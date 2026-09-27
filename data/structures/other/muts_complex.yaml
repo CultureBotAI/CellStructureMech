@@ -1,0 +1,165 @@
+identifier: GO:1990710
+label: MutS complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A homodimeric mismatch repair complex involved in binding to and correcting
+  insertion/deletion mutations.
+definition_source: GO:1990710
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T11:19:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T11:20:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO MutS synonymy, protein-containing-complex parentage, a reviewed-label-only
+    MutS constituent row, E. coli scope, mismatch-repair function evidence, GO/PubMed/DOI
+    evidence, a nonmechanistic function graph, and a MutS subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: MutS mismatch repair complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990710
+parent_structures:
+- GO:0032991
+components:
+- component_id: muts_subunit
+  label: MutS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - mutS
+  stoichiometry: 2 copies per homodimeric MutS complex
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: MutS subunit is modeled as a bacterial MutS-complex constituent;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was
+    curated in this pass.
+  role: MutS-family mismatch-recognition subunit that forms the homodimeric bacterial
+    MutS complex.
+  evidence:
+  - reference: GO:1990710
+    notes: GO:1990710 defines the MutS complex as a homodimeric mismatch repair complex.
+  - reference: DOI:10.1038/35037509
+    notes: Obmolova et al. 2000 reported MutS crystal structures, including a MutS-substrate
+      DNA complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Escherichia coli has a MutS mismatch-repair complex used as a bacterial example
+    by GO:1990710.
+  reference: PMID:21666597
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Bacterial MutS reference system for atomic-force microscopy of MutS oligomers
+    initiating DNA mismatch repair.
+  reference: DOI:10.1038/emboj.2011.180
+functions:
+- function_id: mismatch_repair
+  label: mismatch repair
+  grounding: GO:0006298
+  description: The MutS complex binds mismatched DNA and supports DNA mismatch repair.
+  evidence:
+  - reference: GO:1990710
+    notes: GO:1990710 defines the MutS complex as a mismatch repair complex involved
+      in binding and correcting insertion/deletion mutations.
+  - reference: GO:0006298
+    notes: GO:0006298 is the Gene Ontology biological-process term for mismatch repair.
+evidence:
+- reference: GO:1990710
+  notes: Gene Ontology cellular-component term for the MutS complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0006298
+  notes: Gene Ontology biological-process term for mismatch repair.
+- reference: PMID:21666597
+  notes: PubMed identifier for Jiang and Marszalek 2011, the EMBO Journal paper cited
+    by the GO:1990710 definition.
+- reference: DOI:10.1038/emboj.2011.180
+  notes: DOI for Jiang and Marszalek 2011, verified through PubMed and PMC.
+- reference: PMID:11048710
+  notes: PubMed identifier for Obmolova et al. 2000, the Nature paper on MutS and
+    MutS-substrate-DNA crystal structures.
+- reference: DOI:10.1038/35037509
+  notes: DOI for Obmolova et al. 2000, verified through PubMed.
+- reference: PMID:11048711
+  notes: PubMed identifier for Lamers et al. 2000, the Nature paper on MutS bound
+    to a G-T mismatch.
+- reference: DOI:10.1038/35037523
+  notes: DOI for Lamers et al. 2000, verified through PubMed.
+causal_graphs:
+- graph_id: muts_mismatch_repair
+  title: MutS binds mismatched DNA for repair
+  description: A MutS homodimer forms a mismatch-repair complex that binds mismatched
+    DNA and supports mismatch repair.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records MutS homodimeric composition, mismatched-DNA engagement
+    and mismatch-repair function without resolving ATP-driven conformational changes,
+    MutL recruitment, or strand excision.
+  nodes:
+  - node_id: muts_subunit
+    label: MutS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: muts_subunit
+  - node_id: muts_complex
+    label: MutS complex
+    node_type: STRUCTURE
+    grounding: GO:1990710
+  - node_id: mismatched_dna
+    label: mismatched DNA
+    node_type: GENETIC_ELEMENT
+  - node_id: mismatch_repair
+    label: mismatch repair
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006298
+  edges:
+  - subject: muts_subunit
+    predicate: contributes to
+    object: muts_complex
+    description: MutS subunits form the homodimeric MutS mismatch repair complex.
+    evidence:
+    - reference: GO:1990710
+      notes: GO:1990710 defines MutS as a homodimeric mismatch repair complex.
+    - reference: DOI:10.1038/35037509
+      notes: Obmolova et al. 2000 reported MutS crystal structures.
+  - subject: muts_complex
+    predicate: binds
+    object: mismatched_dna
+    description: The MutS complex binds mismatched DNA.
+    evidence:
+    - reference: GO:1990710
+      notes: GO:1990710 defines the MutS complex as involved in binding mismatches.
+    - reference: DOI:10.1038/35037523
+      notes: Lamers et al. 2000 reported the crystal structure of MutS binding to
+        a G-T mismatch.
+  - subject: muts_complex
+    predicate: supports
+    object: mismatch_repair
+    description: The MutS complex participates in mismatch repair.
+    evidence:
+    - reference: GO:1990710
+      notes: GO:1990710 defines MutS as a mismatch repair complex.
+    - reference: GO:0006298
+      notes: GO:0006298 is the biological-process term for mismatch repair.
+discussions:
+- discussion_id: resolve_muts_family_grounding
+  prompt: Resolve an exact source-neutral family grounding for the MutS constituent
+    of the homodimeric MutS complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#muts_subunit
+  rationale: GO:1990710 exactly identifies the homodimeric MutS complex, but exact
+    InterPro, Pfam, NCBIfam or UniProtKB family boundaries for the bacterial MutS
+    subunit class need narrower follow-up curation.
+  evidence:
+  - reference: GO:1990710
+    notes: GO:1990710 defines the MutS complex as a homodimeric mismatch repair complex.
+  posed_by: codex
+  posed_date: '2026-09-27'
