@@ -1,0 +1,327 @@
+identifier: GO:0032221
+label: Rpd3S complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A eukaryotically conserved histone deacetylase complex which deacetylates
+  histones across gene coding regions. Composed of a catalytic histone deacetylase
+  subunit, a chromodomain protein, a SIN3 family co-repressor, and a WD repeat protein
+  (Clr6p, Alp13p, Pst2p, and Prw1p respectively in Schizosaccharomyces; Rpd3p, Sin3p,
+  Ume1p, Rco1p and Eaf3 in Saccharomyces; homologs thereof in other species).
+definition_source: GO:0032221
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T03:40:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T03:41:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonyms, Sin3-type-complex parentage, chromatin/nuclear-chromosome
+    parthood, five budding-yeast Rpd3S constituent rows, budding-yeast scope, histone
+    deacetylase activity, GO/PubMed/DOI evidence, a nonmechanistic function graph,
+    and an Rpd3S subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Clr6-CII complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032221
+- synonym_text: Clr6 histone deacetylase complex II
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032221
+- synonym_text: Clr6 histone deacetylase complex II'
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032221
+- synonym_text: Clr6S complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032221
+- synonym_text: Rpd3C(S)
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032221
+- synonym_text: Rpd3S
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032221
+- synonym_text: Sin3S
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032221
+parent_structures:
+- GO:0070822
+part_of:
+- GO:0000228
+- GO:0000785
+components:
+- component_id: rpd3_rpd3s_deacetylase_subunit
+  label: Rpd3 Rpd3S deacetylase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RPD3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032221 follows Saccharomyces cerevisiae Rpd3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3S
+    catalytic subunit class was curated in this pass.
+  role: Catalytic histone deacetylase constituent of the budding-yeast Rpd3S complex.
+  evidence:
+  - reference: GO:0032221
+    notes: GO:0032221 defines the Saccharomyces Rpd3S complex as containing Rpd3p.
+  - reference: DOI:10.1016/j.cell.2005.10.025
+    notes: Keogh et al. 2005 characterized Rpd3C(S) as one of two distinct budding-yeast
+      Rpd3 complexes.
+- component_id: sin3_rpd3s_corepressor_subunit
+  label: Sin3 Rpd3S corepressor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SIN3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032221 follows Saccharomyces cerevisiae Sin3p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3S
+    Sin3-family subunit class was curated in this pass.
+  role: SIN3-family corepressor constituent shared by the budding-yeast Rpd3S and
+    Rpd3L complexes.
+  evidence:
+  - reference: GO:0032221
+    notes: GO:0032221 defines the Saccharomyces Rpd3S complex as containing Sin3p.
+  - reference: DOI:10.1016/j.cell.2005.10.025
+    notes: Keogh et al. 2005 reported that Rpd3C(S) shares Sin3 with the larger Rpd3C(L)
+      complex.
+- component_id: ume1_rpd3s_wd_repeat_subunit
+  label: Ume1 Rpd3S WD-repeat subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UME1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032221 follows Saccharomyces cerevisiae Ume1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3S
+    WD-repeat subunit class was curated in this pass.
+  role: WD-repeat constituent shared by the budding-yeast Rpd3S and Rpd3L complexes.
+  evidence:
+  - reference: GO:0032221
+    notes: GO:0032221 defines the Saccharomyces Rpd3S complex as containing Ume1p.
+  - reference: DOI:10.1016/j.cell.2005.10.025
+    notes: Keogh et al. 2005 reported that Rpd3C(S) shares Ume1 with the larger Rpd3C(L)
+      complex.
+- component_id: rco1_rpd3s_subunit
+  label: Rco1 Rpd3S subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RCO1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032221 follows Saccharomyces cerevisiae Rco1p naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3S-specific
+    subunit class was curated in this pass.
+  role: Rpd3S-specific constituent of the budding-yeast complex.
+  evidence:
+  - reference: GO:0032221
+    notes: GO:0032221 defines the Saccharomyces Rpd3S complex as containing Rco1p.
+  - reference: DOI:10.1016/j.cell.2005.10.023
+    notes: Carrozza et al. 2005 identified Rco1 as a subunit specific to budding-yeast
+      Rpd3S.
+  - reference: DOI:10.1016/j.cell.2005.10.025
+    notes: Keogh et al. 2005 identified Rco1 as a unique Rpd3C(S) subunit.
+- component_id: eaf3_rpd3s_chromodomain_subunit
+  label: Eaf3 Rpd3S chromodomain subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - EAF3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032221 follows Saccharomyces cerevisiae Eaf3 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this Rpd3S
+    chromodomain subunit class was curated in this pass.
+  role: Rpd3S-specific chromodomain constituent involved in methylated-nucleosome
+    recruitment.
+  evidence:
+  - reference: GO:0032221
+    notes: GO:0032221 defines the Saccharomyces Rpd3S complex as containing Eaf3.
+  - reference: DOI:10.1016/j.cell.2005.10.023
+    notes: Carrozza et al. 2005 identified Eaf3 as a subunit specific to budding-yeast
+      Rpd3S.
+  - reference: DOI:10.1016/j.cell.2005.10.025
+    notes: Keogh et al. 2005 identified Eaf3 as a unique Rpd3C(S) subunit and linked
+      its chromodomain to recruitment to methylated nucleosomes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0032221 defines the Rpd3S complex
+    as containing Rpd3p, Sin3p, Ume1p, Rco1p and Eaf3.
+  reference: GO:0032221
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Keogh et al. 2005 and Carrozza et al. 2005 characterized Rpd3S/Rpd3C(S) as
+    a budding-yeast Rpd3 histone deacetylase complex containing Rco1 and Eaf3 as smaller-complex-specific
+    subunits.
+  reference: DOI:10.1016/j.cell.2005.10.025
+functions:
+- function_id: histone_deacetylase_activity
+  label: histone deacetylase activity
+  grounding: GO:0004407
+  description: The Rpd3S complex deacetylates histones across gene coding regions
+    through its Rpd3 catalytic subunit.
+  evidence:
+  - reference: GO:0032221
+    notes: GO:0032221 defines Rpd3S as a histone deacetylase complex that deacetylates
+      histones across gene coding regions.
+  - reference: GO:0004407
+    notes: GO:0004407 is the Gene Ontology molecular-function term for histone deacetylase
+      activity.
+  - reference: DOI:10.1016/j.cell.2005.10.023
+    notes: Carrozza et al. 2005 found that RCO1 and EAF3 mutants disrupted open-reading-frame
+      deacetylation and suppression of intragenic transcription.
+  - reference: DOI:10.1016/j.cell.2005.10.025
+    notes: Keogh et al. 2005 found that Eaf3 recruits Rpd3C(S) to Set2-methylated
+      H3K36 nucleosomes for deacetylation of transcribed regions.
+evidence:
+- reference: GO:0032221
+  notes: Gene Ontology cellular-component term for the Rpd3S complex and its exact
+    Clr6-CII, Clr6S, Rpd3C(S), Rpd3S and Sin3S synonyms.
+- reference: GO:0070822
+  notes: Gene Ontology cellular-component parent term for Sin3-type histone deacetylase
+    complexes.
+- reference: GO:0000228
+  notes: Gene Ontology cellular-component term for the nuclear chromosome.
+- reference: GO:0000785
+  notes: Gene Ontology cellular-component term for chromatin.
+- reference: GO:0004407
+  notes: Gene Ontology molecular-function term for histone deacetylase activity.
+- reference: PMID:16286007
+  notes: PubMed identifier for Carrozza et al. 2005, the Cell Rpd3S coding-region
+    deacetylation paper.
+- reference: DOI:10.1016/j.cell.2005.10.023
+  notes: DOI for Carrozza et al. 2005, 'Histone H3 methylation by Set2 directs deacetylation
+    of coding regions by Rpd3S to suppress spurious intragenic transcription', verified
+    through NCBI E-utilities.
+- reference: PMID:16286008
+  notes: PubMed identifier for Keogh et al. 2005, the Cell Rpd3C(S) H3K36me recruitment
+    paper.
+- reference: DOI:10.1016/j.cell.2005.10.025
+  notes: DOI for Keogh et al. 2005, 'Cotranscriptional set2 methylation of histone
+    H3 lysine 36 recruits a repressive Rpd3 complex', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_rpd3s_histone_deacetylase_activity
+  title: Rpd3S carries yeast histone deacetylase activity
+  description: In Saccharomyces cerevisiae, Rpd3p, Sin3p, Ume1p, Rco1p and Eaf3 form
+    the Rpd3S histone deacetylase complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined Rpd3S complex constituents and their
+    connection to histone deacetylase activity without resolving Set2-dependent H3K36
+    methylation, chromodomain binding or transcript-specific recruitment.
+  nodes:
+  - node_id: rpd3_rpd3s_deacetylase_subunit
+    label: Rpd3 Rpd3S deacetylase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rpd3_rpd3s_deacetylase_subunit
+  - node_id: sin3_rpd3s_corepressor_subunit
+    label: Sin3 Rpd3S corepressor subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sin3_rpd3s_corepressor_subunit
+  - node_id: ume1_rpd3s_wd_repeat_subunit
+    label: Ume1 Rpd3S WD-repeat subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ume1_rpd3s_wd_repeat_subunit
+  - node_id: rco1_rpd3s_subunit
+    label: Rco1 Rpd3S subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rco1_rpd3s_subunit
+  - node_id: eaf3_rpd3s_chromodomain_subunit
+    label: Eaf3 Rpd3S chromodomain subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: eaf3_rpd3s_chromodomain_subunit
+  - node_id: rpd3s_complex
+    label: Rpd3S complex
+    node_type: STRUCTURE
+    grounding: GO:0032221
+  - node_id: histone_deacetylase_activity
+    label: histone deacetylase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004407
+  edges:
+  - subject: rpd3_rpd3s_deacetylase_subunit
+    predicate: contributes to
+    object: rpd3s_complex
+    description: Rpd3p is a deacetylase constituent of the budding-yeast Rpd3S complex.
+    evidence:
+    - reference: GO:0032221
+      notes: GO:0032221 defines Rpd3p as an Rpd3S complex constituent.
+    - reference: DOI:10.1016/j.cell.2005.10.025
+      notes: Keogh et al. 2005 characterized Rpd3C(S) as a Rpd3 histone deacetylase
+        complex.
+  - subject: sin3_rpd3s_corepressor_subunit
+    predicate: contributes to
+    object: rpd3s_complex
+    description: Sin3p is a corepressor constituent of the budding-yeast Rpd3S complex.
+    evidence:
+    - reference: GO:0032221
+      notes: GO:0032221 defines Sin3p as an Rpd3S complex constituent.
+    - reference: DOI:10.1016/j.cell.2005.10.025
+      notes: Keogh et al. 2005 identified Sin3 as shared by Rpd3C(S) and Rpd3C(L).
+  - subject: ume1_rpd3s_wd_repeat_subunit
+    predicate: contributes to
+    object: rpd3s_complex
+    description: Ume1p is a WD-repeat constituent of the budding-yeast Rpd3S complex.
+    evidence:
+    - reference: GO:0032221
+      notes: GO:0032221 defines Ume1p as an Rpd3S complex constituent.
+    - reference: DOI:10.1016/j.cell.2005.10.025
+      notes: Keogh et al. 2005 identified Ume1 as shared by Rpd3C(S) and Rpd3C(L).
+  - subject: rco1_rpd3s_subunit
+    predicate: contributes to
+    object: rpd3s_complex
+    description: Rco1p is a specific constituent of the budding-yeast Rpd3S complex.
+    evidence:
+    - reference: GO:0032221
+      notes: GO:0032221 defines Rco1p as an Rpd3S complex constituent.
+    - reference: DOI:10.1016/j.cell.2005.10.023
+      notes: Carrozza et al. 2005 identified Rco1 as an Rpd3S-specific subunit.
+  - subject: eaf3_rpd3s_chromodomain_subunit
+    predicate: contributes to
+    object: rpd3s_complex
+    description: Eaf3 is a chromodomain constituent of the budding-yeast Rpd3S complex.
+    evidence:
+    - reference: GO:0032221
+      notes: GO:0032221 defines Eaf3 as an Rpd3S complex constituent.
+    - reference: DOI:10.1016/j.cell.2005.10.025
+      notes: Keogh et al. 2005 identified Eaf3 as a unique Rpd3C(S) subunit.
+  - subject: rpd3s_complex
+    predicate: supports
+    object: histone_deacetylase_activity
+    description: Rpd3S is a budding-yeast Rpd3-containing histone deacetylase complex
+      that deacetylates transcribed regions.
+    evidence:
+    - reference: GO:0032221
+      notes: GO:0032221 defines Rpd3S as a histone deacetylase complex.
+    - reference: GO:0004407
+      notes: GO:0004407 is the molecular-function term for histone deacetylase activity.
+    - reference: DOI:10.1016/j.cell.2005.10.025
+      notes: Keogh et al. 2005 linked Rpd3C(S) to deacetylation of transcribed regions.
+discussions:
+- discussion_id: resolve_rpd3s_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Rpd3S constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rpd3_rpd3s_deacetylase_subunit
+  - components#sin3_rpd3s_corepressor_subunit
+  - components#ume1_rpd3s_wd_repeat_subunit
+  - components#rco1_rpd3s_subunit
+  - components#eaf3_rpd3s_chromodomain_subunit
+  rationale: GO:0032221 defines five budding-yeast proteins as Rpd3S complex constituents.
+    Exact cross-eukaryotic InterPro, Pfam, NCBIfam or UniProt family boundaries for
+    these Rpd3S subunit classes need narrower curation before these component labels
+    can be grounded.
+  evidence:
+  - reference: GO:0032221
+    notes: GO:0032221 defines the budding-yeast Rpd3S complex subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'

@@ -4320,6 +4320,15 @@
   "definition": "A protein complex that contains a histone deacetylase and is part of the chromatin remodeling machinery. In Saccharomyces cerevisiae this complex contains the Rpd3p, Sin3p, Ume1p, Pho23p, Sap30p, Sds3p, Cti6p, Rxt2p, Rxt3p, Dep1p, Ume6p, Ash1p, Dot6p, Snt1, Sif2p, Set3p, Hos2p, Tos4p and Tod6p proteins."
  },
  {
+  "identifier": "GO:0032221",
+  "label": "Rpd3S complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/rpd3s_complex.html",
+  "definition": "A eukaryotically conserved histone deacetylase complex which deacetylates histones across gene coding regions. Composed of a catalytic histone deacetylase subunit, a chromodomain protein, a SIN3 family co-repressor, and a WD repeat protein (Clr6p, Alp13p, Pst2p, and Prw1p respectively in Schizosaccharomyces; Rpd3p, Sin3p, Ume1p, Rco1p and Eaf3 in Saccharomyces; homologs thereof in other species)."
+ },
+ {
   "identifier": "GO:0016586",
   "label": "RSC-type complex",
   "category": "OTHER",

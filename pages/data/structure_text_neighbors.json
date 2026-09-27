@@ -11653,14 +11653,14 @@
           "cosine_similarity": 0.77595911
         },
         {
+          "identifier": "GO:0032221",
+          "label": "Rpd3S complex",
+          "cosine_similarity": 0.76294173
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.75268254
-        },
-        {
-          "identifier": "GO:0034456",
-          "label": "UTP-C complex",
-          "cosine_similarity": 0.75070623
         }
       ]
     },
@@ -13074,6 +13074,11 @@
           "cosine_similarity": 0.83388535
         },
         {
+          "identifier": "GO:0032221",
+          "label": "Rpd3S complex",
+          "cosine_similarity": 0.76755606
+        },
+        {
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.75465546
@@ -13082,11 +13087,6 @@
           "identifier": "GO:0070210",
           "label": "Rpd3L-Expanded complex",
           "cosine_similarity": 0.75097165
-        },
-        {
-          "identifier": "GO:0000417",
-          "label": "HIR complex",
-          "cosine_similarity": 0.74649257
         }
       ]
     },
@@ -14862,6 +14862,11 @@
       "label": "Rpd3L-Expanded complex",
       "neighbors": [
         {
+          "identifier": "GO:0032221",
+          "label": "Rpd3S complex",
+          "cosine_similarity": 0.88885711
+        },
+        {
           "identifier": "GO:0034967",
           "label": "Set3 complex",
           "cosine_similarity": 0.84992494
@@ -14880,11 +14885,37 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.71567073
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0032221",
+      "label": "Rpd3S complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0070210",
+          "label": "Rpd3L-Expanded complex",
+          "cosine_similarity": 0.88885711
         },
         {
-          "identifier": "GO:0000417",
-          "label": "HIR complex",
-          "cosine_similarity": 0.71187899
+          "identifier": "GO:0034967",
+          "label": "Set3 complex",
+          "cosine_similarity": 0.84011116
+        },
+        {
+          "identifier": "GO:0070211",
+          "label": "Snt2C complex",
+          "cosine_similarity": 0.83070899
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.7915505
+        },
+        {
+          "identifier": "GO:0070823",
+          "label": "HDA1 complex",
+          "cosine_similarity": 0.76755606
         }
       ]
     },
@@ -15120,6 +15151,11 @@
           "cosine_similarity": 0.84992494
         },
         {
+          "identifier": "GO:0032221",
+          "label": "Rpd3S complex",
+          "cosine_similarity": 0.84011116
+        },
+        {
           "identifier": "GO:0070823",
           "label": "HDA1 complex",
           "cosine_similarity": 0.83688246
@@ -15128,11 +15164,6 @@
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.7774188
-        },
-        {
-          "identifier": "GO:0000417",
-          "label": "HIR complex",
-          "cosine_similarity": 0.77479537
         }
       ]
     },
@@ -15213,6 +15244,11 @@
           "cosine_similarity": 0.83388535
         },
         {
+          "identifier": "GO:0032221",
+          "label": "Rpd3S complex",
+          "cosine_similarity": 0.83070899
+        },
+        {
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.81086628
@@ -15221,11 +15257,6 @@
           "identifier": "GO:0070210",
           "label": "Rpd3L-Expanded complex",
           "cosine_similarity": 0.79919428
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.79323154
         }
       ]
     },
