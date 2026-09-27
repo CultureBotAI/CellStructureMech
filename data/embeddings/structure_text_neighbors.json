@@ -12361,6 +12361,11 @@
           "cosine_similarity": 0.7938282
         },
         {
+          "identifier": "GO:0031391",
+          "label": "Elg1 RFC-like complex",
+          "cosine_similarity": 0.79351212
+        },
+        {
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.76449958
@@ -12369,11 +12374,6 @@
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.75129502
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.74861391
         }
       ]
     },
@@ -12557,9 +12557,9 @@
           "cosine_similarity": 0.76211517
         },
         {
-          "identifier": "GO:0031518",
-          "label": "CBF3 complex",
-          "cosine_similarity": 0.75691225
+          "identifier": "GO:0031391",
+          "label": "Elg1 RFC-like complex",
+          "cosine_similarity": 0.76006856
         }
       ]
     },
@@ -12684,6 +12684,37 @@
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.594771
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031391",
+      "label": "Elg1 RFC-like complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031390",
+          "label": "Ctf18 RFC-like complex",
+          "cosine_similarity": 0.79351212
+        },
+        {
+          "identifier": "GO:0031389",
+          "label": "Rad17 RFC-like complex",
+          "cosine_similarity": 0.79281356
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.76523943
+        },
+        {
+          "identifier": "GO:0033588",
+          "label": "elongator holoenzyme complex",
+          "cosine_similarity": 0.76021811
+        },
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.76006856
         }
       ]
     },
@@ -15177,6 +15208,11 @@
           "cosine_similarity": 0.7938282
         },
         {
+          "identifier": "GO:0031391",
+          "label": "Elg1 RFC-like complex",
+          "cosine_similarity": 0.79281356
+        },
+        {
           "identifier": "GO:0030896",
           "label": "checkpoint clamp complex",
           "cosine_similarity": 0.75063021
@@ -15190,11 +15226,6 @@
           "identifier": "GO:0005663",
           "label": "DNA replication factor C complex",
           "cosine_similarity": 0.74911305
-        },
-        {
-          "identifier": "GO:0000111",
-          "label": "nucleotide-excision repair factor 2 complex",
-          "cosine_similarity": 0.73150808
         }
       ]
     },
