@@ -11665,6 +11665,37 @@
       ]
     },
     {
+      "identifier": "GO:0033186",
+      "label": "CAF-1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.80307619
+        },
+        {
+          "identifier": "GO:0008623",
+          "label": "CHRAC",
+          "cosine_similarity": 0.79599578
+        },
+        {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.78425148
+        },
+        {
+          "identifier": "GO:0016590",
+          "label": "ACF complex",
+          "cosine_similarity": 0.77989199
+        },
+        {
+          "identifier": "GO:0032221",
+          "label": "Rpd3S complex",
+          "cosine_similarity": 0.76964997
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031518",
       "label": "CBF3 complex",
       "neighbors": [
@@ -11679,6 +11710,11 @@
           "cosine_similarity": 0.7919121
         },
         {
+          "identifier": "GO:0033186",
+          "label": "CAF-1 complex",
+          "cosine_similarity": 0.78425148
+        },
+        {
           "identifier": "GO:1990468",
           "label": "NuA3b histone acetyltransferase complex",
           "cosine_similarity": 0.77596056
@@ -11687,11 +11723,6 @@
           "identifier": "GO:0000112",
           "label": "nucleotide-excision repair factor 3 complex",
           "cosine_similarity": 0.77595911
-        },
-        {
-          "identifier": "GO:0032221",
-          "label": "Rpd3S complex",
-          "cosine_similarity": 0.76294173
         }
       ]
     },
@@ -12898,9 +12929,9 @@
           "cosine_similarity": 0.80315648
         },
         {
-          "identifier": "GO:1990468",
-          "label": "NuA3b histone acetyltransferase complex",
-          "cosine_similarity": 0.80013537
+          "identifier": "GO:0033186",
+          "label": "CAF-1 complex",
+          "cosine_similarity": 0.80307619
         }
       ]
     },

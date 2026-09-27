@@ -1,0 +1,246 @@
+identifier: GO:0033186
+label: CAF-1 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A conserved heterotrimeric protein complex that promotes histone H3 and
+  H4 deposition onto newly synthesized DNA during replication or DNA repair; specifically
+  facilitates replication-dependent nucleosome assembly with the major histone H3
+  (H3.1). In many species the CAF-1 subunits are designated p150, p60, and p48.
+definition_source: GO:0033186
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T07:39:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T07:40:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added CAF-1 exact synonymy, protein-containing-complex parentage, three
+    budding-yeast CAF-I constituent rows, yeast scope, nucleosome assembly function,
+    GO/PubMed/DOI evidence, a nonmechanistic function graph, and a CAF-1 subunit-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-27T07:40:55Z'
+  curator: codex
+  action: NORMALIZED_EVIDENCE_LISTS
+  changes: Expanded repeated CAF-1 component evidence into independent YAML lists
+    so the record does not emit anchors or aliases.
+  llm_assisted: true
+synonyms:
+- synonym_text: chromatin assembly factor 1 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0033186
+- synonym_text: chromatin assembly factor-I
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1101/gad.11.3.345
+- synonym_text: CAF-I
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1101/gad.11.3.345
+parent_structures:
+- GO:0032991
+components:
+- component_id: cac1_caf1_p90_subunit
+  label: Cac1 CAF-1 p90 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CAC1
+  - RLF2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033186 and Kaufman et al. 1997 follow budding-yeast CAC1/RLF2
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this CAF-1 p90 subunit class was curated in this pass.
+  role: Largest p90 constituent of the budding-yeast CAF-1 complex.
+  evidence:
+  - reference: GO:0033186
+    notes: GO:0033186 comments that the yeast CAF-1 subunits are MSI1/p50, CAC2/p60
+      and CAC1/p90.
+  - reference: DOI:10.1101/gad.11.3.345
+    notes: Kaufman et al. 1997 purified Saccharomyces cerevisiae CAF-I and identified
+      CAC1, CAC2 and CAC3/MSI1 as the genes encoding the three yeast CAF-I subunits.
+- component_id: cac2_caf1_p60_subunit
+  label: Cac2 CAF-1 p60 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CAC2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033186 and Kaufman et al. 1997 follow budding-yeast CAC2 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this CAF-1 p60 subunit class was curated in this pass.
+  role: p60 constituent of the budding-yeast CAF-1 complex.
+  evidence:
+  - reference: GO:0033186
+    notes: GO:0033186 comments that the yeast CAF-1 subunits are MSI1/p50, CAC2/p60
+      and CAC1/p90.
+  - reference: DOI:10.1101/gad.11.3.345
+    notes: Kaufman et al. 1997 purified Saccharomyces cerevisiae CAF-I and identified
+      CAC1, CAC2 and CAC3/MSI1 as the genes encoding the three yeast CAF-I subunits.
+- component_id: msi1_cac3_caf1_p50_subunit
+  label: Msi1/Cac3 CAF-1 p50 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MSI1
+  - CAC3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0033186 follows budding-yeast MSI1/p50 naming and Kaufman et
+    al. 1997 used CAC3/MSI1 naming; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProt family identifier for this CAF-1 p50 subunit class was curated in this
+    pass.
+  role: p50 WD-repeat constituent of the budding-yeast CAF-1 complex.
+  evidence:
+  - reference: GO:0033186
+    notes: GO:0033186 comments that the yeast CAF-1 subunits are MSI1/p50, CAC2/p60
+      and CAC1/p90.
+  - reference: DOI:10.1101/gad.11.3.345
+    notes: Kaufman et al. 1997 purified Saccharomyces cerevisiae CAF-I and identified
+      CAC1, CAC2 and CAC3/MSI1 as the genes encoding the three yeast CAF-I subunits.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism from which Kaufman et al. 1997 purified CAF-I
+    and identified its CAC1, CAC2 and CAC3/MSI1 subunit genes.
+  reference: DOI:10.1101/gad.11.3.345
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Kaufman et al. 1997 purified Saccharomyces cerevisiae CAF-I as a conserved
+    heterotrimeric chromatin assembly factor.
+  reference: DOI:10.1101/gad.11.3.345
+functions:
+- function_id: nucleosome_assembly
+  label: nucleosome assembly
+  grounding: GO:0006334
+  description: CAF-1 promotes deposition of histones H3 and H4 onto newly synthesized
+    DNA during replication or DNA repair.
+  evidence:
+  - reference: GO:0033186
+    notes: GO:0033186 defines CAF-1 as promoting histone H3 and H4 deposition onto
+      newly synthesized DNA during replication or DNA repair.
+  - reference: GO:0006334
+    notes: GO:0006334 is the Gene Ontology biological-process term for nucleosome
+      assembly.
+  - reference: DOI:10.1101/gad.11.3.345
+    notes: Kaufman et al. 1997 purified yeast CAF-I and used an in vitro assay for
+      nucleosome assembly on replicated DNA.
+evidence:
+- reference: GO:0033186
+  notes: Gene Ontology cellular-component term for the CAF-1 complex and its chromatin
+    assembly factor 1 complex exact synonym.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0006334
+  notes: Gene Ontology biological-process term for nucleosome assembly.
+- reference: PMID:9030687
+  notes: PubMed identifier for Kaufman et al. 1997, the budding-yeast CAF-I purification
+    and subunit-identification paper.
+- reference: DOI:10.1101/gad.11.3.345
+  notes: DOI for Kaufman et al. 1997, 'Ultraviolet radiation sensitivity and reduction
+    of telomeric silencing in Saccharomyces cerevisiae cells lacking chromatin assembly
+    factor-I', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_caf1_nucleosome_assembly
+  title: CAF-1 supports yeast replication-coupled nucleosome assembly
+  description: In Saccharomyces cerevisiae, Cac1, Cac2 and Msi1/Cac3 form the CAF-1
+    complex that supports deposition of histones H3 and H4 onto newly synthesized
+    DNA.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three curated CAF-1 constituents and the broad
+    nucleosome-assembly function without resolving histone binding, PCNA coupling
+    or nucleosome deposition chemistry.
+  nodes:
+  - node_id: cac1_caf1_p90_subunit
+    label: Cac1 CAF-1 p90 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cac1_caf1_p90_subunit
+  - node_id: cac2_caf1_p60_subunit
+    label: Cac2 CAF-1 p60 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cac2_caf1_p60_subunit
+  - node_id: msi1_cac3_caf1_p50_subunit
+    label: Msi1/Cac3 CAF-1 p50 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: msi1_cac3_caf1_p50_subunit
+  - node_id: caf_1_complex
+    label: CAF-1 complex
+    node_type: STRUCTURE
+    grounding: GO:0033186
+  - node_id: nucleosome_assembly
+    label: nucleosome assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006334
+  edges:
+  - subject: cac1_caf1_p90_subunit
+    predicate: contributes to
+    object: caf_1_complex
+    description: Cac1 is the p90 constituent of budding-yeast CAF-I.
+    evidence:
+    - reference: GO:0033186
+      notes: GO:0033186 comments that the yeast CAF-1 subunits are MSI1/p50, CAC2/p60
+        and CAC1/p90.
+    - reference: DOI:10.1101/gad.11.3.345
+      notes: Kaufman et al. 1997 purified Saccharomyces cerevisiae CAF-I and identified
+        CAC1, CAC2 and CAC3/MSI1 as the genes encoding the three yeast CAF-I subunits.
+  - subject: cac2_caf1_p60_subunit
+    predicate: contributes to
+    object: caf_1_complex
+    description: Cac2 is the p60 constituent of budding-yeast CAF-I.
+    evidence:
+    - reference: GO:0033186
+      notes: GO:0033186 comments that the yeast CAF-1 subunits are MSI1/p50, CAC2/p60
+        and CAC1/p90.
+    - reference: DOI:10.1101/gad.11.3.345
+      notes: Kaufman et al. 1997 purified Saccharomyces cerevisiae CAF-I and identified
+        CAC1, CAC2 and CAC3/MSI1 as the genes encoding the three yeast CAF-I subunits.
+  - subject: msi1_cac3_caf1_p50_subunit
+    predicate: contributes to
+    object: caf_1_complex
+    description: Msi1/Cac3 is the p50 constituent of budding-yeast CAF-I.
+    evidence:
+    - reference: GO:0033186
+      notes: GO:0033186 comments that the yeast CAF-1 subunits are MSI1/p50, CAC2/p60
+        and CAC1/p90.
+    - reference: DOI:10.1101/gad.11.3.345
+      notes: Kaufman et al. 1997 purified Saccharomyces cerevisiae CAF-I and identified
+        CAC1, CAC2 and CAC3/MSI1 as the genes encoding the three yeast CAF-I subunits.
+  - subject: caf_1_complex
+    predicate: supports
+    object: nucleosome_assembly
+    description: CAF-1 promotes H3/H4 histone deposition onto newly synthesized DNA.
+    evidence:
+    - reference: GO:0033186
+      notes: GO:0033186 defines CAF-1 as promoting histone H3 and H4 deposition onto
+        newly synthesized DNA.
+    - reference: GO:0006334
+      notes: GO:0006334 is the Gene Ontology biological-process term for nucleosome
+        assembly.
+discussions:
+- discussion_id: resolve_caf1_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the CAF-1 p90, p60 and
+    p50 constituent classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cac1_caf1_p90_subunit
+  - components#cac2_caf1_p60_subunit
+  - components#msi1_cac3_caf1_p50_subunit
+  rationale: The budding-yeast CAF-1 subunits correspond to broader eukaryotic p150,
+    p60 and p48 subunit classes; exact InterPro, Pfam, NCBIfam or UniProt family CURIEs
+    should only be curated after verifying that they denote the subunit class rather
+    than a WD40 or acidic-domain motif.
+  evidence:
+  - reference: GO:0033186
+    notes: GO:0033186 comments on the yeast CAC1, CAC2 and MSI1 names for CAF-1 subunits.
+  - reference: DOI:10.1101/gad.11.3.345
+    notes: Kaufman et al. 1997 identified the CAC1, CAC2 and CAC3/MSI1 genes encoding
+      yeast CAF-I subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'
