@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/paraspeckles.yaml
+  slug: paraspeckles
+session:
+  id: 2026-09-27T224032Z-codex-99bc94
+  timestamp: '2026-09-27T22:40:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1684
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1685
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1686
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1683
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add paraspeckles record
+  details: Created an evidence-backed GO:0042382 paraspeckles record with GO parentage, nuclear-lumen
+    parthood, NEAT1 lncRNA and DBHS-family protein component curation, Homo sapiens scope,
+    nuclear-RNA-retention function evidence and a nonmechanistic NEAT1/DBHS assembly graph.
