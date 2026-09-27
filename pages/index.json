@@ -4482,6 +4482,15 @@
   "definition": "A homotetrameric single-stranded DNA-binding protein assembly that binds and stabilizes single-stranded DNA during DNA replication, recombination, and repair."
  },
  {
+  "identifier": "GO:0046695",
+  "label": "SLIK (SAGA-like) complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/slik_saga_like_complex.html",
+  "definition": "A SAGA-type histone acetyltransferase complex that contains a smaller form of Spt7 (lacking the SPT8 binding region) than the fungal SAGA complex, and consequently lacks Spt8. The complex is involved in the yeast retrograde response pathway, which is important for gene expression changes during mitochondrial dysfunction."
+ },
+ {
   "identifier": "GO:0070211",
   "label": "Snt2C complex",
   "category": "OTHER",

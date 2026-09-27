@@ -11343,14 +11343,14 @@
           "cosine_similarity": 0.79381291
         },
         {
+          "identifier": "GO:0046695",
+          "label": "SLIK (SAGA-like) complex",
+          "cosine_similarity": 0.78969473
+        },
+        {
           "identifier": "GO:0000124",
           "label": "SAGA complex",
           "cosine_similarity": 0.77736972
-        },
-        {
-          "identifier": "GO:1990468",
-          "label": "NuA3b histone acetyltransferase complex",
-          "cosine_similarity": 0.75825937
         }
       ]
     },
@@ -13983,9 +13983,9 @@
           "cosine_similarity": 0.80167998
         },
         {
-          "identifier": "GO:0031415",
-          "label": "NatA complex",
-          "cosine_similarity": 0.79711346
+          "identifier": "GO:0046695",
+          "label": "SLIK (SAGA-like) complex",
+          "cosine_similarity": 0.79835591
         }
       ]
     },
@@ -15120,6 +15120,11 @@
           "cosine_similarity": 0.69932785
         },
         {
+          "identifier": "GO:0046695",
+          "label": "SLIK (SAGA-like) complex",
+          "cosine_similarity": 0.69774076
+        },
+        {
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.69760136
@@ -15128,11 +15133,6 @@
           "identifier": "GO:0031932",
           "label": "TORC2 complex",
           "cosine_similarity": 0.68778465
-        },
-        {
-          "identifier": "GO:0031207",
-          "label": "Sec62/Sec63 complex",
-          "cosine_similarity": 0.68233859
         }
       ]
     },
@@ -15140,6 +15140,11 @@
       "identifier": "GO:0000124",
       "label": "SAGA complex",
       "neighbors": [
+        {
+          "identifier": "GO:0046695",
+          "label": "SLIK (SAGA-like) complex",
+          "cosine_similarity": 0.89923433
+        },
         {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
@@ -15159,11 +15164,6 @@
           "identifier": "GO:1990468",
           "label": "NuA3b histone acetyltransferase complex",
           "cosine_similarity": 0.77275762
-        },
-        {
-          "identifier": "GO:1990467",
-          "label": "NuA3a histone acetyltransferase complex",
-          "cosine_similarity": 0.77045991
         }
       ]
     },
@@ -15447,6 +15447,37 @@
       ]
     },
     {
+      "identifier": "GO:0046695",
+      "label": "SLIK (SAGA-like) complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000124",
+          "label": "SAGA complex",
+          "cosine_similarity": 0.89923433
+        },
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.79835591
+        },
+        {
+          "identifier": "GO:0140671",
+          "label": "ADA complex",
+          "cosine_similarity": 0.78969473
+        },
+        {
+          "identifier": "GO:0016514",
+          "label": "SWI/SNF complex",
+          "cosine_similarity": 0.78336636
+        },
+        {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.77360144
+        }
+      ]
+    },
+    {
       "identifier": "GO:0070211",
       "label": "Snt2C complex",
       "neighbors": [
@@ -15549,6 +15580,11 @@
           "cosine_similarity": 0.79266045
         },
         {
+          "identifier": "GO:0046695",
+          "label": "SLIK (SAGA-like) complex",
+          "cosine_similarity": 0.78336636
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.78119275
@@ -15562,11 +15598,6 @@
           "identifier": "GO:0016590",
           "label": "ACF complex",
           "cosine_similarity": 0.71948635
-        },
-        {
-          "identifier": "GO:0048188",
-          "label": "Set1C/COMPASS complex",
-          "cosine_similarity": 0.71568909
         }
       ]
     },
