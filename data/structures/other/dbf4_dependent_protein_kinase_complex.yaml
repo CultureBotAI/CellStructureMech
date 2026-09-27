@@ -1,0 +1,186 @@
+identifier: GO:0031431
+label: Dbf4-dependent protein kinase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterodimeric protein complex required for the activation of DNA replication
+  origins; comprises a catalytic subunit and a regulatory subunit (in Saccharomyces,
+  Cdc7p and Dbf4p, respectively); complexes identified in other species generally
+  contain proteins related to the Saccharomyces proteins.
+definition_source: GO:0031431
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T12:59:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T13:00:50Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO DDK synonymy, nuclear protein-containing-complex parentage, Cdc7
+    and Dbf4 reviewed-label-only budding-yeast constituent rows, yeast scope, DNA-replication-initiation
+    function evidence, GO/PubMed/DOI evidence, a nonmechanistic function graph, and
+    a DDK subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: DDK
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031431
+- synonym_text: Cdc7-Dbf4 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031431
+- synonym_text: Hsk1-Dfp1 kinase complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031431
+parent_structures:
+- GO:0140513
+components:
+- component_id: cdc7_kinase_subunit
+  label: Cdc7 kinase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CDC7
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Cdc7 kinase subunit is modeled as a named budding-yeast DDK constituent;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was
+    curated in this pass.
+  role: Catalytic constituent of the Saccharomyces cerevisiae Dbf4-dependent protein
+    kinase complex.
+  evidence:
+  - reference: GO:0031431
+    notes: GO:0031431 defines budding-yeast DDK as comprising the catalytic Cdc7p
+      subunit and the regulatory Dbf4p subunit.
+- component_id: dbf4_regulatory_subunit
+  label: Dbf4 regulatory subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DBF4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Dbf4 regulatory subunit is modeled as a named budding-yeast DDK
+    constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family
+    CURIE was curated in this pass.
+  role: Regulatory constituent of the Saccharomyces cerevisiae Dbf4-dependent protein
+    kinase complex.
+  evidence:
+  - reference: GO:0031431
+    notes: GO:0031431 defines budding-yeast DDK as comprising the catalytic Cdc7p
+      subunit and the regulatory Dbf4p subunit.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a Dbf4-dependent protein kinase complex made of the Cdc7p
+    catalytic and Dbf4p regulatory subunits.
+  reference: GO:0031431
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system named in the GO:0031431 definition as containing
+    Cdc7p and Dbf4p.
+  reference: GO:0031431
+functions:
+- function_id: dna_replication_initiation
+  label: DNA replication initiation
+  grounding: GO:0006270
+  description: The Dbf4-dependent protein kinase complex is required for activation
+    of DNA replication origins.
+  evidence:
+  - reference: GO:0031431
+    notes: GO:0031431 defines the Dbf4-dependent protein kinase complex as required
+      for activation of DNA replication origins.
+  - reference: GO:0006270
+    notes: GO:0006270 is the Gene Ontology biological-process term for DNA replication
+      initiation.
+evidence:
+- reference: GO:0031431
+  notes: Gene Ontology cellular-component term for the Dbf4-dependent protein kinase
+    complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0006270
+  notes: Gene Ontology biological-process term for DNA replication initiation.
+- reference: PMID:12045100
+  notes: PubMed identifier for Bell and Dutta 2002, the Annual Review of Biochemistry
+    review listed as the GO:0031431 definition source.
+- reference: DOI:10.1146/annurev.biochem.71.110601.135425
+  notes: DOI for Bell and Dutta 2002, verified through PubMed as the GO:0031431 definition-source
+    review.
+causal_graphs:
+- graph_id: ddk_dna_replication_initiation
+  title: DDK supports replication-origin activation
+  description: Cdc7 and Dbf4 form the Saccharomyces cerevisiae Dbf4-dependent protein
+    kinase complex that supports activation of DNA replication origins.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the two budding-yeast DDK constituents and the GO-level
+    origin-activation function without resolving origin licensing, MCM phosphorylation,
+    Cdc45 loading or firing-factor recruitment.
+  nodes:
+  - node_id: cdc7_kinase_subunit
+    label: Cdc7 kinase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: cdc7_kinase_subunit
+  - node_id: dbf4_regulatory_subunit
+    label: Dbf4 regulatory subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dbf4_regulatory_subunit
+  - node_id: ddk_complex
+    label: Dbf4-dependent protein kinase complex
+    node_type: STRUCTURE
+    grounding: GO:0031431
+  - node_id: dna_replication_initiation
+    label: DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006270
+  edges:
+  - subject: cdc7_kinase_subunit
+    predicate: contributes to
+    object: ddk_complex
+    description: Cdc7p is the catalytic constituent of the budding-yeast DDK complex.
+    evidence:
+    - reference: GO:0031431
+      notes: GO:0031431 defines the Saccharomyces DDK complex as containing catalytic
+        Cdc7p and regulatory Dbf4p.
+  - subject: dbf4_regulatory_subunit
+    predicate: contributes to
+    object: ddk_complex
+    description: Dbf4p is the regulatory constituent of the budding-yeast DDK complex.
+    evidence:
+    - reference: GO:0031431
+      notes: GO:0031431 defines the Saccharomyces DDK complex as containing catalytic
+        Cdc7p and regulatory Dbf4p.
+  - subject: ddk_complex
+    predicate: supports
+    object: dna_replication_initiation
+    description: The Dbf4-dependent protein kinase complex supports DNA replication
+      initiation through activation of replication origins.
+    evidence:
+    - reference: GO:0031431
+      notes: GO:0031431 defines DDK as required for activation of DNA replication
+        origins.
+    - reference: GO:0006270
+      notes: GO:0006270 is the biological-process term for DNA replication initiation.
+discussions:
+- discussion_id: resolve_ddk_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Cdc7 and Dbf4 constituents
+    of the Dbf4-dependent protein kinase complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cdc7_kinase_subunit
+  - components#dbf4_regulatory_subunit
+  rationale: GO:0031431 exactly identifies the Dbf4-dependent protein kinase complex
+    and names the budding-yeast Cdc7p and Dbf4p constituents, but exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProtKB family CURIEs for the kinase and regulatory
+    subunit classes were not curated in this pass.
+  evidence:
+  - reference: GO:0031431
+    notes: GO:0031431 defines the Saccharomyces DDK complex as comprising Cdc7p and
+      Dbf4p.
+  posed_by: codex
+  posed_date: '2026-09-27'

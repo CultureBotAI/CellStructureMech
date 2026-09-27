@@ -12409,6 +12409,37 @@
       ]
     },
     {
+      "identifier": "GO:0031431",
+      "label": "Dbf4-dependent protein kinase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000113",
+          "label": "nucleotide-excision repair factor 4 complex",
+          "cosine_similarity": 0.78432021
+        },
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.78205791
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.75187895
+        },
+        {
+          "identifier": "GO:0000111",
+          "label": "nucleotide-excision repair factor 2 complex",
+          "cosine_similarity": 0.74560475
+        },
+        {
+          "identifier": "GO:0016590",
+          "label": "ACF complex",
+          "cosine_similarity": 0.74349359
+        }
+      ]
+    },
+    {
       "identifier": "GO:0120217",
       "label": "DNA gyrase complex",
       "neighbors": [
@@ -12475,6 +12506,11 @@
       "label": "DNA replication factor C complex",
       "neighbors": [
         {
+          "identifier": "GO:0031431",
+          "label": "Dbf4-dependent protein kinase complex",
+          "cosine_similarity": 0.78205791
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.76211517
@@ -12493,11 +12529,6 @@
           "identifier": "GO:0033186",
           "label": "CAF-1 complex",
           "cosine_similarity": 0.74158027
-        },
-        {
-          "identifier": "GO:0009360",
-          "label": "DNA polymerase III complex",
-          "cosine_similarity": 0.74103067
         }
       ]
     },
@@ -13529,6 +13560,11 @@
       "label": "Ku70:Ku80 complex",
       "neighbors": [
         {
+          "identifier": "GO:0031431",
+          "label": "Dbf4-dependent protein kinase complex",
+          "cosine_similarity": 0.70744853
+        },
+        {
           "identifier": "GO:0030690",
           "label": "Noc1p-Noc2p complex",
           "cosine_similarity": 0.69137652
@@ -13547,11 +13583,6 @@
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.67852523
-        },
-        {
-          "identifier": "GO:0030896",
-          "label": "checkpoint clamp complex",
-          "cosine_similarity": 0.67219741
         }
       ]
     },
@@ -14660,14 +14691,14 @@
           "cosine_similarity": 0.91474642
         },
         {
+          "identifier": "GO:0031431",
+          "label": "Dbf4-dependent protein kinase complex",
+          "cosine_similarity": 0.78432021
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.77700035
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.76533377
         }
       ]
     },
