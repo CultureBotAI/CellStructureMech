@@ -1,0 +1,241 @@
+identifier: GO:0005760
+label: gamma DNA polymerase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A DNA polymerase complex consisting of a large subunit, responsible for
+  the catalytic activities, and a small accessory subunit. Functions in the replication
+  and repair of mitochondrial DNA.
+definition_source: GO:0005760
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T20:30:48Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T20:31:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added DNA-polymerase-complex and mitochondrial-protein-complex parentage,
+    mitochondrial-matrix parthood, two reviewed-label-only human Pol gamma constituent
+    rows, Eukaryota scope and a human canonical example, mitochondrial-DNA-replication
+    function evidence, GO/PubMed evidence, a nonmechanistic function graph, a subunit-grounding
+    TODO, and a resolved discussion for modeling the homodimeric accessory subunit
+    as one component class.
+  llm_assisted: true
+parent_structures:
+- GO:0042575
+- GO:0098798
+part_of:
+- GO:0005759
+components:
+- component_id: pol_gamma_catalytic_subunit
+  label: DNA polymerase gamma catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - POLG
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DNA polymerase gamma catalytic subunit is modeled as a constituent
+    class of the eukaryotic gamma DNA polymerase complex; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProtKB family CURIE was curated in this pass.
+  role: Catalytic DNA polymerase gamma constituent that carries the polymerase and
+    exonuclease activities of the mitochondrial DNA polymerase.
+  evidence:
+  - reference: GO:0005760
+    notes: GO:0005760 defines the gamma DNA polymerase complex as a large catalytic
+      subunit and a small accessory subunit that function in mitochondrial DNA replication
+      and repair.
+  - reference: PMID:10608893
+    notes: Lim et al. reconstituted human Hp140 with the p55 accessory subunit as
+      an active DNA polymerase gamma complex.
+- component_id: pol_gamma_accessory_subunit
+  label: DNA polymerase gamma accessory subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - POLG2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DNA polymerase gamma accessory subunit is modeled as a constituent
+    class of the eukaryotic gamma DNA polymerase complex; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProtKB family CURIE was curated in this pass.
+  role: Accessory DNA polymerase gamma constituent that stimulates processive mitochondrial
+    DNA synthesis by the catalytic subunit.
+  evidence:
+  - reference: GO:0005760
+    notes: GO:0005760 defines the gamma DNA polymerase complex as a large catalytic
+      subunit and a small accessory subunit that function in mitochondrial DNA replication
+      and repair.
+  - reference: PMID:10608893
+    notes: Lim et al. showed that human p55 forms a stable complex with the p140 catalytic
+      subunit and enhances DNA binding and processive DNA synthesis.
+  - reference: PMID:11172710
+    notes: Carrodeguas et al. showed that mammalian Pol gamma B, the accessory subunit
+      of DNA polymerase gamma, functions as a homodimer.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: GO:0005760 defines the gamma DNA polymerase complex and constrains the cellular-component
+    term to Eukaryota.
+  reference: GO:0005760
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Reference mammalian system in which the p55 accessory subunit was cloned and
+    reconstituted with the p140 DNA polymerase gamma catalytic subunit.
+  reference: PMID:10608893
+functions:
+- function_id: mitochondrial_dna_replication
+  label: mitochondrial DNA replication
+  grounding: GO:0006264
+  description: The gamma DNA polymerase complex supports synthesis of new mitochondrial
+    DNA strands.
+  evidence:
+  - reference: GO:0005760
+    notes: GO:0005760 defines the gamma DNA polymerase complex as functioning in mitochondrial
+      DNA replication.
+  - reference: GO:0006264
+    notes: GO:0006264 is the Gene Ontology biological-process term for mitochondrial
+      DNA replication.
+  - reference: PMID:10608893
+    notes: Lim et al. connected the human catalytic and p55 accessory subunits to
+      DNA polymerase gamma forms that act in mitochondrial DNA repair and replication.
+evidence:
+- reference: GO:0005760
+  notes: Gene Ontology cellular-component term for the gamma DNA polymerase complex.
+- reference: GO:0042575
+  notes: Gene Ontology cellular-component parent term for DNA polymerase complexes.
+- reference: GO:0098798
+  notes: Gene Ontology cellular-component parent term for mitochondrial protein-containing
+    complexes.
+- reference: GO:0005759
+  notes: Gene Ontology cellular-component term for the mitochondrial matrix; GO:0005760
+    is part of this term.
+- reference: GO:0006264
+  notes: Gene Ontology biological-process term for mitochondrial DNA replication.
+- reference: PMID:12045093
+  notes: PubMed record for Hubscher et al. 2002, the eukaryotic DNA polymerases review
+    cited by GO:0005760.
+- reference: PMID:10608893
+  notes: PubMed record for Lim et al. 1999, the JBC paper that cloned the human p55
+    DNA polymerase gamma accessory subunit and reconstituted it with the p140 catalytic
+    subunit.
+- reference: PMID:11172710
+  notes: PubMed record for Carrodeguas et al. 2001, the Molecular Cell paper showing
+    that mammalian Pol gamma B functions as a homodimer.
+causal_graphs:
+- graph_id: pol_gamma_supports_mtdna_replication
+  title: DNA polymerase gamma supports mitochondrial DNA replication
+  description: The DNA polymerase gamma catalytic and accessory subunits form a mitochondrial
+    polymerase complex that supports mitochondrial DNA replication.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records Pol gamma composition and mitochondrial-DNA-replication
+    output without resolving DNA binding, exonuclease proofreading, accessory-subunit
+    dimerization surfaces, or repair-pathway mechanisms.
+  nodes:
+  - node_id: pol_gamma_catalytic_subunit
+    label: DNA polymerase gamma catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pol_gamma_catalytic_subunit
+  - node_id: pol_gamma_accessory_subunit
+    label: DNA polymerase gamma accessory subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pol_gamma_accessory_subunit
+  - node_id: gamma_dna_polymerase_complex
+    label: gamma DNA polymerase complex
+    node_type: STRUCTURE
+    grounding: GO:0005760
+  - node_id: mitochondrial_dna_replication
+    label: mitochondrial DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006264
+  edges:
+  - subject: pol_gamma_catalytic_subunit
+    predicate: contributes to
+    object: gamma_dna_polymerase_complex
+    description: DNA polymerase gamma catalytic subunit is a constituent of the gamma
+      DNA polymerase complex.
+    evidence:
+    - reference: GO:0005760
+      notes: GO:0005760 defines the gamma DNA polymerase complex as a large catalytic
+        subunit and a small accessory subunit that function in mitochondrial DNA replication
+        and repair.
+    - reference: PMID:10608893
+      notes: Lim et al. reconstituted human Hp140 with the p55 accessory subunit as
+        an active DNA polymerase gamma complex.
+  - subject: pol_gamma_accessory_subunit
+    predicate: contributes to
+    object: gamma_dna_polymerase_complex
+    description: DNA polymerase gamma accessory subunit is a constituent of the gamma
+      DNA polymerase complex.
+    evidence:
+    - reference: GO:0005760
+      notes: GO:0005760 defines the gamma DNA polymerase complex as a large catalytic
+        subunit and a small accessory subunit that function in mitochondrial DNA replication
+        and repair.
+    - reference: PMID:10608893
+      notes: Lim et al. showed that human p55 forms a stable complex with the p140
+        catalytic subunit.
+    - reference: PMID:11172710
+      notes: Carrodeguas et al. showed that mammalian Pol gamma B, the accessory subunit
+        of DNA polymerase gamma, functions as a homodimer.
+  - subject: gamma_dna_polymerase_complex
+    predicate: supports
+    object: mitochondrial_dna_replication
+    description: The gamma DNA polymerase complex supports mitochondrial DNA replication.
+    evidence:
+    - reference: GO:0005760
+      notes: GO:0005760 defines the complex as functioning in mitochondrial DNA replication.
+    - reference: GO:0006264
+      notes: GO:0006264 defines mitochondrial DNA replication.
+discussions:
+- discussion_id: resolve_pol_gamma_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the DNA polymerase gamma
+    catalytic and accessory subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pol_gamma_catalytic_subunit
+  - components#pol_gamma_accessory_subunit
+  rationale: GO:0005760 exactly identifies the gamma DNA polymerase complex and primary
+    human and mammalian evidence directly supports the catalytic and accessory subunit
+    classes, but exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family
+    CURIEs were not curated in this pass.
+  evidence:
+  - reference: GO:0005760
+    notes: GO:0005760 defines the gamma DNA polymerase complex as a large catalytic
+      subunit and a small accessory subunit that function in mitochondrial DNA replication
+      and repair.
+  - reference: PMID:10608893
+    notes: Lim et al. reconstituted human DNA polymerase gamma from catalytic p140
+      and accessory p55 subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'
+- discussion_id: model_accessory_subunit_homodimer
+  prompt: Represent the homodimeric mammalian Pol gamma B accessory subunit as a single
+    accessory-subunit class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#pol_gamma_accessory_subunit
+  rationale: GO:0005760 names a large catalytic subunit and a small accessory subunit;
+    mammalian structural evidence shows that the accessory subunit functions as a
+    homodimer. The component list models molecular classes, so the accessory subunit
+    remains a single component class rather than two duplicate component rows.
+  evidence:
+  - reference: GO:0005760
+    notes: GO:0005760 defines the gamma DNA polymerase complex as a large catalytic
+      subunit and a small accessory subunit that function in mitochondrial DNA replication
+      and repair.
+  - reference: PMID:11172710
+    notes: Carrodeguas et al. showed that mammalian Pol gamma B, the accessory subunit
+      of DNA polymerase gamma, functions as a homodimer.
+  resolution_note: The component list includes one accessory-subunit class; the p55/POLG2
+    copy number can be added later as a taxon-specific complex composition or stoichiometry
+    detail.
+  posed_by: codex
+  posed_date: '2026-09-27'

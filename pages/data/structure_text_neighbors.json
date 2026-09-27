@@ -11359,6 +11359,11 @@
       "label": "alpha DNA polymerase:primase complex",
       "neighbors": [
         {
+          "identifier": "GO:0005760",
+          "label": "gamma DNA polymerase complex",
+          "cosine_similarity": 0.80058088
+        },
+        {
           "identifier": "GO:0009360",
           "label": "DNA polymerase III complex",
           "cosine_similarity": 0.79483778
@@ -11377,11 +11382,6 @@
           "identifier": "GO:0016035",
           "label": "zeta DNA polymerase complex",
           "cosine_similarity": 0.77051677
-        },
-        {
-          "identifier": "GO:0005663",
-          "label": "DNA replication factor C complex",
-          "cosine_similarity": 0.76487576
         }
       ]
     },
@@ -12552,14 +12552,14 @@
           "cosine_similarity": 0.8044557
         },
         {
+          "identifier": "GO:0005760",
+          "label": "gamma DNA polymerase complex",
+          "cosine_similarity": 0.80185924
+        },
+        {
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
           "cosine_similarity": 0.79264471
-        },
-        {
-          "identifier": "GO:0005663",
-          "label": "DNA replication factor C complex",
-          "cosine_similarity": 0.79018547
         }
       ]
     },
@@ -12567,6 +12567,11 @@
       "identifier": "GO:0120217",
       "label": "DNA gyrase complex",
       "neighbors": [
+        {
+          "identifier": "GO:0005760",
+          "label": "gamma DNA polymerase complex",
+          "cosine_similarity": 0.71263955
+        },
         {
           "identifier": "GO:0009340",
           "label": "DNA topoisomerase IV complex",
@@ -12586,11 +12591,6 @@
           "identifier": "GO:0032299",
           "label": "ribonuclease H2 complex",
           "cosine_similarity": 0.68499558
-        },
-        {
-          "identifier": "GO:0000148",
-          "label": "1,3-beta-D-glucan synthase complex",
-          "cosine_similarity": 0.67564253
         }
       ]
     },
@@ -12609,6 +12609,11 @@
           "cosine_similarity": 0.79483778
         },
         {
+          "identifier": "GO:0005760",
+          "label": "gamma DNA polymerase complex",
+          "cosine_similarity": 0.77356556
+        },
+        {
           "identifier": "GO:0016035",
           "label": "zeta DNA polymerase complex",
           "cosine_similarity": 0.77245507
@@ -12617,11 +12622,6 @@
           "identifier": "GO:0008622",
           "label": "epsilon DNA polymerase complex",
           "cosine_similarity": 0.74895954
-        },
-        {
-          "identifier": "GO:0005663",
-          "label": "DNA replication factor C complex",
-          "cosine_similarity": 0.74103067
         }
       ]
     },
@@ -12650,9 +12650,9 @@
           "cosine_similarity": 0.73815525
         },
         {
-          "identifier": "GO:0005664",
-          "label": "nuclear origin of replication recognition complex",
-          "cosine_similarity": 0.72648071
+          "identifier": "GO:0005760",
+          "label": "gamma DNA polymerase complex",
+          "cosine_similarity": 0.73323303
         }
       ]
     },
@@ -13304,6 +13304,37 @@
           "identifier": "GO:0031533",
           "label": "mRNA capping enzyme complex",
           "cosine_similarity": 0.80363957
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005760",
+      "label": "gamma DNA polymerase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0043625",
+          "label": "delta DNA polymerase complex",
+          "cosine_similarity": 0.80185924
+        },
+        {
+          "identifier": "GO:0005658",
+          "label": "alpha DNA polymerase:primase complex",
+          "cosine_similarity": 0.80058088
+        },
+        {
+          "identifier": "GO:0009360",
+          "label": "DNA polymerase III complex",
+          "cosine_similarity": 0.77356556
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.76768518
+        },
+        {
+          "identifier": "GO:0016035",
+          "label": "zeta DNA polymerase complex",
+          "cosine_similarity": 0.76524429
         }
       ]
     },
