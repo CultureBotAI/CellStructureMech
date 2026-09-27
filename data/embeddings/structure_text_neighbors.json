@@ -12867,9 +12867,9 @@
           "cosine_similarity": 0.80315648
         },
         {
-          "identifier": "GO:0070211",
-          "label": "Snt2C complex",
-          "cosine_similarity": 0.79323154
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.79629068
         }
       ]
     },
@@ -13074,6 +13074,11 @@
           "cosine_similarity": 0.83388535
         },
         {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.77334348
+        },
+        {
           "identifier": "GO:0032221",
           "label": "Rpd3S complex",
           "cosine_similarity": 0.76755606
@@ -13082,11 +13087,6 @@
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.75465546
-        },
-        {
-          "identifier": "GO:0070210",
-          "label": "Rpd3L-Expanded complex",
-          "cosine_similarity": 0.75097165
         }
       ]
     },
@@ -13115,9 +13115,9 @@
           "cosine_similarity": 0.75858001
         },
         {
-          "identifier": "GO:0000812",
-          "label": "Swr1 complex",
-          "cosine_similarity": 0.74894023
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.75747499
         }
       ]
     },
@@ -13637,14 +13637,14 @@
           "cosine_similarity": 0.79711346
         },
         {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.79236827
+        },
+        {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.75393997
-        },
-        {
-          "identifier": "GO:0000112",
-          "label": "nucleotide-excision repair factor 3 complex",
-          "cosine_similarity": 0.74542668
         }
       ]
     },
@@ -13663,6 +13663,11 @@
           "cosine_similarity": 0.93100968
         },
         {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.77731581
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.75299812
@@ -13671,11 +13676,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.75282193
-        },
-        {
-          "identifier": "GO:0031205",
-          "label": "endoplasmic reticulum Sec complex",
-          "cosine_similarity": 0.75105846
         }
       ]
     },
@@ -13694,6 +13694,11 @@
           "cosine_similarity": 0.91685993
         },
         {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.77582769
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.7686566
@@ -13702,11 +13707,6 @@
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.76519334
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.75588951
         }
       ]
     },
@@ -13835,9 +13835,45 @@
       ]
     },
     {
+      "identifier": "GO:1990467",
+      "label": "NuA3a histone acetyltransferase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.87746347
+        },
+        {
+          "identifier": "GO:0034967",
+          "label": "Set3 complex",
+          "cosine_similarity": 0.81665429
+        },
+        {
+          "identifier": "GO:0032221",
+          "label": "Rpd3S complex",
+          "cosine_similarity": 0.81663619
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.79629068
+        },
+        {
+          "identifier": "GO:0000112",
+          "label": "nucleotide-excision repair factor 3 complex",
+          "cosine_similarity": 0.79446976
+        }
+      ]
+    },
+    {
       "identifier": "GO:0035267",
       "label": "NuA4 histone acetyltransferase complex",
       "neighbors": [
+        {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.87746347
+        },
         {
           "identifier": "GO:0000124",
           "label": "SAGA complex",
@@ -13857,11 +13893,6 @@
           "identifier": "GO:0000113",
           "label": "nucleotide-excision repair factor 4 complex",
           "cosine_similarity": 0.77700035
-        },
-        {
-          "identifier": "GO:0031417",
-          "label": "NatC complex",
-          "cosine_similarity": 0.7686566
         }
       ]
     },
@@ -14226,14 +14257,14 @@
           "cosine_similarity": 0.91474642
         },
         {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.79446976
+        },
+        {
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.77973442
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.77954575
         }
       ]
     },
@@ -14877,14 +14908,14 @@
           "cosine_similarity": 0.78747576
         },
         {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.78570229
+        },
+        {
           "identifier": "GO:0070211",
           "label": "Snt2C complex",
           "cosine_similarity": 0.75717333
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.75065353
         }
       ]
     },
@@ -14913,9 +14944,9 @@
           "cosine_similarity": 0.79919428
         },
         {
-          "identifier": "GO:0070823",
-          "label": "HDA1 complex",
-          "cosine_similarity": 0.75097165
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.76165347
         }
       ]
     },
@@ -14944,9 +14975,9 @@
           "cosine_similarity": 0.83070899
         },
         {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.7915505
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.81663619
         }
       ]
     },
@@ -14991,6 +15022,11 @@
           "cosine_similarity": 0.80167998
         },
         {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.77045991
+        },
+        {
           "identifier": "GO:0070211",
           "label": "Snt2C complex",
           "cosine_similarity": 0.75108082
@@ -15004,11 +15040,6 @@
           "identifier": "GO:0048188",
           "label": "Set1C/COMPASS complex",
           "cosine_similarity": 0.73728001
-        },
-        {
-          "identifier": "GO:0016514",
-          "label": "SWI/SNF complex",
-          "cosine_similarity": 0.73717444
         }
       ]
     },
@@ -15053,6 +15084,11 @@
           "cosine_similarity": 0.77759153
         },
         {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.75375608
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.74079266
@@ -15066,11 +15102,6 @@
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.72281432
-        },
-        {
-          "identifier": "GO:0031416",
-          "label": "NatB complex",
-          "cosine_similarity": 0.72143685
         }
       ]
     },
@@ -15177,6 +15208,11 @@
           "cosine_similarity": 0.78417339
         },
         {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.78326295
+        },
+        {
           "identifier": "GO:0008623",
           "label": "CHRAC",
           "cosine_similarity": 0.78046599
@@ -15190,11 +15226,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.77066018
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.77021889
         }
       ]
     },
@@ -15223,9 +15254,9 @@
           "cosine_similarity": 0.83688246
         },
         {
-          "identifier": "GO:0033698",
-          "label": "Rpd3L complex",
-          "cosine_similarity": 0.78747576
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.81665429
         }
       ]
     },
