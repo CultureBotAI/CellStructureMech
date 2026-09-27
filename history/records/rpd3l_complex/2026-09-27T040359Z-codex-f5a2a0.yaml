@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/rpd3l_complex.yaml
+  slug: rpd3l_complex
+session:
+  id: 2026-09-27T040359Z-codex-f5a2a0
+  timestamp: '2026-09-27T04:03:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Rpd3L complex record
+  details: Created data/structures/other/rpd3l_complex.yaml as a GO:0033698-backed Rpd3L complex
+    record with GO exact synonyms, GO:0070822 parentage, chromatin and nuclear-chromosome
+    parthood, twelve GO/SGD-supported Saccharomyces cerevisiae constituent rows, GO:0004407
+    histone deacetylase activity, PubMed/DOI evidence from Carrozza et al. 2005 and Keogh
+    et al. 2005, a nonmechanistic function graph, and an open family-grounding TODO.

@@ -14858,9 +14858,45 @@
       ]
     },
     {
+      "identifier": "GO:0033698",
+      "label": "Rpd3L complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0032221",
+          "label": "Rpd3S complex",
+          "cosine_similarity": 0.93394588
+        },
+        {
+          "identifier": "GO:0070210",
+          "label": "Rpd3L-Expanded complex",
+          "cosine_similarity": 0.89579429
+        },
+        {
+          "identifier": "GO:0034967",
+          "label": "Set3 complex",
+          "cosine_similarity": 0.78747576
+        },
+        {
+          "identifier": "GO:0070211",
+          "label": "Snt2C complex",
+          "cosine_similarity": 0.75717333
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.75065353
+        }
+      ]
+    },
+    {
       "identifier": "GO:0070210",
       "label": "Rpd3L-Expanded complex",
       "neighbors": [
+        {
+          "identifier": "GO:0033698",
+          "label": "Rpd3L complex",
+          "cosine_similarity": 0.89579429
+        },
         {
           "identifier": "GO:0032221",
           "label": "Rpd3S complex",
@@ -14880,11 +14916,6 @@
           "identifier": "GO:0070823",
           "label": "HDA1 complex",
           "cosine_similarity": 0.75097165
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.71567073
         }
       ]
     },
@@ -14892,6 +14923,11 @@
       "identifier": "GO:0032221",
       "label": "Rpd3S complex",
       "neighbors": [
+        {
+          "identifier": "GO:0033698",
+          "label": "Rpd3L complex",
+          "cosine_similarity": 0.93394588
+        },
         {
           "identifier": "GO:0070210",
           "label": "Rpd3L-Expanded complex",
@@ -14911,11 +14947,6 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.7915505
-        },
-        {
-          "identifier": "GO:0070823",
-          "label": "HDA1 complex",
-          "cosine_similarity": 0.76755606
         }
       ]
     },
@@ -15161,9 +15192,9 @@
           "cosine_similarity": 0.83688246
         },
         {
-          "identifier": "GO:0070824",
-          "label": "SHREC complex",
-          "cosine_similarity": 0.7774188
+          "identifier": "GO:0033698",
+          "label": "Rpd3L complex",
+          "cosine_similarity": 0.78747576
         }
       ]
     },

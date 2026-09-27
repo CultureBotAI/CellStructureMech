@@ -4311,6 +4311,15 @@
   "definition": "A protein complex which is capable of ribonuclease III activity."
  },
  {
+  "identifier": "GO:0033698",
+  "label": "Rpd3L complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/rpd3l_complex.html",
+  "definition": "A histone deacetylase complex which deacetylates histones preferentially in promoter regions. Composed of a two copies of catalytic histone deacetylase subunit (S. pombe Clr6/ S. cerevisiae Rpd3p), an Sds-3 family protein (S. pombe /S. cerevisiae Sds3(p) ), two copies of SIN3 family co-repressor (S. pombe Pst1/ S. cerevisiae Sin3p, a WD repeat protein/ histone chaperone (S. pombe Prw1/ S. cerevisiae Ume1p), and a zf- PHD finger ( S. pombe Png2/ S. cerevisiae Pho23p), plus 4 additional subunits, and associated factors."
+ },
+ {
   "identifier": "GO:0070210",
   "label": "Rpd3L-Expanded complex",
   "category": "OTHER",
