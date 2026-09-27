@@ -1,0 +1,624 @@
+identifier: GO:0031011
+label: Ino80 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multisubunit protein complex that contains the Ino80p ATPase; exhibits
+  chromatin remodeling activity.
+definition_source: GO:0031011
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T01:24:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T01:27:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added INO80 exact synonymy, INO80-type parentage, nuclear-chromosome parthood,
+    15 budding-yeast constituent rows, yeast scope, chromatin-remodeling function,
+    GO/PubMed/DOI evidence, a nonmechanistic function graph, and a subunit-grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: INO80 chromatin remodeling complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031011
+- synonym_text: INO80-C
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/ncomms8108
+- synonym_text: Ino80.com
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.molcel.2004.09.033
+parent_structures:
+- GO:0097346
+part_of:
+- GO:0000228
+components:
+- component_id: ino80_ino80c_atpase_subunit
+  label: Ino80 INO80-C ATPase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - INO80
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Ino80 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Snf2-family ATPase constituent and scaffold of the budding-yeast INO80 chromatin
+    remodeling complex.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: rvb1_ino80c_head_subunit
+  label: Rvb1 INO80-C head subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RVB1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Rvb1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: RuvB-like AAA+ ATPase constituent of the INO80-C Rvb1/Rvb2 head module.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: rvb2_ino80c_head_subunit
+  label: Rvb2 INO80-C head subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RVB2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Rvb2 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: RuvB-like AAA+ ATPase constituent of the INO80-C Rvb1/Rvb2 head module.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: ies5_ino80c_subunit
+  label: Ies5 INO80-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IES5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Ies5 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast INO80 chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: ies3_ino80c_nhp10_module_subunit
+  label: Ies3 INO80-C Nhp10 module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IES3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Ies3 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Protein constituent associated with the INO80-C Nhp10 nucleosome-binding module.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: nhp10_ino80c_nhp10_module_subunit
+  label: Nhp10 INO80-C Nhp10 module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NHP10
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Nhp10 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Protein constituent of the high-affinity nucleosome-binding Nhp10 module.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: ies6_ino80c_arp5_module_subunit
+  label: Ies6 INO80-C Arp5 module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IES6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Ies6 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Protein constituent of the Arp5-Ies6 module required for INO80-C remodeling.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: ies1_ino80c_subunit
+  label: Ies1 INO80-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IES1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Ies1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast INO80 chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: arp8_ino80c_arp8_module_subunit
+  label: Arp8 INO80-C Arp8 module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARP8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Arp8 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Actin-related-protein constituent of the INO80-C Arp8/Arp4/Act1 module.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: arp4_ino80c_arp8_module_subunit
+  label: Arp4 INO80-C Arp8 module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARP4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Arp4 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Actin-related-protein constituent of the INO80-C Arp8/Arp4/Act1 module.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: act1_ino80c_actin_constituent
+  label: Act1 INO80-C actin constituent
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ACT1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Act1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Actin constituent of the INO80-C Arp8/Arp4/Act1 module.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: taf14_ino80c_subunit
+  label: Taf14 INO80-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAF14
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Taf14 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast INO80 chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: ies2_ino80c_neck_subunit
+  label: Ies2 INO80-C neck subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IES2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Ies2 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Protein constituent that maps near the INO80-C neck with the Arp5 module.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: ies4_ino80c_subunit
+  label: Ies4 INO80-C subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IES4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Ies4 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Protein constituent of the budding-yeast INO80 chromatin remodeling complex.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+- component_id: arp5_ino80c_arp5_module_subunit
+  label: Arp5 INO80-C Arp5 module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARP5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast INO80-C structural literature follows Arp5 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this INO80-C subunit class was curated in this pass.
+  role: Actin-related-protein constituent of the Arp5-Ies6 module required for INO80-C
+    remodeling.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
+      Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
+      independent TAP-tagged purifications.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the source organism for the original INO80 purification and
+    for the 15-subunit INO80-C mass spectrometry preparations.
+  reference: DOI:10.1038/ncomms8108
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Shen et al. 2000 purified the budding-yeast Ino80 ATPase complex and showed
+    that the complex remodels chromatin in vitro.
+  reference: DOI:10.1038/35020123
+functions:
+- function_id: chromatin_remodeling
+  label: chromatin remodeling
+  grounding: GO:0006338
+  description: The Ino80 complex is an ATP-dependent INO80-type chromatin-remodeling
+    complex.
+  evidence:
+  - reference: GO:0006338
+    notes: GO:0006338 is the Gene Ontology biological-process term for chromatin remodeling.
+  - reference: DOI:10.1038/35020123
+    notes: Shen et al. 2000 purified the budding-yeast Ino80 ATPase complex and assayed
+      its chromatin-remodeling activity.
+evidence:
+- reference: GO:0031011
+  notes: Gene Ontology cellular-component term for the Ino80 complex and its exact
+    INO80 chromatin remodeling complex synonym.
+- reference: GO:0097346
+  notes: Gene Ontology cellular-component parent term for INO80-type complexes.
+- reference: GO:0000228
+  notes: Gene Ontology cellular-component term for the nuclear chromosome.
+- reference: GO:0006338
+  notes: Gene Ontology biological-process term for chromatin remodeling.
+- reference: PMID:10952318
+  notes: PubMed identifier for Shen et al. 2000, the Nature paper that first purified
+    the budding-yeast INO80 complex.
+- reference: DOI:10.1038/35020123
+  notes: DOI for Shen et al. 2000, 'A chromatin remodelling complex involved in transcription
+    and DNA processing', verified through NCBI E-utilities.
+- reference: PMID:12887900
+  notes: PubMed identifier for Shen et al. 2003, the Molecular Cell paper that defined
+    Arp4, Arp5, Arp8 and Act1 as stoichiometric INO80 constituents.
+- reference: DOI:10.1016/s1097-2765(03)00264-8
+  notes: DOI for Shen et al. 2003, 'Involvement of actin-related proteins in ATP-dependent
+    chromatin remodeling', verified through NCBI E-utilities.
+- reference: PMID:15525518
+  notes: PubMed identifier for Jonsson et al. 2004, the Molecular Cell paper on Rvb1p/Rvb2p
+    recruitment of Arp5p into Ino80.com.
+- reference: DOI:10.1016/j.molcel.2004.09.033
+  notes: DOI for Jonsson et al. 2004, 'Rvb1p/Rvb2p recruit Arp5p and assemble a functional
+    Ino80 chromatin remodeling complex', verified through NCBI E-utilities.
+- reference: PMID:19355820
+  notes: PubMed identifier for Clapier and Cairns 2009, the Annual Review of Biochemistry
+    chromatin-remodeling review cited by GO:0031011 and GO:0097346.
+- reference: DOI:10.1146/annurev.biochem.77.062706.153223
+  notes: DOI for Clapier and Cairns 2009, 'The biology of chromatin remodeling complexes',
+    verified through NCBI E-utilities.
+- reference: PMID:24034245
+  notes: PubMed identifier for Tosi et al. 2013, the Cell paper on yeast INO80 complex
+    structure and subunit topology.
+- reference: DOI:10.1016/j.cell.2013.08.016
+  notes: DOI for Tosi et al. 2013, 'Structure and subunit topology of the INO80 chromatin
+    remodeler and its nucleosome complex', verified through NCBI E-utilities.
+- reference: PMID:25964121
+  notes: PubMed identifier for Watanabe et al. 2015, the Nature Communications structural
+    analysis with INO80-C mass spectrometry stoichiometry.
+- reference: DOI:10.1038/ncomms8108
+  notes: DOI for Watanabe et al. 2015, 'Structural analyses of the chromatin remodelling
+    enzymes INO80-C and SWR-C', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_ino80_chromatin_remodeling
+  title: INO80-C carries yeast chromatin remodeling
+  description: In Saccharomyces cerevisiae, Ino80, Rvb1, Rvb2, Ies5, Ies3, Nhp10,
+    Ies6, Ies1, Arp8, Arp4, Act1, Taf14, Ies2, Ies4 and Arp5 form the INO80-C chromatin-remodeling
+    complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the 15 INO80-C constituent classes and their connection
+    to ATP-dependent chromatin remodeling without resolving the ordered assembly pathway
+    or the nucleosome-engagement cycle.
+  nodes:
+  - node_id: ino80_ino80c_atpase_subunit
+    label: Ino80 INO80-C ATPase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ino80_ino80c_atpase_subunit
+  - node_id: rvb1_ino80c_head_subunit
+    label: Rvb1 INO80-C head subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rvb1_ino80c_head_subunit
+  - node_id: rvb2_ino80c_head_subunit
+    label: Rvb2 INO80-C head subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rvb2_ino80c_head_subunit
+  - node_id: ies5_ino80c_subunit
+    label: Ies5 INO80-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ies5_ino80c_subunit
+  - node_id: ies3_ino80c_nhp10_module_subunit
+    label: Ies3 INO80-C Nhp10 module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ies3_ino80c_nhp10_module_subunit
+  - node_id: nhp10_ino80c_nhp10_module_subunit
+    label: Nhp10 INO80-C Nhp10 module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: nhp10_ino80c_nhp10_module_subunit
+  - node_id: ies6_ino80c_arp5_module_subunit
+    label: Ies6 INO80-C Arp5 module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ies6_ino80c_arp5_module_subunit
+  - node_id: ies1_ino80c_subunit
+    label: Ies1 INO80-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ies1_ino80c_subunit
+  - node_id: arp8_ino80c_arp8_module_subunit
+    label: Arp8 INO80-C Arp8 module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: arp8_ino80c_arp8_module_subunit
+  - node_id: arp4_ino80c_arp8_module_subunit
+    label: Arp4 INO80-C Arp8 module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: arp4_ino80c_arp8_module_subunit
+  - node_id: act1_ino80c_actin_constituent
+    label: Act1 INO80-C actin constituent
+    node_type: GENE_OR_PROTEIN
+    component_ref: act1_ino80c_actin_constituent
+  - node_id: taf14_ino80c_subunit
+    label: Taf14 INO80-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: taf14_ino80c_subunit
+  - node_id: ies2_ino80c_neck_subunit
+    label: Ies2 INO80-C neck subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ies2_ino80c_neck_subunit
+  - node_id: ies4_ino80c_subunit
+    label: Ies4 INO80-C subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ies4_ino80c_subunit
+  - node_id: arp5_ino80c_arp5_module_subunit
+    label: Arp5 INO80-C Arp5 module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: arp5_ino80c_arp5_module_subunit
+  - node_id: ino80_complex
+    label: Ino80 complex
+    node_type: STRUCTURE
+    grounding: GO:0031011
+  - node_id: chromatin_remodeling
+    label: chromatin remodeling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006338
+  edges:
+  - subject: ino80_ino80c_atpase_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Ino80 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: rvb1_ino80c_head_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Rvb1 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: rvb2_ino80c_head_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Rvb2 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: ies5_ino80c_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Ies5 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: ies3_ino80c_nhp10_module_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Ies3 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: nhp10_ino80c_nhp10_module_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Nhp10 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: ies6_ino80c_arp5_module_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Ies6 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: ies1_ino80c_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Ies1 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: arp8_ino80c_arp8_module_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Arp8 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: arp4_ino80c_arp8_module_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Arp4 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: act1_ino80c_actin_constituent
+    predicate: contributes to
+    object: ino80_complex
+    description: Act1 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: taf14_ino80c_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Taf14 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: ies2_ino80c_neck_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Ies2 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: ies4_ino80c_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Ies4 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: arp5_ino80c_arp5_module_subunit
+    predicate: contributes to
+    object: ino80_complex
+    description: Arp5 is a constituent of the 15-subunit budding-yeast INO80-C chromatin
+      remodeling complex.
+    evidence:
+    - reference: DOI:10.1038/ncomms8108
+      notes: Watanabe et al. 2015 Supplementary Table 2 lists this protein among the
+        purified yeast INO80-C subunits.
+  - subject: ino80_complex
+    predicate: enables
+    object: chromatin_remodeling
+    description: The purified budding-yeast Ino80 ATPase complex remodels chromatin.
+    evidence:
+    - reference: DOI:10.1038/35020123
+      notes: Shen et al. 2000 purified the Ino80 complex from Saccharomyces cerevisiae
+        and assayed its chromatin-remodeling activity.
+    - reference: GO:0006338
+      notes: GO:0006338 lists GO:0031011 as a cellular component capable of chromatin
+        remodeling.
+discussions:
+- discussion_id: ino80c_subunit_grounding
+  prompt: Curate exact source-neutral InterPro, Pfam, NCBIfam or UniProt family groundings
+    for the 15 INO80-C subunit classes when terms that denote the component classes,
+    rather than broader domains, can be verified.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ino80_ino80c_atpase_subunit
+  - components#rvb1_ino80c_head_subunit
+  - components#rvb2_ino80c_head_subunit
+  - components#ies5_ino80c_subunit
+  - components#ies3_ino80c_nhp10_module_subunit
+  - components#nhp10_ino80c_nhp10_module_subunit
+  - components#ies6_ino80c_arp5_module_subunit
+  - components#ies1_ino80c_subunit
+  - components#arp8_ino80c_arp8_module_subunit
+  - components#arp4_ino80c_arp8_module_subunit
+  - components#act1_ino80c_actin_constituent
+  - components#taf14_ino80c_subunit
+  - components#ies2_ino80c_neck_subunit
+  - components#ies4_ino80c_subunit
+  - components#arp5_ino80c_arp5_module_subunit
+  rationale: Several INO80-C constituents are shared with SWR-C or other transcription
+    and chromatin complexes. Exact groundings should distinguish INO80-C component
+    classes from broader ATPase, actin-related protein, actin, or YEATS domain families.
+  evidence:
+  - reference: DOI:10.1038/ncomms8108
+    notes: Watanabe et al. 2015 measured the purified Saccharomyces cerevisiae INO80-C
+      subunit set.
+  posed_by: codex
+  posed_date: '2026-09-26'

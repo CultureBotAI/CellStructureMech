@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ino80_complex.yaml
+  slug: ino80_complex
+session:
+  id: 2026-09-27T012846Z-codex-26e3d2
+  timestamp: '2026-09-27T01:28:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Ino80 complex record
+  details: Created the GO:0031011 Ino80 complex record with the GO exact synonym, INO80-C
+    and Ino80.com literature synonyms, INO80-type parentage, nuclear chromosome parthood,
+    15 Saccharomyces cerevisiae constituent rows curated from yeast INO80-C mass-spectrometry
+    and structural literature, yeast taxonomic scope and canonical example, chromatin-remodeling
+    function evidence, a nonmechanistic function graph, and an open TODO for exact source-neutral
+    subunit-family groundings.
