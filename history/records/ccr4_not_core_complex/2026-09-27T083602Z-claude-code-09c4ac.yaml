@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ccr4_not_core_complex.yaml
+  slug: ccr4_not_core_complex
+session:
+  id: 2026-09-27T083602Z-claude-code-09c4ac
+  timestamp: '2026-09-27T08:36:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the CCR4-NOT core complex record.
+  details: Created a GO:0030015-grounded CCR4-NOT core complex record with nine Saccharomyces
+    cerevisiae Ccr4/Caf1/Not/Caf constituent proteins, GO/PubMed/DOI provenance, yeast scope,
+    poly(A)-specific ribonuclease and deadenylation-dependent mRNA decay functions, a nonmechanistic
+    function graph, and an open TODO to resolve exact source-neutral subunit family groundings.
