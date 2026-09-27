@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/alpha_dna_polymerase_primase_complex.yaml
+  slug: alpha_dna_polymerase_primase_complex
+session:
+  id: 2026-09-27T181327Z-codex-17741f
+  timestamp: '2026-09-27T18:13:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the alpha DNA polymerase:primase complex record.
+  details: Created data/structures/other/alpha_dna_polymerase_primase_complex.yaml for GO:0005658
+    with GO synonymy and DNA-polymerase-complex parentage, four reviewed-label-only constituent
+    classes, Eukaryota scope, a Saccharomyces cerevisiae canonical example, DNA-replication-primer-synthesis
+    function evidence, GO/PubMed provenance, a nonmechanistic primer-synthesis function graph,
+    and a curation discussion for exact subunit groundings.

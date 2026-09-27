@@ -11355,6 +11355,37 @@
       ]
     },
     {
+      "identifier": "GO:0005658",
+      "label": "alpha DNA polymerase:primase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009360",
+          "label": "DNA polymerase III complex",
+          "cosine_similarity": 0.79483778
+        },
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.76487576
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.74639209
+        },
+        {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.72703773
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.71872468
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030121",
       "label": "AP-1 adaptor complex",
       "neighbors": [
@@ -12511,6 +12542,11 @@
           "cosine_similarity": 0.69423383
         },
         {
+          "identifier": "GO:0005658",
+          "label": "alpha DNA polymerase:primase complex",
+          "cosine_similarity": 0.69234111
+        },
+        {
           "identifier": "GO:0032299",
           "label": "ribonuclease H2 complex",
           "cosine_similarity": 0.68499558
@@ -12524,11 +12560,6 @@
           "identifier": "GO:0042555",
           "label": "MCM complex",
           "cosine_similarity": 0.66725497
-        },
-        {
-          "identifier": "GO:0009338",
-          "label": "exodeoxyribonuclease V complex",
-          "cosine_similarity": 0.6609752
         }
       ]
     },
@@ -12536,6 +12567,11 @@
       "identifier": "GO:0009360",
       "label": "DNA polymerase III complex",
       "neighbors": [
+        {
+          "identifier": "GO:0005658",
+          "label": "alpha DNA polymerase:primase complex",
+          "cosine_similarity": 0.79483778
+        },
         {
           "identifier": "GO:0005663",
           "label": "DNA replication factor C complex",
@@ -12555,11 +12591,6 @@
           "identifier": "GO:0031251",
           "label": "PAN complex",
           "cosine_similarity": 0.69023425
-        },
-        {
-          "identifier": "GO:0042555",
-          "label": "MCM complex",
-          "cosine_similarity": 0.68113466
         }
       ]
     },
@@ -12635,6 +12666,11 @@
           "cosine_similarity": 0.69423383
         },
         {
+          "identifier": "GO:0005658",
+          "label": "alpha DNA polymerase:primase complex",
+          "cosine_similarity": 0.6649098
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.65722201
@@ -12648,11 +12684,6 @@
           "identifier": "GO:0009360",
           "label": "DNA polymerase III complex",
           "cosine_similarity": 0.63940843
-        },
-        {
-          "identifier": "GO:0005839",
-          "label": "proteasome core complex",
-          "cosine_similarity": 0.63678036
         }
       ]
     },
