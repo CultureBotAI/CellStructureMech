@@ -1,0 +1,324 @@
+identifier: GO:0071203
+label: WASH complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that localizes at the surface of endosomes, where it
+  recruits and activates the Arp2/3 complex to induce actin polymerization. In human,
+  the WASH complex is composed of F-actin-capping protein subunits alpha and beta,
+  WASH1, FAM21, KIAA1033, KIAA0196 and CCDC53.
+definition_source: GO:0071203
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T21:05:47Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T21:08:05Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO protein-complex parentage and cytoplasm parthood, reviewed-label-only
+    human WASH-complex components, human and broader eukaryotic taxonomic scope, a
+    GO-grounded actin-polymerization function, GO/DOI evidence, a nonmechanistic Arp2/3
+    activation graph, and a component-grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005737
+components:
+- component_id: wash_npf_subunit
+  label: WASH nucleation-promoting factor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the human WASH subunit purified with the WASH complex;
+    the exact source-neutral family boundary was left unresolved because the human
+    genome contains WASH-family paralogues.
+  role: Nucleation-promoting WASH-complex subunit that activates Arp2/3 on endosomal
+    membranes.
+  evidence:
+  - reference: GO:0071203
+    notes: The GO WASH-complex definition names human WASH1 as a WASH-complex component.
+  - reference: DOI:10.1016/j.devcel.2009.09.010
+    notes: Derivery et al. 2009 purified the human WASH complex and identified WASH
+      as a complex subunit.
+- component_id: fam21_wash_subunit
+  label: FAM21/VPEF WASH-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the human FAM21/VPEF subunit purified with the WASH
+    complex; no exact source-neutral family grounding was asserted in this pass.
+  role: Endosome-associated constituent of the human WASH complex.
+  evidence:
+  - reference: GO:0071203
+    notes: The GO WASH-complex definition names human FAM21 as a WASH-complex component.
+  - reference: DOI:10.1016/j.devcel.2009.09.010
+    notes: Derivery et al. 2009 identified VPEF/FAM21 in affinity purifications of
+      the WASH complex from human cells.
+- component_id: swip_wash_subunit
+  label: SWIP/KIAA1033 WASH-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the human SWIP/KIAA1033 subunit purified with the
+    WASH complex; no exact source-neutral family grounding was asserted in this pass.
+  role: Constituent of the human WASH complex.
+  evidence:
+  - reference: GO:0071203
+    notes: The GO WASH-complex definition names human KIAA1033 as a WASH-complex component.
+  - reference: DOI:10.1016/j.devcel.2009.09.010
+    notes: Derivery et al. 2009 identified KIAA1033 in affinity purifications of the
+      WASH complex from human cells.
+- component_id: strumpellin_wash_subunit
+  label: strumpellin/KIAA0196 WASH-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the human strumpellin/KIAA0196 subunit purified with
+    the WASH complex; no exact source-neutral family grounding was asserted in this
+    pass.
+  role: Constituent of the human WASH complex.
+  evidence:
+  - reference: GO:0071203
+    notes: The GO WASH-complex definition names human KIAA0196 as a WASH-complex component.
+  - reference: DOI:10.1016/j.devcel.2009.09.010
+    notes: Derivery et al. 2009 identified KIAA0196/strumpellin in affinity purifications
+      of the WASH complex from human cells.
+- component_id: ccdc53_wash_subunit
+  label: CCDC53 WASH-complex subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the human CCDC53 subunit purified with the WASH complex;
+    no exact source-neutral family grounding was asserted in this pass.
+  role: Constituent of the human WASH complex.
+  evidence:
+  - reference: GO:0071203
+    notes: The GO WASH-complex definition names human CCDC53 as a WASH-complex component.
+  - reference: DOI:10.1016/j.devcel.2009.09.010
+    notes: Derivery et al. 2009 identified CCDC53 in affinity purifications of the
+      WASH complex from human cells.
+- component_id: f_actin_capping_protein_heterodimer
+  label: F-actin-capping protein heterodimer
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated as the alpha/beta capping-protein heterodimer detected
+    with human WASH; no exact source-neutral complex CURIE was verified in this pass.
+  role: Capping-protein heterodimer associated with the human WASH complex.
+  evidence:
+  - reference: GO:0071203
+    notes: The GO WASH-complex definition includes human F-actin-capping protein alpha
+      and beta subunits in the WASH complex.
+  - reference: DOI:10.1016/j.devcel.2009.09.010
+    notes: Derivery et al. 2009 identified capping-protein alpha and beta subunits
+      in affinity purifications of the WASH complex from human cells.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: COMMON
+  note: The seven-subunit WASH complex was purified from human cells and shown to
+    activate Arp2/3-mediated actin nucleation in vitro.
+  reference: DOI:10.1016/j.devcel.2009.09.010
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: A conservation analysis reported WASH-complex subunits across animals, fungi
+    and amoebae, while noting losses from plants and some fungi.
+  reference: DOI:10.4161/cib.3.3.11185
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Human cells are the model in which Derivery et al. purified the WASH complex
+    and assayed its endosomal localization and Arp2/3 activation.
+  reference: DOI:10.1016/j.devcel.2009.09.010
+functions:
+- function_id: endosomal_actin_filament_polymerization
+  label: actin filament polymerization
+  grounding: GO:0030041
+  description: WASH localizes the WASH complex to endosomes, where the complex activates
+    Arp2/3-mediated actin nucleation.
+  evidence:
+  - reference: GO:0030041
+    notes: GO:0030041 denotes assembly of actin filaments by addition of actin monomers
+      to a filament.
+  - reference: DOI:10.1016/j.devcel.2009.09.010
+    notes: Derivery et al. 2009 found that purified human WASH complex activates Arp2/3-mediated
+      actin nucleation.
+evidence:
+- reference: GO:0071203
+  notes: Gene Ontology cellular-component term for the WASH complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for the cytoplasm, matching the asserted
+    GO parthood of the WASH complex.
+- reference: GO:0005885
+  notes: Gene Ontology cellular-component term for the Arp2/3 protein complex.
+- reference: GO:0030041
+  notes: Gene Ontology biological-process term for actin filament polymerization.
+- reference: DOI:10.1016/j.devcel.2009.09.010
+  notes: Derivery et al. 2009, The Arp2/3 activator WASH controls the fission of endosomes
+    through a large multiprotein complex, Developmental Cell.
+- reference: DOI:10.4161/cib.3.3.11185
+  notes: Derivery and Gautreau 2010, Evolutionary conservation of the WASH complex,
+    an actin polymerization machine involved in endosomal fission, Communicative &
+    Integrative Biology.
+causal_graphs:
+- graph_id: human_wash_endosomal_arp23_activation
+  title: WASH activates Arp2/3-mediated endosomal actin assembly
+  description: In human cells, WASH-complex subunits assemble a WASH complex that
+    localizes to endosomes and activates the Arp2/3 complex to drive actin filament
+    polymerization.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures WASH-complex membership and the endosomal Arp2/3
+    activation relationship without modeling WASH tail-domain autoinhibition, retromer
+    or dynactin recruitment, or dynamin-driven membrane fission.
+  nodes:
+  - node_id: wash_npf_subunit
+    label: WASH nucleation-promoting factor subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: wash_npf_subunit
+  - node_id: fam21_wash_subunit
+    label: FAM21/VPEF WASH-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: fam21_wash_subunit
+  - node_id: swip_wash_subunit
+    label: SWIP/KIAA1033 WASH-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: swip_wash_subunit
+  - node_id: strumpellin_wash_subunit
+    label: strumpellin/KIAA0196 WASH-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: strumpellin_wash_subunit
+  - node_id: ccdc53_wash_subunit
+    label: CCDC53 WASH-complex subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ccdc53_wash_subunit
+  - node_id: f_actin_capping_protein_heterodimer
+    label: F-actin-capping protein heterodimer
+    node_type: GENE_OR_PROTEIN
+    component_ref: f_actin_capping_protein_heterodimer
+  - node_id: wash_complex
+    label: WASH complex
+    node_type: STRUCTURE
+    grounding: GO:0071203
+  - node_id: arp23_protein_complex
+    label: Arp2/3 protein complex
+    node_type: STRUCTURE
+    grounding: GO:0005885
+  - node_id: endosome
+    label: endosome
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005768
+  - node_id: actin_filament_polymerization
+    label: actin filament polymerization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030041
+  edges:
+  - subject: wash_npf_subunit
+    predicate: is part of
+    object: wash_complex
+    description: WASH is represented as a constituent of the human WASH complex.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2009.09.010
+      notes: Derivery et al. 2009 identified WASH in human WASH-complex affinity purifications.
+  - subject: fam21_wash_subunit
+    predicate: is part of
+    object: wash_complex
+    description: FAM21/VPEF is represented as a constituent of the human WASH complex.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2009.09.010
+      notes: Derivery et al. 2009 identified VPEF/FAM21 in human WASH-complex affinity
+        purifications.
+  - subject: swip_wash_subunit
+    predicate: is part of
+    object: wash_complex
+    description: SWIP/KIAA1033 is represented as a constituent of the human WASH complex.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2009.09.010
+      notes: Derivery et al. 2009 identified KIAA1033 in human WASH-complex affinity
+        purifications.
+  - subject: strumpellin_wash_subunit
+    predicate: is part of
+    object: wash_complex
+    description: strumpellin/KIAA0196 is represented as a constituent of the human
+      WASH complex.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2009.09.010
+      notes: Derivery et al. 2009 identified KIAA0196/strumpellin in human WASH-complex
+        affinity purifications.
+  - subject: ccdc53_wash_subunit
+    predicate: is part of
+    object: wash_complex
+    description: CCDC53 is represented as a constituent of the human WASH complex.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2009.09.010
+      notes: Derivery et al. 2009 identified CCDC53 in human WASH-complex affinity
+        purifications.
+  - subject: f_actin_capping_protein_heterodimer
+    predicate: is part of
+    object: wash_complex
+    description: The F-actin-capping protein heterodimer is represented as a constituent
+      of the human WASH complex.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2009.09.010
+      notes: Derivery et al. 2009 identified capping-protein alpha and beta subunits
+        in human WASH-complex affinity purifications.
+  - subject: wash_complex
+    predicate: localizes to
+    object: endosome
+    description: The WASH complex localizes to endosomal membranes in human cells.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2009.09.010
+      notes: Derivery et al. 2009 localized the WASH complex to sorting and recycling
+        endosomes.
+  - subject: wash_complex
+    predicate: activates
+    object: arp23_protein_complex
+    description: Purified human WASH complex activates Arp2/3-mediated actin nucleation.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2009.09.010
+      notes: Derivery et al. 2009 showed that purified WASH complex activates Arp2/3-mediated
+        actin nucleation.
+  - subject: arp23_protein_complex
+    predicate: participates in
+    object: actin_filament_polymerization
+    description: The Arp2/3 protein complex nucleates branched actin filaments in
+      the WASH-dependent endosomal pathway.
+    evidence:
+    - reference: DOI:10.1016/j.devcel.2009.09.010
+      notes: Derivery et al. 2009 placed Arp2/3-mediated actin nucleation downstream
+        of the WASH complex.
+discussions:
+- discussion_id: resolve_wash_complex_subunit_groundings
+  prompt: Resolve exact source-neutral InterPro, Pfam, GO or Complex Portal groundings
+    for the individual WASH-complex subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#wash_npf_subunit
+  - components#fam21_wash_subunit
+  - components#swip_wash_subunit
+  - components#strumpellin_wash_subunit
+  - components#ccdc53_wash_subunit
+  - components#f_actin_capping_protein_heterodimer
+  rationale: This first WASH record preserves the names from the human affinity purification
+    and GO definition without asserting exact family or subcomplex CURIEs across WASH-family
+    paralogues and capping-protein alpha/beta subunits until those identifiers are
+    reviewed directly.
+  evidence:
+  - reference: GO:0071203
+  - reference: DOI:10.1016/j.devcel.2009.09.010
+  - reference: DOI:10.4161/cib.3.3.11185
+  posed_by: codex
+  posed_date: '2026-09-27'
