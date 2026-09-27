@@ -13618,6 +13618,37 @@
       ]
     },
     {
+      "identifier": "GO:0036410",
+      "label": "Mst2 histone acetyltransferase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990468",
+          "label": "NuA3b histone acetyltransferase complex",
+          "cosine_similarity": 0.78982095
+        },
+        {
+          "identifier": "GO:1990467",
+          "label": "NuA3a histone acetyltransferase complex",
+          "cosine_similarity": 0.7844356
+        },
+        {
+          "identifier": "GO:0032777",
+          "label": "piccolo histone acetyltransferase complex",
+          "cosine_similarity": 0.76676489
+        },
+        {
+          "identifier": "GO:0070211",
+          "label": "Snt2C complex",
+          "cosine_similarity": 0.75599853
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.75316888
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031415",
       "label": "NatA complex",
       "neighbors": [
