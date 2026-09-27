@@ -11820,6 +11820,37 @@
       ]
     },
     {
+      "identifier": "GO:0008623",
+      "label": "CHRAC",
+      "neighbors": [
+        {
+          "identifier": "GO:0036437",
+          "label": "Isw1b complex",
+          "cosine_similarity": 0.87768318
+        },
+        {
+          "identifier": "GO:0036436",
+          "label": "Isw1a complex",
+          "cosine_similarity": 0.87679675
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.80315648
+        },
+        {
+          "identifier": "GO:0000812",
+          "label": "Swr1 complex",
+          "cosine_similarity": 0.79801593
+        },
+        {
+          "identifier": "GO:0070824",
+          "label": "SHREC complex",
+          "cosine_similarity": 0.78892581
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030118",
       "label": "clathrin coat",
       "neighbors": [
@@ -12795,6 +12826,11 @@
           "cosine_similarity": 0.81272629
         },
         {
+          "identifier": "GO:0008623",
+          "label": "CHRAC",
+          "cosine_similarity": 0.80315648
+        },
+        {
           "identifier": "GO:0070211",
           "label": "Snt2C complex",
           "cosine_similarity": 0.79323154
@@ -12803,11 +12839,6 @@
           "identifier": "GO:0000112",
           "label": "nucleotide-excision repair factor 3 complex",
           "cosine_similarity": 0.77954575
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.77613565
         }
       ]
     },
@@ -13162,6 +13193,11 @@
           "cosine_similarity": 0.97366895
         },
         {
+          "identifier": "GO:0008623",
+          "label": "CHRAC",
+          "cosine_similarity": 0.87679675
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.7550036
@@ -13175,11 +13211,6 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.73487449
-        },
-        {
-          "identifier": "GO:0048188",
-          "label": "Set1C/COMPASS complex",
-          "cosine_similarity": 0.72788531
         }
       ]
     },
@@ -13191,6 +13222,11 @@
           "identifier": "GO:0036436",
           "label": "Isw1a complex",
           "cosine_similarity": 0.97366895
+        },
+        {
+          "identifier": "GO:0008623",
+          "label": "CHRAC",
+          "cosine_similarity": 0.87768318
         },
         {
           "identifier": "GO:0035101",
@@ -13206,11 +13242,6 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.7503589
-        },
-        {
-          "identifier": "GO:0048188",
-          "label": "Set1C/COMPASS complex",
-          "cosine_similarity": 0.74303666
         }
       ]
     },
@@ -15022,6 +15053,11 @@
           "cosine_similarity": 0.78417339
         },
         {
+          "identifier": "GO:0008623",
+          "label": "CHRAC",
+          "cosine_similarity": 0.78046599
+        },
+        {
           "identifier": "GO:0034967",
           "label": "Set3 complex",
           "cosine_similarity": 0.77289347
@@ -15035,11 +15071,6 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.77021889
-        },
-        {
-          "identifier": "GO:0035267",
-          "label": "NuA4 histone acetyltransferase complex",
-          "cosine_similarity": 0.76234391
         }
       ]
     },
@@ -15089,6 +15120,11 @@
           "cosine_similarity": 0.81086628
         },
         {
+          "identifier": "GO:0008623",
+          "label": "CHRAC",
+          "cosine_similarity": 0.78892581
+        },
+        {
           "identifier": "GO:0000417",
           "label": "HIR complex",
           "cosine_similarity": 0.78262689
@@ -15097,11 +15133,6 @@
           "identifier": "GO:0034967",
           "label": "Set3 complex",
           "cosine_similarity": 0.7774188
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.76342937
         }
       ]
     },
@@ -15265,6 +15296,11 @@
       "label": "Swr1 complex",
       "neighbors": [
         {
+          "identifier": "GO:0008623",
+          "label": "CHRAC",
+          "cosine_similarity": 0.79801593
+        },
+        {
           "identifier": "GO:0016514",
           "label": "SWI/SNF complex",
           "cosine_similarity": 0.79266045
@@ -15283,11 +15319,6 @@
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.75338803
-        },
-        {
-          "identifier": "GO:0000417",
-          "label": "HIR complex",
-          "cosine_similarity": 0.74894023
         }
       ]
     },

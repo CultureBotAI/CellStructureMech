@@ -1,0 +1,271 @@
+identifier: GO:0008623
+label: CHRAC
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An ISWI complex that contains an ATPase subunit of the ISWI family (SNF2H
+  in mammals, Isw2 in S. cerevisiae), an ACF1 homolog, and additional small histone
+  fold subunits (generally two of these, but Xenopus has only one and some additional
+  non-conserved subunits). CHRAC plays roles in the regulation of RNA polymerase II
+  transcription and in DNA replication and repair.
+definition_source: GO:0008623
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T02:40:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T02:42:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added chromatin-accessibility-complex synonymy, ISWI-type parentage, four
+    budding-yeast constituent rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI
+    evidence, a nonmechanistic function graph, and a subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-27T02:54:01Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: Added direct McConnell et al. 2004 literature evidence to the CHRAC causal-graph
+    edge that connects the complex to chromatin remodeling.
+  llm_assisted: true
+synonyms:
+- synonym_text: chromatin accessibility complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0008623
+- synonym_text: ISW2 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0008623
+parent_structures:
+- GO:0031010
+components:
+- component_id: isw2_chrac_atpase_subunit
+  label: Isw2 CHRAC ATPase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ISW2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast ISW2/yCHRAC literature follows Isw2 naming; no
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this CHRAC ATPase subunit class was curated in this pass.
+  role: ISWI-family ATPase constituent of the budding-yeast CHRAC-like four-subunit
+    Isw2 chromatin-remodeling complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+    notes: McConnell et al. 2004 purified a four-subunit Isw2 complex containing Itc1p,
+      Isw2p, Dpb4p, and Dls1p from Saccharomyces cerevisiae.
+- component_id: itc1_chrac_acf1_homolog_subunit
+  label: Itc1 CHRAC ACF1-homolog subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ITC1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast ISW2/yCHRAC literature follows Itc1 naming; no
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this CHRAC ACF1-homolog subunit class was curated in this pass.
+  role: ACF1-homolog constituent paired with Isw2 in the budding-yeast CHRAC-like
+    four-subunit Isw2 chromatin-remodeling complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+    notes: McConnell et al. 2004 found Itc1p in the Dls1p-purified four-subunit Isw2
+      complex.
+- component_id: dpb4_chrac_histone_fold_subunit
+  label: Dpb4 CHRAC histone-fold subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DPB4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Dpb4 is shared between budding-yeast ISW2/yCHRAC and DNA polymerase
+    epsilon, so exact grounding should avoid a broad histone-fold or polymerase-epsilon
+    term that does not denote its CHRAC subunit role.
+  role: Small histone-fold constituent of the budding-yeast CHRAC-like four-subunit
+    Isw2 complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+    notes: McConnell et al. 2004 identified Dpb4p as a histone-fold subunit in the
+      four-subunit Saccharomyces cerevisiae Isw2 complex.
+  - reference: DOI:10.1128/MCB.24.1.217-227.2004
+    notes: Iida and Araki 2004 described Dpb4p in the putative budding-yeast ISW2/yCHRAC
+      complex.
+- component_id: dls1_chrac_histone_fold_subunit
+  label: Dls1 CHRAC histone-fold subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DLS1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast ISW2/yCHRAC literature follows Dls1/Yjl065c naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this CHRAC histone-fold subunit class was curated in this pass.
+  role: Small histone-fold constituent of the budding-yeast CHRAC-like four-subunit
+    Isw2 complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+    notes: McConnell et al. 2004 identified Yjl065cp, named Dls1p, as a histone-fold
+      subunit in the four-subunit Saccharomyces cerevisiae Isw2 complex.
+  - reference: DOI:10.1128/MCB.24.1.217-227.2004
+    notes: Iida and Araki 2004 described Dls1p in the putative budding-yeast ISW2/yCHRAC
+      complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the source organism in which Iida and Araki described a putative
+    ISW2/yCHRAC complex with Isw2, Itc1, Dpb4, and Dls1.
+  reference: DOI:10.1128/MCB.24.1.217-227.2004
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: McConnell et al. 2004 purified Dls1p-associated complexes from Saccharomyces
+    cerevisiae and found a four-subunit Isw2 complex containing Itc1p, Isw2p, Dpb4p,
+    and Dls1p.
+  reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+functions:
+- function_id: chromatin_remodeling
+  label: chromatin remodeling
+  grounding: GO:0006338
+  description: The CHRAC-like four-subunit Isw2 complex contributes to ATP-dependent
+    chromatin remodeling in Saccharomyces cerevisiae.
+  evidence:
+  - reference: GO:0006338
+    notes: GO:0006338 is the Gene Ontology biological-process term for chromatin remodeling.
+  - reference: GO:0008623
+    notes: GO:0008623 defines CHRAC as an ISWI complex involved in RNA polymerase
+      II transcription, DNA replication, and DNA repair.
+  - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+    notes: McConnell et al. 2004 found that Dls1p was required for Isw2-dependent
+      chromatin remodeling in vivo.
+evidence:
+- reference: GO:0008623
+  notes: Gene Ontology cellular-component term for CHRAC.
+- reference: GO:0031010
+  notes: Gene Ontology cellular-component parent term for ISWI-type complexes.
+- reference: GO:0006338
+  notes: Gene Ontology biological-process term for chromatin remodeling.
+- reference: PMID:14673157
+  notes: PubMed identifier for Iida and Araki 2004, the Molecular and Cellular Biology
+    paper that described putative budding-yeast ISW2/yCHRAC.
+- reference: DOI:10.1128/MCB.24.1.217-227.2004
+  notes: DOI for Iida and Araki 2004, 'Noncompetitive counteractions of DNA polymerase
+    epsilon and ISW2/yCHRAC for epigenetic inheritance of telomere position effect
+    in Saccharomyces cerevisiae', verified through NCBI E-utilities.
+- reference: PMID:15024052
+  notes: PubMed identifier for McConnell et al. 2004, the Molecular and Cellular Biology
+    paper that identified Dpb4 and Dls1 as Isw2 complex histone-fold subunits.
+- reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+  notes: DOI for McConnell et al. 2004, 'Histone fold protein Dls1p is required for
+    Isw2-dependent chromatin remodeling in vivo', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_chrac_chromatin_remodeling
+  title: CHRAC supports yeast chromatin remodeling
+  description: In Saccharomyces cerevisiae, Isw2, Itc1, Dpb4, and Dls1 form a CHRAC-like
+    four-subunit Isw2 chromatin-remodeling complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the four budding-yeast CHRAC constituent classes
+    and their connection to chromatin remodeling without resolving the ordered substrate-recognition
+    or nucleosome-sliding cycle.
+  nodes:
+  - node_id: isw2_chrac_atpase_subunit
+    label: Isw2 CHRAC ATPase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: isw2_chrac_atpase_subunit
+  - node_id: itc1_chrac_acf1_homolog_subunit
+    label: Itc1 CHRAC ACF1-homolog subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: itc1_chrac_acf1_homolog_subunit
+  - node_id: dpb4_chrac_histone_fold_subunit
+    label: Dpb4 CHRAC histone-fold subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dpb4_chrac_histone_fold_subunit
+  - node_id: dls1_chrac_histone_fold_subunit
+    label: Dls1 CHRAC histone-fold subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dls1_chrac_histone_fold_subunit
+  - node_id: chrac
+    label: CHRAC
+    node_type: STRUCTURE
+    grounding: GO:0008623
+  - node_id: chromatin_remodeling
+    label: chromatin remodeling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006338
+  edges:
+  - subject: isw2_chrac_atpase_subunit
+    predicate: contributes to
+    object: chrac
+    description: Isw2 is a constituent of the budding-yeast CHRAC-like four-subunit
+      Isw2 complex.
+    evidence:
+    - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+      notes: McConnell et al. 2004 found this constituent in a purified Saccharomyces
+        cerevisiae four-subunit Isw2 complex.
+  - subject: itc1_chrac_acf1_homolog_subunit
+    predicate: contributes to
+    object: chrac
+    description: Itc1 is a constituent of the budding-yeast CHRAC-like four-subunit
+      Isw2 complex.
+    evidence:
+    - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+      notes: McConnell et al. 2004 found this constituent in a purified Saccharomyces
+        cerevisiae four-subunit Isw2 complex.
+  - subject: dpb4_chrac_histone_fold_subunit
+    predicate: contributes to
+    object: chrac
+    description: Dpb4 is a constituent of the budding-yeast CHRAC-like four-subunit
+      Isw2 complex.
+    evidence:
+    - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+      notes: McConnell et al. 2004 found this constituent in a purified Saccharomyces
+        cerevisiae four-subunit Isw2 complex.
+  - subject: dls1_chrac_histone_fold_subunit
+    predicate: contributes to
+    object: chrac
+    description: Dls1 is a constituent of the budding-yeast CHRAC-like four-subunit
+      Isw2 complex.
+    evidence:
+    - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+      notes: McConnell et al. 2004 found this constituent in a purified Saccharomyces
+        cerevisiae four-subunit Isw2 complex.
+  - subject: chrac
+    predicate: enables
+    object: chromatin_remodeling
+    description: CHRAC is an ISWI chromatin-remodeling complex.
+    evidence:
+    - reference: GO:0008623
+      notes: GO:0008623 defines CHRAC as an ISWI complex with a role in RNA polymerase
+        II transcription.
+    - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+      notes: McConnell et al. 2004 found that Dls1p was required for Isw2-dependent
+        chromatin remodeling in vivo.
+discussions:
+- discussion_id: chrac_subunit_grounding
+  prompt: Curate exact source-neutral InterPro, Pfam, NCBIfam or UniProt family groundings
+    for the CHRAC Isw2, Itc1, Dpb4, and Dls1 component classes when terms that denote
+    those classes can be verified.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#isw2_chrac_atpase_subunit
+  - components#itc1_chrac_acf1_homolog_subunit
+  - components#dpb4_chrac_histone_fold_subunit
+  - components#dls1_chrac_histone_fold_subunit
+  rationale: Isw2 and Itc1 also occur in a two-subunit ACF-like complex, Dpb4 is shared
+    with DNA polymerase epsilon, and available histone-fold or ATPase identifiers
+    are broader than the CHRAC subunit classes, so exact grounding should avoid terms
+    that do not denote these CHRAC roles.
+  evidence:
+  - reference: DOI:10.1128/MCB.24.1.217-227.2004
+    notes: Iida and Araki 2004 described Isw2, Itc1, Dpb4, and Dls1 in the putative
+      budding-yeast ISW2/yCHRAC complex.
+  - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+    notes: McConnell et al. 2004 separated a four-subunit Itc1p-Isw2p-Dpb4p-Dls1p
+      complex from a two-subunit Itc1p-Isw2p complex.
+  posed_by: codex
+  posed_date: '2026-09-27'

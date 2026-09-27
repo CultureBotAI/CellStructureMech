@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/chrac.yaml
+  slug: chrac
+session:
+  id: 2026-09-27T024250Z-codex-bb01ec
+  timestamp: '2026-09-27T02:42:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add CHRAC record
+  details: Created the GO:0008623 CHRAC record with chromatin-accessibility-complex synonymy,
+    ISWI-type parentage, four Saccharomyces cerevisiae constituent rows curated from Iida
+    and Araki 2004 and McConnell et al. 2004, yeast taxonomic scope and canonical example,
+    chromatin-remodeling function evidence, a nonmechanistic function graph, and an open TODO
+    for exact source-neutral subunit-family groundings.

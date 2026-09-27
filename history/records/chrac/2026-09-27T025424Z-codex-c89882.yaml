@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/chrac.yaml
+  slug: chrac
+session:
+  id: 2026-09-27T025424Z-codex-c89882
+  timestamp: '2026-09-27T02:54:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1634
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1633
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address CHRAC function-edge review
+  details: 'Addressed PR #1633 review issue #1634 by adding direct McConnell et al. 2004 evidence
+    to the CHRAC causal-graph edge that connects the GO:0008623 complex to GO:0006338 chromatin
+    remodeling.'
