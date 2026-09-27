@@ -1,0 +1,283 @@
+identifier: GO:0000811
+label: GINS complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterotetrameric protein complex that associates with replication origins,
+  where it is required for the initiation of DNA replication, and with replication
+  forks.
+definition_source: GO:0000811
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T09:00:52Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T09:02:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, protein-containing-complex parentage, four budding-yeast
+    GINS constituent rows, yeast scope, DNA-replication function evidence, GO/PubMed/DOI
+    evidence, a nonmechanistic function graph, and GINS subunit-grounding and CMG-boundary
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-09-27T09:12:06Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Replaced the bare CMG-boundary discussion components anchor with concrete
+    GINS component anchors.
+  llm_assisted: true
+synonyms:
+- synonym_text: Go, Ichi, Ni and San complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000811
+parent_structures:
+- GO:0032991
+components:
+- component_id: sld5_subunit
+  label: Sld5 GINS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SLD5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Sld5 GINS subunit is modeled as a named budding-yeast GINS-complex
+    subunit; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE
+    was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heterotetrameric GINS complex.
+  evidence:
+  - reference: GO:0000811
+    notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+      and replication-fork protein complex.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
+      Psf1, Psf2 and Psf3 proteins.
+- component_id: psf1_subunit
+  label: Psf1 GINS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PSF1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Psf1 GINS subunit is modeled as a named budding-yeast GINS-complex
+    subunit; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE
+    was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heterotetrameric GINS complex.
+  evidence:
+  - reference: GO:0000811
+    notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+      and replication-fork protein complex.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
+      Psf1, Psf2 and Psf3 proteins.
+- component_id: psf2_subunit
+  label: Psf2 GINS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PSF2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Psf2 GINS subunit is modeled as a named budding-yeast GINS-complex
+    subunit; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE
+    was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heterotetrameric GINS complex.
+  evidence:
+  - reference: GO:0000811
+    notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+      and replication-fork protein complex.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
+      Psf1, Psf2 and Psf3 proteins.
+- component_id: psf3_subunit
+  label: Psf3 GINS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PSF3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Psf3 GINS subunit is modeled as a named budding-yeast GINS-complex
+    subunit; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE
+    was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heterotetrameric GINS complex.
+  evidence:
+  - reference: GO:0000811
+    notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+      and replication-fork protein complex.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
+      Psf1, Psf2 and Psf3 proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a heterotetrameric GINS complex made of Sld5, Psf1, Psf2
+    and Psf3 that is required for chromosomal DNA replication.
+  reference: DOI:10.1101/gad.1065903
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast system in which the Sld5-Psf1-Psf2-Psf3 GINS complex was discovered
+    and connected to replication origins and chromosomal DNA replication.
+  reference: DOI:10.1101/gad.1065903
+functions:
+- function_id: dna_replication
+  label: DNA replication
+  grounding: GO:0006260
+  description: The GINS complex supports chromosomal DNA replication by associating
+    with origins and replication forks.
+  evidence:
+  - reference: GO:0006260
+    notes: GO:0006260 is the biological-process term for DNA replication.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 showed that budding-yeast GINS associates with origins
+      during S phase and is required for chromosomal DNA replication.
+evidence:
+- reference: GO:0000811
+  notes: Gene Ontology cellular-component term for the GINS complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0006260
+  notes: Gene Ontology biological-process term for DNA replication.
+- reference: PMID:12730134
+  notes: PubMed identifier for Takayama et al. 2003, the budding-yeast GINS discovery
+    and DNA-replication paper.
+- reference: DOI:10.1101/gad.1065903
+  notes: DOI for Takayama et al. 2003, 'GINS, a novel multiprotein complex required
+    for chromosomal DNA replication in budding yeast', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: gins_chromosomal_dna_replication
+  title: GINS supports chromosomal DNA replication
+  description: In Saccharomyces cerevisiae, Sld5, Psf1, Psf2 and Psf3 form the heterotetrameric
+    GINS complex that supports chromosomal DNA replication.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GINS composition and DNA-replication function without
+    resolving CMG helicase assembly, Cdc45/MCM contacts, origin activation order,
+    or fork progression.
+  nodes:
+  - node_id: sld5_subunit
+    label: Sld5 GINS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sld5_subunit
+  - node_id: psf1_subunit
+    label: Psf1 GINS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: psf1_subunit
+  - node_id: psf2_subunit
+    label: Psf2 GINS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: psf2_subunit
+  - node_id: psf3_subunit
+    label: Psf3 GINS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: psf3_subunit
+  - node_id: gins_complex
+    label: GINS complex
+    node_type: STRUCTURE
+    grounding: GO:0000811
+  - node_id: dna_replication
+    label: DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: sld5_subunit
+    predicate: contributes to
+    object: gins_complex
+    description: Sld5 subunit is a constituent of the budding-yeast GINS complex.
+    evidence:
+    - reference: GO:0000811
+      notes: GO:0000811 defines GINS as a heterotetrameric protein complex.
+    - reference: DOI:10.1101/gad.1065903
+      notes: Takayama et al. 2003 described budding-yeast GINS as containing Sld5,
+        Psf1, Psf2 and Psf3.
+  - subject: psf1_subunit
+    predicate: contributes to
+    object: gins_complex
+    description: Psf1 subunit is a constituent of the budding-yeast GINS complex.
+    evidence:
+    - reference: GO:0000811
+      notes: GO:0000811 defines GINS as a heterotetrameric protein complex.
+    - reference: DOI:10.1101/gad.1065903
+      notes: Takayama et al. 2003 described budding-yeast GINS as containing Sld5,
+        Psf1, Psf2 and Psf3.
+  - subject: psf2_subunit
+    predicate: contributes to
+    object: gins_complex
+    description: Psf2 subunit is a constituent of the budding-yeast GINS complex.
+    evidence:
+    - reference: GO:0000811
+      notes: GO:0000811 defines GINS as a heterotetrameric protein complex.
+    - reference: DOI:10.1101/gad.1065903
+      notes: Takayama et al. 2003 described budding-yeast GINS as containing Sld5,
+        Psf1, Psf2 and Psf3.
+  - subject: psf3_subunit
+    predicate: contributes to
+    object: gins_complex
+    description: Psf3 subunit is a constituent of the budding-yeast GINS complex.
+    evidence:
+    - reference: GO:0000811
+      notes: GO:0000811 defines GINS as a heterotetrameric protein complex.
+    - reference: DOI:10.1101/gad.1065903
+      notes: Takayama et al. 2003 described budding-yeast GINS as containing Sld5,
+        Psf1, Psf2 and Psf3.
+  - subject: gins_complex
+    predicate: supports
+    object: dna_replication
+    description: The GINS complex is required for chromosomal DNA replication.
+    evidence:
+    - reference: GO:0000811
+      notes: GO:0000811 defines GINS as a complex required for initiation of DNA replication
+        and associated with replication forks.
+    - reference: DOI:10.1101/gad.1065903
+      notes: Takayama et al. 2003 connected budding-yeast GINS to chromosomal DNA
+        replication.
+discussions:
+- discussion_id: resolve_gins_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Sld5, Psf1, Psf2
+    and Psf3 GINS subunits.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#sld5_subunit
+  - components#psf1_subunit
+  - components#psf2_subunit
+  - components#psf3_subunit
+  rationale: The GO complex term exactly identifies GINS and Takayama et al. 2003
+    define the four budding-yeast constituent proteins, but exact InterPro, Pfam,
+    NCBIfam or UniProtKB family CURIEs for the four GINS-specific subunit classes
+    were not curated in this pass.
+  evidence:
+  - reference: GO:0000811
+    notes: GO:0000811 defines the GINS complex as a heterotetrameric protein complex.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
+      Psf1, Psf2 and Psf3 proteins.
+  posed_by: codex
+  posed_date: '2026-09-27'
+- discussion_id: keep_cdc45_mcm_outside_gins
+  prompt: Keep Cdc45 and MCM helicase proteins outside the GINS component list.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#sld5_subunit
+  - components#psf1_subunit
+  - components#psf2_subunit
+  - components#psf3_subunit
+  - causal_graphs#gins_chromosomal_dna_replication
+  rationale: GO:0000811 defines GINS itself as a heterotetrameric complex, and Takayama
+    et al. 2003 separated GINS from other replication initiation factors. Cdc45 and
+    MCM proteins therefore belong to adjacent replisome or CMG-helicase context, not
+    as constituents of the GINS complex.
+  evidence:
+  - reference: GO:0000811
+    notes: GO:0000811 defines GINS as a heterotetrameric protein complex.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 described GINS while discussing its relationships
+      with other origin-loading factors.
+  posed_by: codex
+  posed_date: '2026-09-27'
+  resolved_date: '2026-09-27'
