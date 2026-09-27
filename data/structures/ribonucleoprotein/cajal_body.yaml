@@ -31,6 +31,13 @@ curation_history:
   changes: Aligned the GO:0097525 and SO:0002095 component and graph node labels with
     their canonical spliceosomal snRNP complex and scaRNA labels.
   llm_assisted: true
+- timestamp: '2026-09-27T22:02:25Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1682 by narrowing the scaRNA graph edge so Cajal-body scaRNAs
+    guide spliceosomal snRNA modification during snRNP maturation rather than catalytically
+    modifying RNAs themselves.'
+  llm_assisted: true
 synonyms:
 - synonym_text: coiled body
   synonym_type: EXACT_SYNONYM
@@ -199,14 +206,14 @@ causal_graphs:
     - reference: DOI:10.1093/emboj/21.11.2746
       notes: Darzacq et al. 2002 localized scaRNA guide RNAs to Cajal bodies.
   - subject: small_cajal_body_specific_rnas
-    predicate: modify RNAs in
+    predicate: guide RNA modification during
     object: snrnp_biogenesis
-    description: Cajal-body scaRNAs guide snRNA modifications that are part of snRNP
-      maturation.
+    description: Cajal-body scaRNAs guide spliceosomal snRNA modifications during
+      snRNP maturation.
     evidence:
     - reference: DOI:10.1093/emboj/21.11.2746
-      notes: Darzacq et al. 2002 connected Cajal-body scaRNAs to methylation and pseudouridylation
-        guides for spliceosomal snRNAs.
+      notes: Darzacq et al. 2002 connected Cajal-body scaRNAs to guide RNA roles in
+        spliceosomal snRNA methylation and pseudouridylation.
   - subject: cajal_body
     predicate: is associated with
     object: snrnp_biogenesis
