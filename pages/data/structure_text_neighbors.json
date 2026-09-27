@@ -11944,6 +11944,37 @@
       ]
     },
     {
+      "identifier": "GO:0030896",
+      "label": "checkpoint clamp complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0070824",
+          "label": "SHREC complex",
+          "cosine_similarity": 0.74169886
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.72275516
+        },
+        {
+          "identifier": "GO:0030870",
+          "label": "Mre11 complex",
+          "cosine_similarity": 0.719869
+        },
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.71703165
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.71204784
+        }
+      ]
+    },
+    {
       "identifier": "GO:0008623",
       "label": "CHRAC",
       "neighbors": [
@@ -12433,9 +12464,9 @@
           "cosine_similarity": 0.69023425
         },
         {
-          "identifier": "GO:0000112",
-          "label": "nucleotide-excision repair factor 3 complex",
-          "cosine_similarity": 0.67024604
+          "identifier": "GO:0030896",
+          "label": "checkpoint clamp complex",
+          "cosine_similarity": 0.67579523
         }
       ]
     },
@@ -13518,9 +13549,9 @@
           "cosine_similarity": 0.67852523
         },
         {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.66675714
+          "identifier": "GO:0030896",
+          "label": "checkpoint clamp complex",
+          "cosine_similarity": 0.67219741
         }
       ]
     },

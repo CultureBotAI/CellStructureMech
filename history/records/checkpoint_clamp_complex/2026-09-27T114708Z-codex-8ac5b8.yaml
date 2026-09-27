@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/checkpoint_clamp_complex.yaml
+  slug: checkpoint_clamp_complex
+session:
+  id: 2026-09-27T114708Z-codex-8ac5b8
+  timestamp: '2026-09-27T11:47:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add checkpoint clamp complex record
+  details: Created data/structures/other/checkpoint_clamp_complex.yaml from the GO:0030896
+    cellular-component term with exact GO checkpoint-clamp synonymy, nuclear protein-containing-complex
+    parentage, reviewed-label-only Rad9/Rad1/Hus1 constituent rows, Schizosaccharomyces pombe
+    distribution and canonical-example evidence, DNA-damage-response function evidence, GO/PubMed/DOI
+    evidence, a nonmechanistic causal graph, and an explicit follow-up discussion for exact
+    checkpoint-clamp subunit grounding.
