@@ -21,6 +21,13 @@ curation_history:
     function evidence, a nonmechanistic SUMO-dependent PML-body assembly graph and
     a component-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-27T23:33:05Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1689 by retargeting the Homo sapiens taxonomic and canonical-example
+    evidence from the PML-rescue paper to Koken et al. 1994''s direct human acute-promyelocytic-leukemia
+    PML-body evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ND10
   synonym_type: EXACT_SYNONYM
@@ -81,16 +88,17 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens
-  presence: COMMON
-  note: PML/ND10 bodies were defined in human nuclei as PML- and Sp100-containing
-    nuclear domains.
-  reference: DOI:10.1083/jcb.147.2.221
+  presence: VARIABLE
+  note: Human acute promyelocytic leukemia cells were used to show that the t(15;17)
+    PML-RARalpha translocation alters a PML-associated nuclear body in a retinoic-acid-reversible
+    fashion.
+  reference: DOI:10.1002/j.1460-2075.1994.tb06356.x
 canonical_examples:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens
-  note: Human PML was used to test de novo recruitment of ND10-associated proteins
-    to PML bodies.
-  reference: DOI:10.1083/jcb.147.2.221
+  note: Human acute promyelocytic leukemia cells connected PML-associated nuclear
+    bodies to the t(15;17) PML-RARalpha translocation.
+  reference: DOI:10.1002/j.1460-2075.1994.tb06356.x
 functions:
 - function_id: partner_protein_sumoylation
   label: partner protein sumoylation
@@ -115,6 +123,9 @@ evidence:
 - reference: DOI:10.1182/blood.V95.9.2748.009k31a_2748_2752
   notes: Zhong et al. 2000, Role of SUMO-1-modified PML in nuclear body formation,
     Blood.
+- reference: DOI:10.1002/j.1460-2075.1994.tb06356.x
+  notes: Koken et al. 1994, The t(15;17) translocation alters a nuclear body in a
+    retinoic acid-reversible fashion, EMBO Journal.
 - reference: DOI:10.1016/j.molcel.2006.09.013
   notes: Shen et al. 2006, The mechanisms of PML-nuclear body formation, Molecular
     Cell.
