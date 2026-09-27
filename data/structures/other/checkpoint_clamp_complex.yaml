@@ -1,0 +1,254 @@
+identifier: GO:0030896
+label: checkpoint clamp complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Conserved heterotrimeric complex of PCNA-like proteins that is loaded
+  onto DNA at sites of DNA damage.
+definition_source: GO:0030896
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T11:45:03Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T11:46:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO checkpoint-clamp synonyms, nuclear protein-containing-complex
+    parentage, three reviewed-label-only fission-yeast constituent rows, Schizosaccharomyces
+    pombe scope, DNA-damage-response function evidence, GO/PubMed/DOI evidence, a
+    nonmechanistic function graph, and a checkpoint-clamp subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: CCC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030896
+- synonym_text: Rad9-Hus1-Rad1 (9-1-1) clamp complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030896
+parent_structures:
+- GO:0140513
+components:
+- component_id: rad9_checkpoint_clamp_subunit
+  label: Rad9 checkpoint clamp subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - rad9
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rad9 checkpoint clamp subunit is modeled as a named Schizosaccharomyces
+    pombe checkpoint-clamp constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: PCNA-like constituent of the fission-yeast Rad9-Rad1-Hus1 DNA damage checkpoint
+    clamp.
+  evidence:
+  - reference: GO:0030896
+    notes: GO:0030896 lists Rad9 among the Schizosaccharomyces pombe checkpoint clamp
+      subunit names.
+  - reference: DOI:10.1091/mbc.12.12.3744
+    notes: Kaur et al. 2001 performed structure-function analysis of the fission-yeast
+      Hus1-Rad1-Rad9 checkpoint complex.
+- component_id: rad1_checkpoint_clamp_subunit
+  label: Rad1 checkpoint clamp subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - rad1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rad1 checkpoint clamp subunit is modeled as a named Schizosaccharomyces
+    pombe checkpoint-clamp constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: PCNA-like constituent of the fission-yeast Rad9-Rad1-Hus1 DNA damage checkpoint
+    clamp.
+  evidence:
+  - reference: GO:0030896
+    notes: GO:0030896 lists Rad1 among the Schizosaccharomyces pombe checkpoint clamp
+      subunit names.
+  - reference: DOI:10.1091/mbc.12.12.3744
+    notes: Kaur et al. 2001 performed structure-function analysis of the fission-yeast
+      Hus1-Rad1-Rad9 checkpoint complex.
+- component_id: hus1_checkpoint_clamp_subunit
+  label: Hus1 checkpoint clamp subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hus1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Hus1 checkpoint clamp subunit is modeled as a named Schizosaccharomyces
+    pombe checkpoint-clamp constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: PCNA-like constituent of the fission-yeast Rad9-Rad1-Hus1 DNA damage checkpoint
+    clamp.
+  evidence:
+  - reference: GO:0030896
+    notes: GO:0030896 lists Hus1 among the Schizosaccharomyces pombe checkpoint clamp
+      subunit names.
+  - reference: DOI:10.1091/mbc.12.12.3744
+    notes: Kaur et al. 2001 performed structure-function analysis of the fission-yeast
+      Hus1-Rad1-Rad9 checkpoint complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast has a Hus1-Rad1-Rad9 checkpoint clamp complex matching the Schizosaccharomyces
+    pombe subunit names noted by GO:0030896.
+  reference: DOI:10.1091/mbc.12.12.3744
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Reference fission-yeast system in which Kaur et al. performed structure-function
+    analysis of the Hus1-Rad1-Rad9 checkpoint complex.
+  reference: DOI:10.1091/mbc.12.12.3744
+functions:
+- function_id: dna_damage_response
+  label: DNA damage response
+  grounding: GO:0006974
+  description: The checkpoint clamp complex is loaded onto damaged DNA and supports
+    the cellular response to DNA damage.
+  evidence:
+  - reference: GO:0030896
+    notes: GO:0030896 defines the checkpoint clamp complex as loaded onto DNA at sites
+      of DNA damage.
+  - reference: GO:0006974
+    notes: GO:0006974 is the Gene Ontology biological-process term for DNA damage
+      response.
+evidence:
+- reference: GO:0030896
+  notes: Gene Ontology cellular-component term for the checkpoint clamp complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0006974
+  notes: Gene Ontology biological-process term for DNA damage response.
+- reference: PMID:12531008
+  notes: PubMed identifier for Carr 2002, the DNA Repair review cited by the GO:0030896
+    definition.
+- reference: DOI:10.1016/s1568-7864(02)00165-9
+  notes: DOI for Carr 2002, verified through PubMed.
+- reference: PMID:11739777
+  notes: PubMed identifier for Kaur et al. 2001, the Molecular Biology of the Cell
+    paper on the fission-yeast Hus1-Rad1-Rad9 checkpoint complex.
+- reference: DOI:10.1091/mbc.12.12.3744
+  notes: DOI for Kaur et al. 2001, verified through PubMed and PMC.
+- reference: PMID:15279787
+  notes: PubMed identifier for Parrilla-Castellar et al. 2004, the DNA Repair review
+    on the Rad9-Hus1-Rad1 9-1-1 clamp complex.
+- reference: DOI:10.1016/j.dnarep.2004.03.032
+  notes: DOI for Parrilla-Castellar et al. 2004, verified through PubMed.
+- reference: PMID:19446481
+  notes: PubMed identifier for Dore et al. 2009, the Molecular Cell paper on the Rad9-Rad1-Hus1
+    DNA damage checkpoint complex crystal structure.
+- reference: DOI:10.1016/j.molcel.2009.04.027
+  notes: DOI for Dore et al. 2009, verified through PubMed.
+causal_graphs:
+- graph_id: checkpoint_clamp_dna_damage_response
+  title: Checkpoint clamp loads at DNA damage
+  description: The Rad9, Rad1 and Hus1 proteins form a checkpoint clamp that is loaded
+    at damaged DNA and supports the DNA damage response.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three fission-yeast checkpoint clamp constituents
+    and their GO-level DNA-damage-response function without resolving RFC-like clamp
+    loading, Rad3-Rad26 signaling or Chk1 activation.
+  nodes:
+  - node_id: rad9_checkpoint_clamp_subunit
+    label: Rad9 checkpoint clamp subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad9_checkpoint_clamp_subunit
+  - node_id: rad1_checkpoint_clamp_subunit
+    label: Rad1 checkpoint clamp subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad1_checkpoint_clamp_subunit
+  - node_id: hus1_checkpoint_clamp_subunit
+    label: Hus1 checkpoint clamp subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hus1_checkpoint_clamp_subunit
+  - node_id: checkpoint_clamp_complex
+    label: checkpoint clamp complex
+    node_type: STRUCTURE
+    grounding: GO:0030896
+  - node_id: damaged_dna
+    label: damaged DNA
+    node_type: GENETIC_ELEMENT
+  - node_id: dna_damage_response
+    label: DNA damage response
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006974
+  edges:
+  - subject: rad9_checkpoint_clamp_subunit
+    predicate: contributes to
+    object: checkpoint_clamp_complex
+    description: Rad9 is a constituent of the Schizosaccharomyces pombe checkpoint
+      clamp complex.
+    evidence:
+    - reference: GO:0030896
+      notes: GO:0030896 lists S. pombe Rad9 as a checkpoint clamp subunit.
+    - reference: DOI:10.1091/mbc.12.12.3744
+      notes: Kaur et al. 2001 analyzed the fission-yeast Hus1-Rad1-Rad9 checkpoint
+        complex.
+  - subject: rad1_checkpoint_clamp_subunit
+    predicate: contributes to
+    object: checkpoint_clamp_complex
+    description: Rad1 is a constituent of the Schizosaccharomyces pombe checkpoint
+      clamp complex.
+    evidence:
+    - reference: GO:0030896
+      notes: GO:0030896 lists S. pombe Rad1 as a checkpoint clamp subunit.
+    - reference: DOI:10.1091/mbc.12.12.3744
+      notes: Kaur et al. 2001 analyzed the fission-yeast Hus1-Rad1-Rad9 checkpoint
+        complex.
+  - subject: hus1_checkpoint_clamp_subunit
+    predicate: contributes to
+    object: checkpoint_clamp_complex
+    description: Hus1 is a constituent of the Schizosaccharomyces pombe checkpoint
+      clamp complex.
+    evidence:
+    - reference: GO:0030896
+      notes: GO:0030896 lists S. pombe Hus1 as a checkpoint clamp subunit.
+    - reference: DOI:10.1091/mbc.12.12.3744
+      notes: Kaur et al. 2001 analyzed the fission-yeast Hus1-Rad1-Rad9 checkpoint
+        complex.
+  - subject: checkpoint_clamp_complex
+    predicate: loads onto
+    object: damaged_dna
+    description: The checkpoint clamp is loaded onto DNA at sites of DNA damage.
+    evidence:
+    - reference: GO:0030896
+      notes: GO:0030896 defines the checkpoint clamp complex as loaded onto DNA at
+        sites of DNA damage.
+    - reference: DOI:10.1016/j.dnarep.2004.03.032
+      notes: Parrilla-Castellar et al. 2004 reviewed the Rad9-Hus1-Rad1 9-1-1 clamp
+        complex.
+  - subject: checkpoint_clamp_complex
+    predicate: supports
+    object: dna_damage_response
+    description: The checkpoint clamp complex supports the DNA damage response.
+    evidence:
+    - reference: GO:0030896
+      notes: GO:0030896 defines the checkpoint clamp complex as being loaded at DNA
+        damage sites.
+    - reference: GO:0006974
+      notes: GO:0006974 is the biological-process term for DNA damage response.
+discussions:
+- discussion_id: resolve_checkpoint_clamp_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Rad9, Rad1 and Hus1
+    constituents of the checkpoint clamp complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rad9_checkpoint_clamp_subunit
+  - components#rad1_checkpoint_clamp_subunit
+  - components#hus1_checkpoint_clamp_subunit
+  rationale: GO:0030896 exactly identifies the conserved Rad9-Rad1-Hus1 clamp, but
+    exact InterPro, Pfam, NCBIfam or UniProtKB family boundaries for the three fission-yeast-modeled
+    subunit classes need narrower follow-up curation.
+  evidence:
+  - reference: GO:0030896
+    notes: GO:0030896 identifies the checkpoint clamp complex as a conserved heterotrimeric
+      complex of PCNA-like proteins.
+  posed_by: codex
+  posed_date: '2026-09-27'
