@@ -13773,6 +13773,37 @@
       ]
     },
     {
+      "identifier": "GO:0030870",
+      "label": "Mre11 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.79287822
+        },
+        {
+          "identifier": "GO:0000110",
+          "label": "nucleotide-excision repair factor 1 complex",
+          "cosine_similarity": 0.77603952
+        },
+        {
+          "identifier": "GO:0034457",
+          "label": "Mpp10 complex",
+          "cosine_similarity": 0.77066923
+        },
+        {
+          "identifier": "GO:0048188",
+          "label": "Set1C/COMPASS complex",
+          "cosine_similarity": 0.77039517
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.76306544
+        }
+      ]
+    },
+    {
       "identifier": "GO:0036410",
       "label": "Mst2 histone acetyltransferase complex",
       "neighbors": [
@@ -14412,14 +14443,14 @@
           "cosine_similarity": 0.92482162
         },
         {
+          "identifier": "GO:0030870",
+          "label": "Mre11 complex",
+          "cosine_similarity": 0.77603952
+        },
+        {
           "identifier": "GO:0016590",
           "label": "ACF complex",
           "cosine_similarity": 0.75998364
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.75713882
         }
       ]
     },
