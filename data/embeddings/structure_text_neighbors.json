@@ -13880,6 +13880,11 @@
           "cosine_similarity": 0.77045933
         },
         {
+          "identifier": "GO:0032798",
+          "label": "Swi5-Sfr1 complex",
+          "cosine_similarity": 0.76922467
+        },
+        {
           "identifier": "GO:0048188",
           "label": "Set1C/COMPASS complex",
           "cosine_similarity": 0.76867387
@@ -13888,11 +13893,6 @@
           "identifier": "GO:0034457",
           "label": "Mpp10 complex",
           "cosine_similarity": 0.76648844
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.75907352
         }
       ]
     },
@@ -15709,6 +15709,11 @@
           "cosine_similarity": 0.71657589
         },
         {
+          "identifier": "GO:0032798",
+          "label": "Swi5-Sfr1 complex",
+          "cosine_similarity": 0.69382753
+        },
+        {
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.69349766
@@ -15717,11 +15722,6 @@
           "identifier": "GO:0009360",
           "label": "DNA polymerase III complex",
           "cosine_similarity": 0.69125267
-        },
-        {
-          "identifier": "GO:0001401",
-          "label": "SAM complex",
-          "cosine_similarity": 0.68946453
         }
       ]
     },
@@ -15850,6 +15850,37 @@
       ]
     },
     {
+      "identifier": "GO:0032798",
+      "label": "Swi5-Sfr1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030870",
+          "label": "Mre11 complex",
+          "cosine_similarity": 0.76922467
+        },
+        {
+          "identifier": "GO:0000812",
+          "label": "Swr1 complex",
+          "cosine_similarity": 0.75303229
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.74760612
+        },
+        {
+          "identifier": "GO:0070939",
+          "label": "Dsl1/NZR complex",
+          "cosine_similarity": 0.73772002
+        },
+        {
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.73503627
+        }
+      ]
+    },
+    {
       "identifier": "GO:0016514",
       "label": "SWI/SNF complex",
       "neighbors": [
@@ -15874,9 +15905,9 @@
           "cosine_similarity": 0.73717444
         },
         {
-          "identifier": "GO:0016590",
-          "label": "ACF complex",
-          "cosine_similarity": 0.71948635
+          "identifier": "GO:0032798",
+          "label": "Swi5-Sfr1 complex",
+          "cosine_similarity": 0.72360904
         }
       ]
     },
