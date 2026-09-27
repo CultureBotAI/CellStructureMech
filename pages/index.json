@@ -3636,6 +3636,15 @@
   "definition": "A heterodimeric protein complex required for the activation of DNA replication origins; comprises a catalytic subunit and a regulatory subunit (in Saccharomyces, Cdc7p and Dbf4p, respectively); complexes identified in other species generally contain proteins related to the Saccharomyces proteins."
  },
  {
+  "identifier": "GO:0043625",
+  "label": "delta DNA polymerase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/delta_dna_polymerase_complex.html",
+  "definition": "A multimeric DNA polymerase enzyme complex whose subunit composition differs among species and that functions in DNA replication, mismatch repair, and excision repair; in Saccharomyces cerevisiae, DNA polymerase delta contains Pol3, Pol31, and Pol32 subunits."
+ },
+ {
   "identifier": "GO:0120217",
   "label": "DNA gyrase complex",
   "category": "OTHER",
