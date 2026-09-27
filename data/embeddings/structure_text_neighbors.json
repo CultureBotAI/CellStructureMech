@@ -11324,6 +11324,37 @@
       ]
     },
     {
+      "identifier": "GO:0140671",
+      "label": "ADA complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031415",
+          "label": "NatA complex",
+          "cosine_similarity": 0.79689653
+        },
+        {
+          "identifier": "GO:0031416",
+          "label": "NatB complex",
+          "cosine_similarity": 0.79522319
+        },
+        {
+          "identifier": "GO:0031417",
+          "label": "NatC complex",
+          "cosine_similarity": 0.79381291
+        },
+        {
+          "identifier": "GO:0000124",
+          "label": "SAGA complex",
+          "cosine_similarity": 0.77736972
+        },
+        {
+          "identifier": "GO:1990468",
+          "label": "NuA3b histone acetyltransferase complex",
+          "cosine_similarity": 0.75825937
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030121",
       "label": "AP-1 adaptor complex",
       "neighbors": [
@@ -13668,14 +13699,14 @@
           "cosine_similarity": 0.79711346
         },
         {
+          "identifier": "GO:0140671",
+          "label": "ADA complex",
+          "cosine_similarity": 0.79689653
+        },
+        {
           "identifier": "GO:1990467",
           "label": "NuA3a histone acetyltransferase complex",
           "cosine_similarity": 0.79236827
-        },
-        {
-          "identifier": "GO:1990468",
-          "label": "NuA3b histone acetyltransferase complex",
-          "cosine_similarity": 0.79077958
         }
       ]
     },
@@ -13694,6 +13725,11 @@
           "cosine_similarity": 0.93100968
         },
         {
+          "identifier": "GO:0140671",
+          "label": "ADA complex",
+          "cosine_similarity": 0.79522319
+        },
+        {
           "identifier": "GO:1990468",
           "label": "NuA3b histone acetyltransferase complex",
           "cosine_similarity": 0.79351218
@@ -13702,11 +13738,6 @@
           "identifier": "GO:0032777",
           "label": "piccolo histone acetyltransferase complex",
           "cosine_similarity": 0.77784612
-        },
-        {
-          "identifier": "GO:1990467",
-          "label": "NuA3a histone acetyltransferase complex",
-          "cosine_similarity": 0.77731581
         }
       ]
     },
@@ -13725,6 +13756,11 @@
           "cosine_similarity": 0.91685993
         },
         {
+          "identifier": "GO:0140671",
+          "label": "ADA complex",
+          "cosine_similarity": 0.79381291
+        },
+        {
           "identifier": "GO:1990468",
           "label": "NuA3b histone acetyltransferase complex",
           "cosine_similarity": 0.78357396
@@ -13733,11 +13769,6 @@
           "identifier": "GO:1990467",
           "label": "NuA3a histone acetyltransferase complex",
           "cosine_similarity": 0.77582769
-        },
-        {
-          "identifier": "GO:0035267",
-          "label": "NuA4 histone acetyltransferase complex",
-          "cosine_similarity": 0.7686566
         }
       ]
     },
@@ -15115,6 +15146,11 @@
           "cosine_similarity": 0.80167998
         },
         {
+          "identifier": "GO:0140671",
+          "label": "ADA complex",
+          "cosine_similarity": 0.77736972
+        },
+        {
           "identifier": "GO:0032777",
           "label": "piccolo histone acetyltransferase complex",
           "cosine_similarity": 0.77720344
@@ -15128,11 +15164,6 @@
           "identifier": "GO:1990467",
           "label": "NuA3a histone acetyltransferase complex",
           "cosine_similarity": 0.77045991
-        },
-        {
-          "identifier": "GO:0070211",
-          "label": "Snt2C complex",
-          "cosine_similarity": 0.75108082
         }
       ]
     },

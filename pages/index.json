@@ -3285,6 +3285,15 @@
   "definition": "An ISWI complex that contains an ATPase subunit of the ISWI family (SNF2H in mammals, Isw2 in S. cerevisiae), an ACF1 homolog, and generally no other subunits, though Xenopus is an exception with a third non-conserved subunit. ACF plays roles in regulation of RNA polymerase II transcription and in DNA replication and repair."
  },
  {
+  "identifier": "GO:0140671",
+  "label": "ADA complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/ada_complex.html",
+  "definition": "A chromatin remodeling complex that regulates transcription via acetylation primarily of nucleosomal histones H3 and H2B. In budding yeast shares the histone acetylation (HAT) module of ADA2-GCN5-NGG1-SGF29 with the related SAGA complex."
+ },
+ {
   "identifier": "GO:0030121",
   "label": "AP-1 adaptor complex",
   "category": "OTHER",

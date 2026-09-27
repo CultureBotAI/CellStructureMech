@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ada_complex.yaml
+  slug: ada_complex
+session:
+  id: 2026-09-27T064816Z-codex-1af50a
+  timestamp: '2026-09-27T06:48:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data
+  - curation
+  - evidence
+  summary: Added ADA complex record
+  details: Created the GO:0140671 ADA complex record with SAGA-type parentage, GO exact and
+    related synonyms, six budding-yeast constituent rows, yeast scope, histone acetyltransferase
+    function, a nonmechanistic function graph, and a resolved note excluding the unrelated
+    GO definition xref PMID:28966424.

@@ -1,0 +1,365 @@
+identifier: GO:0140671
+label: ADA complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A chromatin remodeling complex that regulates transcription via acetylation
+  primarily of nucleosomal histones H3 and H2B. In budding yeast shares the histone
+  acetylation (HAT) module of ADA2-GCN5-NGG1-SGF29 with the related SAGA complex.
+definition_source: GO:0140671
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T06:45:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T06:47:08Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ADA exact and related synonymy, SAGA-type parentage, six budding-yeast
+    ADA constituent rows, yeast scope, histone acetyltransferase activity, GO/PubMed/DOI
+    evidence, a nonmechanistic function graph, an ADA subunit-grounding TODO, and
+    an explanation for excluding the unrelated GO definition xref PMID:28966424.
+  llm_assisted: true
+- timestamp: '2026-09-27T06:47:40Z'
+  curator: codex
+  action: CLEANED_YAML_ALIASES
+  changes: Deep-copied ADA graph-edge evidence lists so the record serializes without
+    YAML anchors or aliases.
+  llm_assisted: true
+synonyms:
+- synonym_text: ADA HAT complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0140671
+- synonym_text: ADA histone acetyltransferase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0140671
+- synonym_text: Ada2/Gcn5/Ada3 transcription activator complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:0140671
+- synonym_text: scADA
+  synonym_type: NARROW_SYNONYM
+  source: GO:0140671
+parent_structures:
+- GO:0070461
+components:
+- component_id: ada2_ada_hat_subunit
+  label: Ada2 ADA HAT subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ADA2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0140671 and budding-yeast ADA-complex literature follow Ada2
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this ADA subunit class was curated in this pass.
+  role: Shared Gcn5 HAT-module constituent of the budding-yeast ADA complex.
+  evidence:
+  - reference: GO:0140671
+    notes: GO:0140671 defines the ADA complex as sharing the ADA2-GCN5-NGG1-SGF29
+      HAT module with SAGA in budding yeast.
+  - reference: DOI:10.1038/msb.2011.40
+    notes: Lee et al. 2011 modeled Ada2 as a HAT/Core-module constituent of the Saccharomyces
+      cerevisiae ADA complex.
+- component_id: gcn5_ada_catalytic_subunit
+  label: Gcn5 ADA catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - GCN5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0140671 and budding-yeast ADA-complex literature follow Gcn5
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this ADA catalytic subunit class was curated in this pass.
+  role: Catalytic histone acetyltransferase constituent of the budding-yeast ADA complex.
+  evidence:
+  - reference: GO:0140671
+    notes: GO:0140671 defines the ADA complex as sharing the ADA2-GCN5-NGG1-SGF29
+      HAT module with SAGA in budding yeast.
+  - reference: DOI:10.1038/msb.2011.40
+    notes: Lee et al. 2011 modeled Gcn5 as a HAT/Core-module constituent of the Saccharomyces
+      cerevisiae ADA complex.
+- component_id: ada3_ngg1_ada_hat_subunit
+  label: Ada3/Ngg1 ADA HAT subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NGG1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0140671 uses ADA3/NGG1 naming and the Saccharomyces cerevisiae
+    gene symbol is NGG1; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt
+    family identifier for this ADA subunit class was curated in this pass.
+  role: Shared HAT-module constituent of the budding-yeast ADA complex.
+  evidence:
+  - reference: GO:0140671
+    notes: GO:0140671 defines the ADA complex as sharing the ADA2-GCN5-NGG1-SGF29
+      HAT module with SAGA in budding yeast.
+  - reference: DOI:10.1038/msb.2011.40
+    notes: Lee et al. 2011 modeled Ada3/Ngg1 as a HAT/Core-module constituent of the
+      Saccharomyces cerevisiae ADA complex.
+- component_id: sgf29_ada_hat_subunit
+  label: Sgf29 ADA HAT subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SGF29
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0140671 and budding-yeast ADA-complex literature follow Sgf29
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this ADA subunit class was curated in this pass.
+  role: Shared Gcn5 HAT-module constituent of the budding-yeast ADA complex.
+  evidence:
+  - reference: GO:0140671
+    notes: GO:0140671 defines the ADA complex as sharing the ADA2-GCN5-NGG1-SGF29
+      HAT module with SAGA in budding yeast.
+  - reference: DOI:10.1038/msb.2011.40
+    notes: Lee et al. 2011 characterized Sgf29 as a HAT/Core-module component of all
+      Gcn5 histone acetyltransferase complexes.
+- component_id: ahc1_ada_module_subunit
+  label: Ahc1 ADA-module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - AHC1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast ADA-complex literature follows Ahc1 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this ADA-specific
+    module subunit class was curated in this pass.
+  role: ADA-specific module constituent of the budding-yeast ADA complex.
+  evidence:
+  - reference: DOI:10.1038/msb.2011.40
+    notes: Lee et al. 2011 modeled Ahc1 with Ahc2 as the ADA-specific module of the
+      Saccharomyces cerevisiae ADA complex.
+- component_id: ahc2_ada_module_subunit
+  label: Ahc2 ADA-module subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - AHC2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast ADA-complex literature follows Ahc2 naming; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for this ADA-specific
+    module subunit class was curated in this pass.
+  role: ADA-specific module constituent of the budding-yeast ADA complex.
+  evidence:
+  - reference: DOI:10.1038/msb.2011.40
+    notes: Lee et al. 2011 identified Ycr082w/Ahc2 as a novel ADA-complex subunit
+      that co-purified with Ada3, Ahc1, Gcn5, Ada2 and Sgf29.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which Lee et al. 2011 characterized the six-subunit
+    ADA complex.
+  reference: DOI:10.1038/msb.2011.40
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Lee et al. 2011 used Saccharomyces cerevisiae TAP-tag affinity purifications
+    and deletion strains to model the ADA complex with the ADA-specific Ahc1/Ahc2
+    module and the shared Gcn5 HAT module.
+  reference: DOI:10.1038/msb.2011.40
+functions:
+- function_id: histone_acetyltransferase_activity
+  label: histone acetyltransferase activity
+  grounding: GO:0004402
+  description: The ADA complex acetylates nucleosomal histones through its Gcn5 catalytic
+    subunit and the shared Ada2/Ada3/Sgf29 HAT module.
+  evidence:
+  - reference: GO:0140671
+    notes: GO:0140671 defines the ADA complex as regulating transcription by acetylating
+      primarily nucleosomal histones H3 and H2B.
+  - reference: GO:0004402
+    notes: GO:0004402 is the Gene Ontology molecular-function term for histone acetyltransferase
+      activity.
+  - reference: DOI:10.1038/msb.2011.40
+    notes: Lee et al. 2011 treated ADA as one of the budding-yeast Gcn5 histone acetyltransferase
+      complexes.
+evidence:
+- reference: GO:0140671
+  notes: Gene Ontology cellular-component term for the ADA complex, including ADA
+    HAT complex and ADA histone acetyltransferase complex exact synonyms.
+- reference: GO:0070461
+  notes: Gene Ontology cellular-component parent term for SAGA-type histone acetyltransferase
+    complexes.
+- reference: GO:0004402
+  notes: Gene Ontology molecular-function term for histone acetyltransferase activity.
+- reference: PMID:21734642
+  notes: PubMed identifier for Lee et al. 2011, the budding-yeast SAGA and ADA architecture
+    paper cited by GO:0140671.
+- reference: DOI:10.1038/msb.2011.40
+  notes: DOI for Lee et al. 2011, 'Combinatorial depletion analysis to assemble the
+    network architecture of the SAGA and ADA chromatin remodeling complexes', verified
+    through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_ada_histone_acetyltransferase_activity
+  title: ADA carries yeast histone acetyltransferase activity
+  description: In Saccharomyces cerevisiae, the Ahc1/Ahc2 ADA-specific module and
+    the shared Gcn5 HAT module form the ADA complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the budding-yeast ADA constituents and their connection
+    to histone acetyltransferase activity without resolving Gcn5 catalytic chemistry,
+    chromatin recruitment or subunit interfaces.
+  nodes:
+  - node_id: ada2_ada_hat_subunit
+    label: Ada2 ADA HAT subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ada2_ada_hat_subunit
+  - node_id: gcn5_ada_catalytic_subunit
+    label: Gcn5 ADA catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: gcn5_ada_catalytic_subunit
+  - node_id: ada3_ngg1_ada_hat_subunit
+    label: Ada3/Ngg1 ADA HAT subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ada3_ngg1_ada_hat_subunit
+  - node_id: sgf29_ada_hat_subunit
+    label: Sgf29 ADA HAT subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sgf29_ada_hat_subunit
+  - node_id: ahc1_ada_module_subunit
+    label: Ahc1 ADA-module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ahc1_ada_module_subunit
+  - node_id: ahc2_ada_module_subunit
+    label: Ahc2 ADA-module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ahc2_ada_module_subunit
+  - node_id: ada_complex
+    label: ADA complex
+    node_type: STRUCTURE
+    grounding: GO:0140671
+  - node_id: histone_acetyltransferase_activity
+    label: histone acetyltransferase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004402
+  edges:
+  - subject: ada2_ada_hat_subunit
+    predicate: contributes to
+    object: ada_complex
+    description: Ada2 ADA HAT subunit is a constituent of the budding-yeast ADA complex.
+    evidence:
+    - reference: GO:0140671
+      notes: GO:0140671 defines the ADA complex as sharing the ADA2-GCN5-NGG1-SGF29
+        HAT module with SAGA in budding yeast.
+    - reference: DOI:10.1038/msb.2011.40
+      notes: Lee et al. 2011 modeled Ada2 as a HAT/Core-module constituent of the
+        Saccharomyces cerevisiae ADA complex.
+  - subject: gcn5_ada_catalytic_subunit
+    predicate: contributes to
+    object: ada_complex
+    description: Gcn5 ADA catalytic subunit is a constituent of the budding-yeast
+      ADA complex.
+    evidence:
+    - reference: GO:0140671
+      notes: GO:0140671 defines the ADA complex as sharing the ADA2-GCN5-NGG1-SGF29
+        HAT module with SAGA in budding yeast.
+    - reference: DOI:10.1038/msb.2011.40
+      notes: Lee et al. 2011 modeled Gcn5 as a HAT/Core-module constituent of the
+        Saccharomyces cerevisiae ADA complex.
+  - subject: ada3_ngg1_ada_hat_subunit
+    predicate: contributes to
+    object: ada_complex
+    description: Ada3/Ngg1 ADA HAT subunit is a constituent of the budding-yeast ADA
+      complex.
+    evidence:
+    - reference: GO:0140671
+      notes: GO:0140671 defines the ADA complex as sharing the ADA2-GCN5-NGG1-SGF29
+        HAT module with SAGA in budding yeast.
+    - reference: DOI:10.1038/msb.2011.40
+      notes: Lee et al. 2011 modeled Ada3/Ngg1 as a HAT/Core-module constituent of
+        the Saccharomyces cerevisiae ADA complex.
+  - subject: sgf29_ada_hat_subunit
+    predicate: contributes to
+    object: ada_complex
+    description: Sgf29 ADA HAT subunit is a constituent of the budding-yeast ADA complex.
+    evidence:
+    - reference: GO:0140671
+      notes: GO:0140671 defines the ADA complex as sharing the ADA2-GCN5-NGG1-SGF29
+        HAT module with SAGA in budding yeast.
+    - reference: DOI:10.1038/msb.2011.40
+      notes: Lee et al. 2011 characterized Sgf29 as a HAT/Core-module component of
+        all Gcn5 histone acetyltransferase complexes.
+  - subject: ahc1_ada_module_subunit
+    predicate: contributes to
+    object: ada_complex
+    description: Ahc1 ADA-module subunit is a constituent of the budding-yeast ADA
+      complex.
+    evidence:
+    - reference: DOI:10.1038/msb.2011.40
+      notes: Lee et al. 2011 modeled Ahc1 with Ahc2 as the ADA-specific module of
+        the Saccharomyces cerevisiae ADA complex.
+  - subject: ahc2_ada_module_subunit
+    predicate: contributes to
+    object: ada_complex
+    description: Ahc2 ADA-module subunit is a constituent of the budding-yeast ADA
+      complex.
+    evidence:
+    - reference: DOI:10.1038/msb.2011.40
+      notes: Lee et al. 2011 identified Ycr082w/Ahc2 as a novel ADA-complex subunit
+        that co-purified with Ada3, Ahc1, Gcn5, Ada2 and Sgf29.
+  - subject: ada_complex
+    predicate: supports
+    object: histone_acetyltransferase_activity
+    description: The ADA complex supports Gcn5-dependent histone acetyltransferase
+      activity.
+    evidence:
+    - reference: GO:0140671
+      notes: GO:0140671 defines ADA as a chromatin-remodeling complex that acetylates
+        nucleosomal histones.
+    - reference: GO:0004402
+      notes: GO:0004402 is the molecular-function term for histone acetyltransferase
+        activity.
+    - reference: DOI:10.1038/msb.2011.40
+      notes: Lee et al. 2011 modeled ADA as a budding-yeast Gcn5 HAT complex.
+discussions:
+- discussion_id: resolve_ada_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the ADA-complex constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ada2_ada_hat_subunit
+  - components#gcn5_ada_catalytic_subunit
+  - components#ada3_ngg1_ada_hat_subunit
+  - components#sgf29_ada_hat_subunit
+  - components#ahc1_ada_module_subunit
+  - components#ahc2_ada_module_subunit
+  rationale: GO:0140671 and Lee et al. 2011 define the budding-yeast ADA complex subunits.
+    Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries for
+    these ADA subunit classes need narrower curation before the component labels can
+    be grounded.
+  evidence:
+  - reference: GO:0140671
+    notes: GO:0140671 defines the ADA complex as sharing ADA2, GCN5, NGG1 and SGF29
+      with SAGA in budding yeast.
+  - reference: DOI:10.1038/msb.2011.40
+    notes: Lee et al. 2011 modeled the budding-yeast ADA complex with six subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'
+- discussion_id: exclude_misleading_go_ada_xref_28966424
+  prompt: Do not copy GO:0140671's PMID:28966424 definition xref into record evidence.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - evidence#GO:0140671
+  rationale: QuickGO currently lists PMID:28966424 among GO:0140671 definition xrefs,
+    but NCBI E-utilities resolves that PMID to an unrelated 2016 Personality and Individual
+    Differences article on social anxiety in combat veterans.
+  evidence:
+  - reference: GO:0140671
+    notes: The current GO:0140671 definition xrefs include PMID:28966424.
+  - reference: PMID:28966424
+    notes: NCBI E-utilities resolves PMID:28966424 to Kimbrel et al. 2016, 'Reinforcement
+      Sensitivity and Social Anxiety in Combat Veterans'.
+  posed_by: codex
+  posed_date: '2026-09-27'
+  resolved_date: '2026-09-27'
+  resolution_note: Excluded PMID:28966424 from this ADA-complex record because it
+    does not support a cell-structure claim.
