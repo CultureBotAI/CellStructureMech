@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/swi5_sfr1_complex.yaml
+  slug: swi5_sfr1_complex
+session:
+  id: 2026-09-27T121111Z-codex-077792
+  timestamp: '2026-09-27T12:11:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Swi5-Sfr1 complex record
+  details: Added a GO-grounded Swi5-Sfr1 complex record with nuclear protein-containing-complex
+    parentage, Schizosaccharomyces pombe Swi5 and Sfr1 constituent rows, DNA strand exchange
+    activator activity, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a Swi5-Sfr1
+    subunit-grounding TODO.

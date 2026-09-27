@@ -1,0 +1,207 @@
+identifier: GO:0032798
+label: Swi5-Sfr1 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A conserved DNA recombinase mediator complex that contains two Swi5 monomers
+  and one Sfr1 monomer in Schizosaccharomyces, or orthologs thereof (e.g. Sae3p and
+  Mei5p in Saccharomyces).
+definition_source: GO:0032798
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T12:09:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T12:10:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO Swi5-Sfr1 synonymy, nuclear protein-containing-complex parentage,
+    two reviewed-label-only fission-yeast constituent rows, Schizosaccharomyces pombe
+    scope, DNA-strand-exchange activator-function evidence, GO/PubMed/DOI evidence,
+    a nonmechanistic function graph, and a Swi5-Sfr1 subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Sae3-Mei5 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032798
+- synonym_text: Swi5 complex
+  synonym_type: BROAD_SYNONYM
+  source: GO:0032798
+parent_structures:
+- GO:0140513
+components:
+- component_id: swi5_recombinase_mediator_subunit
+  label: Swi5 recombinase mediator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - swi5
+  stoichiometry: '2'
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Swi5 is modeled as a named Schizosaccharomyces pombe Swi5-Sfr1
+    constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family
+    CURIE was curated in this pass.
+  role: Swi5-class constituent present as two monomers in the fission-yeast Swi5-Sfr1
+    recombinase mediator complex.
+  evidence:
+  - reference: GO:0032798
+    notes: GO:0032798 defines the Schizosaccharomyces complex as containing two Swi5
+      monomers.
+  - reference: DOI:10.1038/nsmb1136
+    notes: Haruta et al. 2006 assayed the Schizosaccharomyces pombe Swi5-Sfr1 complex
+      in Rhp51/Rad51- and Dmc1-mediated DNA strand exchange.
+- component_id: sfr1_recombinase_mediator_subunit
+  label: Sfr1 recombinase mediator subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - sfr1
+  stoichiometry: '1'
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Sfr1 is modeled as a named Schizosaccharomyces pombe Swi5-Sfr1
+    constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family
+    CURIE was curated in this pass.
+  role: Sfr1-class constituent present as one monomer in the fission-yeast Swi5-Sfr1
+    recombinase mediator complex.
+  evidence:
+  - reference: GO:0032798
+    notes: GO:0032798 defines the Schizosaccharomyces complex as containing one Sfr1
+      monomer.
+  - reference: DOI:10.1038/nsmb1136
+    notes: Haruta et al. 2006 assayed the Schizosaccharomyces pombe Swi5-Sfr1 complex
+      in Rhp51/Rad51- and Dmc1-mediated DNA strand exchange.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast has a two-subunit Swi5-Sfr1 complex that stimulates Rhp51/Rad51-
+    and Dmc1-mediated DNA strand exchange in vitro.
+  reference: DOI:10.1038/nsmb1136
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Reference fission-yeast system for in-vitro Swi5-Sfr1 DNA-strand-exchange
+    mediator assays.
+  reference: DOI:10.1038/nsmb1136
+functions:
+- function_id: dna_strand_exchange_activator_activity
+  label: DNA strand exchange activator activity
+  grounding: GO:0140619
+  description: The Swi5-Sfr1 complex stimulates Rhp51/Rad51- and Dmc1-mediated DNA
+    strand exchange in vitro.
+  evidence:
+  - reference: GO:0140619
+    notes: GO:0140619 is the Gene Ontology molecular-function term for DNA strand
+      exchange activator activity.
+  - reference: DOI:10.1038/nsmb1136
+    notes: Haruta et al. 2006 reported that the fission-yeast Swi5-Sfr1 complex stimulates
+      Rhp51/Rad51- and Dmc1-mediated DNA strand exchange in vitro.
+evidence:
+- reference: GO:0032798
+  notes: Gene Ontology cellular-component term for the Swi5-Sfr1 complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0140619
+  notes: Gene Ontology molecular-function term for DNA strand exchange activator activity.
+- reference: PMID:15620352
+  notes: PubMed identifier for Hayase et al. 2004, the Cell paper on a Saccharomyces
+    cerevisiae Mei5-Sae3 protein complex.
+- reference: DOI:10.1016/j.cell.2004.10.031
+  notes: DOI for Hayase et al. 2004, verified through PubMed.
+- reference: PMID:16921379
+  notes: PubMed identifier for Haruta et al. 2006, the Nature Structural & Molecular
+    Biology paper on the Schizosaccharomyces pombe Swi5-Sfr1 complex.
+- reference: DOI:10.1038/nsmb1136
+  notes: DOI for Haruta et al. 2006, verified through PubMed.
+causal_graphs:
+- graph_id: swi5_sfr1_dna_strand_exchange_activation
+  title: Swi5-Sfr1 stimulates recombinase strand exchange
+  description: The Schizosaccharomyces pombe Swi5 and Sfr1 proteins form a mediator
+    complex that stimulates Rhp51/Rad51- and Dmc1-mediated DNA strand exchange.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the two Schizosaccharomyces constituent classes and
+    the GO-level DNA-strand-exchange activator function without resolving Rhp51-DNA
+    filament remodeling, RPA displacement or meiosis-specific Sae3-Mei5 behavior.
+  nodes:
+  - node_id: swi5_recombinase_mediator_subunit
+    label: Swi5 recombinase mediator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: swi5_recombinase_mediator_subunit
+  - node_id: sfr1_recombinase_mediator_subunit
+    label: Sfr1 recombinase mediator subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sfr1_recombinase_mediator_subunit
+  - node_id: swi5_sfr1_complex
+    label: Swi5-Sfr1 complex
+    node_type: STRUCTURE
+    grounding: GO:0032798
+  - node_id: dna_strand_exchange_activity
+    label: DNA strand exchange activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0000150
+  - node_id: dna_strand_exchange_activator_activity
+    label: DNA strand exchange activator activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0140619
+  edges:
+  - subject: swi5_recombinase_mediator_subunit
+    predicate: contributes to
+    object: swi5_sfr1_complex
+    description: Swi5 is present as two monomers in the Schizosaccharomyces Swi5-Sfr1
+      complex.
+    evidence:
+    - reference: GO:0032798
+      notes: GO:0032798 defines the Schizosaccharomyces complex as containing two
+        Swi5 monomers.
+  - subject: sfr1_recombinase_mediator_subunit
+    predicate: contributes to
+    object: swi5_sfr1_complex
+    description: Sfr1 is present as one monomer in the Schizosaccharomyces Swi5-Sfr1
+      complex.
+    evidence:
+    - reference: GO:0032798
+      notes: GO:0032798 defines the Schizosaccharomyces complex as containing one
+        Sfr1 monomer.
+  - subject: swi5_sfr1_complex
+    predicate: stimulates
+    object: dna_strand_exchange_activity
+    description: The Swi5-Sfr1 complex stimulates Rhp51/Rad51- and Dmc1-mediated DNA
+      strand exchange.
+    evidence:
+    - reference: DOI:10.1038/nsmb1136
+      notes: Haruta et al. 2006 directly assayed Swi5-Sfr1 stimulation of Rhp51/Rad51-
+        and Dmc1-mediated DNA strand exchange in vitro.
+  - subject: swi5_sfr1_complex
+    predicate: enables
+    object: dna_strand_exchange_activator_activity
+    description: The Swi5-Sfr1 complex carries out DNA strand exchange activator activity.
+    evidence:
+    - reference: GO:0140619
+      notes: GO:0140619 is the molecular-function term for activity that increases
+        DNA strand exchange activity.
+    - reference: DOI:10.1038/nsmb1136
+      notes: Haruta et al. 2006 reported Swi5-Sfr1 stimulation of Rhp51/Rad51- and
+        Dmc1-mediated DNA strand exchange.
+discussions:
+- discussion_id: resolve_swi5_sfr1_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Swi5 and Sfr1 constituents
+    of the Swi5-Sfr1 complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#swi5_recombinase_mediator_subunit
+  - components#sfr1_recombinase_mediator_subunit
+  rationale: GO:0032798 exactly identifies the conserved Swi5-Sfr1 complex, but exact
+    InterPro, Pfam, NCBIfam or UniProtKB family boundaries for the two Schizosaccharomyces-modeled
+    subunit classes need narrower follow-up curation.
+  evidence:
+  - reference: GO:0032798
+    notes: GO:0032798 identifies a Schizosaccharomyces Swi5-Sfr1 complex and exact
+      Sae3-Mei5 orthologous complex synonym.
+  posed_by: codex
+  posed_date: '2026-09-27'
