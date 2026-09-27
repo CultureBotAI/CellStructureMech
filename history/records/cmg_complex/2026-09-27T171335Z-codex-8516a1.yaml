@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cmg_complex.yaml
+  slug: cmg_complex
+session:
+  id: 2026-09-27T171335Z-codex-8516a1
+  timestamp: '2026-09-27T17:13:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the CMG complex record.
+  details: Created data/structures/other/cmg_complex.yaml for GO:0071162 with GO exact synonymy,
+    DNA replication preinitiation-complex parentage, GINS and MCM subcomplex constituent rows,
+    a reviewed-label-only Cdc45 constituent, Eukaryota scope, a Schizosaccharomyces pombe
+    canonical example, DNA-replication function evidence, GO/PubMed/DOI provenance, a nonmechanistic
+    CMG function graph, and curation discussions for Cdc45 grounding and GINS/MCM subcomplex
+    boundaries.
