@@ -1,0 +1,189 @@
+identifier: GO:0016590
+label: ACF complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An ISWI complex that contains an ATPase subunit of the ISWI family (SNF2H
+  in mammals, Isw2 in S. cerevisiae), an ACF1 homolog, and generally no other subunits,
+  though Xenopus is an exception with a third non-conserved subunit. ACF plays roles
+  in regulation of RNA polymerase II transcription and in DNA replication and repair.
+definition_source: GO:0016590
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T03:15:26Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T03:16:05Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ACF exact synonymy, ISWI-type parentage, Isw2 and Itc1 constituent
+    rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and a subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: ATP-utilizing chromatin assembly and remodeling factor complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016590
+parent_structures:
+- GO:0031010
+components:
+- component_id: isw2_acf_atpase_subunit
+  label: Isw2 ACF ATPase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ISW2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast ACF-like Isw2 literature follows Isw2 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this ACF ATPase subunit class was curated in this pass.
+  role: ISWI-family ATPase constituent of the budding-yeast two-subunit ACF-like Isw2
+    chromatin-remodeling complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.21.6.2098-2106.2001
+    notes: Gelbart et al. 2001 purified Isw2p with Itc1p and found that both subunits
+      were required for the ATPase and chromatin-remodeling activities of the Isw2
+      complex.
+- component_id: itc1_acf_subunit
+  label: Itc1 ACF subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ITC1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The budding-yeast ACF-like Isw2 literature follows Itc1 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this ACF Itc1 subunit class was curated in this pass.
+  role: WAC-motif constituent paired with Isw2 in the budding-yeast two-subunit ACF-like
+    Isw2 chromatin-remodeling complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.21.6.2098-2106.2001
+    notes: Gelbart et al. 2001 identified YGL133w, named ITC1, as the second subunit
+      of the budding-yeast Isw2 complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the source organism in which Gelbart et al. biochemically
+    characterized the two-subunit Isw2/Itc1 complex.
+  reference: DOI:10.1128/MCB.21.6.2098-2106.2001
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Gelbart et al. 2001 purified the two-subunit Isw2 complex from Saccharomyces
+    cerevisiae and identified Itc1p as its second subunit.
+  reference: DOI:10.1128/MCB.21.6.2098-2106.2001
+functions:
+- function_id: chromatin_remodeling
+  label: chromatin remodeling
+  grounding: GO:0006338
+  description: The ACF-like Isw2/Itc1 complex carries ATP-dependent chromatin remodeling
+    activity in Saccharomyces cerevisiae.
+  evidence:
+  - reference: GO:0006338
+    notes: GO:0006338 is the Gene Ontology biological-process term for chromatin remodeling.
+  - reference: GO:0016590
+    notes: GO:0016590 defines the ACF cellular component as an ISWI complex.
+  - reference: DOI:10.1128/MCB.21.6.2098-2106.2001
+    notes: Gelbart et al. 2001 found that Isw2p and Itc1p were both required for chromatin-remodeling
+      activity of the Isw2 complex.
+evidence:
+- reference: GO:0016590
+  notes: Gene Ontology cellular-component term for the ACF complex.
+- reference: GO:0031010
+  notes: Gene Ontology cellular-component parent term for ISWI-type complexes.
+- reference: GO:0006338
+  notes: Gene Ontology biological-process term for chromatin remodeling.
+- reference: PMID:11238944
+  notes: PubMed identifier for Gelbart et al. 2001, the Molecular and Cellular Biology
+    paper that identified ITC1 as the second subunit of the budding-yeast Isw2 complex.
+- reference: DOI:10.1128/MCB.21.6.2098-2106.2001
+  notes: 'DOI for Gelbart et al. 2001, ''Interactions of Isw2 chromatin remodeling
+    complex with nucleosomal arrays: analyses using recombinant yeast histones and
+    immobilized templates'', verified through NCBI E-utilities.'
+- reference: PMID:15024052
+  notes: PubMed identifier for McConnell et al. 2004, the Molecular and Cellular Biology
+    paper that separated the two-subunit and four-subunit Isw2 complexes.
+- reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+  notes: DOI for McConnell et al. 2004, 'Histone fold protein Dls1p is required for
+    Isw2-dependent chromatin remodeling in vivo', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_acf_chromatin_remodeling
+  title: ACF supports yeast chromatin remodeling
+  description: In Saccharomyces cerevisiae, Isw2 and Itc1 form the two-subunit ACF-like
+    Isw2 chromatin-remodeling complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the two budding-yeast ACF constituent classes and
+    their connection to chromatin remodeling without resolving the ordered substrate-recognition
+    or nucleosome-sliding cycle.
+  nodes:
+  - node_id: isw2_acf_atpase_subunit
+    label: Isw2 ACF ATPase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: isw2_acf_atpase_subunit
+  - node_id: itc1_acf_subunit
+    label: Itc1 ACF subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: itc1_acf_subunit
+  - node_id: acf_complex
+    label: ACF complex
+    node_type: STRUCTURE
+    grounding: GO:0016590
+  - node_id: chromatin_remodeling
+    label: chromatin remodeling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006338
+  edges:
+  - subject: isw2_acf_atpase_subunit
+    predicate: contributes to
+    object: acf_complex
+    description: Isw2 is a constituent of the budding-yeast ACF-like two-subunit Isw2
+      complex.
+    evidence:
+    - reference: DOI:10.1128/MCB.21.6.2098-2106.2001
+      notes: Gelbart et al. 2001 purified and reconstituted the budding-yeast Isw2/Itc1
+        complex.
+  - subject: itc1_acf_subunit
+    predicate: contributes to
+    object: acf_complex
+    description: Itc1 is a constituent of the budding-yeast ACF-like two-subunit Isw2
+      complex.
+    evidence:
+    - reference: DOI:10.1128/MCB.21.6.2098-2106.2001
+      notes: Gelbart et al. 2001 purified and reconstituted the budding-yeast Isw2/Itc1
+        complex.
+  - subject: acf_complex
+    predicate: enables
+    object: chromatin_remodeling
+    description: The ACF-like two-subunit Isw2 complex carries chromatin-remodeling
+      activity.
+    evidence:
+    - reference: DOI:10.1128/MCB.21.6.2098-2106.2001
+      notes: Gelbart et al. 2001 found that both Isw2p and Itc1p were required for
+        chromatin-remodeling activity of the complex.
+discussions:
+- discussion_id: acf_subunit_grounding
+  prompt: Curate exact source-neutral InterPro, Pfam, NCBIfam or UniProt family groundings
+    for the ACF Isw2 and Itc1 component classes when terms that denote those classes
+    can be verified.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#isw2_acf_atpase_subunit
+  - components#itc1_acf_subunit
+  rationale: Isw2 and Itc1 occur in both two-subunit ACF-like and four-subunit CHRAC-like
+    complexes, so exact grounding should avoid broad ATPase or WAC-domain terms that
+    do not denote these ACF component roles.
+  evidence:
+  - reference: DOI:10.1128/MCB.21.6.2098-2106.2001
+    notes: Gelbart et al. 2001 identified Isw2p and Itc1p as the two subunits of the
+      budding-yeast Isw2 complex.
+  - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+    notes: McConnell et al. 2004 separated a two-subunit Itc1p-Isw2p complex from
+      a four-subunit Itc1p-Isw2p-Dpb4p-Dls1p complex.
+  posed_by: codex
+  posed_date: '2026-09-27'

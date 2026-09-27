@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/acf_complex.yaml
+  slug: acf_complex
+session:
+  id: 2026-09-27T031638Z-codex-a11fe7
+  timestamp: '2026-09-27T03:16:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add ACF complex record
+  details: Created the GO:0016590 ACF complex record with ATP-utilizing chromatin assembly
+    and remodeling factor exact synonymy, ISWI-type parentage, two Saccharomyces cerevisiae
+    constituent rows curated from Gelbart et al. 2001, yeast taxonomic scope and canonical
+    example, chromatin-remodeling function evidence, a nonmechanistic function graph, and
+    an open TODO for exact source-neutral subunit-family groundings.
