@@ -11,6 +11,11 @@ session:
     name: codex
     model: GPT-5
     agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1677
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1676
 events:
 - type: CREATE
   outcome: changed
