@@ -1,0 +1,326 @@
+identifier: GO:0016035
+label: zeta DNA polymerase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An error-prone eukaryotic DNA polymerase complex that carries out translesion
+  DNA synthesis and damage-tolerance mutagenesis; in Saccharomyces cerevisiae, DNA
+  polymerase zeta contains Rev3, Rev7, and the Pol31 and Pol32 accessory subunits
+  shared with DNA polymerase delta.
+definition_source: GO:0016035
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T19:47:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T19:48:24Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added DNA-polymerase-complex parentage, four reviewed-label-only Saccharomyces
+    Pol zeta constituent rows, budding-yeast scope and canonical example, translesion-synthesis
+    function evidence, GO/PubMed evidence, a nonmechanistic function graph, a subunit-grounding
+    TODO, and a resolved discussion for using the four-subunit Pol zeta assembly while
+    leaving Rev1 outside the stable complex boundary.
+  llm_assisted: true
+parent_structures:
+- GO:0042575
+components:
+- component_id: rev3_catalytic_subunit
+  label: Rev3 catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - REV3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rev3 catalytic subunit is modeled as a named Saccharomyces cerevisiae
+    DNA polymerase zeta constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: Catalytic Rev3 constituent of the Saccharomyces cerevisiae DNA polymerase
+    zeta complex.
+  evidence:
+  - reference: GO:0016035
+    notes: GO:0016035 defines the zeta DNA polymerase complex as first characterized
+      in Saccharomyces with Rev3 and Rev7 subunits.
+  - reference: PMID:8658138
+    notes: Nelson et al. showed that Saccharomyces cerevisiae Rev3 and Rev7 form a
+      complex with DNA polymerase activity.
+  - reference: PMID:23066099
+    notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol zeta
+      complex containing Rev3, Rev7, Pol31, and Pol32.
+- component_id: rev7_subunit
+  label: Rev7 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - REV7
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rev7 subunit is modeled as a named Saccharomyces cerevisiae DNA
+    polymerase zeta constituent; no exact source-neutral InterPro, Pfam, NCBIfam or
+    UniProtKB family CURIE was curated in this pass.
+  role: Rev7 constituent of the Saccharomyces cerevisiae DNA polymerase zeta core.
+  evidence:
+  - reference: GO:0016035
+    notes: GO:0016035 defines the zeta DNA polymerase complex as first characterized
+      in Saccharomyces with Rev3 and Rev7 subunits.
+  - reference: PMID:8658138
+    notes: Nelson et al. showed that Saccharomyces cerevisiae Rev3 and Rev7 form a
+      complex with DNA polymerase activity.
+  - reference: PMID:23066099
+    notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol zeta
+      complex containing Rev3, Rev7, Pol31, and Pol32.
+- component_id: pol31_subunit
+  label: Pol31 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - POL31
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Pol31 subunit is modeled as a named Saccharomyces cerevisiae DNA
+    polymerase zeta constituent that is shared with DNA polymerase delta; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was curated in
+    this pass.
+  role: Pol31 accessory constituent of the Saccharomyces cerevisiae DNA polymerase
+    zeta complex.
+  evidence:
+  - reference: PMID:22465957
+    notes: Baranovskiy et al. found that DNA polymerase zeta shares accessory subunits
+      with DNA polymerase delta.
+  - reference: PMID:22711820
+    notes: Johnson et al. identified Pol31 and Pol32 as essential subunits of yeast
+      DNA polymerase zeta.
+  - reference: PMID:23066099
+    notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol zeta
+      complex containing Rev3, Rev7, Pol31, and Pol32.
+- component_id: pol32_subunit
+  label: Pol32 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - POL32
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Pol32 subunit is modeled as a named Saccharomyces cerevisiae DNA
+    polymerase zeta constituent that is shared with DNA polymerase delta; no exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was curated in
+    this pass.
+  role: Pol32 accessory constituent of the Saccharomyces cerevisiae DNA polymerase
+    zeta complex.
+  evidence:
+  - reference: PMID:22465957
+    notes: Baranovskiy et al. found that DNA polymerase zeta shares accessory subunits
+      with DNA polymerase delta.
+  - reference: PMID:22711820
+    notes: Johnson et al. identified Pol31 and Pol32 as essential subunits of yeast
+      DNA polymerase zeta.
+  - reference: PMID:23066099
+    notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol zeta
+      complex containing Rev3, Rev7, Pol31, and Pol32.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a DNA polymerase zeta complex containing Rev3, Rev7, Pol31,
+    and Pol32.
+  reference: PMID:23066099
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast system in which the Rev3/Rev7 Pol zeta core was discovered
+    and the later four-subunit assembly with Pol31 and Pol32 was biochemically resolved.
+  reference: PMID:23066099
+functions:
+- function_id: translesion_synthesis
+  label: Translesion synthesis
+  grounding: GO:0019985
+  description: The zeta DNA polymerase complex carries out error-prone DNA synthesis
+    across damaged template DNA.
+  evidence:
+  - reference: GO:0016035
+    notes: GO:0016035 defines the zeta DNA polymerase complex as catalyzing error-prone
+      DNA synthesis in translesion-synthesis contexts.
+  - reference: GO:0019985
+    notes: GO:0019985 is the Gene Ontology biological-process term for translesion
+      synthesis.
+  - reference: PMID:8658138
+    notes: Nelson et al. showed that the yeast Rev3/Rev7 DNA polymerase zeta complex
+      can bypass a thymine-thymine cyclobutane dimer.
+evidence:
+- reference: GO:0016035
+  notes: Gene Ontology cellular-component term for the zeta DNA polymerase complex.
+- reference: GO:0042575
+  notes: Gene Ontology cellular-component parent term for DNA polymerase complexes.
+- reference: GO:0019985
+  notes: Gene Ontology biological-process term for translesion synthesis.
+- reference: PMID:8658138
+  notes: PubMed record for Nelson et al. 1996, the Science paper that first characterized
+    yeast DNA polymerase zeta as a Rev3/Rev7 complex.
+- reference: PMID:22465957
+  notes: PubMed record for Baranovskiy et al. 2012, the JBC paper describing shared
+    DNA polymerase delta/zeta accessory subunits.
+- reference: PMID:22711820
+  notes: PubMed record for Johnson et al. 2012, the PNAS paper identifying Pol31 and
+    Pol32 as yeast DNA polymerase zeta subunits.
+- reference: PMID:23066099
+  notes: PubMed record for Makarova et al. 2012, the NAR paper that purified a four-subunit
+    Saccharomyces cerevisiae DNA polymerase zeta complex.
+- reference: PMID:25737057
+  notes: PubMed record for Makarova and Burgers 2015, a review summarizing the four-subunit
+    Pol zeta assembly and its Rev1 and PCNA interactions.
+causal_graphs:
+- graph_id: pol_zeta_supports_translesion_synthesis
+  title: DNA polymerase zeta supports translesion synthesis
+  description: In Saccharomyces cerevisiae, Rev3, Rev7, Pol31, and Pol32 form the
+    zeta DNA polymerase complex that supports translesion synthesis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records Pol zeta composition and translesion-synthesis output
+    without resolving PCNA binding, Rev1 recruitment, or catalytic nucleotide insertion
+    mechanisms.
+  nodes:
+  - node_id: rev3_catalytic_subunit
+    label: Rev3 catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rev3_catalytic_subunit
+  - node_id: rev7_subunit
+    label: Rev7 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rev7_subunit
+  - node_id: pol31_subunit
+    label: Pol31 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pol31_subunit
+  - node_id: pol32_subunit
+    label: Pol32 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pol32_subunit
+  - node_id: zeta_dna_polymerase_complex
+    label: zeta DNA polymerase complex
+    node_type: STRUCTURE
+    grounding: GO:0016035
+  - node_id: translesion_synthesis
+    label: Translesion synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019985
+  edges:
+  - subject: rev3_catalytic_subunit
+    predicate: contributes to
+    object: zeta_dna_polymerase_complex
+    description: Rev3 catalytic subunit is a constituent of the zeta DNA polymerase
+      complex.
+    evidence:
+    - reference: GO:0016035
+      notes: GO:0016035 defines the zeta DNA polymerase complex as first characterized
+        in Saccharomyces with Rev3 and Rev7 subunits.
+    - reference: PMID:8658138
+      notes: Nelson et al. showed that Saccharomyces cerevisiae Rev3 and Rev7 form
+        a complex with DNA polymerase activity.
+    - reference: PMID:23066099
+      notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol
+        zeta complex containing Rev3, Rev7, Pol31, and Pol32.
+  - subject: rev7_subunit
+    predicate: contributes to
+    object: zeta_dna_polymerase_complex
+    description: Rev7 subunit is a constituent of the zeta DNA polymerase complex.
+    evidence:
+    - reference: GO:0016035
+      notes: GO:0016035 defines the zeta DNA polymerase complex as first characterized
+        in Saccharomyces with Rev3 and Rev7 subunits.
+    - reference: PMID:8658138
+      notes: Nelson et al. showed that Saccharomyces cerevisiae Rev3 and Rev7 form
+        a complex with DNA polymerase activity.
+    - reference: PMID:23066099
+      notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol
+        zeta complex containing Rev3, Rev7, Pol31, and Pol32.
+  - subject: pol31_subunit
+    predicate: contributes to
+    object: zeta_dna_polymerase_complex
+    description: Pol31 subunit is a constituent of the zeta DNA polymerase complex.
+    evidence:
+    - reference: PMID:22465957
+      notes: Baranovskiy et al. found that DNA polymerase zeta shares accessory subunits
+        with DNA polymerase delta.
+    - reference: PMID:22711820
+      notes: Johnson et al. identified Pol31 and Pol32 as essential subunits of yeast
+        DNA polymerase zeta.
+    - reference: PMID:23066099
+      notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol
+        zeta complex containing Rev3, Rev7, Pol31, and Pol32.
+  - subject: pol32_subunit
+    predicate: contributes to
+    object: zeta_dna_polymerase_complex
+    description: Pol32 subunit is a constituent of the zeta DNA polymerase complex.
+    evidence:
+    - reference: PMID:22465957
+      notes: Baranovskiy et al. found that DNA polymerase zeta shares accessory subunits
+        with DNA polymerase delta.
+    - reference: PMID:22711820
+      notes: Johnson et al. identified Pol31 and Pol32 as essential subunits of yeast
+        DNA polymerase zeta.
+    - reference: PMID:23066099
+      notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol
+        zeta complex containing Rev3, Rev7, Pol31, and Pol32.
+  - subject: zeta_dna_polymerase_complex
+    predicate: supports
+    object: translesion_synthesis
+    description: The zeta DNA polymerase complex supports translesion synthesis.
+    evidence:
+    - reference: GO:0016035
+      notes: GO:0016035 defines the complex as catalyzing error-prone DNA synthesis
+        in translesion-synthesis contexts.
+    - reference: GO:0019985
+      notes: GO:0019985 defines translesion synthesis.
+discussions:
+- discussion_id: resolve_pol_zeta_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Rev3, Rev7, Pol31,
+    and Pol32 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rev3_catalytic_subunit
+  - components#rev7_subunit
+  - components#pol31_subunit
+  - components#pol32_subunit
+  rationale: GO:0016035 exactly identifies the zeta DNA polymerase complex and primary
+    Saccharomyces evidence directly supports the four curated subunits, but exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIEs were not curated
+    in this pass.
+  evidence:
+  - reference: GO:0016035
+    notes: GO:0016035 defines the Saccharomyces form of the complex as containing
+      Rev3 and Rev7.
+  - reference: PMID:23066099
+    notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol zeta
+      complex.
+  posed_by: codex
+  posed_date: '2026-09-27'
+- discussion_id: model_four_subunit_pol_zeta
+  prompt: Represent Saccharomyces cerevisiae DNA polymerase zeta as a four-subunit
+    Rev3/Rev7/Pol31/Pol32 complex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - GO:0016035
+  rationale: GO:0016035 describes the historical Rev3/Rev7 Pol zeta dimer and notes
+    that Rev1 is often associated with it. Later primary evidence identified Pol31
+    and Pol32 as additional Pol zeta subunits and purified a four-subunit Rev3/Rev7/Pol31/Pol32
+    assembly, while Rev1 remained an assembly or recruitment factor rather than a
+    stable constituent of the Pol zeta complex.
+  evidence:
+  - reference: PMID:8658138
+    notes: Nelson et al. originally characterized yeast Pol zeta as a Rev3/Rev7 complex.
+  - reference: PMID:22711820
+    notes: Johnson et al. identified Pol31 and Pol32 as essential yeast Pol zeta subunits.
+  - reference: PMID:23066099
+    notes: Makarova et al. purified the four-subunit Rev3, Rev7, Pol31, and Pol32
+      complex.
+  - reference: PMID:25737057
+    notes: Makarova and Burgers reviewed the four-subunit Pol zeta complex and its
+      essential interactions with Rev1 and PCNA.
+  resolution_note: The component list includes Rev3, Rev7, Pol31 and Pol32, and leaves
+    Rev1 outside the stable complex boundary.
+  posed_by: codex
+  posed_date: '2026-09-27'

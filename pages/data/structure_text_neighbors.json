@@ -11374,14 +11374,14 @@
           "cosine_similarity": 0.78637151
         },
         {
+          "identifier": "GO:0016035",
+          "label": "zeta DNA polymerase complex",
+          "cosine_similarity": 0.77051677
+        },
+        {
           "identifier": "GO:0005663",
           "label": "DNA replication factor C complex",
           "cosine_similarity": 0.76487576
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.74639209
         }
       ]
     },
@@ -12537,6 +12537,11 @@
       "label": "delta DNA polymerase complex",
       "neighbors": [
         {
+          "identifier": "GO:0016035",
+          "label": "zeta DNA polymerase complex",
+          "cosine_similarity": 0.8611493
+        },
+        {
           "identifier": "GO:0008622",
           "label": "epsilon DNA polymerase complex",
           "cosine_similarity": 0.85941313
@@ -12555,11 +12560,6 @@
           "identifier": "GO:0005663",
           "label": "DNA replication factor C complex",
           "cosine_similarity": 0.79018547
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.7520985
         }
       ]
     },
@@ -12609,6 +12609,11 @@
           "cosine_similarity": 0.79483778
         },
         {
+          "identifier": "GO:0016035",
+          "label": "zeta DNA polymerase complex",
+          "cosine_similarity": 0.77245507
+        },
+        {
           "identifier": "GO:0008622",
           "label": "epsilon DNA polymerase complex",
           "cosine_similarity": 0.74895954
@@ -12617,11 +12622,6 @@
           "identifier": "GO:0005663",
           "label": "DNA replication factor C complex",
           "cosine_similarity": 0.74103067
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.70803067
         }
       ]
     },
@@ -12940,6 +12940,11 @@
       "label": "epsilon DNA polymerase complex",
       "neighbors": [
         {
+          "identifier": "GO:0016035",
+          "label": "zeta DNA polymerase complex",
+          "cosine_similarity": 0.86228123
+        },
+        {
           "identifier": "GO:0043625",
           "label": "delta DNA polymerase complex",
           "cosine_similarity": 0.85941313
@@ -12958,11 +12963,6 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.8031088
-        },
-        {
-          "identifier": "GO:0005658",
-          "label": "alpha DNA polymerase:primase complex",
-          "cosine_similarity": 0.78637151
         }
       ]
     },
@@ -16745,6 +16745,37 @@
           "identifier": "GO:0030662",
           "label": "coated vesicle membrane",
           "cosine_similarity": 0.84099869
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0016035",
+      "label": "zeta DNA polymerase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0008622",
+          "label": "epsilon DNA polymerase complex",
+          "cosine_similarity": 0.86228123
+        },
+        {
+          "identifier": "GO:0043625",
+          "label": "delta DNA polymerase complex",
+          "cosine_similarity": 0.8611493
+        },
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.77887894
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.77512919
+        },
+        {
+          "identifier": "GO:0009360",
+          "label": "DNA polymerase III complex",
+          "cosine_similarity": 0.77245507
         }
       ]
     },
