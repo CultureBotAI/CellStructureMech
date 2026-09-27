@@ -1,0 +1,330 @@
+identifier: GO:0005664
+label: nuclear origin of replication recognition complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multisubunit complex that is located at the replication origins of a
+  chromosome in the nucleus.
+definition_source: GO:0005664
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T17:40:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T17:41:36Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO ORC synonymy, origin-recognition and nuclear protein-containing-complex
+    parentage, six reviewed-label-only Orc constituent rows, Eukaryota scope, budding-yeast
+    canonical evidence, DNA-origin-binding function evidence, GO/PubMed evidence,
+    a nonmechanistic function graph, and an ORC subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-27T17:42:16Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Normalized ORC component role wording and kept the Eukaryota taxonomic-scope
+    note focused on its PubMed reference.
+  llm_assisted: true
+- timestamp: '2026-09-27T17:48:34Z'
+  curator: codex
+  action: FIXED_ID_LABEL
+  changes: Aligned the ORC causal-graph GO:0005664 structure-node label with the current
+    GO canonical label.
+  llm_assisted: true
+synonyms:
+- synonym_text: eukaryotic ORC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005664
+- synonym_text: nuclear ORC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005664
+parent_structures:
+- GO:0000808
+- GO:0140513
+components:
+- component_id: orc1_subunit
+  label: Orc1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This Saccharomyces ORC subunit class is modeled as a named constituent
+    of the nuclear origin recognition complex; no exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProtKB family CURIE was curated in this pass.
+  gene_symbols:
+  - ORC1
+  role: Named Saccharomyces constituent of the origin recognition complex.
+  evidence:
+  - reference: PMID:22405012
+    notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that the
+      six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3 and Orc6
+      are arranged around ORC-Cdc6 bound to origin DNA.
+- component_id: orc2_subunit
+  label: Orc2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This Saccharomyces ORC subunit class is modeled as a named constituent
+    of the nuclear origin recognition complex; no exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProtKB family CURIE was curated in this pass.
+  gene_symbols:
+  - ORC2
+  role: Named Saccharomyces constituent of the origin recognition complex.
+  evidence:
+  - reference: PMID:22405012
+    notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that the
+      six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3 and Orc6
+      are arranged around ORC-Cdc6 bound to origin DNA.
+- component_id: orc3_subunit
+  label: Orc3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This Saccharomyces ORC subunit class is modeled as a named constituent
+    of the nuclear origin recognition complex; no exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProtKB family CURIE was curated in this pass.
+  gene_symbols:
+  - ORC3
+  role: Named Saccharomyces constituent of the origin recognition complex.
+  evidence:
+  - reference: PMID:22405012
+    notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that the
+      six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3 and Orc6
+      are arranged around ORC-Cdc6 bound to origin DNA.
+- component_id: orc4_subunit
+  label: Orc4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This Saccharomyces ORC subunit class is modeled as a named constituent
+    of the nuclear origin recognition complex; no exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProtKB family CURIE was curated in this pass.
+  gene_symbols:
+  - ORC4
+  role: Named Saccharomyces constituent of the origin recognition complex.
+  evidence:
+  - reference: PMID:22405012
+    notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that the
+      six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3 and Orc6
+      are arranged around ORC-Cdc6 bound to origin DNA.
+- component_id: orc5_subunit
+  label: Orc5 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This Saccharomyces ORC subunit class is modeled as a named constituent
+    of the nuclear origin recognition complex; no exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProtKB family CURIE was curated in this pass.
+  gene_symbols:
+  - ORC5
+  role: Named Saccharomyces constituent of the origin recognition complex.
+  evidence:
+  - reference: PMID:22405012
+    notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that the
+      six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3 and Orc6
+      are arranged around ORC-Cdc6 bound to origin DNA.
+- component_id: orc6_subunit
+  label: Orc6 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This Saccharomyces ORC subunit class is modeled as a named constituent
+    of the nuclear origin recognition complex; no exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProtKB family CURIE was curated in this pass.
+  gene_symbols:
+  - ORC6
+  role: Named Saccharomyces constituent of the origin recognition complex.
+  evidence:
+  - reference: PMID:22405012
+    notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that the
+      six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3 and Orc6
+      are arranged around ORC-Cdc6 bound to origin DNA.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: The ORC protein-family review reports that Orc1-Orc5 appear to be present
+    in all eukaryotes and that Orc6 is poorly conserved outside budding yeast.
+  reference: PMID:19344485
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Bell and Stillman originally purified the origin recognition complex from
+    budding yeast and assayed origin-specific DNA binding in Saccharomyces cerevisiae.
+  reference: PMID:1579162
+functions:
+- function_id: dna_replication_origin_binding
+  label: DNA replication origin binding
+  grounding: GO:0003688
+  description: The origin recognition complex recognizes DNA replication origins in
+    an ATP-dependent manner.
+  evidence:
+  - reference: GO:0003688
+    notes: GO:0003688 is the Gene Ontology molecular-function term for DNA replication
+      origin binding.
+  - reference: PMID:1579162
+    notes: The PubMed abstract for Bell and Stillman 1992 reports ATP-dependent origin-specific
+      DNA binding by the Saccharomyces cerevisiae origin recognition complex.
+evidence:
+- reference: GO:0005664
+  notes: Gene Ontology cellular-component term for the nuclear origin of replication
+    recognition complex.
+- reference: GO:0000808
+  notes: Gene Ontology cellular-component parent term for origin recognition complexes.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0003688
+  notes: Gene Ontology molecular-function term for DNA replication origin binding.
+- reference: PMID:1579162
+  notes: PubMed record for the Bell and Stillman paper that purified a budding-yeast
+    multiprotein ORC with ATP-dependent binding to cellular replication origins.
+- reference: PMID:19344485
+  notes: PubMed record for the origin-recognition-complex protein-family review covering
+    Orc1-Orc6 conservation across eukaryotes.
+- reference: PMID:22405012
+  notes: PubMed record for a Saccharomyces cerevisiae ORC-Cdc6-origin-DNA cryo-EM
+    paper that places the six ORC subunits.
+causal_graphs:
+- graph_id: orc_binds_replication_origins
+  title: ORC binds replication origins
+  description: The six Saccharomyces Orc subunits form an origin recognition complex
+    that binds replication-origin DNA.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records yeast ORC subunit membership and DNA-origin binding
+    without resolving origin licensing, Cdc6/Cdt1/MCM loading, ATPase-state transitions
+    or metazoan ORC subcomplexes.
+  nodes:
+  - node_id: orc1_subunit
+    label: Orc1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: orc1_subunit
+  - node_id: orc2_subunit
+    label: Orc2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: orc2_subunit
+  - node_id: orc3_subunit
+    label: Orc3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: orc3_subunit
+  - node_id: orc4_subunit
+    label: Orc4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: orc4_subunit
+  - node_id: orc5_subunit
+    label: Orc5 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: orc5_subunit
+  - node_id: orc6_subunit
+    label: Orc6 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: orc6_subunit
+  - node_id: nuclear_orc
+    label: nuclear origin of replication recognition complex
+    node_type: STRUCTURE
+    grounding: GO:0005664
+  - node_id: dna_replication_origin_binding
+    label: DNA replication origin binding
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003688
+  edges:
+  - subject: orc1_subunit
+    predicate: contributes to
+    object: nuclear_orc
+    description: Orc1 subunit is a named constituent of the Saccharomyces cerevisiae
+      origin recognition complex.
+    evidence:
+    - reference: PMID:22405012
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
+        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+  - subject: orc2_subunit
+    predicate: contributes to
+    object: nuclear_orc
+    description: Orc2 subunit is a named constituent of the Saccharomyces cerevisiae
+      origin recognition complex.
+    evidence:
+    - reference: PMID:22405012
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
+        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+  - subject: orc3_subunit
+    predicate: contributes to
+    object: nuclear_orc
+    description: Orc3 subunit is a named constituent of the Saccharomyces cerevisiae
+      origin recognition complex.
+    evidence:
+    - reference: PMID:22405012
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
+        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+  - subject: orc4_subunit
+    predicate: contributes to
+    object: nuclear_orc
+    description: Orc4 subunit is a named constituent of the Saccharomyces cerevisiae
+      origin recognition complex.
+    evidence:
+    - reference: PMID:22405012
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
+        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+  - subject: orc5_subunit
+    predicate: contributes to
+    object: nuclear_orc
+    description: Orc5 subunit is a named constituent of the Saccharomyces cerevisiae
+      origin recognition complex.
+    evidence:
+    - reference: PMID:22405012
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
+        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+  - subject: orc6_subunit
+    predicate: contributes to
+    object: nuclear_orc
+    description: Orc6 subunit is a named constituent of the Saccharomyces cerevisiae
+      origin recognition complex.
+    evidence:
+    - reference: PMID:22405012
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
+        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+  - subject: nuclear_orc
+    predicate: supports
+    object: dna_replication_origin_binding
+    description: The origin recognition complex supports binding to DNA replication
+      origins.
+    evidence:
+    - reference: GO:0003688
+      notes: GO:0003688 is the molecular-function term for DNA replication origin
+        binding.
+    - reference: PMID:1579162
+      notes: The PubMed abstract for Bell and Stillman 1992 reports origin-specific
+        DNA binding by the Saccharomyces cerevisiae origin recognition complex.
+discussions:
+- discussion_id: resolve_orc_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for Orc1-Orc6 origin-recognition-complex
+    subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#orc1_subunit
+  - components#orc2_subunit
+  - components#orc3_subunit
+  - components#orc4_subunit
+  - components#orc5_subunit
+  - components#orc6_subunit
+  rationale: PMID:22405012 identifies Orc1, Orc4, Orc5, Orc2, Orc3 and Orc6 as the
+    six Saccharomyces ORC subunits, while PMID:19344485 reports that Orc1-Orc5 appear
+    to be present in all eukaryotes and that Orc6 is poorly conserved outside budding
+    yeast. This record therefore leaves ORC subunit components label-only rather than
+    asserting unverified exact InterPro, Pfam, NCBIfam or UniProtKB family CURIEs.
+  evidence:
+  - reference: PMID:19344485
+    notes: The PubMed abstract for the ORC protein-family review summarizes Orc1-Orc6
+      conservation across eukaryotes.
+  - reference: PMID:22405012
+    notes: The PubMed abstract for the 2012 Structure cryo-EM paper places the Saccharomyces
+      Orc1-Orc6 subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'

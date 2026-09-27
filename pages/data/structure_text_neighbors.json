@@ -12495,9 +12495,9 @@
           "cosine_similarity": 0.75187895
         },
         {
-          "identifier": "GO:0000111",
-          "label": "nucleotide-excision repair factor 2 complex",
-          "cosine_similarity": 0.74560475
+          "identifier": "GO:0005664",
+          "label": "nuclear origin of replication recognition complex",
+          "cosine_similarity": 0.75110902
         }
       ]
     },
@@ -12583,14 +12583,14 @@
           "cosine_similarity": 0.76615367
         },
         {
+          "identifier": "GO:0005664",
+          "label": "nuclear origin of replication recognition complex",
+          "cosine_similarity": 0.72648071
+        },
+        {
           "identifier": "GO:0031431",
           "label": "Dbf4-dependent protein kinase complex",
           "cosine_similarity": 0.72378603
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.7211267
         }
       ]
     },
@@ -12614,14 +12614,14 @@
           "cosine_similarity": 0.81260247
         },
         {
+          "identifier": "GO:0005664",
+          "label": "nuclear origin of replication recognition complex",
+          "cosine_similarity": 0.78901522
+        },
+        {
           "identifier": "GO:0031431",
           "label": "Dbf4-dependent protein kinase complex",
           "cosine_similarity": 0.78205791
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.76211517
         }
       ]
     },
@@ -14319,14 +14319,14 @@
           "cosine_similarity": 0.79173637
         },
         {
+          "identifier": "GO:0005664",
+          "label": "nuclear origin of replication recognition complex",
+          "cosine_similarity": 0.7861562
+        },
+        {
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.78009657
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.77110003
         }
       ]
     },
@@ -14345,6 +14345,11 @@
           "cosine_similarity": 0.93937557
         },
         {
+          "identifier": "GO:0005664",
+          "label": "nuclear origin of replication recognition complex",
+          "cosine_similarity": 0.78315418
+        },
+        {
           "identifier": "GO:0034457",
           "label": "Mpp10 complex",
           "cosine_similarity": 0.76748285
@@ -14353,11 +14358,6 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.76340616
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.76336992
         }
       ]
     },
@@ -14381,14 +14381,14 @@
           "cosine_similarity": 0.78865522
         },
         {
+          "identifier": "GO:0005664",
+          "label": "nuclear origin of replication recognition complex",
+          "cosine_similarity": 0.77854767
+        },
+        {
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.77598275
-        },
-        {
-          "identifier": "GO:0034456",
-          "label": "UTP-C complex",
-          "cosine_similarity": 0.77038
         }
       ]
     },
@@ -14513,6 +14513,37 @@
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
           "cosine_similarity": 0.74097934
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005664",
+      "label": "nuclear origin of replication recognition complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.80481311
+        },
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.78901522
+        },
+        {
+          "identifier": "GO:0030690",
+          "label": "Noc1p-Noc2p complex",
+          "cosine_similarity": 0.7861562
+        },
+        {
+          "identifier": "GO:0030691",
+          "label": "Noc2p-Noc3p complex",
+          "cosine_similarity": 0.78315418
+        },
+        {
+          "identifier": "GO:0030692",
+          "label": "Noc4p-Nop14p complex",
+          "cosine_similarity": 0.77854767
         }
       ]
     },
