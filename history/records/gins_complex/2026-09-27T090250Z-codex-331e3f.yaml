@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gins_complex.yaml
+  slug: gins_complex
+session:
+  id: 2026-09-27T090250Z-codex-331e3f
+  timestamp: '2026-09-27T09:02:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add GINS complex record
+  details: Created a GO:0000811-grounded GINS complex record with exact GO synonymy, protein-containing-complex
+    parentage, four reviewed-label-only Saccharomyces cerevisiae Sld5/Psf1/Psf2/Psf3 constituent
+    rows, budding-yeast distribution and example evidence, a DNA-replication function, GO/PubMed/DOI
+    evidence, a nonmechanistic function graph, and curation discussions for subunit grounding
+    and the CMG-helicase boundary.

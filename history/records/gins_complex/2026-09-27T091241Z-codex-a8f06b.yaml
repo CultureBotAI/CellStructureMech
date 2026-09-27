@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gins_complex.yaml
+  slug: gins_complex
+session:
+  id: 2026-09-27T091241Z-codex-a8f06b
+  timestamp: '2026-09-27T09:12:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fix GINS discussion anchor
+  details: Replaced the bare CMG-boundary discussion components anchor on the GINS complex
+    record with concrete Sld5, Psf1, Psf2 and Psf3 component anchors so discussion anchor
+    checks resolve to local component IDs.

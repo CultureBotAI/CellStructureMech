@@ -13122,6 +13122,37 @@
       ]
     },
     {
+      "identifier": "GO:0000811",
+      "label": "GINS complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0042729",
+          "label": "DASH complex",
+          "cosine_similarity": 0.76391989
+        },
+        {
+          "identifier": "GO:1990131",
+          "label": "Gtr1-Gtr2 GTPase complex",
+          "cosine_similarity": 0.7602276
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.75176671
+        },
+        {
+          "identifier": "GO:0033186",
+          "label": "CAF-1 complex",
+          "cosine_similarity": 0.74385615
+        },
+        {
+          "identifier": "GO:0030905",
+          "label": "retromer, tubulation complex",
+          "cosine_similarity": 0.74049618
+        }
+      ]
+    },
+    {
       "identifier": "GO:0042765",
       "label": "GPI-anchor transamidase complex",
       "neighbors": [
