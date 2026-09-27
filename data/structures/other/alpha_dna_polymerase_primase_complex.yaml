@@ -1,0 +1,258 @@
+identifier: GO:0005658
+label: alpha DNA polymerase:primase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A complex of four polypeptides, comprising large and small DNA polymerase
+  alpha subunits and two primase subunits, which are capable of catalyzing the synthesis
+  of an RNA primer on the lagging strand of replicating DNA and the subsequent synthesis
+  of a small stretch of DNA.
+definition_source: GO:0005658
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T18:10:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T18:12:03Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and parentage, four reviewed-label-only constituent classes,
+    Eukaryota scope, a Saccharomyces cerevisiae canonical example, DNA-replication-primer-synthesis
+    function evidence, GO/PubMed evidence, a nonmechanistic function graph, and a
+    subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-27T18:12:53Z'
+  curator: codex
+  action: NORMALIZED_YAML
+  changes: De-aliased repeated GO:0005658 evidence entries so the YAML emits without
+    anchors.
+  llm_assisted: true
+synonyms:
+- synonym_text: DNA polymerase alpha:primase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005658
+- synonym_text: heterotetrameric polymerase alpha holoenzyme
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005658
+- synonym_text: pol-prim
+  synonym_type: RELATED_SYNONYM
+  source: GO:0005658
+parent_structures:
+- GO:0042575
+components:
+- component_id: dna_polymerase_alpha_large_subunit
+  label: DNA polymerase alpha large subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DNA polymerase alpha large subunit is modeled as a constituent
+    class of the eukaryotic alpha DNA polymerase:primase complex; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProtKB family CURIE was curated in this pass.
+  role: Large DNA polymerase alpha constituent class of the four-subunit complex.
+  evidence:
+  - reference: GO:0005658
+    notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
+      complex comprising large and small DNA polymerase alpha subunits plus two primase
+      subunits.
+- component_id: dna_polymerase_alpha_small_subunit
+  label: DNA polymerase alpha small subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DNA polymerase alpha small subunit is modeled as a constituent
+    class of the eukaryotic alpha DNA polymerase:primase complex; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProtKB family CURIE was curated in this pass.
+  role: Small DNA polymerase alpha constituent class of the four-subunit complex.
+  evidence:
+  - reference: GO:0005658
+    notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
+      complex comprising large and small DNA polymerase alpha subunits plus two primase
+      subunits.
+- component_id: dna_primase_large_subunit
+  label: DNA primase large subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DNA primase large subunit is modeled as a constituent class of
+    the eukaryotic alpha DNA polymerase:primase complex; no exact source-neutral InterPro,
+    Pfam, NCBIfam or UniProtKB family CURIE was curated in this pass.
+  role: Large DNA primase constituent class of the four-subunit complex.
+  evidence:
+  - reference: GO:0005658
+    notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
+      complex comprising large and small DNA polymerase alpha subunits plus two primase
+      subunits.
+- component_id: dna_primase_small_subunit
+  label: DNA primase small subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DNA primase small subunit is modeled as a constituent class of
+    the eukaryotic alpha DNA polymerase:primase complex; no exact source-neutral InterPro,
+    Pfam, NCBIfam or UniProtKB family CURIE was curated in this pass.
+  role: Catalytic small DNA primase constituent class of the four-subunit complex.
+  evidence:
+  - reference: GO:0005658
+    notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
+      complex comprising large and small DNA polymerase alpha subunits plus two primase
+      subunits.
+  - reference: PMID:11395402
+    notes: The PubMed abstract for the DNA primase review states that the small eukaryotic
+      primase subunit contains the active site for RNA synthesis.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: GO:0005658 defines an alpha DNA polymerase:primase complex and constrains
+    the cellular-component term to Eukaryota.
+  reference: GO:0005658
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: The four budding-yeast DNA polymerase alpha-primase subunits are assembled
+    throughout the cell cycle.
+  reference: PMID:8621497
+functions:
+- function_id: dna_replication_synthesis_of_primer
+  label: DNA replication, synthesis of primer
+  grounding: GO:0006269
+  description: The alpha DNA polymerase:primase complex synthesizes an RNA primer
+    on lagging-strand templates and then synthesizes a short stretch of DNA.
+  evidence:
+  - reference: GO:0005658
+    notes: GO:0005658 defines the complex by RNA-primer synthesis on lagging-strand
+      DNA and subsequent short DNA synthesis.
+  - reference: GO:0006269
+    notes: GO:0006269 is the Gene Ontology biological-process term for DNA replication
+      primer synthesis.
+  - reference: PMID:26975377
+    notes: The PubMed abstract for the 2016 human primosome structural paper describes
+      coordinated RNA-DNA primer synthesis by primase and DNA polymerase alpha.
+evidence:
+- reference: GO:0005658
+  notes: Gene Ontology cellular-component term for the alpha DNA polymerase:primase
+    complex.
+- reference: GO:0042575
+  notes: Gene Ontology cellular-component parent term for DNA polymerase complexes.
+- reference: GO:0006269
+  notes: Gene Ontology biological-process term for DNA replication primer synthesis.
+- reference: PMID:11395402
+  notes: PubMed record for the DNA primases review cited by GO:0005658.
+- reference: PMID:26975377
+  notes: PubMed record for the human primosome structural paper cited by GO:0005658.
+- reference: PMID:8621497
+  notes: PubMed record for a Saccharomyces cerevisiae DNA polymerase alpha-primase
+    B-subunit paper reporting four-subunit assembly.
+causal_graphs:
+- graph_id: pol_alpha_primase_synthesizes_primers
+  title: DNA polymerase alpha-primase synthesizes primers
+  description: The large and small DNA polymerase alpha subunits plus the two DNA
+    primase subunits form a four-subunit complex that synthesizes RNA-DNA primers.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level subunit classes and primer-synthesis output
+    without resolving domain motion, RNA-to-DNA substrate transfer, polymerase switching
+    or origin-firing regulation.
+  nodes:
+  - node_id: dna_polymerase_alpha_large_subunit
+    label: DNA polymerase alpha large subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dna_polymerase_alpha_large_subunit
+  - node_id: dna_polymerase_alpha_small_subunit
+    label: DNA polymerase alpha small subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dna_polymerase_alpha_small_subunit
+  - node_id: dna_primase_large_subunit
+    label: DNA primase large subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dna_primase_large_subunit
+  - node_id: dna_primase_small_subunit
+    label: DNA primase small subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dna_primase_small_subunit
+  - node_id: alpha_dna_polymerase_primase_complex
+    label: alpha DNA polymerase:primase complex
+    node_type: STRUCTURE
+    grounding: GO:0005658
+  - node_id: dna_replication_synthesis_of_primer
+    label: DNA replication, synthesis of primer
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006269
+  edges:
+  - subject: dna_polymerase_alpha_large_subunit
+    predicate: contributes to
+    object: alpha_dna_polymerase_primase_complex
+    description: DNA polymerase alpha large subunit is a constituent of the alpha
+      DNA polymerase:primase complex.
+    evidence:
+    - reference: GO:0005658
+      notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
+        complex comprising large and small DNA polymerase alpha subunits plus two
+        primase subunits.
+  - subject: dna_polymerase_alpha_small_subunit
+    predicate: contributes to
+    object: alpha_dna_polymerase_primase_complex
+    description: DNA polymerase alpha small subunit is a constituent of the alpha
+      DNA polymerase:primase complex.
+    evidence:
+    - reference: GO:0005658
+      notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
+        complex comprising large and small DNA polymerase alpha subunits plus two
+        primase subunits.
+  - subject: dna_primase_large_subunit
+    predicate: contributes to
+    object: alpha_dna_polymerase_primase_complex
+    description: DNA primase large subunit is a constituent of the alpha DNA polymerase:primase
+      complex.
+    evidence:
+    - reference: GO:0005658
+      notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
+        complex comprising large and small DNA polymerase alpha subunits plus two
+        primase subunits.
+  - subject: dna_primase_small_subunit
+    predicate: contributes to
+    object: alpha_dna_polymerase_primase_complex
+    description: DNA primase small subunit is a constituent of the alpha DNA polymerase:primase
+      complex.
+    evidence:
+    - reference: GO:0005658
+      notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
+        complex comprising large and small DNA polymerase alpha subunits plus two
+        primase subunits.
+  - subject: alpha_dna_polymerase_primase_complex
+    predicate: supports
+    object: dna_replication_synthesis_of_primer
+    description: The alpha DNA polymerase:primase complex supports synthesis of RNA-DNA
+      primers during DNA replication.
+    evidence:
+    - reference: GO:0005658
+      notes: GO:0005658 defines the complex by RNA-primer synthesis and subsequent
+        short DNA synthesis.
+    - reference: GO:0006269
+      notes: GO:0006269 defines DNA replication primer synthesis.
+discussions:
+- discussion_id: resolve_pol_alpha_primase_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the alpha DNA polymerase
+    and primase subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dna_polymerase_alpha_large_subunit
+  - components#dna_polymerase_alpha_small_subunit
+  - components#dna_primase_large_subunit
+  - components#dna_primase_small_subunit
+  rationale: GO:0005658 exactly identifies the four-polypeptide alpha DNA polymerase:primase
+    complex and names large and small DNA polymerase alpha subunits plus two primase
+    subunits, but exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family
+    CURIEs were not curated in this pass.
+  evidence:
+  - reference: GO:0005658
+    notes: GO:0005658 defines the complex as containing large and small DNA polymerase
+      alpha subunits plus two primase subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'
