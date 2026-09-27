@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/pml_body.yaml
+  slug: pml_body
+session:
+  id: 2026-09-27T231958Z-codex-7e9660
+  timestamp: '2026-09-27T23:19:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1688
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1689
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1687
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add PML body record
+  details: Created an evidence-backed GO:0016605 PML body record with GO synonymy, nuclear-body
+    parentage, nuclear-lumen parthood, label-only PML and Sp100 components, Homo sapiens scope,
+    SUMO-linked partner-sumoylation function evidence, a nonmechanistic PML/SUMO/Sp100 assembly
+    graph and a component-boundary TODO.

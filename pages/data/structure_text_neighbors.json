@@ -15230,6 +15230,37 @@
       ]
     },
     {
+      "identifier": "GO:0016605",
+      "label": "PML body",
+      "neighbors": [
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.65459135
+        },
+        {
+          "identifier": "GO:0015030",
+          "label": "Cajal body",
+          "cosine_similarity": 0.63287815
+        },
+        {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.62057203
+        },
+        {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.61677695
+        },
+        {
+          "identifier": "GO:0005692",
+          "label": "U11 snRNP",
+          "cosine_similarity": 0.59877208
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000133",
       "label": "polarisome",
       "neighbors": [

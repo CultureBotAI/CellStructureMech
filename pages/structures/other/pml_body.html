@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PML body · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>PML body</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0016605"><code>GO:0016605</code></a> · OTHER · OTHER · <span class="status">PROPOSED</span></p>
+<p class="definition">A class of nuclear body; they react against SP100 auto-antibodies (PML, promyelocytic leukemia); cells typically contain 10-30 PML bodies per nucleus; alterations in the localization of PML bodies occurs after viral infection. <small>[<a href="http://purl.obolibrary.org/obo/GO_0016605"><code>GO:0016605</code></a>]</small></p>
+<p><strong>Synonyms:</strong> ND10; PML NB; PML nuclear body; nuclear dot</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-pml_protein"><td>PML protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>PML</td><td></td><td>ESSENTIAL</td><td>Scaffold protein required for PML-body formation and recruitment of other ND10/PML-body proteins.<ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.147.2.221"><code>DOI:10.1083/jcb.147.2.221</code></a> <small>Ishov et al. 1999 found that ND10-associated proteins were dispersed in Pml-null cells and were recruited to de novo ND10 after PML reintroduction.</small></li><li><a href="https://doi.org/10.1182/blood.V95.9.2748.009k31a_2748_2752"><code>DOI:10.1182/blood.V95.9.2748.009k31a_2748_2752</code></a> <small>Zhong et al. 2000 showed that PML is required for proper PML nuclear-body formation in primary Pml-null cells and that SUMO modification of PML is required for this role.</small></li></ul></td></tr>
+<tr id="components-sp100_autoantigen"><td>Sp100 nuclear antigen</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>SP100</td><td></td><td>UNKNOWN</td><td>Nuclear autoantigen that accumulates with PML in ND10/PML bodies.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016605"><code>GO:0016605</code></a> <small>GO:0016605 defines PML bodies in relation to SP100 auto-antibodies.</small></li><li><a href="https://doi.org/10.1083/jcb.147.2.221"><code>DOI:10.1083/jcb.147.2.221</code></a> <small>Ishov et al. 1999 described ND10 as discrete nuclear accumulations of proteins including PML and Sp100.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_9606"><code>NCBITaxon:9606</code></a> Homo sapiens — <strong>VARIABLE</strong>: Human acute promyelocytic leukemia cells were used to show that the t(15;17) PML-RARalpha translocation alters a PML-associated nuclear body in a retinoic-acid-reversible fashion. [<a href="https://doi.org/10.1002/j.1460-2075.1994.tb06356.x"><code>DOI:10.1002/j.1460-2075.1994.tb06356.x</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_9606"><code>NCBITaxon:9606</code></a> <em>Homo sapiens</em> — Human acute promyelocytic leukemia cells connected PML-associated nuclear bodies to the t(15;17) PML-RARalpha translocation. [<a href="https://doi.org/10.1002/j.1460-2075.1994.tb06356.x"><code>DOI:10.1002/j.1460-2075.1994.tb06356.x</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>partner protein sumoylation</strong> — PML nuclear bodies can recruit SUMO-pathway machinery and promote sumoylation of recruited partner proteins during oxidative stress.<ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201305148"><code>DOI:10.1083/jcb.201305148</code></a> <small>Sahin et al. 2014 connected oxidative-stress-induced PML nuclear-body assembly to sumoylation of partner proteins.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-sumoylated_pml_body_assembly">PML scaffolds SUMO-dependent PML-body assembly <small>(ASSEMBLY)</small></h3>
+<p>PML protein scaffolds ND10/PML bodies, SUMO modification supports the mature body, and Sp100 accumulates in the assembled nuclear body.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>PML protein</td><td>scaffolds</td><td>PML body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.147.2.221"><code>DOI:10.1083/jcb.147.2.221</code></a> <small>Ishov et al. 1999 found that PML reintroduction restored de novo ND10 formation in Pml-null cells.</small></li></ul></td></tr>
+<tr><td>PML SUMOylation</td><td>supports formation of</td><td>PML body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1182/blood.V95.9.2748.009k31a_2748_2752"><code>DOI:10.1182/blood.V95.9.2748.009k31a_2748_2752</code></a> <small>Zhong et al. 2000 showed that a PML mutant that could not be modified by SUMO-1 failed to relocalize nuclear-body proteins.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2006.09.013"><code>DOI:10.1016/j.molcel.2006.09.013</code></a> <small>Shen et al. 2006 characterized SUMO and SUMO-interacting motif contributions to PML-body formation.</small></li></ul></td></tr>
+<tr><td>Sp100 nuclear antigen</td><td>accumulates in</td><td>PML body</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016605"><code>GO:0016605</code></a> <small>GO:0016605 defines PML bodies in relation to SP100 auto-antibodies.</small></li><li><a href="https://doi.org/10.1083/jcb.147.2.221"><code>DOI:10.1083/jcb.147.2.221</code></a> <small>Ishov et al. 1999 described Sp100 as an ND10-associated protein.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact PML-body resident, client and turnover-factor boundaries before expanding components. <small>This first PML body record captures PML and Sp100 as broad label-only defining proteins while leaving exact PML and Sp100 family groundings, Daxx and ATRX recruitment, SUMO-pathway enzymes, RNF4-dependent turnover and stress- or virus-induced client boundaries to a separate curation pass.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016605"><code>GO:0016605</code></a> <small>Gene Ontology cellular-component term for PML body and its exact ND10/PML-NB synonymy.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0016604"><code>GO:0016604</code></a> <small>Gene Ontology cellular-component term for nuclear body.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> <small>Gene Ontology cellular-component term for nuclear lumen.</small></li><li><a href="https://doi.org/10.1083/jcb.147.2.221"><code>DOI:10.1083/jcb.147.2.221</code></a> <small>Ishov et al. 1999, PML is critical for ND10 formation and recruits the PML-interacting protein Daxx to this nuclear structure when modified by SUMO-1, Journal of Cell Biology.</small></li><li><a href="https://doi.org/10.1182/blood.V95.9.2748.009k31a_2748_2752"><code>DOI:10.1182/blood.V95.9.2748.009k31a_2748_2752</code></a> <small>Zhong et al. 2000, Role of SUMO-1-modified PML in nuclear body formation, Blood.</small></li><li><a href="https://doi.org/10.1002/j.1460-2075.1994.tb06356.x"><code>DOI:10.1002/j.1460-2075.1994.tb06356.x</code></a> <small>Koken et al. 1994, The t(15;17) translocation alters a nuclear body in a retinoic acid-reversible fashion, EMBO Journal.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2006.09.013"><code>DOI:10.1016/j.molcel.2006.09.013</code></a> <small>Shen et al. 2006, The mechanisms of PML-nuclear body formation, Molecular Cell.</small></li><li><a href="https://doi.org/10.1101/cshperspect.a000661"><code>DOI:10.1101/cshperspect.a000661</code></a> <small>Lallemand-Breitenbach and de The 2010, PML nuclear bodies, Cold Spring Harbor Perspectives in Biology.</small></li><li><a href="https://doi.org/10.1083/jcb.201305148"><code>DOI:10.1083/jcb.201305148</code></a> <small>Sahin et al. 2014, Oxidative stress-induced assembly of PML nuclear bodies controls sumoylation of partner proteins, Journal of Cell Biology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-27T23:18:02Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-27T23:19:14Z</code> codex · EXPANDED_RECORD — Added GO PML-body synonymy, nuclear-body parentage, nuclear-lumen parthood, PML and Sp100 label-only components, Homo sapiens scope, SUMO-linked partner-sumoylation function evidence, a nonmechanistic SUMO-dependent PML-body assembly graph and a component-boundary TODO.</li><li><code>2026-09-27T23:33:05Z</code> codex · RESOLVED_REVIEW — Resolved #1689 by retargeting the Homo sapiens taxonomic and canonical-example evidence from the PML-rescue paper to Koken et al. 1994&#39;s direct human acute-promyelocytic-leukemia PML-body evidence.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/pml_body.yaml"><code>data/structures/other/pml_body.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
