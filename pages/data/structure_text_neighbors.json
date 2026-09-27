@@ -13897,6 +13897,37 @@
       ]
     },
     {
+      "identifier": "GO:1990710",
+      "label": "MutS complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000111",
+          "label": "nucleotide-excision repair factor 2 complex",
+          "cosine_similarity": 0.70803381
+        },
+        {
+          "identifier": "GO:0000112",
+          "label": "nucleotide-excision repair factor 3 complex",
+          "cosine_similarity": 0.70799533
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.7075773
+        },
+        {
+          "identifier": "GO:0061617",
+          "label": "MICOS complex",
+          "cosine_similarity": 0.70605613
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.69936011
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031415",
       "label": "NatA complex",
       "neighbors": [
