@@ -22,10 +22,15 @@ curation_history:
     GO/PubMed/DOI evidence, a nonmechanistic function graph, and a THO subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-09-27T14:43:48Z'
+  curator: codex
+  action: TIGHTEN_MEREOLOGY
+  changes: Removed GO:0000346 transcription export complex parthood from the generic
+    GO:0000347 THO complex because GO scopes that context-specific parthood to child
+    term GO:0000445.
+  llm_assisted: true
 parent_structures:
 - GO:0140513
-part_of:
-- GO:0000346
 components:
 - component_id: hpr1_subunit
   label: Hpr1 subunit
