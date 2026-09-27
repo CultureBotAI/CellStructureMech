@@ -12347,6 +12347,37 @@
       ]
     },
     {
+      "identifier": "GO:0031390",
+      "label": "Ctf18 RFC-like complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.81936936
+        },
+        {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.76449958
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.75129502
+        },
+        {
+          "identifier": "GO:0031499",
+          "label": "TRAMP complex",
+          "cosine_similarity": 0.72463357
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.7169022
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031910",
       "label": "cytostome",
       "neighbors": [
@@ -12506,6 +12537,11 @@
       "label": "DNA replication factor C complex",
       "neighbors": [
         {
+          "identifier": "GO:0031390",
+          "label": "Ctf18 RFC-like complex",
+          "cosine_similarity": 0.81936936
+        },
+        {
           "identifier": "GO:0031431",
           "label": "Dbf4-dependent protein kinase complex",
           "cosine_similarity": 0.78205791
@@ -12524,11 +12560,6 @@
           "identifier": "GO:0000111",
           "label": "nucleotide-excision repair factor 2 complex",
           "cosine_similarity": 0.74871947
-        },
-        {
-          "identifier": "GO:0033186",
-          "label": "CAF-1 complex",
-          "cosine_similarity": 0.74158027
         }
       ]
     },

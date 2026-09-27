@@ -1,0 +1,366 @@
+identifier: GO:0031390
+label: Ctf18 RFC-like complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heptameric complex related to replication factor C, which loads the
+  DNA polymerase processivity factor proliferating cell nuclear antigen (PCNA) onto
+  DNA and plays a vital role in chromosome cohesion. In Saccharomyces the subunits
+  are known as Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p, and Ctf8p.
+definition_source: GO:0031390
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T13:54:48Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T13:55:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO Ctf18-RFC synonymy, nuclear protein-containing-complex parentage,
+    seven reviewed-label-only budding-yeast constituent rows, Saccharomyces cerevisiae
+    scope, clamp-loader and sister-chromatid-cohesion function evidence, GO/PubMed/DOI
+    evidence, a nonmechanistic function graph, and a Ctf18-RFC subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Ctf18-RFC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031390
+- synonym_text: Ctf18-RLC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031390
+- synonym_text: RFC (Ctf18)
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031390
+parent_structures:
+- GO:0140513
+components:
+- component_id: ctf18_subunit
+  label: Ctf18 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CTF18
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ctf18 subunit is modeled as a named budding-yeast Ctf18 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heptameric Ctf18 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031390
+    notes: GO:0031390 defines the Saccharomyces Ctf18 RFC-like complex as containing
+      Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+- component_id: rfc2_subunit
+  label: Rfc2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc2 subunit is modeled as a named budding-yeast Ctf18 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heptameric Ctf18 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031390
+    notes: GO:0031390 defines the Saccharomyces Ctf18 RFC-like complex as containing
+      Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+- component_id: rfc3_subunit
+  label: Rfc3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc3 subunit is modeled as a named budding-yeast Ctf18 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heptameric Ctf18 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031390
+    notes: GO:0031390 defines the Saccharomyces Ctf18 RFC-like complex as containing
+      Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+- component_id: rfc4_subunit
+  label: Rfc4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc4 subunit is modeled as a named budding-yeast Ctf18 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heptameric Ctf18 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031390
+    notes: GO:0031390 defines the Saccharomyces Ctf18 RFC-like complex as containing
+      Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+- component_id: rfc5_subunit
+  label: Rfc5 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc5 subunit is modeled as a named budding-yeast Ctf18 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heptameric Ctf18 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031390
+    notes: GO:0031390 defines the Saccharomyces Ctf18 RFC-like complex as containing
+      Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+- component_id: dcc1_subunit
+  label: Dcc1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DCC1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Dcc1 subunit is modeled as a named budding-yeast Ctf18 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heptameric Ctf18 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031390
+    notes: GO:0031390 defines the Saccharomyces Ctf18 RFC-like complex as containing
+      Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+- component_id: ctf8_subunit
+  label: Ctf8 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CTF8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ctf8 subunit is modeled as a named budding-yeast Ctf18 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heptameric Ctf18 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031390
+    notes: GO:0031390 defines the Saccharomyces Ctf18 RFC-like complex as containing
+      Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a heptameric Ctf18 RFC-like complex containing Ctf18p, Rfc2p,
+    Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+  reference: GO:0031390
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system named in the GO:0031390 definition as containing
+    Ctf18p, the four small RFC subunits, Dcc1p and Ctf8p.
+  reference: GO:0031390
+functions:
+- function_id: dna_clamp_loader_activity
+  label: DNA clamp loader activity
+  grounding: GO:0003689
+  description: The Ctf18 RFC-like complex loads the PCNA sliding clamp onto DNA.
+  evidence:
+  - reference: GO:0031390
+    notes: GO:0031390 defines the Ctf18 RFC-like complex as loading PCNA onto DNA.
+  - reference: GO:0003689
+    notes: GO:0003689 is the Gene Ontology molecular-function term for DNA clamp loader
+      activity.
+- function_id: sister_chromatid_cohesion
+  label: sister chromatid cohesion
+  grounding: GO:0007062
+  description: The Ctf18 RFC-like complex supports cohesion of replicated chromosomes.
+  evidence:
+  - reference: GO:0031390
+    notes: GO:0031390 defines the Ctf18 RFC-like complex as playing a vital role in
+      chromosome cohesion.
+  - reference: GO:0007062
+    notes: GO:0007062 is the Gene Ontology biological-process term for sister chromatid
+      cohesion.
+evidence:
+- reference: GO:0031390
+  notes: Gene Ontology cellular-component term for the Ctf18 RFC-like complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0003689
+  notes: Gene Ontology molecular-function term for DNA clamp loader activity.
+- reference: GO:0007062
+  notes: Gene Ontology biological-process term for sister chromatid cohesion.
+- reference: PMID:14614842
+  notes: PubMed identifier for Kim and MacNeill 2003, the Current Biology review listed
+    as the GO:0031390 definition source.
+- reference: DOI:10.1016/j.cub.2003.10.048
+  notes: DOI for Kim and MacNeill 2003, verified through PubMed as the GO:0031390
+    definition-source review.
+causal_graphs:
+- graph_id: ctf18_rfc_clamp_loading_and_cohesion
+  title: Ctf18-RFC loads PCNA and supports cohesion
+  description: Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p form the Saccharomyces
+    cerevisiae Ctf18 RFC-like complex that loads PCNA onto DNA and supports chromosome
+    cohesion.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the seven budding-yeast Ctf18-RFC constituents and
+    GO-level clamp-loading and cohesion functions without resolving PCNA ring opening,
+    ATPase cycling, replication-fork coupling or cohesin establishment.
+  nodes:
+  - node_id: ctf18_subunit
+    label: Ctf18 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ctf18_subunit
+  - node_id: rfc2_subunit
+    label: Rfc2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc2_subunit
+  - node_id: rfc3_subunit
+    label: Rfc3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc3_subunit
+  - node_id: rfc4_subunit
+    label: Rfc4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc4_subunit
+  - node_id: rfc5_subunit
+    label: Rfc5 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc5_subunit
+  - node_id: dcc1_subunit
+    label: Dcc1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dcc1_subunit
+  - node_id: ctf8_subunit
+    label: Ctf8 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ctf8_subunit
+  - node_id: ctf18_rfc_like_complex
+    label: Ctf18 RFC-like complex
+    node_type: STRUCTURE
+    grounding: GO:0031390
+  - node_id: dna_clamp_loader_activity
+    label: DNA clamp loader activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003689
+  - node_id: sister_chromatid_cohesion
+    label: sister chromatid cohesion
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007062
+  edges:
+  - subject: ctf18_subunit
+    predicate: contributes to
+    object: ctf18_rfc_like_complex
+    description: Ctf18 subunit is a constituent of the budding-yeast Ctf18 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031390
+      notes: GO:0031390 defines Saccharomyces Ctf18-RFC as a heptamer containing Ctf18p,
+        Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+  - subject: rfc2_subunit
+    predicate: contributes to
+    object: ctf18_rfc_like_complex
+    description: Rfc2 subunit is a constituent of the budding-yeast Ctf18 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031390
+      notes: GO:0031390 defines Saccharomyces Ctf18-RFC as a heptamer containing Ctf18p,
+        Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+  - subject: rfc3_subunit
+    predicate: contributes to
+    object: ctf18_rfc_like_complex
+    description: Rfc3 subunit is a constituent of the budding-yeast Ctf18 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031390
+      notes: GO:0031390 defines Saccharomyces Ctf18-RFC as a heptamer containing Ctf18p,
+        Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+  - subject: rfc4_subunit
+    predicate: contributes to
+    object: ctf18_rfc_like_complex
+    description: Rfc4 subunit is a constituent of the budding-yeast Ctf18 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031390
+      notes: GO:0031390 defines Saccharomyces Ctf18-RFC as a heptamer containing Ctf18p,
+        Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+  - subject: rfc5_subunit
+    predicate: contributes to
+    object: ctf18_rfc_like_complex
+    description: Rfc5 subunit is a constituent of the budding-yeast Ctf18 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031390
+      notes: GO:0031390 defines Saccharomyces Ctf18-RFC as a heptamer containing Ctf18p,
+        Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+  - subject: dcc1_subunit
+    predicate: contributes to
+    object: ctf18_rfc_like_complex
+    description: Dcc1 subunit is a constituent of the budding-yeast Ctf18 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031390
+      notes: GO:0031390 defines Saccharomyces Ctf18-RFC as a heptamer containing Ctf18p,
+        Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+  - subject: ctf8_subunit
+    predicate: contributes to
+    object: ctf18_rfc_like_complex
+    description: Ctf8 subunit is a constituent of the budding-yeast Ctf18 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031390
+      notes: GO:0031390 defines Saccharomyces Ctf18-RFC as a heptamer containing Ctf18p,
+        Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p.
+  - subject: ctf18_rfc_like_complex
+    predicate: supports
+    object: dna_clamp_loader_activity
+    description: The Ctf18 RFC-like complex loads the PCNA sliding clamp onto DNA.
+    evidence:
+    - reference: GO:0031390
+      notes: GO:0031390 defines the Ctf18 RFC-like complex as loading PCNA onto DNA.
+    - reference: GO:0003689
+      notes: GO:0003689 is the molecular-function term for DNA clamp loader activity.
+  - subject: ctf18_rfc_like_complex
+    predicate: supports
+    object: sister_chromatid_cohesion
+    description: The Ctf18 RFC-like complex supports cohesion of replicated chromosomes.
+    evidence:
+    - reference: GO:0031390
+      notes: GO:0031390 defines the Ctf18 RFC-like complex as playing a vital role
+        in chromosome cohesion.
+    - reference: GO:0007062
+      notes: GO:0007062 is the biological-process term for sister chromatid cohesion.
+discussions:
+- discussion_id: resolve_ctf18_rfc_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Ctf18, Rfc2, Rfc3,
+    Rfc4, Rfc5, Dcc1 and Ctf8 constituents of the Ctf18 RFC-like complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ctf18_subunit
+  - components#rfc2_subunit
+  - components#rfc3_subunit
+  - components#rfc4_subunit
+  - components#rfc5_subunit
+  - components#dcc1_subunit
+  - components#ctf8_subunit
+  rationale: GO:0031390 exactly identifies the Ctf18 RFC-like complex and names the
+    budding-yeast Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p and Ctf8p constituents,
+    but exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIEs for
+    these subunit classes were not curated in this pass.
+  evidence:
+  - reference: GO:0031390
+    notes: GO:0031390 defines Saccharomyces Ctf18-RFC as a heptameric complex with
+      seven named subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'
