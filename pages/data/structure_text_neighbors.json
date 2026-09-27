@@ -11948,6 +11948,11 @@
       "label": "checkpoint clamp complex",
       "neighbors": [
         {
+          "identifier": "GO:0031389",
+          "label": "Rad17 RFC-like complex",
+          "cosine_similarity": 0.75063021
+        },
+        {
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.74169886
@@ -11966,11 +11971,6 @@
           "identifier": "GO:0005663",
           "label": "DNA replication factor C complex",
           "cosine_similarity": 0.71703165
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.71204784
         }
       ]
     },
@@ -12356,6 +12356,11 @@
           "cosine_similarity": 0.81936936
         },
         {
+          "identifier": "GO:0031389",
+          "label": "Rad17 RFC-like complex",
+          "cosine_similarity": 0.7938282
+        },
+        {
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.76449958
@@ -12369,11 +12374,6 @@
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.74861391
-        },
-        {
-          "identifier": "GO:0031499",
-          "label": "TRAMP complex",
-          "cosine_similarity": 0.72463357
         }
       ]
     },
@@ -15164,6 +15164,37 @@
           "identifier": "GO:0009579",
           "label": "thylakoid",
           "cosine_similarity": 0.73383341
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031389",
+      "label": "Rad17 RFC-like complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031390",
+          "label": "Ctf18 RFC-like complex",
+          "cosine_similarity": 0.7938282
+        },
+        {
+          "identifier": "GO:0030896",
+          "label": "checkpoint clamp complex",
+          "cosine_similarity": 0.75063021
+        },
+        {
+          "identifier": "GO:0030870",
+          "label": "Mre11 complex",
+          "cosine_similarity": 0.75036599
+        },
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.74911305
+        },
+        {
+          "identifier": "GO:0000111",
+          "label": "nucleotide-excision repair factor 2 complex",
+          "cosine_similarity": 0.73150808
         }
       ]
     },

@@ -1,0 +1,317 @@
+identifier: GO:0031389
+label: Rad17 RFC-like complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A pentameric protein complex related to replication factor C that loads
+  the checkpoint clamp onto DNA at damage sites and functions in DNA damage cell-cycle
+  checkpoints; the large subunit is Rad17 in Schizosaccharomyces pombe and Rad24p
+  in Saccharomyces cerevisiae.
+definition_source: GO:0031389
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T15:11:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T15:12:53Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO Rad17/Rad24-RFC synonymy, protein-containing-complex parentage,
+    five reviewed-label-only budding-yeast constituent rows, Saccharomyces cerevisiae
+    scope, checkpoint-clamp loader and DNA-damage-response function evidence, GO/PubMed
+    evidence, a nonmechanistic function graph, and a Rad17/Rad24-RFC subunit-grounding
+    TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Rad17-RFC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031389
+- synonym_text: Rad17-RLC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031389
+- synonym_text: Rad24p RFC-like complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031389
+- synonym_text: RFC (Rad17)
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031389
+parent_structures:
+- GO:0032991
+components:
+- component_id: rad24_subunit
+  label: Rad24 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAD24
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rad24 subunit is modeled as a named budding-yeast Rad17/Rad24 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the pentameric Rad17/Rad24 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031389
+    notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like complex
+      as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+- component_id: rfc2_subunit
+  label: Rfc2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc2 subunit is modeled as a named budding-yeast Rad17/Rad24 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the pentameric Rad17/Rad24 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031389
+    notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like complex
+      as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+- component_id: rfc3_subunit
+  label: Rfc3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc3 subunit is modeled as a named budding-yeast Rad17/Rad24 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the pentameric Rad17/Rad24 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031389
+    notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like complex
+      as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+- component_id: rfc4_subunit
+  label: Rfc4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc4 subunit is modeled as a named budding-yeast Rad17/Rad24 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the pentameric Rad17/Rad24 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031389
+    notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like complex
+      as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+- component_id: rfc5_subunit
+  label: Rfc5 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc5 subunit is modeled as a named budding-yeast Rad17/Rad24 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the pentameric Rad17/Rad24 RFC-like
+    complex.
+  evidence:
+  - reference: GO:0031389
+    notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like complex
+      as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a Rad17/Rad24 RFC-like complex containing Rad24p, Rfc2p,
+    Rfc3p, Rfc4p and Rfc5p.
+  reference: GO:0031389
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system named in the GO:0031389 definition as containing
+    Rad24p and the four small RFC subunits.
+  reference: GO:0031389
+functions:
+- function_id: dna_clamp_loader_activity
+  label: DNA clamp loader activity
+  grounding: GO:0003689
+  description: The Rad17/Rad24 RFC-like complex loads the checkpoint clamp onto DNA
+    at damage sites.
+  evidence:
+  - reference: GO:0031389
+    notes: GO:0031389 defines the Rad17 RFC-like complex as loading the checkpoint
+      clamp onto DNA at damage sites.
+  - reference: GO:0003689
+    notes: GO:0003689 is the Gene Ontology molecular-function term for DNA clamp loader
+      activity.
+- function_id: dna_damage_response
+  label: DNA damage response
+  grounding: GO:0006974
+  description: The Rad17/Rad24 RFC-like complex supports DNA damage checkpoint responses.
+  evidence:
+  - reference: GO:0031389
+    notes: GO:0031389 defines the Rad17 RFC-like complex as functioning in DNA damage
+      cell cycle checkpoints.
+  - reference: GO:0006974
+    notes: GO:0006974 is the Gene Ontology biological-process term for DNA damage
+      response.
+evidence:
+- reference: GO:0031389
+  notes: Gene Ontology cellular-component term for the Rad17 RFC-like complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0003689
+  notes: Gene Ontology molecular-function term for DNA clamp loader activity.
+- reference: GO:0006974
+  notes: Gene Ontology biological-process term for DNA damage response.
+- reference: PMID:14614842
+  notes: PubMed identifier for the review listed as the GO:0031389 definition source.
+causal_graphs:
+- graph_id: rad17_rfc_checkpoint_clamp_loading
+  title: Rad17/Rad24-RFC loads the checkpoint clamp
+  description: Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p form the budding-yeast Rad17/Rad24
+    RFC-like complex that loads the checkpoint clamp onto damaged DNA and supports
+    DNA damage checkpoint responses.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the five budding-yeast Rad17/Rad24-RFC constituents
+    and GO-level checkpoint-clamp loading function without resolving ATPase cycling,
+    clamp ring opening or downstream Mec1/Rad53 signaling.
+  nodes:
+  - node_id: rad24_subunit
+    label: Rad24 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad24_subunit
+  - node_id: rfc2_subunit
+    label: Rfc2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc2_subunit
+  - node_id: rfc3_subunit
+    label: Rfc3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc3_subunit
+  - node_id: rfc4_subunit
+    label: Rfc4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc4_subunit
+  - node_id: rfc5_subunit
+    label: Rfc5 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc5_subunit
+  - node_id: rad17_rfc_like_complex
+    label: Rad17 RFC-like complex
+    node_type: STRUCTURE
+    grounding: GO:0031389
+  - node_id: checkpoint_clamp_complex
+    label: checkpoint clamp complex
+    node_type: STRUCTURE
+    grounding: GO:0030896
+  - node_id: damaged_dna
+    label: damaged DNA
+    node_type: GENETIC_ELEMENT
+  - node_id: dna_damage_response
+    label: DNA damage response
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006974
+  edges:
+  - subject: rad24_subunit
+    predicate: contributes to
+    object: rad17_rfc_like_complex
+    description: Rad24 subunit is a constituent of the budding-yeast Rad17/Rad24 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031389
+      notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like
+        complex as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  - subject: rfc2_subunit
+    predicate: contributes to
+    object: rad17_rfc_like_complex
+    description: Rfc2 subunit is a constituent of the budding-yeast Rad17/Rad24 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031389
+      notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like
+        complex as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  - subject: rfc3_subunit
+    predicate: contributes to
+    object: rad17_rfc_like_complex
+    description: Rfc3 subunit is a constituent of the budding-yeast Rad17/Rad24 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031389
+      notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like
+        complex as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  - subject: rfc4_subunit
+    predicate: contributes to
+    object: rad17_rfc_like_complex
+    description: Rfc4 subunit is a constituent of the budding-yeast Rad17/Rad24 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031389
+      notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like
+        complex as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  - subject: rfc5_subunit
+    predicate: contributes to
+    object: rad17_rfc_like_complex
+    description: Rfc5 subunit is a constituent of the budding-yeast Rad17/Rad24 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031389
+      notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like
+        complex as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  - subject: rad17_rfc_like_complex
+    predicate: loads
+    object: checkpoint_clamp_complex
+    description: The Rad17/Rad24 RFC-like complex loads the checkpoint clamp onto
+      DNA at sites of damage.
+    evidence:
+    - reference: GO:0031389
+      notes: GO:0031389 defines the Rad17 RFC-like complex as loading the checkpoint
+        clamp onto DNA at damage sites.
+  - subject: checkpoint_clamp_complex
+    predicate: loads onto
+    object: damaged_dna
+    description: The checkpoint clamp is loaded onto DNA at sites of DNA damage.
+    evidence:
+    - reference: GO:0031389
+      notes: GO:0031389 defines the Rad17 RFC-like complex as loading the checkpoint
+        clamp onto DNA at damage sites.
+  - subject: rad17_rfc_like_complex
+    predicate: supports
+    object: dna_damage_response
+    description: Rad17/Rad24-RFC checkpoint-clamp loading supports DNA damage checkpoint
+      responses.
+    evidence:
+    - reference: GO:0031389
+      notes: GO:0031389 defines the Rad17 RFC-like complex as functioning in DNA damage
+        cell cycle checkpoints.
+    - reference: GO:0006974
+      notes: GO:0006974 is the biological-process term for DNA damage response.
+discussions:
+- discussion_id: resolve_rad17_rfc_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Rad24, Rfc2, Rfc3,
+    Rfc4 and Rfc5 constituents of the Rad17 RFC-like complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rad24_subunit
+  - components#rfc2_subunit
+  - components#rfc3_subunit
+  - components#rfc4_subunit
+  - components#rfc5_subunit
+  rationale: GO:0031389 exactly identifies the Rad17/Rad24 RFC-like complex and names
+    the budding-yeast Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p constituents, but exact
+    source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIEs for these subunit
+    classes were not curated in this pass.
+  evidence:
+  - reference: GO:0031389
+    notes: GO:0031389 defines Saccharomyces cerevisiae Rad17/Rad24-RFC as a pentameric
+      complex with five named subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'
