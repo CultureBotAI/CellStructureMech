@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/isw1a_complex.yaml
+  slug: isw1a_complex
+session:
+  id: 2026-09-27T015602Z-codex-bd8125
+  timestamp: '2026-09-27T01:56:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Isw1a complex record
+  details: Created the GO:0036436 Isw1a complex record with ISW1a exact synonymy, Isw1-complex
+    parentage, two Saccharomyces cerevisiae constituent rows curated from Vary et al. 2003,
+    yeast taxonomic scope and canonical example, chromatin-remodeling function evidence, a
+    nonmechanistic function graph, and an open TODO for exact source-neutral subunit-family
+    groundings.
