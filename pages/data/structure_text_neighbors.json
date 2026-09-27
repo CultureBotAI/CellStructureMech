@@ -16780,6 +16780,37 @@
       ]
     },
     {
+      "identifier": "GO:0071203",
+      "label": "WASH complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.73293238
+        },
+        {
+          "identifier": "GO:0071986",
+          "label": "Ragulator complex",
+          "cosine_similarity": 0.73156677
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.70577488
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.69918801
+        },
+        {
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.69890741
+        }
+      ]
+    },
+    {
       "identifier": "GO:0016035",
       "label": "zeta DNA polymerase complex",
       "neighbors": [
