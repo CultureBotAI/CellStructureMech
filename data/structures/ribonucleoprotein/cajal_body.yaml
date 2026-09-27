@@ -1,0 +1,245 @@
+identifier: GO:0015030
+label: Cajal body
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: A class of nuclear body, first seen after silver staining by Ramon y Cajal
+  in 1903, enriched in small nuclear ribonucleoproteins, and certain general RNA polymerase
+  II transcription factors; ultrastructurally, they appear as a tangle of coiled,
+  electron-dense threads roughly 0.5 micrometers in diameter; involved in aspects
+  of snRNP biogenesis; the protein coilin serves as a marker for Cajal bodies. Some
+  argue that Cajal bodies are the sites for preassembly of transcriptosomes, unitary
+  particles involved in transcription and processing of RNA.
+definition_source: GO:0015030
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T21:41:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T21:42:50Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO Cajal-body synonymy, nuclear RNP granule parentage, nuclear-lumen
+    parthood, coilin, spliceosomal snRNP and scaRNA component curation, Eukaryota
+    distribution, a human example, snRNP-biogenesis function evidence, GO/DOI/PMID
+    evidence, a nonmechanistic Cajal-body RNP graph and a component-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-27T21:48:20Z'
+  curator: codex
+  action: FIXED_PRODUCT_LABELS
+  changes: Aligned the GO:0097525 and SO:0002095 component and graph node labels with
+    their canonical spliceosomal snRNP complex and scaRNA labels.
+  llm_assisted: true
+- timestamp: '2026-09-27T22:02:25Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1682 by narrowing the scaRNA graph edge so Cajal-body scaRNAs
+    guide spliceosomal snRNA modification during snRNP maturation rather than catalytically
+    modifying RNAs themselves.'
+  llm_assisted: true
+synonyms:
+- synonym_text: coiled body
+  synonym_type: EXACT_SYNONYM
+  source: GO:0015030
+- synonym_text: Gemini of coiled bodies
+  synonym_type: RELATED_SYNONYM
+  source: GO:0015030
+- synonym_text: Gems
+  synonym_type: RELATED_SYNONYM
+  source: GO:0015030
+parent_structures:
+- GO:0140168
+part_of:
+- GO:0031981
+components:
+- component_id: coilin
+  label: coilin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - COIL
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Coilin is represented as the canonical Cajal-body marker and scaffold
+    protein family; no exact reviewed InterPro, Pfam or NCBIfam accession was assigned
+    in this first record.
+  role: Cajal-body marker protein concentrated in the nuclear focus and used as a
+    scaffold-like resident in this first component model.
+  evidence:
+  - reference: GO:0015030
+    notes: GO:0015030 names coilin as a marker protein for Cajal bodies in the Cajal
+      body definition.
+  - reference: PMID:10944589
+    notes: Bellini 2000 reviewed coilin as more than a molecular marker of the Cajal/coiled
+      body.
+- component_id: spliceosomal_snrnp_complexes
+  label: spliceosomal snRNP complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0097525
+  essentiality: UNKNOWN
+  role: Small nuclear ribonucleoprotein complexes that are enriched in Cajal bodies
+    during snRNP maturation.
+  evidence:
+  - reference: GO:0015030
+    notes: GO:0015030 defines Cajal bodies as enriched in small nuclear ribonucleoproteins.
+  - reference: DOI:10.1080/15476286.2016.1231359
+    notes: Machyna, Heyn and Neugebauer 2017 reviewed how Cajal bodies participate
+      in snRNP biogenesis.
+- component_id: small_cajal_body_specific_rnas
+  label: scaRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0002095
+  essentiality: UNKNOWN
+  role: scaRNA guides that reside in Cajal bodies and modify spliceosomal snRNAs.
+  evidence:
+  - reference: DOI:10.1093/emboj/21.11.2746
+    notes: Darzacq et al. 2002 defined small Cajal body-specific RNAs as guides for
+      post-transcriptional modification of spliceosomal snRNAs localized in Cajal
+      bodies.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Cajal bodies are nuclear ribonucleoprotein granules of eukaryotic cells, with
+    visible bodies varying across lineage and cell state.
+  reference: DOI:10.1146/annurev.cellbio.16.1.273
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Human cells were used to localize scaRNAs to Cajal bodies and connect them
+    to spliceosomal snRNA modification.
+  reference: DOI:10.1093/emboj/21.11.2746
+functions:
+- function_id: snrnp_biogenesis
+  label: snRNP biogenesis
+  description: Cajal bodies concentrate snRNPs, coilin and scaRNAs in a nuclear body
+    associated with maturation and modification of small nuclear ribonucleoprotein
+    particles.
+  evidence:
+  - reference: DOI:10.1080/15476286.2016.1231359
+    notes: Machyna, Heyn and Neugebauer 2017 reviewed Cajal bodies in relation to
+      snRNP biogenesis.
+  - reference: DOI:10.1093/emboj/21.11.2746
+    notes: Darzacq et al. 2002 connected Cajal-body scaRNAs to guide-directed modification
+      of spliceosomal snRNAs.
+evidence:
+- reference: GO:0015030
+  notes: Gene Ontology cellular-component term for Cajal body and its Cajal body synonymy.
+- reference: GO:0140168
+  notes: Gene Ontology cellular-component parent term for nuclear ribonucleoprotein
+    granule.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen.
+- reference: GO:0097525
+  notes: Gene Ontology cellular-component term for spliceosomal snRNP complex.
+- reference: SO:0002095
+  notes: Sequence Ontology term for small Cajal body-specific RNA.
+- reference: DOI:10.1146/annurev.cellbio.16.1.273
+  notes: Gall 2000 reviewed Cajal bodies and their coiled-body naming history.
+- reference: PMID:10944589
+  notes: PubMed identifier for Bellini 2000, Coilin, more than a molecular marker
+    of the cajal (coiled) body.
+- reference: DOI:10.1093/emboj/21.11.2746
+  notes: 'Darzacq, Jady, Verheggen and colleagues 2002, Cajal body-specific small
+    nuclear RNAs: a novel class of 2''-O-methylation and pseudouridylation guide RNAs,
+    EMBO Journal.'
+- reference: DOI:10.1080/15476286.2016.1231359
+  notes: Machyna, Heyn and Neugebauer 2017, Cajal bodies and snRNPs - friends with
+    benefits, RNA Biology.
+causal_graphs:
+- graph_id: cajal_body_snrnp_biogenesis
+  title: Cajal-body residents support snRNP maturation
+  description: Cajal bodies are nuclear ribonucleoprotein granules that concentrate
+    coilin, spliceosomal snRNP complexes and scaRNAs during small nuclear RNP biogenesis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes conserved Cajal-body resident classes and snRNP-biogenesis
+    context without asserting a complete assembly pathway, exact scaRNP composition
+    or coilin-dependent phase separation mechanism.
+  nodes:
+  - node_id: coilin
+    label: coilin
+    node_type: GENE_OR_PROTEIN
+    component_ref: coilin
+  - node_id: spliceosomal_snrnp_complexes
+    label: spliceosomal snRNP complex
+    node_type: STRUCTURE
+    grounding: GO:0097525
+    component_ref: spliceosomal_snrnp_complexes
+  - node_id: small_cajal_body_specific_rnas
+    label: scaRNA
+    node_type: RNA
+    grounding: SO:0002095
+    component_ref: small_cajal_body_specific_rnas
+  - node_id: cajal_body
+    label: Cajal body
+    node_type: STRUCTURE
+    grounding: GO:0015030
+  - node_id: snrnp_biogenesis
+    label: snRNP biogenesis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: coilin
+    predicate: marks
+    object: cajal_body
+    description: Coilin is a marker protein concentrated in Cajal bodies.
+    evidence:
+    - reference: GO:0015030
+      notes: GO:0015030 names coilin as a Cajal-body marker.
+    - reference: PMID:10944589
+      notes: Bellini 2000 reviewed coilin's relation to the Cajal/coiled body.
+  - subject: spliceosomal_snrnp_complexes
+    predicate: are enriched in
+    object: cajal_body
+    description: Small nuclear ribonucleoprotein complexes concentrate in Cajal bodies.
+    evidence:
+    - reference: GO:0015030
+      notes: GO:0015030 defines Cajal bodies as enriched in small nuclear ribonucleoproteins.
+  - subject: small_cajal_body_specific_rnas
+    predicate: localize to
+    object: cajal_body
+    description: scaRNAs are guide RNAs that localize to Cajal bodies.
+    evidence:
+    - reference: DOI:10.1093/emboj/21.11.2746
+      notes: Darzacq et al. 2002 localized scaRNA guide RNAs to Cajal bodies.
+  - subject: small_cajal_body_specific_rnas
+    predicate: guide RNA modification during
+    object: snrnp_biogenesis
+    description: Cajal-body scaRNAs guide spliceosomal snRNA modifications during
+      snRNP maturation.
+    evidence:
+    - reference: DOI:10.1093/emboj/21.11.2746
+      notes: Darzacq et al. 2002 connected Cajal-body scaRNAs to guide RNA roles in
+        spliceosomal snRNA methylation and pseudouridylation.
+  - subject: cajal_body
+    predicate: is associated with
+    object: snrnp_biogenesis
+    description: Cajal bodies are associated with biogenesis of small nuclear ribonucleoprotein
+      particles.
+    evidence:
+    - reference: DOI:10.1080/15476286.2016.1231359
+      notes: Machyna, Heyn and Neugebauer 2017 reviewed Cajal bodies and snRNP biogenesis.
+discussions:
+- discussion_id: resolve_cajal_body_component_groundings
+  prompt: Resolve exact source-neutral protein-family, scaRNP and telomerase-related
+    boundaries for Cajal-body resident components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#coilin
+  - components#spliceosomal_snrnp_complexes
+  - components#small_cajal_body_specific_rnas
+  - causal_graphs#cajal_body_snrnp_biogenesis
+  rationale: This first Cajal body record captures coilin, GO-grounded spliceosomal
+    snRNP complexes and scaRNA guides as broad resident cohorts while leaving exact
+    coilin family, scaRNP-protein, SMN/gemin and telomerase trafficking boundaries
+    to a separate grounding pass.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.16.1.273
+  - reference: DOI:10.1080/15476286.2016.1231359
+  - reference: DOI:10.1093/emboj/21.11.2746
+  posed_by: codex
+  posed_date: '2026-09-27'
