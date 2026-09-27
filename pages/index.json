@@ -4041,6 +4041,15 @@
   "definition": "Trimeric protein complex that possesses endonuclease activity; involved in meiotic recombination, DNA repair and checkpoint signaling. In Saccharomyces cerevisiae, the complex comprises Mre11p, Rad50p, and Xrs2p; complexes identified in other species generally contain proteins orthologous to the Saccharomyces cerevisiae proteins."
  },
  {
+  "identifier": "GO:0031533",
+  "label": "mRNA capping enzyme complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mrna_capping_enzyme_complex.html",
+  "definition": "A protein complex that consists of an RNA 5' triphosphatase and a guanyl transferase (Cet1p and Ceg1p in S. cerevisiae; Pct1 and Ceg1 in S. pombe) and is involved in mRNA capping."
+ },
+ {
   "identifier": "GO:0036410",
   "label": "Mst2 histone acetyltransferase complex",
   "category": "OTHER",
