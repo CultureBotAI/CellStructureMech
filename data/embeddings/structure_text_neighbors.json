@@ -12490,14 +12490,14 @@
           "cosine_similarity": 0.67564253
         },
         {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.66725497
+        },
+        {
           "identifier": "GO:0009338",
           "label": "exodeoxyribonuclease V complex",
           "cosine_similarity": 0.6609752
-        },
-        {
-          "identifier": "GO:0044777",
-          "label": "single-stranded DNA-binding protein complex",
-          "cosine_similarity": 0.65734993
         }
       ]
     },
@@ -12526,9 +12526,9 @@
           "cosine_similarity": 0.69023425
         },
         {
-          "identifier": "GO:0030896",
-          "label": "checkpoint clamp complex",
-          "cosine_similarity": 0.67579523
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.68113466
         }
       ]
     },
@@ -12540,6 +12540,11 @@
           "identifier": "GO:0005663",
           "label": "DNA replication factor C complex",
           "cosine_similarity": 0.81260247
+        },
+        {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.80526077
         },
         {
           "identifier": "GO:0044777",
@@ -12555,11 +12560,6 @@
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.7211267
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.7083223
         }
       ]
     },
@@ -13658,6 +13658,11 @@
           "cosine_similarity": 0.70744853
         },
         {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.69862037
+        },
+        {
           "identifier": "GO:0005662",
           "label": "DNA replication factor A complex",
           "cosine_similarity": 0.69820313
@@ -13671,11 +13676,37 @@
           "identifier": "GO:0030692",
           "label": "Noc4p-Nop14p complex",
           "cosine_similarity": 0.68971054
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0042555",
+      "label": "MCM complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005662",
+          "label": "DNA replication factor A complex",
+          "cosine_similarity": 0.80526077
         },
         {
-          "identifier": "GO:0030691",
-          "label": "Noc2p-Noc3p complex",
-          "cosine_similarity": 0.68366503
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.79284836
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.77961427
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.77402241
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.7735857
         }
       ]
     },
@@ -14087,6 +14118,11 @@
       "label": "MutS complex",
       "neighbors": [
         {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.71874633
+        },
+        {
           "identifier": "GO:0000111",
           "label": "nucleotide-excision repair factor 2 complex",
           "cosine_similarity": 0.70803381
@@ -14105,11 +14141,6 @@
           "identifier": "GO:0061617",
           "label": "MICOS complex",
           "cosine_similarity": 0.70605613
-        },
-        {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.69936011
         }
       ]
     },
@@ -15890,6 +15921,11 @@
           "cosine_similarity": 0.76615367
         },
         {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.75586452
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.71780139
@@ -15903,11 +15939,6 @@
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.70737475
-        },
-        {
-          "identifier": "GO:0032798",
-          "label": "Swi5-Sfr1 complex",
-          "cosine_similarity": 0.69382753
         }
       ]
     },

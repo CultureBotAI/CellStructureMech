@@ -1,0 +1,145 @@
+identifier: GO:0042555
+label: MCM complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A hexameric protein complex required for the initiation and regulation
+  of DNA replication.
+definition_source: GO:0042555
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T16:35:46Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T16:37:45Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO MCM synonymy, protein-containing-complex parentage, one generic
+    reviewed-label-only hexameric constituent class, Eukaryota scope, DNA-replication
+    function evidence, GO/PubMed evidence, a nonmechanistic function graph, and an
+    MCM subtype/subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: mini-chromosome maintenance complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0042555
+parent_structures:
+- GO:0032991
+components:
+- component_id: mcm_subunit
+  label: MCM subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  stoichiometry: '6'
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0042555 identifies MCM as a hexameric protein complex, while
+    the parent term also has MCM8-MCM9 as a child. This first parent-complex record
+    leaves exact archaeal and eukaryotic subunit-family CURIEs unresolved rather than
+    mapping the generic MCM subunit class to a narrower or organism-specific protein
+    family.
+  role: Protein constituent class that forms the hexameric MCM complex.
+  evidence:
+  - reference: GO:0042555
+    notes: GO:0042555 defines MCM as a hexameric protein complex required for the
+      initiation and regulation of DNA replication.
+  - reference: PMID:11282021
+    notes: The PubMed abstract for Lei and Tye 2001 identifies the eukaryotic MCM
+      complex as a hexameric pre-replication-complex component.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: The Lei and Tye review describes the hexameric MCM complex as a key eukaryotic
+    pre-replication-complex component.
+  reference: PMID:11282021
+functions:
+- function_id: dna_replication
+  label: DNA replication
+  grounding: GO:0006260
+  description: The MCM complex supports the initiation and regulation of DNA replication.
+  evidence:
+  - reference: GO:0042555
+    notes: GO:0042555 defines the MCM complex as required for the initiation and regulation
+      of DNA replication.
+  - reference: GO:0006260
+    notes: GO:0006260 is the Gene Ontology biological-process term for DNA replication.
+  - reference: PMID:11282021
+    notes: The PubMed abstract for Lei and Tye 2001 reviews MCM recruitment to replication
+      origins and activation of DNA synthesis.
+evidence:
+- reference: GO:0042555
+  notes: Gene Ontology cellular-component term for the MCM complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0006260
+  notes: Gene Ontology biological-process term for DNA replication.
+- reference: PMID:11282021
+  notes: PubMed identifier listed by GO:0042555 as its definition cross-reference.
+- reference: GO:0097362
+  notes: Gene Ontology child cellular-component term for the MCM8-MCM9 complex.
+causal_graphs:
+- graph_id: mcm_supports_dna_replication
+  title: MCM supports DNA replication
+  description: MCM subunits form the hexameric MCM complex required for the initiation
+    and regulation of DNA replication.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the generic GO-defined MCM parent complex and DNA-replication
+    process without resolving MCM2-MCM9 subtype boundaries, origin licensing, double-hexamer
+    loading or helicase activation.
+  nodes:
+  - node_id: mcm_subunit
+    label: MCM subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mcm_subunit
+  - node_id: mcm_complex
+    label: MCM complex
+    node_type: STRUCTURE
+    grounding: GO:0042555
+  - node_id: dna_replication
+    label: DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: mcm_subunit
+    predicate: contributes to
+    object: mcm_complex
+    description: MCM subunits are constituents of the hexameric MCM complex.
+    evidence:
+    - reference: GO:0042555
+      notes: GO:0042555 defines MCM as a hexameric protein complex.
+    - reference: PMID:11282021
+      notes: The PubMed abstract for Lei and Tye 2001 identifies the eukaryotic MCM
+        complex as hexameric.
+  - subject: mcm_complex
+    predicate: supports
+    object: dna_replication
+    description: The MCM complex supports initiation and regulation of DNA replication.
+    evidence:
+    - reference: GO:0042555
+      notes: GO:0042555 defines the MCM complex as required for the initiation and
+        regulation of DNA replication.
+    - reference: GO:0006260
+      notes: GO:0006260 is the GO biological-process term for DNA replication.
+discussions:
+- discussion_id: resolve_mcm_subtypes_and_subunit_groundings
+  prompt: Resolve exact source-neutral groundings and subtype boundaries for archaeal
+    MCM, eukaryotic MCM2-7 and MCM8-MCM9 complex constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mcm_subunit
+  - GO:0097362
+  rationale: GO:0042555 exactly identifies the parent MCM complex and defines it as
+    hexameric, while GO:0097362 identifies MCM8-MCM9 as a child of MCM. This record
+    therefore models one generic hexamer-forming MCM subunit class instead of overclaiming
+    six universal named subunits or collapsing MCM8-MCM9 into the parent complex.
+  evidence:
+  - reference: GO:0042555
+    notes: GO:0042555 is the parent Gene Ontology term for MCM complex.
+  - reference: GO:0097362
+    notes: GO:0097362 is the MCM8-MCM9 child term of GO:0042555 in Gene Ontology.
+  posed_by: codex
+  posed_date: '2026-09-27'
