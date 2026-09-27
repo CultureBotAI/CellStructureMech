@@ -3744,6 +3744,15 @@
   "definition": "An endoplasmic reticulum membrane-associated complex involved in the translocation of proteins that are targeted to the ER. In yeast, this complex consists of two subcomplexes, namely, the Sec61 complex and the Sec62/Sec63 complex."
  },
  {
+  "identifier": "GO:0008622",
+  "label": "epsilon DNA polymerase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/epsilon_dna_polymerase_complex.html",
+  "definition": "A heterotetrameric DNA polymerase complex that catalyzes processive DNA synthesis in the absence of PCNA, but is further stimulated in the presence of PCNA. The complex contains a large catalytic subunit and three small subunits, and is best characterized in Saccharomyces, in which the subunits are named Pol2p, Dpb2p, Dpb3p, and Dpb4p. Some evidence suggests that DNA polymerase epsilon is the leading strand polymerase; it is also involved in nucleotide-excision repair and mismatch repair."
+ },
+ {
   "identifier": "GO:0032865",
   "label": "ERMES complex",
   "category": "OTHER",
