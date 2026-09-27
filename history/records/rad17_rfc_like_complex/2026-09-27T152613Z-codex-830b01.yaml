@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/rad17_rfc_like_complex.yaml
+  slug: rad17_rfc_like_complex
+session:
+  id: 2026-09-27T152613Z-codex-830b01
+  timestamp: '2026-09-27T15:26:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1664
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1663
+events:
+- type: EDIT
+  outcome: changed
+  summary: Removed an overbroad Rad17 RFC-like graph edge.
+  details: 'Addressed review issue #1664 for PR #1663 by removing the damaged DNA node and
+    checkpoint-clamp-to-damaged-DNA edge from the Rad17 RFC-like complex function graph, leaving
+    the GO:0031389-supported Rad17/Rad24-RFC checkpoint-clamp loading edge without implying
+    that the checkpoint clamp loads itself.'
