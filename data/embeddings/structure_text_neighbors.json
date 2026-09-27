@@ -13146,9 +13146,9 @@
           "cosine_similarity": 0.70380814
         },
         {
-          "identifier": "GO:0034388",
-          "label": "Pwp2p-containing subcomplex of 90S preribosome",
-          "cosine_similarity": 0.69944212
+          "identifier": "GO:0036437",
+          "label": "Isw1b complex",
+          "cosine_similarity": 0.70019972
         }
       ]
     },
@@ -13156,6 +13156,11 @@
       "identifier": "GO:0036436",
       "label": "Isw1a complex",
       "neighbors": [
+        {
+          "identifier": "GO:0036437",
+          "label": "Isw1b complex",
+          "cosine_similarity": 0.97366895
+        },
         {
           "identifier": "GO:0035101",
           "label": "FACT complex",
@@ -13175,11 +13180,37 @@
           "identifier": "GO:0048188",
           "label": "Set1C/COMPASS complex",
           "cosine_similarity": 0.72788531
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0036437",
+      "label": "Isw1b complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0036436",
+          "label": "Isw1a complex",
+          "cosine_similarity": 0.97366895
         },
         {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.72447396
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.75741148
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.75297439
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.7503589
+        },
+        {
+          "identifier": "GO:0048188",
+          "label": "Set1C/COMPASS complex",
+          "cosine_similarity": 0.74303666
         }
       ]
     },

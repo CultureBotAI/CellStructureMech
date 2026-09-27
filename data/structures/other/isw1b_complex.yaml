@@ -1,0 +1,201 @@
+identifier: GO:0036437
+label: Isw1b complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An Isw1 complex that binds DNA and has nucleosome-stimulated ATPase activity.
+  In S. cerevisiae, contains an Isw1p ATPase subunit in complex with Ioc2p and Ioc4p.
+definition_source: GO:0036437
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T02:17:38Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T02:18:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ISW1b exact synonymy, Isw1-complex parentage, Isw1, Ioc2, and Ioc4
+    constituent rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI evidence,
+    a nonmechanistic function graph, and a subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: ISW1b
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/MCB.23.1.80-91.2003
+parent_structures:
+- GO:0016587
+components:
+- component_id: isw1_isw1b_atpase_subunit
+  label: Isw1 Isw1b ATPase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ISW1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast Isw1b literature follows Isw1 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this Isw1b subunit class
+    was curated in this pass.
+  role: ISWI-family ATPase constituent of the budding-yeast Isw1b chromatin-remodeling
+    complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.1.80-91.2003
+    notes: Vary et al. 2003 separated the budding-yeast Isw1b complex from Isw1a and
+      identified Isw1p as the shared ATPase subunit.
+- component_id: ioc2_isw1b_subunit
+  label: Ioc2 Isw1b subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IOC2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast Isw1b literature follows Ioc2 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this Isw1b subunit class
+    was curated in this pass.
+  role: Ioc protein constituent specific to the budding-yeast Isw1b complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.1.80-91.2003
+    notes: Vary et al. 2003 found that Ioc2p and Ioc4p were mutually dependent for
+      stable association with Isw1p and that Ioc2p copurified near-stoichiometric
+      Isw1p and Ioc4p.
+- component_id: ioc4_isw1b_subunit
+  label: Ioc4 Isw1b subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - IOC4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Budding-yeast Isw1b literature follows Ioc4 naming; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this Isw1b subunit class
+    was curated in this pass.
+  role: Ioc protein constituent specific to the budding-yeast Isw1b complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.1.80-91.2003
+    notes: Vary et al. 2003 found that Ioc2p and Ioc4p were mutually dependent for
+      stable association with Isw1p and that Ioc2p copurified near-stoichiometric
+      Isw1p and Ioc4p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the source organism in which Vary et al. separated Isw1b
+    from the related Isw1a complex.
+  reference: DOI:10.1128/MCB.23.1.80-91.2003
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Vary et al. 2003 purified Isw1p- and Ioc2p-associated complexes from Saccharomyces
+    cerevisiae and resolved the three-subunit Isw1b complex.
+  reference: DOI:10.1128/MCB.23.1.80-91.2003
+functions:
+- function_id: chromatin_remodeling
+  label: chromatin remodeling
+  grounding: GO:0006338
+  description: The Isw1b complex is an ATP-dependent chromatin-remodeling complex
+    with nucleosome-stimulated ATPase activity.
+  evidence:
+  - reference: GO:0006338
+    notes: GO:0006338 is the Gene Ontology biological-process term for chromatin remodeling.
+  - reference: GO:0036437
+    notes: GO:0036437 defines Isw1b as an Isw1 chromatin complex with nucleosome-stimulated
+      ATPase activity.
+evidence:
+- reference: GO:0036437
+  notes: Gene Ontology cellular-component term for the Isw1b complex.
+- reference: GO:0016587
+  notes: Gene Ontology cellular-component parent term for Isw1 complexes.
+- reference: GO:0006338
+  notes: Gene Ontology biological-process term for chromatin remodeling.
+- reference: PMID:12482963
+  notes: PubMed identifier for Vary et al. 2003, the Molecular and Cellular Biology
+    paper that identified the separable budding-yeast Isw1a and Isw1b complexes.
+- reference: DOI:10.1128/MCB.23.1.80-91.2003
+  notes: DOI for Vary et al. 2003, 'Yeast Isw1p forms two separable complexes in vivo',
+    verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_isw1b_chromatin_remodeling
+  title: Isw1b carries yeast chromatin remodeling
+  description: In Saccharomyces cerevisiae, Isw1, Ioc2, and Ioc4 form the Isw1b chromatin-remodeling
+    complex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three Isw1b constituent classes and their connection
+    to chromatin remodeling without resolving their substrate-recognition or nucleosome-sliding
+    cycle.
+  nodes:
+  - node_id: isw1_isw1b_atpase_subunit
+    label: Isw1 Isw1b ATPase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: isw1_isw1b_atpase_subunit
+  - node_id: ioc2_isw1b_subunit
+    label: Ioc2 Isw1b subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ioc2_isw1b_subunit
+  - node_id: ioc4_isw1b_subunit
+    label: Ioc4 Isw1b subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ioc4_isw1b_subunit
+  - node_id: isw1b_complex
+    label: Isw1b complex
+    node_type: STRUCTURE
+    grounding: GO:0036437
+  - node_id: chromatin_remodeling
+    label: chromatin remodeling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006338
+  edges:
+  - subject: isw1_isw1b_atpase_subunit
+    predicate: contributes to
+    object: isw1b_complex
+    description: Isw1 is the ISWI-family ATPase constituent of the budding-yeast Isw1b
+      complex.
+    evidence:
+    - reference: DOI:10.1128/MCB.23.1.80-91.2003
+      notes: Vary et al. 2003 identified Isw1p in the budding-yeast Isw1b complex.
+  - subject: ioc2_isw1b_subunit
+    predicate: contributes to
+    object: isw1b_complex
+    description: Ioc2 is one of the Ioc constituents that complex with Isw1 in budding-yeast
+      Isw1b.
+    evidence:
+    - reference: DOI:10.1128/MCB.23.1.80-91.2003
+      notes: Vary et al. 2003 identified Ioc2p in the budding-yeast Isw1b complex.
+  - subject: ioc4_isw1b_subunit
+    predicate: contributes to
+    object: isw1b_complex
+    description: Ioc4 is one of the Ioc constituents that complex with Isw1 in budding-yeast
+      Isw1b.
+    evidence:
+    - reference: DOI:10.1128/MCB.23.1.80-91.2003
+      notes: Vary et al. 2003 identified Ioc4p in the budding-yeast Isw1b complex.
+  - subject: isw1b_complex
+    predicate: enables
+    object: chromatin_remodeling
+    description: Isw1b is an ATP-dependent Isw1 chromatin-remodeling complex.
+    evidence:
+    - reference: GO:0036437
+      notes: GO:0036437 defines the Isw1b cellular component as an Isw1 chromatin
+        complex with nucleosome-stimulated ATPase activity.
+discussions:
+- discussion_id: isw1b_subunit_grounding
+  prompt: Curate exact source-neutral InterPro, Pfam, NCBIfam or UniProt family groundings
+    for the Isw1b ATPase, Ioc2 and Ioc4 component classes when terms that denote those
+    classes can be verified.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#isw1_isw1b_atpase_subunit
+  - components#ioc2_isw1b_subunit
+  - components#ioc4_isw1b_subunit
+  rationale: The Isw1 ATPase is shared between Isw1a and Isw1b, and the available
+    Ioc2 and Ioc4 motifs are broader than the Isw1b subunit classes, so exact grounding
+    should avoid broad ATPase, PHD, or PWWP domain terms that do not denote these
+    subunit classes.
+  evidence:
+  - reference: DOI:10.1128/MCB.23.1.80-91.2003
+    notes: Vary et al. 2003 resolved Isw1a and Isw1b as separable Isw1 complexes.
+  posed_by: codex
+  posed_date: '2026-09-26'
