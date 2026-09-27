@@ -1,0 +1,279 @@
+identifier: GO:0008622
+label: epsilon DNA polymerase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterotetrameric DNA polymerase complex that catalyzes processive DNA
+  synthesis in the absence of PCNA, but is further stimulated in the presence of PCNA.
+  The complex contains a large catalytic subunit and three small subunits, and is
+  best characterized in Saccharomyces, in which the subunits are named Pol2p, Dpb2p,
+  Dpb3p, and Dpb4p. Some evidence suggests that DNA polymerase epsilon is the leading
+  strand polymerase; it is also involved in nucleotide-excision repair and mismatch
+  repair.
+definition_source: GO:0008622
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T18:37:55Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T18:38:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and DNA-polymerase-complex parentage, Pol2/Dpb2/Dpb3/Dpb4
+    reviewed-label-only constituent rows, a Saccharomyces cerevisiae scope and canonical
+    example, DNA-replication function evidence, GO/PubMed evidence, a nonmechanistic
+    function graph, and a subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: DNA polymerase epsilon complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0008622
+parent_structures:
+- GO:0042575
+components:
+- component_id: pol2_catalytic_subunit
+  label: Pol2 catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - POL2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Pol2 catalytic subunit is modeled as a named Saccharomyces cerevisiae
+    DNA polymerase epsilon constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: Large catalytic Pol2 constituent of the Saccharomyces cerevisiae heterotetramer.
+  evidence:
+  - reference: GO:0008622
+    notes: GO:0008622 defines the epsilon DNA polymerase complex as a heterotetramer
+      containing large catalytic and three small subunits, named Pol2p, Dpb2p, Dpb3p
+      and Dpb4p in Saccharomyces.
+  - reference: PMID:12571237
+    notes: Chilkova et al. purified Saccharomyces cerevisiae DNA polymerase epsilon
+      as a Pol2/Dpb2/Dpb3/Dpb4 complex with 1:1:1:1 stoichiometry.
+- component_id: dpb2_subunit
+  label: Dpb2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DPB2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Dpb2 subunit is modeled as a named Saccharomyces cerevisiae DNA
+    polymerase epsilon constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: Dpb2 small subunit of the Saccharomyces cerevisiae heterotetramer.
+  evidence:
+  - reference: GO:0008622
+    notes: GO:0008622 defines the epsilon DNA polymerase complex as a heterotetramer
+      containing large catalytic and three small subunits, named Pol2p, Dpb2p, Dpb3p
+      and Dpb4p in Saccharomyces.
+  - reference: PMID:12571237
+    notes: Chilkova et al. purified Saccharomyces cerevisiae DNA polymerase epsilon
+      as a Pol2/Dpb2/Dpb3/Dpb4 complex with 1:1:1:1 stoichiometry.
+- component_id: dpb3_subunit
+  label: Dpb3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DPB3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Dpb3 subunit is modeled as a named Saccharomyces cerevisiae DNA
+    polymerase epsilon constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: Dpb3 small subunit of the Saccharomyces cerevisiae heterotetramer.
+  evidence:
+  - reference: GO:0008622
+    notes: GO:0008622 defines the epsilon DNA polymerase complex as a heterotetramer
+      containing large catalytic and three small subunits, named Pol2p, Dpb2p, Dpb3p
+      and Dpb4p in Saccharomyces.
+  - reference: PMID:12571237
+    notes: Chilkova et al. purified Saccharomyces cerevisiae DNA polymerase epsilon
+      as a Pol2/Dpb2/Dpb3/Dpb4 complex with 1:1:1:1 stoichiometry.
+- component_id: dpb4_subunit
+  label: Dpb4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DPB4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Dpb4 subunit is modeled as a named Saccharomyces cerevisiae DNA
+    polymerase epsilon constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: Dpb4 small subunit of the Saccharomyces cerevisiae heterotetramer.
+  evidence:
+  - reference: GO:0008622
+    notes: GO:0008622 defines the epsilon DNA polymerase complex as a heterotetramer
+      containing large catalytic and three small subunits, named Pol2p, Dpb2p, Dpb3p
+      and Dpb4p in Saccharomyces.
+  - reference: PMID:12571237
+    notes: Chilkova et al. purified Saccharomyces cerevisiae DNA polymerase epsilon
+      as a Pol2/Dpb2/Dpb3/Dpb4 complex with 1:1:1:1 stoichiometry.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a heterotetrameric DNA polymerase epsilon complex containing
+    Pol2, Dpb2, Dpb3, and Dpb4.
+  reference: PMID:12571237
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system in which DNA polymerase epsilon was purified
+    as a four-subunit 1:1:1:1 complex.
+  reference: PMID:12571237
+functions:
+- function_id: dna_replication
+  label: DNA replication
+  grounding: GO:0006260
+  description: The epsilon DNA polymerase complex participates in chromosomal DNA
+    replication.
+  evidence:
+  - reference: GO:0008622
+    notes: GO:0008622 defines the complex by processive DNA synthesis and notes that
+      evidence suggests a leading-strand-polymerase role.
+  - reference: GO:0006260
+    notes: GO:0006260 is the Gene Ontology biological-process term for DNA replication.
+  - reference: PMID:12571237
+    notes: Chilkova et al. report that Saccharomyces cerevisiae DNA polymerase epsilon
+      is essential for chromosomal DNA replication.
+evidence:
+- reference: GO:0008622
+  notes: Gene Ontology cellular-component term for the epsilon DNA polymerase complex.
+- reference: GO:0042575
+  notes: Gene Ontology cellular-component parent term for DNA polymerase complexes.
+- reference: GO:0006260
+  notes: Gene Ontology biological-process term for DNA replication.
+- reference: PMID:15814431
+  notes: PubMed record for Garg and Burgers 2005, a review cited by GO:0008622.
+- reference: PMID:9745046
+  notes: PubMed record for Burgers 1998, a review cited by GO:0008622.
+- reference: PMID:12571237
+  notes: PubMed record for Chilkova et al. 2003, the JBC paper on the quaternary structure
+    of Saccharomyces cerevisiae DNA polymerase epsilon.
+- reference: PMID:16369485
+  notes: PubMed record for Asturias et al. 2006, the cryo-EM study of Saccharomyces
+    cerevisiae DNA polymerase epsilon.
+- reference: PMID:25538242
+  notes: PubMed record for Ganai et al. 2015, the biochemical study comparing the
+    yeast DNA polymerase epsilon catalytic core and holoenzyme.
+causal_graphs:
+- graph_id: pol_epsilon_supports_dna_replication
+  title: DNA polymerase epsilon supports DNA replication
+  description: In Saccharomyces cerevisiae, Pol2, Dpb2, Dpb3, and Dpb4 form the epsilon
+    DNA polymerase complex that supports DNA replication.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records Pol epsilon composition and its GO-level DNA-replication
+    role without resolving leading-strand assignment, PCNA stimulation, replisome
+    engagement, or repair-pathway roles.
+  nodes:
+  - node_id: pol2_catalytic_subunit
+    label: Pol2 catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: pol2_catalytic_subunit
+  - node_id: dpb2_subunit
+    label: Dpb2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dpb2_subunit
+  - node_id: dpb3_subunit
+    label: Dpb3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dpb3_subunit
+  - node_id: dpb4_subunit
+    label: Dpb4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dpb4_subunit
+  - node_id: epsilon_dna_polymerase_complex
+    label: epsilon DNA polymerase complex
+    node_type: STRUCTURE
+    grounding: GO:0008622
+  - node_id: dna_replication
+    label: DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: pol2_catalytic_subunit
+    predicate: contributes to
+    object: epsilon_dna_polymerase_complex
+    description: Pol2 catalytic subunit is a constituent of the epsilon DNA polymerase
+      complex.
+    evidence:
+    - reference: GO:0008622
+      notes: GO:0008622 defines the epsilon DNA polymerase complex as a heterotetramer
+        containing large catalytic and three small subunits, named Pol2p, Dpb2p, Dpb3p
+        and Dpb4p in Saccharomyces.
+    - reference: PMID:12571237
+      notes: Chilkova et al. purified Saccharomyces cerevisiae DNA polymerase epsilon
+        as a Pol2/Dpb2/Dpb3/Dpb4 complex with 1:1:1:1 stoichiometry.
+  - subject: dpb2_subunit
+    predicate: contributes to
+    object: epsilon_dna_polymerase_complex
+    description: Dpb2 subunit is a constituent of the epsilon DNA polymerase complex.
+    evidence:
+    - reference: GO:0008622
+      notes: GO:0008622 defines the epsilon DNA polymerase complex as a heterotetramer
+        containing large catalytic and three small subunits, named Pol2p, Dpb2p, Dpb3p
+        and Dpb4p in Saccharomyces.
+    - reference: PMID:12571237
+      notes: Chilkova et al. purified Saccharomyces cerevisiae DNA polymerase epsilon
+        as a Pol2/Dpb2/Dpb3/Dpb4 complex with 1:1:1:1 stoichiometry.
+  - subject: dpb3_subunit
+    predicate: contributes to
+    object: epsilon_dna_polymerase_complex
+    description: Dpb3 subunit is a constituent of the epsilon DNA polymerase complex.
+    evidence:
+    - reference: GO:0008622
+      notes: GO:0008622 defines the epsilon DNA polymerase complex as a heterotetramer
+        containing large catalytic and three small subunits, named Pol2p, Dpb2p, Dpb3p
+        and Dpb4p in Saccharomyces.
+    - reference: PMID:12571237
+      notes: Chilkova et al. purified Saccharomyces cerevisiae DNA polymerase epsilon
+        as a Pol2/Dpb2/Dpb3/Dpb4 complex with 1:1:1:1 stoichiometry.
+  - subject: dpb4_subunit
+    predicate: contributes to
+    object: epsilon_dna_polymerase_complex
+    description: Dpb4 subunit is a constituent of the epsilon DNA polymerase complex.
+    evidence:
+    - reference: GO:0008622
+      notes: GO:0008622 defines the epsilon DNA polymerase complex as a heterotetramer
+        containing large catalytic and three small subunits, named Pol2p, Dpb2p, Dpb3p
+        and Dpb4p in Saccharomyces.
+    - reference: PMID:12571237
+      notes: Chilkova et al. purified Saccharomyces cerevisiae DNA polymerase epsilon
+        as a Pol2/Dpb2/Dpb3/Dpb4 complex with 1:1:1:1 stoichiometry.
+  - subject: epsilon_dna_polymerase_complex
+    predicate: supports
+    object: dna_replication
+    description: The epsilon DNA polymerase complex supports chromosomal DNA replication.
+    evidence:
+    - reference: GO:0008622
+      notes: GO:0008622 defines the complex by processive DNA synthesis.
+    - reference: GO:0006260
+      notes: GO:0006260 defines DNA replication.
+discussions:
+- discussion_id: resolve_pol_epsilon_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Pol2, Dpb2, Dpb3,
+    and Dpb4 subunit classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pol2_catalytic_subunit
+  - components#dpb2_subunit
+  - components#dpb3_subunit
+  - components#dpb4_subunit
+  rationale: GO:0008622 exactly identifies the heterotetrameric epsilon DNA polymerase
+    complex and Chilkova et al. directly support the four Saccharomyces cerevisiae
+    subunits, but exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family
+    CURIEs were not curated in this pass.
+  evidence:
+  - reference: GO:0008622
+    notes: GO:0008622 names Pol2p, Dpb2p, Dpb3p, and Dpb4p as the Saccharomyces subunits.
+  - reference: PMID:12571237
+    notes: Chilkova et al. purified Saccharomyces cerevisiae Pol epsilon with Pol2,
+      Dpb2, Dpb3, and Dpb4.
+  posed_by: codex
+  posed_date: '2026-09-27'
