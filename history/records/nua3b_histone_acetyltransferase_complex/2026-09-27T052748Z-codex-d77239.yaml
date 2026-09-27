@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nua3b_histone_acetyltransferase_complex.yaml
+  slug: nua3b_histone_acetyltransferase_complex
+session:
+  id: 2026-09-27T052748Z-codex-d77239
+  timestamp: '2026-09-27T05:27:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the NuA3b histone acetyltransferase complex record.
+  details: Created an evidence-backed GO:1990468 record for the Saccharomyces cerevisiae NuA3b
+    histone acetyltransferase complex with GO parentage, Eaf6p/Nto1p/Sas3p/Taf14p/Pdp3p constituents,
+    budding-yeast distribution and example rows, histone acetyltransferase activity, a nonmechanistic
+    function graph, and GO/PubMed/DOI evidence from Gilbert et al. 2014. Left exact source-neutral
+    subunit family groundings as an explicit curation TODO.
