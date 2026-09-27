@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mre11_complex.yaml
+  slug: mre11_complex
+session:
+  id: 2026-09-27T093437Z-codex-afbe45
+  timestamp: '2026-09-27T09:34:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Mre11 complex record
+  details: Created a GO:0030870-grounded Mre11 complex record with exact GO MRX/MRN synonymy,
+    nuclear protein-containing-complex parentage, three reviewed-label-only Saccharomyces
+    cerevisiae Mre11/Rad50/Xrs2 constituent rows, budding-yeast distribution and example evidence,
+    DNA-repair and meiotic-recombination functions, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and a curation discussion for subunit grounding.

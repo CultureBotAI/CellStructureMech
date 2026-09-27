@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mre11_complex.yaml
+  slug: mre11_complex
+session:
+  id: 2026-09-27T094717Z-codex-0471ff
+  timestamp: '2026-09-27T09:47:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1651
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1650
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address Mre11 Xrs2 gene-symbol review
+  details: 'Addressed #1651 by narrowing the third Mre11-complex component row from Xrs2/Nbs1
+    with XRS2 and NBN gene symbols to a Saccharomyces cerevisiae Xrs2 row backed by the component-level
+    GO and Chamankhah/Xiao 1999 evidence, then rewired the function graph and subunit-grounding
+    TODO to the renamed component ID.'

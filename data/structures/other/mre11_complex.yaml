@@ -1,0 +1,292 @@
+identifier: GO:0030870
+label: Mre11 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Trimeric protein complex that possesses endonuclease activity; involved
+  in meiotic recombination, DNA repair and checkpoint signaling. In Saccharomyces
+  cerevisiae, the complex comprises Mre11p, Rad50p, and Xrs2p; complexes identified
+  in other species generally contain proteins orthologous to the Saccharomyces cerevisiae
+  proteins.
+definition_source: GO:0030870
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T09:32:46Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T09:33:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO MRX/MRN synonymy, nuclear protein-containing-complex parentage,
+    three reviewed-label-only Mre11-complex constituent rows, budding-yeast scope,
+    DNA-repair and meiotic-recombination functions, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and an Mre11 subunit-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-27T09:46:49Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1651: narrowed the third Mre11-complex component row from Xrs2/Nbs1 with
+    XRS2 and NBN gene symbols to a Saccharomyces cerevisiae Xrs2 row backed by the
+    component-level evidence.'
+  llm_assisted: true
+synonyms:
+- synonym_text: MRN complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030870
+- synonym_text: MRX complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030870
+- synonym_text: Rad50 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030870
+- synonym_text: RAD50-MRE11-NBN complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030870
+- synonym_text: Rad50-Rad32-Nbs1 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030870
+- synonym_text: RMX complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030870
+parent_structures:
+- GO:0140513
+components:
+- component_id: mre11_nuclease_subunit
+  label: Mre11 nuclease subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MRE11
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Mre11 nuclease subunit is modeled as a named Mre11-complex constituent;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was
+    curated in this pass.
+  role: Mre11 nuclease-family constituent of the budding-yeast Mre11-Rad50-Xrs2 complex.
+  evidence:
+  - reference: GO:0030870
+    notes: GO:0030870 defines the Saccharomyces cerevisiae Mre11 complex as containing
+      Mre11p, Rad50p and Xrs2p.
+  - reference: DOI:10.1093/nar/27.10.2072
+    notes: Chamankhah and Xiao 1999 studied formation of the yeast Mre11-Rad50-Xrs2
+      complex.
+- component_id: rad50_atpase_subunit
+  label: Rad50 ATPase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAD50
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rad50 ATPase subunit is modeled as a named Mre11-complex constituent;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE was
+    curated in this pass.
+  role: Rad50 ATPase-family constituent of the budding-yeast Mre11-Rad50-Xrs2 complex.
+  evidence:
+  - reference: GO:0030870
+    notes: GO:0030870 defines the Saccharomyces cerevisiae Mre11 complex as containing
+      Mre11p, Rad50p and Xrs2p.
+  - reference: DOI:10.1093/nar/27.10.2072
+    notes: Chamankhah and Xiao 1999 studied formation of the yeast Mre11-Rad50-Xrs2
+      complex.
+- component_id: xrs2_regulatory_subunit
+  label: Xrs2 regulatory subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - XRS2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Xrs2 regulatory subunit is modeled as a named Saccharomyces cerevisiae
+    Mre11-complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or
+    UniProtKB family CURIE was curated in this pass.
+  role: Xrs2 regulatory constituent of the budding-yeast Mre11-Rad50-Xrs2 complex.
+  evidence:
+  - reference: GO:0030870
+    notes: GO:0030870 defines the Saccharomyces cerevisiae Mre11 complex as containing
+      Mre11p, Rad50p and Xrs2p.
+  - reference: DOI:10.1093/nar/27.10.2072
+    notes: Chamankhah and Xiao 1999 studied formation of the yeast Mre11-Rad50-Xrs2
+      complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has an Mre11-Rad50-Xrs2 complex whose formation is correlated
+    with DNA repair and telomere maintenance.
+  reference: DOI:10.1093/nar/27.10.2072
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system for Mre11-Rad50-Xrs2 complex formation and
+    homologous recombination-based double-strand-break repair studies.
+  reference: DOI:10.1093/nar/27.10.2072
+functions:
+- function_id: dna_repair
+  label: DNA repair
+  grounding: GO:0006281
+  description: The Mre11 complex participates in DNA repair, including homologous
+    recombination-based double-strand-break repair in Saccharomyces cerevisiae.
+  evidence:
+  - reference: GO:0030870
+    notes: GO:0030870 defines the Mre11 complex as involved in DNA repair.
+  - reference: GO:0006281
+    notes: GO:0006281 is the Gene Ontology biological-process term for DNA repair.
+  - reference: DOI:10.1128/MCB.19.11.7681
+    notes: Bressan et al. 1999 connected the Mre11-Rad50-Xrs2 complex to homologous
+      recombination-based double-strand-break repair in budding yeast.
+- function_id: reciprocal_meiotic_recombination
+  label: reciprocal meiotic recombination
+  grounding: GO:0007131
+  description: The Mre11 complex participates in meiotic recombination.
+  evidence:
+  - reference: GO:0030870
+    notes: GO:0030870 defines the Mre11 complex as involved in meiotic recombination.
+  - reference: GO:0007131
+    notes: GO:0007131 is the Gene Ontology biological-process term for reciprocal
+      meiotic recombination.
+  - reference: DOI:10.1007/s10577-007-1147-9
+    notes: Borde 2007 reviewed multiple roles of the Mre11 complex for meiotic recombination.
+evidence:
+- reference: GO:0030870
+  notes: Gene Ontology cellular-component term for the Mre11 complex.
+- reference: GO:0140513
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
+- reference: GO:0006281
+  notes: Gene Ontology biological-process term for DNA repair.
+- reference: GO:0007131
+  notes: Gene Ontology biological-process term for reciprocal meiotic recombination.
+- reference: PMID:10219078
+  notes: PubMed identifier for Chamankhah and Xiao 1999, the Nucleic Acids Research
+    paper on formation of the yeast Mre11-Rad50-Xrs2 complex.
+- reference: DOI:10.1093/nar/27.10.2072
+  notes: DOI for Chamankhah and Xiao 1999, 'Formation of the yeast Mre11-Rad50-Xrs2
+    complex is correlated with DNA repair and telomere maintenance', verified through
+    PubMed and PMC.
+- reference: PMID:10523656
+  notes: PubMed identifier for Bressan, Baxter and Petrini 1999, the Molecular and
+    Cellular Biology paper on Mre11-Rad50-Xrs2 and homologous recombination-based
+    double-strand-break repair.
+- reference: DOI:10.1128/MCB.19.11.7681
+  notes: DOI for Bressan, Baxter and Petrini 1999, verified through PubMed and PMC.
+- reference: PMID:11988766
+  notes: PubMed identifier for D'Amours and Jackson 2002, the Nature Reviews Molecular
+    Cell Biology review cited by the GO:0030870 definition.
+- reference: DOI:10.1038/nrm805
+  notes: DOI for D'Amours and Jackson 2002, verified through PubMed.
+- reference: PMID:17674145
+  notes: PubMed identifier for Borde 2007, the Chromosome Research review cited by
+    the GO:0030870 definition.
+- reference: DOI:10.1007/s10577-007-1147-9
+  notes: DOI for Borde 2007, verified through PubMed.
+causal_graphs:
+- graph_id: mre11_dna_repair_recombination
+  title: Mre11 supports DNA repair and meiotic recombination
+  description: The Saccharomyces cerevisiae Mre11, Rad50 and Xrs2 proteins form a
+    trimeric complex that supports DNA repair and meiotic recombination.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three GO-defined constituent classes and two
+    GO-level functions without resolving double-strand-break end tethering, nuclease
+    activation, checkpoint signaling, or Tel1/ATM recruitment.
+  nodes:
+  - node_id: mre11_nuclease_subunit
+    label: Mre11 nuclease subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mre11_nuclease_subunit
+  - node_id: rad50_atpase_subunit
+    label: Rad50 ATPase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad50_atpase_subunit
+  - node_id: xrs2_regulatory_subunit
+    label: Xrs2 regulatory subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: xrs2_regulatory_subunit
+  - node_id: mre11_complex
+    label: Mre11 complex
+    node_type: STRUCTURE
+    grounding: GO:0030870
+  - node_id: dna_repair
+    label: DNA repair
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006281
+  - node_id: reciprocal_meiotic_recombination
+    label: reciprocal meiotic recombination
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007131
+  edges:
+  - subject: mre11_nuclease_subunit
+    predicate: contributes to
+    object: mre11_complex
+    description: Mre11p is a constituent of the budding-yeast Mre11-Rad50-Xrs2 complex.
+    evidence:
+    - reference: GO:0030870
+      notes: GO:0030870 names Mre11p as a constituent of the complex.
+    - reference: DOI:10.1093/nar/27.10.2072
+      notes: Chamankhah and Xiao 1999 studied the yeast Mre11-Rad50-Xrs2 complex.
+  - subject: rad50_atpase_subunit
+    predicate: contributes to
+    object: mre11_complex
+    description: Rad50p is a constituent of the budding-yeast Mre11-Rad50-Xrs2 complex.
+    evidence:
+    - reference: GO:0030870
+      notes: GO:0030870 names Rad50p as a constituent of the complex.
+    - reference: DOI:10.1093/nar/27.10.2072
+      notes: Chamankhah and Xiao 1999 studied the yeast Mre11-Rad50-Xrs2 complex.
+  - subject: xrs2_regulatory_subunit
+    predicate: contributes to
+    object: mre11_complex
+    description: Xrs2p is a constituent of the budding-yeast Mre11-Rad50-Xrs2 complex.
+    evidence:
+    - reference: GO:0030870
+      notes: GO:0030870 names Xrs2p as a constituent of the complex.
+    - reference: DOI:10.1093/nar/27.10.2072
+      notes: Chamankhah and Xiao 1999 studied the yeast Mre11-Rad50-Xrs2 complex.
+  - subject: mre11_complex
+    predicate: supports
+    object: dna_repair
+    description: The Mre11 complex participates in DNA repair.
+    evidence:
+    - reference: GO:0030870
+      notes: GO:0030870 defines the complex as involved in DNA repair.
+    - reference: GO:0006281
+      notes: GO:0006281 is the process term for DNA repair.
+    - reference: DOI:10.1128/MCB.19.11.7681
+      notes: Bressan et al. 1999 connected the complex to homologous recombination-based
+        DSB repair.
+  - subject: mre11_complex
+    predicate: supports
+    object: reciprocal_meiotic_recombination
+    description: The Mre11 complex participates in meiotic recombination.
+    evidence:
+    - reference: GO:0030870
+      notes: GO:0030870 defines the complex as involved in meiotic recombination.
+    - reference: GO:0007131
+      notes: GO:0007131 is the process term for reciprocal meiotic recombination.
+    - reference: DOI:10.1007/s10577-007-1147-9
+      notes: Borde 2007 reviewed roles of the Mre11 complex in meiotic recombination.
+discussions:
+- discussion_id: resolve_mre11_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the Mre11, Rad50 and
+    Xrs2 constituents of the Mre11 complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mre11_nuclease_subunit
+  - components#rad50_atpase_subunit
+  - components#xrs2_regulatory_subunit
+  rationale: GO:0030870 exactly identifies the trimeric Mre11 complex and names the
+    Saccharomyces cerevisiae Mre11p, Rad50p and Xrs2p constituents, but exact cross-eukaryotic
+    InterPro, Pfam, NCBIfam or UniProtKB family boundaries for the three budding-yeast
+    subunit classes need narrower follow-up curation.
+  evidence:
+  - reference: GO:0030870
+    notes: GO:0030870 defines the Mre11 complex as a trimeric protein complex comprising
+      Mre11p, Rad50p and Xrs2p in Saccharomyces cerevisiae.
+  - reference: DOI:10.1093/nar/27.10.2072
+    notes: Chamankhah and Xiao 1999 studied formation of the yeast Mre11-Rad50-Xrs2
+      complex.
+  posed_by: codex
+  posed_date: '2026-09-27'
