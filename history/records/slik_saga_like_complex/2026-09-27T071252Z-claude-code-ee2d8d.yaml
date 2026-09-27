@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/slik_saga_like_complex.yaml
+  slug: slik_saga_like_complex
+session:
+  id: 2026-09-27T071252Z-claude-code-ee2d8d
+  timestamp: '2026-09-27T07:12:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the SLIK (SAGA-like) complex record
+  details: Created the GO:0046695 SLIK (SAGA-like) complex record with GO exact synonyms,
+    SAGA-type parentage, 18 budding-yeast constituent components, Saccharomyces cerevisiae
+    scope, histone acetyltransferase and deubiquitinase functions, a nonmechanistic function
+    graph, GO/PubMed/DOI evidence from the 2021 SAGA/SLIK comparison and 2002 SLIK discovery
+    papers, and discussions for unresolved subunit groundings and the historical Rtg2 association.
