@@ -12533,6 +12533,37 @@
       ]
     },
     {
+      "identifier": "GO:0033588",
+      "label": "elongator holoenzyme complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.76689199
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.7649892
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.76490574
+        },
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.75304138
+        },
+        {
+          "identifier": "GO:0033698",
+          "label": "Rpd3L complex",
+          "cosine_similarity": 0.74956452
+        }
+      ]
+    },
+    {
       "identifier": "GO:0072546",
       "label": "EMC complex",
       "neighbors": [
@@ -13255,6 +13286,11 @@
           "cosine_similarity": 0.75196408
         },
         {
+          "identifier": "GO:0033588",
+          "label": "elongator holoenzyme complex",
+          "cosine_similarity": 0.72328461
+        },
+        {
           "identifier": "GO:0034457",
           "label": "Mpp10 complex",
           "cosine_similarity": 0.71642108
@@ -13268,11 +13304,6 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.70380814
-        },
-        {
-          "identifier": "GO:0036437",
-          "label": "Isw1b complex",
-          "cosine_similarity": 0.70019972
         }
       ]
     },
