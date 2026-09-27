@@ -4365,6 +4365,15 @@
   "definition": "A large complex of the mitochondrial outer membrane that mediates sorting of some imported proteins to the outer membrane and their assembly in the membrane; functions after import of incoming proteins by the mitochondrial outer membrane translocase complex."
  },
  {
+  "identifier": "GO:0033255",
+  "label": "SAS acetyltransferase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/sas_acetyltransferase_complex.html",
+  "definition": "A protein complex that possesses histone acetyltransferase activity and links histone acetylation to the assembly of transcriptionally silent chromatin. In vitro, the complex acetylates lysine 16 of histone H4 and lysine 14 of histone H3, although the latter may not be relevant in vivo. The complex contains a catalytic subunit and at least two other subunits; in Saccharomyces, the catalytic subunit is Sas2p and additional subunits are Sas4p and Sas5p."
+ },
+ {
   "identifier": "GO:0005784",
   "label": "Sec61 translocon complex",
   "category": "OTHER",

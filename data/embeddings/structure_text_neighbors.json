@@ -15044,6 +15044,37 @@
       ]
     },
     {
+      "identifier": "GO:0033255",
+      "label": "SAS acetyltransferase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0070211",
+          "label": "Snt2C complex",
+          "cosine_similarity": 0.77759153
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.74079266
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.7297318
+        },
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.72281432
+        },
+        {
+          "identifier": "GO:0031416",
+          "label": "NatB complex",
+          "cosine_similarity": 0.72143685
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005784",
       "label": "Sec61 translocon complex",
       "neighbors": [
