@@ -1,0 +1,269 @@
+identifier: GO:0031391
+label: Elg1 RFC-like complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A pentameric replication factor C-like complex that unloads the proliferating
+  cell nuclear antigen DNA clamp from chromatin and supports telomere length regulation
+  and genome stability in Saccharomyces.
+definition_source: GO:0031391
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T15:44:52Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T15:46:11Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO Elg1-RFC synonymy, protein-containing-complex parentage, five
+    reviewed-label-only Saccharomyces constituent rows, Saccharomyces cerevisiae scope,
+    DNA clamp unloader function evidence, GO/PubMed evidence, a nonmechanistic function
+    graph, and an Elg1-RFC subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Elg1-RFC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031391
+- synonym_text: Elg1-RLC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031391
+- synonym_text: RFC (Elg1)
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031391
+parent_structures:
+- GO:0032991
+components:
+- component_id: elg1_subunit
+  label: Elg1 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ELG1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Elg1 subunit is modeled as a named budding-yeast Elg1 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces constituent of the pentameric Elg1 RFC-like complex.
+  evidence:
+  - reference: GO:0031391
+    notes: GO:0031391 defines the Saccharomyces Elg1 RFC-like complex as containing
+      Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+- component_id: rfc2_subunit
+  label: Rfc2 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc2 subunit is modeled as a named budding-yeast Elg1 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces constituent of the pentameric Elg1 RFC-like complex.
+  evidence:
+  - reference: GO:0031391
+    notes: GO:0031391 defines the Saccharomyces Elg1 RFC-like complex as containing
+      Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+- component_id: rfc3_subunit
+  label: Rfc3 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc3 subunit is modeled as a named budding-yeast Elg1 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces constituent of the pentameric Elg1 RFC-like complex.
+  evidence:
+  - reference: GO:0031391
+    notes: GO:0031391 defines the Saccharomyces Elg1 RFC-like complex as containing
+      Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+- component_id: rfc4_subunit
+  label: Rfc4 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc4 subunit is modeled as a named budding-yeast Elg1 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces constituent of the pentameric Elg1 RFC-like complex.
+  evidence:
+  - reference: GO:0031391
+    notes: GO:0031391 defines the Saccharomyces Elg1 RFC-like complex as containing
+      Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+- component_id: rfc5_subunit
+  label: Rfc5 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RFC5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rfc5 subunit is modeled as a named budding-yeast Elg1 RFC-like
+    complex constituent; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
+    family CURIE was curated in this pass.
+  role: Named Saccharomyces constituent of the pentameric Elg1 RFC-like complex.
+  evidence:
+  - reference: GO:0031391
+    notes: GO:0031391 defines the Saccharomyces Elg1 RFC-like complex as containing
+      Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has an Elg1 RFC-like complex containing Elg1p, Rfc2p, Rfc3p,
+    Rfc4p and Rfc5p.
+  reference: GO:0031391
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system named in the GO:0031391 definition as containing
+    Elg1p and the four small RFC subunits.
+  reference: GO:0031391
+functions:
+- function_id: dna_clamp_unloader_activity
+  label: DNA clamp unloader activity
+  grounding: GO:0061860
+  description: The Elg1 RFC-like complex unloads the PCNA DNA clamp from chromatin.
+  evidence:
+  - reference: GO:0031391
+    notes: GO:0031391 defines the Elg1 RFC-like complex as unloading PCNA from chromatin.
+  - reference: GO:0061860
+    notes: GO:0061860 is the Gene Ontology molecular-function term for DNA clamp unloader
+      activity.
+evidence:
+- reference: GO:0031391
+  notes: Gene Ontology cellular-component term for the Elg1 RFC-like complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0061860
+  notes: Gene Ontology molecular-function term for DNA clamp unloader activity.
+- reference: PMID:14614842
+  notes: PubMed identifier listed by GO:0031391 as a definition cross-reference.
+- reference: PMID:23499004
+  notes: PubMed identifier listed by GO:0031391 and GO:0061860 as a definition cross-reference.
+- reference: PMID:27664980
+  notes: PubMed identifier listed by GO:0031391 as a definition cross-reference.
+causal_graphs:
+- graph_id: elg1_rfc_pcna_unloading
+  title: Elg1-RFC unloads PCNA
+  description: Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p form the Saccharomyces Elg1 RFC-like
+    complex that unloads the PCNA DNA clamp from chromatin.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the five Saccharomyces Elg1-RFC constituents and
+    GO-level DNA clamp unloader function without resolving clamp opening, ATPase cycling,
+    telomere-length regulation or genome-stability effects.
+  nodes:
+  - node_id: elg1_subunit
+    label: Elg1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: elg1_subunit
+  - node_id: rfc2_subunit
+    label: Rfc2 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc2_subunit
+  - node_id: rfc3_subunit
+    label: Rfc3 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc3_subunit
+  - node_id: rfc4_subunit
+    label: Rfc4 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc4_subunit
+  - node_id: rfc5_subunit
+    label: Rfc5 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rfc5_subunit
+  - node_id: elg1_rfc_like_complex
+    label: Elg1 RFC-like complex
+    node_type: STRUCTURE
+    grounding: GO:0031391
+  - node_id: dna_clamp_unloader_activity
+    label: DNA clamp unloader activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0061860
+  edges:
+  - subject: elg1_subunit
+    predicate: contributes to
+    object: elg1_rfc_like_complex
+    description: Elg1 subunit is a constituent of the Saccharomyces Elg1 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031391
+      notes: GO:0031391 defines the Saccharomyces Elg1 RFC-like complex as containing
+        Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  - subject: rfc2_subunit
+    predicate: contributes to
+    object: elg1_rfc_like_complex
+    description: Rfc2 subunit is a constituent of the Saccharomyces Elg1 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031391
+      notes: GO:0031391 defines the Saccharomyces Elg1 RFC-like complex as containing
+        Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  - subject: rfc3_subunit
+    predicate: contributes to
+    object: elg1_rfc_like_complex
+    description: Rfc3 subunit is a constituent of the Saccharomyces Elg1 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031391
+      notes: GO:0031391 defines the Saccharomyces Elg1 RFC-like complex as containing
+        Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  - subject: rfc4_subunit
+    predicate: contributes to
+    object: elg1_rfc_like_complex
+    description: Rfc4 subunit is a constituent of the Saccharomyces Elg1 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031391
+      notes: GO:0031391 defines the Saccharomyces Elg1 RFC-like complex as containing
+        Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  - subject: rfc5_subunit
+    predicate: contributes to
+    object: elg1_rfc_like_complex
+    description: Rfc5 subunit is a constituent of the Saccharomyces Elg1 RFC-like
+      complex.
+    evidence:
+    - reference: GO:0031391
+      notes: GO:0031391 defines the Saccharomyces Elg1 RFC-like complex as containing
+        Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  - subject: elg1_rfc_like_complex
+    predicate: supports
+    object: dna_clamp_unloader_activity
+    description: The Elg1 RFC-like complex supports DNA clamp unloader activity.
+    evidence:
+    - reference: GO:0031391
+      notes: GO:0031391 defines Elg1-RFC as unloading PCNA from chromatin.
+    - reference: GO:0061860
+      notes: GO:0061860 is the molecular-function term for DNA clamp unloader activity.
+discussions:
+- discussion_id: resolve_elg1_rfc_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the Elg1, Rfc2, Rfc3,
+    Rfc4 and Rfc5 constituents of the Elg1 RFC-like complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#elg1_subunit
+  - components#rfc2_subunit
+  - components#rfc3_subunit
+  - components#rfc4_subunit
+  - components#rfc5_subunit
+  rationale: GO:0031391 exactly identifies the Elg1 RFC-like complex and names the
+    Saccharomyces Elg1p, Rfc2p, Rfc3p, Rfc4p and Rfc5p constituents, but exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProtKB family CURIEs for these subunit classes were
+    not curated in this pass.
+  evidence:
+  - reference: GO:0031391
+    notes: GO:0031391 defines Saccharomyces Elg1-RFC as a pentameric complex with
+      five named subunits.
+  posed_by: codex
+  posed_date: '2026-09-27'
