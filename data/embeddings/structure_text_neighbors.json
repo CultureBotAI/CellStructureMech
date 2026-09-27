@@ -11727,6 +11727,37 @@
       ]
     },
     {
+      "identifier": "GO:0030015",
+      "label": "CCR4-NOT core complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0033186",
+          "label": "CAF-1 complex",
+          "cosine_similarity": 0.75245566
+        },
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.71004049
+        },
+        {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.70991302
+        },
+        {
+          "identifier": "GO:0008623",
+          "label": "CHRAC",
+          "cosine_similarity": 0.70840699
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.69659763
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005938",
       "label": "cell cortex",
       "neighbors": [
@@ -11906,9 +11937,9 @@
           "cosine_similarity": 0.67127254
         },
         {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.66324686
+          "identifier": "GO:0030015",
+          "label": "CCR4-NOT core complex",
+          "cosine_similarity": 0.66490958
         }
       ]
     },

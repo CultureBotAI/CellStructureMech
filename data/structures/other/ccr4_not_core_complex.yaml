@@ -1,0 +1,490 @@
+identifier: GO:0030015
+label: CCR4-NOT core complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The core of the CCR4-NOT complex. In Saccharomyces the CCR4-NOT core complex
+  comprises Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p, and Not5p.
+definition_source: GO:0030015
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T08:34:33Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-27T08:35:22Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added 1.0 MDa CCR4-NOT exact synonymy, protein-containing-complex parentage,
+    nine budding-yeast CCR4-NOT core constituent rows, yeast scope, poly(A)-specific
+    ribonuclease and mRNA decay functions, GO/PubMed/DOI evidence, a nonmechanistic
+    function graph, and a CCR4-NOT subunit-grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: 1.0 MDa CCR4-NOT complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1006/jmbi.2001.5162
+parent_structures:
+- GO:0032991
+components:
+- component_id: ccr4_core_subunit
+  label: Ccr4 CCR4-NOT core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CCR4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030015 and Chen et al. 2001 follow budding-yeast Ccr4 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this CCR4-NOT core constituent class was curated in this pass.
+  role: Poly(A)-specific ribonuclease constituent of the budding-yeast CCR4-NOT core
+    complex.
+  evidence:
+  - reference: GO:0030015
+    notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+      Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+  - reference: DOI:10.1006/jmbi.2001.5162
+    notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+      complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+- component_id: caf1_pop2_core_subunit
+  label: Caf1/Pop2 CCR4-NOT core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CAF1
+  - POP2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030015 and Chen et al. 2001 follow budding-yeast Caf1/Pop2
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this CCR4-NOT core constituent class was curated in this pass.
+  role: Caf1/Pop2 ribonuclease-family constituent of the budding-yeast CCR4-NOT core
+    complex.
+  evidence:
+  - reference: GO:0030015
+    notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+      Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+  - reference: DOI:10.1006/jmbi.2001.5162
+    notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+      complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+- component_id: not1_cdc39_core_subunit
+  label: Not1/Cdc39 CCR4-NOT core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NOT1
+  - CDC39
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030015 and Chen et al. 2001 follow budding-yeast Not1/Cdc39
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this CCR4-NOT core constituent class was curated in this pass.
+  role: Large protein constituent of the budding-yeast CCR4-NOT core complex.
+  evidence:
+  - reference: GO:0030015
+    notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+      Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+  - reference: DOI:10.1006/jmbi.2001.5162
+    notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+      complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+- component_id: not2_cdc36_core_subunit
+  label: Not2/Cdc36 CCR4-NOT core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NOT2
+  - CDC36
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030015 and Chen et al. 2001 follow budding-yeast Not2/Cdc36
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this CCR4-NOT core constituent class was curated in this pass.
+  role: Protein constituent of the budding-yeast CCR4-NOT core complex.
+  evidence:
+  - reference: GO:0030015
+    notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+      Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+  - reference: DOI:10.1006/jmbi.2001.5162
+    notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+      complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+- component_id: not3_core_subunit
+  label: Not3 CCR4-NOT core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NOT3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030015 and Chen et al. 2001 follow budding-yeast Not3 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this CCR4-NOT core constituent class was curated in this pass.
+  role: Protein constituent of the budding-yeast CCR4-NOT core complex.
+  evidence:
+  - reference: GO:0030015
+    notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+      Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+  - reference: DOI:10.1006/jmbi.2001.5162
+    notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+      complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+- component_id: not4_mot2_core_subunit
+  label: Not4/Mot2 CCR4-NOT core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NOT4
+  - MOT2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030015 and Chen et al. 2001 follow budding-yeast Not4/Mot2
+    naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier
+    for this CCR4-NOT core constituent class was curated in this pass.
+  role: Protein constituent of the budding-yeast CCR4-NOT core complex.
+  evidence:
+  - reference: GO:0030015
+    notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+      Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+  - reference: DOI:10.1006/jmbi.2001.5162
+    notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+      complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+- component_id: not5_core_subunit
+  label: Not5 CCR4-NOT core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NOT5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030015 and Chen et al. 2001 follow budding-yeast Not5 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this CCR4-NOT core constituent class was curated in this pass.
+  role: Protein constituent of the budding-yeast CCR4-NOT core complex.
+  evidence:
+  - reference: GO:0030015
+    notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+      Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+  - reference: DOI:10.1006/jmbi.2001.5162
+    notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+      complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+- component_id: caf40_core_subunit
+  label: Caf40 CCR4-NOT core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CAF40
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030015 and Chen et al. 2001 follow budding-yeast Caf40 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this CCR4-NOT core constituent class was curated in this pass.
+  role: Protein constituent of the budding-yeast CCR4-NOT core complex.
+  evidence:
+  - reference: GO:0030015
+    notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+      Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+  - reference: DOI:10.1006/jmbi.2001.5162
+    notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+      complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+- component_id: caf130_core_subunit
+  label: Caf130 CCR4-NOT core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CAF130
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030015 and Chen et al. 2001 follow budding-yeast Caf130 naming;
+    no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this CCR4-NOT core constituent class was curated in this pass.
+  role: Protein constituent of the budding-yeast CCR4-NOT core complex.
+  evidence:
+  - reference: GO:0030015
+    notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+      Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+  - reference: DOI:10.1006/jmbi.2001.5162
+    notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+      complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0030015 defines the nine-subunit
+    CCR4-NOT core complex and Chen et al. 2001 purified the 1.0 MDa complex.
+  reference: GO:0030015
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT core
+    complex to near homogeneity and identified all nine curated subunits by mass spectrometry.
+  reference: DOI:10.1006/jmbi.2001.5162
+functions:
+- function_id: poly_a_specific_ribonuclease_activity
+  label: poly(A)-specific ribonuclease activity
+  grounding: GO:0004535
+  description: CCR4-NOT supplies the major Ccr4/Caf1-dependent cytoplasmic poly(A)-specific
+    exonuclease activity in budding yeast.
+  evidence:
+  - reference: GO:0004535
+    notes: GO:0004535 is the Gene Ontology molecular-function term for poly(A)-specific
+      ribonuclease activity.
+  - reference: DOI:10.1016/s0092-8674(01)00225-2
+    notes: Tucker et al. 2001 showed that Ccr4 and Caf1 are critical components of
+      the major Saccharomyces cerevisiae cytoplasmic mRNA deadenylase.
+- function_id: deadenylation_dependent_mrna_decay
+  label: nuclear-transcribed mRNA catabolic process, deadenylation-dependent decay
+  grounding: GO:0000288
+  description: CCR4-NOT participates in deadenylation-dependent mRNA decay by shortening
+    cytoplasmic mRNA poly(A) tails.
+  evidence:
+  - reference: GO:0000288
+    notes: GO:0000288 is the Gene Ontology biological-process term for deadenylation-dependent
+      decay of nuclear-transcribed mRNAs.
+  - reference: DOI:10.1016/s0092-8674(01)00225-2
+    notes: Tucker et al. 2001 showed that Ccr4 and Caf1 are required for normal mRNA
+      deadenylation in vivo.
+evidence:
+- reference: GO:0030015
+  notes: Gene Ontology cellular-component term for the unrestricted, non-obsolete
+    CCR4-NOT core complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0004535
+  notes: Gene Ontology molecular-function term for poly(A)-specific ribonuclease activity.
+- reference: GO:0000288
+  notes: Gene Ontology biological-process term for deadenylation-dependent nuclear-transcribed
+    mRNA decay.
+- reference: PMID:11733989
+  notes: PubMed identifier for Chen et al. 2001, the 1.0 MDa Saccharomyces cerevisiae
+    CCR4-NOT core-complex purification paper.
+- reference: DOI:10.1006/jmbi.2001.5162
+  notes: DOI for Chen et al. 2001, 'Purification and characterization of the 1.0 MDa
+    CCR4-NOT complex identifies two novel components of the complex', verified through
+    NCBI E-utilities.
+- reference: PMID:11239395
+  notes: PubMed identifier for Tucker et al. 2001, the budding-yeast Ccr4/Caf1 cytoplasmic
+    mRNA deadenylase paper.
+- reference: DOI:10.1016/s0092-8674(01)00225-2
+  notes: DOI for Tucker et al. 2001, 'The transcription factor associated Ccr4 and
+    Caf1 proteins are components of the major cytoplasmic mRNA deadenylase in Saccharomyces
+    cerevisiae', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: yeast_ccr4_not_deadenylation
+  title: CCR4-NOT supports yeast cytoplasmic mRNA deadenylation
+  description: In Saccharomyces cerevisiae, the nine-subunit 1.0 MDa CCR4-NOT core
+    complex carries Ccr4/Caf1-dependent mRNA deadenylase activity that shortens poly(A)
+    tails.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the nine curated CCR4-NOT core constituents and the
+    broad deadenylase function without resolving mRNA recruitment, Not-module architecture
+    or downstream decapping and exonuclease steps.
+  nodes:
+  - node_id: ccr4_core_subunit
+    label: Ccr4 CCR4-NOT core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ccr4_core_subunit
+  - node_id: caf1_pop2_core_subunit
+    label: Caf1/Pop2 CCR4-NOT core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: caf1_pop2_core_subunit
+  - node_id: not1_cdc39_core_subunit
+    label: Not1/Cdc39 CCR4-NOT core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: not1_cdc39_core_subunit
+  - node_id: not2_cdc36_core_subunit
+    label: Not2/Cdc36 CCR4-NOT core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: not2_cdc36_core_subunit
+  - node_id: not3_core_subunit
+    label: Not3 CCR4-NOT core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: not3_core_subunit
+  - node_id: not4_mot2_core_subunit
+    label: Not4/Mot2 CCR4-NOT core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: not4_mot2_core_subunit
+  - node_id: not5_core_subunit
+    label: Not5 CCR4-NOT core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: not5_core_subunit
+  - node_id: caf40_core_subunit
+    label: Caf40 CCR4-NOT core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: caf40_core_subunit
+  - node_id: caf130_core_subunit
+    label: Caf130 CCR4-NOT core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: caf130_core_subunit
+  - node_id: ccr4_not_core_complex
+    label: CCR4-NOT core complex
+    node_type: STRUCTURE
+    grounding: GO:0030015
+  - node_id: poly_a_specific_ribonuclease_activity
+    label: poly(A)-specific ribonuclease activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004535
+  - node_id: deadenylation_dependent_mrna_decay
+    label: nuclear-transcribed mRNA catabolic process, deadenylation-dependent decay
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000288
+  edges:
+  - subject: ccr4_core_subunit
+    predicate: contributes to
+    object: ccr4_not_core_complex
+    description: Ccr4 CCR4-NOT core subunit is a constituent of the budding-yeast
+      CCR4-NOT core complex.
+    evidence:
+    - reference: GO:0030015
+      notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+        Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+    - reference: DOI:10.1006/jmbi.2001.5162
+      notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+        complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+  - subject: caf1_pop2_core_subunit
+    predicate: contributes to
+    object: ccr4_not_core_complex
+    description: Caf1/Pop2 CCR4-NOT core subunit is a constituent of the budding-yeast
+      CCR4-NOT core complex.
+    evidence:
+    - reference: GO:0030015
+      notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+        Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+    - reference: DOI:10.1006/jmbi.2001.5162
+      notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+        complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+  - subject: not1_cdc39_core_subunit
+    predicate: contributes to
+    object: ccr4_not_core_complex
+    description: Not1/Cdc39 CCR4-NOT core subunit is a constituent of the budding-yeast
+      CCR4-NOT core complex.
+    evidence:
+    - reference: GO:0030015
+      notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+        Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+    - reference: DOI:10.1006/jmbi.2001.5162
+      notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+        complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+  - subject: not2_cdc36_core_subunit
+    predicate: contributes to
+    object: ccr4_not_core_complex
+    description: Not2/Cdc36 CCR4-NOT core subunit is a constituent of the budding-yeast
+      CCR4-NOT core complex.
+    evidence:
+    - reference: GO:0030015
+      notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+        Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+    - reference: DOI:10.1006/jmbi.2001.5162
+      notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+        complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+  - subject: not3_core_subunit
+    predicate: contributes to
+    object: ccr4_not_core_complex
+    description: Not3 CCR4-NOT core subunit is a constituent of the budding-yeast
+      CCR4-NOT core complex.
+    evidence:
+    - reference: GO:0030015
+      notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+        Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+    - reference: DOI:10.1006/jmbi.2001.5162
+      notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+        complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+  - subject: not4_mot2_core_subunit
+    predicate: contributes to
+    object: ccr4_not_core_complex
+    description: Not4/Mot2 CCR4-NOT core subunit is a constituent of the budding-yeast
+      CCR4-NOT core complex.
+    evidence:
+    - reference: GO:0030015
+      notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+        Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+    - reference: DOI:10.1006/jmbi.2001.5162
+      notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+        complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+  - subject: not5_core_subunit
+    predicate: contributes to
+    object: ccr4_not_core_complex
+    description: Not5 CCR4-NOT core subunit is a constituent of the budding-yeast
+      CCR4-NOT core complex.
+    evidence:
+    - reference: GO:0030015
+      notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+        Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+    - reference: DOI:10.1006/jmbi.2001.5162
+      notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+        complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+  - subject: caf40_core_subunit
+    predicate: contributes to
+    object: ccr4_not_core_complex
+    description: Caf40 CCR4-NOT core subunit is a constituent of the budding-yeast
+      CCR4-NOT core complex.
+    evidence:
+    - reference: GO:0030015
+      notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+        Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+    - reference: DOI:10.1006/jmbi.2001.5162
+      notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+        complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+  - subject: caf130_core_subunit
+    predicate: contributes to
+    object: ccr4_not_core_complex
+    description: Caf130 CCR4-NOT core subunit is a constituent of the budding-yeast
+      CCR4-NOT core complex.
+    evidence:
+    - reference: GO:0030015
+      notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+        Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+    - reference: DOI:10.1006/jmbi.2001.5162
+      notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+        complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+  - subject: ccr4_not_core_complex
+    predicate: enables
+    object: poly_a_specific_ribonuclease_activity
+    description: The CCR4-NOT complex supplies Ccr4/Caf1-dependent cytoplasmic poly(A)-specific
+      exonuclease activity.
+    evidence:
+    - reference: DOI:10.1016/s0092-8674(01)00225-2
+      notes: Tucker et al. 2001 purified Caf1p with a Ccr4p-dependent poly(A)-specific
+        exonuclease activity.
+    - reference: GO:0004535
+      notes: GO:0004535 denotes poly(A)-specific ribonuclease activity.
+  - subject: poly_a_specific_ribonuclease_activity
+    predicate: supports
+    object: deadenylation_dependent_mrna_decay
+    description: Poly(A)-specific exonuclease activity shortens mRNA poly(A) tails
+      during deadenylation-dependent decay.
+    evidence:
+    - reference: DOI:10.1016/s0092-8674(01)00225-2
+      notes: Tucker et al. 2001 established that Ccr4 and Caf1 are required for normal
+        mRNA deadenylation in vivo.
+    - reference: GO:0000288
+      notes: GO:0000288 defines the major deadenylation-dependent decay pathway as
+        including poly(A)-tail shortening.
+discussions:
+- discussion_id: resolve_ccr4_not_core_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the CCR4-NOT core constituent
+    classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ccr4_core_subunit
+  - components#caf1_pop2_core_subunit
+  - components#not1_cdc39_core_subunit
+  - components#not2_cdc36_core_subunit
+  - components#not3_core_subunit
+  - components#not4_mot2_core_subunit
+  - components#not5_core_subunit
+  - components#caf40_core_subunit
+  - components#caf130_core_subunit
+  rationale: The budding-yeast CCR4-NOT core contains nuclease, NOT and Caf subunits.
+    Exact InterPro, Pfam, NCBIfam or UniProt family CURIEs should only be curated
+    after verifying that they denote full subunit classes rather than shared nuclease,
+    NOT-box or WD-repeat domains.
+  evidence:
+  - reference: GO:0030015
+    notes: GO:0030015 defines the Saccharomyces CCR4-NOT core complex as comprising
+      Ccr4p, Caf1p, Caf40p, Caf130p, Not1p, Not2p, Not3p, Not4p and Not5p.
+  - reference: DOI:10.1006/jmbi.2001.5162
+    notes: Chen et al. 2001 purified the Saccharomyces cerevisiae 1.0 MDa CCR4-NOT
+      complex and identified CCR4, CAF1, NOT1-NOT5, CAF40 and CAF130 by mass spectrometry.
+  posed_by: codex
+  posed_date: '2026-09-27'
