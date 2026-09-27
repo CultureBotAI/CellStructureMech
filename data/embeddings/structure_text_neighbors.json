@@ -12533,6 +12533,37 @@
       ]
     },
     {
+      "identifier": "GO:0005662",
+      "label": "DNA replication factor A complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005663",
+          "label": "DNA replication factor C complex",
+          "cosine_similarity": 0.81260247
+        },
+        {
+          "identifier": "GO:0044777",
+          "label": "single-stranded DNA-binding protein complex",
+          "cosine_similarity": 0.76615367
+        },
+        {
+          "identifier": "GO:0031431",
+          "label": "Dbf4-dependent protein kinase complex",
+          "cosine_similarity": 0.72378603
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.7211267
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.7083223
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005663",
       "label": "DNA replication factor C complex",
       "neighbors": [
@@ -12547,6 +12578,11 @@
           "cosine_similarity": 0.81936936
         },
         {
+          "identifier": "GO:0005662",
+          "label": "DNA replication factor A complex",
+          "cosine_similarity": 0.81260247
+        },
+        {
           "identifier": "GO:0031431",
           "label": "Dbf4-dependent protein kinase complex",
           "cosine_similarity": 0.78205791
@@ -12555,11 +12591,6 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.76211517
-        },
-        {
-          "identifier": "GO:0031391",
-          "label": "Elg1 RFC-like complex",
-          "cosine_similarity": 0.76006856
         }
       ]
     },
@@ -13627,6 +13658,11 @@
           "cosine_similarity": 0.70744853
         },
         {
+          "identifier": "GO:0005662",
+          "label": "DNA replication factor A complex",
+          "cosine_similarity": 0.69820313
+        },
+        {
           "identifier": "GO:0030690",
           "label": "Noc1p-Noc2p complex",
           "cosine_similarity": 0.69137652
@@ -13640,11 +13676,6 @@
           "identifier": "GO:0030691",
           "label": "Noc2p-Noc3p complex",
           "cosine_similarity": 0.68366503
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.68330945
         }
       ]
     },
@@ -15854,6 +15885,11 @@
       "label": "single-stranded DNA-binding protein complex",
       "neighbors": [
         {
+          "identifier": "GO:0005662",
+          "label": "DNA replication factor A complex",
+          "cosine_similarity": 0.76615367
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.71780139
@@ -15872,11 +15908,6 @@
           "identifier": "GO:0032798",
           "label": "Swi5-Sfr1 complex",
           "cosine_similarity": 0.69382753
-        },
-        {
-          "identifier": "GO:0033565",
-          "label": "ESCRT-0 complex",
-          "cosine_similarity": 0.69349766
         }
       ]
     },
