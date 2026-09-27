@@ -22,6 +22,12 @@ curation_history:
     budding-yeast constituent rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI
     evidence, a nonmechanistic function graph, and a subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-27T02:54:01Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: Added direct McConnell et al. 2004 literature evidence to the CHRAC causal-graph
+    edge that connects the complex to chromatin remodeling.
+  llm_assisted: true
 synonyms:
 - synonym_text: chromatin accessibility complex
   synonym_type: EXACT_SYNONYM
@@ -235,6 +241,9 @@ causal_graphs:
     - reference: GO:0008623
       notes: GO:0008623 defines CHRAC as an ISWI complex with a role in RNA polymerase
         II transcription.
+    - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
+      notes: McConnell et al. 2004 found that Dls1p was required for Isw2-dependent
+        chromatin remodeling in vivo.
 discussions:
 - discussion_id: chrac_subunit_grounding
   prompt: Curate exact source-neutral InterPro, Pfam, NCBIfam or UniProt family groundings
