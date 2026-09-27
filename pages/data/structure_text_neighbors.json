@@ -13122,6 +13122,37 @@
       ]
     },
     {
+      "identifier": "GO:0031011",
+      "label": "Ino80 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.75196408
+        },
+        {
+          "identifier": "GO:0034457",
+          "label": "Mpp10 complex",
+          "cosine_similarity": 0.71642108
+        },
+        {
+          "identifier": "GO:0034456",
+          "label": "UTP-C complex",
+          "cosine_similarity": 0.70973761
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.70380814
+        },
+        {
+          "identifier": "GO:0034388",
+          "label": "Pwp2p-containing subcomplex of 90S preribosome",
+          "cosine_similarity": 0.69944212
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000776",
       "label": "kinetochore",
       "neighbors": [
