@@ -11932,14 +11932,14 @@
           "cosine_similarity": 0.68300553
         },
         {
+          "identifier": "GO:0071162",
+          "label": "CMG complex",
+          "cosine_similarity": 0.67827257
+        },
+        {
           "identifier": "GO:0033263",
           "label": "CORVET complex",
           "cosine_similarity": 0.67127254
-        },
-        {
-          "identifier": "GO:0030015",
-          "label": "CCR4-NOT core complex",
-          "cosine_similarity": 0.66490958
         }
       ]
     },
@@ -12188,6 +12188,37 @@
           "identifier": "GO:0030136",
           "label": "clathrin-coated vesicle",
           "cosine_similarity": 0.89260276
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0071162",
+      "label": "CMG complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.85918593
+        },
+        {
+          "identifier": "GO:0000811",
+          "label": "GINS complex",
+          "cosine_similarity": 0.72010019
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.71791884
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.7170443
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.71686548
         }
       ]
     },
@@ -13684,6 +13715,11 @@
       "label": "MCM complex",
       "neighbors": [
         {
+          "identifier": "GO:0071162",
+          "label": "CMG complex",
+          "cosine_similarity": 0.85918593
+        },
+        {
           "identifier": "GO:0005662",
           "label": "DNA replication factor A complex",
           "cosine_similarity": 0.80526077
@@ -13702,11 +13738,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.77402241
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.7735857
         }
       ]
     },
