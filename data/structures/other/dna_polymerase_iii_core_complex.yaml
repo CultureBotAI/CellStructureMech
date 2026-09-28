@@ -27,6 +27,20 @@ curation_history:
   changes: Aligned the GO:0003887 function label with the canonical DNA-directed DNA
     polymerase activity label.
   llm_assisted: true
+- timestamp: '2026-09-28T09:05:32Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved PR #1712 review issues #1713 and #1714 by narrowing the GO:0003887
+    function text to polymerase activity and changing the alpha, epsilon and theta
+    graph predicates from assembly to membership wording.'
+  llm_assisted: true
+- timestamp: '2026-09-28T09:06:18Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: Finished narrowing the GO:0003887 function evidence note so it supports
+    polymerase activity without bundling proofreading activity into that GO molecular
+    function.
+  llm_assisted: true
 parent_structures:
 - GO:0042575
 part_of:
@@ -99,16 +113,16 @@ functions:
 - function_id: dna_polymerase_core_activity
   label: DNA-directed DNA polymerase activity
   grounding: GO:0003887
-  description: The DNA polymerase III core carries the polymerase and 3'-5' proofreading
-    activities that become processive when auxiliary holoenzyme subunits load and
-    tether the beta clamp.
+  description: The DNA polymerase III core carries DNA-template-directed polymerase
+    activity; beta-clamp and clamp-loader subassemblies make that catalytic core processive
+    within the holoenzyme.
   evidence:
   - reference: GO:0044776
-    notes: GO:0044776 defines the core as the subcomplex that carries out polymerase
-      and 3'-5' exonuclease proofreading activities.
+    notes: GO:0044776 names polymerase activity as one activity carried by the DNA
+      polymerase III core complex.
   - reference: PMID:3283127
     notes: Maki and Kornberg 1988 reported that the Pol III core possesses polymerase
-      and proofreading activities while auxiliary subunits provide processivity.
+      activity while auxiliary subunits provide processivity.
 evidence:
 - reference: GO:0044776
   notes: Gene Ontology cellular-component term for the DNA polymerase III core complex.
@@ -159,21 +173,21 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
   edges:
   - subject: alpha_subunit
-    predicate: assembles into
+    predicate: is part of
     object: pol_iii_core
     description: The alpha subunit is one of the named Pol III core subunits.
     evidence:
     - reference: GO:0044776
       notes: GO:0044776 includes the alpha subunit in the DNA polymerase III core.
   - subject: epsilon_subunit
-    predicate: assembles into
+    predicate: is part of
     object: pol_iii_core
     description: The epsilon subunit is one of the named Pol III core subunits.
     evidence:
     - reference: GO:0044776
       notes: GO:0044776 includes the epsilon subunit in the DNA polymerase III core.
   - subject: theta_subunit
-    predicate: assembles into
+    predicate: is part of
     object: pol_iii_core
     description: The theta subunit is one of the named Pol III core subunits.
     evidence:
