@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/nuclear_stress_granule.yaml
+  slug: nuclear_stress_granule
+session:
+  id: 2026-09-28T012949Z-codex-a7b681
+  timestamp: '2026-09-28T01:29:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1694
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add nuclear stress granule record
+  details: Created a GO:0097165 nuclear stress granule CellStructureMech record with GO-backed
+    nuclear ribonucleoprotein granule and nuclear body parentage, nuclear lumen parthood,
+    label-only HSF1, satellite III stress RNA and pre-mRNA processing factor components, Homo
+    sapiens heat-shock scope, DOI/GO evidence, a nonmechanistic HSF1-satellite III assembly
+    graph, and a curation TODO for exact RNA and protein-family boundaries.

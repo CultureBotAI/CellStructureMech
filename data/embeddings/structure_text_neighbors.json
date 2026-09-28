@@ -17156,6 +17156,11 @@
       "label": "cytoplasmic stress granule",
       "neighbors": [
         {
+          "identifier": "GO:0097165",
+          "label": "nuclear stress granule",
+          "cosine_similarity": 0.82901122
+        },
+        {
           "identifier": "GO:0000932",
           "label": "P-body",
           "cosine_similarity": 0.72205285
@@ -17174,11 +17179,6 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.68203273
-        },
-        {
-          "identifier": "GO:0000177",
-          "label": "cytoplasmic exosome (RNase complex)",
-          "cosine_similarity": 0.68061665
         }
       ]
     },
@@ -17388,14 +17388,45 @@
           "cosine_similarity": 0.72591779
         },
         {
+          "identifier": "GO:0097165",
+          "label": "nuclear stress granule",
+          "cosine_similarity": 0.72561953
+        },
+        {
           "identifier": "GO:0071021",
           "label": "U2-type post-spliceosomal complex",
           "cosine_similarity": 0.72554847
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097165",
+      "label": "nuclear stress granule",
+      "neighbors": [
+        {
+          "identifier": "GO:0010494",
+          "label": "cytoplasmic stress granule",
+          "cosine_similarity": 0.82901122
         },
         {
-          "identifier": "GO:0071006",
-          "label": "U2-type catalytic step 1 spliceosome",
-          "cosine_similarity": 0.72464851
+          "identifier": "GO:0016607",
+          "label": "nuclear speck",
+          "cosine_similarity": 0.72561953
+        },
+        {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.64535222
+        },
+        {
+          "identifier": "GO:0031981",
+          "label": "nuclear lumen",
+          "cosine_similarity": 0.64350626
+        },
+        {
+          "identifier": "GO:0015030",
+          "label": "Cajal body",
+          "cosine_similarity": 0.63281651
         }
       ]
     },

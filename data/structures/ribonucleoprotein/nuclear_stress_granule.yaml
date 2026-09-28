@@ -1,0 +1,232 @@
+identifier: GO:0097165
+label: nuclear stress granule
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: A dense aggregation in the nucleus composed of proteins and RNAs that
+  appear when the cell is under stress.
+definition_source: GO:0097165
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T01:27:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T01:29:04Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nuclear-stress-granule synonymy, GO parentage and nuclear-lumen parthood,
+    label-only HSF1, satellite III RNA and pre-mRNA-processing-factor components,
+    Homo sapiens heat-shock scope, DOI/GO evidence, a nonmechanistic assembly graph
+    and a component-boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: nuclear stress body
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1101/cshperspect.a000695
+- synonym_text: nSB
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1101/cshperspect.a000695
+- synonym_text: HSF1 granule
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1083/jcb.200109018
+parent_structures:
+- GO:0140168
+- GO:0016604
+part_of:
+- GO:0031981
+components:
+- component_id: heat_shock_factor_1
+  label: heat shock factor 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HSF1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: HSF1 is represented as the heat-shock transcription factor that
+    binds satellite III repeats and concentrates in human nuclear stress granules;
+    no exact source-neutral InterPro, Pfam or NCBIfam accession was assigned in this
+    first record.
+  role: Activated heat shock factor that binds satellite III repeats and concentrates
+    at the stress-induced nuclear granule.
+  evidence:
+  - reference: DOI:10.1083/jcb.200109018
+    notes: Jolly et al. 2002 mapped HSF1 granules to human chromosome 9 heterochromatin
+      and showed direct HSF1 binding to satellite III repeats during stress.
+  - reference: DOI:10.1083/jcb.200306104
+    notes: Jolly et al. 2004 connected HSF1-containing nuclear stress granules with
+      RNA polymerase II transcription of satellite III repeats.
+- component_id: satellite_iii_stress_rna
+  label: satellite III stress-induced RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HSATIII
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Stress-induced HSATIII RNA is curated as a human satellite III
+    repeat transcript retained at nuclear stress granules; no exact Sequence Ontology
+    CURIE for this stress-induced repeat RNA was assigned in this first record.
+  role: Large stress-induced satellite III noncoding RNAs that remain associated with
+    the heterochromatic nuclear stress granule locus.
+  evidence:
+  - reference: DOI:10.1083/jcb.200306104
+    notes: Jolly et al. 2004 showed that satellite III repeats are transcribed into
+      large stable RNAs that remain associated with human nuclear stress granule loci.
+- component_id: pre_mrna_processing_factor_cohort
+  label: pre-mRNA processing factor cohort
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Heat-shock nuclear stress granules recruit a heterogeneous set
+    of pre-mRNA processing factors; no exact source-neutral family, complex or cohort
+    CURIE was assigned in this first record.
+  role: Pre-mRNA processing factors that accumulate in nuclear stress granules after
+    heat shock.
+  evidence:
+  - reference: DOI:10.1091/mbc.12.11.3502
+    notes: Denegri et al. 2001 identified stress-induced nuclear bodies as sites that
+      accumulate pre-mRNA processing factors in heat-shocked human cells.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: VARIABLE
+  note: Human heat-shocked cells form HSF1-positive nuclear stress granules at satellite
+    III repeats on chromosome 9 heterochromatin.
+  reference: DOI:10.1083/jcb.200109018
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Human cultured cells were used to connect HSF1-positive nuclear stress granules
+    with RNA polymerase II transcription of satellite III repeats during heat shock.
+  reference: DOI:10.1083/jcb.200306104
+functions:
+- function_id: stress_induced_satellite_iii_rnp_organization
+  label: stress-induced satellite III RNP organization
+  description: Nuclear stress granules assemble on satellite III repeats in heat-shocked
+    human cells, retain satellite III repeat RNAs and accumulate pre-mRNA processing
+    factors.
+  evidence:
+  - reference: DOI:10.1083/jcb.200306104
+    notes: Jolly et al. 2004 showed that satellite III RNAs are transcribed in HSF1-containing
+      nuclear stress granules and remain associated with the 9q12 region.
+  - reference: DOI:10.1101/cshperspect.a000695
+    notes: Biamonti and Vourc'h 2010 reviewed nuclear stress bodies as heat-shock-induced
+      subnuclear organelles formed on satellite III arrays.
+evidence:
+- reference: GO:0097165
+  notes: Gene Ontology cellular-component term for nuclear stress granule.
+- reference: GO:0140168
+  notes: Gene Ontology cellular-component parent term for nuclear ribonucleoprotein
+    granule.
+- reference: GO:0016604
+  notes: Gene Ontology cellular-component parent term for nuclear body.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen.
+- reference: DOI:10.1083/jcb.200109018
+  notes: Jolly, Konecny, Grady and colleagues 2002, In vivo binding of active heat
+    shock transcription factor 1 to human chromosome 9 heterochromatin during stress,
+    Journal of Cell Biology.
+- reference: DOI:10.1083/jcb.200306104
+  notes: Jolly, Metz, Govin and colleagues 2004, Stress-induced transcription of satellite
+    III repeats, Journal of Cell Biology.
+- reference: DOI:10.1091/mbc.12.11.3502
+  notes: Denegri et al. 2001, Stress-induced Nuclear Bodies Are Sites of Accumulation
+    of pre-mRNA Processing Factors, Molecular Biology of the Cell.
+- reference: DOI:10.1101/cshperspect.a000695
+  notes: Biamonti and Vourc'h 2010, Nuclear Stress Bodies, Cold Spring Harbor Perspectives
+    in Biology.
+causal_graphs:
+- graph_id: hsf1_satiii_nuclear_stress_granule_assembly
+  title: HSF1 and satellite III RNAs organize nuclear stress granules
+  description: In heat-shocked human cells, HSF1 binds satellite III repeats, satellite
+    III repeats are transcribed into RNAs retained at the locus, and pre-mRNA processing
+    factors accumulate in the resulting nuclear stress granule.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes the canonical HSF1 and satellite III repeat axis
+    without asserting a complete condensate assembly pathway, the exact boundary of
+    every splicing or hnRNP factor recruited to the body, or all chromosome-specific
+    human satellite III nucleation sites.
+  nodes:
+  - node_id: heat_shock_factor_1
+    label: heat shock factor 1
+    node_type: GENE_OR_PROTEIN
+    component_ref: heat_shock_factor_1
+  - node_id: satellite_iii_repeats
+    label: satellite III repeats
+    node_type: GENETIC_ELEMENT
+  - node_id: satellite_iii_stress_rna
+    label: satellite III stress-induced RNA
+    node_type: RNA
+    component_ref: satellite_iii_stress_rna
+  - node_id: pre_mrna_processing_factor_cohort
+    label: pre-mRNA processing factor cohort
+    node_type: GENE_OR_PROTEIN
+    component_ref: pre_mrna_processing_factor_cohort
+  - node_id: nuclear_stress_granule
+    label: nuclear stress granule
+    node_type: STRUCTURE
+    grounding: GO:0097165
+  edges:
+  - subject: heat_shock_factor_1
+    predicate: binds
+    object: satellite_iii_repeats
+    description: Stress-activated HSF1 binds satellite III repeats in human chromosome
+      9 heterochromatin.
+    evidence:
+    - reference: DOI:10.1083/jcb.200109018
+      notes: Jolly et al. 2002 mapped HSF1 granules to human 9q11-q12 and showed direct
+        HSF1 binding to satellite III repeats.
+  - subject: satellite_iii_repeats
+    predicate: are transcribed into
+    object: satellite_iii_stress_rna
+    description: Heat shock induces RNA polymerase II transcription of satellite III
+      repeats at nuclear stress granules.
+    evidence:
+    - reference: DOI:10.1083/jcb.200306104
+      notes: Jolly et al. 2004 identified nuclear stress granules as RNA polymerase
+        II transcription factories for satellite III repeats.
+  - subject: satellite_iii_stress_rna
+    predicate: is retained in
+    object: nuclear_stress_granule
+    description: Stress-induced satellite III RNAs remain associated with the heterochromatic
+      nuclear stress granule locus.
+    evidence:
+    - reference: DOI:10.1083/jcb.200306104
+      notes: Jolly et al. 2004 found that satellite III RNAs remain associated with
+        the 9q12 region where nuclear stress granules form.
+  - subject: pre_mrna_processing_factor_cohort
+    predicate: accumulates in
+    object: nuclear_stress_granule
+    description: A cohort of pre-mRNA processing factors accumulates in stress-induced
+      nuclear bodies after heat shock.
+    evidence:
+    - reference: DOI:10.1091/mbc.12.11.3502
+      notes: Denegri et al. 2001 identified heat-shock stress-induced nuclear bodies
+        as sites of pre-mRNA processing factor accumulation.
+discussions:
+- discussion_id: resolve_nuclear_stress_granule_component_boundaries
+  prompt: Resolve exact source-neutral RNA and protein-family boundaries for HSF1,
+    stress-induced satellite III RNAs, SR proteins, SAFB and other hnRNP or pre-mRNA-processing
+    factors in nuclear stress granules.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#heat_shock_factor_1
+  - components#satellite_iii_stress_rna
+  - components#pre_mrna_processing_factor_cohort
+  - causal_graphs#hsf1_satiii_nuclear_stress_granule_assembly
+  rationale: This first nuclear-stress-granule record captures HSF1, HSATIII RNA and
+    pre-mRNA processing factors as label-only resident components while leaving exact
+    HSF1 family grounding, satellite repeat transcript typing, and the full SR-protein
+    and hnRNP cohort to a later curation pass.
+  evidence:
+  - reference: DOI:10.1083/jcb.200109018
+  - reference: DOI:10.1083/jcb.200306104
+  - reference: DOI:10.1091/mbc.12.11.3502
+  - reference: DOI:10.1101/cshperspect.a000695
+  posed_by: codex
+  posed_date: '2026-09-28'
