@@ -17078,14 +17078,14 @@
           "cosine_similarity": 0.74929611
         },
         {
+          "identifier": "GO:0071601",
+          "label": "sphere organelle",
+          "cosine_similarity": 0.7475011
+        },
+        {
           "identifier": "GO:0005682",
           "label": "U5 snRNP",
           "cosine_similarity": 0.74730098
-        },
-        {
-          "identifier": "GO:0120259",
-          "label": "7SK snRNP",
-          "cosine_similarity": 0.74627537
         }
       ]
     },
@@ -17693,6 +17693,11 @@
           "cosine_similarity": 0.67244389
         },
         {
+          "identifier": "GO:0071601",
+          "label": "sphere organelle",
+          "cosine_similarity": 0.6595404
+        },
+        {
           "identifier": "GO:0097526",
           "label": "spliceosomal tri-snRNP complex",
           "cosine_similarity": 0.65918117
@@ -17701,11 +17706,6 @@
           "identifier": "GO:0035062",
           "label": "omega speckle",
           "cosine_similarity": 0.65362351
-        },
-        {
-          "identifier": "GO:0000228",
-          "label": "nuclear chromosome",
-          "cosine_similarity": 0.6484423
         }
       ]
     },
@@ -18264,6 +18264,37 @@
           "identifier": "GO:0005685",
           "label": "U1 snRNP",
           "cosine_similarity": 0.82473949
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0071601",
+      "label": "sphere organelle",
+      "neighbors": [
+        {
+          "identifier": "GO:0015030",
+          "label": "Cajal body",
+          "cosine_similarity": 0.7475011
+        },
+        {
+          "identifier": "GO:0005634",
+          "label": "nucleus",
+          "cosine_similarity": 0.69907751
+        },
+        {
+          "identifier": "GO:0005641",
+          "label": "nuclear envelope lumen",
+          "cosine_similarity": 0.69894009
+        },
+        {
+          "identifier": "GO:0020007",
+          "label": "apical complex",
+          "cosine_similarity": 0.68418957
+        },
+        {
+          "identifier": "GO:0005759",
+          "label": "mitochondrial matrix",
+          "cosine_similarity": 0.67782175
         }
       ]
     },

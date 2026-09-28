@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/sphere_organelle.yaml
+  slug: sphere_organelle
+session:
+  id: 2026-09-28T063622Z-claude-code-0933d3
+  timestamp: '2026-09-28T06:36:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1707
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add sphere organelle record
+  details: Created GO:0071601 sphere organelle as a GO-grounded amphibian-oocyte nuclear body
+    with SPH-1/coilin and U7 snRNA components, Xenopus laevis scope, U7-induced coiled-body-like
+    assembly evidence and a TODO for full sphere-organelle composition and Cajal-body homology
+    boundaries.

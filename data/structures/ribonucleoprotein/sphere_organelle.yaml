@@ -1,0 +1,167 @@
+identifier: GO:0071601
+label: sphere organelle
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: 'A nuclear body that is found in the germinal vesicles of amphibian oocytes,
+  and consist of three major parts: a remarkably spherical body about 5-10 pm in diameter,
+  smaller spherical or nearly spherical granules on the surface, and inclusions of
+  various sizes that strongly resemble the surface granules. The parts of the sphere
+  organelle have distinct compositions, including splicing snRNAs and proteins.'
+definition_source: GO:0071601
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T06:33:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T06:35:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nuclear-body parentage, nuclear-lumen parthood, SPH-1/coilin and
+    U7 snRNA components, Xenopus laevis scope, GO/DOI evidence, a nonmechanistic SPH-1/U7
+    sphere-organelle assembly graph and a sphere/Cajal-body boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-28T06:35:52Z'
+  curator: codex
+  action: TIGHTENED_EVIDENCE
+  changes: Narrowed the Xenopus laevis canonical-example note to the SPH-1 cloning
+    and sphere-cortex localization claim supported by its Tuma, Stolk and Roth 1993
+    reference.
+  llm_assisted: true
+parent_structures:
+- GO:0016604
+part_of:
+- GO:0031981
+components:
+- component_id: coilin_sph1
+  label: coilin/SPH-1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Xenopus sphere-organelle antigen SPH-1 is modeled with its
+    coilin relationship as a first-pass protein component; no exact source-neutral
+    InterPro, Pfam or NCBIfam accession covering this amphibian sphere-organelle protein
+    was assigned.
+  role: Coilin-related SPH-1 protein concentrated in the cortex of Xenopus laevis
+    sphere organelles.
+  evidence:
+  - reference: DOI:10.1083/jcb.122.4.767
+    notes: Tuma, Stolk and Roth 1993 localized SPH-1 specifically to the cortex of
+      Xenopus laevis sphere organelles and found that cloned SPH-1 encodes a p80-coilin-related
+      protein.
+- component_id: u7_snrna
+  label: U7 snRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: U7 snRNA is curated as a native sphere-organelle-enriched small
+    nuclear RNA; no exact Sequence Ontology or RNAcentral CURIE was assigned in this
+    first record.
+  role: Small nuclear RNA concentrated in amphibian oocyte sphere organelles and able
+    to induce coiled-body-like structures when increased in Xenopus oocyte nuclei.
+  evidence:
+  - reference: DOI:10.1007/s004120050385
+    notes: Tuma and Roth 1999 described amphibian oocyte sphere organelles as coiled
+      bodies containing high concentrations of U7 snRNA and showed that increasing
+      nuclear U7 snRNA induced coiled-body-like structures in Xenopus oocytes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:8355
+  taxon_label: Xenopus laevis
+  presence: VARIABLE
+  note: Sphere organelles were characterized in Xenopus laevis oocyte germinal vesicles
+    as large nuclear bodies marked by cortex-localized SPH-1.
+  reference: DOI:10.1083/jcb.122.4.767
+canonical_examples:
+- taxon_id: NCBITaxon:8355
+  taxon_label: Xenopus laevis
+  note: Xenopus laevis oocytes were used to clone SPH-1 and localize SPH-1 to the
+    sphere-organelle cortex.
+  reference: DOI:10.1083/jcb.122.4.767
+evidence:
+- reference: GO:0071601
+  notes: Gene Ontology cellular-component term for sphere organelle.
+- reference: GO:0016604
+  notes: Gene Ontology cellular-component parent term for nuclear body.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for the nuclear lumen; sphere organelles
+    are amphibian-oocyte germinal-vesicle nuclear bodies.
+- reference: DOI:10.1002/dvg.1020160107
+  notes: Gall, Tsvetkov, Wu and Murphy 1995 reviewed the sphere organelle/coiled body
+    as a nuclear component related to coiled bodies, prenucleolar bodies and insect
+    Binnenkorper.
+- reference: DOI:10.1083/jcb.122.4.767
+  notes: Tuma, Stolk and Roth 1993, Identification and characterization of a sphere
+    organelle protein, Journal of Cell Biology.
+- reference: DOI:10.1091/mbc.5.10.1119
+  notes: Wu, Murphy and Gall 1994 targeted human p80-coilin to sphere organelles in
+    Xenopus oocyte germinal vesicles.
+- reference: DOI:10.1007/s004120050385
+  notes: Tuma and Roth 1999, Induction of coiled body-like structures in Xenopus oocytes
+    by U7 snRNA, Chromosoma.
+causal_graphs:
+- graph_id: u7_snrna_sphere_body_assembly
+  title: SPH-1 and U7 snRNA mark sphere organelles
+  description: Xenopus laevis sphere organelles contain cortex-localized coilin-related
+    SPH-1 protein and U7 snRNA, and increased U7 snRNA can induce coiled-body-like
+    structures in oocyte nuclei.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures SPH-1 and U7 snRNA localization without assigning
+    every splicing snRNA, protein constituent, surface granule component or relationship
+    to the broader Cajal body class.
+  nodes:
+  - node_id: coilin_sph1
+    label: coilin/SPH-1
+    node_type: GENE_OR_PROTEIN
+    component_ref: coilin_sph1
+  - node_id: u7_snrna
+    label: U7 snRNA
+    node_type: RNA
+    component_ref: u7_snrna
+  - node_id: sphere_organelle
+    label: sphere organelle
+    node_type: STRUCTURE
+    grounding: GO:0071601
+  - node_id: coiled_body_like_structure
+    label: coiled body-like structure
+    node_type: STRUCTURE
+  edges:
+  - subject: coilin_sph1
+    predicate: localizes to
+    object: sphere_organelle
+    description: SPH-1 is a coilin-related protein that localizes to the cortex of
+      Xenopus laevis sphere organelles.
+    evidence:
+    - reference: DOI:10.1083/jcb.122.4.767
+      notes: Tuma, Stolk and Roth 1993 localized SPH-1 specifically to sphere organelles
+        and placed it at the sphere cortex.
+  - subject: u7_snrna
+    predicate: induces
+    object: coiled_body_like_structure
+    description: Increasing nuclear U7 snRNA induces formation of coiled-body-like
+      structures in Xenopus oocytes.
+    evidence:
+    - reference: DOI:10.1007/s004120050385
+      notes: Tuma and Roth 1999 showed that injecting U7 snRNA or functional U7 snRNA
+        genes induced coiled-body-like structures in vivo.
+discussions:
+- discussion_id: resolve_sphere_organelle_boundaries
+  prompt: Resolve the full RNA/protein composition and Cajal-body homology boundary
+    for amphibian oocyte sphere organelles.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#coilin_sph1
+  - components#u7_snrna
+  - causal_graphs#u7_snrna_sphere_body_assembly
+  rationale: This first GO:0071601 record captures SPH-1/coilin and U7 snRNA while
+    leaving other splicing snRNAs, sphere surface granule proteins, amphibian species
+    breadth and the exact sphere-organelle/Cajal-body homology model to a later pass.
+  evidence:
+  - reference: DOI:10.1002/dvg.1020160107
+  - reference: DOI:10.1007/s004120050385
+  posed_by: codex
+  posed_date: '2026-09-28'
