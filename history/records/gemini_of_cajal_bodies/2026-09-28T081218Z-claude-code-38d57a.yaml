@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/gemini_of_cajal_bodies.yaml
+  slug: gemini_of_cajal_bodies
+session:
+  id: 2026-09-28T081218Z-claude-code-38d57a
+  timestamp: '2026-09-28T08:12:18Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1711
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Gemini of Cajal bodies record
+  details: Created GO:0097504 Gemini of Cajal bodies as a GO-grounded nuclear body with exact
+    GO gem synonymy, SMN label-only component curation, human HeLa cell scope, SMN localization
+    and Cajal-body adjacency evidence from Liu and Dreyfuss 1996, snRNP-biogenesis context
+    from Matera and Frey 1998, a nonmechanistic SMN/gems graph, and an open TODO for SMN paralog,
+    Gemin subunit, SMN-complex and gem-versus-Cajal-body boundaries.

@@ -12247,9 +12247,9 @@
           "cosine_similarity": 0.66213962
         },
         {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.63633638
+          "identifier": "GO:0097504",
+          "label": "Gemini of Cajal bodies",
+          "cosine_similarity": 0.65289278
         }
       ]
     },
@@ -13459,6 +13459,37 @@
           "identifier": "GO:0042729",
           "label": "DASH complex",
           "cosine_similarity": 0.72340772
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097504",
+      "label": "Gemini of Cajal bodies",
+      "neighbors": [
+        {
+          "identifier": "GO:0015030",
+          "label": "Cajal body",
+          "cosine_similarity": 0.80813555
+        },
+        {
+          "identifier": "GO:0016605",
+          "label": "PML body",
+          "cosine_similarity": 0.66881845
+        },
+        {
+          "identifier": "GO:0071601",
+          "label": "sphere organelle",
+          "cosine_similarity": 0.66815502
+        },
+        {
+          "identifier": "GO:0071920",
+          "label": "cleavage body",
+          "cosine_similarity": 0.65289278
+        },
+        {
+          "identifier": "GO:0042382",
+          "label": "paraspeckles",
+          "cosine_similarity": 0.64415649
         }
       ]
     },
@@ -15337,6 +15368,11 @@
           "cosine_similarity": 0.67425354
         },
         {
+          "identifier": "GO:0097504",
+          "label": "Gemini of Cajal bodies",
+          "cosine_similarity": 0.66881845
+        },
+        {
           "identifier": "GO:0000932",
           "label": "P-body",
           "cosine_similarity": 0.65459135
@@ -15345,11 +15381,6 @@
           "identifier": "GO:1990251",
           "label": "nuclear exosome focus",
           "cosine_similarity": 0.64344669
-        },
-        {
-          "identifier": "GO:0015030",
-          "label": "Cajal body",
-          "cosine_similarity": 0.63287815
         }
       ]
     },
@@ -17063,6 +17094,11 @@
       "label": "Cajal body",
       "neighbors": [
         {
+          "identifier": "GO:0097504",
+          "label": "Gemini of Cajal bodies",
+          "cosine_similarity": 0.80813555
+        },
+        {
           "identifier": "GO:0005686",
           "label": "U2 snRNP",
           "cosine_similarity": 0.76921799
@@ -17081,11 +17117,6 @@
           "identifier": "GO:0071601",
           "label": "sphere organelle",
           "cosine_similarity": 0.7475011
-        },
-        {
-          "identifier": "GO:0005682",
-          "label": "U5 snRNP",
-          "cosine_similarity": 0.74730098
         }
       ]
     },

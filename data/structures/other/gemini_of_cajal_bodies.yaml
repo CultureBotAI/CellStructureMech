@@ -1,0 +1,170 @@
+identifier: GO:0097504
+label: Gemini of Cajal bodies
+structure_category: OTHER
+structure_kind: OTHER
+definition: Nuclear bodies frequently found near or associated with Cajal bodies (also
+  called coiled bodies or CBs). Gemini of coiled bodies, or 'gems', are similar in
+  size and shape to CBs, and often indistinguishable under the microscope. Unlike
+  CBs, gems do not contain small nuclear ribonucleoproteins (snRNPs); they contain
+  a protein called survivor of motor neurons (SMN) whose function relates to snRNP
+  biogenesis. Gems are believed to assist CBs in snRNP biogenesis, and to play a role
+  in the etiology of spinal muscular atrophy (SMA).
+definition_source: GO:0097504
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T08:10:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T08:11:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO gem synonymy, nuclear-body parentage, nuclear-lumen parthood,
+    an SMN label-only component, human HeLa scope, snRNP-biogenesis association evidence,
+    a nonmechanistic SMN/gems graph, and an SMN-complex/Cajal-body boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Gemini of coiled bodies
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097504
+- synonym_text: Gems
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097504
+parent_structures:
+- GO:0016604
+part_of:
+- GO:0031981
+components:
+- component_id: smn_protein
+  label: SMN protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SMN is represented as the defining gems-resident survival of motor
+    neurons protein; no source-neutral family or complex grounding was assigned for
+    the human SMN paralogs, Gemin interactors, or the broader SMN complex.
+  role: Marker and resident protein concentrated in Gemini of Cajal bodies.
+  evidence:
+  - reference: GO:0097504
+    notes: GO:0097504 defines gems as nuclear bodies that contain survival of motor
+      neurons protein.
+  - reference: PMID:8670859
+    notes: Liu and Dreyfuss 1996 used SMN monoclonal antibodies to identify several
+      intense dots in HeLa nuclei and named the structures gems.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: VARIABLE
+  note: Human HeLa cells were used to define gems as several SMN-containing nuclear
+    foci frequently near or associated with coiled/Cajal bodies.
+  reference: PMID:8670859
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Liu and Dreyfuss localized SMN to two to six gem foci in HeLa nuclei and named
+    them Gemini of coiled bodies because of their close association with coiled bodies.
+  reference: PMID:8670859
+functions:
+- function_id: snrnp_biogenesis_association
+  label: snRNP biogenesis association
+  description: Gemini of Cajal bodies are SMN-containing nuclear bodies implicated
+    in the same nuclear snRNP-biogenesis axis as Cajal bodies.
+  evidence:
+  - reference: GO:0097504
+    notes: GO:0097504 states that gems contain SMN and are believed to assist Cajal
+      bodies in snRNP biogenesis.
+  - reference: DOI:10.1086/301992
+    notes: Matera and Frey 1998 reviewed gems and coiled bodies in the context of
+      spinal muscular atrophy and small nuclear ribonucleoprotein biogenesis.
+evidence:
+- reference: GO:0097504
+  notes: Gene Ontology cellular-component term for Gemini of Cajal bodies and the
+    exact Gems and Gemini of coiled bodies synonyms.
+- reference: GO:0016604
+  notes: Gene Ontology cellular-component parent term for nuclear body.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for the nuclear lumen; gems are nuclear
+    bodies.
+- reference: PMID:8670859
+  notes: Liu and Dreyfuss 1996, A novel nuclear structure containing the survival
+    of motor neurons protein, EMBO Journal.
+- reference: DOI:10.1086/301992
+  notes: 'Matera and Frey 1998, Coiled bodies and gems: Janus or gemini?, American
+    Journal of Human Genetics.'
+- reference: DOI:10.1146/annurev.cellbio.16.1.273
+  notes: 'Gall 2000, Cajal bodies: the first 100 years, Annual Review of Cell and
+    Developmental Biology.'
+causal_graphs:
+- graph_id: smn_gem_association
+  title: SMN marks gems near Cajal bodies
+  description: Gemini of Cajal bodies are SMN-containing nuclear bodies that often
+    sit near Cajal bodies and are associated with snRNP biogenesis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures the defining SMN localization and gem/Cajal-body
+    adjacency without assigning a complete SMN-complex composition or a causal pathway
+    for snRNP assembly.
+  nodes:
+  - node_id: smn_protein
+    label: SMN protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: smn_protein
+  - node_id: gemini_of_cajal_bodies
+    label: Gemini of Cajal bodies
+    node_type: STRUCTURE
+    grounding: GO:0097504
+  - node_id: cajal_body
+    label: Cajal body
+    node_type: STRUCTURE
+    grounding: GO:0015030
+  - node_id: snrnp_biogenesis_association
+    label: snRNP biogenesis association
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: smn_protein
+    predicate: localizes to
+    object: gemini_of_cajal_bodies
+    description: SMN protein concentrates in gem nuclear foci.
+    evidence:
+    - reference: PMID:8670859
+      notes: Liu and Dreyfuss 1996 reported that SMN immunolocalization marked several
+        intense dots in HeLa nuclei and named these foci gems.
+  - subject: gemini_of_cajal_bodies
+    predicate: are associated with
+    object: cajal_body
+    description: Gems are frequently found near or associated with Cajal bodies.
+    evidence:
+    - reference: GO:0097504
+      notes: GO:0097504 defines gems as nuclear bodies frequently found near or associated
+        with Cajal bodies.
+    - reference: PMID:8670859
+      notes: Liu and Dreyfuss 1996 found SMN-positive gems near or associated with
+        coiled bodies.
+  - subject: gemini_of_cajal_bodies
+    predicate: associated with
+    object: snrnp_biogenesis_association
+    description: Gems are associated with the nuclear snRNP biogenesis machinery centered
+      on Cajal bodies.
+    evidence:
+    - reference: DOI:10.1086/301992
+      notes: Matera and Frey 1998 reviewed the relationship between gems, coiled bodies
+        and snRNP biogenesis.
+discussions:
+- discussion_id: resolve_gem_smn_boundaries
+  prompt: Resolve exact SMN paralog, Gemin subunit, SMN-complex and Cajal-body boundary
+    claims for Gemini of Cajal bodies.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#smn_protein
+  - causal_graphs#smn_gem_association
+  rationale: This first GO:0097504 record captures the GO term, SMN localization and
+    gem/Cajal-body adjacency while leaving SMN1-versus-SMN2, Gemin protein, full SMN-complex,
+    and gem-versus-Cajal-body identity boundaries to a later pass.
+  evidence:
+  - reference: PMID:8670859
+  - reference: DOI:10.1086/301992
+  posed_by: codex
+  posed_date: '2026-09-28'
