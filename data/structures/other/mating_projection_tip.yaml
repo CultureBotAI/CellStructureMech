@@ -1,0 +1,213 @@
+identifier: GO:0043332
+label: mating projection tip
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: The apex of the mating projection in unicellular fungi exposed to mating
+  pheromone; site of polarized growth.
+definition_source: GO:0043332
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T14:13:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T14:14:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added shmoo-tip synonymy, mating-projection parthood, exact GO child structures,
+    Saccharomyces and Schizosaccharomyces examples, a polarized-growth-site function,
+    DOI evidence, a nonmechanistic tip-localized-structure graph, and a localized
+    machinery boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-28T14:32:58Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1728 by switching the Saccharomyces projection-tip localization
+    claims to direct Read et al. Spa2p tip evidence.'
+  llm_assisted: true
+synonyms:
+- synonym_text: shmoo tip
+  synonym_type: NARROW_SYNONYM
+  source: GO:0043332
+- synonym_text: conjugation tube tip
+  synonym_type: NARROW_SYNONYM
+  source: GO:0043332
+part_of:
+- GO:0005937
+has_part:
+- GO:0070867
+- GO:0031563
+- GO:1990819
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Haploid budding-yeast cells extend Spa2-positive projection tips during pheromone-induced
+    mating projection formation.
+  reference: DOI:10.1091/mbc.3.4.429
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: VARIABLE
+  note: Fission-yeast mating cells form a focused actin aster at the fusion site of
+    the mating projection tip.
+  reference: DOI:10.1083/jcb.201411124
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Spa2p segregates to mating projection tips in
+    an actin-dependent projection-forming response.
+  reference: DOI:10.1091/mbc.3.4.429
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Fission-yeast model in which the actin fusion focus forms from formin-nucleated
+    filaments at the fusion site.
+  reference: DOI:10.1083/jcb.201411124
+functions:
+- function_id: mating_projection_tip_polarized_growth_site
+  label: mating-projection tip polarized-growth site
+  description: The mating projection tip is the polarized apex of the pheromone-induced
+    projection where membrane, polarisome, and actin-fusion structures organize growth
+    and cell fusion.
+  evidence:
+  - reference: GO:0043332
+    notes: GO:0043332 defines the mating projection tip as the projection apex and
+      site of polarized growth.
+  - reference: GO:0031563
+    notes: GO:0031563 identifies a polarisome localized at the mating projection tip.
+  - reference: GO:1990819
+    notes: GO:1990819 identifies the actin fusion focus at the mating projection tip.
+  - reference: DOI:10.1083/jcb.201411124
+    notes: Dudin et al. 2015 connected the fission-yeast actin fusion focus with local
+      cell-wall dissolution during cell fusion.
+  - reference: DOI:10.1091/mbc.3.4.429
+    notes: Read et al. 1992 tracked Spa2p segregation to Saccharomyces cerevisiae
+      projection tips during mating projection formation.
+evidence:
+- reference: GO:0043332
+  notes: Gene Ontology cellular-component term for the mating projection tip.
+- reference: GO:0005937
+  notes: Gene Ontology cellular-component term for the mating projection.
+- reference: GO:0070867
+  notes: Gene Ontology cellular-component term for the mating projection tip membrane.
+- reference: GO:0031563
+  notes: Gene Ontology cellular-component term for the mating projection tip polarisome.
+- reference: GO:1990819
+  notes: Gene Ontology cellular-component term for the mating projection actin fusion
+    focus.
+- reference: DOI:10.1083/jcb.200307065
+  notes: Bidlingmaier and Snyder 2004, 'Regulation of polarized growth initiation
+    and termination cycles by the polarisome and Cdc42 regulators', Journal of Cell
+    Biology.
+- reference: DOI:10.1083/jcb.201411124
+  notes: Dudin et al. 2015, 'A formin-nucleated actin aster concentrates cell wall
+    hydrolases for cell fusion in fission yeast', Journal of Cell Biology.
+- reference: DOI:10.1091/mbc.3.4.429
+  notes: Read et al. 1992, 'Actin- and tubulin-dependent functions during Saccharomyces
+    cerevisiae mating projection formation', Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: mating_projection_tip_localized_structures
+  title: Mating-projection tip localized structures
+  description: The mating projection tip is the polarized apex of the mating projection
+    and hosts tip-membrane, polarisome, and actin-fusion-focus substructures.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-backed regional topology and selected tip-localized
+    assemblies without asserting complete pheromone-signaling, polarisome-assembly,
+    or cell-fusion mechanisms.
+  nodes:
+  - node_id: mating_projection_tip
+    label: mating projection tip
+    node_type: STRUCTURE
+    grounding: GO:0043332
+  - node_id: mating_projection
+    label: mating projection
+    node_type: STRUCTURE
+    grounding: GO:0005937
+  - node_id: mating_projection_tip_membrane
+    label: mating projection tip membrane
+    node_type: STRUCTURE
+    grounding: GO:0070867
+  - node_id: mating_projection_tip_polarisome
+    label: mating projection tip polarisome
+    node_type: STRUCTURE
+    grounding: GO:0031563
+  - node_id: actin_fusion_focus
+    label: mating projection actin fusion focus
+    node_type: STRUCTURE
+    grounding: GO:1990819
+  - node_id: cell_wall_dissolution
+    label: cell wall dissolution
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: mating_projection_tip
+    predicate: is part of
+    object: mating_projection
+    description: The mating projection tip is the apex of the mating projection.
+    evidence:
+    - reference: GO:0043332
+      notes: GO:0043332 identifies the mating projection tip as part of the mating
+        projection.
+  - subject: mating_projection_tip_membrane
+    predicate: is part of
+    object: mating_projection_tip
+    description: The mating projection tip membrane surrounds the tip region.
+    evidence:
+    - reference: GO:0070867
+      notes: GO:0070867 identifies the plasma-membrane portion surrounding a mating
+        projection tip.
+  - subject: mating_projection_tip_polarisome
+    predicate: localizes to
+    object: mating_projection_tip
+    description: The mating projection tip polarisome is found at the projection apex.
+    evidence:
+    - reference: GO:0031563
+      notes: GO:0031563 identifies the polarisome localized to the mating projection
+        tip.
+    - reference: DOI:10.1091/mbc.3.4.429
+      notes: Read et al. 1992 observed Spa2p segregation to mating projection tips
+        in Saccharomyces cerevisiae.
+  - subject: actin_fusion_focus
+    predicate: is part of
+    object: mating_projection_tip
+    description: The actin fusion focus lies at the mating projection tip fusion site.
+    evidence:
+    - reference: GO:1990819
+      notes: GO:1990819 identifies the actin fusion focus at the mating projection
+        tip.
+  - subject: actin_fusion_focus
+    predicate: focalizes
+    object: cell_wall_dissolution
+    description: The fission-yeast actin fusion focus concentrates cell-wall hydrolases
+      to focalize cell-wall dissolution at the fusion site.
+    evidence:
+    - reference: DOI:10.1083/jcb.201411124
+      notes: Dudin et al. 2015 showed that the actin fusion focus focalizes cell-wall
+        dissolution within a broader synthesis zone.
+discussions:
+- discussion_id: localized_machinery_not_tip_components
+  prompt: Keep polarisome proteins, actin-fusion-focus proteins, and hydrolases on
+    their own structure or protein records rather than duplicating them as direct
+    mating projection tip components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#mating_projection_tip_localized_structures
+  rationale: GO:0043332 identifies the tip region, while GO:0031563 and GO:1990819
+    identify localized assemblies at that region. Those assemblies are linked as tip-localized
+    structures here, leaving their protein constituents on complex-specific or ProteinTraitsMech
+    records.
+  resolution_note: Curated the tip as a region with localized substructures and did
+    not duplicate polarisome, actin-focus, or cell-wall hydrolase proteins as direct
+    components.
+  evidence:
+  - reference: GO:0043332
+    notes: GO:0043332 identifies the mating projection tip.
+  - reference: GO:0031563
+    notes: GO:0031563 identifies a mating-projection-tip polarisome.
+  - reference: GO:1990819
+    notes: GO:1990819 identifies the mating projection actin fusion focus.
+  posed_by: codex
+  posed_date: '2026-09-28'
+  resolved_date: '2026-09-28'
