@@ -27,6 +27,12 @@ curation_history:
   changes: Clarified the psi graph edge so PMID:8505305 supports psi binding the gamma
     DnaX protein instead of a one-ended psi-to-chi bridge edge.
   llm_assisted: true
+- timestamp: '2026-09-28T12:08:15Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: 'Fixed #1722 by adding PMID:8505305 to the chi and psi component evidence
+    lists so the local 1:1 stoichiometry and psi linkage claims are directly sourced.'
+  llm_assisted: true
 synonyms:
 - synonym_text: DNA polymerase III, DnaX complex, chi/psi subcomplex
   synonym_type: EXACT_SYNONYM
@@ -70,6 +76,9 @@ components:
   - reference: PMID:8389364
     notes: Xiao et al. 1993 identified holC as the E. coli gene encoding the DNA polymerase
       III chi accessory protein.
+  - reference: PMID:8505305
+    notes: Xiao et al. 1993 characterized E. coli chi and psi as monomeric proteins
+      that associate to form a 1:1 complex.
   - reference: UniProtKB:P28905
     notes: UniProtKB P28905 is the reviewed E. coli K-12 holC entry for DNA polymerase
       III subunit chi and is annotated to GO:0043846.
@@ -107,6 +116,9 @@ components:
   - reference: PMID:8389364
     notes: Xiao et al. 1993 identified holD as the E. coli gene encoding the DNA polymerase
       III psi accessory protein.
+  - reference: PMID:8505305
+    notes: Xiao et al. 1993 characterized E. coli psi as the gamma-binding partner
+      that bridges chi into the gamma clamp-loader complex.
   - reference: UniProtKB:P28632
     notes: UniProtKB P28632 is the reviewed E. coli K-12 holD entry for DNA polymerase
       III subunit psi and is annotated to GO:0043846.
