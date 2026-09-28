@@ -20,6 +20,13 @@ curation_history:
     a bud-neck polarity function, a nonmechanistic topology graph, and grounding and
     component-boundary TODOs.
   llm_assisted: true
+- timestamp: '2026-09-28T21:40:37Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1742 by retargeting the Spa2/Pea2 topology edge from the GO:0031560
+    complex to the GO:0005935 bud-neck site and separating DOI-backed neck localization
+    from GO-backed complex identity in the function and graph text.'
+  llm_assisted: true
 parent_structures:
 - GO:0000133
 part_of:
@@ -60,8 +67,9 @@ canonical_examples:
 functions:
 - function_id: bud_neck_cell_polarity_organization
   label: bud-neck cell-polarity organization
-  description: The cellular bud neck polarisome concentrates the Spa2/Pea2 polarity
-    scaffold at the mother-daughter neck before cytokinesis.
+  description: The cellular bud neck polarisome is the GO-defined cell-polarity complex
+    at the fungal bud neck, where Valtz and Herskowitz 1996 observed the Saccharomyces
+    Spa2/Pea2 polarity scaffold before cytokinesis.
   evidence:
   - reference: GO:0031560
     notes: GO:0031560 defines the cellular bud neck polarisome by its role in cell-polarity
@@ -84,13 +92,13 @@ evidence:
 causal_graphs:
 - graph_id: bud_neck_polarisome_topology
   title: Bud-neck polarisome topology
-  description: Spa2 and Pea2 localize with the Saccharomyces bud-neck polarisome at
-    the mother-daughter neck before cytokinesis.
+  description: Spa2 and Pea2 mark the Saccharomyces mother-daughter neck occupied
+    by the GO-defined bud-neck polarisome before cytokinesis.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: This graph records bud-neck localization of the Spa2/Pea2 scaffold
-    without asserting a complete actin-assembly pathway or adding candidate Bni1 or
-    Bud6/Aip3 constituents.
+  scope_notes: This graph records direct bud-neck localization of the Spa2/Pea2 scaffold
+    and the GO-defined placement of the bud-neck polarisome without asserting a complete
+    actin-assembly pathway or adding candidate Bni1 or Bud6/Aip3 constituents.
   nodes:
   - node_id: spa2_pea2_scaffold
     label: Spa2/Pea2 polarisome scaffold
@@ -121,9 +129,8 @@ causal_graphs:
       notes: GO:0005935 identifies the cellular bud neck.
   - subject: spa2_pea2_scaffold
     predicate: localizes to
-    object: cellular_bud_neck_polarisome
-    description: Pea2 and Spa2 localize to polarized-growth sites, including the mother-daughter
-      neck before cytokinesis.
+    object: cellular_bud_neck
+    description: Pea2 and Spa2 localize to the mother-daughter neck before cytokinesis.
     evidence:
     - reference: DOI:10.1083/jcb.135.3.725
       notes: Valtz and Herskowitz 1996 localized Pea2 to the mother-daughter neck
