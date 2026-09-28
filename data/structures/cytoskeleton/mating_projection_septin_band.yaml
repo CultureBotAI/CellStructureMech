@@ -1,0 +1,180 @@
+identifier: GO:0032162
+label: mating projection septin band
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A septin band, i.e. a diffuse ring composed of a series of septin bars
+  running parallel to the long axis of the cell, located at the neck of a shmoo (mating
+  projection).
+definition_source: GO:0032162
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T17:13:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T17:15:29Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-cytoskeleton parentage, mating-projection parthood, a label-only
+    septin constituent, Saccharomyces distribution and canonical example evidence,
+    a shmoo-neck scaffold function, DOI/GO evidence, a nonmechanistic shmoo-neck band
+    topology graph, and a resolved ring-versus-band interpretation.
+  llm_assisted: true
+- timestamp: '2026-09-28T17:42:25Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: 'Added an open CURATION_TODO discussion for the reviewed-label-only septin
+    proteins component, addressing issue #1734.'
+  llm_assisted: true
+parent_structures:
+- GO:0032156
+part_of:
+- GO:0005937
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The shmoo-neck septin band is assembled from multiple septin paralogs;
+    no exact source-neutral accession was curated for the whole fungal septin cohort.
+  role: Septin GTPases that form the diffuse set of bars at the neck of the mating
+    projection.
+  evidence:
+  - reference: GO:0032162
+    notes: GO:0032162 defines the mating projection septin band as composed of septin
+      bars at the shmoo neck.
+  - reference: DOI:10.1083/jcb.143.3.719
+    notes: Longtine et al. 1998 visualized septins in pheromone-treated Saccharomyces
+      cells as a fuzzy band or bars parallel to the projection axis.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Budding-yeast cells localize septins to a diffuse shmoo-neck band during pheromone-induced
+    morphogenesis.
+  reference: DOI:10.1083/jcb.143.3.719
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Pheromone-treated budding-yeast model in which septins appear as a fuzzy band
+    or parallel bars at the shmoo neck.
+  reference: DOI:10.1083/jcb.143.3.719
+functions:
+- function_id: shmoo_neck_scaffolding
+  label: shmoo-neck scaffolding
+  description: The diffuse shmoo-neck septin band is positioned with a pheromone-induced
+    chitin band and can organize septin-associated morphogenesis factors at the projection
+    neck.
+  evidence:
+  - reference: DOI:10.1083/jcb.143.3.719
+    notes: Longtine et al. 1998 compared shmoo-neck septin localization with the chitin
+      band deposited at mating-projection bases.
+  - reference: DOI:10.1128/EC.4.9.1503-1512.2005
+    notes: Douglas et al. 2005 reviewed scaffold functions for septins at the Saccharomyces
+      shmoo neck.
+evidence:
+- reference: GO:0032162
+  notes: Gene Ontology cellular-component term for the mating projection septin band.
+- reference: GO:0032156
+  notes: Gene Ontology cellular-component term for the septin cytoskeleton.
+- reference: GO:0005937
+  notes: Gene Ontology cellular-component term for the mating projection.
+- reference: DOI:10.1083/jcb.143.3.719
+  notes: Longtine et al. 1998, 'Role of the yeast Gin4p protein kinase in septin assembly
+    and the relationship between septin assembly and septin function', Journal of
+    Cell Biology.
+- reference: DOI:10.1128/EC.4.9.1503-1512.2005
+  notes: Douglas et al. 2005, 'Septin function in yeast model systems and pathogenic
+    fungi', Eukaryotic Cell.
+causal_graphs:
+- graph_id: shmoo_neck_septin_band_topology
+  title: Shmoo-neck septin band topology
+  description: The mating projection septin band is a diffuse septin bar assembly
+    at the neck of the pheromone-induced mating projection.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-backed band composition and mating-projection
+    parthood without asserting a complete pheromone-response assembly pathway.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: mating_projection_septin_band
+    label: mating projection septin band
+    node_type: STRUCTURE
+    grounding: GO:0032162
+  - node_id: mating_projection
+    label: mating projection
+    node_type: STRUCTURE
+    grounding: GO:0005937
+  edges:
+  - subject: septin_proteins
+    predicate: form
+    object: mating_projection_septin_band
+    description: Septin proteins form the diffuse bar-containing band at the shmoo
+      neck.
+    evidence:
+    - reference: GO:0032162
+      notes: GO:0032162 defines the band as a diffuse series of septin bars.
+    - reference: DOI:10.1083/jcb.143.3.719
+      notes: Longtine et al. 1998 visualized septin bars parallel to the shmoo projection
+        axis.
+  - subject: mating_projection_septin_band
+    predicate: is part of
+    object: mating_projection
+    description: The mating projection septin band occupies the neck of the mating
+      projection.
+    evidence:
+    - reference: GO:0032162
+      notes: GO:0032162 places the septin band at the neck of a shmoo mating projection.
+discussions:
+- discussion_id: septin_band_not_septin_ring
+  prompt: Keep the diffuse mating-projection septin band distinct from the ring-shaped
+    GO:0032175 mating projection septin ring.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - causal_graphs#shmoo_neck_septin_band_topology
+  rationale: GO:0032162 denotes a diffuse ring composed of parallel septin bars at
+    the shmoo neck, whereas GO:0032175 denotes a ring-shaped septin structure. Longtine
+    et al. 1998 describe Saccharomyces pheromone-response septins as a fuzzy band
+    or bars, so this record captures the band morphology and leaves the GO:0032175
+    record separate.
+  resolution_note: Curated the diffuse band as GO:0032162 and linked it to the mating
+    projection with part_of rather than merging it into the GO:0032175 ring record.
+  evidence:
+  - reference: GO:0032162
+    notes: GO:0032162 defines the diffuse mating-projection septin band.
+  - reference: GO:0032175
+    notes: GO:0032175 defines a ring-shaped mating-projection septin structure.
+  - reference: DOI:10.1083/jcb.143.3.719
+    notes: Longtine et al. 1998 observed a fuzzy band or parallel septin bars in pheromone-treated
+      Saccharomyces cells.
+  posed_by: codex
+  posed_date: '2026-09-28'
+  resolved_date: '2026-09-28'
+- discussion_id: resolve_septin_protein_cohort_grounding
+  prompt: Resolve an exact source-neutral grounding for the grouped septin proteins
+    component, if one exists.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: GO:0032162 supports septins as structural constituents of the shmoo-neck
+    band, but septins are a multi-paralog family and this record deliberately avoids
+    guessing one InterPro, Pfam, or NCBIfam accession for the complete fungal septin
+    cohort.
+  evidence:
+  - reference: GO:0032162
+    notes: GO:0032162 defines the mating projection septin band as a diffuse ring
+      composed of septin bars at the shmoo neck.
+  - reference: DOI:10.1083/jcb.143.3.719
+    notes: Longtine et al. 1998 visualized septin localization in pheromone-treated
+      Saccharomyces cells.
+  posed_by: codex
+  posed_date: '2026-09-28'

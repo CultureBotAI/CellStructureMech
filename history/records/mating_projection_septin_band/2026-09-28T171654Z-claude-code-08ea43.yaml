@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+  slug: mating_projection_septin_band
+session:
+  id: 2026-09-28T171654Z-claude-code-08ea43
+  timestamp: '2026-09-28T17:16:54Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added the mating projection septin band record
+  details: Created the GO:0032162 mating projection septin band record, grounded it as part
+    of the mating projection and child of the septin cytoskeleton, curated a label-only septin-protein
+    constituent, Saccharomyces cerevisiae distribution and canonical-example evidence from
+    Longtine et al. 1998, a shmoo-neck scaffolding function supported by Longtine et al. 1998
+    and Douglas et al. 2005, GO/DOI record evidence, a nonmechanistic topology graph, and
+    a resolved interpretation distinguishing the diffuse GO:0032162 band from the GO:0032175
+    ring.
