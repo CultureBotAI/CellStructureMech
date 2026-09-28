@@ -11369,6 +11369,11 @@
           "cosine_similarity": 0.79483778
         },
         {
+          "identifier": "GO:0044776",
+          "label": "DNA polymerase III, core complex",
+          "cosine_similarity": 0.79355418
+        },
+        {
           "identifier": "GO:0043625",
           "label": "delta DNA polymerase complex",
           "cosine_similarity": 0.79264471
@@ -11377,11 +11382,6 @@
           "identifier": "GO:0008622",
           "label": "epsilon DNA polymerase complex",
           "cosine_similarity": 0.78637151
-        },
-        {
-          "identifier": "GO:0016035",
-          "label": "zeta DNA polymerase complex",
-          "cosine_similarity": 0.77051677
         }
       ]
     },
@@ -12630,6 +12630,11 @@
       "label": "DNA polymerase III complex",
       "neighbors": [
         {
+          "identifier": "GO:0044776",
+          "label": "DNA polymerase III, core complex",
+          "cosine_similarity": 0.8960829
+        },
+        {
           "identifier": "GO:0043625",
           "label": "delta DNA polymerase complex",
           "cosine_similarity": 0.8044557
@@ -12648,11 +12653,37 @@
           "identifier": "GO:0016035",
           "label": "zeta DNA polymerase complex",
           "cosine_similarity": 0.77245507
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0044776",
+      "label": "DNA polymerase III, core complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009360",
+          "label": "DNA polymerase III complex",
+          "cosine_similarity": 0.8960829
+        },
+        {
+          "identifier": "GO:0005658",
+          "label": "alpha DNA polymerase:primase complex",
+          "cosine_similarity": 0.79355418
+        },
+        {
+          "identifier": "GO:0043625",
+          "label": "delta DNA polymerase complex",
+          "cosine_similarity": 0.78860421
+        },
+        {
+          "identifier": "GO:0005760",
+          "label": "gamma DNA polymerase complex",
+          "cosine_similarity": 0.75782287
         },
         {
           "identifier": "GO:0008622",
           "label": "epsilon DNA polymerase complex",
-          "cosine_similarity": 0.74895954
+          "cosine_similarity": 0.74072232
         }
       ]
     },
@@ -12728,6 +12759,11 @@
           "cosine_similarity": 0.69423383
         },
         {
+          "identifier": "GO:0044776",
+          "label": "DNA polymerase III, core complex",
+          "cosine_similarity": 0.66760922
+        },
+        {
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
           "cosine_similarity": 0.6649098
@@ -12741,11 +12777,6 @@
           "identifier": "GO:0000112",
           "label": "nucleotide-excision repair factor 3 complex",
           "cosine_similarity": 0.6547675
-        },
-        {
-          "identifier": "GO:0009360",
-          "label": "DNA polymerase III complex",
-          "cosine_similarity": 0.63940843
         }
       ]
     },

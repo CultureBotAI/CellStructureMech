@@ -1,0 +1,222 @@
+identifier: GO:0044776
+label: DNA polymerase III, core complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A DNA polymerase III core subassembly made of alpha, epsilon and theta
+  subunits that provides polymerase and 3'-5' exonuclease proofreading activities
+  within the DNA polymerase III holoenzyme.
+definition_source: GO:0044776
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T08:45:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T08:46:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added DNA polymerase complex parentage, DNA polymerase III holoenzyme parthood,
+    alpha/epsilon/theta label-only components, an E. coli canonical example, GO and
+    Maki/Kornberg activity evidence, a nonmechanistic Pol III core graph, and a subunit-grounding
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-28T08:52:08Z'
+  curator: codex
+  action: FIXED_PRODUCT_LABEL
+  changes: Aligned the GO:0003887 function label with the canonical DNA-directed DNA
+    polymerase activity label.
+  llm_assisted: true
+parent_structures:
+- GO:0042575
+part_of:
+- GO:0009360
+components:
+- component_id: alpha_subunit
+  label: DNA polymerase III alpha subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaE
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The E. coli alpha catalytic subunit is represented by label and
+    gene symbol; no exact source-neutral InterPro, Pfam, or NCBIfam family was assigned
+    for this first DNA polymerase III core-complex split.
+  role: Named alpha subunit of the Escherichia coli DNA polymerase III core.
+  evidence:
+  - reference: GO:0044776
+    notes: GO:0044776 defines the DNA polymerase III core complex as containing an
+      alpha subunit.
+  - reference: PMID:3283127
+    notes: Maki and Kornberg 1988 described partial assemblies of the Pol III core
+      containing alpha, epsilon and theta subunits.
+- component_id: epsilon_subunit
+  label: DNA polymerase III epsilon subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaQ
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The E. coli epsilon proofreading-exonuclease subunit is represented
+    by label and gene symbol; no exact source-neutral InterPro, Pfam, or NCBIfam family
+    was assigned for this first DNA polymerase III core-complex split.
+  role: Named epsilon subunit of the Escherichia coli DNA polymerase III core.
+  evidence:
+  - reference: GO:0044776
+    notes: GO:0044776 defines the DNA polymerase III core complex as containing an
+      epsilon subunit.
+  - reference: PMID:3283127
+    notes: Maki and Kornberg 1988 described partial assemblies of the Pol III core
+      containing alpha, epsilon and theta subunits.
+- component_id: theta_subunit
+  label: DNA polymerase III theta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - holE
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The E. coli theta subunit is represented by label and gene symbol;
+    no exact source-neutral InterPro, Pfam, or NCBIfam family was assigned for this
+    first DNA polymerase III core-complex split.
+  role: Named theta subunit of the Escherichia coli DNA polymerase III core.
+  evidence:
+  - reference: GO:0044776
+    notes: GO:0044776 defines the DNA polymerase III core complex as containing a
+      theta subunit.
+  - reference: PMID:3283127
+    notes: Maki and Kornberg 1988 described partial assemblies of the Pol III core
+      containing alpha, epsilon and theta subunits.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Maki and Kornberg reconstituted the E. coli DNA polymerase III holoenzyme
+    from purified subunits and assigned alpha, epsilon and theta to the Pol III core.
+  reference: PMID:3283127
+functions:
+- function_id: dna_polymerase_core_activity
+  label: DNA-directed DNA polymerase activity
+  grounding: GO:0003887
+  description: The DNA polymerase III core carries the polymerase and 3'-5' proofreading
+    activities that become processive when auxiliary holoenzyme subunits load and
+    tether the beta clamp.
+  evidence:
+  - reference: GO:0044776
+    notes: GO:0044776 defines the core as the subcomplex that carries out polymerase
+      and 3'-5' exonuclease proofreading activities.
+  - reference: PMID:3283127
+    notes: Maki and Kornberg 1988 reported that the Pol III core possesses polymerase
+      and proofreading activities while auxiliary subunits provide processivity.
+evidence:
+- reference: GO:0044776
+  notes: Gene Ontology cellular-component term for the DNA polymerase III core complex.
+- reference: GO:0042575
+  notes: Gene Ontology cellular-component parent term for DNA polymerase complexes.
+- reference: GO:0009360
+  notes: Gene Ontology cellular-component term for the DNA polymerase III holoenzyme
+    complex that contains the Pol III core.
+- reference: GO:0003887
+  notes: Gene Ontology molecular-function term for DNA-directed DNA polymerase activity.
+- reference: PMID:3283127
+  notes: PubMed identifier for Maki and Kornberg 1988, DNA polymerase III holoenzyme
+    of Escherichia coli. III. Distinctive processive polymerases reconstituted from
+    purified subunits.
+causal_graphs:
+- graph_id: pol_iii_core_catalysis
+  title: DNA polymerase III core provides polymerase and proofreading activities
+  description: The alpha, epsilon and theta subunits form the Pol III core that provides
+    the holoenzyme's polymerase and proofreading activities.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures core subunit membership and the core's catalogued
+    activities without assigning full alpha/epsilon/theta protein-family boundaries
+    or modelling how the beta clamp and clamp loader confer processivity.
+  nodes:
+  - node_id: alpha_subunit
+    label: DNA polymerase III alpha subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: alpha_subunit
+  - node_id: epsilon_subunit
+    label: DNA polymerase III epsilon subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: epsilon_subunit
+  - node_id: theta_subunit
+    label: DNA polymerase III theta subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: theta_subunit
+  - node_id: pol_iii_core
+    label: DNA polymerase III, core complex
+    node_type: STRUCTURE
+    grounding: GO:0044776
+  - node_id: dna_polymerase_activity
+    label: DNA-directed DNA polymerase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003887
+  - node_id: proofreading_activity
+    label: 3'-5' exonuclease proofreading activity
+    node_type: MOLECULAR_FUNCTION
+  edges:
+  - subject: alpha_subunit
+    predicate: assembles into
+    object: pol_iii_core
+    description: The alpha subunit is one of the named Pol III core subunits.
+    evidence:
+    - reference: GO:0044776
+      notes: GO:0044776 includes the alpha subunit in the DNA polymerase III core.
+  - subject: epsilon_subunit
+    predicate: assembles into
+    object: pol_iii_core
+    description: The epsilon subunit is one of the named Pol III core subunits.
+    evidence:
+    - reference: GO:0044776
+      notes: GO:0044776 includes the epsilon subunit in the DNA polymerase III core.
+  - subject: theta_subunit
+    predicate: assembles into
+    object: pol_iii_core
+    description: The theta subunit is one of the named Pol III core subunits.
+    evidence:
+    - reference: GO:0044776
+      notes: GO:0044776 includes the theta subunit in the DNA polymerase III core.
+  - subject: pol_iii_core
+    predicate: enables
+    object: dna_polymerase_activity
+    description: The Pol III core is the holoenzyme subcomplex carrying DNA polymerase
+      activity.
+    evidence:
+    - reference: PMID:3283127
+      notes: Maki and Kornberg 1988 reported that the core possesses polymerase activity.
+    - reference: GO:0003887
+      notes: GO:0003887 defines DNA-directed DNA polymerase activity.
+  - subject: pol_iii_core
+    predicate: enables
+    object: proofreading_activity
+    description: The Pol III core is the holoenzyme subcomplex carrying 3'-5' exonuclease
+      proofreading activity.
+    evidence:
+    - reference: GO:0044776
+      notes: GO:0044776 defines the core as carrying out 3'-5' exonuclease proofreading
+        activities.
+    - reference: PMID:3283127
+      notes: Maki and Kornberg 1988 reported that the core possesses proofreading
+        activity.
+discussions:
+- discussion_id: resolve_pol_iii_core_subunit_groundings
+  prompt: Resolve exact source-neutral DnaE, DnaQ and HolE family groundings for DNA
+    polymerase III core components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#alpha_subunit
+  - components#epsilon_subunit
+  - components#theta_subunit
+  - causal_graphs#pol_iii_core_catalysis
+  rationale: This first GO:0044776 split captures the E. coli alpha, epsilon and theta
+    subunits named by GO and Maki/Kornberg while leaving exact source-neutral protein-family
+    grounding and gram-positive PolC-versus-DnaE boundaries to a later pass.
+  evidence:
+  - reference: GO:0044776
+  - reference: PMID:3283127
+  posed_by: codex
+  posed_date: '2026-09-28'
