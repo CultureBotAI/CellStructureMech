@@ -958,14 +958,14 @@
           "cosine_similarity": 0.63856378
         },
         {
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.63650758
+        },
+        {
           "identifier": "GO:0044096",
           "label": "type IV pilus",
           "cosine_similarity": 0.63622958
-        },
-        {
-          "identifier": "GO:0005933",
-          "label": "cellular bud",
-          "cosine_similarity": 0.63074725
         }
       ]
     },
@@ -2544,9 +2544,40 @@
           "cosine_similarity": 0.72470388
         },
         {
-          "identifier": "GO:0000133",
-          "label": "polarisome",
-          "cosine_similarity": 0.70210381
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.70308313
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0032162",
+      "label": "mating projection septin band",
+      "neighbors": [
+        {
+          "identifier": "GO:0032175",
+          "label": "mating projection septin ring",
+          "cosine_similarity": 0.91068626
+        },
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.86086984
+        },
+        {
+          "identifier": "GO:0036286",
+          "label": "eisosome filament",
+          "cosine_similarity": 0.72436953
+        },
+        {
+          "identifier": "GO:0030479",
+          "label": "actin cortical patch",
+          "cosine_similarity": 0.71986902
+        },
+        {
+          "identifier": "GO:0043332",
+          "label": "mating projection tip",
+          "cosine_similarity": 0.70824084
         }
       ]
     },
@@ -2554,6 +2585,11 @@
       "identifier": "GO:0032175",
       "label": "mating projection septin ring",
       "neighbors": [
+        {
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.91068626
+        },
         {
           "identifier": "GO:0005940",
           "label": "septin ring",
@@ -2573,11 +2609,6 @@
           "identifier": "GO:0020031",
           "label": "polar ring of apical complex",
           "cosine_similarity": 0.66459471
-        },
-        {
-          "identifier": "GO:1990819",
-          "label": "mating projection actin fusion focus",
-          "cosine_similarity": 0.66353658
         }
       ]
     },
@@ -2865,6 +2896,11 @@
       "label": "septin ring",
       "neighbors": [
         {
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.86086984
+        },
+        {
           "identifier": "GO:0032175",
           "label": "mating projection septin ring",
           "cosine_similarity": 0.85152624
@@ -2883,11 +2919,6 @@
           "identifier": "GO:0005938",
           "label": "cell cortex",
           "cosine_similarity": 0.73388092
-        },
-        {
-          "identifier": "GO:0030479",
-          "label": "actin cortical patch",
-          "cosine_similarity": 0.71678243
         }
       ]
     },
