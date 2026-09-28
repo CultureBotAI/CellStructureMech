@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+  slug: mating_projection_septin_band
+session:
+  id: 2026-09-28T174252Z-claude-code-09339e
+  timestamp: '2026-09-28T17:42:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1734
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1733
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - discussions
+  summary: Added the septin protein grounding review TODO
+  details: 'Addressed PR #1733 adversarial review issue #1734 by adding an OPEN CURATION_TODO
+    discussion attached to components#septin_proteins, documenting that the septin-protein
+    cohort is intentionally REVIEWED_LABEL_ONLY until an exact source-neutral InterPro, Pfam,
+    or NCBIfam grounding is resolved.'

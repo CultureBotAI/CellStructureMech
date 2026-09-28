@@ -21,6 +21,12 @@ curation_history:
     a shmoo-neck scaffold function, DOI/GO evidence, a nonmechanistic shmoo-neck band
     topology graph, and a resolved ring-versus-band interpretation.
   llm_assisted: true
+- timestamp: '2026-09-28T17:42:25Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: 'Added an open CURATION_TODO discussion for the reviewed-label-only septin
+    proteins component, addressing issue #1734.'
+  llm_assisted: true
 parent_structures:
 - GO:0032156
 part_of:
@@ -152,3 +158,23 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-28'
   resolved_date: '2026-09-28'
+- discussion_id: resolve_septin_protein_cohort_grounding
+  prompt: Resolve an exact source-neutral grounding for the grouped septin proteins
+    component, if one exists.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: GO:0032162 supports septins as structural constituents of the shmoo-neck
+    band, but septins are a multi-paralog family and this record deliberately avoids
+    guessing one InterPro, Pfam, or NCBIfam accession for the complete fungal septin
+    cohort.
+  evidence:
+  - reference: GO:0032162
+    notes: GO:0032162 defines the mating projection septin band as a diffuse ring
+      composed of septin bars at the shmoo neck.
+  - reference: DOI:10.1083/jcb.143.3.719
+    notes: Longtine et al. 1998 visualized septin localization in pheromone-treated
+      Saccharomyces cells.
+  posed_by: codex
+  posed_date: '2026-09-28'
