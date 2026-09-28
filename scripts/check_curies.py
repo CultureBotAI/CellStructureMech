@@ -240,8 +240,9 @@ def resolve_interpro(curies: list[str]) -> dict[str, tuple[str, str]]:
         status, body = _get(f"https://www.ebi.ac.uk/interpro/api/entry/interpro/{acc}")
         # InterPro answers an unknown accession with 204 No Content, not 404, so
         # a resolver keyed on 404 calls it a transport failure and lets it
-        # through. The control caught this (#82).
-        if status in (204, 404) or (status == 200 and not body.strip()):
+        # through. The control caught this (#82). The EBI edge can emit false
+        # 404s for existing accessions, so 404 is a transport failure here.
+        if status == 204 or (status == 200 and not body.strip()):
             out[curie] = ("NOT_FOUND", "no such InterPro entry")
         elif status != 200:
             out[curie] = ("UNREACHABLE", f"InterPro returned {status}")

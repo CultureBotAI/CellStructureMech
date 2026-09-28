@@ -58,6 +58,13 @@ def test_interpro_treats_204_as_absent(monkeypatch):
     assert cc.resolve_interpro(["InterPro:IPR999999"])["InterPro:IPR999999"][0] == "NOT_FOUND"
 
 
+def test_interpro_treats_404_as_unreachable(monkeypatch):
+    """InterPro can emit a false 404 for an accession that normally resolves."""
+    monkeypatch.setattr(cc, "_get", lambda url, timeout=30.0: (404, b""))
+
+    assert cc.resolve_interpro(["InterPro:IPR001119"])["InterPro:IPR001119"][0] == "UNREACHABLE"
+
+
 def test_complex_portal_requires_an_exact_accession_match(monkeypatch):
     """The search endpoint returns near matches; only complexAC equality counts."""
     payload = json.dumps({"elements": [{"complexAC": "CPX-2244", "complexName": "other"}]}).encode()
