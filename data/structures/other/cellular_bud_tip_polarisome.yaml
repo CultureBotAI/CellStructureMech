@@ -20,6 +20,12 @@ curation_history:
     morphogenesis function, a nonmechanistic 12S polarisome topology graph, and grounding
     and component-boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-28T19:57:58Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1738 by renaming the Bud6/Aip3 component and graph node from
+    an actin nucleation-promoting factor to an actin-associated polarity protein.'
+  llm_assisted: true
 parent_structures:
 - GO:0000133
 part_of:
@@ -46,8 +52,8 @@ components:
   - reference: DOI:10.1128/MCB.18.7.4053
     notes: Sheu et al. 1998 found that Spa2 interacts with Pea2 in two-hybrid and
       coimmunoprecipitation experiments.
-- component_id: bud6_actin_nucleation_factor
-  label: Bud6/Aip3 actin nucleation-promoting factor
+- component_id: bud6_actin_associated_polarity_protein
+  label: Bud6/Aip3 actin-associated polarity protein
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: CONDITIONAL
@@ -119,10 +125,10 @@ causal_graphs:
     label: Spa2/Pea2 polarisome scaffold
     node_type: GENE_OR_PROTEIN
     component_ref: spa2_pea2_scaffold
-  - node_id: bud6_actin_nucleation_factor
-    label: Bud6/Aip3 actin nucleation-promoting factor
+  - node_id: bud6_actin_associated_polarity_protein
+    label: Bud6/Aip3 actin-associated polarity protein
     node_type: GENE_OR_PROTEIN
-    component_ref: bud6_actin_nucleation_factor
+    component_ref: bud6_actin_associated_polarity_protein
   - node_id: cellular_bud_tip_polarisome
     label: cellular bud tip polarisome
     node_type: STRUCTURE
@@ -147,7 +153,7 @@ causal_graphs:
     - reference: DOI:10.1128/MCB.18.7.4053
       notes: Sheu et al. 1998 showed that Spa2 and Pea2 interact by two-hybrid analysis
         and coimmunoprecipitate in vivo.
-  - subject: bud6_actin_nucleation_factor
+  - subject: bud6_actin_associated_polarity_protein
     predicate: cosediments with
     object: spa2_pea2_scaffold
     description: Bud6/Aip3 cosediments with Spa2 and Pea2 in a 12S multiprotein polarisome
@@ -182,7 +188,7 @@ discussions:
   status: OPEN
   attaches_to:
   - components#spa2_pea2_scaffold
-  - components#bud6_actin_nucleation_factor
+  - components#bud6_actin_associated_polarity_protein
   rationale: This localized record deliberately reuses the reviewed-label-only Saccharomyces
     polarisome cohorts from the broader polarisome record instead of guessing InterPro,
     Pfam, NCBIfam, or UniProtKB family groundings whose broader homologous families
@@ -200,7 +206,7 @@ discussions:
   status: RESOLVED
   attaches_to:
   - components#spa2_pea2_scaffold
-  - components#bud6_actin_nucleation_factor
+  - components#bud6_actin_associated_polarity_protein
   - causal_graphs#bud_tip_12s_polarisome_topology
   rationale: GO:0000133 and later Saccharomyces polarisome studies implicate Bni1,
     Aip5, and other actin-assembly factors in the broader polarisome, but Sheu et
