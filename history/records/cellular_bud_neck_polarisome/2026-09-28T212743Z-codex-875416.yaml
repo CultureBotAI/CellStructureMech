@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellular_bud_neck_polarisome.yaml
+  slug: cellular_bud_neck_polarisome
+session:
+  id: 2026-09-28T212743Z-codex-875416
+  timestamp: '2026-09-28T21:27:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the cellular bud neck polarisome record
+  details: Created the GO:0031560 cellular bud neck polarisome record, grounded it under the
+    generic polarisome and GO cellular bud neck, curated a reviewed-label-only Saccharomyces
+    Spa2/Pea2 scaffold from Valtz and Herskowitz 1996 bud-neck localization evidence, and
+    recorded TODOs for unresolved family groundings and additional bud-neck component boundaries.

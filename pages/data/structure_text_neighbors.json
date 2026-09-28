@@ -11999,9 +11999,9 @@
           "cosine_similarity": 0.66729967
         },
         {
-          "identifier": "GO:0005938",
-          "label": "cell cortex",
-          "cosine_similarity": 0.66066482
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.66716865
         }
       ]
     },
@@ -12020,6 +12020,11 @@
           "cosine_similarity": 0.81415825
         },
         {
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.77536329
+        },
+        {
           "identifier": "GO:0005938",
           "label": "cell cortex",
           "cosine_similarity": 0.77139622
@@ -12028,11 +12033,37 @@
           "identifier": "GO:0033101",
           "label": "cellular bud membrane",
           "cosine_similarity": 0.76778664
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031560",
+      "label": "cellular bud neck polarisome",
+      "neighbors": [
+        {
+          "identifier": "GO:0031561",
+          "label": "cellular bud tip polarisome",
+          "cosine_similarity": 0.91692779
         },
         {
-          "identifier": "GO:0043332",
-          "label": "mating projection tip",
-          "cosine_similarity": 0.6979495
+          "identifier": "GO:0000133",
+          "label": "polarisome",
+          "cosine_similarity": 0.81850131
+        },
+        {
+          "identifier": "GO:0031563",
+          "label": "mating projection tip polarisome",
+          "cosine_similarity": 0.80013825
+        },
+        {
+          "identifier": "GO:0005935",
+          "label": "cellular bud neck",
+          "cosine_similarity": 0.77536329
+        },
+        {
+          "identifier": "GO:0000811",
+          "label": "GINS complex",
+          "cosine_similarity": 0.76329986
         }
       ]
     },
@@ -12072,6 +12103,11 @@
       "label": "cellular bud tip polarisome",
       "neighbors": [
         {
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.91692779
+        },
+        {
           "identifier": "GO:0000133",
           "label": "polarisome",
           "cosine_similarity": 0.90187302
@@ -12090,11 +12126,6 @@
           "identifier": "GO:0005934",
           "label": "cellular bud tip",
           "cosine_similarity": 0.7689065
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.76155418
         }
       ]
     },
@@ -12123,9 +12154,9 @@
           "cosine_similarity": 0.67052993
         },
         {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.6651775
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.66691493
         }
       ]
     },
@@ -13849,6 +13880,11 @@
           "cosine_similarity": 0.76391989
         },
         {
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.76329986
+        },
+        {
           "identifier": "GO:1990131",
           "label": "Gtr1-Gtr2 GTPase complex",
           "cosine_similarity": 0.7602276
@@ -13857,11 +13893,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.75176671
-        },
-        {
-          "identifier": "GO:0008622",
-          "label": "epsilon DNA polymerase complex",
-          "cosine_similarity": 0.7456394
         }
       ]
     },
@@ -14076,9 +14107,9 @@
           "cosine_similarity": 0.73131013
         },
         {
-          "identifier": "GO:0043332",
-          "label": "mating projection tip",
-          "cosine_similarity": 0.70424878
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.70652029
         }
       ]
     },
@@ -14319,14 +14350,14 @@
           "cosine_similarity": 0.80657573
         },
         {
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.80013825
+        },
+        {
           "identifier": "GO:0031562",
           "label": "hyphal tip polarisome",
           "cosine_similarity": 0.73131013
-        },
-        {
-          "identifier": "GO:0033551",
-          "label": "monopolin complex",
-          "cosine_similarity": 0.69859496
         }
       ]
     },
@@ -15802,6 +15833,11 @@
           "cosine_similarity": 0.87337834
         },
         {
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.81850131
+        },
+        {
           "identifier": "GO:0031562",
           "label": "hyphal tip polarisome",
           "cosine_similarity": 0.76808253
@@ -15810,11 +15846,6 @@
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
           "cosine_similarity": 0.73511698
-        },
-        {
-          "identifier": "GO:0033551",
-          "label": "monopolin complex",
-          "cosine_similarity": 0.7243697
         }
       ]
     },
