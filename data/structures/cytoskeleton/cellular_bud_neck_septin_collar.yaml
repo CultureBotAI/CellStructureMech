@@ -1,0 +1,194 @@
+identifier: GO:0032174
+label: cellular bud neck septin collar
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A tubular structure with flared ends, shaped like an hourglass and composed
+  of highly ordered arrays of septin filaments, that forms at the bud neck of a dividing
+  cell. In S. cerevisiae, this structure is located at the bud neck throughout most
+  of the cell cycle and the septins are fixed within the structure, not exchanging
+  with soluble septins. This septin structure acts as a scaffold for other proteins
+  that function at the bud neck.
+definition_source: GO:0032174
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T22:07:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T22:08:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-collar parentage, bud-neck parthood, a label-only septin constituent,
+    Saccharomyces distribution and canonical example evidence, a bud-neck scaffold
+    function, a nonmechanistic ring-to-collar topology graph, and collar-boundary
+    and grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-28T22:24:40Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1744 by broadening the bud-neck scaffold function beyond cytokinesis
+    while preserving the ring/collar/split-ring boundary.'
+  llm_assisted: true
+parent_structures:
+- GO:0032173
+part_of:
+- GO:0005935
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Saccharomyces bud-neck septin collar is assembled from multiple
+    paralogous septin GTPases; no exact source-neutral protein-family CURIE was assigned
+    for the complete collar-forming fungal septin cohort.
+  role: Septin GTPases that form the hourglass-shaped, ordered filament collar at
+    the Saccharomyces mother-bud neck.
+  evidence:
+  - reference: GO:0032174
+    notes: GO:0032174 defines the cellular bud neck septin collar as an hourglass-shaped
+      array of septin filaments at the bud neck.
+  - reference: DOI:10.1016/j.tcb.2005.06.007
+    notes: Versele and Thorner 2005 reviewed budding-yeast septin filament polymerization
+      as required for septin-collar assembly.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast cells reorganize the initial septin ring into an hourglass-shaped
+    septin collar at the mother-bud neck after budding.
+  reference: DOI:10.1091/mbc.E04-09-0764
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Bni4 and Kcc4 reporters were used to follow asymmetry
+    of proteins associated with the septin ring and the mother-bud-neck septin collar.
+  reference: DOI:10.1091/mbc.E04-09-0764
+functions:
+- function_id: bud_neck_scaffold
+  label: bud-neck scaffold
+  description: The cellular bud neck septin collar acts as an hourglass-shaped septin
+    scaffold that organizes proteins functioning at the Saccharomyces mother-bud neck.
+  evidence:
+  - reference: GO:0032174
+    notes: GO:0032174 defines the collar as a Saccharomyces bud-neck septin structure
+      that scaffolds other proteins functioning at the bud neck.
+  - reference: DOI:10.1091/mbc.E04-09-0764
+    notes: Kozubowski et al. 2005 tracked asymmetric Bni4 and Kcc4 localization relative
+      to the septin ring and collar in Saccharomyces cerevisiae.
+evidence:
+- reference: GO:0032174
+  notes: Gene Ontology cellular-component term for the cellular bud neck septin collar.
+- reference: GO:0032173
+  notes: Gene Ontology cellular-component parent term for septin collar.
+- reference: GO:0005935
+  notes: Gene Ontology cellular-component term for the cellular bud neck.
+- reference: DOI:10.1091/mbc.E04-09-0764
+  notes: Kozubowski, Larson and Tatchell 2005, 'Role of the Septin Ring in the Asymmetric
+    Localization of Proteins at the Mother-Bud Neck in Saccharomyces cerevisiae',
+    Molecular Biology of the Cell.
+- reference: DOI:10.1016/j.tcb.2005.06.007
+  notes: 'Versele and Thorner 2005, ''Some assembly required: yeast septins provide
+    the instruction manual'', Trends in Cell Biology.'
+causal_graphs:
+- graph_id: bud_neck_septin_collar_topology
+  title: Bud-neck septin collar topology
+  description: Septin proteins reorganize from an initial ring into an hourglass-shaped
+    collar at the Saccharomyces mother-bud neck.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the ring-to-collar transition and collar placement
+    at the bud neck without asserting the full order of septin recruitment, collar
+    maturation, or cytokinetic split-ring formation.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: cellular_bud_neck_septin_ring
+    label: cellular bud neck septin ring
+    node_type: STRUCTURE
+    grounding: GO:0000144
+  - node_id: cellular_bud_neck_septin_collar
+    label: cellular bud neck septin collar
+    node_type: STRUCTURE
+    grounding: GO:0032174
+  - node_id: cellular_bud_neck
+    label: cellular bud neck
+    node_type: STRUCTURE
+    grounding: GO:0005935
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: cellular_bud_neck_septin_collar
+    description: Septin filaments form the highly ordered hourglass-shaped collar
+      at the mother-bud neck.
+    evidence:
+    - reference: GO:0032174
+      notes: GO:0032174 defines the collar as an hourglass-shaped array of septin
+        filaments.
+  - subject: cellular_bud_neck_septin_ring
+    predicate: rearranges into
+    object: cellular_bud_neck_septin_collar
+    description: The initial septin ring at the future budding site rearranges into
+      the mother-bud-neck collar after budding.
+    evidence:
+    - reference: DOI:10.1091/mbc.E04-09-0764
+      notes: Kozubowski et al. 2005 describe the Saccharomyces septin ring at the
+        future budding site as rearranging into a collar at the mother-bud neck.
+  - subject: cellular_bud_neck_septin_collar
+    predicate: is part of
+    object: cellular_bud_neck
+    description: The cellular bud neck septin collar is located at the bud neck of
+      a dividing budding-yeast cell.
+    evidence:
+    - reference: GO:0032174
+      notes: GO:0032174 places the septin collar at the bud neck of a dividing cell.
+    - reference: GO:0005935
+      notes: GO:0005935 identifies the cellular bud neck.
+discussions:
+- discussion_id: bud_neck_septin_collar_boundary
+  prompt: Keep the cellular bud neck septin collar distinct from the initial bud-neck
+    septin ring and the cytokinetic split septin rings.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - causal_graphs#bud_neck_septin_collar_topology
+  rationale: GO:0000144 denotes the initial ring at the future bud site, GO:0032174
+    denotes the hourglass-shaped collar that forms at the bud neck for most of the
+    cell cycle, and GO:0032177 denotes the two split rings formed from the collar
+    at cytokinesis. This record models only the intervening collar state.
+  resolution_note: Curated GO:0032174 as a bud-neck septin-collar record and used
+    GO:0000144 only as a topology node for the preceding ring.
+  evidence:
+  - reference: GO:0000144
+    notes: GO:0000144 identifies the dynamic cellular bud neck septin ring that forms
+      at the time of bud emergence.
+  - reference: GO:0032174
+    notes: GO:0032174 identifies the fixed hourglass-shaped cellular bud neck septin
+      collar.
+  - reference: GO:0032177
+    notes: GO:0032177 identifies the pair of split septin rings that form from the
+      collar at cytokinesis.
+  posed_by: codex
+  posed_date: '2026-09-28'
+  resolved_date: '2026-09-28'
+- discussion_id: resolve_bud_neck_collar_septin_groundings
+  prompt: Resolve exact source-neutral family groundings for the bud-neck septin-collar
+    septin proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The first localized collar record reuses the reviewed-label-only septin
+    protein cohort from the broader septin-ring records rather than guessing InterPro,
+    Pfam, or NCBIfam accessions that may not exactly delimit the complete fungal bud-neck
+    collar.
+  evidence:
+  - reference: GO:0032174
+    notes: GO:0032174 defines the collar as composed of ordered septin filaments.
+  posed_by: codex
+  posed_date: '2026-09-28'
