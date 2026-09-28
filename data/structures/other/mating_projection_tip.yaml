@@ -20,6 +20,12 @@ curation_history:
     DOI evidence, a nonmechanistic tip-localized-structure graph, and a localized
     machinery boundary decision.
   llm_assisted: true
+- timestamp: '2026-09-28T14:32:58Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1728 by switching the Saccharomyces projection-tip localization
+    claims to direct Read et al. Spa2p tip evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: shmoo tip
   synonym_type: NARROW_SYNONYM
@@ -37,9 +43,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: VARIABLE
-  note: Haploid budding-yeast cells treated with mating pheromone form polarized projection
-    tips during mating response cycles.
-  reference: DOI:10.1083/jcb.200307065
+  note: Haploid budding-yeast cells extend Spa2-positive projection tips during pheromone-induced
+    mating projection formation.
+  reference: DOI:10.1091/mbc.3.4.429
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe
   presence: VARIABLE
@@ -49,9 +55,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model in which Spa2, Pea2, and Bni1 polarisome components regulate
-    mating-projection growth.
-  reference: DOI:10.1083/jcb.200307065
+  note: Budding-yeast model in which Spa2p segregates to mating projection tips in
+    an actin-dependent projection-forming response.
+  reference: DOI:10.1091/mbc.3.4.429
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe
   note: Fission-yeast model in which the actin fusion focus forms from formin-nucleated
@@ -74,6 +80,9 @@ functions:
   - reference: DOI:10.1083/jcb.201411124
     notes: Dudin et al. 2015 connected the fission-yeast actin fusion focus with local
       cell-wall dissolution during cell fusion.
+  - reference: DOI:10.1091/mbc.3.4.429
+    notes: Read et al. 1992 tracked Spa2p segregation to Saccharomyces cerevisiae
+      projection tips during mating projection formation.
 evidence:
 - reference: GO:0043332
   notes: Gene Ontology cellular-component term for the mating projection tip.
@@ -93,6 +102,9 @@ evidence:
 - reference: DOI:10.1083/jcb.201411124
   notes: Dudin et al. 2015, 'A formin-nucleated actin aster concentrates cell wall
     hydrolases for cell fusion in fission yeast', Journal of Cell Biology.
+- reference: DOI:10.1091/mbc.3.4.429
+  notes: Read et al. 1992, 'Actin- and tubulin-dependent functions during Saccharomyces
+    cerevisiae mating projection formation', Molecular Biology of the Cell.
 causal_graphs:
 - graph_id: mating_projection_tip_localized_structures
   title: Mating-projection tip localized structures
@@ -152,9 +164,9 @@ causal_graphs:
     - reference: GO:0031563
       notes: GO:0031563 identifies the polarisome localized to the mating projection
         tip.
-    - reference: DOI:10.1083/jcb.200307065
-      notes: Bidlingmaier and Snyder 2004 studied Spa2, Pea2, and Bni1 polarisome
-        components in yeast mating projections.
+    - reference: DOI:10.1091/mbc.3.4.429
+      notes: Read et al. 1992 observed Spa2p segregation to mating projection tips
+        in Saccharomyces cerevisiae.
   - subject: actin_fusion_focus
     predicate: is part of
     object: mating_projection_tip

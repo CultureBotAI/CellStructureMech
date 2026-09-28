@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mating_projection_tip.yaml
+  slug: mating_projection_tip
+session:
+  id: 2026-09-28T143342Z-claude-code-aa3051
+  timestamp: '2026-09-28T14:33:42Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1728
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1727
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - distribution
+  - functions
+  - causal_graphs
+  summary: Use direct Spa2 projection-tip evidence
+  details: 'Addressed PR #1727 review issue #1728 by changing the Saccharomyces mating-projection-tip
+    taxonomic distribution, canonical example, polarized-growth-site function, and tip-polarisome
+    graph edge to cite Read et al. 1992 DOI:10.1091/mbc.3.4.429 as direct Spa2p projection-tip
+    localization evidence.'
