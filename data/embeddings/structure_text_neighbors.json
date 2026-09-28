@@ -12223,6 +12223,37 @@
       ]
     },
     {
+      "identifier": "GO:0071920",
+      "label": "cleavage body",
+      "neighbors": [
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.73914981
+        },
+        {
+          "identifier": "GO:0015030",
+          "label": "Cajal body",
+          "cosine_similarity": 0.69093841
+        },
+        {
+          "identifier": "GO:0016605",
+          "label": "PML body",
+          "cosine_similarity": 0.67425354
+        },
+        {
+          "identifier": "GO:0031533",
+          "label": "mRNA capping enzyme complex",
+          "cosine_similarity": 0.66213962
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.63633638
+        }
+      ]
+    },
+    {
       "identifier": "GO:0071162",
       "label": "CMG complex",
       "neighbors": [
@@ -15234,6 +15265,11 @@
       "label": "PML body",
       "neighbors": [
         {
+          "identifier": "GO:0071920",
+          "label": "cleavage body",
+          "cosine_similarity": 0.67425354
+        },
+        {
           "identifier": "GO:0000932",
           "label": "P-body",
           "cosine_similarity": 0.65459135
@@ -15252,11 +15288,6 @@
           "identifier": "GO:0097356",
           "label": "perinucleolar compartment",
           "cosine_similarity": 0.61872195
-        },
-        {
-          "identifier": "GO:0035363",
-          "label": "histone locus body",
-          "cosine_similarity": 0.61743889
         }
       ]
     },
@@ -17528,6 +17559,11 @@
       "label": "P-body",
       "neighbors": [
         {
+          "identifier": "GO:0071920",
+          "label": "cleavage body",
+          "cosine_similarity": 0.73914981
+        },
+        {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.72539438
@@ -17546,11 +17582,6 @@
           "identifier": "GO:0030681",
           "label": "multimeric ribonuclease P complex",
           "cosine_similarity": 0.71887224
-        },
-        {
-          "identifier": "GO:0000177",
-          "label": "cytoplasmic exosome (RNase complex)",
-          "cosine_similarity": 0.7148273
         }
       ]
     },

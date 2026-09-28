@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cleavage_body.yaml
+  slug: cleavage_body
+session:
+  id: 2026-09-28T035441Z-codex-235c0f
+  timestamp: '2026-09-28T03:54:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1701
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1700
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add cleavage body record
+  details: Created GO:0071920 cleavage body as a GO-grounded nuclear body record after a hidden
+    and ignored file-inclusive duplicate search for the GO CURIE, label variants, primary DOIs
+    and PMIDs. Added nuclear-body parentage, nuclear-lumen parthood, CstF-64 and CPSF-100 as
+    label-only constituents, human cleavage-body scope, mRNA 3'-end-processing context, DOI/PMID/GO
+    evidence, a nonmechanistic CstF/CPSF positioning graph, and an open boundary TODO for DDX1
+    bodies and other neighboring factors. Validated the new record with targeted LinkML and
+    strict validation.
