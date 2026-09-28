@@ -1,0 +1,203 @@
+identifier: GO:0044775
+label: DNA polymerase III, beta sliding clamp processivity factor complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A subcomplex of the DNA polymerase III holoenzyme which is responsible
+  for tethering the catalytic subunit of DNA polymerase to DNA during high-speed replication.
+  The complex is homodimeric in prokaryotes, and homotrimeric in other species.
+definition_source: GO:0044775
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T10:08:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T10:09:06Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added protein-containing-complex parentage, DNA polymerase III holoenzyme
+    parthood, a label-only dnaN beta-subunit component, an E. coli canonical example,
+    DNA-replication function evidence, GO/PubMed evidence, a nonmechanistic beta-clamp
+    graph, and a DnaN-grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-28T10:11:18Z'
+  curator: codex
+  action: ADD_PROTEIN_EXAMPLE
+  changes: Added reviewed UniProtKB:P0A988 as the taxon-specific E. coli K-12 DnaN
+    beta-clamp example and cited it for the component gene symbol.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0009360
+components:
+- component_id: dnaN_beta_subunit
+  label: DNA polymerase III beta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaN
+  stoichiometry: two copies per prokaryotic clamp ring
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Escherichia coli beta sliding-clamp constituent is represented
+    by the beta-subunit label and dnaN gene symbol, with reviewed UniProtKB:P0A988
+    added as a taxon-specific example; no exact source-neutral InterPro, Pfam, or
+    NCBIfam family was assigned for this first DNA polymerase III beta-clamp split.
+  role: Ring-forming beta subunit that dimerizes to make the prokaryotic DNA polymerase
+    III sliding clamp.
+  evidence:
+  - reference: GO:0044775
+    notes: GO:0044775 defines the beta sliding-clamp processivity factor complex as
+      homodimeric in prokaryotes.
+  - reference: PMID:1349852
+    notes: Kong et al. 1992 solved the E. coli DNA polymerase III beta subunit crystal
+      structure and described a beta-subunit dimer forming a ring-shaped structure
+      that can encircle duplex DNA.
+  - reference: UniProtKB:P0A988
+    notes: UniProtKB P0A988 is the reviewed Escherichia coli K-12 dnaN entry for the
+      beta sliding clamp.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A988
+    protein_label: Beta sliding clamp
+    gene_symbol: dnaN
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-28'
+    role: Reviewed E. coli K-12 DnaN accession for the DNA polymerase III beta sliding-clamp
+      subunit.
+    evidence:
+    - reference: UniProtKB:P0A988
+      notes: UniProtKB P0A988 is the reviewed Escherichia coli K-12 dnaN entry for
+        the beta sliding clamp.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Species source for the DNA polymerase III beta-subunit crystal structure used
+    to establish the ring-shaped beta sliding clamp.
+  reference: PMID:1349852
+functions:
+- function_id: dna_replication_processivity
+  label: DNA replication
+  grounding: GO:0006260
+  description: The DNA polymerase III beta clamp supports processive DNA replication
+    by tethering the Pol III catalytic core to DNA.
+  evidence:
+  - reference: GO:0044775
+    notes: GO:0044775 defines the beta sliding-clamp complex by its responsibility
+      for tethering the catalytic subunit of DNA polymerase to DNA during high-speed
+      replication.
+  - reference: GO:0006260
+    notes: GO:0006260 is the Gene Ontology biological-process term for DNA replication.
+evidence:
+- reference: GO:0044775
+  notes: Gene Ontology cellular-component term for the DNA polymerase III beta sliding-clamp
+    processivity factor complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0009360
+  notes: Gene Ontology cellular-component term for the DNA polymerase III holoenzyme
+    complex that contains the beta sliding clamp.
+- reference: GO:0044776
+  notes: Gene Ontology cellular-component term for the Pol III core that is tethered
+    by the beta sliding clamp.
+- reference: GO:0006260
+  notes: Gene Ontology biological-process term for DNA replication.
+- reference: PMID:1349852
+  notes: 'PubMed identifier for Kong, Onrust, O''Donnell and Kuriyan 1992, Three-dimensional
+    structure of the beta subunit of E. coli DNA polymerase III holoenzyme: a sliding
+    DNA clamp.'
+- reference: DOI:10.1016/0092-8674(92)90445-i
+  notes: DOI for Kong et al. 1992 as reported by PubMed.
+- reference: UniProtKB:P0A988
+  notes: Reviewed UniProtKB accession for the Escherichia coli K-12 DnaN beta sliding-clamp
+    protein example.
+causal_graphs:
+- graph_id: beta_clamp_processivity
+  title: Beta sliding clamp tethers DNA polymerase III to DNA
+  description: The DnaN beta subunit dimer forms the beta sliding clamp that encircles
+    duplex DNA and tethers the Pol III core during processive DNA replication.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures beta-subunit membership and GO-level clamp tethering
+    without modelling ring opening, ATP-dependent clamp loading, or leading- versus
+    lagging-strand polymerase cycling.
+  nodes:
+  - node_id: dnaN_beta_subunit
+    label: DNA polymerase III beta subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnaN_beta_subunit
+  - node_id: beta_sliding_clamp
+    label: DNA polymerase III, beta sliding clamp processivity factor complex
+    node_type: STRUCTURE
+    grounding: GO:0044775
+  - node_id: pol_iii_core
+    label: DNA polymerase III, core complex
+    node_type: STRUCTURE
+    grounding: GO:0044776
+  - node_id: duplex_dna
+    label: duplex DNA
+    node_type: GENETIC_ELEMENT
+  - node_id: dna_replication
+    label: DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: dnaN_beta_subunit
+    predicate: is part of
+    object: beta_sliding_clamp
+    description: The E. coli DNA polymerase III beta subunit is the repeated constituent
+      of the beta sliding-clamp ring.
+    evidence:
+    - reference: PMID:1349852
+      notes: Kong et al. 1992 reported that a dimer of the E. coli beta subunit forms
+        a ring-shaped structure.
+    - reference: GO:0044775
+      notes: GO:0044775 defines the beta sliding-clamp complex as homodimeric in prokaryotes.
+  - subject: beta_sliding_clamp
+    predicate: encircles
+    object: duplex_dna
+    description: The beta sliding-clamp ring can encircle duplex DNA.
+    evidence:
+    - reference: PMID:1349852
+      notes: The E. coli beta-subunit dimer crystal structure forms a ring lined by
+        alpha helices that can encircle duplex DNA.
+  - subject: beta_sliding_clamp
+    predicate: tethers
+    object: pol_iii_core
+    description: The beta sliding-clamp processivity factor tethers the DNA polymerase
+      III catalytic core to DNA.
+    evidence:
+    - reference: GO:0044775
+      notes: GO:0044775 defines the beta sliding-clamp complex by its responsibility
+        for tethering the catalytic subunit of DNA polymerase to DNA.
+  - subject: beta_sliding_clamp
+    predicate: supports
+    object: dna_replication
+    description: The beta sliding clamp supports high-speed, processive DNA replication
+      by the Pol III holoenzyme.
+    evidence:
+    - reference: GO:0044775
+      notes: GO:0044775 places the beta sliding clamp within the DNA polymerase III
+        holoenzyme during high-speed DNA replication.
+    - reference: GO:0006260
+      notes: GO:0006260 defines the DNA replication biological process.
+discussions:
+- discussion_id: resolve_pol_iii_beta_clamp_grounding
+  prompt: Resolve exact source-neutral DnaN/beta sliding-clamp family grounding for
+    the DNA polymerase III beta-clamp component.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnaN_beta_subunit
+  - causal_graphs#beta_clamp_processivity
+  rationale: This first GO:0044775 split captures the E. coli beta subunit and dnaN
+    gene named in beta-clamp literature while leaving exact source-neutral protein-family
+    grounding to a later pass.
+  evidence:
+  - reference: GO:0044775
+  - reference: PMID:1349852
+  posed_by: codex
+  posed_date: '2026-09-28'
