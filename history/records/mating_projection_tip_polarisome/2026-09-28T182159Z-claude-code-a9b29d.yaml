@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mating_projection_tip_polarisome.yaml
+  slug: mating_projection_tip_polarisome
+session:
+  id: 2026-09-28T182159Z-claude-code-a9b29d
+  timestamp: '2026-09-28T18:21:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added the mating projection tip polarisome record
+  details: Created the GO:0031563 mating projection tip polarisome record, grounded it under
+    the generic polarisome and mating projection tip, curated reviewed-label-only Spa2/Pea2
+    and Bni1 constituents, Saccharomyces cerevisiae distribution and canonical-example evidence
+    from Bidlingmaier and Snyder 2004, a mating-projection growth-control function, GO/DOI
+    record evidence, a nonmechanistic shmoo-tip topology graph, an open component-grounding
+    TODO, and a resolved Cdc42/Fus protein boundary decision.

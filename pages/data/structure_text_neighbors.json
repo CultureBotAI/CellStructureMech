@@ -948,6 +948,11 @@
           "cosine_similarity": 0.85120193
         },
         {
+          "identifier": "GO:0031563",
+          "label": "mating projection tip polarisome",
+          "cosine_similarity": 0.70880973
+        },
+        {
           "identifier": "GO:0009289",
           "label": "pilus",
           "cosine_similarity": 0.6899603
@@ -961,11 +966,6 @@
           "identifier": "GO:0032162",
           "label": "mating projection septin band",
           "cosine_similarity": 0.63650758
-        },
-        {
-          "identifier": "GO:0044096",
-          "label": "type IV pilus",
-          "cosine_similarity": 0.63622958
         }
       ]
     },
@@ -14216,6 +14216,11 @@
           "cosine_similarity": 0.85120193
         },
         {
+          "identifier": "GO:0031563",
+          "label": "mating projection tip polarisome",
+          "cosine_similarity": 0.8167108
+        },
+        {
           "identifier": "GO:0005934",
           "label": "cellular bud tip",
           "cosine_similarity": 0.78551302
@@ -14229,11 +14234,37 @@
           "identifier": "GO:1990819",
           "label": "mating projection actin fusion focus",
           "cosine_similarity": 0.73365781
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031563",
+      "label": "mating projection tip polarisome",
+      "neighbors": [
+        {
+          "identifier": "GO:0000133",
+          "label": "polarisome",
+          "cosine_similarity": 0.84666418
         },
         {
-          "identifier": "GO:0005938",
-          "label": "cell cortex",
-          "cosine_similarity": 0.72282042
+          "identifier": "GO:0043332",
+          "label": "mating projection tip",
+          "cosine_similarity": 0.8167108
+        },
+        {
+          "identifier": "GO:0005937",
+          "label": "mating projection",
+          "cosine_similarity": 0.70880973
+        },
+        {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.69487544
+        },
+        {
+          "identifier": "GO:0033551",
+          "label": "monopolin complex",
+          "cosine_similarity": 0.69090547
         }
       ]
     },
@@ -15699,6 +15730,11 @@
       "label": "polarisome",
       "neighbors": [
         {
+          "identifier": "GO:0031563",
+          "label": "mating projection tip polarisome",
+          "cosine_similarity": 0.84666418
+        },
+        {
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
           "cosine_similarity": 0.73511698
@@ -15717,11 +15753,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.71937728
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.7142458
         }
       ]
     },

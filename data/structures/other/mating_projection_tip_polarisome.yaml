@@ -1,0 +1,222 @@
+identifier: GO:0031563
+label: mating projection tip polarisome
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Protein complex that has a role in determining cell polarity, found at
+  the tip of the mating projection in unicellular fungi exposed to mating pheromone.
+definition_source: GO:0031563
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T18:19:35Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T18:21:18Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added polarisome parentage, mating-projection-tip parthood, Spa2/Pea2 and
+    Bni1 constituents, Saccharomyces distribution and canonical example evidence,
+    a mating-projection growth function, a nonmechanistic shmoo-tip topology graph,
+    and grounding and boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-28T18:37:37Z'
+  curator: codex
+  action: FIXED_DISCUSSION_ANCHORS
+  changes: Replaced an unresolved bare components discussion anchor with the Spa2/Pea2
+    and Bni1 component anchors.
+  llm_assisted: true
+parent_structures:
+- GO:0000133
+part_of:
+- GO:0043332
+components:
+- component_id: spa2_pea2_scaffold
+  label: Spa2/Pea2 polarisome scaffold
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - SPA2
+  - PEA2
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Spa2 and Pea2 are curated as the Saccharomyces scaffold cohort
+    used to delimit mating-projection-tip polarisomes; no exact source-neutral family
+    CURIE was assigned for this fungal grouped component.
+  role: Scaffold proteins that localize to polarized-growth sites and support periodic
+    mating-projection growth.
+  evidence:
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 found Pea2 and Spa2 at sites of polarized growth
+      in budding and mating Saccharomyces cells.
+  - reference: DOI:10.1083/jcb.200307065
+    notes: Bidlingmaier and Snyder 2004 assayed Spa2 and Pea2 during pheromone-induced
+      mating-projection initiation and termination cycles.
+- component_id: bni1_formin
+  label: Bni1 formin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - BNI1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Bni1 is the Saccharomyces formin tested with Spa2 and Pea2 during
+    mating-projection growth; broader formin families include paralogs not delimited
+    to this localized polarisome.
+  role: Formin effector in the Spa2/Pea2 polarisome module that supports mating-projection
+    initiation.
+  evidence:
+  - reference: GO:0000133
+    notes: GO:0000133 names Bni1p as a Saccharomyces polarisome protein.
+  - reference: DOI:10.1083/jcb.200307065
+    notes: Bidlingmaier and Snyder 2004 tested Bni1 with Spa2 and Pea2 in pheromone-treated
+      budding yeast.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Budding-yeast polarisome proteins function at the mating-projection tip in
+    pheromone-treated haploid cells.
+  reference: DOI:10.1083/jcb.200307065
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Pheromone-treated budding-yeast model in which Spa2, Pea2, and Bni1 polarisome
+    proteins control mating projection initiation or termination timing.
+  reference: DOI:10.1083/jcb.200307065
+functions:
+- function_id: mating_projection_growth_control
+  label: mating-projection growth control
+  description: The shmoo-tip polarisome positions polarity machinery at the projection
+    apex and supports pheromone-induced projection initiation and termination cycles.
+  evidence:
+  - reference: GO:0031563
+    notes: GO:0031563 defines the mating projection tip polarisome by its role in
+      determining cell polarity at the projection tip.
+  - reference: DOI:10.1083/jcb.200307065
+    notes: Bidlingmaier and Snyder 2004 showed that Spa2, Pea2, and Bni1 regulate
+      periodic mating-projection formation.
+evidence:
+- reference: GO:0031563
+  notes: Gene Ontology cellular-component term for the mating projection tip polarisome.
+- reference: GO:0000133
+  notes: Gene Ontology cellular-component term for polarisome.
+- reference: GO:0043332
+  notes: Gene Ontology cellular-component term for the mating projection tip.
+- reference: DOI:10.1083/jcb.200307065
+  notes: Bidlingmaier and Snyder 2004, 'Regulation of polarized growth initiation
+    and termination cycles by the polarisome and Cdc42 regulators', Journal of Cell
+    Biology.
+- reference: DOI:10.1083/jcb.135.3.725
+  notes: Valtz and Herskowitz 1996, 'Pea2 protein of yeast is localized to sites of
+    polarized growth and is required for efficient mating and bipolar budding', Journal
+    of Cell Biology.
+causal_graphs:
+- graph_id: shmoo_tip_polarisome_topology
+  title: Shmoo-tip polarisome topology
+  description: Spa2/Pea2 scaffold and Bni1 formin proteins act in a polarisome at
+    the mating-projection tip during pheromone-induced polarized growth.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records component participation and tip localization for
+    the mating-projection-tip polarisome without asserting a full Cdc42 activation
+    or actin-polymerization pathway.
+  nodes:
+  - node_id: spa2_pea2_scaffold
+    label: Spa2/Pea2 polarisome scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: spa2_pea2_scaffold
+  - node_id: bni1_formin
+    label: Bni1 formin
+    node_type: GENE_OR_PROTEIN
+    component_ref: bni1_formin
+  - node_id: mating_projection_tip_polarisome
+    label: mating projection tip polarisome
+    node_type: STRUCTURE
+    grounding: GO:0031563
+  - node_id: mating_projection_tip
+    label: mating projection tip
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0043332
+  - node_id: mating_projection_formation
+    label: mating projection formation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031382
+  edges:
+  - subject: spa2_pea2_scaffold
+    predicate: localizes to
+    object: mating_projection_tip_polarisome
+    description: Spa2 and Pea2 localize to polarized-growth sites and act in the shmoo-tip
+      polarisome.
+    evidence:
+    - reference: DOI:10.1083/jcb.135.3.725
+      notes: Valtz and Herskowitz 1996 localized Pea2 and Spa2 to polarized-growth
+        sites in budding and mating cells.
+    - reference: DOI:10.1083/jcb.200307065
+      notes: Bidlingmaier and Snyder 2004 treated Spa2 and Pea2 as polarisome components
+        during mating-projection formation.
+  - subject: bni1_formin
+    predicate: supports
+    object: mating_projection_formation
+    description: Bni1 acts with Spa2 and Pea2 in the module that controls periodic
+      mating-projection initiation.
+    evidence:
+    - reference: DOI:10.1083/jcb.200307065
+      notes: Bidlingmaier and Snyder 2004 showed that Bni1, Spa2, and Pea2 regulate
+        mating-projection initiation timing.
+  - subject: mating_projection_tip_polarisome
+    predicate: localizes to
+    object: mating_projection_tip
+    description: The mating projection tip polarisome is found at the apex of the
+      pheromone-induced projection.
+    evidence:
+    - reference: GO:0031563
+      notes: GO:0031563 defines the polarisome as localized to the mating projection
+        tip.
+discussions:
+- discussion_id: resolve_shmoo_polarisome_family_groundings
+  prompt: Resolve exact source-neutral family groundings for Spa2/Pea2 and Bni1 at
+    the mating projection tip.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spa2_pea2_scaffold
+  - components#bni1_formin
+  rationale: This localized record deliberately reuses the reviewed-label-only Saccharomyces
+    polarisome cohorts from the broader polarisome record instead of guessing InterPro,
+    Pfam, NCBIfam, or UniProtKB family groundings for proteins whose broader homologous
+    families do not exactly delimit the mating-projection-tip complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 delimited the Spa2 and Pea2 cohort at polarized-growth
+      sites.
+  - reference: DOI:10.1083/jcb.200307065
+    notes: Bidlingmaier and Snyder 2004 tested Spa2, Pea2, and Bni1 in pheromone-treated
+      budding yeast.
+  posed_by: codex
+  posed_date: '2026-09-28'
+- discussion_id: cdc42_and_fus_proteins_outside_polarisome_boundary
+  prompt: Keep Cdc42 regulators and Fus1/Fus2 outside the mating-projection-tip polarisome
+    component boundary.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#spa2_pea2_scaffold
+  - components#bni1_formin
+  - causal_graphs#shmoo_tip_polarisome_topology
+  rationale: Bidlingmaier and Snyder 2004 assayed Cdc24, Bem3, Fus1, and Fus2 together
+    with polarisome mutants during mating-projection cycling, but the exact GO:0031563
+    structure denotes the localized polarisome complex rather than every Cdc42 regulator
+    or cell-fusion protein that affects projection initiation or termination.
+  resolution_note: Curated Spa2/Pea2 and Bni1 as constituents and left Cdc24, Bem3,
+    Fus1, and Fus2 as out-of-record pathway factors.
+  evidence:
+  - reference: GO:0031563
+    notes: GO:0031563 identifies the localized polarisome complex at the mating projection
+      tip.
+  - reference: DOI:10.1083/jcb.200307065
+    notes: Bidlingmaier and Snyder 2004 separated Cdc42 regulators and Fus proteins
+      from the Spa2, Pea2, and Bni1 polarisome component set.
+  posed_by: codex
+  posed_date: '2026-09-28'
+  resolved_date: '2026-09-28'
