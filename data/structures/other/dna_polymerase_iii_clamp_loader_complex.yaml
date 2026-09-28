@@ -27,6 +27,17 @@ curation_history:
   changes: Replaced GO-only delta and delta-prime graph edge evidence with the E.
     coli gamma-complex structure paper.
   llm_assisted: true
+- timestamp: '2026-09-28T11:05:33Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUES
+  changes: 'Fixed #1718 by scoping chi/psi graph evidence to GO:0043847 and fixed
+    #1719 by narrowing the canonical E. coli example note.'
+  llm_assisted: true
+- timestamp: '2026-09-28T11:20:20Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: 'Fixed #1720 by removing the shared YAML alias from chi/psi evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: DNA polymerase III, DnaX complex
   synonym_type: EXACT_SYNONYM
@@ -210,8 +221,7 @@ components:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: Source species for the solved gamma-complex structure and reviewed clamp-loader
-    protein examples.
+  note: Source species for the solved gamma-complex structure.
   reference: PMID:11525729
 functions:
 - function_id: dna_clamp_loading
@@ -353,18 +363,18 @@ causal_graphs:
     description: Chi subunit is a constituent of the DNA polymerase III clamp-loader
       complex.
     evidence:
-    - reference: GO:0043846
-      notes: GO:0043846 identifies the DnaX and chi/psi assemblies as parts of the
-        clamp loader.
+    - reference: GO:0043847
+      notes: GO:0043847 defines the clamp-loader chi/psi subcomplex as a dimer composed
+        of chi and psi.
   - subject: psi_subunit
     predicate: is part of
     object: clamp_loader
     description: Psi subunit is a constituent of the DNA polymerase III clamp-loader
       complex.
     evidence:
-    - reference: GO:0043846
-      notes: GO:0043846 identifies the DnaX and chi/psi assemblies as parts of the
-        clamp loader.
+    - reference: GO:0043847
+      notes: GO:0043847 defines the clamp-loader chi/psi subcomplex as a dimer composed
+        of chi and psi.
   - subject: delta_subunit
     predicate: binds
     object: beta_sliding_clamp

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_polymerase_iii_clamp_loader_complex.yaml
+  slug: dna_polymerase_iii_clamp_loader_complex
+session:
+  id: 2026-09-28T112052Z-claude-code-e0a635
+  timestamp: '2026-09-28T11:20:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1720
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1717
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Remove clamp loader YAML alias
+  details: 'Addressed PR #1717 review issue #1720 by rewriting the chi and psi graph edge
+    evidence as independent GO:0043847 lists so the record emits as plain YAML without anchors
+    or aliases.'
