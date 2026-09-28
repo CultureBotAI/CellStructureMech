@@ -15254,9 +15254,9 @@
           "cosine_similarity": 0.61677695
         },
         {
-          "identifier": "GO:0005692",
-          "label": "U11 snRNP",
-          "cosine_similarity": 0.59877208
+          "identifier": "GO:0016607",
+          "label": "nuclear speck",
+          "cosine_similarity": 0.60169696
         }
       ]
     },
@@ -17338,6 +17338,37 @@
       ]
     },
     {
+      "identifier": "GO:0016607",
+      "label": "nuclear speck",
+      "neighbors": [
+        {
+          "identifier": "GO:0071008",
+          "label": "U2-type post-mRNA release spliceosomal complex",
+          "cosine_similarity": 0.74247187
+        },
+        {
+          "identifier": "GO:0071004",
+          "label": "U2-type prespliceosome",
+          "cosine_similarity": 0.7320899
+        },
+        {
+          "identifier": "GO:0097526",
+          "label": "spliceosomal tri-snRNP complex",
+          "cosine_similarity": 0.72591779
+        },
+        {
+          "identifier": "GO:0071021",
+          "label": "U2-type post-spliceosomal complex",
+          "cosine_similarity": 0.72554847
+        },
+        {
+          "identifier": "GO:0071006",
+          "label": "U2-type catalytic step 1 spliceosome",
+          "cosine_similarity": 0.72464851
+        }
+      ]
+    },
+    {
       "identifier": "GO:0101019",
       "label": "nucleolar exosome (RNase complex)",
       "neighbors": [
@@ -17435,6 +17466,11 @@
       "label": "paraspeckles",
       "neighbors": [
         {
+          "identifier": "GO:0016607",
+          "label": "nuclear speck",
+          "cosine_similarity": 0.71595719
+        },
+        {
           "identifier": "GO:0015030",
           "label": "Cajal body",
           "cosine_similarity": 0.67244389
@@ -17453,11 +17489,6 @@
           "identifier": "GO:0071003",
           "label": "penta-snRNP complex",
           "cosine_similarity": 0.62397386
-        },
-        {
-          "identifier": "GO:0005730",
-          "label": "nucleolus",
-          "cosine_similarity": 0.6229978
         }
       ]
     },
