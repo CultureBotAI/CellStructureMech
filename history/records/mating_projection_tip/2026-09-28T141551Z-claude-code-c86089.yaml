@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mating_projection_tip.yaml
+  slug: mating_projection_tip
+session:
+  id: 2026-09-28T141551Z-claude-code-c86089
+  timestamp: '2026-09-28T14:15:51Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add a GO-grounded mating projection tip record
+  details: Added a GO:0043332 mating projection tip record with shmoo-tip synonymy, GO:0005937
+    parthood, GO child structures for the tip membrane, tip polarisome, and actin fusion focus,
+    Saccharomyces cerevisiae and Schizosaccharomyces pombe examples, a polarized-growth-site
+    function, Bidlingmaier/Dudin evidence, and a boundary decision keeping localized machinery
+    out of direct region components.
