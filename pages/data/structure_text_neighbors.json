@@ -12583,14 +12583,14 @@
           "cosine_similarity": 0.8044557
         },
         {
+          "identifier": "GO:0044775",
+          "label": "DNA polymerase III, beta sliding clamp processivity factor complex",
+          "cosine_similarity": 0.80422834
+        },
+        {
           "identifier": "GO:0005760",
           "label": "gamma DNA polymerase complex",
           "cosine_similarity": 0.80185924
-        },
-        {
-          "identifier": "GO:0005658",
-          "label": "alpha DNA polymerase:primase complex",
-          "cosine_similarity": 0.79264471
         }
       ]
     },
@@ -12626,9 +12626,45 @@
       ]
     },
     {
+      "identifier": "GO:0044775",
+      "label": "DNA polymerase III, beta sliding clamp processivity factor complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009360",
+          "label": "DNA polymerase III complex",
+          "cosine_similarity": 0.95488122
+        },
+        {
+          "identifier": "GO:0044776",
+          "label": "DNA polymerase III, core complex",
+          "cosine_similarity": 0.87511936
+        },
+        {
+          "identifier": "GO:0043625",
+          "label": "delta DNA polymerase complex",
+          "cosine_similarity": 0.80422834
+        },
+        {
+          "identifier": "GO:0005760",
+          "label": "gamma DNA polymerase complex",
+          "cosine_similarity": 0.78183248
+        },
+        {
+          "identifier": "GO:0005658",
+          "label": "alpha DNA polymerase:primase complex",
+          "cosine_similarity": 0.77726798
+        }
+      ]
+    },
+    {
       "identifier": "GO:0009360",
       "label": "DNA polymerase III complex",
       "neighbors": [
+        {
+          "identifier": "GO:0044775",
+          "label": "DNA polymerase III, beta sliding clamp processivity factor complex",
+          "cosine_similarity": 0.95488122
+        },
         {
           "identifier": "GO:0044776",
           "label": "DNA polymerase III, core complex",
@@ -12648,11 +12684,6 @@
           "identifier": "GO:0005760",
           "label": "gamma DNA polymerase complex",
           "cosine_similarity": 0.77356556
-        },
-        {
-          "identifier": "GO:0016035",
-          "label": "zeta DNA polymerase complex",
-          "cosine_similarity": 0.77245507
         }
       ]
     },
@@ -12664,6 +12695,11 @@
           "identifier": "GO:0009360",
           "label": "DNA polymerase III complex",
           "cosine_similarity": 0.90081088
+        },
+        {
+          "identifier": "GO:0044775",
+          "label": "DNA polymerase III, beta sliding clamp processivity factor complex",
+          "cosine_similarity": 0.87511936
         },
         {
           "identifier": "GO:0005658",
@@ -12679,11 +12715,6 @@
           "identifier": "GO:0005760",
           "label": "gamma DNA polymerase complex",
           "cosine_similarity": 0.75856069
-        },
-        {
-          "identifier": "GO:0008622",
-          "label": "epsilon DNA polymerase complex",
-          "cosine_similarity": 0.7412192
         }
       ]
     },
@@ -13384,6 +13415,11 @@
           "cosine_similarity": 0.80058088
         },
         {
+          "identifier": "GO:0044775",
+          "label": "DNA polymerase III, beta sliding clamp processivity factor complex",
+          "cosine_similarity": 0.78183248
+        },
+        {
           "identifier": "GO:0009360",
           "label": "DNA polymerase III complex",
           "cosine_similarity": 0.77356556
@@ -13392,11 +13428,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.76768518
-        },
-        {
-          "identifier": "GO:0016035",
-          "label": "zeta DNA polymerase complex",
-          "cosine_similarity": 0.76524429
         }
       ]
     },
@@ -16303,14 +16334,14 @@
           "cosine_similarity": 0.71780139
         },
         {
+          "identifier": "GO:0044775",
+          "label": "DNA polymerase III, beta sliding clamp processivity factor complex",
+          "cosine_similarity": 0.71747671
+        },
+        {
           "identifier": "GO:0005663",
           "label": "DNA replication factor C complex",
           "cosine_similarity": 0.71657589
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.70737475
         }
       ]
     },

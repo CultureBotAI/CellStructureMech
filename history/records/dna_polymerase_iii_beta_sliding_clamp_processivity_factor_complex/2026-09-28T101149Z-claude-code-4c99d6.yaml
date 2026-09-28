@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_polymerase_iii_beta_sliding_clamp_processivity_factor_complex.yaml
+  slug: dna_polymerase_iii_beta_sliding_clamp_processivity_factor_complex
+session:
+  id: 2026-09-28T101149Z-claude-code-4c99d6
+  timestamp: '2026-09-28T10:11:49Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  urls:
+  - https://www.ebi.ac.uk/QuickGO/term/GO:0044775
+  - https://pubmed.ncbi.nlm.nih.gov/1349852/
+  - https://www.uniprot.org/uniprotkb/P0A988
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add DNA polymerase III beta sliding clamp processivity factor
+  details: Created an evidence-backed GO:0044775 record for the DNA polymerase III beta sliding-clamp
+    processivity factor complex, with GO parthood to the Pol III holoenzyme, a DnaN beta-subunit
+    component backed by reviewed UniProtKB:P0A988, an E. coli canonical example from Kong
+    et al. 1992, DNA-replication function evidence, and a causal graph covering beta-subunit
+    membership, DNA encirclement, Pol III core tethering, and replication support.
