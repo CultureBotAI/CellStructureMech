@@ -4,7 +4,7 @@ structure_category: RIBONUCLEOPROTEIN
 structure_kind: OTHER
 definition: The perinucleolar compartment (PNC) is a subnuclear structure associated
   with, but structurally distinct from, the nucleolus. The PNC contains large amounts
-  of the heterogeneous nuclear ribonucleoprotein complex (hnRNP) called hnRNP 1 (PTB).
+  of the heterogeneous nuclear ribonucleoprotein complex (hnRNP) called hnRNP I (PTB).
   Many RNA binding proteins as well as RNA polymerase III transcripts are highly enriched
   in this compartment. PTB and pol III transcripts are required for the integrity
   of the PNC.
@@ -34,6 +34,12 @@ curation_history:
   action: NORMALIZED_YAML
   changes: Normalized the duplicated PNC-integrity graph evidence lists so the record
     emits without YAML aliases.
+  llm_assisted: true
+- timestamp: '2026-09-28T02:37:03Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1697 by correcting the inherited hnRNP 1 typo in the perinucleolar
+    compartment definition to hnRNP I.'
   llm_assisted: true
 synonyms:
 - synonym_text: perinucleolar region
