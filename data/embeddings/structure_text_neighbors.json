@@ -12640,6 +12640,11 @@
           "cosine_similarity": 0.87511936
         },
         {
+          "identifier": "GO:0043846",
+          "label": "DNA polymerase III, clamp loader complex",
+          "cosine_similarity": 0.87502406
+        },
+        {
           "identifier": "GO:0043625",
           "label": "delta DNA polymerase complex",
           "cosine_similarity": 0.80422834
@@ -12648,11 +12653,37 @@
           "identifier": "GO:0005760",
           "label": "gamma DNA polymerase complex",
           "cosine_similarity": 0.78183248
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0043846",
+      "label": "DNA polymerase III, clamp loader complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009360",
+          "label": "DNA polymerase III complex",
+          "cosine_similarity": 0.89088226
+        },
+        {
+          "identifier": "GO:0044775",
+          "label": "DNA polymerase III, beta sliding clamp processivity factor complex",
+          "cosine_similarity": 0.87502406
+        },
+        {
+          "identifier": "GO:0044776",
+          "label": "DNA polymerase III, core complex",
+          "cosine_similarity": 0.81768053
+        },
+        {
+          "identifier": "GO:0043625",
+          "label": "delta DNA polymerase complex",
+          "cosine_similarity": 0.75075352
         },
         {
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
-          "cosine_similarity": 0.77726798
+          "cosine_similarity": 0.72950416
         }
       ]
     },
@@ -12671,6 +12702,11 @@
           "cosine_similarity": 0.90081088
         },
         {
+          "identifier": "GO:0043846",
+          "label": "DNA polymerase III, clamp loader complex",
+          "cosine_similarity": 0.89088226
+        },
+        {
           "identifier": "GO:0043625",
           "label": "delta DNA polymerase complex",
           "cosine_similarity": 0.8044557
@@ -12679,11 +12715,6 @@
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
           "cosine_similarity": 0.79483778
-        },
-        {
-          "identifier": "GO:0005760",
-          "label": "gamma DNA polymerase complex",
-          "cosine_similarity": 0.77356556
         }
       ]
     },
@@ -12702,6 +12733,11 @@
           "cosine_similarity": 0.87511936
         },
         {
+          "identifier": "GO:0043846",
+          "label": "DNA polymerase III, clamp loader complex",
+          "cosine_similarity": 0.81768053
+        },
+        {
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
           "cosine_similarity": 0.79506208
@@ -12710,11 +12746,6 @@
           "identifier": "GO:0043625",
           "label": "delta DNA polymerase complex",
           "cosine_similarity": 0.78899383
-        },
-        {
-          "identifier": "GO:0005760",
-          "label": "gamma DNA polymerase complex",
-          "cosine_similarity": 0.75856069
         }
       ]
     },

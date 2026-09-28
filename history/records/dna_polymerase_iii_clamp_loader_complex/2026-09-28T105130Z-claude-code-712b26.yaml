@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_polymerase_iii_clamp_loader_complex.yaml
+  slug: dna_polymerase_iii_clamp_loader_complex
+session:
+  id: 2026-09-28T105130Z-claude-code-712b26
+  timestamp: '2026-09-28T10:51:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  urls:
+  - https://www.ebi.ac.uk/QuickGO/term/GO:0043846
+  - https://pubmed.ncbi.nlm.nih.gov/11525729/
+  - https://pubmed.ncbi.nlm.nih.gov/12940977/
+  - https://www.uniprot.org/uniprotkb/P06710
+  - https://www.uniprot.org/uniprotkb/P28630
+  - https://www.uniprot.org/uniprotkb/P28631
+  - https://www.uniprot.org/uniprotkb/P28905
+  - https://www.uniprot.org/uniprotkb/P28632
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add DNA polymerase III clamp loader complex
+  details: Created an evidence-backed GO:0043846 record for the DNA polymerase III clamp-loader
+    complex, including Pol III holoenzyme parthood, DnaX, delta, delta-prime, chi and psi
+    components backed by reviewed E. coli K-12 UniProtKB examples, E. coli gamma-complex structural
+    evidence, clamp-loader and DNA-replication functions, and a causal graph for beta-clamp
+    loading.
