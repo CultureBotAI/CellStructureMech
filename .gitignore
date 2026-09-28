@@ -15,7 +15,11 @@ venv/
 htmlcov/
 
 # Generated reports — regenerate with `just report` / `just validate-all`
-reports/
+reports/*
+!reports/yaml_record_review/
+!reports/yaml_record_review/*.md
+!reports/yaml_category_review/
+!reports/yaml_category_review/*.md
 
 # Generated from the LinkML schema by `just gen-schema`
 src/cellstructuremech/schema/cellstructuremech_dataclasses.py
