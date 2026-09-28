@@ -20,6 +20,13 @@ curation_history:
     Homo sapiens heat-shock scope, DOI/GO evidence, a nonmechanistic assembly graph
     and a component-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-28T01:45:13Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1695 by removing HSATIII from the satellite III RNA component
+    gene_symbols slot so the repeat transcript label remains only in label-only curation
+    text.'
+  llm_assisted: true
 synonyms:
 - synonym_text: nuclear stress body
   synonym_type: EXACT_SYNONYM
@@ -61,8 +68,6 @@ components:
   label: satellite III stress-induced RNA
   component_type: RNA
   component_role: CONSTITUENT
-  gene_symbols:
-  - HSATIII
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: Stress-induced HSATIII RNA is curated as a human satellite III
