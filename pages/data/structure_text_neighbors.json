@@ -939,6 +939,37 @@
       ]
     },
     {
+      "identifier": "GO:0005937",
+      "label": "mating projection",
+      "neighbors": [
+        {
+          "identifier": "GO:0009289",
+          "label": "pilus",
+          "cosine_similarity": 0.6899603
+        },
+        {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.63856378
+        },
+        {
+          "identifier": "GO:0044096",
+          "label": "type IV pilus",
+          "cosine_similarity": 0.63622958
+        },
+        {
+          "identifier": "GO:0005933",
+          "label": "cellular bud",
+          "cosine_similarity": 0.63074725
+        },
+        {
+          "identifier": "cellstructuremech:prostheca",
+          "label": "prostheca",
+          "cosine_similarity": 0.62548535
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:omce_cytochrome_nanowire",
       "label": "OmcE cytochrome nanowire",
       "neighbors": [

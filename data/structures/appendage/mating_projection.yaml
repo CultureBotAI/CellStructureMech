@@ -1,0 +1,238 @@
+identifier: GO:0005937
+label: mating projection
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: The projection formed by unicellular fungi in response to mating pheromone.
+definition_source: GO:0005937
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T13:23:24Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T13:26:29Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Moved the mating projection to APPENDAGE, added GO-backed shmoo synonymy,
+    parentage, substructures, Saccharomyces distribution, a polarized-growth function,
+    DOI evidence, a nonmechanistic projection topology graph, and a localized-complex
+    boundary decision.
+  llm_assisted: true
+- timestamp: '2026-09-28T13:42:13Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1726 by adding the GO:0070867 mating projection tip membrane
+    to the topology graph.'
+  llm_assisted: true
+synonyms:
+- synonym_text: shmoo
+  synonym_type: NARROW_SYNONYM
+  source: GO:0005937
+- synonym_text: conjugation tube
+  synonym_type: NARROW_SYNONYM
+  source: GO:0005937
+parent_structures:
+- GO:0120025
+has_part:
+- GO:0070250
+- GO:0043332
+- GO:0001400
+- GO:0032175
+- GO:0032162
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Haploid budding-yeast cells extend mating projections after pheromone exposure
+    rather than during every growth state.
+  reference: DOI:10.1091/mbc.3.4.429
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which pheromone treatment induces a polarized mating
+    projection containing Spa2-positive tips.
+  reference: DOI:10.1091/mbc.3.4.429
+functions:
+- function_id: mating_projection_polarized_growth
+  label: mating-projection polarized growth
+  description: The mating projection concentrates polarized-growth machinery at its
+    tip to build a pheromone-induced fungal outgrowth.
+  evidence:
+  - reference: GO:0005937
+    notes: GO:0005937 defines the projection as the structure formed by unicellular
+      fungi in response to mating pheromone.
+  - reference: DOI:10.1091/mbc.3.4.429
+    notes: Read et al. 1992 used actin and beta-tubulin mutants to analyze Saccharomyces
+      cerevisiae mating-projection formation.
+  - reference: DOI:10.1083/jcb.200307065
+    notes: Bidlingmaier and Snyder 2004 studied polarisome components during cyclic
+      initiation and termination of yeast mating-projection growth.
+evidence:
+- reference: GO:0005937
+  notes: Gene Ontology cellular-component term for the mating projection.
+- reference: GO:0120025
+  notes: Gene Ontology cellular-component parent term for plasma membrane-bounded
+    cell projections.
+- reference: GO:0070250
+  notes: Gene Ontology cellular-component term for the mating projection membrane.
+- reference: GO:0043332
+  notes: Gene Ontology cellular-component term for the mating projection tip.
+- reference: GO:0001400
+  notes: Gene Ontology cellular-component term for the mating projection base.
+- reference: GO:0032175
+  notes: Gene Ontology cellular-component term for the mating projection septin ring.
+- reference: GO:0032162
+  notes: Gene Ontology cellular-component term for the mating projection septin band.
+- reference: GO:0031563
+  notes: Gene Ontology cellular-component term for the mating projection tip polarisome.
+- reference: GO:0070867
+  notes: Gene Ontology cellular-component term for the mating projection tip membrane.
+- reference: DOI:10.1091/mbc.3.4.429
+  notes: Read et al. 1992, 'Actin- and tubulin-dependent functions during Saccharomyces
+    cerevisiae mating projection formation', Molecular Biology of the Cell.
+- reference: DOI:10.1083/jcb.200307065
+  notes: Bidlingmaier and Snyder 2004, 'Regulation of polarized growth initiation
+    and termination cycles by the polarisome and Cdc42 regulators', Journal of Cell
+    Biology.
+- reference: DOI:10.1128/EC.4.9.1503-1512.2005
+  notes: Douglas et al. 2005, 'Septin function in yeast model systems and pathogenic
+    fungi', Eukaryotic Cell.
+- reference: DOI:10.1083/jcb.135.3.725
+  notes: Valtz and Herskowitz 1996, 'Pea2 protein of yeast is localized to sites of
+    polarized growth and is required for efficient mating and bipolar budding', Journal
+    of Cell Biology.
+causal_graphs:
+- graph_id: mating_projection_polarity_topology
+  title: Mating-projection polarity topology
+  description: The fungal mating projection has a surrounding membrane, a polarized-growth
+    tip, a basal region, septin structures at the neck, and a tip-localized polarisome.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-backed projection regions and localized polarisome
+    or septin substructures without asserting a complete pheromone-response pathway,
+    septin transition order, or actin-polymerization mechanism.
+  nodes:
+  - node_id: mating_projection
+    label: mating projection
+    node_type: STRUCTURE
+    grounding: GO:0005937
+  - node_id: mating_projection_membrane
+    label: mating projection membrane
+    node_type: STRUCTURE
+    grounding: GO:0070250
+  - node_id: mating_projection_tip_membrane
+    label: mating projection tip membrane
+    node_type: STRUCTURE
+    grounding: GO:0070867
+  - node_id: mating_projection_tip
+    label: mating projection tip
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0043332
+  - node_id: mating_projection_base
+    label: mating projection base
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0001400
+  - node_id: mating_projection_septin_ring
+    label: mating projection septin ring
+    node_type: STRUCTURE
+    grounding: GO:0032175
+  - node_id: mating_projection_septin_band
+    label: mating projection septin band
+    node_type: STRUCTURE
+    grounding: GO:0032162
+  - node_id: mating_projection_tip_polarisome
+    label: mating projection tip polarisome
+    node_type: STRUCTURE
+    grounding: GO:0031563
+  edges:
+  - subject: mating_projection_membrane
+    predicate: surrounds
+    object: mating_projection
+    description: The mating projection membrane surrounds the pheromone-induced projection.
+    evidence:
+    - reference: GO:0070250
+      notes: GO:0070250 identifies the mating projection membrane.
+  - subject: mating_projection_tip_membrane
+    predicate: is part of
+    object: mating_projection_tip
+    description: The mating projection tip membrane is the portion of the plasma membrane
+      surrounding the projection tip.
+    evidence:
+    - reference: GO:0070867
+      notes: GO:0070867 identifies the membrane portion surrounding the mating projection
+        tip.
+  - subject: mating_projection_tip
+    predicate: is part of
+    object: mating_projection
+    description: The mating projection tip is the apex and polarized-growth site of
+      the projection.
+    evidence:
+    - reference: GO:0043332
+      notes: GO:0043332 identifies the mating projection tip as a part of the mating
+        projection.
+  - subject: mating_projection_base
+    predicate: is part of
+    object: mating_projection
+    description: The mating projection base is the region where the projection meets
+      the bulk of the cell.
+    evidence:
+    - reference: GO:0001400
+      notes: GO:0001400 identifies the mating projection base as a part of the mating
+        projection.
+  - subject: mating_projection_septin_ring
+    predicate: is part of
+    object: mating_projection
+    description: A septin ring can assemble at the mating-projection neck.
+    evidence:
+    - reference: GO:0032175
+      notes: GO:0032175 identifies the mating projection septin ring as a part of
+        the mating projection.
+    - reference: DOI:10.1128/EC.4.9.1503-1512.2005
+      notes: Douglas et al. 2005 reviewed septin structures at yeast shmoo necks.
+  - subject: mating_projection_septin_band
+    predicate: is part of
+    object: mating_projection
+    description: A septin band can occupy the mating-projection neck.
+    evidence:
+    - reference: GO:0032162
+      notes: GO:0032162 identifies the mating projection septin band as a part of
+        the mating projection.
+  - subject: mating_projection_tip_polarisome
+    predicate: localizes to
+    object: mating_projection_tip
+    description: The mating projection tip polarisome is found at the projection apex.
+    evidence:
+    - reference: GO:0031563
+      notes: GO:0031563 identifies the polarisome localized to the mating projection
+        tip.
+    - reference: DOI:10.1083/jcb.200307065
+      notes: Bidlingmaier and Snyder 2004 studied Spa2, Pea2, and Bni1 polarisome
+        components in yeast mating projections.
+discussions:
+- discussion_id: localized_complexes_not_projection_components
+  prompt: Keep polarisome and septin proteins on their own structure records rather
+    than duplicating them as mating projection components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#mating_projection_polarity_topology
+  rationale: GO:0005937 identifies the whole projection, while GO child terms identify
+    localized membrane, tip, base, septin, and polarisome substructures. This projection-level
+    record links those substructures with has_part and graph edges while leaving their
+    molecular subunits on the polarisome and septin records.
+  resolution_note: Curated projection-level topology and did not duplicate polarisome
+    or septin proteins as direct mating-projection components.
+  evidence:
+  - reference: GO:0005937
+    notes: GO:0005937 identifies the mating projection.
+  - reference: GO:0031563
+    notes: GO:0031563 identifies the mating projection tip polarisome.
+  - reference: GO:0032175
+    notes: GO:0032175 identifies the mating projection septin ring.
+  - reference: GO:0032162
+    notes: GO:0032162 identifies the mating projection septin band.
+  posed_by: codex
+  posed_date: '2026-09-28'
+  resolved_date: '2026-09-28'
