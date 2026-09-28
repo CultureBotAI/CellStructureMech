@@ -17347,6 +17347,11 @@
           "cosine_similarity": 0.72521325
         },
         {
+          "identifier": "GO:0035062",
+          "label": "omega speckle",
+          "cosine_similarity": 0.72098066
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.70150254
@@ -17360,11 +17365,6 @@
           "identifier": "GO:0005685",
           "label": "U1 snRNP",
           "cosine_similarity": 0.67517837
-        },
-        {
-          "identifier": "GO:0005692",
-          "label": "U11 snRNP",
-          "cosine_similarity": 0.67151134
         }
       ]
     },
@@ -17497,6 +17497,11 @@
       "label": "nuclear speck",
       "neighbors": [
         {
+          "identifier": "GO:0035062",
+          "label": "omega speckle",
+          "cosine_similarity": 0.76300079
+        },
+        {
           "identifier": "GO:0071008",
           "label": "U2-type post-mRNA release spliceosomal complex",
           "cosine_similarity": 0.74247187
@@ -17515,11 +17520,6 @@
           "identifier": "GO:0097165",
           "label": "nuclear stress granule",
           "cosine_similarity": 0.72561953
-        },
-        {
-          "identifier": "GO:0071021",
-          "label": "U2-type post-spliceosomal complex",
-          "cosine_similarity": 0.72554847
         }
       ]
     },
@@ -17617,6 +17617,37 @@
       ]
     },
     {
+      "identifier": "GO:0035062",
+      "label": "omega speckle",
+      "neighbors": [
+        {
+          "identifier": "GO:0016607",
+          "label": "nuclear speck",
+          "cosine_similarity": 0.76300079
+        },
+        {
+          "identifier": "GO:0035363",
+          "label": "histone locus body",
+          "cosine_similarity": 0.72098066
+        },
+        {
+          "identifier": "GO:0042382",
+          "label": "paraspeckles",
+          "cosine_similarity": 0.65362351
+        },
+        {
+          "identifier": "GO:0005682",
+          "label": "U5 snRNP",
+          "cosine_similarity": 0.63147727
+        },
+        {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.63090219
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000932",
       "label": "P-body",
       "neighbors": [
@@ -17667,14 +17698,14 @@
           "cosine_similarity": 0.65918117
         },
         {
+          "identifier": "GO:0035062",
+          "label": "omega speckle",
+          "cosine_similarity": 0.65362351
+        },
+        {
           "identifier": "GO:0000228",
           "label": "nuclear chromosome",
           "cosine_similarity": 0.6484423
-        },
-        {
-          "identifier": "GO:0097356",
-          "label": "perinucleolar compartment",
-          "cosine_similarity": 0.63248498
         }
       ]
     },
