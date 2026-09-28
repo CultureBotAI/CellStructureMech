@@ -1382,6 +1382,11 @@
           "cosine_similarity": 0.81972396
         },
         {
+          "identifier": "GO:1990819",
+          "label": "mating projection actin fusion focus",
+          "cosine_similarity": 0.79074028
+        },
+        {
           "identifier": "GO:0005938",
           "label": "cell cortex",
           "cosine_similarity": 0.76180847
@@ -1395,11 +1400,6 @@
           "identifier": "GO:0036286",
           "label": "eisosome filament",
           "cosine_similarity": 0.73789757
-        },
-        {
-          "identifier": "GO:0000133",
-          "label": "polarisome",
-          "cosine_similarity": 0.73511698
         }
       ]
     },
@@ -1418,6 +1418,11 @@
           "cosine_similarity": 0.78370473
         },
         {
+          "identifier": "GO:1990819",
+          "label": "mating projection actin fusion focus",
+          "cosine_similarity": 0.7691493
+        },
+        {
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.75589341
@@ -1426,11 +1431,6 @@
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.74150718
-        },
-        {
-          "identifier": "GO:0036286",
-          "label": "eisosome filament",
-          "cosine_similarity": 0.73250116
         }
       ]
     },
@@ -2516,6 +2516,37 @@
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.77197937
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990819",
+      "label": "mating projection actin fusion focus",
+      "neighbors": [
+        {
+          "identifier": "GO:0030479",
+          "label": "actin cortical patch",
+          "cosine_similarity": 0.79074028
+        },
+        {
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.7691493
+        },
+        {
+          "identifier": "GO:0043332",
+          "label": "mating projection tip",
+          "cosine_similarity": 0.73365781
+        },
+        {
+          "identifier": "cellstructuremech:mamk_filament",
+          "label": "MamK filament",
+          "cosine_similarity": 0.72470388
+        },
+        {
+          "identifier": "GO:0000133",
+          "label": "polarisome",
+          "cosine_similarity": 0.70210381
         }
       ]
     },
@@ -14133,14 +14164,14 @@
           "cosine_similarity": 0.73737454
         },
         {
+          "identifier": "GO:1990819",
+          "label": "mating projection actin fusion focus",
+          "cosine_similarity": 0.73365781
+        },
+        {
           "identifier": "GO:0005938",
           "label": "cell cortex",
           "cosine_similarity": 0.72282042
-        },
-        {
-          "identifier": "GO:0070056",
-          "label": "prospore membrane leading edge",
-          "cosine_similarity": 0.72011825
         }
       ]
     },

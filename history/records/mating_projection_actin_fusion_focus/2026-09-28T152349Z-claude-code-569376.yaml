@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+  slug: mating_projection_actin_fusion_focus
+session:
+  id: 2026-09-28T152349Z-claude-code-569376
+  timestamp: '2026-09-28T15:23:49Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1730
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1729
+events:
+- type: EDIT
+  outcome: changed
+  summary: Represent actin cytoskeleton as parthood
+  details: 'Addressed PR #1729 review issue #1730 by moving GO:0015629 actin cytoskeleton
+    from parent_structures into part_of on GO:1990819, updating the GO:0015629 evidence note,
+    and appending the ADDRESSED_REVIEW curation event.'
