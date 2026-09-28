@@ -23,6 +23,12 @@ curation_history:
     scaffold function, a nonmechanistic ring-to-collar topology graph, and ring-boundary
     and component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-28T23:07:47Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1746 by attaching the bud-neck septin-ring component TODO at
+    record scope as well as to the reviewed-label-only septin component.'
+  llm_assisted: true
 parent_structures:
 - GO:0005940
 part_of:
@@ -175,6 +181,7 @@ discussions:
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
+  - record
   - components#septin_proteins
   rationale: The first localized bud-neck septin-ring record keeps only the reviewed-label-only
     septin protein cohort rather than guessing InterPro, Pfam, or NCBIfam accessions
