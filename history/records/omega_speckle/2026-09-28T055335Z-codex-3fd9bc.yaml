@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/omega_speckle.yaml
+  slug: omega_speckle
+session:
+  id: 2026-09-28T055335Z-codex-3fd9bc
+  timestamp: '2026-09-28T05:53:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1705
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add omega speckle record
+  details: Created GO:0035062 omega speckle as a GO-grounded nuclear speck and nuclear ribonucleoprotein
+    granule with hsr-omega-n RNA and Drosophila hnRNP components, Drosophila melanogaster
+    scope, hnRNP trafficking and availability evidence, and a TODO for hsr-omega, hnRNP and
+    heat-shock remodeling boundaries.

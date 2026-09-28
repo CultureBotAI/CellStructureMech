@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/omega_speckle.yaml
+  slug: omega_speckle
+session:
+  id: 2026-09-28T060920Z-claude-code-5f2bcf
+  timestamp: '2026-09-28T06:09:20Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1706
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1705
+events:
+- type: EDIT
+  outcome: changed
+  summary: Resolve omega speckle graph review
+  details: 'Resolved PR #1705 review issue #1706 by rewording the hsr-omega/hnRNP causal graph
+    description to state hsr-omega-n localization, hnRNP colocalization and physical association,
+    and hnRNP speckled-distribution dependence without implying an active recruitment step.'
