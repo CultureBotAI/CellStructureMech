@@ -1,0 +1,231 @@
+identifier: GO:0106125
+label: reservosome matrix
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: A matrix composed of planar membranes, vesicles and lipid inclusions within
+  the reservosome.
+definition_source: GO:0106125
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T12:39:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T12:41:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parthood, reservosome internal membrane, vesicle and lipid-inclusion
+    matrix constituents, Trypanosoma cruzi scope, sterol-storage evidence, record-level
+    GO/DOI/PMID evidence, an internal-architecture graph, and a grounding TODO for
+    matrix constituents.
+  llm_assisted: true
+- timestamp: '2026-09-28T12:41:52Z'
+  curator: codex
+  action: FIX_GRAPH_NODE
+  changes: Declared the terminal cholesterol graph node used by the reservosome lipid-inclusion
+    storage edge.
+  llm_assisted: true
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0106123
+components:
+- component_id: internal_membrane_profiles
+  label: reservosome internal membrane profiles
+  component_type: LIPID
+  component_role: CONSTITUENT
+  role: Planar membrane profiles that traverse the reservosome matrix and have a membrane
+    architecture similar to the surrounding reservosome boundary membrane.
+  evidence:
+  - reference: GO:0106125
+    notes: GO:0106125 defines the reservosome matrix as containing planar membranes.
+  - reference: DOI:10.1002/jemt.20592
+    notes: Sant'Anna et al. 2008 resolved membrane profiles and longer uranyl-acetate-stained
+      internal membranes inside T. cruzi reservosomes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral identifier was curated for the internal
+    planar membranes of the reservosome matrix.
+- component_id: internal_vesicles
+  label: reservosome internal vesicles
+  component_type: OTHER
+  component_role: CONSTITUENT
+  role: Intralumenal vesicles observed as part of the complex internal reservosome
+    architecture.
+  evidence:
+  - reference: GO:0106125
+    notes: GO:0106125 defines vesicles as constituents of the reservosome matrix.
+  - reference: DOI:10.1002/jemt.20592
+    notes: Sant'Anna et al. 2008 detected internal vesicles in T. cruzi reservosomes
+      by electron microscopy.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral identifier was curated for reservosome
+    internal vesicles distinct from the whole reservosome matrix.
+- component_id: lipid_inclusions
+  label: reservosome lipid inclusions
+  component_type: LIPID
+  component_role: CONSTITUENT
+  role: Electron-lucent lipid inclusions embedded in the reservosome matrix and used
+    to store sterols in T. cruzi epimastigotes.
+  evidence:
+  - reference: GO:0106125
+    notes: GO:0106125 includes lipid inclusions in the reservosome matrix definition.
+  - reference: DOI:10.1002/jemt.20592
+    notes: Sant'Anna et al. 2008 described electron-lucent lipid bodies inside T.
+      cruzi reservosomes.
+  - reference: DOI:10.1371/journal.pone.0022359
+    notes: Pereira et al. 2011 studied cholesterol mobilization from reservosome lipid
+      inclusions in T. cruzi epimastigotes.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral identifier was curated for lipid inclusions
+    specifically embedded in the reservosome matrix.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  presence: VARIABLE
+  note: The reservosome matrix is present in the reservosomes of T. cruzi epimastigotes;
+    reservosomes are absent from amastigotes and trypomastigotes.
+  reference: DOI:10.1017/S0031182004005797
+canonical_examples:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  note: Kinetoplastid parasite whose epimastigote reservosome matrix was analyzed
+    with thin-section, uranyl-acetate, and freeze-fracture electron microscopy.
+  reference: DOI:10.1002/jemt.20592
+functions:
+- function_id: sterol_storage_in_lipid_inclusions
+  label: sterol storage in reservosome lipid inclusions
+  description: Reservosome lipid inclusions store and mobilize sterols, including
+    cholesterol endocytosed by T. cruzi epimastigotes.
+  evidence:
+  - reference: DOI:10.1111/j.1574-6968.2002.tb11317.x
+    notes: Cunha-e-Silva et al. 2002 isolated T. cruzi reservosomes and found large
+      amounts of ergosterol and esterified cholesterol in the purified organelles.
+  - reference: DOI:10.1371/journal.pone.0022359
+    notes: Pereira et al. 2011 showed that T. cruzi epimastigotes store and mobilize
+      cholesterol in reservosome lipid inclusions.
+evidence:
+- reference: GO:0106125
+  notes: Gene Ontology cellular-component term for the reservosome matrix, defined
+    as the planar membrane-, vesicle-, and lipid inclusion-containing matrix inside
+    a reservosome.
+- reference: GO:0110165
+  notes: Gene Ontology cellular-component parent term for cellular anatomical structures.
+- reference: GO:0106123
+  notes: Gene Ontology cellular-component term for the containing reservosome organelle.
+- reference: PMID:18452191
+  notes: PubMed record for the Sant'Anna et al. 2008 reservosome ultrastructure study.
+- reference: DOI:10.1002/jemt.20592
+  notes: Sant'Anna et al. 2008, New insights into the morphology of Trypanosoma cruzi
+    reservosome, Microscopy Research and Technique.
+- reference: DOI:10.1017/S0031182004005797
+  notes: 'Figueiredo et al. 2004, Reservosome: an endocytic compartment in epimastigote
+    forms of the protozoan Trypanosoma cruzi (Kinetoplastida: Trypanosomatidae), Parasitology.'
+- reference: DOI:10.1111/j.1574-6968.2002.tb11317.x
+  notes: Cunha-e-Silva et al. 2002, Isolation and characterization of a reservosome
+    fraction from Trypanosoma cruzi, FEMS Microbiology Letters.
+- reference: DOI:10.1371/journal.pone.0022359
+  notes: Pereira et al. 2011, Trypanosoma cruzi epimastigotes are able to store and
+    mobilize high amounts of cholesterol in reservosome lipid inclusions, PLoS ONE.
+causal_graphs:
+- graph_id: reservosome_matrix_internal_architecture
+  title: Reservosome matrix internal architecture
+  description: The reservosome matrix lies inside the reservosome and contains internal
+    membrane profiles, internal vesicles, and lipid inclusions.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures the observed matrix architecture without asserting
+    a mechanism for internal membrane or lipid-inclusion biogenesis.
+  nodes:
+  - node_id: reservosome_matrix
+    label: reservosome matrix
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0106125
+  - node_id: reservosome
+    label: reservosome
+    node_type: ORGANELLE
+    grounding: GO:0106123
+  - node_id: internal_membrane_profiles
+    label: reservosome internal membrane profiles
+    node_type: STRUCTURE
+    component_ref: internal_membrane_profiles
+  - node_id: internal_vesicles
+    label: reservosome internal vesicles
+    node_type: STRUCTURE
+    component_ref: internal_vesicles
+  - node_id: lipid_inclusions
+    label: reservosome lipid inclusions
+    node_type: STRUCTURE
+    component_ref: lipid_inclusions
+  - node_id: cholesterol
+    label: cholesterol
+    node_type: CHEMICAL
+  edges:
+  - subject: reservosome_matrix
+    predicate: is part of
+    object: reservosome
+    description: The reservosome matrix is an internal substructure of the reservosome
+      organelle.
+    evidence:
+    - reference: GO:0106125
+      notes: GO:0106125 defines the reservosome matrix as a matrix within the reservosome.
+    - reference: GO:0106123
+      notes: GO:0106123 is the cellular-component term for reservosome.
+  - subject: internal_membrane_profiles
+    predicate: is part of
+    object: reservosome_matrix
+    description: Planar membrane profiles run through the reservosome matrix.
+    evidence:
+    - reference: GO:0106125
+      notes: GO:0106125 lists planar membranes as part of the reservosome matrix.
+    - reference: DOI:10.1002/jemt.20592
+      notes: Sant'Anna et al. 2008 observed internal membranes inside T. cruzi reservosomes.
+  - subject: internal_vesicles
+    predicate: is part of
+    object: reservosome_matrix
+    description: Internal vesicles occur in the reservosome matrix.
+    evidence:
+    - reference: GO:0106125
+      notes: GO:0106125 lists vesicles as part of the reservosome matrix.
+    - reference: DOI:10.1002/jemt.20592
+      notes: Sant'Anna et al. 2008 observed internal vesicles in T. cruzi reservosomes.
+  - subject: lipid_inclusions
+    predicate: is part of
+    object: reservosome_matrix
+    description: Lipid inclusions are embedded in the reservosome matrix.
+    evidence:
+    - reference: GO:0106125
+      notes: GO:0106125 lists lipid inclusions as part of the reservosome matrix.
+    - reference: DOI:10.1002/jemt.20592
+      notes: Sant'Anna et al. 2008 detected electron-lucent lipid bodies in the complex
+        internal structure of T. cruzi reservosomes.
+  - subject: lipid_inclusions
+    predicate: stores
+    object: cholesterol
+    description: The lipid inclusions in T. cruzi reservosomes store endocytosed cholesterol.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0022359
+      notes: Pereira et al. 2011 studied cholesterol storage and mobilization in reservosome
+        lipid inclusions.
+discussions:
+- discussion_id: ground_reservosome_matrix_constituents
+  prompt: Resolve exact source-neutral identifiers for reservosome matrix internal
+    membranes, vesicles, and lipid inclusions.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#internal_membrane_profiles
+  - components#internal_vesicles
+  - components#lipid_inclusions
+  rationale: GO:0106125 identifies the whole reservosome matrix, but the internal
+    matrix substructures were curated as morphology-backed labels until exact source-neutral
+    lipid, vesicle, or membrane groundings can be verified.
+  evidence:
+  - reference: GO:0106125
+    notes: GO:0106125 identifies the matrix containing the unresolved internal membranes,
+      vesicles, and lipid inclusions.
+  - reference: DOI:10.1002/jemt.20592
+    notes: Sant'Anna et al. 2008 directly observed the internal architecture of T.
+      cruzi reservosomes by electron microscopy.
+  posed_by: codex
+  posed_date: '2026-09-28'

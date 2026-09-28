@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/reservosome_matrix.yaml
+  slug: reservosome_matrix
+session:
+  id: 2026-09-28T124245Z-codex-608fb0
+  timestamp: '2026-09-28T12:42:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added reservosome matrix record
+  details: Created a GO:0106125 reservosome matrix record with GO cellular-anatomical-structure
+    parentage, reservosome parthood, label-only internal membrane, internal vesicle and lipid-inclusion
+    constituents, Trypanosoma cruzi epimastigote scope, sterol-storage evidence, a nonmechanistic
+    internal-architecture graph, and an open TODO for exact source-neutral matrix-constituent
+    groundings.

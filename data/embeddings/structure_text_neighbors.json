@@ -10429,6 +10429,11 @@
       "label": "reservosome",
       "neighbors": [
         {
+          "identifier": "GO:0106125",
+          "label": "reservosome matrix",
+          "cosine_similarity": 0.86028298
+        },
+        {
           "identifier": "GO:0055037",
           "label": "recycling endosome",
           "cosine_similarity": 0.77819352
@@ -10447,11 +10452,37 @@
           "identifier": "GO:0005770",
           "label": "late endosome",
           "cosine_similarity": 0.7724111
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0106125",
+      "label": "reservosome matrix",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:reservosome",
+          "label": "reservosome",
+          "cosine_similarity": 0.86028298
         },
         {
-          "identifier": "GO:0005768",
-          "label": "endosome",
-          "cosine_similarity": 0.77230619
+          "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
+          "label": "multivesicular body intraluminal vesicle",
+          "cosine_similarity": 0.7578024
+        },
+        {
+          "identifier": "GO:0031904",
+          "label": "endosome lumen",
+          "cosine_similarity": 0.75701971
+        },
+        {
+          "identifier": "GO:0071682",
+          "label": "endocytic vesicle lumen",
+          "cosine_similarity": 0.75174391
+        },
+        {
+          "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
+          "label": "COPI-coated vesicle lumen",
+          "cosine_similarity": 0.75027272
         }
       ]
     },
