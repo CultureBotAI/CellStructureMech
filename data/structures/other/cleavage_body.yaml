@@ -1,6 +1,6 @@
 identifier: GO:0071920
 label: cleavage body
-structure_category: RIBONUCLEOPROTEIN
+structure_category: OTHER
 structure_kind: OTHER
 definition: A nuclear body that contains proteins involved in pre-mRNA 3'-end cleavage
   and polyadenylation, such as DDX1, CSTF2 and CPSFs, as well as the transcription
@@ -20,6 +20,13 @@ curation_history:
   changes: Added nuclear-body parentage, nuclear-lumen parthood, CstF-64/CPSF-100
     components, human cleavage-body scope, mRNA 3'-end-processing context, a nonmechanistic
     cleavage-body positioning graph and a component-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-28T04:11:04Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1701 by moving cleavage body from RIBONUCLEOPROTEIN to OTHER
+    because this first record models a protein-rich nuclear body rather than a resident-RNA
+    ribonucleoprotein granule.'
   llm_assisted: true
 parent_structures:
 - GO:0016604

@@ -55,8 +55,8 @@ records, not records; phenotypes are TraitMech records. See
 | Category | Records | | Status | Records |
 |---|---:|---|---|---:|
 | MEMBRANE_ORGANELLE | 196 | | PROPOSED | 657 |
-| OTHER | 181 | |  |  |
-| RIBONUCLEOPROTEIN | 77 | |  |  |
+| OTHER | 182 | |  |  |
+| RIBONUCLEOPROTEIN | 76 | |  |  |
 | CYTOSKELETON | 60 | |  |  |
 | APPENDAGE | 42 | |  |  |
 | ENERGY_COMPLEX | 25 | |  |  |
