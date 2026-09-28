@@ -15,24 +15,29 @@ curation_history:
 - timestamp: '2026-09-28T15:05:50Z'
   curator: codex
   action: EXPANDED_RECORD
-  changes: Added GO-backed actin-fusion-focus synonymy, actin-cytoskeleton parentage,
-    mating-projection-tip parthood, an actin-filament constituent, a Schizosaccharomyces
-    example, Dudin et al. DOI evidence, a nonmechanistic Fus1-actin-focus wall-dissolution
-    graph, and a component-boundary TODO.
+  changes: Added GO-backed actin-fusion-focus synonymy, actin-cytoskeleton and mating-projection-tip
+    parthood, an actin-filament constituent, a Schizosaccharomyces example, Dudin
+    et al. DOI evidence, a nonmechanistic Fus1-actin-focus wall-dissolution graph,
+    and a component-boundary TODO.
   llm_assisted: true
 - timestamp: '2026-09-28T15:06:21Z'
   curator: codex
   action: FIXED_NOTE
   changes: Corrected the formin-nucleated actin aster graph evidence note.
   llm_assisted: true
+- timestamp: '2026-09-28T15:23:23Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1730 by moving GO:0015629 actin cytoskeleton from parent_structures
+    into part_of.'
+  llm_assisted: true
 synonyms:
 - synonym_text: actin fusion focus
   synonym_type: BROAD_SYNONYM
   source: GO:1990819
-parent_structures:
-- GO:0015629
 part_of:
 - GO:0043332
+- GO:0015629
 components:
 - component_id: actin_filaments
   label: actin filaments
@@ -82,7 +87,7 @@ evidence:
   notes: Gene Ontology cellular-component term for the mating projection actin fusion
     focus.
 - reference: GO:0015629
-  notes: Gene Ontology cellular-component parent for the actin cytoskeleton.
+  notes: Gene Ontology cellular-component term for the actin cytoskeleton.
 - reference: GO:0043332
   notes: Gene Ontology cellular-component term for the mating projection tip.
 - reference: DOI:10.1083/jcb.201411124
