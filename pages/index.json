@@ -3672,6 +3672,15 @@
   "definition": "A subcomplex of the DNA polymerase III holoenzyme which is responsible for tethering the catalytic subunit of DNA polymerase to DNA during high-speed replication. The complex is homodimeric in prokaryotes, and homotrimeric in other species."
  },
  {
+  "identifier": "GO:0043847",
+  "label": "DNA polymerase III, clamp loader chi/psi subcomplex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.html",
+  "definition": "A dimer composed of the chi and psi subunits which is a subassembly of the DNA polymerase III clamp loader complex and serves as a bridge between the DnaX complex and the single-stranded DNA-binding protein (SSB)."
+ },
+ {
   "identifier": "GO:0043846",
   "label": "DNA polymerase III, clamp loader complex",
   "category": "OTHER",

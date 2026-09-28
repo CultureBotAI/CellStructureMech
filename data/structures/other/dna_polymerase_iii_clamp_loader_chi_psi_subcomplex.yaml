@@ -1,0 +1,290 @@
+identifier: GO:0043847
+label: DNA polymerase III, clamp loader chi/psi subcomplex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A dimer composed of the chi and psi subunits which is a subassembly of
+  the DNA polymerase III clamp loader complex and serves as a bridge between the DnaX
+  complex and the single-stranded DNA-binding protein (SSB).
+definition_source: GO:0043847
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T11:43:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T11:44:53Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, protein-containing-complex parentage, clamp-loader
+    parthood, chi and psi components with E. coli K-12 protein examples, an E. coli
+    canonical example, DNA-replication function evidence, GO/PubMed/UniProtKB evidence,
+    a nonmechanistic adapter graph, and a grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-28T11:57:05Z'
+  curator: codex
+  action: REFINED_GRAPH
+  changes: Clarified the psi graph edge so PMID:8505305 supports psi binding the gamma
+    DnaX protein instead of a one-ended psi-to-chi bridge edge.
+  llm_assisted: true
+- timestamp: '2026-09-28T12:08:15Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: 'Fixed #1722 by adding PMID:8505305 to the chi and psi component evidence
+    lists so the local 1:1 stoichiometry and psi linkage claims are directly sourced.'
+  llm_assisted: true
+synonyms:
+- synonym_text: DNA polymerase III, DnaX complex, chi/psi subcomplex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0043847
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0043846
+components:
+- component_id: chi_subunit
+  label: DNA polymerase III chi subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - holC
+  stoichiometry: '1'
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The E. coli chi subunit is represented by reviewed UniProtKB:P28905
+    as a taxon-specific example; no exact source-neutral InterPro, Pfam, or NCBIfam
+    family was assigned for this first chi/psi split.
+  role: HolC chi constituent of the 1:1 chi/psi accessory dimer in the DNA polymerase
+    III clamp-loader complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P28905
+    protein_label: DNA polymerase III subunit chi
+    gene_symbol: holC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-28'
+    role: Reviewed E. coli K-12 HolC accession for the clamp-loader chi subunit.
+    evidence:
+    - reference: UniProtKB:P28905
+      notes: UniProtKB P28905 is the reviewed Escherichia coli K-12 holC entry for
+        DNA polymerase III subunit chi.
+  evidence:
+  - reference: GO:0043847
+    notes: GO:0043847 defines the chi/psi subcomplex as a dimer composed of the chi
+      and psi subunits.
+  - reference: PMID:8389364
+    notes: Xiao et al. 1993 identified holC as the E. coli gene encoding the DNA polymerase
+      III chi accessory protein.
+  - reference: PMID:8505305
+    notes: Xiao et al. 1993 characterized E. coli chi and psi as monomeric proteins
+      that associate to form a 1:1 complex.
+  - reference: UniProtKB:P28905
+    notes: UniProtKB P28905 is the reviewed E. coli K-12 holC entry for DNA polymerase
+      III subunit chi and is annotated to GO:0043846.
+- component_id: psi_subunit
+  label: DNA polymerase III psi subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - holD
+  stoichiometry: '1'
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The E. coli psi subunit is represented by reviewed UniProtKB:P28632
+    as a taxon-specific example; no exact source-neutral InterPro, Pfam, or NCBIfam
+    family was assigned for this first chi/psi split.
+  role: HolD psi constituent that binds chi and links it into the DNA polymerase III
+    gamma clamp-loader complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P28632
+    protein_label: DNA polymerase III subunit psi
+    gene_symbol: holD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-28'
+    role: Reviewed E. coli K-12 HolD accession for the clamp-loader psi subunit.
+    evidence:
+    - reference: UniProtKB:P28632
+      notes: UniProtKB P28632 is the reviewed Escherichia coli K-12 holD entry for
+        DNA polymerase III subunit psi.
+  evidence:
+  - reference: GO:0043847
+    notes: GO:0043847 defines the chi/psi subcomplex as a dimer composed of the chi
+      and psi subunits.
+  - reference: PMID:8389364
+    notes: Xiao et al. 1993 identified holD as the E. coli gene encoding the DNA polymerase
+      III psi accessory protein.
+  - reference: PMID:8505305
+    notes: Xiao et al. 1993 characterized E. coli psi as the gamma-binding partner
+      that bridges chi into the gamma clamp-loader complex.
+  - reference: UniProtKB:P28632
+    notes: UniProtKB P28632 is the reviewed E. coli K-12 holD entry for DNA polymerase
+      III subunit psi and is annotated to GO:0043846.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Source species for biochemical characterization of chi and psi as a 1:1 gamma-complex
+    accessory dimer.
+  reference: PMID:8505305
+functions:
+- function_id: dna_replication
+  label: DNA replication
+  grounding: GO:0006260
+  description: The chi/psi dimer contributes to Pol III replication as an accessory
+    clamp-loader subcomplex that brings chi into the gamma complex through psi.
+  evidence:
+  - reference: PMID:8505305
+    notes: Xiao et al. 1993 characterized E. coli chi and psi as a 1:1 gamma-complex
+      accessory dimer and found that psi links chi to gamma.
+  - reference: GO:0006260
+    notes: GO:0006260 is the Gene Ontology biological-process term for DNA replication.
+evidence:
+- reference: GO:0043847
+  notes: Gene Ontology cellular-component term for the DNA polymerase III clamp-loader
+    chi/psi subcomplex.
+- reference: GO:0043846
+  notes: Gene Ontology cellular-component term for the parent DNA polymerase III clamp-loader
+    complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0006260
+  notes: Gene Ontology biological-process term for DNA replication.
+- reference: PMID:12940977
+  notes: 'PubMed identifier for McHenry 2003, Chromosomal replicases as asymmetric
+    dimers: studies of subunit arrangement and functional consequences.'
+- reference: DOI:10.1046/j.1365-2958.2003.03645.x
+  notes: DOI for McHenry 2003 as reported by PubMed.
+- reference: PMID:8389364
+  notes: PubMed identifier for Xiao et al. 1993, DNA polymerase III accessory proteins.
+    III. holC and holD encoding chi and psi.
+- reference: PMID:8505305
+  notes: PubMed identifier for Xiao et al. 1993, DNA polymerase III accessory proteins.
+    IV. Characterization of chi and psi.
+- reference: PMID:7494000
+  notes: 'PubMed identifier for Olson, Dallmann and McHenry 1995, DnaX complex of
+    Escherichia coli DNA polymerase III holoenzyme: The chi psi complex functions
+    by increasing the affinity of tau and gamma for delta.delta''.'
+- reference: UniProtKB:P28905
+  notes: Reviewed UniProtKB accession for E. coli K-12 HolC.
+- reference: UniProtKB:P28632
+  notes: Reviewed UniProtKB accession for E. coli K-12 HolD.
+causal_graphs:
+- graph_id: chi_psi_clamp_loader_adaptor
+  title: Chi/psi joins the Pol III clamp loader
+  description: The DNA polymerase III chi/psi heterodimer combines HolC and HolD into
+    an accessory subcomplex that is incorporated into the clamp loader through psi.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records subunit membership and adapter-level connections
+    to DnaX proteins and SSB without modeling ATPase cycling or exact clamp-loader
+    conformational transitions.
+  nodes:
+  - node_id: chi_psi_subcomplex
+    label: DNA polymerase III, clamp loader chi/psi subcomplex
+    node_type: STRUCTURE
+    grounding: GO:0043847
+  - node_id: chi_subunit
+    label: DNA polymerase III chi subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: chi_subunit
+  - node_id: psi_subunit
+    label: DNA polymerase III psi subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: psi_subunit
+  - node_id: tau_gamma_dnax_products
+    label: DnaX tau/gamma products
+    node_type: GENE_OR_PROTEIN
+  - node_id: single_stranded_dna_binding_protein
+    label: single-stranded DNA-binding protein
+    node_type: GENE_OR_PROTEIN
+  - node_id: clamp_loader
+    label: DNA polymerase III, clamp loader complex
+    node_type: STRUCTURE
+    grounding: GO:0043846
+  - node_id: dna_replication
+    label: DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: chi_subunit
+    predicate: is part of
+    object: chi_psi_subcomplex
+    description: Chi is one of the two proteins in the DNA polymerase III clamp-loader
+      chi/psi subcomplex.
+    evidence:
+    - reference: GO:0043847
+      notes: GO:0043847 defines the clamp-loader chi/psi subcomplex as a dimer composed
+        of chi and psi.
+  - subject: psi_subunit
+    predicate: is part of
+    object: chi_psi_subcomplex
+    description: Psi is one of the two proteins in the DNA polymerase III clamp-loader
+      chi/psi subcomplex.
+    evidence:
+    - reference: GO:0043847
+      notes: GO:0043847 defines the clamp-loader chi/psi subcomplex as a dimer composed
+        of chi and psi.
+  - subject: chi_psi_subcomplex
+    predicate: is part of
+    object: clamp_loader
+    description: The chi/psi subcomplex is an accessory subassembly of the DNA polymerase
+      III clamp-loader complex.
+    evidence:
+    - reference: GO:0043847
+      notes: GO:0043847 defines chi/psi as a subassembly of the DNA polymerase III
+        clamp-loader complex.
+  - subject: psi_subunit
+    predicate: binds
+    object: tau_gamma_dnax_products
+    description: Psi links chi to the E. coli gamma complex by binding the gamma DnaX
+      protein.
+    evidence:
+    - reference: PMID:8505305
+      notes: Xiao et al. 1993 found that psi binds gamma tightly and bridges the interaction
+        of chi with gamma.
+  - subject: chi_psi_subcomplex
+    predicate: binds
+    object: tau_gamma_dnax_products
+    description: The purified E. coli chi/psi dimer binds the gamma or tau DnaX protein.
+    evidence:
+    - reference: PMID:7494000
+      notes: Olson et al. 1995 purified E. coli chi/psi and showed that it binds either
+        gamma or tau DnaX protein.
+  - subject: chi_psi_subcomplex
+    predicate: bridges to
+    object: single_stranded_dna_binding_protein
+    description: The chi/psi subcomplex bridges the clamp-loader DnaX assembly to
+      single-stranded DNA-binding protein.
+    evidence:
+    - reference: GO:0043847
+      notes: GO:0043847 states that the chi/psi subcomplex serves as a bridge between
+        the DnaX complex and SSB.
+  - subject: chi_psi_subcomplex
+    predicate: supports
+    object: dna_replication
+    description: Chi/psi contributes to E. coli Pol III replication through its gamma-complex
+      accessory role.
+    evidence:
+    - reference: PMID:8505305
+      notes: Xiao et al. 1993 showed that psi stimulates the ATPase and replication
+        activities of the gamma clamp-loader complex.
+discussions:
+- discussion_id: resolve_pol_iii_chi_psi_groundings
+  prompt: Resolve exact source-neutral HolC and HolD family grounding for DNA polymerase
+    III clamp-loader chi/psi components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#chi_subunit
+  - components#psi_subunit
+  rationale: This first GO:0043847 split captures reviewed E. coli K-12 UniProtKB
+    examples for the chi and psi subunits while leaving source-neutral protein-family
+    grounding to a later InterPro/Pfam/NCBIfam review.
+  evidence:
+  - reference: GO:0043847
+  - reference: UniProtKB:P28905
+  - reference: UniProtKB:P28632
+  posed_by: codex
+  posed_date: '2026-09-28'
