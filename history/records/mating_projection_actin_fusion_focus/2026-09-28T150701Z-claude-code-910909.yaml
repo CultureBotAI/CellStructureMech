@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+  slug: mating_projection_actin_fusion_focus
+session:
+  id: 2026-09-28T150701Z-claude-code-910909
+  timestamp: '2026-09-28T15:07:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add mating projection actin fusion focus record
+  details: Created data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+    for GO:1990819 with GO-backed synonymy, actin-cytoskeleton parentage, mating-projection-tip
+    parthood, a label-only actin-filament constituent, Schizosaccharomyces pombe distribution
+    and example evidence from DOI:10.1083/jcb.201411124, a nonmechanistic Fus1/type-V-myosin
+    wall-dissolution graph, and an open boundary TODO for exact Fus1, myosin, and hydrolase
+    family groundings.

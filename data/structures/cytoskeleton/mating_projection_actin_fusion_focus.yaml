@@ -1,0 +1,179 @@
+identifier: GO:1990819
+label: mating projection actin fusion focus
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A focus at the mating projection tip where the cell wall is degraded during
+  cytogamy. Actin filaments form an aster-like structure from this location.
+definition_source: GO:1990819
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T15:04:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T15:05:50Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO-backed actin-fusion-focus synonymy, actin-cytoskeleton parentage,
+    mating-projection-tip parthood, an actin-filament constituent, a Schizosaccharomyces
+    example, Dudin et al. DOI evidence, a nonmechanistic Fus1-actin-focus wall-dissolution
+    graph, and a component-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-28T15:06:21Z'
+  curator: codex
+  action: FIXED_NOTE
+  changes: Corrected the formin-nucleated actin aster graph evidence note.
+  llm_assisted: true
+synonyms:
+- synonym_text: actin fusion focus
+  synonym_type: BROAD_SYNONYM
+  source: GO:1990819
+parent_structures:
+- GO:0015629
+part_of:
+- GO:0043332
+components:
+- component_id: actin_filaments
+  label: actin filaments
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The fission-yeast actin fusion focus is modeled as an actin-filament
+    aster without asserting a source-neutral actin family grounding in this first
+    record.
+  role: Filamentous actin that assembles into the aster-like focus at the mating projection
+    tip fusion site.
+  evidence:
+  - reference: GO:1990819
+    notes: GO:1990819 defines the focus as a site from which actin filaments form
+      an aster-like structure.
+  - reference: DOI:10.1083/jcb.201411124
+    notes: Dudin et al. 2015 analyzed formin-nucleated actin aster formation at the
+      fission-yeast fusion site.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: VARIABLE
+  note: Fission-yeast mating cells form a formin-nucleated actin fusion focus at the
+    mating projection tip fusion site.
+  reference: DOI:10.1083/jcb.201411124
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Model in which Fus1-nucleated actin filaments and type V myosins concentrate
+    hydrolases at the mating-cell fusion focus.
+  reference: DOI:10.1083/jcb.201411124
+functions:
+- function_id: focused_mating_cell_wall_dissolution
+  label: focused mating-cell wall dissolution
+  description: The actin fusion focus concentrates cell-wall hydrolases at the mating
+    projection fusion site so wall dissolution occurs locally during cytogamy.
+  evidence:
+  - reference: GO:1990819
+    notes: GO:1990819 defines the actin fusion focus as a focus where the cell wall
+      is degraded during cytogamy.
+  - reference: DOI:10.1083/jcb.201411124
+    notes: Dudin et al. 2015 connected the actin focus and type V myosins with local
+      hydrolase concentration and cell-wall dissolution.
+evidence:
+- reference: GO:1990819
+  notes: Gene Ontology cellular-component term for the mating projection actin fusion
+    focus.
+- reference: GO:0015629
+  notes: Gene Ontology cellular-component parent for the actin cytoskeleton.
+- reference: GO:0043332
+  notes: Gene Ontology cellular-component term for the mating projection tip.
+- reference: DOI:10.1083/jcb.201411124
+  notes: Dudin et al. 2015, 'A formin-nucleated actin aster concentrates cell wall
+    hydrolases for cell fusion in fission yeast', Journal of Cell Biology.
+causal_graphs:
+- graph_id: fus1_actin_focus_wall_dissolution
+  title: Fus1-nucleated actin asters concentrate hydrolase delivery for wall dissolution
+  description: During Schizosaccharomyces pombe mating, Fus1 nucleates actin filaments
+    at the projection tip and the resulting actin fusion focus works with type V myosins
+    to concentrate hydrolases at the cell-fusion site.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph summarizes the Fus1, actin-focus, type V myosin, and hydrolase
+    relationships without asserting a complete timed transport pathway or a full inventory
+    of fusion-focus proteins.
+  nodes:
+  - node_id: fus1_formin
+    label: Fus1 formin
+    node_type: GENE_OR_PROTEIN
+  - node_id: actin_filaments
+    label: actin filaments
+    node_type: GENE_OR_PROTEIN
+    component_ref: actin_filaments
+  - node_id: actin_fusion_focus
+    label: mating projection actin fusion focus
+    node_type: STRUCTURE
+    grounding: GO:1990819
+  - node_id: type_v_myosins
+    label: type V myosins
+    node_type: GENE_OR_PROTEIN
+  - node_id: cell_wall_hydrolases
+    label: cell-wall hydrolases
+    node_type: GENE_OR_PROTEIN
+  - node_id: cell_wall_dissolution
+    label: cell wall dissolution
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: fus1_formin
+    predicate: nucleates
+    object: actin_filaments
+    description: Fus1 formin nucleates actin filaments for the fusion-site aster.
+    evidence:
+    - reference: DOI:10.1083/jcb.201411124
+      notes: Dudin et al. 2015 identified Fus1 as the formin that nucleates actin
+        at the fission-yeast fusion site.
+  - subject: actin_filaments
+    predicate: assemble into
+    object: actin_fusion_focus
+    description: Actin filaments form the aster-like mating projection actin fusion
+      focus.
+    evidence:
+    - reference: GO:1990819
+      notes: GO:1990819 defines the focus as the mating-tip site from which actin
+        filaments form an aster-like structure.
+    - reference: DOI:10.1083/jcb.201411124
+      notes: Dudin et al. 2015 studied formation of the formin-nucleated actin aster
+        during fission-yeast cell fusion.
+  - subject: type_v_myosins
+    predicate: concentrate
+    object: cell_wall_hydrolases
+    description: Type V myosins help concentrate cell-wall hydrolases at the fusion
+      focus.
+    evidence:
+    - reference: DOI:10.1083/jcb.201411124
+      notes: Dudin et al. 2015 implicated type V myosins in concentrating hydrolases
+        at the actin focus.
+  - subject: actin_fusion_focus
+    predicate: focalizes
+    object: cell_wall_dissolution
+    description: The actin fusion focus focalizes cell-wall dissolution at the projection
+      tip.
+    evidence:
+    - reference: DOI:10.1083/jcb.201411124
+      notes: Dudin et al. 2015 linked the actin focus to localized cell-wall dissolution
+        during fission-yeast cell fusion.
+discussions:
+- discussion_id: resolve_fus1_myo52_hydrolase_boundaries
+  prompt: Resolve exact source-neutral groundings and component boundaries for Fus1
+    formin, type V myosins, and fusion-focus cell-wall hydrolases.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#actin_filaments
+  - causal_graphs#fus1_actin_focus_wall_dissolution
+  rationale: This first actin-fusion-focus record models the actin-filament aster
+    directly and records Fus1, type V myosins, and hydrolases in the graph without
+    guessing family-level InterPro, Pfam, or UniProtKB groundings.
+  evidence:
+  - reference: DOI:10.1083/jcb.201411124
+    notes: Dudin et al. 2015 analyzed Fus1, type V myosins, and cell-wall hydrolase
+      delivery at the fission-yeast actin fusion focus.
+  posed_by: codex
+  posed_date: '2026-09-28'
