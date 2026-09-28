@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/interchromatin_granule.yaml
+  slug: interchromatin_granule
+session:
+  id: 2026-09-28T070822Z-claude-code-4afe4b
+  timestamp: '2026-09-28T07:08:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1708
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add interchromatin granule record
+  details: Created GO:0035061 interchromatin granule as a GO-grounded nuclear ribonucleoprotein
+    granule with SR splicing factor and spliceosomal snRNP components, Mus musculus IGC proteomics
+    scope, pre-mRNA processing reservoir evidence, an IGC/omega-speckle distinction graph
+    and a TODO for full snRNA, snRNP, SR-protein and RNA polymerase II boundaries.
