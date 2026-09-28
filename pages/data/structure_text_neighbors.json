@@ -2117,6 +2117,37 @@
       ]
     },
     {
+      "identifier": "GO:0032174",
+      "label": "cellular bud neck septin collar",
+      "neighbors": [
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.8666021
+        },
+        {
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.85930013
+        },
+        {
+          "identifier": "GO:0005935",
+          "label": "cellular bud neck",
+          "cosine_similarity": 0.79915709
+        },
+        {
+          "identifier": "GO:0032175",
+          "label": "mating projection septin ring",
+          "cosine_similarity": 0.77379133
+        },
+        {
+          "identifier": "GO:0031560",
+          "label": "cellular bud neck polarisome",
+          "cosine_similarity": 0.76685296
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:cetz_filament",
       "label": "CetZ filament",
       "neighbors": [
@@ -2565,6 +2596,11 @@
           "cosine_similarity": 0.86086984
         },
         {
+          "identifier": "GO:0032174",
+          "label": "cellular bud neck septin collar",
+          "cosine_similarity": 0.85930013
+        },
+        {
           "identifier": "GO:0036286",
           "label": "eisosome filament",
           "cosine_similarity": 0.72436953
@@ -2573,11 +2609,6 @@
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
           "cosine_similarity": 0.71986902
-        },
-        {
-          "identifier": "GO:0043332",
-          "label": "mating projection tip",
-          "cosine_similarity": 0.70824084
         }
       ]
     },
@@ -2596,6 +2627,11 @@
           "cosine_similarity": 0.85152624
         },
         {
+          "identifier": "GO:0032174",
+          "label": "cellular bud neck septin collar",
+          "cosine_similarity": 0.77379133
+        },
+        {
           "identifier": "GO:0030257",
           "label": "type III protein secretion system complex",
           "cosine_similarity": 0.66526582
@@ -2604,11 +2640,6 @@
           "identifier": "GO:1990586",
           "label": "divisome complex",
           "cosine_similarity": 0.66463079
-        },
-        {
-          "identifier": "GO:0020031",
-          "label": "polar ring of apical complex",
-          "cosine_similarity": 0.66459471
         }
       ]
     },
@@ -2896,6 +2927,11 @@
       "label": "septin ring",
       "neighbors": [
         {
+          "identifier": "GO:0032174",
+          "label": "cellular bud neck septin collar",
+          "cosine_similarity": 0.8666021
+        },
+        {
           "identifier": "GO:0032162",
           "label": "mating projection septin band",
           "cosine_similarity": 0.86086984
@@ -2914,11 +2950,6 @@
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
           "cosine_similarity": 0.75589341
-        },
-        {
-          "identifier": "GO:0005938",
-          "label": "cell cortex",
-          "cosine_similarity": 0.73388092
         }
       ]
     },
@@ -12020,6 +12051,11 @@
           "cosine_similarity": 0.81415825
         },
         {
+          "identifier": "GO:0032174",
+          "label": "cellular bud neck septin collar",
+          "cosine_similarity": 0.79915709
+        },
+        {
           "identifier": "GO:0005938",
           "label": "cell cortex",
           "cosine_similarity": 0.77139622
@@ -12028,11 +12064,6 @@
           "identifier": "GO:0033101",
           "label": "cellular bud membrane",
           "cosine_similarity": 0.76778664
-        },
-        {
-          "identifier": "GO:0031560",
-          "label": "cellular bud neck polarisome",
-          "cosine_similarity": 0.76667483
         }
       ]
     },
