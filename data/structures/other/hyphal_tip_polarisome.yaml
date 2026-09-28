@@ -26,6 +26,12 @@ curation_history:
   changes: Focused the BNI-1 mature-tip topology edge on the hyphal tip polarisome
     record instead of using a separate Spitzenkorper node.
   llm_assisted: true
+- timestamp: '2026-09-28T20:57:09Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1740 by attaching the non-tip boundary discussion to SPA-2 and
+    clarifying that SPA-2 septal-plug localization is outside the hyphal tip polarisome.'
+  llm_assisted: true
 parent_structures:
 - GO:0000133
 part_of:
@@ -212,20 +218,22 @@ discussions:
   kind: INTERPRETATION
   status: RESOLVED
   attaches_to:
+  - components#spa2_scaffold
   - components#bud6_actin_associated_polarity_protein
   - components#bni1_formin
   - causal_graphs#mature_hyphal_tip_polarisome_topology
-  rationale: Lichius et al. 2012 identified BUD-6 and BNI-1 functions at cell-fusion
-    sites, septa, and cytokinetic rings that are independent of the hyphal-tip polarisome,
-    so those assemblies are excluded from the GO:0031562 component boundary until
-    separate structure evidence is curated.
+  rationale: Lichius et al. 2012 observed SPA-2, BUD-6, and BNI-1 recruitment to septal
+    plugs and identified BUD-6 and BNI-1 functions at cell-fusion sites, septa, and
+    cytokinetic rings that are independent of the hyphal-tip polarisome, so those
+    assemblies are excluded from the GO:0031562 component boundary until separate
+    structure evidence is curated.
   resolution_note: Curated only mature-hyphal-tip SPA-2, BUD-6, and BNI-1 topology
-    and did not assert septal-plug, cell-fusion, or cytokinetic-ring assemblies as
-    parts of this record.
+    and did not assert septal-plug, cell-fusion, septation, or cytokinetic-ring assemblies
+    as parts of this record.
   evidence:
   - reference: DOI:10.1371/journal.pone.0030372
-    notes: Lichius et al. 2012 reported polarisome-independent BUD-6 and BNI-1 roles
-      in Neurospora.
+    notes: Lichius et al. 2012 reported SPA-2, BUD-6, and BNI-1 localization at septal
+      plugs and polarisome-independent BUD-6 and BNI-1 roles in Neurospora.
   posed_by: codex
   posed_date: '2026-09-28'
   resolved_date: '2026-09-28'
