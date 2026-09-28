@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/reservosome_matrix.yaml
+  slug: reservosome_matrix
+session:
+  id: 2026-09-28T125559Z-codex-08e4bf
+  timestamp: '2026-09-28T12:55:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1724
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1723
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Addressed reservosome matrix review issue
+  details: 'Resolved #1724 by moving reservosome matrix parthood and the reservosome graph
+    node from GO:0106123 to the curated local cellstructuremech:reservosome record while retaining
+    the GO term as supporting evidence.'
