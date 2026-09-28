@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/perinucleolar_compartment.yaml
+  slug: perinucleolar_compartment
+session:
+  id: 2026-09-28T021107Z-codex-cde602
+  timestamp: '2026-09-28T02:11:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1697
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1696
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add the perinucleolar compartment record
+  details: Created a GO:0097356 perinucleolar compartment record with GO definition provenance,
+    nuclear-lumen parthood, perinucleolar-region and PNC synonymy, label-only PTB and RNA
+    polymerase III transcript components, Homo sapiens evidence from primary PNC studies,
+    a nonmechanistic PTB/pol III RNA organization graph, and a follow-up TODO for exact component
+    boundary grounding.
