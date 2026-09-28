@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/mating_projection.yaml
+  slug: mating_projection
+session:
+  id: 2026-09-28T132720Z-claude-code-ae785b
+  timestamp: '2026-09-28T13:27:20Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add a GO-grounded mating projection record
+  details: Added a GO:0005937 mating projection record under APPENDAGE with GO-backed shmoo
+    synonymy, GO:0120025 parentage, mating-projection membrane/tip/base/septin parts, Saccharomyces
+    cerevisiae distribution, a polarized-growth function, Read/Bidlingmaier/Douglas/Valtz
+    literature evidence, and a boundary decision keeping polarisome and septin proteins on
+    their own localized-structure records.
