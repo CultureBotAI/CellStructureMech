@@ -17254,6 +17254,11 @@
           "cosine_similarity": 0.82901122
         },
         {
+          "identifier": "GO:0035061",
+          "label": "interchromatin granule",
+          "cosine_similarity": 0.72330891
+        },
+        {
           "identifier": "GO:0000932",
           "label": "P-body",
           "cosine_similarity": 0.72205285
@@ -17267,11 +17272,6 @@
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.68543776
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.68203273
         }
       ]
     },
@@ -17357,14 +17357,45 @@
           "cosine_similarity": 0.70150254
         },
         {
+          "identifier": "GO:0035061",
+          "label": "interchromatin granule",
+          "cosine_similarity": 0.6832666
+        },
+        {
           "identifier": "GO:0000417",
           "label": "HIR complex",
           "cosine_similarity": 0.68014827
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0035061",
+      "label": "interchromatin granule",
+      "neighbors": [
+        {
+          "identifier": "GO:0097165",
+          "label": "nuclear stress granule",
+          "cosine_similarity": 0.75168361
         },
         {
-          "identifier": "GO:0005685",
-          "label": "U1 snRNP",
-          "cosine_similarity": 0.67517837
+          "identifier": "GO:0016607",
+          "label": "nuclear speck",
+          "cosine_similarity": 0.74528706
+        },
+        {
+          "identifier": "GO:0097526",
+          "label": "spliceosomal tri-snRNP complex",
+          "cosine_similarity": 0.73538509
+        },
+        {
+          "identifier": "GO:0005684",
+          "label": "U2-type spliceosomal complex",
+          "cosine_similarity": 0.72851378
+        },
+        {
+          "identifier": "GO:0071010",
+          "label": "prespliceosome",
+          "cosine_similarity": 0.72837661
         }
       ]
     },
@@ -17502,6 +17533,11 @@
           "cosine_similarity": 0.76300079
         },
         {
+          "identifier": "GO:0035061",
+          "label": "interchromatin granule",
+          "cosine_similarity": 0.74528706
+        },
+        {
           "identifier": "GO:0071008",
           "label": "U2-type post-mRNA release spliceosomal complex",
           "cosine_similarity": 0.74247187
@@ -17515,11 +17551,6 @@
           "identifier": "GO:0097526",
           "label": "spliceosomal tri-snRNP complex",
           "cosine_similarity": 0.72591779
-        },
-        {
-          "identifier": "GO:0097165",
-          "label": "nuclear stress granule",
-          "cosine_similarity": 0.72561953
         }
       ]
     },
@@ -17531,6 +17562,11 @@
           "identifier": "GO:0010494",
           "label": "cytoplasmic stress granule",
           "cosine_similarity": 0.82901122
+        },
+        {
+          "identifier": "GO:0035061",
+          "label": "interchromatin granule",
+          "cosine_similarity": 0.75168361
         },
         {
           "identifier": "GO:0016607",
@@ -17546,11 +17582,6 @@
           "identifier": "GO:0031981",
           "label": "nuclear lumen",
           "cosine_similarity": 0.64350626
-        },
-        {
-          "identifier": "GO:1990251",
-          "label": "nuclear exosome focus",
-          "cosine_similarity": 0.63891228
         }
       ]
     },
@@ -17688,6 +17719,11 @@
           "cosine_similarity": 0.71595719
         },
         {
+          "identifier": "GO:0035061",
+          "label": "interchromatin granule",
+          "cosine_similarity": 0.71369839
+        },
+        {
           "identifier": "GO:0015030",
           "label": "Cajal body",
           "cosine_similarity": 0.67244389
@@ -17701,11 +17737,6 @@
           "identifier": "GO:0097526",
           "label": "spliceosomal tri-snRNP complex",
           "cosine_similarity": 0.65918117
-        },
-        {
-          "identifier": "GO:0035062",
-          "label": "omega speckle",
-          "cosine_similarity": 0.65362351
         }
       ]
     },
