@@ -1,0 +1,178 @@
+identifier: GO:0032177
+label: cellular bud neck split septin rings
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: Two separate septin rings that are formed from the septin collar at the
+  time of cytokinesis in cells that divide by budding. These two rings are thought
+  to delineate a special compartment in which factors involved in cytokinesis are
+  concentrated.
+definition_source: GO:0032177
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T23:33:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T23:34:27Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added split-ring parentage, bud-neck parthood, a label-only septin constituent,
+    a cytokinetic-compartment boundary function, GO evidence, a nonmechanistic collar-to-split-ring
+    topology graph, and split-ring boundary and component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0032176
+- GO:0032161
+part_of:
+- GO:0005935
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The bud-neck split septin rings are a cytokinetic state of a localized
+    septin array assembled from multiple septin GTPases; no exact source-neutral protein-family
+    CURIE was assigned for the complete fungal split-ring cohort.
+  role: Septin GTPases that remain in the two cytokinetic rings produced from the
+    bud-neck septin collar.
+  evidence:
+  - reference: GO:0032177
+    notes: GO:0032177 defines the cellular bud neck split septin rings as two septin
+      rings formed from the bud-neck septin collar.
+  - reference: GO:0032161
+    notes: GO:0032161 defines cleavage-apparatus septin structures as septin- and
+      septin-associated-protein structures localized to the cleavage plane.
+functions:
+- function_id: cytokinetic_compartment_boundary
+  label: cytokinetic compartment boundary
+  description: The cellular bud neck split septin rings flank the budding-cell cytokinesis
+    site and delineate a compartment in which cytokinesis factors are concentrated.
+  evidence:
+  - reference: GO:0032177
+    notes: GO:0032177 defines the bud-neck split rings as two separate septin rings
+      formed at cytokinesis and thought to delineate a cytokinesis-factor compartment.
+  - reference: GO:0032176
+    notes: GO:0032176 defines split septin rings as a pair of rings flanking the division
+      site after a septin ring or collar splits before cytokinesis.
+evidence:
+- reference: GO:0032177
+  notes: Gene Ontology cellular-component term for the cellular bud neck split septin
+    rings.
+- reference: GO:0032176
+  notes: Gene Ontology cellular-component parent term for split septin rings.
+- reference: GO:0032161
+  notes: Gene Ontology cellular-component parent term for cleavage apparatus septin
+    structures.
+- reference: GO:0032174
+  notes: Gene Ontology cellular-component term for the cellular bud neck septin collar
+    that gives rise to the split rings.
+- reference: GO:0005935
+  notes: Gene Ontology cellular-component term for the cellular bud neck.
+causal_graphs:
+- graph_id: bud_neck_split_septin_rings_topology
+  title: Bud-neck split septin-rings topology
+  description: At budding-cell cytokinesis, the bud-neck septin collar separates into
+    two septin rings that flank a cytokinesis-factor compartment.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the topological collar-to-split-ring transition
+    without asserting a molecular mechanism for septin-collar splitting or for recruiting
+    cytokinesis factors between the rings.
+  nodes:
+  - node_id: cellular_bud_neck_septin_collar
+    label: cellular bud neck septin collar
+    node_type: STRUCTURE
+    grounding: GO:0032174
+  - node_id: cellular_bud_neck_split_septin_rings
+    label: cellular bud neck split septin rings
+    node_type: STRUCTURE
+    grounding: GO:0032177
+  - node_id: cytokinesis_factor_compartment
+    label: cytokinesis-factor compartment
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: cellular_bud_neck
+    label: cellular bud neck
+    node_type: STRUCTURE
+    grounding: GO:0005935
+  edges:
+  - subject: cellular_bud_neck_septin_collar
+    predicate: splits into
+    object: cellular_bud_neck_split_septin_rings
+    description: The cellular bud neck septin collar forms two separate septin rings
+      at cytokinesis.
+    evidence:
+    - reference: GO:0032177
+      notes: GO:0032177 defines the bud-neck split septin rings as two separate septin
+        rings formed from the septin collar at cytokinesis.
+  - subject: cellular_bud_neck_split_septin_rings
+    predicate: delineates
+    object: cytokinesis_factor_compartment
+    description: The pair of split septin rings is thought to delineate a compartment
+      concentrating cytokinesis factors.
+    evidence:
+    - reference: GO:0032177
+      notes: GO:0032177 describes the two rings as thought to delineate a cytokinesis-factor
+        compartment.
+  - subject: cellular_bud_neck_split_septin_rings
+    predicate: is part of
+    object: cellular_bud_neck
+    description: The cellular bud neck split septin rings are localized to the bud
+      neck of a budding cell.
+    evidence:
+    - reference: GO:0032177
+      notes: GO:0032177 identifies the bud-neck-localized split septin rings.
+    - reference: GO:0005935
+      notes: GO:0005935 identifies the cellular bud neck.
+discussions:
+- discussion_id: bud_neck_split_septin_rings_boundary
+  prompt: Keep the cellular bud neck split septin rings distinct from the initial
+    bud-neck septin ring and the bud-neck septin collar.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - causal_graphs#bud_neck_split_septin_rings_topology
+  rationale: GO:0000144 denotes the dynamic initial bud-neck ring that forms at bud
+    emergence, GO:0032174 denotes the fixed hourglass-shaped collar that persists
+    for most of the cell cycle, and GO:0032177 denotes the two split rings formed
+    from the collar at cytokinesis. This record models only the cytokinetic split-ring
+    state.
+  resolution_note: Curated GO:0032177 as the bud-neck split-ring pair and used GO:0032174
+    only as the topology node for the precursor collar.
+  evidence:
+  - reference: GO:0000144
+    notes: GO:0000144 identifies the dynamic cellular bud neck septin ring that forms
+      at the time of bud emergence.
+  - reference: GO:0032174
+    notes: GO:0032174 identifies the fixed hourglass-shaped cellular bud neck septin
+      collar.
+  - reference: GO:0032177
+    notes: GO:0032177 identifies the pair of split septin rings that form from the
+      bud-neck collar at cytokinesis.
+  posed_by: codex
+  posed_date: '2026-09-28'
+  resolved_date: '2026-09-28'
+- discussion_id: resolve_bud_neck_split_ring_components
+  prompt: Resolve exact source-neutral family groundings and the boundary of bud-neck
+    split-ring septins and septin-associated proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#septin_proteins
+  rationale: The first bud-neck split-ring record keeps only the reviewed-label-only
+    septin protein cohort rather than guessing InterPro, Pfam, or NCBIfam accessions
+    and rather than adding septin-associated proteins before their exact constituent
+    boundary has been reviewed.
+  evidence:
+  - reference: GO:0032161
+    notes: GO:0032161 defines cleavage-apparatus septin structures as composed of
+      septins and septin-associated proteins.
+  - reference: GO:0032177
+    notes: GO:0032177 defines the bud-neck split rings as two septin rings formed
+      from the septin collar.
+  posed_by: codex
+  posed_date: '2026-09-28'
