@@ -14665,9 +14665,40 @@
           "cosine_similarity": 0.75336333
         },
         {
-          "identifier": "GO:0044615",
-          "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.74097934
+          "identifier": "GO:1990251",
+          "label": "nuclear exosome focus",
+          "cosine_similarity": 0.74239603
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990251",
+      "label": "nuclear exosome focus",
+      "neighbors": [
+        {
+          "identifier": "GO:0000176",
+          "label": "nuclear exosome (RNase complex)",
+          "cosine_similarity": 0.77543296
+        },
+        {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.74239603
+        },
+        {
+          "identifier": "GO:0000178",
+          "label": "exosome (RNase complex)",
+          "cosine_similarity": 0.74108778
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.73302087
+        },
+        {
+          "identifier": "GO:0101019",
+          "label": "nucleolar exosome (RNase complex)",
+          "cosine_similarity": 0.73008041
         }
       ]
     },
@@ -15275,6 +15306,11 @@
           "cosine_similarity": 0.65459135
         },
         {
+          "identifier": "GO:1990251",
+          "label": "nuclear exosome focus",
+          "cosine_similarity": 0.64344669
+        },
+        {
           "identifier": "GO:0015030",
           "label": "Cajal body",
           "cosine_similarity": 0.63287815
@@ -15283,11 +15319,6 @@
           "identifier": "GO:0044615",
           "label": "nuclear pore nuclear basket",
           "cosine_similarity": 0.62057203
-        },
-        {
-          "identifier": "GO:0097356",
-          "label": "perinucleolar compartment",
-          "cosine_similarity": 0.61872195
         }
       ]
     },
@@ -17486,9 +17517,9 @@
           "cosine_similarity": 0.64350626
         },
         {
-          "identifier": "GO:0015030",
-          "label": "Cajal body",
-          "cosine_similarity": 0.63281651
+          "identifier": "GO:1990251",
+          "label": "nuclear exosome focus",
+          "cosine_similarity": 0.63891228
         }
       ]
     },

@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_exosome_focus.yaml
+  slug: nuclear_exosome_focus
+session:
+  id: 2026-09-28T045727Z-codex-4e9fb1
+  timestamp: '2026-09-28T04:57:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1703
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - record
+  - evidence
+  - components
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add nuclear exosome focus record
+  details: Created GO:1990251 nuclear exosome focus as a GO-grounded nuclear body record after
+    a hidden and ignored file-inclusive duplicate search for the GO CURIE, label variants,
+    Mmi1 focus synonym, MTREC/NURS names, primary DOI values and PMIDs. Added nuclear-body
+    parentage, nuclear-lumen parthood, a has_part link to the nuclear exosome RNase complex,
+    Mmi1 and nuclear exosome constituents, Schizosaccharomyces pombe scope, nuclear mRNA surveillance
+    of meiosis-specific transcripts as a GO-backed function, DOI/PMID/GO evidence, a nonmechanistic
+    MTREC/NURS recruitment graph, and an open boundary TODO for MTREC/NURS, Red1, Mtl1 and
+    candidate RNA substrates. Validated the new record through the guarded writer.
