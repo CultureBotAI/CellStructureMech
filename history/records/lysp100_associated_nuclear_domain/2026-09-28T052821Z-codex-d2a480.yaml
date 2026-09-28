@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/lysp100_associated_nuclear_domain.yaml
+  slug: lysp100_associated_nuclear_domain
+session:
+  id: 2026-09-28T052821Z-codex-d2a480
+  timestamp: '2026-09-28T05:28:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1704
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add LYSP100-associated nuclear domain
+  details: Created GO:0016606 LYSP100-associated nuclear domain with LAND synonymy, nuclear-body
+    parentage, nuclear-lumen parthood, the LYSp100B/Sp140 defining component, Homo sapiens
+    scope, Bright-dependent IgH enhancer evidence, and a TODO for LAND/PML/Bright component
+    boundaries.

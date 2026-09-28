@@ -1,0 +1,180 @@
+identifier: GO:0016606
+label: LYSP100-associated nuclear domain
+structure_category: OTHER
+structure_kind: OTHER
+definition: A nuclear body that is enriched in the lymphoid cell-specific protein
+  LYSp100B; LANDs are globular, electron-dense structures and are morphologically
+  distinct from the annular structures characteristic of PML bodies.
+definition_source: GO:0016606
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T05:26:18Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T05:27:30Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO LAND synonymy, nuclear-body parentage, nuclear-lumen parthood,
+    LYSp100B/Sp140 component curation, human LAND scope, Bright-dependent IgH enhancer
+    function evidence, a nonmechanistic LYSp100B redistribution graph and a LAND/PML/Bright
+    boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: LANDs
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016606
+parent_structures:
+- GO:0016604
+part_of:
+- GO:0031981
+components:
+- component_id: lysp100b_sp140
+  label: LYSp100B/Sp140
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SP140
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: LYSp100B/Sp140 is curated as the human lymphoid SP100-homolog protein
+    enriched in LANDs; no exact source-neutral InterPro, Pfam or NCBIfam accession
+    was assigned in this first record.
+  role: Lymphoid-cell SP100 homolog that concentrates in LANDs and can be redistributed
+    by the Bright/ARID3A transcription factor.
+  evidence:
+  - reference: PMID:8695863
+    notes: Dent et al. 1996 cloned human LYSP100 and localized LYSP100 protein to
+      LAND nuclear dots that were mostly nonoverlapping with PML nuclear bodies.
+  - reference: DOI:10.1093/emboj/19.15.4123
+    notes: Zong, Das and Tucker 2000 analyzed the LYSp100B/Sp140 homolog of Sp100
+      and its redistribution from LANDs after interaction with Bright.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: VARIABLE
+  note: LANDs were defined around human lymphoid-cell LYSP100, with HeLa transfection
+    used to show that LYSP100B can generate LAND-like nuclear dots.
+  reference: PMID:8695863
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Human LYSP100/LYSp100B was cloned and localized to globular, electron-dense
+    LAND nuclear domains distinct from PML nuclear bodies.
+  reference: PMID:8695863
+functions:
+- function_id: bright_dependent_igh_enhancer_regulation
+  label: Bright-dependent immunoglobulin heavy-chain enhancer regulation
+  description: LYSp100B/Sp140 can interact with the Bright/ARID3A matrix-attachment
+    region-binding transcription factor and is redistributed from LANDs while stimulating
+    Bright transactivation through the immunoglobulin heavy-chain intronic enhancer.
+  evidence:
+  - reference: DOI:10.1093/emboj/19.15.4123
+    notes: Zong, Das and Tucker 2000 connected LYSp100B, Bright and LAND redistribution
+      with matrix-attachment-region-dependent IgH enhancer transcription in lymphoid
+      cells.
+evidence:
+- reference: GO:0016606
+  notes: Gene Ontology cellular-component term for LYSP100-associated nuclear domains
+    and the exact LANDs synonym.
+- reference: GO:0016604
+  notes: Gene Ontology cellular-component parent term for nuclear body.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for the nuclear lumen; LANDs are LYSP100-associated
+    nuclear bodies.
+- reference: PMID:8695863
+  notes: 'Dent et al. 1996, LYSP100-associated nuclear domains (LANDs): description
+    of a new class of subnuclear structures and their relationship to PML nuclear
+    bodies, Blood.'
+- reference: DOI:10.1093/emboj/19.15.4123
+  notes: Zong, Das and Tucker 2000, Regulation of matrix attachment region-dependent,
+    lymphocyte-restricted transcription through differential localization within promyelocytic
+    leukemia nuclear bodies, EMBO Journal.
+causal_graphs:
+- graph_id: lysp100b_land_redistribution
+  title: LYSp100B marks LANDs and is redistributed by Bright
+  description: LYSp100B/Sp140 concentrates in globular LAND nuclear domains distinct
+    from PML bodies and can redistribute from LANDs when it interacts with the Bright/ARID3A
+    immunoglobulin transcription factor.
+  graph_kind: REGULATION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures LYSp100B as the defining LAND protein and Bright
+    as an interacting regulator without assigning Bright, PML, SP100 or nuclear-matrix
+    material as stable LAND constituents.
+  nodes:
+  - node_id: lysp100b_sp140
+    label: LYSp100B/Sp140
+    node_type: GENE_OR_PROTEIN
+    component_ref: lysp100b_sp140
+  - node_id: bright_arid3a
+    label: Bright/ARID3A
+    node_type: GENE_OR_PROTEIN
+  - node_id: lysp100_associated_nuclear_domain
+    label: LYSP100-associated nuclear domain
+    node_type: STRUCTURE
+    grounding: GO:0016606
+  - node_id: pml_body
+    label: PML body
+    node_type: STRUCTURE
+    grounding: GO:0016605
+  - node_id: igh_enhancer_transactivation
+    label: IgH enhancer transactivation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: lysp100b_sp140
+    predicate: localizes to
+    object: lysp100_associated_nuclear_domain
+    description: LYSP100/LYSp100B localizes to LAND nuclear dots that are largely
+      distinct from PML nuclear bodies.
+    evidence:
+    - reference: PMID:8695863
+      notes: Dent et al. 1996 used immunofluorescence and immunoelectron microscopy
+        to localize LYSP100 to LANDs.
+  - subject: lysp100_associated_nuclear_domain
+    predicate: is distinct from
+    object: pml_body
+    description: LANDs are globular, electron-dense domains and differ from the annular
+      structures typical of PML nuclear bodies.
+    evidence:
+    - reference: GO:0016606
+      notes: GO:0016606 defines LANDs as morphologically distinct from PML bodies.
+    - reference: PMID:8695863
+      notes: Dent et al. 1996 described the morphological and biochemical distinction
+        between LANDs and PML bodies.
+  - subject: bright_arid3a
+    predicate: redistributes
+    object: lysp100b_sp140
+    description: Bright interacts with LYSp100B and redistributes it from LANDs into
+      the nucleoplasm and cytoplasm.
+    evidence:
+    - reference: DOI:10.1093/emboj/19.15.4123
+      notes: Zong, Das and Tucker 2000 reported Bright-dependent redistribution of
+        LYSp100B from its associated LANDs.
+  - subject: lysp100b_sp140
+    predicate: modulates
+    object: igh_enhancer_transactivation
+    description: LYSp100B affects Bright-dependent immunoglobulin heavy-chain enhancer
+      transactivation.
+    evidence:
+    - reference: DOI:10.1093/emboj/19.15.4123
+      notes: Zong, Das and Tucker 2000 found that LYSp100B strongly stimulated Bright
+        transactivation through the E mu enhancer.
+discussions:
+- discussion_id: resolve_land_component_boundaries
+  prompt: Resolve exact LAND protein-family boundaries and the relationship between
+    LYSp100B-only LANDs, PML-positive LANDs, SP100 and Bright/ARID3A.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#lysp100b_sp140
+  - causal_graphs#lysp100b_land_redistribution
+  rationale: This first GO:0016606 record captures LYSp100B/Sp140 as the defining
+    LAND-enriched protein while leaving the subset of LANDs that contain PML, the
+    weaker LYSp100B-Bright interaction, exact SP140 isoform boundaries and the stable-resident
+    status of PML, SP100 and Bright to a separate curation pass.
+  evidence:
+  - reference: PMID:8695863
+  - reference: DOI:10.1093/emboj/19.15.4123
+  posed_by: codex
+  posed_date: '2026-09-28'
