@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_polymerase_iii_core_complex.yaml
+  slug: dna_polymerase_iii_core_complex
+session:
+  id: 2026-09-28T084709Z-claude-code-2827e7
+  timestamp: '2026-09-28T08:47:09Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1712
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add DNA polymerase III core complex record
+  details: Created GO:0044776 DNA polymerase III core complex as a GO-grounded protein subassembly
+    of the DNA polymerase III holoenzyme, with GO DNA polymerase complex parentage, alpha,
+    epsilon and theta label-only components, an Escherichia coli canonical example, Maki and
+    Kornberg 1988 evidence for polymerase and proofreading activities, a nonmechanistic Pol
+    III core graph, and an open TODO for exact DnaE, DnaQ, HolE and Gram-positive PolC-versus-DnaE
+    boundaries.

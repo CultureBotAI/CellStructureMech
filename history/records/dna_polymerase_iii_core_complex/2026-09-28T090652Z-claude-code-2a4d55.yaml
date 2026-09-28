@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_polymerase_iii_core_complex.yaml
+  slug: dna_polymerase_iii_core_complex
+session:
+  id: 2026-09-28T090652Z-claude-code-2a4d55
+  timestamp: '2026-09-28T09:06:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1713
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1714
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1712
+events:
+- type: EDIT
+  outcome: changed
+  summary: Resolve DNA polymerase III core review issues
+  details: 'Resolved PR #1712 review issues #1713 and #1714 by narrowing the GO:0003887 function
+    description and evidence notes to DNA-directed DNA polymerase activity and by changing
+    alpha, epsilon and theta graph predicates from unsupported assembly wording to membership
+    wording.'
