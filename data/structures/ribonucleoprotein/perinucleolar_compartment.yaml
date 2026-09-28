@@ -1,0 +1,209 @@
+identifier: GO:0097356
+label: perinucleolar compartment
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: The perinucleolar compartment (PNC) is a subnuclear structure associated
+  with, but structurally distinct from, the nucleolus. The PNC contains large amounts
+  of the heterogeneous nuclear ribonucleoprotein complex (hnRNP) called hnRNP 1 (PTB).
+  Many RNA binding proteins as well as RNA polymerase III transcripts are highly enriched
+  in this compartment. PTB and pol III transcripts are required for the integrity
+  of the PNC.
+definition_source: GO:0097356
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T02:09:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T02:10:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added perinucleolar-compartment synonymy, nuclear-lumen parthood, label-only
+    PTB and RNA polymerase III transcript components, Homo sapiens scope, DOI/GO evidence,
+    a nonmechanistic PTB/pol III RNA organization graph and a component-boundary TODO.
+  llm_assisted: true
+- timestamp: '2026-09-28T02:22:00Z'
+  curator: codex
+  action: TIGHTENED_GRAPH
+  changes: Split the PTB/pol III transcript integrity edge into direct PTB-to-PNC
+    and pol III RNA-to-PNC integrity edges.
+  llm_assisted: true
+- timestamp: '2026-09-28T02:22:36Z'
+  curator: codex
+  action: NORMALIZED_YAML
+  changes: Normalized the duplicated PNC-integrity graph evidence lists so the record
+    emits without YAML aliases.
+  llm_assisted: true
+synonyms:
+- synonym_text: perinucleolar region
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097356
+- synonym_text: PNC
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1083/jcb.129.5.1181
+part_of:
+- GO:0031981
+components:
+- component_id: polypyrimidine_tract_binding_protein
+  label: polypyrimidine tract-binding protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PTB is represented as the hnRNP I protein enriched in and required
+    for the human perinucleolar compartment; no exact source-neutral InterPro, Pfam
+    or NCBIfam accession was assigned in this first record.
+  role: RNA-binding protein concentrated in the PNC and required with RNA polymerase
+    III transcripts to maintain PNC integrity.
+  evidence:
+  - reference: DOI:10.1083/jcb.129.5.1181
+    notes: Matera et al. 1995 identified hnRNP I/PTB as a protein concentrated in
+      the perinucleolar compartment.
+  - reference: DOI:10.1091/mbc.E02-12-0818
+    notes: Wang et al. 2003 showed that PTB and RNA polymerase III transcripts are
+      essential for perinucleolar compartment integrity.
+- component_id: rna_polymerase_iii_transcripts
+  label: RNA polymerase III transcript cohort
+  component_type: RNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The perinucleolar compartment contains several RNA polymerase III
+    transcripts, including Y RNAs and RNase P and RNase MRP RNAs in the original human-cell
+    study; no single Sequence Ontology CURIE covers this heterogeneous PNC-resident
+    RNA cohort.
+  role: Pol III-transcribed RNAs concentrated in the PNC and required with PTB for
+    visible PNC integrity.
+  evidence:
+  - reference: DOI:10.1083/jcb.129.5.1181
+    notes: Matera et al. 1995 found human Y RNAs, RNase P RNA and RNase MRP RNA colocalized
+      in perinucleolar compartments.
+  - reference: DOI:10.1091/mbc.E02-12-0818
+    notes: Wang et al. 2003 showed that RNA polymerase III transcripts and PTB are
+      essential for PNC integrity.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: VARIABLE
+  note: Human cultured cells were used to define the PNC as a perinucleolar focus
+    enriched in PTB and RNA polymerase III transcripts.
+  reference: DOI:10.1083/jcb.129.5.1181
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: HeLa-derived human cells were used to identify Y RNAs, RNase P RNA, RNase
+    MRP RNA and hnRNP I/PTB within the perinucleolar compartment.
+  reference: DOI:10.1083/jcb.129.5.1181
+functions:
+- function_id: pol_iii_rnp_compartment_organization
+  label: RNA polymerase III RNP compartment organization
+  description: Perinucleolar compartments concentrate PTB and multiple RNA polymerase
+    III transcripts in a dynamic subnuclear structure associated with the nucleolus.
+  evidence:
+  - reference: DOI:10.1083/jcb.129.5.1181
+    notes: Matera et al. 1995 described the PNC as a subnuclear compartment containing
+      several RNA polymerase III transcripts and hnRNP I/PTB.
+  - reference: DOI:10.1083/jcb.137.5.965
+    notes: Huang et al. 1997 analyzed the dynamic organization of the perinucleolar
+      compartment in the cell nucleus.
+evidence:
+- reference: GO:0097356
+  notes: Gene Ontology cellular-component term for perinucleolar compartment and its
+    exact perinucleolar-region synonym.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen and GO:0097356 parthood
+    target.
+- reference: DOI:10.1083/jcb.129.5.1181
+  notes: Matera, Frey, Margelot and Wolin 1995, A perinucleolar compartment contains
+    several RNA polymerase III transcripts as well as the polypyrimidine tract-binding
+    protein, hnRNP I, Journal of Cell Biology.
+- reference: DOI:10.1083/jcb.137.5.965
+  notes: Huang, Deerinck, Ellisman and Spector 1997, The Dynamic Organization of the
+    Perinucleolar Compartment in the Cell Nucleus, Journal of Cell Biology.
+- reference: DOI:10.1091/mbc.E02-12-0818
+  notes: Wang, Politz, Pederson and Huang 2003, RNA Polymerase III Transcripts and
+    the PTB Protein Are Essential for the Integrity of the Perinucleolar Compartment,
+    Molecular Biology of the Cell.
+- reference: DOI:10.1101/cshperspect.a000679
+  notes: Pollock and Huang 2010, The Perinucleolar Compartment, Cold Spring Harbor
+    Perspectives in Biology.
+causal_graphs:
+- graph_id: ptb_pol_iii_pnc_organization
+  title: PTB and pol III RNAs organize the PNC
+  description: Human perinucleolar compartments concentrate polypyrimidine tract-binding
+    protein together with several RNA polymerase III transcripts, and both classes
+    are needed for visible PNC integrity.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes the canonical PTB and pol III RNA axis without
+    asserting a complete PNC assembly pathway, all PNC-resident RNA-binding proteins
+    or every enriched pol III transcript species.
+  nodes:
+  - node_id: polypyrimidine_tract_binding_protein
+    label: polypyrimidine tract-binding protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: polypyrimidine_tract_binding_protein
+  - node_id: rna_polymerase_iii_transcripts
+    label: RNA polymerase III transcript cohort
+    node_type: RNA
+    component_ref: rna_polymerase_iii_transcripts
+  - node_id: perinucleolar_compartment
+    label: perinucleolar compartment
+    node_type: STRUCTURE
+    grounding: GO:0097356
+  edges:
+  - subject: polypyrimidine_tract_binding_protein
+    predicate: localizes to
+    object: perinucleolar_compartment
+    description: hnRNP I/PTB concentrates in perinucleolar compartments.
+    evidence:
+    - reference: DOI:10.1083/jcb.129.5.1181
+      notes: Matera et al. 1995 localized hnRNP I/PTB to perinucleolar compartments.
+  - subject: rna_polymerase_iii_transcripts
+    predicate: localize to
+    object: perinucleolar_compartment
+    description: Multiple RNA polymerase III transcripts localize to perinucleolar
+      compartments.
+    evidence:
+    - reference: DOI:10.1083/jcb.129.5.1181
+      notes: Matera et al. 1995 identified several pol III transcripts in PNCs, including
+        Y RNAs, RNase P RNA and RNase MRP RNA.
+  - subject: polypyrimidine_tract_binding_protein
+    predicate: supports integrity of
+    object: perinucleolar_compartment
+    description: PTB is needed for the integrity of the PNC.
+    evidence:
+    - reference: DOI:10.1091/mbc.E02-12-0818
+      notes: Wang et al. 2003 tested PTB and RNA polymerase III transcripts as requirements
+        for PNC integrity.
+  - subject: rna_polymerase_iii_transcripts
+    predicate: support integrity of
+    object: perinucleolar_compartment
+    description: RNA polymerase III transcripts are needed for the integrity of the
+      PNC.
+    evidence:
+    - reference: DOI:10.1091/mbc.E02-12-0818
+      notes: Wang et al. 2003 tested PTB and RNA polymerase III transcripts as requirements
+        for PNC integrity.
+discussions:
+- discussion_id: resolve_pnc_component_boundaries
+  prompt: Resolve exact source-neutral RNA and protein-family boundaries for PTB,
+    Y RNAs, RNase P RNA, RNase MRP RNA and other PNC-enriched RNA-binding proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#polypyrimidine_tract_binding_protein
+  - components#rna_polymerase_iii_transcripts
+  - causal_graphs#ptb_pol_iii_pnc_organization
+  rationale: This first perinucleolar-compartment record captures PTB and PNC-enriched
+    RNA polymerase III transcripts as label-only resident components while leaving
+    exact PTB family grounding and transcript-class splitting to a later curation
+    pass.
+  evidence:
+  - reference: DOI:10.1083/jcb.129.5.1181
+  - reference: DOI:10.1083/jcb.137.5.965
+  - reference: DOI:10.1091/mbc.E02-12-0818
+  - reference: DOI:10.1101/cshperspect.a000679
+  posed_by: codex
+  posed_date: '2026-09-28'

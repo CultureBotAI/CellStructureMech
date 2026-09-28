@@ -15249,14 +15249,14 @@
           "cosine_similarity": 0.62057203
         },
         {
+          "identifier": "GO:0097356",
+          "label": "perinucleolar compartment",
+          "cosine_similarity": 0.61892214
+        },
+        {
           "identifier": "GO:0035363",
           "label": "histone locus body",
           "cosine_similarity": 0.61743889
-        },
-        {
-          "identifier": "GO:0042555",
-          "label": "MCM complex",
-          "cosine_similarity": 0.61677695
         }
       ]
     },
@@ -17548,9 +17548,9 @@
           "cosine_similarity": 0.6484423
         },
         {
-          "identifier": "GO:0035363",
-          "label": "histone locus body",
-          "cosine_similarity": 0.62766409
+          "identifier": "GO:0097356",
+          "label": "perinucleolar compartment",
+          "cosine_similarity": 0.63347384
         }
       ]
     },
@@ -17582,6 +17582,37 @@
           "identifier": "GO:0005688",
           "label": "U6 snRNP",
           "cosine_similarity": 0.89272578
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097356",
+      "label": "perinucleolar compartment",
+      "neighbors": [
+        {
+          "identifier": "GO:0005730",
+          "label": "nucleolus",
+          "cosine_similarity": 0.69871554
+        },
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.69857901
+        },
+        {
+          "identifier": "GO:0000172",
+          "label": "ribonuclease MRP complex",
+          "cosine_similarity": 0.6977805
+        },
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.69196189
+        },
+        {
+          "identifier": "GO:0005655",
+          "label": "nucleolar ribonuclease P complex",
+          "cosine_similarity": 0.685273
         }
       ]
     },
