@@ -27,6 +27,12 @@ curation_history:
   changes: Added reviewed UniProtKB:P0A988 as the taxon-specific E. coli K-12 DnaN
     beta-clamp example and cited it for the component gene symbol.
   llm_assisted: true
+- timestamp: '2026-09-28T10:24:35Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: 'Fixed #1716 by attributing the discussion''s dnaN gene-symbol support
+    to UniProtKB:P0A988.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -193,11 +199,12 @@ discussions:
   attaches_to:
   - components#dnaN_beta_subunit
   - causal_graphs#beta_clamp_processivity
-  rationale: This first GO:0044775 split captures the E. coli beta subunit and dnaN
-    gene named in beta-clamp literature while leaving exact source-neutral protein-family
-    grounding to a later pass.
+  rationale: This first GO:0044775 split captures the E. coli beta subunit from beta-clamp
+    structure literature and the dnaN gene symbol from reviewed UniProtKB:P0A988 while
+    leaving exact source-neutral protein-family grounding to a later pass.
   evidence:
   - reference: GO:0044775
   - reference: PMID:1349852
+  - reference: UniProtKB:P0A988
   posed_by: codex
   posed_date: '2026-09-28'
