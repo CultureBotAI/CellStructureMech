@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/interchromatin_granule.yaml
+  slug: interchromatin_granule
+session:
+  id: 2026-09-28T072859Z-claude-code-75e232
+  timestamp: '2026-09-28T07:28:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1709
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1708
+events:
+- type: EDIT
+  outcome: changed
+  summary: Resolve interchromatin granule review issue 1709
+  details: 'Resolved review issue #1709 from PR #1708 by changing the Mus musculus interchromatin-granule
+    taxonomic_distribution row from COMMON to VARIABLE, keeping mouse liver nuclei as the
+    canonical example while avoiding a species-wide commonness assertion not directly supported
+    by the Saitoh et al. 2004 evidence.'

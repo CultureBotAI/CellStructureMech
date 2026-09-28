@@ -24,6 +24,13 @@ curation_history:
     Mus musculus IGC proteomics scope, pre-mRNA processing reservoir evidence, a nonmechanistic
     splicing-factor IGC graph and an IGC-inventory TODO.
   llm_assisted: true
+- timestamp: '2026-09-28T07:28:30Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1709 by narrowing the Mus musculus interchromatin-granule taxonomic-distribution
+    row from COMMON to VARIABLE because the mouse liver IGC purification evidence
+    establishes an observed canonical example, not species-wide commonness.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ICG
   synonym_type: EXACT_SYNONYM
@@ -73,7 +80,7 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:10090
   taxon_label: Mus musculus
-  presence: COMMON
+  presence: VARIABLE
   note: Interchromatin granule clusters were purified and proteomically characterized
     from mouse liver nuclei as nuclear fractions enriched for pre-mRNA processing
     factors.
