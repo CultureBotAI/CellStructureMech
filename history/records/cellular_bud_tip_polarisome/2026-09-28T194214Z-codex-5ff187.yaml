@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellular_bud_tip_polarisome.yaml
+  slug: cellular_bud_tip_polarisome
+session:
+  id: 2026-09-28T194214Z-codex-5ff187
+  timestamp: '2026-09-28T19:42:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added the cellular bud tip polarisome record
+  details: Created the GO:0031561 cellular bud tip polarisome record, grounded it under the
+    generic polarisome and cellular bud tip, curated reviewed-label-only Spa2/Pea2 and Bud6/Aip3
+    constituents, Saccharomyces cerevisiae distribution and canonical-example evidence from
+    Valtz and Herskowitz 1996 and Sheu et al. 1998, a bud-tip polarized-morphogenesis function,
+    GO/DOI record evidence, a nonmechanistic 12S polarisome topology graph, an open component-grounding
+    TODO, and a resolved Bni1/Aip5/exocyst/MAPK boundary decision.

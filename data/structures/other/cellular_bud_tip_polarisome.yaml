@@ -1,0 +1,231 @@
+identifier: GO:0031561
+label: cellular bud tip polarisome
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Protein complex that has a role in determining cell polarity, found at
+  the tip of a growing fungal bud.
+definition_source: GO:0031561
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T19:36:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T19:40:49Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added polarisome parentage, cellular-bud-tip parthood, Spa2/Pea2 and Bud6/Aip3
+    constituents, Saccharomyces distribution and canonical example evidence, a bud-tip
+    morphogenesis function, a nonmechanistic 12S polarisome topology graph, and grounding
+    and component-boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-28T19:57:58Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1738 by renaming the Bud6/Aip3 component and graph node from
+    an actin nucleation-promoting factor to an actin-associated polarity protein.'
+  llm_assisted: true
+parent_structures:
+- GO:0000133
+part_of:
+- GO:0005934
+components:
+- component_id: spa2_pea2_scaffold
+  label: Spa2/Pea2 polarisome scaffold
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - SPA2
+  - PEA2
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Spa2 and Pea2 are curated as the Saccharomyces scaffold cohort
+    that helps delimit the bud-tip polarisome; no exact source-neutral family CURIE
+    was assigned for this grouped fungal component.
+  role: Scaffold proteins that localize to budding growth sites and form a stable
+    pair in the Saccharomyces 12S polarisome.
+  evidence:
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 showed that Pea2 and Spa2 localize to polarized-growth
+      sites in budding and mating cells and depend on one another for stable localization.
+  - reference: DOI:10.1128/MCB.18.7.4053
+    notes: Sheu et al. 1998 found that Spa2 interacts with Pea2 in two-hybrid and
+      coimmunoprecipitation experiments.
+- component_id: bud6_actin_associated_polarity_protein
+  label: Bud6/Aip3 actin-associated polarity protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - BUD6
+  - AIP3
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Bud6/Aip3 is curated as the Saccharomyces actin-associated 12S
+    polarisome constituent from Sheu et al. 1998; no exact family grounding was assigned
+    for a broader fungal cohort.
+  role: Actin-associated polarity protein that cosediments with Spa2 and Pea2 in the
+    budding-yeast 12S polarisome.
+  evidence:
+  - reference: DOI:10.1128/MCB.18.7.4053
+    notes: Sheu et al. 1998 showed that Spa2 interacts with Bud6/Aip3 by two-hybrid
+      analysis and that a significant portion of Spa2, Pea2, and Bud6 cosediments
+      as a 12S multiprotein complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast Spa2, Pea2, and Bud6/Aip3 proteins localize to polarized growth
+    sites, including small bud tips, and form a 12S polarisome complex.
+  reference: DOI:10.1128/MCB.18.7.4053
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Spa2, Pea2, and Bud6/Aip3 were connected by two-hybrid,
+    coimmunoprecipitation, and velocity-sedimentation assays.
+  reference: DOI:10.1128/MCB.18.7.4053
+functions:
+- function_id: bud_tip_polarized_morphogenesis
+  label: bud-tip polarized morphogenesis
+  description: The cellular bud tip polarisome concentrates Spa2, Pea2, and Bud6/Aip3
+    at budding growth sites to support polarized morphogenesis in Saccharomyces cerevisiae.
+  evidence:
+  - reference: GO:0031561
+    notes: GO:0031561 defines the cellular bud tip polarisome by its role in determining
+      cell polarity at the tip of a growing fungal bud.
+  - reference: DOI:10.1128/MCB.18.7.4053
+    notes: Sheu et al. 1998 proposed that Spa2, Pea2, and Bud6 act together in a complex
+      to promote polarized morphogenesis.
+evidence:
+- reference: GO:0031561
+  notes: Gene Ontology cellular-component term for the cellular bud tip polarisome.
+- reference: GO:0000133
+  notes: Gene Ontology cellular-component term for polarisome.
+- reference: GO:0005934
+  notes: Gene Ontology cellular-component term for the cellular bud tip.
+- reference: DOI:10.1128/MCB.18.7.4053
+  notes: Sheu et al. 1998, 'Spa2p interacts with cell polarity proteins and signaling
+    components involved in yeast cell morphogenesis', Molecular and Cellular Biology.
+- reference: DOI:10.1083/jcb.135.3.725
+  notes: Valtz and Herskowitz 1996, 'Pea2 protein of yeast is localized to sites of
+    polarized growth and is required for efficient mating and bipolar budding', Journal
+    of Cell Biology.
+causal_graphs:
+- graph_id: bud_tip_12s_polarisome_topology
+  title: Bud-tip 12S polarisome topology
+  description: Spa2 and Pea2 form a stable scaffold and Bud6/Aip3 cosediments with
+    that scaffold in the Saccharomyces 12S polarisome found at budding growth sites.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures component participation and bud-tip localization
+    without asserting a complete actin-assembly pathway or including candidate Bni1,
+    Aip5, MAPK, or exocyst partners.
+  nodes:
+  - node_id: spa2_pea2_scaffold
+    label: Spa2/Pea2 polarisome scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: spa2_pea2_scaffold
+  - node_id: bud6_actin_associated_polarity_protein
+    label: Bud6/Aip3 actin-associated polarity protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: bud6_actin_associated_polarity_protein
+  - node_id: cellular_bud_tip_polarisome
+    label: cellular bud tip polarisome
+    node_type: STRUCTURE
+    grounding: GO:0031561
+  - node_id: cellular_bud_tip
+    label: cellular bud tip
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0005934
+  - node_id: bud_tip_polarized_morphogenesis
+    label: bud-tip polarized morphogenesis
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: spa2_pea2_scaffold
+    predicate: forms scaffold for
+    object: cellular_bud_tip_polarisome
+    description: Spa2 and Pea2 physically interact and occupy polarized bud growth
+      sites as part of the bud-tip polarisome scaffold.
+    evidence:
+    - reference: DOI:10.1083/jcb.135.3.725
+      notes: Valtz and Herskowitz 1996 found that Pea2 and Spa2 localize in a similar
+        pattern and depend on one another for stable localization.
+    - reference: DOI:10.1128/MCB.18.7.4053
+      notes: Sheu et al. 1998 showed that Spa2 and Pea2 interact by two-hybrid analysis
+        and coimmunoprecipitate in vivo.
+  - subject: bud6_actin_associated_polarity_protein
+    predicate: cosediments with
+    object: spa2_pea2_scaffold
+    description: Bud6/Aip3 cosediments with Spa2 and Pea2 in a 12S multiprotein polarisome
+      fraction.
+    evidence:
+    - reference: DOI:10.1128/MCB.18.7.4053
+      notes: Sheu et al. 1998 found that a significant portion of Bud6 cosediments
+        with Spa2 and Pea2 by velocity sedimentation.
+  - subject: cellular_bud_tip_polarisome
+    predicate: localizes to
+    object: cellular_bud_tip
+    description: The cellular bud tip polarisome is found at the tip of a growing
+      fungal bud.
+    evidence:
+    - reference: GO:0031561
+      notes: GO:0031561 defines this structure as the polarisome at the tip of a growing
+        fungal bud.
+  - subject: cellular_bud_tip_polarisome
+    predicate: supports
+    object: bud_tip_polarized_morphogenesis
+    description: The Spa2/Pea2/Bud6-containing polarisome promotes polarized morphogenesis
+      from budding growth sites.
+    evidence:
+    - reference: DOI:10.1128/MCB.18.7.4053
+      notes: Sheu et al. 1998 proposed that Spa2, Pea2, and Bud6 function together,
+        perhaps as a complex, to promote polarized morphogenesis.
+discussions:
+- discussion_id: resolve_bud_tip_polarisome_family_groundings
+  prompt: Resolve exact source-neutral family groundings for Spa2, Pea2, and Bud6/Aip3
+    at the cellular bud tip.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spa2_pea2_scaffold
+  - components#bud6_actin_associated_polarity_protein
+  rationale: This localized record deliberately reuses the reviewed-label-only Saccharomyces
+    polarisome cohorts from the broader polarisome record instead of guessing InterPro,
+    Pfam, NCBIfam, or UniProtKB family groundings whose broader homologous families
+    do not exactly delimit the bud-tip complex.
+  evidence:
+  - reference: DOI:10.1128/MCB.18.7.4053
+    notes: Sheu et al. 1998 delimited the Spa2, Pea2, and Bud6/Aip3 12S polarisome
+      in budding yeast.
+  posed_by: codex
+  posed_date: '2026-09-28'
+- discussion_id: bni1_aip5_exocyst_and_mapk_boundary
+  prompt: Keep Bni1, Aip5, the exocyst, and MAPK signaling proteins outside the first
+    cellular-bud-tip polarisome component boundary.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#spa2_pea2_scaffold
+  - components#bud6_actin_associated_polarity_protein
+  - causal_graphs#bud_tip_12s_polarisome_topology
+  rationale: GO:0000133 and later Saccharomyces polarisome studies implicate Bni1,
+    Aip5, and other actin-assembly factors in the broader polarisome, but Sheu et
+    al. 1998 directly support a Spa2/Pea2/Bud6 12S complex and discuss Bni1 only as
+    a possible additional component. The exocyst is a separate bud-tip-localized complex
+    and the MAPK factors tested by Sheu et al. are interacting signaling proteins,
+    not curated constituents of the GO:0031561 structure.
+  resolution_note: Curated the directly supported Spa2/Pea2 and Bud6/Aip3 12S complex
+    and deferred Bni1, Aip5, Myo2, exocyst, and MAPK pathway proteins until exact
+    localized component evidence is curated.
+  evidence:
+  - reference: GO:0031561
+    notes: GO:0031561 identifies the localized bud-tip polarisome complex.
+  - reference: GO:0000145
+    notes: GO:0000145 identifies the exocyst as a distinct complex.
+  - reference: DOI:10.1128/MCB.18.7.4053
+    notes: Sheu et al. 1998 directly assayed Spa2, Pea2, and Bud6 in the 12S polarisome
+      while treating MAPK factors and Bni1 outside that directly demonstrated component
+      set.
+  posed_by: codex
+  posed_date: '2026-09-28'
+  resolved_date: '2026-09-28'
