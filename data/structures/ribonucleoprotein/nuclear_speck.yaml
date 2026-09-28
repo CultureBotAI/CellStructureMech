@@ -1,0 +1,257 @@
+identifier: GO:0016607
+label: nuclear speck
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: A discrete extra-nucleolar subnuclear domain, 20-50 in number, in which
+  splicing factors are seen to be localized by immunofluorescence microscopy.
+definition_source: GO:0016607
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-27T23:58:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T00:00:24Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO nuclear-speck synonymy, nuclear-RNP-granule and nuclear-body parentage,
+    nuclear-lumen parthood, label-only pre-mRNA-splicing-factor, SON/SRRM2 and MALAT1
+    components, Homo sapiens scope, speckle splicing-factor organization evidence,
+    DOI/GO evidence, a nonmechanistic nuclear-speck organization graph and a component-boundary
+    TODO.
+  llm_assisted: true
+- timestamp: '2026-09-28T00:01:01Z'
+  curator: codex
+  action: TIGHTENED_EVIDENCE
+  changes: Narrowed the Homo sapiens distribution row to the Fei et al. 2017 human
+    nuclear-speckle organization claim that its reference directly supports.
+  llm_assisted: true
+synonyms:
+- synonym_text: nuclear speckle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016607
+- synonym_text: nuclear speckles
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016607
+- synonym_text: splicing speckle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016607
+- synonym_text: speckle domain
+  synonym_type: NARROW_SYNONYM
+  source: GO:0016607
+- synonym_text: speckle focus
+  synonym_type: RELATED_SYNONYM
+  source: GO:0016607
+parent_structures:
+- GO:0140168
+- GO:0016604
+part_of:
+- GO:0031981
+components:
+- component_id: pre_mrna_splicing_factor_cohort
+  label: pre-mRNA splicing factor cohort
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SRSF1
+  - SRSF2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SR proteins and other pre-mRNA splicing factors are modeled as
+    a broad nuclear-speckle resident cohort; no exact source-neutral InterPro, Pfam
+    or NCBIfam accession covering this heterogeneous speckle-localized factor set
+    was assigned.
+  role: Pre-mRNA splicing factors concentrated in nuclear speckles and dynamically
+    supplied to active transcription sites.
+  evidence:
+  - reference: GO:0016607
+    notes: GO:0016607 defines nuclear specks by localization of splicing factors in
+      the domain.
+  - reference: DOI:10.1038/387523a0
+    notes: Misteli, Caceres and Spector 1997 tracked a GFP-tagged pre-mRNA splicing
+      factor between nuclear speckles and sites of transcription.
+- component_id: son_srrm2_scaffold_proteins
+  label: SON/SRRM2 scaffold proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SON
+  - SRRM2
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SON and SRRM2 are curated as two large speckle scaffold proteins
+    required for visible human nuclear-speckle formation; no exact source-neutral
+    family or complex CURIE covers this two-protein structural cohort.
+  role: Large intrinsically disordered scaffold proteins that form the core structural
+    framework of nuclear speckles.
+  evidence:
+  - reference: DOI:10.7554/eLife.60579
+    notes: Ilik et al. 2020 identified SON and SRRM2 as essential for nuclear speckle
+      formation.
+  - reference: DOI:10.1242/jcs.206854
+    notes: Fei et al. 2017 resolved SON in the central region of human nuclear speckles
+      by super-resolution microscopy.
+- component_id: malat1_lncrna
+  label: MALAT1 lncRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MALAT1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: MALAT1 is represented as a long noncoding RNA enriched at mammalian
+    nuclear speckles; no exact Sequence Ontology CURIE for the speckle-resident MALAT1
+    RNA species was assigned.
+  role: Long noncoding RNA enriched in nuclear speckles and associated with SR-splicing-factor
+    organization.
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2010.08.011
+    notes: Tripathi et al. 2010 localized MALAT1 to nuclear speckles and connected
+      it to SR-splicing-factor organization.
+  - reference: DOI:10.1242/jcs.206854
+    notes: Fei et al. 2017 found MALAT1 enriched toward the periphery of human nuclear
+      speckles.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: VARIABLE
+  note: Human cells were used to resolve SON, splicing-factor, MALAT1 and snRNA layering
+    within nuclear speckles by super-resolution microscopy.
+  reference: DOI:10.1242/jcs.206854
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Human cultured cells were used to resolve SON, splicing-factor, MALAT1 and
+    snRNA layering within nuclear speckles.
+  reference: DOI:10.1242/jcs.206854
+functions:
+- function_id: pre_mrna_splicing_factor_organization
+  label: pre-mRNA splicing factor organization
+  description: Nuclear speckles concentrate pre-mRNA splicing factors and dynamically
+    supply them to active transcription sites.
+  evidence:
+  - reference: DOI:10.1038/387523a0
+    notes: Misteli, Caceres and Spector 1997 showed dynamic exchange of an SR splicing
+      factor between nuclear speckles and transcription sites in living cells.
+  - reference: DOI:10.1101/cshperspect.a000646
+    notes: Spector and Lamond 2011 reviewed nuclear speckles as subnuclear domains
+      enriched in pre-mRNA splicing factors.
+evidence:
+- reference: GO:0016607
+  notes: Gene Ontology cellular-component term for nuclear speck.
+- reference: GO:0140168
+  notes: Gene Ontology cellular-component ancestor term for nuclear ribonucleoprotein
+    granule.
+- reference: GO:0016604
+  notes: Gene Ontology cellular-component ancestor term for nuclear body.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component ancestor term for nuclear lumen.
+- reference: DOI:10.1093/nar/gkx759
+  notes: 'Galganski, Urbanek and Krzyzosiak 2017, Nuclear speckles: molecular organization,
+    biological function and role in disease, Nucleic Acids Research.'
+- reference: DOI:10.1101/cshperspect.a000646
+  notes: Spector and Lamond 2011, Nuclear Speckles, Cold Spring Harbor Perspectives
+    in Biology.
+- reference: DOI:10.1038/387523a0
+  notes: Misteli, Caceres and Spector 1997, The dynamics of a pre-mRNA splicing factor
+    in living cells, Nature.
+- reference: DOI:10.1242/jcs.206854
+  notes: Fei et al. 2017, Quantitative analysis of multilayer organization of proteins
+    and RNA in nuclear speckles at super resolution, Journal of Cell Science.
+- reference: DOI:10.7554/eLife.60579
+  notes: Ilik et al. 2020, SON and SRRM2 are essential for nuclear speckle formation,
+    eLife.
+- reference: DOI:10.1016/j.molcel.2010.08.011
+  notes: Tripathi et al. 2010, The Nuclear-Retained Noncoding RNA MALAT1 Regulates
+    Alternative Splicing by Modulating SR Splicing Factor Phosphorylation, Molecular
+    Cell.
+causal_graphs:
+- graph_id: son_srrm2_malat1_nuclear_speck_organization
+  title: SON, SRRM2 and MALAT1 organize nuclear speckles
+  description: Human nuclear speckles concentrate pre-mRNA splicing factors on a SON/SRRM2
+    protein framework with MALAT1 lncRNA and small RNAs layered around protein-rich
+    regions.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes core SON/SRRM2 and MALAT1 organization without
+    asserting a complete condensate phase-separation model, the full interchromatin-granule-cluster
+    proteome or exact spliceosomal-snRNP and SR-protein family boundaries.
+  nodes:
+  - node_id: son_srrm2_scaffold_proteins
+    label: SON/SRRM2 scaffold proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: son_srrm2_scaffold_proteins
+  - node_id: pre_mrna_splicing_factor_cohort
+    label: pre-mRNA splicing factor cohort
+    node_type: GENE_OR_PROTEIN
+    component_ref: pre_mrna_splicing_factor_cohort
+  - node_id: malat1_lncrna
+    label: MALAT1 lncRNA
+    node_type: RNA
+    component_ref: malat1_lncrna
+  - node_id: nuclear_speck
+    label: nuclear speck
+    node_type: STRUCTURE
+    grounding: GO:0016607
+  - node_id: pre_mrna_splicing_factor_organization
+    label: pre-mRNA splicing factor organization
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: son_srrm2_scaffold_proteins
+    predicate: scaffolds
+    object: nuclear_speck
+    description: SON and SRRM2 form core structural proteins required for visible
+      nuclear speckle formation.
+    evidence:
+    - reference: DOI:10.7554/eLife.60579
+      notes: Ilik et al. 2020 identified SON and SRRM2 as essential nuclear-speckle
+        scaffold proteins.
+  - subject: pre_mrna_splicing_factor_cohort
+    predicate: localizes to
+    object: nuclear_speck
+    description: Pre-mRNA splicing factors concentrate in nuclear speckles.
+    evidence:
+    - reference: GO:0016607
+      notes: GO:0016607 defines nuclear specks as domains in which splicing factors
+        are localized.
+  - subject: malat1_lncrna
+    predicate: localizes to
+    object: nuclear_speck
+    description: MALAT1 lncRNA is enriched in nuclear speckles.
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2010.08.011
+      notes: Tripathi et al. 2010 localized MALAT1 RNA to nuclear speckles.
+  - subject: nuclear_speck
+    predicate: organizes
+    object: pre_mrna_splicing_factor_organization
+    description: Nuclear speckles concentrate splicing factors that can exchange with
+      active transcription sites.
+    evidence:
+    - reference: DOI:10.1038/387523a0
+      notes: Misteli, Caceres and Spector 1997 showed dynamic exchange of a pre-mRNA
+        splicing factor between speckles and transcription sites.
+    - reference: DOI:10.1101/cshperspect.a000646
+      notes: Spector and Lamond 2011 reviewed nuclear speckles as enriched splicing-factor
+        compartments.
+discussions:
+- discussion_id: resolve_nuclear_speckle_component_boundaries
+  prompt: Resolve exact source-neutral RNA, SR-protein, snRNP and scaffold boundaries
+    for nuclear-speckle resident components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pre_mrna_splicing_factor_cohort
+  - components#son_srrm2_scaffold_proteins
+  - components#malat1_lncrna
+  - causal_graphs#son_srrm2_malat1_nuclear_speck_organization
+  rationale: This first nuclear-speck record captures broad label-only SR splicing-factor,
+    SON/SRRM2 and MALAT1 constituents while leaving exact SR protein families, spliceosomal
+    snRNP subtypes, SON/SRRM2 grounding, additional resident factors and MALAT1 transcript
+    boundaries to a separate curation pass.
+  evidence:
+  - reference: DOI:10.1093/nar/gkx759
+  - reference: DOI:10.1242/jcs.206854
+  - reference: DOI:10.7554/eLife.60579
+  posed_by: codex
+  posed_date: '2026-09-27'

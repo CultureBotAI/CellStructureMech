@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/nuclear_speck.yaml
+  slug: nuclear_speck
+session:
+  id: 2026-09-28T000138Z-codex-0beac2
+  timestamp: '2026-09-28T00:01:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add nuclear speck record
+  details: Created an evidence-backed GO:0016607 nuclear speck record with GO synonymy, nuclear
+    ribonucleoprotein granule and nuclear body parentage, nuclear lumen parthood, label-only
+    splicing-factor, SON/SRRM2 and MALAT1 components, Homo sapiens scope, pre-mRNA splicing-factor
+    organization evidence, a nonmechanistic SON/SRRM2/MALAT1 organization graph and a component-boundary
+    TODO.
