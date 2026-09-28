@@ -24,6 +24,12 @@ curation_history:
     function, a nonmechanistic ring-to-collar topology graph, and collar-boundary
     and grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-28T22:24:40Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1744 by broadening the bud-neck scaffold function beyond cytokinesis
+    while preserving the ring/collar/split-ring boundary.'
+  llm_assisted: true
 parent_structures:
 - GO:0032173
 part_of:
@@ -64,7 +70,7 @@ functions:
 - function_id: bud_neck_scaffold
   label: bud-neck scaffold
   description: The cellular bud neck septin collar acts as an hourglass-shaped septin
-    scaffold that organizes bud-neck-associated proteins during budding-yeast cytokinesis.
+    scaffold that organizes proteins functioning at the Saccharomyces mother-bud neck.
   evidence:
   - reference: GO:0032174
     notes: GO:0032174 defines the collar as a Saccharomyces bud-neck septin structure
