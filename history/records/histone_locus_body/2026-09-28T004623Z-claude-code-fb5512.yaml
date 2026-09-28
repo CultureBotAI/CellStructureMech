@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/histone_locus_body.yaml
+  slug: histone_locus_body
+session:
+  id: 2026-09-28T004623Z-claude-code-fb5512
+  timestamp: '2026-09-28T00:46:23Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1692
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add histone locus body
+  details: Added data/structures/ribonucleoprotein/histone_locus_body.yaml for GO:0035363
+    with the GO HLB synonym, GO:0140168 parentage, nuclear-lumen parthood, label-only NPAT/Mxc
+    and FLASH components, a GO-grounded U7 snRNP component, Drosophila/Homo sapiens scope,
+    a Drosophila canonical example, histone mRNA biogenesis function evidence, DOI/GO evidence,
+    a nonmechanistic HLB graph and a component-boundary TODO. Regenerated embeddings, pages
+    and README stats; verified targeted linkml and strict validation, full strict validation,
+    embedding/page/doc drift checks, evidence snippets, TraitMech links, CURIE liveness, id-label
+    correspondence and git diff whitespace.
