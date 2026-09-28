@@ -23,6 +23,13 @@ curation_history:
     scope, primary-miRNA-processing function evidence, DOI/GO evidence, a nonmechanistic
     SERRATE-driven D-body assembly graph and a component-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-28T03:19:50Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1699 by renaming the D-body RNA component and graph node from
+    a primary-miRNA-only cohort to a pri/pre-miRNA substrate cohort matching the cited
+    SERRATE recruitment evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: D body
   synonym_type: EXACT_SYNONYM
@@ -98,8 +105,8 @@ components:
     notes: Xie et al. 2021 showed that SERRATE can drive DCL1, HYL1 and pri/pre-miRNAs
       into phase-separated D-body droplets and that SERRATE mutation abrogates D-body
       formation in vivo.
-- component_id: primary_mirna_transcripts
-  label: primary miRNA transcript cohort
+- component_id: mirna_processing_substrates
+  label: pri/pre-miRNA substrate cohort
   component_type: RNA
   component_role: CONSTITUENT
   essentiality: UNKNOWN
@@ -107,7 +114,7 @@ components:
   grounding_notes: D-bodies recruit multiple primary and precursor miRNA substrates
     rather than one named RNA species; no exact Sequence Ontology CURIE was assigned
     to this heterogeneous substrate cohort.
-  role: Primary miRNA substrates recruited into D-bodies for DCL1/HYL1/SERRATE-dependent
+  role: Primary and precursor miRNA substrates recruited into D-bodies for DCL1/HYL1/SERRATE-dependent
     processing.
   evidence:
   - reference: DOI:10.1016/j.cub.2007.04.005
@@ -190,10 +197,10 @@ causal_graphs:
     label: SERRATE
     node_type: GENE_OR_PROTEIN
     component_ref: serrate
-  - node_id: primary_mirna_transcripts
-    label: primary miRNA transcript cohort
+  - node_id: mirna_processing_substrates
+    label: pri/pre-miRNA substrate cohort
     node_type: RNA
-    component_ref: primary_mirna_transcripts
+    component_ref: mirna_processing_substrates
   - node_id: nuclear_dicing_body
     label: nuclear dicing body
     node_type: STRUCTURE
@@ -227,7 +234,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.0701061104
       notes: Song et al. 2007 observed HYL1-mCherry and YFP-DCL1 colocalization in
         small nuclear bodies distinct from Atcoilin-marked Cajal bodies.
-  - subject: primary_mirna_transcripts
+  - subject: mirna_processing_substrates
     predicate: localize to
     object: nuclear_dicing_body
     description: D-bodies recruit primary and precursor miRNA substrates.
@@ -259,7 +266,7 @@ discussions:
   - components#dicer_like_1
   - components#hyponastic_leaves1
   - components#serrate
-  - components#primary_mirna_transcripts
+  - components#mirna_processing_substrates
   rationale: This first GO:0010445 record captures Arabidopsis DCL1, HYL1, SERRATE
     and pri/pre-miRNA substrate classes directly supported by D-body imaging and assembly
     evidence. Exact source-neutral protein-family and RNA-substrate groundings should

@@ -12,6 +12,8 @@ session:
     model: gpt-5
     agent_tool: codex
 links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1699
   prs:
   - https://github.com/CultureBotAI/CellStructureMech/pull/1698
 events:
