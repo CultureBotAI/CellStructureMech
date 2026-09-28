@@ -953,11 +953,6 @@
           "cosine_similarity": 0.6899603
         },
         {
-          "identifier": "GO:0032175",
-          "label": "mating projection septin ring",
-          "cosine_similarity": 0.65557327
-        },
-        {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.63856378
@@ -966,6 +961,11 @@
           "identifier": "GO:0044096",
           "label": "type IV pilus",
           "cosine_similarity": 0.63622958
+        },
+        {
+          "identifier": "GO:0005933",
+          "label": "cellular bud",
+          "cosine_similarity": 0.63074725
         }
       ]
     },
@@ -2557,27 +2557,27 @@
         {
           "identifier": "GO:0005940",
           "label": "septin ring",
-          "cosine_similarity": 0.89067415
+          "cosine_similarity": 0.85152624
         },
         {
-          "identifier": "GO:0043332",
-          "label": "mating projection tip",
-          "cosine_similarity": 0.72431449
-        },
-        {
-          "identifier": "GO:0036286",
-          "label": "eisosome filament",
-          "cosine_similarity": 0.71350497
-        },
-        {
-          "identifier": "GO:1990819",
-          "label": "mating projection actin fusion focus",
-          "cosine_similarity": 0.69990225
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.66526582
         },
         {
           "identifier": "GO:1990586",
           "label": "divisome complex",
-          "cosine_similarity": 0.6959438
+          "cosine_similarity": 0.66463079
+        },
+        {
+          "identifier": "GO:0020031",
+          "label": "polar ring of apical complex",
+          "cosine_similarity": 0.66459471
+        },
+        {
+          "identifier": "GO:1990819",
+          "label": "mating projection actin fusion focus",
+          "cosine_similarity": 0.66353658
         }
       ]
     },
@@ -2867,7 +2867,7 @@
         {
           "identifier": "GO:0032175",
           "label": "mating projection septin ring",
-          "cosine_similarity": 0.89067415
+          "cosine_similarity": 0.85152624
         },
         {
           "identifier": "GO:0036286",
@@ -14200,9 +14200,9 @@
           "cosine_similarity": 0.73365781
         },
         {
-          "identifier": "GO:0032175",
-          "label": "mating projection septin ring",
-          "cosine_similarity": 0.72431449
+          "identifier": "GO:0005938",
+          "label": "cell cortex",
+          "cosine_similarity": 0.72282042
         }
       ]
     },

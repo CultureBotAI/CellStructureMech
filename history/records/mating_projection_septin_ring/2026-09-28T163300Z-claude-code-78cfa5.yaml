@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mating_projection_septin_ring.yaml
+  slug: mating_projection_septin_ring
+session:
+  id: 2026-09-28T163300Z-claude-code-78cfa5
+  timestamp: '2026-09-28T16:33:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1732
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1731
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrow mating projection septin ring example evidence
+  details: 'Addressed PR #1731 review issue #1732 by removing the over-specific Saccharomyces
+    cerevisiae distribution and canonical example, removing Giot and Konopka 1997 from the
+    GO-backed septin assembly edge, and expanding the open shmoo-neck TODO to document the
+    GO:0032175 ring versus GO:0032162 band boundary.'

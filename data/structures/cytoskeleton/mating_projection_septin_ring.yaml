@@ -22,6 +22,13 @@ curation_history:
     function, GO and DOI evidence, a nonmechanistic shmoo-neck septin-ring topology
     graph, and a septin-accessory boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-28T16:32:20Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1732 by removing the over-specific S. cerevisiae distribution
+    and canonical example, narrowing Giot and Konopka evidence to Cdc12/Afr1 boundary
+    context, and documenting the GO:0032175 ring versus GO:0032162 band distinction.'
+  llm_assisted: true
 parent_structures:
 - GO:0005940
 part_of:
@@ -43,21 +50,9 @@ components:
     notes: GO:0032175 defines the mating projection septin ring as composed of septins
       and septin-associated proteins.
   - reference: DOI:10.1091/mbc.8.6.987
-    notes: Giot and Konopka 1997 analyzed Cdc12p septin with Afr1p in pheromone-induced
-      Saccharomyces morphogenesis.
-taxonomic_distribution:
-- taxon_id: NCBITaxon:4932
-  taxon_label: Saccharomyces cerevisiae
-  presence: VARIABLE
-  note: Haploid budding-yeast cells form a septin ring at the mating-projection neck
-    during pheromone-induced morphogenesis.
-  reference: DOI:10.1091/mbc.8.6.987
-canonical_examples:
-- taxon_id: NCBITaxon:4932
-  taxon_label: Saccharomyces cerevisiae
-  note: Budding-yeast model in which the Cdc12p septin participates in pheromone-induced
-    mating-projection morphogenesis.
-  reference: DOI:10.1091/mbc.8.6.987
+    notes: Giot and Konopka 1997 linked the Cdc12p septin with Afr1p during pheromone-induced
+      Saccharomyces morphogenesis, supporting the open shmoo-neck accessory-boundary
+      question.
 functions:
 - function_id: shmoo_neck_mating_factor_barrier
   label: shmoo-neck mating-factor barrier
@@ -139,14 +134,11 @@ causal_graphs:
     - reference: GO:0032175
       notes: GO:0032175 defines the structure as a ring composed of septins and septin-associated
         proteins.
-    - reference: DOI:10.1091/mbc.8.6.987
-      notes: Giot and Konopka 1997 analyzed Cdc12p septin during pheromone-induced
-        morphogenesis.
 discussions:
 - discussion_id: resolve_shmoo_neck_septin_accessory_boundaries
   prompt: Resolve which Afr1 and additional shmoo-neck-associated proteins should
-    be curated as mating-projection septin-ring constituents versus associated pheromone
-    morphogenesis machinery.
+    be curated as mating-projection septin-ring constituents, and separate ring-shaped
+    GO:0032175 examples from diffuse septin-band GO:0032162 examples.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
@@ -154,14 +146,22 @@ discussions:
   - causal_graphs#shmoo_neck_septin_ring_topology
   rationale: GO:0032175 includes septin-associated proteins in the ring definition,
     and Giot and Konopka 1997 connected Afr1p with Cdc12p in pheromone-induced morphogenesis.
-    This first record captures the septin constituent cohort and leaves the exact
-    Afr1 boundary for a component-focused follow-up.
+    Douglas et al. 2005 distinguish S. cerevisiae shmoo-neck septins from tight mitotic
+    rings as a diffuse ring or series of bars, so this record deliberately avoids
+    using S. cerevisiae as a ring-specific canonical example until the GO:0032175
+    ring versus GO:0032162 band boundary is resolved from primary evidence.
   evidence:
   - reference: GO:0032175
-    notes: GO:0032175 defines the mating projection septin ring as composed of septins
-      and septin-associated proteins.
+    notes: GO:0032175 defines a ring-shaped mating-projection septin structure at
+      the shmoo neck.
+  - reference: GO:0032162
+    notes: GO:0032162 defines the diffuse mating-projection septin band at the shmoo
+      neck.
   - reference: DOI:10.1091/mbc.8.6.987
     notes: Giot and Konopka 1997 studied Afr1p with the Cdc12p septin during pheromone-induced
       morphogenesis.
+  - reference: DOI:10.1128/EC.4.9.1503-1512.2005
+    notes: Douglas et al. 2005 reviewed shmoo-neck septins as a diffuse ring or bar
+      assembly during Saccharomyces mating.
   posed_by: codex
   posed_date: '2026-09-28'
