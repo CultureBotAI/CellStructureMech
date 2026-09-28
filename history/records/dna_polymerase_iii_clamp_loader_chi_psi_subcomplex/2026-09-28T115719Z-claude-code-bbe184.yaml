@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+  slug: dna_polymerase_iii_clamp_loader_chi_psi_subcomplex
+session:
+  id: 2026-09-28T115719Z-claude-code-bbe184
+  timestamp: '2026-09-28T11:57:19Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Refined the chi/psi adapter graph
+  details: Clarified the psi graph edge so PMID:8505305 supports psi binding the gamma DnaX
+    protein instead of an underspecified one-ended psi-to-chi bridge edge.

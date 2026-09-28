@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+  slug: dna_polymerase_iii_clamp_loader_chi_psi_subcomplex
+session:
+  id: 2026-09-28T114529Z-claude-code-b77623
+  timestamp: '2026-09-28T11:45:29Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Added DNA polymerase III clamp-loader chi/psi subcomplex
+  details: Created a GO:0043847 DNA polymerase III clamp-loader chi/psi subcomplex record
+    with GO exact-synonym identity, protein-containing-complex parentage, clamp-loader parthood,
+    HolC/chi and HolD/psi components, reviewed E. coli K-12 UniProtKB examples, an E. coli
+    canonical example, DNA-replication function evidence, a small nonmechanistic adapter graph,
+    and an open TODO for exact source-neutral HolC/HolD family grounding.
