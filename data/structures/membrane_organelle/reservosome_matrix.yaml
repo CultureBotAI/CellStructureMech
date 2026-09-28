@@ -26,10 +26,17 @@ curation_history:
   changes: Declared the terminal cholesterol graph node used by the reservosome lipid-inclusion
     storage edge.
   llm_assisted: true
+- timestamp: '2026-09-28T12:55:28Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1724 by linking reservosome matrix parthood and the reservosome
+    graph node to the curated local cellstructuremech:reservosome record while retaining
+    GO:0106123 as authority evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 part_of:
-- GO:0106123
+- cellstructuremech:reservosome
 components:
 - component_id: internal_membrane_profiles
   label: reservosome internal membrane profiles
@@ -144,7 +151,7 @@ causal_graphs:
   - node_id: reservosome
     label: reservosome
     node_type: ORGANELLE
-    grounding: GO:0106123
+    grounding: cellstructuremech:reservosome
   - node_id: internal_membrane_profiles
     label: reservosome internal membrane profiles
     node_type: STRUCTURE
