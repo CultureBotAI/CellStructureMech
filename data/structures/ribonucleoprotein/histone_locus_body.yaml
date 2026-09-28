@@ -23,6 +23,13 @@ curation_history:
     function evidence, DOI/GO evidence, a nonmechanistic HLB organization graph and
     a component-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-28T01:02:22Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1693 by narrowing the Drosophila taxonomic-scope and canonical-example
+    notes so Liu et al. 2006 and White et al. 2007 are not asked to support later
+    Mxc/FLASH assembly claims.'
+  llm_assisted: true
 synonyms:
 - synonym_text: HLB
   synonym_type: EXACT_SYNONYM
@@ -91,8 +98,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:7227
   taxon_label: Drosophila melanogaster
   presence: VARIABLE
-  note: Drosophila melanogaster was used to define the HLB as a nuclear body at the
-    histone gene locus and to study Mxc/FLASH-dependent HLB assembly.
+  note: Drosophila melanogaster was used to define the HLB as a U7 snRNP-containing
+    nuclear body associated with the histone gene locus.
   reference: DOI:10.1083/jcb.200511038
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens
@@ -103,9 +110,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:7227
   taxon_label: Drosophila melanogaster
-  note: Drosophila embryos and tissues were used to connect U7 snRNP, Mxc and FLASH
-    with assembly and function of the HLB at the replication-dependent histone gene
-    locus.
+  note: Drosophila embryos and cultured cells were used to characterize developmental
+    and cell-cycle regulation of HLBs associated with the replication-dependent histone
+    gene locus.
   reference: DOI:10.1091/mbc.e06-11-1033
 functions:
 - function_id: replication_dependent_histone_mrna_biogenesis
