@@ -1,0 +1,214 @@
+identifier: GO:1990251
+label: nuclear exosome focus
+structure_category: OTHER
+structure_kind: OTHER
+definition: An nuclear body involved in nuclear mRNA surveilllance. Contains at least
+  Mmi1, or an ortholog of it, and the nuclear exosome.
+definition_source: GO:1990251
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T04:55:33Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T04:56:53Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nuclear-exosome-focus GO synonymy, nuclear-body parentage, nuclear-lumen
+    parthood, Mmi1 and nuclear-exosome components, Schizosaccharomyces pombe scope,
+    meiotic-transcript-surveillance function evidence, a nonmechanistic MTREC/NURS
+    recruitment graph and a component-boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Mmi1 nuclear focus
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990251
+parent_structures:
+- GO:0016604
+part_of:
+- GO:0031981
+has_part:
+- GO:0000176
+components:
+- component_id: mmi1
+  label: Mmi1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - mmi1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Mmi1 is curated as the fission-yeast YTH-family RNA-binding protein
+    that defines Mmi1 nuclear foci; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was assigned in this first record.
+  role: YTH-family RNA-binding constituent that forms nuclear foci for selective elimination
+    of meiosis-specific mRNAs.
+  evidence:
+  - reference: PMID:16823445
+    notes: Harigaya et al. 2006 found that fission-yeast Mmi1 forms multiple nuclear
+      foci during vegetative growth.
+  - reference: DOI:10.1371/journal.pgen.1008598
+    notes: Shichino et al. 2020 analyzed Mmi1 foci and the MTREC/NURS-dependent recruitment
+      of the nuclear exosome to those foci.
+- component_id: nuclear_exosome_rnase_complex
+  label: nuclear exosome (RNase complex)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: GO:0000176
+  role: Nuclear RNase complex recruited to Mmi1 foci for exosome-mediated elimination
+    of meiotic transcripts.
+  evidence:
+  - reference: GO:1990251
+    notes: GO:1990251 defines nuclear exosome foci as containing Mmi1 or an ortholog
+      and the nuclear exosome.
+  - reference: DOI:10.1371/journal.pgen.1008598
+    notes: Shichino et al. 2020 showed that the fission-yeast nuclear exosome colocalizes
+      with Mmi1 foci and is recruited there through MTREC/NURS.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: VARIABLE
+  note: Mmi1 nuclear foci were observed in vegetatively growing fission-yeast cells,
+    where MTREC/NURS links Mmi1 to the nuclear exosome for meiotic transcript elimination.
+  reference: DOI:10.1371/journal.pgen.1008598
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Shichino et al. localized the nuclear exosome to Mmi1-positive nuclear foci
+    in vegetatively growing Schizosaccharomyces pombe.
+  reference: DOI:10.1371/journal.pgen.1008598
+functions:
+- function_id: nuclear_mrna_surveillance_meiosis_specific_transcripts
+  label: nuclear mRNA surveillance of meiosis-specific transcripts
+  grounding: GO:0033621
+  description: Mmi1 nuclear exosome foci couple the YTH-family Mmi1 surveillance factor
+    to nuclear-exosome decay of DSR-containing meiosis-specific transcripts during
+    vegetative fission-yeast growth.
+  evidence:
+  - reference: GO:0033621
+    notes: GO:0033621 is the biological-process term for YTH-family-protein-dependent
+      nuclear mRNA surveillance of meiosis-specific transcripts.
+  - reference: PMID:16823445
+    notes: Harigaya et al. 2006 discovered the DSR-Mmi1 system for selective elimination
+      of meiosis-specific transcripts in vegetative fission yeast.
+  - reference: DOI:10.1371/journal.pgen.1008598
+    notes: Shichino et al. 2020 connected Mmi1 foci, MTREC/NURS and nuclear-exosome
+      recruitment in the same elimination pathway.
+evidence:
+- reference: GO:1990251
+  notes: Gene Ontology cellular-component term for nuclear exosome focus, with definition
+    provenance from PMID:16823445, PMID:23980030 and PMID:32012158.
+- reference: GO:0016604
+  notes: Gene Ontology cellular-component parent term for nuclear body.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for the nuclear lumen; Mmi1/exosome
+    foci are nuclear bodies.
+- reference: GO:0000176
+  notes: Gene Ontology cellular-component term for the nuclear exosome RNase complex,
+    the exosome component in GO:1990251.
+- reference: GO:0033621
+  notes: Gene Ontology biological-process term for nuclear mRNA surveillance of meiosis-specific
+    transcripts.
+- reference: PMID:16823445
+  notes: Harigaya, Tanaka, Yamanaka and colleagues 2006, Selective elimination of
+    messenger RNA prevents an incidence of untimely meiosis, Nature.
+- reference: DOI:10.1093/nar/gkt763
+  notes: Yamashita, Takayama, Iwata and Yamamoto 2013, A novel factor Iss10 regulates
+    Mmi1-mediated selective elimination of meiotic transcripts, Nucleic Acids Research.
+- reference: DOI:10.1371/journal.pgen.1008598
+  notes: Shichino, Otsubo, Yamamoto and Yamashita 2020, Meiotic gene silencing complex
+    MTREC/NURS recruits the nuclear exosome to YTH-RNA-binding protein Mmi1, PLoS
+    Genetics.
+causal_graphs:
+- graph_id: mtrec_recruits_exosome_to_mmi1_focus
+  title: MTREC/NURS recruits exosome to Mmi1 foci
+  description: Fission-yeast Mmi1 forms nuclear foci that recruit the nuclear exosome
+    through MTREC/NURS to eliminate meiosis-specific mRNAs during vegetative growth.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the Mmi1-focus, nuclear-exosome and MTREC/NURS recruitment
+    axis without resolving MTREC/NURS as a component of the focus, assigning source-neutral
+    Red1/Mtl1 groundings or modeling individual meiotic transcript substrates.
+  nodes:
+  - node_id: mmi1
+    label: Mmi1
+    node_type: GENE_OR_PROTEIN
+    component_ref: mmi1
+  - node_id: mtrec_nurs
+    label: MTREC/NURS complex
+    node_type: GENE_OR_PROTEIN
+  - node_id: nuclear_exosome_rnase_complex
+    label: nuclear exosome (RNase complex)
+    node_type: STRUCTURE
+    grounding: GO:0000176
+    component_ref: nuclear_exosome_rnase_complex
+  - node_id: nuclear_exosome_focus
+    label: nuclear exosome focus
+    node_type: STRUCTURE
+    grounding: GO:1990251
+  - node_id: nuclear_mrna_surveillance_meiosis_specific_transcripts
+    label: nuclear mRNA surveillance of meiosis-specific transcripts
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0033621
+  edges:
+  - subject: mmi1
+    predicate: localizes to
+    object: nuclear_exosome_focus
+    description: Mmi1 is the YTH-family RNA-binding protein that forms nuclear exosome
+      foci.
+    evidence:
+    - reference: PMID:16823445
+      notes: Harigaya et al. 2006 found Mmi1 in multiple nuclear foci during vegetative
+        growth.
+  - subject: mtrec_nurs
+    predicate: recruits
+    object: nuclear_exosome_rnase_complex
+    description: The MTREC/NURS complex recruits the nuclear exosome to Mmi1 foci.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1008598
+      notes: Shichino et al. 2020 showed that MTREC/NURS connects Mmi1 and the nuclear
+        exosome in fission yeast.
+  - subject: nuclear_exosome_rnase_complex
+    predicate: localizes to
+    object: nuclear_exosome_focus
+    description: The nuclear exosome colocalizes with Mmi1 in nuclear exosome foci.
+    evidence:
+    - reference: GO:1990251
+      notes: GO:1990251 defines nuclear exosome foci as containing the nuclear exosome.
+    - reference: DOI:10.1371/journal.pgen.1008598
+      notes: Shichino et al. 2020 found nuclear exosome colocalization at Mmi1 foci.
+  - subject: nuclear_exosome_focus
+    predicate: supports
+    object: nuclear_mrna_surveillance_meiosis_specific_transcripts
+    description: Mmi1 nuclear exosome foci support selective elimination of meiosis-specific
+      transcripts.
+    evidence:
+    - reference: GO:1990251
+      notes: GO:1990251 defines the focus as a nuclear body involved in nuclear mRNA
+        surveillance.
+    - reference: GO:0033621
+      notes: GO:0033621 is the exact GO process for YTH-family-protein-dependent degradation
+        of meiosis-specific transcripts.
+discussions:
+- discussion_id: resolve_mtrec_nurs_focus_boundaries
+  prompt: Resolve whether MTREC/NURS, Red1, Mtl1 and meiosis-specific transcript substrates
+    are stable constituents of the nuclear exosome focus.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mmi1
+  - components#nuclear_exosome_rnase_complex
+  - causal_graphs#mtrec_recruits_exosome_to_mmi1_focus
+  rationale: This first GO:1990251 record captures the GO-defined Mmi1 and nuclear-exosome
+    focus. Shichino et al. 2020 establish that MTREC/NURS links Mmi1 to the nuclear
+    exosome, but the exact focus residency of Red1, Mtl1 and Mmi1-bound meiotic RNA
+    substrates should be curated before adding them as components.
+  evidence:
+  - reference: GO:1990251
+    notes: GO-defined focus boundary.
+  - reference: DOI:10.1371/journal.pgen.1008598
+    notes: Primary MTREC/NURS nuclear-exosome recruitment evidence.
+  posed_by: codex
+  posed_date: '2026-09-28'
