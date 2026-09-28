@@ -1,0 +1,184 @@
+identifier: GO:0031560
+label: cellular bud neck polarisome
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Protein complex that has a role in determining cell polarity, found at
+  the neck of a fungal bud before and during cytokinesis.
+definition_source: GO:0031560
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T21:25:51Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T21:26:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added polarisome parentage, bud-neck parthood, a reviewed-label-only Spa2/Pea2
+    scaffold component, Saccharomyces distribution and canonical example evidence,
+    a bud-neck polarity function, a nonmechanistic topology graph, and grounding and
+    component-boundary TODOs.
+  llm_assisted: true
+- timestamp: '2026-09-28T21:40:37Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1742 by retargeting the Spa2/Pea2 topology edge from the GO:0031560
+    complex to the GO:0005935 bud-neck site and separating DOI-backed neck localization
+    from GO-backed complex identity in the function and graph text.'
+  llm_assisted: true
+parent_structures:
+- GO:0000133
+part_of:
+- GO:0005935
+components:
+- component_id: spa2_pea2_scaffold
+  label: Spa2/Pea2 polarisome scaffold
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - SPA2
+  - PEA2
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Spa2 and Pea2 are curated as the Saccharomyces scaffold cohort
+    directly localized to the bud neck; no exact source-neutral family CURIE was assigned
+    for this grouped fungal component.
+  role: Scaffold proteins that localize to the mother-daughter neck before cytokinesis
+    in budding Saccharomyces cells.
+  evidence:
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 found that Pea2 relocalizes to the neck between
+      mother and daughter cells before cytokinesis and reported that Pea2 follows
+      the same general localization pattern as Spa2.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast Pea2 and Spa2 polarity proteins localize to the mother-daughter
+    neck late in mitosis before cytokinesis.
+  reference: DOI:10.1083/jcb.135.3.725
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Pea2 and Spa2 were localized to budding and mating
+    polarity sites, including the neck between mother and daughter cells before cytokinesis.
+  reference: DOI:10.1083/jcb.135.3.725
+functions:
+- function_id: bud_neck_cell_polarity_organization
+  label: bud-neck cell-polarity organization
+  description: The cellular bud neck polarisome is the GO-defined cell-polarity complex
+    at the fungal bud neck, where Valtz and Herskowitz 1996 observed the Saccharomyces
+    Spa2/Pea2 polarity scaffold before cytokinesis.
+  evidence:
+  - reference: GO:0031560
+    notes: GO:0031560 defines the cellular bud neck polarisome by its role in cell-polarity
+      determination at the neck of a fungal bud before and during cytokinesis.
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 observed Pea2 at the Saccharomyces mother-daughter
+      neck before cytokinesis and connected Pea2 with the similarly localized Spa2
+      polarity protein.
+evidence:
+- reference: GO:0031560
+  notes: Gene Ontology cellular-component term for the cellular bud neck polarisome.
+- reference: GO:0000133
+  notes: Gene Ontology cellular-component term for polarisome.
+- reference: GO:0005935
+  notes: Gene Ontology cellular-component term for the cellular bud neck.
+- reference: DOI:10.1083/jcb.135.3.725
+  notes: Valtz and Herskowitz 1996, 'Pea2 protein of yeast is localized to sites of
+    polarized growth and is required for efficient mating and bipolar budding', Journal
+    of Cell Biology.
+causal_graphs:
+- graph_id: bud_neck_polarisome_topology
+  title: Bud-neck polarisome topology
+  description: Spa2 and Pea2 mark the Saccharomyces mother-daughter neck occupied
+    by the GO-defined bud-neck polarisome before cytokinesis.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records direct bud-neck localization of the Spa2/Pea2 scaffold
+    and the GO-defined placement of the bud-neck polarisome without asserting a complete
+    actin-assembly pathway or adding candidate Bni1 or Bud6/Aip3 constituents.
+  nodes:
+  - node_id: spa2_pea2_scaffold
+    label: Spa2/Pea2 polarisome scaffold
+    node_type: GENE_OR_PROTEIN
+    component_ref: spa2_pea2_scaffold
+  - node_id: cellular_bud_neck_polarisome
+    label: cellular bud neck polarisome
+    node_type: STRUCTURE
+    grounding: GO:0031560
+  - node_id: cellular_bud_neck
+    label: cellular bud neck
+    node_type: STRUCTURE
+    grounding: GO:0005935
+  - node_id: bud_neck_cell_polarity_organization
+    label: bud-neck cell-polarity organization
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: cellular_bud_neck_polarisome
+    predicate: is part of
+    object: cellular_bud_neck
+    description: The cellular bud neck polarisome is localized to the bud neck before
+      and during cytokinesis.
+    evidence:
+    - reference: GO:0031560
+      notes: GO:0031560 defines this polarisome as being found at the neck of a fungal
+        bud.
+    - reference: GO:0005935
+      notes: GO:0005935 identifies the cellular bud neck.
+  - subject: spa2_pea2_scaffold
+    predicate: localizes to
+    object: cellular_bud_neck
+    description: Pea2 and Spa2 localize to the mother-daughter neck before cytokinesis.
+    evidence:
+    - reference: DOI:10.1083/jcb.135.3.725
+      notes: Valtz and Herskowitz 1996 localized Pea2 to the mother-daughter neck
+        before cytokinesis and described Pea2 and Spa2 localization as the same general
+        pattern.
+  - subject: cellular_bud_neck_polarisome
+    predicate: supports
+    object: bud_neck_cell_polarity_organization
+    description: The bud-neck polarisome is the cell-polarity protein complex found
+      at the bud neck before and during cytokinesis.
+    evidence:
+    - reference: GO:0031560
+      notes: GO:0031560 defines the bud-neck polarisome by its role in cell-polarity
+        determination at the fungal bud neck.
+discussions:
+- discussion_id: resolve_bud_neck_polarisome_family_groundings
+  prompt: Resolve exact source-neutral family groundings for the bud-neck Spa2/Pea2
+    scaffold.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spa2_pea2_scaffold
+  rationale: The first bud-neck polarisome record keeps Spa2 and Pea2 label-only rather
+    than guessing InterPro, Pfam, or NCBIfam groundings whose broader homologous families
+    may not exactly delimit the localized bud-neck scaffold.
+  evidence:
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 localized Saccharomyces Pea2 and Spa2 during
+      budding and mating.
+  posed_by: codex
+  posed_date: '2026-09-28'
+- discussion_id: resolve_additional_bud_neck_polarisome_components
+  prompt: Resolve whether Bni1, Bud6/Aip3, or other generic polarisome proteins are
+    direct cellular-bud-neck polarisome constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#spa2_pea2_scaffold
+  - causal_graphs#bud_neck_polarisome_topology
+  rationale: GO:0000133 names Bni1p and Bud6p among Saccharomyces polarisome proteins,
+    but the opened bud-neck-localization evidence in this first pass directly supports
+    only Pea2 and Spa2 at the mother-daughter neck.
+  evidence:
+  - reference: GO:0000133
+    notes: GO:0000133 identifies Bni1p and Bud6p as generic Saccharomyces polarisome
+      proteins.
+  - reference: DOI:10.1083/jcb.135.3.725
+    notes: Valtz and Herskowitz 1996 directly support Pea2 and Spa2 localization at
+      the bud neck before cytokinesis.
+  posed_by: codex
+  posed_date: '2026-09-28'

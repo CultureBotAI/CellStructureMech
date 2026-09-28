@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cellular_bud_neck_polarisome.yaml
+  slug: cellular_bud_neck_polarisome
+session:
+  id: 2026-09-28T214059Z-codex-1e0251
+  timestamp: '2026-09-28T21:40:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1742
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1741
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed cellular bud neck polarisome review
+  details: 'Resolved #1742 by retargeting the Spa2/Pea2 topology edge from the GO:0031560
+    cellular bud neck polarisome node to the GO:0005935 cellular bud neck node and by separating
+    DOI-backed neck localization from GO-backed complex identity in the function and graph
+    text.'
