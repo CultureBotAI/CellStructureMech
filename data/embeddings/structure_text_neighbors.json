@@ -15239,6 +15239,11 @@
           "cosine_similarity": 0.65459135
         },
         {
+          "identifier": "GO:0071920",
+          "label": "cleavage body",
+          "cosine_similarity": 0.64852456
+        },
+        {
           "identifier": "GO:0015030",
           "label": "Cajal body",
           "cosine_similarity": 0.63287815
@@ -15252,11 +15257,6 @@
           "identifier": "GO:0097356",
           "label": "perinucleolar compartment",
           "cosine_similarity": 0.61872195
-        },
-        {
-          "identifier": "GO:0035363",
-          "label": "histone locus body",
-          "cosine_similarity": 0.61743889
         }
       ]
     },
@@ -17059,6 +17059,37 @@
       ]
     },
     {
+      "identifier": "GO:0071920",
+      "label": "cleavage body",
+      "neighbors": [
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.78741381
+        },
+        {
+          "identifier": "GO:0015030",
+          "label": "Cajal body",
+          "cosine_similarity": 0.73811505
+        },
+        {
+          "identifier": "GO:0031533",
+          "label": "mRNA capping enzyme complex",
+          "cosine_similarity": 0.67703147
+        },
+        {
+          "identifier": "GO:0097356",
+          "label": "perinucleolar compartment",
+          "cosine_similarity": 0.67250474
+        },
+        {
+          "identifier": "GO:0005686",
+          "label": "U2 snRNP",
+          "cosine_similarity": 0.65759432
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000243",
       "label": "commitment complex",
       "neighbors": [
@@ -17445,6 +17476,11 @@
           "cosine_similarity": 0.72561953
         },
         {
+          "identifier": "GO:0071920",
+          "label": "cleavage body",
+          "cosine_similarity": 0.65497284
+        },
+        {
           "identifier": "GO:0000228",
           "label": "nuclear chromosome",
           "cosine_similarity": 0.64535222
@@ -17453,11 +17489,6 @@
           "identifier": "GO:0031981",
           "label": "nuclear lumen",
           "cosine_similarity": 0.64350626
-        },
-        {
-          "identifier": "GO:0015030",
-          "label": "Cajal body",
-          "cosine_similarity": 0.63281651
         }
       ]
     },
@@ -17528,6 +17559,11 @@
       "label": "P-body",
       "neighbors": [
         {
+          "identifier": "GO:0071920",
+          "label": "cleavage body",
+          "cosine_similarity": 0.78741381
+        },
+        {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.72539438
@@ -17546,11 +17582,6 @@
           "identifier": "GO:0030681",
           "label": "multimeric ribonuclease P complex",
           "cosine_similarity": 0.71887224
-        },
-        {
-          "identifier": "GO:0000177",
-          "label": "cytoplasmic exosome (RNase complex)",
-          "cosine_similarity": 0.7148273
         }
       ]
     },

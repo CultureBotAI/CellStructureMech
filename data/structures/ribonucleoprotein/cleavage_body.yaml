@@ -1,0 +1,222 @@
+identifier: GO:0071920
+label: cleavage body
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: A nuclear body that contains proteins involved in pre-mRNA 3'-end cleavage
+  and polyadenylation, such as DDX1, CSTF2 and CPSFs, as well as the transcription
+  factors TFIIE and TFIIF. Cleavage bodies are localized adjacent to Cajal bodies
+  and are involved in mRNA3'-end processing.
+definition_source: GO:0071920
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T03:51:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T03:53:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nuclear-body parentage, nuclear-lumen parthood, CstF-64/CPSF-100
+    components, human cleavage-body scope, mRNA 3'-end-processing context, a nonmechanistic
+    cleavage-body positioning graph and a component-boundary TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0016604
+part_of:
+- GO:0031981
+components:
+- component_id: cstf64
+  label: CstF-64
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CSTF2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CstF-64 is curated as the cleavage-stimulation-factor subunit enriched
+    in cleavage bodies; no exact reviewed source-neutral InterPro, Pfam or NCBIfam
+    accession was assigned in this first record.
+  role: mRNA 3'-end cleavage/polyadenylation factor that concentrates in cleavage
+    bodies, especially during S phase.
+  evidence:
+  - reference: PMID:8654386
+    notes: Schul et al. 1996 identified nuclear domains containing the RNA 3' cleavage
+      factor CstF 64 kDa close to coiled bodies.
+  - reference: DOI:10.1091/mbc.e05-08-0768
+    notes: Li et al. 2006 used CstF-64 as a cleavage-body marker and found that CstF-64-containing
+      cleavage bodies were primarily observed in S-phase HeLa cells.
+- component_id: cpsf100
+  label: CPSF-100
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CPSF2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CPSF-100 is curated as the cleavage and polyadenylation specificity
+    factor subunit enriched in cleavage bodies; no exact reviewed source-neutral InterPro,
+    Pfam or NCBIfam accession was assigned in this first record.
+  role: mRNA 3'-end cleavage/polyadenylation factor that marks cleavage bodies with
+    CstF-64 and can persist in these foci into G2 phase.
+  evidence:
+  - reference: PMID:8654386
+    notes: Schul et al. 1996 identified CPSF 100 kDa with CstF 64 kDa in nuclear cleavage-factor
+      domains close to coiled bodies.
+  - reference: DOI:10.1091/mbc.e05-08-0768
+    notes: Li et al. 2006 followed CPSF-100-positive cleavage bodies in synchronized
+      HeLa cells and their relationship to DDX1 bodies and Cajal bodies.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  presence: VARIABLE
+  note: Cleavage bodies were defined in human cultured cells as dynamic nuclear foci
+    enriched in CstF-64 and CPSF-100, with abundance and protein composition varying
+    with cell-cycle state.
+  reference: DOI:10.1091/mbc.10.11.3815
+canonical_examples:
+- taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  note: Human T24 and HeLa cells were used to connect cleavage bodies with CstF-64/CPSF-100
+    concentration, nearby Cajal bodies and cell-cycle-dependent nuclear positioning.
+  reference: DOI:10.1091/mbc.10.11.3815
+functions:
+- function_id: mrna_3_end_processing
+  label: mRNA 3'-end processing
+  grounding: GO:0031124
+  description: Cleavage bodies concentrate CstF-64 and CPSF-100, proteins involved
+    in pre-mRNA 3'-end cleavage and polyadenylation, in dynamic nuclear foci associated
+    with Cajal bodies and S-phase histone loci.
+  evidence:
+  - reference: GO:0071920
+    notes: GO:0071920 defines cleavage bodies as nuclear bodies involved in mRNA 3'-end
+      processing and containing proteins involved in pre-mRNA 3'-end cleavage and
+      polyadenylation.
+  - reference: DOI:10.1091/mbc.10.11.3815
+    notes: Schul et al. 1999 analyzed CstF-64-positive cleavage bodies beside coiled
+      bodies and their cell-cycle-dependent overlap with the human histone gene cluster.
+evidence:
+- reference: GO:0071920
+  notes: Gene Ontology cellular-component term for cleavage body, with definition
+    provenance from PMID:8654386, PMID:11598190 and PMID:10564273.
+- reference: GO:0016604
+  notes: Gene Ontology cellular-component parent term for nuclear body.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen; cleavage bodies
+    are nuclear foci.
+- reference: GO:0031124
+  notes: Gene Ontology biological-process term for mRNA 3'-end processing.
+- reference: PMID:8654386
+  notes: Schul, Groenhout, Koberna and colleagues 1996, The RNA 3' cleavage factors
+    CstF 64 kDa and CPSF 100 kDa are concentrated in nuclear domains closely associated
+    with coiled bodies and newly synthesized RNA, EMBO Journal.
+- reference: DOI:10.1091/mbc.10.11.3815
+  notes: Schul, van der Kraan, Matera and colleagues 1999, Nuclear Domains Enriched
+    in RNA 3'-processing Factors Associate with Coiled Bodies and Histone Genes in
+    a Cell Cycle-dependent Manner, Molecular Biology of the Cell.
+- reference: DOI:10.1091/mbc.e05-08-0768
+  notes: Li, Roy, Katyal and colleagues 2006, Dynamic Nature of Cleavage Bodies and
+    Their Spatial Relationship to DDX1 Bodies, Cajal Bodies, and Gems, Molecular Biology
+    of the Cell.
+- reference: DOI:10.1091/mbc.12.10.3046
+  notes: Bleoo et al. 2001 connected human DDX1 with CstF in pre-mRNA 3'-end processing,
+    informing the open DDX1 boundary question for cleavage-body curation.
+causal_graphs:
+- graph_id: cstf_cpsf_cleavage_body_positioning
+  title: CstF/CPSF concentrate in dynamic cleavage bodies
+  description: Human cleavage bodies concentrate the mRNA 3'-end-processing factors
+    CstF-64 and CPSF-100 in nuclear foci that associate with Cajal bodies and overlap
+    S-phase histone gene clusters.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes cleavage-body marker enrichment and spatial associations
+    without asserting a complete condensate assembly pathway, a resident status for
+    every DDX1-associated focus or direct active RNA processing inside the body.
+  nodes:
+  - node_id: cstf64
+    label: CstF-64
+    node_type: GENE_OR_PROTEIN
+    component_ref: cstf64
+  - node_id: cpsf100
+    label: CPSF-100
+    node_type: GENE_OR_PROTEIN
+    component_ref: cpsf100
+  - node_id: cleavage_body
+    label: cleavage body
+    node_type: STRUCTURE
+    grounding: GO:0071920
+  - node_id: cajal_body
+    label: Cajal body
+    node_type: STRUCTURE
+    grounding: GO:0015030
+  - node_id: histone_gene_cluster
+    label: histone gene cluster
+    node_type: GENETIC_ELEMENT
+  - node_id: mrna_3_end_processing
+    label: mRNA 3'-end processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031124
+  edges:
+  - subject: cstf64
+    predicate: localizes to
+    object: cleavage_body
+    description: CstF-64 concentrates in cleavage bodies.
+    evidence:
+    - reference: PMID:8654386
+      notes: Schul et al. 1996 identified CstF-64-positive nuclear cleavage-factor
+        domains near coiled bodies.
+  - subject: cpsf100
+    predicate: localizes to
+    object: cleavage_body
+    description: CPSF-100 concentrates in cleavage bodies.
+    evidence:
+    - reference: PMID:8654386
+      notes: Schul et al. 1996 identified CPSF-100-positive nuclear cleavage-factor
+        domains near coiled bodies.
+  - subject: cleavage_body
+    predicate: associates with
+    object: cajal_body
+    description: Cleavage bodies dynamically overlap or sit adjacent to Cajal bodies
+      in a cell-cycle-dependent pattern.
+    evidence:
+    - reference: DOI:10.1091/mbc.10.11.3815
+      notes: Schul et al. 1999 followed CstF-64-positive cleavage bodies and p80-coilin-positive
+        coiled bodies through the human T24 cell cycle.
+  - subject: cleavage_body
+    predicate: overlaps
+    object: histone_gene_cluster
+    description: S-phase cleavage bodies preferentially overlap the human histone
+      gene cluster adjacent to Cajal bodies.
+    evidence:
+    - reference: DOI:10.1091/mbc.10.11.3815
+      notes: Schul et al. 1999 detected frequent overlap between cleavage bodies and
+        the chromosome 6p21 histone gene cluster in S-phase T24 cells.
+  - subject: cleavage_body
+    predicate: concentrates factors for
+    object: mrna_3_end_processing
+    description: Cleavage bodies concentrate mRNA 3'-end cleavage and polyadenylation
+      factors CstF-64 and CPSF-100.
+    evidence:
+    - reference: GO:0071920
+      notes: GO:0071920 defines cleavage bodies as containing proteins involved in
+        pre-mRNA 3'-end cleavage and polyadenylation.
+discussions:
+- discussion_id: resolve_cleavage_body_component_boundaries
+  prompt: Resolve exact source-neutral protein families and additional resident versus
+    neighboring factors of cleavage bodies.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cstf64
+  - components#cpsf100
+  - causal_graphs#cstf_cpsf_cleavage_body_positioning
+  rationale: This first GO:0071920 record captures the repeatedly imaged CstF-64 and
+    CPSF-100 cleavage-factor markers while leaving exact family groundings and the
+    boundary around DDX1 bodies, TFIIE, TFIIF, RNA polymerase II, hnRNP K and latrunculin-induced
+    nuclear spicules to a separate curation pass.
+  evidence:
+  - reference: GO:0071920
+  - reference: DOI:10.1091/mbc.e05-08-0768
+  - reference: DOI:10.1091/mbc.12.10.3046
+  posed_by: codex
+  posed_date: '2026-09-28'
