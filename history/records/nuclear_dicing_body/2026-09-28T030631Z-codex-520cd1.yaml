@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/nuclear_dicing_body.yaml
+  slug: nuclear_dicing_body
+session:
+  id: 2026-09-28T030631Z-codex-520cd1
+  timestamp: '2026-09-28T03:06:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1699
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1698
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add nuclear dicing body record
+  details: Created GO:0010445 nuclear dicing body as a GO-grounded Arabidopsis D-body record
+    after a hidden- and ignored-inclusive absence search found no existing record. Added GO
+    synonymy, nuclear-body parentage, nuclear-lumen parthood, DCL1, HYL1, SERRATE and pri-miRNA
+    component classes, Arabidopsis taxonomic scope, primary miRNA processing support, a SERRATE-driven
+    D-body assembly graph, GO and DOI evidence, and an open TODO for exact source-neutral
+    component groundings. Validated the YAML through write_validated_structure.
