@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/mating_projection.yaml
+  slug: mating_projection
+session:
+  id: 2026-09-28T134247Z-claude-code-f89de4
+  timestamp: '2026-09-28T13:42:47Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1726
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1725
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Represent the mating projection tip membrane
+  details: 'Addressed PR #1725 review issue #1726 by adding the GO:0070867 mating projection
+    tip membrane as a structure node in the topology graph and connecting it to the GO:0043332
+    mating projection tip with an evidence-backed parthood edge.'

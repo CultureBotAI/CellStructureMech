@@ -19,6 +19,12 @@ curation_history:
     DOI evidence, a nonmechanistic projection topology graph, and a localized-complex
     boundary decision.
   llm_assisted: true
+- timestamp: '2026-09-28T13:42:13Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1726 by adding the GO:0070867 mating projection tip membrane
+    to the topology graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: shmoo
   synonym_type: NARROW_SYNONYM
@@ -115,6 +121,10 @@ causal_graphs:
     label: mating projection membrane
     node_type: STRUCTURE
     grounding: GO:0070250
+  - node_id: mating_projection_tip_membrane
+    label: mating projection tip membrane
+    node_type: STRUCTURE
+    grounding: GO:0070867
   - node_id: mating_projection_tip
     label: mating projection tip
     node_type: CELLULAR_LOCALIZATION
@@ -143,6 +153,15 @@ causal_graphs:
     evidence:
     - reference: GO:0070250
       notes: GO:0070250 identifies the mating projection membrane.
+  - subject: mating_projection_tip_membrane
+    predicate: is part of
+    object: mating_projection_tip
+    description: The mating projection tip membrane is the portion of the plasma membrane
+      surrounding the projection tip.
+    evidence:
+    - reference: GO:0070867
+      notes: GO:0070867 identifies the membrane portion surrounding the mating projection
+        tip.
   - subject: mating_projection_tip
     predicate: is part of
     object: mating_projection
