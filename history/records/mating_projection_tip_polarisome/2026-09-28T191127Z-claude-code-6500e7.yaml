@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mating_projection_tip_polarisome.yaml
+  slug: mating_projection_tip_polarisome
+session:
+  id: 2026-09-28T191127Z-claude-code-6500e7
+  timestamp: '2026-09-28T19:11:27Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1736
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1735
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - discussions
+  summary: Addressed Bud6 review finding
+  details: 'Resolved adversarial review issue #1736 by adding Bud6/Aip3 as a reviewed-label-only
+    Saccharomyces polarisome constituent, expanding the family-grounding TODO to include Bud6,
+    and recording why Bud6 is not asserted in the first mating-projection phenotype graph.'

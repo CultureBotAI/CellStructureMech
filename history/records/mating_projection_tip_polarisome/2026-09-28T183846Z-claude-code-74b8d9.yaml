@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mating_projection_tip_polarisome.yaml
+  slug: mating_projection_tip_polarisome
+session:
+  id: 2026-09-28T183846Z-claude-code-74b8d9
+  timestamp: '2026-09-28T18:38:46Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Fixed mating projection tip polarisome discussion anchors
+  details: Replaced the cdc42_and_fus_proteins_outside_polarisome_boundary discussion bare
+    components anchor with explicit spa2_pea2_scaffold and bni1_formin component anchors so
+    corpus integrity can resolve every attaches_to target.
