@@ -1,0 +1,188 @@
+identifier: GO:0000144
+label: cellular bud neck septin ring
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A ring-shaped structure that forms at the site of cytokinesis in the bud
+  neck of a budding cell; composed of members of the conserved family of filament
+  forming proteins called septins as well as septin-associated proteins. In S. cerevisiae,
+  this structure forms at the time of bud emergence and the septins show a high rate
+  of exchange.
+definition_source: GO:0000144
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T22:52:03Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T22:53:18Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-ring parentage, bud-neck parthood, a reviewed-label-only septin
+    constituent, Saccharomyces distribution and canonical example evidence, a future-bud-site
+    scaffold function, a nonmechanistic ring-to-collar topology graph, and ring-boundary
+    and component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0005940
+part_of:
+- GO:0005935
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Saccharomyces bud-neck septin ring contains multiple paralogous
+    septin GTPases whose complete localized cohort is not delimited by an exact source-neutral
+    protein-family CURIE.
+  role: Septin GTPases that assemble into the dynamic ring at the Saccharomyces future
+    bud site.
+  evidence:
+  - reference: GO:0000144
+    notes: GO:0000144 defines the cellular bud neck septin ring as composed of septins
+      and septin-associated proteins.
+  - reference: DOI:10.1091/mbc.E04-09-0764
+    notes: Kozubowski et al. 2005 describe Saccharomyces septins forming a ring-shaped
+      scaffold at the future budding site.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast septins form an initial ring at the future budding site that
+    later rearranges into the hourglass-shaped bud-neck collar.
+  reference: DOI:10.1091/mbc.E04-09-0764
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the initial future-bud-site septin ring gives
+    way to a mother-bud-neck septin collar.
+  reference: DOI:10.1091/mbc.E04-09-0764
+functions:
+- function_id: future_bud_site_scaffold
+  label: future-bud-site scaffold
+  description: The cellular bud neck septin ring is the dynamic initial septin scaffold
+    that marks the future bud site before rearranging into the mother-bud-neck collar.
+  evidence:
+  - reference: GO:0000144
+    notes: GO:0000144 defines the structure as a Saccharomyces septin ring that forms
+      at bud emergence and shows rapid septin exchange.
+  - reference: DOI:10.1091/mbc.E04-09-0764
+    notes: Kozubowski et al. 2005 describe the septin scaffold as ring-shaped at the
+      future budding site before it rearranges into the mother-bud-neck collar.
+evidence:
+- reference: GO:0000144
+  notes: Gene Ontology cellular-component term for the cellular bud neck septin ring.
+- reference: GO:0005940
+  notes: Gene Ontology cellular-component parent term for septin ring.
+- reference: GO:0005935
+  notes: Gene Ontology cellular-component term for the cellular bud neck.
+- reference: DOI:10.1091/mbc.E04-09-0764
+  notes: Kozubowski, Larson and Tatchell 2005, 'Role of the Septin Ring in the Asymmetric
+    Localization of Proteins at the Mother-Bud Neck in Saccharomyces cerevisiae',
+    Molecular Biology of the Cell.
+- reference: DOI:10.1016/j.tcb.2005.06.007
+  notes: 'Versele and Thorner 2005, ''Some assembly required: yeast septins provide
+    the instruction manual'', Trends in Cell Biology.'
+causal_graphs:
+- graph_id: bud_neck_septin_ring_topology
+  title: Bud-neck septin ring topology
+  description: Septin proteins assemble into the exchangeable initial ring that rearranges
+    into the hourglass-shaped collar at the Saccharomyces mother-bud neck.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records septin-ring placement and the ring-to-collar transition
+    without asserting the full order of septin recruitment, collar maturation, or
+    cytokinetic split-ring formation.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: cellular_bud_neck_septin_ring
+    label: cellular bud neck septin ring
+    node_type: STRUCTURE
+    grounding: GO:0000144
+  - node_id: cellular_bud_neck_septin_collar
+    label: cellular bud neck septin collar
+    node_type: STRUCTURE
+    grounding: GO:0032174
+  - node_id: cellular_bud_neck
+    label: cellular bud neck
+    node_type: STRUCTURE
+    grounding: GO:0005935
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: cellular_bud_neck_septin_ring
+    description: Septin proteins form the ring-shaped, exchangeable initial septin
+      structure at the budding-cell bud neck.
+    evidence:
+    - reference: GO:0000144
+      notes: GO:0000144 defines the cellular bud neck septin ring as a ring-shaped
+        septin-containing structure.
+  - subject: cellular_bud_neck_septin_ring
+    predicate: rearranges into
+    object: cellular_bud_neck_septin_collar
+    description: The septin ring at the future budding site rearranges into the mother-bud-neck
+      collar after budding.
+    evidence:
+    - reference: DOI:10.1091/mbc.E04-09-0764
+      notes: Kozubowski et al. 2005 describe the Saccharomyces septin ring at the
+        future budding site as rearranging into a collar at the mother-bud neck.
+  - subject: cellular_bud_neck_septin_ring
+    predicate: is part of
+    object: cellular_bud_neck
+    description: The cellular bud neck septin ring forms in the bud neck of a budding
+      cell.
+    evidence:
+    - reference: GO:0000144
+      notes: GO:0000144 places the septin ring in the bud neck of a budding cell.
+    - reference: GO:0005935
+      notes: GO:0005935 identifies the cellular bud neck.
+discussions:
+- discussion_id: bud_neck_septin_ring_boundary
+  prompt: Keep the cellular bud neck septin ring distinct from the bud-neck septin
+    collar and split septin rings.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - causal_graphs#bud_neck_septin_ring_topology
+  rationale: GO:0000144 denotes the dynamic initial bud-neck ring that forms at bud
+    emergence, GO:0032174 denotes the fixed hourglass-shaped collar that persists
+    for most of the cell cycle, and GO:0032177 denotes the two split rings formed
+    from the collar at cytokinesis. This record models only the initial ring state.
+  resolution_note: Curated GO:0000144 as a bud-neck septin-ring record and used GO:0032174
+    only as the topology node for the subsequent collar.
+  evidence:
+  - reference: GO:0000144
+    notes: GO:0000144 identifies the dynamic cellular bud neck septin ring that forms
+      at the time of bud emergence.
+  - reference: GO:0032174
+    notes: GO:0032174 identifies the fixed hourglass-shaped cellular bud neck septin
+      collar.
+  - reference: GO:0032177
+    notes: GO:0032177 identifies the pair of split septin rings that form from the
+      collar at cytokinesis.
+  posed_by: codex
+  posed_date: '2026-09-28'
+  resolved_date: '2026-09-28'
+- discussion_id: resolve_bud_neck_ring_components
+  prompt: Resolve exact source-neutral family groundings and boundary status for bud-neck
+    septin-ring septins and septin-associated proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The first localized bud-neck septin-ring record keeps only the reviewed-label-only
+    septin protein cohort rather than guessing InterPro, Pfam, or NCBIfam accessions
+    and rather than adding the GO-defined septin-associated proteins before their
+    exact constituent boundary has been reviewed.
+  evidence:
+  - reference: GO:0000144
+    notes: GO:0000144 defines the ring as containing septins and septin-associated
+      proteins.
+  posed_by: codex
+  posed_date: '2026-09-28'

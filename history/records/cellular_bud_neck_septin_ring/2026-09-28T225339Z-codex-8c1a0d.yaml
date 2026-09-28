@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+  slug: cellular_bud_neck_septin_ring
+session:
+  id: 2026-09-28T225339Z-codex-8c1a0d
+  timestamp: '2026-09-28T22:53:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added cellular bud neck septin ring record
+  details: Created the GO:0000144 cellular bud neck septin ring record, grounded it as a localized
+    septin-ring subtype at the cellular bud neck, added a reviewed-label-only septin protein
+    constituent, Saccharomyces cerevisiae distribution and canonical example evidence from
+    Kozubowski et al. 2005, a future-bud-site scaffold function, a nonmechanistic ring-to-collar
+    topology graph, and explicit ring/collar/split-ring boundary and septin-component grounding
+    discussions.
