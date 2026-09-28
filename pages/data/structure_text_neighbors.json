@@ -2551,6 +2551,37 @@
       ]
     },
     {
+      "identifier": "GO:0032175",
+      "label": "mating projection septin ring",
+      "neighbors": [
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.85152624
+        },
+        {
+          "identifier": "GO:0030257",
+          "label": "type III protein secretion system complex",
+          "cosine_similarity": 0.66526582
+        },
+        {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.66463079
+        },
+        {
+          "identifier": "GO:0020031",
+          "label": "polar ring of apical complex",
+          "cosine_similarity": 0.66459471
+        },
+        {
+          "identifier": "GO:1990819",
+          "label": "mating projection actin fusion focus",
+          "cosine_similarity": 0.66353658
+        }
+      ]
+    },
+    {
       "identifier": "GO:0097568",
       "label": "median body",
       "neighbors": [
@@ -2834,6 +2865,11 @@
       "label": "septin ring",
       "neighbors": [
         {
+          "identifier": "GO:0032175",
+          "label": "mating projection septin ring",
+          "cosine_similarity": 0.85152624
+        },
+        {
           "identifier": "GO:0036286",
           "label": "eisosome filament",
           "cosine_similarity": 0.7574106
@@ -2852,11 +2888,6 @@
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
           "cosine_similarity": 0.71678243
-        },
-        {
-          "identifier": "GO:0009277",
-          "label": "fungal-type cell wall",
-          "cosine_similarity": 0.7114328
         }
       ]
     },

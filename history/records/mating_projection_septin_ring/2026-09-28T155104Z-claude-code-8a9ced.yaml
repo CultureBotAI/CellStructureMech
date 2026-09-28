@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mating_projection_septin_ring.yaml
+  slug: mating_projection_septin_ring
+session:
+  id: 2026-09-28T155104Z-claude-code-8a9ced
+  timestamp: '2026-09-28T15:51:04Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add mating projection septin ring record
+  details: Created data/structures/cytoskeleton/mating_projection_septin_ring.yaml for GO:0032175
+    with septin-ring parentage, mating-projection parthood, a label-only septin constituent,
+    Saccharomyces cerevisiae example evidence from DOI:10.1091/mbc.8.6.987, a shmoo-neck barrier
+    function, a nonmechanistic septin-ring topology graph, and an open boundary TODO for Afr1
+    and additional septin-associated factors.
