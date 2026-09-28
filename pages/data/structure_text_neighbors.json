@@ -13866,6 +13866,37 @@
       ]
     },
     {
+      "identifier": "GO:0016606",
+      "label": "LYSP100-associated nuclear domain",
+      "neighbors": [
+        {
+          "identifier": "GO:0016605",
+          "label": "PML body",
+          "cosine_similarity": 0.69888705
+        },
+        {
+          "identifier": "GO:0071920",
+          "label": "cleavage body",
+          "cosine_similarity": 0.61860536
+        },
+        {
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.61412732
+        },
+        {
+          "identifier": "GO:0031910",
+          "label": "cytostome",
+          "cosine_similarity": 0.61163974
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.60716317
+        }
+      ]
+    },
+    {
       "identifier": "GO:0042555",
       "label": "MCM complex",
       "neighbors": [
@@ -15296,6 +15327,11 @@
       "label": "PML body",
       "neighbors": [
         {
+          "identifier": "GO:0016606",
+          "label": "LYSP100-associated nuclear domain",
+          "cosine_similarity": 0.69888705
+        },
+        {
           "identifier": "GO:0071920",
           "label": "cleavage body",
           "cosine_similarity": 0.67425354
@@ -15314,11 +15350,6 @@
           "identifier": "GO:0015030",
           "label": "Cajal body",
           "cosine_similarity": 0.63287815
-        },
-        {
-          "identifier": "GO:0044615",
-          "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.62057203
         }
       ]
     },
