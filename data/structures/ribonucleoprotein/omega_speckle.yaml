@@ -21,6 +21,13 @@ curation_history:
     hnRNP trafficking evidence, a nonmechanistic hsr-omega omega-speckle organization
     graph and a component-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-09-28T06:08:56Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved #1706 by rewording the omega speckle graph description to state
+    hsr-omega-n/hnRNP colocalization, physical association and dependence without
+    claiming active hnRNP recruitment.'
+  llm_assisted: true
 parent_structures:
 - GO:0016607
 - GO:0140168
@@ -110,8 +117,8 @@ causal_graphs:
 - graph_id: hsr_omega_hnrnp_speckle_organization
   title: hsr-omega RNA organizes hnRNP omega speckles
   description: The Drosophila hsr-omega-n nuclear noncoding transcript localizes in
-    omega speckles, recruits hnRNP proteins to the same foci and is required for their
-    speckled nuclear distribution.
+    omega speckles, colocalizes and physically associates with hnRNP proteins in the
+    same foci, and is required for their speckled nuclear distribution.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This graph summarizes the hsr-omega RNA and hnRNP localization axis
