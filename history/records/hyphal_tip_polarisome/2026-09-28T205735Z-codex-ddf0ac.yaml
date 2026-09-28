@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hyphal_tip_polarisome.yaml
+  slug: hyphal_tip_polarisome
+session:
+  id: 2026-09-28T205735Z-codex-ddf0ac
+  timestamp: '2026-09-28T20:57:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1740
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1739
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed hyphal tip polarisome review
+  details: 'Resolved #1740 by attaching the non-tip boundary discussion to SPA-2 and clarifying
+    that SPA-2 septal-plug localization is outside the GO:0031562 hyphal tip polarisome boundary.'

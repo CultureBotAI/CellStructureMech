@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hyphal_tip_polarisome.yaml
+  slug: hyphal_tip_polarisome
+session:
+  id: 2026-09-28T203649Z-codex-14d4e7
+  timestamp: '2026-09-28T20:36:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the hyphal tip polarisome record
+  details: Created the GO:0031562 hyphal tip polarisome record, grounded it under the generic
+    polarisome and GO hyphal tip, curated reviewed-label-only SPA-2/BUD-6/BNI-1 constituents
+    from Lichius et al. 2012 Neurospora evidence, and recorded TODO and boundary discussions
+    for unresolved family groundings and non-tip assemblies.

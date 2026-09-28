@@ -14052,6 +14052,37 @@
       ]
     },
     {
+      "identifier": "GO:0031562",
+      "label": "hyphal tip polarisome",
+      "neighbors": [
+        {
+          "identifier": "GO:0000133",
+          "label": "polarisome",
+          "cosine_similarity": 0.76808253
+        },
+        {
+          "identifier": "GO:0031521",
+          "label": "spitzenkorper",
+          "cosine_similarity": 0.7633024
+        },
+        {
+          "identifier": "GO:0031561",
+          "label": "cellular bud tip polarisome",
+          "cosine_similarity": 0.7575873
+        },
+        {
+          "identifier": "GO:0031563",
+          "label": "mating projection tip polarisome",
+          "cosine_similarity": 0.73131013
+        },
+        {
+          "identifier": "GO:0043332",
+          "label": "mating projection tip",
+          "cosine_similarity": 0.70424878
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031011",
       "label": "Ino80 complex",
       "neighbors": [
@@ -14288,14 +14319,14 @@
           "cosine_similarity": 0.80657573
         },
         {
+          "identifier": "GO:0031562",
+          "label": "hyphal tip polarisome",
+          "cosine_similarity": 0.73131013
+        },
+        {
           "identifier": "GO:0033551",
           "label": "monopolin complex",
           "cosine_similarity": 0.69859496
-        },
-        {
-          "identifier": "GO:1990819",
-          "label": "mating projection actin fusion focus",
-          "cosine_similarity": 0.697262
         }
       ]
     },
@@ -15771,6 +15802,11 @@
           "cosine_similarity": 0.87337834
         },
         {
+          "identifier": "GO:0031562",
+          "label": "hyphal tip polarisome",
+          "cosine_similarity": 0.76808253
+        },
+        {
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
           "cosine_similarity": 0.73511698
@@ -15779,11 +15815,6 @@
           "identifier": "GO:0033551",
           "label": "monopolin complex",
           "cosine_similarity": 0.7243697
-        },
-        {
-          "identifier": "GO:0035859",
-          "label": "Seh1-associated complex",
-          "cosine_similarity": 0.71955233
         }
       ]
     },
@@ -16722,6 +16753,11 @@
       "label": "spitzenkorper",
       "neighbors": [
         {
+          "identifier": "GO:0031562",
+          "label": "hyphal tip polarisome",
+          "cosine_similarity": 0.7633024
+        },
+        {
           "identifier": "GO:0043332",
           "label": "mating projection tip",
           "cosine_similarity": 0.73737454
@@ -16740,11 +16776,6 @@
           "identifier": "GO:0005628",
           "label": "prospore membrane",
           "cosine_similarity": 0.66644692
-        },
-        {
-          "identifier": "GO:0000133",
-          "label": "polarisome",
-          "cosine_similarity": 0.66425832
         }
       ]
     },
