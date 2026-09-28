@@ -17338,6 +17338,37 @@
       ]
     },
     {
+      "identifier": "GO:0010445",
+      "label": "nuclear dicing body",
+      "neighbors": [
+        {
+          "identifier": "GO:0015030",
+          "label": "Cajal body",
+          "cosine_similarity": 0.69629238
+        },
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.67415589
+        },
+        {
+          "identifier": "GO:0005730",
+          "label": "nucleolus",
+          "cosine_similarity": 0.6554999
+        },
+        {
+          "identifier": "GO:0005685",
+          "label": "U1 snRNP",
+          "cosine_similarity": 0.64781143
+        },
+        {
+          "identifier": "GO:0101019",
+          "label": "nucleolar exosome (RNase complex)",
+          "cosine_similarity": 0.64122364
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000176",
       "label": "nuclear exosome (RNase complex)",
       "neighbors": [

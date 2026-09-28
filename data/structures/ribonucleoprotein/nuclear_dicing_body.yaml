@@ -1,0 +1,266 @@
+identifier: GO:0010445
+label: nuclear dicing body
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: A small round nuclear body, measuring 0.2-0.8 microns in diameter that
+  is diffusely distributed throughout the nucleoplasm. Several proteins known to be
+  involved in miRNA processing have been localized to these structures. D-bodies are
+  thought to be involved in primary-miRNA processing and/or storage/assembly of miRNA
+  processing complexes.
+definition_source: GO:0010445
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-28T03:04:47Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-28T03:05:49Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added nuclear dicing-body GO synonymy, nuclear-body parentage, nuclear-lumen
+    parthood, Arabidopsis DCL1/HYL1/SERRATE and pri-miRNA components, Arabidopsis
+    scope, primary-miRNA-processing function evidence, DOI/GO evidence, a nonmechanistic
+    SERRATE-driven D-body assembly graph and a component-boundary TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: D body
+  synonym_type: EXACT_SYNONYM
+  source: GO:0010445
+- synonym_text: D-body
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.cub.2007.04.005
+parent_structures:
+- GO:0016604
+part_of:
+- GO:0031981
+components:
+- component_id: dicer_like_1
+  label: Dicer-like 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DCL1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Arabidopsis Dicer-like 1 is curated as the RNase III enzyme resident
+    in nuclear dicing bodies; no exact source-neutral InterPro, Pfam or NCBIfam accession
+    was assigned in this first record.
+  role: RNase III enzyme concentrated in D-bodies and acting in plant primary miRNA
+    processing with HYL1 and SERRATE.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2007.04.005
+    notes: Fang and Spector 2007 localized Arabidopsis DCL1 with HYL1 to nuclear dicing
+      bodies and showed that a DCL1 mutant impaired in miRNA processing failed to
+      target to D-bodies.
+  - reference: DOI:10.1073/pnas.0701061104
+    notes: Song et al. 2007 showed that HYL1 and DCL1 fusion proteins colocalize to
+      small nuclear bodies that lack the Cajal-body marker Atcoilin.
+- component_id: hyponastic_leaves1
+  label: HYPONASTIC LEAVES1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HYL1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: HYL1 is curated as the Arabidopsis double-stranded RNA-binding
+    protein resident in DCL1-containing D-bodies; no exact source-neutral InterPro,
+    Pfam or NCBIfam accession was assigned in this first record.
+  role: Double-stranded RNA-binding partner of DCL1 that localizes to D-bodies during
+    plant primary miRNA processing.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2007.04.005
+    notes: Fang and Spector 2007 colocalized HYL1 with DCL1 in nuclear dicing bodies
+      in living Arabidopsis cells.
+  - reference: DOI:10.1073/pnas.0701061104
+    notes: Song et al. 2007 found that HYL1 and DCL1 nuclear bodies are distinct from
+      Arabidopsis Cajal bodies.
+- component_id: serrate
+  label: SERRATE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SE
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: SERRATE is curated as the Arabidopsis zinc-finger protein that
+    interacts with DCL1 and HYL1 in D-bodies and can drive D-body assembly; no exact
+    source-neutral InterPro, Pfam or NCBIfam accession was assigned in this first
+    record.
+  role: D-body scaffold-like protein whose phase separation recruits DCL1, HYL1 and
+    pri/pre-miRNAs into D-body condensates.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2007.04.005
+    notes: Fang and Spector 2007 observed DCL1, HYL1 and SERRATE bimolecular-fluorescence-complementation
+      interactions in nuclear dicing bodies.
+  - reference: DOI:10.1038/s41556-020-00606-5
+    notes: Xie et al. 2021 showed that SERRATE can drive DCL1, HYL1 and pri/pre-miRNAs
+      into phase-separated D-body droplets and that SERRATE mutation abrogates D-body
+      formation in vivo.
+- component_id: primary_mirna_transcripts
+  label: primary miRNA transcript cohort
+  component_type: RNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: D-bodies recruit multiple primary and precursor miRNA substrates
+    rather than one named RNA species; no exact Sequence Ontology CURIE was assigned
+    to this heterogeneous substrate cohort.
+  role: Primary miRNA substrates recruited into D-bodies for DCL1/HYL1/SERRATE-dependent
+    processing.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2007.04.005
+    notes: Fang and Spector 2007 recruited an introduced primary miRNA transcript
+      to Arabidopsis D-bodies.
+  - reference: DOI:10.1038/s41556-020-00606-5
+    notes: Xie et al. 2021 reported that SERRATE brings pri/pre-miRNAs into D-body
+      droplets and that pre-miRNAs can be processed inside those droplets.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3702
+  taxon_label: Arabidopsis thaliana
+  presence: VARIABLE
+  note: Nuclear dicing bodies were defined in living Arabidopsis cells as DCL1- and
+    HYL1-containing nuclear bodies involved in plant miRNA biogenesis.
+  reference: DOI:10.1016/j.cub.2007.04.005
+canonical_examples:
+- taxon_id: NCBITaxon:3702
+  taxon_label: Arabidopsis thaliana
+  note: Arabidopsis cells were used to identify D-bodies, distinguish them from Cajal
+    bodies and connect DCL1, HYL1, SERRATE and pri-miRNA recruitment to primary miRNA
+    processing.
+  reference: DOI:10.1016/j.cub.2007.04.005
+functions:
+- function_id: primary_mirna_processing
+  label: primary miRNA processing
+  grounding: GO:0031053
+  description: Arabidopsis D-bodies concentrate DCL1, HYL1, SERRATE and pri-miRNA
+    substrates in nuclear foci associated with primary miRNA processing.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2007.04.005
+    notes: Fang and Spector 2007 proposed that D-bodies orchestrate pri-miRNA processing
+      and/or storage and assembly of miRNA-processing complexes.
+  - reference: DOI:10.1038/s41556-020-00606-5
+    notes: Xie et al. 2021 linked SERRATE-driven D-body formation to efficient pri-miRNA
+      and pre-miRNA processing.
+evidence:
+- reference: GO:0010445
+  notes: Gene Ontology cellular-component term for nuclear dicing body and its exact
+    D body synonym.
+- reference: GO:0016604
+  notes: Gene Ontology cellular-component term for nuclear body.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for the nuclear lumen; GO:0010445 defines
+    D-bodies as distributed throughout the nucleoplasm.
+- reference: GO:0031053
+  notes: Gene Ontology biological-process term for primary miRNA processing.
+- reference: GO:1904258
+  notes: Gene Ontology biological-process term for nuclear dicing body assembly.
+- reference: DOI:10.1016/j.cub.2007.04.005
+  notes: Fang and Spector 2007, Identification of nuclear dicing bodies containing
+    proteins for microRNA biogenesis in living Arabidopsis plants, Current Biology.
+- reference: DOI:10.1073/pnas.0701061104
+  notes: Song, Han, Lesicka and Fedoroff 2007, Arabidopsis primary microRNA processing
+    proteins HYL1 and DCL1 define a nuclear body distinct from the Cajal body, Proceedings
+    of the National Academy of Sciences.
+- reference: DOI:10.1038/s41556-020-00606-5
+  notes: Xie et al. 2021, Phase separation of SERRATE drives dicing body assembly
+    and promotes miRNA processing in Arabidopsis, Nature Cell Biology.
+causal_graphs:
+- graph_id: serrate_d_body_assembly
+  title: SERRATE scaffolds plant D-body assembly
+  description: Arabidopsis nuclear dicing bodies concentrate the DCL1/HYL1/SERRATE
+    miRNA-processing module with primary miRNA substrates in nuclear foci whose assembly
+    is driven by SERRATE phase separation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes the canonical Arabidopsis DCL1, HYL1, SERRATE
+    and pri/pre-miRNA D-body axis without asserting a complete plant miRNA-processing
+    pathway, every recruited substrate or every regulator of D-body assembly.
+  nodes:
+  - node_id: dicer_like_1
+    label: Dicer-like 1
+    node_type: GENE_OR_PROTEIN
+    component_ref: dicer_like_1
+  - node_id: hyponastic_leaves1
+    label: HYPONASTIC LEAVES1
+    node_type: GENE_OR_PROTEIN
+    component_ref: hyponastic_leaves1
+  - node_id: serrate
+    label: SERRATE
+    node_type: GENE_OR_PROTEIN
+    component_ref: serrate
+  - node_id: primary_mirna_transcripts
+    label: primary miRNA transcript cohort
+    node_type: RNA
+    component_ref: primary_mirna_transcripts
+  - node_id: nuclear_dicing_body
+    label: nuclear dicing body
+    node_type: STRUCTURE
+    grounding: GO:0010445
+  - node_id: primary_mirna_processing
+    label: primary miRNA processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031053
+  edges:
+  - subject: serrate
+    predicate: drives assembly of
+    object: nuclear_dicing_body
+    description: SERRATE phase separation assembles D-body droplets that recruit DCL1,
+      HYL1 and pri/pre-miRNAs.
+    evidence:
+    - reference: DOI:10.1038/s41556-020-00606-5
+      notes: Xie et al. 2021 showed that SERRATE droplets recruit DCL1, HYL1 and pri/pre-miRNAs
+        in vitro and that SERRATE mutation abrogates D-body formation in vivo.
+  - subject: dicer_like_1
+    predicate: localizes to
+    object: nuclear_dicing_body
+    description: DCL1 concentrates in nuclear dicing bodies.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2007.04.005
+      notes: Fang and Spector 2007 observed DCL1 in discrete nuclear D-bodies in Arabidopsis.
+  - subject: hyponastic_leaves1
+    predicate: localizes to
+    object: nuclear_dicing_body
+    description: HYL1 colocalizes with DCL1 in D-bodies.
+    evidence:
+    - reference: DOI:10.1073/pnas.0701061104
+      notes: Song et al. 2007 observed HYL1-mCherry and YFP-DCL1 colocalization in
+        small nuclear bodies distinct from Atcoilin-marked Cajal bodies.
+  - subject: primary_mirna_transcripts
+    predicate: localize to
+    object: nuclear_dicing_body
+    description: D-bodies recruit primary and precursor miRNA substrates.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2007.04.005
+      notes: Fang and Spector 2007 localized DCL1, HYL1 and introduced pri-miRNA transcript
+        to Arabidopsis nuclear dicing bodies.
+    - reference: DOI:10.1038/s41556-020-00606-5
+      notes: Xie et al. 2021 connected SERRATE phase separation to D-body assembly
+        and efficient pri/pre-miRNA processing.
+  - subject: nuclear_dicing_body
+    predicate: supports
+    object: primary_mirna_processing
+    description: D-bodies bring together Dicer-like processing proteins and pri-miRNA
+      substrates during plant primary miRNA processing.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2007.04.005
+      notes: Fang and Spector 2007 localized DCL1, HYL1 and introduced pri-miRNA transcript
+        to Arabidopsis nuclear dicing bodies.
+    - reference: DOI:10.1038/s41556-020-00606-5
+      notes: Xie et al. 2021 connected SERRATE phase separation to D-body assembly
+        and efficient pri/pre-miRNA processing.
+discussions:
+- discussion_id: resolve_nuclear_dicing_body_component_boundaries
+  prompt: Resolve exact source-neutral component boundaries for nuclear dicing bodies.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dicer_like_1
+  - components#hyponastic_leaves1
+  - components#serrate
+  - components#primary_mirna_transcripts
+  rationale: This first GO:0010445 record captures Arabidopsis DCL1, HYL1, SERRATE
+    and pri/pre-miRNA substrate classes directly supported by D-body imaging and assembly
+    evidence. Exact source-neutral protein-family and RNA-substrate groundings should
+    be reviewed against InterPro, Pfam, NCBIfam and Sequence Ontology instead of guessed.
