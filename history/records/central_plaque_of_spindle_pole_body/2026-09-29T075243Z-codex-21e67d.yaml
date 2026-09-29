@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/central_plaque_of_spindle_pole_body.yaml
+  slug: central_plaque_of_spindle_pole_body
+session:
+  id: 2026-09-29T075243Z-codex-21e67d
+  timestamp: '2026-09-29T07:52:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1771
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1772
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1770
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed central plaque PR review issues
+  details: 'Resolved PR #1770 review issues #1771 and #1772 by adding GO:0005822 and GO:0005824
+    as sibling plaque evidence on the boundary discussion and narrowing the component TODO
+    to central-plaque and SPB-core constituents.'
