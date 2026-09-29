@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spindle_pole_body_satellite.yaml
+  slug: spindle_pole_body_satellite
+session:
+  id: 2026-09-29T104310Z-codex-9a8763
+  timestamp: '2026-09-29T10:43:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added spindle pole body satellite record
+  details: Created the cellstructuremech:spindle_pole_body_satellite record with protein-containing-complex
+    parentage, Saccharomyces cerevisiae scope, GO and DOI evidence, a nonmechanistic half-bridge
+    satellite assembly graph, and discussions capturing the SPB satellite boundary and component-grounding
+    follow-up decisions.

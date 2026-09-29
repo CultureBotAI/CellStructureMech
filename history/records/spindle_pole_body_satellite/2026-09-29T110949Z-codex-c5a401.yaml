@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spindle_pole_body_satellite.yaml
+  slug: spindle_pole_body_satellite
+session:
+  id: 2026-09-29T110949Z-codex-c5a401
+  timestamp: '2026-09-29T11:09:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1779
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1778
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed SPB satellite precursor evidence review
+  details: 'Resolved PR #1778 review issue #1779 by tightening the spindle pole body satellite
+    graph edge evidence so the satellite-as-precursor claim is backed by notes that mention
+    the satellite and daughter-SPB assembly stages directly.'

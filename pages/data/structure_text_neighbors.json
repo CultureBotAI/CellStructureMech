@@ -3481,6 +3481,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:spindle_pole_body_satellite",
+      "label": "spindle pole body satellite",
+      "neighbors": [
+        {
+          "identifier": "GO:0005825",
+          "label": "half bridge of spindle pole body",
+          "cosine_similarity": 0.87485963
+        },
+        {
+          "identifier": "GO:0061496",
+          "label": "half bridge of mitotic spindle pole body",
+          "cosine_similarity": 0.8662937
+        },
+        {
+          "identifier": "GO:0005823",
+          "label": "central plaque of spindle pole body",
+          "cosine_similarity": 0.83933485
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.83821192
+        },
+        {
+          "identifier": "GO:0005821",
+          "label": "intermediate layer of spindle pole body",
+          "cosine_similarity": 0.83745784
+        }
+      ]
+    },
+    {
       "identifier": "GO:0020025",
       "label": "subpellicular microtubule",
       "neighbors": [
