@@ -1,0 +1,113 @@
+identifier: GO:0160067
+label: new spindle pole body SIN signaling complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A SIN signaling complex associated with the new mitotic spindle pole body
+  during anaphase and characterized by the presence activated (GTP bound) GTPase (Spg1
+  in fission yeast) to activate SIN signaling.
+definition_source: GO:0160067
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T20:04:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T20:05:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, SIN/MEN parentage, fission-yeast scope, a new-SPB
+    SIN-activation function, GO and literature evidence, and boundary/component discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: new spindle pole body SIN signalling complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0160067
+parent_structures:
+- GO:0160065
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast is the system in which the new-SPB SIN signaling complex was
+    defined in anaphase; no broader fungal distribution is asserted here.
+  reference: DOI:10.1038/emboj.2010.317
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Reference fission-yeast system for the anaphase SIN configuration with activated
+    GTP-bound Spg1 at the new spindle pole body.
+  reference: DOI:10.1038/emboj.2010.317
+functions:
+- function_id: new_spb_sin_activation
+  label: new-SPB SIN activation
+  description: The new-SPB SIN signaling complex is the anaphase SIN state in which
+    activated GTP-bound Spg1 at the newly formed mitotic spindle pole body activates
+    septation-initiation signaling.
+  evidence:
+  - reference: GO:0160067
+    notes: GO:0160067 defines this complex by association with the new mitotic spindle
+      pole body during anaphase and activation of SIN signaling.
+  - reference: DOI:10.1038/emboj.2010.317
+    notes: Johnson and Gould 2011 studied regulation of fission-yeast Sid4 and Plo1
+      kinase localization at spindle pole bodies.
+evidence:
+- reference: GO:0160067
+  notes: Gene Ontology cellular-component term for the new spindle pole body SIN signaling
+    complex, with the British spelling as an exact synonym.
+- reference: GO:0160065
+  notes: Gene Ontology parent term for the broader SIN/MEN signaling complex.
+- reference: GO:0071958
+  notes: Gene Ontology cellular-component term for the new mitotic spindle pole body
+    named in the GO:0160067 definition.
+- reference: DOI:10.1038/emboj.2010.317
+  notes: Johnson and Gould 2011 studied regulation of fission-yeast SIN scaffold Sid4
+    and Plo1 kinase localization at spindle pole bodies.
+discussions:
+- discussion_id: new_spb_sin_complex_boundary
+  prompt: Keep the new spindle pole body SIN signaling complex as the narrower fission-yeast
+    anaphase GO child rather than the broad SIN/MEN complex or old-SPB interphase
+    SIN state.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0160067 is an is-a child of the broader GO:0160065 SIN/MEN signaling
+    complex and is defined by the new-SPB anaphase SIN state with activated GTP-bound
+    Spg1. It is distinct from GO:0160066, the old-SPB interphase SIN signaling complex,
+    and from GO:1990334, the narrower two-component GAP complex. No part_of link to
+    the new mitotic SPB is asserted here because GO:0160067 says the complex is associated
+    with that SPB rather than declaring a proper-parthood relation.
+  resolution_note: Curated GO:0160067 as an exact record with GO:0160065 parentage
+    and left new-SPB localization as evidence-backed scope rather than as a parthood
+    edge.
+  evidence:
+  - reference: GO:0160067
+    notes: GO:0160067 identifies the new spindle pole body SIN signaling complex.
+  - reference: GO:0160066
+    notes: GO:0160066 identifies the sibling interphase SIN signaling complex.
+  - reference: GO:1990334
+    notes: GO:1990334 identifies the SIN/MEN two-component GAP complex.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_new_spb_sin_component_groundings
+  prompt: Resolve exact source-neutral family groundings for the activated Spg1 and
+    associated new-SPB SIN constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: This first GO-backed record captures the anaphase new-SPB SIN signaling
+    complex without guessing InterPro, Pfam, NCBIfam, UniProtKB, or Complex Portal
+    groundings for fission-yeast-specific protein names.
+  evidence:
+  - reference: GO:0160067
+    notes: GO:0160067 defines the new-SPB complex by activated Spg1 at the new mitotic
+      spindle pole body.
+  - reference: DOI:10.1038/emboj.2010.317
+    notes: Johnson and Gould 2011 studied SIN signaling at fission-yeast spindle pole
+      bodies.
+  posed_by: codex
+  posed_date: '2026-09-29'
