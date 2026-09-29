@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/medial_cortex_septin_ring.yaml
+  slug: medial_cortex_septin_ring
+session:
+  id: 2026-09-29T032326Z-codex-5457ac
+  timestamp: '2026-09-29T03:23:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add medial cortex septin ring
+  details: Created the GO:0036391 medial cortex septin ring record after live QuickGO verification
+    and hidden/ignored-inclusive duplicate searches. Added GO-backed septin-ring parentage,
+    a reviewed-label-only septin constituent, a nonmechanistic topology graph for the medial
+    cortex of a symmetrically dividing cell at cytokinesis onset, and boundary and component-grounding
+    discussions while deliberately leaving exact source-neutral septin and septin-associated-protein
+    boundaries as an open TODO.
