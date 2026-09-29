@@ -2136,14 +2136,14 @@
           "cosine_similarity": 0.85877519
         },
         {
+          "identifier": "GO:0032177",
+          "label": "cellular bud neck split septin rings",
+          "cosine_similarity": 0.85527764
+        },
+        {
           "identifier": "GO:0005935",
           "label": "cellular bud neck",
           "cosine_similarity": 0.79873145
-        },
-        {
-          "identifier": "GO:0032175",
-          "label": "mating projection septin ring",
-          "cosine_similarity": 0.77411634
         }
       ]
     },
@@ -2162,6 +2162,11 @@
           "cosine_similarity": 0.91148252
         },
         {
+          "identifier": "GO:0032177",
+          "label": "cellular bud neck split septin rings",
+          "cosine_similarity": 0.89094921
+        },
+        {
           "identifier": "GO:0032162",
           "label": "mating projection septin band",
           "cosine_similarity": 0.87325132
@@ -2170,11 +2175,37 @@
           "identifier": "GO:0032175",
           "label": "mating projection septin ring",
           "cosine_similarity": 0.8299167
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0032177",
+      "label": "cellular bud neck split septin rings",
+      "neighbors": [
+        {
+          "identifier": "GO:0000144",
+          "label": "cellular bud neck septin ring",
+          "cosine_similarity": 0.89094921
         },
         {
-          "identifier": "GO:0005935",
-          "label": "cellular bud neck",
-          "cosine_similarity": 0.80262337
+          "identifier": "GO:0032174",
+          "label": "cellular bud neck septin collar",
+          "cosine_similarity": 0.85527764
+        },
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.85205997
+        },
+        {
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.82570426
+        },
+        {
+          "identifier": "GO:0032175",
+          "label": "mating projection septin ring",
+          "cosine_similarity": 0.82500764
         }
       ]
     },
@@ -2637,9 +2668,9 @@
           "cosine_similarity": 0.85877519
         },
         {
-          "identifier": "GO:0036286",
-          "label": "eisosome filament",
-          "cosine_similarity": 0.72436953
+          "identifier": "GO:0032177",
+          "label": "cellular bud neck split septin rings",
+          "cosine_similarity": 0.82570426
         }
       ]
     },
@@ -2663,14 +2694,14 @@
           "cosine_similarity": 0.8299167
         },
         {
+          "identifier": "GO:0032177",
+          "label": "cellular bud neck split septin rings",
+          "cosine_similarity": 0.82500764
+        },
+        {
           "identifier": "GO:0032174",
           "label": "cellular bud neck septin collar",
           "cosine_similarity": 0.77411634
-        },
-        {
-          "identifier": "GO:0030257",
-          "label": "type III protein secretion system complex",
-          "cosine_similarity": 0.66526582
         }
       ]
     },
@@ -2973,14 +3004,14 @@
           "cosine_similarity": 0.86086984
         },
         {
+          "identifier": "GO:0032177",
+          "label": "cellular bud neck split septin rings",
+          "cosine_similarity": 0.85205997
+        },
+        {
           "identifier": "GO:0032175",
           "label": "mating projection septin ring",
           "cosine_similarity": 0.85152624
-        },
-        {
-          "identifier": "GO:0036286",
-          "label": "eisosome filament",
-          "cosine_similarity": 0.7574106
         }
       ]
     },

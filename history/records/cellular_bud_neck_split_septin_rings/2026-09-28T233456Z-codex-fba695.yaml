@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cellular_bud_neck_split_septin_rings.yaml
+  slug: cellular_bud_neck_split_septin_rings
+session:
+  id: 2026-09-28T233456Z-codex-fba695
+  timestamp: '2026-09-28T23:34:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add cellular bud neck split septin rings
+  details: Created the GO:0032177 cellular bud neck split septin rings record after live QuickGO
+    verification and hidden/ignored-inclusive duplicate searches. Added GO-backed split-ring
+    and cleavage-apparatus parentage, bud-neck parthood, a reviewed-label-only septin constituent,
+    a cytokinetic-compartment boundary function, a nonmechanistic collar-to-split-ring topology
+    graph, and boundary and component-grounding discussions while deliberately leaving exact
+    source-neutral septin and septin-associated-protein boundaries as an open TODO.
