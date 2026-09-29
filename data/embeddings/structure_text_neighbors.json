@@ -2229,14 +2229,14 @@
           "cosine_similarity": 0.92984972
         },
         {
+          "identifier": "GO:0061496",
+          "label": "half bridge of mitotic spindle pole body",
+          "cosine_similarity": 0.90682208
+        },
+        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.82219063
-        },
-        {
-          "identifier": "GO:0072686",
-          "label": "mitotic spindle",
-          "cosine_similarity": 0.7694775
         }
       ]
     },
@@ -2582,9 +2582,45 @@
       ]
     },
     {
+      "identifier": "GO:0061496",
+      "label": "half bridge of mitotic spindle pole body",
+      "neighbors": [
+        {
+          "identifier": "GO:0005825",
+          "label": "half bridge of spindle pole body",
+          "cosine_similarity": 0.96106896
+        },
+        {
+          "identifier": "GO:0005823",
+          "label": "central plaque of spindle pole body",
+          "cosine_similarity": 0.90682208
+        },
+        {
+          "identifier": "GO:0005822",
+          "label": "inner plaque of spindle pole body",
+          "cosine_similarity": 0.89718276
+        },
+        {
+          "identifier": "GO:0005824",
+          "label": "outer plaque of spindle pole body",
+          "cosine_similarity": 0.89630957
+        },
+        {
+          "identifier": "GO:0072686",
+          "label": "mitotic spindle",
+          "cosine_similarity": 0.87100556
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005825",
       "label": "half bridge of spindle pole body",
       "neighbors": [
+        {
+          "identifier": "GO:0061496",
+          "label": "half bridge of mitotic spindle pole body",
+          "cosine_similarity": 0.96106896
+        },
         {
           "identifier": "GO:0005823",
           "label": "central plaque of spindle pole body",
@@ -2604,11 +2640,6 @@
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.85482672
-        },
-        {
-          "identifier": "GO:0072686",
-          "label": "mitotic spindle",
-          "cosine_similarity": 0.79605406
         }
       ]
     },
@@ -2694,14 +2725,14 @@
           "cosine_similarity": 0.90514757
         },
         {
+          "identifier": "GO:0061496",
+          "label": "half bridge of mitotic spindle pole body",
+          "cosine_similarity": 0.89718276
+        },
+        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.87538453
-        },
-        {
-          "identifier": "GO:0005876",
-          "label": "spindle microtubule",
-          "cosine_similarity": 0.7997313
         }
       ]
     },
@@ -2963,6 +2994,11 @@
           "cosine_similarity": 0.90478656
         },
         {
+          "identifier": "GO:0061496",
+          "label": "half bridge of mitotic spindle pole body",
+          "cosine_similarity": 0.87100556
+        },
+        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.82278094
@@ -2976,11 +3012,6 @@
           "identifier": "GO:0005822",
           "label": "inner plaque of spindle pole body",
           "cosine_similarity": 0.78935728
-        },
-        {
-          "identifier": "GO:0005824",
-          "label": "outer plaque of spindle pole body",
-          "cosine_similarity": 0.78596386
         }
       ]
     },
@@ -3066,14 +3097,14 @@
           "cosine_similarity": 0.91091861
         },
         {
+          "identifier": "GO:0061496",
+          "label": "half bridge of mitotic spindle pole body",
+          "cosine_similarity": 0.89630957
+        },
+        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.86403343
-        },
-        {
-          "identifier": "GO:0005876",
-          "label": "spindle microtubule",
-          "cosine_similarity": 0.80280765
         }
       ]
     },
@@ -3350,9 +3381,9 @@
           "cosine_similarity": 0.81657475
         },
         {
-          "identifier": "GO:0005824",
-          "label": "outer plaque of spindle pole body",
-          "cosine_similarity": 0.80280765
+          "identifier": "GO:0061496",
+          "label": "half bridge of mitotic spindle pole body",
+          "cosine_similarity": 0.80888165
         }
       ]
     },
@@ -3364,6 +3395,11 @@
           "identifier": "GO:0005822",
           "label": "inner plaque of spindle pole body",
           "cosine_similarity": 0.87538453
+        },
+        {
+          "identifier": "GO:0061496",
+          "label": "half bridge of mitotic spindle pole body",
+          "cosine_similarity": 0.86491037
         },
         {
           "identifier": "GO:0005824",
@@ -3379,11 +3415,6 @@
           "identifier": "GO:0005825",
           "label": "half bridge of spindle pole body",
           "cosine_similarity": 0.85482672
-        },
-        {
-          "identifier": "GO:0072686",
-          "label": "mitotic spindle",
-          "cosine_similarity": 0.82278094
         }
       ]
     },
