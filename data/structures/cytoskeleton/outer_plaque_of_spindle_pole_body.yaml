@@ -1,0 +1,146 @@
+identifier: GO:0005824
+label: outer plaque of spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: One of three laminate structures that form the spindle pole body; the
+  outer plaque is in the cytoplasm.
+definition_source: GO:0005824
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T06:55:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T06:56:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added spindle-pole-body parthood, Saccharomyces scope, cytoplasmic microtubule-organization
+    function, GO and literature evidence, a nonmechanistic topology graph, and plaque-boundary
+    discussions.
+  llm_assisted: true
+part_of:
+- GO:0005816
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: The outer plaque is directly evidenced as the cytoplasmic lamina of the budding-yeast
+    spindle pole body; no broader fungal distribution is asserted in this first record.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast reference system in which the layered spindle pole body and
+    its cytoplasmic outer plaque have been characterized.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+functions:
+- function_id: cytoplasmic_microtubule_organization
+  label: cytoplasmic microtubule organization
+  description: The outer plaque is the cytoplasmic face of the budding-yeast SPB that
+    organizes cytoplasmic microtubule nucleation.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the budding-yeast SPB outer plaque as
+      the cytoplasmic site for microtubule nucleation.
+evidence:
+- reference: GO:0005824
+  notes: Gene Ontology cellular-component term for the outer plaque of the spindle
+    pole body.
+- reference: GO:0005816
+  notes: Gene Ontology cellular-component term for the spindle pole body that includes
+    the outer plaque.
+- reference: GO:0070057
+  notes: Gene Ontology cellular-component term for the separate prospore membrane
+    spindle pole body attachment site.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+- reference: DOI:10.1093/emboj/19.14.3657
+  notes: Knop and Strasser 2000, Role of the spindle pole body of yeast in mediating
+    assembly of the prospore membrane during meiosis, The EMBO Journal.
+causal_graphs:
+- graph_id: outer_plaque_topology
+  title: Outer-plaque topology in the spindle pole body
+  description: The outer plaque is the cytoplasmic laminate of the budding-yeast spindle
+    pole body and organizes cytoplasmic microtubule nucleation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed SPB parthood and the cytoplasmic microtubule-organizing
+    site without asserting the exact ordered assembly pathway or full outer-plaque
+    component boundary.
+  nodes:
+  - node_id: outer_plaque
+    label: outer plaque of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005824
+  - node_id: spindle_pole_body
+    label: spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005816
+  - node_id: cytoplasmic_microtubules
+    label: cytoplasmic microtubules
+    node_type: STRUCTURE
+  edges:
+  - subject: outer_plaque
+    predicate: is part of
+    object: spindle_pole_body
+    description: The outer plaque is a cytoplasmic laminate structure that forms part
+      of the spindle pole body.
+    evidence:
+    - reference: GO:0005824
+      notes: GO:0005824 defines the outer plaque as one of the laminate structures
+        that form the spindle pole body.
+  - subject: outer_plaque
+    predicate: organizes
+    object: cytoplasmic_microtubules
+    description: The SPB outer plaque faces the cytoplasm and organizes cytoplasmic
+      microtubule nucleation in budding yeast.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the budding-yeast SPB outer plaque
+        as the cytoplasmic site for microtubule nucleation.
+discussions:
+- discussion_id: outer_plaque_boundary
+  prompt: Keep the spindle-pole-body outer plaque distinct from the prospore membrane
+    attachment site and from the sporulation-specific meiotic outer plaque.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0005824 denotes a cytoplasmic laminate structure of the spindle pole
+    body. The meiotic outer plaque nucleates prospore membrane formation in Saccharomyces,
+    and GO:0070057 denotes the separate region of the prospore membrane to which the
+    SPB is anchored.
+  resolution_note: Curated GO:0005824 as the general SPB outer plaque, linked it by
+    parthood to GO:0005816, and left the sporulation-specific meiotic outer-plaque
+    boundary for a focused component-level curation pass.
+  evidence:
+  - reference: GO:0005824
+    notes: GO:0005824 identifies the cytoplasmic outer plaque of the spindle pole
+      body.
+  - reference: GO:0070057
+    notes: GO:0070057 identifies the separate prospore membrane spindle pole body
+      attachment site.
+  - reference: DOI:10.1093/emboj/19.14.3657
+    notes: Knop and Strasser 2000 analyzed spindle-pole-body outer-plaque remodeling
+      during prospore membrane formation.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_outer_plaque_components
+  prompt: Resolve exact source-neutral family groundings and the meiotic remodeling
+    boundary for outer-plaque constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The first GO-backed outer-plaque record captures the lamina as a named
+    SPB substructure without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal
+    groundings for the budding-yeast plaque proteins and associated gamma-tubulin
+    complexes.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'
