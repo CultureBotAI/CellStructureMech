@@ -20,6 +20,12 @@ curation_history:
     GO evidence, a nonmechanistic germ-tube-ring topology graph, and boundary and
     component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-29T02:06:48Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1755 by tightening the GO:0032172 boundary discussion against
+    hyphal and pseudohyphal septin-ring sibling records.'
+  llm_assisted: true
 parent_structures:
 - GO:0005940
 components:
@@ -96,13 +102,21 @@ discussions:
   - identifier
   - parent_structures
   rationale: GO:0032172 denotes the septin ring within a filamentous fungal germ tube
-    at future septation sites, while GO:0005940 denotes the broader septin ring class.
-    This record models only the germ-tube subtype.
-  resolution_note: Curated GO:0032172 as the exact structure identifier and used GO:0005940
-    only as the is-a parent.
+    at future septation sites. GO:0032168 covers the analogous ring within hyphae
+    of filamentous fungi, GO:0032170 covers the ring at the mother-cell/pseudohyphal-projection
+    junction, and GO:0005940 denotes the broader septin ring class. This record models
+    only the germ-tube subtype.
+  resolution_note: Curated GO:0032172 as the exact structure identifier, used GO:0005940
+    only as the is-a parent, and documented GO:0032168 and GO:0032170 as nearby sibling
+    rings rather than parents.
   evidence:
   - reference: GO:0032172
     notes: GO:0032172 identifies the germ-tube-localized septin ring.
+  - reference: GO:0032168
+    notes: GO:0032168 identifies the hypha-localized septin ring.
+  - reference: GO:0032170
+    notes: GO:0032170 identifies the septin ring at a mother-cell/pseudohyphal-projection
+      junction.
   - reference: GO:0005940
     notes: GO:0005940 identifies the broader septin ring class.
   posed_by: codex
