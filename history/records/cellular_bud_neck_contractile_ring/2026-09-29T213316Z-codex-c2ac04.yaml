@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+  slug: cellular_bud_neck_contractile_ring
+session:
+  id: 2026-09-29T213316Z-codex-c2ac04
+  timestamp: '2026-09-29T21:33:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add cellular bud neck contractile ring
+  details: Created the GO:0000142 cellular bud neck contractile ring record with mitotic actomyosin-ring
+    parentage, bud-neck parthood, reviewed-label-only actin and Myo1 constituents, Saccharomyces
+    evidence from DOI:10.1083/jcb.142.5.1301, regenerated embeddings, rendered pages, and
+    refreshed documentation.
