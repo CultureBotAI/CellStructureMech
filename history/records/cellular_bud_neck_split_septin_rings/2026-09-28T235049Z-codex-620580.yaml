@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cellular_bud_neck_split_septin_rings.yaml
+  slug: cellular_bud_neck_split_septin_rings
+session:
+  id: 2026-09-28T235049Z-codex-620580
+  timestamp: '2026-09-28T23:50:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1748
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1747
+events:
+- type: EDIT
+  outcome: changed
+  summary: Preserve split-ring compartment uncertainty
+  details: Addressed adversarial review issue 1748 from PR 1747 by preserving GO:0032177 uncertainty
+    in the cytokinesis-factor compartment language. Updated the cytokinetic_compartment_boundary
+    function and bud_neck_split_septin_rings_topology graph descriptions to keep the direct
+    split-ring topology separate from the lower-confidence compartment interpretation.

@@ -21,6 +21,12 @@ curation_history:
     a cytokinetic-compartment boundary function, GO evidence, a nonmechanistic collar-to-split-ring
     topology graph, and split-ring boundary and component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-28T23:50:31Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1748 by preserving the GO uncertainty qualifier on the cytokinesis-factor
+    compartment interpretation in the split-ring function and topology graph descriptions.'
+  llm_assisted: true
 parent_structures:
 - GO:0032176
 - GO:0032161
@@ -49,7 +55,8 @@ functions:
 - function_id: cytokinetic_compartment_boundary
   label: cytokinetic compartment boundary
   description: The cellular bud neck split septin rings flank the budding-cell cytokinesis
-    site and delineate a compartment in which cytokinesis factors are concentrated.
+    site and are thought to delineate a compartment in which cytokinesis factors are
+    concentrated.
   evidence:
   - reference: GO:0032177
     notes: GO:0032177 defines the bud-neck split rings as two separate septin rings
@@ -75,7 +82,7 @@ causal_graphs:
 - graph_id: bud_neck_split_septin_rings_topology
   title: Bud-neck split septin-rings topology
   description: At budding-cell cytokinesis, the bud-neck septin collar separates into
-    two septin rings that flank a cytokinesis-factor compartment.
+    two septin rings that are thought to delineate a cytokinesis-factor compartment.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This graph records the topological collar-to-split-ring transition
