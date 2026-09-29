@@ -1,0 +1,172 @@
+identifier: GO:0032157
+label: prospore contractile ring
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A contractile ring composed of actin filaments and myosin that forms beneath
+  the plasma membrane of the prospore envelope in meiotic cells in preparation for
+  completing cytokinesis.
+definition_source: GO:0032157
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T06:18:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T06:21:00Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, actomyosin-ring parentage, reviewed-label-only actin
+    and myosin constituents, GO evidence, a nonmechanistic topology graph, and boundary
+    and component-grounding discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: actomyosin ring
+  synonym_type: RELATED_SYNONYM
+  source: GO:0032157
+- synonym_text: cytokinetic ring
+  synonym_type: RELATED_SYNONYM
+  source: GO:0032157
+- synonym_text: meiotic contractile ring
+  synonym_type: RELATED_SYNONYM
+  source: GO:0032157
+parent_structures:
+- GO:0005826
+components:
+- component_id: actin_filaments
+  label: actin filaments
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Prospore contractile rings are actomyosin structures, but no exact
+    source-neutral protein-family CURIE was assigned for the complete prospore-localized
+    actin-filament cohort.
+  role: Filamentous actin constituent of the actomyosin ring that forms beneath the
+    prospore-envelope plasma membrane.
+  evidence:
+  - reference: GO:0032157
+    notes: GO:0032157 defines the prospore contractile ring as a cytoskeletal structure
+      composed of actin filaments and myosin.
+- component_id: myosin_proteins
+  label: myosin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first prospore contractile ring record keeps myosin at a reviewed-label-only
+    level until exact source-neutral groundings and the Saccharomyces or Schizosaccharomyces
+    meiotic-ring myosin boundary are curated from primary sources.
+  role: Myosin constituent of the actin-containing cytokinetic ring that forms during
+    prospore cytokinesis.
+  evidence:
+  - reference: GO:0032157
+    notes: GO:0032157 defines the prospore contractile ring as a cytoskeletal structure
+      composed of actin filaments and myosin.
+evidence:
+- reference: GO:0032157
+  notes: Gene Ontology cellular-component term for the prospore contractile ring.
+- reference: GO:0005826
+  notes: Gene Ontology cellular-component parent term for actomyosin contractile rings.
+- reference: GO:0110086
+  notes: Gene Ontology cellular-component term for the broader meiotic actomyosin
+    contractile ring class.
+causal_graphs:
+- graph_id: prospore_contractile_ring_topology
+  title: Prospore contractile-ring topology
+  description: Actin filaments and myosin form the contractile ring beneath the plasma
+    membrane of the prospore envelope during meiotic cytokinesis.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed composition and localization without asserting
+    an ordered assembly mechanism or the exact Saccharomyces- or Schizosaccharomyces-specific
+    myosin component boundary.
+  nodes:
+  - node_id: actin_filaments
+    label: actin filaments
+    node_type: GENE_OR_PROTEIN
+    component_ref: actin_filaments
+  - node_id: myosin_proteins
+    label: myosin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: myosin_proteins
+  - node_id: prospore_contractile_ring
+    label: prospore contractile ring
+    node_type: STRUCTURE
+    grounding: GO:0032157
+  - node_id: prospore_envelope_plasma_membrane
+    label: prospore-envelope plasma membrane
+    node_type: STRUCTURE
+  edges:
+  - subject: actin_filaments
+    predicate: contributes to
+    object: prospore_contractile_ring
+    description: Actin filaments are constituents of the prospore contractile ring.
+    evidence:
+    - reference: GO:0032157
+      notes: GO:0032157 defines the prospore contractile ring as composed of actin
+        filaments and myosin.
+  - subject: myosin_proteins
+    predicate: contributes to
+    object: prospore_contractile_ring
+    description: Myosin proteins are constituents of the prospore contractile ring.
+    evidence:
+    - reference: GO:0032157
+      notes: GO:0032157 defines the prospore contractile ring as composed of actin
+        filaments and myosin.
+  - subject: prospore_contractile_ring
+    predicate: forms beneath
+    object: prospore_envelope_plasma_membrane
+    description: The prospore contractile ring forms beneath the plasma membrane of
+      the prospore envelope in meiotic cells.
+    evidence:
+    - reference: GO:0032157
+      notes: GO:0032157 localizes the ring beneath the plasma membrane of the prospore
+        envelope.
+discussions:
+- discussion_id: prospore_contractile_ring_boundary
+  prompt: Keep the prospore contractile ring distinct from generic actomyosin contractile
+    rings and from prospore septin rings.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032157 denotes an actin- and myosin-containing contractile ring that
+    forms beneath the prospore-envelope plasma membrane during meiotic cytokinesis.
+    GO:0005826 denotes the broader actomyosin contractile ring class, GO:0110086 denotes
+    the broader meiotic actomyosin contractile ring class, and GO:0032169 denotes
+    a separate prospore septin ring assembled from septins and septin-associated proteins.
+  resolution_note: Curated GO:0032157 as the exact prospore-localized actomyosin ring
+    and used GO:0005826 only as the is-a parent.
+  evidence:
+  - reference: GO:0032157
+    notes: GO:0032157 identifies the prospore-localized actomyosin contractile ring.
+  - reference: GO:0005826
+    notes: GO:0005826 identifies the broader actomyosin contractile ring class.
+  - reference: GO:0110086
+    notes: GO:0110086 identifies the broader meiotic actomyosin contractile ring class.
+  - reference: GO:0032169
+    notes: GO:0032169 identifies the separate septin-containing prospore ring.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_prospore_contractile_ring_components
+  prompt: Resolve exact source-neutral family groundings and species-specific boundaries
+    for the actin and myosin constituents of the prospore contractile ring.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#actin_filaments
+  - components#myosin_proteins
+  rationale: The first GO-backed prospore contractile ring record keeps only the broad
+    actin and myosin constituents from the GO definition rather than guessing exact
+    InterPro, Pfam, or NCBIfam accessions or choosing between Saccharomyces and Schizosaccharomyces
+    meiotic actomyosin-ring component sets without a primary-literature pass.
+  evidence:
+  - reference: GO:0032157
+    notes: GO:0032157 defines the prospore contractile ring as composed of actin filaments
+      and myosin.
+  posed_by: codex
+  posed_date: '2026-09-29'

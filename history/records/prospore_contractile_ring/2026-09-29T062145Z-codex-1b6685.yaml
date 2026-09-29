@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/prospore_contractile_ring.yaml
+  slug: prospore_contractile_ring
+session:
+  id: 2026-09-29T062145Z-codex-1b6685
+  timestamp: '2026-09-29T06:21:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add prospore contractile ring
+  details: Created the GO:0032157 prospore contractile ring record after QuickGO verification
+    and a hidden/ignored-inclusive duplicate search. The first GO-backed pass added actomyosin-ring
+    parentage, GO related synonyms, reviewed-label-only actin and myosin constituents, GO
+    evidence, a nonmechanistic topology graph, and boundary and component-grounding discussions
+    while deliberately leaving organism-specific meiotic actomyosin-ring components to a later
+    primary-literature pass.
