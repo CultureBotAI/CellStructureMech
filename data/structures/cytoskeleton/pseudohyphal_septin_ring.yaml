@@ -20,6 +20,12 @@ curation_history:
     GO evidence, a nonmechanistic pseudohyphal-ring topology graph, and boundary and
     component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-29T01:13:11Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1753 by tightening the GO:0032170 graph-edge evidence note for
+    the pseudohyphal septin-protein constituent edge.'
+  llm_assisted: true
 parent_structures:
 - GO:0005940
 components:
@@ -76,7 +82,8 @@ causal_graphs:
       structure.
     evidence:
     - reference: GO:0032170
-      notes: GO:0032170 defines the structure as a pseudohyphal septin ring.
+      notes: GO:0032170 defines the pseudohyphal septin ring as composed of septins
+        and septin-associated proteins.
   - subject: pseudohyphal_septin_ring
     predicate: forms at
     object: mother_projection_junction
