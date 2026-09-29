@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/sin_men_signaling_complex.yaml
+  slug: sin_men_signaling_complex
+session:
+  id: 2026-09-29T184950Z-codex-5a5ae9
+  timestamp: '2026-09-29T18:49:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - part_of
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - discussions
+  summary: Added SIN/MEN signaling complex record
+  details: Created the GO:0160065 SIN/MEN signaling complex record with GO synonyms, protein-complex
+    parentage, mitotic outer-plaque parthood, Schizosaccharomyces pombe and Saccharomyces
+    cerevisiae scope, a SIN/MEN mitotic-exit signaling function, GO and yeast literature evidence,
+    and discussions capturing narrower SIN/GAP boundaries and deferred component-grounding
+    work.
