@@ -2210,6 +2210,37 @@
       ]
     },
     {
+      "identifier": "GO:0005823",
+      "label": "central plaque of spindle pole body",
+      "neighbors": [
+        {
+          "identifier": "GO:0005824",
+          "label": "outer plaque of spindle pole body",
+          "cosine_similarity": 0.95971093
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.82219063
+        },
+        {
+          "identifier": "GO:0072686",
+          "label": "mitotic spindle",
+          "cosine_similarity": 0.7694775
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.76358955
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.75779064
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:cetz_filament",
       "label": "CetZ filament",
       "neighbors": [
@@ -2880,14 +2911,14 @@
           "cosine_similarity": 0.78596386
         },
         {
+          "identifier": "GO:0005823",
+          "label": "central plaque of spindle pole body",
+          "cosine_similarity": 0.7694775
+        },
+        {
           "identifier": "GO:0000776",
           "label": "kinetochore",
           "cosine_similarity": 0.76863575
-        },
-        {
-          "identifier": "GO:0000940",
-          "label": "outer kinetochore",
-          "cosine_similarity": 0.76276885
         }
       ]
     },
@@ -2958,6 +2989,11 @@
       "label": "outer plaque of spindle pole body",
       "neighbors": [
         {
+          "identifier": "GO:0005823",
+          "label": "central plaque of spindle pole body",
+          "cosine_similarity": 0.95971093
+        },
+        {
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.86403343
@@ -2976,11 +3012,6 @@
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.7717961
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.75372322
         }
       ]
     },
@@ -3283,14 +3314,14 @@
           "cosine_similarity": 0.82278094
         },
         {
+          "identifier": "GO:0005823",
+          "label": "central plaque of spindle pole body",
+          "cosine_similarity": 0.82219063
+        },
+        {
           "identifier": "GO:0000776",
           "label": "kinetochore",
           "cosine_similarity": 0.78914112
-        },
-        {
-          "identifier": "GO:0000940",
-          "label": "outer kinetochore",
-          "cosine_similarity": 0.76622201
         }
       ]
     },
