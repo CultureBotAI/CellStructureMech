@@ -972,6 +972,15 @@
   "definition": "The spindle pole body that is formed by spindle pole body duplication, and to which proteins involved in mitotic exit signaling (for example, the septation initiation network in fission yeast) localize."
  },
  {
+  "identifier": "GO:0160067",
+  "label": "new spindle pole body SIN signaling complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/new_spindle_pole_body_sin_signaling_complex.html",
+  "definition": "A SIN signaling complex associated with the new mitotic spindle pole body during anaphase and characterized by the presence activated (GTP bound) GTPase (Spg1 in fission yeast) to activate SIN signaling."
+ },
+ {
   "identifier": "GO:0005880",
   "label": "nuclear microtubule",
   "category": "CYTOSKELETON",
