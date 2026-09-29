@@ -1,0 +1,154 @@
+identifier: GO:0005881
+label: cytoplasmic microtubule
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: Any microtubule in the cytoplasm of a cell.
+definition_source: GO:0005881
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T13:01:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T13:02:00Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, microtubule parentage, microtubule-cytoskeleton parthood,
+    Saccharomyces scope, a cytoplasmic-array function, GO and literature evidence,
+    a nonmechanistic SPB outer-plaque organization graph, and boundary/component discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: non-spindle-associated astral microtubule
+  synonym_type: NARROW_SYNONYM
+  source: GO:0005881
+parent_structures:
+- GO:0005874
+part_of:
+- GO:0015630
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast spindle pole bodies nucleate cytoplasmic microtubules from their
+    outer plaques.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference fungal model in which cytoplasmic microtubules are organized by
+    the cytoplasmic face of the spindle pole body.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+functions:
+- function_id: cytoplasmic_microtubule_array_organization
+  label: cytoplasmic microtubule array organization
+  description: Cytoplasmic microtubules form non-nuclear tubulin-polymer arrays that
+    can be organized from cytoplasmic microtubule-organizing centers such as the budding-yeast
+    SPB outer plaque.
+  evidence:
+  - reference: GO:0005881
+    notes: GO:0005881 defines cytoplasmic microtubules as microtubules in the cell
+      cytoplasm.
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the budding-yeast SPB outer plaque as
+      the cytoplasmic site for microtubule nucleation.
+evidence:
+- reference: GO:0005881
+  notes: Gene Ontology cellular-component term for the cytoplasmic microtubule.
+- reference: GO:0005874
+  notes: Gene Ontology cellular-component parent term for the microtubule.
+- reference: GO:0015630
+  notes: Gene Ontology cellular-component term for the broader microtubule cytoskeleton.
+- reference: GO:0005879
+  notes: Gene Ontology places axonemal microtubules under the cytoplasmic microtubule
+    class.
+- reference: GO:0005824
+  notes: Gene Ontology cellular-component term for the budding-yeast SPB outer plaque
+    that organizes cytoplasmic microtubule nucleation.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+causal_graphs:
+- graph_id: spb_outer_plaque_organizes_cytoplasmic_microtubules
+  title: SPB outer plaques organize cytoplasmic microtubules
+  description: Budding-yeast spindle pole body outer plaques face the cytoplasm and
+    organize cytoplasmic microtubule nucleation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-backed microtubule subtype and the SPB outer
+    plaque organizing site without asserting specific budding-yeast gamma-tubulin
+    complexes or microtubule-associated proteins.
+  nodes:
+  - node_id: microtubule
+    label: microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005874
+  - node_id: cytoplasmic_microtubule
+    label: cytoplasmic microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005881
+  - node_id: outer_plaque
+    label: outer plaque of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005824
+  edges:
+  - subject: cytoplasmic_microtubule
+    predicate: is subtype of
+    object: microtubule
+    description: Cytoplasmic microtubules are microtubules that reside in the cytoplasm.
+    evidence:
+    - reference: GO:0005881
+      notes: GO:0005881 is a cellular-component child of the generic microtubule term.
+    - reference: GO:0005874
+      notes: GO:0005874 identifies the broader microtubule structure.
+  - subject: outer_plaque
+    predicate: organizes
+    object: cytoplasmic_microtubule
+    description: The budding-yeast SPB outer plaque organizes cytoplasmic microtubule
+      nucleation.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the SPB outer plaque as the budding-yeast
+        cytoplasmic microtubule nucleation site.
+discussions:
+- discussion_id: cytoplasmic_microtubule_boundary
+  prompt: Keep cytoplasmic microtubules distinct from nuclear spindle microtubules
+    while preserving GO axonemal microtubules as child structures.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - causal_graphs#spb_outer_plaque_organizes_cytoplasmic_microtubules
+  rationale: GO:0005881 denotes microtubules in the cytoplasm and therefore differs
+    from the nuclear or spindle-anchored GO:0005876 spindle microtubule class. GO
+    also places the axonemal microtubule class under cytoplasmic microtubule, so this
+    record should stay broader than budding-yeast astral microtubules alone.
+  resolution_note: Curated GO:0005881 as a GO-backed cytoplasmic microtubule subtype,
+    parented it to GO:0005874, and used a budding-yeast SPB graph only as one concrete
+    example of cytoplasmic microtubule organization.
+  evidence:
+  - reference: GO:0005881
+    notes: GO:0005881 identifies the cytoplasmic microtubule class.
+  - reference: GO:0005876
+    notes: GO:0005876 identifies spindle microtubules as part of mitotic or meiotic
+      spindles.
+  - reference: GO:0005879
+    notes: GO:0005879 identifies the axonemal microtubule child class.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_cytoplasmic_microtubule_associated_proteins
+  prompt: Resolve exact source-neutral groundings for cytoplasmic microtubule-associated
+    proteins and nucleation complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: This first cytoplasmic microtubule record captures the GO-backed tubulin-polymer
+    subtype and defers taxon-specific motors, plus-end factors, and gamma-tubulin
+    nucleation complexes.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'

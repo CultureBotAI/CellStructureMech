@@ -2048,9 +2048,9 @@
           "cosine_similarity": 0.7668843
         },
         {
-          "identifier": "GO:0005876",
-          "label": "spindle microtubule",
-          "cosine_similarity": 0.73509392
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.76204505
         }
       ]
     },
@@ -2458,6 +2458,37 @@
       ]
     },
     {
+      "identifier": "GO:0005881",
+      "label": "cytoplasmic microtubule",
+      "neighbors": [
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.90910931
+        },
+        {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.89557632
+        },
+        {
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.87154353
+        },
+        {
+          "identifier": "GO:0097649",
+          "label": "A axonemal microtubule",
+          "cosine_similarity": 0.86822392
+        },
+        {
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.86339316
+        }
+      ]
+    },
+    {
       "identifier": "GO:0036286",
       "label": "eisosome filament",
       "neighbors": [
@@ -2482,9 +2513,9 @@
           "cosine_similarity": 0.78791317
         },
         {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.76902246
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.76967884
         }
       ]
     },
@@ -2813,6 +2844,11 @@
           "cosine_similarity": 0.86932674
         },
         {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.86339316
+        },
+        {
           "identifier": "GO:0097649",
           "label": "A axonemal microtubule",
           "cosine_similarity": 0.84907673
@@ -2821,11 +2857,6 @@
           "identifier": "GO:0005879",
           "label": "axonemal microtubule",
           "cosine_similarity": 0.84133036
-        },
-        {
-          "identifier": "GO:0020010",
-          "label": "conoid",
-          "cosine_similarity": 0.83268359
         }
       ]
     },
@@ -3056,6 +3087,11 @@
           "cosine_similarity": 0.89994172
         },
         {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.89557632
+        },
+        {
           "identifier": "GO:0005879",
           "label": "axonemal microtubule",
           "cosine_similarity": 0.88849228
@@ -3069,11 +3105,6 @@
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
           "cosine_similarity": 0.86932674
-        },
-        {
-          "identifier": "GO:0097650",
-          "label": "B axonemal microtubule",
-          "cosine_similarity": 0.86870154
         }
       ]
     },
@@ -3454,6 +3485,11 @@
       "label": "spindle microtubule",
       "neighbors": [
         {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.90910931
+        },
+        {
           "identifier": "GO:0072686",
           "label": "mitotic spindle",
           "cosine_similarity": 0.90478656
@@ -3472,11 +3508,6 @@
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
           "cosine_similarity": 0.81657475
-        },
-        {
-          "identifier": "GO:0061496",
-          "label": "half bridge of mitotic spindle pole body",
-          "cosine_similarity": 0.80888165
         }
       ]
     },
@@ -3583,6 +3614,11 @@
           "cosine_similarity": 0.93848554
         },
         {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.87154353
+        },
+        {
           "identifier": "GO:0005874",
           "label": "microtubule",
           "cosine_similarity": 0.86313287
@@ -3596,11 +3632,6 @@
           "identifier": "GO:0005879",
           "label": "axonemal microtubule",
           "cosine_similarity": 0.83664324
-        },
-        {
-          "identifier": "GO:0097650",
-          "label": "B axonemal microtubule",
-          "cosine_similarity": 0.83148697
         }
       ]
     },
