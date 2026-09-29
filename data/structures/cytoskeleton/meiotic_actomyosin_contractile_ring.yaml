@@ -1,0 +1,195 @@
+identifier: GO:0110086
+label: meiotic actomyosin contractile ring
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A cytoskeletal structure composed of actin filaments, myosin, and myosin-associated
+  proteins that forms beneath the plasma membrane of many cells, including animal
+  cells and yeast cells, in a plane perpendicular to the axis of the meiotic spindle,
+  i.e. the cell division plane. Ring contraction is associated with centripetal growth
+  of the membrane that divides the cytoplasm of the two future daughter cells. In
+  animal cells, the meiotic contractile ring is located inside the plasma membrane
+  at the location of the cleavage furrow. In fungal cells, the meiotic contractile
+  ring forms beneath the plasma membrane of the prospore envelope in preparation for
+  completing cytokinesis.
+definition_source: GO:0110086
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T22:46:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T22:47:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added actomyosin-ring parentage, reviewed-label-only actin and myosin constituents,
+    fission-yeast meiotic actin-ring evidence, a meiotic cytokinesis function, GO/DOI
+    evidence, a nonmechanistic topology graph, and boundary and component-grounding
+    discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0005826
+components:
+- component_id: actin_filaments
+  label: actin filaments
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0110086 defines the meiotic ring at the broad actin-filament
+    level; no exact source-neutral CURIE was assigned for the complete meiotic ring
+    actin cohort.
+  role: Filamentous actin constituent of the meiotic cytokinetic contractile ring.
+  evidence:
+  - reference: GO:0110086
+    notes: GO:0110086 defines the meiotic actomyosin contractile ring as composed
+      of actin filaments, myosin, and myosin-associated proteins.
+  - reference: DOI:10.1242/jcs.091561
+    notes: Yan and Balasubramanian 2012 characterized the F-actin-containing meiotic
+      actin ring in fission yeast.
+- component_id: myosin_proteins
+  label: myosin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The first broad meiotic actomyosin-ring record keeps myosin reviewed-label-only
+    until exact source-neutral groundings and species-specific meiotic myosin boundaries
+    are curated from primary sources.
+  role: Myosin constituent of the meiotic actomyosin ring that forms at the cytokinetic
+    division plane.
+  evidence:
+  - reference: GO:0110086
+    notes: GO:0110086 defines the meiotic actomyosin contractile ring as composed
+      of actin filaments, myosin, and myosin-associated proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast assembles meiotic actin ring structures during meiosis II sporulation.
+  reference: DOI:10.1242/jcs.091561
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Fission-yeast meiotic model in which the MeiAR expands during early meiosis
+    II and closes during forespore membrane assembly.
+  reference: DOI:10.1242/jcs.091561
+functions:
+- function_id: meiotic_actomyosin_cytokinesis
+  label: meiotic actomyosin cytokinesis
+  description: The meiotic actomyosin contractile ring forms at the division plane
+    and constricts with membrane ingrowth during meiotic cytokinesis.
+  evidence:
+  - reference: GO:0110086
+    notes: GO:0110086 defines the ring by its meiotic cytokinesis location and association
+      with division-plane membrane ingrowth.
+  - reference: DOI:10.1242/jcs.091561
+    notes: Yan and Balasubramanian 2012 followed fission-yeast meiotic actin ring
+      expansion and closure during forespore membrane assembly.
+evidence:
+- reference: GO:0110086
+  notes: Gene Ontology cellular-component term for the meiotic actomyosin contractile
+    ring.
+- reference: GO:0005826
+  notes: Gene Ontology cellular-component parent for actomyosin contractile rings.
+- reference: GO:0110085
+  notes: Gene Ontology cellular-component sibling term for mitotic actomyosin contractile
+    rings.
+- reference: GO:0032157
+  notes: Gene Ontology cellular-component child term for the localized prospore contractile
+    ring.
+- reference: DOI:10.1242/jcs.091561
+  notes: Yan and Balasubramanian 2012, 'Meiotic actin rings are essential for proper
+    sporulation in fission yeast', Journal of Cell Science.
+causal_graphs:
+- graph_id: meiotic_actomyosin_ring_topology
+  title: Meiotic actomyosin-ring topology
+  description: Actin filaments and myosin form the meiotic actomyosin contractile
+    ring.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records only GO-backed actomyosin membership of the meiotic
+    ring without asserting a full assembly pathway or the exact boundary of myosin-associated
+    accessory proteins.
+  nodes:
+  - node_id: actin_filaments
+    label: actin filaments
+    node_type: GENE_OR_PROTEIN
+    component_ref: actin_filaments
+  - node_id: myosin_proteins
+    label: myosin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: myosin_proteins
+  - node_id: meiotic_actomyosin_contractile_ring
+    label: meiotic actomyosin contractile ring
+    node_type: STRUCTURE
+    grounding: GO:0110086
+  edges:
+  - subject: actin_filaments
+    predicate: contributes to
+    object: meiotic_actomyosin_contractile_ring
+    description: Actin filaments are constituents of the meiotic actomyosin contractile
+      ring.
+    evidence:
+    - reference: GO:0110086
+      notes: GO:0110086 defines the meiotic ring as an actin-containing cytoskeletal
+        structure.
+  - subject: myosin_proteins
+    predicate: contributes to
+    object: meiotic_actomyosin_contractile_ring
+    description: Myosin proteins are constituents of the meiotic actomyosin contractile
+      ring.
+    evidence:
+    - reference: GO:0110086
+      notes: GO:0110086 defines the meiotic ring as containing myosin.
+discussions:
+- discussion_id: meiotic_actomyosin_ring_boundary
+  prompt: Keep the meiotic actomyosin contractile ring distinct from the generic actomyosin
+    ring and from mitotic or prospore-localized contractile rings.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0110086 denotes the meiotic subtype of the broader actomyosin contractile
+    ring class. GO:0110085 denotes the mitotic sibling class and GO:0032157 denotes
+    the prospore-localized child structure.
+  resolution_note: Curated GO:0110086 as the exact meiotic actomyosin ring, used GO:0005826
+    as the parent, and left GO:0032157 modeled as a separate narrower record.
+  evidence:
+  - reference: GO:0110086
+    notes: GO:0110086 identifies the meiotic actomyosin contractile ring.
+  - reference: GO:0005826
+    notes: GO:0005826 identifies the broader actomyosin contractile ring.
+  - reference: GO:0110085
+    notes: GO:0110085 identifies the parallel mitotic actomyosin contractile ring
+      class.
+  - reference: GO:0032157
+    notes: GO:0032157 identifies the prospore contractile ring as a narrower meiotic
+      ring.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_meiotic_actomyosin_ring_components
+  prompt: Resolve exact source-neutral family groundings and myosin-associated protein
+    boundaries for the meiotic actomyosin contractile ring.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#actin_filaments
+  - components#myosin_proteins
+  rationale: GO:0110086 includes myosin-associated proteins in the ring definition,
+    while the GO-cited fission-yeast MeiAR paper emphasizes F-actin, Arp2/3, For3,
+    Meu14, and leading-edge topology. This first meiotic subtype record keeps only
+    broad actin and myosin constituents until accessory constituent versus associated-machinery
+    boundaries are reviewed explicitly.
+  evidence:
+  - reference: GO:0110086
+    notes: GO:0110086 names myosin-associated proteins in the meiotic actomyosin-ring
+      definition.
+  - reference: DOI:10.1242/jcs.091561
+    notes: Yan and Balasubramanian 2012 characterized the fission-yeast MeiAR and
+      its relationship to forespore membrane assembly.
+  posed_by: codex
+  posed_date: '2026-09-29'
