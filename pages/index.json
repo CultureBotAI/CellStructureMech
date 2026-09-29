@@ -873,6 +873,15 @@
   "definition": "A non-membrane bound, semi-organized microtubule array of unknown function found in Giardia species (trophozoite stage). It is located on the dorsal side of the trophozoite, slightly posterior to the ventral disc."
  },
  {
+  "identifier": "cellstructuremech:meiotic_outer_plaque",
+  "label": "meiotic outer plaque",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/meiotic_outer_plaque.html",
+  "definition": "A sporulation-specific cytoplasmic plaque that forms on meiosis II spindle pole bodies in budding yeast after outer-plaque remodeling and nucleates prospore membrane assembly."
+ },
+ {
   "identifier": "GO:0005874",
   "label": "microtubule",
   "category": "CYTOSKELETON",

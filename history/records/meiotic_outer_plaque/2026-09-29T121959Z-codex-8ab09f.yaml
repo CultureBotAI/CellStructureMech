@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/meiotic_outer_plaque.yaml
+  slug: meiotic_outer_plaque
+session:
+  id: 2026-09-29T121959Z-codex-8ab09f
+  timestamp: '2026-09-29T12:19:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added meiotic outer plaque record
+  details: Created a CellStructureMech record for the sporulation-specific meiotic outer plaque
+    of the spindle pole body, using primary Saccharomyces evidence for the local definition,
+    GO:0031322 for the SPB remodeling process, GO:0005824 as the broader outer-plaque parent,
+    and GO:0005816 as the containing spindle pole body. Exact source-neutral MOP component
+    family groundings were left as an explicit curation TODO.

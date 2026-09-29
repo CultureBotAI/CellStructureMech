@@ -3016,6 +3016,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:meiotic_outer_plaque",
+      "label": "meiotic outer plaque",
+      "neighbors": [
+        {
+          "identifier": "GO:0005822",
+          "label": "inner plaque of spindle pole body",
+          "cosine_similarity": 0.84705379
+        },
+        {
+          "identifier": "cellstructuremech:spindle_pole_body_duplication_plaque",
+          "label": "spindle pole body duplication plaque",
+          "cosine_similarity": 0.84293744
+        },
+        {
+          "identifier": "GO:0005824",
+          "label": "outer plaque of spindle pole body",
+          "cosine_similarity": 0.84170377
+        },
+        {
+          "identifier": "GO:0061498",
+          "label": "intermediate layer of mitotic spindle pole body",
+          "cosine_similarity": 0.79981214
+        },
+        {
+          "identifier": "GO:0005823",
+          "label": "central plaque of spindle pole body",
+          "cosine_similarity": 0.79547716
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005874",
       "label": "microtubule",
       "neighbors": [
