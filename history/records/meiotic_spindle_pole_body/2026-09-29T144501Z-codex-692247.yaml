@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/meiotic_spindle_pole_body.yaml
+  slug: meiotic_spindle_pole_body
+session:
+  id: 2026-09-29T144501Z-codex-692247
+  timestamp: '2026-09-29T14:45:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added meiotic spindle pole body record
+  details: Created the GO:0035974 meiotic spindle pole body record with spindle-pole-body
+    parentage, Saccharomyces cerevisiae scope, GO and DOI evidence, a nonmechanistic MOP topology
+    graph, and discussions capturing the meiotic SPB boundary and deferred component groundings.
