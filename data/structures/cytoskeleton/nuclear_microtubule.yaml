@@ -1,0 +1,148 @@
+identifier: GO:0005880
+label: nuclear microtubule
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: Any microtubule in the nucleus of a cell.
+definition_source: GO:0005880
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T13:34:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T13:35:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO microtubule parentage, nucleus parthood, Saccharomyces scope,
+    a nuclear-array function, GO and literature evidence, a nonmechanistic SPB inner-plaque
+    organization graph, and boundary/component discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0005874
+part_of:
+- GO:0005634
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast spindle pole bodies nucleate nuclear microtubules from their
+    inner plaques.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference fungal model in which nuclear microtubules are organized by the
+    nuclear face of the spindle pole body.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+functions:
+- function_id: nuclear_microtubule_array_organization
+  label: nuclear microtubule array organization
+  description: Nuclear microtubules form non-cytoplasmic tubulin-polymer arrays that
+    can be organized from nuclear microtubule-organizing centers such as the budding-yeast
+    SPB inner plaque.
+  evidence:
+  - reference: GO:0005880
+    notes: GO:0005880 defines nuclear microtubules as microtubules in the nucleus.
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the budding-yeast SPB inner plaque as
+      the nuclear site for microtubule nucleation.
+evidence:
+- reference: GO:0005880
+  notes: Gene Ontology cellular-component term for the nuclear microtubule.
+- reference: GO:0005874
+  notes: Gene Ontology cellular-component parent term for the microtubule.
+- reference: GO:0005634
+  notes: Gene Ontology cellular-component term for the nucleus.
+- reference: GO:0005822
+  notes: Gene Ontology cellular-component term for the budding-yeast SPB inner plaque
+    that organizes nuclear microtubule nucleation.
+- reference: GO:0005881
+  notes: Gene Ontology cellular-component sibling term for cytoplasmic microtubules.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+causal_graphs:
+- graph_id: spb_inner_plaque_organizes_nuclear_microtubules
+  title: SPB inner plaques organize nuclear microtubules
+  description: Budding-yeast spindle pole body inner plaques face the nucleus and
+    organize nuclear microtubule nucleation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-backed microtubule subtype and the SPB inner-plaque
+    organizing site without asserting specific budding-yeast gamma-tubulin complexes
+    or microtubule-associated proteins.
+  nodes:
+  - node_id: microtubule
+    label: microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005874
+  - node_id: nuclear_microtubule
+    label: nuclear microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005880
+  - node_id: inner_plaque
+    label: inner plaque of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005822
+  edges:
+  - subject: nuclear_microtubule
+    predicate: is subtype of
+    object: microtubule
+    description: Nuclear microtubules are microtubules that reside in the nucleus.
+    evidence:
+    - reference: GO:0005880
+      notes: GO:0005880 is a cellular-component child of the generic microtubule term.
+    - reference: GO:0005874
+      notes: GO:0005874 identifies the broader microtubule structure.
+  - subject: inner_plaque
+    predicate: organizes
+    object: nuclear_microtubule
+    description: The budding-yeast SPB inner plaque organizes nuclear microtubule
+      nucleation.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the SPB inner plaque as the budding-yeast
+        nuclear microtubule nucleation site.
+discussions:
+- discussion_id: nuclear_microtubule_boundary
+  prompt: Keep nuclear microtubules distinct from cytoplasmic microtubules and from
+    array-specific spindle microtubules.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - causal_graphs#spb_inner_plaque_organizes_nuclear_microtubules
+  rationale: GO:0005880 denotes microtubules in the nucleus and therefore differs
+    from the cytoplasmic GO:0005881 class. It also differs from the GO:0005876 spindle
+    microtubule class, which is defined by membership in a mitotic or meiotic spindle
+    rather than by nuclear localization alone.
+  resolution_note: Curated GO:0005880 as a GO-backed nuclear microtubule subtype,
+    parented it to GO:0005874, and used a budding-yeast SPB graph only as one concrete
+    example of nuclear microtubule organization.
+  evidence:
+  - reference: GO:0005880
+    notes: GO:0005880 identifies the nuclear microtubule class.
+  - reference: GO:0005881
+    notes: GO:0005881 identifies the cytoplasmic microtubule class.
+  - reference: GO:0005876
+    notes: GO:0005876 identifies spindle microtubules as part of mitotic or meiotic
+      spindles.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_nuclear_microtubule_associated_proteins
+  prompt: Resolve exact source-neutral groundings for nuclear microtubule-associated
+    proteins and nucleation complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: This first nuclear microtubule record captures the GO-backed tubulin-polymer
+    subtype and defers taxon-specific motors, plus-end factors, and gamma-tubulin
+    nucleation complexes.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'

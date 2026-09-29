@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/nuclear_microtubule.yaml
+  slug: nuclear_microtubule
+session:
+  id: 2026-09-29T133553Z-codex-db57c7
+  timestamp: '2026-09-29T13:35:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added nuclear microtubule record
+  details: Created the GO:0005880 nuclear microtubule record with microtubule parentage, nucleus
+    parthood, Saccharomyces cerevisiae scope, GO and DOI evidence, a nonmechanistic SPB inner-plaque
+    organization graph, and discussions capturing the nuclear microtubule boundary and deferred
+    associated-protein groundings.
