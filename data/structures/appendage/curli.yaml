@@ -30,6 +30,12 @@ curation_history:
   changes: Resolved the curli secretion-complex boundary TODO after adding GO:0062155
     as a standalone secretion-system record.
   llm_assisted: true
+- timestamp: '2026-09-29T05:44:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Softened the resolved curli secretion-complex rationale after PR review
+    to avoid treating GO:0062155 as an exact CsgE/F/G component-boundary decision.
+  llm_assisted: true
 synonyms:
 - synonym_text: curli fimbriae
   synonym_type: EXACT_SYNONYM
@@ -200,9 +206,9 @@ discussions:
   status: RESOLVED
   attaches_to:
   - causal_graphs#type_viii_curli_amyloid_assembly
-  rationale: GO has an exact curli secretion complex term for the CsgEFG machinery.
-    This curli record models that machinery only in the assembly graph because CsgEFG
-    exports fiber subunits but is not itself part of the amyloid pilus.
+  rationale: GO has an exact curli secretion complex term for the Csg secretion machinery.
+    This curli record models that secretion route only in the assembly graph because
+    it exports fiber subunits but is not itself part of the amyloid pilus.
   evidence:
   - reference: GO:0062155
     notes: Gene Ontology carries a cellular-component term for the curli secretion
