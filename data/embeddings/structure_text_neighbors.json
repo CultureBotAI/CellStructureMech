@@ -2892,6 +2892,37 @@
       ]
     },
     {
+      "identifier": "GO:0160066",
+      "label": "interphase SIN signaling complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0160065",
+          "label": "SIN/MEN signaling complex",
+          "cosine_similarity": 0.90690544
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.7313514
+        },
+        {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.72698088
+        },
+        {
+          "identifier": "GO:0071958",
+          "label": "new mitotic spindle pole body",
+          "cosine_similarity": 0.72644039
+        },
+        {
+          "identifier": "GO:0033551",
+          "label": "monopolin complex",
+          "cosine_similarity": 0.7260184
+        }
+      ]
+    },
+    {
       "identifier": "GO:0033289",
       "label": "intraconoid microtubule",
       "neighbors": [
@@ -3733,6 +3764,11 @@
       "label": "SIN/MEN signaling complex",
       "neighbors": [
         {
+          "identifier": "GO:0160066",
+          "label": "interphase SIN signaling complex",
+          "cosine_similarity": 0.90690544
+        },
+        {
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.80211525
@@ -3751,11 +3787,6 @@
           "identifier": "GO:0035974",
           "label": "meiotic spindle pole body",
           "cosine_similarity": 0.79302657
-        },
-        {
-          "identifier": "GO:0071958",
-          "label": "new mitotic spindle pole body",
-          "cosine_similarity": 0.79182056
         }
       ]
     },

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+  slug: interphase_sin_signaling_complex
+session:
+  id: 2026-09-29T192945Z-codex-8d248d
+  timestamp: '2026-09-29T19:29:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - discussions
+  summary: Added interphase SIN signaling complex record
+  details: Created the GO:0160066 interphase SIN signaling complex record with the GO exact
+    synonym, GO-backed SIN/MEN parentage, Schizosaccharomyces pombe scope, an interphase SIN-inactivation
+    function, GO and fission-yeast literature evidence, and discussions capturing its narrower
+    SIN-state boundary and deferred component-grounding work.
