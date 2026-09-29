@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_v_protein_secretion_system_complex.yaml
+  slug: type_v_protein_secretion_system_complex
+session:
+  id: 2026-09-29T040514Z-codex-22a57f
+  timestamp: '2026-09-29T04:05:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - evidence
+  - discussions
+  summary: Add type V protein secretion system complex
+  details: Created the GO:0098046 type V protein secretion system complex record after QuickGO
+    and OLS verification, hidden/ignored-inclusive duplicate searches for the GO CURIE, exact
+    label, GO synonyms, and definition PMIDs, and PubMed/Europe PMC verification of the GO
+    xref literature. Added GO synonymy, protein-containing-complex parentage, a conservative
+    variable Bacteria taxonomic scope row, GO/PubMed record evidence, and open discussions
+    to resolve type V subtype component boundaries and the GO:0046819 process boundary before
+    adding components or functions.

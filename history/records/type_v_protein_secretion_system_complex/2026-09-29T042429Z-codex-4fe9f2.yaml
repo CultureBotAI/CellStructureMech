@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_v_protein_secretion_system_complex.yaml
+  slug: type_v_protein_secretion_system_complex
+session:
+  id: 2026-09-29T042429Z-codex-4fe9f2
+  timestamp: '2026-09-29T04:24:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1761
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1760
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - discussions
+  summary: Address type V subtype boundary review
+  details: 'Resolved #1761 for PR #1760 by narrowing the t5ss_subtype_component_boundary TODO
+    from unsupported later type V subfamilies to the Va/Vb/Vc scope supported by GO:0098046
+    and the 2004 type V secretion review evidence.'
