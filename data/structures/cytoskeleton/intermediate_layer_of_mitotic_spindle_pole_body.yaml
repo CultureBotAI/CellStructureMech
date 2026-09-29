@@ -1,0 +1,138 @@
+identifier: GO:0061498
+label: intermediate layer of mitotic spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The layer of the mitotic spindle pole body between the central plaque
+  and the outer plaque.
+definition_source: GO:0061498
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T10:10:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T10:10:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO-backed intermediate-layer parentage and mitotic-SPB parthood,
+    Saccharomyces scope, GO and literature evidence, a nonmechanistic mitotic intermediate-layer
+    topology graph, and boundary/component discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0005821
+part_of:
+- GO:0044732
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is a characterized fungal model for mitotic spindle-pole-body
+    plaque topology, including the intermediate layer between the central and outer
+    plaques.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast reference system for the mitotic SPB and its layered cytoplasmic
+    plaque side.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+evidence:
+- reference: GO:0061498
+  notes: Gene Ontology cellular-component term for the intermediate layer of the mitotic
+    spindle pole body.
+- reference: GO:0005821
+  notes: Gene Ontology parent term for the general SPB intermediate layer.
+- reference: GO:0044732
+  notes: Gene Ontology cellular-component term for the mitotic spindle pole body that
+    includes GO:0061498 by parthood.
+- reference: GO:0005823
+  notes: Gene Ontology cellular-component term for the central plaque of the spindle
+    pole body.
+- reference: GO:0005824
+  notes: Gene Ontology cellular-component term for the outer plaque of the spindle
+    pole body.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+causal_graphs:
+- graph_id: mitotic_intermediate_layer_topology
+  title: Mitotic intermediate-layer topology in the spindle pole body
+  description: The mitotic intermediate layer is a mitosis-specific SPB intermediate
+    layer between the central and outer plaques.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed specialization and parthood for the mitotic
+    intermediate layer without asserting an ordered component recruitment pathway.
+  nodes:
+  - node_id: mitotic_intermediate_layer
+    label: intermediate layer of mitotic spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0061498
+  - node_id: intermediate_layer
+    label: intermediate layer of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005821
+  - node_id: mitotic_spindle_pole_body
+    label: mitotic spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0044732
+  edges:
+  - subject: mitotic_intermediate_layer
+    predicate: is a
+    object: intermediate_layer
+    description: The mitotic SPB intermediate layer is the mitosis-specific subtype
+      of the general SPB intermediate layer.
+    evidence:
+    - reference: GO:0061498
+      notes: GO:0061498 is_a GO:0005821 in the Gene Ontology cellular-component hierarchy.
+  - subject: mitotic_intermediate_layer
+    predicate: is part of
+    object: mitotic_spindle_pole_body
+    description: The mitotic intermediate layer is a layer of the mitotic spindle
+      pole body.
+    evidence:
+    - reference: GO:0061498
+      notes: GO:0061498 defines the intermediate layer by its position in the mitotic
+        spindle pole body.
+discussions:
+- discussion_id: mitotic_intermediate_layer_boundary
+  prompt: Keep the mitotic SPB intermediate layer narrower than the general SPB intermediate
+    layer.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  rationale: GO:0061498 denotes the intermediate layer of the mitotic spindle pole
+    body, is narrower than GO:0005821, and is part of the GO:0044732 mitotic spindle
+    pole body.
+  resolution_note: Curated GO:0061498 as the mitosis-specific SPB intermediate layer,
+    with is-a and part-of links to the corresponding GO terms.
+  evidence:
+  - reference: GO:0061498
+    notes: GO:0061498 identifies the intermediate layer of the mitotic spindle pole
+      body.
+  - reference: GO:0005821
+    notes: GO:0005821 identifies the general intermediate layer of the spindle pole
+      body.
+  - reference: GO:0044732
+    notes: GO:0044732 identifies the mitotic spindle pole body.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_mitotic_intermediate_layer_components
+  prompt: Resolve exact source-neutral family groundings for mitotic SPB intermediate-layer
+    constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The first GO-backed mitotic intermediate-layer record captures the cell-cycle-specific
+    layer without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal groundings
+    for budding-yeast protein constituents.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'
