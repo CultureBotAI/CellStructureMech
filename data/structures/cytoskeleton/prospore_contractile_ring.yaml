@@ -20,6 +20,12 @@ curation_history:
     and myosin constituents, GO evidence, a nonmechanistic topology graph, and boundary
     and component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-29T06:34:38Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1766 review issue #1767 by replacing the generic GO:0005826
+    parent with the nearer GO:0110086 meiotic actomyosin contractile ring parent.'
+  llm_assisted: true
 synonyms:
 - synonym_text: actomyosin ring
   synonym_type: RELATED_SYNONYM
@@ -31,7 +37,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: GO:0032157
 parent_structures:
-- GO:0005826
+- GO:0110086
 components:
 - component_id: actin_filaments
   label: actin filaments
@@ -66,11 +72,12 @@ components:
 evidence:
 - reference: GO:0032157
   notes: Gene Ontology cellular-component term for the prospore contractile ring.
-- reference: GO:0005826
-  notes: Gene Ontology cellular-component parent term for actomyosin contractile rings.
 - reference: GO:0110086
-  notes: Gene Ontology cellular-component term for the broader meiotic actomyosin
-    contractile ring class.
+  notes: Gene Ontology cellular-component parent term for meiotic actomyosin contractile
+    rings.
+- reference: GO:0005826
+  notes: Gene Ontology cellular-component ancestor term for actomyosin contractile
+    rings.
 causal_graphs:
 - graph_id: prospore_contractile_ring_topology
   title: Prospore contractile-ring topology
@@ -137,8 +144,9 @@ discussions:
     GO:0005826 denotes the broader actomyosin contractile ring class, GO:0110086 denotes
     the broader meiotic actomyosin contractile ring class, and GO:0032169 denotes
     a separate prospore septin ring assembled from septins and septin-associated proteins.
-  resolution_note: Curated GO:0032157 as the exact prospore-localized actomyosin ring
-    and used GO:0005826 only as the is-a parent.
+  resolution_note: Curated GO:0032157 as the exact prospore-localized actomyosin ring,
+    used GO:0110086 as the nearest GO is-a parent, and kept GO:0005826 only as a broader
+    actomyosin-ring ancestor.
   evidence:
   - reference: GO:0032157
     notes: GO:0032157 identifies the prospore-localized actomyosin contractile ring.
