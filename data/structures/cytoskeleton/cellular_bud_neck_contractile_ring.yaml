@@ -1,0 +1,220 @@
+identifier: GO:0000142
+label: cellular bud neck contractile ring
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A contractile ring, i.e. a cytoskeletal structure composed of actin filaments
+  and myosin, that forms beneath the plasma membrane at the mother-bud neck in mitotic
+  cells that divide by budding in preparation for completing cytokinesis. An example
+  of this structure is found in Saccharomyces cerevisiae.
+definition_source: GO:0000142
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T21:26:18Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T21:27:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, mitotic actomyosin-ring parentage, bud-neck parthood,
+    reviewed-label-only actin and Myo1 constituents, Saccharomyces distribution and
+    canonical example evidence, a bud-neck cytokinesis function, GO/DOI evidence,
+    a nonmechanistic actomyosin-ring topology graph, and boundary and component-grounding
+    discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: neck ring
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000142
+parent_structures:
+- GO:0110085
+part_of:
+- GO:0005935
+components:
+- component_id: actin_filaments
+  label: actin filaments
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - ACT1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The bud-neck contractile ring contains Saccharomyces actin filaments,
+    but no exact source-neutral CURIE was assigned for the complete cytokinetic actin
+    filament cohort in this first localized record.
+  role: Filamentous actin constituent of the contractile ring that forms beneath the
+    mother-bud-neck plasma membrane.
+  evidence:
+  - reference: GO:0000142
+    notes: GO:0000142 defines the cellular bud neck contractile ring as a cytoskeletal
+      structure composed of actin filaments and myosin.
+  - reference: DOI:10.1083/jcb.142.5.1301
+    notes: Bi et al. 1998 characterized the Saccharomyces actin ring at the mother-bud
+      neck during cytokinesis.
+- component_id: myo1_family_myosin_ii
+  label: Myo1-family myosin-II motor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - MYO1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Saccharomyces Myo1 is the myosin-II motor of the bud-neck actomyosin
+    ring, but no exact source-neutral InterPro, Pfam, NCBIfam, or UniProtKB CURIE
+    was verified for the localized contractile-ring myosin cohort.
+  role: Myosin-II constituent that localizes to the neck ring and participates in
+    budding-yeast cytokinesis.
+  evidence:
+  - reference: GO:0000142
+    notes: GO:0000142 defines the cellular bud neck contractile ring as a cytoskeletal
+      structure composed of actin filaments and myosin.
+  - reference: DOI:10.1083/jcb.142.5.1301
+    notes: Bi et al. 1998 used Saccharomyces Myo1 localization at the mother-bud neck
+      to study the cytokinetic actomyosin ring.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms a Myo1- and actin-containing contractile ring at the mother-bud
+    neck during cytokinesis.
+  reference: DOI:10.1083/jcb.142.5.1301
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Myo1 and actin rings were tracked at the mother-bud
+    neck during cytokinesis.
+  reference: DOI:10.1083/jcb.142.5.1301
+functions:
+- function_id: bud_neck_actomyosin_cytokinesis
+  label: bud-neck actomyosin cytokinesis
+  description: The cellular bud neck contractile ring forms beneath the mother-bud-neck
+    plasma membrane in preparation for completing budding-yeast cytokinesis.
+  evidence:
+  - reference: GO:0000142
+    notes: GO:0000142 defines the ring by its mother-bud-neck position and cytokinesis
+      timing.
+  - reference: DOI:10.1083/jcb.142.5.1301
+    notes: Bi et al. 1998 directly tested Saccharomyces actomyosin-ring involvement
+      in cytokinesis.
+evidence:
+- reference: GO:0000142
+  notes: Gene Ontology cellular-component term for the cellular bud neck contractile
+    ring.
+- reference: GO:0110085
+  notes: Gene Ontology cellular-component parent for mitotic actomyosin contractile
+    rings.
+- reference: GO:0005935
+  notes: Gene Ontology cellular-component term for the cellular bud neck containing
+    the contractile ring.
+- reference: DOI:10.1083/jcb.142.5.1301
+  notes: Bi et al. 1998, 'Involvement of an actomyosin contractile ring in Saccharomyces
+    cerevisiae cytokinesis', Journal of Cell Biology.
+- reference: DOI:10.1016/j.tcb.2005.06.007
+  notes: 'Versele and Thorner 2005, ''Some assembly required: yeast septins provide
+    the instruction manual'', Trends in Cell Biology.'
+causal_graphs:
+- graph_id: bud_neck_actomyosin_ring_topology
+  title: Bud-neck actomyosin ring topology
+  description: Actin filaments and Myo1 form a contractile ring beneath the plasma
+    membrane at the Saccharomyces mother-bud neck.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records only actin and myosin membership and the bud-neck
+    location without asserting the timing of ring assembly, myosin motor requirements,
+    or accessory-protein boundaries.
+  nodes:
+  - node_id: actin_filaments
+    label: actin filaments
+    node_type: GENE_OR_PROTEIN
+    component_ref: actin_filaments
+  - node_id: myo1_family_myosin_ii
+    label: Myo1-family myosin-II motor
+    node_type: GENE_OR_PROTEIN
+    component_ref: myo1_family_myosin_ii
+  - node_id: cellular_bud_neck_contractile_ring
+    label: cellular bud neck contractile ring
+    node_type: STRUCTURE
+    grounding: GO:0000142
+  - node_id: cellular_bud_neck
+    label: cellular bud neck
+    node_type: STRUCTURE
+    grounding: GO:0005935
+  edges:
+  - subject: actin_filaments
+    predicate: contributes to
+    object: cellular_bud_neck_contractile_ring
+    description: Actin filaments are constituents of the bud-neck contractile ring.
+    evidence:
+    - reference: GO:0000142
+      notes: GO:0000142 defines the ring as composed of actin filaments and myosin.
+  - subject: myo1_family_myosin_ii
+    predicate: contributes to
+    object: cellular_bud_neck_contractile_ring
+    description: Saccharomyces Myo1 localizes as a myosin-II constituent of the neck
+      ring.
+    evidence:
+    - reference: DOI:10.1083/jcb.142.5.1301
+      notes: Bi et al. 1998 followed Myo1 at the Saccharomyces neck ring during cytokinesis.
+  - subject: cellular_bud_neck_contractile_ring
+    predicate: is part of
+    object: cellular_bud_neck
+    description: The contractile ring forms beneath the plasma membrane at the mother-bud
+      neck.
+    evidence:
+    - reference: GO:0000142
+      notes: GO:0000142 places the ring at the mother-bud neck of mitotic budding
+        cells.
+    - reference: GO:0005935
+      notes: GO:0005935 identifies the mother-daughter bud-neck region.
+discussions:
+- discussion_id: bud_neck_actomyosin_ring_boundary
+  prompt: Keep the cellular bud neck contractile ring distinct from the broader actomyosin
+    ring and from bud-neck septin structures.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  rationale: GO:0000142 denotes the budding-cell mitotic actomyosin ring at the mother-bud
+    neck. GO:0110085 denotes the broader mitotic actomyosin contractile ring class,
+    GO:0005935 denotes the bud-neck region, and GO:0000144/GO:0032174 denote separate
+    septin-rich bud-neck structures.
+  resolution_note: Curated GO:0000142 as the exact bud-neck actomyosin ring, used
+    GO:0110085 only as its parent, and represented the bud neck as the containing
+    region.
+  evidence:
+  - reference: GO:0000142
+    notes: GO:0000142 identifies the Saccharomyces-type bud-neck actomyosin contractile
+      ring.
+  - reference: GO:0110085
+    notes: GO:0110085 identifies the broader mitotic actomyosin contractile ring.
+  - reference: GO:0005935
+    notes: GO:0005935 identifies the cellular bud neck.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_bud_neck_actomyosin_components
+  prompt: Resolve exact source-neutral family groundings and accessory boundaries
+    for bud-neck contractile-ring proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#actin_filaments
+  - components#myo1_family_myosin_ii
+  rationale: This first localized bud-neck actomyosin-ring record keeps actin and
+    myosin II reviewed-label only and avoids adding Iqg1/Cyk1, Hof1/Cyk2, Mlc1, or
+    other cytokinetic factors until their constituent versus associated-machinery
+    status has been reviewed explicitly.
+  evidence:
+  - reference: DOI:10.1083/jcb.142.5.1301
+    notes: Bi et al. 1998 directly characterized Saccharomyces actomyosin rings but
+      did not define a complete source-neutral protein-family boundary for all bud-neck
+      contractile-ring constituents.
+  - reference: DOI:10.1016/j.tcb.2005.06.007
+    notes: Versele and Thorner 2005 reviewed additional bud-neck cytokinesis factors
+      that should be resolved before broadening the component list.
+  posed_by: codex
+  posed_date: '2026-09-29'

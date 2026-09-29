@@ -1397,9 +1397,9 @@
           "cosine_similarity": 0.76180847
         },
         {
-          "identifier": "cellstructuremech:mamk_filament",
-          "label": "MamK filament",
-          "cosine_similarity": 0.74816704
+          "identifier": "GO:0000142",
+          "label": "cellular bud neck contractile ring",
+          "cosine_similarity": 0.75796995
         }
       ]
     },
@@ -1411,6 +1411,11 @@
           "identifier": "GO:0032157",
           "label": "prospore contractile ring",
           "cosine_similarity": 0.92973094
+        },
+        {
+          "identifier": "GO:0000142",
+          "label": "cellular bud neck contractile ring",
+          "cosine_similarity": 0.88296725
         },
         {
           "identifier": "GO:0030479",
@@ -1426,11 +1431,6 @@
           "identifier": "GO:1990819",
           "label": "mating projection actin fusion focus",
           "cosine_similarity": 0.7691493
-        },
-        {
-          "identifier": "GO:0005940",
-          "label": "septin ring",
-          "cosine_similarity": 0.75589341
         }
       ]
     },
@@ -2117,6 +2117,37 @@
       ]
     },
     {
+      "identifier": "GO:0000142",
+      "label": "cellular bud neck contractile ring",
+      "neighbors": [
+        {
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.88296725
+        },
+        {
+          "identifier": "GO:0000144",
+          "label": "cellular bud neck septin ring",
+          "cosine_similarity": 0.85566394
+        },
+        {
+          "identifier": "GO:0032157",
+          "label": "prospore contractile ring",
+          "cosine_similarity": 0.85403718
+        },
+        {
+          "identifier": "GO:0032174",
+          "label": "cellular bud neck septin collar",
+          "cosine_similarity": 0.83265482
+        },
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.79398302
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032174",
       "label": "cellular bud neck septin collar",
       "neighbors": [
@@ -2141,9 +2172,9 @@
           "cosine_similarity": 0.85527764
         },
         {
-          "identifier": "GO:0032172",
-          "label": "germ tube septin ring",
-          "cosine_similarity": 0.82596555
+          "identifier": "GO:0000142",
+          "label": "cellular bud neck contractile ring",
+          "cosine_similarity": 0.83265482
         }
       ]
     },
@@ -3645,6 +3676,11 @@
           "cosine_similarity": 0.92973094
         },
         {
+          "identifier": "GO:0000142",
+          "label": "cellular bud neck contractile ring",
+          "cosine_similarity": 0.85403718
+        },
+        {
           "identifier": "GO:0032169",
           "label": "prospore septin ring",
           "cosine_similarity": 0.8177109
@@ -3658,11 +3694,6 @@
           "identifier": "cellstructuremech:mamk_filament",
           "label": "MamK filament",
           "cosine_similarity": 0.75695941
-        },
-        {
-          "identifier": "GO:0032170",
-          "label": "pseudohyphal septin ring",
-          "cosine_similarity": 0.75072585
         }
       ]
     },
