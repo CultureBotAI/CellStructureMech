@@ -1428,9 +1428,9 @@
           "cosine_similarity": 0.75589341
         },
         {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.74150718
+          "identifier": "GO:0032169",
+          "label": "prospore septin ring",
+          "cosine_similarity": 0.74371057
         }
       ]
     },
@@ -2172,9 +2172,9 @@
           "cosine_similarity": 0.87325132
         },
         {
-          "identifier": "GO:0032172",
-          "label": "germ tube septin ring",
-          "cosine_similarity": 0.86133255
+          "identifier": "GO:0032169",
+          "label": "prospore septin ring",
+          "cosine_similarity": 0.8643645
         }
       ]
     },
@@ -2186,6 +2186,11 @@
           "identifier": "GO:0000144",
           "label": "cellular bud neck septin ring",
           "cosine_similarity": 0.89094921
+        },
+        {
+          "identifier": "GO:0032169",
+          "label": "prospore septin ring",
+          "cosine_similarity": 0.86762635
         },
         {
           "identifier": "GO:0032174",
@@ -2201,11 +2206,6 @@
           "identifier": "GO:0032170",
           "label": "pseudohyphal septin ring",
           "cosine_similarity": 0.84883137
-        },
-        {
-          "identifier": "GO:0032162",
-          "label": "mating projection septin band",
-          "cosine_similarity": 0.82570426
         }
       ]
     },
@@ -2539,14 +2539,14 @@
           "cosine_similarity": 0.90346491
         },
         {
+          "identifier": "GO:0032169",
+          "label": "prospore septin ring",
+          "cosine_similarity": 0.89358838
+        },
+        {
           "identifier": "GO:0032175",
           "label": "mating projection septin ring",
           "cosine_similarity": 0.87288779
-        },
-        {
-          "identifier": "GO:0032162",
-          "label": "mating projection septin band",
-          "cosine_similarity": 0.8648741
         }
       ]
     },
@@ -2570,14 +2570,14 @@
           "cosine_similarity": 0.90888979
         },
         {
+          "identifier": "GO:0032169",
+          "label": "prospore septin ring",
+          "cosine_similarity": 0.89904949
+        },
+        {
           "identifier": "GO:0032175",
           "label": "mating projection septin ring",
           "cosine_similarity": 0.87452455
-        },
-        {
-          "identifier": "GO:0032162",
-          "label": "mating projection septin band",
-          "cosine_similarity": 0.85410374
         }
       ]
     },
@@ -2751,6 +2751,11 @@
           "cosine_similarity": 0.89217207
         },
         {
+          "identifier": "GO:0032169",
+          "label": "prospore septin ring",
+          "cosine_similarity": 0.87701567
+        },
+        {
           "identifier": "GO:0032168",
           "label": "hyphal septin ring",
           "cosine_similarity": 0.87452455
@@ -2759,11 +2764,6 @@
           "identifier": "GO:0032172",
           "label": "germ tube septin ring",
           "cosine_similarity": 0.87288779
-        },
-        {
-          "identifier": "GO:0005940",
-          "label": "septin ring",
-          "cosine_similarity": 0.85152624
         }
       ]
     },
@@ -3016,9 +3016,45 @@
       ]
     },
     {
+      "identifier": "GO:0032169",
+      "label": "prospore septin ring",
+      "neighbors": [
+        {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.92121409
+        },
+        {
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.89904949
+        },
+        {
+          "identifier": "GO:0032172",
+          "label": "germ tube septin ring",
+          "cosine_similarity": 0.89358838
+        },
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.88477313
+        },
+        {
+          "identifier": "GO:0032175",
+          "label": "mating projection septin ring",
+          "cosine_similarity": 0.87701567
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032170",
       "label": "pseudohyphal septin ring",
       "neighbors": [
+        {
+          "identifier": "GO:0032169",
+          "label": "prospore septin ring",
+          "cosine_similarity": 0.92121409
+        },
         {
           "identifier": "GO:0032168",
           "label": "hyphal septin ring",
@@ -3038,11 +3074,6 @@
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.87659786
-        },
-        {
-          "identifier": "GO:0032162",
-          "label": "mating projection septin band",
-          "cosine_similarity": 0.87175089
         }
       ]
     },
@@ -3097,14 +3128,14 @@
           "cosine_similarity": 0.91148252
         },
         {
+          "identifier": "GO:0032169",
+          "label": "prospore septin ring",
+          "cosine_similarity": 0.88477313
+        },
+        {
           "identifier": "GO:0032170",
           "label": "pseudohyphal septin ring",
           "cosine_similarity": 0.87659786
-        },
-        {
-          "identifier": "GO:0032174",
-          "label": "cellular bud neck septin collar",
-          "cosine_similarity": 0.86145883
         }
       ]
     },
