@@ -2214,6 +2214,11 @@
       "label": "central plaque of spindle pole body",
       "neighbors": [
         {
+          "identifier": "GO:0005822",
+          "label": "inner plaque of spindle pole body",
+          "cosine_similarity": 0.96235747
+        },
+        {
           "identifier": "GO:0005824",
           "label": "outer plaque of spindle pole body",
           "cosine_similarity": 0.95971093
@@ -2232,11 +2237,6 @@
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.76358955
-        },
-        {
-          "identifier": "GO:0005876",
-          "label": "spindle microtubule",
-          "cosine_similarity": 0.75779064
         }
       ]
     },
@@ -2644,6 +2644,37 @@
       ]
     },
     {
+      "identifier": "GO:0005822",
+      "label": "inner plaque of spindle pole body",
+      "neighbors": [
+        {
+          "identifier": "GO:0005824",
+          "label": "outer plaque of spindle pole body",
+          "cosine_similarity": 0.97969772
+        },
+        {
+          "identifier": "GO:0005823",
+          "label": "central plaque of spindle pole body",
+          "cosine_similarity": 0.96235747
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.87538453
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.7997313
+        },
+        {
+          "identifier": "GO:0072686",
+          "label": "mitotic spindle",
+          "cosine_similarity": 0.78935728
+        }
+      ]
+    },
+    {
       "identifier": "GO:0033289",
       "label": "intraconoid microtubule",
       "neighbors": [
@@ -2906,6 +2937,11 @@
           "cosine_similarity": 0.82278094
         },
         {
+          "identifier": "GO:0005822",
+          "label": "inner plaque of spindle pole body",
+          "cosine_similarity": 0.78935728
+        },
+        {
           "identifier": "GO:0005824",
           "label": "outer plaque of spindle pole body",
           "cosine_similarity": 0.78596386
@@ -2914,11 +2950,6 @@
           "identifier": "GO:0005823",
           "label": "central plaque of spindle pole body",
           "cosine_similarity": 0.7694775
-        },
-        {
-          "identifier": "GO:0000776",
-          "label": "kinetochore",
-          "cosine_similarity": 0.76863575
         }
       ]
     },
@@ -2989,6 +3020,11 @@
       "label": "outer plaque of spindle pole body",
       "neighbors": [
         {
+          "identifier": "GO:0005822",
+          "label": "inner plaque of spindle pole body",
+          "cosine_similarity": 0.97969772
+        },
+        {
           "identifier": "GO:0005823",
           "label": "central plaque of spindle pole body",
           "cosine_similarity": 0.95971093
@@ -3007,11 +3043,6 @@
           "identifier": "GO:0072686",
           "label": "mitotic spindle",
           "cosine_similarity": 0.78596386
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.7717961
         }
       ]
     },
@@ -3299,6 +3330,11 @@
       "label": "spindle pole body",
       "neighbors": [
         {
+          "identifier": "GO:0005822",
+          "label": "inner plaque of spindle pole body",
+          "cosine_similarity": 0.87538453
+        },
+        {
           "identifier": "GO:0005824",
           "label": "outer plaque of spindle pole body",
           "cosine_similarity": 0.86403343
@@ -3317,11 +3353,6 @@
           "identifier": "GO:0005823",
           "label": "central plaque of spindle pole body",
           "cosine_similarity": 0.82219063
-        },
-        {
-          "identifier": "GO:0000776",
-          "label": "kinetochore",
-          "cosine_similarity": 0.78914112
         }
       ]
     },
