@@ -1,0 +1,136 @@
+identifier: GO:0032169
+label: prospore septin ring
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A tight ring-shaped structure that forms in the division plane at the
+  site of cytokinesis in a prospore; composed of septins as well as septin-associated
+  proteins.
+definition_source: GO:0032169
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T02:34:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T02:35:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-ring parentage, a reviewed-label-only septin constituent,
+    GO evidence, a nonmechanistic prospore-ring topology graph, and boundary and component-grounding
+    discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0005940
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Prospore septin rings are assembled from fungal septin GTPases,
+    but no exact source-neutral InterPro, Pfam, or NCBIfam CURIE was assigned for
+    the complete prospore ring cohort.
+  role: Septin GTPases that assemble into the ring-shaped structure at the prospore
+    cytokinesis site.
+  evidence:
+  - reference: GO:0032169
+    notes: GO:0032169 defines the prospore septin ring as composed of septins and
+      septin-associated proteins.
+  - reference: GO:0005940
+    notes: GO:0005940 defines the broader septin ring as a septin- and septin-associated-protein
+      structure.
+evidence:
+- reference: GO:0032169
+  notes: Gene Ontology cellular-component term for the prospore septin ring.
+- reference: GO:0005940
+  notes: Gene Ontology cellular-component parent term for the septin ring.
+causal_graphs:
+- graph_id: prospore_septin_ring_topology
+  title: Prospore septin-ring topology
+  description: Septin proteins form a ring-shaped structure at the site of cytokinesis
+    in a prospore.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed composition and localization without asserting
+    an ordered assembly mechanism or septin-associated protein boundary at the prospore
+    cytokinesis site.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: prospore_septin_ring
+    label: prospore septin ring
+    node_type: STRUCTURE
+    grounding: GO:0032169
+  - node_id: prospore_cytokinesis_site
+    label: prospore cytokinesis site
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: prospore_septin_ring
+    description: Septin proteins are constituents of the prospore ring-shaped structure.
+    evidence:
+    - reference: GO:0032169
+      notes: GO:0032169 defines the prospore septin ring as composed of septins and
+        septin-associated proteins.
+  - subject: prospore_septin_ring
+    predicate: forms at
+    object: prospore_cytokinesis_site
+    description: The prospore septin ring forms at the site of cytokinesis in a prospore.
+    evidence:
+    - reference: GO:0032169
+      notes: GO:0032169 places the prospore septin ring at the site of cytokinesis
+        in a prospore.
+discussions:
+- discussion_id: prospore_septin_ring_boundary
+  prompt: Keep the prospore septin ring distinct from other localized fungal septin-ring
+    states.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032169 denotes the septin ring at the site of cytokinesis in a prospore.
+    GO:0032172 covers germ-tube future septation sites, GO:0032168 covers hyphal future
+    septation sites, GO:0032170 covers mother-cell/pseudohyphal-projection junctions,
+    and GO:0005940 denotes the broader septin ring class. This record models only
+    the prospore subtype.
+  resolution_note: Curated GO:0032169 as the exact structure identifier and used GO:0005940
+    only as the is-a parent.
+  evidence:
+  - reference: GO:0032169
+    notes: GO:0032169 identifies the prospore-localized septin ring.
+  - reference: GO:0032172
+    notes: GO:0032172 identifies the germ-tube-localized septin ring.
+  - reference: GO:0032168
+    notes: GO:0032168 identifies the hypha-localized septin ring.
+  - reference: GO:0032170
+    notes: GO:0032170 identifies the septin ring at a mother-cell/pseudohyphal-projection
+      junction.
+  - reference: GO:0005940
+    notes: GO:0005940 identifies the broader septin ring class.
+  posed_by: codex
+  posed_date: '2026-09-28'
+  resolved_date: '2026-09-28'
+- discussion_id: resolve_prospore_septin_ring_components
+  prompt: Resolve exact source-neutral family groundings and boundary status for prospore
+    septin-ring septins and septin-associated proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#septin_proteins
+  rationale: The first prospore septin-ring record keeps only the reviewed-label-only
+    septin protein cohort rather than guessing fungal-paralog family groundings or
+    adding septin-associated proteins before their exact constituent boundary has
+    been reviewed.
+  evidence:
+  - reference: GO:0032169
+    notes: GO:0032169 defines the prospore septin ring as composed of septins and
+      septin-associated proteins.
+  posed_by: codex
+  posed_date: '2026-09-28'

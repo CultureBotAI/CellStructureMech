@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+  slug: prospore_septin_ring
+session:
+  id: 2026-09-29T023617Z-codex-5d7913
+  timestamp: '2026-09-29T02:36:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add prospore septin ring
+  details: Created the GO:0032169 prospore septin ring record after live QuickGO verification
+    and hidden/ignored-inclusive duplicate searches. Added GO-backed septin-ring parentage,
+    a reviewed-label-only septin constituent, a nonmechanistic topology graph for the cytokinesis
+    site in a prospore, and boundary and component-grounding discussions while deliberately
+    leaving exact source-neutral septin and septin-associated-protein boundaries as an open
+    TODO.
