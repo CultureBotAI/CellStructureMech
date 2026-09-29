@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/radial_spoke_head.yaml
+  slug: radial_spoke_head
+session:
+  id: 2026-09-29T232818Z-codex-a410c1
+  timestamp: '2026-09-29T23:28:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added radial spoke head record
+  details: Created a GO:0001535 radial spoke head subcomplex record with protein-complex parentage,
+    radial-spoke parthood, a reviewed-label-only radial-spoke-head protein constituent, Chlamydomonas
+    radial-spoke structural evidence, a central-pair-facing function, a nonmechanistic topology
+    graph, and boundary and component-grounding discussions.
