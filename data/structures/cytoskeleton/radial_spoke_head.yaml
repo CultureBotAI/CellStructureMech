@@ -1,0 +1,182 @@
+identifier: GO:0001535
+label: radial spoke head
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Protein complex forming portion of the radial spoke that is orthogonal
+  to the elongated stalk and which projects towards the central pair of microtubules
+  within the ciliary or flagellum axoneme.
+definition_source: GO:0001535
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T23:26:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T23:27:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added protein-complex parentage, radial-spoke parthood, a reviewed-label-only
+    head-protein constituent, Chlamydomonas scope and canonical example, a central-pair-facing
+    function, GO/DOI evidence, a nonmechanistic topology graph, and boundary and component-grounding
+    discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0140513
+part_of:
+- GO:0001534
+components:
+- component_id: radial_spoke_head_proteins
+  label: radial spoke head proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The radial spoke head is a multisubunit axonemal subcomplex, but
+    no exact source-neutral CURIE was assigned for the complete radial-spoke-head
+    protein cohort.
+  role: Protein constituents of the globular radial-spoke head that projects toward
+    the axonemal central pair.
+  evidence:
+  - reference: GO:0001535
+    notes: GO:0001535 defines the radial spoke head as a protein complex forming the
+      radial-spoke portion that projects toward the central pair of axonemal microtubules.
+  - reference: DOI:10.1242/jcs.245233
+    notes: Poghosyan et al. 2020 refined the Chlamydomonas radial-spoke architecture
+      and assigned protein densities to the head region.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar axonemes carry radial spokes with globular head subcomplexes
+    resolved by cryo-EM.
+  reference: DOI:10.1242/jcs.245233
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose radial-spoke heads project toward the central pair
+    in 9+2 flagellar axonemes.
+  reference: DOI:10.1126/science.1128618
+functions:
+- function_id: radial_spoke_head_central_pair_coupling
+  label: radial spoke head central-pair coupling
+  description: The radial spoke head forms the central-pair-facing tip of the radial
+    spoke within the axonemal motility transducer apparatus.
+  evidence:
+  - reference: GO:0001535
+    notes: GO:0001535 defines the radial spoke head by its projection toward the axonemal
+      central pair.
+  - reference: DOI:10.1242/jcs.245233
+    notes: Poghosyan et al. 2020 describe the Chlamydomonas radial spoke as a complex
+      in the ciliary motility transducer apparatus and assign head-region proteins.
+evidence:
+- reference: GO:0001535
+  notes: Gene Ontology cellular-component term for the radial spoke head.
+- reference: GO:0140513
+  notes: Gene Ontology parent term for protein-containing complexes.
+- reference: GO:0001534
+  notes: Gene Ontology cellular-component term for the containing radial spoke.
+- reference: DOI:10.1126/science.1128618
+  notes: Nicastro et al. 2006, 'The molecular architecture of axonemes revealed by
+    cryoelectron tomography', Science.
+- reference: DOI:10.1242/jcs.245233
+  notes: Poghosyan et al. 2020, 'The structure and symmetry of the radial spoke protein
+    complex in Chlamydomonas flagella', Journal of Cell Science.
+causal_graphs:
+- graph_id: radial_spoke_head_topology
+  title: Radial-spoke head topology
+  description: Radial-spoke-head proteins form the central-pair-facing head of the
+    axonemal radial spoke.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records radial-spoke-head parthood and orientation without
+    asserting individual RSP protein identities, copy numbers, or ordered assembly.
+  nodes:
+  - node_id: radial_spoke_head_proteins
+    label: radial spoke head proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: radial_spoke_head_proteins
+  - node_id: radial_spoke_head
+    label: radial spoke head
+    node_type: STRUCTURE
+    grounding: GO:0001535
+  - node_id: radial_spoke
+    label: radial spoke
+    node_type: STRUCTURE
+    grounding: GO:0001534
+  - node_id: axonemal_central_pair
+    label: axonemal central pair
+    node_type: STRUCTURE
+    grounding: GO:0097540
+  edges:
+  - subject: radial_spoke_head_proteins
+    predicate: contributes to
+    object: radial_spoke_head
+    description: Radial-spoke-head proteins are constituents of the globular radial-spoke
+      head subcomplex.
+    evidence:
+    - reference: GO:0001535
+      notes: GO:0001535 identifies the radial spoke head as a protein complex.
+  - subject: radial_spoke_head
+    predicate: is part of
+    object: radial_spoke
+    description: The radial spoke head is part of the radial spoke.
+    evidence:
+    - reference: GO:0001535
+      notes: GO:0001535 places the radial spoke head as part of the radial spoke.
+  - subject: radial_spoke_head
+    predicate: projects toward
+    object: axonemal_central_pair
+    description: The radial spoke head projects toward the central pair of the 9+2
+      axoneme.
+    evidence:
+    - reference: GO:0001535
+      notes: GO:0001535 defines the radial spoke head as projecting toward the axonemal
+        central pair.
+    - reference: DOI:10.1126/science.1128618
+      notes: Nicastro et al. 2006 visualized radial spokes in Chlamydomonas 9+2 axonemes.
+discussions:
+- discussion_id: radial_spoke_head_boundary
+  prompt: Keep the radial spoke head distinct from the whole radial spoke and adjacent
+    neck and stalk subcomplexes.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0001535 denotes the terminal protein-complex portion of the radial
+    spoke that projects toward the central pair, GO:0001534 denotes the complete radial
+    spoke, GO:0120343 denotes the radial spoke neck, and GO:0001536 denotes the radial
+    spoke stalk.
+  resolution_note: Curated GO:0001535 as the exact head subcomplex and used GO:0001534
+    for whole-radial-spoke parthood.
+  evidence:
+  - reference: GO:0001535
+    notes: GO:0001535 identifies the radial spoke head subcomplex.
+  - reference: GO:0001534
+    notes: GO:0001534 identifies the complete radial spoke.
+  - reference: GO:0120343
+    notes: GO:0120343 identifies the radial spoke neck.
+  - reference: GO:0001536
+    notes: GO:0001536 identifies the radial spoke stalk.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_radial_spoke_head_proteins
+  prompt: Resolve exact source-neutral groundings and copy numbers for Chlamydomonas
+    radial-spoke-head RSP proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#radial_spoke_head_proteins
+  rationale: Poghosyan et al. 2020 assigned individual Chlamydomonas RSP densities
+    to the head region, but this first child-subcomplex record keeps a reviewed-label-only
+    aggregate instead of guessing exact InterPro, Pfam, NCBIfam, or UniProtKB groundings
+    and cross-species boundaries.
+  evidence:
+  - reference: DOI:10.1242/jcs.245233
+    notes: Poghosyan et al. 2020 assigned radial-spoke proteins to the Chlamydomonas
+      radial-spoke head, neck, and stalk regions.
+  posed_by: codex
+  posed_date: '2026-09-29'
