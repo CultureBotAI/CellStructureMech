@@ -19,6 +19,13 @@ curation_history:
     scope, GO and literature evidence, a nonmechanistic mitotic central-plaque topology
     graph, and boundary/component discussions.
   llm_assisted: true
+- timestamp: '2026-09-29T16:41:52Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1789 review issue #1790 by citing GO:0061497 and GO:0061499
+    as exact mitotic sibling plaque terms in the GO:0061493 record evidence and boundary
+    discussion.'
+  llm_assisted: true
 parent_structures:
 - GO:0005823
 part_of:
@@ -46,6 +53,12 @@ evidence:
 - reference: GO:0044732
   notes: Gene Ontology cellular-component term for the mitotic spindle pole body that
     includes GO:0061493 by parthood.
+- reference: GO:0061497
+  notes: Gene Ontology cellular-component sibling term for the inner plaque of the
+    mitotic spindle pole body.
+- reference: GO:0061499
+  notes: Gene Ontology cellular-component sibling term for the outer plaque of the
+    mitotic spindle pole body.
 - reference: GO:0005635
   notes: Gene Ontology cellular-component term for the nuclear envelope in which the
     SPB central plaque is embedded.
@@ -140,6 +153,12 @@ discussions:
       spindle pole body.
   - reference: GO:0044732
     notes: GO:0044732 identifies the mitotic spindle pole body.
+  - reference: GO:0061497
+    notes: GO:0061497 identifies the nuclear inner plaque of the mitotic spindle pole
+      body as distinct from the central plaque.
+  - reference: GO:0061499
+    notes: GO:0061499 identifies the cytoplasmic outer plaque of the mitotic spindle
+      pole body as distinct from the central plaque.
   - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
     notes: Jaspersen and Winey 2004 reviewed the layered budding-yeast mitotic SPB.
   posed_by: codex
