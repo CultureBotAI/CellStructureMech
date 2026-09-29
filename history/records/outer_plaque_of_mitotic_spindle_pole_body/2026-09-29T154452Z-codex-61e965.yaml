@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+  slug: outer_plaque_of_mitotic_spindle_pole_body
+session:
+  id: 2026-09-29T154452Z-codex-61e965
+  timestamp: '2026-09-29T15:44:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added outer plaque of mitotic spindle pole body record
+  details: Created the GO:0061499 outer plaque of mitotic spindle pole body record with GO-backed
+    outer-plaque parentage and mitotic-SPB parthood, Saccharomyces cerevisiae scope, GO and
+    DOI evidence, a nonmechanistic mitotic outer-plaque topology graph, and discussions capturing
+    the mitotic and meiotic boundary and deferred component groundings.
