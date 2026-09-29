@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+  slug: cytoplasmic_microtubule
+session:
+  id: 2026-09-29T130328Z-codex-8dc5f1
+  timestamp: '2026-09-29T13:03:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added cytoplasmic microtubule record
+  details: Created the GO:0005881 cytoplasmic microtubule record with microtubule parentage,
+    microtubule-cytoskeleton parthood, the GO narrow synonym, Saccharomyces cerevisiae scope,
+    GO and DOI evidence, a nonmechanistic SPB outer-plaque organization graph, and discussions
+    capturing the cytoplasmic microtubule boundary and deferred associated-protein groundings.
