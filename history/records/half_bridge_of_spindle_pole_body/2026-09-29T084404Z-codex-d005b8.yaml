@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/half_bridge_of_spindle_pole_body.yaml
+  slug: half_bridge_of_spindle_pole_body
+session:
+  id: 2026-09-29T084404Z-codex-d005b8
+  timestamp: '2026-09-29T08:44:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added half bridge of spindle pole body record
+  details: Created the GO:0005825 half bridge of spindle pole body record with spindle-pole-body
+    parthood, Saccharomyces cerevisiae scope, GO and DOI evidence, a half-bridge duplication-site
+    topology graph, and discussions capturing plaque-boundary and component-grounding follow-up
+    decisions.

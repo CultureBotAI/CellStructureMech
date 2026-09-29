@@ -1,0 +1,145 @@
+identifier: GO:0005825
+label: half bridge of spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Structure adjacent to the plaques of the spindle pole body.
+definition_source: GO:0005825
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T08:42:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T08:43:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added spindle-pole-body parthood, Saccharomyces scope, a duplication-site
+    function, GO and literature evidence, a nonmechanistic half-bridge topology graph,
+    and plaque-boundary discussions.
+  llm_assisted: true
+part_of:
+- GO:0005816
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is a characterized fungal model in which SPB duplication starts
+    at a half-bridge adjacent to the existing spindle pole body.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast reference system in which the layered SPB and its half-bridge-associated
+    duplication pathway have been characterized.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+functions:
+- function_id: spindle_pole_body_duplication_site
+  label: spindle pole body duplication site
+  description: The half-bridge next to an existing budding-yeast SPB provides the
+    site where new SPB assembly begins.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the half-bridge-associated pathway for
+      budding-yeast SPB duplication.
+evidence:
+- reference: GO:0005825
+  notes: Gene Ontology cellular-component term for the half bridge of the spindle
+    pole body.
+- reference: GO:0005816
+  notes: Gene Ontology cellular-component term for the spindle pole body that includes
+    the half bridge.
+- reference: GO:0005822
+  notes: Gene Ontology cellular-component term for the inner plaque of the spindle
+    pole body.
+- reference: GO:0005823
+  notes: Gene Ontology cellular-component term for the central plaque of the spindle
+    pole body.
+- reference: GO:0005824
+  notes: Gene Ontology cellular-component term for the outer plaque of the spindle
+    pole body.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+causal_graphs:
+- graph_id: half_bridge_duplication_site
+  title: Half-bridge site for new spindle pole body assembly
+  description: The half bridge is adjacent to the SPB plaques and marks where a new
+    budding-yeast spindle pole body begins to assemble.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed half-bridge parthood and the localization
+    of new SPB assembly without asserting the ordered bridge-component pathway.
+  nodes:
+  - node_id: half_bridge
+    label: half bridge of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005825
+  - node_id: spindle_pole_body
+    label: spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005816
+  - node_id: new_spindle_pole_body
+    label: new spindle pole body
+    node_type: ORGANELLE
+  edges:
+  - subject: half_bridge
+    predicate: is part of
+    object: spindle_pole_body
+    description: The half bridge is a structure adjacent to the SPB plaques and forms
+      part of the spindle pole body.
+    evidence:
+    - reference: GO:0005825
+      notes: GO:0005825 defines the half bridge as a structure adjacent to the plaques
+        of the spindle pole body.
+  - subject: half_bridge
+    predicate: templates assembly of
+    object: new_spindle_pole_body
+    description: Budding-yeast SPB duplication starts at the half-bridge next to the
+      existing SPB.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the half-bridge-associated pathway
+        for SPB duplication.
+discussions:
+- discussion_id: half_bridge_boundary
+  prompt: Keep the spindle-pole-body half bridge distinct from the inner, central,
+    and outer plaques.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0005825 denotes the half bridge adjacent to SPB plaques, while GO:0005822,
+    GO:0005823, and GO:0005824 denote the nuclear inner, central, and cytoplasmic
+    outer plaques.
+  resolution_note: Curated GO:0005825 as the general SPB half bridge and linked it
+    by parthood to GO:0005816.
+  evidence:
+  - reference: GO:0005825
+    notes: GO:0005825 identifies the half bridge of the spindle pole body.
+  - reference: GO:0005822
+    notes: GO:0005822 identifies the nuclear inner plaque of the spindle pole body
+      as distinct from the half bridge.
+  - reference: GO:0005823
+    notes: GO:0005823 identifies the central plaque of the spindle pole body as distinct
+      from the half bridge.
+  - reference: GO:0005824
+    notes: GO:0005824 identifies the cytoplasmic outer plaque of the spindle pole
+      body as distinct from the half bridge.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_half_bridge_components
+  prompt: Resolve exact source-neutral family groundings for half-bridge constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The first GO-backed half-bridge record captures the duplication-site
+    substructure without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal
+    groundings for the budding-yeast half-bridge proteins.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'
