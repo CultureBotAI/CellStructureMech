@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spindle_pole_body_duplication_plaque.yaml
+  slug: spindle_pole_body_duplication_plaque
+session:
+  id: 2026-09-29T115114Z-codex-4bd6ba
+  timestamp: '2026-09-29T11:51:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1781
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1780
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed SPB duplication plaque precursor evidence review
+  details: 'Resolved PR #1780 review issue #1781 by tightening the spindle pole body duplication
+    plaque graph edge evidence so the duplication-plaque-as-precursor claim is backed by notes
+    that mention the duplication plaque intermediate directly.'

@@ -1,0 +1,163 @@
+identifier: cellstructuremech:spindle_pole_body_duplication_plaque
+label: spindle pole body duplication plaque
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A transient cytoplasmic plaque intermediate formed after spindle pole
+  body satellite expansion during daughter spindle pole body assembly in budding yeast.
+definition_source: DOI:10.1146/annurev.cellbio.20.022003.114106
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T11:35:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T11:35:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added SPB duplication plaque synonymy, protein-containing-complex parentage,
+    Saccharomyces scope, a daughter-SPB plaque-intermediate function, GO and literature
+    evidence, a nonmechanistic duplication-plaque transition graph, and boundary/component
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-09-29T11:50:45Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1780 review issue #1781 by tightening the SPB duplication
+    plaque precursor edge evidence to mention the duplication plaque intermediate
+    directly.'
+  llm_assisted: true
+synonyms:
+- synonym_text: SPB duplication plaque
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1146/annurev.cellbio.20.022003.114106
+parent_structures:
+- GO:0032991
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the characterized model in which satellite expansion forms
+    a duplication plaque during daughter SPB assembly.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast reference system for the SPB duplication plaque that follows
+    the satellite intermediate in daughter SPB assembly.
+  reference: DOI:10.1083/jcb.145.4.809
+functions:
+- function_id: daughter_spindle_pole_body_plaque_intermediate
+  label: daughter spindle pole body plaque intermediate
+  description: The duplication plaque is an intermediate plaque in the transition
+    from the SPB satellite to an inserted daughter spindle pole body.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed budding-yeast SPB duplication as a pathway
+      in which the satellite expands to a duplication plaque before the daughter SPB
+      forms.
+evidence:
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component term for protein-containing complex, used
+    as the broader parent because GO does not provide an exact SPB duplication plaque
+    term.
+- reference: GO:0005816
+  notes: Gene Ontology cellular-component term for the mature spindle pole body produced
+    after the budding-yeast duplication plaque stage.
+- reference: cellstructuremech:spindle_pole_body_satellite
+  notes: CellStructureMech record for the satellite precursor that expands into the
+    duplication plaque.
+- reference: DOI:10.1083/jcb.145.4.809
+  notes: Adams and Kilmartin 1999, Localization of core spindle pole body components
+    during spindle pole body duplication in Saccharomyces cerevisiae, Journal of Cell
+    Biology.
+- reference: DOI:10.1534/genetics.111.128710
+  notes: Winey and Bloom 2012, Mitotic spindle form and function, Genetics.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+causal_graphs:
+- graph_id: spb_duplication_plaque_transition
+  title: Duplication plaque transition during daughter SPB assembly
+  description: During budding-yeast SPB duplication, the satellite expands into a
+    duplication plaque before an inserted daughter SPB forms.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the duplication plaque as an SPB duplication intermediate
+    without asserting the ordered recruitment of individual plaque constituents.
+  nodes:
+  - node_id: spb_satellite
+    label: spindle pole body satellite
+    node_type: STRUCTURE
+    grounding: cellstructuremech:spindle_pole_body_satellite
+  - node_id: duplication_plaque
+    label: spindle pole body duplication plaque
+    node_type: STRUCTURE
+    grounding: cellstructuremech:spindle_pole_body_duplication_plaque
+  - node_id: daughter_spindle_pole_body
+    label: daughter spindle pole body
+    node_type: ORGANELLE
+  edges:
+  - subject: spb_satellite
+    predicate: matures into
+    object: duplication_plaque
+    description: The SPB satellite expands into a duplication plaque during daughter
+      spindle pole body assembly.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed expansion of the budding-yeast satellite
+        into the duplication plaque.
+  - subject: duplication_plaque
+    predicate: is precursor of
+    object: daughter_spindle_pole_body
+    description: The duplication plaque is a transient plaque intermediate before
+      completion of the daughter SPB.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the budding-yeast duplication plaque
+        as the cytoplasmic plaque intermediate formed after satellite expansion and
+        before completion of the daughter SPB.
+    - reference: DOI:10.1083/jcb.145.4.809
+      notes: Adams and Kilmartin 1999 localized core budding-yeast SPB components
+        through the daughter plaque intermediate stages of SPB duplication.
+discussions:
+- discussion_id: spb_duplication_plaque_boundary
+  prompt: Keep the SPB duplication plaque distinct from the preceding satellite and
+    the mature daughter spindle pole body.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - causal_graphs#spb_duplication_plaque_transition
+  rationale: The duplication plaque is modeled as the transient plaque produced after
+    satellite expansion, not as an exact synonym of the earlier SPB satellite or the
+    final GO:0005816 spindle pole body.
+  resolution_note: Minted a CellStructureMech identifier for the duplication plaque
+    and connected it between the local satellite record and the daughter SPB in a
+    nonmechanistic assembly graph.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the budding-yeast satellite, duplication
+      plaque, and mature daughter SPB as consecutive duplication states.
+  - reference: DOI:10.1083/jcb.145.4.809
+    notes: Adams and Kilmartin 1999 localized SPB components during budding-yeast
+      daughter plaque assembly.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_spb_duplication_plaque_components
+  prompt: Resolve exact source-neutral family groundings for SPB duplication plaque
+    constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The first SPB duplication plaque record captures the transient intermediate
+    without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal groundings for
+    budding-yeast plaque constituents.
+  evidence:
+  - reference: DOI:10.1083/jcb.145.4.809
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'
