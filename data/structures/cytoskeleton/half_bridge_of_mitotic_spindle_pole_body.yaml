@@ -1,0 +1,151 @@
+identifier: GO:0061496
+label: half bridge of mitotic spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Structure adjacent to the plaques of the mitotic spindle pole body.
+definition_source: GO:0061496
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T09:14:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T09:15:11Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO-backed half-bridge parentage and mitotic-SPB parthood, Saccharomyces
+    scope, a mitotic duplication-site function, GO and literature evidence, a nonmechanistic
+    mitotic half-bridge topology graph, and boundary/component discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0005825
+part_of:
+- GO:0044732
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is a characterized fungal model in which mitotic SPB duplication
+    begins at the half-bridge next to the existing spindle pole body.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast reference system in which half-bridge-linked SPB duplication
+    has been characterized through the mitotic cell cycle.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+functions:
+- function_id: mitotic_spindle_pole_body_duplication_site
+  label: mitotic spindle pole body duplication site
+  description: The mitotic half-bridge next to an existing budding-yeast SPB provides
+    the site where daughter SPB assembly begins.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed budding-yeast SPB duplication during
+      mitotic cell-cycle entry as a half-bridge-associated pathway.
+evidence:
+- reference: GO:0061496
+  notes: Gene Ontology cellular-component term for the half bridge of the mitotic
+    spindle pole body.
+- reference: GO:0005825
+  notes: Gene Ontology parent term for the general half bridge of the spindle pole
+    body.
+- reference: GO:0044732
+  notes: Gene Ontology cellular-component term for the mitotic spindle pole body that
+    includes GO:0061496 by parthood.
+- reference: GO:0005816
+  notes: Gene Ontology cellular-component term for the broader spindle pole body.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+causal_graphs:
+- graph_id: mitotic_half_bridge_duplication_site
+  title: Mitotic half-bridge site for daughter spindle pole body assembly
+  description: The mitotic half bridge is a specialized spindle-pole-body half bridge
+    that marks where a daughter SPB begins to assemble in budding yeast.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed specialization and parthood for the mitotic
+    half-bridge term and its local assembly-site role without asserting ordered component
+    recruitment.
+  nodes:
+  - node_id: mitotic_half_bridge
+    label: half bridge of mitotic spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0061496
+  - node_id: half_bridge
+    label: half bridge of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005825
+  - node_id: mitotic_spindle_pole_body
+    label: mitotic spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0044732
+  - node_id: daughter_spindle_pole_body
+    label: daughter spindle pole body
+    node_type: ORGANELLE
+  edges:
+  - subject: mitotic_half_bridge
+    predicate: is a
+    object: half_bridge
+    description: The mitotic SPB half bridge is the mitosis-specific subtype of the
+      general SPB half-bridge structure.
+    evidence:
+    - reference: GO:0061496
+      notes: GO:0061496 is_a GO:0005825 in the Gene Ontology cellular-component hierarchy.
+  - subject: mitotic_half_bridge
+    predicate: is part of
+    object: mitotic_spindle_pole_body
+    description: The mitotic half bridge is adjacent to the plaques of the mitotic
+      spindle pole body.
+    evidence:
+    - reference: GO:0061496
+      notes: GO:0061496 is defined as adjacent to the plaques of the mitotic spindle
+        pole body.
+  - subject: mitotic_half_bridge
+    predicate: templates assembly of
+    object: daughter_spindle_pole_body
+    description: Budding-yeast mitotic SPB duplication begins at the half-bridge next
+      to the existing SPB.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the half-bridge-associated pathway
+        for budding-yeast SPB duplication.
+discussions:
+- discussion_id: mitotic_half_bridge_boundary
+  prompt: Keep the mitotic SPB half bridge narrower than the general SPB half bridge.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  rationale: GO:0061496 denotes the half bridge of the mitotic spindle pole body,
+    is narrower than GO:0005825, and is part of the GO:0044732 mitotic spindle pole
+    body.
+  resolution_note: Curated GO:0061496 as the mitosis-specific SPB half bridge, with
+    is-a and part-of links to the corresponding GO terms.
+  evidence:
+  - reference: GO:0061496
+    notes: GO:0061496 identifies the half bridge of the mitotic spindle pole body.
+  - reference: GO:0005825
+    notes: GO:0005825 identifies the general half bridge of the spindle pole body.
+  - reference: GO:0044732
+    notes: GO:0044732 identifies the mitotic spindle pole body.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_mitotic_half_bridge_components
+  prompt: Resolve exact source-neutral family groundings for mitotic half-bridge constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The first GO-backed mitotic half-bridge record captures the cell-cycle-specific
+    substructure without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal
+    groundings for its budding-yeast protein constituents.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'
