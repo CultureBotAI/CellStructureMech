@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/inner_plaque_of_spindle_pole_body.yaml
+  slug: inner_plaque_of_spindle_pole_body
+session:
+  id: 2026-09-29T081746Z-codex-ec939f
+  timestamp: '2026-09-29T08:17:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added inner plaque of spindle pole body record
+  details: Created the GO:0005822 inner plaque of spindle pole body record with spindle-pole-body
+    parthood, Saccharomyces cerevisiae scope, GO and DOI evidence, a nuclear-microtubule topology
+    graph, and discussions capturing plaque-boundary and component-grounding follow-up decisions.

@@ -1,0 +1,146 @@
+identifier: GO:0005822
+label: inner plaque of spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: One of three laminate structures that form the spindle pole body; the
+  inner plaque is in the nucleus.
+definition_source: GO:0005822
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T08:16:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T08:17:03Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added spindle-pole-body parthood, Saccharomyces scope, nuclear microtubule-organization
+    function, GO and literature evidence, a nonmechanistic topology graph, and plaque-boundary
+    discussions.
+  llm_assisted: true
+part_of:
+- GO:0005816
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is a characterized fungal model for the nuclear inner plaque
+    of the spindle pole body.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast reference system in which the layered SPB and its nuclear inner
+    plaque have been characterized.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+functions:
+- function_id: nuclear_microtubule_organization
+  label: nuclear microtubule organization
+  description: The inner plaque is the nuclear face of the budding-yeast SPB that
+    organizes nuclear microtubule nucleation.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the budding-yeast SPB inner plaque as
+      the nuclear site for microtubule nucleation.
+evidence:
+- reference: GO:0005822
+  notes: Gene Ontology cellular-component term for the inner plaque of the spindle
+    pole body.
+- reference: GO:0005816
+  notes: Gene Ontology cellular-component term for the spindle pole body that includes
+    the inner plaque.
+- reference: GO:0005880
+  notes: Gene Ontology cellular-component term for nuclear microtubule, the structure
+    organized by the inner plaque in the topology graph.
+- reference: GO:0005823
+  notes: Gene Ontology cellular-component term for the central plaque of the spindle
+    pole body.
+- reference: GO:0005824
+  notes: Gene Ontology cellular-component term for the outer plaque of the spindle
+    pole body.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+causal_graphs:
+- graph_id: inner_plaque_topology
+  title: Inner-plaque topology in the spindle pole body
+  description: The inner plaque is the nuclear laminate of the budding-yeast spindle
+    pole body and organizes nuclear microtubule nucleation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed SPB parthood and the nuclear microtubule-organizing
+    site without asserting the exact ordered assembly pathway or full inner-plaque
+    component boundary.
+  nodes:
+  - node_id: inner_plaque
+    label: inner plaque of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005822
+  - node_id: spindle_pole_body
+    label: spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005816
+  - node_id: nuclear_microtubule
+    label: nuclear microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005880
+  edges:
+  - subject: inner_plaque
+    predicate: is part of
+    object: spindle_pole_body
+    description: The inner plaque is a nuclear laminate structure that forms part
+      of the spindle pole body.
+    evidence:
+    - reference: GO:0005822
+      notes: GO:0005822 defines the inner plaque as one of the laminate structures
+        that form the spindle pole body.
+  - subject: inner_plaque
+    predicate: organizes
+    object: nuclear_microtubule
+    description: The SPB inner plaque faces the nucleus and organizes nuclear microtubule
+      nucleation in budding yeast.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the budding-yeast SPB inner plaque
+        as the nuclear site for microtubule nucleation.
+discussions:
+- discussion_id: inner_plaque_boundary
+  prompt: Keep the spindle-pole-body inner plaque distinct from the central and outer
+    plaques.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0005822 denotes a nuclear laminate structure of the spindle pole body,
+    while GO:0005823 denotes the nuclear-envelope-embedded central plaque and GO:0005824
+    denotes the cytoplasmic outer plaque.
+  resolution_note: Curated GO:0005822 as the general SPB inner plaque and linked it
+    by parthood to GO:0005816.
+  evidence:
+  - reference: GO:0005822
+    notes: GO:0005822 identifies the nuclear inner plaque of the spindle pole body.
+  - reference: GO:0005823
+    notes: GO:0005823 identifies the central plaque of the spindle pole body as distinct
+      from the inner plaque.
+  - reference: GO:0005824
+    notes: GO:0005824 identifies the cytoplasmic outer plaque of the spindle pole
+      body as distinct from the inner plaque.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_inner_plaque_components
+  prompt: Resolve exact source-neutral family groundings for inner-plaque constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The first GO-backed inner-plaque record captures the lamina as a named
+    SPB substructure without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal
+    groundings for the budding-yeast plaque proteins and associated gamma-tubulin
+    complexes.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'
