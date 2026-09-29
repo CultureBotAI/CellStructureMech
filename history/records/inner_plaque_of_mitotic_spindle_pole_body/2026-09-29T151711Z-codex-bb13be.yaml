@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/inner_plaque_of_mitotic_spindle_pole_body.yaml
+  slug: inner_plaque_of_mitotic_spindle_pole_body
+session:
+  id: 2026-09-29T151711Z-codex-bb13be
+  timestamp: '2026-09-29T15:17:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added inner plaque of mitotic spindle pole body record
+  details: Created the GO:0061497 inner plaque of mitotic spindle pole body record with GO-backed
+    inner-plaque parentage and mitotic-SPB parthood, Saccharomyces cerevisiae scope, GO and
+    DOI evidence, a nonmechanistic mitotic inner-plaque topology graph, and discussions capturing
+    the mitotic boundary and deferred component groundings.
