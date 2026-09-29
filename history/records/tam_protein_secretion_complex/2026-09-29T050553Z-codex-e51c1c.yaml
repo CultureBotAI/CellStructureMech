@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/tam_protein_secretion_complex.yaml
+  slug: tam_protein_secretion_complex
+session:
+  id: 2026-09-29T050553Z-codex-e51c1c
+  timestamp: '2026-09-29T05:05:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1763
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1762
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - evidence
+  summary: Address TAM abstract evidence review
+  details: 'Resolved #1763 for PR #1762 by bounding the Selkrig et al. 2012 PMID-backed TamA/TamB
+    evidence notes to the public PubMed/Europe PMC abstract and reserving the DOI note for
+    NCBI/Europe PMC metadata equivalence with the GO:0097347 definition PMID.'
