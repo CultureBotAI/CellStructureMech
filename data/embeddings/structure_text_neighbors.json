@@ -1382,6 +1382,11 @@
           "cosine_similarity": 0.81972396
         },
         {
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.79696101
+        },
+        {
           "identifier": "GO:1990819",
           "label": "mating projection actin fusion focus",
           "cosine_similarity": 0.79074028
@@ -1395,11 +1400,6 @@
           "identifier": "GO:0005938",
           "label": "cell cortex",
           "cosine_similarity": 0.76180847
-        },
-        {
-          "identifier": "GO:0000142",
-          "label": "cellular bud neck contractile ring",
-          "cosine_similarity": 0.75796995
         }
       ]
     },
@@ -1407,6 +1407,11 @@
       "identifier": "GO:0005826",
       "label": "actomyosin contractile ring",
       "neighbors": [
+        {
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.95532452
+        },
         {
           "identifier": "GO:0032157",
           "label": "prospore contractile ring",
@@ -1426,11 +1431,6 @@
           "identifier": "cellstructuremech:mamk_filament",
           "label": "MamK filament",
           "cosine_similarity": 0.78370473
-        },
-        {
-          "identifier": "GO:1990819",
-          "label": "mating projection actin fusion focus",
-          "cosine_similarity": 0.7691493
         }
       ]
     },
@@ -2126,6 +2126,11 @@
           "cosine_similarity": 0.88296725
         },
         {
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.86741735
+        },
+        {
           "identifier": "GO:0000144",
           "label": "cellular bud neck septin ring",
           "cosine_similarity": 0.85566394
@@ -2139,11 +2144,6 @@
           "identifier": "GO:0032174",
           "label": "cellular bud neck septin collar",
           "cosine_similarity": 0.83265482
-        },
-        {
-          "identifier": "GO:0005940",
-          "label": "septin ring",
-          "cosine_similarity": 0.79398302
         }
       ]
     },
@@ -3009,9 +3009,9 @@
           "cosine_similarity": 0.78370473
         },
         {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.77197937
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.77915265
         }
       ]
     },
@@ -3030,6 +3030,11 @@
           "cosine_similarity": 0.7691493
         },
         {
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.75021331
+        },
+        {
           "identifier": "GO:0043332",
           "label": "mating projection tip",
           "cosine_similarity": 0.73365781
@@ -3038,11 +3043,6 @@
           "identifier": "GO:0032157",
           "label": "prospore contractile ring",
           "cosine_similarity": 0.73321617
-        },
-        {
-          "identifier": "cellstructuremech:mamk_filament",
-          "label": "MamK filament",
-          "cosine_similarity": 0.72470388
         }
       ]
     },
@@ -3260,6 +3260,37 @@
           "identifier": "GO:0097596",
           "label": "ventral disc supernumerary microtubule array",
           "cosine_similarity": 0.87263058
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0110085",
+      "label": "mitotic actomyosin contractile ring",
+      "neighbors": [
+        {
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.95532452
+        },
+        {
+          "identifier": "GO:0032157",
+          "label": "prospore contractile ring",
+          "cosine_similarity": 0.89630868
+        },
+        {
+          "identifier": "GO:0000142",
+          "label": "cellular bud neck contractile ring",
+          "cosine_similarity": 0.86741735
+        },
+        {
+          "identifier": "GO:0030479",
+          "label": "actin cortical patch",
+          "cosine_similarity": 0.79696101
+        },
+        {
+          "identifier": "cellstructuremech:mamk_filament",
+          "label": "MamK filament",
+          "cosine_similarity": 0.77915265
         }
       ]
     },
@@ -3676,6 +3707,11 @@
           "cosine_similarity": 0.92973094
         },
         {
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.89630868
+        },
+        {
           "identifier": "GO:0000142",
           "label": "cellular bud neck contractile ring",
           "cosine_similarity": 0.85403718
@@ -3689,11 +3725,6 @@
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
           "cosine_similarity": 0.77772237
-        },
-        {
-          "identifier": "cellstructuremech:mamk_filament",
-          "label": "MamK filament",
-          "cosine_similarity": 0.75695941
         }
       ]
     },

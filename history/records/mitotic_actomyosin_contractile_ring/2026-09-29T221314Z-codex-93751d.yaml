@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+  slug: mitotic_actomyosin_contractile_ring
+session:
+  id: 2026-09-29T221314Z-codex-93751d
+  timestamp: '2026-09-29T22:13:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added mitotic actomyosin contractile ring record
+  details: Created a GO:0110085 mitotic actomyosin contractile ring structure with GO-backed
+    definition and parentage, reviewed-label-only actin and myosin constituents, fission-yeast
+    distribution and canonical example evidence, a cytokinesis function, a nonmechanistic
+    assembly topology graph, and boundary discussions that keep the mitotic class distinct
+    from generic, bud-neck, and meiotic actomyosin contractile rings.

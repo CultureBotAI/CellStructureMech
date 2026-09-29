@@ -1,0 +1,210 @@
+identifier: GO:0110085
+label: mitotic actomyosin contractile ring
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A cytoskeletal structure composed of actin filaments, myosin, and myosin-associated
+  proteins that forms beneath the plasma membrane of many cells, including animal
+  cells and yeast cells, in a plane perpendicular to the axis of the mitotic spindle,
+  i.e. the cell division plane. Ring contraction is associated with centripetal growth
+  of the membrane that divides the cytoplasm of the two future daughter cells. In
+  animal cells, the mitotic contractile ring is located inside the plasma membrane
+  at the location of the cleavage furrow. In budding fungal cells, e.g. mitotic S.
+  cerevisiae cells, the mitotic contractile ring forms beneath the plasma membrane
+  at the mother-bud neck before mitosis.
+definition_source: GO:0110085
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T22:10:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T22:11:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added actomyosin-ring parentage, reviewed-label-only actin and myosin constituents,
+    fission-yeast mitotic distribution and canonical example evidence, a cytokinesis
+    function, GO/DOI evidence, a nonmechanistic actomyosin-ring topology graph, and
+    boundary and component-grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-29T22:12:26Z'
+  curator: codex
+  action: REFINED_RECORD
+  changes: Tightened the boundary resolution note so GO:0110086 is described only
+    as a meiotic sibling class rather than as an existing exact record.
+  llm_assisted: true
+parent_structures:
+- GO:0005826
+components:
+- component_id: actin_filaments
+  label: actin filaments
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - act1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Mitotic actomyosin rings contain polymerized actin, but this first
+    subtype record keeps actin filaments reviewed-label-only until an exact source-neutral
+    CURIE for the complete mitotic ring actin cohort is verified.
+  role: Filamentous actin constituent of the mitotic cytokinetic contractile ring.
+  evidence:
+  - reference: GO:0110085
+    notes: GO:0110085 defines the mitotic actomyosin contractile ring as composed
+      of actin filaments, myosin, and myosin-associated proteins.
+  - reference: DOI:10.1083/jcb.200602032
+    notes: Wu and Pollard 2006 tracked fission-yeast actin-dependent coalescence of
+      cortical cytokinesis nodes into a compact contractile ring.
+- component_id: myosin_proteins
+  label: myosin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - myo2
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0110085 defines the ring at the broad myosin level; no exact
+    source-neutral InterPro, Pfam, NCBIfam, or UniProtKB CURIE was assigned for the
+    full mitotic actomyosin-ring myosin cohort.
+  role: Myosin constituent of the mitotic actomyosin ring that forms at the cytokinetic
+    division plane.
+  evidence:
+  - reference: GO:0110085
+    notes: GO:0110085 defines the mitotic actomyosin contractile ring as composed
+      of actin filaments, myosin, and myosin-associated proteins.
+  - reference: DOI:10.1083/jcb.200602032
+    notes: Wu and Pollard 2006 observed Myo2-containing fission-yeast cytokinesis
+      nodes mature and coalesce into the compact contractile ring.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast assembles a compact actomyosin contractile ring from cytokinesis
+    nodes during mitotic cytokinesis.
+  reference: DOI:10.1083/jcb.200602032
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Fission-yeast mitotic model in which Myo2-containing cytokinesis nodes and
+    actin coalesce into the contractile ring.
+  reference: DOI:10.1083/jcb.200602032
+functions:
+- function_id: mitotic_actomyosin_cytokinesis
+  label: mitotic actomyosin cytokinesis
+  description: The mitotic actomyosin contractile ring assembles at the division plane
+    and supports cytokinetic ring constriction.
+  evidence:
+  - reference: GO:0110085
+    notes: GO:0110085 defines the ring by its mitotic cytokinesis location and association
+      with division-plane membrane ingrowth.
+  - reference: DOI:10.1083/jcb.200602032
+    notes: Wu and Pollard 2006 characterized fission-yeast contractile-ring assembly
+      during cytokinesis.
+evidence:
+- reference: GO:0110085
+  notes: Gene Ontology cellular-component term for the mitotic actomyosin contractile
+    ring.
+- reference: GO:0005826
+  notes: Gene Ontology cellular-component parent for actomyosin contractile rings.
+- reference: GO:0000142
+  notes: Gene Ontology cellular-component child term for the localized cellular bud
+    neck contractile ring.
+- reference: GO:0110086
+  notes: Gene Ontology cellular-component sibling term for meiotic actomyosin contractile
+    rings.
+- reference: DOI:10.1083/jcb.200602032
+  notes: Wu and Pollard 2006, 'Assembly of the cytokinetic contractile ring from a
+    broad band of nodes in fission yeast', Journal of Cell Biology.
+causal_graphs:
+- graph_id: fission_yeast_mitotic_ring_topology
+  title: Fission-yeast mitotic actomyosin-ring topology
+  description: Actin filaments and myosin form the fission-yeast mitotic actomyosin
+    contractile ring.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records only core actomyosin membership of the mitotic ring
+    without asserting a full node-maturation pathway or the boundary of all myosin-associated
+    accessory proteins.
+  nodes:
+  - node_id: actin_filaments
+    label: actin filaments
+    node_type: GENE_OR_PROTEIN
+    component_ref: actin_filaments
+  - node_id: myosin_proteins
+    label: myosin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: myosin_proteins
+  - node_id: mitotic_actomyosin_contractile_ring
+    label: mitotic actomyosin contractile ring
+    node_type: STRUCTURE
+    grounding: GO:0110085
+  edges:
+  - subject: actin_filaments
+    predicate: contributes to
+    object: mitotic_actomyosin_contractile_ring
+    description: Actin filaments are constituents of the mitotic actomyosin contractile
+      ring.
+    evidence:
+    - reference: GO:0110085
+      notes: GO:0110085 defines the mitotic ring as an actin-containing cytoskeletal
+        structure.
+  - subject: myosin_proteins
+    predicate: contributes to
+    object: mitotic_actomyosin_contractile_ring
+    description: Myosin proteins are constituents of the mitotic actomyosin contractile
+      ring.
+    evidence:
+    - reference: GO:0110085
+      notes: GO:0110085 defines the mitotic ring as containing myosin.
+discussions:
+- discussion_id: mitotic_actomyosin_ring_boundary
+  prompt: Keep the mitotic actomyosin contractile ring distinct from the generic actomyosin
+    ring and from localized meiotic or bud-neck contractile rings.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0110085 denotes the mitotic subtype of the broader actomyosin contractile
+    ring class. GO:0000142 denotes the cellular bud neck child structure and GO:0110086
+    denotes the meiotic sibling class.
+  resolution_note: Curated GO:0110085 as the exact mitotic actomyosin ring, used GO:0005826
+    as the parent, left GO:0000142 modeled as a separate narrower record, and referenced
+    GO:0110086 only as the meiotic sibling class.
+  evidence:
+  - reference: GO:0110085
+    notes: GO:0110085 identifies the mitotic actomyosin contractile ring.
+  - reference: GO:0005826
+    notes: GO:0005826 identifies the broader actomyosin contractile ring.
+  - reference: GO:0000142
+    notes: GO:0000142 identifies the cellular bud neck contractile ring as a narrower
+      mitotic ring.
+  - reference: GO:0110086
+    notes: GO:0110086 identifies the parallel meiotic actomyosin contractile ring
+      class.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_mitotic_actomyosin_ring_components
+  prompt: Resolve exact source-neutral family groundings and myosin-associated protein
+    boundaries for the mitotic actomyosin contractile ring.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#actin_filaments
+  - components#myosin_proteins
+  rationale: GO:0110085 includes myosin-associated proteins in the ring definition
+    and fission-yeast mitotic rings include many node and actin-remodeling factors.
+    This first mitotic subtype record keeps only broad actin and myosin constituents
+    until accessory constituent versus associated-machinery boundaries are reviewed
+    explicitly.
+  evidence:
+  - reference: GO:0110085
+    notes: GO:0110085 names myosin-associated proteins in the mitotic actomyosin-ring
+      definition.
+  - reference: DOI:10.1083/jcb.200602032
+    notes: Wu and Pollard 2006 tracked fission-yeast node maturation with Myo2 and
+      multiple accessory factors during mitotic contractile-ring assembly.
+  posed_by: codex
+  posed_date: '2026-09-29'
