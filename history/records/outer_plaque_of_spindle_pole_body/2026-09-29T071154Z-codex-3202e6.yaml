@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/outer_plaque_of_spindle_pole_body.yaml
+  slug: outer_plaque_of_spindle_pole_body
+session:
+  id: 2026-09-29T071154Z-codex-3202e6
+  timestamp: '2026-09-29T07:11:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1769
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1768
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground outer plaque cytoplasmic microtubule graph node
+  details: 'Resolved PR #1768 review issue #1769 by grounding the cytoplasmic microtubule
+    graph node to GO:0005881, using GO canonical label cytoplasmic microtubule, and citing
+    the GO term as record evidence.'

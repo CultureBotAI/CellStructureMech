@@ -19,6 +19,12 @@ curation_history:
     function, GO and literature evidence, a nonmechanistic topology graph, and plaque-boundary
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-29T07:11:23Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1768 review issue #1769 by grounding the cytoplasmic microtubule
+    graph node to GO:0005881 and using GO''s canonical label.'
+  llm_assisted: true
 part_of:
 - GO:0005816
 taxonomic_distribution:
@@ -50,6 +56,9 @@ evidence:
 - reference: GO:0005816
   notes: Gene Ontology cellular-component term for the spindle pole body that includes
     the outer plaque.
+- reference: GO:0005881
+  notes: Gene Ontology cellular-component term for cytoplasmic microtubule, the structure
+    organized by the outer plaque in the topology graph.
 - reference: GO:0070057
   notes: Gene Ontology cellular-component term for the separate prospore membrane
     spindle pole body attachment site.
@@ -79,8 +88,9 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0005816
   - node_id: cytoplasmic_microtubules
-    label: cytoplasmic microtubules
+    label: cytoplasmic microtubule
     node_type: STRUCTURE
+    grounding: GO:0005881
   edges:
   - subject: outer_plaque
     predicate: is part of
