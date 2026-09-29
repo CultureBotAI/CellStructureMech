@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+  slug: germ_tube_septin_ring
+session:
+  id: 2026-09-29T014753Z-codex-182878
+  timestamp: '2026-09-29T01:47:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add germ tube septin ring
+  details: Created the GO:0032172 germ tube septin ring record after live QuickGO verification
+    and hidden/ignored-inclusive duplicate searches. Added GO-backed septin-ring parentage,
+    a reviewed-label-only septin constituent, a nonmechanistic topology graph for future septation
+    sites within filamentous fungal germ tubes, and boundary and component-grounding discussions
+    while deliberately leaving exact source-neutral septin and septin-associated-protein boundaries
+    as an open TODO.
