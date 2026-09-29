@@ -3729,6 +3729,37 @@
       ]
     },
     {
+      "identifier": "GO:0160065",
+      "label": "SIN/MEN signaling complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.80211525
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.80093302
+        },
+        {
+          "identifier": "GO:0044732",
+          "label": "mitotic spindle pole body",
+          "cosine_similarity": 0.79919544
+        },
+        {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.79302657
+        },
+        {
+          "identifier": "GO:0071958",
+          "label": "new mitotic spindle pole body",
+          "cosine_similarity": 0.79182056
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005876",
       "label": "spindle microtubule",
       "neighbors": [
@@ -12924,14 +12955,14 @@
           "cosine_similarity": 0.80768463
         },
         {
+          "identifier": "GO:0160065",
+          "label": "SIN/MEN signaling complex",
+          "cosine_similarity": 0.79067044
+        },
+        {
           "identifier": "GO:0000811",
           "label": "GINS complex",
           "cosine_similarity": 0.77963341
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.76686262
         }
       ]
     },
@@ -12986,14 +13017,14 @@
           "cosine_similarity": 0.88103638
         },
         {
+          "identifier": "GO:0160065",
+          "label": "SIN/MEN signaling complex",
+          "cosine_similarity": 0.78494461
+        },
+        {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.78470135
-        },
-        {
-          "identifier": "GO:0005934",
-          "label": "cellular bud tip",
-          "cosine_similarity": 0.7689065
         }
       ]
     },
@@ -15223,9 +15254,9 @@
           "cosine_similarity": 0.80657573
         },
         {
-          "identifier": "GO:0031562",
-          "label": "hyphal tip polarisome",
-          "cosine_similarity": 0.73131013
+          "identifier": "GO:0160065",
+          "label": "SIN/MEN signaling complex",
+          "cosine_similarity": 0.73813521
         }
       ]
     },
@@ -15513,6 +15544,11 @@
       "label": "monopolin complex",
       "neighbors": [
         {
+          "identifier": "GO:0160065",
+          "label": "SIN/MEN signaling complex",
+          "cosine_similarity": 0.78080261
+        },
+        {
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.7790708
@@ -15531,11 +15567,6 @@
           "identifier": "GO:0035974",
           "label": "meiotic spindle pole body",
           "cosine_similarity": 0.76976774
-        },
-        {
-          "identifier": "GO:0034457",
-          "label": "Mpp10 complex",
-          "cosine_similarity": 0.76630338
         }
       ]
     },
@@ -18256,14 +18287,14 @@
           "cosine_similarity": 0.7227738
         },
         {
+          "identifier": "GO:0160065",
+          "label": "SIN/MEN signaling complex",
+          "cosine_similarity": 0.71134236
+        },
+        {
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.70577488
-        },
-        {
-          "identifier": "GO:0034044",
-          "label": "exomer complex",
-          "cosine_similarity": 0.69918801
         }
       ]
     },
