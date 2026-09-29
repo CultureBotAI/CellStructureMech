@@ -1387,6 +1387,11 @@
           "cosine_similarity": 0.79074028
         },
         {
+          "identifier": "GO:0032157",
+          "label": "prospore contractile ring",
+          "cosine_similarity": 0.77772237
+        },
+        {
           "identifier": "GO:0005938",
           "label": "cell cortex",
           "cosine_similarity": 0.76180847
@@ -1395,11 +1400,6 @@
           "identifier": "cellstructuremech:mamk_filament",
           "label": "MamK filament",
           "cosine_similarity": 0.74816704
-        },
-        {
-          "identifier": "GO:0036286",
-          "label": "eisosome filament",
-          "cosine_similarity": 0.73789757
         }
       ]
     },
@@ -1407,6 +1407,11 @@
       "identifier": "GO:0005826",
       "label": "actomyosin contractile ring",
       "neighbors": [
+        {
+          "identifier": "GO:0032157",
+          "label": "prospore contractile ring",
+          "cosine_similarity": 0.92973094
+        },
         {
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
@@ -1426,11 +1431,6 @@
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.75589341
-        },
-        {
-          "identifier": "GO:0032169",
-          "label": "prospore septin ring",
-          "cosine_similarity": 0.74371057
         }
       ]
     },
@@ -2694,14 +2694,14 @@
           "cosine_similarity": 0.73365781
         },
         {
+          "identifier": "GO:0032157",
+          "label": "prospore contractile ring",
+          "cosine_similarity": 0.73321617
+        },
+        {
           "identifier": "cellstructuremech:mamk_filament",
           "label": "MamK filament",
           "cosine_similarity": 0.72470388
-        },
-        {
-          "identifier": "GO:0032162",
-          "label": "mating projection septin band",
-          "cosine_similarity": 0.70308313
         }
       ]
     },
@@ -3043,6 +3043,37 @@
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
           "cosine_similarity": 0.68770352
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0032157",
+      "label": "prospore contractile ring",
+      "neighbors": [
+        {
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.92973094
+        },
+        {
+          "identifier": "GO:0032169",
+          "label": "prospore septin ring",
+          "cosine_similarity": 0.8177109
+        },
+        {
+          "identifier": "GO:0030479",
+          "label": "actin cortical patch",
+          "cosine_similarity": 0.77772237
+        },
+        {
+          "identifier": "cellstructuremech:mamk_filament",
+          "label": "MamK filament",
+          "cosine_similarity": 0.75695941
+        },
+        {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.75072585
         }
       ]
     },
