@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spindle_pole_body_duplication_plaque.yaml
+  slug: spindle_pole_body_duplication_plaque
+session:
+  id: 2026-09-29T113625Z-codex-8e46ef
+  timestamp: '2026-09-29T11:36:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added spindle pole body duplication plaque record
+  details: Created the cellstructuremech:spindle_pole_body_duplication_plaque record with
+    protein-containing-complex parentage, Saccharomyces cerevisiae scope, GO and DOI evidence,
+    a nonmechanistic satellite-to-duplication-plaque transition graph, and discussions capturing
+    the duplication-plaque boundary and component-grounding follow-up decisions.
