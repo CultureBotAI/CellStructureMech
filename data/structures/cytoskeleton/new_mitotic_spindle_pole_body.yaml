@@ -1,0 +1,97 @@
+identifier: GO:0071958
+label: new mitotic spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The spindle pole body that is formed by spindle pole body duplication,
+  and to which proteins involved in mitotic exit signaling (for example, the septation
+  initiation network in fission yeast) localize.
+definition_source: GO:0071958
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T17:21:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T17:23:27Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym, mitotic-SPB parentage, Schizosaccharomyces
+    scope, GO and fission-yeast literature evidence, and boundary/component discussions
+    for the new mitotic spindle pole body.
+  llm_assisted: true
+synonyms:
+- synonym_text: new SPB
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071958
+parent_structures:
+- GO:0044732
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast is the model in which new and old mitotic spindle pole bodies
+    were distinguished during asymmetric mitotic-exit signaling; no broader fungal
+    distribution is asserted here.
+  reference: DOI:10.1101/gad.296204
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Reference fission-yeast system used to define the newly duplicated mitotic
+    SPB as the pole that localizes septation-initiation network proteins.
+  reference: DOI:10.1101/gad.296204
+evidence:
+- reference: GO:0071958
+  notes: Gene Ontology cellular-component term for the new mitotic spindle pole body,
+    with new SPB as an exact synonym.
+- reference: GO:0044732
+  notes: Gene Ontology cellular-component parent term for mitotic spindle pole body.
+- reference: GO:0071957
+  notes: Gene Ontology cellular-component sibling term for the pre-existing old mitotic
+    spindle pole body.
+- reference: DOI:10.1101/gad.296204
+  notes: Grallert et al. 2004 analyzed fission-yeast spindle-pole-body maturation
+    and SIN/NIMA signaling asymmetry.
+discussions:
+- discussion_id: new_mitotic_spb_boundary
+  prompt: Keep the GO age/asymmetry term for the new mitotic SPB narrower than the
+    general mitotic SPB and distinct from local old/new SPB duplication placeholders.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0071958 denotes the newly formed mitotic spindle pole body that localizes
+    mitotic-exit signaling proteins, whereas GO:0044732 denotes the broader mitotic
+    SPB. The older ungrounded old_spb and new_spb causal-graph nodes on the general
+    SPB record are generic duplication roles and are not exact records for the fission-yeast
+    GO:0071957 and GO:0071958 age/asymmetry terms.
+  resolution_note: Curated GO:0071958 as the exact record for the new mitotic SPB,
+    parented it to GO:0044732, and cited GO:0071957 only as the old mitotic SPB sibling.
+  evidence:
+  - reference: GO:0071958
+    notes: GO:0071958 identifies the new mitotic spindle pole body.
+  - reference: GO:0071957
+    notes: GO:0071957 identifies the old mitotic spindle pole body.
+  - reference: GO:0044732
+    notes: GO:0044732 identifies the broader mitotic spindle pole body.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_new_mitotic_spb_signaling_components
+  prompt: Resolve exact source-neutral family groundings and scope for fission-yeast
+    SIN and NIMA-related proteins at the new mitotic SPB.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: This first GO-backed record captures the new mitotic SPB as an age/asymmetry
+    structure without treating transient fission-yeast-specific signaling proteins
+    as conserved SPB constituents or guessing InterPro, Pfam, NCBIfam, UniProtKB,
+    or Complex Portal groundings.
+  evidence:
+  - reference: DOI:10.1101/gad.296204
+    notes: Grallert et al. 2004 studied SIN and NIMA kinase asymmetry at fission-yeast
+      spindle pole bodies.
+  posed_by: codex
+  posed_date: '2026-09-29'

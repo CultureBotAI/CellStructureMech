@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/new_mitotic_spindle_pole_body.yaml
+  slug: new_mitotic_spindle_pole_body
+session:
+  id: 2026-09-29T172834Z-codex-27006c
+  timestamp: '2026-09-29T17:28:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - parent_structures
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - discussions
+  summary: Added new mitotic spindle pole body record
+  details: Created the GO:0071958 new mitotic spindle pole body record with the GO exact synonym,
+    GO-backed mitotic-SPB parentage, Schizosaccharomyces pombe scope, GO and fission-yeast
+    literature evidence, and discussions capturing its age/asymmetry boundary and deferred
+    SIN/NIMA component grounding work.
