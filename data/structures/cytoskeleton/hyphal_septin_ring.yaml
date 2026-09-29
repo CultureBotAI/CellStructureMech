@@ -20,6 +20,12 @@ curation_history:
     a hyphal septation-site function, GO evidence, a nonmechanistic hyphal-septation
     topology graph, and boundary and component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-29T00:28:43Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1750 by removing the location-only function while keeping the
+    future hyphal septation-site claim in the topology graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0005940
 components:
@@ -41,15 +47,6 @@ components:
   - reference: GO:0005940
     notes: GO:0005940 defines the broader septin ring as a septin- and septin-associated-protein
       structure.
-functions:
-- function_id: hyphal_septation_site_ring
-  label: hyphal septation-site ring
-  description: The hyphal septin ring forms at the division plane within a filamentous
-    fungal hypha where a septum will form.
-  evidence:
-  - reference: GO:0032168
-    notes: GO:0032168 defines the hyphal septin ring by its formation at sites where
-      a septum will form within filamentous fungal hyphae.
 evidence:
 - reference: GO:0032168
   notes: Gene Ontology cellular-component term for the hyphal septin ring.
