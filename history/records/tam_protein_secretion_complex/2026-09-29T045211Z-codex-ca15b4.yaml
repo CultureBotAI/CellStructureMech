@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/tam_protein_secretion_complex.yaml
+  slug: tam_protein_secretion_complex
+session:
+  id: 2026-09-29T045211Z-codex-ca15b4
+  timestamp: '2026-09-29T04:52:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - evidence
+  - discussions
+  summary: Add TAM protein secretion complex
+  details: Created the GO:0097347 TAM protein secretion complex record after QuickGO verification,
+    hidden/ignored-inclusive duplicate searches for the GO CURIE, exact label, GO exact synonym,
+    PMID, and DOI, and NCBI/Europe PMC verification of the GO definition PubMed reference.
+    Added GO exact synonymy, protein-containing-complex parentage, reviewed-label-only TamA
+    and TamB constituents, a variable Bacteria taxonomic scope row, GO/PubMed/DOI record evidence,
+    and open discussions to resolve TAM family grounding and autotransporter-function scope
+    before adding exact component groundings or a function row.

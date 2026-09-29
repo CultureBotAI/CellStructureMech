@@ -5868,6 +5868,15 @@
   "definition": "A bacterial cytoplasmic-membrane Sec-pathway protein-conducting channel built from SecY, SecE, and SecG, through which unfolded secretory proteins or nascent membrane proteins move during translocation or membrane insertion."
  },
  {
+  "identifier": "GO:0097347",
+  "label": "TAM protein secretion complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/tam_protein_secretion_complex.html",
+  "definition": "A heterooligomeric protein complex that spans the bacterial periplasm and enables the secretion of adhesin proteins in Gram-negative bacteria. In Citrobacter rodentium, Salmonella enterica and Escherichia coli, the TAM complex consists of an Omp85-family protein, TamA, in the outer membrane and TamB in the inner membrane."
+ },
+ {
   "identifier": "GO:0033281",
   "label": "TAT protein transport complex",
   "category": "SECRETION_SYSTEM",
