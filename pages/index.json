@@ -5922,6 +5922,15 @@
   "definition": "A Bacteroidota trans-envelope secretion nanomachine that couples an inner-membrane PorL/PorM-family motor to PorK/PorN outer-membrane rings and a SprA/Sov translocon to export folded C-terminal-domain-bearing proteins across the outer membrane."
  },
  {
+  "identifier": "GO:0098046",
+  "label": "type V protein secretion system complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/type_v_protein_secretion_system_complex.html",
+  "definition": "A complex of proteins that permits the translocation of proteins across the outer membrane via a transmembrane pore, formed by a beta-barrel, into the extracellular milieu or directly into host cells; the secreted proteins contain all the information required for translocation of an effector molecule through the cell envelope. The type V secretion systems includes the autotransporters (type Va), the two-partner secretion system (type Vb) and the Oca family (type Vc)."
+ },
+ {
   "identifier": "GO:0033104",
   "label": "type VI protein secretion system complex",
   "category": "SECRETION_SYSTEM",
