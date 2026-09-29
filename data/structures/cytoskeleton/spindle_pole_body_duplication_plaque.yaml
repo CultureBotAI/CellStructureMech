@@ -20,6 +20,13 @@ curation_history:
     evidence, a nonmechanistic duplication-plaque transition graph, and boundary/component
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-29T11:50:45Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved PR #1780 review issue #1781 by tightening the SPB duplication
+    plaque precursor edge evidence to mention the duplication plaque intermediate
+    directly.'
+  llm_assisted: true
 synonyms:
 - synonym_text: SPB duplication plaque
   synonym_type: EXACT_SYNONYM
@@ -106,9 +113,13 @@ causal_graphs:
     description: The duplication plaque is a transient plaque intermediate before
       completion of the daughter SPB.
     evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the budding-yeast duplication plaque
+        as the cytoplasmic plaque intermediate formed after satellite expansion and
+        before completion of the daughter SPB.
     - reference: DOI:10.1083/jcb.145.4.809
       notes: Adams and Kilmartin 1999 localized core budding-yeast SPB components
-        through the daughter plaque stages of SPB duplication.
+        through the daughter plaque intermediate stages of SPB duplication.
 discussions:
 - discussion_id: spb_duplication_plaque_boundary
   prompt: Keep the SPB duplication plaque distinct from the preceding satellite and
