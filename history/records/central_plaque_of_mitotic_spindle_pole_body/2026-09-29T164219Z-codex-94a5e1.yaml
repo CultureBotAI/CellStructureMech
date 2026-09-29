@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/central_plaque_of_mitotic_spindle_pole_body.yaml
+  slug: central_plaque_of_mitotic_spindle_pole_body
+session:
+  id: 2026-09-29T164219Z-codex-94a5e1
+  timestamp: '2026-09-29T16:42:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1790
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1789
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed mitotic central plaque sibling evidence review
+  details: 'Resolved PR #1789 review issue #1790 by adding the exact mitotic inner-plaque
+    and outer-plaque sibling GO terms to the GO:0061493 record evidence and boundary discussion
+    while keeping the local definition sourced to spindle-pole-body literature.'
