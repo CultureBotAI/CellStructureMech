@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/medial_cortex_septin_ring.yaml
+  slug: medial_cortex_septin_ring
+session:
+  id: 2026-09-29T033816Z-codex-04a576
+  timestamp: '2026-09-29T03:38:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1759
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1758
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address medial cortex septin ring boundary review
+  details: 'Resolved #1759 for PR #1758 by explicitly distinguishing GO:0036391 medial cortex
+    septin rings from GO:0032175 mating projection septin rings in the boundary discussion
+    and evidence.'

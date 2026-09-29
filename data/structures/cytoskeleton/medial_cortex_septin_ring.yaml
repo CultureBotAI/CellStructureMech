@@ -21,6 +21,12 @@ curation_history:
     GO evidence, a nonmechanistic medial-cortex topology graph, and boundary and component-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-29T03:37:41Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1759 by distinguishing the GO:0036391 medial cortex septin ring
+    from the GO:0032175 mating projection septin ring.'
+  llm_assisted: true
 parent_structures:
 - GO:0005940
 components:
@@ -99,10 +105,11 @@ discussions:
   - parent_structures
   rationale: GO:0036391 denotes the ring that forms at the medial cortex of a symmetrically
     dividing cell at the onset of cytokinesis. GO:0000144 and GO:0032177 cover bud-neck
-    septin states in budding cells, GO:0032169 covers the prospore ring, GO:0032168
-    and GO:0032172 cover filamentous-fungal hyphal and germ-tube rings, GO:0032170
-    covers pseudohyphal-projection junctions, and GO:0005940 denotes the broader septin
-    ring class. This record models only the medial-cortex subtype.
+    septin states in budding cells, GO:0032169 covers the prospore ring, GO:0032175
+    covers the mating projection ring, GO:0032168 and GO:0032172 cover filamentous-fungal
+    hyphal and germ-tube rings, GO:0032170 covers pseudohyphal-projection junctions,
+    and GO:0005940 denotes the broader septin ring class. This record models only
+    the medial-cortex subtype.
   resolution_note: Curated GO:0036391 as the exact structure identifier and used GO:0005940
     only as the is-a parent.
   evidence:
@@ -115,6 +122,8 @@ discussions:
       septin collar at budding-cell cytokinesis.
   - reference: GO:0032169
     notes: GO:0032169 identifies the prospore-localized septin ring.
+  - reference: GO:0032175
+    notes: GO:0032175 identifies the mating projection septin ring.
   - reference: GO:0032168
     notes: GO:0032168 identifies the hypha-localized septin ring.
   - reference: GO:0032172
