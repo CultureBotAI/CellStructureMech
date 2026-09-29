@@ -2141,9 +2141,9 @@
           "cosine_similarity": 0.85527764
         },
         {
-          "identifier": "GO:0032168",
-          "label": "hyphal septin ring",
-          "cosine_similarity": 0.8049499
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.81098938
         }
       ]
     },
@@ -2172,9 +2172,9 @@
           "cosine_similarity": 0.87325132
         },
         {
-          "identifier": "GO:0032168",
-          "label": "hyphal septin ring",
-          "cosine_similarity": 0.84854748
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.85649703
         }
       ]
     },
@@ -2198,14 +2198,14 @@
           "cosine_similarity": 0.85205997
         },
         {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.84883137
+        },
+        {
           "identifier": "GO:0032162",
           "label": "mating projection septin band",
           "cosine_similarity": 0.82570426
-        },
-        {
-          "identifier": "GO:0032175",
-          "label": "mating projection septin ring",
-          "cosine_similarity": 0.82500764
         }
       ]
     },
@@ -2529,6 +2529,11 @@
           "cosine_similarity": 0.92612759
         },
         {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.90888979
+        },
+        {
           "identifier": "GO:0032175",
           "label": "mating projection septin ring",
           "cosine_similarity": 0.87452455
@@ -2542,11 +2547,6 @@
           "identifier": "GO:0000144",
           "label": "cellular bud neck septin ring",
           "cosine_similarity": 0.84854748
-        },
-        {
-          "identifier": "GO:0032174",
-          "label": "cellular bud neck septin collar",
-          "cosine_similarity": 0.8049499
         }
       ]
     },
@@ -2689,6 +2689,11 @@
           "cosine_similarity": 0.87325132
         },
         {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.87175089
+        },
+        {
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.86086984
@@ -2697,11 +2702,6 @@
           "identifier": "GO:0032174",
           "label": "cellular bud neck septin collar",
           "cosine_similarity": 0.85877519
-        },
-        {
-          "identifier": "GO:0032168",
-          "label": "hyphal septin ring",
-          "cosine_similarity": 0.85410374
         }
       ]
     },
@@ -2713,6 +2713,11 @@
           "identifier": "GO:0032162",
           "label": "mating projection septin band",
           "cosine_similarity": 0.91068626
+        },
+        {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.89217207
         },
         {
           "identifier": "GO:0032168",
@@ -2728,11 +2733,6 @@
           "identifier": "GO:0000144",
           "label": "cellular bud neck septin ring",
           "cosine_similarity": 0.8299167
-        },
-        {
-          "identifier": "GO:0032177",
-          "label": "cellular bud neck split septin rings",
-          "cosine_similarity": 0.82500764
         }
       ]
     },
@@ -2985,6 +2985,37 @@
       ]
     },
     {
+      "identifier": "GO:0032170",
+      "label": "pseudohyphal septin ring",
+      "neighbors": [
+        {
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.90888979
+        },
+        {
+          "identifier": "GO:0032175",
+          "label": "mating projection septin ring",
+          "cosine_similarity": 0.89217207
+        },
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.87659786
+        },
+        {
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.87175089
+        },
+        {
+          "identifier": "GO:0000144",
+          "label": "cellular bud neck septin ring",
+          "cosine_similarity": 0.85649703
+        }
+      ]
+    },
+    {
       "identifier": "GO:0001534",
       "label": "radial spoke",
       "neighbors": [
@@ -3030,6 +3061,11 @@
           "cosine_similarity": 0.91148252
         },
         {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.87659786
+        },
+        {
           "identifier": "GO:0032174",
           "label": "cellular bud neck septin collar",
           "cosine_similarity": 0.86145883
@@ -3038,11 +3074,6 @@
           "identifier": "GO:0032162",
           "label": "mating projection septin band",
           "cosine_similarity": 0.86086984
-        },
-        {
-          "identifier": "GO:0032177",
-          "label": "cellular bud neck split septin rings",
-          "cosine_similarity": 0.85205997
         }
       ]
     },
@@ -3443,9 +3474,9 @@
           "cosine_similarity": 0.72166761
         },
         {
-          "identifier": "GO:0009288",
-          "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.70337527
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.70630875
         }
       ]
     },
