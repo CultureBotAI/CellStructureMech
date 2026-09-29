@@ -2875,6 +2875,11 @@
           "cosine_similarity": 0.82278094
         },
         {
+          "identifier": "GO:0005824",
+          "label": "outer plaque of spindle pole body",
+          "cosine_similarity": 0.78596386
+        },
+        {
           "identifier": "GO:0000776",
           "label": "kinetochore",
           "cosine_similarity": 0.76863575
@@ -2883,11 +2888,6 @@
           "identifier": "GO:0000940",
           "label": "outer kinetochore",
           "cosine_similarity": 0.76276885
-        },
-        {
-          "identifier": "cellstructuremech:phuz_spindle",
-          "label": "PhuZ spindle",
-          "cosine_similarity": 0.71561269
         }
       ]
     },
@@ -2950,6 +2950,37 @@
           "identifier": "GO:0160111",
           "label": "axonemal A tubule inner sheath",
           "cosine_similarity": 0.74426983
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005824",
+      "label": "outer plaque of spindle pole body",
+      "neighbors": [
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.86403343
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.80280765
+        },
+        {
+          "identifier": "GO:0072686",
+          "label": "mitotic spindle",
+          "cosine_similarity": 0.78596386
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.7717961
+        },
+        {
+          "identifier": "GO:0044614",
+          "label": "nuclear pore cytoplasmic filaments",
+          "cosine_similarity": 0.75372322
         }
       ]
     },
@@ -3226,9 +3257,9 @@
           "cosine_similarity": 0.81657475
         },
         {
-          "identifier": "GO:0097649",
-          "label": "A axonemal microtubule",
-          "cosine_similarity": 0.80151561
+          "identifier": "GO:0005824",
+          "label": "outer plaque of spindle pole body",
+          "cosine_similarity": 0.80280765
         }
       ]
     },
@@ -3236,6 +3267,11 @@
       "identifier": "GO:0005816",
       "label": "spindle pole body",
       "neighbors": [
+        {
+          "identifier": "GO:0005824",
+          "label": "outer plaque of spindle pole body",
+          "cosine_similarity": 0.86403343
+        },
         {
           "identifier": "GO:0005876",
           "label": "spindle microtubule",
@@ -3255,11 +3291,6 @@
           "identifier": "GO:0000940",
           "label": "outer kinetochore",
           "cosine_similarity": 0.76622201
-        },
-        {
-          "identifier": "GO:0160113",
-          "label": "axonemal microtubule doublet inner junction",
-          "cosine_similarity": 0.75628005
         }
       ]
     },

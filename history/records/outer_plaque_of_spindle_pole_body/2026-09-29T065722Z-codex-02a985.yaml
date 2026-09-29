@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/outer_plaque_of_spindle_pole_body.yaml
+  slug: outer_plaque_of_spindle_pole_body
+session:
+  id: 2026-09-29T065722Z-codex-02a985
+  timestamp: '2026-09-29T06:57:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add outer plaque of spindle pole body record
+  details: Created the GO:0005824 outer plaque of spindle pole body record after QuickGO verification,
+    modeled it as part of the existing GO:0005816 spindle pole body, and added Saccharomyces
+    evidence, a cytoplasmic microtubule-organization function, a topology graph, and boundary
+    discussions.
