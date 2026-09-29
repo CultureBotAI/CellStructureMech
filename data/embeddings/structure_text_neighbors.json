@@ -2520,6 +2520,37 @@
       ]
     },
     {
+      "identifier": "GO:0032168",
+      "label": "hyphal septin ring",
+      "neighbors": [
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.91897712
+        },
+        {
+          "identifier": "GO:0032175",
+          "label": "mating projection septin ring",
+          "cosine_similarity": 0.86410943
+        },
+        {
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.83542012
+        },
+        {
+          "identifier": "GO:0000144",
+          "label": "cellular bud neck septin ring",
+          "cosine_similarity": 0.82852208
+        },
+        {
+          "identifier": "GO:0032177",
+          "label": "cellular bud neck split septin rings",
+          "cosine_similarity": 0.78621588
+        }
+      ]
+    },
+    {
       "identifier": "GO:0036156",
       "label": "inner dynein arm",
       "neighbors": [
@@ -2668,9 +2699,9 @@
           "cosine_similarity": 0.85877519
         },
         {
-          "identifier": "GO:0032177",
-          "label": "cellular bud neck split septin rings",
-          "cosine_similarity": 0.82570426
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.83542012
         }
       ]
     },
@@ -2682,6 +2713,11 @@
           "identifier": "GO:0032162",
           "label": "mating projection septin band",
           "cosine_similarity": 0.91068626
+        },
+        {
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.86410943
         },
         {
           "identifier": "GO:0005940",
@@ -2697,11 +2733,6 @@
           "identifier": "GO:0032177",
           "label": "cellular bud neck split septin rings",
           "cosine_similarity": 0.82500764
-        },
-        {
-          "identifier": "GO:0032174",
-          "label": "cellular bud neck septin collar",
-          "cosine_similarity": 0.77411634
         }
       ]
     },
@@ -2989,6 +3020,11 @@
       "label": "septin ring",
       "neighbors": [
         {
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.91897712
+        },
+        {
           "identifier": "GO:0000144",
           "label": "cellular bud neck septin ring",
           "cosine_similarity": 0.91148252
@@ -3007,11 +3043,6 @@
           "identifier": "GO:0032177",
           "label": "cellular bud neck split septin rings",
           "cosine_similarity": 0.85205997
-        },
-        {
-          "identifier": "GO:0032175",
-          "label": "mating projection septin ring",
-          "cosine_similarity": 0.85152624
         }
       ]
     },
@@ -4373,9 +4404,9 @@
           "cosine_similarity": 0.68396932
         },
         {
-          "identifier": "GO:0009274",
-          "label": "peptidoglycan-based cell wall",
-          "cosine_similarity": 0.67297168
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.67801809
         }
       ]
     },
