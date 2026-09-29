@@ -1,0 +1,162 @@
+identifier: GO:0061493
+label: central plaque of mitotic spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: One of three laminate structures that form the mitotic spindle pole body;
+  the central plaque is embedded in the nuclear envelope.
+definition_source: DOI:10.1146/annurev.cellbio.20.022003.114106
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T16:16:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T16:17:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO-backed central-plaque parentage and mitotic-SPB parthood, Saccharomyces
+    scope, GO and literature evidence, a nonmechanistic mitotic central-plaque topology
+    graph, and boundary/component discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0005823
+part_of:
+- GO:0044732
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is a characterized fungal model for the nuclear-envelope-embedded
+    central plaque of the mitotic spindle pole body.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast reference system in which the layered mitotic SPB and its central
+    core architecture have been reviewed.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+evidence:
+- reference: GO:0061493
+  notes: Gene Ontology cellular-component term for the central plaque of the mitotic
+    spindle pole body.
+- reference: GO:0005823
+  notes: Gene Ontology parent term for the general central plaque of the spindle pole
+    body.
+- reference: GO:0044732
+  notes: Gene Ontology cellular-component term for the mitotic spindle pole body that
+    includes GO:0061493 by parthood.
+- reference: GO:0005635
+  notes: Gene Ontology cellular-component term for the nuclear envelope in which the
+    SPB central plaque is embedded.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+- reference: DOI:10.1091/mbc.E17-06-0397
+  notes: Viswanath et al. 2017, The molecular architecture of the yeast spindle pole
+    body core determined by Bayesian integrative modeling, Molecular Biology of the
+    Cell.
+causal_graphs:
+- graph_id: mitotic_central_plaque_topology
+  title: Mitotic central-plaque topology in the spindle pole body
+  description: The mitotic central plaque is a mitosis-specific SPB central plaque
+    embedded in the budding-yeast nuclear envelope.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed specialization and parthood for the mitotic
+    central plaque without asserting an ordered component recruitment pathway.
+  nodes:
+  - node_id: mitotic_central_plaque
+    label: central plaque of mitotic spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0061493
+  - node_id: central_plaque
+    label: central plaque of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005823
+  - node_id: mitotic_spindle_pole_body
+    label: mitotic spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0044732
+  - node_id: nuclear_envelope
+    label: nuclear envelope
+    node_type: STRUCTURE
+    grounding: GO:0005635
+  edges:
+  - subject: mitotic_central_plaque
+    predicate: is a
+    object: central_plaque
+    description: The mitotic SPB central plaque is the mitosis-specific subtype of
+      the general SPB central-plaque structure.
+    evidence:
+    - reference: GO:0061493
+      notes: GO:0061493 is_a GO:0005823 in the Gene Ontology cellular-component hierarchy.
+  - subject: mitotic_central_plaque
+    predicate: is part of
+    object: mitotic_spindle_pole_body
+    description: The mitotic central plaque is a nuclear-envelope laminate of the
+      mitotic spindle pole body.
+    evidence:
+    - reference: GO:0061493
+      notes: GO:0061493 identifies a central-plaque substructure of the mitotic spindle
+        pole body.
+  - subject: mitotic_central_plaque
+    predicate: is embedded in
+    object: nuclear_envelope
+    description: The SPB central plaque is embedded in the nuclear envelope at the
+      mitotic SPB core.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the budding-yeast SPB central plaque
+        as the nuclear-envelope-embedded SPB core.
+    - reference: DOI:10.1091/mbc.E17-06-0397
+      notes: Viswanath et al. 2017 modeled the central plaque as the core of the budding-yeast
+        SPB.
+discussions:
+- discussion_id: mitotic_central_plaque_boundary
+  prompt: Keep the mitotic SPB central plaque narrower than the general SPB central
+    plaque and avoid the malformed GO:0061493 definition text.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - definition
+  - definition_source
+  - parent_structures
+  - part_of
+  rationale: GO:0061493 denotes the central plaque of the mitotic spindle pole body,
+    is narrower than GO:0005823, and is part of the GO:0044732 mitotic spindle pole
+    body. Its current definition text describes the inner plaque instead of the central
+    plaque, so the local definition follows the existing GO:0005823 central-plaque
+    boundary and SPB literature.
+  resolution_note: Curated GO:0061493 as the mitosis-specific SPB central plaque,
+    with is-a and part-of links to the corresponding GO terms and a literature-backed
+    local definition.
+  evidence:
+  - reference: GO:0061493
+    notes: GO:0061493 identifies the central plaque of the mitotic spindle pole body.
+  - reference: GO:0005823
+    notes: GO:0005823 identifies the nuclear-envelope-embedded central plaque of the
+      spindle pole body.
+  - reference: GO:0044732
+    notes: GO:0044732 identifies the mitotic spindle pole body.
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the layered budding-yeast mitotic SPB.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_mitotic_central_plaque_components
+  prompt: Resolve exact source-neutral family groundings for mitotic central-plaque
+    and SPB-core constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: This first GO-backed mitotic central-plaque record captures the cell-cycle-specific
+    layer without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal groundings
+    for budding-yeast central-plaque and SPB-core proteins.
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-06-0397
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'

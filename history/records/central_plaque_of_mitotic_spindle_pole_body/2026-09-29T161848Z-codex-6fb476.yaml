@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/central_plaque_of_mitotic_spindle_pole_body.yaml
+  slug: central_plaque_of_mitotic_spindle_pole_body
+session:
+  id: 2026-09-29T161848Z-codex-6fb476
+  timestamp: '2026-09-29T16:18:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added central plaque of mitotic spindle pole body record
+  details: Created the GO:0061493 central plaque of mitotic spindle pole body record with
+    GO-backed central-plaque parentage and mitotic-SPB parthood, Saccharomyces cerevisiae
+    scope, GO and DOI evidence, a nonmechanistic mitotic central-plaque topology graph, and
+    discussions capturing the GO definition-text boundary and deferred component groundings.
