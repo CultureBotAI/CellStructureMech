@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spindle_pole_body_satellite.yaml
+  slug: spindle_pole_body_satellite
+session:
+  id: 2026-09-29T105446Z-codex-b5eab2
+  timestamp: '2026-09-29T10:54:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fixed SPB satellite discussion anchor
+  details: Resolved a local corpus-integrity failure in the spindle pole body satellite record
+    by changing the SPB satellite boundary discussion attachment from the bare causal_graphs
+    section to causal_graphs#spb_satellite_precursor_assembly.
