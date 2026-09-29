@@ -1,0 +1,171 @@
+identifier: GO:0035974
+label: meiotic spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The microtubule organizing center that forms as part of the meiotic cell
+  cycle; functionally homologous to the animal cell centrosome.
+definition_source: GO:0035974
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T14:42:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T14:44:19Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO-backed spindle-pole-body parentage, Saccharomyces scope, meiotic
+    microtubule-organization and prospore-initiation functions, GO and literature
+    evidence, a nonmechanistic MOP topology graph, and boundary/component discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0005816
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast meiosis II spindle pole bodies remodel their cytoplasmic outer
+    plaques into meiotic outer plaques that initiate prospore membrane assembly.
+  reference: DOI:10.1093/emboj/19.14.3657
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference fungal model in which meiosis II SPBs form meiotic outer plaques
+    that dock prospore-membrane precursors.
+  reference: DOI:10.1093/emboj/19.14.3657
+functions:
+- function_id: meiotic_microtubule_organization
+  label: meiotic microtubule organization
+  description: Meiotic spindle pole bodies organize microtubules during the meiotic
+    cell cycle.
+  evidence:
+  - reference: GO:0035974
+    notes: GO:0035974 defines the meiotic spindle pole body as the microtubule-organizing
+      center formed as part of the meiotic cell cycle.
+- function_id: prospore_membrane_initiation_site
+  label: prospore membrane initiation site
+  description: In budding yeast, meiosis II SPBs carry a meiotic outer plaque that
+    nucleates prospore membrane formation.
+  evidence:
+  - reference: GO:0031322
+    notes: GO:0031322 defines prospore-specific SPB remodeling as recruitment of sporulation-specific
+      proteins to the outer plaque to form the meiotic outer plaque.
+  - reference: DOI:10.1093/emboj/19.14.3657
+    notes: Knop and Strasser 2000 analyzed the budding-yeast SPB outer plaque as the
+      assembly site for prospore membranes.
+evidence:
+- reference: GO:0035974
+  notes: Gene Ontology cellular-component term for the meiotic spindle pole body.
+- reference: GO:0005816
+  notes: Gene Ontology parent term for the general fungal spindle pole body.
+- reference: GO:0031322
+  notes: Gene Ontology biological-process term for ascospore-type prospore-specific
+    SPB remodeling; its definition names meiotic outer plaque formation.
+- reference: GO:0005628
+  notes: Gene Ontology cellular-component term for the prospore membrane that initiates
+    from the meiotic outer plaque.
+- reference: DOI:10.1093/emboj/19.14.3657
+  notes: Knop and Strasser 2000, Role of the spindle pole body of yeast in mediating
+    assembly of the prospore membrane during meiosis, The EMBO Journal.
+causal_graphs:
+- graph_id: meiotic_spindle_pole_body_remodeling
+  title: Meiotic spindle pole bodies initiate prospore membranes
+  description: The meiotic SPB is a cell-cycle-specific SPB that carries a meiotic
+    outer plaque for prospore membrane initiation in budding yeast.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-backed meiotic SPB subtype and the meiotic-outer-plaque
+    assembly site without asserting ordered MOP protein recruitment.
+  nodes:
+  - node_id: spindle_pole_body
+    label: spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005816
+  - node_id: meiotic_spindle_pole_body
+    label: meiotic spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0035974
+  - node_id: meiotic_outer_plaque
+    label: meiotic outer plaque
+    node_type: STRUCTURE
+    grounding: cellstructuremech:meiotic_outer_plaque
+  - node_id: prospore_membrane
+    label: prospore membrane
+    node_type: STRUCTURE
+    grounding: GO:0005628
+  edges:
+  - subject: meiotic_spindle_pole_body
+    predicate: is subtype of
+    object: spindle_pole_body
+    description: The meiotic spindle pole body is a cell-cycle-specific spindle pole
+      body.
+    evidence:
+    - reference: GO:0035974
+      notes: GO:0035974 is a cellular-component child of the general spindle pole
+        body term.
+    - reference: GO:0005816
+      notes: GO:0005816 identifies the broader fungal spindle pole body.
+  - subject: meiotic_outer_plaque
+    predicate: is part of
+    object: meiotic_spindle_pole_body
+    description: The meiotic outer plaque forms on the cytoplasmic face of meiosis
+      II spindle pole bodies.
+    evidence:
+    - reference: DOI:10.1093/emboj/19.14.3657
+      notes: Knop and Strasser 2000 studied MOP formation on budding-yeast spindle
+        pole bodies during meiosis.
+  - subject: meiotic_outer_plaque
+    predicate: anchors initiation of
+    object: prospore_membrane
+    description: The MOP nucleates and anchors prospore membrane formation at the
+      meiotic SPB.
+    evidence:
+    - reference: GO:0031322
+      notes: GO:0031322 describes outer-plaque remodeling into the meiotic outer plaque.
+    - reference: DOI:10.1093/emboj/19.14.3657
+      notes: Knop and Strasser 2000 linked meiotic SPB remodeling to prospore membrane
+        assembly.
+discussions:
+- discussion_id: meiotic_spindle_pole_body_boundary
+  prompt: Keep the meiotic spindle pole body narrower than the general fungal spindle
+    pole body and distinct from the meiotic outer plaque substructure.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - causal_graphs#meiotic_spindle_pole_body_remodeling
+  rationale: GO:0035974 denotes the SPB formed as part of the meiotic cell cycle,
+    while GO:0005816 covers the general fungal SPB. The locally minted meiotic outer
+    plaque is a meiosis-II SPB substructure and prospore-membrane assembly site, not
+    an equivalent name for the whole meiotic SPB.
+  resolution_note: Curated GO:0035974 as the exact meiotic SPB subtype, parented it
+    to GO:0005816, and represented the existing MOP record as a budding-yeast assembly-site
+    substructure.
+  evidence:
+  - reference: GO:0035974
+    notes: GO:0035974 identifies the meiotic spindle pole body.
+  - reference: GO:0005816
+    notes: GO:0005816 identifies the general spindle pole body.
+  - reference: DOI:10.1093/emboj/19.14.3657
+    notes: Knop and Strasser 2000 studied budding-yeast SPB remodeling and MOP-associated
+      prospore membrane assembly during meiosis.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_meiotic_spindle_pole_body_components
+  prompt: Resolve exact source-neutral family groundings for meiotic SPB and MOP constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: This first GO-backed meiotic SPB record captures the named cell-cycle-specific
+    structure without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal groundings
+    for budding-yeast MOP or SPB-remodeling proteins.
+  evidence:
+  - reference: DOI:10.1093/emboj/19.14.3657
+  - reference: DOI:10.1091/mbc.12.6.1611
+  - reference: DOI:10.1091/mbc.E10-07-0563
+  posed_by: codex
+  posed_date: '2026-09-29'

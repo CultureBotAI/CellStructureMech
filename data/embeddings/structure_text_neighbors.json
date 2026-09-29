@@ -2322,14 +2322,14 @@
           "cosine_similarity": 0.75380139
         },
         {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.69904006
+        },
+        {
           "identifier": "GO:0044732",
           "label": "mitotic spindle pole body",
           "cosine_similarity": 0.69696822
-        },
-        {
-          "identifier": "GO:0009431",
-          "label": "bacterial-type flagellum basal body, MS ring",
-          "cosine_similarity": 0.69684094
         }
       ]
     },
@@ -3051,6 +3051,11 @@
       "label": "meiotic outer plaque",
       "neighbors": [
         {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.87273727
+        },
+        {
           "identifier": "GO:0005822",
           "label": "inner plaque of spindle pole body",
           "cosine_similarity": 0.84705379
@@ -3069,11 +3074,37 @@
           "identifier": "GO:0061498",
           "label": "intermediate layer of mitotic spindle pole body",
           "cosine_similarity": 0.79981214
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0035974",
+      "label": "meiotic spindle pole body",
+      "neighbors": [
+        {
+          "identifier": "GO:0044732",
+          "label": "mitotic spindle pole body",
+          "cosine_similarity": 0.93713379
         },
         {
-          "identifier": "GO:0005823",
-          "label": "central plaque of spindle pole body",
-          "cosine_similarity": 0.79547716
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.88036764
+        },
+        {
+          "identifier": "GO:0061496",
+          "label": "half bridge of mitotic spindle pole body",
+          "cosine_similarity": 0.87791139
+        },
+        {
+          "identifier": "cellstructuremech:meiotic_outer_plaque",
+          "label": "meiotic outer plaque",
+          "cosine_similarity": 0.87273727
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.87051413
         }
       ]
     },
@@ -3133,9 +3164,9 @@
           "cosine_similarity": 0.84863758
         },
         {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.82278094
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.82889788
         }
       ]
     },
@@ -3143,6 +3174,11 @@
       "identifier": "GO:0044732",
       "label": "mitotic spindle pole body",
       "neighbors": [
+        {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.93713379
+        },
         {
           "identifier": "GO:0061496",
           "label": "half bridge of mitotic spindle pole body",
@@ -3162,11 +3198,6 @@
           "identifier": "GO:0072686",
           "label": "mitotic spindle",
           "cosine_similarity": 0.89217714
-        },
-        {
-          "identifier": "GO:0005822",
-          "label": "inner plaque of spindle pole body",
-          "cosine_similarity": 0.88528552
         }
       ]
     },
@@ -3567,9 +3598,9 @@
           "cosine_similarity": 0.88438823
         },
         {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.85885332
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.87051413
         }
       ]
     },
@@ -3581,6 +3612,11 @@
           "identifier": "GO:0044732",
           "label": "mitotic spindle pole body",
           "cosine_similarity": 0.89913627
+        },
+        {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.88036764
         },
         {
           "identifier": "GO:0005822",
@@ -3596,11 +3632,6 @@
           "identifier": "GO:0005824",
           "label": "outer plaque of spindle pole body",
           "cosine_similarity": 0.86403343
-        },
-        {
-          "identifier": "GO:0005876",
-          "label": "spindle microtubule",
-          "cosine_similarity": 0.85885332
         }
       ]
     },
@@ -15342,14 +15373,14 @@
           "cosine_similarity": 0.77042817
         },
         {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.76976774
+        },
+        {
           "identifier": "GO:0034457",
           "label": "Mpp10 complex",
           "cosine_similarity": 0.76630338
-        },
-        {
-          "identifier": "GO:0031560",
-          "label": "cellular bud neck polarisome",
-          "cosine_similarity": 0.76394248
         }
       ]
     },
