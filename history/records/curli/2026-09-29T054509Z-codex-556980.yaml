@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/curli.yaml
+  slug: curli
+session:
+  id: 2026-09-29T054509Z-codex-556980
+  timestamp: '2026-09-29T05:45:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Soften curli secretion complex boundary wording
+  details: 'Fixed PR #1764 review issue #1765 by softening the resolved GO:0062155 curli secretion
+    complex rationale so it no longer treats the GO term as an exact CsgE/F/G membership decision
+    while the standalone curli secretion complex record keeps that component boundary open.'

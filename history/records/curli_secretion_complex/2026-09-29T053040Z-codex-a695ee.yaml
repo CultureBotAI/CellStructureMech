@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/curli_secretion_complex.yaml
+  slug: curli_secretion_complex
+session:
+  id: 2026-09-29T053040Z-codex-a695ee
+  timestamp: '2026-09-29T05:30:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - evidence
+  - discussions
+  summary: Add curli secretion complex
+  details: Created the GO:0062155 curli secretion complex record after QuickGO verification,
+    hidden/ignored-inclusive duplicate searches for the GO CURIE, exact label, definition
+    PMID, and DOI, and NCBI verification of the GO definition PubMed reference. Added protein-containing-complex
+    parentage, a variable Bacteria taxonomic scope row, GO/PubMed/DOI record evidence, a type
+    VIII secretion function, and an open CsgE/F/G component-boundary discussion before adding
+    constituents.

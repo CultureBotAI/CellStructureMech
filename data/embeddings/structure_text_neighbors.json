@@ -824,6 +824,11 @@
           "cosine_similarity": 0.72769845
         },
         {
+          "identifier": "GO:0062155",
+          "label": "curli secretion complex",
+          "cosine_similarity": 0.64812663
+        },
+        {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
           "cosine_similarity": 0.64666853
@@ -837,11 +842,6 @@
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
           "cosine_similarity": 0.63494731
-        },
-        {
-          "identifier": "GO:0140621",
-          "label": "type I pilus",
-          "cosine_similarity": 0.63331011
         }
       ]
     },
@@ -20128,6 +20128,37 @@
       ]
     },
     {
+      "identifier": "GO:0062155",
+      "label": "curli secretion complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0098046",
+          "label": "type V protein secretion system complex",
+          "cosine_similarity": 0.82729623
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.82046208
+        },
+        {
+          "identifier": "cellstructuremech:type_ix_protein_secretion_system_complex",
+          "label": "type IX protein secretion system complex",
+          "cosine_similarity": 0.81187312
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.77493841
+        },
+        {
+          "identifier": "GO:0097347",
+          "label": "TAM protein secretion complex",
+          "cosine_similarity": 0.74825947
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex",
       "label": "ESX-3 type VII secretion system membrane complex",
       "neighbors": [
@@ -20452,6 +20483,11 @@
           "cosine_similarity": 0.84410856
         },
         {
+          "identifier": "GO:0062155",
+          "label": "curli secretion complex",
+          "cosine_similarity": 0.82729623
+        },
+        {
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
           "cosine_similarity": 0.81852716
@@ -20460,11 +20496,6 @@
           "identifier": "GO:0033104",
           "label": "type VI protein secretion system complex",
           "cosine_similarity": 0.81825047
-        },
-        {
-          "identifier": "GO:0043684",
-          "label": "type IV secretion system complex",
-          "cosine_similarity": 0.81714176
         }
       ]
     },
