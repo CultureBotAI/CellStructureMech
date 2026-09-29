@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+  slug: prospore_septin_ring
+session:
+  id: 2026-09-29T025406Z-codex-86485b
+  timestamp: '2026-09-29T02:54:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1757
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1756
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Address prospore septin ring boundary review
+  details: 'Resolved #1757 for PR #1756 by explicitly distinguishing GO:0032169 prospore septin
+    rings from GO:0032177 cytokinetic cellular bud neck split septin rings in the boundary
+    discussion and evidence.'

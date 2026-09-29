@@ -20,6 +20,12 @@ curation_history:
     GO evidence, a nonmechanistic prospore-ring topology graph, and boundary and component-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-29T02:53:24Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1757 by distinguishing the GO:0032169 prospore septin ring from
+    GO:0032177 cytokinetic bud-neck split septin rings.'
+  llm_assisted: true
 parent_structures:
 - GO:0005940
 components:
@@ -97,10 +103,12 @@ discussions:
   rationale: GO:0032169 denotes the septin ring at the site of cytokinesis in a prospore.
     GO:0032172 covers germ-tube future septation sites, GO:0032168 covers hyphal future
     septation sites, GO:0032170 covers mother-cell/pseudohyphal-projection junctions,
-    and GO:0005940 denotes the broader septin ring class. This record models only
-    the prospore subtype.
-  resolution_note: Curated GO:0032169 as the exact structure identifier and used GO:0005940
-    only as the is-a parent.
+    GO:0032177 covers the two split septin rings formed from the bud-neck septin collar
+    at budding-cell cytokinesis, and GO:0005940 denotes the broader septin ring class.
+    This record models only the prospore subtype.
+  resolution_note: Curated GO:0032169 as the exact structure identifier, used GO:0005940
+    only as the is-a parent, and documented GO:0032177 as a cytokinetic sibling rather
+    than a prospore ring.
   evidence:
   - reference: GO:0032169
     notes: GO:0032169 identifies the prospore-localized septin ring.
@@ -111,6 +119,9 @@ discussions:
   - reference: GO:0032170
     notes: GO:0032170 identifies the septin ring at a mother-cell/pseudohyphal-projection
       junction.
+  - reference: GO:0032177
+    notes: GO:0032177 identifies the two split septin rings formed from the bud-neck
+      septin collar at budding-cell cytokinesis.
   - reference: GO:0005940
     notes: GO:0005940 identifies the broader septin ring class.
   posed_by: codex
