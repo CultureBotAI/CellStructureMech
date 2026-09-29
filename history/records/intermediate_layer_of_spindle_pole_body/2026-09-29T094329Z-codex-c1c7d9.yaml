@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+  slug: intermediate_layer_of_spindle_pole_body
+session:
+  id: 2026-09-29T094329Z-codex-c1c7d9
+  timestamp: '2026-09-29T09:43:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added intermediate layer of spindle pole body record
+  details: Created the GO:0005821 intermediate layer of spindle pole body record with spindle-pole-body
+    parthood, Saccharomyces cerevisiae scope, GO and DOI evidence, a nonmechanistic intermediate-layer
+    topology graph, and discussions capturing plaque-boundary and component-grounding follow-up
+    decisions.

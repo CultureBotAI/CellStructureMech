@@ -1,0 +1,145 @@
+identifier: GO:0005821
+label: intermediate layer of spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The layer of the spindle pole body between the central plaque and the
+  outer plaque.
+definition_source: GO:0005821
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T09:41:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T09:42:43Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added spindle-pole-body parthood, Saccharomyces scope, GO and literature
+    evidence, a nonmechanistic intermediate-layer topology graph, and boundary/component
+    discussions.
+  llm_assisted: true
+part_of:
+- GO:0005816
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is a characterized fungal model for the layered spindle pole
+    body that includes an intermediate layer between the central and outer plaques.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast reference system in which layered SPB architecture and plaque
+    topology have been characterized.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+evidence:
+- reference: GO:0005821
+  notes: Gene Ontology cellular-component term for the intermediate layer of the spindle
+    pole body.
+- reference: GO:0005816
+  notes: Gene Ontology cellular-component term for the spindle pole body that includes
+    the intermediate layer.
+- reference: GO:0005823
+  notes: Gene Ontology cellular-component term for the central plaque of the spindle
+    pole body.
+- reference: GO:0005824
+  notes: Gene Ontology cellular-component term for the outer plaque of the spindle
+    pole body.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+causal_graphs:
+- graph_id: intermediate_layer_topology
+  title: Intermediate-layer topology in the spindle pole body
+  description: The intermediate layer is the spindle-pole-body layer between the central
+    and outer plaques.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed SPB parthood and the position of the intermediate
+    layer relative to the central and outer plaques without asserting the exact ordered
+    assembly pathway or component boundary.
+  nodes:
+  - node_id: intermediate_layer
+    label: intermediate layer of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005821
+  - node_id: spindle_pole_body
+    label: spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005816
+  - node_id: central_plaque
+    label: central plaque of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005823
+  - node_id: outer_plaque
+    label: outer plaque of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005824
+  edges:
+  - subject: intermediate_layer
+    predicate: is part of
+    object: spindle_pole_body
+    description: The intermediate layer is a layer of the spindle pole body.
+    evidence:
+    - reference: GO:0005821
+      notes: GO:0005821 identifies the intermediate layer as a layer of the spindle
+        pole body.
+  - subject: intermediate_layer
+    predicate: lies between
+    object: central_plaque
+    description: The intermediate layer is positioned between the SPB central and
+      outer plaques.
+    evidence:
+    - reference: GO:0005821
+      notes: GO:0005821 defines the intermediate layer as the SPB layer between the
+        central and outer plaques.
+  - subject: intermediate_layer
+    predicate: lies between
+    object: outer_plaque
+    description: The intermediate layer is positioned between the SPB central and
+      outer plaques.
+    evidence:
+    - reference: GO:0005821
+      notes: GO:0005821 defines the intermediate layer as the SPB layer between the
+        central and outer plaques.
+discussions:
+- discussion_id: intermediate_layer_boundary
+  prompt: Keep the SPB intermediate layer distinct from the central and outer plaques.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0005821 denotes the layer between the central and outer plaques of
+    the spindle pole body, while GO:0005823 denotes the nuclear-envelope-embedded
+    central plaque and GO:0005824 denotes the cytoplasmic outer plaque.
+  resolution_note: Curated GO:0005821 as the general SPB intermediate layer and linked
+    it by parthood to GO:0005816.
+  evidence:
+  - reference: GO:0005821
+    notes: GO:0005821 identifies the intermediate layer of the spindle pole body.
+  - reference: GO:0005823
+    notes: GO:0005823 identifies the central plaque of the spindle pole body as distinct
+      from the intermediate layer.
+  - reference: GO:0005824
+    notes: GO:0005824 identifies the outer plaque of the spindle pole body as distinct
+      from the intermediate layer.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_intermediate_layer_components
+  prompt: Resolve exact source-neutral family groundings for SPB intermediate-layer
+    constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The first GO-backed intermediate-layer record captures the named SPB
+    layer without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal groundings
+    for budding-yeast proteins in the layer.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'
