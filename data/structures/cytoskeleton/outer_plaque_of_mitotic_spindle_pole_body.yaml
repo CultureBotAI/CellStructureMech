@@ -1,0 +1,157 @@
+identifier: GO:0061499
+label: outer plaque of mitotic spindle pole body
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: One of three laminate structures that form the mitotic spindle pole body;
+  the outer plaque is in the cytoplasm.
+definition_source: GO:0061499
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T15:43:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T15:44:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO-backed outer-plaque parentage and mitotic-SPB parthood, Saccharomyces
+    scope, a mitotic cytoplasmic microtubule-organization function, GO and literature
+    evidence, a nonmechanistic mitotic outer-plaque topology graph, and boundary/component
+    discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0005824
+part_of:
+- GO:0044732
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is a characterized fungal model for the cytoplasmic outer plaque
+    of the mitotic spindle pole body.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast reference system in which the layered mitotic SPB and its cytoplasmic
+    microtubule-nucleating outer plaque have been reviewed.
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+functions:
+- function_id: mitotic_cytoplasmic_microtubule_organization
+  label: mitotic cytoplasmic microtubule organization
+  description: The mitotic outer plaque is the cytoplasmic face of the budding-yeast
+    SPB that organizes mitotic cytoplasmic microtubule nucleation.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 reviewed the budding-yeast SPB outer plaque as
+      the cytoplasmic site for microtubule nucleation.
+evidence:
+- reference: GO:0061499
+  notes: Gene Ontology cellular-component term for the outer plaque of the mitotic
+    spindle pole body.
+- reference: GO:0005824
+  notes: Gene Ontology parent term for the general outer plaque of the spindle pole
+    body.
+- reference: GO:0044732
+  notes: Gene Ontology cellular-component term for the mitotic spindle pole body that
+    includes GO:0061499 by parthood.
+- reference: GO:0005881
+  notes: Gene Ontology cellular-component term for cytoplasmic microtubule, the structure
+    organized by the outer plaque.
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
+causal_graphs:
+- graph_id: mitotic_outer_plaque_topology
+  title: Mitotic outer-plaque topology in the spindle pole body
+  description: The mitotic outer plaque is a mitosis-specific SPB outer plaque facing
+    the budding-yeast cytoplasm.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed specialization and parthood for the mitotic
+    outer plaque without asserting an ordered component recruitment pathway.
+  nodes:
+  - node_id: mitotic_outer_plaque
+    label: outer plaque of mitotic spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0061499
+  - node_id: outer_plaque
+    label: outer plaque of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005824
+  - node_id: mitotic_spindle_pole_body
+    label: mitotic spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0044732
+  - node_id: cytoplasmic_microtubule
+    label: cytoplasmic microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005881
+  edges:
+  - subject: mitotic_outer_plaque
+    predicate: is a
+    object: outer_plaque
+    description: The mitotic SPB outer plaque is the mitosis-specific subtype of the
+      general SPB outer-plaque structure.
+    evidence:
+    - reference: GO:0061499
+      notes: GO:0061499 is_a GO:0005824 in the Gene Ontology cellular-component hierarchy.
+  - subject: mitotic_outer_plaque
+    predicate: is part of
+    object: mitotic_spindle_pole_body
+    description: The mitotic outer plaque is a cytoplasmic laminate of the mitotic
+      spindle pole body.
+    evidence:
+    - reference: GO:0061499
+      notes: GO:0061499 defines the outer plaque as one of the laminate structures
+        of the mitotic spindle pole body.
+  - subject: mitotic_outer_plaque
+    predicate: organizes
+    object: cytoplasmic_microtubule
+    description: The SPB outer plaque faces the cytoplasm and organizes cytoplasmic
+      microtubule nucleation in budding yeast.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the budding-yeast SPB outer plaque
+        as the cytoplasmic site for microtubule nucleation.
+discussions:
+- discussion_id: mitotic_outer_plaque_boundary
+  prompt: Keep the mitotic SPB outer plaque narrower than the general SPB outer plaque
+    and distinct from the meiotic outer plaque.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  rationale: GO:0061499 denotes the outer plaque of the mitotic spindle pole body,
+    is narrower than GO:0005824, and is part of the GO:0044732 mitotic spindle pole
+    body. The existing local meiotic outer plaque record denotes a sporulation-specific
+    outer-plaque remodeling product and stays outside this mitotic subtype.
+  resolution_note: Curated GO:0061499 as the mitosis-specific SPB outer plaque, with
+    is-a and part-of links to the corresponding GO terms.
+  evidence:
+  - reference: GO:0061499
+    notes: GO:0061499 identifies the outer plaque of the mitotic spindle pole body.
+  - reference: GO:0005824
+    notes: GO:0005824 identifies the general outer plaque of the spindle pole body.
+  - reference: GO:0044732
+    notes: GO:0044732 identifies the mitotic spindle pole body.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_mitotic_outer_plaque_components
+  prompt: Resolve exact source-neutral family groundings for mitotic outer-plaque
+    constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: This first GO-backed mitotic outer-plaque record captures the cell-cycle-specific
+    layer without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal groundings
+    for budding-yeast outer-plaque proteins.
+  evidence:
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  posed_by: codex
+  posed_date: '2026-09-29'
