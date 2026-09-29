@@ -2906,6 +2906,11 @@
           "cosine_similarity": 0.90690544
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.82894985
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.7313514
@@ -2914,11 +2919,6 @@
           "identifier": "GO:0035974",
           "label": "meiotic spindle pole body",
           "cosine_similarity": 0.72698088
-        },
-        {
-          "identifier": "GO:0071958",
-          "label": "new mitotic spindle pole body",
-          "cosine_similarity": 0.72644039
         }
       ]
     },
@@ -3381,9 +3381,9 @@
           "cosine_similarity": 0.82314926
         },
         {
-          "identifier": "GO:0071957",
-          "label": "old mitotic spindle pole body",
-          "cosine_similarity": 0.81074778
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.81258275
         }
       ]
     },
@@ -3800,6 +3800,11 @@
           "cosine_similarity": 0.90690544
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.88631399
+        },
+        {
           "identifier": "GO:0160067",
           "label": "new spindle pole body SIN signaling complex",
           "cosine_similarity": 0.86309052
@@ -3813,11 +3818,37 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.80093302
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990334",
+      "label": "SIN/MEN two-component GAP complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0160065",
+          "label": "SIN/MEN signaling complex",
+          "cosine_similarity": 0.88631399
         },
         {
-          "identifier": "GO:0044732",
-          "label": "mitotic spindle pole body",
-          "cosine_similarity": 0.79919544
+          "identifier": "GO:0160066",
+          "label": "interphase SIN signaling complex",
+          "cosine_similarity": 0.82894985
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.82254886
+        },
+        {
+          "identifier": "GO:0035859",
+          "label": "Seh1-associated complex",
+          "cosine_similarity": 0.8213971
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.81371822
         }
       ]
     },
@@ -13022,9 +13053,9 @@
           "cosine_similarity": 0.79067044
         },
         {
-          "identifier": "GO:0000811",
-          "label": "GINS complex",
-          "cosine_similarity": 0.77963341
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.78040116
         }
       ]
     },
@@ -13136,6 +13167,11 @@
           "cosine_similarity": 0.69277957
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.68421344
+        },
+        {
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.68300553
@@ -13144,11 +13180,6 @@
           "identifier": "GO:0071162",
           "label": "CMG complex",
           "cosine_similarity": 0.67827257
-        },
-        {
-          "identifier": "GO:0033263",
-          "label": "CORVET complex",
-          "cosine_similarity": 0.67127254
         }
       ]
     },
@@ -13441,6 +13472,11 @@
           "cosine_similarity": 0.85918593
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.74198554
+        },
+        {
           "identifier": "GO:0000811",
           "label": "GINS complex",
           "cosine_similarity": 0.72010019
@@ -13454,11 +13490,6 @@
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.7170443
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.71686548
         }
       ]
     },
@@ -13704,9 +13735,9 @@
           "cosine_similarity": 0.77544625
         },
         {
-          "identifier": "GO:0030905",
-          "label": "retromer, tubulation complex",
-          "cosine_similarity": 0.76546534
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.77504943
         }
       ]
     },
@@ -13735,9 +13766,9 @@
           "cosine_similarity": 0.7730115
         },
         {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.75187895
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.75581884
         }
       ]
     },
@@ -14603,9 +14634,9 @@
           "cosine_similarity": 0.77029066
         },
         {
-          "identifier": "GO:1990070",
-          "label": "TRAPPI protein complex",
-          "cosine_similarity": 0.76915128
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.76941431
         }
       ]
     },
@@ -14617,6 +14648,11 @@
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.8780125
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.81371822
         },
         {
           "identifier": "GO:0070824",
@@ -14632,11 +14668,6 @@
           "identifier": "GO:0016590",
           "label": "ACF complex",
           "cosine_similarity": 0.8072003
-        },
-        {
-          "identifier": "GO:0031533",
-          "label": "mRNA capping enzyme complex",
-          "cosine_similarity": 0.80363957
         }
       ]
     },
@@ -14727,9 +14758,9 @@
           "cosine_similarity": 0.82845723
         },
         {
-          "identifier": "GO:0031931",
-          "label": "TORC1 complex",
-          "cosine_similarity": 0.77959159
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.80050861
         }
       ]
     },
@@ -14836,6 +14867,11 @@
           "cosine_similarity": 0.77963341
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.77320032
+        },
+        {
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.77259658
@@ -14849,11 +14885,6 @@
           "identifier": "GO:1990131",
           "label": "Gtr1-Gtr2 GTPase complex",
           "cosine_similarity": 0.7602276
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.75176671
         }
       ]
     },
@@ -14872,6 +14903,11 @@
           "cosine_similarity": 0.73383965
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.73298712
+        },
+        {
           "identifier": "GO:1990130",
           "label": "GATOR1 complex",
           "cosine_similarity": 0.72468108
@@ -14880,11 +14916,6 @@
           "identifier": "GO:1990071",
           "label": "TRAPPII protein complex",
           "cosine_similarity": 0.72145121
-        },
-        {
-          "identifier": "GO:0000938",
-          "label": "GARP complex",
-          "cosine_similarity": 0.71766359
         }
       ]
     },
@@ -14908,14 +14939,14 @@
           "cosine_similarity": 0.83386265
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.79328005
+        },
+        {
           "identifier": "GO:0000938",
           "label": "GARP complex",
           "cosine_similarity": 0.76690089
-        },
-        {
-          "identifier": "GO:0042765",
-          "label": "GPI-anchor transamidase complex",
-          "cosine_similarity": 0.76141666
         }
       ]
     },
@@ -15342,14 +15373,14 @@
           "cosine_similarity": 0.79284836
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.78192595
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.77961427
-        },
-        {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.77402241
         }
       ]
     },
@@ -15606,6 +15637,11 @@
       "label": "monopolin complex",
       "neighbors": [
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.80040661
+        },
+        {
           "identifier": "GO:0160065",
           "label": "SIN/MEN signaling complex",
           "cosine_similarity": 0.78080261
@@ -15624,11 +15660,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.77042817
-        },
-        {
-          "identifier": "GO:0035974",
-          "label": "meiotic spindle pole body",
-          "cosine_similarity": 0.76976774
         }
       ]
     },
@@ -15678,6 +15709,11 @@
           "cosine_similarity": 0.79206907
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.78138797
+        },
+        {
           "identifier": "GO:0000110",
           "label": "nucleotide-excision repair factor 1 complex",
           "cosine_similarity": 0.77045933
@@ -15686,11 +15722,6 @@
           "identifier": "GO:0032798",
           "label": "Swi5-Sfr1 complex",
           "cosine_similarity": 0.76922467
-        },
-        {
-          "identifier": "GO:0048188",
-          "label": "Set1C/COMPASS complex",
-          "cosine_similarity": 0.76867387
         }
       ]
     },
@@ -16897,9 +16928,9 @@
           "cosine_similarity": 0.76661317
         },
         {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.73819978
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.74337577
         }
       ]
     },
@@ -16928,9 +16959,9 @@
           "cosine_similarity": 0.71078341
         },
         {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.69631859
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.70840467
         }
       ]
     },
@@ -17047,14 +17078,14 @@
           "cosine_similarity": 0.82102723
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.78690145
+        },
+        {
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.7768948
-        },
-        {
-          "identifier": "GO:0030905",
-          "label": "retromer, tubulation complex",
-          "cosine_similarity": 0.77355936
         }
       ]
     },
@@ -17543,14 +17574,14 @@
           "cosine_similarity": 0.83386265
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.8213971
+        },
+        {
           "identifier": "GO:0071986",
           "label": "Ragulator complex",
           "cosine_similarity": 0.82102723
-        },
-        {
-          "identifier": "GO:0031205",
-          "label": "endoplasmic reticulum Sec complex",
-          "cosine_similarity": 0.79810308
         }
       ]
     },
@@ -17946,14 +17977,14 @@
           "cosine_similarity": 0.83717252
         },
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.82254886
+        },
+        {
           "identifier": "GO:0005663",
           "label": "DNA replication factor C complex",
           "cosine_similarity": 0.82208113
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.81612126
         }
       ]
     },
@@ -18334,6 +18365,11 @@
       "label": "WASH complex",
       "neighbors": [
         {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.73625278
+        },
+        {
           "identifier": "GO:0042555",
           "label": "MCM complex",
           "cosine_similarity": 0.73293238
@@ -18352,11 +18388,6 @@
           "identifier": "GO:0160065",
           "label": "SIN/MEN signaling complex",
           "cosine_similarity": 0.71134236
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.70577488
         }
       ]
     },

@@ -1107,6 +1107,15 @@
   "definition": "A protein complex associated with the mitotic spindle pole body during interphase and mitosis and comprises of the proteins of the septation initiation signaling network (SIN) of fission yeast or mitotic exit network (MEN) of budding yeast, organized by two scaffold/adaptor proteins."
  },
  {
+  "identifier": "GO:1990334",
+  "label": "SIN/MEN two-component GAP complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/sin_men_two_component_gap_complex.html",
+  "definition": "A protein complex that acts as a two-component GTPase-activating protein for the Tem1/Spg1 GTPase, thus regulating a signal transduction cascade (the mitotic exit network, MEN, in budding yeast; the septation initiation network, SIN, in fission yeast), which is required for mitotic exit and cytokinesis. The complex keeps the GTPase inactive until the spindle is properly oriented, thus inhibiting MEN/SIN activation."
+ },
+ {
   "identifier": "GO:0005876",
   "label": "spindle microtubule",
   "category": "CYTOSKELETON",
