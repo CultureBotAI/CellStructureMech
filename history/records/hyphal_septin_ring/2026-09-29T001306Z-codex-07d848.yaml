@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+  slug: hyphal_septin_ring
+session:
+  id: 2026-09-29T001306Z-codex-07d848
+  timestamp: '2026-09-29T00:13:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add hyphal septin ring
+  details: Created the GO:0032168 hyphal septin ring record after live QuickGO verification
+    and hidden/ignored-inclusive duplicate searches. Added GO-backed septin-ring parentage,
+    a reviewed-label-only septin constituent, a hyphal septation-site function, a nonmechanistic
+    topology graph, and boundary and component-grounding discussions while deliberately leaving
+    exact source-neutral septin and septin-associated-protein boundaries as an open TODO.

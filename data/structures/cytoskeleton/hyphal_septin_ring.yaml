@@ -1,0 +1,134 @@
+identifier: GO:0032168
+label: hyphal septin ring
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A tight ring-shaped structure that forms in the division plane within
+  hyphae of filamentous fungi at sites where a septum will form; composed of septins
+  as well as septin-associated proteins.
+definition_source: GO:0032168
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T00:12:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T00:12:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-ring parentage, a reviewed-label-only septin constituent,
+    a hyphal septation-site function, GO evidence, a nonmechanistic hyphal-septation
+    topology graph, and boundary and component-grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-29T00:28:43Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1750 by removing the location-only function while keeping the
+    future hyphal septation-site claim in the topology graph.'
+  llm_assisted: true
+parent_structures:
+- GO:0005940
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Hyphal septin rings are assembled from fungal septin GTPases, but
+    no exact source-neutral InterPro, Pfam, or NCBIfam CURIE was assigned for the
+    complete filamentous-fungus hyphal ring cohort.
+  role: Septin GTPases that assemble into the ring-shaped structure at future septation
+    sites in filamentous fungal hyphae.
+  evidence:
+  - reference: GO:0032168
+    notes: GO:0032168 defines the hyphal septin ring as composed of septins and septin-associated
+      proteins.
+  - reference: GO:0005940
+    notes: GO:0005940 defines the broader septin ring as a septin- and septin-associated-protein
+      structure.
+evidence:
+- reference: GO:0032168
+  notes: Gene Ontology cellular-component term for the hyphal septin ring.
+- reference: GO:0005940
+  notes: Gene Ontology cellular-component parent term for the septin ring.
+causal_graphs:
+- graph_id: hyphal_septin_ring_topology
+  title: Hyphal septin-ring topology
+  description: Septin proteins form a ring-shaped structure at future septation sites
+    in filamentous fungal hyphae.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed composition and localization without asserting
+    the ordered recruitment mechanism or septin-associated protein boundary at a hyphal
+    septation site.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: hyphal_septin_ring
+    label: hyphal septin ring
+    node_type: STRUCTURE
+    grounding: GO:0032168
+  - node_id: septation_site
+    label: hyphal septation site
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: hyphal_septin_ring
+    description: Septin proteins are constituents of the hyphal ring-shaped structure.
+    evidence:
+    - reference: GO:0032168
+      notes: GO:0032168 defines the structure as a hyphal septin ring.
+  - subject: hyphal_septin_ring
+    predicate: forms at
+    object: septation_site
+    description: The hyphal septin ring forms at a division plane where a septum will
+      form.
+    evidence:
+    - reference: GO:0032168
+      notes: GO:0032168 places the hyphal septin ring within hyphae of filamentous
+        fungi at future septation sites.
+discussions:
+- discussion_id: hyphal_septin_ring_boundary
+  prompt: Keep the hyphal septin ring distinct from other localized fungal septin-ring
+    states.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032168 denotes the septin ring within filamentous fungal hyphae at
+    future septation sites, while GO:0005940 denotes the broader septin ring class
+    spanning bud-neck, pseudohyphal, prospore, hyphal, and medial-cortex examples.
+    This record models only the hyphal septation-site subtype.
+  resolution_note: Curated GO:0032168 as the exact structure identifier and used GO:0005940
+    only as the is-a parent.
+  evidence:
+  - reference: GO:0032168
+    notes: GO:0032168 identifies the hypha-localized septin ring.
+  - reference: GO:0005940
+    notes: GO:0005940 identifies the broader division-plane septin ring class.
+  posed_by: codex
+  posed_date: '2026-09-28'
+  resolved_date: '2026-09-28'
+- discussion_id: resolve_hyphal_septin_ring_components
+  prompt: Resolve exact source-neutral family groundings and boundary status for hyphal
+    septin-ring septins and septin-associated proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#septin_proteins
+  rationale: The first hyphal septin-ring record keeps only the reviewed-label-only
+    septin protein cohort rather than guessing fungal-paralog family groundings or
+    adding septin-associated proteins before their exact constituent boundary has
+    been reviewed.
+  evidence:
+  - reference: GO:0032168
+    notes: GO:0032168 defines the hyphal septin ring as composed of septins and septin-associated
+      proteins.
+  posed_by: codex
+  posed_date: '2026-09-28'
