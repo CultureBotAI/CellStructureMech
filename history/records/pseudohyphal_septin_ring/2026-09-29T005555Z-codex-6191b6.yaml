@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+  slug: pseudohyphal_septin_ring
+session:
+  id: 2026-09-29T005555Z-codex-6191b6
+  timestamp: '2026-09-29T00:55:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add pseudohyphal septin ring
+  details: Created the GO:0032170 pseudohyphal septin ring record after live QuickGO verification
+    and hidden/ignored-inclusive duplicate searches. Added GO-backed septin-ring parentage,
+    a reviewed-label-only septin constituent, a nonmechanistic topology graph for the mother-cell/pseudohyphal-projection
+    junction, and boundary and component-grounding discussions while deliberately leaving
+    exact source-neutral septin and septin-associated-protein boundaries as an open TODO.
