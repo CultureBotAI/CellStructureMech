@@ -1,0 +1,211 @@
+identifier: cellstructuremech:meiotic_outer_plaque
+label: meiotic outer plaque
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A sporulation-specific cytoplasmic plaque that forms on meiosis II spindle
+  pole bodies in budding yeast after outer-plaque remodeling and nucleates prospore
+  membrane assembly.
+definition_source: DOI:10.1093/emboj/19.14.3657
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T12:17:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T12:19:11Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added MOP synonymy, outer-plaque parentage, spindle-pole-body parthood,
+    Saccharomyces scope, prospore-membrane initiation and vesicle-docking functions,
+    GO and literature evidence, a nonmechanistic MOP remodeling graph, and boundary/component
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-09-29T12:34:07Z'
+  curator: codex
+  action: TIGHTENED_DEFINITION
+  changes: Reworded the meiotic outer plaque definition so the record denotes the
+    plaque structure rather than the remodeling process and used primary literature
+    as the local definition source.
+  llm_assisted: true
+synonyms:
+- synonym_text: meiosis II outer plaque
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1091/mbc.E10-07-0563
+- synonym_text: MOP
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031322
+parent_structures:
+- GO:0005824
+part_of:
+- GO:0005816
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the characterized model in which sporulation-specific proteins
+    remodel the cytoplasmic SPB outer plaque into a meiotic outer plaque.
+  reference: DOI:10.1091/mbc.12.6.1611
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast MOP assembly, vesicle docking, and prospore membrane initiation
+    have been dissected genetically and cytologically.
+  reference: DOI:10.1091/mbc.E10-07-0563
+functions:
+- function_id: prospore_membrane_initiation
+  label: prospore membrane initiation
+  description: The meiotic outer plaque nucleates de novo prospore membrane formation
+    on the cytoplasmic face of meiosis II spindle pole bodies.
+  evidence:
+  - reference: GO:0031322
+    notes: GO:0031322 defines prospore-specific SPB remodeling as recruitment of sporulation-specific
+      proteins to the outer plaque to form the MOP.
+  - reference: DOI:10.1093/emboj/19.14.3657
+    notes: Knop and Strasser 2000 analyzed the budding-yeast SPB outer plaque as the
+      assembly site for prospore membranes.
+- function_id: prospore_vesicle_docking
+  label: prospore vesicle docking
+  description: The MOP acts as a docking complex for prospore-membrane precursor vesicles
+    during Saccharomyces sporulation.
+  evidence:
+  - reference: DOI:10.1091/mbc.E10-07-0563
+    notes: Mathieson et al. 2010 used Mpc54 mutants to separate vesicle association
+      from docking at the MOP and linked docking to exocyst recruitment.
+evidence:
+- reference: GO:0005824
+  notes: Gene Ontology cellular-component term for the broader SPB outer plaque.
+- reference: GO:0005816
+  notes: Gene Ontology cellular-component term for the spindle pole body that carries
+    the meiotic outer plaque.
+- reference: GO:0031322
+  notes: Gene Ontology biological-process term for ascospore-type prospore-specific
+    SPB remodeling; its definition names meiotic outer plaque formation.
+- reference: GO:0032120
+  notes: Gene Ontology biological-process term for ascospore-type prospore membrane
+    formation from the meiotic outer plaque.
+- reference: GO:0005628
+  notes: Gene Ontology cellular-component term for the prospore membrane that initiates
+    from the meiotic outer plaque.
+- reference: DOI:10.1093/emboj/19.14.3657
+  notes: Knop and Strasser 2000, Role of the spindle pole body of yeast in mediating
+    assembly of the prospore membrane during meiosis, The EMBO Journal.
+- reference: DOI:10.1091/mbc.12.6.1611
+  notes: Bajgier et al. 2001, SPO21 Is Required for Meiosis-specific Modification
+    of the Spindle Pole Body in Yeast, Molecular Biology of the Cell.
+- reference: DOI:10.1128/EC.2.3.431-445.2003
+  notes: Nickas et al. 2003, Ady4p and Spo74p Are Components of the Meiotic Spindle
+    Pole Body That Promote Growth of the Spores in Saccharomyces cerevisiae, Eukaryotic
+    Cell.
+- reference: DOI:10.1091/mbc.E10-07-0563
+  notes: Mathieson et al. 2010, Vesicle Docking to the Spindle Pole Body Is Necessary
+    to Recruit the Exocyst During Membrane Formation in Saccharomyces cerevisiae,
+    Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: meiotic_outer_plaque_initiates_prospore_membrane
+  title: MOP remodeling initiates the prospore membrane
+  description: During budding-yeast meiosis II, sporulation-specific remodeling converts
+    the SPB outer plaque into a meiotic outer plaque that docks precursor vesicles
+    and initiates prospore membrane growth.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the MOP as the meiosis-specific SPB outer-plaque
+    specialization and prospore-membrane initiation site without asserting the ordered
+    recruitment of individual Mpc54, Spo21/Mpc70, Spo74, or Ady4 constituents.
+  nodes:
+  - node_id: outer_plaque
+    label: outer plaque of spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005824
+  - node_id: meiotic_outer_plaque
+    label: meiotic outer plaque
+    node_type: STRUCTURE
+    grounding: cellstructuremech:meiotic_outer_plaque
+  - node_id: spindle_pole_body
+    label: spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005816
+  - node_id: prospore_membrane
+    label: prospore membrane
+    node_type: STRUCTURE
+    grounding: GO:0005628
+  edges:
+  - subject: outer_plaque
+    predicate: is remodeled into
+    object: meiotic_outer_plaque
+    description: During ascospore formation, sporulation-specific proteins remodel
+      the SPB outer plaque to form the meiotic outer plaque.
+    evidence:
+    - reference: GO:0031322
+      notes: GO:0031322 defines ascospore-type prospore-specific SPB remodeling as
+        recruitment of sporulation-specific proteins to form the MOP.
+    - reference: DOI:10.1091/mbc.12.6.1611
+      notes: Bajgier et al. 2001 found that Spo21 is required for the meiosis-specific
+        structural modification of the budding-yeast SPB outer plaque.
+  - subject: meiotic_outer_plaque
+    predicate: is part of
+    object: spindle_pole_body
+    description: The meiotic outer plaque is a cytoplasmic substructure of meiosis
+      II spindle pole bodies.
+    evidence:
+    - reference: GO:0031322
+      notes: GO:0031322 defines MOP formation as part of structural reorganization
+        of the SPB outer plaque.
+    - reference: DOI:10.1093/emboj/19.14.3657
+      notes: Knop and Strasser 2000 studied MOP formation on budding-yeast spindle
+        pole bodies during meiosis.
+  - subject: meiotic_outer_plaque
+    predicate: anchors initiation of
+    object: prospore_membrane
+    description: The MOP nucleates and anchors prospore membrane formation at the
+      SPB.
+    evidence:
+    - reference: DOI:10.1093/emboj/19.14.3657
+      notes: Knop and Strasser 2000 linked MOP assembly at the SPB to prospore membrane
+        formation.
+    - reference: DOI:10.1091/mbc.E10-07-0563
+      notes: Mathieson et al. 2010 showed that the MOP docks precursor vesicles and
+        recruits exocyst components during prospore membrane formation.
+discussions:
+- discussion_id: meiotic_outer_plaque_boundary
+  prompt: Keep the meiotic outer plaque distinct from the general SPB outer plaque
+    and the prospore-membrane SPB attachment site.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  - causal_graphs#meiotic_outer_plaque_initiates_prospore_membrane
+  rationale: GO:0031322 describes a meiosis II remodeling event that creates the MOP
+    from the cytoplasmic SPB outer plaque, whereas GO:0005824 denotes the broader
+    SPB outer plaque and GO:0070057 denotes the separate prospore-membrane region
+    to which the SPB is anchored.
+  resolution_note: Minted a local meiotic outer plaque identifier, parented it to
+    GO:0005824, linked it as part of GO:0005816, and kept the membrane attachment
+    site outside this protein-complex record.
+  evidence:
+  - reference: GO:0031322
+    notes: GO:0031322 names MOP formation as part of prospore-specific SPB remodeling.
+  - reference: GO:0005824
+    notes: GO:0005824 identifies the broader outer plaque of the spindle pole body.
+  - reference: GO:0070057
+    notes: GO:0070057 identifies the separate prospore membrane SPB attachment site.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_meiotic_outer_plaque_components
+  prompt: Resolve exact source-neutral family groundings for MOP constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The first MOP record captures the meiotic SPB outer-plaque specialization
+    without guessing exact InterPro, Pfam, NCBIfam, or Complex Portal groundings for
+    budding-yeast Mpc54, Spo21/Mpc70, Spo74, or Ady4.
+  evidence:
+  - reference: DOI:10.1091/mbc.12.6.1611
+  - reference: DOI:10.1128/EC.2.3.431-445.2003
+  - reference: DOI:10.1091/mbc.E10-07-0563
+  posed_by: codex
+  posed_date: '2026-09-29'
