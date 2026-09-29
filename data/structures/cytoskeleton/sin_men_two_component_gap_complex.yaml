@@ -1,0 +1,122 @@
+identifier: GO:1990334
+label: SIN/MEN two-component GAP complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that acts as a two-component GTPase-activating protein
+  for the Tem1/Spg1 GTPase, thus regulating a signal transduction cascade (the mitotic
+  exit network, MEN, in budding yeast; the septation initiation network, SIN, in fission
+  yeast), which is required for mitotic exit and cytokinesis. The complex keeps the
+  GTPase inactive until the spindle is properly oriented, thus inhibiting MEN/SIN
+  activation.
+definition_source: GO:1990334
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-29T20:41:46Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-29T20:42:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO narrow synonyms, GTPase-activator parentage, spindle-pole-body
+    parthood, budding-yeast scope, a MEN Tem1 inhibition function, GO and literature
+    evidence, and boundary/component discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: Bfa1-Bub2 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990334
+- synonym_text: Byr4-Cdc16 GAP complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990334
+parent_structures:
+- GO:1902773
+part_of:
+- GO:0005816
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the model system for the Bfa1-Bub2 branch of this two-component
+    MEN GAP; no broader fungal distribution is asserted here.
+  reference: DOI:10.1083/jcb.200507162
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference budding-yeast system for the Bfa1-Bub2 GAP complex that restrains
+    Tem1 to inhibit mitotic exit.
+  reference: DOI:10.1083/jcb.200507162
+functions:
+- function_id: men_tem1_gap_checkpoint_inhibition
+  label: MEN Tem1 GAP checkpoint inhibition
+  description: The budding-yeast Bfa1-Bub2 two-component GAP complex keeps Tem1 inactive
+    at spindle pole bodies until spindle orientation permits MEN activation and mitotic
+    exit.
+  evidence:
+  - reference: GO:1990334
+    notes: GO:1990334 defines the complex by two-component GTPase-activating activity
+      toward Tem1/Spg1 and MEN/SIN inhibition.
+  - reference: DOI:10.1083/jcb.200507162
+    notes: Fraschini et al. 2006 studied Bfa1-dependent Bub2 regulation of Tem1 and
+      mitotic exit from spindle pole bodies in budding yeast.
+evidence:
+- reference: GO:1990334
+  notes: Gene Ontology cellular-component term for the SIN/MEN two-component GAP complex,
+    with budding- and fission-yeast complex names as narrow synonyms.
+- reference: GO:1902773
+  notes: Gene Ontology parent term for GTPase activator complex.
+- reference: GO:0005816
+  notes: Gene Ontology cellular-component term for the spindle pole body, which contains
+    the SIN/MEN two-component GAP complex by parthood.
+- reference: DOI:10.1083/jcb.200507162
+  notes: Fraschini et al. 2006 studied localization and Tem1/MEN checkpoint function
+    of the budding-yeast Bub2-Bfa1 complex at duplicated spindle pole bodies.
+discussions:
+- discussion_id: sin_men_two_component_gap_boundary
+  prompt: Keep the SIN/MEN two-component GAP complex distinct from the broad SIN/MEN
+    signaling complex and from SPB-localized SIN activation states.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  rationale: GO:1990334 denotes the narrower two-component GAP that inhibits Tem1/Spg1
+    GTPase signaling and is part of the spindle pole body. It is not equivalent to
+    the broader GO:0160065 SIN/MEN signaling complex, nor to the GO:0160066 old-SPB
+    interphase or GO:0160067 new-SPB anaphase SIN states.
+  resolution_note: Curated GO:1990334 as a spindle-pole-body GAP complex with GO:1902773
+    parentage and kept broad SIN/MEN and narrow SIN activation-state assemblies out
+    of this record.
+  evidence:
+  - reference: GO:1990334
+    notes: GO:1990334 identifies the SIN/MEN two-component GAP complex.
+  - reference: GO:0160065
+    notes: GO:0160065 identifies the broader SIN/MEN signaling complex.
+  - reference: GO:0160066
+    notes: GO:0160066 identifies the interphase SIN signaling complex.
+  - reference: GO:0160067
+    notes: GO:0160067 identifies the new spindle pole body SIN signaling complex.
+  posed_by: codex
+  posed_date: '2026-09-29'
+  resolved_date: '2026-09-29'
+- discussion_id: resolve_sin_men_gap_component_groundings
+  prompt: Resolve exact source-neutral family groundings for Bfa1/Bub2 and Byr4/Cdc16
+    GAP constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: This first GO-backed record captures the two-component GAP complex without
+    guessing InterPro, Pfam, NCBIfam, UniProtKB, or Complex Portal groundings for
+    lineage-specific protein names.
+  evidence:
+  - reference: GO:1990334
+    notes: GO:1990334 names budding- and fission-yeast GAP complexes without grounding
+      their constituents as source-neutral families.
+  - reference: DOI:10.1083/jcb.200507162
+    notes: Fraschini et al. 2006 studied the budding-yeast Bub2-Bfa1 complex at spindle
+      pole bodies.
+  posed_by: codex
+  posed_date: '2026-09-29'

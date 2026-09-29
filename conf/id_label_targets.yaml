@@ -62,6 +62,8 @@ targets:
     exclude_keys: [components, functions, causal_graphs, taxonomic_distribution, canonical_examples,
                    images, physical_properties, associated_traits, discussions, datasets, curation_history,
                    synonyms, evidence]
+    exceptions:
+      - { id: "GO:1990334", label: "SIN/MEN two-component GAP complex", reason: "QuickGO canonical was updated from 'Bfa1-Bub2 complex' to 'SIN/MEN two-component GAP complex' in 2026; the OAK GO snapshot still reports the older label" }
 
   # Functions and causal-graph nodes: (grounding, label).
   - name: grounded_nodes

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+  slug: sin_men_two_component_gap_complex
+session:
+  id: 2026-09-29T204726Z-codex-14256d
+  timestamp: '2026-09-29T20:47:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - parent_structures
+  - part_of
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - discussions
+  summary: Added SIN/MEN two-component GAP complex record
+  details: Created the GO:1990334 SIN/MEN two-component GAP complex record with GO narrow
+    synonyms, GTPase-activator parentage, spindle-pole-body parthood, Saccharomyces cerevisiae
+    scope, a MEN Tem1 checkpoint-inhibition function, GO and budding-yeast literature evidence,
+    and discussions capturing its SIN/MEN boundary and deferred component-grounding work.
