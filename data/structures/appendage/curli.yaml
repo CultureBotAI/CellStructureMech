@@ -24,6 +24,12 @@ curation_history:
   changes: Repointed the curli secretion complex boundary TODO to the curli assembly
     graph so its attaches_to anchor resolves.
   llm_assisted: true
+- timestamp: '2026-09-29T05:29:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Resolved the curli secretion-complex boundary TODO after adding GO:0062155
+    as a standalone secretion-system record.
+  llm_assisted: true
 synonyms:
 - synonym_text: curli fimbriae
   synonym_type: EXACT_SYNONYM
@@ -191,7 +197,7 @@ discussions:
   prompt: Decide whether GO:0062155 curli secretion complex needs its own CellStructureMech
     record.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#type_viii_curli_amyloid_assembly
   rationale: GO has an exact curli secretion complex term for the CsgEFG machinery.
@@ -206,3 +212,8 @@ discussions:
       complexes.
   posed_by: claude
   posed_date: '2026-09-06'
+  resolution_note: Added GO:0062155 as a standalone curli secretion complex record
+    and kept it separate from the GO:0098774 curli appendage because the Csg secretion
+    machinery exports curli subunits but is not part of the extracellular amyloid
+    fiber.
+  resolved_date: '2026-09-29'

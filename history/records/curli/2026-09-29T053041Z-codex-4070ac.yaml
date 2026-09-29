@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/curli.yaml
+  slug: curli
+session:
+  id: 2026-09-29T053041Z-codex-4070ac
+  timestamp: '2026-09-29T05:30:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Resolve curli secretion complex boundary
+  details: Resolved the GO:0062155 curli secretion complex boundary TODO on the GO:0098774
+    curli record after adding a standalone curli secretion complex record and keeping the
+    Csg secretion machinery outside the extracellular amyloid-fiber boundary.
