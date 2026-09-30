@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/mating_projection_tip_membrane.yaml
+  slug: mating_projection_tip_membrane
+session:
+  id: 2026-09-30T050624Z-codex-3b6357
+  timestamp: '2026-09-30T05:06:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added mating projection tip membrane record
+  details: Created a GO:0070867 mating projection tip membrane record with mating-projection-tip
+    and mating-projection-membrane parthood, a reviewed-label-only lipid-bilayer component,
+    Saccharomyces scope, tip-membrane domain function evidence, a nonmechanistic tip-membrane
+    topology graph, and an open grounding TODO for the lipid constituent.
