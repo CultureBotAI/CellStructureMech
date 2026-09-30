@@ -726,6 +726,11 @@
       "label": "ciliary membrane",
       "neighbors": [
         {
+          "identifier": "GO:0020018",
+          "label": "ciliary pocket membrane",
+          "cosine_similarity": 0.87825989
+        },
+        {
           "identifier": "GO:0005929",
           "label": "cilium",
           "cosine_similarity": 0.8528158
@@ -744,11 +749,6 @@
           "identifier": "GO:0009707",
           "label": "chloroplast outer membrane",
           "cosine_similarity": 0.77892944
-        },
-        {
-          "identifier": "GO:0009527",
-          "label": "plastid outer membrane",
-          "cosine_similarity": 0.7774063
         }
       ]
     },
@@ -2384,14 +2384,14 @@
           "cosine_similarity": 0.75380139
         },
         {
+          "identifier": "GO:0020018",
+          "label": "ciliary pocket membrane",
+          "cosine_similarity": 0.70741281
+        },
+        {
           "identifier": "GO:0035974",
           "label": "meiotic spindle pole body",
           "cosine_similarity": 0.69904006
-        },
-        {
-          "identifier": "GO:0044732",
-          "label": "mitotic spindle pole body",
-          "cosine_similarity": 0.69696822
         }
       ]
     },
@@ -6953,6 +6953,37 @@
       ]
     },
     {
+      "identifier": "GO:0020018",
+      "label": "ciliary pocket membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0020016",
+          "label": "flagellar pocket",
+          "cosine_similarity": 0.89442768
+        },
+        {
+          "identifier": "GO:0060170",
+          "label": "ciliary membrane",
+          "cosine_similarity": 0.87825989
+        },
+        {
+          "identifier": "cellstructuremech:mitosome_inner_membrane",
+          "label": "mitosome inner membrane",
+          "cosine_similarity": 0.81505004
+        },
+        {
+          "identifier": "cellstructuremech:mitosome_outer_membrane",
+          "label": "mitosome outer membrane",
+          "cosine_similarity": 0.79687526
+        },
+        {
+          "identifier": "GO:0070113",
+          "label": "organellar chromatophore inner membrane",
+          "cosine_similarity": 0.78863692
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005801",
       "label": "cis-Golgi network",
       "neighbors": [
@@ -8631,6 +8662,11 @@
       "label": "flagellar pocket",
       "neighbors": [
         {
+          "identifier": "GO:0020018",
+          "label": "ciliary pocket membrane",
+          "cosine_similarity": 0.89442768
+        },
+        {
           "identifier": "GO:1990900",
           "label": "ciliary pocket collar",
           "cosine_similarity": 0.79816005
@@ -8649,11 +8685,6 @@
           "identifier": "GO:0031905",
           "label": "early endosome lumen",
           "cosine_similarity": 0.75379258
-        },
-        {
-          "identifier": "GO:0060170",
-          "label": "ciliary membrane",
-          "cosine_similarity": 0.75295429
         }
       ]
     },

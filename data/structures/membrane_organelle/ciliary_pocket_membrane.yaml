@@ -1,0 +1,186 @@
+identifier: GO:0020018
+label: ciliary pocket membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: That part of the plasma membrane found in the ciliary pocket (also called
+  flagellar pocket).
+definition_source: GO:0020018
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T02:23:15Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T02:24:36Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, ciliary-membrane parentage, flagellar-pocket parthood,
+    a reviewed-label-only lipid-bilayer constituent, Trypanosoma scope and canonical
+    example, a membrane-boundary function, GO/DOI evidence, a nonmechanistic topology
+    graph, and boundary and molecular-inventory discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: cilial pocket membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0020018
+- synonym_text: cilium pocket membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0020018
+- synonym_text: flagellar pocket membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:0020018
+parent_structures:
+- GO:0060170
+part_of:
+- GO:0020016
+components:
+- component_id: ciliary_pocket_lipid_bilayer
+  label: ciliary pocket lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0020018 identifies the complete ciliary-pocket membrane domain,
+    but no exact source-neutral lipid CURIE was curated for the lipid bilayer of that
+    specialized pocket membrane.
+  role: Lipid-bilayer constituent of the plasma-membrane domain that lines the flagellar
+    pocket invagination.
+  evidence:
+  - reference: GO:0020018
+    notes: GO:0020018 defines the ciliary pocket membrane as the plasma-membrane portion
+      in the ciliary or flagellar pocket.
+  - reference: DOI:10.1073/pnas.0909289106
+    notes: Gadelha et al. 2009 studied the T. brucei flagellar pocket membrane domain
+      and its cytoskeletal boundaries.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  presence: COMMON
+  note: T. brucei flagellar pockets include a specialized plasma-membrane domain whose
+    boundaries are influenced by pocket-associated cytoskeletal features.
+  reference: DOI:10.1073/pnas.0909289106
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: African trypanosome model in which flagellar-pocket membrane domains and pocket
+    boundaries have been analyzed.
+  reference: DOI:10.1073/pnas.0909289106
+functions:
+- function_id: flagellar_pocket_membrane_boundary
+  label: flagellar pocket membrane boundary
+  description: The ciliary pocket membrane forms the specialized plasma-membrane domain
+    that lines the flagellar pocket invagination.
+  evidence:
+  - reference: GO:0020018
+    notes: GO:0020018 identifies the ciliary pocket membrane as the plasma-membrane
+      part found in the ciliary or flagellar pocket.
+  - reference: DOI:10.1038/nrmicro2221
+    notes: Field and Carrington 2009 reviewed the trypanosome flagellar pocket as
+      a plasma-membrane invagination with a distinct membrane domain.
+evidence:
+- reference: GO:0020018
+  notes: Gene Ontology cellular-component term for the ciliary pocket membrane.
+- reference: GO:0060170
+  notes: Gene Ontology cellular-component term for the ciliary membrane.
+- reference: GO:0020016
+  notes: Gene Ontology cellular-component term for the containing ciliary pocket.
+- reference: DOI:10.1038/nrmicro2221
+  notes: Field and Carrington 2009, 'The trypanosome flagellar pocket', Nature Reviews
+    Microbiology.
+- reference: DOI:10.1073/pnas.0909289106
+  notes: Gadelha et al. 2009, 'Membrane domains and flagellar pocket boundaries are
+    influenced by the cytoskeleton in African trypanosomes', Proceedings of the National
+    Academy of Sciences.
+- reference: DOI:10.1242/jcs.045740
+  notes: Lacomble et al. 2009, 'Three-dimensional cellular architecture of the flagellar
+    pocket and associated cytoskeleton in trypanosomes revealed by electron microscope
+    tomography', Journal of Cell Science.
+- reference: DOI:10.1016/j.pt.2020.11.005
+  notes: Halliday and Sunter 2021, 'Trypanosomatid Flagellar Pocket from Structure
+    to Function', Trends in Parasitology.
+causal_graphs:
+- graph_id: ciliary_pocket_membrane_bounds_pocket
+  title: Ciliary-pocket membrane bounds the flagellar pocket
+  description: The ciliary pocket membrane is a specialized plasma-membrane domain
+    that lines the flagellar pocket invagination.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures membrane topology around the flagellar pocket without
+    asserting exact T. brucei membrane proteins, lipid species, or cytoskeletal anchoring
+    machinery.
+  nodes:
+  - node_id: ciliary_pocket_lipid_bilayer
+    label: ciliary pocket lipid bilayer
+    node_type: STRUCTURE
+    component_ref: ciliary_pocket_lipid_bilayer
+  - node_id: ciliary_pocket_membrane
+    label: ciliary pocket membrane
+    node_type: STRUCTURE
+    grounding: GO:0020018
+  - node_id: flagellar_pocket
+    label: flagellar pocket
+    node_type: ORGANELLE
+    grounding: GO:0020016
+  edges:
+  - subject: ciliary_pocket_lipid_bilayer
+    predicate: contributes to
+    object: ciliary_pocket_membrane
+    description: The ciliary pocket lipid bilayer is a constituent of the complete
+      flagellar-pocket membrane domain.
+    evidence:
+    - reference: GO:0020018
+      notes: GO:0020018 identifies the ciliary pocket membrane as a plasma-membrane
+        domain.
+  - subject: ciliary_pocket_membrane
+    predicate: bounds
+    object: flagellar_pocket
+    description: The ciliary pocket membrane lines the flagellar pocket invagination.
+    evidence:
+    - reference: GO:0020018
+      notes: GO:0020018 defines the ciliary pocket membrane as part of the ciliary
+        or flagellar pocket.
+    - reference: DOI:10.1038/nrmicro2221
+      notes: Field and Carrington 2009 reviewed the membrane organization of the trypanosome
+        flagellar pocket.
+discussions:
+- discussion_id: ciliary_pocket_membrane_boundary
+  prompt: Keep the ciliary pocket membrane distinct from the whole flagellar pocket
+    and from the cytoskeletal pocket collar.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0020018 denotes the specialized plasma-membrane domain lining the
+    ciliary or flagellar pocket, GO:0020016 denotes the complete ciliary pocket invagination,
+    and GO:1990900 denotes the collar complex at the pocket neck.
+  resolution_note: Curated GO:0020018 as the exact pocket-membrane domain and used
+    GO:0020016 for whole-pocket parthood.
+  evidence:
+  - reference: GO:0020018
+    notes: GO:0020018 identifies the ciliary pocket membrane.
+  - reference: GO:0020016
+    notes: GO:0020016 identifies the complete ciliary pocket.
+  - reference: GO:1990900
+    notes: GO:1990900 identifies the ciliary pocket collar.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_ciliary_pocket_membrane_inventory
+  prompt: Resolve exact lipid classes and membrane proteins of the T. brucei flagellar
+    pocket membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#ciliary_pocket_lipid_bilayer
+  rationale: Gadelha et al. 2009 support the flagellar-pocket membrane domain and
+    its cytoskeletal boundaries, but this first child-membrane record does not assign
+    exact source-neutral lipid or protein-family groundings for the pocket membrane.
+  evidence:
+  - reference: DOI:10.1073/pnas.0909289106
+    notes: Gadelha et al. 2009 investigated African trypanosome flagellar-pocket membrane
+      domains and boundaries.
+  posed_by: codex
+  posed_date: '2026-09-30'
