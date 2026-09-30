@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/oral_apparatus.yaml
+  slug: oral_apparatus
+session:
+  id: 2026-09-30T195024Z-codex-02ea1e
+  timestamp: '2026-09-30T19:50:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added oral apparatus record
+  details: Added a GO:0031912 oral apparatus record for the ciliate feeding apparatus, including
+    cellular-anatomical-structure parentage, GO:0032123 deep-fiber has-part topology, Ciliophora
+    and Tetrahymena scope, a food-channeling function, and boundary and component-grounding
+    discussions.

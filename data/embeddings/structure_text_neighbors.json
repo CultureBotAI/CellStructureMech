@@ -14552,6 +14552,11 @@
       "label": "cytostome",
       "neighbors": [
         {
+          "identifier": "GO:0031912",
+          "label": "oral apparatus",
+          "cosine_similarity": 0.74674727
+        },
+        {
           "identifier": "cellstructuremech:funis",
           "label": "funis",
           "cosine_similarity": 0.70527905
@@ -14570,11 +14575,6 @@
           "identifier": "GO:0031905",
           "label": "early endosome lumen",
           "cosine_similarity": 0.68070329
-        },
-        {
-          "identifier": "GO:0020007",
-          "label": "apical complex",
-          "cosine_similarity": 0.68069846
         }
       ]
     },
@@ -15027,6 +15027,11 @@
           "cosine_similarity": 0.62548163
         },
         {
+          "identifier": "GO:0031912",
+          "label": "oral apparatus",
+          "cosine_similarity": 0.61993242
+        },
+        {
           "identifier": "GO:0032126",
           "label": "eisosome",
           "cosine_similarity": 0.61742677
@@ -15035,11 +15040,6 @@
           "identifier": "GO:0062159",
           "label": "contractile vacuole complex",
           "cosine_similarity": 0.61602216
-        },
-        {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.594771
         }
       ]
     },
@@ -17458,6 +17458,37 @@
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.77736198
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031912",
+      "label": "oral apparatus",
+      "neighbors": [
+        {
+          "identifier": "GO:0031910",
+          "label": "cytostome",
+          "cosine_similarity": 0.74674727
+        },
+        {
+          "identifier": "GO:0020007",
+          "label": "apical complex",
+          "cosine_similarity": 0.66510513
+        },
+        {
+          "identifier": "GO:0035253",
+          "label": "ciliary rootlet",
+          "cosine_similarity": 0.65843851
+        },
+        {
+          "identifier": "GO:0062159",
+          "label": "contractile vacuole complex",
+          "cosine_similarity": 0.65616589
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.6409593
         }
       ]
     },

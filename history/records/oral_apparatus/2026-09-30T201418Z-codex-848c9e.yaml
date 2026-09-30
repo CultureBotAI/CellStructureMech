@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/oral_apparatus.yaml
+  slug: oral_apparatus
+session:
+  id: 2026-09-30T201418Z-codex-848c9e
+  timestamp: '2026-09-30T20:14:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1839
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1838
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed oral apparatus graph review
+  details: 'Resolved PR #1838 review issue #1839 by removing an unsupported generic food CHEMICAL
+    node from the oral-apparatus topology graph and retaining the GO-backed edge from the
+    oral apparatus to the cytostome.'
