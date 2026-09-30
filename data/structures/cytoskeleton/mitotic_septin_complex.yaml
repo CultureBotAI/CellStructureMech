@@ -1,0 +1,125 @@
+identifier: GO:0032151
+label: mitotic septin complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterooligomeric septin complex that acts during mitotic cell division.
+definition_source: GO:0032151
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T17:42:05Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T17:43:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-complex parentage, a reviewed-label-only septin constituent,
+    a GO-backed mitotic cell-division function, a nonmechanistic oligomerization graph,
+    and boundary and component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0031105
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0032151 defines a heterooligomeric septin complex acting during
+    mitotic cell division, but no exact source-neutral InterPro, Pfam, NCBIfam, or
+    UniProtKB CURIE was assigned for the full mitotic septin-complex cohort.
+  role: Septin GTPases that assemble into the heterooligomeric septin complex acting
+    during mitotic cell division.
+  evidence:
+  - reference: GO:0032151
+    notes: GO:0032151 defines the mitotic septin complex as a heterooligomeric septin
+      complex.
+  - reference: GO:0031105
+    notes: GO:0031105 defines septin complexes as septin-containing, typically oligomeric
+      protein complexes.
+functions:
+- function_id: mitotic_cell_division_support
+  label: mitotic cell division support
+  description: The mitotic septin complex is a heterooligomeric septin complex that
+    acts during mitotic cell division.
+  evidence:
+  - reference: GO:0032151
+    notes: GO:0032151 defines the complex by its action during mitotic cell division.
+evidence:
+- reference: GO:0032151
+  notes: Gene Ontology cellular-component term for the mitotic septin complex.
+- reference: GO:0031105
+  notes: OLS reports GO:0031105 septin complex as the direct GO:0032151 parent.
+causal_graphs:
+- graph_id: mitotic_septin_complex_oligomerization
+  title: Mitotic septin-complex oligomerization
+  description: Septin proteins form a heterooligomeric septin complex that acts during
+    mitotic cell division.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-backed composition of the mitotic septin
+    complex without asserting exact subunit stoichiometry, a species-specific paralog
+    set, or higher-order septin-ring polymerization.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: mitotic_septin_complex
+    label: mitotic septin complex
+    node_type: STRUCTURE
+    grounding: GO:0032151
+  edges:
+  - subject: septin_proteins
+    predicate: oligomerize into
+    object: mitotic_septin_complex
+    description: Septin proteins assemble into the heterooligomeric mitotic septin
+      complex.
+    evidence:
+    - reference: GO:0032151
+      notes: GO:0032151 defines the mitotic septin complex as a heterooligomeric septin
+        complex.
+discussions:
+- discussion_id: mitotic_septin_complex_boundary
+  prompt: Keep the mitotic septin complex distinct from the parent septin complex,
+    the meiotic septin complex, and higher-order septin rings.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032151 denotes the heterooligomeric septin complex that acts during
+    mitotic cell division. GO:0031105 is the broader septin-complex parent, GO:0032152
+    denotes the meiotic counterpart, and GO:0005940 denotes a higher-order septin
+    ring rather than the oligomeric complex.
+  resolution_note: Curated GO:0032151 as the mitotic specialization of the septin-complex
+    class and did not merge it with meiotic or higher-order septin-ring records.
+  evidence:
+  - reference: GO:0032151
+    notes: GO:0032151 identifies the mitotic septin complex.
+  - reference: GO:0031105
+    notes: GO:0031105 identifies the broader septin-complex class.
+  - reference: GO:0032152
+    notes: GO:0032152 identifies the meiotic septin complex.
+  - reference: GO:0005940
+    notes: GO:0005940 identifies the higher-order septin ring.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_mitotic_septin_complex_components
+  prompt: Resolve exact source-neutral family groundings and species boundaries for
+    mitotic septin-complex septin proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The initial mitotic septin complex record uses a reviewed-label-only
+    septin protein cohort rather than guessing a family CURIE or importing species-specific
+    paralogs into the generic GO:0032151 record.
+  evidence:
+  - reference: GO:0032151
+    notes: GO:0032151 defines a heterooligomeric mitotic septin complex.
+  posed_by: codex
+  posed_date: '2026-09-30'
