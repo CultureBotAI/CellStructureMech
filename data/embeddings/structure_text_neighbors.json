@@ -15044,6 +15044,37 @@
       ]
     },
     {
+      "identifier": "GO:0071819",
+      "label": "DUBm complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000124",
+          "label": "SAGA complex",
+          "cosine_similarity": 0.83074135
+        },
+        {
+          "identifier": "GO:0046695",
+          "label": "SLIK (SAGA-like) complex",
+          "cosine_similarity": 0.82433441
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.81328579
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.78018774
+        },
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.77600874
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032126",
       "label": "eisosome",
       "neighbors": [
@@ -18370,6 +18401,11 @@
           "cosine_similarity": 0.89923433
         },
         {
+          "identifier": "GO:0071819",
+          "label": "DUBm complex",
+          "cosine_similarity": 0.83074135
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.80167998
@@ -18383,11 +18419,6 @@
           "identifier": "GO:0032777",
           "label": "piccolo histone acetyltransferase complex",
           "cosine_similarity": 0.77720344
-        },
-        {
-          "identifier": "GO:1990468",
-          "label": "NuA3b histone acetyltransferase complex",
-          "cosine_similarity": 0.77275762
         }
       ]
     },
@@ -18680,6 +18711,11 @@
           "cosine_similarity": 0.89923433
         },
         {
+          "identifier": "GO:0071819",
+          "label": "DUBm complex",
+          "cosine_similarity": 0.82433441
+        },
+        {
           "identifier": "GO:0035267",
           "label": "NuA4 histone acetyltransferase complex",
           "cosine_similarity": 0.79835591
@@ -18693,11 +18729,6 @@
           "identifier": "GO:0016514",
           "label": "SWI/SNF complex",
           "cosine_similarity": 0.78336636
-        },
-        {
-          "identifier": "GO:1990467",
-          "label": "NuA3a histone acetyltransferase complex",
-          "cosine_similarity": 0.77360144
         }
       ]
     },
