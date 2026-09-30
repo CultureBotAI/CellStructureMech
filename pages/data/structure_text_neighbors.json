@@ -2250,6 +2250,11 @@
           "cosine_similarity": 0.95919692
         },
         {
+          "identifier": "GO:0032173",
+          "label": "septin collar",
+          "cosine_similarity": 0.90504548
+        },
+        {
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.86145883
@@ -2263,11 +2268,6 @@
           "identifier": "GO:0032177",
           "label": "cellular bud neck split septin rings",
           "cosine_similarity": 0.85527764
-        },
-        {
-          "identifier": "GO:0000142",
-          "label": "cellular bud neck contractile ring",
-          "cosine_similarity": 0.83265482
         }
       ]
     },
@@ -2296,9 +2296,9 @@
           "cosine_similarity": 0.87325132
         },
         {
-          "identifier": "GO:0032169",
-          "label": "prospore septin ring",
-          "cosine_similarity": 0.8643645
+          "identifier": "GO:0032173",
+          "label": "septin collar",
+          "cosine_similarity": 0.86822947
         }
       ]
     },
@@ -2761,9 +2761,9 @@
           "cosine_similarity": 0.89358838
         },
         {
-          "identifier": "GO:0032175",
-          "label": "mating projection septin ring",
-          "cosine_similarity": 0.87288779
+          "identifier": "GO:0032173",
+          "label": "septin collar",
+          "cosine_similarity": 0.87397993
         }
       ]
     },
@@ -3159,14 +3159,14 @@
           "cosine_similarity": 0.87175089
         },
         {
+          "identifier": "GO:0032173",
+          "label": "septin collar",
+          "cosine_similarity": 0.86988407
+        },
+        {
           "identifier": "GO:0032172",
           "label": "germ tube septin ring",
           "cosine_similarity": 0.8648741
-        },
-        {
-          "identifier": "GO:0005940",
-          "label": "septin ring",
-          "cosine_similarity": 0.86086984
         }
       ]
     },
@@ -4035,6 +4035,37 @@
           "identifier": "GO:0005822",
           "label": "inner plaque of spindle pole body",
           "cosine_similarity": 0.74367847
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0032173",
+      "label": "septin collar",
+      "neighbors": [
+        {
+          "identifier": "GO:0032174",
+          "label": "cellular bud neck septin collar",
+          "cosine_similarity": 0.90504548
+        },
+        {
+          "identifier": "GO:0032172",
+          "label": "germ tube septin ring",
+          "cosine_similarity": 0.87397993
+        },
+        {
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.86988407
+        },
+        {
+          "identifier": "GO:0000144",
+          "label": "cellular bud neck septin ring",
+          "cosine_similarity": 0.86822947
+        },
+        {
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.86762773
         }
       ]
     },

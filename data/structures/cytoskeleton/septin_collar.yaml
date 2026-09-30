@@ -1,0 +1,149 @@
+identifier: GO:0032173
+label: septin collar
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A tubular, hourglass-shaped structure composed of highly ordered arrays
+  of septin filaments; in budding yeast cells, the septin collar forms from the initial
+  septin ring by expanding into the daughter cell.
+definition_source: GO:0032173
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T07:49:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T07:52:19Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-hourglass synonymy, septin-cytoskeleton parentage, a reviewed-label-only
+    septin constituent, Saccharomyces distribution and canonical example evidence,
+    GO-backed ring-to-collar topology, and collar-boundary and component-grounding
+    discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: septin hourglass
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032173
+parent_structures:
+- GO:0032156
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Fungal septin collars are assembled from multiple septin GTPases,
+    but no exact source-neutral InterPro, Pfam, or NCBIfam CURIE was assigned for
+    the complete collar-forming fungal septin cohort.
+  role: Septin GTPases that form highly ordered filament arrays in the tubular hourglass-shaped
+    collar.
+  evidence:
+  - reference: GO:0032173
+    notes: GO:0032173 defines the septin collar as a tubular, hourglass-shaped structure
+      composed of highly ordered arrays of septin filaments.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast septin collars form from the initial septin ring as it expands
+    into the daughter cell.
+  reference: GO:0032173
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: GO uses budding yeast as the definitional example in which the septin collar
+    forms from the initial septin ring.
+  reference: GO:0032173
+evidence:
+- reference: GO:0032173
+  notes: Gene Ontology cellular-component term for the septin collar.
+- reference: GO:0032156
+  notes: Gene Ontology cellular-component parent term for the septin cytoskeleton.
+- reference: GO:0032174
+  notes: Gene Ontology cellular-component child term for the cellular bud neck septin
+    collar.
+- reference: GO:0062140
+  notes: Gene Ontology cellular-component child term for the hyphae septin collar.
+causal_graphs:
+- graph_id: septin_ring_to_collar_topology
+  title: Budding-yeast septin-ring to septin-collar topology
+  description: Septin proteins form highly ordered arrays in an hourglass-shaped collar
+    after the initial budding-yeast septin ring expands into the daughter cell.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-backed budding-yeast ring-to-collar transition
+    for the generic septin-collar class without asserting the ordered recruitment
+    mechanism or the filament organization of every localized collar subtype.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: septin_ring
+    label: septin ring
+    node_type: STRUCTURE
+    grounding: GO:0005940
+  - node_id: septin_collar
+    label: septin collar
+    node_type: STRUCTURE
+    grounding: GO:0032173
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: septin_collar
+    description: Septin filaments form highly ordered arrays in the tubular septin
+      collar.
+    evidence:
+    - reference: GO:0032173
+      notes: GO:0032173 defines the septin collar as a tubular, hourglass-shaped array
+        of septin filaments.
+  - subject: septin_ring
+    predicate: expands into
+    object: septin_collar
+    description: In budding yeast, the septin collar forms from the initial septin
+      ring by expansion into the daughter cell.
+    evidence:
+    - reference: GO:0032173
+      notes: GO:0032173 describes the budding-yeast septin collar as forming from
+        the initial septin ring by expansion into the daughter cell.
+discussions:
+- discussion_id: septin_collar_boundary
+  prompt: Keep the generic septin collar distinct from localized bud-neck and hyphal
+    septin-collar subtypes.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032173 denotes the broader hourglass-shaped septin filament collar
+    class, while GO:0032174 narrows the same architecture to the cellular bud neck
+    and GO:0062140 narrows it to the pathogenic-fungal hyphae collar at plant plasmodesmata.
+  resolution_note: Curated GO:0032173 as the generic collar and kept GO:0032174 and
+    GO:0062140 as narrower collar classes.
+  evidence:
+  - reference: GO:0032173
+    notes: GO:0032173 identifies the broader septin collar.
+  - reference: GO:0032174
+    notes: GO:0032174 identifies the cellular bud neck septin collar.
+  - reference: GO:0062140
+    notes: GO:0062140 identifies the hyphae septin collar.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_septin_collar_grounding
+  prompt: Resolve exact source-neutral family groundings for septin-collar septin
+    proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The first generic septin-collar record reuses a reviewed-label-only septin
+    protein cohort rather than guessing InterPro, Pfam, or NCBIfam accessions that
+    may not exactly delimit all fungal septins that form collar architectures.
+  evidence:
+  - reference: GO:0032173
+    notes: GO:0032173 defines the collar as composed of ordered septin filaments.
+  posed_by: codex
+  posed_date: '2026-09-30'
