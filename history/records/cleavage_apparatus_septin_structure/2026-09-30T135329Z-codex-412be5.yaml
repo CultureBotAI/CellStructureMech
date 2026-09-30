@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cleavage_apparatus_septin_structure.yaml
+  slug: cleavage_apparatus_septin_structure
+session:
+  id: 2026-09-30T135329Z-codex-412be5
+  timestamp: '2026-09-30T13:53:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1828
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1827
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Address cleavage apparatus graph review
+  details: 'Resolved PR #1827 review issue #1828 by changing the GO:0032156 septin_cytoskeleton
+    graph node from CELLULAR_LOCALIZATION to STRUCTURE so its type matches its cellular-component
+    grounding and the is-part-of edge from the GO:0032161 cleavage apparatus septin structure.'

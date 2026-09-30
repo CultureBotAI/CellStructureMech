@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cleavage_apparatus_septin_structure.yaml
+  slug: cleavage_apparatus_septin_structure
+session:
+  id: 2026-09-30T133827Z-codex-750af2
+  timestamp: '2026-09-30T13:38:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add GO:0032161 cleavage apparatus septin structure
+  details: Created a GO:0032161 cleavage apparatus septin structure record after hidden/ignored-inclusive
+    duplicate searches over data/structures found no existing exact identifier or label. Verified
+    the OLS definition, direct GO:0110165 cellular anatomical structure parent, direct cell-cortex,
+    cell-division-site, and septin-cytoskeleton part_of edges, and direct localized septin
+    child terms. Added a reviewed-label-only septin protein constituent, a nonmechanistic
+    cleavage-plane topology graph, and resolved/open discussions for child-term boundaries
+    and the septin-associated-protein grounding boundary.

@@ -1,0 +1,187 @@
+identifier: GO:0032161
+label: cleavage apparatus septin structure
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: Any of a series of structures composed of septins and septin-associated
+  proteins localized to the cleavage plane which are involved in cytokinesis.
+definition_source: GO:0032161
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T13:37:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T13:37:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cellular-anatomical-structure parentage, cell-cortex, cell-division-site,
+    and septin-cytoskeleton parthood, a reviewed-label-only septin constituent, GO-backed
+    cleavage-plane topology, and boundary and component-grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-30T13:52:51Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1828 from PR #1827 by typing the GO:0032156 septin cytoskeleton
+    graph node as STRUCTURE instead of CELLULAR_LOCALIZATION.'
+  llm_assisted: true
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0005938
+- GO:0032153
+- GO:0032156
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Cleavage-apparatus septin structures contain septin GTPases across
+    several localized cytokinetic states, but no exact source-neutral InterPro, Pfam,
+    or NCBIfam CURIE was assigned for the complete cleavage-plane septin cohort.
+  role: Septin GTPases that assemble into cytokinetic structures at the cleavage plane.
+  evidence:
+  - reference: GO:0032161
+    notes: GO:0032161 defines cleavage-apparatus septin structures as composed of
+      septins and septin-associated proteins at the cleavage plane.
+evidence:
+- reference: GO:0032161
+  notes: Gene Ontology cellular-component term for the cleavage apparatus septin structure.
+- reference: GO:0110165
+  notes: OLS reports GO:0110165 cellular anatomical structure as the direct GO:0032161
+    parent.
+- reference: GO:0005938
+  notes: OLS reports a direct GO:0032161 part_of relation to the cell cortex.
+- reference: GO:0032153
+  notes: OLS reports a direct GO:0032161 part_of relation to the cell division site.
+- reference: GO:0032156
+  notes: OLS reports a direct GO:0032161 part_of relation to the septin cytoskeleton.
+- reference: GO:0000144
+  notes: OLS reports the cellular bud neck septin ring as a direct GO:0032161 child
+    term.
+- reference: GO:0032174
+  notes: OLS reports the cellular bud neck septin collar as a direct GO:0032161 child
+    term.
+- reference: GO:0032177
+  notes: OLS reports the cellular bud neck split septin rings as a direct GO:0032161
+    child term.
+- reference: GO:0032169
+  notes: OLS reports the prospore septin ring as a direct GO:0032161 child term.
+- reference: GO:0036391
+  notes: OLS reports the medial cortex septin ring as a direct GO:0032161 child term.
+causal_graphs:
+- graph_id: cleavage_apparatus_septin_structure_topology
+  title: Cleavage-plane septin-structure topology
+  description: Septin proteins assemble into septin-containing cytokinetic structures
+    localized to the cell-division cleavage plane.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed cleavage-plane localization for the generic
+    parent class without asserting a single assembly mechanism for bud-neck, prospore,
+    and medial-cortex child structures or assigning exact septin-associated proteins.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: cleavage_apparatus_septin_structure
+    label: cleavage apparatus septin structure
+    node_type: STRUCTURE
+    grounding: GO:0032161
+  - node_id: cleavage_plane
+    label: cleavage plane
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: cell_division_site
+    label: cell division site
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0032153
+  - node_id: septin_cytoskeleton
+    label: septin cytoskeleton
+    node_type: STRUCTURE
+    grounding: GO:0032156
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: cleavage_apparatus_septin_structure
+    description: Septin proteins are constituents of septin-containing structures
+      at the cleavage plane.
+    evidence:
+    - reference: GO:0032161
+      notes: GO:0032161 defines these cleavage-plane structures as composed of septins
+        and septin-associated proteins.
+  - subject: cleavage_apparatus_septin_structure
+    predicate: localizes to
+    object: cleavage_plane
+    description: Cleavage-apparatus septin structures are localized to the cytokinetic
+      cleavage plane.
+    evidence:
+    - reference: GO:0032161
+      notes: GO:0032161 localizes the generic septin structure class to the cleavage
+        plane.
+  - subject: cleavage_apparatus_septin_structure
+    predicate: is part of
+    object: cell_division_site
+    description: Cleavage-apparatus septin structures are associated with the cell
+      division site.
+    evidence:
+    - reference: GO:0032153
+      notes: OLS reports GO:0032161 as part_of GO:0032153.
+  - subject: cleavage_apparatus_septin_structure
+    predicate: is part of
+    object: septin_cytoskeleton
+    description: Cleavage-apparatus septin structures are localized members of the
+      septin cytoskeleton.
+    evidence:
+    - reference: GO:0032156
+      notes: OLS reports GO:0032161 as part_of GO:0032156.
+discussions:
+- discussion_id: cleavage_apparatus_septin_structure_boundary
+  prompt: Keep the generic cleavage apparatus septin structure distinct from localized
+    bud-neck, prospore, and medial-cortex septin structures.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032161 denotes the generic class of septin- and septin-associated-protein
+    structures at cytokinetic cleavage planes. OLS lists GO:0000144, GO:0032174, GO:0032177,
+    GO:0032169, and GO:0036391 as direct child terms for localized cleavage-plane
+    septin structures.
+  resolution_note: Curated GO:0032161 as the generic cleavage-plane septin structure
+    and used localized cytokinetic septin structures only as child-term boundary evidence.
+  evidence:
+  - reference: GO:0032161
+    notes: GO:0032161 identifies the generic cleavage apparatus septin structure.
+  - reference: GO:0000144
+    notes: GO:0000144 identifies a bud-neck septin ring child.
+  - reference: GO:0032174
+    notes: GO:0032174 identifies a bud-neck septin collar child.
+  - reference: GO:0032177
+    notes: GO:0032177 identifies the bud-neck split septin rings child.
+  - reference: GO:0032169
+    notes: GO:0032169 identifies a prospore septin ring child.
+  - reference: GO:0036391
+    notes: GO:0036391 identifies a medial-cortex septin ring child.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_cleavage_apparatus_septin_associated_proteins
+  prompt: Resolve the exact boundary and source-neutral groundings for cleavage-apparatus
+    septins and septin-associated proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#septin_proteins
+  rationale: GO:0032161 includes septin-associated proteins as well as septins, but
+    this first generic record keeps only the reviewed-label-only septin protein cohort
+    rather than guessing which associated proteins are genuine constituents across
+    all cleavage-plane child structures.
+  evidence:
+  - reference: GO:0032161
+    notes: GO:0032161 defines this structure class as composed of septins and septin-associated
+      proteins.
+  posed_by: codex
+  posed_date: '2026-09-30'
