@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dubm_complex.yaml
+  slug: dubm_complex
+session:
+  id: 2026-09-30T221034Z-codex-3cce35
+  timestamp: '2026-09-30T22:10:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0071819 DUBm complex
+  details: Created the GO:0071819 DUBm complex record under data/structures/other with GO
+    synonymy, nuclear-protein-containing-complex parentage, SAGA and SLIK parthood, reviewed-label-only
+    Saccharomyces DUBm constituent rows, Saccharomyces cerevisiae scope, a cysteine-type deubiquitinase
+    activity, a nonmechanistic SAGA-family module graph, and grounding and boundary discussions.
+    Focused LinkML and strict validation passed before derived artifacts were regenerated.

@@ -1,0 +1,318 @@
+identifier: GO:0071819
+label: DUBm complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that forms part of SAGA-type complexes SAGA and SLIK,
+  and mediates deubiquitination of histone H2B. In S. cerevisiae, the DUBm consists
+  of the proteins Ubp8p, Sgf11p, Sus1p, and Sgf73p.
+definition_source: GO:0071819
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T22:07:51Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T22:09:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, nuclear-protein-complex parentage, SAGA and SLIK parthood,
+    reviewed-label-only budding-yeast DUBm constituents, Saccharomyces scope, deubiquitinase
+    activity, a nonmechanistic module graph, and DUBm boundary and grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-30T22:27:21Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHORS
+  changes: Replaced the DUBm boundary discussion's section-level components anchor
+    with explicit component IDs.
+  llm_assisted: true
+synonyms:
+- synonym_text: deubiquitinating module
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071819
+- synonym_text: deubiquitination module
+  synonym_type: EXACT_SYNONYM
+  source: GO:0071819
+- synonym_text: SAGA DUBm complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0071819
+parent_structures:
+- GO:0140513
+part_of:
+- GO:0000124
+- GO:0046695
+components:
+- component_id: ubp8_dubm_subunit
+  label: Ubp8 DUBm catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - UBP8
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The SAGA and SLIK DUB-module literature follows Ubp8 naming; no
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this DUBm subunit class was curated in this pass.
+  role: Catalytic cysteine-type deubiquitinase constituent of the yeast DUBm module.
+  evidence:
+  - reference: GO:0071819
+    notes: GO:0071819 defines the DUBm complex as containing Saccharomyces cerevisiae
+      Ubp8p.
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 resolved Ubp8 within the Saccharomyces cerevisiae SAGA
+      DUB module.
+- component_id: sgf11_dubm_subunit
+  label: Sgf11 DUBm subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SGF11
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The SAGA and SLIK DUB-module literature follows Sgf11 naming; no
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this DUBm subunit class was curated in this pass.
+  role: SGF-family constituent of the yeast DUBm module.
+  evidence:
+  - reference: GO:0071819
+    notes: GO:0071819 defines the DUBm complex as containing Saccharomyces cerevisiae
+      Sgf11p.
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 resolved Sgf11 within the Saccharomyces cerevisiae SAGA
+      DUB module.
+- component_id: sus1_dubm_subunit
+  label: Sus1 DUBm subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SUS1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The SAGA and SLIK DUB-module literature follows Sus1 naming; no
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this DUBm subunit class was curated in this pass.
+  role: ENY2/Sus1-family constituent of the yeast DUBm module.
+  evidence:
+  - reference: GO:0071819
+    notes: GO:0071819 defines the DUBm complex as containing Saccharomyces cerevisiae
+      Sus1p.
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 resolved Sus1 within the Saccharomyces cerevisiae SAGA
+      DUB module.
+- component_id: sgf73_dubm_anchor_subunit
+  label: Sgf73 DUBm anchor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SGF73
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The SAGA and SLIK DUB-module literature follows Sgf73 naming; no
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family identifier for
+    this DUBm subunit class was curated in this pass.
+  role: SAGA-family DUB-module constituent that helps anchor DUBm to the core.
+  evidence:
+  - reference: GO:0071819
+    notes: GO:0071819 defines the DUBm complex as containing Saccharomyces cerevisiae
+      Sgf73p.
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 resolved the N-terminal Sgf73 region within the Saccharomyces
+      cerevisiae SAGA DUB module.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast contains a four-subunit DUBm in SAGA-family coactivator complexes.
+  reference: DOI:10.1038/s41586-020-1933-5
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Wang et al. 2020 resolved the Saccharomyces cerevisiae SAGA DUB module containing
+    Ubp8, Sgf11, Sus1, and the N-terminal Sgf73 region.
+  reference: DOI:10.1038/s41586-020-1933-5
+functions:
+- function_id: histone_h2b_deubiquitination
+  label: cysteine-type deubiquitinase activity
+  grounding: GO:0004843
+  description: The Ubp8-containing DUBm complex deubiquitinates histone H2B within
+    SAGA-family transcriptional coactivators.
+  evidence:
+  - reference: GO:0071819
+    notes: GO:0071819 defines DUBm as a protein complex that mediates histone H2B
+      deubiquitination.
+  - reference: GO:0004843
+    notes: GO:0004843 identifies cysteine-type deubiquitinase activity.
+  - reference: DOI:10.1101/gad.1144003
+    notes: Henry et al. 2003 identified SAGA-associated Ubp8 as a mediator of histone
+      H2B deubiquitylation.
+evidence:
+- reference: GO:0071819
+  notes: Gene Ontology cellular-component term for the DUBm complex.
+- reference: GO:0140513
+  notes: OLS reports GO:0140513 nuclear protein-containing complex as the GO:0071819
+    is-a parent.
+- reference: GO:0000124
+  notes: Gene Ontology cellular-component term for the SAGA complex that has a DUB
+    module.
+- reference: GO:0046695
+  notes: Gene Ontology cellular-component term for the SLIK SAGA-like complex.
+- reference: GO:0004843
+  notes: Gene Ontology molecular-function term for cysteine-type deubiquitinase activity.
+- reference: DOI:10.1038/s41586-020-1933-5
+  notes: Wang et al. 2020, 'Structure of the transcription coactivator SAGA'.
+- reference: DOI:10.1016/j.jbc.2021.100671
+  notes: Adamus et al. 2021, 'SAGA and SAGA-like SLIK transcriptional coactivators
+    are structurally and biochemically equivalent'.
+- reference: DOI:10.1101/gad.1144003
+  notes: Henry et al. 2003, 'Transcriptional activation via sequential histone H2B
+    ubiquitylation and deubiquitylation, mediated by SAGA-associated Ubp8'.
+causal_graphs:
+- graph_id: dubm_saga_family_deubiquitination
+  title: DUBm supports SAGA-family H2B deubiquitination
+  description: In budding yeast, Ubp8, Sgf11, Sus1, and Sgf73 assemble the DUBm deubiquitinase
+    module found in SAGA-family transcriptional coactivator complexes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records DUBm module composition, placement in SAGA-family
+    complexes, and the curated broad activity without resolving ubiquitin positioning
+    or catalysis.
+  nodes:
+  - node_id: ubp8_dubm_subunit
+    label: Ubp8 DUBm catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ubp8_dubm_subunit
+  - node_id: sgf11_dubm_subunit
+    label: Sgf11 DUBm subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sgf11_dubm_subunit
+  - node_id: sus1_dubm_subunit
+    label: Sus1 DUBm subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sus1_dubm_subunit
+  - node_id: sgf73_dubm_anchor_subunit
+    label: Sgf73 DUBm anchor subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sgf73_dubm_anchor_subunit
+  - node_id: dubm_complex
+    label: DUBm complex
+    node_type: STRUCTURE
+    grounding: GO:0071819
+  - node_id: saga_complex
+    label: SAGA complex
+    node_type: STRUCTURE
+    grounding: GO:0000124
+  - node_id: slik_saga_like_complex
+    label: SLIK (SAGA-like) complex
+    node_type: STRUCTURE
+    grounding: GO:0046695
+  - node_id: cysteine_type_deubiquitinase_activity
+    label: cysteine-type deubiquitinase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004843
+  edges:
+  - subject: ubp8_dubm_subunit
+    predicate: contributes to
+    object: dubm_complex
+    description: Ubp8 is the catalytic deubiquitinase constituent of DUBm.
+    evidence:
+    - reference: GO:0071819
+      notes: GO:0071819 defines DUBm as containing Saccharomyces cerevisiae Ubp8p.
+  - subject: sgf11_dubm_subunit
+    predicate: contributes to
+    object: dubm_complex
+    description: Sgf11 is a constituent of DUBm.
+    evidence:
+    - reference: GO:0071819
+      notes: GO:0071819 defines DUBm as containing Saccharomyces cerevisiae Sgf11p.
+  - subject: sus1_dubm_subunit
+    predicate: contributes to
+    object: dubm_complex
+    description: Sus1 is a constituent of DUBm.
+    evidence:
+    - reference: GO:0071819
+      notes: GO:0071819 defines DUBm as containing Saccharomyces cerevisiae Sus1p.
+  - subject: sgf73_dubm_anchor_subunit
+    predicate: contributes to
+    object: dubm_complex
+    description: Sgf73 contributes an anchoring subunit to DUBm.
+    evidence:
+    - reference: GO:0071819
+      notes: GO:0071819 defines DUBm as containing Saccharomyces cerevisiae Sgf73p.
+  - subject: dubm_complex
+    predicate: is part of
+    object: saga_complex
+    description: DUBm is a deubiquitinase module of SAGA.
+    evidence:
+    - reference: GO:0071819
+      notes: GO:0071819 defines DUBm as a component of SAGA-type complexes.
+    - reference: DOI:10.1038/s41586-020-1933-5
+      notes: Wang et al. 2020 resolved DUBm in budding-yeast SAGA.
+  - subject: dubm_complex
+    predicate: is part of
+    object: slik_saga_like_complex
+    description: DUBm is also present in the SLIK SAGA-like complex.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified
+        budding-yeast SLIK.
+  - subject: dubm_complex
+    predicate: supports
+    object: cysteine_type_deubiquitinase_activity
+    description: Ubp8-containing DUBm supports SAGA-family cysteine-type deubiquitinase
+      activity.
+    evidence:
+    - reference: GO:0071819
+      notes: GO:0071819 defines DUBm as mediating histone H2B deubiquitination.
+    - reference: GO:0004843
+      notes: GO:0004843 identifies cysteine-type deubiquitinase activity.
+discussions:
+- discussion_id: resolve_dubm_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the curated DUBm protein
+    constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ubp8_dubm_subunit
+  - components#sgf11_dubm_subunit
+  - components#sus1_dubm_subunit
+  - components#sgf73_dubm_anchor_subunit
+  rationale: Ubp8, Sgf11, Sus1, and Sgf73 are shared between SAGA and SLIK and have
+    metazoan homologues or domain-level identifiers; curate InterPro, Pfam, NCBIfam
+    or UniProt family accessions only when they denote the DUBm component class rather
+    than a broader domain.
+  evidence:
+  - reference: DOI:10.1038/s41586-020-1933-5
+    notes: Wang et al. 2020 resolved the Saccharomyces cerevisiae SAGA DUB-module
+      architecture.
+  - reference: DOI:10.1016/j.jbc.2021.100671
+    notes: Adamus et al. 2021 detected the same four DUBm proteins in purified Saccharomyces
+      cerevisiae SLIK.
+  posed_by: codex
+  posed_date: '2026-09-30'
+- discussion_id: dubm_boundaries
+  prompt: Keep DUBm distinct from whole SAGA-family complexes and from HAT or core
+    modules.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  - components#ubp8_dubm_subunit
+  - components#sgf11_dubm_subunit
+  - components#sus1_dubm_subunit
+  - components#sgf73_dubm_anchor_subunit
+  rationale: GO:0071819 denotes the Ubp8/Sgf11/Sus1/Sgf73 deubiquitinase module, while
+    GO:0000124 and GO:0046695 denote whole SAGA-family transcriptional coactivator
+    complexes that also contain core, Tra1, and HAT-module constituents.
+  resolution_note: Curated the four DUB-module proteins on the DUBm record and linked
+    the module to SAGA-family parent complexes via part_of.
+  evidence:
+  - reference: GO:0071819
+    notes: GO:0071819 identifies the DUBm complex.
+  - reference: GO:0000124
+    notes: GO:0000124 identifies the whole SAGA complex.
+  - reference: GO:0046695
+    notes: GO:0046695 identifies the whole SLIK SAGA-like complex.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
