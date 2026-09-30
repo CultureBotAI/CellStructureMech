@@ -178,6 +178,11 @@
           "cosine_similarity": 0.84542659
         },
         {
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.83325176
+        },
+        {
           "identifier": "GO:0031969",
           "label": "chloroplast membrane",
           "cosine_similarity": 0.82588231
@@ -186,11 +191,6 @@
           "identifier": "GO:0005886",
           "label": "plasma membrane",
           "cosine_similarity": 0.82437159
-        },
-        {
-          "identifier": "GO:0009527",
-          "label": "plastid outer membrane",
-          "cosine_similarity": 0.82052723
         }
       ]
     },
@@ -5768,9 +5768,9 @@
           "cosine_similarity": 0.84622971
         },
         {
-          "identifier": "GO:0005741",
-          "label": "mitochondrial outer membrane",
-          "cosine_similarity": 0.83416635
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.83538974
         }
       ]
     },
@@ -6543,9 +6543,9 @@
           "cosine_similarity": 0.82267747
         },
         {
-          "identifier": "GO:0030666",
-          "label": "endocytic vesicle membrane",
-          "cosine_similarity": 0.80927576
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.81689395
         }
       ]
     },
@@ -7008,9 +7008,9 @@
           "cosine_similarity": 0.79687526
         },
         {
-          "identifier": "GO:0070113",
-          "label": "organellar chromatophore inner membrane",
-          "cosine_similarity": 0.78863692
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.78920564
         }
       ]
     },
@@ -9819,6 +9819,11 @@
           "cosine_similarity": 0.90622081
         },
         {
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.90309961
+        },
+        {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.88739762
@@ -9827,11 +9832,6 @@
           "identifier": "GO:0005740",
           "label": "mitochondrial envelope",
           "cosine_similarity": 0.88560947
-        },
-        {
-          "identifier": "GO:0005741",
-          "label": "mitochondrial outer membrane",
-          "cosine_similarity": 0.8582003
         }
       ]
     },
@@ -9843,6 +9843,11 @@
           "identifier": "GO:0005758",
           "label": "mitochondrial intermembrane space",
           "cosine_similarity": 0.91789787
+        },
+        {
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.91144374
         },
         {
           "identifier": "GO:0030061",
@@ -9858,11 +9863,6 @@
           "identifier": "GO:0005759",
           "label": "mitochondrial matrix",
           "cosine_similarity": 0.8721493
-        },
-        {
-          "identifier": "GO:0031966",
-          "label": "mitochondrial membrane",
-          "cosine_similarity": 0.86488986
         }
       ]
     },
@@ -9891,9 +9891,40 @@
           "cosine_similarity": 0.93122621
         },
         {
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.92280843
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097002",
+      "label": "mitochondrial inner boundary membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0005743",
+          "label": "mitochondrial inner membrane",
+          "cosine_similarity": 0.9634359
+        },
+        {
+          "identifier": "GO:0031966",
+          "label": "mitochondrial membrane",
+          "cosine_similarity": 0.94932128
+        },
+        {
+          "identifier": "GO:0005741",
+          "label": "mitochondrial outer membrane",
+          "cosine_similarity": 0.94730271
+        },
+        {
+          "identifier": "GO:0005740",
+          "label": "mitochondrial envelope",
+          "cosine_similarity": 0.92280843
+        },
+        {
           "identifier": "GO:0005758",
           "label": "mitochondrial intermembrane space",
-          "cosine_similarity": 0.8990572
+          "cosine_similarity": 0.91256919
         }
       ]
     },
@@ -9901,6 +9932,11 @@
       "identifier": "GO:0005743",
       "label": "mitochondrial inner membrane",
       "neighbors": [
+        {
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.9634359
+        },
         {
           "identifier": "GO:0005741",
           "label": "mitochondrial outer membrane",
@@ -9920,11 +9956,6 @@
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.93200642
-        },
-        {
-          "identifier": "GO:0005758",
-          "label": "mitochondrial intermembrane space",
-          "cosine_similarity": 0.92380845
         }
       ]
     },
@@ -10005,6 +10036,11 @@
           "cosine_similarity": 0.95633986
         },
         {
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.94932128
+        },
+        {
           "identifier": "GO:0005758",
           "label": "mitochondrial intermembrane space",
           "cosine_similarity": 0.93216665
@@ -10013,11 +10049,6 @@
           "identifier": "GO:0005740",
           "label": "mitochondrial envelope",
           "cosine_similarity": 0.93122621
-        },
-        {
-          "identifier": "GO:0005739",
-          "label": "mitochondrion",
-          "cosine_similarity": 0.90966559
         }
       ]
     },
@@ -10041,14 +10072,14 @@
           "cosine_similarity": 0.95549919
         },
         {
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.94730271
+        },
+        {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.94231359
-        },
-        {
-          "identifier": "GO:0005758",
-          "label": "mitochondrial intermembrane space",
-          "cosine_similarity": 0.9316308
         }
       ]
     },

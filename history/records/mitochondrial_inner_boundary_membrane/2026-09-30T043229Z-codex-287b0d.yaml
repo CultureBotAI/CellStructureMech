@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_inner_boundary_membrane.yaml
+  slug: mitochondrial_inner_boundary_membrane
+session:
+  id: 2026-09-30T043229Z-codex-287b0d
+  timestamp: '2026-09-30T04:32:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added mitochondrial inner boundary membrane record
+  details: Created a GO:0097002 mitochondrial inner boundary membrane record with mitochondrial
+    inner-membrane parthood, a reviewed-label-only lipid-bilayer component, eukaryotic and
+    budding-yeast scope, inner mitochondrial membrane organization evidence, a nonmechanistic
+    crista-junction topology graph, and an open grounding TODO for the lipid constituent.
