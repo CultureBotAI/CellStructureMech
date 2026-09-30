@@ -20,6 +20,13 @@ curation_history:
     scope and canonical example evidence, a GO-backed oligomerization graph, and complex-boundary
     and component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-30T10:23:25Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1820 from PR #1819 by tightening the Schizosaccharomyces pombe
+    taxonomic-distribution and canonical-example notes to cite the Spn1/Spn2/Spn3/Spn4
+    oligomeric septin complex.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -47,14 +54,14 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe
   presence: COMMON
-  note: Fission yeast septins assemble into septin complexes during septation, the
-    source context for the GO septin-complex definition.
+  note: Fission yeast Spn1, Spn2, Spn3 and Spn4 form an oligomeric septin complex
+    containing two copies of each septin.
   reference: DOI:10.1091/mbc.E04-07-0640
 canonical_examples:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe
-  note: Fission-yeast model in which An et al. 2004 tested septin requirements for
-    complex formation, localization, and function.
+  note: Fission-yeast model in which An et al. 2004 mapped an oligomeric septin complex
+    containing Spn1, Spn2, Spn3 and Spn4.
   reference: DOI:10.1091/mbc.E04-07-0640
 evidence:
 - reference: GO:0031105

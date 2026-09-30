@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_complex.yaml
+  slug: septin_complex
+session:
+  id: 2026-09-30T102355Z-claude-code-a79383
+  timestamp: '2026-09-30T10:23:55Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1820
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1819
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address septin complex review
+  details: 'Resolved #1820 from PR #1819 by revising the Schizosaccharomyces pombe taxonomic-distribution
+    and canonical-example notes to state the Spn1/Spn2/Spn3/Spn4 oligomeric septin complex
+    from An et al. 2004.'
