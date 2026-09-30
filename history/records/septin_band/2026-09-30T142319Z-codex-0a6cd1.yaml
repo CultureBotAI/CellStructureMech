@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_band.yaml
+  slug: septin_band
+session:
+  id: 2026-09-30T142319Z-codex-0a6cd1
+  timestamp: '2026-09-30T14:23:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the septin band record
+  details: Created the GO:0032158 septin band record from the OLS-verified GO cellular-component
+    term, direct GO:0110165 cellular anatomical structure parent, direct GO:0032156 septin
+    cytoskeleton parthood, and direct GO:0032162/GO:0032163 localized child-band boundaries.
+    Added a reviewed-label-only septin-protein constituent, a nonmechanistic GO-backed topology
+    graph, and boundary and component-grounding discussions.
