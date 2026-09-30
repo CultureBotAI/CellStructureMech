@@ -21,6 +21,12 @@ curation_history:
     GO-backed ring-to-collar topology, and collar-boundary and component-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-30T08:17:49Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1815 by citing Kozubowski et al. 2005 for the Saccharomyces
+    septin-collar distribution and canonical example rows.'
+  llm_assisted: true
 synonyms:
 - synonym_text: septin hourglass
   synonym_type: EXACT_SYNONYM
@@ -47,15 +53,15 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Budding-yeast septin collars form from the initial septin ring as it expands
-    into the daughter cell.
-  reference: GO:0032173
+  note: Saccharomyces cerevisiae cells reorganize the initial septin ring into an
+    hourglass-shaped septin collar at the mother-bud neck after budding.
+  reference: DOI:10.1091/mbc.E04-09-0764
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: GO uses budding yeast as the definitional example in which the septin collar
-    forms from the initial septin ring.
-  reference: GO:0032173
+  note: Budding-yeast model in which Bni4 and Kcc4 reporters were used to follow asymmetric
+    protein localization relative to the septin ring and mother-bud-neck septin collar.
+  reference: DOI:10.1091/mbc.E04-09-0764
 evidence:
 - reference: GO:0032173
   notes: Gene Ontology cellular-component term for the septin collar.
@@ -66,6 +72,10 @@ evidence:
     collar.
 - reference: GO:0062140
   notes: Gene Ontology cellular-component child term for the hyphae septin collar.
+- reference: DOI:10.1091/mbc.E04-09-0764
+  notes: Kozubowski, Larson and Tatchell 2005, 'Role of the Septin Ring in the Asymmetric
+    Localization of Proteins at the Mother-Bud Neck in Saccharomyces cerevisiae',
+    Molecular Biology of the Cell.
 causal_graphs:
 - graph_id: septin_ring_to_collar_topology
   title: Budding-yeast septin-ring to septin-collar topology

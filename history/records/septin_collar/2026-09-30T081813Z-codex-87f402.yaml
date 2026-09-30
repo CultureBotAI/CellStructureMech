@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_collar.yaml
+  slug: septin_collar
+session:
+  id: 2026-09-30T081813Z-codex-87f402
+  timestamp: '2026-09-30T08:18:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1815
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1814
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address septin collar evidence review
+  details: 'Resolved PR #1814 review issue #1815 by citing DOI:10.1091/mbc.E04-09-0764 for
+    the Saccharomyces cerevisiae taxonomic distribution and canonical example rows on the
+    GO:0032173 septin collar record.'
