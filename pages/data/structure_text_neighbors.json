@@ -2830,6 +2830,37 @@
       ]
     },
     {
+      "identifier": "GO:0062140",
+      "label": "hyphae septin collar",
+      "neighbors": [
+        {
+          "identifier": "GO:0032173",
+          "label": "septin collar",
+          "cosine_similarity": 0.83970482
+        },
+        {
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.83050393
+        },
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.79448921
+        },
+        {
+          "identifier": "GO:0032174",
+          "label": "cellular bud neck septin collar",
+          "cosine_similarity": 0.78655431
+        },
+        {
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.7781174
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032168",
       "label": "hyphal septin ring",
       "neighbors": [
