@@ -1,0 +1,194 @@
+identifier: GO:0120343
+label: radial spoke neck
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The radial spoke neck is a complex that connects the spoke stalk to the
+  head.
+definition_source: GO:0120343
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T01:44:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T01:45:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added protein-complex parentage, radial-spoke parthood, a reviewed-label-only
+    neck-protein constituent, Chlamydomonas scope and canonical example, a head-stalk-linkage
+    function, GO/DOI evidence, a nonmechanistic topology graph, and boundary and component-grounding
+    discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0001534
+components:
+- component_id: radial_spoke_neck_proteins
+  label: radial spoke neck proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The radial spoke neck is a multisubunit axonemal subcomplex, but
+    no exact source-neutral CURIE was assigned for the complete radial-spoke-neck
+    protein cohort.
+  role: Protein constituents of the connector subcomplex that joins the radial-spoke
+    stalk to the head.
+  evidence:
+  - reference: GO:0120343
+    notes: GO:0120343 identifies the radial spoke neck as a protein-containing complex
+      that connects the radial-spoke stalk to the head.
+  - reference: DOI:10.1242/jcs.245233
+    notes: Poghosyan et al. 2020 refined the Chlamydomonas radial-spoke architecture
+      and assigned proteins to the neck region.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar axonemes carry radial spokes with neck subcomplexes
+    resolved by cryo-EM.
+  reference: DOI:10.1242/jcs.245233
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose radial-spoke necks connect the head and stalk in 9+2
+    flagellar axonemes.
+  reference: DOI:10.1242/jcs.245233
+functions:
+- function_id: radial_spoke_neck_head_stalk_linkage
+  label: radial spoke neck head-stalk linkage
+  description: The radial spoke neck forms the connector between the stalk and head
+    portions of the axonemal radial spoke.
+  evidence:
+  - reference: GO:0120343
+    notes: GO:0120343 defines the neck by its connection between the radial-spoke
+      stalk and head.
+  - reference: DOI:10.1242/jcs.245233
+    notes: Poghosyan et al. 2020 describe the Chlamydomonas radial spoke as a complex
+      in the ciliary motility transducer apparatus and assign neck-region proteins.
+evidence:
+- reference: GO:0120343
+  notes: Gene Ontology cellular-component term for the radial spoke neck.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component term for protein-containing complex.
+- reference: GO:0001534
+  notes: Gene Ontology cellular-component term for the containing radial spoke.
+- reference: GO:0001535
+  notes: Gene Ontology cellular-component term for the radial spoke head.
+- reference: GO:0001536
+  notes: Gene Ontology cellular-component term for the radial spoke stalk.
+- reference: DOI:10.1126/science.1128618
+  notes: Nicastro et al. 2006, 'The molecular architecture of axonemes revealed by
+    cryoelectron tomography', Science.
+- reference: DOI:10.1242/jcs.245233
+  notes: Poghosyan et al. 2020, 'The structure and symmetry of the radial spoke protein
+    complex in Chlamydomonas flagella', Journal of Cell Science.
+causal_graphs:
+- graph_id: radial_spoke_neck_topology
+  title: Radial-spoke neck topology
+  description: Radial-spoke-neck proteins form the connector subcomplex between the
+    radial-spoke stalk and the head.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records radial-spoke-neck parthood and coarse orientation
+    without asserting individual RSP protein identities, copy numbers, or ordered
+    assembly.
+  nodes:
+  - node_id: radial_spoke_neck_proteins
+    label: radial spoke neck proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: radial_spoke_neck_proteins
+  - node_id: radial_spoke_neck
+    label: radial spoke neck
+    node_type: STRUCTURE
+    grounding: GO:0120343
+  - node_id: radial_spoke
+    label: radial spoke
+    node_type: STRUCTURE
+    grounding: GO:0001534
+  - node_id: radial_spoke_head
+    label: radial spoke head
+    node_type: STRUCTURE
+    grounding: GO:0001535
+  - node_id: radial_spoke_stalk
+    label: radial spoke stalk
+    node_type: STRUCTURE
+    grounding: GO:0001536
+  edges:
+  - subject: radial_spoke_neck_proteins
+    predicate: contribute to
+    object: radial_spoke_neck
+    description: Radial-spoke-neck proteins are constituents of the connector radial-spoke
+      neck subcomplex.
+    evidence:
+    - reference: GO:0120343
+      notes: GO:0120343 identifies the radial spoke neck as a protein-containing complex.
+  - subject: radial_spoke_neck
+    predicate: is part of
+    object: radial_spoke
+    description: The radial spoke neck is part of the radial spoke.
+    evidence:
+    - reference: GO:0120343
+      notes: GO:0120343 places the radial spoke neck as part of the radial spoke.
+  - subject: radial_spoke_neck
+    predicate: connects to
+    object: radial_spoke_head
+    description: The radial spoke neck connects to the radial-spoke head.
+    evidence:
+    - reference: GO:0120343
+      notes: GO:0120343 defines the neck by its connection between the radial-spoke
+        stalk and head.
+  - subject: radial_spoke_neck
+    predicate: connects to
+    object: radial_spoke_stalk
+    description: The radial spoke neck connects to the radial-spoke stalk.
+    evidence:
+    - reference: GO:0120343
+      notes: GO:0120343 defines the neck by its connection between the radial-spoke
+        stalk and head.
+discussions:
+- discussion_id: radial_spoke_neck_boundary
+  prompt: Keep the radial spoke neck distinct from the whole radial spoke and adjacent
+    head and stalk subcomplexes.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0120343 denotes the connector subcomplex between the radial-spoke
+    stalk and head, GO:0001534 denotes the complete radial spoke, GO:0001535 denotes
+    the radial spoke head, and GO:0001536 denotes the radial spoke stalk.
+  resolution_note: Curated GO:0120343 as the exact neck subcomplex and used GO:0001534
+    for whole-radial-spoke parthood.
+  evidence:
+  - reference: GO:0120343
+    notes: GO:0120343 identifies the radial spoke neck subcomplex.
+  - reference: GO:0001534
+    notes: GO:0001534 identifies the complete radial spoke.
+  - reference: GO:0001535
+    notes: GO:0001535 identifies the radial spoke head.
+  - reference: GO:0001536
+    notes: GO:0001536 identifies the radial spoke stalk.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_radial_spoke_neck_proteins
+  prompt: Resolve exact source-neutral groundings and copy numbers for Chlamydomonas
+    radial-spoke-neck RSP proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#radial_spoke_neck_proteins
+  rationale: Poghosyan et al. 2020 assigned individual Chlamydomonas RSP densities
+    to the neck region, but this first child-subcomplex record keeps a reviewed-label-only
+    aggregate instead of guessing exact InterPro, Pfam, NCBIfam, or UniProtKB groundings
+    and cross-species boundaries.
+  evidence:
+  - reference: DOI:10.1242/jcs.245233
+    notes: Poghosyan et al. 2020 assigned radial-spoke proteins to the Chlamydomonas
+      radial-spoke head, neck, and stalk regions.
+  posed_by: codex
+  posed_date: '2026-09-30'

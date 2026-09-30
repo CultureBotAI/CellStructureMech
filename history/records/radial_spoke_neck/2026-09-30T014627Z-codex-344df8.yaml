@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/radial_spoke_neck.yaml
+  slug: radial_spoke_neck
+session:
+  id: 2026-09-30T014627Z-codex-344df8
+  timestamp: '2026-09-30T01:46:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added radial spoke neck record
+  details: Created a GO:0120343 radial spoke neck subcomplex record with protein-complex parentage,
+    radial-spoke parthood, a reviewed-label-only radial-spoke-neck protein constituent, Chlamydomonas
+    radial-spoke structural evidence, a head-stalk-linkage function, a nonmechanistic topology
+    graph, and boundary and component-grounding discussions.

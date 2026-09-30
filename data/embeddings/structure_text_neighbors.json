@@ -3836,6 +3836,11 @@
           "cosine_similarity": 0.91393924
         },
         {
+          "identifier": "GO:0120343",
+          "label": "radial spoke neck",
+          "cosine_similarity": 0.90460161
+        },
+        {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.77061307
@@ -3844,11 +3849,6 @@
           "identifier": "GO:1990718",
           "label": "axonemal central pair projection",
           "cosine_similarity": 0.75183334
-        },
-        {
-          "identifier": "GO:0097540",
-          "label": "axonemal central pair",
-          "cosine_similarity": 0.71520148
         }
       ]
     },
@@ -3867,6 +3867,11 @@
           "cosine_similarity": 0.93800821
         },
         {
+          "identifier": "GO:0120343",
+          "label": "radial spoke neck",
+          "cosine_similarity": 0.93011324
+        },
+        {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.7833887
@@ -3875,11 +3880,37 @@
           "identifier": "GO:1990718",
           "label": "axonemal central pair projection",
           "cosine_similarity": 0.75350667
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0120343",
+      "label": "radial spoke neck",
+      "neighbors": [
+        {
+          "identifier": "GO:0001535",
+          "label": "radial spoke head",
+          "cosine_similarity": 0.93011324
         },
         {
-          "identifier": "GO:0005822",
-          "label": "inner plaque of spindle pole body",
-          "cosine_similarity": 0.73775168
+          "identifier": "GO:0001536",
+          "label": "radial spoke stalk",
+          "cosine_similarity": 0.92153511
+        },
+        {
+          "identifier": "GO:0001534",
+          "label": "radial spoke",
+          "cosine_similarity": 0.90460161
+        },
+        {
+          "identifier": "GO:0005823",
+          "label": "central plaque of spindle pole body",
+          "cosine_similarity": 0.67973442
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.67622884
         }
       ]
     },
@@ -3891,6 +3922,11 @@
           "identifier": "GO:0001535",
           "label": "radial spoke head",
           "cosine_similarity": 0.94208438
+        },
+        {
+          "identifier": "GO:0120343",
+          "label": "radial spoke neck",
+          "cosine_similarity": 0.92153511
         },
         {
           "identifier": "GO:0001534",
@@ -3906,11 +3942,6 @@
           "identifier": "GO:0005822",
           "label": "inner plaque of spindle pole body",
           "cosine_similarity": 0.74367847
-        },
-        {
-          "identifier": "GO:0005823",
-          "label": "central plaque of spindle pole body",
-          "cosine_similarity": 0.73486169
         }
       ]
     },
