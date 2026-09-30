@@ -1,0 +1,128 @@
+identifier: GO:0032165
+label: prospore septin filament array
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: Arrays of septin filaments, or bars, found in a series of filamentous
+  structures; observed in the prospore membrane during spore formation.
+definition_source: GO:0032165
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T15:28:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T15:29:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-filament-array parentage, a reviewed-label-only septin constituent,
+    a nonmechanistic GO-backed prospore-membrane topology graph, and boundary and
+    component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0032160
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The prospore septin filament array is made of septin filaments
+    or bars at the prospore membrane, but no exact source-neutral InterPro, Pfam,
+    or NCBIfam CURIE was assigned for the complete prospore-array-forming septin cohort.
+  role: Septin GTPases that polymerize into filament bars arranged as the prospore
+    septin filament array.
+  evidence:
+  - reference: GO:0032165
+    notes: GO:0032165 defines the structure as arrays of septin filaments or bars.
+evidence:
+- reference: GO:0032165
+  notes: Gene Ontology cellular-component term for the prospore septin filament array.
+- reference: GO:0032160
+  notes: OLS reports GO:0032160 septin filament array as the direct GO:0032165 parent.
+causal_graphs:
+- graph_id: prospore_septin_filament_array_topology
+  title: Prospore septin-filament-array topology
+  description: Septin proteins form filament bars arranged as a prospore septin filament
+    array at the prospore membrane during spore formation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed prospore septin-filament-array composition
+    and localization without asserting a species-specific assembly or recruitment
+    mechanism.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: prospore_septin_filament_array
+    label: prospore septin filament array
+    node_type: STRUCTURE
+    grounding: GO:0032165
+  - node_id: prospore_membrane
+    label: prospore membrane
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: prospore_septin_filament_array
+    description: Septin proteins form the filament bars arranged in the prospore septin
+      filament array.
+    evidence:
+    - reference: GO:0032165
+      notes: GO:0032165 defines the array as septin filaments or bars.
+  - subject: prospore_septin_filament_array
+    predicate: is observed in
+    object: prospore_membrane
+    description: The prospore septin filament array is observed in the prospore membrane
+      during spore formation.
+    evidence:
+    - reference: GO:0032165
+      notes: GO:0032165 localizes the septin filament array to the prospore membrane
+        during spore formation.
+discussions:
+- discussion_id: prospore_septin_filament_array_boundary
+  prompt: Keep the prospore septin filament array distinct from the generic septin
+    filament array and other prospore septin structures.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032165 denotes the prospore-membrane-localized child of the generic
+    GO:0032160 septin filament array. GO:0032166 covers the parallel chlamydospore-membrane
+    array, and GO:0032169 covers a tight ring-shaped septin structure at the site
+    of cytokinesis in a prospore rather than a filamentous array in the prospore membrane.
+  resolution_note: Curated GO:0032165 as the exact localized septin-filament-array
+    record, kept GO:0032160 as its is-a parent, and did not merge it with GO:0032166
+    or prospore septin-ring records.
+  evidence:
+  - reference: GO:0032165
+    notes: GO:0032165 identifies the prospore septin filament array.
+  - reference: GO:0032160
+    notes: GO:0032160 identifies the broader septin filament array.
+  - reference: GO:0032166
+    notes: GO:0032166 identifies the chlamydospore septin filament array.
+  - reference: GO:0032169
+    notes: GO:0032169 identifies the prospore septin ring.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_prospore_septin_filament_array_grounding
+  prompt: Resolve an exact source-neutral grounding for prospore-septin-filament-array
+    septin proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The initial prospore septin filament array record uses a reviewed-label-only
+    septin protein cohort rather than guessing InterPro, Pfam, or NCBIfam accessions
+    that may not exactly delimit all septins that form prospore membrane filament
+    arrays.
+  evidence:
+  - reference: GO:0032165
+    notes: GO:0032165 defines the structure as arrays of septin filaments or bars
+      at the prospore membrane.
+  posed_by: codex
+  posed_date: '2026-09-30'

@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+  slug: prospore_septin_filament_array
+session:
+  id: 2026-09-30T153017Z-codex-91b7a2
+  timestamp: '2026-09-30T15:30:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the prospore septin filament array record
+  details: Created the GO:0032165 prospore septin filament array record from the OLS-verified
+    GO cellular-component term and direct GO:0032160 septin filament array parent. Added a
+    reviewed-label-only septin-protein constituent, a nonmechanistic GO-backed prospore-membrane
+    topology graph, and boundary and component-grounding discussions.
