@@ -1,0 +1,188 @@
+identifier: GO:0034270
+label: Cvt complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that is involved in the Cvt pathway. In budding yeast,
+  the Cvt complex consists of multimers of preApe1p.
+definition_source: GO:0034270
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T06:38:16Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T06:40:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Cvt-complex synonymy, protein-complex parentage, cytoplasm parthood,
+    a reviewed-label-only precursor aminopeptidase I constituent, Saccharomyces cerevisiae
+    scope, a Cvt-pathway function, GO/DOI evidence, a nonmechanistic Cvt cargo-delivery
+    graph, and grounding and Atg receptor/scaffold boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-09-30T07:06:22Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1813 by removing the passive Cvt-pathway function row while
+    retaining GO:0032258 as evidence for Cvt-complex enclosure in the cargo-delivery
+    graph.'
+  llm_assisted: true
+synonyms:
+- synonym_text: cytoplasm to vacuole targeting complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034270
+- synonym_text: cytoplasm-to-vacuole targeting complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034270
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005737
+components:
+- component_id: precursor_aminopeptidase_i
+  label: precursor aminopeptidase I
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - APE1
+  essentiality: ESSENTIAL
+  role: Budding-yeast proApe1 cargo constituent that multimerizes to form the Cvt
+    complex recognized for selective vacuolar delivery.
+  evidence:
+  - reference: GO:0034270
+    notes: GO:0034270 defines the budding-yeast Cvt complex as a preApe1p-containing
+      protein complex.
+  - reference: DOI:10.1016/s1097-2765(01)00263-5
+    notes: Scott et al. 2001 identified Cvt19/Atg19 as a receptor that links precursor
+      aminopeptidase I cargo to Cvt-pathway delivery.
+  - reference: DOI:10.1074/jbc.M404399200
+    notes: Shintani and Klionsky 2004 analyzed Ape1 cargo as a determinant of Cvt
+      vesicle formation.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from budding-yeast APE1/proApe1 membership in the Cvt complex;
+    no exact source-neutral InterPro or Pfam family identifier for the Cvt precursor-aminopeptidase-I
+    cargo constituent was verified in this pass.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast assembles preApe1p-containing Cvt complexes for selective cytoplasm-to-vacuole
+    targeting.
+  reference: DOI:10.1016/s1097-2765(01)00263-5
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Model yeast used to define receptor-mediated delivery of precursor aminopeptidase
+    I cargo through the Cvt pathway.
+  reference: DOI:10.1016/s1097-2765(01)00263-5
+evidence:
+- reference: GO:0034270
+  notes: Gene Ontology cellular-component term for the Cvt complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0005737
+  notes: Gene Ontology cellular-component term for the cytoplasm.
+- reference: GO:0032258
+  notes: Gene Ontology biological-process term for cytoplasm to vacuole targeting
+    by the Cvt pathway.
+- reference: GO:0033107
+  notes: Gene Ontology cellular-component term for the Cvt vesicle that sequesters
+    the Cvt complex.
+- reference: DOI:10.1016/s1097-2765(01)00263-5
+  notes: Scott et al. 2001, Cvt19 is a receptor for the cytoplasm-to-vacuole targeting
+    pathway, Molecular Cell.
+- reference: DOI:10.1074/jbc.M404399200
+  notes: Shintani and Klionsky 2004, Cargo proteins facilitate the formation of transport
+    vesicles in the cytoplasm to vacuole targeting pathway, Journal of Biological
+    Chemistry.
+causal_graphs:
+- graph_id: cvt_complex_vacuolar_delivery
+  title: Cvt-complex cargo delivery
+  description: Precursor aminopeptidase I multimerizes into the Cvt complex, which
+    is then selectively enclosed by Cvt vesicles before vacuolar delivery.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Cvt-complex cargo composition and vesicle enclosure
+    without asserting the Atg receptor, scaffold, or membrane-expansion machinery
+    that assemble the vesicle.
+  nodes:
+  - node_id: precursor_aminopeptidase_i
+    label: precursor aminopeptidase I
+    node_type: GENE_OR_PROTEIN
+    component_ref: precursor_aminopeptidase_i
+  - node_id: cvt_complex
+    label: Cvt complex
+    node_type: STRUCTURE
+    grounding: GO:0034270
+  - node_id: cvt_vesicle
+    label: Cvt vesicle
+    node_type: ORGANELLE
+    grounding: GO:0033107
+  - node_id: cvt_pathway
+    label: cytoplasm to vacuole targeting by the Cvt pathway
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032258
+  edges:
+  - subject: precursor_aminopeptidase_i
+    predicate: is part of
+    object: cvt_complex
+    description: Precursor aminopeptidase I is the curated cargo constituent of the
+      budding-yeast Cvt complex.
+    evidence:
+    - reference: GO:0034270
+      notes: GO:0034270 defines the Cvt complex as a preApe1p-containing protein complex.
+  - subject: cvt_complex
+    predicate: is enclosed by
+    object: cvt_vesicle
+    description: The Cvt complex is selectively sequestered inside the forming Cvt
+      vesicle.
+    evidence:
+    - reference: GO:0032258
+      notes: GO:0032258 defines Cvt-pathway delivery as formation of a Cvt complex
+        and expansion of a membrane around it.
+  - subject: cvt_vesicle
+    predicate: supports
+    object: cvt_pathway
+    description: Cvt vesicles are the double-membrane carriers that sequester the
+      Cvt complex for vacuolar delivery.
+    evidence:
+    - reference: GO:0033107
+      notes: GO:0033107 defines Cvt vesicles by their involvement in the Cvt pathway.
+discussions:
+- discussion_id: ground_precursor_ape1_component
+  prompt: Resolve an exact source-neutral grounding for the Cvt precursor-aminopeptidase-I
+    cargo constituent.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#precursor_aminopeptidase_i
+  rationale: This first Cvt complex record represents the GO-defined budding-yeast
+    proApe1 cargo constituent, while leaving exact InterPro or Pfam grounding unset
+    until the aminopeptidase family boundary has been reviewed.
+  evidence:
+  - reference: GO:0034270
+    notes: GO:0034270 defines the Cvt complex through its preApe1p cargo membership.
+  posed_by: codex
+  posed_date: '2026-09-30'
+- discussion_id: atg_receptor_scaffold_boundary
+  prompt: Do not model Atg19 or Atg11 as constituent Cvt complex components.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#cvt_complex_vacuolar_delivery
+  rationale: Atg19/Cvt19 recognizes precursor aminopeptidase I cargo and Atg11 moves
+    the resulting Cvt complex to the phagophore assembly site, but the GO:0034270
+    record boundary is the preApe1p-containing Cvt cargo complex rather than those
+    pathway adaptors.
+  resolution_note: 'Declined: kept Atg19 and Atg11 outside the Cvt complex constituent
+    list as recognition and trafficking machinery.'
+  evidence:
+  - reference: GO:0032258
+    notes: GO:0032258 places Atg19 and Atg11 in the Cvt pathway that targets the Cvt
+      complex for vesicle formation.
+  - reference: DOI:10.1016/s1097-2765(01)00263-5
+    notes: Scott et al. 2001 identified Cvt19/Atg19 as the Cvt pathway receptor for
+      precursor aminopeptidase I cargo.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cvt_complex.yaml
+  slug: cvt_complex
+session:
+  id: 2026-09-30T064557Z-codex-50d57b
+  timestamp: '2026-09-30T06:45:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Cvt complex record
+  details: Created a GO:0034270 Cvt complex record with GO synonymy, protein-complex parentage,
+    cytoplasm parthood, a reviewed-label-only precursor aminopeptidase I constituent, Saccharomyces
+    cerevisiae scope, Cvt-pathway function evidence, a nonmechanistic cargo-delivery graph,
+    and grounding and Atg receptor/scaffold boundary discussions.
