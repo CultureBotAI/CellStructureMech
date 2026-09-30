@@ -3512,6 +3512,37 @@
       ]
     },
     {
+      "identifier": "GO:0032152",
+      "label": "meiotic septin complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0032151",
+          "label": "mitotic septin complex",
+          "cosine_similarity": 0.9507757
+        },
+        {
+          "identifier": "GO:0031105",
+          "label": "septin complex",
+          "cosine_similarity": 0.87080631
+        },
+        {
+          "identifier": "GO:0032161",
+          "label": "cleavage apparatus septin structure",
+          "cosine_similarity": 0.78887353
+        },
+        {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.74533287
+        },
+        {
+          "identifier": "GO:0032176",
+          "label": "split septin rings",
+          "cosine_similarity": 0.74310138
+        }
+      ]
+    },
+    {
       "identifier": "GO:0035974",
       "label": "meiotic spindle pole body",
       "neighbors": [
@@ -3609,6 +3640,11 @@
       "label": "mitotic septin complex",
       "neighbors": [
         {
+          "identifier": "GO:0032152",
+          "label": "meiotic septin complex",
+          "cosine_similarity": 0.9507757
+        },
+        {
           "identifier": "GO:0031105",
           "label": "septin complex",
           "cosine_similarity": 0.87618792
@@ -3627,11 +3663,6 @@
           "identifier": "GO:0036391",
           "label": "medial cortex septin ring",
           "cosine_similarity": 0.75576775
-        },
-        {
-          "identifier": "GO:0032176",
-          "label": "split septin rings",
-          "cosine_similarity": 0.75344726
         }
       ]
     },
@@ -4389,6 +4420,11 @@
           "cosine_similarity": 0.87618792
         },
         {
+          "identifier": "GO:0032152",
+          "label": "meiotic septin complex",
+          "cosine_similarity": 0.87080631
+        },
+        {
           "identifier": "GO:0032161",
           "label": "cleavage apparatus septin structure",
           "cosine_similarity": 0.81967448
@@ -4402,11 +4438,6 @@
           "identifier": "GO:0160065",
           "label": "SIN/MEN signaling complex",
           "cosine_similarity": 0.78927362
-        },
-        {
-          "identifier": "GO:0005940",
-          "label": "septin ring",
-          "cosine_similarity": 0.78085909
         }
       ]
     },
