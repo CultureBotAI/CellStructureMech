@@ -20,6 +20,12 @@ curation_history:
     evidence, GO-backed collar topology, and collar-boundary and component-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-30T09:32:08Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1818 from PR #1817 by tightening the Pyricularia taxonomic-distribution
+    and canonical-example notes to cite structure-level Sep5-GFP septin-collar observations.'
+  llm_assisted: true
 synonyms:
 - synonym_text: septin collar of invasive hyphae
   synonym_type: RELATED_SYNONYM
@@ -49,14 +55,15 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:318829
   taxon_label: Pyricularia oryzae
   presence: VARIABLE
-  note: The rice blast fungus Pyricularia oryzae forms invasive hyphae during plant
-    cell-to-cell movement, the context used for the GO hyphae septin collar term.
+  note: The rice blast fungus Pyricularia oryzae forms Sep5-GFP septin collars at
+    rice cell wall crossing points during invasive hyphal growth.
   reference: DOI:10.1126/science.aaq0892
 canonical_examples:
 - taxon_id: NCBITaxon:318829
   taxon_label: Pyricularia oryzae
-  note: Rice-blast fungus model in which Sakulkoo et al. 2018 analyzed plant cell-to-cell
-    invasion through plasmodesmata.
+  note: Rice-blast fungus model in which Sakulkoo et al. 2018 observed Sep5-GFP septin
+    collars at plant cell wall crossing points and linked collar organization to Pmk1
+    signaling during cell-to-cell invasion.
   reference: DOI:10.1126/science.aaq0892
 evidence:
 - reference: GO:0062140
