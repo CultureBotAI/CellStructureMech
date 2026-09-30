@@ -1,0 +1,181 @@
+identifier: GO:0120115
+label: Lsm2-8 complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Heteroheptameric Sm-like protein ring complex composed of Lsm2, Lsm3,
+  Lsm4, Lsm5, Lsm6, Lsm7 and Lsm8 or their orthologs that associates with U6-family
+  spliceosomal snRNAs.
+definition_source: GO:0120115
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T03:43:31Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T03:44:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added protein-complex parentage, U6/U6atac snRNP parthood, a reviewed-label-only
+    Lsm2-8 protein constituent, budding-yeast distribution and canonical example,
+    a U6-family snRNP association function, GO/DOI evidence, a nonmechanistic assembly
+    graph, and boundary and component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005688
+- GO:0005691
+components:
+- component_id: lsm2_8_proteins
+  label: Lsm2-8 proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0120115 defines the Lsm2-8 complex as a seven-protein heteromer,
+    but this aggregate does not assign exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB groundings to the individual Lsm2, Lsm3, Lsm4, Lsm5, Lsm6, Lsm7 and
+    Lsm8 subunits.
+  role: Sm-like protein constituents that form the Lsm2-8 heteroheptameric ring in
+    U6-family spliceosomal snRNPs.
+  evidence:
+  - reference: GO:0120115
+    notes: GO:0120115 defines the Lsm2-8 complex as the heteroheptameric complex composed
+      of Lsm2, Lsm3, Lsm4, Lsm5, Lsm6, Lsm7 and Lsm8 or their orthologs.
+  - reference: DOI:10.1038/nature16940
+    notes: Nguyen, Galej, Bai and colleagues 2016 resolved budding-yeast U4/U6.U5
+      tri-snRNP particles containing the U6-associated Lsm2-8 ring.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast U6 snRNPs carry an Lsm2-8 ring that is represented inside U4/U6.U5
+    tri-snRNP cryo-EM structures.
+  reference: DOI:10.1038/nature16940
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast spliceosomal model in which the Lsm2-8 ring is captured as part
+    of cryo-EM U4/U6.U5 tri-snRNP structures.
+  reference: DOI:10.1038/nature16940
+functions:
+- function_id: lsm2_8_u6_family_snrnp_association
+  label: U6-family snRNP association
+  description: The Lsm2-8 protein ring associates with U6-family spliceosomal snRNAs
+    as a defining protein-ring constituent of U6 and U6atac snRNPs.
+  evidence:
+  - reference: GO:0005688
+    notes: GO:0005688 names the Lsm2-8 ring as a U6 snRNP constituent.
+  - reference: GO:0005691
+    notes: GO:0005691 names the Lsm2-8 ring as a U6atac snRNP constituent.
+evidence:
+- reference: GO:0120115
+  notes: Gene Ontology cellular-component term for the Lsm2-8 complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component term for protein-containing complex.
+- reference: GO:0005688
+  notes: Gene Ontology cellular-component term for the U6 snRNP.
+- reference: GO:0005691
+  notes: Gene Ontology cellular-component term for the U6atac snRNP.
+- reference: DOI:10.1038/nature16940
+  notes: Nguyen, Galej, Bai and colleagues 2016, Cryo-EM structure of the yeast U4/U6.U5
+    tri-snRNP at 3.7 Angstrom resolution, Nature.
+causal_graphs:
+- graph_id: lsm2_8_snrnp_constituency
+  title: Lsm2-8 proteins form a U6-family snRNP ring
+  description: Seven Sm-like Lsm proteins form the GO-defined Lsm2-8 complex, which
+    is a protein-ring constituent of U6 and U6atac snRNPs.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records Lsm2-8 ring membership in U6-family snRNPs without
+    asserting exact individual Lsm-family groundings, subunit interfaces or RNA contacts.
+  nodes:
+  - node_id: lsm2_8_proteins
+    label: Lsm2-8 proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: lsm2_8_proteins
+  - node_id: lsm2_8_complex
+    label: Lsm2-8 complex
+    node_type: STRUCTURE
+    grounding: GO:0120115
+  - node_id: u6_snrnp
+    label: U6 snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005688
+  - node_id: u6atac_snrnp
+    label: U6atac snRNP
+    node_type: STRUCTURE
+    grounding: GO:0005691
+  edges:
+  - subject: lsm2_8_proteins
+    predicate: assemble into
+    object: lsm2_8_complex
+    description: Lsm2, Lsm3, Lsm4, Lsm5, Lsm6, Lsm7 and Lsm8 form the heteroheptameric
+      Lsm2-8 complex.
+    evidence:
+    - reference: GO:0120115
+      notes: GO:0120115 defines the subunit scope of the Lsm2-8 complex.
+  - subject: lsm2_8_complex
+    predicate: contributes constituents to
+    object: u6_snrnp
+    description: The Lsm2-8 protein ring is a constituent of the U6 snRNP.
+    evidence:
+    - reference: GO:0005688
+      notes: GO:0005688 defines the U6 snRNP as containing the Lsm2-8 heptameric ring
+        complex.
+    - reference: GO:0120115
+      notes: GO:0120115 is the Gene Ontology cellular-component term for the Lsm2-8
+        complex.
+  - subject: lsm2_8_complex
+    predicate: contributes constituents to
+    object: u6atac_snrnp
+    description: The Lsm2-8 protein ring is a constituent of the U6atac snRNP.
+    evidence:
+    - reference: GO:0005691
+      notes: GO:0005691 defines the U6atac snRNP as containing the Lsm2-8 heptameric
+        ring complex.
+    - reference: GO:0120115
+      notes: GO:0120115 is the Gene Ontology cellular-component term for the Lsm2-8
+        complex.
+discussions:
+- discussion_id: lsm2_8_complex_boundary
+  prompt: Keep the Lsm2-8 protein ring distinct from complete U6-family snRNPs and
+    from individual Lsm proteins.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0120115 denotes the heteroheptameric Lsm2-8 protein complex, whereas
+    GO:0005688 and GO:0005691 denote complete U6 and U6atac small nuclear ribonucleoprotein
+    complexes that contain snRNA and additional proteins.
+  resolution_note: Curated GO:0120115 as a child protein complex with U6 and U6atac
+    snRNP parthood.
+  evidence:
+  - reference: GO:0120115
+    notes: GO:0120115 identifies the Lsm2-8 complex.
+  - reference: GO:0005688
+    notes: GO:0005688 identifies the U6 snRNP.
+  - reference: GO:0005691
+    notes: GO:0005691 identifies the U6atac snRNP.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_lsm2_8_subunit_groundings
+  prompt: Resolve exact source-neutral groundings for the individual Lsm2, Lsm3, Lsm4,
+    Lsm5, Lsm6, Lsm7 and Lsm8 protein families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#lsm2_8_proteins
+  rationale: GO:0120115 establishes the seven named Sm-like subunits of the Lsm2-8
+    complex, but this first child-complex record keeps them as a reviewed-label-only
+    aggregate instead of guessing exact InterPro, Pfam, NCBIfam or UniProtKB groundings
+    for individual Lsm proteins.
+  evidence:
+  - reference: GO:0120115
+    notes: GO:0120115 defines the protein membership of the Lsm2-8 complex.
+  posed_by: codex
+  posed_date: '2026-09-30'
