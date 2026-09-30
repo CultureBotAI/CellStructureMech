@@ -1,0 +1,157 @@
+identifier: GO:0032176
+label: split septin rings
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A pair of rings that flank the site of cell division, formed by splitting
+  of the septin ring (or collar) prior to cytokinesis; this double ring structure
+  is thought to trap proteins needed for cytokinesis or the formation of the new membrane
+  or cell wall between the two septin rings. Split septin rings are known to occur
+  in budding yeast cells and probably occur in other cell types as well.
+definition_source: GO:0032176
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T16:36:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T16:37:18Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-cytoskeleton parentage, cytoskeleton parthood, a reviewed-label-only
+    septin constituent, a GO-backed cytokinetic compartment function, a nonmechanistic
+    split-ring topology graph, and boundary and component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0032156
+part_of:
+- GO:0005856
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Split septin rings are cytokinetic septin ring pairs, but no exact
+    source-neutral InterPro, Pfam, or NCBIfam CURIE was assigned for the complete
+    split-ring-forming septin cohort.
+  role: Septin GTPases that remain in the pair of rings after a septin ring or collar
+    splits before cytokinesis.
+  evidence:
+  - reference: GO:0032176
+    notes: GO:0032176 defines split septin rings as a pair of rings formed by splitting
+      of a septin ring or collar.
+functions:
+- function_id: cytokinetic_compartment_boundary
+  label: cytokinetic compartment boundary
+  description: Split septin rings flank the cell-division site and are thought to
+    trap proteins needed for cytokinesis or for formation of the new membrane or cell
+    wall between the two rings.
+  evidence:
+  - reference: GO:0032176
+    notes: GO:0032176 describes the double ring structure as thought to trap cytokinesis,
+      new-membrane, or new-cell-wall proteins.
+evidence:
+- reference: GO:0032176
+  notes: Gene Ontology cellular-component term for split septin rings.
+- reference: GO:0032156
+  notes: OLS reports GO:0032156 septin cytoskeleton as the direct GO:0032176 parent.
+- reference: GO:0005856
+  notes: OLS reports a direct GO:0032176 part_of relation to the cytoskeleton.
+- reference: GO:0032177
+  notes: OLS reports GO:0032177 cellular bud neck split septin rings as the direct
+    GO:0032176 child.
+causal_graphs:
+- graph_id: split_septin_rings_topology
+  title: Split septin-rings topology
+  description: A septin ring or collar splits into a pair of septin rings that flank
+    the site of cell division before cytokinesis.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-backed split-ring topology without asserting
+    a molecular mechanism for septin-ring or septin-collar splitting.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: septin_ring_or_collar
+    label: septin ring or collar
+    node_type: STRUCTURE
+  - node_id: split_septin_rings
+    label: split septin rings
+    node_type: STRUCTURE
+    grounding: GO:0032176
+  - node_id: cell_division_site
+    label: cell division site
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: split_septin_rings
+    description: Septin proteins form the pair of septin rings.
+    evidence:
+    - reference: GO:0032176
+      notes: GO:0032176 defines split septin rings as a pair of rings formed from
+        a septin ring or collar.
+  - subject: septin_ring_or_collar
+    predicate: splits into
+    object: split_septin_rings
+    description: Split septin rings form by splitting of a septin ring or collar before
+      cytokinesis.
+    evidence:
+    - reference: GO:0032176
+      notes: GO:0032176 defines split septin rings as a double-ring structure produced
+        when the septin ring or collar splits before cytokinesis.
+  - subject: split_septin_rings
+    predicate: flank
+    object: cell_division_site
+    description: The pair of split septin rings flanks the site of cell division.
+    evidence:
+    - reference: GO:0032176
+      notes: GO:0032176 defines the split septin rings as a pair of rings that flank
+        the site of cell division.
+discussions:
+- discussion_id: split_septin_rings_boundary
+  prompt: Keep the generic split septin rings distinct from localized bud-neck split
+    septin rings and from the precursor septin ring or collar.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032176 denotes the broader pair of rings that forms when a septin
+    ring or septin collar splits before cytokinesis. GO:0032177 narrows that state
+    to the cellular bud neck, GO:0005940 denotes an unsplit septin ring, and GO:0032173
+    denotes an unsplit septin collar.
+  resolution_note: Curated GO:0032176 as the generic split-ring class, kept GO:0032177
+    as the narrower bud-neck child, and did not merge the split pair with its precursor
+    septin-ring or septin-collar states.
+  evidence:
+  - reference: GO:0032176
+    notes: GO:0032176 identifies the generic split septin rings.
+  - reference: GO:0032177
+    notes: GO:0032177 identifies the localized cellular bud neck split septin rings.
+  - reference: GO:0005940
+    notes: GO:0005940 identifies the septin ring.
+  - reference: GO:0032173
+    notes: GO:0032173 identifies the septin collar.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_split_septin_rings_grounding
+  prompt: Resolve an exact source-neutral grounding for split-septin-rings septin
+    proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The initial split septin rings record uses a reviewed-label-only septin
+    protein cohort rather than guessing InterPro, Pfam, or NCBIfam accessions that
+    may not exactly delimit all septins that remain in split-ring pairs.
+  evidence:
+  - reference: GO:0032176
+    notes: GO:0032176 defines split septin rings as a pair of septin rings.
+  posed_by: codex
+  posed_date: '2026-09-30'

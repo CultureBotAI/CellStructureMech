@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/split_septin_rings.yaml
+  slug: split_septin_rings
+session:
+  id: 2026-09-30T163754Z-codex-8f2667
+  timestamp: '2026-09-30T16:37:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the split septin rings record
+  details: Created the GO:0032176 split septin rings record from the OLS-verified GO cellular-component
+    term, direct GO:0032156 septin cytoskeleton parent, direct cytoskeleton parthood, and
+    direct GO:0032177 child. Added a reviewed-label-only septin-protein constituent, a GO-backed
+    cytokinetic-compartment function, a nonmechanistic split-ring topology graph, and boundary
+    and component-grounding discussions.
