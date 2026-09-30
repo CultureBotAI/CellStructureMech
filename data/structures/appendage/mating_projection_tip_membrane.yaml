@@ -19,6 +19,12 @@ curation_history:
     domain function evidence, a nonmechanistic tip-membrane topology graph, and a
     lipid-bilayer grounding TODO.
   llm_assisted: true
+- timestamp: '2026-09-30T05:26:38Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1810 by rewording the only function row from a membrane-domain
+    restatement to a mating-projection-tip polarized-growth role.'
+  llm_assisted: true
 part_of:
 - GO:0043332
 - GO:0070250
@@ -53,10 +59,10 @@ canonical_examples:
     formation and polarized Spa2p localization at projection tips.
   reference: DOI:10.1091/mbc.3.4.429
 functions:
-- function_id: mating_projection_tip_membrane_domain
-  label: mating projection tip membrane domain
-  description: The mating projection tip membrane surrounds the polarized projection
-    apex and forms the local plasma-membrane domain associated with tip growth.
+- function_id: mating_projection_tip_polarized_growth
+  label: mating-projection tip polarized growth
+  description: The mating projection tip membrane delimits the local plasma-membrane
+    surface around the projection apex where pheromone-induced polarized growth occurs.
   evidence:
   - reference: GO:0070867
     notes: GO:0070867 identifies the membrane portion surrounding a mating projection
