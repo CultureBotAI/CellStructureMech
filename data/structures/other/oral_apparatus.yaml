@@ -1,0 +1,151 @@
+identifier: GO:0031912
+label: oral apparatus
+structure_category: OTHER
+structure_kind: OTHER
+definition: Complex basket- or funnel-like structure used by the cell to collect food
+  and channel it to the cytostome; includes specialized sub-structures made up of
+  closely-spaced cilia and underlying basal bodies and fibrillar systems.
+definition_source: GO:0031912
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T19:46:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T19:48:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cellular-anatomical-structure parentage, deep-fiber has-part topology,
+    Ciliophora and Tetrahymena scope, GO-backed food-channeling function, an oral-apparatus
+    topology graph, and boundary and component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0110165
+has_part:
+- GO:0032123
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5878
+  taxon_label: Ciliophora
+  presence: COMMON
+  note: GO scopes the oral apparatus to the ciliate-protozoan feeding structure rather
+    than oral structures of multicellular animals.
+  reference: GO:0031912
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Ciliate model covered by Frankel's Methods in Cell Biology review that supplied
+    the GO oral-apparatus definition.
+  reference: DOI:10.1016/S0091-679X(08)61528-9
+functions:
+- function_id: food_collection_and_cytostome_channeling
+  label: food collection and cytostome channeling
+  description: The ciliate oral apparatus collects food and channels it toward the
+    cytostome for cellular ingestion.
+  evidence:
+  - reference: GO:0031912
+    notes: GO:0031912 defines the oral apparatus as a basket- or funnel-like ciliate
+      structure that collects food and channels it to the cytostome.
+evidence:
+- reference: GO:0031912
+  notes: Gene Ontology cellular-component term for the ciliate oral apparatus.
+- reference: GO:0110165
+  notes: OLS reports GO:0110165 cellular anatomical structure as the direct GO:0031912
+    parent.
+- reference: GO:0032123
+  notes: OLS reports GO:0032123 deep fiber as a direct GO:0031912 child and as part
+    of the oral apparatus.
+- reference: DOI:10.1016/S0091-679X(08)61528-9
+  notes: Frankel 2000, Cell biology of Tetrahymena thermophila, Methods in Cell Biology.
+causal_graphs:
+- graph_id: oral_apparatus_food_channeling
+  title: Oral-apparatus topology for feeding
+  description: The oral apparatus is a ciliate feeding structure with specialized
+    ciliary, basal-body and fibrillar substructures; deep fibers are GO-modeled oral-apparatus
+    parts, and the whole apparatus channels food toward the cytostome.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed topology only; it does not assign individual
+    basal-body, ciliary, or fibrillar protein components.
+  nodes:
+  - node_id: oral_apparatus
+    label: oral apparatus
+    node_type: STRUCTURE
+    grounding: GO:0031912
+  - node_id: deep_fiber
+    label: deep fiber
+    node_type: STRUCTURE
+    grounding: GO:0032123
+  - node_id: cytostome
+    label: cytostome
+    node_type: STRUCTURE
+    grounding: GO:0031910
+  - node_id: food
+    label: food
+    node_type: CHEMICAL
+  edges:
+  - subject: deep_fiber
+    predicate: is part of
+    object: oral_apparatus
+    description: Deep fibers are oral-apparatus substructures.
+    evidence:
+    - reference: GO:0032123
+      notes: GO:0032123 defines deep fibers as inward projections of oral-apparatus
+        cytoskeletal structures.
+  - subject: oral_apparatus
+    predicate: channels
+    object: food
+    description: The oral apparatus collects food and channels it toward the cytostome.
+    evidence:
+    - reference: GO:0031912
+      notes: GO:0031912 defines the oral apparatus by its role in collecting food
+        and channeling it to the cytostome.
+  - subject: oral_apparatus
+    predicate: directs food to
+    object: cytostome
+    description: The oral apparatus feeds collected material toward the cytostome.
+    evidence:
+    - reference: GO:0031912
+      notes: GO:0031912 defines the oral apparatus as a food-collecting structure
+        that channels material to the cytostome.
+discussions:
+- discussion_id: oral_apparatus_boundary
+  prompt: Keep the ciliate oral apparatus distinct from its cytostome and deep-fiber
+    substructures.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - has_part
+  rationale: GO:0031912 denotes the whole ciliate feeding apparatus that collects
+    food and channels it to the cytostome. GO:0031910 denotes a cytostome opening,
+    and GO:0032123 denotes the narrower deep-fiber oral-apparatus substructure.
+  resolution_note: Curated GO:0031912 as the whole oral-apparatus structure and recorded
+    GO:0032123 only as a child part pending a separate deep-fiber record.
+  evidence:
+  - reference: GO:0031912
+    notes: GO:0031912 identifies the ciliate oral apparatus.
+  - reference: GO:0031910
+    notes: GO:0031910 identifies the cytostome.
+  - reference: GO:0032123
+    notes: GO:0032123 identifies the deep fiber.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_oral_apparatus_components
+  prompt: Resolve exact ciliary, basal-body and fibrillar components before adding
+    molecular constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - causal_graphs#oral_apparatus_food_channeling
+  rationale: GO:0031912 states that the oral apparatus includes closely spaced cilia,
+    underlying basal bodies and fibrillar systems, but this first GO-backed record
+    does not guess exact source-neutral component groundings for those substructures.
+  evidence:
+  - reference: GO:0031912
+    notes: GO:0031912 defines the oral apparatus as including cilia, basal bodies
+      and fibrillar systems.
+  posed_by: codex
+  posed_date: '2026-09-30'
