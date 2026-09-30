@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_cap.yaml
+  slug: septin_cap
+session:
+  id: 2026-09-30T110354Z-codex-60edcb
+  timestamp: '2026-09-30T11:03:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added septin cap record
+  details: Created GO:0032159 septin cap with GO-backed septin-cytoskeleton parentage, cytoskeleton
+    parthood, Candida albicans exemplar evidence, a reviewed-label-only septin constituent,
+    a nonmechanistic apical topology graph, and boundary and grounding discussions.
