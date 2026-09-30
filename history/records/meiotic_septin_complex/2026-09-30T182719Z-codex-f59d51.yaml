@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/meiotic_septin_complex.yaml
+  slug: meiotic_septin_complex
+session:
+  id: 2026-09-30T182719Z-codex-f59d51
+  timestamp: '2026-09-30T18:27:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add meiotic septin complex record
+  details: Added GO:0032152 as the meiotic septin-complex specialization of the broader septin
+    complex, with GO-backed parentage, a reviewed-label-only septin constituent, a meiotic
+    cell-division function, a nonmechanistic assembly graph, and curation discussions documenting
+    the boundary and unresolved exact septin-family groundings.
