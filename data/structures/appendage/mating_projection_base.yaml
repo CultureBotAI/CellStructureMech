@@ -1,0 +1,116 @@
+identifier: GO:0001400
+label: mating projection base
+structure_category: APPENDAGE
+structure_kind: SUBCELLULAR_REGION
+definition: The region where the mating projection meets the bulk of the cell, in
+  unicellular fungi exposed to mating pheromone.
+definition_source: GO:0001400
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T21:29:56Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T21:31:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, cellular-anatomical-structure parentage, mating-projection
+    parthood, Saccharomyces scope, a GO-backed topology graph, and a boundary discussion
+    for neighboring projection substructures.
+  llm_assisted: true
+synonyms:
+- synonym_text: base of shmoo tip
+  synonym_type: NARROW_SYNONYM
+  source: GO:0001400
+- synonym_text: conjugation tube base
+  synonym_type: NARROW_SYNONYM
+  source: GO:0001400
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0005937
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Haploid budding-yeast cells have a mating projection base only when pheromone
+    induces a mating projection.
+  reference: DOI:10.1091/mbc.3.4.429
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which pheromone treatment induces a mating projection
+    with a base adjoining the mother-cell body.
+  reference: DOI:10.1091/mbc.3.4.429
+evidence:
+- reference: GO:0001400
+  notes: Gene Ontology cellular-component term for the mating projection base.
+- reference: GO:0110165
+  notes: OLS reports GO:0110165 cellular anatomical structure as the GO:0001400 is-a
+    parent.
+- reference: GO:0005937
+  notes: OLS reports GO:0001400 mating projection base as part of the mating projection.
+- reference: DOI:10.1091/mbc.3.4.429
+  notes: Read et al. 1992, Actin- and tubulin-dependent functions during Saccharomyces
+    cerevisiae mating projection formation, Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: mating_projection_base_topology
+  title: The mating-projection base adjoins the bulk cell
+  description: The mating projection base is the basal region of a fungal mating projection
+    where the pheromone-induced outgrowth meets the bulk cell.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed projection topology only; it does not
+    assign polarisome, septin, or actin machinery to the base region.
+  nodes:
+  - node_id: mating_projection_base
+    label: mating projection base
+    node_type: STRUCTURE
+    grounding: GO:0001400
+  - node_id: mating_projection
+    label: mating projection
+    node_type: STRUCTURE
+    grounding: GO:0005937
+  edges:
+  - subject: mating_projection_base
+    predicate: is part of
+    object: mating_projection
+    description: The base is the region where the mating projection joins the bulk
+      cell.
+    evidence:
+    - reference: GO:0001400
+      notes: GO:0001400 defines the mating projection base as the region where the
+        mating projection meets the bulk of a pheromone-exposed unicellular fungal
+        cell.
+discussions:
+- discussion_id: mating_projection_base_boundary
+  prompt: Keep the mating projection base distinct from the whole projection, projection
+    tip, membrane, and septin substructures.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0001400 denotes the basal region of GO:0005937, not the whole projection,
+    the GO:0043332 tip, the GO:0070250 membrane, or the GO:0032175/GO:0032162 septin
+    structures that can occupy the neck.
+  resolution_note: Curated GO:0001400 as a subcellular region that is part of the
+    mating projection and left septin and tip-localized machinery on their own structure
+    records.
+  evidence:
+  - reference: GO:0001400
+    notes: GO:0001400 identifies the mating projection base.
+  - reference: GO:0005937
+    notes: GO:0005937 identifies the whole mating projection.
+  - reference: GO:0043332
+    notes: GO:0043332 identifies the mating projection tip.
+  - reference: GO:0070250
+    notes: GO:0070250 identifies the mating projection membrane.
+  - reference: GO:0032175
+    notes: GO:0032175 identifies the mating projection septin ring.
+  - reference: GO:0032162
+    notes: GO:0032162 identifies the mating projection septin band.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'

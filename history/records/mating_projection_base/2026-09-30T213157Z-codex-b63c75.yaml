@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/mating_projection_base.yaml
+  slug: mating_projection_base
+session:
+  id: 2026-09-30T213157Z-codex-b63c75
+  timestamp: '2026-09-30T21:31:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0001400 mating projection base
+  details: Created the GO:0001400 mating projection base record under data/structures/appendage
+    with GO-backed cellular-anatomical-structure parentage, GO:0005937 mating-projection parthood,
+    GO synonymy, Saccharomyces cerevisiae scope, a nonmechanistic topology graph, and a resolved
+    boundary discussion for neighboring projection substructures. Focused LinkML and strict
+    validation passed before derived artifacts were regenerated.
