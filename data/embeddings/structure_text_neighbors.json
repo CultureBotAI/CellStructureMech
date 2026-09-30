@@ -5365,9 +5365,9 @@
           "cosine_similarity": 0.75122647
         },
         {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.72667237
+          "identifier": "GO:0034270",
+          "label": "Cvt complex",
+          "cosine_similarity": 0.74872482
         }
       ]
     },
@@ -5391,14 +5391,14 @@
           "cosine_similarity": 0.77085801
         },
         {
+          "identifier": "GO:0034270",
+          "label": "Cvt complex",
+          "cosine_similarity": 0.75054867
+        },
+        {
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.72671629
-        },
-        {
-          "identifier": "GO:0005774",
-          "label": "vacuolar membrane",
-          "cosine_similarity": 0.72411217
         }
       ]
     },
@@ -13508,6 +13508,11 @@
           "cosine_similarity": 0.69277957
         },
         {
+          "identifier": "GO:0034270",
+          "label": "Cvt complex",
+          "cosine_similarity": 0.6867236
+        },
+        {
           "identifier": "GO:1990334",
           "label": "SIN/MEN two-component GAP complex",
           "cosine_similarity": 0.68421344
@@ -13516,11 +13521,6 @@
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.68300553
-        },
-        {
-          "identifier": "GO:0071162",
-          "label": "CMG complex",
-          "cosine_similarity": 0.67827257
         }
       ]
     },
@@ -14017,6 +14017,37 @@
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.75129502
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0034270",
+      "label": "Cvt complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0043291",
+          "label": "RAVE complex",
+          "cosine_similarity": 0.8072812
+        },
+        {
+          "identifier": "GO:0033107",
+          "label": "Cvt vesicle",
+          "cosine_similarity": 0.79985879
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.78145688
+        },
+        {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.77665871
+        },
+        {
+          "identifier": "GO:0000813",
+          "label": "ESCRT I complex",
+          "cosine_similarity": 0.77445034
         }
       ]
     },
@@ -17445,6 +17476,11 @@
           "cosine_similarity": 0.81612126
         },
         {
+          "identifier": "GO:0034270",
+          "label": "Cvt complex",
+          "cosine_similarity": 0.8072812
+        },
+        {
           "identifier": "GO:0030905",
           "label": "retromer, tubulation complex",
           "cosine_similarity": 0.80189927
@@ -17453,11 +17489,6 @@
           "identifier": "GO:0030904",
           "label": "retromer complex",
           "cosine_similarity": 0.78778865
-        },
-        {
-          "identifier": "GO:0031561",
-          "label": "cellular bud tip polarisome",
-          "cosine_similarity": 0.78470135
         }
       ]
     },
