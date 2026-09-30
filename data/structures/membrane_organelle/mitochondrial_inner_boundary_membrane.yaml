@@ -1,0 +1,188 @@
+identifier: GO:0097002
+label: mitochondrial inner boundary membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The portion of the mitochondrial inner membrane that is not invaginated
+  to form cristae and lies parallel to the outer membrane.
+definition_source: GO:0097002
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T04:29:35Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T04:31:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added mitochondrial-inner-membrane parthood, a reviewed-label-only lipid-bilayer
+    component, Eukaryota and Saccharomyces scope, inner-membrane-organization function
+    evidence, a nonmechanistic inner-boundary topology graph, and a lipid-bilayer
+    grounding TODO.
+  llm_assisted: true
+part_of:
+- GO:0005743
+components:
+- component_id: mitochondrial_inner_boundary_lipid_bilayer
+  label: mitochondrial inner boundary lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Non-invaginated lipid bilayer domain of the mitochondrial inner membrane that
+    runs parallel to the outer membrane.
+  evidence:
+  - reference: GO:0097002
+    notes: GO:0097002 identifies the inner boundary membrane as the portion of the
+      mitochondrial inner membrane that is not invaginated to form cristae.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0097002 identifies the whole mitochondrial inner boundary membrane,
+    but no separate source-neutral CURIE was verified for the lipid bilayer constituent
+    of that membrane domain.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: VARIABLE
+  note: Canonical inner boundary membranes occur with crista-forming mitochondria,
+    while some anaerobic eukaryotic lineages carry reduced mitochondrion-related organelles.
+  reference: GO:0097002
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondrial inner membranes contain inner boundary and crista
+    membrane domains connected by crista junctions.
+  reference: DOI:10.1016/j.devcel.2011.08.026
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast for MINOS and MICOS studies that connect crista membranes
+    to the mitochondrial inner boundary membrane through crista junctions.
+  reference: DOI:10.1016/j.devcel.2011.08.026
+functions:
+- function_id: inner_mitochondrial_membrane_organization
+  label: inner mitochondrial membrane organization
+  grounding: GO:0007007
+  description: The inner boundary membrane provides the non-invaginated inner-membrane
+    domain to which cristae remain connected through crista junctions.
+  evidence:
+  - reference: GO:0097002
+    notes: GO:0097002 defines the inner boundary membrane as the non-invaginated portion
+      of the mitochondrial inner membrane.
+  - reference: GO:0044284
+    notes: GO:0044284 defines the crista junction as the tubular connection between
+      a mitochondrial crista and the inner boundary membrane.
+  - reference: GO:0007007
+    notes: GO:0007007 defines inner mitochondrial membrane organization as assembly,
+      arrangement of constituent parts, or disassembly of the mitochondrial inner
+      membrane.
+evidence:
+- reference: GO:0097002
+  notes: Gene Ontology cellular-component term for mitochondrial inner boundary membrane.
+- reference: GO:0005743
+  notes: Gene Ontology cellular-component term for mitochondrial inner membrane.
+- reference: GO:0030061
+  notes: Gene Ontology cellular-component term for mitochondrial crista.
+- reference: GO:0044284
+  notes: Gene Ontology cellular-component term for mitochondrial crista junction.
+- reference: GO:0007007
+  notes: Gene Ontology biological-process term for inner mitochondrial membrane organization.
+- reference: DOI:10.1016/j.devcel.2011.08.026
+  notes: von der Malsburg et al. 2011, 'Dual role of mitofilin in mitochondrial membrane
+    organization and protein biogenesis', Developmental Cell.
+- reference: DOI:10.7554/elife.07739
+  notes: Friedman et al. 2015, 'MICOS coordinates with respiratory complexes and lipids
+    to establish mitochondrial inner membrane architecture', eLife.
+- reference: DOI:10.1038/nature12985
+  notes: Friedman and Nunnari 2014, 'Mitochondrial form and function', Nature.
+causal_graphs:
+- graph_id: yeast_inner_boundary_membrane_topology
+  title: Yeast mitochondrial inner boundary membrane topology
+  description: In budding yeast, the inner boundary membrane is the non-invaginated
+    mitochondrial inner-membrane domain that connects to crista membranes through
+    crista junctions.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures inner-boundary, crista, and crista-junction topology
+    without asserting MICOS subunit composition, a crista-junction assembly sequence,
+    or respiratory-complex redistribution mechanisms.
+  nodes:
+  - node_id: mitochondrial_inner_boundary_membrane
+    label: mitochondrial inner boundary membrane
+    node_type: STRUCTURE
+    grounding: GO:0097002
+  - node_id: mitochondrial_inner_membrane
+    label: mitochondrial inner membrane
+    node_type: STRUCTURE
+    grounding: GO:0005743
+  - node_id: mitochondrial_crista
+    label: mitochondrial crista
+    node_type: STRUCTURE
+    grounding: GO:0030061
+  - node_id: crista_junction
+    label: mitochondrial crista junction
+    node_type: STRUCTURE
+    grounding: GO:0044284
+  - node_id: inner_mitochondrial_membrane_organization
+    label: inner mitochondrial membrane organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007007
+  edges:
+  - subject: mitochondrial_inner_boundary_membrane
+    predicate: is part of
+    object: mitochondrial_inner_membrane
+    description: The inner boundary membrane is a portion of the mitochondrial inner
+      membrane.
+    evidence:
+    - reference: GO:0097002
+      notes: GO:0097002 defines the inner boundary membrane as a portion of the mitochondrial
+        inner membrane.
+    - reference: GO:0005743
+      notes: GO:0005743 identifies the mitochondrial inner membrane.
+  - subject: mitochondrial_inner_boundary_membrane
+    predicate: is connected to
+    object: crista_junction
+    description: Crista junctions connect mitochondrial cristae to the inner boundary
+      membrane.
+    evidence:
+    - reference: GO:0044284
+      notes: GO:0044284 defines a crista junction as the tubular structure that connects
+        a mitochondrial crista to the inner boundary membrane.
+  - subject: crista_junction
+    predicate: connects
+    object: mitochondrial_crista
+    description: Crista junctions connect inward crista folds with the non-invaginated
+      inner boundary membrane.
+    evidence:
+    - reference: GO:0044284
+      notes: GO:0044284 defines a crista junction as the connection between a crista
+        and the inner boundary membrane.
+    - reference: GO:0030061
+      notes: GO:0030061 defines a mitochondrial crista as an inward fold of the mitochondrial
+        inner membrane.
+  - subject: mitochondrial_inner_boundary_membrane
+    predicate: participates in
+    object: inner_mitochondrial_membrane_organization
+    description: The inner boundary membrane is the non-invaginated domain that is
+      organized relative to crista folds and crista junctions.
+    evidence:
+    - reference: GO:0097002
+      notes: GO:0097002 distinguishes the non-invaginated inner boundary membrane
+        from invaginated cristae.
+    - reference: GO:0007007
+      notes: GO:0007007 denotes assembly, arrangement of constituent parts, or disassembly
+        of the mitochondrial inner membrane.
+discussions:
+- discussion_id: ground_mitochondrial_inner_boundary_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    mitochondrial inner boundary membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mitochondrial_inner_boundary_lipid_bilayer
+  rationale: GO:0097002 identifies the whole inner boundary membrane, but the lipid-bilayer
+    constituent is intentionally left as reviewed-label-only until an exact source-neutral
+    lipid or membrane-constituent CURIE is curated.
+  evidence:
+  - reference: GO:0097002
+    notes: GO:0097002 identifies the whole mitochondrial inner boundary membrane.
+  posed_by: codex
+  posed_date: '2026-09-30'
