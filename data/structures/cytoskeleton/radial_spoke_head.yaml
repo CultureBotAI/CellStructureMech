@@ -21,8 +21,14 @@ curation_history:
     function, GO/DOI evidence, a nonmechanistic topology graph, and boundary and component-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-09-30T00:09:09Z'
+  curator: codex
+  action: FIX_PARENT_STRUCTURE
+  changes: Replaced the erroneous GO:0140513 nuclear protein-containing-complex parent
+    with the generic GO:0032991 protein-containing-complex term.
+  llm_assisted: true
 parent_structures:
-- GO:0140513
+- GO:0032991
 part_of:
 - GO:0001534
 components:
@@ -72,8 +78,8 @@ functions:
 evidence:
 - reference: GO:0001535
   notes: Gene Ontology cellular-component term for the radial spoke head.
-- reference: GO:0140513
-  notes: Gene Ontology parent term for protein-containing complexes.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component term for protein-containing complex.
 - reference: GO:0001534
   notes: Gene Ontology cellular-component term for the containing radial spoke.
 - reference: DOI:10.1126/science.1128618
