@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/lsm2_8_complex.yaml
+  slug: lsm2_8_complex
+session:
+  id: 2026-09-30T034555Z-codex-6bbcf0
+  timestamp: '2026-09-30T03:45:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Lsm2-8 complex record
+  details: Created a GO:0120115 Lsm2-8 complex record with protein-complex parentage, U6 and
+    U6atac snRNP parthood, a reviewed-label-only Lsm2-8 protein constituent, Saccharomyces
+    cerevisiae U4/U6.U5 tri-snRNP evidence, a U6-family snRNP association function, a nonmechanistic
+    assembly graph, and boundary and component-grounding discussions.
