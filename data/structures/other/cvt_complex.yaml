@@ -20,6 +20,13 @@ curation_history:
     scope, a Cvt-pathway function, GO/DOI evidence, a nonmechanistic Cvt cargo-delivery
     graph, and grounding and Atg receptor/scaffold boundary discussions.
   llm_assisted: true
+- timestamp: '2026-09-30T07:06:22Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #1813 by removing the passive Cvt-pathway function row while
+    retaining GO:0032258 as evidence for Cvt-complex enclosure in the cargo-delivery
+    graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cytoplasm to vacuole targeting complex
   synonym_type: EXACT_SYNONYM
@@ -68,19 +75,6 @@ canonical_examples:
   note: Model yeast used to define receptor-mediated delivery of precursor aminopeptidase
     I cargo through the Cvt pathway.
   reference: DOI:10.1016/s1097-2765(01)00263-5
-functions:
-- function_id: cvt_cargo_delivery
-  label: cytoplasm to vacuole targeting by the Cvt pathway
-  grounding: GO:0032258
-  description: The Cvt complex serves as selective hydrolase cargo that is recognized
-    and sequestered into Cvt vesicles for delivery to the fungal vacuole.
-  evidence:
-  - reference: GO:0032258
-    notes: GO:0032258 defines the Cvt pathway by receptor-dependent formation of a
-      Cvt complex and membrane expansion around it.
-  - reference: DOI:10.1016/s1097-2765(01)00263-5
-    notes: Scott et al. 2001 identified the receptor that recognizes precursor aminopeptidase
-      I cargo in the Cvt pathway.
 evidence:
 - reference: GO:0034270
   notes: Gene Ontology cellular-component term for the Cvt complex.
