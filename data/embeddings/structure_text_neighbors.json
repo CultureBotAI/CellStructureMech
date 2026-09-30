@@ -14517,6 +14517,37 @@
       ]
     },
     {
+      "identifier": "GO:0000440",
+      "label": "core TFIIH complex portion of NEF3 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000112",
+          "label": "nucleotide-excision repair factor 3 complex",
+          "cosine_similarity": 0.8715988
+        },
+        {
+          "identifier": "GO:0000111",
+          "label": "nucleotide-excision repair factor 2 complex",
+          "cosine_similarity": 0.76153838
+        },
+        {
+          "identifier": "GO:0000110",
+          "label": "nucleotide-excision repair factor 1 complex",
+          "cosine_similarity": 0.75757547
+        },
+        {
+          "identifier": "GO:0000113",
+          "label": "nucleotide-excision repair factor 4 complex",
+          "cosine_similarity": 0.74703563
+        },
+        {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.71178414
+        }
+      ]
+    },
+    {
       "identifier": "GO:0033263",
       "label": "CORVET complex",
       "neighbors": [
@@ -17512,14 +17543,14 @@
           "cosine_similarity": 0.91474642
         },
         {
+          "identifier": "GO:0000440",
+          "label": "core TFIIH complex portion of NEF3 complex",
+          "cosine_similarity": 0.8715988
+        },
+        {
           "identifier": "GO:1990468",
           "label": "NuA3b histone acetyltransferase complex",
           "cosine_similarity": 0.79861482
-        },
-        {
-          "identifier": "GO:1990467",
-          "label": "NuA3a histone acetyltransferase complex",
-          "cosine_similarity": 0.79446976
         }
       ]
     },

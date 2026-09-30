@@ -1,0 +1,397 @@
+identifier: GO:0000440
+label: core TFIIH complex portion of NEF3 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The core TFIIH complex when it is part of the nucleotide-excision repair
+  factor 3 (NEF3).
+definition_source: GO:0000440
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T23:01:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T23:03:35Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, TFIIH-core parentage, NEF3 parthood, seven reviewed-label-only
+    TFIIH core constituents, Saccharomyces scope, a nucleotide-excision-repair function
+    graph, and TFIIH-core grounding and boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: SSL2-core TFIIH complex portion of NEF3 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000440
+parent_structures:
+- GO:0000439
+part_of:
+- GO:0000112
+components:
+- component_id: ssl2_xpb_tfiih_core_subunit
+  label: Ssl2/XPB TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SSL2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Ssl2/XPB as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of NEF3.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000440
+    notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
+      complex.
+- component_id: tfb1_p62_tfiih_core_subunit
+  label: Tfb1/p62 TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TFB1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Tfb1/p62 as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of NEF3.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000440
+    notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
+      complex.
+- component_id: tfb2_p52_tfiih_core_subunit
+  label: Tfb2/p52 TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TFB2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Tfb2/p52 as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of NEF3.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000440
+    notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
+      complex.
+- component_id: ssl1_p44_tfiih_core_subunit
+  label: Ssl1/p44 TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SSL1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Ssl1/p44 as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of NEF3.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000440
+    notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
+      complex.
+- component_id: tfb4_p34_tfiih_core_subunit
+  label: Tfb4/p34 TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TFB4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Tfb4/p34 as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of NEF3.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000440
+    notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
+      complex.
+- component_id: tfb5_p8_tfiih_core_subunit
+  label: Tfb5/p8 TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TFB5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Tfb5/p8 as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of NEF3.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000440
+    notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
+      complex.
+- component_id: rad3_xpd_tfiih_core_subunit
+  label: Rad3/XPD TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAD3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Rad3/XPD as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of NEF3.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000440
+    notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
+      complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast is the organism in which GO:0000112 defines NEF3 as containing
+    the core TFIIH-Ssl2p complex.
+  reference: GO:0000112
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Prakash and Prakash 2000 described budding-yeast Rad2 and TFIIH as the nucleotide-excision
+    repair subassembly called NEF3.
+  reference: DOI:10.1016/s0027-5107(00)00037-3
+functions:
+- function_id: nucleotide_excision_repair
+  label: nucleotide-excision repair
+  grounding: GO:0006289
+  description: The core TFIIH complex portion participates in nucleotide-excision
+    repair as the TFIIH-derived component of NEF3.
+  evidence:
+  - reference: GO:0000440
+    notes: GO:0000440 defines this record as the TFIIH core complex when it is part
+      of NEF3.
+  - reference: GO:0000112
+    notes: GO:0000112 defines NEF3 as a nucleotide-excision repair factor containing
+      Rad2p and core TFIIH-Ssl2p.
+  - reference: GO:0006289
+    notes: GO:0006289 is the Gene Ontology biological-process term for nucleotide-excision
+      repair.
+evidence:
+- reference: GO:0000440
+  notes: Gene Ontology cellular-component term for the TFIIH core complex portion
+    of NEF3 and its exact SSL2-core TFIIH portion synonym.
+- reference: GO:0000439
+  notes: Gene Ontology cellular-component parent term for the seven-subunit transcription
+    factor TFIIH core complex.
+- reference: GO:0000112
+  notes: Gene Ontology cellular-component term for the broader NEF3 complex that has
+    the TFIIH core as a part.
+- reference: GO:0006289
+  notes: Gene Ontology biological-process term for nucleotide-excision repair.
+- reference: PMID:10915862
+  notes: PubMed identifier for Prakash and Prakash 2000, the Mutation Research yeast
+    nucleotide-excision repair review cited by GO:0000112.
+- reference: DOI:10.1016/s0027-5107(00)00037-3
+  notes: DOI for Prakash and Prakash 2000, 'Nucleotide excision repair in yeast'.
+causal_graphs:
+- graph_id: core_tfiih_nef3_nucleotide_excision_repair
+  title: TFIIH core contributes to NEF3 nucleotide-excision repair
+  description: In Saccharomyces cerevisiae, the seven-subunit TFIIH core complex is
+    part of the Rad2-containing NEF3 nucleotide-excision repair factor.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined TFIIH core subunits, placement in
+    NEF3, and connection to nucleotide-excision repair without resolving Rad2 endonuclease
+    or TFIIH helicase chemistry.
+  nodes:
+  - node_id: ssl2_xpb_tfiih_core_subunit
+    label: Ssl2/XPB TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ssl2_xpb_tfiih_core_subunit
+  - node_id: tfb1_p62_tfiih_core_subunit
+    label: Tfb1/p62 TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tfb1_p62_tfiih_core_subunit
+  - node_id: tfb2_p52_tfiih_core_subunit
+    label: Tfb2/p52 TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tfb2_p52_tfiih_core_subunit
+  - node_id: ssl1_p44_tfiih_core_subunit
+    label: Ssl1/p44 TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ssl1_p44_tfiih_core_subunit
+  - node_id: tfb4_p34_tfiih_core_subunit
+    label: Tfb4/p34 TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tfb4_p34_tfiih_core_subunit
+  - node_id: tfb5_p8_tfiih_core_subunit
+    label: Tfb5/p8 TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tfb5_p8_tfiih_core_subunit
+  - node_id: rad3_xpd_tfiih_core_subunit
+    label: Rad3/XPD TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad3_xpd_tfiih_core_subunit
+  - node_id: core_tfiih_nef3_complex
+    label: core TFIIH complex portion of NEF3 complex
+    node_type: STRUCTURE
+    grounding: GO:0000440
+  - node_id: nef3_complex
+    label: NEF3 complex
+    node_type: STRUCTURE
+    grounding: GO:0000112
+  - node_id: nucleotide_excision_repair
+    label: nucleotide-excision repair
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006289
+  edges:
+  - subject: ssl2_xpb_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_nef3_complex
+    description: Ssl2/XPB is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: tfb1_p62_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_nef3_complex
+    description: Tfb1/p62 is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: tfb2_p52_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_nef3_complex
+    description: Tfb2/p52 is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: ssl1_p44_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_nef3_complex
+    description: Ssl1/p44 is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: tfb4_p34_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_nef3_complex
+    description: Tfb4/p34 is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: tfb5_p8_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_nef3_complex
+    description: Tfb5/p8 is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: rad3_xpd_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_nef3_complex
+    description: Rad3/XPD is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: core_tfiih_nef3_complex
+    predicate: is part of
+    object: nef3_complex
+    description: The TFIIH core complex is the named core TFIIH portion of the budding-yeast
+      NEF3 complex.
+    evidence:
+    - reference: GO:0000440
+      notes: GO:0000440 defines this cellular component as TFIIH core when it is part
+        of NEF3.
+    - reference: GO:0000112
+      notes: GO:0000112 defines NEF3 as containing the core TFIIH-Ssl2p complex.
+  - subject: nef3_complex
+    predicate: supports
+    object: nucleotide_excision_repair
+    description: NEF3 is one multiprotein subassembly of the yeast nucleotide-excision
+      repair system.
+    evidence:
+    - reference: GO:0000112
+      notes: GO:0000112 defines NEF3 as one of several nucleotide-excision repair
+        factors.
+    - reference: GO:0006289
+      notes: GO:0006289 is the process term for nucleotide-excision repair.
+discussions:
+- discussion_id: resolve_tfiih_core_nef3_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the curated TFIIH core
+    protein constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ssl2_xpb_tfiih_core_subunit
+  - components#tfb1_p62_tfiih_core_subunit
+  - components#tfb2_p52_tfiih_core_subunit
+  - components#ssl1_p44_tfiih_core_subunit
+  - components#tfb4_p34_tfiih_core_subunit
+  - components#tfb5_p8_tfiih_core_subunit
+  - components#rad3_xpd_tfiih_core_subunit
+  rationale: GO:0000439 defines S. cerevisiae and human names for seven TFIIH core
+    complex subunits. Exact cross-eukaryotic InterPro, Pfam, NCBIfam or UniProt family
+    boundaries for these TFIIH core classes need narrower curation before the component
+    labels can be grounded.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 lists Ssl2/XPB, Tfb1/p62, Tfb2/p52, Ssl1/p44, Tfb4/p34, Tfb5/p8,
+      and Rad3/XPD in the TFIIH core complex.
+  posed_by: codex
+  posed_date: '2026-09-30'
+- discussion_id: core_tfiih_nef3_boundaries
+  prompt: Keep the GO:0000440 portion term distinct from both the generic TFIIH core
+    complex and whole NEF3.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  - components#ssl2_xpb_tfiih_core_subunit
+  - components#tfb1_p62_tfiih_core_subunit
+  - components#tfb2_p52_tfiih_core_subunit
+  - components#ssl1_p44_tfiih_core_subunit
+  - components#tfb4_p34_tfiih_core_subunit
+  - components#tfb5_p8_tfiih_core_subunit
+  - components#rad3_xpd_tfiih_core_subunit
+  rationale: GO:0000440 denotes the GO:0000439 TFIIH core complex specifically when
+    it is part of the GO:0000112 NEF3 complex. Rad2 is a partner constituent of NEF3,
+    not part of the TFIIH core portion itself.
+  resolution_note: Modeled GO:0000439 as an is-a parent, linked GO:0000112 through
+    part_of, and curated only the seven TFIIH core constituents as components of this
+    portion.
+  evidence:
+  - reference: GO:0000440
+    notes: GO:0000440 identifies the TFIIH core complex portion when it is part of
+      NEF3.
+  - reference: GO:0000439
+    notes: GO:0000439 identifies the broader TFIIH core complex.
+  - reference: GO:0000112
+    notes: GO:0000112 identifies whole NEF3 as containing Rad2p and the core TFIIH-Ssl2p
+      complex.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
