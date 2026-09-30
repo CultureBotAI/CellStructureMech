@@ -2761,9 +2761,9 @@
           "cosine_similarity": 0.89358838
         },
         {
-          "identifier": "GO:0032173",
-          "label": "septin collar",
-          "cosine_similarity": 0.87397993
+          "identifier": "GO:0032159",
+          "label": "septin cap",
+          "cosine_similarity": 0.89252836
         }
       ]
     },
@@ -2844,6 +2844,11 @@
           "cosine_similarity": 0.83050393
         },
         {
+          "identifier": "GO:0032159",
+          "label": "septin cap",
+          "cosine_similarity": 0.81103631
+        },
+        {
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.79448921
@@ -2852,11 +2857,6 @@
           "identifier": "GO:0032174",
           "label": "cellular bud neck septin collar",
           "cosine_similarity": 0.78655431
-        },
-        {
-          "identifier": "GO:0032162",
-          "label": "mating projection septin band",
-          "cosine_similarity": 0.7781174
         }
       ]
     },
@@ -2885,9 +2885,9 @@
           "cosine_similarity": 0.89904949
         },
         {
-          "identifier": "GO:0032175",
-          "label": "mating projection septin ring",
-          "cosine_similarity": 0.87452455
+          "identifier": "GO:0032159",
+          "label": "septin cap",
+          "cosine_similarity": 0.88732385
         }
       ]
     },
@@ -4070,6 +4070,37 @@
       ]
     },
     {
+      "identifier": "GO:0032159",
+      "label": "septin cap",
+      "neighbors": [
+        {
+          "identifier": "GO:0032172",
+          "label": "germ tube septin ring",
+          "cosine_similarity": 0.89252836
+        },
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.88881514
+        },
+        {
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.88732385
+        },
+        {
+          "identifier": "GO:0032173",
+          "label": "septin collar",
+          "cosine_similarity": 0.86853536
+        },
+        {
+          "identifier": "GO:0000144",
+          "label": "cellular bud neck septin ring",
+          "cosine_similarity": 0.83634335
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032173",
       "label": "septin collar",
       "neighbors": [
@@ -4089,14 +4120,14 @@
           "cosine_similarity": 0.86988407
         },
         {
+          "identifier": "GO:0032159",
+          "label": "septin cap",
+          "cosine_similarity": 0.86853536
+        },
+        {
           "identifier": "GO:0000144",
           "label": "cellular bud neck septin ring",
           "cosine_similarity": 0.86822947
-        },
-        {
-          "identifier": "GO:0032168",
-          "label": "hyphal septin ring",
-          "cosine_similarity": 0.86762773
         }
       ]
     },
@@ -4151,14 +4182,14 @@
           "cosine_similarity": 0.91148252
         },
         {
+          "identifier": "GO:0032159",
+          "label": "septin cap",
+          "cosine_similarity": 0.88881514
+        },
+        {
           "identifier": "GO:0032169",
           "label": "prospore septin ring",
           "cosine_similarity": 0.88477313
-        },
-        {
-          "identifier": "GO:0032170",
-          "label": "pseudohyphal septin ring",
-          "cosine_similarity": 0.87659786
         }
       ]
     },
@@ -5634,6 +5665,11 @@
           "cosine_similarity": 0.69898039
         },
         {
+          "identifier": "GO:0032159",
+          "label": "septin cap",
+          "cosine_similarity": 0.68987829
+        },
+        {
           "identifier": "GO:0009276",
           "label": "Gram-negative-bacterium-type cell wall",
           "cosine_similarity": 0.68701887
@@ -5642,11 +5678,6 @@
           "identifier": "GO:0032172",
           "label": "germ tube septin ring",
           "cosine_similarity": 0.68499192
-        },
-        {
-          "identifier": "GO:0140266",
-          "label": "Woronin body",
-          "cosine_similarity": 0.68396932
         }
       ]
     },

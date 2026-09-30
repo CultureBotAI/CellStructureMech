@@ -1,0 +1,171 @@
+identifier: GO:0032159
+label: septin cap
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A faint structure formed of septins found at the leading edge of growth
+  in germ tubes and hyphae in fungal cells growing filamentously. This cap of septins
+  colocalizes with a region of the plasma membrane that is rich in ergosterol.
+definition_source: GO:0032159
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T11:00:36Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T11:02:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-cap parentage, a reviewed-label-only septin constituent, Candida
+    albicans scope and canonical example evidence, GO-backed apical cap topology,
+    and cap-boundary and component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0032156
+part_of:
+- GO:0005856
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Fungal septin caps are formed by septin GTPases, but no exact source-neutral
+    InterPro, Pfam, or NCBIfam CURIE was assigned for the complete cap-forming cohort.
+  role: Septin GTPases that form the faint cap at the leading edge of filamentous
+    fungal germ tubes and hyphae.
+  evidence:
+  - reference: GO:0032159
+    notes: GO:0032159 defines the septin cap as a structure formed of septins.
+  - reference: GO:0032156
+    notes: GO:0032156 defines the broader septin cytoskeleton as cytoskeleton composed
+      of septins and associated proteins.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5476
+  taxon_label: Candida albicans
+  presence: VARIABLE
+  note: Candida albicans septin caps occur during the filamentous germ-tube and hyphal
+    growth states rather than throughout all budding, pseudohyphal and hyphal morphologies.
+  reference: DOI:10.1128/EC.4.9.1503-1512.2005
+canonical_examples:
+- taxon_id: NCBITaxon:5476
+  taxon_label: Candida albicans
+  note: Candida model in which Warenda and Konopka reported GFP-labeled septins in
+    emerging germ tubes and Douglas et al. reviewed the apical septin cap as a C.
+    albicans germ-tube and hyphal septin structure.
+  reference: DOI:10.1091/mbc.e02-01-0013
+evidence:
+- reference: GO:0032159
+  notes: Gene Ontology cellular-component term for the septin cap.
+- reference: GO:0032156
+  notes: Gene Ontology cellular-component parent term for the septin cytoskeleton.
+- reference: GO:0005856
+  notes: OLS reports a direct GO:0032159 part_of relation to the cytoskeleton.
+- reference: DOI:10.1128/EC.4.9.1503-1512.2005
+  notes: Douglas et al. 2005, 'Septin function in yeast model systems and pathogenic
+    fungi', Eukaryotic Cell.
+- reference: DOI:10.1091/mbc.e02-01-0013
+  notes: Warenda and Konopka 2002, 'Septin function in Candida albicans morphogenesis',
+    Molecular Biology of the Cell.
+- reference: DOI:10.1128/EC.3.3.675-684.2004
+  notes: Martin and Konopka 2004, 'Lipid raft polarization contributes to hyphal growth
+    in Candida albicans', Eukaryotic Cell.
+causal_graphs:
+- graph_id: septin_cap_topology
+  title: Septin-cap apical topology
+  description: Septin proteins form a faint cap at the leading edge of filamentous
+    fungal germ tubes and hyphae.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed septin-cap composition and apical localization
+    without asserting an ordered recruitment mechanism for fungal septins or ergosterol-rich
+    membrane domains.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: septin_cap
+    label: septin cap
+    node_type: STRUCTURE
+    grounding: GO:0032159
+  - node_id: filamentous_growth_tip
+    label: filamentous fungal growth tip
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: ergosterol_rich_plasma_membrane_region
+    label: ergosterol-rich plasma membrane region
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: septin_cap
+    description: Septin proteins form the fungal septin cap.
+    evidence:
+    - reference: GO:0032159
+      notes: GO:0032159 defines the septin cap as a structure formed of septins.
+  - subject: septin_cap
+    predicate: forms at
+    object: filamentous_growth_tip
+    description: The septin cap forms at the leading edge of growth in filamentous
+      fungal germ tubes and hyphae.
+    evidence:
+    - reference: GO:0032159
+      notes: GO:0032159 localizes the septin cap to the leading edge of growth in
+        germ tubes and hyphae.
+  - subject: septin_cap
+    predicate: colocalizes with
+    object: ergosterol_rich_plasma_membrane_region
+    description: The apical septin cap colocalizes with an ergosterol-rich region
+      of the plasma membrane.
+    evidence:
+    - reference: GO:0032159
+      notes: GO:0032159 defines septin caps by colocalization with an ergosterol-rich
+        plasma-membrane region.
+    - reference: DOI:10.1128/EC.3.3.675-684.2004
+      notes: Martin and Konopka observed polarized sterol staining at the leading
+        edge throughout Candida albicans hyphal growth.
+discussions:
+- discussion_id: septin_cap_boundary
+  prompt: Keep the septin cap distinct from narrower germ-tube and hyphal septin caps
+    and from septin rings or collars.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032159 denotes the parent septin-cap structure at the leading edge
+    of filamentous fungal growth. GO:0032171 and GO:0032164 are exact child terms
+    for germ-tube and hyphal septin caps, whereas GO:0005940 and GO:0032173 model
+    ring-shaped and collar-shaped septin structures.
+  resolution_note: Curated GO:0032159 as the generic septin cap, used GO:0032156 as
+    its is-a parent, and documented germ-tube and hyphal cap terms as narrower future
+    records.
+  evidence:
+  - reference: GO:0032159
+    notes: GO:0032159 identifies the septin cap.
+  - reference: GO:0032171
+    notes: GO:0032171 identifies the narrower germ tube septin cap.
+  - reference: GO:0032164
+    notes: GO:0032164 identifies the narrower hyphal septin cap.
+  - reference: GO:0005940
+    notes: GO:0005940 identifies the broader septin ring class.
+  - reference: GO:0032173
+    notes: GO:0032173 identifies the broader septin collar class.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_septin_cap_grounding
+  prompt: Resolve exact source-neutral family groundings for septin-cap septin proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The first septin-cap record uses a reviewed-label-only septin protein
+    cohort rather than guessing InterPro, Pfam, or NCBIfam accessions that may not
+    exactly delimit all septins in this apical fungal cap.
+  evidence:
+  - reference: GO:0032159
+    notes: GO:0032159 defines the septin cap as a structure formed of septins.
+  posed_by: codex
+  posed_date: '2026-09-30'
