@@ -2427,6 +2427,37 @@
       ]
     },
     {
+      "identifier": "GO:0032166",
+      "label": "chlamydospore septin filament array",
+      "neighbors": [
+        {
+          "identifier": "GO:0032165",
+          "label": "prospore septin filament array",
+          "cosine_similarity": 0.9322784
+        },
+        {
+          "identifier": "GO:0032160",
+          "label": "septin filament array",
+          "cosine_similarity": 0.89892555
+        },
+        {
+          "identifier": "GO:0032172",
+          "label": "germ tube septin ring",
+          "cosine_similarity": 0.87057391
+        },
+        {
+          "identifier": "GO:0032171",
+          "label": "germ tube septin cap",
+          "cosine_similarity": 0.85417855
+        },
+        {
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.84514814
+        }
+      ]
+    },
+    {
       "identifier": "GO:0036064",
       "label": "ciliary basal body",
       "neighbors": [
@@ -2601,14 +2632,14 @@
           "cosine_similarity": 0.80379718
         },
         {
+          "identifier": "GO:0032166",
+          "label": "chlamydospore septin filament array",
+          "cosine_similarity": 0.79854856
+        },
+        {
           "identifier": "GO:0032165",
           "label": "prospore septin filament array",
           "cosine_similarity": 0.76917162
-        },
-        {
-          "identifier": "GO:0032160",
-          "label": "septin filament array",
-          "cosine_similarity": 0.76160129
         }
       ]
     },
@@ -4012,6 +4043,11 @@
       "label": "prospore septin filament array",
       "neighbors": [
         {
+          "identifier": "GO:0032166",
+          "label": "chlamydospore septin filament array",
+          "cosine_similarity": 0.9322784
+        },
+        {
           "identifier": "GO:0032160",
           "label": "septin filament array",
           "cosine_similarity": 0.8923133
@@ -4030,11 +4066,6 @@
           "identifier": "GO:0032169",
           "label": "prospore septin ring",
           "cosine_similarity": 0.86631048
-        },
-        {
-          "identifier": "GO:0032173",
-          "label": "septin collar",
-          "cosine_similarity": 0.8549772
         }
       ]
     },
@@ -4353,6 +4384,11 @@
       "label": "septin filament array",
       "neighbors": [
         {
+          "identifier": "GO:0032166",
+          "label": "chlamydospore septin filament array",
+          "cosine_similarity": 0.89892555
+        },
+        {
           "identifier": "GO:0032159",
           "label": "septin cap",
           "cosine_similarity": 0.89266765
@@ -4371,11 +4407,6 @@
           "identifier": "GO:0032172",
           "label": "germ tube septin ring",
           "cosine_similarity": 0.85326172
-        },
-        {
-          "identifier": "GO:0032174",
-          "label": "cellular bud neck septin collar",
-          "cosine_similarity": 0.84711776
         }
       ]
     },

@@ -1,0 +1,134 @@
+identifier: GO:0032166
+label: chlamydospore septin filament array
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: Arrays of septin filaments, or bars, found in a series of filamentous
+  structures. Observed in the chlamydospore membrane during chlamydospore formation.
+definition_source: GO:0032166
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T16:02:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T16:03:53Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-filament-array parentage, a reviewed-label-only septin constituent,
+    a nonmechanistic GO-backed chlamydospore-membrane topology graph, and boundary
+    and component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0032160
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The chlamydospore septin filament array is made of septin filaments
+    or bars at the chlamydospore membrane, but no exact source-neutral InterPro, Pfam,
+    or NCBIfam CURIE was assigned for the complete chlamydospore-array-forming septin
+    cohort.
+  role: Septin GTPases that polymerize into filament bars arranged as the chlamydospore
+    septin filament array.
+  evidence:
+  - reference: GO:0032166
+    notes: GO:0032166 defines the structure as arrays of septin filaments or bars.
+evidence:
+- reference: GO:0032166
+  notes: Gene Ontology cellular-component term for the chlamydospore septin filament
+    array.
+- reference: GO:0032160
+  notes: OLS reports GO:0032160 septin filament array as the direct GO:0032166 parent.
+causal_graphs:
+- graph_id: chlamydospore_septin_filament_array_topology
+  title: Chlamydospore septin-filament-array topology
+  description: Septin proteins form filament bars arranged as a chlamydospore septin
+    filament array at the chlamydospore membrane during chlamydospore formation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed chlamydospore septin-filament-array composition
+    and localization without asserting a species-specific assembly or recruitment
+    mechanism.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: chlamydospore_septin_filament_array
+    label: chlamydospore septin filament array
+    node_type: STRUCTURE
+    grounding: GO:0032166
+  - node_id: chlamydospore_membrane
+    label: chlamydospore membrane
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: chlamydospore_septin_filament_array
+    description: Septin proteins form the filament bars arranged in the chlamydospore
+      septin filament array.
+    evidence:
+    - reference: GO:0032166
+      notes: GO:0032166 defines the array as septin filaments or bars.
+  - subject: chlamydospore_septin_filament_array
+    predicate: is observed in
+    object: chlamydospore_membrane
+    description: The chlamydospore septin filament array is observed in the chlamydospore
+      membrane during chlamydospore formation.
+    evidence:
+    - reference: GO:0032166
+      notes: GO:0032166 localizes the septin filament array to the chlamydospore membrane
+        during chlamydospore formation.
+discussions:
+- discussion_id: chlamydospore_septin_filament_array_boundary
+  prompt: Keep the chlamydospore septin filament array distinct from the generic septin
+    filament array and other localized septin structures.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032166 denotes the chlamydospore-membrane-localized child of the
+    generic GO:0032160 septin filament array. GO:0032165 covers the parallel prospore-membrane
+    array, whereas GO:0005940, GO:0032173, and GO:0032159 model ring-shaped, collar-shaped,
+    and cap-shaped higher-order septin structures.
+  resolution_note: Curated GO:0032166 as the exact localized septin-filament-array
+    record, kept GO:0032160 as its is-a parent, and did not merge it with GO:0032165
+    or localized septin ring, collar, or cap records.
+  evidence:
+  - reference: GO:0032166
+    notes: GO:0032166 identifies the chlamydospore septin filament array.
+  - reference: GO:0032160
+    notes: GO:0032160 identifies the broader septin filament array.
+  - reference: GO:0032165
+    notes: GO:0032165 identifies the prospore septin filament array.
+  - reference: GO:0005940
+    notes: GO:0005940 identifies the broader septin ring.
+  - reference: GO:0032173
+    notes: GO:0032173 identifies the septin collar.
+  - reference: GO:0032159
+    notes: GO:0032159 identifies the septin cap.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_chlamydospore_septin_filament_array_grounding
+  prompt: Resolve an exact source-neutral grounding for chlamydospore-septin-filament-array
+    septin proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The initial chlamydospore septin filament array record uses a reviewed-label-only
+    septin protein cohort rather than guessing InterPro, Pfam, or NCBIfam accessions
+    that may not exactly delimit all septins that form chlamydospore membrane filament
+    arrays.
+  evidence:
+  - reference: GO:0032166
+    notes: GO:0032166 defines the structure as arrays of septin filaments or bars
+      at the chlamydospore membrane.
+  posed_by: codex
+  posed_date: '2026-09-30'
