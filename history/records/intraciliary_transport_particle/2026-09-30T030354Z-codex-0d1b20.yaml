@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/intraciliary_transport_particle.yaml
+  slug: intraciliary_transport_particle
+session:
+  id: 2026-09-30T030354Z-codex-0d1b20
+  timestamp: '2026-09-30T03:03:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added intraciliary transport particle record
+  details: Created a GO:0030990 intraciliary transport particle record with protein-complex
+    parentage, cilium parthood, intraflagellar transport synonymy, a reviewed-label-only IFT-particle
+    protein constituent, Chlamydomonas IFT evidence, an IFT cargo-transport function, a nonmechanistic
+    transport graph, and boundary and component-grounding discussions.
