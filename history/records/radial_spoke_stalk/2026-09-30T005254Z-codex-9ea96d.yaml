@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+  slug: radial_spoke_stalk
+session:
+  id: 2026-09-30T005254Z-codex-9ea96d
+  timestamp: '2026-09-30T00:52:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added radial spoke stalk record
+  details: Created a GO:0001536 radial spoke stalk subcomplex record with protein-complex
+    parentage, radial-spoke parthood, a reviewed-label-only radial-spoke-stalk protein constituent,
+    Chlamydomonas radial-spoke structural evidence, an outer-doublet-linkage function, a nonmechanistic
+    topology graph, and boundary and component-grounding discussions.

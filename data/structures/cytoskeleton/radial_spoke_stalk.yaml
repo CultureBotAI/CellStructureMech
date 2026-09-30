@@ -1,0 +1,200 @@
+identifier: GO:0001536
+label: radial spoke stalk
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Protein complex forming the elongated portion of the radial spoke between
+  the base which binds to the A-tubule of each microtubule outer doublet and the neck
+  which connects to the spoke head within the ciliary or flagellum axoneme.
+definition_source: GO:0001536
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T00:51:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T00:52:19Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added protein-complex parentage, radial-spoke parthood, a reviewed-label-only
+    stalk-protein constituent, Chlamydomonas scope and canonical example, an outer-doublet-linkage
+    function, GO/DOI evidence, a nonmechanistic topology graph, and boundary and component-grounding
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-09-30T01:02:11Z'
+  curator: codex
+  action: REFINE_STALK_TOPOLOGY
+  changes: Narrowed the stalk graph so the GO:0001536 stalk connects to a radial-spoke
+    base node rather than directly to the axonemal doublet microtubule.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0001534
+components:
+- component_id: radial_spoke_stalk_proteins
+  label: radial spoke stalk proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The radial spoke stalk is a multisubunit axonemal subcomplex, but
+    no exact source-neutral CURIE was assigned for the complete radial-spoke-stalk
+    protein cohort.
+  role: Protein constituents of the elongated stalk subcomplex that links the A-tubule-binding
+    base to the radial-spoke neck.
+  evidence:
+  - reference: GO:0001536
+    notes: GO:0001536 defines the radial spoke stalk as a protein complex forming
+      the elongated radial-spoke portion between the A-tubule-binding base and the
+      neck.
+  - reference: DOI:10.1242/jcs.245233
+    notes: Poghosyan et al. 2020 refined the Chlamydomonas radial-spoke architecture
+      and assigned proteins to the stalk region.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagellar axonemes carry radial spokes with elongated stalk
+    subcomplexes resolved by cryo-EM.
+  reference: DOI:10.1242/jcs.245233
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model whose radial-spoke stalks connect the A-tubule-proximal
+    radial-spoke base to the neck in 9+2 flagellar axonemes.
+  reference: DOI:10.1126/science.1128618
+functions:
+- function_id: radial_spoke_stalk_outer_doublet_linkage
+  label: radial spoke stalk outer-doublet linkage
+  description: The radial spoke stalk forms the elongated portion of each radial spoke
+    between its A-tubule-binding base and the neck that connects to the head.
+  evidence:
+  - reference: GO:0001536
+    notes: GO:0001536 defines the stalk by its position between the A-tubule-binding
+      radial-spoke base and the neck.
+  - reference: DOI:10.1242/jcs.245233
+    notes: Poghosyan et al. 2020 describe the Chlamydomonas radial spoke as a complex
+      in the ciliary motility transducer apparatus and assign stalk-region proteins.
+evidence:
+- reference: GO:0001536
+  notes: Gene Ontology cellular-component term for the radial spoke stalk.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component term for protein-containing complex.
+- reference: GO:0001534
+  notes: Gene Ontology cellular-component term for the containing radial spoke.
+- reference: GO:0120343
+  notes: Gene Ontology cellular-component term for the radial spoke neck.
+- reference: DOI:10.1126/science.1128618
+  notes: Nicastro et al. 2006, 'The molecular architecture of axonemes revealed by
+    cryoelectron tomography', Science.
+- reference: DOI:10.1242/jcs.245233
+  notes: Poghosyan et al. 2020, 'The structure and symmetry of the radial spoke protein
+    complex in Chlamydomonas flagella', Journal of Cell Science.
+causal_graphs:
+- graph_id: radial_spoke_stalk_topology
+  title: Radial-spoke stalk topology
+  description: Radial-spoke-stalk proteins form the elongated radial-spoke subcomplex
+    between the outer-doublet-associated base and the neck.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records radial-spoke-stalk parthood and coarse orientation
+    without asserting individual RSP protein identities, copy numbers, or ordered
+    assembly.
+  nodes:
+  - node_id: radial_spoke_stalk_proteins
+    label: radial spoke stalk proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: radial_spoke_stalk_proteins
+  - node_id: radial_spoke_stalk
+    label: radial spoke stalk
+    node_type: STRUCTURE
+    grounding: GO:0001536
+  - node_id: radial_spoke
+    label: radial spoke
+    node_type: STRUCTURE
+    grounding: GO:0001534
+  - node_id: radial_spoke_base
+    label: radial spoke base
+    node_type: STRUCTURE
+  - node_id: radial_spoke_neck
+    label: radial spoke neck
+    node_type: STRUCTURE
+    grounding: GO:0120343
+  edges:
+  - subject: radial_spoke_stalk_proteins
+    predicate: contribute to
+    object: radial_spoke_stalk
+    description: Radial-spoke-stalk proteins are constituents of the elongated radial-spoke
+      stalk subcomplex.
+    evidence:
+    - reference: GO:0001536
+      notes: GO:0001536 identifies the radial spoke stalk as a protein complex.
+  - subject: radial_spoke_stalk
+    predicate: is part of
+    object: radial_spoke
+    description: The radial spoke stalk is part of the radial spoke.
+    evidence:
+    - reference: GO:0001536
+      notes: GO:0001536 places the radial spoke stalk as part of the radial spoke.
+  - subject: radial_spoke_stalk
+    predicate: connects to
+    object: radial_spoke_base
+    description: The radial spoke stalk connects to the radial-spoke base at its A-tubule-proximal
+      end.
+    evidence:
+    - reference: GO:0001536
+      notes: GO:0001536 defines the stalk as the elongated radial-spoke portion between
+        the A-tubule-binding base and the neck.
+  - subject: radial_spoke_stalk
+    predicate: connects to
+    object: radial_spoke_neck
+    description: The radial spoke stalk connects to the radial-spoke neck on its head-facing
+      end.
+    evidence:
+    - reference: GO:0001536
+      notes: GO:0001536 places the stalk between the radial-spoke base and the neck.
+discussions:
+- discussion_id: radial_spoke_stalk_boundary
+  prompt: Keep the radial spoke stalk distinct from the whole radial spoke and adjacent
+    head and neck subcomplexes.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0001536 denotes the elongated radial-spoke portion between the A-tubule-binding
+    base and the neck, GO:0001534 denotes the complete radial spoke, GO:0120343 denotes
+    the radial spoke neck, and GO:0001535 denotes the radial spoke head.
+  resolution_note: Curated GO:0001536 as the exact stalk subcomplex and used GO:0001534
+    for whole-radial-spoke parthood.
+  evidence:
+  - reference: GO:0001536
+    notes: GO:0001536 identifies the radial spoke stalk subcomplex.
+  - reference: GO:0001534
+    notes: GO:0001534 identifies the complete radial spoke.
+  - reference: GO:0120343
+    notes: GO:0120343 identifies the radial spoke neck.
+  - reference: GO:0001535
+    notes: GO:0001535 identifies the radial spoke head.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_radial_spoke_stalk_proteins
+  prompt: Resolve exact source-neutral groundings and copy numbers for Chlamydomonas
+    radial-spoke-stalk RSP proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#radial_spoke_stalk_proteins
+  rationale: Poghosyan et al. 2020 assigned individual Chlamydomonas RSP densities
+    to the stalk region, but this first child-subcomplex record keeps a reviewed-label-only
+    aggregate instead of guessing exact InterPro, Pfam, NCBIfam, or UniProtKB groundings
+    and cross-species boundaries.
+  evidence:
+  - reference: DOI:10.1242/jcs.245233
+    notes: Poghosyan et al. 2020 assigned radial-spoke proteins to the Chlamydomonas
+      radial-spoke head, neck, and stalk regions.
+  posed_by: codex
+  posed_date: '2026-09-30'
