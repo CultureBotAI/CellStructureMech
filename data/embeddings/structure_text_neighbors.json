@@ -1547,14 +1547,14 @@
           "cosine_similarity": 0.79753777
         },
         {
+          "identifier": "GO:0032160",
+          "label": "septin filament array",
+          "cosine_similarity": 0.76016022
+        },
+        {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
           "cosine_similarity": 0.75568649
-        },
-        {
-          "identifier": "cellstructuremech:bactofilin_filament",
-          "label": "bactofilin filament",
-          "cosine_similarity": 0.74845055
         }
       ]
     },
@@ -2570,14 +2570,14 @@
           "cosine_similarity": 0.80379718
         },
         {
+          "identifier": "GO:0032160",
+          "label": "septin filament array",
+          "cosine_similarity": 0.76160129
+        },
+        {
           "identifier": "cellstructuremech:cetz_filament",
           "label": "CetZ filament",
           "cosine_similarity": 0.7561357
-        },
-        {
-          "identifier": "GO:0009420",
-          "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.75590134
         }
       ]
     },
@@ -2653,6 +2653,11 @@
           "cosine_similarity": 0.84376994
         },
         {
+          "identifier": "GO:0032160",
+          "label": "septin filament array",
+          "cosine_similarity": 0.81197342
+        },
+        {
           "identifier": "GO:0090512",
           "label": "eisosome membrane domain/MCC",
           "cosine_similarity": 0.79494266
@@ -2666,11 +2671,6 @@
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
           "cosine_similarity": 0.78791317
-        },
-        {
-          "identifier": "GO:0005880",
-          "label": "nuclear microtubule",
-          "cosine_similarity": 0.78423298
         }
       ]
     },
@@ -4146,6 +4146,11 @@
           "cosine_similarity": 0.9450281
         },
         {
+          "identifier": "GO:0032160",
+          "label": "septin filament array",
+          "cosine_similarity": 0.89266765
+        },
+        {
           "identifier": "GO:0032172",
           "label": "germ tube septin ring",
           "cosine_similarity": 0.89252836
@@ -4154,11 +4159,6 @@
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.88881514
-        },
-        {
-          "identifier": "GO:0032168",
-          "label": "hyphal septin ring",
-          "cosine_similarity": 0.88732385
         }
       ]
     },
@@ -4170,6 +4170,11 @@
           "identifier": "GO:0032174",
           "label": "cellular bud neck septin collar",
           "cosine_similarity": 0.90504548
+        },
+        {
+          "identifier": "GO:0032160",
+          "label": "septin filament array",
+          "cosine_similarity": 0.87675677
         },
         {
           "identifier": "GO:0032172",
@@ -4185,11 +4190,6 @@
           "identifier": "GO:0032159",
           "label": "septin cap",
           "cosine_similarity": 0.86853536
-        },
-        {
-          "identifier": "GO:0000144",
-          "label": "cellular bud neck septin ring",
-          "cosine_similarity": 0.86822947
         }
       ]
     },
@@ -4221,6 +4221,37 @@
           "identifier": "GO:0000144",
           "label": "cellular bud neck septin ring",
           "cosine_similarity": 0.77132492
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0032160",
+      "label": "septin filament array",
+      "neighbors": [
+        {
+          "identifier": "GO:0032159",
+          "label": "septin cap",
+          "cosine_similarity": 0.89266765
+        },
+        {
+          "identifier": "GO:0032173",
+          "label": "septin collar",
+          "cosine_similarity": 0.87675677
+        },
+        {
+          "identifier": "GO:0032172",
+          "label": "germ tube septin ring",
+          "cosine_similarity": 0.85326172
+        },
+        {
+          "identifier": "GO:0032174",
+          "label": "cellular bud neck septin collar",
+          "cosine_similarity": 0.84711776
+        },
+        {
+          "identifier": "GO:0032171",
+          "label": "germ tube septin cap",
+          "cosine_similarity": 0.84652055
         }
       ]
     },

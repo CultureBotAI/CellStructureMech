@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_filament_array.yaml
+  slug: septin_filament_array
+session:
+  id: 2026-09-30T125546Z-codex-d50f8a
+  timestamp: '2026-09-30T12:55:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - examples
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add GO:0032160 septin filament array
+  details: Created a GO:0032160 septin filament array record after hidden/ignored-inclusive
+    duplicate searches over data/structures found no existing exact identifier or label. Verified
+    the OLS definition, direct GO:0032156 septin cytoskeleton parent, direct GO:0005856 cytoskeleton
+    parthood, and GO:0032165/GO:0032166 child array boundaries. Added a reviewed-label-only
+    septin protein constituent, Saccharomyces and Candida lifecycle examples backed by the
+    GO definition and its PMID:16151244 citation, a nonmechanistic topology graph, and resolved/open
+    discussions for array boundary and component grounding.
