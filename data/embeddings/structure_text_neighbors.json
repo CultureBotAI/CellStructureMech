@@ -2706,6 +2706,37 @@
       ]
     },
     {
+      "identifier": "GO:0032123",
+      "label": "deep fiber",
+      "neighbors": [
+        {
+          "identifier": "GO:0032173",
+          "label": "septin collar",
+          "cosine_similarity": 0.73549193
+        },
+        {
+          "identifier": "GO:0032165",
+          "label": "prospore septin filament array",
+          "cosine_similarity": 0.73207277
+        },
+        {
+          "identifier": "GO:0032172",
+          "label": "germ tube septin ring",
+          "cosine_similarity": 0.72918106
+        },
+        {
+          "identifier": "GO:0032158",
+          "label": "septin band",
+          "cosine_similarity": 0.71898505
+        },
+        {
+          "identifier": "GO:0032171",
+          "label": "germ tube septin cap",
+          "cosine_similarity": 0.71559541
+        }
+      ]
+    },
+    {
       "identifier": "GO:0036286",
       "label": "eisosome filament",
       "neighbors": [

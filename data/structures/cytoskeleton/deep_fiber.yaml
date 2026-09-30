@@ -1,0 +1,123 @@
+identifier: GO:0032123
+label: deep fiber
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: Inward projections of the cytoskeletal structures of the oral apparatus,
+  which form a fiber that extends past the cytostome into the cytoplasm.
+definition_source: GO:0032123
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T20:50:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T20:51:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, cytoskeleton parentage, oral-apparatus parthood, a Tetrahymena
+    canonical example, GO-backed topology evidence, a nonmechanistic deep-fiber topology
+    graph, and boundary and component grounding discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: deep fibre
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032123
+parent_structures:
+- GO:0005856
+part_of:
+- GO:0031912
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Ciliate model covered by Frankel's Methods in Cell Biology review that supplied
+    the GO deep-fiber definition.
+  reference: DOI:10.1016/S0091-679X(08)61528-9
+evidence:
+- reference: GO:0032123
+  notes: Gene Ontology cellular-component term for the ciliate oral-apparatus deep
+    fiber.
+- reference: GO:0005856
+  notes: OLS reports GO:0005856 cytoskeleton as a direct GO:0032123 parent.
+- reference: GO:0031912
+  notes: OLS reports GO:0032123 deep fiber as part of the oral apparatus.
+- reference: DOI:10.1016/S0091-679X(08)61528-9
+  notes: Frankel 2000, Cell biology of Tetrahymena thermophila, Methods in Cell Biology.
+causal_graphs:
+- graph_id: deep_fiber_oral_apparatus_topology
+  title: Deep fibers project through the oral apparatus
+  description: Deep fibers are cytoskeletal oral-apparatus substructures that form
+    inward fibers extending past the cytostome.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed topology only; it does not assign the
+    molecular constituents that build the deep fiber.
+  nodes:
+  - node_id: deep_fiber
+    label: deep fiber
+    node_type: STRUCTURE
+    grounding: GO:0032123
+  - node_id: oral_apparatus
+    label: oral apparatus
+    node_type: STRUCTURE
+    grounding: GO:0031912
+  - node_id: cytostome
+    label: cytostome
+    node_type: STRUCTURE
+    grounding: GO:0031910
+  edges:
+  - subject: deep_fiber
+    predicate: is part of
+    object: oral_apparatus
+    description: Deep fibers are cytoskeletal substructures of the oral apparatus.
+    evidence:
+    - reference: GO:0032123
+      notes: GO:0032123 defines deep fibers as inward projections of the cytoskeletal
+        structures of the oral apparatus.
+  - subject: deep_fiber
+    predicate: extends past
+    object: cytostome
+    description: Deep fibers form fibers that extend past the cytostome into the cytoplasm.
+    evidence:
+    - reference: GO:0032123
+      notes: GO:0032123 defines deep fibers as oral-apparatus fibers that extend past
+        the cytostome into the cytoplasm.
+discussions:
+- discussion_id: deep_fiber_boundary
+  prompt: Keep the deep fiber distinct from the whole oral apparatus and the cytostome.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0032123 denotes a narrow cytoskeletal fiber of the oral apparatus.
+    GO:0031912 denotes the whole feeding apparatus, and GO:0031910 denotes the cytostome
+    that the deep fiber extends past.
+  resolution_note: Curated GO:0032123 as an oral-apparatus substructure with GO:0031912
+    as its proper whole.
+  evidence:
+  - reference: GO:0032123
+    notes: GO:0032123 identifies the deep fiber.
+  - reference: GO:0031912
+    notes: GO:0031912 identifies the ciliate oral apparatus.
+  - reference: GO:0031910
+    notes: GO:0031910 identifies the cytostome.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_deep_fiber_components
+  prompt: Resolve the exact molecular constituents of the deep fiber before adding
+    components.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - causal_graphs#deep_fiber_oral_apparatus_topology
+  rationale: GO:0032123 identifies the deep fiber as a cytoskeletal oral-apparatus
+    fiber, but this GO-backed pass did not verify exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProtKB component groundings.
+  evidence:
+  - reference: GO:0032123
+    notes: GO:0032123 defines the deep fiber but not its molecular constituents.
+  posed_by: codex
+  posed_date: '2026-09-30'
