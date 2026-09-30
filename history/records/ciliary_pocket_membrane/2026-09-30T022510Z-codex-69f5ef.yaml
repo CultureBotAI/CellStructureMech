@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/ciliary_pocket_membrane.yaml
+  slug: ciliary_pocket_membrane
+session:
+  id: 2026-09-30T022510Z-codex-69f5ef
+  timestamp: '2026-09-30T02:25:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added ciliary pocket membrane record
+  details: Created a GO:0020018 ciliary pocket membrane record with ciliary-membrane parentage,
+    flagellar-pocket parthood, GO synonymy, a reviewed-label-only pocket-lipid-bilayer constituent,
+    Trypanosoma brucei flagellar-pocket membrane evidence, a nonmechanistic boundary graph,
+    and boundary and molecular-inventory discussions.
