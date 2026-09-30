@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>split septin rings · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>split septin rings</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0032176"><code>GO:0032176</code></a> · CYTOSKELETON · FILAMENT · <span class="status">PROPOSED</span></p>
+<p class="definition">A pair of rings that flank the site of cell division, formed by splitting of the septin ring (or collar) prior to cytokinesis; this double ring structure is thought to trap proteins needed for cytokinesis or the formation of the new membrane or cell wall between the two septin rings. Split septin rings are known to occur in budding yeast cells and probably occur in other cell types as well. <small>[<a href="http://purl.obolibrary.org/obo/GO_0032176"><code>GO:0032176</code></a>]</small></p>
+<p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005856"><code>GO:0005856</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-septin_proteins"><td>septin proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Septin GTPases that remain in the pair of rings after a septin ring or collar splits before cytokinesis.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032176"><code>GO:0032176</code></a> <small>GO:0032176 defines split septin rings as a pair of rings formed by splitting of a septin ring or collar.</small></li></ul></td></tr>
+</tbody></table>
+
+
+
+
+<h2>Functions</h2>
+<ul><li><strong>cytokinetic compartment boundary</strong> — Split septin rings flank the cell-division site and are thought to trap proteins needed for cytokinesis or for formation of the new membrane or cell wall between the two rings.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032176"><code>GO:0032176</code></a> <small>GO:0032176 describes the double ring structure as thought to trap cytokinesis, new-membrane, or new-cell-wall proteins.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-split_septin_rings_topology">Split septin-rings topology <small>(ASSEMBLY)</small></h3>
+<p>A septin ring or collar splits into a pair of septin rings that flank the site of cell division before cytokinesis.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>septin proteins</td><td>assemble into</td><td>split septin rings</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032176"><code>GO:0032176</code></a> <small>GO:0032176 defines split septin rings as a pair of rings formed from a septin ring or collar.</small></li></ul></td></tr>
+<tr><td>septin ring or collar</td><td>splits into</td><td>split septin rings</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032176"><code>GO:0032176</code></a> <small>GO:0032176 defines split septin rings as a double-ring structure produced when the septin ring or collar splits before cytokinesis.</small></li></ul></td></tr>
+<tr><td>split septin rings</td><td>flank</td><td>cell division site</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032176"><code>GO:0032176</code></a> <small>GO:0032176 defines the split septin rings as a pair of rings that flank the site of cell division.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the generic split septin rings distinct from localized bud-neck split septin rings and from the precursor septin ring or collar. <small>GO:0032176 denotes the broader pair of rings that forms when a septin ring or septin collar splits before cytokinesis. GO:0032177 narrows that state to the cellular bud neck, GO:0005940 denotes an unsplit septin ring, and GO:0032173 denotes an unsplit septin collar.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for split-septin-rings septin proteins. <small>The initial split septin rings record uses a reviewed-label-only septin protein cohort rather than guessing InterPro, Pfam, or NCBIfam accessions that may not exactly delimit all septins that remain in split-ring pairs.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032176"><code>GO:0032176</code></a> <small>Gene Ontology cellular-component term for split septin rings.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032156"><code>GO:0032156</code></a> <small>OLS reports GO:0032156 septin cytoskeleton as the direct GO:0032176 parent.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005856"><code>GO:0005856</code></a> <small>OLS reports a direct GO:0032176 part_of relation to the cytoskeleton.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032177"><code>GO:0032177</code></a> <small>OLS reports GO:0032177 cellular bud neck split septin rings as the direct GO:0032176 child.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-09-30T16:36:00Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-30T16:37:18Z</code> codex · EXPANDED_RECORD — Added septin-cytoskeleton parentage, cytoskeleton parthood, a reviewed-label-only septin constituent, a GO-backed cytokinetic compartment function, a nonmechanistic split-ring topology graph, and boundary and component-grounding discussions.</li><li><code>2026-09-30T17:09:36Z</code> codex · ADDRESSED_REVIEW — Resolved #1834 in PR #1833 by grounding the split_septin_rings_topology cell_division_site node to GO:0032153.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/split_septin_rings.yaml"><code>data/structures/cytoskeleton/split_septin_rings.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
