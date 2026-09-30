@@ -20,6 +20,13 @@ curation_history:
     albicans scope and canonical example evidence, GO-backed apical cap topology,
     and cap-boundary and component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-30T11:25:41Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1822 from PR #1821 by removing an indirect Martin and Konopka
+    sterol-polarization DOI from the septin-cap colocalization edge and top-level
+    evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0032156
 part_of:
@@ -68,9 +75,6 @@ evidence:
 - reference: DOI:10.1091/mbc.e02-01-0013
   notes: Warenda and Konopka 2002, 'Septin function in Candida albicans morphogenesis',
     Molecular Biology of the Cell.
-- reference: DOI:10.1128/EC.3.3.675-684.2004
-  notes: Martin and Konopka 2004, 'Lipid raft polarization contributes to hyphal growth
-    in Candida albicans', Eukaryotic Cell.
 causal_graphs:
 - graph_id: septin_cap_topology
   title: Septin-cap apical topology
@@ -122,9 +126,6 @@ causal_graphs:
     - reference: GO:0032159
       notes: GO:0032159 defines septin caps by colocalization with an ergosterol-rich
         plasma-membrane region.
-    - reference: DOI:10.1128/EC.3.3.675-684.2004
-      notes: Martin and Konopka observed polarized sterol staining at the leading
-        edge throughout Candida albicans hyphal growth.
 discussions:
 - discussion_id: septin_cap_boundary
   prompt: Keep the septin cap distinct from narrower germ-tube and hyphal septin caps

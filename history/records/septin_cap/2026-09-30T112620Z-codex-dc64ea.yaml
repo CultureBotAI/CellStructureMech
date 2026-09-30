@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_cap.yaml
+  slug: septin_cap
+session:
+  id: 2026-09-30T112620Z-codex-dc64ea
+  timestamp: '2026-09-30T11:26:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1822
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1821
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address septin cap review
+  details: 'Resolved #1822 from PR #1821 by removing an indirect Martin and Konopka sterol-polarization
+    DOI from the septin-cap colocalization edge and top-level evidence while retaining the
+    direct GO:0032159 colocalization evidence.'
