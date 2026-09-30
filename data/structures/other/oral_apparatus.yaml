@@ -20,6 +20,12 @@ curation_history:
     Ciliophora and Tetrahymena scope, GO-backed food-channeling function, an oral-apparatus
     topology graph, and boundary and component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-30T20:13:58Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1839 from PR #1838 by removing an unsupported generic food CHEMICAL
+    node and retaining only the GO-backed oral-apparatus to cytostome topology edge.'
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 has_part:
@@ -62,7 +68,7 @@ causal_graphs:
   title: Oral-apparatus topology for feeding
   description: The oral apparatus is a ciliate feeding structure with specialized
     ciliary, basal-body and fibrillar substructures; deep fibers are GO-modeled oral-apparatus
-    parts, and the whole apparatus channels food toward the cytostome.
+    parts, and the whole apparatus directs collected material toward the cytostome.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph records GO-backed topology only; it does not assign individual
@@ -80,9 +86,6 @@ causal_graphs:
     label: cytostome
     node_type: STRUCTURE
     grounding: GO:0031910
-  - node_id: food
-    label: food
-    node_type: CHEMICAL
   edges:
   - subject: deep_fiber
     predicate: is part of
@@ -92,14 +95,6 @@ causal_graphs:
     - reference: GO:0032123
       notes: GO:0032123 defines deep fibers as inward projections of oral-apparatus
         cytoskeletal structures.
-  - subject: oral_apparatus
-    predicate: channels
-    object: food
-    description: The oral apparatus collects food and channels it toward the cytostome.
-    evidence:
-    - reference: GO:0031912
-      notes: GO:0031912 defines the oral apparatus by its role in collecting food
-        and channeling it to the cytostome.
   - subject: oral_apparatus
     predicate: directs food to
     object: cytostome
