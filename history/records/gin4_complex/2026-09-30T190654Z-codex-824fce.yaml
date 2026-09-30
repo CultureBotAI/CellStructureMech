@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/gin4_complex.yaml
+  slug: gin4_complex
+session:
+  id: 2026-09-30T190654Z-codex-824fce
+  timestamp: '2026-09-30T19:06:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Gin4 complex record
+  details: Added GO:1990317 as the budding-yeast Gin4 complex, with serine/threonine kinase
+    complex parentage, cellular bud neck septin ring parthood, Saccharomyces scope, a septin-ring
+    assembly function, a GO relation graph, and curation discussions documenting the boundary
+    and unresolved exact component groundings.

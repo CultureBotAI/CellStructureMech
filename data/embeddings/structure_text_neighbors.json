@@ -2861,6 +2861,37 @@
       ]
     },
     {
+      "identifier": "GO:1990317",
+      "label": "Gin4 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031105",
+          "label": "septin complex",
+          "cosine_similarity": 0.86281103
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.85450081
+        },
+        {
+          "identifier": "GO:0160065",
+          "label": "SIN/MEN signaling complex",
+          "cosine_similarity": 0.8423348
+        },
+        {
+          "identifier": "GO:0000811",
+          "label": "GINS complex",
+          "cosine_similarity": 0.82635834
+        },
+        {
+          "identifier": "GO:0044732",
+          "label": "mitotic spindle pole body",
+          "cosine_similarity": 0.81180126
+        }
+      ]
+    },
+    {
       "identifier": "GO:0061496",
       "label": "half bridge of mitotic spindle pole body",
       "neighbors": [
@@ -3221,14 +3252,14 @@
           "cosine_similarity": 0.82894985
         },
         {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.76592764
+        },
+        {
           "identifier": "GO:0031105",
           "label": "septin complex",
           "cosine_similarity": 0.75398315
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.7313514
         }
       ]
     },
@@ -3526,6 +3557,11 @@
           "cosine_similarity": 0.87080631
         },
         {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.79878543
+        },
+        {
           "identifier": "GO:0032161",
           "label": "cleavage apparatus septin structure",
           "cosine_similarity": 0.78887353
@@ -3534,11 +3570,6 @@
           "identifier": "GO:0032170",
           "label": "pseudohyphal septin ring",
           "cosine_similarity": 0.74533287
-        },
-        {
-          "identifier": "GO:0032176",
-          "label": "split septin rings",
-          "cosine_similarity": 0.74310138
         }
       ]
     },
@@ -3655,14 +3686,14 @@
           "cosine_similarity": 0.81713419
         },
         {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.80945145
+        },
+        {
           "identifier": "GO:0032170",
           "label": "pseudohyphal septin ring",
           "cosine_similarity": 0.75985296
-        },
-        {
-          "identifier": "GO:0036391",
-          "label": "medial cortex septin ring",
-          "cosine_similarity": 0.75576775
         }
       ]
     },
@@ -4425,6 +4456,11 @@
           "cosine_similarity": 0.87080631
         },
         {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.86281103
+        },
+        {
           "identifier": "GO:0032161",
           "label": "cleavage apparatus septin structure",
           "cosine_similarity": 0.81967448
@@ -4433,11 +4469,6 @@
           "identifier": "GO:1990334",
           "label": "SIN/MEN two-component GAP complex",
           "cosine_similarity": 0.79916347
-        },
-        {
-          "identifier": "GO:0160065",
-          "label": "SIN/MEN signaling complex",
-          "cosine_similarity": 0.78927362
         }
       ]
     },
@@ -4523,14 +4554,14 @@
           "cosine_similarity": 0.86309052
         },
         {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.8423348
+        },
+        {
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.80211525
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.80093302
         }
       ]
     },
@@ -4542,6 +4573,11 @@
           "identifier": "GO:0160065",
           "label": "SIN/MEN signaling complex",
           "cosine_similarity": 0.88631399
+        },
+        {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.85450081
         },
         {
           "identifier": "GO:0160066",
@@ -4557,11 +4593,6 @@
           "identifier": "GO:0035859",
           "label": "Seh1-associated complex",
           "cosine_similarity": 0.8213971
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.81371822
         }
       ]
     },
@@ -13854,14 +13885,14 @@
           "cosine_similarity": 0.80768463
         },
         {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.80627565
+        },
+        {
           "identifier": "GO:0160065",
           "label": "SIN/MEN signaling complex",
           "cosine_similarity": 0.79067044
-        },
-        {
-          "identifier": "GO:1990334",
-          "label": "SIN/MEN two-component GAP complex",
-          "cosine_similarity": 0.78040116
         }
       ]
     },
@@ -13937,6 +13968,11 @@
           "cosine_similarity": 0.69427509
         },
         {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.68675877
+        },
+        {
           "identifier": "GO:0022624",
           "label": "proteasome accessory complex",
           "cosine_similarity": 0.6814608
@@ -13950,11 +13986,6 @@
           "identifier": "GO:0000502",
           "label": "proteasome complex",
           "cosine_similarity": 0.67712529
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.67317772
         }
       ]
     },
@@ -14293,9 +14324,9 @@
           "cosine_similarity": 0.71791884
         },
         {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.7170443
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.71766407
         }
       ]
     },
@@ -15699,6 +15730,11 @@
       "label": "GINS complex",
       "neighbors": [
         {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.82635834
+        },
+        {
           "identifier": "GO:0031560",
           "label": "cellular bud neck polarisome",
           "cosine_similarity": 0.77963341
@@ -15717,11 +15753,6 @@
           "identifier": "GO:0042729",
           "label": "DASH complex",
           "cosine_similarity": 0.76391989
-        },
-        {
-          "identifier": "GO:1990131",
-          "label": "Gtr1-Gtr2 GTPase complex",
-          "cosine_similarity": 0.7602276
         }
       ]
     },
@@ -16474,6 +16505,11 @@
       "label": "monopolin complex",
       "neighbors": [
         {
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.80610038
+        },
+        {
           "identifier": "GO:1990334",
           "label": "SIN/MEN two-component GAP complex",
           "cosine_similarity": 0.80040661
@@ -16492,11 +16528,6 @@
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.7769972
-        },
-        {
-          "identifier": "GO:0043291",
-          "label": "RAVE complex",
-          "cosine_similarity": 0.77042817
         }
       ]
     },
@@ -19222,9 +19253,9 @@
           "cosine_similarity": 0.73156677
         },
         {
-          "identifier": "GO:0097347",
-          "label": "TAM protein secretion complex",
-          "cosine_similarity": 0.7227738
+          "identifier": "GO:1990317",
+          "label": "Gin4 complex",
+          "cosine_similarity": 0.72504943
         }
       ]
     },
