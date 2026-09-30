@@ -86,6 +86,8 @@ extend-exclude = [
     "src/cellstructuremech/schema/cellstructuremech_dataclasses.py",
     # claw-governed vendored files: byte-identical to canon, linted there, not here.
     "scripts/check_vendored_sync.py",
+    "scripts/auto_merge_ready_prs.py",
+    "scripts/verify_merge_integrity.py",
     "scripts/validate_id_label_correspondence.py",
     "scripts/chem_formula.py",
     "tests/test_skill_frontmatter.py",
