@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/core_tfiih_complex_portion_of_nef3_complex.yaml
+  slug: core_tfiih_complex_portion_of_nef3_complex
+session:
+  id: 2026-09-30T230440Z-claude-code-e07674
+  timestamp: '2026-09-30T23:04:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO:0000440 core TFIIH NEF3 portion record
+  details: Curated GO:0000440 as the core TFIIH complex portion of NEF3, including GO exact
+    synonymy, GO:0000439 TFIIH-core parentage, GO:0000112 NEF3 parthood, seven reviewed-label-only
+    TFIIH core constituent classes, Saccharomyces cerevisiae scope, nucleotide-excision repair
+    function context, a nonmechanistic function graph, and TODO/boundary discussions for unresolved
+    protein-family grounding and the Rad2/NEF3 boundary.
