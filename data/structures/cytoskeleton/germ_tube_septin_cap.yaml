@@ -1,0 +1,169 @@
+identifier: GO:0032171
+label: germ tube septin cap
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A faint structure formed of septins found at the leading edge of growth
+  in germ tubes of fungal cells growing filamentously. This cap of septins colocalizes
+  with a region of the plasma membrane that is rich in ergosterol.
+definition_source: GO:0032171
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T12:23:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T12:24:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO-backed septin-cap parentage and germ-tube parthood, a reviewed-label-only
+    septin constituent, GO-backed germ-tube apical-cap topology, and cap-boundary
+    and component-grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-30T12:25:04Z'
+  curator: codex
+  action: FIXED_GRAPH_NODE
+  changes: Added the GO:0032179 germ tube structure node referenced by the germ tube
+    septin cap part_of graph edge.
+  llm_assisted: true
+parent_structures:
+- GO:0032159
+part_of:
+- GO:0032179
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Germ-tube septin caps are formed by fungal septin GTPases, but
+    no exact source-neutral InterPro, Pfam, or NCBIfam CURIE was assigned for the
+    complete germ-tube cap cohort.
+  role: Septin GTPases that form the faint cap at the leading edge of filamentous
+    fungal germ tubes.
+  evidence:
+  - reference: GO:0032171
+    notes: GO:0032171 defines the germ tube septin cap as a structure formed of septins.
+  - reference: GO:0032159
+    notes: GO:0032159 defines the broader septin cap as a structure formed of septins.
+evidence:
+- reference: GO:0032171
+  notes: Gene Ontology cellular-component term for the germ tube septin cap.
+- reference: GO:0032159
+  notes: Gene Ontology cellular-component parent term for the septin cap.
+- reference: GO:0032179
+  notes: Gene Ontology cellular-component term for the germ tube.
+- reference: DOI:10.1128/EC.4.9.1503-1512.2005
+  notes: Douglas et al. 2005, 'Septin function in yeast model systems and pathogenic
+    fungi', Eukaryotic Cell.
+causal_graphs:
+- graph_id: germ_tube_septin_cap_topology
+  title: Germ-tube septin-cap apical topology
+  description: Septin proteins form a faint cap at the leading edge of filamentous
+    fungal germ tubes.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed germ-tube-cap composition and apical localization
+    without asserting an ordered recruitment mechanism for fungal septins or ergosterol-rich
+    membrane domains.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: germ_tube_septin_cap
+    label: germ tube septin cap
+    node_type: STRUCTURE
+    grounding: GO:0032171
+  - node_id: germ_tube_growth_tip
+    label: germ-tube growth tip
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: ergosterol_rich_plasma_membrane_region
+    label: ergosterol-rich plasma membrane region
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: germ_tube
+    label: germ tube
+    node_type: STRUCTURE
+    grounding: GO:0032179
+  edges:
+  - subject: septin_proteins
+    predicate: assemble into
+    object: germ_tube_septin_cap
+    description: Septin proteins form the fungal germ tube septin cap.
+    evidence:
+    - reference: GO:0032171
+      notes: GO:0032171 defines the germ tube septin cap as a structure formed of
+        septins.
+  - subject: germ_tube_septin_cap
+    predicate: forms at
+    object: germ_tube_growth_tip
+    description: The germ tube septin cap forms at the leading edge of growth in filamentous
+      fungal germ tubes.
+    evidence:
+    - reference: GO:0032171
+      notes: GO:0032171 localizes the germ tube septin cap to the leading edge of
+        growth in germ tubes.
+  - subject: germ_tube_septin_cap
+    predicate: colocalizes with
+    object: ergosterol_rich_plasma_membrane_region
+    description: The germ tube septin cap colocalizes with an ergosterol-rich region
+      of the plasma membrane.
+    evidence:
+    - reference: GO:0032171
+      notes: GO:0032171 defines germ tube septin caps by colocalization with an ergosterol-rich
+        plasma-membrane region.
+  - subject: germ_tube_septin_cap
+    predicate: is part of
+    object: germ_tube
+    description: The germ tube septin cap is part of the germ tube.
+    evidence:
+    - reference: GO:0032171
+      notes: The GO:0032171 graph places the germ tube septin cap in a part_of relation
+        to GO:0032179.
+discussions:
+- discussion_id: germ_tube_septin_cap_boundary
+  prompt: Keep the germ tube septin cap distinct from the generic septin cap, the
+    hyphal cap, and germ-tube septation-site rings.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  rationale: GO:0032171 denotes the apical septin cap at the leading edge of filamentous
+    fungal germ tubes. GO:0032159 denotes the broader hyphal-or-germ-tube septin-cap
+    class, GO:0032164 denotes the hyphal cap sibling, and GO:0032172 denotes a ring-shaped
+    septin structure at future germ-tube septation sites.
+  resolution_note: Curated GO:0032171 as the exact germ tube septin-cap structure,
+    used GO:0032159 as its is-a parent, used GO:0032179 as its direct part_of target,
+    and kept hyphal caps and germ-tube septation-site rings outside this record.
+  evidence:
+  - reference: GO:0032171
+    notes: GO:0032171 identifies the germ-tube-localized septin cap.
+  - reference: GO:0032159
+    notes: GO:0032159 identifies the broader septin cap.
+  - reference: GO:0032179
+    notes: The GO graph places GO:0032171 in a part_of relation to GO:0032179.
+  - reference: GO:0032164
+    notes: GO:0032164 identifies the hyphal septin cap.
+  - reference: GO:0032172
+    notes: GO:0032172 identifies the germ-tube septation-site ring.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_germ_tube_septin_cap_grounding
+  prompt: Resolve exact source-neutral family groundings for germ-tube-cap septin
+    proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The first germ tube septin-cap record uses a reviewed-label-only septin
+    protein cohort rather than guessing InterPro, Pfam, or NCBIfam accessions that
+    may not exactly delimit all septins in this apical germ-tube cap.
+  evidence:
+  - reference: GO:0032171
+    notes: GO:0032171 defines the germ tube septin cap as a structure formed of septins.
+  posed_by: codex
+  posed_date: '2026-09-30'
