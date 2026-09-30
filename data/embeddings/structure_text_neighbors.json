@@ -3605,6 +3605,37 @@
       ]
     },
     {
+      "identifier": "GO:0032151",
+      "label": "mitotic septin complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031105",
+          "label": "septin complex",
+          "cosine_similarity": 0.87618792
+        },
+        {
+          "identifier": "GO:0032161",
+          "label": "cleavage apparatus septin structure",
+          "cosine_similarity": 0.81713419
+        },
+        {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.75985296
+        },
+        {
+          "identifier": "GO:0036391",
+          "label": "medial cortex septin ring",
+          "cosine_similarity": 0.75576775
+        },
+        {
+          "identifier": "GO:0032176",
+          "label": "split septin rings",
+          "cosine_similarity": 0.75344726
+        }
+      ]
+    },
+    {
       "identifier": "GO:0072686",
       "label": "mitotic spindle",
       "neighbors": [
@@ -4353,6 +4384,11 @@
       "label": "septin complex",
       "neighbors": [
         {
+          "identifier": "GO:0032151",
+          "label": "mitotic septin complex",
+          "cosine_similarity": 0.87618792
+        },
+        {
           "identifier": "GO:0032161",
           "label": "cleavage apparatus septin structure",
           "cosine_similarity": 0.81967448
@@ -4371,11 +4407,6 @@
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.78085909
-        },
-        {
-          "identifier": "GO:0032170",
-          "label": "pseudohyphal septin ring",
-          "cosine_similarity": 0.77757517
         }
       ]
     },
