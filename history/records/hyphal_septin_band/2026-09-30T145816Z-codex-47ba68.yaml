@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/hyphal_septin_band.yaml
+  slug: hyphal_septin_band
+session:
+  id: 2026-09-30T145816Z-codex-47ba68
+  timestamp: '2026-09-30T14:58:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the hyphal septin band record
+  details: Created the GO:0032163 hyphal septin band record from the OLS-verified GO cellular-component
+    term and direct GO:0032158 septin band parent. Added a reviewed-label-only septin-protein
+    constituent, a nonmechanistic GO-backed mother cell-germ tube junction topology graph,
+    and boundary and component-grounding discussions.
