@@ -1,0 +1,154 @@
+identifier: GO:1990317
+label: Gin4 complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex involved in septin ring formation during mitosis. In
+  Saccharomyces cerevisiae it consists of BNI5, CDC3, CDC10, CDC11, CDC12, GIN4, NAP1
+  and SHS1. At least 2 GIN4 molecules are involved.
+definition_source: GO:1990317
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T19:04:33Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T19:06:15Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added kinase-complex parentage, cellular bud neck septin ring parthood,
+    Saccharomyces scope, septin-ring assembly function, a nonmechanistic GO relation
+    graph, and boundary and component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:1902554
+part_of:
+- GO:0000144
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: GO:1990317 defines the Gin4 complex by its Saccharomyces cerevisiae BNI5,
+    CDC3, CDC10, CDC11, CDC12, GIN4, NAP1 and SHS1 composition; no broader fungal
+    distribution is asserted here.
+  reference: GO:1990317
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which GO:1990317 defines the Gin4 complex as a BNI5/CDC3/CDC10/CDC11/CDC12/GIN4/NAP1/SHS1
+    complex involved in mitotic septin ring formation.
+  reference: GO:1990317
+functions:
+- function_id: mitotic_septin_ring_assembly_support
+  label: mitotic septin ring assembly support
+  description: The Gin4 complex participates in septin ring formation during mitosis.
+  evidence:
+  - reference: GO:1990317
+    notes: GO:1990317 defines the complex by its involvement in septin ring formation
+      during mitosis.
+  - reference: GO:0000921
+    notes: GO:1990317 has a capable_of_part_of relation to GO:0000921 septin ring
+      assembly in OLS.
+evidence:
+- reference: GO:1990317
+  notes: Gene Ontology cellular-component term for the Saccharomyces Gin4 complex,
+    with a GO definition that names the BNI5, CDC3, CDC10, CDC11, CDC12, GIN4, NAP1
+    and SHS1 participants.
+- reference: GO:1902554
+  notes: OLS reports GO:1902554 serine/threonine protein kinase complex as the direct
+    GO:1990317 parent.
+- reference: GO:0000144
+  notes: GO:1990317 is related to the cellular bud neck septin ring, GO:0000144, by
+    GO parthood.
+- reference: GO:0000921
+  notes: GO:1990317 is related to GO:0000921 septin ring assembly by a capable_of_part_of
+    relation.
+causal_graphs:
+- graph_id: gin4_complex_septin_ring_assembly
+  title: Gin4 complex links to septin ring assembly
+  description: The Gin4 complex is modeled as part of the cellular bud neck septin
+    ring and as participating in septin ring assembly.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed parthood and process participation without
+    asserting the molecular order of BNI5, CDC3, CDC10, CDC11, CDC12, GIN4, NAP1 and
+    SHS1 recruitment into the budding-yeast Gin4 complex.
+  nodes:
+  - node_id: gin4_complex
+    label: Gin4 complex
+    node_type: STRUCTURE
+    grounding: GO:1990317
+  - node_id: cellular_bud_neck_septin_ring
+    label: cellular bud neck septin ring
+    node_type: STRUCTURE
+    grounding: GO:0000144
+  - node_id: septin_ring_assembly
+    label: septin ring assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000921
+  edges:
+  - subject: gin4_complex
+    predicate: is part of
+    object: cellular_bud_neck_septin_ring
+    description: The Gin4 complex is part of the cellular bud neck septin ring in
+      GO.
+    evidence:
+    - reference: GO:1990317
+      notes: GO:1990317 links the Gin4 complex to the cellular bud neck septin ring
+        by parthood.
+    - reference: GO:0000144
+      notes: GO:0000144 identifies the cellular bud neck septin ring.
+  - subject: gin4_complex
+    predicate: participates in
+    object: septin_ring_assembly
+    description: The Gin4 complex participates in mitotic septin ring assembly.
+    evidence:
+    - reference: GO:1990317
+      notes: GO:1990317 defines the Gin4 complex by its involvement in septin ring
+        formation during mitosis.
+    - reference: GO:0000921
+      notes: GO:0000921 identifies the septin ring assembly process.
+discussions:
+- discussion_id: gin4_complex_boundary
+  prompt: Keep the Gin4 complex distinct from the cellular bud neck septin ring and
+    from the septin ring assembly process.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  rationale: GO:1990317 denotes a Saccharomyces protein complex involved in septin
+    ring formation. GO:0000144 denotes the higher-order cellular bud neck septin ring
+    that contains it, and GO:0000921 denotes the biological process of septin ring
+    assembly rather than a cellular structure.
+  resolution_note: Curated GO:1990317 as the kinase-complex child of GO:1902554, kept
+    GO:0000144 as parthood, and used GO:0000921 only as a process/function target.
+  evidence:
+  - reference: GO:1990317
+    notes: GO:1990317 identifies the Gin4 complex.
+  - reference: GO:1902554
+    notes: GO:1902554 identifies serine/threonine protein kinase complexes.
+  - reference: GO:0000144
+    notes: GO:0000144 identifies the cellular bud neck septin ring.
+  - reference: GO:0000921
+    notes: GO:0000921 identifies septin ring assembly.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_gin4_complex_components
+  prompt: Resolve exact source-neutral family groundings for the BNI5/CDC3/CDC10/CDC11/CDC12/GIN4/NAP1/SHS1
+    Gin4-complex participants.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The initial Gin4 complex record uses the exact GO cellular-component
+    identity without guessing InterPro, Pfam, NCBIfam, UniProtKB, or Complex Portal
+    accessions for the Saccharomyces-specific protein names in the GO definition.
+  evidence:
+  - reference: GO:1990317
+    notes: GO:1990317 names BNI5, CDC3, CDC10, CDC11, CDC12, GIN4, NAP1 and SHS1 as
+      Saccharomyces cerevisiae Gin4-complex participants.
+  posed_by: codex
+  posed_date: '2026-09-30'
