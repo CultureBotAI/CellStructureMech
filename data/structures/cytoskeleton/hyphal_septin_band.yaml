@@ -1,0 +1,125 @@
+identifier: GO:0032163
+label: hyphal septin band
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A septin band, i.e. a diffuse ring composed of a series of septin bars
+  running parallel to the long axis of the cell, located at the junction between the
+  mother cell and the germ tube (hypha) of a fungal cell growing filamentously.
+definition_source: GO:0032163
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T14:56:44Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T14:57:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added septin-band parentage, a reviewed-label-only septin constituent,
+    GO-backed hyphal-band topology, and boundary and component-grounding discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0032158
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The hyphal septin band is composed of septin bars at a filamentous
+    fungal germ-tube junction, but no exact source-neutral InterPro, Pfam, or NCBIfam
+    CURIE was assigned for the localized band-forming septin cohort.
+  role: Septin GTPases that form the diffuse bar series in the band at the junction
+    between the mother cell and germ tube.
+  evidence:
+  - reference: GO:0032163
+    notes: GO:0032163 defines the hyphal septin band as a septin band composed of
+      a series of septin bars.
+evidence:
+- reference: GO:0032163
+  notes: Gene Ontology cellular-component term for the hyphal septin band.
+- reference: GO:0032158
+  notes: OLS reports GO:0032158 septin band as the direct GO:0032163 parent.
+causal_graphs:
+- graph_id: hyphal_septin_band_topology
+  title: Hyphal septin-band topology
+  description: Septin proteins form a diffuse band of septin bars at the junction
+    between a filamentous fungal mother cell and its germ tube.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records GO-backed hyphal septin-band composition and localization
+    without asserting a species-specific recruitment mechanism.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: hyphal_septin_band
+    label: hyphal septin band
+    node_type: STRUCTURE
+    grounding: GO:0032163
+  - node_id: mother_germ_tube_junction
+    label: mother cell-germ tube junction
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: septin_proteins
+    predicate: form
+    object: hyphal_septin_band
+    description: Septin proteins form the diffuse bar-containing hyphal septin band.
+    evidence:
+    - reference: GO:0032163
+      notes: GO:0032163 defines the structure as a septin band composed of a series
+        of septin bars.
+  - subject: hyphal_septin_band
+    predicate: is localized at
+    object: mother_germ_tube_junction
+    description: The hyphal septin band is located at the junction between a fungal
+      mother cell and its filamentous germ tube.
+    evidence:
+    - reference: GO:0032163
+      notes: GO:0032163 locates the hyphal septin band at the mother cell-germ tube
+        junction.
+discussions:
+- discussion_id: hyphal_septin_band_boundary
+  prompt: Keep the hyphal septin band distinct from the generic septin band and from
+    localized septin-ring structures.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  rationale: GO:0032163 denotes only the diffuse septin-bar band at the junction between
+    a filamentous fungal mother cell and germ tube. GO:0032158 is the broader noncytokinetic
+    septin-band class, while GO:0032172 and GO:0032168 denote ring-shaped septin structures
+    within germ tubes or hyphae.
+  resolution_note: Curated GO:0032163 as the localized hyphal septin band, kept GO:0032158
+    as its is-a parent, and did not merge it with septin-ring terms.
+  evidence:
+  - reference: GO:0032163
+    notes: GO:0032163 identifies the hyphal septin band.
+  - reference: GO:0032158
+    notes: GO:0032158 identifies the broader septin band.
+  - reference: GO:0032172
+    notes: GO:0032172 identifies the germ tube septin ring.
+  - reference: GO:0032168
+    notes: GO:0032168 identifies the hyphal septin ring.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_hyphal_septin_band_grounding
+  prompt: Resolve an exact source-neutral grounding for hyphal-septin-band septin
+    proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The initial hyphal septin-band record uses a reviewed-label-only septin
+    protein cohort rather than guessing InterPro, Pfam, or NCBIfam accessions that
+    may not exactly delimit all septins that form diffuse hyphal band assemblies.
+  evidence:
+  - reference: GO:0032163
+    notes: GO:0032163 defines the hyphal septin band as composed of septin bars.
+  posed_by: codex
+  posed_date: '2026-09-30'
