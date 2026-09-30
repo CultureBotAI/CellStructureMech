@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/radial_spoke_head.yaml
+  slug: radial_spoke_head
+session:
+  id: 2026-09-30T000933Z-codex-15b2ca
+  timestamp: '2026-09-30T00:09:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1801
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fix radial spoke head parent structure
+  details: 'Resolved #1801 by replacing the erroneous GO:0140513 nuclear protein-containing-complex
+    parent on GO:0001535 radial spoke head with the generic GO:0032991 protein-containing
+    complex term and aligning the record-level evidence.'
