@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/mating_projection_tip_membrane.yaml
+  slug: mating_projection_tip_membrane
+session:
+  id: 2026-09-30T052738Z-codex-4dc264
+  timestamp: '2026-09-30T05:27:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1810
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1809
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Clarified mating projection tip membrane function wording
+  details: 'Resolved review issue #1810 by rewording the new GO:0070867 record''s function
+    row from a membrane-domain identity restatement to a mating-projection-tip polarized-growth
+    role.'

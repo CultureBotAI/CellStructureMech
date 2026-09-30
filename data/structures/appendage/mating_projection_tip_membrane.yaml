@@ -1,0 +1,159 @@
+identifier: GO:0070867
+label: mating projection tip membrane
+structure_category: APPENDAGE
+structure_kind: MEMBRANE
+definition: The portion of the plasma membrane surrounding the mating projection tip.
+definition_source: GO:0070867
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T05:04:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T05:05:30Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added mating-projection-tip and mating-projection-membrane parthood, a
+    reviewed-label-only lipid-bilayer component, Saccharomyces scope, tip-membrane
+    domain function evidence, a nonmechanistic tip-membrane topology graph, and a
+    lipid-bilayer grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-09-30T05:26:38Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1810 by rewording the only function row from a membrane-domain
+    restatement to a mating-projection-tip polarized-growth role.'
+  llm_assisted: true
+part_of:
+- GO:0043332
+- GO:0070250
+components:
+- component_id: mating_projection_tip_lipid_bilayer
+  label: mating projection tip lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Localized plasma-membrane lipid bilayer surrounding the apex of the pheromone-induced
+    mating projection.
+  evidence:
+  - reference: GO:0070867
+    notes: GO:0070867 identifies the mating projection tip membrane as the plasma-membrane
+      portion surrounding a mating projection tip.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070867 identifies the whole mating projection tip membrane,
+    but no separate source-neutral CURIE was verified for the lipid bilayer constituent
+    of this local plasma-membrane domain.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Haploid budding-yeast cells extend pheromone-induced mating projections with
+    polarized tips rather than carrying a mating projection tip membrane in every
+    growth state.
+  reference: DOI:10.1091/mbc.3.4.429
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which pheromone treatment induces mating projection
+    formation and polarized Spa2p localization at projection tips.
+  reference: DOI:10.1091/mbc.3.4.429
+functions:
+- function_id: mating_projection_tip_polarized_growth
+  label: mating-projection tip polarized growth
+  description: The mating projection tip membrane delimits the local plasma-membrane
+    surface around the projection apex where pheromone-induced polarized growth occurs.
+  evidence:
+  - reference: GO:0070867
+    notes: GO:0070867 identifies the membrane portion surrounding a mating projection
+      tip.
+  - reference: GO:0043332
+    notes: GO:0043332 defines the mating projection tip as the apex and polarized-growth
+      site of the mating projection.
+  - reference: DOI:10.1091/mbc.3.4.429
+    notes: Read et al. 1992 observed Spa2p segregation to Saccharomyces cerevisiae
+      mating projection tips during mating projection formation.
+evidence:
+- reference: GO:0070867
+  notes: Gene Ontology cellular-component term for the mating projection tip membrane.
+- reference: GO:0043332
+  notes: Gene Ontology cellular-component term for the mating projection tip.
+- reference: GO:0070250
+  notes: Gene Ontology cellular-component term for the mating projection membrane.
+- reference: GO:0005937
+  notes: Gene Ontology cellular-component term for the mating projection.
+- reference: DOI:10.1091/mbc.3.4.429
+  notes: Read et al. 1992, 'Actin- and tubulin-dependent functions during Saccharomyces
+    cerevisiae mating projection formation', Molecular Biology of the Cell.
+causal_graphs:
+- graph_id: mating_projection_tip_membrane_topology
+  title: Mating projection tip membrane topology
+  description: The mating projection tip membrane is the local membrane portion that
+    surrounds the projection apex and is part of the broader mating projection membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures mating-projection membrane regional topology without
+    asserting pheromone signaling, polarisome assembly, actin cable polarization,
+    or secretion mechanisms at the tip.
+  nodes:
+  - node_id: mating_projection_tip_membrane
+    label: mating projection tip membrane
+    node_type: STRUCTURE
+    grounding: GO:0070867
+  - node_id: mating_projection_membrane
+    label: mating projection membrane
+    node_type: STRUCTURE
+    grounding: GO:0070250
+  - node_id: mating_projection_tip
+    label: mating projection tip
+    node_type: STRUCTURE
+    grounding: GO:0043332
+  - node_id: mating_projection
+    label: mating projection
+    node_type: STRUCTURE
+    grounding: GO:0005937
+  edges:
+  - subject: mating_projection_tip_membrane
+    predicate: is part of
+    object: mating_projection_tip
+    description: The mating projection tip membrane is the plasma-membrane portion
+      surrounding the mating projection apex.
+    evidence:
+    - reference: GO:0070867
+      notes: GO:0070867 identifies the tip membrane as the membrane portion surrounding
+        a mating projection tip.
+    - reference: GO:0043332
+      notes: GO:0043332 identifies the mating projection tip.
+  - subject: mating_projection_tip_membrane
+    predicate: is part of
+    object: mating_projection_membrane
+    description: The tip membrane is a local region of the mating projection membrane.
+    evidence:
+    - reference: GO:0070867
+      notes: GO:0070867 names the mating projection tip membrane as a portion of plasma
+        membrane at the mating projection tip.
+    - reference: GO:0070250
+      notes: GO:0070250 identifies the mating projection membrane.
+  - subject: mating_projection_tip
+    predicate: is part of
+    object: mating_projection
+    description: The mating projection tip is the apex of the pheromone-induced projection.
+    evidence:
+    - reference: GO:0043332
+      notes: GO:0043332 defines the mating projection tip as part of the mating projection.
+discussions:
+- discussion_id: ground_mating_projection_tip_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    mating projection tip membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mating_projection_tip_lipid_bilayer
+  rationale: GO:0070867 identifies the whole mating projection tip membrane, but the
+    lipid-bilayer constituent is intentionally left as reviewed-label-only until an
+    exact source-neutral lipid or membrane-domain CURIE is curated.
+  evidence:
+  - reference: GO:0070867
+    notes: GO:0070867 identifies the whole mating projection tip membrane.
+  posed_by: codex
+  posed_date: '2026-09-30'
