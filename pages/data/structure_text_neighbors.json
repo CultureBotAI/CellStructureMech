@@ -803,14 +803,14 @@
           "cosine_similarity": 0.8348756
         },
         {
+          "identifier": "GO:0030990",
+          "label": "intraciliary transport particle",
+          "cosine_similarity": 0.82384505
+        },
+        {
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.78568751
-        },
-        {
-          "identifier": "GO:0005931",
-          "label": "axonemal nexin link",
-          "cosine_similarity": 0.78362517
         }
       ]
     },
@@ -904,6 +904,37 @@
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
           "cosine_similarity": 0.55245531
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030990",
+      "label": "intraciliary transport particle",
+      "neighbors": [
+        {
+          "identifier": "GO:0005929",
+          "label": "cilium",
+          "cosine_similarity": 0.82384505
+        },
+        {
+          "identifier": "GO:0060170",
+          "label": "ciliary membrane",
+          "cosine_similarity": 0.75873471
+        },
+        {
+          "identifier": "GO:0005931",
+          "label": "axonemal nexin link",
+          "cosine_similarity": 0.72497445
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.72210111
+        },
+        {
+          "identifier": "GO:0005858",
+          "label": "axonemal dynein complex",
+          "cosine_similarity": 0.70502314
         }
       ]
     },

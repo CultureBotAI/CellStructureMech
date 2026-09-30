@@ -1,0 +1,180 @@
+identifier: GO:0030990
+label: intraciliary transport particle
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Non-membrane-bounded protein particle complex that carries cargo along
+  axonemal microtubules during intraflagellar transport in eukaryotic cilia and flagella.
+definition_source: GO:0030990
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T03:01:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T03:02:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added intraflagellar transport synonymy, protein-complex parentage, cilium
+    parthood, a reviewed-label-only IFT-protein constituent, Chlamydomonas scope and
+    canonical example, an IFT cargo-transport function, GO/DOI evidence, a nonmechanistic
+    transport graph, and boundary and component-grounding discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: intraflagellar transport particle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030990
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005929
+components:
+- component_id: ift_particle_proteins
+  label: IFT particle proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The intraciliary transport particle is a multisubunit ciliary protein
+    complex, but no exact source-neutral CURIE was assigned for the complete IFT-particle
+    protein cohort.
+  role: Protein constituents of the IFT particle complex that shuttles ciliary cargo
+    along the axoneme.
+  evidence:
+  - reference: GO:0030990
+    notes: GO:0030990 identifies the intraciliary transport particle as a protein
+      complex.
+  - reference: DOI:10.1038/nrm952
+    notes: Rosenbaum and Witman 2002 review IFT particles as protein assemblies that
+      transport cargo during cilium and flagellum assembly and maintenance.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  presence: COMMON
+  note: Chlamydomonas flagella use IFT particles for bidirectional transport along
+    the axoneme during flagellar assembly and maintenance.
+  reference: DOI:10.1038/nrm952
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Green-algal model in which IFT particles have been used to define intraflagellar
+    transport in eukaryotic flagella.
+  reference: DOI:10.1038/nrm952
+functions:
+- function_id: ift_particle_ciliary_cargo_transport
+  label: IFT particle ciliary cargo transport
+  description: Intraciliary transport particles move cargo bidirectionally along axonemal
+    microtubules to assemble and maintain eukaryotic cilia and flagella.
+  evidence:
+  - reference: DOI:10.1038/nrm952
+    notes: Rosenbaum and Witman 2002 review intraflagellar transport particles as
+      cargo transport assemblies required for cilium and flagellum assembly and maintenance.
+evidence:
+- reference: GO:0030990
+  notes: Gene Ontology cellular-component term for the intraciliary transport particle.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component term for protein-containing complex.
+- reference: GO:0005929
+  notes: Gene Ontology cellular-component term for the containing cilium.
+- reference: GO:0060271
+  notes: Gene Ontology biological-process term for cilium assembly.
+- reference: DOI:10.1038/nrm952
+  notes: Rosenbaum and Witman 2002, 'Intraflagellar transport', Nature Reviews Molecular
+    Cell Biology.
+causal_graphs:
+- graph_id: ift_particle_ciliary_transport
+  title: IFT particles transport cargo along axonemes
+  description: IFT-particle proteins form a mobile complex that transports cargo along
+    axonemal microtubules to support cilium assembly and maintenance.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the coarse role of the IFT particle in bidirectional
+    axonemal cargo transport without asserting individual IFT-A, IFT-B, kinesin-II,
+    or dynein-2 components.
+  nodes:
+  - node_id: ift_particle_proteins
+    label: IFT particle proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: ift_particle_proteins
+  - node_id: ift_particle
+    label: intraciliary transport particle
+    node_type: STRUCTURE
+    grounding: GO:0030990
+  - node_id: axoneme
+    label: axoneme
+    node_type: STRUCTURE
+    grounding: GO:0005930
+  - node_id: cilium_assembly
+    label: cilium assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0060271
+  edges:
+  - subject: ift_particle_proteins
+    predicate: contribute to
+    object: ift_particle
+    description: IFT-particle proteins are constituents of the intraciliary transport
+      particle complex.
+    evidence:
+    - reference: GO:0030990
+      notes: GO:0030990 identifies the intraciliary transport particle as a protein
+        complex.
+  - subject: ift_particle
+    predicate: transports cargo along
+    object: axoneme
+    description: IFT particles move cargo bidirectionally along axonemal microtubules
+      beneath the ciliary membrane.
+    evidence:
+    - reference: DOI:10.1038/nrm952
+      notes: Rosenbaum and Witman 2002 review bidirectional IFT-particle transport
+        along Chlamydomonas axonemes.
+  - subject: ift_particle
+    predicate: supports
+    object: cilium_assembly
+    description: Intraflagellar-transport particles shuttle ciliary cargo required
+      for assembly and maintenance of the membrane-sheathed axoneme.
+    evidence:
+    - reference: DOI:10.1038/nrm952
+      notes: Rosenbaum and Witman 2002 review IFT as required machinery for cilium
+        and flagellum assembly and maintenance.
+discussions:
+- discussion_id: ift_particle_boundary
+  prompt: Keep the intraciliary transport particle distinct from the complete cilium,
+    the axoneme, and IFT motor complexes.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - part_of
+  rationale: GO:0030990 denotes the mobile IFT protein-particle complex that acts
+    inside the cilium, GO:0005929 denotes the complete membrane-sheathed cilium, and
+    GO:0005930 denotes the axonemal microtubule core on which IFT particles move.
+  resolution_note: Curated GO:0030990 as the exact IFT particle and used GO:0005929
+    for cilium parthood.
+  evidence:
+  - reference: GO:0030990
+    notes: GO:0030990 identifies the intraciliary transport particle.
+  - reference: GO:0005929
+    notes: GO:0005929 identifies the complete eukaryotic cilium.
+  - reference: GO:0005930
+    notes: GO:0005930 identifies the axoneme.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_ift_particle_proteins
+  prompt: Resolve exact source-neutral groundings and copy numbers for IFT-particle
+    proteins and subcomplexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  - components#ift_particle_proteins
+  rationale: Rosenbaum and Witman 2002 support IFT particles as ciliary transport
+    protein complexes, but this first child-complex record keeps a reviewed-label-only
+    aggregate instead of guessing exact IFT-A, IFT-B, kinesin-II, dynein-2, InterPro,
+    Pfam, NCBIfam, or UniProtKB groundings.
+  evidence:
+  - reference: DOI:10.1038/nrm952
+    notes: Rosenbaum and Witman 2002 review IFT particle subcomplexes and motor-dependent
+      particle movement.
+  posed_by: codex
+  posed_date: '2026-09-30'
