@@ -22,6 +22,12 @@ curation_history:
     septin constituent, a GO-backed cytokinetic compartment function, a nonmechanistic
     split-ring topology graph, and boundary and component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-30T17:09:36Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1834 in PR #1833 by grounding the split_septin_rings_topology
+    cell_division_site node to GO:0032153.'
+  llm_assisted: true
 parent_structures:
 - GO:0032156
 part_of:
@@ -86,6 +92,7 @@ causal_graphs:
   - node_id: cell_division_site
     label: cell division site
     node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0032153
   edges:
   - subject: septin_proteins
     predicate: assemble into
