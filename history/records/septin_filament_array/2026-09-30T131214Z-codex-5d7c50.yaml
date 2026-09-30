@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_filament_array.yaml
+  slug: septin_filament_array
+session:
+  id: 2026-09-30T131214Z-codex-5d7c50
+  timestamp: '2026-09-30T13:12:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1826
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1825
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - examples
+  summary: Address septin filament array PMID review
+  details: 'Resolved PR #1825 review issue #1826 by removing unread PMID:16151244 evidence
+    from the GO:0032160 septin filament array record. The Saccharomyces cerevisiae and Candida
+    albicans canonical examples now cite GO:0032160, matching the verified source for those
+    example contexts, and the top-level evidence list no longer presents the PMID as independently
+    opened evidence.'

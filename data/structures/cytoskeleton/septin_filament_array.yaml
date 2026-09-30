@@ -21,6 +21,12 @@ curation_history:
     septin constituent, Saccharomyces and Candida example contexts, GO-backed septin-array
     topology, and boundary and component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-09-30T13:11:32Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1826 from PR #1825 by removing unread PMID:16151244 evidence
+    and citing GO:0032160 for the Saccharomyces and Candida canonical example contexts.'
+  llm_assisted: true
 parent_structures:
 - GO:0032156
 part_of:
@@ -60,12 +66,12 @@ canonical_examples:
   taxon_label: Saccharomyces cerevisiae
   note: Budding-yeast model in which the GO definition records septin filament arrays
     at the prospore membrane during spore formation.
-  reference: PMID:16151244
+  reference: GO:0032160
 - taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   note: Candida model in which the GO definition records septin filament arrays at
     the chlamydospore membrane during chlamydospore formation.
-  reference: PMID:16151244
+  reference: GO:0032160
 evidence:
 - reference: GO:0032160
   notes: Gene Ontology cellular-component term for the septin filament array.
@@ -79,9 +85,6 @@ evidence:
 - reference: GO:0032166
   notes: Gene Ontology cellular-component child term for the chlamydospore septin
     filament array.
-- reference: PMID:16151244
-  notes: Douglas et al. 2005, 'Septin function in yeast model systems and pathogenic
-    fungi', Eukaryotic Cell.
 causal_graphs:
 - graph_id: septin_filament_array_topology
   title: Septin-filament-array topology
