@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/hyphae_septin_collar.yaml
+  slug: hyphae_septin_collar
+session:
+  id: 2026-09-30T091133Z-codex-8b7eac
+  timestamp: '2026-09-30T09:11:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add hyphae septin collar record
+  details: Created a GO:0062140 hyphae septin collar record with invasive-hyphae synonymy,
+    septin-collar parentage, a reviewed-label-only septin constituent, Pyricularia oryzae
+    scope and canonical example evidence, GO-backed collar topology, and boundary and component-grounding
+    discussions.

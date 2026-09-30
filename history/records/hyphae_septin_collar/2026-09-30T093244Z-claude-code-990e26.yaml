@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/hyphae_septin_collar.yaml
+  slug: hyphae_septin_collar
+session:
+  id: 2026-09-30T093244Z-claude-code-990e26
+  timestamp: '2026-09-30T09:32:44Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1818
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1817
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address hyphae septin collar review
+  details: 'Resolved #1818 from PR #1817 by revising the Pyricularia oryzae taxonomic-distribution
+    and canonical-example notes to state the Sep5-GFP septin-collar observations from Sakulkoo
+    et al. 2018.'
