@@ -2737,9 +2737,45 @@
       ]
     },
     {
+      "identifier": "GO:0032171",
+      "label": "germ tube septin cap",
+      "neighbors": [
+        {
+          "identifier": "GO:0032172",
+          "label": "germ tube septin ring",
+          "cosine_similarity": 0.94896227
+        },
+        {
+          "identifier": "GO:0032159",
+          "label": "septin cap",
+          "cosine_similarity": 0.9450281
+        },
+        {
+          "identifier": "GO:0032164",
+          "label": "hyphal septin cap",
+          "cosine_similarity": 0.93337981
+        },
+        {
+          "identifier": "GO:0032168",
+          "label": "hyphal septin ring",
+          "cosine_similarity": 0.87756235
+        },
+        {
+          "identifier": "GO:0005940",
+          "label": "septin ring",
+          "cosine_similarity": 0.86618189
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032172",
       "label": "germ tube septin ring",
       "neighbors": [
+        {
+          "identifier": "GO:0032171",
+          "label": "germ tube septin cap",
+          "cosine_similarity": 0.94896227
+        },
         {
           "identifier": "GO:0032168",
           "label": "hyphal septin ring",
@@ -2759,11 +2795,6 @@
           "identifier": "GO:0032169",
           "label": "prospore septin ring",
           "cosine_similarity": 0.89358838
-        },
-        {
-          "identifier": "GO:0032159",
-          "label": "septin cap",
-          "cosine_similarity": 0.89252836
         }
       ]
     },
@@ -2875,6 +2906,11 @@
           "cosine_similarity": 0.93870609
         },
         {
+          "identifier": "GO:0032171",
+          "label": "germ tube septin cap",
+          "cosine_similarity": 0.93337981
+        },
+        {
           "identifier": "GO:0032172",
           "label": "germ tube septin ring",
           "cosine_similarity": 0.8860053
@@ -2883,11 +2919,6 @@
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.87505531
-        },
-        {
-          "identifier": "GO:0032173",
-          "label": "septin collar",
-          "cosine_similarity": 0.85729915
         }
       ]
     },
@@ -4110,6 +4141,11 @@
           "cosine_similarity": 0.95024841
         },
         {
+          "identifier": "GO:0032171",
+          "label": "germ tube septin cap",
+          "cosine_similarity": 0.9450281
+        },
+        {
           "identifier": "GO:0032172",
           "label": "germ tube septin ring",
           "cosine_similarity": 0.89252836
@@ -4123,11 +4159,6 @@
           "identifier": "GO:0032168",
           "label": "hyphal septin ring",
           "cosine_similarity": 0.88732385
-        },
-        {
-          "identifier": "GO:0032173",
-          "label": "septin collar",
-          "cosine_similarity": 0.86853536
         }
       ]
     },
