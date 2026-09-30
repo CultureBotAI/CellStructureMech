@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_complex.yaml
+  slug: septin_complex
+session:
+  id: 2026-09-30T100454Z-claude-code-1204b3
+  timestamp: '2026-09-30T10:04:54Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add septin complex record
+  details: Created a GO:0031105 septin complex record with protein-containing-complex parentage,
+    septin-cytoskeleton and cell-cortex parthood, a reviewed-label-only septin constituent,
+    Schizosaccharomyces pombe scope and canonical example evidence, a GO-backed oligomerization
+    graph, and complex-boundary and component-grounding discussions.

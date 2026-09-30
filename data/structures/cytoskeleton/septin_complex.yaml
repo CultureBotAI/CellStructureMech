@@ -1,0 +1,148 @@
+identifier: GO:0031105
+label: septin complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex containing septins. Typically, these complexes contain
+  multiple septins and are oligomeric.
+definition_source: GO:0031105
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-09-30T10:02:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-09-30T10:04:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added protein-containing-complex parentage, septin-cytoskeleton and cell-cortex
+    parthood, a reviewed-label-only septin constituent, Schizosaccharomyces pombe
+    scope and canonical example evidence, a GO-backed oligomerization graph, and complex-boundary
+    and component-grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-09-30T10:23:25Z'
+  curator: codex
+  action: ADDRESSED_REVIEW
+  changes: 'Resolved #1820 from PR #1819 by tightening the Schizosaccharomyces pombe
+    taxonomic-distribution and canonical-example notes to cite the Spn1/Spn2/Spn3/Spn4
+    oligomeric septin complex.'
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0032156
+- GO:0005938
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Septin complexes contain multiple septin GTPases, but no exact
+    source-neutral InterPro, Pfam, NCBIfam, or UniProtKB CURIE was assigned for every
+    septin that can participate in oligomeric septin complexes.
+  role: Septin GTPases that associate into oligomeric septin protein complexes.
+  evidence:
+  - reference: GO:0031105
+    notes: GO:0031105 defines a septin complex as a protein complex containing septins
+      that is typically oligomeric.
+  - reference: DOI:10.1091/mbc.E04-07-0640
+    notes: An et al. 2004 assayed fission-yeast septin requirements for septin complex
+      formation.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast Spn1, Spn2, Spn3 and Spn4 form an oligomeric septin complex
+    containing two copies of each septin.
+  reference: DOI:10.1091/mbc.E04-07-0640
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Fission-yeast model in which An et al. 2004 mapped an oligomeric septin complex
+    containing Spn1, Spn2, Spn3 and Spn4.
+  reference: DOI:10.1091/mbc.E04-07-0640
+evidence:
+- reference: GO:0031105
+  notes: Gene Ontology cellular-component term for the septin complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0032156
+  notes: Gene Ontology cellular-component term for the septin cytoskeleton.
+- reference: GO:0005938
+  notes: Gene Ontology cellular-component term for the cell cortex.
+- reference: DOI:10.1091/mbc.E04-07-0640
+  notes: An, Morrell, Jennings, Link and Gould 2004, 'Requirements of fission yeast
+    septins for complex formation, localization, and function', Molecular Biology
+    of the Cell.
+causal_graphs:
+- graph_id: septin_complex_oligomerization
+  title: Septin proteins oligomerize into septin complexes
+  description: Septin proteins associate into oligomeric septin protein complexes.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph records the GO-backed composition of oligomeric septin complexes
+    without asserting a fixed subunit order, stoichiometry, or polymerization into
+    higher-order septin filaments.
+  nodes:
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+  - node_id: septin_complex
+    label: septin complex
+    node_type: STRUCTURE
+    grounding: GO:0031105
+  edges:
+  - subject: septin_proteins
+    predicate: oligomerize into
+    object: septin_complex
+    description: Septin proteins oligomerize into septin protein complexes.
+    evidence:
+    - reference: GO:0031105
+      notes: GO:0031105 defines the septin complex as an oligomeric protein complex
+        containing septins.
+    - reference: DOI:10.1091/mbc.E04-07-0640
+      notes: An et al. 2004 tested which fission-yeast septins are required for septin
+        complex formation.
+discussions:
+- discussion_id: septin_complex_boundary
+  prompt: Keep oligomeric septin complexes distinct from higher-order septin filaments,
+    rings, and collars.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - causal_graphs#septin_complex_oligomerization
+  rationale: GO:0031105 denotes oligomeric septin protein complexes. GO:0005940 denotes
+    higher-order cortical septin rings at division planes, and GO:0032173 denotes
+    tubular septin collars assembled from ordered filament arrays.
+  resolution_note: Curated GO:0031105 as the oligomeric complex and left filament,
+    ring, and collar polymerization to higher-order septin-structure records.
+  evidence:
+  - reference: GO:0031105
+    notes: GO:0031105 identifies oligomeric septin protein complexes.
+  - reference: GO:0005940
+    notes: GO:0005940 identifies the septin ring.
+  - reference: GO:0032173
+    notes: GO:0032173 identifies the septin collar.
+  posed_by: codex
+  posed_date: '2026-09-30'
+  resolved_date: '2026-09-30'
+- discussion_id: resolve_septin_complex_components
+  prompt: Resolve exact source-neutral family groundings for septin-complex septin
+    proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#septin_proteins
+  rationale: The first septin-complex record uses a reviewed-label-only septin protein
+    cohort rather than guessing a family CURIE that may not exactly delimit every
+    septin protein participating in GO:0031105 oligomeric complexes.
+  evidence:
+  - reference: GO:0031105
+    notes: GO:0031105 defines the structure as a protein complex containing septins.
+  posed_by: codex
+  posed_date: '2026-09-30'
