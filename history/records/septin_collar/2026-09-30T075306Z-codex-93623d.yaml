@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_collar.yaml
+  slug: septin_collar
+session:
+  id: 2026-09-30T075306Z-codex-93623d
+  timestamp: '2026-09-30T07:53:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add septin collar record
+  details: Created a GO:0032173 septin collar record with septin-hourglass synonymy, septin-cytoskeleton
+    parentage, a reviewed-label-only septin constituent, Saccharomyces cerevisiae scope and
+    canonical example evidence, GO-backed ring-to-collar topology, and boundary and component-grounding
+    discussions.
