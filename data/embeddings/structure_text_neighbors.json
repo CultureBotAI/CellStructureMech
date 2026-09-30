@@ -2312,6 +2312,11 @@
           "cosine_similarity": 0.89094921
         },
         {
+          "identifier": "GO:0032161",
+          "label": "cleavage apparatus septin structure",
+          "cosine_similarity": 0.87080957
+        },
+        {
           "identifier": "GO:0036391",
           "label": "medial cortex septin ring",
           "cosine_similarity": 0.86807538
@@ -2325,11 +2330,6 @@
           "identifier": "GO:0032174",
           "label": "cellular bud neck septin collar",
           "cosine_similarity": 0.85527764
-        },
-        {
-          "identifier": "GO:0005940",
-          "label": "septin ring",
-          "cosine_similarity": 0.85205997
         }
       ]
     },
@@ -2516,6 +2516,37 @@
           "identifier": "GO:0060170",
           "label": "ciliary membrane",
           "cosine_similarity": 0.73118209
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0032161",
+      "label": "cleavage apparatus septin structure",
+      "neighbors": [
+        {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.90660339
+        },
+        {
+          "identifier": "GO:0032169",
+          "label": "prospore septin ring",
+          "cosine_similarity": 0.89910566
+        },
+        {
+          "identifier": "GO:0036391",
+          "label": "medial cortex septin ring",
+          "cosine_similarity": 0.89506308
+        },
+        {
+          "identifier": "GO:0032162",
+          "label": "mating projection septin band",
+          "cosine_similarity": 0.87240521
+        },
+        {
+          "identifier": "GO:0032172",
+          "label": "germ tube septin ring",
+          "cosine_similarity": 0.87167329
         }
       ]
     },
@@ -3247,6 +3278,11 @@
           "cosine_similarity": 0.87325132
         },
         {
+          "identifier": "GO:0032161",
+          "label": "cleavage apparatus septin structure",
+          "cosine_similarity": 0.87240521
+        },
+        {
           "identifier": "GO:0032170",
           "label": "pseudohyphal septin ring",
           "cosine_similarity": 0.87175089
@@ -3255,11 +3291,6 @@
           "identifier": "GO:0032173",
           "label": "septin collar",
           "cosine_similarity": 0.86988407
-        },
-        {
-          "identifier": "GO:0032172",
-          "label": "germ tube septin ring",
-          "cosine_similarity": 0.8648741
         }
       ]
     },
@@ -3309,6 +3340,11 @@
           "cosine_similarity": 0.89597409
         },
         {
+          "identifier": "GO:0032161",
+          "label": "cleavage apparatus septin structure",
+          "cosine_similarity": 0.89506308
+        },
+        {
           "identifier": "GO:0032177",
           "label": "cellular bud neck split septin rings",
           "cosine_similarity": 0.86807538
@@ -3317,11 +3353,6 @@
           "identifier": "GO:0005940",
           "label": "septin ring",
           "cosine_similarity": 0.86525981
-        },
-        {
-          "identifier": "GO:0032172",
-          "label": "germ tube septin ring",
-          "cosine_similarity": 0.86427119
         }
       ]
     },
@@ -3955,6 +3986,11 @@
           "cosine_similarity": 0.92121409
         },
         {
+          "identifier": "GO:0032161",
+          "label": "cleavage apparatus septin structure",
+          "cosine_similarity": 0.89910566
+        },
+        {
           "identifier": "GO:0032168",
           "label": "hyphal septin ring",
           "cosine_similarity": 0.89904949
@@ -3968,11 +4004,6 @@
           "identifier": "GO:0032172",
           "label": "germ tube septin ring",
           "cosine_similarity": 0.89358838
-        },
-        {
-          "identifier": "GO:0005940",
-          "label": "septin ring",
-          "cosine_similarity": 0.88477313
         }
       ]
     },
@@ -3996,14 +4027,14 @@
           "cosine_similarity": 0.90687933
         },
         {
+          "identifier": "GO:0032161",
+          "label": "cleavage apparatus septin structure",
+          "cosine_similarity": 0.90660339
+        },
+        {
           "identifier": "GO:0032172",
           "label": "germ tube septin ring",
           "cosine_similarity": 0.90346491
-        },
-        {
-          "identifier": "GO:0032175",
-          "label": "mating projection septin ring",
-          "cosine_similarity": 0.89217207
         }
       ]
     },
@@ -4198,6 +4229,11 @@
       "label": "septin complex",
       "neighbors": [
         {
+          "identifier": "GO:0032161",
+          "label": "cleavage apparatus septin structure",
+          "cosine_similarity": 0.81967448
+        },
+        {
           "identifier": "GO:1990334",
           "label": "SIN/MEN two-component GAP complex",
           "cosine_similarity": 0.79916347
@@ -4216,11 +4252,6 @@
           "identifier": "GO:0032170",
           "label": "pseudohyphal septin ring",
           "cosine_similarity": 0.77757517
-        },
-        {
-          "identifier": "GO:0000144",
-          "label": "cellular bud neck septin ring",
-          "cosine_similarity": 0.77132492
         }
       ]
     },
