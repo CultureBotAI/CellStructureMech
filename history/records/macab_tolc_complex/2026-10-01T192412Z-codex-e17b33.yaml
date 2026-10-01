@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/macab_tolc_complex.yaml
+  slug: macab_tolc_complex
+session:
+  id: 2026-10-01T192412Z-codex-e17b33
+  timestamp: '2026-10-01T19:24:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added MacAB-TolC complex record
+  details: Created a GO:1990196-backed MacAB-TolC complex record with GO exact synonymy, GO:1990195
+    macrolide-transporter parentage, InterPro-grounded MacA/MacB/TolC constituents, reviewed
+    E. coli K-12 UniProt examples, a PDB:5NIK hetero-11-mer canonical example and subunit
+    count, ABC-type xenobiotic transporter activity, and DOI/PMID/PDB evidence from the MacAB-TolC
+    structural literature.

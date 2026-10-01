@@ -16966,6 +16966,37 @@
       ]
     },
     {
+      "identifier": "GO:1990196",
+      "label": "MacAB-TolC complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.7253221
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.72079166
+        },
+        {
+          "identifier": "GO:0097347",
+          "label": "TAM protein secretion complex",
+          "cosine_similarity": 0.70591367
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.68002055
+        },
+        {
+          "identifier": "GO:0010006",
+          "label": "Toc complex",
+          "cosine_similarity": 0.67835305
+        }
+      ]
+    },
+    {
       "identifier": "GO:0043332",
       "label": "mating projection tip",
       "neighbors": [
