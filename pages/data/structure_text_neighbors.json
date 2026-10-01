@@ -15006,9 +15006,9 @@
           "cosine_similarity": 0.76615367
         },
         {
-          "identifier": "GO:0043625",
-          "label": "delta DNA polymerase complex",
-          "cosine_similarity": 0.73815525
+          "identifier": "GO:1990101",
+          "label": "DnaA-oriC complex",
+          "cosine_similarity": 0.74943214
         }
       ]
     },
@@ -15084,6 +15084,11 @@
           "cosine_similarity": 0.93175148
         },
         {
+          "identifier": "GO:1990101",
+          "label": "DnaA-oriC complex",
+          "cosine_similarity": 0.86808264
+        },
+        {
           "identifier": "GO:1990158",
           "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
           "cosine_similarity": 0.82715373
@@ -15097,11 +15102,37 @@
           "identifier": "GO:1990156",
           "label": "DnaB-DnaG complex",
           "cosine_similarity": 0.81878954
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990101",
+      "label": "DnaA-oriC complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990157",
+          "label": "DnaA-DnaB-DnaC complex",
+          "cosine_similarity": 0.86808264
         },
         {
-          "identifier": "GO:0005662",
-          "label": "DNA replication factor A complex",
-          "cosine_similarity": 0.77478777
+          "identifier": "GO:1990100",
+          "label": "DnaB-DnaC complex",
+          "cosine_similarity": 0.82069785
+        },
+        {
+          "identifier": "GO:0005664",
+          "label": "nuclear origin of replication recognition complex",
+          "cosine_similarity": 0.78211488
+        },
+        {
+          "identifier": "GO:1990158",
+          "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
+          "cosine_similarity": 0.78167072
+        },
+        {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.7723555
         }
       ]
     },
@@ -15125,14 +15156,14 @@
           "cosine_similarity": 0.86372002
         },
         {
+          "identifier": "GO:1990101",
+          "label": "DnaA-oriC complex",
+          "cosine_similarity": 0.82069785
+        },
+        {
           "identifier": "GO:1990158",
           "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
           "cosine_similarity": 0.8106083
-        },
-        {
-          "identifier": "GO:0044777",
-          "label": "single-stranded DNA-binding protein complex",
-          "cosine_similarity": 0.79045015
         }
       ]
     },
@@ -15156,14 +15187,14 @@
           "cosine_similarity": 0.8106083
         },
         {
+          "identifier": "GO:1990101",
+          "label": "DnaA-oriC complex",
+          "cosine_similarity": 0.78167072
+        },
+        {
           "identifier": "GO:1990161",
           "label": "DnaB helicase complex",
           "cosine_similarity": 0.75153667
-        },
-        {
-          "identifier": "GO:0005658",
-          "label": "alpha DNA polymerase:primase complex",
-          "cosine_similarity": 0.74653693
         }
       ]
     },
@@ -17393,9 +17424,9 @@
           "cosine_similarity": 0.78315418
         },
         {
-          "identifier": "GO:0030692",
-          "label": "Noc4p-Nop14p complex",
-          "cosine_similarity": 0.77854767
+          "identifier": "GO:1990101",
+          "label": "DnaA-oriC complex",
+          "cosine_similarity": 0.78211488
         }
       ]
     },

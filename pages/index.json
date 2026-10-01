@@ -4383,6 +4383,15 @@
   "definition": "A protein-DNA complex consisting of the helicase loading complex DnaB-DnaC bound to the DNA-bound DNA replication initiation protein DnaA. Essential for DNA replication initiation."
  },
  {
+  "identifier": "GO:1990101",
+  "label": "DnaA-oriC complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/dnaa_oric_complex.html",
+  "definition": "A protein-DNA complex containing the initiator protein DnaA bound to high-affinity recognition sites in the unique origin of replication, oriC. DnaA-oriC binding is the first step in assembly of a bacterial pre-replicative complex (pre-RC) and is responsible for the timely initiation of replication once per cell cycle."
+ },
+ {
   "identifier": "GO:1990100",
   "label": "DnaB-DnaC complex",
   "category": "OTHER",

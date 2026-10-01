@@ -1,0 +1,224 @@
+identifier: GO:1990101
+label: DnaA-oriC complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A protein-DNA complex containing the initiator protein DnaA bound to high-affinity
+  recognition sites in the unique origin of replication, oriC. DnaA-oriC binding is
+  the first step in assembly of a bacterial pre-replicative complex (pre-RC) and is
+  responsible for the timely initiation of replication once per cell cycle.
+definition_source: GO:1990101
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T06:19:57Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T06:21:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, primosome-complex parentage, reviewed-label-only DnaA
+    and oriC DNA components, E. coli origin-recognition evidence, DNA-replication-initiation
+    function evidence, GO/PubMed/DOI evidence, a nonmechanistic initiation graph,
+    and grounding/boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-10-01T06:22:41Z'
+  curator: codex
+  action: FIX_BOUNDARY_EVIDENCE
+  changes: Added explicit GO:1990102 and GO:1990100 evidence for the DiaA and DnaB-DnaC
+    boundary discussion.
+  llm_assisted: true
+synonyms:
+- synonym_text: DnaA-DNA complex
+  synonym_type: BROAD_SYNONYM
+  source: GO:1990101
+parent_structures:
+- GO:1990077
+components:
+- component_id: dnaa_initiator
+  label: DnaA replication initiation protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaA is represented as the initiator protein constituent named
+    by GO:1990101; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    boundaries were not curated in this pass.
+  role: Initiator protein bound to high-affinity recognition sites in oriC.
+  evidence:
+  - reference: GO:1990101
+    notes: GO:1990101 defines the DnaA-oriC complex as containing initiator protein
+      DnaA.
+  - reference: PMID:19833870
+    notes: Miller et al. 2009 analyzed DnaA binding to high- and lower-affinity sites
+      in the E. coli oriC origin.
+- component_id: oric_origin_dna
+  label: oriC origin DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: oriC is the bacterial chromosomal origin sequence scaffold bound
+    by DnaA in GO:1990101; no exact source-neutral SO sequence-feature CURIE was curated
+    in this pass.
+  role: Unique chromosomal replication-origin DNA carrying the high-affinity DnaA
+    recognition sites.
+  evidence:
+  - reference: GO:1990101
+    notes: GO:1990101 defines the complex around DnaA bound to high-affinity recognition
+      sites in oriC.
+  - reference: PMID:19833870
+    notes: Miller et al. 2009 mutated E. coli high-affinity DnaA recognition sites
+      in oriC and assayed DnaA binding at that origin.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Miller et al. 2009 studied the high-affinity DnaA-oriC complex and bacterial
+    pre-RC assembly at the E. coli origin.
+  reference: PMID:19833870
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Miller et al. 2009 examined DnaA occupation of high- and lower-affinity DnaA
+    recognition sites in E. coli oriC.
+  reference: PMID:19833870
+functions:
+- function_id: dna_replication_initiation
+  label: DNA replication initiation
+  grounding: GO:0006270
+  description: The DnaA-oriC complex participates in the timely initiation of bacterial
+    chromosomal replication by seeding assembly of the pre-replicative complex at
+    oriC.
+  evidence:
+  - reference: GO:1990101
+    notes: GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC
+      assembly and as responsible for timely replication initiation.
+  - reference: GO:0006270
+    notes: GO:0006270 is the Gene Ontology biological-process term for DNA replication
+      initiation.
+  - reference: PMID:19833870
+    notes: Miller et al. 2009 tested how E. coli oriC high-affinity DnaA sites assist
+      additional DnaA loading during pre-RC assembly.
+evidence:
+- reference: GO:1990101
+  notes: Gene Ontology cellular-component term for the DnaA-oriC complex and its broad
+    DnaA-DNA complex synonym.
+- reference: GO:1990077
+  notes: OLS reports GO:1990077 primosome complex as the direct GO:1990101 is-a parent.
+- reference: GO:1990102
+  notes: Gene Ontology cellular-component term for the separately scoped DnaA-DiaA
+    complex.
+- reference: GO:1990100
+  notes: Gene Ontology cellular-component term for the separate DnaB-DnaC helicase-loading
+    complex.
+- reference: GO:0006270
+  notes: Gene Ontology biological-process term for DNA replication initiation.
+- reference: PMID:19833870
+  notes: PubMed identifier for Miller et al. 2009, the PNAS paper cited by GO:1990101.
+- reference: DOI:10.1073/pnas.0909472106
+  notes: DOI for Miller et al. 2009, 'Bacterial origin recognition complexes direct
+    assembly of higher-order DnaA oligomeric structures', as reported by PubMed.
+causal_graphs:
+- graph_id: dnaa_oric_initiation
+  title: DnaA-oriC seeds initiation
+  description: DnaA bound to high-affinity oriC recognition sites forms a nucleoprotein
+    complex that seeds bacterial pre-RC assembly during DNA replication initiation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level DnaA-oriC composition and initiation scope
+    without resolving ATP-DnaA oligomerization, DiaA stimulation, HU/IHF/Fis modulation,
+    origin unwinding, or DnaB-DnaC helicase loading.
+  nodes:
+  - node_id: dnaa_initiator
+    label: DnaA replication initiation protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnaa_initiator
+  - node_id: oric_origin_dna
+    label: oriC origin DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: oric_origin_dna
+  - node_id: dnaa_oric_complex
+    label: DnaA-oriC complex
+    node_type: STRUCTURE
+    grounding: GO:1990101
+  - node_id: dna_replication_initiation
+    label: DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006270
+  edges:
+  - subject: dnaa_initiator
+    predicate: contributes to
+    object: dnaa_oric_complex
+    description: DnaA initiator protein is a constituent of the DnaA-oriC complex.
+    evidence:
+    - reference: GO:1990101
+      notes: GO:1990101 defines the complex as containing initiator protein DnaA.
+  - subject: oric_origin_dna
+    predicate: scaffolds
+    object: dnaa_oric_complex
+    description: oriC origin DNA carries the high-affinity DnaA recognition sites
+      occupied in the DnaA-oriC complex.
+    evidence:
+    - reference: GO:1990101
+      notes: GO:1990101 defines the complex around DnaA bound to high-affinity oriC
+        sites.
+    - reference: PMID:19833870
+      notes: Miller et al. 2009 studied DnaA binding to the E. coli oriC origin.
+  - subject: dnaa_oric_complex
+    predicate: supports
+    object: dna_replication_initiation
+    description: The DnaA-oriC complex seeds bacterial pre-RC assembly during initiation
+      of chromosomal replication.
+    evidence:
+    - reference: GO:1990101
+      notes: GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC
+        assembly.
+    - reference: GO:0006270
+      notes: GO:0006270 is the DNA replication initiation process term.
+discussions:
+- discussion_id: resolve_dnaa_oric_component_groundings
+  prompt: Resolve exact source-neutral DnaA and oriC origin DNA groundings for the
+    DnaA-oriC complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnaa_initiator
+  - components#oric_origin_dna
+  rationale: GO:1990101 defines the DnaA-oriC complex around DnaA bound to high-affinity
+    oriC recognition sites. Exact source-neutral InterPro, Pfam, NCBIfam, UniProt
+    family or SO sequence-feature CURIEs for these components need narrower curation
+    before the labels can be grounded.
+  evidence:
+  - reference: GO:1990101
+    notes: GO:1990101 names DnaA and oriC DNA as the scoped complex constituents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: exclude_later_initiation_factors
+  prompt: Leave DiaA, DnaB-DnaC, HU, IHF and Fis out of the scoped GO:1990101 DnaA-oriC
+    complex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#dnaa_initiator
+  - components#oric_origin_dna
+  - causal_graphs#dnaa_oric_initiation
+  rationale: GO:1990101 denotes DnaA bound to high-affinity oriC recognition sites.
+    GO models the DiaA-containing complex separately as GO:1990102, and DnaB-DnaC
+    helicase loading belongs to later pre-primosome assemblies.
+  resolution_note: Curated the exact DnaA-plus-oriC boundary and left DiaA, HU/IHF/Fis
+    modulation, origin unwinding and DnaB-DnaC helicase loading as nonmechanistic
+    graph scope.
+  evidence:
+  - reference: GO:1990101
+    notes: GO:1990101 defines the DnaA-oriC complex around DnaA bound to high-affinity
+      oriC recognition sites.
+  - reference: GO:1990102
+    notes: GO:1990102 denotes the DiaA-containing DnaA complex bound to oriC DNA.
+  - reference: GO:1990100
+    notes: GO:1990100 denotes the separate DnaB-DnaC helicase-loading complex.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'
