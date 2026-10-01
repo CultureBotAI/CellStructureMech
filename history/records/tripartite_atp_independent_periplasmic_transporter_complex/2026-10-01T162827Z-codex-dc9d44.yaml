@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tripartite_atp_independent_periplasmic_transporter_complex.yaml
+  slug: tripartite_atp_independent_periplasmic_transporter_complex
+session:
+  id: 2026-10-01T162827Z-codex-dc9d44
+  timestamp: '2026-10-01T16:28:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add tripartite ATP-independent periplasmic transporter complex
+  details: Added a PROPOSED GO:0031317 record for the TRAP transporter complex with GO synonymy,
+    DctP/DctQ/DctM-family components, bacterial and archaeal taxonomic scope, a Rhodobacter
+    capsulatus DctPQM canonical example, ion-gradient-dependent solute uptake function evidence,
+    and a receptor-grounding discussion.

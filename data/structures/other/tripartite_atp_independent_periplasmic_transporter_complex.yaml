@@ -1,0 +1,142 @@
+identifier: GO:0031317
+label: tripartite ATP-independent periplasmic transporter complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A complex consisting of two membrane proteins and one extracytoplasmic
+  solute receptor. Such transporters transport a variety of substrates without direct
+  ATP power, instead using energy from ion gradients.
+definition_source: GO:0031317
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T16:25:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T16:27:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, transporter-complex parentage, TRAP receptor and membrane
+    components, bacterial and archaeal taxonomy, the R. capsulatus DctPQM canonical
+    example, ion-gradient-dependent transport function, evidence, and a receptor-grounding
+    discussion.
+  llm_assisted: true
+synonyms:
+- synonym_text: TRAP transporter complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031317
+- synonym_text: TRAP-T transporter complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031317
+parent_structures:
+- GO:1990351
+components:
+- component_id: trap_extracytoplasmic_solute_receptor
+  label: TRAP extracytoplasmic solute receptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: TRAP transporters use extracytoplasmic solute receptors from DctP
+    and TAXI families; no single exact source-neutral InterPro, Pfam, NCBIfam, or
+    UniProtKB family CURIE was asserted for the full receptor class.
+  role: Binds substrate outside the cytoplasmic membrane and delivers it to the DctQ/DctM-type
+    membrane transporter.
+  evidence:
+  - reference: GO:0031317
+    notes: GO:0031317 defines the TRAP transporter complex as containing one extracytoplasmic
+      solute receptor.
+  - reference: DOI:10.1128/JB.179.17.5482-5493.1997
+    notes: Forward et al. 1997 identified DctP as the periplasmic C4-dicarboxylate-binding
+      component of the Rhodobacter capsulatus DctPQM TRAP transporter.
+- component_id: trap_small_membrane_dctq
+  label: TRAP transporter, small membrane protein DctQ
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR007387
+  role: Small integral membrane constituent of DctPQM-type TRAP transporters.
+  evidence:
+  - reference: GO:0031317
+    notes: GO:0031317 defines the TRAP transporter complex as containing two membrane
+      proteins.
+  - reference: InterPro:IPR007387
+    notes: InterPro:IPR007387 covers TRAP transporter small membrane proteins of the
+      DctQ family.
+  - reference: DOI:10.1128/JB.179.17.5482-5493.1997
+    notes: Forward et al. 1997 identified R. capsulatus dctQ as a membrane-protein
+      gene required with dctP and dctM for functional C4-dicarboxylate transport.
+- component_id: trap_large_membrane_dctm
+  label: TRAP transporter large membrane protein DctM
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR004681
+  role: Large integral membrane constituent of DctPQM-type TRAP transporters.
+  evidence:
+  - reference: GO:0031317
+    notes: GO:0031317 defines the TRAP transporter complex as containing two membrane
+      proteins.
+  - reference: InterPro:IPR004681
+    notes: InterPro:IPR004681 covers TRAP transporter large membrane proteins of the
+      DctM family.
+  - reference: DOI:10.1128/JB.179.17.5482-5493.1997
+    notes: Forward et al. 1997 identified R. capsulatus dctM as a membrane-protein
+      gene required with dctP and dctQ for functional C4-dicarboxylate transport.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: TRAP transporter complexes occur in bacteria but are not universal across
+    the bacterial domain.
+  reference: DOI:10.1111/j.1574-6976.2010.00236.x
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: VARIABLE
+  note: TRAP transporter complexes have been detected in archaea but are not universal
+    across the archaeal domain.
+  reference: DOI:10.1111/j.1574-6976.2010.00236.x
+canonical_examples:
+- taxon_id: NCBITaxon:1061
+  taxon_label: Rhodobacter capsulatus
+  note: R. capsulatus DctPQM is the founding C4-dicarboxylate TRAP transporter complex
+    characterized genetically and bioenergetically.
+  reference: DOI:10.1128/JB.179.17.5482-5493.1997
+functions:
+- function_id: ion_gradient_dependent_solute_uptake
+  label: ion-gradient-dependent solute uptake
+  description: Couples extracytoplasmic receptor binding to secondary active solute
+    import without direct ATP hydrolysis.
+  evidence:
+  - reference: GO:0031317
+    notes: GO:0031317 defines TRAP transporter complexes by transport of varied substrates
+      without direct ATP power and with energy from ion gradients.
+  - reference: DOI:10.1128/JB.179.17.5482-5493.1997
+    notes: Forward et al. 1997 found that R. capsulatus DctPQM succinate uptake tracked
+      membrane potential rather than ATP abundance.
+evidence:
+- reference: GO:0031317
+  notes: GO:0031317 is an active cellular-component term for the tripartite ATP-independent
+    periplasmic transporter complex and is_a GO:1990351 transporter complex.
+- reference: DOI:10.1128/JB.179.17.5482-5493.1997
+  notes: Forward et al. 1997 characterized the R. capsulatus dctPQM genes, showed
+    that dctP, dctQ, and dctM were sufficient for C4-dicarboxylate transport, and
+    proposed the TRAP transporter name.
+- reference: DOI:10.1099/00221287-145-12-3431
+  notes: Rabus et al. 1999 analyzed TRAP transporters as an ancient family of extracytoplasmic
+    solute-receptor-dependent secondary active transporters.
+- reference: DOI:10.1111/j.1574-6976.2010.00236.x
+  notes: Mulligan, Fischer and Thomas 2011 reviewed tripartite ATP-independent periplasmic
+    transporters in bacteria and archaea.
+discussions:
+- discussion_id: resolve_trap_receptor_grounding
+  prompt: Resolve an exact source-neutral family grounding for the extracytoplasmic
+    solute receptor class of TRAP transporter complexes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#trap_extracytoplasmic_solute_receptor
+  rationale: The first record uses a reviewed receptor-class label rather than forcing
+    all TRAP extracytoplasmic receptors into either the DctP InterPro family or the
+    TAXI-family branch.
+  evidence:
+  - reference: DOI:10.1111/j.1574-6976.2010.00236.x
+  posed_by: codex
+  posed_date: '2026-10-01'

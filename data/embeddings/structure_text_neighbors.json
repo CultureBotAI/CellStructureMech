@@ -932,9 +932,9 @@
           "cosine_similarity": 0.72210111
         },
         {
-          "identifier": "GO:0005858",
-          "label": "axonemal dynein complex",
-          "cosine_similarity": 0.70502314
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.71288166
         }
       ]
     },
@@ -16815,6 +16815,11 @@
       "label": "lipopolysaccharide transport system",
       "neighbors": [
         {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.75521267
+        },
+        {
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
           "cosine_similarity": 0.72964442
@@ -16833,11 +16838,6 @@
           "identifier": "GO:0005886",
           "label": "plasma membrane",
           "cosine_similarity": 0.68251923
-        },
-        {
-          "identifier": "GO:0033281",
-          "label": "TAT protein transport complex",
-          "cosine_similarity": 0.67827782
         }
       ]
     },
@@ -17001,6 +17001,11 @@
       "label": "methyl accepting chemotaxis protein complex",
       "neighbors": [
         {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.69250834
+        },
+        {
           "identifier": "GO:0097589",
           "label": "archaeal-type flagellum",
           "cosine_similarity": 0.68543973
@@ -17019,11 +17024,6 @@
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.67068434
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.66678426
         }
       ]
     },
@@ -20066,6 +20066,37 @@
       ]
     },
     {
+      "identifier": "GO:0031317",
+      "label": "tripartite ATP-independent periplasmic transporter complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.805895
+        },
+        {
+          "identifier": "GO:0033281",
+          "label": "TAT protein transport complex",
+          "cosine_similarity": 0.77937958
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.77169044
+        },
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.75884875
+        },
+        {
+          "identifier": "GO:0062051",
+          "label": "lipopolysaccharide transport system",
+          "cosine_similarity": 0.75521267
+        }
+      ]
+    },
+    {
       "identifier": "GO:0034456",
       "label": "UTP-C complex",
       "neighbors": [
@@ -22839,6 +22870,11 @@
           "cosine_similarity": 0.78808761
         },
         {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.77937958
+        },
+        {
           "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
           "label": "type VI secretion system membrane complex",
           "cosine_similarity": 0.76869399
@@ -22847,11 +22883,6 @@
           "identifier": "GO:0043684",
           "label": "type IV secretion system complex",
           "cosine_similarity": 0.7519137
-        },
-        {
-          "identifier": "GO:0015627",
-          "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.75034946
         }
       ]
     },
