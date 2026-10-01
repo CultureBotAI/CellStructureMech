@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dnab_dnac_dnat_pria_prib_complex.yaml
+  slug: dnab_dnac_dnat_pria_prib_complex
+session:
+  id: 2026-10-01T051710Z-codex-db492e
+  timestamp: '2026-10-01T05:17:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1855
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fixed DnaB-DnaC-DnaT-PriA-PriB graph node type
+  details: 'Fixed review issue #1855 by changing the grounded GO:1990100 DnaB-DnaC complex
+    node in dnab_dnac_dnat_pria_prib_restart from GENE_OR_PROTEIN to STRUCTURE.'

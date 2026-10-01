@@ -15089,6 +15089,11 @@
           "cosine_similarity": 0.86372002
         },
         {
+          "identifier": "GO:1990158",
+          "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
+          "cosine_similarity": 0.8106083
+        },
+        {
           "identifier": "GO:0044777",
           "label": "single-stranded DNA-binding protein complex",
           "cosine_similarity": 0.79045015
@@ -15097,11 +15102,37 @@
           "identifier": "GO:0042555",
           "label": "MCM complex",
           "cosine_similarity": 0.78494291
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990158",
+      "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.8428515
         },
         {
-          "identifier": "GO:0071162",
-          "label": "CMG complex",
-          "cosine_similarity": 0.75964686
+          "identifier": "GO:1990100",
+          "label": "DnaB-DnaC complex",
+          "cosine_similarity": 0.8106083
+        },
+        {
+          "identifier": "GO:1990161",
+          "label": "DnaB helicase complex",
+          "cosine_similarity": 0.75153667
+        },
+        {
+          "identifier": "GO:0005658",
+          "label": "alpha DNA polymerase:primase complex",
+          "cosine_similarity": 0.74653693
+        },
+        {
+          "identifier": "GO:0005662",
+          "label": "DNA replication factor A complex",
+          "cosine_similarity": 0.73271663
         }
       ]
     },
@@ -15120,6 +15151,11 @@
           "cosine_similarity": 0.85591883
         },
         {
+          "identifier": "GO:1990158",
+          "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
+          "cosine_similarity": 0.8428515
+        },
+        {
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
           "cosine_similarity": 0.82905031
@@ -15128,11 +15164,6 @@
           "identifier": "GO:0071162",
           "label": "CMG complex",
           "cosine_similarity": 0.78902075
-        },
-        {
-          "identifier": "GO:0042555",
-          "label": "MCM complex",
-          "cosine_similarity": 0.78892309
         }
       ]
     },

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dnab_dnac_dnat_pria_prib_complex.yaml
+  slug: dnab_dnac_dnat_pria_prib_complex
+session:
+  id: 2026-10-01T044751Z-codex-53f394
+  timestamp: '2026-10-01T04:47:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added DnaB-DnaC-DnaT-PriA-PriB complex record
+  details: Created a GO:1990158-backed DnaB-DnaC-DnaT-PriA-PriB preprimosome record with GO
+    synonymy, pre-primosome parentage, DnaB-DnaC subcomplex parthood, reviewed-label-only
+    DnaT, PriA, PriB and PAS DNA components, E. coli/PhiX174 evidence from Ng and Marians
+    1996, replication-fork-processing function evidence, a nonmechanistic replication-restart
+    graph, and curation discussions for unresolved component grounding and PriC/DnaG boundary
+    decisions.
