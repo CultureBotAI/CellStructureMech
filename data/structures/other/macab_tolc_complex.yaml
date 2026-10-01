@@ -1,0 +1,199 @@
+identifier: GO:1990196
+label: MacAB-TolC complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The MacAB-TolC complex is a macrolide transporter complex found in E.coli
+  and related gram-negative bacteria. Its transport activity is specific to macrolide
+  compounds containing 14- and 15-membered lactones. It consists of the dimeric inner
+  membrane ATPase MacB, the hexameric, periplasmic membrane fusion protein MacA and
+  the trimeric outer membrane factor TolC.
+definition_source: GO:1990196
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T19:20:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T19:22:57Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and macrolide-transporter parentage, MacA/MacB/TolC components
+    with exact InterPro groundings and reviewed E. coli K-12 UniProt examples, the
+    PDB:5NIK hetero-11-mer, function, taxonomy, and authority evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: macrolide transporter MacAB-TolC complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990196
+parent_structures:
+- GO:1990195
+components:
+- component_id: maca_membrane_fusion_protein
+  label: Macrolide export protein MacA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR058623
+  gene_symbols:
+  - macA
+  stoichiometry: 6 copies per E. coli MacAB-TolC assembly in PDB:5NIK biological assembly
+    1
+  essentiality: UNKNOWN
+  role: Hexameric periplasmic membrane-fusion constituent that links the inner-membrane
+    MacB dimer to the TolC outer-membrane channel.
+  protein_examples:
+  - uniprot_id: UniProtKB:P75830
+    protein_label: Macrolide export protein MacA
+    gene_symbol: macA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 MacA accession mapped by RCSB to the MacA polymer
+      entity in PDB:5NIK.
+    evidence:
+    - reference: UniProtKB:P75830
+      notes: UniProtKB P75830 is the reviewed E. coli K-12 entry for MacA.
+    - reference: PDB:5NIK
+      notes: RCSB maps PDB:5NIK polymer entity 2 to UniProtKB:P75830.
+  evidence:
+  - reference: GO:1990196
+    notes: GO:1990196 defines MacA as the hexameric periplasmic membrane-fusion protein
+      in the MacAB-TolC complex.
+  - reference: InterPro:IPR058623
+    notes: InterPro IPR058623 is the Macrolide export protein MacA family entry.
+  - reference: PDB:5NIK
+    notes: RCSB describes six MacA chains in PDB:5NIK biological assembly 1.
+- component_id: macb_atp_binding_permease
+  label: Macrolide Exporter MacB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR050250
+  gene_symbols:
+  - macB
+  stoichiometry: 2 copies per E. coli MacAB-TolC assembly in PDB:5NIK biological assembly
+    1
+  essentiality: UNKNOWN
+  role: Dimeric inner-membrane ABC transporter constituent that hydrolyzes ATP and
+    forms the MacAB-TolC translocation path.
+  protein_examples:
+  - uniprot_id: UniProtKB:P75831
+    protein_label: Macrolide export ATP-binding/permease protein MacB
+    gene_symbol: macB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 MacB accession mapped by RCSB to the MacB polymer
+      entity in PDB:5NIK.
+    evidence:
+    - reference: UniProtKB:P75831
+      notes: UniProtKB P75831 is the reviewed E. coli K-12 entry for MacB.
+    - reference: PDB:5NIK
+      notes: RCSB maps PDB:5NIK polymer entity 3 to UniProtKB:P75831.
+  evidence:
+  - reference: GO:1990196
+    notes: GO:1990196 defines MacB as the dimeric inner-membrane ATPase in the MacAB-TolC
+      complex.
+  - reference: InterPro:IPR050250
+    notes: InterPro IPR050250 is the Macrolide Exporter MacB family entry.
+  - reference: PDB:5NIK
+    notes: RCSB describes two MacB chains in PDB:5NIK biological assembly 1.
+- component_id: tolc_outer_membrane_channel
+  label: Outer membrane channel protein TolC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR058622
+  gene_symbols:
+  - tolC
+  stoichiometry: 3 copies per E. coli MacAB-TolC assembly in PDB:5NIK biological assembly
+    1
+  essentiality: UNKNOWN
+  role: Trimeric outer-membrane channel constituent that completes the MacAB-TolC
+    efflux conduit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P02930
+    protein_label: Outer membrane protein TolC
+    gene_symbol: tolC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 TolC accession mapped by RCSB to the TolC polymer
+      entity in PDB:5NIK.
+    evidence:
+    - reference: UniProtKB:P02930
+      notes: UniProtKB P02930 is the reviewed E. coli K-12 entry for TolC.
+    - reference: PDB:5NIK
+      notes: RCSB maps PDB:5NIK polymer entity 1 to UniProtKB:P02930.
+  evidence:
+  - reference: GO:1990196
+    notes: GO:1990196 defines TolC as the trimeric outer-membrane factor in the MacAB-TolC
+      complex.
+  - reference: InterPro:IPR058622
+    notes: InterPro IPR058622 is the Outer membrane channel protein TolC family entry.
+  - reference: PDB:5NIK
+    notes: RCSB describes three TolC chains in PDB:5NIK biological assembly 1.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: GO:1990196 frames MacAB-TolC as a macrolide transporter found in E. coli and
+    related Gram-negative bacteria, so it is represented as variable within Bacteria.
+  reference: GO:1990196
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli source of the MacAB-TolC ABC-type tripartite multidrug efflux pump
+    structure deposited as PDB:5NIK.
+  reference: PDB:5NIK
+functions:
+- function_id: atp_dependent_xenobiotic_export
+  label: ABC-type xenobiotic transporter activity
+  grounding: GO:0008559
+  description: MacAB-TolC uses the MacB ABC transporter to export macrolide antibiotics
+    and other xenobiotics through the MacA adaptor and TolC outer-membrane channel.
+  evidence:
+  - reference: GO:1990196
+    notes: GO:1990196 defines MacAB-TolC by its 14- and 15-membered macrolide transport
+      specificity.
+  - reference: PMID:18955484
+    notes: Tikhonova et al. 2009 reported that E. coli MacB is a dimeric ABC transporter
+      whose ATPase activity and macrolide-binding capacity are regulated by MacA.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '11'
+  context: E. coli MacAB-TolC hetero-11-mer in PDB:5NIK biological assembly 1
+  reference: PDB:5NIK
+evidence:
+- reference: GO:1990196
+  notes: Gene Ontology cellular-component term for the MacAB-TolC complex.
+- reference: GO:1990195
+  notes: QuickGO reports GO:1990196 as an is-a child of GO:1990195 macrolide transmembrane
+    transporter complex.
+- reference: GO:0008559
+  notes: Gene Ontology molecular-function term for ABC-type xenobiotic transporter
+    activity.
+- reference: InterPro:IPR058623
+  notes: InterPro family entry for Macrolide export protein MacA.
+- reference: InterPro:IPR050250
+  notes: InterPro family entry for Macrolide Exporter MacB.
+- reference: InterPro:IPR058622
+  notes: InterPro family entry for Outer membrane channel protein TolC.
+- reference: UniProtKB:P75830
+  notes: UniProtKB reviewed E. coli K-12 MacA entry.
+- reference: UniProtKB:P75831
+  notes: UniProtKB reviewed E. coli K-12 MacB entry.
+- reference: UniProtKB:P02930
+  notes: UniProtKB reviewed E. coli K-12 TolC entry.
+- reference: PDB:5NIK
+  notes: RCSB Protein Data Bank entry for the E. coli MacAB-TolC ABC-type tripartite
+    multidrug efflux pump structure.
+- reference: PMID:28504659
+  notes: PubMed identifier for the 2017 MacAB-TolC structural paper cited by PDB:5NIK.
+- reference: DOI:10.1038/nmicrobiol.2017.70
+  notes: DOI for 'Structure of the MacAB-TolC ABC-type tripartite multidrug efflux
+    pump' as reported by RCSB and PubMed.
+- reference: PMID:18955484
+  notes: PubMed identifier for the 2009 Journal of Biological Chemistry paper showing
+    that MacA regulates MacB ATPase activity and macrolide binding.
