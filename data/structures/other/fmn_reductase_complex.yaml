@@ -1,0 +1,106 @@
+identifier: GO:1990202
+label: FMN reductase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex capable of FMN reductase activity. Reduces FMN to FMNH2
+  in a NAD(P)H-dependent manner. In E.coli, consists of a SsuE dimer.
+definition_source: GO:1990202
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T21:33:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T21:33:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact and narrow synonymy, GO:1990204 oxidoreductase-complex parentage,
+    an InterPro-grounded SsuE component with a reviewed E. coli K-12 UniProt example,
+    an E. coli canonical example, NADPH-dependent FMN reductase activity, dimer subunit
+    count, and PMID/DOI evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: FMN reductase complex, NAD(P)H-dependent
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990202
+- synonym_text: SsuE complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990202
+parent_structures:
+- GO:1990204
+components:
+- component_id: ssue_fmn_reductase
+  label: NADPH-dependent FMN reductase, SsuE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR020048
+  gene_symbols:
+  - ssuE
+  stoichiometry: 2 copies per E. coli SsuE dimer described by GO:1990202
+  essentiality: UNKNOWN
+  role: FMN reductase subunit that homodimerizes to reduce FMN to FMNH2 in the E.
+    coli alkanesulfonate monooxygenase system.
+  protein_examples:
+  - uniprot_id: UniProtKB:P80644
+    protein_label: FMN reductase (NADPH)
+    gene_symbol: ssuE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 SsuE accession for the FMN-reducing homodimer represented
+      by GO:1990202.
+    evidence:
+    - reference: UniProtKB:P80644
+      notes: UniProtKB P80644 is the reviewed E. coli K-12 entry for SsuE FMN reductase.
+    - reference: PMID:10480865
+      notes: Eichhorn et al. 1999 characterized E. coli SsuE as the FMN-reducing enzyme
+        in the alkanesulfonate monooxygenase system.
+  evidence:
+  - reference: GO:1990202
+    notes: GO:1990202 defines the E. coli FMN reductase complex as a SsuE dimer.
+  - reference: InterPro:IPR020048
+    notes: InterPro IPR020048 is the NADPH-dependent FMN reductase, SsuE family entry.
+  - reference: PMID:10480865
+    notes: Eichhorn et al. 1999 characterized SsuE as the E. coli FMN reductase that
+      provides FMNH2 to SsuD.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli source of the NADPH-dependent SsuE FMN reductase characterized in
+    the alkanesulfonate monooxygenase system.
+  reference: PMID:10480865
+functions:
+- function_id: nadph_fmn_reductase
+  label: FMN reductase (NADPH) activity
+  grounding: GO:0052873
+  description: The E. coli SsuE FMN reductase complex reduces FMN with NADPH.
+  evidence:
+  - reference: GO:1990202
+    notes: GO:1990202 defines the complex by NAD(P)H-dependent FMN reduction.
+  - reference: GO:0052873
+    notes: GO:0052873 is the molecular-function term for NADPH-dependent FMN reductase
+      activity.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '2'
+  context: E. coli SsuE dimer described by GO:1990202
+  reference: GO:1990202
+evidence:
+- reference: GO:1990202
+  notes: Gene Ontology cellular-component term for the FMN reductase complex.
+- reference: GO:1990204
+  notes: QuickGO reports GO:1990202 as an is-a descendant of GO:1990204 oxidoreductase
+    complex.
+- reference: GO:0052873
+  notes: Gene Ontology molecular-function term for FMN reductase (NADPH) activity.
+- reference: InterPro:IPR020048
+  notes: InterPro family entry for NADPH-dependent FMN reductase, SsuE.
+- reference: UniProtKB:P80644
+  notes: UniProtKB reviewed E. coli K-12 SsuE entry.
+- reference: PMID:10480865
+  notes: PubMed identifier for Eichhorn, van der Ploeg and Leisinger 1999, the Journal
+    of Biological Chemistry SsuD/SsuE characterization paper cited by GO:1990202.
+- reference: DOI:10.1074/jbc.274.38.26639
+  notes: DOI for the GO:1990202-cited SsuD/SsuE characterization paper.

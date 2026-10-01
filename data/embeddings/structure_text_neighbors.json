@@ -5345,6 +5345,11 @@
       "label": "fumarate reductase complex",
       "neighbors": [
         {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.71891396
+        },
+        {
           "identifier": "GO:0045273",
           "label": "respiratory chain complex II (succinate dehydrogenase)",
           "cosine_similarity": 0.70869109
@@ -5363,11 +5368,6 @@
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
           "cosine_similarity": 0.67971608
-        },
-        {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.64737316
         }
       ]
     },
@@ -5448,6 +5448,11 @@
           "cosine_similarity": 0.66106655
         },
         {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.65842586
+        },
+        {
           "identifier": "GO:0160292",
           "label": "sodium-translocating NADH:quinone reductase complex",
           "cosine_similarity": 0.64687576
@@ -5456,11 +5461,6 @@
           "identifier": "GO:0045283",
           "label": "fumarate reductase complex",
           "cosine_similarity": 0.64404227
-        },
-        {
-          "identifier": "GO:0009512",
-          "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.62595733
         }
       ]
     },
@@ -5468,6 +5468,11 @@
       "identifier": "GO:0016610",
       "label": "nitrogenase complex",
       "neighbors": [
+        {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.71416678
+        },
         {
           "identifier": "GO:0160292",
           "label": "sodium-translocating NADH:quinone reductase complex",
@@ -5487,11 +5492,6 @@
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.64851979
-        },
-        {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.64462418
         }
       ]
     },
@@ -5846,6 +5846,11 @@
           "cosine_similarity": 0.7363429
         },
         {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.70257918
+        },
+        {
           "identifier": "GO:0016610",
           "label": "nitrogenase complex",
           "cosine_similarity": 0.69987486
@@ -5859,11 +5864,6 @@
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
           "cosine_similarity": 0.66189566
-        },
-        {
-          "identifier": "GO:0045273",
-          "label": "respiratory chain complex II (succinate dehydrogenase)",
-          "cosine_similarity": 0.66034321
         }
       ]
     },
@@ -15683,14 +15683,14 @@
           "cosine_similarity": 0.70726103
         },
         {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.68841281
+        },
+        {
           "identifier": "GO:0008622",
           "label": "epsilon DNA polymerase complex",
           "cosine_similarity": 0.68596698
-        },
-        {
-          "identifier": "GO:0032299",
-          "label": "ribonuclease H2 complex",
-          "cosine_similarity": 0.68319715
         }
       ]
     },
@@ -16200,6 +16200,11 @@
           "cosine_similarity": 0.68501582
         },
         {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.68247896
+        },
+        {
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.67948136
@@ -16213,11 +16218,6 @@
           "identifier": "GO:1990065",
           "label": "Dxr protein complex",
           "cosine_similarity": 0.66238081
-        },
-        {
-          "identifier": "GO:1990621",
-          "label": "ESCRT IV complex",
-          "cosine_similarity": 0.66201679
         }
       ]
     },
@@ -16280,6 +16280,37 @@
           "identifier": "GO:0016590",
           "label": "ACF complex",
           "cosine_similarity": 0.8072003
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990202",
+      "label": "FMN reductase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990200",
+          "label": "SsuD-SsuE complex",
+          "cosine_similarity": 0.77510908
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.7206893
+        },
+        {
+          "identifier": "GO:0045283",
+          "label": "fumarate reductase complex",
+          "cosine_similarity": 0.71891396
+        },
+        {
+          "identifier": "GO:0016610",
+          "label": "nitrogenase complex",
+          "cosine_similarity": 0.71416678
+        },
+        {
+          "identifier": "GO:0160292",
+          "label": "sodium-translocating NADH:quinone reductase complex",
+          "cosine_similarity": 0.70257918
         }
       ]
     },
@@ -19698,6 +19729,11 @@
       "label": "SsuD-SsuE complex",
       "neighbors": [
         {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.77510908
+        },
+        {
           "identifier": "GO:0045273",
           "label": "respiratory chain complex II (succinate dehydrogenase)",
           "cosine_similarity": 0.70697699
@@ -19716,11 +19752,6 @@
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
           "cosine_similarity": 0.65089072
-        },
-        {
-          "identifier": "GO:1990065",
-          "label": "Dxr protein complex",
-          "cosine_similarity": 0.61979652
         }
       ]
     },
