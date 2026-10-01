@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/lipopolysaccharide_transport_system.yaml
+  slug: lipopolysaccharide_transport_system
+session:
+  id: 2026-10-01T155518Z-codex-f94cac
+  timestamp: '2026-10-01T15:55:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add lipopolysaccharide transport system
+  details: Added a PROPOSED GO:0062051 record for the Gram-negative Lpt lipopolysaccharide
+    transport system with LptA-G reviewed-label-only components, bacterial taxonomic scope,
+    an Escherichia coli canonical example, ATP-dependent LPS transport function evidence,
+    and grounding/boundary discussions.
