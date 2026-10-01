@@ -1,0 +1,214 @@
+identifier: GO:1990084
+label: DnaA-Dps complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that negatively regulates strand-opening at the origin
+  of replication, thereby interfering with replication initiation. This complex is
+  thought to be involved in the regulation of replication under oxidative stress conditions.
+  In E. coli, this complex is composed of DnaA and Dps.
+definition_source: GO:1990084
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T13:39:35Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T13:40:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added replication-inhibiting-complex parentage, reviewed-label-only DnaA
+    and Dps components, E. coli DnaA-Dps evidence, negative-DNA-replication-initiation
+    function evidence, GO/PubMed/DOI evidence, a nonmechanistic DnaA-Dps regulatory
+    graph, and grounding/boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:1990078
+components:
+- component_id: dnaa_initiator
+  label: DnaA replication initiation protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaA is represented as the initiator constituent named by GO:1990084;
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries were
+    not curated in this pass.
+  role: Replication initiator constituent bound by Dps in the DnaA-Dps complex.
+  evidence:
+  - reference: GO:1990084
+    notes: GO:1990084 defines the E. coli DnaA-Dps complex as being composed of DnaA
+      and Dps.
+  - reference: PMID:18284581
+    notes: Chodavarapu et al. 2008 reported that E. coli Dps specifically interacts
+      with DnaA protein.
+- component_id: dps_protein
+  label: Dps DNA-binding protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dps
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Dps is represented as the DNA-binding constituent named by GO:1990084;
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries were
+    not curated in this pass.
+  role: Oxidative-stress-induced DNA-binding protein that interacts with DnaA and
+    impedes replication initiation.
+  evidence:
+  - reference: GO:1990084
+    notes: GO:1990084 defines the E. coli DnaA-Dps complex as being composed of Dps
+      and DnaA.
+  - reference: PMID:18284581
+    notes: Chodavarapu et al. 2008 studied E. coli Dps interaction with DnaA in replication
+      initiation control.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Chodavarapu et al. 2008 studied the E. coli Dps-DnaA interaction and Dps effects
+    on replication initiation.
+  reference: PMID:18284581
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Chodavarapu et al. 2008 used E. coli Dps and DnaA to define Dps-DnaA binding
+    and Dps inhibition of DnaA origin strand-opening activity.
+  reference: PMID:18284581
+functions:
+- function_id: negative_regulation_of_dna_replication_initiation
+  label: negative regulation of DNA-templated DNA replication initiation
+  grounding: GO:0032297
+  description: The E. coli DnaA-Dps complex negatively regulates replication initiation
+    by interfering with DnaA-dependent strand opening at the replication origin.
+  evidence:
+  - reference: GO:1990084
+    notes: GO:1990084 defines the DnaA-Dps complex by negative regulation of origin
+      strand opening and interference with replication initiation.
+  - reference: GO:0032297
+    notes: GO:0032297 is the Gene Ontology biological-process term for negative regulation
+      of DNA-templated DNA replication initiation.
+  - reference: PMID:18284581
+    notes: Chodavarapu et al. 2008 showed that Dps inhibits DnaA function in initiation
+      by interfering with strand opening of the E. coli replication origin.
+evidence:
+- reference: GO:1990084
+  notes: Gene Ontology cellular-component term for the DnaA-Dps complex.
+- reference: GO:1990078
+  notes: QuickGO reports GO:1990084 DnaA-Dps complex as an is-a child of GO:1990078
+    replication inhibiting complex.
+- reference: GO:1990083
+  notes: Gene Ontology cellular-component term for the separately scoped DnaA-Hda
+    complex.
+- reference: GO:1990085
+  notes: Gene Ontology cellular-component term for the separately scoped Hda-beta
+    clamp complex.
+- reference: GO:0032297
+  notes: Gene Ontology biological-process term for negative regulation of DNA-templated
+    DNA replication initiation.
+- reference: PMID:18284581
+  notes: PubMed identifier for Chodavarapu, Gomez, Vicente and Kaguni 2008, the Molecular
+    Microbiology paper cited by GO:1990084.
+- reference: DOI:10.1111/j.1365-2958.2008.06127.x
+  notes: 'DOI for Chodavarapu et al. 2008, ''Escherichia coli Dps interacts with DnaA
+    protein to impede initiation: a model of adaptive mutation'', as reported by PubMed.'
+causal_graphs:
+- graph_id: dnaa_dps_inhibition
+  title: Dps inhibits DnaA initiation activity
+  description: Dps binds DnaA to form a complex that supports negative regulation
+    of replication initiation by interfering with origin strand opening.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level DnaA-Dps composition and negative replication-initiation
+    regulation without resolving Dps oligomer state, DnaA domain contacts, oxidative-stress
+    signaling to Dps abundance, or downstream effects on adaptive mutation.
+  nodes:
+  - node_id: dnaa_initiator
+    label: DnaA replication initiation protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnaa_initiator
+  - node_id: dps_protein
+    label: Dps DNA-binding protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: dps_protein
+  - node_id: dnaa_dps_complex
+    label: DnaA-Dps complex
+    node_type: STRUCTURE
+    grounding: GO:1990084
+  - node_id: negative_regulation_of_dna_replication_initiation
+    label: negative regulation of DNA-templated DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032297
+  edges:
+  - subject: dnaa_initiator
+    predicate: contributes to
+    object: dnaa_dps_complex
+    description: DnaA replication initiation protein is a constituent of the DnaA-Dps
+      complex.
+    evidence:
+    - reference: GO:1990084
+      notes: GO:1990084 defines the E. coli complex as being composed of DnaA and
+        Dps.
+  - subject: dps_protein
+    predicate: contributes to
+    object: dnaa_dps_complex
+    description: Dps DNA-binding protein is a constituent of the DnaA-Dps complex.
+    evidence:
+    - reference: GO:1990084
+      notes: GO:1990084 names Dps as a constituent of the DnaA-Dps complex.
+    - reference: PMID:18284581
+      notes: Chodavarapu et al. 2008 reported Dps interaction with DnaA protein.
+  - subject: dnaa_dps_complex
+    predicate: supports
+    object: negative_regulation_of_dna_replication_initiation
+    description: The DnaA-Dps complex supports negative regulation of replication
+      initiation by interfering with DnaA origin strand opening.
+    evidence:
+    - reference: GO:1990084
+      notes: GO:1990084 defines the complex by negative regulation of origin strand
+        opening and interference with replication initiation.
+    - reference: PMID:18284581
+      notes: Chodavarapu et al. 2008 found that Dps inhibits DnaA function in initiation
+        by interfering with origin strand opening.
+discussions:
+- discussion_id: resolve_dnaa_dps_component_groundings
+  prompt: Resolve exact source-neutral DnaA and Dps family groundings for the DnaA-Dps
+    complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnaa_initiator
+  - components#dps_protein
+  rationale: GO:1990084 names DnaA and Dps as the E. coli constituents of the DnaA-Dps
+    complex. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family CURIEs
+    need narrower curation before these components can be grounded.
+  evidence:
+  - reference: GO:1990084
+    notes: GO:1990084 defines the DnaA-Dps complex around DnaA and Dps constituents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: distinguish_dps_and_rida_complexes
+  prompt: Keep the DnaA-Dps complex distinct from DnaA/Hda RIDA complexes.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - components#dnaa_initiator
+  - components#dps_protein
+  - causal_graphs#dnaa_dps_inhibition
+  rationale: GO:1990084 denotes DnaA bound to Dps, whereas GO:1990083 denotes the
+    DnaA-Hda complex and GO:1990085 denotes Hda bound to the DnaN beta clamp.
+  resolution_note: Curated only DnaA and Dps on GO:1990084 and left Hda, the beta
+    clamp, and RIDA hydrolysis chemistry out of the component list and graph edges.
+  evidence:
+  - reference: GO:1990084
+    notes: GO:1990084 denotes the DnaA-Dps complex.
+  - reference: GO:1990083
+    notes: GO:1990083 denotes the separately scoped DnaA-Hda complex.
+  - reference: GO:1990085
+    notes: GO:1990085 denotes the separately scoped Hda-beta clamp complex.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'

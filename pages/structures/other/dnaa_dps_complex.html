@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DnaA-Dps complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>DnaA-Dps complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> · OTHER · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A protein complex that negatively regulates strand-opening at the origin of replication, thereby interfering with replication initiation. This complex is thought to be involved in the regulation of replication under oxidative stress conditions. In E. coli, this complex is composed of DnaA and Dps. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-dnaa_initiator"><td>DnaA replication initiation protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>dnaA</td><td></td><td>UNKNOWN</td><td>Replication initiator constituent bound by Dps in the DnaA-Dps complex.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 defines the E. coli DnaA-Dps complex as being composed of DnaA and Dps.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a> <small>Chodavarapu et al. 2008 reported that E. coli Dps specifically interacts with DnaA protein.</small></li></ul></td></tr>
+<tr id="components-dps_protein"><td>Dps DNA-binding protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>dps</td><td></td><td>UNKNOWN</td><td>Oxidative-stress-induced DNA-binding protein that interacts with DnaA and impedes replication initiation.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 defines the E. coli DnaA-Dps complex as being composed of Dps and DnaA.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a> <small>Chodavarapu et al. 2008 studied E. coli Dps interaction with DnaA in replication initiation control.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> Escherichia coli — <strong>COMMON</strong>: Chodavarapu et al. 2008 studied the E. coli Dps-DnaA interaction and Dps effects on replication initiation. [<a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> <em>Escherichia coli</em> — Chodavarapu et al. 2008 used E. coli Dps and DnaA to define Dps-DnaA binding and Dps inhibition of DnaA origin strand-opening activity. [<a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>negative regulation of DNA-templated DNA replication initiation</strong> <a href="http://purl.obolibrary.org/obo/GO_0032297"><code>GO:0032297</code></a> — The E. coli DnaA-Dps complex negatively regulates replication initiation by interfering with DnaA-dependent strand opening at the replication origin.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 defines the DnaA-Dps complex by negative regulation of origin strand opening and interference with replication initiation.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032297"><code>GO:0032297</code></a> <small>GO:0032297 is the Gene Ontology biological-process term for negative regulation of DNA-templated DNA replication initiation.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a> <small>Chodavarapu et al. 2008 showed that Dps inhibits DnaA function in initiation by interfering with strand opening of the E. coli replication origin.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-dnaa_dps_inhibition">Dps inhibits DnaA initiation activity <small>(FUNCTION)</small></h3>
+<p>Dps binds DnaA to form a complex that supports negative regulation of replication initiation by interfering with origin strand opening.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>DnaA replication initiation protein</td><td>contributes to</td><td>DnaA-Dps complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 defines the E. coli complex as being composed of DnaA and Dps.</small></li></ul></td></tr>
+<tr><td>Dps DNA-binding protein</td><td>contributes to</td><td>DnaA-Dps complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 names Dps as a constituent of the DnaA-Dps complex.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a> <small>Chodavarapu et al. 2008 reported Dps interaction with DnaA protein.</small></li></ul></td></tr>
+<tr><td>DnaA-Dps complex</td><td>supports</td><td>negative regulation of DNA-templated DNA replication initiation</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 defines the complex by negative regulation of origin strand opening and interference with replication initiation.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a> <small>Chodavarapu et al. 2008 found that Dps inhibits DnaA function in initiation by interfering with origin strand opening.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral DnaA and Dps family groundings for the DnaA-Dps complex. <small>GO:1990084 names DnaA and Dps as the E. coli constituents of the DnaA-Dps complex. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family CURIEs need narrower curation before these components can be grounded.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the DnaA-Dps complex distinct from DnaA/Hda RIDA complexes. <small>GO:1990084 denotes DnaA bound to Dps, whereas GO:1990083 denotes the DnaA-Hda complex and GO:1990085 denotes Hda bound to the DnaN beta clamp.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>Gene Ontology cellular-component term for the DnaA-Dps complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990078"><code>GO:1990078</code></a> <small>QuickGO reports GO:1990084 DnaA-Dps complex as an is-a child of GO:1990078 replication inhibiting complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990083"><code>GO:1990083</code></a> <small>Gene Ontology cellular-component term for the separately scoped DnaA-Hda complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990085"><code>GO:1990085</code></a> <small>Gene Ontology cellular-component term for the separately scoped Hda-beta clamp complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032297"><code>GO:0032297</code></a> <small>Gene Ontology biological-process term for negative regulation of DNA-templated DNA replication initiation.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a> <small>PubMed identifier for Chodavarapu, Gomez, Vicente and Kaguni 2008, the Molecular Microbiology paper cited by GO:1990084.</small></li><li><a href="https://doi.org/10.1111/j.1365-2958.2008.06127.x"><code>DOI:10.1111/j.1365-2958.2008.06127.x</code></a> <small>DOI for Chodavarapu et al. 2008, &#39;Escherichia coli Dps interacts with DnaA protein to impede initiation: a model of adaptive mutation&#39;, as reported by PubMed.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-01T13:39:35Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-01T13:40:58Z</code> codex · EXPANDED_RECORD — Added replication-inhibiting-complex parentage, reviewed-label-only DnaA and Dps components, E. coli DnaA-Dps evidence, negative-DNA-replication-initiation function evidence, GO/PubMed/DOI evidence, a nonmechanistic DnaA-Dps regulatory graph, and grounding/boundary discussions.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dnaa_dps_complex.yaml"><code>data/structures/other/dnaa_dps_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
