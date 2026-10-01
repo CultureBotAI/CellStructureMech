@@ -4293,6 +4293,15 @@
   "definition": "A multimeric DNA polymerase enzyme complex whose subunit composition differs among species and that functions in DNA replication, mismatch repair, and excision repair; in Saccharomyces cerevisiae, DNA polymerase delta contains Pol3, Pol31, and Pol32 subunits."
  },
  {
+  "identifier": "GO:1990125",
+  "label": "DiaA complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/diaa_complex.html",
+  "definition": "A homotetrameric protein complex consisting of a symmetrical pair of DiaA homodimers. Facilitates DnaA binding to the origin of replication during replication initiation."
+ },
+ {
   "identifier": "GO:0120217",
   "label": "DNA gyrase complex",
   "category": "OTHER",
