@@ -21,6 +21,12 @@ curation_history:
     evidence, GO/PubMed/DOI evidence, a nonmechanistic helicase-loading graph, and
     grounding/stoichiometry discussions.
   llm_assisted: true
+- timestamp: '2026-10-01T03:01:11Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: '#1851: replaced the GO-backed E. coli taxonomic row with primary DnaB-DnaC
+    evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: DnaB6-DnaC3 complex
   synonym_type: NARROW_SYNONYM
@@ -77,8 +83,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
   presence: COMMON
-  note: GO:1990100 is defined around the E. coli DnaB-DnaC helicase-loading complex.
-  reference: GO:1990100
+  note: Makowska-Grzyska and Kaguni 2010 studied DnaB-DnaC helicase loading at the
+    E. coli chromosomal origin.
+  reference: PMID:20129058
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dnab_dnac_complex.yaml
+  slug: dnab_dnac_complex
+session:
+  id: 2026-10-01T030139Z-codex-776154
+  timestamp: '2026-10-01T03:01:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1851
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1850
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fixed DnaB-DnaC taxonomic evidence scope
+  details: 'Fixed review issue #1851 by replacing the GO-backed Escherichia coli taxonomic_distribution
+    row with a primary PMID:20129058 reference and narrowing the note to Makowska-Grzyska
+    and Kaguni 2010.'
