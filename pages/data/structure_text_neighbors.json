@@ -16811,6 +16811,37 @@
       ]
     },
     {
+      "identifier": "GO:0062051",
+      "label": "lipopolysaccharide transport system",
+      "neighbors": [
+        {
+          "identifier": "GO:0015627",
+          "label": "type II protein secretion system complex",
+          "cosine_similarity": 0.72964442
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.70504716
+        },
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.69711762
+        },
+        {
+          "identifier": "GO:0005886",
+          "label": "plasma membrane",
+          "cosine_similarity": 0.68251923
+        },
+        {
+          "identifier": "GO:0033281",
+          "label": "TAT protein transport complex",
+          "cosine_similarity": 0.67827782
+        }
+      ]
+    },
+    {
       "identifier": "GO:0016606",
       "label": "LYSP100-associated nuclear domain",
       "neighbors": [
