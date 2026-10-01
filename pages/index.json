@@ -4374,6 +4374,15 @@
   "definition": "A bacterial type IIA topoisomerase complex composed of ParC and ParE subunits that can relax supercoiled DNA and supports chromosome segregation."
  },
  {
+  "identifier": "GO:1990102",
+  "label": "DnaA-DiaA complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/dnaa_diaa_complex.html",
+  "definition": "A protein-DNA complex containing a tetramer of DiaA attached to multiple DnaA molecule bound to oriC DNA. Regulates timely initiation of chromosomal replication during the cell cycle by stimulating assembly of DnaA-oriC complexes, conformational changes in ATP-DnaA initiation complexes, and unwinding of oriC duplex DNA."
+ },
+ {
   "identifier": "GO:1990157",
   "label": "DnaA-DnaB-DnaC complex",
   "category": "OTHER",

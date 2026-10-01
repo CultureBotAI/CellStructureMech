@@ -1,0 +1,278 @@
+identifier: GO:1990102
+label: DnaA-DiaA complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A protein-DNA complex containing a tetramer of DiaA attached to multiple
+  DnaA molecule bound to oriC DNA. Regulates timely initiation of chromosomal replication
+  during the cell cycle by stimulating assembly of DnaA-oriC complexes, conformational
+  changes in ATP-DnaA initiation complexes, and unwinding of oriC duplex DNA.
+definition_source: GO:1990102
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T07:17:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T07:18:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, primosome-complex parentage, DnaA-oriC and DiaA-complex
+    part links, reviewed-label-only DiaA, DnaA and oriC DNA components, E. coli DiaA
+    initiation evidence, DNA-replication-initiation function evidence, GO/PubMed/DOI
+    evidence, a nonmechanistic initiation graph, and grounding/boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-10-01T07:19:13Z'
+  curator: codex
+  action: FIX_EVIDENCE_NOTES
+  changes: Narrowed the E. coli taxonomic-distribution note to the cited Keyamura
+    et al. 2007 source and normalized the Genes & Development journal title.
+  llm_assisted: true
+synonyms:
+- synonym_text: DnaA-DiaA-DNA complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990102
+parent_structures:
+- GO:1990077
+has_part:
+- GO:1990101
+- GO:1990125
+components:
+- component_id: diaa_regulator
+  label: DiaA DnaA-binding protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - diaA
+  stoichiometry: 4 copies per DiaA homotetramer
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DiaA is represented as the DnaA-binding protein constituent named
+    by GO:1990102 and by the GO:1990125 DiaA homotetramer; exact source-neutral InterPro,
+    Pfam, NCBIfam or UniProt family boundaries were not curated in this pass.
+  role: Homotetramer-forming DiaA constituent that binds multiple DnaA molecules at
+    oriC.
+  evidence:
+  - reference: GO:1990102
+    notes: GO:1990102 defines the DnaA-DiaA complex as containing a tetramer of DiaA
+      attached to DnaA on oriC DNA.
+  - reference: GO:1990125
+    notes: GO:1990125 defines the DiaA complex as a homotetrameric protein complex.
+  - reference: PMID:17699754
+    notes: Keyamura et al. 2007 determined the E. coli DiaA structure and found that
+      DiaA forms homotetramers that bind multiple DnaA molecules.
+- component_id: dnaa_initiator
+  label: DnaA replication initiation protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaA is represented as the oriC-bound initiator protein constituent
+    named by GO:1990102; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    boundaries were not curated in this pass.
+  role: DnaA initiator constituent bound to oriC DNA and contacted by DiaA.
+  evidence:
+  - reference: GO:1990102
+    notes: GO:1990102 defines the DnaA-DiaA complex as DiaA attached to multiple DnaA
+      molecules bound to oriC DNA.
+  - reference: PMID:15326179
+    notes: Ishida et al. 2004 identified DiaA as an E. coli DnaA-associating factor
+      that binds directly to DnaA.
+  - reference: PMID:17699754
+    notes: Keyamura et al. 2007 analyzed DiaA-dependent assembly of multiple DnaA
+      molecules on E. coli oriC.
+- component_id: oric_origin_dna
+  label: oriC origin DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: oriC is the bacterial chromosomal replication-origin DNA bound
+    by DnaA in GO:1990102; no exact source-neutral SO sequence-feature CURIE was curated
+    in this pass.
+  role: Origin DNA scaffold carrying the DnaA-bound sites contacted by DiaA.
+  evidence:
+  - reference: GO:1990102
+    notes: GO:1990102 scopes the DnaA-DiaA complex to DiaA attached to multiple DnaA
+      molecules bound to oriC DNA.
+  - reference: PMID:17699754
+    notes: Keyamura et al. 2007 tested DiaA stimulation of DnaA assembly on E. coli
+      oriC DNA.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Keyamura et al. 2007 studied DiaA-dependent DnaA initiation-complex assembly
+    in E. coli.
+  reference: PMID:17699754
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Keyamura et al. 2007 resolved E. coli DiaA as a homotetramer and tested its
+    stimulation of DnaA-oriC initiation-complex assembly.
+  reference: PMID:17699754
+functions:
+- function_id: dna_replication_initiation
+  label: DNA replication initiation
+  grounding: GO:0006270
+  description: The DnaA-DiaA complex promotes timely chromosomal replication initiation
+    by stimulating assembly of DnaA on oriC.
+  evidence:
+  - reference: GO:1990102
+    notes: GO:1990102 defines this DiaA-containing complex by its stimulation of DnaA-oriC
+      initiation-complex assembly.
+  - reference: GO:0006270
+    notes: GO:0006270 is the Gene Ontology biological-process term for DNA replication
+      initiation.
+  - reference: PMID:15326179
+    notes: Ishida et al. 2004 identified DiaA as a DnaA-associating factor needed
+      for timely E. coli chromosomal replication initiation.
+  - reference: PMID:17699754
+    notes: Keyamura et al. 2007 showed that E. coli DiaA stimulates the assembly of
+      multiple DnaA molecules on oriC.
+evidence:
+- reference: GO:1990102
+  notes: Gene Ontology cellular-component term for the DnaA-DiaA complex and its exact
+    DnaA-DiaA-DNA complex synonym.
+- reference: GO:1990077
+  notes: OLS reports GO:1990077 primosome complex as the direct GO:1990102 is-a parent.
+- reference: GO:1990101
+  notes: OLS reports GO:1990101 DnaA-oriC complex as a GO:1990102 has-part structure.
+- reference: GO:1990125
+  notes: OLS reports GO:1990125 DiaA complex as a GO:1990102 has-part structure.
+- reference: GO:0006270
+  notes: Gene Ontology biological-process term for DNA replication initiation.
+- reference: PMID:15326179
+  notes: PubMed identifier for Ishida et al. 2004, the Journal of Biological Chemistry
+    paper cited by GO:1990102.
+- reference: DOI:10.1074/jbc.M402762200
+  notes: DOI for Ishida et al. 2004, 'DiaA, a novel DnaA-binding protein, ensures
+    the timely initiation of Escherichia coli chromosome replication', as reported
+    by PubMed.
+- reference: PMID:17699754
+  notes: PubMed identifier for Keyamura et al. 2007, the Genes & Development paper
+    cited by GO:1990102 and GO:1990125.
+- reference: DOI:10.1101/gad.1561207
+  notes: DOI for Keyamura et al. 2007, 'The interaction of DiaA and DnaA regulates
+    the replication cycle in E. coli by directly promoting ATP DnaA-specific initiation
+    complexes', as reported by PubMed.
+causal_graphs:
+- graph_id: dnaa_diaa_initiation
+  title: DiaA promotes DnaA-oriC assembly
+  description: A DiaA homotetramer contacts DnaA bound to oriC DNA to form a DnaA-DiaA-DNA
+    complex that promotes DNA replication initiation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level DnaA-DiaA-oriC composition and initiation
+    scope without resolving ATP-DnaA oligomerization, oriC unwinding, or later DnaB-DnaC
+    helicase loading.
+  nodes:
+  - node_id: diaa_regulator
+    label: DiaA DnaA-binding protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: diaa_regulator
+  - node_id: dnaa_initiator
+    label: DnaA replication initiation protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnaa_initiator
+  - node_id: oric_origin_dna
+    label: oriC origin DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: oric_origin_dna
+  - node_id: dnaa_diaa_complex
+    label: DnaA-DiaA complex
+    node_type: STRUCTURE
+    grounding: GO:1990102
+  - node_id: dna_replication_initiation
+    label: DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006270
+  edges:
+  - subject: diaa_regulator
+    predicate: contributes to
+    object: dnaa_diaa_complex
+    description: A tetramer of DiaA is a constituent of the DnaA-DiaA complex.
+    evidence:
+    - reference: GO:1990102
+      notes: GO:1990102 defines the complex as containing a tetramer of DiaA.
+  - subject: dnaa_initiator
+    predicate: contributes to
+    object: dnaa_diaa_complex
+    description: DnaA initiator protein is bound to oriC in the DnaA-DiaA-DNA complex.
+    evidence:
+    - reference: GO:1990102
+      notes: GO:1990102 defines the complex around DiaA attached to DnaA bound to
+        oriC DNA.
+  - subject: oric_origin_dna
+    predicate: scaffolds
+    object: dnaa_diaa_complex
+    description: oriC origin DNA scaffolds the DnaA-DiaA-DNA complex.
+    evidence:
+    - reference: GO:1990102
+      notes: GO:1990102 scopes the complex to DiaA attached to DnaA molecules bound
+        to oriC DNA.
+    - reference: PMID:17699754
+      notes: Keyamura et al. 2007 tested DiaA-dependent assembly of DnaA on oriC.
+  - subject: dnaa_diaa_complex
+    predicate: promotes
+    object: dna_replication_initiation
+    description: The DnaA-DiaA complex promotes timely chromosomal replication initiation
+      by stimulating DnaA assembly on oriC.
+    evidence:
+    - reference: GO:1990102
+      notes: GO:1990102 defines this complex as regulating timely chromosomal replication
+        initiation.
+    - reference: PMID:17699754
+      notes: Keyamura et al. 2007 found that DiaA tetramers stimulate assembly of
+        ATP-DnaA-oriC initiation complexes.
+discussions:
+- discussion_id: resolve_dnaa_diaa_component_groundings
+  prompt: Resolve exact source-neutral DiaA, DnaA and oriC origin DNA groundings for
+    the DnaA-DiaA complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#diaa_regulator
+  - components#dnaa_initiator
+  - components#oric_origin_dna
+  rationale: GO:1990102 defines the DnaA-DiaA complex around a DiaA tetramer attached
+    to DnaA molecules bound to oriC DNA. Exact source-neutral InterPro, Pfam, NCBIfam,
+    UniProt family or SO sequence-feature CURIEs for these primitive components need
+    narrower curation before the labels can be grounded.
+  evidence:
+  - reference: GO:1990102
+    notes: GO:1990102 names DiaA, DnaA and oriC DNA as scoped constituents of the
+      DnaA-DiaA complex.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: exclude_adjacent_initiation_complexes
+  prompt: Keep the GO:1990102 DnaA-DiaA complex distinct from the free DnaA-oriC and
+    DiaA complexes and from DnaB-DnaC helicase loading.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - has_part
+  - components#diaa_regulator
+  - components#dnaa_initiator
+  - components#oric_origin_dna
+  - causal_graphs#dnaa_diaa_initiation
+  rationale: GO:1990102 is the DiaA-containing DnaA-oriC state. GO models the DnaA-oriC
+    complex as GO:1990101, the DiaA homotetramer as GO:1990125, and the DnaB-DnaC
+    helicase-loading state separately as GO:1990100.
+  resolution_note: Curated the DiaA-bound DnaA-oriC boundary, linked the DnaA-oriC
+    and DiaA complexes as parts, and left DnaB-DnaC helicase loading as nonmechanistic
+    graph scope.
+  evidence:
+  - reference: GO:1990102
+    notes: GO:1990102 denotes the DiaA-containing DnaA-oriC protein-DNA complex.
+  - reference: GO:1990101
+    notes: GO:1990101 denotes the DnaA-oriC complex.
+  - reference: GO:1990125
+    notes: GO:1990125 denotes the DiaA homotetrameric complex.
+  - reference: GO:1990100
+    notes: GO:1990100 denotes the separate DnaB-DnaC helicase-loading complex.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'

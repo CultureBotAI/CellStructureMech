@@ -15075,6 +15075,37 @@
       ]
     },
     {
+      "identifier": "GO:1990102",
+      "label": "DnaA-DiaA complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990101",
+          "label": "DnaA-oriC complex",
+          "cosine_similarity": 0.93330482
+        },
+        {
+          "identifier": "GO:1990157",
+          "label": "DnaA-DnaB-DnaC complex",
+          "cosine_similarity": 0.86325668
+        },
+        {
+          "identifier": "GO:1990100",
+          "label": "DnaB-DnaC complex",
+          "cosine_similarity": 0.81020937
+        },
+        {
+          "identifier": "GO:1990158",
+          "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
+          "cosine_similarity": 0.79430301
+        },
+        {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.76451297
+        }
+      ]
+    },
+    {
       "identifier": "GO:1990157",
       "label": "DnaA-DnaB-DnaC complex",
       "neighbors": [
@@ -15089,6 +15120,11 @@
           "cosine_similarity": 0.86808264
         },
         {
+          "identifier": "GO:1990102",
+          "label": "DnaA-DiaA complex",
+          "cosine_similarity": 0.86325668
+        },
+        {
           "identifier": "GO:1990158",
           "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
           "cosine_similarity": 0.82715373
@@ -15097,11 +15133,6 @@
           "identifier": "GO:1990161",
           "label": "DnaB helicase complex",
           "cosine_similarity": 0.81900756
-        },
-        {
-          "identifier": "GO:1990156",
-          "label": "DnaB-DnaG complex",
-          "cosine_similarity": 0.81878954
         }
       ]
     },
@@ -15109,6 +15140,11 @@
       "identifier": "GO:1990101",
       "label": "DnaA-oriC complex",
       "neighbors": [
+        {
+          "identifier": "GO:1990102",
+          "label": "DnaA-DiaA complex",
+          "cosine_similarity": 0.93330482
+        },
         {
           "identifier": "GO:1990157",
           "label": "DnaA-DnaB-DnaC complex",
@@ -15128,11 +15164,6 @@
           "identifier": "GO:1990158",
           "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
           "cosine_similarity": 0.78167072
-        },
-        {
-          "identifier": "GO:1990156",
-          "label": "DnaB-DnaG complex",
-          "cosine_similarity": 0.7723555
         }
       ]
     },
@@ -15187,14 +15218,14 @@
           "cosine_similarity": 0.8106083
         },
         {
+          "identifier": "GO:1990102",
+          "label": "DnaA-DiaA complex",
+          "cosine_similarity": 0.79430301
+        },
+        {
           "identifier": "GO:1990101",
           "label": "DnaA-oriC complex",
           "cosine_similarity": 0.78167072
-        },
-        {
-          "identifier": "GO:1990161",
-          "label": "DnaB helicase complex",
-          "cosine_similarity": 0.75153667
         }
       ]
     },
