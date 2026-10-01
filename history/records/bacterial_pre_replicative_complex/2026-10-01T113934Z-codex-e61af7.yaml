@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/bacterial_pre_replicative_complex.yaml
+  slug: bacterial_pre_replicative_complex
+session:
+  id: 2026-10-01T113934Z-codex-e61af7
+  timestamp: '2026-10-01T11:39:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added bacterial pre-replicative complex record
+  details: Created a GO:0036389-backed bacterial pre-replicative complex record with GO synonymy,
+    pre-replicative-complex parentage, reviewed-label-only DnaA and oriC DNA components, Escherichia
+    coli bacterial pre-RC evidence, DNA-replication-initiation function evidence, GO/PubMed/DOI
+    evidence, a nonmechanistic bacterial pre-RC graph, and curation discussions for unresolved
+    component groundings and the generic pre-RC boundary.
