@@ -1,0 +1,237 @@
+identifier: GO:0036389
+label: bacterial pre-replicative complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A protein-DNA complex that forms at the bacterial oriC during the initial
+  step of DNA replication and allows the origin to become competent, or 'licensed',
+  for replication.
+definition_source: GO:0036389
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T11:35:38Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T11:36:57Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, pre-replicative-complex parentage, reviewed-label-only
+    DnaA and oriC DNA components, E. coli bacterial pre-RC evidence, DNA-replication-initiation
+    function evidence, GO/PubMed/DOI evidence, a nonmechanistic bacterial pre-RC graph,
+    and grounding/boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-10-01T11:38:24Z'
+  curator: codex
+  action: FIX_EVIDENCE_NOTES
+  changes: Narrowed the GO:0036387 parent note to direct child evidence and removed
+    unsupported regulatory-architectural-protein scope text.
+  llm_assisted: true
+synonyms:
+- synonym_text: bacterial pre-RC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0036389
+parent_structures:
+- GO:0036387
+components:
+- component_id: dnaa_initiator
+  label: DnaA replication initiation protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaA is represented as the bacterial initiator constituent that
+    assembles on oriC during pre-RC formation; exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProt family boundaries were not curated in this pass.
+  role: Replication initiator that occupies oriC recognition sites during bacterial
+    pre-RC assembly.
+  evidence:
+  - reference: GO:1990101
+    notes: GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC
+      assembly.
+  - reference: PMID:19833870
+    notes: Miller et al. 2009 analyzed how E. coli DnaA bound at high-affinity oriC
+      sites assists loading of additional DnaA during pre-RC assembly.
+- component_id: oric_origin_dna
+  label: oriC origin DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: oriC is the bacterial replication-origin DNA scaffold named by
+    GO:0036389; no exact source-neutral SO sequence-feature CURIE was curated in this
+    pass.
+  role: Bacterial chromosomal origin DNA scaffold on which the pre-RC forms.
+  evidence:
+  - reference: GO:0036389
+    notes: GO:0036389 defines the bacterial pre-replicative complex as a protein-DNA
+      complex that forms at bacterial oriC.
+  - reference: PMID:19833870
+    notes: Miller et al. 2009 tested DnaA occupation of the E. coli oriC origin during
+      bacterial pre-RC assembly.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Miller et al. 2009 investigated E. coli DnaA and oriC interactions during
+    bacterial pre-RC assembly.
+  reference: PMID:19833870
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Miller et al. 2009 used the E. coli oriC system to study assembly of bacterial
+    pre-replicative complexes from high-affinity DnaA origin recognition complexes.
+  reference: PMID:19833870
+functions:
+- function_id: dna_replication_initiation
+  label: DNA replication initiation
+  grounding: GO:0006270
+  description: The bacterial pre-replicative complex forms at oriC during the initial
+    stage of DNA replication to license the origin for replication.
+  evidence:
+  - reference: GO:0036389
+    notes: GO:0036389 defines the bacterial pre-RC as forming at oriC during the initial
+      step of DNA replication.
+  - reference: GO:0006270
+    notes: GO:0006270 is the Gene Ontology biological-process term for DNA replication
+      initiation.
+  - reference: PMID:21035377
+    notes: Leonard and Grimwade 2010 reviewed regulation of DnaA complex assembly
+      during bacterial replication initiation.
+evidence:
+- reference: GO:0036389
+  notes: Gene Ontology cellular-component term for the bacterial pre-replicative complex
+    and its exact bacterial pre-RC synonym.
+- reference: GO:0036387
+  notes: QuickGO reports GO:0036389 bacterial pre-replicative complex as an is-a child
+    of GO:0036387 pre-replicative complex.
+- reference: GO:0032993
+  notes: QuickGO reports GO:0032993 protein-DNA complex as an ancestor of GO:0036389.
+- reference: GO:1990101
+  notes: Gene Ontology cellular-component term for the DnaA-oriC complex, the first
+    step in bacterial pre-RC assembly.
+- reference: GO:0006270
+  notes: Gene Ontology biological-process term for DNA replication initiation.
+- reference: PMID:19833870
+  notes: PubMed identifier for Miller et al. 2009, the PNAS paper cited by GO:0036389.
+- reference: DOI:10.1073/pnas.0909472106
+  notes: DOI for Miller et al. 2009, 'Bacterial origin recognition complexes direct
+    assembly of higher-order DnaA oligomeric structures', as reported by PubMed.
+- reference: PMID:21035377
+  notes: PubMed identifier for Leonard and Grimwade 2010, the Current Opinion in Microbiology
+    review cited by GO:0036389.
+- reference: DOI:10.1016/j.mib.2010.10.001
+  notes: 'DOI for Leonard and Grimwade 2010, ''Regulating DnaA complex assembly: it
+    is time to fill the gaps'', as reported by PubMed.'
+causal_graphs:
+- graph_id: bacterial_prerc_assembly
+  title: DnaA and oriC form the bacterial pre-RC
+  description: DnaA occupies oriC origin DNA during bacterial pre-RC assembly to make
+    the origin competent for DNA replication initiation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level DnaA/oriC bacterial pre-RC formation without
+    resolving DnaA oligomerization, lower-affinity oriC site loading, DiaA/HU-containing
+    substates, or later DnaB-DnaC helicase loading.
+  nodes:
+  - node_id: dnaa_initiator
+    label: DnaA replication initiation protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnaa_initiator
+  - node_id: oric_origin_dna
+    label: oriC origin DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: oric_origin_dna
+  - node_id: bacterial_pre_replicative_complex
+    label: bacterial pre-replicative complex
+    node_type: STRUCTURE
+    grounding: GO:0036389
+  - node_id: dna_replication_initiation
+    label: DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006270
+  edges:
+  - subject: dnaa_initiator
+    predicate: contributes to
+    object: bacterial_pre_replicative_complex
+    description: DnaA replication initiator occupies bacterial oriC during pre-RC
+      assembly.
+    evidence:
+    - reference: GO:1990101
+      notes: GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC
+        assembly.
+    - reference: PMID:19833870
+      notes: Miller et al. 2009 tested DnaA loading during E. coli pre-RC assembly.
+  - subject: oric_origin_dna
+    predicate: scaffolds
+    object: bacterial_pre_replicative_complex
+    description: Bacterial oriC origin DNA scaffolds pre-RC formation during the initial
+      step of replication.
+    evidence:
+    - reference: GO:0036389
+      notes: GO:0036389 defines the bacterial pre-RC as a protein-DNA complex that
+        forms at bacterial oriC.
+  - subject: bacterial_pre_replicative_complex
+    predicate: supports
+    object: dna_replication_initiation
+    description: The bacterial pre-RC licenses oriC for DNA replication initiation.
+    evidence:
+    - reference: GO:0036389
+      notes: GO:0036389 defines the bacterial pre-RC as allowing oriC to become licensed
+        for replication.
+    - reference: GO:0006270
+      notes: GO:0006270 is the DNA replication initiation process term.
+discussions:
+- discussion_id: resolve_bacterial_prerc_component_groundings
+  prompt: Resolve exact source-neutral DnaA and oriC origin DNA groundings for the
+    bacterial pre-replicative complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnaa_initiator
+  - components#oric_origin_dna
+  rationale: GO:0036389 defines the bacterial pre-RC as a protein-DNA complex at oriC,
+    and GO:1990101 identifies DnaA-oriC binding as the first step in bacterial pre-RC
+    assembly. Exact source-neutral InterPro, Pfam, NCBIfam, UniProt family or SO sequence-feature
+    CURIEs need narrower curation before these components can be grounded.
+  evidence:
+  - reference: GO:0036389
+    notes: GO:0036389 defines the bacterial pre-RC as a protein-DNA complex.
+  - reference: GO:1990101
+    notes: GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC
+      assembly.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: distinguish_prerc_substates
+  prompt: Keep the generic bacterial pre-RC distinct from named DnaA-oriC, DnaA-DiaA,
+    DnaA-HU and helicase-loading complexes.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - components#dnaa_initiator
+  - components#oric_origin_dna
+  - causal_graphs#bacterial_prerc_assembly
+  rationale: GO:0036389 denotes the generic bacterial pre-RC at oriC. GO models DnaA-oriC,
+    DnaA-DiaA and DnaA-HU complexes as separate named cellular components, and DnaB-DnaC
+    complexes mark later helicase loading states rather than required parts of every
+    bacterial pre-RC.
+  resolution_note: Curated only DnaA and oriC on the generic bacterial pre-RC and
+    left other DnaA-bound substates and DnaB-DnaC helicase loading out of has_part
+    and graph edges.
+  evidence:
+  - reference: GO:0036389
+    notes: GO:0036389 denotes the generic bacterial pre-RC class.
+  - reference: GO:1990101
+    notes: GO:1990101 denotes the narrower DnaA-oriC complex.
+  - reference: GO:1990102
+    notes: GO:1990102 denotes the DiaA-containing DnaA-oriC complex.
+  - reference: GO:1990103
+    notes: GO:1990103 denotes the HU-containing DnaA-DNA complex.
+  - reference: GO:1990100
+    notes: GO:1990100 denotes the DnaB-DnaC helicase-loading complex.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'

@@ -13711,6 +13711,37 @@
       ]
     },
     {
+      "identifier": "GO:0036389",
+      "label": "bacterial pre-replicative complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990101",
+          "label": "DnaA-oriC complex",
+          "cosine_similarity": 0.87015727
+        },
+        {
+          "identifier": "GO:1990103",
+          "label": "DnaA-HU complex",
+          "cosine_similarity": 0.78564266
+        },
+        {
+          "identifier": "GO:1990157",
+          "label": "DnaA-DnaB-DnaC complex",
+          "cosine_similarity": 0.78367829
+        },
+        {
+          "identifier": "GO:1990102",
+          "label": "DnaA-DiaA complex",
+          "cosine_similarity": 0.77638593
+        },
+        {
+          "identifier": "GO:1990099",
+          "label": "pre-primosome complex",
+          "cosine_similarity": 0.76418583
+        }
+      ]
+    },
+    {
       "identifier": "GO:1990063",
       "label": "Bam protein complex",
       "neighbors": [
@@ -15244,6 +15275,11 @@
           "cosine_similarity": 0.9081926
         },
         {
+          "identifier": "GO:0036389",
+          "label": "bacterial pre-replicative complex",
+          "cosine_similarity": 0.87015727
+        },
+        {
           "identifier": "GO:1990157",
           "label": "DnaA-DnaB-DnaC complex",
           "cosine_similarity": 0.86808264
@@ -15252,11 +15288,6 @@
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.82069785
-        },
-        {
-          "identifier": "GO:1990125",
-          "label": "DiaA complex",
-          "cosine_similarity": 0.81961665
         }
       ]
     },
