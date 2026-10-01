@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mdtbc_complex.yaml
+  slug: mdtbc_complex
+session:
+  id: 2026-10-01T202932Z-codex-1445ef
+  timestamp: '2026-10-01T20:29:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added MdtBC Complex record
+  details: Created a GO:1990203-backed MdtBC Complex record with GO exact synonymy, GO:1902495
+    transmembrane-transporter parentage, exact InterPro-grounded MdtB and MdtC constituents,
+    reviewed E. coli K-12 UniProt examples, an E. coli canonical example, B2C heterotrimer
+    subunit count, xenobiotic transmembrane transporter activity, and PMID/DOI evidence from
+    the E. coli MdtBC heterotrimer literature.

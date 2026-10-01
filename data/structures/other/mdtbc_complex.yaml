@@ -1,0 +1,150 @@
+identifier: GO:1990203
+label: MdtBC Complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex containing two transmembrane subunits; a MdtB dimer
+  and one unit of MdtC. Capable of exporting substrates across the cell membrane.
+  Involved in conferring antibiotic resistance of Gram-negative bacteria by transporting
+  drugs across the membrane.
+definition_source: GO:1990203
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T20:27:24Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T20:28:45Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and transmembrane-transporter parentage, MdtB and MdtC
+    components with exact InterPro groundings and reviewed E. coli K-12 UniProt examples,
+    the B2C heterotrimer subunit count, xenobiotic transport function, taxonomy, and
+    PMID/DOI evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: multidrug efflux pump MdtBC
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990203
+parent_structures:
+- GO:1902495
+components:
+- component_id: mdtb_multidrug_resistance_protein
+  label: Multidrug resistance protein MdtB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR022831
+  gene_symbols:
+  - mdtB
+  stoichiometry: 2 copies per active E. coli MdtBC B2C heterotrimer
+  essentiality: UNKNOWN
+  role: Inner-membrane RND transporter permease subunit that dimerizes with one MdtC
+    subunit to form the functional MdtBC drug efflux complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P76398
+    protein_label: Multidrug resistance protein MdtB
+    gene_symbol: mdtB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 MdtB accession matching the MdtB subunit of the MdtBC
+      heterotrimer.
+    evidence:
+    - reference: UniProtKB:P76398
+      notes: UniProtKB P76398 is the reviewed E. coli K-12 entry for MdtB.
+    - reference: PMID:20038594
+      notes: Kim et al. 2010 characterized E. coli MdtB as the dimeric partner in
+        the active MdtBC heterotrimer.
+  evidence:
+  - reference: GO:1990203
+    notes: GO:1990203 defines the MdtBC complex as containing a MdtB dimer.
+  - reference: InterPro:IPR022831
+    notes: InterPro IPR022831 is the Multidrug resistance protein MdtB family entry.
+  - reference: PMID:20038594
+    notes: Kim et al. 2010 reported that active E. coli MdtBC contains two MdtB subunits.
+- component_id: mdtc_multidrug_resistance_protein
+  label: Multidrug resistance protein MdtC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR023931
+  gene_symbols:
+  - mdtC
+  stoichiometry: 1 copy per active E. coli MdtBC B2C heterotrimer
+  essentiality: UNKNOWN
+  role: Inner-membrane RND transporter permease subunit that pairs with the MdtB dimer
+    to complete the B2C multidrug efflux complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P76399
+    protein_label: Multidrug resistance protein MdtC
+    gene_symbol: mdtC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 MdtC accession matching the single MdtC subunit of
+      the MdtBC heterotrimer.
+    evidence:
+    - reference: UniProtKB:P76399
+      notes: UniProtKB P76399 is the reviewed E. coli K-12 entry for MdtC.
+    - reference: PMID:20038594
+      notes: Kim et al. 2010 characterized E. coli MdtC as the single-copy partner
+        in the active MdtBC heterotrimer.
+  evidence:
+  - reference: GO:1990203
+    notes: GO:1990203 defines the MdtBC complex as containing one MdtC unit.
+  - reference: InterPro:IPR023931
+    notes: InterPro IPR023931 is the Multidrug resistance protein MdtC family entry.
+  - reference: PMID:20038594
+    notes: Kim et al. 2010 reported that active E. coli MdtBC contains one MdtC subunit.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: GO:1990203 frames MdtBC as an antibiotic-resistance multidrug efflux complex
+    of Gram-negative bacteria, so it is represented as variable within Bacteria rather
+    than universal.
+  reference: GO:1990203
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli source of the active MdtBC B2C heterotrimer characterized by Kim et
+    al. 2010.
+  reference: PMID:20038594
+functions:
+- function_id: xenobiotic_transmembrane_transport
+  label: xenobiotic transmembrane transporter activity
+  grounding: GO:0042910
+  description: MdtBC exports drug substrates across the E. coli cell membrane.
+  evidence:
+  - reference: GO:1990203
+    notes: GO:1990203 defines MdtBC by drug export across the cell membrane.
+  - reference: GO:0042910
+    notes: GO:0042910 is the molecular-function term for xenobiotic transmembrane
+      transporter activity.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '3'
+  context: E. coli MdtBC B2C heterotrimer
+  reference: PMID:20038594
+evidence:
+- reference: GO:1990203
+  notes: Gene Ontology cellular-component term for the MdtBC complex.
+- reference: GO:1902495
+  notes: QuickGO reports GO:1990203 as an is-a child of GO:1902495 transmembrane transporter
+    complex.
+- reference: GO:0042910
+  notes: Gene Ontology molecular-function term for xenobiotic transmembrane transporter
+    activity.
+- reference: InterPro:IPR022831
+  notes: InterPro family entry for Multidrug resistance protein MdtB.
+- reference: InterPro:IPR023931
+  notes: InterPro family entry for Multidrug resistance protein MdtC.
+- reference: UniProtKB:P76398
+  notes: UniProtKB reviewed E. coli K-12 MdtB entry.
+- reference: UniProtKB:P76399
+  notes: UniProtKB reviewed E. coli K-12 MdtC entry.
+- reference: PMID:20038594
+  notes: PubMed identifier for the E. coli MdtBC B2C heterotrimer study cited by GO:1990203.
+- reference: DOI:10.1128/JB.01448-09
+  notes: DOI for the MdtBC B2C heterotrimer study as reported by PubMed.

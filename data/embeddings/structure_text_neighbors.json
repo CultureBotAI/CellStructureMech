@@ -13451,14 +13451,14 @@
           "cosine_similarity": 0.70755078
         },
         {
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.69142381
+        },
+        {
           "identifier": "GO:0033281",
           "label": "TAT protein transport complex",
           "cosine_similarity": 0.68764767
-        },
-        {
-          "identifier": "GO:0036436",
-          "label": "Isw1a complex",
-          "cosine_similarity": 0.68119547
         }
       ]
     },
@@ -15859,6 +15859,11 @@
           "cosine_similarity": 0.81202612
         },
         {
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.79924068
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.78137136
@@ -15872,11 +15877,6 @@
           "identifier": "GO:0097347",
           "label": "TAM protein secretion complex",
           "cosine_similarity": 0.75277867
-        },
-        {
-          "identifier": "GO:0030256",
-          "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.74659009
         }
       ]
     },
@@ -16949,6 +16949,11 @@
           "cosine_similarity": 0.72964442
         },
         {
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.70620115
+        },
+        {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.70504716
@@ -16957,11 +16962,6 @@
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
           "cosine_similarity": 0.69711762
-        },
-        {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.68251923
         }
       ]
     },
@@ -17021,9 +17021,9 @@
           "cosine_similarity": 0.70591367
         },
         {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.68002055
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.69002379
         }
       ]
     },
@@ -17117,6 +17117,37 @@
           "identifier": "GO:1990156",
           "label": "DnaB-DnaG complex",
           "cosine_similarity": 0.78892309
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990203",
+      "label": "MdtBC Complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.79924068
+        },
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.76963732
+        },
+        {
+          "identifier": "GO:0033281",
+          "label": "TAT protein transport complex",
+          "cosine_similarity": 0.71657308
+        },
+        {
+          "identifier": "GO:0062051",
+          "label": "lipopolysaccharide transport system",
+          "cosine_similarity": 0.70620115
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.70412838
         }
       ]
     },
@@ -20276,9 +20307,9 @@
           "cosine_similarity": 0.77169044
         },
         {
-          "identifier": "GO:0015627",
-          "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.75884875
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.76963732
         }
       ]
     },
