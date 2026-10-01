@@ -14867,6 +14867,11 @@
           "cosine_similarity": 0.9068975
         },
         {
+          "identifier": "GO:1990083",
+          "label": "DnaA-Hda complex",
+          "cosine_similarity": 0.82823476
+        },
+        {
           "identifier": "GO:1990103",
           "label": "DnaA-HU complex",
           "cosine_similarity": 0.8230023
@@ -14880,11 +14885,6 @@
           "identifier": "GO:1990157",
           "label": "DnaA-DnaB-DnaC complex",
           "cosine_similarity": 0.79012928
-        },
-        {
-          "identifier": "GO:1990100",
-          "label": "DnaB-DnaC complex",
-          "cosine_similarity": 0.78774397
         }
       ]
     },
@@ -15089,6 +15089,11 @@
           "cosine_similarity": 0.80526077
         },
         {
+          "identifier": "GO:1990083",
+          "label": "DnaA-Hda complex",
+          "cosine_similarity": 0.79068205
+        },
+        {
           "identifier": "GO:1990157",
           "label": "DnaA-DnaB-DnaC complex",
           "cosine_similarity": 0.77478777
@@ -15097,11 +15102,6 @@
           "identifier": "GO:0044777",
           "label": "single-stranded DNA-binding protein complex",
           "cosine_similarity": 0.76615367
-        },
-        {
-          "identifier": "GO:1990103",
-          "label": "DnaA-HU complex",
-          "cosine_similarity": 0.76051178
         }
       ]
     },
@@ -15192,9 +15192,9 @@
           "cosine_similarity": 0.86325668
         },
         {
-          "identifier": "GO:1990100",
-          "label": "DnaB-DnaC complex",
-          "cosine_similarity": 0.81020937
+          "identifier": "GO:1990083",
+          "label": "DnaA-Hda complex",
+          "cosine_similarity": 0.85206702
         }
       ]
     },
@@ -15223,9 +15223,40 @@
           "cosine_similarity": 0.86325668
         },
         {
-          "identifier": "GO:1990160",
-          "label": "DnaB-DnaC-Rep-PriC complex",
-          "cosine_similarity": 0.82953544
+          "identifier": "GO:1990083",
+          "label": "DnaA-Hda complex",
+          "cosine_similarity": 0.84822647
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990083",
+      "label": "DnaA-Hda complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990103",
+          "label": "DnaA-HU complex",
+          "cosine_similarity": 0.86053997
+        },
+        {
+          "identifier": "GO:1990102",
+          "label": "DnaA-DiaA complex",
+          "cosine_similarity": 0.85206702
+        },
+        {
+          "identifier": "GO:1990157",
+          "label": "DnaA-DnaB-DnaC complex",
+          "cosine_similarity": 0.84822647
+        },
+        {
+          "identifier": "GO:1990101",
+          "label": "DnaA-oriC complex",
+          "cosine_similarity": 0.84296001
+        },
+        {
+          "identifier": "GO:1990125",
+          "label": "DiaA complex",
+          "cosine_similarity": 0.82823476
         }
       ]
     },
@@ -15249,14 +15280,14 @@
           "cosine_similarity": 0.87364693
         },
         {
+          "identifier": "GO:1990083",
+          "label": "DnaA-Hda complex",
+          "cosine_similarity": 0.86053997
+        },
+        {
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.82383294
-        },
-        {
-          "identifier": "GO:1990125",
-          "label": "DiaA complex",
-          "cosine_similarity": 0.8230023
         }
       ]
     },
@@ -15285,9 +15316,9 @@
           "cosine_similarity": 0.86808264
         },
         {
-          "identifier": "GO:1990100",
-          "label": "DnaB-DnaC complex",
-          "cosine_similarity": 0.82069785
+          "identifier": "GO:1990083",
+          "label": "DnaA-Hda complex",
+          "cosine_similarity": 0.84296001
         }
       ]
     },

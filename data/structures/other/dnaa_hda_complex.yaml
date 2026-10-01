@@ -1,0 +1,224 @@
+identifier: GO:1990083
+label: DnaA-Hda complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that inactivates the function of DnaA by inhibiting
+  the phosphorylation of DnaA-ADP to DnaA-ATP and thereby preventing multiple events
+  of replication initiation. In E. coli, this complex is composed of DnaA and Hda.
+definition_source: GO:1990083
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T12:06:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T12:07:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added replication-inhibiting-complex parentage, reviewed-label-only DnaA
+    and Hda components, E. coli RIDA evidence, negative-DNA-replication-initiation
+    function evidence, GO/PubMed/DOI evidence, a nonmechanistic DnaA-Hda regulatory
+    graph, and grounding/boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-10-01T12:09:16Z'
+  curator: codex
+  action: FIX_GRAPH_PREDICATE
+  changes: Changed the DnaA-Hda graph edge to support the negative-regulation process
+    instead of negatively regulating that process.
+  llm_assisted: true
+parent_structures:
+- GO:1990078
+components:
+- component_id: dnaa_initiator
+  label: DnaA replication initiation protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaA is represented as the initiator constituent named by GO:1990083;
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries were
+    not curated in this pass.
+  role: Replication initiator constituent bound by Hda during regulatory inactivation
+    of DnaA.
+  evidence:
+  - reference: GO:1990083
+    notes: GO:1990083 defines the DnaA-Hda complex as being composed of DnaA and Hda
+      in E. coli.
+  - reference: PMID:21708944
+    notes: Keyamura and Katayama 2011 tested DnaA residues needed for E. coli DnaA-Hda
+      interaction during regulatory inactivation of DnaA.
+- component_id: hda_regulator
+  label: Hda DnaA-related protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hda
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Hda is represented as the DnaA-related constituent named by GO:1990083;
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries were
+    not curated in this pass.
+  role: DnaA-related regulatory inactivation factor that binds DnaA in the DnaA-Hda
+    complex.
+  evidence:
+  - reference: GO:1990083
+    notes: GO:1990083 defines the E. coli DnaA-Hda complex as containing Hda.
+  - reference: PMID:21708944
+    notes: Keyamura and Katayama 2011 modeled and tested Hda interactions with the
+      DnaA DNA-binding and AAA+ domains.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Keyamura and Katayama 2011 studied E. coli DnaA-Hda interactions during regulatory
+    inactivation of DnaA.
+  reference: PMID:21708944
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Keyamura and Katayama 2011 used the E. coli Hda and DnaA proteins to define
+    DnaA-Hda contacts needed for DnaA-ATP hydrolysis in the regulatory inactivation
+    of DnaA system.
+  reference: PMID:21708944
+functions:
+- function_id: negative_regulation_of_dna_replication_initiation
+  label: negative regulation of DNA-templated DNA replication initiation
+  grounding: GO:0032297
+  description: The E. coli DnaA-Hda complex participates in regulatory inactivation
+    of DnaA to prevent extra DNA replication initiation events.
+  evidence:
+  - reference: GO:1990083
+    notes: GO:1990083 defines the complex by inactivation of DnaA and prevention of
+      multiple replication initiation events.
+  - reference: GO:0032297
+    notes: GO:0032297 is the Gene Ontology biological-process term for negative regulation
+      of DNA-templated DNA replication initiation.
+  - reference: PMID:21708944
+    notes: Keyamura and Katayama 2011 analyzed DnaA-Hda interaction during regulatory
+      inactivation of DnaA, the E. coli pathway that represses extra initiations.
+evidence:
+- reference: GO:1990083
+  notes: Gene Ontology cellular-component term for the DnaA-Hda complex.
+- reference: GO:1990078
+  notes: OLS reports GO:1990078 replication inhibiting complex as the direct GO:1990083
+    is-a parent.
+- reference: GO:1990085
+  notes: Gene Ontology cellular-component term for the separately scoped Hda-beta
+    clamp complex.
+- reference: GO:0032297
+  notes: Gene Ontology biological-process term for negative regulation of DNA-templated
+    DNA replication initiation.
+- reference: PMID:21708944
+  notes: PubMed identifier for Keyamura and Katayama 2011, the Journal of Biological
+    Chemistry paper cited by GO:1990083.
+- reference: DOI:10.1074/jbc.M111.233403
+  notes: DOI for Keyamura and Katayama 2011, 'DnaA protein DNA-binding domain binds
+    to Hda protein to promote inter-AAA+ domain interaction involved in regulatory
+    inactivation of DnaA', as reported by PubMed.
+- reference: PMID:15150238
+  notes: PubMed identifier for Kurz et al. 2004, the Journal of Bacteriology paper
+    cited by GO:1990085.
+- reference: DOI:10.1128/JB.186.11.3508-3515.2004
+  notes: DOI for Kurz et al. 2004, 'Interaction of the sliding clamp beta-subunit
+    and Hda, a DnaA-related protein', as reported by PubMed.
+causal_graphs:
+- graph_id: dnaa_hda_rida
+  title: Hda binds DnaA for RIDA
+  description: Hda binds DnaA in a protein complex that supports regulatory inactivation
+    of DnaA and thereby suppresses extra replication initiation events.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level DnaA-Hda composition and negative replication-initiation
+    regulation without resolving DNA-loaded beta clamp binding, clamp loading, DnaA-ATP
+    hydrolysis chemistry, or the separate Hda-beta clamp complex.
+  nodes:
+  - node_id: dnaa_initiator
+    label: DnaA replication initiation protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnaa_initiator
+  - node_id: hda_regulator
+    label: Hda DnaA-related protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: hda_regulator
+  - node_id: dnaa_hda_complex
+    label: DnaA-Hda complex
+    node_type: STRUCTURE
+    grounding: GO:1990083
+  - node_id: negative_regulation_of_dna_replication_initiation
+    label: negative regulation of DNA-templated DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032297
+  edges:
+  - subject: dnaa_initiator
+    predicate: contributes to
+    object: dnaa_hda_complex
+    description: DnaA initiator protein is a constituent of the DnaA-Hda complex.
+    evidence:
+    - reference: GO:1990083
+      notes: GO:1990083 defines the E. coli complex as being composed of DnaA and
+        Hda.
+  - subject: hda_regulator
+    predicate: contributes to
+    object: dnaa_hda_complex
+    description: Hda is a DnaA-related constituent of the DnaA-Hda complex.
+    evidence:
+    - reference: GO:1990083
+      notes: GO:1990083 defines the E. coli complex as being composed of DnaA and
+        Hda.
+  - subject: dnaa_hda_complex
+    predicate: supports
+    object: negative_regulation_of_dna_replication_initiation
+    description: DnaA-Hda interaction is part of the RIDA system that hydrolyzes DnaA-bound
+      ATP and supports negative regulation of DNA replication initiation.
+    evidence:
+    - reference: GO:1990083
+      notes: GO:1990083 defines the complex by inactivation of DnaA and prevention
+        of multiple replication initiation events.
+    - reference: PMID:21708944
+      notes: Keyamura and Katayama 2011 showed that functional DnaA-Hda interactions
+        are needed for regulatory inactivation of DnaA.
+discussions:
+- discussion_id: resolve_dnaa_hda_component_groundings
+  prompt: Resolve exact source-neutral DnaA and Hda family groundings for the DnaA-Hda
+    complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnaa_initiator
+  - components#hda_regulator
+  rationale: GO:1990083 names DnaA and Hda as the E. coli constituents of the DnaA-Hda
+    complex. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family CURIEs
+    need narrower curation before these components can be grounded.
+  evidence:
+  - reference: GO:1990083
+    notes: GO:1990083 defines the DnaA-Hda complex around DnaA and Hda constituents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: distinguish_hda_bound_states
+  prompt: Keep the DnaA-Hda complex distinct from the Hda-beta clamp complex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - components#dnaa_initiator
+  - components#hda_regulator
+  - causal_graphs#dnaa_hda_rida
+  rationale: GO:1990083 denotes the DnaA-Hda complex, whereas GO:1990085 separately
+    denotes Hda bound to the DnaN beta clamp. Keyamura and Katayama 2011 studied DnaA-Hda
+    contacts during RIDA in the context of DNA-loaded clamp-Hda but do not make the
+    beta clamp a required constituent of the GO:1990083 entity.
+  resolution_note: Curated only DnaA and Hda on the GO:1990083 complex and left the
+    Hda-beta clamp regulatory state out of has_part and graph edges.
+  evidence:
+  - reference: GO:1990083
+    notes: GO:1990083 denotes the DnaA-Hda complex.
+  - reference: GO:1990085
+    notes: GO:1990085 denotes the separately scoped Hda-beta clamp complex.
+  - reference: PMID:15150238
+    notes: Kurz et al. 2004 established Hda interaction with the beta sliding clamp.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'

@@ -4419,6 +4419,15 @@
   "definition": "A protein-DNA complex consisting of the helicase loading complex DnaB-DnaC bound to the DNA-bound DNA replication initiation protein DnaA. Essential for DNA replication initiation."
  },
  {
+  "identifier": "GO:1990083",
+  "label": "DnaA-Hda complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/dnaa_hda_complex.html",
+  "definition": "A protein complex that inactivates the function of DnaA by inhibiting the phosphorylation of DnaA-ADP to DnaA-ATP and thereby preventing multiple events of replication initiation. In E. coli, this complex is composed of DnaA and Hda."
+ },
+ {
   "identifier": "GO:1990103",
   "label": "DnaA-HU complex",
   "category": "OTHER",
