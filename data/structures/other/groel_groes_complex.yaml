@@ -1,0 +1,153 @@
+identifier: GO:1990220
+label: GroEL-GroES complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Bacterial chaperonin complex consisting of a heptameric 10kDa chaperonin
+  subunit GroES and a tetradecameric (2x7) 60kDa chaperonin subunit GroEL. The 60kDa
+  subunit possesses ATPase activity while the holo-enzyme is responsible for the correct
+  folding of proteins.
+definition_source: GO:1990220
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T17:00:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T17:03:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and chaperonin-ATPase parentage, GroEL and GroES components
+    grounded to exact InterPro families with E. coli UniProt examples, an E. coli
+    PDB:1AON canonical example, protein-folding function evidence, PDB-backed stoichiometry,
+    and DOI/PMID/PDB evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: bacterial chaperonin ATPase complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990220
+- synonym_text: bacterial chaperonin complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990220
+parent_structures:
+- GO:0016465
+components:
+- component_id: groel_chaperonin
+  label: Chaperonin Cpn60/GroEL
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR001844
+  gene_symbols:
+  - groEL
+  stoichiometry: 14 copies per asymmetric GroEL-GroES complex
+  role: ATPase chaperonin ring subunit that forms the two stacked GroEL heptameric
+    rings.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A6F5
+    protein_label: Chaperonin GroEL
+    gene_symbol: groEL
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 GroEL accession mapped by RCSB to the fourteen GroEL
+      chains in PDB:1AON.
+    evidence:
+    - reference: UniProtKB:P0A6F5
+      notes: UniProtKB P0A6F5 is the reviewed Escherichia coli K-12 entry for chaperonin
+        GroEL.
+    - reference: PDB:1AON
+      notes: RCSB SIFTS maps PDB:1AON polymer entity 1 to UniProtKB:P0A6F5 with fourteen
+        protein chains.
+  evidence:
+  - reference: GO:1990220
+    notes: GO:1990220 defines the complex as containing a tetradecameric 60 kDa GroEL
+      chaperonin subunit.
+  - reference: InterPro:IPR001844
+    notes: InterPro IPR001844 is a family entry named Chaperonin Cpn60/GroEL.
+  - reference: PDB:1AON
+    notes: RCSB maps PDB:1AON polymer entity 1 to fourteen Escherichia coli GroEL
+      chains.
+- component_id: groes_cochaperonin
+  label: GroES chaperonin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR020818
+  gene_symbols:
+  - groES
+  stoichiometry: 7 copies per asymmetric GroEL-GroES complex
+  role: Co-chaperonin cap subunit that forms the GroES heptamer bound to one GroEL
+    ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A6F9
+    protein_label: Co-chaperonin GroES
+    gene_symbol: groES
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 GroES accession mapped by RCSB to the seven GroES
+      chains in PDB:1AON.
+    evidence:
+    - reference: UniProtKB:P0A6F9
+      notes: UniProtKB P0A6F9 is the reviewed Escherichia coli K-12 entry for co-chaperonin
+        GroES.
+    - reference: PDB:1AON
+      notes: RCSB SIFTS maps PDB:1AON polymer entity 2 to UniProtKB:P0A6F9 with seven
+        protein chains.
+  evidence:
+  - reference: GO:1990220
+    notes: GO:1990220 defines the complex as containing a heptameric 10 kDa GroES
+      chaperonin subunit.
+  - reference: InterPro:IPR020818
+    notes: InterPro IPR020818 is a family entry named GroES chaperonin family.
+  - reference: PDB:1AON
+    notes: RCSB maps PDB:1AON polymer entity 2 to seven Escherichia coli GroES chains.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Bacterial source of the asymmetric 14-GroEL, 7-GroES GroEL-GroES/(ADP)7 crystal
+    structure deposited as PDB:1AON.
+  reference: PDB:1AON
+functions:
+- function_id: protein_folding
+  label: protein folding
+  grounding: GO:0006457
+  description: GroEL-GroES assists ATP-dependent folding of substrate proteins inside
+    a transient GroEL cavity capped by GroES.
+  evidence:
+  - reference: GO:1990220
+    notes: GO:1990220 defines the GroEL-GroES holoenzyme by its role in correct protein
+      folding.
+  - reference: DOI:10.1038/41944
+    notes: Xu, Horwich and Sigler 1997 solved the asymmetric GroEL-GroES-(ADP)7 structure.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '21'
+  context: Asymmetric Escherichia coli GroEL-GroES/(ADP)7 complex in PDB:1AON
+  reference: PDB:1AON
+evidence:
+- reference: GO:1990220
+  notes: Gene Ontology cellular-component term for the GroEL-GroES complex and source
+    of its related bacterial-chaperonin synonyms.
+- reference: GO:0016465
+  notes: Gene Ontology cellular-component term for chaperonin ATPase complexes, the
+    broader class that includes GroEL-GroES.
+- reference: GO:0006457
+  notes: Gene Ontology biological-process term for protein folding.
+- reference: InterPro:IPR001844
+  notes: InterPro family entry for Chaperonin Cpn60/GroEL.
+- reference: InterPro:IPR020818
+  notes: InterPro family entry for GroES chaperonins.
+- reference: UniProtKB:P0A6F5
+  notes: UniProtKB reviewed E. coli K-12 GroEL entry.
+- reference: UniProtKB:P0A6F9
+  notes: UniProtKB reviewed E. coli K-12 GroES entry.
+- reference: DOI:10.1038/41944
+  notes: Xu, Horwich and Sigler 1997, The crystal structure of the asymmetric GroEL-GroES-(ADP)7
+    chaperonin complex, Nature.
+- reference: PMID:9285585
+  notes: PubMed identifier for Xu, Horwich and Sigler 1997 as reported by RCSB PDB:1AON.
+- reference: PDB:1AON
+  notes: RCSB Protein Data Bank entry for the asymmetric Escherichia coli GroEL-GroES-(ADP)7
+    crystal structure from Xu, Horwich and Sigler 1997.
