@@ -21,6 +21,12 @@ curation_history:
     function evidence, GO/PubMed/DOI evidence, a nonmechanistic DnaA-HU graph, and
     grounding/boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-01T11:08:12Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: 'Addressed PR #1867 review issue #1868 by removing unsupported DNA-bending
+    mechanism text from the nonmechanistic DnaA-HU graph scope.'
+  llm_assisted: true
 synonyms:
 - synonym_text: DnaA-HU-DNA complex
   synonym_type: EXACT_SYNONYM
@@ -143,8 +149,8 @@ causal_graphs:
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph records GO-level DnaA-HU-DNA composition and initiation scope
-    without resolving HU subunit choice, DNA bending, DnaA oligomerization, DiaA stimulation,
-    or later DnaB-DnaC helicase loading.
+    without resolving HU subunit choice, DnaA oligomerization, DiaA stimulation, or
+    later DnaB-DnaC helicase loading.
   nodes:
   - node_id: dnaa_initiator
     label: DnaA replication initiation protein

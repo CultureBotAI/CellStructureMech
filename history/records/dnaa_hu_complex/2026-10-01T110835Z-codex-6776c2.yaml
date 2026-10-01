@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dnaa_hu_complex.yaml
+  slug: dnaa_hu_complex
+session:
+  id: 2026-10-01T110835Z-codex-6776c2
+  timestamp: '2026-10-01T11:08:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1868
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1867
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fixed DnaA-HU graph scope
+  details: 'Addressed PR #1867 review issue #1868 by removing an unsupported DNA-bending mechanism
+    phrase from the nonmechanistic GO:1990103 DnaA-HU function graph scope while preserving
+    the GO-level DnaA-HU-DNA composition and initiation boundary.'
