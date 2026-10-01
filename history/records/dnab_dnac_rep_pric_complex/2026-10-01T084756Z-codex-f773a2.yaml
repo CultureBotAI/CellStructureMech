@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dnab_dnac_rep_pric_complex.yaml
+  slug: dnab_dnac_rep_pric_complex
+session:
+  id: 2026-10-01T084756Z-codex-f773a2
+  timestamp: '2026-10-01T08:47:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added DnaB-DnaC-Rep-PriC complex record
+  details: Created a GO:1990160-backed DnaB-DnaC-Rep-PriC preprimosome record with GO synonymy,
+    pre-primosome parentage, DnaB-DnaC subcomplex parthood, reviewed-label-only Rep/PriC and
+    primosome assembly site DNA components, Escherichia coli Rep evidence, replication-fork-processing
+    function evidence, a nonmechanistic Rep/PriC-branch restart graph, and curation discussions
+    for unresolved component groundings and the PriA, PriB, DnaT and DnaG boundary.

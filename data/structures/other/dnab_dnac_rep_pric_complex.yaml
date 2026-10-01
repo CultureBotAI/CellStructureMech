@@ -1,0 +1,270 @@
+identifier: GO:1990160
+label: DnaB-DnaC-Rep-PriC complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A protein-DNA complex consisting of the helicase loading complex DnaB-DnaC,
+  replication restart proteins Rep and PriC, and associated DNA. Involved in the restart
+  of DNA replication after a stalled replication fork has been repaired.
+definition_source: GO:1990160
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T08:46:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T08:47:15Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, pre-primosome parentage, the DnaB-DnaC subcomplex and
+    Rep/PriC/DNA components, Escherichia coli Rep evidence, replication-fork-processing
+    function evidence, GO/PubMed/DOI evidence, a nonmechanistic Rep/PriC-branch restart
+    graph, and grounding/boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: DnaB-DnaC-Rep-PriC preprimosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990160
+- synonym_text: phi-X174-type preprimosome
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990160
+parent_structures:
+- GO:1990099
+has_part:
+- GO:1990100
+components:
+- component_id: dnab_dnac_complex
+  label: DnaB-DnaC complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:1990100
+  essentiality: UNKNOWN
+  role: Helicase-loading subcomplex in the Rep/PriC preprimosome.
+  evidence:
+  - reference: GO:1990160
+    notes: GO:1990160 defines this preprimosome as containing the DnaB-DnaC helicase-loading
+      complex.
+- component_id: rep_helicase
+  label: Rep helicase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - rep
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rep is represented as the replication-restart constituent named
+    by GO:1990160; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    boundaries were not curated in this pass.
+  role: Replication-restart helicase in the Rep/PriC branch.
+  evidence:
+  - reference: GO:1990160
+    notes: GO:1990160 defines Rep as a constituent of this preprimosome.
+  - reference: PMID:19941825
+    notes: Guy et al. 2009 used reconstituted E. coli replisomes to study Rep helicase
+      activity at blocked forks.
+- component_id: pric_restart_protein
+  label: PriC replication restart protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - priC
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PriC is represented as the replication-restart constituent named
+    by GO:1990160; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    boundaries were not curated in this pass.
+  role: Replication-restart protein in the Rep/PriC branch.
+  evidence:
+  - reference: GO:1990160
+    notes: GO:1990160 defines PriC as a constituent of this preprimosome.
+- component_id: primosome_assembly_site_dna
+  label: primosome assembly site DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Single-stranded DNA scaffold carrying the primosome assembly site.
+  evidence:
+  - reference: GO:1990160
+    notes: GO:1990160 defines this preprimosome as a protein-DNA complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Guy et al. 2009 used reconstituted E. coli replisomes to study Rep at replication
+    forks.
+  reference: PMID:19941825
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Guy et al. 2009 reconstituted E. coli replisomes to analyze Rep function at
+    forks blocked by protein-DNA complexes.
+  reference: PMID:19941825
+functions:
+- function_id: replication_fork_processing
+  label: replication fork processing
+  grounding: GO:0031297
+  description: The DnaB-DnaC-Rep-PriC preprimosome participates in restarting repaired
+    stalled replication forks.
+  evidence:
+  - reference: GO:1990160
+    notes: GO:1990160 defines this preprimosome by replication restart after a stalled
+      replication fork has been repaired.
+  - reference: GO:0031297
+    notes: GO:0031297 is the Gene Ontology biological-process term for restoring and
+      restarting a stalled DNA replication fork.
+evidence:
+- reference: GO:1990160
+  notes: Gene Ontology cellular-component term for the DnaB-DnaC-Rep-PriC complex
+    and its exact preprimosome synonymy.
+- reference: GO:1990099
+  notes: QuickGO reports GO:1990160 as an is-a child of GO:1990099 pre-primosome complex.
+- reference: GO:1990100
+  notes: Gene Ontology cellular-component term for the DnaB-DnaC helicase-loading
+    subcomplex.
+- reference: GO:1990158
+  notes: Gene Ontology cellular-component term for the PriA/PriB/DnaT preprimosome
+    sibling.
+- reference: GO:1990159
+  notes: Gene Ontology cellular-component term for the PriA/PriC/DnaT preprimosome
+    sibling.
+- reference: GO:0031297
+  notes: Gene Ontology biological-process term for replication fork processing.
+- reference: PMID:19941825
+  notes: PubMed identifier for Guy et al. 2009, the Molecular Cell paper cited by
+    GO:1990160.
+- reference: DOI:10.1016/j.molcel.2009.11.009
+  notes: DOI for Guy et al. 2009, 'Rep provides a second motor at the replisome to
+    promote duplication of protein-bound DNA', as reported by PubMed.
+- reference: PMID:8663105
+  notes: PubMed identifier for Ng and Marians 1996 part II, the second paper cited
+    by GO:1990160.
+- reference: DOI:10.1074/jbc.271.26.15649
+  notes: DOI for Ng and Marians 1996, 'The ordered assembly of the phiX174-type primosome.
+    II. Preservation of primosome composition from assembly through replication',
+    as reported by PubMed.
+causal_graphs:
+- graph_id: dnab_dnac_rep_pric_restart
+  title: DnaB-DnaC-Rep-PriC supports fork restart
+  description: A DnaB-DnaC helicase-loading subcomplex and Rep and PriC assemble on
+    single-stranded primosome assembly site DNA to form a preprimosome used in replication
+    restart.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level preprimosome composition and replication-restart
+    scope without resolving helicase loading, PriA/PriB/DnaT-containing alternatives
+    or DnaG primase recruitment.
+  nodes:
+  - node_id: dnab_dnac_complex
+    label: DnaB-DnaC complex
+    node_type: STRUCTURE
+    component_ref: dnab_dnac_complex
+    grounding: GO:1990100
+  - node_id: rep_helicase
+    label: Rep helicase
+    node_type: GENE_OR_PROTEIN
+    component_ref: rep_helicase
+  - node_id: pric_restart_protein
+    label: PriC replication restart protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: pric_restart_protein
+  - node_id: primosome_assembly_site_dna
+    label: primosome assembly site DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: primosome_assembly_site_dna
+  - node_id: dnab_dnac_rep_pric_complex
+    label: DnaB-DnaC-Rep-PriC complex
+    node_type: STRUCTURE
+    grounding: GO:1990160
+  - node_id: replication_fork_processing
+    label: replication fork processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031297
+  edges:
+  - subject: dnab_dnac_complex
+    predicate: contributes to
+    object: dnab_dnac_rep_pric_complex
+    description: The DnaB-DnaC helicase-loading complex is a constituent of the DnaB-DnaC-Rep-PriC
+      preprimosome.
+    evidence:
+    - reference: GO:1990160
+      notes: GO:1990160 includes the DnaB-DnaC helicase-loading complex.
+  - subject: rep_helicase
+    predicate: contributes to
+    object: dnab_dnac_rep_pric_complex
+    description: Rep is a constituent of the preprimosome.
+    evidence:
+    - reference: GO:1990160
+      notes: GO:1990160 names Rep as a replication-restart constituent.
+  - subject: pric_restart_protein
+    predicate: contributes to
+    object: dnab_dnac_rep_pric_complex
+    description: PriC is a constituent of the preprimosome.
+    evidence:
+    - reference: GO:1990160
+      notes: GO:1990160 names PriC as a replication-restart constituent.
+  - subject: primosome_assembly_site_dna
+    predicate: scaffolds
+    object: dnab_dnac_rep_pric_complex
+    description: Primosome assembly site DNA scaffolds assembly of the PhiX174-type
+      Rep/PriC preprimosome.
+    evidence:
+    - reference: GO:1990160
+      notes: GO:1990160 defines this entity as a protein-DNA complex.
+  - subject: dnab_dnac_rep_pric_complex
+    predicate: supports
+    object: replication_fork_processing
+    description: The DnaB-DnaC-Rep-PriC preprimosome is involved in replication restart
+      after stalled fork repair.
+    evidence:
+    - reference: GO:1990160
+      notes: GO:1990160 defines this preprimosome by its involvement in replication
+        restart after stalled replication fork repair.
+    - reference: GO:0031297
+      notes: GO:0031297 defines replication fork processing as restoration and restart
+        of a stalled DNA replication fork.
+discussions:
+- discussion_id: resolve_rep_pric_component_groundings
+  prompt: Resolve exact source-neutral Rep, PriC and primosome assembly site DNA groundings
+    for the DnaB-DnaC-Rep-PriC complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rep_helicase
+  - components#pric_restart_protein
+  - components#primosome_assembly_site_dna
+  rationale: GO:1990160 defines Rep, PriC and associated DNA as constituents of this
+    preprimosome. Exact source-neutral InterPro, Pfam, NCBIfam, UniProt family or
+    SO sequence-feature CURIEs for these components need narrower curation before
+    the labels can be grounded.
+  evidence:
+  - reference: GO:1990160
+    notes: GO:1990160 names the DnaB-DnaC-Rep-PriC preprimosome constituents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: exclude_pria_prib_dnat_dnag_from_rep_pric_preprimosome
+  prompt: Leave PriA, PriB, DnaT and DnaG out of the GO:1990160 DnaB-DnaC-Rep-PriC
+    complex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#dnab_dnac_complex
+  - components#rep_helicase
+  - components#pric_restart_protein
+  - causal_graphs#dnab_dnac_rep_pric_restart
+  rationale: GO:1990160 denotes the Rep/PriC/DnaB-DnaC preprimosome. GO models PriA/PriB/DnaT
+    and PriA/PriC/DnaT alternatives as separate sibling terms and models DnaG-containing
+    entities as primosomes rather than pre-primosomes.
+  resolution_note: Curated the exact GO:1990160 boundary and recorded PriA/PriB/DnaT,
+    PriA/PriC/DnaT and DnaG-containing alternatives as out of scope for this record.
+  evidence:
+  - reference: GO:1990160
+    notes: GO:1990160 names the DnaB-DnaC-Rep-PriC complex.
+  - reference: GO:1990158
+    notes: GO:1990158 denotes the PriA/PriB/DnaT sibling complex.
+  - reference: GO:1990159
+    notes: GO:1990159 denotes the PriA/PriC/DnaT sibling complex.
+  - reference: GO:1990099
+    notes: GO:1990099 defines pre-primosome complexes as lacking a primase component.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'
