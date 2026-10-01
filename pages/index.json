@@ -5301,6 +5301,15 @@
   "definition": "A proteinaceous bacterial polar microdomain formed by PopZ polymers at Caulobacter cell poles that anchors the ParB-bound chromosomal origin and organizes pole-specific client proteins."
  },
  {
+  "identifier": "GO:1990099",
+  "label": "pre-primosome complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/pre_primosome_complex.html",
+  "definition": "Any of the protein-DNA complexes that contain a DNA helicase and associated protein(s) at the origin of replication, and build up to assembling the core primosome. The associated protein(s) chaperone the helicase to the DNA, and assembly of the pre-primosome is essential for the initiation or restart of replication. Pre-primosome complexes lack a primase component."
+ },
+ {
   "identifier": "GO:0022624",
   "label": "proteasome accessory complex",
   "category": "OTHER",

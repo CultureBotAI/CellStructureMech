@@ -1,0 +1,306 @@
+identifier: GO:1990099
+label: pre-primosome complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: Any of the protein-DNA complexes that contain a DNA helicase and associated
+  protein(s) at the origin of replication, and build up to assembling the core primosome.
+  The associated protein(s) chaperone the helicase to the DNA, and assembly of the
+  pre-primosome is essential for the initiation or restart of replication. Pre-primosome
+  complexes lack a primase component.
+definition_source: GO:1990099
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T10:08:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T10:10:15Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, primosome parentage, reviewed-label-only helicase, associated-protein
+    and replication-site-DNA components, E. coli pre-primosome evidence, initiation
+    and replication-restart function evidence, a nonmechanistic pre-primosome graph,
+    and grounding/boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: pre-priming complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990099
+- synonym_text: pre-primosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990099
+- synonym_text: preprimosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990099
+- synonym_text: preprimosome complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990099
+- synonym_text: prereplication complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990099
+- synonym_text: pre-replication complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990099
+parent_structures:
+- GO:1990077
+components:
+- component_id: dna_helicase
+  label: DNA helicase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:1990099 defines the pre-primosome class around at least one
+    DNA helicase, but this generic term spans initiation and restart assemblies with
+    different helicases; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    boundaries were not curated in this pass.
+  role: Replicative helicase constituent chaperoned to origin or restart DNA before
+    primase-containing core primosome assembly.
+  evidence:
+  - reference: GO:1990099
+    notes: GO:1990099 defines pre-primosome complexes as protein-DNA complexes that
+      contain a DNA helicase.
+- component_id: helicase_chaperone
+  label: helicase-chaperoning replication protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:1990099 groups alternative DnaA-, DnaT/PriA/PriB-, DnaT/PriA/PriC-,
+    and Rep/PriC-containing pre-primosomes. This generic chaperoning-protein component
+    is intentionally ungrounded until the narrower family boundaries can be curated.
+  role: Associated replication protein that chaperones the DNA helicase to replication-origin
+    or restart DNA before primase recruitment.
+  evidence:
+  - reference: GO:1990099
+    notes: GO:1990099 defines pre-primosome associated proteins as chaperoning the
+      helicase to DNA.
+- component_id: replication_site_dna
+  label: replication initiation or restart DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The GO:1990099 protein-DNA class spans origin-proximal initiation
+    DNA and single-stranded restart substrates, so no exact source-neutral SO sequence-feature
+    CURIE was curated in this pass.
+  role: DNA scaffold that receives the chaperoned helicase during pre-primosome assembly.
+  evidence:
+  - reference: GO:1990099
+    notes: GO:1990099 defines pre-primosomes as protein-DNA complexes that contain
+      a helicase at the replication origin and build toward a core primosome.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: GO's narrower E. coli pre-primosomes include the DnaA-DnaB-DnaC initiation
+    complex and PhiX174-type DnaB-DnaC restart assemblies.
+  reference: GO:1990099
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Ng and Marians 1996 isolated PhiX174-type E. coli preprimosomal and primosomal
+    protein-DNA complexes during ordered primosome assembly on single-stranded DNA.
+  reference: PMID:8663105
+functions:
+- function_id: dna_replication_initiation
+  label: DNA replication initiation
+  grounding: GO:0006270
+  description: Pre-primosome complexes position a DNA helicase during replication
+    initiation before primase-containing core primosome assembly.
+  evidence:
+  - reference: GO:1990099
+    notes: GO:1990099 defines pre-primosome assembly as essential for initiation or
+      restart of replication.
+- function_id: replication_fork_processing
+  label: replication fork processing
+  grounding: GO:0031297
+  description: Some pre-primosome complexes assemble during restart after a stalled
+    replication fork has been repaired.
+  evidence:
+  - reference: GO:1990158
+    notes: GO:1990158 is a pre-primosome child term defined by replication restart
+      after stalled-fork repair.
+  - reference: GO:1990160
+    notes: GO:1990160 is a Rep/PriC pre-primosome child term defined by replication
+      restart after stalled-fork repair.
+  - reference: GO:0031297
+    notes: GO:0031297 defines replication fork processing as restoration and restart
+      of a stalled DNA replication fork.
+evidence:
+- reference: GO:1990099
+  notes: Gene Ontology cellular-component term for the pre-primosome complex and its
+    exact pre-primosome, preprimosome and pre-priming-complex synonymy.
+- reference: GO:1990077
+  notes: QuickGO reports GO:1990099 as an is-a child of GO:1990077 primosome complex.
+- reference: GO:1990157
+  notes: QuickGO reports GO:1990157 DnaA-DnaB-DnaC complex as a pre-primosome child
+    of GO:1990099.
+- reference: GO:1990158
+  notes: QuickGO reports GO:1990158 DnaB-DnaC-DnaT-PriA-PriB complex as a pre-primosome
+    child of GO:1990099.
+- reference: GO:1990159
+  notes: QuickGO reports GO:1990159 DnaB-DnaC-DnaT-PriA-PriC complex as a pre-primosome
+    child of GO:1990099.
+- reference: GO:1990160
+  notes: QuickGO reports GO:1990160 DnaB-DnaC-Rep-PriC complex as a pre-primosome
+    child of GO:1990099.
+- reference: GO:0006270
+  notes: Gene Ontology biological-process term for DNA replication initiation.
+- reference: GO:0031297
+  notes: Gene Ontology biological-process term for replication fork processing.
+- reference: PMID:18179598
+  notes: PubMed identifier for Chodavarapu et al. 2008, one of the papers cited by
+    GO:1990099.
+- reference: DOI:10.1111/j.1365-2958.2007.06094.x
+  notes: DOI for Chodavarapu et al. 2008, 'Escherichia coli DnaA interacts with HU
+    in initiation at the E. coli replication origin', as reported by PubMed.
+- reference: PMID:20129058
+  notes: PubMed identifier for Makowska-Grzyska and Kaguni 2010, the Molecular Cell
+    DnaB-DnaC paper cited by GO:1990099.
+- reference: DOI:10.1016/j.molcel.2009.12.031
+  notes: DOI for Makowska-Grzyska and Kaguni 2010, 'Primase directs the release of
+    DnaC from DnaB', as reported by PubMed.
+- reference: PMID:8663105
+  notes: PubMed identifier for Ng and Marians 1996 part II, the Journal of Biological
+    Chemistry paper cited by GO:1990099.
+- reference: DOI:10.1074/jbc.271.26.15649
+  notes: DOI for Ng and Marians 1996, 'The ordered assembly of the phiX174-type primosome.
+    II. Preservation of primosome composition from assembly through replication',
+    as reported by PubMed.
+causal_graphs:
+- graph_id: pre_primosome_assembly
+  title: pre-primosome positions helicase before primase recruitment
+  description: An associated replication protein chaperones a DNA helicase to an origin
+    or restart DNA scaffold to form a primase-lacking pre-primosome used during replication
+    initiation or restart.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the generic GO:1990099 boundary without resolving
+    the DnaA-bound initiation assembly, alternative PriA/PriB/PriC/DnaT restart assemblies,
+    Rep/PriC restart branch, ATPase cycling, DnaC release or later DnaG primase recruitment.
+  nodes:
+  - node_id: dna_helicase
+    label: DNA helicase
+    node_type: GENE_OR_PROTEIN
+    component_ref: dna_helicase
+  - node_id: helicase_chaperone
+    label: helicase-chaperoning replication protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: helicase_chaperone
+  - node_id: replication_site_dna
+    label: replication initiation or restart DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: replication_site_dna
+  - node_id: pre_primosome_complex
+    label: pre-primosome complex
+    node_type: STRUCTURE
+    grounding: GO:1990099
+  - node_id: dna_replication_initiation
+    label: DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006270
+  - node_id: replication_fork_processing
+    label: replication fork processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031297
+  edges:
+  - subject: dna_helicase
+    predicate: contributes to
+    object: pre_primosome_complex
+    description: A DNA helicase is a constituent of pre-primosome protein-DNA complexes.
+    evidence:
+    - reference: GO:1990099
+      notes: GO:1990099 defines pre-primosomes as containing a DNA helicase.
+  - subject: helicase_chaperone
+    predicate: contributes to
+    object: pre_primosome_complex
+    description: A helicase-chaperoning replication protein is an associated constituent
+      of the pre-primosome.
+    evidence:
+    - reference: GO:1990099
+      notes: GO:1990099 defines pre-primosomes as containing associated proteins that
+        chaperone the helicase to DNA.
+  - subject: replication_site_dna
+    predicate: scaffolds
+    object: pre_primosome_complex
+    description: Replication initiation or restart DNA scaffolds pre-primosome assembly.
+    evidence:
+    - reference: GO:1990099
+      notes: GO:1990099 defines the pre-primosome as a protein-DNA complex.
+  - subject: pre_primosome_complex
+    predicate: supports
+    object: dna_replication_initiation
+    description: Pre-primosome assembly supports DNA replication initiation by building
+      toward a primase-containing core primosome.
+    evidence:
+    - reference: GO:1990099
+      notes: GO:1990099 defines pre-primosome assembly as essential for replication
+        initiation or restart.
+  - subject: pre_primosome_complex
+    predicate: supports
+    object: replication_fork_processing
+    description: Restart-specific pre-primosomes support replication fork restart
+      after stalled-fork repair.
+    evidence:
+    - reference: GO:1990158
+      notes: GO:1990158 is a GO:1990099 child involved in replication restart after
+        stalled-fork repair.
+    - reference: GO:1990159
+      notes: GO:1990159 is a GO:1990099 child involved in replication restart after
+        stalled-fork repair.
+    - reference: GO:0031297
+      notes: GO:0031297 defines replication fork processing as restoration and restart
+        of a stalled DNA replication fork.
+discussions:
+- discussion_id: resolve_pre_primosome_component_groundings
+  prompt: Resolve exact source-neutral DNA-helicase, helicase-chaperone and replication-site
+    DNA groundings for the pre-primosome complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dna_helicase
+  - components#helicase_chaperone
+  - components#replication_site_dna
+  rationale: GO:1990099 defines the generic pre-primosome as a protein-DNA complex
+    containing a DNA helicase, associated proteins that chaperone the helicase to
+    DNA, and replication-origin or restart DNA. Exact source-neutral InterPro, Pfam,
+    NCBIfam, UniProt family or SO sequence-feature CURIEs for these components need
+    narrower curation before the labels can be grounded.
+  evidence:
+  - reference: GO:1990099
+    notes: GO:1990099 defines the generic pre-primosome boundary.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: distinguish_pre_primosome_boundary
+  prompt: Model the generic pre-primosome complex separately from concrete DnaB-DnaC
+    pre-primosomes and primase-containing core primosomes.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - components#dna_helicase
+  - components#helicase_chaperone
+  - components#replication_site_dna
+  - causal_graphs#pre_primosome_assembly
+  rationale: GO:1990099 denotes a primase-lacking pre-primosome class. GO models GO:1990157,
+    GO:1990158, GO:1990159 and GO:1990160 as narrower is-a children rather than as
+    parts of every pre-primosome, and GO:1990098 models helicase-primase core primosomes
+    separately.
+  resolution_note: Curated GO:1990077 as the generic is-a parent, left the narrower
+    DnaA-bound and restart-specific pre-primosomes out of has_part, and kept DnaG
+    primase out of this primase-lacking record.
+  evidence:
+  - reference: GO:1990099
+    notes: GO:1990099 defines pre-primosome complexes as lacking a primase component.
+  - reference: GO:1990098
+    notes: GO:1990098 denotes the DNA-bound core primosome class that contains at
+      least one primase.
+  - reference: GO:1990157
+    notes: GO:1990157 denotes a narrower DnaA-DnaB-DnaC pre-primosome.
+  - reference: GO:1990160
+    notes: GO:1990160 denotes a narrower DnaB-DnaC-Rep-PriC pre-primosome.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'
