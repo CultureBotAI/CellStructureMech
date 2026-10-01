@@ -1,0 +1,154 @@
+identifier: GO:1990161
+label: DnaB helicase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A homohexameric protein complex that possesses DNA helicase activity;
+  functions during DNA replication and repair.
+definition_source: GO:1990161
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T04:15:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T04:16:35Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and DNA-helicase-complex parentage, a DnaB reviewed-label-only
+    component, Geobacillus/PDB scope, DNA helicase activity evidence, GO/PubMed/DOI/PDB
+    evidence, a nonmechanistic helicase-activity graph, and a grounding discussion.
+  llm_assisted: true
+synonyms:
+- synonym_text: DnaB hexamer
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990161
+parent_structures:
+- GO:0033202
+components:
+- component_id: dnab_helicase
+  label: DnaB helicase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaB
+  stoichiometry: 6 copies per DnaB helicase hexamer
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaB is represented as the GO-defined monomeric constituent of
+    the homohexameric DnaB helicase complex; exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProt family boundaries were not curated in this pass.
+  role: Protein subunit that homohexamerizes to form the replicative DnaB helicase
+    ring.
+  evidence:
+  - reference: GO:1990161
+    notes: GO:1990161 defines the DnaB helicase complex as homohexameric.
+  - reference: PMID:17947583
+    notes: Bailey, Eliason and Steitz 2007 solved crystal structures of the hexameric
+      DnaB helicase.
+  - reference: PDB:2R6D
+    notes: RCSB PDB entry 2R6D contains six chains of Geobacillus stearothermophilus
+      replicative DNA helicase DnaB.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1422
+  taxon_label: Geobacillus stearothermophilus
+  presence: COMMON
+  note: PDB 2R6D is a hexameric DnaB helicase crystal form from Geobacillus stearothermophilus.
+  reference: PDB:2R6D
+canonical_examples:
+- taxon_id: NCBITaxon:1422
+  taxon_label: Geobacillus stearothermophilus
+  note: Bailey, Eliason and Steitz 2007 solved Geobacillus stearothermophilus DnaB
+    hexamer crystal forms, including PDB 2R6D.
+  reference: PMID:17947583
+functions:
+- function_id: dna_helicase_activity
+  label: DNA helicase activity
+  grounding: GO:0003678
+  description: The DnaB helicase complex unwinds a DNA helix using ATP hydrolysis.
+  evidence:
+  - reference: GO:1990161
+    notes: GO:1990161 defines the DnaB helicase complex as possessing DNA helicase
+      activity.
+  - reference: GO:0003678
+    notes: GO:0003678 is the Gene Ontology molecular function term for ATP-dependent
+      DNA helix unwinding.
+  - reference: PMID:17947583
+    notes: Bailey, Eliason and Steitz 2007 studied the DnaB helicase ring that unwinds
+      duplex DNA at the eubacterial replication fork.
+evidence:
+- reference: GO:1990161
+  notes: Gene Ontology cellular-component term for the DnaB helicase complex and its
+    DnaB hexamer synonym.
+- reference: GO:0033202
+  notes: OLS reports GO:0033202 DNA helicase complex as the direct GO:1990161 is-a
+    parent.
+- reference: GO:0003678
+  notes: Gene Ontology molecular-function term for DNA helicase activity.
+- reference: PMID:17947583
+  notes: PubMed identifier for Bailey, Eliason and Steitz 2007, the Science paper
+    cited by GO:1990161.
+- reference: DOI:10.1126/science.1147353
+  notes: DOI for Bailey, Eliason and Steitz 2007, 'Structure of hexameric DnaB helicase
+    and its complex with a domain of DnaG primase', as reported by PubMed.
+- reference: PDB:2R6D
+  notes: RCSB PDB entry for a Geobacillus stearothermophilus hexameric DnaB crystal
+    form from Bailey, Eliason and Steitz 2007.
+causal_graphs:
+- graph_id: dnab_hexamer_dna_helicase_activity
+  title: DnaB hexamer enables DNA helicase activity
+  description: Six DnaB subunits form a helicase ring that unwinds DNA at the eubacterial
+    replication fork.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records homohexameric DnaB composition and DNA helicase activity
+    without resolving ATPase cycling, DNA translocation, DnaG binding or DnaC loading.
+  nodes:
+  - node_id: dnab_helicase
+    label: DnaB helicase
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnab_helicase
+  - node_id: dnab_helicase_complex
+    label: DnaB helicase complex
+    node_type: STRUCTURE
+    grounding: GO:1990161
+  - node_id: dna_helicase_activity
+    label: DNA helicase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003678
+  edges:
+  - subject: dnab_helicase
+    predicate: contributes to
+    object: dnab_helicase_complex
+    description: Six DnaB helicase subunits constitute the homohexameric DnaB helicase
+      complex.
+    evidence:
+    - reference: GO:1990161
+      notes: GO:1990161 defines the DnaB helicase complex as homohexameric.
+  - subject: dnab_helicase_complex
+    predicate: supports
+    object: dna_helicase_activity
+    description: The DnaB helicase complex supports ATP-dependent unwinding of a DNA
+      helix.
+    evidence:
+    - reference: GO:1990161
+      notes: GO:1990161 defines the complex by DNA helicase activity.
+    - reference: GO:0003678
+      notes: GO:0003678 defines DNA helicase activity as ATP-dependent DNA helix unwinding.
+discussions:
+- discussion_id: resolve_dnab_family_grounding
+  prompt: Resolve an exact source-neutral DnaB family grounding for the DnaB helicase
+    complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnab_helicase
+  rationale: GO:1990161 defines the DnaB helicase complex as a homohexameric DnaB
+    assembly. An exact source-neutral InterPro, Pfam, NCBIfam or UniProt family CURIE
+    for the monomeric DnaB component needs narrower curation before the label can
+    be grounded.
+  evidence:
+  - reference: GO:1990161
+    notes: GO:1990161 defines the DnaB helicase complex as homohexameric.
+  posed_by: codex
+  posed_date: '2026-10-01'
