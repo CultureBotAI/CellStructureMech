@@ -4446,6 +4446,15 @@
   "definition": "A protein-DNA complex containing DNA-bound DnaA attached to HU. HU is a dimer encoded by two closely related genes. Essential for the initiation of replication in bacteria; stimulates the DnaA-dependent unwinding of oriC."
  },
  {
+  "identifier": "GO:1990082",
+  "label": "DnaA-L2 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/dnaa_l2_complex.html",
+  "definition": "A protein complex that inhibits unwinding of DNA at the origin of replication and assembly of the pre-primosome. In E. coli, this complex is composed of DnaA and of the ribosomal protein L2."
+ },
+ {
   "identifier": "GO:1990101",
   "label": "DnaA-oriC complex",
   "category": "OTHER",

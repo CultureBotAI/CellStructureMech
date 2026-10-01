@@ -1,0 +1,226 @@
+identifier: GO:1990082
+label: DnaA-L2 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that inhibits unwinding of DNA at the origin of replication
+  and assembly of the pre-primosome. In E. coli, this complex is composed of DnaA
+  and of the ribosomal protein L2.
+definition_source: GO:1990082
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T14:15:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T14:17:04Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added replication-inhibiting-complex parentage, reviewed-label-only DnaA
+    and ribosomal-protein-L2 components, E. coli DnaA-L2 evidence, negative-DNA-replication-initiation
+    function evidence, GO/PubMed/DOI evidence, a nonmechanistic DnaA-L2 regulatory
+    graph, and grounding/boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:1990078
+components:
+- component_id: dnaa_initiator
+  label: DnaA replication initiation protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaA is represented as the initiator constituent named by GO:1990082;
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries were
+    not curated in this pass.
+  role: Replication initiator constituent bound by ribosomal protein L2 in the DnaA-L2
+    complex.
+  evidence:
+  - reference: GO:1990082
+    notes: GO:1990082 defines the E. coli DnaA-L2 complex as being composed of DnaA
+      and ribosomal protein L2.
+  - reference: PMID:21288885
+    notes: Chodavarapu et al. 2011 reported that full-length and truncated E. coli
+      L2 physically interact with the N-terminal region of DnaA.
+- component_id: ribosomal_protein_l2
+  label: 50S ribosomal protein L2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - rplB
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Ribosomal protein L2 is represented as the E. coli L2 constituent
+    named by GO:1990082; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    boundaries were not curated in this pass.
+  role: DnaA-binding ribosomal protein constituent that inhibits DnaA oligomer formation,
+    oriC unwinding, and downstream assembly of the prepriming complex.
+  evidence:
+  - reference: GO:1990082
+    notes: GO:1990082 defines the E. coli DnaA-L2 complex as being composed of ribosomal
+      protein L2 and DnaA.
+  - reference: PMID:21288885
+    notes: Chodavarapu et al. 2011 purified an oriC plasmid replication inhibitor
+      as a truncated ribosomal protein L2 and showed that truncated or mature L2 interacts
+      with DnaA.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Chodavarapu et al. 2011 studied E. coli ribosomal protein L2 binding to DnaA
+    and inhibition of DnaA-dependent oriC replication initiation reactions.
+  reference: PMID:21288885
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Chodavarapu et al. 2011 used E. coli DnaA and L2 to define L2-DnaA binding
+    and L2 inhibition of origin unwinding and prepriming-complex assembly.
+  reference: PMID:21288885
+functions:
+- function_id: negative_regulation_of_dna_replication_initiation
+  label: negative regulation of DNA-templated DNA replication initiation
+  grounding: GO:0032297
+  description: The E. coli DnaA-L2 complex negatively regulates replication initiation
+    by inhibiting DnaA-dependent oriC unwinding and assembly of the pre-primosome.
+  evidence:
+  - reference: GO:1990082
+    notes: GO:1990082 defines the DnaA-L2 complex by inhibition of origin unwinding
+      and pre-primosome assembly.
+  - reference: GO:0032297
+    notes: GO:0032297 is the Gene Ontology biological-process term for negative regulation
+      of DNA-templated DNA replication initiation.
+  - reference: PMID:21288885
+    notes: Chodavarapu et al. 2011 showed that ribosomal protein L2 inhibits oriC
+      initiation by interfering with DnaA oligomerization, oriC unwinding, and prepriming-complex
+      assembly in vitro.
+evidence:
+- reference: GO:1990082
+  notes: Gene Ontology cellular-component term for the DnaA-L2 complex.
+- reference: GO:1990078
+  notes: QuickGO reports GO:1990082 DnaA-L2 complex as an is-a child of GO:1990078
+    replication inhibiting complex.
+- reference: GO:1990083
+  notes: Gene Ontology cellular-component term for the separately scoped DnaA-Hda
+    complex.
+- reference: GO:1990084
+  notes: Gene Ontology cellular-component term for the separately scoped DnaA-Dps
+    complex.
+- reference: GO:1990085
+  notes: Gene Ontology cellular-component term for the separately scoped Hda-beta
+    clamp complex.
+- reference: GO:0032297
+  notes: Gene Ontology biological-process term for negative regulation of DNA-templated
+    DNA replication initiation.
+- reference: PMID:21288885
+  notes: PubMed identifier for Chodavarapu, Felczak and Kaguni 2011, the Nucleic Acids
+    Research paper cited by GO:1990082.
+- reference: DOI:10.1093/nar/gkq1203
+  notes: DOI for Chodavarapu et al. 2011, 'Two forms of ribosomal protein L2 of Escherichia
+    coli that inhibit DnaA in DNA replication', as reported by PubMed.
+causal_graphs:
+- graph_id: dnaa_l2_inhibition
+  title: L2 inhibits DnaA initiation activity
+  description: Ribosomal protein L2 binds DnaA to form a complex that supports negative
+    regulation of replication initiation by interfering with DnaA-dependent origin
+    unwinding and pre-primosome assembly.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level DnaA-L2 composition and negative replication-initiation
+    regulation without resolving the L2 cleavage state, DnaA domain contacts, ribosome-associated
+    pools, or in vivo stringent-response context.
+  nodes:
+  - node_id: dnaa_initiator
+    label: DnaA replication initiation protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnaa_initiator
+  - node_id: ribosomal_protein_l2
+    label: 50S ribosomal protein L2
+    node_type: GENE_OR_PROTEIN
+    component_ref: ribosomal_protein_l2
+  - node_id: dnaa_l2_complex
+    label: DnaA-L2 complex
+    node_type: STRUCTURE
+    grounding: GO:1990082
+  - node_id: negative_regulation_of_dna_replication_initiation
+    label: negative regulation of DNA-templated DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032297
+  edges:
+  - subject: dnaa_initiator
+    predicate: contributes to
+    object: dnaa_l2_complex
+    description: DnaA replication initiation protein is a constituent of the DnaA-L2
+      complex.
+    evidence:
+    - reference: GO:1990082
+      notes: GO:1990082 defines the E. coli complex as being composed of DnaA and
+        ribosomal protein L2.
+  - subject: ribosomal_protein_l2
+    predicate: contributes to
+    object: dnaa_l2_complex
+    description: Ribosomal protein L2 is a constituent of the DnaA-L2 complex.
+    evidence:
+    - reference: GO:1990082
+      notes: GO:1990082 names ribosomal protein L2 as a constituent of the DnaA-L2
+        complex.
+    - reference: PMID:21288885
+      notes: Chodavarapu et al. 2011 reported physical interaction between E. coli
+        L2 and the N-terminal region of DnaA.
+  - subject: dnaa_l2_complex
+    predicate: supports
+    object: negative_regulation_of_dna_replication_initiation
+    description: The DnaA-L2 complex supports negative regulation of replication initiation
+      by inhibiting DnaA origin unwinding and pre-primosome assembly.
+    evidence:
+    - reference: GO:1990082
+      notes: GO:1990082 defines the complex by inhibition of origin unwinding and
+        pre-primosome assembly.
+    - reference: PMID:21288885
+      notes: Chodavarapu et al. 2011 found that L2 inhibits DnaA-dependent oriC unwinding
+        and subsequent prepriming-complex assembly.
+discussions:
+- discussion_id: resolve_dnaa_l2_component_groundings
+  prompt: Resolve exact source-neutral DnaA and ribosomal protein L2 family groundings
+    for the DnaA-L2 complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnaa_initiator
+  - components#ribosomal_protein_l2
+  rationale: GO:1990082 names DnaA and ribosomal protein L2 as the E. coli constituents
+    of the DnaA-L2 complex. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt
+    family CURIEs need narrower curation before these components can be grounded.
+  evidence:
+  - reference: GO:1990082
+    notes: GO:1990082 defines the DnaA-L2 complex around DnaA and ribosomal protein
+      L2 constituents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: distinguish_l2_from_other_dnaa_inhibitors
+  prompt: Keep the DnaA-L2 complex distinct from DnaA-Dps and RIDA complexes.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - components#dnaa_initiator
+  - components#ribosomal_protein_l2
+  - causal_graphs#dnaa_l2_inhibition
+  rationale: GO:1990082 denotes DnaA bound to ribosomal protein L2, whereas GO:1990084
+    denotes the DnaA-Dps complex, GO:1990083 denotes the DnaA-Hda complex, and GO:1990085
+    denotes Hda bound to the DnaN beta clamp.
+  resolution_note: Curated only DnaA and ribosomal protein L2 on GO:1990082 and left
+    Dps, Hda, and the beta clamp out of the component list and graph edges.
+  evidence:
+  - reference: GO:1990082
+    notes: GO:1990082 denotes the DnaA-L2 complex.
+  - reference: GO:1990084
+    notes: GO:1990084 denotes the separately scoped DnaA-Dps complex.
+  - reference: GO:1990083
+    notes: GO:1990083 denotes the separately scoped DnaA-Hda complex.
+  - reference: GO:1990085
+    notes: GO:1990085 denotes the separately scoped Hda-beta clamp complex.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'
