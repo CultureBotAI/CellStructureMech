@@ -1,0 +1,241 @@
+identifier: GO:1990085
+label: Hda-beta clamp complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex involved in inactivating the function of DnaA and thereby
+  preventing multiple events of replication initiation. In E. coli, this complex is
+  composed of the beta clamp (DnaN) and Hda.
+definition_source: GO:1990085
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T12:42:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T12:43:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Hda-beta clamp GO synonymy, replication-inhibiting-complex parentage,
+    beta sliding-clamp substructure and component links, a reviewed-label-only Hda
+    component, E. coli Hda-beta evidence, negative-DNA-replication-initiation function
+    evidence, GO/PubMed/DOI evidence, a nonmechanistic Hda-beta RIDA graph, and grounding/boundary
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-10-01T12:45:20Z'
+  curator: codex
+  action: FIX_COMPONENT_LABEL
+  changes: Matched the beta sliding-clamp component label to GO:0044775 and narrowed
+    the Hda-beta/DnaA-Hda boundary discussion rationale to the directly cited GO and
+    Kurz et al. 2004 sources.
+  llm_assisted: true
+- timestamp: '2026-10-01T13:05:25Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: 'Addressed PR #1871 review issue #1872 by narrowing the Hda-beta/DnaA-Hda
+    boundary discussion so Kurz et al. 2004 supports direct Hda-beta binding while
+    GO:1990085 supports the replication-inhibiting scope.'
+  llm_assisted: true
+synonyms:
+- synonym_text: Hda-DnaN complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990085
+- synonym_text: Hda-dpo3b complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990085
+parent_structures:
+- GO:1990078
+has_part:
+- GO:0044775
+components:
+- component_id: hda_regulator
+  label: Hda DnaA-related protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hda
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Hda is represented as the DnaA-related constituent named by GO:1990085;
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries were
+    not curated in this pass.
+  role: DnaA-related regulatory protein that binds the DnaN beta clamp in the Hda-beta
+    clamp complex.
+  evidence:
+  - reference: GO:1990085
+    notes: GO:1990085 defines the E. coli Hda-beta clamp complex as containing Hda.
+  - reference: PMID:15150238
+    notes: Kurz et al. 2004 purified E. coli Hda and beta proteins and assayed their
+      direct interaction.
+- component_id: dnaN_beta_clamp
+  label: DNA polymerase III, beta sliding clamp processivity factor complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0044775
+  gene_symbols:
+  - dnaN
+  essentiality: UNKNOWN
+  role: DnaN beta sliding-clamp ring bound by Hda during regulatory inactivation of
+    DnaA.
+  evidence:
+  - reference: GO:1990085
+    notes: GO:1990085 defines the E. coli Hda-beta clamp complex as containing the
+      beta clamp, DnaN.
+  - reference: GO:0044775
+    notes: GO:0044775 is the Gene Ontology cellular-component term for the DNA polymerase
+      III beta sliding-clamp processivity factor complex.
+  - reference: PMID:15150238
+    notes: Kurz et al. 2004 showed direct interaction between E. coli Hda and the
+      sliding-clamp beta subunit.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Kurz et al. 2004 studied the interaction between E. coli Hda and the DnaN
+    beta sliding clamp.
+  reference: PMID:15150238
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Kurz et al. 2004 used purified E. coli Hda and beta sliding-clamp proteins
+    to define the Hda-beta interaction.
+  reference: PMID:15150238
+functions:
+- function_id: negative_regulation_of_dna_replication_initiation
+  label: negative regulation of DNA-templated DNA replication initiation
+  grounding: GO:0032297
+  description: The E. coli Hda-beta clamp complex participates in regulatory inactivation
+    of DnaA to prevent multiple replication initiation events.
+  evidence:
+  - reference: GO:1990085
+    notes: GO:1990085 defines the Hda-beta clamp complex by DnaA inactivation and
+      prevention of multiple replication initiation events.
+  - reference: GO:0032297
+    notes: GO:0032297 is the Gene Ontology biological-process term for negative regulation
+      of DNA-templated DNA replication initiation.
+  - reference: PMID:15150238
+    notes: Kurz et al. 2004 connected Hda-beta interaction to accelerated hydrolysis
+      of DnaA-bound ATP and prevention of excess replication initiation.
+evidence:
+- reference: GO:1990085
+  notes: Gene Ontology cellular-component term for the Hda-beta clamp complex and
+    its Hda-DnaN/Hda-dpo3b exact synonyms.
+- reference: GO:1990078
+  notes: QuickGO reports GO:1990085 Hda-beta clamp complex as an is-a child of GO:1990078
+    replication inhibiting complex.
+- reference: GO:0044775
+  notes: Gene Ontology cellular-component term for the DNA polymerase III beta sliding-clamp
+    processivity factor complex.
+- reference: GO:1990083
+  notes: Gene Ontology cellular-component term for the separately scoped DnaA-Hda
+    complex.
+- reference: GO:0032297
+  notes: Gene Ontology biological-process term for negative regulation of DNA-templated
+    DNA replication initiation.
+- reference: PMID:15150238
+  notes: PubMed identifier for Kurz et al. 2004, the Journal of Bacteriology paper
+    cited by GO:1990085.
+- reference: DOI:10.1128/JB.186.11.3508-3515.2004
+  notes: DOI for Kurz et al. 2004, 'Interaction of the sliding clamp beta-subunit
+    and Hda, a DnaA-related protein', as reported by PubMed.
+causal_graphs:
+- graph_id: hda_beta_clamp_rida
+  title: Hda binds the beta clamp for RIDA
+  description: Hda binds the DnaN beta sliding clamp to form a replication inhibiting
+    complex that supports regulatory inactivation of DnaA.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level Hda-beta clamp composition and negative
+    replication-initiation regulation without resolving DNA clamp loading, DnaA-Hda
+    contacts, DnaA-ATP hydrolysis chemistry, or beta-clamp processivity.
+  nodes:
+  - node_id: hda_regulator
+    label: Hda DnaA-related protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: hda_regulator
+  - node_id: dnaN_beta_clamp
+    label: DNA polymerase III, beta sliding clamp processivity factor complex
+    node_type: STRUCTURE
+    component_ref: dnaN_beta_clamp
+    grounding: GO:0044775
+  - node_id: hda_beta_clamp_complex
+    label: Hda-beta clamp complex
+    node_type: STRUCTURE
+    grounding: GO:1990085
+  - node_id: negative_regulation_of_dna_replication_initiation
+    label: negative regulation of DNA-templated DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032297
+  edges:
+  - subject: hda_regulator
+    predicate: contributes to
+    object: hda_beta_clamp_complex
+    description: Hda is a DnaA-related constituent of the Hda-beta clamp complex.
+    evidence:
+    - reference: GO:1990085
+      notes: GO:1990085 names Hda as a constituent of the Hda-beta clamp complex.
+  - subject: dnaN_beta_clamp
+    predicate: contributes to
+    object: hda_beta_clamp_complex
+    description: The DnaN beta sliding clamp is a constituent of the Hda-beta clamp
+      complex.
+    evidence:
+    - reference: GO:1990085
+      notes: GO:1990085 names the beta clamp, DnaN, as a constituent of the Hda-beta
+        clamp complex.
+    - reference: GO:0044775
+      notes: GO:0044775 denotes the DNA polymerase III beta sliding-clamp complex.
+  - subject: hda_beta_clamp_complex
+    predicate: supports
+    object: negative_regulation_of_dna_replication_initiation
+    description: Hda interaction with the beta clamp is part of the regulatory inactivation
+      of DnaA system that suppresses excess replication initiation.
+    evidence:
+    - reference: GO:1990085
+      notes: GO:1990085 defines the complex by DnaA inactivation and prevention of
+        multiple replication initiation events.
+    - reference: PMID:15150238
+      notes: Kurz et al. 2004 established Hda-beta binding and proposed its importance
+        in DnaA inactivation.
+discussions:
+- discussion_id: resolve_hda_component_grounding
+  prompt: Resolve exact source-neutral Hda family grounding for the Hda-beta clamp
+    complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#hda_regulator
+  rationale: GO:1990085 names Hda as an E. coli constituent of the Hda-beta clamp
+    complex. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family CURIEs
+    need narrower curation before this component can be grounded.
+  evidence:
+  - reference: GO:1990085
+    notes: GO:1990085 defines the Hda-beta clamp complex around Hda and beta-clamp
+      constituents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: distinguish_hda_beta_and_dnaa_hda_states
+  prompt: Keep the Hda-beta clamp complex distinct from the DnaA-Hda complex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - has_part
+  - components#hda_regulator
+  - components#dnaN_beta_clamp
+  - causal_graphs#hda_beta_clamp_rida
+  rationale: GO:1990085 denotes Hda bound to the DnaN beta clamp, whereas GO:1990083
+    separately denotes the DnaA-Hda complex. Kurz et al. 2004 established direct Hda-beta
+    interaction, and GO:1990085 scopes that Hda-beta entity to the replication-inhibiting
+    state.
+  resolution_note: Curated Hda and the beta sliding clamp on GO:1990085 and left DnaA
+    itself out of the component list, has_part links, and graph edges.
+  evidence:
+  - reference: GO:1990085
+    notes: GO:1990085 denotes the Hda-beta clamp complex.
+  - reference: GO:1990083
+    notes: GO:1990083 denotes the separately scoped DnaA-Hda complex.
+  - reference: PMID:15150238
+    notes: Kurz et al. 2004 established Hda interaction with the beta sliding clamp.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'
