@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hda_beta_clamp_complex.yaml
+  slug: hda_beta_clamp_complex
+session:
+  id: 2026-10-01T124754Z-codex-682919
+  timestamp: '2026-10-01T12:47:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Hda-beta clamp complex record
+  details: Created a GO:1990085-backed Hda-beta clamp complex record with replication-inhibiting-complex
+    parentage, Hda and beta sliding-clamp components, Escherichia coli Hda-DnaN evidence from
+    Kurz et al. 2004, negative DNA replication initiation function evidence, GO/PubMed/DOI
+    evidence, a nonmechanistic Hda-beta regulatory graph, and curation discussions for unresolved
+    Hda grounding and the DnaA-Hda sibling boundary.

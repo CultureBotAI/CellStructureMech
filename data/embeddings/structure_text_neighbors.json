@@ -14123,6 +14123,11 @@
           "cosine_similarity": 0.75063021
         },
         {
+          "identifier": "GO:1990085",
+          "label": "Hda-beta clamp complex",
+          "cosine_similarity": 0.74782177
+        },
+        {
           "identifier": "GO:0070824",
           "label": "SHREC complex",
           "cosine_similarity": 0.74169886
@@ -14136,11 +14141,6 @@
           "identifier": "GO:0008622",
           "label": "epsilon DNA polymerase complex",
           "cosine_similarity": 0.72157921
-        },
-        {
-          "identifier": "GO:0030870",
-          "label": "Mre11 complex",
-          "cosine_similarity": 0.719869
         }
       ]
     },
@@ -14882,9 +14882,9 @@
           "cosine_similarity": 0.81961665
         },
         {
-          "identifier": "GO:1990157",
-          "label": "DnaA-DnaB-DnaC complex",
-          "cosine_similarity": 0.79012928
+          "identifier": "GO:1990085",
+          "label": "Hda-beta clamp complex",
+          "cosine_similarity": 0.7942643
         }
       ]
     },
@@ -14944,9 +14944,9 @@
           "cosine_similarity": 0.84932482
         },
         {
-          "identifier": "GO:0043625",
-          "label": "delta DNA polymerase complex",
-          "cosine_similarity": 0.80422834
+          "identifier": "GO:1990085",
+          "label": "Hda-beta clamp complex",
+          "cosine_similarity": 0.82020126
         }
       ]
     },
@@ -14975,9 +14975,9 @@
           "cosine_similarity": 0.79504845
         },
         {
-          "identifier": "GO:0005658",
-          "label": "alpha DNA polymerase:primase complex",
-          "cosine_similarity": 0.74156827
+          "identifier": "GO:1990085",
+          "label": "Hda-beta clamp complex",
+          "cosine_similarity": 0.75591246
         }
       ]
     },
@@ -15006,9 +15006,9 @@
           "cosine_similarity": 0.81768053
         },
         {
-          "identifier": "GO:0043625",
-          "label": "delta DNA polymerase complex",
-          "cosine_similarity": 0.75075352
+          "identifier": "GO:1990085",
+          "label": "Hda-beta clamp complex",
+          "cosine_similarity": 0.76790675
         }
       ]
     },
@@ -15234,6 +15234,11 @@
       "label": "DnaA-Hda complex",
       "neighbors": [
         {
+          "identifier": "GO:1990085",
+          "label": "Hda-beta clamp complex",
+          "cosine_similarity": 0.90401781
+        },
+        {
           "identifier": "GO:1990103",
           "label": "DnaA-HU complex",
           "cosine_similarity": 0.86053997
@@ -15252,11 +15257,6 @@
           "identifier": "GO:1990101",
           "label": "DnaA-oriC complex",
           "cosine_similarity": 0.84296001
-        },
-        {
-          "identifier": "GO:1990125",
-          "label": "DiaA complex",
-          "cosine_similarity": 0.82823476
         }
       ]
     },
@@ -16435,6 +16435,37 @@
           "identifier": "GO:0032221",
           "label": "Rpd3S complex",
           "cosine_similarity": 0.76755606
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990085",
+      "label": "Hda-beta clamp complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990083",
+          "label": "DnaA-Hda complex",
+          "cosine_similarity": 0.90401781
+        },
+        {
+          "identifier": "GO:0044775",
+          "label": "DNA polymerase III, beta sliding clamp processivity factor complex",
+          "cosine_similarity": 0.82020126
+        },
+        {
+          "identifier": "GO:1990103",
+          "label": "DnaA-HU complex",
+          "cosine_similarity": 0.80088271
+        },
+        {
+          "identifier": "GO:1990125",
+          "label": "DiaA complex",
+          "cosine_similarity": 0.7942643
+        },
+        {
+          "identifier": "GO:1990102",
+          "label": "DnaA-DiaA complex",
+          "cosine_similarity": 0.79055042
         }
       ]
     },
@@ -19222,9 +19253,9 @@
           "cosine_similarity": 0.76064166
         },
         {
-          "identifier": "GO:1990157",
-          "label": "DnaA-DnaB-DnaC complex",
-          "cosine_similarity": 0.75641472
+          "identifier": "GO:1990085",
+          "label": "Hda-beta clamp complex",
+          "cosine_similarity": 0.76032787
         }
       ]
     },
