@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/msba_transporter_complex.yaml
+  slug: msba_transporter_complex
+session:
+  id: 2026-10-01T210410Z-codex-f74164
+  timestamp: '2026-10-01T21:04:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added MsbA transporter complex record
+  details: Created a GO:1990199-backed MsbA transporter complex record with GO exact synonymy,
+    GO:1902495 transmembrane-transporter parentage, an exact InterPro-grounded MsbA constituent,
+    a reviewed E. coli K-12 UniProt example, a PDB-backed E. coli canonical example, lipopolysaccharide
+    floppase activity, MsbA homodimer subunit count, and PMID/DOI evidence from the PDB:3B5W
+    MsbA structural literature.

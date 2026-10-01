@@ -1,0 +1,112 @@
+identifier: GO:1990199
+label: MsbA transporter complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An ATP-binding cassette (ABC) transporter complex made up of a dimer of
+  MsbA. Facilitates the export across the plasma membrane of, amongst others, lipid
+  A and lipopolysaccharide. In contrast to most ABC transporter complexes, each chain
+  of the homodimer contains both the transmembrane domain (TMD) and the cytoplasmic
+  ATP-binding domain (NBD).
+definition_source: GO:1990199
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T21:01:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T21:03:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonyms and transmembrane-transporter parentage, an InterPro-grounded
+    MsbA component with a reviewed E. coli K-12 UniProt example, an E. coli PDB-backed
+    canonical example, lipopolysaccharide floppase activity, homodimer subunit count,
+    and PMID/DOI evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: MsbA complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990199
+- synonym_text: MsbA dimer
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990199
+parent_structures:
+- GO:1902495
+components:
+- component_id: msba_lipid_a_core_flippase
+  label: ABC transporter, lipid A-core flippase, MsbA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011917
+  gene_symbols:
+  - msbA
+  stoichiometry: 2 copies per E. coli MsbA homodimer in PDB:3B5W biological assembly
+    1
+  essentiality: UNKNOWN
+  role: ATP-binding inner-membrane flippase subunit that homodimerizes to form the
+    MsbA lipid A-core and lipopolysaccharide transporter.
+  protein_examples:
+  - uniprot_id: UniProtKB:P60752
+    protein_label: ATP-dependent lipid A-core flippase
+    gene_symbol: msbA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 MsbA accession mapped by RCSB to the homodimeric polymer
+      entity in PDB:3B5W.
+    evidence:
+    - reference: UniProtKB:P60752
+      notes: UniProtKB P60752 is the reviewed E. coli K-12 entry for MsbA.
+    - reference: PDB:3B5W
+      notes: RCSB maps PDB:3B5W polymer entity 1 to UniProtKB:P60752.
+  evidence:
+  - reference: GO:1990199
+    notes: GO:1990199 defines the MsbA transporter complex as a dimer of MsbA.
+  - reference: InterPro:IPR011917
+    notes: InterPro IPR011917 is the ABC transporter, lipid A-core flippase, MsbA
+      family entry.
+  - reference: PDB:3B5W
+    notes: RCSB describes PDB:3B5W biological assembly 1 as an E. coli MsbA homo-2-mer.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli source of the homodimeric MsbA transporter structure deposited as
+    PDB:3B5W.
+  reference: PDB:3B5W
+functions:
+- function_id: lipopolysaccharide_floppase
+  label: lipopolysaccharide floppase activity
+  grounding: GO:0015437
+  description: MsbA flips lipid A-core lipopolysaccharide from the cytosolic to the
+    exoplasmic leaflet of the E. coli inner membrane.
+  evidence:
+  - reference: GO:1990199
+    notes: GO:1990199 defines the MsbA transporter complex by export of lipid A and
+      lipopolysaccharide across the plasma membrane.
+  - reference: GO:0015437
+    notes: GO:0015437 is the molecular-function term for ATP-dependent lipopolysaccharide
+      floppase activity.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '2'
+  context: E. coli MsbA homodimer in PDB:3B5W biological assembly 1
+  reference: PDB:3B5W
+evidence:
+- reference: GO:1990199
+  notes: Gene Ontology cellular-component term for the MsbA transporter complex.
+- reference: GO:1902495
+  notes: QuickGO reports GO:1990199 as an is-a descendant of GO:1902495 transmembrane
+    transporter complex.
+- reference: GO:0015437
+  notes: Gene Ontology molecular-function term for lipopolysaccharide floppase activity.
+- reference: InterPro:IPR011917
+  notes: InterPro family entry for ABC transporter, lipid A-core flippase, MsbA.
+- reference: UniProtKB:P60752
+  notes: UniProtKB reviewed E. coli K-12 MsbA entry.
+- reference: PDB:3B5W
+  notes: RCSB structure entry for the homodimeric E. coli MsbA transporter.
+- reference: PMID:18024585
+  notes: PubMed identifier for the PDB:3B5W MsbA flexibility study cited by GO:1990199.
+- reference: DOI:10.1073/pnas.0709388104
+  notes: DOI for the PDB:3B5W primary citation as reported by RCSB and PubMed.

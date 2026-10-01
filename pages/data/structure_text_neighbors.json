@@ -13777,6 +13777,11 @@
       "label": "Bam protein complex",
       "neighbors": [
         {
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.76279144
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.70066013
@@ -13795,11 +13800,6 @@
           "identifier": "GO:0048500",
           "label": "signal recognition particle",
           "cosine_similarity": 0.69288509
-        },
-        {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.67379115
         }
       ]
     },
@@ -15864,6 +15864,11 @@
           "cosine_similarity": 0.79924068
         },
         {
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.79884734
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.78137136
@@ -15872,11 +15877,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.75911881
-        },
-        {
-          "identifier": "GO:0097347",
-          "label": "TAM protein secretion complex",
-          "cosine_similarity": 0.75277867
         }
       ]
     },
@@ -16949,6 +16949,11 @@
           "cosine_similarity": 0.72964442
         },
         {
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.70819008
+        },
+        {
           "identifier": "GO:1990203",
           "label": "MdtBC Complex",
           "cosine_similarity": 0.70620115
@@ -16957,11 +16962,6 @@
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.70504716
-        },
-        {
-          "identifier": "GO:0009279",
-          "label": "cell outer membrane",
-          "cosine_similarity": 0.69711762
         }
       ]
     },
@@ -17001,6 +17001,11 @@
       "label": "MacAB-TolC complex",
       "neighbors": [
         {
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.73566226
+        },
+        {
           "identifier": "GO:1990207",
           "label": "EmrE multidrug transporter complex",
           "cosine_similarity": 0.73124832
@@ -17019,11 +17024,6 @@
           "identifier": "GO:0097347",
           "label": "TAM protein secretion complex",
           "cosine_similarity": 0.70591367
-        },
-        {
-          "identifier": "GO:1990203",
-          "label": "MdtBC Complex",
-          "cosine_similarity": 0.69002379
         }
       ]
     },
@@ -17130,6 +17130,11 @@
           "cosine_similarity": 0.79924068
         },
         {
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.78515861
+        },
+        {
           "identifier": "GO:0031317",
           "label": "tripartite ATP-independent periplasmic transporter complex",
           "cosine_similarity": 0.76963732
@@ -17143,11 +17148,6 @@
           "identifier": "GO:0062051",
           "label": "lipopolysaccharide transport system",
           "cosine_similarity": 0.70620115
-        },
-        {
-          "identifier": "GO:0030256",
-          "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.70412838
         }
       ]
     },
@@ -17520,6 +17520,37 @@
           "identifier": "GO:0033565",
           "label": "ESCRT-0 complex",
           "cosine_similarity": 0.77104178
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990199",
+      "label": "MsbA transporter complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.79884734
+        },
+        {
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.78515861
+        },
+        {
+          "identifier": "GO:1990063",
+          "label": "Bam protein complex",
+          "cosine_similarity": 0.76279144
+        },
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.74745277
+        },
+        {
+          "identifier": "GO:1990196",
+          "label": "MacAB-TolC complex",
+          "cosine_similarity": 0.73566226
         }
       ]
     },
