@@ -28,6 +28,12 @@ curation_history:
   changes: Narrowed the E. coli canonical-example note so its PDB:1OS7 reference only
     supports the ligand-bound homodimeric TauD structure.
   llm_assisted: true
+- timestamp: '2026-10-01T23:36:50Z'
+  curator: codex
+  action: REFINED_GROUNDING_NOTES
+  changes: Narrowed TauD grounding notes to the verified broad InterPro entries found
+    during PR review, removing unsupported Pfam and NCBIfam wording.
+  llm_assisted: true
 synonyms:
 - synonym_text: 2-aminoethanesulfonate dioxygenase complex
   synonym_type: EXACT_SYNONYM
@@ -52,10 +58,10 @@ components:
   stoichiometry: 2 copies per E. coli TauD dimer in PDB:1OS7 biological assembly 1
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The reviewed E. coli TauD accession maps to the broad InterPro:IPR051323
-    alpha-ketoglutarate-dependent sulfate ester dioxygenase-like family, InterPro:IPR003819
-    TauD/TfdA-like domain, and Pfam:PF02668 TauD/TfdA family; no exact source-neutral
-    InterPro, Pfam, or NCBIfam family CURIE was asserted for TauD alone.
+  grounding_notes: 'The reviewed E. coli TauD accession maps to broad InterPro entries:
+    InterPro:IPR051323 alpha-ketoglutarate-dependent sulfate ester dioxygenase-like
+    family and InterPro:IPR003819 TauD/TfdA-like domain. Both entries also cover non-TauD
+    dioxygenases, so no exact InterPro family CURIE was asserted for TauD alone.'
   role: Iron- and 2-oxoglutarate-dependent taurine dioxygenase subunit that homooligomerizes
     to release sulfite from taurine during sulfur starvation.
   protein_examples:
