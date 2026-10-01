@@ -4410,6 +4410,15 @@
   "definition": "A protein-DNA complex consisting of the helicase loading complex DnaB-DnaC bound to the DNA-bound DNA replication initiation protein DnaA. Essential for DNA replication initiation."
  },
  {
+  "identifier": "GO:1990103",
+  "label": "DnaA-HU complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/dnaa_hu_complex.html",
+  "definition": "A protein-DNA complex containing DNA-bound DnaA attached to HU. HU is a dimer encoded by two closely related genes. Essential for the initiation of replication in bacteria; stimulates the DnaA-dependent unwinding of oriC."
+ },
+ {
   "identifier": "GO:1990101",
   "label": "DnaA-oriC complex",
   "category": "OTHER",

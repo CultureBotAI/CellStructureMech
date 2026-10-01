@@ -1,0 +1,252 @@
+identifier: GO:1990103
+label: DnaA-HU complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A protein-DNA complex containing DNA-bound DnaA attached to HU. HU is
+  a dimer encoded by two closely related genes. Essential for the initiation of replication
+  in bacteria; stimulates the DnaA-dependent unwinding of oriC.
+definition_source: GO:1990103
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T10:51:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T10:52:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, primosome-complex parentage, reviewed-label-only DnaA,
+    HU and oriC DNA components, E. coli DnaA-HU initiation evidence, DNA-replication-initiation
+    function evidence, GO/PubMed/DOI evidence, a nonmechanistic DnaA-HU graph, and
+    grounding/boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: DnaA-HU-DNA complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990103
+parent_structures:
+- GO:1990077
+components:
+- component_id: dnaa_initiator
+  label: DnaA replication initiation protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaA is represented as the DNA-bound initiator protein constituent
+    named by GO:1990103; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    boundaries were not curated in this pass.
+  role: DNA-bound initiator constituent contacted by HU in the oriC-bound complex.
+  evidence:
+  - reference: GO:1990103
+    notes: GO:1990103 defines the DnaA-HU complex as containing DNA-bound DnaA attached
+      to HU.
+  - reference: PMID:18179598
+    notes: Chodavarapu et al. 2008 studied E. coli DnaA interaction with HU during
+      initiation at the E. coli replication origin.
+- component_id: hu_dimer
+  label: HU histone-like protein dimer
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  stoichiometry: dimer
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: HU is represented as the dimeric bacterial histone-like DNA-binding
+    protein constituent named by GO:1990103; exact source-neutral InterPro, Pfam,
+    NCBIfam or UniProt family boundaries for the HU gene products were not curated
+    in this pass.
+  role: Dimeric histone-like protein constituent attached to DNA-bound DnaA in the
+    DnaA-HU complex.
+  evidence:
+  - reference: GO:1990103
+    notes: GO:1990103 defines the DnaA-HU complex as containing HU and notes that
+      HU is a dimer encoded by two closely related genes.
+  - reference: PMID:18179598
+    notes: Chodavarapu et al. 2008 studied HU interaction with E. coli DnaA during
+      initiation at the replication origin.
+- component_id: oric_origin_dna
+  label: oriC origin DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: oriC is represented as the replication-origin DNA scaffold unwound
+    by DnaA in GO:1990103; no exact source-neutral SO sequence-feature CURIE was curated
+    in this pass.
+  role: Origin DNA scaffold for the DNA-bound DnaA/HU nucleoprotein complex.
+  evidence:
+  - reference: GO:1990103
+    notes: GO:1990103 defines this entity as a protein-DNA complex and scopes HU stimulation
+      to DnaA-dependent unwinding of oriC.
+  - reference: PMID:18179598
+    notes: Chodavarapu et al. 2008 studied initiation at the E. coli replication origin.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Chodavarapu et al. 2008 studied E. coli DnaA interaction with HU during initiation
+    at the E. coli replication origin.
+  reference: PMID:18179598
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Chodavarapu et al. 2008 examined DnaA-HU interaction in initiation at the
+    E. coli replication origin.
+  reference: PMID:18179598
+functions:
+- function_id: dna_replication_initiation
+  label: DNA replication initiation
+  grounding: GO:0006270
+  description: The DnaA-HU complex participates in bacterial DNA replication initiation
+    by stimulating DnaA-dependent oriC unwinding.
+  evidence:
+  - reference: GO:1990103
+    notes: GO:1990103 defines the DnaA-HU complex as essential for replication initiation
+      in bacteria and as stimulating DnaA-dependent unwinding of oriC.
+  - reference: GO:0006270
+    notes: GO:0006270 is the Gene Ontology biological-process term for DNA replication
+      initiation.
+  - reference: PMID:18179598
+    notes: Chodavarapu et al. 2008 studied E. coli DnaA and HU during initiation at
+      the E. coli replication origin.
+evidence:
+- reference: GO:1990103
+  notes: Gene Ontology cellular-component term for the DnaA-HU complex and its exact
+    DnaA-HU-DNA complex synonym.
+- reference: GO:1990077
+  notes: QuickGO reports GO:1990103 as an is-a child of GO:1990077 primosome complex.
+- reference: GO:1990101
+  notes: Gene Ontology cellular-component term for the separately scoped DnaA-oriC
+    complex.
+- reference: GO:1990102
+  notes: Gene Ontology cellular-component term for the separately scoped DnaA-DiaA
+    complex.
+- reference: GO:1990100
+  notes: Gene Ontology cellular-component term for the separate DnaB-DnaC helicase-loading
+    complex.
+- reference: GO:0006270
+  notes: Gene Ontology biological-process term for DNA replication initiation.
+- reference: PMID:18179598
+  notes: PubMed identifier for Chodavarapu et al. 2008, the Molecular Microbiology
+    paper cited by GO:1990103.
+- reference: DOI:10.1111/j.1365-2958.2007.06094.x
+  notes: DOI for Chodavarapu et al. 2008, 'Escherichia coli DnaA interacts with HU
+    in initiation at the E. coli replication origin', as reported by PubMed.
+causal_graphs:
+- graph_id: dnaa_hu_initiation
+  title: HU stimulates DnaA-dependent oriC unwinding
+  description: HU attaches to DNA-bound DnaA on oriC to form a nucleoprotein complex
+    that supports DNA replication initiation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level DnaA-HU-DNA composition and initiation scope
+    without resolving HU subunit choice, DNA bending, DnaA oligomerization, DiaA stimulation,
+    or later DnaB-DnaC helicase loading.
+  nodes:
+  - node_id: dnaa_initiator
+    label: DnaA replication initiation protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnaa_initiator
+  - node_id: hu_dimer
+    label: HU histone-like protein dimer
+    node_type: STRUCTURE
+    component_ref: hu_dimer
+  - node_id: oric_origin_dna
+    label: oriC origin DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: oric_origin_dna
+  - node_id: dnaa_hu_complex
+    label: DnaA-HU complex
+    node_type: STRUCTURE
+    grounding: GO:1990103
+  - node_id: dna_replication_initiation
+    label: DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006270
+  edges:
+  - subject: dnaa_initiator
+    predicate: contributes to
+    object: dnaa_hu_complex
+    description: DNA-bound DnaA is a constituent of the DnaA-HU-DNA complex.
+    evidence:
+    - reference: GO:1990103
+      notes: GO:1990103 defines the complex as containing DNA-bound DnaA attached
+        to HU.
+  - subject: hu_dimer
+    predicate: contributes to
+    object: dnaa_hu_complex
+    description: HU is the dimeric protein constituent attached to DnaA.
+    evidence:
+    - reference: GO:1990103
+      notes: GO:1990103 names HU as part of this DnaA-containing complex.
+  - subject: oric_origin_dna
+    predicate: scaffolds
+    object: dnaa_hu_complex
+    description: oriC origin DNA scaffolds the DNA-bound DnaA contacted by HU.
+    evidence:
+    - reference: GO:1990103
+      notes: GO:1990103 defines the complex as a protein-DNA complex and scopes it
+        to DnaA-dependent oriC unwinding.
+    - reference: PMID:18179598
+      notes: Chodavarapu et al. 2008 studied the E. coli replication origin.
+  - subject: dnaa_hu_complex
+    predicate: supports
+    object: dna_replication_initiation
+    description: The DnaA-HU complex supports DNA replication initiation by stimulating
+      DnaA-dependent oriC unwinding.
+    evidence:
+    - reference: GO:1990103
+      notes: GO:1990103 defines the DnaA-HU complex as essential for bacterial replication
+        initiation.
+    - reference: GO:0006270
+      notes: GO:0006270 is the DNA replication initiation process term.
+discussions:
+- discussion_id: resolve_dnaa_hu_component_groundings
+  prompt: Resolve exact source-neutral DnaA, HU and oriC origin DNA groundings for
+    the DnaA-HU complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnaa_initiator
+  - components#hu_dimer
+  - components#oric_origin_dna
+  rationale: GO:1990103 defines the DnaA-HU complex around DNA-bound DnaA, a HU dimer
+    and oriC DNA. Exact source-neutral InterPro, Pfam, NCBIfam, UniProt family or
+    SO sequence-feature CURIEs for these components need narrower curation before
+    the labels can be grounded.
+  evidence:
+  - reference: GO:1990103
+    notes: GO:1990103 names DnaA, HU and DNA as scoped constituents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: distinguish_dnaa_hu_boundary
+  prompt: Keep the GO:1990103 HU-containing complex distinct from DnaA-oriC, DnaA-DiaA
+    and DnaB-DnaC helicase loading.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#dnaa_initiator
+  - components#hu_dimer
+  - components#oric_origin_dna
+  - causal_graphs#dnaa_hu_initiation
+  rationale: GO:1990103 denotes a HU-containing DnaA-DNA complex. GO models the plain
+    DnaA-oriC complex as GO:1990101, the DiaA-containing complex as GO:1990102, and
+    DnaB-DnaC helicase loading separately as GO:1990100.
+  resolution_note: Curated the HU-bound DnaA-DNA boundary and left DiaA stimulation,
+    origin unwinding mechanics and DnaB-DnaC helicase loading as nonmechanistic graph
+    scope.
+  evidence:
+  - reference: GO:1990103
+    notes: GO:1990103 denotes the HU-containing DnaA-DNA complex.
+  - reference: GO:1990101
+    notes: GO:1990101 denotes the DnaA-oriC complex.
+  - reference: GO:1990102
+    notes: GO:1990102 denotes the DiaA-containing DnaA-oriC complex.
+  - reference: GO:1990100
+    notes: GO:1990100 denotes the separate DnaB-DnaC helicase-loading complex.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'

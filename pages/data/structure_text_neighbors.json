@@ -14836,6 +14836,11 @@
           "cosine_similarity": 0.9068975
         },
         {
+          "identifier": "GO:1990103",
+          "label": "DnaA-HU complex",
+          "cosine_similarity": 0.8230023
+        },
+        {
           "identifier": "GO:1990101",
           "label": "DnaA-oriC complex",
           "cosine_similarity": 0.81961665
@@ -14849,11 +14854,6 @@
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.78774397
-        },
-        {
-          "identifier": "GO:1990161",
-          "label": "DnaB helicase complex",
-          "cosine_similarity": 0.76248262
         }
       ]
     },
@@ -15068,9 +15068,9 @@
           "cosine_similarity": 0.76615367
         },
         {
-          "identifier": "GO:1990125",
-          "label": "DiaA complex",
-          "cosine_similarity": 0.75185817
+          "identifier": "GO:1990103",
+          "label": "DnaA-HU complex",
+          "cosine_similarity": 0.76051178
         }
       ]
     },
@@ -15151,6 +15151,11 @@
           "cosine_similarity": 0.9068975
         },
         {
+          "identifier": "GO:1990103",
+          "label": "DnaA-HU complex",
+          "cosine_similarity": 0.89594361
+        },
+        {
           "identifier": "GO:1990157",
           "label": "DnaA-DnaB-DnaC complex",
           "cosine_similarity": 0.86325668
@@ -15159,11 +15164,6 @@
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.81020937
-        },
-        {
-          "identifier": "GO:1990158",
-          "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
-          "cosine_similarity": 0.79430301
         }
       ]
     },
@@ -15175,6 +15175,11 @@
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.93175148
+        },
+        {
+          "identifier": "GO:1990103",
+          "label": "DnaA-HU complex",
+          "cosine_similarity": 0.87364693
         },
         {
           "identifier": "GO:1990101",
@@ -15190,11 +15195,37 @@
           "identifier": "GO:1990160",
           "label": "DnaB-DnaC-Rep-PriC complex",
           "cosine_similarity": 0.82953544
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990103",
+      "label": "DnaA-HU complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990101",
+          "label": "DnaA-oriC complex",
+          "cosine_similarity": 0.9081926
         },
         {
-          "identifier": "GO:1990158",
-          "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
-          "cosine_similarity": 0.82715373
+          "identifier": "GO:1990102",
+          "label": "DnaA-DiaA complex",
+          "cosine_similarity": 0.89594361
+        },
+        {
+          "identifier": "GO:1990157",
+          "label": "DnaA-DnaB-DnaC complex",
+          "cosine_similarity": 0.87364693
+        },
+        {
+          "identifier": "GO:1990100",
+          "label": "DnaB-DnaC complex",
+          "cosine_similarity": 0.82383294
+        },
+        {
+          "identifier": "GO:1990125",
+          "label": "DiaA complex",
+          "cosine_similarity": 0.8230023
         }
       ]
     },
@@ -15206,6 +15237,11 @@
           "identifier": "GO:1990102",
           "label": "DnaA-DiaA complex",
           "cosine_similarity": 0.93330482
+        },
+        {
+          "identifier": "GO:1990103",
+          "label": "DnaA-HU complex",
+          "cosine_similarity": 0.9081926
         },
         {
           "identifier": "GO:1990157",
@@ -15221,11 +15257,6 @@
           "identifier": "GO:1990125",
           "label": "DiaA complex",
           "cosine_similarity": 0.81961665
-        },
-        {
-          "identifier": "GO:0005664",
-          "label": "nuclear origin of replication recognition complex",
-          "cosine_similarity": 0.78211488
         }
       ]
     },
@@ -15254,9 +15285,9 @@
           "cosine_similarity": 0.83754992
         },
         {
-          "identifier": "GO:1990101",
-          "label": "DnaA-oriC complex",
-          "cosine_similarity": 0.82069785
+          "identifier": "GO:1990103",
+          "label": "DnaA-HU complex",
+          "cosine_similarity": 0.82383294
         }
       ]
     },
