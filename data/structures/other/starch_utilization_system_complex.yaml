@@ -1,0 +1,224 @@
+identifier: GO:0044570
+label: starch utilization system complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A bacterial cell envelope-associated multiprotein system, which binds
+  and degrades starch.
+definition_source: GO:0044570
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T14:55:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T14:57:02Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Sus synonym, parentage, outer-membrane SusCDEFG components, B. thetaiotaomicron
+    taxonomy, starch-binding function, evidence, and component-boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-10-01T15:10:49Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHOR
+  changes: Pointed the SusA/SusB/SusR boundary discussion at concrete Sus component
+    anchors.
+  llm_assisted: true
+- timestamp: '2026-10-01T15:23:48Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #1875 review issue #1876 by changing SusE and SusF essentiality
+    from DISPENSABLE to UNKNOWN.'
+  llm_assisted: true
+synonyms:
+- synonym_text: Sus complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0044570
+parent_structures:
+- GO:0098796
+- GO:0140392
+part_of:
+- GO:0009279
+components:
+- component_id: susc_tonb_dependent_transporter
+  label: SusC TonB-dependent starch transporter
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam, or UniProtKB family
+    CURIE was asserted for the SusC starch-system TonB-dependent transporter; broader
+    TonB receptor terms would overgeneralize this component.
+  gene_symbols:
+  - susC
+  essentiality: ESSENTIAL
+  role: Outer-membrane TonB-dependent component that interacts with SusD and participates
+    in starch binding and oligosaccharide uptake.
+  evidence:
+  - reference: DOI:10.1074/jbc.R109.022848
+    notes: Martens et al. 2009 review SusC as the TonB-dependent outer-membrane receptor
+      of the B. thetaiotaomicron starch utilization system.
+  - reference: DOI:10.1128/JB.182.19.5365-5372.2000
+    notes: Shipman et al. 2000 found that SusC contributes to starch binding and interacts
+      with SusD in the outer membrane.
+- component_id: susd_starch_binding_lipoprotein
+  label: SusD starch-binding lipoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family CURIE was asserted for the Bacteroidetes
+    SusD starch-binding lipoprotein; broad SusD-like families would cover non-starch
+    polysaccharide utilization loci.
+  gene_symbols:
+  - susD
+  essentiality: ESSENTIAL
+  role: Surface-exposed outer-membrane lipoprotein that binds starch with SusC as
+    a major starch-binding component.
+  evidence:
+  - reference: DOI:10.1074/jbc.R109.022848
+    notes: Martens et al. 2009 review SusD as one of the outer-membrane lipoproteins
+      exposed by the B. thetaiotaomicron starch utilization system.
+  - reference: DOI:10.1128/JB.182.19.5365-5372.2000
+    notes: Shipman et al. 2000 measured a major SusD contribution to cell-surface
+      starch binding and provided evidence for an outer-membrane SusC-SusD interaction.
+- component_id: suse_starch_binding_lipoprotein
+  label: SusE starch-binding lipoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam, or UniProtKB family
+    CURIE was asserted for the SusE outer-membrane starch-binding lipoprotein.
+  gene_symbols:
+  - susE
+  essentiality: UNKNOWN
+  role: Surface-exposed outer-membrane lipoprotein that enhances SusC- and SusD-dependent
+    starch binding.
+  evidence:
+  - reference: DOI:10.1074/jbc.R109.022848
+    notes: Martens et al. 2009 review SusE as an outer-membrane Sus lipoprotein that
+      is exposed to the external environment.
+  - reference: DOI:10.1128/JB.182.19.5365-5372.2000
+    notes: Shipman et al. 2000 found that SusE contributes to starch binding and increases
+      SusC-SusD binding activity in B. thetaiotaomicron.
+- component_id: susf_starch_binding_lipoprotein
+  label: SusF starch-binding lipoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam, or UniProtKB family
+    CURIE was asserted for the SusF outer-membrane lipoprotein.
+  gene_symbols:
+  - susF
+  essentiality: UNKNOWN
+  role: Surface-exposed outer-membrane lipoprotein associated with the starch-binding
+    Sus complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.R109.022848
+    notes: Martens et al. 2009 review SusF as one of the outer-membrane Sus lipoproteins
+      exposed by the starch utilization system.
+  - reference: DOI:10.1128/JB.182.19.5365-5372.2000
+    notes: Shipman et al. 2000 showed that SusF is surface exposed and protected from
+      proteolysis by amylopectin, supporting its association with bound starch.
+- component_id: susg_alpha_amylase
+  label: SusG alpha-amylase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam, or UniProtKB family
+    CURIE was asserted for the SusG outer-membrane alpha-amylase.
+  gene_symbols:
+  - susG
+  essentiality: ESSENTIAL
+  role: Cell-surface outer-membrane alpha-amylase that hydrolyzes starch after cell-surface
+    binding by SusC/D/E/F.
+  evidence:
+  - reference: DOI:10.1074/jbc.R109.022848
+    notes: Martens et al. 2009 review SusG as an outer-membrane Sus lipoprotein and
+      model it as the surface glycoside hydrolase that degrades bound starch.
+  - reference: DOI:10.1128/JB.181.23.7206-7211.1999
+    notes: Shipman et al. 1999 showed that SusG is an outer-membrane protein exposed
+      on the cell surface whose main role is starch hydrolysis.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:818
+  taxon_label: Bacteroides thetaiotaomicron
+  presence: COMMON
+  note: The B. thetaiotaomicron starch utilization system is encoded by susRABCDEFG
+    and includes the outer-membrane SusCDEFG constituents curated here.
+  reference: DOI:10.1074/jbc.R109.022848
+canonical_examples:
+- taxon_id: NCBITaxon:818
+  taxon_label: Bacteroides thetaiotaomicron
+  note: B. thetaiotaomicron is the model organism in which SusC, SusD, SusE, SusF,
+    and SusG were characterized as outer-membrane starch utilization proteins.
+  reference: DOI:10.1128/JB.182.19.5365-5372.2000
+functions:
+- function_id: cell_surface_starch_binding_and_degradation
+  label: cell-surface starch binding and degradation
+  description: Binds starch at the bacterial cell surface, positions it on SusC/D/E/F
+    outer-membrane proteins, and hydrolyzes starch through the SusG surface alpha-amylase
+    to initiate starch import.
+  evidence:
+  - reference: DOI:10.1128/JB.182.19.5365-5372.2000
+    notes: Shipman et al. 2000 showed that SusC, SusD, and SusE cooperate in starch
+      binding and that SusF is surface exposed in the B. thetaiotaomicron Sus system.
+  - reference: DOI:10.1128/JB.181.23.7206-7211.1999
+    notes: Shipman et al. 1999 established SusG as the Sus outer-membrane protein
+      responsible for cell-surface starch hydrolysis.
+evidence:
+- reference: GO:0044570
+  notes: GO:0044570 is an active cellular-component term for the starch utilization
+    system complex, carries the exact synonym Sus complex, and defines the complex
+    as a bacterial cell-envelope-associated multiprotein system that binds and degrades
+    starch.
+- reference: DOI:10.1074/jbc.R109.022848
+  notes: Martens, Koropatkin, Smith and Gordon 2009 review the Bacteroidetes Sus-like
+    paradigm and the B. thetaiotaomicron starch utilization system.
+- reference: DOI:10.1128/JB.182.19.5365-5372.2000
+  notes: Shipman, Berleman and Salyers 2000 characterized SusC, SusD, SusE, and SusF
+    as outer-membrane proteins involved in binding starch to the B. thetaiotaomicron
+    cell surface.
+- reference: DOI:10.1128/JB.181.23.7206-7211.1999
+  notes: Shipman, Cho, Siegel and Salyers 1999 physiologically characterized SusG
+    as the outer-membrane starch-hydrolyzing component of the Sus system.
+discussions:
+- discussion_id: resolve_sus_component_groundings
+  prompt: Resolve exact source-neutral family groundings for SusC, SusD, SusE, SusF,
+    and SusG in the starch utilization system complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#susc_tonb_dependent_transporter
+  - components#susd_starch_binding_lipoprotein
+  - components#suse_starch_binding_lipoprotein
+  - components#susf_starch_binding_lipoprotein
+  - components#susg_alpha_amylase
+  rationale: The initial record uses reviewed gene-family labels from B. thetaiotaomicron
+    literature and avoids guessing InterPro, Pfam, NCBIfam, or UniProtKB identifiers
+    that could broaden a Sus starch-system component to unrelated TonB transporters,
+    SusD-like proteins, or alpha-amylases.
+  evidence:
+  - reference: DOI:10.1074/jbc.R109.022848
+  - reference: DOI:10.1128/JB.182.19.5365-5372.2000
+  - reference: DOI:10.1128/JB.181.23.7206-7211.1999
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: exclude_susab_susr_from_outer_membrane_complex
+  prompt: Should SusA, SusB, or SusR be curated as constituents of the outer-membrane
+    starch utilization system complex?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#susc_tonb_dependent_transporter
+  - components#susd_starch_binding_lipoprotein
+  - components#suse_starch_binding_lipoprotein
+  - components#susf_starch_binding_lipoprotein
+  - components#susg_alpha_amylase
+  rationale: Martens et al. 2009 place SusA and SusB in the periplasm and describe
+    SusR as an inner-membrane regulator, whereas the curated SusCDEFG constituents
+    are outer-membrane proteins. SusA, SusB, and SusR are therefore out of scope for
+    this outer-membrane complex.
+  evidence:
+  - reference: DOI:10.1074/jbc.R109.022848
+    notes: The review separates outer-membrane SusCDEFG from periplasmic SusA/SusB
+      and the cytoplasmic-membrane regulator SusR.
+  posed_by: codex
+  posed_date: '2026-10-01'

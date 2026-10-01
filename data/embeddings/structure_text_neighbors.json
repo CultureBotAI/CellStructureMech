@@ -19446,6 +19446,37 @@
       ]
     },
     {
+      "identifier": "GO:0044570",
+      "label": "starch utilization system complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990063",
+          "label": "Bam protein complex",
+          "cosine_similarity": 0.67018603
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.63603817
+        },
+        {
+          "identifier": "GO:0030117",
+          "label": "membrane coat",
+          "cosine_similarity": 0.63111475
+        },
+        {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.63069688
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.62488109
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032798",
       "label": "Swi5-Sfr1 complex",
       "neighbors": [
