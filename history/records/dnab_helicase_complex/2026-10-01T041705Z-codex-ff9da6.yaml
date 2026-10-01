@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dnab_helicase_complex.yaml
+  slug: dnab_helicase_complex
+session:
+  id: 2026-10-01T041705Z-codex-ff9da6
+  timestamp: '2026-10-01T04:17:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added DnaB helicase complex record
+  details: Created a GO:1990161-backed DnaB helicase complex record with the DnaB hexamer
+    synonym, DNA-helicase-complex parentage, a reviewed-label-only DnaB component, Geobacillus
+    stearothermophilus evidence from PDB 2R6D and PMID:17947583, DNA helicase activity evidence,
+    a nonmechanistic helicase-activity graph, and a curation discussion for unresolved DnaB
+    family grounding.

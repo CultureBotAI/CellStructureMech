@@ -14376,6 +14376,11 @@
           "cosine_similarity": 0.78902075
         },
         {
+          "identifier": "GO:1990161",
+          "label": "DnaB helicase complex",
+          "cosine_similarity": 0.7788766
+        },
+        {
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.75964686
@@ -14384,11 +14389,6 @@
           "identifier": "GO:1990334",
           "label": "SIN/MEN two-component GAP complex",
           "cosine_similarity": 0.74198554
-        },
-        {
-          "identifier": "GO:0000811",
-          "label": "GINS complex",
-          "cosine_similarity": 0.72010019
         }
       ]
     },
@@ -14805,6 +14805,11 @@
           "cosine_similarity": 0.75069956
         },
         {
+          "identifier": "GO:1990161",
+          "label": "DnaB helicase complex",
+          "cosine_similarity": 0.72044705
+        },
+        {
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.71887435
@@ -14818,11 +14823,6 @@
           "identifier": "GO:0009340",
           "label": "DNA topoisomerase IV complex",
           "cosine_similarity": 0.69423383
-        },
-        {
-          "identifier": "GO:0005658",
-          "label": "alpha DNA polymerase:primase complex",
-          "cosine_similarity": 0.69234111
         }
       ]
     },
@@ -15079,6 +15079,11 @@
       "label": "DnaB-DnaC complex",
       "neighbors": [
         {
+          "identifier": "GO:1990161",
+          "label": "DnaB helicase complex",
+          "cosine_similarity": 0.90805752
+        },
+        {
           "identifier": "GO:1990156",
           "label": "DnaB-DnaG complex",
           "cosine_similarity": 0.86372002
@@ -15097,11 +15102,6 @@
           "identifier": "GO:0071162",
           "label": "CMG complex",
           "cosine_similarity": 0.75964686
-        },
-        {
-          "identifier": "GO:0005663",
-          "label": "DNA replication factor C complex",
-          "cosine_similarity": 0.75284756
         }
       ]
     },
@@ -15113,6 +15113,11 @@
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.86372002
+        },
+        {
+          "identifier": "GO:1990161",
+          "label": "DnaB helicase complex",
+          "cosine_similarity": 0.85591883
         },
         {
           "identifier": "GO:0005658",
@@ -15128,11 +15133,37 @@
           "identifier": "GO:0042555",
           "label": "MCM complex",
           "cosine_similarity": 0.78892309
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990161",
+      "label": "DnaB helicase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990100",
+          "label": "DnaB-DnaC complex",
+          "cosine_similarity": 0.90805752
+        },
+        {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.85591883
+        },
+        {
+          "identifier": "GO:0071162",
+          "label": "CMG complex",
+          "cosine_similarity": 0.7788766
+        },
+        {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.77240523
         },
         {
           "identifier": "GO:0044777",
           "label": "single-stranded DNA-binding protein complex",
-          "cosine_similarity": 0.77847291
+          "cosine_similarity": 0.76064166
         }
       ]
     },
@@ -18814,14 +18845,14 @@
           "cosine_similarity": 0.76615367
         },
         {
+          "identifier": "GO:1990161",
+          "label": "DnaB helicase complex",
+          "cosine_similarity": 0.76064166
+        },
+        {
           "identifier": "GO:0042555",
           "label": "MCM complex",
           "cosine_similarity": 0.75586452
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.71780139
         }
       ]
     },
