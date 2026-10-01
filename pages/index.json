@@ -5607,6 +5607,15 @@
   "definition": "A complex that is capable of kinase activity directed towards the C-terminal Domain (CTD) of the largest subunit of RNA polymerase II and is essential for initiation at RNA polymerase II promoters in vitro. It is composed of the core TFIIH complex and the TFIIK complex."
  },
  {
+  "identifier": "GO:0070985",
+  "label": "transcription factor TFIIK complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/transcription_factor_tfiik_complex.html",
+  "definition": "A transcription factor complex that forms part of the holo TFIIH complex. In Saccharomyces/human, TFIIK contains Ccl1p/Cyclin H, Tfb3p/MAT1 and Kin28p/CDK7."
+ },
+ {
   "identifier": "GO:1990070",
   "label": "TRAPPI protein complex",
   "category": "OTHER",

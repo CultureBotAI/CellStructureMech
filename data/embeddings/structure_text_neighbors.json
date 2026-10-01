@@ -14061,6 +14061,11 @@
           "cosine_similarity": 0.69490312
         },
         {
+          "identifier": "GO:0070985",
+          "label": "transcription factor TFIIK complex",
+          "cosine_similarity": 0.69328158
+        },
+        {
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.69277957
@@ -14074,11 +14079,6 @@
           "identifier": "GO:0005675",
           "label": "transcription factor TFIIH holo complex",
           "cosine_similarity": 0.68699789
-        },
-        {
-          "identifier": "GO:1990334",
-          "label": "SIN/MEN two-component GAP complex",
-          "cosine_similarity": 0.68421344
         }
       ]
     },
@@ -14536,14 +14536,14 @@
           "cosine_similarity": 0.81934984
         },
         {
+          "identifier": "GO:0070985",
+          "label": "transcription factor TFIIK complex",
+          "cosine_similarity": 0.76268095
+        },
+        {
           "identifier": "GO:0000112",
           "label": "nucleotide-excision repair factor 3 complex",
           "cosine_similarity": 0.7053997
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.69928661
         }
       ]
     },
@@ -19279,14 +19279,14 @@
           "cosine_similarity": 0.82473812
         },
         {
+          "identifier": "GO:0070985",
+          "label": "transcription factor TFIIK complex",
+          "cosine_similarity": 0.80373358
+        },
+        {
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.74253861
-        },
-        {
-          "identifier": "GO:0000112",
-          "label": "nucleotide-excision repair factor 3 complex",
-          "cosine_similarity": 0.73916653
         }
       ]
     },
@@ -19294,6 +19294,11 @@
       "identifier": "GO:0005675",
       "label": "transcription factor TFIIH holo complex",
       "neighbors": [
+        {
+          "identifier": "GO:0070985",
+          "label": "transcription factor TFIIK complex",
+          "cosine_similarity": 0.9048733
+        },
         {
           "identifier": "GO:0000438",
           "label": "core TFIIH complex portion of holo TFIIH complex",
@@ -19313,11 +19318,37 @@
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.78639333
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0070985",
+      "label": "transcription factor TFIIK complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005675",
+          "label": "transcription factor TFIIH holo complex",
+          "cosine_similarity": 0.9048733
         },
         {
-          "identifier": "GO:0000112",
-          "label": "nucleotide-excision repair factor 3 complex",
-          "cosine_similarity": 0.76763258
+          "identifier": "GO:0000439",
+          "label": "transcription factor TFIIH core complex",
+          "cosine_similarity": 0.80373358
+        },
+        {
+          "identifier": "GO:0000438",
+          "label": "core TFIIH complex portion of holo TFIIH complex",
+          "cosine_similarity": 0.76268095
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.76009057
+        },
+        {
+          "identifier": "GO:0031431",
+          "label": "Dbf4-dependent protein kinase complex",
+          "cosine_similarity": 0.73429398
         }
       ]
     },
