@@ -4770,6 +4770,15 @@
   "definition": "A multisubunit membrane protein complex that attaches preassembled glycosylphosphatidylinositol anchors to proteins."
  },
  {
+  "identifier": "GO:1990220",
+  "label": "GroEL-GroES complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/groel_groes_complex.html",
+  "definition": "Bacterial chaperonin complex consisting of a heptameric 10kDa chaperonin subunit GroES and a tetradecameric (2x7) 60kDa chaperonin subunit GroEL. The 60kDa subunit possesses ATPase activity while the holo-enzyme is responsible for the correct folding of proteins."
+ },
+ {
   "identifier": "GO:1990131",
   "label": "Gtr1-Gtr2 GTPase complex",
   "category": "OTHER",

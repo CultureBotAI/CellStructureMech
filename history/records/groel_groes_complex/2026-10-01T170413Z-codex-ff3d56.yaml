@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/groel_groes_complex.yaml
+  slug: groel_groes_complex
+session:
+  id: 2026-10-01T170413Z-codex-ff3d56
+  timestamp: '2026-10-01T17:04:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GroEL-GroES complex record
+  details: Created a GO:1990220-backed GroEL-GroES complex record with GO related synonymy,
+    chaperonin ATPase parentage, InterPro-grounded GroEL and GroES components, RCSB/UniProt-backed
+    Escherichia coli protein examples, an Escherichia coli PDB:1AON canonical example, protein-folding
+    function evidence, a PDB-backed subunit count, and DOI/PMID/PDB evidence from Xu, Horwich
+    and Sigler 1997.

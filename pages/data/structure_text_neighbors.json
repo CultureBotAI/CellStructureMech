@@ -14087,6 +14087,11 @@
       "label": "chaperonin-containing T-complex",
       "neighbors": [
         {
+          "identifier": "GO:1990220",
+          "label": "GroEL-GroES complex",
+          "cosine_similarity": 0.74236187
+        },
+        {
           "identifier": "GO:0033281",
           "label": "TAT protein transport complex",
           "cosine_similarity": 0.69490312
@@ -14105,11 +14110,6 @@
           "identifier": "GO:0034270",
           "label": "Cvt complex",
           "cosine_similarity": 0.69229911
-        },
-        {
-          "identifier": "GO:0005675",
-          "label": "transcription factor TFIIH holo complex",
-          "cosine_similarity": 0.68699789
         }
       ]
     },
@@ -16435,6 +16435,37 @@
           "identifier": "GO:1990071",
           "label": "TRAPPII protein complex",
           "cosine_similarity": 0.72145121
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990220",
+      "label": "GroEL-GroES complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005832",
+          "label": "chaperonin-containing T-complex",
+          "cosine_similarity": 0.74236187
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.68909489
+        },
+        {
+          "identifier": "GO:0032865",
+          "label": "ERMES complex",
+          "cosine_similarity": 0.68393058
+        },
+        {
+          "identifier": "GO:0031205",
+          "label": "endoplasmic reticulum Sec complex",
+          "cosine_similarity": 0.67948112
+        },
+        {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.67296657
         }
       ]
     },
