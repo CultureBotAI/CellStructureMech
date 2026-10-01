@@ -19973,6 +19973,37 @@
       ]
     },
     {
+      "identifier": "GO:1990205",
+      "label": "taurine dioxygenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.67839197
+        },
+        {
+          "identifier": "GO:0045273",
+          "label": "respiratory chain complex II (succinate dehydrogenase)",
+          "cosine_similarity": 0.66541141
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.66166306
+        },
+        {
+          "identifier": "GO:0045275",
+          "label": "respiratory chain complex III",
+          "cosine_similarity": 0.64658423
+        },
+        {
+          "identifier": "GO:1990200",
+          "label": "SsuD-SsuE complex",
+          "cosine_similarity": 0.6414333
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000347",
       "label": "THO complex",
       "neighbors": [

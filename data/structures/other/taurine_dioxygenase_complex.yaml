@@ -1,0 +1,183 @@
+identifier: GO:1990205
+label: taurine dioxygenase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex capable of catalyzing the conversion of taurine and
+  alpha-ketoglutarate to sulfite, aminoacetaldehyde and succinate under sulfur or
+  cysteine starvation conditions. Its expression is repressed by the presence of sulfate
+  or cysteine. In E. coli it is a homodimer or homotetramer of the protein TauD.
+definition_source: GO:1990205
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T23:18:05Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T23:19:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact and narrow synonymy, GO:1990204 oxidoreductase-complex parentage,
+    cytosol parthood, a reviewed-label-only TauD component with an E. coli K-12 UniProt
+    example, an E. coli PDB:1OS7 homodimer example, taurine dioxygenase activity,
+    PDB-specific dimer subunit count, and PMID/DOI evidence.
+  llm_assisted: true
+- timestamp: '2026-10-01T23:20:10Z'
+  curator: codex
+  action: REFINED_EVIDENCE_SCOPE
+  changes: Narrowed the E. coli canonical-example note so its PDB:1OS7 reference only
+    supports the ligand-bound homodimeric TauD structure.
+  llm_assisted: true
+- timestamp: '2026-10-01T23:36:50Z'
+  curator: codex
+  action: REFINED_GROUNDING_NOTES
+  changes: Narrowed TauD grounding notes to the verified broad InterPro entries found
+    during PR review, removing unsupported Pfam and NCBIfam wording.
+  llm_assisted: true
+synonyms:
+- synonym_text: 2-aminoethanesulfonate dioxygenase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990205
+- synonym_text: alpha-ketoglutarate-dependent taurine dioxygenase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990205
+- synonym_text: TauD complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990205
+parent_structures:
+- GO:1990204
+part_of:
+- GO:0005829
+components:
+- component_id: taud_taurine_dioxygenase
+  label: alpha-ketoglutarate-dependent taurine dioxygenase TauD
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - tauD
+  stoichiometry: 2 copies per E. coli TauD dimer in PDB:1OS7 biological assembly 1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: 'The reviewed E. coli TauD accession maps to broad InterPro entries:
+    InterPro:IPR051323 alpha-ketoglutarate-dependent sulfate ester dioxygenase-like
+    family and InterPro:IPR003819 TauD/TfdA-like domain. Both entries also cover non-TauD
+    dioxygenases, so no exact InterPro family CURIE was asserted for TauD alone.'
+  role: Iron- and 2-oxoglutarate-dependent taurine dioxygenase subunit that homooligomerizes
+    to release sulfite from taurine during sulfur starvation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P37610
+    protein_label: Alpha-ketoglutarate-dependent taurine dioxygenase
+    gene_symbol: tauD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 TauD accession for the taurine dioxygenase subunit
+      represented by GO:1990205.
+    evidence:
+    - reference: UniProtKB:P37610
+      notes: UniProtKB P37610 is the reviewed E. coli K-12 entry for TauD.
+    - reference: PMID:9287300
+      notes: Eichhorn et al. 1997 characterized E. coli TauD as the alpha-ketoglutarate-dependent
+        taurine dioxygenase.
+  evidence:
+  - reference: GO:1990205
+    notes: GO:1990205 defines the E. coli taurine dioxygenase complex as a TauD homodimer
+      or homotetramer.
+  - reference: UniProtKB:P37610
+    notes: UniProtKB maps reviewed E. coli K-12 TauD to GO:1990205.
+  - reference: PDB:1OS7
+    notes: RCSB maps PDB:1OS7 polymer entity 1 to UniProtKB:P37610 and describes the
+      TauD biological assemblies as homodimeric.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli source of the ligand-bound homodimeric TauD structure deposited as
+    PDB:1OS7.
+  reference: PDB:1OS7
+functions:
+- function_id: taurine_dioxygenase_activity
+  label: taurine dioxygenase activity
+  grounding: GO:0000908
+  description: The E. coli TauD complex oxidatively converts taurine and 2-oxoglutarate
+    to aminoacetaldehyde, sulfite, succinate, and carbon dioxide.
+  evidence:
+  - reference: GO:0000908
+    notes: GO:0000908 is the molecular-function term for taurine dioxygenase activity.
+  - reference: PMID:9287300
+    notes: Eichhorn et al. 1997 purified and characterized alpha-ketoglutarate-dependent
+      taurine dioxygenase from E. coli.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '2'
+  context: E. coli TauD homodimer in PDB:1OS7 biological assembly 1
+  reference: PDB:1OS7
+evidence:
+- reference: GO:1990205
+  notes: Gene Ontology cellular-component term for the taurine dioxygenase complex
+    and source of the synonymy.
+- reference: GO:1990204
+  notes: GO:1990205 is an is-a descendant of GO:1990204 oxidoreductase complex.
+- reference: GO:0005829
+  notes: QuickGO reports GO:1990205 as part of the cytosol.
+- reference: GO:0000908
+  notes: Gene Ontology molecular-function term for taurine dioxygenase activity.
+- reference: InterPro:IPR051323
+  notes: InterPro family entry for alpha-ketoglutarate-dependent sulfate ester dioxygenase-like
+    proteins; this broad family was not used as exact grounding for TauD.
+- reference: InterPro:IPR003819
+  notes: InterPro domain entry for the TauD/TfdA-like domain; this broad domain was
+    not used as exact grounding for TauD.
+- reference: UniProtKB:P37610
+  notes: UniProtKB reviewed E. coli K-12 TauD entry.
+- reference: PDB:1OS7
+  notes: RCSB Protein Data Bank entry for ligand-bound E. coli TauD homodimeric structures.
+- reference: PMID:9287300
+  notes: PubMed identifier for Eichhorn et al. 1997, the Journal of Biological Chemistry
+    TauD biochemical characterization paper.
+- reference: DOI:10.1074/jbc.272.37.23031
+  notes: DOI for Eichhorn et al. 1997, 'Characterization of alpha-Ketoglutarate-dependent
+    Taurine Dioxygenase from Escherichia coli'.
+- reference: PMID:12741810
+  notes: PubMed identifier for O'Brien et al. 2003, the Biochemistry structural paper
+    cited by GO:1990205 and PDB:1OS7.
+- reference: DOI:10.1021/bi0341096
+  notes: DOI for O'Brien et al. 2003, 'Substrate-Induced Conformational Changes in
+    Escherichia coli Taurine/alpha-Ketoglutarate Dioxygenase and Insight into the
+    Oligomeric Structure'.
+discussions:
+- discussion_id: resolve_taud_grounding
+  prompt: Resolve an exact source-neutral family grounding for TauD taurine dioxygenase.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#taud_taurine_dioxygenase
+  rationale: The first record represents TauD by its reviewed E. coli gene name and
+    avoids mapping it to InterPro:IPR051323 or InterPro:IPR003819 because those entries
+    also cover non-TauD dioxygenases.
+  evidence:
+  - reference: InterPro:IPR051323
+    notes: InterPro IPR051323 is named alpha-ketoglutarate-dependent sulfate ester
+      dioxygenase-like.
+  - reference: InterPro:IPR003819
+    notes: InterPro IPR003819 is named TauD/TfdA-like domain.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: do_not_assert_fixed_taud_oligomer_count
+  prompt: Should the taurine dioxygenase complex assert one fixed dimer or tetramer
+    stoichiometry?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: No. GO:1990205 defines E. coli TauD as a homodimer or homotetramer, while
+    PDB:1OS7 contains separate homodimeric biological assemblies. This record cites
+    the PDB-specific dimer measurement but leaves the class-level TauD homo-oligomer
+    boundary flexible.
+  evidence:
+  - reference: GO:1990205
+    notes: GO:1990205 defines the E. coli taurine dioxygenase complex as homodimeric
+      or homotetrameric.
+  - reference: PDB:1OS7
+    notes: RCSB describes the PDB:1OS7 TauD biological assemblies as dimeric E. coli
+      assemblies.
+  posed_by: codex
+  posed_date: '2026-10-01'
