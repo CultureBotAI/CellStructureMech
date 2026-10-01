@@ -1,0 +1,119 @@
+identifier: GO:1990065
+label: Dxr protein complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that is involved in the MEP pathway of IPP biosynthesis.
+  It catalyzes the NADP-dependent rearrangement and reduction of 1-deoxy-D-xylulose-5-phosphate
+  (DXP) to 2-C-methyl-D-erythritol 4-phosphate (MEP).
+definition_source: GO:1990065
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T18:16:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T18:17:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO exact synonym and protein-containing-complex parent, grounded
+    the Dxr constituent to exact InterPro family IPR003821, added the E. coli PDB:1Q0Q
+    homodimeric structure with a reviewed UniProt example, and cited DOI/PMID/PDB
+    evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: 1-deoxy-D-xylulose 5-phosphate reductoisomerase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990065
+parent_structures:
+- GO:0032991
+components:
+- component_id: dxr_reductoisomerase
+  label: 1-deoxy-D-xylulose 5-phosphate reductoisomerase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR003821
+  gene_symbols:
+  - dxr
+  - ispC
+  stoichiometry: 2 copies per E. coli Dxr homodimer in PDB:1Q0Q
+  essentiality: UNKNOWN
+  role: Homodimeric reductoisomerase subunit that catalyzes the NADPH-dependent DXP-to-MEP
+    step of the methylerythritol phosphate pathway.
+  protein_examples:
+  - uniprot_id: UniProtKB:P45568
+    protein_label: 1-deoxy-D-xylulose 5-phosphate reductoisomerase
+    gene_symbol: dxr
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 Dxr accession mapped by RCSB to the two protein chains
+      in PDB:1Q0Q.
+    evidence:
+    - reference: UniProtKB:P45568
+      notes: UniProtKB P45568 is the reviewed Escherichia coli K-12 entry for Dxr,
+        also named IspC.
+    - reference: PDB:1Q0Q
+      notes: RCSB SIFTS maps PDB:1Q0Q polymer entity 1 to UniProtKB:P45568 with two
+        E. coli Dxr chains.
+  evidence:
+  - reference: GO:1990065
+    notes: GO:1990065 defines the Dxr protein complex by its role in the MEP pathway
+      and DXP-to-MEP reductoisomerase reaction.
+  - reference: InterPro:IPR003821
+    notes: InterPro IPR003821 is the 1-deoxy-D-xylulose 5-phosphate reductoisomerase
+      family entry.
+  - reference: PDB:1Q0Q
+    notes: RCSB describes PDB:1Q0Q as a homomeric E. coli Dxr protein structure with
+      two deposited polymer instances.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli source of the two-chain Dxr structure in complex with NADPH and 1-deoxy-D-xylulose
+    5-phosphate deposited as PDB:1Q0Q.
+  reference: PDB:1Q0Q
+functions:
+- function_id: deoxy_d_xylulose_5_phosphate_reductoisomerase_activity
+  label: 1-deoxy-D-xylulose-5-phosphate reductoisomerase activity
+  grounding: GO:0030604
+  description: The Dxr homodimer catalyzes the NADPH-dependent rearrangement and reduction
+    of 1-deoxy-D-xylulose 5-phosphate to 2-C-methyl-D-erythritol 4-phosphate in the
+    MEP pathway.
+  evidence:
+  - reference: GO:1990065
+    notes: GO:1990065 defines the Dxr protein complex by the NADP-dependent DXP-to-MEP
+      rearrangement and reduction.
+  - reference: GO:0030604
+    notes: GO:0030604 is the Gene Ontology molecular-function term for 1-deoxy-D-xylulose-5-phosphate
+      reductoisomerase activity.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '2'
+  context: E. coli Dxr homodimer in PDB:1Q0Q
+  reference: PDB:1Q0Q
+evidence:
+- reference: GO:1990065
+  notes: Gene Ontology cellular-component term for the Dxr protein complex and source
+    of its exact 1-deoxy-D-xylulose 5-phosphate reductoisomerase complex synonym.
+- reference: GO:0032991
+  notes: QuickGO reports GO:1990065 Dxr protein complex as an is-a child of GO:0032991
+    protein-containing complex.
+- reference: GO:0030604
+  notes: Gene Ontology molecular-function term for 1-deoxy-D-xylulose-5-phosphate
+    reductoisomerase activity.
+- reference: InterPro:IPR003821
+  notes: InterPro family entry for 1-deoxy-D-xylulose 5-phosphate reductoisomerases.
+- reference: UniProtKB:P45568
+  notes: UniProtKB reviewed E. coli K-12 Dxr entry.
+- reference: PDB:1Q0Q
+  notes: RCSB Protein Data Bank entry for the E. coli Dxr homodimeric structure with
+    1-deoxy-D-xylulose 5-phosphate and NADPH.
+- reference: PMID:15567415
+  notes: PubMed identifier for Mac Sweeney et al. 2005, the Journal of Molecular Biology
+    E. coli Dxr structural paper cited by PDB:1Q0Q.
+- reference: DOI:10.1016/j.jmb.2004.10.030
+  notes: DOI for Mac Sweeney et al. 2005, 'The crystal structure of E.coli 1-deoxy-D-xylulose-5-phosphate
+    reductoisomerase in a ternary complex with the antimalarial compound fosmidomycin
+    and NADPH reveals a tight-binding closed enzyme conformation', as reported by
+    PubMed.
