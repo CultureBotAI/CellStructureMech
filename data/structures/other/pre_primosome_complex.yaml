@@ -23,6 +23,12 @@ curation_history:
     and replication-restart function evidence, a nonmechanistic pre-primosome graph,
     and grounding/boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-01T10:23:19Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: '#1866: Replaced the GO-backed E. coli taxonomic-distribution row with
+    direct Ng and Marians PhiX174-type preprimosome evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: pre-priming complex
   synonym_type: EXACT_SYNONYM
@@ -94,9 +100,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
   presence: COMMON
-  note: GO's narrower E. coli pre-primosomes include the DnaA-DnaB-DnaC initiation
-    complex and PhiX174-type DnaB-DnaC restart assemblies.
-  reference: GO:1990099
+  note: Ng and Marians 1996 isolated PhiX174-type E. coli preprimosomal and primosomal
+    protein-DNA complexes assembled on single-stranded primosome assembly site DNA.
+  reference: PMID:8663105
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli

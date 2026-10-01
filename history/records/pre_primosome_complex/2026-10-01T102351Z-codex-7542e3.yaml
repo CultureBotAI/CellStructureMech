@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/pre_primosome_complex.yaml
+  slug: pre_primosome_complex
+session:
+  id: 2026-10-01T102351Z-codex-7542e3
+  timestamp: '2026-10-01T10:23:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1866
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1865
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomy
+  - evidence
+  summary: Fixed pre-primosome taxonomic evidence scope
+  details: 'Addressed PR #1865 review issue #1866 by replacing the GO:1990099-backed Escherichia
+    coli taxonomic-distribution row with direct PMID:8663105 Ng and Marians PhiX174-type preprimosome
+    evidence, while preserving the generic GO:1990099 identity and pre-primosome boundary.'
