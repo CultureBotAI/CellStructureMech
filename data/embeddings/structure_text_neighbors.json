@@ -15156,14 +15156,14 @@
           "cosine_similarity": 0.86325668
         },
         {
+          "identifier": "GO:1990160",
+          "label": "DnaB-DnaC-Rep-PriC complex",
+          "cosine_similarity": 0.82953544
+        },
+        {
           "identifier": "GO:1990158",
           "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
           "cosine_similarity": 0.82715373
-        },
-        {
-          "identifier": "GO:1990161",
-          "label": "DnaB helicase complex",
-          "cosine_similarity": 0.81900756
         }
       ]
     },
@@ -15218,14 +15218,14 @@
           "cosine_similarity": 0.86372002
         },
         {
+          "identifier": "GO:1990160",
+          "label": "DnaB-DnaC-Rep-PriC complex",
+          "cosine_similarity": 0.83754992
+        },
+        {
           "identifier": "GO:1990101",
           "label": "DnaA-oriC complex",
           "cosine_similarity": 0.82069785
-        },
-        {
-          "identifier": "GO:1990158",
-          "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
-          "cosine_similarity": 0.8106083
         }
       ]
     },
@@ -15237,6 +15237,11 @@
           "identifier": "GO:1990159",
           "label": "DnaB-DnaC-DnaT-PriA-PriC complex",
           "cosine_similarity": 0.99154772
+        },
+        {
+          "identifier": "GO:1990160",
+          "label": "DnaB-DnaC-Rep-PriC complex",
+          "cosine_similarity": 0.9645716
         },
         {
           "identifier": "GO:1990156",
@@ -15252,11 +15257,6 @@
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.8106083
-        },
-        {
-          "identifier": "GO:1990102",
-          "label": "DnaA-DiaA complex",
-          "cosine_similarity": 0.79430301
         }
       ]
     },
@@ -15268,6 +15268,11 @@
           "identifier": "GO:1990158",
           "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
           "cosine_similarity": 0.99154772
+        },
+        {
+          "identifier": "GO:1990160",
+          "label": "DnaB-DnaC-Rep-PriC complex",
+          "cosine_similarity": 0.97048668
         },
         {
           "identifier": "GO:1990156",
@@ -15283,11 +15288,37 @@
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.79226935
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990160",
+      "label": "DnaB-DnaC-Rep-PriC complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990159",
+          "label": "DnaB-DnaC-DnaT-PriA-PriC complex",
+          "cosine_similarity": 0.97048668
         },
         {
-          "identifier": "GO:1990102",
-          "label": "DnaA-DiaA complex",
-          "cosine_similarity": 0.77343376
+          "identifier": "GO:1990158",
+          "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
+          "cosine_similarity": 0.9645716
+        },
+        {
+          "identifier": "GO:1990100",
+          "label": "DnaB-DnaC complex",
+          "cosine_similarity": 0.83754992
+        },
+        {
+          "identifier": "GO:1990157",
+          "label": "DnaA-DnaB-DnaC complex",
+          "cosine_similarity": 0.82953544
+        },
+        {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.82536864
         }
       ]
     },
@@ -15316,9 +15347,9 @@
           "cosine_similarity": 0.82905031
         },
         {
-          "identifier": "GO:1990157",
-          "label": "DnaA-DnaB-DnaC complex",
-          "cosine_similarity": 0.81878954
+          "identifier": "GO:1990160",
+          "label": "DnaB-DnaC-Rep-PriC complex",
+          "cosine_similarity": 0.82536864
         }
       ]
     },
@@ -15342,14 +15373,14 @@
           "cosine_similarity": 0.81900756
         },
         {
+          "identifier": "GO:1990160",
+          "label": "DnaB-DnaC-Rep-PriC complex",
+          "cosine_similarity": 0.78485245
+        },
+        {
           "identifier": "GO:0071162",
           "label": "CMG complex",
           "cosine_similarity": 0.7788766
-        },
-        {
-          "identifier": "GO:0042555",
-          "label": "MCM complex",
-          "cosine_similarity": 0.77240523
         }
       ]
     },

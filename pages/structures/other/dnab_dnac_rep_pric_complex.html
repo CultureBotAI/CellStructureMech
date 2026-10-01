@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DnaB-DnaC-Rep-PriC complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>DnaB-DnaC-Rep-PriC complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> · OTHER · NUCLEOPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A protein-DNA complex consisting of the helicase loading complex DnaB-DnaC, replication restart proteins Rep and PriC, and associated DNA. Involved in the restart of DNA replication after a stalled replication fork has been repaired. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a>]</small></p>
+<p><strong>Synonyms:</strong> DnaB-DnaC-Rep-PriC preprimosome; phi-X174-type preprimosome</p><p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_1990100"><code>GO:1990100</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-dnab_dnac_complex"><td>DnaB-DnaC complex</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_1990100"><code>GO:1990100</code></a></td><td></td><td></td><td>UNKNOWN</td><td>Helicase-loading subcomplex in the Rep/PriC preprimosome.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>GO:1990160 defines this preprimosome as containing the DnaB-DnaC helicase-loading complex.</small></li></ul></td></tr>
+<tr id="components-rep_helicase"><td>Rep helicase</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>rep</td><td></td><td>UNKNOWN</td><td>Replication-restart helicase in the Rep/PriC branch.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>GO:1990160 defines Rep as a constituent of this preprimosome.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19941825"><code>PMID:19941825</code></a> <small>Guy et al. 2009 used reconstituted E. coli replisomes to study Rep helicase activity at blocked forks.</small></li></ul></td></tr>
+<tr id="components-pric_restart_protein"><td>PriC replication restart protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>priC</td><td></td><td>UNKNOWN</td><td>Replication-restart protein in the Rep/PriC branch.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>GO:1990160 defines PriC as a constituent of this preprimosome.</small></li></ul></td></tr>
+<tr id="components-primosome_assembly_site_dna"><td>primosome assembly site DNA</td><td>DNA</td><td>part of</td><td></td><td></td><td></td><td>UNKNOWN</td><td>Single-stranded DNA scaffold carrying the primosome assembly site.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>GO:1990160 defines this preprimosome as a protein-DNA complex.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> Escherichia coli — <strong>COMMON</strong>: Guy et al. 2009 used reconstituted E. coli replisomes to study Rep at replication forks. [<a href="https://pubmed.ncbi.nlm.nih.gov/19941825"><code>PMID:19941825</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> <em>Escherichia coli</em> — Guy et al. 2009 reconstituted E. coli replisomes to analyze Rep function at forks blocked by protein-DNA complexes. [<a href="https://pubmed.ncbi.nlm.nih.gov/19941825"><code>PMID:19941825</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>replication fork processing</strong> <a href="http://purl.obolibrary.org/obo/GO_0031297"><code>GO:0031297</code></a> — The DnaB-DnaC-Rep-PriC preprimosome participates in restarting repaired stalled replication forks.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>GO:1990160 defines this preprimosome by replication restart after a stalled replication fork has been repaired.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031297"><code>GO:0031297</code></a> <small>GO:0031297 is the Gene Ontology biological-process term for restoring and restarting a stalled DNA replication fork.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-dnab_dnac_rep_pric_restart">DnaB-DnaC-Rep-PriC supports fork restart <small>(FUNCTION)</small></h3>
+<p>A DnaB-DnaC helicase-loading subcomplex and Rep and PriC assemble on single-stranded primosome assembly site DNA to form a preprimosome used in replication restart.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>DnaB-DnaC complex</td><td>contributes to</td><td>DnaB-DnaC-Rep-PriC complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>GO:1990160 includes the DnaB-DnaC helicase-loading complex.</small></li></ul></td></tr>
+<tr><td>Rep helicase</td><td>contributes to</td><td>DnaB-DnaC-Rep-PriC complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>GO:1990160 names Rep as a replication-restart constituent.</small></li></ul></td></tr>
+<tr><td>PriC replication restart protein</td><td>contributes to</td><td>DnaB-DnaC-Rep-PriC complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>GO:1990160 names PriC as a replication-restart constituent.</small></li></ul></td></tr>
+<tr><td>primosome assembly site DNA</td><td>scaffolds</td><td>DnaB-DnaC-Rep-PriC complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>GO:1990160 defines this entity as a protein-DNA complex.</small></li></ul></td></tr>
+<tr><td>DnaB-DnaC-Rep-PriC complex</td><td>supports</td><td>replication fork processing</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>GO:1990160 defines this preprimosome by its involvement in replication restart after stalled replication fork repair.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031297"><code>GO:0031297</code></a> <small>GO:0031297 defines replication fork processing as restoration and restart of a stalled DNA replication fork.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral Rep, PriC and primosome assembly site DNA groundings for the DnaB-DnaC-Rep-PriC complex. <small>GO:1990160 defines Rep, PriC and associated DNA as constituents of this preprimosome. Exact source-neutral InterPro, Pfam, NCBIfam, UniProt family or SO sequence-feature CURIEs for these components need narrower curation before the labels can be grounded.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Leave PriA, PriB, DnaT and DnaG out of the GO:1990160 DnaB-DnaC-Rep-PriC complex. <small>GO:1990160 denotes the Rep/PriC/DnaB-DnaC preprimosome. GO models PriA/PriB/DnaT and PriA/PriC/DnaT alternatives as separate sibling terms and models DnaG-containing entities as primosomes rather than pre-primosomes.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990160"><code>GO:1990160</code></a> <small>Gene Ontology cellular-component term for the DnaB-DnaC-Rep-PriC complex and its exact preprimosome synonymy.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990099"><code>GO:1990099</code></a> <small>QuickGO reports GO:1990160 as an is-a child of GO:1990099 pre-primosome complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990100"><code>GO:1990100</code></a> <small>Gene Ontology cellular-component term for the DnaB-DnaC helicase-loading subcomplex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990158"><code>GO:1990158</code></a> <small>Gene Ontology cellular-component term for the PriA/PriB/DnaT preprimosome sibling.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990159"><code>GO:1990159</code></a> <small>Gene Ontology cellular-component term for the PriA/PriC/DnaT preprimosome sibling.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031297"><code>GO:0031297</code></a> <small>Gene Ontology biological-process term for replication fork processing.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19941825"><code>PMID:19941825</code></a> <small>PubMed identifier for Guy et al. 2009, the Molecular Cell paper cited by GO:1990160.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2009.11.009"><code>DOI:10.1016/j.molcel.2009.11.009</code></a> <small>DOI for Guy et al. 2009, &#39;Rep provides a second motor at the replisome to promote duplication of protein-bound DNA&#39;, as reported by PubMed.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/8663105"><code>PMID:8663105</code></a> <small>PubMed identifier for Ng and Marians 1996 part II, the second paper cited by GO:1990160.</small></li><li><a href="https://doi.org/10.1074/jbc.271.26.15649"><code>DOI:10.1074/jbc.271.26.15649</code></a> <small>DOI for Ng and Marians 1996, &#39;The ordered assembly of the phiX174-type primosome. II. Preservation of primosome composition from assembly through replication&#39;, as reported by PubMed.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-01T08:46:25Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-01T08:47:15Z</code> codex · EXPANDED_RECORD — Added GO synonymy, pre-primosome parentage, the DnaB-DnaC subcomplex and Rep/PriC/DNA components, Escherichia coli Rep evidence, replication-fork-processing function evidence, GO/PubMed/DOI evidence, a nonmechanistic Rep/PriC-branch restart graph, and grounding/boundary discussions.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dnab_dnac_rep_pric_complex.yaml"><code>data/structures/other/dnab_dnac_rep_pric_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>
