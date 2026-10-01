@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/methionine_importing_abc_transporter_complex.yaml
+  slug: methionine_importing_abc_transporter_complex
+session:
+  id: 2026-10-01T224813Z-codex-2b20c0
+  timestamp: '2026-10-01T22:48:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added methionine-importing ABC transporter complex record
+  details: Created a GO:1990197-backed methionine-importing ABC transporter complex record
+    with GO exact and narrow synonymy, GO:1902495 transmembrane transporter complex parentage,
+    MetN, MetI, and MetQ constituents with reviewed E. coli K-12 UniProt examples, an E. coli
+    K-12 PDB:6CVL-backed MetN2I2Q canonical example, L- and D-methionine transporter activities,
+    2:2:1 stoichiometry, label-only MetI and MetQ grounding follow-up, and DOI/PMID evidence
+    from the MetNI and MetNIQ structural literature.
