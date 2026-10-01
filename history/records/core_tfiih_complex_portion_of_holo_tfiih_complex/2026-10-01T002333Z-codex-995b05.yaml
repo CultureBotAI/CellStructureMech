@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/core_tfiih_complex_portion_of_holo_tfiih_complex.yaml
+  slug: core_tfiih_complex_portion_of_holo_tfiih_complex
+session:
+  id: 2026-10-01T002333Z-codex-995b05
+  timestamp: '2026-10-01T00:23:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0000438 core TFIIH holo portion record
+  details: Created the GO:0000438 core TFIIH complex portion of holo TFIIH record under data/structures/other
+    with GO synonymy, GO:0000439 TFIIH-core parentage, GO:0005675 holo-TFIIH parthood, seven
+    reviewed-label-only TFIIH core subunits, Saccharomyces cerevisiae scope, a nonmechanistic
+    holo-TFIIH assembly graph, and grounding and boundary discussions. Focused LinkML and
+    strict validation passed before derived artifacts were regenerated.

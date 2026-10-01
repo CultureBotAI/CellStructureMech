@@ -14517,6 +14517,37 @@
       ]
     },
     {
+      "identifier": "GO:0000438",
+      "label": "core TFIIH complex portion of holo TFIIH complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000439",
+          "label": "transcription factor TFIIH core complex",
+          "cosine_similarity": 0.95128363
+        },
+        {
+          "identifier": "GO:0000440",
+          "label": "core TFIIH complex portion of NEF3 complex",
+          "cosine_similarity": 0.81934984
+        },
+        {
+          "identifier": "GO:0000112",
+          "label": "nucleotide-excision repair factor 3 complex",
+          "cosine_similarity": 0.7053997
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.69928661
+        },
+        {
+          "identifier": "GO:1990070",
+          "label": "TRAPPI protein complex",
+          "cosine_similarity": 0.68661806
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000440",
       "label": "core TFIIH complex portion of NEF3 complex",
       "neighbors": [
@@ -14531,6 +14562,11 @@
           "cosine_similarity": 0.8489224
         },
         {
+          "identifier": "GO:0000438",
+          "label": "core TFIIH complex portion of holo TFIIH complex",
+          "cosine_similarity": 0.81934984
+        },
+        {
           "identifier": "GO:0000111",
           "label": "nucleotide-excision repair factor 2 complex",
           "cosine_similarity": 0.76153838
@@ -14539,11 +14575,6 @@
           "identifier": "GO:0000110",
           "label": "nucleotide-excision repair factor 1 complex",
           "cosine_similarity": 0.75757547
-        },
-        {
-          "identifier": "GO:0000113",
-          "label": "nucleotide-excision repair factor 4 complex",
-          "cosine_similarity": 0.74703563
         }
       ]
     },
@@ -19233,6 +19264,11 @@
       "label": "transcription factor TFIIH core complex",
       "neighbors": [
         {
+          "identifier": "GO:0000438",
+          "label": "core TFIIH complex portion of holo TFIIH complex",
+          "cosine_similarity": 0.95128363
+        },
+        {
           "identifier": "GO:0000440",
           "label": "core TFIIH complex portion of NEF3 complex",
           "cosine_similarity": 0.8489224
@@ -19251,11 +19287,6 @@
           "identifier": "GO:0031207",
           "label": "Sec62/Sec63 complex",
           "cosine_similarity": 0.71589651
-        },
-        {
-          "identifier": "GO:1990070",
-          "label": "TRAPPI protein complex",
-          "cosine_similarity": 0.71372827
         }
       ]
     },
