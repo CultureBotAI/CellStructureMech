@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/emre_multidrug_transporter_complex.yaml
+  slug: emre_multidrug_transporter_complex
+session:
+  id: 2026-10-01T195637Z-codex-59b3e3
+  timestamp: '2026-10-01T19:56:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added EmrE multidrug transporter complex record
+  details: Created a GO:1990207-backed EmrE multidrug transporter complex record with GO narrow
+    synonymy, GO:1902495 transmembrane-transporter parentage, a reviewed-label-only EmrE constituent,
+    a reviewed E. coli K-12 UniProt example, a PDB:3B5D homodimer canonical example and subunit
+    count, xenobiotic transmembrane transporter activity, and DOI/PMID/PDB evidence from the
+    EmrE X-ray structure literature.

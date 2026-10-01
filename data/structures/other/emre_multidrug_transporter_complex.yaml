@@ -1,0 +1,135 @@
+identifier: GO:1990207
+label: EmrE multidrug transporter complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A transmembrane protein complex capable of transporting positively charged
+  hydrophobic drugs across the plasma membrane thereby involved in conferring resistance
+  to a wide range of toxic compounds (e.g. methyl viologen, ethidium bromide and acriflavine).
+  It is commonly found in bacteria. In E. coli it forms a homodimer.
+definition_source: GO:1990207
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T19:54:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T19:55:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and transmembrane-transporter parentage, an EmrE reviewed-label-only
+    component with an E. coli K-12 UniProt example, the PDB:3B5D homodimer, xenobiotic
+    transporter function, taxonomy, and a component-grounding discussion.
+  llm_assisted: true
+synonyms:
+- synonym_text: EmrE complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990207
+parent_structures:
+- GO:1902495
+components:
+- component_id: emre_multidrug_transporter
+  label: Multidrug transporter EmrE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProtKB:P23895 is reviewed for E. coli K-12 EmrE, but the InterPro
+    families on that entry cover broader small multidrug resistance protein groups
+    rather than an exact source-neutral EmrE family.
+  gene_symbols:
+  - emrE
+  stoichiometry: 2 copies per E. coli EmrE homodimer in PDB:3B5D biological assembly
+    1
+  essentiality: UNKNOWN
+  role: Small multidrug resistance transporter subunit that forms an antiparallel
+    homodimer to export toxic hydrophobic cations.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23895
+    protein_label: Multidrug transporter EmrE
+    gene_symbol: emrE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 EmrE accession mapped by RCSB to the homodimeric polymer
+      entity in PDB:3B5D.
+    evidence:
+    - reference: UniProtKB:P23895
+      notes: UniProtKB P23895 is the reviewed E. coli K-12 entry for EmrE.
+    - reference: PDB:3B5D
+      notes: RCSB maps PDB:3B5D polymer entity 1 to UniProtKB:P23895.
+  evidence:
+  - reference: GO:1990207
+    notes: GO:1990207 defines the EmrE multidrug transporter complex as the E. coli
+      homodimer.
+  - reference: PDB:3B5D
+    notes: RCSB describes PDB:3B5D biological assembly 1 as an E. coli EmrE homo-2-mer.
+  - reference: PMID:18024586
+    notes: The PDB:3B5D primary paper reported the EmrE X-ray structure and its dual-topology
+      model.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: VARIABLE
+  note: GO:1990207 defines EmrE as a multidrug transporter complex commonly found
+    in bacteria, so it is represented as variable within Bacteria rather than universal.
+  reference: GO:1990207
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli source of the homodimeric EmrE multidrug transporter structure deposited
+    as PDB:3B5D.
+  reference: PDB:3B5D
+functions:
+- function_id: xenobiotic_transmembrane_transport
+  label: xenobiotic transmembrane transporter activity
+  grounding: GO:0042910
+  description: EmrE homodimers export positively charged hydrophobic xenobiotics across
+    the plasma membrane.
+  evidence:
+  - reference: GO:1990207
+    notes: GO:1990207 defines the complex by transport of positively charged hydrophobic
+      drugs across the plasma membrane.
+  - reference: GO:0042910
+    notes: GO:0042910 is the molecular-function term for xenobiotic transmembrane
+      transporter activity.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '2'
+  context: E. coli EmrE homodimer in PDB:3B5D biological assembly 1
+  reference: PDB:3B5D
+evidence:
+- reference: GO:1990207
+  notes: Gene Ontology cellular-component term for the EmrE multidrug transporter
+    complex.
+- reference: GO:1902495
+  notes: QuickGO reports GO:1990207 as an is-a child of GO:1902495 transmembrane transporter
+    complex.
+- reference: GO:0042910
+  notes: Gene Ontology molecular-function term for xenobiotic transmembrane transporter
+    activity.
+- reference: UniProtKB:P23895
+  notes: UniProtKB reviewed E. coli K-12 EmrE entry.
+- reference: PDB:3B5D
+  notes: RCSB Protein Data Bank entry for the E. coli EmrE multidrug transporter homodimer.
+- reference: PMID:18024586
+  notes: PubMed identifier for the PDB:3B5D X-ray EmrE structural paper cited by GO:1990207.
+- reference: DOI:10.1073/pnas.0709387104
+  notes: DOI for 'X-ray structure of EmrE supports dual topology model' as reported
+    by RCSB and PubMed.
+discussions:
+- discussion_id: resolve_emre_component_grounding
+  prompt: Resolve an exact source-neutral family grounding for the EmrE multidrug
+    transporter component.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#emre_multidrug_transporter
+  rationale: The first record uses the reviewed E. coli EmrE label and avoids grounding
+    to InterPro small-drug, small-multidrug, or EmrE-superfamily entries that are
+    broader than the exact EmrE constituent.
+  evidence:
+  - reference: UniProtKB:P23895
+  - reference: PDB:3B5D
+  posed_by: codex
+  posed_date: '2026-10-01'
