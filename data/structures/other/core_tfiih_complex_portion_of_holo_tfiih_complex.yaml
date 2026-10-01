@@ -1,0 +1,360 @@
+identifier: GO:0000438
+label: core TFIIH complex portion of holo TFIIH complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The core TFIIH complex when it is part of the general transcription factor
+  TFIIH.
+definition_source: GO:0000438
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T00:20:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T00:22:10Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, TFIIH-core parentage, holo-TFIIH parthood, seven reviewed-label-only
+    TFIIH core constituents, Saccharomyces scope, a nonmechanistic holo-TFIIH assembly
+    graph, and grounding and boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: SSL2-core TFIIH complex portion of holo TFIIH complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000438
+parent_structures:
+- GO:0000439
+part_of:
+- GO:0005675
+components:
+- component_id: ssl2_xpb_tfiih_core_subunit
+  label: Ssl2/XPB TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SSL2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Ssl2/XPB as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of holo TFIIH.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000438
+    notes: GO:0000438 denotes that TFIIH core complex when it is part of the general
+      transcription factor TFIIH holo complex.
+- component_id: tfb1_p62_tfiih_core_subunit
+  label: Tfb1/p62 TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TFB1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Tfb1/p62 as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of holo TFIIH.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000438
+    notes: GO:0000438 denotes that TFIIH core complex when it is part of the general
+      transcription factor TFIIH holo complex.
+- component_id: tfb2_p52_tfiih_core_subunit
+  label: Tfb2/p52 TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TFB2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Tfb2/p52 as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of holo TFIIH.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000438
+    notes: GO:0000438 denotes that TFIIH core complex when it is part of the general
+      transcription factor TFIIH holo complex.
+- component_id: ssl1_p44_tfiih_core_subunit
+  label: Ssl1/p44 TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SSL1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Ssl1/p44 as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of holo TFIIH.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000438
+    notes: GO:0000438 denotes that TFIIH core complex when it is part of the general
+      transcription factor TFIIH holo complex.
+- component_id: tfb4_p34_tfiih_core_subunit
+  label: Tfb4/p34 TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TFB4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Tfb4/p34 as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of holo TFIIH.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000438
+    notes: GO:0000438 denotes that TFIIH core complex when it is part of the general
+      transcription factor TFIIH holo complex.
+- component_id: tfb5_p8_tfiih_core_subunit
+  label: Tfb5/p8 TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TFB5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Tfb5/p8 as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of holo TFIIH.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000438
+    notes: GO:0000438 denotes that TFIIH core complex when it is part of the general
+      transcription factor TFIIH holo complex.
+- component_id: rad3_xpd_tfiih_core_subunit
+  label: Rad3/XPD TFIIH core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RAD3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0000439 names Rad3/XPD as part of the S. cerevisiae/human TFIIH
+    core complex, but no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this TFIIH core subunit class was curated in this pass.
+  role: Protein constituent of the seven-subunit TFIIH core that forms the core TFIIH
+    complex portion of holo TFIIH.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 defines the transcription factor TFIIH core complex as a seven-subunit
+      S. cerevisiae/human complex.
+  - reference: GO:0000438
+    notes: GO:0000438 denotes that TFIIH core complex when it is part of the general
+      transcription factor TFIIH holo complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: GO:0000439 defines the TFIIH core complex as a seven-subunit S. cerevisiae/human
+    complex, and GO:0000438 denotes that core in its holo-TFIIH context.
+  reference: GO:0000439
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: The Gene Ontology TFIIH core definition enumerates budding-yeast Ssl2, Tfb1,
+    Tfb2, Ssl1, Tfb4, Tfb5, and Rad3 as the seven core constituents of the generic
+    core represented by this holo-TFIIH portion term.
+  reference: GO:0000439
+evidence:
+- reference: GO:0000438
+  notes: Gene Ontology cellular-component term for the TFIIH core complex portion
+    of holo TFIIH and its exact SSL2-core TFIIH portion synonym.
+- reference: GO:0000439
+  notes: Gene Ontology cellular-component parent term for the seven-subunit transcription
+    factor TFIIH core complex.
+- reference: GO:0005675
+  notes: Gene Ontology cellular-component term for the broader holo-TFIIH complex
+    that contains the core TFIIH complex and the TFIIK complex.
+causal_graphs:
+- graph_id: core_tfiih_holo_assembly
+  title: TFIIH core contributes to holo TFIIH
+  description: The seven-subunit TFIIH core complex is part of the general transcription
+    factor TFIIH holo complex.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-defined TFIIH core composition and placement inside
+    holo TFIIH without resolving assembly order, TFIIK association, or enzymatic transcription-initiation
+    chemistry.
+  nodes:
+  - node_id: ssl2_xpb_tfiih_core_subunit
+    label: Ssl2/XPB TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ssl2_xpb_tfiih_core_subunit
+  - node_id: tfb1_p62_tfiih_core_subunit
+    label: Tfb1/p62 TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tfb1_p62_tfiih_core_subunit
+  - node_id: tfb2_p52_tfiih_core_subunit
+    label: Tfb2/p52 TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tfb2_p52_tfiih_core_subunit
+  - node_id: ssl1_p44_tfiih_core_subunit
+    label: Ssl1/p44 TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ssl1_p44_tfiih_core_subunit
+  - node_id: tfb4_p34_tfiih_core_subunit
+    label: Tfb4/p34 TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tfb4_p34_tfiih_core_subunit
+  - node_id: tfb5_p8_tfiih_core_subunit
+    label: Tfb5/p8 TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tfb5_p8_tfiih_core_subunit
+  - node_id: rad3_xpd_tfiih_core_subunit
+    label: Rad3/XPD TFIIH core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad3_xpd_tfiih_core_subunit
+  - node_id: core_tfiih_holo_complex
+    label: core TFIIH complex portion of holo TFIIH complex
+    node_type: STRUCTURE
+    grounding: GO:0000438
+  - node_id: holo_tfiih_complex
+    label: transcription factor TFIIH holo complex
+    node_type: STRUCTURE
+    grounding: GO:0005675
+  edges:
+  - subject: ssl2_xpb_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_holo_complex
+    description: Ssl2/XPB is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: tfb1_p62_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_holo_complex
+    description: Tfb1/p62 is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: tfb2_p52_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_holo_complex
+    description: Tfb2/p52 is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: ssl1_p44_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_holo_complex
+    description: Ssl1/p44 is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: tfb4_p34_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_holo_complex
+    description: Tfb4/p34 is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: tfb5_p8_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_holo_complex
+    description: Tfb5/p8 is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: rad3_xpd_tfiih_core_subunit
+    predicate: contributes to
+    object: core_tfiih_holo_complex
+    description: Rad3/XPD is one constituent of the TFIIH core complex.
+    evidence:
+    - reference: GO:0000439
+      notes: GO:0000439 defines the seven S. cerevisiae/human TFIIH core complex constituents.
+  - subject: core_tfiih_holo_complex
+    predicate: is part of
+    object: holo_tfiih_complex
+    description: The TFIIH core complex is the named core TFIIH portion of the general
+      transcription factor TFIIH holo complex.
+    evidence:
+    - reference: GO:0000438
+      notes: GO:0000438 defines this cellular component as TFIIH core when it is part
+        of holo TFIIH.
+    - reference: GO:0005675
+      notes: GO:0005675 defines holo TFIIH as composed of the core TFIIH complex and
+        the TFIIK complex.
+discussions:
+- discussion_id: resolve_tfiih_core_holo_subunit_groundings
+  prompt: Resolve exact source-neutral family groundings for the curated TFIIH core
+    protein constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ssl2_xpb_tfiih_core_subunit
+  - components#tfb1_p62_tfiih_core_subunit
+  - components#tfb2_p52_tfiih_core_subunit
+  - components#ssl1_p44_tfiih_core_subunit
+  - components#tfb4_p34_tfiih_core_subunit
+  - components#tfb5_p8_tfiih_core_subunit
+  - components#rad3_xpd_tfiih_core_subunit
+  rationale: GO:0000439 defines S. cerevisiae and human names for seven TFIIH core
+    complex subunits. Exact cross-eukaryotic InterPro, Pfam, NCBIfam or UniProt family
+    boundaries for these TFIIH core classes need narrower curation before the component
+    labels can be grounded.
+  evidence:
+  - reference: GO:0000439
+    notes: GO:0000439 lists Ssl2/XPB, Tfb1/p62, Tfb2/p52, Ssl1/p44, Tfb4/p34, Tfb5/p8,
+      and Rad3/XPD in the TFIIH core complex.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: core_tfiih_holo_boundaries
+  prompt: Keep the GO:0000438 portion term distinct from both generic TFIIH core and
+    whole holo TFIIH.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - identifier
+  - parent_structures
+  - part_of
+  - components#ssl2_xpb_tfiih_core_subunit
+  - components#tfb1_p62_tfiih_core_subunit
+  - components#tfb2_p52_tfiih_core_subunit
+  - components#ssl1_p44_tfiih_core_subunit
+  - components#tfb4_p34_tfiih_core_subunit
+  - components#tfb5_p8_tfiih_core_subunit
+  - components#rad3_xpd_tfiih_core_subunit
+  rationale: GO:0000438 denotes the GO:0000439 TFIIH core complex specifically when
+    it is part of the GO:0005675 holo-TFIIH complex. TFIIK is a partner subcomplex
+    of whole holo TFIIH, not part of the TFIIH core portion itself.
+  resolution_note: Modeled GO:0000439 as an is-a parent, linked GO:0005675 through
+    part_of, and curated only the seven TFIIH core constituents as components of this
+    portion.
+  evidence:
+  - reference: GO:0000438
+    notes: GO:0000438 identifies the TFIIH core complex portion when it is part of
+      holo TFIIH.
+  - reference: GO:0000439
+    notes: GO:0000439 identifies the broader TFIIH core complex.
+  - reference: GO:0005675
+    notes: GO:0005675 identifies whole holo TFIIH as containing core TFIIH plus TFIIK.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'
