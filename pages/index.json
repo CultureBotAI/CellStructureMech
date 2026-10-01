@@ -5085,6 +5085,15 @@
   "definition": "A protein complex that consists of an RNA 5' triphosphatase and a guanyl transferase (Cet1p and Ceg1p in S. cerevisiae; Pct1 and Ceg1 in S. pombe) and is involved in mRNA capping."
  },
  {
+  "identifier": "GO:1990199",
+  "label": "MsbA transporter complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/msba_transporter_complex.html",
+  "definition": "An ATP-binding cassette (ABC) transporter complex made up of a dimer of MsbA. Facilitates the export across the plasma membrane of, amongst others, lipid A and lipopolysaccharide. In contrast to most ABC transporter complexes, each chain of the homodimer contains both the transmembrane domain (TMD) and the cytoplasmic ATP-binding domain (NBD)."
+ },
+ {
   "identifier": "GO:0036410",
   "label": "Mst2 histone acetyltransferase complex",
   "category": "OTHER",
