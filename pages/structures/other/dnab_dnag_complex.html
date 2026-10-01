@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DnaB-DnaG complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>DnaB-DnaG complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990156"><code>GO:1990156</code></a> · OTHER · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A protein complex containing homohexameric DnaB helicase, and DnaG (a primase). Facilitates the unwinding of double-stranded DNA and the synthesis of RNA primer sequences during DNA replication and repair in Prokaryotes. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990156"><code>GO:1990156</code></a>]</small></p>
+<p><strong>Synonyms:</strong> DnaB-DnaG primosome complex</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_1990098"><code>GO:1990098</code></a> </p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-dnab_helicase"><td>DnaB helicase</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>dnaB</td><td>6 copies per DnaB homohexamer</td><td>UNKNOWN</td><td>Homohexameric DNA helicase constituent of the primase-bound DnaB-DnaG complex.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990156"><code>GO:1990156</code></a> <small>GO:1990156 defines the DnaB-DnaG complex as containing homohexameric DnaB helicase.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/14557266"><code>PMID:14557266</code></a> <small>Tougu and Marians 2003 stabilized the E. coli primase-helicase complex and measured DnaG primase occupancy on the DnaB hexamer.</small></li></ul></td></tr>
+<tr id="components-dnag_primase"><td>DnaG primase</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>dnaG</td><td>3 primase copies per DnaB hexamer in the stabilized E. coli complex</td><td>UNKNOWN</td><td>Primase constituent that synthesizes RNA primer sequences while bound to DnaB helicase.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990156"><code>GO:1990156</code></a> <small>GO:1990156 defines the DnaB-DnaG complex as containing DnaG primase.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/14557266"><code>PMID:14557266</code></a> <small>Tougu and Marians 2003 reported three DnaG primase molecules per E. coli DnaB hexamer in their stabilized primase-helicase complex.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> Escherichia coli — <strong>COMMON</strong>: Tougu and Marians 2003 stabilized the E. coli DnaB-DnaG primase-helicase complex. [<a href="https://pubmed.ncbi.nlm.nih.gov/14557266"><code>PMID:14557266</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> <em>Escherichia coli</em> — Tougu and Marians 2003 used the E. coli DnaB-DnaG system to measure primase-helicase stoichiometry and primer synthesis on single-stranded DNA templates. [<a href="https://pubmed.ncbi.nlm.nih.gov/14557266"><code>PMID:14557266</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>DNA replication, synthesis of primer</strong> <a href="http://purl.obolibrary.org/obo/GO_0006269"><code>GO:0006269</code></a> — The DnaB-DnaG complex supports synthesis of RNA primers on single-stranded DNA templates during DNA replication.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990156"><code>GO:1990156</code></a> <small>GO:1990156 defines the DnaB-DnaG complex by DnaB-mediated unwinding and DnaG-mediated RNA primer synthesis.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006269"><code>GO:0006269</code></a> <small>GO:0006269 is the Gene Ontology biological process term for DNA replication primer synthesis.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/14557266"><code>PMID:14557266</code></a> <small>Tougu and Marians 2003 measured E. coli DnaB stimulation of DnaG-dependent primer synthesis on single-stranded templates.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-dnab_dnag_primer_synthesis">DnaB-DnaG supports primer synthesis <small>(FUNCTION)</small></h3>
+<p>The DnaB helicase hexamer and DnaG primase form a complex that supports RNA primer synthesis on single-stranded DNA templates.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>DnaB helicase</td><td>contributes to</td><td>DnaB-DnaG complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990156"><code>GO:1990156</code></a> <small>GO:1990156 defines the complex as containing homohexameric DnaB helicase.</small></li></ul></td></tr>
+<tr><td>DnaG primase</td><td>contributes to</td><td>DnaB-DnaG complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990156"><code>GO:1990156</code></a> <small>GO:1990156 defines the complex as containing DnaG primase.</small></li></ul></td></tr>
+<tr><td>DnaB-DnaG complex</td><td>supports</td><td>DNA replication, synthesis of primer</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990156"><code>GO:1990156</code></a> <small>GO:1990156 defines the complex by RNA primer synthesis during DNA replication and repair in Prokaryotes.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/14557266"><code>PMID:14557266</code></a> <small>Tougu and Marians 2003 measured E. coli primer synthesis by DnaG in the presence of DnaB helicase.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral DnaB and DnaG family groundings for the DnaB-DnaG complex. <small>GO:1990156 defines DnaB and DnaG as constituents of this primase-helicase complex. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries for these component classes need narrower curation before the labels can be grounded.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Model the GO:1990098 core primosome relationship as parthood rather than DnaB-DnaG complex is-a core primosome complex. <small>OLS reports GO:0033202 as the direct GO:1990156 is-a parent and reports GO:1990098 as a separate hierarchical parent. GO:1990098 denotes a protein-DNA complex containing a helicase and primase, while GO:1990156 is a DnaB-DnaG protein complex.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990156"><code>GO:1990156</code></a> <small>Gene Ontology cellular-component term for the DnaB-DnaG complex and its related primosome-complex synonym.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0033202"><code>GO:0033202</code></a> <small>OLS reports GO:0033202 DNA helicase complex as the direct GO:1990156 is-a parent.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990098"><code>GO:1990098</code></a> <small>OLS reports GO:1990098 core primosome complex as a direct hierarchical parent of GO:1990156.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006269"><code>GO:0006269</code></a> <small>Gene Ontology biological-process term for DNA replication primer synthesis.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/14557266"><code>PMID:14557266</code></a> <small>PubMed identifier for Tougu and Marians 2003, the Journal of Biological Chemistry paper cited by GO:1990156.</small></li><li><a href="https://doi.org/10.1074/jbc.M308956200"><code>DOI:10.1074/jbc.M308956200</code></a> <small>DOI for Tougu and Marians 2003, &#39;Mechanism and stoichiometry of interaction of DnaG primase with DnaB helicase of Escherichia coli in RNA primer synthesis&#39;, as reported by PubMed.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-01T03:36:10Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-01T03:37:45Z</code> codex · EXPANDED_RECORD — Added GO synonymy, DNA-helicase-complex parentage, core-primosome parthood, DnaB and DnaG reviewed-label-only components, E. coli scope, DNA-replication-primer-synthesis function evidence, GO/PubMed/DOI evidence, a nonmechanistic primer-synthesis graph, and grounding/parthood discussions.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dnab_dnag_complex.yaml"><code>data/structures/other/dnab_dnag_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+identifier: GO:1990156
+label: DnaB-DnaG complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex containing homohexameric DnaB helicase, and DnaG (a
+  primase). Facilitates the unwinding of double-stranded DNA and the synthesis of
+  RNA primer sequences during DNA replication and repair in Prokaryotes.
+definition_source: GO:1990156
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T03:36:10Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T03:37:45Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, DNA-helicase-complex parentage, core-primosome parthood,
+    DnaB and DnaG reviewed-label-only components, E. coli scope, DNA-replication-primer-synthesis
+    function evidence, GO/PubMed/DOI evidence, a nonmechanistic primer-synthesis graph,
+    and grounding/parthood discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: DnaB-DnaG primosome complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990156
+parent_structures:
+- GO:0033202
+part_of:
+- GO:1990098
+components:
+- component_id: dnab_helicase
+  label: DnaB helicase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaB
+  stoichiometry: 6 copies per DnaB homohexamer
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaB is represented as the GO-defined homohexameric helicase constituent
+    of the DnaB-DnaG complex; exact source-neutral InterPro, Pfam, NCBIfam or UniProt
+    family boundaries were not curated in this pass.
+  role: Homohexameric DNA helicase constituent of the primase-bound DnaB-DnaG complex.
+  evidence:
+  - reference: GO:1990156
+    notes: GO:1990156 defines the DnaB-DnaG complex as containing homohexameric DnaB
+      helicase.
+  - reference: PMID:14557266
+    notes: Tougu and Marians 2003 stabilized the E. coli primase-helicase complex
+      and measured DnaG primase occupancy on the DnaB hexamer.
+- component_id: dnag_primase
+  label: DnaG primase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaG
+  stoichiometry: 3 primase copies per DnaB hexamer in the stabilized E. coli complex
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaG is represented as the primase constituent named by GO:1990156;
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries were
+    not curated in this pass.
+  role: Primase constituent that synthesizes RNA primer sequences while bound to DnaB
+    helicase.
+  evidence:
+  - reference: GO:1990156
+    notes: GO:1990156 defines the DnaB-DnaG complex as containing DnaG primase.
+  - reference: PMID:14557266
+    notes: Tougu and Marians 2003 reported three DnaG primase molecules per E. coli
+      DnaB hexamer in their stabilized primase-helicase complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Tougu and Marians 2003 stabilized the E. coli DnaB-DnaG primase-helicase complex.
+  reference: PMID:14557266
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Tougu and Marians 2003 used the E. coli DnaB-DnaG system to measure primase-helicase
+    stoichiometry and primer synthesis on single-stranded DNA templates.
+  reference: PMID:14557266
+functions:
+- function_id: dna_replication_synthesis_of_primer
+  label: DNA replication, synthesis of primer
+  grounding: GO:0006269
+  description: The DnaB-DnaG complex supports synthesis of RNA primers on single-stranded
+    DNA templates during DNA replication.
+  evidence:
+  - reference: GO:1990156
+    notes: GO:1990156 defines the DnaB-DnaG complex by DnaB-mediated unwinding and
+      DnaG-mediated RNA primer synthesis.
+  - reference: GO:0006269
+    notes: GO:0006269 is the Gene Ontology biological process term for DNA replication
+      primer synthesis.
+  - reference: PMID:14557266
+    notes: Tougu and Marians 2003 measured E. coli DnaB stimulation of DnaG-dependent
+      primer synthesis on single-stranded templates.
+evidence:
+- reference: GO:1990156
+  notes: Gene Ontology cellular-component term for the DnaB-DnaG complex and its related
+    primosome-complex synonym.
+- reference: GO:0033202
+  notes: OLS reports GO:0033202 DNA helicase complex as the direct GO:1990156 is-a
+    parent.
+- reference: GO:1990098
+  notes: OLS reports GO:1990098 core primosome complex as a direct hierarchical parent
+    of GO:1990156.
+- reference: GO:0006269
+  notes: Gene Ontology biological-process term for DNA replication primer synthesis.
+- reference: PMID:14557266
+  notes: PubMed identifier for Tougu and Marians 2003, the Journal of Biological Chemistry
+    paper cited by GO:1990156.
+- reference: DOI:10.1074/jbc.M308956200
+  notes: DOI for Tougu and Marians 2003, 'Mechanism and stoichiometry of interaction
+    of DnaG primase with DnaB helicase of Escherichia coli in RNA primer synthesis',
+    as reported by PubMed.
+causal_graphs:
+- graph_id: dnab_dnag_primer_synthesis
+  title: DnaB-DnaG supports primer synthesis
+  description: The DnaB helicase hexamer and DnaG primase form a complex that supports
+    RNA primer synthesis on single-stranded DNA templates.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level subunit composition and primer-synthesis
+    output without resolving DnaG binding kinetics, primase cycling or interactions
+    with DnaC and other replication factors.
+  nodes:
+  - node_id: dnab_helicase
+    label: DnaB helicase
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnab_helicase
+  - node_id: dnag_primase
+    label: DnaG primase
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnag_primase
+  - node_id: dnab_dnag_complex
+    label: DnaB-DnaG complex
+    node_type: STRUCTURE
+    grounding: GO:1990156
+  - node_id: dna_replication_synthesis_of_primer
+    label: DNA replication, synthesis of primer
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006269
+  edges:
+  - subject: dnab_helicase
+    predicate: contributes to
+    object: dnab_dnag_complex
+    description: A homohexameric DnaB helicase is a constituent of the DnaB-DnaG complex.
+    evidence:
+    - reference: GO:1990156
+      notes: GO:1990156 defines the complex as containing homohexameric DnaB helicase.
+  - subject: dnag_primase
+    predicate: contributes to
+    object: dnab_dnag_complex
+    description: DnaG primase is a constituent of the DnaB-DnaG complex.
+    evidence:
+    - reference: GO:1990156
+      notes: GO:1990156 defines the complex as containing DnaG primase.
+  - subject: dnab_dnag_complex
+    predicate: supports
+    object: dna_replication_synthesis_of_primer
+    description: The DnaB-DnaG complex supports synthesis of RNA primers during DNA
+      replication.
+    evidence:
+    - reference: GO:1990156
+      notes: GO:1990156 defines the complex by RNA primer synthesis during DNA replication
+        and repair in Prokaryotes.
+    - reference: PMID:14557266
+      notes: Tougu and Marians 2003 measured E. coli primer synthesis by DnaG in the
+        presence of DnaB helicase.
+discussions:
+- discussion_id: resolve_dnab_dnag_family_groundings
+  prompt: Resolve exact source-neutral DnaB and DnaG family groundings for the DnaB-DnaG
+    complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnab_helicase
+  - components#dnag_primase
+  rationale: GO:1990156 defines DnaB and DnaG as constituents of this primase-helicase
+    complex. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries
+    for these component classes need narrower curation before the labels can be grounded.
+  evidence:
+  - reference: GO:1990156
+    notes: GO:1990156 defines the DnaB-DnaG complex around DnaB and DnaG constituents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: model_core_primosome_as_part_of
+  prompt: Model the GO:1990098 core primosome relationship as parthood rather than
+    DnaB-DnaG complex is-a core primosome complex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - part_of
+  - parent_structures
+  rationale: OLS reports GO:0033202 as the direct GO:1990156 is-a parent and reports
+    GO:1990098 as a separate hierarchical parent. GO:1990098 denotes a protein-DNA
+    complex containing a helicase and primase, while GO:1990156 is a DnaB-DnaG protein
+    complex.
+  resolution_note: Curated GO:0033202 under parent_structures and GO:1990098 under
+    part_of.
+  evidence:
+  - reference: GO:1990156
+    notes: GO:1990156 defines DnaB-DnaG as a protein complex.
+  - reference: GO:1990098
+    notes: GO:1990098 defines a core primosome as a protein-DNA complex containing
+      at least one DNA helicase and one primase.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'

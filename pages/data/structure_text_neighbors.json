@@ -13405,6 +13405,11 @@
       "label": "alpha DNA polymerase:primase complex",
       "neighbors": [
         {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.82905031
+        },
+        {
           "identifier": "GO:0005760",
           "label": "gamma DNA polymerase complex",
           "cosine_similarity": 0.80058088
@@ -13423,11 +13428,6 @@
           "identifier": "GO:0043625",
           "label": "delta DNA polymerase complex",
           "cosine_similarity": 0.79264471
-        },
-        {
-          "identifier": "GO:0008622",
-          "label": "epsilon DNA polymerase complex",
-          "cosine_similarity": 0.78637151
         }
       ]
     },
@@ -14371,6 +14371,11 @@
           "cosine_similarity": 0.85918593
         },
         {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.78902075
+        },
+        {
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.75964686
@@ -14384,11 +14389,6 @@
           "identifier": "GO:0000811",
           "label": "GINS complex",
           "cosine_similarity": 0.72010019
-        },
-        {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.71791884
         }
       ]
     },
@@ -14800,6 +14800,11 @@
       "label": "DNA gyrase complex",
       "neighbors": [
         {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.75069956
+        },
+        {
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.71887435
@@ -14818,11 +14823,6 @@
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
           "cosine_similarity": 0.69234111
-        },
-        {
-          "identifier": "GO:0008622",
-          "label": "epsilon DNA polymerase complex",
-          "cosine_similarity": 0.68644521
         }
       ]
     },
@@ -15053,6 +15053,11 @@
           "cosine_similarity": 0.69423383
         },
         {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.67410231
+        },
+        {
           "identifier": "GO:0044776",
           "label": "DNA polymerase III, core complex",
           "cosine_similarity": 0.67158149
@@ -15066,11 +15071,6 @@
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.66030068
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.65722201
         }
       ]
     },
@@ -15078,6 +15078,11 @@
       "identifier": "GO:1990100",
       "label": "DnaB-DnaC complex",
       "neighbors": [
+        {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.86372002
+        },
         {
           "identifier": "GO:0044777",
           "label": "single-stranded DNA-binding protein complex",
@@ -15097,11 +15102,37 @@
           "identifier": "GO:0005663",
           "label": "DNA replication factor C complex",
           "cosine_similarity": 0.75284756
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990156",
+      "label": "DnaB-DnaG complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990100",
+          "label": "DnaB-DnaC complex",
+          "cosine_similarity": 0.86372002
         },
         {
-          "identifier": "GO:0005662",
-          "label": "DNA replication factor A complex",
-          "cosine_similarity": 0.73639753
+          "identifier": "GO:0005658",
+          "label": "alpha DNA polymerase:primase complex",
+          "cosine_similarity": 0.82905031
+        },
+        {
+          "identifier": "GO:0071162",
+          "label": "CMG complex",
+          "cosine_similarity": 0.78902075
+        },
+        {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.78892309
+        },
+        {
+          "identifier": "GO:0044777",
+          "label": "single-stranded DNA-binding protein complex",
+          "cosine_similarity": 0.77847291
         }
       ]
     },
@@ -16427,14 +16458,14 @@
           "cosine_similarity": 0.79284836
         },
         {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.78892309
+        },
+        {
           "identifier": "GO:1990100",
           "label": "DnaB-DnaC complex",
           "cosine_similarity": 0.78494291
-        },
-        {
-          "identifier": "GO:1990334",
-          "label": "SIN/MEN two-component GAP complex",
-          "cosine_similarity": 0.78192595
         }
       ]
     },
@@ -18773,6 +18804,11 @@
           "cosine_similarity": 0.79045015
         },
         {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.77847291
+        },
+        {
           "identifier": "GO:0005662",
           "label": "DNA replication factor A complex",
           "cosine_similarity": 0.76615367
@@ -18786,11 +18822,6 @@
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.71780139
-        },
-        {
-          "identifier": "GO:0044775",
-          "label": "DNA polymerase III, beta sliding clamp processivity factor complex",
-          "cosine_similarity": 0.71747671
         }
       ]
     },
