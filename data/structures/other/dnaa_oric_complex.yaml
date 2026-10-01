@@ -28,6 +28,12 @@ curation_history:
   changes: Added explicit GO:1990102 and GO:1990100 evidence for the DiaA and DnaB-DnaC
     boundary discussion.
   llm_assisted: true
+- timestamp: '2026-10-01T06:45:13Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: Narrowed the boundary discussion by removing unsupported HU/IHF/Fis names
+    from the graph scope and discussion prompt.
+  llm_assisted: true
 synonyms:
 - synonym_text: DnaA-DNA complex
   synonym_type: BROAD_SYNONYM
@@ -129,8 +135,8 @@ causal_graphs:
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph records GO-level DnaA-oriC composition and initiation scope
-    without resolving ATP-DnaA oligomerization, DiaA stimulation, HU/IHF/Fis modulation,
-    origin unwinding, or DnaB-DnaC helicase loading.
+    without resolving ATP-DnaA oligomerization, DiaA stimulation, origin unwinding,
+    or DnaB-DnaC helicase loading.
   nodes:
   - node_id: dnaa_initiator
     label: DnaA replication initiation protein
@@ -197,8 +203,7 @@ discussions:
   posed_by: codex
   posed_date: '2026-10-01'
 - discussion_id: exclude_later_initiation_factors
-  prompt: Leave DiaA, DnaB-DnaC, HU, IHF and Fis out of the scoped GO:1990101 DnaA-oriC
-    complex.
+  prompt: Leave DiaA and DnaB-DnaC out of the scoped GO:1990101 DnaA-oriC complex.
   kind: INTERPRETATION
   status: RESOLVED
   attaches_to:
@@ -208,9 +213,8 @@ discussions:
   rationale: GO:1990101 denotes DnaA bound to high-affinity oriC recognition sites.
     GO models the DiaA-containing complex separately as GO:1990102, and DnaB-DnaC
     helicase loading belongs to later pre-primosome assemblies.
-  resolution_note: Curated the exact DnaA-plus-oriC boundary and left DiaA, HU/IHF/Fis
-    modulation, origin unwinding and DnaB-DnaC helicase loading as nonmechanistic
-    graph scope.
+  resolution_note: Curated the exact DnaA-plus-oriC boundary and left DiaA, origin
+    unwinding and DnaB-DnaC helicase loading as nonmechanistic graph scope.
   evidence:
   - reference: GO:1990101
     notes: GO:1990101 defines the DnaA-oriC complex around DnaA bound to high-affinity
