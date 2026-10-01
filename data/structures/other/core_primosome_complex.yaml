@@ -1,0 +1,263 @@
+identifier: GO:1990098
+label: core primosome complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A protein-DNA complex containing at least one DNA helicase and one primase.
+  Can also contain associated proteins. The helicase component continues to unwind
+  the double-stranded DNA (dsDNA) and the primase component synthesizes a RNA primer
+  during initiation or restart of replication.
+definition_source: GO:1990098
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T09:17:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T09:19:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, primosome parentage, DnaB-DnaG complex parthood, reviewed-label-only
+    helicase/primase/template-DNA components, E. coli scope, DNA-replication-primer-synthesis
+    function evidence, GO/PubMed/DOI evidence, a nonmechanistic primer-synthesis graph,
+    and grounding/boundary discussions.
+  llm_assisted: true
+- timestamp: '2026-10-01T09:31:13Z'
+  curator: codex
+  action: FIX_DISCUSSION_ANCHORS
+  changes: Replaced the bare components discussion attachment with concrete core-primosome
+    component anchors.
+  llm_assisted: true
+synonyms:
+- synonym_text: core primosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990098
+parent_structures:
+- GO:1990077
+has_part:
+- GO:1990156
+components:
+- component_id: replicative_dna_helicase
+  label: replicative DNA helicase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:1990098 defines the core primosome around at least one DNA helicase;
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries were
+    not curated in this pass.
+  role: Replicative helicase constituent that unwinds double-stranded DNA in the DNA-bound
+    core primosome.
+  evidence:
+  - reference: GO:1990098
+    notes: GO:1990098 defines a core primosome as a protein-DNA complex containing
+      at least one DNA helicase.
+- component_id: dna_primase
+  label: DNA primase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:1990098 defines the core primosome around at least one primase;
+    exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries were
+    not curated in this pass.
+  role: Primase constituent that synthesizes RNA primer sequences after helicase-mediated
+    DNA unwinding.
+  evidence:
+  - reference: GO:1990098
+    notes: GO:1990098 defines a core primosome as a protein-DNA complex containing
+      at least one primase.
+- component_id: template_dna
+  label: template DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:1990098 defines a protein-DNA complex that acts on unwound DNA,
+    but this pass did not curate an exact source-neutral SO sequence-feature grounding
+    for the replication template.
+  role: DNA template scaffold for the helicase-primase core primosome.
+  evidence:
+  - reference: GO:1990098
+    notes: GO:1990098 defines the core primosome as a protein-DNA complex whose helicase
+      continues to unwind double-stranded DNA.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Kaguni 2011 reviewed E. coli chromosomal initiation from DnaB-DnaC loading
+    through DnaG-dependent primer formation.
+  reference: PMID:21856207
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Kaguni 2011 describes DnaB helicase recruitment at oriC and subsequent primer
+    formation by DnaG primase in the E. coli replication-initiation system.
+  reference: PMID:21856207
+functions:
+- function_id: dna_replication_synthesis_of_primer
+  label: DNA replication, synthesis of primer
+  grounding: GO:0006269
+  description: The core primosome supports synthesis of a short RNA primer on an unwound
+    DNA template.
+  evidence:
+  - reference: GO:1990098
+    notes: GO:1990098 defines the primase component by RNA primer synthesis during
+      initiation or restart of replication.
+  - reference: GO:0006269
+    notes: GO:0006269 defines DNA replication primer synthesis.
+  - reference: PMID:21856207
+    notes: Kaguni 2011 reviewed DnaG-dependent primer formation after DnaB-DnaC loading
+      in the E. coli replication-initiation pathway.
+evidence:
+- reference: GO:1990098
+  notes: Gene Ontology cellular-component term for the core primosome complex and
+    its exact synonym.
+- reference: GO:1990077
+  notes: QuickGO reports GO:1990098 as an is-a descendant of GO:1990077 primosome
+    complex.
+- reference: GO:1990099
+  notes: Gene Ontology cellular-component term for pre-primosome complexes, which
+    lack a primase component.
+- reference: GO:1990156
+  notes: QuickGO models the DnaB-DnaG helicase-primase complex as part of GO:1990098.
+- reference: GO:0006269
+  notes: Gene Ontology biological-process term for DNA replication primer synthesis.
+- reference: PMID:21856207
+  notes: PubMed identifier for Kaguni 2011, the Current Opinion in Chemical Biology
+    review cited by GO:1990098.
+- reference: DOI:10.1016/j.cbpa.2011.07.016
+  notes: DOI for Kaguni 2011, 'Replication initiation at the Escherichia coli chromosomal
+    origin', as reported by PubMed.
+- reference: PMID:14557266
+  notes: PubMed identifier for Mitkova, Khopde and Biswas 2003, which measured E.
+    coli DnaB-DnaG primase-helicase stoichiometry.
+- reference: DOI:10.1074/jbc.M308956200
+  notes: DOI for Mitkova, Khopde and Biswas 2003, 'Mechanism and stoichiometry of
+    interaction of DnaG primase with DnaB helicase of Escherichia coli in RNA primer
+    synthesis', as reported by PubMed.
+causal_graphs:
+- graph_id: core_primosome_primer_synthesis
+  title: core primosome supports primer synthesis
+  description: A DNA-bound helicase-primase core primosome supports RNA primer synthesis
+    on an unwound template during DNA replication.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level core composition and primer-synthesis output
+    without resolving primase cycling, template tracking, restart-specific accessory
+    proteins or species-specific helicase-loader handoff.
+  nodes:
+  - node_id: replicative_dna_helicase
+    label: replicative DNA helicase
+    node_type: GENE_OR_PROTEIN
+    component_ref: replicative_dna_helicase
+  - node_id: dna_primase
+    label: DNA primase
+    node_type: GENE_OR_PROTEIN
+    component_ref: dna_primase
+  - node_id: template_dna
+    label: template DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: template_dna
+  - node_id: dnab_dnag_complex
+    label: DnaB-DnaG complex
+    node_type: STRUCTURE
+    grounding: GO:1990156
+  - node_id: core_primosome_complex
+    label: core primosome complex
+    node_type: STRUCTURE
+    grounding: GO:1990098
+  - node_id: dna_replication_synthesis_of_primer
+    label: DNA replication, synthesis of primer
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006269
+  edges:
+  - subject: replicative_dna_helicase
+    predicate: contributes to
+    object: core_primosome_complex
+    description: A replicative DNA helicase is a constituent of the core primosome.
+    evidence:
+    - reference: GO:1990098
+      notes: GO:1990098 defines the core primosome as containing at least one DNA
+        helicase.
+  - subject: dna_primase
+    predicate: contributes to
+    object: core_primosome_complex
+    description: A primase is a constituent of the core primosome.
+    evidence:
+    - reference: GO:1990098
+      notes: GO:1990098 defines the core primosome as containing at least one primase.
+  - subject: template_dna
+    predicate: scaffolds
+    object: core_primosome_complex
+    description: Template DNA is the DNA constituent of the core primosome protein-DNA
+      complex.
+    evidence:
+    - reference: GO:1990098
+      notes: GO:1990098 defines the core primosome as a protein-DNA complex.
+  - subject: dnab_dnag_complex
+    predicate: part of
+    object: core_primosome_complex
+    description: The E. coli DnaB-DnaG primase-helicase complex is a protein subcomplex
+      of a DNA-bound core primosome.
+    evidence:
+    - reference: GO:1990156
+      notes: QuickGO models the DnaB-DnaG complex as part of GO:1990098.
+  - subject: core_primosome_complex
+    predicate: supports
+    object: dna_replication_synthesis_of_primer
+    description: The helicase and primase constituents support RNA primer synthesis
+      on the DNA template.
+    evidence:
+    - reference: GO:1990098
+      notes: GO:1990098 defines the complex by helicase-mediated unwinding and primase
+        RNA-primer synthesis.
+    - reference: GO:0006269
+      notes: GO:0006269 defines DNA replication primer synthesis.
+discussions:
+- discussion_id: resolve_core_primosome_component_groundings
+  prompt: Resolve exact source-neutral helicase, primase and template-DNA groundings
+    for the core primosome complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#replicative_dna_helicase
+  - components#dna_primase
+  - components#template_dna
+  rationale: GO:1990098 defines a protein-DNA complex containing a DNA helicase, primase
+    and associated DNA template. Exact source-neutral InterPro, Pfam, NCBIfam, UniProt
+    family or SO sequence-feature CURIEs for these components need narrower curation
+    before the labels can be grounded.
+  evidence:
+  - reference: GO:1990098
+    notes: GO:1990098 defines the helicase, primase and DNA scope of the core primosome.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: distinguish_core_primosome_boundary
+  prompt: Model the core primosome separately from the broader primosome, primase-lacking
+    pre-primosomes and the protein-only DnaB-DnaG complex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - parent_structures
+  - has_part
+  - components#replicative_dna_helicase
+  - components#dna_primase
+  - components#template_dna
+  rationale: GO:1990098 denotes a DNA-bound helicase-primase core, GO:1990077 denotes
+    the broader primosome class, GO:1990099 denotes primase-lacking pre-primosomes,
+    and GO:1990156 denotes the DnaB-DnaG protein subcomplex.
+  resolution_note: Curated GO:1990077 as the is-a parent, GO:1990156 as a part, and
+    kept DnaC/pre-primosome accessory proteins out of this core-primosome record.
+  evidence:
+  - reference: GO:1990098
+    notes: GO:1990098 defines the DNA-bound core primosome.
+  - reference: GO:1990077
+    notes: QuickGO reports GO:1990098 as an is-a descendant of GO:1990077.
+  - reference: GO:1990099
+    notes: GO:1990099 defines pre-primosome complexes as lacking a primase component.
+  - reference: GO:1990156
+    notes: GO:1990156 denotes the DnaB-DnaG protein complex.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'

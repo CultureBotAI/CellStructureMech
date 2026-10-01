@@ -14517,6 +14517,37 @@
       ]
     },
     {
+      "identifier": "GO:1990098",
+      "label": "core primosome complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990156",
+          "label": "DnaB-DnaG complex",
+          "cosine_similarity": 0.84973209
+        },
+        {
+          "identifier": "GO:1990158",
+          "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
+          "cosine_similarity": 0.84012143
+        },
+        {
+          "identifier": "GO:1990160",
+          "label": "DnaB-DnaC-Rep-PriC complex",
+          "cosine_similarity": 0.83439264
+        },
+        {
+          "identifier": "GO:1990159",
+          "label": "DnaB-DnaC-DnaT-PriA-PriC complex",
+          "cosine_similarity": 0.83120019
+        },
+        {
+          "identifier": "GO:0005658",
+          "label": "alpha DNA polymerase:primase complex",
+          "cosine_similarity": 0.78760691
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000438",
       "label": "core TFIIH complex portion of holo TFIIH complex",
       "neighbors": [
@@ -15094,14 +15125,14 @@
           "cosine_similarity": 0.67158149
         },
         {
+          "identifier": "GO:1990098",
+          "label": "core primosome complex",
+          "cosine_similarity": 0.66978382
+        },
+        {
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
           "cosine_similarity": 0.6649098
-        },
-        {
-          "identifier": "GO:1990100",
-          "label": "DnaB-DnaC complex",
-          "cosine_similarity": 0.66030068
         }
       ]
     },
@@ -15249,14 +15280,14 @@
           "cosine_similarity": 0.8428515
         },
         {
+          "identifier": "GO:1990098",
+          "label": "core primosome complex",
+          "cosine_similarity": 0.84012143
+        },
+        {
           "identifier": "GO:1990157",
           "label": "DnaA-DnaB-DnaC complex",
           "cosine_similarity": 0.82715373
-        },
-        {
-          "identifier": "GO:1990100",
-          "label": "DnaB-DnaC complex",
-          "cosine_similarity": 0.8106083
         }
       ]
     },
@@ -15275,6 +15306,11 @@
           "cosine_similarity": 0.97048668
         },
         {
+          "identifier": "GO:1990098",
+          "label": "core primosome complex",
+          "cosine_similarity": 0.83120019
+        },
+        {
           "identifier": "GO:1990156",
           "label": "DnaB-DnaG complex",
           "cosine_similarity": 0.81522142
@@ -15283,11 +15319,6 @@
           "identifier": "GO:1990157",
           "label": "DnaA-DnaB-DnaC complex",
           "cosine_similarity": 0.80671852
-        },
-        {
-          "identifier": "GO:1990100",
-          "label": "DnaB-DnaC complex",
-          "cosine_similarity": 0.79226935
         }
       ]
     },
@@ -15311,14 +15342,14 @@
           "cosine_similarity": 0.83754992
         },
         {
+          "identifier": "GO:1990098",
+          "label": "core primosome complex",
+          "cosine_similarity": 0.83439264
+        },
+        {
           "identifier": "GO:1990157",
           "label": "DnaA-DnaB-DnaC complex",
           "cosine_similarity": 0.82953544
-        },
-        {
-          "identifier": "GO:1990156",
-          "label": "DnaB-DnaG complex",
-          "cosine_similarity": 0.82536864
         }
       ]
     },
@@ -15337,6 +15368,11 @@
           "cosine_similarity": 0.85591883
         },
         {
+          "identifier": "GO:1990098",
+          "label": "core primosome complex",
+          "cosine_similarity": 0.84973209
+        },
+        {
           "identifier": "GO:1990158",
           "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
           "cosine_similarity": 0.8428515
@@ -15345,11 +15381,6 @@
           "identifier": "GO:0005658",
           "label": "alpha DNA polymerase:primase complex",
           "cosine_similarity": 0.82905031
-        },
-        {
-          "identifier": "GO:1990160",
-          "label": "DnaB-DnaC-Rep-PriC complex",
-          "cosine_similarity": 0.82536864
         }
       ]
     },
@@ -18318,14 +18349,14 @@
           "cosine_similarity": 0.74320367
         },
         {
+          "identifier": "GO:1990098",
+          "label": "core primosome complex",
+          "cosine_similarity": 0.7131973
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.71078341
-        },
-        {
-          "identifier": "GO:1990334",
-          "label": "SIN/MEN two-component GAP complex",
-          "cosine_similarity": 0.70840467
         }
       ]
     },

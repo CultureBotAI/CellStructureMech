@@ -4212,6 +4212,15 @@
   "definition": "A COPII coat protein complex that assembles on endoplasmic-reticulum membranes to bud COPII-coated ER-to-Golgi transport vesicles; in budding yeast it contains Sar1p, Sec23p, Sec24p, Sec13p, and Sec31p."
  },
  {
+  "identifier": "GO:1990098",
+  "label": "core primosome complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/core_primosome_complex.html",
+  "definition": "A protein-DNA complex containing at least one DNA helicase and one primase. Can also contain associated proteins. The helicase component continues to unwind the double-stranded DNA (dsDNA) and the primase component synthesizes a RNA primer during initiation or restart of replication."
+ },
+ {
   "identifier": "GO:0000438",
   "label": "core TFIIH complex portion of holo TFIIH complex",
   "category": "OTHER",

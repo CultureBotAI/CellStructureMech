@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/core_primosome_complex.yaml
+  slug: core_primosome_complex
+session:
+  id: 2026-10-01T092010Z-codex-b44004
+  timestamp: '2026-10-01T09:20:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added core primosome complex record
+  details: Created a GO:1990098-backed core primosome complex record with GO synonymy, primosome
+    parentage, DnaB-DnaG complex parthood, reviewed-label-only helicase/primase/template-DNA
+    components, E. coli evidence from PMID:21856207, DNA-replication-primer-synthesis function
+    evidence, GO/PubMed/DOI evidence, a nonmechanistic primer-synthesis graph, and curation
+    discussions for unresolved component groundings and the core/pre-primosome boundary.
