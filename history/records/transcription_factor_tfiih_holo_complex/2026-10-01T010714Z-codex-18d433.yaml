@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/transcription_factor_tfiih_holo_complex.yaml
+  slug: transcription_factor_tfiih_holo_complex
+session:
+  id: 2026-10-01T010714Z-codex-18d433
+  timestamp: '2026-10-01T01:07:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO:0005675 TFIIH holo complex record
+  details: Created the GO:0005675 transcription factor TFIIH holo complex record under data/structures/other
+    with GO exact, related, and broad synonymy, three GO is-a parents, GO-grounded core TFIIH
+    and TFIIK protein-complex components, has-part links to those two subcomplexes, Saccharomyces
+    cerevisiae scope, a nonmechanistic subcomplex assembly graph, and a holo-TFIIH boundary
+    discussion. Focused LinkML and strict validation passed before derived artifacts were
+    regenerated.
