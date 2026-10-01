@@ -5058,6 +5058,15 @@
   "definition": "A ribonuclease P complex located in the mitochondrion of a eukaryotic cell, where it catalyzes the 5' endonucleolytic cleavage of precursor tRNAs to yield mature tRNAs. The subunit composition of mitochondrial ribonuclease P complexes varies between species. The complex contains a single RNA molecule and a single protein molecule in yeast (PMID:12045094), but comprises three proteins and lacks an RNA component in humans."
  },
  {
+  "identifier": "GO:1990198",
+  "label": "ModE complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mode_complex.html",
+  "definition": "A dimeric protein complex containing two ModE subunits. Binds directly to DNA to regulate transcription, and is involved in (positively and negatively) regulating various aspects of molybdenum metabolism."
+ },
+ {
   "identifier": "GO:0033551",
   "label": "monopolin complex",
   "category": "OTHER",

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mode_complex.yaml
+  slug: mode_complex
+session:
+  id: 2026-10-01T221008Z-codex-f40f61
+  timestamp: '2026-10-01T22:10:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added ModE complex record
+  details: Created a GO:1990198-backed ModE complex record with GO exact ModE dimer synonymy,
+    GO:0005667 transcription regulator complex parentage, an InterPro:IPR016462-grounded ModE
+    constituent with a reviewed UniProtKB:P0A9G8 E. coli K-12 example, a PDB:1O7L-backed E.
+    coli canonical example, molybdenum ion binding and cis-regulatory region sequence-specific
+    DNA binding functions, dimer subunit count, and PMID/DOI evidence from the molybdate-activated
+    E. coli ModE structural literature.

@@ -1,0 +1,133 @@
+identifier: GO:1990198
+label: ModE complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A dimeric protein complex containing two ModE subunits. Binds directly
+  to DNA to regulate transcription, and is involved in (positively and negatively)
+  regulating various aspects of molybdenum metabolism.
+definition_source: GO:1990198
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T22:05:05Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T22:06:35Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonymy and transcription-regulator parentage, an InterPro-grounded
+    ModE constituent with a reviewed E. coli K-12 UniProt example, an E. coli PDB-backed
+    canonical example, molybdenum-binding and DNA-binding functions, dimer subunit
+    count, and DOI/PMID/PDB evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: ModE dimer
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990198
+parent_structures:
+- GO:0005667
+components:
+- component_id: mode_transcriptional_regulator
+  label: Molybdate-dependent transcriptional regulator ModE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR016462
+  gene_symbols:
+  - modE
+  - modR
+  stoichiometry: 2 copies per E. coli ModE homodimer in PDB:1O7L biological assembly
+    1
+  essentiality: UNKNOWN
+  role: Homodimeric transcription-regulator subunit with an N-terminal DNA-binding
+    domain and C-terminal oxyanion-binding domains that bind molybdate.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A9G8
+    protein_label: DNA-binding transcriptional dual regulator ModE
+    gene_symbol: modE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 ModE accession that UniProt maps to GO:1990198 and
+      RCSB maps to the ModE homodimer in PDB:1O7L.
+    evidence:
+    - reference: UniProtKB:P0A9G8
+      notes: UniProtKB P0A9G8 is the reviewed E. coli K-12 entry for DNA-binding transcriptional
+        dual regulator ModE.
+    - reference: PDB:1O7L
+      notes: RCSB reports PDB:1O7L as molybdate-activated E. coli ModE with homomeric
+        dimer biological assemblies.
+  evidence:
+  - reference: GO:1990198
+    notes: GO:1990198 defines the ModE complex as a dimeric protein complex containing
+      two ModE subunits.
+  - reference: InterPro:IPR016462
+    notes: InterPro IPR016462 is the full-length molybdate-dependent transcriptional
+      regulator ModE family entry.
+  - reference: PDB:1O7L
+    notes: RCSB describes each PDB:1O7L biological assembly as a homomeric E. coli
+      ModE dimer.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli source of the molybdate-activated ModE homodimer deposited as PDB:1O7L.
+  reference: PDB:1O7L
+functions:
+- function_id: molybdenum_ion_binding
+  label: molybdenum ion binding
+  grounding: GO:0030151
+  description: The ModE homodimer binds molybdate through its C-terminal oxyanion-binding
+    domains.
+  evidence:
+  - reference: GO:1990198
+    notes: GO:1990198 defines the complex by its involvement in molybdenum metabolism.
+  - reference: GO:0030151
+    notes: GO:0030151 is the Gene Ontology molecular-function term for molybdenum
+      ion binding.
+  - reference: PDB:1O7L
+    notes: RCSB reports PDB:1O7L as the molybdate-activated form of E. coli ModE.
+- function_id: cis_regulatory_region_sequence_specific_dna_binding
+  label: cis-regulatory region sequence-specific DNA binding
+  grounding: GO:0000987
+  description: The ModE homodimer uses its N-terminal DNA-binding domains to bind
+    regulatory DNA sites.
+  evidence:
+  - reference: GO:1990198
+    notes: GO:1990198 defines the ModE complex as binding DNA directly to regulate
+      transcription.
+  - reference: GO:0000987
+    notes: GO:0000987 is the Gene Ontology molecular-function term for cis-regulatory
+      region sequence-specific DNA binding.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '2'
+  context: E. coli ModE homodimer in PDB:1O7L biological assembly 1
+  reference: PDB:1O7L
+evidence:
+- reference: GO:1990198
+  notes: Gene Ontology cellular-component term for the dimeric ModE complex and source
+    of the exact ModE dimer synonym.
+- reference: GO:0005667
+  notes: QuickGO reports GO:1990198 as an is-a child of GO:0005667 transcription regulator
+    complex.
+- reference: GO:0030151
+  notes: Gene Ontology molecular-function term for molybdenum ion binding.
+- reference: GO:0000987
+  notes: Gene Ontology molecular-function term for cis-regulatory region sequence-specific
+    DNA binding.
+- reference: InterPro:IPR016462
+  notes: InterPro family entry for molybdate-dependent transcriptional regulators
+    of the ModE type.
+- reference: UniProtKB:P0A9G8
+  notes: UniProtKB reviewed E. coli K-12 ModE entry.
+- reference: PDB:1O7L
+  notes: RCSB Protein Data Bank entry for the molybdate-activated homodimeric E. coli
+    ModE structure.
+- reference: PMID:12581638
+  notes: PubMed identifier for Schuttelkopf, Boxer and Hunter 2003, the Journal of
+    Molecular Biology ModE structural paper cited by PDB:1O7L.
+- reference: DOI:10.1016/S0022-2836(02)01358-X
+  notes: DOI for Schuttelkopf, Boxer and Hunter 2003, 'Crystal Structure of Activated
+    ModE Reveals Conformational Changes Involving Both Oxyanion and DNA-binding Domains',
+    as reported by Crossref.

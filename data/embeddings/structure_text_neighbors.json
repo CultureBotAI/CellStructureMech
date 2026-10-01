@@ -17431,6 +17431,37 @@
       ]
     },
     {
+      "identifier": "GO:1990198",
+      "label": "ModE complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0044777",
+          "label": "single-stranded DNA-binding protein complex",
+          "cosine_similarity": 0.67962337
+        },
+        {
+          "identifier": "GO:1990125",
+          "label": "DiaA complex",
+          "cosine_similarity": 0.67899902
+        },
+        {
+          "identifier": "GO:0042555",
+          "label": "MCM complex",
+          "cosine_similarity": 0.6637205
+        },
+        {
+          "identifier": "GO:1990085",
+          "label": "Hda-beta clamp complex",
+          "cosine_similarity": 0.64080031
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.63678063
+        }
+      ]
+    },
+    {
       "identifier": "GO:0033551",
       "label": "monopolin complex",
       "neighbors": [
