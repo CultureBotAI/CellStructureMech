@@ -27,6 +27,11 @@ curation_history:
   changes: Replaced a bare components discussion anchor with explicit components#...
     anchors for the PriC/DnaG boundary discussion.
   llm_assisted: true
+- timestamp: '2026-10-01T05:16:35Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: '#1855: typed the GO:1990100 DnaB-DnaC causal node as STRUCTURE.'
+  llm_assisted: true
 synonyms:
 - synonym_text: DnaB-DnaC-DnaT-PriA-PriB preprimosome
   synonym_type: EXACT_SYNONYM
@@ -189,7 +194,7 @@ causal_graphs:
   nodes:
   - node_id: dnab_dnac_complex
     label: DnaB-DnaC complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: dnab_dnac_complex
     grounding: GO:1990100
   - node_id: dnat_restart_protein
