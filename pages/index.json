@@ -4419,6 +4419,15 @@
   "definition": "A protein-DNA complex consisting of the helicase loading complex DnaB-DnaC bound to the DNA-bound DNA replication initiation protein DnaA. Essential for DNA replication initiation."
  },
  {
+  "identifier": "GO:1990084",
+  "label": "DnaA-Dps complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/dnaa_dps_complex.html",
+  "definition": "A protein complex that negatively regulates strand-opening at the origin of replication, thereby interfering with replication initiation. This complex is thought to be involved in the regulation of replication under oxidative stress conditions. In E. coli, this complex is composed of DnaA and Dps."
+ },
+ {
   "identifier": "GO:1990083",
   "label": "DnaA-Hda complex",
   "category": "OTHER",

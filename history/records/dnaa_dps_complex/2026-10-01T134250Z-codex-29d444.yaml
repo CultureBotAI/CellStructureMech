@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dnaa_dps_complex.yaml
+  slug: dnaa_dps_complex
+session:
+  id: 2026-10-01T134250Z-codex-29d444
+  timestamp: '2026-10-01T13:42:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added DnaA-Dps complex record
+  details: Created a GO:1990084-backed DnaA-Dps complex record with replication-inhibiting-complex
+    parentage, reviewed-label-only DnaA and Dps components, Escherichia coli Dps-DnaA evidence
+    from Chodavarapu et al. 2008, negative DNA replication initiation function evidence, GO/PubMed/DOI
+    evidence, a nonmechanistic DnaA-Dps regulatory graph, and curation discussions for unresolved
+    component groundings and the DnaA/Hda sibling boundary.
