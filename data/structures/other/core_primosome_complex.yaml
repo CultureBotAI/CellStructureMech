@@ -28,14 +28,19 @@ curation_history:
   changes: Replaced the bare components discussion attachment with concrete core-primosome
     component anchors.
   llm_assisted: true
+- timestamp: '2026-10-01T09:42:15Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: '#1864: Removed DnaB-DnaG complex from generic GO:1990098 has_part and
+    the core-primosome graph, and narrowed the boundary discussion to leave species-specific
+    helicase-primase protein subcomplexes out of the generic core record.'
+  llm_assisted: true
 synonyms:
 - synonym_text: core primosome
   synonym_type: EXACT_SYNONYM
   source: GO:1990098
 parent_structures:
 - GO:1990077
-has_part:
-- GO:1990156
 components:
 - component_id: replicative_dna_helicase
   label: replicative DNA helicase
@@ -129,13 +134,6 @@ evidence:
 - reference: DOI:10.1016/j.cbpa.2011.07.016
   notes: DOI for Kaguni 2011, 'Replication initiation at the Escherichia coli chromosomal
     origin', as reported by PubMed.
-- reference: PMID:14557266
-  notes: PubMed identifier for Mitkova, Khopde and Biswas 2003, which measured E.
-    coli DnaB-DnaG primase-helicase stoichiometry.
-- reference: DOI:10.1074/jbc.M308956200
-  notes: DOI for Mitkova, Khopde and Biswas 2003, 'Mechanism and stoichiometry of
-    interaction of DnaG primase with DnaB helicase of Escherichia coli in RNA primer
-    synthesis', as reported by PubMed.
 causal_graphs:
 - graph_id: core_primosome_primer_synthesis
   title: core primosome supports primer synthesis
@@ -145,7 +143,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: The graph records GO-level core composition and primer-synthesis output
     without resolving primase cycling, template tracking, restart-specific accessory
-    proteins or species-specific helicase-loader handoff.
+    proteins, species-specific helicase-primase subcomplexes or helicase-loader handoff.
   nodes:
   - node_id: replicative_dna_helicase
     label: replicative DNA helicase
@@ -159,10 +157,6 @@ causal_graphs:
     label: template DNA
     node_type: GENETIC_ELEMENT
     component_ref: template_dna
-  - node_id: dnab_dnag_complex
-    label: DnaB-DnaG complex
-    node_type: STRUCTURE
-    grounding: GO:1990156
   - node_id: core_primosome_complex
     label: core primosome complex
     node_type: STRUCTURE
@@ -195,14 +189,6 @@ causal_graphs:
     evidence:
     - reference: GO:1990098
       notes: GO:1990098 defines the core primosome as a protein-DNA complex.
-  - subject: dnab_dnag_complex
-    predicate: part of
-    object: core_primosome_complex
-    description: The E. coli DnaB-DnaG primase-helicase complex is a protein subcomplex
-      of a DNA-bound core primosome.
-    evidence:
-    - reference: GO:1990156
-      notes: QuickGO models the DnaB-DnaG complex as part of GO:1990098.
   - subject: core_primosome_complex
     predicate: supports
     object: dna_replication_synthesis_of_primer
@@ -240,15 +226,16 @@ discussions:
   status: RESOLVED
   attaches_to:
   - parent_structures
-  - has_part
   - components#replicative_dna_helicase
   - components#dna_primase
   - components#template_dna
   rationale: GO:1990098 denotes a DNA-bound helicase-primase core, GO:1990077 denotes
     the broader primosome class, GO:1990099 denotes primase-lacking pre-primosomes,
-    and GO:1990156 denotes the DnaB-DnaG protein subcomplex.
-  resolution_note: Curated GO:1990077 as the is-a parent, GO:1990156 as a part, and
-    kept DnaC/pre-primosome accessory proteins out of this core-primosome record.
+    and species-specific helicase-primase protein subcomplexes such as GO:1990156
+    are narrower parts of particular core primosomes rather than generic GO:1990098
+    has_part structures.
+  resolution_note: Curated GO:1990077 as the is-a parent and kept DnaB-DnaG, DnaC
+    and pre-primosome accessory proteins out of this generic core-primosome record.
   evidence:
   - reference: GO:1990098
     notes: GO:1990098 defines the DNA-bound core primosome.
@@ -257,7 +244,8 @@ discussions:
   - reference: GO:1990099
     notes: GO:1990099 defines pre-primosome complexes as lacking a primase component.
   - reference: GO:1990156
-    notes: GO:1990156 denotes the DnaB-DnaG protein complex.
+    notes: GO:1990156 denotes the DnaB-DnaG protein complex, which is narrower than
+      the generic DNA-bound core primosome.
   posed_by: codex
   posed_date: '2026-10-01'
   resolved_date: '2026-10-01'

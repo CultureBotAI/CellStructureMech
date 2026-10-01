@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/core_primosome_complex.yaml
+  slug: core_primosome_complex
+session:
+  id: 2026-10-01T094245Z-codex-ba2201
+  timestamp: '2026-10-01T09:42:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1864
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1863
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed core primosome parthood review
+  details: 'Addressed PR #1863 review issue #1864 by removing GO:1990156 from the generic
+    GO:1990098 core primosome has_part assertions, dropping the DnaB-DnaG graph node and edge,
+    and narrowing the boundary discussion so species-specific helicase-primase protein subcomplexes
+    remain out of the generic DNA-bound core record.'
