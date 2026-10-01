@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dnab_dnac_dnat_pria_prib_complex.yaml
+  slug: dnab_dnac_dnat_pria_prib_complex
+session:
+  id: 2026-10-01T050407Z-codex-f00ed4
+  timestamp: '2026-10-01T05:04:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fixed DnaB-DnaC-DnaT-PriA-PriB discussion anchors
+  details: Replaced the PriC/DnaG boundary discussion's bare components anchor with explicit
+    components#dnab_dnac_complex, components#dnat_restart_protein, components#pria_restart_protein
+    and components#prib_restart_protein anchors so every discussion anchor resolves to a local
+    row.

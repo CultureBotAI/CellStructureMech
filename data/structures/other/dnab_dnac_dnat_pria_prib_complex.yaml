@@ -1,0 +1,314 @@
+identifier: GO:1990158
+label: DnaB-DnaC-DnaT-PriA-PriB complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A protein-DNA complex consisting of the helicase loading complex DnaB-DnaC,
+  replication restart proteins DnaT, PriA and PriB, and associated DNA. Involved in
+  the restart of DNA replication after a stalled replication fork has been repaired.
+definition_source: GO:1990158
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T04:44:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T04:46:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, pre-primosome parentage, DnaB-DnaC subcomplex and DnaT/PriA/PriB/DNA
+    components, E. coli/PhiX174 evidence, replication-fork-processing function evidence,
+    GO/PubMed/DOI evidence, a nonmechanistic restart graph, and grounding/boundary
+    discussions.
+  llm_assisted: true
+- timestamp: '2026-10-01T05:03:44Z'
+  curator: codex
+  action: FIX_VALIDATION
+  changes: Replaced a bare components discussion anchor with explicit components#...
+    anchors for the PriC/DnaG boundary discussion.
+  llm_assisted: true
+synonyms:
+- synonym_text: DnaB-DnaC-DnaT-PriA-PriB preprimosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990158
+- synonym_text: phi-X174-type preprimosome
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990158
+parent_structures:
+- GO:1990099
+has_part:
+- GO:1990100
+components:
+- component_id: dnab_dnac_complex
+  label: DnaB-DnaC complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:1990100
+  essentiality: UNKNOWN
+  role: Helicase-loading subcomplex that donates DnaB during preprimosome assembly.
+  evidence:
+  - reference: GO:1990158
+    notes: GO:1990158 defines this preprimosome as containing the DnaB-DnaC helicase-loading
+      complex.
+  - reference: PMID:8663104
+    notes: Ng and Marians 1996 described ATP-dependent transfer of DnaB from DnaB-DnaC
+      into a PriA-PriB-DnaT-PAS complex.
+- component_id: dnat_restart_protein
+  label: DnaT replication restart protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaT is represented as the replication-restart constituent named
+    by GO:1990158; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    boundaries were not curated in this pass.
+  role: Replication-restart protein in the PriA-PriB-DnaT assembly intermediate.
+  evidence:
+  - reference: GO:1990158
+    notes: GO:1990158 defines DnaT as a constituent of this preprimosome.
+  - reference: PMID:8663104
+    notes: Ng and Marians 1996 placed DnaT in the PriA-PriB-DnaT complex assembled
+      at a PhiX174 primosome assembly site.
+- component_id: pria_restart_protein
+  label: PriA replication restart protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - priA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PriA is represented as the replication-restart constituent named
+    by GO:1990158; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    boundaries were not curated in this pass.
+  role: Primosomal protein that recognizes primosome assembly site DNA.
+  evidence:
+  - reference: GO:1990158
+    notes: GO:1990158 defines PriA as a constituent of this preprimosome.
+  - reference: PMID:8663104
+    notes: Ng and Marians 1996 described PriA recognition and binding at a PhiX174
+      primosome assembly site.
+- component_id: prib_restart_protein
+  label: PriB replication restart protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - priB
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: PriB is represented as the replication-restart constituent named
+    by GO:1990158; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    boundaries were not curated in this pass.
+  role: Replication-restart protein that stabilizes the PriA-DNA complex.
+  evidence:
+  - reference: GO:1990158
+    notes: GO:1990158 defines PriB as a constituent of this preprimosome.
+  - reference: PMID:8663104
+    notes: Ng and Marians 1996 reported that PriB stabilizes PriA on primosome assembly
+      site DNA.
+- component_id: primosome_assembly_site_dna
+  label: primosome assembly site DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Single-stranded DNA scaffold carrying the primosome assembly site.
+  evidence:
+  - reference: GO:1990158
+    notes: GO:1990158 defines this preprimosome as a protein-DNA complex.
+  - reference: PMID:8663104
+    notes: Ng and Marians 1996 assembled PriA-PriB-DnaT-DnaB protein-DNA complexes
+      on PhiX174 primosome assembly site DNA.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Ng and Marians 1996 reconstituted PhiX174-type primosome assembly with E.
+    coli primosomal proteins.
+  reference: PMID:8663104
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Ng and Marians 1996 isolated PhiX174-type preprimosomal and primosomal protein-DNA
+    complexes formed by E. coli PriA, PriB, PriC, DnaT, DnaB, DnaC and DnaG on single-stranded
+    DNA.
+  reference: PMID:8663105
+functions:
+- function_id: replication_fork_processing
+  label: replication fork processing
+  grounding: GO:0031297
+  description: The DnaB-DnaC-DnaT-PriA-PriB preprimosome participates in restarting
+    repaired stalled replication forks.
+  evidence:
+  - reference: GO:1990158
+    notes: GO:1990158 defines this preprimosome by replication restart after a stalled
+      replication fork has been repaired.
+  - reference: GO:0031297
+    notes: GO:0031297 is the Gene Ontology biological-process term for restoring and
+      restarting a stalled DNA replication fork.
+  - reference: PMID:8663105
+    notes: Ng and Marians 1996 connected maintenance of the PhiX174-type primosome
+      on replicated DNA with re-establishment of replication forks.
+evidence:
+- reference: GO:1990158
+  notes: Gene Ontology cellular-component term for the DnaB-DnaC-DnaT-PriA-PriB complex
+    and its PhiX174-type preprimosome synonymy.
+- reference: GO:1990099
+  notes: OLS reports GO:1990099 pre-primosome complex as the direct GO:1990158 is-a
+    parent.
+- reference: GO:1990100
+  notes: Gene Ontology cellular-component term for the DnaB-DnaC helicase-loading
+    subcomplex.
+- reference: GO:0031297
+  notes: Gene Ontology biological-process term for replication fork processing.
+- reference: PMID:8663104
+  notes: PubMed identifier for Ng and Marians 1996 part I, which analyzed ordered
+    PhiX174-type primosome assembly intermediates.
+- reference: DOI:10.1074/jbc.271.26.15642
+  notes: DOI for Ng and Marians 1996, 'The ordered assembly of the phiX174-type primosome.
+    I. Isolation and identification of intermediate protein-DNA complexes', as reported
+    by PubMed.
+- reference: PMID:8663105
+  notes: PubMed identifier for Ng and Marians 1996 part II, the Journal of Biological
+    Chemistry paper cited by GO:1990158.
+- reference: DOI:10.1074/jbc.271.26.15649
+  notes: DOI for Ng and Marians 1996, 'The ordered assembly of the phiX174-type primosome.
+    II. Preservation of primosome composition from assembly through replication',
+    as reported by PubMed.
+causal_graphs:
+- graph_id: dnab_dnac_dnat_pria_prib_restart
+  title: DnaB-DnaC-DnaT-PriA-PriB supports fork restart
+  description: A DnaB-DnaC helicase-loading subcomplex and PriA, PriB and DnaT assemble
+    on single-stranded primosome assembly site DNA to form a preprimosome used in
+    replication restart.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level preprimosome composition and replication-restart
+    scope without resolving ATPase cycling, DnaB transfer, DnaC release, PriC-containing
+    alternatives or DnaG primase recruitment.
+  nodes:
+  - node_id: dnab_dnac_complex
+    label: DnaB-DnaC complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnab_dnac_complex
+    grounding: GO:1990100
+  - node_id: dnat_restart_protein
+    label: DnaT replication restart protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnat_restart_protein
+  - node_id: pria_restart_protein
+    label: PriA replication restart protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: pria_restart_protein
+  - node_id: prib_restart_protein
+    label: PriB replication restart protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: prib_restart_protein
+  - node_id: primosome_assembly_site_dna
+    label: primosome assembly site DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: primosome_assembly_site_dna
+  - node_id: dnab_dnac_dnat_pria_prib_complex
+    label: DnaB-DnaC-DnaT-PriA-PriB complex
+    node_type: STRUCTURE
+    grounding: GO:1990158
+  - node_id: replication_fork_processing
+    label: replication fork processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031297
+  edges:
+  - subject: dnab_dnac_complex
+    predicate: contributes to
+    object: dnab_dnac_dnat_pria_prib_complex
+    description: The DnaB-DnaC helicase-loading complex is a constituent of the DnaB-DnaC-DnaT-PriA-PriB
+      preprimosome.
+    evidence:
+    - reference: GO:1990158
+      notes: GO:1990158 includes the DnaB-DnaC helicase-loading complex.
+  - subject: pria_restart_protein
+    predicate: contributes to
+    object: dnab_dnac_dnat_pria_prib_complex
+    description: PriA is a constituent of the preprimosome.
+    evidence:
+    - reference: GO:1990158
+      notes: GO:1990158 names PriA as a replication-restart constituent.
+  - subject: prib_restart_protein
+    predicate: contributes to
+    object: dnab_dnac_dnat_pria_prib_complex
+    description: PriB is a constituent of the preprimosome.
+    evidence:
+    - reference: GO:1990158
+      notes: GO:1990158 names PriB as a replication-restart constituent.
+  - subject: dnat_restart_protein
+    predicate: contributes to
+    object: dnab_dnac_dnat_pria_prib_complex
+    description: DnaT is a constituent of the preprimosome.
+    evidence:
+    - reference: GO:1990158
+      notes: GO:1990158 names DnaT as a replication-restart constituent.
+  - subject: primosome_assembly_site_dna
+    predicate: scaffolds
+    object: dnab_dnac_dnat_pria_prib_complex
+    description: Primosome assembly site DNA scaffolds assembly of the PhiX174-type
+      preprimosome.
+    evidence:
+    - reference: GO:1990158
+      notes: GO:1990158 defines this entity as a protein-DNA complex.
+    - reference: PMID:8663104
+      notes: Ng and Marians 1996 assembled primosomal intermediates at a PhiX174 primosome
+        assembly site.
+  - subject: dnab_dnac_dnat_pria_prib_complex
+    predicate: supports
+    object: replication_fork_processing
+    description: The DnaB-DnaC-DnaT-PriA-PriB preprimosome is involved in replication
+      restart after stalled fork repair.
+    evidence:
+    - reference: GO:1990158
+      notes: GO:1990158 defines this preprimosome by its involvement in replication
+        restart after stalled replication fork repair.
+    - reference: GO:0031297
+      notes: GO:0031297 defines replication fork processing as restoration and restart
+        of a stalled replication fork.
+discussions:
+- discussion_id: resolve_restart_component_groundings
+  prompt: Resolve exact source-neutral DnaT, PriA, PriB and primosome assembly site
+    DNA groundings for the DnaB-DnaC-DnaT-PriA-PriB complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnat_restart_protein
+  - components#pria_restart_protein
+  - components#prib_restart_protein
+  - components#primosome_assembly_site_dna
+  rationale: GO:1990158 defines DnaT, PriA, PriB and associated DNA as constituents
+    of this preprimosome. Exact source-neutral InterPro, Pfam, NCBIfam, UniProt family
+    or SO sequence-feature CURIEs for these components need narrower curation before
+    the labels can be grounded.
+  evidence:
+  - reference: GO:1990158
+    notes: GO:1990158 names the DnaB-DnaC-DnaT-PriA-PriB preprimosome constituents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: exclude_pric_and_dnag_from_priab_preprimosome
+  prompt: Leave PriC and DnaG out of the GO:1990158 DnaB-DnaC-DnaT-PriA-PriB complex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#dnab_dnac_complex
+  - components#dnat_restart_protein
+  - components#pria_restart_protein
+  - components#prib_restart_protein
+  - causal_graphs#dnab_dnac_dnat_pria_prib_restart
+  rationale: GO:1990158 denotes the PriA/PriB/DnaT/DnaB-DnaC preprimosome. GO models
+    the PriC-containing alternative as separate sibling terms and models DnaG-containing
+    entities as primosomes rather than pre-primosomes.
+  resolution_note: Curated the exact GO:1990158 boundary and recorded PriC-containing
+    and DnaG-containing alternatives as out of scope for this record.
+  evidence:
+  - reference: GO:1990158
+    notes: GO:1990158 names the DnaB-DnaC-DnaT-PriA-PriB complex.
+  - reference: GO:1990099
+    notes: GO:1990099 defines pre-primosome complexes as lacking a primase component.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'

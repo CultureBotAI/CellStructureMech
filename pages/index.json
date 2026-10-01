@@ -4383,6 +4383,15 @@
   "definition": "A protein complex containing homohexameric DNA helicase DnaB, and the DNA helicase loader DnaC. The helicase loader DnaC delivers DnaB to the chromosomal origin (oriC)."
  },
  {
+  "identifier": "GO:1990158",
+  "label": "DnaB-DnaC-DnaT-PriA-PriB complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/dnab_dnac_dnat_pria_prib_complex.html",
+  "definition": "A protein-DNA complex consisting of the helicase loading complex DnaB-DnaC, replication restart proteins DnaT, PriA and PriB, and associated DNA. Involved in the restart of DNA replication after a stalled replication fork has been repaired."
+ },
+ {
   "identifier": "GO:1990156",
   "label": "DnaB-DnaG complex",
   "category": "OTHER",
