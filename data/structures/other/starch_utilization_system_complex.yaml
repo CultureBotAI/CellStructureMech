@@ -24,6 +24,12 @@ curation_history:
   changes: Pointed the SusA/SusB/SusR boundary discussion at concrete Sus component
     anchors.
   llm_assisted: true
+- timestamp: '2026-10-01T15:23:48Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Addressed PR #1875 review issue #1876 by changing SusE and SusF essentiality
+    from DISPENSABLE to UNKNOWN.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Sus complex
   synonym_type: EXACT_SYNONYM
@@ -83,7 +89,7 @@ components:
     CURIE was asserted for the SusE outer-membrane starch-binding lipoprotein.
   gene_symbols:
   - susE
-  essentiality: DISPENSABLE
+  essentiality: UNKNOWN
   role: Surface-exposed outer-membrane lipoprotein that enhances SusC- and SusD-dependent
     starch binding.
   evidence:
@@ -102,7 +108,7 @@ components:
     CURIE was asserted for the SusF outer-membrane lipoprotein.
   gene_symbols:
   - susF
-  essentiality: DISPENSABLE
+  essentiality: UNKNOWN
   role: Surface-exposed outer-membrane lipoprotein associated with the starch-binding
     Sus complex.
   evidence:
