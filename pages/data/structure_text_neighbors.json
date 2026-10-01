@@ -15633,6 +15633,37 @@
       ]
     },
     {
+      "identifier": "GO:1990065",
+      "label": "Dxr protein complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.73002337
+        },
+        {
+          "identifier": "GO:1990084",
+          "label": "DnaA-Dps complex",
+          "cosine_similarity": 0.71090292
+        },
+        {
+          "identifier": "GO:0070939",
+          "label": "Dsl1/NZR complex",
+          "cosine_similarity": 0.70726103
+        },
+        {
+          "identifier": "GO:0008622",
+          "label": "epsilon DNA polymerase complex",
+          "cosine_similarity": 0.68596698
+        },
+        {
+          "identifier": "GO:0032299",
+          "label": "ribonuclease H2 complex",
+          "cosine_similarity": 0.68319715
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032126",
       "label": "eisosome",
       "neighbors": [
@@ -16117,14 +16148,14 @@
           "cosine_similarity": 0.67570642
         },
         {
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.66238081
+        },
+        {
           "identifier": "GO:1990621",
           "label": "ESCRT IV complex",
           "cosine_similarity": 0.66201679
-        },
-        {
-          "identifier": "GO:0000178",
-          "label": "exosome (RNase complex)",
-          "cosine_similarity": 0.66122292
         }
       ]
     },
@@ -19532,9 +19563,9 @@
           "cosine_similarity": 0.65089072
         },
         {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.61767763
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.61979652
         }
       ]
     },
