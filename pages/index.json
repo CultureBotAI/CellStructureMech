@@ -4374,6 +4374,15 @@
   "definition": "A bacterial type IIA topoisomerase complex composed of ParC and ParE subunits that can relax supercoiled DNA and supports chromosome segregation."
  },
  {
+  "identifier": "GO:1990100",
+  "label": "DnaB-DnaC complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/dnab_dnac_complex.html",
+  "definition": "A protein complex containing homohexameric DNA helicase DnaB, and the DNA helicase loader DnaC. The helicase loader DnaC delivers DnaB to the chromosomal origin (oriC)."
+ },
+ {
   "identifier": "GO:0070939",
   "label": "Dsl1/NZR complex",
   "category": "OTHER",

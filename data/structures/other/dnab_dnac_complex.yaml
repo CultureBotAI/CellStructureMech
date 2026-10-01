@@ -1,0 +1,233 @@
+identifier: GO:1990100
+label: DnaB-DnaC complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex containing homohexameric DNA helicase DnaB, and the
+  DNA helicase loader DnaC. The helicase loader DnaC delivers DnaB to the chromosomal
+  origin (oriC).
+definition_source: GO:1990100
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T02:37:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T02:39:03Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy, protein-containing-complex parentage, DnaB and DnaC
+    reviewed-label-only components, E. coli scope, DNA-replication-initiation function
+    evidence, GO/PubMed/DOI evidence, a nonmechanistic helicase-loading graph, and
+    grounding/stoichiometry discussions.
+  llm_assisted: true
+- timestamp: '2026-10-01T03:01:11Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: '#1851: replaced the GO-backed E. coli taxonomic row with primary DnaB-DnaC
+    evidence.'
+  llm_assisted: true
+synonyms:
+- synonym_text: DnaB6-DnaC3 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990100
+- synonym_text: DnaB6-DnaC6 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990100
+- synonym_text: helicase-loading complex
+  synonym_type: BROAD_SYNONYM
+  source: GO:1990100
+parent_structures:
+- GO:0032991
+components:
+- component_id: dnab_helicase
+  label: DnaB helicase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaB
+  stoichiometry: 6 copies per DnaB homohexamer
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaB is represented as the GO-defined homohexameric helicase constituent
+    of the DnaB-DnaC complex; exact source-neutral InterPro, Pfam, NCBIfam or UniProt
+    family boundaries were not curated in this pass.
+  role: Homohexameric DNA helicase constituent of the DnaB-DnaC helicase-loading complex.
+  evidence:
+  - reference: GO:1990100
+    notes: GO:1990100 defines the DnaB-DnaC complex as containing homohexameric DNA
+      helicase DnaB.
+  - reference: PMID:20129058
+    notes: Makowska-Grzyska and Kaguni 2010 reported quantitative analysis of the
+      DnaB-DnaC complex relative to the DnaB hexamer.
+- component_id: dnac_helicase_loader
+  label: DnaC helicase loader
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - dnaC
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: DnaC is represented as the helicase-loader constituent named by
+    GO:1990100; exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries
+    were not curated in this pass.
+  role: Helicase-loader constituent that delivers DnaB to the chromosomal origin.
+  evidence:
+  - reference: GO:1990100
+    notes: GO:1990100 defines the DnaB-DnaC complex as containing the DNA helicase
+      loader DnaC.
+  - reference: PMID:20129058
+    notes: Makowska-Grzyska and Kaguni 2010 studied DnaC-dependent delivery and release
+      of DnaB at the E. coli chromosomal origin.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Makowska-Grzyska and Kaguni 2010 studied DnaB-DnaC helicase loading at the
+    E. coli chromosomal origin.
+  reference: PMID:20129058
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Makowska-Grzyska and Kaguni 2010 used the E. coli DnaB-DnaC system to quantify
+    DnaC occupancy on the DnaB hexamer and to dissect DnaC release during replication
+    initiation.
+  reference: PMID:20129058
+functions:
+- function_id: dna_replication_initiation
+  label: DNA replication initiation
+  grounding: GO:0006270
+  description: The DnaB-DnaC complex participates in bacterial DNA replication initiation
+    by delivering DnaB helicase to the chromosomal origin.
+  evidence:
+  - reference: GO:1990100
+    notes: GO:1990100 defines the DnaB-DnaC complex by DnaC-mediated DnaB delivery
+      to the chromosomal origin.
+  - reference: GO:0006270
+    notes: GO:0006270 is the Gene Ontology biological-process term for DNA replication
+      initiation.
+  - reference: PMID:20129058
+    notes: Makowska-Grzyska and Kaguni 2010 dissected DnaC release from a DnaB-DnaC
+      prepriming intermediate at oriC.
+evidence:
+- reference: GO:1990100
+  notes: Gene Ontology cellular-component term for the DnaB-DnaC complex and its narrow
+    and broad synonymy.
+- reference: GO:0032991
+  notes: OLS reports GO:0032991 protein-containing complex as the direct GO:1990100
+    is-a parent.
+- reference: GO:0006270
+  notes: Gene Ontology biological-process term for DNA replication initiation.
+- reference: PMID:20129058
+  notes: PubMed identifier for Makowska-Grzyska and Kaguni 2010, the Molecular Cell
+    paper cited by GO:1990100.
+- reference: DOI:10.1016/j.molcel.2009.12.031
+  notes: DOI for Makowska-Grzyska and Kaguni 2010, 'Primase directs the release of
+    DnaC from DnaB', as reported by PubMed.
+causal_graphs:
+- graph_id: dnab_dnac_helicase_loading
+  title: DnaC delivers DnaB to oriC
+  description: The DnaB-DnaC complex combines a DnaB helicase hexamer with DnaC helicase
+    loader to deliver DnaB to oriC during DNA replication initiation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO-level subunit composition and DnaB delivery to
+    oriC without resolving ATPase cycling, DnaC release stoichiometry or primase-triggered
+    helicase activation.
+  nodes:
+  - node_id: dnab_helicase
+    label: DnaB helicase
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnab_helicase
+  - node_id: dnac_helicase_loader
+    label: DnaC helicase loader
+    node_type: GENE_OR_PROTEIN
+    component_ref: dnac_helicase_loader
+  - node_id: dnab_dnac_complex
+    label: DnaB-DnaC complex
+    node_type: STRUCTURE
+    grounding: GO:1990100
+  - node_id: chromosomal_origin_oric
+    label: chromosomal origin oriC
+    node_type: GENETIC_ELEMENT
+  - node_id: dna_replication_initiation
+    label: DNA replication initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006270
+  edges:
+  - subject: dnab_helicase
+    predicate: contributes to
+    object: dnab_dnac_complex
+    description: A homohexameric DnaB helicase is a constituent of the DnaB-DnaC complex.
+    evidence:
+    - reference: GO:1990100
+      notes: GO:1990100 defines the complex as containing homohexameric DNA helicase
+        DnaB.
+  - subject: dnac_helicase_loader
+    predicate: contributes to
+    object: dnab_dnac_complex
+    description: DnaC helicase loader is a constituent of the DnaB-DnaC complex.
+    evidence:
+    - reference: GO:1990100
+      notes: GO:1990100 defines the complex as containing the DNA helicase loader
+        DnaC.
+  - subject: dnab_dnac_complex
+    predicate: delivers helicase to
+    object: chromosomal_origin_oric
+    description: The DnaB-DnaC complex delivers DnaB helicase to the chromosomal origin
+      oriC.
+    evidence:
+    - reference: GO:1990100
+      notes: GO:1990100 defines DnaC as delivering DnaB to the chromosomal origin.
+    - reference: PMID:20129058
+      notes: Makowska-Grzyska and Kaguni 2010 studied a DnaB-DnaC prepriming intermediate
+        at the E. coli chromosomal origin.
+  - subject: dnab_dnac_complex
+    predicate: supports
+    object: dna_replication_initiation
+    description: DnaB delivery by the DnaB-DnaC complex supports the start of DNA-dependent
+      DNA replication.
+    evidence:
+    - reference: GO:1990100
+      notes: GO:1990100 defines this complex as a chromosomal origin DnaB-loading
+        complex.
+    - reference: GO:0006270
+      notes: GO:0006270 is the DNA replication initiation process term.
+discussions:
+- discussion_id: resolve_dnab_dnac_family_groundings
+  prompt: Resolve exact source-neutral DnaB and DnaC family groundings for the DnaB-DnaC
+    complex.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#dnab_helicase
+  - components#dnac_helicase_loader
+  rationale: GO:1990100 defines DnaB and DnaC as constituents of this helicase-loading
+    complex. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family boundaries
+    for these component classes need narrower curation before the labels can be grounded.
+  evidence:
+  - reference: GO:1990100
+    notes: GO:1990100 defines the DnaB-DnaC complex around DnaB and DnaC constituents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: defer_dnac_stoichiometry
+  prompt: Leave DnaC stoichiometry unresolved rather than choosing a DnaB6-DnaC3 or
+    DnaB6-DnaC6 narrow subcomplex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - synonyms
+  - components#dnac_helicase_loader
+  rationale: GO:1990100 uses DnaB6-DnaC3 and DnaB6-DnaC6 as narrow synonyms for the
+    broader DnaB-DnaC complex. The broader record can safely assert hexameric DnaB
+    from the GO definition without committing the DnaC component row to one narrower
+    loading-state stoichiometry.
+  resolution_note: Curated DnaB6-DnaC3 and DnaB6-DnaC6 as narrow synonyms and left
+    DnaC stoichiometry unset.
+  evidence:
+  - reference: GO:1990100
+    notes: GO:1990100 lists DnaB6-DnaC3 complex and DnaB6-DnaC6 complex as narrow
+      synonyms.
+  posed_by: codex
+  posed_date: '2026-10-01'
+  resolved_date: '2026-10-01'

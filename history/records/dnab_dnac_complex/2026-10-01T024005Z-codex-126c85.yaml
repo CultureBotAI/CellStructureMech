@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dnab_dnac_complex.yaml
+  slug: dnab_dnac_complex
+session:
+  id: 2026-10-01T024005Z-codex-126c85
+  timestamp: '2026-10-01T02:40:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added DnaB-DnaC complex record
+  details: Created a GO:1990100 DnaB-DnaC complex record with GO synonymy, GO:0032991 parentage,
+    reviewed-label-only DnaB and DnaC constituents, Escherichia coli taxonomic scope, DNA
+    replication initiation function evidence, a nonmechanistic helicase-loading graph, and
+    explicit follow-up discussions for DnaB/DnaC family groundings and DnaC stoichiometry.
