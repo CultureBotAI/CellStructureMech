@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ssud_ssue_complex.yaml
+  slug: ssud_ssue_complex
+session:
+  id: 2026-10-01T174630Z-codex-cfa1b6
+  timestamp: '2026-10-01T17:46:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added SsuD-SsuE complex record
+  details: Created a GO:1990200-backed SsuD-SsuE complex record with GO related synonymy,
+    GO:0032991 protein-containing-complex parentage, curated SsuD and SsuE constituents, an
+    InterPro-grounded SsuE component, E. coli K-12 UniProt examples, an Escherichia coli canonical
+    example, alkanesulfonate monooxygenase function evidence, and DOI/PMID evidence from Eichhorn
+    et al. 1999 and Gao and Ellis 2006.

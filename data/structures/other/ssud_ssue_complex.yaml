@@ -1,0 +1,198 @@
+identifier: GO:1990200
+label: SsuD-SsuE complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex containing an alkanesulfonate monooxygenase subunit
+  (SsuD tetramer in E. coli) and a flavin oxidoreductase subunit (SsuE dimer in E.
+  coli). Involved in the utilization of alkanesulfonates as sulfur sources under conditions
+  of sulfate or cysteine starvation.
+definition_source: GO:1990200
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T17:44:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T17:45:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added the GO synonym and protein-containing-complex parent, curated SsuD
+    and SsuE constituents with E. coli K-12 reviewed UniProt examples, grounded SsuE
+    to InterPro, added alkanesulfonate monooxygenase function and E. coli example
+    evidence, and recorded grounding and stoichiometry boundary decisions.
+  llm_assisted: true
+synonyms:
+- synonym_text: two-component alkanesulfonate monooxygenase system
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990200
+parent_structures:
+- GO:0032991
+components:
+- component_id: ssud_alkanesulfonate_monooxygenase
+  label: SsuD alkanesulfonate monooxygenase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ssuD
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The closest reviewed InterPro family found in this pass, IPR050172,
+    combines SsuD and RutA monooxygenases; no exact source-neutral InterPro, Pfam,
+    or NCBIfam family CURIE was asserted for SsuD alone.
+  role: FMNH2-dependent monooxygenase constituent that oxygenates alkanesulfonates
+    to release sulfite and the corresponding aldehyde.
+  protein_examples:
+  - uniprot_id: UniProtKB:P80645
+    protein_label: Alkanesulfonate monooxygenase
+    gene_symbol: ssuD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 SsuD accession for the alkanesulfonate monooxygenase
+      subunit characterized in the two-component system.
+    evidence:
+    - reference: UniProtKB:P80645
+      notes: UniProtKB P80645 is the reviewed Escherichia coli K-12 entry for SsuD
+        alkanesulfonate monooxygenase.
+    - reference: PMID:10480865
+      notes: Eichhorn et al. 1999 overexpressed and characterized E. coli SsuD as
+        the FMNH2-dependent alkanesulfonate monooxygenase.
+  evidence:
+  - reference: GO:1990200
+    notes: GO:1990200 defines the SsuD-SsuE complex as containing an alkanesulfonate
+      monooxygenase subunit represented by SsuD in E. coli.
+  - reference: DOI:10.1074/jbc.274.38.26639
+    notes: Eichhorn et al. 1999 purified E. coli SsuD and showed that it catalyzes
+      FMNH2-dependent oxygenolytic conversion of alkanesulfonates to sulfite and aldehydes.
+  - reference: DOI:10.1128/JB.00966-06
+    notes: Gao and Ellis 2006 reported affinity-chromatography and cross-linking support
+      for a stable complex between E. coli SsuD and the FMN reductase SsuE.
+- component_id: ssue_fmn_reductase
+  label: NADPH-dependent FMN reductase SsuE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR020048
+  gene_symbols:
+  - ssuE
+  essentiality: UNKNOWN
+  role: FMN reductase constituent that provides reduced FMN to SsuD for alkanesulfonate
+    monooxygenase catalysis.
+  protein_examples:
+  - uniprot_id: UniProtKB:P80644
+    protein_label: FMN reductase (NADPH)
+    gene_symbol: ssuE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 SsuE accession for the FMN reductase subunit characterized
+      in the two-component system.
+    evidence:
+    - reference: UniProtKB:P80644
+      notes: UniProtKB P80644 is the reviewed Escherichia coli K-12 entry for SsuE
+        FMN reductase.
+    - reference: PMID:10480865
+      notes: Eichhorn et al. 1999 characterized E. coli SsuE as the FMN-reducing enzyme
+        that provides SsuD with FMNH2.
+  evidence:
+  - reference: GO:1990200
+    notes: GO:1990200 defines the SsuD-SsuE complex as containing a flavin oxidoreductase
+      subunit represented by SsuE in E. coli.
+  - reference: InterPro:IPR020048
+    notes: InterPro IPR020048 is the NADPH-dependent FMN reductase, SsuE family entry.
+  - reference: DOI:10.1128/JB.00966-06
+    notes: Gao and Ellis 2006 reported direct protein-protein interaction evidence
+      between E. coli SsuE and SsuD.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: The GO-cited biochemical studies defined the SsuD-SsuE complex using Escherichia
+    coli SsuD and SsuE.
+  reference: PMID:16997955
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Gao and Ellis 2006 used E. coli SsuD and SsuE to detect a stable protein-protein
+    complex in the alkanesulfonate monooxygenase system.
+  reference: PMID:16997955
+functions:
+- function_id: alkanesulfonate_monooxygenase_activity
+  label: alkanesulfonate monooxygenase activity
+  grounding: GO:0008726
+  description: The complex couples SsuE-dependent FMN reduction to SsuD-catalyzed
+    FMNH2-dependent oxygenation of alkanesulfonates, generating sulfite and aldehyde
+    products during sulfur starvation.
+  evidence:
+  - reference: GO:0008726
+    notes: GO:0008726 is the molecular-function term for alkanesulfonate monooxygenase
+      activity.
+  - reference: PMID:10480865
+    notes: Eichhorn et al. 1999 showed that SsuE supplies reduced FMN and SsuD catalyzes
+      oxygenolytic alkanesulfonate conversion.
+evidence:
+- reference: GO:1990200
+  notes: Gene Ontology cellular-component term for the SsuD-SsuE complex and its related
+    two-component alkanesulfonate monooxygenase system synonym.
+- reference: GO:0032991
+  notes: QuickGO reports GO:1990200 SsuD-SsuE complex as an is-a child of GO:0032991
+    protein-containing complex.
+- reference: GO:0008726
+  notes: Gene Ontology molecular-function term for alkanesulfonate monooxygenase activity.
+- reference: InterPro:IPR020048
+  notes: InterPro family entry for NADPH-dependent FMN reductase, SsuE.
+- reference: InterPro:IPR050172
+  notes: InterPro family entry for SsuD/RutA monooxygenases; this broad entry was
+    not used as exact grounding for the SsuD component.
+- reference: UniProtKB:P80645
+  notes: UniProtKB reviewed E. coli K-12 SsuD entry.
+- reference: UniProtKB:P80644
+  notes: UniProtKB reviewed E. coli K-12 SsuE entry.
+- reference: PMID:10480865
+  notes: PubMed identifier for Eichhorn, van der Ploeg and Leisinger 1999, the Journal
+    of Biological Chemistry SsuD/SsuE characterization paper cited by GO:1990201.
+- reference: DOI:10.1074/jbc.274.38.26639
+  notes: DOI for Eichhorn, van der Ploeg and Leisinger 1999, 'Characterization of
+    a two-component alkanesulfonate monooxygenase from Escherichia coli', as reported
+    by PubMed.
+- reference: PMID:16997955
+  notes: PubMed identifier for Gao and Ellis 2006, the Journal of Bacteriology SsuD-SsuE
+    interaction paper cited by GO:1990200.
+- reference: DOI:10.1128/JB.00966-06
+  notes: DOI for Gao and Ellis 2006, 'Detection of protein-protein interactions in
+    the alkanesulfonate monooxygenase system from Escherichia coli', as reported by
+    PubMed.
+discussions:
+- discussion_id: resolve_ssud_grounding
+  prompt: Resolve an exact source-neutral family grounding for SsuD alkanesulfonate
+    monooxygenase.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#ssud_alkanesulfonate_monooxygenase
+  rationale: The first record represents SsuD by its reviewed E. coli gene name and
+    avoids mapping it to InterPro:IPR050172 because that family also covers RutA monooxygenases.
+  evidence:
+  - reference: InterPro:IPR050172
+    notes: InterPro IPR050172 is named SsuD/RutA monooxygenase.
+  posed_by: codex
+  posed_date: '2026-10-01'
+- discussion_id: do_not_assert_six_subunit_stoichiometry
+  prompt: Should the SsuD-SsuE complex assert a fixed six-subunit stoichiometry?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: No. The first biochemical study characterized isolated SsuD as a homotetramer
+    and isolated SsuE as a homodimer, while the later interaction study supported
+    a stable SsuD-SsuE complex and proposed a 1:1 monomeric SsuE:SsuD association.
+    This record leaves the assembled complex subunit count unmodeled.
+  evidence:
+  - reference: PMID:10480865
+    notes: Eichhorn et al. 1999 reported native oligomer states for purified SsuD
+      and SsuE.
+  - reference: PMID:16997955
+    notes: Gao and Ellis 2006 detected SsuD-SsuE complex formation and proposed 1:1
+      monomeric association for the interaction.
+  posed_by: codex
+  posed_date: '2026-10-01'

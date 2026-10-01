@@ -5661,6 +5661,15 @@
   "definition": "An endoplasmic-reticulum translocon complex with a core heterotrimer of alpha, beta, and gamma subunits, represented in budding yeast by Ssh1p, Sbh2p, and Sss1p, that supports cotranslational protein transport across the ER membrane."
  },
  {
+  "identifier": "GO:1990200",
+  "label": "SsuD-SsuE complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/ssud_ssue_complex.html",
+  "definition": "A protein complex containing an alkanesulfonate monooxygenase subunit (SsuD tetramer in E. coli) and a flavin oxidoreductase subunit (SsuE dimer in E. coli). Involved in the utilization of alkanesulfonates as sulfur sources under conditions of sulfate or cysteine starvation."
+ },
+ {
   "identifier": "GO:0044570",
   "label": "starch utilization system complex",
   "category": "OTHER",
