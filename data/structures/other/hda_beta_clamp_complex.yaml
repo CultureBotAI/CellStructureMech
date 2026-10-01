@@ -29,6 +29,13 @@ curation_history:
     the Hda-beta/DnaA-Hda boundary discussion rationale to the directly cited GO and
     Kurz et al. 2004 sources.
   llm_assisted: true
+- timestamp: '2026-10-01T13:05:25Z'
+  curator: codex
+  action: FIX_REVIEW_ISSUE
+  changes: 'Addressed PR #1871 review issue #1872 by narrowing the Hda-beta/DnaA-Hda
+    boundary discussion so Kurz et al. 2004 supports direct Hda-beta binding while
+    GO:1990085 supports the replication-inhibiting scope.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Hda-DnaN complex
   synonym_type: EXACT_SYNONYM
@@ -217,8 +224,9 @@ discussions:
   - components#dnaN_beta_clamp
   - causal_graphs#hda_beta_clamp_rida
   rationale: GO:1990085 denotes Hda bound to the DnaN beta clamp, whereas GO:1990083
-    separately denotes the DnaA-Hda complex. Kurz et al. 2004 established Hda-beta
-    binding as an interaction needed for regulatory inactivation of DnaA.
+    separately denotes the DnaA-Hda complex. Kurz et al. 2004 established direct Hda-beta
+    interaction, and GO:1990085 scopes that Hda-beta entity to the replication-inhibiting
+    state.
   resolution_note: Curated Hda and the beta sliding clamp on GO:1990085 and left DnaA
     itself out of the component list, has_part links, and graph edges.
   evidence:

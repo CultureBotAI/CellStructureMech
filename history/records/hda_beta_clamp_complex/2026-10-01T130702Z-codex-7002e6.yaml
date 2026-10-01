@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hda_beta_clamp_complex.yaml
+  slug: hda_beta_clamp_complex
+session:
+  id: 2026-10-01T130702Z-codex-7002e6
+  timestamp: '2026-10-01T13:07:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1872
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1871
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrowed Hda-beta clamp evidence attribution
+  details: 'Addressed PR #1871 review issue #1872 by narrowing the Hda-beta/DnaA-Hda boundary
+    discussion so PMID:15150238 supports direct Hda-beta binding while GO:1990085 supports
+    the replication-inhibiting scope.'
