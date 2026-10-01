@@ -1366,9 +1366,9 @@
           "cosine_similarity": 0.67685745
         },
         {
-          "identifier": "GO:0009529",
-          "label": "plastid intermembrane space",
-          "cosine_similarity": 0.67141299
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.67487693
         }
       ]
     },
@@ -13441,6 +13441,11 @@
           "cosine_similarity": 0.7533269
         },
         {
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.72316088
+        },
+        {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.70755078
@@ -13454,11 +13459,6 @@
           "identifier": "GO:0036436",
           "label": "Isw1a complex",
           "cosine_similarity": 0.68119547
-        },
-        {
-          "identifier": "GO:0036437",
-          "label": "Isw1b complex",
-          "cosine_similarity": 0.68006863
         }
       ]
     },
@@ -15850,6 +15850,37 @@
       ]
     },
     {
+      "identifier": "GO:1990207",
+      "label": "EmrE multidrug transporter complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.81202612
+        },
+        {
+          "identifier": "GO:0072546",
+          "label": "EMC complex",
+          "cosine_similarity": 0.78137136
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.75911881
+        },
+        {
+          "identifier": "GO:0097347",
+          "label": "TAM protein secretion complex",
+          "cosine_similarity": 0.75277867
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.74659009
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031205",
       "label": "endoplasmic reticulum Sec complex",
       "neighbors": [
@@ -16970,6 +17001,11 @@
       "label": "MacAB-TolC complex",
       "neighbors": [
         {
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.73124832
+        },
+        {
           "identifier": "GO:0031317",
           "label": "tripartite ATP-independent periplasmic transporter complex",
           "cosine_similarity": 0.7253221
@@ -16988,11 +17024,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.68002055
-        },
-        {
-          "identifier": "GO:0010006",
-          "label": "Toc complex",
-          "cosine_similarity": 0.67835305
         }
       ]
     },
@@ -20225,6 +20256,11 @@
       "label": "tripartite ATP-independent periplasmic transporter complex",
       "neighbors": [
         {
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.81202612
+        },
+        {
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.805895
@@ -20243,11 +20279,6 @@
           "identifier": "GO:0015627",
           "label": "type II protein secretion system complex",
           "cosine_similarity": 0.75884875
-        },
-        {
-          "identifier": "GO:0062051",
-          "label": "lipopolysaccharide transport system",
-          "cosine_similarity": 0.75521267
         }
       ]
     },
