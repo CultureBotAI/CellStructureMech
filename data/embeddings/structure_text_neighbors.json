@@ -13451,14 +13451,14 @@
           "cosine_similarity": 0.70755078
         },
         {
+          "identifier": "GO:1990197",
+          "label": "methionine-importing ABC transporter complex",
+          "cosine_similarity": 0.69731002
+        },
+        {
           "identifier": "GO:1990203",
           "label": "MdtBC Complex",
           "cosine_similarity": 0.69142381
-        },
-        {
-          "identifier": "GO:0033281",
-          "label": "TAT protein transport complex",
-          "cosine_similarity": 0.68764767
         }
       ]
     },
@@ -17210,6 +17210,37 @@
           "identifier": "GO:0030662",
           "label": "coated vesicle membrane",
           "cosine_similarity": 0.82308746
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990197",
+      "label": "methionine-importing ABC transporter complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.7572677
+        },
+        {
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.71548707
+        },
+        {
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.70062772
+        },
+        {
+          "identifier": "GO:0110067",
+          "label": "ammonium transmembrane transporter complex",
+          "cosine_similarity": 0.69731002
+        },
+        {
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.66933249
         }
       ]
     },

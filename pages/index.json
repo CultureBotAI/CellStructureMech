@@ -4995,6 +4995,15 @@
   "definition": "Any of several different proteinaceous coats that can associate with membranes. Membrane coats include those formed by clathrin plus an adaptor complex, the COPI and COPII complexes, and possibly others. They are found associated with membranes on many vesicles as well as other membrane features such as pits and perhaps tubules."
  },
  {
+  "identifier": "GO:1990197",
+  "label": "methionine-importing ABC transporter complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/methionine_importing_abc_transporter_complex.html",
+  "definition": "An ATP-binding cassette (ABC) transporter complex that is capable of methionine-importing activity. An example is the bacterial MetNIQ methionine transporter, that consists of the dimeric ATPase subunit MetN located at the cytoplasmic side of the plasma membrane and the dimeric transmembrane subunit MetI. MetQ is regarded as the periplasmic methionine-binding chaperon subunit, and is capable of transporting methionine from the periplasm into the cytoplasm in an ATP-dependent manner."
+ },
+ {
   "identifier": "GO:0098561",
   "label": "methyl accepting chemotaxis protein complex",
   "category": "OTHER",
