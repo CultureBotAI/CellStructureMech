@@ -1,0 +1,111 @@
+identifier: GO:0110067
+label: ammonium transmembrane transporter complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: High affinity ammonium transporter complex that enables the transfer of
+  ammonium from one side of a membrane to the other.
+definition_source: GO:0110067
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T18:46:47Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T18:47:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO narrow synonymy and transmembrane-transporter parentage, grounded
+    the Amt-family constituent to exact InterPro family IPR001905, added the E. coli
+    PDB:1U7G homotrimer with a reviewed UniProt example, and cited GO/InterPro/UniProt/PDB/PMID/DOI
+    evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: AMT1 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0110067
+parent_structures:
+- GO:1902495
+components:
+- component_id: ammonium_transporter
+  label: Ammonium transporter
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR001905
+  gene_symbols:
+  - amtB
+  stoichiometry: 3 copies per E. coli AmtB homotrimer in PDB:1U7G biological assembly
+    1
+  essentiality: UNKNOWN
+  role: Amt-family membrane channel subunit that assembles as a homotrimer for high-affinity
+    ammonium uptake.
+  protein_examples:
+  - uniprot_id: UniProtKB:P69681
+    protein_label: Ammonium transporter AmtB
+    gene_symbol: amtB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 AmtB accession mapped by RCSB to the polymer entity
+      in PDB:1U7G.
+    evidence:
+    - reference: UniProtKB:P69681
+      notes: UniProtKB P69681 is the reviewed Escherichia coli K-12 entry for AmtB.
+    - reference: PDB:1U7G
+      notes: RCSB SIFTS maps PDB:1U7G polymer entity 1 to UniProtKB:P69681.
+  evidence:
+  - reference: GO:0110067
+    notes: GO:0110067 defines the ammonium transmembrane transporter complex.
+  - reference: InterPro:IPR001905
+    notes: InterPro IPR001905 is the Ammonium transporter family entry and excludes
+      the Rhesus subgroup.
+  - reference: PDB:1U7G
+    notes: RCSB describes PDB:1U7G biological assembly 1 as a homotrimeric E. coli
+      AmtB ammonia-channel structure.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli source of the trimeric AmtB ammonia channel structure deposited as
+    PDB:1U7G.
+  reference: PDB:1U7G
+functions:
+- function_id: ammonium_channel_activity
+  label: ammonium channel activity
+  grounding: GO:0008519
+  description: AmtB trimers mediate energy-independent facilitated ammonium diffusion
+    through a transmembrane channel.
+  evidence:
+  - reference: GO:0110067
+    notes: GO:0110067 has a capable-of relation to GO:0008519 ammonium channel activity.
+  - reference: GO:0008519
+    notes: GO:0008519 is the molecular-function term for ammonium channel activity.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '3'
+  context: E. coli AmtB homotrimer in PDB:1U7G biological assembly 1
+  reference: PDB:1U7G
+evidence:
+- reference: GO:0110067
+  notes: Gene Ontology cellular-component term for the ammonium transmembrane transporter
+    complex.
+- reference: GO:1902495
+  notes: QuickGO reports GO:0110067 as an is-a child of GO:1902495 transmembrane transporter
+    complex.
+- reference: GO:0008519
+  notes: Gene Ontology molecular-function term for ammonium channel activity.
+- reference: GO:0072488
+  notes: Gene Ontology biological-process term for ammonium transmembrane transport.
+- reference: InterPro:IPR001905
+  notes: InterPro family entry for Amt-family ammonium transporters.
+- reference: UniProtKB:P69681
+  notes: UniProtKB reviewed E. coli K-12 AmtB entry.
+- reference: PDB:1U7G
+  notes: RCSB Protein Data Bank entry for the trimeric E. coli AmtB ammonia-channel
+    structure at 1.35 A.
+- reference: PMID:15361618
+  notes: PubMed identifier for Khademi et al. 2004, the Science E. coli AmtB structural
+    paper cited by PDB:1U7G.
+- reference: DOI:10.1126/science.1101952
+  notes: 'DOI for Khademi et al. 2004, ''Mechanism of ammonia transport by Amt/MEP/Rh:
+    structure of AmtB at 1.35 A'', as reported by PubMed.'

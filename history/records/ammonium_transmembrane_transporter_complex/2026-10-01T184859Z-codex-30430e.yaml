@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/ammonium_transmembrane_transporter_complex.yaml
+  slug: ammonium_transmembrane_transporter_complex
+session:
+  id: 2026-10-01T184859Z-codex-30430e
+  timestamp: '2026-10-01T18:48:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added ammonium transmembrane transporter complex record
+  details: Created a GO:0110067-backed ammonium transmembrane transporter complex record with
+    GO narrow synonymy, GO:1902495 transmembrane-transporter parentage, an InterPro-grounded
+    Amt-family constituent, an E. coli K-12 UniProt example, a PDB:1U7G E. coli homotrimer
+    canonical example and subunit count, ammonium channel activity evidence, and DOI/PMID/PDB
+    evidence from Khademi et al. 2004.
