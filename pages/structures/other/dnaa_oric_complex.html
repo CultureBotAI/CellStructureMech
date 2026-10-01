@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DnaA-oriC complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>DnaA-oriC complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> · OTHER · NUCLEOPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A protein-DNA complex containing the initiator protein DnaA bound to high-affinity recognition sites in the unique origin of replication, oriC. DnaA-oriC binding is the first step in assembly of a bacterial pre-replicative complex (pre-RC) and is responsible for the timely initiation of replication once per cell cycle. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a>]</small></p>
+<p><strong>Synonyms:</strong> DnaA-DNA complex</p>
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-dnaa_initiator"><td>DnaA replication initiation protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>dnaA</td><td></td><td>UNKNOWN</td><td>Initiator protein bound to high-affinity recognition sites in oriC.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines the DnaA-oriC complex as containing initiator protein DnaA.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a> <small>Miller et al. 2009 analyzed DnaA binding to high- and lower-affinity sites in the E. coli oriC origin.</small></li></ul></td></tr>
+<tr id="components-oric_origin_dna"><td>oriC origin DNA</td><td>DNA</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Unique chromosomal replication-origin DNA carrying the high-affinity DnaA recognition sites.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines the complex around DnaA bound to high-affinity recognition sites in oriC.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a> <small>Miller et al. 2009 mutated E. coli high-affinity DnaA recognition sites in oriC and assayed DnaA binding at that origin.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> Escherichia coli — <strong>COMMON</strong>: Miller et al. 2009 studied the high-affinity DnaA-oriC complex and bacterial pre-RC assembly at the E. coli origin. [<a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code>NCBITaxon:562</code></a> <em>Escherichia coli</em> — Miller et al. 2009 examined DnaA occupation of high- and lower-affinity DnaA recognition sites in E. coli oriC. [<a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>DNA replication initiation</strong> <a href="http://purl.obolibrary.org/obo/GO_0006270"><code>GO:0006270</code></a> — The DnaA-oriC complex participates in the timely initiation of bacterial chromosomal replication by seeding assembly of the pre-replicative complex at oriC.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC assembly and as responsible for timely replication initiation.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006270"><code>GO:0006270</code></a> <small>GO:0006270 is the Gene Ontology biological-process term for DNA replication initiation.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a> <small>Miller et al. 2009 tested how E. coli oriC high-affinity DnaA sites assist additional DnaA loading during pre-RC assembly.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-dnaa_oric_initiation">DnaA-oriC seeds initiation <small>(FUNCTION)</small></h3>
+<p>DnaA bound to high-affinity oriC recognition sites forms a nucleoprotein complex that seeds bacterial pre-RC assembly during DNA replication initiation.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>DnaA replication initiation protein</td><td>contributes to</td><td>DnaA-oriC complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines the complex as containing initiator protein DnaA.</small></li></ul></td></tr>
+<tr><td>oriC origin DNA</td><td>scaffolds</td><td>DnaA-oriC complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines the complex around DnaA bound to high-affinity oriC sites.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a> <small>Miller et al. 2009 studied DnaA binding to the E. coli oriC origin.</small></li></ul></td></tr>
+<tr><td>DnaA-oriC complex</td><td>supports</td><td>DNA replication initiation</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC assembly.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006270"><code>GO:0006270</code></a> <small>GO:0006270 is the DNA replication initiation process term.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral DnaA and oriC origin DNA groundings for the DnaA-oriC complex. <small>GO:1990101 defines the DnaA-oriC complex around DnaA bound to high-affinity oriC recognition sites. Exact source-neutral InterPro, Pfam, NCBIfam, UniProt family or SO sequence-feature CURIEs for these components need narrower curation before the labels can be grounded.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Leave DiaA and DnaB-DnaC out of the scoped GO:1990101 DnaA-oriC complex. <small>GO:1990101 denotes DnaA bound to high-affinity oriC recognition sites. GO models the DiaA-containing complex separately as GO:1990102, and DnaB-DnaC helicase loading belongs to later pre-primosome assemblies.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>Gene Ontology cellular-component term for the DnaA-oriC complex and its broad DnaA-DNA complex synonym.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990077"><code>GO:1990077</code></a> <small>OLS reports GO:1990077 primosome complex as the direct GO:1990101 is-a parent.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990102"><code>GO:1990102</code></a> <small>Gene Ontology cellular-component term for the separately scoped DnaA-DiaA complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990100"><code>GO:1990100</code></a> <small>Gene Ontology cellular-component term for the separate DnaB-DnaC helicase-loading complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006270"><code>GO:0006270</code></a> <small>Gene Ontology biological-process term for DNA replication initiation.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a> <small>PubMed identifier for Miller et al. 2009, the PNAS paper cited by GO:1990101.</small></li><li><a href="https://doi.org/10.1073/pnas.0909472106"><code>DOI:10.1073/pnas.0909472106</code></a> <small>DOI for Miller et al. 2009, &#39;Bacterial origin recognition complexes direct assembly of higher-order DnaA oligomeric structures&#39;, as reported by PubMed.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-01T06:19:57Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-01T06:21:16Z</code> codex · EXPANDED_RECORD — Added GO synonymy, primosome-complex parentage, reviewed-label-only DnaA and oriC DNA components, E. coli origin-recognition evidence, DNA-replication-initiation function evidence, GO/PubMed/DOI evidence, a nonmechanistic initiation graph, and grounding/boundary discussions.</li><li><code>2026-10-01T06:22:41Z</code> codex · FIX_BOUNDARY_EVIDENCE — Added explicit GO:1990102 and GO:1990100 evidence for the DiaA and DnaB-DnaC boundary discussion.</li><li><code>2026-10-01T06:45:13Z</code> codex · FIX_REVIEW_ISSUE — Narrowed the boundary discussion by removing unsupported HU/IHF/Fis names from the graph scope and discussion prompt.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dnaa_oric_complex.yaml"><code>data/structures/other/dnaa_oric_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · CC0-1.0 · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+</footer>
+</body>
+</html>

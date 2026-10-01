@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dnaa_oric_complex.yaml
+  slug: dnaa_oric_complex
+session:
+  id: 2026-10-01T065917Z-claude-code-18d432
+  timestamp: '2026-10-01T06:59:17Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1858
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1857
+events:
+- type: EDIT
+  outcome: changed
+  summary: Fixed DnaA-oriC boundary review issue
+  details: Narrowed the GO:1990101 boundary discussion and nonmechanistic graph scope so the
+    DnaA-oriC record only excludes directly evidenced DiaA and DnaB-DnaC assemblies, resolving
+    the adversarial-review finding that unsupported HU/IHF/Fis names appeared in those boundary
+    notes.
