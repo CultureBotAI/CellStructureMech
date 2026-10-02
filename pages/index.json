@@ -5211,6 +5211,15 @@
   "definition": "A ribonuclease P complex located in the mitochondrion of a eukaryotic cell, where it catalyzes the 5' endonucleolytic cleavage of precursor tRNAs to yield mature tRNAs. The subunit composition of mitochondrial ribonuclease P complexes varies between species. The complex contains a single RNA molecule and a single protein molecule in yeast (PMID:12045094), but comprises three proteins and lacks an RNA component in humans."
  },
  {
+  "identifier": "cellstructuremech:mlafedb_lipid_transport_complex",
+  "label": "MlaFEDB lipid transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mlafedb_lipid_transport_complex.html",
+  "definition": "An Escherichia coli inner-membrane ABC transporter complex composed of MlaE, MlaF, MlaD, and MlaB subunits that participates in phospholipid transport during maintenance of outer-membrane lipid asymmetry."
+ },
+ {
   "identifier": "GO:1990198",
   "label": "ModE complex",
   "category": "OTHER",

@@ -1,0 +1,411 @@
+identifier: cellstructuremech:mlafedb_lipid_transport_complex
+label: MlaFEDB lipid transport complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An Escherichia coli inner-membrane ABC transporter complex composed of
+  MlaE, MlaF, MlaD, and MlaB subunits that participates in phospholipid transport
+  during maintenance of outer-membrane lipid asymmetry.
+definition_source: ComplexPortal:CPX-3464
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T12:47:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T12:49:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ABC transporter parentage, MlaE, MlaF, MlaD, and MlaB component rows
+    with reviewed E. coli K-12 UniProt examples, exact MlaE/MlaD/MlaB InterPro groundings,
+    PDB:7CGE subunit counts, GO phospholipid-transport function, a compact MlaFEDB
+    function graph, and boundary discussions for MlaF grounding plus MlaC and outer-membrane
+    Mla exclusion.
+  llm_assisted: true
+- timestamp: '2026-10-02T12:50:47Z'
+  curator: complex_portal
+  action: ADD_EVIDENCE
+  changes: Added taxon-specific composition ComplexPortal:CPX-3464 (4 participants);
+    exact accession and taxon verified at import.
+- timestamp: '2026-10-02T13:04:36Z'
+  curator: codex
+  action: EDITED_DISCUSSION
+  changes: Reanchored the MlaC and outer-membrane Mla exclusion discussion from the
+    components section to the four MlaFEDB constituent component rows.
+  llm_assisted: true
+synonyms:
+- synonym_text: MlaFEDB complex
+  synonym_type: EXACT_SYNONYM
+  source: ComplexPortal:CPX-3464
+parent_structures:
+- GO:0043190
+components:
+- component_id: mlae_permease_subunit
+  label: Intermembrane phospholipid transport system permease protein MlaE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR053408
+  gene_symbols:
+  - mlaE
+  essentiality: ESSENTIAL
+  role: Inner-membrane permease constituent that contributes two copies to the transmembrane
+    core of the MlaFEDB complex.
+  stoichiometry: 2 copies in E. coli PDB:7CGE assembly 1
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P64606
+    protein_label: Intermembrane phospholipid transport system permease protein MlaE
+    gene_symbol: mlaE
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P64606
+      notes: Reviewed Swiss-Prot entry MLAE_ECOLI is the E. coli K-12 MlaE accession
+        and cross-references ComplexPortal:CPX-3464 and PDB:7CGE.
+  evidence:
+  - reference: ComplexPortal:CPX-3464
+    notes: Complex Portal CPX-3464 curates P64606/MlaE as an E. coli K-12 MlaFEDB
+      lipid transport complex participant.
+  - reference: UniProtKB:P64606
+    notes: UniProtKB P64606 is the reviewed E. coli K-12 entry for Intermembrane phospholipid
+      transport system permease protein MlaE.
+  - reference: InterPro:IPR053408
+    notes: InterPro IPR053408 is the MlaE Permease family entry.
+  - reference: PDB:7CGE
+    notes: RCSB maps two PDB:7CGE MlaE chains to UniProtKB:P64606 in the author-defined
+      E. coli MlaFEDB assembly.
+- component_id: mlaf_atp_binding_subunit
+  label: Intermembrane phospholipid transport system ATP-binding protein MlaF
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - mlaF
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro cross-references are broad ABC-transporter, AAA+ ATPase, and P-loop NTPase
+    entries rather than an exact MlaF source-neutral family.
+  role: Cytoplasmic ATP-binding constituent that contributes two nucleotide-binding
+    copies to the MlaFEDB ABC-transporter core.
+  stoichiometry: 2 copies in E. coli PDB:7CGE assembly 1
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P63386
+    protein_label: Intermembrane phospholipid transport system ATP-binding protein
+      MlaF
+    gene_symbol: mlaF
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P63386
+      notes: Reviewed Swiss-Prot entry MLAF_ECOLI is the E. coli K-12 MlaF accession
+        and cross-references ComplexPortal:CPX-3464 and PDB:7CGE.
+  evidence:
+  - reference: ComplexPortal:CPX-3464
+    notes: Complex Portal CPX-3464 curates P63386/MlaF as an E. coli K-12 MlaFEDB
+      lipid transport complex participant.
+  - reference: UniProtKB:P63386
+    notes: UniProtKB P63386 is the reviewed E. coli K-12 entry for Intermembrane phospholipid
+      transport system ATP-binding protein MlaF.
+  - reference: PDB:7CGE
+    notes: RCSB maps two PDB:7CGE MlaF chains to UniProtKB:P63386 in the author-defined
+      E. coli MlaFEDB assembly.
+- component_id: mlad_binding_subunit
+  label: Intermembrane phospholipid transport system binding protein MlaD
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR030970
+  gene_symbols:
+  - mlaD
+  essentiality: ESSENTIAL
+  role: MlaFEDB binding-protein constituent that forms the six-copy periplasmic MlaD
+    ring in the E. coli inner-membrane complex.
+  stoichiometry: 6 copies in the E. coli K-12 Complex Portal CPX-3464 entry and PDB:7CGE
+    assembly 1
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P64604
+    protein_label: Intermembrane phospholipid transport system binding protein MlaD
+    gene_symbol: mlaD
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P64604
+      notes: Reviewed Swiss-Prot entry MLAD_ECOLI is the E. coli K-12 MlaD accession
+        and cross-references ComplexPortal:CPX-3464 and PDB:7CGE.
+  evidence:
+  - reference: ComplexPortal:CPX-3464
+    notes: Complex Portal CPX-3464 curates six P64604/MlaD copies in the E. coli K-12
+      MlaFEDB lipid transport complex.
+  - reference: UniProtKB:P64604
+    notes: UniProtKB P64604 is the reviewed E. coli K-12 entry for Intermembrane phospholipid
+      transport system binding protein MlaD.
+  - reference: InterPro:IPR030970
+    notes: InterPro IPR030970 is the Probable phospholipid ABC transporter-binding
+      protein MlaD family entry.
+  - reference: PDB:7CGE
+    notes: RCSB maps six PDB:7CGE MlaD chains to UniProtKB:P64604 in the author-defined
+      E. coli MlaFEDB assembly.
+- component_id: mlab_binding_subunit
+  label: Intermembrane phospholipid transport system binding protein MlaB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR049743
+  gene_symbols:
+  - mlaB
+  essentiality: ESSENTIAL
+  role: Cytoplasmic accessory constituent paired with MlaF in the MlaFEDB lipid transport
+    complex.
+  stoichiometry: 2 copies in E. coli PDB:7CGE assembly 1
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P64602
+    protein_label: Intermembrane phospholipid transport system binding protein MlaB
+    gene_symbol: mlaB
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P64602
+      notes: Reviewed Swiss-Prot entry MLAB_ECOLI is the E. coli K-12 MlaB accession
+        and cross-references ComplexPortal:CPX-3464 and PDB:7CGE.
+  evidence:
+  - reference: ComplexPortal:CPX-3464
+    notes: Complex Portal CPX-3464 curates P64602/MlaB as an E. coli K-12 MlaFEDB
+      lipid transport complex participant.
+  - reference: UniProtKB:P64602
+    notes: UniProtKB P64602 is the reviewed E. coli K-12 entry for Intermembrane phospholipid
+      transport system binding protein MlaB.
+  - reference: InterPro:IPR049743
+    notes: InterPro IPR049743 is the Intermembrane phospholipid transport system binding
+      protein MlaB family entry.
+  - reference: PDB:7CGE
+    notes: RCSB maps two PDB:7CGE MlaB chains to UniProtKB:P64602 in the author-defined
+      E. coli MlaFEDB assembly.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Source strain for Complex Portal CPX-3464 and for PDB:7CGE, an author-defined
+    dodecameric MlaFEDB electron-microscopy assembly with two MlaE, two MlaF, six
+    MlaD, and two MlaB chains.
+  reference: PDB:7CGE
+functions:
+- function_id: phospholipid_transport
+  label: phospholipid transport
+  grounding: GO:0015914
+  description: MlaFEDB participates in ATP-dependent phospholipid transport as part
+    of the Mla envelope system that maintains outer-membrane lipid asymmetry.
+  evidence:
+  - reference: GO:0015914
+    notes: GO:0015914 is the biological-process term for phospholipid transport.
+  - reference: ComplexPortal:CPX-3464
+    notes: Complex Portal cross-references phospholipid transport on the E. coli K-12
+      MlaFEDB lipid transport complex and describes ATP hydrolysis during MlaC-to-MlaFEDB
+      phospholipid handoff.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '12'
+  context: PDB:7CGE author-defined dodecameric MlaFEDB assembly 1
+  reference: PDB:7CGE
+evidence:
+- reference: ComplexPortal:CPX-3464
+  notes: Complex Portal entry for the E. coli K-12 MlaFEDB lipid transport complex,
+    systematic name mlaB:mlaD:mlaE:mlaF.
+- reference: GO:0043190
+  notes: Gene Ontology cellular-component parent term for ATP-binding cassette transporter
+    complexes.
+- reference: GO:0015914
+  notes: Gene Ontology biological-process term for phospholipid transport.
+- reference: InterPro:IPR053408
+  notes: InterPro family entry for MlaE Permease.
+- reference: InterPro:IPR030970
+  notes: InterPro family entry for Probable phospholipid ABC transporter-binding protein
+    MlaD.
+- reference: InterPro:IPR049743
+  notes: InterPro family entry for Intermembrane phospholipid transport system binding
+    protein MlaB.
+- reference: UniProtKB:P64606
+  notes: Reviewed E. coli K-12 MlaE UniProtKB entry.
+- reference: UniProtKB:P63386
+  notes: Reviewed E. coli K-12 MlaF UniProtKB entry.
+- reference: UniProtKB:P64604
+  notes: Reviewed E. coli K-12 MlaD UniProtKB entry.
+- reference: UniProtKB:P64602
+  notes: Reviewed E. coli K-12 MlaB UniProtKB entry.
+- reference: PDB:7CGE
+  notes: RCSB Protein Data Bank entry for a nucleotide-free E. coli MlaFEDB electron-microscopy
+    structure.
+- reference: PMID:32884137
+  notes: PubMed identifier for Chi et al. 2020, Structural mechanism of phospholipids
+    translocation by MlaFEDB complex.
+- reference: DOI:10.1038/s41422-020-00404-6
+  notes: DOI for Chi et al. 2020, Structural mechanism of phospholipids translocation
+    by MlaFEDB complex.
+causal_graphs:
+- graph_id: mlafedb_phospholipid_transport
+  title: MlaFEDB participates in phospholipid transport
+  description: MlaE, MlaF, MlaD, and MlaB form the MlaFEDB inner-membrane ABC transporter
+    that receives MlaC phospholipid substrates in the Mla outer-membrane lipid-asymmetry
+    system.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the four-protein inner-membrane MlaFEDB boundary
+    and its whole-complex phospholipid-transport function without asserting a resolved
+    retrograde-versus-antegrade direction, MlaC docking geometry, or nucleotide-state
+    transport cycle.
+  nodes:
+  - node_id: mlafedb
+    label: MlaFEDB lipid transport complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mlafedb_lipid_transport_complex
+  - node_id: mlae
+    label: Intermembrane phospholipid transport system permease protein MlaE
+    node_type: GENE_OR_PROTEIN
+    component_ref: mlae_permease_subunit
+    grounding: InterPro:IPR053408
+  - node_id: mlaf
+    label: Intermembrane phospholipid transport system ATP-binding protein MlaF
+    node_type: GENE_OR_PROTEIN
+    component_ref: mlaf_atp_binding_subunit
+  - node_id: mlad
+    label: Intermembrane phospholipid transport system binding protein MlaD
+    node_type: GENE_OR_PROTEIN
+    component_ref: mlad_binding_subunit
+    grounding: InterPro:IPR030970
+  - node_id: mlab
+    label: Intermembrane phospholipid transport system binding protein MlaB
+    node_type: GENE_OR_PROTEIN
+    component_ref: mlab_binding_subunit
+    grounding: InterPro:IPR049743
+  - node_id: mlac
+    label: Intermembrane phospholipid transport system MlaC
+    node_type: GENE_OR_PROTEIN
+  - node_id: phospholipid_transport
+    label: phospholipid transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015914
+  edges:
+  - subject: mlae
+    predicate: assembles with
+    object: mlaf
+    description: MlaE and MlaF are both protein constituents of the E. coli inner-membrane
+      MlaFEDB transporter.
+    evidence:
+    - reference: ComplexPortal:CPX-3464
+      notes: CPX-3464 curates MlaE and MlaF as participants in the E. coli MlaFEDB
+        lipid transport complex.
+  - subject: mlad
+    predicate: forms hexameric ring in
+    object: mlafedb
+    description: Six MlaD copies are present in the Complex Portal MlaFEDB source
+      composition and in PDB:7CGE assembly 1.
+    evidence:
+    - reference: ComplexPortal:CPX-3464
+      notes: CPX-3464 curates six MlaD copies.
+    - reference: PDB:7CGE
+      notes: RCSB maps chains G-L of PDB:7CGE to MlaD UniProtKB:P64604.
+  - subject: mlab
+    predicate: assembles with
+    object: mlaf
+    description: Two MlaB chains and two MlaF chains are present in the author-defined
+      MlaFEDB assembly in PDB:7CGE.
+    evidence:
+    - reference: PDB:7CGE
+      notes: RCSB maps PDB:7CGE chains C and F to MlaB and chains B and E to MlaF.
+  - subject: mlac
+    predicate: delivers phospholipids to
+    object: mlafedb
+    description: MlaC carries phospholipid substrates between the Mla outer-membrane
+      complex and the inner-membrane MlaFEDB transporter.
+    evidence:
+    - reference: ComplexPortal:CPX-3464
+      notes: CPX-3464 describes MlaC shuttling phospholipid substrates between the
+        inner-membrane MlaFEDB transporter and an outer-membrane complex.
+  - subject: mlafedb
+    predicate: enables
+    object: phospholipid_transport
+    description: The assembled MlaFEDB complex participates in ATP-dependent phospholipid
+      transport during outer-membrane lipid-asymmetry maintenance.
+    evidence:
+    - reference: ComplexPortal:CPX-3464
+      notes: Complex Portal cross-references GO:0015914 on the E. coli K-12 MlaFEDB
+        lipid transport complex.
+discussions:
+- discussion_id: mlaf_component_family_grounding
+  prompt: Resolve an exact source-neutral MlaF protein family before replacing its
+    reviewed-label-only component row.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mlaf_atp_binding_subunit
+  rationale: ComplexPortal:CPX-3464, PDB:7CGE, and the reviewed E. coli K-12 UniProt
+    record exactly identify MlaF, but its UniProt InterPro cross-references are broad
+    ABC-transporter, AAA+ ATPase, ABC-transporter signature, and P-loop NTPase entries
+    rather than an exact MlaF family.
+  evidence:
+  - reference: ComplexPortal:CPX-3464
+    notes: CPX-3464 curates P63386/MlaF as a participant.
+  - reference: UniProtKB:P63386
+    notes: Reviewed E. coli K-12 MlaF UniProtKB entry.
+  posed_by: codex
+  posed_date: '2026-10-02'
+- discussion_id: exclude_mlac_and_outer_membrane_mla_complex
+  prompt: Should MlaC or the outer-membrane Mla complex be curated as constituents
+    of the MlaFEDB lipid transport complex?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#mlae_permease_subunit
+  - components#mlaf_atp_binding_subunit
+  - components#mlad_binding_subunit
+  - components#mlab_binding_subunit
+  rationale: MlaC shuttles phospholipid substrates between the outer-membrane Mla
+    machinery and the inner-membrane MlaFEDB transporter, but ComplexPortal:CPX-3464
+    scopes the MlaFEDB complex itself to MlaE, MlaF, MlaD, and MlaB.
+  evidence:
+  - reference: ComplexPortal:CPX-3464
+    notes: CPX-3464 lists MlaE, MlaF, MlaD, and MlaB as the MlaFEDB participants and
+      mentions MlaC as a shuttling protein in the function description.
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolution_note: Keep MlaC and the outer-membrane Mla machinery outside the MlaFEDB
+    component boundary and include MlaC only as a handoff node in the nonmechanistic
+    function graph.
+complex_compositions:
+- composition_id: complex_portal_cpx_3464
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-3464
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-3464
+  complex_label: MlaFEDB lipid transport complex
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  evidence_code: ECO:0000353
+  participants:
+  - participant_id: UniProtKB:P64606
+    label: Intermembrane phospholipid transport system permease protein MlaE
+    participant_type: protein
+    gene_symbol: mlaE
+    source_interactor_id: EBI-20200026
+  - participant_id: UniProtKB:P63386
+    label: Intermembrane phospholipid transport system ATP-binding protein MlaF
+    participant_type: protein
+    gene_symbol: mlaF
+    source_interactor_id: EBI-20200027
+  - participant_id: UniProtKB:P64604
+    label: Intermembrane phospholipid transport system binding protein MlaD
+    participant_type: protein
+    gene_symbol: mlaD
+    stoichiometry: '6'
+    source_interactor_id: EBI-20200023
+  - participant_id: UniProtKB:P64602
+    label: Intermembrane phospholipid transport system binding protein MlaB
+    participant_type: protein
+    gene_symbol: mlaB
+    source_interactor_id: EBI-20200028
+  retrieved_on: '2026-10-02'
+  notes: 'Curator-scoped import: E. coli K-12 MlaFEDB source composition for this
+    record. Source evidence: physical interaction evidence. The accession was resolved
+    through the Complex Portal accession endpoint; no equivalence xref was inferred.'
