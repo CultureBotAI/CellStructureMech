@@ -1,0 +1,134 @@
+identifier: GO:1990201
+label: alkanesulfonate monooxygenase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex capable of alkanesulfonate monooxygenase activity. Involved
+  in the utilization of alkanesulfonates as sulfur sources under conditions of sulfate
+  or cysteine starvation, catalyzing the conversion of alkanesulfonates into aldehydes
+  and sulfite. In E.coli the complex consists of a SsuD tetramer.
+definition_source: GO:1990201
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T00:04:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T00:06:46Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added SsuD complex synonymy, oxidoreductase-complex parentage, cytosol
+    parthood, an InterPro-grounded SsuD constituent with an E. coli K-12 reviewed
+    UniProt example, an E. coli canonical example, alkanesulfonate monooxygenase activity,
+    tetrameric subunit count, and a resolved SsuE boundary discussion.
+  llm_assisted: true
+synonyms:
+- synonym_text: SsuD complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990201
+parent_structures:
+- GO:1990204
+part_of:
+- GO:0005829
+components:
+- component_id: ssud_alkanesulfonate_monooxygenase
+  label: Alkanesulphonate monooxygenase, FMN-dependent
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR019911
+  gene_symbols:
+  - ssuD
+  stoichiometry: 4 copies per E. coli SsuD tetramer described by GO:1990201
+  essentiality: UNKNOWN
+  role: FMNH2-dependent monooxygenase subunit that homotetramerizes to convert alkanesulfonates
+    into aldehydes and sulfite.
+  protein_examples:
+  - uniprot_id: UniProtKB:P80645
+    protein_label: Alkanesulfonate monooxygenase
+    gene_symbol: ssuD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 SsuD accession for the homotetrameric alkanesulfonate
+      monooxygenase represented by GO:1990201.
+    evidence:
+    - reference: UniProtKB:P80645
+      notes: UniProtKB P80645 is the reviewed Escherichia coli K-12 entry for SsuD
+        alkanesulfonate monooxygenase.
+    - reference: PMID:10480865
+      notes: Eichhorn et al. 1999 characterized E. coli SsuD as the FMNH2-dependent
+        alkanesulfonate monooxygenase.
+  evidence:
+  - reference: GO:1990201
+    notes: GO:1990201 defines the E. coli alkanesulfonate monooxygenase complex as
+      a SsuD tetramer.
+  - reference: InterPro:IPR019911
+    notes: InterPro IPR019911 is the FMN-dependent alkanesulphonate monooxygenase
+      family that contains reviewed E. coli K-12 SsuD.
+  - reference: PMID:10480865
+    notes: Eichhorn et al. 1999 reported SsuD as the E. coli FMNH2-dependent alkanesulfonate
+      monooxygenase in the alkanesulfonate utilization system.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: E. coli source of the SsuD tetramer described in the GO definition and the
+    GO-cited biochemical characterization paper.
+  reference: PMID:10480865
+functions:
+- function_id: alkanesulfonate_monooxygenase_activity
+  label: alkanesulfonate monooxygenase activity
+  grounding: GO:0008726
+  description: The SsuD tetramer catalyzes FMNH2-dependent oxygenation of alkanesulfonates
+    into aldehydes and sulfite during sulfur starvation.
+  evidence:
+  - reference: GO:1990201
+    notes: GO:1990201 is capable of GO:0008726 alkanesulfonate monooxygenase activity.
+  - reference: GO:0008726
+    notes: GO:0008726 is the molecular-function term for alkanesulfonate monooxygenase
+      activity.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '4'
+  context: E. coli SsuD tetramer described by GO:1990201
+  reference: GO:1990201
+evidence:
+- reference: GO:1990201
+  notes: Gene Ontology cellular-component term for the alkanesulfonate monooxygenase
+    complex and its SsuD complex narrow synonym.
+- reference: GO:1990204
+  notes: QuickGO reports GO:1990201 as an is-a child of GO:1990204 oxidoreductase
+    complex.
+- reference: GO:0005829
+  notes: QuickGO reports GO:1990201 as part of GO:0005829 cytosol.
+- reference: GO:0008726
+  notes: Gene Ontology molecular-function term for alkanesulfonate monooxygenase activity.
+- reference: InterPro:IPR019911
+  notes: InterPro family entry for FMN-dependent alkanesulphonate monooxygenases.
+- reference: UniProtKB:P80645
+  notes: UniProtKB reviewed E. coli K-12 SsuD entry annotated to GO:1990201.
+- reference: PMID:10480865
+  notes: PubMed identifier for Eichhorn, van der Ploeg and Leisinger 1999, the Journal
+    of Biological Chemistry SsuD/SsuE characterization paper cited by GO:1990201.
+- reference: DOI:10.1074/jbc.274.38.26639
+  notes: DOI for the GO:1990201-cited SsuD/SsuE characterization paper.
+discussions:
+- discussion_id: exclude_ssue_from_ssud_complex
+  prompt: Should the SsuE FMN reductase be modeled as a component of the alkanesulfonate
+    monooxygenase complex?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: No. GO:1990201 denotes the SsuD tetrameric alkanesulfonate monooxygenase
+    complex, while GO:1990200 separately denotes the SsuD-SsuE complex and GO:1990202
+    denotes the SsuE FMN reductase dimer.
+  evidence:
+  - reference: GO:1990201
+    notes: GO:1990201 defines the E. coli alkanesulfonate monooxygenase complex as
+      a SsuD tetramer.
+  - reference: GO:1990200
+    notes: GO:1990200 is the sibling cellular-component term for the SsuD-SsuE complex.
+  - reference: GO:1990202
+    notes: GO:1990202 is the sibling cellular-component term for the FMN reductase
+      complex.
+  posed_by: codex
+  posed_date: '2026-10-01'
