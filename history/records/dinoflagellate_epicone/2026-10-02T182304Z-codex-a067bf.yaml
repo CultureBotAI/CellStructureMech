@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_epicone.yaml
+  slug: dinoflagellate_epicone
+session:
+  id: 2026-10-02T182304Z-codex-a067bf
+  timestamp: '2026-10-02T18:23:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1931
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1932
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1930
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - discussions
+  - generated_artifacts
+  - history
+  summary: Address dinoflagellate epicone PR review
+  details: 'Addressed adversarial PR #1930 review issues #1931 and #1932. Added dinoflagellate
+    cingulum and dinoflagellate hypocone nodes to the epicone topology graph, recorded GO:0097613-supported
+    boundary edges for the cingulum-separated epicone/hypocone topology, and added a resolved
+    hypocone_is_sibling interpretation documenting GO:0097614 as a posterior sibling to keep
+    separate from the GO:0097613 epicone record. Regenerated embeddings, pages, and README
+    stats after the YAML edit.'

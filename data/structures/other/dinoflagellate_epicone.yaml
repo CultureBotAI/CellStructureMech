@@ -21,6 +21,13 @@ curation_history:
     record-level adjacent GO evidence, and curation discussions for molecular components
     and the epicone/apex boundary.
   llm_assisted: true
+- timestamp: '2026-10-02T18:22:29Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1930 review issues #1931 and #1932 by documenting GO:0097614
+    dinoflagellate hypocone as a sibling of the epicone and adding cingulum/hypocone
+    boundary topology to the epicone graph.'
+  llm_assisted: true
 synonyms:
 - synonym_text: epicone
   synonym_type: BROAD_SYNONYM
@@ -64,7 +71,8 @@ causal_graphs:
 - graph_id: epicone_topology
   title: Epicone topology
   description: The dinoflagellate epicone is a cellular anatomical structure that
-    has the dinoflagellate apex and apical groove as parts.
+    has the dinoflagellate apex and apical groove as parts, lies anterior to the hypocone,
+    and is separated from the hypocone by the cingulum.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph records GO is-a and part-of topology for the epicone region,
@@ -86,6 +94,14 @@ causal_graphs:
     label: dinoflagellate apical groove
     node_type: STRUCTURE
     grounding: GO:0097685
+  - node_id: dinoflagellate_cingulum
+    label: dinoflagellate cingulum
+    node_type: STRUCTURE
+    grounding: GO:0097611
+  - node_id: dinoflagellate_hypocone
+    label: dinoflagellate hypocone
+    node_type: STRUCTURE
+    grounding: GO:0097614
   edges:
   - subject: dinoflagellate_epicone
     predicate: is a
@@ -109,6 +125,24 @@ causal_graphs:
     evidence:
     - reference: GO:0097613
       notes: The QuickGO GO:0097613 payload lists GO:0097685 as a part_of child term.
+  - subject: dinoflagellate_epicone
+    predicate: is separated from
+    object: dinoflagellate_hypocone
+    description: GO defines the dinoflagellate epicone as separated from the hypocone
+      by the cingulum.
+    evidence:
+    - reference: GO:0097613
+      notes: The GO:0097613 definition describes the cingulum as separating the epicone
+        from the hypocone.
+  - subject: dinoflagellate_cingulum
+    predicate: separates
+    object: dinoflagellate_epicone
+    description: The cingulum forms the boundary below the epicone that separates
+      the epicone from the hypocone.
+    evidence:
+    - reference: GO:0097613
+      notes: The GO:0097613 definition states that the epicone is separated from the
+        hypocone by the cingulum.
 discussions:
 - discussion_id: resolve_epicone_molecular_constituents
   prompt: Add epicone molecular components only after directly localized constituents
@@ -138,3 +172,19 @@ discussions:
   resolved_date: '2026-10-02'
   resolution_note: Model GO:0097613 as the whole anterior epicone region and leave
     the apex for separate GO:0097683 curation.
+- discussion_id: hypocone_is_sibling
+  prompt: Keep dinoflagellate hypocone separate from the dinoflagellate epicone unless
+    curating the posterior GO:0097614 class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0097614 is the posterior counterpart of GO:0097613 and is separated
+    from the epicone by the cingulum, so it should not be modeled as a synonym or
+    part of the anterior epicone region.
+  evidence:
+  - reference: GO:0097613
+  - reference: GO:0097614
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
+  resolution_note: Model GO:0097613 as the anterior dinoflagellate epicone and leave
+    the posterior hypocone for separate GO:0097614 curation.
