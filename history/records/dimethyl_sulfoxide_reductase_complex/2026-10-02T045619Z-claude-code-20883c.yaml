@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/dimethyl_sulfoxide_reductase_complex.yaml
+  slug: dimethyl_sulfoxide_reductase_complex
+session:
+  id: 2026-10-02T045619Z-claude-code-20883c
+  timestamp: '2026-10-02T04:56:19Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - energy_complex
+  summary: Add dimethyl sulfoxide reductase complex record
+  details: Added an evidence-backed GO:0009390 dimethyl sulfoxide reductase complex record
+    with DmsA, DmsB, and DmsC InterPro component groundings, E. coli K-12 reviewed UniProt
+    examples, Complex Portal CPX-320 heterotrimer composition, GO:0009389 activity linkage,
+    and supporting PubMed/DOI evidence.
