@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/3_phenylpropionate_dioxygenase_complex.yaml
+  slug: 3_phenylpropionate_dioxygenase_complex
+session:
+  id: 2026-10-02T005424Z-codex-385233
+  timestamp: '2026-10-02T00:54:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added 3-phenylpropionate dioxygenase complex record
+  details: Created a GO:0009334-backed 3-phenylpropionate dioxygenase complex record with
+    GO:1990204 oxidoreductase-complex parentage, four exact InterPro-grounded Hca constituents,
+    reviewed E. coli K-12 UniProt examples for hcaE, hcaF, hcaC, and hcaD, an E. coli K-12
+    canonical example, 3-phenylpropionate dioxygenase activity, and PubMed/DOI evidence from
+    the GO-cited hca cluster characterization paper.
