@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_apical_horn.yaml
+  slug: dinoflagellate_apical_horn
+session:
+  id: 2026-10-02T202841Z-codex-57d787
+  timestamp: '2026-10-02T20:28:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1940
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1941
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1939
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed dinoflagellate apical horn PR review
+  details: 'Addressed PR #1939 review issues #1940 and #1941 by adding record-level and graph-level
+    GO:0097613 epicone parthood for GO:0097686 and removing the transitive GO:0110165 cellular-anatomical-structure
+    edge from the apical-horn topology graph.'

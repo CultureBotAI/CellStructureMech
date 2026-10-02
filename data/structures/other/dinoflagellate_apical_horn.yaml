@@ -18,6 +18,13 @@ curation_history:
     topology, Taylor 1980 metadata-only evidence, and curation discussions for molecular
     components and the apical-horn/apex boundary.
   llm_assisted: true
+- timestamp: '2026-10-02T20:28:01Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1939 review issues #1940 and #1941 by adding record-level
+    and graph-level epicone parthood for GO:0097686 and removing the transitive GO:0110165
+    edge from the topology graph.'
+  llm_assisted: true
 parent_structures:
 - GO:0097683
 taxonomic_distribution:
@@ -52,11 +59,11 @@ causal_graphs:
 - graph_id: apical_horn_apex_topology
   title: Apical-horn apex topology
   description: The dinoflagellate apical horn is a horn-shaped, thecate specialization
-    of the dinoflagellate apex within the epicone region.
+    of the dinoflagellate apex within the epicone.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records GO class and inherited apex topology, not a molecular
-    assembly or physiological mechanism.
+  scope_notes: The graph records exact GO apical-horn, apex, and epicone topology,
+    not transitive ancestor closure, a molecular assembly, or a physiological mechanism.
   nodes:
   - node_id: dinoflagellate_apical_horn
     label: dinoflagellate apical horn
@@ -70,10 +77,6 @@ causal_graphs:
     label: dinoflagellate epicone
     node_type: STRUCTURE
     grounding: GO:0097613
-  - node_id: cellular_anatomical_structure
-    label: cellular anatomical structure
-    node_type: STRUCTURE
-    grounding: GO:0110165
   edges:
   - subject: dinoflagellate_apical_horn
     predicate: is a
@@ -83,6 +86,18 @@ causal_graphs:
     evidence:
     - reference: GO:0097686
       notes: The QuickGO GO:0097686 history records an is_a relation to GO:0097683.
+  - subject: dinoflagellate_apical_horn
+    predicate: is part of
+    object: dinoflagellate_epicone
+    description: The apical horn is a specialized apex located in the dinoflagellate
+      epicone.
+    evidence:
+    - reference: GO:0097686
+      notes: QuickGO lists GO:0097613 as an ancestor of GO:0097686 through the GO:0097683
+        apex parent.
+    - reference: GO:0097683
+      notes: QuickGO lists GO:0097613 as an ancestor of the GO:0097683 dinoflagellate
+        apex parent.
   - subject: dinoflagellate_apex
     predicate: is part of
     object: dinoflagellate_epicone
@@ -93,15 +108,6 @@ causal_graphs:
     - reference: GO:0097613
       notes: The QuickGO GO:0097613 children endpoint lists GO:0097683 as a part_of
         child term.
-  - subject: dinoflagellate_apical_horn
-    predicate: is a
-    object: cellular_anatomical_structure
-    description: QuickGO places the dinoflagellate apical horn under cellular anatomical
-      structure through its GO ancestors.
-    evidence:
-    - reference: GO:0097686
-      notes: The QuickGO ancestor payload for GO:0097686 includes GO:0110165 cellular
-        anatomical structure.
 discussions:
 - discussion_id: resolve_apical_horn_molecular_constituents
   prompt: Add apical-horn molecular components only after directly localized constituents
@@ -131,3 +137,5 @@ discussions:
   resolved_date: '2026-10-02'
   resolution_note: Model GO:0097686 as the specialized horn-shaped thecate apical-horn
     class under GO:0097683.
+part_of:
+- GO:0097613
