@@ -1,0 +1,134 @@
+identifier: GO:0097685
+label: dinoflagellate apical groove
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: A cell surface furrow (or groove) found on a dinoflagellate apex. It typically
+  loops around the apex.
+definition_source: GO:0097685
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T15:51:53Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T15:53:07Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added apical-groove synonymy, GO cell-surface-furrow parentage, dinoflagellate-epicone
+    parthood, Dinophyceae and Margalefidinium polykrikoides taxon evidence, a nonmechanistic
+    epicone-topology graph, and a curation TODO for apical-groove molecular components.
+  llm_assisted: true
+- timestamp: '2026-10-02T15:53:56Z'
+  curator: codex
+  action: REFINED_CANONICAL_EXAMPLE
+  changes: Retargeted the Margalefidinium polykrikoides canonical-example citation
+    to the 2010 apical-groove ultrastructure study while keeping the 2017 Margalefidinium
+    taxonomic-transfer paper as record-level evidence.
+  llm_assisted: true
+- timestamp: '2026-10-02T16:07:15Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1921 review issues #1922 and #1923 by removing the Margalefidinium
+    transfer claim from the DOI:10.1111/j.1550-7408.2010.00491.x taxonomic-distribution
+    row and narrowing the GO:0097613 evidence note to the dinoflagellate epicone term.'
+  llm_assisted: true
+synonyms:
+- synonym_text: apical groove
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097685
+parent_structures:
+- GO:0097610
+part_of:
+- GO:0097613
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: GO:0097685 places this apical cell-surface furrow in Dinophyceae; the apical
+    groove is a named morphology of dinoflagellate apices.
+  reference: GO:0097685
+- taxon_id: NCBITaxon:77300
+  taxon_label: Margalefidinium polykrikoides
+  presence: COMMON
+  note: Cochlodinium polykrikoides, the species examined in the 2010 electron-microscopy
+    study, has a U-shaped apical groove at the dorsal side of the epicone.
+  reference: DOI:10.1111/j.1550-7408.2010.00491.x
+canonical_examples:
+- taxon_id: NCBITaxon:77300
+  taxon_label: Margalefidinium polykrikoides
+  note: Dinophycean model described as Cochlodinium polykrikoides in the electron-microscopy
+    study that characterized the apical groove and flagellar apparatus.
+  reference: DOI:10.1111/j.1550-7408.2010.00491.x
+evidence:
+- reference: GO:0097685
+  notes: Gene Ontology cellular-component term for the dinoflagellate apical groove.
+- reference: GO:0097610
+  notes: Gene Ontology cellular-component parent term for cell surface furrow.
+- reference: GO:0097613
+  notes: Gene Ontology cellular-component term for the dinoflagellate epicone.
+- reference: PMID:20561119
+  notes: PubMed record for Iwataki et al. 2010, the apical-groove ultrastructure study
+    cited by GO:0097685.
+- reference: DOI:10.1111/j.1550-7408.2010.00491.x
+  notes: Iwataki et al. 2010 examined the external and internal ultrastructure of
+    Cochlodinium polykrikoides with reference to the apical groove and flagellar apparatus.
+- reference: DOI:10.1016/j.hal.2017.01.008
+  notes: Gomez et al. 2017 established Margalefidinium gen. nov. for Cochlodinium
+    polykrikoides and allied species.
+causal_graphs:
+- graph_id: apical_groove_epicone_topology
+  title: Apical-groove epicone topology
+  description: The dinoflagellate apical groove is a cell-surface furrow that typically
+    loops around the cell apex and belongs to the epicone region.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO is-a and part-of topology plus ultrastructural
+    morphology, not molecular assembly or a physiological mechanism.
+  nodes:
+  - node_id: dinoflagellate_apical_groove
+    label: dinoflagellate apical groove
+    node_type: STRUCTURE
+    grounding: GO:0097685
+  - node_id: cell_surface_furrow
+    label: cell surface furrow
+    node_type: STRUCTURE
+    grounding: GO:0097610
+  - node_id: dinoflagellate_epicone
+    label: dinoflagellate epicone
+    node_type: STRUCTURE
+    grounding: GO:0097613
+  edges:
+  - subject: dinoflagellate_apical_groove
+    predicate: is a
+    object: cell_surface_furrow
+    description: GO classifies the dinoflagellate apical groove as a cell-surface
+      furrow.
+    evidence:
+    - reference: GO:0097685
+      notes: The GO graph links GO:0097685 to GO:0097610 by rdfs:subClassOf.
+  - subject: dinoflagellate_apical_groove
+    predicate: is part of
+    object: dinoflagellate_epicone
+    description: GO places the dinoflagellate apical groove in the dinoflagellate
+      epicone.
+    evidence:
+    - reference: GO:0097685
+      notes: The GO graph links GO:0097685 to GO:0097613 by BFO part-of.
+    - reference: DOI:10.1111/j.1550-7408.2010.00491.x
+      notes: Iwataki et al. 2010 described the apical groove position on the dorsal
+        epicone in Cochlodinium polykrikoides.
+discussions:
+- discussion_id: resolve_apical_groove_molecular_constituents
+  prompt: Add apical-groove molecular components only after directly localized constituents
+    and exact source-neutral family groundings have been identified.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO and the ultrastructure literature define the apical groove as a dinoflagellate
+    cell-surface furrow, but this pass did not find exact family-level evidence for
+    apical-groove-specific molecular constituents.
+  evidence:
+  - reference: GO:0097685
+  - reference: DOI:10.1111/j.1550-7408.2010.00491.x
+  posed_by: codex
+  posed_date: '2026-10-02'
