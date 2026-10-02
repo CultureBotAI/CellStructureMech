@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_apical_horn.yaml
+  slug: dinoflagellate_apical_horn
+session:
+  id: 2026-10-02T201603Z-codex-18a764
+  timestamp: '2026-10-02T20:16:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-backed dinoflagellate apical horn record
+  details: Created data/structures/other/dinoflagellate_apical_horn.yaml for GO:0097686 with
+    GO:0097683 apex parentage, Dinophyceae and thecate taxon scope, apical-horn/apex/epicone
+    topology, Taylor 1980 metadata-only bibliographic evidence, and curation discussions for
+    molecular-component and apical-horn/apex follow-up.
