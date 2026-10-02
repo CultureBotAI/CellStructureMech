@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_antapical_horn.yaml
+  slug: dinoflagellate_antapical_horn
+session:
+  id: 2026-10-02T214240Z-codex-d8c2f7
+  timestamp: '2026-10-02T21:42:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-backed dinoflagellate antapical horn record
+  details: Created data/structures/other/dinoflagellate_antapical_horn.yaml for GO:0097687
+    with GO:0097684 antapex parentage, GO:0097614 hypocone parthood, Dinophyceae and thecate
+    taxon scope, antapical-horn/antapex/hypocone topology, Taylor 1980 metadata-only bibliographic
+    evidence, and curation discussions for molecular-component and antapical-horn/antapex
+    follow-up.

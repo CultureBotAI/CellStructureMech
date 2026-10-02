@@ -1,0 +1,144 @@
+identifier: GO:0097687
+label: dinoflagellate antapical horn
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: A horn-shaped dinoflagellate antapex found in thecate species.
+definition_source: GO:0097687
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T21:38:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T21:39:08Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO antapex parentage, hypocone parthood, Dinophyceae and thecate
+    taxon evidence, antapical-horn/antapex/hypocone topology, Taylor 1980 metadata-only
+    evidence, and curation discussions for molecular components and the antapical-horn/antapex
+    boundary.
+  llm_assisted: true
+- timestamp: '2026-10-02T21:56:16Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1945 review issues #1946 and #1947 by citing GO:0097687
+    history for direct antapex parentage and clarifying that hypocone parthood is
+    inherited through GO:0097684.'
+  llm_assisted: true
+parent_structures:
+- GO:0097684
+part_of:
+- GO:0097614
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: GO:0097687 defines the dinoflagellate antapical horn as a horn-shaped dinoflagellate
+    antapex found in thecate species.
+  reference: GO:0097687
+evidence:
+- reference: GO:0097687
+  notes: Gene Ontology cellular-component term for the horn-shaped dinoflagellate
+    antapical horn of thecate species.
+- reference: GO:0097684
+  notes: Gene Ontology cellular-component term for the dinoflagellate antapex, which
+    the QuickGO GO:0097687 history records as the direct is_a parent.
+- reference: GO:0097614
+  notes: Gene Ontology cellular-component term for the dinoflagellate hypocone that
+    contains the parent GO:0097684 antapex.
+- reference: GO:0110165
+  notes: Gene Ontology cellular-component parent term for cellular anatomical structure.
+- reference: PMID:7002229
+  notes: PubMed record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution
+    review cited by GO:0097687; EuropePMC reported no PMC, open-access, full-text,
+    or PDF route in this pass.
+- reference: DOI:10.1016/0303-2647(80)90006-4
+  notes: Crossref and EuropePMC metadata identify DOI:10.1016/0303-2647(80)90006-4
+    as the Taylor 1980 Biosystems review behind PMID:7002229; no article-body text
+    was reachable through the checked metadata routes, so this record uses it only
+    as bibliographic corroboration for the GO definition xref.
+causal_graphs:
+- graph_id: antapical_horn_antapex_topology
+  title: Antapical-horn antapex topology
+  description: The dinoflagellate antapical horn is a horn-shaped, thecate specialization
+    of the dinoflagellate antapex within the hypocone.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the direct GO antapical-horn parent edge plus hypocone
+    parthood inherited from the parent antapex, not a full transitive ancestor closure,
+    a molecular assembly, or a physiological mechanism.
+  nodes:
+  - node_id: dinoflagellate_antapical_horn
+    label: dinoflagellate antapical horn
+    node_type: STRUCTURE
+    grounding: GO:0097687
+  - node_id: dinoflagellate_antapex
+    label: dinoflagellate antapex
+    node_type: STRUCTURE
+    grounding: GO:0097684
+  - node_id: dinoflagellate_hypocone
+    label: dinoflagellate hypocone
+    node_type: STRUCTURE
+    grounding: GO:0097614
+  edges:
+  - subject: dinoflagellate_antapical_horn
+    predicate: is a
+    object: dinoflagellate_antapex
+    description: GO classifies the horn-shaped thecate antapical horn as a specialized
+      dinoflagellate antapex.
+    evidence:
+    - reference: GO:0097687
+      notes: The QuickGO GO:0097687 history records an is_a relation to GO:0097684.
+    - reference: GO:0097684
+      notes: The QuickGO GO:0097684 children endpoint lists GO:0097687 as an is_a
+        child term.
+  - subject: dinoflagellate_antapical_horn
+    predicate: is part of
+    object: dinoflagellate_hypocone
+    description: The antapical horn inherits hypocone parthood through its direct
+      dinoflagellate antapex parent.
+    evidence:
+    - reference: GO:0097687
+      notes: QuickGO records GO:0097684 as the direct is_a parent of GO:0097687; paired
+        with GO:0097684 part_of GO:0097614, that parentage transmits hypocone parthood.
+    - reference: GO:0097684
+      notes: The QuickGO GO:0097684 history records a part_of relation to GO:0097614.
+  - subject: dinoflagellate_antapex
+    predicate: is part of
+    object: dinoflagellate_hypocone
+    description: The parent dinoflagellate antapex belongs to the hypocone.
+    evidence:
+    - reference: GO:0097684
+      notes: The QuickGO GO:0097684 history records a part_of relation to GO:0097614.
+    - reference: GO:0097614
+      notes: The QuickGO GO:0097614 payload lists GO:0097684 as a part_of child term.
+discussions:
+- discussion_id: resolve_antapical_horn_molecular_constituents
+  prompt: Add antapical-horn molecular components only after directly localized constituents
+    and exact source-neutral family groundings have been identified.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO defines the dinoflagellate antapical horn morphologically as a horn-shaped
+    antapex of thecate species, but this pass did not find exact family-level evidence
+    for antapical-horn-specific molecular constituents.
+  evidence:
+  - reference: GO:0097687
+  posed_by: codex
+  posed_date: '2026-10-02'
+- discussion_id: antapical_horn_is_narrower_than_antapex
+  prompt: Keep the horn-shaped thecate dinoflagellate antapical horn separate from
+    the general dinoflagellate antapex unless curating the broader GO:0097684 class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: QuickGO identifies GO:0097687 as an is_a child of GO:0097684 and GO:0097687
+    defines a horn-shaped antapex found in thecate species, so the antapical horn
+    should remain a specialized child class of the general antapex.
+  evidence:
+  - reference: GO:0097687
+  - reference: GO:0097684
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
+  resolution_note: Model GO:0097687 as the specialized horn-shaped thecate antapical-horn
+    class under GO:0097684.

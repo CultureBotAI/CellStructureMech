@@ -15265,6 +15265,11 @@
       "label": "dinoflagellate antapex",
       "neighbors": [
         {
+          "identifier": "GO:0097687",
+          "label": "dinoflagellate antapical horn",
+          "cosine_similarity": 0.90271876
+        },
+        {
           "identifier": "GO:0097614",
           "label": "dinoflagellate hypocone",
           "cosine_similarity": 0.90042797
@@ -15283,11 +15288,37 @@
           "identifier": "GO:0097612",
           "label": "dinoflagellate sulcus",
           "cosine_similarity": 0.86644488
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097687",
+      "label": "dinoflagellate antapical horn",
+      "neighbors": [
+        {
+          "identifier": "GO:0097686",
+          "label": "dinoflagellate apical horn",
+          "cosine_similarity": 0.9624293
+        },
+        {
+          "identifier": "GO:0097684",
+          "label": "dinoflagellate antapex",
+          "cosine_similarity": 0.90271876
+        },
+        {
+          "identifier": "GO:0097683",
+          "label": "dinoflagellate apex",
+          "cosine_similarity": 0.84999348
         },
         {
           "identifier": "GO:0097611",
           "label": "dinoflagellate cingulum",
-          "cosine_similarity": 0.8659019
+          "cosine_similarity": 0.84341659
+        },
+        {
+          "identifier": "GO:0097612",
+          "label": "dinoflagellate sulcus",
+          "cosine_similarity": 0.84037236
         }
       ]
     },
@@ -15358,6 +15389,11 @@
       "label": "dinoflagellate apical horn",
       "neighbors": [
         {
+          "identifier": "GO:0097687",
+          "label": "dinoflagellate antapical horn",
+          "cosine_similarity": 0.9624293
+        },
+        {
           "identifier": "GO:0097683",
           "label": "dinoflagellate apex",
           "cosine_similarity": 0.88718649
@@ -15376,11 +15412,6 @@
           "identifier": "GO:0097613",
           "label": "dinoflagellate epicone",
           "cosine_similarity": 0.8589673
-        },
-        {
-          "identifier": "GO:0097684",
-          "label": "dinoflagellate antapex",
-          "cosine_similarity": 0.85687142
         }
       ]
     },
