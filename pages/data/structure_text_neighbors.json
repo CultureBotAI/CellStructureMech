@@ -13529,6 +13529,11 @@
       "label": "AcrAB-TolC multidrug efflux transport complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAD-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.969758
+        },
+        {
           "identifier": "GO:1990196",
           "label": "MacAB-TolC complex",
           "cosine_similarity": 0.80096702
@@ -13547,11 +13552,37 @@
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.77193145
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+      "label": "AcrAD-TolC multidrug efflux transport complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.969758
         },
         {
-          "identifier": "GO:1990203",
-          "label": "MdtBC Complex",
-          "cosine_similarity": 0.73967434
+          "identifier": "GO:1990196",
+          "label": "MacAB-TolC complex",
+          "cosine_similarity": 0.80959941
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.7873098
+        },
+        {
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.78443239
+        },
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.774661
         }
       ]
     },
@@ -16091,9 +16122,9 @@
           "cosine_similarity": 0.79650194
         },
         {
-          "identifier": "GO:0072546",
-          "label": "EMC complex",
-          "cosine_similarity": 0.78137136
+          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAD-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.78443239
         }
       ]
     },
@@ -17321,6 +17352,11 @@
           "cosine_similarity": 0.72516399
         },
         {
+          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAD-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.72242908
+        },
+        {
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.71044166
@@ -17329,11 +17365,6 @@
           "identifier": "GO:1990199",
           "label": "MsbA transporter complex",
           "cosine_similarity": 0.70289139
-        },
-        {
-          "identifier": "GO:1990196",
-          "label": "MacAB-TolC complex",
-          "cosine_similarity": 0.70267874
         }
       ]
     },
@@ -17373,6 +17404,11 @@
       "label": "MacAB-TolC complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAD-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.80959941
+        },
+        {
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.80096702
@@ -17391,11 +17427,6 @@
           "identifier": "GO:0031317",
           "label": "tripartite ATP-independent periplasmic transporter complex",
           "cosine_similarity": 0.7253221
-        },
-        {
-          "identifier": "GO:0030256",
-          "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.72079166
         }
       ]
     },
@@ -17517,9 +17548,9 @@
           "cosine_similarity": 0.73967434
         },
         {
-          "identifier": "GO:0033281",
-          "label": "TAT protein transport complex",
-          "cosine_similarity": 0.71657308
+          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAD-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.7315143
         }
       ]
     },
@@ -19176,6 +19207,11 @@
           "cosine_similarity": 0.70012661
         },
         {
+          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAD-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.68776568
+        },
+        {
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.68588164
@@ -19189,11 +19225,6 @@
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.66886038
-        },
-        {
-          "identifier": "GO:1990196",
-          "label": "MacAB-TolC complex",
-          "cosine_similarity": 0.65952705
         }
       ]
     },
@@ -20891,14 +20922,14 @@
           "cosine_similarity": 0.77937958
         },
         {
+          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAD-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.774661
+        },
+        {
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.77211125
-        },
-        {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.77169044
         }
       ]
     },
