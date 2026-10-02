@@ -5022,6 +5022,15 @@
   "definition": "A protein-containing complex that functions to transport lipopolysaccharide from its site of synthesis at the cytoplasmic membrane across the periplasm to the outer membrane in an ATP-dependent manner."
  },
  {
+  "identifier": "cellstructuremech:lolcde_lipoprotein_abc_transporter_complex",
+  "label": "LolCDE lipoprotein ABC transporter complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/lolcde_lipoprotein_abc_transporter_complex.html",
+  "definition": "An Escherichia coli inner-membrane ABC transporter complex composed of one LolC transmembrane subunit, two LolD ATP-binding subunits, and one LolE transmembrane subunit that uses LolD ATP hydrolysis to release outer membrane-specific lipoproteins from the inner membrane for periplasmic trafficking."
+ },
+ {
   "identifier": "GO:0016606",
   "label": "LYSP100-associated nuclear domain",
   "category": "OTHER",

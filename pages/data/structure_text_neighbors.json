@@ -13999,6 +13999,11 @@
           "cosine_similarity": 0.76279144
         },
         {
+          "identifier": "cellstructuremech:lolcde_lipoprotein_abc_transporter_complex",
+          "label": "LolCDE lipoprotein ABC transporter complex",
+          "cosine_similarity": 0.72760636
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.70066013
@@ -14012,11 +14017,6 @@
           "identifier": "GO:0001401",
           "label": "SAM complex",
           "cosine_similarity": 0.69410949
-        },
-        {
-          "identifier": "GO:0048500",
-          "label": "signal recognition particle",
-          "cosine_similarity": 0.69288509
         }
       ]
     },
@@ -17303,6 +17303,37 @@
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.70506743
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:lolcde_lipoprotein_abc_transporter_complex",
+      "label": "LolCDE lipoprotein ABC transporter complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990063",
+          "label": "Bam protein complex",
+          "cosine_similarity": 0.72760636
+        },
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.72516399
+        },
+        {
+          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.71044166
+        },
+        {
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.70289139
+        },
+        {
+          "identifier": "GO:1990196",
+          "label": "MacAB-TolC complex",
+          "cosine_similarity": 0.70267874
         }
       ]
     },

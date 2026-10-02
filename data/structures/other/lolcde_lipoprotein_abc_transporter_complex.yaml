@@ -1,0 +1,350 @@
+identifier: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+label: LolCDE lipoprotein ABC transporter complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An Escherichia coli inner-membrane ABC transporter complex composed of
+  one LolC transmembrane subunit, two LolD ATP-binding subunits, and one LolE transmembrane
+  subunit that uses LolD ATP hydrolysis to release outer membrane-specific lipoproteins
+  from the inner membrane for periplasmic trafficking.
+definition_source: ComplexPortal:CPX-4262
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T09:04:13Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T09:05:36Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ABC transporter parentage, LolC, LolD, and LolE component rows with
+    E. coli K-12 reviewed UniProt examples, GO lipoprotein-releasing activity, a compact
+    lipoprotein-release graph, CPX-4262 heterotetramer source composition, and a component-family
+    grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: LolCDE complex
+  synonym_type: EXACT_SYNONYM
+  source: ComplexPortal:CPX-4262
+parent_structures:
+- GO:0043190
+components:
+- component_id: lolc_transmembrane_subunit
+  label: Lipoprotein-releasing system transmembrane protein LolC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - lolC
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro cross-references are shared LolC/LolE families or broader membrane-transporter
+    entries rather than an exact LolC source-neutral family.
+  role: Inner-membrane transmembrane subunit that recognizes mature outer-membrane
+    lipoproteins with LolE on the periplasmic side of the membrane.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-4262 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P0ADC3
+    protein_label: Lipoprotein-releasing system transmembrane protein LolC
+    gene_symbol: lolC
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P0ADC3
+      notes: Reviewed Swiss-Prot entry LOLC_ECOLI is the E. coli K-12 LolC accession
+        and cross-references ComplexPortal:CPX-4262.
+  evidence:
+  - reference: ComplexPortal:CPX-4262
+    notes: Complex Portal CPX-4262 curates one P0ADC3/LolC copy in the E. coli K-12
+      LolCDE lipoprotein ABC transporter complex.
+  - reference: UniProtKB:P0ADC3
+    notes: UniProtKB P0ADC3 is the reviewed E. coli K-12 entry for Lipoprotein-releasing
+      system transmembrane protein LolC.
+  - reference: PDB:7MDY
+    notes: RCSB PDB:7MDY is an E. coli LolCDE nucleotide-bound electron-microscopy
+      structure.
+- component_id: lold_atp_binding_subunit
+  label: Lipoprotein-releasing system ATP-binding protein LolD
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - lolD
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro cross-references are ABC-transporter nucleotide-binding domains or superfamilies
+    rather than an exact LolD source-neutral family.
+  role: Cytoplasmic ATP-binding subunit that forms a two-copy nucleotide-binding dimer
+    and drives lipoprotein release by ATP hydrolysis.
+  stoichiometry: 2 copies in the E. coli K-12 Complex Portal CPX-4262 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P75957
+    protein_label: Lipoprotein-releasing system ATP-binding protein LolD
+    gene_symbol: lolD
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P75957
+      notes: Reviewed Swiss-Prot entry LOLD_ECOLI is the E. coli K-12 LolD accession
+        and cross-references ComplexPortal:CPX-4262.
+  evidence:
+  - reference: ComplexPortal:CPX-4262
+    notes: Complex Portal CPX-4262 curates two P75957/LolD copies in the E. coli K-12
+      LolCDE lipoprotein ABC transporter complex.
+  - reference: UniProtKB:P75957
+    notes: UniProtKB P75957 is the reviewed E. coli K-12 entry for Lipoprotein-releasing
+      system ATP-binding protein LolD.
+  - reference: PDB:7MDY
+    notes: RCSB PDB:7MDY is an E. coli LolCDE nucleotide-bound electron-microscopy
+      structure.
+- component_id: lole_transmembrane_subunit
+  label: Lipoprotein-releasing system transmembrane protein LolE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - lolE
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro cross-references are shared LolC/LolE families or broader membrane-transporter
+    entries rather than an exact LolE source-neutral family.
+  role: Inner-membrane transmembrane subunit that cooperates with LolC in periplasmic-side
+    recognition and release of mature outer-membrane lipoproteins.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-4262 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P75958
+    protein_label: Lipoprotein-releasing system transmembrane protein LolE
+    gene_symbol: lolE
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P75958
+      notes: Reviewed Swiss-Prot entry LOLE_ECOLI is the E. coli K-12 LolE accession
+        and cross-references ComplexPortal:CPX-4262.
+  evidence:
+  - reference: ComplexPortal:CPX-4262
+    notes: Complex Portal CPX-4262 curates one P75958/LolE copy in the E. coli K-12
+      LolCDE lipoprotein ABC transporter complex.
+  - reference: UniProtKB:P75958
+    notes: UniProtKB P75958 is the reviewed E. coli K-12 entry for Lipoprotein-releasing
+      system transmembrane protein LolE.
+  - reference: PDB:7MDY
+    notes: RCSB PDB:7MDY is an E. coli LolCDE nucleotide-bound electron-microscopy
+      structure.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Source strain for Complex Portal CPX-4262, which curates the heterotetrameric
+    LolCD2E lipoprotein ABC transporter composition.
+  reference: ComplexPortal:CPX-4262
+functions:
+- function_id: lipoprotein_releasing
+  label: lipoprotein releasing activity
+  grounding: GO:0140306
+  description: LolCDE recognizes mature outer-membrane lipoproteins in the inner membrane
+    and releases them for periplasmic transport toward the outer membrane.
+  evidence:
+  - reference: GO:0140306
+    notes: GO:0140306 is the molecular-function term for LolCDE-mediated lipoprotein
+      releasing activity.
+  - reference: ComplexPortal:CPX-4262
+    notes: Complex Portal CPX-4262 describes LolC/LolE recognition and LolD ATP hydrolysis
+      during lipoprotein release.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '4'
+  context: E. coli K-12 LolCD2E heterotetramer in ComplexPortal:CPX-4262
+  reference: ComplexPortal:CPX-4262
+evidence:
+- reference: ComplexPortal:CPX-4262
+  notes: Complex Portal entry for the E. coli K-12 LolCDE lipoprotein ABC transporter
+    complex.
+- reference: GO:0043190
+  notes: Gene Ontology cellular-component parent term for ATP-binding cassette transporter
+    complexes.
+- reference: GO:0140306
+  notes: Gene Ontology molecular-function term for lipoprotein releasing activity.
+- reference: GO:0044874
+  notes: Gene Ontology biological-process term for lipoprotein localization to outer
+    membrane.
+- reference: UniProtKB:P0ADC3
+  notes: Reviewed E. coli K-12 LolC transmembrane protein entry.
+- reference: UniProtKB:P75957
+  notes: Reviewed E. coli K-12 LolD ATP-binding protein entry.
+- reference: UniProtKB:P75958
+  notes: Reviewed E. coli K-12 LolE transmembrane protein entry.
+- reference: PDB:7MDY
+  notes: RCSB Protein Data Bank entry for a nucleotide-bound E. coli LolCDE electron-microscopy
+    structure.
+- reference: DOI:10.1038/s41467-021-24965-1
+  notes: DOI for Sharma et al. 2021, Mechanism of LolCDE as a molecular extruder of
+    bacterial triacylated lipoproteins.
+- reference: PMID:10783239
+  notes: PubMed identifier for Yakushi et al. 2000, A new ABC transporter mediating
+    the detachment of lipid-modified proteins from membranes.
+- reference: DOI:10.1038/35008635
+  notes: DOI for Yakushi et al. 2000, A new ABC transporter mediating the detachment
+    of lipid-modified proteins from membranes.
+- reference: PMID:18634750
+  notes: PubMed identifier for Moussatova et al. 2008, ATP-binding cassette transporters
+    in Escherichia coli.
+- reference: DOI:10.1016/j.bbamem.2008.06.009
+  notes: DOI for Moussatova et al. 2008, ATP-binding cassette transporters in Escherichia
+    coli.
+causal_graphs:
+- graph_id: lolcde_lipoprotein_release
+  title: LolCDE releases outer-membrane lipoproteins from the inner membrane
+  description: LolC, LolE, and two LolD copies form an ATP-powered inner-membrane
+    complex that releases mature lipoproteins for delivery to the outer membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three-protein LolCDE boundary and whole-complex
+    lipoprotein releasing activity without resolving the alternating-access cycle,
+    nucleotide state, or individual lipoprotein handoff to LolA.
+  nodes:
+  - node_id: lolcde
+    label: LolCDE lipoprotein ABC transporter complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  - node_id: lolc
+    label: Lipoprotein-releasing system transmembrane protein LolC
+    node_type: GENE_OR_PROTEIN
+    component_ref: lolc_transmembrane_subunit
+  - node_id: lold
+    label: Lipoprotein-releasing system ATP-binding protein LolD
+    node_type: GENE_OR_PROTEIN
+    component_ref: lold_atp_binding_subunit
+  - node_id: lole
+    label: Lipoprotein-releasing system transmembrane protein LolE
+    node_type: GENE_OR_PROTEIN
+    component_ref: lole_transmembrane_subunit
+  - node_id: lipoprotein_release
+    label: lipoprotein releasing activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0140306
+  - node_id: outer_membrane_lipoprotein_localization
+    label: lipoprotein localization to outer membrane
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0044874
+  - node_id: mature_outer_membrane_lipoprotein
+    label: mature outer-membrane lipoprotein
+    node_type: GENE_OR_PROTEIN
+  - node_id: inner_membrane
+    label: inner membrane
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: outer_membrane
+    label: outer membrane
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: lolc
+    predicate: recognizes with
+    object: lole
+    description: LolC and LolE form the periplasm-facing transmembrane subunits that
+      recognize mature outer-membrane lipoproteins.
+    evidence:
+    - reference: ComplexPortal:CPX-4262
+      notes: CPX-4262 describes lipoprotein recognition by LolC and/or LolE on the
+        periplasmic side of the inner membrane.
+  - subject: lold
+    predicate: powers
+    object: lipoprotein_release
+    description: LolD hydrolyzes ATP on the cytoplasmic side of the inner membrane
+      to drive the lipoprotein release reaction.
+    evidence:
+    - reference: ComplexPortal:CPX-4262
+      notes: CPX-4262 describes LolD ATP hydrolysis as the driving force for lipoprotein
+        release.
+  - subject: lolcde
+    predicate: enables
+    object: lipoprotein_release
+    description: The assembled LolCD2E complex mediates release of mature outer-membrane
+      lipoproteins from the inner membrane.
+    evidence:
+    - reference: GO:0140306
+      notes: GO:0140306 defines lipoprotein releasing activity as mediated by the
+        LolCDE complex.
+  - subject: lipoprotein_release
+    predicate: releases
+    object: mature_outer_membrane_lipoprotein
+    description: LolCDE release acts on mature outer-membrane lipoproteins embedded
+      in the inner membrane.
+    evidence:
+    - reference: GO:0140306
+      notes: GO:0140306 specifies mature outer membrane lipoproteins in the inner
+        membrane as the substrates of LolCDE-mediated release.
+  - subject: mature_outer_membrane_lipoprotein
+    predicate: leaves
+    object: inner_membrane
+    description: After LolCDE recognition, the substrate lipoprotein is released from
+      the inner membrane.
+    evidence:
+    - reference: GO:0140306
+      notes: GO:0140306 describes release of mature outer-membrane lipoproteins from
+        the inner membrane.
+  - subject: outer_membrane_lipoprotein_localization
+    predicate: targets
+    object: outer_membrane
+    description: The Lol pathway localizes its released lipoprotein cargo to the outer
+      membrane.
+    evidence:
+    - reference: GO:0044874
+      notes: GO:0044874 is the biological-process term for localization of lipoproteins
+        to an outer membrane.
+discussions:
+- discussion_id: resolve_lolcde_component_family_groundings
+  prompt: Resolve exact source-neutral protein-family groundings for LolC, LolD, and
+    LolE before replacing their reviewed-label-only component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#lolc_transmembrane_subunit
+  - components#lold_atp_binding_subunit
+  - components#lole_transmembrane_subunit
+  rationale: ComplexPortal:CPX-4262, PDB:7MDY, and the reviewed E. coli K-12 UniProt
+    records exactly identify the three LolCDE proteins, but no InterPro, Pfam, NCBIfam,
+    or GO accession was verified as an exact source-neutral family for each named
+    constituent.
+  evidence:
+  - reference: ComplexPortal:CPX-4262
+    notes: CPX-4262 curates the E. coli K-12 LolC, LolD, and LolE participants.
+  posed_by: codex
+  posed_date: '2026-10-02'
+complex_compositions:
+- composition_id: complex_portal_cpx_4262
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-4262
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-4262
+  complex_label: LolCDE lipoprotein ABC transporter complex
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  assembly: Heterotetramer
+  evidence_code: ECO:0000353
+  participants:
+  - participant_id: UniProtKB:P0ADC3
+    label: Lipoprotein-releasing system transmembrane protein LolC
+    participant_type: protein
+    gene_symbol: lolC
+    stoichiometry: '1'
+    source_interactor_id: EBI-21405979
+  - participant_id: UniProtKB:P75957
+    label: Lipoprotein-releasing system ATP-binding protein LolD
+    participant_type: protein
+    gene_symbol: lolD
+    stoichiometry: '2'
+    source_interactor_id: EBI-21405980
+  - participant_id: UniProtKB:P75958
+    label: Lipoprotein-releasing system transmembrane protein LolE
+    participant_type: protein
+    gene_symbol: lolE
+    stoichiometry: '1'
+    source_interactor_id: EBI-21405985
+  retrieved_on: '2026-10-02'
+  notes: 'Curator-scoped import: E. coli K-12 LolCDE source composition for this record.
+    Source evidence: physical interaction evidence. The accession was resolved through
+    the Complex Portal accession endpoint; no equivalence xref was inferred.'
