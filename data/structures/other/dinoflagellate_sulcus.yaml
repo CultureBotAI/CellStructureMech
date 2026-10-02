@@ -20,6 +20,13 @@ curation_history:
     taxon evidence, record-level PMID/DOI evidence, a nonmechanistic sulcus/cingulum
     topology graph, and a curation TODO for sulcus molecular components.
   llm_assisted: true
+- timestamp: '2026-10-02T17:31:19Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1927 review issues #1928 and #1929 by adding GO:0097611
+    evidence for the cingulum graph node and documenting GO:0097618 dinoflagellate
+    sulcal notch as narrower than the general sulcus.'
+  llm_assisted: true
 synonyms:
 - synonym_text: sulcus
   synonym_type: BROAD_SYNONYM
@@ -44,6 +51,9 @@ evidence:
   notes: Gene Ontology cellular-component term for the dinoflagellate sulcus.
 - reference: GO:0097610
   notes: Gene Ontology cellular-component parent term for cell surface furrow.
+- reference: GO:0097611
+  notes: Gene Ontology cellular-component term for the dinoflagellate cingulum, which
+    the GO:0097612 definition names as the furrow intersected by the sulcus.
 - reference: PMID:7002229
   notes: PubMed record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution
     review cited by GO:0097612; EuropePMC reported no PMC, open-access, full-text,
@@ -67,6 +77,22 @@ discussions:
   - reference: PMID:7002229
   posed_by: codex
   posed_date: '2026-10-02'
+- discussion_id: sulcal_notch_is_narrower
+  prompt: Keep dinoflagellate sulcal notch separate from the general dinoflagellate
+    sulcus unless curating the narrower GO:0097618 class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0097618 is a child of GO:0097612 for a sulcus that extends to the
+    posterior antapex and makes the hypocone appear bilobed, so it should not be folded
+    into this general sulcus record as an exact synonym or duplicate identifier.
+  evidence:
+  - reference: GO:0097612
+  - reference: GO:0097618
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
+  resolution_note: Model GO:0097612 as the general dinoflagellate sulcus and leave
+    the sulcal notch for separate GO:0097618 curation.
 causal_graphs:
 - graph_id: sulcus_cingulum_topology
   title: Sulcus-cingulum topology
