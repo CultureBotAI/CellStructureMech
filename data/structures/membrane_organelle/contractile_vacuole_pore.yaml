@@ -20,6 +20,13 @@ curation_history:
     function, GO/DOI evidence, a nonmechanistic pore topology graph, and an open pore-component
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-02T15:17:28Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed review issues #1919 and #1920 by tightening the GO:0031164 evidence
+    note and removing a genus-level Paramecium canonical example while retaining McKanna
+    1973 as structural evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0098797
 part_of:
@@ -31,11 +38,6 @@ canonical_examples:
   note: Ciliate model whose contractile-vacuole pore was included in the cell-biology
     review used by GO to define GO:0031913.
   reference: DOI:10.1016/S0091-679X(08)61528-9
-- taxon_id: NCBITaxon:5884
-  taxon_label: Paramecium
-  note: Ciliate genus in which the contractile-vacuole pore was analyzed by thin-section
-    ultrastructure.
-  reference: DOI:10.1111/j.1550-7408.1973.tb03587.x
 functions:
 - function_id: regulated_contractile_vacuole_discharge
   label: regulated contractile-vacuole discharge
@@ -55,8 +57,7 @@ evidence:
   notes: Gene Ontology parent term that classifies the contractile vacuole pore as
     a plasma membrane protein complex.
 - reference: GO:0031164
-  notes: Gene Ontology cellular-component term for the contractile vacuolar membrane
-    that contains the pore.
+  notes: Gene Ontology cellular-component term for the contractile vacuolar membrane.
 - reference: GO:0005856
   notes: Gene Ontology cellular-component term for the cytoskeleton, which GO:0031913
     links to the pore by part_of.
