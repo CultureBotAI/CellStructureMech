@@ -1,0 +1,463 @@
+identifier: cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex
+label: Holo-translocon SecYEG-SecDF-YajC-YidC complex
+structure_category: SECRETION_SYSTEM
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An Escherichia coli Sec-pathway plasma-membrane holo-translocon complex
+  in which SecY, SecE, SecG, SecD, SecF, YajC, and YidC assemble as a heteroheptamer
+  that supports protein secretion and membrane-protein insertion.
+definition_source: ComplexPortal:CPX-1095
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T13:34:20Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T13:38:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added CPX-1095 synonymy, GO Sec-complex parentage, a SecYEG core has-part
+    link, seven one-copy CPX participant component rows, E. coli K-12 canonical context,
+    GO-grounded Sec transport and membrane insertase functions, subunit-count evidence,
+    a compact holo-translocon function graph, and boundary discussions for component
+    family grounding plus SecA exclusion.
+  llm_assisted: true
+- timestamp: '2026-10-02T13:39:33Z'
+  curator: complex_portal
+  action: ADD_EVIDENCE
+  changes: Added taxon-specific composition ComplexPortal:CPX-1095 (7 participants);
+    exact accession and taxon verified at import.
+- timestamp: '2026-10-02T13:45:07Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: Removed the broad GO:0005886 grounding from the inner-membrane lipid bilayer
+    causal-graph node because the term label is plasma membrane, not a source-exact
+    bacterial inner-membrane lipid bilayer.
+  llm_assisted: true
+synonyms:
+- synonym_text: HTL complex
+  synonym_type: EXACT_SYNONYM
+  source: ComplexPortal:CPX-1095
+parent_structures:
+- GO:0031522
+has_part:
+- cellstructuremech:secyeg_translocon_complex
+components:
+- component_id: secy_channel_subunit
+  label: Protein translocase subunit SecY
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - secY
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ComplexPortal:CPX-1095 exactly identifies the E. coli K-12 secY
+    participant, but no exact source-neutral InterPro, Pfam, NCBIfam, GO, or Complex
+    Portal protein-family grounding was verified.
+  role: Core protein-conducting channel subunit that forms the central pore and lateral
+    gate used during secretion and membrane-protein insertion.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-1095 entry
+  evidence:
+  - reference: ComplexPortal:CPX-1095
+    notes: Complex Portal CPX-1095 curates UniProtKB:P0AGA2/secY as a one-copy participant
+      in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon.
+  - reference: PMID:27435098
+    notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
+      supercomplex in the E. coli inner membrane.
+- component_id: sece_clamp_subunit
+  label: Protein translocase subunit SecE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - secE
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ComplexPortal:CPX-1095 exactly identifies the E. coli K-12 secE
+    participant, but no exact source-neutral InterPro, Pfam, NCBIfam, GO, or Complex
+    Portal protein-family grounding was verified.
+  role: Core channel constituent that braces SecY in the SecYEG module of the holo-translocon.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-1095 entry
+  evidence:
+  - reference: ComplexPortal:CPX-1095
+    notes: Complex Portal CPX-1095 curates UniProtKB:P0AG96/secE as a one-copy participant
+      in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon.
+  - reference: PMID:27435098
+    notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
+      supercomplex in the E. coli inner membrane.
+- component_id: secg_accessory_subunit
+  label: Protein-export membrane protein SecG
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - secG
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ComplexPortal:CPX-1095 exactly identifies the E. coli K-12 secG
+    participant, but no exact source-neutral InterPro, Pfam, NCBIfam, GO, or Complex
+    Portal protein-family grounding was verified.
+  role: SecYEG channel constituent that completes the SecYEG module inside the larger
+    holo-translocon.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-1095 entry
+  evidence:
+  - reference: ComplexPortal:CPX-1095
+    notes: Complex Portal CPX-1095 curates UniProtKB:P0AG99/secG as a one-copy participant
+      in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon.
+  - reference: PMID:27435098
+    notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
+      supercomplex in the E. coli inner membrane.
+- component_id: secd_subunit
+  label: Protein translocase subunit SecD
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - secD
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ComplexPortal:CPX-1095 exactly identifies the E. coli K-12 secD
+    participant, but no exact source-neutral InterPro, Pfam, NCBIfam, GO, or Complex
+    Portal protein-family grounding was verified.
+  role: SecDF-YajC module constituent that links proton-motive-force assisted Sec
+    protein transport to the SecYEG channel.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-1095 entry
+  evidence:
+  - reference: ComplexPortal:CPX-1095
+    notes: Complex Portal CPX-1095 curates UniProtKB:P0AG90/secD as a one-copy participant
+      in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon.
+  - reference: PMID:27435098
+    notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
+      supercomplex in the E. coli inner membrane.
+- component_id: secf_subunit
+  label: Protein translocase subunit SecF
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - secF
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ComplexPortal:CPX-1095 exactly identifies the E. coli K-12 secF
+    participant, but no exact source-neutral InterPro, Pfam, NCBIfam, GO, or Complex
+    Portal protein-family grounding was verified.
+  role: SecDF-YajC module constituent in the proton-motive-force assisted branch of
+    the Sec holo-translocon.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-1095 entry
+  evidence:
+  - reference: ComplexPortal:CPX-1095
+    notes: Complex Portal CPX-1095 curates UniProtKB:P0AG93/secF as a one-copy participant
+      in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon.
+  - reference: PMID:27435098
+    notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
+      supercomplex in the E. coli inner membrane.
+- component_id: yajc_accessory_subunit
+  label: Sec translocon accessory complex subunit YajC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - yajC
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ComplexPortal:CPX-1095 exactly identifies the E. coli K-12 yajC
+    participant, but no exact source-neutral InterPro, Pfam, NCBIfam, GO, or Complex
+    Portal protein-family grounding was verified.
+  role: Accessory membrane constituent present with SecD and SecF in the seven-participant
+    E. coli holo-translocon source complex.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-1095 entry
+  evidence:
+  - reference: ComplexPortal:CPX-1095
+    notes: Complex Portal CPX-1095 curates UniProtKB:P0ADZ7/yajC as a one-copy participant
+      in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon.
+  - reference: PMID:27435098
+    notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
+      supercomplex in the E. coli inner membrane.
+- component_id: yidc_insertase
+  label: Membrane protein insertase YidC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - yidC
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: ComplexPortal:CPX-1095 exactly identifies the E. coli K-12 yidC
+    participant, but no exact source-neutral InterPro, Pfam, NCBIfam, GO, or Complex
+    Portal protein-family grounding was verified.
+  role: Membrane insertase constituent that cooperates with the SecY lateral gate
+    during insertion and folding of inner-membrane proteins.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-1095 entry
+  evidence:
+  - reference: ComplexPortal:CPX-1095
+    notes: Complex Portal CPX-1095 curates UniProtKB:P25714/yidC as a one-copy participant
+      in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon.
+  - reference: PMID:27435098
+    notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
+      supercomplex in the E. coli inner membrane.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Source strain for the Complex Portal CPX-1095 SecYEG-SecDF-YajC-YidC holo-translocon
+    entry.
+  reference: ComplexPortal:CPX-1095
+functions:
+- function_id: protein_transport_by_sec_complex
+  label: protein transport by the Sec complex
+  grounding: GO:0043952
+  description: The SecYEG-SecDF-YajC-YidC holo-translocon carries out Sec-pathway
+    protein transport across the bacterial plasma membrane.
+  evidence:
+  - reference: GO:0043952
+    notes: GO:0043952 defines protein transport across the bacterial cytoplasmic membrane
+      by the Sec complex.
+  - reference: ComplexPortal:CPX-1095
+    notes: Complex Portal cross-references protein transport by the Sec complex on
+      the E. coli K-12 holo-translocon.
+- function_id: membrane_insertase_activity
+  label: membrane insertase activity
+  grounding: GO:0032977
+  description: Through its YidC-containing holo-translocon assembly, the complex supports
+    insertion of membrane proteins from the SecY lateral gate into the inner-membrane
+    lipid bilayer.
+  evidence:
+  - reference: GO:0032977
+    notes: GO:0032977 is the molecular-function term for membrane insertase activity.
+  - reference: ComplexPortal:CPX-1095
+    notes: Complex Portal describes YidC as facilitating passage from the SecY lateral
+      gate and folding or assembly of inner-membrane proteins and complexes.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '7'
+  context: E. coli K-12 heteroheptameric Complex Portal CPX-1095 entry
+  reference: ComplexPortal:CPX-1095
+evidence:
+- reference: ComplexPortal:CPX-1095
+  notes: Complex Portal entry for the E. coli K-12 Holo-translocon SecYEG-SecDF-YajC-YidC
+    complex.
+- reference: GO:0031522
+  notes: Gene Ontology cellular-component parent term for the cell envelope Sec protein
+    transport complex.
+- reference: GO:0043952
+  notes: Gene Ontology biological-process term for protein transport by the Sec complex.
+- reference: GO:0032977
+  notes: Gene Ontology molecular-function term for membrane insertase activity.
+- reference: PDB:5MG3
+  notes: RCSB Protein Data Bank entry for an EM-fitted bacterial holo-translocon model
+    that includes SecYEG, SecDF, and YidC.
+- reference: PMID:27435098
+  notes: PubMed identifier for Komar et al. 2016, Membrane protein insertion and assembly
+    by the bacterial holo-translocon SecYEG-SecDF-YajC-YidC.
+- reference: DOI:10.1042/BCJ20160545
+  notes: DOI for Komar et al. 2016, Membrane protein insertion and assembly by the
+    bacterial holo-translocon SecYEG-SecDF-YajC-YidC.
+- reference: PMID:27924919
+  notes: PubMed identifier for Botte et al. 2016, A central cavity within the holo-translocon
+    suggests a mechanism for membrane protein insertion.
+- reference: DOI:10.1038/srep38399
+  notes: DOI for Botte et al. 2016, A central cavity within the holo-translocon suggests
+    a mechanism for membrane protein insertion.
+causal_graphs:
+- graph_id: htl_sec_transport_and_membrane_insertion
+  title: Sec holo-translocon couples transport and insertion
+  description: SecYEG, SecDF-YajC, and YidC assemble as the bacterial holo-translocon,
+    where the SecYEG core supplies the pore and lateral gate, SecDF supports proton-motive-force
+    assisted translocation, and YidC cooperates with the lateral gate for membrane-protein
+    insertion.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records CPX-1095 subcomplex boundaries and whole-complex
+    activities without specifying the SecA ATPase cycle or cotranslational versus
+    post-translational substrate handoff state.
+  nodes:
+  - node_id: holotranslocon
+    label: Holo-translocon SecYEG-SecDF-YajC-YidC complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex
+  - node_id: secyeg_core
+    label: SecYEG translocon complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:secyeg_translocon_complex
+  - node_id: secdf_yajc_module
+    label: SecDF-YajC module
+    node_type: STRUCTURE
+  - node_id: yidc_insertase
+    label: Membrane protein insertase YidC
+    node_type: GENE_OR_PROTEIN
+    component_ref: yidc_insertase
+  - node_id: proton_motive_force
+    label: proton-motive force
+    node_type: STATE
+  - node_id: inner_membrane_lipid_bilayer
+    label: inner-membrane lipid bilayer
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: sec_transport
+    label: protein transport by the Sec complex
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0043952
+  - node_id: membrane_insertase_activity
+    label: membrane insertase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0032977
+  edges:
+  - subject: secyeg_core
+    predicate: forms pore and lateral gate of
+    object: holotranslocon
+    description: The SecYEG core supplies the central pore and lateral gate within
+      the E. coli holo-translocon.
+    evidence:
+    - reference: ComplexPortal:CPX-1095
+      notes: Complex Portal describes SecYEG as the central pore and lateral gate
+        of CPX-1095.
+  - subject: secdf_yajc_module
+    predicate: assembles with
+    object: secyeg_core
+    description: SecDF-YajC is present with SecYEG in the SecYEG-SecDF-YajC-YidC holo-translocon
+      boundary.
+    evidence:
+    - reference: ComplexPortal:CPX-1095
+      notes: CPX-1095 curates SecD, SecF, YajC, SecY, SecE, and SecG as participants
+        in one source complex.
+    - reference: PMID:27435098
+      notes: Komar et al. 2016 identify the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
+        supercomplex.
+  - subject: yidc_insertase
+    predicate: assembles with
+    object: holotranslocon
+    description: YidC is a protein participant in the E. coli SecYEG-SecDF-YajC-YidC
+      holo-translocon.
+    evidence:
+    - reference: ComplexPortal:CPX-1095
+      notes: CPX-1095 curates P25714/YidC as a one-copy participant in the E. coli
+        K-12 complex.
+  - subject: proton_motive_force
+    predicate: assists
+    object: secdf_yajc_module
+    description: The SecDF portion of the holo-translocon stimulates SecYEG-mediated
+      protein translocation with assistance from proton-motive force.
+    evidence:
+    - reference: ComplexPortal:CPX-1095
+      notes: Complex Portal describes SecDF as stimulating protein translocation through
+        SecYEG with proton-motive-force assistance.
+  - subject: yidc_insertase
+    predicate: facilitates insertion into
+    object: inner_membrane_lipid_bilayer
+    description: YidC facilitates movement of membrane-protein segments from the SecY
+      lateral gate into the lipid bilayer and their folding or assembly in the inner
+      membrane.
+    evidence:
+    - reference: ComplexPortal:CPX-1095
+      notes: CPX-1095 describes YidC facilitating passage from the SecY lateral gate
+        into the bilayer and then folding or assembly of inner-membrane proteins.
+    - reference: PMID:27924919
+      notes: Botte et al. 2016 resolved a central cavity in the SecYEG-SecDF-YidC
+        holo-translocon model that informs membrane-protein insertion.
+  - subject: holotranslocon
+    predicate: enables
+    object: sec_transport
+    description: The assembled SecYEG-SecDF-YajC-YidC holo-translocon supports Sec-pathway
+      protein transport.
+    evidence:
+    - reference: ComplexPortal:CPX-1095
+      notes: Complex Portal cross-references GO:0043952 on the E. coli K-12 holo-translocon.
+  - subject: holotranslocon
+    predicate: enables
+    object: membrane_insertase_activity
+    description: The YidC-containing holo-translocon supports membrane-protein insertion
+      in the inner membrane.
+    evidence:
+    - reference: ComplexPortal:CPX-1095
+      notes: Complex Portal cross-references GO:0032977 on the E. coli K-12 holo-translocon.
+discussions:
+- discussion_id: exact_component_family_groundings
+  prompt: Resolve exact source-neutral protein-family groundings for SecY, SecE, SecG,
+    SecD, SecF, YajC, and YidC before replacing their reviewed-label-only rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#secy_channel_subunit
+  - components#sece_clamp_subunit
+  - components#secg_accessory_subunit
+  - components#secd_subunit
+  - components#secf_subunit
+  - components#yajc_accessory_subunit
+  - components#yidc_insertase
+  rationale: CPX-1095 exactly identifies each E. coli K-12 participant, but accession-specific
+    UniProtKB identifiers belong in complex_compositions and none of the seven constituents
+    has a verified exact source-neutral protein-family CURIE in this record.
+  evidence:
+  - reference: ComplexPortal:CPX-1095
+    notes: CPX-1095 curates the seven E. coli K-12 UniProtKB participants in the SecYEG-SecDF-YajC-YidC
+      holo-translocon.
+  posed_by: codex
+  posed_date: '2026-10-02'
+- discussion_id: exclude_seca_from_holotranslocon_boundary
+  prompt: Should SecA be modeled as a constituent of the SecYEG-SecDF-YajC-YidC holo-translocon?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#secy_channel_subunit
+  - causal_graphs#htl_sec_transport_and_membrane_insertion
+  rationale: SecA drives post-translational substrates through Sec-family channels,
+    but CPX-1095 scopes the holo-translocon itself to SecYEG, SecDF-YajC, and YidC.
+  evidence:
+  - reference: ComplexPortal:CPX-1095
+    notes: CPX-1095 lists SecY, SecE, SecG, SecD, SecF, YajC, and YidC as participants
+      and does not include SecA as a complex participant.
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolution_note: Keep SecA outside the curated holo-translocon component boundary
+    and mention it only in future substrate-handoff graphs when evidence requires
+    it.
+complex_compositions:
+- composition_id: complex_portal_cpx_1095
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-1095
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-1095
+  complex_label: Holo-translocon SecYEG-SecDF-YajC-YidC complex
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  assembly: Heteroheptamer
+  evidence_code: ECO:0000353
+  participants:
+  - participant_id: UniProtKB:P0ADZ7
+    label: Sec translocon accessory complex subunit YajC
+    participant_type: protein
+    gene_symbol: yajC
+    stoichiometry: '1'
+    source_interactor_id: EBI-13950974
+  - participant_id: UniProtKB:P0AG93
+    label: Protein translocase subunit SecF
+    participant_type: protein
+    gene_symbol: secF
+    stoichiometry: '1'
+    source_interactor_id: EBI-13950970
+  - participant_id: UniProtKB:P0AG90
+    label: Protein translocase subunit SecD
+    participant_type: protein
+    gene_symbol: secD
+    stoichiometry: '1'
+    source_interactor_id: EBI-13950968
+  - participant_id: UniProtKB:P25714
+    label: Membrane protein insertase YidC
+    participant_type: protein
+    gene_symbol: yidC
+    stoichiometry: '1'
+    source_interactor_id: EBI-13950973
+  - participant_id: UniProtKB:P0AG99
+    label: Protein-export membrane protein SecG
+    participant_type: protein
+    gene_symbol: secG
+    stoichiometry: '1'
+    source_interactor_id: EBI-13950971
+  - participant_id: UniProtKB:P0AG96
+    label: Protein translocase subunit SecE
+    participant_type: protein
+    gene_symbol: secE
+    stoichiometry: '1'
+    source_interactor_id: EBI-13950969
+  - participant_id: UniProtKB:P0AGA2
+    label: Protein translocase subunit SecY
+    participant_type: protein
+    gene_symbol: secY
+    stoichiometry: '1'
+    source_interactor_id: EBI-13950972
+  retrieved_on: '2026-10-02'
+  notes: 'Curator-scoped import: E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon
+    source composition for this record. Source evidence: physical interaction evidence.
+    The accession was resolved through the Complex Portal accession endpoint; no equivalence
+    xref was inferred.'

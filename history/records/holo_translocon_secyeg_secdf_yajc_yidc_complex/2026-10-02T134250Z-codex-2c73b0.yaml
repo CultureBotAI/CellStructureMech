@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/holo_translocon_secyeg_secdf_yajc_yidc_complex.yaml
+  slug: holo_translocon_secyeg_secdf_yajc_yidc_complex
+session:
+  id: 2026-10-02T134250Z-codex-2c73b0
+  timestamp: '2026-10-02T13:42:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Holo-translocon SecYEG-SecDF-YajC-YidC complex record
+  details: Created a proposed ComplexPortal:CPX-1095-backed E. coli K-12 SecYEG-SecDF-YajC-YidC
+    holo-translocon record with seven reviewed-label-only SecY, SecE, SecG, SecD, SecF, YajC,
+    and YidC component rows, GO Sec transport and membrane insertase functions, the CPX-1095
+    heteroheptameric composition import, a compact function graph, and grounding/SecA boundary
+    discussions.

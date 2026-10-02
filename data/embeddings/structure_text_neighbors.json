@@ -16525,9 +16525,9 @@
           "cosine_similarity": 0.72738926
         },
         {
-          "identifier": "cellstructuremech:secyeg_translocon_complex",
-          "label": "SecYEG translocon complex",
-          "cosine_similarity": 0.72024485
+          "identifier": "cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex",
+          "label": "Holo-translocon SecYEG-SecDF-YajC-YidC complex",
+          "cosine_similarity": 0.7257695
         }
       ]
     },
@@ -20085,14 +20085,14 @@
           "cosine_similarity": 0.83747342
         },
         {
+          "identifier": "cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex",
+          "label": "Holo-translocon SecYEG-SecDF-YajC-YidC complex",
+          "cosine_similarity": 0.83029998
+        },
+        {
           "identifier": "GO:0000145",
           "label": "exocyst",
           "cosine_similarity": 0.82566428
-        },
-        {
-          "identifier": "GO:0071261",
-          "label": "Ssh1 translocon complex",
-          "cosine_similarity": 0.80728805
         }
       ]
     },
@@ -20116,14 +20116,14 @@
           "cosine_similarity": 0.8259876
         },
         {
+          "identifier": "cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex",
+          "label": "Holo-translocon SecYEG-SecDF-YajC-YidC complex",
+          "cosine_similarity": 0.79685153
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.77820881
-        },
-        {
-          "identifier": "cellstructuremech:secyeg_translocon_complex",
-          "label": "SecYEG translocon complex",
-          "cosine_similarity": 0.77722667
         }
       ]
     },
@@ -23786,9 +23786,45 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex",
+      "label": "Holo-translocon SecYEG-SecDF-YajC-YidC complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:secyeg_translocon_complex",
+          "label": "SecYEG translocon complex",
+          "cosine_similarity": 0.89216462
+        },
+        {
+          "identifier": "GO:0005784",
+          "label": "Sec61 translocon complex",
+          "cosine_similarity": 0.83029998
+        },
+        {
+          "identifier": "GO:0097347",
+          "label": "TAM protein secretion complex",
+          "cosine_similarity": 0.7973245
+        },
+        {
+          "identifier": "GO:0031207",
+          "label": "Sec62/Sec63 complex",
+          "cosine_similarity": 0.79685153
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.7787834
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:secyeg_translocon_complex",
       "label": "SecYEG translocon complex",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex",
+          "label": "Holo-translocon SecYEG-SecDF-YajC-YidC complex",
+          "cosine_similarity": 0.89216462
+        },
         {
           "identifier": "GO:0005784",
           "label": "Sec61 translocon complex",
@@ -23808,11 +23844,6 @@
           "identifier": "GO:0097347",
           "label": "TAM protein secretion complex",
           "cosine_similarity": 0.77061722
-        },
-        {
-          "identifier": "GO:0015627",
-          "label": "type II protein secretion system complex",
-          "cosine_similarity": 0.76590234
         }
       ]
     },

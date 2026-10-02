@@ -6903,6 +6903,15 @@
   "definition": "A mycobacterial ESX-5 type VII secretion inner-membrane complex in which EccB5, EccC5, EccD5, EccE5, and MycP5 assemble into a multi-megadalton nanomachine that exports Esx and PE/PPE-family protein substrates."
  },
  {
+  "identifier": "cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex",
+  "label": "Holo-translocon SecYEG-SecDF-YajC-YidC complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/holo_translocon_secyeg_secdf_yajc_yidc_complex.html",
+  "definition": "An Escherichia coli Sec-pathway plasma-membrane holo-translocon complex in which SecY, SecE, SecG, SecD, SecF, YajC, and YidC assemble as a heteroheptamer that supports protein secretion and membrane-protein insertion."
+ },
+ {
   "identifier": "cellstructuremech:secyeg_translocon_complex",
   "label": "SecYEG translocon complex",
   "category": "SECRETION_SYSTEM",
