@@ -45,7 +45,7 @@ ACCESS = {"BULK", "API", "BOTH", "MANUAL", "UNVERIFIED"}
 STATUS = {"CANDIDATE", "EVALUATING", "ADOPTED", "REJECTED", "BLOCKED"}
 # What LICENSE says may be copied into records or pages. SHARE_ALIKE is here
 # rather than in the hostable set because share-alike propagates to consumers
-# of this corpus, which a CC0 repository cannot promise (#93).
+# of this corpus, which this repository's CC BY data policy does not permit (#93).
 HOST_FORBIDDEN = {"UNVERIFIED", "NONCOMMERCIAL", "RESTRICTED", "SHARE_ALIKE"}
 
 # Gaps that are not record fields: corpus-level things a source can close.

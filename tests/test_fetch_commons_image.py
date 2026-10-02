@@ -33,7 +33,7 @@ def test_hostable_licences_are_exactly_the_redistributable_ones():
     """The schema, tests/test_corpus_integrity.py and LICENSE state the same set;
     if these drift apart the script would download something the corpus must not
     host. Share-alike is excluded deliberately (#93): it constrains what a
-    downstream user may do, which a CC0 repository cannot promise for them."""
+    downstream user may do, which this repository's CC BY data policy does not permit."""
     assert {"CC0", "PUBLIC_DOMAIN", "CC_BY_3_0", "CC_BY_4_0"} == fci.HOSTABLE
     assert set(fci.LICENCES.values()) >= fci.HOSTABLE
     for link_only in ("CC BY-SA 3.0", "CC BY-SA 4.0", "CC BY-NC 4.0",

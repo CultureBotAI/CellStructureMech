@@ -161,8 +161,13 @@ queue validation, and recovery when a queued change fails.
 
 ## License
 
-CC0-1.0 for everything this project authored — records, schema, scripts,
-pages, prose. Third-party material it redistributes keeps its own licence:
+Project-authored data and narrative documentation are licensed under
+[CC BY 4.0](LICENSE-DATA). Project-authored code, including scripts, tests,
+schemas and website templates, is licensed under [BSD-3-Clause](LICENSE-CODE).
+Third-party material retains its own licenses and attribution requirements.
+See [LICENSE](LICENSE) for scope and attribution.
+
+Third-party material this project redistributes keeps its own licence:
 each hosted image records its licence and attribution in the record that
 displays it, and text derived from CC BY sources (UniProt Subcellular
 Location, Complex Portal) names its source in an evidence reference. Only
