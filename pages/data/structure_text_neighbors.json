@@ -13348,6 +13348,11 @@
           "cosine_similarity": 0.75985725
         },
         {
+          "identifier": "GO:0062077",
+          "label": "phenylacetyl-CoA 1,2-epoxidase complex",
+          "cosine_similarity": 0.73166578
+        },
+        {
           "identifier": "GO:0045273",
           "label": "respiratory chain complex II (succinate dehydrogenase)",
           "cosine_similarity": 0.72079392
@@ -13361,11 +13366,6 @@
           "identifier": "GO:1990201",
           "label": "alkanesulfonate monooxygenase complex",
           "cosine_similarity": 0.70099055
-        },
-        {
-          "identifier": "GO:0045275",
-          "label": "respiratory chain complex III",
-          "cosine_similarity": 0.68852221
         }
       ]
     },
@@ -18729,6 +18729,37 @@
           "identifier": "GO:0005938",
           "label": "cell cortex",
           "cosine_similarity": 0.71724588
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0062077",
+      "label": "phenylacetyl-CoA 1,2-epoxidase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.73166578
+        },
+        {
+          "identifier": "GO:7770085",
+          "label": "protocatechuate 3,4-dioxygenase complex",
+          "cosine_similarity": 0.65594609
+        },
+        {
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.62992968
+        },
+        {
+          "identifier": "GO:0009338",
+          "label": "exodeoxyribonuclease V complex",
+          "cosine_similarity": 0.62755135
+        },
+        {
+          "identifier": "GO:0045277",
+          "label": "respiratory chain complex IV",
+          "cosine_similarity": 0.62146528
         }
       ]
     },
