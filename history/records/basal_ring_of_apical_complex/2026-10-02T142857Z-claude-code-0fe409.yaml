@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_ring_of_apical_complex.yaml
+  slug: basal_ring_of_apical_complex
+session:
+  id: 2026-10-02T142857Z-claude-code-0fe409
+  timestamp: '2026-10-02T14:28:57Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add the basal ring of apical complex record
+  details: Created an evidence-backed GO:0020032 basal ring of apical complex record with
+    exact GO synonyms for lower, posterior, and preconoidal rings, apical-complex parthood,
+    Toxoplasma gondii scope, GO and Hu et al. 2006 evidence, a nonmechanistic topology graph
+    for the lower polar ring and subpellicular-microtubule origin, and discussions that leave
+    exact basal-ring constituents open while separating GO:0020032 from the anterior polar
+    ring GO:0020031. Validated the record with LinkML and strict single/all-record validation,
+    refreshed text embeddings, rendered pages, and checked docs/page drift.
