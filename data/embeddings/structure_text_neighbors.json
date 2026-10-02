@@ -13343,6 +13343,11 @@
       "label": "3-phenylpropionate dioxygenase complex",
       "neighbors": [
         {
+          "identifier": "GO:7770085",
+          "label": "protocatechuate 3,4-dioxygenase complex",
+          "cosine_similarity": 0.75985725
+        },
+        {
           "identifier": "GO:0045273",
           "label": "respiratory chain complex II (succinate dehydrogenase)",
           "cosine_similarity": 0.72079392
@@ -13361,11 +13366,6 @@
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
           "cosine_similarity": 0.68852221
-        },
-        {
-          "identifier": "GO:1990200",
-          "label": "SsuD-SsuE complex",
-          "cosine_similarity": 0.68760932
         }
       ]
     },
@@ -15745,14 +15745,14 @@
           "cosine_similarity": 0.70726103
         },
         {
+          "identifier": "GO:7770085",
+          "label": "protocatechuate 3,4-dioxygenase complex",
+          "cosine_similarity": 0.68858729
+        },
+        {
           "identifier": "GO:1990202",
           "label": "FMN reductase complex",
           "cosine_similarity": 0.68841281
-        },
-        {
-          "identifier": "GO:0008622",
-          "label": "epsilon DNA polymerase complex",
-          "cosine_similarity": 0.68596698
         }
       ]
     },
@@ -18981,6 +18981,37 @@
       ]
     },
     {
+      "identifier": "GO:7770085",
+      "label": "protocatechuate 3,4-dioxygenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.75985725
+        },
+        {
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.68858729
+        },
+        {
+          "identifier": "GO:1990205",
+          "label": "taurine dioxygenase complex",
+          "cosine_similarity": 0.67688139
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.67557291
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.65708807
+        }
+      ]
+    },
+    {
       "identifier": "GO:0034388",
       "label": "Pwp2p-containing subcomplex of 90S preribosome",
       "neighbors": [
@@ -20049,6 +20080,11 @@
           "cosine_similarity": 0.67839197
         },
         {
+          "identifier": "GO:7770085",
+          "label": "protocatechuate 3,4-dioxygenase complex",
+          "cosine_similarity": 0.67688139
+        },
+        {
           "identifier": "GO:0045273",
           "label": "respiratory chain complex II (succinate dehydrogenase)",
           "cosine_similarity": 0.66541141
@@ -20057,11 +20093,6 @@
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.66166306
-        },
-        {
-          "identifier": "GO:0045275",
-          "label": "respiratory chain complex III",
-          "cosine_similarity": 0.64658423
         }
       ]
     },

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/protocatechuate_3_4_dioxygenase_complex.yaml
+  slug: protocatechuate_3_4_dioxygenase_complex
+session:
+  id: 2026-10-02T012656Z-codex-1cd641
+  timestamp: '2026-10-02T01:26:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added protocatechuate 3,4-dioxygenase complex record
+  details: Created a GO:7770085-backed protocatechuate 3,4-dioxygenase complex record with
+    GO:1990204 oxidoreductase-complex parentage, exact InterPro-grounded PcaG and PcaH constituents,
+    reviewed Pseudomonas putida UniProt examples for pcaG and pcaH, Rhodococcus jostii RHA1
+    and P. putida canonical examples, protocatechuate 3,4-dioxygenase activity, and PubMed/DOI
+    evidence from the GO-cited PcaHG reconstitution paper and the UniProt-cited P. putida
+    pca gene cloning paper.
