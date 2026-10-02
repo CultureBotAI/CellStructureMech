@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/dinoflagellate_peduncle.yaml
+  slug: dinoflagellate_peduncle
+session:
+  id: 2026-10-02T231622Z-codex-4f5852
+  timestamp: '2026-10-02T23:16:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-backed dinoflagellate peduncle record
+  details: Created data/structures/appendage/dinoflagellate_peduncle.yaml for GO:1990905 with
+    GO:0120025 plasma-membrane-bounded cell-projection parentage, Dinophyceae taxon scope,
+    direct Okamoto and Keeling 2014 plus Larsson et al. 2025 literature evidence, a nonmechanistic
+    GO projection-topology graph, and curation discussions for molecular-component resolution,
+    flagellar-apparatus boundaries, and apical-complex homology.

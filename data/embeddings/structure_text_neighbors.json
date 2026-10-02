@@ -28,14 +28,14 @@
           "cosine_similarity": 0.65272608
         },
         {
+          "identifier": "GO:1990905",
+          "label": "dinoflagellate peduncle",
+          "cosine_similarity": 0.64388811
+        },
+        {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
           "cosine_similarity": 0.6191194
-        },
-        {
-          "identifier": "GO:0043591",
-          "label": "endospore external encapsulating structure",
-          "cosine_similarity": 0.60251524
         }
       ]
     },
@@ -846,6 +846,37 @@
       ]
     },
     {
+      "identifier": "GO:1990905",
+      "label": "dinoflagellate peduncle",
+      "neighbors": [
+        {
+          "identifier": "GO:0097613",
+          "label": "dinoflagellate epicone",
+          "cosine_similarity": 0.75997117
+        },
+        {
+          "identifier": "GO:0097611",
+          "label": "dinoflagellate cingulum",
+          "cosine_similarity": 0.75698577
+        },
+        {
+          "identifier": "GO:0097683",
+          "label": "dinoflagellate apex",
+          "cosine_similarity": 0.75396811
+        },
+        {
+          "identifier": "GO:0097684",
+          "label": "dinoflagellate antapex",
+          "cosine_similarity": 0.7503479
+        },
+        {
+          "identifier": "GO:0097686",
+          "label": "dinoflagellate apical horn",
+          "cosine_similarity": 0.74879387
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:hamus",
       "label": "hamus",
       "neighbors": [
@@ -881,6 +912,11 @@
       "label": "haptonema",
       "neighbors": [
         {
+          "identifier": "GO:1990905",
+          "label": "dinoflagellate peduncle",
+          "cosine_similarity": 0.62546721
+        },
+        {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.57328775
@@ -899,11 +935,6 @@
           "identifier": "cellstructuremech:archaeal_cannula",
           "label": "archaeal cannula",
           "cosine_similarity": 0.55634317
-        },
-        {
-          "identifier": "GO:0055040",
-          "label": "periplasmic flagellum",
-          "cosine_similarity": 0.55588219
         }
       ]
     },
