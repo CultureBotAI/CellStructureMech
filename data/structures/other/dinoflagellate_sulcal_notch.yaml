@@ -21,6 +21,13 @@ curation_history:
     evidence, and curation discussions for molecular components and the sulcal-notch/sulcus
     boundary.
   llm_assisted: true
+- timestamp: '2026-10-02T22:38:40Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1948 review issues #1949 and #1950 by adding edge-level
+    antapex and hypocone GO evidence and documenting that the sulcal notch reaches
+    the antapex and changes hypocone shape without being an antapex or hypocone class.'
+  llm_assisted: true
 synonyms:
 - synonym_text: dinoflagellate sulcus notch
   synonym_type: EXACT_SYNONYM
@@ -104,6 +111,9 @@ causal_graphs:
     - reference: GO:0097618
       notes: The GO:0097618 definition defines a sulcal notch as a dinoflagellate
         sulcus that extends to the posterior antapex.
+    - reference: GO:0097684
+      notes: Gene Ontology term for the dinoflagellate antapex reached by the GO:0097618
+        sulcal notch.
   - subject: dinoflagellate_sulcal_notch
     predicate: gives bilobed appearance to
     object: dinoflagellate_hypocone
@@ -112,6 +122,9 @@ causal_graphs:
     - reference: GO:0097618
       notes: The GO:0097618 definition states that a sulcal notch makes the dinoflagellate
         hypocone appear bilobed.
+    - reference: GO:0097614
+      notes: Gene Ontology term for the dinoflagellate hypocone whose bilobed appearance
+        can indicate a sulcal notch.
 discussions:
 - discussion_id: resolve_sulcal_notch_molecular_constituents
   prompt: Add sulcal-notch molecular components only after directly localized constituents
@@ -141,3 +154,21 @@ discussions:
   resolved_date: '2026-10-02'
   resolution_note: Model GO:0097618 as a specialized antapex-reaching dinoflagellate
     sulcus under GO:0097612.
+- discussion_id: sulcal_notch_reaches_antapex_without_being_hypocone
+  prompt: Model the dinoflagellate sulcal notch as a sulcus extension to the antapex
+    that affects hypocone shape, not as an antapex or hypocone child class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0097618 is_a GO:0097612 and its definition states that a sulcal notch
+    extends to the antapex and can make the hypocone appear bilobed, so its antapex
+    and hypocone links are morphological adjacency and appearance edges rather than
+    subclass relations.
+  evidence:
+  - reference: GO:0097618
+  - reference: GO:0097684
+  - reference: GO:0097614
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
+  resolution_note: Keep GO:0097618 under the dinoflagellate sulcus and connect it
+    to the antapex and hypocone by morphology edges only.
