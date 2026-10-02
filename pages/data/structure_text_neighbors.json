@@ -5334,9 +5334,9 @@
           "cosine_similarity": 0.70210282
         },
         {
-          "identifier": "GO:0009512",
-          "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.6604251
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.6652186
         }
       ]
     },
@@ -5758,6 +5758,11 @@
           "cosine_similarity": 0.77700758
         },
         {
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.72079392
+        },
+        {
           "identifier": "GO:0045277",
           "label": "respiratory chain complex IV",
           "cosine_similarity": 0.70999741
@@ -5766,11 +5771,6 @@
           "identifier": "GO:0045283",
           "label": "fumarate reductase complex",
           "cosine_similarity": 0.70869109
-        },
-        {
-          "identifier": "GO:1990201",
-          "label": "alkanesulfonate monooxygenase complex",
-          "cosine_similarity": 0.70856615
         }
       ]
     },
@@ -13339,6 +13339,37 @@
       ]
     },
     {
+      "identifier": "GO:0009334",
+      "label": "3-phenylpropionate dioxygenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0045273",
+          "label": "respiratory chain complex II (succinate dehydrogenase)",
+          "cosine_similarity": 0.72079392
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.71472433
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.70099055
+        },
+        {
+          "identifier": "GO:0045275",
+          "label": "respiratory chain complex III",
+          "cosine_similarity": 0.68852221
+        },
+        {
+          "identifier": "GO:1990200",
+          "label": "SsuD-SsuE complex",
+          "cosine_similarity": 0.68760932
+        }
+      ]
+    },
+    {
       "identifier": "GO:0016590",
       "label": "ACF complex",
       "neighbors": [
@@ -13425,9 +13456,9 @@
           "cosine_similarity": 0.70856615
         },
         {
-          "identifier": "GO:0045275",
-          "label": "respiratory chain complex III",
-          "cosine_similarity": 0.68800934
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.70099055
         }
       ]
     },
@@ -19842,9 +19873,9 @@
           "cosine_similarity": 0.69169481
         },
         {
-          "identifier": "GO:0045277",
-          "label": "respiratory chain complex IV",
-          "cosine_similarity": 0.65694533
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.68760932
         }
       ]
     },

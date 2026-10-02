@@ -1,0 +1,218 @@
+identifier: GO:0009334
+label: 3-phenylpropionate dioxygenase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: 'Enzyme complex consisting of four proteins: the two subunits of the hydroxylase
+  component (hcaE and hcaF), a ferredoxin (hcaC) and a ferredoxin reductase (hcaD).
+  Converts 3-phenylpropionic acid (PP) into cis-3-(3-carboxyethyl)-3,5-cyclohexadiene-1,2-diol
+  (PP-dihydrodiol).'
+definition_source: GO:0009334
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T00:49:27Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T00:50:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added oxidoreductase-complex parentage, four exact InterPro-grounded Hca
+    constituents with reviewed E. coli K-12 UniProt examples, an E. coli K-12 canonical
+    example, 3-phenylpropionate dioxygenase activity, and GO/PubMed/DOI evidence.
+  llm_assisted: true
+parent_structures:
+- GO:1990204
+components:
+- component_id: hcae_hydroxylase_alpha
+  label: 3-phenylpropionate/cinnamic acid dioxygenase, alpha subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR020875
+  gene_symbols:
+  - hcaE
+  essentiality: UNKNOWN
+  role: Hydroxylase alpha subunit of the Hca 3-phenylpropionate dioxygenase.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABR5
+    protein_label: 3-phenylpropionate/cinnamic acid dioxygenase subunit alpha
+    gene_symbol: hcaE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 hcaE accession for the GO:0009334 3-phenylpropionate
+      dioxygenase complex.
+    evidence:
+    - reference: UniProtKB:P0ABR5
+      notes: UniProtKB P0ABR5 is the reviewed Escherichia coli K-12 entry for hcaE.
+    - reference: PMID:9603882
+      notes: Díaz et al. 1998 characterized the E. coli K-12 hca cluster encoding
+        3-phenylpropionic acid dioxygenolytic catabolism.
+  evidence:
+  - reference: GO:0009334
+    notes: GO:0009334 defines hcaE as one of the four proteins in the 3-phenylpropionate
+      dioxygenase complex.
+  - reference: InterPro:IPR020875
+    notes: InterPro IPR020875 is the 3-phenylpropionate/cinnamic acid dioxygenase,
+      alpha subunit family entry.
+  - reference: PMID:9603882
+    notes: Díaz et al. 1998 characterized the E. coli K-12 hca cluster that encodes
+      the initial 3-phenylpropionic acid dioxygenase pathway.
+- component_id: hcaf_hydroxylase_beta
+  label: 3-phenylpropionate/cinnamic acid dioxygenase, beta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR023712
+  gene_symbols:
+  - hcaF
+  essentiality: UNKNOWN
+  role: Hydroxylase beta subunit of the Hca 3-phenylpropionate dioxygenase.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q47140
+    protein_label: 3-phenylpropionate/cinnamic acid dioxygenase subunit beta
+    gene_symbol: hcaF
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 hcaF accession for the GO:0009334 3-phenylpropionate
+      dioxygenase complex.
+    evidence:
+    - reference: UniProtKB:Q47140
+      notes: UniProtKB Q47140 is the reviewed Escherichia coli K-12 entry for hcaF.
+    - reference: PMID:9603882
+      notes: Díaz et al. 1998 characterized the E. coli K-12 hca cluster encoding
+        3-phenylpropionic acid dioxygenolytic catabolism.
+  evidence:
+  - reference: GO:0009334
+    notes: GO:0009334 defines hcaF as one of the four proteins in the 3-phenylpropionate
+      dioxygenase complex.
+  - reference: InterPro:IPR023712
+    notes: InterPro IPR023712 is the 3-phenylpropionate/cinnamic acid dioxygenase,
+      beta subunit family entry.
+  - reference: PMID:9603882
+    notes: Díaz et al. 1998 characterized the E. coli K-12 hca cluster that encodes
+      the initial 3-phenylpropionic acid dioxygenase pathway.
+- component_id: hcac_ferredoxin
+  label: 3-phenylpropionate/cinnamic acid dioxygenase, ferredoxin subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR023739
+  gene_symbols:
+  - hcaC
+  essentiality: UNKNOWN
+  role: Ferredoxin subunit that transfers electrons in the Hca 3-phenylpropionate
+    dioxygenase.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABW0
+    protein_label: 3-phenylpropionate/cinnamic acid dioxygenase ferredoxin subunit
+    gene_symbol: hcaC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 hcaC accession for the GO:0009334 3-phenylpropionate
+      dioxygenase complex.
+    evidence:
+    - reference: UniProtKB:P0ABW0
+      notes: UniProtKB P0ABW0 is the reviewed Escherichia coli K-12 entry for hcaC.
+    - reference: PMID:9603882
+      notes: Díaz et al. 1998 characterized the E. coli K-12 hca cluster encoding
+        3-phenylpropionic acid dioxygenolytic catabolism.
+  evidence:
+  - reference: GO:0009334
+    notes: GO:0009334 defines hcaC as one of the four proteins in the 3-phenylpropionate
+      dioxygenase complex.
+  - reference: InterPro:IPR023739
+    notes: InterPro IPR023739 is the 3-phenylpropionate/cinnamic acid dioxygenase,
+      ferredoxin subunit family entry.
+  - reference: PMID:9603882
+    notes: Díaz et al. 1998 characterized the E. coli K-12 hca cluster that encodes
+      the initial 3-phenylpropionic acid dioxygenase pathway.
+- component_id: hcad_ferredoxin_nad_reductase
+  label: 3-phenylpropionate/cinnamic acid dioxygenase, ferredoxin--NAD(+) reductase
+    subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR023744
+  gene_symbols:
+  - hcaD
+  essentiality: UNKNOWN
+  role: Ferredoxin--NAD(+) reductase subunit of the Hca 3-phenylpropionate dioxygenase.
+  protein_examples:
+  - uniprot_id: UniProtKB:P77650
+    protein_label: 3-phenylpropionate/cinnamic acid dioxygenase ferredoxin--NAD(+)
+      reductase component
+    gene_symbol: hcaD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 hcaD accession for the GO:0009334 3-phenylpropionate
+      dioxygenase complex.
+    evidence:
+    - reference: UniProtKB:P77650
+      notes: UniProtKB P77650 is the reviewed Escherichia coli K-12 entry for hcaD.
+    - reference: PMID:9603882
+      notes: Díaz et al. 1998 characterized the E. coli K-12 hca cluster encoding
+        3-phenylpropionic acid dioxygenolytic catabolism.
+  evidence:
+  - reference: GO:0009334
+    notes: GO:0009334 defines hcaD as one of the four proteins in the 3-phenylpropionate
+      dioxygenase complex.
+  - reference: InterPro:IPR023744
+    notes: InterPro IPR023744 is the 3-phenylpropionate/cinnamic acid dioxygenase,
+      ferredoxin--NAD(+) reductase subunit family entry.
+  - reference: PMID:9603882
+    notes: Díaz et al. 1998 characterized the E. coli K-12 hca cluster that encodes
+      the initial 3-phenylpropionic acid dioxygenase pathway.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: E. coli K-12 source of the hca-encoded 3-phenylpropionate dioxygenase complex
+    curated by GO:0009334.
+  reference: PMID:9603882
+functions:
+- function_id: 3_phenylpropionate_dioxygenase_activity
+  label: 3-phenylpropionate dioxygenase activity
+  grounding: GO:0008695
+  description: The Hca complex converts 3-phenylpropionate, NADH, oxygen, and a proton
+    to PP-dihydrodiol and NAD+.
+  evidence:
+  - reference: GO:0009334
+    notes: GO:0009334 is capable of GO:0008695 3-phenylpropionate dioxygenase activity.
+  - reference: GO:0008695
+    notes: GO:0008695 is the molecular-function term for 3-phenylpropionate dioxygenase
+      activity.
+evidence:
+- reference: GO:0009334
+  notes: Gene Ontology cellular-component term for the 3-phenylpropionate dioxygenase
+    complex.
+- reference: GO:1990204
+  notes: QuickGO reports GO:0009334 as an is-a child of GO:1990204 oxidoreductase
+    complex.
+- reference: GO:0008695
+  notes: Gene Ontology molecular-function term for 3-phenylpropionate dioxygenase
+    activity.
+- reference: InterPro:IPR020875
+  notes: InterPro family entry for HcaE alpha subunits.
+- reference: InterPro:IPR023712
+  notes: InterPro family entry for HcaF beta subunits.
+- reference: InterPro:IPR023739
+  notes: InterPro family entry for HcaC ferredoxin subunits.
+- reference: InterPro:IPR023744
+  notes: InterPro family entry for HcaD ferredoxin--NAD(+) reductase subunits.
+- reference: UniProtKB:P0ABR5
+  notes: UniProtKB reviewed E. coli K-12 HcaE entry.
+- reference: UniProtKB:Q47140
+  notes: UniProtKB reviewed E. coli K-12 HcaF entry.
+- reference: UniProtKB:P0ABW0
+  notes: UniProtKB reviewed E. coli K-12 HcaC entry.
+- reference: UniProtKB:P77650
+  notes: UniProtKB reviewed E. coli K-12 HcaD entry.
+- reference: PMID:9603882
+  notes: PubMed identifier for Díaz, Ferrández and García 1998, the Journal of Bacteriology
+    hca cluster characterization paper cited by GO:0009334.
+- reference: DOI:10.1128/JB.180.11.2915-2923.1998
+  notes: DOI for Díaz, Ferrández and García 1998, as reported by PubMed.
