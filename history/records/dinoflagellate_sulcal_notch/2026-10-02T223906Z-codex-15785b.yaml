@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_sulcal_notch.yaml
+  slug: dinoflagellate_sulcal_notch
+session:
+  id: 2026-10-02T223906Z-codex-15785b
+  timestamp: '2026-10-02T22:39:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1949
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1950
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1948
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed sulcal-notch PR review issues
+  details: 'Addressed PR #1948 review issues #1949 and #1950 for data/structures/other/dinoflagellate_sulcal_notch.yaml
+    by adding edge-level GO:0097684 and GO:0097614 evidence to the antapex and hypocone morphology
+    edges and recording a resolved boundary discussion that keeps the sulcal notch under GO:0097612
+    rather than GO:0097684 or GO:0097614.'
