@@ -15261,6 +15261,37 @@
       ]
     },
     {
+      "identifier": "GO:0097685",
+      "label": "dinoflagellate apical groove",
+      "neighbors": [
+        {
+          "identifier": "GO:0009532",
+          "label": "plastid stroma",
+          "cosine_similarity": 0.70892215
+        },
+        {
+          "identifier": "GO:0034060",
+          "label": "cyanelle stroma",
+          "cosine_similarity": 0.69842016
+        },
+        {
+          "identifier": "GO:0031978",
+          "label": "plastid thylakoid lumen",
+          "cosine_similarity": 0.6954277
+        },
+        {
+          "identifier": "GO:0020032",
+          "label": "basal ring of apical complex",
+          "cosine_similarity": 0.69139872
+        },
+        {
+          "identifier": "GO:0033114",
+          "label": "cyanelle thylakoid lumen",
+          "cosine_similarity": 0.69139684
+        }
+      ]
+    },
+    {
       "identifier": "GO:0120217",
       "label": "DNA gyrase complex",
       "neighbors": [

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_apical_groove.yaml
+  slug: dinoflagellate_apical_groove
+session:
+  id: 2026-10-02T155813Z-codex-581f1c
+  timestamp: '2026-10-02T15:58:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - examples
+  - evidence
+  - causal_graphs
+  - discussions
+  - generated_artifacts
+  summary: Add dinoflagellate apical groove record
+  details: Created a GO:0097685 dinoflagellate apical groove CellStructureMech record as an
+    OTHER/SUBCELLULAR_REGION surface-furrow structure with GO-backed cell-surface-furrow parentage,
+    dinoflagellate-epicone parthood, a broad apical-groove synonym, Dinophyceae and Margalefidinium
+    polykrikoides taxon evidence, a Margalefidinium polykrikoides canonical example, GO/PMID/DOI
+    evidence, a nonmechanistic apical-groove-to-epicone topology graph, generated embeddings/pages/docs,
+    and an open curation TODO for exact source-neutral apical-groove component groundings.
