@@ -1,0 +1,411 @@
+identifier: cellstructuremech:potabcd_spermidine_abc_transporter_complex
+label: PotABCD spermidine ABC transporter complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An Escherichia coli PotABCD ATP-binding cassette importer composed of
+  two PotA ATP-binding subunits, one PotB permease, one PotC permease, and one PotD
+  periplasmic substrate-binding protein that imports spermidine and can also import
+  putrescine.
+definition_source: ComplexPortal:CPX-4383
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T08:28:36Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T08:30:22Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added Complex Portal and GO synonymy, ABC transporter parentage, PotA,
+    PotB, PotC, and PotD component rows with E. coli K-12 reviewed UniProt examples,
+    ABC-type polyamine and putrescine transporter activities, a compact function graph,
+    CPX-4383 heteropentamer source composition, and a component-family grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: Spermidine ABC transporter complex
+  synonym_type: EXACT_SYNONYM
+  source: ComplexPortal:CPX-4383
+- synonym_text: Spermidine-preferential ABC transporter complex
+  synonym_type: EXACT_SYNONYM
+  source: ComplexPortal:CPX-4383
+- synonym_text: potABCD complex
+  synonym_type: EXACT_SYNONYM
+  source: ComplexPortal:CPX-4383
+parent_structures:
+- GO:0055052
+components:
+- component_id: pota_atp_binding_subunit
+  label: Spermidine/putrescine import ATP-binding protein PotA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - potA
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro cross-references are ABC-transporter ATPase domains or broader superfamilies
+    rather than an exact PotA source-neutral family.
+  role: Cytoplasmic nucleotide-binding subunit that dimerizes as two copies and hydrolyzes
+    ATP to power PotBC channel cycling.
+  stoichiometry: 2 copies in the E. coli K-12 Complex Portal CPX-4383 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P69874
+    protein_label: Spermidine/putrescine import ATP-binding protein PotA
+    gene_symbol: potA
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P69874
+      notes: Reviewed Swiss-Prot entry POTA_ECOLI is the E. coli K-12 PotA accession
+        and cross-references ComplexPortal:CPX-4383.
+  evidence:
+  - reference: ComplexPortal:CPX-4383
+    notes: Complex Portal CPX-4383 curates two P69874/PotA copies in the E. coli K-12
+      PotABCD spermidine ABC transporter complex.
+  - reference: UniProtKB:P69874
+    notes: UniProtKB P69874 is the reviewed E. coli K-12 entry for Spermidine/putrescine
+      import ATP-binding protein PotA.
+- component_id: potb_permease_subunit
+  label: Spermidine/putrescine transport system permease protein PotB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - potB
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but no InterPro,
+    Pfam, NCBIfam, or GO accession was verified as an exact PotB family grounding.
+  role: Inner-membrane permease subunit that pairs with PotC to form the polyamine
+    translocation channel.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-4383 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P0AFK4
+    protein_label: Spermidine/putrescine transport system permease protein PotB
+    gene_symbol: potB
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P0AFK4
+      notes: Reviewed Swiss-Prot entry POTB_ECOLI is the E. coli K-12 PotB accession
+        and cross-references ComplexPortal:CPX-4383.
+  evidence:
+  - reference: ComplexPortal:CPX-4383
+    notes: Complex Portal CPX-4383 curates one P0AFK4/PotB copy in the E. coli K-12
+      PotABCD spermidine ABC transporter complex.
+  - reference: UniProtKB:P0AFK4
+    notes: UniProtKB P0AFK4 is the reviewed E. coli K-12 entry for Spermidine/putrescine
+      transport system permease protein PotB.
+- component_id: potc_permease_subunit
+  label: Spermidine/putrescine transport system permease protein PotC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - potC
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but no InterPro,
+    Pfam, NCBIfam, or GO accession was verified as an exact PotC family grounding.
+  role: Inner-membrane permease subunit that pairs with PotB to form the polyamine
+    translocation channel.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-4383 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P0AFK6
+    protein_label: Spermidine/putrescine transport system permease protein PotC
+    gene_symbol: potC
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P0AFK6
+      notes: Reviewed Swiss-Prot entry POTC_ECOLI is the E. coli K-12 PotC accession
+        and cross-references ComplexPortal:CPX-4383.
+  evidence:
+  - reference: ComplexPortal:CPX-4383
+    notes: Complex Portal CPX-4383 curates one P0AFK6/PotC copy in the E. coli K-12
+      PotABCD spermidine ABC transporter complex.
+  - reference: UniProtKB:P0AFK6
+    notes: UniProtKB P0AFK6 is the reviewed E. coli K-12 entry for Spermidine/putrescine
+      transport system permease protein PotC.
+- component_id: potd_periplasmic_binding_protein
+  label: Spermidine/putrescine-binding periplasmic protein PotD
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - potD
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro hits are broader extracellular solute-binding protein entries rather
+    than an exact PotD family CURIE.
+  role: Periplasmic substrate-binding subunit that delivers bound spermidine or putrescine
+    to the PotBC permease.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-4383 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P0AFK9
+    protein_label: Spermidine/putrescine-binding periplasmic protein
+    gene_symbol: potD
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P0AFK9
+      notes: Reviewed Swiss-Prot entry POTD_ECOLI is the E. coli K-12 PotD accession
+        and cross-references ComplexPortal:CPX-4383.
+  evidence:
+  - reference: ComplexPortal:CPX-4383
+    notes: Complex Portal CPX-4383 curates one P0AFK9/PotD copy in the E. coli K-12
+      PotABCD spermidine ABC transporter complex.
+  - reference: UniProtKB:P0AFK9
+    notes: UniProtKB P0AFK9 is the reviewed E. coli K-12 entry for Spermidine/putrescine-binding
+      periplasmic protein.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Source strain for Complex Portal CPX-4383, which curates the heteropentameric
+    PotA2BCD spermidine ABC transporter composition.
+  reference: ComplexPortal:CPX-4383
+functions:
+- function_id: abc_type_polyamine_transport
+  label: ABC-type polyamine transporter activity
+  grounding: GO:0015417
+  description: The PotABCD importer couples PotA ATP hydrolysis to uptake of extracellular
+    polyamines through the PotB/PotC inner-membrane channel.
+  evidence:
+  - reference: GO:0015417
+    notes: GO:0015417 is the molecular-function term for ABC-type polyamine transporter
+      activity.
+  - reference: ComplexPortal:CPX-4383
+    notes: Complex Portal cross-references GO:0015417 for the E. coli K-12 PotABCD
+      complex.
+- function_id: abc_type_putrescine_transport
+  label: ABC-type putrescine transporter activity
+  grounding: GO:0015594
+  description: PotABCD can also import putrescine by an ATP-dependent ABC-transporter
+    reaction.
+  evidence:
+  - reference: GO:0015594
+    notes: GO:0015594 is the molecular-function term for ABC-type putrescine transporter
+      activity.
+  - reference: ComplexPortal:CPX-4383
+    notes: Complex Portal cross-references GO:0015594 for the E. coli K-12 PotABCD
+      complex.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '5'
+  context: E. coli K-12 PotA2BCD heteropentamer in ComplexPortal:CPX-4383
+  reference: ComplexPortal:CPX-4383
+evidence:
+- reference: ComplexPortal:CPX-4383
+  notes: Complex Portal entry for the E. coli K-12 Spermidine ABC transporter complex,
+    systematic name 2xpotA:potB:potC:potD.
+- reference: GO:0055052
+  notes: Gene Ontology cellular-component parent term for ABC transporter complexes
+    that contain a substrate-binding subunit.
+- reference: GO:0015417
+  notes: Gene Ontology molecular-function term for ABC-type polyamine transporter
+    activity.
+- reference: GO:0015594
+  notes: Gene Ontology molecular-function term for ABC-type putrescine transporter
+    activity.
+- reference: UniProtKB:P69874
+  notes: Reviewed E. coli K-12 PotA ATP-binding protein entry.
+- reference: UniProtKB:P0AFK4
+  notes: Reviewed E. coli K-12 PotB permease protein entry.
+- reference: UniProtKB:P0AFK6
+  notes: Reviewed E. coli K-12 PotC permease protein entry.
+- reference: UniProtKB:P0AFK9
+  notes: Reviewed E. coli K-12 PotD spermidine/putrescine-binding periplasmic protein
+    entry.
+- reference: PMID:18634750
+  notes: PubMed identifier for Moussatova et al. 2008, ATP-binding cassette transporters
+    in Escherichia coli.
+- reference: DOI:10.1016/j.bbamem.2008.06.009
+  notes: DOI for Moussatova et al. 2008, ATP-binding cassette transporters in Escherichia
+    coli.
+- reference: PMID:11421274
+  notes: PubMed identifier for Igarashi and Kashiwagi 2001, Polyamine uptake systems
+    in Escherichia coli.
+- reference: DOI:10.1016/s0923-2508(01)01198-6
+  notes: DOI for Igarashi and Kashiwagi 2001, Polyamine uptake systems in Escherichia
+    coli.
+causal_graphs:
+- graph_id: potabcd_polyamine_import
+  title: PotABCD imports polyamines through an ABC-transporter core
+  description: PotD, PotB, PotC, and two PotA copies form an E. coli substrate-binding-protein
+    ABC importer for spermidine and putrescine.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the five-subunit PotABCD boundary and whole-complex
+    polyamine import functions without resolving nucleotide-site state changes, substrate-binding
+    chemistry, or a transport-cycle conformational series.
+  nodes:
+  - node_id: potabcd
+    label: PotABCD spermidine ABC transporter complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:potabcd_spermidine_abc_transporter_complex
+  - node_id: pota
+    label: Spermidine/putrescine import ATP-binding protein PotA
+    node_type: GENE_OR_PROTEIN
+    component_ref: pota_atp_binding_subunit
+  - node_id: potb
+    label: Spermidine/putrescine transport system permease protein PotB
+    node_type: GENE_OR_PROTEIN
+    component_ref: potb_permease_subunit
+  - node_id: potc
+    label: Spermidine/putrescine transport system permease protein PotC
+    node_type: GENE_OR_PROTEIN
+    component_ref: potc_permease_subunit
+  - node_id: potd
+    label: Spermidine/putrescine-binding periplasmic protein PotD
+    node_type: GENE_OR_PROTEIN
+    component_ref: potd_periplasmic_binding_protein
+  - node_id: polyamine_transport
+    label: ABC-type polyamine transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0015417
+  - node_id: putrescine_transport
+    label: ABC-type putrescine transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0015594
+  - node_id: periplasmic_polyamine
+    label: periplasmic polyamine
+    node_type: CHEMICAL
+  - node_id: cytoplasmic_polyamine
+    label: cytoplasmic polyamine
+    node_type: CHEMICAL
+  edges:
+  - subject: potd
+    predicate: delivers substrate to
+    object: potb
+    description: PotD is the substrate-binding protein that hands polyamines to the
+      PotB/PotC permease core.
+    evidence:
+    - reference: ComplexPortal:CPX-4383
+      notes: CPX-4383 curates PotD, PotB, and PotC as participants in the E. coli
+        K-12 spermidine ABC transporter complex.
+  - subject: potd
+    predicate: delivers substrate to
+    object: potc
+    description: PotD substrate loading connects the soluble periplasmic binding protein
+      to the PotBC membrane channel.
+    evidence:
+    - reference: ComplexPortal:CPX-4383
+      notes: CPX-4383 curates PotD, PotB, and PotC as participants in the E. coli
+        K-12 spermidine ABC transporter complex.
+  - subject: pota
+    predicate: powers
+    object: polyamine_transport
+    description: The two PotA nucleotide-binding subunits provide the ATPase activity
+      that powers ABC-type polyamine uptake.
+    evidence:
+    - reference: ComplexPortal:CPX-4383
+      notes: CPX-4383 curates PotA as two copies in a complex annotated with GO:0015417.
+  - subject: potb
+    predicate: forms channel with
+    object: potc
+    description: PotB and PotC are the two single-copy inner-membrane permease subunits
+      in the PotABCD heteropentamer.
+    evidence:
+    - reference: ComplexPortal:CPX-4383
+      notes: CPX-4383 curates PotB and PotC as one copy each in the E. coli K-12 spermidine
+        ABC transporter complex.
+  - subject: potabcd
+    predicate: enables
+    object: polyamine_transport
+    description: The assembled PotABCD heteropentamer imports polyamines by an ABC-transporter
+      mechanism.
+    evidence:
+    - reference: ComplexPortal:CPX-4383
+      notes: Complex Portal cross-references GO:0015417 for the E. coli K-12 PotABCD
+        complex.
+  - subject: potabcd
+    predicate: enables
+    object: putrescine_transport
+    description: The PotABCD complex can catalyze ATP-dependent putrescine import
+      in addition to spermidine import.
+    evidence:
+    - reference: ComplexPortal:CPX-4383
+      notes: Complex Portal cross-references GO:0015594 for the E. coli K-12 PotABCD
+        complex.
+  - subject: polyamine_transport
+    predicate: moves
+    object: periplasmic_polyamine
+    description: ABC-type polyamine transporter activity moves external or periplasmic
+      polyamine substrate toward the cytoplasm.
+    evidence:
+    - reference: GO:0015417
+      notes: GO:0015417 defines ATP-dependent ABC-type polyamine import from outside
+        to inside.
+  - subject: polyamine_transport
+    predicate: targets
+    object: cytoplasmic_polyamine
+    description: PotABCD imports its polyamine substrates into the cell interior.
+    evidence:
+    - reference: GO:0015417
+      notes: GO:0015417 states the outside-to-inside polyamine ABC-transporter reaction.
+discussions:
+- discussion_id: resolve_potabcd_component_family_groundings
+  prompt: Resolve exact source-neutral protein-family groundings for PotA, PotB, PotC,
+    and PotD before replacing their reviewed-label-only component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#pota_atp_binding_subunit
+  - components#potb_permease_subunit
+  - components#potc_permease_subunit
+  - components#potd_periplasmic_binding_protein
+  rationale: ComplexPortal:CPX-4383 and the reviewed E. coli K-12 UniProt records
+    exactly identify the four PotABCD proteins, but no InterPro, Pfam, NCBIfam, or
+    GO accession was verified as an exact source-neutral family for each named constituent.
+  evidence:
+  - reference: ComplexPortal:CPX-4383
+    notes: CPX-4383 curates the E. coli K-12 PotA, PotB, PotC, and PotD participants.
+  posed_by: codex
+  posed_date: '2026-10-02'
+complex_compositions:
+- composition_id: complex_portal_cpx_4383
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-4383
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-4383
+  complex_label: Spermidine ABC transporter complex
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  assembly: Heteropentamer
+  evidence_code: ECO:0005547
+  participants:
+  - participant_id: UniProtKB:P69874
+    label: Spermidine/putrescine import ATP-binding protein PotA
+    participant_type: protein
+    gene_symbol: potA
+    stoichiometry: '2'
+    source_interactor_id: EBI-21458960
+  - participant_id: UniProtKB:P0AFK4
+    label: Spermidine/putrescine transport system permease protein PotB
+    participant_type: protein
+    gene_symbol: potB
+    stoichiometry: '1'
+    source_interactor_id: EBI-21458961
+  - participant_id: UniProtKB:P0AFK6
+    label: Spermidine/putrescine transport system permease protein PotC
+    participant_type: protein
+    gene_symbol: potC
+    stoichiometry: '1'
+    source_interactor_id: EBI-21458962
+  - participant_id: UniProtKB:P0AFK9
+    label: Spermidine/putrescine-binding periplasmic protein
+    participant_type: protein
+    gene_symbol: potD
+    stoichiometry: '1'
+    source_interactor_id: EBI-21458963
+  retrieved_on: '2026-10-02'
+  notes: 'Curator-scoped import: E. coli K-12 PotABCD spermidine ABC transporter source
+    composition for this record. Source evidence: inferred by curator. The accession
+    was resolved through the Complex Portal accession endpoint; no equivalence xref
+    was inferred.'

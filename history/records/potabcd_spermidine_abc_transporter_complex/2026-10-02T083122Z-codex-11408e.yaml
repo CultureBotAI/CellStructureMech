@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/potabcd_spermidine_abc_transporter_complex.yaml
+  slug: potabcd_spermidine_abc_transporter_complex
+session:
+  id: 2026-10-02T083122Z-codex-11408e
+  timestamp: '2026-10-02T08:31:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - other
+  summary: Add PotABCD spermidine ABC transporter complex record
+  details: Added an evidence-backed cellstructuremech:potabcd_spermidine_abc_transporter_complex
+    record with reviewed-label-only PotA, PotB, PotC, and PotD components, E. coli K-12 reviewed
+    UniProt examples, exact Complex Portal CPX-4383 heteropentamer composition, ABC-type polyamine
+    and putrescine transporter activities, DOI/PMID/GO/UniProt evidence, and a component-family
+    grounding TODO.
