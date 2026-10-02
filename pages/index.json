@@ -5103,6 +5103,15 @@
   "definition": "A hexameric protein complex required for the initiation and regulation of DNA replication."
  },
  {
+  "identifier": "cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex",
+  "label": "MdtABC-TolC multidrug efflux transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mdtabc_tolc_multidrug_efflux_transport_complex.html",
+  "definition": "An Escherichia coli Resistance-Nodulation-Division-family cell-envelope efflux pump complex composed of MdtA, MdtB, MdtC, and TolC subunits that exports novobiocin, bile salts, quinolones, fosfomycin, detergents, myricetin, zinc, and other substrates from the cell."
+ },
+ {
   "identifier": "GO:1990203",
   "label": "MdtBC Complex",
   "category": "OTHER",
