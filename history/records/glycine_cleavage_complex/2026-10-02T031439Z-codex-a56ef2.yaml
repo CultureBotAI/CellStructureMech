@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/glycine_cleavage_complex.yaml
+  slug: glycine_cleavage_complex
+session:
+  id: 2026-10-02T031439Z-codex-a56ef2
+  timestamp: '2026-10-02T03:14:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add glycine cleavage complex record
+  details: Created a GO:0005960-backed glycine cleavage complex record with GO exact synonymy,
+    oxidoreductase- and transferase-complex parentage, exact InterPro-grounded P/H/T constituents,
+    a reviewed-label-only L constituent with a grounding TODO, reviewed E. coli K-12 UniProt
+    examples, glycine dehydrogenase activity, and DOI/PMID evidence.
