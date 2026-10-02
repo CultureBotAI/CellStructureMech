@@ -33,9 +33,8 @@ the initial branch push.
 - Verified the current direct `GO:1990905` `is a` parent as `GO:0120025`
   `plasma membrane bounded cell projection`.
 - Verified QuickGO lists `GO:0110165` cellular anatomical structure,
-  `GO:0120025` plasma membrane bounded cell projection, `GO:0032991` protein-
-  containing complex, and `GO:0005575` cellular component in the `GO:1990905`
-  ancestor closure.
+  `GO:0120025` plasma membrane bounded cell projection, and `GO:0005575`
+  cellular component in the `GO:1990905` ancestor closure.
 - Verified `GO:1990905` records Lee and Kugrens 1992 as an authority through
   `PMID:1480107`.
 - Verified `PMID:1480107`, `PMCID:PMC372886`, and
