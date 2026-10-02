@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_cingulum.yaml
+  slug: dinoflagellate_cingulum
+session:
+  id: 2026-10-02T163647Z-codex-6256c6
+  timestamp: '2026-10-02T16:36:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - evidence
+  - discussions
+  - generated_artifacts
+  summary: Add dinoflagellate cingulum record
+  details: Created a GO:0097611 dinoflagellate cingulum CellStructureMech record as an OTHER/SUBCELLULAR_REGION
+    cell-surface-furrow structure with GO-backed cingulum synonymy, GO cell-surface-furrow
+    parentage, Dinophyceae taxon evidence, PMID/DOI evidence for the Taylor 1980 dinoflagellate-evolution
+    review cited by GO, generated embeddings/pages/docs, and an open curation TODO for exact
+    source-neutral cingulum component groundings.
