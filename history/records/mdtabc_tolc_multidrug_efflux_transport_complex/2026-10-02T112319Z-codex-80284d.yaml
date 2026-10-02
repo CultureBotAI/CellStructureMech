@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mdtabc_tolc_multidrug_efflux_transport_complex.yaml
+  slug: mdtabc_tolc_multidrug_efflux_transport_complex
+session:
+  id: 2026-10-02T112319Z-codex-80284d
+  timestamp: '2026-10-02T11:23:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added MdtABC-TolC multidrug efflux transport complex record
+  details: Created a ComplexPortal:CPX-2119-backed MdtABC-TolC multidrug efflux transport
+    complex record with GO:1990281 efflux-pump parentage, exact InterPro-grounded MdtA, MdtB,
+    MdtC, and TolC constituents, reviewed E. coli K-12 UniProt examples, a compact xenobiotic
+    export graph, and the exact CPX-2119 taxon-specific source composition.
