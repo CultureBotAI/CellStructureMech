@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/narghi_complex.yaml
+  slug: narghi_complex
+session:
+  id: 2026-10-02T042057Z-codex-34a26c
+  timestamp: '2026-10-02T04:20:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add NarGHI complex record
+  details: Added a GO:0044799-backed NarGHI complex record with GO synonymy and nitrate-reductase
+    parentage, InterPro/NCBIfam-grounded NarG/NarH/NarI constituent components, reviewed E.
+    coli K-12 UniProt examples, quinol:nitrate oxidoreductase activity, CPX-1974 heterohexamer
+    composition with cofactors, a nonmechanistic electron-transfer function graph, and regenerated
+    embedding/site/doc artifacts.
