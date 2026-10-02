@@ -5345,6 +5345,11 @@
       "label": "dimethyl sulfoxide reductase complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.73235856
+        },
+        {
           "identifier": "GO:0044674",
           "label": "methyl coenzyme M reductase complex",
           "cosine_similarity": 0.73080816
@@ -5363,11 +5368,37 @@
           "identifier": "GO:0045283",
           "label": "fumarate reductase complex",
           "cosine_similarity": 0.71694239
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+      "label": "formate dehydrogenase N complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0045273",
+          "label": "respiratory chain complex II (succinate dehydrogenase)",
+          "cosine_similarity": 0.79763562
         },
         {
-          "identifier": "GO:1990065",
-          "label": "Dxr protein complex",
-          "cosine_similarity": 0.71315812
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.76573892
+        },
+        {
+          "identifier": "GO:0045283",
+          "label": "fumarate reductase complex",
+          "cosine_similarity": 0.7649414
+        },
+        {
+          "identifier": "GO:0044799",
+          "label": "NarGHI complex",
+          "cosine_similarity": 0.76351251
+        },
+        {
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.75717558
         }
       ]
     },
@@ -5375,6 +5406,11 @@
       "identifier": "GO:0045283",
       "label": "fumarate reductase complex",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.7649414
+        },
         {
           "identifier": "GO:1990202",
           "label": "FMN reductase complex",
@@ -5394,11 +5430,6 @@
           "identifier": "GO:0045273",
           "label": "respiratory chain complex II (succinate dehydrogenase)",
           "cosine_similarity": 0.70869109
-        },
-        {
-          "identifier": "GO:0160292",
-          "label": "sodium-translocating NADH:quinone reductase complex",
-          "cosine_similarity": 0.69520164
         }
       ]
     },
@@ -5505,6 +5536,11 @@
           "cosine_similarity": 0.77405991
         },
         {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.76351251
+        },
+        {
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
           "cosine_similarity": 0.7538859
@@ -5518,11 +5554,6 @@
           "identifier": "GO:0045283",
           "label": "fumarate reductase complex",
           "cosine_similarity": 0.71355928
-        },
-        {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.7125561
         }
       ]
     },
@@ -5534,6 +5565,11 @@
           "identifier": "GO:0044799",
           "label": "NarGHI complex",
           "cosine_similarity": 0.77405991
+        },
+        {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.74818638
         },
         {
           "identifier": "GO:1990202",
@@ -5549,11 +5585,6 @@
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.67660632
-        },
-        {
-          "identifier": "GO:0031415",
-          "label": "NatA complex",
-          "cosine_similarity": 0.65079547
         }
       ]
     },
@@ -5799,9 +5830,9 @@
           "cosine_similarity": 0.76854425
         },
         {
-          "identifier": "GO:1990201",
-          "label": "alkanesulfonate monooxygenase complex",
-          "cosine_similarity": 0.74319398
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.76573892
         }
       ]
     },
@@ -5813,6 +5844,11 @@
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.83130559
+        },
+        {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.79763562
         },
         {
           "identifier": "GO:0045275",
@@ -5828,11 +5864,6 @@
           "identifier": "GO:0045277",
           "label": "respiratory chain complex IV",
           "cosine_similarity": 0.70999741
-        },
-        {
-          "identifier": "GO:0045283",
-          "label": "fumarate reductase complex",
-          "cosine_similarity": 0.70869109
         }
       ]
     },
@@ -5923,9 +5954,9 @@
           "cosine_similarity": 0.70257918
         },
         {
-          "identifier": "GO:0016610",
-          "label": "nitrogenase complex",
-          "cosine_similarity": 0.69987486
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.70202637
         }
       ]
     },
@@ -13410,6 +13441,11 @@
           "cosine_similarity": 0.75985725
         },
         {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.75717558
+        },
+        {
           "identifier": "GO:0062077",
           "label": "phenylacetyl-CoA 1,2-epoxidase complex",
           "cosine_similarity": 0.73166578
@@ -13423,11 +13459,6 @@
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.71472433
-        },
-        {
-          "identifier": "GO:1990201",
-          "label": "alkanesulfonate monooxygenase complex",
-          "cosine_similarity": 0.70099055
         }
       ]
     },
@@ -16339,9 +16370,9 @@
           "cosine_similarity": 0.67570642
         },
         {
-          "identifier": "GO:1990065",
-          "label": "Dxr protein complex",
-          "cosine_similarity": 0.66238081
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.66586592
         }
       ]
     },
@@ -16701,6 +16732,11 @@
           "cosine_similarity": 0.69416357
         },
         {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.67107392
+        },
+        {
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.66803464
@@ -16709,11 +16745,6 @@
           "identifier": "GO:0009342",
           "label": "glutamate synthase complex (NADPH)",
           "cosine_similarity": 0.66566434
-        },
-        {
-          "identifier": "GO:1990201",
-          "label": "alkanesulfonate monooxygenase complex",
-          "cosine_similarity": 0.66166872
         }
       ]
     },
@@ -19176,6 +19207,11 @@
           "cosine_similarity": 0.75985725
         },
         {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.70754196
+        },
+        {
           "identifier": "GO:1990065",
           "label": "Dxr protein complex",
           "cosine_similarity": 0.68858729
@@ -19189,11 +19225,6 @@
           "identifier": "GO:1990201",
           "label": "alkanesulfonate monooxygenase complex",
           "cosine_similarity": 0.67557291
-        },
-        {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.65708807
         }
       ]
     },
@@ -20090,9 +20121,9 @@
           "cosine_similarity": 0.69169481
         },
         {
-          "identifier": "GO:0009334",
-          "label": "3-phenylpropionate dioxygenase complex",
-          "cosine_similarity": 0.68760932
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.68811801
         }
       ]
     },

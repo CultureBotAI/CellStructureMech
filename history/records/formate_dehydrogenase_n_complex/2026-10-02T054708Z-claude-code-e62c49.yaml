@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/formate_dehydrogenase_n_complex.yaml
+  slug: formate_dehydrogenase_n_complex
+session:
+  id: 2026-10-02T054708Z-claude-code-e62c49
+  timestamp: '2026-10-02T05:47:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - energy_complex
+  summary: Add formate dehydrogenase N complex record
+  details: Added an evidence-backed cellstructuremech:formate_dehydrogenase_n_complex formate
+    dehydrogenase N record with reviewed-label-only FdnG, FdnH, and FdnI components, E. coli
+    K-12 reviewed UniProt examples, Complex Portal CPX-1975 heterononamer composition, GO:0036397
+    activity linkage, and supporting PDB/PubMed/DOI evidence.
