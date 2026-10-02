@@ -1,0 +1,334 @@
+identifier: GO:0062077
+label: phenylacetyl-CoA 1,2-epoxidase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A PaaA/PaaB/PaaC/PaaE multicomponent monooxygenase complex that catalyzes
+  the NADPH- and oxygen-dependent epoxidation of phenylacetyl-CoA to 2-(1,2-epoxy-1,2-dihydrophenyl)acetyl-CoA.
+definition_source: GO:0062077
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T02:01:07Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T02:02:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and oxidoreductase-complex parentage, exact InterPro-grounded
+    PaaA/PaaB/PaaC/PaaE constituents with reviewed E. coli K-12 UniProt examples,
+    an E. coli K-12 canonical example, phenylacetyl-CoA 1,2-epoxidase activity, and
+    the PaaD exclusion boundary discussion.
+  llm_assisted: true
+- timestamp: '2026-10-02T02:03:15Z'
+  curator: complex_portal
+  action: ADD_EVIDENCE
+  changes: Added taxon-specific composition ComplexPortal:CPX-2844 (7 participants);
+    exact accession and taxon verified at import.
+- timestamp: '2026-10-02T02:04:12Z'
+  curator: codex
+  action: ADD_EVIDENCE
+  changes: Added ComplexPortal:CPX-2844 evidence to the PaaA, PaaB, PaaC and PaaE
+    stoichiometry claims and to the record-level evidence list.
+  llm_assisted: true
+synonyms:
+- synonym_text: paaABCE complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0062077
+parent_structures:
+- GO:1990204
+components:
+- component_id: paaa_epoxidase_alpha
+  label: 1,2-phenylacetyl-CoA epoxidase, subunit A
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011881
+  gene_symbols:
+  - paaA
+  stoichiometry: 2 copies in Escherichia coli K-12 Complex Portal CPX-2844
+  essentiality: UNKNOWN
+  role: Catalytic alpha subunit of the PaaAC hydroxylase core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P76077
+    protein_label: 1,2-phenylacetyl-CoA epoxidase, subunit A
+    gene_symbol: paaA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 paaA accession annotated to the phenylacetyl-CoA 1,2-epoxidase
+      complex.
+    evidence:
+    - reference: UniProtKB:P76077
+      notes: UniProtKB P76077 is the reviewed E. coli K-12 entry for 1,2-phenylacetyl-CoA
+        epoxidase subunit A.
+    - reference: PMID:21247899
+      notes: Grishin et al. 2011 reconstituted activity with E. coli PaaA, PaaB, PaaC
+        and PaaE and solved PaaAC crystal structures.
+  evidence:
+  - reference: GO:0062077
+    notes: QuickGO annotates E. coli K-12 PaaA as part of the phenylacetyl-CoA 1,2-epoxidase
+      complex.
+  - reference: InterPro:IPR011881
+    notes: InterPro IPR011881 is the exact 1,2-phenylacetyl-CoA epoxidase subunit
+      A family entry.
+  - reference: PMID:21247899
+    notes: Grishin et al. 2011 showed that PaaA is necessary for in vitro PA-CoA monooxygenase
+      catalysis and forms the catalytic subunit of the PaaAC hydroxylase core.
+  - reference: ComplexPortal:CPX-2844
+    notes: Complex Portal CPX-2844 asserts two PaaA copies in the E. coli K-12 PaaABCE
+      phenylacetyl-CoA monooxygenase complex.
+- component_id: paab_epoxidase_effector
+  label: 1,2-phenylacetyl-CoA epoxidase, subunit B
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR009359
+  gene_symbols:
+  - paaB
+  stoichiometry: 2 copies in Escherichia coli K-12 Complex Portal CPX-2844
+  essentiality: UNKNOWN
+  role: Small constituent required for PaaABCE epoxidase catalysis, likely acting
+    as a regulatory or effector subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P76078
+    protein_label: 1,2-phenylacetyl-CoA epoxidase, subunit B
+    gene_symbol: paaB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 paaB accession annotated to the phenylacetyl-CoA 1,2-epoxidase
+      complex.
+    evidence:
+    - reference: UniProtKB:P76078
+      notes: UniProtKB P76078 is the reviewed E. coli K-12 entry for 1,2-phenylacetyl-CoA
+        epoxidase subunit B.
+    - reference: PMID:21247899
+      notes: Grishin et al. 2011 showed that PaaB is one of the subunits necessary
+        for in vitro PaaABCE epoxidase catalysis.
+  evidence:
+  - reference: GO:0062077
+    notes: QuickGO annotates E. coli K-12 PaaB as part of the phenylacetyl-CoA 1,2-epoxidase
+      complex.
+  - reference: InterPro:IPR009359
+    notes: InterPro IPR009359 is the 1,2-phenylacetyl-CoA epoxidase subunit B family
+      entry.
+  - reference: PMID:21247899
+    notes: Grishin et al. 2011 found PaaB necessary for in vitro activity and discussed
+      a possible regulatory role in the PaaABCE complex.
+  - reference: ComplexPortal:CPX-2844
+    notes: Complex Portal CPX-2844 asserts two PaaB copies in the E. coli K-12 PaaABCE
+      phenylacetyl-CoA monooxygenase complex.
+- component_id: paac_epoxidase_beta
+  label: 1,2-phenylacetyl-CoA epoxidase, subunit C
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011882
+  gene_symbols:
+  - paaC
+  stoichiometry: 2 copies in Escherichia coli K-12 Complex Portal CPX-2844
+  essentiality: UNKNOWN
+  role: Structural beta subunit of the PaaAC hydroxylase core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P76079
+    protein_label: 1,2-phenylacetyl-CoA epoxidase, subunit C
+    gene_symbol: paaC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 paaC accession annotated to the phenylacetyl-CoA 1,2-epoxidase
+      complex.
+    evidence:
+    - reference: UniProtKB:P76079
+      notes: UniProtKB P76079 is the reviewed E. coli K-12 entry for 1,2-phenylacetyl-CoA
+        epoxidase subunit C.
+    - reference: PMID:21247899
+      notes: Grishin et al. 2011 showed that PaaC forms the beta subunit of the crystallized
+        PaaAC hydroxylase core.
+  evidence:
+  - reference: GO:0062077
+    notes: QuickGO annotates E. coli K-12 PaaC as part of the phenylacetyl-CoA 1,2-epoxidase
+      complex.
+  - reference: InterPro:IPR011882
+    notes: InterPro IPR011882 is the exact 1,2-phenylacetyl-CoA epoxidase subunit
+      C family entry.
+  - reference: PMID:21247899
+    notes: Grishin et al. 2011 showed that PaaC is necessary for in vitro PA-CoA monooxygenase
+      catalysis and acts as the structural beta subunit of the PaaAC core.
+  - reference: ComplexPortal:CPX-2844
+    notes: Complex Portal CPX-2844 asserts two PaaC copies in the E. coli K-12 PaaABCE
+      phenylacetyl-CoA monooxygenase complex.
+- component_id: paae_epoxidase_reductase
+  label: 1,2-phenylacetyl-CoA epoxidase, subunit E
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011884
+  gene_symbols:
+  - paaE
+  stoichiometry: 1 copy in Escherichia coli K-12 Complex Portal CPX-2844
+  essentiality: UNKNOWN
+  role: NADPH/FAD reductase constituent that supplies electrons to the PaaAC hydroxylase
+    core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P76081
+    protein_label: 1,2-phenylacetyl-CoA epoxidase, subunit E
+    gene_symbol: paaE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 paaE accession annotated to the phenylacetyl-CoA 1,2-epoxidase
+      complex.
+    evidence:
+    - reference: UniProtKB:P76081
+      notes: UniProtKB P76081 is the reviewed E. coli K-12 entry for 1,2-phenylacetyl-CoA
+        epoxidase subunit E.
+    - reference: PMID:21247899
+      notes: Grishin et al. 2011 experimentally showed that E. coli PaaE is the PA-CoA
+        oxygenase reductase subunit.
+  evidence:
+  - reference: GO:0062077
+    notes: QuickGO annotates E. coli K-12 PaaE as part of the phenylacetyl-CoA 1,2-epoxidase
+      complex.
+  - reference: InterPro:IPR011884
+    notes: InterPro IPR011884 is the 1,2-phenylacetyl-CoA epoxidase subunit E family
+      entry.
+  - reference: PMID:21247899
+    notes: Grishin et al. 2011 found PaaE necessary for PaaABCE activity and showed
+      experimentally that PaaE is a reductase.
+  - reference: ComplexPortal:CPX-2844
+    notes: Complex Portal CPX-2844 asserts one PaaE copy in the E. coli K-12 PaaABCE
+      phenylacetyl-CoA monooxygenase complex.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: E. coli K-12 source of the PaaA/PaaB/PaaC/PaaE in vitro reconstitution, PaaAC
+    structural study, UniProtKB examples, and Complex Portal CPX-2844 curation.
+  reference: PMID:21247899
+functions:
+- function_id: phenylacetyl_coa_1_2_epoxidase_activity
+  label: phenylacetyl-CoA 1,2-epoxidase activity
+  grounding: GO:0097266
+  description: The PaaABCE complex catalyzes NADPH-dependent epoxidation of phenylacetyl-CoA.
+  evidence:
+  - reference: GO:0062077
+    notes: GO:0062077 defines the complex by its ability to catalyze phenylacetyl-CoA
+      1,2-epoxidase activity.
+  - reference: GO:0097266
+    notes: GO:0097266 is the molecular-function term for phenylacetyl-CoA 1,2-epoxidase
+      activity.
+  - reference: PMID:21247899
+    notes: Grishin et al. 2011 reconstituted the E. coli PaaABCE monooxygenase activity
+      in vitro.
+evidence:
+- reference: GO:0062077
+  notes: Gene Ontology cellular-component term for the phenylacetyl-CoA 1,2-epoxidase
+    complex and its paaABCE complex synonym.
+- reference: GO:1990204
+  notes: QuickGO reports GO:0062077 as an is-a descendant of GO:1990204 oxidoreductase
+    complex.
+- reference: GO:0097266
+  notes: Gene Ontology molecular-function term for phenylacetyl-CoA 1,2-epoxidase
+    activity.
+- reference: InterPro:IPR011881
+  notes: InterPro family entry for PaaA epoxidase subunits.
+- reference: InterPro:IPR009359
+  notes: InterPro family entry for PaaB epoxidase subunits.
+- reference: InterPro:IPR011882
+  notes: InterPro family entry for PaaC epoxidase subunits.
+- reference: InterPro:IPR011884
+  notes: InterPro family entry for PaaE epoxidase subunits.
+- reference: UniProtKB:P76077
+  notes: UniProtKB reviewed E. coli K-12 PaaA entry.
+- reference: UniProtKB:P76078
+  notes: UniProtKB reviewed E. coli K-12 PaaB entry.
+- reference: UniProtKB:P76079
+  notes: UniProtKB reviewed E. coli K-12 PaaC entry.
+- reference: UniProtKB:P76081
+  notes: UniProtKB reviewed E. coli K-12 PaaE entry.
+- reference: PMID:21247899
+  notes: PubMed identifier for Grishin et al. 2011, the Journal of Biological Chemistry
+    E. coli PaaABCE structural and functional study cited by GO:0062077.
+- reference: DOI:10.1074/jbc.M110.194423
+  notes: DOI for Grishin et al. 2011, as reported by PubMed.
+- reference: ComplexPortal:CPX-2844
+  notes: Complex Portal entry for the E. coli K-12 PaaABCE phenylacetyl-CoA monooxygenase
+    composition.
+discussions:
+- discussion_id: exclude_paad_from_paabce
+  prompt: Should PaaD be modeled as a constituent of the phenylacetyl-CoA 1,2-epoxidase
+    complex?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: No. GO:0062077 uses the paaABCE complex synonym and QuickGO annotates
+    PaaA, PaaB, PaaC and PaaE, but not PaaD, to the complex. Grishin et al. 2011 found
+    that PaaD did not form a stable complex with the other proteins in the tested
+    pull-downs and was not necessary for in vitro PaaABCE catalysis, while noting
+    that it may assist maturation of the monooxygenase in vivo.
+  evidence:
+  - reference: GO:0062077
+    notes: GO:0062077 names the PaaABCE complex without PaaD.
+  - reference: PMID:21247899
+    notes: Grishin et al. 2011 tested PaaD in co-purification, pull-down, and activity
+      assays and discussed it as a possible maturation factor rather than a direct
+      catalytic constituent.
+  posed_by: codex
+  posed_date: '2026-10-01'
+complex_compositions:
+- composition_id: complex_portal_cpx_2844
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-2844
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-2844
+  complex_label: paaABCE phenylacetyl-CoA monooxygenase complex
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  assembly: Heterooctamer
+  evidence_code: ECO:0005547
+  participants:
+  - participant_id: CHEBI:49601
+    label: Fe2S2 iron-sulfur cluster
+    participant_type: small molecule
+    gene_symbol: fe2s2 iron-sulfur cluster
+    stoichiometry: '1'
+    source_interactor_id: EBI-20710094
+  - participant_id: UniProtKB:P76077
+    label: 1,2-phenylacetyl-CoA epoxidase, subunit A
+    participant_type: protein
+    gene_symbol: paaA
+    stoichiometry: '2'
+    source_interactor_id: EBI-9026829
+  - participant_id: UniProtKB:P76078
+    label: 1,2-phenylacetyl-CoA epoxidase, subunit B
+    participant_type: protein
+    gene_symbol: paaB
+    stoichiometry: '2'
+    source_interactor_id: EBI-20638103
+  - participant_id: UniProtKB:P76081
+    label: 1,2-phenylacetyl-CoA epoxidase, subunit E
+    participant_type: protein
+    gene_symbol: paaE
+    stoichiometry: '1'
+    source_interactor_id: EBI-20638104
+  - participant_id: UniProtKB:P76079
+    label: 1,2-phenylacetyl-CoA epoxidase, subunit C
+    participant_type: protein
+    gene_symbol: paaC
+    stoichiometry: '2'
+    source_interactor_id: EBI-9026828
+  - participant_id: CHEBI:24875
+    label: iron cation
+    participant_type: small molecule
+    gene_symbol: iron cation
+    stoichiometry: '4'
+    source_interactor_id: EBI-20710086
+  - participant_id: CHEBI:57692
+    label: FAD(3-)
+    participant_type: small molecule
+    gene_symbol: fad(3-)
+    source_interactor_id: EBI-20710102
+  retrieved_on: '2026-10-01'
+  notes: 'Curator-scoped import: E. coli K-12 PaaABCE phenylacetyl-CoA 1,2-epoxidase
+    composition, equivalent to the taxon-specific assembly characterized by Grishin
+    et al. 2011. Source evidence: inferred by curator. The accession was resolved
+    through the Complex Portal accession endpoint; no equivalence xref was inferred.'
