@@ -17404,6 +17404,11 @@
       "label": "lipopolysaccharide transport system",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:mlafedb_lipid_transport_complex",
+          "label": "MlaFEDB lipid transport complex",
+          "cosine_similarity": 0.75906894
+        },
+        {
           "identifier": "GO:0031317",
           "label": "tripartite ATP-independent periplasmic transporter complex",
           "cosine_similarity": 0.75521267
@@ -17422,11 +17427,6 @@
           "identifier": "GO:1990199",
           "label": "MsbA transporter complex",
           "cosine_similarity": 0.70819008
-        },
-        {
-          "identifier": "GO:1990203",
-          "label": "MdtBC Complex",
-          "cosine_similarity": 0.70620115
         }
       ]
     },
@@ -17954,6 +17954,37 @@
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.80525848
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:mlafedb_lipid_transport_complex",
+      "label": "MlaFEDB lipid transport complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0062051",
+          "label": "lipopolysaccharide transport system",
+          "cosine_similarity": 0.75906894
+        },
+        {
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.69155851
+        },
+        {
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.68223766
+        },
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.67942997
+        },
+        {
+          "identifier": "cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex",
+          "label": "MdtABC-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.67925681
         }
       ]
     },
