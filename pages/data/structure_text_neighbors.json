@@ -6631,14 +6631,14 @@
           "cosine_similarity": 0.6304028
         },
         {
+          "identifier": "GO:0097611",
+          "label": "dinoflagellate cingulum",
+          "cosine_similarity": 0.62986643
+        },
+        {
           "identifier": "GO:0033114",
           "label": "cyanelle thylakoid lumen",
           "cosine_similarity": 0.62870018
-        },
-        {
-          "identifier": "cellstructuremech:r_body",
-          "label": "R-body",
-          "cosine_similarity": 0.62735502
         }
       ]
     },
@@ -15265,6 +15265,11 @@
       "label": "dinoflagellate apical groove",
       "neighbors": [
         {
+          "identifier": "GO:0097611",
+          "label": "dinoflagellate cingulum",
+          "cosine_similarity": 0.90864046
+        },
+        {
           "identifier": "GO:0009532",
           "label": "plastid stroma",
           "cosine_similarity": 0.70892215
@@ -15283,11 +15288,37 @@
           "identifier": "GO:0020032",
           "label": "basal ring of apical complex",
           "cosine_similarity": 0.69139872
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097611",
+      "label": "dinoflagellate cingulum",
+      "neighbors": [
+        {
+          "identifier": "GO:0097685",
+          "label": "dinoflagellate apical groove",
+          "cosine_similarity": 0.90864046
         },
         {
-          "identifier": "GO:0033114",
-          "label": "cyanelle thylakoid lumen",
-          "cosine_similarity": 0.69139684
+          "identifier": "GO:0005641",
+          "label": "nuclear envelope lumen",
+          "cosine_similarity": 0.73119312
+        },
+        {
+          "identifier": "GO:0009532",
+          "label": "plastid stroma",
+          "cosine_similarity": 0.72884142
+        },
+        {
+          "identifier": "GO:0034591",
+          "label": "rhoptry lumen",
+          "cosine_similarity": 0.72481948
+        },
+        {
+          "identifier": "GO:0034060",
+          "label": "cyanelle stroma",
+          "cosine_similarity": 0.7243315
         }
       ]
     },
@@ -19114,6 +19145,11 @@
           "cosine_similarity": 0.74674727
         },
         {
+          "identifier": "GO:0097611",
+          "label": "dinoflagellate cingulum",
+          "cosine_similarity": 0.66893338
+        },
+        {
           "identifier": "GO:0020007",
           "label": "apical complex",
           "cosine_similarity": 0.66510513
@@ -19127,11 +19163,6 @@
           "identifier": "GO:0062159",
           "label": "contractile vacuole complex",
           "cosine_similarity": 0.65616589
-        },
-        {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.6409593
         }
       ]
     },

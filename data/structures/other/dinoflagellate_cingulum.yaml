@@ -1,0 +1,65 @@
+identifier: GO:0097611
+label: dinoflagellate cingulum
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: A cell surface furrow that wraps around a dinoflagellate cell; the transverse
+  flagellum lies in it.
+definition_source: GO:0097611
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T16:35:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T16:35:54Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO cingulum synonymy, GO cell-surface-furrow parentage, Dinophyceae
+    taxon evidence, record-level PMID/DOI evidence, and a curation TODO for cingulum
+    molecular components.
+  llm_assisted: true
+synonyms:
+- synonym_text: cingulum
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097611
+- synonym_text: girdle
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097611
+- synonym_text: transverse groove
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097611
+parent_structures:
+- GO:0097610
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: GO:0097611 places this cingulum cell-surface furrow in Dinophyceae and defines
+    it as wrapping around a dinoflagellate cell.
+  reference: GO:0097611
+evidence:
+- reference: GO:0097611
+  notes: Gene Ontology cellular-component term for the dinoflagellate cingulum.
+- reference: GO:0097610
+  notes: Gene Ontology cellular-component parent term for cell surface furrow.
+- reference: PMID:7002229
+  notes: PubMed record for Taylor 1980, the dinoflagellate-evolution review cited
+    by GO:0097611.
+- reference: DOI:10.1016/0303-2647(80)90006-4
+  notes: Taylor 1980 reviewed dinoflagellate evolution in Biosystems and is the article
+    behind PMID:7002229.
+discussions:
+- discussion_id: resolve_cingulum_molecular_constituents
+  prompt: Add cingulum molecular components only after directly localized constituents
+    and exact source-neutral family groundings have been identified.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO defines the dinoflagellate cingulum as a cell-surface furrow and places
+    it in Dinophyceae, but this pass did not find exact family-level evidence for
+    cingulum-specific molecular constituents.
+  evidence:
+  - reference: GO:0097611
+  - reference: PMID:7002229
+  posed_by: codex
+  posed_date: '2026-10-02'
