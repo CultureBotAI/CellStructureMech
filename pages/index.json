@@ -4671,6 +4671,15 @@
   "definition": "A transmembrane protein complex in the endoplasmic reticulum membrane that promotes insertion of newly synthesized proteins into the ER membrane."
  },
  {
+  "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
+  "label": "EmrAB-TolC multidrug efflux transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/emrab_tolc_multidrug_efflux_transport_complex.html",
+  "definition": "An Escherichia coli MFS-family cell-envelope efflux pump complex composed of EmrA, EmrB, and TolC subunits that exports hydrophobic xenobiotics across the inner and outer membranes."
+ },
+ {
   "identifier": "GO:1990207",
   "label": "EmrE multidrug transporter complex",
   "category": "OTHER",
