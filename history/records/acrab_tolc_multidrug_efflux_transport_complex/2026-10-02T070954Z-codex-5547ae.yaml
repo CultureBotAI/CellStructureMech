@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/acrab_tolc_multidrug_efflux_transport_complex.yaml
+  slug: acrab_tolc_multidrug_efflux_transport_complex
+session:
+  id: 2026-10-02T070954Z-codex-5547ae
+  timestamp: '2026-10-02T07:09:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1906
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1905
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - other
+  summary: Ground AcrAB-TolC TolC component
+  details: 'Resolved PR #1905 review issue #1906 by grounding the TolC component and causal-graph
+    node to InterPro:IPR058622, adding the InterPro evidence, and narrowing the AcrAB-TolC
+    component-family grounding TODO to AcrA and AcrB.'

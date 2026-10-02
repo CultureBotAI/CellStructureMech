@@ -21,6 +21,13 @@ curation_history:
     xenobiotic transporter activity, Complex Portal/PDB/PubMed evidence, a compact
     function graph, and a component-family grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-02T07:09:23Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Resolved PR #1905 review issue #1906 by grounding the TolC component to
+    InterPro:IPR058622 and narrowing the open component-family grounding TODO to AcrA
+    and AcrB.'
+  llm_assisted: true
 parent_structures:
 - GO:1990281
 components:
@@ -91,16 +98,12 @@ components:
     notes: RCSB maps one PDB:5V5S polymer entity to UniProtKB:P31224 in the AcrAB-TolC
       cryo-EM structure.
 - component_id: tolc_outer_membrane_channel
-  label: Outer membrane protein TolC
+  label: Outer membrane channel protein TolC
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
   - tolC
   essentiality: ESSENTIAL
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The reviewed E. coli K-12 UniProt example is exact, but no InterPro,
-    Pfam, NCBIfam, or GO accession was verified as an exact source-neutral family
-    for this named AcrAB-TolC constituent.
   role: Outer-membrane channel subunit that closes the periplasmic AcrA bridge and
     conducts exported substrates out of the cell envelope.
   stoichiometry: 3 copies in the E. coli K-12 Complex Portal CPX-4263 entry
@@ -123,6 +126,9 @@ components:
   - reference: PDB:5V5S
     notes: RCSB maps one PDB:5V5S polymer entity to UniProtKB:P02930 in the AcrAB-TolC
       cryo-EM structure.
+  - reference: InterPro:IPR058622
+    notes: InterPro IPR058622 is the Outer membrane channel protein TolC family entry.
+  grounding: InterPro:IPR058622
 canonical_examples:
 - taxon_id: NCBITaxon:83333
   taxon_label: Escherichia coli K-12
@@ -152,6 +158,8 @@ evidence:
 - reference: GO:0042910
   notes: Gene Ontology molecular-function term for xenobiotic transmembrane transporter
     activity.
+- reference: InterPro:IPR058622
+  notes: InterPro family entry for Outer membrane channel protein TolC.
 - reference: UniProtKB:P0AE06
   notes: Reviewed E. coli K-12 AcrA UniProtKB entry.
 - reference: UniProtKB:P31224
@@ -189,9 +197,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: acrb_inner_membrane_transporter
   - node_id: tolc
-    label: Outer membrane protein TolC
+    label: Outer membrane channel protein TolC
     node_type: GENE_OR_PROTEIN
     component_ref: tolc_outer_membrane_channel
+    grounding: InterPro:IPR058622
   - node_id: xenobiotic_transport
     label: xenobiotic transmembrane transporter activity
     node_type: MOLECULAR_FUNCTION
@@ -215,8 +224,8 @@ causal_graphs:
   - subject: acra
     predicate: couples to
     object: tolc
-    description: AcrA adaptor subunits connect the AcrB transporter to the TolC outer-membrane
-      channel.
+    description: AcrA adaptor subunits connect the AcrB transporter to the trimeric
+      TolC outer-membrane channel.
     evidence:
     - reference: ComplexPortal:CPX-4263
       notes: CPX-4263 curates AcrA and TolC as participants in the E. coli AcrAB-TolC
@@ -247,20 +256,22 @@ causal_graphs:
         AcrAB-TolC structure.
 discussions:
 - discussion_id: acrab_tolc_component_family_grounding
-  prompt: Resolve exact source-neutral protein families for AcrA, AcrB, and TolC before
-    replacing reviewed-label-only component rows.
+  prompt: Resolve exact source-neutral protein families for AcrA and AcrB before replacing
+    reviewed-label-only component rows.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#acra_periplasmic_adaptor
   - components#acrb_inner_membrane_transporter
-  - components#tolc_outer_membrane_channel
   rationale: ComplexPortal:CPX-4263, reviewed E. coli UniProt records, and PDB:5V5S
-    exactly identify the AcrAB-TolC proteins, but no InterPro, Pfam, NCBIfam, or GO
-    accession was verified as an exact source-neutral family for each named pump constituent.
+    exactly identify the AcrA and AcrB proteins, but no InterPro, Pfam, NCBIfam, or
+    GO accession was verified as an exact source-neutral family for either named pump
+    constituent; TolC is already grounded to InterPro:IPR058622.
   evidence:
   - reference: ComplexPortal:CPX-4263
     notes: CPX-4263 curates the E. coli K-12 AcrA, AcrB, and TolC participants.
+  - reference: InterPro:IPR058622
+    notes: Existing corpus curation verifies IPR058622 as the exact TolC family entry.
   posed_by: codex
   posed_date: '2026-10-02'
 complex_compositions:
