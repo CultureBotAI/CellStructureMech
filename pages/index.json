@@ -3933,6 +3933,15 @@
   "definition": "An Escherichia coli tripartite multidrug efflux pump complex composed of AcrB inner-membrane RND transporters, AcrA periplasmic adaptor proteins, and the TolC outer-membrane channel that exports xenobiotics across the cell envelope."
  },
  {
+  "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+  "label": "AcrAD-TolC multidrug efflux transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/acrad_tolc_multidrug_efflux_transport_complex.html",
+  "definition": "An Escherichia coli RND-family cell-envelope efflux pump complex composed of AcrA, AcrD, and TolC subunits that exports aminoglycosides and other xenobiotic substrates across the cell envelope."
+ },
+ {
   "identifier": "GO:0140671",
   "label": "ADA complex",
   "category": "OTHER",

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  slug: acrad_tolc_multidrug_efflux_transport_complex
+session:
+  id: 2026-10-02T093931Z-codex-cdb670
+  timestamp: '2026-10-02T09:39:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - other
+  summary: Add AcrAD-TolC multidrug efflux transport complex record
+  details: Added an evidence-backed cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+    record with reviewed-label-only AcrA and AcrD components, an InterPro-grounded TolC component,
+    E. coli K-12 reviewed UniProt examples, exact Complex Portal CPX-4264 heterododecamer
+    composition, GO xenobiotic transporter activity, PubMed/DOI evidence, and a component-family
+    grounding TODO.
