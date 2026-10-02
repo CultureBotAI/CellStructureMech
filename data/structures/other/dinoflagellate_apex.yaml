@@ -19,6 +19,13 @@ curation_history:
     Taylor 1980 metadata-only evidence, and curation discussions for molecular components
     and the apex/apical-horn boundary.
   llm_assisted: true
+- timestamp: '2026-10-02T19:48:26Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1936 review issues #1937 and #1938 by adding GO:0097613
+    evidence to the apex-epicone graph edge and preserving the horn-shaped thecate
+    qualifier for GO:0097686.'
+  llm_assisted: true
 synonyms:
 - synonym_text: apex
   synonym_type: BROAD_SYNONYM
@@ -42,8 +49,8 @@ evidence:
 - reference: GO:0097613
   notes: Gene Ontology cellular-component term for the dinoflagellate epicone.
 - reference: GO:0097686
-  notes: Gene Ontology cellular-component term for the dinoflagellate apical horn,
-    which QuickGO lists as an is_a child of GO:0097683.
+  notes: Gene Ontology cellular-component term for the horn-shaped dinoflagellate
+    apical horn of thecate species, which QuickGO lists as an is_a child of GO:0097683.
 - reference: GO:0097685
   notes: Gene Ontology cellular-component term for the dinoflagellate apical groove
     found on the dinoflagellate apex.
@@ -60,7 +67,8 @@ causal_graphs:
 - graph_id: apex_epicone_topology
   title: Apex-epicone topology
   description: The dinoflagellate apex is a cellular anatomical structure at the anterior
-    end of the epicone, can specialize into an apical horn, and bears the apical groove.
+    end of the epicone, has GO:0097686 as a narrower horn-shaped thecate child class,
+    and bears the apical groove.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph records GO topology for the apex region, not a molecular
@@ -100,15 +108,22 @@ causal_graphs:
     description: GO places the dinoflagellate apex in the epicone.
     evidence:
     - reference: GO:0097683
-      notes: QuickGO lists GO:0097613 as an ancestor of GO:0097683 and the GO:0097613
-        payload lists GO:0097683 as a part_of child term.
+      notes: QuickGO lists GO:0097613 as an ancestor of GO:0097683.
+    - reference: GO:0097613
+      notes: The QuickGO GO:0097613 children endpoint lists GO:0097683 as a part_of
+        child term.
   - subject: dinoflagellate_apical_horn
     predicate: is a
     object: dinoflagellate_apex
-    description: GO classifies the dinoflagellate apical horn as a specialized apex.
+    description: GO classifies the horn-shaped thecate dinoflagellate apical horn
+      as a specialized apex.
     evidence:
     - reference: GO:0097683
-      notes: The QuickGO GO:0097683 payload lists GO:0097686 as an is_a child term.
+      notes: The QuickGO GO:0097683 children endpoint lists GO:0097686 as an is_a
+        child term.
+    - reference: GO:0097686
+      notes: The GO:0097686 definition narrows the apical horn to a horn-shaped dinoflagellate
+        apex found in thecate species.
   - subject: dinoflagellate_apical_groove
     predicate: is found on
     object: dinoflagellate_apex
@@ -130,13 +145,14 @@ discussions:
   posed_by: codex
   posed_date: '2026-10-02'
 - discussion_id: apical_horn_is_narrower_than_apex
-  prompt: Keep dinoflagellate apical horn separate from the general dinoflagellate
-    apex unless curating the narrower GO:0097686 class.
+  prompt: Keep the horn-shaped thecate dinoflagellate apical horn separate from the
+    general dinoflagellate apex unless curating the narrower GO:0097686 class.
   kind: INTERPRETATION
   status: RESOLVED
-  rationale: QuickGO lists GO:0097686 as an is_a child of GO:0097683, so the dinoflagellate
-    apical horn should be modeled as a specialized apex rather than folded into the
-    whole apex record as an exact synonym.
+  rationale: QuickGO lists GO:0097686 as an is_a child of GO:0097683 and GO:0097686
+    defines a horn-shaped apex found in thecate species, so the dinoflagellate apical
+    horn should be modeled as a specialized apex rather than folded into the whole
+    apex record as an exact synonym.
   evidence:
   - reference: GO:0097683
   - reference: GO:0097686
@@ -144,4 +160,4 @@ discussions:
   posed_date: '2026-10-02'
   resolved_date: '2026-10-02'
   resolution_note: Model GO:0097683 as the general dinoflagellate apex and leave the
-    apical horn for separate GO:0097686 curation.
+    horn-shaped thecate apical horn for separate GO:0097686 curation.
