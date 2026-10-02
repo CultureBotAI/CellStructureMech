@@ -19,6 +19,13 @@ curation_history:
     evidence, and curation discussions for molecular components and the antapex/antapical-horn
     boundary.
   llm_assisted: true
+- timestamp: '2026-10-02T21:09:34Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1942 review issues #1943 and #1944 by citing GO:0097684
+    direct parthood history for the antapex-hypocone edge and materializing the GO:0097618
+    sulcal-notch to GO:0097612 sulcus parent edge.'
+  llm_assisted: true
 synonyms:
 - synonym_text: antapex
   synonym_type: BROAD_SYNONYM
@@ -57,11 +64,11 @@ causal_graphs:
   title: Antapex-hypocone topology
   description: The dinoflagellate antapex is a cellular anatomical structure within
     the hypocone, has the horn-shaped thecate antapical horn as a narrower child class,
-    and can be reached by the dinoflagellate sulcal notch.
+    and can be reached by the dinoflagellate sulcal notch sulcus subclass.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records GO is-a, part-of, and child-term topology for the
-    antapex region, not a molecular assembly or physiological mechanism.
+  scope_notes: The graph records GO is-a, part-of, child-term, and sulcal-notch parentage
+    for the antapex region, not a molecular assembly or physiological mechanism.
   nodes:
   - node_id: dinoflagellate_antapex
     label: dinoflagellate antapex
@@ -83,6 +90,10 @@ causal_graphs:
     label: dinoflagellate sulcal notch
     node_type: STRUCTURE
     grounding: GO:0097618
+  - node_id: dinoflagellate_sulcus
+    label: dinoflagellate sulcus
+    node_type: STRUCTURE
+    grounding: GO:0097612
   edges:
   - subject: dinoflagellate_antapex
     predicate: is a
@@ -98,8 +109,7 @@ causal_graphs:
     description: GO places the dinoflagellate antapex in the hypocone.
     evidence:
     - reference: GO:0097684
-      notes: QuickGO lists GO:0097614 among the GO:0097684 ancestors through part-of
-        topology.
+      notes: The QuickGO GO:0097684 history records a part_of relation to GO:0097614.
     - reference: GO:0097614
       notes: The QuickGO GO:0097614 payload lists GO:0097684 as a part_of child term.
   - subject: dinoflagellate_antapical_horn
@@ -114,6 +124,14 @@ causal_graphs:
     - reference: GO:0097687
       notes: The QuickGO GO:0097687 ancestors endpoint lists GO:0097684 among its
         ancestors.
+  - subject: dinoflagellate_sulcal_notch
+    predicate: is a
+    object: dinoflagellate_sulcus
+    description: GO classifies the dinoflagellate sulcal notch as a specialized dinoflagellate
+      sulcus.
+    evidence:
+    - reference: GO:0097618
+      notes: The GO graph links GO:0097618 to GO:0097612 by rdfs:subClassOf.
   - subject: dinoflagellate_sulcal_notch
     predicate: extends to
     object: dinoflagellate_antapex
