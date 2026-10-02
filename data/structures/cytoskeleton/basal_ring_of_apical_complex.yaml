@@ -1,0 +1,168 @@
+identifier: GO:0020032
+label: basal ring of apical complex
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: An electron dense ring at the most posterior position of the apical complex,
+  from which the subpellicular microtubules originate; formed during an invasive life
+  cycle stage of an apicomplexan parasite.
+definition_source: GO:0020032
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T14:24:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T14:25:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact GO basal-ring synonyms, GO apical-complex parthood, Toxoplasma
+    gondii scope, Hu 2006 and GO evidence, a nonmechanistic basal-ring topology graph,
+    and curation discussions for unresolved constituents and the anterior/posterior
+    polar-ring boundary.
+  llm_assisted: true
+synonyms:
+- synonym_text: lower polar ring of apical complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0020032
+- synonym_text: posterior polar ring of apical complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0020032
+- synonym_text: preconoidal ring of apical complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0020032
+part_of:
+- GO:0020007
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  presence: COMMON
+  note: Toxoplasma tachyzoite daughter scaffolds contain lower polar or preconoidal
+    rings at the posterior end of the conoid, where subpellicular microtubules originate.
+  reference: DOI:10.1371/journal.ppat.0020013
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model in which the conoid fibers, polar rings, intraconoid microtubules
+    and subpellicular microtubules of the apical complex were resolved as distinct
+    cytoskeletal elements.
+  reference: DOI:10.1371/journal.ppat.0020013
+functions:
+- function_id: subpellicular_microtubule_origin
+  label: subpellicular microtubule origin
+  description: The basal ring of the apical complex marks the posterior preconoidal
+    ring from which apicomplexan subpellicular microtubules originate.
+  evidence:
+  - reference: GO:0020032
+    notes: Gene Ontology defines the basal ring of the apical complex by the origin
+      of the subpellicular microtubules.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 localized the lower polar rings and the subpellicular microtubules
+      in the Toxoplasma daughter apical scaffold.
+evidence:
+- reference: GO:0020032
+  notes: Gene Ontology cellular-component term for the basal ring of the apical complex.
+- reference: GO:0020007
+  notes: Gene Ontology models the basal ring of the apical complex as part of the
+    apicomplexan apical complex.
+- reference: DOI:10.1371/journal.ppat.0020013
+  notes: Hu et al. 2006, Cytoskeletal Components of an Invasion Machine--the Apical
+    Complex of Toxoplasma gondii, PLOS Pathogens.
+causal_graphs:
+- graph_id: toxoplasma_basal_ring_topology
+  title: The lower polar ring marks the origin of subpellicular microtubules
+  description: The basal ring of the apical complex is the lower or preconoidal ring
+    at the posterior side of the Toxoplasma conoid; subpellicular microtubules originate
+    from this region in the apical scaffold.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records basal-ring topology in the mature apical complex.
+    It does not assert the proteins that form the ring or the mechanism that nucleates
+    subpellicular microtubules.
+  nodes:
+  - node_id: basal_ring_of_apical_complex
+    label: basal ring of apical complex
+    node_type: STRUCTURE
+    grounding: GO:0020032
+  - node_id: apical_complex
+    label: apical complex
+    node_type: STRUCTURE
+    grounding: GO:0020007
+  - node_id: conoid
+    label: conoid
+    node_type: STRUCTURE
+    grounding: GO:0020010
+  - node_id: subpellicular_microtubule
+    label: subpellicular microtubule
+    node_type: STRUCTURE
+    grounding: GO:0020025
+  edges:
+  - subject: basal_ring_of_apical_complex
+    predicate: is part of
+    object: apical_complex
+    description: The basal ring is a cytoskeletal substructure of the apicomplexan
+      apical complex.
+    evidence:
+    - reference: GO:0020007
+      notes: Gene Ontology places the basal ring of the apical complex under the apical-complex
+        cellular-component term.
+  - subject: basal_ring_of_apical_complex
+    predicate: is posterior to
+    object: conoid
+    description: The basal ring occupies the lower or preconoidal ring position at
+      the posterior end of the conoid.
+    evidence:
+    - reference: GO:0020032
+      notes: Gene Ontology lists lower, posterior and preconoidal ring exact synonyms
+        for the basal ring of the apical complex.
+    - reference: DOI:10.1371/journal.ppat.0020013
+      notes: Hu et al. 2006 distinguished upper and lower polar rings in the Toxoplasma
+        apical scaffold.
+  - subject: subpellicular_microtubule
+    predicate: originates from
+    object: basal_ring_of_apical_complex
+    description: Subpellicular microtubules originate from the basal ring of the apical
+      complex.
+    evidence:
+    - reference: GO:0020032
+      notes: Gene Ontology defines the basal ring by the origin of the subpellicular
+        microtubules.
+discussions:
+- discussion_id: resolve_basal_ring_constituents
+  prompt: Resolve exact basal-ring resident proteins and their source-neutral family
+    groundings.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#toxoplasma_basal_ring_topology
+  rationale: This first basal-ring record captures the GO-delimited lower polar ring
+    and its subpellicular-microtubule origin topology. It leaves protein components
+    out until direct evidence places candidate proteins in the mature basal ring and
+    an exact taxon-neutral family scope can be reviewed.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Hu et al. 2006 localized candidate proteins to several Toxoplasma apical-cytoskeleton
+      subcompartments.
+  posed_by: codex
+  posed_date: '2026-10-02'
+- discussion_id: distinguish_anterior_polar_ring
+  prompt: Keep the basal or posterior polar ring distinct from the anterior polar
+    ring of the apical complex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#toxoplasma_basal_ring_topology
+  rationale: GO:0020032 denotes the lower/posterior/preconoidal ring from which subpellicular
+    microtubules originate, whereas GO:0020031 denotes the anterior polar ring from
+    which conoid fibers originate. The two terms therefore represent adjacent but
+    separate apical-complex rings.
+  evidence:
+  - reference: GO:0020032
+    notes: Gene Ontology lists lower, posterior and preconoidal ring exact synonyms
+      for GO:0020032.
+  - reference: GO:0020031
+    notes: Gene Ontology identifies the anterior polar ring of the apical complex
+      as a distinct term.
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
