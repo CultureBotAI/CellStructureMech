@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_antapex.yaml
+  slug: dinoflagellate_antapex
+session:
+  id: 2026-10-02T211309Z-codex-e0fbb3
+  timestamp: '2026-10-02T21:13:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1943
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1944
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1942
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed antapex PR review issues
+  details: 'Addressed PR #1942 review issues #1943 and #1944 for data/structures/other/dinoflagellate_antapex.yaml
+    by changing the antapex-hypocone edge to cite the direct GO:0097684 part_of history relation
+    and adding the GO:0097612 dinoflagellate sulcus node plus the GO:0097618 sulcal-notch
+    subclass edge to the topology graph.'
