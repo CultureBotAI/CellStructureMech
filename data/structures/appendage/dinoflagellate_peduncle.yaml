@@ -22,6 +22,14 @@ curation_history:
     graph, and curation discussions for molecular components, flagellar-apparatus
     boundaries, and apical-complex homology.
   llm_assisted: true
+- timestamp: '2026-10-02T23:27:02Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1951 review issues #1952 and #1953 by narrowing the Okamoto
+    and Keeling 2014 microtubular-strand evidence, adding Larsson et al. 2022 as primary
+    Prorocentrum peduncular-feeding evidence, and restricting the Larsson et al. 2025
+    evidence row to Prorocentrum insidiosum taxonomy.'
+  llm_assisted: true
 parent_structures:
 - GO:0120025
 taxonomic_distribution:
@@ -50,15 +58,23 @@ evidence:
     for the GO xref.
 - reference: DOI:10.3390/microorganisms2010073
   notes: Okamoto and Keeling 2014 reviewed the dinoflagellate flagellar apparatus
-    and described the peduncle as a myzocytotic feeding apparatus whose microtubular
-    strand lies close to the flagellar apparatus in many dinoflagellates.
+    and distinguished the widespread microtubular strand or basket near the flagellar
+    apparatus from confirmed peduncle membership in specific lineages, noting that
+    the analogous gonyaulacoid strand had not been shown to extend into the peduncle.
 - reference: PMID:27694777
   notes: PubMed record for Okamoto and Keeling 2014, the open-access review of dinoflagellate,
     perkinsid, and colpodellid flagellar apparatus ultrastructure.
+- reference: DOI:10.1038/s41467-022-28867-8
+  notes: Larsson et al. 2022 observed Australian Prorocentrum cf. balticum strains
+    feeding on Rhodomonas salina through a short tubular peduncle and confirmed myzocytosis
+    by visualizing intracellular food vacuoles.
+- reference: PMID:35288549
+  notes: PubMed record for Larsson et al. 2022, the primary open-access mucosphere-assisted
+    feeding study later tied to Prorocentrum insidiosum sp. nov.
 - reference: DOI:10.1111/jeu.70017
-  notes: Larsson et al. 2025 described Prorocentrum insidiosum sp. nov.; its Australian
-    strains supplement photosynthesis by peduncular consumption of captured microbial
-    prey.
+  notes: Larsson et al. 2025 described Prorocentrum insidiosum sp. nov. for the Australian
+    strains originally reported as Prorocentrum cf. balticum by Larsson et al. 2022
+    and characterized their morphology and phylogeny.
 - reference: PMID:40448289
   notes: PubMed record for Larsson et al. 2025, an open-access morphological and phylogenetic
     characterization of the mucosphere-producing dinoflagellate Prorocentrum insidiosum.
@@ -110,9 +126,9 @@ discussions:
   kind: INTERPRETATION
   status: RESOLVED
   rationale: GO:1990905 classifies the peduncle under plasma membrane bounded cell
-    projection, and Okamoto and Keeling 2014 note that the peduncle-associated microtubular
-    strand is typically considered separately from the flagellar apparatus despite
-    lying near it.
+    projection, and Okamoto and Keeling 2014 treated the microtubular strand or basket
+    as a microtubule bundle that bypasses close to the flagellar apparatus rather
+    than as a core basal-body root or connective fiber.
   evidence:
   - reference: GO:1990905
   - reference: GO:0120025

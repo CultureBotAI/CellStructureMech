@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/dinoflagellate_peduncle.yaml
+  slug: dinoflagellate_peduncle
+session:
+  id: 2026-10-02T232926Z-codex-41b398
+  timestamp: '2026-10-02T23:29:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1952
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1953
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1951
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed dinoflagellate peduncle PR review
+  details: 'Addressed PR #1951 review issues #1952 and #1953 for data/structures/appendage/dinoflagellate_peduncle.yaml
+    by narrowing the Okamoto and Keeling 2014 microtubular-strand evidence, adding Larsson
+    et al. 2022 DOI:10.1038/s41467-022-28867-8 and PMID:35288549 as primary Prorocentrum peduncular-feeding
+    evidence, and restricting the Larsson et al. 2025 evidence row to Prorocentrum insidiosum
+    taxonomy.'
