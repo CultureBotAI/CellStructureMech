@@ -34,6 +34,13 @@ curation_history:
     causal-graph node because the term label is plasma membrane, not a source-exact
     bacterial inner-membrane lipid bilayer.
   llm_assisted: true
+- timestamp: '2026-10-02T13:59:33Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Resolved issue #1916 by documenting why SecDF-YajC and YidC are modeled
+    as holo-translocon constituents around a SecYEG core rather than folded into the
+    SecYEG translocon complex record.'
+  llm_assisted: true
 synonyms:
 - synonym_text: HTL complex
   synonym_type: EXACT_SYNONYM
@@ -385,6 +392,32 @@ discussions:
       holo-translocon.
   posed_by: codex
   posed_date: '2026-10-02'
+- discussion_id: secyeg_core_holotranslocon_boundary
+  prompt: Should SecDF-YajC and YidC be folded into the SecYEG translocon record or
+    modeled as constituents of a larger SecYEG-SecDF-YajC-YidC holo-translocon?
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - has_part#cellstructuremech:secyeg_translocon_complex
+  - components#secd_subunit
+  - components#secf_subunit
+  - components#yajc_accessory_subunit
+  - components#yidc_insertase
+  rationale: The existing SecYEG translocon record captures the heterotrimeric protein-conducting
+    channel core, while CPX-1095 scopes the E. coli holo-translocon as SecYEG assembled
+    with SecDF-YajC and YidC. The larger holo-translocon is therefore a distinct supercomplex
+    that has the SecYEG core as a named part.
+  evidence:
+  - reference: ComplexPortal:CPX-1095
+    notes: CPX-1095 curates SecY, SecE, SecG, SecD, SecF, YajC, and YidC as participants
+      in the E. coli K-12 Holo-translocon SecYEG-SecDF-YajC-YidC complex.
+  - reference: PMID:27435098
+    notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
+      supercomplex.
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolution_note: Keep SecD, SecF, YajC, and YidC in the larger SecYEG-SecDF-YajC-YidC
+    holo-translocon record and point back to the SecYEG core with has_part.
 - discussion_id: exclude_seca_from_holotranslocon_boundary
   prompt: Should SecA be modeled as a constituent of the SecYEG-SecDF-YajC-YidC holo-translocon?
   kind: INTERPRETATION
