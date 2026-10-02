@@ -1,0 +1,137 @@
+identifier: GO:1990905
+label: dinoflagellate peduncle
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A small, flexible, finger-like projection of cytoplasm containing an array
+  of microtubles and located near the flagellar pores in some photosynthetic as well
+  as nonphotosynthetic dinoflagellate species. Its functions are not fully understood,
+  but it has been associated with feeding behavior (phagotrophy).
+definition_source: GO:1990905
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T23:10:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T23:12:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO plasma-membrane-bounded projection parentage, Dinophyceae taxon
+    evidence, direct peduncle literature evidence, a nonmechanistic projection-topology
+    graph, and curation discussions for molecular components, flagellar-apparatus
+    boundaries, and apical-complex homology.
+  llm_assisted: true
+parent_structures:
+- GO:0120025
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: GO:1990905 defines the peduncle as a cytoplasmic projection in some photosynthetic
+    and nonphotosynthetic dinoflagellate species, so presence is patchy across Dinophyceae
+    rather than universal.
+  reference: GO:1990905
+evidence:
+- reference: GO:1990905
+  notes: Gene Ontology cellular-component term for the dinoflagellate peduncle, defined
+    as a cytoplasmic projection near the flagellar pores that contains an array of
+    microtubules.
+- reference: GO:0120025
+  notes: Gene Ontology cellular-component term for plasma membrane bounded cell projection;
+    QuickGO records it as the current direct is_a parent of GO:1990905.
+- reference: PMID:1480107
+  notes: PubMed record for the Lee and Kugrens 1992 dinoflagellate/ciliate review
+    cited by GO:1990905.
+- reference: DOI:10.1128/mr.56.4.529-542.1992
+  notes: Lee and Kugrens 1992 is the Microbiological Reviews article behind PMID:1480107;
+    PMC exposed the article metadata and HTML body in this pass, but not peduncle-specific
+    searchable body text, so this record uses it only as bibliographic corroboration
+    for the GO xref.
+- reference: DOI:10.3390/microorganisms2010073
+  notes: Okamoto and Keeling 2014 reviewed the dinoflagellate flagellar apparatus
+    and described the peduncle as a myzocytotic feeding apparatus whose microtubular
+    strand lies close to the flagellar apparatus in many dinoflagellates.
+- reference: PMID:27694777
+  notes: PubMed record for Okamoto and Keeling 2014, the open-access review of dinoflagellate,
+    perkinsid, and colpodellid flagellar apparatus ultrastructure.
+- reference: DOI:10.1111/jeu.70017
+  notes: Larsson et al. 2025 described Prorocentrum insidiosum sp. nov.; its Australian
+    strains supplement photosynthesis by peduncular consumption of captured microbial
+    prey.
+- reference: PMID:40448289
+  notes: PubMed record for Larsson et al. 2025, an open-access morphological and phylogenetic
+    characterization of the mucosphere-producing dinoflagellate Prorocentrum insidiosum.
+causal_graphs:
+- graph_id: peduncle_projection_topology
+  title: Peduncle projection topology
+  description: The dinoflagellate peduncle is a plasma-membrane-bounded cytoplasmic
+    projection associated with phagotrophic feeding.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records exact GO is-a topology and the peduncle boundary,
+    not a molecular assembly or feeding mechanism.
+  nodes:
+  - node_id: dinoflagellate_peduncle
+    label: dinoflagellate peduncle
+    node_type: STRUCTURE
+    grounding: GO:1990905
+  - node_id: plasma_membrane_bounded_cell_projection
+    label: plasma membrane bounded cell projection
+    node_type: STRUCTURE
+    grounding: GO:0120025
+  edges:
+  - subject: dinoflagellate_peduncle
+    predicate: is a
+    object: plasma_membrane_bounded_cell_projection
+    description: GO classifies the dinoflagellate peduncle as a plasma membrane bounded
+      cell projection.
+    evidence:
+    - reference: GO:1990905
+      notes: QuickGO records GO:0120025 as the current direct is_a parent of GO:1990905.
+discussions:
+- discussion_id: resolve_peduncle_molecular_constituents
+  prompt: Add peduncle molecular components only after directly localized constituents
+    and exact source-neutral family groundings have been identified.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO and ultrastructural literature define the peduncle as a microtubule-containing
+    cytoplasmic projection, but this pass did not find exact family-level evidence
+    for peduncle-specific molecular constituents; broad tubulin and microtubule terms
+    do not encode the dinoflagellate peduncle context.
+  evidence:
+  - reference: GO:1990905
+  - reference: DOI:10.3390/microorganisms2010073
+  posed_by: codex
+  posed_date: '2026-10-02'
+- discussion_id: peduncle_is_projection_not_flagellar_apparatus
+  prompt: Keep the peduncle as a cytoplasmic cell projection even though it is topologically
+    associated with the dinoflagellate flagellar apparatus.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:1990905 classifies the peduncle under plasma membrane bounded cell
+    projection, and Okamoto and Keeling 2014 note that the peduncle-associated microtubular
+    strand is typically considered separately from the flagellar apparatus despite
+    lying near it.
+  evidence:
+  - reference: GO:1990905
+  - reference: GO:0120025
+  - reference: DOI:10.3390/microorganisms2010073
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
+  resolution_note: Model GO:1990905 as a membrane-bounded cell projection rather than
+    a flagellar-apparatus substructure.
+- discussion_id: evaluate_peduncle_apical_complex_homology
+  prompt: Evaluate dinoflagellate-peduncle/apical-complex homology before adding apical-complex
+    components, secretory-vesicle parts, or homology edges to this record.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Okamoto and Keeling 2014 reviewed the hypothesis that the dinoflagellate
+    peduncle is homologous to the apical complex and noted electron-dense vesicles
+    associated with some peduncles, but this record should not import apical-complex
+    structure until the specific homology and component boundaries are directly curated.
+  evidence:
+  - reference: DOI:10.3390/microorganisms2010073
+  posed_by: codex
+  posed_date: '2026-10-02'
