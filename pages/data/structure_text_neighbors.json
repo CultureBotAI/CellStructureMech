@@ -8114,6 +8114,11 @@
           "cosine_similarity": 0.86535145
         },
         {
+          "identifier": "GO:0031913",
+          "label": "contractile vacuole pore",
+          "cosine_similarity": 0.83168075
+        },
+        {
           "identifier": "GO:0000329",
           "label": "fungal-type vacuole membrane",
           "cosine_similarity": 0.82927713
@@ -8122,11 +8127,6 @@
           "identifier": "cellstructuremech:contractile_vacuole_lumen",
           "label": "contractile vacuole lumen",
           "cosine_similarity": 0.82721587
-        },
-        {
-          "identifier": "cellstructuremech:parasitophorous_vacuole_membrane",
-          "label": "parasitophorous vacuole membrane",
-          "cosine_similarity": 0.82475625
         }
       ]
     },
@@ -8150,14 +8150,14 @@
           "cosine_similarity": 0.8633251
         },
         {
+          "identifier": "GO:0031913",
+          "label": "contractile vacuole pore",
+          "cosine_similarity": 0.85441933
+        },
+        {
           "identifier": "GO:0005773",
           "label": "vacuole",
           "cosine_similarity": 0.81757704
-        },
-        {
-          "identifier": "GO:0005774",
-          "label": "vacuolar membrane",
-          "cosine_similarity": 0.81327255
         }
       ]
     },
@@ -8186,9 +8186,9 @@
           "cosine_similarity": 0.79956711
         },
         {
-          "identifier": "GO:0062160",
-          "label": "spongiome",
-          "cosine_similarity": 0.77221683
+          "identifier": "GO:0031913",
+          "label": "contractile vacuole pore",
+          "cosine_similarity": 0.79034207
         }
       ]
     },
@@ -8220,6 +8220,37 @@
           "identifier": "GO:0062159",
           "label": "contractile vacuole complex",
           "cosine_similarity": 0.8074239
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031913",
+      "label": "contractile vacuole pore",
+      "neighbors": [
+        {
+          "identifier": "GO:0000331",
+          "label": "contractile vacuole",
+          "cosine_similarity": 0.85441933
+        },
+        {
+          "identifier": "GO:0031164",
+          "label": "contractile vacuolar membrane",
+          "cosine_similarity": 0.83168075
+        },
+        {
+          "identifier": "cellstructuremech:contractile_vacuole_lumen",
+          "label": "contractile vacuole lumen",
+          "cosine_similarity": 0.79640314
+        },
+        {
+          "identifier": "GO:0062159",
+          "label": "contractile vacuole complex",
+          "cosine_similarity": 0.79034207
+        },
+        {
+          "identifier": "GO:0005773",
+          "label": "vacuole",
+          "cosine_similarity": 0.76243166
         }
       ]
     },

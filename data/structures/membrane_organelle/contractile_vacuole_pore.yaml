@@ -1,0 +1,141 @@
+identifier: GO:0031913
+label: contractile vacuole pore
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Stable structure that regulates the flow of liquid between the contractile
+  vacuole and the surrounding medium.
+definition_source: GO:0031913
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T15:01:51Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T15:02:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added plasma-membrane-protein-complex parentage, contractile-vacuolar membrane
+    and cytoskeleton parthood, Tetrahymena and Paramecium examples, a regulated-discharge
+    function, GO/DOI evidence, a nonmechanistic pore topology graph, and an open pore-component
+    grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:0098797
+part_of:
+- GO:0031164
+- GO:0005856
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Ciliate model whose contractile-vacuole pore was included in the cell-biology
+    review used by GO to define GO:0031913.
+  reference: DOI:10.1016/S0091-679X(08)61528-9
+- taxon_id: NCBITaxon:5884
+  taxon_label: Paramecium
+  note: Ciliate genus in which the contractile-vacuole pore was analyzed by thin-section
+    ultrastructure.
+  reference: DOI:10.1111/j.1550-7408.1973.tb03587.x
+functions:
+- function_id: regulated_contractile_vacuole_discharge
+  label: regulated contractile-vacuole discharge
+  description: The contractile vacuole pore regulates liquid flow between the contractile
+    vacuole and the exterior medium during discharge.
+  evidence:
+  - reference: GO:0031913
+    notes: GO:0031913 defines the contractile vacuole pore as a stable structure that
+      regulates liquid flow between the contractile vacuole and surrounding medium.
+  - reference: DOI:10.1111/j.1550-7408.1973.tb03587.x
+    notes: McKanna 1973 analyzed the fine structure of the Paramecium contractile-vacuole
+      pore.
+evidence:
+- reference: GO:0031913
+  notes: Gene Ontology cellular-component term for the contractile vacuole pore.
+- reference: GO:0098797
+  notes: Gene Ontology parent term that classifies the contractile vacuole pore as
+    a plasma membrane protein complex.
+- reference: GO:0031164
+  notes: Gene Ontology cellular-component term for the contractile vacuolar membrane
+    that contains the pore.
+- reference: GO:0005856
+  notes: Gene Ontology cellular-component term for the cytoskeleton, which GO:0031913
+    links to the pore by part_of.
+- reference: DOI:10.1016/S0091-679X(08)61528-9
+  notes: Frankel 2000, Cell biology of Tetrahymena thermophila, Methods in Cell Biology;
+    cited by GO:0031913 for the contractile vacuole pore definition.
+- reference: DOI:10.1111/j.1550-7408.1973.tb03587.x
+  notes: McKanna 1973, Fine structure of the contractile vacuole pore in Paramecium,
+    Journal of Protozoology.
+causal_graphs:
+- graph_id: contractile_vacuole_pore_discharge_topology
+  title: Contractile-vacuole pores connect the vacuole to the medium
+  description: The contractile vacuole pore is a plasma-membrane protein complex that
+    sits in the contractile vacuolar membrane and cytoskeletal framework and regulates
+    liquid passage during vacuole discharge.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures GO-backed parthood and pore-mediated liquid-flow
+    regulation without asserting the pore subunit composition or the force-generating
+    mechanism that opens it.
+  nodes:
+  - node_id: contractile_vacuole_pore
+    label: contractile vacuole pore
+    node_type: STRUCTURE
+    grounding: GO:0031913
+  - node_id: contractile_vacuolar_membrane
+    label: contractile vacuolar membrane
+    node_type: STRUCTURE
+    grounding: GO:0031164
+  - node_id: cytoskeleton
+    label: cytoskeleton
+    node_type: STRUCTURE
+    grounding: GO:0005856
+  - node_id: external_liquid_flow
+    label: contractile-vacuole liquid discharge
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: contractile_vacuole_pore
+    predicate: is part of
+    object: contractile_vacuolar_membrane
+    description: GO places the contractile vacuole pore as a part of the contractile
+      vacuolar membrane.
+    evidence:
+    - reference: GO:0031913
+      notes: The GO graph links GO:0031913 contractile vacuole pore to GO:0031164
+        contractile vacuolar membrane by part_of.
+  - subject: contractile_vacuole_pore
+    predicate: is part of
+    object: cytoskeleton
+    description: GO places the contractile vacuole pore as a cytoskeletal part.
+    evidence:
+    - reference: GO:0031913
+      notes: The GO graph links GO:0031913 contractile vacuole pore to GO:0005856
+        cytoskeleton by part_of.
+  - subject: contractile_vacuole_pore
+    predicate: regulates
+    object: external_liquid_flow
+    description: The pore regulates liquid flow between the contractile vacuole and
+      the medium.
+    evidence:
+    - reference: GO:0031913
+      notes: GO defines the pore by regulation of liquid flow between the contractile
+        vacuole and surrounding medium.
+    - reference: DOI:10.1111/j.1550-7408.1973.tb03587.x
+      notes: McKanna 1973 resolved the fine structure of the Paramecium contractile-vacuole
+        pore.
+discussions:
+- discussion_id: resolve_contractile_vacuole_pore_components
+  prompt: Resolve exact source-neutral protein-family or complex groundings for contractile-vacuole
+    pore constituents.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#contractile_vacuole_pore_discharge_topology
+  rationale: The GO topology and ultrastructural evidence establish the pore as a
+    stable structure, but this pass did not verify InterPro, Pfam, NCBIfam, UniProtKB
+    or Complex Portal CURIEs for exact lineage-neutral pore subunits.
+  evidence:
+  - reference: GO:0031913
+  - reference: DOI:10.1111/j.1550-7408.1973.tb03587.x
+  posed_by: codex
+  posed_date: '2026-10-02'
