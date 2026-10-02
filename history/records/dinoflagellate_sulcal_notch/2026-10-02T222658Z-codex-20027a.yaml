@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_sulcal_notch.yaml
+  slug: dinoflagellate_sulcal_notch
+session:
+  id: 2026-10-02T222658Z-codex-20027a
+  timestamp: '2026-10-02T22:26:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-backed dinoflagellate sulcal notch record
+  details: Created data/structures/other/dinoflagellate_sulcal_notch.yaml for GO:0097618 with
+    GO sulcal-notch synonyms, GO:0097612 sulcus parentage, Dinophyceae taxon scope, sulcal-notch
+    extension to GO:0097684 antapex, GO:0097614 bilobed-hypocone morphology, Taylor 1980 metadata-only
+    bibliographic evidence, and curation discussions for molecular-component and sulcal-notch/sulcus
+    follow-up.

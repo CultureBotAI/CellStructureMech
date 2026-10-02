@@ -15280,14 +15280,14 @@
           "cosine_similarity": 0.89509726
         },
         {
+          "identifier": "GO:0097618",
+          "label": "dinoflagellate sulcal notch",
+          "cosine_similarity": 0.88978008
+        },
+        {
           "identifier": "GO:0097613",
           "label": "dinoflagellate epicone",
           "cosine_similarity": 0.87723306
-        },
-        {
-          "identifier": "GO:0097612",
-          "label": "dinoflagellate sulcus",
-          "cosine_similarity": 0.86644488
         }
       ]
     },
@@ -15311,14 +15311,14 @@
           "cosine_similarity": 0.84999348
         },
         {
+          "identifier": "GO:0097618",
+          "label": "dinoflagellate sulcal notch",
+          "cosine_similarity": 0.84869398
+        },
+        {
           "identifier": "GO:0097611",
           "label": "dinoflagellate cingulum",
           "cosine_similarity": 0.84341659
-        },
-        {
-          "identifier": "GO:0097612",
-          "label": "dinoflagellate sulcus",
-          "cosine_similarity": 0.84037236
         }
       ]
     },
@@ -15373,14 +15373,14 @@
           "cosine_similarity": 0.86558022
         },
         {
+          "identifier": "GO:0097618",
+          "label": "dinoflagellate sulcal notch",
+          "cosine_similarity": 0.8461375
+        },
+        {
           "identifier": "GO:0097614",
           "label": "dinoflagellate hypocone",
           "cosine_similarity": 0.83568286
-        },
-        {
-          "identifier": "GO:0097613",
-          "label": "dinoflagellate epicone",
-          "cosine_similarity": 0.8352246
         }
       ]
     },
@@ -15509,6 +15509,37 @@
       ]
     },
     {
+      "identifier": "GO:0097618",
+      "label": "dinoflagellate sulcal notch",
+      "neighbors": [
+        {
+          "identifier": "GO:0097612",
+          "label": "dinoflagellate sulcus",
+          "cosine_similarity": 0.91648674
+        },
+        {
+          "identifier": "GO:0097684",
+          "label": "dinoflagellate antapex",
+          "cosine_similarity": 0.88978008
+        },
+        {
+          "identifier": "GO:0097614",
+          "label": "dinoflagellate hypocone",
+          "cosine_similarity": 0.86192193
+        },
+        {
+          "identifier": "GO:0097611",
+          "label": "dinoflagellate cingulum",
+          "cosine_similarity": 0.86134131
+        },
+        {
+          "identifier": "GO:0097687",
+          "label": "dinoflagellate antapical horn",
+          "cosine_similarity": 0.84869398
+        }
+      ]
+    },
+    {
       "identifier": "GO:0097612",
       "label": "dinoflagellate sulcus",
       "neighbors": [
@@ -15516,6 +15547,11 @@
           "identifier": "GO:0097611",
           "label": "dinoflagellate cingulum",
           "cosine_similarity": 0.92568474
+        },
+        {
+          "identifier": "GO:0097618",
+          "label": "dinoflagellate sulcal notch",
+          "cosine_similarity": 0.91648674
         },
         {
           "identifier": "GO:0097685",
@@ -15531,11 +15567,6 @@
           "identifier": "GO:0097684",
           "label": "dinoflagellate antapex",
           "cosine_similarity": 0.86644488
-        },
-        {
-          "identifier": "GO:0097613",
-          "label": "dinoflagellate epicone",
-          "cosine_similarity": 0.86021615
         }
       ]
     },
