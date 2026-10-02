@@ -16594,6 +16594,37 @@
       ]
     },
     {
+      "identifier": "GO:0030700",
+      "label": "glycine reductase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.69356343
+        },
+        {
+          "identifier": "GO:0045283",
+          "label": "fumarate reductase complex",
+          "cosine_similarity": 0.6603281
+        },
+        {
+          "identifier": "GO:0160292",
+          "label": "sodium-translocating NADH:quinone reductase complex",
+          "cosine_similarity": 0.65305936
+        },
+        {
+          "identifier": "GO:1903095",
+          "label": "ribonuclease III complex",
+          "cosine_similarity": 0.65300759
+        },
+        {
+          "identifier": "GO:0044674",
+          "label": "methyl coenzyme M reductase complex",
+          "cosine_similarity": 0.63499305
+        }
+      ]
+    },
+    {
       "identifier": "GO:0042765",
       "label": "GPI-anchor transamidase complex",
       "neighbors": [
