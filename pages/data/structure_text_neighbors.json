@@ -891,6 +891,11 @@
           "cosine_similarity": 0.5575739
         },
         {
+          "identifier": "GO:0097614",
+          "label": "dinoflagellate hypocone",
+          "cosine_similarity": 0.55757301
+        },
+        {
           "identifier": "cellstructuremech:archaeal_cannula",
           "label": "archaeal cannula",
           "cosine_similarity": 0.55634317
@@ -899,11 +904,6 @@
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
           "cosine_similarity": 0.55588219
-        },
-        {
-          "identifier": "GO:0009424",
-          "label": "bacterial-type flagellum hook",
-          "cosine_similarity": 0.55245531
         }
       ]
     },
@@ -6626,6 +6626,11 @@
           "cosine_similarity": 0.74995545
         },
         {
+          "identifier": "GO:0097614",
+          "label": "dinoflagellate hypocone",
+          "cosine_similarity": 0.63295435
+        },
+        {
           "identifier": "cellstructuremech:parasporal_crystal",
           "label": "parasporal crystal",
           "cosine_similarity": 0.6304028
@@ -6634,11 +6639,6 @@
           "identifier": "GO:0097611",
           "label": "dinoflagellate cingulum",
           "cosine_similarity": 0.62986643
-        },
-        {
-          "identifier": "GO:0033114",
-          "label": "cyanelle thylakoid lumen",
-          "cosine_similarity": 0.62870018
         }
       ]
     },
@@ -15275,6 +15275,11 @@
           "cosine_similarity": 0.88145177
         },
         {
+          "identifier": "GO:0097614",
+          "label": "dinoflagellate hypocone",
+          "cosine_similarity": 0.83568286
+        },
+        {
           "identifier": "GO:0097613",
           "label": "dinoflagellate epicone",
           "cosine_similarity": 0.8352246
@@ -15283,11 +15288,6 @@
           "identifier": "GO:0009532",
           "label": "plastid stroma",
           "cosine_similarity": 0.70892215
-        },
-        {
-          "identifier": "GO:0034060",
-          "label": "cyanelle stroma",
-          "cosine_similarity": 0.69842016
         }
       ]
     },
@@ -15306,6 +15306,11 @@
           "cosine_similarity": 0.90864046
         },
         {
+          "identifier": "GO:0097614",
+          "label": "dinoflagellate hypocone",
+          "cosine_similarity": 0.90264215
+        },
+        {
           "identifier": "GO:0097613",
           "label": "dinoflagellate epicone",
           "cosine_similarity": 0.90198699
@@ -15314,11 +15319,6 @@
           "identifier": "GO:0005641",
           "label": "nuclear envelope lumen",
           "cosine_similarity": 0.73119312
-        },
-        {
-          "identifier": "GO:0009532",
-          "label": "plastid stroma",
-          "cosine_similarity": 0.72884142
         }
       ]
     },
@@ -15326,6 +15326,11 @@
       "identifier": "GO:0097613",
       "label": "dinoflagellate epicone",
       "neighbors": [
+        {
+          "identifier": "GO:0097614",
+          "label": "dinoflagellate hypocone",
+          "cosine_similarity": 0.92179925
+        },
         {
           "identifier": "GO:0097611",
           "label": "dinoflagellate cingulum",
@@ -15345,11 +15350,37 @@
           "identifier": "GO:0005641",
           "label": "nuclear envelope lumen",
           "cosine_similarity": 0.6980959
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097614",
+      "label": "dinoflagellate hypocone",
+      "neighbors": [
+        {
+          "identifier": "GO:0097613",
+          "label": "dinoflagellate epicone",
+          "cosine_similarity": 0.92179925
+        },
+        {
+          "identifier": "GO:0097611",
+          "label": "dinoflagellate cingulum",
+          "cosine_similarity": 0.90264215
+        },
+        {
+          "identifier": "GO:0097612",
+          "label": "dinoflagellate sulcus",
+          "cosine_similarity": 0.87403046
+        },
+        {
+          "identifier": "GO:0097685",
+          "label": "dinoflagellate apical groove",
+          "cosine_similarity": 0.83568286
         },
         {
           "identifier": "GO:0033114",
           "label": "cyanelle thylakoid lumen",
-          "cosine_similarity": 0.69719972
+          "cosine_similarity": 0.73330243
         }
       ]
     },
@@ -15368,6 +15399,11 @@
           "cosine_similarity": 0.88145177
         },
         {
+          "identifier": "GO:0097614",
+          "label": "dinoflagellate hypocone",
+          "cosine_similarity": 0.87403046
+        },
+        {
           "identifier": "GO:0097613",
           "label": "dinoflagellate epicone",
           "cosine_similarity": 0.86021615
@@ -15376,11 +15412,6 @@
           "identifier": "GO:0009532",
           "label": "plastid stroma",
           "cosine_similarity": 0.693262
-        },
-        {
-          "identifier": "GO:0034060",
-          "label": "cyanelle stroma",
-          "cosine_similarity": 0.68591505
         }
       ]
     },

@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_hypocone.yaml
+  slug: dinoflagellate_hypocone
+session:
+  id: 2026-10-02T185144Z-codex-a57087
+  timestamp: '2026-10-02T18:51:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-backed dinoflagellate hypocone record
+  details: Created data/structures/other/dinoflagellate_hypocone.yaml for GO:0097614 with
+    GO synonymy, GO:0110165 parentage, GO:0097684 antapex has-part topology, Dinophyceae taxon
+    scope, adjacent cingulum and epicone evidence, and curation discussions for molecular-component
+    and boundary follow-up.

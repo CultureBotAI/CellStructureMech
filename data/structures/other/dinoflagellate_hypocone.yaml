@@ -1,0 +1,241 @@
+identifier: GO:0097614
+label: dinoflagellate hypocone
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: The part of a dinoflagellate cell below the cingulum; also referred to
+  as the posterior portion of a dinoflagellate cell. It is separated from the epicone
+  by the cingulum.
+definition_source: GO:0097614
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T18:49:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T18:50:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO hypocone synonymy, GO cellular-anatomical-structure parentage,
+    dinoflagellate antapex part topology, Dinophyceae taxon evidence, record-level
+    adjacent GO evidence, and curation discussions for molecular components and the
+    hypocone/antapex and hypocone/epicone boundaries.
+  llm_assisted: true
+- timestamp: '2026-10-02T19:06:25Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1933 review issues #1934 and #1935 by adding the reciprocal
+    cingulum-to-epicone boundary edge and modeling GO:0097618 dinoflagellate sulcal
+    notch as a sulcus subclass that extends to the antapex and changes hypocone appearance.'
+  llm_assisted: true
+synonyms:
+- synonym_text: hypocone
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097614
+- synonym_text: hyposome
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097614
+- synonym_text: hypotheca
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097614
+parent_structures:
+- GO:0110165
+has_part:
+- GO:0097684
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: GO:0097614 defines the dinoflagellate hypocone as the part of a dinoflagellate
+    cell below the cingulum.
+  reference: GO:0097614
+evidence:
+- reference: GO:0097614
+  notes: Gene Ontology cellular-component term for the dinoflagellate hypocone.
+- reference: GO:0110165
+  notes: Gene Ontology cellular-component parent term for cellular anatomical structure.
+- reference: GO:0097684
+  notes: Gene Ontology cellular-component term for the dinoflagellate antapex, which
+    QuickGO lists as a part_of child of GO:0097614.
+- reference: GO:0097618
+  notes: Gene Ontology cellular-component term for the dinoflagellate sulcal notch,
+    a narrower sulcus morphology that extends to the antapex and can make the hypocone
+    appear bilobed.
+- reference: GO:0097612
+  notes: Gene Ontology cellular-component term for the dinoflagellate sulcus, the
+    parent class of GO:0097618.
+- reference: GO:0097611
+  notes: Gene Ontology cellular-component term for the dinoflagellate cingulum named
+    in the GO:0097614 definition.
+- reference: GO:0097613
+  notes: Gene Ontology cellular-component term for the dinoflagellate epicone named
+    in the GO:0097614 definition.
+causal_graphs:
+- graph_id: hypocone_topology
+  title: Hypocone topology
+  description: The dinoflagellate hypocone is a cellular anatomical structure that
+    has the dinoflagellate antapex as a part, lies posterior to the epicone, is separated
+    from the epicone by the cingulum, and can appear bilobed when a sulcal notch extends
+    to the antapex.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO is-a and part-of topology for the hypocone region,
+    not a molecular assembly or physiological mechanism.
+  nodes:
+  - node_id: dinoflagellate_hypocone
+    label: dinoflagellate hypocone
+    node_type: STRUCTURE
+    grounding: GO:0097614
+  - node_id: cellular_anatomical_structure
+    label: cellular anatomical structure
+    node_type: STRUCTURE
+    grounding: GO:0110165
+  - node_id: dinoflagellate_antapex
+    label: dinoflagellate antapex
+    node_type: STRUCTURE
+    grounding: GO:0097684
+  - node_id: dinoflagellate_cingulum
+    label: dinoflagellate cingulum
+    node_type: STRUCTURE
+    grounding: GO:0097611
+  - node_id: dinoflagellate_epicone
+    label: dinoflagellate epicone
+    node_type: STRUCTURE
+    grounding: GO:0097613
+  - node_id: dinoflagellate_sulcus
+    label: dinoflagellate sulcus
+    node_type: STRUCTURE
+    grounding: GO:0097612
+  - node_id: dinoflagellate_sulcal_notch
+    label: dinoflagellate sulcal notch
+    node_type: STRUCTURE
+    grounding: GO:0097618
+  edges:
+  - subject: dinoflagellate_hypocone
+    predicate: is a
+    object: cellular_anatomical_structure
+    description: GO classifies the dinoflagellate hypocone as a cellular anatomical
+      structure.
+    evidence:
+    - reference: GO:0097614
+      notes: The GO graph links GO:0097614 to GO:0110165 by rdfs:subClassOf.
+  - subject: dinoflagellate_hypocone
+    predicate: has part
+    object: dinoflagellate_antapex
+    description: GO places the dinoflagellate antapex in the hypocone.
+    evidence:
+    - reference: GO:0097614
+      notes: The QuickGO GO:0097614 payload lists GO:0097684 as a part_of child term.
+  - subject: dinoflagellate_hypocone
+    predicate: is separated from
+    object: dinoflagellate_epicone
+    description: GO defines the dinoflagellate hypocone as separated from the epicone
+      by the cingulum.
+    evidence:
+    - reference: GO:0097614
+      notes: The GO:0097614 definition describes the cingulum as separating the hypocone
+        from the epicone.
+  - subject: dinoflagellate_cingulum
+    predicate: separates
+    object: dinoflagellate_hypocone
+    description: The cingulum forms the boundary above the hypocone that separates
+      the hypocone from the epicone.
+    evidence:
+    - reference: GO:0097614
+      notes: The GO:0097614 definition states that the hypocone is separated from
+        the epicone by the cingulum.
+  - subject: dinoflagellate_cingulum
+    predicate: separates
+    object: dinoflagellate_epicone
+    description: The cingulum separates the posterior hypocone from the anterior epicone.
+    evidence:
+    - reference: GO:0097614
+      notes: The GO:0097614 definition states that the hypocone is separated from
+        the epicone by the cingulum.
+  - subject: dinoflagellate_sulcal_notch
+    predicate: is a
+    object: dinoflagellate_sulcus
+    description: GO classifies the dinoflagellate sulcal notch as a specialized dinoflagellate
+      sulcus.
+    evidence:
+    - reference: GO:0097618
+      notes: The GO graph links GO:0097618 to GO:0097612 by rdfs:subClassOf.
+  - subject: dinoflagellate_sulcal_notch
+    predicate: extends to
+    object: dinoflagellate_antapex
+    description: The sulcal notch reaches the antapex at the posterior end of the
+      cell.
+    evidence:
+    - reference: GO:0097618
+      notes: The GO:0097618 definition defines a sulcal notch as a dinoflagellate
+        sulcus that extends to the posterior antapex.
+  - subject: dinoflagellate_sulcal_notch
+    predicate: gives bilobed appearance to
+    object: dinoflagellate_hypocone
+    description: A sulcal notch can make the dinoflagellate hypocone appear bilobed.
+    evidence:
+    - reference: GO:0097618
+      notes: The GO:0097618 definition states that a sulcal notch makes the dinoflagellate
+        hypocone appear bilobed.
+discussions:
+- discussion_id: resolve_hypocone_molecular_constituents
+  prompt: Add hypocone molecular components only after directly localized constituents
+    and exact source-neutral family groundings have been identified.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO defines the dinoflagellate hypocone as a subcellular region below
+    the cingulum, but this pass did not find exact family-level evidence for hypocone-specific
+    molecular constituents.
+  evidence:
+  - reference: GO:0097614
+  posed_by: codex
+  posed_date: '2026-10-02'
+- discussion_id: antapex_is_narrower_than_hypocone
+  prompt: Keep dinoflagellate antapex separate from the general dinoflagellate hypocone
+    unless curating the narrower GO:0097684 class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: QuickGO lists GO:0097684 as a part_of child of GO:0097614, so the dinoflagellate
+    antapex should be modeled as a hypocone part rather than folded into the whole
+    hypocone record as an exact synonym.
+  evidence:
+  - reference: GO:0097614
+  - reference: GO:0097684
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
+  resolution_note: Model GO:0097614 as the whole posterior hypocone region and leave
+    the antapex for separate GO:0097684 curation.
+- discussion_id: epicone_is_sibling
+  prompt: Keep dinoflagellate epicone separate from the dinoflagellate hypocone because
+    GO models it as the anterior counterpart.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0097613 is the anterior counterpart of GO:0097614 and is separated
+    from the hypocone by the cingulum, so it should not be modeled as a synonym or
+    part of the posterior hypocone region.
+  evidence:
+  - reference: GO:0097614
+  - reference: GO:0097613
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
+  resolution_note: Model GO:0097614 as the posterior dinoflagellate hypocone and keep
+    the anterior epicone in GO:0097613.
+- discussion_id: sulcal_notch_is_sulcus_subclass
+  prompt: Keep dinoflagellate sulcal notch separate from the whole dinoflagellate
+    hypocone unless curating the narrower GO:0097618 class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: GO:0097618 is a subclass of the dinoflagellate sulcus that extends to
+    the antapex and can make the hypocone appear bilobed; it is adjacent to the hypocone
+    boundary rather than a subtype or synonym of the whole posterior hypocone.
+  evidence:
+  - reference: GO:0097614
+  - reference: GO:0097618
+  - reference: GO:0097612
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
+  resolution_note: Model GO:0097614 as the whole posterior hypocone region and leave
+    the sulcal notch for separate GO:0097618 curation.

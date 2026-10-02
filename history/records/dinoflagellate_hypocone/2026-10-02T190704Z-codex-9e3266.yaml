@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_hypocone.yaml
+  slug: dinoflagellate_hypocone
+session:
+  id: 2026-10-02T190704Z-codex-9e3266
+  timestamp: '2026-10-02T19:07:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1934
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1935
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1933
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed dinoflagellate hypocone PR review
+  details: 'Addressed PR #1933 review findings by adding the reciprocal cingulum-to-epicone
+    boundary edge and modeling GO:0097618 dinoflagellate sulcal notch as a dinoflagellate
+    sulcus subclass that reaches the antapex and can make the hypocone appear bilobed.'
