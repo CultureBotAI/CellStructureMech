@@ -13534,6 +13534,11 @@
           "cosine_similarity": 0.969758
         },
         {
+          "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.9200638
+        },
+        {
           "identifier": "GO:1990196",
           "label": "MacAB-TolC complex",
           "cosine_similarity": 0.80096702
@@ -13547,11 +13552,6 @@
           "identifier": "GO:0031317",
           "label": "tripartite ATP-independent periplasmic transporter complex",
           "cosine_similarity": 0.77211125
-        },
-        {
-          "identifier": "GO:0030256",
-          "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.77193145
         }
       ]
     },
@@ -13563,6 +13563,11 @@
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.969758
+        },
+        {
+          "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.90770589
         },
         {
           "identifier": "GO:1990196",
@@ -13578,11 +13583,6 @@
           "identifier": "GO:1990207",
           "label": "EmrE multidrug transporter complex",
           "cosine_similarity": 0.78443239
-        },
-        {
-          "identifier": "GO:0031317",
-          "label": "tripartite ATP-independent periplasmic transporter complex",
-          "cosine_similarity": 0.774661
         }
       ]
     },
@@ -16098,9 +16098,45 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
+      "label": "EmrAB-TolC multidrug efflux transport complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.9200638
+        },
+        {
+          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAD-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.90770589
+        },
+        {
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.84354349
+        },
+        {
+          "identifier": "GO:1990196",
+          "label": "MacAB-TolC complex",
+          "cosine_similarity": 0.80540736
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.75550184
+        }
+      ]
+    },
+    {
       "identifier": "GO:1990207",
       "label": "EmrE multidrug transporter complex",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.84354349
+        },
         {
           "identifier": "GO:0031317",
           "label": "tripartite ATP-independent periplasmic transporter complex",
@@ -16120,11 +16156,6 @@
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.79650194
-        },
-        {
-          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
-          "label": "AcrAD-TolC multidrug efflux transport complex",
-          "cosine_similarity": 0.78443239
         }
       ]
     },
@@ -17347,6 +17378,11 @@
           "cosine_similarity": 0.72760636
         },
         {
+          "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.7263125
+        },
+        {
           "identifier": "GO:0031317",
           "label": "tripartite ATP-independent periplasmic transporter complex",
           "cosine_similarity": 0.72516399
@@ -17360,11 +17396,6 @@
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.71044166
-        },
-        {
-          "identifier": "GO:1990199",
-          "label": "MsbA transporter complex",
-          "cosine_similarity": 0.70289139
         }
       ]
     },
@@ -17409,6 +17440,11 @@
           "cosine_similarity": 0.80959941
         },
         {
+          "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.80540736
+        },
+        {
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.80096702
@@ -17422,11 +17458,6 @@
           "identifier": "GO:1990207",
           "label": "EmrE multidrug transporter complex",
           "cosine_similarity": 0.73124832
-        },
-        {
-          "identifier": "GO:0031317",
-          "label": "tripartite ATP-independent periplasmic transporter complex",
-          "cosine_similarity": 0.7253221
         }
       ]
     },
@@ -17548,9 +17579,9 @@
           "cosine_similarity": 0.73967434
         },
         {
-          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
-          "label": "AcrAD-TolC multidrug efflux transport complex",
-          "cosine_similarity": 0.7315143
+          "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.73684903
         }
       ]
     },

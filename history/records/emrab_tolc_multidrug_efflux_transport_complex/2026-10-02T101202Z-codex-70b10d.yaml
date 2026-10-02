@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+  slug: emrab_tolc_multidrug_efflux_transport_complex
+session:
+  id: 2026-10-02T101202Z-codex-70b10d
+  timestamp: '2026-10-02T10:12:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add EmrAB-TolC multidrug efflux transport complex record
+  details: Created the EmrAB-TolC multidrug efflux transport complex record with reviewed-label-only
+    EmrA, InterPro-grounded EmrB and TolC components, E. coli K-12 reviewed UniProt examples,
+    exact Complex Portal CPX-4268 heterodecamer composition, PDB:8ZAL structural evidence,
+    GO xenobiotic transport function, and an open EmrA component-family grounding TODO.

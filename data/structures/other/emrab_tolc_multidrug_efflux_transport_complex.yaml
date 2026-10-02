@@ -1,0 +1,353 @@
+identifier: cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+label: EmrAB-TolC multidrug efflux transport complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An Escherichia coli MFS-family cell-envelope efflux pump complex composed
+  of EmrA, EmrB, and TolC subunits that exports hydrophobic xenobiotics across the
+  inner and outer membranes.
+definition_source: ComplexPortal:CPX-4268
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T10:09:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T10:11:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added CPX-4268/GO efflux-pump parentage, EmrA, EmrB, and TolC component
+    rows with E. coli K-12 reviewed UniProt examples, exact InterPro groundings for
+    EmrB and TolC, PDB/PubMed evidence, a compact xenobiotic export graph, the exact
+    Complex Portal heterodecamer source composition, and an EmrA component-family
+    grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: EmrAB-TolC multidrug efflux transport system
+  synonym_type: EXACT_SYNONYM
+  source: ComplexPortal:CPX-4268
+parent_structures:
+- GO:1990281
+components:
+- component_id: emra_membrane_fusion_protein
+  label: Multidrug export protein EmrA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - emrA
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro entries are broader membrane-fusion families or EmrA/FarA domain families
+    rather than an exact source-neutral EmrA family.
+  role: Periplasmic membrane-fusion adaptor subunit that links EmrB to the TolC outer-membrane
+    channel in the EmrAB-TolC conduit.
+  stoichiometry: 6 copies in the E. coli K-12 Complex Portal CPX-4268 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P27303
+    protein_label: Multidrug export protein EmrA
+    gene_symbol: emrA
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P27303
+      notes: Reviewed Swiss-Prot entry EMRA_ECOLI is the E. coli K-12 EmrA accession
+        and cross-references ComplexPortal:CPX-4268 and PDB:8ZAL.
+  evidence:
+  - reference: ComplexPortal:CPX-4268
+    notes: Complex Portal CPX-4268 curates P27303/EmrA as six copies in the E. coli
+      K-12 EmrAB-TolC multidrug efflux transport system.
+  - reference: UniProtKB:P27303
+    notes: UniProtKB P27303 is the reviewed E. coli K-12 entry for Multidrug export
+      protein EmrA.
+  - reference: PDB:8ZAL
+    notes: RCSB PDB:8ZAL is an EmrAB-TolC electron-microscopy structure with six modeled
+      EmrA chains.
+- component_id: emrb_inner_membrane_transporter
+  label: Multidrug export protein EmrB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR004638
+  gene_symbols:
+  - emrB
+  essentiality: ESSENTIAL
+  role: Inner-membrane MFS transporter subunit that forms the EmrAB core and exports
+    hydrophobic xenobiotics through the EmrA/TolC conduit.
+  stoichiometry: 1 copy in the E. coli K-12 Complex Portal CPX-4268 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P0AEJ0
+    protein_label: Multidrug export protein EmrB
+    gene_symbol: emrB
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P0AEJ0
+      notes: Reviewed Swiss-Prot entry EMRB_ECOLI is the E. coli K-12 EmrB accession
+        and cross-references ComplexPortal:CPX-4268 and PDB:8ZAL.
+  evidence:
+  - reference: ComplexPortal:CPX-4268
+    notes: Complex Portal CPX-4268 curates P0AEJ0/EmrB as the single E. coli K-12
+      EmrB copy in EmrAB-TolC.
+  - reference: UniProtKB:P0AEJ0
+    notes: UniProtKB P0AEJ0 is the reviewed E. coli K-12 entry for Multidrug export
+      protein EmrB.
+  - reference: InterPro:IPR004638
+    notes: InterPro IPR004638 is the Drug resistance transporter EmrB-like family
+      entry.
+  - reference: PDB:8ZAL
+    notes: RCSB PDB:8ZAL is an EmrAB-TolC electron-microscopy structure with one modeled
+      EmrB chain.
+- component_id: tolc_outer_membrane_channel
+  label: Outer membrane channel protein TolC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR058622
+  gene_symbols:
+  - tolC
+  essentiality: ESSENTIAL
+  role: Trimeric outer-membrane channel constituent that completes the EmrAB-TolC
+    cell-envelope efflux conduit.
+  stoichiometry: 3 copies in the E. coli K-12 Complex Portal CPX-4268 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P02930
+    protein_label: Outer membrane protein TolC
+    gene_symbol: tolC
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P02930
+      notes: Reviewed Swiss-Prot entry TOLC_ECOLI is the E. coli K-12 TolC accession
+        and cross-references ComplexPortal:CPX-4268 and PDB:8ZAL.
+  evidence:
+  - reference: ComplexPortal:CPX-4268
+    notes: Complex Portal CPX-4268 curates P02930/TolC as three copies in the E. coli
+      K-12 EmrAB-TolC multidrug efflux transport system.
+  - reference: UniProtKB:P02930
+    notes: UniProtKB P02930 is the reviewed E. coli K-12 entry for Outer membrane
+      protein TolC.
+  - reference: InterPro:IPR058622
+    notes: InterPro IPR058622 is the Outer membrane channel protein TolC family entry.
+  - reference: PDB:8ZAL
+    notes: RCSB PDB:8ZAL is an EmrAB-TolC electron-microscopy structure with three
+      modeled TolC chains.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Source strain for Complex Portal CPX-4268, which curates the heterodecameric
+    EmrAB-TolC pump with six EmrA, one EmrB, and three TolC subunits.
+  reference: ComplexPortal:CPX-4268
+functions:
+- function_id: xenobiotic_transmembrane_transport
+  label: xenobiotic transmembrane transporter activity
+  grounding: GO:0042910
+  description: The EmrAB-TolC complex exports hydrophobic xenobiotics across the E.
+    coli inner and outer membranes through the coupled EmrB transporter, EmrA adaptor,
+    and TolC channel.
+  evidence:
+  - reference: GO:0042910
+    notes: GO:0042910 is the molecular-function term for xenobiotic transmembrane
+      transporter activity.
+  - reference: ComplexPortal:CPX-4268
+    notes: Complex Portal cross-references GO:0042910 for the E. coli K-12 EmrAB-TolC
+      multidrug efflux transport system.
+  - reference: PMID:33065135
+    notes: Yousefian et al. 2021 structurally characterized the EmrAB-TolC efflux
+      complex from E. coli.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '10'
+  context: E. coli K-12 6xEmrA:1xEmrB:3xTolC heterodecamer in ComplexPortal:CPX-4268
+  reference: ComplexPortal:CPX-4268
+evidence:
+- reference: ComplexPortal:CPX-4268
+  notes: Complex Portal entry for the E. coli K-12 EmrAB-TolC multidrug efflux transport
+    system.
+- reference: GO:1990281
+  notes: Gene Ontology cellular-component parent term for efflux pump complexes.
+- reference: GO:0042910
+  notes: Gene Ontology molecular-function term for xenobiotic transmembrane transporter
+    activity.
+- reference: GO:0140330
+  notes: Gene Ontology biological-process term for xenobiotic detoxification by transmembrane
+    export across the cell outer membrane.
+- reference: InterPro:IPR004638
+  notes: InterPro family entry for Drug resistance transporter EmrB-like.
+- reference: InterPro:IPR058622
+  notes: InterPro family entry for Outer membrane channel protein TolC.
+- reference: UniProtKB:P27303
+  notes: Reviewed E. coli K-12 EmrA UniProtKB entry.
+- reference: UniProtKB:P0AEJ0
+  notes: Reviewed E. coli K-12 EmrB UniProtKB entry.
+- reference: UniProtKB:P02930
+  notes: Reviewed E. coli K-12 TolC UniProtKB entry.
+- reference: PDB:8ZAL
+  notes: RCSB Protein Data Bank entry for the EmrAB-TolC MFS-type tripartite multidrug
+    efflux pump EA electron-microscopy model.
+- reference: PMID:33065135
+  notes: PubMed identifier for Yousefian et al. 2021, Structural characterization
+    of the EmrAB-TolC efflux complex from E. coli.
+- reference: DOI:10.1016/j.bbamem.2020.183488
+  notes: DOI for Yousefian et al. 2021, Structural characterization of the EmrAB-TolC
+    efflux complex from E. coli.
+- reference: PMID:12482849
+  notes: PubMed identifier for Borges-Walmsley et al. 2003, Identification of oligomerization
+    and drug-binding domains of the membrane fusion protein EmrA.
+- reference: DOI:10.1074/jbc.M209457200
+  notes: DOI for Borges-Walmsley et al. 2003, Identification of oligomerization and
+    drug-binding domains of the membrane fusion protein EmrA.
+- reference: PMID:41839863
+  notes: PubMed identifier for Zhong et al. 2026, A model for drug transport across
+    two membranes of Gram-negative bacteria by an MFS tripartite assembly.
+- reference: DOI:10.1038/s41467-026-70500-5
+  notes: DOI for Zhong et al. 2026, A model for drug transport across two membranes
+    of Gram-negative bacteria by an MFS tripartite assembly.
+causal_graphs:
+- graph_id: emrab_tolc_xenobiotic_efflux
+  title: EmrAB-TolC exports hydrophobic xenobiotics across the cell envelope
+  description: EmrB, EmrA, and TolC form an envelope-spanning MFS-type efflux pump
+    that exports hydrophobic xenobiotics from E. coli.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three-protein EmrAB-TolC boundary and whole-complex
+    xenobiotic export function without resolving MFS antiport states, substrate-binding
+    residues, or TolC gate opening.
+  nodes:
+  - node_id: emrab_tolc
+    label: EmrAB-TolC multidrug efflux transport complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  - node_id: emra
+    label: Multidrug export protein EmrA
+    node_type: GENE_OR_PROTEIN
+    component_ref: emra_membrane_fusion_protein
+  - node_id: emrb
+    label: Multidrug export protein EmrB
+    node_type: GENE_OR_PROTEIN
+    component_ref: emrb_inner_membrane_transporter
+    grounding: InterPro:IPR004638
+  - node_id: tolc
+    label: Outer membrane channel protein TolC
+    node_type: GENE_OR_PROTEIN
+    component_ref: tolc_outer_membrane_channel
+    grounding: InterPro:IPR058622
+  - node_id: xenobiotic_transport
+    label: xenobiotic transmembrane transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0042910
+  - node_id: outer_membrane_export
+    label: xenobiotic detoxification by transmembrane export across the cell outer
+      membrane
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0140330
+  - node_id: hydrophobic_xenobiotic
+    label: hydrophobic xenobiotic substrate
+    node_type: CHEMICAL
+  - node_id: cell_exterior
+    label: cell exterior
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: emrb
+    predicate: couples to
+    object: emra
+    description: EmrB forms the inner-membrane MFS transporter core and couples to
+      EmrA adaptor subunits.
+    evidence:
+    - reference: ComplexPortal:CPX-4268
+      notes: CPX-4268 curates EmrA and EmrB as participants in the E. coli EmrAB-TolC
+        pump.
+  - subject: emra
+    predicate: couples to
+    object: tolc
+    description: EmrA adaptor subunits connect the EmrB transporter to the TolC outer-membrane
+      channel.
+    evidence:
+    - reference: PMID:33065135
+      notes: Yousefian et al. 2021 structurally characterized the EmrAB-TolC complex.
+  - subject: emrab_tolc
+    predicate: enables
+    object: xenobiotic_transport
+    description: The assembled EmrAB-TolC complex enables xenobiotic transmembrane
+      transporter activity.
+    evidence:
+    - reference: ComplexPortal:CPX-4268
+      notes: Complex Portal cross-references GO:0042910 for the EmrAB-TolC complex.
+  - subject: xenobiotic_transport
+    predicate: transports
+    object: hydrophobic_xenobiotic
+    description: EmrAB-TolC exports hydrophobic xenobiotics through the tripartite
+      pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4268
+      notes: CPX-4268 summarizes the EmrAB-TolC system as transporting hydrophobic
+        xenobiotics such as CCCP and steroid hormones.
+  - subject: outer_membrane_export
+    predicate: targets
+    object: cell_exterior
+    description: The EmrAB-TolC pump contributes to xenobiotic export across the outer
+      membrane and out of the cell envelope.
+    evidence:
+    - reference: GO:0140330
+      notes: GO:0140330 describes reducing xenobiotic toxicity by export through the
+        outer membrane.
+discussions:
+- discussion_id: emrab_tolc_component_family_grounding
+  prompt: Resolve an exact source-neutral EmrA protein family before replacing the
+    reviewed-label-only component row.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#emra_membrane_fusion_protein
+  rationale: ComplexPortal:CPX-4268 and the reviewed E. coli K-12 UniProt record exactly
+    identify EmrA, but no InterPro, Pfam, NCBIfam, or GO accession was verified as
+    an exact source-neutral family for this named pump constituent; EmrB and TolC
+    are grounded to InterPro:IPR004638 and InterPro:IPR058622.
+  evidence:
+  - reference: ComplexPortal:CPX-4268
+    notes: CPX-4268 curates the E. coli K-12 EmrA, EmrB, and TolC participants.
+  - reference: InterPro:IPR004638
+    notes: InterPro IPR004638 is the Drug resistance transporter EmrB-like family
+      entry.
+  - reference: InterPro:IPR058622
+    notes: InterPro IPR058622 is the exact Outer membrane channel protein TolC family
+      entry.
+  posed_by: codex
+  posed_date: '2026-10-02'
+complex_compositions:
+- composition_id: complex_portal_cpx_4268
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-4268
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-4268
+  complex_label: EmrAB-TolC multidrug efflux transport system
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  assembly: Heterodecamer
+  evidence_code: ECO:0005547
+  participants:
+  - participant_id: UniProtKB:P27303
+    label: Multidrug export protein EmrA
+    participant_type: protein
+    gene_symbol: emrA
+    stoichiometry: '6'
+    source_interactor_id: EBI-21407298
+  - participant_id: UniProtKB:P0AEJ0
+    label: Multidrug export protein EmrB
+    participant_type: protein
+    gene_symbol: emrB
+    stoichiometry: '1'
+    source_interactor_id: EBI-21407257
+  - participant_id: UniProtKB:P02930
+    label: Outer membrane protein TolC
+    participant_type: protein
+    gene_symbol: tolC
+    stoichiometry: '3'
+    source_interactor_id: EBI-21407260
+  retrieved_on: '2026-10-02'
+  notes: 'Curator-scoped import: E. coli K-12 EmrAB-TolC source composition for this
+    record. Source evidence: inferred by curator. The accession was resolved through
+    the Complex Portal accession endpoint; no equivalence xref was inferred.'
