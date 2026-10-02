@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_apex.yaml
+  slug: dinoflagellate_apex
+session:
+  id: 2026-10-02T193652Z-codex-79f04e
+  timestamp: '2026-10-02T19:36:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-backed dinoflagellate apex record
+  details: Created data/structures/other/dinoflagellate_apex.yaml for GO:0097683 with GO broad
+    synonymy, GO:0110165 parentage, GO:0097613 epicone parthood, apical-horn and apical-groove
+    topology, Dinophyceae taxon scope, Taylor 1980 metadata-only bibliographic evidence, and
+    curation discussions for molecular-component and apex/apical-horn follow-up.
