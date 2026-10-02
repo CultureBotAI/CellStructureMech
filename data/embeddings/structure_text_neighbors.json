@@ -15745,14 +15745,14 @@
           "cosine_similarity": 0.70726103
         },
         {
+          "identifier": "GO:0005960",
+          "label": "glycine cleavage complex",
+          "cosine_similarity": 0.69416357
+        },
+        {
           "identifier": "GO:7770085",
           "label": "protocatechuate 3,4-dioxygenase complex",
           "cosine_similarity": 0.68858729
-        },
-        {
-          "identifier": "GO:1990202",
-          "label": "FMN reductase complex",
-          "cosine_similarity": 0.68841281
         }
       ]
     },
@@ -16594,9 +16594,45 @@
       ]
     },
     {
+      "identifier": "GO:0005960",
+      "label": "glycine cleavage complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030700",
+          "label": "glycine reductase complex",
+          "cosine_similarity": 0.81877749
+        },
+        {
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.69416357
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.66803464
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.66166872
+        },
+        {
+          "identifier": "GO:0032299",
+          "label": "ribonuclease H2 complex",
+          "cosine_similarity": 0.65950946
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030700",
       "label": "glycine reductase complex",
       "neighbors": [
+        {
+          "identifier": "GO:0005960",
+          "label": "glycine cleavage complex",
+          "cosine_similarity": 0.81877749
+        },
         {
           "identifier": "GO:1990202",
           "label": "FMN reductase complex",
@@ -16616,11 +16652,6 @@
           "identifier": "GO:1903095",
           "label": "ribonuclease III complex",
           "cosine_similarity": 0.65300759
-        },
-        {
-          "identifier": "GO:0044674",
-          "label": "methyl coenzyme M reductase complex",
-          "cosine_similarity": 0.63499305
         }
       ]
     },
