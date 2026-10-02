@@ -13544,14 +13544,14 @@
           "cosine_similarity": 0.90453141
         },
         {
+          "identifier": "cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrKY-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.89845201
+        },
+        {
           "identifier": "cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex",
           "label": "MdtABC-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.83527914
-        },
-        {
-          "identifier": "GO:1990196",
-          "label": "MacAB-TolC complex",
-          "cosine_similarity": 0.80096702
         }
       ]
     },
@@ -13575,14 +13575,14 @@
           "cosine_similarity": 0.90246513
         },
         {
+          "identifier": "cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrKY-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.87464145
+        },
+        {
           "identifier": "cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex",
           "label": "MdtABC-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.82853722
-        },
-        {
-          "identifier": "GO:1990196",
-          "label": "MacAB-TolC complex",
-          "cosine_similarity": 0.80959941
         }
       ]
     },
@@ -13606,14 +13606,14 @@
           "cosine_similarity": 0.88136493
         },
         {
+          "identifier": "cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrKY-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.8768465
+        },
+        {
           "identifier": "cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex",
           "label": "MdtABC-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.79195455
-        },
-        {
-          "identifier": "GO:1990196",
-          "label": "MacAB-TolC complex",
-          "cosine_similarity": 0.77425729
         }
       ]
     },
@@ -16133,6 +16133,11 @@
       "label": "EmrAB-TolC multidrug efflux transport complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrKY-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.94850047
+        },
+        {
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.9200638
@@ -16151,11 +16156,6 @@
           "identifier": "GO:1990207",
           "label": "EmrE multidrug transporter complex",
           "cosine_similarity": 0.84354349
-        },
-        {
-          "identifier": "cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex",
-          "label": "MdtABC-TolC multidrug efflux transport complex",
-          "cosine_similarity": 0.82000245
         }
       ]
     },
@@ -16167,6 +16167,11 @@
           "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
           "label": "EmrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.84354349
+        },
+        {
+          "identifier": "cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrKY-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.81250686
         },
         {
           "identifier": "GO:0031317",
@@ -16182,11 +16187,37 @@
           "identifier": "GO:1990199",
           "label": "MsbA transporter complex",
           "cosine_similarity": 0.79884734
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex",
+      "label": "EmrKY-TolC multidrug efflux transport complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.94850047
         },
         {
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
-          "cosine_similarity": 0.79650194
+          "cosine_similarity": 0.89845201
+        },
+        {
+          "identifier": "cellstructuremech:acref_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrEF-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.8768465
+        },
+        {
+          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAD-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.87464145
+        },
+        {
+          "identifier": "cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex",
+          "label": "MdtABC-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.8262615
         }
       ]
     },
@@ -17605,14 +17636,14 @@
           "cosine_similarity": 0.82853722
         },
         {
+          "identifier": "cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrKY-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.8262615
+        },
+        {
           "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
           "label": "EmrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.82000245
-        },
-        {
-          "identifier": "cellstructuremech:acref_tolc_multidrug_efflux_transport_complex",
-          "label": "AcrEF-TolC multidrug efflux transport complex",
-          "cosine_similarity": 0.79195455
         }
       ]
     },

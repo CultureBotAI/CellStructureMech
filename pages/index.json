@@ -4698,6 +4698,15 @@
   "definition": "A transmembrane protein complex capable of transporting positively charged hydrophobic drugs across the plasma membrane thereby involved in conferring resistance to a wide range of toxic compounds (e.g. methyl viologen, ethidium bromide and acriflavine). It is commonly found in bacteria. In E. coli it forms a homodimer."
  },
  {
+  "identifier": "cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex",
+  "label": "EmrKY-TolC multidrug efflux transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/emrky_tolc_multidrug_efflux_transport_complex.html",
+  "definition": "An Escherichia coli MFS-family cell-envelope efflux pump complex composed of EmrK, EmrY, and TolC subunits that exports xenobiotics, including antimicrobial compounds, from the cell."
+ },
+ {
   "identifier": "GO:0031205",
   "label": "endoplasmic reticulum Sec complex",
   "category": "OTHER",

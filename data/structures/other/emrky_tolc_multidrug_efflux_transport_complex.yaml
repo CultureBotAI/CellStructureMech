@@ -1,0 +1,316 @@
+identifier: cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+label: EmrKY-TolC multidrug efflux transport complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An Escherichia coli MFS-family cell-envelope efflux pump complex composed
+  of EmrK, EmrY, and TolC subunits that exports xenobiotics, including antimicrobial
+  compounds, from the cell.
+definition_source: ComplexPortal:CPX-4273
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T12:05:36Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T12:07:24Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added CPX-4273/GO efflux-pump parentage, EmrK, EmrY, and TolC component
+    rows with exact E. coli K-12 reviewed UniProt examples, an exact TolC InterPro
+    grounding, a compact xenobiotic export graph, the Complex Portal CPX-4273 source
+    composition, and component-family grounding TODOs for EmrK and EmrY.
+  llm_assisted: true
+synonyms:
+- synonym_text: EmrKY-TolC multidrug efflux transport system
+  synonym_type: EXACT_SYNONYM
+  source: ComplexPortal:CPX-4273
+parent_structures:
+- GO:1990281
+components:
+- component_id: emrk_membrane_fusion_protein
+  label: Probable multidrug resistance protein EmrK
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - emrK
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro entries are broader membrane-fusion protein families or domain entries
+    rather than an exact source-neutral EmrK family.
+  role: Periplasmic membrane-fusion adaptor constituent of the EmrKY-TolC tripartite
+    efflux system.
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P52599
+    protein_label: Probable multidrug resistance protein EmrK
+    gene_symbol: emrK
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P52599
+      notes: Reviewed Swiss-Prot entry EMRK_ECOLI is the E. coli K-12 EmrK accession
+        and cross-references ComplexPortal:CPX-4273.
+  evidence:
+  - reference: ComplexPortal:CPX-4273
+    notes: Complex Portal CPX-4273 curates P52599/EmrK as an E. coli K-12 EmrKY-TolC
+      multidrug efflux transport system participant.
+  - reference: UniProtKB:P52599
+    notes: UniProtKB P52599 is the reviewed E. coli K-12 entry for Probable multidrug
+      resistance protein EmrK.
+- component_id: emry_inner_membrane_transporter
+  label: Probable multidrug resistance protein EmrY
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - emrY
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro entries are broader EmrB-like and major facilitator superfamily entries
+    rather than an exact source-neutral EmrY family.
+  role: Inner-membrane MFS transporter constituent that forms the EmrKY transport
+    core with the EmrK adaptor.
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P52600
+    protein_label: Probable multidrug resistance protein EmrY
+    gene_symbol: emrY
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P52600
+      notes: Reviewed Swiss-Prot entry EMRY_ECOLI is the E. coli K-12 EmrY accession
+        and cross-references ComplexPortal:CPX-4273.
+  evidence:
+  - reference: ComplexPortal:CPX-4273
+    notes: Complex Portal CPX-4273 curates P52600/EmrY as an E. coli K-12 EmrKY-TolC
+      multidrug efflux transport system participant.
+  - reference: UniProtKB:P52600
+    notes: UniProtKB P52600 is the reviewed E. coli K-12 entry for Probable multidrug
+      resistance protein EmrY.
+- component_id: tolc_outer_membrane_channel
+  label: Outer membrane channel protein TolC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR058622
+  gene_symbols:
+  - tolC
+  essentiality: ESSENTIAL
+  role: Trimeric outer-membrane channel constituent that completes the EmrKY-TolC
+    cell-envelope efflux conduit.
+  stoichiometry: 3 copies in the E. coli K-12 Complex Portal CPX-4273 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P02930
+    protein_label: Outer membrane protein TolC
+    gene_symbol: tolC
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P02930
+      notes: Reviewed Swiss-Prot entry TOLC_ECOLI is the E. coli K-12 TolC accession
+        and cross-references ComplexPortal:CPX-4273.
+  evidence:
+  - reference: ComplexPortal:CPX-4273
+    notes: Complex Portal CPX-4273 curates P02930/TolC as three copies in the E. coli
+      K-12 EmrKY-TolC multidrug efflux transport system.
+  - reference: UniProtKB:P02930
+    notes: UniProtKB P02930 is the reviewed E. coli K-12 entry for Outer membrane
+      protein TolC.
+  - reference: InterPro:IPR058622
+    notes: InterPro IPR058622 is the Outer membrane channel protein TolC family entry.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Source strain for Complex Portal CPX-4273, which curates EmrK, EmrY, and TolC
+    as the participants of EmrKY-TolC.
+  reference: ComplexPortal:CPX-4273
+functions:
+- function_id: xenobiotic_transmembrane_transport
+  label: xenobiotic transmembrane transporter activity
+  grounding: GO:0042910
+  description: The EmrKY-TolC system exports xenobiotics such as drugs from E. coli
+    through the coupled EmrY transporter, EmrK adaptor, and TolC channel.
+  evidence:
+  - reference: GO:0042910
+    notes: GO:0042910 is the molecular-function term for xenobiotic transmembrane
+      transporter activity.
+  - reference: ComplexPortal:CPX-4273
+    notes: Complex Portal cross-references GO:0042910 for the E. coli K-12 EmrKY-TolC
+      multidrug efflux transport system.
+evidence:
+- reference: ComplexPortal:CPX-4273
+  notes: Complex Portal entry for the E. coli K-12 EmrKY-TolC multidrug efflux transport
+    system.
+- reference: GO:1990281
+  notes: Gene Ontology cellular-component parent term for efflux pump complexes.
+- reference: GO:0042910
+  notes: Gene Ontology molecular-function term for xenobiotic transmembrane transporter
+    activity.
+- reference: GO:0140330
+  notes: Gene Ontology biological-process term for xenobiotic detoxification by transmembrane
+    export across the cell outer membrane.
+- reference: InterPro:IPR058622
+  notes: InterPro family entry for Outer membrane channel protein TolC.
+- reference: UniProtKB:P52599
+  notes: Reviewed E. coli K-12 EmrK UniProtKB entry.
+- reference: UniProtKB:P52600
+  notes: Reviewed E. coli K-12 EmrY UniProtKB entry.
+- reference: UniProtKB:P02930
+  notes: Reviewed E. coli K-12 TolC UniProtKB entry.
+- reference: PMID:19721076
+  notes: PubMed identifier for May et al. 2009, Induction of multidrug resistance
+    mechanism in Escherichia coli biofilms by interplay between tetracycline and ampicillin
+    resistance genes.
+- reference: DOI:10.1128/AAC.00454-09
+  notes: DOI for May et al. 2009, Induction of multidrug resistance mechanism in Escherichia
+    coli biofilms by interplay between tetracycline and ampicillin resistance genes.
+causal_graphs:
+- graph_id: emrky_tolc_xenobiotic_efflux
+  title: EmrKY-TolC exports xenobiotics across the cell envelope
+  description: EmrY, EmrK, and TolC form an envelope-spanning MFS efflux pump that
+    exports xenobiotics from E. coli.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three-protein EmrKY-TolC boundary and whole-complex
+    xenobiotic export function without resolving MFS antiport states, substrate-binding
+    residues, or TolC gate opening.
+  nodes:
+  - node_id: emrky_tolc
+    label: EmrKY-TolC multidrug efflux transport complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  - node_id: emrk
+    label: Probable multidrug resistance protein EmrK
+    node_type: GENE_OR_PROTEIN
+    component_ref: emrk_membrane_fusion_protein
+  - node_id: emry
+    label: Probable multidrug resistance protein EmrY
+    node_type: GENE_OR_PROTEIN
+    component_ref: emry_inner_membrane_transporter
+  - node_id: tolc
+    label: Outer membrane channel protein TolC
+    node_type: GENE_OR_PROTEIN
+    component_ref: tolc_outer_membrane_channel
+    grounding: InterPro:IPR058622
+  - node_id: xenobiotic_transport
+    label: xenobiotic transmembrane transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0042910
+  - node_id: outer_membrane_export
+    label: xenobiotic detoxification by transmembrane export across the cell outer
+      membrane
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0140330
+  - node_id: xenobiotic
+    label: xenobiotic substrate
+    node_type: CHEMICAL
+  - node_id: cell_exterior
+    label: cell exterior
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: emry
+    predicate: couples to
+    object: emrk
+    description: EmrY forms the inner-membrane transporter core that couples to the
+      EmrK adaptor.
+    evidence:
+    - reference: ComplexPortal:CPX-4273
+      notes: CPX-4273 curates EmrK and EmrY as participants in the E. coli EmrKY-TolC
+        pump.
+  - subject: emrk
+    predicate: couples to
+    object: tolc
+    description: EmrK membrane-fusion adaptor subunits connect the EmrY transporter
+      to the TolC outer-membrane channel.
+    evidence:
+    - reference: UniProtKB:P52599
+      notes: UniProtKB describes EmrK as part of the tripartite EmrYK-TolC efflux
+        system and as the system's membrane-fusion protein.
+  - subject: emrky_tolc
+    predicate: enables
+    object: xenobiotic_transport
+    description: The assembled EmrKY-TolC complex enables xenobiotic transmembrane
+      transporter activity.
+    evidence:
+    - reference: ComplexPortal:CPX-4273
+      notes: Complex Portal cross-references GO:0042910 for the EmrKY-TolC complex.
+  - subject: xenobiotic_transport
+    predicate: transports
+    object: xenobiotic
+    description: EmrKY-TolC exports xenobiotics through the tripartite pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4273
+      notes: CPX-4273 summarizes the EmrKY-TolC system as responsible for transport
+        of xenobiotics such as drugs out of the cell.
+  - subject: outer_membrane_export
+    predicate: targets
+    object: cell_exterior
+    description: The EmrKY-TolC pump contributes to xenobiotic export across the outer
+      membrane and out of the cell envelope.
+    evidence:
+    - reference: GO:0140330
+      notes: GO:0140330 describes reducing xenobiotic toxicity by export through the
+        outer membrane.
+discussions:
+- discussion_id: emrky_tolc_component_family_grounding
+  prompt: Resolve exact source-neutral EmrK and EmrY protein families before replacing
+    the reviewed-label-only component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#emrk_membrane_fusion_protein
+  - components#emry_inner_membrane_transporter
+  rationale: ComplexPortal:CPX-4273 and the reviewed E. coli K-12 UniProt records
+    exactly identify EmrK and EmrY, but no InterPro, Pfam, NCBIfam, or GO accession
+    was verified as an exact source-neutral family for either named pump constituent;
+    TolC is grounded to InterPro:IPR058622.
+  evidence:
+  - reference: ComplexPortal:CPX-4273
+    notes: CPX-4273 curates the E. coli K-12 EmrK, EmrY, and TolC participants.
+  - reference: UniProtKB:P52599
+    notes: Reviewed E. coli K-12 EmrK UniProtKB entry.
+  - reference: UniProtKB:P52600
+    notes: Reviewed E. coli K-12 EmrY UniProtKB entry.
+  - reference: InterPro:IPR058622
+    notes: InterPro IPR058622 is the exact Outer membrane channel protein TolC family
+      entry.
+  posed_by: codex
+  posed_date: '2026-10-02'
+complex_compositions:
+- composition_id: complex_portal_cpx_4273
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-4273
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-4273
+  complex_label: EmrKY-TolC multidrug efflux transport system
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  evidence_code: ECO:0005547
+  participants:
+  - participant_id: UniProtKB:P52599
+    label: Probable multidrug resistance protein EmrK
+    participant_type: protein
+    gene_symbol: emrK
+    source_interactor_id: EBI-21418869
+  - participant_id: UniProtKB:P52600
+    label: Probable multidrug resistance protein EmrY
+    participant_type: protein
+    gene_symbol: emrY
+    source_interactor_id: EBI-21407650
+  - participant_id: UniProtKB:P02930
+    label: Outer membrane protein TolC
+    participant_type: protein
+    gene_symbol: tolC
+    stoichiometry: '3'
+    source_interactor_id: EBI-21419977
+  retrieved_on: '2026-10-02'
+  notes: 'Curator-scoped import: E. coli K-12 EmrKY-TolC source composition for this
+    record. Source evidence: inferred by curator. CPX-4273 does not supply an assembly
+    label, and its EmrK and EmrY participants have no source stoichiometry, so those
+    fields are omitted here. The accession was resolved through the Complex Portal
+    accession endpoint; no equivalence xref was inferred.'

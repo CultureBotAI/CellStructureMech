@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+  slug: emrky_tolc_multidrug_efflux_transport_complex
+session:
+  id: 2026-10-02T120805Z-codex-b84bda
+  timestamp: '2026-10-02T12:08:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add EmrKY-TolC multidrug efflux transport complex
+  details: Created a proposed EmrKY-TolC multidrug efflux transport complex record from ComplexPortal:CPX-4273
+    with GO efflux-pump parentage, reviewed E. coli K-12 UniProt examples for EmrK, EmrY,
+    and TolC, an exact TolC InterPro component grounding, reviewed-label-only component-family
+    notes for EmrK and EmrY, a compact xenobiotic export graph, the CPX-4273 source composition,
+    and PMID/DOI evidence from the Complex Portal-linked May et al. 2009 PubMed record.
