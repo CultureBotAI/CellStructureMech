@@ -19136,6 +19136,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:potabcd_spermidine_abc_transporter_complex",
+      "label": "PotABCD spermidine ABC transporter complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.70012661
+        },
+        {
+          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.68588164
+        },
+        {
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.68584168
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.66886038
+        },
+        {
+          "identifier": "GO:1990196",
+          "label": "MacAB-TolC complex",
+          "cosine_similarity": 0.65952705
+        }
+      ]
+    },
+    {
       "identifier": "GO:1990099",
       "label": "pre-primosome complex",
       "neighbors": [

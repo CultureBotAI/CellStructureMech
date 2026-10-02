@@ -5553,6 +5553,15 @@
   "definition": "A proteinaceous bacterial polar microdomain formed by PopZ polymers at Caulobacter cell poles that anchors the ParB-bound chromosomal origin and organizes pole-specific client proteins."
  },
  {
+  "identifier": "cellstructuremech:potabcd_spermidine_abc_transporter_complex",
+  "label": "PotABCD spermidine ABC transporter complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/potabcd_spermidine_abc_transporter_complex.html",
+  "definition": "An Escherichia coli PotABCD ATP-binding cassette importer composed of two PotA ATP-binding subunits, one PotB permease, one PotC permease, and one PotD periplasmic substrate-binding protein that imports spermidine and can also import putrescine."
+ },
+ {
   "identifier": "GO:1990099",
   "label": "pre-primosome complex",
   "category": "OTHER",
