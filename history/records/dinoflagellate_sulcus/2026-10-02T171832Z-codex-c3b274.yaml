@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_sulcus.yaml
+  slug: dinoflagellate_sulcus
+session:
+  id: 2026-10-02T171832Z-codex-c3b274
+  timestamp: '2026-10-02T17:18:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - evidence
+  - causal_graphs
+  - discussions
+  - generated_artifacts
+  summary: Add dinoflagellate sulcus record
+  details: Created a GO:0097612 dinoflagellate sulcus CellStructureMech record as an OTHER/SUBCELLULAR_REGION
+    ventral cell-surface-furrow structure with GO-backed sulcus synonymy, GO cell-surface-furrow
+    parentage, Dinophyceae taxon evidence, Taylor 1980 PMID/DOI metadata evidence, a nonmechanistic
+    sulcus/cingulum topology graph, generated embeddings/pages/docs, and an open curation
+    TODO for exact source-neutral sulcus component groundings.

@@ -1,0 +1,108 @@
+identifier: GO:0097612
+label: dinoflagellate sulcus
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: A cell surface furrow that occurs on the ventral side of a dinoflagellate
+  cell. It partially houses the longitudinal flagellum. The sulcus intersects with
+  the cingulum on the ventral side of a dinoflagellate cell.
+definition_source: GO:0097612
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T17:17:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T17:17:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO sulcus synonymy, GO cell-surface-furrow parentage, Dinophyceae
+    taxon evidence, record-level PMID/DOI evidence, a nonmechanistic sulcus/cingulum
+    topology graph, and a curation TODO for sulcus molecular components.
+  llm_assisted: true
+synonyms:
+- synonym_text: sulcus
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097612
+- synonym_text: longitudinal furrow
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097612
+- synonym_text: longitudinal groove
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097612
+parent_structures:
+- GO:0097610
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: GO:0097612 places this ventral cell-surface furrow in Dinophyceae and defines
+    it as partially housing the longitudinal flagellum.
+  reference: GO:0097612
+evidence:
+- reference: GO:0097612
+  notes: Gene Ontology cellular-component term for the dinoflagellate sulcus.
+- reference: GO:0097610
+  notes: Gene Ontology cellular-component parent term for cell surface furrow.
+- reference: PMID:7002229
+  notes: PubMed record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution
+    review cited by GO:0097612; EuropePMC reported no PMC, open-access, full-text,
+    or PDF route in this pass.
+- reference: DOI:10.1016/0303-2647(80)90006-4
+  notes: Crossref and EuropePMC metadata identify DOI:10.1016/0303-2647(80)90006-4
+    as the Taylor 1980 Biosystems review behind PMID:7002229; no article-body text
+    was reachable through the checked metadata routes, so this record uses it only
+    as bibliographic corroboration for the GO definition xref.
+discussions:
+- discussion_id: resolve_sulcus_molecular_constituents
+  prompt: Add sulcus molecular components only after directly localized constituents
+    and exact source-neutral family groundings have been identified.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO defines the dinoflagellate sulcus as a cell-surface furrow and places
+    it in Dinophyceae, but this pass did not find exact family-level evidence for
+    sulcus-specific molecular constituents.
+  evidence:
+  - reference: GO:0097612
+  - reference: PMID:7002229
+  posed_by: codex
+  posed_date: '2026-10-02'
+causal_graphs:
+- graph_id: sulcus_cingulum_topology
+  title: Sulcus-cingulum topology
+  description: The dinoflagellate sulcus is a ventral cell-surface furrow that intersects
+    the dinoflagellate cingulum.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO is-a topology and sulcus/cingulum surface-furrow
+    morphology, not a molecular assembly or motility mechanism.
+  nodes:
+  - node_id: dinoflagellate_sulcus
+    label: dinoflagellate sulcus
+    node_type: STRUCTURE
+    grounding: GO:0097612
+  - node_id: cell_surface_furrow
+    label: cell surface furrow
+    node_type: STRUCTURE
+    grounding: GO:0097610
+  - node_id: dinoflagellate_cingulum
+    label: dinoflagellate cingulum
+    node_type: STRUCTURE
+    grounding: GO:0097611
+  edges:
+  - subject: dinoflagellate_sulcus
+    predicate: is a
+    object: cell_surface_furrow
+    description: GO classifies the dinoflagellate sulcus as a cell-surface furrow.
+    evidence:
+    - reference: GO:0097612
+      notes: The GO graph links GO:0097612 to GO:0097610 by rdfs:subClassOf.
+  - subject: dinoflagellate_sulcus
+    predicate: intersects
+    object: dinoflagellate_cingulum
+    description: The sulcus intersects the cingulum on the ventral side of the dinoflagellate
+      cell.
+    evidence:
+    - reference: GO:0097612
+      notes: The GO:0097612 definition describes the dinoflagellate sulcus as intersecting
+        the cingulum ventrally.
