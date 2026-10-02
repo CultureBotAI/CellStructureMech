@@ -13,7 +13,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import difflib
 import filecmp
 import json
 import shutil
@@ -207,32 +206,6 @@ def _tree_differs(a: Path, b: Path) -> list[str]:
     return diffs
 
 
-def _text_diff(
-    rendered_root: Path, committed_root: Path, relative: str, *, max_lines: int = 80
-) -> str | None:
-    rendered = rendered_root / relative
-    committed = committed_root / relative
-    if not rendered.is_file() or not committed.is_file():
-        return None
-    try:
-        rendered_lines = rendered.read_text(encoding="utf-8").splitlines(keepends=True)
-        committed_lines = committed.read_text(encoding="utf-8").splitlines(keepends=True)
-    except UnicodeDecodeError:
-        return None
-
-    diff = list(
-        difflib.unified_diff(
-            committed_lines,
-            rendered_lines,
-            fromfile=f"{relative} (committed)",
-            tofile=f"{relative} (rendered)",
-        )
-    )
-    if len(diff) <= max_lines:
-        return "".join(diff)
-    return "".join(diff[:max_lines] + [f"... diff truncated at {max_lines} lines ...\n"])
-
-
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, default=PAGES_DIR)
@@ -241,20 +214,15 @@ def main() -> int:
 
     if args.check:
         with tempfile.TemporaryDirectory() as tmp:
-            tmp_path = Path(tmp)
-            render(tmp_path)
+            render(Path(tmp))
             if not args.out.exists():
                 print(f"{args.out} does not exist; run `just render`", file=sys.stderr)
                 return 1
-            diffs = _tree_differs(tmp_path, args.out)
-            if diffs:
-                print(
-                    f"pages/ is stale ({len(diffs)} file(s) differ), e.g. {diffs[:5]}; run `just render`",
-                    file=sys.stderr,
-                )
-                if diff := _text_diff(tmp_path, args.out, diffs[0]):
-                    print(diff, file=sys.stderr)
-                return 1
+            diffs = _tree_differs(Path(tmp), args.out)
+        if diffs:
+            print(f"pages/ is stale ({len(diffs)} file(s) differ), e.g. {diffs[:5]}; run `just render`",
+                  file=sys.stderr)
+            return 1
         print("pages/ is current")
         return 0
 
