@@ -1557,6 +1557,15 @@
   "definition": "A membrane-bound anaerobic dimethyl sulfoxide reductase complex that catalyzes the reduction of dimethyl sulfoxide to dimethyl sulfide during respiratory electron transport."
  },
  {
+  "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+  "label": "formate dehydrogenase N complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/formate_dehydrogenase_n_complex.html",
+  "definition": "A nitrate-inducible, membrane-bound formate:quinone oxidoreductase complex whose FdnG, FdnH, and FdnI subunits oxidize formate and pass electrons to a membrane quinone during anaerobic respiration."
+ },
+ {
   "identifier": "GO:0045283",
   "label": "fumarate reductase complex",
   "category": "ENERGY_COMPLEX",
