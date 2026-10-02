@@ -26,6 +26,13 @@ curation_history:
     to the 2010 apical-groove ultrastructure study while keeping the 2017 Margalefidinium
     taxonomic-transfer paper as record-level evidence.
   llm_assisted: true
+- timestamp: '2026-10-02T16:07:15Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1921 review issues #1922 and #1923 by removing the Margalefidinium
+    transfer claim from the DOI:10.1111/j.1550-7408.2010.00491.x taxonomic-distribution
+    row and narrowing the GO:0097613 evidence note to the dinoflagellate epicone term.'
+  llm_assisted: true
 synonyms:
 - synonym_text: apical groove
   synonym_type: BROAD_SYNONYM
@@ -45,8 +52,7 @@ taxonomic_distribution:
   taxon_label: Margalefidinium polykrikoides
   presence: COMMON
   note: Cochlodinium polykrikoides, the species examined in the 2010 electron-microscopy
-    study, has a U-shaped apical groove at the dorsal side of the epicone; the species
-    was later transferred to Margalefidinium.
+    study, has a U-shaped apical groove at the dorsal side of the epicone.
   reference: DOI:10.1111/j.1550-7408.2010.00491.x
 canonical_examples:
 - taxon_id: NCBITaxon:77300
@@ -60,8 +66,7 @@ evidence:
 - reference: GO:0097610
   notes: Gene Ontology cellular-component parent term for cell surface furrow.
 - reference: GO:0097613
-  notes: Gene Ontology cellular-component term for the dinoflagellate epicone that
-    carries the apical groove.
+  notes: Gene Ontology cellular-component term for the dinoflagellate epicone.
 - reference: PMID:20561119
   notes: PubMed record for Iwataki et al. 2010, the apical-groove ultrastructure study
     cited by GO:0097685.
