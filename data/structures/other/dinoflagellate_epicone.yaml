@@ -1,0 +1,140 @@
+identifier: GO:0097613
+label: dinoflagellate epicone
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: The part of a dinoflagellate cell above the cingulum; also referred to
+  as the anterior portion of a dinoflagellate cell. It is separated from the hypocone
+  by the cingulum.
+definition_source: GO:0097613
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T18:07:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T18:08:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO epicone synonymy, GO cellular-anatomical-structure parentage,
+    dinoflagellate apex and apical-groove part topology, Dinophyceae taxon evidence,
+    record-level adjacent GO evidence, and curation discussions for molecular components
+    and the epicone/apex boundary.
+  llm_assisted: true
+synonyms:
+- synonym_text: epicone
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097613
+- synonym_text: episome
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097613
+- synonym_text: epitheca
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097613
+parent_structures:
+- GO:0110165
+has_part:
+- GO:0097683
+- GO:0097685
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: GO:0097613 defines the dinoflagellate epicone as the part of a dinoflagellate
+    cell above the cingulum.
+  reference: GO:0097613
+evidence:
+- reference: GO:0097613
+  notes: Gene Ontology cellular-component term for the dinoflagellate epicone.
+- reference: GO:0110165
+  notes: Gene Ontology cellular-component parent term for cellular anatomical structure.
+- reference: GO:0097683
+  notes: Gene Ontology cellular-component term for the dinoflagellate apex, which
+    QuickGO lists as a part_of child of GO:0097613.
+- reference: GO:0097685
+  notes: Gene Ontology cellular-component term for the dinoflagellate apical groove,
+    which QuickGO lists as a part_of child of GO:0097613.
+- reference: GO:0097611
+  notes: Gene Ontology cellular-component term for the dinoflagellate cingulum named
+    in the GO:0097613 definition.
+- reference: GO:0097614
+  notes: Gene Ontology cellular-component term for the dinoflagellate hypocone named
+    in the GO:0097613 definition.
+causal_graphs:
+- graph_id: epicone_topology
+  title: Epicone topology
+  description: The dinoflagellate epicone is a cellular anatomical structure that
+    has the dinoflagellate apex and apical groove as parts.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO is-a and part-of topology for the epicone region,
+    not a molecular assembly or physiological mechanism.
+  nodes:
+  - node_id: dinoflagellate_epicone
+    label: dinoflagellate epicone
+    node_type: STRUCTURE
+    grounding: GO:0097613
+  - node_id: cellular_anatomical_structure
+    label: cellular anatomical structure
+    node_type: STRUCTURE
+    grounding: GO:0110165
+  - node_id: dinoflagellate_apex
+    label: dinoflagellate apex
+    node_type: STRUCTURE
+    grounding: GO:0097683
+  - node_id: dinoflagellate_apical_groove
+    label: dinoflagellate apical groove
+    node_type: STRUCTURE
+    grounding: GO:0097685
+  edges:
+  - subject: dinoflagellate_epicone
+    predicate: is a
+    object: cellular_anatomical_structure
+    description: GO classifies the dinoflagellate epicone as a cellular anatomical
+      structure.
+    evidence:
+    - reference: GO:0097613
+      notes: The GO graph links GO:0097613 to GO:0110165 by rdfs:subClassOf.
+  - subject: dinoflagellate_epicone
+    predicate: has part
+    object: dinoflagellate_apex
+    description: GO places the dinoflagellate apex in the epicone.
+    evidence:
+    - reference: GO:0097613
+      notes: The QuickGO GO:0097613 payload lists GO:0097683 as a part_of child term.
+  - subject: dinoflagellate_epicone
+    predicate: has part
+    object: dinoflagellate_apical_groove
+    description: GO places the dinoflagellate apical groove in the epicone.
+    evidence:
+    - reference: GO:0097613
+      notes: The QuickGO GO:0097613 payload lists GO:0097685 as a part_of child term.
+discussions:
+- discussion_id: resolve_epicone_molecular_constituents
+  prompt: Add epicone molecular components only after directly localized constituents
+    and exact source-neutral family groundings have been identified.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO defines the dinoflagellate epicone as a subcellular region above the
+    cingulum, but this pass did not find exact family-level evidence for epicone-specific
+    molecular constituents.
+  evidence:
+  - reference: GO:0097613
+  posed_by: codex
+  posed_date: '2026-10-02'
+- discussion_id: apex_is_narrower_than_epicone
+  prompt: Keep dinoflagellate apex separate from the general dinoflagellate epicone
+    unless curating the narrower GO:0097683 class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: QuickGO lists GO:0097683 as a part_of child of GO:0097613, so the dinoflagellate
+    apex should be modeled as an epicone part rather than folded into the whole epicone
+    record as an exact synonym.
+  evidence:
+  - reference: GO:0097613
+  - reference: GO:0097683
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
+  resolution_note: Model GO:0097613 as the whole anterior epicone region and leave
+    the apex for separate GO:0097683 curation.

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_epicone.yaml
+  slug: dinoflagellate_epicone
+session:
+  id: 2026-10-02T180917Z-codex-d37207
+  timestamp: '2026-10-02T18:09:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomic_distribution
+  - evidence
+  - causal_graphs
+  - discussions
+  - generated_artifacts
+  - history
+  summary: Add dinoflagellate epicone record
+  details: Created a GO:0097613 dinoflagellate epicone CellStructureMech record as an OTHER/SUBCELLULAR_REGION
+    entry with GO synonymy, GO cellular-anatomical-structure parentage, dinoflagellate apex
+    and apical-groove has-part topology, Dinophyceae taxon evidence, adjacent GO term evidence
+    for the cingulum and hypocone terms named by the definition, a nonmechanistic epicone
+    topology graph, a molecular-component curation TODO, an explicit apex boundary interpretation,
+    and generated embeddings/pages/docs.
