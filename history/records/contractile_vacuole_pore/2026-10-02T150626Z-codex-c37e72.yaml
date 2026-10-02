@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/contractile_vacuole_pore.yaml
+  slug: contractile_vacuole_pore
+session:
+  id: 2026-10-02T150626Z-codex-c37e72
+  timestamp: '2026-10-02T15:06:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  - generated_artifacts
+  summary: Add contractile vacuole pore record
+  details: Created a GO:0031913 contractile vacuole pore CellStructureMech record as a membrane-organelle
+    multiprotein-complex substructure with GO-backed plasma-membrane-protein-complex parentage,
+    contractile-vacuolar membrane and cytoskeleton parthood, Tetrahymena and Paramecium examples,
+    a regulated-discharge function, GO/DOI evidence, a nonmechanistic topology graph, generated
+    embeddings/pages/docs, and an open curation TODO for exact source-neutral pore-component
+    groundings.

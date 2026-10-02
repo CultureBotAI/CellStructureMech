@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/contractile_vacuole_pore.yaml
+  slug: contractile_vacuole_pore
+session:
+  id: 2026-10-02T151809Z-codex-90aa2d
+  timestamp: '2026-10-02T15:18:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1919
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1920
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1918
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - examples
+  - evidence
+  - generated_artifacts
+  summary: Address contractile vacuole pore PR review
+  details: 'Addressed PR #1918 review issues #1919 and #1920 by removing the genus-level Paramecium
+    canonical example, tightening the GO:0031164 evidence note so the part_of assertion remains
+    scoped to GO:0031913, retaining McKanna 1973 as structural evidence, and regenerating
+    embeddings and pages from the corrected record.'
