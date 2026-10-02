@@ -19,6 +19,13 @@ curation_history:
     evidence, and curation discussions for molecular components and the antapical-horn/antapex
     boundary.
   llm_assisted: true
+- timestamp: '2026-10-02T21:56:16Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Addressed PR #1945 review issues #1946 and #1947 by citing GO:0097687
+    history for direct antapex parentage and clarifying that hypocone parthood is
+    inherited through GO:0097684.'
+  llm_assisted: true
 parent_structures:
 - GO:0097684
 part_of:
@@ -36,7 +43,7 @@ evidence:
     antapical horn of thecate species.
 - reference: GO:0097684
   notes: Gene Ontology cellular-component term for the dinoflagellate antapex, which
-    QuickGO lists among GO:0097687 ancestors.
+    the QuickGO GO:0097687 history records as the direct is_a parent.
 - reference: GO:0097614
   notes: Gene Ontology cellular-component term for the dinoflagellate hypocone that
     contains the parent GO:0097684 antapex.
@@ -58,8 +65,9 @@ causal_graphs:
     of the dinoflagellate antapex within the hypocone.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records exact GO antapical-horn, antapex, and hypocone topology,
-    not transitive ancestor closure, a molecular assembly, or a physiological mechanism.
+  scope_notes: The graph records the direct GO antapical-horn parent edge plus hypocone
+    parthood inherited from the parent antapex, not a full transitive ancestor closure,
+    a molecular assembly, or a physiological mechanism.
   nodes:
   - node_id: dinoflagellate_antapical_horn
     label: dinoflagellate antapical horn
@@ -81,20 +89,19 @@ causal_graphs:
       dinoflagellate antapex.
     evidence:
     - reference: GO:0097687
-      notes: The QuickGO GO:0097687 ancestors endpoint lists GO:0097684 among its
-        ancestors.
+      notes: The QuickGO GO:0097687 history records an is_a relation to GO:0097684.
     - reference: GO:0097684
       notes: The QuickGO GO:0097684 children endpoint lists GO:0097687 as an is_a
         child term.
   - subject: dinoflagellate_antapical_horn
     predicate: is part of
     object: dinoflagellate_hypocone
-    description: The antapical horn is a specialized antapex located in the dinoflagellate
-      hypocone.
+    description: The antapical horn inherits hypocone parthood through its direct
+      dinoflagellate antapex parent.
     evidence:
     - reference: GO:0097687
-      notes: QuickGO lists GO:0097614 as an ancestor of GO:0097687 through the GO:0097684
-        antapex parent.
+      notes: QuickGO records GO:0097684 as the direct is_a parent of GO:0097687; paired
+        with GO:0097684 part_of GO:0097614, that parentage transmits hypocone parthood.
     - reference: GO:0097684
       notes: The QuickGO GO:0097684 history records a part_of relation to GO:0097614.
   - subject: dinoflagellate_antapex

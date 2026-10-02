@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_antapical_horn.yaml
+  slug: dinoflagellate_antapical_horn
+session:
+  id: 2026-10-02T215653Z-codex-b4e26f
+  timestamp: '2026-10-02T21:56:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1946
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1947
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1945
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed antapical-horn PR review issues
+  details: 'Addressed PR #1945 review issues #1946 and #1947 for data/structures/other/dinoflagellate_antapical_horn.yaml
+    by changing the antapical-horn parent edge to cite the direct GO:0097687 is_a history
+    relation and clarifying the inherited GO:0097687 -> GO:0097684 -> GO:0097614 hypocone
+    parthood in the topology graph.'
