@@ -1,0 +1,158 @@
+identifier: GO:7770085
+label: protocatechuate 3,4-dioxygenase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex which is capable of protocatechuate 3,4-dioxygenase
+  activity. It consists of an alpha subunit (PcaG) and a beta subunit (PcaH), with
+  the non-heme iron active site formed at the alpha-beta interface.
+definition_source: GO:7770085
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T01:22:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T01:23:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added PcaGH synonymy, oxidoreductase-complex parentage, exact InterPro-grounded
+    PcaG and PcaH constituents with reviewed Pseudomonas putida UniProt examples,
+    Rhodococcus jostii RHA1 and P. putida canonical examples, protocatechuate 3,4-dioxygenase
+    activity, and GO/PubMed/DOI evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: PcaGH complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:7770085
+- synonym_text: PcaHG complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:7770085
+- synonym_text: protocatechuate 3,4-oxygenase complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:7770085
+parent_structures:
+- GO:1990204
+components:
+- component_id: pcag_alpha
+  label: Protocatechuate 3,4-dioxygenase, alpha subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR012786
+  gene_symbols:
+  - pcaG
+  essentiality: UNKNOWN
+  role: Alpha subunit of the two-component PcaGH intradiol ring-cleavage dioxygenase.
+  protein_examples:
+  - uniprot_id: UniProtKB:P00436
+    protein_label: Protocatechuate 3,4-dioxygenase alpha chain
+    gene_symbol: pcaG
+    taxon_id: NCBITaxon:303
+    taxon_label: Pseudomonas putida
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed Pseudomonas putida pcaG accession for the protocatechuate 3,4-dioxygenase
+      alpha subunit.
+    evidence:
+    - reference: UniProtKB:P00436
+      notes: UniProtKB P00436 is the reviewed Pseudomonas putida entry for pcaG.
+    - reference: PMID:8407791
+      notes: Frazee et al. 1993 cloned, sequenced and expressed the Pseudomonas putida
+        protocatechuate 3,4-dioxygenase genes.
+  evidence:
+  - reference: GO:7770085
+    notes: GO:7770085 defines the protocatechuate 3,4-dioxygenase complex as containing
+      a PcaG alpha subunit.
+  - reference: InterPro:IPR012786
+    notes: InterPro IPR012786 is the protocatechuate 3,4-dioxygenase alpha subunit
+      family entry.
+  - reference: PMID:25558786
+    notes: Yamanashi et al. 2015 reconstituted Rhodococcus jostii RHA1 protocatechuate-branch
+      reactions with PcaHG.
+- component_id: pcah_beta
+  label: Protocatechuate 3,4-dioxygenase, beta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR012785
+  gene_symbols:
+  - pcaH
+  essentiality: UNKNOWN
+  role: Beta subunit of the PcaGH dioxygenase; the non-heme iron active site is formed
+    at the alpha-beta interface.
+  protein_examples:
+  - uniprot_id: UniProtKB:P00437
+    protein_label: Protocatechuate 3,4-dioxygenase beta chain
+    gene_symbol: pcaH
+    taxon_id: NCBITaxon:303
+    taxon_label: Pseudomonas putida
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed Pseudomonas putida pcaH accession for the protocatechuate 3,4-dioxygenase
+      beta subunit.
+    evidence:
+    - reference: UniProtKB:P00437
+      notes: UniProtKB P00437 is the reviewed Pseudomonas putida entry for pcaH.
+    - reference: PMID:8407791
+      notes: Frazee et al. 1993 cloned, sequenced and expressed the Pseudomonas putida
+        protocatechuate 3,4-dioxygenase genes.
+  evidence:
+  - reference: GO:7770085
+    notes: GO:7770085 defines the protocatechuate 3,4-dioxygenase complex as containing
+      a PcaH beta subunit.
+  - reference: InterPro:IPR012785
+    notes: InterPro IPR012785 is the protocatechuate 3,4-dioxygenase beta subunit
+      family entry.
+  - reference: PMID:25558786
+    notes: Yamanashi et al. 2015 reconstituted Rhodococcus jostii RHA1 protocatechuate-branch
+      reactions with PcaHG.
+canonical_examples:
+- taxon_id: NCBITaxon:101510
+  taxon_label: Rhodococcus jostii RHA1
+  note: Strain source of the PcaHG protocatechuate-branch in vitro reconstitution
+    cited by GO:7770085.
+  reference: PMID:25558786
+- taxon_id: NCBITaxon:303
+  taxon_label: Pseudomonas putida
+  note: Source of the reviewed PcaG/PcaH protein examples and the pcaG-pcaH gene cloning
+    and expression study.
+  reference: PMID:8407791
+functions:
+- function_id: protocatechuate_3_4_dioxygenase_activity
+  label: protocatechuate 3,4-dioxygenase activity
+  grounding: GO:0018578
+  description: The PcaGH complex catalyzes ring cleavage of 3,4-dihydroxybenzoate
+    to 3-carboxy-cis,cis-muconate.
+  evidence:
+  - reference: GO:7770085
+    notes: GO:7770085 is capable of GO:0018578 protocatechuate 3,4-dioxygenase activity.
+  - reference: GO:0018578
+    notes: GO:0018578 is the molecular-function term for protocatechuate 3,4-dioxygenase
+      activity.
+evidence:
+- reference: GO:7770085
+  notes: Gene Ontology cellular-component term for the protocatechuate 3,4-dioxygenase
+    complex and its PcaGH, PcaHG and protocatechuate 3,4-oxygenase synonymy.
+- reference: GO:1990204
+  notes: QuickGO reports GO:7770085 as an is-a child of GO:1990204 oxidoreductase
+    complex.
+- reference: GO:0018578
+  notes: Gene Ontology molecular-function term for protocatechuate 3,4-dioxygenase
+    activity.
+- reference: InterPro:IPR012786
+  notes: InterPro family entry for protocatechuate 3,4-dioxygenase alpha subunits.
+- reference: InterPro:IPR012785
+  notes: InterPro family entry for protocatechuate 3,4-dioxygenase beta subunits.
+- reference: UniProtKB:P00436
+  notes: UniProtKB reviewed Pseudomonas putida PcaG entry.
+- reference: UniProtKB:P00437
+  notes: UniProtKB reviewed Pseudomonas putida PcaH entry.
+- reference: PMID:25558786
+  notes: PubMed identifier for Yamanashi et al. 2015, the Bioscience, Biotechnology,
+    and Biochemistry PcaHG reconstitution paper cited by GO:7770085.
+- reference: DOI:10.1080/09168451.2014.993915
+  notes: DOI for Yamanashi et al. 2015, as reported by PubMed.
+- reference: PMID:8407791
+  notes: PubMed identifier for Frazee et al. 1993, the Journal of Bacteriology Pseudomonas
+    putida pcaG-pcaH cloning paper cited by UniProtKB P00436 and P00437.
+- reference: DOI:10.1128/jb.175.19.6194-6202.1993
+  notes: DOI for Frazee et al. 1993, as reported by UniProtKB.
