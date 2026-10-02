@@ -15270,6 +15270,11 @@
           "cosine_similarity": 0.90864046
         },
         {
+          "identifier": "GO:0097612",
+          "label": "dinoflagellate sulcus",
+          "cosine_similarity": 0.88145177
+        },
+        {
           "identifier": "GO:0009532",
           "label": "plastid stroma",
           "cosine_similarity": 0.70892215
@@ -15283,11 +15288,6 @@
           "identifier": "GO:0031978",
           "label": "plastid thylakoid lumen",
           "cosine_similarity": 0.6954277
-        },
-        {
-          "identifier": "GO:0020032",
-          "label": "basal ring of apical complex",
-          "cosine_similarity": 0.69139872
         }
       ]
     },
@@ -15295,6 +15295,11 @@
       "identifier": "GO:0097611",
       "label": "dinoflagellate cingulum",
       "neighbors": [
+        {
+          "identifier": "GO:0097612",
+          "label": "dinoflagellate sulcus",
+          "cosine_similarity": 0.92568474
+        },
         {
           "identifier": "GO:0097685",
           "label": "dinoflagellate apical groove",
@@ -15314,11 +15319,37 @@
           "identifier": "GO:0034591",
           "label": "rhoptry lumen",
           "cosine_similarity": 0.72481948
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097612",
+      "label": "dinoflagellate sulcus",
+      "neighbors": [
+        {
+          "identifier": "GO:0097611",
+          "label": "dinoflagellate cingulum",
+          "cosine_similarity": 0.92568474
+        },
+        {
+          "identifier": "GO:0097685",
+          "label": "dinoflagellate apical groove",
+          "cosine_similarity": 0.88145177
+        },
+        {
+          "identifier": "GO:0009532",
+          "label": "plastid stroma",
+          "cosine_similarity": 0.693262
         },
         {
           "identifier": "GO:0034060",
           "label": "cyanelle stroma",
-          "cosine_similarity": 0.7243315
+          "cosine_similarity": 0.68591505
+        },
+        {
+          "identifier": "GO:0001400",
+          "label": "mating projection base",
+          "cosine_similarity": 0.68313801
         }
       ]
     },
