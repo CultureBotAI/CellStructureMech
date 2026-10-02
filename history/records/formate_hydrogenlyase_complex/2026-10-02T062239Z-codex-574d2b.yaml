@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+  slug: formate_hydrogenlyase_complex
+session:
+  id: 2026-10-02T062239Z-codex-574d2b
+  timestamp: '2026-10-02T06:22:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - energy_complex
+  summary: Add formate hydrogenlyase complex record
+  details: Added an evidence-backed cellstructuremech:formate_hydrogenlyase_complex record
+    with reviewed-label-only FdhF and HycB-HycG components, E. coli K-12 reviewed UniProt
+    examples, PDB:7Z0T polymer-entity support, formate hydrogenlyase activity, DOI/PMID/PDB
+    evidence, and a component-family grounding TODO.
