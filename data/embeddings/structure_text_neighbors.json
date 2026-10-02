@@ -5846,6 +5846,11 @@
           "cosine_similarity": 0.7363429
         },
         {
+          "identifier": "GO:0009342",
+          "label": "glutamate synthase complex (NADPH)",
+          "cosine_similarity": 0.71081652
+        },
+        {
           "identifier": "GO:1990202",
           "label": "FMN reductase complex",
           "cosine_similarity": 0.70257918
@@ -5859,11 +5864,6 @@
           "identifier": "GO:0045283",
           "label": "fumarate reductase complex",
           "cosine_similarity": 0.69520164
-        },
-        {
-          "identifier": "GO:0045275",
-          "label": "respiratory chain complex III",
-          "cosine_similarity": 0.66189566
         }
       ]
     },
@@ -16594,6 +16594,37 @@
       ]
     },
     {
+      "identifier": "GO:0009342",
+      "label": "glutamate synthase complex (NADPH)",
+      "neighbors": [
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.72923634
+        },
+        {
+          "identifier": "GO:0160292",
+          "label": "sodium-translocating NADH:quinone reductase complex",
+          "cosine_similarity": 0.71081652
+        },
+        {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.68907581
+        },
+        {
+          "identifier": "GO:0030700",
+          "label": "glycine reductase complex",
+          "cosine_similarity": 0.67308803
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.66911489
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005960",
       "label": "glycine cleavage complex",
       "neighbors": [
@@ -16613,14 +16644,14 @@
           "cosine_similarity": 0.66803464
         },
         {
+          "identifier": "GO:0009342",
+          "label": "glutamate synthase complex (NADPH)",
+          "cosine_similarity": 0.66566434
+        },
+        {
           "identifier": "GO:1990201",
           "label": "alkanesulfonate monooxygenase complex",
           "cosine_similarity": 0.66166872
-        },
-        {
-          "identifier": "GO:0032299",
-          "label": "ribonuclease H2 complex",
-          "cosine_similarity": 0.65950946
         }
       ]
     },
@@ -16639,6 +16670,11 @@
           "cosine_similarity": 0.69356343
         },
         {
+          "identifier": "GO:0009342",
+          "label": "glutamate synthase complex (NADPH)",
+          "cosine_similarity": 0.67308803
+        },
+        {
           "identifier": "GO:0045283",
           "label": "fumarate reductase complex",
           "cosine_similarity": 0.6603281
@@ -16647,11 +16683,6 @@
           "identifier": "GO:0160292",
           "label": "sodium-translocating NADH:quinone reductase complex",
           "cosine_similarity": 0.65305936
-        },
-        {
-          "identifier": "GO:1903095",
-          "label": "ribonuclease III complex",
-          "cosine_similarity": 0.65300759
         }
       ]
     },
