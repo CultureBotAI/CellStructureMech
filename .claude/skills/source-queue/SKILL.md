@@ -38,18 +38,17 @@ source is. In order:
    four records against a backlog of dozens (#12). A source that supplies
    *records* or *components with evidence* outranks one that supplies a
    second image.
-2. **Can we redistribute it?** This is a hard gate. The corpus is CC0 and
-   hosts image copies under `pages/`. `SEED` (copy into records or pages) is
-   allowed only under `CC0_OK`, `ATTRIBUTION` or `SHARE_ALIKE`; `NONCOMMERCIAL`
-   is `LINK_ONLY` at best (the Atlas); `RESTRICTED` is `CURATE_ONLY` (EcoCyc:
+2. **Can we redistribute it?** This is a hard gate. Project-authored
+   data uses CC BY 4.0, and the repository hosts image copies under `pages/`. `SEED` (copy into records or pages) is
+   allowed only under `CC0_OK` or `ATTRIBUTION`; `SHARE_ALIKE` and
+   `NONCOMMERCIAL` are `LINK_ONLY` at best (the Atlas); `RESTRICTED` is `CURATE_ONLY` (EcoCyc:
    cite, never copy); `UNVERIFIED` cannot be adopted. Record what the licence
    page says, not what it would take to make it work.
 
-   The same tension AntibioticMech carries is open here: CC BY images and CC
-   BY vocabularies sit inside a CC0 repository. Attribution is preserved per
-   item (`images.attribution`, evidence notes), but a blanket CC0 dedication
-   over CC BY content is not something we can grant. Judge candidates against
-   the stricter reading.
+   Imported images and vocabulary content retain their source licenses.
+   Preserve attribution per item (`images.attribution`, evidence notes); the
+   project data license does not replace upstream terms. The hosting policy
+   in LICENSE and the validator allow only CC0, public-domain and CC BY copies.
 3. **Does every item carry a citable identifier and a taxon?** The project
    brief requires both on images and protein examples. `item_id` and
    `taxon_link` say whether the source gives them or the curator must supply
