@@ -3870,6 +3870,15 @@
   "definition": "A protein complex that catalyzes the transfer of a glucose group from UDP-glucose to a (1->3)-beta-D-glucan chain."
  },
  {
+  "identifier": "GO:0009334",
+  "label": "3-phenylpropionate dioxygenase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/3_phenylpropionate_dioxygenase_complex.html",
+  "definition": "Enzyme complex consisting of four proteins: the two subunits of the hydroxylase component (hcaE and hcaF), a ferredoxin (hcaC) and a ferredoxin reductase (hcaD). Converts 3-phenylpropionic acid (PP) into cis-3-(3-carboxyethyl)-3,5-cyclohexadiene-1,2-diol (PP-dihydrodiol)."
+ },
+ {
   "identifier": "GO:0016590",
   "label": "ACF complex",
   "category": "OTHER",
@@ -3886,6 +3895,15 @@
   "status": "PROPOSED",
   "page": "structures/other/ada_complex.html",
   "definition": "A chromatin remodeling complex that regulates transcription via acetylation primarily of nucleosomal histones H3 and H2B. In budding yeast shares the histone acetylation (HAT) module of ADA2-GCN5-NGG1-SGF29 with the related SAGA complex."
+ },
+ {
+  "identifier": "GO:1990201",
+  "label": "alkanesulfonate monooxygenase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/alkanesulfonate_monooxygenase_complex.html",
+  "definition": "A protein complex capable of alkanesulfonate monooxygenase activity. Involved in the utilization of alkanesulfonates as sulfur sources under conditions of sulfate or cysteine starvation, catalyzing the conversion of alkanesulfonates into aldehydes and sulfite. In E.coli the complex consists of a SsuD tetramer."
  },
  {
   "identifier": "GO:0005658",
@@ -4797,6 +4815,33 @@
   "definition": "A heterotetrameric protein complex that associates with replication origins, where it is required for the initiation of DNA replication, and with replication forks."
  },
  {
+  "identifier": "GO:0009342",
+  "label": "glutamate synthase complex (NADPH)",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/glutamate_synthase_complex_nadph.html",
+  "definition": "A NADPH-dependent glutamate synthase protein complex that possesses glutamate synthase (NADPH) activity."
+ },
+ {
+  "identifier": "GO:0005960",
+  "label": "glycine cleavage complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/glycine_cleavage_complex.html",
+  "definition": "A glycine-cleavage multienzyme protein complex that reversibly oxidizes glycine through L-, P-, H-, and T-protein components."
+ },
+ {
+  "identifier": "GO:0030700",
+  "label": "glycine reductase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/glycine_reductase_complex.html",
+  "definition": "A protein complex that possesses glycine reductase activity and is usually built from selenoprotein A, selenoprotein B, and protein C subunits."
+ },
+ {
   "identifier": "GO:0042765",
   "label": "GPI-anchor transamidase complex",
   "category": "OTHER",
@@ -4993,6 +5038,15 @@
   "status": "PROPOSED",
   "page": "structures/other/membrane_coat.html",
   "definition": "Any of several different proteinaceous coats that can associate with membranes. Membrane coats include those formed by clathrin plus an adaptor complex, the COPI and COPII complexes, and possibly others. They are found associated with membranes on many vesicles as well as other membrane features such as pits and perhaps tubules."
+ },
+ {
+  "identifier": "GO:1990197",
+  "label": "methionine-importing ABC transporter complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/methionine_importing_abc_transporter_complex.html",
+  "definition": "An ATP-binding cassette (ABC) transporter complex that is capable of methionine-importing activity. An example is the bacterial MetNIQ methionine transporter, that consists of the dimeric ATPase subunit MetN located at the cytoplasmic side of the plasma membrane and the dimeric transmembrane subunit MetI. MetQ is regarded as the periplasmic methionine-binding chaperon subunit, and is capable of transporting methionine from the periplasm into the cytoplasm in an ATP-dependent manner."
  },
  {
   "identifier": "GO:0098561",
@@ -5409,6 +5463,15 @@
   "definition": "Punctate structures proximal to the endoplasmic reticulum which are the sites where the Atg machinery assembles upon autophagy induction."
  },
  {
+  "identifier": "GO:0062077",
+  "label": "phenylacetyl-CoA 1,2-epoxidase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/phenylacetyl_coa_1_2_epoxidase_complex.html",
+  "definition": "A PaaA/PaaB/PaaC/PaaE multicomponent monooxygenase complex that catalyzes the NADPH- and oxygen-dependent epoxidation of phenylacetyl-CoA to 2-(1,2-epoxy-1,2-dihydrophenyl)acetyl-CoA."
+ },
+ {
   "identifier": "GO:0032777",
   "label": "piccolo histone acetyltransferase complex",
   "category": "OTHER",
@@ -5479,6 +5542,15 @@
   "status": "PROPOSED",
   "page": "structures/other/proteasome_core_complex.html",
   "definition": "A barrel-shaped self-compartmentalized protease core of proteasomes, built from stacked alpha- and beta-subunit rings that sequester threonine protease active sites in an internal chamber for protein degradation."
+ },
+ {
+  "identifier": "GO:7770085",
+  "label": "protocatechuate 3,4-dioxygenase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/protocatechuate_3_4_dioxygenase_complex.html",
+  "definition": "A protein complex which is capable of protocatechuate 3,4-dioxygenase activity. It consists of an alpha subunit (PcaG) and a beta subunit (PcaH), with the non-heme iron active site formed at the alpha-beta interface."
  },
  {
   "identifier": "GO:0034388",
@@ -5785,6 +5857,15 @@
   "status": "PROPOSED",
   "page": "structures/other/t_utp_complex.html",
   "definition": "A protein complex that forms a subcomplex of the 90S preribosome and is required for the subsequent assembly of the rest of the preribosome. In S. cerevisiae, it is composed of Utp5p, Utp4p, Nan1p, Utp8p, Utp9p, Utp10 and Utp15p."
+ },
+ {
+  "identifier": "GO:1990205",
+  "label": "taurine dioxygenase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/taurine_dioxygenase_complex.html",
+  "definition": "A protein complex capable of catalyzing the conversion of taurine and alpha-ketoglutarate to sulfite, aminoacetaldehyde and succinate under sulfur or cysteine starvation conditions. Its expression is repressed by the presence of sulfate or cysteine. In E. coli it is a homodimer or homotetramer of the protein TauD."
  },
  {
   "identifier": "GO:0000347",

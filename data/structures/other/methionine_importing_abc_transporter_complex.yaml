@@ -1,0 +1,267 @@
+identifier: GO:1990197
+label: methionine-importing ABC transporter complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An ATP-binding cassette (ABC) transporter complex that is capable of methionine-importing
+  activity. An example is the bacterial MetNIQ methionine transporter, that consists
+  of the dimeric ATPase subunit MetN located at the cytoplasmic side of the plasma
+  membrane and the dimeric transmembrane subunit MetI. MetQ is regarded as the periplasmic
+  methionine-binding chaperon subunit, and is capable of transporting methionine from
+  the periplasm into the cytoplasm in an ATP-dependent manner.
+definition_source: GO:1990197
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-01T22:43:44Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-01T22:45:04Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and transmembrane-transporter parentage, the E. coli
+    MetN, MetI, and MetQ constituents with reviewed UniProt examples, the PDB-backed
+    E. coli MetNIQ canonical example, L- and D-methionine transporter activities,
+    2:2:1 stoichiometry, component-grounding follow-up, and DOI/PMID/PDB evidence.
+  llm_assisted: true
+- timestamp: '2026-10-01T22:45:32Z'
+  curator: codex
+  action: REFINED_EVIDENCE
+  changes: Corrected the GO:1902495 parentage note to describe GO:1902495 as an ancestor
+    of GO:1990197.
+  llm_assisted: true
+synonyms:
+- synonym_text: ATP-binding cassette (ABC) methionine importer complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990197
+- synonym_text: ATP-dependent methionine importer complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990197
+- synonym_text: ATP-dependent methionine importing complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990197
+- synonym_text: ATP-dependent methionine-importing complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990197
+- synonym_text: MetNI complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990197
+- synonym_text: MetNIQ complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990197
+- synonym_text: MetNIQ transport complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990197
+- synonym_text: MetNI transport complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990197
+- synonym_text: MetNI transporter complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:1990197
+parent_structures:
+- GO:1902495
+components:
+- component_id: metn_atp_binding_subunit
+  label: ABC transporter, methionine import, ATP-binding protein MetN, proteobacteria
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR012692
+  gene_symbols:
+  - metN
+  - abc
+  stoichiometry: 2 copies per E. coli MetNIQ complex in PDB:6CVL
+  essentiality: UNKNOWN
+  role: Cytoplasmic ATP-binding subunit of the E. coli MetNIQ methionine ABC importer.
+  protein_examples:
+  - uniprot_id: UniProtKB:P30750
+    protein_label: Methionine import ATP-binding protein MetN
+    gene_symbol: metN
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 MetN accession that UniProt maps to GO:1990197 and
+      RCSB maps to the two MetN copies in PDB:6CVL entity 1.
+    evidence:
+    - reference: UniProtKB:P30750
+      notes: UniProtKB P30750 is the reviewed E. coli K-12 entry for Methionine import
+        ATP-binding protein MetN.
+    - reference: PDB:6CVL
+      notes: RCSB maps PDB:6CVL entity 1 to UniProtKB:P30750 and reports two MetN
+        molecules in the assembly.
+  evidence:
+  - reference: GO:1990197
+    notes: GO:1990197 defines the bacterial MetNIQ example as containing a dimeric
+      ATPase MetN subunit.
+  - reference: InterPro:IPR012692
+    notes: InterPro IPR012692 is the proteobacterial methionine ABC transporter ATP-binding
+      protein MetN family.
+  - reference: PDB:6CVL
+    notes: PDB:6CVL contains two MetN nucleotide-binding subunits from E. coli K-12.
+- component_id: meti_transmembrane_subunit
+  label: MetI transmembrane subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: E. coli MetI is directly supported by UniProtKB:P31547 and PDB:6CVL;
+    available InterPro hits are amino-acid ABC permease, MetI-like transmembrane-domain,
+    or MetI-like superfamily entries rather than an exact MetI family CURIE.
+  gene_symbols:
+  - metI
+  - yaeE
+  stoichiometry: 2 copies per E. coli MetNIQ complex in PDB:6CVL
+  essentiality: UNKNOWN
+  role: Integral membrane permease subunit that forms the MetNIQ translocation path
+    with a second MetI copy.
+  protein_examples:
+  - uniprot_id: UniProtKB:P31547
+    protein_label: D-methionine transport system permease protein MetI
+    gene_symbol: metI
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 MetI accession that UniProt maps to GO:1990197 and
+      RCSB maps to the two MetI copies in PDB:6CVL entity 2.
+    evidence:
+    - reference: UniProtKB:P31547
+      notes: UniProtKB P31547 is the reviewed E. coli K-12 entry for the D-methionine
+        transport system permease MetI.
+    - reference: PDB:6CVL
+      notes: RCSB maps PDB:6CVL entity 2 to UniProtKB:P31547 and reports two MetI
+        molecules in the assembly.
+  evidence:
+  - reference: GO:1990197
+    notes: GO:1990197 defines the bacterial MetNIQ example as containing a dimeric
+      transmembrane subunit MetI.
+  - reference: PDB:6CVL
+    notes: PDB:6CVL contains two MetI transmembrane subunits from E. coli K-12.
+- component_id: metq_periplasmic_binding_protein
+  label: MetQ periplasmic methionine-binding protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: E. coli MetQ is directly supported by UniProtKB:P28635 and PDB:6CVL;
+    the observed InterPro hit is the broader Lipoprotein NlpA family rather than an
+    exact MetQ CURIE.
+  gene_symbols:
+  - metQ
+  - yaeC
+  stoichiometry: 1 copy per E. coli MetNIQ complex in PDB:6CVL
+  essentiality: UNKNOWN
+  role: Periplasmic binding-protein subunit that docks on MetNI and delivers methionine
+    to the transporter.
+  protein_examples:
+  - uniprot_id: UniProtKB:P28635
+    protein_label: D-methionine-binding lipoprotein MetQ
+    gene_symbol: metQ
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-01'
+    role: Reviewed E. coli K-12 MetQ accession that UniProt maps to GO:1990197 and
+      RCSB maps to the single MetQ copy in PDB:6CVL entity 3.
+    evidence:
+    - reference: UniProtKB:P28635
+      notes: UniProtKB P28635 is the reviewed E. coli K-12 entry for the D-methionine-binding
+        lipoprotein MetQ.
+    - reference: PDB:6CVL
+      notes: RCSB maps PDB:6CVL entity 3 to UniProtKB:P28635 and reports one MetQ
+        molecule in the assembly.
+  evidence:
+  - reference: GO:1990197
+    notes: GO:1990197 defines MetQ as the periplasmic methionine-binding chaperon
+      subunit in the bacterial MetNIQ example.
+  - reference: PDB:6CVL
+    notes: PDB:6CVL contains one MetQ periplasmic binding protein from E. coli K-12.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: E. coli K-12 source of the MetN2I2Q methionine ABC importer deposited as PDB:6CVL.
+  reference: PDB:6CVL
+functions:
+- function_id: abc_type_d_methionine_transport
+  label: ABC-type D-methionine transporter activity
+  grounding: GO:0033232
+  description: MetNI couples ATP hydrolysis to transport of D-methionine and methionine
+    derivatives across the plasma membrane.
+  evidence:
+  - reference: GO:0033232
+    notes: GO:0033232 is the Gene Ontology molecular-function term for ABC-type D-methionine
+      transporter activity.
+  - reference: DOI:10.1073/pnas.1811003115
+    notes: Nguyen et al. 2018 characterized D-methionine derivative transport by the
+      E. coli MetNI transporter and solved the PDB:6CVL MetNIQ structure.
+- function_id: l_methionine_transmembrane_transport
+  label: L-methionine transmembrane transporter activity
+  grounding: GO:0015191
+  description: MetNIQ imports L-methionine across the bacterial plasma membrane through
+    an ATP-binding-cassette mechanism.
+  evidence:
+  - reference: GO:1990197
+    notes: GO:1990197 defines the complex by methionine-importing activity.
+  - reference: GO:0015191
+    notes: GO:0015191 is the Gene Ontology molecular-function term for L-methionine
+      transmembrane transporter activity.
+  - reference: PMID:22095702
+    notes: Johnson et al. 2012 analyzed inward-facing E. coli MetNI methionine ABC
+      transporter structures.
+physical_properties:
+- property: SUBUNIT_COUNT
+  value: '5'
+  context: E. coli MetN2I2Q complex in PDB:6CVL biological assembly 1
+  reference: PDB:6CVL
+evidence:
+- reference: GO:1990197
+  notes: Gene Ontology cellular-component term for the methionine-importing ABC transporter
+    complex and source of ATP-dependent and MetNI/MetNIQ synonymy.
+- reference: GO:1902495
+  notes: QuickGO reports GO:1902495 transmembrane transporter complex in the ancestor
+    set of GO:1990197.
+- reference: GO:0033232
+  notes: Gene Ontology molecular-function term for ABC-type D-methionine transporter
+    activity.
+- reference: GO:0015191
+  notes: Gene Ontology molecular-function term for L-methionine transmembrane transporter
+    activity.
+- reference: InterPro:IPR012692
+  notes: InterPro family entry for proteobacterial methionine-import ATP-binding protein
+    MetN.
+- reference: UniProtKB:P30750
+  notes: Reviewed E. coli K-12 MetN ATP-binding protein entry.
+- reference: UniProtKB:P31547
+  notes: Reviewed E. coli K-12 MetI permease protein entry.
+- reference: UniProtKB:P28635
+  notes: Reviewed E. coli K-12 MetQ methionine-binding protein entry.
+- reference: PDB:6CVL
+  notes: RCSB Protein Data Bank entry for the E. coli K-12 MetN2I2Q methionine ABC
+    transporter complex.
+- reference: PMID:22095702
+  notes: PubMed identifier for Johnson, Nguyen, Yeates and Rees 2012, the Protein
+    Science MetNI conformational paper cited in the GO:1990197 definition.
+- reference: DOI:10.1002/pro.765
+  notes: DOI for Johnson et al. 2012, Inward facing conformations of the MetNI methionine
+    ABC transporter.
+- reference: PMID:30352853
+  notes: PubMed identifier for Nguyen et al. 2018, the PNAS paper describing the PDB:6CVL
+    MetNIQ structure.
+- reference: DOI:10.1073/pnas.1811003115
+  notes: DOI for Nguyen et al. 2018, Noncanonical role for the binding protein in
+    substrate uptake by the MetNI methionine ATP Binding Cassette transporter.
+discussions:
+- discussion_id: resolve_metniq_component_groundings
+  prompt: Resolve exact source-neutral family groundings for MetI transmembrane subunits
+    and MetQ periplasmic methionine-binding proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#meti_transmembrane_subunit
+  - components#metq_periplasmic_binding_protein
+  rationale: The first record uses reviewed labels for MetI and MetQ rather than forcing
+    the MetI component into a generic amino-acid ABC permease/domain entry or the
+    MetQ component into the broader NlpA lipoprotein family.
+  evidence:
+  - reference: UniProtKB:P31547
+  - reference: UniProtKB:P28635
+  posed_by: codex
+  posed_date: '2026-10-01'

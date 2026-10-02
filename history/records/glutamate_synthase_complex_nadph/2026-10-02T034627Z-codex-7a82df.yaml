@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/glutamate_synthase_complex_nadph.yaml
+  slug: glutamate_synthase_complex_nadph
+session:
+  id: 2026-10-02T034627Z-codex-7a82df
+  timestamp: '2026-10-02T03:46:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add glutamate synthase complex NADPH record
+  details: Created a GO:0009342-backed NADPH glutamate synthase complex record with generic
+    glutamate-synthase parentage, reviewed-label-only GltB and GltD constituents, reviewed
+    E. coli K-12 UniProt examples, CPX-5041 composition evidence, glutamate synthase NADPH
+    activity, and DOI/PMID evidence.

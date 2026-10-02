@@ -5334,9 +5334,9 @@
           "cosine_similarity": 0.70210282
         },
         {
-          "identifier": "GO:0009512",
-          "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.6604251
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.6652186
         }
       ]
     },
@@ -5737,9 +5737,9 @@
           "cosine_similarity": 0.76854425
         },
         {
-          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
-          "label": "chromatophore cytochrome bc1 complex",
-          "cosine_similarity": 0.73797968
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.74319398
         }
       ]
     },
@@ -5758,6 +5758,11 @@
           "cosine_similarity": 0.77700758
         },
         {
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.72079392
+        },
+        {
           "identifier": "GO:0045277",
           "label": "respiratory chain complex IV",
           "cosine_similarity": 0.70999741
@@ -5766,11 +5771,6 @@
           "identifier": "GO:0045283",
           "label": "fumarate reductase complex",
           "cosine_similarity": 0.70869109
-        },
-        {
-          "identifier": "GO:1990200",
-          "label": "SsuD-SsuE complex",
-          "cosine_similarity": 0.70697699
         }
       ]
     },
@@ -5846,6 +5846,11 @@
           "cosine_similarity": 0.7363429
         },
         {
+          "identifier": "GO:0009342",
+          "label": "glutamate synthase complex (NADPH)",
+          "cosine_similarity": 0.71081652
+        },
+        {
           "identifier": "GO:1990202",
           "label": "FMN reductase complex",
           "cosine_similarity": 0.70257918
@@ -5859,11 +5864,6 @@
           "identifier": "GO:0045283",
           "label": "fumarate reductase complex",
           "cosine_similarity": 0.69520164
-        },
-        {
-          "identifier": "GO:0045275",
-          "label": "respiratory chain complex III",
-          "cosine_similarity": 0.66189566
         }
       ]
     },
@@ -13339,6 +13339,37 @@
       ]
     },
     {
+      "identifier": "GO:0009334",
+      "label": "3-phenylpropionate dioxygenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:7770085",
+          "label": "protocatechuate 3,4-dioxygenase complex",
+          "cosine_similarity": 0.75985725
+        },
+        {
+          "identifier": "GO:0062077",
+          "label": "phenylacetyl-CoA 1,2-epoxidase complex",
+          "cosine_similarity": 0.73166578
+        },
+        {
+          "identifier": "GO:0045273",
+          "label": "respiratory chain complex II (succinate dehydrogenase)",
+          "cosine_similarity": 0.72079392
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.71472433
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.70099055
+        }
+      ]
+    },
+    {
       "identifier": "GO:0016590",
       "label": "ACF complex",
       "neighbors": [
@@ -13401,6 +13432,37 @@
       ]
     },
     {
+      "identifier": "GO:1990201",
+      "label": "alkanesulfonate monooxygenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990200",
+          "label": "SsuD-SsuE complex",
+          "cosine_similarity": 0.94635683
+        },
+        {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.77875066
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.74319398
+        },
+        {
+          "identifier": "GO:0045273",
+          "label": "respiratory chain complex II (succinate dehydrogenase)",
+          "cosine_similarity": 0.70856615
+        },
+        {
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.70099055
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005658",
       "label": "alpha DNA polymerase:primase complex",
       "neighbors": [
@@ -13451,14 +13513,14 @@
           "cosine_similarity": 0.70755078
         },
         {
+          "identifier": "GO:1990197",
+          "label": "methionine-importing ABC transporter complex",
+          "cosine_similarity": 0.69731002
+        },
+        {
           "identifier": "GO:1990203",
           "label": "MdtBC Complex",
           "cosine_similarity": 0.69142381
-        },
-        {
-          "identifier": "GO:0033281",
-          "label": "TAT protein transport complex",
-          "cosine_similarity": 0.68764767
         }
       ]
     },
@@ -15683,14 +15745,14 @@
           "cosine_similarity": 0.70726103
         },
         {
-          "identifier": "GO:1990202",
-          "label": "FMN reductase complex",
-          "cosine_similarity": 0.68841281
+          "identifier": "GO:0005960",
+          "label": "glycine cleavage complex",
+          "cosine_similarity": 0.69416357
         },
         {
-          "identifier": "GO:0008622",
-          "label": "epsilon DNA polymerase complex",
-          "cosine_similarity": 0.68596698
+          "identifier": "GO:7770085",
+          "label": "protocatechuate 3,4-dioxygenase complex",
+          "cosine_similarity": 0.68858729
         }
       ]
     },
@@ -16288,6 +16350,11 @@
       "label": "FMN reductase complex",
       "neighbors": [
         {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.77875066
+        },
+        {
           "identifier": "GO:1990200",
           "label": "SsuD-SsuE complex",
           "cosine_similarity": 0.77510908
@@ -16306,11 +16373,6 @@
           "identifier": "GO:0016610",
           "label": "nitrogenase complex",
           "cosine_similarity": 0.71416678
-        },
-        {
-          "identifier": "GO:0160292",
-          "label": "sodium-translocating NADH:quinone reductase complex",
-          "cosine_similarity": 0.70257918
         }
       ]
     },
@@ -16528,6 +16590,99 @@
           "identifier": "GO:0042729",
           "label": "DASH complex",
           "cosine_similarity": 0.76391989
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009342",
+      "label": "glutamate synthase complex (NADPH)",
+      "neighbors": [
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.72923634
+        },
+        {
+          "identifier": "GO:0160292",
+          "label": "sodium-translocating NADH:quinone reductase complex",
+          "cosine_similarity": 0.71081652
+        },
+        {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.68907581
+        },
+        {
+          "identifier": "GO:0030700",
+          "label": "glycine reductase complex",
+          "cosine_similarity": 0.67308803
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.66911489
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005960",
+      "label": "glycine cleavage complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0030700",
+          "label": "glycine reductase complex",
+          "cosine_similarity": 0.81877749
+        },
+        {
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.69416357
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.66803464
+        },
+        {
+          "identifier": "GO:0009342",
+          "label": "glutamate synthase complex (NADPH)",
+          "cosine_similarity": 0.66566434
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.66166872
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030700",
+      "label": "glycine reductase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005960",
+          "label": "glycine cleavage complex",
+          "cosine_similarity": 0.81877749
+        },
+        {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.69356343
+        },
+        {
+          "identifier": "GO:0009342",
+          "label": "glutamate synthase complex (NADPH)",
+          "cosine_similarity": 0.67308803
+        },
+        {
+          "identifier": "GO:0045283",
+          "label": "fumarate reductase complex",
+          "cosine_similarity": 0.6603281
+        },
+        {
+          "identifier": "GO:0160292",
+          "label": "sodium-translocating NADH:quinone reductase complex",
+          "cosine_similarity": 0.65305936
         }
       ]
     },
@@ -17210,6 +17365,37 @@
           "identifier": "GO:0030662",
           "label": "coated vesicle membrane",
           "cosine_similarity": 0.82308746
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990197",
+      "label": "methionine-importing ABC transporter complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.7572677
+        },
+        {
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.71548707
+        },
+        {
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.70062772
+        },
+        {
+          "identifier": "GO:0110067",
+          "label": "ammonium transmembrane transporter complex",
+          "cosine_similarity": 0.69731002
+        },
+        {
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.66933249
         }
       ]
     },
@@ -18640,6 +18826,37 @@
       ]
     },
     {
+      "identifier": "GO:0062077",
+      "label": "phenylacetyl-CoA 1,2-epoxidase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.73166578
+        },
+        {
+          "identifier": "GO:7770085",
+          "label": "protocatechuate 3,4-dioxygenase complex",
+          "cosine_similarity": 0.65594609
+        },
+        {
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.62992968
+        },
+        {
+          "identifier": "GO:0009338",
+          "label": "exodeoxyribonuclease V complex",
+          "cosine_similarity": 0.62755135
+        },
+        {
+          "identifier": "GO:0045277",
+          "label": "respiratory chain complex IV",
+          "cosine_similarity": 0.62146528
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032777",
       "label": "piccolo histone acetyltransferase complex",
       "neighbors": [
@@ -18884,6 +19101,37 @@
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.71078341
+        }
+      ]
+    },
+    {
+      "identifier": "GO:7770085",
+      "label": "protocatechuate 3,4-dioxygenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.75985725
+        },
+        {
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.68858729
+        },
+        {
+          "identifier": "GO:1990205",
+          "label": "taurine dioxygenase complex",
+          "cosine_similarity": 0.67688139
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.67557291
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.65708807
         }
       ]
     },
@@ -19760,6 +20008,11 @@
       "label": "SsuD-SsuE complex",
       "neighbors": [
         {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.94635683
+        },
+        {
           "identifier": "GO:1990202",
           "label": "FMN reductase complex",
           "cosine_similarity": 0.77510908
@@ -19775,14 +20028,9 @@
           "cosine_similarity": 0.69169481
         },
         {
-          "identifier": "GO:0045277",
-          "label": "respiratory chain complex IV",
-          "cosine_similarity": 0.65694533
-        },
-        {
-          "identifier": "GO:0045275",
-          "label": "respiratory chain complex III",
-          "cosine_similarity": 0.65089072
+          "identifier": "GO:0009334",
+          "label": "3-phenylpropionate dioxygenase complex",
+          "cosine_similarity": 0.68760932
         }
       ]
     },
@@ -19938,6 +20186,37 @@
           "identifier": "GO:0030690",
           "label": "Noc1p-Noc2p complex",
           "cosine_similarity": 0.76474233
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990205",
+      "label": "taurine dioxygenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.68701332
+        },
+        {
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.67839197
+        },
+        {
+          "identifier": "GO:7770085",
+          "label": "protocatechuate 3,4-dioxygenase complex",
+          "cosine_similarity": 0.67688139
+        },
+        {
+          "identifier": "GO:0045273",
+          "label": "respiratory chain complex II (succinate dehydrogenase)",
+          "cosine_similarity": 0.66541141
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.66166306
         }
       ]
     },

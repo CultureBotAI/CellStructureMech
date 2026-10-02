@@ -64,6 +64,7 @@ targets:
                    synonyms, evidence]
     exceptions:
       - { id: "GO:1990334", label: "SIN/MEN two-component GAP complex", reason: "QuickGO canonical was updated from 'Bfa1-Bub2 complex' to 'SIN/MEN two-component GAP complex' in 2026; the OAK GO snapshot still reports the older label" }
+      - { id: "GO:7770085", label: "protocatechuate 3,4-dioxygenase complex", reason: "QuickGO added this active cellular-component term on 2026-07-16; the OAK GO snapshot does not include it yet" }
 
   # Functions and causal-graph nodes: (grounding, label).
   - name: grounded_nodes

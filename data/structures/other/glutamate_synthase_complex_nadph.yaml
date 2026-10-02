@@ -1,0 +1,207 @@
+identifier: GO:0009342
+label: glutamate synthase complex (NADPH)
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A NADPH-dependent glutamate synthase protein complex that possesses glutamate
+  synthase (NADPH) activity.
+definition_source: GO:0009342
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T03:41:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T03:43:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, Complex Portal synonymy and E. coli K-12 composition,
+    reviewed-label-only GltB/GltD constituents, reviewed UniProt examples, glutamate
+    synthase NADPH activity, a component grounding TODO, and DOI/PMID evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: Glutamate synthase [NADPH] complex
+  synonym_type: EXACT_SYNONYM
+  source: ComplexPortal:CPX-5041
+- synonym_text: GOGAT complex
+  synonym_type: RELATED_SYNONYM
+  source: ComplexPortal:CPX-5041
+- synonym_text: Iron-sulfur flavoenzyme glutamate synthase complex
+  synonym_type: RELATED_SYNONYM
+  source: ComplexPortal:CPX-5041
+- synonym_text: Glutamine-oxoglutarate amino transferase complex
+  synonym_type: RELATED_SYNONYM
+  source: ComplexPortal:CPX-5041
+parent_structures:
+- GO:0031026
+components:
+- component_id: gltb_large_chain
+  label: Glutamate synthase NADPH large chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli GltB accession carries domain-level InterPro
+    entries and broad FAD/NADPH dehydrogenase families, but no exact source-neutral
+    glutamate synthase NADPH large-chain family was verified.
+  gene_symbols:
+  - gltB
+  essentiality: UNKNOWN
+  role: Large glutamate synthase subunit that binds glutamine and participates in
+    amide transfer to 2-oxoglutarate in the NADPH-dependent GltBD complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P09831
+    protein_label: Glutamate synthase [NADPH] large chain
+    gene_symbol: gltB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    role: Reviewed E. coli K-12 GltB accession for the NADPH-dependent glutamate synthase
+      large chain.
+    evidence:
+    - reference: UniProtKB:P09831
+      notes: UniProtKB P09831 is the reviewed E. coli K-12 entry for the NADPH-dependent
+        glutamate synthase large chain.
+    - reference: PMID:3326786
+      notes: Oliver et al. 1987 sequenced the E. coli K-12 glutamate synthase structural
+        genes for both large and small subunits.
+  evidence:
+  - reference: UniProtKB:P09831
+    notes: Reviewed E. coli K-12 GltB accession.
+  - reference: PMID:3326786
+    notes: Oliver et al. 1987 identified the E. coli K-12 large subunit structural
+      gene.
+  - reference: ComplexPortal:CPX-5041
+    notes: Complex Portal CPX-5041 curates P09831/GltB as a protein participant in
+      the E. coli K-12 glutamate synthase [NADPH] complex.
+- component_id: gltd_small_chain
+  label: Glutamate synthase NADPH small chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro:IPR006006 is GltD-like but also covers AegA/UacF relatives,
+    so it was reviewed as too broad for exact glutamate synthase NADPH small-chain
+    grounding.
+  gene_symbols:
+  - gltD
+  essentiality: UNKNOWN
+  role: Small iron-sulfur glutamate synthase subunit in the NADPH-dependent GltBD
+    complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P09832
+    protein_label: Glutamate synthase [NADPH] small chain
+    gene_symbol: gltD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    role: Reviewed E. coli K-12 GltD accession for the NADPH-dependent glutamate synthase
+      small chain.
+    evidence:
+    - reference: UniProtKB:P09832
+      notes: UniProtKB P09832 is the reviewed E. coli K-12 entry for the NADPH-dependent
+        glutamate synthase small chain.
+    - reference: PMID:3326786
+      notes: Oliver et al. 1987 sequenced the E. coli K-12 glutamate synthase structural
+        genes for both large and small subunits.
+  evidence:
+  - reference: UniProtKB:P09832
+    notes: Reviewed E. coli K-12 GltD accession.
+  - reference: PMID:3326786
+    notes: Oliver et al. 1987 identified the E. coli K-12 small subunit structural
+      gene.
+  - reference: ComplexPortal:CPX-5041
+    notes: Complex Portal CPX-5041 curates P09832/GltD as a protein participant in
+      the E. coli K-12 glutamate synthase [NADPH] complex.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Source strain for the CPX-5041 GltBD composition and the reviewed UniProtKB
+    GltB and GltD examples.
+  reference: ComplexPortal:CPX-5041
+functions:
+- function_id: glutamate_synthase_nadph_activity
+  label: glutamate synthase (NADPH) activity
+  grounding: GO:0004355
+  description: NADPH-dependent conversion mediated by the GltBD complex between glutamine
+    plus 2-oxoglutarate and glutamate.
+  evidence:
+  - reference: GO:0009342
+    notes: GO:0009342 is the cellular-component term for a complex that possesses
+      glutamate synthase (NADPH) activity.
+  - reference: GO:0004355
+    notes: GO:0004355 is the molecular-function term for glutamate synthase (NADPH)
+      activity.
+  - reference: PMID:4565085
+    notes: Miller and Stadtman 1972 characterized purified E. coli glutamate synthase
+      as an iron-sulfur flavoprotein.
+evidence:
+- reference: GO:0009342
+  notes: Gene Ontology cellular-component term for the NADPH-specific glutamate synthase
+    complex.
+- reference: GO:0031026
+  notes: OLS4 reports GO:0009342 as an is-a child of the generic glutamate synthase
+    complex term GO:0031026.
+- reference: GO:0004355
+  notes: Gene Ontology molecular-function term for glutamate synthase (NADPH) activity.
+- reference: UniProtKB:P09831
+  notes: Reviewed UniProtKB E. coli K-12 GltB entry.
+- reference: UniProtKB:P09832
+  notes: Reviewed UniProtKB E. coli K-12 GltD entry.
+- reference: ComplexPortal:CPX-5041
+  notes: Complex Portal entry for the E. coli K-12 glutamate synthase [NADPH] complex.
+- reference: PMID:4565085
+  notes: PubMed identifier for Miller and Stadtman 1972, the Journal of Biological
+    Chemistry biochemical study cited by GO:0009342 and CPX-5041.
+- reference: DOI:10.1016/S0021-9258(19)44642-5
+  notes: DOI for Miller and Stadtman 1972 as reported by UniProtKB.
+- reference: PMID:3326786
+  notes: PubMed identifier for Oliver et al. 1987, the E. coli K-12 glutamate synthase
+    structural-gene sequence paper.
+- reference: DOI:10.1016/0378-1119(87)90207-1
+  notes: DOI for Oliver et al. 1987, as reported by PubMed.
+discussions:
+- discussion_id: resolve_gltb_gltd_component_grounding
+  prompt: Can the GltB and GltD components be grounded to exact source-neutral families?
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GltB has only domain/broad dehydrogenase signatures in the reviewed E.
+    coli UniProtKB entry, and the closest reviewed GltD InterPro family also covers
+    AegA/UacF oxidoreductase relatives. Keep both components reviewed-label-only until
+    exact large-chain and small-chain families are verified.
+  evidence:
+  - reference: UniProtKB:P09831
+    notes: The reviewed GltB entry lists broad or domain-level InterPro signatures
+      rather than an exact large-chain family.
+  - reference: InterPro:IPR006006
+    notes: IPR006006 covers GltD and closely related AegA/UacF proteins, so it is
+      broader than the GltD component.
+  posed_by: codex
+  posed_date: '2026-10-02'
+complex_compositions:
+- composition_id: complex_portal_cpx_5041
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-5041
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-5041
+  complex_label: Glutamate synthase [NADPH] complex
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  evidence_code: ECO:0000353
+  retrieved_on: '2026-10-02'
+  participants:
+  - participant_id: UniProtKB:P09831
+    label: Glutamate synthase [NADPH] large chain
+    participant_type: protein
+    gene_symbol: gltB
+    source_interactor_id: EBI-22228009
+  - participant_id: UniProtKB:P09832
+    label: Glutamate synthase [NADPH] small chain
+    participant_type: protein
+    gene_symbol: gltD
+    source_interactor_id: EBI-22228010
+  - participant_id: CHEBI:49883
+    label: tetra-mu3-sulfido-tetrairon
+    participant_type: small molecule
+    gene_symbol: 4Fe-4S iron-sulfur cluster
+    stoichiometry: '1'
+    source_interactor_id: EBI-22228055

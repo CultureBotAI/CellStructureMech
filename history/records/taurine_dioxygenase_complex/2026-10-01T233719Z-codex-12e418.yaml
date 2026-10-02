@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/taurine_dioxygenase_complex.yaml
+  slug: taurine_dioxygenase_complex
+session:
+  id: 2026-10-01T233719Z-codex-12e418
+  timestamp: '2026-10-01T23:37:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1891
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1890
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrowed taurine dioxygenase grounding note
+  details: 'Addressed PR review issue #1891 by narrowing the TauD component grounding_notes
+    to the broad InterPro entries actually verified in the GO:1990205 curation pass, preserving
+    REVIEWED_LABEL_ONLY and the open exact-family CURATION_TODO while removing unsupported
+    Pfam and NCBIfam wording.'

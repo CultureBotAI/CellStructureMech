@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/alkanesulfonate_monooxygenase_complex.yaml
+  slug: alkanesulfonate_monooxygenase_complex
+session:
+  id: 2026-10-02T001138Z-codex-dea1fa
+  timestamp: '2026-10-02T00:11:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added alkanesulfonate monooxygenase complex record
+  details: Created a GO:1990201-backed alkanesulfonate monooxygenase complex record with the
+    GO SsuD complex narrow synonym, GO:1990204 oxidoreductase-complex parentage, cytosol parthood,
+    an InterPro-grounded SsuD constituent with an E. coli K-12 reviewed UniProt example, an
+    E. coli canonical example, alkanesulfonate monooxygenase activity, tetrameric subunit
+    count, DOI/PMID evidence from the GO-cited SsuD/SsuE biochemical literature, and an explicit
+    SsuE boundary decision.

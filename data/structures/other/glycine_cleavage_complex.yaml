@@ -1,0 +1,257 @@
+identifier: GO:0005960
+label: glycine cleavage complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A glycine-cleavage multienzyme protein complex that reversibly oxidizes
+  glycine through L-, P-, H-, and T-protein components.
+definition_source: GO:0005960
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T03:09:52Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T03:11:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO exact synonymy, oxidoreductase- and transferase-complex parentage,
+    exact InterPro-grounded P/H/T constituents, a reviewed-label-only L constituent
+    with a grounding TODO, reviewed E. coli K-12 UniProt examples, glycine dehydrogenase
+    activity, and DOI/PMID evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: glycine cleavage system
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005960
+- synonym_text: glycine decarboxylase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005960
+- synonym_text: glycine dehydrogenase (decarboxylating) complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005960
+- synonym_text: glycine synthase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005960
+parent_structures:
+- GO:1990204
+- GO:1990234
+components:
+- component_id: gcvp_p_protein
+  label: Glycine dehydrogenase (decarboxylating)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR020581
+  gene_symbols:
+  - gcvP
+  essentiality: UNKNOWN
+  role: P-protein pyridoxal-phosphate enzyme that decarboxylates glycine and transfers
+    the remaining aminomethyl group to lipoylated H protein.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33195
+    protein_label: Glycine dehydrogenase (decarboxylating)
+    gene_symbol: gcvP
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    role: Reviewed E. coli K-12 gcvP accession for glycine cleavage P-protein.
+    evidence:
+    - reference: UniProtKB:P33195
+      notes: UniProtKB P33195 is the reviewed E. coli K-12 entry for glycine cleavage
+        system P-protein.
+    - reference: PMID:8375392
+      notes: Okamura-Ikeda et al. 1993 sequenced the E. coli gcvT-gcvH-gcvP operon
+        encoding the T, H and P proteins.
+  evidence:
+  - reference: GO:0005960
+    notes: GO:0005960 defines the E. coli glycine cleavage complex as containing glycine
+      dehydrogenase, also known as P-protein.
+  - reference: InterPro:IPR020581
+    notes: InterPro IPR020581 is the exact glycine cleavage system P-protein family
+      entry.
+  - reference: PMID:8375392
+    notes: Okamura-Ikeda et al. 1993 identified E. coli gcvP as the structural gene
+      encoding P-protein.
+- component_id: gcvh_h_protein
+  label: Glycine cleavage system H protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR017453
+  gene_symbols:
+  - gcvH
+  essentiality: UNKNOWN
+  role: Lipoyl carrier protein that accepts aminomethyl groups from P-protein and
+    presents them to T-protein.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A6T9
+    protein_label: Glycine cleavage system H protein
+    gene_symbol: gcvH
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    role: Reviewed E. coli K-12 gcvH accession for glycine cleavage H-protein.
+    evidence:
+    - reference: UniProtKB:P0A6T9
+      notes: UniProtKB P0A6T9 is the reviewed E. coli K-12 entry for glycine cleavage
+        system H-protein.
+    - reference: PMID:8375392
+      notes: Okamura-Ikeda et al. 1993 sequenced gcvH in the E. coli gcv operon.
+  evidence:
+  - reference: GO:0005960
+    notes: GO:0005960 defines the E. coli glycine cleavage complex as containing lipoyl-GcvH-protein.
+  - reference: InterPro:IPR017453
+    notes: InterPro IPR017453 is the exact glycine cleavage system H-protein subgroup
+      family entry.
+  - reference: PMID:8375392
+    notes: Okamura-Ikeda et al. 1993 identified E. coli gcvH as the structural gene
+      encoding H-protein.
+- component_id: gcvt_t_protein
+  label: Aminomethyltransferase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006223
+  gene_symbols:
+  - gcvT
+  essentiality: UNKNOWN
+  role: T-protein folate-dependent aminomethyltransferase that transfers the aminomethyl
+    group from H protein to tetrahydrofolate.
+  protein_examples:
+  - uniprot_id: UniProtKB:P27248
+    protein_label: Aminomethyltransferase
+    gene_symbol: gcvT
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    role: Reviewed E. coli K-12 gcvT accession for glycine cleavage T-protein.
+    evidence:
+    - reference: UniProtKB:P27248
+      notes: UniProtKB P27248 is the reviewed E. coli K-12 entry for glycine cleavage
+        system T-protein.
+    - reference: PMID:8375392
+      notes: Okamura-Ikeda et al. 1993 sequenced gcvT in the E. coli gcv operon.
+  evidence:
+  - reference: GO:0005960
+    notes: GO:0005960 defines the E. coli glycine cleavage complex as containing aminomethyltransferase,
+      also known as T-protein.
+  - reference: InterPro:IPR006223
+    notes: InterPro IPR006223 is the exact glycine cleavage system T-protein family
+      entry.
+  - reference: PMID:8375392
+    notes: Okamura-Ikeda et al. 1993 identified E. coli gcvT as the structural gene
+      encoding T-protein.
+- component_id: lpd_l_protein
+  label: Dihydrolipoyl dehydrogenase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact glycine-cleavage-specific L-protein family was asserted.
+    E. coli LpdA is a shared E3 flavoprotein that also serves pyruvate and 2-oxoglutarate
+    dehydrogenase complexes, so broad dihydrolipoamide dehydrogenase InterPro signatures
+    would overclaim glycine cleavage specificity.
+  gene_symbols:
+  - lpdA
+  - lpd
+  essentiality: UNKNOWN
+  role: L-protein dihydrolipoyl dehydrogenase that reoxidizes the reduced H-protein
+    lipoyl arm.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A9P0
+    protein_label: Dihydrolipoyl dehydrogenase
+    gene_symbol: lpdA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    role: Reviewed E. coli K-12 lpdA/lpd accession for the shared glycine cleavage
+      L-protein.
+    evidence:
+    - reference: UniProtKB:P0A9P0
+      notes: UniProtKB P0A9P0 is the reviewed E. coli K-12 entry for dihydrolipoyl
+        dehydrogenase.
+    - reference: GO:0005960
+      notes: GO:0005960 names dihydrolipoamide dehydrogenase as the E. coli glycine
+        cleavage complex L protein.
+  evidence:
+  - reference: GO:0005960
+    notes: GO:0005960 defines the E. coli glycine cleavage complex as containing dihydrolipoamide
+      dehydrogenase, also known as L-protein.
+  - reference: UniProtKB:P0A9P0
+    notes: UniProtKB P0A9P0 identifies E. coli LpdA/Lpd as the glycine cleavage system
+      L protein.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Bacterial source of the cloned gcv operon sequence for the T, H and P proteins
+    and of the reviewed UniProtKB examples.
+  reference: PMID:8375392
+functions:
+- function_id: glycine_dehydrogenase_decarboxylating_activity
+  label: glycine dehydrogenase (decarboxylating) activity
+  grounding: GO:0004375
+  description: The P-protein constituent decarboxylates glycine and transfers the
+    remaining aminomethyl group to the H-protein lipoyl arm during glycine cleavage.
+  evidence:
+  - reference: GO:0005960
+    notes: QuickGO links the glycine cleavage complex to glycine dehydrogenase (decarboxylating)
+      activity.
+  - reference: GO:0004375
+    notes: GO:0004375 is the molecular-function term for glycine cleavage P-protein
+      activity.
+  - reference: InterPro:IPR020581
+    notes: InterPro IPR020581 carries GO:0004375 for glycine cleavage system P proteins.
+evidence:
+- reference: GO:0005960
+  notes: Gene Ontology cellular-component term for the glycine cleavage complex and
+    its exact synonymy.
+- reference: GO:1990204
+  notes: OLS4 reports GO:0005960 as an is-a child of GO:1990204 oxidoreductase complex.
+- reference: GO:1990234
+  notes: OLS4 reports GO:0005960 as an is-a child of GO:1990234 transferase complex.
+- reference: GO:0004375
+  notes: Gene Ontology molecular-function term for glycine dehydrogenase (decarboxylating)
+    activity.
+- reference: InterPro:IPR020581
+  notes: InterPro family entry for glycine cleavage P proteins.
+- reference: InterPro:IPR017453
+  notes: InterPro family entry for glycine cleavage H proteins.
+- reference: InterPro:IPR006223
+  notes: InterPro family entry for glycine cleavage T proteins.
+- reference: UniProtKB:P33195
+  notes: Reviewed UniProtKB E. coli K-12 GcvP entry.
+- reference: UniProtKB:P0A6T9
+  notes: Reviewed UniProtKB E. coli K-12 GcvH entry.
+- reference: UniProtKB:P27248
+  notes: Reviewed UniProtKB E. coli K-12 GcvT entry.
+- reference: UniProtKB:P0A9P0
+  notes: Reviewed UniProtKB E. coli K-12 LpdA/Lpd entry.
+- reference: PMID:8375392
+  notes: PubMed identifier for Okamura-Ikeda et al. 1993, the European Journal of
+    Biochemistry E. coli gcv operon sequence paper.
+- reference: DOI:10.1111/j.1432-1033.1993.tb18172.x
+  notes: DOI for Okamura-Ikeda et al. 1993, as reported by PubMed.
+- reference: PMID:3023185
+  notes: PubMed identifier for Stauffer, Plamann and Stauffer 1986, the Gene E. coli
+    glycine-cleavage enzyme system cloning paper.
+- reference: DOI:10.1016/0378-1119(86)90185-X
+  notes: DOI for Stauffer, Plamann and Stauffer 1986, as reported by PubMed.
+discussions:
+- discussion_id: resolve_l_protein_grounding
+  prompt: Can the glycine cleavage L-protein be grounded to an exact source-neutral
+    family?
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The E. coli L protein is LpdA/Lpd, a dihydrolipoyl dehydrogenase shared
+    by multiple multienzyme complexes. Keep the component reviewed-label-only until
+    an exact L-protein family or glycine cleavage subcomplex grounding is verified.
+  evidence:
+  - reference: GO:0005960
+    notes: GO:0005960 names dihydrolipoamide dehydrogenase as the E. coli glycine
+      cleavage L protein.
+  - reference: UniProtKB:P0A9P0
+    notes: UniProtKB P0A9P0 describes E. coli LpdA/Lpd as the E3 component of several
+      dehydrogenase complexes and as glycine cleavage L protein.
+  posed_by: codex
+  posed_date: '2026-10-02'
