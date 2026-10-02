@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_cingulum.yaml
+  slug: dinoflagellate_cingulum
+session:
+  id: 2026-10-02T165028Z-codex-c3304b
+  timestamp: '2026-10-02T16:50:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1925
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1926
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1924
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - generated_artifacts
+  - history
+  summary: Address dinoflagellate cingulum PR review
+  details: 'Addressed adversarial PR #1924 review issues #1925 and #1926. Added a nonmechanistic
+    cingulum-to-cell-surface-furrow topology graph so the GO:0097611 rdfs:subClassOf GO:0097610
+    assertion is represented in the graph layer with GO evidence. Tightened the Taylor 1980
+    PMID/DOI evidence notes to record that this pass reached EuropePMC and Crossref metadata
+    but no article-body text, PMC copy, open-access route, or PDF. Regenerated embeddings,
+    pages, and README stats after the YAML edit.'
