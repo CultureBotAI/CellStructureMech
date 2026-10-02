@@ -13539,6 +13539,11 @@
           "cosine_similarity": 0.9200638
         },
         {
+          "identifier": "cellstructuremech:acref_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrEF-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.90453141
+        },
+        {
           "identifier": "GO:1990196",
           "label": "MacAB-TolC complex",
           "cosine_similarity": 0.80096702
@@ -13547,11 +13552,6 @@
           "identifier": "GO:1990207",
           "label": "EmrE multidrug transporter complex",
           "cosine_similarity": 0.79650194
-        },
-        {
-          "identifier": "GO:0031317",
-          "label": "tripartite ATP-independent periplasmic transporter complex",
-          "cosine_similarity": 0.77211125
         }
       ]
     },
@@ -13570,6 +13570,11 @@
           "cosine_similarity": 0.90770589
         },
         {
+          "identifier": "cellstructuremech:acref_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrEF-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.90246513
+        },
+        {
           "identifier": "GO:1990196",
           "label": "MacAB-TolC complex",
           "cosine_similarity": 0.80959941
@@ -13578,11 +13583,37 @@
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.7873098
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:acref_tolc_multidrug_efflux_transport_complex",
+      "label": "AcrEF-TolC multidrug efflux transport complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.90453141
+        },
+        {
+          "identifier": "cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAD-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.90246513
+        },
+        {
+          "identifier": "cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex",
+          "label": "EmrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.88136493
+        },
+        {
+          "identifier": "GO:1990196",
+          "label": "MacAB-TolC complex",
+          "cosine_similarity": 0.77425729
         },
         {
           "identifier": "GO:1990207",
           "label": "EmrE multidrug transporter complex",
-          "cosine_similarity": 0.78443239
+          "cosine_similarity": 0.75617658
         }
       ]
     },
@@ -16112,6 +16143,11 @@
           "cosine_similarity": 0.90770589
         },
         {
+          "identifier": "cellstructuremech:acref_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrEF-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.88136493
+        },
+        {
           "identifier": "GO:1990207",
           "label": "EmrE multidrug transporter complex",
           "cosine_similarity": 0.84354349
@@ -16120,11 +16156,6 @@
           "identifier": "GO:1990196",
           "label": "MacAB-TolC complex",
           "cosine_similarity": 0.80540736
-        },
-        {
-          "identifier": "GO:0030256",
-          "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.75550184
         }
       ]
     },
@@ -17450,14 +17481,14 @@
           "cosine_similarity": 0.80096702
         },
         {
+          "identifier": "cellstructuremech:acref_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrEF-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.77425729
+        },
+        {
           "identifier": "GO:1990199",
           "label": "MsbA transporter complex",
           "cosine_similarity": 0.73566226
-        },
-        {
-          "identifier": "GO:1990207",
-          "label": "EmrE multidrug transporter complex",
-          "cosine_similarity": 0.73124832
         }
       ]
     },

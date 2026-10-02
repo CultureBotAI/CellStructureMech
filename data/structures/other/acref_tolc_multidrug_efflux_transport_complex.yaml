@@ -1,0 +1,314 @@
+identifier: cellstructuremech:acref_tolc_multidrug_efflux_transport_complex
+label: AcrEF-TolC multidrug efflux transport complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An Escherichia coli Resistance-Nodulation-Division-family cell-envelope
+  efflux pump complex composed of AcrE, AcrF, and TolC subunits that exports acriflavines,
+  indoles, and other xenobiotic substrates across the cell envelope.
+definition_source: ComplexPortal:CPX-4265
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T10:46:19Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T10:47:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added CPX-4265/GO efflux-pump parentage, AcrE, AcrF, and TolC component
+    rows with E. coli K-12 reviewed UniProt examples, exact InterPro grounding for
+    TolC, a compact xenobiotic export graph, the Complex Portal CPX-4265 source composition,
+    and an AcrE/AcrF component-family grounding TODO.
+  llm_assisted: true
+parent_structures:
+- GO:1990281
+components:
+- component_id: acre_membrane_fusion_protein
+  label: Multidrug export protein AcrE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - acrE
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro/Pfam entries are broader MdtA-like subdomains or RND-pump membrane-fusion
+    families rather than an exact source-neutral AcrE family.
+  role: Periplasmic membrane-fusion adaptor subunit that links AcrF to the TolC outer-membrane
+    channel in the AcrEF-TolC conduit.
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P24180
+    protein_label: Multidrug export protein AcrE
+    gene_symbol: acrE
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P24180
+      notes: Reviewed Swiss-Prot entry ACRE_ECOLI is the E. coli K-12 AcrE accession
+        and cross-references ComplexPortal:CPX-4265.
+  evidence:
+  - reference: ComplexPortal:CPX-4265
+    notes: Complex Portal CPX-4265 curates P24180/AcrE as an E. coli K-12 AcrEF-TolC
+      multidrug efflux transport complex participant.
+  - reference: UniProtKB:P24180
+    notes: UniProtKB P24180 is the reviewed E. coli K-12 entry for Multidrug export
+      protein AcrE.
+- component_id: acrf_inner_membrane_transporter
+  label: Multidrug export protein AcrF
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - acrF
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt entry is exact, but the available
+    InterPro/Pfam entries are broader RND-family transporter entries rather than an
+    exact source-neutral AcrF family.
+  role: Inner-membrane RND transporter subunit that forms the AcrEF transport core
+    for xenobiotic export through the AcrE/TolC conduit.
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P24181
+    protein_label: Multidrug export protein AcrF
+    gene_symbol: acrF
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P24181
+      notes: Reviewed Swiss-Prot entry ACRF_ECOLI is the E. coli K-12 AcrF accession
+        and cross-references ComplexPortal:CPX-4265.
+  evidence:
+  - reference: ComplexPortal:CPX-4265
+    notes: Complex Portal CPX-4265 curates P24181/AcrF as an E. coli K-12 AcrEF-TolC
+      multidrug efflux transport complex participant.
+  - reference: UniProtKB:P24181
+    notes: UniProtKB P24181 is the reviewed E. coli K-12 entry for Multidrug export
+      protein AcrF.
+- component_id: tolc_outer_membrane_channel
+  label: Outer membrane channel protein TolC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR058622
+  gene_symbols:
+  - tolC
+  essentiality: ESSENTIAL
+  role: Trimeric outer-membrane channel constituent that completes the AcrEF-TolC
+    cell-envelope efflux conduit.
+  stoichiometry: 3 copies in the E. coli K-12 Complex Portal CPX-4265 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P02930
+    protein_label: Outer membrane protein TolC
+    gene_symbol: tolC
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P02930
+      notes: Reviewed Swiss-Prot entry TOLC_ECOLI is the E. coli K-12 TolC accession
+        and cross-references ComplexPortal:CPX-4265.
+  evidence:
+  - reference: ComplexPortal:CPX-4265
+    notes: Complex Portal CPX-4265 curates P02930/TolC as three copies in the E. coli
+      K-12 AcrEF-TolC multidrug efflux transport complex.
+  - reference: UniProtKB:P02930
+    notes: UniProtKB P02930 is the reviewed E. coli K-12 entry for Outer membrane
+      protein TolC.
+  - reference: InterPro:IPR058622
+    notes: InterPro IPR058622 is the Outer membrane channel protein TolC family entry.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Source strain for Complex Portal CPX-4265, which curates AcrE, AcrF, and TolC
+    as the participants of AcrEF-TolC.
+  reference: ComplexPortal:CPX-4265
+functions:
+- function_id: xenobiotic_transmembrane_transport
+  label: xenobiotic transmembrane transporter activity
+  grounding: GO:0042910
+  description: The AcrEF-TolC complex exports acriflavine, indole, and other xenobiotic
+    substrates across the E. coli cell envelope through the coupled AcrF transporter,
+    AcrE adaptor, and TolC channel.
+  evidence:
+  - reference: GO:0042910
+    notes: GO:0042910 is the molecular-function term for xenobiotic transmembrane
+      transporter activity.
+  - reference: ComplexPortal:CPX-4265
+    notes: Complex Portal cross-references GO:0042910 for the E. coli K-12 AcrEF-TolC
+      multidrug efflux transport complex.
+evidence:
+- reference: ComplexPortal:CPX-4265
+  notes: Complex Portal entry for the E. coli K-12 AcrEF-TolC multidrug efflux transport
+    complex.
+- reference: GO:1990281
+  notes: Gene Ontology cellular-component parent term for efflux pump complexes.
+- reference: GO:0042910
+  notes: Gene Ontology molecular-function term for xenobiotic transmembrane transporter
+    activity.
+- reference: GO:0140330
+  notes: Gene Ontology biological-process term for xenobiotic detoxification by transmembrane
+    export across the cell outer membrane.
+- reference: InterPro:IPR058622
+  notes: InterPro family entry for Outer membrane channel protein TolC.
+- reference: UniProtKB:P24180
+  notes: Reviewed E. coli K-12 AcrE UniProtKB entry.
+- reference: UniProtKB:P24181
+  notes: Reviewed E. coli K-12 AcrF UniProtKB entry.
+- reference: UniProtKB:P02930
+  notes: Reviewed E. coli K-12 TolC UniProtKB entry.
+- reference: PMID:30880703
+  notes: PubMed identifier for Srinivasan et al. 2018, Transcriptional response of
+    AcrEF-TolC against fluoroquinolone and carbapenem in Escherichia coli of clinical
+    origin.
+- reference: DOI:10.4103/ijmm.IJMM_18_308
+  notes: DOI for Srinivasan et al. 2018, Transcriptional response of AcrEF-TolC against
+    fluoroquinolone and carbapenem in Escherichia coli of clinical origin.
+- reference: PMID:26113845
+  notes: PubMed identifier for Zwama and Pos 2015, The ins and outs of RND efflux
+    pumps in Escherichia coli.
+- reference: DOI:10.3389/fmicb.2015.00587
+  notes: DOI for Zwama and Pos 2015, The ins and outs of RND efflux pumps in Escherichia
+    coli.
+causal_graphs:
+- graph_id: acref_tolc_xenobiotic_efflux
+  title: AcrEF-TolC exports xenobiotics across the cell envelope
+  description: AcrF, AcrE, and TolC form an envelope-spanning RND efflux pump that
+    exports acriflavine, indole, and other xenobiotic substrates from E. coli.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three-protein AcrEF-TolC boundary and whole-complex
+    xenobiotic export function without resolving AcrF substrate-binding sites, proton-coupled
+    transport states, or TolC gate opening.
+  nodes:
+  - node_id: acref_tolc
+    label: AcrEF-TolC multidrug efflux transport complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:acref_tolc_multidrug_efflux_transport_complex
+  - node_id: acre
+    label: Multidrug export protein AcrE
+    node_type: GENE_OR_PROTEIN
+    component_ref: acre_membrane_fusion_protein
+  - node_id: acrf
+    label: Multidrug export protein AcrF
+    node_type: GENE_OR_PROTEIN
+    component_ref: acrf_inner_membrane_transporter
+  - node_id: tolc
+    label: Outer membrane channel protein TolC
+    node_type: GENE_OR_PROTEIN
+    component_ref: tolc_outer_membrane_channel
+    grounding: InterPro:IPR058622
+  - node_id: xenobiotic_transport
+    label: xenobiotic transmembrane transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0042910
+  - node_id: outer_membrane_export
+    label: xenobiotic detoxification by transmembrane export across the cell outer
+      membrane
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0140330
+  - node_id: xenobiotic
+    label: xenobiotic substrate
+    node_type: CHEMICAL
+  - node_id: cell_exterior
+    label: cell exterior
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: acrf
+    predicate: couples to
+    object: acre
+    description: AcrF forms the inner-membrane RND transporter core and couples to
+      AcrE adaptor subunits.
+    evidence:
+    - reference: ComplexPortal:CPX-4265
+      notes: CPX-4265 curates AcrE and AcrF as participants in the E. coli AcrEF-TolC
+        pump.
+  - subject: acre
+    predicate: couples to
+    object: tolc
+    description: AcrE adaptor subunits connect the AcrF transporter to the TolC outer-membrane
+      channel.
+    evidence:
+    - reference: ComplexPortal:CPX-4265
+      notes: CPX-4265 curates AcrE and TolC as participants in the E. coli AcrEF-TolC
+        pump.
+  - subject: acref_tolc
+    predicate: enables
+    object: xenobiotic_transport
+    description: The assembled AcrEF-TolC complex enables xenobiotic transmembrane
+      transporter activity.
+    evidence:
+    - reference: ComplexPortal:CPX-4265
+      notes: Complex Portal cross-references GO:0042910 for the AcrEF-TolC complex.
+  - subject: xenobiotic_transport
+    predicate: transports
+    object: xenobiotic
+    description: AcrEF-TolC exports acriflavine, indole, and other xenobiotic substrates
+      through the tripartite pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4265
+      notes: CPX-4265 summarizes the AcrEF-TolC complex as transporting acriflavines
+        and indoles.
+  - subject: outer_membrane_export
+    predicate: targets
+    object: cell_exterior
+    description: The AcrEF-TolC pump contributes to xenobiotic export across the outer
+      membrane and out of the cell envelope.
+    evidence:
+    - reference: GO:0140330
+      notes: GO:0140330 describes reducing xenobiotic toxicity by export through the
+        outer membrane.
+discussions:
+- discussion_id: acref_tolc_component_family_grounding
+  prompt: Resolve exact source-neutral protein families for AcrE and AcrF before replacing
+    their reviewed-label-only component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#acre_membrane_fusion_protein
+  - components#acrf_inner_membrane_transporter
+  rationale: ComplexPortal:CPX-4265 and the reviewed E. coli K-12 UniProt records
+    exactly identify AcrE and AcrF, but no InterPro, Pfam, NCBIfam, or GO accession
+    was verified as an exact source-neutral family for either named pump constituent;
+    TolC is grounded to InterPro:IPR058622.
+  evidence:
+  - reference: ComplexPortal:CPX-4265
+    notes: CPX-4265 curates the E. coli K-12 AcrE, AcrF, and TolC participants.
+  - reference: InterPro:IPR058622
+    notes: InterPro IPR058622 is the exact Outer membrane channel protein TolC family
+      entry.
+  posed_by: codex
+  posed_date: '2026-10-02'
+complex_compositions:
+- composition_id: complex_portal_cpx_4265
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-4265
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-4265
+  complex_label: AcrEF-TolC multidrug efflux transport complex
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  evidence_code: ECO:0005547
+  participants:
+  - participant_id: UniProtKB:P24180
+    label: Multidrug export protein AcrE
+    participant_type: protein
+    gene_symbol: acrE
+    source_interactor_id: EBI-21406699
+  - participant_id: UniProtKB:P24181
+    label: Multidrug export protein AcrF
+    participant_type: protein
+    gene_symbol: acrF
+    source_interactor_id: EBI-21406706
+  - participant_id: UniProtKB:P02930
+    label: Outer membrane protein TolC
+    participant_type: protein
+    gene_symbol: tolC
+    stoichiometry: '3'
+    source_interactor_id: EBI-21406696
+  retrieved_on: '2026-10-02'
+  notes: 'Curator-scoped import: E. coli K-12 AcrEF-TolC source composition for this
+    record. Source evidence: inferred by curator. The accession was resolved through
+    the Complex Portal accession endpoint; no equivalence xref was inferred.'
