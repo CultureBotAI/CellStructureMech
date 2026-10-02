@@ -1,0 +1,388 @@
+identifier: cellstructuremech:formate_hydrogenlyase_complex
+label: formate hydrogenlyase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A membrane-bound Escherichia coli formate hydrogenlyase complex in which
+  FdhF and HycB-HycG subunits couple formate oxidation to proton reduction, yielding
+  carbon dioxide and hydrogen gas.
+definition_source: DOI:10.1038/s41467-022-32831-x
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T06:16:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T06:17:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parentage, FHL synonymy, reviewed-label-only FdhF and HycB-HycG
+    component rows with E. coli K-12 UniProt examples, a PDB:7Z0T canonical example,
+    formate hydrogenlyase activity, DOI/PMID/PDB evidence, a compact function graph,
+    and a component-family grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-10-02T06:17:55Z'
+  curator: codex
+  action: REVISED_TEXT
+  changes: Restored standard Hyc and FHL capitalization in component role prose.
+  llm_assisted: true
+synonyms:
+- synonym_text: FHL complex
+  synonym_type: EXACT_SYNONYM
+  source: PMID:36104349
+parent_structures:
+- GO:1990204
+components:
+- component_id: fdhf_formate_dehydrogenase_h
+  label: Formate dehydrogenase H
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - fdhF
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family was asserted for this E. coli formate
+    hydrogenlyase subunit; the reviewed UniProt example is exact, but broader domain
+    and family signatures were not verified as exclusive to this FHL component.
+  role: Formate-oxidizing molybdo-selenoprotein that donates electrons into the Hyc
+    module.
+  stoichiometry: 1 copy in the E. coli K-12 PDB:7Z0T composite structure
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P07658
+    protein_label: Formate dehydrogenase H
+    gene_symbol: fdhF
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P07658
+      notes: Reviewed Swiss-Prot entry for E. coli K-12 fdhF matches the Formate dehydrogenase
+        H accession mapped by RCSB to PDB:7Z0T entity 7.
+  evidence:
+  - reference: PDB:7Z0T
+    notes: RCSB maps PDB:7Z0T entity 7 to UniProtKB:P07658 and describes it as Formate
+      dehydrogenase H from E. coli K-12.
+  - reference: PMID:36104349
+    notes: Steinhilper et al. 2022 resolved P07658/fdhF as one of seven protein entities
+      in the membrane-bound E. coli formate hydrogenlyase complex.
+- component_id: hycb_subunit
+  label: Formate hydrogenlyase subunit 2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hycB
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family was asserted for this E. coli formate
+    hydrogenlyase subunit; the reviewed UniProt example is exact, but broader domain
+    and family signatures were not verified as exclusive to this FHL component.
+  role: Electron-transfer subunit in the membrane-bound Hyc module.
+  stoichiometry: 1 copy in the E. coli K-12 PDB:7Z0T composite structure
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P0AAK1
+    protein_label: Formate hydrogenlyase subunit 2
+    gene_symbol: hycB
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P0AAK1
+      notes: Reviewed Swiss-Prot entry for E. coli K-12 hycB matches the Formate hydrogenlyase
+        subunit 2 accession mapped by RCSB to PDB:7Z0T entity 3.
+  evidence:
+  - reference: PDB:7Z0T
+    notes: RCSB maps PDB:7Z0T entity 3 to UniProtKB:P0AAK1 and describes it as Formate
+      hydrogenlyase subunit 2 from E. coli K-12.
+  - reference: PMID:36104349
+    notes: Steinhilper et al. 2022 resolved P0AAK1/hycB as one of seven protein entities
+      in the membrane-bound E. coli formate hydrogenlyase complex.
+- component_id: hycc_subunit
+  label: Formate hydrogenlyase subunit 3
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hycC
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family was asserted for this E. coli formate
+    hydrogenlyase subunit; the reviewed UniProt example is exact, but broader domain
+    and family signatures were not verified as exclusive to this FHL component.
+  role: Membrane subunit in the Hyc proton-reducing module.
+  stoichiometry: 1 copy in the E. coli K-12 PDB:7Z0T composite structure
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P16429
+    protein_label: Formate hydrogenlyase subunit 3
+    gene_symbol: hycC
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P16429
+      notes: Reviewed Swiss-Prot entry for E. coli K-12 hycC matches the Formate hydrogenlyase
+        subunit 3 accession mapped by RCSB to PDB:7Z0T entity 1.
+  evidence:
+  - reference: PDB:7Z0T
+    notes: RCSB maps PDB:7Z0T entity 1 to UniProtKB:P16429 and describes it as Formate
+      hydrogenlyase subunit 3 from E. coli K-12.
+  - reference: PMID:36104349
+    notes: Steinhilper et al. 2022 resolved P16429/hycC as one of seven protein entities
+      in the membrane-bound E. coli formate hydrogenlyase complex.
+- component_id: hycd_subunit
+  label: Formate hydrogenlyase subunit 4
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hycD
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family was asserted for this E. coli formate
+    hydrogenlyase subunit; the reviewed UniProt example is exact, but broader domain
+    and family signatures were not verified as exclusive to this FHL component.
+  role: Membrane subunit in the Hyc proton-reducing module.
+  stoichiometry: 1 copy in the E. coli K-12 PDB:7Z0T composite structure
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P16430
+    protein_label: Formate hydrogenlyase subunit 4
+    gene_symbol: hycD
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P16430
+      notes: Reviewed Swiss-Prot entry for E. coli K-12 hycD matches the Formate hydrogenlyase
+        subunit 4 accession mapped by RCSB to PDB:7Z0T entity 6.
+  evidence:
+  - reference: PDB:7Z0T
+    notes: RCSB maps PDB:7Z0T entity 6 to UniProtKB:P16430 and describes it as Formate
+      hydrogenlyase subunit 4 from E. coli K-12.
+  - reference: PMID:36104349
+    notes: Steinhilper et al. 2022 resolved P16430/hycD as one of seven protein entities
+      in the membrane-bound E. coli formate hydrogenlyase complex.
+- component_id: hyce_subunit
+  label: Formate hydrogenlyase subunit 5
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hycE
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family was asserted for this E. coli formate
+    hydrogenlyase subunit; the reviewed UniProt example is exact, but broader domain
+    and family signatures were not verified as exclusive to this FHL component.
+  role: Hydrogenase-3 large subunit in the Hyc module.
+  stoichiometry: 1 copy in the E. coli K-12 PDB:7Z0T composite structure
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P16431
+    protein_label: Formate hydrogenlyase subunit 5
+    gene_symbol: hycE
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P16431
+      notes: Reviewed Swiss-Prot entry for E. coli K-12 hycE matches the Formate hydrogenlyase
+        subunit 5 accession mapped by RCSB to PDB:7Z0T entity 2.
+  evidence:
+  - reference: PDB:7Z0T
+    notes: RCSB maps PDB:7Z0T entity 2 to UniProtKB:P16431 and describes it as Formate
+      hydrogenlyase subunit 5 from E. coli K-12.
+  - reference: PMID:36104349
+    notes: Steinhilper et al. 2022 resolved P16431/hycE as one of seven protein entities
+      in the membrane-bound E. coli formate hydrogenlyase complex.
+- component_id: hycf_subunit
+  label: Formate hydrogenlyase subunit 6
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hycF
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family was asserted for this E. coli formate
+    hydrogenlyase subunit; the reviewed UniProt example is exact, but broader domain
+    and family signatures were not verified as exclusive to this FHL component.
+  role: Hyc module constituent resolved in the membrane-bound FHL structure.
+  stoichiometry: 1 copy in the E. coli K-12 PDB:7Z0T composite structure
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P16432
+    protein_label: Formate hydrogenlyase subunit 6
+    gene_symbol: hycF
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P16432
+      notes: Reviewed Swiss-Prot entry for E. coli K-12 hycF matches the Formate hydrogenlyase
+        subunit 6 accession mapped by RCSB to PDB:7Z0T entity 5.
+  evidence:
+  - reference: PDB:7Z0T
+    notes: RCSB maps PDB:7Z0T entity 5 to UniProtKB:P16432 and describes it as Formate
+      hydrogenlyase subunit 6 from E. coli K-12.
+  - reference: PMID:36104349
+    notes: Steinhilper et al. 2022 resolved P16432/hycF as one of seven protein entities
+      in the membrane-bound E. coli formate hydrogenlyase complex.
+- component_id: hycg_subunit
+  label: Formate hydrogenlyase subunit 7
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hycG
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral family was asserted for this E. coli formate
+    hydrogenlyase subunit; the reviewed UniProt example is exact, but broader domain
+    and family signatures were not verified as exclusive to this FHL component.
+  role: Hyc module constituent resolved in the membrane-bound FHL structure.
+  stoichiometry: 1 copy in the E. coli K-12 PDB:7Z0T composite structure
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P16433
+    protein_label: Formate hydrogenlyase subunit 7
+    gene_symbol: hycG
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P16433
+      notes: Reviewed Swiss-Prot entry for E. coli K-12 hycG matches the Formate hydrogenlyase
+        subunit 7 accession mapped by RCSB to PDB:7Z0T entity 4.
+  evidence:
+  - reference: PDB:7Z0T
+    notes: RCSB maps PDB:7Z0T entity 4 to UniProtKB:P16433 and describes it as Formate
+      hydrogenlyase subunit 7 from E. coli K-12.
+  - reference: PMID:36104349
+    notes: Steinhilper et al. 2022 resolved P16433/hycG as one of seven protein entities
+      in the membrane-bound E. coli formate hydrogenlyase complex.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Natural source of the FdhF/HycB-HycG formate hydrogenlyase complex deposited
+    as the PDB:7Z0T composite cryo-EM structure.
+  reference: PDB:7Z0T
+functions:
+- function_id: formate_hydrogenlyase_activity
+  label: formate hydrogenlyase activity
+  description: The membrane-bound FHL complex oxidizes formate to carbon dioxide and
+    transfers the released electrons through the Hyc module to reduce protons to molecular
+    hydrogen.
+  evidence:
+  - reference: PMID:36104349
+    notes: Steinhilper et al. 2022 describe E. coli FHL as a membrane-bound complex
+      that couples formate oxidation by FdhF to proton reduction at the Hyc hydrogenase
+      module.
+evidence:
+- reference: PDB:7Z0T
+  notes: RCSB Protein Data Bank entry for the seven-protein E. coli formate hydrogenlyase
+    composite cryo-EM structure.
+- reference: GO:1990204
+  notes: Gene Ontology cellular-component parent term for oxidoreductase complexes.
+- reference: PMID:36104349
+  notes: PubMed identifier for Steinhilper et al. 2022, Structure of the membrane-bound
+    formate hydrogenlyase complex from Escherichia coli.
+- reference: DOI:10.1038/s41467-022-32831-x
+  notes: DOI for the Steinhilper et al. 2022 E. coli formate hydrogenlyase paper.
+causal_graphs:
+- graph_id: formate_hydrogenlyase_formate_to_hydrogen
+  title: FHL couples formate oxidation to hydrogen evolution
+  description: The membrane-bound E. coli formate hydrogenlyase complex uses FdhF
+    and the HycB-HycG module to transfer electrons from formate to protons.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the whole-complex reaction and the PDB:7Z0T subunit
+    boundary without resolving individual metal clusters, membrane-coupling conformational
+    changes, or maturation proteins.
+  nodes:
+  - node_id: formate_hydrogenlyase
+    label: formate hydrogenlyase complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:formate_hydrogenlyase_complex
+  - node_id: fdhf
+    label: Formate dehydrogenase H
+    node_type: GENE_OR_PROTEIN
+    component_ref: fdhf_formate_dehydrogenase_h
+  - node_id: hyc_module
+    label: HycB-HycG membrane hydrogenase module
+    node_type: GENE_OR_PROTEIN
+    description: Six-subunit Hyc module resolved with FdhF in PDB:7Z0T.
+  - node_id: formate
+    label: formate
+    node_type: CHEMICAL
+  - node_id: protons
+    label: protons
+    node_type: CHEMICAL
+  - node_id: co2
+    label: CO2
+    node_type: CHEMICAL
+  - node_id: hydrogen
+    label: H2
+    node_type: CHEMICAL
+  - node_id: fhl_activity
+    label: formate hydrogenlyase activity
+    node_type: MOLECULAR_FUNCTION
+  edges:
+  - subject: formate_hydrogenlyase
+    predicate: enables
+    object: fhl_activity
+    description: The FdhF/HycB-HycG complex enables coupled formate oxidation and
+      proton reduction.
+    evidence:
+    - reference: PMID:36104349
+      notes: Steinhilper et al. 2022 resolved the membrane-bound E. coli FHL complex
+        and described how it couples formate oxidation to hydrogen evolution.
+  - subject: formate
+    predicate: donates electrons to
+    object: fdhf
+    description: FdhF oxidizes formate at the entry side of the FHL complex.
+    evidence:
+    - reference: PMID:36104349
+      notes: Steinhilper et al. 2022 place FdhF in the complex as the formate-oxidizing
+        subunit.
+  - subject: fdhf
+    predicate: feeds electrons to
+    object: hyc_module
+    description: Electrons from FdhF pass into the HycB-HycG module for delivery to
+      the hydrogenase active site.
+    evidence:
+    - reference: PDB:7Z0T
+      notes: PDB:7Z0T resolves FdhF together with the six HycB-HycG protein entities
+        in one composite structure.
+  - subject: fhl_activity
+    predicate: produces
+    object: co2
+    description: Formate oxidation produces carbon dioxide.
+    evidence:
+    - reference: PMID:36104349
+  - subject: fhl_activity
+    predicate: produces
+    object: hydrogen
+    description: Proton reduction produces molecular hydrogen.
+    evidence:
+    - reference: PMID:36104349
+discussions:
+- discussion_id: fhl_component_family_grounding
+  prompt: Resolve exact source-neutral protein families for FdhF and HycB-HycG before
+    replacing reviewed-label-only component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#fdhf_formate_dehydrogenase_h
+  - components#hycb_subunit
+  - components#hycc_subunit
+  - components#hycd_subunit
+  - components#hyce_subunit
+  - components#hycf_subunit
+  - components#hycg_subunit
+  rationale: PDB:7Z0T and the reviewed E. coli UniProt records exactly identify the
+    seven FHL proteins, but no InterPro, Pfam, or NCBIfam accession was verified as
+    an exact source-neutral family for each named FHL subunit.
+  evidence:
+  - reference: PDB:7Z0T
+    notes: RCSB maps the 7Z0T formate hydrogenlyase polymer entities to one FdhF and
+      six HycB-HycG UniProt accessions.
+  posed_by: codex
+  posed_date: '2026-10-02'
