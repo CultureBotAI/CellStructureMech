@@ -13525,6 +13525,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+      "label": "AcrAB-TolC multidrug efflux transport complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990196",
+          "label": "MacAB-TolC complex",
+          "cosine_similarity": 0.80096702
+        },
+        {
+          "identifier": "GO:1990207",
+          "label": "EmrE multidrug transporter complex",
+          "cosine_similarity": 0.79650194
+        },
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.77211125
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.77193145
+        },
+        {
+          "identifier": "GO:1990203",
+          "label": "MdtBC Complex",
+          "cosine_similarity": 0.73967434
+        }
+      ]
+    },
+    {
       "identifier": "GO:0140671",
       "label": "ADA complex",
       "neighbors": [
@@ -16055,14 +16086,14 @@
           "cosine_similarity": 0.79884734
         },
         {
+          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.79650194
+        },
+        {
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.78137136
-        },
-        {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.75911881
         }
       ]
     },
@@ -17269,9 +17300,9 @@
           "cosine_similarity": 0.70620115
         },
         {
-          "identifier": "GO:0030256",
-          "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.70504716
+          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.70506743
         }
       ]
     },
@@ -17311,6 +17342,11 @@
       "label": "MacAB-TolC complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.80096702
+        },
+        {
           "identifier": "GO:1990199",
           "label": "MsbA transporter complex",
           "cosine_similarity": 0.73566226
@@ -17329,11 +17365,6 @@
           "identifier": "GO:0030256",
           "label": "type I protein secretion system complex",
           "cosine_similarity": 0.72079166
-        },
-        {
-          "identifier": "GO:0097347",
-          "label": "TAM protein secretion complex",
-          "cosine_similarity": 0.70591367
         }
       ]
     },
@@ -17450,14 +17481,14 @@
           "cosine_similarity": 0.76963732
         },
         {
+          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.73967434
+        },
+        {
           "identifier": "GO:0033281",
           "label": "TAT protein transport complex",
           "cosine_similarity": 0.71657308
-        },
-        {
-          "identifier": "GO:0062051",
-          "label": "lipopolysaccharide transport system",
-          "cosine_similarity": 0.70620115
         }
       ]
     },
@@ -20798,14 +20829,14 @@
           "cosine_similarity": 0.77937958
         },
         {
+          "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+          "label": "AcrAB-TolC multidrug efflux transport complex",
+          "cosine_similarity": 0.77211125
+        },
+        {
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.77169044
-        },
-        {
-          "identifier": "GO:1990203",
-          "label": "MdtBC Complex",
-          "cosine_similarity": 0.76963732
         }
       ]
     },

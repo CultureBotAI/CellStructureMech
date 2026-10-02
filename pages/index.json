@@ -3924,6 +3924,15 @@
   "definition": "An ISWI complex that contains an ATPase subunit of the ISWI family (SNF2H in mammals, Isw2 in S. cerevisiae), an ACF1 homolog, and generally no other subunits, though Xenopus is an exception with a third non-conserved subunit. ACF plays roles in regulation of RNA polymerase II transcription and in DNA replication and repair."
  },
  {
+  "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
+  "label": "AcrAB-TolC multidrug efflux transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/acrab_tolc_multidrug_efflux_transport_complex.html",
+  "definition": "An Escherichia coli tripartite multidrug efflux pump complex composed of AcrB inner-membrane RND transporters, AcrA periplasmic adaptor proteins, and the TolC outer-membrane channel that exports xenobiotics across the cell envelope."
+ },
+ {
   "identifier": "GO:0140671",
   "label": "ADA complex",
   "category": "OTHER",

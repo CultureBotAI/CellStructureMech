@@ -1,0 +1,309 @@
+identifier: cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex
+label: AcrAB-TolC multidrug efflux transport complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An Escherichia coli tripartite multidrug efflux pump complex composed
+  of AcrB inner-membrane RND transporters, AcrA periplasmic adaptor proteins, and
+  the TolC outer-membrane channel that exports xenobiotics across the cell envelope.
+definition_source: ComplexPortal:CPX-4263
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T06:49:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T06:51:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO efflux-pump parentage, AcrA/AcrB/TolC component rows with E. coli
+    K-12 reviewed UniProt examples, the exact Complex Portal CPX-4263 source composition,
+    xenobiotic transporter activity, Complex Portal/PDB/PubMed evidence, a compact
+    function graph, and a component-family grounding TODO.
+  llm_assisted: true
+- timestamp: '2026-10-02T07:09:23Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Resolved PR #1905 review issue #1906 by grounding the TolC component to
+    InterPro:IPR058622 and narrowing the open component-family grounding TODO to AcrA
+    and AcrB.'
+  llm_assisted: true
+parent_structures:
+- GO:1990281
+components:
+- component_id: acra_periplasmic_adaptor
+  label: Multidrug efflux pump subunit AcrA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - acrA
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt example is exact, but no InterPro,
+    Pfam, NCBIfam, or GO accession was verified as an exact source-neutral family
+    for this named AcrAB-TolC constituent.
+  role: Periplasmic adaptor subunit that couples AcrB to TolC in the envelope-spanning
+    AcrAB-TolC pump.
+  stoichiometry: 6 copies in the E. coli K-12 Complex Portal CPX-4263 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P0AE06
+    protein_label: Multidrug efflux pump subunit AcrA
+    gene_symbol: acrA
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P0AE06
+      notes: Reviewed Swiss-Prot entry ACRA_ECOLI is the E. coli K-12 AcrA accession
+        and cross-references ComplexPortal:CPX-4263.
+  evidence:
+  - reference: ComplexPortal:CPX-4263
+    notes: Complex Portal CPX-4263 curates P0AE06/AcrA as six copies in the E. coli
+      K-12 AcrAB-TolC multidrug efflux transport complex.
+  - reference: PDB:5V5S
+    notes: RCSB maps one PDB:5V5S polymer entity to UniProtKB:P0AE06 in the AcrAB-TolC
+      cryo-EM structure.
+- component_id: acrb_inner_membrane_transporter
+  label: Multidrug efflux pump subunit AcrB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - acrB
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli K-12 UniProt example is exact, but no InterPro,
+    Pfam, NCBIfam, or GO accession was verified as an exact source-neutral family
+    for this named AcrAB-TolC constituent.
+  role: Inner-membrane RND transporter subunit that forms the trimeric substrate/proton
+    antiporter core.
+  stoichiometry: 3 copies in the E. coli K-12 Complex Portal CPX-4263 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P31224
+    protein_label: Multidrug efflux pump subunit AcrB
+    gene_symbol: acrB
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P31224
+      notes: Reviewed Swiss-Prot entry ACRB_ECOLI is the E. coli K-12 AcrB accession
+        and cross-references ComplexPortal:CPX-4263.
+  evidence:
+  - reference: ComplexPortal:CPX-4263
+    notes: Complex Portal CPX-4263 curates P31224/AcrB as three copies in the E. coli
+      K-12 AcrAB-TolC multidrug efflux transport complex.
+  - reference: PDB:5V5S
+    notes: RCSB maps one PDB:5V5S polymer entity to UniProtKB:P31224 in the AcrAB-TolC
+      cryo-EM structure.
+- component_id: tolc_outer_membrane_channel
+  label: Outer membrane channel protein TolC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - tolC
+  essentiality: ESSENTIAL
+  role: Outer-membrane channel subunit that closes the periplasmic AcrA bridge and
+    conducts exported substrates out of the cell envelope.
+  stoichiometry: 3 copies in the E. coli K-12 Complex Portal CPX-4263 entry
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P02930
+    protein_label: Outer membrane protein TolC
+    gene_symbol: tolC
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P02930
+      notes: Reviewed Swiss-Prot entry TOLC_ECOLI is the E. coli K-12 TolC accession
+        and cross-references ComplexPortal:CPX-4263.
+  evidence:
+  - reference: ComplexPortal:CPX-4263
+    notes: Complex Portal CPX-4263 curates P02930/TolC as three copies in the E. coli
+      K-12 AcrAB-TolC multidrug efflux transport complex.
+  - reference: PDB:5V5S
+    notes: RCSB maps one PDB:5V5S polymer entity to UniProtKB:P02930 in the AcrAB-TolC
+      cryo-EM structure.
+  - reference: InterPro:IPR058622
+    notes: InterPro IPR058622 is the Outer membrane channel protein TolC family entry.
+  grounding: InterPro:IPR058622
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Source strain for Complex Portal CPX-4263, which curates the heterododecameric
+    AcrAB-TolC pump with six AcrA, three AcrB, and three TolC subunits.
+  reference: ComplexPortal:CPX-4263
+functions:
+- function_id: xenobiotic_transmembrane_transport
+  label: xenobiotic transmembrane transporter activity
+  grounding: GO:0042910
+  description: The AcrAB-TolC complex exports xenobiotics across the E. coli cell
+    envelope through the coupled AcrB transporter, AcrA adaptor, and TolC outer-membrane
+    channel.
+  evidence:
+  - reference: GO:0042910
+    notes: GO:0042910 is the molecular-function term for xenobiotic transmembrane
+      transporter activity.
+  - reference: ComplexPortal:CPX-4263
+    notes: Complex Portal cross-references GO:0042910 for the E. coli K-12 AcrAB-TolC
+      multidrug efflux transport complex.
+evidence:
+- reference: ComplexPortal:CPX-4263
+  notes: Complex Portal entry for the E. coli K-12 AcrAB-TolC multidrug efflux transport
+    complex.
+- reference: GO:1990281
+  notes: Gene Ontology cellular-component parent term for efflux pump complexes.
+- reference: GO:0042910
+  notes: Gene Ontology molecular-function term for xenobiotic transmembrane transporter
+    activity.
+- reference: InterPro:IPR058622
+  notes: InterPro family entry for Outer membrane channel protein TolC.
+- reference: UniProtKB:P0AE06
+  notes: Reviewed E. coli K-12 AcrA UniProtKB entry.
+- reference: UniProtKB:P31224
+  notes: Reviewed E. coli K-12 AcrB UniProtKB entry.
+- reference: UniProtKB:P02930
+  notes: Reviewed E. coli K-12 TolC UniProtKB entry.
+- reference: PDB:5V5S
+  notes: RCSB Protein Data Bank entry for a three-protein AcrAB-TolC cryo-EM structure.
+- reference: PMID:28355133
+  notes: PubMed identifier for Wang et al. 2017, An allosteric transport mechanism
+    for the AcrAB-TolC multidrug efflux pump.
+- reference: DOI:10.7554/eLife.24905
+  notes: DOI for the Wang et al. 2017 AcrAB-TolC structural paper.
+causal_graphs:
+- graph_id: acrab_tolc_xenobiotic_efflux
+  title: AcrAB-TolC exports xenobiotics across the cell envelope
+  description: AcrB, AcrA, and TolC form an envelope-spanning efflux pump that exports
+    xenobiotic substrates from E. coli.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three-subunit envelope-spanning pump boundary
+    and whole-complex xenobiotic export function without resolving AcrB drug-binding
+    sites, proton-coupled conformational cycling, or AcrZ-bound variants.
+  nodes:
+  - node_id: acrab_tolc
+    label: AcrAB-TolC multidrug efflux transport complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex
+  - node_id: acra
+    label: Multidrug efflux pump subunit AcrA
+    node_type: GENE_OR_PROTEIN
+    component_ref: acra_periplasmic_adaptor
+  - node_id: acrb
+    label: Multidrug efflux pump subunit AcrB
+    node_type: GENE_OR_PROTEIN
+    component_ref: acrb_inner_membrane_transporter
+  - node_id: tolc
+    label: Outer membrane channel protein TolC
+    node_type: GENE_OR_PROTEIN
+    component_ref: tolc_outer_membrane_channel
+    grounding: InterPro:IPR058622
+  - node_id: xenobiotic_transport
+    label: xenobiotic transmembrane transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0042910
+  - node_id: xenobiotic
+    label: xenobiotic substrate
+    node_type: CHEMICAL
+  - node_id: cell_exterior
+    label: cell exterior
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: acrb
+    predicate: couples to
+    object: acra
+    description: AcrB forms the inner-membrane RND core and couples to AcrA adaptor
+      subunits.
+    evidence:
+    - reference: ComplexPortal:CPX-4263
+      notes: CPX-4263 curates AcrB and AcrA as participants in the E. coli AcrAB-TolC
+        pump.
+  - subject: acra
+    predicate: couples to
+    object: tolc
+    description: AcrA adaptor subunits connect the AcrB transporter to the trimeric
+      TolC outer-membrane channel.
+    evidence:
+    - reference: ComplexPortal:CPX-4263
+      notes: CPX-4263 curates AcrA and TolC as participants in the E. coli AcrAB-TolC
+        pump.
+  - subject: acrab_tolc
+    predicate: enables
+    object: xenobiotic_transport
+    description: The assembled AcrAB-TolC complex enables xenobiotic transmembrane
+      transporter activity.
+    evidence:
+    - reference: ComplexPortal:CPX-4263
+      notes: Complex Portal cross-references GO:0042910 for the AcrAB-TolC complex.
+  - subject: xenobiotic_transport
+    predicate: transports
+    object: xenobiotic
+    description: AcrAB-TolC exports xenobiotic substrates through the tripartite pump.
+    evidence:
+    - reference: PMID:28355133
+      notes: The PDB:5V5S primary citation structurally studied the AcrAB-TolC multidrug
+        efflux pump.
+  - subject: xenobiotic_transport
+    predicate: targets
+    object: cell_exterior
+    description: AcrAB-TolC completes efflux across the outer membrane through TolC.
+    evidence:
+    - reference: PDB:5V5S
+      notes: PDB:5V5S resolves the AcrB, AcrA, and TolC proteins in one three-protein
+        AcrAB-TolC structure.
+discussions:
+- discussion_id: acrab_tolc_component_family_grounding
+  prompt: Resolve exact source-neutral protein families for AcrA and AcrB before replacing
+    reviewed-label-only component rows.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#acra_periplasmic_adaptor
+  - components#acrb_inner_membrane_transporter
+  rationale: ComplexPortal:CPX-4263, reviewed E. coli UniProt records, and PDB:5V5S
+    exactly identify the AcrA and AcrB proteins, but no InterPro, Pfam, NCBIfam, or
+    GO accession was verified as an exact source-neutral family for either named pump
+    constituent; TolC is already grounded to InterPro:IPR058622.
+  evidence:
+  - reference: ComplexPortal:CPX-4263
+    notes: CPX-4263 curates the E. coli K-12 AcrA, AcrB, and TolC participants.
+  - reference: InterPro:IPR058622
+    notes: Existing corpus curation verifies IPR058622 as the exact TolC family entry.
+  posed_by: codex
+  posed_date: '2026-10-02'
+complex_compositions:
+- composition_id: complex_portal_cpx_4263
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-4263
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-4263
+  complex_label: AcrAB-TolC multidrug efflux transport complex
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  assembly: Heterododecamer
+  evidence_code: ECO:0000353
+  participants:
+  - participant_id: UniProtKB:P31224
+    label: Multidrug efflux pump subunit AcrB
+    participant_type: protein
+    gene_symbol: acrB
+    stoichiometry: '3'
+    source_interactor_id: EBI-21406081
+  - participant_id: UniProtKB:P0AE06
+    label: Multidrug efflux pump subunit AcrA
+    participant_type: protein
+    gene_symbol: acrA
+    stoichiometry: '6'
+    source_interactor_id: EBI-21406080
+  - participant_id: UniProtKB:P02930
+    label: Outer membrane protein TolC
+    participant_type: protein
+    gene_symbol: tolC
+    stoichiometry: '3'
+    source_interactor_id: EBI-21406079
+  retrieved_on: '2026-10-02'
+  notes: 'Curator-scoped import: E. coli K-12 AcrAB-TolC source composition for this
+    record. Source evidence: physical interaction evidence. The accession was resolved
+    through the Complex Portal accession endpoint; no equivalence xref was inferred.'
