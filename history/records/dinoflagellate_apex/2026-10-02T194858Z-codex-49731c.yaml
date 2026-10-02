@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_apex.yaml
+  slug: dinoflagellate_apex
+session:
+  id: 2026-10-02T194858Z-codex-49731c
+  timestamp: '2026-10-02T19:48:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1937
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1938
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1936
+events:
+- type: EDIT
+  outcome: changed
+  summary: Addressed dinoflagellate apex PR review
+  details: 'Addressed PR #1936 review issues #1937 and #1938 by adding GO:0097613 as direct
+    evidence for the apex-epicone graph child-listing assertion and preserving the horn-shaped
+    thecate qualifier from GO:0097686 in the apical-horn evidence, graph edge, and interpretation
+    discussion.'
