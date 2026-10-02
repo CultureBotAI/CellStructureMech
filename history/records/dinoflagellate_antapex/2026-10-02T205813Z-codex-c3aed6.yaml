@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dinoflagellate_antapex.yaml
+  slug: dinoflagellate_antapex
+session:
+  id: 2026-10-02T205813Z-codex-c3aed6
+  timestamp: '2026-10-02T20:58:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-backed dinoflagellate antapex record
+  details: Created data/structures/other/dinoflagellate_antapex.yaml for GO:0097684 with GO:0110165
+    cellular-anatomical-structure parentage, GO:0097614 hypocone parthood, GO:0097687 antapical-horn
+    and GO:0097618 sulcal-notch topology, Dinophyceae taxon scope, and curation discussions
+    for molecular-component and antapical-horn follow-up.

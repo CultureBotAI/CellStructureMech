@@ -1,0 +1,154 @@
+identifier: GO:0097684
+label: dinoflagellate antapex
+structure_category: OTHER
+structure_kind: SUBCELLULAR_REGION
+definition: The anterior most point of a dinoflagellate hypocone.
+definition_source: GO:0097684
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-02T20:53:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-02T20:54:29Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO antapex synonymy, GO cellular-anatomical-structure parentage,
+    hypocone parthood, antapical-horn and sulcal-notch topology, Dinophyceae taxon
+    evidence, and curation discussions for molecular components and the antapex/antapical-horn
+    boundary.
+  llm_assisted: true
+synonyms:
+- synonym_text: antapex
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097684
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0097614
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: GO:0097684 constrains the dinoflagellate antapex to Dinophyceae and defines
+    it as a point of the dinoflagellate hypocone.
+  reference: GO:0097684
+evidence:
+- reference: GO:0097684
+  notes: Gene Ontology cellular-component term for the dinoflagellate antapex.
+- reference: GO:0110165
+  notes: Gene Ontology cellular-component parent term for cellular anatomical structure.
+- reference: GO:0097614
+  notes: Gene Ontology cellular-component term for the dinoflagellate hypocone, which
+    QuickGO lists among GO:0097684 ancestors.
+- reference: GO:0097687
+  notes: Gene Ontology cellular-component term for the horn-shaped dinoflagellate
+    antapical horn of thecate species.
+- reference: GO:0097618
+  notes: Gene Ontology cellular-component term for the dinoflagellate sulcal notch,
+    a sulcus subclass that extends to the antapex and can make the hypocone appear
+    bilobed.
+- reference: GO:0097612
+  notes: Gene Ontology cellular-component term for the dinoflagellate sulcus, the
+    parent class of GO:0097618.
+causal_graphs:
+- graph_id: antapex_hypocone_topology
+  title: Antapex-hypocone topology
+  description: The dinoflagellate antapex is a cellular anatomical structure within
+    the hypocone, has the horn-shaped thecate antapical horn as a narrower child class,
+    and can be reached by the dinoflagellate sulcal notch.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO is-a, part-of, and child-term topology for the
+    antapex region, not a molecular assembly or physiological mechanism.
+  nodes:
+  - node_id: dinoflagellate_antapex
+    label: dinoflagellate antapex
+    node_type: STRUCTURE
+    grounding: GO:0097684
+  - node_id: cellular_anatomical_structure
+    label: cellular anatomical structure
+    node_type: STRUCTURE
+    grounding: GO:0110165
+  - node_id: dinoflagellate_hypocone
+    label: dinoflagellate hypocone
+    node_type: STRUCTURE
+    grounding: GO:0097614
+  - node_id: dinoflagellate_antapical_horn
+    label: dinoflagellate antapical horn
+    node_type: STRUCTURE
+    grounding: GO:0097687
+  - node_id: dinoflagellate_sulcal_notch
+    label: dinoflagellate sulcal notch
+    node_type: STRUCTURE
+    grounding: GO:0097618
+  edges:
+  - subject: dinoflagellate_antapex
+    predicate: is a
+    object: cellular_anatomical_structure
+    description: GO classifies the dinoflagellate antapex as a cellular anatomical
+      structure.
+    evidence:
+    - reference: GO:0097684
+      notes: The QuickGO GO:0097684 history records an is_a relation to GO:0110165.
+  - subject: dinoflagellate_antapex
+    predicate: is part of
+    object: dinoflagellate_hypocone
+    description: GO places the dinoflagellate antapex in the hypocone.
+    evidence:
+    - reference: GO:0097684
+      notes: QuickGO lists GO:0097614 among the GO:0097684 ancestors through part-of
+        topology.
+    - reference: GO:0097614
+      notes: The QuickGO GO:0097614 payload lists GO:0097684 as a part_of child term.
+  - subject: dinoflagellate_antapical_horn
+    predicate: is a
+    object: dinoflagellate_antapex
+    description: GO classifies the horn-shaped thecate antapical horn as a specialized
+      dinoflagellate antapex.
+    evidence:
+    - reference: GO:0097684
+      notes: The QuickGO GO:0097684 children endpoint lists GO:0097687 as an is_a
+        child term.
+    - reference: GO:0097687
+      notes: The QuickGO GO:0097687 ancestors endpoint lists GO:0097684 among its
+        ancestors.
+  - subject: dinoflagellate_sulcal_notch
+    predicate: extends to
+    object: dinoflagellate_antapex
+    description: The sulcal notch reaches the antapex at the posterior end of the
+      cell.
+    evidence:
+    - reference: GO:0097618
+      notes: The GO:0097618 definition defines a sulcal notch as a dinoflagellate
+        sulcus that extends to the posterior antapex.
+discussions:
+- discussion_id: resolve_antapex_molecular_constituents
+  prompt: Add antapex molecular components only after directly localized constituents
+    and exact source-neutral family groundings have been identified.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO defines the dinoflagellate antapex as a point of the hypocone, but
+    this pass did not find exact family-level evidence for antapex-specific molecular
+    constituents.
+  evidence:
+  - reference: GO:0097684
+  posed_by: codex
+  posed_date: '2026-10-02'
+- discussion_id: antapical_horn_is_narrower_than_antapex
+  prompt: Keep dinoflagellate antapical horn separate from the general dinoflagellate
+    antapex unless curating the narrower GO:0097687 class.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: QuickGO identifies GO:0097687 as an is_a child of GO:0097684 and GO:0097687
+    defines a horn-shaped antapex found in thecate species, so the antapical horn
+    should remain a specialized child class of the general antapex.
+  evidence:
+  - reference: GO:0097684
+  - reference: GO:0097687
+  posed_by: codex
+  posed_date: '2026-10-02'
+  resolved_date: '2026-10-02'
+  resolution_note: Model GO:0097684 as the general dinoflagellate antapex and leave
+    the horn-shaped thecate antapical horn for separate GO:0097687 curation.
