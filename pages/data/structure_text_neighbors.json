@@ -5403,6 +5403,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:formate_hydrogenlyase_complex",
+      "label": "formate hydrogenlyase complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.74576656
+        },
+        {
+          "identifier": "GO:0005960",
+          "label": "glycine cleavage complex",
+          "cosine_similarity": 0.68296478
+        },
+        {
+          "identifier": "GO:0045271",
+          "label": "respiratory chain complex I",
+          "cosine_similarity": 0.67851564
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.67366815
+        },
+        {
+          "identifier": "GO:1990065",
+          "label": "Dxr protein complex",
+          "cosine_similarity": 0.6629907
+        }
+      ]
+    },
+    {
       "identifier": "GO:0045283",
       "label": "fumarate reductase complex",
       "neighbors": [
@@ -16732,6 +16763,11 @@
           "cosine_similarity": 0.69416357
         },
         {
+          "identifier": "cellstructuremech:formate_hydrogenlyase_complex",
+          "label": "formate hydrogenlyase complex",
+          "cosine_similarity": 0.68296478
+        },
+        {
           "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
           "label": "formate dehydrogenase N complex",
           "cosine_similarity": 0.67107392
@@ -16740,11 +16776,6 @@
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.66803464
-        },
-        {
-          "identifier": "GO:0009342",
-          "label": "glutamate synthase complex (NADPH)",
-          "cosine_similarity": 0.66566434
         }
       ]
     },

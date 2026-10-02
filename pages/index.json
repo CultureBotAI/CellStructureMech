@@ -1566,6 +1566,15 @@
   "definition": "A nitrate-inducible, membrane-bound formate:quinone oxidoreductase complex whose FdnG, FdnH, and FdnI subunits oxidize formate and pass electrons to a membrane quinone during anaerobic respiration."
  },
  {
+  "identifier": "cellstructuremech:formate_hydrogenlyase_complex",
+  "label": "formate hydrogenlyase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/formate_hydrogenlyase_complex.html",
+  "definition": "A membrane-bound Escherichia coli formate hydrogenlyase complex in which FdhF and HycB-HycG subunits couple formate oxidation to proton reduction, yielding carbon dioxide and hydrogen gas."
+ },
+ {
   "identifier": "GO:0045283",
   "label": "fumarate reductase complex",
   "category": "ENERGY_COMPLEX",
