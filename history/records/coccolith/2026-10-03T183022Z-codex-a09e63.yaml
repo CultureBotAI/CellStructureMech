@@ -1,0 +1,51 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/coccolith.yaml
+  slug: coccolith
+session:
+  id: 2026-10-03T183022Z-codex-a09e63
+  timestamp: '2026-10-03T18:30:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - discussions
+  - images
+  summary: Add evidence-backed coccolith scale record
+  details: Added cellstructuremech:coccolith as an individual mineralized scale, not the coccolith
+    vesicle or entire coccosphere. Whole-repository hidden/ignored-inclusive searches for
+    labels, narrower types, calcite-scale aliases, CHEBI:46719 and primary DOI/PMID identifiers
+    found no duplicate scale record; existing coccolith-vesicle mentions explicitly distinguish
+    the mineral cargo. Additional DOI:10.1126/sciadv.adc8728 / PMID:36662866 search found
+    no matches. QuickGO searches coccolith, heterococcolith, holococcolith and coccosphere
+    each returned zero. Verified broad GO:0110165, exact CHEBI:46719 calcite, and ENA taxa
+    127549 Calcidiscus leptoporus and 2903 Emiliania huxleyi. Read Avrahami 2026 morphology
+    Results, Figure 1 and supplementary RCC1130/SEM/AFM Methods; Johns 2023 Results, organic-removal
+    and virus-interaction sections, culture/isolation/treatment Methods; and the 2026 holococcolith
+    study Results/Discussion as a subtype/mechanism scope check. Captured calcite and mixed
+    organic-material classes, with the latter REVIEWED_LABEL_ONLY because exact composition
+    is not established and ChEBI coccolith search returned zero. Kept calcified CCMP374 donor
+    coccoliths distinct from naked recipients; no taxonomic prevalence or universal dimensions,
+    morphology, protective function or specific adhesion molecule inferred. Resolved the vesicle-protein
+    boundary separately from the open organic-inventory question. No unconditional vesicle
+    parthood, dangling coccosphere relation, causal graph or unverified trait link added.
+    ENVELOPE is the covering-element category, kind OTHER avoids equating one scale with a
+    continuous layer. Visually inspected Figure 1 from current non-retracted PMC13067266.1;
+    SEM plus schematic/AFM panels, not cryo-ET. PMC CC BY metadata agrees with JATS ALI license_ref
+    CC BY 4.0 URL and explicit licence text. Media MD5 30aa4e061b96edbf874a64bb6f8064e2, SHA256
+    35772c3d477f71c47c7c2e0d6e91fbd6086b9061126c7bee92cec70fcd95f939, 148935 bytes. Guarded
+    one-use mutators parsed YAML, asserted prior values, appended llm_assisted events and
+    used validated writers; both were removed. Status remains PROPOSED. Regenerated-artifact
+    and full validation gates will follow, then separate post-opening adversarial review and
+    PR-linked history before merge.

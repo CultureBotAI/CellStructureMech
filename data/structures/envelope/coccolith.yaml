@@ -1,0 +1,233 @@
+identifier: cellstructuremech:coccolith
+label: coccolith
+structure_category: ENVELOPE
+structure_kind: OTHER
+definition: An individual mineralized scale produced by a coccolithophore, with a
+  characteristic arrangement of calcite crystals. Coccoliths form elements of the
+  external cell covering, the coccosphere, and can be shed as free scales.
+definition_source: DOI:10.1126/sciadv.adc8728
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T18:27:35Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T18:28:48Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added verified calcite and label-only organic-material composition, two
+    species examples, covering and scoped adsorption roles, identity/molecular/ecological
+    boundaries and inspected Figure 1 with verified CC BY 4.0 provenance.
+  llm_assisted: true
+- timestamp: '2026-10-03T18:29:51Z'
+  curator: codex
+  action: CLARIFIED_COMPONENT_BOUNDARY
+  changes: Separated the resolved vesicle-protein exclusion from the open organic-material
+    identity question without changing its historical rationale.
+  llm_assisted: true
+parent_structures:
+- GO:0110165
+components:
+- component_id: calcite_crystals
+  label: calcite
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  grounding: CHEBI:46719
+  essentiality: UNKNOWN
+  role: Mineral material of the coccolith crystal assembly.
+  evidence:
+  - reference: DOI:10.1021/jacs.6c02151
+    notes: Results and Figure 1 characterize calcite units in Calcidiscus leptoporus
+      coccoliths; the illustrated two-shield morphology is not generalized to all
+      coccoliths.
+  - reference: DOI:10.1093/pnasnexus/pgag104
+    notes: Results describe calcite rhombohedra assembled into holococcoliths, rather
+      than the intergrown crystal architecture typical of heterococcoliths.
+- component_id: organic_material
+  label: coccolith-associated organic material
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This mixed material includes the organic base plate and surface-associated
+    organics, not one identified chemical species or protein family. A ChEBI coccolith
+    search returned no term; a generic polysaccharide or protein term would not identify
+    the measured material or its composition.
+  essentiality: UNKNOWN
+  role: Organic material associated with the mineral scale, including the base plate.
+    In tested Emiliania huxleyi coccoliths, removal of surface organics reduces adsorption
+    to cells.
+  evidence:
+  - reference: DOI:10.1126/sciadv.adc8728
+    notes: 'Figure 3 compares untreated and hypochlorite-oxidized coccoliths: SEM
+      shows loss of organic base-plate material while the crystalline structure remains,
+      and oxidized coccoliths attach less efficiently. This does not identify a specific
+      adhesion molecule or test de novo assembly without organics.'
+  - reference: DOI:10.1093/pnasnexus/pgag104
+    notes: Results and Figure 1 identify an organic base plate in mature holococcoliths;
+      this does not establish a universal nucleation-template mechanism.
+canonical_examples:
+- taxon_id: NCBITaxon:127549
+  taxon_label: Calcidiscus leptoporus
+  reference: DOI:10.1021/jacs.6c02151
+  note: Strain RCC1130. SEM and AFM characterize mature coccoliths with distal and
+    proximal shields and a connecting stem. Supplementary Methods describe coccolith
+    isolation, cleaning and SEM preparation; these dimensions and surfaces are species-
+    and sample-specific.
+- taxon_id: NCBITaxon:2903
+  taxon_label: Emiliania huxleyi
+  reference: DOI:10.1126/sciadv.adc8728
+  note: Calcified CCMP374 supplies coccoliths for adsorption experiments with naked
+    cells; the paper also tests other morphotypes and recipient strains. The species
+    label follows the verified NCBI/ENA authority. The record does not generalize
+    one morphotype's attachment behavior to all coccoliths.
+functions:
+- function_id: cell_covering_element
+  label: cell-covering element
+  description: Individual coccolith scales form elements of the external coccosphere.
+    This structural role does not itself establish protection against every predator,
+    virus or environmental stress.
+  evidence:
+  - reference: DOI:10.1021/jacs.6c02151
+    notes: Figure 1A shows a coccolith-covered cell, while Figures 1B-E resolve individual
+      scales.
+- function_id: cell_surface_adsorption
+  label: cell-surface adsorption
+  description: In Emiliania huxleyi experiments, isolated coccoliths adsorb to cells;
+    oxidation of coccolith-associated organic material reduces this attachment. This
+    is an observed interaction in the tested system, not a universal adaptive benefit.
+  evidence:
+  - reference: DOI:10.1126/sciadv.adc8728
+    notes: Results, Figure 3 and coccolith-treatment Methods compare untreated and
+      oxidized coccoliths; attachment also differs among morphotypes.
+evidence:
+- reference: DOI:10.1126/sciadv.adc8728
+  notes: Johns et al. (2023), Science Advances. Primary Results and Discussion, Figure
+    3 and culture/isolation/treatment Methods read. Distinguishes attached scales,
+    free coccoliths and whole coccospheres; organic removal affects cell adsorption
+    and virus interactions are context-dependent.
+- reference: DOI:10.1021/jacs.6c02151
+  notes: Avrahami et al. (2026), Journal of the American Chemical Society. Primary
+    morphology Results and Figure 1, plus supplementary culture and SEM/AFM preparation
+    Methods, read. SEM and AFM characterize calcite-scale architecture in RCC1130.
+- reference: DOI:10.1093/pnasnexus/pgag104
+  notes: 'Primary Results and Discussion read as a morphology and mechanism scope
+    check: mature holococcoliths contain calcite rhombohedra and an organic base plate,
+    but crystal arrangement and nucleation differ from the heterococcolith examples.'
+- reference: GO:0110165
+  notes: Verified broad cellular anatomical structure term includes substances produced
+    by cells above protein-complex granularity, without imposing an exclusively intracellular
+    or extracellular developmental location.
+discussions:
+- discussion_id: scale_identity_and_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish a coccolith scale from the coccolith vesicle, coccosphere and
+    narrower morphotypes.
+  rationale: A mineralized scale, a membrane-bounded formation compartment and an
+    entire covering have different physical identities.
+  notes: Hidden/ignored-inclusive searches found the coccolith-vesicle record but
+    no exact scale record or synonym. QuickGO searches for coccolith, heterococcolith,
+    holococcolith and coccosphere returned zero hits. GO:0110165 is a broad parent,
+    not an exact identity. ENVELOPE groups this cell-covering element; kind OTHER
+    avoids calling one scale a continuous envelope layer. Heterococcolith and holococcolith
+    are narrower structural types, not exact synonyms. No unconditional vesicle parthood
+    or extracellular-only classification is asserted for all developmental stages;
+    no dangling coccosphere identifier is minted here.
+  evidence:
+  - reference: DOI:10.1021/jacs.6c02151
+    notes: Figures 1 and 2 distinguish individual scales, whole cell covering and
+      formation compartment.
+  - reference: DOI:10.1093/pnasnexus/pgag104
+    notes: Results contrast holococcolith and heterococcolith crystal architectures.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: organic_material_identity
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the molecular identities and taxon-specific composition of coccolith-associated
+    organic material.
+  rationale: Selective oxidation supports an organic-material contribution but cannot
+    identify a particular polymer, protein, receptor or binding interaction.
+  notes: The mixed organic-material class is deliberately label-only. Base plates
+    and surface organics may vary with species, morphotype, developmental stage and
+    preparation. Persistence of mineral architecture after oxidation is not evidence
+    that organics are dispensable during assembly.
+  evidence:
+  - reference: DOI:10.1126/sciadv.adc8728
+    notes: Figure 3 and Methods resolve a material-removal effect but not its exact
+      molecular cause.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: vesicle_protein_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not equate proteins associated with the forming vesicle with constituents
+    of the mineral scale.
+  rationale: A site of crystal formation and its mineral product have different molecular
+    boundaries.
+  notes: The primary Figure 4 examines unidentified particles on the luminal side
+    of the coccolith-vesicle membrane and challenges their assignment to a full ATPase.
+    Neither these particles nor unverified vesicle transporters are asserted as mature
+    coccolith constituents. This does not claim their biological absence or resolve
+    the separate organic-material inventory.
+  evidence:
+  - reference: DOI:10.1021/jacs.6c02151
+    notes: Results and Figure 4 localize the densities to the vesicle membrane, not
+      to an identified scale protein component.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: morphogenesis_and_ecological_limits
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Establish how crystal organization, surface chemistry and ecological effects
+    vary among coccolith types and conditions.
+  rationale: One species' morphology or one adsorption experiment cannot establish
+    a universal shape, nucleation mechanism, protective role or prevalence.
+  notes: The two-shield Calcidiscus morphology, surface roughness and V/R crystal
+    arrangement are not generic dimensions or stoichiometry. Holococcolith observations
+    do not support universal base-plate-templated nucleation. Cell-surface adsorption
+    is kept distinct from proof of an adaptive benefit; the 2023 study finds context-dependent
+    viral effects, so no universal antiviral function is asserted. No broad taxonomic-distribution
+    row, fixed crystal count, causal graph or unverified trait link is added.
+  evidence:
+  - reference: DOI:10.1021/jacs.6c02151
+    notes: Results and Conclusions retain uncertainty about morphogenesis control.
+  - reference: DOI:10.1093/pnasnexus/pgag104
+    notes: Discussion allows undetected small nucleators and leaves crystal-ordering
+      dynamics unresolved.
+  - reference: DOI:10.1126/sciadv.adc8728
+    notes: Results distinguish empirical adsorption/infection experiments from turbulence-dependent
+      encounter models.
+  posed_by: codex
+  posed_date: '2026-10-03'
+images:
+- image_id: pmc_pmc13067266_fig1
+  file: pmc13067266_fig1.jpg
+  file_sha256: 35772c3d477f71c47c7c2e0d6e91fbd6086b9061126c7bee92cec70fcd95f939
+  source: PMC
+  source_accession: PMC13067266.1 fig1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13067266/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13067266.1/ja6c02151_0001.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Emanuel M. Avrahami, Dmitry Karpov, Lior Aram, Nadav Elad, Razi Safadi,
+    Irit Rosenhek-Goldian, Xiao-Meng Sui, Diede de Haan, Neta Varsano, Sidney R. Cohen,
+    et al.; CC BY 4.0, via PubMed Central
+  modality: SEM
+  caption: 'Calcidiscus leptoporus, Figure 1. A: SEM of a coccolith-covered cell beside
+    a schematic cross-section of one scale. B-E: SEM views of individual coccoliths
+    from distal, proximal and side orientations. F: AFM surface-height maps and three-dimensional
+    projections of selected regions. The two shields and connecting stem characterize
+    this example, not every coccolith type; AFM scan areas are not whole-scale dimensions.'
+  taxon_id: NCBITaxon:127549
+  taxon_label: Calcidiscus leptoporus
+  reference: DOI:10.1021/jacs.6c02151
+  retrieved_on: '2026-10-03'
+  notes: Visually inspected, unmodified multi-panel Figure 1. Source supplementary
+    Methods identify strain RCC1130 and distinguish cleaned, ex situ SEM/AFM specimens
+    from cryogenic imaging elsewhere in the paper. Exact CC BY 4.0 URL verified in
+    JATS ALI license_ref text against PMC metadata CC BY; media MD5 and local SHA-256
+    match. This figure includes SEM, schematic and AFM panels, not cryo-electron tomography.
