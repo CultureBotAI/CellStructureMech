@@ -14407,6 +14407,11 @@
           "cosine_similarity": 0.72760636
         },
         {
+          "identifier": "GO:7770042",
+          "label": "bindosome complex",
+          "cosine_similarity": 0.71019836
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.70066013
@@ -14415,11 +14420,37 @@
           "identifier": "GO:0097347",
           "label": "TAM protein secretion complex",
           "cosine_similarity": 0.69951722
+        }
+      ]
+    },
+    {
+      "identifier": "GO:7770042",
+      "label": "bindosome complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.78752701
+        },
+        {
+          "identifier": "GO:0022624",
+          "label": "proteasome accessory complex",
+          "cosine_similarity": 0.77076737
+        },
+        {
+          "identifier": "GO:0031317",
+          "label": "tripartite ATP-independent periplasmic transporter complex",
+          "cosine_similarity": 0.76931144
         },
         {
           "identifier": "GO:0001401",
           "label": "SAM complex",
-          "cosine_similarity": 0.69410949
+          "cosine_similarity": 0.7676592
+        },
+        {
+          "identifier": "GO:0043529",
+          "label": "GET complex",
+          "cosine_similarity": 0.76391802
         }
       ]
     },
@@ -14707,6 +14738,11 @@
       "label": "cellulosome",
       "neighbors": [
         {
+          "identifier": "GO:7770042",
+          "label": "bindosome complex",
+          "cosine_similarity": 0.70499482
+        },
+        {
           "identifier": "GO:0031105",
           "label": "septin complex",
           "cosine_similarity": 0.69427509
@@ -14725,11 +14761,6 @@
           "identifier": "GO:0031560",
           "label": "cellular bud neck polarisome",
           "cosine_similarity": 0.6776807
-        },
-        {
-          "identifier": "GO:0000502",
-          "label": "proteasome complex",
-          "cosine_similarity": 0.67712529
         }
       ]
     },
@@ -17538,6 +17569,11 @@
           "cosine_similarity": 0.72497748
         },
         {
+          "identifier": "GO:7770042",
+          "label": "bindosome complex",
+          "cosine_similarity": 0.70752637
+        },
+        {
           "identifier": "GO:0120120",
           "label": "bilobe structure",
           "cosine_similarity": 0.70645167
@@ -17546,11 +17582,6 @@
           "identifier": "GO:0005931",
           "label": "axonemal nexin link",
           "cosine_similarity": 0.70451449
-        },
-        {
-          "identifier": "GO:0036156",
-          "label": "inner dynein arm",
-          "cosine_similarity": 0.70254998
         }
       ]
     },
@@ -21124,6 +21155,11 @@
       "label": "starch utilization system complex",
       "neighbors": [
         {
+          "identifier": "GO:7770042",
+          "label": "bindosome complex",
+          "cosine_similarity": 0.72848922
+        },
+        {
           "identifier": "GO:1990063",
           "label": "Bam protein complex",
           "cosine_similarity": 0.67018603
@@ -21142,11 +21178,6 @@
           "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
           "label": "type VI secretion system membrane complex",
           "cosine_similarity": 0.63069688
-        },
-        {
-          "identifier": "GO:0030256",
-          "label": "type I protein secretion system complex",
-          "cosine_similarity": 0.62488109
         }
       ]
     },

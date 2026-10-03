@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/bindosome_complex.yaml
+  slug: bindosome_complex
+session:
+  id: 2026-10-03T055838Z-codex-615f0d
+  timestamp: '2026-10-03T05:58:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - discussions
+  summary: Add bindosome complex record
+  details: Added GO:7770042 bindosome complex as an archaeal membrane-associated sugar-binding-protein
+    complex, with GO membrane-protein-complex parentage, a reviewed-label-only sugar-binding-protein
+    constituent, Saccharolobus solfataricus scope, a cell-surface sugar-binding-protein organization
+    function, DOI evidence, and Bas-machinery and S-layer boundary discussions.
