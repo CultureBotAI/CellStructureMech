@@ -1,0 +1,58 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/coccolith_vesicle.yaml
+  slug: coccolith_vesicle
+session:
+  id: 2026-10-03T180804Z-codex-130a6e
+  timestamp: '2026-10-03T18:08:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1993
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - discussions
+  - images
+  - derived_artifacts
+  summary: 'Adversarial review of coccolith vesicle PR: no actionable defects'
+  details: 'Separate post-opening adversarial self-review of PR #1993 at scientific head ea0013a389e7f7e012a5fcb4fcc548ecf14713a3.
+    Read the actual PR file set and committed YAML, then rechecked primary 2026 Results and
+    Figure 4, supplementary RCC1130 culture/preparation Methods, and 2016 microscopy, calcium-store
+    Discussion and AWI1516 Methods. Challenged exact identity versus broad GO, vesicle versus
+    mineral cargo/coccosphere/reticular body, organelle parthood versus Golgi derivation,
+    morphology versus causal mechanism, observed luminal particles versus ATPase identity,
+    and species examples versus clade-wide prevalence. No actionable findings; no defect issues
+    manufactured. The broad GO:0043231 parent avoids an unverified spherical constraint; no
+    exact GO or Golgi parthood is asserted. The cited particle average is not promoted to
+    an ATPase component; membrane proximity bands are not asserted as sealed suborganelles
+    or universal molding, and Ca nondetection in the earlier species is not generalized. The
+    supplementary holococcolith paper DOI:10.1093/pnasnexus/pgag104 was read for scope challenge:
+    scattered crystals, unresolved ordering and limits on detecting templates reinforce the
+    decision not to assert a universal nucleation/molding mechanism. No unverified taxon was
+    added from that study. Rechecked current non-retracted PMC13067266.1 CC BY metadata, exact
+    ALI license_ref CC BY 4.0 URL and explicit licence text; the shared importer was not weakened
+    to accept missing provenance. Verified committed image bytes equal the visually inspected
+    source, source MD5 and record SHA256, modality/panel distinctions, canonical taxon and
+    visible rendered attribution. Structured committed-head assertions proved only the new
+    record YAML changed, all 840 previous embedding rows are byte-for-byte unchanged as structured
+    rows, and exactly one new row was added. Local QC passed 585 tests with 3 skips and 2
+    dependency warnings; 841 records strict-valid; 1507 history records valid before this
+    review; site and text map current. Network gates: 31/31 verbatim quotations, 10/10 matching
+    TraitMech links, 3552 live identifiers with 166 intentional unsupported/local skips and
+    zero unreachable; all supported identifier-label pairs match. Residual gaps are explicit:
+    molecular inventory, transport, membrane shaping and broader taxonomic/life-cycle scope.
+    This is self-review, not independent human approval; status stays PROPOSED. The review-only
+    file will be validated separately, and exact final-head plus merge-queue checks must pass
+    before merge.'
