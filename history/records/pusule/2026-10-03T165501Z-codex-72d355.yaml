@@ -1,0 +1,50 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/pusule.yaml
+  slug: pusule
+session:
+  id: 2026-10-03T165501Z-codex-72d355
+  timestamp: '2026-10-03T16:55:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1991
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - evidence
+  - discussions
+  - images
+  - derived_artifacts
+  summary: 'Adversarial review of pusule PR: no actionable defects'
+  details: 'Post-opening adversarial self-review of PR #1991 at scientific head 0432c379560109ab0bcb10e3558908a0c2b1e4e7.
+    Read the actual PR file list and committed record, compared primary Dodge publisher summary,
+    Klut publisher abstract in Crossref, and Gavelis PMC Results, collection Methods and Figure
+    2. Challenged structure identity, surface-connected lumen versus sealed vacuole, broader
+    GO parent versus exact identity, abstract-only physiology, taxonomic prevalence, molecular
+    assignment, adjacent nuclear/flagellar anatomy, image attribution/licence and generated-data
+    churn. No actionable defects found; no issues manufactured. The full apparatus is distinct
+    from plasma membrane alone; no contractile-vacuole equivalence, transport function, transmembrane
+    delivery, molecular family, broad prevalence or causal graph is asserted. Three species
+    are examples, not frequency claims. Caption and scope notes separate pusule panels from
+    contextual nuclear/flagellar features. Rechecked committed image bytes against the visually
+    inspected source file and SHA-256; exact CC BY 4.0 from current PMC metadata/JATS. Structured
+    committed-head audit confirmed exactly one new embedding row and all 838 existing rows
+    unchanged. Local full QC passed: 581 tests, 3 skips, 2 dependency warnings; 1503 history
+    records valid; 839 strict-valid records; generated pages and text map current. Network
+    gates passed: 31/31 verbatim snippets, 10/10 matching trait links, 3545 resolved identifiers
+    with 164 intentionally skipped local/unsupported identifiers and zero unreachable, all
+    supported identifier-label pairs matching. Residual limitations are explicit: two older
+    papers only summary/abstract accessible; physiological mechanisms and molecular machinery
+    remain open; this self-review is not human promotion, so status remains PROPOSED. This
+    review-only history addition will be validated and committed separately, with all checks
+    required on its exact final head and merge-queue head before merge.'
