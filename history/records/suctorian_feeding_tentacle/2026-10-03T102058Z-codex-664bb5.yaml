@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/suctorian_feeding_tentacle.yaml
+  slug: suctorian_feeding_tentacle
+session:
+  id: 2026-10-03T102058Z-codex-664bb5
+  timestamp: '2026-10-03T10:20:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add suctorian feeding tentacle from primary literature
+  details: Minted an exact local identity after hidden/ignored-inclusive repository searches
+    and GO searches found no equivalent. Curated Rudzinska 1965 feeding-apparatus evidence
+    and visually read Xu et al. 2026 Figures 4-5 and adjacent text. Verified NCBI names for
+    Prodiscophrya collini and Tokophrya infusionum, GO projection/microtubule/process terms,
+    and InterPro family entries. Kept centrin sequence assignments unresolved, excluded unlocalized
+    whole-cell proteomics hits, and scoped regeneration edges to pharmacological experiments
+    in the studied organism.

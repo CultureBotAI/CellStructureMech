@@ -1,0 +1,202 @@
+identifier: cellstructuremech:suctorian_feeding_tentacle
+label: suctorian feeding tentacle
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A tubular cell projection of suctorian ciliates that captures prey at
+  its tip and conveys prey cytoplasm into the cell body.
+definition_source: DOI:10.1083/jcb.25.3.459
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T10:18:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T10:20:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added sourced composition, two authority-verified examples, suctorian scope,
+    feeding function, a pharmacologically supported regeneration graph, and explicit
+    molecular-grounding and structure-boundary decisions.
+  llm_assisted: true
+parent_structures:
+- GO:0120025
+has_part:
+- GO:0005874
+components:
+- component_id: tubulin
+  label: Tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: InterPro:IPR000217
+  grounding_notes: Family-level class, not a claim that every tubulin paralogue occurs
+    here.
+  role: Builds the microtubule framework.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2026.05.071
+    notes: 'Figure 5: tubulin immunostaining.'
+- component_id: centrin_like_proteins
+  label: centrin-like proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Anti-centrin staining does not identify individual sequences. The
+    inspected Centrin/CML-like family IPR050145 remains unassigned pending sequence-level
+    correspondence.
+  role: Localize to the basal collar and tip.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2026.05.071
+    notes: 'Figure 5: anti-centrin localization.'
+taxonomic_distribution:
+- taxon_id: NCBITaxon:39462
+  taxon_label: Suctoria
+  presence: COMMON
+  note: Rudzinska introduces tentacles as the suctorian feeding apparatus.
+  reference: DOI:10.1083/jcb.25.3.459
+canonical_examples:
+- taxon_id: NCBITaxon:2585839
+  taxon_label: Prodiscophrya collini
+  note: Studied as Podophrya collini; current name verified against NCBI Taxonomy.
+  reference: DOI:10.1016/j.cub.2026.05.071
+- taxon_id: NCBITaxon:1173374
+  taxon_label: Tokophrya infusionum
+  note: Tentacle ultrastructure and feeding were examined by electron microscopy.
+  reference: DOI:10.1083/jcb.25.3.459
+functions:
+- function_id: prey_capture_and_ingestion
+  label: prey capture and cytoplasm ingestion
+  description: Attaches to prey and channels its cytoplasm into the predator.
+  evidence:
+  - reference: DOI:10.1083/jcb.25.3.459
+causal_graphs:
+- graph_id: tentacle_regeneration
+  title: Transcription and translation support tentacle regeneration
+  description: Regeneration in Prodiscophrya collini.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Cell-level pharmacological requirements and observed constituents;
+    specific regulatory genes and model-derived resource feedback are not asserted.
+  nodes:
+  - node_id: severing
+    label: mechanical tentacle removal
+    node_type: STATE
+  - node_id: transcription
+    label: DNA-templated transcription
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006351
+  - node_id: translation
+    label: translation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006412
+  - node_id: regeneration
+    label: tentacle regeneration
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: tubulin
+    label: Tubulin
+    node_type: GENE_OR_PROTEIN
+    component_ref: tubulin
+    grounding: InterPro:IPR000217
+  - node_id: microtubule
+    label: microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005874
+  - node_id: centrin
+    label: centrin-like proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: centrin_like_proteins
+  - node_id: tentacle
+    label: suctorian feeding tentacle
+    node_type: STRUCTURE
+    grounding: cellstructuremech:suctorian_feeding_tentacle
+  edges:
+  - subject: severing
+    predicate: triggers
+    object: regeneration
+    description: Severed cells regenerated tentacles.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2026.05.071
+      notes: Figure 4F.
+  - subject: transcription
+    predicate: supports
+    object: regeneration
+    description: Actinomycin D inhibited regeneration.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2026.05.071
+      notes: Figure 4H.
+  - subject: translation
+    predicate: supports
+    object: regeneration
+    description: Cycloheximide inhibited recovery after severing.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2026.05.071
+      notes: Figure 4G.
+  - subject: regeneration
+    predicate: produces
+    object: tentacle
+    description: New tentacles formed during recovery.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2026.05.071
+      notes: Figure 4F.
+  - subject: tubulin
+    predicate: polymerizes_into
+    object: microtubule
+    description: Tubulin subunits polymerize into microtubules.
+    evidence:
+    - reference: GO:0005874
+  - subject: microtubule
+    predicate: forms_scaffold_of
+    object: tentacle
+    description: Microtubules form the tentacle framework.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2026.05.071
+      notes: Figure 5.
+  - subject: centrin
+    predicate: localizes_to
+    object: tentacle
+    description: Centrin-like staining marks collar and tip.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2026.05.071
+      notes: Figure 5.
+evidence:
+- reference: DOI:10.1083/jcb.25.3.459
+  notes: Rudzinska 1965; abstract read at PubMed.
+- reference: DOI:10.1016/j.cub.2026.05.071
+  notes: Xu et al. 2026; author-hosted PDF read visually, especially Figures 4-5.
+discussions:
+- discussion_id: resolve_centrin_sequences
+  prompt: Resolve the localized centrin-like proteins to exact families.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#centrin_like_proteins
+  rationale: Sequence correspondence and assembly essentiality remain unestablished.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2026.05.071
+  - reference: InterPro:IPR050145
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: exclude_unlocalized_proteomics_hits
+  prompt: Require localization before promoting whole-cell proteomics hits to components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: Differential abundance in whole cells does not establish tentacle membership.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2026.05.071
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: tentacle_boundary
+  prompt: Keep the whole feeding projection distinct from its extrusomes and other
+    protist appendages.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: The record denotes the tubular feeding apparatus, not its dense secretory
+    bodies. Functional analogy alone does not identify it with a dinoflagellate peduncle
+    or haptonema.
+  evidence:
+  - reference: DOI:10.1083/jcb.25.3.459
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
