@@ -3825,6 +3825,15 @@
   "definition": "The pigmented photosynthetic membrane of cyanobacteria and chloroplasts, enriched in photosystems, cytochrome b6f, ATP synthase, plastoquinone and glycolipids, where light-driven electron transport builds the proton motive force for photosynthetic ATP synthesis."
  },
  {
+  "identifier": "cellstructuremech:toxicyst",
+  "label": "toxicyst",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/toxicyst.html",
+  "definition": "A ciliate offensive extrusome that stores toxic discharge material and ejects on prey contact to immobilize prey during raptorial feeding."
+ },
+ {
   "identifier": "GO:0005802",
   "label": "trans-Golgi network",
   "category": "MEMBRANE_ORGANELLE",
