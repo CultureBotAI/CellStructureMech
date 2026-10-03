@@ -22,10 +22,12 @@
 <p class="definition">The mitosomal envelope comprises the inner and outer mitosomal membrane including the intermembrane space. <small>[<code>uniprot.location:SL-0438</code>]</small></p>
 <p><strong>Synonyms:</strong> mitosomal envelope</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0032047"><code>GO:0032047</code></a> </p><p><strong>Has part:</strong> <code>cellstructuremech:mitosome_inner_membrane</code> <code>cellstructuremech:mitosome_outer_membrane</code> <code>cellstructuremech:mitosome_intermembrane_space</code> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0438</code> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-mitosome_outer_membrane"><td>mitosome outer membrane</td><td>LIPID</td><td>part of</td><td><code>cellstructuremech:mitosome_outer_membrane</code></td><td></td><td></td><td>UNKNOWN</td><td>Cytoplasm-facing lipid bilayer of the mitosome envelope.<ul class="evidence"><li><code>uniprot.location:SL-0443</code> <small>UniProt SL-0443 identifies the mitosome outer membrane as the mitosomal membrane facing the cytoplasm.</small></li></ul></td></tr>
 <tr id="components-mitosome_inner_membrane"><td>mitosome inner membrane</td><td>LIPID</td><td>part of</td><td><code>cellstructuremech:mitosome_inner_membrane</code></td><td></td><td></td><td>UNKNOWN</td><td>Matrix-facing lipid bilayer that separates the mitosomal matrix from the intermembrane space.<ul class="evidence"><li><code>uniprot.location:SL-0439</code> <small>UniProt Subcellular Location SL-0439 identifies the mitosome inner membrane as separating the mitosomal matrix from the intermembrane space.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,12 +43,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-mitosome_envelope_topology">Mitosome envelope encloses the reduced organelle <small>(FUNCTION)</small></h3>
-<p>The mitosome envelope contains inner and outer membranes plus the intermembrane space and surrounds the mitosome.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The mitosome envelope contains inner and outer membranes plus the intermembrane space and surrounds the mitosome.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Mitosome envelope encloses the reduced organelle">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>mitosome envelope</td><td>encloses</td><td>mitosome</td><td><ul class="evidence"><li><code>uniprot.location:SL-0438</code> <small>UniProt SL-0438 identifies the inner and outer mitosomal membranes and intermembrane space as the mitosome envelope.</small></li></ul></td></tr>
 <tr><td>mitosome outer membrane</td><td>is part of</td><td>mitosome envelope</td><td><ul class="evidence"><li><code>uniprot.location:SL-0443</code> <small>UniProt SL-0443 defines the mitosome outer membrane as the membrane facing the cytoplasm.</small></li></ul></td></tr>
 <tr><td>mitosome inner membrane</td><td>is part of</td><td>mitosome envelope</td><td><ul class="evidence"><li><code>uniprot.location:SL-0439</code> <small>UniProt SL-0439 defines the mitosome inner membrane by its position between the matrix and intermembrane space.</small></li></ul></td></tr>
 <tr><td>mitosome envelope</td><td>contains</td><td>mitosome intermembrane space</td><td><ul class="evidence"><li><code>uniprot.location:SL-0440</code> <small>UniProt SL-0440 defines the mitosome intermembrane space as the space between the inner and outer mitosomal membranes.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (RESOLVED): Resolve an exact source-neutral record for the mitosome intermembrane space. <small>UniProt provides an exact SL identifier for the remaining intermembrane-space child compartment, but no exact GO or CellStructureMech record was curated here for that location.</small></li></ul>

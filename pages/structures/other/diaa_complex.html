@@ -22,9 +22,11 @@
 <p class="definition">A homotetrameric protein complex consisting of a symmetrical pair of DiaA homodimers. Facilitates DnaA binding to the origin of replication during replication initiation. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990125"><code>GO:1990125</code></a>]</small></p>
 <p><strong>Synonyms:</strong> DiaA homotetramer</p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-diaa_regulator"><td>DiaA DnaA-binding protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>diaA</td><td>4 copies per DiaA homotetramer</td><td>UNKNOWN</td><td>Homodimerizing DiaA subunit whose tetrameric complex binds DnaA and facilitates DnaA loading at oriC.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990125"><code>GO:1990125</code></a> <small>GO:1990125 defines the DiaA complex as a homotetrameric complex made of a symmetrical pair of DiaA homodimers.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/17699754"><code>PMID:17699754</code></a> <small>Keyamura et al. 2007 determined the E. coli DiaA structure and showed that DiaA forms homotetramers.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,10 +42,12 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-diaa_facilitates_initiation">DiaA facilitates DnaA loading <small>(FUNCTION)</small></h3>
-<p>DiaA subunits form a homotetrameric complex that facilitates DnaA loading at oriC during DNA replication initiation.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>DiaA subunits form a homotetrameric complex that facilitates DnaA loading at oriC during DNA replication initiation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: DiaA facilitates DnaA loading">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>DiaA DnaA-binding protein</td><td>contributes to</td><td>DiaA complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990125"><code>GO:1990125</code></a> <small>GO:1990125 defines the DiaA complex as a homotetrameric protein complex.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/17699754"><code>PMID:17699754</code></a> <small>Keyamura et al. 2007 showed that E. coli DiaA forms homotetramers.</small></li></ul></td></tr>
 <tr><td>DiaA complex</td><td>facilitates</td><td>DNA replication initiation</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990125"><code>GO:1990125</code></a> <small>GO:1990125 defines the DiaA complex by its facilitation of DnaA binding to the origin of replication during initiation.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/17699754"><code>PMID:17699754</code></a> <small>Keyamura et al. 2007 reported that DiaA homotetramerization is required for stimulation of initiation by DiaA.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral DiaA grounding for the DiaA complex. <small>GO:1990125 defines a DiaA homotetramer, but an exact source-neutral InterPro, Pfam, NCBIfam or UniProt family CURIE for the DiaA protein constituent was not curated in this pass.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Leave DnaA and oriC DNA out of the scoped GO:1990125 DiaA complex. <small>GO:1990125 denotes the free DiaA homotetramer. GO models the DiaA-containing DnaA-oriC protein-DNA assembly separately as GO:1990102, so DnaA and oriC are binding partners in that larger complex rather than constituents of GO:1990125.</small></li></ul>

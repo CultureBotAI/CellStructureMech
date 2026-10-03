@@ -22,11 +22,13 @@
 <p class="definition">A membrane-embedded eukaryotic protein complex that forms a discrete pore in the nuclear envelope where the inner and outer nuclear membranes join and mediates exchange between the nucleus and cytoplasm. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a>]</small></p>
 <p><strong>Synonyms:</strong> nuclear pore complex; NPC</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005635"><code>GO:0005635</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-scaffold_nucleoporins"><td>scaffold nucleoporins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Structural nucleoporins that build the spoke and ring scaffold of the nuclear pore complex.<ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.148.4.635"><code>DOI:10.1083/jcb.148.4.635</code></a> <small>Rout et al. 2000 mapped the yeast NPC into subcomplexes that form the pore architecture.</small></li><li><a href="https://doi.org/10.1016/j.cell.2021.12.015"><code>DOI:10.1016/j.cell.2021.12.015</code></a> <small>Akey et al. 2022 resolved the comprehensive yeast NPC scaffold architecture.</small></li></ul></td></tr>
 <tr id="components-fg_repeat_nucleoporins"><td>FG-repeat nucleoporins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Nucleoporins whose FG-repeat regions line the central channel and form the selective transport barrier.<ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.111.127803"><code>DOI:10.1534/genetics.111.127803</code></a> <small>Aitchison and Rout 2012 review FG Nups in the yeast nuclear pore transport barrier.</small></li><li><a href="https://doi.org/10.1101/cshperspect.a000562"><code>DOI:10.1101/cshperspect.a000562</code></a> <small>Wente and Rout 2010 review FG-repeat nucleoporins as central NPC transport factors.</small></li></ul></td></tr>
 <tr id="components-membrane_nucleoporins"><td>transmembrane nucleoporins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Integral membrane nucleoporins that anchor the pore complex in the fused nuclear-envelope membrane.<ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.148.4.635"><code>DOI:10.1083/jcb.148.4.635</code></a> <small>Rout et al. 2000 identified integral membrane proteins within the yeast NPC architecture.</small></li><li><a href="https://doi.org/10.1016/j.cell.2021.12.015"><code>DOI:10.1016/j.cell.2021.12.015</code></a> <small>Akey et al. 2022 modeled the membrane-proximal adaptations of the yeast NPC.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -42,11 +44,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-nucleoporin_scaffold_transport_channel">Nucleoporins build a nuclear-envelope pore <small>(ASSEMBLY)</small></h3>
-<p>Membrane nucleoporins anchor the nuclear pore at the fused nuclear-envelope membrane, scaffold nucleoporins build the pore architecture, and FG-repeat nucleoporins line the central channel.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Membrane nucleoporins anchor the nuclear pore at the fused nuclear-envelope membrane, scaffold nucleoporins build the pore architecture, and FG-repeat nucleoporins line the central channel.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Nucleoporins build a nuclear-envelope pore">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>transmembrane nucleoporins</td><td>anchor</td><td>nuclear pore</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> <small>GO:0005643 places the pore at the junction between the inner and outer nuclear membranes.</small></li><li><a href="https://doi.org/10.1016/j.cell.2021.12.015"><code>DOI:10.1016/j.cell.2021.12.015</code></a> <small>Akey et al. 2022 modeled membrane anchors in the yeast NPC.</small></li></ul></td></tr>
 <tr><td>scaffold nucleoporins</td><td>assemble into</td><td>nuclear pore</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.148.4.635"><code>DOI:10.1083/jcb.148.4.635</code></a> <small>Rout et al. 2000 mapped the yeast NPC composition and architecture.</small></li></ul></td></tr>
 <tr><td>FG-repeat nucleoporins</td><td>line</td><td>nuclear pore</td><td><ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.111.127803"><code>DOI:10.1534/genetics.111.127803</code></a> <small>Aitchison and Rout 2012 review FG nucleoporins in yeast NPC transport.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral family groundings for scaffold, FG-repeat, and membrane nucleoporins. <small>The first NPC record groups Saccharomyces nucleoporins by architectural class and deliberately avoids guessing one InterPro, Pfam, NCBIfam, or UniProtKB accession for classes with many unrelated Nup folds.</small></li></ul>

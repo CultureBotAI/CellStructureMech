@@ -22,9 +22,11 @@
 <p class="definition">Either of the lipid bilayers that surround the mitochondrion and form the mitochondrial envelope. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031966"><code>GO:0031966</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005740"><code>GO:0005740</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-mitochondrial_lipid_bilayer"><td>mitochondrial lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Generic lipid-bilayer constituent of a mitochondrial envelope membrane when the exact inner or outer membrane is unspecified.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031966"><code>GO:0031966</code></a> <small>GO:0031966 defines mitochondrial membrane as either lipid bilayer that surrounds a mitochondrion and forms the mitochondrial envelope.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005740"><code>GO:0005740</code></a> <small>GO:0005740 defines the mitochondrial envelope as the double lipid bilayer enclosing the mitochondrion.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -38,11 +40,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-mitochondrial_membrane_scope">Mitochondrial membrane scope <small>(FUNCTION)</small></h3>
-<p>The generic mitochondrial membrane class covers either lipid bilayer of the mitochondrial envelope when the exact inner or outer membrane is unspecified.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The generic mitochondrial membrane class covers either lipid bilayer of the mitochondrial envelope when the exact inner or outer membrane is unspecified.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Mitochondrial membrane scope">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>mitochondrial membrane</td><td>is part of</td><td>mitochondrial envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031966"><code>GO:0031966</code></a> <small>GO:0031966 defines the generic mitochondrial membrane as either bilayer that forms the mitochondrial envelope.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005740"><code>GO:0005740</code></a> <small>GO:0005740 identifies the complete double lipid bilayer of the mitochondrial envelope.</small></li></ul></td></tr>
 <tr><td>mitochondrial outer membrane</td><td>is a</td><td>mitochondrial membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005741"><code>GO:0005741</code></a> <small>GO places GO:0005741 as an is_a child of the generic mitochondrial membrane term.</small></li></ul></td></tr>
 <tr><td>mitochondrial inner membrane</td><td>is a</td><td>mitochondrial membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005743"><code>GO:0005743</code></a> <small>GO places GO:0005743 as an is_a child of the generic mitochondrial membrane term.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the GO:0031966 generic mitochondrial membrane parent distinct from exact mitochondrial envelope, outer membrane, inner membrane, and crista records. <small>GO:0031966 denotes the generic mitochondrial membrane class whose is_a children include the outer and inner mitochondrial envelope bilayers. TOM import, matrix-facing respiratory chain localization, and crista architecture belong on the exact mitochondrial child membranes and substructures.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the generic lipid constituent of a mitochondrial membrane. <small>The record is exactly grounded to GO:0031966, but the generic lipid bilayer constituent is intentionally left as a reviewed-label-only component until an exact source-neutral lipid or membrane-constituent CURIE is curated.</small></li></ul>

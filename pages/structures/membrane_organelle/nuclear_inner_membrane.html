@@ -22,9 +22,11 @@
 <p class="definition">The inner, i.e. lumen-facing, lipid bilayer of the nuclear envelope. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a>]</small></p>
 <p><strong>Synonyms:</strong> inner nuclear membrane</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005635"><code>GO:0005635</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-nuclear_inner_lipid_bilayer"><td>nuclear inner membrane lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Lumen-facing lipid-bilayer constituent of the nuclear envelope inner membrane.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 defines the nuclear inner membrane as the lumen-facing lipid bilayer of the nuclear envelope.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,7 +42,8 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-yeast_integral_inner_nuclear_membrane_protein_targeting">Yeast inner nuclear membrane receives integral protein cargo <small>(FUNCTION)</small></h3>
-<p>The nuclear inner membrane is the lumen-facing nuclear envelope membrane and receives integral Heh1p and Heh2p cargo through karyopherin-mediated targeting.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The nuclear inner membrane is the lumen-facing nuclear envelope membrane and receives integral Heh1p and Heh2p cargo through karyopherin-mediated targeting.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Yeast inner nuclear membrane receives integral protein cargo">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>nuclear inner membrane</td><td>is part of</td><td>nuclear envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 defines the nuclear inner membrane as the lumen-facing lipid bilayer of the nuclear envelope.</small></li></ul></td></tr>
 <tr><td>nuclear envelope lumen</td><td>lies between</td><td>nuclear inner membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a> <small>GO:0005641 defines the nuclear envelope lumen as the region between the two nuclear envelope bilayers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 identifies the inner nuclear envelope bilayer.</small></li></ul></td></tr>
 <tr><td>nuclear envelope lumen</td><td>lies between</td><td>nuclear outer membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a> <small>GO:0005641 defines the nuclear envelope lumen as the region between the two nuclear envelope bilayers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> <small>GO:0005640 identifies the outer nuclear envelope bilayer.</small></li></ul></td></tr>
@@ -51,6 +54,7 @@
 <tr><td>Heh1p</td><td>is cargo of</td><td>integral inner nuclear membrane protein targeting</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature05075"><code>DOI:10.1038/nature05075</code></a> <small>King et al. 2006 used Heh1p as an integral inner nuclear membrane protein cargo in the karyopherin-dependent targeting assay.</small></li></ul></td></tr>
 <tr><td>Heh2p</td><td>is cargo of</td><td>integral inner nuclear membrane protein targeting</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature05075"><code>DOI:10.1038/nature05075</code></a> <small>King et al. 2006 also used Heh2p as an integral inner nuclear membrane protein cargo in the karyopherin-dependent targeting assay.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the paired nuclear outer membrane and nuclear envelope lumen as neighboring nuclear-envelope structures rather than as nuclear inner membrane components. <small>GO:0005637 denotes the inner bilayer of the nuclear envelope, GO:0005640 denotes the distinct outer bilayer, and GO:0005641 denotes the lumen between those bilayers.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for Heh1p, Heh2p, Kap60, and Kap95. <small>This record uses Heh1p, Heh2p, and the Kap60/Kap95 import system in the functional graph to capture the cited budding-yeast inner nuclear membrane example but leaves those proteins ungrounded until exact UniProtKB or family-level identifiers can be verified.</small></li></ul>

@@ -22,9 +22,11 @@
 <p class="definition">A small, threadlike secretory organelle that forms part of the apical complex and lies close to the subpellicular microtubules. <small>[<a href="http://purl.obolibrary.org/obo/GO_0070074"><code>GO:0070074</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0020007"><code>GO:0020007</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-pfrom1_rhomboid_protease"><td>PfROM1 rhomboid-1 protease</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>PfROM1</td><td></td><td>UNKNOWN</td><td>Plasmodium falciparum rhomboid-1 protease that resides in the mononeme before merozoite release and redistributes to the merozoite surface with apical and posterior enrichment after release.<ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.0709999104"><code>DOI:10.1073/pnas.0709999104</code></a> <small>Singh et al. 2007 identified PfROM1 as a rhomboid protease in the newly named mononeme and followed its redistribution after merozoite release.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,7 +42,8 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-pfrom1_mononeme_relocalization">PfROM1 marks a threadlike mononeme before merozoite release <small>(FUNCTION)</small></h3>
-<p>PfROM1 resides in the single thread-like mononeme next to the subpellicular microtubules in mature P. falciparum merozoites; after erythrocyte rupture, PfROM1 redistributes to the merozoite surface with apical and posterior enrichment.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>PfROM1 resides in the single thread-like mononeme next to the subpellicular microtubules in mature P. falciparum merozoites; after erythrocyte rupture, PfROM1 redistributes to the merozoite surface with apical and posterior enrichment.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: PfROM1 marks a threadlike mononeme before merozoite release">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>PfROM1 rhomboid-1 protease</td><td>resides in</td><td>mononeme</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.0709999104"><code>DOI:10.1073/pnas.0709999104</code></a> <small>Singh et al. 2007 localized HA-PfROM1 to a single thread-like structure in mature P. falciparum segmenters and named that organelle the mononeme.</small></li></ul></td></tr>
 <tr><td>mononeme</td><td>lies close to</td><td>subpellicular microtubule</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.0709999104"><code>DOI:10.1073/pnas.0709999104</code></a> <small>Singh et al. 2007 found HA-PfROM1 in close proximity to the longitudinal subpellicular microtubules.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0070074"><code>GO:0070074</code></a> <small>Gene Ontology defines the mononeme as a thread-like apical-complex organelle located close to the subpellicular microtubules.</small></li></ul></td></tr>
 <tr><td>mononeme</td><td>is distinct from</td><td>microneme</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.0709999104"><code>DOI:10.1073/pnas.0709999104</code></a> <small>Singh et al. 2007 found that HA-PfROM1 did not colocalize with the AMA1 microneme marker.</small></li></ul></td></tr>
@@ -48,6 +51,7 @@
 <tr><td>mononeme</td><td>is distinct from</td><td>apicomplexan dense granule</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.0709999104"><code>DOI:10.1073/pnas.0709999104</code></a> <small>Singh et al. 2007 found that HA-PfROM1 did not colocalize with a RESA dense-granule marker.</small></li></ul></td></tr>
 <tr><td>PfROM1 rhomboid-1 protease</td><td>redistributes to</td><td>post-release merozoite surface</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.0709999104"><code>DOI:10.1073/pnas.0709999104</code></a> <small>Singh et al. 2007 tracked HA-PfROM1 relocalization to apical and posterior poles after merozoite release.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve the mononeme membrane boundary and any conserved cargo or accessory proteins beyond PfROM1. <small>The first mononeme paper establishes PfROM1 localization in a distinct thread-like apical organelle, but this record does not yet curate an exact mononeme membrane, lumen, motor, or pan-apicomplexan cargo cohort.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Avoid asserting a microtubule-based mononeme transport mechanism until direct motor or route evidence is curated. <small>Singh et al. noted that the mononeme might move along microtubules and that testing this would require exact localization of the mononeme and candidate motors. The causal graph therefore records only observed topology and PfROM1 relocalization.</small></li></ul>

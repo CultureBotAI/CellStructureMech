@@ -22,9 +22,11 @@
 <p class="definition">A specialized membranous structure that extends from the photosynthetic thylakoid membrane into and transverses the matrix of a pyrenoid. <small>[<a href="http://purl.obolibrary.org/obo/GO_0160223"><code>GO:0160223</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_1990732"><code>GO:1990732</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-pyrenoid_tubule_lipid_bilayer"><td>pyrenoid tubule lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Generic thylakoid-derived lipid bilayer that forms a membrane tubule traversing the pyrenoid matrix.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0160223"><code>GO:0160223</code></a> <small>GO:0160223 defines the pyrenoid tubule as a specialized membranous structure extending from the photosynthetic thylakoid membrane into the pyrenoid matrix.</small></li><li><a href="https://doi.org/10.7554/eLife.04889"><code>DOI:10.7554/eLife.04889</code></a> <small>Engel et al. 2015 resolved pyrenoid-crossing membrane tubules in native Chlamydomonas chloroplasts by in situ cryo-electron tomography.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,11 +42,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-pyrenoid_tubule_topology">Pyrenoid tubules traverse the Rubisco matrix <small>(FUNCTION)</small></h3>
-<p>Pyrenoid tubules are specialized thylakoid-derived membranes continuous with the chloroplast thylakoid network and traversing the pyrenoid matrix.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Pyrenoid tubules are specialized thylakoid-derived membranes continuous with the chloroplast thylakoid network and traversing the pyrenoid matrix.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Pyrenoid tubules traverse the Rubisco matrix">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>pyrenoid tubule</td><td>is part of</td><td>pyrenoid</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0160223"><code>GO:0160223</code></a> <small>GO:0160223 identifies the pyrenoid tubule as a membranous structure that extends into the matrix of a pyrenoid.</small></li><li><a href="https://doi.org/10.1093/plcell/koad157"><code>DOI:10.1093/plcell/koad157</code></a> <small>He, Crans and Jonikas 2023 review pyrenoid ultrastructure and matrix-traversing membranes.</small></li></ul></td></tr>
 <tr><td>pyrenoid tubule</td><td>is continuous with</td><td>thylakoid membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0160223"><code>GO:0160223</code></a> <small>GO:0160223 defines pyrenoid tubules as extending from the photosynthetic thylakoid membrane.</small></li><li><a href="https://doi.org/10.7554/eLife.04889"><code>DOI:10.7554/eLife.04889</code></a> <small>Engel et al. 2015 resolved native Chlamydomonas pyrenoid tubules continuous with stromal thylakoids.</small></li></ul></td></tr>
 <tr><td>pyrenoid tubule</td><td>traverses</td><td>pyrenoid matrix</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0160223"><code>GO:0160223</code></a> <small>GO:0160223 defines the pyrenoid tubule by its extension into and traversal across a pyrenoid matrix.</small></li><li><a href="https://doi.org/10.1111/nph.70669"><code>DOI:10.1111/nph.70669</code></a> <small>Franklin et al. 2026 enriched and proteomically analyzed Chlamydomonas pyrenoid-traversing membranes.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the lipid constituent of the pyrenoid tubule. <small>The record is exactly grounded to GO:0160223, but no exact source-neutral lipid CURIE was curated for the generic constituent of this specialized thylakoid-derived membrane.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep pyrenoid tubules as a standalone exact record rather than a mandatory part of every pyrenoid. <small>GO:0160223 exactly denotes matrix-traversing pyrenoid tubules, but the existing broad pyrenoid record cannot assert them as universal parts because pyrenoid ultrastructure varies among lineages.</small></li></ul>

@@ -26,10 +26,12 @@
 </figure>
 
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-thin_peptidoglycan"><td>thin peptidoglycan sacculus</td><td>PEPTIDOGLYCAN</td><td>part of</td><td></td><td></td><td></td><td>ESSENTIAL</td><td>Provides mechanical integrity within the periplasm.<ul class="evidence"><li><a href="https://doi.org/10.1101/cshperspect.a000414"><code>DOI:10.1101/cshperspect.a000414</code></a> <small>Silhavy et al. distinguish the thin wall from the outer membrane.</small></li></ul></td></tr>
 <tr id="components-outer_membrane_lipoprotein_links"><td>peptidoglycan–outer-membrane lipoprotein links</td><td>PROTEIN</td><td>part of</td><td></td><td></td><td></td><td>CONDITIONAL</td><td>Couple the peptidoglycan layer mechanically to the outer membrane in many diderms.<ul class="evidence"><li><a href="https://doi.org/10.1101/cshperspect.a000414"><code>DOI:10.1101/cshperspect.a000414</code></a> <small>Envelope review describes lipoprotein coupling.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -45,15 +47,18 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-peptidoglycan_outer_membrane_tethering">Lipoprotein tethers connect the thin wall to the outer membrane <small>(FUNCTION)</small></h3>
-<p>In the canonical E. coli diderm envelope, the thin peptidoglycan sacculus sits in the periplasm and Braun-lipoprotein tethers connect that wall to the outer membrane. This peptidoglycan-outer membrane coupling tunes the mechanical stiffness of the Gram-negative envelope.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In the canonical E. coli diderm envelope, the thin peptidoglycan sacculus sits in the periplasm and Braun-lipoprotein tethers connect that wall to the outer membrane. This peptidoglycan-outer membrane coupling tunes the mechanical stiffness of the Gram-negative envelope.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Lipoprotein tethers connect the thin wall to the outer membrane">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>thin peptidoglycan sacculus</td><td>lines</td><td>cell outer membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1101/cshperspect.a000414"><code>DOI:10.1101/cshperspect.a000414</code></a> <small>Silhavy, Kahne and Walker 2010 describe the Gram-negative envelope as an outer membrane around a thin peptidoglycan cell wall.</small></li></ul></td></tr>
 <tr><td>peptidoglycan-outer-membrane lipoprotein links</td><td>anchors into</td><td>cell outer membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-020-15489-1"><code>DOI:10.1038/s41467-020-15489-1</code></a> <small>Mathelié-Guinlet and colleagues 2020 describe Lpp as inserted in the E. coli outer membrane by a lipid moiety on its N-terminal cysteine.</small></li></ul></td></tr>
 <tr><td>peptidoglycan-outer-membrane lipoprotein links</td><td>covalently tethers</td><td>thin peptidoglycan sacculus</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-020-15489-1"><code>DOI:10.1038/s41467-020-15489-1</code></a> <small>Mathelié-Guinlet and colleagues 2020 studied E. coli Lpp mutations that alter the covalent peptidoglycan linkage.</small></li></ul></td></tr>
 <tr><td>peptidoglycan-outer-membrane lipoprotein links</td><td>connects</td><td>linked Gram-negative cell envelope</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-020-15489-1"><code>DOI:10.1038/s41467-020-15489-1</code></a> <small>Mathelié-Guinlet and colleagues 2020 show that Lpp contributes to envelope stiffness by covalently connecting the outer membrane to peptidoglycan.</small></li></ul></td></tr>
 <tr><td>linked Gram-negative cell envelope</td><td>controls</td><td>cell-envelope stiffness</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-020-15489-1"><code>DOI:10.1038/s41467-020-15489-1</code></a> <small>Mathelié-Guinlet and colleagues 2020 measured E. coli envelope mechanics after genetically changing Lpp length and its peptidoglycan attachment site.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 <h3 id="causal_graphs-lpp_lol_pg_tether_assembly">Lol trafficking and L,D-transpeptidation install Lpp wall tethers <small>(ASSEMBLY)</small></h3>
-<p>Braun lipoprotein matures as a triacylated outer-membrane lipoprotein, is trafficked to the outer membrane by the Lol pathway, and is covalently attached to meso-diaminopimelate in peptidoglycan by L,D-transpeptidases. The result is a protein bridge from the outer membrane to the thin Gram-negative wall.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Braun lipoprotein matures as a triacylated outer-membrane lipoprotein, is trafficked to the outer membrane by the Lol pathway, and is covalently attached to meso-diaminopimelate in peptidoglycan by L,D-transpeptidases. The result is a protein bridge from the outer membrane to the thin Gram-negative wall.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Lol trafficking and L,D-transpeptidation install Lpp wall tethers">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Braun lipoprotein Lpp</td><td>matures into</td><td>triacylated mature Lpp</td><td><ul class="evidence"><li><a href="https://doi.org/10.1098/rstb.2015.0030"><code>DOI:10.1098/rstb.2015.0030</code></a> <small>Konovalova and Silhavy 2015 review outer-membrane lipoprotein maturation and trafficking through the Lol pathway.</small></li></ul></td></tr>
 <tr><td>Lol lipoprotein-trafficking pathway</td><td>traffics</td><td>triacylated mature Lpp</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.1702248114"><code>DOI:10.1073/pnas.1702248114</code></a> <small>Grabowicz and Silhavy 2017 summarize the Lol trafficking paradigm and test which Lol components remain essential when lipoprotein accumulation at the inner membrane is prevented.</small></li></ul></td></tr>
 <tr><td>triacylated mature Lpp</td><td>inserts into</td><td>cell outer membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-020-15489-1"><code>DOI:10.1038/s41467-020-15489-1</code></a> <small>Mathelie-Guinlet and colleagues 2020 describe E. coli Lpp as embedded in the outer membrane through its N-terminal lipid moiety.</small></li></ul></td></tr>
@@ -61,6 +66,7 @@
 <tr><td>Lpp-anchoring L,D-transpeptidases</td><td>uses acceptor</td><td>thin peptidoglycan sacculus</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/JB.00084-07"><code>DOI:10.1128/JB.00084-07</code></a> <small>Magnet et al. 2007 mapped the E. coli Lpp-peptidoglycan linkage to the meso-diaminopimelate residue of a disaccharide-tripeptide muropeptide.</small></li></ul></td></tr>
 <tr><td>triacylated mature Lpp</td><td>forms</td><td>covalent Lpp-peptidoglycan tether</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-020-15489-1"><code>DOI:10.1038/s41467-020-15489-1</code></a> <small>Mathelie-Guinlet and colleagues 2020 measured the contribution of Lpp outer-membrane-to-peptidoglycan tethers to E. coli envelope stiffness.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Datasets</h2>

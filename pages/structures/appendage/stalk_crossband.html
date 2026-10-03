@@ -22,9 +22,11 @@
 <p class="definition">A disk-like multiprotein diffusion barrier that spans the Caulobacter stalk cross-section. StpABCD-containing stalk crossbands partition the prostheca into compartments by limiting exchange of soluble and membrane proteins between the cell body and stalk segments. <small>[<a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a>]</small></p>
 <p><strong>Synonyms:</strong> stalk band; Caulobacter crossband</p><p><strong>Part of:</strong> <code>cellstructuremech:prostheca</code> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-stp_abcd_crossband_proteins"><td>StpA/StpB/StpC/StpD crossband proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>stpA, stpB, stpC, stpD</td><td></td><td>ESSENTIAL</td><td>Assemble into the proteinaceous crossband that spans the stalk and forms a diffusion barrier.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 identify StpA, StpB, StpC and StpD as proteins required to form Caulobacter stalk crossbands.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,12 +42,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-stp_crossband_stalk_barrier">StpABCD proteins assemble stalk-compartment diffusion barriers <small>(ASSEMBLY)</small></h3>
-<p>StpA, StpB, StpC and StpD build crossbands that span the prostheca and limit exchange of soluble and membrane proteins across stalk compartments.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>StpA, StpB, StpC and StpD build crossbands that span the prostheca and limit exchange of soluble and membrane proteins across stalk compartments.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: StpABCD proteins assemble stalk-compartment diffusion barriers">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>StpA/StpB/StpC/StpD crossband proteins</td><td>assemble into</td><td>stalk crossband</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 show that at least four Stp proteins comprise the crossband barrier.</small></li></ul></td></tr>
 <tr><td>stalk crossband</td><td>spans</td><td>prostheca</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 describe crossbands as spanning the stalk.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/4126821"><code>PMID:4126821</code></a> <small>Jones and Schmidt 1973 imaged electron-dense crossbands in Caulobacter stalks.</small></li></ul></td></tr>
 <tr><td>stalk crossband</td><td>restricts</td><td>protein diffusion</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 tested soluble and membrane-protein diffusion across crossbands.</small></li></ul></td></tr>
 <tr><td>stalk crossband</td><td>supports</td><td>stalk compartmentalization</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 connect crossband diffusion barriers with bacterial stalk compartments.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for the Caulobacter StpABCD crossband complex. <small>The first record uses a reviewed label for the StpABCD cohort until an exact protein-family or complex identifier is verified.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Model the stalk crossband as a protein complex part of the prostheca, not as a molecular constituent of the prostheca record. <small>The prostheca record captures the whole envelope projection and its generic wall and membrane materials. Crossbands are discrete proteinaceous barriers inside that projection, so they receive a separate record with part_of pointing back to the prostheca.</small></li></ul>

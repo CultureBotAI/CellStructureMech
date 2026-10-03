@@ -22,9 +22,11 @@
 <p class="definition">Non-membrane-bounded protein particle complex that carries cargo along axonemal microtubules during intraflagellar transport in eukaryotic cilia and flagella. <small>[<a href="http://purl.obolibrary.org/obo/GO_0030990"><code>GO:0030990</code></a>]</small></p>
 <p><strong>Synonyms:</strong> intraflagellar transport particle</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005929"><code>GO:0005929</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-ift_particle_proteins"><td>IFT particle proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Protein constituents of the IFT particle complex that shuttles ciliary cargo along the axoneme.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030990"><code>GO:0030990</code></a> <small>GO:0030990 identifies the intraciliary transport particle as a protein complex.</small></li><li><a href="https://doi.org/10.1038/nrm952"><code>DOI:10.1038/nrm952</code></a> <small>Rosenbaum and Witman 2002 review IFT particles as protein assemblies that transport cargo during cilium and flagellum assembly and maintenance.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,11 +42,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-ift_particle_ciliary_transport">IFT particles transport cargo along axonemes <small>(FUNCTION)</small></h3>
-<p>IFT-particle proteins form a mobile complex that transports cargo along axonemal microtubules to support cilium assembly and maintenance.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>IFT-particle proteins form a mobile complex that transports cargo along axonemal microtubules to support cilium assembly and maintenance.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: IFT particles transport cargo along axonemes">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>IFT particle proteins</td><td>contribute to</td><td>intraciliary transport particle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030990"><code>GO:0030990</code></a> <small>GO:0030990 identifies the intraciliary transport particle as a protein complex.</small></li></ul></td></tr>
 <tr><td>intraciliary transport particle</td><td>transports cargo along</td><td>axoneme</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrm952"><code>DOI:10.1038/nrm952</code></a> <small>Rosenbaum and Witman 2002 review bidirectional IFT-particle transport along Chlamydomonas axonemes.</small></li></ul></td></tr>
 <tr><td>intraciliary transport particle</td><td>supports</td><td>cilium assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrm952"><code>DOI:10.1038/nrm952</code></a> <small>Rosenbaum and Witman 2002 review IFT as required machinery for cilium and flagellum assembly and maintenance.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the intraciliary transport particle distinct from the complete cilium, the axoneme, and IFT motor complexes. <small>GO:0030990 denotes the mobile IFT protein-particle complex that acts inside the cilium, GO:0005929 denotes the complete membrane-sheathed cilium, and GO:0005930 denotes the axonemal microtubule core on which IFT particles move.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings and copy numbers for IFT-particle proteins and subcomplexes. <small>Rosenbaum and Witman 2002 support IFT particles as ciliary transport protein complexes, but this first child-complex record keeps a reviewed-label-only aggregate instead of guessing exact IFT-A, IFT-B, kinesin-II, dynein-2, InterPro, Pfam, NCBIfam, or UniProtKB groundings.</small></li></ul>

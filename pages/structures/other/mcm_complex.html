@@ -22,9 +22,11 @@
 <p class="definition">A hexameric protein complex required for the initiation and regulation of DNA replication. <small>[<a href="http://purl.obolibrary.org/obo/GO_0042555"><code>GO:0042555</code></a>]</small></p>
 <p><strong>Synonyms:</strong> mini-chromosome maintenance complex</p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-mcm_subunit"><td>MCM subunit</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td>6</td><td>UNKNOWN</td><td>Protein constituent class that forms the hexameric MCM complex.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042555"><code>GO:0042555</code></a> <small>GO:0042555 defines MCM as a hexameric protein complex required for the initiation and regulation of DNA replication.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/11282021"><code>PMID:11282021</code></a> <small>The PubMed abstract for Lei and Tye 2001 identifies the eukaryotic MCM complex as a hexameric pre-replication-complex component.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -38,10 +40,12 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-mcm_supports_dna_replication">MCM supports DNA replication <small>(FUNCTION)</small></h3>
-<p>MCM subunits form the hexameric MCM complex required for the initiation and regulation of DNA replication.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>MCM subunits form the hexameric MCM complex required for the initiation and regulation of DNA replication.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MCM supports DNA replication">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>MCM subunit</td><td>contributes to</td><td>MCM complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042555"><code>GO:0042555</code></a> <small>GO:0042555 defines MCM as a hexameric protein complex.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/11282021"><code>PMID:11282021</code></a> <small>The PubMed abstract for Lei and Tye 2001 identifies the eukaryotic MCM complex as hexameric.</small></li></ul></td></tr>
 <tr><td>MCM complex</td><td>supports</td><td>DNA replication</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042555"><code>GO:0042555</code></a> <small>GO:0042555 defines the MCM complex as required for the initiation and regulation of DNA replication.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006260"><code>GO:0006260</code></a> <small>GO:0006260 is the GO biological-process term for DNA replication.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings and subtype boundaries for archaeal MCM, eukaryotic MCM2-7 and MCM8-MCM9 complex constituents. <small>GO:0042555 exactly identifies the parent MCM complex and defines it as hexameric, while GO:0097362 identifies MCM8-MCM9 as a child of MCM. This record therefore models one generic hexamer-forming MCM subunit class instead of overclaiming six universal named subunits or collapsing MCM8-MCM9 into the parent complex.</small></li></ul>

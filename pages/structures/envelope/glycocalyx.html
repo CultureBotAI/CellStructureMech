@@ -22,9 +22,11 @@
 <p class="definition">A carbohydrate rich layer at the outermost periphery of a cell. <small>[<a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a>]</small></p>
 
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-glycocalyx_extracellular_matrix"><td>glycocalyx extracellular matrix</td><td>OTHER</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Forms the carbohydrate-rich extracellular layer at the outermost cell periphery.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a> <small>GO defines the glycocalyx as a carbohydrate-rich layer at the outermost cell periphery.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> <small>GO defines a slime layer as a diffuse glycocalyx subclass that consists mostly of exopolysaccharides, glycoproteins and glycolipids.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0042603"><code>GO:0042603</code></a> <small>GO defines capsule as a highly organized glycocalyx subclass attached outside the cell wall.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 
@@ -36,10 +38,12 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-glycocalyx_matrix_surface_layer">Extracellular matrix forms a peripheral glycocalyx <small>(ASSEMBLY)</small></h3>
-<p>Glycocalyx extracellular matrix is positioned at the outermost cell periphery in microbial subclasses such as a diffuse slime layer or an organized capsule.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Glycocalyx extracellular matrix is positioned at the outermost cell periphery in microbial subclasses such as a diffuse slime layer or an organized capsule.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Extracellular matrix forms a peripheral glycocalyx">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>glycocalyx extracellular matrix</td><td>forms</td><td>glycocalyx</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a> <small>The GO glycocalyx definition identifies it as a carbohydrate-rich layer.</small></li></ul></td></tr>
 <tr><td>glycocalyx</td><td>lies at</td><td>outermost cell periphery</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030112"><code>GO:0030112</code></a> <small>The GO glycocalyx definition places the layer at the outermost periphery of a cell.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep glycocalyx as a parent class rather than merging capsule and slime-layer records into it. <small>GO:0030112 denotes the broad carbohydrate-rich outer layer, while GO:0042603 restricts capsule to a highly organized glycocalyx and GO:0030114 restricts slime layer to a diffuse, easily removed glycocalyx. The existing capsule and slime-layer records therefore remain narrower sibling subclasses of this parent record.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for the broad glycocalyx extracellular matrix. <small>This broad parent record curates one extracellular-matrix component for the carbohydrate-rich layer while leaving exact glycan, glycoprotein, glycolipid, and peptide-polymer groundings to narrower capsule or slime-layer follow-up.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Acknowledge non-microbial GO:0030112 subclasses while curating microbial glycocalyx examples. <small>GO:0030112 exactly names the broad glycocalyx class that already parents the microbial capsule and slime-layer records, but its current GO children also include vascular endothelial, sperm, platelet, and stereocilium glycocalyces. This first CellStructureMech parent record therefore keeps the exact GO identifier while limiting curated examples and assembly prose to the microbial capsule and slime-layer subclasses.</small></li></ul>

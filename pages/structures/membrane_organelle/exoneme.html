@@ -22,10 +22,12 @@
 <p class="definition">A dense granule-like organelle of the apical complex of merozoites, released into the parasitophorous vacuole, mediating protease-dependent rupture and parasite exit from the infected erythrocyte. <small>[<a href="http://purl.obolibrary.org/obo/GO_0044311"><code>GO:0044311</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0020007"><code>GO:0020007</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-pfsub1_exoneme_protease"><td>PfSUB1 exoneme protease</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>sub1</td><td></td><td>UNKNOWN</td><td>Secretory subtilisin-like serine protease stored in exonemes and released into the parasitophorous vacuole shortly before egress to process SERA and merozoite-surface protein substrates.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2007.10.049"><code>DOI:10.1016/j.cell.2007.10.049</code></a> <small>Yeoh et al. 2007 identified PfSUB1 in dense granule-like exonemes and connected its regulated release to SERA processing, egress, and merozoite invasion competence.</small></li><li><a href="https://doi.org/10.1111/j.1462-5822.2008.01176.x"><code>DOI:10.1111/j.1462-5822.2008.01176.x</code></a> <small>Blackman 2008 reviews PfSUB1 discharge from exonemes into the PV space just before P. falciparum blood-stage egress.</small></li></ul></td></tr>
 <tr id="components-plasmepsin_x_exoneme_protease"><td>plasmepsin X exoneme protease</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>pmx</td><td></td><td>UNKNOWN</td><td>Exoneme-localized aspartic protease that supports the final maturation step of the PfSUB1 egress protease.<ul class="evidence"><li><a href="https://doi.org/10.1126/science.aan1478"><code>DOI:10.1126/science.aan1478</code></a> <small>Nasamu et al. 2017 localized Plasmepsin X to exonemes and linked PMX knockdown to impaired SUB1 maturation and egress.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,7 +43,8 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-pmx_sub1_exoneme_egress">Plasmepsin X and PfSUB1 connect exonemes to erythrocyte egress <small>(FUNCTION)</small></h3>
-<p>PMX localizes to exonemes and supports final maturation of PfSUB1; exonemes discharge PfSUB1 into the PV, where the protease processes SERA/MSP substrates required for P. falciparum egress and post-egress invasion.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>PMX localizes to exonemes and supports final maturation of PfSUB1; exonemes discharge PfSUB1 into the PV, where the protease processes SERA/MSP substrates required for P. falciparum egress and post-egress invasion.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Plasmepsin X and PfSUB1 connect exonemes to erythrocyte egress">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>plasmepsin X exoneme protease</td><td>localizes to</td><td>exoneme</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.aan1478"><code>DOI:10.1126/science.aan1478</code></a> <small>Nasamu et al. 2017 localized PMX to exonemes by immuno-electron microscopy.</small></li></ul></td></tr>
 <tr><td>plasmepsin X exoneme protease</td><td>supports maturation of</td><td>PfSUB1 exoneme protease</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.aan1478"><code>DOI:10.1126/science.aan1478</code></a> <small>Nasamu et al. 2017 found that PMX knockdown blocked the second SUB1 maturation step.</small></li></ul></td></tr>
 <tr><td>PfSUB1 exoneme protease</td><td>resides in</td><td>exoneme</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2007.10.049"><code>DOI:10.1016/j.cell.2007.10.049</code></a> <small>Yeoh et al. 2007 identified PfSUB1 in previously unrecognized organelles termed exonemes.</small></li></ul></td></tr>
@@ -51,6 +54,7 @@
 <tr><td>SERA and MSP substrates</td><td>support</td><td>erythrocyte egress</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms4726"><code>DOI:10.1038/ncomms4726</code></a> <small>Withers-Martinez et al. 2014 review SUB1 cleavage of egress and invasion substrates.</small></li></ul></td></tr>
 <tr><td>PfSUB1 exoneme protease</td><td>supports</td><td>merozoite invasion capacity</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2007.10.049"><code>DOI:10.1016/j.cell.2007.10.049</code></a> <small>Yeoh et al. 2007 found that PfSUB1 blockade inhibited egress and ablated the invasive capacity of released merozoites.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for Plasmodium SUB1 and plasmepsin X exoneme protein families. <small>The first exoneme record keeps P. falciparum SUB1 and PMX label-only because no exact cross-source family CURIE was curated for either exoneme protease.</small></li></ul>
