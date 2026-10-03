@@ -1,0 +1,48 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/infraciliary_lattice.yaml
+  slug: infraciliary_lattice
+session:
+  id: 2026-10-03T210020Z-codex-cce191
+  timestamp: '2026-10-03T21:00:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1998
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - images
+  - evidence
+  summary: Adversarial self-review of infraciliary lattice PR 1998
+  details: 'Separate post-opening adversarial self-review of scientific commit 933b55936ec6c0c3241be3833df8d0c04a04a9db
+    against base db3db34f111477573c9675fda3a12fcf4258f95e in PR #1998. Same agent, not independent
+    human review. Read the committed record diff, creation history, generated catalogue changes
+    and repository field checklist; checked identity/parthood, components, species scope,
+    both functions, both assembly edges, and the figure against inspected primary sources
+    and authorities. Challenged whole-lattice versus ICLOC/ICL1e equivalence, basal-body anchoring/duplication
+    transfer, initial calcium signal versus decay, one-scaffold completeness, gene counts
+    versus stoichiometry, and confocal versus STED. Those boundaries are explicit. Re-inspected
+    the committed figure: WT mesh versus BP remnants, GFP-Cen15 versus 1A9, arrows and scale
+    bars agree with the caption. JATS CC BY 3.0 and publisher wording are preserved; committed
+    image SHA256 and source bytes match. Asserted graph endpoint/evidence integrity, PROPOSED
+    status and truthful LLM events. All 845 old embedding rows remain unchanged; published
+    map copies equal derived data. No concrete defect found, no issue fabricated, no scientific
+    mutation needed. Residual limits remain open: exact component-family mapping and full-text
+    confirmation before quantitative use of the 2008/2009 abstract evidence. Local target
+    validation and full QC passed: 595 tests, 3 skips, 2 dependency warnings; 846 structures
+    and 1517 histories valid; site/docs current. Source checks: 31/31 verbatim snippets, 10/10
+    matching traits, 3567 resolved identifiers with 171 skips, 3438 canonical labels plus
+    48 synonyms and 8 accepted exceptions with 434 no-adapter skips. This appended review
+    history is to be validated and included in the final-head CI before merge.'
