@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/phycobilisome_core.yaml
+  slug: phycobilisome_core
+session:
+  id: 2026-10-03T014904Z-codex-584101
+  timestamp: '2026-10-03T01:49:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add phycobilisome core record
+  details: Added a minted cellstructuremech:phycobilisome_core record as an allophycocyanin-containing
+    light-harvesting subassembly of the phycobilisome, with GO:0030076 parentage, GO:0030089
+    parthood, reviewed-label-only allophycocyanin/core-linker/phycobilin components, cyanobacterial
+    and red-algal scope, Synechocystis and Thermostichus examples, photosynthetic light-harvesting
+    function evidence, DOI/GO/InterPro evidence, a nonmechanistic core energy-transfer graph,
+    and discussions that record rejected broad or narrow InterPro near matches and keep the
+    core distinct from the whole phycobilisome.
