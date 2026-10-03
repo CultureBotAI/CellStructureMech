@@ -3326,9 +3326,45 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:icl1e_complex",
+      "label": "ICL1e complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:infraciliary_lattice",
+          "label": "infraciliary lattice",
+          "cosine_similarity": 0.77785033
+        },
+        {
+          "identifier": "GO:0120269",
+          "label": "ciliary centrin arm",
+          "cosine_similarity": 0.72537353
+        },
+        {
+          "identifier": "GO:0160066",
+          "label": "interphase SIN signaling complex",
+          "cosine_similarity": 0.6796453
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.67688466
+        },
+        {
+          "identifier": "GO:0005931",
+          "label": "axonemal nexin link",
+          "cosine_similarity": 0.66902452
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:infraciliary_lattice",
       "label": "infraciliary lattice",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:icl1e_complex",
+          "label": "ICL1e complex",
+          "cosine_similarity": 0.77785033
+        },
         {
           "identifier": "cellstructuremech:cryptophyte_cortical_centrin_network",
           "label": "cryptophyte cortical centrin network",
@@ -3348,11 +3384,6 @@
           "identifier": "GO:0020007",
           "label": "apical complex",
           "cosine_similarity": 0.63609185
-        },
-        {
-          "identifier": "GO:0032157",
-          "label": "prospore contractile ring",
-          "cosine_similarity": 0.63281385
         }
       ]
     },

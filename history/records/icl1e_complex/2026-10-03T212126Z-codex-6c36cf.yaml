@@ -1,0 +1,43 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/icl1e_complex.yaml
+  slug: icl1e_complex
+session:
+  id: 2026-10-03T212126Z-codex-6c36cf
+  timestamp: '2026-10-03T21:21:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  summary: Add evidence-backed ICL1e complex and licensed Figure 3
+  details: Added ICL1e complex as a named basal-body-associated functional centrin assembly,
+    distinct from the full infraciliary lattice and complete organizing-centre remnant. Hidden/ignored-inclusive
+    label, alias and DOI/PMID searches found only the neighboring lattice record, derived
+    mentions and citation caches. Exact QuickGO ICL1e search returned no term; verified GO:0140535
+    parent, GO:0030863 parthood and non-equivalent GO:0120269 centrin arm. ENA verifies P.
+    tetraurelia NCBITaxon:5888; InterPro IPR050145 is too broad for exact ICL1e-family grounding.
+    Read primary 2017 JATS localization, timing, depletion, topological and interaction Results,
+    essential-function Discussion, relevant Methods and Figures 2-7 legends. Kept direct-binding,
+    copy-number, component-assembly and cross-taxon limits explicit, including delayed recruitment
+    at some paired basal bodies and distinction from basal-body duplication failure. Added
+    one source-neutral paralogue class, three scoped functions and two perturbation-based
+    localization edges; external Centrin2/Centrin3 and hypothetical Sfi1 connectors are not
+    curated constituents. Visually inspected unmodified epifluorescence Figure 3 and verified
+    its versioned PMC metadata, CC BY 3.0 JATS licence, media md5, 215631-byte file and SHA256
+    872562907de911c3e541f5973cbe8c183f9e2e57a8e9522f5926153bf8e0a3c8. Caption separates GFP-Cen15,
+    1A9 and RFP-SAS6 signals in dividing BP cells. The scaffold and guarded safe_load mutator
+    used truthful LLM events and validated writers. Full corpus gates and post-opening adversarial
+    review remain required before merge.

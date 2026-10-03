@@ -1,0 +1,286 @@
+identifier: cellstructuremech:icl1e_complex
+label: ICL1e complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A basal-body-associated centrin assembly described in Paramecium tetraurelia
+  as a functional complex of ICL1e-subfamily proteins. It appears as a discrete ICL1e-positive
+  dot and persists in cells lacking the extended infraciliary lattice; it is distinct
+  from the whole lattice and from the complete infraciliary-lattice organizing-centre
+  remnant.
+definition_source: DOI:10.1242/bio.024273
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T21:20:08Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T21:20:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added primary localization and depletion evidence, scoped component and
+    functions, perturbation-based localization graph, boundary discussions, verified
+    taxonomy and licensed Figure 3.
+  llm_assisted: true
+- timestamp: '2026-10-03T21:24:02Z'
+  curator: codex
+  action: CORRECTED_SOURCE_CONTEXT
+  changes: Corrected the section attribution of the hypothetical Sfi1 connection to
+    the interaction Results; retained its exclusion from established constituents.
+  llm_assisted: true
+parent_structures:
+- GO:0140535
+part_of:
+- GO:0030863
+synonyms:
+- synonym_text: ICL1e dot
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1242/bio.024273
+components:
+- component_id: icl1e_family_centrins
+  label: ICL1e-family centrins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR050145 Centrin/CML-like contains broader centrin and
+    non-centrin calcium-binding proteins, including obelin and plant CML proteins.
+    It is not an exact ICL1e-subfamily grounding. No species-specific accession substitutes
+    for this source-neutral paralogue group.
+  essentiality: UNKNOWN
+  role: Centrin paralogue group defining the named basal-body-associated assembly;
+    its molecular assembly requirements are not resolved separately for every paralogue.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Localization and depletion Results identify colocalizing, functionally
+      nonredundant ICL1e-family centrins. Functional dependence is not encoded as
+      a measured subunit stoichiometry or proof that every depletion eliminates the
+      entire complex.
+canonical_examples:
+- taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  reference: DOI:10.1242/bio.024273
+  note: Methods lists d4-2, nd7-1 and Delta-CenBP1/nd7-1. The BP background lacks
+    the extended lattice but retains the ICL1e complex; Figure 3 depicts dividing
+    BP cells. Strain names remain metadata, not invented taxon identifiers.
+functions:
+- function_id: basal_body_patterning
+  label: Cortical basal-body positioning support
+  description: Contributes to normal basal-body positioning and anchoring. Depletion
+    produces developed but unanchored basal bodies, not a failure of duplication per
+    se; this is not a universal requirement for direct association with every basal
+    body.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Depletion and topological Results, Figures 4 and 5, distinguish cortical
+      insertion defects from basal-body formation and describe delayed complex recruitment
+      at some paired basal bodies.
+- function_id: centrin3_localization
+  label: Right-proximal Centrin3 localization support
+  description: Supports the normal right-proximal Centrin3 signal. Its early loss
+    after ICL1e depletion differs from the initial persistence of the left-proximal
+    and tip signals; direct binding is not established.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Interaction Results and Figure 7 use GFP-Centrin3 localization after ICL1e
+      RNAi, including STED observations.
+- function_id: icl_organizing_centre_assembly
+  label: Infraciliary-lattice organizing-centre assembly support
+  description: ICL1e-family activity supports organizing-centre assembly. In BP cells,
+    depletion leaves newly formed basal bodies without these remnants; complex duplication
+    precedes later 1A9-reactive material during cortical reorganization.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Timing and depletion Results, Figures 3 and 4. This is a functional assembly
+      dependence, not a resolved nucleation reaction or equivalence of the ICL1e complex
+      with the whole organizing centre.
+causal_graphs:
+- graph_id: centrin_localization_dependencies
+  title: Perturbation-based centrin localization dependencies
+  graph_kind: REGULATION
+  scope_status: MECHANISTIC
+  scope_notes: Paramecium tetraurelia RNAi/localization evidence. Arrows describe
+    localization dependencies, not physical binding, a purified ternary complex or
+    an invariant requirement at every basal body and cell-cycle stage.
+  nodes:
+  - node_id: centrin2
+    label: Centrin2
+    node_type: GENE_OR_PROTEIN
+    description: External basal-body centrin whose depletion perturbs ICL1e localization;
+      not asserted as an ICL1e-complex constituent.
+  - node_id: icl1e_complex
+    label: ICL1e complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:icl1e_complex
+  - node_id: right_centrin3_site
+    label: Right-proximal Centrin3 localization
+    node_type: STATE
+  edges:
+  - subject: centrin2
+    predicate: supports basal-body localization of
+    object: icl1e_complex
+    evidence:
+    - reference: DOI:10.1242/bio.024273
+      notes: 'Figure 6 and interaction Results: internal basal bodies lack GFP-ICL1e
+        after Centrin2 depletion, whereas they retain it after Centrin3 depletion.'
+  - subject: icl1e_complex
+    predicate: supports
+    object: right_centrin3_site
+    evidence:
+    - reference: DOI:10.1242/bio.024273
+      notes: 'Figure 7 and interaction Results: the right-proximal Centrin3 spot is
+        lost early after ICL1e depletion; different sites have different temporal
+        responses.'
+evidence:
+- reference: DOI:10.1242/bio.024273
+  notes: 'Aubusson-Fleury et al. (2017), Centrin diversity and basal body patterning
+    across evolution: new insights from Paramecium. Read primary Results on localization,
+    timing, depletion, topological relationships and centrin interactions; essential-function
+    Discussion; strain, RNAi, immunostaining and microscopy Methods; Figures 2-7 legends.
+    Europe PMC JATS and versioned PMC OA JATS provide direct full-text evidence, not
+    a review-only attribution.'
+- reference: GO:0140535
+  notes: Verified non-obsolete intracellular protein-containing complex; a broader
+    parent rather than an exact identity.
+- reference: GO:0030863
+  notes: Verified non-obsolete cortical cytoskeleton. Parthood describes normal cortical
+    organization, not perturbation-induced intracellular displacement.
+discussions:
+- discussion_id: identity_and_granularity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the named ICL1e assembly from a single centrin protein and neighboring
+    structures.
+  rationale: A discrete complex must not be merged with the whole lattice solely because
+    they share a protein subfamily.
+  notes: Hidden- and ignored-inclusive searches for ICL1e complex/dot, organizing-centre
+    aliases and DOI/PMID found only the lattice record, its derived artifacts and
+    citation caches. QuickGO ICL1e returned zero hits; broad complex searches yielded
+    unrelated results, not an exact identity. GO:0120269 ciliary centrin arm denotes
+    a rod flanking the trypanosome FAZ and is not equivalent. The authors name the
+    persistent dot a functional complex on localization and depletion evidence. GO:0140535
+    is used as parent, while direct contacts, purification and copy numbers remain
+    unresolved. No strict basal-body-cylinder or whole-lattice parthood is asserted.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Localization Results and Figure 2 delimit the named dot and the bipartite
+      BP remnant.
+  - reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=ICL1e
+    notes: Exact-name authority search used before minting.
+  - reference: GO:0120269
+    notes: Authoritative definition checked and rejected as identity.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: composition_and_family_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact ICL1e-family groundings and the molecular composition of the
+    discrete complex.
+  rationale: Colocalization and nonredundancy do not determine copy number, direct
+    interaction or an exhaustive molecular inventory.
+  notes: The study lists seven genes in three ohnolog pairs (ICL1e/ICL1g, Cen8/Cen10,
+    Cen12/Cen15) plus Cen18, with representative GFP fusions. This is not a seven-copy
+    stoichiometry. InterPro IPR050145 is broader than this paralogue group. Component
+    essentiality remains UNKNOWN because whole-complex assembly was not independently
+    resolved for every paralogue, despite clear functional effects of depletion. No
+    UniProt accession is guessed.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Localization and depletion Results; RNAi Methods describe off-target screening
+      and specificity controls.
+  - reference: InterPro:IPR050145
+    notes: Centrin/CML-like name, family type and broader description verified at
+      the InterPro API.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: external_factors_not_constituents
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep localization dependencies and candidate connectors separate from established
+    constituents.
+  rationale: An upstream recruitment factor, downstream signal or neighboring marker
+    is not automatically part of a complex.
+  notes: Centrin2 is upstream in the localization experiments; Centrin3 is a downstream
+    localization readout. Neither is added as a constituent or asserted direct binder.
+    Sfi1-type connectors are proposed in the interaction Results, not established
+    members. SAS-6, tubulin and 1A9-reactive centrin material label neighboring structures
+    and are omitted. The family signal along the extended lattice is not equated with
+    the discrete basal-body-associated dot.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Figures 2, 3, 6 and 7 and interaction Results distinguish markers, dependencies
+      and hypothetical connections.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: cell_cycle_and_function_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Reconcile anchoring phenotypes with delayed complex recruitment at paired
+    basal bodies.
+  rationale: Whole-cell depletion phenotypes cannot establish a universal requirement
+    for a detectable complex at every basal body.
+  notes: Figure 5 and topological Results show that some newly formed anterior members
+    of basal-body pairs lack a detected new ICL1e/Centrin3 spot until a later duplication.
+    Developed basal bodies also persist after depletion. The record therefore describes
+    normal cortical patterning and site-specific localization dependencies, not obligatory
+    basal-body duplication, direct universal anchorage or a ternary Cen2-ICL1e-Cen3
+    complex. Whole-lattice calcium buffering and contraction are not transferred to
+    this subassembly.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Topological and depletion Results, Figure 5 and Discussion were reconciled
+      rather than treating the broad Discussion wording as an unconditional rule.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: taxonomic_and_molecular_limits
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Test complex conservation and molecular architecture beyond the characterized
+    Paramecium system.
+  rationale: Conserved paralogues are not evidence that another organism builds the
+    same assembly with the same function.
+  notes: Only P. tetraurelia is asserted as an exemplar. The source discusses ICL1e
+    homologues in P. caudatum, Tetrahymena, Oxytricha and other alveolates, but functional
+    equivalence is not established here. No clade prevalence, absence, exact native
+    size, purified-complex structure or direct-binding model is encoded.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Essential-function Discussion explicitly distinguishes characterized functions
+      from inferred homologue roles.
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5888
+    notes: Verified canonical species name and rank; culture codes are not taxon CURIEs.
+  posed_by: codex
+  posed_date: '2026-10-03'
+images:
+- image_id: pmc_pmc5483020_bio024273f3
+  file: pmc5483020_bio024273f3.jpg
+  file_sha256: 872562907de911c3e541f5973cbe8c183f9e2e57a8e9522f5926153bf8e0a3c8
+  source: PMC
+  source_accession: PMC5483020.1 BIO024273F3
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5483020/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5483020.1/biolopen-6-024273-g3.jpg
+  licence: CC_BY_3_0
+  licence_url: https://creativecommons.org/licenses/by/3.0/
+  attribution: 'Anne Aubusson-Fleury, Guillaume Balavoine, Michel Lemullois, Khaled
+    Bouhouche, Janine Beisson, France Koll; CC BY, via PubMed Central; Aubusson-Fleury
+    et al., Centrin diversity and basal body patterning across evolution: new insights
+    from Paramecium, Biology Open (2017), doi:10.1242/bio.024273. Copyright 2017.
+    Published by The Company of Biologists Ltd. CC BY 3.0; unmodified Figure 3.'
+  modality: FLUORESCENCE
+  caption: 'Epifluorescence Figure 3 of dividing ICL-less BP Paramecium tetraurelia.
+    A/A1-A3 compare GFP-Cen15-positive ICL1e complexes (green) with 1A9-positive older
+    organizing-centre material (magenta); arrows in A2 identify new complexes. B/B1-B3
+    compare GFP-Cen15 (green) with RFP-SAS6-marked basal bodies (magenta). These dots
+    are not an intact lattice, and SAS-6 is a neighboring marker, not a claimed complex
+    subunit. Scale bars: 20 micrometres in A/B and 1 micrometre in the insets.'
+  taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  reference: DOI:10.1242/bio.024273
+  retrieved_on: '2026-10-03'
+  notes: Fig. 3. from article version PMC5483020.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Figure 3 is epifluorescence, not the confocal Figure 2 or the STED panels of Figure
+    7.
