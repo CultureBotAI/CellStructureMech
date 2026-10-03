@@ -1,0 +1,264 @@
+identifier: cellstructuremech:cryptophyte_cortical_centrin_network
+label: cryptophyte cortical centrin network
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A peripheral centrin-positive cytoskeletal network observed in cryptophyte
+  cells by ultrastructure expansion microscopy. It forms a regular hexagonal mesh
+  in Rhinomonas nottbeckii and shows variable network patterns among Rhodomonas isolates.
+  The assembly is distinct from basal-body-associated centrin structures and from
+  the periplast itself.
+definition_source: DOI:10.1016/j.cell.2025.09.027
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T20:07:17Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T20:07:56Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added centrin immunolocalization evidence, verified taxon and culture provenance,
+    ontology and physiological boundaries, imaging dataset metadata, and the inspected
+    CC BY publisher Figure 3.
+  llm_assisted: true
+parent_structures:
+- GO:0005622
+part_of:
+- GO:0005856
+components:
+- component_id: centrin
+  label: Centrin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro centrin search and the IPR050145 entry were reviewed.
+    Centrin/CML-like includes caltractin, obelin and plant CML proteins, so it is
+    broader than the centrin component identified here. EF-hand domains, pericentrin
+    and centrin-binding SFI1 families are not exact centrin groundings. No exact source-neutral
+    family accession is asserted.
+  essentiality: UNKNOWN
+  role: Centrin-family material detected along the peripheral network using the broad-specificity
+    20H5 antibody after expansion. Immunolocalization supports membership, not an
+    exact paralogue inventory or an assembly requirement.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Centrin Results and Figure 3D-F identify centrin-positive cortical networks
+      in Rhinomonas and Rhodomonas; the study uses antibody 20H5.
+canonical_examples:
+- taxon_id: NCBITaxon:1326783
+  taxon_label: Rhinomonas nottbeckii
+  reference: DOI:10.1016/j.cell.2025.09.027
+  note: RCC6444, also listed as K-1855 in Table S1, was examined by fixed-cell U-ExM.
+    Figure 3D-F and S2 show the cortical network and hexagonal pattern. The source
+    uses Rhinomonas nottbecki, an explicit synonym of the verified NCBI/ENA canonical
+    name Rhinomonas nottbeckii. Table S1 List of Species row 76 identifies RCC6444;
+    Dataset Annotation row 382 marks cortical centrin in one-species interphase material.
+- taxon_id: NCBITaxon:37096
+  taxon_label: Rhodomonas
+  reference: DOI:10.1016/j.cell.2025.09.027
+  note: Genus-level identification of cultured BMCC67 and RCC10777 (other code Q1-11),
+    not an assertion for every species in the genus. Table S1 List of Species rows
+    69 and 73 identifies the cultures; Dataset Annotation rows 402 and 412 mark cortical
+    centrin in one-species interphase material. Figure 3D-E and S2 illustrate Rhodomonas
+    networks, but an exact figure-panel-to-isolate mapping was not established.
+evidence:
+- reference: DOI:10.1016/j.cell.2025.09.027
+  notes: Mikus et al. (2025), Charting the landscape of cytoskeletal diversity in
+    microbial eukaryotes, Cell. Read centrin Results, Figure 3 and S2 legends, fixation,
+    U-ExM, microscopy and image-analysis Methods. The authors distinguish the cryptophyte
+    cortical network from ciliate basal-body-associated networks and describe variable
+    mesh morphology, not a demonstrated physiological function.
+- reference: https://www.dudinlab.com/s/Table-S1.xlsx
+  notes: Author-linked Table S1 read as structured workbook data. List of Species
+    rows 69, 73 and 76 identify BMCC67, RCC10777 and RCC6444. Dataset Annotation rows
+    402, 412 and 382 respectively mark cortical centrin in column AK. Image annotations
+    are not independent-cell counts or clade prevalence estimates.
+- reference: GO:0005622
+  notes: Verified non-obsolete intracellular anatomical structure; broad is-a parent
+    for the intracellular network without claiming a membrane or single resolved polymer
+    lattice.
+- reference: GO:0005856
+  notes: Verified non-obsolete cytoskeleton. This cortical centrin assembly is part
+    of the cellular cytoskeleton, not equivalent to its entire framework.
+datasets:
+- title: Microbial eukaryote U-ExM volumes and annotations
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  url: https://github.com/Dey-Lab-Team/culture-collections/tree/2dc2f3dbae8fefe60cea3a2499a1a5f50fe4c98d
+  publication: DOI:10.1016/j.cell.2025.09.027
+  platform: Ultrastructure expansion microscopy with post-expansion immunofluorescence
+  description: Multi-species study archive with Rhinomonas RCC6444 and Rhodomonas
+    BMCC67 and RCC10777 image sources relevant to cortical centrin networks.
+  notes: Read the pinned data/project.json and data/volumes/dataset.json metadata;
+    volumes is the default dataset. Table S1 identifies cortical-centrin-positive
+    examples rcc6444_pfa_cetn-tub-dna_20230704_cl_s00, bmcc67_pfa_nhs-cetn-tub-dna_20240205_fm_01
+    and rcc10777_pfa_cetn-tub-dna_20230704_cl_s00. No raw volume is hosted or claimed
+    to have been reanalyzed here, and no exact raw-volume-to-figure mapping is asserted.
+discussions:
+- discussion_id: identity_and_ontology_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish this cortical network from centrin proteins and other centrin
+    assemblies.
+  rationale: Shared antibody reactivity and superficial mesh geometry do not establish
+    identity or homology between different subcellular assemblies.
+  notes: Hidden- and ignored-inclusive repository searches for the label, source,
+    cultures and obvious aliases found no matching record. QuickGO searches for cryptophyte
+    centrin, centrin network and cortical centrin returned no exact term. The ciliary
+    centrin arm GO:0120269 is a different rod-shaped assembly. GO:0020038 subpellicular
+    network requires a mechanically stable pellicle-associated structure surrounding
+    microtubules, not established here. The cryptophyte network is not equated to
+    ciliate infraciliary lattices, periplast plates, nuclear baskets or flagellar
+    rootlets. OTHER kind avoids asserting a single filament or a resolved multiprotein-complex
+    composition.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Centrin Results, Figure 3D-F, Figure S2 and associated Methods were read
+      directly.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: centrin_family_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve an exact source-neutral centrin family and the network paralogues.
+  rationale: Broad antibody specificity cannot identify every gene product, and a
+    broader calcium-binding family must not be promoted to exact centrin identity.
+  notes: IPR050145 Centrin/CML-like also contains obelin and plant CML proteins. The
+    centrin component therefore remains reviewed-label-only; no species-specific UniProt
+    accession, centrin subtype, stoichiometry or assembly essentiality is inferred.
+  evidence:
+  - reference: InterPro:IPR050145
+    notes: InterPro API verified family identity and its broader membership.
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: 20H5 immunolabeling establishes the centrin-positive network.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: neighboring_signals_and_periplast_boundary
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Keep neighboring labeled structures separate and resolve the network-periplast
+    relationship.
+  rationale: Colocalization within a whole-cell figure does not make every signal
+    a network constituent.
+  notes: Tubulin, DNA, centrin at the basal bodies, and centrin along the gullet or
+    furrow are shown separately and are not added as cortical-network components.
+    The authors propose that the hexagonal mesh lies beneath the periplast; direct
+    attachment or periplast parthood was not demonstrated. No SFI1 scaffold is inferred
+    from other centrin systems. These omissions are evidence boundaries, not biological
+    absence claims.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Centrin Results, Figure 3D-F, Figure S2 and associated Methods were read
+      directly.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: morphology_and_taxonomic_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Determine network diversity and prevalence using comparable labeling across
+    cultures.
+  rationale: Sampling and antigen detection constrain distribution claims, while geometry
+    observed in one culture need not define every cryptophyte network.
+  notes: The regular hexagonal mesh is documented in Rhinomonas nottbeckii. The source
+    also describes open-ringed or diffuse Rhodomonas patterns and rings in Urgorri.
+    No detectable peripheral signal in Cryptomonas curvata is not encoded as biological
+    absence. No universal cryptophyte presence, universal hexagonal topology or taxonomic_distribution
+    prevalence row is asserted.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Centrin Results, Figure 3D-F, Figure S2 and associated Methods were read
+      directly.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: physiological_function
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Test contraction, calcium responses, mechanical roles and assembly dynamics.
+  rationale: Fixed-cell morphology and generic centrin biology do not demonstrate
+    a network-level physiological mechanism.
+  notes: No function, trait or causal graph is asserted. In particular, proposed ejectosome-release
+    involvement concerns centrin along the gullet/furrow and does not establish that
+    the cortical network drives release. Roles inferred for striated rootlets or ciliate
+    lattices are not transferred to this network.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Centrin Results, Figure 3D-F, Figure S2 and associated Methods were read
+      directly.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: scale_and_image_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile expansion correction before recording native dimensions.
+  rationale: Conflicting scale statements must not be silently converted into biological
+    measurements.
+  notes: Figure 3 specifies 10 micrometre scale bars and 1 micrometre insets adjusted
+    for expansion; Figure S2 specifies adjusted 5 micrometre bars. Image-analysis
+    Methods instead says scale bars are not adjusted. Hexagon areas were obtained
+    by manually joining centrin dots. No physical_properties or inferred native fiber
+    diameter is asserted. The unmodified publisher Figure 3 standard rendition fits
+    the image size cap; D-F concern cortical networks, whereas A-C and G-I include
+    schematics or other structures and taxa.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Centrin Results, Figure 3D-F, Figure S2 and associated Methods were read
+      directly.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: sample_identity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Preserve canonical taxon names and culture-level limits without guessing
+    panel assignments.
+  rationale: Culture codes, source spellings and genus-level identifications require
+    explicit reconciliation.
+  notes: NCBI taxonomy as served by ENA verifies Rhinomonas nottbeckii (NCBITaxon:1326783)
+    with source spelling Rhinomonas nottbecki as a synonym. Rhodomonas NCBITaxon:37096
+    is a genus, not an identified species for BMCC67 or RCC10777. Table S1 supplies
+    K-1855 for RCC6444 and Q1-11 for RCC10777. Figure S2 does not name the two Rhodomonas
+    isolates, so its different patterns are not assigned to those cultures individually.
+  evidence:
+  - reference: https://www.dudinlab.com/s/Table-S1.xlsx
+    notes: List of Species rows 69, 73, 76 and Dataset Annotation rows 382, 402, 412
+      were read.
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1326783
+    notes: Verified canonical species and synonym from the taxon endpoint.
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/37096
+    notes: Verified genus name and rank from the taxon endpoint.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+images:
+- image_id: mikus_2025_figure3
+  file: mikus_2025_figure3.jpg
+  file_sha256: 587e21df6fad0e21c8a9fcb12345866b6661126ca6e69b4585bceaf5d1bc1e64
+  source: OTHER
+  source_accession: S0092867425011274 Figure 3
+  source_url: https://doi.org/10.1016/j.cell.2025.09.027
+  download_url: https://ars.els-cdn.com/content/image/1-s2.0-S0092867425011274-gr3.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Felix Mikus and coauthors, Charting the landscape of cytoskeletal diversity
+    in microbial eukaryotes, Cell (2025), Figure 3, DOI 10.1016/j.cell.2025.09.027.
+    Copyright 2025 The Authors; published by Elsevier Inc.; CC BY 4.0. Unmodified
+    publisher image.
+  modality: SUPER_RESOLUTION
+  caption: 'Figure 3: D shows cortical centrin (yellow) in Rhinomonas nottbeckii (source
+    label Rhinomonas nottbecki, left) and Rhodomonas sp. (right), with tubulin in
+    magenta and DNA in blue, using fixed-cell U-ExM. E summarizes network spacing;
+    F illustrates Rhinomonas hexagons and their measured areas. A-C and G-I include
+    schematics or other centrin structures and taxa, not additional examples of this
+    network. The legend gives adjusted 10 micrometre bars and 1 micrometre insets,
+    conflicting with the Methods scale statement; no native-size measurement is inferred
+    here.'
+  taxon_id: NCBITaxon:1326783
+  taxon_label: Rhinomonas nottbeckii
+  reference: DOI:10.1016/j.cell.2025.09.027
+  retrieved_on: '2026-10-03'
+  notes: Licence verified from Crossref version-of-record licence metadata and the
+    article PDF explicit CC BY 4.0 statement. Original publisher standard JPEG visually
+    inspected and retained without cropping or rescaling. The taxon field applies
+    to the Rhinomonas panels, not the entire multi-taxon figure; Rhodomonas is separately
+    listed as a canonical example.

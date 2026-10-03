@@ -1,0 +1,54 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cryptophyte_cortical_centrin_network.yaml
+  slug: cryptophyte_cortical_centrin_network
+session:
+  id: 2026-10-03T200833Z-codex-e3794f
+  timestamp: '2026-10-03T20:08:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - evidence
+  - datasets
+  - discussions
+  - images
+  summary: Add evidence-backed cryptophyte cortical centrin network
+  details: 'Added one PROPOSED cryptophyte cortical centrin network record from Mikus et al.
+    2025, DOI 10.1016/j.cell.2025.09.027, PMID 41175866. Hidden- and ignored-inclusive repository
+    searches covered identity, obvious aliases, source DOI/PMID and culture codes; no existing
+    equivalent record was found. The same paper already supports tubulin spool, a different
+    structure. All returned QuickGO hits for cryptophyte centrin (2), centrin network (62)
+    and cortical centrin (48) were inspected; no exact term. Verified GO:0005622 as broad
+    is-a parent and GO:0005856 for cytoskeletal parthood. The subpellicular network definition
+    and existing ciliary centrin arm are not exact equivalents. Read primary centrin Results,
+    Figure 3 and S2 legends and fixation/U-ExM/microscopy/image-analysis Methods. Inspected
+    original Figure 3 and supplementary S2. Verified NCBITaxon:1326783 Rhinomonas nottbeckii
+    with source spelling nottbecki an explicit synonym, and NCBITaxon:37096 Rhodomonas at
+    genus rank, through ENA taxonomy. Author-linked Table S1 SHA256 bfeb51750c59a50005f2cc7d7efe28582b164d938ca76f7c795f0b26113e61fe
+    was read as structured workbook data; List of Species rows69,73,76 and Dataset Annotation
+    rows382,402,412 establish RCC6444/K-1855, BMCC67, RCC10777/Q1-11 with cortical centrin
+    (columnAK), interphase and one species per gel. No exact figure-to-isolate mapping or
+    independent-cell count inferred. Read pinned MoBIE project and volumes metadata at 2dc2f3dbae8fefe60cea3a2499a1a5f50fe4c98d;
+    no raw-volume reanalysis. Centrin remains reviewed-label-only: verified InterPro IPR050145
+    Centrin/CML-like includes non-centrin obelin and plant CML proteins. Broad 20H5 reactivity
+    supports localization, not subtype, gene inventory, essentiality or calcium-dependent
+    contraction. Network function, periplast attachment and clade prevalence remain open.
+    No physical properties because Figure3/ S2 adjusted scale statements conflict with Methods;
+    no biological absence from nondetection. Hosted original publisher standard Figure3, 239120bytes,
+    SHA256 587e21df6fad0e21c8a9fcb12345866b6661126ca6e69b4585bceaf5d1bc1e64, with CC BY4.0
+    verified from Crossref version-of-record metadata and PDF licence. Full caption distinguishes
+    D-F cortical networks from unrelated panels and taxa; no cropping or rescaling. Scaffolded
+    via new_record.py and expanded using guarded safe_load/assert/curation-event/write_validated_structure
+    mutator with llm_assisted true. Mutator first attempted before the still-running scaffold
+    completed and made no change; after scaffold completion it succeeded and was removed.
+    Full validation and separate post-opening adversarial review follow.'

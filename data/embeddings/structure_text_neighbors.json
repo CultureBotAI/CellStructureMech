@@ -2830,6 +2830,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:cryptophyte_cortical_centrin_network",
+      "label": "cryptophyte cortical centrin network",
+      "neighbors": [
+        {
+          "identifier": "GO:0120269",
+          "label": "ciliary centrin arm",
+          "cosine_similarity": 0.70290475
+        },
+        {
+          "identifier": "GO:0030130",
+          "label": "clathrin coat of trans-Golgi network vesicle",
+          "cosine_similarity": 0.6742753
+        },
+        {
+          "identifier": "GO:0032170",
+          "label": "pseudohyphal septin ring",
+          "cosine_similarity": 0.67158855
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.67082484
+        },
+        {
+          "identifier": "GO:0036391",
+          "label": "medial cortex septin ring",
+          "cosine_similarity": 0.66700401
+        }
+      ]
+    },
+    {
       "identifier": "GO:0097268",
       "label": "cytoophidium",
       "neighbors": [
