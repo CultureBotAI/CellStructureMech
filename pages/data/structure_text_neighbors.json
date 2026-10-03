@@ -6399,6 +6399,11 @@
       "label": "coccolith",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:coccosphere",
+          "label": "coccosphere",
+          "cosine_similarity": 0.85213987
+        },
+        {
           "identifier": "cellstructuremech:coccolith_vesicle",
           "label": "coccolith vesicle",
           "cosine_similarity": 0.69637732
@@ -6417,11 +6422,37 @@
           "identifier": "GO:0062159",
           "label": "contractile vacuole complex",
           "cosine_similarity": 0.55134788
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:coccosphere",
+      "label": "coccosphere",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:coccolith",
+          "label": "coccolith",
+          "cosine_similarity": 0.85213987
         },
         {
-          "identifier": "GO:0017119",
-          "label": "COG complex",
-          "cosine_similarity": 0.5495774
+          "identifier": "cellstructuremech:coccolith_vesicle",
+          "label": "coccolith vesicle",
+          "cosine_similarity": 0.7267169
+        },
+        {
+          "identifier": "GO:0009274",
+          "label": "peptidoglycan-based cell wall",
+          "cosine_similarity": 0.67506801
+        },
+        {
+          "identifier": "GO:0030112",
+          "label": "glycocalyx",
+          "cosine_similarity": 0.64278547
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.63572043
         }
       ]
     },

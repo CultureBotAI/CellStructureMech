@@ -1,0 +1,64 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/coccosphere.yaml
+  slug: coccosphere
+session:
+  id: 2026-10-03T191324Z-codex-26738b
+  timestamp: '2026-10-03T19:13:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1995
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - discussions
+  - images
+  summary: Adversarial post-opening review of coccosphere PR 1995
+  details: 'Separate post-opening adversarial self-review of PR 1995 at scientific head 37b70eafffb6a847d5ba2f4b2f67854006f201a1;
+    this is not an independent second reviewer. Inspected the actual submitted head and 14-file
+    scope, re-read the committed record, reviewed generated count/catalogue changes, and structurally
+    compared committed embedding artifacts. Challenged whole-covering versus scale/vesicle/glycocalyx
+    identity, GO:0030312 parent scope, coccolith has_part versus is-a and same-cell biosynthesis,
+    mixed-matrix constituency and essentiality, species/strain scope, treatment causality,
+    geometry/count generalization, and image licence/attribution. No concrete defect found;
+    no issue or scientific fix warranted. The record remains PROPOSED. Re-read Xu et al. Methods:
+    CS-369 samples pool light/CO2 conditions, the layer definition is operational, and total
+    plates are estimated by doubling visible interlocked plates under uniform-distribution
+    assumptions. The record does not universalize layer number, minimum plate counts, neighbor
+    rules or sensing mechanisms. Re-read Walker et al. daughter-separation and extracellular-layer
+    Results: decalcified cells can complete initial cytokinesis; daughter nuclei and membranes
+    are distinct; subsequent persistent pairs differ from initial cytokinesis failure, and
+    low-Ca treatment lacks the same paired phenotype. The function is qualified to tested
+    C. braarudii/Ge/HEDP settings and acknowledges possible additional treatment effects.
+    Lectin staining does not identify an exact matrix polymer or adhesive protein; UNKNOWN
+    essentiality and REVIEWED_LABEL_ONLY with an open discussion are appropriate. Intracellular
+    division microtubules are excluded through a separate resolved boundary discussion, not
+    asserted absent biologically. Acquired coccoliths do not imply same-cell production or
+    make every partial coating a full coccosphere. Visually reinspected committed Figure 2:
+    six actual SEM panels with 1 micrometre bars and red neighboring-plate annotations, not
+    live-cell or cryo-ET images. Re-fetched current non-retracted PMC5896503.1 metadata, checksum-verified
+    source JATS and Figure 2 media. Exact CC BY 4.0 agrees between metadata and JATS; source-specific
+    authors, original title, PeerJ and DOI attribution requirements are satisfied in the visible
+    page. The source and committed 236065-byte media are identical, MD5 f9e1e8ae4903f47abc657f2dc8098415,
+    SHA256 5f3b2473ff6c3e1e281c8ae71b4c2d72dd32536e8c9b80e08f761c72b0bff765. Verified image
+    path, canonical image taxon, published map/neighbors equality, valid coccolith target
+    and visible has_part CURIE. The existing renderer presents local CURIEs as text; no clickable
+    local relationship was claimed. All 842 previous embedding rows remain identical and exactly
+    one coccosphere row is added. Full local QC passed before the scientific commit: 589 tests,
+    3 skips, 2 dependency warnings; 843 structures and 1511 history records validate, site/docs
+    current. External gates passed: 31/31 snippets verbatim, 10/10 trait links match, 3558
+    CURIEs OK plus 168 intentional skips and zero unreachable, and supported labels all match
+    (3438 canonical,48 synonym,8 accepted exceptions;429 without adapter). This review-only
+    history addition will receive full history validation and exact-final-head CI before merge.'
