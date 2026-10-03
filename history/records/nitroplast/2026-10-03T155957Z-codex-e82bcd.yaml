@@ -1,0 +1,49 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nitroplast.yaml
+  slug: nitroplast
+session:
+  id: 2026-10-03T155957Z-codex-e82bcd
+  timestamp: '2026-10-03T15:59:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1126/science.adk1075
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - discussions
+  - images
+  summary: Add evidence-backed nitroplast record with lineage and import boundaries
+  details: Created PROPOSED cellstructuremech:nitroplast through new_record.py and a one-use
+    asserted safe_load mutator with curation event and validated writer; mutator removed.
+    Hidden/ignored-inclusive repository search found only diazoplast boundary references,
+    not an existing record. QuickGO nitroplast search returned zero; verified GO:0043229,
+    GO:0016020, GO:0016610 and GO:0009399 directly, and NCBITaxon:373042 at ENA taxonomy.
+    Coale primary Results and supplementary experimental Methods read at public mirrors https://www.scribd.com/document/726995298/Nitrogen-fixing-organelle-in-a-marine-alga
+    and https://www.scribd.com/document/727554687/science-adk1075-sm; bibliographic identity
+    cross-checked against Europe PMC/PubMed and the primary Dryad landing page. Publisher
+    and author-token routes returned 403, and no mirror editorial summary was used as evidence.
+    Dryad DOI:10.5061/dryad.2z34tmptf latest metadata inspected; file downloads returned 403,
+    so no CSV contents claimed read. Methods resolve the FR-21 experimental identity despite
+    the dataset README discrepancy. Hagino final 2026 taxonomic revision obtained from the
+    author-hosted Wakeman laboratory PDF, locally rendered with temporary PyMuPDF, and Table
+    2 plus Figures 28-31 visually inspected; no project dependency change. Image remains link-only
+    because redistribution permission was not established. Li 2026 DOI:10.64898/2026.04.11.717942
+    is a version-1 preprint per current PMC/PubMed and bioRxiv; selected full BioC Results,
+    Discussion and Methods read, and limitations retained rather than asserted as mechanisms.
+    No guessed protein accessions, broad lineage equivalence, causal transport edges or predicted-only
+    imported proteins added. No exact membrane-count claim. Derived artifacts and full local/network
+    gates will be run before the scientific commit; separate post-opening PR review will append
+    its own history record.
