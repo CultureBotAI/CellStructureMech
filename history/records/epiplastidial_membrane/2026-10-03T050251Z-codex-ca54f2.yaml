@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+  slug: epiplastidial_membrane
+session:
+  id: 2026-10-03T050251Z-codex-ca54f2
+  timestamp: '2026-10-03T05:02:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - discussions
+  summary: Add epiplastidial membrane record
+  details: Added GO:7770040 epiplastidial membrane as the host-endomembrane-derived outermost
+    lipid bilayer around secondary complex plastids, with GO synonymy and plastid-membrane
+    parentage, a reviewed-label-only lipid-bilayer constituent, Phaeodactylum tricornutum
+    scope, a complex-plastid boundary function, DOI evidence, and open discussions for lipid
+    grounding and separation from GO:7770041 periplastidial membrane.

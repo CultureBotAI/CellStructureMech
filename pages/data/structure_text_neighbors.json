@@ -9333,9 +9333,9 @@
           "cosine_similarity": 0.90555037
         },
         {
-          "identifier": "GO:0030662",
-          "label": "coated vesicle membrane",
-          "cosine_similarity": 0.8970249
+          "identifier": "GO:7770040",
+          "label": "epiplastidial membrane",
+          "cosine_similarity": 0.90203033
         }
       ]
     },
@@ -9429,6 +9429,37 @@
           "identifier": "GO:0005769",
           "label": "early endosome",
           "cosine_similarity": 0.91811731
+        }
+      ]
+    },
+    {
+      "identifier": "GO:7770040",
+      "label": "epiplastidial membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:0009527",
+          "label": "plastid outer membrane",
+          "cosine_similarity": 0.91067383
+        },
+        {
+          "identifier": "GO:0005789",
+          "label": "endoplasmic reticulum membrane",
+          "cosine_similarity": 0.90203033
+        },
+        {
+          "identifier": "GO:0009528",
+          "label": "plastid inner membrane",
+          "cosine_similarity": 0.90104198
+        },
+        {
+          "identifier": "GO:0042170",
+          "label": "plastid membrane",
+          "cosine_similarity": 0.89396572
+        },
+        {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.88854493
         }
       ]
     },
@@ -9545,14 +9576,14 @@
           "cosine_similarity": 0.85893148
         },
         {
+          "identifier": "GO:7770040",
+          "label": "epiplastidial membrane",
+          "cosine_similarity": 0.82950255
+        },
+        {
           "identifier": "GO:0030666",
           "label": "endocytic vesicle membrane",
           "cosine_similarity": 0.8282538
-        },
-        {
-          "identifier": "GO:0030659",
-          "label": "cytoplasmic vesicle membrane",
-          "cosine_similarity": 0.82517647
         }
       ]
     },
@@ -10315,6 +10346,11 @@
           "cosine_similarity": 0.83013195
         },
         {
+          "identifier": "GO:7770040",
+          "label": "epiplastidial membrane",
+          "cosine_similarity": 0.81850397
+        },
+        {
           "identifier": "cellstructuremech:parasitophorous_vacuole",
           "label": "parasitophorous vacuole",
           "cosine_similarity": 0.80922086
@@ -10323,11 +10359,6 @@
           "identifier": "cellstructuremech:mitosome_inner_membrane",
           "label": "mitosome inner membrane",
           "cosine_similarity": 0.80400507
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_outer_membrane",
-          "label": "mitosome outer membrane",
-          "cosine_similarity": 0.80035087
         }
       ]
     },
@@ -11529,14 +11560,14 @@
           "cosine_similarity": 0.86976956
         },
         {
+          "identifier": "GO:7770040",
+          "label": "epiplastidial membrane",
+          "cosine_similarity": 0.86632433
+        },
+        {
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
           "cosine_similarity": 0.86491545
-        },
-        {
-          "identifier": "GO:0032585",
-          "label": "multivesicular body membrane",
-          "cosine_similarity": 0.84395661
         }
       ]
     },
@@ -11591,14 +11622,14 @@
           "cosine_similarity": 0.88928848
         },
         {
+          "identifier": "GO:7770040",
+          "label": "epiplastidial membrane",
+          "cosine_similarity": 0.87238069
+        },
+        {
           "identifier": "GO:0005789",
           "label": "endoplasmic reticulum membrane",
           "cosine_similarity": 0.86849645
-        },
-        {
-          "identifier": "GO:0005774",
-          "label": "vacuolar membrane",
-          "cosine_similarity": 0.86626189
         }
       ]
     },
@@ -12402,9 +12433,9 @@
           "cosine_similarity": 0.89940776
         },
         {
-          "identifier": "GO:0009707",
-          "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.87759937
+          "identifier": "GO:7770040",
+          "label": "epiplastidial membrane",
+          "cosine_similarity": 0.88678561
         }
       ]
     },
@@ -12676,14 +12707,14 @@
           "cosine_similarity": 0.75105545
         },
         {
+          "identifier": "GO:7770040",
+          "label": "epiplastidial membrane",
+          "cosine_similarity": 0.74913267
+        },
+        {
           "identifier": "GO:0031969",
           "label": "chloroplast membrane",
           "cosine_similarity": 0.74886379
-        },
-        {
-          "identifier": "GO:0044099",
-          "label": "polar tube",
-          "cosine_similarity": 0.744083
         }
       ]
     },
