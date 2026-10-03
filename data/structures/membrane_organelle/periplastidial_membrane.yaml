@@ -1,0 +1,123 @@
+identifier: GO:7770041
+label: periplastidial membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer that forms the second outermost membrane of complex
+  plastids in organisms that acquired their plastids through secondary endosymbiosis.
+  The periplastidial membrane is evolutionarily derived from the plasma membrane of
+  the engulfed algal endosymbiont and together with the outer envelope membrane of
+  the plastid defines the periplastidial compartment.
+definition_source: GO:7770041
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T05:26:46Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T05:27:32Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and plastid-membrane parentage, curated a reviewed-label-only
+    periplastidial lipid-bilayer constituent, added Phaeodactylum tricornutum scope,
+    a periplastidial-compartment boundary function, GO and DOI evidence, and open
+    lipid-grounding and complex-plastid membrane-boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: PPM
+  synonym_type: EXACT_SYNONYM
+  source: GO:7770041
+parent_structures:
+- GO:0042170
+part_of:
+- GO:0009536
+components:
+- component_id: periplastidial_lipid_bilayer
+  label: periplastidial lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Second outermost complex-plastid bilayer derived from the engulfed algal endosymbiont
+    plasma membrane.
+  evidence:
+  - reference: GO:7770041
+    notes: GO:7770041 defines the periplastidial membrane as the second outermost
+      complex-plastid lipid bilayer and describes its endosymbiont plasma-membrane
+      origin.
+  - reference: DOI:10.1016/j.protis.2016.04.001
+    notes: Flori et al. 2016 analyzed the Phaeodactylum tricornutum periplastidial
+      compartment ultrastructure.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:7770041 identifies the complete periplastidial membrane, but
+    no separate source-neutral lipid or membrane-constituent CURIE was curated for
+    its bilayer matrix.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2850
+  taxon_label: Phaeodactylum tricornutum
+  presence: COMMON
+  note: The diatom Phaeodactylum tricornutum contains a complex secondary plastid
+    with a periplastidial membrane around the periplastidial compartment.
+  reference: DOI:10.1016/j.protis.2016.04.001
+canonical_examples:
+- taxon_id: NCBITaxon:2850
+  taxon_label: Phaeodactylum tricornutum
+  note: Diatom model used for ultrastructural analysis of the periplastidial compartment
+    and its bounding membranes.
+  reference: DOI:10.1016/j.protis.2016.04.001
+functions:
+- function_id: periplastidial_compartment_boundary
+  label: periplastidial compartment boundary
+  description: The periplastidial membrane forms the second outermost membrane of
+    a secondary complex plastid and helps delimit the periplastidial compartment with
+    the plastid outer envelope membrane.
+  evidence:
+  - reference: GO:7770041
+    notes: The GO definition states that the periplastidial membrane and the outer
+      plastid envelope membrane together define the periplastidial compartment.
+  - reference: DOI:10.1007/s10265-005-0214-6
+    notes: Hashimoto 2005 reviewed the ultrastructure and division of secondary plastids.
+evidence:
+- reference: GO:7770041
+  notes: Gene Ontology cellular-component term for the periplastidial membrane.
+- reference: GO:0042170
+  notes: Gene Ontology cellular-component parent term for plastid membrane.
+- reference: GO:0009536
+  notes: Gene Ontology cellular-component term for plastid.
+- reference: DOI:10.1007/s10265-005-0214-6
+  notes: Hashimoto 2005, The ultrastructural features and division of secondary plastids,
+    Journal of Plant Research.
+- reference: DOI:10.1016/j.protis.2016.04.001
+  notes: Flori et al. 2016, Ultrastructure of the Periplastidial Compartment of the
+    Diatom Phaeodactylum tricornutum, Protist.
+- reference: DOI:10.1093/plcell/koae275
+  notes: Gueguen et al. 2024, Monogalactosyldiacylglycerol synthase isoforms play
+    diverse roles inside and outside the diatom plastid, The Plant Cell.
+discussions:
+- discussion_id: ground_periplastidial_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    periplastidial membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#periplastidial_lipid_bilayer
+  rationale: The record is exactly grounded to GO:7770041, but no exact source-neutral
+    lipid or lipid-bilayer CURIE was curated for the periplastidial membrane matrix.
+  evidence:
+  - reference: GO:7770041
+    notes: GO:7770041 identifies the complete periplastidial membrane.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: separate_periplastidial_membrane_boundaries
+  prompt: Keep the periplastidial membrane distinct from the epiplastidial membrane
+    and the plastid outer envelope.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:7770041 denotes the second outermost complex-plastid membrane, whereas
+    GO:7770040 denotes the outermost epiplastidial membrane and GO:0009527 denotes
+    the outer membrane of the canonical plastid envelope.
+  evidence:
+  - reference: GO:7770041
+  - reference: GO:7770040
+  - reference: GO:0009527
+  posed_by: codex
+  posed_date: '2026-10-03'
