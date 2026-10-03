@@ -5748,6 +5748,11 @@
       "label": "phycobilisome",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:phycobilisome_core",
+          "label": "phycobilisome core",
+          "cosine_similarity": 0.93514415
+        },
+        {
           "identifier": "GO:0030076",
           "label": "light-harvesting complex",
           "cosine_similarity": 0.77339866
@@ -5766,11 +5771,37 @@
           "identifier": "GO:0030096",
           "label": "plasma membrane-derived thylakoid photosystem II",
           "cosine_similarity": 0.75271565
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:phycobilisome_core",
+      "label": "phycobilisome core",
+      "neighbors": [
+        {
+          "identifier": "GO:0030089",
+          "label": "phycobilisome",
+          "cosine_similarity": 0.93514415
         },
         {
-          "identifier": "GO:0009523",
-          "label": "photosystem II",
-          "cosine_similarity": 0.7441601
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.73947017
+        },
+        {
+          "identifier": "GO:0030096",
+          "label": "plasma membrane-derived thylakoid photosystem II",
+          "cosine_similarity": 0.7390786
+        },
+        {
+          "identifier": "GO:0030076",
+          "label": "light-harvesting complex",
+          "cosine_similarity": 0.71902838
+        },
+        {
+          "identifier": "GO:0009512",
+          "label": "cytochrome b6f complex",
+          "cosine_similarity": 0.71764977
         }
       ]
     },
