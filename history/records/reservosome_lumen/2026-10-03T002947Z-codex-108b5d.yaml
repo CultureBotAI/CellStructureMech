@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/reservosome_lumen.yaml
+  slug: reservosome_lumen
+session:
+  id: 2026-10-03T002947Z-codex-108b5d
+  timestamp: '2026-10-03T00:29:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1957
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1956
+events:
+- type: EDIT
+  outcome: changed
+  summary: Narrowed reservosome lumen canonical evidence
+  details: 'Resolved PR review issue #1957 by replacing the GO:0106124 reservosome lumen canonical
+    example note with a T. cruzi ultrastructure statement supported by DOI:10.1002/jemt.20592,
+    removing hydrolase and endocytosed-cargo claims from that single-citation example while
+    keeping the proteomics paper as record-level evidence.'

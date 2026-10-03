@@ -19,6 +19,13 @@ curation_history:
     resolved boundary interpretation that leaves reservosome-matrix constituents on
     the matrix record.
   llm_assisted: true
+- timestamp: '2026-10-03T00:29:25Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: 'Resolved #1957 by narrowing the reservosome lumen canonical example to
+    T. cruzi ultrastructure evidence and removing hydrolase and cargo claims from
+    the single-citation example.'
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 part_of:
@@ -33,8 +40,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:5693
   taxon_label: Trypanosoma cruzi
-  note: Kinetoplastid parasite whose epimastigote reservosome lumen encloses endocytosed
-    cargo, hydrolases, internal membrane profiles, vesicles, and lipid inclusions.
+  note: Kinetoplastid parasite whose epimastigote reservosomes were analyzed by thin-section,
+    uranyl-acetate, and freeze-fracture electron microscopy to resolve complex internal
+    membrane, vesicle, and lipid-inclusion architecture.
   reference: DOI:10.1002/jemt.20592
 evidence:
 - reference: GO:0106124
