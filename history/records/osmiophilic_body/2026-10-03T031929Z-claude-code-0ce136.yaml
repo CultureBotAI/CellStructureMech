@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/osmiophilic_body.yaml
+  slug: osmiophilic_body
+session:
+  id: 2026-10-03T031929Z-claude-code-0ce136
+  timestamp: '2026-10-03T03:19:29Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add osmiophilic body record
+  details: Added GO:0044310 osmiophilic body as a Plasmodium falciparum female-gametocyte
+    cytoplasmic vesicle, with GO cytoplasmic-vesicle parentage, reviewed-label-only osmiophilic-body
+    membrane and Pfg377 components, P. falciparum scope, female gametocyte emergence and mosquito-infection
+    support functions, GO and DOI evidence, a nonmechanistic Pfg377 emergence graph, and discussions
+    that record component-grounding gaps and avoid overstating the postulated osmiophilic-body
+    cargo-release mechanism.
