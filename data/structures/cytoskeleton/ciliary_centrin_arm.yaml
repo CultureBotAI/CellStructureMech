@@ -1,0 +1,119 @@
+identifier: GO:0120269
+label: ciliary centrin arm
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A rod-shaped protein complex containing Centrin4 protein that flanks the
+  flagellum attachment zone (FAZ) filament and the quartet microtubules.
+definition_source: GO:0120269
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T04:29:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T04:29:46Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added intracellular-protein-complex parentage and ciliary-pocket parthood,
+    curated Centrin4 as a reviewed-label-only constituent, added Trypanosoma brucei
+    scope, hook/FAZ and flagellum-inheritance functions, core literature evidence,
+    and open component-boundary discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0140535
+part_of:
+- GO:0020016
+components:
+- component_id: centrin4
+  label: Centrin4 ciliary centrin arm protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TbCentrin4
+  essentiality: UNKNOWN
+  role: Centrin-family marker of the rod-shaped ciliary centrin arm in the trypanosome
+    hook-complex/bilobe region.
+  evidence:
+  - reference: GO:0120269
+    notes: GO:0120269 defines the ciliary centrin arm as a rod-shaped protein complex
+      containing Centrin4.
+  - reference: DOI:10.3390/cells4040726
+    notes: Morriswood 2015 reviewed the TbCentrin4-positive arm as part of the flagellum-associated
+      bilobe/hook complex in T. brucei.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: General centrin-family accessions are broader than the T. brucei
+    Centrin4 protein at the ciliary centrin arm. No exact source-neutral Centrin4
+    family CURIE was curated.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  presence: COMMON
+  note: The ciliary centrin arm has been studied as a Centrin4-positive arm of the
+    trypanosome hook complex that neighbors the microtubule quartet and FAZ filament.
+  reference: DOI:10.1242/jcs.230581
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Trypanosome model in which BOH1 and hook-complex proteins have been connected
+    to ciliary centrin arm assembly and flagellum inheritance.
+  reference: DOI:10.1074/jbc.RA120.014237
+functions:
+- function_id: hook_faz_flanking
+  label: hook-complex and FAZ filament flanking
+  description: The ciliary centrin arm flanks the flagellum attachment zone filament
+    and the microtubule quartet in the T. brucei flagellar pocket-associated cytoskeleton.
+  evidence:
+  - reference: GO:0120269
+    notes: The GO definition places the ciliary centrin arm beside the FAZ filament
+      and quartet microtubules.
+  - reference: DOI:10.3390/cells4040726
+    notes: Morriswood 2015 reviewed the hook complex as a Centrin4-positive arm of
+      the trypanosome bilobe.
+- function_id: flagellum_inheritance_support
+  label: flagellum inheritance support
+  description: Hook-complex integrity and ciliary centrin arm assembly support flagellum
+    inheritance in T. brucei.
+  evidence:
+  - reference: DOI:10.1074/jbc.RA120.014237
+    notes: Pham et al. 2020 connected maintenance of hook-complex integrity and centrin
+      arm assembly to flagellum inheritance in T. brucei.
+evidence:
+- reference: DOI:10.3390/cells4040726
+  notes: Morriswood 2015, Form, Fabric, and Function of a Flagellum-Associated Cytoskeletal
+    Structure, Cells.
+- reference: DOI:10.1242/jcs.230581
+  notes: Pham et al. 2019, BOH1 cooperates with Polo-like kinase to regulate flagellum
+    inheritance and cytokinesis initiation in Trypanosoma brucei, Journal of Cell
+    Science.
+- reference: DOI:10.1074/jbc.RA120.014237
+  notes: Pham, Hu and Li 2020, Maintenance of hook complex integrity and centrin arm
+    assembly facilitates flagellum inheritance in Trypanosoma brucei, Journal of Biological
+    Chemistry.
+discussions:
+- discussion_id: curate_ciliary_centrin_arm_subunits
+  prompt: Resolve additional ciliary centrin arm and hook-complex proteins before
+    expanding the component list.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The ciliary centrin arm is a Centrin4-containing complex, but this first
+    record does not assert BOH1 or other hook-complex proteins as arm constituents
+    until source-neutral families and their structural boundaries are curated.
+  evidence:
+  - reference: DOI:10.1242/jcs.230581
+  - reference: DOI:10.1074/jbc.RA120.014237
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: separate_arm_from_whole_bilobe
+  prompt: Keep the ciliary centrin arm separated from the complete bilobe or hook
+    complex in future graph curation.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0120269 denotes the rod-shaped Centrin4 arm, whereas GO:0120120 denotes
+    the larger bilobe structure that links the ciliary pocket collar and the flagellum
+    attachment zone.
+  evidence:
+  - reference: GO:0120269
+  - reference: GO:0120120
+  posed_by: codex
+  posed_date: '2026-10-03'
