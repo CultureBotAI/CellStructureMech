@@ -1,0 +1,46 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/pusule.yaml
+  slug: pusule
+session:
+  id: 2026-10-03T164312Z-codex-3563bf
+  timestamp: '2026-10-03T16:43:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1038/s41598-018-37065-w
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - evidence
+  - discussions
+  - images
+  summary: Add evidence-backed pusule record with explicit topology and physiological uncertainty
+  details: Created PROPOSED cellstructuremech:pusule through new_record.py and a one-use asserted
+    safe_load mutator, llm_assisted curation event and write_image_with_validated_record delegating
+    to write_validated_structure; mutator removed. Hidden/ignored-inclusive whole-repository
+    search, excluding .git internals, found no pusul or candidate DOI/PMID matches. QuickGO
+    pusule search returned zero; GO:0043227 and GO:0016020 definitions verified directly.
+    ENA scientific-name endpoints verified Polykrikos kofoidii 271679, Prorocentrum micans
+    2945 and Amphidinium carterae 2961. Dodge 1972 publisher summary read, but subscription
+    preview/PDF/discovery routes did not establish full-text access. Klut 1987 publisher abstract
+    read through Crossref; publisher HTML/PDF returned 403 and exact-title discovery found
+    citations, not full text. No unsupported quantitative measurements or physiological functions
+    imported. Gavelis 2019 primary Results, collection Methods and Figure 2 read through PMC
+    BioC and current JATS. Figure visually inspected; PMC6351617.1 metadata, JATS CC BY 4.0
+    licence and media MD5 verified, and ingested bytes matched the inspected file. Multipanel
+    figure accepted explicitly; caption separates pusule panels D/E/G/H from nuclear anatomy.
+    Components limited to membrane class; no guessed molecular identities, transport functions,
+    prevalence rows or causal mechanisms. Canal continuity and distinction from contractile
+    vacuoles are explicit. Derived artifacts and full local/network gates will be checked
+    before scientific commit; post-opening adversarial review will append a separate timestamped
+    history record.
