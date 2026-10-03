@@ -21,6 +21,13 @@ curation_history:
     examples, scoped functional response graph, assay/model/taxon limits and a checksum-verified
     public-domain CIL preview.
   llm_assisted: true
+- timestamp: '2026-10-03T22:50:29Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_SCOPE
+  changes: 'Addressed issue #2002: distinguish abstract-supported stalk CCDC/EGF-like
+    membership from CCDC-specific sheath localization; preserve the spasmoneme exclusion,
+    discussion rationale and dates.'
+  llm_assisted: true
 parent_structures:
 - GO:0005622
 synonyms:
@@ -233,8 +240,10 @@ discussions:
   notes: Membrane-bounded tubules belong to the described organelle morphology, but
     their molecular inventory is not resolved here. No specific pump, channel, tubulin,
     mitochondrial protein or stable calcium subunit is inferred. The 2025 Epistylis
-    sheath CCDC/EGF-like proteins and chitin-associated rings concern stalk substructures,
-    not demonstrated spasmoneme membership.
+    abstract identifies CCDC and EGF-like proteins as stalk components, but specifically
+    places only CCDC proteins in the sheath. These stalk findings and chitin-associated
+    rings do not demonstrate spasmoneme membership; no EGF-like sheath localization
+    is inferred.
   evidence:
   - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
     notes: Tubular and fibrillar compartments are distinguished from a speculative
@@ -242,6 +251,9 @@ discussions:
   - reference: DOI:10.1111/jeu.70006
     notes: Abstract places CCDC proteins in the sheath and describes Epistylis stalk
       proteomics, not a spasmoneme inventory.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2002
+    notes: Post-opening self-review corrected an unsupported extension of CCDC sheath
+      localization to EGF-like stalk proteins.
   posed_by: codex
   posed_date: '2026-10-03'
   resolved_date: '2026-10-03'
