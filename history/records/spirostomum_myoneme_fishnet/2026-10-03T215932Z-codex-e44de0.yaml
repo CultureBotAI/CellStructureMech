@@ -1,0 +1,50 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spirostomum_myoneme_fishnet.yaml
+  slug: spirostomum_myoneme_fishnet
+session:
+  id: 2026-10-03T215932Z-codex-e44de0
+  timestamp: '2026-10-03T21:59:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - discussions
+  - images
+  summary: Add evidence-backed Spirostomum myoneme fishnet
+  details: 'Added the genus-qualified Spirostomum myoneme fishnet as an extended cortical
+    network, not a protein, isolated repeat complex, generic cross-taxon myoneme, Paramecium
+    infraciliary lattice or stalk spasmoneme. Whole-repository hidden/ignored-inclusive name,
+    alias, DOI and PMID searches found no matching record. Exact QuickGO myoneme, spasmoneme,
+    Spirostomum and fishnet searches returned no hits; verified GO:0005622 parent and GO:0030863
+    parthood. ENA verifies S. minus NCBITaxon:402029 and S. ambiguum NCBITaxon:37688. InterPro
+    spasmin/GSBP searches returned HTTP204; IPR050145 and IPR052270 are broader than the curated
+    component classes. Read primary 2023 DOI:10.1126/sciadv.add6550 Introduction, all relevant
+    Results/Discussion, culture/species, MS, IP-MS, IF, Western and RNAi Methods, and Figures5-9
+    legends; separately read all main prose of 2024 preprint PMC11581044.2 plus Figures1/3
+    legends, not supplement Methods. Verified final 2026 DOI:10.1073/pnas.2601408123 PMID42213749
+    at publisher/PubMed/EuropePMC; only abstract/significance are accessible and PMC13229174
+    is embargoed until2026-11-29. Its qualitative repeat-reconstitution update is not conflated
+    with the old preprint or whole-native-mesh sufficiency. Two source-neutral constituent
+    classes retain label-only groundings and UNKNOWN essentiality; one supported contractile
+    function is curated. Explicit limits cover minority type-E RNAi phenotypes, absence of
+    measured target depletion, cross-reacting GSBP2 antibody, unresolved extra EF-hand candidates,
+    native stoichiometry, detailed molecular switching, recovery energetics and non-constituent
+    neighbors. No speculative causal graph or numerical preprint properties added. Inspected
+    source Figure5 in temporary storage: versioned PMC9946354.1 JATS md5 3e94476b75520b5f351c6f4fd97e95c4
+    and media md5 4d4c13d6219f5b468c531d2def3df883 match metadata. Exact CC BY-NC4.0 and author
+    copyright verified; linked image only, no hosted bytes. Caption distinguishes the predicted
+    panel, optical-layer merges, Western insets and antibody specificity. Scaffold and safe_load
+    mutator used identity/old-value assertions, truthful LLM events and write_validated_structure.
+    Mapping remains PROPOSED. Temporary mutator removed; complete derived-artifact gates,
+    full QC and separate post-opening self-review remain required before merge.'

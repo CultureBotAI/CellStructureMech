@@ -1,0 +1,311 @@
+identifier: cellstructuremech:spirostomum_myoneme_fishnet
+label: Spirostomum myoneme fishnet
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A mesh-like cortical myoneme characterized in Spirostomum, containing
+  intersecting centrin/spasmin-rich fibrillar bundles and giant Sfi1-like scaffold
+  proteins. The extended network shortens during calcium-triggered cell contraction
+  and is distinct from adjacent microtubule bundles and from an isolated scaffold-centrin
+  protein complex.
+definition_source: DOI:10.1126/sciadv.add6550
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T21:57:09Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T21:58:42Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added scoped primary evidence, two component classes, verified species
+    examples, calcium-triggered contraction, molecular and assay limits, and inspected
+    link-only Figure 5 with its noncommercial licence.
+  llm_assisted: true
+parent_structures:
+- GO:0005622
+part_of:
+- GO:0030863
+synonyms:
+- synonym_text: Spirostomum mesh-like contractile fibrillar system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/sciadv.add6550
+- synonym_text: myoneme
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.1101/2024.11.07.622534
+components:
+- component_id: myonemal_centrins
+  label: Myonemal centrin-family proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro spasmin search returned no entry. IPR050145 Centrin/CML-like
+    includes non-centrin calcium-binding proteins and is broader than the myonemal
+    centrin/spasmin class. No exact family mapping or species-specific accession is
+    substituted for that class.
+  essentiality: UNKNOWN
+  role: Calcium-binding centrin/spasmin constituents of the contractile bundles, exemplified
+    by Spasmin 1 and 2 in S. minus. Localization and proteomics do not establish an
+    exhaustive paralogue inventory or individual assembly requirements.
+  evidence:
+  - reference: DOI:10.1126/sciadv.add6550
+    notes: Results on spasmin identification combine whole-cell MS with centrin, GSBP1
+      and GSBP2 immunoprecipitation-MS. Figure 5 uses anti-centrin staining, not antibodies
+      distinguishing Spasmin 1 from Spasmin 2.
+  - reference: DOI:10.1073/pnas.2601408123
+    notes: Published abstract reports centrin localization by immunofluorescence and
+      immunogold electron microscopy in S. ambiguum. Full journal methods were not
+      accessible; no exact paralogue or quantitative result is imported.
+- component_id: giant_sfi1_like_scaffolds
+  label: Giant Sfi1-like myoneme scaffold proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro GSBP search returned no entry. IPR052270 Centrin-binding
+    protein SFI1-like represents broader SFI1-related proteins, including CCDC191;
+    an exact mapping of this giant myoneme scaffold class was not established. Similarity
+    of repeat architecture is not a verified family accession.
+  essentiality: UNKNOWN
+  role: Repeat-rich centrin/spasmin-binding scaffold class, exemplified by GSBP1 and
+    GSBP2 in S. minus. Evidence supports mesh membership, but limited RNAi phenotypes
+    do not establish each paralogue's universal assembly requirement.
+  evidence:
+  - reference: DOI:10.1126/sciadv.add6550
+    notes: Sequence, transcript, MS, immunoprecipitation, Western and localization
+      Results support GSBP1/GSBP2. Anti-GSBP1 is specific in the reported Western,
+      whereas anti-GSBP2 recognizes both proteins; its fluorescence is not an isoform-specific
+      GSBP2 map. GSBP2 is abundant in GSBP1 immunoprecipitates.
+  - reference: DOI:10.1073/pnas.2601408123
+    notes: Published abstract reports Sfi1-homolog localization and calcium-dependent
+      compaction/self-association of a reconstituted centrin-Sfi1 repeat complex.
+      That assay is not reconstitution of the complete native fishnet.
+canonical_examples:
+- taxon_id: NCBITaxon:402029
+  taxon_label: Spirostomum minus
+  reference: DOI:10.1126/sciadv.add6550
+  note: Clonal culture isolated from East Lake, Wuhan, and maintained at 22 degrees
+    C. Species identification used live morphology, protargol staining and SSU rDNA
+    comparison. Figure 5 and proteomic/RNAi experiments concern this culture; no strain
+    taxon or genus-wide prevalence is inferred.
+- taxon_id: NCBITaxon:37688
+  taxon_label: Spirostomum ambiguum
+  reference: DOI:10.1073/pnas.2601408123
+  note: Published title and abstract identify the experimentally imaged myoneme fishnet
+    and its centrin/Sfi1 constituents. The associated 2024 preprint main text was
+    read separately; inaccessible final methods are not used to assign a strain, exact
+    native stoichiometry or numerical phenotype to this species.
+functions:
+- function_id: calcium_triggered_contraction
+  label: Calcium-triggered cell contraction
+  description: The cortical myoneme network contributes to rapid whole-cell shortening
+    after calcium stimulation. This contractile role does not establish the complete
+    molecular shortening mechanism or the energy source for subsequent re-extension.
+  evidence:
+  - reference: DOI:10.1126/sciadv.add6550
+    notes: In the RNAi experiments, a minority of type-E distorted cells appeared
+      only in GSBP-targeted conditions and failed to contract during observation in
+      1 mM calcium. Mesh disruption was imaged in selected GSBP2-RNAi type-E cells.
+      Other abnormal morphologies also occurred in controls and retained contraction.
+  - reference: DOI:10.1073/pnas.2601408123
+    notes: Published abstract connects the imaged fishnet with calcium-triggered cell
+      shortening and reports repeat-complex compaction in vitro. No full-native-mesh
+      sufficiency claim, exact kinetics or binding stoichiometry is curated.
+evidence:
+- reference: DOI:10.1126/sciadv.add6550
+  notes: Zhang et al. (2023), Giant proteins in a giant cell. Read primary Introduction,
+    spasmin/backbone identification, RNAi, cortical organization and Discussion; culture/species,
+    MS, immunoprecipitation, immunofluorescence, Western and RNAi Methods; Figures
+    5-9 legends. Figure 5 was visually inspected. Versioned PMC metadata and JATS
+    verify DOI, PMID 36812318, non-retracted status and CC BY-NC 4.0.
+- reference: DOI:10.1073/pnas.2601408123
+  notes: Lannan et al. (2026), A centrin-Sfi1 myoneme fishnet powers ultrafast calcium-triggered
+    contraction in the giant ciliate Spirostomum ambiguum. Publisher significance/abstract
+    and PubMed/Europe PMC metadata were read. Publisher full text requires access;
+    PubMed lists PMC13229174 as available on 2026-11-29, later than this curation.
+    Europe PMC provides no full body. Only explicit qualitative abstract-level findings
+    are used.
+- reference: DOI:10.1101/2024.11.07.622534
+  notes: Lannan et al. 2024 preprint, PMC11581044 version 2. Read Introduction, all
+    Results, Discussion and Figures 1/3 legends in JATS, but not supplementary Methods.
+    This is not the final 2026 article; numeric estimates and tentative molecular
+    models are not silently promoted to final-version results.
+- reference: DOI:10.1016/j.cell.2025.09.027
+  notes: Mikus et al. comparative centrin discussion distinguishes the Paramecium
+    infraciliary lattice from the Spirostomum fishnet. This is contextual comparison,
+    not a new Spirostomum experiment or evidence of equivalence to Lacrymaria meshes.
+- reference: GO:0005622
+  notes: Verified non-obsolete intracellular anatomical structure; broad is-a parent
+    for an extended intracellular network rather than a single resolved complex.
+- reference: GO:0030863
+  notes: Verified non-obsolete cortical cytoskeleton; the fishnet is part of, not
+    equivalent to, the entire cortical framework.
+discussions:
+- discussion_id: identity_and_granularity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Delimit the Spirostomum myoneme fishnet from other centrin assemblies.
+  rationale: Shared calcium-binding proteins and a mesh-like appearance do not establish
+    identity or justify equating all myonemes across taxa.
+  notes: Whole-repository hidden- and ignored-inclusive label, alias, DOI and PMID
+    searches found no existing record. QuickGO myoneme, spasmoneme, Spirostomum and
+    fishnet searches returned no hits. The primary literature recognizes an extended
+    cortical contractile mesh; OTHER denotes a network, not a single filament or isolated
+    repeat complex. The label is genus-qualified, with only the two studied species
+    asserted as examples. The Paramecium infraciliary lattice, cryptophyte cortical
+    centrin network and stalk spasmonemes are not exact synonyms. A fishnet-like Lacrymaria
+    network is not included merely on shape similarity.
+  evidence:
+  - reference: DOI:10.1126/sciadv.add6550
+    notes: Introduction and cortical organization Results distinguish the mesh from
+      adjacent microtubule bundles and compare, rather than equate, stalk myonemes.
+  - reference: DOI:10.1073/pnas.2601408123
+    notes: Published title and abstract identify the named myoneme fishnet.
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Comparative centrin text and Lacrymaria observations delimit structural
+      scope.
+  - reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=myoneme
+    notes: Exact-name authority search used before minting.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: composition_and_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact component-family groundings and the complete native molecular
+    inventory.
+  rationale: Proteomic enrichment, antibody localization and repeat predictions do
+    not determine every member, direct contact or subunit copy number.
+  notes: Two source-neutral component classes are curated, not an asserted two-protein
+    stoichiometry. The 2023 study identifies Spasmin 1/2 and GSBP1/2, but three further
+    EF-hand candidates have ambiguous peptides and weak GSBP2-IP evidence and are
+    not accepted as additional established members. Predicted binding capacities and
+    AlphaFold models are not native stoichiometry. InterPro named searches yielded
+    no exact entry, and the broader centrin/SFI1 families do not establish exact source-neutral
+    mappings. No UniProt accession is guessed.
+  evidence:
+  - reference: DOI:10.1126/sciadv.add6550
+    notes: Spasmin and scaffold identification Results distinguish supported proteins
+      from the unresolved candidate cluster and predicted repeat capacities.
+  - reference: InterPro:IPR050145
+    notes: Centrin/CML-like family and broader membership read at the InterPro API.
+  - reference: InterPro:IPR052270
+    notes: SFI1-like family description read; GSBP equivalence was not established.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: perturbation_and_antibody_limits
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Preserve the RNAi phenotype scope and antibody cross-reactivity.
+  rationale: Rare affected cells and cross-reacting antibodies cannot establish uniform
+    depletion, universal assembly requirements or isoform-specific localization.
+  notes: Type-E cells occurred at 0-4 percent in GSBP RNAi replicates and failed to
+    contract during an average 267-second observation at 1 mM calcium. Other abnormal
+    forms also occurred in controls and contracted. Mesh disruption was examined in
+    selected type-E GSBP2-RNAi cells. Methods RT-PCR concerns bacterial dsRNA production,
+    not quantified depletion in Spirostomum. Both component essentialities remain
+    UNKNOWN. Anti-GSBP2 recognizes GSBP1 and GSBP2; anti-centrin does not distinguish
+    Spasmin 1/2. The preprint Sfi1 antibody was raised against Stentor peptides and
+    labeled myonemes sparsely, not as a resolved GSBP paralogue map.
+  evidence:
+  - reference: DOI:10.1126/sciadv.add6550
+    notes: RNAi Results, Figure 6, antibody-specificity Results, and Western/RNAi
+      Methods.
+  - reference: DOI:10.1101/2024.11.07.622534
+    notes: Preprint TEM Results and Figure 3 distinguish dense centrin labeling from
+      sparse labeling with cross-species Sfi1 antibody.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: neighboring_structures_not_constituents
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep neighboring cortical structures and proposed calcium-handling machinery
+    outside the established constituent list.
+  rationale: Proximity, model coupling and predicted physiological roles are not evidence
+    of molecular membership in the contractile bundles.
+  notes: Cortical microtubule bundles, basal bodies, endoplasmic reticulum and mitochondria
+    are separately described structures. Tubulin, calcium pumps and ryanodine receptors
+    are not added as fishnet constituents from those observations. No unknown basal-body
+    connector is invented, and calcium is a trigger rather than an asserted stable
+    structural subunit. Distorted RNAi cells suggest a shape-maintenance role but
+    do not establish a separate resolved mechanism here.
+  evidence:
+  - reference: DOI:10.1126/sciadv.add6550
+    notes: Cortical organization Results, Figures 7-9 and Discussion separate observations
+      from proposed coordination with other structures.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: molecular_mechanism_and_recovery
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile native contraction and re-extension mechanisms with the final
+    2026 repeat-complex experiments when full experimental text is available.
+  rationale: A successful simulation or partial-complex assay does not by itself resolve
+    native fishnet force generation, sufficient composition or recovery energetics.
+  notes: The 2023 model proposes coiled scaffolds, microtubule recoil and ER/mitochondrial
+    coordination. The 2024 preprint instead estimates that microtubule/membrane stored
+    energy is insufficient for re-extension; its AlphaFold structures do not establish
+    a unique calcium-dependent conformational switch. Its mesh simulation assumes
+    volume conservation. The 2026 published abstract now reports reconstituted repeat
+    complex compaction/self-association, so the preprint's call for a future purified
+    assay is not treated as current absence of evidence. Final methods remain unread.
+    No detailed causal graph, native force, binding stoichiometry or ATP-free recovery
+    mechanism is asserted. Numerical preprint estimates are not curated properties.
+  evidence:
+  - reference: DOI:10.1126/sciadv.add6550
+    notes: Discussion explicitly frames the coupled structural scheme as a model.
+  - reference: DOI:10.1101/2024.11.07.622534
+    notes: Results on mesh modeling, TEM and AlphaFold plus Discussion define assumptions
+      and alternative recovery mechanisms.
+  - reference: DOI:10.1073/pnas.2601408123
+    notes: Published abstract supplies the qualitative reconstitution update; full
+      journal text is not yet publicly available through the checked PMC route.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: figure_and_licence_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the observed network from predicted structures and retain link-only
+    reuse.
+  rationale: A mixed figure must not be presented as a native molecular reconstruction,
+    and a noncommercial licence does not permit repository hosting under current policy.
+  notes: Visually inspected unmodified Figure 5. Panel A is an AlphaFold2 prediction;
+    B contains merged-layer centrin/GSBP immunofluorescence and a light image; C contains
+    single-layer GSBP immunofluorescence with Western insets. Anti-GSBP2 cross-reactivity
+    prevents an isoform-specific interpretation. Versioned PMC metadata says CC BY-NC;
+    JATS specifies CC BY-NC 4.0 and the authors as copyright holders. The image is
+    linked, never hosted, and no scale-bar-derived biological dimensions are inferred.
+  evidence:
+  - reference: DOI:10.1126/sciadv.add6550
+    notes: Figure 5, its legend, antibody Results and versioned JATS permissions inspected.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+images:
+- image_id: pmc_pmc9946354_f5
+  source: PMC
+  source_accession: PMC9946354.1 F5
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9946354/figure/F5/
+  licence: CC_BY_NC_4_0
+  licence_url: https://creativecommons.org/licenses/by-nc/4.0/
+  attribution: Jing Zhang, Weiwei Qin, Che Hu, Siyu Gu, Xiaocui Chai, Mingkun Yang,
+    Fang Zhou, Xueyan Wang, Kai Chen, Guanxiong Yan, Guangying Wang, Chuanqi Jiang,
+    Alan Warren, Jie Xiong and Wei Miao; Copyright 2023 The Authors, exclusive licensee
+    American Association for the Advancement of Science; CC BY-NC 4.0; Figure 5 of
+    Giant proteins in a giant cell, Science Advances, doi:10.1126/sciadv.add6550,
+    via PubMed Central. Link only; no repository copy or adaptation.
+  modality: FLUORESCENCE
+  caption: Spirostomum minus myoneme mesh in Figure 5B/C. B compares centrin signal
+    (red) with anti-GSBP2 signal (green) using merged optical layers. C compares anti-GSBP1
+    (red) with anti-GSBP2 (green) in a single optical layer and includes Western insets.
+    Anti-GSBP2 recognizes both GSBP proteins. Panel A is a predicted partial protein
+    complex, not a native mesh reconstruction.
+  taxon_id: NCBITaxon:402029
+  taxon_label: Spirostomum minus
+  reference: DOI:10.1126/sciadv.add6550
+  retrieved_on: '2026-10-03'
+  notes: Source JATS md5 and Figure 5 media md5 were checked against versioned PMC
+    metadata. The original figure was inspected in temporary storage only. No file,
+    file checksum or download URL is provided for hosting; the exact CC BY-NC 4.0
+    terms require a link-only entry under repository policy.
