@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/stressosome.yaml
+  slug: stressosome
+session:
+  id: 2026-10-03T152217Z-codex-012f38
+  timestamp: '2026-10-03T15:22:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  summary: Add evidence-backed stressosome record
+  details: Added a PROPOSED stressosome multiprotein-complex record after whole-repository
+    hidden/ignored-inclusive label, identifier, synonym and primary DOI/PMID deduplication.
+    QuickGO returned no stressosome term; verified GO:0032991 is broader. Read full relevant
+    primary Results and Methods from Williams 2019, Kwon 2019, Impens 2017 and Khadka 2025.
+    Curated RsbR/RsbS/RsbT with label-only exact-family boundaries, InterPro:IPR049722 Prli42
+    associated machinery, verified P42409/P42410 strain-168 examples and ENA-verified strain
+    taxa. Kept exact generic stoichiometry, inferred kinase gating, broad phylum occurrence
+    and a mandatory stress-sensing role out of the record. The 2025 graph is explicitly nonmechanistic
+    and limited to tested PY79-derived backgrounds preserving RsbT. Included complete visually
+    inspected PMC6614362.1 Fig1 with independently checked CC BY 4.0 licence, source media
+    checksum, donor taxon and purified-particle caption. Created through new_record.py, then
+    a temporary identity- and old-state-asserting mutator using yaml.safe_load, LLM-tagged
+    record_curation_event and write_image_with_validated_record, which calls write_validated_structure.
+    Temporary mutator removed after success. Separate post-PR adversarial review will be appended.

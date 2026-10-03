@@ -6201,6 +6201,15 @@
   "definition": "A bacterial cell envelope-associated multiprotein system, which binds and degrades starch."
  },
  {
+  "identifier": "cellstructuremech:stressosome",
+  "label": "stressosome",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/stressosome.html",
+  "definition": "A bacterial multiprotein regulatory assembly with an oligomeric core formed by RsbR-family and RsbS STAS domains and an associated RsbT kinase. Characterized stressosomes organize environmental-stress signaling; their subunit composition and requirement for downstream responses depend on the organism and experimental context."
+ },
+ {
   "identifier": "GO:0032798",
   "label": "Swi5-Sfr1 complex",
   "category": "OTHER",
