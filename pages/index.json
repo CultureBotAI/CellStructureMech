@@ -1863,6 +1863,15 @@
   "definition": "An individual mineralized scale produced by a coccolithophore, with a characteristic arrangement of calcite crystals. Coccoliths form elements of the external cell covering, the coccosphere, and can be shed as free scales."
  },
  {
+  "identifier": "cellstructuremech:coccosphere",
+  "label": "coccosphere",
+  "category": "ENVELOPE",
+  "kind": "ENVELOPE_LAYER",
+  "status": "PROPOSED",
+  "page": "structures/envelope/coccosphere.html",
+  "definition": "An external cell covering of a coccolithophore assembled from individual mineralized scales called coccoliths. Its organization varies among taxa and cell states; the covering is distinct from a single coccolith and from the intracellular vesicle in which a coccolith forms."
+ },
+ {
   "identifier": "GO:0000935",
   "label": "division septum",
   "category": "ENVELOPE",

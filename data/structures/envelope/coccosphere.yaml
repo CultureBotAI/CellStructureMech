@@ -1,0 +1,286 @@
+identifier: cellstructuremech:coccosphere
+label: coccosphere
+structure_category: ENVELOPE
+structure_kind: ENVELOPE_LAYER
+definition: An external cell covering of a coccolithophore assembled from individual
+  mineralized scales called coccoliths. Its organization varies among taxa and cell
+  states; the covering is distinct from a single coccolith and from the intracellular
+  vesicle in which a coccolith forms.
+definition_source: DOI:10.1111/nph.15272
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T18:57:33Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T18:59:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added whole-covering identity and coccolith parthood, verified calcite,
+    label-only organic matrix, two species examples, scoped covering/separation roles,
+    geometry and mechanism limits, and inspected CC BY 4.0 SEM Figure 2 with complete
+    source-specific attribution.
+  llm_assisted: true
+- timestamp: '2026-10-03T19:00:38Z'
+  curator: codex
+  action: CLARIFIED_COMPONENT_BOUNDARY
+  changes: Recorded the resolved intracellular-cytoskeleton exclusion separately from
+    the open extracellular matrix-composition question.
+  llm_assisted: true
+parent_structures:
+- GO:0030312
+has_part:
+- cellstructuremech:coccolith
+components:
+- component_id: calcite
+  label: calcite
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  grounding: CHEBI:46719
+  essentiality: UNKNOWN
+  role: Mineral material of the coccolith scales assembled into the covering.
+  evidence:
+  - reference: DOI:10.1111/nph.15272
+    notes: Introduction and Results distinguish the calcite coccoliths from their
+      organization into the external coccosphere.
+  - reference: DOI:10.7717/peerj.4608
+    notes: Primary SEM observations and Figure 2 examine the arrangement of individual
+      coccolith scales in Emiliania huxleyi coccospheres.
+- component_id: organic_matrix
+  label: coccosphere-associated organic matrix
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This denotes the mixed extracellular material associated with the
+    assembled covering, not a chemically identified polysaccharide or protein. A ChEBI
+    coccosphere search returned no term. Lectin staining and retained spatial organization
+    do not establish a single polymer identity, and a generic polysaccharide CURIE
+    would not identify this material.
+  essentiality: UNKNOWN
+  role: In Coccolithus braarudii, a structured polysaccharide-rich organic layer contributes
+    to organization of the coccolith covering. Its molecular composition and necessity
+    for assembly are not established here.
+  evidence:
+  - reference: DOI:10.1111/nph.15272
+    notes: Figure 9, associated Results and fluorescence Methods show a FITC-Concanavalin-A-stained
+      extracellular layer with patterned unstained regions after decalcification.
+      The authors relate this layer to coccolith organization and contacts between
+      incompletely covered daughter cells; the assay does not identify an exact adhesion
+      molecule.
+canonical_examples:
+- taxon_id: NCBITaxon:2903
+  taxon_label: Emiliania huxleyi
+  reference: DOI:10.7717/peerj.4608
+  note: Calcifying strain CS-369. SEM characterizes coccolith arrangement in coccospheres
+    from cultures pooled across light and CO2 conditions. Whole-sphere plate numbers
+    are estimated from visible interlocked plates under a uniform-distribution assumption,
+    not counted independently in three dimensions.
+- taxon_id: NCBITaxon:221442
+  taxon_label: Coccolithus braarudii
+  reference: DOI:10.1111/nph.15272
+  note: Strain PLY182g, called Coccolithus pelagicus subsp. braarudii in older work.
+    Time-lapse microscopy follows rearrangement of the covering during division; calcification-disruption
+    experiments and fluorescence microscopy distinguish daughter-cell separation defects
+    from an inability to complete initial cytokinesis.
+functions:
+- function_id: external_covering
+  label: external cell covering
+  description: Coccolith scales collectively cover the cell exterior. The spatial
+    arrangement and integrity of this covering vary with species, cell state and experimental
+    perturbation.
+  evidence:
+  - reference: DOI:10.7717/peerj.4608
+    notes: Figure 2 directly shows interlocking scale coverings of E. huxleyi; mathematical
+      topology analysis remains specific to the study assumptions and measured geometry.
+  - reference: DOI:10.1111/nph.15272
+    notes: Figure 5 time-lapse imaging shows flexible rearrangement of C. braarudii
+      coccoliths as the cell divides while retaining coverage.
+- function_id: daughter_cell_separation
+  label: support of daughter-cell separation
+  description: In tested Coccolithus braarudii cultures, an intact coccosphere supports
+    separation of daughter cells. Disruption of the covering during Ge or HEDP treatment
+    is associated with persistent cell pairs after completed cytokinesis; this is
+    not asserted for every coccolithophore or calcification perturbation.
+  evidence:
+  - reference: DOI:10.1111/nph.15272
+    notes: Results and Figures 7-9 combine treatment time courses, time-lapse imaging,
+      nuclear and membrane staining, and in situ decalcification controls. Low-Ca
+      growth inhibition does not produce the same paired-cell phenotype. Possible
+      additional treatment effects and the precise adhesion mechanism remain unresolved.
+evidence:
+- reference: DOI:10.7717/peerj.4608
+  notes: Xu, Hutchins and Gao (2018), PeerJ. Primary Methods, SEM architecture Results,
+    Figure 2, count/geometry assumptions and assembly discussion read. Separates observed
+    scale arrangement from simulated topology and hypothetical cellular control.
+- reference: DOI:10.1111/nph.15272
+  notes: Walker et al. (2018), New Phytologist. Culture and perturbation Methods,
+    time-lapse/fluorescence/SEM Methods, division and organic-layer Results, Figures
+    5-9 and Discussion read. Supports species- and treatment-scoped covering organization
+    and daughter-separation observations.
+- reference: DOI:10.1126/sciadv.adc8728
+  notes: Johns et al. (2023), Science Advances. Primary Results and culture/isolation/adsorption
+    Methods read. Cells can acquire free coccoliths, and xenospheres can mix morphotypes
+    or scales from different species; possession of an attached scale does not prove
+    that its host produced it.
+- reference: GO:0030312
+  notes: Verified external encapsulating structure is a broader cellular-component
+    class for structures outside the plasma membrane surrounding the cell, not an
+    exact coccosphere identity.
+discussions:
+- discussion_id: covering_identity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the whole coccosphere distinct from an individual coccolith, its formation
+    vesicle and the organic matrix alone.
+  rationale: A covering assembled from mineral scales, a scale and a membrane-bounded
+    formation compartment have different physical boundaries.
+  notes: Whole-repository hidden/ignored-inclusive name, alias, parent and primary-reference
+    searches found no duplicate covering record. QuickGO coccosphere and xenosphere
+    searches returned zero; coccolithophore shell returned process and unrelated structure
+    terms. GO:0030312 is broader, so the local identifier is minted. The coccosphere
+    has_part cellstructuremech:coccolith; it is not a subclass of the scale or of
+    the coccolith vesicle. ENVELOPE_LAYER denotes a non-membrane covering, not a claim
+    of exactly one geometric layer. The entire mineral-scale covering is not equated
+    with glycocalyx or with its organic matrix, and no unconditional vesicle parthood
+    is asserted.
+  evidence:
+  - reference: DOI:10.7717/peerj.4608
+    notes: SEM and geometric analysis distinguish individual plates from their complete
+      arrangement.
+  - reference: DOI:10.1111/nph.15272
+    notes: Results distinguish the extracellular covering, intracellular coccolith
+      formation and the organic layer exposed after decalcification.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: matrix_identity
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the chemistry, distribution and assembly requirement of the coccosphere-associated
+    organic matrix.
+  rationale: A patterned lectin-positive layer does not identify an exact polymer,
+    protein or receptor, nor prove a universal composition.
+  notes: The matrix remains REVIEWED_LABEL_ONLY. Retention after decalcification helps
+    distinguish it from the mineral plates but does not establish that either matrix
+    or mineral is dispensable for normal assembly. No specific adhesive protein, exact
+    polymer composition, fixed stoichiometry or universal essentiality is assigned.
+  evidence:
+  - reference: DOI:10.1111/nph.15272
+    notes: Figure 9 and the fluorescence Methods characterize extracellular lectin
+      staining, not the exact matrix chemistry.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: geometry_and_layer_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve how layer definitions, coccolith geometry and cell state affect
+    coccosphere architecture across taxa.
+  rationale: A topology model fitted to one strain does not determine universal plate
+    counts, layer counts or cellular sensing machinery.
+  notes: The PeerJ study defines a layer operationally as fully interlocking plates
+    covering the surface and estimates total plate numbers from visible plates. Other
+    sources discuss extra plates or multiple layers using different conventions. No
+    universal one-layer statement, minimum plate number, four-to-six-neighbor rule,
+    whole-sphere diameter or geometry-sensing protein is asserted. Xenosphere and
+    holococcosphere are narrower configurations, not exact synonyms for every coccosphere;
+    model-based assembly explanations remain hypotheses.
+  evidence:
+  - reference: DOI:10.7717/peerj.4608
+    notes: Methods explicitly state the counting assumption and layer definition;
+      Conclusions leave actual sensing and regulation unresolved.
+  - reference: DOI:10.1111/nph.15272
+    notes: Discussion contrasts coccosphere organization among species and life-cycle
+      states.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: division_and_ecological_limits
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Distinguish species-specific daughter-separation effects from universal
+    growth, protection or photosynthesis functions.
+  rationale: Different calcification perturbations and different species need not
+    have the same cellular consequences.
+  notes: C. braarudii cells with disrupted coverings can complete an initial cytokinesis
+    before remaining paired and failing subsequent divisions. Low-Ca treatment does
+    not produce the same paired-cell phenotype; potential additional effects of Ge
+    or HEDP are acknowledged. The source does not show that calcification directly
+    supports photosynthesis under the tested conditions. No broad prevalence row,
+    generalized cell-cycle block, universal antiviral or grazing protection, causal
+    graph or unverified trait link is added.
+  evidence:
+  - reference: DOI:10.1111/nph.15272
+    notes: Division Results and Discussion retain species/treatment distinctions and
+      do not equate impaired growth with failure of initial cytokinesis.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: adsorbed_scale_origin
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not infer that every coccolith in a covering was produced by the covered
+    cell.
+  rationale: A structural part can be acquired from the surrounding medium rather
+    than synthesized by its present host.
+  notes: Experiments distinguish calcified CCMP374 donor cells from naked recipients
+    that adsorb isolated coccoliths, and natural xenospheres can contain mixed scales.
+    The has_part link is structural, not a same-cell biosynthesis assertion. This
+    evidence does not make every adsorbed coccolith a fully reconstructed coccosphere
+    or justify a universal benefit of adsorption.
+  evidence:
+  - reference: DOI:10.1126/sciadv.adc8728
+    notes: Figures 1-3 and culture/adsorption Methods distinguish mixed-scale coverings,
+      donor and recipient cells, and organic-material-dependent adsorption.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: intracellular_cytoskeleton_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not import the intracellular division microtubule network as a constituent
+    of the extracellular covering.
+  rationale: Concurrent cellular rearrangements do not establish shared structural
+    membership.
+  notes: The source images an intracellular microtubule bundle during division separately
+    from the extracellular coccosphere and organic layer. Tubulin is therefore not
+    added as a coccosphere component. This boundary decision does not claim that the
+    cytoskeleton has no role in division, trafficking or covering reorganization,
+    or resolve the open matrix-chemistry question.
+  evidence:
+  - reference: DOI:10.1111/nph.15272
+    notes: Figure 6 and immunofluorescence Results localize the microtubule network
+      within dividing cells; Figure 9 characterizes the extracellular organic layer.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+images:
+- image_id: pmc_pmc5896503_fig_2
+  file: pmc5896503_fig_2.jpg
+  file_sha256: 5f3b2473ff6c3e1e281c8ae71b4c2d72dd32536e8c9b80e08f761c72b0bff765
+  source: PMC
+  source_accession: PMC5896503.1 fig-2
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5896503/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5896503.1/peerj-06-4608-g002.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Kai Xu, David Hutchins and Kunshan Gao; Coccolith arrangement follows
+    Eulerian mathematics in the coccolithophore Emiliania huxleyi; PeerJ (2018), DOI:10.7717/peerj.4608;
+    CC BY 4.0, via PubMed Central
+  modality: SEM
+  caption: Emiliania huxleyi CS-369 coccospheres, Figure 2. Six SEM panels (A-F) show
+    different arrangements of interlocking coccolith scales around cells. White scale
+    bars are 1 micrometre; red numbers identify neighboring plates around selected
+    coccoliths, not the total number of plates in the covering. Whole-sphere plate
+    estimates in the study depend on a counting assumption and are not universal coccosphere
+    counts.
+  taxon_id: NCBITaxon:2903
+  taxon_label: Emiliania huxleyi
+  reference: DOI:10.7717/peerj.4608
+  retrieved_on: '2026-10-03'
+  notes: Figure 2 from article version PMC5896503.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Visually inspected unmodified six-panel SEM figure. Methods identify calcifying
+    strain CS-369 and filtration/SEM preparation; this is not live-cell imaging or
+    cryo-electron tomography. Source-specific author, article-title, journal and DOI
+    attribution is retained. The study estimates whole-sphere counts by doubling visible
+    fully interlocked plates assuming uniform distribution.

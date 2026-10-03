@@ -1,0 +1,54 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/coccosphere.yaml
+  slug: coccosphere
+session:
+  id: 2026-10-03T190113Z-codex-0dfdfb
+  timestamp: '2026-10-03T19:01:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - discussions
+  - images
+  summary: Add evidence-backed coccosphere covering record
+  details: Added cellstructuremech:coccosphere as the whole external coccolith covering, distinct
+    from individual mineral scales, their formation vesicle and the organic matrix alone.
+    Started from clean up-to-date main 1753b397fb4d0c0be365f93b3b4051378cf7dcff. Whole-repository
+    hidden/ignored-inclusive searches included coccosphere, xenosphere, coccolithophore-covering
+    aliases, GO:0030312 and primary DOI/PMID identifiers; exact corpus label/identifier/synonym
+    scan found no duplicate. Current QuickGO coccosphere and xenosphere searches returned
+    zero; coccolithophore shell returned process and unrelated structure terms. Verified broader
+    GO:0030312 external encapsulating structure, exact CHEBI:46719 calcite and ENA taxa 2903
+    Emiliania huxleyi and 221442 Coccolithus braarudii. ChEBI coccosphere search found no
+    term for the mixed organic matrix. Read Xu et al. 2018 primary Methods, SEM/topology/count
+    Results, Figure 2, assembly discussion and Conclusions; Walker et al. 2018 culture/perturbation/time-lapse/fluorescence/SEM
+    Methods, division and organic-layer Results, Figures 5-9 and Discussion; Johns et al.
+    2023 primary adsorption, xenosphere and donor/recipient Methods/Results. Added coccolith
+    has_part relation, calcite and label-only organic matrix with UNKNOWN essentiality, CS-369
+    and PLY182g examples, structural covering and species/treatment-scoped daughter-separation
+    roles. Retained distinctions between completed initial cytokinesis and subsequent paired-cell
+    arrest, low-Ca versus Ge/HEDP effects, measured morphology versus topology assumptions,
+    and acquired scales versus same-cell biosynthesis. No universal layer/plate counts, prevalence,
+    photosynthesis or protection function, exact matrix polymer, causal graph or trait link
+    inferred. Recorded a resolved intracellular microtubule exclusion separately from open
+    matrix chemistry. Visually inspected unmodified six-panel SEM Figure 2 from current non-retracted
+    PMC5896503.1; metadata and source JATS agree on CC BY 4.0. Preserved authors, original
+    article title, PeerJ and DOI in attribution as the source requires. Exact 236065-byte
+    media MD5 f9e1e8ae4903f47abc657f2dc8098415 and SHA256 5f3b2473ff6c3e1e281c8ae71b4c2d72dd32536e8c9b80e08f761c72b0bff765
+    verified; caption distinguishes red neighbor labels from model-dependent whole-cover counts.
+    Guarded one-use mutators parsed YAML, asserted prior values, appended llm_assisted events
+    and used validated writers, then were removed. Record remains PROPOSED. Derived-artifact
+    and full validation gates follow; separate post-opening adversarial review and PR-linked
+    history will precede merge.
