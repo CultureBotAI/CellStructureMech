@@ -877,6 +877,37 @@
       ]
     },
     {
+      "identifier": "GO:0120118",
+      "label": "flagella connector",
+      "neighbors": [
+        {
+          "identifier": "GO:0055040",
+          "label": "periplasmic flagellum",
+          "cosine_similarity": 0.75635256
+        },
+        {
+          "identifier": "GO:0120120",
+          "label": "bilobe structure",
+          "cosine_similarity": 0.75019052
+        },
+        {
+          "identifier": "GO:1990900",
+          "label": "ciliary pocket collar",
+          "cosine_similarity": 0.72495896
+        },
+        {
+          "identifier": "GO:0009431",
+          "label": "bacterial-type flagellum basal body, MS ring",
+          "cosine_similarity": 0.72427003
+        },
+        {
+          "identifier": "GO:0020016",
+          "label": "flagellar pocket",
+          "cosine_similarity": 0.72236934
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:hamus",
       "label": "hamus",
       "neighbors": [
@@ -2193,6 +2224,11 @@
           "cosine_similarity": 0.75232431
         },
         {
+          "identifier": "GO:0120118",
+          "label": "flagella connector",
+          "cosine_similarity": 0.75019052
+        },
+        {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
           "cosine_similarity": 0.74734662
@@ -2201,11 +2237,6 @@
           "identifier": "GO:0020016",
           "label": "flagellar pocket",
           "cosine_similarity": 0.74463014
-        },
-        {
-          "identifier": "GO:0000940",
-          "label": "outer kinetochore",
-          "cosine_similarity": 0.73594954
         }
       ]
     },
@@ -2601,14 +2632,14 @@
           "cosine_similarity": 0.75380139
         },
         {
+          "identifier": "GO:0120118",
+          "label": "flagella connector",
+          "cosine_similarity": 0.72495896
+        },
+        {
           "identifier": "GO:0020018",
           "label": "ciliary pocket membrane",
           "cosine_similarity": 0.70741281
-        },
-        {
-          "identifier": "GO:0035974",
-          "label": "meiotic spindle pole body",
-          "cosine_similarity": 0.69904006
         }
       ]
     },

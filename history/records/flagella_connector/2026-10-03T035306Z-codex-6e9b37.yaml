@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/flagella_connector.yaml
+  slug: flagella_connector
+session:
+  id: 2026-10-03T035306Z-codex-6e9b37
+  timestamp: '2026-10-03T03:53:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - taxonomy
+  - functions
+  - evidence
+  - discussions
+  summary: Add flagella connector record
+  details: Added GO:0120118 flagella connector as a Trypanosoma brucei mobile transmembrane
+    junction, with GO cell-junction parentage, a related FC synonym, T. brucei division-stage
+    scope, new-to-old flagellum linkage and distal-tip coupling functions, DOI evidence from
+    the primary ultrastructural and distal-tip proteomics literature, and open discussions
+    for FC protein boundaries and connector motility mechanisms.
