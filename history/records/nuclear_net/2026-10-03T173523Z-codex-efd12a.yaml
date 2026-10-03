@@ -1,0 +1,57 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_net.yaml
+  slug: nuclear_net
+session:
+  id: 2026-10-03T173523Z-codex-efd12a
+  timestamp: '2026-10-03T17:35:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1992
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - mereology
+  - components
+  - canonical_examples
+  - evidence
+  - discussions
+  - images
+  - derived_artifacts
+  summary: 'Adversarial review of nuclear net PR: no actionable defects'
+  details: 'Post-opening adversarial self-review of PR #1992 at scientific head 2dd337a0a0056f28001f2563a16c3e5b2873a389.
+    Read the actual PR file set and committed record. Rechecked Gavelis 2019 Results, Conclusion,
+    Methods and Figure 3 against every structural assertion, specimen-count boundary, centrin/tubulin
+    decision and image caption. Challenged exact GO identity versus a broad parent, nuclear-envelope
+    parthood versus is-a, continuity versus sealed-organelle identity, membrane topology versus
+    physiological causality, and retrospective TEM versus complete three-dimensional taxon
+    coverage. No actionable defects found; no defect issues manufactured. The broad GO:0005622
+    parent is intentional; GO:0044195 is not asserted as equivalent or as a parent with unverified
+    lamina-associated scope. The primary Conclusion explicitly requests higher-resolution
+    centrin confirmation; neither centrin nor spindle tubulin is promoted to a network constituent.
+    The six tunnels are tied to the single reconstructed specimen rather than universal stoichiometry.
+    Re-read Kalvelage 2023 microscopy Results and Figure 1 caption: its conspicuous chromosome-associated
+    structure is only speculatively ER extending into the nucleus, not an identified reticulating
+    nuclear net; the Conclusion calls for future nuclear-net work. Thus it does not warrant
+    an added canonical example, and no biological absence is asserted. Verified committed
+    image bytes against the visually inspected source and SHA-256, taxon/canonical-example
+    match, CC BY 4.0 metadata/JATS and visible generated-page attribution. Structured committed-head
+    checks confirmed exactly one new embedding row and all 839 earlier rows unchanged, no
+    invented functions/graphs/prevalence/measurements/exact xrefs, and only the new record
+    plus its artifacts changed. Local QC passed: 583 tests, 3 skips, 2 dependency warnings;
+    1505 history records valid; 840 strict-valid records; pages/text map current. Network
+    gates passed: 31/31 verbatim snippets, 10/10 matching trait links, 3548 live identifiers
+    with 165 intentional local/unsupported skips and zero unreachable, all supported identifier-label
+    pairs matching. Residual limitations remain explicit: molecular inventory, biological
+    function, cell-cycle dynamics, precise ontology placement and broader occurrence need
+    further evidence. This is a separate self-review, not human status promotion; the record
+    remains PROPOSED. The review-only addition will be validated separately; all final-head
+    and merge-queue checks must pass before merge.'

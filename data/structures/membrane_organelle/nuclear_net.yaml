@@ -1,0 +1,145 @@
+identifier: cellstructuremech:nuclear_net
+label: nuclear net
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: A reticulating double-membrane network characterized inside the nucleus
+  of the dinoflagellate Polykrikos kofoidii. Its strands interconnect dinomitotic
+  tunnels and the peripheral nuclear envelope, with regularly spaced swellings along
+  the inner strands; the network is continuous with and forms part of the nuclear
+  envelope.
+definition_source: DOI:10.1038/s41598-018-37065-w
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T17:14:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T17:15:43Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added verified nuclear-envelope topology, membrane constituent class, Polykrikos
+    microscopy example, ontology and molecular evidence boundaries, unresolved functional
+    scope and inspected CC BY Figure 3.
+  llm_assisted: true
+parent_structures:
+- GO:0005622
+part_of:
+- GO:0005635
+components:
+- component_id: strand_membranes
+  label: membrane
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0016020
+  essentiality: UNKNOWN
+  role: Two membranes line the strands and continue into those lining the dinomitotic
+    tunnels.
+  evidence:
+  - reference: DOI:10.1038/s41598-018-37065-w
+    notes: Results describe double-membrane strands; no molecular inventory or assembly-essentiality
+      test is reported.
+canonical_examples:
+- taxon_id: NCBITaxon:271679
+  taxon_label: Polykrikos kofoidii
+  reference: DOI:10.1038/s41598-018-37065-w
+  note: Wild-collected pseudocolonies. One specimen was reconstructed by FIB-SEM after
+    high-pressure freezing and freeze substitution, complemented by TEM and confocal
+    observations of additional specimens.
+evidence:
+- reference: DOI:10.1038/s41598-018-37065-w
+  notes: Gavelis et al. (2019), Scientific Reports. Primary Results, Discussion, Conclusion,
+    Methods and Figure 3 read via publisher and PMC BioC/JATS. Three-dimensional continuity
+    supports nuclear-envelope parthood; chemical fixation disrupts the finer network.
+    Neither lumenal flow nor a division mechanism was demonstrated.
+- reference: GO:0005622
+  notes: Verified broad intracellular-anatomical-structure parent. This named membrane
+    network is not asserted to be a separate sealed organelle or the entire nuclear
+    envelope.
+discussions:
+- discussion_id: identity_and_ontology_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the nuclear net from broader nuclear-envelope invaginations
+    and neighboring structures.
+  rationale: An exact mapping must denote the same entity rather than import unverified
+    features.
+  notes: All 589 QuickGO nuclear-net search results were retrieved across three pages;
+    no exact name or definition match was found. GO:0044195 nucleoplasmic reticulum
+    describes lamina-associated channels and is not asserted as equivalent or a parent
+    without evidence for that scope. GO:0005622 supplies a conservative broader class.
+    The nuclear envelope is a whole of which the net is part, not an is-a parent.
+    Pusules and nucleus-to-flagellum ribbons are distinct structures.
+  evidence:
+  - reference: DOI:10.1038/s41598-018-37065-w
+    notes: Results and Figure 3 establish the named network and its continuity.
+  - reference: GO:0044195
+    notes: Current QuickGO definition checked; exact equivalence not established.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: centrin_and_spindle_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not promote immunofluorescence proximity into a molecular constituent
+    assignment.
+  rationale: Confocal correspondence alone does not resolve the molecular composition
+    of individual membrane strands.
+  notes: Centrin labeling occurs between spindle-associated signals, but the authors
+    explicitly call for super-resolution confirmation of colocalization. Tubulin labeling
+    identifies spindles traversing nuclear tunnels, not a demonstrated lattice within
+    the net strands. Neither protein is asserted as a net constituent; this is an
+    evidence boundary, not proof of absence.
+  evidence:
+  - reference: DOI:10.1038/s41598-018-37065-w
+    notes: Figure 4 Results and Conclusion distinguish observations from proposed
+      confirmation.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: function_dynamics_and_taxonomic_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Establish molecular machinery, function, cell-cycle dynamics and three-dimensional
+    occurrence beyond Polykrikos kofoidii.
+  rationale: A reconstructed static network does not establish transport, mitotic
+    force generation or clade-wide prevalence.
+  notes: Retrospective two-dimensional images in other dinoflagellates are leads,
+    not proof of the complete reticulating architecture. No prevalence, absence, fixed
+    tunnel-count, transport, causal assembly or division claim is asserted. A later
+    Prorocentrum cordatum study identifies nuclear-net investigation as future work,
+    not an independent reconstruction of this network.
+  evidence:
+  - reference: DOI:10.1038/s41598-018-37065-w
+    notes: Discussion and Conclusion retain these mechanistic and taxonomic questions.
+  - reference: DOI:10.1128/msphere.00038-23
+    notes: 'Kalvelage et al. (2023): primary Conclusion read; nuclear-net work remains
+      prospective.'
+  posed_by: codex
+  posed_date: '2026-10-03'
+images:
+- image_id: pmc_pmc6351617_fig3
+  file: pmc6351617_fig3.jpg
+  file_sha256: 9f2cd13af66cdb9f0321d5a23b6381a3cf3fd7d087be5e87b68c1176619db3de
+  source: PMC
+  source_accession: PMC6351617.1 Fig3
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6351617/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC6351617.1/41598_2018_37065_Fig3_HTML.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Gregory S. Gavelis, Maria Herranz, Kevin C. Wakeman, Christina Ripken,
+    Satoshi Mitarai, Gillian H. Gile, Patrick J. Keeling, Brian S. Leander; CC BY,
+    via PubMed Central
+  modality: SEM
+  caption: 'Polykrikos kofoidii, Figure 3. A-C: FIB-SEM sections showing strands and
+    membranous swellings between the nuclear envelope and a tunnel. D-F: reconstructed
+    net in red over section images; surrounding anatomy is shown for context. G: the
+    six numbered tunnels and connecting strands in this reconstruction. This is the
+    observed count in one specimen, not a universal count.'
+  taxon_id: NCBITaxon:271679
+  taxon_label: Polykrikos kofoidii
+  reference: DOI:10.1038/s41598-018-37065-w
+  retrieved_on: '2026-10-03'
+  notes: Figure 3 from article version PMC6351617.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.

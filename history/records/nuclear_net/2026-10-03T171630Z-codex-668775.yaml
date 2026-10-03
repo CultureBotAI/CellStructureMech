@@ -1,0 +1,51 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nuclear_net.yaml
+  slug: nuclear_net
+session:
+  id: 2026-10-03T171630Z-codex-668775
+  timestamp: '2026-10-03T17:16:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1038/s41598-018-37065-w
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - canonical_examples
+  - evidence
+  - discussions
+  - images
+  summary: Add evidence-backed nuclear net record with explicit structural and molecular boundaries
+  details: 'Created PROPOSED cellstructuremech:nuclear_net through new_record.py and a one-use
+    asserted safe_load mutator with llm_assisted curation event and write_image_with_validated_record
+    delegating to write_validated_structure; mutator removed. Hidden/ignored-inclusive whole-repository
+    search excluding .git internals found only the pusule boundary/source references and ignored
+    identifier cache/report, not a nuclear-net record. Final data/history/research search
+    also checked nuclear_net, dinomitotic, nucleoplasmic reticulum, GO:0044195 and the later
+    DOI/PMID; only pusule matched. Retrieved all 589 distinct QuickGO nuclear net hits on
+    three 200-result pages: no exact label or definition match; dinomitotic search returned
+    zero. Compared GO:0044195 definition and verified GO:0005622, GO:0005635 and GO:0016020
+    at QuickGO; GO:0044195 is not asserted as an equivalence or parent because its lamina-associated
+    channel scope is not established. Nuclear-envelope continuity is modeled as part_of, not
+    is-a. ENA verified NCBITaxon:271679 Polykrikos kofoidii. Gavelis 2019 primary Results,
+    Discussion, Conclusion, Methods and Figure 3 read through publisher and PMC BioC/JATS.
+    Single-specimen FIB-SEM reconstruction and additional TEM/confocal support are distinguished;
+    no universal six-tunnel count. The authors request higher-resolution centrin colocalization
+    confirmation, so centrin/tubulin are not promoted to net components. Kalvelage 2023 primary
+    Conclusion, cultivation context and relevant full-text search checked via ASM/PMC; study
+    treats nuclear-net work as prospective, so no extra taxon/example imported. Figure 3 visually
+    inspected; current PMC6351617.1 identity, JATS CC BY 4.0 and media MD5 verified; ingested
+    bytes equal inspected image. No physiological function, assembly/transport causal graph,
+    clade-wide prevalence or unsupported absence is asserted. Derived artifacts and full local/network
+    gates will be run before commit; post-opening adversarial review will append its own timestamped
+    record.'

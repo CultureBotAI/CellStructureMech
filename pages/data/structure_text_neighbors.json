@@ -11758,6 +11758,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:nuclear_net",
+      "label": "nuclear net",
+      "neighbors": [
+        {
+          "identifier": "GO:0005640",
+          "label": "nuclear outer membrane",
+          "cosine_similarity": 0.85409694
+        },
+        {
+          "identifier": "GO:0005637",
+          "label": "nuclear inner membrane",
+          "cosine_similarity": 0.84953669
+        },
+        {
+          "identifier": "GO:0005635",
+          "label": "nuclear envelope",
+          "cosine_similarity": 0.82754139
+        },
+        {
+          "identifier": "GO:0005789",
+          "label": "endoplasmic reticulum membrane",
+          "cosine_similarity": 0.8018009
+        },
+        {
+          "identifier": "GO:7770040",
+          "label": "epiplastidial membrane",
+          "cosine_similarity": 0.79743116
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005640",
       "label": "nuclear outer membrane",
       "neighbors": [
@@ -13286,6 +13317,11 @@
           "cosine_similarity": 0.6944175
         },
         {
+          "identifier": "cellstructuremech:nuclear_net",
+          "label": "nuclear net",
+          "cosine_similarity": 0.6904175
+        },
+        {
           "identifier": "GO:0042651",
           "label": "thylakoid membrane",
           "cosine_similarity": 0.68540693
@@ -13299,11 +13335,6 @@
           "identifier": "GO:0097614",
           "label": "dinoflagellate hypocone",
           "cosine_similarity": 0.67997529
-        },
-        {
-          "identifier": "GO:0042717",
-          "label": "plasma membrane-derived chromatophore membrane",
-          "cosine_similarity": 0.6752123
         }
       ]
     },
