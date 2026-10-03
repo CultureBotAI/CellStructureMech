@@ -1,0 +1,135 @@
+identifier: GO:7770040
+label: epiplastidial membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The outermost lipid bilayer surrounding complex plastids in organisms
+  that acquired their plastids through secondary endosymbiosis. This membrane is derived
+  from the host cell's endomembrane system and is continuous with the rough endoplasmic
+  reticulum and the outer nuclear envelope. In some species, the cytoplasmic face
+  may be studded with ribosomes.
+definition_source: GO:7770040
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T05:00:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T05:01:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO synonymy and plastid-membrane parentage, curated a reviewed-label-only
+    epiplastidial lipid-bilayer constituent, added Phaeodactylum tricornutum scope,
+    a complex-plastid boundary function, GO and DOI evidence, and open lipid-grounding
+    and periplastidial-boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: cERM
+  synonym_type: EXACT_SYNONYM
+  source: GO:7770040
+- synonym_text: chloroplast ER membrane
+  synonym_type: EXACT_SYNONYM
+  source: GO:7770040
+- synonym_text: epiplastid rough ER
+  synonym_type: EXACT_SYNONYM
+  source: GO:7770040
+- synonym_text: EpM
+  synonym_type: EXACT_SYNONYM
+  source: GO:7770040
+- synonym_text: EPrER
+  synonym_type: EXACT_SYNONYM
+  source: GO:7770040
+parent_structures:
+- GO:0042170
+part_of:
+- GO:0009536
+components:
+- component_id: epiplastidial_lipid_bilayer
+  label: epiplastidial lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Outermost host-endomembrane-derived lipid bilayer that surrounds the complex
+    plastid and can be continuous with rough endoplasmic reticulum and the outer nuclear
+    envelope.
+  evidence:
+  - reference: GO:7770040
+    notes: GO:7770040 defines the epiplastidial membrane as the outermost lipid bilayer
+      around secondary complex plastids.
+  - reference: DOI:10.1016/j.protis.2016.04.001
+    notes: Flori et al. 2016 analyzed the ultrastructure of the Phaeodactylum tricornutum
+      periplastidial compartment.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:7770040 identifies the complete epiplastidial membrane, but
+    no separate source-neutral lipid or membrane-constituent CURIE was curated for
+    its bilayer matrix.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2850
+  taxon_label: Phaeodactylum tricornutum
+  presence: COMMON
+  note: The pennate diatom Phaeodactylum tricornutum contains a complex secondary
+    plastid whose outer epiplastidial membrane encloses the periplastidial compartment.
+  reference: DOI:10.1016/j.protis.2016.04.001
+canonical_examples:
+- taxon_id: NCBITaxon:2850
+  taxon_label: Phaeodactylum tricornutum
+  note: Diatom model used for ultrastructural analysis of the periplastidial compartment
+    and its surrounding complex-plastid membranes.
+  reference: DOI:10.1016/j.protis.2016.04.001
+functions:
+- function_id: complex_plastid_outer_boundary
+  label: complex-plastid outer boundary
+  description: The epiplastidial membrane forms the host-derived outermost membrane
+    of secondary complex plastids and separates the periplastidial compartment from
+    the host endomembrane system.
+  evidence:
+  - reference: GO:7770040
+    notes: The GO definition places the epiplastidial membrane as the outermost host-endomembrane-derived
+      bilayer around complex plastids.
+  - reference: DOI:10.1007/s10265-005-0214-6
+    notes: Hashimoto 2005 reviewed the ultrastructure and division of secondary plastids.
+evidence:
+- reference: GO:7770040
+  notes: Gene Ontology cellular-component term for the epiplastidial membrane.
+- reference: GO:0042170
+  notes: Gene Ontology cellular-component parent term for plastid membrane.
+- reference: GO:0009536
+  notes: Gene Ontology cellular-component term for plastid.
+- reference: DOI:10.1007/s10265-005-0214-6
+  notes: Hashimoto 2005, The ultrastructural features and division of secondary plastids,
+    Journal of Plant Research.
+- reference: DOI:10.1016/j.protis.2016.04.001
+  notes: Flori et al. 2016, Ultrastructure of the Periplastidial Compartment of the
+    Diatom Phaeodactylum tricornutum, Protist.
+- reference: DOI:10.1093/plcell/koae275
+  notes: Gueguen et al. 2024, Monogalactosyldiacylglycerol synthase isoforms play
+    diverse roles inside and outside the diatom plastid, The Plant Cell.
+discussions:
+- discussion_id: ground_epiplastidial_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    epiplastidial membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#epiplastidial_lipid_bilayer
+  rationale: The record is exactly grounded to GO:7770040, but no exact source-neutral
+    lipid or lipid-bilayer CURIE was curated for the host-derived epiplastidial membrane
+    matrix.
+  evidence:
+  - reference: GO:7770040
+    notes: GO:7770040 identifies the complete epiplastidial membrane.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: separate_epiplastidial_from_periplastidial_membrane
+  prompt: Keep the epiplastidial membrane distinct from the periplastidial membrane
+    in future complex-plastid topology.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:7770040 denotes the outermost complex-plastid membrane, whereas GO:7770041
+    denotes the second outermost membrane that borders the periplastidial compartment
+    on its plastid side.
+  evidence:
+  - reference: GO:7770040
+  - reference: GO:7770041
+  posed_by: codex
+  posed_date: '2026-10-03'
