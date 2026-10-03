@@ -1,0 +1,141 @@
+identifier: GO:0106124
+label: reservosome lumen
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: SUBCELLULAR_REGION
+definition: The volume enclosed by the membranes of a reservosome.
+definition_source: GO:0106124
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T00:14:47Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T00:15:39Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO parthood and parentage, Trypanosoma cruzi epimastigote scope,
+    GO/DOI/PMID evidence, a nonmechanistic reservosome-lumen topology graph, and a
+    resolved boundary interpretation that leaves reservosome-matrix constituents on
+    the matrix record.
+  llm_assisted: true
+- timestamp: '2026-10-03T00:29:25Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: 'Resolved #1957 by narrowing the reservosome lumen canonical example to
+    T. cruzi ultrastructure evidence and removing hydrolase and cargo claims from
+    the single-citation example.'
+  llm_assisted: true
+parent_structures:
+- GO:0110165
+part_of:
+- cellstructuremech:reservosome
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  presence: VARIABLE
+  note: Reservosome lumens occur in reservosomes of T. cruzi epimastigotes and are
+    absent from amastigote and trypomastigote life-cycle forms that lack reservosomes.
+  reference: DOI:10.1017/S0031182004005797
+canonical_examples:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  note: Kinetoplastid parasite whose epimastigote reservosomes were analyzed by thin-section,
+    uranyl-acetate, and freeze-fracture electron microscopy to resolve complex internal
+    membrane, vesicle, and lipid-inclusion architecture.
+  reference: DOI:10.1002/jemt.20592
+evidence:
+- reference: GO:0106124
+  notes: Gene Ontology cellular-component term for the reservosome lumen, defined
+    as the volume enclosed by the membranes of a reservosome.
+- reference: GO:0110165
+  notes: Gene Ontology cellular-component parent term for cellular anatomical structures.
+- reference: GO:0106123
+  notes: Gene Ontology cellular-component term for the containing reservosome organelle.
+- reference: GO:0106126
+  notes: Gene Ontology cellular-component term for the lipid-bilayer reservosome membrane
+    that bounds the lumen.
+- reference: GO:0106125
+  notes: Gene Ontology cellular-component term for the distinct reservosome matrix
+    inside the reservosome.
+- reference: PMID:18452191
+  notes: PubMed record for the Sant'Anna et al. 2008 reservosome ultrastructure study.
+- reference: DOI:10.1002/jemt.20592
+  notes: Sant'Anna et al. 2008, New insights into the morphology of Trypanosoma cruzi
+    reservosome, Microscopy Research and Technique.
+- reference: DOI:10.1017/S0031182004005797
+  notes: 'Figueiredo et al. 2004, Reservosome: an endocytic compartment in epimastigote
+    forms of the protozoan Trypanosoma cruzi (Kinetoplastida: Trypanosomatidae), Parasitology.'
+- reference: DOI:10.1002/pmic.200800730
+  notes: Sant'Anna et al. 2009, Subcellular proteomics of Trypanosoma cruzi reservosomes,
+    Proteomics.
+causal_graphs:
+- graph_id: reservosome_lumen_topology
+  title: Reservosome lumen topology
+  description: The reservosome lumen is the internal volume of a T. cruzi reservosome
+    and is bounded by the reservosome membrane.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures the defining lumen boundary and parthood topology
+    without duplicating whole-reservosome endocytic storage or reservosome-matrix
+    architecture.
+  nodes:
+  - node_id: reservosome_lumen
+    label: reservosome lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0106124
+  - node_id: reservosome_membrane
+    label: reservosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0106126
+  - node_id: reservosome
+    label: reservosome
+    node_type: ORGANELLE
+    grounding: cellstructuremech:reservosome
+  edges:
+  - subject: reservosome_lumen
+    predicate: is part of
+    object: reservosome
+    description: The reservosome lumen is the internal compartment inside a reservosome.
+    evidence:
+    - reference: GO:0106124
+      notes: GO:0106124 is the reservosome lumen cellular-component term.
+    - reference: GO:0106123
+      notes: GO:0106123 identifies the containing reservosome organelle.
+  - subject: reservosome_membrane
+    predicate: bounds
+    object: reservosome_lumen
+    description: The reservosome membrane is the lipid-bilayer boundary of the reservosome
+      lumen.
+    evidence:
+    - reference: GO:0106124
+      notes: GO:0106124 defines the reservosome lumen as the volume enclosed by reservosome
+        membranes.
+    - reference: GO:0106126
+      notes: GO:0106126 identifies the lipid bilayer surrounding a reservosome.
+discussions:
+- discussion_id: lumen_boundary_not_matrix_components
+  prompt: Represent the reservosome matrix as a separate internal substructure rather
+    than duplicating its membranes, vesicles, or lipid inclusions as direct lumen
+    components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  - causal_graphs#reservosome_lumen_topology
+  rationale: GO:0106124 denotes the volume enclosed by reservosome membranes, whereas
+    GO:0106125 denotes the internal reservosome matrix composed of planar membranes,
+    vesicles, and lipid inclusions.
+  resolution_note: Curated only the lumen-to-reservosome topology on this record and
+    left matrix constituents on the distinct reservosome matrix record.
+  evidence:
+  - reference: GO:0106124
+    notes: GO:0106124 identifies the internal reservosome lumen.
+  - reference: GO:0106125
+    notes: GO:0106125 identifies the reservosome matrix and lists planar membranes,
+      vesicles, and lipid inclusions in its definition.
+  - reference: DOI:10.1002/jemt.20592
+    notes: Sant'Anna et al. 2008 directly observed the complex internal architecture
+      of T. cruzi reservosomes by electron microscopy.
+  posed_by: codex
+  posed_date: '2026-10-03'

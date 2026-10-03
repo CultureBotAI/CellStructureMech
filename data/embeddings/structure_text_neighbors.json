@@ -12666,6 +12666,11 @@
           "cosine_similarity": 0.86028298
         },
         {
+          "identifier": "GO:0106124",
+          "label": "reservosome lumen",
+          "cosine_similarity": 0.8276086
+        },
+        {
           "identifier": "GO:0055037",
           "label": "recycling endosome",
           "cosine_similarity": 0.77819352
@@ -12679,11 +12684,37 @@
           "identifier": "GO:0031904",
           "label": "endosome lumen",
           "cosine_similarity": 0.77485148
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0106124",
+      "label": "reservosome lumen",
+      "neighbors": [
+        {
+          "identifier": "GO:0071682",
+          "label": "endocytic vesicle lumen",
+          "cosine_similarity": 0.86726194
         },
         {
-          "identifier": "GO:0005770",
-          "label": "late endosome",
-          "cosine_similarity": 0.7724111
+          "identifier": "GO:0060205",
+          "label": "cytoplasmic vesicle lumen",
+          "cosine_similarity": 0.85703314
+        },
+        {
+          "identifier": "GO:0106125",
+          "label": "reservosome matrix",
+          "cosine_similarity": 0.85211798
+        },
+        {
+          "identifier": "GO:0031904",
+          "label": "endosome lumen",
+          "cosine_similarity": 0.84896185
+        },
+        {
+          "identifier": "GO:0005775",
+          "label": "vacuolar lumen",
+          "cosine_similarity": 0.84521121
         }
       ]
     },
@@ -12695,6 +12726,11 @@
           "identifier": "cellstructuremech:reservosome",
           "label": "reservosome",
           "cosine_similarity": 0.86028298
+        },
+        {
+          "identifier": "GO:0106124",
+          "label": "reservosome lumen",
+          "cosine_similarity": 0.85211798
         },
         {
           "identifier": "cellstructuremech:multivesicular_body_intraluminal_vesicle",
@@ -12710,11 +12746,6 @@
           "identifier": "GO:0071682",
           "label": "endocytic vesicle lumen",
           "cosine_similarity": 0.75174391
-        },
-        {
-          "identifier": "cellstructuremech:copi_coated_vesicle_lumen",
-          "label": "COPI-coated vesicle lumen",
-          "cosine_similarity": 0.75027272
         }
       ]
     },
@@ -12764,6 +12795,11 @@
           "cosine_similarity": 0.84044481
         },
         {
+          "identifier": "GO:0106124",
+          "label": "reservosome lumen",
+          "cosine_similarity": 0.83716882
+        },
+        {
           "identifier": "GO:0060205",
           "label": "cytoplasmic vesicle lumen",
           "cosine_similarity": 0.83485313
@@ -12772,11 +12808,6 @@
           "identifier": "GO:0005775",
           "label": "vacuolar lumen",
           "cosine_similarity": 0.82811998
-        },
-        {
-          "identifier": "GO:0033985",
-          "label": "acidocalcisome lumen",
-          "cosine_similarity": 0.82049512
         }
       ]
     },
