@@ -1,0 +1,62 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/tubulin_spool.yaml
+  slug: tubulin_spool
+session:
+  id: 2026-10-03T194705Z-codex-cffab8
+  timestamp: '2026-10-03T19:47:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1996
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - evidence
+  - datasets
+  - discussions
+  - images
+  summary: Adversarial post-opening review of tubulin spool PR 1996
+  details: 'Separate post-opening adversarial self-review of PR1996 at scientific head a1fe41a2b93ec81ce3ae2fb7a90092278db83b53;
+    this is not an independent second reviewer. Read the submitted 244-line record and verified
+    the remote head and exact 14-file scope. Challenged assembly-versus-protein identity,
+    overly broad ontology equivalence, apparent single-microtubule continuity, exact subtype
+    claims, co-embedded culture identity, sampled taxonomic scope, functional speculation,
+    image panel identity, expansion scale and licence. No concrete defect found; no issue
+    or scientific fix warranted. The record remains PROPOSED. Primary Results describes an
+    apparent extension, not resolved lattice topology or a one-microtubule stoichiometry;
+    OTHER kind, broad intracellular parent, cytoskeleton parthood and open topology discussion
+    preserve that distinction. Tubulin-family grounding does not assert every subtype, exact
+    ortholog or assembly essentiality. Desmose, swimming reinforcement and nuclear-envelope
+    roles remain hypotheses, not functions/traits/causal edges. Sampled Kareniaceae are not
+    universal prevalence; two observed locations are not a universal copy number. Re-read
+    Table S1 rows46,1375,1376,1384 and checked its creation-time hash: RCC10719 is Takayama
+    helix with other code P22-120; combined identifiers are two-species gels, not strain synonyms;
+    row1384 is a one-species spool-positive E7Ab/interphase observation. No raw-volume-to-Figure2
+    mapping is claimed. DNA, cortical centrin and flagellar/cortical modification panels are
+    correctly excluded as unproven spool constituents. Re-read Figure2 morphology and primary
+    scale statements: the figure legend says adjusted, Methods says unadjusted scale bars.
+    The record asserts no absolute physical properties and exposes the discrepancy in the
+    visible caption. Visually reinspected committed publisher Figure2; D-E contain the Takayama
+    spool micrographs/enlargements and plot, other panels are contextual taxa/structures.
+    Re-fetched publisher-deposited Crossref VOR licence (CC BY4.0), matching the article licence.
+    A Python image request received HTTP403; the previously successful public curl route fetched
+    the same original JPEG, byte-identical to the committed 1902497-byte file, SHA256 e979bacf2fad45501744aa5dbc2fd75c0fc2ab2b5e6a6be32be77aad0b1f9046.
+    No synthetic, cropped or rescaled microscopy is introduced. Rendered image path, canonical
+    taxon, caption, attribution, source and licence link verified. All843 previous embedding
+    rows are unchanged and exactly one spool row is added; published map/neighbors match source
+    artifacts. Full local QC passed before commit:591 tests,3 skips,2 dependency warnings;844
+    structures and1513 histories valid;site/docs current. External gates passed:31/31 snippets
+    verbatim,10/10 traitlinks matching,3560 CURIEs OK plus169 intentional skips and zero unreachable;
+    all supported labels match (3438 canonical,48 synonym,8 accepted exceptions,431 no adapter).
+    This append-only review is the only follow-up file; full history validation and exact-final-head
+    CI are required before merge.'
