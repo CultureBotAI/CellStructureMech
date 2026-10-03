@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/phycobilisome_rod.yaml
+  slug: phycobilisome_rod
+session:
+  id: 2026-10-03T023037Z-claude-code-f7ee44
+  timestamp: '2026-10-03T02:30:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add phycobilisome rod record
+  details: Added a minted cellstructuremech:phycobilisome_rod record as a peripheral phycobiliprotein
+    light-harvesting subassembly of the phycobilisome, with GO:0030076 parentage, GO:0030089
+    parthood, reviewed-label-only rod phycobiliprotein/linker/phycobilin components, cyanobacterial
+    and red-algal scope, Thermostichus and Nostoc examples, a photosynthetic light-harvesting
+    function, DOI/GO/InterPro evidence, a nonmechanistic rod light-capture graph, and discussions
+    that record broad InterPro grounding and the rod boundary relative to the whole phycobilisome
+    and allophycocyanin core.

@@ -1683,6 +1683,15 @@
   "definition": "Allophycocyanin-containing central cylinder assembly of a phycobilisome that receives excitation energy from peripheral rods and routes it toward chlorophyll photosystems."
  },
  {
+  "identifier": "cellstructuremech:phycobilisome_rod",
+  "label": "phycobilisome rod",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/phycobilisome_rod.html",
+  "definition": "Peripheral phycobiliprotein cylinder subassembly of a phycobilisome that binds phycobilin chromophores, absorbs excitation energy, and transfers it inward to the allophycocyanin core."
+ },
+ {
   "identifier": "GO:0030094",
   "label": "plasma membrane-derived photosystem I",
   "category": "ENERGY_COMPLEX",

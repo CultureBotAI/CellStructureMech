@@ -1,0 +1,270 @@
+identifier: cellstructuremech:phycobilisome_rod
+label: phycobilisome rod
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Peripheral phycobiliprotein cylinder subassembly of a phycobilisome that
+  binds phycobilin chromophores, absorbs excitation energy, and transfers it inward
+  to the allophycocyanin core.
+definition_source: DOI:10.1146/annurev-biophys-062920-063657
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T02:28:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T02:29:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added light-harvesting-complex parentage, phycobilisome parthood, rod phycobiliprotein/linker/phycobilin
+    components, cyanobacterial and red-algal scope, Thermostichus and Nostoc examples,
+    a light-harvesting function, DOI/GO/InterPro evidence, a nonmechanistic rod light-capture
+    graph, and grounding and boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: phycobilisome peripheral rod
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1146/annurev-biophys-062920-063657
+parent_structures:
+- GO:0030076
+part_of:
+- GO:0030089
+components:
+- component_id: rod_phycobiliproteins
+  label: rod phycobiliproteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cpcA
+  - cpcB
+  - cpeA
+  - cpeB
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro:IPR012128 covers the broader phycobilisome alpha/beta
+    subunit family, including allophycocyanin core subunits as well as rod phycocyanin
+    and phycoerythrin subunits. No exact source-neutral InterPro, Pfam, NCBIfam, or
+    Complex Portal CURIE for the complete rod-only phycobiliprotein set was verified.
+  role: Pigment-binding alpha and beta phycobiliprotein subunits that assemble into
+    peripheral rod disks and absorb incoming light.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviews peripheral rod cylinders and the phycobiliproteins that
+      form them in phycobilisomes.
+  - reference: DOI:10.1038/s41467-022-30962-9
+    notes: Kawakami et al. 2022 resolved stacked phycocyanin rod disks in an intact
+      thermophilic cyanobacterial phycobilisome.
+- component_id: rod_linker_polypeptides
+  label: phycobilisome rod linker polypeptides
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cpcC
+  - cpcD
+  - cpcG
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rod, rod-cap, and rod-core linker polypeptides are structurally
+    distinct. No exact taxon-agnostic InterPro, Pfam, NCBIfam, or Complex Portal CURIE
+    spanning the mixed phycobilisome rod linker set was verified.
+  role: Rod-associated linkers stabilize stacked phycobiliprotein disks and tune chromophore
+    energies for transfer from rods toward the allophycocyanin core.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 summarizes rod and rod-core linker roles in phycobilisome assembly
+      and energy transfer.
+  - reference: DOI:10.1038/s41467-022-30962-9
+    notes: Kawakami et al. 2022 modeled linker positions in thermophilic cyanobacterial
+      phycocyanin rods.
+- component_id: rod_phycobilin_chromophores
+  label: rod-bound phycobilin chromophores
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Phycobilisome rods carry covalently attached bilin pigments, but
+    this pass did not verify an exact ChEBI CURIE for the complete rod-bound chromophore
+    set.
+  role: Covalently attached linear tetrapyrrole pigments that absorb photons and initiate
+    rod-to-core excitation transfer.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviews phycobilins attached to peripheral rod phycobiliproteins
+      as the light-absorbing pigments of phycobilisomes.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Cyanobacterial phycobilisomes use peripheral rods to collect excitation energy
+    and funnel it into allophycocyanin cores.
+  reference: DOI:10.1146/annurev-biophys-062920-063657
+- taxon_id: NCBITaxon:2763
+  taxon_label: Rhodophyta
+  presence: COMMON
+  note: Red algal phycobilisomes share the core-and-rod architecture that positions
+    rods around a central allophycocyanin core.
+  reference: DOI:10.1146/annurev-biophys-062920-063657
+canonical_examples:
+- taxon_id: NCBITaxon:32053
+  taxon_label: Thermostichus vulcanus
+  note: Thermophilic cyanobacterium whose stacked phycocyanin rods were resolved in
+    an intact light-harvesting phycobilisome.
+  reference: DOI:10.1038/s41467-022-30962-9
+- taxon_id: NCBITaxon:103690
+  taxon_label: Nostoc sp. PCC 7120 = FACHB-418
+  note: Cyanobacterial model used for single-particle EM of intact phycobilisomes
+    with peripheral rods.
+  reference: DOI:10.1038/cr.2015.59
+functions:
+- function_id: rod_to_core_light_harvesting
+  label: photosynthesis, light harvesting
+  grounding: GO:0009765
+  description: Phycobilisome rods absorb light in peripheral phycobiliprotein-bound
+    bilins and transfer the resulting excitation inward to the allophycocyanin core.
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviews the rod-to-core direction of energy transfer through phycobilisomes.
+  - reference: DOI:10.1038/s41467-022-30962-9
+    notes: Kawakami et al. 2022 resolved rods in an intact thermophilic cyanobacterial
+      light-harvesting phycobilisome.
+evidence:
+- reference: DOI:10.1146/annurev-biophys-062920-063657
+  notes: Sui 2021, Structure of Phycobilisomes, Annual Review of Biophysics.
+- reference: DOI:10.1038/s41467-022-30962-9
+  notes: Kawakami et al. 2022, Core and rod structures of a thermophilic cyanobacterial
+    light-harvesting phycobilisome, Nature Communications.
+- reference: DOI:10.1038/cr.2015.59
+  notes: Chang et al. 2015, Structural organization of an intact phycobilisome and
+    its association with photosystem II, Cell Research.
+- reference: GO:0030076
+  notes: Gene Ontology cellular-component term for the broader light-harvesting complex
+    class.
+- reference: GO:0030089
+  notes: Gene Ontology cellular-component term for the containing phycobilisome complex.
+- reference: GO:0009765
+  notes: Gene Ontology biological-process term for photosynthesis, light harvesting.
+- reference: InterPro:IPR012128
+  notes: InterPro family for phycobilisome alpha/beta subunits; broader than the rod-only
+    phycobiliproteins because it also includes allophycocyanin core subunits.
+causal_graphs:
+- graph_id: phycobilisome_rod_light_capture
+  title: Peripheral rods absorb light and transfer excitation to the core
+  description: Rod phycobiliproteins bind phycobilin chromophores that capture light.
+    Rod linkers stabilize disk stacking and tune the downhill transfer path toward
+    the allophycocyanin core.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records rod assembly and rod-to-core transfer directionality
+    without modeling individual bilin sites or lineage-specific rod composition.
+  nodes:
+  - node_id: rod_phycobiliproteins
+    label: rod phycobiliproteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: rod_phycobiliproteins
+  - node_id: rod_linkers
+    label: phycobilisome rod linker polypeptides
+    node_type: GENE_OR_PROTEIN
+    component_ref: rod_linker_polypeptides
+  - node_id: rod_chromophores
+    label: rod-bound phycobilin chromophores
+    node_type: CHEMICAL
+    component_ref: rod_phycobilin_chromophores
+  - node_id: phycobilisome_rod
+    label: phycobilisome rod
+    node_type: STRUCTURE
+    grounding: cellstructuremech:phycobilisome_rod
+  - node_id: allophycocyanin_core
+    label: allophycocyanin core
+    node_type: STRUCTURE
+    grounding: cellstructuremech:phycobilisome_core
+  - node_id: light_harvesting
+    label: photosynthesis, light harvesting
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009765
+  edges:
+  - subject: rod_phycobiliproteins
+    predicate: assemble into
+    object: phycobilisome_rod
+    description: Rod alpha and beta phycobiliproteins assemble into stacked peripheral
+      phycobilisome rod disks.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-30962-9
+      notes: Kawakami et al. 2022 resolved stacked phycocyanin disks in thermophilic
+        cyanobacterial rods.
+  - subject: rod_linkers
+    predicate: stabilize and tune
+    object: phycobilisome_rod
+    description: Rod linker polypeptides organize rod disk stacking and tune bilin
+      energies along the rod-to-core path.
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-062920-063657
+      notes: Sui 2021 reviews phycobilisome rod linkers that organize phycobiliprotein
+        disks and tune spectral properties.
+  - subject: rod_chromophores
+    predicate: are bound by
+    object: rod_phycobiliproteins
+    description: Rod phycobiliproteins covalently bind phycobilin chromophores that
+      absorb photons.
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-062920-063657
+      notes: Sui 2021 reviews the bilin chromophores carried by phycobilisome rod
+        proteins.
+  - subject: phycobilisome_rod
+    predicate: transfers excitation to
+    object: allophycocyanin_core
+    description: Peripheral rods pass absorbed excitation energy toward the central
+      allophycocyanin core.
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-062920-063657
+      notes: Sui 2021 describes the direction of excitation transfer from rods to
+        the allophycocyanin core.
+  - subject: phycobilisome_rod
+    predicate: contributes to
+    object: light_harvesting
+    description: Rod light capture is the peripheral input step of phycobilisome-mediated
+      photosynthetic light harvesting.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-30962-9
+      notes: Kawakami et al. 2022 resolved rods as light-harvesting subassemblies
+        of an intact cyanobacterial phycobilisome.
+discussions:
+- discussion_id: ground_phycobilisome_rod_constituents
+  prompt: Resolve exact InterPro, Pfam, NCBIfam, Complex Portal, or ChEBI accessions
+    for phycobilisome rod phycobiliproteins, rod linkers, and bound phycobilins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rod_phycobiliproteins
+  - components#rod_linker_polypeptides
+  - components#rod_phycobilin_chromophores
+  rationale: This first rod child record keeps the mixed rod phycobiliprotein, linker,
+    and chromophore groups reviewed-label-only because a broad phycobiliprotein family
+    would blur rod constituents with core constituents.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviews the distinct rod phycobiliproteins, rod linkers, and phycobilins
+      used by phycobilisomes.
+  - reference: InterPro:IPR012128
+    notes: InterPro:IPR012128 is broader than rod phycobiliproteins because it also
+      covers allophycocyanin core subunits.
+- discussion_id: rod_not_whole_phycobilisome
+  prompt: Keep the phycobilisome rod distinct from the whole phycobilisome and from
+    the allophycocyanin core.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - part_of
+  rationale: GO:0030089 denotes the complete phycobilisome. The rod is a peripheral
+    phycobiliprotein subassembly of the complete antenna, while the allophycocyanin
+    core is a different central subassembly that accepts rod excitation.
+  resolution_note: Minted cellstructuremech:phycobilisome_rod with GO:0030076 as a
+    broader light-harvesting-complex parent and GO:0030089 as the containing phycobilisome.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-062920-063657
+    notes: Sui 2021 reviews the phycobilisome as a core-and-rod light-harvesting complex.
+  - reference: GO:0030089
+    notes: GO:0030089 identifies the whole phycobilisome rather than a rod subassembly.
