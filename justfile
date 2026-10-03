@@ -237,3 +237,8 @@ evidence-verify *args:
 # trait index. Network unless a checkout is present.
 check-trait-links *args:
     uv run python scripts/check_trait_links.py {{args}}
+
+# Preview full common map inputs; --limit/--record select an explicit canary.
+# Add --output build/text-map/inputs.jsonl to atomically export the JSONL.
+text-map-inputs *args:
+    uv run python scripts/text_map_inputs.py "$@"
