@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/reservosome_lumen.yaml
+  slug: reservosome_lumen
+session:
+  id: 2026-10-03T001615Z-codex-b16e5d
+  timestamp: '2026-10-03T00:16:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GO-backed reservosome lumen record
+  details: Created data/structures/membrane_organelle/reservosome_lumen.yaml for GO:0106124
+    with GO:0110165 cellular-anatomical-structure parentage, parthood to the curated cellstructuremech:reservosome
+    organelle, Trypanosoma cruzi epimastigote scope, GO/PMID/DOI evidence for the lumen, reservosome
+    membrane, containing reservosome, and reservosome matrix, a nonmechanistic reservosome-lumen
+    topology graph, and a resolved interpretation that keeps reservosome matrix constituents
+    on the distinct reservosome matrix record.
