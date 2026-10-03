@@ -22,6 +22,13 @@ curation_history:
     gliding-motility and host-cell-invasion functions, a GAP50-anchored glideosome
     function graph, and a component grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-03T01:12:52Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: 'Addressed PR #1958 review issue #1959 by renaming the MLC1-centered component
+    and causal node to a source-neutral glideosome myosin light-chain cohort while
+    retaining MLC1 as the Toxoplasma gene symbol.'
+  llm_assisted: true
 synonyms:
 - synonym_text: actin-myosin glideosome
   synonym_type: EXACT_SYNONYM
@@ -47,8 +54,8 @@ components:
     notes: Gene Ontology defines the glideosome as containing myosin heavy chains.
   - reference: DOI:10.1083/jcb.200311137
     notes: Gaskins et al. 2004 identified TgMyoA in a Toxoplasma glideosome complex.
-- component_id: mlc1_myosin_light_chain
-  label: MLC1 myosin light chain
+- component_id: glideosome_myosin_light_chains
+  label: glideosome myosin light chains
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
@@ -58,7 +65,7 @@ components:
   grounding_notes: Apicomplexan glideosome light chains include TgMLC1 and Plasmodium
     MTIP-like proteins, but no exact source-neutral CURIE for this functional light-chain
     cohort was verified in this pass.
-  role: Myosin light-chain partner of the MyoA heavy chain in the glideosome motor.
+  role: Myosin light-chain partners of the MyoA heavy chain in the glideosome motor.
   evidence:
   - reference: GO:0160055
     notes: Gene Ontology defines the glideosome as containing myosin light chains.
@@ -175,10 +182,10 @@ causal_graphs:
     label: MyoA class XIV myosin heavy chain
     node_type: GENE_OR_PROTEIN
     component_ref: myoa_class_xiv_myosin_heavy_chain
-  - node_id: mlc1_myosin_light_chain
-    label: MLC1 myosin light chain
+  - node_id: glideosome_myosin_light_chains
+    label: glideosome myosin light chains
     node_type: GENE_OR_PROTEIN
-    component_ref: mlc1_myosin_light_chain
+    component_ref: glideosome_myosin_light_chains
   - node_id: gap45_glideosome_associated_protein
     label: Glideosome-associated protein 45
     node_type: GENE_OR_PROTEIN
@@ -210,10 +217,10 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.200311137
       notes: Gaskins et al. 2004 identified TgMyoA in the Toxoplasma glideosome complex.
-  - subject: mlc1_myosin_light_chain
+  - subject: glideosome_myosin_light_chains
     predicate: assembles into
     object: glideosome
-    description: TgMLC1 is the myosin light-chain partner in the Toxoplasma glideosome.
+    description: TgMLC1 is a myosin light-chain partner in the Toxoplasma glideosome.
     evidence:
     - reference: DOI:10.1083/jcb.200311137
       notes: Gaskins et al. 2004 identified TgMLC1 in the Toxoplasma glideosome complex.
@@ -266,7 +273,7 @@ discussions:
   status: OPEN
   attaches_to:
   - components#myoa_class_xiv_myosin_heavy_chain
-  - components#mlc1_myosin_light_chain
+  - components#glideosome_myosin_light_chains
   - components#gap50_membrane_receptor
   - causal_graphs#gap50_anchored_glideosome_motor
   rationale: The first glideosome record uses exact Pfam grounding for GAP45 but leaves

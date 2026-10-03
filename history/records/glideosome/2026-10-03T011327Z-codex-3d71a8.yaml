@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/glideosome.yaml
+  slug: glideosome
+session:
+  id: 2026-10-03T011327Z-codex-3d71a8
+  timestamp: '2026-10-03T01:13:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1959
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1958
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address glideosome review issue
+  details: 'Addressed PR #1958 review issue #1959 by renaming the MLC1-centered glideosome
+    component and causal node to the source-neutral glideosome myosin light-chain cohort.
+    Retained MLC1 only as a Toxoplasma gene symbol and updated the causal graph edge and grounding
+    TODO attachment to reference the renamed component.'
