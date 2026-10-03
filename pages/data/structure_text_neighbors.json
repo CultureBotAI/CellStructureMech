@@ -13091,6 +13091,37 @@
       ]
     },
     {
+      "identifier": "GO:0036007",
+      "label": "scintillon",
+      "neighbors": [
+        {
+          "identifier": "GO:0042651",
+          "label": "thylakoid membrane",
+          "cosine_similarity": 0.68540693
+        },
+        {
+          "identifier": "GO:0034357",
+          "label": "photosynthetic membrane",
+          "cosine_similarity": 0.68062272
+        },
+        {
+          "identifier": "GO:0097614",
+          "label": "dinoflagellate hypocone",
+          "cosine_similarity": 0.67997529
+        },
+        {
+          "identifier": "GO:0042717",
+          "label": "plasma membrane-derived chromatophore membrane",
+          "cosine_similarity": 0.6752123
+        },
+        {
+          "identifier": "GO:0030089",
+          "label": "phycobilisome",
+          "cosine_similarity": 0.66793065
+        }
+      ]
+    },
+    {
       "identifier": "GO:0062160",
       "label": "spongiome",
       "neighbors": [
