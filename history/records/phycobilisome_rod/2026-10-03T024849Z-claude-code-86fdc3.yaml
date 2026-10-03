@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/phycobilisome_rod.yaml
+  slug: phycobilisome_rod
+session:
+  id: 2026-10-03T024849Z-claude-code-86fdc3
+  timestamp: '2026-10-03T02:48:49Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1963
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1962
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Tighten phycobilisome rod literature evidence
+  details: 'Addressed adversarial review issue #1963 by replacing rod-specific Sui 2021 and
+    Chang 2015 assertions with directly readable Kawakami 2022 evidence, removing unsupported
+    cpeA/cpeB gene symbols and the PCC 7120 canonical example, and tightening the Thermostichus
+    vulcanus rod note to avoid implying that the isolated PC rod was resolved inside a fully
+    intact phycobilisome.'
