@@ -1,0 +1,288 @@
+identifier: cellstructuremech:bacterial_aggresome
+label: bacterial aggresome
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A stress-associated, membraneless cytoplasmic inclusion in bacteria that
+  concentrates endogenous proteins and can sequester mRNA; Escherichia coli aggresomes
+  exhibit liquid-like dynamics and preserve selected transcripts during stress.
+definition_source: DOI:10.1038/s41564-025-02086-5
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T12:38:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T12:40:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added four grounded constituents, a strain-scoped canonical example, mRNA-stabilization
+    function, six-edge mechanistic graph, verified inclusion-body parentage and explicit
+    identity, composition and fitness boundaries.
+  llm_assisted: true
+synonyms:
+- synonym_text: bacterial stress granule
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41564-025-02086-5
+parent_structures:
+- GO:0016234
+part_of:
+- GO:0005737
+components:
+- component_id: hslu
+  label: Heat shock protein HslU
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR004491
+  gene_symbols:
+  - hslU
+  essentiality: UNKNOWN
+  role: Endogenous protein constituent used as an aggresome marker in E. coli; its
+    enrichment does not establish that it is an essential assembly scaffold.
+  evidence:
+  - reference: DOI:10.1126/sciadv.abh2929
+    notes: Chromosomal fluorescent fusions accumulate in aggresomes and co-localize
+      with Kbl and AcnB. HslU responds earliest among these three tested markers.
+  - reference: InterPro:IPR004491
+    notes: Verified whole-protein HslU family. This is the ATPase subunit, not HslV
+      or the complete HslUV protease complex.
+- component_id: kbl
+  label: 2-amino-3-ketobutyrate coenzyme A ligase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011282
+  gene_symbols:
+  - kbl
+  essentiality: UNKNOWN
+  role: Metabolic-enzyme constituent detected in E. coli aggresomes; incorporation
+    kinetics differ from those of HslU and AcnB.
+  evidence:
+  - reference: DOI:10.1126/sciadv.abh2929
+    notes: Chromosomal Kbl fluorescent fusions form foci co-localizing with the other
+      aggresome markers; photobleaching experiments examine its internal mobility.
+  - reference: InterPro:IPR011282
+    notes: Verified Kbl whole-protein family, not a generic pyridoxal-phosphate-dependent
+      enzyme superfamily.
+- component_id: acnb
+  label: Aconitase B
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR004406
+  gene_symbols:
+  - acnB
+  essentiality: UNKNOWN
+  role: Metabolic-enzyme constituent recruited into E. coli aggresomes with slower
+    observed clustering than HslU or Kbl.
+  evidence:
+  - reference: DOI:10.1126/sciadv.abh2929
+    notes: Chromosomal AcnB fluorescent fusions co-localize with the aggresome markers;
+      the study does not establish an assembly requirement for AcnB.
+  - reference: InterPro:IPR004406
+    notes: Verified Aconitase B family, distinct from generic aconitase groupings.
+- component_id: mrna
+  label: mRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000234
+  essentiality: UNKNOWN
+  role: Selectively enriched RNA cargo. Longer transcripts partition preferentially
+    under the tested stresses; this is not a claim that every mRNA enters the bodies
+    or that mRNA is the only RNA class present.
+  evidence:
+  - reference: DOI:10.1038/s41564-025-02086-5
+    notes: Fractionation/RNA-seq, RNA-FISH and tagged-transcript imaging support enrichment.
+      nuoJ, nlpE, glpK and mukF are experimentally followed examples; other tested
+      transcripts remain cytosolic.
+canonical_examples:
+- taxon_id: NCBITaxon:511145
+  taxon_label: Escherichia coli str. K-12 substr. MG1655
+  note: Methods identify MG1655 carrying a chromosomal HslU-GFP fusion for aggresome
+    isolation after arsenite exposure, starvation or HokB induction. These are experimentally
+    induced states, not strain-wide prevalence estimates.
+  reference: DOI:10.1038/s41564-025-02086-5
+functions:
+- function_id: mrna_stabilization
+  label: mRNA stabilization
+  grounding: GO:0048255
+  description: Preserves selected mRNAs during the assayed E. coli stress conditions.
+    Preserved transcripts can return to the cytosol and support translation after
+    stress removal.
+  evidence:
+  - reference: DOI:10.1038/s41564-025-02086-5
+    notes: Isolated-fraction RNA integrity assays, RNase charge mutants and transcription/translation-inhibitor
+      controls support RNA protection and subsequent reuse.
+evidence:
+- reference: DOI:10.1126/sciadv.abh2929
+  notes: Jin et al. 2021, Membraneless organelles formed by liquid-liquid phase separation
+    increase bacterial fitness. Results and methods read through NCBI PMC BioC (PMC8528417).
+    Protein tracking, fusion and photobleaching support liquid-like dynamics in the
+    assayed states.
+- reference: DOI:10.1038/s41564-025-02086-5
+  notes: Pei et al. 2025, Aggresomes protect mRNA under stress in Escherichia coli.
+    Results, methods and Figures 5-6 read in the openly available accepted manuscript
+    at https://eprints.whiterose.ac.uk/id/eprint/229675/ .
+causal_graphs:
+- graph_id: aggresome_mrna_preservation
+  title: Selective RNase exclusion preserves mRNA for reuse after stress
+  description: E. coli aggresomes sequester selected transcripts while limiting access
+    by tested mRNA-degrading RNases; stress relief releases RNA that can support renewed
+    translation.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Based on arsenite-induced E. coli imaging, RNA-integrity assays and
+    RNase charge mutants, with starvation and HokB comparisons. Exclusion refers to
+    RNB, RBN and ORN, not all RNases. Charge-dependent partitioning is supported experimentally;
+    RNA itself being the repulsive agent remains a proposed explanation. No general
+    survival or antibiotic-resistance edge is inferred.
+  nodes:
+  - node_id: aggresome
+    label: bacterial aggresome
+    node_type: STRUCTURE
+    grounding: cellstructuremech:bacterial_aggresome
+  - node_id: mrna
+    label: mRNA
+    node_type: RNA
+    grounding: SO:0000234
+    component_ref: mrna
+  - node_id: rnase_exclusion
+    label: Charge-dependent exclusion of tested mRNA-degrading RNases
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: preservation
+    label: mRNA stabilization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0048255
+  - node_id: stress_removal
+    label: Removal of arsenite stress
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: rna_release
+    label: Release of stored mRNA to the cytosol
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: translation
+    label: Translation from preserved mRNA
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: aggresome
+    predicate: sequesters
+    object: mrna
+    description: Aggresomes concentrate selected mRNAs during stress.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02086-5
+      notes: RNA enrichment measurements and fluorescent localization independently
+        identify transcript recruitment.
+  - subject: aggresome
+    predicate: restricts RNase access through
+    object: rnase_exclusion
+    description: Partitioning into the aggresome disfavors the tested wild-type RNB,
+      RBN and ORN proteins in a surface-charge-dependent manner.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02086-5
+      notes: Wild-type RNases are depleted from the bodies; charge-altering mutants
+        enter them. Other RNA-processing proteins are enriched, precluding a blanket
+        exclusion claim.
+  - subject: rnase_exclusion
+    predicate: protects RNA through
+    object: preservation
+    description: Limiting access by active RNases protects sequestered mRNA from degradation.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02086-5
+      notes: The active, charge-altered RNB-MO variant enters bodies and depletes
+        their RNA; the inactive RNB-ME variant enters without the same depletion.
+  - subject: stress_removal
+    predicate: triggers
+    object: rna_release
+    description: Arsenite washout permits stored transcripts to redistribute into
+      the cytosol.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02086-5
+      notes: Time-resolved imaging follows glpK and three other tagged mRNAs after
+        stress removal.
+  - subject: preservation
+    predicate: retains templates for
+    object: translation
+    description: RNA preserved during stress remains usable for subsequent protein
+      synthesis.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02086-5
+      notes: GlpK-GFP fluorescence recovery after bleaching and stress removal exceeds
+        the maturation-only control when new transcription is inhibited.
+  - subject: rna_release
+    predicate: supplies mRNA for
+    object: translation
+    description: Released mRNA supports translation during recovery in the tested
+      reporter system.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02086-5
+      notes: Rifampicin-only versus rifampicin-plus-tetracycline conditions separate
+        protein synthesis from maturation of pre-existing fluorescent protein.
+discussions:
+- discussion_id: bacterial_condensate_identity
+  prompt: Keep bacterial aggresomes distinct from the dynein-dependent GO aggresome
+    and RNase E-containing BR-bodies.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: The GO aggresome definition specifies microtubules and dynein, whereas
+    the bacterial entity is a stress-associated protein/RNA condensate. Shared use
+    of stress-granule terminology does not establish identity with every bacterial
+    or eukaryotic RNA granule.
+  notes: Minted a bacterial identifier with inclusion body as its is-a parent. GO:0016235
+    is neither an exact xref nor an is-a parent. RNase E-containing BR-bodies remain
+    a separate record. The related stress-granule synonym is not asserted as exact.
+    Liquid-like behavior is supported in tested states, not guaranteed throughout
+    aging or for every bacterial protein aggregate.
+  evidence:
+  - reference: GO:0016235
+    notes: QuickGO definition explicitly requires dynein-dependent retrograde transport
+      on microtubules.
+  - reference: GO:0016234
+    notes: Verified broader inclusion-body class.
+  - reference: DOI:10.1126/sciadv.abh2929
+    notes: Dynamic protein measurements distinguish the assayed bodies from an assumption
+      of immobile aggregates.
+  - reference: DOI:10.1038/s41564-025-02086-5
+    notes: The paper distinguishes aggresomes from RNase E-enriched BR-bodies and
+      other bacterial condensates.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: constituent_and_mechanism_boundaries
+  prompt: Separate observed constituents from upstream stress triggers and normally
+    excluded enzymes.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: Co-localization establishes constituent membership but not assembly essentiality.
+    HokB induces ATP depletion upstream, while wild-type RNB, RBN and ORN are normally
+    excluded from the condensate under the tested stresses.
+  notes: HokB and the excluded RNases are not listed as constituents. All four component
+    essentialities remain UNKNOWN. The list is a supported subset, not a complete
+    proteome or RNA inventory. No unverified strain-specific UniProt mapping, specific
+    pairwise protein interaction, or universal RNase-exclusion mechanism is asserted.
+  evidence:
+  - reference: DOI:10.1126/sciadv.abh2929
+    notes: HslU, Kbl and AcnB are fluorescent biomarkers with different incorporation
+      dynamics; HokB is used to induce stress.
+  - reference: DOI:10.1038/s41564-025-02086-5
+    notes: Charge-mutant controls establish the RNA-protection mechanism for the assayed
+      enzymes; some other RNA-processing proteins are enriched rather than excluded.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: taxon_and_fitness_scope
+  prompt: Avoid inferring lineage prevalence or a universal survival effect from induced
+    cellular experiments.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: Presence after stress in MG1655 is an experimental example, not a measure
+    of how consistently a lineage carries the structure. Growth recovery, dormancy
+    and antibiotic survival are distinct outcomes affected by the perturbations used.
+  notes: 'Retained MG1655 only under canonical_examples and omitted prevalence rows.
+    The graph stops at RNA reuse: the active RNase-entry mutant lengthens recovery
+    lag and increases persister fractions, whereas chemical disruption of aggresome
+    formation reduces persistence in separate assays. Neither result is flattened
+    into a generic RNA-protection-to-antibiotic-survival edge.'
+  evidence:
+  - reference: DOI:10.1038/s41564-025-02086-5
+    notes: Methods specify MG1655 and induced stresses; Figure 6 separates RNase-mutant
+      recovery/persistence experiments from chemical-disruption survival assays.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'

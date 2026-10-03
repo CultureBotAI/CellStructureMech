@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bacterial aggresome · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>bacterial aggresome</h1>
+<p class="meta"><code>cellstructuremech:bacterial_aggresome</code> · INCLUSION · INCLUSION_BODY · <span class="status">PROPOSED</span></p>
+<p class="definition">A stress-associated, membraneless cytoplasmic inclusion in bacteria that concentrates endogenous proteins and can sequester mRNA; Escherichia coli aggresomes exhibit liquid-like dynamics and preserve selected transcripts during stress. <small>[<a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a>]</small></p>
+<p><strong>Synonyms:</strong> bacterial stress granule</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005737"><code>GO:0005737</code></a> </p>
+<h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-hslu"><td>Heat shock protein HslU</td><td>PROTEIN</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR004491"><code>InterPro:IPR004491</code></a></td><td>hslU</td><td></td><td>UNKNOWN</td><td>Endogenous protein constituent used as an aggresome marker in E. coli; its enrichment does not establish that it is an essential assembly scaffold.<ul class="evidence"><li><a href="https://doi.org/10.1126/sciadv.abh2929"><code>DOI:10.1126/sciadv.abh2929</code></a> <small>Chromosomal fluorescent fusions accumulate in aggresomes and co-localize with Kbl and AcnB. HslU responds earliest among these three tested markers.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR004491"><code>InterPro:IPR004491</code></a> <small>Verified whole-protein HslU family. This is the ATPase subunit, not HslV or the complete HslUV protease complex.</small></li></ul></td></tr>
+<tr id="components-kbl"><td>2-amino-3-ketobutyrate coenzyme A ligase</td><td>PROTEIN</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR011282"><code>InterPro:IPR011282</code></a></td><td>kbl</td><td></td><td>UNKNOWN</td><td>Metabolic-enzyme constituent detected in E. coli aggresomes; incorporation kinetics differ from those of HslU and AcnB.<ul class="evidence"><li><a href="https://doi.org/10.1126/sciadv.abh2929"><code>DOI:10.1126/sciadv.abh2929</code></a> <small>Chromosomal Kbl fluorescent fusions form foci co-localizing with the other aggresome markers; photobleaching experiments examine its internal mobility.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR011282"><code>InterPro:IPR011282</code></a> <small>Verified Kbl whole-protein family, not a generic pyridoxal-phosphate-dependent enzyme superfamily.</small></li></ul></td></tr>
+<tr id="components-acnb"><td>Aconitase B</td><td>PROTEIN</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR004406"><code>InterPro:IPR004406</code></a></td><td>acnB</td><td></td><td>UNKNOWN</td><td>Metabolic-enzyme constituent recruited into E. coli aggresomes with slower observed clustering than HslU or Kbl.<ul class="evidence"><li><a href="https://doi.org/10.1126/sciadv.abh2929"><code>DOI:10.1126/sciadv.abh2929</code></a> <small>Chromosomal AcnB fluorescent fusions co-localize with the aggresome markers; the study does not establish an assembly requirement for AcnB.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR004406"><code>InterPro:IPR004406</code></a> <small>Verified Aconitase B family, distinct from generic aconitase groupings.</small></li></ul></td></tr>
+<tr id="components-mrna"><td>mRNA</td><td>RNA</td><td>part of</td><td><code>SO:0000234</code></td><td></td><td></td><td>UNKNOWN</td><td>Selectively enriched RNA cargo. Longer transcripts partition preferentially under the tested stresses; this is not a claim that every mRNA enters the bodies or that mRNA is the only RNA class present.<ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a> <small>Fractionation/RNA-seq, RNA-FISH and tagged-transcript imaging support enrichment. nuoJ, nlpE, glpK and mukF are experimentally followed examples; other tested transcripts remain cytosolic.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_511145"><code>NCBITaxon:511145</code></a> <em>Escherichia coli str. K-12 substr. MG1655</em> — Methods identify MG1655 carrying a chromosomal HslU-GFP fusion for aggresome isolation after arsenite exposure, starvation or HokB induction. These are experimentally induced states, not strain-wide prevalence estimates. [<a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>mRNA stabilization</strong> <a href="http://purl.obolibrary.org/obo/GO_0048255"><code>GO:0048255</code></a> — Preserves selected mRNAs during the assayed E. coli stress conditions. Preserved transcripts can return to the cytosol and support translation after stress removal.<ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a> <small>Isolated-fraction RNA integrity assays, RNase charge mutants and transcription/translation-inhibitor controls support RNA protection and subsequent reuse.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-aggresome_mrna_preservation">Selective RNase exclusion preserves mRNA for reuse after stress <small>(FUNCTION)</small></h3>
+<p>E. coli aggresomes sequester selected transcripts while limiting access by tested mRNA-degrading RNases; stress relief releases RNA that can support renewed translation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Selective RNase exclusion preserves mRNA for reuse after stress">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>bacterial aggresome</td><td>sequesters</td><td>mRNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a> <small>RNA enrichment measurements and fluorescent localization independently identify transcript recruitment.</small></li></ul></td></tr>
+<tr><td>bacterial aggresome</td><td>restricts RNase access through</td><td>Charge-dependent exclusion of tested mRNA-degrading RNases</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a> <small>Wild-type RNases are depleted from the bodies; charge-altering mutants enter them. Other RNA-processing proteins are enriched, precluding a blanket exclusion claim.</small></li></ul></td></tr>
+<tr><td>Charge-dependent exclusion of tested mRNA-degrading RNases</td><td>protects RNA through</td><td>mRNA stabilization</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a> <small>The active, charge-altered RNB-MO variant enters bodies and depletes their RNA; the inactive RNB-ME variant enters without the same depletion.</small></li></ul></td></tr>
+<tr><td>Removal of arsenite stress</td><td>triggers</td><td>Release of stored mRNA to the cytosol</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a> <small>Time-resolved imaging follows glpK and three other tagged mRNAs after stress removal.</small></li></ul></td></tr>
+<tr><td>mRNA stabilization</td><td>retains templates for</td><td>Translation from preserved mRNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a> <small>GlpK-GFP fluorescence recovery after bleaching and stress removal exceeds the maturation-only control when new transcription is inhibited.</small></li></ul></td></tr>
+<tr><td>Release of stored mRNA to the cytosol</td><td>supplies mRNA for</td><td>Translation from preserved mRNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a> <small>Rifampicin-only versus rifampicin-plus-tetracycline conditions separate protein synthesis from maturation of pre-existing fluorescent protein.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep bacterial aggresomes distinct from the dynein-dependent GO aggresome and RNase E-containing BR-bodies. <small>The GO aggresome definition specifies microtubules and dynein, whereas the bacterial entity is a stress-associated protein/RNA condensate. Shared use of stress-granule terminology does not establish identity with every bacterial or eukaryotic RNA granule.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Separate observed constituents from upstream stress triggers and normally excluded enzymes. <small>Co-localization establishes constituent membership but not assembly essentiality. HokB induces ATP depletion upstream, while wild-type RNB, RBN and ORN are normally excluded from the condensate under the tested stresses.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Avoid inferring lineage prevalence or a universal survival effect from induced cellular experiments. <small>Presence after stress in MG1655 is an experimental example, not a measure of how consistently a lineage carries the structure. Growth recovery, dormancy and antibiotic survival are distinct outcomes affected by the perturbations used.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1126/sciadv.abh2929"><code>DOI:10.1126/sciadv.abh2929</code></a> <small>Jin et al. 2021, Membraneless organelles formed by liquid-liquid phase separation increase bacterial fitness. Results and methods read through NCBI PMC BioC (PMC8528417). Protein tracking, fusion and photobleaching support liquid-like dynamics in the assayed states.</small></li><li><a href="https://doi.org/10.1038/s41564-025-02086-5"><code>DOI:10.1038/s41564-025-02086-5</code></a> <small>Pei et al. 2025, Aggresomes protect mRNA under stress in Escherichia coli. Results, methods and Figures 5-6 read in the openly available accepted manuscript at https://eprints.whiterose.ac.uk/id/eprint/229675/ .</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-03T12:38:30Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-03T12:40:13Z</code> codex · EXPANDED_RECORD — Added four grounded constituents, a strain-scoped canonical example, mRNA-stabilization function, six-edge mechanistic graph, verified inclusion-body parentage and explicit identity, composition and fitness boundaries.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/inclusion/bacterial_aggresome.yaml"><code>data/structures/inclusion/bacterial_aggresome.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+</body>
+</html>
