@@ -110,6 +110,7 @@ def render(out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / ".nojekyll").write_text("")
     shutil.copy(TEMPLATES_DIR / "style.css", out_dir / "style.css")
+    shutil.copy(TEMPLATES_DIR / "record-browser.js", out_dir / "record-browser.js")
     # Vendored byte-identical across all seven Mech sites: reads localStorage
     # "mech-theme", sets data-theme before paint, injects the toggle button.
     shutil.copy(TEMPLATES_DIR / "theme-toggle.js", out_dir / "theme-toggle.js")
