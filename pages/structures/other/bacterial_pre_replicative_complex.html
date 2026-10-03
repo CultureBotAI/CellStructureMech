@@ -22,10 +22,12 @@
 <p class="definition">A protein-DNA complex that forms at the bacterial oriC during the initial step of DNA replication and allows the origin to become competent, or &#39;licensed&#39;, for replication. <small>[<a href="http://purl.obolibrary.org/obo/GO_0036389"><code>GO:0036389</code></a>]</small></p>
 <p><strong>Synonyms:</strong> bacterial pre-RC</p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-dnaa_initiator"><td>DnaA replication initiation protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>dnaA</td><td></td><td>UNKNOWN</td><td>Replication initiator that occupies oriC recognition sites during bacterial pre-RC assembly.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC assembly.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a> <small>Miller et al. 2009 analyzed how E. coli DnaA bound at high-affinity oriC sites assists loading of additional DnaA during pre-RC assembly.</small></li></ul></td></tr>
 <tr id="components-oric_origin_dna"><td>oriC origin DNA</td><td>DNA</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Bacterial chromosomal origin DNA scaffold on which the pre-RC forms.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036389"><code>GO:0036389</code></a> <small>GO:0036389 defines the bacterial pre-replicative complex as a protein-DNA complex that forms at bacterial oriC.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a> <small>Miller et al. 2009 tested DnaA occupation of the E. coli oriC origin during bacterial pre-RC assembly.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,11 +43,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-bacterial_prerc_assembly">DnaA and oriC form the bacterial pre-RC <small>(ASSEMBLY)</small></h3>
-<p>DnaA occupies oriC origin DNA during bacterial pre-RC assembly to make the origin competent for DNA replication initiation.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>DnaA occupies oriC origin DNA during bacterial pre-RC assembly to make the origin competent for DNA replication initiation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: DnaA and oriC form the bacterial pre-RC">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>DnaA replication initiation protein</td><td>contributes to</td><td>bacterial pre-replicative complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC assembly.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a> <small>Miller et al. 2009 tested DnaA loading during E. coli pre-RC assembly.</small></li></ul></td></tr>
 <tr><td>oriC origin DNA</td><td>scaffolds</td><td>bacterial pre-replicative complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036389"><code>GO:0036389</code></a> <small>GO:0036389 defines the bacterial pre-RC as a protein-DNA complex that forms at bacterial oriC.</small></li></ul></td></tr>
 <tr><td>bacterial pre-replicative complex</td><td>supports</td><td>DNA replication initiation</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036389"><code>GO:0036389</code></a> <small>GO:0036389 defines the bacterial pre-RC as allowing oriC to become licensed for replication.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006270"><code>GO:0006270</code></a> <small>GO:0006270 is the DNA replication initiation process term.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral DnaA and oriC origin DNA groundings for the bacterial pre-replicative complex. <small>GO:0036389 defines the bacterial pre-RC as a protein-DNA complex at oriC, and GO:1990101 identifies DnaA-oriC binding as the first step in bacterial pre-RC assembly. Exact source-neutral InterPro, Pfam, NCBIfam, UniProt family or SO sequence-feature CURIEs need narrower curation before these components can be grounded.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the generic bacterial pre-RC distinct from named DnaA-oriC, DnaA-DiaA, DnaA-HU and helicase-loading complexes. <small>GO:0036389 denotes the generic bacterial pre-RC at oriC. GO models DnaA-oriC, DnaA-DiaA and DnaA-HU complexes as separate named cellular components, and DnaB-DnaC complexes mark later helicase loading states rather than required parts of every bacterial pre-RC.</small></li></ul>

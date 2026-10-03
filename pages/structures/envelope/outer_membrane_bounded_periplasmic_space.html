@@ -22,9 +22,11 @@
 <p class="definition">The region between the inner (cytoplasmic or plasma) membrane and outer membrane of organisms with two membranes such as Gram negative bacteria. These periplasmic spaces are relatively thick and contain a thin peptidoglycan layer (PGL), also referred to as a thin cell wall. <small>[<a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a>]</small></p>
 <p><strong>Synonyms:</strong> outer membrane bounded periplasmic space; outer membrane-enclosed periplasmic space</p><p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0009276"><code>GO:0009276</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-gram_negative_peptidoglycan"><td>Gram-negative-bacterium-type cell wall</td><td>PEPTIDOGLYCAN</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0009276"><code>GO:0009276</code></a></td><td></td><td></td><td>UNKNOWN</td><td>Thin peptidoglycan sacculus that lies within the periplasm and is tethered to the outer membrane by lipoprotein links in canonical Gram-negative envelopes.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a> <small>GO:0030288 notes that the outer membrane-bounded periplasmic space contains a thin peptidoglycan layer.</small></li><li><a href="https://doi.org/10.1101/cshperspect.a000414"><code>DOI:10.1101/cshperspect.a000414</code></a> <small>Silhavy, Kahne and Walker 2010 describe the Gram-negative envelope as an outer membrane surrounding a thin peptidoglycan wall in the periplasm.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,7 +42,8 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-diderm_periplasm_topology">Inner and outer membranes bound the Gram-negative periplasm <small>(FUNCTION)</small></h3>
-<p>The plasma membrane and cell outer membrane delimit the diderm periplasmic region, which contains the thin Gram-negative peptidoglycan wall and is crossed by LPS transport machinery during outer-membrane assembly.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The plasma membrane and cell outer membrane delimit the diderm periplasmic region, which contains the thin Gram-negative peptidoglycan wall and is crossed by LPS transport machinery during outer-membrane assembly.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Inner and outer membranes bound the Gram-negative periplasm">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>plasma membrane</td><td>bounds the inner side of</td><td>outer membrane-bounded periplasmic space</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a> <small>GO:0030288 defines this periplasmic space as the region between the inner and outer membranes.</small></li></ul></td></tr>
 <tr><td>cell outer membrane</td><td>bounds the outer side of</td><td>outer membrane-bounded periplasmic space</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a> <small>GO:0030288 defines this periplasmic space as the region enclosed by the inner and outer membranes.</small></li></ul></td></tr>
 <tr><td>Gram-negative-bacterium-type cell wall</td><td>resides in</td><td>outer membrane-bounded periplasmic space</td><td><ul class="evidence"><li><a href="https://doi.org/10.1101/cshperspect.a000414"><code>DOI:10.1101/cshperspect.a000414</code></a> <small>Silhavy, Kahne and Walker 2010 describe the Gram-negative envelope as a thin peptidoglycan wall surrounded by an outer membrane.</small></li></ul></td></tr>
@@ -48,6 +51,7 @@
 <tr><td>Lpt lipopolysaccharide transport machinery</td><td>delivers</td><td>lipopolysaccharide</td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.R117.802512"><code>DOI:10.1074/jbc.R117.802512</code></a> <small>Sperandeo, Martorana and Polissi 2017 review the Lpt pathway as the Gram-negative LPS transport system.</small></li></ul></td></tr>
 <tr><td>lipopolysaccharide</td><td>is inserted into</td><td>cell outer membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.R117.802512"><code>DOI:10.1074/jbc.R117.802512</code></a> <small>Sperandeo, Martorana and Polissi 2017 review LPS delivery to the outer membrane by the Lpt pathway.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the outer membrane-bounded periplasmic space separate from the Gram-negative-bacterium-type cell wall record. <small>GO:0030288 denotes the entire region between the inner and outer membranes, whereas GO:0009276 denotes the thin peptidoglycan wall located inside that region.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the inner and outer membranes as boundaries of the outer membrane-bounded periplasmic space rather than as periplasm components. <small>GO:0030288 denotes the region between the inner and outer membranes, so those membranes bound the region but are not contained by it.</small></li></ul>

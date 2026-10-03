@@ -22,10 +22,12 @@
 <p class="definition">A class of nuclear body; they react against SP100 auto-antibodies (PML, promyelocytic leukemia); cells typically contain 10-30 PML bodies per nucleus; alterations in the localization of PML bodies occurs after viral infection. <small>[<a href="http://purl.obolibrary.org/obo/GO_0016605"><code>GO:0016605</code></a>]</small></p>
 <p><strong>Synonyms:</strong> ND10; PML NB; PML nuclear body; nuclear dot</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-pml_protein"><td>PML protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>PML</td><td></td><td>ESSENTIAL</td><td>Scaffold protein required for PML-body formation and recruitment of other ND10/PML-body proteins.<ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.147.2.221"><code>DOI:10.1083/jcb.147.2.221</code></a> <small>Ishov et al. 1999 found that ND10-associated proteins were dispersed in Pml-null cells and were recruited to de novo ND10 after PML reintroduction.</small></li><li><a href="https://doi.org/10.1182/blood.V95.9.2748.009k31a_2748_2752"><code>DOI:10.1182/blood.V95.9.2748.009k31a_2748_2752</code></a> <small>Zhong et al. 2000 showed that PML is required for proper PML nuclear-body formation in primary Pml-null cells and that SUMO modification of PML is required for this role.</small></li></ul></td></tr>
 <tr id="components-sp100_autoantigen"><td>Sp100 nuclear antigen</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>SP100</td><td></td><td>UNKNOWN</td><td>Nuclear autoantigen that accumulates with PML in ND10/PML bodies.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016605"><code>GO:0016605</code></a> <small>GO:0016605 defines PML bodies in relation to SP100 auto-antibodies.</small></li><li><a href="https://doi.org/10.1083/jcb.147.2.221"><code>DOI:10.1083/jcb.147.2.221</code></a> <small>Ishov et al. 1999 described ND10 as discrete nuclear accumulations of proteins including PML and Sp100.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,11 +43,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-sumoylated_pml_body_assembly">PML scaffolds SUMO-dependent PML-body assembly <small>(ASSEMBLY)</small></h3>
-<p>PML protein scaffolds ND10/PML bodies, SUMO modification supports the mature body, and Sp100 accumulates in the assembled nuclear body.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>PML protein scaffolds ND10/PML bodies, SUMO modification supports the mature body, and Sp100 accumulates in the assembled nuclear body.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: PML scaffolds SUMO-dependent PML-body assembly">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>PML protein</td><td>scaffolds</td><td>PML body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.147.2.221"><code>DOI:10.1083/jcb.147.2.221</code></a> <small>Ishov et al. 1999 found that PML reintroduction restored de novo ND10 formation in Pml-null cells.</small></li></ul></td></tr>
 <tr><td>PML SUMOylation</td><td>supports formation of</td><td>PML body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1182/blood.V95.9.2748.009k31a_2748_2752"><code>DOI:10.1182/blood.V95.9.2748.009k31a_2748_2752</code></a> <small>Zhong et al. 2000 showed that a PML mutant that could not be modified by SUMO-1 failed to relocalize nuclear-body proteins.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2006.09.013"><code>DOI:10.1016/j.molcel.2006.09.013</code></a> <small>Shen et al. 2006 characterized SUMO and SUMO-interacting motif contributions to PML-body formation.</small></li></ul></td></tr>
 <tr><td>Sp100 nuclear antigen</td><td>accumulates in</td><td>PML body</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0016605"><code>GO:0016605</code></a> <small>GO:0016605 defines PML bodies in relation to SP100 auto-antibodies.</small></li><li><a href="https://doi.org/10.1083/jcb.147.2.221"><code>DOI:10.1083/jcb.147.2.221</code></a> <small>Ishov et al. 1999 described Sp100 as an ND10-associated protein.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact PML-body resident, client and turnover-factor boundaries before expanding components. <small>This first PML body record captures PML and Sp100 as broad label-only defining proteins while leaving exact PML and Sp100 family groundings, Daxx and ATRX recruitment, SUMO-pathway enzymes, RNF4-dependent turnover and stress- or virus-induced client boundaries to a separate curation pass.</small></li></ul>

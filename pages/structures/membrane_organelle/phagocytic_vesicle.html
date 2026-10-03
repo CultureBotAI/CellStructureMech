@@ -22,9 +22,11 @@
 <p class="definition">A membrane-bounded intracellular vesicle that arises from the ingestion of particulate material by phagocytosis. <small>[<a href="http://purl.obolibrary.org/obo/GO_0045335"><code>GO:0045335</code></a>]</small></p>
 <p><strong>Synonyms:</strong> phagosome</p><p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0030670"><code>GO:0030670</code></a> <a href="http://purl.obolibrary.org/obo/GO_0097013"><code>GO:0097013</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0206</code> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-phagocytic_vesicle_lipid_bilayer"><td>phagocytic vesicle lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Lipid-bilayer material that forms the phagocytic vesicle membrane boundary around ingested particulate cargo.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030670"><code>GO:0030670</code></a> <small>GO:0030670 identifies the phagocytic vesicle membrane surrounding a phagocytic vesicle.</small></li><li><code>uniprot.location:SL-0206</code> <small>UniProt Subcellular Location SL-0206 identifies the phagosome as a phagocytic cell-specific membrane-bounded vesicle formed after uptake of extracellular material.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,7 +42,8 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-phagocytic_vesicle_topology">Phagocytic vesicle topology and maturation <small>(FUNCTION)</small></h3>
-<p>A phagocytic vesicle forms when phagocytosis encloses external particulate material inside a membrane-bounded compartment whose membrane and lumen are remodeled during maturation.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>A phagocytic vesicle forms when phagocytosis encloses external particulate material inside a membrane-bounded compartment whose membrane and lumen are remodeled during maturation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Phagocytic vesicle topology and maturation">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>phagocytic vesicle membrane</td><td>is part of</td><td>phagocytic vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030670"><code>GO:0030670</code></a> <small>GO:0030670 identifies the phagocytic vesicle membrane as the lipid bilayer surrounding a phagocytic vesicle.</small></li></ul></td></tr>
 <tr><td>phagocytic vesicle lumen</td><td>is part of</td><td>phagocytic vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097013"><code>GO:0097013</code></a> <small>GO:0097013 defines the phagocytic vesicle lumen as the volume enclosed by a phagocytic vesicle membrane.</small></li></ul></td></tr>
 <tr><td>phagocytic vesicle membrane</td><td>bounds</td><td>phagocytic vesicle lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030670"><code>GO:0030670</code></a> <small>GO:0030670 identifies the phagocytic vesicle membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0097013"><code>GO:0097013</code></a> <small>GO:0097013 defines the phagocytic vesicle lumen by enclosure within a phagocytic vesicle membrane.</small></li></ul></td></tr>
@@ -50,6 +53,7 @@
 <tr><td>phagolysosome</td><td>is a</td><td>phagocytic vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032010"><code>GO:0032010</code></a> <small>GO:0032010 defines the phagolysosome as a vesicle formed by maturation of an early phagosome after phagocytosis.</small></li></ul></td></tr>
 <tr><td>early phagosome</td><td>matures into</td><td>phagolysosome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0090382"><code>GO:0090382</code></a> <small>GO:0090382 defines phagosome maturation as beginning with early-phagosome formation and ending with phagolysosome formation.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032010"><code>GO:0032010</code></a> <small>GO:0032010 identifies the phagolysosome as the product of early phagosome maturation.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep transient phagosome-maturation proteins out of the generic phagocytic vesicle components. <small>The generic phagocytic vesicle is defined by a membrane-bounded vesicle made by phagocytosis. Rab GTPases, V-ATPases, proteases, and actin-associated factors associate with phagosomes in maturation-stage-specific ways, so the first record models only the stable membrane boundary as a constituent and leaves exact trafficking machinery to narrower timing- or organism-specific curation.</small></li></ul>

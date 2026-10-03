@@ -22,9 +22,11 @@
 <p class="definition">A protein complex that is involved in the Cvt pathway. In budding yeast, the Cvt complex consists of multimers of preApe1p. <small>[<a href="http://purl.obolibrary.org/obo/GO_0034270"><code>GO:0034270</code></a>]</small></p>
 <p><strong>Synonyms:</strong> cytoplasm to vacuole targeting complex; cytoplasm-to-vacuole targeting complex</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005737"><code>GO:0005737</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-precursor_aminopeptidase_i"><td>precursor aminopeptidase I</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>APE1</td><td></td><td>ESSENTIAL</td><td>Budding-yeast proApe1 cargo constituent that multimerizes to form the Cvt complex recognized for selective vacuolar delivery.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0034270"><code>GO:0034270</code></a> <small>GO:0034270 defines the budding-yeast Cvt complex as a preApe1p-containing protein complex.</small></li><li><a href="https://doi.org/10.1016/s1097-2765(01)00263-5"><code>DOI:10.1016/s1097-2765(01)00263-5</code></a> <small>Scott et al. 2001 identified Cvt19/Atg19 as a receptor that links precursor aminopeptidase I cargo to Cvt-pathway delivery.</small></li><li><a href="https://doi.org/10.1074/jbc.M404399200"><code>DOI:10.1074/jbc.M404399200</code></a> <small>Shintani and Klionsky 2004 analyzed Ape1 cargo as a determinant of Cvt vesicle formation.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -38,11 +40,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-cvt_complex_vacuolar_delivery">Cvt-complex cargo delivery <small>(FUNCTION)</small></h3>
-<p>Precursor aminopeptidase I multimerizes into the Cvt complex, which is then selectively enclosed by Cvt vesicles before vacuolar delivery.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Precursor aminopeptidase I multimerizes into the Cvt complex, which is then selectively enclosed by Cvt vesicles before vacuolar delivery.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Cvt-complex cargo delivery">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>precursor aminopeptidase I</td><td>is part of</td><td>Cvt complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0034270"><code>GO:0034270</code></a> <small>GO:0034270 defines the Cvt complex as a preApe1p-containing protein complex.</small></li></ul></td></tr>
 <tr><td>Cvt complex</td><td>is enclosed by</td><td>Cvt vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032258"><code>GO:0032258</code></a> <small>GO:0032258 defines Cvt-pathway delivery as formation of a Cvt complex and expansion of a membrane around it.</small></li></ul></td></tr>
 <tr><td>Cvt vesicle</td><td>supports</td><td>cytoplasm to vacuole targeting by the Cvt pathway</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033107"><code>GO:0033107</code></a> <small>GO:0033107 defines Cvt vesicles by their involvement in the Cvt pathway.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the Cvt precursor-aminopeptidase-I cargo constituent. <small>This first Cvt complex record represents the GO-defined budding-yeast proApe1 cargo constituent, while leaving exact InterPro or Pfam grounding unset until the aminopeptidase family boundary has been reviewed.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Do not model Atg19 or Atg11 as constituent Cvt complex components. <small>Atg19/Cvt19 recognizes precursor aminopeptidase I cargo and Atg11 moves the resulting Cvt complex to the phagophore assembly site, but the GO:0034270 record boundary is the preApe1p-containing Cvt cargo complex rather than those pathway adaptors.</small></li></ul>

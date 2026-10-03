@@ -68,7 +68,7 @@ tbody tr:hover{background:rgba(82,87,201,.06)}
 .status{font-weight:600}
 .definition{font-size:1.05rem}
 .evidence{margin:.2rem 0 0;padding-left:1.1rem;font-size:.88rem;color:var(--muted)}
-.history{font-size:.9rem}
+.history{font-size:.9rem;overflow-wrap:anywhere}
 q{font-style:italic}
 
 figure.hero{margin:1rem 0}
@@ -142,7 +142,13 @@ figure.hero figcaption{font-size:.85rem;color:var(--muted);margin-top:.3rem}
 .record-filters label { display: block; font-weight: 600; }
 .record-filters input, .record-filters select, .record-filters button { font: inherit; padding: .55rem; color: inherit; background: var(--card); border: 1px solid var(--line); border-radius: .3rem; max-width: 100%; }
 .record-filters input, .record-filters select { width: 100%; }
-.record-filters :focus-visible, .record-table-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.record-table-scroll { max-width: 100%; overflow-x: auto; }
+.record-filters :focus-visible, .record-table-scroll:focus-visible, .table-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.record-table-scroll, .table-scroll { max-width: 100%; overflow-x: auto; }
 .record-table-scroll table { min-width: 42rem; }
 .record-definition { margin: .35rem 0 0; font-size: .9rem; max-width: 48rem; overflow-wrap: anywhere; }
+
+/* Keep complete source paths readable without widening the record page. */
+.source code { overflow-wrap: anywhere; }
+
+/* Additional evidence images retain their aspect ratio within the record. */
+main figure img { max-width: 100%; height: auto; }

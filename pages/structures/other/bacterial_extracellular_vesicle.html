@@ -22,10 +22,12 @@
 <p class="definition">Small membrane vesicle (&lt; 1 um) that buds off a prokaryotic cell plasma membrane, able to carry proteins, phospholipids, lipopolysaccharides, nucleic acids, viruses, and more. Important in intercellular communication and pathogenesis; can exist within host cells. <small>[<a href="http://purl.obolibrary.org/obo/GO_0097691"><code>GO:0097691</code></a>]</small></p>
 <p><strong>Synonyms:</strong> bacterial membrane vesicle</p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0489</code> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-bacterial_extracellular_vesicle_membrane"><td>bacterial extracellular vesicle membrane</td><td>OTHER</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Composite membrane that bounds the released bacterial extracellular vesicle and carries or encloses its packaged cargo.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097691"><code>GO:0097691</code></a> <small>GO:0097691 defines the bacterial extracellular vesicle as a small membrane vesicle that buds from a bacterial plasma membrane.</small></li><li><a href="https://doi.org/10.1038/s41579-018-0112-2"><code>DOI:10.1038/s41579-018-0112-2</code></a> <small>Toyofuku, Nomura and Eberl 2019 review distinct bacterial membrane-vesicle origins and compositions.</small></li></ul></td></tr>
 <tr id="components-bacterial_extracellular_vesicle_cargo"><td>bacterial extracellular vesicle cargo</td><td>OTHER</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Variable bacterial material packaged inside or associated with the extracellular vesicle for export to neighboring microbes or host cells.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097691"><code>GO:0097691</code></a> <small>GO:0097691 lists proteins, phospholipids, lipopolysaccharides, nucleic acids and viruses among the cargos bacterial extracellular vesicles can carry.</small></li><li><a href="https://doi.org/10.1016/j.semcdb.2015.02.006"><code>DOI:10.1016/j.semcdb.2015.02.006</code></a> <small>Kim et al. 2015 review bacterial extracellular vesicles from Gram-negative and Gram-positive bacteria as extracellular carriers of bioactive cargo.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,10 +43,12 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-bacterial_extracellular_vesicle_cargo_export">Bacterial extracellular vesicles carry exported cargo <small>(FUNCTION)</small></h3>
-<p>Bacterial extracellular vesicles contain a mixed membrane and heterogeneous cargo that are released from the producing bacterium and can be delivered to neighboring microbes or host cells.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Bacterial extracellular vesicles contain a mixed membrane and heterogeneous cargo that are released from the producing bacterium and can be delivered to neighboring microbes or host cells.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Bacterial extracellular vesicles carry exported cargo">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>bacterial extracellular vesicle</td><td>carries</td><td>bacterial extracellular vesicle cargo</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097691"><code>GO:0097691</code></a> <small>GO:0097691 defines the vesicle as a membrane vesicle able to carry multiple cargo classes.</small></li><li><a href="https://doi.org/10.1038/s41579-018-0112-2"><code>DOI:10.1038/s41579-018-0112-2</code></a> <small>Toyofuku, Nomura and Eberl 2019 review cargo packaging across bacterial membrane-vesicle types.</small></li></ul></td></tr>
 <tr><td>bacterial extracellular vesicle membrane</td><td>is part of</td><td>bacterial extracellular vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097691"><code>GO:0097691</code></a> <small>GO:0097691 identifies the structure as a small bacterial membrane vesicle.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for the membrane and cargo classes that span all bacterial extracellular vesicle origins. <small>The first GO:0097691 record models the conserved vesicle membrane and cargo relationship, but leaves the heterogeneous Gram-negative and Gram-positive membrane sources and cargo sets ungrounded until exact component identifiers can be verified.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): The generic labels membrane vesicle and microvesicle are not curated as exact bacterial extracellular vesicle synonyms. <small>UniProt SL-0489 lists Bacterial membrane vesicle, Membrane vesicle and Microvesicle as entry synonyms. Only bacterial membrane vesicle is exact enough for GO:0097691; the generic labels also denote non-bacterial extracellular vesicles.</small></li></ul>

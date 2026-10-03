@@ -22,10 +22,12 @@
 <p class="definition">The portion of the plasma membrane surrounding a cilium. <small>[<a href="http://purl.obolibrary.org/obo/GO_0060170"><code>GO:0060170</code></a>]</small></p>
 <p><strong>Synonyms:</strong> cilial membrane; cilium membrane; flagellar membrane; flagellum membrane</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005929"><code>GO:0005929</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-ciliary_membrane_lipid_bilayer"><td>ciliary membrane lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Lipid-bilayer constituent of the plasma-membrane extension that surrounds the cilium.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0060170"><code>GO:0060170</code></a> <small>GO:0060170 defines the ciliary membrane as the plasma-membrane portion surrounding a cilium.</small></li><li><a href="https://doi.org/10.1016/j.cub.2018.03.010"><code>DOI:10.1016/j.cub.2018.03.010</code></a> <small>Garcia et al. 2018 reviewed the ciliary membrane as a specialized membrane domain that contains selected lipids and proteins.</small></li></ul></td></tr>
 <tr id="components-ciliary_membrane_proteins"><td>ciliary membrane proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Membrane proteins that localize to the ciliary membrane for signaling, trafficking, and cilium function.<ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200504008"><code>DOI:10.1083/jcb.200504008</code></a> <small>Pazour et al. 2005 identified predicted membrane proteins in purified Chlamydomonas flagella.</small></li><li><a href="https://doi.org/10.1016/j.cub.2018.03.010"><code>DOI:10.1016/j.cub.2018.03.010</code></a> <small>Garcia et al. 2018 reviewed ciliary membrane proteins and lipids as sorted constituents of the ciliary signaling surface.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,12 +43,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-ciliary_membrane_bounds_ciliary_compartment">Ciliary membrane bounds the ciliary compartment <small>(ASSEMBLY)</small></h3>
-<p>The ciliary membrane is a specialized plasma-membrane domain that surrounds the cilium and carries sorted ciliary membrane proteins.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The ciliary membrane is a specialized plasma-membrane domain that surrounds the cilium and carries sorted ciliary membrane proteins.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Ciliary membrane bounds the ciliary compartment">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>ciliary membrane lipid bilayer</td><td>is lipid phase of</td><td>ciliary membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0060170"><code>GO:0060170</code></a> <small>GO:0060170 identifies the ciliary membrane as a plasma-membrane portion.</small></li><li><a href="https://doi.org/10.1016/j.cub.2018.03.010"><code>DOI:10.1016/j.cub.2018.03.010</code></a> <small>Garcia et al. 2018 reviewed organization of ciliary membrane lipids and proteins.</small></li></ul></td></tr>
 <tr><td>ciliary membrane</td><td>bounds</td><td>cilium</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0060170"><code>GO:0060170</code></a> <small>GO:0060170 defines this membrane as the plasma-membrane portion surrounding a cilium and relates it as bounding layer of the cilium.</small></li></ul></td></tr>
 <tr><td>ciliary membrane proteins</td><td>localize to</td><td>ciliary membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200504008"><code>DOI:10.1083/jcb.200504008</code></a> <small>Pazour et al. 2005 found predicted membrane proteins in purified Chlamydomonas flagella.</small></li></ul></td></tr>
 <tr><td>ciliary membrane</td><td>expands during</td><td>cilium assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pone.0053366"><code>DOI:10.1371/journal.pone.0053366</code></a> <small>Dentler 2013 analyzed membrane growth during Chlamydomonas flagellar assembly and length regulation.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact conserved lipid classes and protein families that should replace the label-only ciliary membrane lipid and protein aggregates. <small>The membrane record needs cilium-specific lipid and protein curation across taxa; this first pass keeps those sets aggregate to avoid overclaiming exact conserved constituents.</small></li></ul>

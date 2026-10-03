@@ -22,11 +22,13 @@
 <p class="definition">Protein complex that has a role in determining cell polarity, found at the tip of a growing fungal hypha. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031562"><code>GO:0031562</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0001411"><code>GO:0001411</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-spa2_scaffold"><td>SPA-2 polarisome scaffold</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>SPA-2</td><td></td><td>CONDITIONAL</td><td>Scaffold marker that partially overlaps the Spitzenkorper and extends into the apical dome of mature Neurospora hyphae.<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pone.0030372"><code>DOI:10.1371/journal.pone.0030372</code></a> <small>Lichius et al. 2012 compared BUD-6 and BNI-1 localization with SPA-2 as a bona fide Neurospora polarisome marker and integrated SPA-2 into the mature hyphal-tip architecture.</small></li></ul></td></tr>
 <tr id="components-bud6_actin_associated_polarity_protein"><td>BUD-6 actin-associated polarity protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>BUD-6</td><td></td><td>CONDITIONAL</td><td>Actin-associated polarity protein that forms a subapical cloud around the Spitzenkorper in mature Neurospora hyphae.<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pone.0030372"><code>DOI:10.1371/journal.pone.0030372</code></a> <small>Lichius et al. 2012 localized BUD-6 to a dynamic subapical cloud that surrounds the Spitzenkorper during Neurospora mature hyphal-tip growth.</small></li></ul></td></tr>
 <tr id="components-bni1_formin"><td>BNI-1 formin</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>BNI-1</td><td></td><td>CONDITIONAL</td><td>Formin that localizes in apical clusters and the Spitzenkorper core at mature Neurospora hyphal tips.<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pone.0030372"><code>DOI:10.1371/journal.pone.0030372</code></a> <small>Lichius et al. 2012 assayed BNI-1 and placed it in both the apical cap and Spitzenkorper core of the mature Neurospora hyphal tip.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -42,12 +44,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-mature_hyphal_tip_polarisome_topology">Mature hyphal-tip polarisome topology <small>(FUNCTION)</small></h3>
-<p>SPA-2, BUD-6, and BNI-1 occupy distinct zones in the Neurospora mature hyphal-tip apical dome.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>SPA-2, BUD-6, and BNI-1 occupy distinct zones in the Neurospora mature hyphal-tip apical dome.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Mature hyphal-tip polarisome topology">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>hyphal tip polarisome</td><td>is part of</td><td>hyphal tip</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031562"><code>GO:0031562</code></a> <small>GO:0031562 defines the polarisome at a growing fungal hyphal tip.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0001411"><code>GO:0001411</code></a> <small>GO:0001411 identifies the fungal hyphal tip.</small></li></ul></td></tr>
 <tr><td>SPA-2 polarisome scaffold</td><td>occupies</td><td>hyphal tip polarisome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pone.0030372"><code>DOI:10.1371/journal.pone.0030372</code></a> <small>Lichius et al. 2012 integrated SPA-2 as partially overlapping the Spitzenkorper and fanning into the Neurospora apical dome.</small></li></ul></td></tr>
 <tr><td>BUD-6 actin-associated polarity protein</td><td>occupies</td><td>hyphal tip polarisome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pone.0030372"><code>DOI:10.1371/journal.pone.0030372</code></a> <small>Lichius et al. 2012 observed BUD-6 as a subapical cloud that was excluded from the Spitzenkorper.</small></li></ul></td></tr>
 <tr><td>BNI-1 formin</td><td>occupies</td><td>hyphal tip polarisome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pone.0030372"><code>DOI:10.1371/journal.pone.0030372</code></a> <small>Lichius et al. 2012 localized BNI-1 to the Spitzenkorper core and to apical clusters in mature Neurospora hyphae.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral family groundings for Neurospora SPA-2, BUD-6, and BNI-1. <small>The first hyphal-tip record keeps the Neurospora Spa2, Bud6, and Bni1 homologs label-only rather than guessing InterPro, Pfam, or NCBIfam groundings whose broader families may include paralogs outside this localized polarisome architecture.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep septal plugging, cell fusion, and cytokinesis roles outside the first hyphal-tip polarisome boundary. <small>Lichius et al. 2012 observed SPA-2, BUD-6, and BNI-1 recruitment to septal plugs and identified BUD-6 and BNI-1 functions at cell-fusion sites, septa, and cytokinetic rings that are independent of the hyphal-tip polarisome, so those assemblies are excluded from the GO:0031562 component boundary until separate structure evidence is curated.</small></li></ul>

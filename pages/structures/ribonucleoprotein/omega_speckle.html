@@ -22,10 +22,12 @@
 <p class="definition">A nucleoplasmic speckle distributed in the interchromatin space of cells in close proximity to chromatin. Omega speckles are distinct from interchromatin granules and contain heterogeneous nuclear RNA-binding proteins (hnRNPs). <small>[<a href="http://purl.obolibrary.org/obo/GO_0035062"><code>GO:0035062</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-hsr_omega_n_lncrna"><td>hsr-omega-n lncRNA</td><td>RNA</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>hsr-omega</td><td></td><td>ESSENTIAL</td><td>Noncoding nuclear RNA that organizes and maintains hnRNP-containing omega speckles in the Drosophila nucleoplasm.<ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.113.19.3485"><code>DOI:10.1242/jcs.113.19.3485</code></a> <small>Prasanth et al. 2000 localized hsr-omega-n transcripts to omega speckles and found that the hnRNP speckled pattern was lost in hsr-omega nullosomics.</small></li></ul></td></tr>
 <tr id="components-drosophila_hnrnp_cohort"><td>Drosophila hnRNP cohort</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>Hrb87F, Hrp40, Hrb57A, S5</td><td></td><td>UNKNOWN</td><td>Heterogeneous nuclear RNA-binding proteins that colocalize with hsr-omega transcripts in omega speckles and physically associate with hsr-omega RNA.<ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.113.19.3485"><code>DOI:10.1242/jcs.113.19.3485</code></a> <small>Prasanth et al. 2000 colocalized HRB87F, Hrp40, Hrb57A and S5 hnRNPs with omega speckles and detected physical association between hnRNPs and hsr-omega transcripts.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,12 +43,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-hsr_omega_hnrnp_speckle_organization">hsr-omega RNA organizes hnRNP omega speckles <small>(ASSEMBLY)</small></h3>
-<p>The Drosophila hsr-omega-n nuclear noncoding transcript localizes in omega speckles, colocalizes and physically associates with hnRNP proteins in the same foci, and is required for their speckled nuclear distribution.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The Drosophila hsr-omega-n nuclear noncoding transcript localizes in omega speckles, colocalizes and physically associates with hnRNP proteins in the same foci, and is required for their speckled nuclear distribution.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: hsr-omega RNA organizes hnRNP omega speckles">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>hsr-omega-n lncRNA</td><td>localizes to</td><td>omega speckle</td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.113.19.3485"><code>DOI:10.1242/jcs.113.19.3485</code></a> <small>Prasanth et al. 2000 used RNA in situ hybridization to localize hsr-omega-n transcripts to omega speckles.</small></li></ul></td></tr>
 <tr><td>Drosophila hnRNP cohort</td><td>colocalizes with</td><td>hsr-omega-n lncRNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.113.19.3485"><code>DOI:10.1242/jcs.113.19.3485</code></a> <small>Prasanth et al. 2000 found absolute colocalization of tested hnRNPs with omega speckles.</small></li></ul></td></tr>
 <tr><td>omega speckle</td><td>is distinct from</td><td>interchromatin granule</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035062"><code>GO:0035062</code></a> <small>GO:0035062 defines omega speckles as distinct from interchromatin granules.</small></li><li><a href="https://doi.org/10.1242/jcs.113.19.3485"><code>DOI:10.1242/jcs.113.19.3485</code></a> <small>Prasanth et al. 2000 reported that SC35 and SRp55 SR-protein nuclear speckles did not colocalize with omega speckles.</small></li></ul></td></tr>
 <tr><td>hsr-omega-n lncRNA</td><td>organizes</td><td>hnRNP trafficking and availability regulation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.113.19.3485"><code>DOI:10.1242/jcs.113.19.3485</code></a> <small>Prasanth et al. 2000 found that hnRNP speckling was disrupted in hsr-omega nullosomics and connected omega speckles to hnRNP trafficking and availability.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact hsr-omega-n RNA, Drosophila hnRNP and heat-shock remodeling boundaries for omega speckles. <small>This first GO:0035062 record captures the defining hsr-omega-n RNA and a tested hnRNP cohort while leaving exact noncoding transcript isoforms, source-neutral hnRNP family groundings, candidate additional RNA-binding proteins and the heat-shock-driven coalescence pathway to a later pass.</small></li></ul>

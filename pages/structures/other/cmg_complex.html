@@ -22,11 +22,13 @@
 <p class="definition">A protein complex that contains the GINS complex, Cdc45p, and the heterohexameric MCM complex, and that is involved in unwinding DNA during replication. <small>[<a href="http://purl.obolibrary.org/obo/GO_0071162"><code>GO:0071162</code></a>]</small></p>
 <p><strong>Synonyms:</strong> unwindosome</p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-gins_complex"><td>GINS complex</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0000811"><code>GO:0000811</code></a></td><td></td><td>1</td><td>UNKNOWN</td><td>Heterotetrameric GINS constituent subcomplex of the CMG helicase.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071162"><code>GO:0071162</code></a> <small>GO:0071162 defines the CMG complex as containing the GINS complex.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19228417"><code>PMID:19228417</code></a> <small>Akman and MacNeill 2009 describe GINS as one of the three individual components of the eukaryotic CMG complex.</small></li></ul></td></tr>
 <tr id="components-mcm_complex"><td>MCM complex</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0042555"><code>GO:0042555</code></a></td><td></td><td>1</td><td>UNKNOWN</td><td>Heterohexameric MCM constituent subcomplex of the CMG helicase.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071162"><code>GO:0071162</code></a> <small>GO:0071162 defines the CMG complex as containing the heterohexameric MCM complex.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19228417"><code>PMID:19228417</code></a> <small>Akman and MacNeill 2009 describe MCM as one of the three individual components of the eukaryotic CMG complex.</small></li></ul></td></tr>
 <tr id="components-cdc45_protein"><td>Cdc45 protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>CDC45</td><td>1</td><td>UNKNOWN</td><td>Cdc45 constituent protein of the CMG helicase.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071162"><code>GO:0071162</code></a> <small>GO:0071162 defines the CMG complex as containing Cdc45p.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19228417"><code>PMID:19228417</code></a> <small>Akman and MacNeill 2009 describe Cdc45 as one of the three individual components of the eukaryotic CMG complex.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -42,12 +44,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-cmg_supports_dna_unwinding">CMG supports replicative DNA unwinding <small>(FUNCTION)</small></h3>
-<p>The GINS complex, heterohexameric MCM complex and Cdc45 form the eukaryotic CMG complex that supports DNA unwinding during replication.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The GINS complex, heterohexameric MCM complex and Cdc45 form the eukaryotic CMG complex that supports DNA unwinding during replication.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: CMG supports replicative DNA unwinding">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>GINS complex</td><td>contributes to</td><td>CMG complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071162"><code>GO:0071162</code></a> <small>GO:0071162 defines the CMG complex as containing GINS.</small></li></ul></td></tr>
 <tr><td>MCM complex</td><td>contributes to</td><td>CMG complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071162"><code>GO:0071162</code></a> <small>GO:0071162 defines the CMG complex as containing the heterohexameric MCM complex.</small></li></ul></td></tr>
 <tr><td>Cdc45 protein</td><td>contributes to</td><td>CMG complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071162"><code>GO:0071162</code></a> <small>GO:0071162 defines the CMG complex as containing Cdc45p.</small></li></ul></td></tr>
 <tr><td>CMG complex</td><td>supports</td><td>DNA replication</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071162"><code>GO:0071162</code></a> <small>GO:0071162 defines CMG as involved in unwinding DNA during replication.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006260"><code>GO:0006260</code></a> <small>GO:0006260 is the GO biological-process term for DNA replication.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral family grounding for Cdc45 in the CMG complex. <small>GO:0071162 exactly identifies the CMG complex and its Cdc45, GINS and MCM constituents, but an exact InterPro, Pfam, NCBIfam or UniProtKB family CURIE for the source-neutral Cdc45 component was not curated in this pass.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Model GINS and MCM as constituent subcomplexes rather than flattening them into their protein subunits. <small>GO:0071162 defines CMG as containing the GINS complex and the heterohexameric MCM complex, both of which have their own GO cellular-component identities and CellStructureMech records.</small></li></ul>

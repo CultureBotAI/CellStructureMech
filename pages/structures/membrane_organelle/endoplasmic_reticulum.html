@@ -22,10 +22,12 @@
 <p class="definition">The irregular network of unit membranes, visible only by electron microscopy, that occurs in the cytoplasm of many eukaryotic cells. The membranes form a complex meshwork of tubular channels, which are often expanded into slitlike cavities called cisternae. The ER takes two forms, rough (or granular), with ribosomes adhering to the outer surface, and smooth (with no ribosomes attached). <small>[<a href="http://purl.obolibrary.org/obo/GO_0005783"><code>GO:0005783</code></a>]</small></p>
 <p><strong>Synonyms:</strong> ER</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0012505"><code>GO:0012505</code></a> </p><p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a> <a href="http://purl.obolibrary.org/obo/GO_0005788"><code>GO:0005788</code></a> <a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-er_membrane"><td>endoplasmic reticulum membrane</td><td>LIPID</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a></td><td></td><td></td><td>ESSENTIAL</td><td>Lipid bilayer that bounds the endoplasmic reticulum and separates its lumen from cytosol.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a> <small>GO:0005789 defines the endoplasmic reticulum membrane as the lipid bilayer surrounding the endoplasmic reticulum.</small></li></ul></td></tr>
 <tr id="components-sec61_translocon_complex"><td>Sec61 translocon complex</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a></td><td></td><td></td><td>UNKNOWN</td><td>Conserved ER membrane channel complex that mediates cotranslational and posttranslational protein translocation.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> <small>GO:0005784 defines the Sec61 translocon complex as a core heterotrimeric ER translocon.</small></li><li><a href="https://doi.org/10.1091/mbc.3.2.129"><code>DOI:10.1091/mbc.3.2.129</code></a> <small>Stirling et al. 1992 isolated yeast sec61 mutants defective in integral membrane protein insertion into the endoplasmic reticulum.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,13 +43,15 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-yeast_er_protein_biogenesis_quality_control">Yeast ER couples protein entry and quality control <small>(FUNCTION)</small></h3>
-<p>In budding yeast, the ER membrane surrounds the ER lumen, embeds Sec61 protein-translocation machinery, and provides the compartment where protein biogenesis is coupled to unfolded-protein-response and ERAD quality-control pathways.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In budding yeast, the ER membrane surrounds the ER lumen, embeds Sec61 protein-translocation machinery, and provides the compartment where protein biogenesis is coupled to unfolded-protein-response and ERAD quality-control pathways.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Yeast ER couples protein entry and quality control">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>endoplasmic reticulum membrane</td><td>bounds</td><td>endoplasmic reticulum lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005788"><code>GO:0005788</code></a> <small>GO:0005788 defines the endoplasmic reticulum lumen as the volume enclosed by ER membranes.</small></li></ul></td></tr>
 <tr><td>endoplasmic reticulum membrane</td><td>is part of</td><td>endoplasmic reticulum</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005783"><code>GO:0005783</code></a> <small>GO:0005783 defines the ER as an irregular network of unit membranes arranged as tubular channels and cisternae.</small></li></ul></td></tr>
 <tr><td>Sec61 translocon complex</td><td>is embedded in</td><td>endoplasmic reticulum membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> <small>GO:0005784 identifies Sec61 as an ER translocon complex.</small></li></ul></td></tr>
 <tr><td>Sec61 translocon complex</td><td>supports</td><td>protein translocation into the endoplasmic reticulum</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.3.2.129"><code>DOI:10.1091/mbc.3.2.129</code></a> <small>Stirling et al. 1992 characterized Saccharomyces cerevisiae sec61 alleles defective in ER protein insertion.</small></li></ul></td></tr>
 <tr><td>endoplasmic reticulum unfolded protein response</td><td>coordinates with</td><td>ERAD pathway</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/s0092-8674(00)80835-1"><code>DOI:10.1016/s0092-8674(00)80835-1</code></a> <small>Travers et al. 2000 showed coordination between the yeast unfolded protein response and ER-associated degradation.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral component groundings for yeast ER unfolded-protein-response and ER-associated-degradation machinery, including luminal chaperone, retrotranslocation, and ubiquitin-ligase cohorts. <small>This first endoplasmic reticulum record grounds the Sec61 translocon complex and ER membrane but does not overclaim exact identifiers for multi-family UPR and ERAD machinery cohorts.</small></li></ul>

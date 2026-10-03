@@ -22,9 +22,11 @@
 <p class="definition">A highly organized glycocalyx layer attached outside the cell wall of some bacteria and fungi, usually built from capsular polysaccharides and retained on the cell surface rather than released as a loose extracellular polymer. <small>[<a href="http://purl.obolibrary.org/obo/GO_0042603"><code>GO:0042603</code></a>]</small></p>
 <p><strong>Synonyms:</strong> bacterial capsule; polysaccharide capsule; cryptococcal capsule</p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-capsular_extracellular_polymer"><td>capsular extracellular polymer</td><td>OTHER</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Forms the hydrated extracellular matrix that remains associated with the cell surface as an organized capsule.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.micro.50.1.285"><code>DOI:10.1146/annurev.micro.50.1.285</code></a> <small>Roberts 1996 reviews bacterial capsular polysaccharides as surface-associated capsule materials.</small></li><li><a href="https://doi.org/10.1128/CMR.00001-12"><code>DOI:10.1128/CMR.00001-12</code></a> <small>O&#39;Meara and Alspaugh 2012 review the polysaccharide capsule surrounding Cryptococcus neoformans cells.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,11 +42,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-capsule_polymer_export_and_retention">Capsular polymers are exported and retained as an organized surface layer <small>(ASSEMBLY)</small></h3>
-<p>Capsule-biosynthesis proteins synthesize and export repeat-unit polymers that remain attached at the cell surface, producing an organized capsule rather than a diffuse released exopolysaccharide slime.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Capsule-biosynthesis proteins synthesize and export repeat-unit polymers that remain attached at the cell surface, producing an organized capsule rather than a diffuse released exopolysaccharide slime.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Capsular polymers are exported and retained as an organized surface layer">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>capsule polymer synthesis and export</td><td>produces</td><td>capsular extracellular polymer</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.biochem.75.103004.142545"><code>DOI:10.1146/annurev.biochem.75.103004.142545</code></a> <small>Whitfield 2006 reviews the group 1, group 2 and group 4 E. coli capsule assembly and export systems.</small></li></ul></td></tr>
 <tr><td>capsular extracellular polymer</td><td>is retained at</td><td>cell surface</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.biochem.75.103004.142545"><code>DOI:10.1146/annurev.biochem.75.103004.142545</code></a> <small>Whitfield 2006 describes E. coli capsule assembly pathways that retain exported polysaccharide at the cell surface.</small></li></ul></td></tr>
 <tr><td>capsular extracellular polymer</td><td>assembles into</td><td>capsule</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.micro.50.1.285"><code>DOI:10.1146/annurev.micro.50.1.285</code></a> <small>Roberts 1996 reviews bacterial capsular polysaccharide production and surface capsule formation.</small></li><li><a href="https://doi.org/10.1128/CMR.00001-12"><code>DOI:10.1128/CMR.00001-12</code></a> <small>O&#39;Meara and Alspaugh 2012 review the Cryptococcus capsule as an extracellular polysaccharide structure surrounding the cell wall.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (RESOLVED): Model the capsule constituent as a broad extracellular polymer rather than forcing every capsule into polysaccharide chemistry. <small>Most curated examples are polysaccharide-rich, but the GO capsule term also covers chemically different organized capsules such as the Bacillus poly-D-glutamate capsule. The schema lacks a peptide-polymer enum value, so this record uses OTHER with reviewed-label grounding.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Keep the capsule record restricted to organized, surface-retained capsules rather than loose slime layers. <small>GO:0042603 denotes the organized capsule subclass of glycocalyx. A diffuse released exopolysaccharide slime layer would need a separate record if curated.</small></li></ul>
