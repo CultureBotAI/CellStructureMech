@@ -5748,6 +5748,11 @@
       "label": "phycobilisome",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:phycobilisome_rod",
+          "label": "phycobilisome rod",
+          "cosine_similarity": 0.94099616
+        },
+        {
           "identifier": "cellstructuremech:phycobilisome_core",
           "label": "phycobilisome core",
           "cosine_similarity": 0.93514415
@@ -5766,11 +5771,6 @@
           "identifier": "GO:0009522",
           "label": "photosystem I",
           "cosine_similarity": 0.75533959
-        },
-        {
-          "identifier": "GO:0030096",
-          "label": "plasma membrane-derived thylakoid photosystem II",
-          "cosine_similarity": 0.75271565
         }
       ]
     },
@@ -5782,6 +5782,11 @@
           "identifier": "GO:0030089",
           "label": "phycobilisome",
           "cosine_similarity": 0.93514415
+        },
+        {
+          "identifier": "cellstructuremech:phycobilisome_rod",
+          "label": "phycobilisome rod",
+          "cosine_similarity": 0.91382162
         },
         {
           "identifier": "GO:0030094",
@@ -5797,11 +5802,37 @@
           "identifier": "GO:0030076",
           "label": "light-harvesting complex",
           "cosine_similarity": 0.71902838
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:phycobilisome_rod",
+      "label": "phycobilisome rod",
+      "neighbors": [
+        {
+          "identifier": "GO:0030089",
+          "label": "phycobilisome",
+          "cosine_similarity": 0.94099616
         },
         {
-          "identifier": "GO:0009512",
-          "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.71764977
+          "identifier": "cellstructuremech:phycobilisome_core",
+          "label": "phycobilisome core",
+          "cosine_similarity": 0.91382162
+        },
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.70051449
+        },
+        {
+          "identifier": "GO:0030076",
+          "label": "light-harvesting complex",
+          "cosine_similarity": 0.68560323
+        },
+        {
+          "identifier": "GO:0030094",
+          "label": "plasma membrane-derived photosystem I",
+          "cosine_similarity": 0.67525465
         }
       ]
     },
