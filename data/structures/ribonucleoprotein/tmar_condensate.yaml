@@ -20,6 +20,12 @@ curation_history:
     functions, seven-edge mechanism graph, native/H-body boundaries and an explicit
     RNA-evidence follow-up; verified exact NCBIfam TmaR equivalog.
   llm_assisted: true
+- timestamp: '2026-10-03T14:08:25Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_SCOPE
+  changes: 'Addressed review issue #1987 by separating established EI-HPr partnership
+    from modeled HPr exclusion by TmaR-bound EI; no component or mechanism expansion.'
+  llm_assisted: true
 synonyms:
 - synonym_text: TmaR-EI polar condensate
   synonym_type: RELATED_SYNONYM
@@ -267,13 +273,17 @@ discussions:
   status: RESOLVED
   rationale: EI and TmaR require co-expression for the tested yeast condensates, unlike
     native bacterial TmaR foci. Plasmid cross-species complementation is not endogenous
-    taxonomic prevalence.
-  notes: TmaR is the defining scaffold and EI a DISPENSABLE constituent. HPr is a
-    modeled EI interaction partner, not a demonstrated condensate constituent here.
-    Hfq/polyP stress co-condensation is documented in the separate H-body record,
-    not imported as constitutive basal TmaR membership. Retained only MG1655 as canonical
-    example; no prevalence rows, yeast or Salmonella native-structure claims, fixed
-    stoichiometry or strain-mismatched protein examples.
+    taxonomic prevalence. Post-PR review found that calling HPr merely a modeled EI
+    partner conflated established EI-HPr interaction with the proposed TmaR-dependent
+    exclusion mechanism.
+  notes: TmaR is the defining scaffold and EI a DISPENSABLE constituent. HPr is an
+    experimentally established EI phosphotransfer partner, but no HPr membership in
+    this condensate was demonstrated here. Exclusion of HPr by the proposed closed
+    EI-TmaR configuration remains a structural-model interpretation. Hfq/polyP stress
+    co-condensation is documented in the separate H-body record, not imported as constitutive
+    basal TmaR membership. Retained only MG1655 as canonical example; no prevalence
+    rows, yeast or Salmonella native-structure claims, fixed stoichiometry or strain-mismatched
+    protein examples.
   evidence:
   - reference: DOI:10.1016/j.celrep.2025.115436
     notes: Results distinguish bacterial and yeast assembly, and Figure 5 uses plasmid
@@ -281,6 +291,9 @@ discussions:
   - reference: DOI:10.1371/journal.pbio.3003775
     notes: Figure 1L supports TmaR foci without Hfq/polyP, while stress conditions
       permit co-condensation.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/1987
+    notes: 'Adversarial review correction: retain established EI-HPr interaction while
+      distinguishing modeled exclusion from demonstrated condensate composition.'
   posed_by: codex
   posed_date: '2026-10-03'
   resolved_date: '2026-10-03'
