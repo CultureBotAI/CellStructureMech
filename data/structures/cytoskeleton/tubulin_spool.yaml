@@ -1,0 +1,244 @@
+identifier: cellstructuremech:tubulin_spool
+label: tubulin spool
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A compact spool-like tubulin-positive cytoskeletal structure observed
+  in kareniacean dinoflagellates. In Takayama helix, ultrastructure expansion microscopy
+  resolves perinuclear and posterior spools that appear continuous with microtubules.
+  The name denotes the assembled structure, not a tubulin protein or the entire cortical
+  microtubule array.
+definition_source: DOI:10.1016/j.cell.2025.09.027
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T19:30:36Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T19:32:55Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added tubulin-family composition, verified Takayama strain and dataset
+    provenance, ontology boundaries, unresolved functional and scale scope, and inspected
+    CC BY publisher Figure 2.
+  llm_assisted: true
+synonyms:
+- synonym_text: microtubule spool
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.cell.2025.09.027
+parent_structures:
+- GO:0005622
+part_of:
+- GO:0015630
+components:
+- component_id: tubulin
+  label: Tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000217
+  essentiality: UNKNOWN
+  role: Tubulin-family material detected in the spool by post-expansion immunolabeling.
+    The family grounding does not identify every tubulin subtype or an exact Takayama
+    gene product, and the study did not test assembly essentiality.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Figure 2D-E and the microtubule-array Results identify tubulin-positive
+      spools. Table S1 includes spool-positive RCC10719 material labeled with E7 anti-beta-tubulin.
+  - reference: InterPro:IPR000217
+    notes: Issuing InterPro API verified the Tubulin family and its broad subtype
+      scope.
+canonical_examples:
+- taxon_id: NCBITaxon:241424
+  taxon_label: Takayama helix
+  reference: DOI:10.1016/j.cell.2025.09.027
+  note: Cultured RCC10719 dinoflagellate examined by fixed-cell ultrastructure expansion
+    microscopy. Figure 2D-E shows perinuclear and posterior spools. Table S1, List
+    of Species row 46, identifies the strain; Dataset Annotation row 1384 records
+    spool-positive interphase material, E7 antibody and one species in the gel. P22-120
+    is its other culture code.
+evidence:
+- reference: DOI:10.1016/j.cell.2025.09.027
+  notes: Mikus et al. (2025), Charting the landscape of cytoskeletal diversity in
+    microbial eukaryotes, Cell. Read the primary microtubule-array Results, dinoflagellate
+    survey, Discussion, Figure 2 and 6 legends, key resources, fixation, U-ExM, microscopy
+    and image-analysis Methods in the public article PDF. Spool identity and location
+    are observations; desmose association and physiological roles remain proposals.
+- reference: https://www.dudinlab.com/s/Table-S1.xlsx
+  notes: Author-linked Table S1 read directly. List of Species A46:K46 identifies
+    RCC10719 as Takayama helix with successful expansion and staining. Dataset Annotation
+    D1384:V1384 identifies the spool-positive interphase volume rcc10719_pfa_dna-tub-nhs_20230802_od_s00,
+    culture code P22-120, E7Ab and one species in the gel. These are image annotations,
+    not independent-cell counts or a population-prevalence estimate.
+- reference: GO:0005622
+  notes: Verified non-obsolete intracellular anatomical structure, used as a broad
+    is-a parent without asserting a particular microtubule lattice or membrane boundary.
+- reference: GO:0015630
+  notes: Verified non-obsolete microtubule cytoskeleton. The spool is a part of this
+    cytoskeletal system, not equivalent to the whole system.
+datasets:
+- title: Microbial eukaryote U-ExM volumes and annotations
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  url: https://github.com/Dey-Lab-Team/culture-collections/tree/2dc2f3dbae8fefe60cea3a2499a1a5f50fe4c98d
+  publication: DOI:10.1016/j.cell.2025.09.027
+  platform: Ultrastructure expansion microscopy with post-expansion immunofluorescence
+  description: Multi-species study archive; the relevant subset includes Takayama
+    helix RCC10719 volumes annotated for spool presence.
+  notes: Inspected the pinned repository metadata, data/project.json and data/volumes/dataset.json,
+    plus the tab-delimited categories.csv. The default dataset is volumes, not the
+    older single_volumes metadata. Spool annotations include Yes, No, Maybe and blank
+    entries; they are not treated as clade-level presence or absence. The archive
+    also links BioImage Archive S-BIAD2095; no raw volume is hosted or claimed to
+    have been reanalyzed here.
+discussions:
+- discussion_id: identity_and_ontology_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the named spool assembly from tubulin proteins and broader cytoskeletal
+    structures.
+  rationale: A shape-bearing subcellular structure requires its own identity without
+    promoting a broader ontology class or a hypothetical homology to equivalence.
+  notes: Hidden- and ignored-inclusive repository searches for labels, aliases, DOI,
+    PMID and preprint DOI found no existing spool record. QuickGO spool search returned
+    zero terms. Generic tubulin and microtubule hits do not denote this assembly.
+    GO:0005622 is the broad parent; microtubule cytoskeleton is a part_of relation.
+    OTHER kind avoids claiming a resolved single-filament lattice or bundle topology.
+    Tubulin ring is not an exact synonym for all ring-shaped tubulin structures. The
+    membrane nuclear net, cortical array, flagellar apparatus and apical centrin ring
+    are not asserted to be this entity. No desmose equivalence or parthood is asserted.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Figure 2D-E names the tubulin or microtubule spools; desmose association
+      is speculative.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: molecular_and_topological_resolution
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the spool's filament topology, tubulin subtype composition and assembly
+    mechanism.
+  rationale: Immunolocalization and an apparent connection cannot establish the complete
+    lattice, gene inventory or assembly dependencies.
+  notes: The authors describe an apparent extension from a single microtubule. This
+    is not treated as a counted one-microtubule stoichiometry, closed ring topology,
+    standard protofilament number or direct reconstruction of a complete molecular
+    lattice. Tubulin-family grounding is not a claim that every family member is present.
+    No gene-specific accession, subunit count or causal assembly graph is asserted.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Microtubule-array Results and Figure 2D-E establish morphology and tubulin
+      labeling.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: neighboring_signals_not_spool_components
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep neighboring cortical centrin, DNA and flagellar modification signals
+    separate from spool composition.
+  rationale: A multi-channel or multi-panel view does not make every labeled material
+    a constituent of the highlighted structure.
+  notes: DNA supplies nuclear context, not a demonstrated spool constituent. Cortical
+    centrin is described separately and is not assigned to the spool merely because
+    it appears in the same cells or video. Figure 2F-G examines flagellar and cortical
+    tubulin modifications; it does not establish a spool-specific modification inventory.
+    The structure is not assigned centrin, DNA, flagellar proteins or modifying enzymes
+    on that basis. This is an evidence boundary, not a claim of biological absence.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: The microtubule and centrin Results and Figure 2 separate these structures
+      and signals.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: functional_and_taxonomic_limits
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Establish physiological function, cell-cycle dynamics and taxonomic prevalence
+    with targeted tests.
+  rationale: A fixed-cell survey and a hypothesis about neighboring structures do
+    not demonstrate force transmission, swimming performance or division requirements.
+  notes: The survey reports spools among sampled Kareniaceae, including Karenia, Karlodinium
+    and Takayama. This is not universal family prevalence or an absence claim for
+    unsampled or insufficiently labeled taxa. Mechanical reinforcement, high-shear
+    swimming, nuclear-envelope dynamics and desmose-mediated basal-body linkage remain
+    hypotheses. No asserted function, associated trait, essentiality, universal two-spool
+    count or causal graph is inferred from them.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Dinoflagellate survey and Discussion explicitly propose future time-course
+      experiments to clarify spool formation and function.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: expansion_scale_and_image_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile expansion-factor handling before asserting native-cell dimensions
+    from the figure.
+  rationale: Conflicting scale statements must not be silently converted into a precise
+    biological measurement.
+  notes: Figure 2's legend describes 5 micrometre scale bars adjusted for expansion,
+    whereas Image analysis Methods says scale bars are not adjusted. Figure 2E reports
+    perinuclear and posterior diameter summaries for measured spools, not universal
+    dimensions. No physical_properties or scale-derived measurements are asserted.
+    The hosted publisher Figure 2 is unmodified; D-E are the spool panels, while other
+    panels contain other structures or taxa. It is fixed-cell expansion fluorescence,
+    not live imaging, electron microscopy or a direct native-size image.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Figure 2 legend and STAR Methods, Image analysis, were read together; the
+      scale-bar discrepancy remains unresolved.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: sample_identity_and_metadata_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Interpret combined culture identifiers using specimen annotations rather
+    than filenames alone.
+  rationale: Co-embedded cultures are not synonyms or proof that both organisms possess
+    the structure.
+  notes: Table S1 identifies rcc3511rcc10719 volumes as Takayama helix RCC10719 with
+    two species in the gel, while row 1384 identifies a one-species RCC10719 volume
+    with spool presence. RCC3511 is separately listed as Biecheleriopsis adriatica
+    in the key resources. The combined filename therefore does not establish strain
+    equivalence or spool occurrence in Biecheleriopsis. The caption identifies Figure
+    2D-E as Takayama helix; an exact raw-volume-to-panel mapping was not established.
+  evidence:
+  - reference: https://www.dudinlab.com/s/Table-S1.xlsx
+    notes: Dataset Annotation rows 1375-1376 and 1384 distinguish culture, species
+      count per gel and spool annotation.
+  - reference: DOI:10.1016/j.cell.2025.09.027
+    notes: Key resources and Figure 2D-E provide the separate strain and panel identities.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+images:
+- image_id: mikus_2025_figure2
+  file: mikus_2025_figure2.jpg
+  file_sha256: e979bacf2fad45501744aa5dbc2fd75c0fc2ab2b5e6a6be32be77aad0b1f9046
+  source: OTHER
+  source_accession: S0092867425011274 Figure 2
+  source_url: https://doi.org/10.1016/j.cell.2025.09.027
+  download_url: https://ars.els-cdn.com/content/image/1-s2.0-S0092867425011274-gr2_lrg.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Felix Mikus and coauthors, Charting the landscape of cytoskeletal diversity
+    in microbial eukaryotes, Cell (2025), Figure 2, DOI 10.1016/j.cell.2025.09.027.
+    Copyright 2025 The Authors; published by Elsevier Inc.; CC BY 4.0. Unmodified
+    publisher image.
+  modality: SUPER_RESOLUTION
+  caption: 'Figure 2: D-E show tubulin-positive perinuclear and posterior spools in
+    Takayama helix by fixed-cell ultrastructure expansion microscopy; D includes tubulin
+    in magenta and DNA in blue, and E includes enlarged views and diameter summaries.
+    A-C and F-G contain other taxa or other cytoskeletal observations, not additional
+    spool examples. The legend gives 5 micrometre scale bars adjusted for expansion,
+    but Methods says bars are not adjusted; no native-size measurement is inferred
+    here.'
+  taxon_id: NCBITaxon:241424
+  taxon_label: Takayama helix
+  reference: DOI:10.1016/j.cell.2025.09.027
+  retrieved_on: '2026-10-03'
+  notes: Licence verified from the publisher-deposited Crossref version-of-record
+    metadata and the article's explicit CC BY 4.0 statement. Original publisher JPEG
+    visually inspected against Figure 2 and retained without cropping or rescaling.
+    Taxon applies to spool panels D-E, not every organism in the figure.
