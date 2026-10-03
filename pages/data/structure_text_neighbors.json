@@ -2849,14 +2849,14 @@
           "cosine_similarity": 0.70290475
         },
         {
+          "identifier": "cellstructuremech:stalk_spasmoneme",
+          "label": "Stalk spasmoneme",
+          "cosine_similarity": 0.67964564
+        },
+        {
           "identifier": "GO:0030130",
           "label": "clathrin coat of trans-Golgi network vesicle",
           "cosine_similarity": 0.6742753
-        },
-        {
-          "identifier": "GO:0032170",
-          "label": "pseudohyphal septin ring",
-          "cosine_similarity": 0.67158855
         }
       ]
     },
@@ -3381,9 +3381,9 @@
           "cosine_similarity": 0.67391026
         },
         {
-          "identifier": "GO:0005826",
-          "label": "actomyosin contractile ring",
-          "cosine_similarity": 0.64551414
+          "identifier": "cellstructuremech:stalk_spasmoneme",
+          "label": "Stalk spasmoneme",
+          "cosine_similarity": 0.66246695
         }
       ]
     },
@@ -5035,6 +5035,11 @@
       "label": "Spirostomum myoneme fishnet",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:stalk_spasmoneme",
+          "label": "Stalk spasmoneme",
+          "cosine_similarity": 0.7724251
+        },
+        {
           "identifier": "cellstructuremech:infraciliary_lattice",
           "label": "infraciliary lattice",
           "cosine_similarity": 0.73248969
@@ -5053,11 +5058,6 @@
           "identifier": "cellstructuremech:cryptophyte_cortical_centrin_network",
           "label": "cryptophyte cortical centrin network",
           "cosine_similarity": 0.70713467
-        },
-        {
-          "identifier": "GO:0110085",
-          "label": "mitotic actomyosin contractile ring",
-          "cosine_similarity": 0.70610947
         }
       ]
     },
@@ -5089,6 +5089,37 @@
           "identifier": "GO:0032170",
           "label": "pseudohyphal septin ring",
           "cosine_similarity": 0.87773074
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:stalk_spasmoneme",
+      "label": "Stalk spasmoneme",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:spirostomum_myoneme_fishnet",
+          "label": "Spirostomum myoneme fishnet",
+          "cosine_similarity": 0.7724251
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.69322271
+        },
+        {
+          "identifier": "GO:0035253",
+          "label": "ciliary rootlet",
+          "cosine_similarity": 0.68632516
+        },
+        {
+          "identifier": "GO:0032157",
+          "label": "prospore contractile ring",
+          "cosine_similarity": 0.68191486
+        },
+        {
+          "identifier": "cellstructuremech:cryptophyte_cortical_centrin_network",
+          "label": "cryptophyte cortical centrin network",
+          "cosine_similarity": 0.67964564
         }
       ]
     },

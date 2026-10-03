@@ -1,0 +1,60 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/stalk_spasmoneme.yaml
+  slug: stalk_spasmoneme
+session:
+  id: 2026-10-03T225128Z-codex-20a0fa
+  timestamp: '2026-10-03T22:51:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2002
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2001
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Adversarial self-review and correction of sheath localization scope
+  details: 'Adversarial self-review of PR #2001 after opening, initially reviewing commit
+    b161e3f4dbf8402750332efdb92edd3208307d09 against main 1478111537cfa8736219d530717cc5a9ef5e1666.
+    This was the same AI assistant, not independent human review. One concrete P2 defect was
+    filed as issue #2002: the nonconstituents discussion extended CCDC sheath localization
+    to EGF-like proteins, although the accessible Jiang 2025 abstract supports both classes
+    at stalk level and specifically localizes only CCDC to the sheath. Corrected that distinction
+    without adding constituents or inferring spasmoneme membership. A safe_load mutator asserted
+    identity, status and exact old notes, preserved rationale and discussion dates, linked
+    the issue in evidence, appended an llm_assisted curation event, and wrote through write_validated_structure;
+    the temporary script was removed.
+
+
+    The remaining review checked structure-versus-protein identity, body-myoneme and extracellular-sheath
+    boundaries, broad historical spasmoneme terminology, the composite OTHER kind, one combined
+    constituent class rather than an exhaustive inventory, unknown assembly essentiality,
+    and unresolved family grounding. Rechecked primary assay and model limits: glycerinated
+    calcium exposure is separated from live-cell viscous-load experiments; antibody reactivity
+    does not identify a unique native isoform; force extrapolation, putative partners and
+    proposed recovery models are not promoted to direct molecular observations. The historical
+    Zoothamnium name remains unresolved rather than receiving a guessed taxon. Re-read the
+    CIL item metadata and inspected its unchanged preview, and visually inspected Konior 2009
+    Figures 4-8; no quantitative image measurement or protein-specific assertion is made from
+    the CIL preview. No other actionable defect was found within this review''s scope.
+
+
+    Before the correction, full QC passed: 601 tests, 3 skipped, 2 dependency warnings; 849
+    structures and 1524 histories. Snippets verified 31/31, trait links 10/10, identifier
+    liveness 3580 OK and 175 explicitly skipped with all resolver controls exercised, and
+    identifier-label checks passed with 438 no-adapter entries. All 848 pre-existing embedding
+    rows and search-index entries were unchanged. Hosted image hash/size, generated links
+    and published JSON copies were checked. The correction affects discussion and provenance
+    only; derived artifacts are being regenerated and target checks plus full QC must pass
+    again before committing. Remaining native composition, recovery-mechanism and historical-taxon
+    questions are documented knowledge gaps, not claims of resolution. Mapping status remains
+    PROPOSED.'
