@@ -1,0 +1,54 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/diazoplast.yaml
+  slug: diazoplast
+session:
+  id: 2026-10-03T145232Z-codex-73d018
+  timestamp: '2026-10-03T14:52:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1988
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  - generated_artifacts
+  summary: Adversarial diazoplast review retains bounded evidence claims
+  details: 'Separate model-only adversarial pass after PR #1988 opened, against scientific
+    commit 6bfc093c8424ffe712fde0872120706c23d202cb and its actual 14-file PR diff/base 2cbf81f7af44001b76f0a327c58d76a32b0f1218.
+    Re-read the committed YAML and generated record page; compared every scientific claim
+    with final primary PMC11070190 Results/Discussion (passages13,14,16,18-23,25,27,28,30,32,34,35,37,39,41,43)
+    and PMC12377750 (6-8,32,34,36,37,43,44,46). Challenged organelle versus obligate-endosymbiont
+    identity, nitroplast conflation, generic spheroid-body synonym scope, broad structural
+    GO parent, constituent versus functional essentiality, HupL detection versus localization/flux,
+    genus distribution versus species physiology, nonaxenic culture attribution, partial versus
+    complete inhibition, isotope-inferred exchange versus named transporters, and unvalidated
+    host imports. Existing record correctly preserves these limits; the inconsistent proteome-coverage
+    percentages in the 2025 source are not imported. Reinspected the hosted whole Figure2,
+    confirmed caption/taxon/modality, SHA256 and generated image/licence/attribution links;
+    prior licence/JATS/media MD5 validation remains applicable to unchanged bytes. Confirmed
+    only one new vector and 835 unchanged prior vector entries, with expected PCA-map and
+    neighbor regeneration. No actionable defect found; no issue manufactured and no scientific
+    YAML mutation made. OPEN exact HupL family and direct transport/division follow-ups remain.
+    Initial local QC passed575 tests with3 skips and2 dependency deprecation warnings,836
+    strict-valid records,1497 valid histories, current site/README/embeddings;3525 OK and161
+    explicitly skipped identifiers;3430 canonical48synonym8accepted-exception421no-adapter
+    label pairs;31/31 snippets,10/10trait links,18/18vendored. All resolver controls were
+    exercised across the full identifier run and a successful targeted InterPro retry after
+    a transient timeout. This append-only review history must pass validation and final local
+    QC before commit; exact final-head CI and merge-queue checks remain required before merge.
+    Review is model-only, not independent human review; PROPOSED status is retained.'
