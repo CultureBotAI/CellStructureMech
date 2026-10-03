@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/bindosome_complex.yaml
+  slug: bindosome_complex
+session:
+  id: 2026-10-03T061656Z-codex-3830e4
+  timestamp: '2026-10-03T06:16:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1970
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1969
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - evidence
+  summary: Qualify bindosome constituent specificity
+  details: 'Addressed PR #1969 review issue #1970 by qualifying SSO3043 and SSO1273 as putative
+    solute-binding proteins detected in high-molecular-mass bindosome fractions, while preserving
+    direct GlcS and AraS sugar-binding assignments.'

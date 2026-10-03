@@ -24,6 +24,13 @@ curation_history:
     organization function, GO and DOI evidence, and Bas-machinery and S-layer boundary
     discussions.
   llm_assisted: true
+- timestamp: '2026-10-03T06:16:32Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Qualified the bindosome constituent grounding note so SSO3043 and SSO1273
+    are described as detected putative solute-binding proteins rather than proven
+    sugar-binding proteins; addresses PR #1969 review issue #1970.'
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 components:
@@ -44,7 +51,10 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam, or UniProtKB family
     CURIE was curated for the combined archaeal cell-surface sugar-binding-protein
-    class; specific S. solfataricus proteins include GlcS, AraS, SSO3043, and SSO1273.
+    class. GlcS and AraS have direct sugar-binding assignments in S. solfataricus;
+    Zolghadr et al. 2011 also detected SSO3043 and SSO1273 putative solute-binding
+    proteins in extracted high-molecular-mass complexes without resolving their exact
+    substrates.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2287
   taxon_label: Saccharolobus solfataricus
