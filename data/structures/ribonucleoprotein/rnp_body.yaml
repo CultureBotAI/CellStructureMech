@@ -1,0 +1,348 @@
+identifier: GO:0140365
+label: RNP body
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: A ribonucleoprotein granule located in the cytoplasm of bacteria, minimally
+  containing the RNase E protein and RNA molecules. Bacterial RNP-bodies are similar
+  to eukaryotic P-bodies and stress granules.
+definition_source: GO:0140365
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T11:59:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T12:00:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added GO identity and parentage, four evidence-backed components with verified
+    NA1000 protein examples, scoped taxonomy and mRNA-decay function, a six-edge mechanistic
+    graph, condensate boundaries and client-family follow-up.
+  llm_assisted: true
+- timestamp: '2026-10-03T12:03:07Z'
+  curator: codex
+  action: TIGHTENED_TAXONOMY_SCOPE
+  changes: Removed provisional species prevalence assertion; retain experimentally
+    demonstrated NA1000 as a canonical example without inferring lineage patchiness.
+  llm_assisted: true
+synonyms:
+- synonym_text: BR-body
+  synonym_type: EXACT_SYNONYM
+  source: GO:0140365
+- synonym_text: bacterial RNP body
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.molcel.2018.08.003
+parent_structures:
+- GO:0036464
+part_of:
+- GO:0005737
+components:
+- component_id: rnase_e
+  label: Ribonuclease E
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR028878
+  gene_symbols:
+  - rne
+  essentiality: ESSENTIAL
+  role: 'Core scaffold in Caulobacter: its disordered C-terminal domain supports condensation
+    with RNA and recruits degradosome clients; its catalytic domain cleaves RNA. Family
+    membership alone does not establish BR-body formation in other bacteria.'
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A0H3CAR6
+    protein_label: Ribonuclease E
+    gene_symbol: rne
+    taxon_id: NCBITaxon:565050
+    taxon_label: Caulobacter vibrioides NA1000
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-03'
+    role: Experimentally tested BR-body scaffold and endoribonuclease.
+    evidence:
+    - reference: UniProtKB:A0A0H3CAR6
+      notes: UniProt identifies CCNA_01954 in taxon 565050; the accession is an unreviewed
+        sequence mapping, not independent localization evidence.
+    - reference: DOI:10.1016/j.molcel.2018.08.003
+      notes: Methods identify CCNA_01954 as the locus used for the experimentally
+        localized fluorescent fusion.
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2018.08.003
+    notes: CTD deletion disperses RNase E; CTD-only constructs form condensates. RNase
+      E depletion disperses RhlB and aconitase foci. Assembly essentiality refers
+      to this scaffold, not a requirement for its catalytic domain.
+  - reference: InterPro:IPR028878
+    notes: Verified Ribonuclease E family, rather than the broader RNase E/G family;
+      UniProt maps the experimentally used CCNA_01954 product to it.
+- component_id: mrna
+  label: mRNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000234
+  essentiality: CONDITIONAL
+  role: RNA cargo and assembly substrate. Long, poorly translated mRNAs are preferentially
+    enriched in the experimentally isolated Caulobacter bodies; the SO grounding denotes
+    the RNA class, not this translation state.
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2018.08.003
+    notes: In vivo mRNA depletion disperses bodies and rifampicin-resistant T7 transcription
+      preserves them. Purified RNase E CTD can condense without RNA at suitable protein
+      and salt concentrations, so mRNA is not asserted to be universally required
+      in vitro.
+  - reference: DOI:10.1016/j.molcel.2020.04.001
+    notes: RNA sequencing of active-site-mutant-stabilized bodies enriches mRNAs,
+      small RNAs and antisense RNAs. Longer RNAs stimulate CTD droplet assembly in
+      vitro; mRNA is not the only RNA class present.
+- component_id: rhlb
+  label: RhlB RNA helicase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - rhlB
+  essentiality: DISPENSABLE
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The Caulobacter CCNA_01923 product maps to the RhlB-like helicase
+    domain IPR044742, not an exact whole-protein family. InterPro searches also found
+    RhlB families IPR022077 and IPR023554, but their coverage of this experimentally
+    tested product was not established; no domain is promoted to a family grounding.
+  role: RNase E-recruited helicase client within Caulobacter BR-bodies. Loss of its
+    RNase E binding site eliminates client foci without eliminating RNase E bodies.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A0H3C8I9
+    protein_label: DEAD-box ATP-dependent RNA helicase RhpA
+    gene_symbol: rhlB
+    taxon_id: NCBITaxon:565050
+    taxon_label: Caulobacter vibrioides NA1000
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-03'
+    role: RhlB in the paper; UniProt currently labels the same locus RhpA while retaining
+      the rhlB gene symbol.
+    evidence:
+    - reference: UniProtKB:A0A0H3C8I9
+      notes: UniProt identifies CCNA_01923 in taxon 565050; the accession is an unreviewed
+        sequence mapping, not independent localization evidence.
+    - reference: DOI:10.1016/j.molcel.2018.08.003
+      notes: Methods identify CCNA_01923 as the locus used for the experimentally
+        localized fluorescent fusion.
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2018.08.003
+    notes: Figure 3 and associated binding-site deletion experiments show RhlB co-localization
+      and RNase E-dependent recruitment; the bodies persist when recruitment is disrupted.
+- component_id: aconitase
+  label: aconitase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - acnA
+  essentiality: DISPENSABLE
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The verified Caulobacter product maps to aconitase/IRP and aconitase/isopropylmalate-dehydratase
+    groupings and domains. These are broader than the aconitase class curated here;
+    no exact source-neutral whole-protein family was established in this pass.
+  role: RNase E-recruited metabolic-enzyme client in Caulobacter BR-bodies; its recruitment
+    is dispensable for formation of the RNase E condensate.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A0H3CE29
+    protein_label: Aconitate hydratase
+    gene_symbol: acnA
+    taxon_id: NCBITaxon:565050
+    taxon_label: Caulobacter vibrioides NA1000
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-03'
+    role: Aconitase client localized in RNase E-containing bodies.
+    evidence:
+    - reference: UniProtKB:A0A0H3CE29
+      notes: UniProt identifies CCNA_03781 in taxon 565050; the accession is an unreviewed
+        sequence mapping, not independent localization evidence.
+    - reference: DOI:10.1016/j.molcel.2018.08.003
+      notes: Methods identify CCNA_03781 as the locus used for the experimentally
+        localized fluorescent fusion.
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2018.08.003
+    notes: Figure 3 shows aconitase co-localization with RNase E. Deleting the aconitase-binding
+      site disperses aconitase while RNase E still forms bodies.
+canonical_examples:
+- taxon_id: NCBITaxon:565050
+  taxon_label: Caulobacter vibrioides NA1000
+  note: All Caulobacter strains in the 2018 study derive from NA1000, historically
+    called C. crescentus NA1000. Fluorescent-fusion imaging, RNase E domain and binding-site
+    mutants, and RNA-depletion experiments establish BR-body assembly in this background.
+  reference: DOI:10.1016/j.molcel.2018.08.003
+functions:
+- function_id: mrna_catabolism
+  label: mRNA catabolic process
+  grounding: GO:0006402
+  description: During the assayed Caulobacter growth conditions, BR-bodies preferentially
+    organize poorly translated mRNAs and decay enzymes, stimulating initial endonucleolytic
+    cleavage and subsequent degradation. This does not assert identical RNA fate under
+    every stress condition.
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2020.04.001
+    notes: Global half-life profiling and paired RNA-seq/qRT-PCR comparisons distinguish
+      condensation-dependent initial cleavage from the contribution of recruited exoribonucleases
+      to decay of intermediates.
+evidence:
+- reference: GO:0140365
+  notes: Active GO cellular-component identity with exact BR-body synonym and original-paper
+    PMID 30197298; GO:0036464 is its is-a parent.
+- reference: DOI:10.1016/j.molcel.2018.08.003
+  notes: Al-Husini et al. 2018, alpha-proteobacterial RNA degradosomes assemble liquid-liquid
+    phase separated RNP bodies. Full-text results and methods read through NCBI PMC
+    BioC (PMC6151146).
+- reference: DOI:10.1016/j.molcel.2020.04.001
+  notes: Al-Husini et al. 2020, BR-bodies provide selectively permeable condensates
+    that stimulate mRNA decay and prevent release of decay intermediates. Results
+    read through NCBI PMC BioC (PMC7245546).
+causal_graphs:
+- graph_id: caulobacter_br_body_cycle
+  title: RNA-dependent condensation couples BR-body assembly to RNA cleavage
+  description: Caulobacter RNase E and available mRNA promote condensation; the resulting
+    bodies stimulate RNA cleavage, which enables their dynamic disassembly.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Based on NA1000-derived cellular perturbations and purified Caulobacter
+    RNase E CTD assays from 2018 and 2020. RNA promotes rather than universally enables
+    in vitro condensation. The graph describes the growth-condition decay cycle, not
+    all stress states, all bacterial RNase E proteins, or a fixed stoichiometric complex.
+  nodes:
+  - node_id: rnase_e
+    label: Ribonuclease E
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR028878
+    component_ref: rnase_e
+  - node_id: mrna
+    label: mRNA
+    node_type: RNA
+    grounding: SO:0000234
+    component_ref: mrna
+  - node_id: condensation
+    label: RNase E CTD-mediated condensation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: rnp_body
+    label: RNP body
+    node_type: STRUCTURE
+    grounding: GO:0140365
+  - node_id: rna_cleavage
+    label: RNase E-mediated RNA cleavage
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: disassembly
+    label: BR-body disassembly
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: rnase_e
+    predicate: drives
+    object: condensation
+    description: The disordered RNase E CTD drives condensate assembly under the tested
+      conditions.
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2018.08.003
+      notes: CTD deletion abolishes foci, CTD-only constructs form foci, and purified
+        CTD forms salt- and concentration-dependent liquid-like droplets.
+  - subject: mrna
+    predicate: promotes
+    object: condensation
+    description: Available mRNA supports cellular body formation; RNA addition promotes
+      purified CTD condensation over a broader salt range within a concentration window.
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2018.08.003
+      notes: Rifampicin/T7 experiments establish the cellular mRNA dependence; poly-A
+        titrations promote droplets at intermediate RNA concentrations, while excess
+        RNA inhibits condensation.
+  - subject: condensation
+    predicate: forms
+    object: rnp_body
+    description: RNase E condensation with RNA produces bacterial RNP bodies.
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2018.08.003
+      notes: Live-cell fusion dynamics, RNase E domain perturbations and purified-protein
+        phase behavior support the condensate interpretation.
+  - subject: rnase_e
+    predicate: catalyzes
+    object: rna_cleavage
+    description: The catalytic N-terminal domain cleaves RNA, distinct from the CTD
+      assembly function.
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2018.08.003
+      notes: Catalytically impaired RNase E and CTD-only replacements retain bodies
+        but fail to support their normal rapid disassembly.
+  - subject: rnp_body
+    predicate: stimulates
+    object: rna_cleavage
+    description: Condensate organization accelerates the initial cleavage of tested
+      mRNA substrates in the assayed growth conditions.
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2020.04.001
+      notes: qRT-PCR half-lives are prolonged in the noncondensing NTD mutant and
+        partly restored by the condensation-competent degradosome-binding-site mutant,
+        separating condensation from client recruitment.
+  - subject: rna_cleavage
+    predicate: enables
+    object: disassembly
+    description: RNA cleavage permits rapid BR-body dissolution during the observed
+      growth-condition cycle.
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2018.08.003
+      notes: Wild-type bodies are dynamic on the minute scale; two catalytic mutants
+        retain bodies throughout ten-minute imaging, and RNase A treatment dissolves
+        stabilized bodies in lysates.
+discussions:
+- discussion_id: condensate_not_degradosome_or_eukaryotic_granule
+  prompt: Keep the BR-body condensate distinct from one RNA degradosome and from eukaryotic
+    granules.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: The existing bacterial degradosome record describes a protein complex
+    with an E. coli-centered component set. BR-bodies are mesoscale RNase E/RNA condensates
+    whose assembly persists after several degradosome-client binding sites are removed.
+    Eukaryotic P-bodies and stress granules are analogies, not exact identities.
+  notes: Used exact GO:0140365 rather than a duplicate degradosome identifier. No
+    enolase, eukaryotic translation-initiation complex, ribosome or tmRNA constituent
+    was transferred. The 2020 RNA-enrichment and imaging experiments show depletion
+    of ribosomal RNAs, tmRNA and ribosomes from BR-bodies. The four curated components
+    are a supported subset, not an exhaustive proteome; PNPase, RNase D, small RNAs
+    and antisense RNAs remain additional evidenced composition leads.
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2018.08.003
+    notes: RNase E scaffold/client-binding-site experiments distinguish condensate
+      assembly from degradosome recruitment.
+  - reference: DOI:10.1016/j.molcel.2020.04.001
+    notes: RNA enrichment and super-resolution imaging delimit the cargo and ribosome
+      boundary.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: resolve_client_families
+  prompt: Establish exact taxon-neutral family groundings for the RhlB and aconitase
+    client classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#rhlb
+  - components#aconitase
+  rationale: The verified strain-specific UniProt mappings identify the assayed loci,
+    but domain and broad superfamily matches cannot substitute for exact whole-protein
+    family groundings. Current UniProt calls CCNA_01923 RhpA, whereas the paper and
+    gene symbol call it RhlB; this nomenclature difference is explicitly retained.
+  notes: Client localization and dispensability for condensate formation are supported
+    independently by the 2018 experiments. No guessed family accessions were added.
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2018.08.003
+    notes: Figure 3 and fluorescent-fusion methods establish the assayed clients and
+      their loci.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: taxon_occurrence_not_prevalence
+  prompt: Distinguish the verified NA1000 example from species-wide prevalence.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: A species-level VARIABLE presence row would imply patchiness across lineages
+    that the curated NA1000 experiments do not establish. A qualifying note cannot
+    remove that assertion from the structured field.
+  notes: Removed the provisional distribution row before commit. Retained NCBITaxon:565050
+    under canonical_examples. The 2018 paper also images Agrobacterium and Sinorhizobium,
+    but these are not extrapolated into an order- or class-wide prevalence statement
+    in this focused record.
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2018.08.003
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
