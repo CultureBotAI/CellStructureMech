@@ -1,0 +1,294 @@
+identifier: cellstructuremech:infraciliary_lattice
+label: infraciliary lattice
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A subcortical, calcium-responsive contractile network of centrin-containing
+  filaments in Paramecium, assembled with Sfi1-like centrin-binding proteins. The
+  mesh extends beneath the cell surface and is distinct from the basal-body-associated
+  organizing centres and ICL1e complex that can persist when the extended lattice
+  is lost.
+definition_source: DOI:10.1242/bio.024273
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T20:44:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T20:46:26Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added scoped primary evidence, component classes, calcium-related functions,
+    assembly dependencies, boundary discussions and the verified CC BY 3.0 confocal
+    Figure 2.
+  llm_assisted: true
+- timestamp: '2026-10-03T20:47:04Z'
+  curator: codex
+  action: CORRECTED_ATTRIBUTION
+  changes: Preserved the JATS distinction between the copyright notice and publisher
+    without assigning an unstated copyright holder.
+  llm_assisted: true
+parent_structures:
+- GO:0005622
+part_of:
+- GO:0030863
+synonyms:
+- synonym_text: ICL
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1242/bio.024273
+components:
+- component_id: icl_centrins
+  label: Infraciliary-lattice centrins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR050145 Centrin/CML-like also includes obelin and plant
+    CML proteins. It is not an exact grounding for the ICL centrin class. Neither
+    an EF-hand domain nor a species-specific centrin accession defines this component.
+  essentiality: ESSENTIAL
+  role: Calcium-binding centrin-family constituents of the lattice. ICL1e-family depletion
+    strips the extended network; essentiality here concerns lattice assembly, not
+    cell viability or a requirement for every centrin homologue.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Localization Results, depletion Results and Figures 2 and 4 distinguish
+      lattice centrins from basal-body-associated signals.
+  - reference: DOI:10.1242/jcs.019414
+    notes: 'Abstract read: proteomics identifies ten centrin subfamilies required
+      for ICL biogenesis. Full experimental text was not reached.'
+- component_id: icl_centrin_binding_proteins
+  label: Infraciliary-lattice Sfi1-like centrin-binding proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR052270 covers SFI1 and related proteins, including
+    CCDC191. An exact family mapping for the ICL scaffold class and its constituent
+    subfamilies was not established; similarity to Sfi1 is not an accession mapping.
+  essentiality: ESSENTIAL
+  role: Scaffold class required for extended lattice assembly, exemplified by PtCenBP1.
+    Not a claim that PtCenBP1 is the complete scaffold inventory.
+  evidence:
+  - reference: DOI:10.1128/EC.00197-07
+    notes: RNAi and GFP-fragment experiments support PtCenBP1 membership and assembly
+      dependence.
+  - reference: DOI:10.1242/jcs.019414
+    notes: 'Abstract read: two Sfi1-like protein subfamilies are required for ICL
+      biogenesis. Full experimental text was not reached.'
+canonical_examples:
+- taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  reference: DOI:10.1242/bio.024273
+  note: Wild-type reference strain d4-2 and mutant backgrounds were studied. Figure
+    2 compares an intact wild-type lattice with the BP ICL-less state; Methods identifies
+    Delta-CenBP1/nd7-1 among the strains. The species taxon is verified at ENA; no
+    strain identifier or clade-wide prevalence is inferred.
+functions:
+- function_id: calcium_dependent_contractility
+  label: Calcium-dependent lattice contractility
+  description: Supports cell contraction during secretagogue-induced calcium influx
+    in the experimental Paramecium system; not assigned as a locomotory motor.
+  evidence:
+  - reference: DOI:10.1128/EC.00197-07
+    notes: AED assay and PtCenBP1 RNAi connect lattice integrity with contractility.
+- function_id: calcium_signal_downregulation
+  label: Post-exocytotic calcium-signal downregulation
+  description: Supports rapid recovery of intracellular calcium after exocytosis stimulation.
+    ICL-less Delta-PtCenBP1 cells show slower signal decay without a change in initial
+    signal generation; the authors interpret this as endogenous buffering.
+  evidence:
+  - reference: DOI:10.1016/j.ceca.2008.06.004
+    notes: 'Primary abstract read: Fura Red ratio imaging compares d4-2 with Delta-PtCenBP1.
+      Full methods were not reached; quantitative decay values are not curated.'
+causal_graphs:
+- graph_id: icl_assembly_dependencies
+  title: Constituent requirements for lattice assembly
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Paramecium tetraurelia component-class dependencies, supported by depletion
+    and localization. The graph does not specify assembly order, stoichiometry, molecular
+    shortening, or basal-body anchoring.
+  nodes:
+  - node_id: centrins
+    label: Infraciliary-lattice centrins
+    node_type: GENE_OR_PROTEIN
+    component_ref: icl_centrins
+  - node_id: scaffolds
+    label: Infraciliary-lattice Sfi1-like centrin-binding proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: icl_centrin_binding_proteins
+  - node_id: lattice
+    label: Assembled infraciliary lattice
+    node_type: STRUCTURE
+    grounding: cellstructuremech:infraciliary_lattice
+  edges:
+  - subject: centrins
+    predicate: are required for assembly of
+    object: lattice
+    evidence:
+    - reference: DOI:10.1242/bio.024273
+      notes: ICL1e-family RNAi strips the wild-type mesh; the separate basal-body-associated
+        complex is outside this edge.
+  - subject: scaffolds
+    predicate: are required for assembly of
+    object: lattice
+    evidence:
+    - reference: DOI:10.1128/EC.00197-07
+      notes: PtCenBP1 depletion disassembles the mesh; recovery permits reassembly.
+    - reference: DOI:10.1242/jcs.019414
+      notes: Abstract reports assembly requirements for both scaffold subfamilies.
+evidence:
+- reference: DOI:10.1242/bio.024273
+  notes: Aubusson-Fleury et al. (2017). Read Introduction, ICL1e localization and
+    depletion Results, strain, RNAi, immunostaining and microscopy Methods, and Figure
+    2 legend in Europe PMC JATS. These delimit the extended lattice and surviving
+    basal-body-associated structures.
+- reference: DOI:10.1128/EC.00197-07
+  notes: Gogendeau et al. (2007). Publisher abstract, Methods, RNAi/localization Results
+    and opening Discussion read. Earlier PMC and Europe PMC routes failed; the ASM
+    publisher body subsequently succeeded.
+- reference: DOI:10.1242/jcs.019414
+  notes: Gogendeau et al. (2008). Europe PMC primary abstract read. DOI and publisher-search
+    routes did not yield full text; no detailed methods, exact paralogue inventory
+    or copy numbers are claimed.
+- reference: DOI:10.1016/j.ceca.2008.06.004
+  notes: Sehring et al. (2009). Europe PMC primary abstract read. DOI retrieval failed
+    and a public PDF lead did not establish full-body access. The function is retained
+    only at the explicitly reported qualitative comparison.
+- reference: GO:0005622
+  notes: Verified non-obsolete intracellular anatomical structure, used as a broad
+    is-a parent.
+- reference: GO:0030863
+  notes: Verified non-obsolete cortical cytoskeleton. The subcortical lattice is treated
+    as a proper part, not the entire cortical framework.
+discussions:
+- discussion_id: identity_and_ontology_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate the infraciliary lattice from other centrin assemblies and ontology
+    lattices.
+  rationale: Similar names, shared centrin and neighboring localization do not establish
+    structural identity.
+  notes: Hidden- and ignored-inclusive repository searches found only discussion mentions
+    in the cryptophyte cortical centrin network and its derived embedding, not an
+    ICL record. QuickGO infraciliary returned no term; infraciliary lattice returned
+    galectin and mammalian cytoplasmic-lattice terms, whose definitions do not match.
+    A broader centrin/contractile/network query was not an exact identity match. GO:0030863
+    is the encompassing cortical cytoskeleton. The local mint denotes the extended
+    mesh, not an individual filament, protein, organizing centre, ICL1e complex, ciliary
+    centrin arm or cryptophyte network.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Introduction and localization Results distinguish the whole mesh from retained
+      basal-body-associated structures.
+  - reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=infraciliary%20lattice
+    notes: Authority search; GO:0140095, GO:0140419 and GO:0140366 definitions were
+      read and rejected as identities.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: component_family_groundings
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral families for the ICL centrin and scaffold classes.
+  rationale: A broad family or domain must not silently substitute for the experimentally
+    delimited component class.
+  notes: InterPro IPR050145 includes non-centrin calcium-binding proteins, and IPR052270
+    does not by itself verify an exact ICL scaffold mapping. Components remain reviewed-label-only.
+    The two scaffold subfamilies reported in the 2008 abstract prevent treating PtCenBP1
+    as a complete inventory. No species-specific accession or stoichiometry is guessed.
+  evidence:
+  - reference: InterPro:IPR050145
+    notes: Family name and description read at the InterPro API.
+  - reference: InterPro:IPR052270
+    notes: Family name and description read at the InterPro API.
+  - reference: DOI:10.1242/jcs.019414
+    notes: Abstract documents molecular diversity of both component classes.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: basal_body_function_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not transfer ICL1e-complex anchoring functions to the whole extended
+    lattice.
+  rationale: ICL-less cells retain basal-body-associated material, while centrin depletion
+    affects more than one assembly.
+  notes: The 2017 study distinguishes the ICL-organizing centre from the ICL1e dot/complex.
+    Both lattice-bearing and BP cells retain the basal-body-associated ICL1e complex.
+    Depletion causes anchoring defects, not failure of basal-body duplication per
+    se. Those phenotypes are not assigned as whole-lattice functions. Basal-body tubulin,
+    Centrin2 and Centrin3 are not included simply because they are imaged or discussed
+    near the lattice; 1A9 does not recognize ICL1e centrins.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Localization and depletion Results; Figures 2 and 4.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: taxonomic_and_mechanistic_limits
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve taxonomic extent and finer molecular mechanisms with direct evidence.
+  rationale: Centrin conservation and network morphology do not establish universal
+    lattice occurrence or a resolved contraction mechanism.
+  notes: Only the verified P. tetraurelia exemplar is asserted. No prevalence row,
+    cross-ciliate homology claim, native dimension inferred from a scale bar, contraction
+    stoichiometry or detailed torsion/sliding mechanism is encoded. Family gene counts
+    are not copies per lattice. Abstract-only 2008 composition and 2009 calcium evidence
+    should be checked against full experimental text before quantitative expansion.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Species, imaging and depletion evidence delimit current assertions.
+  - reference: DOI:10.1016/j.ceca.2008.06.004
+    notes: Abstract supports a qualitative decay comparison, not a curated kinetic
+      model.
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5888
+    notes: Verified Paramecium tetraurelia, species rank; d4-2 is recorded as culture
+      metadata only.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: figure_and_antibody_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Identify intact and ICL-less panels and preserve the figure's exact licence.
+  rationale: Residual dots in a knockout are not an intact lattice, and different
+    antibody targets are not interchangeable.
+  notes: Unmodified Figure 2 is confocal, not STED. A/A1/A2 show the wild-type network;
+    B/B1/B2 show BP cells and residual structures. Actual panels label GFP-Cen15,
+    an ICL1e-subfamily member; the legend uses GFP-ICL1e generically. 1A9 marks other
+    ICL centrins and PolyE marks basal bodies. Scale bars are 20 micrometres in A/B
+    and 1 micrometre in insets. CC BY 3.0 was read in JATS and checked against PMC
+    OA metadata; the source media checksum was verified.
+  evidence:
+  - reference: DOI:10.1242/bio.024273
+    notes: Figure 2, its legend, fluorescence Methods and article permissions inspected.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+images:
+- image_id: pmc_pmc5483020_bio024273f2
+  file: pmc5483020_bio024273f2.jpg
+  file_sha256: c5d90f9f49f6d7e5039205c08adda9620a37aa7da5085986f9ea73436fb7b60a
+  source: PMC
+  source_accession: PMC5483020.1 BIO024273F2
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5483020/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5483020.1/biolopen-6-024273-g2.jpg
+  licence: CC_BY_3_0
+  licence_url: https://creativecommons.org/licenses/by/3.0/
+  attribution: 'Anne Aubusson-Fleury, Guillaume Balavoine, Michel Lemullois, Khaled
+    Bouhouche, Janine Beisson, France Koll; CC BY, via PubMed Central; Aubusson-Fleury
+    et al., Centrin diversity and basal body patterning across evolution: new insights
+    from Paramecium, Biology Open (2017), doi:10.1242/bio.024273. Copyright 2017.
+    Published by The Company of Biologists Ltd. CC BY 3.0; unmodified Figure 2.'
+  modality: FLUORESCENCE
+  caption: 'Confocal Figure 2: wild-type Paramecium tetraurelia lattice in A/A1/A2,
+    contrasted with BP ICL-less cells and residual basal-body-associated structures
+    in B/B1/B2. GFP-Cen15 (ICL1e subfamily) is green, 1A9-labelled ICL centrins magenta,
+    and basal bodies blue where shown. Arrows mark the separate ICL1e dot. Scale bars:
+    20 micrometres in A/B; 1 micrometre in insets.'
+  taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  reference: DOI:10.1242/bio.024273
+  retrieved_on: '2026-10-03'
+  notes: Fig. 2. from article version PMC5483020.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.

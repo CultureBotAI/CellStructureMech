@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/infraciliary_lattice.yaml
+  slug: infraciliary_lattice
+session:
+  id: 2026-10-03T204706Z-codex-dd4e5f
+  timestamp: '2026-10-03T20:47:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  summary: Add evidence-backed infraciliary lattice with licensed confocal figure
+  details: Added the infraciliary lattice as a distinct extended centrin/scaffold mesh, not
+    a protein, organizing centre, ICL1e complex or cryptophyte network. Hidden/ignored-inclusive
+    deduplication found only discussion mentions. QuickGO identity searches and definitions
+    support a local mint with GO:0005622 parent and GO:0030863 parthood; ENA verifies NCBITaxon:5888.
+    Read 2017 JATS localization/depletion Results, Methods and Figure 2; publisher 2007 abstract,
+    Methods and relevant Results/Discussion; Europe PMC 2008 composition and 2009 calcium
+    abstracts. Full-body access for the latter two was not established, so quantitative claims
+    are withheld. InterPro family scope checks leave both component classes reviewed-label-only
+    with follow-up discussion. The existing PMC API validated version 1 JATS licence CC BY
+    3.0, media md5 and SHA256 c5d90f9f49f6d7e5039205c08adda9620a37aa7da5085986f9ea73436fb7b60a
+    for the visually inspected unmodified confocal Figure 2; caption separates WT network
+    from BP remnants and identifies GFP-Cen15. All YAML changes used guarded safe_load mutators
+    with llm_assisted events and validated writers; attribution preserves the source publisher
+    wording. Whole-corpus gates and a separate post-opening adversarial self-review follow
+    before merge.
