@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/suctorian_feeding_tentacle.yaml
+  slug: suctorian_feeding_tentacle
+session:
+  id: 2026-10-03T104253Z-codex-481d80
+  timestamp: '2026-10-03T10:42:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1981
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1980
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - generated_artifacts
+  summary: Regenerate tentacle page after upstream template integration
+  details: 'The evidence review found no record-content defect, but PR merge-ref CI subsequently
+    detected one stale generated page after the mobile detail-table fix from PR #1975 entered
+    main. Recorded the reproducible integration failure as issue #1981. Integrated main at
+    fd0ed39d without conflicts and regenerated through scripts/render_pages.py. Only the new
+    tentacle page changed beyond upstream content, gaining named keyboard-focusable scroll
+    wrappers around its Components and Mechanism evidence tables. The curated YAML, citations,
+    component assignments, and embedding vectors are unchanged. Full QC is rerun on the integrated
+    tree and required PR/merge-group checks must pass before merge.'

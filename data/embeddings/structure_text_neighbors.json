@@ -28,14 +28,14 @@
           "cosine_similarity": 0.65272608
         },
         {
+          "identifier": "cellstructuremech:suctorian_feeding_tentacle",
+          "label": "suctorian feeding tentacle",
+          "cosine_similarity": 0.64840567
+        },
+        {
           "identifier": "GO:1990905",
           "label": "dinoflagellate peduncle",
           "cosine_similarity": 0.64388811
-        },
-        {
-          "identifier": "GO:0055040",
-          "label": "periplasmic flagellum",
-          "cosine_similarity": 0.6191194
         }
       ]
     },
@@ -152,14 +152,14 @@
           "cosine_similarity": 0.7371076
         },
         {
+          "identifier": "cellstructuremech:suctorian_feeding_tentacle",
+          "label": "suctorian feeding tentacle",
+          "cosine_similarity": 0.73615154
+        },
+        {
           "identifier": "GO:0044096",
           "label": "type IV pilus",
           "cosine_similarity": 0.73606456
-        },
-        {
-          "identifier": "GO:0140737",
-          "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.73459488
         }
       ]
     },
@@ -912,6 +912,11 @@
       "label": "hamus",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:suctorian_feeding_tentacle",
+          "label": "suctorian feeding tentacle",
+          "cosine_similarity": 0.65648221
+        },
+        {
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
           "cosine_similarity": 0.64883246
@@ -930,11 +935,6 @@
           "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
           "label": "archaeal-type flagellum filament",
           "cosine_similarity": 0.61444854
-        },
-        {
-          "identifier": "GO:0009289",
-          "label": "pilus",
-          "cosine_similarity": 0.61323214
         }
       ]
     },
@@ -942,6 +942,11 @@
       "identifier": "cellstructuremech:haptonema",
       "label": "haptonema",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:suctorian_feeding_tentacle",
+          "label": "suctorian feeding tentacle",
+          "cosine_similarity": 0.68752776
+        },
         {
           "identifier": "GO:1990905",
           "label": "dinoflagellate peduncle",
@@ -961,11 +966,6 @@
           "identifier": "GO:0097614",
           "label": "dinoflagellate hypocone",
           "cosine_similarity": 0.55757301
-        },
-        {
-          "identifier": "cellstructuremech:archaeal_cannula",
-          "label": "archaeal cannula",
-          "cosine_similarity": 0.55634317
         }
       ]
     },
@@ -1056,9 +1056,9 @@
           "cosine_similarity": 0.7499705
         },
         {
-          "identifier": "GO:0031563",
-          "label": "mating projection tip polarisome",
-          "cosine_similarity": 0.69278595
+          "identifier": "cellstructuremech:suctorian_feeding_tentacle",
+          "label": "suctorian feeding tentacle",
+          "cosine_similarity": 0.71059241
         }
       ]
     },
@@ -1431,6 +1431,37 @@
           "identifier": "GO:1990207",
           "label": "EmrE multidrug transporter complex",
           "cosine_similarity": 0.67487693
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:suctorian_feeding_tentacle",
+      "label": "suctorian feeding tentacle",
+      "neighbors": [
+        {
+          "identifier": "GO:0005929",
+          "label": "cilium",
+          "cosine_similarity": 0.7448613
+        },
+        {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.73615154
+        },
+        {
+          "identifier": "GO:0044096",
+          "label": "type IV pilus",
+          "cosine_similarity": 0.7158859
+        },
+        {
+          "identifier": "GO:0001400",
+          "label": "mating projection base",
+          "cosine_similarity": 0.71365138
+        },
+        {
+          "identifier": "GO:0020007",
+          "label": "apical complex",
+          "cosine_similarity": 0.71145811
         }
       ]
     },
