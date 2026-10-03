@@ -1,0 +1,52 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/stalk_spasmoneme.yaml
+  slug: stalk_spasmoneme
+session:
+  id: 2026-10-03T223352Z-codex-ca7e7d
+  timestamp: '2026-10-03T22:33:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  summary: Add evidence-backed stalk spasmoneme
+  details: 'Created one PROPOSED stalk spasmoneme record from synchronized main1478111537cfa8736219d530717cc5a9ef5e1666.
+    Whole-repository hidden/ignored-inclusive labels, historical terms, DOIs, PMIDs and image-accession
+    searches found only Spirostomum comparison mentions and inspected numeric false positives
+    in embeddings/mpmath; an additional Konior/title/URL/identifier search found no match.
+    QuickGO spasmoneme and myoneme searches returned zero hits; GO:0005622 was read as a non-obsolete
+    broad parent. ENA verifies Vorticella convallaria60850 and Carchesium polypinum168244;
+    exact historical Zoothamnium geniculatum lookup is empty and remains an OPEN mapping question.
+    Read complete primary1978 Routledge PDF13pages (versionedPMC2110051.1 md5a76a2162b684f02b37968298e17a5881
+    verified), primary2012 Ryu article8pages (notSupportingMaterial), and newly found primary2009
+    Konior publisherPDF14pages including allmaintext/legends. Separately read accessible primary
+    abstracts for1999spasmin cloning,1998putativepartner and2025peritrichstalk, with accesslimits
+    retained. Current InterPro spasmin search204 and broaderIPR050145 description justify
+    one combined label-only centrin/spasmin class with UNKNOWN assembly essentiality. Qualitative
+    functional graph is explicitlyNONMECHANISTIC and separates glycerinated calcium exposure
+    from liveVorticella resistance experiments; no molecularswitch, exactnative inventory,
+    universalforce, channelidentity or recovery energetics is asserted. Boundary decisions
+    distinguish bodymyonemes, extracellularsheath and internal membranetubules, exclude unsupportedpartner/pump/sheathprotein
+    assignments, and preserve antibody/denaturant/model limits. CIL39509 itemJSONLD verified
+    through repositorynative-trust transport: PUBLIC_DOMAIN dedication, RichardAllen attribution,
+    V.convallaria name, acquisition1972/catalogue2012 and exactpreviewURL. Original512x512TEMpreview
+    visually inspected and checksum9055d5484ed8919c2a9f831c72eca12efd73abc294db7f017beb448ee45554c2
+    reconfirmed; hosted unchanged43395bytes underdata/images/cytoskeleton/stalk_spasmoneme.
+    No rawarchive, scale-derived dimensions, isoformlocalization or calciumassay inferred
+    fromimage. Scaffold and safe_load temporarymutator assertidentity/oldvalues, recordtruthful
+    llm_assisted events, and write through write_image_with_validated_record -> write_validated_structure
+    after completevalidation. Temporarymutator removed. Derived regeneration, complete gates
+    and separate post-opening adversarial self-review remain required.'

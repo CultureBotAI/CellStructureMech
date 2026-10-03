@@ -1,0 +1,327 @@
+identifier: cellstructuremech:stalk_spasmoneme
+label: Stalk spasmoneme
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: An intracellular contractile fibrillar organelle within the stalk of contractile-stalk
+  peritrich ciliates. A spasmin-rich fibrillar mass is interspersed with membrane-bounded
+  tubules. Shortening deforms the surrounding stalk; the organelle is distinct from
+  the extracellular sheath and from the continuous body myoneme network.
+definition_source: DOI:10.1083/jcb.77.2.358
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T22:30:52Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T22:33:02Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added primary evidence, a source-neutral centrin/spasmin class, verified
+    examples, scoped functional response graph, assay/model/taxon limits and a checksum-verified
+    public-domain CIL preview.
+  llm_assisted: true
+parent_structures:
+- GO:0005622
+synonyms:
+- synonym_text: vorticellid spasmoneme
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1083/jcb.77.2.358
+- synonym_text: stalk myoneme
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1083/jcb.77.2.358
+- synonym_text: spasmoneme
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.1083/jcb.77.2.358
+components:
+- component_id: centrin_spasmin_proteins
+  label: Centrin/spasmin-family proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro spasmin search returned no entry. IPR050145 Centrin/CML-like
+    also includes non-centrin calcium-binding proteins; it is broader than this constituent
+    class. No exact family mapping or species-specific accession is substituted.
+  essentiality: UNKNOWN
+  role: Calcium-binding constituents of the stalk contractile organelle. This combined
+    family-level class does not assert one gene product, an exhaustive inventory,
+    native filament sufficiency or individual assembly requirements.
+  evidence:
+  - reference: DOI:10.1083/jcb.77.2.358
+    notes: Spasmin-rich protein fractions were obtained from denuded stalks and dissected
+      spasmonemes; additional proteins remained unidentified.
+  - reference: DOI:10.1111/j.1550-7408.1999.tb04601.x
+    notes: Abstract reports a cloned V. convallaria spasmin, recombinant calcium binding
+      and 1F5 immunolocalization; full methods were not read.
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: Immunogold localizes centrin/spasmin immunoreactivities within the spasmoneme.
+      N-termVcCentrin4 labels fibrillar and tubular compartments; 1F5 labeling favors
+      the fibrillar mass.
+canonical_examples:
+- taxon_id: NCBITaxon:60850
+  taxon_label: Vorticella convallaria
+  reference: DOI:10.1016/j.bpj.2012.07.038
+  note: Live-cell microfluidic experiments characterize load-dependent stalk contraction.
+    Separately cited CIL:39509 provides imaging of this species. No strain CURIE or
+    genus-wide prevalence is asserted.
+- taxon_id: NCBITaxon:168244
+  taxon_label: Carchesium polypinum
+  reference: DOI:10.1083/jcb.77.2.358
+  note: Species used for cultured, denuded-stalk protein preparations and calcium-dependent
+    assays; not a claim about all colonial peritrichs.
+functions:
+- function_id: stalk_contraction
+  label: Calcium-responsive stalk contraction
+  description: Spasmoneme shortening drives deformation of the surrounding stalk and
+    retraction of the attached cell body. Geometry and external resistance affect
+    the observed movement; no universal contraction speed or force is asserted.
+  evidence:
+  - reference: DOI:10.1083/jcb.77.2.358
+    notes: Glycerinated preparations respond reversibly to calcium exposure and removal.
+  - reference: DOI:10.1016/j.bpj.2012.07.038
+    notes: Greater imposed viscous resistance slows live V. convallaria contraction
+      and reduces its excursion. Force values require hydrodynamic inference and extrapolation.
+evidence:
+- reference: DOI:10.1083/jcb.77.2.358
+  notes: Routledge (1978). Read the full 13-page primary PDF, including Methods, Results,
+    Discussion and legends. Versioned PMC2110051.1 PDF checksum verified; JATS has
+    only abstract and reference text.
+- reference: DOI:10.1111/j.1550-7408.1999.tb04601.x
+  notes: Maciejewski et al. (1999). PubMed/Europe PMC abstract and identity verified;
+    the available full-text route is subscription-only.
+- reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+  notes: Konior, McCutcheon and Buhse (2009), Transactions of the Illinois State Academy
+    of Science 102:161-174. Read all main text and figure legends in the publisher-hosted
+    PDF.
+- reference: DOI:10.1016/j.bpj.2012.07.038
+  notes: Ryu, Lang and Matsudaira (2012). Read the complete eight-page author-hosted
+    article, not its Supporting Material.
+- reference: DOI:10.1111/j.1550-7408.1998.tb05066.x
+  notes: Asai et al. (1998). Publisher abstract read; no claim to have read full experimental
+    methods.
+- reference: DOI:10.1111/jeu.70006
+  notes: Jiang et al. (2025). Primary abstract and metadata read; complete publisher
+    text was not accessible through the checked routes.
+- reference: DOI:10.7295/W9CIL39509
+  notes: Single-item CIL metadata and unmodified preview inspected; public-domain
+    dedication, author, organism and source-served preview verified.
+- reference: GO:0005622
+  notes: Verified non-obsolete intracellular anatomical structure, used only as a
+    broad is-a parent.
+causal_graphs:
+- graph_id: stalk_response
+  title: Observed stalk contractile response
+  description: Qualitative organelle-level response, not a resolved molecular motor
+    cycle.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: Calcium manipulation concerns glycerinated preparations; resistance
+    experiments concern live V. convallaria. These observations do not identify a
+    native conformational switch, force-additive motor units, channel identity or
+    ATP-independent recovery in living cells.
+  nodes:
+  - node_id: calcium_exposure
+    label: Calcium exposure of glycerinated preparations
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: shortening
+    label: Spasmoneme shortening
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: stalk_deformation
+    label: Stalk deformation and cell-body retraction
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: viscous_resistance
+    label: Imposed viscous resistance in live Vorticella
+    node_type: EXPERIMENTAL_FACTOR
+  edges:
+  - subject: calcium_exposure
+    predicate: elicits
+    object: shortening
+    evidence:
+    - reference: DOI:10.1083/jcb.77.2.358
+      notes: Calcium-responsive glycerinated organelles; not a live-cell channel mechanism.
+  - subject: shortening
+    predicate: drives
+    object: stalk_deformation
+    evidence:
+    - reference: DOI:10.1016/j.bpj.2012.07.038
+      notes: Contractile stalk mechanics connect organelle shortening with cell-body
+        displacement.
+  - subject: viscous_resistance
+    predicate: slows and limits
+    object: stalk_deformation
+    evidence:
+    - reference: DOI:10.1016/j.bpj.2012.07.038
+      notes: Controlled channel-flow resistance increases contraction duration and
+        decreases excursion.
+discussions:
+- discussion_id: identity_and_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate the stalk organelle from body myonemes and the complete stalk.
+  rationale: Continuity, related proteins and historical terminology do not make these
+    structures identical.
+  notes: Hidden- and ignored-inclusive searches found only comparative mentions in
+    the Spirostomum record/history and unrelated numeric matches. QuickGO spasmoneme/myoneme
+    searches returned zero hits. OTHER denotes the composite fibrillar organelle,
+    not a single nanofilament. Generic spasmoneme is broad because historical usage
+    also includes body fibers. Stalk coiling in Vorticella/Carchesium is not imposed
+    on the differently folding Zoothamnium example. No exact parthood target for the
+    complete stalk is minted here.
+  evidence:
+  - reference: DOI:10.1083/jcb.77.2.358
+    notes: Distinguishes stalk organization across the studied genera and continuity
+      with zooid fibers.
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: Delimits body myonemes and their convergence into the stalk spasmoneme.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: composition_and_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the native constituent inventory, exact family groundings and proposed
+    scaffold partners.
+  rationale: Protein enrichment and chemical perturbation do not establish a complete
+    molecular assembly.
+  notes: One combined centrin/spasmin class is not a one-protein composition. Spaconnectin
+    and Sfi1-like scaffold models are not entered as established constituents from
+    the sources read. Exact paralogue copy numbers, assembly requirements and a native
+    reconstituted motor remain unresolved here.
+  evidence:
+  - reference: InterPro:IPR050145
+    notes: Broader Centrin/CML-like family includes other calcium-binding proteins.
+  - reference: DOI:10.1111/j.1550-7408.1998.tb05066.x
+    notes: Chemical-modification observations suggest an additional non-calcium-binding
+      partner, without a resolved native assembly.
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: The proposed Sfi1-like backbone was a model to be tested, not an identified
+      Vorticella constituent.
+  - reference: DOI:10.1016/j.bpj.2012.07.038
+    notes: Discussion explicitly leaves filament composition and calcium-dependent
+      folding unresolved.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: antibody_and_preparation_limits
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Preserve antibody specificity and sample-preparation limits.
+  rationale: Compartment labeling cannot be treated as an isoform-specific native
+    molecular reconstruction.
+  notes: The 2009 1F5 Western recognizes two bands; N-termVcCentrin4 recognizes one.
+    Their light-microscopy stalk labeling has different sheath-access requirements.
+    Immunogold distributions do not quantify native subunit stoichiometry. Earlier
+    extraction uses glycerination and denaturants; soluble fractions are not intact
+    reconstituted fibers. No exact detection-limit claim is promoted to absolute absence
+    of actin or tubulin.
+  evidence:
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: Methods, Results and Figures 2-8 establish assay scope and compartment-dependent
+      staining.
+  - reference: DOI:10.1083/jcb.77.2.358
+    notes: Extraction changes contractility; insoluble residue and unidentified proteins
+      remain.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: nonconstituents_and_subcompartments
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the extracellular sheath and unresolved calcium-handling machinery
+    outside the molecular component list.
+  rationale: An observed compartment or neighboring structure is not an identified
+    protein family.
+  notes: Membrane-bounded tubules belong to the described organelle morphology, but
+    their molecular inventory is not resolved here. No specific pump, channel, tubulin,
+    mitochondrial protein or stable calcium subunit is inferred. The 2025 Epistylis
+    sheath CCDC/EGF-like proteins and chitin-associated rings concern stalk substructures,
+    not demonstrated spasmoneme membership.
+  evidence:
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: Tubular and fibrillar compartments are distinguished from a speculative
+      assembly/disassembly model.
+  - reference: DOI:10.1111/jeu.70006
+    notes: Abstract places CCDC proteins in the sheath and describes Epistylis stalk
+      proteomics, not a spasmoneme inventory.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: mechanics_and_recovery
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the native contraction and recovery mechanism without promoting
+    physical models to molecular observations.
+  rationale: Measured displacement, inferred force and simulated motor arrangements
+    answer different questions.
+  notes: The 2012 maximal tension is extrapolated from hydrodynamically inferred residual
+    force, and work estimates omit contributions. Proposed serial force addition is
+    not observed motor architecture. No universal force, kinetics or species-transferred
+    calcium stoichiometry is curated. Tubular fiber disassembly/reassembly is a 2009
+    hypothesis, not an established recovery mechanism.
+  evidence:
+  - reference: DOI:10.1016/j.bpj.2012.07.038
+    notes: Methods and Discussion state geometric, drag, extrapolation and energetic
+      assumptions.
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: The dual structural/calcium-storage model is explicitly proposed for future
+      testing.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: historical_taxon
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the historical Zoothamnium geniculatum name at a taxonomic authority.
+  rationale: A historical experimental organism must not receive a guessed modern
+    taxon identifier.
+  notes: ENA exact-name lookup returned no match for Zoothamnium geniculatum. Vorticella
+    convallaria and Carchesium polypinum were independently verified as species. The
+    historical Zoothamnium experiments remain evidence, but no canonical taxon row
+    or synonym to Z. arbuscula is invented.
+  evidence:
+  - reference: DOI:10.1083/jcb.77.2.358
+    notes: Identifies the historical organism as Zoothamnium geniculatum Ayrton.
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/Zoothamnium%20geniculatum
+    notes: Exact-name authority query returned an empty list.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: image_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the source preview distinct from quantitative microscopy and protein-specific
+    localization.
+  rationale: An unlabeled TEM preview cannot establish protein identity, calcium transport
+    or calibrated dimensions.
+  notes: CIL:39509 is an unmodified public-domain TEM preview by Richard Allen, acquired
+    in 1972 and catalogued in 2012. The source places it in a contractile-stalk context.
+    Only the small source-served preview is hosted; no raw archive, magnification-derived
+    measurement or inferred calcium assay is included. The exact level along the stalk
+    is not assigned.
+  evidence:
+  - reference: DOI:10.7295/W9CIL39509
+    notes: Per-item metadata, organism, licence, attribution and preview bytes were
+      verified at the source.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+images:
+- image_id: cil_39509
+  file: cil_39509.jpg
+  file_sha256: 9055d5484ed8919c2a9f831c72eca12efd73abc294db7f017beb448ee45554c2
+  source: CELL_IMAGE_LIBRARY
+  source_accession: CIL:39509
+  source_url: https://www.cellimagelibrary.org/images/39509
+  download_url: https://cildata.crbs.ucsd.edu/media/thumbnail_display/39509/39509_thumbnailx512.jpg
+  licence: PUBLIC_DOMAIN
+  attribution: Richard Allen (University of Hawaii); via Cell Image Library
+  modality: TEM
+  caption: Vorticella convallaria spasmoneme profile with membrane-bounded tubules
+    and adjacent cortical structures. Unmodified source-served TEM preview by Richard
+    Allen. This image shows morphology, not protein-specific localization or a calcium-transport
+    measurement; no calibrated dimensions are inferred from the preview.
+  taxon_id: NCBITaxon:60850
+  taxon_label: Vorticella convallaria
+  reference: DOI:10.7295/W9CIL39509
+  retrieved_on: '2026-10-03'
+  notes: DOI, per-item licence, attribution and preview URL read from the landing-page
+    JSON-LD. The source-served preview is used because CIL primary distributions may
+    be TIFF or video. Taxon supplied by the curator because CIL exposes an organism
+    name but no NCBI Taxonomy ID in its item JSON-LD.
