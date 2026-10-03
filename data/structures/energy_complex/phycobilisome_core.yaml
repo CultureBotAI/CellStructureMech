@@ -27,6 +27,13 @@ curation_history:
   changes: Recorded rejected InterPro near matches IPR012128, IPR006245 and IPR011134
     in the phycobilisome-core component grounding notes.
   llm_assisted: true
+- timestamp: '2026-10-03T02:02:33Z'
+  curator: codex
+  action: REVIEW_FIX_SAUER_TAXON
+  changes: '#1961: replaced unsupported Synechocystis PCC 6803 attribution for Sauer
+    2021 with Picosynechococcus sp. PCC 7002 and strain-neutral PCC 7002/PCC 7120
+    evidence notes.'
+  llm_assisted: true
 synonyms:
 - synonym_text: allophycocyanin core
   synonym_type: EXACT_SYNONYM
@@ -58,7 +65,7 @@ components:
     notes: Sui 2021 reviews the allophycocyanin core as the central cylinder assembly
       that accepts excitation from peripheral phycobilisome rods.
   - reference: DOI:10.1038/s41467-021-25813-y
-    notes: Sauer et al. 2021 resolved the Synechocystis allophycocyanin core subunits
+    notes: Sauer et al. 2021 resolved PCC 7002 and PCC 7120 allophycocyanin core subunits
       within intact phycobilisomes by cryo-EM.
 - component_id: core_linkers_and_terminal_emitters
   label: phycobilisome core linker and terminal emitter polypeptides
@@ -82,8 +89,8 @@ components:
     notes: Sui 2021 reviews core linker and terminal-emitter roles in phycobilisome
       assembly and downhill energy transfer.
   - reference: DOI:10.1038/s41467-021-25813-y
-    notes: Sauer et al. 2021 modeled the Synechocystis core linkers and terminal emitters
-      in light-harvesting and photoprotected phycobilisome states.
+    notes: Sauer et al. 2021 modeled PCC 7002 and PCC 7120 core linkers and terminal
+      emitters in light-harvesting and photoprotected phycobilisome states.
 - component_id: core_phycobilin_chromophores
   label: allophycocyanin-bound phycobilin chromophores
   component_type: SMALL_MOLECULE
@@ -113,10 +120,10 @@ taxonomic_distribution:
     allophycocyanin core collects excitation from rods.
   reference: DOI:10.1146/annurev-biophys-062920-063657
 canonical_examples:
-- taxon_id: NCBITaxon:1148
-  taxon_label: Synechocystis sp. PCC 6803
-  note: Cyanobacterial model whose phycobilisome core was resolved by cryo-EM in light-harvesting
-    and photoprotected states.
+- taxon_id: NCBITaxon:32049
+  taxon_label: Picosynechococcus sp. PCC 7002
+  note: Cyanobacterial model whose phycobilisome core was resolved by cryo-EM to model
+    core-mediated excitation transfer.
   reference: DOI:10.1038/s41467-021-25813-y
 - taxon_id: NCBITaxon:32053
   taxon_label: Thermostichus vulcanus
@@ -135,8 +142,8 @@ functions:
     notes: Sui 2021 reviews rod-to-core energy transfer through allophycocyanin and
       terminal emitters in phycobilisomes.
   - reference: DOI:10.1038/s41467-021-25813-y
-    notes: Sauer et al. 2021 modeled excitation-energy transfer through the Synechocystis
-      phycobilisome core.
+    notes: Sauer et al. 2021 modeled excitation-energy transfer through cyanobacterial
+      phycobilisome cores.
 evidence:
 - reference: DOI:10.1146/annurev-biophys-062920-063657
   notes: Sui 2021, Structure of Phycobilisomes, Annual Review of Biophysics.
@@ -207,8 +214,8 @@ causal_graphs:
       phycobilisome core cylinders.
     evidence:
     - reference: DOI:10.1038/s41467-021-25813-y
-      notes: Sauer et al. 2021 resolved allophycocyanin subunits in the Synechocystis
-        core by cryo-EM.
+      notes: Sauer et al. 2021 resolved allophycocyanin subunits in the PCC 7002 and
+        PCC 7120 cores by cryo-EM.
   - subject: core_linkers
     predicate: stabilize and tune
     object: phycobilisome_core
@@ -241,7 +248,7 @@ causal_graphs:
       toward thylakoid photosystems.
     evidence:
     - reference: DOI:10.1038/s41467-021-25813-y
-      notes: Sauer et al. 2021 modeled energy transfer through the Synechocystis allophycocyanin
+      notes: Sauer et al. 2021 modeled energy transfer through the PCC 7002 allophycocyanin
         core toward photosystem acceptors.
   - subject: phycobilisome_core
     predicate: contributes to

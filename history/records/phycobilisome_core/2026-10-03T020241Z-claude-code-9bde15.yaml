@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/phycobilisome_core.yaml
+  slug: phycobilisome_core
+session:
+  id: 2026-10-03T020241Z-claude-code-9bde15
+  timestamp: '2026-10-03T02:02:41Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1961
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1960
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomy
+  - evidence
+  - causal_graphs
+  summary: Fix Sauer 2021 phycobilisome-core taxon attribution
+  details: 'Addressed adversarial review issue #1961 by replacing the unsupported Synechocystis
+    sp. PCC 6803 canonical example for DOI:10.1038/s41467-021-25813-y with the NCBI-verified
+    PCC 7002 taxon, Picosynechococcus sp. PCC 7002, and by rewriting Sauer 2021 evidence notes
+    to refer to directly supported PCC 7002/PCC 7120 phycobilisome cores or to cyanobacterial
+    cores generically.'
