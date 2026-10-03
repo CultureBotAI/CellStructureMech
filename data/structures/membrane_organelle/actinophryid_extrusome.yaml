@@ -1,0 +1,214 @@
+identifier: cellstructuremech:actinophryid_extrusome
+label: actinophryid extrusome
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A secretory granule beneath the cell or axopodial surface of actinophryid
+  protists, containing amorphous electron-dense material released during prey capture.
+definition_source: DOI:10.1016/j.ejop.2007.11.001
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T11:16:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T11:18:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added sourced GP40 cargo and membrane, species-scoped examples, adhesion
+    and membrane-supply functions, a physical fusion mechanism, and explicit grounding
+    and pharmacology limits.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+components:
+- component_id: gp40_adhesive_glycoprotein
+  label: GP40-type adhesive glycoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The inspected GP40 sequence entries B2NIF0 and B2NIF1 are unreviewed.
+    Their active InterPro matches IPR000757 and IPR013320 describe a domain and a
+    superfamily, not an exact adhesive-GP40 family. The additional IPR050546 cross-reference
+    returned HTTP 410 and was not adopted.
+  role: Adhesive glycoprotein cargo implicated in prey attachment and ingestion.
+  evidence:
+  - reference: DOI:10.1078/1434-4610-00041
+    notes: The abstract identifies extrusome-stored GP40 and reports prey adhesion
+      to GP40-coated beads.
+- component_id: extrusome_membrane
+  label: extrusome membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Composite bounding membrane; the cited ultrastructural study does
+    not identify particular lipid species.
+  role: Bounds the granule and contributes membrane during prey enclosure.
+  evidence:
+  - reference: DOI:10.1002/cm.970020103
+    notes: Electron microscopy links extrusome fusion to provision of food-vacuole
+      membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:238771
+  taxon_label: Actinophrys sol
+  presence: COMMON
+  note: Numerous extrusomes occur beneath the axopodial surface in studied cultures;
+    this row does not assert presence in every strain or all actinophryids.
+  reference: DOI:10.1007/BF01279469
+canonical_examples:
+- taxon_id: NCBITaxon:238771
+  taxon_label: Actinophrys sol
+  note: Predatory protist used for extrusome cargo isolation and GP40-coated bead
+    assays.
+  reference: DOI:10.1078/1434-4610-00041
+functions:
+- function_id: prey_adhesion
+  label: prey adhesion
+  description: Extrusome contents contribute adhesive material during prey capture.
+  evidence:
+  - reference: DOI:10.1007/BF01279469
+    notes: Isolated extrusome preparations adhered strongly to prey flagellates.
+  - reference: DOI:10.1078/1434-4610-00041
+    notes: Purified GP40 supported bead adhesion and induced ingestion of coated beads.
+- function_id: membrane_supply
+  label: membrane supply during prey enclosure
+  description: Extrusome fusion supplies membrane while a feeding pseudopodium encloses
+    prey.
+  evidence:
+  - reference: DOI:10.1002/cm.970020103
+causal_graphs:
+- graph_id: extrusome_membrane_donation
+  title: Extrusome fusion supplies membrane during prey enclosure
+  description: Ultrastructural membrane-donation mechanism in Actinophrys sol.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Restricted to observed membrane fusion and enclosure; molecular fusion
+    machinery and upstream calcium signaling are not specified.
+  nodes:
+  - node_id: extrusome_membrane
+    label: extrusome membrane
+    node_type: STRUCTURE
+    component_ref: extrusome_membrane
+  - node_id: extrusome
+    label: actinophryid extrusome
+    node_type: ORGANELLE
+    grounding: cellstructuremech:actinophryid_extrusome
+  - node_id: extrusome_fusion
+    label: extrusome fusion
+    node_type: BIOLOGICAL_PROCESS
+    description: Fusion of extrusomes with each other and the plasma membrane.
+  - node_id: prey_vacuole_membrane
+    label: prey food-vacuole membrane
+    node_type: STRUCTURE
+  - node_id: feeding_pseudopodium
+    label: funnel-shaped feeding pseudopodium
+    node_type: STRUCTURE
+  - node_id: prey_enclosure
+    label: prey enclosure
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: extrusome_membrane
+    predicate: bounds
+    object: extrusome
+    description: An investing membrane bounds each extrusome.
+    evidence:
+    - reference: DOI:10.1002/cm.970020103
+  - subject: extrusome
+    predicate: undergoes
+    object: extrusome_fusion
+    description: Extrusomes expand and fuse during pseudopod development.
+    evidence:
+    - reference: DOI:10.1002/cm.970020103
+  - subject: extrusome_fusion
+    predicate: supplies
+    object: prey_vacuole_membrane
+    description: Fusion makes extrusome membrane available as food-vacuole membrane.
+    evidence:
+    - reference: DOI:10.1002/cm.970020103
+  - subject: prey_vacuole_membrane
+    predicate: contributes_to
+    object: prey_enclosure
+    description: The donated membrane contributes to the enclosure around prey.
+    evidence:
+    - reference: DOI:10.1002/cm.970020103
+  - subject: feeding_pseudopodium
+    predicate: mediates
+    object: prey_enclosure
+    description: A funnel-shaped pseudopodium extends over prey to enclose it.
+    evidence:
+    - reference: DOI:10.1002/cm.970020103
+evidence:
+- reference: DOI:10.1016/j.ejop.2007.11.001
+  notes: 'Kakuta and Suzaki (2008): accepted manuscript read via Kobe University;
+    granule morphology and prey-capture pharmacology.'
+- reference: DOI:10.1007/BF01279469
+  notes: 'Sakaguchi, Hausmann and Suzaki (1998): publisher summary read; isolated
+    extrusome adhesion experiments.'
+- reference: DOI:10.1078/1434-4610-00041
+  notes: 'Sakaguchi, Murakami and Suzaki (2001): PubMed abstract read; GP40 isolation
+    and functional bead assays.'
+- reference: DOI:10.1002/cm.970020103
+  notes: 'Hausmann and Patterson (1982): publisher-supplied abstract read via Crossref;
+    electron-microscopic membrane-donation observations.'
+discussions:
+- discussion_id: resolve_gp40_family_and_localization
+  prompt: Resolve an exact GP40 protein-family grounding and isoform-specific extrusome
+    localization.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#gp40_adhesive_glycoprotein
+  rationale: B2NIF0 and B2NIF1 correspond to gp40-1 and gp40-2 direct submissions,
+    not isoform-specific localization experiments in the 2001 study. Do not infer
+    enzymatic activity from broad glucanase-related domains or add both sequences
+    as experimentally localized protein examples.
+  evidence:
+  - reference: DOI:10.1078/1434-4610-00041
+  - reference: UniProtKB:B2NIF0
+  - reference: UniProtKB:B2NIF1
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: resolve_extrusome_lipids
+  prompt: Identify the lipid constituents of the extrusome membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#extrusome_membrane
+  rationale: Membrane continuity is evidenced, but lipid chemistry remains uncharacterized
+    in the cited study.
+  evidence:
+  - reference: DOI:10.1002/cm.970020103
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: exclude_pharmacological_candidates
+  prompt: Do not treat pharmacological targets as localized granule components.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: Channel-blocker and calmodulin-antagonist effects do not identify granule-resident
+    proteins. Ionophore-mediated granule depletion was proposed but unverified, and
+    Con A could target other surface glycoconjugates.
+  evidence:
+  - reference: DOI:10.1016/j.ejop.2007.11.001
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: retain_narrow_identity_and_context
+  prompt: Keep actinophryid extrusomes distinct from ciliate extrusomes and context-specific
+    vacuole terms.
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: The source distinguishes amorphous actinophryid contents from organized
+    ciliate extrusomes; toxicyst is not adopted as an exact synonym. GO:0043231 is
+    the broader parent; GO:0030141 additionally assumes Golgi origin, not established
+    here. The prey-vacuole membrane node remains ungrounded because GO:0020020 denotes
+    a parasite vacuole digesting host cytoplasm.
+  evidence:
+  - reference: DOI:10.1016/j.ejop.2007.11.001
+  - reference: GO:0043231
+  - reference: GO:0030141
+  - reference: GO:0020020
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'

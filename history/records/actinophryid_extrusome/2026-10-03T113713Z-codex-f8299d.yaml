@@ -1,0 +1,50 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/actinophryid_extrusome.yaml
+  slug: actinophryid_extrusome
+session:
+  id: 2026-10-03T113713Z-codex-f8299d
+  timestamp: '2026-10-03T11:37:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1982
+  urls:
+  - https://api.crossref.org/works/10.1002/cm.970020103
+  - https://pubmed.ncbi.nlm.nih.gov/11401035/
+  - https://rest.uniprot.org/uniprotkb/B2NIF0
+  - https://rest.uniprot.org/uniprotkb/B2NIF1
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence
+  - generated_artifacts
+  summary: Adversarial review of actinophryid extrusome PR finds no actionable defect
+  details: 'Reviewed PR #1982 at 3b4aed1f7508dbe06365f756d88110cee876fb09 after opening it.
+    Rechecked the submitted record, creation history, generated page and catalogue changes,
+    and embedding scope. Challenged identity against ciliate toxicysts, parent semantics,
+    family/domain conflation, sequence-versus-localization evidence, species scope, assembly
+    essentiality, and each physical membrane-donation edge. Re-read the 1982 publisher-supplied
+    abstract and 2001 PubMed abstract and re-resolved UniProt B2NIF0/B2NIF1: they remain unreviewed
+    sequence submissions, not localized isoform examples. Membrane fusion and provision of
+    enclosure membrane are directly supported; molecular fusion machinery and pharmacological
+    targets are not asserted. GP40 and lipid components retain UNKNOWN assembly essentiality
+    and documented label-only grounding. The prey-vacuole node correctly avoids the parasite-specific
+    GO food-vacuole term. No concrete defect warranted a GitHub issue or record mutation.
+    GP40 family/localization and membrane lipid chemistry remain open CURATION_TODOs, and
+    mapping_status remains PROPOSED. Hidden/ignored-inclusive duplicate checks and exact GO
+    searches were completed before creation. Local full QC passed with 573 tests passed and
+    3 skipped, 831 valid records, 1486 valid histories, and current pages/docs/embeddings.
+    Snippet, trait-link, identifier liveness, label correspondence and all 18 vendored artifacts
+    passed. All 830 pre-existing embedding records are identical to main; map projection changes
+    are derived.'

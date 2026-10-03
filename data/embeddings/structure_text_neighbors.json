@@ -7232,6 +7232,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:actinophryid_extrusome",
+      "label": "actinophryid extrusome",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:toxicyst",
+          "label": "toxicyst",
+          "cosine_similarity": 0.74272046
+        },
+        {
+          "identifier": "GO:0033111",
+          "label": "attachment organelle membrane",
+          "cosine_similarity": 0.73122135
+        },
+        {
+          "identifier": "GO:0070258",
+          "label": "inner membrane pellicle complex",
+          "cosine_similarity": 0.72260888
+        },
+        {
+          "identifier": "GO:0005628",
+          "label": "prospore membrane",
+          "cosine_similarity": 0.71882835
+        },
+        {
+          "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
+          "label": "microsporidian posterior vacuole",
+          "cosine_similarity": 0.71340737
+        }
+      ]
+    },
+    {
       "identifier": "GO:0044222",
       "label": "anammoxosome",
       "neighbors": [
@@ -13250,6 +13281,11 @@
       "label": "toxicyst",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:actinophryid_extrusome",
+          "label": "actinophryid extrusome",
+          "cosine_similarity": 0.74272046
+        },
+        {
           "identifier": "GO:0060170",
           "label": "ciliary membrane",
           "cosine_similarity": 0.73424535
@@ -13268,11 +13304,6 @@
           "identifier": "GO:0009536",
           "label": "plastid",
           "cosine_similarity": 0.7260916
-        },
-        {
-          "identifier": "GO:0031969",
-          "label": "chloroplast membrane",
-          "cosine_similarity": 0.71108005
         }
       ]
     },

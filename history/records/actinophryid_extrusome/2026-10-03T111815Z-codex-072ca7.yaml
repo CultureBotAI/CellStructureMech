@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/actinophryid_extrusome.yaml
+  slug: actinophryid_extrusome
+session:
+  id: 2026-10-03T111815Z-codex-072ca7
+  timestamp: '2026-10-03T11:18:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  urls:
+  - https://da.lib.kobe-u.ac.jp/da/kernel/90000974/90000974.pdf
+  - https://pubmed.ncbi.nlm.nih.gov/11401035/
+  - https://link.springer.com/article/10.1007/BF01279469
+  - https://api.crossref.org/works/10.1002/cm.970020103
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add evidence-backed actinophryid extrusome record
+  details: Minted cellstructuremech:actinophryid_extrusome after whole-repository hidden/ignored-inclusive
+    duplicate searches and exact QuickGO searches returned no match. Added GP40-class cargo,
+    bounding membrane, Actinophrys sol (NCBITaxon:238771), two functions, and a five-edge
+    physical membrane-donation graph. Read the 2008 accepted manuscript, 1998 publisher summary,
+    2001 PubMed abstract, and 1982 publisher-supplied Crossref abstract; no full-text access
+    is claimed for the latter three. Verified GO parent and context-specific exclusions, NCBI
+    species identity, and unreviewed UniProt B2NIF0/B2NIF1 with their NCBI sequence links.
+    Active InterPro matches were broad domains/superfamilies, a stale cross-reference returned
+    HTTP 410, and GP40 search returned an unrelated phage family. Left protein-family and
+    lipid-chemistry CURATION_TODOs open; omitted unproven isoform localization and drug-inferred
+    structural components. No snippets or images copied.

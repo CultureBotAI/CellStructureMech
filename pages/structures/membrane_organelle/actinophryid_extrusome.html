@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>actinophryid extrusome · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>actinophryid extrusome</h1>
+<p class="meta"><code>cellstructuremech:actinophryid_extrusome</code> · MEMBRANE_ORGANELLE · MEMBRANE_BOUNDED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">A secretory granule beneath the cell or axopodial surface of actinophryid protists, containing amorphous electron-dense material released during prey capture. <small>[<a href="https://doi.org/10.1016/j.ejop.2007.11.001"><code>DOI:10.1016/j.ejop.2007.11.001</code></a>]</small></p>
+
+<h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-gp40_adhesive_glycoprotein"><td>GP40-type adhesive glycoprotein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Adhesive glycoprotein cargo implicated in prey attachment and ingestion.<ul class="evidence"><li><a href="https://doi.org/10.1078/1434-4610-00041"><code>DOI:10.1078/1434-4610-00041</code></a> <small>The abstract identifies extrusome-stored GP40 and reports prey adhesion to GP40-coated beads.</small></li></ul></td></tr>
+<tr id="components-extrusome_membrane"><td>extrusome membrane</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Bounds the granule and contributes membrane during prey enclosure.<ul class="evidence"><li><a href="https://doi.org/10.1002/cm.970020103"><code>DOI:10.1002/cm.970020103</code></a> <small>Electron microscopy links extrusome fusion to provision of food-vacuole membrane.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_238771"><code>NCBITaxon:238771</code></a> Actinophrys sol — <strong>COMMON</strong>: Numerous extrusomes occur beneath the axopodial surface in studied cultures; this row does not assert presence in every strain or all actinophryids. [<a href="https://doi.org/10.1007/BF01279469"><code>DOI:10.1007/BF01279469</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_238771"><code>NCBITaxon:238771</code></a> <em>Actinophrys sol</em> — Predatory protist used for extrusome cargo isolation and GP40-coated bead assays. [<a href="https://doi.org/10.1078/1434-4610-00041"><code>DOI:10.1078/1434-4610-00041</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>prey adhesion</strong> — Extrusome contents contribute adhesive material during prey capture.<ul class="evidence"><li><a href="https://doi.org/10.1007/BF01279469"><code>DOI:10.1007/BF01279469</code></a> <small>Isolated extrusome preparations adhered strongly to prey flagellates.</small></li><li><a href="https://doi.org/10.1078/1434-4610-00041"><code>DOI:10.1078/1434-4610-00041</code></a> <small>Purified GP40 supported bead adhesion and induced ingestion of coated beads.</small></li></ul></li><li><strong>membrane supply during prey enclosure</strong> — Extrusome fusion supplies membrane while a feeding pseudopodium encloses prey.<ul class="evidence"><li><a href="https://doi.org/10.1002/cm.970020103"><code>DOI:10.1002/cm.970020103</code></a></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-extrusome_membrane_donation">Extrusome fusion supplies membrane during prey enclosure <small>(FUNCTION)</small></h3>
+<p>Ultrastructural membrane-donation mechanism in Actinophrys sol.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Extrusome fusion supplies membrane during prey enclosure">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>extrusome membrane</td><td>bounds</td><td>actinophryid extrusome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/cm.970020103"><code>DOI:10.1002/cm.970020103</code></a></li></ul></td></tr>
+<tr><td>actinophryid extrusome</td><td>undergoes</td><td>extrusome fusion</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/cm.970020103"><code>DOI:10.1002/cm.970020103</code></a></li></ul></td></tr>
+<tr><td>extrusome fusion</td><td>supplies</td><td>prey food-vacuole membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/cm.970020103"><code>DOI:10.1002/cm.970020103</code></a></li></ul></td></tr>
+<tr><td>prey food-vacuole membrane</td><td>contributes_to</td><td>prey enclosure</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/cm.970020103"><code>DOI:10.1002/cm.970020103</code></a></li></ul></td></tr>
+<tr><td>funnel-shaped feeding pseudopodium</td><td>mediates</td><td>prey enclosure</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/cm.970020103"><code>DOI:10.1002/cm.970020103</code></a></li></ul></td></tr>
+</tbody></table>
+</div>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact GP40 protein-family grounding and isoform-specific extrusome localization. <small>B2NIF0 and B2NIF1 correspond to gp40-1 and gp40-2 direct submissions, not isoform-specific localization experiments in the 2001 study. Do not infer enzymatic activity from broad glucanase-related domains or add both sequences as experimentally localized protein examples.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Identify the lipid constituents of the extrusome membrane. <small>Membrane continuity is evidenced, but lipid chemistry remains uncharacterized in the cited study.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Do not treat pharmacological targets as localized granule components. <small>Channel-blocker and calmodulin-antagonist effects do not identify granule-resident proteins. Ionophore-mediated granule depletion was proposed but unverified, and Con A could target other surface glycoconjugates.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep actinophryid extrusomes distinct from ciliate extrusomes and context-specific vacuole terms. <small>The source distinguishes amorphous actinophryid contents from organized ciliate extrusomes; toxicyst is not adopted as an exact synonym. GO:0043231 is the broader parent; GO:0030141 additionally assumes Golgi origin, not established here. The prey-vacuole membrane node remains ungrounded because GO:0020020 denotes a parasite vacuole digesting host cytoplasm.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1016/j.ejop.2007.11.001"><code>DOI:10.1016/j.ejop.2007.11.001</code></a> <small>Kakuta and Suzaki (2008): accepted manuscript read via Kobe University; granule morphology and prey-capture pharmacology.</small></li><li><a href="https://doi.org/10.1007/BF01279469"><code>DOI:10.1007/BF01279469</code></a> <small>Sakaguchi, Hausmann and Suzaki (1998): publisher summary read; isolated extrusome adhesion experiments.</small></li><li><a href="https://doi.org/10.1078/1434-4610-00041"><code>DOI:10.1078/1434-4610-00041</code></a> <small>Sakaguchi, Murakami and Suzaki (2001): PubMed abstract read; GP40 isolation and functional bead assays.</small></li><li><a href="https://doi.org/10.1002/cm.970020103"><code>DOI:10.1002/cm.970020103</code></a> <small>Hausmann and Patterson (1982): publisher-supplied abstract read via Crossref; electron-microscopic membrane-donation observations.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-03T11:16:42Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-03T11:18:13Z</code> codex · EXPANDED_RECORD — Added sourced GP40 cargo and membrane, species-scoped examples, adhesion and membrane-supply functions, a physical fusion mechanism, and explicit grounding and pharmacology limits.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/actinophryid_extrusome.yaml"><code>data/structures/membrane_organelle/actinophryid_extrusome.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+</body>
+</html>
