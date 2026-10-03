@@ -1,0 +1,60 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/coccolith.yaml
+  slug: coccolith
+session:
+  id: 2026-10-03T184309Z-codex-0837f1
+  timestamp: '2026-10-03T18:43:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1994
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - discussions
+  - images
+  summary: Adversarial post-opening review of coccolith PR 1994
+  details: 'Separate post-opening adversarial self-review of PR 1994 at scientific head a74c7a552b8147b292a2a612c6ac600d7b0db979,
+    not an independent second reviewer. Inspected the actual PR head and all 14 submitted
+    paths, re-read the committed YAML, and repeated whole-repository hidden/ignored-inclusive
+    candidate/reference searches. Challenged scale versus vesicle versus entire coccosphere
+    identity, broad GO:0110165 parent and ENVELOPE/OTHER classification, subtype versus synonym
+    boundaries, component constituency and essentiality, species/strain scope, ecological
+    interpretations, hosted-image provenance, and embedding/site drift. No concrete defect
+    found; no issue or scientific fix warranted. Re-read Johns 2023 organic-removal Results,
+    Figure 3 and Methods: calcified CCMP374 donors are distinct from naked CCMP374/1516 recipients;
+    post-formation oxidation reducing adsorption does not identify a molecule or establish
+    assembly dispensability. Re-read holococcolith primary Results/Discussion: calcite rhombohedra
+    and an organic base plate are supported, while undetected nucleators and ordering dynamics
+    remain unresolved. Do not generalize the two-shield Calcidiscus morphology, dimensions,
+    crystal counts, protection or viral effects. The mixed organic material remains REVIEWED_LABEL_ONLY
+    with UNKNOWN essentiality and an open discussion; vesicle-membrane particles are not imported
+    as identified scale proteins. The record remains PROPOSED and has no unsupported broad
+    taxonomic row, causal graph or trait link. Visually reinspected the committed multi-panel
+    Figure 1 and its primary caption: SEM plus schematic and AFM, not cryo-ET. Re-fetched
+    current non-retracted PMC13067266.1 metadata, checksum-verified S3 JATS and media. The
+    versioned S3 JATS ALI license_ref explicitly gives https://creativecommons.org/licenses/by/4.0/
+    and agrees with PMC CC BY metadata; the Europe PMC text independently says CC-BY 4.0 but
+    omits that ALI element. Figure bytes match the committed 148935-byte file exactly; MD5
+    30aa4e061b96edbf874a64bb6f8064e2 and SHA256 35772c3d477f71c47c7c2e0d6e91fbd6086b9061126c7bee92cec70fcd95f939.
+    Canonical taxon, visible attribution/licence and AFM context are rendered. Structured
+    base/head comparison confirms all 841 existing embedding rows are unchanged and only the
+    coccolith row is added; published map/neighbors equal source artifacts. Local full QC
+    passed before the scientific commit: 587 tests, 3 skips, 2 dependency warnings; 842 structure
+    records and 1509 history records valid; generated site and README current. Separate network
+    gates passed: 31/31 snippets verbatim, 10/10 trait links match, 3555 CURIEs OK with 167
+    intentional skips and zero unreachable, and all supported identifier/label pairs match.
+    This review-only history addition will receive history validation and exact-final-head
+    CI before merge.'
