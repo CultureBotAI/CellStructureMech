@@ -7437,14 +7437,14 @@
           "cosine_similarity": 0.74072894
         },
         {
+          "identifier": "cellstructuremech:nitroplast",
+          "label": "nitroplast",
+          "cosine_similarity": 0.73796163
+        },
+        {
           "identifier": "GO:0009941",
           "label": "chloroplast envelope",
           "cosine_similarity": 0.73277356
-        },
-        {
-          "identifier": "GO:0009526",
-          "label": "plastid envelope",
-          "cosine_similarity": 0.72998431
         }
       ]
     },
@@ -9158,6 +9158,11 @@
       "label": "diazoplast",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:nitroplast",
+          "label": "nitroplast",
+          "cosine_similarity": 0.9135031
+        },
+        {
           "identifier": "GO:0140266",
           "label": "Woronin body",
           "cosine_similarity": 0.76376311
@@ -9176,11 +9181,6 @@
           "identifier": "GO:0070111",
           "label": "organellar chromatophore",
           "cosine_similarity": 0.75053848
-        },
-        {
-          "identifier": "GO:0070115",
-          "label": "organellar chromatophore intermembrane space",
-          "cosine_similarity": 0.74862327
         }
       ]
     },
@@ -10599,14 +10599,14 @@
           "cosine_similarity": 0.78404906
         },
         {
+          "identifier": "cellstructuremech:nitroplast",
+          "label": "nitroplast",
+          "cosine_similarity": 0.77214441
+        },
+        {
           "identifier": "GO:0033009",
           "label": "nucleomorph",
           "cosine_similarity": 0.77013763
-        },
-        {
-          "identifier": "cellstructuremech:mitosome_intermembrane_space",
-          "label": "mitosome intermembrane space",
-          "cosine_similarity": 0.76366044
         }
       ]
     },
@@ -11441,9 +11441,9 @@
           "cosine_similarity": 0.75932853
         },
         {
-          "identifier": "GO:0009536",
-          "label": "plastid",
-          "cosine_similarity": 0.74508432
+          "identifier": "cellstructuremech:nitroplast",
+          "label": "nitroplast",
+          "cosine_similarity": 0.75083309
         }
       ]
     },
@@ -11599,6 +11599,37 @@
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
           "cosine_similarity": 0.88563224
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:nitroplast",
+      "label": "nitroplast",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:diazoplast",
+          "label": "diazoplast",
+          "cosine_similarity": 0.9135031
+        },
+        {
+          "identifier": "GO:0070258",
+          "label": "inner membrane pellicle complex",
+          "cosine_similarity": 0.78402582
+        },
+        {
+          "identifier": "GO:0031966",
+          "label": "mitochondrial membrane",
+          "cosine_similarity": 0.77806443
+        },
+        {
+          "identifier": "GO:0031039",
+          "label": "macronucleus",
+          "cosine_similarity": 0.77214441
+        },
+        {
+          "identifier": "GO:0140266",
+          "label": "Woronin body",
+          "cosine_similarity": 0.76798409
         }
       ]
     },
@@ -13611,9 +13642,9 @@
           "cosine_similarity": 0.77304989
         },
         {
-          "identifier": "cellstructuremech:diazoplast",
-          "label": "diazoplast",
-          "cosine_similarity": 0.76376311
+          "identifier": "cellstructuremech:nitroplast",
+          "label": "nitroplast",
+          "cosine_similarity": 0.76798409
         }
       ]
     },
@@ -23588,14 +23619,14 @@
           "cosine_similarity": 0.69894009
         },
         {
+          "identifier": "cellstructuremech:nitroplast",
+          "label": "nitroplast",
+          "cosine_similarity": 0.68468277
+        },
+        {
           "identifier": "GO:0020007",
           "label": "apical complex",
           "cosine_similarity": 0.68418957
-        },
-        {
-          "identifier": "cellstructuremech:diazoplast",
-          "label": "diazoplast",
-          "cosine_similarity": 0.6802403
         }
       ]
     },

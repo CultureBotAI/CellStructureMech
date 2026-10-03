@@ -1,0 +1,149 @@
+identifier: cellstructuremech:nitroplast
+label: nitroplast
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded nitrogen-fixing organelle derived from a UCYN-A cyanobacterium
+  within a Braarudosphaera haptophyte; characterized in B. bigelowii by coordinated
+  division and evidence for host-encoded protein import.
+definition_source: DOI:10.1126/science.adk1075
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T15:58:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T15:59:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added verified host scope, core constituents, nitrogen-fixation evidence,
+    import and preprint boundaries, and inspected link-only TEM provenance.
+  llm_assisted: true
+parent_structures:
+- GO:0043229
+synonyms:
+- synonym_text: UCYN-A spheroid body
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.adk1075
+components:
+- component_id: membranes
+  label: membrane
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0016020
+  essentiality: UNKNOWN
+  role: Boundary and internal membrane system.
+  evidence:
+  - reference: DOI:10.1080/00318884.2026.2660260
+    notes: Figures 28-29 show FR-21 nitroplast boundaries and internal lamellae.
+- component_id: nitrogenase
+  label: nitrogenase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0016610
+  essentiality: UNKNOWN
+  role: Nitrogen-fixing enzyme machinery; organelle assembly essentiality untested.
+  evidence:
+  - reference: DOI:10.1126/science.adk1075
+    notes: NifH enrichment and nitrogenase activity support assignment; no subunit
+      stoichiometry asserted.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:373042
+  taxon_label: Braarudosphaera bigelowii
+  presence: VARIABLE
+  reference: DOI:10.1080/00318884.2026.2660260
+  note: Sensu stricto, 18S genotype III. Table 2 distinguishes nitroplast-bearing
+    FR-12/FR-21 from culture KC1-P2, which lost it; not a wild-population frequency
+    estimate.
+canonical_examples:
+- taxon_id: NCBITaxon:373042
+  taxon_label: Braarudosphaera bigelowii
+  reference: DOI:10.1126/science.adk1075
+  note: FR-21 (NIES-4399), containing UCYN-A2; supplementary Methods specify the experimental
+    strain.
+functions:
+- function_id: nitrogen_fixation
+  label: nitrogen fixation
+  grounding: GO:0009399
+  description: Fixes dinitrogen within the host cell.
+  evidence:
+  - reference: DOI:10.1126/science.adk1075
+    notes: Supplementary Methods and Figure S3 report acetylene-reduction activity
+      in FR-21 cultures.
+evidence:
+- reference: DOI:10.1126/science.adk1075
+  notes: Primary Results and supplementary Methods read via publicly readable article
+    mirrors; title, authors, journal, DOI and PMID 38603509 cross-checked. Publisher
+    access returned 403.
+- reference: DOI:10.1080/00318884.2026.2660260
+  notes: Author-hosted final PDF read; Table 2 and Figures 28-31 visually inspected.
+    FR-21 is B. bigelowii sensu stricto, not B. parkeae.
+- reference: GO:0043229
+  notes: Broad intracellular-organelle parent avoids encoding an exact membrane count.
+    GO and host taxon labels verified at QuickGO and ENA/NCBI.
+discussions:
+- discussion_id: identity_and_host_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the nitroplast distinct from a whole host, a microbial taxon and the
+    diazoplast.
+  rationale: A compartment record must not turn a lineage name into an unrestricted
+    structural synonym.
+  notes: Minted after hidden/ignored-inclusive deduplication and exact GO search.
+    FR-12 and FR-21 are separate cultures. Distribution is deliberately limited to
+    the verified host; protein-import evidence is not generalized to every UCYN-A
+    lineage.
+  evidence:
+  - reference: DOI:10.1080/00318884.2026.2660260
+    notes: Scope and evidence boundary reviewed.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: import_evidence_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate organelle-level import evidence from individual candidate validation.
+  rationale: Protein enrichment and sequence prediction have different evidential
+    strength.
+  notes: Host-protein enrichment supports import. Predicted-only uTP candidates are
+    not constituents here. uTP cleavage, translocon identity, mitochondrial ATP transfer
+    and candidate-specific roles remain unproven; no causal edges assert them.
+  evidence:
+  - reference: DOI:10.1126/science.adk1075
+    notes: Scope and evidence boundary reviewed.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: transport_and_diel_remodeling
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve import machinery, exchanged substrates and vesicle cargo experimentally.
+  rationale: Static architecture cannot establish transport direction or regulatory
+    causality.
+  notes: Li et al. 2026 version 1 remains a preprint in PMC. Its Discussion explicitly
+    leaves cargo and directionality unresolved. Membrane discontinuities and vesicle
+    proximity are not proof of gating, cargo transfer or a causal nitrogen-fixation
+    mechanism; unidentified densities are not named components.
+  evidence:
+  - reference: DOI:10.64898/2026.04.11.717942
+    notes: Scope and evidence boundary reviewed.
+  posed_by: codex
+  posed_date: '2026-10-03'
+images:
+- image_id: hagino_2026_fig28_29
+  source: OTHER
+  source_accession: 10.1080/00318884.2026.2660260 Figures 28-29
+  source_url: https://wakemanlaboratory.com/wp-content/uploads/2026/07/taxonomic-re-evaluation-of-the-braarudosphaera-bigelowii-species-complex-prymnesiophyceae-_compressed.pdf#page=14
+  licence: OTHER
+  attribution: Hagino et al. (2026), Phycologia; copyright International Phycological
+    Society. Linked, not reproduced.
+  modality: TEM
+  caption: 'Figures 28-29: FR-21 cells with one or two bodies labeled Nit. Scale bar:
+    1 micrometer. Adjacent Figures 30-31 show OTR22-B, a different host, and are not
+    the example asserted here.'
+  taxon_id: NCBITaxon:373042
+  taxon_label: Braarudosphaera bigelowii
+  reference: DOI:10.1080/00318884.2026.2660260
+  retrieved_on: '2026-10-03'
+  notes: PDF page 14 (journal page 13) inspected. Copyright statement checked on cover;
+    no redistribution licence established, so no image file is hosted.
