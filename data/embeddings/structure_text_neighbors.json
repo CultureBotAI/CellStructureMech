@@ -22467,6 +22467,11 @@
           "cosine_similarity": 0.72512989
         },
         {
+          "identifier": "cellstructuremech:tmar_condensate",
+          "label": "TmaR condensate",
+          "cosine_similarity": 0.70778392
+        },
+        {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.67694471
@@ -22475,11 +22480,6 @@
           "identifier": "GO:0048500",
           "label": "signal recognition particle",
           "cosine_similarity": 0.67323723
-        },
-        {
-          "identifier": "cellstructuremech:bacterial_aggresome",
-          "label": "bacterial aggresome",
-          "cosine_similarity": 0.67033651
         }
       ]
     },
@@ -23689,6 +23689,37 @@
           "identifier": "GO:0005732",
           "label": "sno(s)RNA-containing ribonucleoprotein complex",
           "cosine_similarity": 0.76364529
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:tmar_condensate",
+      "label": "TmaR condensate",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:h_body",
+          "label": "H-body",
+          "cosine_similarity": 0.70778392
+        },
+        {
+          "identifier": "cellstructuremech:bacterial_aggresome",
+          "label": "bacterial aggresome",
+          "cosine_similarity": 0.6547331
+        },
+        {
+          "identifier": "GO:0048500",
+          "label": "signal recognition particle",
+          "cosine_similarity": 0.65463878
+        },
+        {
+          "identifier": "GO:0030256",
+          "label": "type I protein secretion system complex",
+          "cosine_similarity": 0.62932189
+        },
+        {
+          "identifier": "GO:0043684",
+          "label": "type IV secretion system complex",
+          "cosine_similarity": 0.62079188
         }
       ]
     },
