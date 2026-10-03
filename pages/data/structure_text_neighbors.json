@@ -2834,6 +2834,11 @@
       "label": "cryptophyte cortical centrin network",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:infraciliary_lattice",
+          "label": "infraciliary lattice",
+          "cosine_similarity": 0.74148703
+        },
+        {
           "identifier": "GO:0120269",
           "label": "ciliary centrin arm",
           "cosine_similarity": 0.70290475
@@ -2852,11 +2857,6 @@
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.67082484
-        },
-        {
-          "identifier": "GO:0036391",
-          "label": "medial cortex septin ring",
-          "cosine_similarity": 0.66700401
         }
       ]
     },
@@ -3322,6 +3322,37 @@
           "identifier": "GO:0032169",
           "label": "prospore septin ring",
           "cosine_similarity": 0.89904949
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:infraciliary_lattice",
+      "label": "infraciliary lattice",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:cryptophyte_cortical_centrin_network",
+          "label": "cryptophyte cortical centrin network",
+          "cosine_similarity": 0.74148703
+        },
+        {
+          "identifier": "GO:0120269",
+          "label": "ciliary centrin arm",
+          "cosine_similarity": 0.67391026
+        },
+        {
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.64551414
+        },
+        {
+          "identifier": "GO:0020007",
+          "label": "apical complex",
+          "cosine_similarity": 0.63609185
+        },
+        {
+          "identifier": "GO:0032157",
+          "label": "prospore contractile ring",
+          "cosine_similarity": 0.63281385
         }
       ]
     },
