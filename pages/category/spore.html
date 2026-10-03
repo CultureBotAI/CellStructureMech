@@ -19,33 +19,44 @@
 <main>
 <h1>SPORE</h1>
 <p>Endospore layers, exosporium, and spore-specific structures.</p>
-<table>
-<thead><tr><th>Label</th><th>Identifier</th><th>Kind</th><th>Status</th></tr></thead>
+<form id="record-filters" class="record-filters" hidden>
+  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
+  <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option><option value="SPORE">SPORE</option></select></div>
+  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option><option value="ENVELOPE_LAYER">ENVELOPE_LAYER</option><option value="FILAMENT">FILAMENT</option><option value="MEMBRANE">MEMBRANE</option><option value="OTHER">OTHER</option><option value="SUBCELLULAR_REGION">SUBCELLULAR_REGION</option></select></div>
+  <button type="reset">Clear filters</button>
+</form>
+<p id="record-count" role="status" aria-live="polite">21 records</p>
+<p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
+<div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
+<table id="record-table">
+<caption>Records</caption>
+<thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
 <tbody>
-<tr><td><a href="../structures/spore/ascospore_wall.html">ascospore wall</a></td><td><code>GO:0005619</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/chitosan_layer_of_spore_wall.html">chitosan layer of spore wall</a></td><td><code>GO:0005631</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/dityrosine_layer_of_spore_wall.html">dityrosine layer of spore wall</a></td><td><code>GO:0005630</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/endospore_coat.html">endospore coat</a></td><td><code>GO:0043593</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/endospore_core.html">endospore core</a></td><td><code>GO:0070477</code></td><td>SUBCELLULAR_REGION</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/endospore_cortex.html">endospore cortex</a></td><td><code>GO:0043595</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/endospore_external_encapsulating_structure.html">endospore external encapsulating structure</a></td><td><code>GO:0043591</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/endospore_forming_forespore.html">endospore-forming forespore</a></td><td><code>GO:0042601</code></td><td>SUBCELLULAR_REGION</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/exosporium.html">exosporium</a></td><td><code>GO:0043592</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/inner_layer_of_spore_wall.html">inner layer of spore wall</a></td><td><code>GO:0005632</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/isp3_layer_of_spore_wall.html">Isp3 layer of spore wall</a></td><td><code>GO:1990916</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/microsporidian_type_endospore.html">microsporidian-type endospore</a></td><td><code>GO:0090641</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/microsporidian_type_exospore.html">microsporidian-type exospore</a></td><td><code>GO:0090642</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/outer_endospore_membrane.html">outer endospore membrane</a></td><td><code>GO:0043594</code></td><td>MEMBRANE</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/polar_tube.html">polar tube</a></td><td><code>GO:0044099</code></td><td>FILAMENT</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/polar_tube_anchoring_disc.html">polar tube anchoring disc</a></td><td><code>GO:0160202</code></td><td>OTHER</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/prospore_membrane.html">prospore membrane</a></td><td><code>GO:0005628</code></td><td>MEMBRANE</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/prospore_membrane_leading_edge.html">prospore membrane leading edge</a></td><td><code>GO:0070056</code></td><td>SUBCELLULAR_REGION</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/prospore_membrane_spindle_pole_body_attachment_site.html">prospore membrane spindle pole body attachment site</a></td><td><code>GO:0070057</code></td><td>SUBCELLULAR_REGION</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/spore_inner_membrane.html">spore inner membrane</a></td><td><code>GO:0140549</code></td><td>MEMBRANE</td><td>PROPOSED</td></tr>
-<tr><td><a href="../structures/spore/spore_wall.html">spore wall</a></td><td><code>GO:0031160</code></td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/ascospore_wall.html">ascospore wall</a><p class="record-definition">The specialized cell wall of the ascospore (spore), which is the product of meiotic division. Examples of this component are found in Fungi.</p></td><td><code>GO:0005619</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/chitosan_layer_of_spore_wall.html">chitosan layer of spore wall</a><p class="record-definition">The second outermost layer of the spore wall, as described in Saccharomyces.</p></td><td><code>GO:0005631</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/dityrosine_layer_of_spore_wall.html">dityrosine layer of spore wall</a><p class="record-definition">The outermost layer of the spore wall, as described in Saccharomyces.</p></td><td><code>GO:0005630</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/endospore_coat.html">endospore coat</a><p class="record-definition">The layer in a bacterial endospore that lies under the exosporium, and is impermeable to many toxic molecules. The coat may also contain enzymes that are involved in endospore germination.</p></td><td><code>GO:0043593</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="SUBCELLULAR_REGION"><td><a href="../structures/spore/endospore_core.html">endospore core</a><p class="record-definition">An intracellular part that represents the innermost portion of an endospore; the endospore core is dehydrated, enriched in dipicolinic acid and divalent cations, and metabolically inactive.</p></td><td><code>GO:0070477</code></td><td>SPORE</td><td>SUBCELLULAR_REGION</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/endospore_cortex.html">endospore cortex</a><p class="record-definition">The thick, loosely cross-linked peptidoglycan layer between the spore core and the coat of a mature bacterial endospore.</p></td><td><code>GO:0043595</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/endospore_external_encapsulating_structure.html">endospore external encapsulating structure</a><p class="record-definition">The layered envelope that surrounds a bacterial endospore and gives it its resistance: a thick modified peptidoglycan cortex, a proteinaceous coat of dozens of proteins outside it, and in some species an additional loose exosporium. It encases the dehydrated, mineralised core in which the chromosome is held.</p></td><td><code>GO:0043591</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="SUBCELLULAR_REGION"><td><a href="../structures/spore/endospore_forming_forespore.html">endospore-forming forespore</a><p class="record-definition">Portion of the cell formed during the process of bacterial sporulation that will ultimately become the core of the endospore. An endospore is a type of dormant cell that is resistant to adverse conditions.</p></td><td><code>GO:0042601</code></td><td>SPORE</td><td>SUBCELLULAR_REGION</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/exosporium.html">exosporium</a><p class="record-definition">The outermost layer of a bacterial endospore, which is loosely attached and located outside of the endospore coat. It is generally composed of protein, carbohydrate, and perhaps lipid.</p></td><td><code>GO:0043592</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/inner_layer_of_spore_wall.html">inner layer of spore wall</a><p class="record-definition">Either of the two innermost layers of the spore wall, as described in Saccharomyces.</p></td><td><code>GO:0005632</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/isp3_layer_of_spore_wall.html">Isp3 layer of spore wall</a><p class="record-definition">The outermost layers of the spore wall, as described in Schizosaccharomyces pombe.</p></td><td><code>GO:1990916</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/microsporidian_type_endospore.html">microsporidian-type endospore</a><p class="record-definition">The middle layer in a microsporidian spore wall that lies under the exospore and outside the plasma membrane, containing chitin and proteins.</p></td><td><code>GO:0090641</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/microsporidian_type_exospore.html">microsporidian-type exospore</a><p class="record-definition">The dense, protein-rich outermost layer of a microsporidian spore wall that lies above the endospore.</p></td><td><code>GO:0090642</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="MEMBRANE"><td><a href="../structures/spore/outer_endospore_membrane.html">outer endospore membrane</a><p class="record-definition">The outer membrane around a bacterial endospore, located between the endospore cortex and the endospore coat.</p></td><td><code>GO:0043594</code></td><td>SPORE</td><td>MEMBRANE</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="FILAMENT"><td><a href="../structures/spore/polar_tube.html">polar tube</a><p class="record-definition">A microsporidian invasion tube that is coiled inside the spore as the polar filament and rapidly everts from the anterior pole during germination, forming a conduit for the sporoplasm toward a host cell.</p></td><td><code>GO:0044099</code></td><td>SPORE</td><td>FILAMENT</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="OTHER"><td><a href="../structures/spore/polar_tube_anchoring_disc.html">polar tube anchoring disc</a><p class="record-definition">A structural component of the microsporidian spore&#39;s invasion apparatus that is located at the anterior end of the spore and serves to attach the polar tube to the inside of the spore wall.</p></td><td><code>GO:0160202</code></td><td>SPORE</td><td>OTHER</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="MEMBRANE"><td><a href="../structures/spore/prospore_membrane.html">prospore membrane</a><p class="record-definition">An ascospore-forming fungal double-membrane structure that grows from meiotic outer plaques to encapsulate meiotic nuclei and provide the foundation for spore-wall assembly.</p></td><td><code>GO:0005628</code></td><td>SPORE</td><td>MEMBRANE</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="SUBCELLULAR_REGION"><td><a href="../structures/spore/prospore_membrane_leading_edge.html">prospore membrane leading edge</a><p class="record-definition">The region of the prospore membrane that extends to surround the spore nucleus; coated with specific proteins that are thought to play a role in prospore membrane organization.</p></td><td><code>GO:0070056</code></td><td>SPORE</td><td>SUBCELLULAR_REGION</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="SUBCELLULAR_REGION"><td><a href="../structures/spore/prospore_membrane_spindle_pole_body_attachment_site.html">prospore membrane spindle pole body attachment site</a><p class="record-definition">The region of the prospore membrane to which the spindle pole body (SPB) is anchored; the prospore membrane extends from the SPB attachment site to surround the spore nucleus.</p></td><td><code>GO:0070057</code></td><td>SPORE</td><td>SUBCELLULAR_REGION</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="MEMBRANE"><td><a href="../structures/spore/spore_inner_membrane.html">spore inner membrane</a><p class="record-definition">The membrane surrounding the spore core (endospore core) that separates it from its external environment.</p></td><td><code>GO:0140549</code></td><td>SPORE</td><td>MEMBRANE</td><td>PROPOSED</td></tr>
+<tr data-category="SPORE" data-kind="ENVELOPE_LAYER"><td><a href="../structures/spore/spore_wall.html">spore wall</a><p class="record-definition">The specialized envelope lying outside the cell membrane of a spore.</p></td><td><code>GO:0031160</code></td><td>SPORE</td><td>ENVELOPE_LAYER</td><td>PROPOSED</td></tr>
 </tbody>
 </table>
-</main>
+</div>
+<script src="../record-browser.js" defer></script></main>
 <footer>
   <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
@@ -53,6 +64,7 @@
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </body>
 </html>
