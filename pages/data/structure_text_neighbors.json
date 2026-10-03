@@ -6798,6 +6798,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:bacterial_aggresome",
+      "label": "bacterial aggresome",
+      "neighbors": [
+        {
+          "identifier": "GO:0010494",
+          "label": "cytoplasmic stress granule",
+          "cosine_similarity": 0.71220655
+        },
+        {
+          "identifier": "GO:0140365",
+          "label": "RNP body",
+          "cosine_similarity": 0.69266883
+        },
+        {
+          "identifier": "GO:0048500",
+          "label": "signal recognition particle",
+          "cosine_similarity": 0.68544014
+        },
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.67634006
+        },
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.66379698
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:cyanophycin_granule",
       "label": "cyanophycin granule",
       "neighbors": [
@@ -6905,6 +6936,11 @@
           "cosine_similarity": 0.75125271
         },
         {
+          "identifier": "cellstructuremech:bacterial_aggresome",
+          "label": "bacterial aggresome",
+          "cosine_similarity": 0.66050016
+        },
+        {
           "identifier": "GO:0031411",
           "label": "gas vesicle",
           "cosine_similarity": 0.63834474
@@ -6913,11 +6949,6 @@
           "identifier": "GO:0033172",
           "label": "gas vesicle shell",
           "cosine_similarity": 0.63621614
-        },
-        {
-          "identifier": "cellstructuremech:sulfur_globule",
-          "label": "sulfur globule",
-          "cosine_similarity": 0.6316245
         }
       ]
     },
@@ -7081,6 +7112,11 @@
       "label": "R-body",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:bacterial_aggresome",
+          "label": "bacterial aggresome",
+          "cosine_similarity": 0.64281906
+        },
+        {
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
           "cosine_similarity": 0.64250712
@@ -7099,11 +7135,6 @@
           "identifier": "GO:0009428",
           "label": "bacterial-type flagellum basal body, distal rod, P ring",
           "cosine_similarity": 0.61191092
-        },
-        {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.61000091
         }
       ]
     },
@@ -7115,6 +7146,11 @@
           "identifier": "cellstructuremech:glycogen_granule",
           "label": "glycogen granule",
           "cosine_similarity": 0.6316245
+        },
+        {
+          "identifier": "cellstructuremech:bacterial_aggresome",
+          "label": "bacterial aggresome",
+          "cosine_similarity": 0.60822446
         },
         {
           "identifier": "GO:0031411",
@@ -7130,11 +7166,6 @@
           "identifier": "GO:0031469",
           "label": "bacterial microcompartment",
           "cosine_similarity": 0.59810245
-        },
-        {
-          "identifier": "GO:0140737",
-          "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.59240135
         }
       ]
     },
@@ -22348,14 +22379,14 @@
           "cosine_similarity": 0.72205285
         },
         {
+          "identifier": "cellstructuremech:bacterial_aggresome",
+          "label": "bacterial aggresome",
+          "cosine_similarity": 0.71220655
+        },
+        {
           "identifier": "GO:0031533",
           "label": "mRNA capping enzyme complex",
           "cosine_similarity": 0.68902927
-        },
-        {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.68543776
         }
       ]
     },

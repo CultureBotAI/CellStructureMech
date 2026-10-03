@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/bacterial_aggresome.yaml
+  slug: bacterial_aggresome
+session:
+  id: 2026-10-03T124014Z-codex-4047ef
+  timestamp: '2026-10-03T12:40:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1126/sciadv.abh2929
+  - https://doi.org/10.1038/s41564-025-02086-5
+  - https://eprints.whiterose.ac.uk/id/eprint/229675/
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add evidence-backed bacterial aggresome record
+  details: Created a PROPOSED bacterial aggresome record from Jin et al. 2021 and Pei et al.
+    2025. Read PMC BioC full text and the White Rose accepted manuscript, including Figures
+    5-6. Verified the inclusion-body parent, cytoplasm parthood, mRNA stabilization, three
+    InterPro families, SO mRNA and MG1655 taxonomy. Kept protein-marker essentiality UNKNOWN,
+    omitted taxonomic prevalence and unverified strain-specific protein mappings, and bounded
+    the graph to selective RNase exclusion and RNA reuse. Whole-repository duplicate searches
+    included hidden and ignored files; component-name matches were certificate-encoding false
+    positives. Scaffolded and expanded through the guarded writer; derived-artifact and full
+    QC validation follow before commit. No images or third-party manuscript content are hosted.

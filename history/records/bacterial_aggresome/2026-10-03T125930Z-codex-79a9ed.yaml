@@ -1,0 +1,46 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/bacterial_aggresome.yaml
+  slug: bacterial_aggresome
+session:
+  id: 2026-10-03T125930Z-codex-79a9ed
+  timestamp: '2026-10-03T12:59:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1984
+  urls:
+  - https://doi.org/10.1126/sciadv.abh2929
+  - https://doi.org/10.1038/s41564-025-02086-5
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence
+  - generated_artifacts
+  summary: Adversarial review of bacterial aggresome PR 1984
+  details: 'Reviewed PR #1984 at scientific commit 21b65f776762ad61fbc17fb06b6953484409ff84
+    as a separate model-only adversarial pass. Checked submitted YAML, history and rendered
+    page against the 2021 protein-marker experiments and the 2025 accepted manuscript, especially
+    RNase charge/activity controls and transcript-reuse assays. Found no actionable defect:
+    GO:0016235 is explicitly rejected as identity; broader inclusion-body parentage is valid;
+    HslU/Kbl/AcnB family labels resolve; components retain UNKNOWN assembly essentiality;
+    excluded RNases and upstream HokB are not constituents; MG1655 is a canonical example
+    without inferred lineage prevalence; all six edges are cited and limited to the tested
+    mechanism. The graph does not infer universal RNase exclusion, a proven RNA-based repulsion
+    agent, or a generic antibiotic-survival benefit. All 832 prior embedding records are unchanged.
+    Local full QC passed with 573 tests passed, 3 skipped, all 833 records strict-valid, 1491
+    pre-review history records valid and no generated-site drift. Identifier/label, resolver-control
+    retry, quotation, trait and vendored checks passed. No defect issues were warranted; no
+    record edits or human REVIEWED promotion were made. PR checks and merge queue will be
+    verified before merge. This append-only review is the only follow-up change.'
