@@ -1,0 +1,240 @@
+identifier: GO:0036007
+label: scintillon
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A cytoplasmic light-emitting compartment of certain dinoflagellates that
+  produces bioluminescence upon acidification in the presence of oxygen.
+definition_source: GO:0036007
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T09:19:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T09:21:26Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added verified GO scintillon identity relations, four sourced components,
+    current NCBI organism identity, bioluminescence function, scoped proton-triggered
+    flash mechanism, and explicit grounding and contamination decisions.
+  llm_assisted: true
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0005737
+components:
+- component_id: luciferase
+  label: dinoflagellate luciferase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The verified O77206 cross-references identify InterPro domains
+    IPR007959, IPR018804 and IPR018475 and structural superfamilies, not an exact
+    whole-protein family. The reviewed accession is retained only as a protein example.
+  role: Catalyzes light-producing oxidation of luciferin; activated by acidification.
+  protein_examples:
+  - uniprot_id: UniProtKB:O77206
+    protein_label: Dinoflagellate luciferase
+    taxon_id: NCBITaxon:160621
+    taxon_label: Lingulaulax polyedra
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-03'
+    evidence:
+    - reference: DOI:10.1073/pnas.0409335102
+      notes: The study characterizes the third catalytic domain of this luciferase.
+  evidence:
+  - reference: DOI:10.1073/pnas.0409335102
+    notes: Schultz et al. characterize scintillon luciferase and its pH regulation.
+- component_id: luciferin_binding_protein
+  label: dinoflagellate luciferin-binding protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The inspected UniProt LBP entries Q39909-Q39913 map to the shared
+    N-terminal domain IPR007959/PF05295. That domain also occurs in luciferase and
+    does not identify the complete LBP family.
+  role: Binds luciferin at higher pH and releases it on acidification in the studied
+    organism.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0171594
+    notes: Figure 7 localizes LBP in isolated scintillons.
+- component_id: luciferin
+  label: dinoflagellate luciferin
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: CHEBI:61702
+  role: Tetrapyrrole substrate stored for the light-emitting reaction; the chemical
+    identity does not specify its in situ protonation state.
+  evidence:
+  - reference: DOI:10.1073/pnas.0409335102
+    notes: Figure 1 identifies the luciferin substrate and its oxidative light reaction.
+- component_id: proton_channel
+  label: Voltage-gated hydrogen channel 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: InterPro:IPR031846
+  role: Scintillon-localized proton channel implicated in flash triggering by acidification.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0171594
+    notes: LpHV1 localization was supported by immunostaining, Western blotting and
+      peptide detection.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: GO defines scintillons in some dinoflagellates and constrains the term to
+    Dinophyceae.
+  reference: GO:0036007
+canonical_examples:
+- taxon_id: NCBITaxon:160621
+  taxon_label: Lingulaulax polyedra
+  note: Studied as Lingulodinium polyedrum, formerly Gonyaulax polyedra; isolated
+    scintillons were used for localization and flash assays. The current name was
+    verified against NCBI Taxonomy.
+  reference: DOI:10.1371/journal.pone.0171594
+functions:
+- function_id: bioluminescence
+  label: bioluminescence
+  grounding: GO:0008218
+  description: Produces light through the oxygen-dependent luciferin reaction after
+    acidification.
+  evidence:
+  - reference: DOI:10.1073/pnas.69.3.690
+    notes: Isolated particles flash on acidification and recover flash capacity after
+      luciferin incubation.
+causal_graphs:
+- graph_id: scintillon_flash
+  title: Acidification couples proton-channel opening to light emission
+  description: Mechanistic model for the studied Lingulaulax polyedra scintillon.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Channel gating was measured heterologously; localization and zinc inhibition
+    support the proposed native proton-influx step. Upstream mechanosensing and propagation
+    of the tonoplast action potential remain outside this graph.
+  nodes:
+  - node_id: scintillon
+    label: scintillon
+    node_type: ORGANELLE
+    grounding: GO:0036007
+  - node_id: depolarization
+    label: membrane depolarization
+    node_type: STATE
+  - node_id: proton_channel
+    label: Voltage-gated hydrogen channel 1
+    node_type: GENE_OR_PROTEIN
+    component_ref: proton_channel
+    grounding: InterPro:IPR031846
+  - node_id: acidification
+    label: scintillon acidification
+    node_type: STATE
+  - node_id: luciferin_binding_protein
+    label: dinoflagellate luciferin-binding protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: luciferin_binding_protein
+  - node_id: luciferin
+    label: dinoflagellate luciferin
+    node_type: CHEMICAL
+    component_ref: luciferin
+    grounding: CHEBI:61702
+  - node_id: luciferase
+    label: dinoflagellate luciferase
+    node_type: GENE_OR_PROTEIN
+    component_ref: luciferase
+  - node_id: flash
+    label: bioluminescence
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0008218
+  edges:
+  - subject: scintillon
+    predicate: contains
+    object: proton_channel
+    description: LpHV1 localizes to scintillons.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0171594
+  - subject: depolarization
+    predicate: opens
+    object: proton_channel
+    description: Depolarization activates LpHV1 currents.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0171594
+  - subject: proton_channel
+    predicate: promotes
+    object: acidification
+    description: The supported native model couples channel opening to proton influx
+      from the acidic vacuole.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0171594
+  - subject: luciferin_binding_protein
+    predicate: binds_at_higher_pH
+    object: luciferin
+    description: LBP binds luciferin at pH 8.0 but not at pH 6.3.
+    evidence:
+    - reference: DOI:10.1073/pnas.0409335102
+  - subject: acidification
+    predicate: promotes_release_of
+    object: luciferin
+    description: Lower pH releases luciferin from LBP for reaction.
+    evidence:
+    - reference: DOI:10.1073/pnas.0409335102
+  - subject: acidification
+    predicate: activates
+    object: luciferase
+    description: Acidification increases luciferase catalytic activity.
+    evidence:
+    - reference: DOI:10.1073/pnas.0409335102
+  - subject: luciferin
+    predicate: supplies_substrate_for
+    object: flash
+    description: Luciferin supplies the substrate for light emission.
+    evidence:
+    - reference: DOI:10.1073/pnas.69.3.690
+  - subject: luciferase
+    predicate: catalyzes
+    object: flash
+    description: Luciferase catalyzes the oxygen-dependent light-emitting reaction.
+    evidence:
+    - reference: DOI:10.1073/pnas.0409335102
+evidence:
+- reference: DOI:10.1371/journal.pone.0171594
+  notes: 'Rodriguez et al. 2017: proton-channel physiology and scintillon localization.'
+- reference: DOI:10.1073/pnas.0409335102
+  notes: 'Schultz et al. 2005: luciferase structure and pH regulation.'
+- reference: DOI:10.1073/pnas.69.3.690
+  notes: 'Fogel and Hastings 1972: isolated scintillon flash assays; abstract read
+    via Europe PMC.'
+discussions:
+- discussion_id: resolve_whole_protein_groundings
+  prompt: Resolve whole-protein family identifiers for dinoflagellate luciferase and
+    LBP.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#luciferase
+  - components#luciferin_binding_protein
+  rationale: Verified UniProt mappings supply domain-level terms shared between the
+    proteins or covering only part of luciferase. They do not identify either complete
+    component. Assembly essentiality and cross-species conservation of the studied
+    composition remain unasserted.
+  evidence:
+  - reference: UniProtKB:O77206
+  - reference: UniProtKB:Q39913
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: exclude_chloroplast_contaminants
+  prompt: Exclude chloroplast proteins detected in scintillon preparations.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#proton_channel
+  rationale: The proteomics study identifies chloroplast contamination. Rubisco and
+    other chloroplast hits alone do not establish scintillon membership.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0171594
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'

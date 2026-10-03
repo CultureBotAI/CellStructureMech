@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/scintillon.yaml
+  slug: scintillon
+session:
+  id: 2026-10-03T092135Z-codex-34e877
+  timestamp: '2026-10-03T09:21:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-6
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add GO-grounded scintillon with a sourced flash mechanism
+  details: Verified GO:0036007 and its parent/parthood relations; searched hidden and ignored
+    repository content for names, organism names, identifiers and references. Added four components
+    and a Lingulaulax polyedra example from primary literature, distinguishing measured channel
+    properties from the inferred native mechanism and excluding chloroplast contaminants.
+    Used current NCBI Taxonomy naming, verified ChEBI/InterPro/UniProt identifiers, and retained
+    whole-protein grounding TODOs for luciferase and LBP.
