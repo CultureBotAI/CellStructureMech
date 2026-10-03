@@ -1,0 +1,52 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cryptophyte_cortical_centrin_network.yaml
+  slug: cryptophyte_cortical_centrin_network
+session:
+  id: 2026-10-03T202534Z-codex-618ead
+  timestamp: '2026-10-03T20:25:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1997
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - evidence
+  - datasets
+  - discussions
+  - images
+  summary: Adversarial review of cortical centrin network PR1997
+  details: 'Separate post-opening adversarial self-review of PR1997 scientific commit ca952653b728dd6af7fa0dc2ea10cfe5137316d6
+    against base 40a4b4c4e71d8d23a4d16be0d8c882423a38b44b. This is a same-agent review, not
+    an independent second curator; mapping_status remains PROPOSED. Reviewed the full committed
+    record and 14-file PR scope, provenance history, generated statistics and artifact deltas.
+    Checked primary centrin Results, Figure3/S2 against the definition and assertions, including
+    network-versus-protein identity, no inferred ICL/rootlet homology, no periplast parthood,
+    no generic centrin function transfer, no exact paralogue/essentiality claims, no prevalence
+    or absence from nondetection, and no unsupported native dimensions. Taxon spellings and
+    ranks were verified at NCBI/ENA: nottbecki is a synonym of canonical nottbeckii; Rhodomonas
+    culture identifications remain genus-level. TableS1 row/column checks support RCC6444/K-1855,
+    BMCC67 and RCC10777/Q1-11 but not exact figure-to-isolate assignments. Re-fetched pinned
+    archive metadata after PR opening and confirmed all three exact example volume prefixes
+    have channel entries. Inspected the committed original Figure3 and FigureS2 again: D-F
+    match cortical network panels; unrelated structures/taxa are explicitly excluded; no synthetic
+    or altered micrograph. Rechecked Crossref version-of-record CC BY4.0 licence, source-byte/hash
+    match, 239120byte cap, canonical taxon, visible rendered attribution/caption/licence and
+    correct image path. Rechecked unique identity, exactly one changed structure record, and
+    all844 previous embedding rows unchanged. Complete local QC passed with 593tests,3skips,2dependency
+    deprecation warnings;845structures and1515histories validated; generated site/docs/map
+    current. External gates passed:31/31verbatim snippets,10/10traitlinks,3562identifierOK/170intentionalSKIPPED,3438canonical/48synonym/8acceptedexception
+    labels and432withoutadapter. New unsupported-adapter taxa were manually authority-checked.
+    No concrete scientific, provenance or generated-artifact defect found. No review issue
+    or scientific fix warranted. This append-only review history is the only follow-up change;
+    its target/full-history validation and final-head CI follow.'
