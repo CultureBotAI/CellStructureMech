@@ -2839,6 +2839,11 @@
           "cosine_similarity": 0.74148703
         },
         {
+          "identifier": "cellstructuremech:spirostomum_myoneme_fishnet",
+          "label": "Spirostomum myoneme fishnet",
+          "cosine_similarity": 0.70713467
+        },
+        {
           "identifier": "GO:0120269",
           "label": "ciliary centrin arm",
           "cosine_similarity": 0.70290475
@@ -2852,11 +2857,6 @@
           "identifier": "GO:0032170",
           "label": "pseudohyphal septin ring",
           "cosine_similarity": 0.67158855
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.67082484
         }
       ]
     },
@@ -3371,6 +3371,11 @@
           "cosine_similarity": 0.74148703
         },
         {
+          "identifier": "cellstructuremech:spirostomum_myoneme_fishnet",
+          "label": "Spirostomum myoneme fishnet",
+          "cosine_similarity": 0.73248969
+        },
+        {
           "identifier": "GO:0120269",
           "label": "ciliary centrin arm",
           "cosine_similarity": 0.67391026
@@ -3379,11 +3384,6 @@
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
           "cosine_similarity": 0.64551414
-        },
-        {
-          "identifier": "GO:0020007",
-          "label": "apical complex",
-          "cosine_similarity": 0.63609185
         }
       ]
     },
@@ -5027,6 +5027,37 @@
           "identifier": "GO:0005823",
           "label": "central plaque of spindle pole body",
           "cosine_similarity": 0.83933485
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:spirostomum_myoneme_fishnet",
+      "label": "Spirostomum myoneme fishnet",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:infraciliary_lattice",
+          "label": "infraciliary lattice",
+          "cosine_similarity": 0.73248969
+        },
+        {
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.72222077
+        },
+        {
+          "identifier": "GO:0032157",
+          "label": "prospore contractile ring",
+          "cosine_similarity": 0.71901483
+        },
+        {
+          "identifier": "cellstructuremech:cryptophyte_cortical_centrin_network",
+          "label": "cryptophyte cortical centrin network",
+          "cosine_similarity": 0.70713467
+        },
+        {
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.70610947
         }
       ]
     },

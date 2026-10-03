@@ -1,0 +1,54 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spirostomum_myoneme_fishnet.yaml
+  slug: spirostomum_myoneme_fishnet
+session:
+  id: 2026-10-03T221304Z-codex-96d784
+  timestamp: '2026-10-03T22:13:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2000
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - discussions
+  - images
+  - generated_artifacts
+  summary: Adversarial self-review of Spirostomum myoneme fishnet PR2000
+  details: 'Separate post-opening same-agent adversarial self-review of PR2000 at 65400b49b635d772a8b5553b7499ac041414b138
+    against base 2974474c6b2ae8376d3832d79883a9f4691c62ef. This is neither independent nor
+    human review. Inspected all13 changed paths, committed YAML and generated metadata. Challenged
+    genus-scoped identity versus broad myoneme synonym and adjacent centrin networks; ignored/hidden-inclusive
+    source/name searches match only this new record/history. Reviewed primary2023 spasmin/scaffold
+    identification, RNAi, antibody Methods and Figure5 legend again, separately checked preprint
+    antibody/recovery/AlphaFold limits and live PubMed final2026 metadata/abstract/embargo.
+    No evidence supports converting minority type-E RNAi to universal essentiality, cross-reacting
+    anti-GSBP2 staining to isoform-specific mapping, predicted binding capacities to native
+    stoichiometry, or purified repeat-compaction to whole-native-fishnet sufficiency; the
+    record makes none of those claims. Neighboring microtubules, basal bodies and calcium-handling
+    organelles remain excluded from constituent membership. Two species examples do not assert
+    genus-wide prevalence. Exact component family groundings remain unresolved rather than
+    guessed. Re-inspected original Figure5 and source permissions: panelA is predicted, B
+    is merged-layer imaging, C includes single-layer imaging/Westerns; caption describes displayed
+    pseudocolors and cross-reactivity. CC BY-NC4.0 entry is link-only with no hosting keys
+    or image bytes. No numeric image-derived dimensions or speculative causal graph added.
+    Rechecked all847 existing embedding rows unchanged, exactly one new row, and published
+    map/neighbors byte-identical. Full local QC passed before submission:599tests passed,3skipped,2dependency
+    deprecation warnings;848structures and1522histories valid; site andREADME current. TargetLinkML/strict,
+    snippets31/31, traits10/10 and label checks passed. Identifier gate passed twice with3572OK173SKIPPED,
+    but UniProt resolver-control authority was unreachable and that control was not exercised;
+    the newrecord has noUniProtgrounding. No additional concrete defect found, so no placeholder
+    issue created. Residual scientific gaps remain in OPEN discussions; mapping remainsPROPOSED.
+    This append-only REVIEW/no_change entry changes no domain YAML. Final-head CI, protected
+    mergequeue verification and postmerge checks remain required.'
