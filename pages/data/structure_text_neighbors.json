@@ -20845,6 +20845,11 @@
       "label": "RSC-type complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:stressosome",
+          "label": "stressosome",
+          "cosine_similarity": 0.76177469
+        },
+        {
           "identifier": "GO:0016514",
           "label": "SWI/SNF complex",
           "cosine_similarity": 0.69995145
@@ -20863,11 +20868,6 @@
           "identifier": "GO:0034456",
           "label": "UTP-C complex",
           "cosine_similarity": 0.69760136
-        },
-        {
-          "identifier": "GO:0031932",
-          "label": "TORC2 complex",
-          "cosine_similarity": 0.68778465
         }
       ]
     },
@@ -21364,6 +21364,37 @@
           "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
           "label": "type VI secretion system membrane complex",
           "cosine_similarity": 0.63069688
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:stressosome",
+      "label": "stressosome",
+      "neighbors": [
+        {
+          "identifier": "GO:0016586",
+          "label": "RSC-type complex",
+          "cosine_similarity": 0.76177469
+        },
+        {
+          "identifier": "cellstructuremech:type_vi_secretion_system_membrane_complex",
+          "label": "type VI secretion system membrane complex",
+          "cosine_similarity": 0.66996643
+        },
+        {
+          "identifier": "GO:0000439",
+          "label": "transcription factor TFIIH core complex",
+          "cosine_similarity": 0.65986389
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.65064413
+        },
+        {
+          "identifier": "GO:0048500",
+          "label": "signal recognition particle",
+          "cosine_similarity": 0.64456765
         }
       ]
     },
