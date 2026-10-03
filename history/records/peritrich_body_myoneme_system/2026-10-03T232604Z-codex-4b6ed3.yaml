@@ -1,0 +1,48 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  slug: peritrich_body_myoneme_system
+session:
+  id: 2026-10-03T232604Z-codex-4b6ed3
+  timestamp: '2026-10-03T23:26:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  summary: Add evidence-backed peritrich body myoneme system
+  details: Created one PROPOSED Peritrich body myoneme system record from clean synchronized
+    main d4b9dc34c10cdc3ced16b223a8fba4754cea9a2e. Whole-repository hidden/ignored-inclusive
+    searches for myoneme, candidate labels, synonyms, organism names, DOI/PMID and exact image/taxon
+    identifiers found only stalk-spasmoneme and Spirostomum comparative mentions plus numeric
+    cache/library false positives, not an existing body-system identity. QuickGO myoneme/myonemal/spasmoneme/peritrich
+    queries all returned zero hits; verified GO0005622 broad parent and GO0005856 parthood.
+    ENA verified Vorticella convallaria60850 and Campanella umbellaria168242. Read complete
+    Konior2009 publisher PDF14pages and visually inspected body-network Figure3; Shi2004 PMID15164366
+    DOI10.1002/jmor.10225 and Katoh1994 PMID9317557 DOI10.1242/jeb.189.1.163 remain primary-abstract-only
+    with full-text access limits explicit. Allen1973 DOI10.1083/jcb.56.2.559 complete21-page
+    PMC2108889.1 PDF was read and selected figures inspected; its linkage complex is retained
+    as a lead, not a molecularly resolved addition. InterPro spasmin search204 and broader
+    IPR050145 justify label-only combined centrin/spasmin class with UNKNOWN essentiality.
+    No Campanella molecular inventory, universal peritrich distribution, stalk-specific percentage
+    transfer, isoform stoichiometry or mechanistic calcium-channel claim is asserted. Functional
+    graph is explicitly NONMECHANISTIC, separating live injection from extracted-preparation
+    external calcium. CIL39513 metadata verifies DOI10.7295/W9CIL39513, PUBLIC_DOMAIN dedication,
+    RichardAllen attribution, D.Kunkel acquisition1994-08-18, catalog2012 and V.convallaria
+    identity. Unmodified512x512 preview visually inspected;39121bytes SHA256feeb4e959248a63f2e69d6ed5e1850858b2e52448724e311ea1e55d43897479f.
+    No archival raw image or calibrated quantity inferred. Scaffold and guarded safe_load
+    temporary mutator used truthful llm_assisted events and validated writers; temporary mutator
+    removed. Regeneration, full gates and separate post-opening adversarial self-review remain
+    required.
