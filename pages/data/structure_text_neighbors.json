@@ -10506,14 +10506,14 @@
           "cosine_similarity": 0.74593849
         },
         {
+          "identifier": "GO:0044310",
+          "label": "osmiophilic body",
+          "cosine_similarity": 0.7431875
+        },
+        {
           "identifier": "cellstructuremech:parasitophorous_vacuole",
           "label": "parasitophorous vacuole",
           "cosine_similarity": 0.73117669
-        },
-        {
-          "identifier": "GO:0030668",
-          "label": "apicomplexan dense granule membrane",
-          "cosine_similarity": 0.69052789
         }
       ]
     },
@@ -11214,6 +11214,11 @@
           "cosine_similarity": 0.78769001
         },
         {
+          "identifier": "GO:0044310",
+          "label": "osmiophilic body",
+          "cosine_similarity": 0.76548323
+        },
+        {
           "identifier": "GO:0020009",
           "label": "microneme",
           "cosine_similarity": 0.75932853
@@ -11222,11 +11227,6 @@
           "identifier": "GO:0009536",
           "label": "plastid",
           "cosine_similarity": 0.74508432
-        },
-        {
-          "identifier": "GO:0034494",
-          "label": "microneme lumen",
-          "cosine_similarity": 0.7436011
         }
       ]
     },
@@ -11847,6 +11847,37 @@
           "identifier": "GO:0070114",
           "label": "organellar chromatophore outer membrane",
           "cosine_similarity": 0.89476426
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0044310",
+      "label": "osmiophilic body",
+      "neighbors": [
+        {
+          "identifier": "GO:0070074",
+          "label": "mononeme",
+          "cosine_similarity": 0.76548323
+        },
+        {
+          "identifier": "GO:0020036",
+          "label": "Maurer's cleft",
+          "cosine_similarity": 0.7431875
+        },
+        {
+          "identifier": "GO:0044311",
+          "label": "exoneme",
+          "cosine_similarity": 0.7002433
+        },
+        {
+          "identifier": "GO:0020020",
+          "label": "food vacuole",
+          "cosine_similarity": 0.6829834
+        },
+        {
+          "identifier": "GO:0070258",
+          "label": "inner membrane pellicle complex",
+          "cosine_similarity": 0.67292676
         }
       ]
     },

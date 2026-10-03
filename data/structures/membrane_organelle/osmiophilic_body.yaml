@@ -1,0 +1,228 @@
+identifier: GO:0044310
+label: osmiophilic body
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded vesicle found predominantly in Plasmodium female gametocytes,
+  that becomes progressively more abundant as the gametocyte reaches full maturity.
+  These vesicles lie beneath the subpellicular membrane of the gametocyte, and the
+  release of their contents into the parasitophorous vacuole has been postulated to
+  aid in the escape of gametocytes from the erythrocyte after ingestion by the mosquito.
+definition_source: GO:0044310
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T03:16:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T03:18:15Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic-vesicle parentage, membrane and Pfg377 components, P.
+    falciparum female-gametocyte scope, DOI/GO evidence, a nonmechanistic Pfg377 emergence
+    graph, and component-grounding and release-scope discussions.
+  llm_assisted: true
+parent_structures:
+- GO:0031410
+components:
+- component_id: osmiophilic_body_membrane
+  label: osmiophilic body membrane
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0044310 identifies the whole osmiophilic body vesicle; no exact
+    source-neutral osmiophilic-body membrane CURIE was curated in this pass.
+  role: Membrane boundary of the electron-dense osmiophilic body in mature Plasmodium
+    falciparum female gametocytes.
+  evidence:
+  - reference: GO:0044310
+    notes: GO defines osmiophilic bodies as membrane-bounded vesicles.
+  - reference: DOI:10.1111/j.1365-2958.2007.06039.x
+    notes: De Koning-Ward et al. 2008 studied membrane-bound osmiophilic bodies in
+      P. falciparum female gametocytes.
+- component_id: pfg377_osmiophilic_body_protein
+  label: Pfg377 osmiophilic body protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Pfg377 is curated as a P. falciparum osmiophilic-body protein;
+    no exact source-neutral Plasmodium Pfg377 protein-family CURIE was verified in
+    this pass.
+  gene_symbols:
+  - Pfg377
+  role: Gametocyte protein associated with P. falciparum osmiophilic bodies and required
+    for the normal osmiophilic-body complement of female gametocytes.
+  evidence:
+  - reference: DOI:10.1016/0166-6851(95)02491-3
+    notes: Alano et al. 1995 identified Pfg377 as a P. falciparum gametocyte antigen
+      associated with osmiophilic bodies.
+  - reference: DOI:10.1111/j.1365-2958.2007.06039.x
+    notes: De Koning-Ward et al. 2008 used targeted gene disruption to tie Pfg377
+      to normal osmiophilic-body formation.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  presence: COMMON
+  note: Osmiophilic bodies are directly evidenced in mature P. falciparum female gametocytes,
+    where Pfg377 loss reduces the normal organelle complement.
+  reference: DOI:10.1111/j.1365-2958.2007.06039.x
+canonical_examples:
+- taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  note: Human malaria parasite in which Pfg377 disruption connected osmiophilic body
+    formation to female gametocyte emergence and mosquito infectivity.
+  reference: DOI:10.1111/j.1365-2958.2007.06039.x
+functions:
+- function_id: female_gametocyte_emergence
+  label: female gametocyte emergence support
+  description: Osmiophilic bodies in mature P. falciparum female gametocytes support
+    efficient emergence from erythrocytes after gametogenesis is induced.
+  evidence:
+  - reference: DOI:10.1111/j.1365-2958.2007.06039.x
+    notes: De Koning-Ward et al. 2008 found that Pfg377-negative female gametocytes
+      lack the full osmiophilic-body complement and are less efficient at emergence
+      from erythrocytes.
+- function_id: malaria_transmission_to_mosquito
+  label: mosquito infection support
+  description: Normal osmiophilic-body formation contributes to P. falciparum transmission
+    to mosquitoes after a gametocyte-containing blood meal.
+  evidence:
+  - reference: DOI:10.1111/j.1365-2958.2007.06039.x
+    notes: De Koning-Ward et al. 2008 linked the Pfg377-negative osmiophilic-body
+      defect to a strong reduction in mosquito oocyst formation.
+evidence:
+- reference: GO:0044310
+  notes: Gene Ontology cellular-component term for osmiophilic body.
+- reference: GO:0031410
+  notes: Gene Ontology cellular-component parent term for cytoplasmic vesicles.
+- reference: DOI:10.1016/0166-6851(95)02491-3
+  notes: Alano et al. 1995, COS cell expression cloning of Pfg377, a Plasmodium falciparum
+    gametocyte antigen associated with osmiophilic bodies, Molecular and Biochemical
+    Parasitology.
+- reference: DOI:10.1111/j.1365-2958.2007.06039.x
+  notes: De Koning-Ward et al. 2008, The role of osmiophilic bodies and Pfg377 expression
+    in female gametocyte emergence and mosquito infectivity in the human malaria parasite
+    Plasmodium falciparum, Molecular Microbiology.
+- reference: DOI:10.1074/mcp.m116.060681
+  notes: Suarez-Cortes et al. 2016, Comparative Proteomics and Functional Analysis
+    Reveal a Role of Plasmodium falciparum Osmiophilic Bodies in Malaria Parasite
+    Transmission, Molecular & Cellular Proteomics.
+causal_graphs:
+- graph_id: pfg377_osmiophilic_body_emergence
+  title: Pfg377 supports osmiophilic-body abundance and gametocyte emergence
+  description: Pfg377 associates with P. falciparum osmiophilic bodies and supports
+    normal osmiophilic-body formation; female gametocytes with a reduced organelle
+    complement emerge from erythrocytes less efficiently and are defective in mosquito
+    infection.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records Pfg377 association, organelle abundance, and the
+    emergence phenotype without asserting that osmiophilic-body content release is
+    the direct physical cause of erythrocyte exit.
+  nodes:
+  - node_id: osmiophilic_body_membrane
+    label: osmiophilic body membrane
+    node_type: STRUCTURE
+    component_ref: osmiophilic_body_membrane
+  - node_id: osmiophilic_body
+    label: osmiophilic body
+    node_type: ORGANELLE
+    grounding: GO:0044310
+  - node_id: pfg377_osmiophilic_body_protein
+    label: Pfg377 osmiophilic body protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: pfg377_osmiophilic_body_protein
+  - node_id: female_gametocyte_emergence
+    label: female gametocyte emergence
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: mosquito_oocyst_formation
+    label: mosquito oocyst formation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: osmiophilic_body_membrane
+    predicate: bounds
+    object: osmiophilic_body
+    description: The osmiophilic body membrane bounds the vesicle in mature P. falciparum
+      female gametocytes.
+    evidence:
+    - reference: GO:0044310
+      notes: GO defines osmiophilic bodies as membrane-bounded vesicles of Plasmodium
+        female gametocytes.
+  - subject: pfg377_osmiophilic_body_protein
+    predicate: associates with
+    object: osmiophilic_body
+    description: The Pfg377 gametocyte antigen associates with P. falciparum osmiophilic
+      bodies.
+    evidence:
+    - reference: DOI:10.1016/0166-6851(95)02491-3
+      notes: Alano et al. 1995 identified Pfg377 as a P. falciparum gametocyte antigen
+        associated with osmiophilic bodies.
+  - subject: pfg377_osmiophilic_body_protein
+    predicate: supports formation of
+    object: osmiophilic_body
+    description: Pfg377 supports normal formation of the osmiophilic-body complement
+      in P. falciparum female gametocytes.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2007.06039.x
+      notes: De Koning-Ward et al. 2008 found fewer osmiophilic bodies in Pfg377-negative
+        female gametocytes.
+  - subject: osmiophilic_body
+    predicate: supports
+    object: female_gametocyte_emergence
+    description: A normal osmiophilic-body complement supports efficient female gametocyte
+      emergence from erythrocytes.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2007.06039.x
+      notes: De Koning-Ward et al. 2008 connected the Pfg377 osmiophilic-body defect
+        to reduced female gametocyte emergence.
+  - subject: female_gametocyte_emergence
+    predicate: supports
+    object: mosquito_oocyst_formation
+    description: Efficient emergence of P. falciparum female gametocytes supports
+      mosquito oocyst formation after the blood meal.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2007.06039.x
+      notes: De Koning-Ward et al. 2008 found that the reduced emergence of Pfg377-negative
+        gametocytes strongly impaired mosquito oocyst formation.
+discussions:
+- discussion_id: ground_pfg377_and_osmiophilic_body_membrane
+  prompt: Resolve exact source-neutral groundings for Pfg377 and the osmiophilic body
+    membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#osmiophilic_body_membrane
+  - components#pfg377_osmiophilic_body_protein
+  rationale: This first osmiophilic-body record keeps the Pfg377 protein and the vesicle
+    membrane label-only because no exact InterPro, Pfam, NCBIfam, or GO identifier
+    for those source-neutral component classes was verified.
+  evidence:
+  - reference: GO:0044310
+    notes: GO identifies the whole osmiophilic body vesicle.
+  - reference: DOI:10.1111/j.1365-2958.2007.06039.x
+    notes: De Koning-Ward et al. 2008 studied the known Pfg377 protein association
+      with osmiophilic bodies.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: keep_release_mechanism_postulated
+  prompt: Avoid asserting a direct osmiophilic-body cargo-release mechanism for female
+    gametocyte egress until direct physical evidence is curated.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#pfg377_osmiophilic_body_emergence
+  rationale: GO's definition and De Koning-Ward et al. describe release of osmiophilic-body
+    contents into the parasitophorous vacuole as a postulated aid to escape. The graph
+    therefore captures the supported Pfg377-to-organelle and emergence phenotypes
+    without converting that postulate into a causal edge.
+  evidence:
+  - reference: GO:0044310
+    notes: GO carries the postulated-release wording in its osmiophilic body definition.
+  - reference: DOI:10.1111/j.1365-2958.2007.06039.x
+    notes: De Koning-Ward et al. 2008 found a reduced osmiophilic-body complement
+      and reduced emergence efficiency in Pfg377-negative female gametocytes.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
