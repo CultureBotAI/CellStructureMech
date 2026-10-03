@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/scintillon.yaml
+  slug: scintillon
+session:
+  id: 2026-10-03T093739Z-codex-9122b6
+  timestamp: '2026-10-03T09:37:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1979
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1978
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - components
+  - evidence
+  summary: Correct LBP accession provenance after adversarial review
+  details: 'Reviewed exact identity, component membership and grounding, native versus heterologous
+    mechanism evidence, taxonomy scope, generated artifacts and validations in PR #1978. Found
+    one provenance defect: the Q39909-Q39913 range includes Q39912, which UniProt resolves
+    to luciferase O77206. Replaced the range with the four individually verified LBP accessions
+    Q39909, Q39910, Q39911 and Q39913, explicitly excluding Q39912. No other concrete defects
+    identified; whole-protein family grounding TODOs remain explicit.'

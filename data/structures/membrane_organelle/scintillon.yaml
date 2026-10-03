@@ -19,6 +19,12 @@ curation_history:
     current NCBI organism identity, bioluminescence function, scoped proton-triggered
     flash mechanism, and explicit grounding and contamination decisions.
   llm_assisted: true
+- timestamp: '2026-10-03T09:37:30Z'
+  curator: codex
+  action: CURATED_COMPONENTS
+  changes: 'Addressed adversarial review issue #1979: listed exact inspected LBP accessions
+    and excluded Q39912, which resolves to luciferase O77206.'
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 part_of:
@@ -53,9 +59,10 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The inspected UniProt LBP entries Q39909-Q39913 map to the shared
-    N-terminal domain IPR007959/PF05295. That domain also occurs in luciferase and
-    does not identify the complete LBP family.
+  grounding_notes: The inspected UniProt LBP entries Q39909, Q39910, Q39911 and Q39913
+    map to the shared N-terminal domain IPR007959/PF05295. That domain also occurs
+    in luciferase and does not identify the complete LBP family. Q39912 resolves to
+    luciferase O77206 and is not an LBP example.
   role: Binds luciferin at higher pH and releases it on acidification in the studied
     organism.
   evidence:
