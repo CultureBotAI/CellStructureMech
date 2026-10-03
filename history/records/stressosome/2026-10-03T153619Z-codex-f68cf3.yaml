@@ -1,0 +1,56 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/stressosome.yaml
+  slug: stressosome
+session:
+  id: 2026-10-03T153619Z-codex-f68cf3
+  timestamp: '2026-10-03T15:36:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1989
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  - validation
+  summary: Adversarial review of stressosome PR 1989
+  details: 'Separate post-opening adversarial pass on PR #1989 scientific head 970638bc55dc9ce3743d94acdb01462fff8d3233
+    against base 3dfc7079c7c670eb914569052164a61f3d04fe75. Re-read the entire committed YAML
+    and the PR file list, reviewed the schema/curation checklist, and re-read relevant primary
+    Results and Methods in PMC6614362, PMC6760441, PMC5802382 and PMC11821858. No actionable
+    defect found; no GitHub issue manufactured. Identity is a multiprotein structure with
+    a broader GO parent, not a single protein or phenotype. RsbR/RsbS/RsbT family boundaries
+    remain label-only instead of using shared domains or the combined IPR051932 family. Prli42
+    is exact-family-grounded associated machinery with explicit Listeria, reconstitution and
+    fractionation limits, not a universal core constituent or proven channel. Strain-168 protein
+    examples match cloned donor identity; EGD-e is distinguished from recombinant E. coli;
+    no broad distribution assertion is inferred from homologs. The 2025 graph is nonmechanistic,
+    PY79/rsbP-background scoped and accounts for the rsbRA-rsbS deletion confound on RsbT
+    production, early-stop controls, inconclusive acid responses and downstream-output versus
+    direct-sensing distinctions. Reconstitution does not establish generic formation essentiality;
+    RsbS crystal packing is not a native solution shell, and reconstruction-dependent stoichiometries
+    are not universalized. Rechecked image bytes against the recorded SHA-256, 175955-byte
+    size, canonical taxon, figure panels, CC BY 4.0 source licence and attribution; source
+    microscopy is explicitly of purified particles and RsbT is not claimed atomically resolved.
+    All 836 previous embedding entries are unchanged; one new vector and expected derived
+    map/site changes account for the diff. Local validation passed: 577 tests, 3 skipped,
+    2 dependency warnings; 837 closed-schema records; 1499 pre-review history records; LinkML
+    target validation; all authority controls; 3534 identifiers resolved, 162 skipped, none
+    unreachable; all ID/label pairs; 10 live trait links; 31/31 verbatim existing quotations;
+    README, site and embedding drift checks; git diff --check. Remaining exact-family and
+    molecular-trigger questions are recorded as scientific curation TODOs, not correctness
+    defects. This is an agent review, not independent human sign-off; mapping_status remains
+    PROPOSED. This append-only review adds provenance only and does not mutate the scientific
+    record. Final-head CI and merge-queue checks remain mandatory before merge.'
