@@ -20,6 +20,12 @@ curation_history:
     discharge evidence, a nonmechanistic toxicyst discharge graph, and curation discussions
     for unresolved toxin chemistry and candidate PKS/LAAO boundary handling.
   llm_assisted: true
+- timestamp: '2026-10-03T08:04:23Z'
+  curator: codex
+  action: ADDRESS_REVIEW
+  changes: 'Resolved PR #1973 review issue #1974 by removing an uncoupled Didinium
+    nasutum Ca2+-triggered discharge citation from the record-level evidence list.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 components:
@@ -91,9 +97,6 @@ evidence:
 - reference: DOI:10.1111/jeu.12106
   notes: Buonanno et al. 2014, Chemical offense by means of toxicysts in the freshwater
     ciliate, Coleps hirtus, Journal of Eukaryotic Microbiology.
-- reference: DOI:10.1007/BF01279249
-  notes: Iwadate, Katoh, Kikuyama and Asai 1999, Ca2+ triggers toxicyst discharge
-    in Didinium nasutum, Protoplasma.
 causal_graphs:
 - graph_id: toxicyst_predatory_discharge
   title: Toxicysts discharge toxic material during predation
