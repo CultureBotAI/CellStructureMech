@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H-body · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>H-body</h1>
+<p class="meta"><code>cellstructuremech:h_body</code> · RIBONUCLEOPROTEIN · OTHER · <span class="status">PROPOSED</span></p>
+<p class="definition">A stress-responsive, polar, membraneless ribonucleoprotein condensate organized by Hfq in Escherichia coli, with polyphosphate-modulated assembly and enrichment of polyadenylated transcripts and RNA-processing proteins. <small>[<a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a>]</small></p>
+<p><strong>Synonyms:</strong> Hfq condensate</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005737"><code>GO:0005737</code></a> </p>
+<h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-hfq"><td>RNA-binding protein Hfq</td><td>PROTEIN</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR005001"><code>InterPro:IPR005001</code></a></td><td>hfq</td><td></td><td>ESSENTIAL</td><td>Defining RNA-binding scaffold of the H-body; many Hfq molecules assemble into a mesoscale condensate, rather than one Hfq hexamer constituting the entire structure.<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Endogenous fluorescent reporters locate Hfq in polar bodies. Purified Hfq phase separates above a concentration threshold, reduced by polyphosphate within a concentration window (Figures 1 and 4).</small></li></ul></td></tr>
+<tr id="components-polyp"><td>polyphosphate</td><td>SMALL_MOLECULE</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/CHEBI_16838"><code>CHEBI:16838</code></a></td><td></td><td></td><td>DISPENSABLE</td><td>Inorganic polyanion that co-partitions with Hfq and modulates condensation, client enrichment and body persistence. Its absence does not eliminate all nitrogen-starvation-induced Hfq bodies.<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figure 3 reports modest but significant Hfq/polyP colocalization, with strong enrichment in only a subset of foci. Figures 1 and 4 show residual foci in nitrogen-starved ppk mutants and Hfq-only droplets at high protein concentrations; excess polyP redissolves reconstituted droplets. The grounding denotes the polymer class, not a fixed chain length.</small></li></ul></td></tr>
+<tr id="components-mrna"><td>mRNA</td><td>RNA</td><td>part of</td><td><code>SO:0000234</code></td><td></td><td></td><td>UNKNOWN</td><td>Polyadenylated transcript cargo; the RNA-class grounding does not assert that all mRNAs localize to the body or that RNA is universally required for its assembly.<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figure 5E FISH shows poly(A)-transcript colocalization with Hfq in a subset of nitrogen-starved WT cells, with limited signal-to-noise. Figure 4 uses an rA30 oligonucleotide, not a full mRNA, for ternary Hfq/polyP/RNA reconstitution. RNase A does not dissolve the lysate HMW Hfq assemblies in the tested assay.</small></li></ul></td></tr>
+<tr id="components-rnase_e"><td>Ribonuclease E</td><td>PROTEIN</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR028878"><code>InterPro:IPR028878</code></a></td><td>rne</td><td></td><td>UNKNOWN</td><td>RNA-processing client enriched with Hfq in nitrogen-starvation bodies; neither catalytic inactivity within the body nor a requirement for H-body assembly is asserted.<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figure 4G-I shows RNase E in polyP-dependent HMW Hfq assemblies and endogenous fluorescent RNase E enrichment at Hfq foci. Hfq is the organizing scaffold here; the Caulobacter BR-body RNase E-scaffold essentiality is not transferred.</small></li></ul></td></tr>
+<tr id="components-rhlb"><td>ATP-dependent RNA helicase RhlB type</td><td>PROTEIN</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR023554"><code>InterPro:IPR023554</code></a></td><td>rhlB</td><td></td><td>UNKNOWN</td><td>RNA-helicase client whose endogenous fluorescent foci colocalize with Hfq under nitrogen starvation in the presence of polyP.<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figure 5C directly images RhlB/Hfq colocalization in WT and its loss in the ppk deletion background. The verified E. coli RhlB product maps to the IPR023554 family, not the Xanthomonadaceae-focused IPR022077 family or the RhlB helicase domain.</small></li></ul></td></tr>
+<tr id="components-tmar"><td>TmaR</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>tmaR</td><td></td><td>CONDITIONAL</td><td>Co-condensing polar regulator required for Hfq-body assembly during the tested nitrogen-starvation condition. It also forms distinct foci without Hfq, and is not universally required under stronger osmotic stress.<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figure 1L compares endogenous Hfq/TmaR localization and deletion backgrounds; Hfq foci are lost without TmaR during nitrogen starvation. Figure 1M retains some Hfq foci without TmaR at 1.17 M NaCl. The Results discuss prior direct co-condensation evidence.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_511145"><code>NCBITaxon:511145</code></a> <em>Escherichia coli str. K-12 substr. MG1655</em> — The study uses MG1655-derived strains with endogenous fluorescent fusions, nitrogen starvation in defined Gutnick medium, and strong osmotic stress at 1.17 M NaCl. This is an experimentally demonstrated strain example, not a prevalence assertion across E. coli or bacteria. [<a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>RNA and protein sequestration</strong> — Concentrates polyadenylated transcripts and selected RNA-processing proteins during nitrogen starvation. PolyP-dependent body organization is associated with selective transcript stabilization; the genetic comparisons do not isolate condensation from all other Hfq and polyP activities.<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figures 4H-I and 5C,E directly localize RNase E, RhlB and poly(A) RNA. Transcript half-life and poly(A)-tail measurements in WT versus ppk deletion strains support selective preservation, but the Discussion calls for separation-of-function mutants before attributing survival specifically to condensation.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-polyp_modulated_h_body_assembly">Polyphosphate modulates stress-induced H-body assembly <small>(ASSEMBLY)</small></h3>
+<p>Nitrogen starvation increases polyphosphate, which promotes Hfq condensation within a concentration window; the assembled bodies enrich selected RNA and protein cargo.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Polyphosphate modulates stress-induced H-body assembly">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>Nitrogen starvation</td><td>induces accumulation of</td><td>polyphosphate</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figure 1A measures polyP accumulation after entry into nitrogen starvation; the ppk deletion strain lacks detectable polyP.</small></li></ul></td></tr>
+<tr><td>polyphosphate</td><td>promotes</td><td>Hfq condensation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figure 4A-D shows concentration-dependent reconstitution and ternary complexes. Figure 1 compares cellular ppk deletion and Ppk10k-driven polyP accumulation. Excess polyP dissolves droplets, so the effect is not monotonic.</small></li></ul></td></tr>
+<tr><td>RNA-binding protein Hfq</td><td>undergoes</td><td>Hfq condensation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Purified Hfq forms droplets at high protein concentration without polyP, while native gels show polyP-dependent HMW Hfq assemblies in starved WT lysates (Figure 4).</small></li></ul></td></tr>
+<tr><td>TmaR</td><td>enables under nitrogen starvation</td><td>Hfq condensation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figure 1L and S1H show loss of nitrogen-starvation Hfq foci in tmaR mutants, not rescued by Ppk10k. Figure 1M shows residual Hfq foci in tmaR mutants under strong osmotic stress.</small></li></ul></td></tr>
+<tr><td>Hfq condensation</td><td>forms</td><td>H-body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Endogenous Hfq imaging, focus dynamics, hexanediol sensitivity and FRAP support the cellular condensate interpretation (Figures 1-3); purified droplets are a reconstitution, not an assertion that every cellular constituent is reconstituted.</small></li></ul></td></tr>
+<tr><td>H-body</td><td>concentrates</td><td>Ribonuclease E</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figure 4G-I combines HMW-complex association with live-cell RNase E/Hfq colocalization. These experiments do not establish whether the sequestered enzyme is catalytically inactive.</small></li></ul></td></tr>
+<tr><td>H-body</td><td>sequesters</td><td>mRNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Figure 5E shows poly(A)-RNA/Hfq colocalization in a subset of WT cells. Low FISH signal-to-noise limits quantification; no universal transcript occupancy or assembly requirement is inferred.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Distinguish H-body from BR-body, one Hfq hexamer and unrelated polyphosphate stores. <small>Shared RNA or RNase E membership does not establish identical condensate identity. GO:0140365 has a broad minimal-component definition but an exact BR-body synonym and Caulobacter RNase E-scaffold provenance; it does not specifically denote Hfq-organized H-bodies.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Keep direct localization evidence separate from candidate proteomic associations. <small>The native-gel screen can include polyP-binding proteins that do not interact with Hfq. The final paper reports mostly diffuse enolase fluorescence, unlike a stronger interpretation of the preprint.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Do not equate polyphosphate promotion with universal necessity or transcript preservation with proven RNase inhibition. <small>Residual Hfq foci persist without polyP during nitrogen starvation, whereas effects are stronger under 1.17 M NaCl. Knockouts affect multiple processes and cannot uniquely assign survival or transcript-stability changes to condensation.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Establish an exact source-neutral family grounding for the TmaR pole-localizer class. <small>Verified sequence-family membership alone does not show that the wider DUF496 or UPF0265 families are coextensive with the named TmaR functional class.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.3003775"><code>DOI:10.1371/journal.pbio.3003775</code></a> <small>Guan et al. 2026, peer-reviewed PLOS Biology article. Full Results, relevant Methods and Discussion read through the publisher and NCBI PMC BioC (PMC13193609); Figures 1, 4 and 5 visually inspected. Uses the final H-body terminology and revised results, not unqualified claims from the earlier HP-body preprint.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-03T13:17:51Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-03T13:19:26Z</code> codex · EXPANDED_RECORD — Added six source-bounded components, MG1655 example, RNA/protein sequestration function, seven-edge assembly graph, identity and evidence boundaries, and an explicit TmaR family-grounding follow-up.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/h_body.yaml"><code>data/structures/ribonucleoprotein/h_body.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+</body>
+</html>

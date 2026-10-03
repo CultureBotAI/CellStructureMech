@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/h_body.yaml
+  slug: h_body
+session:
+  id: 2026-10-03T132026Z-codex-9d4ef4
+  timestamp: '2026-10-03T13:20:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add evidence-backed H-body condensate record
+  details: 'Created cellstructuremech:h_body from the final peer-reviewed Guan et al. 2026
+    paper DOI:10.1371/journal.pbio.3003775 (PMID 42044170, PMC13193609). Read the published
+    Results, relevant Methods and Discussion; visually inspected Figures 1, 4 and 5. Hidden/ignored-inclusive
+    whole-repository name, old-name, source and core-family searches found no existing H-body
+    identity; related RNP-body and acidocalcisome records were inspected. Exact GO searches
+    for H-body, HP-body, Hfq and Hfq condensate returned zero matches. GO:0036464 is the broad
+    cytoplasmic RNP-granule parent, GO:0005737 the enclosing cytoplasm; GO:0140365 BR-body
+    is not asserted equivalent. Curated six constituents: Hfq (InterPro:IPR005001), polyphosphate
+    (CHEBI:16838), mRNA (SO:0000234), RNase E (InterPro:IPR028878), RhlB (InterPro:IPR023554),
+    and label-only TmaR. Authorities verified family types, chemical/RNA labels and NCBITaxon:511145
+    MG1655. TmaR mappings to DUF496/UPF0265 were examined but no exact functional-family scope
+    established; one OPEN grounding follow-up remains. PolyP is DISPENSABLE and TmaR CONDITIONAL,
+    not universally essential. Seven cited assembly edges and a sequestration function distinguish
+    cellular perturbations from purified reconstitution and omit unproven RNase inactivity
+    or condensate-specific survival causation. Enolase, Ppk and the full gel-screen proteome
+    are not automatically promoted to constituents. Record is model-written PROPOSED, with
+    guarded validated mutations and no verbatim snippets. Derived artifacts and validation
+    are performed after this creation event and documented in the later PR review.'
