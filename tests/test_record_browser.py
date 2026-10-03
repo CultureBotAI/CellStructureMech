@@ -39,8 +39,8 @@ def test_catalogue_has_escaped_definitions_and_progressive_controls(template):
     }
     context = dict(
         root="../",
-        records=[record],
-        traits=[record],
+        records=[record, dict(record, kind=None)],
+        traits=[record, dict(record, kind=None)],
         category={"name": "TEST", "blurb": "Example"},
         category_counts={"TEST": 1},
         embedding_per_category={},
