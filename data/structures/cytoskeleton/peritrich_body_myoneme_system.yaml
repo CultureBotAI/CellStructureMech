@@ -21,6 +21,12 @@ curation_history:
     separate live/extracted calcium responses, evidence limitations and verified CIL
     preview.
   llm_assisted: true
+- timestamp: '2026-10-03T23:47:03Z'
+  curator: codex
+  action: CLARIFIED_ASSAY_SCOPE
+  changes: 'Qualified the Konior study''s light-microscopy statement and distinguished
+    the separate CIL immunogold TEM dataset after self-review issue #2004.'
+  llm_assisted: true
 parent_structures:
 - GO:0005622
 part_of:
@@ -166,12 +172,17 @@ discussions:
   status: RESOLVED
   prompt: Keep body localization distinct from stalk immunogold measurements.
   rationale: Different compartments and antibodies cannot supply interchangeable measurements.
-  notes: 1F5 recognizes two Western bands, N-termVcCentrin4 one. Body-network labeling
-    is light microscopy; the published compartment percentages concern stalk spasmonemes,
-    not this body network. No antibody-derived native copy number is asserted.
+  notes: In Konior et al. (2009), 1F5 recognizes two Western bands and N-termVcCentrin4
+    one. That study's body-network labeling is light microscopy; its compartment percentages
+    concern stalk spasmonemes, not this body network. CIL:39513 separately provides
+    body-myoneme immunogold TEM. No antibody-derived native copy number is asserted.
   evidence:
   - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
     notes: Figures 2-3 versus 4-8.
+  - reference: DOI:10.7295/W9CIL39513
+    notes: Separate body-myoneme TEM dataset, not the Konior study.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2004
+    notes: Post-opening self-review clarified the study-specific microscopy boundary.
   posed_by: codex
   posed_date: '2026-10-03'
   resolved_date: '2026-10-03'
