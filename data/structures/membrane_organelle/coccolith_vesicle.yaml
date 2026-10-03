@@ -1,0 +1,177 @@
+identifier: cellstructuremech:coccolith_vesicle
+label: coccolith vesicle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A membrane-bounded intracellular compartment of coccolithophores that
+  encloses a developing calcite coccolith. Its bounding membrane surrounds the site
+  of coccolith mineralization and can change shape as the crystals grow.
+definition_source: DOI:10.1021/jacs.6c02151
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T17:53:43Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T17:54:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added evidence-backed morphology, two verified species examples, membrane
+    constituent and calcification-site function; documented compartment, protein and
+    causal boundaries; added inspected CC BY 4.0 Figure 2 with verified ALI licence
+    and checksums.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+components:
+- component_id: bounding_membrane
+  label: membrane
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0016020
+  essentiality: UNKNOWN
+  role: Bounds the vesicle lumen around the developing coccolith.
+  evidence:
+  - reference: DOI:10.1021/jacs.6c02151
+    notes: Figures 2 and 3 resolve the membrane around intracellular coccoliths; the
+      molecular inventory and assembly essentiality are not established.
+canonical_examples:
+- taxon_id: NCBITaxon:127549
+  taxon_label: Calcidiscus leptoporus
+  reference: DOI:10.1021/jacs.6c02151
+  note: Strain RCC1130. Supplementary Methods identify the culture; cryo-SEM, cryo-FIB-SEM
+    and cryo-electron tomography show the vesicle and its relationship to developing
+    coccolith crystals. External coccoliths were removed before plunge freezing for
+    FIB imaging; Figure 2B instead uses high-pressure freezing and freeze fracture.
+- taxon_id: NCBITaxon:2903
+  taxon_label: Emiliania huxleyi
+  reference: DOI:10.1038/ncomms11228
+  note: Strain AWI1516. Cryo-FIB-SEM resolves intracellular coccoliths in the coccolith-vesicle/reticular-body
+    system separately from a calcium-rich storage compartment. The label follows the
+    verified NCBI taxon, which retains Gephyrocapsa huxleyi as a synonym.
+functions:
+- function_id: intracellular_coccolith_formation
+  label: intracellular coccolith formation
+  description: Provides the membrane-bounded environment in which coccolith calcite
+    crystals develop. This site-of-formation claim does not specify the molecular
+    mechanism that sets crystal shape.
+  evidence:
+  - reference: DOI:10.1021/jacs.6c02151
+    notes: Results and Figures 2-3 image membrane-enclosed coccoliths at different
+      developmental stages in Calcidiscus leptoporus.
+  - reference: DOI:10.1038/ncomms11228
+    notes: Figures 3-4 distinguish the calcite-forming compartment from the separate
+      calcium-rich storage compartment in Emiliania huxleyi.
+evidence:
+- reference: DOI:10.1021/jacs.6c02151
+  notes: Avrahami et al. (2026), Journal of the American Chemical Society. Primary
+    Results, Discussion, Conclusions, figure captions and supplementary culture/imaging
+    Methods read. Membrane-crystal proximity varies with position and stage; mechanistic
+    compartmentalization remains an interpretation of structural and elemental observations.
+- reference: DOI:10.1038/ncomms11228
+  notes: Sviben et al. (2016), Nature Communications. Primary microscopy Results,
+    Discussion and culture Methods read. The calcium/phosphorus-rich storage compartment
+    is distinct from the coccolith-vesicle/reticular-body system; apposition does
+    not establish continuity or an identified transfer mechanism.
+- reference: GO:0043231
+  notes: Verified broad intracellular membrane-bounded organelle parent, not an exact
+    coccolith-vesicle identity.
+discussions:
+- discussion_id: identity_and_compartment_boundaries
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the coccolith-forming vesicle distinct from its mineral product and
+    neighboring calcium store.
+  rationale: Similarity in calcium content or close membrane apposition does not make
+    these entities equivalent.
+  notes: Hidden/ignored-inclusive repository searches found no duplicate label, alias
+    or primary citation. QuickGO coccolith and coccolithogenesis searches returned
+    zero hits; all 481 results of the broader coccolith-vesicle query were inspected
+    without an exact label/definition match. GO:0043231 supplies a broad parent without
+    imposing a spherical geometry. Neither a coccolith nor the extracellular coccosphere
+    is a synonym for the vesicle. The reticular body is not asserted as an exact synonym.
+    Golgi derivation does not by itself establish persistent Golgi parthood. The calcium/phosphorus
+    storage compartment is not imported into this record.
+  evidence:
+  - reference: DOI:10.1021/jacs.6c02151
+    notes: Introduction and Results distinguish mineral, surrounding membrane and
+      extracellular coccoliths.
+  - reference: DOI:10.1038/ncomms11228
+    notes: Figures 3 and 6 distinguish storage and calcification compartments.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: molecular_component_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not assign unidentified luminal particles to a full ATPase complex or
+    import cargo scaffolds as vesicle-building proteins.
+  rationale: Ultrastructural resemblance is insufficient to choose a protein family
+    or infer transport activity.
+  notes: The 2026 Figure 4 average of 716 membrane-associated particles is approximately
+    half the height of the comparison ATPase and challenges a full-ATPase assignment.
+    The particles are observed, but their identities and functions remain unresolved.
+    No ATPase, ion transporter, cytoskeletal protein or guessed accession is asserted
+    as a constituent. The organic base plate and calcite are treated here as the developing
+    coccolith cargo rather than verified molecular building blocks of the vesicle
+    boundary. Lack of detected cytoskeletal contact is not evidence of biological
+    absence.
+  evidence:
+  - reference: DOI:10.1021/jacs.6c02151
+    notes: Results and Figure 4 explicitly discuss limited structural resolution and
+      uncertain particle identity.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: morphogenesis_and_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve molecular transport, membrane shaping, developmental dynamics and
+    occurrence across additional species and life-cycle phases.
+  rationale: Near-native snapshots and elemental maps establish morphology but do
+    not independently prove a general causal mechanism.
+  notes: Membrane-crystal proximity bands in Calcidiscus are not asserted as sealed
+    suborganelles or a universal continuous physical mold. Proposed chemical subcompartments
+    and local growth inhibition remain hypotheses; no causal graph or universal distance,
+    concentration, stoichiometry or prevalence is asserted. The later Calcidiscus
+    study detects luminal calcium, so the earlier Emiliania nondetection is not generalized
+    as absence. Exact protein composition and how these observations extend to other
+    coccolith types require further evidence.
+  evidence:
+  - reference: DOI:10.1021/jacs.6c02151
+    notes: Discussion and Conclusions retain open questions about solutes, transporters,
+      membrane proximity and organic macromolecules.
+  - reference: DOI:10.1038/ncomms11228
+    notes: Discussion proposes calcium-transfer routes without identifying the relevant
+      transport machinery.
+  posed_by: codex
+  posed_date: '2026-10-03'
+images:
+- image_id: pmc_pmc13067266_fig2
+  file: pmc13067266_fig2.jpg
+  file_sha256: f41e31add721c5f01869b2ce9ebe38b8aa7add53acb9a6445f6d2335858d2020
+  source: PMC
+  source_accession: PMC13067266.1 fig2
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13067266/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13067266.1/ja6c02151_0002.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Emanuel M. Avrahami, Dmitry Karpov, Lior Aram, Nadav Elad, Razi Safadi,
+    Irit Rosenhek-Goldian, Xiao-Meng Sui, Diede de Haan, Neta Varsano, Sidney R. Cohen,
+    et al.; CC BY 4.0, via PubMed Central
+  modality: SEM
+  caption: 'Calcidiscus leptoporus, Figure 2. A: schematic cell organization, not
+    to scale. B: cryo-SEM of a cell containing an intracellular coccolith. C-D: cryo-FIB-SEM
+    sections, with the vesicle membrane highlighted in white. E: five reconstructed
+    coccolith stages, showing the enclosing membrane on each right half. Arrows distinguish
+    close and more variable membrane-crystal spacing; the panels are not a time-lapse
+    of one cell.'
+  taxon_id: NCBITaxon:127549
+  taxon_label: Calcidiscus leptoporus
+  reference: DOI:10.1021/jacs.6c02151
+  retrieved_on: '2026-10-03'
+  notes: Unmodified, visually inspected multi-panel Figure 2. Exact CC BY 4.0 URL
+    read from the JATS ALI license_ref element and checked against PMC metadata license_code
+    CC BY; media MD5 and local SHA-256 verified. Source Methods identify RCC1130.
+    The SEM modality includes cryogenic preparations and reconstructed volume renderings,
+    not cryo-electron tomography in this figure.

@@ -1,0 +1,50 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/coccolith_vesicle.yaml
+  slug: coccolith_vesicle
+session:
+  id: 2026-10-03T175535Z-codex-828d08
+  timestamp: '2026-10-03T17:55:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - discussions
+  - images
+  summary: Add evidence-backed coccolith vesicle record
+  details: 'Added cellstructuremech:coccolith_vesicle after a whole-repository hidden/ignored-inclusive
+    search for coccolith, coccosphere, calcification-vesicle aliases, pentalith and primary
+    DOI/PMID identifiers found no matches. QuickGO coccolith and coccolithogenesis searches
+    returned zero; all 481 hits in the broader coccolith-vesicle query were inspected without
+    an exact label/definition match. Verified GO:0043231 and GO:0016020, plus ENA/NCBI taxa
+    127549 Calcidiscus leptoporus and 2903 Emiliania huxleyi. Read Avrahami 2026 JACS Results,
+    Discussion, Conclusions, figure captions and supplementary Methods (RCC1130; microscopy
+    preparation differs by method), and Sviben 2016 Nature Communications Results, Discussion
+    and culture Methods (AWI1516). Asserted the membrane-bounded calcification compartment,
+    observed membrane, two canonical species examples and site-of-coccolith-formation function.
+    Kept the neighboring Ca-P storage compartment, mineral cargo and extracellular coccosphere
+    distinct. Did not infer a full ATPase from the unidentified luminal particles, transporter
+    identities, sealed suborganelles, a universal physical mold, broad prevalence or generic
+    dimensions. No causal graph is warranted by these observations alone. Imported visually
+    inspected Figure 2 from current non-retracted PMC13067266.1: metadata CC BY agrees with
+    JATS ALI license_ref https://creativecommons.org/licenses/by/4.0/ and explicit CC-BY 4.0
+    text. The general importer expects an xlink URL and rejected this ALI form; a one-use
+    guarded mutator verified it explicitly without modifying the shared importer. Image MD5
+    e5d90b790d65c13d85c6ec7a34b37ae4, SHA256 f41e31add721c5f01869b2ce9ebe38b8aa7add53acb9a6445f6d2335858d2020,
+    109794 bytes. The figure includes schematic, cryo-SEM, cryo-FIB-SEM and reconstruction
+    panels, not cryo-ET; source attribution and culture identity retained. Record written
+    through validated image/record writer, with llm_assisted curation history; one-use mutator
+    removed. Status remains PROPOSED. Regenerated-artifact and full validation gates will
+    follow; a separate post-opening adversarial review and PR-linked history will precede
+    merge.'
