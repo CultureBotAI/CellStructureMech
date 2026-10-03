@@ -1,0 +1,51 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/nitroplast.yaml
+  slug: nitroplast
+session:
+  id: 2026-10-03T161951Z-codex-f5130f
+  timestamp: '2026-10-03T16:19:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1990
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - definition
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - discussions
+  - images
+  - derived_artifacts
+  summary: Adversarial review of nitroplast PR 1990 finds no actionable defect
+  details: 'Separate post-opening adversarial pass over PR #1990 scientific head 4fc59ae0b70bfe6521cf3f344d5cbd2a21b1853c.
+    Re-read committed YAML and creation history, checked the GitHub PR head and complete 13-file
+    diff inventory, and inspected generated page/catalogue changes. Challenged nitroplast
+    versus diazoplast identity, whole-taxon conflation, strict host attribution, culture loss
+    versus wild prevalence, source-neutral constituent classes, unknown assembly essentiality,
+    protein enrichment versus demonstrated individual import, untested causal mechanisms,
+    preprint status, and image rights/panel attribution. Hidden/ignored-inclusive corpus search
+    found no competing record; nitroplast and unhyphenated UCYN QuickGO searches return zero.
+    The hyphenated UCYN-A search splits into unrelated A terms and was not treated as exact
+    identity evidence. NIES-4399 official collection result confirms FR-21 and Coale DOI/PMID;
+    its older broad synonym is not imported over Hagino 2026 revision. Existing 837 embedding
+    entries compare byte-for-byte as parsed objects; only the nitroplast entry was added.
+    No manual generated-page edits, unrelated changes or hosted restricted images. No actionable
+    findings, therefore no defect issue or corrective mutation. Research gaps remain explicit,
+    not blockers invented for this review. Local record LinkML and strict gates passed; full
+    QC passed with 579 tests, 3 skips, 2 dependency warnings, 838 strict-valid structure records,
+    1501 valid histories and current generated site. Network gates passed: 31/31 snippets,
+    10/10 trait links, identifier liveness OK 3538 with 163 deliberately skipped, and id-label
+    correspondence 3433 canonical/48 synonym/8 exceptions with 424 no-adapter skips. Diff
+    whitespace checks passed. Final-head and exact merge-queue SHA CI must still pass before
+    merging.'
