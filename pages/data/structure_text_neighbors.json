@@ -6822,9 +6822,9 @@
           "cosine_similarity": 0.67634006
         },
         {
-          "identifier": "GO:0005840",
-          "label": "ribosome",
-          "cosine_similarity": 0.66379698
+          "identifier": "cellstructuremech:h_body",
+          "label": "H-body",
+          "cosine_similarity": 0.67033651
         }
       ]
     },
@@ -22453,6 +22453,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:h_body",
+      "label": "H-body",
+      "neighbors": [
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.73295541
+        },
+        {
+          "identifier": "GO:0140365",
+          "label": "RNP body",
+          "cosine_similarity": 0.72512989
+        },
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.67694471
+        },
+        {
+          "identifier": "GO:0048500",
+          "label": "signal recognition particle",
+          "cosine_similarity": 0.67323723
+        },
+        {
+          "identifier": "cellstructuremech:bacterial_aggresome",
+          "label": "bacterial aggresome",
+          "cosine_similarity": 0.67033651
+        }
+      ]
+    },
+    {
       "identifier": "GO:0035363",
       "label": "histone locus body",
       "neighbors": [
@@ -22839,6 +22870,11 @@
           "cosine_similarity": 0.73914981
         },
         {
+          "identifier": "cellstructuremech:h_body",
+          "label": "H-body",
+          "cosine_similarity": 0.73295541
+        },
+        {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.72539438
@@ -22847,11 +22883,6 @@
           "identifier": "GO:0010494",
           "label": "cytoplasmic stress granule",
           "cosine_similarity": 0.72205285
-        },
-        {
-          "identifier": "GO:0015030",
-          "label": "Cajal body",
-          "cosine_similarity": 0.71914305
         }
       ]
     },
@@ -23283,9 +23314,9 @@
           "cosine_similarity": 0.73720595
         },
         {
-          "identifier": "GO:0015935",
-          "label": "small ribosomal subunit",
-          "cosine_similarity": 0.72227983
+          "identifier": "cellstructuremech:h_body",
+          "label": "H-body",
+          "cosine_similarity": 0.72512989
         }
       ]
     },

@@ -1,0 +1,51 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/h_body.yaml
+  slug: h_body
+session:
+  id: 2026-10-03T133121Z-codex-dee9d3
+  timestamp: '2026-10-03T13:31:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1985
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - generated_artifacts
+  summary: Adversarial review of H-body PR found no actionable defects
+  details: 'Separate model-only adversarial pass after PR #1985 opened, reviewing scientific
+    commit ca199146060a79419a79d4bb9aed97b4de63c09d and its submitted 13-file scope. Re-read
+    the full submitted YAML, creation provenance and rendered content; checked actual PR metadata/file
+    list. Rechecked final primary-paper passages on TmaR dependence, concentration-dependent
+    Hfq/polyP reconstitution, RNase E association and proteomic localization controls. Challenged
+    possible BR-body duplication, a single-protein versus mesoscale-structure boundary, broader-family
+    substitution, strain-prevalence inference, universal polyP/RNA necessity, excess-polyP
+    behavior, TmaR co-condensation versus independently formed foci, gel-screen false positives,
+    RNase inactivity and survival causation. No actionable defect found, so no review defect
+    issue was manufactured. The existing OPEN TmaR functional-family discussion is an explicitly
+    permitted label-only grounding limit, not an invented exact mapping. Curated proteins
+    remain taxon-neutral; no K12 UniProt entry is mislabeled as MG1655. Eight graph nodes
+    and seven source-cited edges retain required component references and separate cellular
+    evidence from purified reconstitution. Checked all 833 prior embedding entries are unchanged;
+    one new entry and expected PCA/neighbor regeneration. Local gates passed: LinkML target,
+    strict target and all 834 records; 1493 valid history entries before this review; 573
+    tests passed and 3 skipped; current embeddings, README and generated site; 3515 live identifiers
+    and 158 explicitly skipped; 3423 canonical, 48 synonym, 8 accepted-exception and 415 no-adapter
+    labels; 31/31 snippets, 10/10 trait links, 18/18 vendored artifacts; focused scope assertions
+    and git diff check. Initial InterPro control request was unreachable; all resolver controls
+    subsequently passed with approved network access and longer timeout/retries. PR CI is
+    running; final-head and merge-queue checks must be verified before merge. This review
+    does not promote the model-drafted PROPOSED record to human REVIEWED.'
