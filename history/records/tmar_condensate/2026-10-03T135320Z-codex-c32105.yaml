@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/tmar_condensate.yaml
+  slug: tmar_condensate
+session:
+  id: 2026-10-03T135320Z-codex-c32105
+  timestamp: '2026-10-03T13:53:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add evidence-backed TmaR polar condensate record
+  details: 'Created cellstructuremech:tmar_condensate as PROPOSED through new_record.py and
+    a guarded safe_load/assert/event/validated-writer mutator. Hidden/ignored-inclusive identity,
+    synonym, component and citation searches found only H-body mentions, not an existing condensate
+    identity; exact GO searches returned no matching structure. Sources added: DOI:10.1016/j.celrep.2025.115436
+    (PMID 40100851, PMC11937232; full Results, relevant Methods, resource table, limitations
+    and Figures 1/3 examined), DOI:10.1016/j.celrep.2023.113393 (PMID 37934665; verified final
+    abstract only, failed publisher full-text routes), DOI:10.1371/journal.pbio.3003775 (H-body
+    boundary). Groundings verified at authorities: NCBIfam:NF040881 equivalog PTS system regulator
+    TmaR via public NCBI hmm_info API and reviewed P0A8M6 mapping; InterPro:IPR024692 family
+    and reviewed P08839 mapping; SO:0000356 RNA; GO:0036464 parent; GO:0005737 parthood; NCBITaxon:511145
+    MG1655. P0A8M6 and P08839 remain verification leads, not strain-specific protein examples.
+    TmaR ESSENTIAL, EI DISPENSABLE, RNA UNKNOWN. Seven graph nodes and seven cited edges;
+    two bounded functions. No broad prevalence, fixed stoichiometry, atomic docking claim,
+    direct glucose-import flux claim or Hfq/polyP basal membership. Flagged figure/text K95E
+    significance discrepancy and used unambiguous F8L/V11I evidence. One OPEN follow-up for
+    full-text RNA cargo/requirements. Primary images inspected with matching metadata MD5
+    but not hosted under CC BY-NC-ND. Validation and generated-artifact gates follow before
+    commit.'

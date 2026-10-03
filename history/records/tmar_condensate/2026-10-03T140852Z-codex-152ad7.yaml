@@ -1,0 +1,51 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/tmar_condensate.yaml
+  slug: tmar_condensate
+session:
+  id: 2026-10-03T140852Z-codex-152ad7
+  timestamp: '2026-10-03T14:08:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1987
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1986
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - generated_artifacts
+  summary: Adversarial review corrects EI-HPr evidence modality
+  details: 'Separate model-only adversarial pass after PR #1986 opened, reviewing scientific
+    commit 184041b28e513cfeec1205f147e6ffede05f797b and its actual 13-file PR scope. Re-read
+    submitted YAML, creation provenance and generated content; challenged H-body duplication,
+    scaffold/client essentiality, RNA abstract-only evidence, NCBIfam exact-equivalog grounding,
+    native versus yeast reconstitution, MG1655 versus K12 accession scope, modeled atomic
+    mechanisms, mutant significance and consumption-versus-import semantics. Found one P3
+    evidence-modality defect: native_constituent_scope called HPr a modeled EI partner, although
+    the primary paper discusses experimentally determined EI-HPr structures; the model concerns
+    exclusion by TmaR-bound EI. Filed issue #1987 and re-read PMC11937232 passages15,98,104.
+    Corrected through safe_load/assert/curation_event/validated writer, preserved original
+    discussion rationale and dates, appended the defect rationale and linked issue evidence.
+    HPr is still not promoted to a condensate constituent. No other actionable defect found
+    on the separate pass or correction check. Existing RNA full-text TODO remains an explicit
+    evidence limit. Original full QC passed573 tests with3 skips and2 dependency warnings;835
+    strict-valid records;1495 valid history entries; current generated site/README/embeddings;834
+    prior embedding entries unchanged;3519 live identifiers and160 explicitly skipped;3425
+    canonical48synonym8accepted-exception420no-adapter labels;31/31 snippets10/10trait links18/18vendored;
+    all resolver controls exercised across full run and successful targeted BFO retry. Follow-up
+    validation and full QC are required before committing this correction; final-head CI and
+    merge-queue checks are required before merge. Review is not independent human review and
+    does not promote PROPOSED status.'

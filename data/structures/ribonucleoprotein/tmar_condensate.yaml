@@ -1,0 +1,339 @@
+identifier: cellstructuremech:tmar_condensate
+label: TmaR condensate
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: A polar, membraneless ribonucleoprotein condensate organized by TmaR in
+  Escherichia coli that recruits phosphotransferase-system enzyme I and participates
+  in spatial regulation of sugar utilization.
+definition_source: DOI:10.1016/j.celrep.2025.115436
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T13:51:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T13:52:49Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added three grounded component classes, MG1655 example, two source-bounded
+    functions, seven-edge mechanism graph, native/H-body boundaries and an explicit
+    RNA-evidence follow-up; verified exact NCBIfam TmaR equivalog.
+  llm_assisted: true
+- timestamp: '2026-10-03T14:08:25Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_SCOPE
+  changes: 'Addressed review issue #1987 by separating established EI-HPr partnership
+    from modeled HPr exclusion by TmaR-bound EI; no component or mechanism expansion.'
+  llm_assisted: true
+synonyms:
+- synonym_text: TmaR-EI polar condensate
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.celrep.2025.115436
+parent_structures:
+- GO:0036464
+part_of:
+- GO:0005737
+components:
+- component_id: tmar
+  label: PTS system regulator TmaR
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: NCBIfam:NF040881
+  grounding_notes: NCBI's exact model NF040881.1 is an NCBIFAM equivalog named PTS
+    system regulator TmaR, with gene symbol tmaR and PMID 33376208. Verified through
+    the issuing authority's public hmm_info API and the reviewed UniProt P0A8M6 cross-reference.
+    This functional model is used instead of adopting the broader DUF496 label or
+    InterPro's unreviewed UPF0265 description.
+  gene_symbols:
+  - tmaR
+  essentiality: ESSENTIAL
+  role: Defining scaffold of the polar condensate and recruiter of enzyme I.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2025.115436
+    notes: Native-locus imaging and recruitment mutants separate TmaR clustering from
+      EI recruitment (Figures 1F-G and 2D).
+  - reference: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/NF040881/
+    notes: 'Live authority model: NF040881.1, source NCBIFAM, family_type equivalog,
+      product_name PTS system regulator TmaR; checked 2026-10-03.'
+- component_id: ei
+  label: Phosphotransferase system, enzyme I
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR024692
+  gene_symbols:
+  - ptsI
+  essentiality: DISPENSABLE
+  role: Recruited enzyme client. Native bacterial TmaR condensates can form without
+    EI; recruitment regulates sugar utilization.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2025.115436
+    notes: Results explicitly distinguish EI-independent bacterial TmaR condensation
+      from two-protein reconstitution in yeast. Figures 1-3 test client recruitment
+      and interaction.
+- component_id: rna
+  label: RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000356
+  essentiality: UNKNOWN
+  role: Heterotypic condensation partner and transcript cargo; no universal RNA-species
+    requirement or exhaustive cargo inventory is asserted.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2023.113393
+    notes: Readable final-paper abstract reports RNA-dependent heterotypic phase separation
+      in vivo and in vitro and protection of flagellar transcripts. Full Results were
+      not accessible through the attempted publisher routes; specific RNA identities
+      and quantitative requirements are not imported.
+canonical_examples:
+- taxon_id: NCBITaxon:511145
+  taxon_label: Escherichia coli str. K-12 substr. MG1655
+  reference: DOI:10.1016/j.celrep.2025.115436
+  note: Key resources and strain-construction Methods identify MG1655 derivatives
+    for native-locus TmaR-YFP/EI-mCherry imaging. Standard growth uses supplemented
+    M9-glucose at 30 C; individual biochemical and sugar-consumption assays also use
+    specified plasmids. This example is not a species-wide prevalence claim.
+functions:
+- function_id: ei_sequestration
+  label: Spatial regulation of sugar utilization
+  description: Polar retention of EI by TmaR limits EI-dependent sugar consumption
+    in the tested E. coli backgrounds.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2025.115436
+    notes: Figures 1-3 combine localization and interaction perturbations with consumption
+      assays. F8L and V11I recruitment-defective TmaR variants show elevated glucose
+      consumption. This is not a direct measurement of transport flux or the catalytic
+      state of each condensed EI molecule.
+- function_id: transcript_protection
+  label: Flagellar transcript protection
+  description: The primary report associates protection of flagella-related transcripts
+    in TmaR condensates with control of flagella production and motility.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2023.113393
+    notes: Supported at the level of the readable final-paper abstract. Transcript-specific
+      half-lives, exact cargo membership and downstream causal edges await full-text
+      assessment.
+evidence:
+- reference: DOI:10.1016/j.celrep.2025.115436
+  notes: Albocher-Kedem et al. 2025; PMC11937232. Full Results, relevant Methods,
+    limitations and MG1655 resource table read through PMC BioC and Europe PMC JATS.
+    Figures 1 and 3 visually inspected; downloaded bytes match PMC metadata MD5. CC
+    BY-NC-ND figures are not hosted.
+- reference: DOI:10.1016/j.celrep.2023.113393
+  notes: Szoke et al. 2023; PMID 37934665. Final-paper abstract verified at Europe
+    PMC and the publisher. Publisher full-text routes returned access errors; no full
+    Results reading or preprint substitution is claimed.
+- reference: DOI:10.1371/journal.pbio.3003775
+  notes: Guan et al. 2026; Figure 1L and corresponding Results independently show
+    TmaR foci without Hfq or polyP, supporting a boundary from the Hfq-organized H-body.
+causal_graphs:
+- graph_id: tmar_polar_ei_sequestration
+  title: TmaR condensation couples EI retention to sugar-use control
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  description: RNA-associated TmaR condensation supports polar EI retention and regulation
+    of sugar consumption.
+  scope_notes: RNA/assembly edges are limited to the 2023 primary abstract; EI interaction,
+    localization and functional perturbations use the fully read 2025 study. Native
+    bacterial behavior is not inferred from yeast alone. No atomic docking mechanism,
+    universal RNA essentiality or direct glucose-import measurement is asserted.
+  nodes:
+  - node_id: tmar
+    label: PTS system regulator TmaR
+    node_type: GENE_OR_PROTEIN
+    grounding: NCBIfam:NF040881
+    component_ref: tmar
+  - node_id: rna
+    label: RNA
+    node_type: RNA
+    grounding: SO:0000356
+    component_ref: rna
+  - node_id: condensation
+    label: TmaR condensation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: condensate
+    label: TmaR condensate
+    node_type: STRUCTURE
+  - node_id: ei
+    label: Phosphotransferase system, enzyme I
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR024692
+    component_ref: ei
+  - node_id: retention
+    label: Polar EI retention
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: sugar_use
+    label: EI-dependent sugar consumption
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: tmar
+    predicate: undergoes
+    object: condensation
+    description: TmaR assembles by phase separation.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2023.113393
+      notes: Final-paper abstract reports cellular and reconstituted phase separation;
+        no material-property numbers are imported.
+  - subject: rna
+    predicate: promotes
+    object: condensation
+    description: Heterotypic RNA interactions support TmaR condensation.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2023.113393
+      notes: The abstract identifies RNA as an in vivo and in vitro condensation partner,
+        without establishing every RNA species as necessary.
+  - subject: condensation
+    predicate: forms
+    object: condensate
+    description: TmaR phase separation produces a polar membraneless compartment.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2023.113393
+      notes: The final abstract connects TmaR condensation with its polar organization
+        and transcript-related function.
+  - subject: tmar
+    predicate: interacts with
+    object: ei
+    description: TmaR recognizes and recruits EI through protein interactions.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2025.115436
+      notes: Figures 1I and 3A-B, far-western controls and bacterial two-hybrid assays
+        support interaction. G266 effects differ between assays; overexpression can
+        compensate reduced interaction.
+  - subject: condensate
+    predicate: supports
+    object: retention
+    description: The assembled polar condensate provides the EI-retention compartment.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2025.115436
+      notes: Native chromosomal reporters colocalize; TmaR recruitment mutants retain
+        foci while EI becomes diffuse (Figures 1F-G and 2D). Some variants also alter
+        scaffold abundance.
+  - subject: ei
+    predicate: undergoes
+    object: retention
+    description: A cellular fraction of EI is retained at TmaR foci.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2025.115436
+      notes: EI localization shifts with TmaR abundance and EI/TmaR interaction mutations;
+        no fixed occupancy or stoichiometry is inferred.
+  - subject: retention
+    predicate: restrains
+    object: sugar_use
+    description: TmaR-mediated EI sequestration limits sugar consumption in the assayed
+      backgrounds.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2025.115436
+      notes: Figure 3D-E links recruitment-defective variants to altered sugar consumption.
+        The interpretation combines localization and functional perturbations; it
+        is not a purified condensate-specific enzyme assay.
+discussions:
+- discussion_id: identity_and_h_body_boundary
+  prompt: Distinguish the TmaR scaffolded condensate from a protein, one EI-TmaR complex
+    and the H-body.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: Shared polar location and stress-induced co-condensation do not imply
+    identical structure identity or permanent parthood.
+  notes: Minted after hidden/ignored-inclusive repository searches and exact GO searches
+    for TmaR, TmaR condensate, TmaR-EI condensate and enzyme I condensate. GO:0036464
+    is a broader parent, not identity. EI occupancy is variable, so the TmaR-EI name
+    is a related synonym. Hfq-dependent stress bodies remain separately curated; no
+    fixed is-a or part-of link between the two condensates is asserted.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2025.115436
+    notes: Native TmaR condensates persist without EI; the structure is not a stoichiometric
+      EI-TmaR heterocomplex.
+  - reference: DOI:10.1371/journal.pbio.3003775
+    notes: TmaR foci persist in hfq and ppk deletion backgrounds (Figure 1L).
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: specific_tmar_family_grounding
+  prompt: Resolve TmaR at its issuing family authority rather than substituting a
+    generic sequence family.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: InterPro's DUF496 and unreviewed UPF0265 descriptions alone do not establish
+    the intended functional class.
+  notes: The NCBI public model API identifies NF040881.1 as an NCBIFAM equivalog for
+    PTS system regulator TmaR; reviewed UniProt P0A8M6 independently links this model.
+    Accepted the exact NCBIfam grounding. This does not assert that every sequence-family
+    member forms a condensate in every taxon.
+  evidence:
+  - reference: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/NF040881/
+    notes: Checked accession, product name, family_type, source, tmaR symbol and PMID
+      33376208 on 2026-10-03.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: native_constituent_scope
+  prompt: Keep scaffold/client essentiality and native organism scope separate from
+    heterologous reconstitution.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: EI and TmaR require co-expression for the tested yeast condensates, unlike
+    native bacterial TmaR foci. Plasmid cross-species complementation is not endogenous
+    taxonomic prevalence. Post-PR review found that calling HPr merely a modeled EI
+    partner conflated established EI-HPr interaction with the proposed TmaR-dependent
+    exclusion mechanism.
+  notes: TmaR is the defining scaffold and EI a DISPENSABLE constituent. HPr is an
+    experimentally established EI phosphotransfer partner, but no HPr membership in
+    this condensate was demonstrated here. Exclusion of HPr by the proposed closed
+    EI-TmaR configuration remains a structural-model interpretation. Hfq/polyP stress
+    co-condensation is documented in the separate H-body record, not imported as constitutive
+    basal TmaR membership. Retained only MG1655 as canonical example; no prevalence
+    rows, yeast or Salmonella native-structure claims, fixed stoichiometry or strain-mismatched
+    protein examples.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2025.115436
+    notes: Results distinguish bacterial and yeast assembly, and Figure 5 uses plasmid
+      cross-species combinations.
+  - reference: DOI:10.1371/journal.pbio.3003775
+    notes: Figure 1L supports TmaR foci without Hfq/polyP, while stress conditions
+      permit co-condensation.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/1987
+    notes: 'Adversarial review correction: retain established EI-HPr interaction while
+      distinguishing modeled exclusion from demonstrated condensate composition.'
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: mechanistic_and_statistical_limits
+  prompt: Do not promote docking, consumption measurements or discordant significance
+    descriptions into stronger claims.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: The 2025 interface is a model with mutational support, not an experimentally
+    solved EI-TmaR complex. Figure 3E marks K95E, whereas the Results text singles
+    out A84G among patch-II variants.
+  notes: No atomic closed-conformation/HPr-exclusion edge is asserted. The record
+    cites the unambiguous F8L/V11I glucose-consumption result, without declaring all
+    other mutants significant or nonsignificant. GO:0046325 was checked but not assigned
+    because consumption is not a direct import-flux assay. Screen selection, protein-abundance
+    and tagging effects limit interpretation of individual mutants.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2025.115436
+    notes: Compared Figure 3E with its Results, and read the docking and screen limitations;
+      affinity, kinetics and native stoichiometry were not established.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: resolve_rna_cargo_and_requirements
+  prompt: Assess the full 2023 primary experiments before adding specific RNA cargo
+    or transcript-stability mechanisms.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The verified abstract supports RNA-assisted assembly and flagellar transcript
+    protection but not an exhaustive cargo list, quantitative half-lives or universal
+    necessity.
+  notes: Publisher full-text routes were attempted but inaccessible; RNA essentiality
+    remains UNKNOWN and no detailed motility/biofilm graph is asserted. The readable
+    2025 Introduction summarizes the earlier work, not an independent replication
+    of every RNA experiment.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2023.113393
+    notes: Readable final abstract only; no invented snippets or substitution of the
+      2022 preprint.
+  - reference: DOI:10.1016/j.celrep.2025.115436
+    notes: RNA/flagellar-transcript claims in the Introduction cite the earlier study.
+  posed_by: codex
+  posed_date: '2026-10-03'
