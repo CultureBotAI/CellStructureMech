@@ -1,0 +1,53 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/tubulin_spool.yaml
+  slug: tubulin_spool
+session:
+  id: 2026-10-03T193426Z-codex-48cd6b
+  timestamp: '2026-10-03T19:34:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - evidence
+  - datasets
+  - discussions
+  - images
+  summary: Add evidence-backed tubulin spool record
+  details: 'Added one PROPOSED tubulin-spool record from Mikus et al. 2025, DOI 10.1016/j.cell.2025.09.027,
+    PMID 41175866. Whole-repository hidden/ignored-inclusive searches found no matching identity,
+    aliases, DOI/PMID or preprint DOI before minting; exact QuickGO spool query returned zero.
+    Verified current GO:0005622 intracellular anatomical structure as a conservative parent
+    and GO:0015630 microtubule cytoskeleton for parthood. OTHER kind avoids claiming a resolved
+    single-filament lattice. Verified InterPro:IPR000217 Tubulin family at the issuing API
+    and NCBITaxon:241424 Takayama helix at NCBI/ENA. Tubulin-family immunolabeling is not
+    an exact subtype/ortholog inventory or essentiality test. Read relevant primary Results,
+    Discussion, Figures 2 and 6, key resources and full fixation/U-ExM/microscopy/image-analysis
+    Methods from the public article PDF. Author-linked Table S1 downloaded and read without
+    editing; SHA256 bfeb51750c59a50005f2cc7d7efe28582b164d938ca76f7c795f0b26113e61fe. List
+    of Species row46 confirms RCC10719; Dataset Annotation row1384 confirms P22-120, E7Ab,
+    interphase, one species in gel and spool-positive volume rcc10719_pfa_dna-tub-nhs_20230802_od_s00.
+    Rows1375-1376 explain combined rcc3511rcc10719 filenames as two-species gels, not equivalent
+    strains; no Biecheleriopsis spool claim. Inspected pinned MoBIE metadata at 2dc2f3dbae8fefe60cea3a2499a1a5f50fe4c98d.
+    Individual image annotations are not independent-cell counts or population prevalence.
+    Functions involving desmose, high-shear swimming, mechanical support and nuclear-envelope
+    dynamics remain hypotheses. Cortical centrin, contextual DNA and flagellar modification
+    panels are not promoted into spool constituents. No physical properties: the Figure2 legend
+    and Methods conflict on scale-bar expansion adjustment. Downloaded unmodified publisher
+    Figure2 (1902497 bytes, SHA256 e979bacf2fad45501744aa5dbc2fd75c0fc2ab2b5e6a6be32be77aad0b1f9046),
+    visually inspected D-E as Takayama spool panels, and verified CC BY4.0 from Crossref publisher-deposited
+    version-of-record metadata plus the article licence. Caption explicitly scopes other taxa/panels
+    and the scale discrepancy. Scaffolded through new_record.py, then used a guarded YAML
+    parse/assert/event/validated-writer mutator with llm_assisted true. Closed-schema validation
+    rejected an unsupported strain field before mutation; strain is correctly retained in
+    the canonical-example note. Temporary mutator removed after successful validated write.
+    Full gates and separate post-opening adversarial review follow.'
