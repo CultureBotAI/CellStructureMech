@@ -1,0 +1,119 @@
+identifier: GO:0120118
+label: flagella connector
+structure_category: APPENDAGE
+structure_kind: OTHER
+definition: A mobile transmembrane junction at the tip of the flagellum of some kinetoplastid
+  species linking the tip of a new growing flagellum to an older flagellum.
+definition_source: GO:0120118
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T03:49:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T03:51:37Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added FC synonymy and cell-junction parentage, Trypanosoma brucei taxonomic
+    scope, new-to-old flagellar-tip coupling functions, core literature evidence,
+    and open component-boundary discussions.
+  llm_assisted: true
+synonyms:
+- synonym_text: FC
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1371/journal.pntd.0004312
+parent_structures:
+- GO:0030054
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  presence: VARIABLE
+  note: The flagella connector is a division-stage junction in procyclic Trypanosoma
+    brucei that links the tip of the new flagellum to the old flagellum.
+  reference: DOI:10.1242/jcs.00995
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: African trypanosome model in which the flagella connector was defined as a
+    motile transmembrane junction and later resolved by electron and cryo-electron
+    tomography.
+  reference: DOI:10.1371/journal.pntd.0004312
+functions:
+- function_id: new_to_old_flagellum_linkage
+  label: new-to-old flagellum linkage
+  description: The FC couples the distal tip of the growing new flagellum to the flank
+    of the old flagellum during T. brucei flagellum biogenesis.
+  evidence:
+  - reference: DOI:10.1242/jcs.00995
+    notes: Briggs et al. 2004 characterized the T. brucei flagella connector as a
+      mobile transmembrane junction linking the new and old flagella.
+  - reference: DOI:10.1371/journal.pntd.0004312
+    notes: Hoog et al. 2016 resolved FC layers between the new and old flagella by
+      electron tomography and cryo-electron tomography.
+- function_id: flagella_connector_tip_motility
+  label: new-flagellum tip tracking
+  description: The FC remains associated with the tip of the assembling new flagellum
+    while moving along the old flagellum.
+  evidence:
+  - reference: DOI:10.1126/science.1063775
+    notes: Moreira-Leite et al. 2001 first described the motile junction that connects
+      the growing new flagellum to the old flagellum during trypanosome cell division.
+  - reference: DOI:10.1242/jcs.03203
+    notes: Davidge et al. 2006 used intraflagellar-transport mutants to dissect FC
+      movement from extension of the new flagellar axoneme.
+- function_id: distal_flagellar_tip_coupling
+  label: distal flagellar-tip coupling
+  description: FC-associated proteins couple the connector membrane junction to microtubules
+    at the distal tips of the assembling and mature trypanosome flagella.
+  evidence:
+  - reference: DOI:10.1073/pnas.1703553114
+    notes: Varga et al. 2017 identified FC constituents and assigned kinesin-family
+      proteins to the links between the FC membrane junction and microtubules at the
+      distal new- and old-flagellum tips.
+evidence:
+- reference: DOI:10.1126/science.1063775
+  notes: Moreira-Leite, Sherwin, Kohl and Gull 2001, A trypanosome structure involved
+    in transmitting cytoplasmic information during cell division, Science.
+- reference: DOI:10.1242/jcs.00995
+  notes: 'Briggs et al. 2004, The flagella connector of Trypanosoma brucei: an unusual
+    mobile transmembrane junction, Journal of Cell Science.'
+- reference: DOI:10.1242/jcs.03203
+  notes: Davidge et al. 2006, Trypanosome IFT mutants provide insight into the motor
+    location for mobility of the flagella connector and flagellar membrane formation,
+    Journal of Cell Science.
+- reference: DOI:10.1371/journal.pntd.0004312
+  notes: Hoog et al. 2016, 3D Architecture of the Trypanosoma brucei Flagella Connector,
+    a Mobile Transmembrane Junction, PLOS Neglected Tropical Diseases.
+- reference: DOI:10.1073/pnas.1703553114
+  notes: Varga, Moreira-Leite, Portman and Gull 2017, Protein diversity in discrete
+    structures at the distal tip of the trypanosome flagellum, Proceedings of the
+    National Academy of Sciences of the United States of America.
+discussions:
+- discussion_id: curate_flagella_connector_components
+  prompt: Resolve the complete set of T. brucei FC constituent proteins and their
+    exact source-neutral groundings.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Varga et al. 2017 identified seven flagella-connector constituents and
+    three axonemal-capping-structure constituents. This first record defers component
+    curation until the connector, axonemal cap and adjacent distal-tip boundaries
+    can be separated without absorbing neighboring structures.
+  evidence:
+  - reference: DOI:10.1073/pnas.1703553114
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: resolve_connector_motility_mechanism
+  prompt: Model the FC motor and old- versus new-flagellum attachment mechanisms once
+    the kinesin components have exact boundaries.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Davidge et al. 2006 showed that FC motility is separable from new-axoneme
+    extension, and Varga et al. 2017 assigned kinesin-family proteins to opposite
+    FC attachment sides. The motility graph should wait until those proteins are curated
+    as FC components or deliberately excluded.
+  evidence:
+  - reference: DOI:10.1242/jcs.03203
+  - reference: DOI:10.1073/pnas.1703553114
+  posed_by: codex
+  posed_date: '2026-10-03'
