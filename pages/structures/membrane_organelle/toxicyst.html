@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>toxicyst · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>toxicyst</h1>
+<p class="meta"><code>cellstructuremech:toxicyst</code> · MEMBRANE_ORGANELLE · MEMBRANE_BOUNDED_ORGANELLE · <span class="status">PROPOSED</span></p>
+<p class="definition">A ciliate offensive extrusome that stores toxic discharge material and ejects on prey contact to immobilize prey during raptorial feeding. <small>[<a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a>]</small></p>
+
+<h2>Components</h2>
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-toxicyst_membrane"><td>toxicyst membrane</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Membrane envelope that bounds the resting toxicyst and can fuse with the plasma membrane during toxicyst discharge.<ul class="evidence"><li><a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a> <small>Chen et al. 2024 reviewed toxicyst ultrastructure and discharge models involving the toxicyst membrane.</small></li></ul></td></tr>
+<tr id="components-toxic_discharge_material"><td>toxicyst toxic discharge material</td><td>SMALL_MOLECULE</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Toxic material released by the toxicyst discharge and implicated in chemical offense against prey ciliates.<ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12106"><code>DOI:10.1111/jeu.12106</code></a> <small>Buonanno et al. 2014 isolated toxicyst discharge from living Coleps hirtus and analyzed its free fatty acid-rich composition by liquid chromatography-electrospray mass spectrometry and gas chromatography-mass spectrometry.</small></li></ul></td></tr>
+</tbody></table>
+
+
+<h2>Taxonomic distribution</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_197905"><code>NCBITaxon:197905</code></a> Haptoria — <strong>COMMON</strong>: Raptorial haptorian ciliates carry oral toxicysts, and long type I toxicysts are described as consistently present across Haptoria. [<a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a>]</li><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_60000"><code>NCBITaxon:60000</code></a> Coleps hirtus — <strong>COMMON</strong>: Coleps hirtus cells carry toxicysts that cluster mainly in and around the oral aperture and assist carnivorous feeding. [<a href="https://doi.org/10.1111/jeu.12106"><code>DOI:10.1111/jeu.12106</code></a>]</li></ul>
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_60000"><code>NCBITaxon:60000</code></a> <em>Coleps hirtus</em> — Freshwater ciliate in which toxicyst discharge material was isolated from living cells and tested for cytotoxic effects against other ciliates. [<a href="https://doi.org/10.1111/jeu.12106"><code>DOI:10.1111/jeu.12106</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>prey immobilization</strong> — Toxicysts rapidly discharge during ciliate predation and release toxic material that helps immobilize prey.<ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12106"><code>DOI:10.1111/jeu.12106</code></a> <small>Buonanno et al. 2014 tested the cytotoxic effects of Coleps hirtus toxicyst discharge and connected it to effective predatory behavior.</small></li><li><a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a> <small>Chen et al. 2024 observed raptorial haptorian ciliates using toxicysts near the oral apparatus during predation.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-toxicyst_predatory_discharge">Toxicysts discharge toxic material during predation <small>(FUNCTION)</small></h3>
+<p>A ciliate toxicyst is enclosed by a membrane, discharges during predatory prey contact, and releases toxic cargo that supports prey immobilization.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>toxicyst membrane</td><td>bounds</td><td>toxicyst</td><td><ul class="evidence"><li><a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a> <small>Chen et al. 2024 describe discharge models in which the toxicyst membrane releases stored toxic material.</small></li></ul></td></tr>
+<tr><td>prey contact</td><td>triggers</td><td>toxicyst discharge</td><td><ul class="evidence"><li><a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a> <small>Chen et al. 2024 described toxicysts as offensive extrusomes that rapidly discharge upon prey contact.</small></li></ul></td></tr>
+<tr><td>toxicyst discharge</td><td>releases</td><td>toxicyst toxic discharge material</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12106"><code>DOI:10.1111/jeu.12106</code></a> <small>Buonanno et al. 2014 isolated and chemically analyzed toxicyst discharge from living Coleps hirtus cells.</small></li></ul></td></tr>
+<tr><td>toxicyst toxic discharge material</td><td>supports</td><td>prey immobilization</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12106"><code>DOI:10.1111/jeu.12106</code></a> <small>Buonanno et al. 2014 found Coleps hirtus toxicyst discharge was cytotoxic to tested ciliates and essential for effective predation.</small></li></ul></td></tr>
+</tbody></table>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact small-molecule and biosynthetic boundaries for toxicyst toxic discharge material. <small>Coleps discharge contains several free fatty acids and a minor amount of phytanic acid, while haptorian genomes are enriched for candidate toxin-related PKS and L-amino acid oxidase genes; this first record therefore leaves the toxic material aggregated until exact secreted molecules are localized to toxicysts.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Do not curate haptorian PKS or L-amino acid oxidase expansions as mature toxicyst components without direct toxicyst localization. <small>Chen et al. 2024 identified PKS and L-amino acid oxidase genes as duplicated candidate toxin genes in Haptoria, but those genes were not resolved as mature structural cargo or membrane constituents of the toxicyst organelle.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a> <small>Chen et al. 2024, Genomic insights into the cellular specialization of predation in raptorial protists, BMC Biology.</small></li><li><a href="https://doi.org/10.1111/jeu.12106"><code>DOI:10.1111/jeu.12106</code></a> <small>Buonanno et al. 2014, Chemical offense by means of toxicysts in the freshwater ciliate, Coleps hirtus, Journal of Eukaryotic Microbiology.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-03T07:46:18Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-03T07:47:23Z</code> codex · EXPANDED_RECORD — Added toxicyst membrane and toxic discharge-material components, Haptoria and Coleps hirtus taxonomic scope, Coleps hirtus as a canonical example, predatory discharge evidence, a nonmechanistic toxicyst discharge graph, and curation discussions for unresolved toxin chemistry and candidate PKS/LAAO boundary handling.</li><li><code>2026-10-03T08:04:23Z</code> codex · ADDRESS_REVIEW — Resolved PR #1973 review issue #1974 by removing an uncoupled Didinium nasutum Ca2+-triggered discharge citation from the record-level evidence list.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/toxicyst.yaml"><code>data/structures/membrane_organelle/toxicyst.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+</body>
+</html>

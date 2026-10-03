@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/toxicyst.yaml
+  slug: toxicyst
+session:
+  id: 2026-10-03T080612Z-codex-f6a2c9
+  timestamp: '2026-10-03T08:06:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/1974
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1973
+events:
+- type: EDIT
+  outcome: changed
+  summary: Address toxicyst PR review
+  details: 'Resolved PR #1973 review issue #1974 by removing the uncoupled Didinium nasutum
+    Ca2+-triggered discharge paper from the toxicyst record-level evidence list.'

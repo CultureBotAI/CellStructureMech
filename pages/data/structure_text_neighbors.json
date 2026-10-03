@@ -13184,6 +13184,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:toxicyst",
+      "label": "toxicyst",
+      "neighbors": [
+        {
+          "identifier": "GO:0060170",
+          "label": "ciliary membrane",
+          "cosine_similarity": 0.73424535
+        },
+        {
+          "identifier": "GO:0033111",
+          "label": "attachment organelle membrane",
+          "cosine_similarity": 0.72911716
+        },
+        {
+          "identifier": "GO:0042170",
+          "label": "plastid membrane",
+          "cosine_similarity": 0.72847739
+        },
+        {
+          "identifier": "GO:0009536",
+          "label": "plastid",
+          "cosine_similarity": 0.7260916
+        },
+        {
+          "identifier": "GO:0031969",
+          "label": "chloroplast membrane",
+          "cosine_similarity": 0.71108005
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005802",
       "label": "trans-Golgi network",
       "neighbors": [
