@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/glideosome.yaml
+  slug: glideosome
+session:
+  id: 2026-10-03T005843Z-codex-89fd38
+  timestamp: '2026-10-03T00:58:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add glideosome record
+  details: Created the GO:0160055 glideosome structure record with protein-containing-complex
+    parentage, an actin-myosin glideosome synonym, MyoA/MLC1/GAP45/GAP50 core components,
+    exact Pfam grounding for GAP45, Apicomplexa distribution, Toxoplasma gondii canonical
+    evidence, gliding-motility and host-cell-invasion functions, and a GAP50-anchored function
+    graph. Left MyoA, MLC1, GAP50, GAP40 and GAPM family grounding reconciliation as an open
+    TODO rather than assigning broad myosin, EF-hand or metallophosphatase groundings.

@@ -1,0 +1,282 @@
+identifier: GO:0160055
+label: glideosome
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex composed of at least GAP45 (gliding-associated protein),
+  GAP50 and myosin heavy and light chains. Anchored via GAP50 to the inner membrane
+  complex of motile and invasive forms of apicomplexan parasites and regulates parasite
+  gliding motility and invasion of host cells.
+definition_source: GO:0160055
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T00:55:45Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T00:57:51Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added protein-containing-complex parentage, actin-myosin synonymy, MyoA/MLC1/GAP45/GAP50
+    core components with exact GAP45 Pfam grounding, Apicomplexa and Toxoplasma scope,
+    gliding-motility and host-cell-invasion functions, a GAP50-anchored glideosome
+    function graph, and a component grounding TODO.
+  llm_assisted: true
+synonyms:
+- synonym_text: actin-myosin glideosome
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1046/j.1365-2958.2002.03056.x
+parent_structures:
+- GO:0032991
+components:
+- component_id: myoa_class_xiv_myosin_heavy_chain
+  label: MyoA class XIV myosin heavy chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MyoA
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Apicomplexan MyoA is the glideosome myosin heavy-chain motor; available
+    family groundings for reviewed Plasmodium MyoA entries cover broad myosin motor
+    domains rather than the source-neutral glideosome MyoA family.
+  role: Class XIV myosin heavy-chain motor that assembles with light-chain and GAP
+    proteins in the apicomplexan glideosome.
+  evidence:
+  - reference: GO:0160055
+    notes: Gene Ontology defines the glideosome as containing myosin heavy chains.
+  - reference: DOI:10.1083/jcb.200311137
+    notes: Gaskins et al. 2004 identified TgMyoA in a Toxoplasma glideosome complex.
+- component_id: mlc1_myosin_light_chain
+  label: MLC1 myosin light chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MLC1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Apicomplexan glideosome light chains include TgMLC1 and Plasmodium
+    MTIP-like proteins, but no exact source-neutral CURIE for this functional light-chain
+    cohort was verified in this pass.
+  role: Myosin light-chain partner of the MyoA heavy chain in the glideosome motor.
+  evidence:
+  - reference: GO:0160055
+    notes: Gene Ontology defines the glideosome as containing myosin light chains.
+  - reference: DOI:10.1083/jcb.200311137
+    notes: Gaskins et al. 2004 identified TgMLC1 in the Toxoplasma glideosome complex.
+- component_id: gap45_glideosome_associated_protein
+  label: Glideosome-associated protein 45
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: Pfam:PF29346
+  gene_symbols:
+  - GAP45
+  essentiality: UNKNOWN
+  role: Glideosome-associated protein constituent of the apicomplexan motor complex.
+  evidence:
+  - reference: GO:0160055
+    notes: Gene Ontology defines the glideosome as containing GAP45.
+  - reference: Pfam:PF29346
+    notes: Pfam PF29346 is the Glideosome-associated protein 45 family, integrated
+      by InterPro as IPR063210.
+  - reference: DOI:10.1083/jcb.200311137
+    notes: Gaskins et al. 2004 identified TgGAP45 in the Toxoplasma glideosome complex.
+- component_id: gap50_membrane_receptor
+  label: GAP50 membrane receptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - GAP50
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GAP50 maps to broad metallophosphatase or purple-acid-phosphatase
+    entries in UniProt cross-references; those domains are not exact for the apicomplexan
+    glideosome GAP50 membrane-receptor family.
+  role: Integral membrane receptor that anchors the MyoA/light-chain/GAP45 motor complex
+    to the inner membrane complex.
+  evidence:
+  - reference: GO:0160055
+    notes: Gene Ontology defines the glideosome as containing GAP50.
+  - reference: DOI:10.1083/jcb.200311137
+    notes: Gaskins et al. 2004 identified TgGAP50 and reported it as the integral
+      membrane anchor for the Toxoplasma glideosome.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5794
+  taxon_label: Apicomplexa
+  presence: COMMON
+  note: The glideosome is an apicomplexan myosin-based motor of motile and invasive
+    parasite stages, with components studied in Toxoplasma and Plasmodium.
+  reference: DOI:10.1016/j.mib.2009.06.008
+canonical_examples:
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  note: Apicomplexan model in which the TgMyoA/TgMLC1/TgGAP45/TgGAP50 glideosome complex
+    was identified and localized to the inner membrane complex.
+  reference: DOI:10.1083/jcb.200311137
+functions:
+- function_id: cell_surface_adhesin_mediated_gliding_motility
+  label: cell surface adhesin-mediated gliding motility
+  grounding: GO:0071980
+  description: The inner-membrane-complex-anchored glideosome drives the actomyosin-dependent
+    gliding motility of apicomplexan parasites.
+  evidence:
+  - reference: GO:0071980
+    notes: Gene Ontology defines cell surface adhesin-mediated gliding motility as
+      gliding driven by adhesins propelled by membrane motor proteins.
+  - reference: DOI:10.1016/j.mib.2009.06.008
+    notes: Daher and Soldati-Favre 2009 review the glideosome as the myosin-based
+      motor for apicomplexan parasite motility.
+- function_id: host_cell_invasion
+  label: host-cell invasion
+  description: The glideosome supports active entry of motile apicomplexan stages
+    into host cells.
+  evidence:
+  - reference: GO:0160055
+    notes: Gene Ontology defines the glideosome as regulating parasite gliding motility
+      and invasion of host cells.
+  - reference: DOI:10.1046/j.1365-2958.2002.03056.x
+    notes: Opitz and Soldati 2002 review the early glideosome model for Toxoplasma
+      gliding and host-cell invasion.
+evidence:
+- reference: GO:0160055
+  notes: Gene Ontology cellular-component term for the glideosome protein complex,
+    with GAP45, GAP50, myosin heavy-chain and myosin light-chain constituents.
+- reference: GO:0032991
+  notes: QuickGO reports GO:0160055 glideosome as an is-a child of GO:0032991 protein-containing
+    complex.
+- reference: GO:0071980
+  notes: Gene Ontology biological-process term for gliding motility driven by surface
+    adhesins and membrane motor proteins.
+- reference: Pfam:PF29346
+  notes: Pfam family entry for Glideosome-associated protein 45, integrated into InterPro
+    IPR063210.
+- reference: DOI:10.1046/j.1365-2958.2002.03056.x
+  notes: 'Opitz and Soldati 2002, ''The glideosome'': a dynamic complex powering gliding
+    motion and host cell invasion by Toxoplasma gondii, Molecular Microbiology.'
+- reference: DOI:10.1083/jcb.200311137
+  notes: Gaskins et al. 2004, Identification of the membrane receptor of a class XIV
+    myosin in Toxoplasma gondii, Journal of Cell Biology.
+- reference: DOI:10.1016/j.mib.2009.06.008
+  notes: Daher and Soldati-Favre 2009, Mechanisms controlling glideosome function
+    in apicomplexans, Current Opinion in Microbiology.
+causal_graphs:
+- graph_id: gap50_anchored_glideosome_motor
+  title: GAP50 anchors the MyoA glideosome at the IMC
+  description: MyoA, MLC1, GAP45 and GAP50 form an apicomplexan actomyosin motor complex
+    that is anchored to the inner membrane complex and supports parasite gliding motility
+    and host-cell invasion.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph captures the core Toxoplasma glideosome complex identified
+    by Gaskins et al. It leaves actin-filament flux, microneme adhesins, aldolase
+    coupling, GAP40 and GAPM proteins outside the first-pass component boundary.
+  nodes:
+  - node_id: myoa_class_xiv_myosin_heavy_chain
+    label: MyoA class XIV myosin heavy chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: myoa_class_xiv_myosin_heavy_chain
+  - node_id: mlc1_myosin_light_chain
+    label: MLC1 myosin light chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: mlc1_myosin_light_chain
+  - node_id: gap45_glideosome_associated_protein
+    label: Glideosome-associated protein 45
+    node_type: GENE_OR_PROTEIN
+    component_ref: gap45_glideosome_associated_protein
+  - node_id: gap50_membrane_receptor
+    label: GAP50 membrane receptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: gap50_membrane_receptor
+  - node_id: glideosome
+    label: glideosome
+    node_type: STRUCTURE
+    grounding: GO:0160055
+  - node_id: inner_membrane_pellicle_complex
+    label: inner membrane pellicle complex
+    node_type: ORGANELLE
+    grounding: GO:0070258
+  - node_id: cell_gliding
+    label: cell surface adhesin-mediated gliding motility
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071980
+  - node_id: host_cell_invasion
+    label: host-cell invasion
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: myoa_class_xiv_myosin_heavy_chain
+    predicate: assembles into
+    object: glideosome
+    description: TgMyoA is the class XIV myosin motor in the Toxoplasma glideosome.
+    evidence:
+    - reference: DOI:10.1083/jcb.200311137
+      notes: Gaskins et al. 2004 identified TgMyoA in the Toxoplasma glideosome complex.
+  - subject: mlc1_myosin_light_chain
+    predicate: assembles into
+    object: glideosome
+    description: TgMLC1 is the myosin light-chain partner in the Toxoplasma glideosome.
+    evidence:
+    - reference: DOI:10.1083/jcb.200311137
+      notes: Gaskins et al. 2004 identified TgMLC1 in the Toxoplasma glideosome complex.
+  - subject: gap45_glideosome_associated_protein
+    predicate: assembles into
+    object: glideosome
+    description: TgGAP45 is a GAP constituent of the Toxoplasma glideosome.
+    evidence:
+    - reference: DOI:10.1083/jcb.200311137
+      notes: Gaskins et al. 2004 identified TgGAP45 in the Toxoplasma glideosome complex.
+  - subject: gap50_membrane_receptor
+    predicate: anchors
+    object: glideosome
+    description: TgGAP50 anchors the Toxoplasma glideosome at the IMC.
+    evidence:
+    - reference: DOI:10.1083/jcb.200311137
+      notes: Gaskins et al. 2004 identified TgGAP50 as an integral membrane anchor
+        for the glideosome complex.
+  - subject: glideosome
+    predicate: localizes to
+    object: inner_membrane_pellicle_complex
+    description: The GAP50-anchored glideosome localizes to the inner membrane complex.
+    evidence:
+    - reference: DOI:10.1083/jcb.200311137
+      notes: Gaskins et al. 2004 localized the Toxoplasma glideosome complex to the
+        IMC.
+  - subject: glideosome
+    predicate: supports
+    object: cell_gliding
+    description: The apicomplexan glideosome supports actomyosin-dependent cell gliding.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2009.06.008
+      notes: Daher and Soldati-Favre 2009 review glideosome function in apicomplexan
+        motility.
+  - subject: glideosome
+    predicate: supports
+    object: host_cell_invasion
+    description: The glideosome supports apicomplexan invasion of host cells.
+    evidence:
+    - reference: DOI:10.1046/j.1365-2958.2002.03056.x
+      notes: Opitz and Soldati 2002 review the glideosome as a Toxoplasma invasion
+        motor.
+    - reference: DOI:10.1016/j.mib.2009.06.008
+      notes: Daher and Soldati-Favre 2009 review glideosome roles in host-cell invasion.
+discussions:
+- discussion_id: resolve_glideosome_component_groundings
+  prompt: Resolve exact source-neutral groundings for MyoA, MLC1 or MTIP-like light
+    chains, GAP50, GAP40 and GAPM glideosome proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#myoa_class_xiv_myosin_heavy_chain
+  - components#mlc1_myosin_light_chain
+  - components#gap50_membrane_receptor
+  - causal_graphs#gap50_anchored_glideosome_motor
+  rationale: The first glideosome record uses exact Pfam grounding for GAP45 but leaves
+    MyoA, light-chain and GAP50 components reviewed-label-only because broad myosin,
+    EF-hand and metallophosphatase domains do not denote the specific apicomplexan
+    glideosome families. Later Plasmodium studies add GAP40, GAPM proteins and regulatory
+    factors that should be reconciled before expanding this core component set.
+  evidence:
+  - reference: DOI:10.1083/jcb.200311137
+  - reference: DOI:10.1016/j.mib.2009.06.008
+  - reference: Pfam:PF29346
+  posed_by: codex
+  posed_date: '2026-10-03'
