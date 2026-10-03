@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+  slug: ciliary_centrin_arm
+session:
+  id: 2026-10-03T043017Z-codex-db3543
+  timestamp: '2026-10-03T04:30:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - discussions
+  summary: Add ciliary centrin arm record
+  details: Added GO:0120269 ciliary centrin arm as a Centrin4-containing T. brucei cytoskeletal
+    protein complex, with GO intracellular-protein-complex parentage and ciliary-pocket parthood,
+    a reviewed-label-only Centrin4 constituent, T. brucei scope, hook/FAZ flanking and flagellum-inheritance
+    functions, DOI evidence, and open discussions for component boundaries and separation
+    from the complete bilobe.

@@ -2219,6 +2219,11 @@
           "cosine_similarity": 0.83372939
         },
         {
+          "identifier": "GO:0120269",
+          "label": "ciliary centrin arm",
+          "cosine_similarity": 0.81680977
+        },
+        {
           "identifier": "GO:0120119",
           "label": "flagellum attachment zone",
           "cosine_similarity": 0.75232431
@@ -2232,11 +2237,6 @@
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
           "cosine_similarity": 0.74734662
-        },
-        {
-          "identifier": "GO:0020016",
-          "label": "flagellar pocket",
-          "cosine_similarity": 0.74463014
         }
       ]
     },
@@ -2613,6 +2613,37 @@
       ]
     },
     {
+      "identifier": "GO:0120269",
+      "label": "ciliary centrin arm",
+      "neighbors": [
+        {
+          "identifier": "GO:0120120",
+          "label": "bilobe structure",
+          "cosine_similarity": 0.81680977
+        },
+        {
+          "identifier": "GO:1990900",
+          "label": "ciliary pocket collar",
+          "cosine_similarity": 0.80612002
+        },
+        {
+          "identifier": "GO:0120119",
+          "label": "flagellum attachment zone",
+          "cosine_similarity": 0.77643164
+        },
+        {
+          "identifier": "GO:0005858",
+          "label": "axonemal dynein complex",
+          "cosine_similarity": 0.76879082
+        },
+        {
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.76150524
+        }
+      ]
+    },
+    {
       "identifier": "GO:1990900",
       "label": "ciliary pocket collar",
       "neighbors": [
@@ -2620,6 +2651,11 @@
           "identifier": "GO:0120120",
           "label": "bilobe structure",
           "cosine_similarity": 0.83372939
+        },
+        {
+          "identifier": "GO:0120269",
+          "label": "ciliary centrin arm",
+          "cosine_similarity": 0.80612002
         },
         {
           "identifier": "GO:0020016",
@@ -2635,11 +2671,6 @@
           "identifier": "GO:0120118",
           "label": "flagella connector",
           "cosine_similarity": 0.72495896
-        },
-        {
-          "identifier": "GO:0020018",
-          "label": "ciliary pocket membrane",
-          "cosine_similarity": 0.70741281
         }
       ]
     },
@@ -2896,6 +2927,11 @@
       "label": "flagellum attachment zone",
       "neighbors": [
         {
+          "identifier": "GO:0120269",
+          "label": "ciliary centrin arm",
+          "cosine_similarity": 0.77643164
+        },
+        {
           "identifier": "GO:1990900",
           "label": "ciliary pocket collar",
           "cosine_similarity": 0.75380139
@@ -2914,11 +2950,6 @@
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.69500643
-        },
-        {
-          "identifier": "GO:0036286",
-          "label": "eisosome filament",
-          "cosine_similarity": 0.68751293
         }
       ]
     },
