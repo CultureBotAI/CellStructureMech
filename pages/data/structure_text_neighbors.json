@@ -6395,6 +6395,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:coccolith",
+      "label": "coccolith",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:coccolith_vesicle",
+          "label": "coccolith vesicle",
+          "cosine_similarity": 0.69637732
+        },
+        {
+          "identifier": "GO:1990732",
+          "label": "pyrenoid",
+          "cosine_similarity": 0.56641558
+        },
+        {
+          "identifier": "GO:0009534",
+          "label": "chloroplast thylakoid",
+          "cosine_similarity": 0.5518027
+        },
+        {
+          "identifier": "GO:0062159",
+          "label": "contractile vacuole complex",
+          "cosine_similarity": 0.55134788
+        },
+        {
+          "identifier": "GO:0017119",
+          "label": "COG complex",
+          "cosine_similarity": 0.5495774
+        }
+      ]
+    },
+    {
       "identifier": "GO:0000935",
       "label": "division septum",
       "neighbors": [
