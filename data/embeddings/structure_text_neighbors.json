@@ -6600,14 +6600,14 @@
           "cosine_similarity": 0.85370553
         },
         {
+          "identifier": "GO:7770041",
+          "label": "periplastidial membrane",
+          "cosine_similarity": 0.83074901
+        },
+        {
           "identifier": "GO:0009276",
           "label": "Gram-negative-bacterium-type cell wall",
           "cosine_similarity": 0.83050223
-        },
-        {
-          "identifier": "GO:0009529",
-          "label": "plastid intermembrane space",
-          "cosine_similarity": 0.82566414
         }
       ]
     },
@@ -9437,6 +9437,11 @@
       "label": "epiplastidial membrane",
       "neighbors": [
         {
+          "identifier": "GO:7770041",
+          "label": "periplastidial membrane",
+          "cosine_similarity": 0.92984325
+        },
+        {
           "identifier": "GO:0009527",
           "label": "plastid outer membrane",
           "cosine_similarity": 0.91067383
@@ -9455,11 +9460,6 @@
           "identifier": "GO:0042170",
           "label": "plastid membrane",
           "cosine_similarity": 0.89396572
-        },
-        {
-          "identifier": "GO:0009707",
-          "label": "chloroplast outer membrane",
-          "cosine_similarity": 0.88854493
         }
       ]
     },
@@ -9922,9 +9922,9 @@
           "cosine_similarity": 0.82482883
         },
         {
-          "identifier": "GO:0005778",
-          "label": "peroxisomal membrane",
-          "cosine_similarity": 0.80767026
+          "identifier": "GO:7770041",
+          "label": "periplastidial membrane",
+          "cosine_similarity": 0.80943468
         }
       ]
     },
@@ -12068,6 +12068,37 @@
       ]
     },
     {
+      "identifier": "GO:7770041",
+      "label": "periplastidial membrane",
+      "neighbors": [
+        {
+          "identifier": "GO:7770040",
+          "label": "epiplastidial membrane",
+          "cosine_similarity": 0.92984325
+        },
+        {
+          "identifier": "GO:0009527",
+          "label": "plastid outer membrane",
+          "cosine_similarity": 0.89869478
+        },
+        {
+          "identifier": "GO:0009528",
+          "label": "plastid inner membrane",
+          "cosine_similarity": 0.89754137
+        },
+        {
+          "identifier": "GO:0042170",
+          "label": "plastid membrane",
+          "cosine_similarity": 0.89677305
+        },
+        {
+          "identifier": "GO:0009707",
+          "label": "chloroplast outer membrane",
+          "cosine_similarity": 0.87737922
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005782",
       "label": "peroxisomal matrix",
       "neighbors": [
@@ -12113,6 +12144,11 @@
           "cosine_similarity": 0.85940293
         },
         {
+          "identifier": "GO:7770041",
+          "label": "periplastidial membrane",
+          "cosine_similarity": 0.82442174
+        },
+        {
           "identifier": "GO:0046861",
           "label": "glyoxysomal membrane",
           "cosine_similarity": 0.820696
@@ -12121,11 +12157,6 @@
           "identifier": "GO:0030659",
           "label": "cytoplasmic vesicle membrane",
           "cosine_similarity": 0.8105536
-        },
-        {
-          "identifier": "GO:0046860",
-          "label": "glycosome membrane",
-          "cosine_similarity": 0.80767026
         }
       ]
     },

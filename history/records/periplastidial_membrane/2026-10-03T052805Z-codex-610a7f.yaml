@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/periplastidial_membrane.yaml
+  slug: periplastidial_membrane
+session:
+  id: 2026-10-03T052805Z-codex-610a7f
+  timestamp: '2026-10-03T05:28:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - mereology
+  - components
+  - taxonomy
+  - functions
+  - evidence
+  - discussions
+  summary: Add periplastidial membrane record
+  details: Added GO:7770041 periplastidial membrane as the second outermost lipid bilayer
+    around secondary complex plastids, with GO PPM synonymy and plastid-membrane parentage,
+    a reviewed-label-only lipid-bilayer constituent, Phaeodactylum tricornutum scope, a periplastidial-compartment
+    boundary function, DOI evidence, and open discussions for lipid grounding and separation
+    from epiplastidial and plastid outer membranes.
