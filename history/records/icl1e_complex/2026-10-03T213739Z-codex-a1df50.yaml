@@ -1,0 +1,50 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/icl1e_complex.yaml
+  slug: icl1e_complex
+session:
+  id: 2026-10-03T213739Z-codex-a1df50
+  timestamp: '2026-10-03T21:37:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1999
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  - validation
+  summary: Post-opening adversarial self-review finds no additional concrete defect
+  details: 'Post-opening adversarial self-review of PR #1999 at scientific commit 06f3be13c1193923fb54991cf5e1ba661afe17b0
+    against main 879d13a0834bfba741f2d551f6d1d570943412dc. This is a separate pass by the
+    same AI agent, not independent or human review; mapping_status remains PROPOSED. Re-read
+    committed YAML and creation/correction histories, the repository field-by-field review
+    checklist, and primary DOI:10.1242/bio.024273 JATS Results s2b-s2f, strain Methods and
+    Figures 3, 5 and 7 legends. Challenged named functional-complex identity versus purified
+    molecular architecture; separation from the whole lattice and bipartite ICLOC; unknown
+    paralogue assembly essentiality and non-stoichiometric gene counts; developed-but-unanchored
+    basal bodies versus duplication failure; delayed recruitment at paired basal bodies; site-specific
+    Centrin3 response; and dependency arrows versus physical binding. Centrin2/Centrin3, SAS6,
+    1A9-reactive material and hypothetical Sfi1 connectors remain outside established constituents.
+    Checked taxon scope, broader GO parent/parthood, label-only family grounding, explicit
+    uncertainties, Figure 3 epifluorescence/BP context, marker separation and primary CC BY
+    3.0 permissions. No additional concrete defect found and no issue manufactured. The preflight
+    source-section attribution defect was already corrected and recorded in 2026-10-03T212404Z-codex-a02a32.yaml.
+    Reviewed artifact scope and clean diff checks; prior full local QC on this scientific
+    commit passed 597 tests, 3 skipped, 2 dependency warnings, 847 structures and 1520 histories,
+    plus target LinkML, strict, snippet, trait, identifier and label gates. Previously verified
+    image checksum, generated links and all 846 unchanged pre-existing embedding rows. This
+    review adds only append-only provenance; validate all histories and require green final-head
+    and merge-queue checks before merge.'

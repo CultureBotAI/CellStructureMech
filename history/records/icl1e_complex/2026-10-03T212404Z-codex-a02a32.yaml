@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/icl1e_complex.yaml
+  slug: icl1e_complex
+session:
+  id: 2026-10-03T212404Z-codex-a02a32
+  timestamp: '2026-10-03T21:24:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Correct source-section attribution for hypothetical Sfi1 connection
+  details: 'Preflight re-reading of primary DOI:10.1242/bio.024273 JATS section s2f (Interactions
+    between ICL1e and Centrin2 and Centrin3) located the proposed Sfi1-type physical connection
+    in Results, not the Discussion section. Corrected that source-section phrase with a safe_load
+    mutator, exact identifier/old-text assertions, truthful LLM event and write_validated_structure.
+    The component list and scientific boundary are unchanged: the connector remains hypothetical
+    and is not curated as a member. Complements creation history 2026-10-03T212126Z-codex-6c36cf.yaml;
+    no prior history was edited.'
