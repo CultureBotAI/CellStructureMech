@@ -1,0 +1,47 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/diazoplast.yaml
+  slug: diazoplast
+session:
+  id: 2026-10-03T143417Z-codex-f99756
+  timestamp: '2026-10-03T14:34:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  summary: Add evidence-backed diazoplast proto-organelle record
+  details: Added cellstructuremech:diazoplast after fresh hidden/ignored-inclusive search
+    (28588 files, no label/old-name/DOI/PMID hits) and exact OLS GO searches for diazoplast,
+    spheroid body, Epithemia and Rhopalodia (zero). Read final primary PMC11070190 Results/Discussion
+    via BioC/JATS and PMC12377750 proteomics and organelle-boundary Discussion; distinguished
+    final PNAS title/DOI from earlier preprint. Verified GO0043229,GO0016020,GO0016610,GO0009399
+    at QuickGO and Epithemia genus420972/clementina3042617 exact labels at ENA. Compared InterPro
+    IPR001501/IPR050867 authority families and reviewed UniProt HupL mappings; retained uptake-specific
+    HupL label-only rather than adopting broader nickel-hydrogenase identity. Inspected 2024
+    Figures2,3,4 individually; bytes match metadata MD5. Included only Figure2 (all imaged
+    cells E.clementina), whole multi-panel NanoSIMS image, using existing PMC builder and
+    guarded image/record writer; exact CC BY4.0 verified in JATS and metadata; no image editing.
+    Membrane, nitrogenase and HupL constituents retain UNKNOWN formation essentiality. Genus
+    distribution is separate from the experimentally demonstrated clementina phenotype. Seven-edge
+    physiological graph preserves partial inhibition, isotope-inferred exchange and unknown
+    transferred chemicals. Declined host-import candidates, TusA/PFK imports, dynamin machinery,
+    respiration/microoxia and storage-carbon causal claims. Record uses structural compartment
+    classification, not proof of classical genetic integration; no nitroplast synonym. Two
+    OPEN follow-ups cover exact HupL grounding and direct transport/division mechanisms. Used
+    safe_load/assert, llm_assisted curation event and write_image_with_validated_record, which
+    calls write_validated_structure. Temporary mutator removed. Full validation and separate
+    post-PR adversarial review required before merge; record remains PROPOSED.

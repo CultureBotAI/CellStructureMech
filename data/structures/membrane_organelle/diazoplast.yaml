@@ -1,0 +1,282 @@
+identifier: cellstructuremech:diazoplast
+label: diazoplast
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: An obligate, membrane-bounded nitrogen-fixing compartment of Epithemia
+  diatoms containing a reduced, nonphotosynthetic cyanobacterial endosymbiont; a metabolically
+  integrated proto-organelle whose genetic integration remains unresolved.
+definition_source: DOI:10.1073/pnas.2507237122
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T14:32:11Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T14:33:31Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added three constituent classes, verified Epithemia scope/example, nitrogen-fixation
+    exchange graph, explicit proto-organelle/import boundaries, two follow-ups and
+    inspected CC BY 4.0 NanoSIMS figure via the PMC adapter.
+  llm_assisted: true
+synonyms:
+- synonym_text: spheroid body
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1093/ismeco/ycae055
+parent_structures:
+- GO:0043229
+components:
+- component_id: membranes
+  label: membrane
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0016020
+  essentiality: UNKNOWN
+  role: Boundary and retained internal membranes; no photosynthetic role is asserted.
+  evidence:
+  - reference: DOI:10.1093/ismeco/ycae055
+    notes: Figure 4D-E TEM shows diazoplast boundaries and internal thylakoids.
+- component_id: nitrogenase
+  label: nitrogenase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0016610
+  gene_symbols:
+  - nifH
+  - nifD
+  - nifK
+  essentiality: UNKNOWN
+  role: Nitrogen-fixing enzyme machinery.
+  evidence:
+  - reference: DOI:10.1093/ismeco/ycae055
+    notes: Intact nif cluster, NifDK immunoblots and acetylene-reduction activity
+      support assignment; no assembly-essentiality test.
+- component_id: hupl
+  label: Uptake hydrogenase large subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hupL
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Reviewed UniProt HupL entries map to InterPro IPR001501 and IPR050867,
+    which cover broader nickel-hydrogenase large-subunit families. No exact uptake-specific
+    family asserted.
+  role: Hydrogen-recycling enzyme subunit; functional assignment, not a diazoplast-specific
+    perturbation result.
+  evidence:
+  - reference: DOI:10.1093/ismeco/ycae055
+    notes: Figure 3B reports HupL immunoblot detection, not in situ localization or
+      a hydrogen-flux assay.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:420972
+  taxon_label: Epithemia
+  presence: COMMON
+  reference: DOI:10.1073/pnas.2507237122
+  note: Reported in all described Epithemia species; physiological uniformity is not
+    implied.
+canonical_examples:
+- taxon_id: NCBITaxon:3042617
+  taxon_label: Epithemia clementina (nom. ined.)
+  reference: DOI:10.1093/ismeco/ycae055
+  note: Butano-area isolate studied by isotope imaging, immunoblots and physiological
+    perturbations. Cultures were monoalgal, not axenic. Taxon label verified at ENA/NCBI.
+functions:
+- function_id: nitrogen_fixation
+  label: nitrogen fixation
+  grounding: GO:0009399
+  description: Fixes dinitrogen within the host cell.
+  evidence:
+  - reference: DOI:10.1093/ismeco/ycae055
+    notes: 'Figures 2-3: isotope incorporation and nitrogenase activity.'
+- function_id: host_nitrogen_supply
+  label: Fixed-nitrogen provision to the host
+  description: Transfers fixed nitrogen to the diatom host.
+  evidence:
+  - reference: DOI:10.1093/ismeco/ycae055
+    notes: 'Figure 2: isotope enrichment extends into host compartments; transferred
+      chemical species remain unidentified.'
+evidence:
+- reference: DOI:10.1093/ismeco/ycae055
+  notes: Moulin et al. 2024, PMID 38707843/PMC11070190. Final primary Results and
+    Discussion read; Figures 2-4 inspected with PMC metadata MD5 verification.
+- reference: DOI:10.1073/pnas.2507237122
+  notes: Frail et al. 2025, PMID 40794833/PMC12377750. Final primary proteomics and
+    Discussion read, not the differently titled 2024 preprint.
+- reference: GO:0043229
+  notes: Broad structural parent; no genetic-integration criterion.
+causal_graphs:
+- graph_id: host_diazoplast_exchange
+  title: Host carbon supports diazoplast nitrogen fixation
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: E. clementina physiology only. Process-level exchange and perturbation
+    evidence, not identified transporters, transferred metabolites, respiration coupling
+    or division machinery.
+  nodes:
+  - node_id: diazoplast
+    label: diazoplast
+    node_type: STRUCTURE
+  - node_id: nitrogenase
+    label: nitrogenase complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0016610
+    component_ref: nitrogenase
+  - node_id: fixation
+    label: nitrogen fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009399
+  - node_id: host_nitrogen
+    label: Fixed nitrogen in host biomass
+    node_type: STATE
+  - node_id: photosynthesis
+    label: Host photosynthesis
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: host_carbon
+    label: Host-fixed carbon
+    node_type: CHEMICAL
+  - node_id: inhibition
+    label: Daytime darkness or DCMU treatment
+    node_type: EXPERIMENTAL_FACTOR
+  edges:
+  - subject: nitrogenase
+    predicate: catalyzes
+    object: fixation
+    evidence:
+    - reference: GO:0016610
+      notes: Nitrogenase reaction; diazoplast membership supported in components.
+  - subject: diazoplast
+    predicate: performs
+    object: fixation
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae055
+      notes: Figures 2-3; compartment isotope enrichment and culture activity.
+  - subject: fixation
+    predicate: supplies
+    object: host_nitrogen
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae055
+      notes: Figure 2B supports nitrogen transfer; no export species assigned.
+  - subject: photosynthesis
+    predicate: produces
+    object: host_carbon
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae055
+      notes: Bicarbonate labeling and bulk IRMS distinguish daytime carbon fixation.
+  - subject: host_carbon
+    predicate: is transferred into
+    object: diazoplast
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae055
+      notes: Figure 2C supports carbon transfer; wash losses limit temporal interpretation.
+  - subject: photosynthesis
+    predicate: supports
+    object: fixation
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae055
+      notes: Figure 3D daytime perturbations support physiological coupling.
+  - subject: inhibition
+    predicate: reduces
+    object: fixation
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae055
+      notes: Results report about 60% reduction, not complete abolition.
+discussions:
+- discussion_id: identity_and_organelle_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the diazoplast compartment from nitroplast and a genetically
+    integrated organelle.
+  rationale: Dedicated intracellular compartments qualify structurally without assuming
+    demonstrated genetic integration.
+  notes: Minted after ignored-inclusive repository and exact GO searches. Kind denotes
+    physical compartment architecture. Diazoplast and UCYN-A nitroplast have independent
+    origins; no identity or parthood equivalence. No exact GO diazoplast term found.
+  evidence:
+  - reference: DOI:10.1073/pnas.2507237122
+    notes: Scope and evidence boundary reviewed.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: decline_unvalidated_import_candidates
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not promote enriched host proteins to confirmed diazoplast constituents.
+  rationale: Enrichment can reflect contamination.
+  notes: Six candidates lack localization validation. TusA was not detected; host
+    PFK import was unsupported. Neither candidate proteins nor hypothetical dynamin
+    machinery are components here.
+  evidence:
+  - reference: DOI:10.1073/pnas.2507237122
+    notes: Scope and evidence boundary reviewed.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: physiology_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep perturbation, diel and metabolic claims within demonstrated scope.
+  rationale: Abstract wording and metabolic models exceed some direct measurements.
+  notes: Use partial inhibition from Results. Day/night activity is not genus-wide.
+    No universal glycogen absence, identified sugar transporter, or demonstrated respiratory
+    oxygen-protection mechanism.
+  evidence:
+  - reference: DOI:10.1093/ismeco/ycae055
+    notes: Scope and evidence boundary reviewed.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: hupl_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve an exact source-neutral uptake-hydrogenase large-subunit family.
+  rationale: Broad nickel-hydrogenase families do not isolate the uptake-specific
+    component.
+  notes: IPR001501 and IPR050867 were read at InterPro; reviewed UniProt HupL cross-references
+    confirm their broad coverage, not an exact functional equivalog.
+  evidence:
+  - reference: DOI:10.1093/ismeco/ycae055
+    notes: Scope and evidence boundary reviewed.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  attaches_to:
+  - components#hupl
+- discussion_id: transport_and_inheritance_mechanisms
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify transport substrates, transporters and division machinery directly.
+  rationale: Metabolic and cellular integration do not establish molecular mechanisms.
+  notes: Host-membrane fission and confinement remain hypotheses. No import machinery
+    or specific transport substrate asserted.
+  evidence:
+  - reference: DOI:10.1073/pnas.2507237122
+    notes: Scope and evidence boundary reviewed.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  attaches_to:
+  - causal_graphs#host_diazoplast_exchange
+images:
+- image_id: pmc_pmc11070190_f2
+  file: pmc11070190_f2.jpg
+  file_sha256: b8aae76bbe0c1d74896370bae92524c6764ea2795b1ddfa2309c5fc28dc74366
+  source: PMC
+  source_accession: PMC11070190.1 f2
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11070190/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11070190.1/ycae055f2.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Solène L Y Moulin, Sarah Frail, Thomas Braukmann, Jon Doenier, Melissa
+    Steele-Ogus, Jane C Marks, Matthew M Mills, Ellen Yeh; CC BY, via PubMed Central
+  modality: OTHER
+  caption: NanoSIMS isotope imaging of Epithemia clementina after 12 or 24 hours of
+    labeling. Arrowheads identify diazoplasts; lower panels compare nitrogen and carbon
+    enrichment in diazoplast and host regions. Complete multi-panel Figure 2, including
+    quantification.
+  taxon_id: NCBITaxon:3042617
+  taxon_label: Epithemia clementina (nom. ined.)
+  reference: DOI:10.1093/ismeco/ycae055
+  retrieved_on: '2026-10-03'
+  notes: Figure 2 from article version PMC11070190.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
