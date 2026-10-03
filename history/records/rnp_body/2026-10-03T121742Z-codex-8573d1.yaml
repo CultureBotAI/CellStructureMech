@@ -1,0 +1,54 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/rnp_body.yaml
+  slug: rnp_body
+session:
+  id: 2026-10-03T121742Z-codex-8573d1
+  timestamp: '2026-10-03T12:17:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/1983
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC6151146/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7245546/
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence
+  - generated_artifacts
+  summary: Adversarial review of RNP body PR found no actionable defects
+  details: 'Reviewed PR #1983 at scientific commit 5b3c8863d499936289dc48d2445000aef336bf4d
+    as a separate pass after PR creation. Re-read the complete record and append-only histories,
+    checked the GitHub changed-file list, and compared the scientific diff with the inspected
+    2018 and 2020 Results/Methods and issuing-authority metadata. Confirmed exact GO:0140365
+    identity, GO:0036464 is-a parent and cytoplasm parthood; no identity conflation with the
+    existing degradosome or eukaryotic granules. Checked four component memberships, RNase
+    E scaffold versus catalytic-domain roles, RNA-dependent cellular assembly versus RNA-independent
+    purified-CTD condensation, excess-RNA inhibition, client-binding-site experiments and
+    assembly-dispensable client recruitment. Confirmed each unreviewed UniProt example maps
+    to the experimentally named NA1000 locus, with the RhpA/RhlB naming difference disclosed.
+    No species prevalence assertion remains. Audited all six causal edges and their experimental
+    context, including active-site-mutant enrichment limitations and growth-condition RNA-decay
+    scope. No unsupported stoichiometry, taxonomic absence, or transferred eukaryotic/E. coli
+    component was asserted. Checked generated indexes/statistics and verified all 831 pre-existing
+    embedding entries were unchanged. Local full QC passed: 573 tests passed, 3 skipped; 832
+    records and 1489 then-existing history records validated; generated site and embeddings
+    current. Direct LinkML, strict validation, identifier liveness, identifier-label correspondence,
+    31/31 snippet verification, 10/10 trait links, all 18 vendored artifacts and diff whitespace
+    checks passed. No actionable review defects found; no GitHub defect issues created. Residual
+    curation scope: exact RhlB/aconitase families remain an explicit TODO, composition is
+    not exhaustive, and stress-specific storage behavior is not generalized from these growth-condition
+    experiments. Record remains PROPOSED and awaits human scientific sign-off. This review
+    adds provenance only; it does not alter the scientific YAML or derived semantic content.'

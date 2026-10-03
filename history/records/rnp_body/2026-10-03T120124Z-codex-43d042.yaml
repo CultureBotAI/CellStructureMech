@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/rnp_body.yaml
+  slug: rnp_body
+session:
+  id: 2026-10-03T120124Z-codex-43d042
+  timestamp: '2026-10-03T12:01:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC6151146/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7245546/
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  summary: Add evidence-backed bacterial RNP body record
+  details: Created GO:0140365 RNP body (BR-body), distinguished from the existing GO:1990061
+    bacterial degradosome by its mesoscale condensate identity. Hidden and ignored files were
+    included in exact-identity, synonym, primary-publication and component searches; unrelated
+    U snRNP cache matches and existing degradosome mentions were inspected. Read original
+    2018 and 2020 Results through NCBI PMC BioC, including RNA dependence, CTD phase behavior,
+    client binding-site mutations, RNA cleavage-dependent disassembly, enrichment biases and
+    half-life experiments. Added RNase E, mRNA, RhlB and aconitase with explicit constituent
+    and essentiality boundaries; the last two retain reviewed label-only family groundings.
+    Verified GO terms via QuickGO, SO mRNA via OLS, RNase E family via InterPro, three exact
+    NA1000 loci and unreviewed accessions via UniProt, and current strain/species labels via
+    NCBI Taxonomy. Added the current-name NA1000 exemplar, narrowly qualified distribution,
+    mRNA-catabolic function, and six-node/six-edge mechanistic cycle. The four components
+    are not an exhaustive proteome. Model-generated record remains PROPOSED. Guarded schema
+    write succeeded; broader QC and generated-artifact checks follow before commit.

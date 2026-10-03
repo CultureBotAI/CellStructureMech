@@ -22798,6 +22798,11 @@
       "label": "P-body",
       "neighbors": [
         {
+          "identifier": "GO:0140365",
+          "label": "RNP body",
+          "cosine_similarity": 0.77227311
+        },
+        {
           "identifier": "GO:0071920",
           "label": "cleavage body",
           "cosine_similarity": 0.73914981
@@ -22816,11 +22821,6 @@
           "identifier": "GO:0015030",
           "label": "Cajal body",
           "cosine_similarity": 0.71914305
-        },
-        {
-          "identifier": "GO:0030681",
-          "label": "multimeric ribonuclease P complex",
-          "cosine_similarity": 0.71887224
         }
       ]
     },
@@ -23228,6 +23228,37 @@
       ]
     },
     {
+      "identifier": "GO:0140365",
+      "label": "RNP body",
+      "neighbors": [
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.77227311
+        },
+        {
+          "identifier": "GO:0005840",
+          "label": "ribosome",
+          "cosine_similarity": 0.76301486
+        },
+        {
+          "identifier": "GO:0048500",
+          "label": "signal recognition particle",
+          "cosine_similarity": 0.75979593
+        },
+        {
+          "identifier": "GO:0030680",
+          "label": "dimeric ribonuclease P complex",
+          "cosine_similarity": 0.73720595
+        },
+        {
+          "identifier": "GO:0015935",
+          "label": "small ribosomal subunit",
+          "cosine_similarity": 0.72227983
+        }
+      ]
+    },
+    {
       "identifier": "GO:0048500",
       "label": "signal recognition particle",
       "neighbors": [
@@ -23235,6 +23266,11 @@
           "identifier": "GO:0005840",
           "label": "ribosome",
           "cosine_similarity": 0.79338868
+        },
+        {
+          "identifier": "GO:0140365",
+          "label": "RNP body",
+          "cosine_similarity": 0.75979593
         },
         {
           "identifier": "GO:0015935",
@@ -23250,11 +23286,6 @@
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.73775026
-        },
-        {
-          "identifier": "GO:0015934",
-          "label": "large ribosomal subunit",
-          "cosine_similarity": 0.73306301
         }
       ]
     },

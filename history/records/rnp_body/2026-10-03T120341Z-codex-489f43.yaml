@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/rnp_body.yaml
+  slug: rnp_body
+session:
+  id: 2026-10-03T120341Z-codex-489f43
+  timestamp: '2026-10-03T12:03:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomy
+  summary: Keep BR-body taxonomy at demonstrated occurrence
+  details: 'Removed the provisional Caulobacter vibrioides VARIABLE distribution row: one
+    studied strain does not establish lineage patchiness or a species prevalence estimate.
+    Retained the exact experimentally demonstrated NA1000 canonical example and protein examples,
+    with current NCBI name reconciliation. Added a resolved discussion explaining the occurrence-versus-prevalence
+    boundary, appended a model-assisted curation event, and wrote through the guarded validator.
+    No paper-supported organism example was removed.'

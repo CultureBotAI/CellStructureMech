@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RNP body · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>RNP body</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0140365"><code>GO:0140365</code></a> · RIBONUCLEOPROTEIN · OTHER · <span class="status">PROPOSED</span></p>
+<p class="definition">A ribonucleoprotein granule located in the cytoplasm of bacteria, minimally containing the RNase E protein and RNA molecules. Bacterial RNP-bodies are similar to eukaryotic P-bodies and stress granules. <small>[<a href="http://purl.obolibrary.org/obo/GO_0140365"><code>GO:0140365</code></a>]</small></p>
+<p><strong>Synonyms:</strong> BR-body; bacterial RNP body</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005737"><code>GO:0005737</code></a> </p>
+<h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-rnase_e"><td>Ribonuclease E</td><td>PROTEIN</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR028878"><code>InterPro:IPR028878</code></a></td><td>rne</td><td></td><td>ESSENTIAL</td><td>Core scaffold in Caulobacter: its disordered C-terminal domain supports condensation with RNA and recruits degradosome clients; its catalytic domain cleaves RNA. Family membership alone does not establish BR-body formation in other bacteria.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>CTD deletion disperses RNase E; CTD-only constructs form condensates. RNase E depletion disperses RhlB and aconitase foci. Assembly essentiality refers to this scaffold, not a requirement for its catalytic domain.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR028878"><code>InterPro:IPR028878</code></a> <small>Verified Ribonuclease E family, rather than the broader RNase E/G family; UniProt maps the experimentally used CCNA_01954 product to it.</small></li></ul></td></tr>
+<tr id="components-mrna"><td>mRNA</td><td>RNA</td><td>part of</td><td><code>SO:0000234</code></td><td></td><td></td><td>CONDITIONAL</td><td>RNA cargo and assembly substrate. Long, poorly translated mRNAs are preferentially enriched in the experimentally isolated Caulobacter bodies; the SO grounding denotes the RNA class, not this translation state.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>In vivo mRNA depletion disperses bodies and rifampicin-resistant T7 transcription preserves them. Purified RNase E CTD can condense without RNA at suitable protein and salt concentrations, so mRNA is not asserted to be universally required in vitro.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2020.04.001"><code>DOI:10.1016/j.molcel.2020.04.001</code></a> <small>RNA sequencing of active-site-mutant-stabilized bodies enriches mRNAs, small RNAs and antisense RNAs. Longer RNAs stimulate CTD droplet assembly in vitro; mRNA is not the only RNA class present.</small></li></ul></td></tr>
+<tr id="components-rhlb"><td>RhlB RNA helicase</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>rhlB</td><td></td><td>DISPENSABLE</td><td>RNase E-recruited helicase client within Caulobacter BR-bodies. Loss of its RNase E binding site eliminates client foci without eliminating RNase E bodies.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>Figure 3 and associated binding-site deletion experiments show RhlB co-localization and RNase E-dependent recruitment; the bodies persist when recruitment is disrupted.</small></li></ul></td></tr>
+<tr id="components-aconitase"><td>aconitase</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>acnA</td><td></td><td>DISPENSABLE</td><td>RNase E-recruited metabolic-enzyme client in Caulobacter BR-bodies; its recruitment is dispensable for formation of the RNase E condensate.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>Figure 3 shows aconitase co-localization with RNase E. Deleting the aconitase-binding site disperses aconitase while RNase E still forms bodies.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+<h2>Organism-specific protein examples</h2>
+<p><small>Named proteins in which each component's role was established, with the
+organism the evidence comes from. The component above is the taxon-agnostic
+family; these are the specific entries behind it.</small></p>
+<h3 id="protein-examples-rnase_e">Ribonuclease E</h3>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Protein examples: Ribonuclease E">
+<table><thead><tr><th>Accession</th><th>Protein</th><th>Gene</th><th>Organism</th><th>Entry</th></tr></thead><tbody>
+<tr id="protein-UniProtKB-A0A0H3CAR6"><td><a href="https://www.uniprot.org/uniprotkb/A0A0H3CAR6"><code>UniProtKB:A0A0H3CAR6</code></a></td><td>Ribonuclease E</td><td>rne</td><td><em>Caulobacter vibrioides NA1000</em> (<a href="http://purl.obolibrary.org/obo/NCBITaxon_565050"><code>NCBITaxon:565050</code></a>)</td><td>UNREVIEWED</td></tr>
+<tr><td colspan="5"><details><summary>Role and evidence (2 references)</summary><p>Experimentally tested BR-body scaffold and endoribonuclease.</p><ul class="evidence"><li><a href="https://www.uniprot.org/uniprotkb/A0A0H3CAR6"><code>UniProtKB:A0A0H3CAR6</code></a> <small>UniProt identifies CCNA_01954 in taxon 565050; the accession is an unreviewed sequence mapping, not independent localization evidence.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>Methods identify CCNA_01954 as the locus used for the experimentally localized fluorescent fusion.</small></li></ul></details></td></tr>
+</tbody></table>
+</div>
+<h3 id="protein-examples-rhlb">RhlB RNA helicase</h3>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Protein examples: RhlB RNA helicase">
+<table><thead><tr><th>Accession</th><th>Protein</th><th>Gene</th><th>Organism</th><th>Entry</th></tr></thead><tbody>
+<tr id="protein-UniProtKB-A0A0H3C8I9"><td><a href="https://www.uniprot.org/uniprotkb/A0A0H3C8I9"><code>UniProtKB:A0A0H3C8I9</code></a></td><td>DEAD-box ATP-dependent RNA helicase RhpA</td><td>rhlB</td><td><em>Caulobacter vibrioides NA1000</em> (<a href="http://purl.obolibrary.org/obo/NCBITaxon_565050"><code>NCBITaxon:565050</code></a>)</td><td>UNREVIEWED</td></tr>
+<tr><td colspan="5"><details><summary>Role and evidence (2 references)</summary><p>RhlB in the paper; UniProt currently labels the same locus RhpA while retaining the rhlB gene symbol.</p><ul class="evidence"><li><a href="https://www.uniprot.org/uniprotkb/A0A0H3C8I9"><code>UniProtKB:A0A0H3C8I9</code></a> <small>UniProt identifies CCNA_01923 in taxon 565050; the accession is an unreviewed sequence mapping, not independent localization evidence.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>Methods identify CCNA_01923 as the locus used for the experimentally localized fluorescent fusion.</small></li></ul></details></td></tr>
+</tbody></table>
+</div>
+<h3 id="protein-examples-aconitase">aconitase</h3>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Protein examples: aconitase">
+<table><thead><tr><th>Accession</th><th>Protein</th><th>Gene</th><th>Organism</th><th>Entry</th></tr></thead><tbody>
+<tr id="protein-UniProtKB-A0A0H3CE29"><td><a href="https://www.uniprot.org/uniprotkb/A0A0H3CE29"><code>UniProtKB:A0A0H3CE29</code></a></td><td>Aconitate hydratase</td><td>acnA</td><td><em>Caulobacter vibrioides NA1000</em> (<a href="http://purl.obolibrary.org/obo/NCBITaxon_565050"><code>NCBITaxon:565050</code></a>)</td><td>UNREVIEWED</td></tr>
+<tr><td colspan="5"><details><summary>Role and evidence (2 references)</summary><p>Aconitase client localized in RNase E-containing bodies.</p><ul class="evidence"><li><a href="https://www.uniprot.org/uniprotkb/A0A0H3CE29"><code>UniProtKB:A0A0H3CE29</code></a> <small>UniProt identifies CCNA_03781 in taxon 565050; the accession is an unreviewed sequence mapping, not independent localization evidence.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>Methods identify CCNA_03781 as the locus used for the experimentally localized fluorescent fusion.</small></li></ul></details></td></tr>
+</tbody></table>
+</div>
+
+
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_565050"><code>NCBITaxon:565050</code></a> <em>Caulobacter vibrioides NA1000</em> — All Caulobacter strains in the 2018 study derive from NA1000, historically called C. crescentus NA1000. Fluorescent-fusion imaging, RNase E domain and binding-site mutants, and RNA-depletion experiments establish BR-body assembly in this background. [<a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>mRNA catabolic process</strong> <a href="http://purl.obolibrary.org/obo/GO_0006402"><code>GO:0006402</code></a> — During the assayed Caulobacter growth conditions, BR-bodies preferentially organize poorly translated mRNAs and decay enzymes, stimulating initial endonucleolytic cleavage and subsequent degradation. This does not assert identical RNA fate under every stress condition.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2020.04.001"><code>DOI:10.1016/j.molcel.2020.04.001</code></a> <small>Global half-life profiling and paired RNA-seq/qRT-PCR comparisons distinguish condensation-dependent initial cleavage from the contribution of recruited exoribonucleases to decay of intermediates.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-caulobacter_br_body_cycle">RNA-dependent condensation couples BR-body assembly to RNA cleavage <small>(FUNCTION)</small></h3>
+<p>Caulobacter RNase E and available mRNA promote condensation; the resulting bodies stimulate RNA cleavage, which enables their dynamic disassembly.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: RNA-dependent condensation couples BR-body assembly to RNA cleavage">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>Ribonuclease E</td><td>drives</td><td>RNase E CTD-mediated condensation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>CTD deletion abolishes foci, CTD-only constructs form foci, and purified CTD forms salt- and concentration-dependent liquid-like droplets.</small></li></ul></td></tr>
+<tr><td>mRNA</td><td>promotes</td><td>RNase E CTD-mediated condensation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>Rifampicin/T7 experiments establish the cellular mRNA dependence; poly-A titrations promote droplets at intermediate RNA concentrations, while excess RNA inhibits condensation.</small></li></ul></td></tr>
+<tr><td>RNase E CTD-mediated condensation</td><td>forms</td><td>RNP body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>Live-cell fusion dynamics, RNase E domain perturbations and purified-protein phase behavior support the condensate interpretation.</small></li></ul></td></tr>
+<tr><td>Ribonuclease E</td><td>catalyzes</td><td>RNase E-mediated RNA cleavage</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>Catalytically impaired RNase E and CTD-only replacements retain bodies but fail to support their normal rapid disassembly.</small></li></ul></td></tr>
+<tr><td>RNP body</td><td>stimulates</td><td>RNase E-mediated RNA cleavage</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2020.04.001"><code>DOI:10.1016/j.molcel.2020.04.001</code></a> <small>qRT-PCR half-lives are prolonged in the noncondensing NTD mutant and partly restored by the condensation-competent degradosome-binding-site mutant, separating condensation from client recruitment.</small></li></ul></td></tr>
+<tr><td>RNase E-mediated RNA cleavage</td><td>enables</td><td>BR-body disassembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>Wild-type bodies are dynamic on the minute scale; two catalytic mutants retain bodies throughout ten-minute imaging, and RNase A treatment dissolves stabilized bodies in lysates.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep the BR-body condensate distinct from one RNA degradosome and from eukaryotic granules. <small>The existing bacterial degradosome record describes a protein complex with an E. coli-centered component set. BR-bodies are mesoscale RNase E/RNA condensates whose assembly persists after several degradosome-client binding sites are removed. Eukaryotic P-bodies and stress granules are analogies, not exact identities.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Establish exact taxon-neutral family groundings for the RhlB and aconitase client classes. <small>The verified strain-specific UniProt mappings identify the assayed loci, but domain and broad superfamily matches cannot substitute for exact whole-protein family groundings. Current UniProt calls CCNA_01923 RhpA, whereas the paper and gene symbol call it RhlB; this nomenclature difference is explicitly retained.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Distinguish the verified NA1000 example from species-wide prevalence. <small>A species-level VARIABLE presence row would imply patchiness across lineages that the curated NA1000 experiments do not establish. A qualifying note cannot remove that assertion from the structured field.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140365"><code>GO:0140365</code></a> <small>Active GO cellular-component identity with exact BR-body synonym and original-paper PMID 30197298; GO:0036464 is its is-a parent.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2018.08.003"><code>DOI:10.1016/j.molcel.2018.08.003</code></a> <small>Al-Husini et al. 2018, alpha-proteobacterial RNA degradosomes assemble liquid-liquid phase separated RNP bodies. Full-text results and methods read through NCBI PMC BioC (PMC6151146).</small></li><li><a href="https://doi.org/10.1016/j.molcel.2020.04.001"><code>DOI:10.1016/j.molcel.2020.04.001</code></a> <small>Al-Husini et al. 2020, BR-bodies provide selectively permeable condensates that stimulate mRNA decay and prevent release of decay intermediates. Results read through NCBI PMC BioC (PMC7245546).</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-03T11:59:25Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-03T12:00:58Z</code> codex · EXPANDED_RECORD — Added GO identity and parentage, four evidence-backed components with verified NA1000 protein examples, scoped taxonomy and mRNA-decay function, a six-edge mechanistic graph, condensate boundaries and client-family follow-up.</li><li><code>2026-10-03T12:03:07Z</code> codex · TIGHTENED_TAXONOMY_SCOPE — Removed provisional species prevalence assertion; retain experimentally demonstrated NA1000 as a canonical example without inferring lineage patchiness.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/rnp_body.yaml"><code>data/structures/ribonucleoprotein/rnp_body.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+</body>
+</html>
