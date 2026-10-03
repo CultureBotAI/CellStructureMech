@@ -1,0 +1,137 @@
+identifier: cellstructuremech:pusule
+label: pusule
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A dinoflagellate membrane organelle connected to a flagellar canal, comprising
+  sacs, tubules or collecting chambers with associated diverticula. Its wall includes
+  an invaginated plasma membrane apposed to vacuolar membrane; the canal-connected
+  lumen is not a sealed intracellular compartment.
+definition_source: DOI:10.1007/BF01279820
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T16:41:23Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T16:42:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added source-bounded membrane anatomy, three verified species examples,
+    physiological uncertainty, identity boundaries and inspected CC BY microscopy
+    provenance.
+  llm_assisted: true
+parent_structures:
+- GO:0043227
+synonyms:
+- synonym_text: pusule apparatus
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1007/BF01279820
+components:
+- component_id: membranes
+  label: membrane
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding: GO:0016020
+  essentiality: UNKNOWN
+  role: Apposed plasma and vacuolar membranes form the pusular wall.
+  evidence:
+  - reference: DOI:10.1007/BF01279820
+    notes: Publisher summary describes this membrane arrangement; full text was not
+      accessible.
+canonical_examples:
+- taxon_id: NCBITaxon:271679
+  taxon_label: Polykrikos kofoidii
+  reference: DOI:10.1038/s41598-018-37065-w
+  note: Wild-collected pseudocolonies examined by TEM and FIB-SEM. Figure 2D-E shows
+    the collecting duct and associated diverticula; G-H locates the pusule beside
+    the nucleus.
+- taxon_id: NCBITaxon:2945
+  taxon_label: Prorocentrum micans
+  reference: DOI:10.1139/b87-098
+  note: Armored species in the tracer study; publisher-deposited abstract read via
+    Crossref, not the full paper.
+- taxon_id: NCBITaxon:2961
+  taxon_label: Amphidinium carterae
+  reference: DOI:10.1139/b87-098
+  note: Unarmored species in the tracer and serial-section TEM study; abstract-only
+    access.
+evidence:
+- reference: DOI:10.1007/BF01279820
+  notes: Dodge (1972), Protoplasma. Primary publisher summary read; morphology varies
+    between tubular, sac and vesicle-associated forms. Publisher offers only a subscription
+    preview; PDF and discovery routes did not yield readable full text. No numerical
+    dimensions imported.
+- reference: DOI:10.1139/b87-098
+  notes: Klut, Bisalputra and Antia (1987), Canadian Journal of Botany. Crossref publisher
+    abstract reports horseradish peroxidase, cationized ferritin and lectins entering
+    pusules via the flagellar canal in both species. Publisher HTML/PDF routes returned
+    403 and title searches yielded citations, not full text. No cytoplasmic delivery
+    or nutrient assimilation inferred.
+- reference: DOI:10.1038/s41598-018-37065-w
+  notes: Gavelis et al. (2019), Scientific Reports. Primary Results, collection Methods
+    and Figure 2 read through PMC BioC/JATS; figure visually inspected. Elaborate
+    plasma-membrane infoldings are identified as pusules. Collecting-duct and diverticular
+    topology is visible without implying a transport mechanism.
+- reference: GO:0043227
+  notes: Broad membrane-bounded-organelle parent verified in QuickGO; membrane-bounded
+    does not assert that the lumen is closed. The record denotes the entire pusular
+    apparatus, not the plasma membrane alone.
+discussions:
+- discussion_id: identity_and_topology_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the pusule distinct from the contractile vacuole and the nuclear net.
+  rationale: Similar names or spatial proximity do not establish equivalent structures.
+  notes: Minted after a hidden/ignored-inclusive repository search and a zero-hit
+    QuickGO pusule search. Canal continuity is explicit. Nuclear membranes, nucleus-to-flagellum
+    ribbons and flagellar rootlets in the figure are contextual anatomy, not assigned
+    pusule constituents. Species examples do not imply clade-wide prevalence.
+  evidence:
+  - reference: DOI:10.1038/s41598-018-37065-w
+    notes: Figure 2 distinguishes these adjacent structures.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: physiology_and_molecular_machinery
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve physiological transport functions and molecular constituents with
+    direct evidence.
+  rationale: Tracer entry into a surface-connected lumen is not evidence of transmembrane
+    transport.
+  notes: Osmoregulation, secretion and collar/flagellum-driven flow remain proposals
+    in the accessible sources. No GO transport function, contractile cycle, protein-family
+    assignment, assembly essentiality or causal graph is asserted. Full-text experimental
+    controls remain to be reviewed.
+  evidence:
+  - reference: DOI:10.1139/b87-098
+    notes: Abstract distinguishes observations from suggested functions.
+  posed_by: codex
+  posed_date: '2026-10-03'
+images:
+- image_id: pmc_pmc6351617_fig2
+  file: pmc6351617_fig2.jpg
+  file_sha256: 6c37909f2a8a422f0625da79598171847c57a39ec9aad4587239482b31eaeb6a
+  source: PMC
+  source_accession: PMC6351617.1 Fig2
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6351617/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC6351617.1/41598_2018_37065_Fig2_HTML.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Gregory S. Gavelis, Maria Herranz, Kevin C. Wakeman, Christina Ripken,
+    Satoshi Mitarai, Gillian H. Gile, Patrick J. Keeling, Brian S. Leander; CC BY,
+    via PubMed Central
+  modality: OTHER
+  caption: 'Polykrikos kofoidii, Figure 2. D: transverse and longitudinal TEM sections
+    of the pusule collecting duct and diverticula (2 micrometer scale bars). E: interior
+    FIB-SEM surface reconstruction. G-H: orange pusule in cellular context (5 micrometer
+    bars). A-C and F depict nuclear features, not pusule anatomy; the nucleus, fibrous
+    ribbon and flagellar rootlets are not pusule components.'
+  taxon_id: NCBITaxon:271679
+  taxon_label: Polykrikos kofoidii
+  reference: DOI:10.1038/s41598-018-37065-w
+  retrieved_on: '2026-10-03'
+  notes: Figure 2 from article version PMC6351617.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
