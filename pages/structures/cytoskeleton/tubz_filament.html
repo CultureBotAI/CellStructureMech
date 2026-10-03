@@ -22,9 +22,11 @@
 <p class="definition">A plasmid-encoded bacterial tubulin-like cytoskeletal filament assembled from TubZ GTPase subunits that supports pBtoxis plasmid partitioning in Bacillus thuringiensis. <small>[<a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a>]</small></p>
 
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-tubz"><td>TubZ</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>tubZ</td><td></td><td>ESSENTIAL</td><td>Plasmid-encoded tubulin/FtsZ-family GTPase that polymerizes into dynamic filaments for pBtoxis plasmid partitioning.<ul class="evidence"><li><a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a> <small>Larsen et al. 2007 characterized Bacillus thuringiensis pBtoxis TubZ as a prokaryotic tubulin-like protein that treadmills and is required for plasmid stability.</small></li><li><a href="https://doi.org/10.1073/pnas.1010176107"><code>DOI:10.1073/pnas.1010176107</code></a> <small>Aylett et al. 2010 determined the filament structure of the bacterial tubulin homologue TubZ.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,11 +42,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-tubzrc_pbtoxis_partitioning">TubZ filaments support pBtoxis plasmid partitioning <small>(FUNCTION)</small></h3>
-<p>TubZ polymerizes into tubulin-like filaments and TubR bound to pBtoxis tubC centromere DNA engages TubZ filaments to support plasmid partitioning.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>TubZ polymerizes into tubulin-like filaments and TubR bound to pBtoxis tubC centromere DNA engages TubZ filaments to support plasmid partitioning.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: TubZ filaments support pBtoxis plasmid partitioning">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>TubZ</td><td>polymerizes into</td><td>TubZ filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a> <small>Larsen et al. 2007 characterized TubZ polymers from the pBtoxis plasmid.</small></li><li><a href="https://doi.org/10.1073/pnas.1010176107"><code>DOI:10.1073/pnas.1010176107</code></a> <small>Aylett et al. 2010 solved the TubZ filament structure.</small></li></ul></td></tr>
 <tr><td>TubR-tubC complex</td><td>engages</td><td>TubZ filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.1003817107"><code>DOI:10.1073/pnas.1003817107</code></a> <small>Ni et al. 2010 reported TubR DNA binding and recruitment of TubZ for DNA partition.</small></li></ul></td></tr>
 <tr><td>TubZ filament</td><td>supports</td><td>pBtoxis plasmid partitioning</td><td><ul class="evidence"><li><a href="https://doi.org/10.1101/gad.1546107"><code>DOI:10.1101/gad.1546107</code></a> <small>Larsen et al. 2007 connected TubZ treadmilling to pBtoxis plasmid stability.</small></li><li><a href="https://doi.org/10.1073/pnas.1210899109"><code>DOI:10.1073/pnas.1210899109</code></a> <small>Aylett and Lowe 2012 analyzed the pBtoxis TubR-tubC centromeric partition complex.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral grounding for plasmid-encoded filament-forming TubZ GTPases. <small>This first record curates TubZ from the Bacillus thuringiensis pBtoxis partition system without asserting that a broad tubulin/FtsZ GTPase domain accession exactly denotes TubZ filament-forming proteins.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): TubR and tubC centromere DNA are graph-scoped partition adapters rather than TubZ filament constituents. <small>TubR bound to the pBtoxis tubC centromere site engages TubZ filaments in the TubZRC partition system, but this centromeric complex is cargo-coupling machinery rather than a TubZ polymer subunit.</small></li></ul>

@@ -22,10 +22,12 @@
 <p class="definition">The volume enclosed by the nuclear inner membrane. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005634"><code>GO:0005634</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-nuclear_chromosome"><td>nuclear chromosome</td><td>OTHER</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a></td><td></td><td></td><td></td><td>Chromosome structure that encodes the eukaryotic nuclear genome inside the nuclear lumen.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a> <small>GO:0000228 identifies nuclear chromosomes as chromosomes that encode the nuclear genome and are part of the nuclear lumen.</small></li><li><a href="https://doi.org/10.1038/nature08973"><code>DOI:10.1038/nature08973</code></a> <small>Duan et al. 2010 modeled the three-dimensional organization of the Saccharomyces cerevisiae nuclear genome.</small></li></ul></td></tr>
 <tr id="components-nucleolus"><td>nucleolus</td><td>OTHER</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a></td><td></td><td></td><td></td><td>Dense nuclear body that concentrates ribosomal DNA transcription, pre-rRNA processing, and early ribosomal subunit assembly in the nuclear lumen.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a> <small>GO:0005730 defines the nucleolus as part of the nuclear lumen.</small></li><li><a href="https://doi.org/10.1038/nrm2184"><code>DOI:10.1038/nrm2184</code></a> <small>Boisvert et al. 2007 review the nucleolus as a nuclear body organized around ribosome biogenesis.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 
@@ -37,12 +39,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-nuclear_lumen_topology">The nuclear inner membrane encloses the nuclear lumen <small>(FUNCTION)</small></h3>
-<p>The nuclear inner membrane delimits the nuclear lumen, and the nuclear lumen contains nuclear chromosomes and the nucleolus.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The nuclear inner membrane delimits the nuclear lumen, and the nuclear lumen contains nuclear chromosomes and the nucleolus.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: The nuclear inner membrane encloses the nuclear lumen">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>nuclear inner membrane</td><td>delimits</td><td>nuclear lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> <small>GO:0031981 defines the nuclear lumen by the volume inside the nuclear inner membrane.</small></li></ul></td></tr>
 <tr><td>nuclear lumen</td><td>is part of</td><td>nucleus</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> <small>GO models the nuclear lumen as an internal compartment of the nucleus.</small></li></ul></td></tr>
 <tr><td>nuclear chromosome</td><td>is located in</td><td>nuclear lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a> <small>GO:0000228 places nuclear chromosomes in the nuclear lumen.</small></li></ul></td></tr>
 <tr><td>nucleolus</td><td>is located in</td><td>nuclear lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a> <small>GO:0005730 places the nucleolus in the nuclear lumen.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>INTERPRETATION</strong> (RESOLVED): Should nucleoplasm be added as an exact synonym of nuclear lumen? <small>This record follows GO:0031981 for the whole inner-membrane-enclosed nuclear volume and grounds contained nucleolar and chromosomal substructures separately. No exact synonymy between nuclear lumen and nucleoplasm was verified in this pass.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve remaining nuclear-lumen bodies and substructures before expanding the component list. <small>This first nuclear-lumen record grounds the nuclear chromosome and nucleolus because existing CellStructureMech records already curate their GO boundaries, but GO:0031981 can contain additional nuclear bodies and subregions whose exact GO and literature boundaries need separate review.</small></li></ul>

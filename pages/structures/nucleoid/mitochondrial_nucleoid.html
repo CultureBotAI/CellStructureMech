@@ -22,10 +22,12 @@
 <p class="definition">The region of a mitochondrion to which the DNA is confined. <small>[<a href="http://purl.obolibrary.org/obo/GO_0042645"><code>GO:0042645</code></a>]</small></p>
 <p><strong>Synonyms:</strong> mitochondrion nucleoid; mitochromosome</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005759"><code>GO:0005759</code></a> </p><p><strong>Xrefs:</strong> <code>uniprot.location:SL-0269</code> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-mitochondrial_dna"><td>mitochondrial DNA</td><td>DNA</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Mitochondrial genome DNA packaged with DNA-binding proteins into nucleoprotein foci inside the mitochondrial matrix.<ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.028605"><code>DOI:10.1242/jcs.028605</code></a> <small>Kucej et al. 2008 assayed Saccharomyces cerevisiae mitochondrial DNA organization in nucleoids under different metabolic states.</small></li><li><a href="https://doi.org/10.1016/j.tcb.2007.08.007"><code>DOI:10.1016/j.tcb.2007.08.007</code></a> <small>Kucej and Butow 2007 review mitochondrial nucleoids as nucleoprotein structures that package and maintain mitochondrial DNA.</small></li></ul></td></tr>
 <tr id="components-mitochondrial_hmg_box_proteins"><td>mitochondrial HMG-box DNA-binding proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>High-mobility-group DNA-binding proteins represented by Saccharomyces cerevisiae Abf2 that bind and package mtDNA within mitochondrial nucleoids.<ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.028605"><code>DOI:10.1242/jcs.028605</code></a> <small>Kucej et al. 2008 used ChIP-on-chip to show that Saccharomyces cerevisiae Abf2 binds most of the mitochondrial genome in vivo.</small></li><li><a href="https://doi.org/10.1534/genetics.108.095786"><code>DOI:10.1534/genetics.108.095786</code></a> <small>Sia et al. 2009 studied loss of the abundant Saccharomyces cerevisiae mitochondrial nucleoid-associated protein Abf2p.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,11 +43,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-abf2_mitochondrial_nucleoid_packaging">Abf2 helps package yeast mtDNA into mitochondrial nucleoids <small>(FUNCTION)</small></h3>
-<p>In Saccharomyces cerevisiae, the mitochondrial HMG-box protein Abf2 binds broadly across mtDNA and supports its packaging and stability in matrix-localized mitochondrial nucleoids.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In Saccharomyces cerevisiae, the mitochondrial HMG-box protein Abf2 binds broadly across mtDNA and supports its packaging and stability in matrix-localized mitochondrial nucleoids.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Abf2 helps package yeast mtDNA into mitochondrial nucleoids">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>mitochondrial HMG-box DNA-binding proteins</td><td>bind</td><td>mitochondrial DNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.028605"><code>DOI:10.1242/jcs.028605</code></a> <small>Kucej et al. 2008 mapped Abf2 binding across Saccharomyces cerevisiae mtDNA by in organello ChIP-on-chip.</small></li></ul></td></tr>
 <tr><td>mitochondrial DNA</td><td>is packaged in</td><td>mitochondrial nucleoid</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.tcb.2007.08.007"><code>DOI:10.1016/j.tcb.2007.08.007</code></a> <small>Kucej and Butow 2007 review the architecture of protein-bound mitochondrial nucleoids.</small></li></ul></td></tr>
 <tr><td>mitochondrial HMG-box DNA-binding proteins</td><td>supports</td><td>mitochondrial genome maintenance</td><td><ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.108.095786"><code>DOI:10.1534/genetics.108.095786</code></a> <small>Sia et al. 2009 measured increased mitochondrial frameshifts and direct-repeat deletions after loss of Abf2p.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for mitochondrial DNA and mitochondrial nucleoid-associated protein classes before adding additional mtDNA packaging factors. <small>This first mitochondrial nucleoid record keeps mtDNA and the Abf2-represented HMG-box protein component reviewed-label-only to avoid guessing Sequence Ontology or protein-family CURIEs.</small></li></ul>

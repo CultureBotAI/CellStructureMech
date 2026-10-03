@@ -22,10 +22,12 @@
 <p class="definition">A histone chaperone complex that facilitates nucleosome disassembly and reassembly upon DNA or RNA polymerase passage. <small>[<a href="http://purl.obolibrary.org/obo/GO_0035101"><code>GO:0035101</code></a>]</small></p>
 <p><strong>Synonyms:</strong> Facilitates chromatin transcription complex</p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-spt16_fact_subunit"><td>Spt16 FACT subunit</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>SPT16</td><td></td><td>UNKNOWN</td><td>Large histone-chaperone constituent of the budding-yeast Spt16-Pob3 FACT core.<ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/20.13.3506"><code>DOI:10.1093/emboj/20.13.3506</code></a> <small>Formosa et al. 2001 reported that the Saccharomyces cerevisiae Spt16/Cdc68 and Pob3 proteins form the yeast Spt16-Pob3 heterodimer.</small></li></ul></td></tr>
 <tr id="components-pob3_fact_subunit"><td>Pob3 FACT subunit</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>POB3</td><td></td><td>UNKNOWN</td><td>Protein constituent of the budding-yeast Spt16-Pob3 FACT core that supplies the SSRP1-related middle domain.<ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/20.13.3506"><code>DOI:10.1093/emboj/20.13.3506</code></a> <small>Formosa et al. 2001 reported that the Saccharomyces cerevisiae Spt16/Cdc68 and Pob3 proteins form the yeast Spt16-Pob3 heterodimer.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,12 +43,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-yeast_fact_nucleosome_reorganization">FACT supports nucleosome reorganization during transcription <small>(FUNCTION)</small></h3>
-<p>In Saccharomyces cerevisiae, the Spt16-Pob3 FACT core works with Nhp6 to reorganize nucleosomes and supports RNA polymerase II transcription through nucleosomal templates.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In Saccharomyces cerevisiae, the Spt16-Pob3 FACT core works with Nhp6 to reorganize nucleosomes and supports RNA polymerase II transcription through nucleosomal templates.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: FACT supports nucleosome reorganization during transcription">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Spt16 FACT subunit</td><td>contributes to</td><td>FACT complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/20.13.3506"><code>DOI:10.1093/emboj/20.13.3506</code></a> <small>Formosa et al. 2001 reported that Spt16/Cdc68 and Pob3 form a heterodimer in budding yeast.</small></li></ul></td></tr>
 <tr><td>Pob3 FACT subunit</td><td>contributes to</td><td>FACT complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/20.13.3506"><code>DOI:10.1093/emboj/20.13.3506</code></a> <small>Formosa et al. 2001 reported that Spt16/Cdc68 and Pob3 form a heterodimer in budding yeast.</small></li></ul></td></tr>
 <tr><td>FACT complex</td><td>supports</td><td>nucleosome organization</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035101"><code>GO:0035101</code></a> <small>GO:0035101 defines FACT as a histone chaperone complex that facilitates nucleosome disassembly and reassembly during polymerase passage.</small></li></ul></td></tr>
 <tr><td>FACT complex</td><td>supports</td><td>DNA-templated transcription elongation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1085703"><code>DOI:10.1126/science.1085703</code></a> <small>Belotserkovskaya et al. 2003 studied FACT-dependent RNA polymerase II transcription through nucleosomes.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (RESOLVED): Do not model Nhp6 as a core FACT complex constituent. <small>Formosa et al. 2001 reported that Spt16/Cdc68 and Pob3 form a yeast heterodimer and that this heterodimer combines with Nhp6 to form the nucleosome-binding factor SPN, supporting Nhp6 as a DNA-binding cofactor for the yeast SPN activity rather than one of the two FACT core constituents.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral family groundings for the FACT complex constituents. <small>The curated FACT component labels are yeast gene-name-based classes. This pass verified the gene symbols and the Spt16-Pob3 composition but did not verify exact InterPro, Pfam, NCBIfam or UniProt family CURIEs that should be reused across fungi.</small></li></ul>

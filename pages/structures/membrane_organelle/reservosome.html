@@ -22,11 +22,13 @@
 <p class="definition">A posterior, membrane-bounded endocytic organelle in Trypanosoma cruzi epimastigotes that receives internalized macromolecular cargo. <small>[<a href="https://doi.org/10.1017/S0031182004005797"><code>DOI:10.1017/S0031182004005797</code></a>]</small></p>
 
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-reservosome_membrane"><td>reservosome membrane</td><td>LIPID</td><td>part of</td><td></td><td></td><td></td><td></td><td>Membrane boundary of the posterior acidic compartment that separates reservosome contents from the T. cruzi cytosol.<ul class="evidence"><li><a href="https://doi.org/10.1017/S0031182004005797"><code>DOI:10.1017/S0031182004005797</code></a> <small>Figueiredo et al. 2004 described reservosomes as large membrane-bound organelles in T. cruzi epimastigotes.</small></li></ul></td></tr>
 <tr id="components-endocytosed_cargo"><td>endocytosed protein and lipid cargo</td><td>OTHER</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td></td><td>Proteins and lipids internalized through the endocytic pathway and stored inside reservosomes.<ul class="evidence"><li><a href="https://doi.org/10.1078/0171-9335-00112"><code>DOI:10.1078/0171-9335-00112</code></a> <small>Porto-Carreiro et al. 2000 traced endocytic cargo entering the cytostome and reaching reservosomes.</small></li></ul></td></tr>
 <tr id="components-cruzipain"><td>cruzipain</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td></td><td>Major lysosomal cysteine proteinase concentrated in the reservosome lumen.<ul class="evidence"><li><a href="https://doi.org/10.1002/pmic.200800730"><code>DOI:10.1002/pmic.200800730</code></a> <small>Sant&#39;Anna et al. 2009 identified hydrolases, including cruzipain, in the reservosome proteome.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -42,12 +44,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-endocytic_storage_and_proteolysis">Reservosomes store cargo and contain hydrolases <small>(FUNCTION)</small></h3>
-<p>Cargo entering through the cytostome-cytopharynx reaches the reservosome, where internalized protein and lipid cargo is stored alongside a hydrolase pool that includes cruzipain.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Cargo entering through the cytostome-cytopharynx reaches the reservosome, where internalized protein and lipid cargo is stored alongside a hydrolase pool that includes cruzipain.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Reservosomes store cargo and contain hydrolases">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>cytostome-cytopharynx</td><td>delivers</td><td>endocytosed protein and lipid cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1078/0171-9335-00112"><code>DOI:10.1078/0171-9335-00112</code></a> <small>Porto-Carreiro et al. 2000 traced endocytic cargo from the cytostome through the endosomal pathway.</small></li></ul></td></tr>
 <tr><td>endocytosed protein and lipid cargo</td><td>accumulates in</td><td>reservosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1078/0171-9335-00112"><code>DOI:10.1078/0171-9335-00112</code></a> <small>Porto-Carreiro et al. 2000 placed reservosomes at the storage end of the T. cruzi epimastigote endocytic pathway.</small></li></ul></td></tr>
 <tr><td>cruzipain</td><td>localizes to</td><td>reservosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/pmic.200800730"><code>DOI:10.1002/pmic.200800730</code></a> <small>Sant&#39;Anna et al. 2009 detected cruzipain and other hydrolases in purified reservosomes.</small></li></ul></td></tr>
 <tr><td>cruzipain</td><td>is associated with</td><td>reservosome cargo proteolysis</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/pmic.200800730"><code>DOI:10.1002/pmic.200800730</code></a> <small>Sant&#39;Anna et al. 2009 detected cruzipain and other lysosomal hydrolases in purified reservosomes and discussed protein degradation and regulation as a reservosome role.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact cruzipain isoforms, chagasin, proton pumps and other reservosome-localized markers before expanding the proteolysis graph. <small>The purified reservosome proteome includes many proteins, but this first pass curates only the broad cruzipain pool and leaves isoform-level and inhibitor boundaries for a targeted grounding review.</small></li></ul>

@@ -22,10 +22,12 @@
 <p class="definition">A protein complex that negatively regulates strand-opening at the origin of replication, thereby interfering with replication initiation. This complex is thought to be involved in the regulation of replication under oxidative stress conditions. In E. coli, this complex is composed of DnaA and Dps. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a>]</small></p>
 
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-dnaa_initiator"><td>DnaA replication initiation protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>dnaA</td><td></td><td>UNKNOWN</td><td>Replication initiator constituent bound by Dps in the DnaA-Dps complex.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 defines the E. coli DnaA-Dps complex as being composed of DnaA and Dps.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a> <small>Chodavarapu et al. 2008 reported that E. coli Dps specifically interacts with DnaA protein.</small></li></ul></td></tr>
 <tr id="components-dps_protein"><td>Dps DNA-binding protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>dps</td><td></td><td>UNKNOWN</td><td>Oxidative-stress-induced DNA-binding protein that interacts with DnaA and impedes replication initiation.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 defines the E. coli DnaA-Dps complex as being composed of Dps and DnaA.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a> <small>Chodavarapu et al. 2008 studied E. coli Dps interaction with DnaA in replication initiation control.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,11 +43,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-dnaa_dps_inhibition">Dps inhibits DnaA initiation activity <small>(FUNCTION)</small></h3>
-<p>Dps binds DnaA to form a complex that supports negative regulation of replication initiation by interfering with origin strand opening.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Dps binds DnaA to form a complex that supports negative regulation of replication initiation by interfering with origin strand opening.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Dps inhibits DnaA initiation activity">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>DnaA replication initiation protein</td><td>contributes to</td><td>DnaA-Dps complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 defines the E. coli complex as being composed of DnaA and Dps.</small></li></ul></td></tr>
 <tr><td>Dps DNA-binding protein</td><td>contributes to</td><td>DnaA-Dps complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 names Dps as a constituent of the DnaA-Dps complex.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a> <small>Chodavarapu et al. 2008 reported Dps interaction with DnaA protein.</small></li></ul></td></tr>
 <tr><td>DnaA-Dps complex</td><td>supports</td><td>negative regulation of DNA-templated DNA replication initiation</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990084"><code>GO:1990084</code></a> <small>GO:1990084 defines the complex by negative regulation of origin strand opening and interference with replication initiation.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18284581"><code>PMID:18284581</code></a> <small>Chodavarapu et al. 2008 found that Dps inhibits DnaA function in initiation by interfering with origin strand opening.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral DnaA and Dps family groundings for the DnaA-Dps complex. <small>GO:1990084 names DnaA and Dps as the E. coli constituents of the DnaA-Dps complex. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family CURIEs need narrower curation before these components can be grounded.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the DnaA-Dps complex distinct from DnaA/Hda RIDA complexes. <small>GO:1990084 denotes DnaA bound to Dps, whereas GO:1990083 denotes the DnaA-Hda complex and GO:1990085 denotes Hda bound to the DnaN beta clamp.</small></li></ul>

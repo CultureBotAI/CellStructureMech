@@ -22,10 +22,12 @@
 <p class="definition">A protein complex that inactivates the function of DnaA by inhibiting the phosphorylation of DnaA-ADP to DnaA-ATP and thereby preventing multiple events of replication initiation. In E. coli, this complex is composed of DnaA and Hda. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990083"><code>GO:1990083</code></a>]</small></p>
 
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-dnaa_initiator"><td>DnaA replication initiation protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>dnaA</td><td></td><td>UNKNOWN</td><td>Replication initiator constituent bound by Hda during regulatory inactivation of DnaA.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990083"><code>GO:1990083</code></a> <small>GO:1990083 defines the DnaA-Hda complex as being composed of DnaA and Hda in E. coli.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/21708944"><code>PMID:21708944</code></a> <small>Keyamura and Katayama 2011 tested DnaA residues needed for E. coli DnaA-Hda interaction during regulatory inactivation of DnaA.</small></li></ul></td></tr>
 <tr id="components-hda_regulator"><td>Hda DnaA-related protein</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>hda</td><td></td><td>UNKNOWN</td><td>DnaA-related regulatory inactivation factor that binds DnaA in the DnaA-Hda complex.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990083"><code>GO:1990083</code></a> <small>GO:1990083 defines the E. coli DnaA-Hda complex as containing Hda.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/21708944"><code>PMID:21708944</code></a> <small>Keyamura and Katayama 2011 modeled and tested Hda interactions with the DnaA DNA-binding and AAA+ domains.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,11 +43,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-dnaa_hda_rida">Hda binds DnaA for RIDA <small>(FUNCTION)</small></h3>
-<p>Hda binds DnaA in a protein complex that supports regulatory inactivation of DnaA and thereby suppresses extra replication initiation events.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Hda binds DnaA in a protein complex that supports regulatory inactivation of DnaA and thereby suppresses extra replication initiation events.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Hda binds DnaA for RIDA">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>DnaA replication initiation protein</td><td>contributes to</td><td>DnaA-Hda complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990083"><code>GO:1990083</code></a> <small>GO:1990083 defines the E. coli complex as being composed of DnaA and Hda.</small></li></ul></td></tr>
 <tr><td>Hda DnaA-related protein</td><td>contributes to</td><td>DnaA-Hda complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990083"><code>GO:1990083</code></a> <small>GO:1990083 defines the E. coli complex as being composed of DnaA and Hda.</small></li></ul></td></tr>
 <tr><td>DnaA-Hda complex</td><td>supports</td><td>negative regulation of DNA-templated DNA replication initiation</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990083"><code>GO:1990083</code></a> <small>GO:1990083 defines the complex by inactivation of DnaA and prevention of multiple replication initiation events.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/21708944"><code>PMID:21708944</code></a> <small>Keyamura and Katayama 2011 showed that functional DnaA-Hda interactions are needed for regulatory inactivation of DnaA.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral DnaA and Hda family groundings for the DnaA-Hda complex. <small>GO:1990083 names DnaA and Hda as the E. coli constituents of the DnaA-Hda complex. Exact source-neutral InterPro, Pfam, NCBIfam or UniProt family CURIEs need narrower curation before these components can be grounded.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the DnaA-Hda complex distinct from the Hda-beta clamp complex. <small>GO:1990083 denotes the DnaA-Hda complex, whereas GO:1990085 separately denotes Hda bound to the DnaN beta clamp. Keyamura and Katayama 2011 studied DnaA-Hda contacts during RIDA in the context of DNA-loaded clamp-Hda but do not make the beta clamp a required constituent of the GO:1990083 entity.</small></li></ul>

@@ -22,10 +22,12 @@
 <p class="definition">A ribonuclease complex with 3&#39;-to-5&#39; exoribonuclease activity that participates in RNA processing and degradation. <small>[<a href="http://purl.obolibrary.org/obo/GO_0000178"><code>GO:0000178</code></a>]</small></p>
 <p><strong>Synonyms:</strong> exosome multienzyme ribonuclease complex; RNA exosome</p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-nine_subunit_exosome_core"><td>nine-subunit exosome core</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td>9 subunits</td><td>UNKNOWN</td><td>Protein barrel and cap that form the conserved scaffold of eukaryotic RNA exosome complexes.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2006.10.037"><code>DOI:10.1016/j.cell.2006.10.037</code></a> <small>Liu et al. 2006 reconstituted nine-subunit yeast and human exosomes and determined the crystal structure of a human nine-subunit exosome.</small></li><li><code>RCSB_PDB:2NN6</code> <small>RCSB PDB 2NN6 records the Liu et al. human RNA exosome structure with Rrp41, Rrp45, Rrp46, Rrp43, Mtr3, Rrp42, Csl4, Rrp4 and Rrp40.</small></li></ul></td></tr>
 <tr id="components-rrp44_dis3_rnase"><td>Rrp44/Dis3 catalytic nuclease</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>RRP44, DIS3</td><td></td><td>UNKNOWN</td><td>Catalytic 3-prime-to-5-prime exoribonuclease associated with the yeast exosome.<ul class="evidence"><li><a href="https://doi.org/10.1016/s0092-8674(00)80432-8"><code>DOI:10.1016/s0092-8674(00)80432-8</code></a> <small>Mitchell et al. 1997 identified Rrp44/Dis3 among the original Saccharomyces cerevisiae exosome proteins.</small></li><li><a href="https://doi.org/10.1016/j.cell.2006.10.037"><code>DOI:10.1016/j.cell.2006.10.037</code></a> <small>Liu et al. 2006 compared yeast 9-, 10- and 11-subunit exosomes and assigned processive hydrolytic activity to Rrp44 and to the yeast 10-subunit exosome.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,11 +43,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-rna_exosome_decay">RNA exosome catalytic subunits degrade RNA <small>(FUNCTION)</small></h3>
-<p>The conserved nine-subunit RNA exosome core and associated Rrp44/Dis3 catalytic nuclease form a yeast 10-subunit exosome that acts on RNA substrates.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The conserved nine-subunit RNA exosome core and associated Rrp44/Dis3 catalytic nuclease form a yeast 10-subunit exosome that acts on RNA substrates.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: RNA exosome catalytic subunits degrade RNA">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>nine-subunit exosome core</td><td>scaffolds</td><td>exosome (RNase complex)</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2006.10.037"><code>DOI:10.1016/j.cell.2006.10.037</code></a> <small>Liu et al. 2006 reconstituted yeast and human nine-subunit exosomes.</small></li></ul></td></tr>
 <tr><td>Rrp44/Dis3 catalytic nuclease</td><td>provides hydrolytic activity for</td><td>exosome (RNase complex)</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2006.10.037"><code>DOI:10.1016/j.cell.2006.10.037</code></a> <small>Liu et al. 2006 assigned processive hydrolytic activity to yeast Rrp44 and to the yeast 10-subunit exosome.</small></li></ul></td></tr>
 <tr><td>exosome (RNase complex)</td><td>supports</td><td>RNA catabolic process</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2006.10.037"><code>DOI:10.1016/j.cell.2006.10.037</code></a> <small>Liu et al. 2006 reconstituted yeast exosomes and analyzed their RNA-degradation activities.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral InterPro, Pfam, GO or Complex Portal groundings for the RNA exosome core and Dis3/Rrp44 nuclease; split the nine core protein families and decide whether Rrp6 belongs only on a nuclear-exosome child record when exact cross-taxon boundaries are justified. <small>The first RNase exosome record captures the conserved core and Dis3/Rrp44 catalytic subunit as reviewed, label-only components. A follow-up curation pass should map exact family boundaries and separate cytoplasmic, nuclear, Rrp6-containing and archaeal exosome variants.</small></li></ul>

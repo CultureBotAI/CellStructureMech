@@ -22,9 +22,11 @@
 <p class="definition">A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell&#39;s chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005634"><code>GO:0005634</code></a>]</small></p>
 <p><strong>Synonyms:</strong> cell nucleus</p><p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005635"><code>GO:0005635</code></a> <a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> <a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-nuclear_pore"><td>nuclear pore</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a></td><td></td><td></td><td>UNKNOWN</td><td>Membrane-embedded pore complex that spans the nuclear envelope and mediates exchange between nucleoplasm and cytoplasm.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> <small>GO:0005643 defines the nuclear pore as a protein complex that provides a discrete opening in the nuclear envelope.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,12 +42,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-yeast_nucleus_envelope_and_pores">Nuclear envelope bounds a pore-gated lumen <small>(FUNCTION)</small></h3>
-<p>In budding yeast, the nuclear envelope surrounds the nuclear lumen and is perforated by nuclear pores that mediate nucleocytoplasmic exchange.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In budding yeast, the nuclear envelope surrounds the nuclear lumen and is perforated by nuclear pores that mediate nucleocytoplasmic exchange.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Nuclear envelope bounds a pore-gated lumen">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>nuclear envelope</td><td>bounds</td><td>nuclear lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> <small>GO:0031981 defines the nuclear lumen as the volume enclosed by the nuclear inner membrane.</small></li></ul></td></tr>
 <tr><td>nuclear envelope</td><td>encloses</td><td>nucleus</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005635"><code>GO:0005635</code></a> <small>GO:0005635 defines the nuclear envelope as the double lipid bilayer that encloses the nucleus.</small></li></ul></td></tr>
 <tr><td>nuclear pore</td><td>spans</td><td>nuclear envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> <small>GO:0005643 places nuclear pores at openings in the nuclear envelope where the inner and outer nuclear membranes are joined.</small></li></ul></td></tr>
 <tr><td>nuclear pore</td><td>mediates</td><td>nucleocytoplasmic transport</td><td><ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.111.127803"><code>DOI:10.1534/genetics.111.127803</code></a> <small>Aitchison and Rout 2012 review transport through the budding-yeast nuclear pore complex.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral boundaries and groundings for chromatin, nucleolar RNP, and nuclear-envelope-associated protein cohorts in the nucleus. <small>This first nucleus record grounds the nuclear pore as an exact protein-complex component but avoids treating chromatin or nucleolar cohorts as a single exact protein, RNA, or DNA component.</small></li></ul>

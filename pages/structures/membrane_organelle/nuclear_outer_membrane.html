@@ -22,9 +22,11 @@
 <p class="definition">The outer, i.e. cytoplasm-facing, lipid bilayer of the nuclear envelope. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a>]</small></p>
 <p><strong>Synonyms:</strong> outer nuclear membrane</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005635"><code>GO:0005635</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-nuclear_outer_lipid_bilayer"><td>nuclear outer membrane lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Cytoplasm-facing lipid-bilayer constituent of the nuclear envelope outer membrane.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> <small>GO:0005640 defines the nuclear outer membrane as the cytoplasm-facing lipid bilayer of the nuclear envelope.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,7 +42,8 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-yeast_nuclear_outer_membrane_contacts">Yeast nuclear outer membrane forms vacuole contacts <small>(FUNCTION)</small></h3>
-<p>The nuclear outer membrane is the cytoplasm-facing nuclear envelope membrane and carries Nvj1p for yeast nucleus-vacuole junction formation.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The nuclear outer membrane is the cytoplasm-facing nuclear envelope membrane and carries Nvj1p for yeast nucleus-vacuole junction formation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Yeast nuclear outer membrane forms vacuole contacts">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>nuclear outer membrane</td><td>is part of</td><td>nuclear envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> <small>GO:0005640 defines the nuclear outer membrane as the cytoplasm-facing lipid bilayer of the nuclear envelope.</small></li></ul></td></tr>
 <tr><td>nuclear envelope lumen</td><td>lies between</td><td>nuclear outer membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a> <small>GO:0005641 defines the nuclear envelope lumen as the region between the two nuclear envelope bilayers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 identifies the inner nuclear envelope bilayer.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> <small>GO:0005640 identifies the outer nuclear envelope bilayer.</small></li></ul></td></tr>
 <tr><td>nuclear envelope lumen</td><td>lies between</td><td>nuclear inner membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a> <small>GO:0005641 defines the nuclear envelope lumen as the region between the two nuclear envelope bilayers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 identifies the inner nuclear envelope bilayer.</small></li></ul></td></tr>
@@ -48,6 +51,7 @@
 <tr><td>Vac8p</td><td>localizes to</td><td>vacuolar membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.11.7.2445"><code>DOI:10.1091/mbc.11.7.2445</code></a> <small>Pan et al. 2000 identified Vac8p as the vacuolar Nvj1p partner that forms nucleus-vacuole junctions.</small></li></ul></td></tr>
 <tr><td>Nvj1p</td><td>interacts with</td><td>Vac8p</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.11.7.2445"><code>DOI:10.1091/mbc.11.7.2445</code></a> <small>Pan et al. 2000 found that Nvj1p directly interacts with Vac8p to form nucleus-vacuole junctions.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>INTERPRETATION</strong> (RESOLVED): Keep the paired nuclear inner membrane and nuclear envelope lumen as neighboring nuclear-envelope structures rather than as nuclear outer membrane components. <small>GO:0005640 denotes the outer bilayer of the nuclear envelope, GO:0005637 denotes the distinct inner bilayer, and GO:0005641 denotes the lumen between those bilayers.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for yeast Nvj1p and Vac8p. <small>This record uses Nvj1p and Vac8p in the functional graph to capture the cited yeast nucleus-vacuole junction example but leaves those protein nodes ungrounded until exact UniProtKB or family-level identifiers can be verified.</small></li></ul>

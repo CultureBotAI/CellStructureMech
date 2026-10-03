@@ -22,9 +22,11 @@
 <p class="definition">A vacuole to which materials ingested by endocytosis are delivered. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005768"><code>GO:0005768</code></a>]</small></p>
 <p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0010008"><code>GO:0010008</code></a> <a href="http://purl.obolibrary.org/obo/GO_0031904"><code>GO:0031904</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-endosome_membrane"><td>endosome membrane</td><td>LIPID</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0010008"><code>GO:0010008</code></a></td><td></td><td></td><td>ESSENTIAL</td><td>Lipid bilayer that encloses the endosome lumen and carries sorting machinery and membrane cargo.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0010008"><code>GO:0010008</code></a> <small>GO:0010008 defines the endosome membrane as the lipid bilayer surrounding an endosome.</small></li><li><a href="https://doi.org/10.1083/jcb.200302136"><code>DOI:10.1083/jcb.200302136</code></a> <small>Katzmann et al. 2003 localized yeast Vps27 and ESCRT-I recruitment to endosomal membranes during MVB sorting.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,7 +42,8 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-yeast_escrt_mvb_sorting">ESCRT machinery sorts endosomal cargo into multivesicular bodies <small>(FUNCTION)</small></h3>
-<p>In Saccharomyces cerevisiae, Vps27 and ESCRT complexes are recruited to endosomal membranes to sort ubiquitinated membrane cargo and package it into multivesicular-body intraluminal vesicles.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In Saccharomyces cerevisiae, Vps27 and ESCRT complexes are recruited to endosomal membranes to sort ubiquitinated membrane cargo and package it into multivesicular-body intraluminal vesicles.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: ESCRT machinery sorts endosomal cargo into multivesicular bodies">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>endosome membrane</td><td>bounds</td><td>endosome lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031904"><code>GO:0031904</code></a> <small>GO:0031904 defines the endosome lumen as the volume enclosed by the membrane of an endosome.</small></li></ul></td></tr>
 <tr><td>Vps27 endosomal ESCRT-I recruiter</td><td>recruits</td><td>ESCRT I complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200302136"><code>DOI:10.1083/jcb.200302136</code></a> <small>Katzmann et al. 2003 found that yeast Vps27 recruits ESCRT-I to endosomal membranes.</small></li></ul></td></tr>
 <tr><td>ESCRT I complex</td><td>sorts</td><td>ubiquitinated membrane cargo</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/11511343"><code>PMID:11511343</code></a> <small>Katzmann, Babst and Emr 2001 showed ESCRT-I is needed for ubiquitin-dependent MVB cargo sorting.</small></li></ul></td></tr>
@@ -49,6 +52,7 @@
 <tr><td>endosome membrane</td><td>forms</td><td>multivesicular body intraluminal vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005771"><code>GO:0005771</code></a> <small>GO:0005771 defines multivesicular bodies as endosomes with internal vesicles formed by invagination of the limiting endosomal membrane.</small></li></ul></td></tr>
 <tr><td>multivesicular body intraluminal vesicle</td><td>is contained in</td><td>multivesicular body</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005771"><code>GO:0005771</code></a> <small>GO:0005771 defines multivesicular bodies as endosomes with internal vesicles formed by limiting-membrane invagination.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings and separate record boundaries for Vps27 cargo-recognition machinery, ESCRT-I, ESCRT-II, ESCRT-III, Doa4 and Vps4 before adding a more detailed MVB-sorting machinery model. <small>This first endosome record grounds the membrane boundary and uses GO-grounded ESCRT complexes as graph nodes, but keeps transient cargo-recognition, deubiquitination and recycling machinery out of the endosome component table until exact complex boundaries or dedicated subcomplex records are reviewed.</small></li></ul>

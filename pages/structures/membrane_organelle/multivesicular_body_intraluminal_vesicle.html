@@ -22,9 +22,11 @@
 <p class="definition">A membrane-bounded vesicle inside a multivesicular body that forms when the limiting endosomal membrane buds inward and pinches into the lumen during multivesicular body sorting. <small>[<a href="https://doi.org/10.1016/j.devcel.2011.05.015"><code>DOI:10.1016/j.devcel.2011.05.015</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005771"><code>GO:0005771</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-intraluminal_vesicle_lipid_bilayer"><td>intraluminal vesicle lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Lipid-bilayer constituent that buds from the multivesicular-body limiting membrane to enclose each intraluminal vesicle.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005771"><code>GO:0005771</code></a> <small>GO:0005771 defines multivesicular bodies as endosomes with internal vesicles formed by invagination of the limiting endosomal membrane.</small></li><li><a href="https://doi.org/10.1016/j.devcel.2011.05.015"><code>DOI:10.1016/j.devcel.2011.05.015</code></a> <small>Henne, Buchkovich and Emr 2011 reviewed intraluminal vesicle formation as inward budding of the endosomal limiting membrane in the ESCRT pathway.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,11 +42,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-yeast_escrt_mvb_intraluminal_vesicle_formation">ESCRT machinery forms multivesicular-body intraluminal vesicles <small>(ASSEMBLY)</small></h3>
-<p>In Saccharomyces cerevisiae, ESCRT-III remodels the multivesicular-body limiting membrane so it buds inward and forms intraluminal vesicles in the multivesicular-body lumen.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In Saccharomyces cerevisiae, ESCRT-III remodels the multivesicular-body limiting membrane so it buds inward and forms intraluminal vesicles in the multivesicular-body lumen.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: ESCRT machinery forms multivesicular-body intraluminal vesicles">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>ESCRT III complex</td><td>remodels</td><td>multivesicular body membrane</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/12194857"><code>PMID:12194857</code></a> <small>Babst et al. 2002 characterized yeast ESCRT-III as an endosome-associated complex required for MVB sorting.</small></li><li><a href="https://doi.org/10.1016/j.devcel.2011.05.015"><code>DOI:10.1016/j.devcel.2011.05.015</code></a> <small>Henne, Buchkovich and Emr 2011 reviewed ESCRT-III as the membrane-remodeling complex in the endosomal ESCRT pathway.</small></li></ul></td></tr>
 <tr><td>multivesicular body membrane</td><td>buds inward to form</td><td>multivesicular body intraluminal vesicle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005771"><code>GO:0005771</code></a> <small>GO:0005771 defines multivesicular bodies as endosomes with internal vesicles formed by invagination of the limiting endosomal membrane.</small></li></ul></td></tr>
 <tr><td>multivesicular body intraluminal vesicle</td><td>is contained in</td><td>multivesicular body lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005771"><code>GO:0005771</code></a> <small>GO:0005771 defines the multivesicular body by the presence of internal vesicles.</small></li><li><code>uniprot.location:SL-0340</code> <small>UniProt SL-0340 identifies the internal multivesicular body lumen.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the lipid bilayer of multivesicular-body intraluminal vesicles. <small>The record is grounded as an intraluminal-vesicle substructure of the multivesicular body, but this pass did not curate a separate CURIE for the membrane lipid constituent of one vesicle.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep ESCRT complexes and cargo-recognition factors out of the multivesicular-body intraluminal vesicle component list. <small>ESCRT machinery sorts cargo and drives limiting-membrane remodeling during intraluminal-vesicle formation, but it is modeled as assembly machinery rather than as a stable molecular constituent of the resulting vesicle.</small></li></ul>

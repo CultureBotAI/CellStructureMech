@@ -22,9 +22,11 @@
 <p class="definition">A slime layer is an easily removed, diffuse, unorganized layer of extracellular material that surrounds a cell. Specifically this consists mostly of exopolysaccharides, glycoproteins, and glycolipids. <small>[<a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a>]</small></p>
 <p><strong>Xrefs:</strong> <code>uniprot.location:SL-0247</code> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-slime_layer_extracellular_material"><td>slime-layer extracellular material</td><td>OTHER</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Forms the loose, diffuse extracellular glycocalyx matrix that surrounds the cell surface.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> <small>GO:0030114 defines a slime layer as diffuse extracellular material that surrounds a cell and consists mostly of exopolysaccharides, glycoproteins and glycolipids.</small></li><li><a href="https://doi.org/10.1042/bj1120521"><code>DOI:10.1042/bj1120521</code></a> <small>Brown, Foster and Clamp 1969 chemically characterized Pseudomonas aeruginosa slime as predominantly polysaccharide with additional nucleic acid material and minor protein.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 
@@ -36,10 +38,12 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-diffuse_glycocalyx_matrix">Extracellular material forms a loose glycocalyx <small>(ASSEMBLY)</small></h3>
-<p>Mixed extracellular material accumulates as a diffuse, easily removed slime layer rather than as a highly organized capsule.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Mixed extracellular material accumulates as a diffuse, easily removed slime layer rather than as a highly organized capsule.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Extracellular material forms a loose glycocalyx">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>slime-layer extracellular material</td><td>forms</td><td>slime layer</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> <small>GO:0030114 defines the slime layer by diffuse extracellular material.</small></li><li><a href="https://doi.org/10.1042/bj1120521"><code>DOI:10.1042/bj1120521</code></a> <small>Brown, Foster and Clamp 1969 found Pseudomonas aeruginosa slime to be predominantly polysaccharide with nucleic acid material and minor protein.</small></li></ul></td></tr>
 <tr><td>slime layer</td><td>surrounds</td><td>cell surface</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030114"><code>GO:0030114</code></a> <small>GO:0030114 defines the slime layer as surrounding a cell.</small></li><li><code>uniprot.location:SL-0247</code> <small>UniProt Subcellular Location entry SL-0247 describes the slime layer as extracellular material that surrounds the bacterial cell.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep diffuse slime layers separate from the organized capsule record. <small>GO:0030114 and UniProt SL-0247 denote a loose, diffuse glycocalyx that is easily removed, whereas GO:0042603 denotes the organized capsule subclass of glycocalyx; slime layer therefore belongs in a separate sibling record.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for slime-layer matrix material. <small>This first slime-layer record curates a broad extracellular matrix component while leaving exact glycan, glycoprotein and glycolipid identifiers open for species-specific follow-up.</small></li></ul>

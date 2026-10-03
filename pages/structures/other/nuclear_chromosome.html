@@ -22,10 +22,12 @@
 <p class="definition">A chromosome that encodes the nuclear genome and is found in the nucleus of a eukaryotic cell during the cell cycle phases when the nucleus is intact. <small>[<a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a>]</small></p>
 <p><strong>Synonyms:</strong> nuclear interphase chromosome</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-chromosomal_dna"><td>nuclear chromosomal DNA</td><td>DNA</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Linear nuclear DNA molecules that carry the eukaryotic nuclear genome.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a> <small>GO:0000228 defines a nuclear chromosome as encoding the nuclear genome.</small></li><li><a href="https://doi.org/10.1038/nature08973"><code>DOI:10.1038/nature08973</code></a> <small>Duan et al. 2010 modeled the Saccharomyces cerevisiae nuclear genome in three dimensions.</small></li></ul></td></tr>
 <tr id="components-chromatin_proteins"><td>chromatin-associated proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Histone and non-histone proteins that package and organize nuclear chromosomal DNA.<ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-genet-120116-023438"><code>DOI:10.1146/annurev-genet-120116-023438</code></a> <small>Noma 2017 reviewed mechanisms that organize the three-dimensional budding-yeast genome.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,12 +43,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-chromatinized_dna_forms_nuclear_chromosome">Chromatinized DNA folds into a nuclear chromosome <small>(ASSEMBLY)</small></h3>
-<p>In budding yeast, nuclear chromosomal DNA is packaged by chromatin proteins and folded inside the nuclear lumen as part of the three-dimensional genome.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>In budding yeast, nuclear chromosomal DNA is packaged by chromatin proteins and folded inside the nuclear lumen as part of the three-dimensional genome.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Chromatinized DNA folds into a nuclear chromosome">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>nuclear chromosomal DNA</td><td>is a DNA constituent of</td><td>nuclear chromosome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a> <small>GO:0000228 defines a nuclear chromosome as encoding the nuclear genome.</small></li><li><a href="https://doi.org/10.1038/nature08973"><code>DOI:10.1038/nature08973</code></a> <small>Duan et al. 2010 modeled Saccharomyces cerevisiae nuclear chromosomes as folded genomic DNA molecules.</small></li></ul></td></tr>
 <tr><td>chromatin-associated proteins</td><td>organize</td><td>nuclear chromosomal DNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-genet-120116-023438"><code>DOI:10.1146/annurev-genet-120116-023438</code></a> <small>Noma 2017 reviewed yeast factors that shape three-dimensional genome organization.</small></li></ul></td></tr>
 <tr><td>nuclear chromosome</td><td>is located in</td><td>nuclear lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000228"><code>GO:0000228</code></a> <small>GO asserts GO:0000228 nuclear chromosome part_of GO:0031981 nuclear lumen.</small></li></ul></td></tr>
 <tr><td>nuclear chromosome</td><td>undergoes</td><td>chromosome organization</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-genet-120116-023438"><code>DOI:10.1146/annurev-genet-120116-023438</code></a> <small>Noma 2017 reviewed three-dimensional organization of yeast nuclear chromosomes.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve which histone, condensin, cohesin, centromere and telomere protein cohorts should be modeled as components of the nuclear chromosome rather than process machinery. <small>This first nuclear-chromosome record keeps chromatin proteins as a reviewed label-only aggregate to avoid overclaiming a source-neutral exact component list.</small></li></ul>

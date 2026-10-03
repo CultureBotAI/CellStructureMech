@@ -22,10 +22,12 @@
 <p class="definition">Discrete subnuclear bodies in the interchromatin nucleoplasmic space, often located adjacent to nuclear specks. 10-20 paraspeckles are typically found in human cell nuclei. <small>[<a href="http://purl.obolibrary.org/obo/GO_0042382"><code>GO:0042382</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-neat1_lncrna"><td>NEAT1 lncRNA</td><td>RNA</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>NEAT1</td><td></td><td>ESSENTIAL</td><td>Architectural long noncoding RNA scaffold that is required for visible paraspeckle structure.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2009.01.026"><code>DOI:10.1016/j.molcel.2009.01.026</code></a> <small>Clemson et al. 2009 showed that NEAT1 RNA is essential for paraspeckle structure.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2018.05.019"><code>DOI:10.1016/j.molcel.2018.05.019</code></a> <small>Yamazaki et al. 2018 mapped functional domains of NEAT1 that induce paraspeckle assembly through phase separation.</small></li></ul></td></tr>
 <tr id="components-dbhs_paraspeckle_proteins"><td>DBHS paraspeckle proteins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>NONO, SFPQ, PSPC1</td><td></td><td>UNKNOWN</td><td>RNA-binding DBHS-family proteins that associate with NEAT1 and support paraspeckle integrity.<ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200906113"><code>DOI:10.1083/jcb.200906113</code></a> <small>Bond and Fox 2009 reviewed SFPQ/PSF, NONO/p54nrb and PSPC1 as core paraspeckle proteins that associate with NEAT1.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,13 +43,15 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-neat1_dbhs_paraspeckle_assembly">NEAT1 and DBHS proteins assemble paraspeckles <small>(ASSEMBLY)</small></h3>
-<p>Paraspeckles are nuclear ribonucleoprotein granules scaffolded by NEAT1 lncRNA and DBHS-family RNA-binding proteins.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Paraspeckles are nuclear ribonucleoprotein granules scaffolded by NEAT1 lncRNA and DBHS-family RNA-binding proteins.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: NEAT1 and DBHS proteins assemble paraspeckles">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>NEAT1 lncRNA</td><td>scaffolds</td><td>paraspeckles</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2009.01.026"><code>DOI:10.1016/j.molcel.2009.01.026</code></a> <small>Clemson et al. 2009 found that NEAT1 RNA is required for paraspeckle structure.</small></li></ul></td></tr>
 <tr><td>DBHS paraspeckle proteins</td><td>associate with</td><td>NEAT1 lncRNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200906113"><code>DOI:10.1083/jcb.200906113</code></a> <small>Bond and Fox 2009 reviewed the association of core DBHS paraspeckle proteins with NEAT1.</small></li></ul></td></tr>
 <tr><td>NEAT1 lncRNA</td><td>promotes</td><td>paraspeckle assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.05.019"><code>DOI:10.1016/j.molcel.2018.05.019</code></a> <small>Yamazaki et al. 2018 mapped NEAT1 domains that induce paraspeckle assembly through phase separation.</small></li></ul></td></tr>
 <tr><td>DBHS paraspeckle proteins</td><td>maintain integrity of</td><td>paraspeckles</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200906113"><code>DOI:10.1083/jcb.200906113</code></a> <small>Bond and Fox 2009 reviewed core DBHS paraspeckle proteins in the context of NEAT1 association and paraspeckle integrity.</small></li></ul></td></tr>
 <tr><td>paraspeckles</td><td>are associated with</td><td>nuclear RNA retention</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200906113"><code>DOI:10.1083/jcb.200906113</code></a> <small>Bond and Fox 2009 reviewed paraspeckle nuclear bodies in relation to RNA nuclear retention.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral RNA and protein-family boundaries for NEAT1 isoforms, DBHS proteins, FUS, RBM14 and other paraspeckle assembly factors. <small>This first paraspeckles record keeps NEAT1 and DBHS-family proteins as broad, label-only component cohorts while leaving exact NEAT1 isoform boundaries and NONO/SFPQ/PSPC1/FUS/RBM14 family grounding to a separate curation pass.</small></li></ul>

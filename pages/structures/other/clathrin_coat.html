@@ -22,10 +22,12 @@
 <p class="definition">A membrane coat found on coated pits and some coated vesicles; consists of polymerized clathrin triskelions, each comprising three clathrin heavy chains and three clathrin light chains, linked to the membrane via one of the AP adaptor complexes. <small>[<a href="http://purl.obolibrary.org/obo/GO_0030118"><code>GO:0030118</code></a>]</small></p>
 <p><strong>Synonyms:</strong> clathrin cage</p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-clathrin_triskelion_scaffold"><td>clathrin triskelion scaffold</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Polymerized three-legged clathrin heavy-chain and light-chain complexes that build the clathrin coat lattice.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030118"><code>GO:0030118</code></a> <small>GO:0030118 defines clathrin coats as membrane coats made from polymerized clathrin triskelions.</small></li></ul></td></tr>
 <tr id="components-ap_type_clathrin_adaptors"><td>AP-type clathrin adaptor complexes</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>UNKNOWN</td><td>Adaptor complexes that connect polymerized clathrin to membrane surfaces and cargo during clathrin-coat assembly.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030118"><code>GO:0030118</code></a> <small>GO:0030118 frames clathrin coats as clathrin triskelions linked to membranes through AP adaptor complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030119"><code>GO:0030119</code></a> <small>GO:0030119 defines AP-type membrane coat adaptor complexes as membrane-coat complexes that link clathrin or another coat-forming molecule to a membrane surface.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,13 +43,15 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-clathrin_coat_topology">Clathrin triskelions and adaptors form a membrane coat <small>(ASSEMBLY)</small></h3>
-<p>A clathrin coat is a clathrin triskelion lattice connected to a membrane through AP-type adaptor complexes.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>A clathrin coat is a clathrin triskelion lattice connected to a membrane through AP-type adaptor complexes.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Clathrin triskelions and adaptors form a membrane coat">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>clathrin triskelion scaffold</td><td>polymerizes into</td><td>clathrin coat</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030118"><code>GO:0030118</code></a> <small>GO:0030118 defines clathrin coats as membrane coats made from polymerized clathrin triskelions.</small></li></ul></td></tr>
 <tr><td>AP-type clathrin adaptor complexes</td><td>links scaffold to</td><td>membrane surface</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030118"><code>GO:0030118</code></a> <small>GO:0030118 defines clathrin coats as clathrin triskelions linked to membranes through one of the AP adaptor complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030119"><code>GO:0030119</code></a> <small>GO:0030119 defines AP-type membrane coat adaptor complexes.</small></li></ul></td></tr>
 <tr><td>AP-type clathrin adaptor complexes</td><td>is part of</td><td>clathrin coat</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030118"><code>GO:0030118</code></a> <small>GO:0030118 defines clathrin coats as triskelion lattices linked to the membrane by AP adaptor complexes.</small></li></ul></td></tr>
 <tr><td>clathrin coat</td><td>is a</td><td>membrane coat</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030118"><code>GO:0030118</code></a> <small>GO places the clathrin coat directly under the membrane-coat parent.</small></li></ul></td></tr>
 <tr><td>clathrin coat</td><td>participates in</td><td>clathrin-dependent endocytosis</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0072583"><code>GO:0072583</code></a> <small>GO:0072583 describes endocytosis through clathrin-coated pits that form clathrin-coated endocytic vesicles.</small></li><li><a href="https://doi.org/10.1016/j.cell.2005.09.024"><code>DOI:10.1016/j.cell.2005.09.024</code></a> <small>Kaksonen, Toret and Drubin 2005 analyzed the yeast clathrin- and actin-mediated endocytic machinery.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep clathrin coat broader than the clathrin vesicle coat. <small>GO:0030118 is the clathrin-specific membrane-coat parent for clathrin coats on coated pits and some coated vesicles. GO:0030125 is a narrower child restricted to vesicles, so this record is a direct membrane-coat child rather than a duplicate of the clathrin vesicle coat.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral groundings for clathrin triskelions and AP-type clathrin adaptor complexes. <small>This first clathrin-coat parent record keeps the triskelion and AP adaptor entries at a reviewed label level instead of forcing a subtype-specific Complex Portal, InterPro, Pfam, or NCBIfam grounding onto the entire clathrin-coat class.</small></li></ul>

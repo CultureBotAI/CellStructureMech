@@ -22,10 +22,12 @@
 <p class="definition">A class of nuclear body measuring 20-25 nm in diameter and distributed throughout the interchromatin space, linked together by thin fibrils. They are believed to be storage centers for various snRNAs, snRNPs, serine/arginine-rich proteins and RNA polymerase II. A typical mammalian cell contains 25-50 clusters of interchromatin granules. Interchromatin granule clusters do not contain the heterogeneous nuclear RNA-binding proteins (hnRNPs). <small>[<a href="http://purl.obolibrary.org/obo/GO_0035061"><code>GO:0035061</code></a>]</small></p>
 <p><strong>Synonyms:</strong> ICG</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-sr_splicing_factor_cohort"><td>SR splicing factor cohort</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>SRSF2, SRSF6</td><td></td><td>UNKNOWN</td><td>Serine/arginine-rich pre-mRNA splicing factors that concentrate in interchromatin granule clusters.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035061"><code>GO:0035061</code></a> <small>GO:0035061 describes interchromatin granules as storage centers for serine/arginine-rich proteins.</small></li><li><a href="https://doi.org/10.1242/jcs.113.19.3485"><code>DOI:10.1242/jcs.113.19.3485</code></a> <small>Prasanth et al. 2000 used SC35 and SRp55 as markers of SR-protein nuclear speckles that were distinct from hnRNP-containing omega speckles.</small></li></ul></td></tr>
 <tr id="components-spliceosomal_snrnp_complexes"><td>spliceosomal snRNP complex</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0097525"><code>GO:0097525</code></a></td><td></td><td></td><td>UNKNOWN</td><td>Spliceosomal small nuclear ribonucleoprotein complexes enriched in interchromatin granule clusters.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035061"><code>GO:0035061</code></a> <small>GO:0035061 describes interchromatin granules as storage centers for snRNAs and snRNPs.</small></li><li><a href="https://doi.org/10.1093/emboj/18.15.4308"><code>DOI:10.1093/emboj/18.15.4308</code></a> <small>Mintz et al. 1999 biochemically purified interchromatin granule clusters and identified many proteins linked to pre-mRNA splicing.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -41,12 +43,14 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-splicing_factor_igc_reservoir">IGCs concentrate pre-mRNA processing factors <small>(FUNCTION)</small></h3>
-<p>Interchromatin granule clusters are nuclear RNP granules that concentrate SR splicing factors and spliceosomal snRNPs while remaining distinct from hnRNP-containing omega speckles.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Interchromatin granule clusters are nuclear RNP granules that concentrate SR splicing factors and spliceosomal snRNPs while remaining distinct from hnRNP-containing omega speckles.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: IGCs concentrate pre-mRNA processing factors">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>SR splicing factor cohort</td><td>localizes to</td><td>interchromatin granule</td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.113.19.3485"><code>DOI:10.1242/jcs.113.19.3485</code></a> <small>Prasanth et al. 2000 used SC35 and SRp55 SR-protein nuclear speckles as interchromatin-granule markers.</small></li></ul></td></tr>
 <tr><td>spliceosomal snRNP complex</td><td>are enriched in</td><td>interchromatin granule</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035061"><code>GO:0035061</code></a> <small>GO:0035061 describes interchromatin granules as storage centers for snRNAs and snRNPs.</small></li></ul></td></tr>
 <tr><td>interchromatin granule</td><td>supports</td><td>pre-mRNA processing factor reservoir</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.e04-03-0253"><code>DOI:10.1091/mbc.e04-03-0253</code></a> <small>Saitoh et al. 2004 found that 54% of identified IGC proteins had known pre-mRNA-splicing functions and that 81% were associated with RNA metabolism.</small></li></ul></td></tr>
 <tr><td>interchromatin granule</td><td>is distinct from</td><td>omega speckle</td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.113.19.3485"><code>DOI:10.1242/jcs.113.19.3485</code></a> <small>Prasanth et al. 2000 reported that SC35 and SRp55 SR-protein nuclear speckles did not colocalize with omega speckles.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve the exact snRNA, snRNP, SR-protein and RNA polymerase II constituent boundaries for interchromatin granules. <small>This first GO:0035061 record captures the GO term, SR splicing factors and spliceosomal snRNPs while leaving the purified mammalian IGC proteome, individual snRNAs, RNA polymerase II storage claims and species-to-species variation to a later pass.</small></li></ul>

@@ -22,9 +22,11 @@
 <p class="definition">Any of the long, generally straight, hollow tubes of internal diameter 12-15 nm and external diameter 24 nm found in a wide variety of eukaryotic cells; each consists (usually) of 13 protofilaments of polymeric tubulin, staggered in such a manner that the tubulin monomers are arranged in a helical pattern on the microtubular surface, and with the alpha/beta axes of the tubulin subunits parallel to the long axis of the tubule; exist in equilibrium with pool of tubulin monomers and can be rapidly assembled or disassembled in response to physiological stimuli; concerned with force generation, e.g. in the spindle. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005874"><code>GO:0005874</code></a>]</small></p>
 <p><strong>Synonyms:</strong> microtubuli; microtubulus; neurotubule</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0015630"><code>GO:0015630</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-alpha_beta_tubulins"><td>alpha- and beta-tubulins</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Eukaryotic tubulin subunits that co-polymerize into microtubule protofilaments.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005874"><code>GO:0005874</code></a> <small>Gene Ontology defines microtubules as hollow tubes made from polymeric tubulin protofilaments.</small></li><li><a href="https://doi.org/10.1126/science.1128618"><code>DOI:10.1126/science.1128618</code></a> <small>Nicastro et al. 2006 resolved alpha/beta-tubulin outer doublet microtubules in Chlamydomonas axonemes by cryoelectron tomography.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,10 +42,12 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-eukaryotic_microtubule_polymer">Alpha- and beta-tubulins polymerize into microtubules <small>(ASSEMBLY)</small></h3>
-<p>Eukaryotic alpha- and beta-tubulin subunits polymerize into microtubules, the hollow cytoskeletal fibers that make up the microtubule cytoskeleton.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Eukaryotic alpha- and beta-tubulin subunits polymerize into microtubules, the hollow cytoskeletal fibers that make up the microtubule cytoskeleton.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Alpha- and beta-tubulins polymerize into microtubules">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>alpha- and beta-tubulins</td><td>polymerize into</td><td>microtubule</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005874"><code>GO:0005874</code></a> <small>GO defines microtubules as hollow tubes of polymeric tubulin protofilaments.</small></li></ul></td></tr>
 <tr><td>microtubule</td><td>is part of</td><td>microtubule cytoskeleton</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005874"><code>GO:0005874</code></a> <small>GO models the microtubule as part of the microtubule cytoskeleton.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral grounding for the alpha- and beta-tubulins that build canonical eukaryotic microtubules. <small>This first GO:0005874 record curates broad eukaryotic tubulin constituents without asserting that a general tubulin/FtsZ GTPase-domain accession exactly denotes the microtubule alpha/beta-tubulin constituent set.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Curate axonemal doublets, basal-body triplets, haptonemal singlets and other array-specific microtubule subtypes as exact subtypes or array-specific components before mapping them back to GO:0005874. <small>Microbial eukaryotes build specialized microtubule arrays; this generic record records only the shared GO:0005874 polymer boundary and does not flatten doublet, triplet, singlet or ventral-disc-specific morphologies into one component.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Keep bacterial, archaeal and phage tubulin-like filaments separate from the GO:0005874 eukaryotic microtubule record. <small>GO:0005874 denotes eukaryotic microtubules built from alpha/beta tubulin into canonical hollow tubes, while this corpus separately models bacterial BtubAB mini-microtubules, bacterial TubZ partition filaments, phage PhuZ spindles, archaeal CetZ filaments and FtsZ-family division rings as non-eukaryotic tubulin/FtsZ-superfamily or tubulin-like cytoskeletal systems with different subunits, architectures or cargo relationships.</small></li></ul>

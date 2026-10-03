@@ -22,9 +22,11 @@
 <p class="definition">Either of the lipid bilayers that surround a cyanelle and form the cyanelle envelope. <small>[<a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0033112"><code>GO:0033112</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-cyanelle_envelope_lipid_bilayer"><td>cyanelle envelope lipid bilayer</td><td>LIPID</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td></td><td></td><td>ESSENTIAL</td><td>Generic lipid-bilayer constituent of a cyanelle envelope membrane when the exact inner or outer membrane identity is unspecified.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a> <small>GO:0033113 defines a cyanelle membrane as either lipid bilayer that forms the cyanelle envelope.</small></li><li><code>uniprot.location:SL-0083</code> <small>UniProt SL-0083 provides the cyanelle membrane localization entry and notes that it can be used when the exact cyanelle membrane assignment is unresolved.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -38,11 +40,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-cyanelle_membrane_scope">Cyanelle membrane scope <small>(FUNCTION)</small></h3>
-<p>The generic cyanelle membrane class covers either cyanelle-envelope lipid bilayer when the exact inner or outer membrane identity is unspecified.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>The generic cyanelle membrane class covers either cyanelle-envelope lipid bilayer when the exact inner or outer membrane identity is unspecified.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Cyanelle membrane scope">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>cyanelle membrane</td><td>is part of</td><td>cyanelle envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a> <small>GO:0033113 defines the generic cyanelle membrane as either bilayer that forms the cyanelle envelope.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0033112"><code>GO:0033112</code></a> <small>GO:0033112 identifies the complete double lipid bilayer of the cyanelle envelope.</small></li></ul></td></tr>
 <tr><td>cyanelle inner membrane</td><td>is a</td><td>cyanelle membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a> <small>GO places GO:0036012 as an is_a child of the generic cyanelle membrane term.</small></li></ul></td></tr>
 <tr><td>cyanelle outer membrane</td><td>is a</td><td>cyanelle membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033113"><code>GO:0033113</code></a> <small>GO places GO:0036013 as an is_a child of the generic cyanelle membrane term.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>INTERPRETATION</strong> (RESOLVED): Exclude GO:0033115 cyanelle thylakoid membrane from the GO:0033113 cyanelle membrane scope even though UniProt SL-0083 can be used as a fallback thylakoid localization. <small>GO:0033113 is defined as either envelope lipid bilayer that surrounds a cyanelle, whereas GO:0033115 identifies the separate internal thylakoid membrane.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve an exact source-neutral grounding for the generic lipid constituent of a cyanelle envelope membrane. <small>The record is exactly grounded to GO:0033113, while UniProt SL-0083 is broader fallback evidence; the lipid bilayer constituent is intentionally left as a reviewed-label-only component until an exact source-neutral lipid or membrane-constituent CURIE is curated.</small></li></ul>

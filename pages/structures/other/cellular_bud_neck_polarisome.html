@@ -22,9 +22,11 @@
 <p class="definition">Protein complex that has a role in determining cell polarity, found at the neck of a fungal bud before and during cytokinesis. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005935"><code>GO:0005935</code></a> </p>
 <h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-spa2_pea2_scaffold"><td>Spa2/Pea2 polarisome scaffold</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>SPA2, PEA2</td><td></td><td>CONDITIONAL</td><td>Scaffold proteins that localize to the mother-daughter neck before cytokinesis in budding Saccharomyces cells.<ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.135.3.725"><code>DOI:10.1083/jcb.135.3.725</code></a> <small>Valtz and Herskowitz 1996 found that Pea2 relocalizes to the neck between mother and daughter cells before cytokinesis and reported that Pea2 follows the same general localization pattern as Spa2.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 
 <h2>Taxonomic distribution</h2>
@@ -40,11 +42,13 @@
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-bud_neck_polarisome_topology">Bud-neck polarisome topology <small>(FUNCTION)</small></h3>
-<p>Spa2 and Pea2 mark the Saccharomyces mother-daughter neck occupied by the GO-defined bud-neck polarisome before cytokinesis.</p><table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<p>Spa2 and Pea2 mark the Saccharomyces mother-daughter neck occupied by the GO-defined bud-neck polarisome before cytokinesis.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Bud-neck polarisome topology">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>cellular bud neck polarisome</td><td>is part of</td><td>cellular bud neck</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a> <small>GO:0031560 defines this polarisome as being found at the neck of a fungal bud.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005935"><code>GO:0005935</code></a> <small>GO:0005935 identifies the cellular bud neck.</small></li></ul></td></tr>
 <tr><td>Spa2/Pea2 polarisome scaffold</td><td>localizes to</td><td>cellular bud neck</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.135.3.725"><code>DOI:10.1083/jcb.135.3.725</code></a> <small>Valtz and Herskowitz 1996 localized Pea2 to the mother-daughter neck before cytokinesis and described Pea2 and Spa2 localization as the same general pattern.</small></li></ul></td></tr>
 <tr><td>cellular bud neck polarisome</td><td>supports</td><td>bud-neck cell-polarity organization</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a> <small>GO:0031560 defines the bud-neck polarisome by its role in cell-polarity determination at the fungal bud neck.</small></li></ul></td></tr>
 </tbody></table>
+</div>
 
 <h2>Discussions</h2>
 <ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral family groundings for the bud-neck Spa2/Pea2 scaffold. <small>The first bud-neck polarisome record keeps Spa2 and Pea2 label-only rather than guessing InterPro, Pfam, or NCBIfam groundings whose broader homologous families may not exactly delimit the localized bud-neck scaffold.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve whether Bni1, Bud6/Aip3, or other generic polarisome proteins are direct cellular-bud-neck polarisome constituents. <small>GO:0000133 names Bni1p and Bud6p among Saccharomyces polarisome proteins, but the opened bud-neck-localization evidence in this first pass directly supports only Pea2 and Spa2 at the mother-daughter neck.</small></li></ul>
