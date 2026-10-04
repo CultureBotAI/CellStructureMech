@@ -1,0 +1,408 @@
+identifier: cellstructuremech:basal_body_a_c_linker
+label: basal body A-C linker
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A proteinaceous intertriplet linkage connecting the A-microtubule of one
+  triplet to the C-microtubule of the neighboring triplet in the wall of a ciliary
+  basal body.
+definition_source: DOI:10.1126/sciadv.ady3689
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T07:47:48Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T07:51:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added four evidence-backed component classes, Tetrahymena example, proximal
+    structural-contact graph, PDB dataset and licensed cryotomography. Preserved compositional
+    polymorphism, uncertain groundings and conflicting protein assignments without
+    inferring temporal assembly or stoichiometry.
+  llm_assisted: true
+synonyms:
+- synonym_text: A-C linker
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/sciadv.ady3689
+parent_structures:
+- GO:0140535
+part_of:
+- GO:0036064
+components:
+- component_id: wrap73
+  label: WRAP73 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The verified WRAP73-like accession I7MIG5 has InterPro IPR052778,
+    Centrosome-associated WD domain-containing protein. Exact equivalence of that
+    broadly named family to WRAP73 was not established. WRAP73 and WDR8 text searches
+    yielded no exact integrated family; WD40 superfamilies are not substituted.
+  gene_symbols:
+  - WRAP73
+  - WDR8
+  essentiality: UNKNOWN
+  role: A-link constituent modeled as a nine-bladed beta-propeller that contacts CEP135
+    and unassigned helical elements. It is retained in the proximal and transitional
+    linker reconstructions in Tetrahymena.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+    notes: Results and Figure 5 identify the unusual beta-propeller by fitting an
+      MS-derived AlphaFold model library into the map. Figure 6 retains WRAP73 in
+      both forms; functional necessity is not established by this assignment.
+- component_id: cep135
+  label: CEP135 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The CEP135 text search returned a microtubule-binding domain, not
+    an exact whole-protein family. Both verified Tetrahymena variants carry IPR051877,
+    Centriole and Basal Body Structural Protein, but its exact equivalence to CEP135
+    was not established. No domain or broad family is promoted to exact identity.
+  gene_symbols:
+  - CEP135
+  - BLD10
+  essentiality: UNKNOWN
+  role: A-link constituent whose modeled N-terminal dimer contacts WRAP73 and the
+    central filament. A segment bridges A-microtubule protofilaments in the proximal
+    form. The transitional form has an altered orientation and a less well resolved
+    microtubule-contacting segment.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+    notes: Figure 5 and structural modeling support CEP135 placement and the approximately
+      325-360 contact segment. Methods explicitly cannot discriminate the two N-terminally
+      similar variants in the density. GFP localization used induced constructs, not
+      endogenous abundance.
+- component_id: tbc1d31
+  label: TBC1D31 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Verified accessions Q23AD1 and Q23K58 carry IPR051570, TBC1 domain
+    family involved in cilium biogenesis. The live family metadata and TBC1D31 search
+    did not establish exact subfamily equivalence. A generic Rab-GAP domain does not
+    identify TBC1D31 or establish catalytic activity.
+  gene_symbols:
+  - TBC1D31
+  - TBC1D31A
+  - TBC1D31B
+  - WDR67
+  essentiality: UNKNOWN
+  role: Two TBC1D31-like proteins contribute to the proximal C-link and its staggered
+    central helical filament. They connect the C-side interface to the A-link. These
+    densities are not assigned in the transitional C-link, which has a different,
+    unresolved composition.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+    notes: Figure 3 and Results assign the proximal C-link and central filament using
+      density fitting, supported by GFP localization. The Results and Methods reverse
+      the A/B accession aliases, so no exact paralogue accession pairing or whole-linker
+      copy number is asserted.
+- component_id: poc1
+  label: POC1 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR050505 combines WDR55 and POC1 and is broader than
+    this component. IPR020472 is a WD40 repeat rather than a POC1 family. The live
+    POC1 search therefore did not provide an exact integrated grounding for this narrower
+    class.
+  gene_symbols:
+  - POC1
+  essentiality: UNKNOWN
+  role: The C-terminal helix contributes to the proximal C-link alongside TBC1D31-like
+    proteins; the N-terminal region associates with the neighboring B-C inner junction.
+    The corresponding C-link density is not assigned in the transitional form.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+    notes: Figures 3-4 and the structural model connect POC1 to the proximal C-link
+      and B-C junction. The verified POC1 accession is Q229Z6; the transposed accession
+      in the article Methods is not copied into a protein example.
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: The study isolates basal bodies from strain SB715 and compares their architecture
+    with in-situ cryotomograms. It calls these ciliary basal bodies centrioles for
+    simplicity. GFP localization uses separately specified strains and constructs.
+  reference: DOI:10.1126/sciadv.ady3689
+functions:
+- function_id: intertriplet_linkage
+  label: intertriplet microtubule linkage
+  description: Connects the A-microtubule of one basal-body triplet to the C-microtubule
+    of its neighbor through a proteinaceous A-link/C-link assembly. Proximal and transitional
+    forms achieve this connection with different C-side compositions.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+    notes: Cryotomography and reconstructions in Figures 1-2 and 6 show the intertriplet
+      bridge. This is a structural linkage function, not a measured force threshold
+      or a demonstrated temporal assembly sequence.
+causal_graphs:
+- graph_id: proximal_linker_structural_contacts
+  title: Structural contacts bridging adjacent basal-body triplets
+  description: A density-supported model of the proximal Tetrahymena A-C linker's
+    physical connections to neighboring microtubules.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Edges describe modeled structural contacts, not perturbation-proven
+    dependencies, binding kinetics or temporal assembly order. The model applies to
+    the proximal form only. TBC1D31A/B accession aliases and the CEP135 variant assignment
+    remain unresolved; unassigned helical elements are not invented as protein families.
+    No Rab-GAP reaction or native force-resistance threshold is inferred.
+  nodes:
+  - node_id: wrap73
+    label: WRAP73 family protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: wrap73
+  - node_id: cep135
+    label: CEP135 family protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: cep135
+  - node_id: tbc1d31
+    label: TBC1D31 family protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: tbc1d31
+  - node_id: poc1
+    label: POC1 family protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: poc1
+  - node_id: c_side_interface
+    label: proximal C-link contact interface
+    node_type: STATE
+    description: Modeled arrangement of POC1 and TBC1D31-like proteins, not an additional
+      component family.
+  - node_id: a_tubule
+    label: A-microtubule of one basal-body triplet
+    node_type: STRUCTURE
+    description: The linker-contacted A06/A07 region; not an axonemal A-microtubule
+      ontology identity.
+  - node_id: c_tubule
+    label: C-microtubule of the neighboring basal-body triplet
+    node_type: STRUCTURE
+    description: The C09-contacted microtubule belongs to the adjacent triplet.
+  - node_id: linker
+    label: basal body A-C linker
+    node_type: STRUCTURE
+    description: Proximal form of this record's structure, not a model of the transitional
+      C-link composition.
+  edges:
+  - subject: wrap73
+    predicate: coordinates
+    object: cep135
+    description: WRAP73 contacts the modeled N-terminal CEP135 dimer in the A-link.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figure 5A-B and fitting of the predicted WRAP73-CEP135 complex into observed
+        density support the contact arrangement.
+  - subject: cep135
+    predicate: cross-bridges protofilaments of
+    object: a_tubule
+    description: The approximately 325-360 coiled-coil segment bridges protofilaments
+      A06 and A07 in the proximal reconstruction.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figure 5C; no claim that this contact alone induces the observed microtubule
+        lattice compaction.
+  - subject: tbc1d31
+    predicate: contacts
+    object: cep135
+    description: The proximal central-filament and WD40-containing region contacts
+      the modeled N terminus of CEP135.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figure 3B and Figure 5A; a collective family-level relationship avoids
+        assigning a contradictory A/B accession alias.
+  - subject: poc1
+    predicate: contributes a C-terminal helix to
+    object: c_side_interface
+    description: The POC1 C-terminal helix participates in the modeled proximal C-link
+      interface with TBC1D31-like proteins.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figure 3A and density fitting of the predicted subcomplex.
+  - subject: tbc1d31
+    predicate: contributes modeled binding domains to
+    object: c_side_interface
+    description: TBC1D31-like domains form the proximal C-link arrangement with POC1.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figure 3A; domain names do not establish a Rab GTPase reaction.
+  - subject: c_side_interface
+    predicate: contacts
+    object: c_tubule
+    description: The modeled POC1/TBC1D31 interface connects to alpha-tubulins in
+      protofilament C09 of the neighboring triplet.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Results and Figure 3A support the subcomplex-level contact; it is not
+        assigned exclusively to one protein.
+  - subject: cep135
+    predicate: contributes the A-side attachment of
+    object: linker
+    description: CEP135 contacts the A-microtubule and joins the WRAP73/helical network
+      to the central filament in the proximal linker.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figures 3B and 5; the unidentified AHE network also contributes to attachment
+        and is not omitted as if CEP135 acted alone.
+  - subject: c_side_interface
+    predicate: contributes the C-side attachment of
+    object: linker
+    description: The proximal C-link contacts the neighboring C-microtubule and is
+      connected to the A-link by the central filament.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figure 3 and Results; transitional C-link protein identities are unresolved
+        and are outside this graph.
+datasets:
+- accession: PDB:9QZC
+  title: Proximal A-C linker of Tetrahymena centriole, one repeating unit
+  description: Released experimental model of one proximal repeating unit. The deposited
+    assembly also includes junction-associated protein and unassigned chains; it is
+    not the complete linker or its universal composition.
+  organism: Tetrahymena thermophila
+  dataset_type: EXPERIMENTAL_STRUCTURE
+  repository: RCSB_PDB
+  sample_types:
+  - isolated basal-body material
+  conditions:
+  - proximal A-C linker; deposited repeating-unit model
+  platform: cryo-electron microscopy with single-particle reconstruction and model
+    fitting
+  url: https://www.rcsb.org/structure/9QZC
+  publication: DOI:10.1126/sciadv.ady3689
+  findings: Supports molecular assignments at the family level and preserves multiple
+    unassigned protein chains. No global or local deposition copy number is promoted
+    to whole-linker stoichiometry.
+  notes: Official entry, all 15 polymer entities and assembly 1 inspected. The entry
+    identifies NCBITaxon 5911 and links the primary DOI/PMID. Only metadata and links
+    are retained, not coordinates. The CEP135 SIFTS assignment and article Methods
+    differ; see the open discussion.
+evidence:
+- reference: DOI:10.1126/sciadv.ady3689
+  notes: Cai et al. 2025. Official PMC12506977.1 metadata and checksum-verified JATS
+    inspected. Main text, methods and figure captions read; Figures 1, 3, 5 and 6
+    inspected visually.
+- reference: PMID:41061066
+  notes: Bibliographic identity matches the official PMC metadata and PDB primary
+    citation.
+- reference: PDB:9QZC
+  notes: Official released model, exact primary citation, source organism, polymer
+    entities and assembly inspected.
+discussions:
+- discussion_id: linker_identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the intertriplet A-C linker from the enclosing basal body and
+    other basal-body modules.
+  rationale: A named, imaged multi-protein linkage is a distinct structure, not a
+    single protein or synonym of the whole basal body.
+  notes: Ignored- and hidden-inclusive repository searches found no existing identity
+    record. Complete GO searches for linker, triplet, intertriplet and centriole found
+    no exact term. GO:0140535 is a broader is-a parent and GO:0036064 is parthood.
+    Cartwheel, inner scaffold, transition fibers and Y-links remain distinct. The
+    primary paper uses centriole as shorthand for the Tetrahymena ciliary basal body.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+  - reference: GO:0140535
+  - reference: GO:0036064
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: exact_component_families
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral groundings for WRAP73, CEP135, TBC1D31 and
+    POC1 without using broader families or domains.
+  rationale: All four named classes have structural evidence but their inspected integrated
+    annotations do not establish exact family equivalence.
+  notes: The live searches and accession annotations are recorded in each grounding
+    note. Broad InterPro family summaries, including LLM-labeled descriptions, are
+    not used as mechanistic evidence. All four remain REVIEWED_LABEL_ONLY.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: polymorphism_and_missing_components
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify the unassigned helical elements and transitional C-link proteins,
+    and determine form-specific assembly requirements.
+  rationale: The four-family list is incomplete and must not be interpreted as the
+    universal composition of every A-C linker.
+  notes: The proximal form contains the POC1/TBC1D31 C-link and five unassigned AHEs.
+    The transitional form retains WRAP73/CEP135, adds an unassigned AHE and replaces
+    the C-side densities with unassigned beta-propellers and a microtubule-contacting
+    domain. Figure 6C/D caption labels conflict with the panel titles, so form identity
+    takes precedence over an ambiguous panel letter. A proposed distal form remains
+    hypothetical. Essentialities and full copy numbers are unset; hierarchical layering
+    is not temporal assembly evidence.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: reconcile_variant_and_strain_assignments
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile TBC1D31 A/B aliases and CEP135 variant assignments before adding
+    strain-paired protein examples.
+  rationale: Article text and deposition mappings disagree at finer granularity than
+    the supported family-level components.
+  notes: Results assign Q23AD1 to A and Q23K58 to B, while Methods reverse them. Methods
+    acknowledge indistinguishable CEP135 N termini and choose Q22AS4; current PDB
+    SIFTS maps that entity to Q24GZ2. UniProt accessions describe SB210, whereas structural
+    isolation uses SB715 and localization uses other strains. No exact paralogue/accession
+    pairing or strain-specific protein example is asserted. Separately, verified POC1
+    is Q229Z6; the article's Q22Z96 is a different uncharacterized protein, not an
+    alternative POC1.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+  - reference: PDB:9QZC
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: exclude_neighboring_junction_proteins
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not import all adjacent microtubule and junction material as A-C linker
+    constituents.
+  rationale: A deposited structural model can include connected modules outside the
+    structure's curated composition boundary.
+  notes: Microtubules are the bridged substrates here, not linker protein families.
+    I7LY02 is assigned to inner-junction ladders and is not added to linker composition
+    merely because it appears in PDB:9QZC. POC1 is included specifically because its
+    C-terminal region participates in the proximal C-link. Unidentified chains and
+    AHEs are retained as uncertainty, not fabricated components.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+  - reference: PDB:9QZC
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: pmc_pmc12506977_f1
+  file: pmc12506977_f1.jpg
+  file_sha256: fe0ce1a1e2152db5441413b3f999800bb60903ecfd8664ddcb78b352d3d995ad
+  source: PMC
+  source_accession: PMC12506977.1 F1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12506977/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12506977.1/sciadv.ady3689-f1.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Bin Cai, Jingwei Xu, Erik H. Collet, Ellen Aarts, Leo Luo, Alexander
+    Leitner, Takashi Ishikawa, Pedro Beltrao, Chad G. Pearson, Martin Pilhofer, et
+    al.; CC BY, via PubMed Central
+  modality: CRYO_ET
+  caption: 'Figure 1: Tetrahymena basal-body A-C linkers in situ and after isolation.
+    A-C show segmented and raw in-situ cryotomograms; F-G show isolated basal bodies
+    with A-C linkers labeled. D is the isolation schematic and E is an SDS-PAGE gel,
+    not microscopy. Scale bars: A, 200 nm; B-C and F-G, 100 nm.'
+  taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  reference: DOI:10.1126/sciadv.ady3689
+  retrieved_on: '2026-10-04'
+  notes: Fig. 1. from article version PMC12506977.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    The entire multi-panel figure was visually inspected; source bytes are reproduced
+    unchanged. Tomograms support structure identity, not individual protein identity
+    or a mechanical perturbation assay.

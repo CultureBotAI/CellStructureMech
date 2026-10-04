@@ -772,14 +772,14 @@
           "cosine_similarity": 0.76132419
         },
         {
+          "identifier": "cellstructuremech:basal_body_a_c_linker",
+          "label": "basal body A-C linker",
+          "cosine_similarity": 0.757908
+        },
+        {
           "identifier": "GO:0097537",
           "label": "Y-shaped link",
           "cosine_similarity": 0.74579261
-        },
-        {
-          "identifier": "cellstructuremech:distal_connecting_fiber",
-          "label": "distal connecting fiber",
-          "cosine_similarity": 0.74394587
         }
       ]
     },
@@ -1594,6 +1594,11 @@
       "label": "Y-shaped link",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:basal_body_a_c_linker",
+          "label": "basal body A-C linker",
+          "cosine_similarity": 0.80262607
+        },
+        {
           "identifier": "GO:0160113",
           "label": "axonemal microtubule doublet inner junction",
           "cosine_similarity": 0.7990145
@@ -1612,11 +1617,6 @@
           "identifier": "GO:0097539",
           "label": "ciliary transition fiber",
           "cosine_similarity": 0.74579261
-        },
-        {
-          "identifier": "GO:0160110",
-          "label": "axonemal microtubule doublet inner sheath",
-          "cosine_similarity": 0.73867823
         }
       ]
     },
@@ -2268,6 +2268,37 @@
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
           "cosine_similarity": 0.76383502
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:basal_body_a_c_linker",
+      "label": "basal body A-C linker",
+      "neighbors": [
+        {
+          "identifier": "GO:0097537",
+          "label": "Y-shaped link",
+          "cosine_similarity": 0.80262607
+        },
+        {
+          "identifier": "GO:0160113",
+          "label": "axonemal microtubule doublet inner junction",
+          "cosine_similarity": 0.78628986
+        },
+        {
+          "identifier": "GO:0160114",
+          "label": "axonemal microtubule doublet outer junction",
+          "cosine_similarity": 0.7665553
+        },
+        {
+          "identifier": "GO:0097539",
+          "label": "ciliary transition fiber",
+          "cosine_similarity": 0.757908
+        },
+        {
+          "identifier": "GO:1990717",
+          "label": "axonemal central bridge",
+          "cosine_similarity": 0.74290428
         }
       ]
     },
@@ -3495,6 +3526,11 @@
           "cosine_similarity": 0.72537353
         },
         {
+          "identifier": "cellstructuremech:basal_body_a_c_linker",
+          "label": "basal body A-C linker",
+          "cosine_similarity": 0.69396843
+        },
+        {
           "identifier": "GO:0160066",
           "label": "interphase SIN signaling complex",
           "cosine_similarity": 0.6796453
@@ -3503,11 +3539,6 @@
           "identifier": "GO:1990334",
           "label": "SIN/MEN two-component GAP complex",
           "cosine_similarity": 0.67688466
-        },
-        {
-          "identifier": "GO:0005931",
-          "label": "axonemal nexin link",
-          "cosine_similarity": 0.66902452
         }
       ]
     },
@@ -4373,9 +4404,9 @@
           "cosine_similarity": 0.74430176
         },
         {
-          "identifier": "GO:0044614",
-          "label": "nuclear pore cytoplasmic filaments",
-          "cosine_similarity": 0.73314612
+          "identifier": "cellstructuremech:basal_body_a_c_linker",
+          "label": "basal body A-C linker",
+          "cosine_similarity": 0.73783595
         }
       ]
     },
