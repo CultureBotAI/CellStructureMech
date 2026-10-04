@@ -1,0 +1,224 @@
+identifier: cellstructuremech:basal_body_d2_rod
+label: basal body D2-rod
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A longitudinal subassembly at the periphery of a microbial ciliary basal-body
+  or pro-basal-body cartwheel, linking the outer radial-spoke ends along the cartwheel
+  axis. In characterized Chlamydomonas and Paramecium regions it is distinguishable
+  from the pinhead and extends into the proximal cartwheel segment beyond the microtubule
+  wall.
+definition_source: DOI:10.15252/embj.2020106246
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T15:11:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T15:13:44Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added D2-rod cartwheel parthood, native Chlamydomonas and Paramecium evidence,
+    scoped radial-position measurement and inspected CC BY figure. Distinguished D1,
+    pinhead, reconstituted arrays and proposed human CPAP localization from native
+    microbial D2 composition; retained molecular and dataset boundaries without unsupported
+    components or causal claims.
+  llm_assisted: true
+parent_structures:
+- GO:0005575
+part_of:
+- cellstructuremech:basal_body_cartwheel
+- GO:0036064
+- GO:0120280
+synonyms:
+- synonym_text: centriole D2-rod
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.15252/embj.2020106246
+- synonym_text: D2 density
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/ncomms14813
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Ninefold-symmetrized cryo-ET of isolated CW-15 pro-basal bodies resolves peripheral
+    D2 densities in the core cartwheel. Figure 1 includes a proximal segment lacking
+    pinhead and microtubules. This is native isolated material, distinct from the
+    paper's recombinant arrays.
+  reference: DOI:10.1038/ncomms14813
+- taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  note: Cryo-ET and symmetrized cartwheel views resolve longitudinal D2 connections
+    in Figure EV3 and Figure 3. Methods describe cortical units isolated from d4-2
+    and Delta-CenBP1; these figures are not assigned to one strain. No Chlamydomonas
+    numerical measurement is transferred here.
+  reference: DOI:10.15252/embj.2020106246
+functions:
+- function_id: longitudinal_spoke_end_connection
+  label: ciliary basal body organization
+  grounding: GO:0032053
+  description: Connects peripheral radial-spoke ends along the cartwheel axis in the
+    characterized Chlamydomonas and Paramecium proximal regions. This observed arrangement
+    does not establish a stiffness, a growth mechanism, or D2-specific essentiality.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+    notes: The proximal-extension Results name the vertical D2 connections as D2-rod.
+      Figure EV3 distinguishes the D2-rod from the pinhead, including in the protruding
+      cartwheel segment; Figure 3 resolves D1-to-D2 radial connections.
+physical_properties:
+- property: OTHER
+  value: 45.6 +/- 0.8
+  unit: UO:0000018
+  context: Radial distance from the hub margin to the D2 density in isolated Chlamydomonas
+    reinhardtii CW-15 pro-basal bodies, Guichard et al. 2017 Figure 1f; reported value
+    and error, n=13 measurements from five tomograms. The caption does not specify
+    the error statistic. Methods selected spokes ending in visible D1 and/or D2 densities
+    for these distance measurements. This is a position relative to the hub edge,
+    not the hub center, rod length, diameter, axial repeat or molecule count.
+  reference: DOI:10.1038/ncomms14813
+evidence:
+- reference: DOI:10.15252/embj.2020106246
+  notes: Klena et al. 2020, PMID:32954513. Checksum-verified PMC7667884.1 Results,
+    species preparation, cartwheel averaging Methods, Figure EV3 and Data availability
+    inspected. The original mixed-species EV3 figure was visually inspected but is
+    not hosted here. Chlamydomonas in-situ mat3-4 mature and pro-basal-body views
+    distinguish D2-rod from pinhead and microtubule wall.
+- reference: DOI:10.1038/ncomms14813
+  notes: Guichard et al. 2017, PMID:28332496. Checksum-verified PMC5376648.1 native
+    and reconstitution Results, Discussion, isolation, cryo-ET and measurement Methods,
+    Figure 1 and Data availability inspected. The original Figure 1 was visually inspected.
+    Native D2 morphology is distinguished from recombinant core-cartwheel sufficiency.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the D2-rod from the cartwheel and its neighboring densities.
+  rationale: A named peripheral subassembly is not the entire cartwheel or a single
+    asserted protein.
+  notes: Hidden/ignored-inclusive repository searches and parsed identifier, label
+    and synonym checks found no standalone D2-rod record before creation. Complete
+    QuickGO queries D2 rod (49 results), cartwheel D2 (15) and centriole D2 (37) found
+    no exact cellular-component identity. Bacterial flagellar rods and cyclin-D2 complexes
+    are different entities. The cartwheel is parthood, not is-a. D1, the hub, cartwheel
+    inner density, pinhead and triplet base are not exact synonyms. D2 density is
+    related terminology for the peripheral cross-sectional feature, not an asserted
+    exact synonym for a complete longitudinal rod. OTHER and the broad GO:0005575
+    parent retain unresolved molecular classification without asserting a proven multiprotein
+    composition or filament architecture.
+  evidence:
+  - reference: DOI:10.1038/ncomms14813
+  - reference: DOI:10.15252/embj.2020106246
+  - reference: GO:0005575
+  - reference: GO:0036064
+  - reference: GO:0120280
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: native_molecular_identity
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify the native microbial D2-rod constituents and a narrower molecular
+    class.
+  rationale: Morphology and coassembly do not assign a complete native proteome to
+    a resolved density.
+  notes: Direct molecular localization or a sequence-resolved D2-rod model is needed
+    before adding components, stoichiometry, family groundings or D2-specific essentiality.
+    Neither the native 2017 cross sections nor the 2020 longitudinal reconstructions
+    provide those assignments.
+  evidence:
+  - reference: DOI:10.1038/ncomms14813
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: declined_component_transfers
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep core-cartwheel reconstitution and human localization models separate
+    from microbial D2 composition.
+  rationale: Membership in a broader assembly or a proposed counterpart is not a native
+    D2-specific assignment.
+  notes: Full-length CrSAS-6 plus Bld10 residues 1061-1641 forms core-cartwheel-like
+    arrays with D1- and D2-like peripheral densities in the 2017 assay. CrSAS-6_NL
+    arrays retain D1 but lack D2. These results do not identify which protein forms
+    the native D2-rod; the explicit SAS-6 assignment to D1 is not transferred to D2.
+    The inspected 2024 human U-ExM study proposes CPAP as a D2 constituent from localization
+    and prior fibril formation. That human model does not establish microbial D2 membership.
+    No SAS-6, Bld10/Cep135, CPAP, pinhead protein or tubulin component is asserted
+    here solely from these neighboring or model-system observations.
+  evidence:
+  - reference: DOI:10.1038/ncomms14813
+  - reference: DOI:10.15252/embj.2020106246
+  - reference: DOI:10.1016/j.cell.2024.03.025
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: measurement_and_reconstruction_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep radial position, axial organization and assembly models distinct.
+  rationale: Processing symmetry and adjacent structural repeats do not supply a molecular
+    count or D2 growth rate.
+  notes: The 45.6-nm Figure 1f measurement is a hub-margin-to-D2 distance. The roughly
+    25-nm spacing in the 2020 cartwheel analysis concerns D1 merged-spoke units, not
+    a demonstrated D2-rod repeat. Ninefold symmetrization improves contrast and is
+    not a count of D2 protein molecules. The 2020 Paramecium Results and Methods give
+    different cartwheel averaging counts (8 tomograms/235 boxes versus 7 tomograms/232
+    retained subvolumes); neither is promoted to biological stoichiometry or used
+    for the 2017 measurement. Spatial extension without visible pinhead is not a time-resolved
+    assembly sequence. No mechanical modulus, causal graph, broad clade distribution
+    or motility trait is asserted.
+  evidence:
+  - reference: DOI:10.1038/ncomms14813
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: deposited_data_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not substitute neighboring maps for a D2-rod-specific deposit.
+  rationale: Sharing an article does not establish structural equivalence or sufficient
+    map coverage.
+  notes: The 2017 Data availability statement points to the paper and its supplementary
+    material. The 2020 paper lists EMD-10726 through EMD-10729; native released-entry
+    titles describe A-C-linker or microtubule-triplet reconstructions, not an isolated
+    D2-rod map. They are not added as exact xrefs or D2-specific datasets. This is
+    a bounded decision about those deposits, not a claim that no relevant dataset
+    exists elsewhere. The single-species 2017 Figure 1 supplies the hosted native
+    D2 visual evidence; 2020 EV3 supplies the inspected longitudinal context but contains
+    two taxa.
+  evidence:
+  - reference: DOI:10.1038/ncomms14813
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: pmc_pmc5376648_f1
+  file: pmc5376648_f1.jpg
+  file_sha256: 50a63f5c43b225e40950c425b3c32b6c8e728c051a543a2d0277d898ee5712da
+  source: PMC
+  source_accession: PMC5376648.1 f1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5376648/figure/f1/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5376648.1/ncomms14813-f1.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: P. Guichard, V. Hamel, M. Le Guennec, N. Banterle, I. Iacovache, V.
+    Nemčíková, I. Flückiger, K. N. Goldie, H. Stahlberg, D. Lévy, et al.; CC BY, via
+    PubMed Central
+  modality: CRYO_ET
+  caption: Native isolated Chlamydomonas CW-15 pro-basal-body cartwheel. Panels a-c
+    show ninefold-symmetrized transverse cryo-tomographic sections and enlarged regions;
+    d is a schematic. Panel e distinguishes the hub, D1 and the outer D2 density.
+    Panel f plots hub diameter and radial hub-margin distances to D1 and D2, not D2-rod
+    length. Scale bars are 50 nm. These cross sections show the D2 region, not its
+    full longitudinal extent.
+  taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  reference: DOI:10.1038/ncomms14813
+  retrieved_on: '2026-10-04'
+  notes: Original multipanel Figure 1 visually inspected and accepted without cropping
+    or modification. JATS links f1 to ncomms14813-f1.jpg; article and media MD5 checksums
+    were verified from PMC OA metadata. The exact CC BY 4.0 licence comes from JATS.
+    Taxon and CW-15 preparation come from the primary Methods and match the canonical
+    example. Processed density views, schematic colors and the D2 label do not assign
+    a protein sequence.
