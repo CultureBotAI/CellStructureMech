@@ -2427,6 +2427,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:basal_body_cartwheel",
+      "label": "basal body cartwheel",
+      "neighbors": [
+        {
+          "identifier": "GO:0001535",
+          "label": "radial spoke head",
+          "cosine_similarity": 0.78086676
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.77215133
+        },
+        {
+          "identifier": "GO:0001536",
+          "label": "radial spoke stalk",
+          "cosine_similarity": 0.76240293
+        },
+        {
+          "identifier": "GO:0001534",
+          "label": "radial spoke",
+          "cosine_similarity": 0.75635616
+        },
+        {
+          "identifier": "GO:0120343",
+          "label": "radial spoke neck",
+          "cosine_similarity": 0.71694874
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:basal_body_inner_scaffold",
       "label": "basal body inner scaffold",
       "neighbors": [
@@ -4962,9 +4993,9 @@
           "cosine_similarity": 0.77061307
         },
         {
-          "identifier": "GO:1990718",
-          "label": "axonemal central pair projection",
-          "cosine_similarity": 0.75183334
+          "identifier": "cellstructuremech:basal_body_cartwheel",
+          "label": "basal body cartwheel",
+          "cosine_similarity": 0.75635616
         }
       ]
     },
@@ -4993,9 +5024,9 @@
           "cosine_similarity": 0.7833887
         },
         {
-          "identifier": "GO:1990718",
-          "label": "axonemal central pair projection",
-          "cosine_similarity": 0.75350667
+          "identifier": "cellstructuremech:basal_body_cartwheel",
+          "label": "basal body cartwheel",
+          "cosine_similarity": 0.78086676
         }
       ]
     },
@@ -5019,14 +5050,14 @@
           "cosine_similarity": 0.90460161
         },
         {
+          "identifier": "cellstructuremech:basal_body_cartwheel",
+          "label": "basal body cartwheel",
+          "cosine_similarity": 0.71694874
+        },
+        {
           "identifier": "GO:0005823",
           "label": "central plaque of spindle pole body",
           "cosine_similarity": 0.67973442
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.67622884
         }
       ]
     },
@@ -5050,14 +5081,14 @@
           "cosine_similarity": 0.91393924
         },
         {
+          "identifier": "cellstructuremech:basal_body_cartwheel",
+          "label": "basal body cartwheel",
+          "cosine_similarity": 0.76240293
+        },
+        {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
           "cosine_similarity": 0.75709714
-        },
-        {
-          "identifier": "GO:0005822",
-          "label": "inner plaque of spindle pole body",
-          "cosine_similarity": 0.74367847
         }
       ]
     },

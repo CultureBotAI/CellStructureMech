@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_cartwheel.yaml
+  slug: basal_body_cartwheel
+session:
+  id: 2026-10-04T130332Z-codex-a0d709
+  timestamp: '2026-10-04T13:03:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - physical_properties
+  - images
+  - discussions
+  summary: Add evidence-backed basal body cartwheel record
+  details: Created one PROPOSED record through new_record.py and a guarded temporary mutator,
+    with explicit identifier and scaffold assertions, an LLM curation event, closed-schema
+    validation and byte-identical re-emission. Inspected checksum-verified primary 2004, 2017
+    and 2020 PMC text, native UniProt/InterPro/GO/NCBI Taxonomy/EMDB metadata and the licensed
+    2020 Figure 1. Retained three microbial examples, two protein constituents with taxon-specific
+    accessions, scoped native measurements, and the unmodified CC BY 4.0 figure with checksums.
+    Whole-protein family groundings remain label-only; broader families, domains, neighboring
+    deposits, universal stoichiometry and inferred kinetics were declined. The 2026 full-text
+    follow-up is explicitly unresolved after publisher failures and preprint HTTP 429. Hidden/ignored-inclusive
+    deduplication and complete GO searches preceded minting. Embedding/site regeneration and
+    full gates follow this history creation; no PR exists yet and no human-reviewed promotion
+    is claimed.

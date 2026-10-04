@@ -1,0 +1,300 @@
+identifier: cellstructuremech:basal_body_cartwheel
+label: basal body cartwheel
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A proteinaceous hub-and-spoke assembly at the proximal region of a microbial
+  ciliary basal body or pro-basal body. Its central hub bears nine radially arranged
+  spokes that connect toward the surrounding microtubules; the hub and spokes extend
+  longitudinally as a stacked scaffold.
+definition_source: DOI:10.15252/embj.2020106246
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T12:59:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T13:02:54Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added source-scoped cartwheel identity, constituents and protein examples,
+    three microbial examples, native measurements and an inspected CC BY 4.0 figure.
+    Documented grounding, model and deposition boundaries and the unread 2026 full-text
+    follow-up.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0036064
+- GO:0120280
+synonyms:
+- synonym_text: centriole cartwheel
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.15252/embj.2020106246
+components:
+- component_id: sas6
+  label: SAS-6
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro search returned SAS-6 domains and a domain superfamily,
+    not an exact whole-protein family. These are not asserted as equivalent to SAS-6;
+    the source-specific accession is retained below.
+  gene_symbols:
+  - SAS6
+  - BLD12
+  - CrSAS-6
+  essentiality: UNKNOWN
+  role: Structural constituent of the central hub and radial spokes. Recombinant Chlamydomonas
+    SAS-6 forms ring-based assemblies, but this does not establish complete native
+    composition or a fixed copy number per cartwheel.
+  evidence:
+  - reference: DOI:10.1038/ncomms14813
+    notes: Native localization and in-vitro reconstitution with full-length CrSAS-6
+      and a Bld10 C-terminal fragment support cartwheel membership. The truncated
+      SAS-6 assembly assay is not a census of native subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:A9CQL4
+    protein_label: Centriole protein
+    gene_symbol: CrSAS-6
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-04'
+    role: Chlamydomonas SAS-6; the native UniProt entry retains its submitted name
+      and CrSAS-6 gene symbol. This is a TrEMBL entry, not reviewed Swiss-Prot.
+    evidence:
+    - reference: UniProtKB:A9CQL4
+      notes: Native JSON confirms accession, organism, gene symbol and entry status;
+        its sequence reference is the original Chlamydomonas SAS-6 study.
+    - reference: DOI:10.1038/ncomms14813
+- component_id: bld10_cep135
+  label: Bld10/Cep135
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro IPR051877 includes both CEP135 and TSGA10, as independently
+    confirmed by reviewed human UniProt entries. Its scope is broader than Bld10/Cep135.
+    The matched Pfam entries describe domains, not an exact whole-protein family.
+  gene_symbols:
+  - BLD10
+  - CEP135
+  essentiality: UNKNOWN
+  role: Cartwheel-associated structural protein localized to radial fibers in Chlamydomonas.
+    Its C-terminal fragment supports organized core-cartwheel reconstitution with
+    full-length SAS-6; this does not assign the complete protein to a single density
+    or establish universal cartwheel essentiality.
+  evidence:
+  - reference: DOI:10.1083/jcb.200402022
+    notes: Immunogold localization places Bld10 on cartwheel radial fibers in basal
+      bodies and pro-basal bodies. The null mutant lacks recognizable basal bodies,
+      so its phenotype is not a cartwheel-specific loss assay.
+  - reference: DOI:10.1038/ncomms14813
+    notes: Full-length SAS-6 together with Bld10 residues 1061-1641 produces organized
+      hub-and-spoke arrays in vitro. Fragment sufficiency does not establish the full
+      native cartwheel proteome.
+  protein_examples:
+  - uniprot_id: UniProtKB:A8ID55
+    protein_label: Basal body protein 10
+    gene_symbol: BLD10
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-04'
+    evidence:
+    - reference: UniProtKB:A8ID55
+      notes: Native UniProt JSON verifies the accession, recommended name, BLD10 gene
+        symbol, taxon and Swiss-Prot status.
+    - reference: DOI:10.1083/jcb.200402022
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: In-situ cryo-FIB/cryo-ET of mat3-4 cells resolves cartwheels in mature basal
+    bodies and pro-basal bodies. This is a native cellular sample, not a recombinant
+    cartwheel reconstitution.
+  reference: DOI:10.15252/embj.2020106246
+- taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  note: Cartwheels characterized by cryo-ET and subtomogram averaging of isolated
+    cortical units from d4-2 and delta-CenBP1 strains. The example does not assert
+    identical cartwheel length or spoke-fusion geometry across species.
+  reference: DOI:10.15252/embj.2020106246
+- taxon_id: NCBITaxon:5762
+  taxon_label: Naegleria gruberi
+  note: Isolated basal bodies from NEG cells differentiated into flagellates. Cartwheel
+    periodicities were measured in undamaged regions because specimen preparation
+    often compressed the basal bodies; this is not an assertion that amoeboid cells
+    retain a cartwheel.
+  reference: DOI:10.15252/embj.2020106246
+functions:
+- function_id: radial_scaffold
+  label: ciliary basal body organization
+  grounding: GO:0032053
+  description: Provides a central radial scaffold linking the hub toward the surrounding
+    microtubules in the proximal basal-body region. This structural role does not
+    imply that the cartwheel alone determines microtubule number or that its absence
+    abolishes every form of basal-body assembly.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+    notes: Native reconstructions resolve the hub, spokes and peripheral connections.
+      Static architecture does not establish a growth time course.
+  - reference: DOI:10.1038/ncomms14813
+physical_properties:
+- property: DIAMETER
+  value: 22.4 +/- 1.3
+  unit: UO:0000018
+  context: Central-hub diameter in isolated Chlamydomonas reinhardtii pro-basal bodies,
+    Figure 1 of Guichard et al. 2017; reported value and error, n=10 measurements
+    from five tomograms. The caption does not specify the error statistic. This is
+    not the full spoke-to-spoke cartwheel diameter.
+  reference: DOI:10.1038/ncomms14813
+- property: OTHER
+  value: 4.1 +/- 0.67
+  unit: UO:0000018
+  context: Axial central-hub density spacing in mature Chlamydomonas reinhardtii basal
+    bodies imaged in situ in Klena et al. 2020, Figure 1; mean and SD, n=30 distances.
+    Not a universal ring-pair repeat or whole cartwheel length.
+  reference: DOI:10.15252/embj.2020106246
+- property: OTHER
+  value: 8.7 +/- 1.6
+  unit: UO:0000018
+  context: Axial spacing of cartwheel inner densities in the mature Chlamydomonas
+    reinhardtii in-situ sample, Figure 1; mean and SD, n=18 distances. Inner-density
+    occupancy is not uniform throughout every cartwheel.
+  reference: DOI:10.15252/embj.2020106246
+evidence:
+- reference: DOI:10.15252/embj.2020106246
+  notes: Klena et al. 2020, PMID:32954513. Checksum-verified PMC7667884.1 JATS Results,
+    Discussion, cartwheel Methods and figure captions inspected; Figure 1 visually
+    inspected. Native architecture and taxon-specific measurements are distinguished
+    from proposed molecular assignments.
+- reference: DOI:10.1038/ncomms14813
+  notes: Guichard et al. 2017, PMID:28332496. Checksum-verified PMC5376648.1 Results,
+    Discussion and Methods inspected. Native core-cartwheel morphology and recombinant
+    sufficiency experiments have different scopes.
+- reference: DOI:10.1083/jcb.200402022
+  notes: Matsuura et al. 2004, PMID:15173189. Checksum-verified PMC2172387.1 Results,
+    including localization, immuno-EM and mutant/rescue experiments, inspected. No
+    media from this noncommercial-licensed article are hosted.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish a cartwheel record from its basal-body parent and neighbors.
+  rationale: A named hub-and-spoke subassembly is not a single protein or an entire
+    basal body.
+  notes: Hidden/ignored-inclusive searches found cartwheel as a component of the existing
+    ciliary basal body record, not as a standalone record. Complete QuickGO cartwheel
+    and centriole-cartwheel searches found no exact cellular component identity. GO:0032991
+    supplies the broader protein-containing complex class; basal body and pro-basal
+    body are parthood, not is-a. The record centers on the hub and spokes, including
+    their native peripheral specializations. Pinhead, triplet base, A-C linker, inner
+    scaffold and microtubule wall are not synonyms. The 2017 core-cartwheel term excludes
+    pinhead and microtubules and is narrower than the broader cartwheel usage.
+  evidence:
+  - reference: DOI:10.1038/ncomms14813
+  - reference: DOI:10.15252/embj.2020106246
+  - reference: GO:0032991
+  - reference: GO:0036064
+  - reference: GO:0120280
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: exact_component_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Find exact taxon-agnostic groundings for SAS-6 and Bld10/Cep135.
+  rationale: Domain matches and a broader paralog family are not whole-family equivalents.
+  notes: Native InterPro searches and the two UniProt entries were inspected on 2026-10-04.
+    SAS-6 matches are domains or domain superfamilies. IPR051877 includes both reviewed
+    human CEP135 and TSGA10 entries. Components remain REVIEWED_LABEL_ONLY; organism-specific
+    examples retain native names and distinct reviewed/unreviewed statuses. No cross-species
+    essentiality or whole-cartwheel stoichiometry is asserted.
+  evidence:
+  - reference: UniProtKB:A9CQL4
+  - reference: UniProtKB:A8ID55
+  - reference: InterPro:IPR051877
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: architecture_is_not_assembly_chronology
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep reconstruction periodicities and reconstitution models scoped.
+  rationale: Native ring organization, artificial arrays and model fits are different
+    kinds of evidence.
+  notes: Klena et al. resolve closely spaced hub rings and taxon-specific spoke merging;
+    low-pass filtering can obscure paired rings. The 2017 truncated SAS-6 arrays include
+    eightfold assemblies, and inferred preferential ring-pair addition comes from
+    height distributions rather than a direct time course. Neither experiment supplies
+    a universal copy number or kinetic assembly graph. SAS-5 and Bld10 assignments
+    to particular additional densities remain hypotheses; no SAS-5 component or sequence
+    identity for the cartwheel inner density is asserted here.
+  evidence:
+  - reference: DOI:10.1038/ncomms14813
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: newer_trichonympha_source
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Assess the full 2026 Trichonympha cartwheel study before adding its molecular
+    model or deposits.
+  rationale: Metadata and an abstract do not support an audited native model.
+  notes: The published DOI and PMID:42709820 were verified, and the bioRxiv API links
+    the author preprint to this publication. Publisher/full-text routes were unsuccessful
+    and the preprint XML returned HTTP 429 after backoff on 2026-10-04. Full Results
+    and Methods have not been inspected. Its molecular assignments, repeat interpretation,
+    model stoichiometry and specimen taxon are not curated here. Existing numerical
+    fields remain explicitly tied to the 2017 or 2020 Chlamydomonas experiments, not
+    a universal architecture.
+  evidence:
+  - reference: DOI:10.1073/pnas.2612170123
+    notes: Metadata and abstract inspected only; follow-up source, not evidence for
+      an asserted molecular claim in this record.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: deposited_map_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not label neighboring triplet deposits as cartwheel maps.
+  rationale: Sharing a publication does not establish structural equivalence.
+  notes: Native EMDB entries EMD-10726 through EMD-10729 describe Paramecium A-C-linker
+    or proximal microtubule-triplet reconstructions. No isolated cartwheel deposit
+    is identified by those entry descriptions, so they are not added as exact xrefs
+    or cartwheel-specific datasets. Figure 1 supplies the directly inspected native
+    cartwheel visual evidence.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: pmc_pmc7667884_embj2020106246_fig_0001
+  file: pmc7667884_embj2020106246_fig_0001.jpg
+  file_sha256: c25cd15b6042c4631df0e30c2ce5bfa6e7b2fca1467bd035aec57879ddef7453
+  source: PMC
+  source_accession: PMC7667884.1 embj2020106246-fig-0001
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7667884/figure/embj2020106246-fig-0001/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7667884.1/EMBJ-39-e106246-g002.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Nikolai Klena, Maeva Le Guennec, Anne‐Marie Tassin, Hugo van den Hoek,
+    Philipp S Erdmann, Miroslava Schaffer, Stefan Geimer, Gabriel Aeschlimann, Lubomir
+    Kovacik, Yashar Sadian, et al.; CC BY, via PubMed Central
+  modality: CRYO_ET
+  caption: Native Chlamydomonas cartwheels in mature basal bodies and pro-basal bodies.
+    A-B show in-situ tomographic context; C-F show longitudinal and transverse views
+    of the hub, inner densities and spokes. G shows symmetrized cross sections, H
+    compares measured axial spacings, and I-J show serial symmetrized hub projections.
+    Scale bars in A-B are 100 nm.
+  taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  reference: DOI:10.15252/embj.2020106246
+  retrieved_on: '2026-10-04'
+  notes: Figure 1 from article version PMC7667884.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Original image visually inspected without modification. The JATS caption contains
+    inconsistent panel lettering; the curated caption follows the graphic labels.
+    Symmetrized panels are processed views, not raw observations.
