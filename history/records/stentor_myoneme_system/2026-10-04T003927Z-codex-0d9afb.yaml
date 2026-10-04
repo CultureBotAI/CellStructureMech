@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/stentor_myoneme_system.yaml
+  slug: stentor_myoneme_system
+session:
+  id: 2026-10-04T003927Z-codex-0d9afb
+  timestamp: '2026-10-04T00:39:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2006
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2007
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2005
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - causal_graphs
+  - discussions
+  summary: Address Stentor citation and rendered graph-scope review findings
+  details: Same-agent adversarial review of PR 2005 identified two P3 findings. Definition
+    and M-band synonym now cite Newman 1972 directly; Huang and Pitelka 1973 remain ultrastructure
+    and image evidence. Graph title and edge evidence explicitly expose nonmechanistic scope
+    and absence of demonstrated causal mediation without editing shared templates. Added resolved
+    discussion with both issue links and a new in-record curation event. Original discussions
+    and creation history remain unchanged; status stays PROPOSED. Post-fix validation and
+    full QC are required before the follow-up push and merge.

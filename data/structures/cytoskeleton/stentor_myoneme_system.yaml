@@ -6,7 +6,7 @@ definition: The cortical system of longitudinal contractile filament bundles, hi
   termed M bands, characterized in Stentor coeruleus. Its prominent posterior myonemes
   are distinct from the adjacent microtubular Km fibers; this record does not denote
   every centrin-containing cortical assembly.
-definition_source: DOI:10.1083/jcb.57.3.704
+definition_source: DOI:10.1126/science.177.4047.447
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-10-04T00:21:29Z'
@@ -27,6 +27,13 @@ curation_history:
   changes: Use produces for the impaired-contraction outcome state so the predicate
     does not invert the reported phenotype.
   llm_assisted: true
+- timestamp: '2026-10-04T00:39:25Z'
+  curator: codex
+  action: ADDRESSED_ADVERSARIAL_REVIEW
+  changes: Corrected direct M-band definition/synonym provenance and made the nonmechanistic
+    graph scope and mediation limits visible; retained PROPOSED status and linked
+    both review issues.
+  llm_assisted: true
 parent_structures:
 - GO:0005622
 part_of:
@@ -34,7 +41,7 @@ part_of:
 synonyms:
 - synonym_text: Stentor M-band system
   synonym_type: EXACT_SYNONYM
-  source: DOI:10.1083/jcb.57.3.704
+  source: DOI:10.1126/science.177.4047.447
 - synonym_text: myonemes
   synonym_type: BROAD_SYNONYM
   source: DOI:10.1111/j.1550-7408.2005.00048x
@@ -100,7 +107,7 @@ functions:
       with reduced myoneme cables.
 causal_graphs:
 - graph_id: sfi1_knockdown_phenotypes
-  title: Sfi1 knockdown and myoneme-associated phenotypes
+  title: Nonmechanistic summary of Sfi1 knockdown phenotypes
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: Experimental perturbation summary in S. coeruleus, limited to the published
@@ -124,8 +131,10 @@ causal_graphs:
     description: The reported Sfi1 knockdown conditions reduce myoneme cables.
     evidence:
     - reference: DOI:10.1016/j.cub.2026.06.062
-      notes: Abstract-level intervention result; final experimental methods were not
-        accessible.
+      notes: Nonmechanistic intervention summary from the published abstract; final
+        experimental methods were inaccessible. Cable reduction and contraction impairment
+        are parallel outcomes, not proof that cable loss mediates the contractile
+        defect.
   - subject: sfi1_rnai
     predicate: produces
     object: impaired_contraction
@@ -133,8 +142,10 @@ causal_graphs:
       incompletely.
     evidence:
     - reference: DOI:10.1016/j.cub.2026.06.062
-      notes: Abstract-level contractile phenotype in cable-reducing knockdowns; no
-        exact kinetics are imported.
+      notes: Abstract-level phenotype in cable-reducing knockdowns; no exact kinetics
+        or universal Sfi1 requirement is inferred. This outcome does not resolve native
+        force generation or establish mediation by cable loss; final methods remain
+        inaccessible.
 evidence:
 - reference: DOI:10.1083/jcb.57.3.704
   notes: Huang and Pitelka (1973). Full primary PDF and Figures 16/17 inspected; versioned
@@ -243,6 +254,29 @@ discussions:
     notes: Chapter 2 uses prediction, imaging and RNAi as distinct kinds of evidence.
   posed_by: codex
   posed_date: '2026-10-04'
+- discussion_id: review_provenance_and_presentation
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Use direct historical terminology provenance and expose the graph's evidence
+    limits in the generated page.
+  rationale: Same-agent review found that the M-band alias had an indirect source
+    assignment and that the renderer did not display the graph scope fields.
+  notes: Definition and synonym provenance now use Newman (1972), which explicitly
+    distinguishes microfilament M bands from microtubular Km fibers. Huang and Pitelka
+    remain the ultrastructure and image sources. The graph title and edge evidence
+    now expose its nonmechanistic status and lack of a demonstrated mediation step
+    without changing the shared renderer. This is agent review, not human sign-off.
+  evidence:
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2006
+    notes: Historical alias provenance finding.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2007
+    notes: Rendered graph scope finding.
+  - reference: DOI:10.1126/science.177.4047.447
+    notes: Primary Introduction and cinematic Results explicitly name M bands and
+      distinguish the two cortical fiber systems.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
 images:
 - image_id: pmc2108994_figure16
   source: PMC
