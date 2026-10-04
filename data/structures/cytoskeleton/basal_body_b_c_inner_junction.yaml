@@ -1,0 +1,436 @@
+identifier: cellstructuremech:basal_body_b_c_inner_junction
+label: basal body B-C inner junction
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A proteinaceous junction network at the lumen-facing interface between
+  the B- and C-tubules of a basal-body triplet microtubule, connecting the two tubules
+  with region-dependent composition.
+definition_source: DOI:10.1083/jcb.202311104
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T10:49:33Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T10:52:29Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added region-bounded B-C junction components, two species examples, proximal
+    structural contacts, verified EMDB datasets and density preview. Preserved unassigned
+    core/WD40 identities, model-fitting limits, strain provenance, cross-species uncertainty
+    and conflicting reported repeat/dataset labels.
+  llm_assisted: true
+synonyms:
+- synonym_text: B-C inner junction
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.7554/eLife.43434
+parent_structures:
+- GO:0140535
+part_of:
+- GO:0036064
+components:
+- component_id: poc1
+  label: POC1 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The live POC1 family search returns IPR050505, combining WDR55
+    and POC1; IPR020472 is a WD40 repeat. Neither denotes this exact class. Native
+    UniProt Q229Z6 is a reviewed POC1 reference from SB210, not a strain-paired example
+    for the structural experiments. Its domain and repeat annotations are not promoted
+    to a whole-protein family.
+  gene_symbols:
+  - POC1
+  essentiality: UNKNOWN
+  role: Its N-terminal WD40 domain bridges B08 and C10 in the proximal Tetrahymena
+    junction. The C-terminal region continues into the neighboring A-C linker. This
+    membership is not assigned to the compositionally distinct core B-C junction.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+    notes: Figure 2D-F combines predicted-model fitting with loss of the corresponding
+      WD40 density in complete-triplet subclasses of poc1 deletion material. Figure
+      S4B-D distinguishes the core junction, whose bridging density remains without
+      Poc1.
+  - reference: DOI:10.1126/sciadv.ady3689
+    notes: Figure 4A-B and Results trace the POC1 C-link helix to its N-terminal B08/C10
+      bridge. This establishes shared participation in connected modules, not identity
+      of the B-C junction and A-C linker.
+- component_id: inner_junction_ladder_protein
+  label: alpha-helical inner-junction ladder protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The source assigns I7LY02, an unreviewed SB210 reference at TTHERM_00682980.
+    UniProt lists no InterPro or Pfam cross-reference and the native integrated InterPro
+    endpoint returned HTTP 204. No exact source-neutral family is asserted. The PDB
+    entity's SWIM-type name is not a verified family or activity. Cai's structural
+    isolation uses SB715, so no strain-paired protein example is added.
+  essentiality: UNKNOWN
+  role: Forms an alpha-helical ladder connecting B07 and C10 in the proximal Tetrahymena
+    B-C junction. It is distinct from the additional unassigned WD40 density between
+    successive POC1 molecules.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+    notes: Figure 4A-C and Results assign the ladder using an MS-derived library of
+      predicted models and density fitting. RCSB 9QZC entity 8 maps the study's ladder
+      model to I7LY02. This is not an I7LY02 knockout, biochemical binding assay or
+      essentiality test.
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Cryo-ET of isolated basal bodies resolves different proximal and core B-C
+    networks, with wild-type and poc1-deletion comparisons. Methods list B2086 and
+    SB1969 backgrounds; this is a species-level example, not a pairing with SB210
+    reference sequences.
+  reference: DOI:10.1083/jcb.202311104
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Cryo-ET of nucleo-flagellar apparatus from cc849, cw10 mt-, resolves a B-C
+    junction network. The main average combines proximal mother-basal-body segments
+    and attached procentrioles; separate averages reveal maturity-related differences.
+    MIP9-11 are density labels, not verified equivalents of the Tetrahymena molecular
+    assignments.
+  reference: DOI:10.7554/eLife.43434
+functions:
+- function_id: luminal_b_c_connection
+  label: luminal B-C tubule connection
+  description: Connects the B- and C-tubules along the lumen-facing triplet interface.
+    The Tetrahymena core junction also provides an interface for attachment of the
+    separate inner scaffold.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+    notes: Figure 2D and Figure S4B-D show proximal and core bridging networks and
+      distinguish the core junction from its scaffold attachment. This structural
+      function is not a measured force threshold or a junction-specific explanation
+      of all poc1 mutant defects.
+  - reference: DOI:10.7554/eLife.43434
+    notes: Results and Figure 2C describe a network of MIP densities at the Chlamydomonas
+      B-C inner junction without assigning their gene products.
+causal_graphs:
+- graph_id: proximal_junction_contacts
+  title: Proximal B-C junction contacts
+  description: A bounded structural-contact network in the proximal Tetrahymena basal
+    body.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Edges describe contacts inferred from density and fitted models, not
+    direct binding assays or temporal assembly order. They apply to the proximal form,
+    not the distinct core architecture or an inferred Chlamydomonas protein crosswalk.
+  nodes:
+  - node_id: poc1
+    label: POC1 family protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: poc1
+  - node_id: ladder
+    label: alpha-helical inner-junction ladder protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: inner_junction_ladder_protein
+  - node_id: b_tubule
+    label: basal-body B-tubule
+    node_type: STRUCTURE
+  - node_id: c_tubule
+    label: basal-body C-tubule
+    node_type: STRUCTURE
+  edges:
+  - subject: poc1
+    predicate: contacts
+    object: b_tubule
+    description: POC1's WD40 domain contacts protofilament B08.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figure 4A-B and Results locate the B-side of the proximal POC1 bridge.
+  - subject: poc1
+    predicate: contacts
+    object: c_tubule
+    description: POC1's WD40 domain bridges toward protofilament C10.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figure 4A-B and Results resolve the C-side of the proximal bridge.
+  - subject: ladder
+    predicate: contacts
+    object: b_tubule
+    description: The assigned alpha-helical ladder contacts B07.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figure 4A and C and Results place the I7LY02 model against B07.
+  - subject: ladder
+    predicate: contacts
+    object: c_tubule
+    description: The assigned alpha-helical ladder connects toward C10.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ady3689
+      notes: Figure 4A and C and Results place the I7LY02 model against C10.
+datasets:
+- accession: EMDB:EMD-42781
+  title: Wild-type proximal B-C inner junction
+  description: Focused subtomogram reconstruction of the proximal junction and adjacent
+    triplet density.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and focused subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-42781
+  publication: DOI:10.1083/jcb.202311104
+  notes: Released native EMDB metadata, natural-source taxon 5911 and exact primary
+    citation verified. These are bounded reconstruction links, not exact whole-structure
+    identities or universal compositions. Full volume maps are not retained; mutant
+    comparisons are not selective B-C-junction ablations.
+- accession: EMDB:EMD-42777
+  title: Wild-type central-core basal-body triplet
+  description: Core triplet reconstruction containing the distinct B-C bridging network
+    and scaffold attachments.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-42777
+  publication: DOI:10.1083/jcb.202311104
+  notes: Released native EMDB metadata, natural-source taxon 5911 and exact primary
+    citation verified. These are bounded reconstruction links, not exact whole-structure
+    identities or universal compositions. Full volume maps are not retained; mutant
+    comparisons are not selective B-C-junction ablations.
+- accession: EMDB:EMD-42783
+  title: Poc1-knockout proximal basal-body triplet
+  description: Mutant proximal triplet reconstruction for comparison with wild-type
+    junction densities.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-42783
+  publication: DOI:10.1083/jcb.202311104
+  notes: Released native EMDB metadata, natural-source taxon 5911 and exact primary
+    citation verified. These are bounded reconstruction links, not exact whole-structure
+    identities or universal compositions. Full volume maps are not retained; mutant
+    comparisons are not selective B-C-junction ablations.
+- accession: EMDB:EMD-42784
+  title: Poc1-knockout central-core basal-body triplet
+  description: Core mutant reconstruction distinguishing retained B-C bridging density
+    from lost scaffold attachment.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-42784
+  publication: DOI:10.1083/jcb.202311104
+  notes: Released native EMDB metadata, natural-source taxon 5911 and exact primary
+    citation verified. These are bounded reconstruction links, not exact whole-structure
+    identities or universal compositions. Full volume maps are not retained; mutant
+    comparisons are not selective B-C-junction ablations.
+- accession: EMDB:EMD-53982
+  title: Proximal B-C inner junction focused on POC1
+  description: Single-particle focused submap from the proximal A-C-linker study,
+    resolving the POC1 region.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron microscopy and focused single-particle reconstruction
+  url: https://www.ebi.ac.uk/emdb/EMD-53982
+  publication: DOI:10.1126/sciadv.ady3689
+  notes: Released native EMDB metadata, natural-source taxon 5911 and exact primary
+    citation verified. These are bounded reconstruction links, not exact whole-structure
+    identities or universal compositions. Full volume maps are not retained; mutant
+    comparisons are not selective B-C-junction ablations.
+- accession: EMDB:EMD-53983
+  title: Proximal B-C inner junction focused on the WD40 region
+  description: Complementary focused submap; its region label does not identify the
+    additional WD40 protein.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron microscopy and focused single-particle reconstruction
+  url: https://www.ebi.ac.uk/emdb/EMD-53983
+  publication: DOI:10.1126/sciadv.ady3689
+  notes: Released native EMDB metadata, natural-source taxon 5911 and exact primary
+    citation verified. These are bounded reconstruction links, not exact whole-structure
+    identities or universal compositions. Full volume maps are not retained; mutant
+    comparisons are not selective B-C-junction ablations.
+evidence:
+- reference: DOI:10.1083/jcb.202311104
+  notes: Ruehle et al. 2024. Official PMC11094743.1 JATS checksum verified; proximal/core
+    and mutant Results, relevant Discussion, Methods and captions inspected. Figures
+    2 and S4 visually checked. Molecular fitting and perturbation evidence are distinguished;
+    no verbatim snippets are asserted.
+- reference: DOI:10.1126/sciadv.ady3689
+  notes: Cai et al. 2025. Official PMC12506977.1 JATS checksum verified; junction
+    Results, relevant isolation/model-building Methods and data availability read,
+    and Figure 4 visually inspected. Structural isolation uses SB715; model assignments
+    are MS-guided predicted-model fits.
+- reference: DOI:10.7554/eLife.43434
+  notes: Li et al. 2019. Official PMC6384029.1 JATS checksum verified; relevant architecture,
+    MIP and assembly Results, Methods and MIP9 author response read. Figure 2 and
+    its supplement 12 visually checked. Main averages combine mother-basal-body proximal
+    segments with attached procentrioles.
+- reference: DOI:10.1038/s44318-025-00392-6
+  notes: Li et al. 2025 provides the earlier unassigned inner-ladder observation and
+    an explicitly retained B-C dataset-label conflict. It is not the source for the
+    later I7LY02 molecular assignment.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the B-C inner junction from connected basal-body modules.
+  rationale: This is a named proteinaceous junction network within a triplet, not
+    one protein.
+  notes: Hidden- and ignored-inclusive label, synonym, slug and citation searches
+    found only adjacent records and provenance, not this identity. Complete inner-junction
+    and triplet GO searches, and all cellular-component candidates from the basal-body
+    search, found no exact B-C term. GO:0160113 denotes an axonemal doublet A-B junction,
+    not this structure. The outer B-C junction, A-B inner junction, intertriplet A-C
+    linker, inner scaffold and whole triplet are distinct. GO:0140535 is broader is-a;
+    GO:0036064 is parthood.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+  - reference: DOI:10.7554/eLife.43434
+  - reference: GO:0160113
+  - reference: GO:0140535
+  - reference: GO:0036064
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: exact_family_groundings
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact POC1 and alpha-helical inner-junction ladder family groundings.
+  rationale: A repeat, domain or combined family does not denote an exact component
+    class.
+  notes: Both components remain REVIEWED_LABEL_ONLY for the documented reasons. POC1
+    Q229Z6 is a reviewed SB210 reference; I7LY02 is unreviewed. Neither is paired
+    to B2086, SB1969 or SB715 as an experimental protein example. The paper's limited
+    detectable I7LY02 homology outside Ciliophora is not evidence that the structure
+    is absent in other taxa.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+  - reference: DOI:10.1126/sciadv.ady3689
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: regional_and_unassigned_composition
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify the additional proximal WD40 protein and the core B-C bridging
+    proteins.
+  rationale: The named proximal classes are not a complete or universal junction composition.
+  notes: Cai et al. leave the WD40 density between POC1 copies unassigned; TBC1D31A
+    is only a hypothesis based on proximity and is not added as a component. Ruehle
+    et al. find a distinct bulky core junction without POC1-like density; its bridge
+    persists in complete poc1-deletion triplets even when the separate scaffold attachment
+    is lost. Proximal I7LY02 placement is not transferred to these core densities.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+  - reference: DOI:10.1126/sciadv.ady3689
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: later_ladder_assignment
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Reconcile the earlier unassigned ladder with newer molecular evidence.
+  rationale: Molecular uncertainty must follow the source chronology.
+  notes: Li et al. 2025 left the proximal B-C ladder identity open. Cai et al. later
+    assigned I7LY02 by MS-guided model fitting, represented here with that qualification.
+    The same paper assigns a separate I7LY02 array at the A-B junction; sharing a
+    protein does not merge the two junction records.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+  - reference: DOI:10.1126/sciadv.ady3689
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: chlamydomonas_density_identities
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve Chlamydomonas MIP9-11 identities and reconcile the reported MIP9
+    repeat.
+  rationale: Density labels and geometric similarity are not cross-species protein
+    identities.
+  notes: Li et al. 2019 assign MIP9 as likely non-tubulin because a canonical protofilament
+    model deviates from its density; the author response and Figure 2 supplement 12
+    do not identify a gene product. MIP9-11 are not equated to Tetrahymena POC1 or
+    I7LY02. Results describe a 4-nm MIP9 periodicity, while Table 1 lists 8 nm; no
+    repeat measurement is asserted here pending reconciliation. Proximal mother-basal-body
+    and procentriole averages differ, so the pooled map is not immature-only or a
+    universal architecture.
+  evidence:
+  - reference: DOI:10.7554/eLife.43434
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: exclude_neighboring_components
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep neighboring linkers, scaffolds and axonemal proteins outside junction
+    composition.
+  rationale: A composite map includes material beyond the curated structural boundary.
+  notes: Tubulins are bridged substrates here, not extra junction families. Fam161A/Poc16
+    core localization is not a molecular assignment to the B-C bridge. TBC1D31-like
+    A-C-linker proteins and axonemal FAP/PACRG assemblies are not imported merely
+    because they are adjacent or occupy similar sites. POC1 is included specifically
+    for its directly supported proximal B-C membership.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+  - reference: DOI:10.1126/sciadv.ady3689
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: mechanical_and_assembly_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Avoid converting heterogeneous static reconstructions into a temporal assembly
+    mechanism.
+  rationale: Poc1 loss affects multiple structures and specimen isolation can destabilize
+    triplets.
+  notes: Complete-triplet mutant subclasses support local density comparisons, not
+    uniform absence of the entire junction. Percentages of subtomogram classes are
+    not organism prevalence. The 2019 assembly model and 2024 disassembly interpretation
+    derive from static classes, with preparation-induced lability acknowledged. No
+    junction-specific force threshold, whole-junction stoichiometry, broad taxonomic
+    distribution or assembly essentiality is asserted. Reconstruction window lengths
+    and map resolutions are not biological dimensions.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+  - reference: DOI:10.7554/eLife.43434
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: dataset_label_conflict
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Handle the conflicting regional label for EMD-46438 without silently choosing
+    one.
+  rationale: Native archive titles and article tables do not always agree.
+  notes: Li et al. 2025 Table 2 calls EMD-46438 core B-C, whereas native EMDB metadata
+    says proximal B-C; the Methods also state that B-C junctions were excluded from
+    the detailed study. This record instead links independently verified, region-consistent
+    2024 and Cai 2025 reconstructions. The conflict is retained rather than asserted
+    to be resolved biologically.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: emdb_42781
+  file: emd_42781.png
+  file_sha256: df7ed8e6da1d20a19522b82a1c2b0afc590de9c802972628beb22fabd0951860
+  source: EMDB
+  source_accession: EMD-42781
+  source_url: https://www.ebi.ac.uk/emdb/EMD-42781
+  download_url: https://ftp.ebi.ac.uk/pub/databases/emdb/structures/EMD-42781/images/emd_42781.png
+  licence: PUBLIC_DOMAIN
+  licence_url: https://www.ebi.ac.uk/emdb/policies.html
+  attribution: Ruehle M, Li S, Agard DA, Pearson C; EMDB depositor representative
+    figure, without copyright restrictions.
+  modality: CRYO_ET
+  caption: Representative density rendering of a focused wild-type Tetrahymena proximal
+    basal-body B-C inner-junction reconstruction, including adjacent triplet density.
+    This is a subtomogram average, not a raw micrograph, whole basal body or individually
+    labeled protein model. No scale bar is shown.
+  taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  reference: DOI:10.1083/jcb.202311104
+  retrieved_on: '2026-10-04'
+  notes: Native EMDB natural-source taxon, citation and depositor authors verified;
+    PNG inspected and SHA-256 checked. The archive title misspells the species, but
+    native natural_source metadata resolves Tetrahymena thermophila. EMDB policy 3.1.2
+    requires representative figures free of copyright restrictions, recorded using
+    the repository adapter's PUBLIC_DOMAIN convention. The paper's separate CC BY-NC-SA
+    figures are inspected only, not hosted.

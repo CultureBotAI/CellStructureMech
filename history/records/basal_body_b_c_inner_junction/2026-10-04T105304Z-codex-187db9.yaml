@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_b_c_inner_junction.yaml
+  slug: basal_body_b_c_inner_junction
+session:
+  id: 2026-10-04T105304Z-codex-187db9
+  timestamp: '2026-10-04T10:53:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - datasets
+  - evidence
+  - discussions
+  - images
+  summary: Add the basal-body B-C inner junction
+  details: Add a distinct proteinaceous B-C junction record from Ruehle et al. 2024, Cai et
+    al. 2025 and Li et al. 2019, with the Li et al. 2025 uncertainty and dataset conflict
+    retained. Include proximal POC1 and alpha-helical ladder classes, Tetrahymena and Chlamydomonas
+    examples, four bounded proximal structural contacts, six native-verified EMDB reconstruction
+    links and the licensed EMD-42781 density preview. Preserve unknown core and WD40 identities,
+    source-specific model-fitting and strain limits, cross-species density-label uncertainty,
+    static-class interpretation and conflicting MIP9 repeat reports. Scaffold and curate through
+    the guarded writer; regenerate embeddings and site products and run the full validation
+    set. Status remains PROPOSED.
