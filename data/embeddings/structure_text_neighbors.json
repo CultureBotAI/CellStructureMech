@@ -2334,6 +2334,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:basal_body_a_tusk",
+      "label": "basal body A-tusk",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:basal_body_triplet_base",
+          "label": "basal body triplet base",
+          "cosine_similarity": 0.81412736
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.73744832
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_d2_rod",
+          "label": "basal body D2-rod",
+          "cosine_similarity": 0.71670507
+        },
+        {
+          "identifier": "cellstructuremech:entodiniomorphid_subkinetal_myoneme_system",
+          "label": "Entodiniomorphid subkinetal myoneme system",
+          "cosine_similarity": 0.7088319
+        },
+        {
+          "identifier": "cellstructuremech:nucleus_basal_body_connector",
+          "label": "nucleus-basal body connector",
+          "cosine_similarity": 0.70532979
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:basal_body_b_c_inner_junction",
       "label": "basal body B-C inner junction",
       "neighbors": [
@@ -2555,6 +2586,11 @@
       "label": "basal body triplet base",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:basal_body_a_tusk",
+          "label": "basal body A-tusk",
+          "cosine_similarity": 0.81412736
+        },
+        {
           "identifier": "cellstructuremech:basal_body_pinhead",
           "label": "basal body pinhead",
           "cosine_similarity": 0.77227024
@@ -2573,11 +2609,6 @@
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.7504271
-        },
-        {
-          "identifier": "cellstructuremech:nucleus_basal_body_connector",
-          "label": "nucleus-basal body connector",
-          "cosine_similarity": 0.74672501
         }
       ]
     },
