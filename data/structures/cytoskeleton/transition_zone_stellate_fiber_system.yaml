@@ -1,0 +1,303 @@
+identifier: cellstructuremech:transition_zone_stellate_fiber_system
+label: transition zone stellate fiber system
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A centrin-containing system of luminal fibers forming a nine-pointed stellate
+  array attached to the outer microtubule doublets of the Chlamydomonas ciliary transition
+  zone. It is distinct from the peripheral Y-links and from the central cylinder around
+  which the fibers extend.
+definition_source: DOI:10.1083/jcb.124.5.795
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T04:58:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T04:59:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added stellate-fiber identity and parthood, verified centrin example, canonical
+    species, bounded contraction mechanism, explicit conflicting excision evidence,
+    component exclusions and a link-only micrograph.
+  llm_assisted: true
+parent_structures:
+- GO:0043232
+part_of:
+- GO:0035869
+synonyms:
+- synonym_text: transition zone stellate fibers
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1083/jcb.124.5.795
+- synonym_text: transition region stellate fibers
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1242/jcs.99.4.731
+- synonym_text: stellate structure
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.cub.2014.11.066
+components:
+- component_id: stellate_fiber_centrins
+  label: Stellate fiber centrins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Calcium-binding constituents of the stellate fibers; centrin sequence mutations
+    affect ordered transition-region assembly in Chlamydomonas.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: IPR050145 includes CML and obelin proteins as well as centrins;
+    IPR050230 is broader still. Neither exactly denotes this constituent class, and
+    an EF-hand domain is not a protein-family identity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P05434
+    protein_label: Caltractin
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-04'
+    role: Species-level centrin example shared with other centrin assemblies, not
+      a stellate-specific paralogue.
+    evidence:
+    - reference: UniProtKB:P05434
+      notes: Authority verifies the reviewed entry, recommended name and organism;
+        no primary gene symbol is supplied.
+    - reference: DOI:10.1083/jcb.119.6.1613
+      notes: The centrin/caltractin sequence, pCaBP4 clone and sequence-source citations
+        identify the studied protein. vfl2 and intragenic revertants alter centrin
+        assemblies.
+  evidence:
+  - reference: DOI:10.1083/jcb.124.5.795
+    notes: Results describe the centrin-based stellate fibers and antibody perturbations.
+  - reference: DOI:10.1083/jcb.119.6.1613
+    notes: Transition-region structures are disrupted by E101K centrin and restored
+      in intragenic revertants; the mutation is not specific to this fiber system.
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  reference: DOI:10.1083/jcb.124.5.795
+  note: Methods use wild-type 137c and vfl2 isolate 416. Species identity was checked
+    at NCBI; no culture-collection accession is inferred from these strain names.
+functions:
+- function_id: calcium_induced_doublet_repositioning
+  label: calcium-induced doublet repositioning
+  description: Stellate-fiber contraction draws transition-zone doublets inward in
+    detergent-extracted Chlamydomonas cell models. This bounded mechanical response
+    does not establish universal necessity for flagellar excision.
+  evidence:
+  - reference: DOI:10.1083/jcb.124.5.795
+    notes: Figure 2 compares extended and contracted arrays before and after calcium
+      challenge.
+causal_graphs:
+- graph_id: extracted_model_stellate_contraction
+  title: Calcium-induced stellate contraction in extracted Chlamydomonas models
+  description: Composition and attachment context accompany the observed contraction-to-doublet-displacement
+    mechanism.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Restricted to the 1994 detergent-model experiment. No severing, universal
+    excision requirement, centrin-only motor cycle or reverse edge is asserted.
+  nodes:
+  - node_id: centrins
+    label: Stellate fiber centrins
+    node_type: GENE_OR_PROTEIN
+    component_ref: stellate_fiber_centrins
+  - node_id: array
+    label: Transition-zone stellate fiber array
+    node_type: STRUCTURE
+  - node_id: doublets
+    label: Outer microtubule doublets
+    node_type: STRUCTURE
+    description: Attachment partners, not additional fiber constituents.
+  - node_id: calcium
+    label: Calcium challenge of detergent-extracted models
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: contraction
+    label: Stellate-fiber contraction
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: inward_shift
+    label: Inward displacement of doublets
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: centrins
+    predicate: are constituents of
+    object: array
+    description: Centrins form part of the array; a complete inventory is not known.
+    evidence:
+    - reference: DOI:10.1083/jcb.124.5.795
+      notes: Centrin-based fiber identity and perturbation experiments.
+  - subject: array
+    predicate: attaches to
+    object: doublets
+    description: The luminal fibers attach to the A-tubules of the outer doublets.
+    evidence:
+    - reference: DOI:10.1126/science.abm6704
+      notes: Native cryo-ET resolves attachment at protofilament A3.
+  - subject: calcium
+    predicate: triggers
+    object: contraction
+    description: Calcium addition elicits fiber condensation in the extracted preparation.
+    evidence:
+    - reference: DOI:10.1083/jcb.124.5.795
+      notes: Results and Figure 2 before/after comparison.
+  - subject: array
+    predicate: undergoes
+    object: contraction
+    description: The stellate fibers contract around the distal central cylinder.
+    evidence:
+    - reference: DOI:10.1083/jcb.124.5.795
+      notes: Figure 2D-F and accompanying Results.
+  - subject: contraction
+    predicate: draws doublets into
+    object: inward_shift
+    description: Contraction repositions the attached doublets inward.
+    evidence:
+    - reference: DOI:10.1083/jcb.124.5.795
+      notes: Figure 2C/F and accompanying mechanical interpretation.
+evidence:
+- reference: DOI:10.1083/jcb.124.5.795
+  notes: Full primary PDF text read; Figure 2 and Table I visually inspected. Physical
+    response is distinguished from disputed excision necessity.
+- reference: DOI:10.1083/jcb.119.6.1613
+  notes: Primary Methods, mutant/revertant Results and Table II inspected; centrin
+    assembly evidence is pleiotropic.
+- reference: DOI:10.1242/jcs.99.4.731
+  notes: Complete publisher abstract read; full text is access-restricted and figures
+    remain unread. Reports autotomy without organized stellate fibers or detectable
+    narrowing.
+- reference: DOI:10.1091/mbc.9.5.1195
+  notes: Primary Introduction, Methods, Results and Discussion read at PMC25341; figures
+    uninspected. Katanin experiments do not identify stellate-fiber constituents.
+- reference: DOI:10.1016/j.cub.2014.11.066
+  notes: 'Primary ultrastructure Results read: isolated central cylinders persist
+    after stellate fibers are no longer identifiable.'
+- reference: DOI:10.1126/science.abm6704
+  notes: Published primary architecture Results and Figure 1 caption read from the
+    institutional PDF. Native cryo-ET distinguishes luminal stellates, Y-links and
+    the distal microtubule sleeve; figures not visually inspected.
+- reference: GO:0043232
+  notes: Verified intracellular membraneless organelle as a broad is-a parent.
+- reference: GO:0035869
+  notes: Verified ciliary transition zone as the enclosing region, not exact identity.
+discussions:
+- discussion_id: identity_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate luminal stellate fibers from neighboring transition-zone structures.
+  rationale: Shared location or centrin does not imply identical structures.
+  notes: 'Whole-repository ignored- and hidden-inclusive searches found only an unaccepted
+    lead, not an existing exact record. GO searches found no exact term: GO:0035869
+    is the entire transition zone, GO:0097539 denotes external transition fibers,
+    and GO:0120269 denotes the trypanosome centrin arm. OTHER describes an organized
+    fiber system rather than a single filament. The central cylinder/H-piece, Y-links
+    and distal microtubule sleeve are not synonyms or constituents of this record.'
+  evidence:
+  - reference: DOI:10.1016/j.cub.2014.11.066
+    notes: Central-cylinder integrity persists without identifiable stellate fibers.
+  - reference: DOI:10.1126/science.abm6704
+    notes: The native architecture separates luminal stellates from Y-links and the
+      distal sleeve.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: excision_necessity_conflict
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve preparation-dependent contributions of stellate contraction to flagellar
+    excision.
+  rationale: Published results disagree, and the perturbations affect multiple assemblies.
+  notes: Jarvik and Suhan report effective vfl2 autotomy without organized fibers.
+    Sanders and Salisbury attribute the discrepancy to external shear and assay conditions,
+    but this is their interpretation, not an independently resolved conflict. Their
+    Table I retains residual excision after perturbation. EDTA, antibodies and vfl2
+    are not selective fiber ablations. The graph stops at doublet displacement and
+    does not assert necessary or sufficient severing by centrin alone.
+  evidence:
+  - reference: DOI:10.1242/jcs.99.4.731
+    notes: Abstract-bounded counter-evidence.
+  - reference: DOI:10.1083/jcb.124.5.795
+    notes: Table I and Discussion compare shear conditions.
+  - reference: DOI:10.1091/mbc.9.5.1195
+    notes: Introduction challenges centrin necessity; some supporting vfl2 observations
+      are explicitly unpublished.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: molecular_inventory
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact centrin-family grounding and the remaining molecular inventory.
+  rationale: One identified constituent does not establish molecular sufficiency,
+    stoichiometry or universal assembly essentiality.
+  notes: InterPro family boundaries are broader than this class. Native helical morphology
+    does not identify its complete protein composition. Centrin essentiality remains
+    UNKNOWN rather than transferring the pleiotropic vfl2 phenotype to every stellate
+    array.
+  evidence:
+  - reference: InterPro:IPR050145
+    notes: Authority includes centrins, CML and obelin proteins.
+  - reference: InterPro:IPR050230
+    notes: Authority describes several calcium-binding protein classes.
+  - reference: DOI:10.1083/jcb.119.6.1613
+    notes: Mutant and revertant comparisons distinguish several centrin assemblies.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: severing_and_gate_proteins_excluded
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not import whole-transition-zone or severing proteins as stellate constituents.
+  rationale: Region-level enrichment and enzymatic activity are not fiber-specific
+    localization.
+  notes: 'Katanin, FA1 and FA2 are not added: the 1998 work tests whole flagellar-basal-body
+    complexes and foreign purified katanin, not isolated stellate fibers. ESCRT proteins
+    from the 2015 transition-zone proteome are likewise not assigned to this array.
+    No IFT-gating or central-pair-exclusion function is inferred for fibers alone.'
+  evidence:
+  - reference: DOI:10.1091/mbc.9.5.1195
+    notes: Katanin-mediated severing and inhibitor experiments have a broader structural
+      boundary.
+  - reference: DOI:10.1016/j.cub.2014.11.066
+    notes: Proteomics samples whole isolated transition zones.
+  - reference: DOI:10.1242/jcs.99.4.731
+    notes: The proposed central-pair exclusion role concerns multiple defective transition-region
+      structures.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: taxonomic_and_function_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Extend directly demonstrated taxonomic scope and resolve an exact function
+    term.
+  rationale: A canonical species does not establish a prevalence statement for an
+    entire clade.
+  notes: No clade-wide distribution row, collection accession, exact GO function mapping
+    or whole-system dimensions are inferred. Filament thickness, cylinder dimensions
+    and helical pitch are different measurements, not interchangeable dimensions of
+    this system.
+  evidence:
+  - reference: DOI:10.1083/jcb.124.5.795
+    notes: Chlamydomonas model and ultrastructural measurements.
+  - reference: DOI:10.1126/science.abm6704
+    notes: Native Chlamydomonas architecture resolves a six-start stellate helix.
+  posed_by: codex
+  posed_date: '2026-10-04'
+images:
+- image_id: pmc2119956_figure2
+  source: PMC
+  source_accession: PMC2119956.1 Figure 2
+  source_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC2119956.1/PMC2119956.1.pdf#page=3
+  licence: CC_BY_NC_SA_4_0
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  attribution: M. A. Sanders and J. L. Salisbury, Figure 2, Journal of Cell Biology
+    124 (1994), doi:10.1083/jcb.124.5.795, via PubMed Central; CC BY-NC-SA 4.0. Link
+    only; no repository copy or adaptation.
+  modality: TEM
+  caption: 'Figure 2: Chlamydomonas transition zones in detergent-extracted models
+    before (A-C) and after (D-F) calcium challenge. Cross-sections C and F contrast
+    extended and condensed stellate fibers with displaced doublets. Source scale bar:
+    0.2 micrometers.'
+  taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  reference: DOI:10.1083/jcb.124.5.795
+  retrieved_on: '2026-10-04'
+  notes: All six panels visually inspected on PDF page 3; the same page also contains
+    a separate DIC Figure 1. Official version-1 PDF checksum and JATS licence verified.
+    No image binary is hosted.

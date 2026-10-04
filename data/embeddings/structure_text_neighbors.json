@@ -2994,6 +2994,11 @@
           "cosine_similarity": 0.8503359
         },
         {
+          "identifier": "cellstructuremech:transition_zone_stellate_fiber_system",
+          "label": "transition zone stellate fiber system",
+          "cosine_similarity": 0.80304448
+        },
+        {
           "identifier": "cellstructuremech:stentor_km_fiber",
           "label": "Stentor Km fiber",
           "cosine_similarity": 0.7415808
@@ -3007,11 +3012,6 @@
           "identifier": "GO:0032123",
           "label": "deep fiber",
           "cosine_similarity": 0.73721294
-        },
-        {
-          "identifier": "cellstructuremech:cytostomal_cord",
-          "label": "cytostomal cord",
-          "cosine_similarity": 0.72405058
         }
       ]
     },
@@ -4301,6 +4301,11 @@
           "cosine_similarity": 0.81185729
         },
         {
+          "identifier": "cellstructuremech:transition_zone_stellate_fiber_system",
+          "label": "transition zone stellate fiber system",
+          "cosine_similarity": 0.74717895
+        },
+        {
           "identifier": "cellstructuremech:cytostomal_cord",
           "label": "cytostomal cord",
           "cosine_similarity": 0.74430176
@@ -4309,11 +4314,6 @@
           "identifier": "GO:0044614",
           "label": "nuclear pore cytoplasmic filaments",
           "cosine_similarity": 0.73314612
-        },
-        {
-          "identifier": "cellstructuremech:peritrich_body_myoneme_system",
-          "label": "Peritrich body myoneme system",
-          "cosine_similarity": 0.7292021
         }
       ]
     },
@@ -5399,6 +5399,37 @@
           "identifier": "GO:0097649",
           "label": "A axonemal microtubule",
           "cosine_similarity": 0.85101028
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:transition_zone_stellate_fiber_system",
+      "label": "transition zone stellate fiber system",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:distal_connecting_fiber",
+          "label": "distal connecting fiber",
+          "cosine_similarity": 0.80304448
+        },
+        {
+          "identifier": "cellstructuremech:nucleus_basal_body_connector",
+          "label": "nucleus-basal body connector",
+          "cosine_similarity": 0.74717895
+        },
+        {
+          "identifier": "GO:0032123",
+          "label": "deep fiber",
+          "cosine_similarity": 0.73067947
+        },
+        {
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.72615582
+        },
+        {
+          "identifier": "cellstructuremech:parm_filament",
+          "label": "ParM filament",
+          "cosine_similarity": 0.70382803
         }
       ]
     },
