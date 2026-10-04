@@ -1,0 +1,261 @@
+identifier: cellstructuremech:peritrich_body_myoneme_system
+label: Peritrich body myoneme system
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: An interconnected contractile fiber system in the cell body of peritrich
+  ciliates, comprising longitudinal and peristomial fibers. In Vorticella, body myonemes
+  converge aborally into the distinct stalk spasmoneme. This record denotes the body
+  network, not the stalk organelle, ciliary apparatus or an individual protein.
+definition_source: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-03T23:23:39Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-03T23:25:09Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added scoped peritrich identity, verified examples, centrin/spasmin localization,
+    separate live/extracted calcium responses, evidence limitations and verified CIL
+    preview.
+  llm_assisted: true
+- timestamp: '2026-10-03T23:47:03Z'
+  curator: codex
+  action: CLARIFIED_ASSAY_SCOPE
+  changes: 'Qualified the Konior study''s light-microscopy statement and distinguished
+    the separate CIL immunogold TEM dataset after self-review issue #2004.'
+  llm_assisted: true
+parent_structures:
+- GO:0005622
+part_of:
+- GO:0005856
+synonyms:
+- synonym_text: body myonemes
+  synonym_type: BROAD_SYNONYM
+  source: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+- synonym_text: myoneme system
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.1002/jmor.10225
+components:
+- component_id: centrin_spasmin_proteins
+  label: Centrin/spasmin-family proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro spasmin search returned no entry. IPR050145 Centrin/CML-like
+    includes other calcium-binding proteins; it is not an exact mapping of this class.
+  essentiality: UNKNOWN
+  role: Immunolocalized constituents in V. convallaria; not an exhaustive or pan-peritrich
+    inventory.
+  evidence:
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: Figure 3 labels body fibers with N-termVcCentrin4 and 1F5 antibodies.
+canonical_examples:
+- taxon_id: NCBITaxon:60850
+  taxon_label: Vorticella convallaria
+  reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+  note: Body-network immunolocalization; also the organism identified by CIL:39513.
+- taxon_id: NCBITaxon:168242
+  taxon_label: Campanella umbellaria
+  reference: DOI:10.1002/jmor.10225
+  note: Protargol reveals interconnected longitudinal and circular fibers. Abstract-only
+    morphological example, not molecular composition or a contraction perturbation
+    assay.
+functions:
+- function_id: body_contraction
+  label: Cell-body contraction
+  description: Body fibers support zooid shortening; calcium-response evidence is
+    from Vorticella.
+  evidence:
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: Distinguishes body myonemes from stalk spasmoneme.
+  - reference: DOI:10.1242/jeb.189.1.163
+    notes: Abstract reports calcium-induced body shrinkage in living and Triton-extracted
+      preparations.
+causal_graphs:
+- graph_id: vorticella_body_response
+  title: Vorticella cell-body calcium responses
+  description: Separate live-cell and detergent-extracted interventions.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: Abstract-level organelle-response evidence, not a resolved molecular
+    motor. No species-level attribution, channel identity or stalk-to-body threshold
+    transfer.
+  nodes:
+  - node_id: live_calcium
+    label: Calcium-buffer injection into living Vorticella
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: live_shrinkage
+    label: Graded live cell-body shrinkage
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: extracted_calcium
+    label: Raised external calcium in Triton-extracted Vorticella
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: extracted_shrinkage
+    label: Extracted cell-body shrinkage
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: live_calcium
+    predicate: elicits
+    object: live_shrinkage
+    description: Body shrinkage increases with the injected buffer's free calcium
+      concentration.
+    evidence:
+    - reference: DOI:10.1242/jeb.189.1.163
+      notes: Abstract point 3; the stalk instead responds all-or-nothing in this experiment.
+  - subject: extracted_calcium
+    predicate: elicits
+    object: extracted_shrinkage
+    description: Body contraction increases with external calcium in extracted preparations.
+    evidence:
+    - reference: DOI:10.1242/jeb.189.1.163
+      notes: Abstract points 1-2; not a measurement of intact-cell calcium access.
+evidence:
+- reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+  notes: Konior et al. (2009), 102:161-174. Complete main PDF and legends read; Figure
+    3 visually inspected.
+- reference: DOI:10.1002/jmor.10225
+  notes: Shi et al. (2004). Primary PubMed abstract read; checked publisher full-text
+    routes were inaccessible.
+- reference: DOI:10.1242/jeb.189.1.163
+  notes: Katoh and Naitoh (1994). PubMed and publisher abstracts read; full publisher
+    text requires access.
+- reference: DOI:10.1083/jcb.56.2.559
+  notes: Allen (1973). Complete 21-page PMC2108889.1 PDF read; Figures 1, 7-10 and
+    19 inspected.
+- reference: DOI:10.7295/W9CIL39513
+  notes: Per-item JSON-LD and source preview inspected; public-domain dedication verified.
+- reference: GO:0005622
+  notes: Non-obsolete intracellular anatomical structure; broad is-a parent only.
+- reference: GO:0005856
+  notes: Non-obsolete cytoskeleton; used as a parthood target, not exact identity.
+discussions:
+- discussion_id: identity_and_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate the body network from stalk and other ciliate contractile structures.
+  rationale: Continuity and shared proteins do not establish identical subcellular
+    boundaries.
+  notes: Hidden- and ignored-inclusive whole-repository searches found comparative
+    mentions, not an existing body-system record. QuickGO myoneme, myonemal, spasmoneme
+    and peritrich queries returned zero hits. OTHER denotes a network, not one filament.
+    The label does not assert universal peritrich prevalence or identical fiber arrangements.
+    Generic synonyms are broad; no equivalence to Spirostomum fishnet is asserted.
+  evidence:
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: Body fibers converge into a spatially distinct stalk organelle.
+  - reference: DOI:10.1002/jmor.10225
+    notes: Names an interconnected system in a second peritrich genus.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: composition_and_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve molecular inventory, exact family groundings and assembly requirements.
+  rationale: Antibody localization is not a complete native assembly reconstruction.
+  notes: No exact paralogue stoichiometry, single-protein sufficiency or essentiality
+    is inferred. Vorticella Sfi1-like partners remain proposed, not entered as constituents.
+    Centrin/spasmin membership is not transferred to Campanella without molecular
+    evidence.
+  evidence:
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: The scaffold model was proposed for testing.
+  - reference: InterPro:IPR050145
+    notes: Broader Centrin/CML-like family; no exact grounding assigned.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: assay_boundaries
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep body localization distinct from stalk immunogold measurements.
+  rationale: Different compartments and antibodies cannot supply interchangeable measurements.
+  notes: In Konior et al. (2009), 1F5 recognizes two Western bands and N-termVcCentrin4
+    one. That study's body-network labeling is light microscopy; its compartment percentages
+    concern stalk spasmonemes, not this body network. CIL:39513 separately provides
+    body-myoneme immunogold TEM. No antibody-derived native copy number is asserted.
+  evidence:
+  - reference: https://ilacadofsci.com/wp-content/uploads/2013/03/102-15MS2905-print.pdf
+    notes: Figures 2-3 versus 4-8.
+  - reference: DOI:10.7295/W9CIL39513
+    notes: Separate body-myoneme TEM dataset, not the Konior study.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2004
+    notes: Post-opening self-review clarified the study-specific microscopy boundary.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+- discussion_id: native_mechanism
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the native calcium-handling and contraction mechanism.
+  rationale: Response to an intervention does not identify the molecular machinery
+    that mediates it.
+  notes: Calcium-induced calcium release is an interpretation, not a directly identified
+    channel. No receptor, pump, ATP-independent recovery or universal kinetics is
+    curated. Campanella's proposed skeletal and relaxation roles are not treated as
+    tested causal edges.
+  evidence:
+  - reference: DOI:10.1242/jeb.189.1.163
+    notes: Abstract distinguishes observations from the proposed regenerative-release
+      mechanism.
+  - reference: DOI:10.1002/jmor.10225
+    notes: Abstract proposes functions from morphology.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: linkage_complex_lead
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify molecular constituents before separately curating the ER-myoneme
+    linkage complex.
+  rationale: A recognizable substructure need not have an identified protein inventory.
+  notes: Allen describes midpiece, rails and cradle at the ER-myoneme interface. These
+    are morphological parts, not named molecular families. Calcium transport and excitation
+    transmission were proposed functions. The complex remains a research lead; no
+    guessed tether, ATPase or membrane-channel component is added here.
+  evidence:
+  - reference: DOI:10.1083/jcb.56.2.559
+    notes: Conventional TEM; preparation and section geometry limit interpretation.
+  posed_by: codex
+  posed_date: '2026-10-03'
+- discussion_id: image_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the source preview and antibody interpretation within their documented
+    scope.
+  rationale: A qualitative preview is not a calibrated raw image or an isoform-resolved
+    assay.
+  notes: CIL:39513 identifies V. convallaria and an alpha-centrin immunogold cryosection.
+    The 1994 acquisition is distinct from 2012 catalog publication. The hosted unmodified
+    preview is not the archival negative and is not used for measurements or isoform
+    assignment.
+  evidence:
+  - reference: DOI:10.7295/W9CIL39513
+    notes: Public-domain item; source attribution and photographer retained.
+  posed_by: codex
+  posed_date: '2026-10-03'
+  resolved_date: '2026-10-03'
+images:
+- image_id: cil_39513
+  file: cil_39513.jpg
+  file_sha256: feeb4e959248a63f2e69d6ed5e1850858b2e52448724e311ea1e55d43897479f
+  source: CELL_IMAGE_LIBRARY
+  source_accession: CIL:39513
+  source_url: https://www.cellimagelibrary.org/images/39513
+  download_url: https://cildata.crbs.ucsd.edu/media/thumbnail_display/39513/39513_thumbnailx512.jpg
+  licence: PUBLIC_DOMAIN
+  attribution: Richard Allen (University of Hawaii); via Cell Image Library
+  modality: TEM
+  caption: Vorticella convallaria cortical myoneme in a thin cryosection labeled with
+    anti-alpha-centrin and gold-conjugated anti-rabbit IgG. The source interprets
+    gold at the myoneme as centrin localization. TEM acquired by D. Kunkel on 1994-08-18;
+    unmodified source-served preview, not a calibrated measurement.
+  taxon_id: NCBITaxon:60850
+  taxon_label: Vorticella convallaria
+  reference: DOI:10.7295/W9CIL39513
+  retrieved_on: '2026-10-03'
+  notes: DOI, per-item licence, attribution and preview URL read from the landing-page
+    JSON-LD. The source-served preview is used because CIL primary distributions may
+    be TIFF or video. Taxon supplied by the curator because CIL exposes an organism
+    name but no NCBI Taxonomy ID in its item JSON-LD.

@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  slug: peritrich_body_myoneme_system
+session:
+  id: 2026-10-03T234724Z-codex-94ed2f
+  timestamp: '2026-10-03T23:47:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2004
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2003
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Adversarial self-review clarified the study-specific microscopy boundary
+  details: 'Same-agent post-opening review of PR #2003 and initial commit 8b770f67d088f139bee18569ddf632708197390b;
+    not an independent or human review. Read the full target, history and generated diff;
+    rechecked Konior 2009 results and Figure 3, direct primary Shi and Katoh abstracts, Allen
+    morphology boundaries and CIL metadata/image provenance. Found one minor wording ambiguity,
+    issue #2004: the light-microscopy statement did not explicitly name Konior''s study despite
+    separate CIL body-myoneme TEM evidence. Guarded mutation now scopes it to Konior et al.
+    (2009), distinguishes CIL:39513 and preserves the no-copy-number boundary, rationale and
+    resolution dates. No blocker or major defect found. Initial gates passed: 603 tests, 3
+    skips, 850 strict-valid structures, 1526 valid histories, snippet/trait/identifier/label/site/embedding
+    gates and all four required PR checks. Post-fix regeneration and full gates must run before
+    merge. Record remains PROPOSED; no exact paralogue/stoichiometry, broad prevalence, native
+    channel identity or antibody copy-number inference. Shi and Katoh full texts were inaccessible;
+    only their inspected abstracts support these claims. Molecular inventory and native mechanism
+    remain explicit follow-ups.'
