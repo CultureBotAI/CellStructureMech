@@ -1,0 +1,297 @@
+identifier: cellstructuremech:mic60_mic19_complex
+label: Mic60-Mic19 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heteromeric MICOS subcomplex composed of Mic60 and Mic19 that couples
+  protein assembly to mitochondrial inner-membrane remodeling and crista-junction
+  organization.
+definition_source: DOI:10.1126/sciadv.abo4946
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T21:48:42Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T21:50:14Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added source-bounded fungal components, yeast scope, cristae-formation
+    function, direct biochemical mechanism and explicit family/native-architecture
+    limitations.
+  llm_assisted: true
+- timestamp: '2026-10-04T21:50:36Z'
+  curator: pmc_oa
+  action: ADD_IMAGE
+  changes: Added PMC5460017.1 f4; version, CC licence, JATS figure identity and media
+    md5 verified through the PMC OA S3 dataset.
+synonyms:
+- synonym_text: Mic19-Mic60 subcomplex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/ncomms15258
+parent_structures:
+- GO:0098800
+part_of:
+- GO:0061617
+components:
+- component_id: mic60
+  label: MICOS complex subunit MIC60
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR019133
+  gene_symbols:
+  - MIC60
+  role: Membrane-anchored scaffold whose intermembrane-space region binds Mic19 and
+    lipids; its coiled-coil and mitofilin regions contribute oligomerization and membrane-remodeling
+    interfaces.
+  evidence:
+  - reference: DOI:10.1038/ncomms15258
+    notes: Purified Chaetomium thermophilum Mic60 soluble region binds and tubulates
+      Folch liposomes and directly binds Mic19; lipid-binding-site mutations disrupt
+      crista junctions in budding yeast.
+  - reference: DOI:10.1126/sciadv.abo4946
+    notes: Fungal domain structures and mutational analysis identify Mic60 oligomerization,
+      Mic19-binding and lipid-binding interfaces. Crystal domain constructs are not
+      a full native complex structure.
+  - reference: InterPro:IPR019133
+    notes: InterPro resolves this accession as a family named MICOS complex subunit
+      MIC60, rather than a generic coiled-coil domain.
+- component_id: mic19
+  label: MICOS complex subunit Mic19
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed budding-yeast Mic19 protein maps to InterPro IPR012471
+    and Pfam PF07956 (DUF1690). The issuing family description only establishes uncharacterized
+    fungal proteins, not an exact source-neutral Mic19 family boundary. These are
+    not asserted as exact groundings.
+  gene_symbols:
+  - MIC19
+  role: CHCH-domain-containing binding partner that promotes Mic60 higher-order assembly
+    and enhances membrane remodeling by the soluble Mic60 region in fungal reconstitution
+    assays.
+  evidence:
+  - reference: DOI:10.1038/ncomms15258
+    notes: Calorimetry establishes direct Mic19-Mic60 binding through the Mic19 CHCH
+      region and Mic60 mitofilin region. Full Mic19 enhances Mic60-dependent liposome
+      tubulation, branching and dye leakage; Mic19 alone does not bind or remodel
+      these liposomes.
+  - reference: DOI:10.1126/sciadv.abo4946
+    notes: Mic19 promotes higher-order assembly of purified fungal Mic60; interface
+      substitutions impair binding and budding-yeast crista-junction organization.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding-yeast mitochondrial MICOS contains the Mic60-Mic19 subcomplex; the
+    cited experiments use YPH499 derivatives. This species-level assertion does not
+    establish universal presence in fungi or every strain.
+  reference: DOI:10.1126/sciadv.abo4946
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: YPH499-derived strains expressing Mic60 or Mic19 interface variants were examined
+    by mitochondrial affinity purification and electron microscopy. These in vivo
+    experiments are distinct from the purified Chaetomium thermophilum proteins used
+    for membrane reconstitution.
+  reference: DOI:10.1126/sciadv.abo4946
+functions:
+- function_id: cristae_formation
+  label: cristae formation
+  grounding: GO:0042407
+  description: Supports formation and organization of mitochondrial crista junctions
+    through cooperative Mic60-Mic19 assembly and membrane remodeling, within the larger
+    MICOS machinery.
+  evidence:
+  - reference: DOI:10.1038/ncomms15258
+    notes: Mic60 lipid-binding mutants in YPH499-derived yeast lose normal crista
+      junctions and accumulate detached lamellar cristae; purified fungal Mic19 enhances
+      Mic60-driven membrane deformation.
+  - reference: DOI:10.1126/sciadv.abo4946
+    notes: Mic60 oligomerization-interface and Mic60-Mic19 interaction-interface variants
+      impair crista-junction formation in yeast. The complex is not asserted to be
+      sufficient for native crista formation by itself.
+evidence:
+- reference: DOI:10.1038/ncomms15258
+  notes: Hessenberger et al. (2017), Regulated membrane remodeling by Mic60 controls
+    formation of mitochondrial crista junctions. Full Results, Discussion, methods
+    and Figure 4 inspected in checksum-verified PMC5460017 version 1.
+- reference: DOI:10.1126/sciadv.abo4946
+  notes: Bock-Bierbaum et al. (2022), Structural insights into crista junction formation
+    by the Mic60-Mic19 complex. Full Results, Discussion and relevant methods inspected
+    in checksum-verified PMC9432830 version 1.
+- reference: GO:0098800
+  notes: The local complex is a type of inner mitochondrial membrane protein complex;
+    this broader GO term is not its exact identity.
+- reference: GO:0061617
+  notes: MICOS is the containing complex, not an is-a parent or synonym of the two-component
+    subcomplex.
+causal_graphs:
+- graph_id: mic60_mic19_membrane_remodeling
+  title: Direct binding and cooperative membrane remodeling by fungal Mic60 and Mic19
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  description: Purified fungal proteins establish direct interaction, Mic60-dependent
+    lipid recruitment, Mic19-enhanced oligomerization and membrane tubulation.
+  scope_notes: Biochemical edges concern Chaetomium thermophilum Mic60 soluble region
+    lacking its N-terminal transmembrane anchor and purified Mic19 in Folch liposome
+    assays. They are not a reconstruction of native yeast MICOS, a physiological membrane-leakage
+    claim, or proof of an in situ diffusion barrier. Higher-order assembly is supported,
+    but universal 4:4 stoichiometry is not asserted.
+  nodes:
+  - node_id: mic60
+    label: MICOS complex subunit MIC60
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR019133
+    component_ref: mic60
+  - node_id: mic19
+    label: MICOS complex subunit Mic19
+    node_type: GENE_OR_PROTEIN
+    component_ref: mic19
+  - node_id: lipid_bound_complex
+    label: Lipid-associated Mic60-Mic19 assembly
+    node_type: STATE
+    description: Experimental assembly of soluble fungal Mic60 and Mic19 on Folch
+      liposomes, not an atomically resolved full-length native complex.
+  - node_id: higher_order_assembly
+    label: Higher-order Mic60-Mic19 assembly
+    node_type: STATE
+  - node_id: membrane_tubulation
+    label: Liposome tubulation and branching
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: mic19
+    predicate: directly binds
+    object: mic60
+    description: The Mic19 CHCH region binds the Mic60 mitofilin region.
+    evidence:
+    - reference: DOI:10.1038/ncomms15258
+      notes: Isothermal titration calorimetry and domain deletions establish direct
+        binding; isolated Mic19 coiled-coil region does not bind Mic60.
+    - reference: DOI:10.1126/sciadv.abo4946
+      notes: Fusion-domain crystal structures and binding-interface substitutions
+        resolve the heteromeric contact.
+  - subject: mic60
+    predicate: recruits Mic19 into
+    object: lipid_bound_complex
+    description: Mic60 lipid binding recruits Mic19 into a liposome-associated assembly.
+    evidence:
+    - reference: DOI:10.1038/ncomms15258
+      notes: Liposome co-sedimentation detects Mic19 in the presence of Mic60; Mic19
+        alone does not bind the tested membranes.
+  - subject: mic19
+    predicate: promotes
+    object: higher_order_assembly
+    description: Mic19 binding promotes higher-order assembly of purified soluble
+      Mic60.
+    evidence:
+    - reference: DOI:10.1126/sciadv.abo4946
+      notes: Hydrodynamic and cross-linking experiments support Mic19-induced oligomerization,
+        with an inferred tetrameric Mic60 arrangement rather than a universal native
+        copy count.
+  - subject: mic60
+    predicate: drives
+    object: membrane_tubulation
+    description: The soluble Mic60 region binds and deforms model lipid membranes
+      through its lipid-binding regions.
+    evidence:
+    - reference: DOI:10.1038/ncomms15258
+      notes: Electron microscopy shows tubulation with purified Mic60; deletion of
+        the amphipathic LBS1 region abolishes lipid binding and remodeling.
+  - subject: lipid_bound_complex
+    predicate: enhances
+    object: membrane_tubulation
+    description: Adding full Mic19 increases Mic60-dependent liposome tubulation and
+      branching relative to Mic60 alone.
+    evidence:
+    - reference: DOI:10.1038/ncomms15258
+      notes: Figure 3 reconstitution assays compare Mic60 alone with full Mic19 and
+        Mic19 domain constructs. Full Mic19 stimulates membrane deformation; its domains
+        have different effects on dye leakage.
+discussions:
+- discussion_id: mic19_family_grounding
+  prompt: Establish an exact taxon-agnostic Mic19 family grounding without treating
+    DUF1690 membership as identity.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mic19
+  rationale: Reviewed yeast Mic19 cross-references a fungal DUF family, but the current
+    family description does not establish equivalence to the complete Mic19 component
+    class. CHCH-domain membership alone is also insufficient.
+  evidence:
+  - reference: InterPro:IPR012471
+    notes: The current InterPro family label is Protein of unknown function DUF1690
+      and its description names uncharacterized fungal proteins.
+  - reference: DOI:10.1038/ncomms15258
+    notes: Direct experiments establish the Mic19 component independently of a database
+      family assignment.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: native_architecture_scope
+  prompt: Determine the native microbial complex architecture and copy number, and
+    directly test the proposed crista-junction strut and diffusion-barrier functions.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#mic60_mic19_membrane_remodeling
+  rationale: The 2022 structural model combines isolated fungal domains and engineered
+    fusion constructs. The authors explicitly leave the molecular identity of yeast
+    junction-spanning tomographic densities unresolved. Purified-protein oligomerization
+    does not prove one universal native 4:4 assembly.
+  evidence:
+  - reference: DOI:10.1126/sciadv.abo4946
+    notes: Discussion and Figure 5 present an architectural model and testable barrier/strut
+      hypotheses, not direct molecular identification of a native junction-spanning
+      complex.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: micos_and_recombinant_boundaries
+  prompt: Keep the Mic60-Mic19 subcomplex distinct from full MICOS, MIB and experimental
+    expression hosts.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: Other MICOS subunits and outer-membrane partners occur in the surrounding
+    machinery but are not constituent identities of this two-component subcomplex.
+    Expression in Escherichia coli does not make the complex a bacterial structure.
+  resolution_note: Only Mic60 and Mic19 are components; MICOS is linked by part_of.
+    Yeast YPH499 derivatives provide the canonical in vivo example. S288c accessions
+    used for family lookup are not added as strain-matched protein examples, and recombinant
+    fusion constructs are not treated as native stoichiometry.
+  evidence:
+  - reference: DOI:10.1038/ncomms15258
+    notes: Methods distinguish fungal protein sequences, bacterial expression hosts,
+      and YPH499-derived yeast experiments.
+  - reference: DOI:10.1126/sciadv.abo4946
+    notes: Structural and yeast experiments address the named Mic60-Mic19 subcomplex
+      within MICOS.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: pmc_pmc5460017_f4
+  file: pmc5460017_f4.jpg
+  file_sha256: 4a86dfab5f2d4d49925989b9566c18ffac1d087292f5ece4cd0dedcf9cf36954
+  source: PMC
+  source_accession: PMC5460017.1 f4
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5460017/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5460017.1/ncomms15258-f4.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Manuel Hessenberger, Ralf M. Zerbes, Heike Rampelt, Séverine Kunz,
+    Audrey H. Xavier, Bettina Purfürst, Hauke Lilie, Nikolaus Pfanner, Martin van
+    der Laan, Oliver Daumke; CC BY, via PubMed Central
+  modality: TEM
+  caption: 'Mic60 perturbation context in YPH499-derived Saccharomyces cerevisiae,
+    not an image of the isolated Mic60-Mic19 complex. Full Figure 4: affinity purification
+    (a), respiratory growth (b), mitochondrial cryosection TEM of Mic60-ProtA control
+    and mic60 deletion or lipid-binding mutants (c-f; scale bars 500 nm), crista-junction
+    counts (g), and respiratory-complex activities (h-i). Original multipanel figure
+    retained.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1038/ncomms15258
+  retrieved_on: '2026-10-04'
+  notes: Figure 4 from article version PMC5460017.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.

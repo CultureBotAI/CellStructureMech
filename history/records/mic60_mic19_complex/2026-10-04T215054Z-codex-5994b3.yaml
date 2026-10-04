@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mic60_mic19_complex.yaml
+  slug: mic60_mic19_complex
+session:
+  id: 2026-10-04T215054Z-codex-5994b3
+  timestamp: '2026-10-04T21:50:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - images
+  summary: Add the fungal Mic60-Mic19 MICOS subcomplex
+  details: Curated a distinct two-component complex from Hessenberger et al. 2017 and Bock-Bierbaum
+    et al. 2022. Verified GO parentage and MICOS parthood, exact Mic60 family, yeast experimental
+    scope and direct fungal biochemical mechanism; left Mic19 family identity and native strut/barrier
+    architecture explicitly unresolved. Added an inspected checksum-verified CC BY 4.0 yeast
+    perturbation figure through the PMC adapter; no universal stoichiometry, bacterial expression-host
+    distribution or unmatched strain protein examples asserted.
