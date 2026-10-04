@@ -1,0 +1,300 @@
+identifier: cellstructuremech:mitochondrial_multifunctional_assembly
+label: mitochondrial multifunctional assembly
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A biochemically isolatable protein-lipid assembly of the mitochondrial
+  inner membrane characterized in Saccharomyces cerevisiae. MIMAS brings together
+  metabolite carriers, dehydrogenases, respiratory-chain biogenesis factors and phospholipid
+  enzymes, with stability dependent on phosphatidylethanolamine production.
+definition_source: DOI:10.1016/j.celrep.2024.113772
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T20:20:25Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T20:22:27Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added five bounded constituent classes, verified family mappings and mitochondrial
+    hierarchy, yeast example, PRIDE link, respiratory-biogenesis function, short PE-dependent
+    integrity mechanism, and explicit client, strain, stoichiometry and image-license
+    limits.
+  llm_assisted: true
+- timestamp: '2026-10-04T20:26:45Z'
+  curator: codex
+  action: REFINED_FUNCTION_SCOPE
+  changes: Distinguished transient Cox13 association observed in import/chase assays
+    from the proposed transfer route into mature complex IV before PR submission.
+  llm_assisted: true
+synonyms:
+- synonym_text: MIMAS
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.celrep.2024.113772
+parent_structures:
+- GO:0098800
+part_of:
+- GO:0005743
+components:
+- component_id: aac
+  label: ADP/ATP carrier protein, eukaryotic type
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - AAC2
+  - PET9
+  essentiality: UNKNOWN
+  role: Metabolite carrier represented by the MIMAS-associated pool of Aac2.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+    notes: 'Figures 1B and 2G-J: complexome migration, enrichment in intact Psd1-isolated
+      MIMAS, and Nde1-AAC crosslinking support membership; not all cellular AAC is
+      in MIMAS.'
+  grounding: InterPro:IPR002113
+- component_id: rcf1
+  label: Mitochondrial Respiratory Supercomplex Factor 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RCF1
+  essentiality: UNKNOWN
+  role: Respiratory assembly factor with MIMAS-associated and respiratory-chain pools.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+    notes: 'Figures 1A-B, 2F and 4G: Rcf1 co-migrates and co-isolates with MIMAS.
+      R67A reduces its MIMAS association, whereas Q61A/Q71A increases it, in the tested
+      rcf1/rcf2 deletion background. This does not establish fixed occupancy.'
+  grounding: InterPro:IPR050355
+- component_id: psd1
+  label: Phosphatidylserine decarboxylase, eukaryotic type 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PSD1
+  essentiality: UNKNOWN
+  role: Phosphatidylethanolamine-producing constituent used to isolate intact MIMAS.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+    notes: 'Figures 2E-H and 3F-G: Psd1 is incorporated into MIMAS. Active Psd1, but
+      not S463A, restores MIMAS integrity in psd1-null cells, although S463A can join
+      MIMAS in wild-type mitochondria. Catalytic competence and physical incorporation
+      are distinct; complete assembly essentiality is not assigned from destabilization.'
+  grounding: InterPro:IPR033661
+- component_id: nde1
+  label: external mitochondrial NADH dehydrogenase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NDE1
+  essentiality: UNKNOWN
+  role: Intermembrane-space-facing dehydrogenase represented by the MIMAS-associated
+    Nde1 pool.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+    notes: 'Figure 2A-C,F-G,I-J: Nde1 co-migrates and co-isolates with MIMAS; crosslinking
+      in intact mitochondria followed by denaturing affinity isolation supports proximity
+      to AAC. The matrix-facing Ndi1 has a different profile.'
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro search did not resolve an external-specific family.
+    The verified Nde1 reference protein maps to IPR045024, Alternative NADH dehydrogenase,
+    which also includes internal Ndi1 and bacterial proteins. That broader family
+    is not substituted for this external mitochondrial class.
+- component_id: tafazzin
+  label: Tafazzin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAZ1
+  essentiality: UNKNOWN
+  role: Phospholipid-remodeling enzyme with a MIMAS-associated population.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+    notes: 'Figure 2D-F: Taz1 migrates in the MIMAS range and is recovered with Psd1.
+      Its membership does not prove that cardiolipin remodeling is locally coupled
+      to transport or respiratory-chain assembly.'
+  grounding: InterPro:IPR000872
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: The primary study uses YPH499- or W303-1A-derived strains and isolated mitochondria.
+    Culture conditions vary by experiment. Methods identify a Neurospora crassa AAC
+    construct for import assays, despite Figure 1F naming Aac2; this heterologous
+    precursor does not establish a second canonical organism. Endogenous yeast AAC
+    membership has separate complexome and biochemical support.
+  reference: DOI:10.1016/j.celrep.2024.113772
+functions:
+- function_id: respiratory_biogenesis_platform
+  label: platform for respiratory-chain subunit biogenesis
+  description: MIMAS groups respiratory biogenesis factors and transiently accommodates
+    imported Cox13. Its role as a platform preceding incorporation into complex IV
+    is an interpretation of import/chase and Rcf1-association experiments, not direct
+    tracking of transfer between complexes or an obligatory route for all respiratory
+    subunits.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+    notes: 'Figure 4D-G: precursor import/chase distinguishes transient Cox13 association
+      from mature respiratory complexes. Rcf1 point mutants shift its distribution.
+      The source presents broader metabolic integration as a model.'
+datasets:
+- accession: PXD047946
+  title: Psd1 affinity-isolation and native-gel MIMAS proteomics
+  description: Publication-linked label-free proteomics of Psd1-associated material;
+    identifier and repository landing page only.
+  organism: Saccharomyces cerevisiae
+  dataset_type: PROTEOMICS
+  repository: PRIDE
+  url: https://www.ebi.ac.uk/pride/archive/projects/PXD047946
+  publication: DOI:10.1016/j.celrep.2024.113772
+  notes: Native accession, title, taxon 4932 and DOI verified. The repository reports
+    a PARTIAL submission and PMID zero, which is a placeholder and is not imported.
+    Enrichment identifies Psd1 interactors, not exclusively invariant MIMAS constituents.
+    No spectra, protein table or repository prose is redistributed.
+evidence:
+- reference: DOI:10.1016/j.celrep.2024.113772
+  notes: Horten et al.; PMID:38393949. Current PMC11010658.1 identity and JATS checksum
+    verified. Results, Discussion, limitations, strain, isolation, interaction and
+    import Methods inspected. Native Figures 2-4 visually inspected with media checksum
+    verification. The CC BY-NC-ND 4.0 figures are not hosted.
+- reference: DOI:10.1002/pro.70653
+  notes: PMID:42178653; current PMC13240547.1 identity and JATS checksum verified.
+    Section 1.1 supplies expanded-name and boundary context, while retaining metabolic
+    integration and local lipid organization as hypotheses. It does not establish
+    a broader taxonomic distribution.
+causal_graphs:
+- graph_id: pe_dependent_integrity
+  title: Psd1 activity supports MIMAS integrity
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: A bounded enzyme-product-stability mechanism. Genetic rescue supports
+    PE dependence, not a resolved lipid-binding site, local PE concentration or complete
+    assembly order. No extra edges are inferred from co-migration.
+  nodes:
+  - node_id: psd1
+    label: Phosphatidylserine decarboxylase, eukaryotic type 1
+    node_type: GENE_OR_PROTEIN
+    component_ref: psd1
+    grounding: InterPro:IPR033661
+  - node_id: pe_production
+    label: Psd1-dependent phosphatidylethanolamine production
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: mimas_integrity
+    label: MIMAS integrity
+    node_type: STATE
+    description: Preservation of the high-molecular-mass assembly in the native-gel
+      assays.
+  edges:
+  - subject: psd1
+    predicate: catalyzes
+    object: pe_production
+    description: Psd1 converts phosphatidylserine into phosphatidylethanolamine.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2024.113772
+      notes: Results on phospholipid biosynthesis and Figure 3 distinguish active
+        Psd1 from its catalytically inactive S463A variant.
+  - subject: pe_production
+    predicate: supports
+    object: mimas_integrity
+    description: Psd1-dependent PE production supports stability of the assembly.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2024.113772
+      notes: 'Figure 3B-G: psd1 deletion destabilizes MIMAS, whereas crd1 deletion
+        does not show the same effect. Active Psd1 rescues the psd1-null defect, while
+        S463A does not despite incorporation in wild-type mitochondria. PE dependence
+        is the authors'' mechanistic inference from these experiments, not direct
+        measurement of a lipid-protein contact.'
+discussions:
+- discussion_id: exact_identity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish MIMAS from other mitochondrial assemblies.
+  rationale: Similar mitochondrial-complex names do not establish equivalent identity.
+  notes: Parsed identities and synonyms across 877 prior records and hidden/ignored-inclusive
+    whole-repository searches found no MIMAS record or prior primary citation. Native
+    GO MIMAS search returned no entry; the complete multifunctional result contained
+    two molecular-function terms, not a cellular component. Complex Portal exact-name
+    searches returned no entry. GO:0098800 is an is-a parent; GO:0005743 is the containing
+    membrane. INAC, MICOS, SAM and MIB denote different assemblies. MIMAS-A and MIMAS-B
+    are migration populations, not separately resolved organelles.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+  - reference: DOI:10.1002/pro.70653
+  - reference: GO:0098800
+  - reference: GO:0005743
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: composition_and_architecture
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve complete membership and architecture.
+  rationale: The first record represents experimentally supported classes, not an
+    exhaustive stoichiometry.
+  notes: Five classes are curated here. Additional carriers, dehydrogenases, lipid
+    enzymes and respiratory biogenesis factors described in the paper remain candidates
+    for claim-by-claim expansion. Psd1 enrichment and complexome correlation alone
+    do not make every hit an invariant subunit. MIMAS-A and MIMAS-B migrate at apparent
+    masses near 3.3 and 2.5 MDa; these are not exact particle masses or copy counts.
+    Obtain resolved architecture and appropriately licensed imaging before adding
+    dimensions or a structural image. Primary gels are not hosted under NC-ND terms.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: client_and_complex_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep transient clients and neighboring complexes separate.
+  rationale: A transient assembly intermediate is not mature constituent membership.
+  notes: 'Cox13 is excluded as a stable constituent: its imported precursor visits
+    MIMAS, whereas mature Cox13 occupies respiratory complexes. Mature respiratory
+    supercomplexes, ATP synthase, prohibitins and matrix-facing Ndi1 have distinct
+    profiles. No part_of relation to MICOS, SAM, MIB or respiratory supercomplexes
+    is inferred. No entire-family membership follows from a shared InterPro family.'
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: families_and_strains
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve external dehydrogenase grounding and studied-strain examples.
+  rationale: Reference-proteome annotations do not identify every experimentally used
+    allele.
+  notes: Native UniProt and InterPro records support the four asserted family mappings.
+    Nde1 maps to the broader IPR045024, so its external-specific class stays label-only.
+    Verified S288c references P18239, Q03713, P39006, P40215 and Q06510 are not substituted
+    for the studied YPH499/W303-derived strains in protein_examples. The iModulonDB
+    adapter listed 28 datasets without a matching yeast organism; not applicable,
+    not negative evidence. Clade-wide distribution remains unset.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+  - reference: InterPro:IPR045024
+  - reference: UniProtKB:P18239
+  - reference: UniProtKB:Q03713
+  - reference: UniProtKB:P39006
+  - reference: UniProtKB:P40215
+  - reference: UniProtKB:Q06510
+  posed_by: codex
+  posed_date: '2026-10-04'
+  attaches_to:
+  - components#nde1
+- discussion_id: functional_limits
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Test local metabolic coupling and lipid organization.
+  rationale: Proximity and enzyme membership do not establish metabolite channeling.
+  notes: The primary study and 2026 review leave exact stoichiometry, spatial arrangement,
+    local PE composition, metabolite channeling and collective regulation unresolved.
+    The short graph records Psd1-dependent integrity only. It does not assert that
+    MIMAS is required for every activity of its proteins, that PE binds a specific
+    site, or that cardiolipin has no role in every condition.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2024.113772
+  - reference: DOI:10.1002/pro.70653
+  posed_by: codex
+  posed_date: '2026-10-04'
+  attaches_to:
+  - causal_graphs#pe_dependent_integrity
+  - functions#respiratory_biogenesis_platform

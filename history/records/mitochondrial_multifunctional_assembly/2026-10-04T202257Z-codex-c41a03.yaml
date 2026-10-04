@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mitochondrial_multifunctional_assembly.yaml
+  slug: mitochondrial_multifunctional_assembly
+session:
+  id: 2026-10-04T202257Z-codex-c41a03
+  timestamp: '2026-10-04T20:22:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - datasets
+  - discussions
+  summary: Add evidence-bounded mitochondrial multifunctional assembly
+  details: Added one PROPOSED MIMAS record from DOI:10.1016/j.celrep.2024.113772, PMID:38393949,
+    current PMC11010658.1, with naming and limitation context from DOI:10.1002/pro.70653,
+    PMID:42178653, current PMC13240547.1. Hidden/ignored-inclusive deduplication and native
+    GO/Complex Portal searches justify local identity under GO:0098800 and parthood to GO:0005743.
+    Five representative constituent classes have claim-level evidence; four have verified
+    InterPro family mappings and external NADH dehydrogenase stays label-only. The yeast example
+    preserves YPH499/W303 strain scope and the Neurospora precursor discrepancy. Native PRIDE
+    PXD047946 is linked without bulk ingestion. A two-edge enzyme-product-stability graph
+    preserves the inference behind PE dependence; transient Cox13, mature respiratory complexes,
+    metabolic channeling and stoichiometry are explicitly bounded. Figures 2-4 were checksum-verified
+    and inspected but not hosted under CC BY-NC-ND 4.0. Guarded writer and byte-identical
+    round trip passed. Generated products and full QC follow before commit. No PR or review
+    issue existed when this append-only creation history was written.

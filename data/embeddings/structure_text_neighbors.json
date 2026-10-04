@@ -19973,6 +19973,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:mitochondrial_multifunctional_assembly",
+      "label": "mitochondrial multifunctional assembly",
+      "neighbors": [
+        {
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.7458123
+        },
+        {
+          "identifier": "GO:0061617",
+          "label": "MICOS complex",
+          "cosine_similarity": 0.7394116
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.73136105
+        },
+        {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.71605113
+        },
+        {
+          "identifier": "GO:0005744",
+          "label": "TIM23 mitochondrial import inner membrane translocase complex",
+          "cosine_similarity": 0.70981803
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005742",
       "label": "mitochondrial outer membrane translocase complex",
       "neighbors": [
