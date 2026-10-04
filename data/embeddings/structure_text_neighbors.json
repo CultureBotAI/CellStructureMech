@@ -3898,6 +3898,11 @@
           "cosine_similarity": 0.72537353
         },
         {
+          "identifier": "cellstructuremech:cullin_e_ubiquitin_ligase_complex",
+          "label": "Cullin-E ubiquitin ligase complex",
+          "cosine_similarity": 0.69946346
+        },
+        {
           "identifier": "cellstructuremech:basal_body_a_c_linker",
           "label": "basal body A-C linker",
           "cosine_similarity": 0.69396843
@@ -3906,11 +3911,6 @@
           "identifier": "cellstructuremech:basal_body_inner_scaffold",
           "label": "basal body inner scaffold",
           "cosine_similarity": 0.692225
-        },
-        {
-          "identifier": "GO:0160066",
-          "label": "interphase SIN signaling complex",
-          "cosine_similarity": 0.6796453
         }
       ]
     },
@@ -16718,6 +16718,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:cullin_e_ubiquitin_ligase_complex",
+      "label": "Cullin-E ubiquitin ligase complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:tusk_complex",
+          "label": "TUSK complex",
+          "cosine_similarity": 0.7700099
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.75755494
+        },
+        {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.74271997
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.74172728
+        },
+        {
+          "identifier": "GO:0120269",
+          "label": "ciliary centrin arm",
+          "cosine_similarity": 0.73510798
+        }
+      ]
+    },
+    {
       "identifier": "GO:0034270",
       "label": "Cvt complex",
       "neighbors": [
@@ -19052,6 +19083,11 @@
           "cosine_similarity": 0.74236187
         },
         {
+          "identifier": "cellstructuremech:cullin_e_ubiquitin_ligase_complex",
+          "label": "Cullin-E ubiquitin ligase complex",
+          "cosine_similarity": 0.69966735
+        },
+        {
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.68909489
@@ -19065,11 +19101,6 @@
           "identifier": "GO:0031205",
           "label": "endoplasmic reticulum Sec complex",
           "cosine_similarity": 0.67948112
-        },
-        {
-          "identifier": "GO:0000502",
-          "label": "proteasome complex",
-          "cosine_similarity": 0.67296657
         }
       ]
     },
@@ -22534,14 +22565,14 @@
           "cosine_similarity": 0.65986389
         },
         {
+          "identifier": "cellstructuremech:cullin_e_ubiquitin_ligase_complex",
+          "label": "Cullin-E ubiquitin ligase complex",
+          "cosine_similarity": 0.65875364
+        },
+        {
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.65064413
-        },
-        {
-          "identifier": "GO:0048500",
-          "label": "signal recognition particle",
-          "cosine_similarity": 0.64456765
         }
       ]
     },
@@ -23170,6 +23201,11 @@
       "label": "TUSK complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:cullin_e_ubiquitin_ligase_complex",
+          "label": "Cullin-E ubiquitin ligase complex",
+          "cosine_similarity": 0.7700099
+        },
+        {
           "identifier": "GO:0005675",
           "label": "transcription factor TFIIH holo complex",
           "cosine_similarity": 0.7554954
@@ -23188,11 +23224,6 @@
           "identifier": "GO:0000439",
           "label": "transcription factor TFIIH core complex",
           "cosine_similarity": 0.70439637
-        },
-        {
-          "identifier": "GO:0034044",
-          "label": "exomer complex",
-          "cosine_similarity": 0.69821024
         }
       ]
     },

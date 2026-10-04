@@ -4851,6 +4851,15 @@
   "definition": "A heptameric complex related to replication factor C, which loads the DNA polymerase processivity factor proliferating cell nuclear antigen (PCNA) onto DNA and plays a vital role in chromosome cohesion. In Saccharomyces the subunits are known as Ctf18p, Rfc2p, Rfc3p, Rfc4p, Rfc5p, Dcc1p, and Ctf8p."
  },
  {
+  "identifier": "cellstructuremech:cullin_e_ubiquitin_ligase_complex",
+  "label": "Cullin-E ubiquitin ligase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/cullin_e_ubiquitin_ligase_complex.html",
+  "definition": "A cullin-RING protein complex defined by the Cullin-E scaffold, experimentally characterized in Trypanosoma brucei by co-isolation with Rbx1, Skp1.2 and kelch-domain proteins. The associated kelch proteins are candidate client-recognition subunits; simultaneous occupancy and fixed stoichiometry have not been established."
+ },
+ {
   "identifier": "GO:0034270",
   "label": "Cvt complex",
   "category": "OTHER",
