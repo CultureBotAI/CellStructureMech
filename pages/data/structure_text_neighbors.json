@@ -19911,9 +19911,45 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:mic10_subcomplex",
+      "label": "MIC10 subcomplex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:mic60_mic19_complex",
+          "label": "Mic60-Mic19 complex",
+          "cosine_similarity": 0.94746481
+        },
+        {
+          "identifier": "GO:0061617",
+          "label": "MICOS complex",
+          "cosine_similarity": 0.8068161
+        },
+        {
+          "identifier": "GO:0140275",
+          "label": "MIB complex",
+          "cosine_similarity": 0.78858969
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.69659342
+        },
+        {
+          "identifier": "GO:0071819",
+          "label": "DUBm complex",
+          "cosine_similarity": 0.69285812
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:mic60_mic19_complex",
       "label": "Mic60-Mic19 complex",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:mic10_subcomplex",
+          "label": "MIC10 subcomplex",
+          "cosine_similarity": 0.94746481
+        },
         {
           "identifier": "GO:0061617",
           "label": "MICOS complex",
@@ -19933,11 +19969,6 @@
           "identifier": "GO:0031205",
           "label": "endoplasmic reticulum Sec complex",
           "cosine_similarity": 0.70271697
-        },
-        {
-          "identifier": "GO:0042721",
-          "label": "TIM22 mitochondrial import inner membrane insertion complex",
-          "cosine_similarity": 0.69882783
         }
       ]
     },

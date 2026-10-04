@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mic10_subcomplex.yaml
+  slug: mic10_subcomplex
+session:
+  id: 2026-10-04T223205Z-codex-f1b2f6
+  timestamp: '2026-10-04T22:32:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - images
+  summary: Add the yeast-supported MIC10 subcomplex
+  details: Curated the Mic10-Mic12-Mic26-Mic27 MICOS module from primary 2015, 2018 and 2020
+    evidence, preserving strain and perturbation scope. Added four verified InterPro families,
+    five assembly edges, a licensed PMC4434539 Figure 3, and native-architecture and lipid-binding
+    limitations.

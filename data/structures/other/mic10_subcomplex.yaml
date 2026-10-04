@@ -1,0 +1,304 @@
+identifier: cellstructuremech:mic10_subcomplex
+label: MIC10 subcomplex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A mitochondrial inner-membrane MICOS subcomplex containing Mic10, Mic12,
+  Mic26 and Mic27, organized around Mic10 oligomers and involved in crista architecture.
+definition_source: DOI:10.1016/j.jmb.2018.04.037
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T22:30:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T22:31:41Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added four verified protein families, bounded yeast examples, inner-membrane
+    organization, five experimental assembly edges and explicit conditional-core,
+    lipid and native-architecture limits.
+  llm_assisted: true
+- timestamp: '2026-10-04T22:32:05Z'
+  curator: pmc_oa
+  action: ADD_IMAGE
+  changes: Added PMC4434539.1 fig3; version, CC licence, JATS figure identity and
+    media md5 verified through the PMC OA S3 dataset.
+parent_structures:
+- GO:0098800
+part_of:
+- GO:0061617
+components:
+- component_id: mic10
+  label: MICOS complex subunit Mic10
+  grounding: InterPro:IPR007512
+  role: Oligomeric scaffold of the inner-membrane subcomplex.
+  evidence:
+  - reference: DOI:10.1016/j.jmb.2018.04.037
+    notes: Mic10 oligomer ladders and cross-linking products are altered by Mic26
+      and Mic27 deletion.
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MIC10
+- component_id: mic12
+  label: MICOS complex subunit Mic12
+  grounding: InterPro:IPR031463
+  role: Subunit that promotes focal assembly of the Mic10-Mic27 organizing center.
+  evidence:
+  - reference: DOI:10.7554/elife.07739
+    notes: In W303 derivatives lacking other MICOS proteins, Mic10 plus Mic12 restores
+      prominent Mic27 foci; mic12 deletion reduces foci in the mic60-deletion background.
+  - reference: DOI:10.1016/j.jmb.2018.04.037
+    notes: The paper explicitly defines the four-protein MIC10 subcomplex.
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MIC12
+- component_id: mic26
+  label: MICOS subunit Mic26, fungi
+  grounding: InterPro:IPR033181
+  role: Fungal subunit that counteracts stabilization of higher-order Mic10 oligomers.
+  evidence:
+  - reference: DOI:10.1016/j.jmb.2018.04.037
+    notes: Mic26 co-cross-links with Mic10; mic26 deletion favors higher-order Mic10
+      assemblies.
+  - reference: InterPro:IPR033181
+    notes: Current InterPro fungal Mic26 family; the broader MIC26/MIC27 family also
+      includes animal paralogs.
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MIC26
+- component_id: mic27
+  label: MICOS complex subunit MIC27
+  grounding: InterPro:IPR061953
+  role: Yeast subunit that stabilizes higher-order Mic10 assemblies.
+  evidence:
+  - reference: DOI:10.1016/j.jmb.2018.04.037
+    notes: Mic27 co-cross-links with Mic10; mic27 deletion reduces higher-order assemblies.
+  - reference: InterPro:IPR061953
+    notes: Current family represents MIC27 from Saccharomycetaceae, not mammalian
+      MIC27 or the broader ApoO family.
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MIC27
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  reference: DOI:10.1016/j.jmb.2018.04.037
+  note: Demonstrated in budding-yeast mitochondrial MICOS using YPH499 derivatives;
+    no universal fungal or eukaryotic distribution is asserted.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1016/j.jmb.2018.04.037
+  note: YPH499 derivatives supply mitochondrial purification and cross-linking evidence.
+    The separate 2015 fluorescence experiments use W303 derivatives, not the S288c
+    proteins consulted for family lookup.
+functions:
+- function_id: inner_mitochondrial_membrane_organization
+  label: inner mitochondrial membrane organization
+  grounding: GO:0007007
+  description: Contributes a Mic10-based organizing module to the MICOS machinery
+    that maintains mitochondrial crista architecture.
+  evidence:
+  - reference: DOI:10.7554/elife.07739
+    notes: Genetics, microscopy and Mic27 immunopurification distinguish an independent
+      organizing center from the Mic60-containing module. Junction localization of
+      Mic27 foci is inferred from proximity to crista markers, not resolved by direct
+      immuno-electron microscopy.
+  - reference: DOI:10.1016/j.jmb.2018.04.037
+    notes: Antagonistic Mic26-Mic27 effects regulate the Mic10 oligomeric scaffold.
+evidence:
+- reference: DOI:10.1016/j.jmb.2018.04.037
+  notes: Rampelt et al. (2018), Assembly of the Mitochondrial Cristae Organizer Mic10
+    Is Regulated by Mic26-Mic27 Antagonism and Cardiolipin. Main text, captions and
+    Figures 1-4 inspected in the institutional publisher-version PDF.
+- reference: DOI:10.7554/elife.07739
+  notes: Friedman et al. (2015), MICOS coordinates with respiratory complexes and
+    lipids to establish mitochondrial inner membrane architecture. Relevant Results,
+    Discussion, strain methods and Figure 3 inspected in checksum-verified PMC4434539
+    version 1.
+- reference: DOI:10.1083/jcb.202003024
+  notes: Tirrell et al. (2020), MICOS subcomplexes assemble independently on the mitochondrial
+    inner membrane in proximity to ER contact sites. Subcomplex-localization and ERMES-perturbation
+    Results plus strain methods inspected in checksum-verified PMC7545361 version
+    1.
+- reference: GO:0098800
+  notes: 'Broader is-a parent: inner mitochondrial membrane protein complex.'
+- reference: GO:0061617
+  notes: Containing MICOS complex; not an exact synonym or is-a parent of this subassembly.
+causal_graphs:
+- graph_id: yeast_mic10_subcomplex_assembly
+  title: Mic10 oligomer regulation and conditional Mic27 focal assembly
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  description: Protein-specific perturbations distinguish regulation of Mic10 oligomers
+    from focal assembly of a Mic27-containing organizing center.
+  scope_notes: Oligomer edges concern isolated YPH499-derived mitochondria in the
+    2018 study. Focal-assembly edges concern W303-derived MICOS deletion strains in
+    2015. These are distinct assays and backgrounds, not one reconstructed temporal
+    pathway. Neither a fixed stoichiometry nor complete dissociation of MICOS follows
+    from a shifted native-gel ladder.
+  nodes:
+  - node_id: mic10
+    label: MICOS complex subunit Mic10
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR007512
+    component_ref: mic10
+  - node_id: mic12
+    label: MICOS complex subunit Mic12
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR031463
+    component_ref: mic12
+  - node_id: mic26
+    label: MICOS subunit Mic26, fungi
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR033181
+    component_ref: mic26
+  - node_id: mic27
+    label: MICOS complex subunit MIC27
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR061953
+    component_ref: mic27
+  - node_id: mic10_oligomers
+    label: Higher-order Mic10 assemblies
+    node_type: STATE
+  - node_id: mic27_foci
+    label: Focal Mic27-containing assemblies without Mic60
+    node_type: STATE
+  edges:
+  - subject: mic10
+    predicate: oligomerizes into
+    object: mic10_oligomers
+    description: Mic10 forms higher-order assemblies in yeast mitochondria.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2018.04.037
+      notes: Native-gel ladders and in-organello cross-linking provide complementary
+        assembly evidence.
+  - subject: mic26
+    predicate: destabilizes
+    object: mic10_oligomers
+    description: Mic26 opposes higher-order Mic10 assembly under the tested conditions.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2018.04.037
+      notes: Deletion shifts Mic10 toward larger assemblies and increases cross-linking
+        adducts.
+  - subject: mic27
+    predicate: stabilizes
+    object: mic10_oligomers
+    description: Mic27 promotes stable higher-order Mic10 assemblies.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2018.04.037
+      notes: Deletion favors smaller assemblies and reduces Mic10 cross-linking adducts.
+  - subject: mic10
+    predicate: is required for
+    object: mic27_foci
+    description: Mic10 is required for detectable Mic27 foci in the mic60-deletion
+      background.
+    evidence:
+    - reference: DOI:10.7554/elife.07739
+      notes: 'Figure 3E-F: mic60 mic10 double-deletion cells lack detectable Mic27
+        foci; reconstitution with Mic10 supports some focal assembly.'
+  - subject: mic12
+    predicate: promotes
+    object: mic27_foci
+    description: Mic12 increases focal assembly of the Mic10-Mic27 organizing center
+      without Mic60.
+    evidence:
+    - reference: DOI:10.7554/elife.07739
+      notes: 'Figure 3C-F: Mic10 plus Mic12 restores prominent Mic27 foci in cells
+        lacking the other MICOS proteins; Mic12 loss reduces, rather than abolishes,
+        foci in mic60-deletion cells.'
+discussions:
+- discussion_id: four_subunit_and_conditional_core_boundaries
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Reconcile the four-subunit MIC10 module with the three-protein organizing
+    center seen in deletion strains.
+  rationale: The 2015 Mic27/Mic12/Mic10 assembly does not establish that Mic26 is
+    absent from the normal module; the experiments ask which proteins sustain focal
+    assembly without other MICOS subunits.
+  resolution_note: Retain all four components supported by the 2018 study. Do not
+    treat the conditional three-protein core as an exact synonym of the four-protein
+    module. Keep Mic60-Mic19 and full MICOS as distinct entities; MICOS is linked
+    through part_of.
+  evidence:
+  - reference: DOI:10.7554/elife.07739
+    notes: Mic26 is diffuse in mic60-deletion cells and a role in focal assembly was
+      not detected.
+  - reference: DOI:10.1016/j.jmb.2018.04.037
+    notes: Four-subunit definition and Mic26-Mic10 cross-linking establish the broader
+      module boundary.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: lipid_and_contact_site_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Distinguish environmental assembly dependencies from constituent identity.
+  rationale: Genetic cardiolipin dependence and proximity to ER contact sites do not
+    identify additional stoichiometric components of this protein module.
+  resolution_note: Do not add cardiolipin, ERMES, Vps13 or respiratory complexes as
+    constituents. Cardiolipin loss can shift Mic10 native-gel migration without gross
+    MICOS dissociation; Mic27 focal assembly is strongly cardiolipin dependent when
+    Mic60 is absent. Vps13-L1627S bypass restores foci despite ERMES loss, so ERMES
+    is not an obligatory physical template.
+  evidence:
+  - reference: DOI:10.1016/j.jmb.2018.04.037
+    notes: Single crd1 deletion and combined mic27/crd1 deletion have different effects.
+  - reference: DOI:10.7554/elife.07739
+    notes: Cardiolipin requirement for focal Mic27 assembly was tested in the mic60-deletion
+      background.
+  - reference: DOI:10.1083/jcb.202003024
+    notes: ERMES perturbation and Vps13 bypass distinguish ERMES function from obligatory
+      ERMES-complex presence; localization overlap does not prove direct binding.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: native_architecture_and_lipid_binding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve intact native subcomplex architecture, stoichiometry and direct
+    cardiolipin-binding interfaces.
+  attaches_to:
+  - causal_graphs#yeast_mic10_subcomplex_assembly
+  rationale: Native-gel migration, cross-linking and fluorescent foci do not establish
+    one atomic structure or copy number. Direct cardiolipin binding to Mic10 is proposed
+    from the perturbation data rather than independently measured in the cited 2018
+    study.
+  evidence:
+  - reference: DOI:10.1016/j.jmb.2018.04.037
+    notes: The lipid-binding explanation is an interpretation of altered assembly
+      behavior, not a resolved binding site.
+  posed_by: codex
+  posed_date: '2026-10-04'
+images:
+- image_id: pmc_pmc4434539_fig3
+  file: pmc4434539_fig3.jpg
+  file_sha256: af23bf8f6f0e98c05adf50c869b1a63705423d54278c9af60657b308361189c8
+  source: PMC
+  source_accession: PMC4434539.1 fig3
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4434539/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC4434539.1/elife07739f003.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Jonathan R Friedman, Arnaud Mourier, Justin Yamada, J Michael McCaffery,
+    Jodi Nunnari; CC BY, via PubMed Central
+  modality: FLUORESCENCE
+  caption: 'Conditional MICOS subassembly in W303-derived Saccharomyces cerevisiae,
+    not an image of an isolated intact four-protein MIC10 complex. Full Figure 3:
+    confocal fluorescence of tagged MICOS proteins and mitochondrial markers in deletion
+    and reconstitution strains (A-C, E), Mic27 foci counts (D, F), and Mic27-EGFP
+    immunopurification mass-spectrometry comparison (G). Mic10 and Mic12 support focal
+    Mic27 assemblies without Mic60. Original multipanel figure retained.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.7554/eLife.07739
+  retrieved_on: '2026-10-04'
+  notes: Figure 3. from article version PMC4434539.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
