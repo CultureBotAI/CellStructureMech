@@ -1,0 +1,196 @@
+identifier: cellstructuremech:stentor_km_fiber
+label: Stentor Km fiber
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A longitudinal cortical bundle of overlapping microtubule ribbons in Stentor,
+  characterized ultrastructurally in S. coeruleus. Ribbons originate beside successive
+  basal-body pairs and overlap alongside a ciliary row; the bundle is distinct from
+  the deeper contractile myonemes.
+definition_source: DOI:10.1083/jcb.57.3.704
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T01:16:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T01:17:38Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added verified tubulin families, species example, bounded extension function,
+    nonmechanistic RNAi graph, identity and motor limits, and inspected link-only
+    Figure 8.
+  llm_assisted: true
+parent_structures:
+- GO:0097427
+part_of:
+- GO:0030863
+synonyms:
+- synonym_text: km fibers
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.1083/jcb.57.3.704
+components:
+- component_id: alpha_tubulin
+  label: Alpha tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002452
+  essentiality: UNKNOWN
+  role: Tubulin subunit of the microtubules forming the ribbons.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.1001861
+    notes: Tubulin RNAi Results and Figure 2D-E identify cortical microtubule bundles
+      by anti-alpha-tubulin staining.
+  - reference: InterPro:IPR002452
+    notes: Authority entry verifies the Alpha tubulin family and alpha/beta microtubule
+      composition.
+- component_id: beta_tubulin
+  label: Beta tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002453
+  essentiality: UNKNOWN
+  role: Partner tubulin subunit; depletion disrupts the normal cortical microtubule
+    rows, without defining a minimal Km-fiber assembly requirement.
+  evidence:
+  - reference: DOI:10.1371/journal.pbio.1001861
+    notes: RNAi Results and Figure 2 show beta-tubulin transcript depletion and disorganized
+      tubulin-positive cortical rows; this is not a Km-specific knockout.
+  - reference: InterPro:IPR002453
+    notes: Authority entry verifies the Beta tubulin family and its role in microtubules.
+canonical_examples:
+- taxon_id: NCBITaxon:5963
+  taxon_label: Stentor coeruleus
+  reference: DOI:10.1083/jcb.57.3.704
+  note: Experimental species for the fixed-state ultrastructural comparison. ENA verifies
+    the species identifier; no genus-wide prevalence is asserted.
+functions:
+- function_id: cell_reextension
+  label: Cell re-extension
+  description: Implicated in cell re-extension through relative displacement of overlapping
+    ribbons; a bridge-driven motor cycle remains a model.
+  evidence:
+  - reference: DOI:10.1083/jcb.57.3.704
+    notes: Results and Discussion compare contracted and relaxed cells. Reduced ribbon
+      overlap accompanies extension; selective disruption of the two fiber systems
+      was unsuccessful.
+causal_graphs:
+- graph_id: tubulin_rnai_cortical_rows
+  title: Nonmechanistic summary of beta-tubulin RNAi effects on cortical rows
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: Perturbation evidence in S. coeruleus, not a native assembly pathway
+    or selective Km-fiber intervention.
+  nodes:
+  - node_id: beta_tubulin_rnai
+    label: Beta-tubulin RNAi
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: disorganized_rows
+    label: Disorganized cortical microtubule rows
+    node_type: STATE
+  edges:
+  - subject: beta_tubulin_rnai
+    predicate: produces
+    object: disorganized_rows
+    description: Beta-tubulin depletion produces breaks and disorientation in cortical
+      microtubule rows.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1001861
+      notes: 'Figure 2D-E and RNAi Results. Nonmechanistic intervention summary: tubulin
+        depletion is not specific to Km fibers and does not isolate their contribution
+        to whole-cell shape or establish the native extension motor.'
+evidence:
+- reference: DOI:10.1083/jcb.57.3.704
+  notes: Huang and Pitelka (1973), PMID 4633444. Primary PDF Methods, Km-fiber Results,
+    Discussion and Figure 8 inspected. Fixed-state comparisons support sliding; molecular
+    force generation remains unresolved.
+- reference: DOI:10.1371/journal.pbio.1001861
+  notes: Slabodnick et al. (2014). Publisher tubulin-RNAi Results, Figure 2 legend,
+    and RNAi, antibody and immunofluorescence Methods read. No Mob1 phenotype is attributed
+    to tubulin.
+- reference: GO:0097427
+  notes: 'Verified non-obsolete microtubule bundle: broader is-a parent, not exact
+    identity.'
+- reference: GO:0030863
+  notes: 'Verified non-obsolete cortical cytoskeleton: encompassing framework, used
+    as part_of.'
+discussions:
+- discussion_id: identity_and_granularity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the Km bundle from a single microtubule, myoneme or striated
+    rootlet.
+  rationale: Basal-body association and similar fiber names do not make different
+    cortical assemblies equivalent.
+  notes: Hidden- and ignored-inclusive repository searches found only neighboring
+    myoneme references, not an existing target record. QuickGO Stentor, kinetodesmal
+    and postciliary searches returned no hits; Km fiber returned generic fiber matches.
+    GO microtubule bundle is broader. GO:0035253 describes a typically striated ciliary
+    rootlet, not this overlapping ribbon bundle. The genus-qualified label does not
+    assert uniqueness to Stentor or prevalence across the genus.
+  evidence:
+  - reference: DOI:10.1083/jcb.57.3.704
+    notes: The microtubular Km fibers and deeper myonemes are separate systems.
+  - reference: GO:0035253
+    notes: Rootlet definition checked at QuickGO.
+  - reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Stentor
+    notes: Authority identity search before minting.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: unidentified_bridges_and_motor
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify the molecular bridges and test how Km fibers generate extension
+    force.
+  rationale: Morphological bridges do not identify a motor protein or prove an ATPase
+    cycle.
+  notes: Do not add dynein, a specific ATPase, or unidentified bridge proteins as
+    grounded constituents. Essentiality, native paralogue inventory and stoichiometry
+    remain unset or UNKNOWN. No mechanistic graph is asserted.
+  evidence:
+  - reference: DOI:10.1083/jcb.57.3.704
+    notes: Discussion explicitly states that direct evidence for ATP-utilizing enzymes
+      in the interribbon bridges was lacking; the dynein comparison is an analogy.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: neighboring_and_regulatory_proteins
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep neighboring organelles and broadly localized regulators outside the
+    constituent list.
+  rationale: Cortical localization alone does not establish membership of the Km bundle.
+  notes: Exclude the deeper myoneme system, basal bodies, transverse microtubules
+    and adjacent membranes as constituents. Mob1 localization to posterior cortical
+    rows does not resolve direct Km association; do not add it as a constituent or
+    bundle-maintenance factor on that basis.
+  evidence:
+  - reference: DOI:10.1083/jcb.57.3.704
+    notes: The cortical architecture distinguishes neighboring systems.
+  - reference: DOI:10.1371/journal.pbio.1001861
+    notes: Mob1 localization Results and Figure 3 describe diffuse cortical-row signal,
+      not purified Km membership.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: pmc2108994_figure8
+  source: PMC
+  source_accession: PMC2108994.1 Figure 8
+  source_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108994.1/PMC2108994.1.pdf#page=8
+  licence: CC_BY_NC_SA_4_0
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  attribution: B. Huang and D. R. Pitelka, Figure 8, The contractile process in the
+    ciliate, Stentor coeruleus. I. The role of microtubules and filaments, Journal
+    of Cell Biology 57 (1973), doi:10.1083/jcb.57.3.704, via PubMed Central; CC BY-NC-SA
+    4.0. Link only; no repository copy or adaptation.
+  modality: TEM
+  caption: 'Figure 8: transverse section of a Km fiber in an extended Stentor coeruleus
+    cell, with a microtubule-numbering diagram. Scale bar: 0.1 micrometer.'
+  taxon_id: NCBITaxon:5963
+  taxon_label: Stentor coeruleus
+  reference: DOI:10.1083/jcb.57.3.704
+  retrieved_on: '2026-10-04'
+  notes: Visually inspected PDF page 8 (printed page 711). PMC version-1 PDF MD5 verified;
+    JATS specifies CC BY-NC-SA 4.0. The scanned article has no separate JATS figure
+    object; the accession names the printed figure, not a fabricated XML identifier.

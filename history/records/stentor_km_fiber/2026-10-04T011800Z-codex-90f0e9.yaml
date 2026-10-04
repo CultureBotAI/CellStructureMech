@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/stentor_km_fiber.yaml
+  slug: stentor_km_fiber
+session:
+  id: 2026-10-04T011800Z-codex-90f0e9
+  timestamp: '2026-10-04T01:18:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - images
+  - discussions
+  summary: Add evidence-backed Stentor Km fiber
+  details: Added a PROPOSED overlapping microtubule-ribbon bundle record, distinct from myonemes
+    and ciliary rootlets. Read Huang and Pitelka 1973 Km-fiber ultrastructure and inspected
+    Figure 8; verified noncommercial link-only provenance. Read Slabodnick et al. 2014 tubulin
+    RNAi Results and relevant Methods. Verified GO parent/parthood, ENA species and InterPro
+    alpha/beta families. Kept native bridge identity, motor mechanism and assembly essentiality
+    unresolved. Hidden- and ignored-inclusive deduplication found neighboring references only.
+    Regenerate embeddings/site and run all required gates before publication.
