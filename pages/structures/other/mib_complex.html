@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIB complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>MIB complex</h1>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> · OTHER · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A mitochondrial intermembrane-space-spanning assembly that couples inner-membrane MICOS to outer-membrane SAM and includes a conserved DNAJC11-related protein and metaxin 1. <small>[<a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a>]</small></p>
+<p><strong>Synonyms:</strong> mitochondrial intermembrane space bridging complex; mitofilin complex</p><p><strong>Part of:</strong> <a href="http://purl.obolibrary.org/obo/GO_0005743"><code>GO:0005743</code></a> </p><p><strong>Has part:</strong> <a href="http://purl.obolibrary.org/obo/GO_0061617"><code>GO:0061617</code></a> <a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a> </p>
+<h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-micos"><td>MICOS complex</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0061617"><code>GO:0061617</code></a></td><td></td><td></td><td></td><td>Inner-membrane subcomplex of the membrane-spanning assembly.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>MIB includes MICOS constituents.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Figure 1F-G: Mic60 and Mic26 baits recovered MICOS and MIB proteins in fission yeast.</small></li></ul></td></tr>
+<tr id="components-sam"><td>SAM complex</td><td>PROTEIN_COMPLEX</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a></td><td></td><td></td><td></td><td>Outer-membrane subcomplex associated with MICOS.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>SAM is the outer-membrane complex included in MIB.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Sam50 and metaxin 1 were enriched with both MICOS baits.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_4896"><code>NCBITaxon:4896</code></a> <em>Schizosaccharomyces pombe</em> — Cross-linked lysate IP/MS recovered SAM and a DNAJC11 homolog with MICOS. This is association evidence, not purified reconstitution or fixed stoichiometry. [<a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>mitochondrial membrane bridging</strong> — Connects mitochondrial inner- and outer-membrane protein assemblies across the intermembrane space.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>The GO definition specifies a bridging assembly spanning MICOS and SAM.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>The Introduction describes MIB as a trans-boundary MICOS-SAM assembly; Figure 1 supports association in fission yeast.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-mib_membrane_bridge">MIB connects MICOS and SAM <small>(FUNCTION)</small></h3>
+<p>Structural organization of the membrane bridge, not a temporal assembly pathway.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MIB connects MICOS and SAM">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>MICOS complex</td><td>is part of</td><td>MIB complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Definition-level membership.</small></li></ul></td></tr>
+<tr><td>SAM complex</td><td>is part of</td><td>MIB complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Definition-level membership.</small></li></ul></td></tr>
+<tr><td>MIB complex</td><td>mediates</td><td>mitochondrial membrane bridging</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Structural bridging role in the GO definition.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Introduction: trans-boundary MIB organization.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+<h2>Discussions</h2>
+<ul><li><strong>INTERPRETATION</strong> (RESOLVED): Does MIB duplicate MICOS, SAM or MIMAS? <small>MIB denotes the larger bridging assembly; its existing MICOS and SAM records denote subcomplexes. The GO synonym mitofilin complex is retained without treating every mitofilin-containing assembly as MIB.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact DNAJC11-related and metaxin family mappings and strain-matched protein examples. <small>The two component rows describe subcomplexes, not an exhaustive protein inventory. Separate metaxin representation must not double-count a SAM constituent. No individual family or reference-strain accession is asserted before its scope is verified.</small></li><li><strong>INTERPRETATION</strong> (RESOLVED): Should Mmc1 be encoded as an obligatory MIB constituent? <small>Mmc1 associates with MICOS, but the source separates its activity from MICOS assembly. Association alone does not establish an obligatory MIB subunit.</small></li><li><strong>CONTROVERSY</strong> (OPEN): Resolve differing mitofilin C-terminal truncation results before adding a domain-level yeast bridging mechanism. <small>Two budding-yeast studies report opposite changes in SAM co-isolation after C-terminal truncation. The fission-yeast example does not resolve that experimental disagreement.</small></li></ul>
+
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Exact cellular-component identity, synonyms and composition boundary.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0098800"><code>GO:0098800</code></a> <small>Verified GO is-a parent of MIB.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005743"><code>GO:0005743</code></a> <small>Containing inner mitochondrial membrane, not an identity mapping.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Kumar et al. 2024, A dynamin superfamily-like pseudoenzyme coordinates with MICOS to promote cristae architecture. PMID 38692277; native PMC11187654.319 JATS checked against MD5 10930e607aec0699d936e157acfdacce.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-04T21:05:04Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-04T21:07:34Z</code> codex · CURATED_RECORD — Added exact GO identity and subcomplexes, a fission-yeast association example, structural bridging function, nonmechanistic graph and bounded component/experimental uncertainties.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mib_complex.yaml"><code>data/structures/other/mib_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+</body>
+</html>

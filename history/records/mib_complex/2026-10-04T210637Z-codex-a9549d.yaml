@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mib_complex.yaml
+  slug: mib_complex
+session:
+  id: 2026-10-04T210637Z-codex-a9549d
+  timestamp: '2026-10-04T21:06:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  summary: Add GO-grounded MIB complex with a fission-yeast example
+  details: GO:0140275 distinguishes the MICOS-SAM bridging assembly from either subcomplex.
+    Kumar et al. 2024 (DOI:10.1016/j.cub.2024.04.028; native PMC11187654.319 JATS verified)
+    supports the Schizosaccharomyces pombe association example. Curated two GO-grounded subcomplexes
+    and a nonmechanistic structural-function graph; retained unresolved protein-family mappings
+    and the conflicting budding-yeast truncation results. No fixed stoichiometry, direct interfaces,
+    universal distribution, Mmc1 core membership or hosted images asserted.
