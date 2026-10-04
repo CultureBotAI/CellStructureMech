@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cytostomal_cord.yaml
+  slug: cytostomal_cord
+session:
+  id: 2026-10-04T030600Z-codex-1067b9
+  timestamp: '2026-10-04T03:06:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - images
+  - discussions
+  summary: Add evidence-backed cytostomal cord
+  details: Added one PROPOSED named oral extension of the infraciliary lattice, not the whole
+    lattice or neighboring microtubular ribbons. Read the checksum-verified 1974 primary PDF
+    Methods and cord-specific Observations/Discussion and inspected selected pages; read the
+    1998 primary abstract, with full publisher PDF inaccessible. Verified GO hierarchy and
+    exact ENA species. Hidden- and ignored-inclusive searches found only an earlier review-report
+    lead, not a prior cord record. Curated centrin as reviewed label-only with UNKNOWN assembly
+    essentiality, an explicitly architectural roof role, and open mechanistic and cross-taxon
+    questions. Inspected CIL:36704 source metadata and full web JPEG; retained the public-domain
+    image unchanged with checksum, attribution and organism provenance. Did not host the noncommercial
+    CIL:36779 asset. No speculative contraction, membrane-fusion causal graph or inherited
+    ICL assembly requirements. Regenerate derived artifacts and run all gates before publication.
