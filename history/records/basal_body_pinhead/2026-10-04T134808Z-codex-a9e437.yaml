@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_pinhead.yaml
+  slug: basal_body_pinhead
+session:
+  id: 2026-10-04T134808Z-codex-a9e437
+  timestamp: '2026-10-04T13:48:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - physical_properties
+  - datasets
+  - images
+  - discussions
+  summary: Add the basal body pinhead as a named microbial subassembly
+  details: Ignored-inclusive deduplication and complete GO searches preceded minting. Read
+    checksum-verified Li 2019 primary JATS and Figure 2, relevant Klena 2020 text, native
+    EMDB EMD-9171, UniProt/InterPro/GO and NCBI taxon metadata. Bld10 membership is explicitly
+    limited to the inspected Hiraki 2007 primary abstract; unavailable full-text sources remain
+    a follow-up, not asserted density assignments. Scaffolded with new_record.py, then used
+    a temporary asserting safe-load mutator with an LLM curation event and write_image_with_validated_record,
+    which invokes the guarded record writer. Verified byte-identical YAML emission and the
+    original CC BY 4.0 image checksum. Retained PROPOSED. No PR or review issue exists at
+    history creation; generated artifacts and full gates follow before commit.

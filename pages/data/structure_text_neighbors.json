@@ -2379,6 +2379,11 @@
           "cosine_similarity": 0.7886753
         },
         {
+          "identifier": "cellstructuremech:basal_body_pinhead",
+          "label": "basal body pinhead",
+          "cosine_similarity": 0.77839376
+        },
+        {
           "identifier": "cellstructuremech:nucleus_basal_body_connector",
           "label": "nucleus-basal body connector",
           "cosine_similarity": 0.75987752
@@ -2387,11 +2392,6 @@
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
           "cosine_similarity": 0.75155661
-        },
-        {
-          "identifier": "GO:1990720",
-          "label": "C2 axonemal microtubule",
-          "cosine_similarity": 0.74595547
         }
       ]
     },
@@ -2431,6 +2431,11 @@
       "label": "basal body cartwheel",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:basal_body_pinhead",
+          "label": "basal body pinhead",
+          "cosine_similarity": 0.83896685
+        },
+        {
           "identifier": "GO:0001535",
           "label": "radial spoke head",
           "cosine_similarity": 0.78086676
@@ -2449,11 +2454,6 @@
           "identifier": "GO:0001534",
           "label": "radial spoke",
           "cosine_similarity": 0.75635616
-        },
-        {
-          "identifier": "GO:0120343",
-          "label": "radial spoke neck",
-          "cosine_similarity": 0.71694874
         }
       ]
     },
@@ -2485,6 +2485,37 @@
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.76295875
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:basal_body_pinhead",
+      "label": "basal body pinhead",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:basal_body_cartwheel",
+          "label": "basal body cartwheel",
+          "cosine_similarity": 0.83896685
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.8129023
+        },
+        {
+          "identifier": "cellstructuremech:nucleus_basal_body_connector",
+          "label": "nucleus-basal body connector",
+          "cosine_similarity": 0.80329546
+        },
+        {
+          "identifier": "GO:0001536",
+          "label": "radial spoke stalk",
+          "cosine_similarity": 0.77858758
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_c_tubule_hook",
+          "label": "basal body C-tubule hook",
+          "cosine_similarity": 0.77839376
         }
       ]
     },
@@ -3283,14 +3314,14 @@
           "cosine_similarity": 0.80304448
         },
         {
+          "identifier": "cellstructuremech:basal_body_pinhead",
+          "label": "basal body pinhead",
+          "cosine_similarity": 0.74952261
+        },
+        {
           "identifier": "GO:0097539",
           "label": "ciliary transition fiber",
           "cosine_similarity": 0.74394587
-        },
-        {
-          "identifier": "cellstructuremech:stentor_km_fiber",
-          "label": "Stentor Km fiber",
-          "cosine_similarity": 0.7415808
         }
       ]
     },
@@ -4580,6 +4611,11 @@
           "cosine_similarity": 0.81185729
         },
         {
+          "identifier": "cellstructuremech:basal_body_pinhead",
+          "label": "basal body pinhead",
+          "cosine_similarity": 0.80329546
+        },
+        {
           "identifier": "cellstructuremech:basal_body_c_tubule_hook",
           "label": "basal body C-tubule hook",
           "cosine_similarity": 0.75987752
@@ -4588,11 +4624,6 @@
           "identifier": "cellstructuremech:transition_zone_stellate_fiber_system",
           "label": "transition zone stellate fiber system",
           "cosine_similarity": 0.74717895
-        },
-        {
-          "identifier": "cellstructuremech:cytostomal_cord",
-          "label": "cytostomal cord",
-          "cosine_similarity": 0.74430176
         }
       ]
     },
@@ -5050,14 +5081,14 @@
           "cosine_similarity": 0.90460161
         },
         {
+          "identifier": "cellstructuremech:basal_body_pinhead",
+          "label": "basal body pinhead",
+          "cosine_similarity": 0.72740042
+        },
+        {
           "identifier": "cellstructuremech:basal_body_cartwheel",
           "label": "basal body cartwheel",
           "cosine_similarity": 0.71694874
-        },
-        {
-          "identifier": "GO:0005823",
-          "label": "central plaque of spindle pole body",
-          "cosine_similarity": 0.67973442
         }
       ]
     },
@@ -5081,14 +5112,14 @@
           "cosine_similarity": 0.91393924
         },
         {
+          "identifier": "cellstructuremech:basal_body_pinhead",
+          "label": "basal body pinhead",
+          "cosine_similarity": 0.77858758
+        },
+        {
           "identifier": "cellstructuremech:basal_body_cartwheel",
           "label": "basal body cartwheel",
           "cosine_similarity": 0.76240293
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.75709714
         }
       ]
     },
