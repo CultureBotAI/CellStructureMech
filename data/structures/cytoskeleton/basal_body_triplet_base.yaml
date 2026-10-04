@@ -1,0 +1,183 @@
+identifier: cellstructuremech:basal_body_triplet_base
+label: basal body triplet base
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A linker in the proximal region of a microbial ciliary basal body that
+  connects the pinhead to the A-C linker. In Paramecium tetraurelia reconstructions
+  it extends to the ArmB region of the A-C linker.
+definition_source: DOI:10.15252/embj.2020106246
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T14:28:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T14:30:29Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added directly imaged triplet-base connectivity, two species examples,
+    approximate Paramecium span, scoped EMDB provenance and inspected CC BY figure.
+    Retained molecular identity, periodicity and mechanics as unresolved; no hypothesized
+    protein membership or broad distribution asserted.
+  llm_assisted: true
+parent_structures:
+- GO:0005575
+part_of:
+- GO:0036064
+synonyms:
+- synonym_text: centriole triplet base
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.15252/embj.2020106246
+canonical_examples:
+- taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  note: Ninefold-symmetrized cryo-ET cross sections and a focused subtomogram average
+    resolve the pinhead-to-A-C-linker connection. Methods describe cortical units
+    isolated from d4-2 and Delta-CenBP1; Figure 5 is not assigned to one strain. The
+    proximal-region analysis used 11 uncompressed tomograms containing 16 centrioles
+    with intact proximal regions.
+  reference: DOI:10.15252/embj.2020106246
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: In situ cryo-ET of FIB-milled mat3-4 cells and ninefold-symmetrized cross
+    sections show the link in Figure 4. The Paramecium focused-map measurement is
+    not transferred to this species.
+  reference: DOI:10.15252/embj.2020106246
+functions:
+- function_id: pinhead_a_c_linker_connection
+  label: ciliary basal body organization
+  grounding: GO:0032053
+  description: Provides a structural connection between the pinhead and A-C linker
+    in the imaged proximal region. This is an observed spatial arrangement, not proof
+    of a mechanical stiffness, essentiality or assembly time course.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+    notes: Figures 4 and 5 and the accompanying Results identify the connecting density;
+      the Paramecium average locates its A-C-linker contact on ArmB.
+physical_properties:
+- property: LENGTH
+  value: '35'
+  unit: UO:0000018
+  context: Approximate pinhead-to-A-C-linker span annotated as about 35 nm in the
+    Paramecium tetraurelia proximal-triplet reconstruction, Figure 5A, and described
+    in the Discussion. No replicate distribution or uncertainty is reported for this
+    annotation. It is not an axial repeat or a universal length.
+  reference: DOI:10.15252/embj.2020106246
+datasets:
+- accession: EMDB:EMD-10729
+  title: Paramecium microtubule triplet from the start of the proximal region
+  description: Public proximal-triplet reconstruction from the study that visualizes
+    the triplet-base connection. The deposited entity includes the microtubule wall
+    and neighboring densities, not an isolated triplet base.
+  organism: Paramecium tetraurelia
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-10729
+  publication: DOI:10.15252/embj.2020106246
+  notes: Native released EMDB metadata verifies the start-of-proximal-region title,
+    taxon 5888, DOI and PMID:32954513. The paper lists EMD-10726 through EMD-10729
+    in Data availability. EMD-10728 denotes the distal comparison; EMD-10726 and EMD-10727
+    denote A-C-linker-focused maps. Their sample-name fields repeat start-region wording
+    despite different entry titles, so titles are used to distinguish these deposits.
+    No exact structure xref or hosted map volume is asserted.
+evidence:
+- reference: DOI:10.15252/embj.2020106246
+  notes: Klena et al. 2020, PMID:32954513. Checksum-verified PMC7667884.1 JATS Results,
+    Discussion, species preparation and A-C-linker averaging Methods, Figure 5 and
+    Data availability inspected. Figure 5 was visually inspected; its low-threshold
+    triplet-base density is not a sequence-resolved model.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the triplet base distinct from adjacent basal-body modules.
+  rationale: A named linker is not the entire cartwheel, pinhead or A-C linker.
+  notes: Hidden/ignored-inclusive repository searches and parsed record identity/synonym
+    checks found mentions but no standalone record. Complete QuickGO searches for
+    triplet base (119 results) and centriole triplet base (141 results) found no exact
+    cellular-component term. The ontology root GO:0005575 is retained only as a deliberately
+    broad class pending molecular classification; OTHER avoids asserting a proven
+    multiprotein composition or filament architecture. GO:0110165 would assert granularity
+    above a protein complex, which is also unresolved. Basal body is parthood, not
+    is-a. No obligatory cartwheel or pro-basal-body parthood is inferred. D2-rod,
+    A-tusk, pinhead, ArmB, cartwheel spokes and the A-C linker are not exact synonyms
+    or separately identified triplet-base components.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+  - reference: GO:0005575
+  - reference: GO:0110165
+  - reference: GO:0036064
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: molecular_identity
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve triplet-base molecular composition and a narrower structure class.
+  rationale: A proposed coiled-coil assignment is not a demonstrated molecular identity.
+  notes: Klena 2020 explicitly leaves molecular nature unknown and hypothesizes Bld10/Cep135
+    membership from length, appearance and prior localization. The inspected Cai 2025
+    Tetrahymena Discussion still describes the C-terminal CEP135 triplet-base assignment
+    as proposed; its direct N-terminal CEP135 assignment is to the A-link, not this
+    density. Consequently no Bld10/Cep135, SAS-6, tubulin or A-C-linker protein is
+    asserted as composition here. Seek direct localization or sequence-resolved triplet-base
+    evidence before assigning components, stoichiometry or protein-family grounding.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+  - reference: DOI:10.1126/sciadv.ady3689
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: measurement_and_mechanism_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate observed connectivity from periodicity and mechanical hypotheses.
+  rationale: Low density and static axial differences do not uniquely specify occupancy,
+    flexibility or chronology.
+  notes: The focused Paramecium map required a low contour threshold to show the triplet
+    base. The source offers flexibility or incomplete occupancy as alternatives and
+    could not reliably recover triplet-base or pinhead longitudinal periodicities.
+    The 8.5-nm initial picking interval and 8.4-nm A-C-linker repeat are not triplet-base
+    repeats. The predicted 133-nm CEP135 coiled-coil length is not a measured linker
+    length. A-C linker density persists farther distally when the pinhead/triplet-base
+    connection is weak or absent, so the structures are not interchangeable. The proposed
+    cohesion/stability function and replacement by other densities are not direct
+    force measurements or time-resolved assembly evidence. No causal graph, motility
+    trait or broad taxonomic-distribution claim is asserted.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: pmc_pmc7667884_embj2020106246_fig_0005
+  file: pmc7667884_embj2020106246_fig_0005.jpg
+  file_sha256: 1431f971830fd590ad25381abf065a76a1d99800827c4e6292490af98a1fde34
+  source: PMC
+  source_accession: PMC7667884.1 embj2020106246-fig-0005
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7667884/figure/embj2020106246-fig-0005/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7667884.1/EMBJ-39-e106246-g010.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Nikolai Klena, Maeva Le Guennec, Anne‐Marie Tassin, Hugo van den Hoek,
+    Philipp S Erdmann, Miroslava Schaffer, Stefan Geimer, Gabriel Aeschlimann, Lubomir
+    Kovacik, Yashar Sadian, et al.; CC BY, via PubMed Central
+  modality: CRYO_ET
+  caption: Paramecium proximal-triplet reconstructions. Panel A shows the triplet
+    base in green connecting the purple pinhead to the turquoise A-C linker at low
+    contour threshold, with an approximate 35-nm span annotation. Panel B uses a higher
+    threshold and shows only a dashed putative triplet-base position; C-F emphasize
+    the neighboring A-C linker and proximal/distal comparisons. These are segmented
+    averages, not raw micrographs or sequence-resolved proteins.
+  taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  reference: DOI:10.15252/embj.2020106246
+  retrieved_on: '2026-10-04'
+  notes: Original multipanel Figure 5 visually inspected and accepted without cropping
+    or modification. The JATS figure ID resolves to g010.jpg, not g005.jpg. Article
+    and media MD5 checksums were verified from PMC OA metadata; exact licence version
+    comes from JATS. The entire figure concerns Paramecium and matches the canonical
+    example. Density colors mark structural regions, not molecular assignments; the
+    pinhead is hidden in panel B because the source warns that its reconstruction
+    was biased by the initial picking interval.

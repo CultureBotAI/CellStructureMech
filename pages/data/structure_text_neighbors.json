@@ -2520,6 +2520,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:basal_body_triplet_base",
+      "label": "basal body triplet base",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:basal_body_pinhead",
+          "label": "basal body pinhead",
+          "cosine_similarity": 0.77227024
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_a_c_linker",
+          "label": "basal body A-C linker",
+          "cosine_similarity": 0.7509437
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.7504271
+        },
+        {
+          "identifier": "cellstructuremech:nucleus_basal_body_connector",
+          "label": "nucleus-basal body connector",
+          "cosine_similarity": 0.74672501
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_inner_scaffold",
+          "label": "basal body inner scaffold",
+          "cosine_similarity": 0.72680181
+        }
+      ]
+    },
+    {
       "identifier": "GO:0020032",
       "label": "basal ring of apical complex",
       "neighbors": [
