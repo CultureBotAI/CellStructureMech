@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tusk_complex.yaml
+  slug: tusk_complex
+session:
+  id: 2026-10-04T181248Z-codex-6a89a7
+  timestamp: '2026-10-04T18:12:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - synonyms
+  - components
+  - canonical_examples
+  - functions
+  - datasets
+  - causal_graphs
+  - discussions
+  summary: Add evidence-bounded TUSK protein complex
+  details: Created TUSK from checksum-verified PMC11732084.1 and alias provenance PMC9896412.1,
+    after hidden/ignored-inclusive deduplication of 874 records and native GO, NCBI, InterPro,
+    UniProt, Complex Portal and PRIDE checks. Curated three label-only constituent classes,
+    Trypanosoma brucei with distinct assay stages, qualitative whole-cell abundance function,
+    a NONMECHANISTIC RNAi-output graph and identifier-only PXD021000/PXD021797 dataset links.
+    Preserved unresolved locus/effect-size conflicts, localization, stoichiometry, family
+    groundings and catalytic hypotheses; declined contaminants and phenotype/predicted-model
+    images. Native media Figures 3 and 4 inspected, not hosted; license helper rejects plain-text
+    license URL. No PR or review issue exists at creation time. Target LinkML and strict validation
+    passed; emitter is byte-stable. Derived products and full gates follow before commit.

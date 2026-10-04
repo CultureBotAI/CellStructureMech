@@ -1,0 +1,418 @@
+identifier: cellstructuremech:tusk_complex
+label: TUSK complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex containing Usp7, the divergent Skp1-like protein SkpZ,
+  and Tpr86, experimentally characterized in Trypanosoma brucei. It is distinct from
+  cullin ubiquitin-ligase complexes and is implicated in coordinated regulation of
+  surface-protein abundance.
+definition_source: DOI:10.3389/fpara.2023.1118284
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T18:06:38Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T18:09:16Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added the native TUSK three-component association, source-backed aliases,
+    scoped Trypanosoma example, qualitative abundance function, experiment-bounded
+    nonmechanistic graph and two PRIDE links. Preserved locus/effect-size conflicts,
+    assay-stage and database-version boundaries, uncertain localization/stoichiometry
+    and hypothetical catalytic mechanism; declined broader family grounds and unsupported
+    constituents.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+synonyms:
+- synonym_text: TUSK
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.3389/fpara.2023.1118284
+- synonym_text: TUS complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.3389/fpara.2023.1118284
+- synonym_text: TUS deubiquitinase complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.15698/mic2023.02.790
+components:
+- component_id: tpr86
+  label: Tpr86 TUSK subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - Tpr86
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro Tpr86 search returned no entry. The paper's IPR011990
+    and IPR002885 are a broad homologous superfamily and a repeat, respectively, not
+    the Tpr86 component family. The source also has conflicting locus strings, so
+    no protein accession is substituted for family identity.
+  role: Constituent recovered with SkpZ and Usp7; a substrate-scaffolding role is
+    proposed, not demonstrated.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+    notes: Native SkpZ affinity isolation identified Tpr86; reciprocal tagged-Tpr86
+      isolation in three biological replicates recovered SkpZ and Usp7 (Results and
+      Figure 6B). Figure 3A supports Tpr86-Usp7 co-isolation. These support complex
+      membership, not exact pairwise contact sites or assembly essentiality.
+- component_id: usp7
+  label: Usp7 TUSK subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - Usp7
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro Usp7 search returned IPR024729, an ICP0-binding
+    domain rather than a whole Usp7 family. No exact source-neutral family mapping
+    for this constituent was established. Exact source-locus UniProt queries returned
+    no entries; that query limit is not proof that protein entries do not exist.
+  role: Deubiquitinase-family constituent; direct substrate delivery and a complete
+    catalytic mechanism of the assembled TUSK complex remain unresolved.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+    notes: SkpZ and Tpr86 affinity isolations recover TbUsp7, and Figure 3A shows
+      tagged-Usp7 immunoprecipitation co-enriching Tpr86 with an enolase control.
+      The paper identifies Usp7 as the deubiquitinase-family member; molecular activity
+      of individual candidate surface substrates is not assigned from these interactions.
+- component_id: skpz
+  label: SkpZ TUSK subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SkpZ
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro SkpZ search returned no entry. The primary phylogeny
+    distinguishes SkpZ from other Skp1 paralogs, so generic Skp1 or POZ domains would
+    be broader than this constituent class. No exact family identifier was established.
+  role: Divergent Skp1-like constituent; its depletion alters other TUSK subunit levels
+    and selected surface-protein cohorts. Direct substrate-adaptor action is a hypothesis.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+    notes: Affinity isolation of endogenously tagged SkpZ and reciprocal tagged-Tpr86
+      isolation identify the three-member TUSK association. The phylogeny distinguishes
+      the SkpZ lineage from Skp1.1, Skp1.3 and Skp1.4. RNAi effects on protein abundance
+      do not establish whether the residual complex can assemble without SkpZ.
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: Native complex membership was examined using tagged proteins and affinity
+    isolation. Tagging and immunoprecipitation Methods specify procyclic-form 427
+    cells, whereas the culture and RNAi experiments describe bloodstream-form 2T1
+    cells derived from Lister 427. The SILAC abundance comparison follows 48 hours
+    of induction. These assay stages are retained separately. Strain 927 protein databases
+    used for peptide identification are reference annotations, not the cultured experimental
+    strain.
+  reference: DOI:10.3389/fpara.2023.1118284
+functions:
+- function_id: surface_protein_abundance_regulation
+  label: regulation of surface-protein abundance
+  description: In the studied bloodstream-form T. brucei RNAi context, SkpZ depletion
+    reduces Usp7 and Tpr86 levels and decreases total abundance of selected transmembrane
+    surface/endosomal proteins while increasing selected predicted GPI-anchored protein
+    cohorts. Whole-cell proteomics measures abundance, not surface-specific occupancy
+    or direct deubiquitination of each affected protein.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+    notes: Results, Table 1 and Figure 4 report qualitative cohort directions after
+      48-hour SkpZ RNAi; the ISG75 immunoblot corroborates reduced abundance. The
+      Discussion explicitly allows indirect effects for GPI-linked proteins. ESAG7
+      is a soluble partner of GPI-anchored ESAG6, and ESAG5 anchoring is uncertain;
+      neither is relabeled as a demonstrated GPI-anchored protein here.
+datasets:
+- accession: PXD021000
+  title: SkpZ RNAi and affinity-isolation proteomics
+  description: Publication-linked proteomics supporting the TUSK interaction and abundance
+    analyses; identifier and landing-page reference only.
+  organism: Trypanosoma brucei
+  dataset_type: PROTEOMICS
+  repository: PRIDE
+  url: https://www.ebi.ac.uk/pride/archive/projects/PXD021000
+  publication: DOI:10.3389/fpara.2023.1118284
+  notes: Native accession, organism 5691 and DOI were verified. The native PMID field
+    is the placeholder zero, not a valid PMID to import. The paper and repository
+    describe bloodstream-form RNAi and procyclic 427 immunoprecipitation separately.
+    The paper's SILAC Methods name reference database release 24; this deposition
+    instead names release 8.1. These source-specific processing descriptions are not
+    harmonized. No raw spectra, processed protein tables or bulk repository prose
+    are redistributed.
+- accession: PXD021797
+  title: Tpr86 reciprocal affinity-isolation proteomics
+  description: Publication-linked reverse isolation supporting recovery of SkpZ and
+    Usp7 with Tpr86; identifier and landing-page reference only.
+  organism: Trypanosoma brucei
+  dataset_type: PROTEOMICS
+  repository: PRIDE
+  url: https://www.ebi.ac.uk/pride/archive/projects/PXD021797
+  publication: DOI:10.3389/fpara.2023.1118284
+  notes: Native accession, organism 5691, DOI and PMID:39816833 were verified. The
+    native protocol describes procyclic 427 material and reference database release
+    39.0, distinct from the cultured organism and other source-specific pipeline versions.
+    The paper's SILAC subsection drops the initial P in this accession; its data availability
+    statement and the native PRIDE entry establish PXD021797. No raw spectra, processed
+    protein tables or bulk repository prose are redistributed.
+evidence:
+- reference: DOI:10.3389/fpara.2023.1118284
+  notes: Yamada et al. 2023, PMID:39816833. Checksum-verified PMC11732084.1 abstract,
+    complex-isolation and knockdown Results, Discussion and relevant culture, tagging,
+    SILAC, immunoprecipitation and BN-PAGE Methods inspected. Original Figures 3 and
+    4 visually inspected. Supports a named physical complex and bounded perturbation
+    effects, not the proposed dark-cullin mechanism as established fact.
+- reference: DOI:10.15698/mic2023.02.790
+  notes: The ISG75 study names the same SkpZ/Tpr86/Usp7 association as the TUS deubiquitinase
+    complex. Its reference 58 links the prior title/preprint to the TUSK paper; the
+    inspected paragraph supplies synonym provenance, not a new composition.
+causal_graphs:
+- graph_id: skpz_perturbation_abundance_outputs
+  title: Measured abundance responses to SkpZ depletion
+  description: Experiment-scoped outputs of SkpZ RNAi in T. brucei; not a reconstruction
+    of TUSK catalysis or substrate delivery.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: All edges start at the measured intervention. No edge connects a proposed
+    Tpr86 scaffold, SkpZ substrate adaptor, Usp7 catalytic step or lysosomal delivery
+    into an established pathway. Whole-cell steady-state abundance cannot establish
+    direct substrates, degradation rates or surface-localized fractions.
+  nodes:
+  - node_id: skpz_rnai
+    label: SkpZ RNAi induction
+    node_type: EXPERIMENTAL_FACTOR
+    description: 48-hour induction in the studied bloodstream-form T. brucei 2T1/Lister
+      427 context.
+  - node_id: tpr86
+    label: Tpr86 TUSK subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tpr86
+  - node_id: usp7
+    label: Usp7 TUSK subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: usp7
+  - node_id: skpz
+    label: SkpZ TUSK subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: skpz
+  - node_id: tmd_cohort_abundance
+    label: total abundance of selected transmembrane surface/endosomal proteins
+    node_type: STATE
+    description: Measured whole-cell protein abundance, not direct surface occupancy
+      or a claim about every transmembrane protein.
+  - node_id: gpi_cohort_abundance
+    label: total abundance of selected predicted GPI-anchored proteins
+    node_type: STATE
+    description: Selected predicted GPI-anchored protein cohort; does not reclassify
+      soluble ESAG7 or uncertain-anchor ESAG5.
+  edges:
+  - subject: skpz_rnai
+    predicate: decreases abundance of
+    object: skpz
+    description: SkpZ protein abundance decreases following targeted RNAi.
+    evidence:
+    - reference: DOI:10.3389/fpara.2023.1118284
+      notes: SkpZ knockdown Results, Figure 4 and Table 1 support this qualitative
+        48-hour perturbation output. No reaction, mediation pathway or effect-size
+        conversion is inferred.
+  - subject: skpz_rnai
+    predicate: decreases abundance of
+    object: usp7
+    description: Usp7 abundance decreases after SkpZ RNAi; this does not by itself
+      prove a direct degradation mechanism.
+    evidence:
+    - reference: DOI:10.3389/fpara.2023.1118284
+      notes: SkpZ knockdown Results, Figure 4 and Table 1 support this qualitative
+        48-hour perturbation output. No reaction, mediation pathway or effect-size
+        conversion is inferred.
+  - subject: skpz_rnai
+    predicate: decreases abundance of
+    object: tpr86
+    description: Tpr86 abundance decreases after SkpZ RNAi; exact effect-size wording
+      remains conflicted between text and table.
+    evidence:
+    - reference: DOI:10.3389/fpara.2023.1118284
+      notes: SkpZ knockdown Results, Figure 4 and Table 1 support this qualitative
+        48-hour perturbation output. No reaction, mediation pathway or effect-size
+        conversion is inferred.
+  - subject: skpz_rnai
+    predicate: decreases
+    object: tmd_cohort_abundance
+    description: Selected transmembrane surface/endosomal protein groups decline in
+      the whole-cell abundance comparison; ISG75 has orthogonal immunoblot support.
+    evidence:
+    - reference: DOI:10.3389/fpara.2023.1118284
+      notes: SkpZ knockdown Results, Figure 4 and Table 1 support this qualitative
+        48-hour perturbation output. No reaction, mediation pathway or effect-size
+        conversion is inferred.
+  - subject: skpz_rnai
+    predicate: increases
+    object: gpi_cohort_abundance
+    description: Selected predicted GPI-anchored protein groups increase in the whole-cell
+      abundance comparison; the effect can be indirect.
+    evidence:
+    - reference: DOI:10.3389/fpara.2023.1118284
+      notes: SkpZ knockdown Results, Figure 4 and Table 1 support this qualitative
+        48-hour perturbation output. No reaction, mediation pathway or effect-size
+        conversion is inferred.
+discussions:
+- discussion_id: identity_and_aliases
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep TUSK distinct from the basal-body A-tusk and from cullin or SAGA-family
+    complexes.
+  rationale: A shared name fragment or related enzyme family does not establish structure
+    identity.
+  notes: Whole-repository hidden/ignored-inclusive alias, slug, locus, accession,
+    DOI and PMID searches and parsed identities across 874 prior records found only
+    unrelated A-tusk context, not this complex. Current native GO searches for TUSK,
+    TUS, Tpr86, SkpZ and the three-protein combination returned zero hits; GO:0032991
+    is a verified broader parent, not an exact identity. Earlier broad queries containing
+    complex exceeded QuickGO's 25-page cap and are not claimed exhaustive. Native
+    Complex Portal TUSK, Tpr86 and SkpZ queries returned no entries. Figure 3 uses
+    TUS complex, and the inspected ISG75 paper uses TUS deubiquitinase complex for
+    the same three proteins. No equivalence to DUBm or an E3 ligase is asserted.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+  - reference: DOI:10.15698/mic2023.02.790
+  - reference: GO:0032991
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: component_family_groundings
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral family identifiers for the three TUSK constituent
+    classes.
+  rationale: Shared repeats, domains and divergent paralogs must not be promoted to
+    exact family identity.
+  notes: Native InterPro searches found no Tpr86 or SkpZ entry and only the IPR024729
+    ICP0-binding domain for Usp7. The paper's Tpr86-related IPR011990 is a homologous
+    superfamily and IPR002885 is a repeat. These are declined as component identities.
+    Protein-example accessions remain unset because exact source-locus UniProt queries
+    did not resolve them; such bounded misses do not prove absence. Generic Skp1,
+    TPR and deubiquitinase domains do not identify TUSK-specific membership.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+  - reference: InterPro:IPR011990
+  - reference: InterPro:IPR002885
+  - reference: InterPro:IPR024729
+  posed_by: codex
+  posed_date: '2026-10-04'
+  attaches_to:
+  - components#tpr86
+  - components#usp7
+  - components#skpz
+- discussion_id: source_locus_and_effect_size_conflicts
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile the Tpr86 locus and the percentage-versus-ratio wording before
+    adding exact identifiers or effect sizes.
+  rationale: The source contains internal inconsistencies that do not invalidate the
+    named reciprocal-isolation evidence.
+  notes: The main text calls Tpr86 Tb927.11.810, whereas Table 1 gives Tb927.10.810.
+    No accession is guessed from either string. Results say Usp7 and Tpr86 are reduced
+    by 38% and about 42%, whereas Table 1 lists ratios 0.38 and 0.42. Only the agreed
+    qualitative decreases enter the function and graph; no arithmetic reconciliation
+    or exact percent loss is asserted. Figure 4's inset is read as abundance corroboration,
+    not a measured degradation half-life.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+  posed_by: codex
+  posed_date: '2026-10-04'
+  attaches_to:
+  - components#tpr86
+  - causal_graphs#skpz_perturbation_abundance_outputs
+- discussion_id: localization_and_stoichiometry
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Establish native complex localization, subunit copy numbers and oligomeric
+    state independently of tag artifacts.
+  rationale: Co-isolation establishes membership but not fixed stoichiometry, direct
+    pairwise contacts or exact organellar parthood.
+  notes: The authors call TUSK heterotrimeric, but tagged-cell BN-PAGE gives apparent
+    400- and 600-kDa species and explicitly permits alternative stoichiometry or composition.
+    Neither those migration values nor the summed subunit masses are curated as intrinsic
+    complex properties. Their own tagged localization was ambiguous; TrypTag localization
+    is discussed by the paper, but its native images were not independently inspected
+    here. No fixed endosome/Golgi part_of, molecule count, dimension or structure-assembly
+    essentiality is inferred.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: mechanism_and_function_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Test direct TUSK substrate recognition and deubiquitination without treating
+    the dark-cullin analogy as established mechanism.
+  rationale: An intervention's abundance outputs do not identify the intermediates
+    connecting it to each affected protein.
+  notes: Tpr86 scaffolding, SkpZ substrate delivery, Usp7-mediated removal of ubiquitin
+    from individual surface substrates and subsequent lysosomal routing remain proposed
+    links. The curated NONMECHANISTIC graph preserves only measured RNAi outputs.
+    The GPI-linked response may be secondary; ESAG7 is soluble and associated with
+    GPI-anchored ESAG6, and ESAG5 anchoring is uncertain. No direct GPI substrate
+    claim, universal cohort direction, catalytic specificity or narrower GO function
+    is assigned from whole-cell proteomics. Ortholog conservation across kinetoplastids
+    is not an experimentally demonstrated distribution of assembled TUSK, so only
+    the studied species is a canonical example.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+  posed_by: codex
+  posed_date: '2026-10-04'
+  attaches_to:
+  - functions#surface_protein_abundance_regulation
+  - causal_graphs#skpz_perturbation_abundance_outputs
+- discussion_id: declined_additional_constituents
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not promote initial co-isolates or analogous cullin machinery to TUSK
+    constituents.
+  rationale: Not every enrichment hit is a specific, reproducible complex member.
+  notes: GRESAG4 and PFC17 were enriched in the initial SkpZ experiment but were not
+    recovered in reciprocal Tpr86 isolation and were rejected as contaminants by the
+    authors. The source also spells the latter PCF17 in one sentence. Cullin and Rbx1
+    machinery were not established as TUSK members; the dark-cullin analogy is not
+    a cullin assignment. Vdu1 is a separate deubiquitinase, and changed abundance
+    of VAMP7b or surface cargo does not make those proteins constituents.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: specimen_and_dataset_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Retain assay stages, reference-database versions and accession discrepancies
+    without conflating samples.
+  rationale: Protein-search annotation strains and pipeline versions are not the experimental
+    organism or one interchangeable protocol.
+  notes: Native NCBI confirms Trypanosoma brucei taxon 5691. The study distinguishes
+    procyclic 427 tagging/immunoprecipitation from bloodstream 2T1/Lister 427 RNAi.
+    The 927 annotation databases and source-specific releases 24, 8.1 and 39.0 are
+    retained as processing context, not canonical strains. Native PRIDE metadata verifies
+    both accessions and the paper DOI; PXD021000's PMID zero is not imported, and
+    PXD021797 corrects the paper's XD021797 typographic form using its data-availability
+    statement and native entry. Links are not exact complex xrefs. iModulonDB has
+    no matching organism among the 28 listed datasets and is not negative evidence.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: native_assembly_imaging
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Obtain experimentally resolved imaging of the assembled TUSK complex.
+  rationale: Biochemical readouts, knockdown phenotypes and predicted architectures
+    show different things.
+  notes: Original Figure 3 co-immunoprecipitation/BN-PAGE and Figure 4 proteomics/immunoblot
+    graphics were visually inspected and their native media checksums verified, but
+    no complex micrograph is asserted. Figure 7's membrane hypertrophy is a knockdown
+    phenotype, not TUSK localization. Figure 6C is a predicted Tpr86 subunit model
+    and Figure 8 a proposed architecture; neither is an experimentally resolved whole-complex
+    structure. No image, dimension or atomic-model xref is inferred from these panels.
+  evidence:
+  - reference: DOI:10.3389/fpara.2023.1118284
+  posed_by: codex
+  posed_date: '2026-10-04'

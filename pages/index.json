@@ -6723,6 +6723,15 @@
   "definition": "A complex consisting of two membrane proteins and one extracytoplasmic solute receptor. Such transporters transport a variety of substrates without direct ATP power, instead using energy from ion gradients."
  },
  {
+  "identifier": "cellstructuremech:tusk_complex",
+  "label": "TUSK complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/tusk_complex.html",
+  "definition": "A protein complex containing Usp7, the divergent Skp1-like protein SkpZ, and Tpr86, experimentally characterized in Trypanosoma brucei. It is distinct from cullin ubiquitin-ligase complexes and is implicated in coordinated regulation of surface-protein abundance."
+ },
+ {
   "identifier": "GO:0034456",
   "label": "UTP-C complex",
   "category": "OTHER",

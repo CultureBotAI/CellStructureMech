@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TUSK complex · CellStructureMech</title>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../theme-toggle.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html">CellStructureMech</a>
+  <nav>
+    <a href="../../browse.html">Browse</a>
+    <a href="../../embedding-map.html">Text map</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+<main>
+<h1>TUSK complex</h1>
+<p class="meta"><code>cellstructuremech:tusk_complex</code> · OTHER · MULTIPROTEIN_COMPLEX · <span class="status">PROPOSED</span></p>
+<p class="definition">A protein complex containing Usp7, the divergent Skp1-like protein SkpZ, and Tpr86, experimentally characterized in Trypanosoma brucei. It is distinct from cullin ubiquitin-ligase complexes and is implicated in coordinated regulation of surface-protein abundance. <small>[<a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a>]</small></p>
+<p><strong>Synonyms:</strong> TUSK; TUS complex; TUS deubiquitinase complex</p>
+<h2>Components</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Components">
+<table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
+<tr id="components-tpr86"><td>Tpr86 TUSK subunit</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>Tpr86</td><td></td><td>UNKNOWN</td><td>Constituent recovered with SkpZ and Usp7; a substrate-scaffolding role is proposed, not demonstrated.<ul class="evidence"><li><a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a> <small>Native SkpZ affinity isolation identified Tpr86; reciprocal tagged-Tpr86 isolation in three biological replicates recovered SkpZ and Usp7 (Results and Figure 6B). Figure 3A supports Tpr86-Usp7 co-isolation. These support complex membership, not exact pairwise contact sites or assembly essentiality.</small></li></ul></td></tr>
+<tr id="components-usp7"><td>Usp7 TUSK subunit</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>Usp7</td><td></td><td>UNKNOWN</td><td>Deubiquitinase-family constituent; direct substrate delivery and a complete catalytic mechanism of the assembled TUSK complex remain unresolved.<ul class="evidence"><li><a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a> <small>SkpZ and Tpr86 affinity isolations recover TbUsp7, and Figure 3A shows tagged-Usp7 immunoprecipitation co-enriching Tpr86 with an enolase control. The paper identifies Usp7 as the deubiquitinase-family member; molecular activity of individual candidate surface substrates is not assigned from these interactions.</small></li></ul></td></tr>
+<tr id="components-skpz"><td>SkpZ TUSK subunit</td><td>PROTEIN</td><td>part of</td><td><em>REVIEWED_LABEL_ONLY</em></td><td>SkpZ</td><td></td><td>UNKNOWN</td><td>Divergent Skp1-like constituent; its depletion alters other TUSK subunit levels and selected surface-protein cohorts. Direct substrate-adaptor action is a hypothesis.<ul class="evidence"><li><a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a> <small>Affinity isolation of endogenously tagged SkpZ and reciprocal tagged-Tpr86 isolation identify the three-member TUSK association. The phylogeny distinguishes the SkpZ lineage from Skp1.1, Skp1.3 and Skp1.4. RNAi effects on protein abundance do not establish whether the residual complex can assemble without SkpZ.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+
+
+<h2>Canonical examples</h2>
+<ul><li><a href="http://purl.obolibrary.org/obo/NCBITaxon_5691"><code>NCBITaxon:5691</code></a> <em>Trypanosoma brucei</em> — Native complex membership was examined using tagged proteins and affinity isolation. Tagging and immunoprecipitation Methods specify procyclic-form 427 cells, whereas the culture and RNAi experiments describe bloodstream-form 2T1 cells derived from Lister 427. The SILAC abundance comparison follows 48 hours of induction. These assay stages are retained separately. Strain 927 protein databases used for peptide identification are reference annotations, not the cultured experimental strain. [<a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a>]</li></ul>
+
+<h2>Functions</h2>
+<ul><li><strong>regulation of surface-protein abundance</strong> — In the studied bloodstream-form T. brucei RNAi context, SkpZ depletion reduces Usp7 and Tpr86 levels and decreases total abundance of selected transmembrane surface/endosomal proteins while increasing selected predicted GPI-anchored protein cohorts. Whole-cell proteomics measures abundance, not surface-specific occupancy or direct deubiquitination of each affected protein.<ul class="evidence"><li><a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a> <small>Results, Table 1 and Figure 4 report qualitative cohort directions after 48-hour SkpZ RNAi; the ISG75 immunoblot corroborates reduced abundance. The Discussion explicitly allows indirect effects for GPI-linked proteins. ESAG7 is a soluble partner of GPI-anchored ESAG6, and ESAG5 anchoring is uncertain; neither is relabeled as a demonstrated GPI-anchored protein here.</small></li></ul></li></ul>
+
+
+
+<h2>Mechanism graphs</h2>
+<h3 id="causal_graphs-skpz_perturbation_abundance_outputs">Measured abundance responses to SkpZ depletion <small>(FUNCTION)</small></h3>
+<p>Experiment-scoped outputs of SkpZ RNAi in T. brucei; not a reconstruction of TUSK catalysis or substrate delivery.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Measured abundance responses to SkpZ depletion">
+<table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>SkpZ RNAi induction</td><td>decreases abundance of</td><td>SkpZ TUSK subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a> <small>SkpZ knockdown Results, Figure 4 and Table 1 support this qualitative 48-hour perturbation output. No reaction, mediation pathway or effect-size conversion is inferred.</small></li></ul></td></tr>
+<tr><td>SkpZ RNAi induction</td><td>decreases abundance of</td><td>Usp7 TUSK subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a> <small>SkpZ knockdown Results, Figure 4 and Table 1 support this qualitative 48-hour perturbation output. No reaction, mediation pathway or effect-size conversion is inferred.</small></li></ul></td></tr>
+<tr><td>SkpZ RNAi induction</td><td>decreases abundance of</td><td>Tpr86 TUSK subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a> <small>SkpZ knockdown Results, Figure 4 and Table 1 support this qualitative 48-hour perturbation output. No reaction, mediation pathway or effect-size conversion is inferred.</small></li></ul></td></tr>
+<tr><td>SkpZ RNAi induction</td><td>decreases</td><td>total abundance of selected transmembrane surface/endosomal proteins</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a> <small>SkpZ knockdown Results, Figure 4 and Table 1 support this qualitative 48-hour perturbation output. No reaction, mediation pathway or effect-size conversion is inferred.</small></li></ul></td></tr>
+<tr><td>SkpZ RNAi induction</td><td>increases</td><td>total abundance of selected predicted GPI-anchored proteins</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a> <small>SkpZ knockdown Results, Figure 4 and Table 1 support this qualitative 48-hour perturbation output. No reaction, mediation pathway or effect-size conversion is inferred.</small></li></ul></td></tr>
+</tbody></table>
+</div>
+
+<h2>Discussions</h2>
+<ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep TUSK distinct from the basal-body A-tusk and from cullin or SAGA-family complexes. <small>A shared name fragment or related enzyme family does not establish structure identity.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral family identifiers for the three TUSK constituent classes. <small>Shared repeats, domains and divergent paralogs must not be promoted to exact family identity.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Reconcile the Tpr86 locus and the percentage-versus-ratio wording before adding exact identifiers or effect sizes. <small>The source contains internal inconsistencies that do not invalidate the named reciprocal-isolation evidence.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Establish native complex localization, subunit copy numbers and oligomeric state independently of tag artifacts. <small>Co-isolation establishes membership but not fixed stoichiometry, direct pairwise contacts or exact organellar parthood.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Test direct TUSK substrate recognition and deubiquitination without treating the dark-cullin analogy as established mechanism. <small>An intervention&#39;s abundance outputs do not identify the intermediates connecting it to each affected protein.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Do not promote initial co-isolates or analogous cullin machinery to TUSK constituents. <small>Not every enrichment hit is a specific, reproducible complex member.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Retain assay stages, reference-database versions and accession discrepancies without conflating samples. <small>Protein-search annotation strains and pipeline versions are not the experimental organism or one interchangeable protocol.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Obtain experimentally resolved imaging of the assembled TUSK complex. <small>Biochemical readouts, knockdown phenotypes and predicted architectures show different things.</small></li></ul>
+
+<h2>Datasets</h2>
+<ul class="datasets"><li><a href="https://www.ebi.ac.uk/pride/archive/projects/PXD021000"><strong>SkpZ RNAi and affinity-isolation proteomics</strong></a> (<code>PXD021000</code>) · PRIDE · PROTEOMICS<br><em>Organism:</em> Trypanosoma brucei<p><small>Native accession, organism 5691 and DOI were verified. The native PMID field is the placeholder zero, not a valid PMID to import. The paper and repository describe bloodstream-form RNAi and procyclic 427 immunoprecipitation separately. The paper&#39;s SILAC Methods name reference database release 24; this deposition instead names release 8.1. These source-specific processing descriptions are not harmonized. No raw spectra, processed protein tables or bulk repository prose are redistributed.</small></p></li><li><a href="https://www.ebi.ac.uk/pride/archive/projects/PXD021797"><strong>Tpr86 reciprocal affinity-isolation proteomics</strong></a> (<code>PXD021797</code>) · PRIDE · PROTEOMICS<br><em>Organism:</em> Trypanosoma brucei<p><small>Native accession, organism 5691, DOI and PMID:39816833 were verified. The native protocol describes procyclic 427 material and reference database release 39.0, distinct from the cultured organism and other source-specific pipeline versions. The paper&#39;s SILAC subsection drops the initial P in this accession; its data availability statement and the native PRIDE entry establish PXD021797. No raw spectra, processed protein tables or bulk repository prose are redistributed.</small></p></li></ul>
+
+<h2>Evidence</h2>
+<ul class="evidence"><li><a href="https://doi.org/10.3389/fpara.2023.1118284"><code>DOI:10.3389/fpara.2023.1118284</code></a> <small>Yamada et al. 2023, PMID:39816833. Checksum-verified PMC11732084.1 abstract, complex-isolation and knockdown Results, Discussion and relevant culture, tagging, SILAC, immunoprecipitation and BN-PAGE Methods inspected. Original Figures 3 and 4 visually inspected. Supports a named physical complex and bounded perturbation effects, not the proposed dark-cullin mechanism as established fact.</small></li><li><a href="https://doi.org/10.15698/mic2023.02.790"><code>DOI:10.15698/mic2023.02.790</code></a> <small>The ISG75 study names the same SkpZ/Tpr86/Usp7 association as the TUS deubiquitinase complex. Its reference 58 links the prior title/preprint to the TUSK paper; the inspected paragraph supplies synonym provenance, not a new composition.</small></li></ul>
+
+<h2>Curation history</h2>
+<ul class="history"><li><code>2026-10-04T18:06:38Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-04T18:09:16Z</code> codex · CURATED_RECORD — Added the native TUSK three-component association, source-backed aliases, scoped Trypanosoma example, qualitative abundance function, experiment-bounded nonmechanistic graph and two PRIDE links. Preserved locus/effect-size conflicts, assay-stage and database-version boundaries, uncertain localization/stoichiometry and hypothetical catalytic mechanism; declined broader family grounds and unsupported constituents.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/tusk_complex.yaml"><code>data/structures/other/tusk_complex.yaml</code></a></p>
+</main>
+<footer>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+</body>
+</html>

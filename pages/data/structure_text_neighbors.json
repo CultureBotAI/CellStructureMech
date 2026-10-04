@@ -16618,9 +16618,9 @@
           "cosine_similarity": 0.76268095
         },
         {
-          "identifier": "GO:0000112",
-          "label": "nucleotide-excision repair factor 3 complex",
-          "cosine_similarity": 0.7053997
+          "identifier": "cellstructuremech:tusk_complex",
+          "label": "TUSK complex",
+          "cosine_similarity": 0.70735728
         }
       ]
     },
@@ -23162,6 +23162,37 @@
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.77211125
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:tusk_complex",
+      "label": "TUSK complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0005675",
+          "label": "transcription factor TFIIH holo complex",
+          "cosine_similarity": 0.7554954
+        },
+        {
+          "identifier": "GO:0070985",
+          "label": "transcription factor TFIIK complex",
+          "cosine_similarity": 0.71598987
+        },
+        {
+          "identifier": "GO:0000438",
+          "label": "core TFIIH complex portion of holo TFIIH complex",
+          "cosine_similarity": 0.70735728
+        },
+        {
+          "identifier": "GO:0000439",
+          "label": "transcription factor TFIIH core complex",
+          "cosine_similarity": 0.70439637
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.69821024
         }
       ]
     },
