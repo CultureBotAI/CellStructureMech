@@ -1,0 +1,303 @@
+identifier: cellstructuremech:stentor_myoneme_system
+label: Stentor myoneme system
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: The cortical system of longitudinal contractile filament bundles, historically
+  termed M bands, characterized in Stentor coeruleus. Its prominent posterior myonemes
+  are distinct from the adjacent microtubular Km fibers; this record does not denote
+  every centrin-containing cortical assembly.
+definition_source: DOI:10.1126/science.177.4047.447
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T00:21:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T00:22:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added source-bounded centrin/Sfi1 components, verified species example,
+    contraction function, nonmechanistic perturbation graph, identity and evidence
+    limits, and inspected link-only Figure 16.
+  llm_assisted: true
+- timestamp: '2026-10-04T00:23:32Z'
+  curator: codex
+  action: REFINED_GRAPH_WORDING
+  changes: Use produces for the impaired-contraction outcome state so the predicate
+    does not invert the reported phenotype.
+  llm_assisted: true
+- timestamp: '2026-10-04T00:39:25Z'
+  curator: codex
+  action: ADDRESSED_ADVERSARIAL_REVIEW
+  changes: Corrected direct M-band definition/synonym provenance and made the nonmechanistic
+    graph scope and mediation limits visible; retained PROPOSED status and linked
+    both review issues.
+  llm_assisted: true
+parent_structures:
+- GO:0005622
+part_of:
+- GO:0030863
+synonyms:
+- synonym_text: Stentor M-band system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.177.4047.447
+- synonym_text: myonemes
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.1111/j.1550-7408.2005.00048x
+components:
+- component_id: myonemal_centrins
+  label: Myonemal centrin-family proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR050145 Centrin/CML-like includes other calcium-binding
+    proteins; it does not exactly delimit the myonemal centrin class. No species-specific
+    accession is substituted for a family.
+  essentiality: UNKNOWN
+  role: Centrin-related calcium-binding constituents of the myonemes; the antibody
+    evidence does not resolve the complete native paralogue inventory.
+  evidence:
+  - reference: DOI:10.1111/j.1550-7408.2005.00048x
+    notes: 'Publisher abstract: three antibody preparations label myonemes, not the
+      adjacent Km fibers in alpha-tubulin double-labeling experiments. Immunoblots
+      identify a calcium-binding, caltractin-related protein. Full article methods
+      were inaccessible.'
+- component_id: sfi1_family_scaffolds
+  label: Myonemal Sfi1-family scaffold proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR052270 represents broader SFI1-related proteins, including
+    CCDC191. Exact coverage of the myonemal scaffold class and its experimentally
+    localized Stentor proteins was not established.
+  essentiality: UNKNOWN
+  role: Repeat-rich scaffold proteins localized to posterior myonemes and lateral
+    connections; knockdown supports a role in regional centrin organization, not a
+    defined minimal assembly stoichiometry.
+  evidence:
+  - reference: https://escholarship.org/content/qt48v7x2m3/qt48v7x2m3_noSplash_81e16ae35ca9c5219383afd7085febfb.pdf
+    notes: 'Yan dissertation, Chapter 2, pp. 26-32: Sfi1-1 (SteCoe_17904), Sfi1-2
+      (SteCoe_25973) and Sfi1-3 (SteCoe_10021) localize to myonemes and posterior
+      lateral bands, but not the anterior centrin mesh. Antibody blots contain nonspecific
+      bands; peptide-block and RNAi immunofluorescence controls are reported.'
+  - reference: DOI:10.1016/j.cub.2026.06.062
+    notes: Published abstract supports regional Sfi1-dependent centrin patterning.
+      Detailed isoform localization is sourced separately to the dissertation, not
+      to inaccessible final methods.
+canonical_examples:
+- taxon_id: NCBITaxon:5963
+  taxon_label: Stentor coeruleus
+  reference: DOI:10.1083/jcb.57.3.704
+  note: Experimental organism for the ultrastructural comparison of myonemes and Km
+    fibers. The species identifier was verified at ENA; no genus-wide prevalence is
+    asserted.
+functions:
+- function_id: cell_body_contraction
+  label: Rapid cell-body contraction
+  description: The myoneme system contributes to shortening of the cell body in response
+    to stimulation.
+  evidence:
+  - reference: DOI:10.1126/science.177.4047.447
+    notes: Primary high-speed cinematography follows M bands straightening before
+      regional body shortening. Mechanical and electrical stimulation differ in the
+      spatial progression of contraction; the signal is not directly identified.
+  - reference: DOI:10.1016/j.cub.2026.06.062
+    notes: Published abstract reports impaired or incomplete contraction in Sfi1 knockdowns
+      with reduced myoneme cables.
+causal_graphs:
+- graph_id: sfi1_knockdown_phenotypes
+  title: Nonmechanistic summary of Sfi1 knockdown phenotypes
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: Experimental perturbation summary in S. coeruleus, limited to the published
+    abstract. The two outcomes are not connected by a claimed causal mediation step.
+    This is not a resolved molecular contraction mechanism or a claim about every
+    Sfi1 isoform.
+  nodes:
+  - node_id: sfi1_rnai
+    label: RNAi against the implicated Sfi1 isoforms
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: reduced_cables
+    label: Reduced myoneme cables
+    node_type: STATE
+  - node_id: impaired_contraction
+    label: Impaired stimulus-evoked contraction
+    node_type: STATE
+  edges:
+  - subject: sfi1_rnai
+    predicate: produces
+    object: reduced_cables
+    description: The reported Sfi1 knockdown conditions reduce myoneme cables.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2026.06.062
+      notes: Nonmechanistic intervention summary from the published abstract; final
+        experimental methods were inaccessible. Cable reduction and contraction impairment
+        are parallel outcomes, not proof that cable loss mediates the contractile
+        defect.
+  - subject: sfi1_rnai
+    predicate: produces
+    object: impaired_contraction
+    description: Affected cells fail to respond normally to stimulation or contract
+      incompletely.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2026.06.062
+      notes: Abstract-level phenotype in cable-reducing knockdowns; no exact kinetics
+        or universal Sfi1 requirement is inferred. This outcome does not resolve native
+        force generation or establish mediation by cable loss; final methods remain
+        inaccessible.
+evidence:
+- reference: DOI:10.1083/jcb.57.3.704
+  notes: Huang and Pitelka (1973). Full primary PDF and Figures 16/17 inspected; versioned
+    PMC metadata verifies DOI, PMID 4633444 and non-retracted status. Molecular coiling
+    is an interpretation of fixed-state morphology, not a directly resolved transition.
+- reference: DOI:10.1126/science.177.4047.447
+  notes: Newman (1972). Primary PMC author manuscript read, including methods and
+    figure legends; PMID 5043148. Cinematic evidence is not calcium imaging.
+- reference: DOI:10.1111/j.1550-7408.2005.00048x
+  notes: Maloney et al. (2005), PMID 16014010. Publisher abstract read; full-text/PDF
+    access was not obtained. Localization at membranelle bases is additional centrin
+    distribution, not evidence that those bases are the myoneme system.
+- reference: DOI:10.1016/j.cub.2026.06.062
+  notes: Yan et al. (2026), PMID 42476139. Published abstract and bibliographic metadata
+    verified; Cell and ScienceDirect full-text routes were inaccessible. No unpublished
+    numeric values are attributed to this DOI.
+- reference: https://escholarship.org/content/qt48v7x2m3/qt48v7x2m3_noSplash_81e16ae35ca9c5219383afd7085febfb.pdf
+  notes: 'Connie Yan, Oral Regeneration in Stentor coeruleus: Cytoskeletal Patterning
+    and Cell Cycle Control. Chapter 2 localization and RNAi results and relevant methods
+    read. This dissertation is a separate source version, not the final journal article.'
+- reference: GO:0005622
+  notes: 'Verified intracellular anatomical structure: broad is-a parent.'
+- reference: GO:0030863
+  notes: 'Verified cortical cytoskeleton: encompassing framework, used as part_of.'
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the Stentor myoneme system from homonymous and neighboring assemblies.
+  rationale: A shared protein or historical name does not establish structural equivalence.
+  notes: Hidden- and ignored-inclusive repository searches found no existing target
+    record. QuickGO myoneme and Stentor searches returned no hits. GO:0031430 M band
+    denotes a sarcomeric structure and is not this identity. OTHER denotes a filament
+    system, not one filament. The genus-qualified label is supported by the single
+    verified species example; it does not assert occurrence throughout Stentor. Spirostomum
+    fishnets, peritrich body myonemes and stalk spasmonemes remain separate records.
+  evidence:
+  - reference: DOI:10.1083/jcb.57.3.704
+    notes: Describes the named myonemes separately from Km fibers.
+  - reference: GO:0031430
+    notes: Authority definition specifies the thick-filament midline of a sarcomere.
+  - reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=myoneme
+    notes: Authority identity search before minting.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: component_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact myonemal family mappings and native molecular composition.
+  rationale: Broad family matches and localization do not establish exact class equivalence,
+    paralogue completeness or copy number.
+  notes: Both components remain REVIEWED_LABEL_ONLY and assembly essentiality UNKNOWN.
+    Verify sequence-level mappings before adding UniProt examples; do not infer native
+    stoichiometry from predicted repeat counts.
+  evidence:
+  - reference: InterPro:IPR050145
+    notes: Authority family description includes non-centrin calcium-binding proteins.
+  - reference: InterPro:IPR052270
+    notes: Authority family description includes SFI1 and related proteins.
+  - reference: https://escholarship.org/content/qt48v7x2m3/qt48v7x2m3_noSplash_81e16ae35ca9c5219383afd7085febfb.pdf
+    notes: Chapter 2 distinguishes sequence predictions from localization and RNAi
+      experiments.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: neighboring_assemblies
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep other cortical assemblies out of the myoneme constituent list.
+  rationale: Adjacency or shared centrin labeling does not establish molecular membership.
+  notes: Km microtubules, nearby ER, basal bodies and membranelles are excluded as
+    constituents. The anterior centrin mesh is not equated with posterior myoneme
+    cables; Sfi1-positive lateral connections are included as associated architecture.
+    No unidentified linker or calcium pump is invented.
+  evidence:
+  - reference: DOI:10.1083/jcb.57.3.704
+    notes: Separate cortical fiber systems and adjacent membranes are described.
+  - reference: DOI:10.1111/j.1550-7408.2005.00048x
+    notes: Centrin-related labeling also occurs at membranelle bases.
+  - reference: https://escholarship.org/content/qt48v7x2m3/qt48v7x2m3_noSplash_81e16ae35ca9c5219383afd7085febfb.pdf
+    notes: Chapter 2, pp. 30-32 separates posterior Sfi1/centrin structures from the
+      anterior centrin mesh.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: mechanism_and_source_versions
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve native force generation and check detailed Sfi1 results against
+    accessible final methods.
+  rationale: Fixed-state morphology, localization and knockdown do not uniquely determine
+    a molecular motor cycle.
+  notes: The graph retains only published intervention outcomes. It does not claim
+    direct Sfi1-centrin binding, complete reconstitution, an ATP-free recovery cycle
+    or mediation of every phenotype by posterior cables. Selected dissertation evidence
+    is explicitly versioned; the linked 2025 preprint's full text was not obtained
+    through checked PMC, Europe PMC or bioRxiv routes. Do not treat either as the
+    final 2026 methods.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2026.06.062
+    notes: Published abstract is the available final-version evidence.
+  - reference: DOI:10.1083/jcb.57.3.704
+    notes: Fixed-state comparisons do not directly observe a molecular shortening
+      trajectory.
+  - reference: https://escholarship.org/content/qt48v7x2m3/qt48v7x2m3_noSplash_81e16ae35ca9c5219383afd7085febfb.pdf
+    notes: Chapter 2 uses prediction, imaging and RNAi as distinct kinds of evidence.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: review_provenance_and_presentation
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Use direct historical terminology provenance and expose the graph's evidence
+    limits in the generated page.
+  rationale: Same-agent review found that the M-band alias had an indirect source
+    assignment and that the renderer did not display the graph scope fields.
+  notes: Definition and synonym provenance now use Newman (1972), which explicitly
+    distinguishes microfilament M bands from microtubular Km fibers. Huang and Pitelka
+    remain the ultrastructure and image sources. The graph title and edge evidence
+    now expose its nonmechanistic status and lack of a demonstrated mediation step
+    without changing the shared renderer. This is agent review, not human sign-off.
+  evidence:
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2006
+    notes: Historical alias provenance finding.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2007
+    notes: Rendered graph scope finding.
+  - reference: DOI:10.1126/science.177.4047.447
+    notes: Primary Introduction and cinematic Results explicitly name M bands and
+      distinguish the two cortical fiber systems.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: pmc2108994_figure16
+  source: PMC
+  source_accession: PMC2108994.1 Figure 16
+  source_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108994.1/PMC2108994.1.pdf#page=17
+  licence: CC_BY_NC_SA_4_0
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  attribution: B. Huang and D. R. Pitelka, Figure 16, The contractile process in the
+    ciliate, Stentor coeruleus. I. The role of microtubules and filaments, Journal
+    of Cell Biology 57 (1973), doi:10.1083/jcb.57.3.704, via PubMed Central; CC BY-NC-SA
+    4.0. Link only; no repository copy or adaptation.
+  modality: TEM
+  caption: 'Figure 16: longitudinal section of a contracted Stentor coeruleus myoneme,
+    with a transverse-section inset. The source scale bar is 0.1 micrometer. This
+    is fixed-cell ultrastructure, not a molecular reconstruction.'
+  taxon_id: NCBITaxon:5963
+  taxon_label: Stentor coeruleus
+  reference: DOI:10.1083/jcb.57.3.704
+  retrieved_on: '2026-10-04'
+  notes: Inspected on PDF page 17 (printed page 720). PMC version-1 metadata supplies
+    the PDF and its verified MD5; verified JATS specifies CC BY-NC-SA 4.0. The JATS
+    has no individual figure objects, so the source link addresses the figure's PDF
+    page. Noncommercial/share-alike terms require link-only treatment under repository
+    policy.
