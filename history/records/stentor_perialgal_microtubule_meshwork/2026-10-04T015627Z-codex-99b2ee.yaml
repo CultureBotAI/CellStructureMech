@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/stentor_perialgal_microtubule_meshwork.yaml
+  slug: stentor_perialgal_microtubule_meshwork
+session:
+  id: 2026-10-04T015627Z-codex-99b2ee
+  timestamp: '2026-10-04T01:56:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - images
+  - discussions
+  summary: Add Stentor perialgal microtubule meshwork
+  details: Curated one PROPOSED host cytoskeletal meshwork from the 2025 Boudreau et al. primary
+    article. Read main-text JATS and inspected Figure 3; verified official XML/PDF hashes,
+    GO hierarchy, InterPro beta-tubulin family and ENA host species. Hidden- and ignored-inclusive
+    deduplication and GO searches found no exact prior record or term. Kept the positioning
+    function explicitly proposed, composition partial, essentiality UNKNOWN and causal graphs
+    absent because no mesh-specific perturbation establishes mechanism. Excluded algae, vacuoles
+    and longitudinal Km bundles from molecular membership. Linked Figure 3 without hosting;
+    documented explicit JATS CC BY 4.0 terms versus missing PMC license_code. Regenerate derived
+    artifacts and run all required gates before publication.
