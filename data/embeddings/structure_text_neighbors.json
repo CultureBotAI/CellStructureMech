@@ -2389,9 +2389,9 @@
           "cosine_similarity": 0.75987752
         },
         {
-          "identifier": "GO:0009424",
-          "label": "bacterial-type flagellum hook",
-          "cosine_similarity": 0.75155661
+          "identifier": "cellstructuremech:basal_body_d2_rod",
+          "label": "basal body D2-rod",
+          "cosine_similarity": 0.75185985
         }
       ]
     },
@@ -2436,6 +2436,11 @@
           "cosine_similarity": 0.83896685
         },
         {
+          "identifier": "cellstructuremech:basal_body_d2_rod",
+          "label": "basal body D2-rod",
+          "cosine_similarity": 0.83796698
+        },
+        {
           "identifier": "GO:0001535",
           "label": "radial spoke head",
           "cosine_similarity": 0.78086676
@@ -2449,11 +2454,37 @@
           "identifier": "GO:0001536",
           "label": "radial spoke stalk",
           "cosine_similarity": 0.76240293
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:basal_body_d2_rod",
+      "label": "basal body D2-rod",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:basal_body_cartwheel",
+          "label": "basal body cartwheel",
+          "cosine_similarity": 0.83796698
         },
         {
-          "identifier": "GO:0001534",
-          "label": "radial spoke",
-          "cosine_similarity": 0.75635616
+          "identifier": "cellstructuremech:basal_body_pinhead",
+          "label": "basal body pinhead",
+          "cosine_similarity": 0.8105563
+        },
+        {
+          "identifier": "cellstructuremech:nucleus_basal_body_connector",
+          "label": "nucleus-basal body connector",
+          "cosine_similarity": 0.78863524
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.78486392
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_triplet_base",
+          "label": "basal body triplet base",
+          "cosine_similarity": 0.75683125
         }
       ]
     },
@@ -2503,6 +2534,11 @@
           "cosine_similarity": 0.8129023
         },
         {
+          "identifier": "cellstructuremech:basal_body_d2_rod",
+          "label": "basal body D2-rod",
+          "cosine_similarity": 0.8105563
+        },
+        {
           "identifier": "cellstructuremech:nucleus_basal_body_connector",
           "label": "nucleus-basal body connector",
           "cosine_similarity": 0.80329546
@@ -2511,11 +2547,6 @@
           "identifier": "GO:0001536",
           "label": "radial spoke stalk",
           "cosine_similarity": 0.77858758
-        },
-        {
-          "identifier": "cellstructuremech:basal_body_c_tubule_hook",
-          "label": "basal body C-tubule hook",
-          "cosine_similarity": 0.77839376
         }
       ]
     },
@@ -2527,6 +2558,11 @@
           "identifier": "cellstructuremech:basal_body_pinhead",
           "label": "basal body pinhead",
           "cosine_similarity": 0.77227024
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_d2_rod",
+          "label": "basal body D2-rod",
+          "cosine_similarity": 0.75683125
         },
         {
           "identifier": "cellstructuremech:basal_body_a_c_linker",
@@ -2542,11 +2578,6 @@
           "identifier": "cellstructuremech:nucleus_basal_body_connector",
           "label": "nucleus-basal body connector",
           "cosine_similarity": 0.74672501
-        },
-        {
-          "identifier": "cellstructuremech:basal_body_inner_scaffold",
-          "label": "basal body inner scaffold",
-          "cosine_similarity": 0.72680181
         }
       ]
     },
@@ -4647,14 +4678,14 @@
           "cosine_similarity": 0.80329546
         },
         {
+          "identifier": "cellstructuremech:basal_body_d2_rod",
+          "label": "basal body D2-rod",
+          "cosine_similarity": 0.78863524
+        },
+        {
           "identifier": "cellstructuremech:basal_body_c_tubule_hook",
           "label": "basal body C-tubule hook",
           "cosine_similarity": 0.75987752
-        },
-        {
-          "identifier": "cellstructuremech:transition_zone_stellate_fiber_system",
-          "label": "transition zone stellate fiber system",
-          "cosine_similarity": 0.74717895
         }
       ]
     },

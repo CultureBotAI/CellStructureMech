@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_d2_rod.yaml
+  slug: basal_body_d2_rod
+session:
+  id: 2026-10-04T151416Z-codex-ab91ea
+  timestamp: '2026-10-04T15:14:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC5376648/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7667884/
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - part_of
+  - canonical_examples
+  - functions
+  - physical_properties
+  - images
+  - discussions
+  summary: Add the basal body D2-rod as a distinct cartwheel subassembly
+  details: Created via the validated scaffold and guarded writer after ignored-inclusive searches,
+    parsed identity checks and complete GO queries. Read checksum-verified Guichard 2017 and
+    Klena 2020 native morphology, reconstitution, preparation and measurement text; inspected
+    both Figure 1 and EV3 and native authority labels. Added two species examples, cartwheel
+    parthood, a radial hub-margin-to-D2 position rather than rod length, and unmodified CC
+    BY 4.0 Figure 1 with checksum-verified media. Preserved differing 2020 sampling counts
+    and declined unsupported native protein assignments, broad distribution, causal mechanics
+    and neighboring-map equivalence. The human 2024 CPAP model is explicitly not transferred
+    to microbes. Kind OTHER and the broad GO root retain unresolved molecular classification;
+    status remains PROPOSED. Generated artifacts and full validation accompany the PR. No
+    PR existed when this append-only entry was created.
