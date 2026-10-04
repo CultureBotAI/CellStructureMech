@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+  slug: basal_body_inner_scaffold
+session:
+  id: 2026-10-04T084332Z-codex-09a2cc
+  timestamp: '2026-10-04T08:43:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: GENERAL
+  outcome: changed
+  sections:
+  - history
+  summary: Correct the scaffold session actor attribution
+  details: 'Append-only correction to history/records/basal_body_inner_scaffold/2026-10-04T084050Z-claude-code-d1514c.yaml:
+    its actor name was inherited from the scaffolder default. The actual curator was Codex,
+    using the codex tool and GPT-5 model, not Claude Code. The earlier event remains immutable;
+    its biological curation description and tool/model fields are unchanged. This correction
+    changes provenance only, not record content.'

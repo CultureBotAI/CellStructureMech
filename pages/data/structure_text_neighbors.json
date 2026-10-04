@@ -2276,6 +2276,11 @@
       "label": "basal body A-C linker",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:basal_body_inner_scaffold",
+          "label": "basal body inner scaffold",
+          "cosine_similarity": 0.81928765
+        },
+        {
           "identifier": "GO:0097537",
           "label": "Y-shaped link",
           "cosine_similarity": 0.80262607
@@ -2294,11 +2299,37 @@
           "identifier": "GO:0097539",
           "label": "ciliary transition fiber",
           "cosine_similarity": 0.757908
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:basal_body_inner_scaffold",
+      "label": "basal body inner scaffold",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:basal_body_a_c_linker",
+          "label": "basal body A-C linker",
+          "cosine_similarity": 0.81928765
         },
         {
-          "identifier": "GO:1990717",
-          "label": "axonemal central bridge",
-          "cosine_similarity": 0.74290428
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.76897679
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.76295875
+        },
+        {
+          "identifier": "GO:0160114",
+          "label": "axonemal microtubule doublet outer junction",
+          "cosine_similarity": 0.76138064
+        },
+        {
+          "identifier": "GO:0160113",
+          "label": "axonemal microtubule doublet inner junction",
+          "cosine_similarity": 0.76101505
         }
       ]
     },
@@ -3195,9 +3226,9 @@
           "cosine_similarity": 0.75232431
         },
         {
-          "identifier": "GO:0160113",
-          "label": "axonemal microtubule doublet inner junction",
-          "cosine_similarity": 0.69607976
+          "identifier": "cellstructuremech:basal_body_inner_scaffold",
+          "label": "basal body inner scaffold",
+          "cosine_similarity": 0.70010843
         }
       ]
     },
@@ -3531,14 +3562,14 @@
           "cosine_similarity": 0.69396843
         },
         {
+          "identifier": "cellstructuremech:basal_body_inner_scaffold",
+          "label": "basal body inner scaffold",
+          "cosine_similarity": 0.692225
+        },
+        {
           "identifier": "GO:0160066",
           "label": "interphase SIN signaling complex",
           "cosine_similarity": 0.6796453
-        },
-        {
-          "identifier": "GO:1990334",
-          "label": "SIN/MEN two-component GAP complex",
-          "cosine_similarity": 0.67688466
         }
       ]
     },

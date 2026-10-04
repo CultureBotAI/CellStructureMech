@@ -1,0 +1,321 @@
+identifier: cellstructuremech:basal_body_inner_scaffold
+label: basal body inner scaffold
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A proteinaceous meshwork lining the lumen-facing surface of the central
+  basal-body wall and interconnecting neighboring triplet microtubules through multiple
+  attachment sites.
+definition_source: DOI:10.1083/jcb.202311104
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T08:39:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T08:40:37Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added bounded Tetrahymena inner-scaffold composition, structural-contact
+    graph, EMDB datasets and licensed density preview; preserved unknown molecular
+    assignments, assay scope and family-grounding uncertainty.
+  llm_assisted: true
+parent_structures:
+- GO:0140535
+part_of:
+- GO:0036064
+components:
+- component_id: poc1
+  label: POC1 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR050505 combines WDR55 and POC1 and is broader than
+    this class. IPR020472 is a WD40 repeat, not an exact POC1 family. The inspected
+    POC1 accession Q229Z6 and family searches do not justify either as exact identity.
+  gene_symbols:
+  - POC1
+  essentiality: UNKNOWN
+  role: Anchors the scaffold at the central-core A-B inner junction. Its WD40 domain
+    contacts an unidentified stem protein connecting toward the scaffold. This role
+    does not assign Poc1 to the central-core B-C junction.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+    notes: Figures 5D-E and 6C combine model fitting and loss of the corresponding
+      density in poc1 deletion material. Scaffold density is nearly absent in the
+      mutant; initial assembly versus subsequent maintenance is not separated.
+- component_id: fam161a
+  label: FAM161A family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The paper identifies a Tetrahymena Fam161A homolog at TTHERM_00052590.
+    Its unreviewed SB210 UniProt entry Q23CT1 matches IPR019579, Protein FAM161A/B,
+    and IPR051655, FAM161. These combined or broader families do not establish an
+    exact FAM161A-only grounding. No strain-paired protein example is inferred.
+  gene_symbols:
+  - FAM161A
+  essentiality: UNKNOWN
+  role: Inner-scaffold-associated constituent supported by endogenous-tag localization
+    at the basal-body core and reduced basal-body signal after Poc1 loss. Its exact
+    position within the scaffold and direct binding partners in Tetrahymena remain
+    unassigned; additional distal localization is present.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+    notes: Results and Figures 5A, 6A and S5 support the homolog assignment and localization.
+      Unlike Poc1, Fam161A has no assigned molecular cryo-ET density here. Human-protein
+      interaction results cited by the article are not direct evidence of a Tetrahymena
+      Poc1-Fam161A contact.
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Cryotomography of isolated wild-type and poc1-deletion basal bodies resolves
+    the central-core scaffold and its attachments. Endogenous Fam161A tagging and
+    fluorescence imaging provide complementary localization evidence. Methods list
+    B2086 and SB1969 backgrounds; this example is species-level, not an asserted strain-specific
+    pairing with SB210 reference sequences.
+  reference: DOI:10.1083/jcb.202311104
+functions:
+- function_id: intertriplet_cohesion
+  label: intertriplet cohesion
+  description: Provides luminal connections between neighboring basal-body triplet
+    microtubules in the central core. In the studied Tetrahymena material, backfitted
+    reconstructions support stacked rings rather than a universal helical geometry.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+    notes: Figure 5B-C and Figure S4E support the intertriplet meshwork and ring arrangement.
+      This structural function does not assert a measured force threshold or selective
+      scaffold-dependent rescue of basal-body shape.
+causal_graphs:
+- graph_id: poc1_scaffold_attachment
+  title: Poc1 anchors a luminal intertriplet scaffold
+  description: Structural contacts and a separately bounded localization dependency
+    in the Tetrahymena basal-body central core.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Contact edges describe fitted cryo-ET density, not temporal assembly
+    order. The fluorescence edge describes basal-body Fam161A signal, not a direct
+    Poc1-Fam161A interaction or an exclusively scaffold-specific measurement. Poc1
+    deletion affects multiple basal-body modules, so this graph does not attribute
+    the entire mechanical phenotype to scaffold loss.
+  nodes:
+  - node_id: poc1
+    label: POC1 family protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: poc1
+  - node_id: triplets
+    label: central-core basal-body triplet microtubules
+    node_type: STRUCTURE
+    description: Scaffold attachment substrate, not an axonemal microtubule identity.
+  - node_id: stem
+    label: unassigned A-B junction stem density
+    node_type: STATE
+    description: Observed barrel-shaped protein density adjacent to Poc1. Its molecular
+      identity is unknown; it is not an invented component family.
+  - node_id: scaffold
+    label: basal body inner scaffold
+    node_type: STRUCTURE
+  - node_id: fam161a_signal
+    label: basal-body Fam161A localization signal
+    node_type: STATE
+    description: Normalized fluorescence at basal bodies includes more than one Fam161A
+      localization pool; it is not a scaffold-only occupancy measurement.
+  edges:
+  - subject: poc1
+    predicate: binds at the A-B inner junction of
+    object: triplets
+    description: Poc1 WD40 density bridges the A01/B10 junction in the basal-body
+      core.
+    evidence:
+    - reference: DOI:10.1083/jcb.202311104
+      notes: Figure 5D-E and Video 4 support placement and mutant density loss.
+  - subject: poc1
+    predicate: contacts
+    object: stem
+    description: The lumen-exposed Poc1 WD40 domain contacts the unidentified stem.
+    evidence:
+    - reference: DOI:10.1083/jcb.202311104
+      notes: Figure 6C resolves contiguous densities; both disappear in poc1 deletion
+        material.
+  - subject: stem
+    predicate: connects toward
+    object: scaffold
+    description: The unassigned stem joins the elongated luminal scaffold density.
+    evidence:
+    - reference: DOI:10.1083/jcb.202311104
+      notes: Figures 5D and 6C and Results support the structural attachment model.
+  - subject: scaffold
+    predicate: interconnects
+    object: triplets
+    description: The luminal meshwork contacts triplets at A03 and A-B and B-C attachment
+      sites and connects laterally to neighboring repeats.
+    evidence:
+    - reference: DOI:10.1083/jcb.202311104
+      notes: Figure 5B-C and Results show multiple attachments and lateral connections.
+  - subject: poc1
+    predicate: supports normal levels of
+    object: fam161a_signal
+    description: Basal-body Fam161A fluorescence is reduced but not eliminated in
+      poc1 deletion cells at 30 degrees C relative to wild type.
+    evidence:
+    - reference: DOI:10.1083/jcb.202311104
+      notes: Figure 6A compares total-cell-normalized basal-body signal at 30 degrees
+        C (p = 0.0079). This is a perturbation dependency, not evidence of direct
+        binding or complete recruitment dependence.
+datasets:
+- accession: EMDB:EMD-42777
+  title: Wild-type basal-body central-core triplet microtubule
+  description: Subtomogram average of isolated Tetrahymena basal-body core triplets
+    and associated luminal densities; not a complete inner-scaffold molecular model.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-42777
+  publication: DOI:10.1083/jcb.202311104
+  notes: Released EMDB metadata, natural-source taxon 5911 and exact primary citation
+    verified. Only metadata and the representative PNG are retained, not volume maps.
+- accession: EMDB:EMD-42782
+  title: Wild-type central-core A-B inner junction
+  description: Focused reconstruction resolving the Poc1-containing scaffold attachment
+    region.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and focused subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-42782
+  publication: DOI:10.1083/jcb.202311104
+  notes: Released native EMDB metadata inspected; the reconstruction is a subregion,
+    not whole-scaffold identity.
+- accession: EMDB:EMD-42784
+  title: Poc1-knockout basal-body central-core triplet microtubule
+  description: Mutant core reconstruction for comparison with wild-type scaffold attachments.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-42784
+  publication: DOI:10.1083/jcb.202311104
+  notes: Released native EMDB metadata inspected. Poc1 loss is pleiotropic and is
+    not a selective ablation of only the inner scaffold.
+evidence:
+- reference: DOI:10.1083/jcb.202311104
+  notes: Ruehle et al. 2024. Official checksum-verified PMC11094743.1 JATS, core-region
+    Results and Discussion, relevant Methods, tables and figure captions read. Figures
+    5, 6 and S4 inspected visually. No verbatim snippets are asserted.
+- reference: PMID:38743010
+  notes: Bibliographic identity verified against the official PMC and EMDB primary
+    citations.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the inner scaffold from adjacent basal-body structures.
+  rationale: The imaged intertriplet meshwork is a physical entity, not a single protein
+    or the whole basal body.
+  notes: Hidden- and ignored-inclusive repository searches found no existing identity
+    record. Complete GO searches for scaffold, centriole and intertriplet found no
+    exact cellular-component term. GO:0140180 is a molecular function, not this structure.
+    GO:0140535 is a broader is-a parent; GO:0036064 is parthood. The proximal A-C
+    linker, cartwheel, pinhead and transition-zone Y-links are distinct. Inner junctions
+    form attachment interfaces, not scaffold synonyms.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+  - reference: GO:0140535
+  - reference: GO:0036064
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: exact_family_groundings
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact POC1 and FAM161A family groundings without substituting broader
+    families.
+  rationale: A combined family or domain is not an exact identity for a narrower component
+    class.
+  notes: Both components remain REVIEWED_LABEL_ONLY. The inspected Fam161A homolog
+    accession describes SB210, whereas endogenous tagging uses other backgrounds.
+    No strain-paired protein example or unverified A/B orthology is asserted.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: unresolved_scaffold_composition
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify the stem and other attachment proteins and locate Fam161A within
+    the scaffold.
+  rationale: The two named classes are not a complete composition or a molecular model
+    of every scaffold density.
+  notes: Fam161A localization supports scaffold association but does not identify
+    a particular density or direct Tetrahymena Poc1 contact. A03 and B-C attachment
+    identities remain unresolved. Poc1-knockout material loses most scaffold density,
+    including in complete-triplet subclasses, but a reduced A03 density remains. Assembly
+    requirements, stoichiometry and attachment redundancy need further experiments;
+    essentialities are UNKNOWN.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: exclude_neighboring_or_cross_species_assignments
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not import nearby proteins or human scaffold composition as demonstrated
+    Tetrahymena constituents.
+  rationale: Colocalization and evidence from another organism do not by themselves
+    establish the same molecular placement.
+  notes: Poc16/WDR90 colocalizes in the core but its predicted shape does not fit
+    the Poc1-containing A-B junction density; the paper does not assign it to this
+    scaffold. Human POC5 and Centrin2 assignments and human Poc1B-Fam161A binding
+    are not copied as Tetrahymena evidence. Microtubules are attachment substrates,
+    not additional scaffold protein families. Unidentified densities remain open questions
+    rather than invented components.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: mechanical_and_geometric_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep mechanical interpretations and geometric measurements within their
+    assay scope.
+  rationale: Poc1 loss affects multiple modules, and preparation-induced deformation
+    is not a direct in-cell force measurement.
+  notes: Stacked rings are supported in the studied Tetrahymena material, not a universal
+    scaffold geometry. Isolated mutant flattening can reflect grid preparation. High-temperature
+    phenotypes do not isolate a scaffold-only mechanism. The wild-type Fam161A temperature
+    comparison in Figure 6A has p = 0.0560 and is not treated as a significant decrease.
+    U-ExM scale bars refer to acquired expanded images, not expansion-corrected biological
+    size.
+  evidence:
+  - reference: DOI:10.1083/jcb.202311104
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: emdb_42777
+  file: emd_42777.png
+  file_sha256: a5176dd2788438b2806536518b065bebf2bf18825d5f5290e7ce6afe26294d6d
+  source: EMDB
+  source_accession: EMD-42777
+  source_url: https://www.ebi.ac.uk/emdb/EMD-42777
+  download_url: https://ftp.ebi.ac.uk/pub/databases/emdb/structures/EMD-42777/images/emd_42777.png
+  licence: PUBLIC_DOMAIN
+  licence_url: https://www.ebi.ac.uk/emdb/policies.html
+  attribution: Ruehle M, Li S, Agard DA, Pearson C; EMDB depositor representative
+    figure, without copyright restrictions.
+  modality: CRYO_ET
+  caption: Representative density rendering of a wild-type Tetrahymena central-core
+    basal-body triplet with associated luminal attachments. This is a subtomogram
+    average, not a raw micrograph, complete scaffold ring or identification of individual
+    proteins. No scale bar is shown.
+  taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  reference: DOI:10.1083/jcb.202311104
+  retrieved_on: '2026-10-04'
+  notes: Native EMDB taxon, citation and authors verified; PNG inspected and SHA-256
+    checked. EMDB policy section 3.1.2 requires representative figures free of copyright
+    restrictions, recorded using the repository adapter's PUBLIC_DOMAIN convention.
+    No EMPIAR link is inferred. The paper's separate CC BY-NC-SA figures are not hosted
+    here.

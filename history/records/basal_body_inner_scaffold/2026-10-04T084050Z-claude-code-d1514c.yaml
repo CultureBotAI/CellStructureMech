@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+  slug: basal_body_inner_scaffold
+session:
+  id: 2026-10-04T084050Z-claude-code-d1514c
+  timestamp: '2026-10-04T08:40:50Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - datasets
+  - discussions
+  - images
+  summary: Add evidence-backed basal-body inner scaffold
+  details: Curated the distinct Tetrahymena central-core luminal scaffold from DOI:10.1083/jcb.202311104.
+    Verified GO identity searches, official PMC XML, InterPro/UniProt family scope and EMDB
+    entries. Added two cautiously bounded protein classes, five supported edges, three structural
+    datasets and a checksum-verified EMDB density preview under the native representative-figure
+    policy. Unknown protein identities, family groundings, strain pairing and pleiotropic
+    knockout limitations remain explicit. Guarded scaffold and validated image-record writer
+    used; status remains PROPOSED. Full validation and a separate same-agent adversarial PR
+    review follow; no PR or review issue existed when this append-only event was created.
