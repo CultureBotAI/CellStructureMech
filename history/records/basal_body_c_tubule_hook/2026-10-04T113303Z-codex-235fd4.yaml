@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_c_tubule_hook.yaml
+  slug: basal_body_c_tubule_hook
+session:
+  id: 2026-10-04T113303Z-codex-235fd4
+  timestamp: '2026-10-04T11:33:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1038/emboj.2011.460
+  - https://doi.org/10.15252/embj.2020106249
+  - https://www.ebi.ac.uk/emdb/EMD-5252
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - functions
+  - physical_properties
+  - images
+  - datasets
+  - discussions
+  summary: Add the basal-body C-tubule hook as a bounded structural record
+  details: Created through new_record.py and a guarded safe_load/assert/record_curation_event/write_validated_structure
+    mutator. Hidden- and ignored-inclusive duplicate checks plus all-page GO searches preceded
+    minting. Inspected checksum-verified Li 2012 and Nazarov 2020 primary text and figures,
+    live GO/ENA/UO records and EMD-5252 metadata. The record covers the Chlamydomonas distal
+    exterior hook and 8-nm axial repeat, not inner junctions, the luminal filament or an established
+    C-stretch synonym. Components and causal graph remain unset; delta-tubulin and POC5 hypotheses
+    are explicitly declined as hook assignments. Original Figure 4 is linked only under its
+    exact CC BY-NC-ND 3.0 license. EMD-5252 is a whole-triplet dataset, not an isolated hook
+    map. Scaffold and curation passed the closed-schema guarded writer; full corpus gates,
+    embedding refresh and rendering follow before commit. Agent-authored PROPOSED status is
+    retained; no human sign-off. PR does not yet exist at append time.
