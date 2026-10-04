@@ -2276,6 +2276,11 @@
       "label": "basal body A-B inner junction",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:basal_body_b_c_inner_junction",
+          "label": "basal body B-C inner junction",
+          "cosine_similarity": 0.874672
+        },
+        {
           "identifier": "cellstructuremech:basal_body_inner_scaffold",
           "label": "basal body inner scaffold",
           "cosine_similarity": 0.85291
@@ -2294,11 +2299,6 @@
           "identifier": "cellstructuremech:basal_body_a_c_linker",
           "label": "basal body A-C linker",
           "cosine_similarity": 0.84236021
-        },
-        {
-          "identifier": "GO:0160110",
-          "label": "axonemal microtubule doublet inner sheath",
-          "cosine_similarity": 0.78318495
         }
       ]
     },
@@ -2306,6 +2306,11 @@
       "identifier": "cellstructuremech:basal_body_a_c_linker",
       "label": "basal body A-C linker",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:basal_body_b_c_inner_junction",
+          "label": "basal body B-C inner junction",
+          "cosine_similarity": 0.846274
+        },
         {
           "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
           "label": "basal body A-B inner junction",
@@ -2325,11 +2330,37 @@
           "identifier": "GO:0160113",
           "label": "axonemal microtubule doublet inner junction",
           "cosine_similarity": 0.78628986
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:basal_body_b_c_inner_junction",
+      "label": "basal body B-C inner junction",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
+          "label": "basal body A-B inner junction",
+          "cosine_similarity": 0.874672
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_a_c_linker",
+          "label": "basal body A-C linker",
+          "cosine_similarity": 0.846274
         },
         {
           "identifier": "GO:0160114",
           "label": "axonemal microtubule doublet outer junction",
-          "cosine_similarity": 0.7665553
+          "cosine_similarity": 0.83893126
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_inner_scaffold",
+          "label": "basal body inner scaffold",
+          "cosine_similarity": 0.83241799
+        },
+        {
+          "identifier": "GO:0160113",
+          "label": "axonemal microtubule doublet inner junction",
+          "cosine_similarity": 0.82987683
         }
       ]
     },
@@ -2341,6 +2372,11 @@
           "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
           "label": "basal body A-B inner junction",
           "cosine_similarity": 0.85291
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_b_c_inner_junction",
+          "label": "basal body B-C inner junction",
+          "cosine_similarity": 0.83241799
         },
         {
           "identifier": "cellstructuremech:basal_body_a_c_linker",
@@ -2356,11 +2392,6 @@
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.76295875
-        },
-        {
-          "identifier": "GO:0160114",
-          "label": "axonemal microtubule doublet outer junction",
-          "cosine_similarity": 0.76138064
         }
       ]
     },
