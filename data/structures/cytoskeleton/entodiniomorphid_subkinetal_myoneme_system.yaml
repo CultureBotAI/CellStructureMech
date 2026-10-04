@@ -1,0 +1,176 @@
+identifier: cellstructuremech:entodiniomorphid_subkinetal_myoneme_system
+label: Entodiniomorphid subkinetal myoneme system
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A system of calmyonemin-containing contractile filament bundles associated
+  with the bases of retractile apical ciliature in entodiniomorphid ciliates, characterized
+  in Eudiplodinium maggii and Entodinium bursa. This record denotes the subkinetal
+  bundles, not all other calmyonemin-positive arrays or the cilia themselves.
+definition_source: DOI:10.1016/S0248-4900(94)80014-6
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T02:31:37Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T02:33:01Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added primary-abstract-backed calmyonemin class, verified species and hierarchy,
+    retraction function, and explicit source-access, composition, causal and other-array
+    boundaries.
+  llm_assisted: true
+parent_structures:
+- GO:0005622
+part_of:
+- GO:0005856
+synonyms:
+- synonym_text: subkinetal myonemes
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.1016/S0248-4900(94)80014-6
+components:
+- component_id: calmyonemin
+  label: Calmyonemin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Named centrin-like, calcium-binding protein class; no exact source-neutral
+    family mapping established. InterPro calmyonemin search returned no entry. IPR050145
+    Centrin/CML-like also includes obelin and Arabidopsis CML proteins, so it is not
+    an exact mapping of this class.
+  essentiality: UNKNOWN
+  role: Antibody-localized myonemal constituents; molecular identity and native inventory
+    are not resolved to specific paralogues.
+  evidence:
+  - reference: DOI:10.1002/cm.970270208
+    notes: Primary abstract reports A69 immunoelectron localization to E. maggii myonemes
+      plus biochemical calcium-binding and centrin-similarity evidence. An essential
+      role in retraction is postulated, not experimentally established.
+  - reference: DOI:10.1016/S0248-4900(94)80014-6
+    notes: Publisher-deposited abstract reports anti-calmyonemin immunofluorescence
+      at E. bursa ciliature bases and describes subkinetal myoneme assembly. Other
+      antibody-positive arrays are not merged into this structure.
+canonical_examples:
+- taxon_id: NCBITaxon:47892
+  taxon_label: Eudiplodinium maggii
+  reference: DOI:10.1002/cm.970270208
+  note: Species used for myonemal protein characterization and immunoelectron localization,
+    as reported in the primary abstract. Identifier verified at ENA.
+- taxon_id: NCBITaxon:358014
+  taxon_label: Entodinium bursa
+  reference: DOI:10.1016/S0248-4900(94)80014-6
+  note: Species used for calmyonemin immunofluorescence and cell-cycle observations.
+    Abstract-level example; identifier verified at ENA. No clade-wide prevalence is
+    inferred.
+functions:
+- function_id: apical_ciliature_retraction
+  label: Apical ciliature retraction
+  description: The subkinetal contractile bundles support withdrawal of apical ciliature
+    during stress-associated retraction; the molecular force-generating mechanism
+    remains unresolved here.
+  evidence:
+  - reference: DOI:10.1002/cm.970270208
+    notes: Abstract places converging myonemes beneath retractile apical ciliary zones.
+  - reference: DOI:10.1016/S0248-4900(94)80014-6
+    notes: Abstract explicitly describes subkinetal myonemes as contractile bundles
+      powering ciliature retraction.
+evidence:
+- reference: DOI:10.1002/cm.970270208
+  notes: David and Vigues (1994), PMID 8162623. PubMed and publisher-deposited Crossref
+    abstracts read. Publisher PDF returned HTTP 403; full Methods and figures were
+    not inspected.
+- reference: DOI:10.1016/S0248-4900(94)80014-6
+  notes: Vigues and David (1994 print; 2012 online date in Crossref). DOI, authors
+    and publisher-deposited abstract verified at Crossref. Publisher PDF returned
+    HTTP 403; full Methods and figures were not inspected. A quoted Europe PMC DOI
+    lookup returned no hit, not proof that no PubMed record exists.
+- reference: GO:0005622
+  notes: 'Verified non-obsolete intracellular anatomical structure: broad is-a parent
+    only.'
+- reference: GO:0005856
+  notes: 'Verified non-obsolete cytoskeleton: encompassing framework, used as part_of.'
+discussions:
+- discussion_id: identity_and_granularity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Delimit one subkinetal bundle system rather than a generic myoneme or a
+    record per species.
+  rationale: Shared calcium-binding proteins do not make all ciliate contractile architectures
+    the same structure.
+  notes: Hidden- and ignored-inclusive whole-repository searches for target names,
+    species, component and source identifiers found no matches before scaffolding.
+    QuickGO subkinetal, myoneme and calmyonemin searches returned zero hits. The apical
+    ciliature-associated bundles differ from the extended Paramecium lattice, Spirostomum
+    fishnet, Stentor longitudinal M bands and peritrich body/stalk systems. The clade-qualified
+    label does not assert universal distribution or uniqueness to that clade.
+  evidence:
+  - reference: DOI:10.1002/cm.970270208
+    notes: Abstract identifies convergent bundles at retractile apical ciliary zones.
+  - reference: DOI:10.1016/S0248-4900(94)80014-6
+    notes: Abstract explicitly names subkinetal myonemes in the related ciliate study.
+  - reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=subkinetal
+    notes: Authority identity search before minting.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: calmyonemin_identity_and_inventory
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the native calmyonemin sequences, exact family grounding and other
+    bundle constituents.
+  rationale: Antibody cross-reactivity and EF-hand similarity do not establish an
+    exact taxon-neutral family mapping or complete composition.
+  notes: Keep the named component label-only. Do not substitute a generic EF-hand
+    domain, the broader Centrin/CML-like family or an organism-specific accession
+    as exact identity. No Sfi1 scaffold, actin, myosin, copy number or native paralogue
+    inventory is transferred from other ciliate systems.
+  evidence:
+  - reference: DOI:10.1002/cm.970270208
+    notes: Abstract characterizes a centrin-like calcium-binding protein, not a complete
+      native assembly.
+  - reference: InterPro:IPR050145
+    notes: Issuing-authority description includes caltractin, obelin and Arabidopsis
+      CML37/38; broader than the curated component.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: other_calmyonemin_arrays
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep other calmyonemin-positive arrays and their cell-cycle behavior outside
+    this record.
+  rationale: A shared immunoreactive protein does not establish anatomical identity
+    or a shared assembly pathway.
+  notes: Do not include the E. bursa circumciliary-lip, cytoproct or postoral endoplasmic
+    arrays as subkinetal bundles merely from antibody signal. The reported transient
+    resorption belongs to the endoplasmic array, not the parental subkinetal myonemes.
+    Cilia and basal bodies are associated structures, not molecular constituents of
+    the bundles.
+  evidence:
+  - reference: DOI:10.1016/S0248-4900(94)80014-6
+    notes: Abstract distinguishes multiple localization sites and specifies the endoplasmic
+      array as the exception among parental arrays during division.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: source_access_and_causal_tests
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Inspect full Methods and microscopy panels, then identify selective tests
+    of assembly and retraction requirements.
+  rationale: Readable primary abstracts support this bounded anatomical record but
+    not a resolved molecular contraction cycle.
+  notes: 'No figures, measurements or specific stimulation protocols are curated without
+    source inspection. Essentiality stays UNKNOWN: the authors'' proposed essential
+    retraction role is not a demonstrated assembly requirement. No causal graph is
+    asserted; calcium-dependent electrophoretic or chromatographic changes of a protein
+    do not establish a native bundle contraction mechanism, ATP dependence or recovery
+    cycle.'
+  evidence:
+  - reference: DOI:10.1002/cm.970270208
+    notes: Primary abstract read; publisher full-text route inaccessible in this session.
+  - reference: DOI:10.1016/S0248-4900(94)80014-6
+    notes: Publisher-deposited primary abstract read; publisher full-text route inaccessible
+      in this session.
+  posed_by: codex
+  posed_date: '2026-10-04'

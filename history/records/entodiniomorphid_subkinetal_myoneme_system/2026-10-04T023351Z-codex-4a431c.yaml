@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/entodiniomorphid_subkinetal_myoneme_system.yaml
+  slug: entodiniomorphid_subkinetal_myoneme_system
+session:
+  id: 2026-10-04T023351Z-codex-4a431c
+  timestamp: '2026-10-04T02:33:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - discussions
+  summary: Add entodiniomorphid subkinetal myoneme system
+  details: Added one PROPOSED apical ciliature-associated contractile bundle system across
+    Eudiplodinium maggii and Entodinium bursa, not one record per species or all calmyonemin-positive
+    arrays. Read PubMed and publisher-deposited Crossref primary abstracts; checked publisher
+    PDFs returned HTTP 403, and full Methods and figures were not inspected. Verified exact
+    species at ENA, broad GO hierarchy and no exact GO name matches. Hidden- and ignored-inclusive
+    whole-repository identity, component, source and species searches found no prior target.
+    Kept calmyonemin label-only after exact-name InterPro search and inspection of the broader
+    Centrin/CML-like family. Retained UNKNOWN essentiality and omitted unsupported causal
+    graphs, images and measurements. Documented source-access, molecular-inventory and other-array
+    boundaries. Regenerate derived artifacts and run all required gates before publication.
