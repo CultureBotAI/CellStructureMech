@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+  slug: cullin_e_ubiquitin_ligase_complex
+session:
+  id: 2026-10-04T185706Z-codex-d96391
+  timestamp: '2026-10-04T18:57:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - datasets
+  - discussions
+  summary: Add evidence-bounded Cullin-E ubiquitin ligase complex
+  details: Created a PROPOSED Cullin-E record from DOI:10.1038/s41598-025-32077-9, current
+    checksum-verified PMC12816148.1, Table 1, original Figures 2/6/7 and read-only Supplementary
+    Table S3 CULE rows. Verified GO:0031461 as a broader parent, native NCBI species 5691,
+    InterPro candidates and PRIDE PXD042022. Complete source queries and ignored/hidden-inclusive
+    repository searches plus parsed identities across 875 existing records found no exact
+    duplicate. Four constituent classes are label-only with bounded family-search rationale;
+    co-isolation is not stoichiometry or direct catalysis. Retained the measured organelle-division
+    phenotype and five intervention-output edges as NONMECHANISTIC. Older DOI:10.1371/journal.ppat.1006146
+    assigns WDR1/PLK to TbCUL4/Tb927.3.1290, not the current Cullin-E locus Tb927.11.11430;
+    excluded that misattributed mechanism. Preserved stage/control/locus discrepancies and
+    unresolved assembly imaging. No raw dataset redistribution or source-queue adoption. Structured
+    iModulonDB dataset listing has no matching Trypanosoma organism. Record written through
+    guarded curation_event and validated writer, then byte-stable re-emission checked; generated
+    artifacts and full gates follow before commit. PR and separate review will link this immutable
+    creation history once their URLs exist.
