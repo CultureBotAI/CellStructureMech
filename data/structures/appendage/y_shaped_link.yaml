@@ -1,0 +1,235 @@
+identifier: GO:0097537
+label: Y-shaped link
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A Y-shaped protein complex in the ciliary transition zone that connects
+  the cilium axoneme to the ciliary necklace. Both protein sorting and protein gating
+  occur at this point in the cilium allowing some, but not all proteins to enter the
+  cilium.
+definition_source: GO:0097537
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T06:09:30Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T06:11:13Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact GO synonymy and transition-zone parthood, verified CEP290 family,
+    Chlamydomonas canonical example, bounded physical tethering function and mechanism,
+    link-only primary microscopy and explicit composition, accession and gating uncertainties.
+  llm_assisted: true
+synonyms:
+- synonym_text: membrane-microtubule complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097537
+- synonym_text: Y-link
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097537
+- synonym_text: Y-link structure
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097537
+- synonym_text: Y-shaped assemblage
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097537
+- synonym_text: Y-shaped fiber
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097537
+- synonym_text: Y-shaped fibre
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097537
+- synonym_text: Y-shaped linker
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097537
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0035869
+components:
+- component_id: cep290
+  label: Centrosomal protein of 290kDa
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR026201
+  grounding_notes: 'The InterPro authority identifies IPR026201 as the CEP290 protein
+    family, not the whole Y-link complex. No organism-specific accession is asserted:
+    current Chlamydomonas UniProt search results require reconciliation with the experimentally
+    studied CEP290/POC3 sequence.'
+  gene_symbols:
+  - CEP290
+  - POC3
+  essentiality: UNKNOWN
+  role: A linker-associated constituent supporting normal microtubule-membrane connector
+    architecture in Chlamydomonas. It is not the entire linker; rare Y-connectors
+    persist in the cep290 null mutant, so absolute assembly essentiality is not asserted.
+  evidence:
+  - reference: DOI:10.1083/jcb.201006105
+    notes: Immunogold localization in Figure 4 places the middle region of CEP290
+      on or near Y-connectors; Figure 3 shows most connectors absent or abnormal in
+      the deletion mutant. The authors explicitly report rare remaining Y-connectors
+      and infer additional constituents.
+  - reference: InterPro:IPR026201
+    notes: Live InterPro metadata verifies the family type and the canonical label
+      Centrosomal protein of 290kDa; it does not supply linker stoichiometry.
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Wild-type, cep290 deletion and complemented cells were examined. Transition-zone
+    cross sections resolve peripheral Y-connectors; immunogold microscopy and detergent-extraction
+    assays link CEP290 to connector architecture and membrane attachment.
+  reference: DOI:10.1083/jcb.201006105
+functions:
+- function_id: transition_zone_membrane_tethering
+  label: transition-zone membrane tethering
+  description: Microtubule-membrane connectors physically couple the transition-zone
+    doublets to the surrounding ciliary membrane. The Chlamydomonas evidence concerns
+    the connector ensemble, not purified Y-links acting alone.
+  evidence:
+  - reference: DOI:10.1083/jcb.201006105
+    notes: Figure 3 compares connector defects with greater and more variable membrane
+      spacing and loss of detergent-resistant membrane attachment in cep290 cells.
+causal_graphs:
+- graph_id: cep290_dependent_connector_tethering
+  title: CEP290-supported connector architecture and membrane tethering
+  description: A bounded physical mechanism supported by Chlamydomonas localization,
+    mutant ultrastructure and membrane-extraction experiments.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: The experiment perturbs CEP290 and affects both Y-connectors and longitudinal
+    wedge densities. It supports connector-mediated tethering, not a Y-link-only sufficiency
+    assay, direct CEP290-lipid binding, an absolute requirement for every linker,
+    or a molecular gating pathway.
+  nodes:
+  - node_id: cep290
+    label: Centrosomal protein of 290kDa
+    node_type: GENE_OR_PROTEIN
+    component_ref: cep290
+    grounding: InterPro:IPR026201
+  - node_id: y_link
+    label: Y-shaped link
+    node_type: STRUCTURE
+    grounding: GO:0097537
+  - node_id: membrane_tethering
+    label: transition-zone membrane tethering to microtubule doublets
+    node_type: STATE
+  edges:
+  - subject: cep290
+    predicate: supports normal architecture of
+    object: y_link
+    description: In Chlamydomonas, CEP290 supports normal connector architecture;
+      its loss removes most Y-links but does not eliminate every connector.
+    evidence:
+    - reference: DOI:10.1083/jcb.201006105
+      notes: Figures 3C-D and 4 combine mutant cross sections with immunogold placement.
+        Rare surviving Y-connectors limit the claim to normal architecture rather
+        than absolute assembly dependence.
+  - subject: y_link
+    predicate: contributes to
+    object: membrane_tethering
+    description: Y-links participate in the connector ensemble that tethers the transition-zone
+      membrane to doublet microtubules.
+    evidence:
+    - reference: DOI:10.1083/jcb.201006105
+      notes: Figure 3 shows cross-sectional links between doublets and membrane; connector
+        disruption accompanies increased membrane spacing and loss of membrane retention
+        after detergent extraction. Wedge densities are also affected, so this is
+        not Y-link-specific sufficiency.
+images:
+- image_id: craige_2010_connector_ultrastructure
+  source: PMC
+  source_accession: PMC2935561.1:fig3
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2935561/figure/fig3/
+  licence: OTHER
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  attribution: Branch Craige, Che-Chia Tsao, Dennis R. Diener, Yuqing Hou, Karl-Ferdinand
+    Lechtreck, Joel L. Rosenbaum and George B. Witman; 2010, CC BY-NC-SA 3.0, via
+    PubMed Central.
+  modality: TEM
+  caption: Wild-type and cep290 Chlamydomonas transition zones. Panels C-D compare
+    Y-connectors in cross section; A-B show longitudinal wedge densities; E-G show
+    mutant flagellar defects, H compares membrane spacing, and I-J compare detergent-extracted
+    transition zones. Scale bars vary by panel; the C-D insets are image averages,
+    not individual linkers.
+  taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  reference: DOI:10.1083/jcb.201006105
+  retrieved_on: '2026-10-04'
+  notes: Link-only. PMC OA metadata gives CC BY-NC-SA and the JATS permissions specify
+    version 3.0; OTHER preserves that exact licence because the schema has no CC_BY_NC_SA_3_0
+    value. The JATS and figure MD5 checksums were verified against PMC2935561.1 metadata,
+    and all figure panels were visually inspected. No image file is hosted in this
+    repository.
+evidence:
+- reference: GO:0097537
+  notes: Exact GO identity, definition and related synonyms for the named linker subassembly.
+- reference: DOI:10.1083/jcb.201006105
+  notes: Craige et al. 2010, CEP290 tethers flagellar transition zone microtubules
+    to the membrane and regulates flagellar protein content. Primary Results, Discussion,
+    methods and Figures 3-4 inspected from official PMC OA JATS and checksum-verified
+    figures.
+- reference: PMID:20819941
+  notes: PubMed bibliographic identity for the Craige et al. primary study.
+discussions:
+- discussion_id: linker_not_transition_zone_or_transition_fiber
+  prompt: Distinguish the Y-shaped linker subassembly from adjacent ciliary structures.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: The existing ciliary-transition-zone record already mentions Y-linkers
+    as an architectural component, but denotes the whole region. GO:0097537 denotes
+    the discrete linker complex and is linked here by part_of, not treated as a synonym
+    of that region.
+  notes: 'This record excludes GO:0097539 external transition fibers, the luminal
+    stellate-fiber system and the central cylinder. Y-links and longitudinal wedge
+    densities are not declared exact synonyms: the primary study explicitly leaves
+    their equivalence unresolved.'
+  evidence:
+  - reference: GO:0097537
+    notes: Exact linker subassembly identity.
+  - reference: GO:0035869
+    notes: Enclosing transition-zone region.
+  - reference: GO:0097539
+    notes: Distinct external basal-body-to-membrane transition fibers.
+  - reference: DOI:10.1083/jcb.201006105
+    notes: The Discussion distinguishes known Y-link morphology from unresolved wedge
+      equivalence.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: complete_linker_inventory_and_protein_examples
+  prompt: Resolve additional linker constituents and the exact experimental CEP290
+    protein accession.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#cep290
+  rationale: Residual Y-links in the cep290 null mutant show that CEP290 is not the
+    complete molecular inventory. UniProt text searches yield multiple unreviewed
+    Chlamydomonas models without the experimental paper citation; a family match alone
+    does not establish the exact protein example.
+  notes: Stoichiometry, organism-specific protein examples and additional constituents
+    remain unset. The verified InterPro family is distinct from the identity of the
+    whole linker complex.
+  evidence:
+  - reference: DOI:10.1083/jcb.201006105
+    notes: The authors observe rare Y-connectors without CEP290 and infer other constituents.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: separate_linker_tethering_from_gating_hypotheses
+  prompt: Resolve which linker-specific interactions control ciliary protein entry
+    or retention.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: CEP290 loss changes ciliary protein composition, but it also disrupts
+    multiple connector features. Those phenotypes do not isolate the Y-link contribution
+    or demonstrate a particular binding or transport reaction.
+  notes: The GO definition retains regional sorting/gating context; the curated function
+    and mechanistic graph claim only physical tethering. No broad taxonomic prevalence
+    is inferred from this one algal model.
+  evidence:
+  - reference: DOI:10.1083/jcb.201006105
+    notes: Protein-composition results are direct observations; proposed gating explanations
+      remain alternatives.
+  posed_by: codex
+  posed_date: '2026-10-04'

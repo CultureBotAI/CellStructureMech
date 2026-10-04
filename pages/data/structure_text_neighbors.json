@@ -772,14 +772,14 @@
           "cosine_similarity": 0.73918838
         },
         {
+          "identifier": "GO:0097537",
+          "label": "Y-shaped link",
+          "cosine_similarity": 0.73300732
+        },
+        {
           "identifier": "GO:0160113",
           "label": "axonemal microtubule doublet inner junction",
           "cosine_similarity": 0.69658471
-        },
-        {
-          "identifier": "GO:0035253",
-          "label": "ciliary rootlet",
-          "cosine_similarity": 0.69646197
         }
       ]
     },
@@ -994,9 +994,9 @@
           "cosine_similarity": 0.72210111
         },
         {
-          "identifier": "GO:0031317",
-          "label": "tripartite ATP-independent periplasmic transporter complex",
-          "cosine_similarity": 0.71288166
+          "identifier": "GO:0097537",
+          "label": "Y-shaped link",
+          "cosine_similarity": 0.71813313
         }
       ]
     },
@@ -1555,6 +1555,37 @@
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.73606456
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0097537",
+      "label": "Y-shaped link",
+      "neighbors": [
+        {
+          "identifier": "GO:0160113",
+          "label": "axonemal microtubule doublet inner junction",
+          "cosine_similarity": 0.7990145
+        },
+        {
+          "identifier": "GO:0005931",
+          "label": "axonemal nexin link",
+          "cosine_similarity": 0.77524358
+        },
+        {
+          "identifier": "GO:0160114",
+          "label": "axonemal microtubule doublet outer junction",
+          "cosine_similarity": 0.75657879
+        },
+        {
+          "identifier": "GO:0160110",
+          "label": "axonemal microtubule doublet inner sheath",
+          "cosine_similarity": 0.73867823
+        },
+        {
+          "identifier": "GO:0035869",
+          "label": "ciliary transition zone",
+          "cosine_similarity": 0.73300732
         }
       ]
     },

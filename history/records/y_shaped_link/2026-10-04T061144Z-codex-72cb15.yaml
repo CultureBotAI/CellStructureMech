@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/y_shaped_link.yaml
+  slug: y_shaped_link
+session:
+  id: 2026-10-04T061144Z-codex-72cb15
+  timestamp: '2026-10-04T06:11:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - images
+  - discussions
+  summary: Add evidence-backed Y-shaped link record
+  details: Added GO:0097537 as a distinct transition-zone subassembly using the exact GO term
+    and related synonyms. Primary DOI:10.1083/jcb.201006105 and PMID:20819941 support Chlamydomonas
+    connector architecture and membrane tethering, with verified InterPro:IPR026201 CEP290
+    family. Kept residual-linker observations and unresolved wedge equivalence explicit, omitted
+    ambiguous UniProt models and broad prevalence, and linked Figure 3 under its exact CC
+    BY-NC-SA 3.0 licence without hosting. Hidden and ignored files were included in duplicate
+    searches. Record remains PROPOSED.
