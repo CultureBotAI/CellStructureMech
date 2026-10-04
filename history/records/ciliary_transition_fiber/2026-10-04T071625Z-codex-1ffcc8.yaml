@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/ciliary_transition_fiber.yaml
+  slug: ciliary_transition_fiber
+session:
+  id: 2026-10-04T071625Z-codex-1ffcc8
+  timestamp: '2026-10-04T07:16:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2018
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2017
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Correct TFK1 interaction assay scope after adversarial review
+  details: 'Addressed issue #2018 from the separate same-agent review of PR #2017. Re-read
+    DOI:10.1242/jcs.259893 accepted-manuscript pages 13-14 and Figure 5: CC1/full-length binding
+    is demonstrated by yeast two-hybrid, whereas recruitment through endogenous TFK1 in trypanosomes
+    remains a proposed explanation. Corrected only the discussion evidence note, preserving
+    the bounded graph and PROPOSED status. Guarded writer validates before write; full QC
+    and affected generated artifacts are rerun before commit. Appends to, without modifying,
+    history record 2026-10-04T065753Z-codex-1e3045.'
