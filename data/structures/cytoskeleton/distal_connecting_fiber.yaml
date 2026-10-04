@@ -1,0 +1,363 @@
+identifier: cellstructuremech:distal_connecting_fiber
+label: distal connecting fiber
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A centrin-containing fibrous bridge connecting the distal regions of paired
+  flagellar basal bodies in green algae. It is distinct from proximal connecting fibers
+  and nucleus-directed rootlets; cross-striation differs between the documented examples.
+definition_source: DOI:10.1083/jcb.105.2.903
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T04:19:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T04:20:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added distinct distal-fiber identity, centrin composition and verified
+    protein example, two canonical species, bounded linkage/reorientation functions,
+    an extracted-apparatus graph, link-only micrograph and explicit mutant, synchronization
+    and contractile-cycle limitations.
+  llm_assisted: true
+parent_structures:
+- GO:0043232
+part_of:
+- GO:0005856
+synonyms:
+- synonym_text: distal basal body connecting fiber
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1083/jcb.105.2.903
+- synonym_text: distal striated fiber
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1083/jcb.119.6.1613
+- synonym_text: DSF
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1083/jcb.119.6.1613
+- synonym_text: distal fiber
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1002/(SICI)1097-0169(1998)41:1<49::AID-CM4>3.0.CO;2-A
+components:
+- component_id: distal_fiber_centrins
+  label: Distal connecting fiber centrins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Calcium-binding constituents of the distal fiber. Centrin sequence substitutions
+    affect normal distal-fiber assembly in the tested Chlamydomonas strains; this
+    is not a universal essentiality assertion.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Reviewed IPR050145 includes non-centrin CML and obelin proteins;
+    IPR050230 is an even broader calcium-binding protein family. Neither denotes the
+    distal-fiber centrin class exactly. EF-hand domains are not family identities.
+  protein_examples:
+  - uniprot_id: UniProtKB:P05434
+    protein_label: Caltractin
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-04'
+    role: Species-level centrin example, not a distal-fiber-specific paralogue or
+      an entire fiber inventory.
+    evidence:
+    - reference: UniProtKB:P05434
+      notes: Verified reviewed entry, recommended name, organism and sequence-source
+        references; no primary gene symbol is supplied.
+    - reference: DOI:10.1083/jcb.119.6.1613
+      notes: The centrin/caltractin sequence and vfl2 linkage identify the studied
+        protein; Methods use pCaBP4 and the sequence publications also cited by UniProt.
+        Mutants and intragenic revertants distinguish distal-fiber assembly phenotypes.
+  evidence:
+  - reference: DOI:10.1083/jcb.105.2.903
+    notes: Anti-20-kDa-protein immunogold labels the distal connecting fiber of Spermatozopsis
+      similis; apparatus immunoblots detect the antigen. No exact Spermatozopsis sequence
+      is assigned.
+  - reference: DOI:10.1083/jcb.119.6.1613
+    notes: E101K centrin and position-101 revertants alter normal distal striated
+      fiber formation. Class-2 revertants retain abnormal half fibers despite normal
+      nucleus-basal body connectors and transition-region structures.
+canonical_examples:
+- taxon_id: NCBITaxon:3192
+  taxon_label: Spermatozopsis similis
+  reference: DOI:10.1083/jcb.105.2.903
+  note: SAG 1.85 is explicitly used in Methods and was verified against the culture
+    collection. The distal fiber is unstriated in this example; extracted-apparatus
+    reorientation and immunogold localization were studied.
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  reference: DOI:10.1083/jcb.119.6.1613
+  note: Wild-type, vfl2 and intragenic-revertant comparisons resolve the cross-striated
+    distal fiber from other centrin assemblies. No collection accession is inferred
+    from the mutant names.
+functions:
+- function_id: interbasal_body_linkage
+  label: interbasal-body linkage
+  description: The distal fiber forms a physical bridge between paired flagellar basal
+    bodies, separately from the proximal fibers and nucleus-directed connectors.
+  evidence:
+  - reference: DOI:10.1083/jcb.105.2.903
+    notes: Ultrastructure and Figure 9 distinguish the interbasal bridge from adjacent
+      root structures.
+  - reference: DOI:10.1083/jcb.119.6.1613
+    notes: Distal half-fiber assembly and continuity between the basal bodies are
+      assessed separately from other centrin structures.
+- function_id: calcium_dependent_reorientation
+  label: calcium-dependent basal-body reorientation
+  description: Distal-fiber contraction reorients paired basal bodies in Spermatozopsis
+    similis. Chlamydomonas preparations show smaller, reversible calcium-dependent
+    angle changes; the two experimental responses are not treated as identical.
+  evidence:
+  - reference: DOI:10.1083/jcb.105.2.903
+    notes: Reorientation persists when beating is blocked or axonemes are mechanically
+      removed, supporting a separate contractile apparatus.
+  - reference: DOI:10.1002/(SICI)1097-0169(1998)41:1<49::AID-CM4>3.0.CO;2-A
+    notes: Primary abstract reports calcium-dependent interaxonemal-angle changes
+      in pf18 and pf18fa1 preparations and lack of that response in pf18vfl2. Full
+      paper unread; vfl2 is not a selective distal-fiber perturbation.
+causal_graphs:
+- graph_id: spermatozopsis_distal_fiber_reorientation
+  title: Calcium-driven distal-fiber contraction in extracted Spermatozopsis apparatuses
+  description: A physical contractile mechanism, with constituent and geometry context.
+    Elevated calcium condenses the fiber and reorients basal bodies; attached axonemes
+    change their relative orientation. This does not require ongoing beating and does
+    not establish the molecular force-generating cycle.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Restricted to Spermatozopsis similis extracted preparations. No direct
+    centrin conformational reaction, kinase, light-to-calcium pathway, universal ATP-free
+    cycle, or reverse edge is asserted. Low calcium failed to restore antiparallel
+    basal bodies in this preparation.
+  nodes:
+  - node_id: centrins
+    label: Distal connecting fiber centrins
+    node_type: GENE_OR_PROTEIN
+    component_ref: distal_fiber_centrins
+  - node_id: distal_fiber
+    label: Spermatozopsis distal connecting fiber
+    node_type: STRUCTURE
+  - node_id: calcium
+    label: Elevated calcium in the extracted-apparatus assay
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: contraction
+    label: Distal-fiber contraction
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: basal_body_reorientation
+    label: Basal bodies reoriented toward parallel
+    node_type: CELLULAR_LOCALIZATION
+  - node_id: axoneme_orientation
+    label: Parallel projection of attached axonemes
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: centrins
+    predicate: are constituents of
+    object: distal_fiber
+    description: Immunogold localizes the centrin-related antigen to the distal fiber;
+      this edge records composition, not a reconstructed molecular motor.
+    evidence:
+    - reference: DOI:10.1083/jcb.105.2.903
+      notes: Figure 9 and immunoblot results; no complete molecular inventory or stoichiometry
+        is implied.
+  - subject: distal_fiber
+    predicate: undergoes calcium-induced
+    object: contraction
+    description: The connecting fiber is more condensed in calcium-treated preparations.
+    evidence:
+    - reference: DOI:10.1083/jcb.105.2.903
+      notes: Figure 9 contrasts expanded and condensed fibers in the extracted apparatus.
+  - subject: calcium
+    predicate: triggers
+    object: contraction
+    description: Raising free calcium elicits contraction in the tested preparations,
+      including those without ATP added to the reactivation solution.
+    evidence:
+    - reference: DOI:10.1083/jcb.105.2.903
+      notes: Results, Figures 3-5 and 9; lack of added ATP is not proof of an ATP-independent
+        complete contraction-extension cycle.
+  - subject: contraction
+    predicate: reorients
+    object: basal_body_reorientation
+    description: The physical bridge reorients the paired basal bodies even when axonemal
+      beating is inhibited or axonemes have been amputated.
+    evidence:
+    - reference: DOI:10.1083/jcb.105.2.903
+      notes: Orthovanadate, DTT/ATP-omission and mechanical-amputation experiments
+        support separation from axonemal motility.
+  - subject: basal_body_reorientation
+    predicate: repositions attached axonemes into
+    object: axoneme_orientation
+    description: When axonemes remain attached, their relative projection follows
+      basal-body reorientation; waveform conversion is a separate calcium response.
+    evidence:
+    - reference: DOI:10.1083/jcb.105.2.903
+      notes: Figures 3-5 and Results distinguish axonemal geometry from beating. No
+        requirement for the fiber to initiate flagellar beating is asserted.
+evidence:
+- reference: DOI:10.1083/jcb.105.2.903
+  notes: Full ten-page primary PDF text read; Figure 9 visually inspected. Identity,
+    fiber-localized antigen and calcium-triggered mechanical response.
+- reference: DOI:10.1083/jcb.119.6.1613
+  notes: Primary Methods, mutant/revertant Results and Table II inspected; normal
+    distal-fiber assembly is separable from other centrin assemblies.
+- reference: DOI:10.1083/jcb.98.3.818
+  notes: Full seven-page primary PDF text read. Pleiotropic vfl3 comparisons preserve
+    the study-specific negative results on waveform, synchrony and shock response.
+- reference: DOI:10.1002/(SICI)1097-0169(1998)41:1<49::AID-CM4>3.0.CO;2-A
+  notes: Complete primary abstract read through Europe PMC; full paper and figures
+    unread. Chlamydomonas angle reversibility is not transferred to Spermatozopsis.
+- reference: DOI:10.1073/pnas.1518527113
+  notes: Primary abstract and significance statement read through NCBI EFetch. Full
+    text unavailable through attempted PMC web, Europe PMC and current PMC OA routes;
+    later coupling evidence remains abstract-bounded.
+- reference: GO:0043232
+  notes: Verified intracellular membraneless organelle as a broad is-a parent, not
+    exact identity.
+- reference: GO:0005856
+  notes: Verified cytoskeleton term for parthood, not equivalence to the whole framework.
+- reference: https://sagdb.uni-goettingen.de/detailedList.php?str_number=1.85
+  notes: Authority confirms SAG 1.85 as Spermatozopsis similis; strain label agrees
+    with the 1987 Methods.
+discussions:
+- discussion_id: distal_fiber_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the interbasal distal fiber separate from proximal fibers and nucleus-directed
+    rootlets.
+  rationale: Shared centrin and adjacent attachment sites do not establish equivalent
+    structures.
+  notes: Ignored- and hidden-inclusive searches found only prior mentions, not an
+    exact record. GO:0035253 is nucleus-directed; GO:0120118 is an interflagellar
+    membrane junction; neither is exact identity. The Spermatozopsis fiber is unstriated,
+    so distal striated fiber and DSF are narrow synonyms. OTHER denotes the organized
+    fiber bundle, not one protein or filament.
+  evidence:
+  - reference: DOI:10.1083/jcb.105.2.903
+    notes: Results distinguish one distal, two proximal connecting fibers and separate
+      rootlets; Figure 9F is the nucleus connector, not the distal fiber.
+  - reference: DOI:10.1083/jcb.119.6.1613
+    notes: NBBC, DSF and transition-region structures are distinguished in Table II.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: molecular_inventory
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact centrin-family grounding and additional distal-fiber constituents.
+  rationale: Immunoreactivity and one verified species sequence do not establish a
+    complete cross-taxon inventory.
+  notes: IPR050145 and IPR050230 are broader than this component class. Do not import
+    SF-assemblin from system-I root fibers, or proposed whole-centrin-scaffold proteins
+    into this bridge without direct evidence. The approximately 3% protein estimate
+    in the 1987 gel analysis is for the isolated apparatus, not distal-fiber stoichiometry.
+    Essentiality remains unknown across the record's scope.
+  evidence:
+  - reference: InterPro:IPR050145
+    notes: Authority includes CML and obelin proteins.
+  - reference: InterPro:IPR050230
+    notes: Authority describes multiple calcium-binding regulatory-protein classes.
+  - reference: DOI:10.1083/jcb.105.2.903
+    notes: Distinct antigen localization and whole-apparatus biochemical sampling.
+  - reference: DOI:10.1083/jcb.119.6.1613
+    notes: Centrin sequence substitutions affect normal distal-fiber assembly.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: contractile_cycle_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve native force generation and species-specific reextension mechanisms.
+  rationale: Preparations differ in reversibility and do not identify every biochemical
+    intermediate.
+  notes: Spermatozopsis basal bodies do not recover antiparallel geometry on calcium
+    reduction in the isolated preparation, despite waveform reversal; intact-cell
+    recovery is slower. Chlamydomonas angle reversal in the 1998 abstract is a different
+    preparation and species. No phosphorylation step, complete ATP-free cycle, or
+    mandatory phobic-response function is inferred. Basal-body angles and constituent-filament
+    diameters are not dimensions of the whole fiber.
+  evidence:
+  - reference: DOI:10.1083/jcb.105.2.903
+    notes: Results and Discussion separate reorientation, waveform switching and unknown
+      reextension.
+  - reference: DOI:10.1002/(SICI)1097-0169(1998)41:1<49::AID-CM4>3.0.CO;2-A
+    notes: Primary abstract reports reversible angle changes and suggests, rather
+      than proves, a role in phobic responses.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: synchronization_evidence
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile experimental conditions and isolate the distal fiber's contribution
+    to flagellar coordination.
+  rationale: Multistructure mutants cannot by themselves establish a distal-fiber-specific
+    necessity or absence of function.
+  notes: The 1984 vfl3 study found similar waveform, frequency and synchrony under
+    its filming conditions, but both striated fibers and microtubular roots were abnormal.
+    The 2016 primary abstract reports altered synchronization in basal-connection-defective
+    mutants and supports internal coupling. Its full experimental text was not reached
+    in this pass. Neither observation is promoted into a universal positive or negative
+    distal-fiber mechanism.
+  evidence:
+  - reference: DOI:10.1083/jcb.98.3.818
+    notes: Discussion explicitly cannot separate fiber and microtubular-rootlet contributions.
+  - reference: DOI:10.1073/pnas.1518527113
+    notes: Abstract and significance statement support internal coupling, not a molecularly
+      isolated distal-fiber mechanism.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: segregation_not_assigned
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not transfer the entire vfl2 segregation phenotype to the distal fiber.
+  rationale: The centrin mutation affects several distinct assemblies.
+  notes: Class-2 revertants with abnormal distal fibers retain normal NBBCs and transition
+    regions and run the basal-body cycle normally. The authors argue against a necessary
+    distal-fiber role in accurate segregation. No required mitotic or segregation
+    function is added.
+  evidence:
+  - reference: DOI:10.1083/jcb.119.6.1613
+    notes: Table II and Discussion distinguish structural phenotypes and their functional
+      interpretation.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: taxonomic_and_function_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Extend directly demonstrated taxonomic scope and resolve an exact reorientation
+    function term.
+  rationale: Two studied species do not establish clade-wide prevalence or identical
+    geometry.
+  notes: Both species identifiers were authority-verified. No distribution row or
+    unverified strain identifier is added. GO:0032053 ciliary basal body organization
+    describes assembly and arrangement of constituent parts, not exactly the interbasal
+    angular response; function labels remain ungrounded rather than asserting equivalence.
+  evidence:
+  - reference: DOI:10.1083/jcb.105.2.903
+    notes: Spermatozopsis experiments and explicit comparison with Chlamydomonas.
+  - reference: DOI:10.1083/jcb.119.6.1613
+    notes: Chlamydomonas distal-fiber comparisons.
+  - reference: GO:0032053
+    notes: Authority definition checked; no exact function mapping asserted.
+  posed_by: codex
+  posed_date: '2026-10-04'
+images:
+- image_id: pmc2114749_figure9
+  source: PMC
+  source_accession: PMC2114749.1 Figure 9
+  source_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC2114749.1/PMC2114749.1.pdf#page=8
+  licence: CC_BY_NC_SA_4_0
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  attribution: G. I. McFadden, D. Schulze, B. Surek, J. L. Salisbury and M. Melkonian,
+    Figure 9, Journal of Cell Biology 105 (1987), doi:10.1083/jcb.105.2.903, via PubMed
+    Central; CC BY-NC-SA 4.0. Link only; no repository copy or adaptation.
+  modality: TEM
+  caption: 'Figure 9: distal-fiber immunogold localization and basal-body geometry
+    in Spermatozopsis similis. Panels B-E show labeled distal fibers; F shows the
+    separate nucleus connector and G the preimmune control. Source scale bars: 300
+    nm.'
+  taxon_id: NCBITaxon:3192
+  taxon_label: Spermatozopsis similis
+  reference: DOI:10.1083/jcb.105.2.903
+  retrieved_on: '2026-10-04'
+  notes: All seven panels visually inspected on PDF page 8. Official version-1 metadata,
+    PDF checksum and JATS licence verified; no separate figure object is supplied.
+    No image binary is hosted.

@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/distal_connecting_fiber.yaml
+  slug: distal_connecting_fiber
+session:
+  id: 2026-10-04T042320Z-codex-6697b2
+  timestamp: '2026-10-04T04:23:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  summary: Add the distal connecting fiber as a distinct interbasal structure
+  details: Created one PROPOSED record after ignored- and hidden-inclusive deduplication and
+    current GO checks. Distinguished the distal bridge from proximal fibers, nucleus-basal
+    body connectors, ciliary rootlets and flagella connectors; used GO:0043232 as a broad
+    parent and GO:0005856 for parthood. Curated centrin composition with reviewed UniProtKB:P05434
+    and two authority-verified species, but no clade-wide distribution or exact InterPro family.
+    Read the full 1987 primary PDF and visually inspected Figure 9; used 1992 Methods, mutant/revertant
+    Results and Table II, and the full 1984 vfl3 primary text. The 1998 paper remains abstract-only;
+    the 2016 paper remains limited to its abstract and significance statement. The graph describes
+    physical contraction and reorientation in extracted Spermatozopsis apparatuses, not a
+    reconstructed molecular motor, universal ATP-free cycle or mandatory phobic-response mechanism.
+    Preserved species-specific reversibility, mutant pleiotropy, unresolved synchronization
+    and inventory limits in discussions. Verified SAG 1.85 against its authority and the PMC
+    version-1 PDF/JATS metadata and licence; Figure 9 is linked only under CC BY-NC-SA 4.0
+    without copying a binary. Record written through the schema-validating writer with LLM-assisted
+    provenance. Derived artifacts and local gates will be checked before commit; PR and adversarial-review
+    results will be recorded after opening.
