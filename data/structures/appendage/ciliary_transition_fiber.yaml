@@ -21,6 +21,12 @@ curation_history:
     graph, link-only immunogold microscopy and explicit assembly, grounding and antibody
     limitations.
   llm_assisted: true
+- timestamp: '2026-10-04T07:16:16Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_SCOPE
+  changes: 'Addressed review issue #2018: distinguish demonstrated yeast two-hybrid
+    CC1/full-length interaction from the proposed endogenous targeting route.'
+  llm_assisted: true
 synonyms:
 - synonym_text: centriolar distal appendage
   synonym_type: RELATED_SYNONYM
@@ -316,8 +322,10 @@ discussions:
     are not imported as demonstrated trypanosome reactions.
   evidence:
   - reference: DOI:10.1242/jcs.259893
-    notes: CC1 can interact with endogenous full-length TFK1; the targeting experiments
-      do not separate this route from other binding partners.
+    notes: CC1 interacts with full-length TFK1 in yeast two-hybrid. Interaction with
+      endogenous TFK1 is a proposed explanation for targeting in trypanosomes, not
+      a demonstrated native interaction; the targeting experiments do not separate
+      this hypothesis from other binding partners.
   - reference: DOI:10.1242/jcs.261692
     notes: The authors explicitly leave the docking and marker-recruitment alternatives
       unresolved.
