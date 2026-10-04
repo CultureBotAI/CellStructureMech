@@ -1,0 +1,199 @@
+identifier: cellstructuremech:basal_body_c_tubule_luminal_filament
+label: basal body C-tubule luminal filament
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A crescent-shaped proteinaceous filament inside the lumen of a basal-body
+  C-tubule, spanning from protofilament C3 to the C6-C7 junction and occurring in
+  a longitudinally repeated array in the distal half of isolated Chlamydomonas reinhardtii
+  basal bodies.
+definition_source: DOI:10.1038/emboj.2011.460
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T12:07:21Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T12:10:51Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added Chlamydomonas-scoped filament morphology, repeat and span, structural
+    linkage, whole-triplet dataset and link-only Figure 4 provenance. Kept protein
+    identity, mechanics and assembly unresolved and separated the distal filament
+    from proximal MIP assignments.
+  llm_assisted: true
+parent_structures:
+- GO:0005856
+part_of:
+- GO:0036064
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Distal-half triplet reconstructions from isolated basal bodies; Figure 4C
+    resolves the luminal filament separately from the exterior hook in Figure 4B.
+    This species example does not imply occurrence in every strain or throughout the
+    basal-body length.
+  reference: DOI:10.1038/emboj.2011.460
+functions:
+- function_id: intraluminal_c_tubule_linkage
+  label: intraluminal C-tubule linkage
+  description: In the characterized Chlamydomonas distal region, the filament spans
+    the C-tubule lumen from protofilament C3 to the C6-C7 junction. This is an observed
+    structural connection, not a demonstrated requirement for stiffness, assembly
+    or motility.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+    notes: Longitudinal-variation Results and Figure 4C show crescent-shaped luminal
+      densities. Mechanical reinforcement and contact with the separate exterior hook
+      are proposed interpretations, not tested filament-specific functions.
+physical_properties:
+- property: OTHER
+  value: '8'
+  unit: UO:0000018
+  context: Longitudinal spacing of repeated luminal filaments in the distal-half Chlamydomonas
+    reinhardtii basal-body triplet subtomogram average, reported in Figure 4C; not
+    filament length.
+  reference: DOI:10.1038/emboj.2011.460
+- property: OTHER
+  value: '13.6'
+  unit: UO:0000018
+  context: 'Approximate span from C3 to the C6-C7 junction in the distal-half Chlamydomonas
+    reinhardtii reconstruction: the reported approximately 136 angstrom value converted
+    to nanometers. Not a measured contour length or the length of the axial array.'
+  reference: DOI:10.1038/emboj.2011.460
+datasets:
+- accession: EMDB:EMD-5252
+  title: Chlamydomonas basal-body triplet reconstruction
+  description: Whole-triplet reconstruction deposited with Li et al. 2012, not a separately
+    identified luminal-filament submap.
+  organism: Chlamydomonas reinhardtii
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-5252
+  publication: DOI:10.1038/emboj.2011.460
+  notes: Released native EMDB metadata links taxon 3055, strain cc3491 and PMID:22157822
+    to the exact primary DOI. The archive strain label is not evidence of a separately
+    deposited filament map. Whole-triplet mass, component counts and resolution do
+    not specify filament composition or dimensions; no map volume is hosted.
+images:
+- image_id: li_2012_figure4_link
+  source: PMC
+  source_accession: PMC3273388.1:f4
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3273388/figure/f4/
+  licence: OTHER
+  licence_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+  attribution: Sam Li, Jose-Jesus Fernandez, Wallace F Marshall and David A Agard;
+    Figure 4, The EMBO Journal (2012), DOI:10.1038/emboj.2011.460. Copyright 2012
+    European Molecular Biology Organization; CC BY-NC-ND 3.0 Unported.
+  modality: CRYO_ET
+  taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  reference: DOI:10.1038/emboj.2011.460
+  retrieved_on: '2026-10-04'
+  caption: Regional triplet density reconstructions. Panel C shows yellow crescent-shaped
+    filaments inside the blue C-tubule lumen, with C3, C6 and C7 labeled, and their
+    longitudinal repetition. Panel B instead shows the separate exterior hook. Panel
+    A has a 10-nm scale bar; the displayed segment is not the biological array length.
+  notes: 'Link only: the exact JATS license is CC BY-NC-ND 3.0, which has no dedicated
+    schema enum. OTHER preserves those terms; no image file, derivative, download
+    URL or hosted-copy checksum is supplied. The original multipanel figure was visually
+    inspected using the checksum-verified PMC media object. These are averaged-density
+    renderings and sections, not raw single-particle micrographs.'
+evidence:
+- reference: DOI:10.1038/emboj.2011.460
+  notes: Li et al. 2012, PMID:22157822. Official PMC3273388.1 JATS and Figure 4 media
+    checksums verified; longitudinal-variation Results, Discussion, reconstruction
+    Methods and Figure 4 caption inspected. Density morphology and repeat are observed;
+    protein identity, reinforcement and assembly chronology are not established by
+    the static reconstructions. No verbatim snippet is asserted.
+- reference: DOI:10.7554/eLife.43434
+  notes: Li et al. 2019. Official PMC6384029.1 JATS checksum verified; proximal-region
+    scope, focused MIP Results, complete Table 1 and the regional-comparison Discussion
+    inspected. These support boundaries against MIP8-MIP11, not an exact molecular
+    assignment to the distal C3-to-C6/C7 filament.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate the luminal filament from neighboring assemblies.
+  rationale: A resolved filament is a structural entity even without a molecular assignment.
+  notes: The curated name denotes the crescent-shaped filament and its axial repetition
+    in Li et al., not the C-tubule wall, external hook, B-C inner junction or Y-shaped
+    scaffold. Hidden/ignored-inclusive identity and citation searches found no existing
+    record. Complete GO searches for C-tubule luminal filament, microtubule inner
+    filament and C-tubule brace found no exact cellular-component term. GO:0160110
+    and its A/B inner-sheath children concern axonemal doublets, not this basal-body
+    C-tubule filament. GO:0005856 supplies the broader cytoskeletal class and GO:0036064
+    supplies parthood. FILAMENT describes observed morphology, not a claimed protein
+    family or complex stoichiometry.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+  - reference: GO:0005856
+  - reference: GO:0036064
+  - reference: GO:0160110
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: molecular_identity
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify constituents of the C3-to-C6/C7 luminal filament.
+  rationale: A density-derived mass does not identify proteins or stoichiometry.
+  notes: The approximately 46-kDa estimate uses segmented density volume and an assumed
+    protein density of 1.41 g/cm3. It is not a sequence-resolved or biochemical composition
+    measurement. Components and stoichiometry remain unset until an assignment is
+    demonstrated for this exact distal structure.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: declined_mechanism_inferences
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep proposed mechanics and assembly separate from imaging.
+  rationale: Regional co-occurrence is neither a direct interaction assay nor a time
+    course.
+  notes: The authors propose reinforcement of C-tubule rigidity and possible contact
+    with the exterior hook. These are not asserted as established functions. The polarity
+    interpretation compares the filament pitch with an assumed B-surface tubulin lattice;
+    it is not a measured force or molecular mechanism. Delta-tubulin and POC5 assembly
+    discussions do not assign either protein to this filament. No causal graph, trait
+    link, filament-specific essentiality or chronological assembly sequence is added.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: regional_mip_comparison
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Avoid transferring proximal MIP names to the distal filament.
+  rationale: C-lumen localization alone does not establish structural identity.
+  notes: Li et al. 2019 analyze the proximal region and list MIP8 at B6/B7 inside
+    the C lumen, MIP9 at B8/B9/C10, MIP10 at B7/C10 and MIP11 at C9/C10. Those described
+    positions do not assign any of these names to the C3-to-C6/C7 crescent. They are
+    not exact synonyms or component identities here. The comparison is region-specific
+    and does not assert that an unobserved structure is biologically absent.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+  - reference: DOI:10.7554/eLife.43434
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: measurement_and_provenance_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish filament dimensions from map metadata.
+  rationale: Reconstruction windows and resolution are not biological structure lengths.
+  notes: The 8-nm axial repeat and approximately 13.6-nm span are context-specific
+    properties of the distal Chlamydomonas reconstruction. Figure segment lengths,
+    map resolution and estimated mass are not additional dimensions or molecular composition.
+    EMD-5252 is linked as a whole-triplet deposit; Figure 4C is the explicit regional
+    visual evidence. The original figure is externally linked under its noncommercial,
+    no-derivatives license.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'

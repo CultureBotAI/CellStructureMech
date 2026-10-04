@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_c_tubule_luminal_filament.yaml
+  slug: basal_body_c_tubule_luminal_filament
+session:
+  id: 2026-10-04T121123Z-codex-313ff9
+  timestamp: '2026-10-04T12:11:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - canonical_examples
+  - functions
+  - physical_properties
+  - datasets
+  - images
+  - evidence
+  - discussions
+  summary: Add the basal body C-tubule luminal filament
+  details: Created one PROPOSED Chlamydomonas-scoped filament record using the guarded scaffold
+    and validated YAML writer. Inspected checksum-verified Li 2012 PMC JATS and Figure 4C,
+    and Li 2019 proximal MIP descriptions and complete Table 1. Verified GO, taxon, unit and
+    native EMD-5252 metadata; complete GO searches and hidden/ignored-inclusive repository
+    searches found no exact existing identity. Curated the observed C3-to-C6/C7 span and 8-nm
+    axial repeat, structural linkage, whole-triplet dataset and link-only licensed image.
+    Components, stoichiometry, mechanics, causal graph and broader taxonomic claims remain
+    unset; proximal MIP names are not transferred. Scaffold and enrichment passed write-time
+    closed-schema validation; full corpus and generated-product gates follow before commit.
