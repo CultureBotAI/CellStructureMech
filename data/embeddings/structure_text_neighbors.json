@@ -753,6 +753,37 @@
       ]
     },
     {
+      "identifier": "GO:0097539",
+      "label": "ciliary transition fiber",
+      "neighbors": [
+        {
+          "identifier": "GO:0120119",
+          "label": "flagellum attachment zone",
+          "cosine_similarity": 0.77533729
+        },
+        {
+          "identifier": "GO:0120269",
+          "label": "ciliary centrin arm",
+          "cosine_similarity": 0.76295212
+        },
+        {
+          "identifier": "GO:1990900",
+          "label": "ciliary pocket collar",
+          "cosine_similarity": 0.76132419
+        },
+        {
+          "identifier": "GO:0097537",
+          "label": "Y-shaped link",
+          "cosine_similarity": 0.74579261
+        },
+        {
+          "identifier": "cellstructuremech:distal_connecting_fiber",
+          "label": "distal connecting fiber",
+          "cosine_similarity": 0.74394587
+        }
+      ]
+    },
+    {
       "identifier": "GO:0035869",
       "label": "ciliary transition zone",
       "neighbors": [
@@ -777,9 +808,9 @@
           "cosine_similarity": 0.73300732
         },
         {
-          "identifier": "GO:0160113",
-          "label": "axonemal microtubule doublet inner junction",
-          "cosine_similarity": 0.69658471
+          "identifier": "GO:0097539",
+          "label": "ciliary transition fiber",
+          "cosine_similarity": 0.70928853
         }
       ]
     },
@@ -1578,14 +1609,14 @@
           "cosine_similarity": 0.75657879
         },
         {
+          "identifier": "GO:0097539",
+          "label": "ciliary transition fiber",
+          "cosine_similarity": 0.74579261
+        },
+        {
           "identifier": "GO:0160110",
           "label": "axonemal microtubule doublet inner sheath",
           "cosine_similarity": 0.73867823
-        },
-        {
-          "identifier": "GO:0035869",
-          "label": "ciliary transition zone",
-          "cosine_similarity": 0.73300732
         }
       ]
     },
@@ -2699,9 +2730,9 @@
           "cosine_similarity": 0.76879082
         },
         {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.76150524
+          "identifier": "GO:0097539",
+          "label": "ciliary transition fiber",
+          "cosine_similarity": 0.76295212
         }
       ]
     },
@@ -2725,14 +2756,14 @@
           "cosine_similarity": 0.79816005
         },
         {
+          "identifier": "GO:0097539",
+          "label": "ciliary transition fiber",
+          "cosine_similarity": 0.76132419
+        },
+        {
           "identifier": "GO:0120119",
           "label": "flagellum attachment zone",
           "cosine_similarity": 0.75380139
-        },
-        {
-          "identifier": "GO:0120118",
-          "label": "flagella connector",
-          "cosine_similarity": 0.72495896
         }
       ]
     },
@@ -3035,14 +3066,14 @@
           "cosine_similarity": 0.80304448
         },
         {
+          "identifier": "GO:0097539",
+          "label": "ciliary transition fiber",
+          "cosine_similarity": 0.74394587
+        },
+        {
           "identifier": "cellstructuremech:stentor_km_fiber",
           "label": "Stentor Km fiber",
           "cosine_similarity": 0.7415808
-        },
-        {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.73812277
         }
       ]
     },
@@ -3118,6 +3149,11 @@
           "cosine_similarity": 0.77643164
         },
         {
+          "identifier": "GO:0097539",
+          "label": "ciliary transition fiber",
+          "cosine_similarity": 0.77533729
+        },
+        {
           "identifier": "GO:1990900",
           "label": "ciliary pocket collar",
           "cosine_similarity": 0.75380139
@@ -3131,11 +3167,6 @@
           "identifier": "GO:0160113",
           "label": "axonemal microtubule doublet inner junction",
           "cosine_similarity": 0.69607976
-        },
-        {
-          "identifier": "GO:0005930",
-          "label": "axoneme",
-          "cosine_similarity": 0.69500643
         }
       ]
     },

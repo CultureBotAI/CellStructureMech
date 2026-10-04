@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/ciliary_transition_fiber.yaml
+  slug: ciliary_transition_fiber
+session:
+  id: 2026-10-04T065753Z-codex-1e3045
+  timestamp: '2026-10-04T06:57:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - images
+  - discussions
+  summary: Add evidence-backed ciliary transition fiber record
+  details: Added GO:0097539 with exact synonym scopes and basal-body parthood; curated TFK1,
+    CEP164, RP2 and FBF1 from primary trypanosome localization studies DOI:10.1242/jcs.259893
+    and DOI:10.1242/jcs.261692. Verified XRP2 and FBF1 InterPro families; retained TFK1 and
+    CEP164 as reviewed label-only. Included only experimentally bounded TFK1 CC1 targeting
+    and Y2H self-interaction, not an inferred causal bridge or complete fiber assembly. Preserved
+    the YL1/2 antigen caution from DOI:10.1016/j.protis.2017.07.002. Linked visually inspected
+    HAL figure without redistributing it. Model draft remains PROPOSED; no universal prevalence,
+    stoichiometry, strain-mismatched protein examples or mammalian gating pathway asserted.

@@ -1,0 +1,343 @@
+identifier: GO:0097539
+label: ciliary transition fiber
+structure_category: APPENDAGE
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A nine-bladed, propeller-like protein complex that links the distal end
+  of the basal body and the cilium to the plasma membrane. Functions in protein sorting
+  and gating (i.e. active and passive transport of proteins in and out of the cilium).
+definition_source: GO:0097539
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T06:53:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T06:57:12Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact GO synonymy and basal-body parthood, four bounded component
+    families, a trypanosome example, functions, TFK1 targeting and self-interaction
+    graph, link-only immunogold microscopy and explicit assembly, grounding and antibody
+    limitations.
+  llm_assisted: true
+synonyms:
+- synonym_text: centriolar distal appendage
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097539
+- synonym_text: cilial transition fiber
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097539
+- synonym_text: cilial transition fibre
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097539
+- synonym_text: ciliary transition fibre
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097539
+- synonym_text: cilium transition fiber
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097539
+- synonym_text: cilium transition fibre
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097539
+- synonym_text: distal appendage of basal body
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097539
+- synonym_text: distal appendage of centriole
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097539
+- synonym_text: distal appendage of mother centriole
+  synonym_type: RELATED_SYNONYM
+  source: GO:0097539
+- synonym_text: transition fiber
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097539
+- synonym_text: transition fibre
+  synonym_type: BROAD_SYNONYM
+  source: GO:0097539
+parent_structures:
+- GO:0140535
+part_of:
+- GO:0036064
+components:
+- component_id: tfk1
+  label: transition fibre kinetoplastid-specific protein 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No integrated InterPro entry was returned for the verified TFK1
+    protein Q585C9 or the TFK1 text search. A generic coiled-coil domain or unrelated
+    PANTHER prediction is not an exact family grounding.
+  gene_symbols:
+  - TFK1
+  essentiality: UNKNOWN
+  role: Resident of the transition-fiber matrix region in Trypanosoma brucei. RNAi
+    leaves gross fiber-region architecture intact; bloodstream-form lethality does
+    not establish assembly essentiality.
+  evidence:
+  - reference: DOI:10.1242/jcs.259893
+    notes: Figures 2-3 localize TFK1 between CEP164C puncta and distal to RP2. Figure
+      5 tests its CC1 targeting region and self-interaction; RNAi is not a null allele.
+- component_id: cep164
+  label: CEP164 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The live CEP164 InterPro search returned N-terminal and coiled-coil
+    domain entries, not an exact integrated whole-protein family. No domain is promoted
+    to family identity.
+  gene_symbols:
+  - CEP164A
+  - CEP164B
+  - CEP164C
+  essentiality: UNKNOWN
+  role: 'Spatially and temporally differentiated transition-fiber proteins. The trypanosome
+    paralogues are not interchangeable: CEP164C is associated with older flagella,
+    whereas A and B also label the new flagellum base.'
+  evidence:
+  - reference: DOI:10.1242/jcs.259893
+    notes: Figure 2 resolves a punctate CEP164C pattern distinct from the TFK1 matrix
+      pattern.
+  - reference: DOI:10.1242/jcs.261692
+    notes: Spatial mapping and cell-cycle analysis distinguish CEP164A, B and C; localization
+      does not prove that every paralogue is required for fiber assembly.
+- component_id: rp2
+  label: Protein XRP2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR039093
+  grounding_notes: InterPro verifies the XRP2 family and assigns it to the trypanosome
+    RP2 locus product Q388J8. Domain names are not evidence for a particular tubulin-binding
+    or GTPase reaction at this structure.
+  gene_symbols:
+  - RP2
+  - XRP2
+  essentiality: UNKNOWN
+  role: A proximal, approximately ring-like resident of the trypanosome transition-fiber
+    region, spatially distinct from TFK1.
+  evidence:
+  - reference: DOI:10.1242/jcs.259893
+    notes: Figure 2 uses endogenously TY1-tagged RP2 to distinguish its distribution
+      from TFK1.
+  - reference: InterPro:IPR039093
+    notes: Authority-verified family type and canonical label Protein XRP2.
+- component_id: fbf1
+  label: Fas-binding factor 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR033561
+  gene_symbols:
+  - FBF1
+  essentiality: UNKNOWN
+  role: Transition-fiber-associated protein with an approximately ninefold arrangement
+    around the trypanosome basal body. It supports normal new-flagellum assembly,
+    but its exact placement in blade versus matrix and fiber-assembly requirement
+    remain unresolved here.
+  evidence:
+  - reference: DOI:10.1242/jcs.261692
+    notes: Figure 1H expansion microscopy resolves the FBF1 pattern; Figure 5D shows
+      strongly shortened new flagella after depletion. Neither establishes a specific
+      molecular gating interaction in trypanosomes.
+  - reference: InterPro:IPR033561
+    notes: Authority-verified FBF1 family identity; its mammalian and nematode mechanistic
+      annotations are not transferred to the trypanosome.
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: The 2022 study examines procyclic and bloodstream SmOx 427 cells, with high-resolution
+    localization and domain targeting experiments in procyclic cells.
+  reference: DOI:10.1242/jcs.259893
+functions:
+- function_id: basal_body_membrane_linkage
+  label: basal-body membrane linkage
+  description: The radial transition-fiber complex links the distal basal body and
+    cilium to the plasma membrane.
+  evidence:
+  - reference: GO:0097539
+    notes: The exact cellular-component definition supplies this anatomical linking
+      function; no individual protein is assigned direct lipid binding.
+- function_id: support_new_flagellum_assembly
+  label: support of new flagellum assembly
+  description: Transition-fiber-associated proteins contribute to normal new-flagellum
+    assembly in procyclic trypanosomes.
+  evidence:
+  - reference: DOI:10.1242/jcs.261692
+    notes: RNAi of FBF1 and five other mapped proteins impairs new-flagellum assembly.
+      This does not isolate fiber docking, prove loss of every blade, or establish
+      a specific IFT-entry reaction.
+causal_graphs:
+- graph_id: tfk1_cc1_targeting
+  title: TFK1 domain-dependent targeting to transition fibers
+  description: Experimentally delimited component recruitment and self-interaction
+    in the trypanosome transition-fiber assembly context.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: This graph concerns incorporation of one resident, not construction
+    of the whole fiber. CC1 targeting was tested in cells retaining endogenous TFK1.
+    Self-interaction could explain recruitment, but that causal connection was not
+    isolated and is not drawn. Y2H does not determine native oligomer stoichiometry.
+  nodes:
+  - node_id: tfk1
+    label: transition fibre kinetoplastid-specific protein 1
+    node_type: GENE_OR_PROTEIN
+    component_ref: tfk1
+  - node_id: cc1_fragment
+    label: TFK1 CC1-containing T4 fragment
+    node_type: GENE_OR_PROTEIN
+    component_ref: tfk1
+    description: Experimental fragment of TFK1, not a separate component family; construct
+      residues 75-536 in Figure 5 and Methods.
+  - node_id: self_association
+    label: TFK1 self-interaction in yeast two-hybrid
+    node_type: STATE
+  - node_id: transition_fiber
+    label: ciliary transition fiber
+    node_type: STRUCTURE
+    grounding: GO:0097539
+  edges:
+  - subject: tfk1
+    predicate: supports
+    object: self_association
+    description: Full-length TFK1 interacts with a second full-length TFK1 construct
+      in the yeast two-hybrid assay.
+    evidence:
+    - reference: DOI:10.1242/jcs.259893
+      notes: Figure 5C, full-length versus full-length, with positive and negative
+        assay controls.
+  - subject: cc1_fragment
+    predicate: supports
+    object: self_association
+    description: The CC1-containing T4 fragment interacts with full-length TFK1 in
+      yeast two-hybrid.
+    evidence:
+    - reference: DOI:10.1242/jcs.259893
+      notes: Figure 5C compares the domain constructs; CC1-containing T2 and T4 give
+        interaction signals.
+  - subject: cc1_fragment
+    predicate: is sufficient for targeting to
+    object: transition_fiber
+    description: Ectopic T4 targets the endogenous TFK1-positive transition-fiber
+      region in procyclic cells.
+    evidence:
+    - reference: DOI:10.1242/jcs.259893
+      notes: Figure 5B and supplementary Figure S5 compare localized CC1-containing
+        constructs with non-retained fragments. This is not autonomous de novo fiber
+        assembly.
+images:
+- image_id: ramanantsalama_2022_tfk1_immunogold
+  source: OTHER
+  source_accession: hal-03817184:figure3
+  source_url: https://hal.science/hal-03817184/document#page=50
+  licence: OTHER
+  licence_url: https://about.hal.science/hal-authorisation-v1/
+  attribution: Miharisoa Rijatiana Ramanantsalama, Nicolas Landrein, Elina Casas,
+    Benedicte Salin, Corinne Blancard, Melanie Bonhivers, Derrick R. Robinson and
+    Denis Dacheux; Journal of Cell Science, 2022; accepted manuscript deposited as
+    HAL hal-03817184.
+  modality: TEM
+  caption: 'Figure 3: TFK1 immunogold labeling near transition-fiber tips in procyclic
+    trypanosomes. A-B are longitudinal and C-D transverse views. Main scale bars are
+    200 nm; inset bars are 100 nm.'
+  taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  reference: DOI:10.1242/jcs.259893
+  retrieved_on: '2026-10-04'
+  notes: Link-only. HAL metadata gives a deposit-authorization licence, not a verified
+    Creative Commons reuse licence. No paper or figure is redistributed. The full
+    figure was visually inspected; the manuscript describes detergent-extracted immunolabeled
+    material, so this is not an intact-membrane tethering assay.
+evidence:
+- reference: GO:0097539
+  notes: Exact structure definition and synonym scopes; distinct from transition-zone
+    Y-links.
+- reference: DOI:10.1242/jcs.259893
+  notes: Ramanantsalama et al. 2022. Accepted manuscript, Results, Discussion, relevant
+    Methods and Figures 2, 3 and 5 inspected.
+- reference: PMID:35588197
+  notes: PubMed bibliographic identity of the TFK1 primary study.
+- reference: DOI:10.1242/jcs.261692
+  notes: Ahmed et al. 2024. Official PMC11190437.1 JATS inspected with its metadata
+    checksum verified; Figure 1 also inspected visually.
+- reference: PMID:38572631
+  notes: PubMed bibliographic identity of the trypanosome transition-fiber mapping
+    study.
+discussions:
+- discussion_id: transition_fiber_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate transition fibers from the surrounding basal body and distal transition-zone
+    linkers.
+  rationale: Adjacent records mention this structure but do not denote the discrete
+    radial appendage complex.
+  notes: Ignored- and hidden-inclusive searches found no existing identity record.
+    The basal body is the enclosing structure, not an is-a parent. Y-shaped links
+    are distinct, and the GO scopes of distal-appendage and bare transition-fiber
+    synonyms are preserved.
+  evidence:
+  - reference: GO:0097539
+    notes: Exact appendage-complex identity.
+  - reference: GO:0036064
+    notes: Enclosing ciliary basal body.
+  - reference: GO:0097537
+    notes: Distinct transition-zone Y-link complex.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: complete_component_inventory_and_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact CEP164 and TFK1 families, strain-paired protein examples,
+    and the remaining mapped component classes.
+  rationale: The four curated families are not a complete inventory. Thirty proteins
+    were mapped in 2024, in addition to previously studied RP2 and TFK1; localization,
+    constitutive membership and assembly essentiality require separate judgements.
+  notes: The verified TFK1 accession Q585C9 matches the published locus, RefSeq cross-reference
+    and length, but represents TREU927 while the domain experiments use SmOx427. No
+    strain-specific protein example or cross-taxon prevalence is asserted. CEP164
+    domain entries are not whole-family identities; stoichiometry remains unset.
+  evidence:
+  - reference: DOI:10.1242/jcs.261692
+    notes: The mapping study reports a substantially larger inventory and non-identical
+      paralogue timing.
+  - reference: DOI:10.1242/jcs.259893
+    notes: The experimental strain context and cloned genomic locus must not be conflated.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: separate_targeting_from_complete_assembly
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Determine native binding partners, self-association requirements, blade
+    assembly dependencies and molecular gating reactions.
+  rationale: Domain targeting, protein-depletion phenotypes and whole-fiber construction
+    are different claims.
+  notes: No TFK1 self-association-to-targeting edge is inferred. Loss of CEP164A signal
+    after CEP90 or TFP68 depletion does not distinguish missing fibers from failed
+    marker recruitment. Worm or mammalian FBF1-IFT mechanisms and cytokinesis hypotheses
+    are not imported as demonstrated trypanosome reactions.
+  evidence:
+  - reference: DOI:10.1242/jcs.259893
+    notes: CC1 can interact with endogenous full-length TFK1; the targeting experiments
+      do not separate this route from other binding partners.
+  - reference: DOI:10.1242/jcs.261692
+    notes: The authors explicitly leave the docking and marker-recruitment alternatives
+      unresolved.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: rp2_antibody_not_tubulin_binding_proof
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not infer a tubulin-binding reaction from basal-body YL1/2 staining.
+  rationale: YL1/2 recognition of RP2 confounds interpreting disappearance of the
+    basal-body signal as loss of a tubulin pool.
+  notes: RP2 membership here uses tagged-protein spatial localization, not YL1/2 staining
+    as evidence of direct RP2-tubulin binding. Tubulin is not added as a fiber constituent
+    on that basis.
+  evidence:
+  - reference: DOI:10.1016/j.protis.2017.07.002
+    notes: The primary abstract identifies RP2, rather than tyrosinated alpha-tubulin,
+      as the mature-basal-body antigen recognized by YL1/2.
+  - reference: DOI:10.1242/jcs.259893
+    notes: Figure 2 uses TY1-tagged RP2 for its relative localization.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
