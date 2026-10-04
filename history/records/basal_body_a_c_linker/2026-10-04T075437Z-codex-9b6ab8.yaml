@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_a_c_linker.yaml
+  slug: basal_body_a_c_linker
+session:
+  id: 2026-10-04T075437Z-codex-9b6ab8
+  timestamp: '2026-10-04T07:54:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - datasets
+  - images
+  summary: Add the basal body A-C linker
+  details: Curated the intertriplet linkage from DOI:10.1126/sciadv.ady3689 and PMID:41061066
+    with four label-only component families, a Tetrahymena thermophila canonical example,
+    eight density-supported proximal contact edges, PDB:9QZC metadata and an unchanged CC
+    BY 4.0 PMC figure. Preserved proximal/transitional composition differences, unresolved
+    helical elements, contradictory TBC1D31 A/B aliases, CEP135 variant mappings and experimental
+    strain boundaries. Corrected the source POC1 accession typo by authority checks without
+    adding strain-specific protein examples. Hidden- and ignored-inclusive deduplication and
+    complete bounded GO searches found no exact existing identity; all model-drafted content
+    remains PROPOSED.
