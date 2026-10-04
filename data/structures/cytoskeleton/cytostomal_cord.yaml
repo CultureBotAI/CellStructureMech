@@ -1,0 +1,231 @@
+identifier: cellstructuremech:cytostomal_cord
+label: cytostomal cord
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: A largely unbranched, centrin-containing extension of the infraciliary
+  lattice associated with the cytostome-cytopharynx region, characterized in Paramecium.
+  It is a named fibrillar substructure, not the entire lattice or the adjacent cytopharyngeal
+  microtubular ribbons.
+definition_source: DOI:10.1111/j.1550-7408.1998.tb04526.x
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T03:03:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T03:05:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added scoped primary anatomy and centrin evidence, part-whole hierarchy,
+    verified examples, architectural role, inspected public-domain TEM and explicit
+    molecular, functional and distribution limits.
+  llm_assisted: true
+parent_structures:
+- GO:0005622
+part_of:
+- cellstructuremech:infraciliary_lattice
+- GO:0031912
+components:
+- component_id: cord_centrins
+  label: Cytostomal-cord centrins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Centrin immunoreactivity supports this class, not a resolved paralogue
+    inventory. InterPro IPR050145 Centrin/CML-like also includes obelin and plant
+    CML proteins and is broader than cord centrins; no exact source-neutral family
+    grounding was established.
+  essentiality: UNKNOWN
+  role: Centrin-family constituents detected by centrin-specific antibody labeling;
+    selective requirements for cord assembly are not established here.
+  evidence:
+  - reference: DOI:10.1111/j.1550-7408.1998.tb04526.x
+    notes: Primary abstract identifies the cord as centrin-specific, like the infraciliary
+      lattice, and immunologically distinct from striated bands. No cord-specific
+      depletion or complete composition is described in the abstract.
+canonical_examples:
+- taxon_id: NCBITaxon:5885
+  taxon_label: Paramecium caudatum
+  reference: DOI:10.1083/jcb.63.3.904
+  note: Species used for serial-section electron microscopy in the 1974 Methods. The
+    cord is named and described in the Observations; CIL:36779 also documents it.
+    Exact species identifier verified at ENA.
+- taxon_id: NCBITaxon:44030
+  taxon_label: Paramecium multimicronucleatum
+  reference: DOI:10.7295/W9CIL36704
+  note: Organism named by the inspected CIL:36704 TEM record. Source supplies the
+    species name, not a taxid; exact identifier independently verified at ENA. No
+    strain or genus-wide prevalence inferred.
+functions:
+- function_id: cytopharyngeal_space_roof
+  label: Roof of cytopharyngeal vesicle-accumulation spaces
+  description: In P. caudatum the cord forms the fibrillar roof of boxlike spaces
+    between cytopharyngeal microtubular ribbons, above the membrane where discoidal
+    vesicles accumulate. This is an observed architectural role, not a demonstrated
+    requirement for vesicle retention, transport, fusion or vacuole release.
+  evidence:
+  - reference: DOI:10.1083/jcb.63.3.904
+    notes: Observations on journal pages 913 and 915 place the cord above the ribbon
+      ends and the accumulating vesicles. Discussion on page 918 treats the cord's
+      active function as unresolved.
+images:
+- image_id: cil_36704
+  file: cil_36704.jpg
+  file_sha256: edac0b49ef3f15bb5a4bac942c999a505c8f36edff9a30d03e7dfae88cab7657
+  source: CELL_IMAGE_LIBRARY
+  source_accession: CIL:36704
+  source_url: https://www.cellimagelibrary.org/images/36704
+  download_url: https://www.cellimagelibrary.org/download/web_jpeg/image/36704
+  licence: PUBLIC_DOMAIN
+  attribution: Richard Allen (University of Hawaii); via Cell Image Library
+  modality: TEM
+  caption: 'Cytostomal cord and adjacent cross sections of alveolar-sac extensions
+    in Paramecium multimicronucleatum. Source scale bar: 0.5 micrometres. Static anatomy
+    does not demonstrate calcium-triggered cord contraction.'
+  taxon_id: NCBITaxon:44030
+  taxon_label: Paramecium multimicronucleatum
+  reference: DOI:10.7295/W9CIL36704
+  retrieved_on: '2026-10-04'
+  notes: Full source-served web JPEG inspected and retained unchanged, not the thumbnail.
+    Source JSON-LD declares public domain via its legacy selector; this is not relabeled
+    CC0. Richard Allen TEM dated 1974-04-04, Hitachi HU11A at 75 kV. No dimensional
+    measurements inferred from this digitized image. The caption's proposed calcium-release
+    and vesicle-fusion roles remain hypotheses.
+evidence:
+- reference: DOI:10.1083/jcb.63.3.904
+  notes: Allen 1974, PMID 4373478, PMC2109358 version 1. Official PDF checksum verified;
+    Methods and cord-specific Observations/Discussion read on PDF pages 2, 10, 12
+    and 15. PDF pages 15-16 visually inspected. The paper distinguishes observed anatomy
+    from speculative cord function.
+- reference: DOI:10.1111/j.1550-7408.1998.tb04526.x
+  notes: Allen, Aihara and Fok 1998, PMID 9561774. PubMed and publisher-deposited
+    Crossref abstracts read. Publisher PDF returned HTTP 403; full Methods and figures
+    were not inspected.
+- reference: DOI:10.7295/W9CIL36704
+  notes: Source-native caption, public-domain declaration, attribution and organism
+    metadata read; entire TEM inspected. Alveolar-finger association is anatomical
+    evidence; the source explicitly marks the proposed cord contraction and downstream
+    effects as hypothetical.
+- reference: DOI:10.7295/W9CIL36779
+  notes: Source-native caption and entire TEM inspected. P. caudatum cord is distinguished
+    from the curving microtubular ribbons and nearby alveolar extensions. CC BY-NC-SA
+    3.0 asset is not copied into the repository.
+- reference: GO:0005622
+  notes: Verified non-obsolete intracellular anatomical structure, used only as broad
+    is-a parent.
+- reference: GO:0031912
+  notes: Verified non-obsolete oral apparatus, the encompassing feeding structure;
+    cord location is independently supported by the 1974 primary Observations.
+discussions:
+- discussion_id: identity_and_part_whole
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the named oral cord from the extended infraciliary lattice and
+    other oral or centrin structures.
+  rationale: A named localized substructure can have its own record without duplicating
+    its encompassing network.
+  notes: Use part_of for the lattice and oral apparatus, not is-a lattice. Hidden-
+    and ignored-inclusive searches found only a prior review-report lead, not an existing
+    cord record or history. QuickGO cytostomal and cytosomal queries returned zero
+    hits; cord returned no cellular-component term. The ciliary centrin arm denotes
+    a different FAZ-associated complex, and the deep fiber is not adopted as exact
+    identity merely because it is oral cytoskeleton.
+  evidence:
+  - reference: DOI:10.1111/j.1550-7408.1998.tb04526.x
+    notes: Primary abstract identifies an essentially unbranched extension of the
+      netlike lattice.
+  - reference: DOI:10.1083/jcb.63.3.904
+    notes: Observations name the cord and distinguish its location from the neighboring
+      microtubular ribbons.
+  - reference: GO:0120269
+    notes: Authority definition specifies a Centrin4 complex flanking the FAZ and
+      quartet microtubules, not this cord.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: cord_composition_and_assembly
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve cord-specific centrin paralogues, scaffold constituents and selective
+    assembly requirements.
+  rationale: Shared immunoreactivity does not establish complete molecular identity
+    or requirements inherited from the whole lattice.
+  notes: Retain label-only grounding and UNKNOWN essentiality. Do not transfer Sfi1-like
+    scaffolds, ICL1e depletion phenotypes or a complete ICL paralogue inventory to
+    the cord without cord-specific evidence. InterPro's broader family does not resolve
+    that boundary.
+  evidence:
+  - reference: DOI:10.1111/j.1550-7408.1998.tb04526.x
+    notes: Abstract supports centrin-specific labeling, not a cord inventory or selective
+      assembly test.
+  - reference: InterPro:IPR050145
+    notes: Authority describes the broader Centrin/CML-like family, including obelin
+      and plant CML proteins.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: functional_hypotheses
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Test whether cord contraction promotes vesicle fusion or release of nascent
+    food vacuoles, and identify the relevant calcium pathway.
+  rationale: Static ultrastructure and centrin localization do not demonstrate an
+    active mechanism or necessity.
+  notes: The 1974 Discussion explicitly leaves cord function uncertain and considers
+    both contractile and purely structural alternatives. The 1998 abstract suggests
+    a calcium-supply role for neighboring alveolar sacs; CIL:36704 proposes possible
+    fusion or vacuole-release effects. Only the observed architectural roof is recorded
+    as a role. No mechanistic causal graph, ATP dependence, calcium-channel identity
+    or selective requirement is asserted.
+  evidence:
+  - reference: DOI:10.1083/jcb.63.3.904
+    notes: Journal page 918, cord-function discussion; read and visually checked.
+  - reference: DOI:10.1111/j.1550-7408.1998.tb04526.x
+    notes: Alveolar association motivates a suggestion, not a demonstrated calcium-release
+      pathway.
+  - reference: DOI:10.7295/W9CIL36704
+    notes: Source caption explicitly qualifies contraction and downstream outcomes
+      as proposed.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: adjacent_structures_not_components
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep microtubular ribbons, alveolar sacs, striated bands and vesicles outside
+    the cord's molecular composition.
+  rationale: Adjacency and shared placement in the oral apparatus do not make other
+    structures constituent proteins or membranes of the cord.
+  notes: Do not add tubulin or alveolar lipids merely because these structures border
+    the cord. The 110 kDa antigen belongs to the immunologically distinct striated
+    bands, not to the centrin-specific cord. Vesicle movement along ribbons is not
+    assigned to the cord as a motor function.
+  evidence:
+  - reference: DOI:10.1083/jcb.63.3.904
+    notes: Observations distinguish fibrillar cord, microtubular ribbons, alveolar
+      evaginations and discoidal vesicles.
+  - reference: DOI:10.1111/j.1550-7408.1998.tb04526.x
+    notes: Abstract distinguishes the 110 kDa striated-band antigen from centrin-specific
+      structures.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: taxonomic_scope_and_source_access
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Inspect full 1998 experimental text and compare named cytostomal cords outside
+    Paramecium before extending distribution.
+  rationale: Names shared across ciliates do not by themselves establish identical
+    molecular composition or topology.
+  notes: The unqualified structural label does not assert a universal or Paramecium-exclusive
+    distribution. Current canonical examples are source-demonstrated species only.
+    Full 1998 Methods and figures remain unread; no inferred measurements, additional
+    species or strain identifiers are added.
+  evidence:
+  - reference: DOI:10.1111/j.1550-7408.1998.tb04526.x
+    notes: Primary abstract read; checked publisher PDF route inaccessible.
+  - reference: DOI:10.1083/jcb.63.3.904
+    notes: Methods specifies P. caudatum.
+  - reference: DOI:10.7295/W9CIL36704
+    notes: Item specifies P. multimicronucleatum.
+  posed_by: codex
+  posed_date: '2026-10-04'
