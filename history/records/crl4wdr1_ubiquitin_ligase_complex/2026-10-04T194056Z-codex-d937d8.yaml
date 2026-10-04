@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/crl4wdr1_ubiquitin_ligase_complex.yaml
+  slug: crl4wdr1_ubiquitin_ligase_complex
+session:
+  id: 2026-10-04T194056Z-codex-d937d8
+  timestamp: '2026-10-04T19:40:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - images
+  - discussions
+  summary: Add evidence-bounded CRL4WDR1 ubiquitin ligase complex
+  details: Added one PROPOSED receptor-specific Cullin4-DDB1-WDR1 record from DOI:10.1371/journal.ppat.1006146,
+    PMID:28052114, current PMC5241021.1. Complete ignored/hidden-inclusive deduplication and
+    native GO/Complex Portal comparisons justify a local identity under broader GO:0080008.
+    Three constituent classes remain label-only after exact InterPro searches; reference-genome
+    UniProt proteins are not substituted for studied strains. Procyclic Trypanosoma example,
+    two bounded functions and six NONMECHANISTIC intervention edges preserve the unresolved
+    identity of ubiquitinated proteins and avoid importing the Figure 8 model as demonstrated
+    chemistry. Modern DOI:10.1038/s41598-025-32077-9 is used only for the Cullin-D versus
+    Cullin-E nomenclature boundary. Unchanged native Figure 2 is hosted under JATS-verified
+    CC BY 4.0 with MD5/SHA256 verification and explicit subunit-only, mixed-panel caption.
+    Guarded writer and byte-identical round-trip passed; generated products and full QC follow
+    before commit. No PR or review issue existed when this append-only creation history was
+    written.
