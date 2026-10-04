@@ -1,0 +1,299 @@
+identifier: GO:0140595
+label: MIM complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex located in the mitochondrial outer membrane that functions
+  as an insertase, mediating the insertion of alpha-helical proteins from the cytosol
+  into the outer membrane. Client proteins are usually single- and multi-span proteins
+  that include components of the TOM complex.
+definition_source: GO:0140595
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T23:11:03Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T23:13:24Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added verified Mim1/Mim2 families, yeast-bounded examples, exact GO insertion
+    function, five source-cited functional edges and explicit substrate-dependence,
+    partner-boundary and architecture limits.
+  llm_assisted: true
+- timestamp: '2026-10-04T23:14:29Z'
+  curator: pmc_oa
+  action: ADD_IMAGE
+  changes: Added PMC6010339.1 fig5; version, CC licence, JATS figure identity and
+    media md5 verified through the PMC OA S3 dataset.
+synonyms:
+- synonym_text: mitochondrial outer import machinery
+  synonym_type: EXACT_SYNONYM
+  source: GO:0140595
+parent_structures:
+- GO:0098799
+part_of:
+- GO:0005741
+components:
+- component_id: mim1
+  label: Outer membrane protein, MIM1/TOM13, mitochondrial
+  grounding: InterPro:IPR013262
+  role: Mim1 subunit of the mitochondrial outer-membrane alpha-helical protein import
+    complex.
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MIM1
+  - TOM13
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.107567
+    notes: Mim1 and Mim2 co-purify with imported Msp1 and Fis1; mim1-23 disrupts MIM-dependent
+      import while preserving TOM and SAM complexes.
+  - reference: DOI:10.7554/eLife.34488
+    notes: Both Mim1 and Mim2 are needed for effective heterologous rescue of ATOM-complex
+      assembly. This does not establish fixed native subunit copy numbers.
+  - reference: InterPro:IPR013262
+    notes: Verified MIM1/TOM13 family; the historical TOM13 name does not make Mim1
+      a constitutive TOM subunit.
+- component_id: mim2
+  label: Mim2
+  grounding: InterPro:IPR037652
+  role: Partner subunit of Mim1 in the mitochondrial outer-membrane import complex.
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MIM2
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.107567
+    notes: Mim2 accompanies Mim1 in substrate-associated complexes purified after
+      precursor import.
+  - reference: DOI:10.7554/eLife.34488
+    notes: Coexpressed Mim1 and Mim2 form a native-like complex in trypanosomes; expression
+      dominated by either subunit alone does not rescue ATOM assembly. Heterologous
+      complementation is not natural taxonomic occurrence.
+  - reference: InterPro:IPR037652
+    notes: Verified Mim2 family, distinct from the Mim1/TOM13 family.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  reference: DOI:10.1016/j.celrep.2020.107567
+  note: Experimentally characterized in budding-yeast YPH499 derivatives; no universal
+    fungal or eukaryotic distribution is asserted.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1016/j.celrep.2020.107567
+  note: YPH499-derived strains provide isolated-mitochondrial import, affinity-purification
+    and native-gel evidence. The separate 2018 deletion/rescue microscopy uses W303
+    derivatives. Heterologous expression in Trypanosoma brucei is not evidence for
+    a native trypanosome MIM complex.
+functions:
+- function_id: alpha_helical_outer_membrane_insertion
+  label: alpha helical protein insertion into mitochondrial outer membrane
+  grounding: GO:7770059
+  description: Promotes biogenesis of selected signal-anchored, tail-anchored and
+    multispanning alpha-helical mitochondrial outer-membrane proteins; dependence
+    varies with substrate and assay.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.107567
+    notes: Radiolabeled precursor import, mim1-23 controls and precursor co-purification
+      support an import role. Fis1 and Gem1 import are impaired under these isolated-mitochondrial
+      assay conditions; these results do not prove an exclusive route.
+  - reference: DOI:10.1016/j.isci.2019.100779
+    notes: Msp1 import is strongly MIM dependent, Gem1 is only moderately dependent,
+      and Fis1 and Mcr1 mitochondrial levels are largely MIM independent. This preserves
+      the contrast with the later import assays.
+  - reference: DOI:10.7554/eLife.34488
+    notes: Loss of Mim1/Mim2 impairs Tom20 and Ugo1 import. Heterologous pATOM36 rescues
+      Tom20 much more effectively than Ugo1, so functional interchangeability is substrate
+      limited.
+evidence:
+- reference: DOI:10.1016/j.celrep.2020.107567
+  notes: 'Doan et al. (2020), The Mitochondrial Import Complex MIM Functions as Main
+    Translocase for alpha-Helical Outer Membrane Proteins. Main text, Figures 1-4
+    and experimental methods inspected in the institutional publisher PDF. CC BY-NC-ND:
+    figures not hosted.'
+- reference: DOI:10.7554/eLife.34488
+  notes: Independent evolution of functionally exchangeable mitochondrial outer membrane
+    import complexes. Relevant yeast and heterologous Results, Discussion, strain/microscopy
+    methods and Figure 5 inspected in checksum-verified PMC6010339 version 1.
+- reference: DOI:10.1016/j.isci.2019.100779
+  notes: The Biogenesis of Mitochondrial Outer Membrane Proteins Show Variable Dependence
+    on Import Factors. Signal-anchored and tail-anchored Results, Discussion and limitations
+    inspected in checksum-verified PMC6965732 version 1.
+- reference: GO:0098799
+  notes: 'Broader is-a parent: outer mitochondrial membrane protein complex.'
+- reference: GO:0005741
+  notes: Containing mitochondrial outer membrane, not an is-a parent.
+causal_graphs:
+- graph_id: yeast_mim_import_and_partner_populations
+  title: MIM-dependent import and distinct TOM/SAM-associated populations
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  description: MIM promotes selected precursor-import and assembly reactions and associates
+    separately with TOM and SAM.
+  scope_notes: Edges describe YPH499-derived isolated-mitochondrial experiments in
+    the 2020 Cell Reports study, not one temporal sequence or one TOM-MIM-SAM supercomplex.
+    Association is not direct-contact or pore-transit proof. Fis1/Mcr1 dependence
+    differs from earlier steady-state measurements; no exclusive import route, fixed
+    stoichiometry or directly observed exchange between MIM populations is asserted.
+  nodes:
+  - node_id: mim
+    label: MIM complex
+    node_type: STRUCTURE
+    grounding: GO:0140595
+  - node_id: tom
+    label: mitochondrial outer membrane translocase complex
+    node_type: STRUCTURE
+    grounding: GO:0005742
+  - node_id: sam
+    label: SAM complex
+    node_type: STRUCTURE
+    grounding: GO:0001401
+  - node_id: signal_anchored_import
+    label: Import of tested signal-anchored precursors
+    node_type: STATE
+  - node_id: tail_anchored_import
+    label: Import of tested tail-anchored precursors
+    node_type: STATE
+  - node_id: sam_tom6_intermediate
+    label: SAM-associated Tom6 assembly intermediate
+    node_type: STATE
+  edges:
+  - subject: mim
+    predicate: associates with
+    object: tom
+    description: A MIM population associates with the TOM machinery.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.107567
+      notes: 'Figure 3A: Tom20-His affinity purification and BN-PAGE recover a TOM-MIM
+        population distinct from free MIM and SAM-associated MIM.'
+  - subject: mim
+    predicate: associates with
+    object: sam
+    description: A separate MIM population associates with SAM.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.107567
+      notes: 'Figure 3A: Sam35-His affinity purification and BN-PAGE recover SAM-associated
+        MIM. Apparent native-gel size does not determine stoichiometry.'
+  - subject: mim
+    predicate: promotes
+    object: signal_anchored_import
+    description: MIM promotes import of Msp1, Pth2, Mcy1 and the outer-membrane form
+      of Mcr1 under the tested conditions.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.107567
+      notes: 'Figure 1: deletion and mim1-23 import assays plus substrate co-purification
+        distinguish MIM involvement from secondary loss of TOM/SAM. The Mcr1 claim
+        concerns the membrane form, not the soluble intermembrane-space isoform.'
+  - subject: mim
+    predicate: promotes
+    object: tail_anchored_import
+    description: MIM promotes Fis1 and Gem1 import in the isolated-mitochondrial assays.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.107567
+      notes: 'Figure 2: import is impaired in mim1-deletion and mim1-23 mitochondria;
+        imported His-Fis1 co-purifies Mim1 and Mim2. MIM assistance is not equivalent
+        to absolute dependence.'
+  - subject: mim
+    predicate: promotes formation of
+    object: sam_tom6_intermediate
+    description: MIM activity supports formation of a SAM-associated Tom6 assembly
+      intermediate.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.107567
+      notes: 'Figure 4C-D: mim1 perturbations reduce the intermediate, Sam35-HA antibody
+        shift identifies SAM association, and a Sam50 POTRA deletion enhances both
+        MIM-SAM association and Tom6 intermediate formation. Direct molecular handoff
+        is inferred rather than visualized.'
+discussions:
+- discussion_id: interacting_complex_and_substrate_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Distinguish MIM constituents from interacting import systems, substrates
+    and functional substitutes.
+  rationale: TOM and SAM association, precursor binding and heterologous rescue do
+    not establish additional constitutive MIM components.
+  resolution_note: Keep Mim1 and Mim2 as the two curated constituent families. Do
+    not add TOM, SAM, Tom70, Tom5, Tom6, imported substrates or pATOM36 as MIM components.
+    TOM13 is a historical Mim1 name, not proof of constitutive TOM membership. Do
+    not equate MIM with the mitochondrial inner membrane, MIMAS, or a stable TOM-MIM-SAM
+    supercomplex.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.107567
+    notes: Separate MIM populations and substrate-dependent Tom70 cooperation.
+  - reference: DOI:10.7554/eLife.34488
+    notes: pATOM36 substitutes for selected yeast MIM functions but poorly rescues
+      Ugo1 import; yeast MIM does not replace the pATOM36 DNA-inheritance function.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: substrate_and_assay_dependence
+  kind: CONTROVERSY
+  status: OPEN
+  prompt: Resolve the assay-dependent differences in Fis1 and Mcr1 dependence on MIM.
+  attaches_to:
+  - functions#alpha_helical_outer_membrane_insertion
+  - causal_graphs#yeast_mim_import_and_partner_populations
+  rationale: The iScience study finds largely preserved mitochondrial levels of Fis1
+    and Mcr1 and only minor Fis1 mistargeting, whereas the later Cell Reports import
+    assays detect MIM-dependent effects. Steady-state abundance, targeting fidelity
+    and import kinetics are different readouts; these sources do not establish which
+    experimental differences explain the contrast.
+  evidence:
+  - reference: DOI:10.1016/j.isci.2019.100779
+    notes: Signal-anchored and tail-anchored Results and Discussion explicitly distinguish
+      strong Msp1 dependence, moderate Gem1 dependence and largely independent Fis1/Mcr1
+      behavior.
+  - reference: DOI:10.1016/j.celrep.2020.107567
+    notes: Figures 1-2 report impaired precursor import in mim1-deletion and mim1-23
+      mitochondria.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: native_architecture_and_exchange
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve native MIM stoichiometry and the proposed exchange between free,
+    TOM-associated and SAM-associated populations.
+  rationale: Native-gel migration and complementation do not resolve an intact atomic
+    structure or fixed copy number. Competition and altered association support a
+    dynamic-exchange model without directly observing exchange. The hosted microscopy
+    shows organelle morphology, not molecular MIM localization or structure.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.107567
+    notes: Discussion proposes redistribution among populations from association and
+      competition experiments.
+  - reference: DOI:10.7554/eLife.34488
+    notes: Figure 5 visualizes mito-GFP morphology in W303-derived deletion/rescue
+      cells. Heterologous coexpression experiments support a two-protein machinery
+      but not fixed native stoichiometry.
+  posed_by: codex
+  posed_date: '2026-10-04'
+images:
+- image_id: pmc_pmc6010339_fig5
+  file: pmc6010339_fig5.jpg
+  file_sha256: cdfb8f43e86424b85aa88ac2baa741035d8f107d58fe3b26ad48d595017a5af1
+  source: PMC
+  source_accession: PMC6010339.1 fig5
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6010339/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC6010339.1/elife-34488-fig5.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Daniela G Vitali, Sandro Käser, Antonia Kolb, Kai S Dimmer, Andre Schneider,
+    Doron Rapaport; CC BY, via PubMed Central
+  modality: FLUORESCENCE
+  caption: 'MIM deletion and heterologous rescue phenotypes in W303-derived Saccharomyces
+    cerevisiae, not an image of the MIM complex itself. Full Figure 5: mito-GFP fluorescence
+    and bright-field images of wild type, mim1 deletion, mim2 deletion and double-deletion
+    cells carrying empty vector or trypanosomal pATOM36 (A; scale bars 5 micrometers),
+    with tubular versus fragmented mitochondrial morphology quantified across three
+    experiments (B). pATOM36 expression restores tubular morphology; it is a functional
+    substitute, not a MIM constituent. Original multipanel figure retained.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.7554/eLife.34488
+  retrieved_on: '2026-10-04'
+  notes: Figure 5. from article version PMC6010339.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
