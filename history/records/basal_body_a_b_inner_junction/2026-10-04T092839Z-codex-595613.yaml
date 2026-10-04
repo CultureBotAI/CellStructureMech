@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_a_b_inner_junction.yaml
+  slug: basal_body_a_b_inner_junction
+session:
+  id: 2026-10-04T092839Z-codex-595613
+  timestamp: '2026-10-04T09:28:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1038/s44318-025-00392-6
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - datasets
+  - evidence
+  - discussions
+  - images
+  summary: Add evidence-backed basal-body A-B inner junction
+  details: Created one PROPOSED multiprotein junction record through the scaffold and guarded
+    validated writer. Primary PMC11961760.1 JATS and Figures 4/EV4 support region-specific
+    Tetrahymena composition and five core structural-contact edges, not assembly timing. Exact
+    FAP45/FAP210 InterPro families verified; four broader or domain-only matches remain label-only.
+    Unconfirmed LRR and ladder identities, mutant-only replacements, strain/model-source mismatch
+    and the B-C deposition-label conflict are explicit discussions. Three native-verified
+    A-B EMDB datasets and one inspected, policy-verified representative image added; no volume
+    maps or EMPIAR bridge inferred. Generated artifacts and required validation gates will
+    be checked before committing; subsequent PR and same-agent review are tracked on the PR.

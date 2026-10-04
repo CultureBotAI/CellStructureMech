@@ -1,0 +1,380 @@
+identifier: cellstructuremech:basal_body_a_b_inner_junction
+label: basal body A-B inner junction
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein network at the lumen-facing interface between the A- and B-tubules
+  of a basal-body triplet microtubule, forming connections between the two tubules
+  with region-specific composition.
+definition_source: DOI:10.1038/s44318-025-00392-6
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T09:26:35Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T09:28:14Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added bounded basal-body A-B inner-junction composition, core structural-contact
+    graph, verified EMDB datasets and density preview; preserved uncertain identities,
+    region-specific composition, mutant-only replacements and model-fitting limitations.
+  llm_assisted: true
+parent_structures:
+- GO:0140535
+part_of:
+- GO:0036064
+components:
+- component_id: poc1
+  label: POC1 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Bridges the A1/B10 inner junction in proximal and central-core basal-body
+    regions. At the core it also provides an attachment toward the separate inner
+    scaffold.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+    notes: Results, Figures 2 and 4, and Figure EV4 place Poc1 at the junction. Poc1
+      deletion produces heterogeneous defects and replacement compositions, not uniform
+      absence of every A-B junction; assembly essentiality is not assigned.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR050505 combines WDR55 and POC1; IPR020472 is a WD40
+    repeat. Neither is an exact POC1 family identity. The inspected Q229Z6 sequence
+    belongs to the SB210 reference strain and is not paired to the B2086 experiment.
+- component_id: fap52
+  label: FAP52 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Core-region microtubule inner protein contacting B9 and B10. A FAP52-like
+    protein occupies a different, predominantly B9 position proximally; its precise
+    paralog identity is unresolved.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+    notes: Figures 2B, 4 and EV4 support the core assignment by model fitting. The
+      proximal assignment is explicitly FAP52-like, not proven to be the same gene
+      product as core FAP52.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Core axonemal model CFAP52A in PDB 8G2Z maps to Q22ZH2. Its InterPro
+    IPR050630 is the broader WD repeat Echinoderm Microtubule-associated Protein-like
+    family; WD40 annotations are domains or repeats. Potential proximal paralogs I7MJ23,
+    Q24C92 and I7MLQ3 do not establish one exact FAP52 grounding.
+- component_id: fap106
+  label: FAP106 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Microtubule inner protein fitted at the proximal and core A-B inner junctions.
+    Core models place it adjacent to FAP52; that proposed contact is not a binding
+    assay.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+    notes: Figures 2, 4 and EV4 identify FAP106 by structural fitting. Recruitment
+      hierarchies from other species' axonemes are not direct basal-body assembly
+      evidence.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR052102 combines enkurin and enkurin domain-containing
+    protein 1, whereas IPR027012 is an enkurin domain. Neither establishes an exact
+    whole-protein FAP106 family. No Tetrahymena accession is guessed from a name search.
+- component_id: ij34
+  label: IJ34 family protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Core-region inner-junction protein whose main domain anchors to the A-tubule
+    and whose C-terminal helix tethers FAP52 in the fitted structural model.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+    notes: 'Figure 4F compares the core and axonemal models: different C-terminal-helix
+      positions retain the FAP52 connection. This is a structural comparison, not
+      a time-resolved conformational trajectory.'
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The IJ34 model entity in PDB 8G2Z maps to I7M9T0. Its InterPro
+    IPR028034 and IPR040673 annotations are CCDC81 HU domains 1 and 2, not an exact
+    IJ34 family. These domain names do not equate IJ34 with the separately named CCDC81b.
+- component_id: fap45
+  label: Cilia- and flagella-associated protein 45
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Core-region junction-associated microtubule inner protein assigned within
+    the 48-nm reconstruction by fitting an axonemal protein model.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+    notes: Figures 4A and EV4A support the core assignment. Model source PDB 8G2Z
+      maps CFAP45 to W7XCX2, whose exact InterPro family is IPR033253; this model
+      crosscheck is not a strain-matched basal-body protein example.
+  grounding: InterPro:IPR033253
+- component_id: fap210
+  label: Cilia- and flagella- associated protein 210
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Core-region junction-associated microtubule inner protein assigned within
+    the 48-nm reconstruction; its possible FAP52 contact remains model-derived.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+    notes: Figures 4A and EV4A support the core assignment. Model source PDB 8G2Z
+      maps CFAP210 to Q23EX8, annotated with the exact InterPro family IPR039986 despite
+      a domain-based UniProt protein name. No direct binding assay is inferred.
+  grounding: InterPro:IPR039986
+canonical_examples:
+- taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  note: Cryo-ET and focused subtomogram averages of isolated basal bodies resolve
+    proximal and central-core A-B junction networks. Methods identify wild-type B2086;
+    the canonical example is species-level. SB210 reference sequences and CU428 axonemal
+    models are not asserted to be strain-matched experimental examples.
+  reference: DOI:10.1038/s44318-025-00392-6
+functions:
+- function_id: luminal_a_b_connection
+  label: luminal A-B tubule connection
+  description: Forms luminal connections between the A- and B-tubules of basal-body
+    triplets. Core junctions also provide an attachment site toward the distinct inner
+    scaffold.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+    notes: Results and Figures 2 and 4 support the junction's structural role. Stability
+      is a structural interpretation, not a measured force threshold or a phenotype
+      attributable only to this junction in pleiotropic poc1 mutants.
+causal_graphs:
+- graph_id: core_junction_contacts
+  title: Core-region A-B junction contacts
+  description: A bounded contact network from fitted Tetrahymena basal-body core models.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Edges describe contacts inferred from cryo-ET density and fitted models,
+    not biochemical binding measurements or temporal assembly order. Proximal FAP52-like
+    placement differs. Unconfirmed LRR identity and proposed FAP106/FAP210 contacts
+    are not promoted to established graph edges.
+  nodes:
+  - node_id: poc1
+    label: POC1 family protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: poc1
+  - node_id: fap52
+    label: FAP52 family protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: fap52
+  - node_id: ij34
+    label: IJ34 family protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: ij34
+  - node_id: a_tubule
+    label: basal-body A-tubule
+    node_type: STRUCTURE
+  - node_id: b_tubule
+    label: basal-body B-tubule
+    node_type: STRUCTURE
+  edges:
+  - subject: poc1
+    predicate: contacts
+    object: a_tubule
+    description: Poc1 occupies the A1 side of the core inner junction.
+    evidence:
+    - reference: DOI:10.1038/s44318-025-00392-6
+      notes: Figures 4A-B and EV4A place Poc1 at A1/B10.
+  - subject: poc1
+    predicate: contacts
+    object: b_tubule
+    description: Poc1 bridges toward B10 at the core inner junction.
+    evidence:
+    - reference: DOI:10.1038/s44318-025-00392-6
+      notes: Figures 4A-B and EV4A resolve its bridging position.
+  - subject: fap52
+    predicate: contacts
+    object: b_tubule
+    description: Core FAP52 lies across the B9/B10 lateral interface.
+    evidence:
+    - reference: DOI:10.1038/s44318-025-00392-6
+      notes: Figures 2B and 4 and Results distinguish this position from the predominantly
+        B9 proximal FAP52-like protein.
+  - subject: ij34
+    predicate: anchors to
+    object: a_tubule
+    description: The main IJ34 globular domain anchors to the A-tubule in the fitted
+      core model.
+    evidence:
+    - reference: DOI:10.1038/s44318-025-00392-6
+      notes: Figure 4F and the accompanying structural comparison identify the main-domain
+        anchor.
+  - subject: ij34
+    predicate: tethers
+    object: fap52
+    description: The IJ34 C-terminal helix contacts FAP52 despite a different helix
+      position from the axonemal model.
+    evidence:
+    - reference: DOI:10.1038/s44318-025-00392-6
+      notes: Figure 4F and Results support the structural tether; flexibility is inferred
+        from comparing structures, not observed real-time motion.
+datasets:
+- accession: EMDB:EMD-46437
+  title: Wild-type proximal A-B inner junction, 16-nm repeat
+  description: Focused proximal basal-body junction reconstruction.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and focused subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-46437
+  publication: DOI:10.1038/s44318-025-00392-6
+  notes: Released native EMDB metadata, natural-source taxon 5911 and exact primary
+    citation verified. Repeat length describes the reconstruction window, not universal
+    whole-junction stoichiometry. Full volume maps are not retained.
+- accession: EMDB:EMD-46439
+  title: Wild-type central-core A-B inner junction, 48-nm repeat
+  description: Longer-repeat reconstruction used for core-region protein assignments.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and focused subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-46439
+  publication: DOI:10.1038/s44318-025-00392-6
+  notes: Released native EMDB metadata, natural-source taxon 5911 and exact primary
+    citation verified. Repeat length describes the reconstruction window, not universal
+    whole-junction stoichiometry. Full volume maps are not retained.
+- accession: EMDB:EMD-46440
+  title: Wild-type central-core A-B inner junction, 16-nm repeat
+  description: Focused core-region reconstruction resolving the junction interface.
+  organism: Tetrahymena thermophila
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and focused subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-46440
+  publication: DOI:10.1038/s44318-025-00392-6
+  notes: Released native EMDB metadata, natural-source taxon 5911 and exact primary
+    citation verified. Repeat length describes the reconstruction window, not universal
+    whole-junction stoichiometry. Full volume maps are not retained.
+evidence:
+- reference: DOI:10.1038/s44318-025-00392-6
+  notes: 'Li et al. 2025. Checksum-verified official PMC11961760.1 JATS: proximal/core
+    and mutant Results, relevant Discussion and Methods, tables and figure captions
+    read. Figures 4 and EV4 inspected visually. Molecular fitting assignments are
+    distinguished from perturbation and direct binding evidence; no verbatim snippets
+    are asserted.'
+- reference: PMID:39994484
+  notes: Bibliographic identity verified against official PMC and EMDB citations.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the basal-body A-B junction from neighboring structures.
+  rationale: This is a named multiprotein junction network, not one protein or a whole
+    triplet.
+  notes: Hidden- and ignored-inclusive repository searches found no existing identity
+    record. Complete GO searches for inner junction, basal body and triplet found
+    no exact basal-body A-B cellular component. GO:0160113 specifically denotes the
+    axonemal doublet inner junction and remains a separate record. The A-C intertriplet
+    linker, B-C junction, inner scaffold and unassigned proximal inner ladder are
+    not synonyms. GO:0140535 is broader is-a; GO:0036064 is parthood.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+  - reference: GO:0160113
+  - reference: GO:0140535
+  - reference: GO:0036064
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: exact_family_groundings
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact POC1, FAP52, FAP106 and IJ34 family groundings.
+  rationale: Broader families, individual domains and organism-specific sequences
+    do not define exact taxon-agnostic component classes.
+  notes: These four components remain REVIEWED_LABEL_ONLY for the documented reasons.
+    FAP45 and FAP210 have exact InterPro family annotations. RCSB 8G2Z is a CU428
+    axonemal doublet, not a basal-body deposition; its sequence mappings are used
+    only to crosscheck model identities. The inspected unreviewed UniProt entries
+    are SB210 references. Neither source supports a B2086 strain-paired example.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: unassigned_densities
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Confirm the LRR protein and proximal ladder identities experimentally.
+  rationale: A plausible predicted-model fit does not establish a unique molecular
+    identity.
+  notes: Q22N53 is a candidate for the core arch-shaped LRR density; the authors explicitly
+    defer confirmation of identity and function. Its proposed N-terminal hairpin dimer
+    and contacts remain models, not established components or stoichiometry. Its computational
+    UniProt name is not evidence of kinase activity. The proximal A-B ladder links
+    A13 to B10, but its protein identity and equivalence to the B-C ladder are unresolved.
+    The proximal FAP52-like paralog and core scaffold-attachment stem also remain
+    unassigned.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: wild_type_and_mutant_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep mutant replacements and neighboring proteins out of wild-type composition.
+  rationale: poc1 deletion affects multiple basal-body modules and yields heterogeneous
+    junctions.
+  notes: PACRG, FAP20 and the CCDC81b/BMIP1-associated axonemal-like configurations
+    occur in mutant core subclasses; they are not added as normal wild-type basal-body
+    junction constituents. IJ34 is not equated to CCDC81b through shared domain annotations.
+    Tubulins are junction substrates here, and the inner scaffold is a separate connected
+    structure, not an extra component family. Subtomogram class percentages are not
+    organismal prevalence.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: mechanism_and_spatial_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Avoid inferring assembly timing, direct binding or universal geometry.
+  rationale: The analyzed basal bodies are mature; spatial comparisons are not time
+    courses.
+  notes: Proximal-to-core composition and lattice-angle differences do not establish
+    temporal recruitment order. FAP106 recruitment hierarchies from another species'
+    axoneme are not transferred here. Potential FAP52-FAP106 and FAP52-FAP210 contacts
+    in EV4 remain model-based. No assembly essentiality, force threshold, general
+    stoichiometry or broad taxonomic distribution is asserted.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: dataset_label_conflict
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Use native deposition metadata to bound dataset links.
+  rationale: The article's B-C entry label conflicts with the native archive title.
+  notes: Table 2 labels EMD-46438 as core B-C, whereas its native EMDB title says
+    proximal B-C. It is outside this A-B record and is not linked or silently relabeled.
+    Only the three native-verified wild-type A-B datasets are included.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: emdb_46440
+  file: emd_46440.png
+  file_sha256: feb57c8110b7ff8737f5ac412c1712576437c5441e3097d0df8a8b0f42e4e910
+  source: EMDB
+  source_accession: EMD-46440
+  source_url: https://www.ebi.ac.uk/emdb/EMD-46440
+  download_url: https://ftp.ebi.ac.uk/pub/databases/emdb/structures/EMD-46440/images/emd_46440.png
+  licence: PUBLIC_DOMAIN
+  licence_url: https://www.ebi.ac.uk/emdb/policies.html
+  attribution: Li S, Fernandez J, Ruehle M, Fabritius A, Pearson C, Agard DA, Winey
+    M; EMDB depositor representative figure, without copyright restrictions.
+  modality: CRYO_ET
+  caption: Representative density rendering of a focused 16-nm repeat of the wild-type
+    Tetrahymena basal-body central-core A-B inner junction. This is a subtomogram
+    average with adjacent tubule density, not a raw micrograph, whole basal body or
+    individually labeled protein model. No scale bar is shown.
+  taxon_id: NCBITaxon:5911
+  taxon_label: Tetrahymena thermophila
+  reference: DOI:10.1038/s44318-025-00392-6
+  retrieved_on: '2026-10-04'
+  notes: Native EMDB taxon, citation and authors verified; PNG inspected and SHA-256
+    checked. EMDB policy section 3.1.2 requires representative figures free of copyright
+    restrictions, recorded using the repository adapter's PUBLIC_DOMAIN convention.
+    No EMPIAR link is inferred. Paper figures were inspected separately, not hosted.
