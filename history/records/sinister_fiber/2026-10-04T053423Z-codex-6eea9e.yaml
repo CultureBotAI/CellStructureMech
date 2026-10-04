@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/sinister_fiber.yaml
+  slug: sinister_fiber
+session:
+  id: 2026-10-04T053423Z-codex-6eea9e
+  timestamp: '2026-10-04T05:34:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - images
+  summary: Add source-bounded sinister fiber record
+  details: Added the native BAp95-containing basal-body to s-root linker from DOI:10.1083/jcb.140.5.1149,
+    with UniProtKB:O49944 explicitly UNREVIEWED, NCBITaxon:3192, GO:0043232 is-a parent and
+    GO:0005856 parthood. Kept recombinant assembly separate from native biogenesis, excluded
+    unsupported physiological and cross-taxon claims, and linked the verified PMC2132688 Figure
+    7 without hosting its noncommercial image. Hidden/ignored-inclusive deduplication completed;
+    model-drafted record remains PROPOSED.
