@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/transition_zone_stellate_fiber_system.yaml
+  slug: transition_zone_stellate_fiber_system
+session:
+  id: 2026-10-04T045929Z-codex-40512c
+  timestamp: '2026-10-04T04:59:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - evidence
+  - discussions
+  - images
+  summary: Add the transition zone stellate fiber system
+  details: 'Created a distinct luminal stellate-fiber record after ignored/hidden-inclusive
+    deduplication and live GO searches. Sources: Sanders and Salisbury 1994; Taillon et al.
+    1992; Jarvik and Suhan 1991 (abstract only); Lohret et al. 1998; Diener et al. 2015 ultrastructure
+    Results; van den Hoek et al. 2022 native architecture Results. Verified GO parent/parthood,
+    NCBI taxon 3055, UniProt P05434 and broad InterPro family boundaries. Restricted the graph
+    to observed contraction/doublet displacement; retained conflicting excision findings and
+    excluded whole-TZ proteins. Figure 2 is link-only after visual, checksum and licence verification.
+    Scaffold and guarded mutation passed closed-schema validation; full QC and authority gates
+    follow before commit. No PR or review issue exists yet.'
