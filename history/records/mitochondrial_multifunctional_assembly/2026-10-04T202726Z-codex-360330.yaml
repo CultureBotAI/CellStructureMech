@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mitochondrial_multifunctional_assembly.yaml
+  slug: mitochondrial_multifunctional_assembly
+session:
+  id: 2026-10-04T202726Z-codex-360330
+  timestamp: '2026-10-04T20:27:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  summary: Clarify the inferred Cox13 biogenesis route
+  details: 'Pre-PR full-record inspection tightened the function description: transient Cox13
+    association is observed, whereas transfer from MIMAS into complex IV is an interpretation
+    of import/chase and Rcf1 data, not direct tracking between complexes. This refines the
+    creation entry 2026-10-04T202257Z-codex-c41a03 without changing identity, components,
+    identifiers or mechanism edges. Guarded old-value assertion, curation event and byte-identical
+    round trip passed. Embeddings and site will be regenerated before full QC. No PR or review
+    issue existed at this point.'

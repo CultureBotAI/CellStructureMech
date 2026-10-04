@@ -5796,6 +5796,15 @@
   "definition": "Protease complex of the mitochondrial inner membrane, consisting of at least two subunits, involved in processing of both nuclear- and mitochondrially-encoded proteins targeted to the intermembrane space."
  },
  {
+  "identifier": "cellstructuremech:mitochondrial_multifunctional_assembly",
+  "label": "mitochondrial multifunctional assembly",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mitochondrial_multifunctional_assembly.html",
+  "definition": "A biochemically isolatable protein-lipid assembly of the mitochondrial inner membrane characterized in Saccharomyces cerevisiae. MIMAS brings together metabolite carriers, dehydrogenases, respiratory-chain biogenesis factors and phospholipid enzymes, with stability dependent on phosphatidylethanolamine production."
+ },
+ {
   "identifier": "GO:0005742",
   "label": "mitochondrial outer membrane translocase complex",
   "category": "OTHER",
