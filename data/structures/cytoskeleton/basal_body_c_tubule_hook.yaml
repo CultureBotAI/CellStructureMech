@@ -1,0 +1,198 @@
+identifier: cellstructuremech:basal_body_c_tubule_hook
+label: basal body C-tubule hook
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A hook-shaped proteinaceous linker at the external B-C interface of a
+  basal-body microtubule triplet. In the distal half of isolated Chlamydomonas reinhardtii
+  basal bodies, hook densities occupy the C1 position, extend across the outer surfaces
+  of C2-C4, and recur along the triplet axis.
+definition_source: DOI:10.1038/emboj.2011.460
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T11:30:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T11:32:38Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added bounded Chlamydomonas morphology, axial repeat, structural linkage,
+    whole-triplet dataset and link-only Figure 4 provenance. Kept molecular composition,
+    causal mechanism and C-stretch equivalence unresolved.
+  llm_assisted: true
+- timestamp: '2026-10-04T11:37:25Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_SCOPE
+  changes: Corrected the C-stretch comparison genus to Teranympha mirabilis after
+    reinspection of Nazarov et al. Figure 4 and full-name Results. Chlamydomonas-only
+    hook scope and unresolved homology are unchanged.
+  llm_assisted: true
+parent_structures:
+- GO:0005856
+part_of:
+- GO:0036064
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Distal-half triplet reconstructions from isolated basal bodies; Figure 4B
+    distinguishes the exterior hook from the separate luminal C-tubule filaments in
+    Figure 4C. This is a species example, not a claim of occurrence in every strain
+    or every basal-body region.
+  reference: DOI:10.1038/emboj.2011.460
+functions:
+- function_id: external_b_c_linkage
+  label: external B-C tubule linkage
+  description: In the characterized Chlamydomonas distal region, the hook bridges
+    the B4/C1 interface and extends across the outer C2-C4 surfaces. This is a structural
+    connection, not a demonstrated hook-specific requirement for assembly, force resistance
+    or motility.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+    notes: Regional cryo-electron tomography averages and Figure 4B resolve the exterior
+      linker. B4 contact is described in the longitudinal-variation Discussion; molecular
+      identity and assembly chronology remain interpretive.
+physical_properties:
+- property: OTHER
+  value: '8'
+  unit: UO:0000018
+  context: Longitudinal spacing of the hook-associated density at C1 in the distal-half
+    Chlamydomonas reinhardtii basal-body triplet subtomogram average; not hook length,
+    width or a universal repeat.
+  reference: DOI:10.1038/emboj.2011.460
+datasets:
+- accession: EMDB:EMD-5252
+  title: Chlamydomonas basal-body triplet reconstruction
+  description: Whole-triplet reconstruction deposited with Li et al. 2012, not a separately
+    identified distal-hook submap.
+  organism: Chlamydomonas reinhardtii
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-5252
+  publication: DOI:10.1038/emboj.2011.460
+  notes: Released native EMDB metadata links taxon 3055, strain cc3491 and PMID:22157822
+    with the exact primary DOI. The species example does not transfer this archive-only
+    strain label into an assertion about a separately deposited hook map. Whole-triplet
+    mass, component counts and map resolution are not hook composition or dimensions;
+    no map volume is hosted.
+images:
+- image_id: li_2012_figure4_link
+  source: PMC
+  source_accession: PMC3273388.1:f4
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3273388/figure/f4/
+  licence: OTHER
+  licence_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+  attribution: Sam Li, Jose-Jesus Fernandez, Wallace F Marshall and David A Agard;
+    Figure 4, The EMBO Journal (2012), DOI:10.1038/emboj.2011.460. Copyright 2012
+    European Molecular Biology Organization; CC BY-NC-ND 3.0 Unported.
+  modality: CRYO_ET
+  taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  reference: DOI:10.1038/emboj.2011.460
+  retrieved_on: '2026-10-04'
+  caption: Regional triplet density reconstructions. Panel B shows yellow exterior
+    hooks in the blue distal-half reconstruction beside the green proximal comparison.
+    Panel C instead shows separate luminal filaments. Panel A has a 10-nm scale bar.
+    The displayed segment length is not the biological length of a hook array.
+  notes: 'Link only: the exact JATS license is CC BY-NC-ND 3.0, which has no dedicated
+    schema enum. OTHER preserves those terms; no image file, derivative, download
+    URL or hosted-copy checksum is supplied. The original multipanel figure was visually
+    inspected using the checksum-verified PMC media object. These are averaged-density
+    renderings and sections, not single-particle raw micrographs.'
+evidence:
+- reference: DOI:10.1038/emboj.2011.460
+  notes: Li et al. 2012, PMID:22157822. Official PMC3273388.1 JATS and Figure 4 media
+    checksums verified; non-tubulin and longitudinal Results, longitudinal Discussion,
+    Methods and figure captions read. The morphology is directly observed, but the
+    proposed assembly sequence and protein assignments are not established by those
+    static reconstructions. No verbatim snippet is asserted.
+- reference: DOI:10.15252/embj.2020106249
+  notes: Nazarov et al. 2020, PMID:32954505. Official PMC7667878.1 JATS and Figure
+    4 media checksums verified; comparative peripheral architecture Results and organism/purification
+    Methods inspected. Figure 4I supports a Teranympha mirabilis C-stretch lead, not
+    an established cross-species synonym or example of this hook.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate the external C-tubule hook from other triplet linkers.
+  rationale: This is an imaged named subassembly, not a gene product.
+  notes: The curated label denotes the hook-shaped arm and its axial repetition described
+    by Li et al., not the whole C-tubule or every outer B-C contact. Hidden/ignored-inclusive
+    label, synonym, slug and citation searches found no existing record. Complete
+    C-tubule-hook, C-stretch and outer-junction GO searches found no exact cellular-component
+    term. GO:0160114 denotes an axonemal A-B outer junction, not this B-C structure.
+    GO:0005856 is the broader cytoskeletal class and GO:0036064 is parthood. OTHER
+    avoids asserting an identified multiprotein composition. The B-C inner junction,
+    intertriplet A-C linker, Y-shaped inner scaffold and luminal C-tubule filaments
+    are outside this boundary.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+  - reference: GO:0005856
+  - reference: GO:0036064
+  - reference: GO:0160114
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: molecular_identity
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify the protein constituents of the distal C-tubule hook.
+  rationale: Density shape and estimated mass do not identify gene products.
+  notes: The primary paper leaves the hook as an unknown protein or complex. Components,
+    stoichiometry and molecular groundings remain unset. The approximately 270-kDa
+    estimate uses density volume and an assumed protein density, not biochemical composition.
+    A sequence-resolved assignment to this exact region is needed before adding component
+    families.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: declined_component_and_mechanism_inferences
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep assembly hypotheses separate from direct hook composition.
+  rationale: Regional correlation is not molecular or causal identification.
+  notes: Delta-tubulin is proposed for proximal C1, not experimentally assigned to
+    the distal hook. POC5 maturation phenotypes likewise do not identify a hook constituent.
+    These proteins are not added. Interaction with the separate C3-to-C6/C7 luminal
+    filament is conjectural; co-occurrence is not a demonstrated contact. No causal
+    graph, trait link, hook-specific essentiality or chronological replacement mechanism
+    is asserted.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: c_stretch_relationship
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the relationship between the hook and the C-stretch.
+  rationale: A similar position alone cannot establish homology or synonymy.
+  notes: Nazarov et al. show a C1 extension called the C-stretch in Teranympha mirabilis.
+    The inspected description and Figure 4I do not equate it to the Chlamydomonas
+    external hook spanning C2-C4. C-stretch is not added as an exact synonym, and
+    Teranympha is not added as a canonical example or clade-level distribution assertion.
+    A direct structural comparison is needed before either lumping or declaring distinct
+    identities.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+  - reference: DOI:10.15252/embj.2020106249
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: measurement_and_provenance_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish a biological repeat from reconstruction metadata.
+  rationale: An imaging window and map resolution are not structure size.
+  notes: Only the source's distal 8-nm axial repeat is represented as a physical property.
+    Figure segment lengths and reconstruction resolution are not dimensions of the
+    hook. EMD-5252 is linked as a whole-triplet deposit; Figure 4B is the explicit
+    regional visual evidence. Its noncommercial, no-derivatives license is preserved
+    by an external link without copying the figure.
+  evidence:
+  - reference: DOI:10.1038/emboj.2011.460
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'

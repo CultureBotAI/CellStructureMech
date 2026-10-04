@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_c_tubule_hook.yaml
+  slug: basal_body_c_tubule_hook
+session:
+  id: 2026-10-04T113801Z-codex-c4af83
+  timestamp: '2026-10-04T11:38:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.15252/embj.2020106249
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  summary: Correct the comparison organism to Teranympha mirabilis before the first commit
+  details: 'Reinspection of the original Nazarov et al. Figure 4 and the full-name Results
+    exposed an incorrect expansion of T. mirabilis in the draft. A guarded YAML mutator asserted
+    both affected fields, replaced Trichonympha mirabilis with Teranympha mirabilis, and appended
+    an LLM-assisted curation event through write_validated_structure. The historical CREATE
+    record is preserved. No taxon CURIE or canonical example changes: the hook remains scoped
+    to Chlamydomonas reinhardtii and C-stretch equivalence remains unresolved. Evidence/discussion
+    text is outside the semantic embedding projection; full embedding consistency and regenerated-site
+    gates will nevertheless be run. This was a pre-commit source-verification correction,
+    not an independent or human review.'
