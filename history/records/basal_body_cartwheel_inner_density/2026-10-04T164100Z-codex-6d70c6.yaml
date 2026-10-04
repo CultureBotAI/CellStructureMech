@@ -1,0 +1,45 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml
+  slug: basal_body_cartwheel_inner_density
+session:
+  id: 2026-10-04T164100Z-codex-6d70c6
+  timestamp: '2026-10-04T16:41:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7667884/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7667878/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC6721650/
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - part_of
+  - canonical_examples
+  - physical_properties
+  - datasets
+  - images
+  - discussions
+  summary: Add the basal body cartwheel inner density as a distinct native subassembly
+  details: Created via the validated scaffold and guarded writer after hidden/ignored-inclusive
+    searches and parsed identities across 872 records plus complete native GO queries. Inspected
+    checksum-verified Klena and Nazarov 2020 JATS, native specimens, CID measurements, source
+    figures and reconstruction classes; added four microbial examples, four scoped spacing
+    observations and two non-equivalent EMDB class records. Imported the exact unchanged CC
+    BY 4.0 Chlamydomonas Figure 1 with verified checksums and graphic-correct panel lettering.
+    Distinguished whole-CID granularity from individual densities, SAS-6 hub rings and continuous
+    filamentous CID. Declined speculative host Poc1B and surrounding hub-protein assignments
+    after inspecting the 2019 discussion and native 2026 PDB entity metadata; newer full Results
+    and Methods remain unread. Kept composition, specific function and polarity/homology questions
+    open, with no invented components, causal graph, stoichiometry or broad distribution.
+    Refined the occupancy source pointer during the precommit reread; byte-stable re-emission
+    passed. Native taxonomy, unit and EMDB metadata verified; iModulonDB did not cover these
+    organisms. Mapping remains PROPOSED. Generated artifacts and validation accompany the
+    PR. No PR existed at history creation.
