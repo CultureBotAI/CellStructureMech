@@ -1,0 +1,238 @@
+identifier: cellstructuremech:basal_body_pinhead
+label: basal body pinhead
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A proteinaceous subassembly on the luminal face of the A-tubule in the
+  proximal region of a microbial ciliary basal body or pro-basal body, forming the
+  peripheral connection toward the cartwheel spokes. In Chlamydomonas reinhardtii
+  it has a bent pinbody and two pinfeet attached to protofilament A3.
+definition_source: DOI:10.7554/eLife.43434
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T13:45:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T13:47:45Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added pinhead architecture, Chlamydomonas example, 8-nm repeat, scoped
+    Bld10 membership, native EMDB dataset and inspected CC BY figure. Kept density
+    assignments and inaccessible full-text follow-up explicit; no universal composition
+    or assembly chronology asserted.
+  llm_assisted: true
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0036064
+- GO:0120280
+synonyms:
+- synonym_text: centriole pinhead
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.7554/eLife.43434
+components:
+- component_id: bld10_cep135
+  label: Bld10/Cep135
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro IPR051877 includes both CEP135 and TSGA10, as confirmed
+    by reviewed human UniProt entries Q66GS9 and Q9BZW7. It is broader than Bld10/Cep135;
+    PF30381 and PF30378 are domain matches, not exact whole-protein family equivalents.
+  gene_symbols:
+  - BLD10
+  - CEP135
+  essentiality: UNKNOWN
+  role: Cartwheel spoke-tip constituent in Chlamydomonas, supported by the primary
+    report of immuno-EM localization and truncation morphology. This is not a sequence
+    assignment to PinB, PinF1 or PinF2 in the subtomogram average, nor a claim that
+    Bld10 is confined to the pinhead.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2007.09.021
+    notes: The inspected primary abstract reports Bld10 as a major spoke-tip component
+      based on immuno-EM and truncated-protein morphology. Only the abstract was accessible;
+      full Results, Methods and figures were not inspected. Detailed mutant measurements
+      are not curated here.
+  protein_examples:
+  - uniprot_id: UniProtKB:A8ID55
+    protein_label: Basal body protein 10
+    gene_symbol: BLD10
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-04'
+    evidence:
+    - reference: UniProtKB:A8ID55
+      notes: Native UniProt JSON verifies accession, recommended name, gene, taxon
+        and Swiss-Prot status; it is not independent pinhead imaging.
+    - reference: DOI:10.1016/j.cub.2007.09.021
+      notes: Membership is supported at the inspected primary-abstract level, not
+        by a residue-resolved model.
+canonical_examples:
+- taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  note: Cryo-ET and local subtomogram classification of isolated nuclear-flagellar
+    apparatuses resolve pinheads in pro-basal bodies and the proximal region of mother
+    basal bodies. This is not an assertion of pinhead occupancy along the entire basal-body
+    length.
+  reference: DOI:10.7554/eLife.43434
+functions:
+- function_id: cartwheel_microtubule_connection
+  label: ciliary basal body organization
+  grounding: GO:0032053
+  description: Forms the peripheral structural connection between cartwheel spokes
+    and the A-tubule wall in the characterized Chlamydomonas proximal region. This
+    observed connection does not by itself establish a force response, a length-control
+    mechanism or an assembly time course.
+  evidence:
+  - reference: DOI:10.7554/eLife.43434
+    notes: Results and Figures 1 and 2 resolve the connection and the A3-associated
+      pinbody/pinfeet morphology.
+physical_properties:
+- property: OTHER
+  value: '8'
+  unit: UO:0000018
+  context: Axial pinhead repeat in the Chlamydomonas proximal mother-basal-body and
+    pro-basal-body reconstruction, Li et al. 2019 Figure 2D. Each pair of pinfeet
+    associates with an alpha/beta-tubulin dimer on A3. This is not the length of a
+    pinhead or a repeat generalized to other species.
+  reference: DOI:10.7554/eLife.43434
+datasets:
+- accession: EMDB:EMD-9171
+  title: Chlamydomonas pinhead with associated partial A-tubule
+  description: Local subtomogram average of the pinhead and attached A-tubule region,
+    identified as structure 5 in Table 3 of Li et al. 2019.
+  organism: Chlamydomonas reinhardtii
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-9171
+  publication: DOI:10.7554/eLife.43434
+  notes: Released EMDB metadata explicitly identifies the pinhead-associated map,
+    taxon 3055, strain CC849 and the primary DOI/PMID. Its 4763 subtomograms and 23.1-angstrom
+    resolution are reconstruction provenance, not biological counts or dimensions.
+    The map includes tubulin and is not an exact xref for the pinhead alone. No map
+    volume is hosted.
+evidence:
+- reference: DOI:10.7554/eLife.43434
+  notes: Li et al. 2019, PMID:30741631. Checksum-verified PMC6384029.1 JATS pinhead
+    Results, Discussion, reconstruction and periodicity-control Methods, Table 3 and
+    Figure 2 inspected. The original Figure 2 was visually inspected; no sequence
+    assignment follows from its densities.
+- reference: DOI:10.1016/j.cub.2007.09.021
+  notes: Hiraki et al. 2007, PMID:17900905. Primary abstract inspected through Europe
+    PMC; publisher PDF and full-text routes were inaccessible on 2026-10-04. Only
+    the abstract-supported Bld10 spoke-tip membership is used.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the pinhead from its cartwheel and microtubule neighbors.
+  rationale: A named peripheral assembly is neither an entire basal body nor a single
+    protein.
+  notes: Hidden/ignored-inclusive repository searches and parsed identity/synonym
+    checks found mentions but no standalone record. Complete QuickGO searches for
+    pinhead, pinfoot, pinbody, centriole pinhead and cartwheel spoke tip found no
+    exact cellular-component identity. Axonemal radial-spoke terms denote a different
+    assembly. GO:0032991 is a broader class; basal body and pro-basal body are parthood.
+    PinB and PinF1/PinF2 are morphological regions, not identified protein families.
+    The hub, spokes, D2-rod, triplet base, A-C linker, inner scaffold and tubulin
+    wall are not exact synonyms. The record does not impose an obligate cartwheel
+    parthood relation on every pinhead-containing region.
+  evidence:
+  - reference: DOI:10.7554/eLife.43434
+  - reference: DOI:10.15252/embj.2020106246
+  - reference: GO:0032991
+  - reference: GO:0036064
+  - reference: GO:0120280
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: molecular_identity_and_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the pinhead proteome and exact Bld10/Cep135 family grounding.
+  rationale: Localization and domain matches do not assign all resolved densities
+    or a complete proteome.
+  notes: Bld10 membership is retained at the explicitly stated primary-abstract level.
+    Obtain lawful full text of Hiraki 2007 and Noga 2022 before curating domain-specific
+    locations or mutant dimensions. PMC/publisher/Europe PMC full-text routes for
+    Noga were unsuccessful; the PSI DORA item psi:45372 marks its deposited PDF restricted
+    to the intranet, and no restricted file was requested. Its public abstract concerns
+    inter-triplet crosslinks and does not make those links exact pinhead synonyms.
+    Bld10 remains REVIEWED_LABEL_ONLY because IPR051877 also includes TSGA10. Other
+    constituents, stoichiometry and pinhead-specific essentiality remain unresolved.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2007.09.021
+  - reference: DOI:10.15252/embj.2020104582
+  - reference: UniProtKB:A8ID55
+  - reference: InterPro:IPR051877
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: declined_neighbor_assignments
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Avoid transferring cartwheel and triplet identities into the pinhead.
+  rationale: Being part of the same basal body does not establish membership in every
+    subassembly.
+  notes: SAS-6 is discussed as a spoke constituent, but the inspected 2019 map does
+    not identify SAS-6 in PinB or either foot; no SAS-6 pinhead component is asserted.
+    Alpha/beta tubulin supplies the adjoining A3 lattice and is not listed as pinhead
+    composition. The 2020 Bld10 assignment to the triplet base is expressly hypothetical
+    and is not transferred here as a density-resolved model.
+  evidence:
+  - reference: DOI:10.7554/eLife.43434
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: measurement_and_mechanism_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep repeat measurements separate from map dimensions and assembly hypotheses.
+  rationale: Static reconstruction, image processing and proposed mechanics answer
+    different questions.
+  notes: Li et al. tested segment length, overlap, masking, initial reference and
+    mother/pro-basal-body sampling when assessing the 8-nm pinhead repeat. The 19-nm
+    final reconstruction window and 23.1-angstrom resolution are not biological lengths.
+    Pinhead-tip low resolution is consistent with flexibility, not a measured spring
+    constant. Iris-like twist classes, spoke strain, length control and the five-step
+    triplet assembly scheme are interpretations of static data, not a direct time
+    course. No kinetic causal graph or motility trait is asserted. The 2020 Paramecium
+    analysis warns that initial 8.5-nm picking biased its pinhead reconstruction;
+    no repeat from that map is substituted for the explicitly Chlamydomonas-scoped
+    2019 measurement.
+  evidence:
+  - reference: DOI:10.7554/eLife.43434
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: pmc_pmc6384029_fig2
+  file: pmc6384029_fig2.jpg
+  file_sha256: 9be52fd2803806b6eba0a9907365734ffef10776ceae64386b31f566479bcecb
+  source: PMC
+  source_accession: PMC6384029.1 fig2
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6384029/figure/fig2/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC6384029.1/elife-43434-fig2.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Sam Li, Jose-Jesus Fernandez, Wallace F Marshall, David A Agard; CC
+    BY 4.0, via PubMed Central
+  modality: CRYO_ET
+  taxon_id: NCBITaxon:3055
+  taxon_label: Chlamydomonas reinhardtii
+  reference: DOI:10.7554/eLife.43434
+  retrieved_on: '2026-10-04'
+  caption: Chlamydomonas proximal triplet reconstructions. Panel D highlights the
+    pinhead in pink, with PinB, PinF1 and PinF2 labeled and an 8-nm axial repeat.
+    Panels A-C instead show tubule reconstructions and neighboring MIPs. Each row
+    has a 10-nm scale bar. These are averaged density renderings, not raw micrographs.
+  notes: Original multipanel Figure 2 visually inspected and accepted without cropping
+    or modification. The direct JATS graphic was selected separately from nested supplementary
+    figures. Article and media MD5 checksums were verified from PMC OA metadata; the
+    exact licence version was read from JATS. Taxon comes from the experimental text
+    and matches the canonical example. Colors identify segmented densities, not sequence-resolved
+    proteins.
