@@ -1,0 +1,380 @@
+identifier: cellstructuremech:crl4wdr1_ubiquitin_ligase_complex
+label: CRL4WDR1 ubiquitin ligase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A WDR1-containing Cullin4-DDB1 protein complex characterized in procyclic
+  Trypanosoma brucei. The named CRL4WDR1 association participates in regulation of
+  TbPLK protein turnover; its complete catalytic composition and direct ubiquitination
+  of TbPLK have not been established.
+definition_source: DOI:10.1371/journal.ppat.1006146
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T19:38:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T19:40:32Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added three source-bounded constituent classes, verified broad Cul4 parent,
+    procyclic Trypanosoma example, turnover and inheritance functions, nonmechanistic
+    depletion graph, bounded native Figure 2 with verified CC BY 4.0 provenance, and
+    explicit identity, catalytic, family and imaging limits.
+  llm_assisted: true
+synonyms:
+- synonym_text: CRL4WDR1
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1371/journal.ppat.1006146
+parent_structures:
+- GO:0080008
+components:
+- component_id: cullin4
+  label: Cullin4 scaffold subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CUL4
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro Cullin4 and Cullin-D text searches returned no
+    entry. The verified reference protein Q57XW2 maps to the broader Cullin family
+    IPR045093 and shared domains, not an exact Cullin4 family established here. Its
+    putative Cullin4B name is not used to assert A/B orthology.
+  role: Defining cullin scaffold co-isolated with WDR1 and DDB1; direct contacts and
+    copy number are unresolved.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+    notes: Figure 3B-D and the complex-identification Results identify TbCUL4 as Tb927.3.1290.
+      WDR1 immunoprecipitation from a cell line with endogenously tagged WDR1, TbCUL4
+      and TbDDB1 recovers both partners. Other tested cullins, including TbCUL1/Tb927.11.11430,
+      did not co-precipitate WDR1 in that assay.
+- component_id: ddb1
+  label: DDB1 adaptor subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - DDB1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro DDB1 search and the verified reference protein
+    Q586I3 resolve the broader RSE1/DDB1/CPSF1 family IPR050358 and shared propeller
+    domains. None is an exact DDB1-only family mapping established by this review.
+  role: Adaptor co-isolated with WDR1; a WDR1 N-terminal fragment retrieves DDB1 from
+    cell lysate.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+    notes: Figure 3C-E identifies TbDDB1 as Tb927.6.5110. The WDR1 1-300 amino-acid
+      GST fusion pulls down tagged DDB1 from trypanosome lysate; this is not a binding
+      experiment with two purified partners.
+- component_id: wdr1
+  label: WDR1 substrate-recognition subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - WDR1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro WDR1 search returned WDR11/12/18/19 entries, not
+    an exact family for this receptor. WD40 repeats and a PDZ domain are not equivalent
+    to the entire WDR1 class. Complex Portal WDR1 hits were predicted human complexes
+    rather than this trypanosome assembly.
+  role: Receptor-class constituent that associates with DDB1 through its N-terminal
+    region and recognizes TbPLK through C-terminal fragments. Its depletion slows
+    TbPLK turnover.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+    notes: Results and Figures 2-3 identify WDR1 as Tb927.10.15080. Directional yeast
+      two-hybrid and GST/lysate pull-down support TbPLK recognition by C-terminal
+      fragments; the PDZ domain alone is insufficient and is not required. Deleting
+      the TbPLK PEST motif disrupts fragment-mediated association. Full-length WDR1
+      was not tested in yeast because cloning failed. Growth defects after RNAi do
+      not establish essentiality for complex assembly.
+canonical_examples:
+- taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  note: 'The paper studies procyclic cells: strain 29-13 for inducible RNAi and Lister
+    427 for endogenous tagging, with tagging also performed in RNAi lines. Two nonoverlapping
+    WDR1 RNAi fragments and two clones per fragment were tested; the paper presents
+    one representative clone after reporting similar phenotypes. The 927 locus identifiers
+    are reference annotations, not the cultured strain. Yeast two-hybrid hosts and
+    recombinant E. coli expression hosts are not canonical organisms for this complex.'
+  reference: DOI:10.1371/journal.ppat.1006146
+functions:
+- function_id: tbplk_turnover
+  label: regulation of TbPLK protein turnover
+  description: WDR1 depletion slows the loss of TbPLK during a cycloheximide chase
+    and increases its abundance in procyclic T. brucei. This supports a turnover-regulatory
+    role for the named association, but does not establish direct covalent ubiquitination
+    of TbPLK by a purified complex.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+    notes: 'Figure 6A-C measures abundance at 24/48 hours of RNAi and a 0-6-hour chase
+      after 24 hours of induction. Figure 6D detects less polyubiquitinated material
+      in TbPLK immunoprecipitates, but the Results explicitly leave its identity unresolved:
+      TbPLK itself and/or associated proteins.'
+- function_id: organelle_inheritance
+  label: support of bilobe duplication and flagellum attachment
+  description: WDR1 RNAi impairs bilobe duplication, basal-body segregation and new
+    flagellum-attachment-zone assembly, with detached flagella at 48 hours. These
+    are perturbation-supported cellular outputs, not proof that every phenotype is
+    mediated exclusively by direct TbPLK ubiquitination.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+    notes: Figures 4-5 show basal-body, bilobe, FAZ and attachment phenotypes after
+      48 hours of WDR1 RNAi. Figure 7 shows persistent phospho-Ser54 TbCentrin2 staining
+      in late-cycle cells at 24 hours. TbPLK overexpression in S4 Figure phenocopies
+      several effects, but is not a rescue or an epistasis test.
+evidence:
+- reference: DOI:10.1371/journal.ppat.1006146
+  notes: Hu, Zhou, Han and Li; PMID:28052114. Current PMC5241021.1 JATS identity,
+    license and checksum verified. Complex-identification, depletion, turnover and
+    overexpression Results, Discussion and relevant Methods inspected. Native Figures
+    2, 3 and 6 were visually inspected with media checksums verified. Supports the
+    named association and measured intervention outputs; the Figure 8 causal model
+    exceeds the direct biochemical resolution.
+- reference: DOI:10.1038/s41598-025-32077-9
+  notes: PMID:41413177; Table 1 maps the same Tb927.3.1290 scaffold to TbCul-D, not
+    TbCul-E. The newer scaffold-isolation study identifies additional DCAF proteins
+    and Rbx1, without resolving their membership in the WDR1-specific assembly. Used
+    for nomenclature and boundary comparison only.
+causal_graphs:
+- graph_id: wdr1_depletion_outputs
+  title: Measured outputs of WDR1 depletion
+  description: Source-bounded protein and cellular readouts of a receptor-subunit
+    intervention.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: Each edge starts at RNAi, not at an inferred intermediate. The 24-hour
+    chase, immunoprecipitation and phosphostaining, 24/48-hour abundance measurements
+    and 48-hour attachment phenotype remain distinct. No edge asserts direct substrate
+    ubiquitination, a proteasomal reaction, obligatory assembly order or exclusive
+    TbPLK mediation.
+  nodes:
+  - node_id: wdr1_rnai
+    label: WDR1 RNAi induction
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: wdr1
+    label: WDR1 substrate-recognition subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: wdr1
+  - node_id: tbplk_turnover
+    label: TbPLK degradation rate in chase
+    node_type: STATE
+  - node_id: tbplk_abundance
+    label: whole-cell TbPLK abundance
+    node_type: STATE
+  - node_id: polyub_ip
+    label: polyubiquitinated material in TbPLK immunoprecipitate
+    node_type: STATE
+    description: Unresolved protein identities; not a specific measurement of covalently
+      ubiquitinated TbPLK.
+  - node_id: late_ps54
+    label: late-cycle TbCentrin2 phospho-Ser54 staining
+    node_type: STATE
+  - node_id: attachment_defects
+    label: flagellum detachment
+    node_type: STATE
+  edges:
+  - subject: wdr1_rnai
+    predicate: decreases abundance of
+    object: wdr1
+    description: WDR1 protein is depleted by the induced RNAi intervention.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1006146
+      notes: Figures 4A and 6A monitor tagged WDR1 protein. Figure 6A includes 24-
+        and 48-hour induction samples; this is protein depletion, not proof of complex
+        disassembly.
+  - subject: wdr1_rnai
+    predicate: reduces
+    object: tbplk_turnover
+    description: TbPLK is lost more slowly during cycloheximide treatment after 24
+      hours of RNAi.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1006146
+      notes: 'Figure 6B-C: 0-6-hour chase, normalized to TbPSA6; three independent
+        experiments. The edge is a measured turnover effect, not a direct catalytic
+        reaction.'
+  - subject: wdr1_rnai
+    predicate: increases
+    object: tbplk_abundance
+    description: TbPLK protein accumulates after 24 and 48 hours of WDR1 RNAi.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1006146
+      notes: 'Figure 6A: anti-TbPLK immunoblot with TbPSA6 loading control; three
+        repeats reported as similar.'
+  - subject: wdr1_rnai
+    predicate: decreases
+    object: polyub_ip
+    description: Less anti-ubiquitin signal is recovered in TbPLK immunoprecipitates
+      after 24 hours of RNAi.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1006146
+      notes: Figure 6D and accompanying Results explicitly warn that the detected
+        polyubiquitinated proteins could include TbPLK or co-precipitated partners.
+        No substrate identity is assigned.
+  - subject: wdr1_rnai
+    predicate: yields cells retaining
+    object: late_ps54
+    description: PS54 staining persists in 1N2K and 2N2K cells after 24 hours of RNAi.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1006146
+      notes: 'Figure 7: PS54 detects phospho-Ser54 TbCentrin2, with 20H5 marking the
+        bilobe. This does not directly measure kinase flux or prove the complete proposed
+        mediation chain.'
+  - subject: wdr1_rnai
+    predicate: increases
+    object: attachment_defects
+    description: Detached flagella occur in the 48-hour RNAi population.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1006146
+      notes: Figure 4D-E quantifies the attachment phenotype. This later readout is
+        not treated as a direct consequence of any single 24-hour biochemical readout.
+discussions:
+- discussion_id: exact_identity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate CRL4WDR1 from generic Cul4 and other DDB1 complexes.
+  rationale: Shared cullin or receptor names do not establish equivalence.
+  notes: Parsed identities and synonyms across 876 prior records and whole-repository
+    hidden/ignored-inclusive name, locus, DOI, PMID and candidate identifier searches
+    found no existing record; prior mentions concern the Cullin-E boundary. Native
+    GO queries for CRL4WDR1 and WDR1 found no entry. GO:0080008 is the broader Cul4-RING
+    parent; GO:0031464/0031465 denote A/B subclasses, GO:0043494 denotes CLRC, and
+    GO:0070912/0070913 denote different transcription-coupled repair heterodimers.
+    Exact Complex Portal name and locus queries found no entry. WDR1 hits there denote
+    predicted human complexes, not this assembly.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+  - reference: GO:0080008
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: cullin_nomenclature
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the WDR1-specific assembly distinct from Cullin-E and broader Cullin-D
+    isolates.
+  rationale: A scaffold identity is not the identity of all its receptor-specific
+    complexes.
+  notes: The primary paper assigns WDR1 to TbCUL4/Tb927.3.1290 and reports no co-isolation
+    with TbCUL1/Tb927.11.11430. The modern Table 1 calls these TbCul-D and TbCul-E
+    respectively, despite its Discussion attributing the older PLK result to Cullin-E.
+    Modern Cullin-D isolates contain DCAF proteins Tb927.11.3190 and Tb927.8.840 and
+    Rbx1/Tb927.10.1810; they do not establish those as members of CRL4WDR1. Neither
+    a Cul4A versus Cul4B assignment nor generic Cullin-D nuclear localization is imposed
+    on this receptor-specific record.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+  - reference: DOI:10.1038/s41598-025-32077-9
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: component_families_and_examples
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact component-family mappings and studied-strain protein examples.
+  rationale: Broad families and reference-genome annotations do not supply exact experimental
+    examples.
+  notes: 'InterPro search and reference-protein entry pages were checked completely:
+    IPR045093 and IPR050358 are broader families; WDR1 hits are other WDR proteins.
+    UniProt exact-locus queries resolve unreviewed Q57XW2 and Q586I3 to the reference
+    strain 927/4 GUTat10.1, not the studied Lister 427 or 29-13 cells; the WDR1 locus
+    query returned no entry. These verified reference annotations are not entered
+    as experimental protein_examples, and the reviewed-only automated adapter is not
+    relaxed. The structured iModulonDB adapter lists 28 datasets without a matching
+    Trypanosoma organism: not applicable, not negative biological evidence.'
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+  - reference: InterPro:IPR045093
+  - reference: InterPro:IPR050358
+  - reference: UniProtKB:Q57XW2
+  - reference: UniProtKB:Q586I3
+  posed_by: codex
+  posed_date: '2026-10-04'
+  attaches_to:
+  - components#cullin4
+  - components#ddb1
+  - components#wdr1
+- discussion_id: client_and_marker_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not convert captured client proteins or experimental markers into obligatory
+    constituents.
+  rationale: Co-isolation and downstream readouts have different biological roles.
+  notes: TbPLK is recovered with the three tagged core proteins in Figure 3D, but
+    the source interprets it as a recognized client. It is not asserted to be an invariant
+    structural subunit. TbCentrin2, TbCentrin4, FAZ1, TbPSA6, antibodies, recombinant-expression
+    hosts and APC/C are not constituents. Cdc27/APC/C depletion also affects TbPLK
+    turnover, so CRL4WDR1 is not claimed as the sole pathway. Rbx1 and other DCAFs
+    from broader Cullin-D isolates are excluded pending receptor-specific membership
+    evidence.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+  - reference: DOI:10.1038/s41598-025-32077-9
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: catalytic_resolution
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Establish the complete catalytic assembly and direct covalent substrate
+    reaction.
+  rationale: Co-immunoprecipitation and chase data do not identify all catalytic subunits
+    or ubiquitinated proteins.
+  notes: The 2017 paper does not experimentally identify a RING subunit within the
+    WDR1-specific assembly, resolve fixed stoichiometry or show purified CRL4WDR1
+    ubiquitinating TbPLK. Figure 6D leaves the polyubiquitinated species unresolved.
+    Figure 8 is a model, not proof of the entire ubiquitination, turnover, phosphorylation
+    and FAZ chain. TbPLK overexpression phenocopy does not establish exclusive mediation.
+    Subunit assembly essentiality, physical dimensions and broad clade distribution
+    remain unset.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+  posed_by: codex
+  posed_date: '2026-10-04'
+  attaches_to:
+  - functions#tbplk_turnover
+  - causal_graphs#wdr1_depletion_outputs
+- discussion_id: assembled_complex_localization
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve localization and architecture of the assembled CRL4WDR1 particle.
+  rationale: Subunit immunofluorescence does not demonstrate colocalization of all
+    constituents.
+  notes: Figure 2E-F localizes endogenous WDR1-3HA to the basal-body/bilobe region,
+    with partial TbPLK overlap in G1 and reduced WDR1 signal later. It does not image
+    the whole assembly. The unchanged multi-panel Figure 2 is hosted as explicitly
+    bounded subunit-localization and interaction evidence under verified CC BY 4.0;
+    A-D include schematics, yeast assays and biochemical blots. No organelle part_of
+    relation or whole-complex atomic structure is inferred.
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1006146
+  posed_by: codex
+  posed_date: '2026-10-04'
+images:
+- image_id: pmc_pmc5241021_ppat_1006146_g002_04eab535
+  file: pmc5241021_ppat_1006146_g002_04eab535.jpg
+  file_sha256: 670801001c1d236247e8901451b48538d1b444bbeddde152500be4273d75cc62
+  source: PMC
+  source_accession: PMC5241021.1 ppat.1006146.g002
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5241021/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5241021.1/ppat.1006146.g002.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Huiqing Hu, Qing Zhou, Xianxian Han, Ziyin Li; CC BY, via PubMed Central
+  modality: FLUORESCENCE
+  caption: 'WDR1 subunit localization and interaction assays, not a resolved image
+    of the entire CRL4WDR1 complex. Panels E-F show procyclic T. brucei: endogenous
+    WDR1-3HA is green; TbPLK (E) or the anti-LdCen1 marker (F) is red; DAPI is blue.
+    WDR1 is enriched at the basal-body/bilobe region in G1/S and remains detectable
+    at lower levels later. Scale bars, 5 micrometers. Panels A-D show constructs,
+    yeast two-hybrid, GST/lysate pull-down and co-immunoprecipitation assays; their
+    hosts are not additional canonical organisms. Original Figure 2, unchanged.'
+  taxon_id: NCBITaxon:5691
+  taxon_label: Trypanosoma brucei
+  reference: DOI:10.1371/journal.ppat.1006146
+  retrieved_on: '2026-10-04'
+  notes: Fig 2 from article version PMC5241021.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.

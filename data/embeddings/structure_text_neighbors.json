@@ -16687,6 +16687,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:crl4wdr1_ubiquitin_ligase_complex",
+      "label": "CRL4WDR1 ubiquitin ligase complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:cullin_e_ubiquitin_ligase_complex",
+          "label": "Cullin-E ubiquitin ligase complex",
+          "cosine_similarity": 0.78604842
+        },
+        {
+          "identifier": "GO:0031431",
+          "label": "Dbf4-dependent protein kinase complex",
+          "cosine_similarity": 0.7138622
+        },
+        {
+          "identifier": "GO:0031518",
+          "label": "CBF3 complex",
+          "cosine_similarity": 0.71077854
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.71061893
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.70929885
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031390",
       "label": "Ctf18 RFC-like complex",
       "neighbors": [
@@ -16722,6 +16753,11 @@
       "label": "Cullin-E ubiquitin ligase complex",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:crl4wdr1_ubiquitin_ligase_complex",
+          "label": "CRL4WDR1 ubiquitin ligase complex",
+          "cosine_similarity": 0.78604842
+        },
+        {
           "identifier": "cellstructuremech:tusk_complex",
           "label": "TUSK complex",
           "cosine_similarity": 0.7700099
@@ -16740,11 +16776,6 @@
           "identifier": "GO:1990334",
           "label": "SIN/MEN two-component GAP complex",
           "cosine_similarity": 0.74172728
-        },
-        {
-          "identifier": "GO:0120269",
-          "label": "ciliary centrin arm",
-          "cosine_similarity": 0.73510798
         }
       ]
     },
@@ -22570,9 +22601,9 @@
           "cosine_similarity": 0.65875364
         },
         {
-          "identifier": "GO:0034044",
-          "label": "exomer complex",
-          "cosine_similarity": 0.65064413
+          "identifier": "cellstructuremech:crl4wdr1_ubiquitin_ligase_complex",
+          "label": "CRL4WDR1 ubiquitin ligase complex",
+          "cosine_similarity": 0.65093493
         }
       ]
     },
