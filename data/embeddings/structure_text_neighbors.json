@@ -5159,6 +5159,11 @@
       "label": "Stentor Km fiber",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:stentor_perialgal_microtubule_meshwork",
+          "label": "Stentor perialgal microtubule meshwork",
+          "cosine_similarity": 0.79173136
+        },
+        {
           "identifier": "GO:0160115",
           "label": "axonemal microtubule doublet ribbon",
           "cosine_similarity": 0.77692086
@@ -5177,11 +5182,6 @@
           "identifier": "GO:0097649",
           "label": "A axonemal microtubule",
           "cosine_similarity": 0.76398213
-        },
-        {
-          "identifier": "GO:0097650",
-          "label": "B axonemal microtubule",
-          "cosine_similarity": 0.75723424
         }
       ]
     },
@@ -5213,6 +5213,37 @@
           "identifier": "cellstructuremech:stentor_km_fiber",
           "label": "Stentor Km fiber",
           "cosine_similarity": 0.70577829
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:stentor_perialgal_microtubule_meshwork",
+      "label": "Stentor perialgal microtubule meshwork",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:stentor_km_fiber",
+          "label": "Stentor Km fiber",
+          "cosine_similarity": 0.79173136
+        },
+        {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.79160146
+        },
+        {
+          "identifier": "GO:0005874",
+          "label": "microtubule",
+          "cosine_similarity": 0.78681994
+        },
+        {
+          "identifier": "cellstructuremech:tubulin_spool",
+          "label": "tubulin spool",
+          "cosine_similarity": 0.7832951
+        },
+        {
+          "identifier": "GO:0033289",
+          "label": "intraconoid microtubule",
+          "cosine_similarity": 0.75768192
         }
       ]
     },
@@ -5288,6 +5319,11 @@
           "cosine_similarity": 0.81170305
         },
         {
+          "identifier": "cellstructuremech:stentor_perialgal_microtubule_meshwork",
+          "label": "Stentor perialgal microtubule meshwork",
+          "cosine_similarity": 0.7832951
+        },
+        {
           "identifier": "GO:0005881",
           "label": "cytoplasmic microtubule",
           "cosine_similarity": 0.7813892
@@ -5301,11 +5337,6 @@
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
           "cosine_similarity": 0.76953077
-        },
-        {
-          "identifier": "cellstructuremech:stentor_km_fiber",
-          "label": "Stentor Km fiber",
-          "cosine_similarity": 0.76454614
         }
       ]
     },

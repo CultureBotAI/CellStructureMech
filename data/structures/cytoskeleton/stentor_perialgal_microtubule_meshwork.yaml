@@ -1,0 +1,169 @@
+identifier: cellstructuremech:stentor_perialgal_microtubule_meshwork
+label: Stentor perialgal microtubule meshwork
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: An irregular cortical microtubule meshwork characterized in Stentor pyriformis,
+  with gaps occupied by algal endosymbionts in perialgal vacuoles. The named basket
+  system denotes host cytoskeletal architecture, not regular cages, the symbionts
+  themselves, their vacuole membranes, or the longitudinal Km-fiber bundles.
+definition_source: DOI:10.1091/mbc.E24-12-0571
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T01:53:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T01:56:05Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added directly imaged beta-tubulin meshwork evidence, verified host and
+    hierarchy, qualified positioning hypothesis, explicit structure and mechanism
+    limits, and link-only Figure 3 with license metadata caveat.
+  llm_assisted: true
+parent_structures:
+- GO:0005622
+part_of:
+- GO:0030863
+synonyms:
+- synonym_text: microtubule basket system
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.1091/mbc.E24-12-0571
+components:
+- component_id: beta_tubulin
+  label: Beta tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002453
+  essentiality: UNKNOWN
+  role: Tubulin subunit detected in the cortical microtubule meshwork.
+  evidence:
+  - reference: DOI:10.1091/mbc.E24-12-0571
+    notes: Figure 3 and microscopy Methods identify beta-tubulin immunofluorescence;
+      the primary antibody was Sigma T0198. This does not resolve native paralogues
+      or assembly essentiality.
+  - reference: InterPro:IPR002453
+    notes: Authority entry verifies the Beta tubulin family label.
+canonical_examples:
+- taxon_id: NCBITaxon:2721102
+  taxon_label: Stentor pyriformis
+  reference: DOI:10.1091/mbc.E24-12-0571
+  note: Imaged host species; ENA exact-name lookup verifies the identifier. No genus-wide
+    prevalence or absence assertion is made.
+functions:
+- function_id: proposed_symbiont_positioning
+  label: Proposed cortical positioning of endosymbionts
+  description: The authors propose that the meshwork helps retain algal endosymbionts
+    near the host cortex; a meshwork-specific causal requirement has not been established.
+  evidence:
+  - reference: DOI:10.1091/mbc.E24-12-0571
+    notes: The surface-association Discussion proposes anchoring from cortical organization.
+      Centrifugation displaces algae but is not a selective microtubule perturbation.
+evidence:
+- reference: DOI:10.1091/mbc.E24-12-0571
+  notes: Boudreau et al. (2025), PMID 39937680. Main-text Introduction, Results, Discussion
+    and Methods read in official JATS; Figure 3 inspected in the PDF. Supplementary
+    movies were not inspected.
+- reference: GO:0005622
+  notes: 'Non-obsolete intracellular anatomical structure: broad is-a parent, not
+    an exact identity mapping.'
+- reference: GO:0030863
+  notes: 'Non-obsolete cortical cytoskeleton: encompassing framework, used as part_of.'
+discussions:
+- discussion_id: identity_and_granularity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the perialgal meshwork from generic microtubules, Km fibers
+    and unrelated baskets.
+  rationale: Basket terminology alone does not identify a regular cage or a shared
+    structure across taxa.
+  notes: Hidden- and ignored-inclusive repository searches found only unrelated peduncle-basket
+    comparisons before scaffolding. QuickGO Stentor and perialgal searches returned
+    no matches; microtubule-basket results included neuronal and nuclear-pore baskets,
+    not this system. A single microtubule and the longitudinal Km bundle are different
+    granularities or architectures. The record covers the irregular meshwork, not
+    a separate cage per alga or a claim of uniqueness to this genus.
+  evidence:
+  - reference: DOI:10.1091/mbc.E24-12-0571
+    notes: Cell-anatomy Results identify Km bundles separately; the microtubule-basket
+      Results describe irregular gaps rather than regular baskets.
+  - reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=perialgal
+    notes: Authority identity search before minting.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: partial_composition_and_anchoring
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve mesh-associated linkers and test a selective requirement for cortical
+    symbiont positioning.
+  rationale: Tubulin staining and spatial association do not identify attachment molecules
+    or establish causation.
+  notes: 'The component list is intentionally partial and limited to the directly
+    stained tubulin family. No native paralogue inventory, linker identity, stoichiometry
+    or assembly essentiality is asserted. No causal graph is added: centrifugation
+    and symbiont-removal or photosynthesis-inhibition assays do not isolate meshwork
+    function. Test selective mesh disruption and rescue before asserting anchoring,
+    photoprotection, enhanced photosynthesis, gas exchange or phototaxis mechanisms.'
+  evidence:
+  - reference: DOI:10.1091/mbc.E24-12-0571
+    notes: Figure 3 supports anatomy; the surface-association Discussion frames positioning
+      and physiological benefits as possibilities.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: host_structure_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep symbionts and neighboring structures outside the molecular constituent
+    list.
+  rationale: Association with a host cytoskeleton is not membership of that cytoskeleton
+    or evidence of organelle fixation.
+  notes: Exclude Chlorella cells, perialgal vacuole membranes, mitochondria, membranelle
+    roots and Km-fiber bundles as constituents. The paper cultured the algae outside
+    the host; this record does not classify the symbionts as organelles.
+  evidence:
+  - reference: DOI:10.1091/mbc.E24-12-0571
+    notes: Cell anatomy, host/symbiont phylogeny and culture Methods distinguish these
+      entities.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: figure_license_metadata
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile PMC license metadata before attempting hosted-image ingestion.
+  rationale: The explicit article copyright statement and the structured PMC license-code
+    field differ in completeness.
+  notes: Version-1 JATS copyright text explicitly grants CC BY 4.0, but PMC metadata
+    license_code is null and the license element contains a trademark notice. The
+    normal hosting adapter rejects that metadata. Keep Figure 3 link-only and do not
+    weaken the hosting guard.
+  evidence:
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC12005096.1.json
+    notes: Version, DOI, PMID, non-retraction flag and XML/PDF hashes checked against
+      downloaded sources.
+  posed_by: codex
+  posed_date: '2026-10-04'
+images:
+- image_id: pmc12005096_figure3
+  source: PMC
+  source_accession: PMC12005096.1:F3
+  source_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12005096.1/PMC12005096.1.pdf#page=6
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Boudreau et al., Figure 3, The cell biology and genome of Stentor pyriformis,
+    a giant cell that embeds symbiotic algae in a microtubule meshwork, Molecular
+    Biology of the Cell (2025), doi:10.1091/mbc.E24-12-0571, via PubMed Central; CC
+    BY 4.0. Link only; no repository copy or adaptation.
+  modality: FLUORESCENCE
+  caption: 'Figure 3: beta-tubulin immunofluorescence and chlorophyll signal in Stentor
+    pyriformis (A), with six optical sections through an expanded cortical microtubule
+    meshwork (B).'
+  taxon_id: NCBITaxon:2721102
+  taxon_label: Stentor pyriformis
+  reference: DOI:10.1091/mbc.E24-12-0571
+  retrieved_on: '2026-10-04'
+  notes: Inspected PDF page 6; F3 is the JATS figure identifier. Official XML/PDF
+    MD5 hashes verified. License comes from the explicit JATS copyright statement,
+    not the null metadata license_code. No hosted file. Expansion-image distances
+    are not recorded as native structural measurements.
