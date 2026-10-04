@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_a_b_inner_junction.yaml
+  slug: basal_body_a_b_inner_junction
+session:
+  id: 2026-10-04T101051Z-codex-e1e0b0
+  timestamp: '2026-10-04T10:10:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2022
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - evidence
+  - discussions
+  - curation_history
+  summary: Curate the later proximal inner-junction ladder assignment
+  details: 'Addresses issue #2022 using Cai et al. 2025 (DOI:10.1126/sciadv.ady3689): add
+    a label-only alpha-helical ladder component assigned to I7LY02 and reconcile earlier unresolved
+    identity. Preserve MS-guided model-fitting limits, SB715 versus SB210 provenance, core-region
+    uncertainty, the existing core graph and image, and PROPOSED status. Rebuild semantic
+    embeddings and rendered products; retain earlier review reports unchanged.'

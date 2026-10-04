@@ -20,6 +20,13 @@ curation_history:
     graph, verified EMDB datasets and density preview; preserved uncertain identities,
     region-specific composition, mutant-only replacements and model-fitting limitations.
   llm_assisted: true
+- timestamp: '2026-10-04T10:08:19Z'
+  curator: codex
+  action: CURATED_COMPONENTS
+  changes: 'Addressed issue #2022: added the later Cai et al. I7LY02 ladder assignment
+    as a label-only proximal component and replaced stale blanket uncertainty. Preserved
+    model-fitting and strain limits, core graph, image and unresolved core densities.'
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 part_of:
@@ -119,6 +126,29 @@ components:
       maps CFAP210 to Q23EX8, annotated with the exact InterPro family IPR039986 despite
       a domain-based UniProt protein name. No direct binding assay is inferred.
   grounding: InterPro:IPR039986
+- component_id: inner_junction_ladder_protein
+  label: alpha-helical inner-junction ladder protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The source assigns the ladder to I7LY02, an unreviewed SB210 reference
+    protein at TTHERM_00682980. UniProt lists no InterPro or Pfam cross-reference,
+    and the native InterPro protein-to-integrated-entry endpoint returned no match.
+    No exact source-neutral family is asserted. The PDB entity name SWIM-type domain-containing
+    protein is not a verified family or activity. The structural experiment uses SB715,
+    so no strain-paired protein example is added.
+  essentiality: UNKNOWN
+  role: Forms the alpha-helical ladder assigned to the proximal A-B inner junction,
+    bridging protofilaments A13 and B10 in the structural model. This assignment is
+    not transferred to the distinct core-region LRR density or the FAP52-like protein.
+  evidence:
+  - reference: DOI:10.1126/sciadv.ady3689
+    notes: Cai et al. 2025, Figure 4D-F and Results identify an I7LY02-containing
+      array in the A-B junction, following the MS-guided predicted-model assignment
+      of the corresponding B-C ladder. This supports source-assigned membership, not
+      a knockout dependency, biochemical binding assay or assembly essentiality. RCSB
+      9QZC entity 8 independently maps the study's ladder model to I7LY02, but its
+      A-C/B-C composite scope is not treated as an A-B-specific deposition.
 canonical_examples:
 - taxon_id: NCBITaxon:5911
   taxon_label: Tetrahymena thermophila
@@ -254,6 +284,11 @@ evidence:
     are asserted.'
 - reference: PMID:39994484
   notes: Bibliographic identity verified against official PMC and EMDB citations.
+- reference: DOI:10.1126/sciadv.ady3689
+  notes: Cai et al. 2025. Official PMC12506977.1 JATS checksum verified; junction
+    Results, relevant sample/model Methods and Figure 4 caption read, and Figure 4
+    inspected visually. Molecular assignment is MS-guided predicted-model fitting.
+    SB715 sample identity and the distinct SB210 sequence reference are preserved.
 discussions:
 - discussion_id: identity_and_boundary
   kind: CURATION_TODO
@@ -265,8 +300,8 @@ discussions:
     record. Complete GO searches for inner junction, basal body and triplet found
     no exact basal-body A-B cellular component. GO:0160113 specifically denotes the
     axonemal doublet inner junction and remains a separate record. The A-C intertriplet
-    linker, B-C junction, inner scaffold and unassigned proximal inner ladder are
-    not synonyms. GO:0140535 is broader is-a; GO:0036064 is parthood.
+    linker, B-C junction, inner scaffold and proximal inner ladder are not synonyms.
+    GO:0140535 is broader is-a; GO:0036064 is parthood.
   evidence:
   - reference: DOI:10.1038/s44318-025-00392-6
   - reference: GO:0160113
@@ -278,33 +313,38 @@ discussions:
 - discussion_id: exact_family_groundings
   kind: CURATION_TODO
   status: OPEN
-  prompt: Resolve exact POC1, FAP52, FAP106 and IJ34 family groundings.
+  prompt: Resolve exact POC1, FAP52, FAP106, IJ34 and alpha-helical inner-junction
+    ladder protein family groundings.
   rationale: Broader families, individual domains and organism-specific sequences
     do not define exact taxon-agnostic component classes.
-  notes: These four components remain REVIEWED_LABEL_ONLY for the documented reasons.
+  notes: These five components remain REVIEWED_LABEL_ONLY for the documented reasons.
     FAP45 and FAP210 have exact InterPro family annotations. RCSB 8G2Z is a CU428
     axonemal doublet, not a basal-body deposition; its sequence mappings are used
     only to crosscheck model identities. The inspected unreviewed UniProt entries
-    are SB210 references. Neither source supports a B2086 strain-paired example.
+    are SB210 references, not strain-paired B2086 or SB715 experimental examples.
+    I7LY02 has no integrated InterPro match in the inspected endpoint; the paper's
+    limited detectable homology is not evidence for taxonomic absence of the structure.
   evidence:
   - reference: DOI:10.1038/s44318-025-00392-6
+  - reference: DOI:10.1126/sciadv.ady3689
   posed_by: codex
   posed_date: '2026-10-04'
 - discussion_id: unassigned_densities
   kind: CURATION_TODO
   status: OPEN
-  prompt: Confirm the LRR protein and proximal ladder identities experimentally.
+  prompt: Confirm the core LRR protein and resolve the remaining unassigned densities.
   rationale: A plausible predicted-model fit does not establish a unique molecular
     identity.
-  notes: Q22N53 is a candidate for the core arch-shaped LRR density; the authors explicitly
+  notes: Q22N53 is a candidate for the core arch-shaped LRR density; Li et al. explicitly
     defer confirmation of identity and function. Its proposed N-terminal hairpin dimer
     and contacts remain models, not established components or stoichiometry. Its computational
-    UniProt name is not evidence of kinase activity. The proximal A-B ladder links
-    A13 to B10, but its protein identity and equivalence to the B-C ladder are unresolved.
-    The proximal FAP52-like paralog and core scaffold-attachment stem also remain
-    unassigned.
+    UniProt name is not evidence of kinase activity. The proximal FAP52-like paralog
+    and core scaffold-attachment stem also remain unassigned. Cai et al.'s later I7LY02
+    assignment to the proximal inner-junction ladders is represented separately and
+    does not identify these other densities.
   evidence:
   - reference: DOI:10.1038/s44318-025-00392-6
+  - reference: DOI:10.1126/sciadv.ady3689
   posed_by: codex
   posed_date: '2026-10-04'
 - discussion_id: wild_type_and_mutant_scope
@@ -350,6 +390,26 @@ discussions:
     Only the three native-verified wild-type A-B datasets are included.
   evidence:
   - reference: DOI:10.1038/s44318-025-00392-6
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: later_ladder_assignment
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Reconcile the earlier unassigned proximal ladder with newer molecular evidence.
+  rationale: A later source assigns a protein to a density that the earlier study
+    left unidentified; uncertainty must track the current evidence rather than stay
+    blanket.
+  notes: Li et al. 2025 left the proximal A-B and B-C ladder identities open. Cai
+    et al. 2025 subsequently assigned I7LY02 to ladders at both junctions by MS-guided
+    model fitting, with the A-B array depicted in Figure 4D-F. This record now includes
+    the supported alpha-helical ladder class, without claiming perturbation-proven
+    identity, necessity, universal composition or whole-junction stoichiometry. The
+    separate unassigned WD40 ladder at the B-C junction is not an A-B component. Prior
+    timestamped review reports remain immutable snapshots.
+  evidence:
+  - reference: DOI:10.1038/s44318-025-00392-6
+  - reference: DOI:10.1126/sciadv.ady3689
   posed_by: codex
   posed_date: '2026-10-04'
   resolved_date: '2026-10-04'
