@@ -1,0 +1,272 @@
+identifier: cellstructuremech:sinister_fiber
+label: sinister fiber
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A striated, wedge-shaped fibrous linker connecting a flagellar basal body
+  to a five-microtubule s-type root in Spermatozopsis similis. Its BAp95-containing
+  assembly is distinct from the root microtubules, SF-assemblin fibers, centrin fibers
+  and proximal interbasal plates.
+definition_source: DOI:10.1083/jcb.140.5.1149
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T05:32:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T05:33:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added source-bounded sf-fiber identity, BAp95 composition and verified
+    unreviewed protein example, canonical species, native linkage function, a two-edge
+    in-vitro assembly graph, link-only micrograph and explicit ontology, inventory
+    and functional limitations.
+  llm_assisted: true
+parent_structures:
+- GO:0043232
+part_of:
+- GO:0005856
+synonyms:
+- synonym_text: sf-fiber
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1083/jcb.140.5.1149
+- synonym_text: 1sf-fiber
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1083/jcb.140.5.1149
+- synonym_text: 2sf-fiber
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1083/jcb.140.5.1149
+components:
+- component_id: bap95_sf_fiber_proteins
+  label: BAp95 sf-fiber structural proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Fiber-localized structural constituent. Recombinant BAp95 forms striated fibers
+    in vitro, supporting a major structural role without establishing the complete
+    native inventory or native assembly sufficiency.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact family was verified in InterPro integrated entries for
+    O49944 or bounded entry searches for BAp95, sinister fiber and basal apparatus
+    protein (all HTTP 204). Predicted coiled-coil segments do not establish an exact
+    protein-family identity.
+  protein_examples:
+  - uniprot_id: UniProtKB:O49944
+    protein_label: 95 kD basal apparatus-protein
+    taxon_id: NCBITaxon:3192
+    taxon_label: Spermatozopsis similis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-04'
+    role: Sequence-backed BAp95 example corresponding to the cloned antigen; not a
+      complete sf-fiber composition or a curated family accession.
+    evidence:
+    - reference: UniProtKB:O49944
+      notes: Live entry verifies the submitted name, unreviewed status, species, 834-residue
+        sequence and EMBL AJ001438/CAA04763.1 bridge. No primary gene symbol is supplied.
+    - reference: DOI:10.1083/jcb.140.5.1149
+      notes: Clone 7/1 and the Figure 2 sequence accession AJ001438 identify the recombinant
+        antigen used for anti-rec95 localization and reassembly.
+  evidence:
+  - reference: DOI:10.1083/jcb.140.5.1149
+    notes: Anti-rec95 raised against the recombinant antigen specifically labels sf-fibers
+      by immunogold, with preimmune controls. The broader anti-p95 serum recognizes
+      two bands and is not used to assign both antigens to BAp95. Results and Figure
+      7.
+canonical_examples:
+- taxon_id: NCBITaxon:3192
+  taxon_label: Spermatozopsis similis
+  reference: DOI:10.1083/jcb.140.5.1149
+  note: Methods use SAG B1.85. The current SAG 1.85 authority record links this paper's
+    AJ001438 sequence and the historical SAG B 1.85 designation in its sequence metadata.
+    Both 1sf on the older basal body and 2sf on the younger basal body were examined;
+    no clade-wide prevalence is asserted.
+functions:
+- function_id: basal_body_s_root_linkage
+  label: basal-body to s-root linkage
+  description: The native fiber physically links a basal body with its five-microtubule
+    s-type root. This structural linkage does not by itself demonstrate control of
+    phototaxis, spindle placement or cleavage-furrow positioning.
+  evidence:
+  - reference: DOI:10.1083/jcb.140.5.1149
+    notes: Results and Figures 7-8 resolve the attachments. The larger 1sf is subdistal
+      on the older basal body; 2sf is proximal on the younger one. Retention of 1sf
+      after mechanical disintegration supports firm basal-body attachment.
+causal_graphs:
+- graph_id: bap95_in_vitro_fiber_assembly
+  title: Recombinant BAp95 self-assembly in vitro
+  description: Purified recombinant BAp95 forms striated fibers during stepwise denaturant
+    removal. This is an experimental constituent-assembly mechanism, not a reconstitution
+    of the complete native basal-body to s-root linker.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Restricted to the Figure 5 floating-microdialysis assay. The product
+    is deliberately not grounded to the native sinister-fiber identifier. Rodlike
+    particles and ladderlike profiles are proposed intermediates, so no precursor
+    sequence or native attachment step is asserted. Two supported edges are retained
+    without padding the graph.
+  nodes:
+  - node_id: recombinant_bap95
+    label: Purified recombinant BAp95
+    node_type: GENE_OR_PROTEIN
+    component_ref: bap95_sf_fiber_proteins
+    description: The Spermatozopsis sequence expressed in bacteria and purified in
+      urea.
+  - node_id: stepwise_dialysis
+    label: Stepwise urea removal in the floating-membrane assay
+    node_type: EXPERIMENTAL_FACTOR
+    description: Dialysis through 4, 2, 0.8 and 0 M urea, with approximately 0.1 microgram
+      per microliter protein, in the reported salt buffer.
+  - node_id: reconstituted_fibers
+    label: In-vitro striated BAp95 fibers
+    node_type: STRUCTURE
+    description: Reconstituted fibers with an approximately 98 nm repeat; not the
+      complete native linker and not the spindle-shaped aggregates obtained under
+      different conditions.
+  edges:
+  - subject: recombinant_bap95
+    predicate: self-assembles in vitro into
+    object: reconstituted_fibers
+    description: The purified recombinant protein produces cross-striated fibers in
+      the defined reassembly assay.
+    evidence:
+    - reference: DOI:10.1083/jcb.140.5.1149
+      notes: Reassembly Results and Figure 5a-e; sedimented material is predominantly
+        the 95-kD protein. Full native composition and anchoring are not reconstituted.
+  - subject: stepwise_dialysis
+    predicate: permits formation of
+    object: reconstituted_fibers
+    description: Gradual urea removal under the specified assay conditions yields
+      striated fibers in the final dialysate; no claim that this protocol is the native
+      biogenesis pathway or the only possible assembly condition is made.
+    evidence:
+    - reference: DOI:10.1083/jcb.140.5.1149
+      notes: Reassembly Methods and Results. Higher protein concentration or dialysis
+        tubing instead yields spindle-shaped aggregates, sometimes with a different
+        repeat.
+evidence:
+- reference: DOI:10.1083/jcb.140.5.1149
+  notes: Official PMC version-1 JATS checked against MD5 b55a173054e9099893a40b25435f284b.
+    Introduction, Methods, Results and Discussion read; Figures 5, 7 and 8 visually
+    inspected. No verbatim snippets are stored.
+- reference: GO:0043232
+  notes: Verified broad is-a parent for a morphologically distinct intracellular,
+    membraneless assembly; not exact identity.
+- reference: GO:0005856
+  notes: Verified cytoskeleton term for parthood rather than equivalence to the whole
+    cellular framework.
+- reference: NCBITaxon:3192
+  notes: Current species identifier and name verified at NCBI Taxonomy; type material
+    links SAG 1.85.
+- reference: https://sagdb.uni-goettingen.de/detailedList.php?str_number=1.85
+  notes: Current culture-collection record identifies Spermatozopsis similis and links
+    AJ001438; sequence metadata preserves the historical SAG B 1.85 label.
+discussions:
+- discussion_id: sf_fiber_identity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep sinister fibers distinct from adjacent basal-apparatus assemblies.
+  rationale: Shared location or striation does not establish identical structures.
+  notes: Whole-repository searches including hidden and ignored files found prior
+    discovery notes but no exact record. The 1sf and 2sf names denote age-associated
+    instances, not two separate protein-family records. SF-assemblin SMAFs, centrin
+    fibers, proximal plates and d-fibers remain distinct. OTHER denotes the organized
+    wedge-shaped linker, not a single protein or one molecular filament.
+  evidence:
+  - reference: DOI:10.1083/jcb.140.5.1149
+    notes: Primary Methods, Results and Discussion.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: ontology_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Use a local identifier rather than equating sf-fibers with a mother-centriolar
+    appendage.
+  rationale: The paper compares basal feet and satellites by resemblance, without
+    establishing exact homology or identity.
+  notes: QuickGO searches for sinister, basal foot, subdistal appendage and proximal
+    plate and their returned definitions did not yield an exact sf-fiber term. GO:0120103
+    specifies an appendage assembled on the mother centriole; it is not assigned to
+    both the older-basal-body 1sf and proximal younger-basal-body 2sf. Broad organelle
+    parent and cytoskeletal parthood are kept separate.
+  evidence:
+  - reference: DOI:10.1083/jcb.140.5.1149
+    notes: Native positions and comparisons to basal feet in Results and Discussion.
+  - reference: GO:0120103
+    notes: Current definition and synonyms checked at QuickGO; not used as record
+      identity.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: family_and_inventory
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve a source-neutral BAp95 family grounding and the remaining native
+    molecular inventory.
+  rationale: A cloned antigen and in-vitro self-assembly do not establish all native
+    constituents or their stoichiometry.
+  notes: InterPro returned no integrated entries for O49944 and no results in the
+    bounded BAp95/sinister-fiber/basal-apparatus-protein searches. The unreviewed
+    sequence example remains explicitly unreviewed. Apparatus-level gel percentages
+    are not sf-fiber stoichiometry. BAp90, SF-assemblin, centrin and predicted coiled-coil
+    homologues are not imported as sf-fiber constituents without direct evidence.
+  evidence:
+  - reference: DOI:10.1083/jcb.140.5.1149
+    notes: Primary Methods, Results and Discussion.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: native_assembly_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Establish native sf-fiber biogenesis, recruitment and BAp95 essentiality.
+  rationale: The recombinant assay establishes intrinsic assembly capacity, not native
+    localization or sufficiency.
+  notes: No causal chain through rodlike or ladderlike proposed intermediates is asserted.
+    Recombinant fiber dimensions and repeat spacing are not native whole-fiber physical
+    properties. Putative cdc2 phosphorylation motifs are sequence predictions, not
+    a demonstrated regulatory reaction.
+  evidence:
+  - reference: DOI:10.1083/jcb.140.5.1149
+    notes: Primary Methods, Results and Discussion.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: functional_and_taxonomic_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve direct functional perturbations, exact function grounding and additional
+    demonstrated organisms.
+  rationale: Native linkage is observed, while broader physiological roles and cross-species
+    equivalence require separate evidence.
+  notes: Root orientation, phototaxis and mitotic-positioning roles remain hypotheses.
+    Chlamydomonas antibody dots reported without displayed data do not establish the
+    exact sf-fiber there; negative cross-reactivity elsewhere does not prove structure
+    absence. No distribution row, trait link or broad function term is inferred from
+    the single species.
+  evidence:
+  - reference: DOI:10.1083/jcb.140.5.1149
+    notes: Primary Methods, Results and Discussion.
+  posed_by: codex
+  posed_date: '2026-10-04'
+images:
+- image_id: pmc2132688_figure7
+  source: PMC
+  source_accession: PMC2132688.1 Figure 7
+  source_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC2132688.1/JCB15053.f7.jpg
+  licence: CC_BY_NC_SA_4_0
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  attribution: Stefan Geimer, Judith Clees, Michael Melkonian and Karl-Ferdinand Lechtreck,
+    Figure 7, Journal of Cell Biology 140 (1998), doi:10.1083/jcb.140.5.1149, via
+    PubMed Central; CC BY-NC-SA 4.0. Link only; no repository copy or adaptation.
+  modality: TEM
+  caption: 'Figure 7: native sf-fiber immunogold localization in isolated Spermatozopsis
+    similis cytoskeletons. Panels a, c-f, h and i use anti-rec95; b and g are preimmune
+    controls. The open arrow in a marks the separate distal connecting fiber. Source
+    scale bar: 200 nm.'
+  taxon_id: NCBITaxon:3192
+  taxon_label: Spermatozopsis similis
+  reference: DOI:10.1083/jcb.140.5.1149
+  retrieved_on: '2026-10-04'
+  notes: All nine panels visually inspected. Official version-1 metadata and JATS
+    licence verified; image MD5 f23cd3d26f582cd37401dc00e89ddccb matches the official
+    manifest. No image binary is hosted. Native Figure 8 and recombinant Figure 5
+    were separately inspected; they are not interchangeable evidence.
