@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+  slug: nucleus_basal_body_connector
+session:
+  id: 2026-10-04T034322Z-codex-e0716a
+  timestamp: '2026-10-04T03:43:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - images
+  - discussions
+  summary: Add the centrin-rich nucleus-basal body connector
+  details: Added one specialized ciliary-rootlet class after ignored/hidden-inclusive deduplication
+    and live GO checks. Primary 1985 identity, 1987 contraction experiments, 1992 centrin
+    mutants/revertants, and abstract-bounded 1989 negative induction and 2003 chrysomonad
+    comparisons support the record. Verified P05434, three species IDs, broad rather than
+    exact InterPro families, GO parent/function, and the exact noncommercial figure licence.
+    The eight-node graph retains assay conditions and ATP potentiation without inventing a
+    phosphorylation mechanism. PROPOSED and llm_assisted; no clade prevalence or entire-scaffold
+    composition transfer. One link-only Figure 2 from PMC2114663.1; no hosted image. Validated
+    scaffold and guarded writer used. PR does not yet exist.
