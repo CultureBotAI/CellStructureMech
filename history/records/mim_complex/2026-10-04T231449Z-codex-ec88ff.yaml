@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mim_complex.yaml
+  slug: mim_complex
+session:
+  id: 2026-10-04T231449Z-codex-ec88ff
+  timestamp: '2026-10-04T23:14:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - images
+  summary: Add evidence-bounded MIM complex record
+  details: Added GO:0140595 with exact GO definition and parent/parthood, verified InterPro
+    Mim1 and Mim2 families, Saccharomyces cerevisiae examples and GO:7770059 insertion function.
+    Read primary Cell Reports 2020 PDF and checksum-verified PMC6010339.1 and PMC6965732.1
+    sections; preserve conflicting Fis1/Mcr1 dependency results, distinguish TOM/SAM partners
+    from constituents, and avoid fixed stoichiometry or inferred exchange as observed fact.
+    Added five source-cited functional edges and inspected CC BY 4.0 PMC6010339.1 Figure 5
+    with phenotype-only caption and verified media checksum. Hidden/ignored-inclusive candidate
+    and alias searches found no prior record. Draft remains PROPOSED; no human review implied.
+    No paid research or delegated review.
