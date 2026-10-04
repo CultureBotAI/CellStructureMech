@@ -2985,6 +2985,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:entodiniomorphid_subkinetal_myoneme_system",
+      "label": "Entodiniomorphid subkinetal myoneme system",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:stentor_myoneme_system",
+          "label": "Stentor myoneme system",
+          "cosine_similarity": 0.77106447
+        },
+        {
+          "identifier": "cellstructuremech:peritrich_body_myoneme_system",
+          "label": "Peritrich body myoneme system",
+          "cosine_similarity": 0.76827038
+        },
+        {
+          "identifier": "cellstructuremech:spirostomum_myoneme_fishnet",
+          "label": "Spirostomum myoneme fishnet",
+          "cosine_similarity": 0.75372217
+        },
+        {
+          "identifier": "GO:0005931",
+          "label": "axonemal nexin link",
+          "cosine_similarity": 0.73513222
+        },
+        {
+          "identifier": "cellstructuremech:stalk_spasmoneme",
+          "label": "Stalk spasmoneme",
+          "cosine_similarity": 0.73034983
+        }
+      ]
+    },
+    {
       "identifier": "GO:0120119",
       "label": "flagellum attachment zone",
       "neighbors": [
@@ -4368,14 +4399,14 @@
           "cosine_similarity": 0.77234904
         },
         {
+          "identifier": "cellstructuremech:entodiniomorphid_subkinetal_myoneme_system",
+          "label": "Entodiniomorphid subkinetal myoneme system",
+          "cosine_similarity": 0.76827038
+        },
+        {
           "identifier": "cellstructuremech:cryptophyte_cortical_centrin_network",
           "label": "cryptophyte cortical centrin network",
           "cosine_similarity": 0.7261108
-        },
-        {
-          "identifier": "GO:0097568",
-          "label": "median body",
-          "cosine_similarity": 0.71339826
         }
       ]
     },
@@ -5081,14 +5112,14 @@
           "cosine_similarity": 0.77234904
         },
         {
+          "identifier": "cellstructuremech:entodiniomorphid_subkinetal_myoneme_system",
+          "label": "Entodiniomorphid subkinetal myoneme system",
+          "cosine_similarity": 0.75372217
+        },
+        {
           "identifier": "cellstructuremech:infraciliary_lattice",
           "label": "infraciliary lattice",
           "cosine_similarity": 0.73248969
-        },
-        {
-          "identifier": "GO:0005826",
-          "label": "actomyosin contractile ring",
-          "cosine_similarity": 0.72222077
         }
       ]
     },
@@ -5138,6 +5169,11 @@
           "cosine_similarity": 0.7724251
         },
         {
+          "identifier": "cellstructuremech:entodiniomorphid_subkinetal_myoneme_system",
+          "label": "Entodiniomorphid subkinetal myoneme system",
+          "cosine_similarity": 0.73034983
+        },
+        {
           "identifier": "cellstructuremech:stentor_myoneme_system",
           "label": "Stentor myoneme system",
           "cosine_similarity": 0.72555621
@@ -5146,11 +5182,6 @@
           "identifier": "GO:0005930",
           "label": "axoneme",
           "cosine_similarity": 0.69322271
-        },
-        {
-          "identifier": "GO:0035253",
-          "label": "ciliary rootlet",
-          "cosine_similarity": 0.68632516
         }
       ]
     },
@@ -5200,6 +5231,11 @@
           "cosine_similarity": 0.81319833
         },
         {
+          "identifier": "cellstructuremech:entodiniomorphid_subkinetal_myoneme_system",
+          "label": "Entodiniomorphid subkinetal myoneme system",
+          "cosine_similarity": 0.77106447
+        },
+        {
           "identifier": "cellstructuremech:stalk_spasmoneme",
           "label": "Stalk spasmoneme",
           "cosine_similarity": 0.72555621
@@ -5208,11 +5244,6 @@
           "identifier": "GO:0032157",
           "label": "prospore contractile ring",
           "cosine_similarity": 0.70674445
-        },
-        {
-          "identifier": "cellstructuremech:stentor_km_fiber",
-          "label": "Stentor Km fiber",
-          "cosine_similarity": 0.70577829
         }
       ]
     },
