@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_a_tusk.yaml
+  slug: basal_body_a_tusk
+session:
+  id: 2026-10-04T155908Z-codex-e6c2a1
+  timestamp: '2026-10-04T15:59:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7667884/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC12506977/
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - part_of
+  - canonical_examples
+  - physical_properties
+  - datasets
+  - images
+  - discussions
+  summary: Add the basal body A-tusk as a distinct microtubule-associated subassembly
+  details: Created through the validated scaffold and guarded writer after hidden/ignored-inclusive
+    repository searches, parsed identities across 871 records and complete native GO queries.
+    Read checksum-verified Klena 2020 morphology, preparation, averaging and data-availability
+    text; inspected Figures 5 and EV5 and native taxonomy, unit and EMDB metadata. Added the
+    Paramecium example, two explicitly scoped axial-offset annotations, broader deposited
+    triplet-map context, and unmodified CC BY 4.0 Figure 5 with verified checksums. Kept sampling
+    intervals, neighboring-module measurements, strain context and cross-species comparisons
+    distinct. The inspected Cai 2025 A-C-linker assignments do not identify the Paramecium
+    A-tusk and were not imported as its components. Molecular composition and role remain
+    open; no unsupported functions, traits, causal graph, distribution or stoichiometry added.
+    Kind OTHER and broad GO root retain unresolved molecular classification; mapping status
+    remains PROPOSED. Byte-stable re-emission passed. Generated artifacts and full validation
+    accompany the PR. No PR existed when this append-only entry was created.

@@ -1,0 +1,208 @@
+identifier: cellstructuremech:basal_body_a_tusk
+label: basal body A-tusk
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A microtubule-associated subassembly in the proximal region of a ciliary
+  basal body, identified in Paramecium tetraurelia as a protruding density between
+  A-microtubule protofilaments A8 and A9, adjacent to but distinguishable from the
+  A-C linker.
+definition_source: DOI:10.15252/embj.2020106246
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T15:56:03Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T15:58:26Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added the native Paramecium A-tusk example, basal-body parthood, scoped
+    axial-offset annotations, deposited triplet-map context and inspected CC BY figure.
+    Distinguished adjacent linker proteins and processing intervals from A-tusk identity,
+    composition and repeat length; retained molecular role and distribution as unresolved
+    rather than inferring mechanisms or homology.
+  llm_assisted: true
+parent_structures:
+- GO:0005575
+part_of:
+- GO:0036064
+synonyms:
+- synonym_text: A-tusk
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.15252/embj.2020106246
+- synonym_text: centriole A-tusk
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.15252/embj.2020106246
+canonical_examples:
+- taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  note: Cryo-ET and subtomogram averaging of isolated basal bodies resolve the A-tusk
+    in Figure 5B-D and Figure EV5C-E. Cortical units were isolated from d4-2 and Delta-CenBP1;
+    the figures are not assigned to one strain. The proximal-region analysis used
+    11 tomograms containing 16 basal bodies with intact proximal regions.
+  reference: DOI:10.15252/embj.2020106246
+physical_properties:
+- property: OTHER
+  value: 3.3 and 5.2
+  unit: UO:0000018
+  context: 'Axial separation annotations in Paramecium tetraurelia Figure EV5E: the
+    position of A-tusk 2 on one triplet lies 5.2 nm below the upper and 3.3 nm above
+    the lower A-tusk 1 positions on the neighboring triplet. The original figure was
+    visually inspected. These are two static, pairwise offsets in the depicted reconstruction,
+    not means, uncertainty bounds, A-tusk dimensions, a universal axial repeat or
+    an assembly time course. No replicate count or error estimate is supplied for
+    these annotations.'
+  reference: DOI:10.15252/embj.2020106246
+datasets:
+- accession: EMDB:EMD-10729
+  title: Paramecium microtubule triplet from the start of the proximal region
+  description: Deposited whole-triplet structural context from the study defining
+    the A-tusk. This is a proximal microtubule-triplet reconstruction with associated
+    densities, not an isolated A-tusk map or a sequence-resolved A-tusk model.
+  organism: Paramecium tetraurelia
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-10729
+  publication: DOI:10.15252/embj.2020106246
+  notes: Native released-entry metadata verifies the title, taxon 5888, DOI and PMID:32954513.
+    The paper lists EMD-10726 through EMD-10729 and describes combining global triplet
+    and locally aligned A-C-linker maps to display adjacent triplets. EMD-10727 is
+    the proximal A-C-linker-focused deposit; EMD-10726 and EMD-10728 have end-of-proximal-region
+    titles. Sample-name fields repeat start-region wording, so entry titles distinguish
+    the deposits. Only metadata and links are retained; no map volume was downloaded
+    and no exact structure xref is asserted.
+evidence:
+- reference: DOI:10.15252/embj.2020106246
+  notes: Klena et al. 2020, PMID:32954513. Checksum-verified PMC7667884.1 Results,
+    Paramecium preparation and A-C-linker averaging Methods, Figure 5, Figure EV5
+    and Data availability inspected. Both original figures were visually inspected;
+    Figure 5 is hosted unchanged. Named segmented densities support morphological
+    identity and placement, not a native protein assignment.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the A-tusk distinct from the A-C linker and other basal-body densities.
+  rationale: A named morphological subassembly is not the entire basal body or an
+    asserted protein.
+  notes: Hidden/ignored-inclusive repository searches and parsed identifiers, labels
+    and synonyms across 871 prior records found no standalone A-tusk identity. Complete
+    QuickGO queries tusk (0), A-tusk (730), centriole tusk (22) and basal body tusk
+    (399) returned no exact term. Kind OTHER and parent GO:0005575 deliberately retain
+    unresolved molecular classification. Basal body is parthood, not is-a. A-tusk,
+    A-link trunk, ArmA, ArmB, triplet base, pinhead, D2-rod and tubulin protofilaments
+    are not exact synonyms. Proximity to the A-C linker is not used to assert obligatory
+    A-C-linker, cartwheel or pro-basal-body parthood.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+  - reference: GO:0005575
+  - reference: GO:0036064
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: native_composition_and_role
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify native A-tusk constituents and determine its specific biological
+    role.
+  rationale: A segmented protrusion and a static spatial offset do not establish molecular
+    membership or function.
+  notes: Direct molecular localization or a sequence-resolved model is needed before
+    assigning components, stoichiometry or protein-family groundings. The inspected
+    morphological evidence does not establish A-tusk-specific essentiality, assembly
+    order, force transmission or mechanical stiffness. No function, trait or causal
+    graph is asserted solely from the surrounding basal-body architecture.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: declined_linker_component_transfer
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not transfer neighboring A-C-linker protein assignments into A-tusk composition.
+  rationale: An assignment to a connected assembly in another species does not identify
+    this density.
+  notes: The inspected Cai et al. 2025 Tetrahymena study assigns WRAP73, CEP135, TBC1D31
+    and POC1 to A-C-linker regions and leaves additional helical elements unassigned.
+    Its JATS contains no A-tusk identification. These observations do not explicitly
+    establish the identity or composition of the named Paramecium A-tusk. No linker
+    protein or tubulin family is imported here as a constituent merely because it
+    lies in the same broader reconstruction.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+  - reference: DOI:10.1126/sciadv.ady3689
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: measurement_and_processing_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish neighboring-triplet offsets from a biological repeat or mechanical
+    measurement.
+  rationale: Reconstruction sampling and adjacent-module annotations are not A-tusk
+    dimensions.
+  notes: Figure EV5E labels two axial offsets, 5.2 and 3.3 nm, around one neighboring
+    A-tusk position. Do not sum these into an independently measured A-tusk repeat.
+    The Methods pick subvolumes every 8.5 nm; Figure 5 warns that this imposed a pinhead
+    periodicity. The 8.4 +/- 0.2 nm value concerns the A-C linker, and 31.5 angstroms
+    is reconstruction resolution. The approximately 35-nm label belongs to the triplet
+    base; 6- and 9-degree changes concern triplet/linker orientation. None is an A-tusk
+    length, stoichiometry or force measurement. The 1941 extracted subvolumes, split
+    into 1042 proximal and 899 distal classes, are processing counts, not biological
+    copy numbers.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: taxonomic_and_image_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the directly supported example separate from cross-species linker comparisons.
+  rationale: A multipanel comparison does not establish the same named density in
+    every illustrated taxon.
+  notes: Figure 5 and Figure EV5C-E directly label the Paramecium A-tusk. Figure EV5F-H
+    compares A-C linkers from Paramecium, Chlamydomonas and Trichonympha; it is not
+    used to assert broad A-tusk distribution, homologous protein composition or absence
+    in other taxa. Only the single-species Figure 5 is hosted. The d4-2 and Delta-CenBP1
+    preparation strains are retained without assigning the image to one strain or
+    interpreting it as a perturbation phenotype.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106246
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: pmc_pmc7667884_embj2020106246_fig_0005
+  file: pmc7667884_embj2020106246_fig_0005.jpg
+  file_sha256: 1431f971830fd590ad25381abf065a76a1d99800827c4e6292490af98a1fde34
+  source: PMC
+  source_accession: PMC7667884.1 embj2020106246-fig-0005
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7667884/figure/embj2020106246-fig-0005/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7667884.1/EMBJ-39-e106246-g010.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Nikolai Klena, Maeva Le Guennec, Anne‐Marie Tassin, Hugo van den Hoek,
+    Philipp S Erdmann, Miroslava Schaffer, Stefan Geimer, Gabriel Aeschlimann, Lubomir
+    Kovacik, Yashar Sadian, et al.; CC BY, via PubMed Central
+  modality: CRYO_ET
+  caption: Paramecium proximal-triplet reconstructions. Panels B-D label the dark-teal
+    A-tusk next to A-microtubule protofilaments A8 and A9, distinct from the lighter
+    patterned A-C linker. Panel A shows the neighboring triplet base and pinhead;
+    its approximately 35-nm annotation is not an A-tusk length. Panels E-F compare
+    proximal-region triplet and linker orientations. These are segmented cryo-ET averages,
+    not raw micrographs or sequence-resolved proteins.
+  taxon_id: NCBITaxon:5888
+  taxon_label: Paramecium tetraurelia
+  reference: DOI:10.15252/embj.2020106246
+  retrieved_on: '2026-10-04'
+  notes: Original multipanel Figure 5 visually inspected and accepted without cropping
+    or modification. JATS links this figure to g010.jpg, not g005.jpg; article and
+    media MD5 checksums were verified. Exact CC BY 4.0 licensing comes from JATS.
+    All panels concern Paramecium and match the canonical example. The source hides
+    the pinhead in panel B because its reconstruction was biased by the picking interval.
+    Figure EV5 was also inspected for axial-offset annotations but is not hosted because
+    its complete figure includes multiple taxa. Segmentation colors are not protein
+    identities.
