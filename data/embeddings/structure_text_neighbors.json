@@ -2477,14 +2477,14 @@
           "cosine_similarity": 0.82109835
         },
         {
+          "identifier": "cellstructuremech:basal_body_filamentous_cartwheel_inner_density",
+          "label": "basal body filamentous cartwheel inner density",
+          "cosine_similarity": 0.81742113
+        },
+        {
           "identifier": "GO:0001535",
           "label": "radial spoke head",
           "cosine_similarity": 0.78086676
-        },
-        {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.77215133
         }
       ]
     },
@@ -2503,6 +2503,11 @@
           "cosine_similarity": 0.81329607
         },
         {
+          "identifier": "cellstructuremech:basal_body_filamentous_cartwheel_inner_density",
+          "label": "basal body filamentous cartwheel inner density",
+          "cosine_similarity": 0.80918192
+        },
+        {
           "identifier": "cellstructuremech:basal_body_pinhead",
           "label": "basal body pinhead",
           "cosine_similarity": 0.70339773
@@ -2511,11 +2516,6 @@
           "identifier": "cellstructuremech:basal_body_a_tusk",
           "label": "basal body A-tusk",
           "cosine_similarity": 0.67259658
-        },
-        {
-          "identifier": "GO:0036064",
-          "label": "ciliary basal body",
-          "cosine_similarity": 0.66361037
         }
       ]
     },
@@ -2547,6 +2547,37 @@
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.78486392
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:basal_body_filamentous_cartwheel_inner_density",
+      "label": "basal body filamentous cartwheel inner density",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:basal_body_cartwheel",
+          "label": "basal body cartwheel",
+          "cosine_similarity": 0.81742113
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_cartwheel_inner_density",
+          "label": "basal body cartwheel inner density",
+          "cosine_similarity": 0.80918192
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_d2_rod",
+          "label": "basal body D2-rod",
+          "cosine_similarity": 0.76998565
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_pinhead",
+          "label": "basal body pinhead",
+          "cosine_similarity": 0.74537064
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_c_tubule_luminal_filament",
+          "label": "basal body C-tubule luminal filament",
+          "cosine_similarity": 0.72166722
         }
       ]
     },

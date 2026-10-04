@@ -1,0 +1,269 @@
+identifier: cellstructuremech:basal_body_filamentous_cartwheel_inner_density
+label: basal body filamentous cartwheel inner density
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: An apparently continuous filamentous subassembly extending longitudinally
+  within the lumen of a microbial basal-body cartwheel hub. It is morphologically
+  distinguishable from the surrounding hub rings and spokes and from discontinuous
+  cartwheel inner-density units.
+definition_source: DOI:10.15252/embj.2020106249
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T17:21:33Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T17:23:20Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added native morphology-defined fCID identity, scoped Teranympha specimen
+    and approximate diameter, distinct EMDB classes and an inspected unmodified CC
+    BY figure. Preserved specimen-assignment and deposition-name caveats, reconstruction
+    processing, and unresolved composition, function and CID homology.
+  llm_assisted: true
+parent_structures:
+- GO:0005575
+part_of:
+- cellstructuremech:basal_body_cartwheel
+synonyms:
+- synonym_text: filamentous cartwheel inner density
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.15252/embj.2020106249
+- synonym_text: filamentous CID
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.15252/embj.2020106249
+- synonym_text: fCID
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.15252/embj.2020106249
+canonical_examples:
+- taxon_id: NCBITaxon:285686
+  taxon_label: Teranympha mirabilis
+  note: Native basal bodies from hindgut flagellates of Reticulitermes speratus were
+    examined by cryo-ET and subtomogram averaging. Preparation began with mixed Trichonympha
+    agilis and Teranympha mirabilis cells, with a sedimentation step enriching the
+    latter. Whole-cell morphology distinguished resin-embedded species; purified cryo-ET
+    basal bodies were assigned using fCID presence or absence. This retains the source's
+    morphology-based attribution, not an independent molecular identification. Figure
+    4 resolves fCID in both 64% and 36% cartwheel subvolume classes, which can coexist
+    within one basal body.
+  reference: DOI:10.15252/embj.2020106249
+physical_properties:
+- property: DIAMETER
+  value: approximately 7
+  unit: UO:0000018
+  context: Approximate diameter of the filamentous cartwheel inner density in purified
+    Teranympha mirabilis basal bodies, Figure 4F-G and the corresponding Results.
+    The value is reported for both 64% and 36% central-cartwheel reconstruction classes.
+    No sample count or error statistic is supplied for this diameter. It is not the
+    approximately 23-nm hub diameter, an axial hub/spoke spacing, or a measurement
+    of discrete CID.
+  reference: DOI:10.15252/embj.2020106249
+datasets:
+- accession: EMDB:EMD-10922
+  title: Teranympha mirabilis central cartwheel without variations, 64% class
+  description: Released central-cartwheel subtomogram average for the 64% reconstruction
+    class, providing the broader hub-and-spoke context around the continuous fCID.
+    This is not an isolated filament map or a sequence-resolved molecular model.
+  organism: Teranympha mirabilis
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-10922
+  publication: DOI:10.15252/embj.2020106249
+  notes: Native metadata verifies released status, the class title, natural-source
+    organism Teranympha mirabilis with taxon 285686, and DOI/PMID:32954505. The sample
+    and supramolecule free-text names instead say Teranympha agilis; this discrepancy
+    is retained, not adopted as the organism identity. The paper and structured organism
+    field support the curated taxon. Percentages are classified subvolumes, not species
+    prevalence. Metadata and links only; no map volume downloaded or exact fCID xref
+    asserted.
+- accession: EMDB:EMD-10923
+  title: Teranympha mirabilis central cartwheel with variations, 36% class
+  description: Released central-cartwheel subtomogram average for the 36% reconstruction
+    class, providing the broader hub-and-spoke context around the continuous fCID.
+    This is not an isolated filament map or a sequence-resolved molecular model.
+  organism: Teranympha mirabilis
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  platform: cryo-electron tomography and subtomogram averaging
+  url: https://www.ebi.ac.uk/emdb/EMD-10923
+  publication: DOI:10.15252/embj.2020106249
+  notes: Native metadata verifies released status, the class title, natural-source
+    organism Teranympha mirabilis with taxon 285686, and DOI/PMID:32954505. The sample
+    and supramolecule free-text names instead say Teranympha agilis; this discrepancy
+    is retained, not adopted as the organism identity. The paper and structured organism
+    field support the curated taxon. Percentages are classified subvolumes, not species
+    prevalence. Metadata and links only; no map volume downloaded or exact fCID xref
+    asserted.
+evidence:
+- reference: DOI:10.15252/embj.2020106249
+  notes: Nazarov et al. 2020, PMID:32954505. Checksum-verified PMC7667878.1 dedicated
+    Teranympha Results, conserved-architecture Discussion, Figure 4 and EV3 captions,
+    specimen preparation, cryo-ET acquisition and subtomogram processing Methods inspected.
+    Original Figure 4 visually inspected. Supports a named continuous inner filament,
+    not its molecular composition or proven function.
+discussions:
+- discussion_id: identity_and_granularity
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the continuous inner filament distinct from the cartwheel hub and discrete
+    CID.
+  rationale: A named morphological subassembly is not a single protein or an entire
+    cartwheel.
+  notes: Hidden/ignored-inclusive alias, slug, DOI and PMID searches and parsed identities
+    across 873 prior records found no standalone fCID record; the existing CID record
+    explicitly excludes it. Searches also included FLS as a possible older name lead
+    without adopting it as an asserted synonym. Complete native GO queries for filamentous
+    cartwheel inner density (275 hits), fCID (0), and Teranympha cartwheel (0) found
+    no exact term. FILAMENT describes the observed form without asserting a protein
+    family. GO:0110165 requires granularity above a protein complex, which is not
+    established for this molecularly unassigned entity; broad GO:0005575 is retained.
+    The cartwheel is part_of, not is-a. Hub rings, spokes, microtubule wall and discrete
+    CID are not synonyms.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106249
+  - reference: GO:0005575
+  - reference: GO:0110165
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: composition_and_specific_function
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Identify native fCID constituents and test filament-specific biological
+    roles.
+  rationale: Morphology and proximity do not identify molecules or demonstrate necessity.
+  notes: The inspected primary study leaves molecular nature unresolved. Its modeled
+    SAS-6 rings concern the surrounding hub, not a sequence assignment to fCID. No
+    component family, protein accession, stoichiometry, essentiality, GO function,
+    trait link or causal graph is inferred. Direct localization and filament-specific
+    perturbations would be needed before importing these claims.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106249
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: declined_hub_protein_assignment
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not transfer SAS-6 hub-ring fitting to the luminal filament.
+  rationale: The filament and the protein-containing hub are separate structures in
+    the source maps.
+  notes: The paper fits CrSAS-6 ring models to hub densities and studies recombinant
+    cartwheel-like arrays. Neither identifies fCID composition. SAS-6 is therefore
+    not added as a filament constituent merely because its rings surround fCID; no
+    surrounding pinhead, linker or microtubule protein is borrowed from Figure 4H-K.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106249
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: cid_relationship_and_geometry
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the molecular relationship to discrete CID and the filament's connections
+    and helicity.
+  rationale: Similar position and appearance do not establish homology, molecular
+    equivalence or dynamics.
+  notes: The Discussion contrasts continuous Teranympha fCID with discontinuous Trichonympha
+    CID and leaves shared molecular identity or evolutionary history unresolved. It
+    describes small possible links in the 36% class and leaves other contacts and
+    helical organization open. Figure 4 notes off-center positions as suggestive of
+    flexibility, not a measured mechanical property. No fixed helical pitch, handedness,
+    elasticity or conserved CID-like polarity is asserted. Related densities in other
+    taxa are leads, not canonical examples here.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106249
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: specimen_and_reconstruction_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Preserve morphology-based specimen attribution and reconstruction processing
+    boundaries.
+  rationale: Classified subvolumes and imposed symmetry are not independent organisms
+    or molecular evidence.
+  notes: The source distinguishes intact resin-embedded species by whole-cell morphology
+    and isolated cryo-ET basal bodies by fCID presence. This is not a molecular taxon
+    assay or an unbiased prevalence survey. Central-cartwheel maps used C9 symmetry;
+    later re-centered sector analysis relaxed symmetry to C1. The Results also report
+    fCID in raw tomograms (Appendix Figure S1E) and non-symmetrized spoke-centered
+    averages (Figure EV2I-P); those source statements were read, but these supplemental
+    graphics were not visually inspected for this record. The 64% and 36% classes
+    are not independent taxa and can coexist within one basal body. No native ninefold
+    filament symmetry is inferred from processed maps.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106249
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: deposition_name_discrepancy
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile the free-text sample names in EMD-10922 and EMD-10923 with their
+    structured taxonomy.
+  rationale: A mismatched sample name must not silently create a different organism
+    assertion.
+  notes: Both native entries have Teranympha mirabilis in their titles and natural_source
+    organism fields, with NCBI taxon 285686 and the verified Nazarov DOI/PMID. Their
+    sample and supramolecule names instead say Teranympha agilis. The paper and native
+    taxonomy support Teranympha mirabilis. The datasets retain the discrepancy and
+    class distinctions; no third-party metadata was edited.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106249
+  - reference: EMDB:EMD-10922
+  - reference: EMDB:EMD-10923
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: measurement_and_image_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep filament dimensions separate from surrounding hub and spoke measurements.
+  rationale: The same multipanel figure contains several structures with different
+    measured quantities.
+  notes: Only the approximate 7-nm filament diameter is curated as a physical property.
+    Hub diameters, hub/spoke periodicities, whole cartwheel-bearing-region lengths
+    and map resolution are not filament dimensions. Neither a sample count nor an
+    error statistic for the diameter is supplied in Figure 4. The original single-species
+    CC BY 4.0 Figure 4 is hosted unchanged; panel labels and 10-nm scale bars were
+    visually checked. Segmentation colors are illustrative, not molecular boundaries,
+    and the H-K peripheral maps are context rather than evidence of filament composition.
+  evidence:
+  - reference: DOI:10.15252/embj.2020106249
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+images:
+- image_id: pmc_pmc7667878_embj2020106249_fig_0004
+  file: pmc7667878_embj2020106249_fig_0004.jpg
+  file_sha256: 3f53fa8d66e6190e7ed2eabef754711bdc455d3598a67123f723641a4c51de33
+  source: PMC
+  source_accession: PMC7667878.1 embj2020106249-fig-0004
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7667878/figure/embj2020106249-fig-0004/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7667878.1/EMBJ-39-e106249-g008.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Sergey Nazarov, Alexandra Bezler, Georgios N Hatzopoulos, Veronika
+    Nemčíková Villímová, Davide Demurtas, Maeva Le Guennec, Paul Guichard, Pierre
+    Gönczy; CC BY, via PubMed Central
+  modality: CRYO_ET
+  caption: Filamentous cartwheel inner density (fCID) in Teranympha mirabilis basal
+    bodies. A-C show transverse averages and surface views of the 64% and 36% cartwheel
+    classes; D-E show longitudinal averaged sections with hub-density profiles. F-G
+    show the continuous inner filament, approximately 7 nm in diameter, inside the
+    hub. H-K show surrounding microtubule-triplet, pinhead and A-C linker reconstructions,
+    not filament constituents. Scale bars in A and H are 10 nm. These are processed
+    views, not raw tomograms or molecular assignments.
+  taxon_id: NCBITaxon:285686
+  taxon_label: Teranympha mirabilis
+  reference: DOI:10.15252/embj.2020106249
+  retrieved_on: '2026-10-04'
+  notes: Figure 4 from article version PMC7667878.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Original figure visually inspected without cropping or modification; exact JATS
+    graphic is g008.jpg, with verified article and media MD5 checksums. All panels
+    are attributed by the source to Teranympha mirabilis; the morphology-based specimen
+    identification is retained in the canonical example. Central maps use C9 symmetry
+    and do not independently establish native filament symmetry. The profiles in D-E
+    measure hub densities, not an fCID axial repeat.

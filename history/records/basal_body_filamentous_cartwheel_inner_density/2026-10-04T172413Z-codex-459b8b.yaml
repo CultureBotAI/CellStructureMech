@@ -1,0 +1,45 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_filamentous_cartwheel_inner_density.yaml
+  slug: basal_body_filamentous_cartwheel_inner_density
+session:
+  id: 2026-10-04T172413Z-codex-459b8b
+  timestamp: '2026-10-04T17:24:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7667878/
+  - https://www.ebi.ac.uk/emdb/EMD-10922
+  - https://www.ebi.ac.uk/emdb/EMD-10923
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - part_of
+  - canonical_examples
+  - physical_properties
+  - datasets
+  - images
+  - discussions
+  summary: Add the basal body filamentous cartwheel inner density as a distinct native filament
+  details: Created through the validated scaffold and guarded writer after whole-repository
+    hidden/ignored-inclusive alias, slug, DOI and PMID searches, parsed identities across
+    873 prior records, and complete native GO searches. Inspected checksum-verified Nazarov
+    2020 dedicated Teranympha Results, conserved-architecture Discussion, native specimen
+    and reconstruction Methods, and original Figure 4. Added one morphology-scoped microbial
+    example, approximate 7-nm diameter and two separate EMDB class datasets; retained native
+    sample-name conflicts with verified structured taxon 285686. Hosted the unchanged CC BY
+    4.0 figure with verified article/media checksums. Preserved morphology-based species assignment,
+    imposed C9 processing, subvolume-class fractions and uninspected supplemental-graphic
+    boundaries. Declined unsupported SAS-6 hub membership and retained open composition, specific
+    function, contacts, helicity and CID-homology questions without invented components or
+    a causal graph. Broad parent reflects unknown molecular granularity. Guarded byte-stable
+    re-emission passed. Native taxonomy, unit and EMDB citation metadata verified; iModulonDB
+    has no matching organism. Mapping remains PROPOSED. Generated artifacts and validation
+    accompany the PR. No PR existed at history creation.
