@@ -2472,6 +2472,11 @@
           "cosine_similarity": 0.83796698
         },
         {
+          "identifier": "cellstructuremech:basal_body_cartwheel_inner_density",
+          "label": "basal body cartwheel inner density",
+          "cosine_similarity": 0.82109835
+        },
+        {
           "identifier": "GO:0001535",
           "label": "radial spoke head",
           "cosine_similarity": 0.78086676
@@ -2480,11 +2485,37 @@
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.77215133
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:basal_body_cartwheel_inner_density",
+      "label": "basal body cartwheel inner density",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:basal_body_cartwheel",
+          "label": "basal body cartwheel",
+          "cosine_similarity": 0.82109835
         },
         {
-          "identifier": "GO:0001536",
-          "label": "radial spoke stalk",
-          "cosine_similarity": 0.76240293
+          "identifier": "cellstructuremech:basal_body_d2_rod",
+          "label": "basal body D2-rod",
+          "cosine_similarity": 0.81329607
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_pinhead",
+          "label": "basal body pinhead",
+          "cosine_similarity": 0.70339773
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_a_tusk",
+          "label": "basal body A-tusk",
+          "cosine_similarity": 0.67259658
+        },
+        {
+          "identifier": "GO:0036064",
+          "label": "ciliary basal body",
+          "cosine_similarity": 0.66361037
         }
       ]
     },
@@ -2496,6 +2527,11 @@
           "identifier": "cellstructuremech:basal_body_cartwheel",
           "label": "basal body cartwheel",
           "cosine_similarity": 0.83796698
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_cartwheel_inner_density",
+          "label": "basal body cartwheel inner density",
+          "cosine_similarity": 0.81329607
         },
         {
           "identifier": "cellstructuremech:basal_body_pinhead",
@@ -2511,11 +2547,6 @@
           "identifier": "GO:0036064",
           "label": "ciliary basal body",
           "cosine_similarity": 0.78486392
-        },
-        {
-          "identifier": "cellstructuremech:basal_body_triplet_base",
-          "label": "basal body triplet base",
-          "cosine_similarity": 0.75683125
         }
       ]
     },
