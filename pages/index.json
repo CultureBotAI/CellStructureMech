@@ -5769,6 +5769,15 @@
   "definition": "The chemoreceptor array: a hexagonal lattice of trimers-of-dimers of methyl-accepting chemotaxis proteins, held at the membrane by the CheA kinase and the CheW coupling protein. The array is the cell's sensory organ, and its geometry — a 12 nm hexagonal spacing conserved across bacteria and archaea — is what gives chemotaxis its cooperativity and gain."
  },
  {
+  "identifier": "GO:0140275",
+  "label": "MIB complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mib_complex.html",
+  "definition": "A mitochondrial intermembrane-space-spanning assembly that couples inner-membrane MICOS to outer-membrane SAM and includes a conserved DNAJC11-related protein and metaxin 1."
+ },
+ {
   "identifier": "GO:0061617",
   "label": "MICOS complex",
   "category": "OTHER",

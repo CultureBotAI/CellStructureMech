@@ -15409,9 +15409,9 @@
           "cosine_similarity": 0.69731002
         },
         {
-          "identifier": "GO:1990203",
-          "label": "MdtBC Complex",
-          "cosine_similarity": 0.69142381
+          "identifier": "GO:0140275",
+          "label": "MIB complex",
+          "cosine_similarity": 0.69303797
         }
       ]
     },
@@ -15745,14 +15745,14 @@
           "cosine_similarity": 0.71019836
         },
         {
+          "identifier": "GO:0140275",
+          "label": "MIB complex",
+          "cosine_similarity": 0.70813183
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.70066013
-        },
-        {
-          "identifier": "GO:0097347",
-          "label": "TAM protein secretion complex",
-          "cosine_similarity": 0.69951722
         }
       ]
     },
@@ -19129,9 +19129,9 @@
           "cosine_similarity": 0.68393058
         },
         {
-          "identifier": "GO:0031205",
-          "label": "endoplasmic reticulum Sec complex",
-          "cosine_similarity": 0.67948112
+          "identifier": "GO:0140275",
+          "label": "MIB complex",
+          "cosine_similarity": 0.68109392
         }
       ]
     },
@@ -19880,9 +19880,45 @@
       ]
     },
     {
+      "identifier": "GO:0140275",
+      "label": "MIB complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0061617",
+          "label": "MICOS complex",
+          "cosine_similarity": 0.86479752
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.83634404
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.82888445
+        },
+        {
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.8218408
+        },
+        {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.82084062
+        }
+      ]
+    },
+    {
       "identifier": "GO:0061617",
       "label": "MICOS complex",
       "neighbors": [
+        {
+          "identifier": "GO:0140275",
+          "label": "MIB complex",
+          "cosine_similarity": 0.86479752
+        },
         {
           "identifier": "GO:0001401",
           "label": "SAM complex",
@@ -19902,11 +19938,6 @@
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.85098369
-        },
-        {
-          "identifier": "GO:0030061",
-          "label": "mitochondrial crista",
-          "cosine_similarity": 0.82719248
         }
       ]
     },
@@ -19977,6 +20008,11 @@
       "label": "mitochondrial multifunctional assembly",
       "neighbors": [
         {
+          "identifier": "GO:0140275",
+          "label": "MIB complex",
+          "cosine_similarity": 0.78840133
+        },
+        {
           "identifier": "GO:0042721",
           "label": "TIM22 mitochondrial import inner membrane insertion complex",
           "cosine_similarity": 0.7458123
@@ -19995,11 +20031,6 @@
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.71605113
-        },
-        {
-          "identifier": "GO:0005744",
-          "label": "TIM23 mitochondrial import inner membrane translocase complex",
-          "cosine_similarity": 0.70981803
         }
       ]
     },

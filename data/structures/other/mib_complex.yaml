@@ -1,0 +1,206 @@
+identifier: GO:0140275
+label: MIB complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A mitochondrial intermembrane-space-spanning assembly that couples inner-membrane
+  MICOS to outer-membrane SAM and includes a conserved DNAJC11-related protein and
+  metaxin 1.
+definition_source: GO:0140275
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T21:05:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T21:07:34Z'
+  curator: codex
+  action: CURATED_RECORD
+  changes: Added exact GO identity and subcomplexes, a fission-yeast association example,
+    structural bridging function, nonmechanistic graph and bounded component/experimental
+    uncertainties.
+  llm_assisted: true
+synonyms:
+- synonym_text: mitochondrial intermembrane space bridging complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0140275
+- synonym_text: mitofilin complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0140275
+parent_structures:
+- GO:0098800
+part_of:
+- GO:0005743
+has_part:
+- GO:0061617
+- GO:0001401
+components:
+- component_id: micos
+  label: MICOS complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0061617
+  role: Inner-membrane subcomplex of the membrane-spanning assembly.
+  evidence:
+  - reference: GO:0140275
+    notes: MIB includes MICOS constituents.
+  - reference: DOI:10.1016/j.cub.2024.04.028
+    notes: 'Figure 1F-G: Mic60 and Mic26 baits recovered MICOS and MIB proteins in
+      fission yeast.'
+- component_id: sam
+  label: SAM complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0001401
+  role: Outer-membrane subcomplex associated with MICOS.
+  evidence:
+  - reference: GO:0140275
+    notes: SAM is the outer-membrane complex included in MIB.
+  - reference: DOI:10.1016/j.cub.2024.04.028
+    notes: Sam50 and metaxin 1 were enriched with both MICOS baits.
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1016/j.cub.2024.04.028
+  note: Cross-linked lysate IP/MS recovered SAM and a DNAJC11 homolog with MICOS.
+    This is association evidence, not purified reconstitution or fixed stoichiometry.
+functions:
+- function_id: mitochondrial_membrane_bridging
+  label: mitochondrial membrane bridging
+  description: Connects mitochondrial inner- and outer-membrane protein assemblies
+    across the intermembrane space.
+  evidence:
+  - reference: GO:0140275
+    notes: The GO definition specifies a bridging assembly spanning MICOS and SAM.
+  - reference: DOI:10.1016/j.cub.2024.04.028
+    notes: The Introduction describes MIB as a trans-boundary MICOS-SAM assembly;
+      Figure 1 supports association in fission yeast.
+evidence:
+- reference: GO:0140275
+  notes: Exact cellular-component identity, synonyms and composition boundary.
+- reference: GO:0098800
+  notes: Verified GO is-a parent of MIB.
+- reference: GO:0005743
+  notes: Containing inner mitochondrial membrane, not an identity mapping.
+- reference: DOI:10.1016/j.cub.2024.04.028
+  notes: Kumar et al. 2024, A dynamin superfamily-like pseudoenzyme coordinates with
+    MICOS to promote cristae architecture. PMID 38692277; native PMC11187654.319 JATS
+    checked against MD5 10930e607aec0699d936e157acfdacce.
+causal_graphs:
+- graph_id: mib_membrane_bridge
+  title: MIB connects MICOS and SAM
+  description: Structural organization of the membrane bridge, not a temporal assembly
+    pathway.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: Association and ontology membership do not establish direct interfaces,
+    assembly order or a MIB-specific crista-remodeling mechanism.
+  nodes:
+  - node_id: micos
+    label: MICOS complex
+    node_type: STRUCTURE
+    grounding: GO:0061617
+    component_ref: micos
+  - node_id: sam
+    label: SAM complex
+    node_type: STRUCTURE
+    grounding: GO:0001401
+    component_ref: sam
+  - node_id: mib
+    label: MIB complex
+    node_type: STRUCTURE
+    grounding: GO:0140275
+  - node_id: bridging
+    label: mitochondrial membrane bridging
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: micos
+    predicate: is part of
+    object: mib
+    description: MICOS supplies the inner-membrane subcomplex.
+    evidence:
+    - reference: GO:0140275
+      notes: Definition-level membership.
+  - subject: sam
+    predicate: is part of
+    object: mib
+    description: SAM supplies the outer-membrane subcomplex.
+    evidence:
+    - reference: GO:0140275
+      notes: Definition-level membership.
+  - subject: mib
+    predicate: mediates
+    object: bridging
+    description: The combined assembly bridges the mitochondrial membranes.
+    evidence:
+    - reference: GO:0140275
+      notes: Structural bridging role in the GO definition.
+    - reference: DOI:10.1016/j.cub.2024.04.028
+      notes: 'Introduction: trans-boundary MIB organization.'
+discussions:
+- discussion_id: mib_identity_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Does MIB duplicate MICOS, SAM or MIMAS?
+  rationale: MIB denotes the larger bridging assembly; its existing MICOS and SAM
+    records denote subcomplexes. The GO synonym mitofilin complex is retained without
+    treating every mitofilin-containing assembly as MIB.
+  resolution_note: Use GO:0140275 and explicit has_part relations, not a local identifier
+    or equivalence to a constituent.
+  evidence:
+  - reference: GO:0140275
+    notes: Exact MIB composition and synonymy.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: mib_individual_component_groundings
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact DNAJC11-related and metaxin family mappings and strain-matched
+    protein examples.
+  rationale: The two component rows describe subcomplexes, not an exhaustive protein
+    inventory. Separate metaxin representation must not double-count a SAM constituent.
+    No individual family or reference-strain accession is asserted before its scope
+    is verified.
+  evidence:
+  - reference: GO:0140275
+    notes: The definition also names DNAJC11-related protein and metaxin 1.
+  - reference: DOI:10.1016/j.cub.2024.04.028
+    notes: Figure 1F-G includes a DNAJC11 homolog among MIB-associated proteins.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: mmc1_not_a_core_mib_component
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Should Mmc1 be encoded as an obligatory MIB constituent?
+  rationale: Mmc1 associates with MICOS, but the source separates its activity from
+    MICOS assembly. Association alone does not establish an obligatory MIB subunit.
+  resolution_note: Do not add Mmc1 as a core constituent or assign its oligomer mass
+    to MIB.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2024.04.028
+    notes: 'Figures 4 and 7: MICOS/MIB association persists without Mmc1; Mmc1 forms
+      large assemblies independently of MICOS.'
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: mib_yeast_domain_conflict
+  kind: CONTROVERSY
+  status: OPEN
+  prompt: Resolve differing mitofilin C-terminal truncation results before adding
+    a domain-level yeast bridging mechanism.
+  rationale: Two budding-yeast studies report opposite changes in SAM co-isolation
+    after C-terminal truncation. The fission-yeast example does not resolve that experimental
+    disagreement.
+  notes: No universal C-terminal dependency, fixed TOM membership or budding-yeast
+    canonical example is asserted here.
+  evidence:
+  - reference: DOI:10.1091/mbc.E11-10-0831
+    notes: 'Read Results: Fcj1(1-472) loses Tob55 co-isolation, with reduced-solubility
+      caveat.'
+  - reference: DOI:10.1016/j.jmb.2012.05.004
+    notes: 'Only abstract inspected: C-terminal deletion enhances TOM/SAM association.
+      Full text was not reachable through publisher or Europe PMC routes; construct-level
+      reconciliation remains open.'
+  posed_by: codex
+  posed_date: '2026-10-04'
