@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  slug: intramitochondrial_protein_quality_control_compartment
+session:
+  id: 2026-10-05T043510Z-codex-009274
+  timestamp: '2026-10-05T04:35:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - discussions
+  summary: Keep Hsp60 association outside canonical IMiQ machinery
+  details: Full reading of the 2025 primary Discussion raised an unresolved distinction between
+    Hsp60 coaggregation and action on an assembled deposit. Removed Hsp60 from the associated-machinery
+    component list, retained the observed localization in the explicit boundary discussion,
+    and preserved the original discussion rationale by appending the new evidence. This does
+    not assert Hsp60 absence.

@@ -3348,6 +3348,15 @@
   "definition": "An apicomplexan double-membrane pellicle structure formed by flattened vesicles beneath the plasma membrane."
  },
  {
+  "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
+  "label": "intramitochondrial protein quality control compartment",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.html",
+  "definition": "A mitochondrial membrane-enclosed deposit compartment characterized in budding yeast that sequesters aggregated matrix proteins, often near the nucleus and separated from the remaining tubular mitochondrial network."
+ },
+ {
   "identifier": "GO:0005770",
   "label": "late endosome",
   "category": "MEMBRANE_ORGANELLE",

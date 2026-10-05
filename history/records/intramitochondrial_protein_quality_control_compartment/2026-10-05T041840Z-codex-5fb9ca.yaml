@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  slug: intramitochondrial_protein_quality_control_compartment
+session:
+  id: 2026-10-05T041840Z-codex-5fb9ca
+  timestamp: '2026-10-05T04:18:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - evidence
+  summary: Tighten IMiQ strain provenance
+  details: Moved the experimental YPH499 note to the 2025 primary-paper evidence and narrowed
+    the S288C canonical note to its cited Hsp78 reference accession. This corrects citation
+    placement without changing biological scope or semantic embedding text.
