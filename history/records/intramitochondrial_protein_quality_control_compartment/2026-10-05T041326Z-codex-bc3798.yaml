@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  slug: intramitochondrial_protein_quality_control_compartment
+session:
+  id: 2026-10-05T041326Z-codex-bc3798
+  timestamp: '2026-10-05T04:13:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - datasets
+  - images
+  - discussions
+  summary: Add evidence-backed IMiQ compartment
+  details: Curated the reporter-defined yeast mitochondrial deposit compartment from inspected
+    2018 and 2025 primary evidence, with verified chaperone reference identities, PRIDE provenance,
+    bounded formation graph, link-only figures and explicit unresolved DUMP equivalence. No
+    broad prevalence, fixed copy number or DUMP exact synonym asserted.

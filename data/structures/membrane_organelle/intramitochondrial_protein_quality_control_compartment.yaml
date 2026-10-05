@@ -1,0 +1,444 @@
+identifier: cellstructuremech:intramitochondrial_protein_quality_control_compartment
+label: intramitochondrial protein quality control compartment
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A mitochondrial membrane-enclosed deposit compartment characterized in
+  budding yeast that sequesters aggregated matrix proteins, often near the nucleus
+  and separated from the remaining tubular mitochondrial network.
+definition_source: DOI:10.1242/jcs.263680
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T04:10:52Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T04:12:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added yeast-scoped IMiQ evidence, recruited chaperone families, bounded
+    intervention graph, verified PRIDE dataset, link-only figures and unresolved DUMP
+    equivalence.
+  llm_assisted: true
+- timestamp: '2026-10-05T04:18:14Z'
+  curator: codex
+  action: REFINED_PROVENANCE
+  changes: Placed the experimental YPH499 strain note with its primary-paper citation
+    and narrowed the S288C reference example to its cited accession.
+  llm_assisted: true
+- timestamp: '2026-10-05T04:35:09Z'
+  curator: codex
+  action: REVISED_COMPONENT_BOUNDARY
+  changes: Removed Hsp60 from canonical associated machinery after full Discussion
+    review; retained directly observed association as an unresolved cargo-versus-machinery
+    boundary.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+synonyms:
+- synonym_text: IMiQ
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1091/mbc.E17-01-0027
+components:
+- component_id: aggregate_cargo
+  label: aggregated mitochondrial matrix proteins
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: A heterogeneous cargo class, not a single protein family. Neither
+    the engineered reporter nor a chaperone family defines this class.
+  role: Sequestered misfolded protein material. The destabilized GFP-DHFR reporter
+    is experimental cargo, not an invariant native subunit.
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-01-0027
+    notes: 'Results and Figures 1-3: targeted destabilized reporter forms sedimentable
+      deposits; endogenous proteins can coaggregate in small, condition-dependent
+      amounts.'
+- component_id: hsp78
+  label: Hsp78-type chaperone
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  gene_symbols:
+  - HSP78
+  role: Aggregate-associated disaggregase. Recruitment does not demonstrate clearance
+    of the stable IMiQ cargo.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33416
+    protein_label: Heat shock protein 78, mitochondrial
+    gene_symbol: HSP78
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence example, not a reassignment of the paper experimental
+      strain.
+    evidence:
+    - reference: UniProtKB:P33416
+      notes: Native reviewed entry verifies the accession, protein name, primary gene
+        and reference taxon.
+    - reference: DOI:10.1242/jcs.263680
+      notes: 'Figure 4C,E: strong localization at reporter deposits but limited recovery
+        in the sedimentation assay.'
+  evidence:
+  - reference: DOI:10.1242/jcs.263680
+    notes: 'Figure 4C,E: strong localization at reporter deposits but limited recovery
+      in the sedimentation assay.'
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200
+    notes: Native combined InterPro endpoint inspected on 2026-10-05, including all
+      integrated matches (next=null). Family identity is separate from experimental
+      compartment recruitment.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: P33416 matches the broader ClpA/B families IPR001270 and IPR050130,
+    not an exact Hsp78-type family. Domains, conserved sites and superfamilies are
+    not adopted as exact identities.
+- component_id: hsp70
+  label: Heat shock protein 70 family
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  gene_symbols:
+  - SSC1
+  role: Aggregate-associated chaperone, exemplified by mitochondrial Ssc1; not a fixed
+    stoichiometric shell in all conditions.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0CS90
+    protein_label: Import motor subunit, mitochondrial
+    gene_symbol: SSC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence example, not a reassignment of the paper experimental
+      strain.
+    evidence:
+    - reference: UniProtKB:P0CS90
+      notes: Native reviewed entry verifies the accession, protein name, primary gene
+        and reference taxon.
+    - reference: DOI:10.1242/jcs.263680
+      notes: 'Figures 4-5: Ssc1 is enriched at deposits; conspicuous rings occur in
+        fis1 deletion cells.'
+  evidence:
+  - reference: DOI:10.1242/jcs.263680
+    notes: 'Figures 4-5: Ssc1 is enriched at deposits; conspicuous rings occur in
+      fis1 deletion cells.'
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P0CS90/?page_size=200
+    notes: Native combined InterPro endpoint inspected on 2026-10-05, including all
+      integrated matches (next=null). Family identity is separate from experimental
+      compartment recruitment.
+  grounding: InterPro:IPR013126
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1091/mbc.E17-01-0027
+  note: Reporter-defined deposits characterized in budding yeast. Experimental cargo
+    contains mouse DHFR and GFP; those source organisms are not native IMiQ taxa.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: UniProtKB:P33416
+  note: Reference-sequence taxon of the reviewed Hsp78 example, not an assertion that
+    the imaging used S288C. Each other protein example carries its own reviewed accession.
+functions:
+- function_id: sequestration
+  label: sequestration of aggregated mitochondrial proteins
+  description: 'Concentrates insoluble matrix protein cargo into a restricted deposit.
+    Preserved growth and import in the tested conditions do not imply universal protection:
+    prolonged reporter expression increased menadione sensitivity and reduced cytochrome
+    b translation.'
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-01-0027
+    notes: Figures 2-4 and Results compare reporter-bearing and control yeast. Functional
+      costs depend on expression duration and stress; aggregation is not equivalent
+      to degradation.
+- function_id: biased_inheritance
+  label: biased retention of mitochondrial aggregate deposits in mother cells
+  description: Perinuclear deposits are preferentially retained during budding; daughter-cell
+    inheritance is reduced, not eliminated.
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-01-0027
+    notes: 'Figure 5: after reporter induction and shutoff, about 7 percent of daughter
+      cells inherited aggregates, compared with about 98 percent inheriting the control
+      mitochondrial GFP signal.'
+causal_graphs:
+- graph_id: yeast_reporter_sequestration
+  title: Reporter-defined IMiQ formation and positioning
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  description: Interventions affecting deposit coalescence, positioning and separation
+    in budding yeast.
+  scope_notes: Separate phenotypic readouts do not establish a molecular tether, a
+    temporal assembly sequence or direct binding of Fis1/Fzo1 to IMiQ. Reporter expression
+    and mutant conditions are not natural prevalence estimates.
+  nodes:
+  - node_id: reporter
+    label: Expression of mitochondria-targeted destabilized GFP-DHFR
+    node_type: STATE
+  - node_id: imiq
+    label: intramitochondrial protein quality control compartment
+    node_type: STRUCTURE
+    grounding: cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - node_id: perinuclear
+    label: Perinuclear localization of mitochondrial reporter deposits
+    node_type: STATE
+  - node_id: separation
+    label: Separation of aggregate-containing compartments from the tubular network
+    node_type: STATE
+  - node_id: hsp78_deletion
+    label: HSP78 deletion
+    node_type: STATE
+  - node_id: fzo1_deletion
+    label: FZO1 deletion
+    node_type: STATE
+  - node_id: fis1_deletion
+    label: FIS1 deletion
+    node_type: STATE
+  - node_id: benomyl
+    label: Benomyl treatment
+    node_type: STATE
+  edges:
+  - subject: reporter
+    predicate: induces
+    object: imiq
+    evidence:
+    - reference: DOI:10.1091/mbc.E17-01-0027
+      notes: Figure 1 contrasts targeted destabilized reporter with stable reporter
+        controls.
+  - subject: imiq
+    predicate: exhibits
+    object: perinuclear
+    evidence:
+    - reference: DOI:10.1091/mbc.E17-01-0027
+      notes: Figure 5 uses a nuclear marker; positioning is frequent, not invariant.
+  - subject: imiq
+    predicate: exhibits
+    object: separation
+    evidence:
+    - reference: DOI:10.1091/mbc.E17-01-0027
+      notes: Figures 1 and 7 distinguish large deposits from the residual tubular
+        mitochondrial network; separation is not loss of all surrounding membrane.
+  - subject: hsp78_deletion
+    predicate: impairs
+    object: perinuclear
+    evidence:
+    - reference: DOI:10.1091/mbc.E17-01-0027
+      notes: 'Figure 6: hsp78 deletion cells carry more small network-associated deposits
+        rather than the normal large perinuclear deposit.'
+  - subject: fzo1_deletion
+    predicate: impairs
+    object: perinuclear
+    evidence:
+    - reference: DOI:10.1091/mbc.E17-01-0027
+      notes: 'Figure 7: fusion-deficient cells show multiple small deposits lacking
+        normal perinuclear coalescence. Respiratory deficiency limits functional interpretation
+        of this strain.'
+  - subject: fis1_deletion
+    predicate: impairs
+    object: separation
+    evidence:
+    - reference: DOI:10.1091/mbc.E17-01-0027
+      notes: 'Figure 7: aggregate-bearing mitochondrial material remains associated
+        with the hyperconnected network in fis1 deletion cells.'
+  - subject: benomyl
+    predicate: reduces
+    object: perinuclear
+    evidence:
+    - reference: DOI:10.1091/mbc.E17-01-0027
+      notes: 'Figure 5: 100 micrograms/ml benomyl for 5 hours reduces perinuclear
+        localization while deposits still form. This pharmacological result does not
+        identify a molecular tether.'
+datasets:
+- accession: PXD059828
+  title: Mitochondrial reporter aggregate-associated proteome
+  dataset_type: PROTEOMICS
+  repository: PRIDE
+  organism: Saccharomyces cerevisiae (NCBITaxon:4932)
+  description: SILAC comparison of mitochondrial lysates and GFP-affinity isolates
+    from stable and destabilized reporter conditions.
+  conditions:
+  - mtDHFR control versus mtDHFRds aggregation reporter
+  - Mitochondrial lysate and aggregate-affinity fractions
+  platform: Orbitrap Fusion Lumos LC-MS/MS
+  url: https://www.ebi.ac.uk/pride/archive/projects/PXD059828
+  publication: DOI:10.1242/jcs.263680
+  findings: Aggregate-associated proteins are not automatically fixed structural subunits.
+  notes: Native PRIDE metadata verified accession, yeast taxon, publication DOI/PMID,
+    instrument and CC0 dataset licence on 2026-10-05. Raw files were not downloaded
+    or reanalyzed. Dataset CC0 does not license the paper figures.
+  evidence:
+  - reference: https://www.ebi.ac.uk/pride/archive/projects/PXD059828
+    supports: SUPPORT
+    notes: Project metadata agrees with the publication Data availability statement.
+evidence:
+- reference: DOI:10.1091/mbc.E17-01-0027
+  notes: Bruderek et al. (2018), PMID 29212875. Read Results, Discussion, figure captions
+    and selected Methods in PMC5996957.1; actual Figure 1 inspected. Supplementary
+    strain tables were not read; strain identity is not inferred from reference-sequence
+    entries.
+- reference: DOI:10.1242/jcs.263680
+  notes: Ruland et al. (2025), PMID 40734647. Read publisher Results on ultrastructure
+    and chaperones, Discussion, Methods and Data availability; actual Figure 1 inspected.
+    Supplements and raw proteomics were not reanalyzed. The Methods introduce fission/fusion
+    deletions into YPH499; reference-sequence accessions do not reassign that experimental
+    background.
+- reference: GO:0043231
+  notes: Native QuickGO confirms active cellular-component term intracellular membrane-bounded
+    organelle. It is a broader parent, not the exact identity.
+discussions:
+- discussion_id: identity_and_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Define the membrane-enclosed deposit compartment, rather than its protein
+    cargo alone.
+  rationale: A protein aggregate is not equivalent to the entire membrane-enclosed
+    IMiQ compartment. A broader ontology term must not replace the named identity.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-01-0027
+    notes: The named deposit is distinct from the residual network.
+  - reference: DOI:10.1242/jcs.263680
+    notes: Figure 1E and Discussion describe amorphous deposits surrounded by mitochondrial
+      membranes.
+  - reference: GO:0016234
+    notes: Native definition of inclusion body covers aggregated molecular material;
+      not selected as identity for the enclosing compartment.
+  resolved_date: '2026-10-05'
+  resolution_note: Mint IMiQ after bounded QuickGO and OLS GO label/synonym searches
+    for IMiQ, intramitochondrial, the full name and mitochondrial protein aggregate
+    did not identify an exact cellular-component term. Category and kind represent
+    membrane enclosure, not an autonomous self-replicating organelle. Hidden/ignored-inclusive
+    whole-worktree searches and parsed identities of 886 existing records found no
+    duplicate. No invariant part_of link to an intact mitochondrion is imposed on
+    a separated mitochondrial compartment.
+- discussion_id: dump_equivalence
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve whether DUMP and IMiQ represent different states or different structures
+    before merging or splitting their identities.
+  rationale: The 2020 DUMP paper explicitly argues distinction from IMiQ based on
+    network localization. The 2025 IMiQ paper instead considers likely similarity
+    or possible identity, while noting functional differences.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1126/sciadv.abc7288
+    notes: Abstract and Discussion and Conclusion read in PMC7406381.1. DUMP means
+      deposits of unfolded mitochondrial proteins; the discussion explicitly contrasts
+      them with IMiQ.
+  - reference: DOI:10.1242/jcs.263680
+    notes: Introduction discusses unresolved equivalence; its alternative-name wording
+      in Discussion does not settle the conflict.
+  notes: Do not add DUMP as an exact synonym, transfer its lipid-regulatory mechanism,
+    or generalize its human-cell observations to IMiQ. A separate DUMP addition needs
+    an explicit overlap decision.
+- discussion_id: exact_component_classes
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral grounding for Hsp78-type chaperones and the
+    heterogeneous aggregate cargo where an appropriate authority supports it.
+  rationale: The inspected Hsp78 InterPro matches are broader than the component;
+    the cargo is not one protein family. Exact matches should not be fabricated.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200
+    notes: Nine integrated matches, no exact Hsp78-type family in this bounded result.
+  - reference: DOI:10.1091/mbc.E17-01-0027
+    notes: Reporter and variable endogenous cargo do not define a single sequence
+      family.
+  notes: Retain REVIEWED_LABEL_ONLY and no grounding for these two classes. The grounded
+    Hsp70 label is deliberately family-level; recruitment is demonstrated only for
+    the named yeast example.
+- discussion_id: component_exclusions
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Distinguish directly localized chaperones from formation factors and potential
+    copurifying cargo.
+  rationale: Genetic effects and affinity enrichment alone do not define stable compartment
+    composition. Reading the remaining 2025 Discussion clarified that Hsp60 colocalization
+    could reflect failed precursor folding or coaggregation, rather than action on
+    the assembled deposit.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-01-0027
+    notes: Hsp78, Fis1 and Fzo1 perturbations affect deposit organization.
+  - reference: DOI:10.1242/jcs.263680
+    notes: Chaperone microscopy and proteomic enrichment are different evidence types.
+  - reference: DOI:10.1242/jcs.263680
+    notes: Discussion contrasts Hsp60 precursor folding with resolubilization or neutralization
+      of already aggregated proteins and proposes alternative explanations for its
+      partial recruitment. Figure 4 alone does not distinguish those alternatives.
+  resolved_date: '2026-10-05'
+  resolution_note: 'Include Hsp78 and Ssc1 as associated machinery, not a fixed coat
+    or invariant constituent set. Exclude Fis1/Fzo1 as demonstrated constituents;
+    their perturbations remain in the graph. Mdj1, Ecm10, proteases and respiratory
+    enzymes remain candidate interactors/cargo rather than fixed members. Sod2 is
+    a localization control, and GFP-DHFR is a reporter, not a native subunit. Leave
+    Hsp60 outside the canonical machinery list: its localization is supported, but
+    its maintenance role on IMiQ is unresolved. This is not a claim of absence from
+    deposits; it remains possible variable cargo.'
+- discussion_id: condition_and_measurement_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve native prevalence, membrane composition, deposition lifetime and
+    protocol-dependent chaperone recruitment.
+  rationale: Artificial reporter induction establishes a structure under specified
+    conditions, not broad taxonomic prevalence or a universal copy number. The 2018
+    sedimentation results show little stable chaperone association; the 2025 microscopy
+    shows recruitment that can be lost during isolation.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-01-0027
+    notes: Aggregate counts vary with induction/shutoff; prolonged expression has
+      functional costs.
+  - reference: DOI:10.1242/jcs.263680
+    notes: Microscopy and biochemical isolation give different recruitment readouts.
+  notes: Leave broad distribution, fixed stoichiometry and physical-property fields
+    empty. Do not convert two-dimensional aggregate area or section counts into compartment
+    diameter or copy number. No permanent inertness, resolved molecular tether, universal
+    protective shell, or demonstrated mitophagic disposal is asserted.
+images:
+- image_id: bruderek_2018_fig1
+  source: PMC
+  source_accession: PMC5996957.1 F1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5996957/#F1
+  licence: OTHER
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  attribution: Michael Bruderek, Witold Jaworek, Anne Wilkening, Cornelia Rub, Giovanna
+    Cenini, Arion Fortsch, Marc Sylvester and Wolfgang Voos (2018), Figure 1, DOI
+    10.1091/mbc.E17-01-0027; CC BY-NC-SA 3.0.
+  modality: FLUORESCENCE
+  caption: 'Reporter constructs, protease protection and fluorescence localization.
+    Destabilized mitochondrial reporter forms deposits; stable controls label the
+    network. Microscopy scale bars: 10 micrometers.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1091/mbc.E17-01-0027
+  retrieved_on: '2026-10-05'
+  notes: Actual multi-panel figure inspected; versioned PMC media MD5 7d0f983ae366b95f1c5424f921e91b4e
+    verified. The fluorescence panels do not resolve membrane ultrastructure. Exact
+    NC-SA licence verified in native metadata/JATS; link-only and no hosted copy.
+    OTHER retains the combined licence absent from the enum.
+- image_id: ruland_2025_fig1
+  source: OTHER
+  source_accession: DOI:10.1242/jcs.263680 Figure 1
+  source_url: https://journals.biologists.com/jcs/article/138/16/jcs263680/369001/Mitochondrial-protein-aggregates-recruit-key
+  licence: OTHER
+  licence_url: https://www.biologists.com/user-licence-1-2/
+  attribution: Laura Ruland, Marc Sylvester, Lydia Maus, Hannes Beckert and Wolfgang
+    Voos (2025), Figure 1, DOI 10.1242/jcs.263680; The Company of Biologists User
+    Licence 1.2.
+  modality: OTHER
+  caption: 'Reporter diagrams, immunoblots, immunofluorescence and transmission electron
+    microscopy of yeast controls and reporter-induced deposits; microscopy scale bars:
+    2 micrometers.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1242/jcs.263680
+  retrieved_on: '2026-10-05'
+  notes: Actual publisher-hosted figure inspected. Panel E includes author-coloured
+    organelle outlines and enlarged uncoloured micrographs. Crossref links the publication
+    to User Licence 1.2, not a Creative Commons hosting licence. Link-only; no figure
+    bytes are committed.
