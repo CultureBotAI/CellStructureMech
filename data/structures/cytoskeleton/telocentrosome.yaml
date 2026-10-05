@@ -1,0 +1,621 @@
+identifier: cellstructuremech:telocentrosome
+label: telocentrosome
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A telomere-associated microtubule organizing assembly formed at the nuclear
+  envelope during meiotic entry in Schizosaccharomyces pombe. It recruits a gamma-tubulin
+  nucleation complex to SUN/KASH-linked telomeres and generates cytoplasmic microtubules
+  that support their clustering at the spindle pole body; it is distinct from the
+  spindle pole body and the completed telomere bouquet.
+definition_source: DOI:10.1083/jcb.201207168
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T19:43:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T19:43:50Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added eight component classes and eight verified protein examples, bounded
+    assembly and function graphs, a link-only inspected primary figure, and explicit
+    identity, evidence and family-grounding limits.
+  llm_assisted: true
+parent_structures:
+- GO:0005815
+synonyms:
+- synonym_text: meiotic telomeric MTOC
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1083/jcb.201207168
+components:
+- component_id: sun
+  label: SUN domain-containing protein 1-5
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Nuclear-envelope SUN component marking telomere-associated nucleation sites.
+  grounding: InterPro:IPR045119
+  grounding_notes: Exact integrated SUN1-5 family, distinct from the SUN domain alone.
+  gene_symbols:
+  - sad1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q09825
+    protein_label: Spindle pole body-associated protein sad1
+    gene_symbol: sad1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level localization experiment;
+      not an assertion that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figure 3A localizes Sad1 with unclustered Taz1-marked telomeres before
+        conjugation; Supplementary Figure S2D observes microtubule regrowth from Sad1
+        foci.
+    - reference: https://www.uniprot.org/uniprotkb/Q09825/entry
+      notes: Reviewed status, primary gene, protein label and source taxon verified
+        natively on 2026-10-05. Localization is supported by the primary experiment.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+    notes: Figure 3A localizes Sad1 with unclustered Taz1-marked telomeres before
+      conjugation; Supplementary Figure S2D observes microtubule regrowth from Sad1
+      foci.
+  - reference: InterPro:IPR045119
+    notes: Authority label and scope checked on 2026-10-05; the primary paper, not
+      the family match alone, establishes residence.
+- component_id: kms1
+  label: Kms1-like KASH protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident envelope linker required for normal recruitment of Mto1, Dlc1 and
+    the gamma-tubulin complex.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Complete P87245 InterPro matches contain the EF-hand domain-pair
+    homologous superfamily, not an exact Kms1-like whole-protein family.
+  gene_symbols:
+  - kms1
+  protein_examples:
+  - uniprot_id: UniProtKB:P87245
+    protein_label: Karyogamy meiotic segregation protein 1
+    gene_symbol: kms1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level localization experiment;
+      not an assertion that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figure 3B-D localizes Kms1 at Sad1-marked telocentrosomes and tests recruitment
+        dependencies; reduced or residual signals do not justify an all-or-none stoichiometric
+        claim.
+    - reference: https://www.uniprot.org/uniprotkb/P87245/entry
+      notes: Reviewed status, primary gene, protein label and source taxon verified
+        natively on 2026-10-05. Localization is supported by the primary experiment.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+    notes: Figure 3B-D localizes Kms1 at Sad1-marked telocentrosomes and tests recruitment
+      dependencies; reduced or residual signals do not justify an all-or-none stoichiometric
+      claim.
+- component_id: kms2
+  label: Kms2-like KASH protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Second resident KASH protein at telomere-associated envelope sites.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: O43087 matches integrated family IPR030268 Nesprin-4, whose native
+    definition is predominantly mammalian. That broader family is not asserted as
+    an exact equivalent of the narrower Kms2-like class.
+  gene_symbols:
+  - kms2
+  protein_examples:
+  - uniprot_id: UniProtKB:O43087
+    protein_label: Karyogamy meiotic segregation protein 2
+    gene_symbol: kms2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level localization experiment;
+      not an assertion that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figure 3A-B colocalizes Kms2 with multiple Sad1 foci before conjugation;
+        this experiment does not establish its individual assembly essentiality.
+    - reference: https://www.uniprot.org/uniprotkb/O43087/entry
+      notes: Reviewed status, primary gene, protein label and source taxon verified
+        natively on 2026-10-05. Localization is supported by the primary experiment.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+    notes: Figure 3A-B colocalizes Kms2 with multiple Sad1 foci before conjugation;
+      this experiment does not establish its individual assembly essentiality.
+- component_id: mto1
+  label: Mto1-like microtubule nucleation adaptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident adaptor supporting telomeric recruitment of the gamma-tubulin nucleation
+    complex.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: O94488 has Centrosomin N-terminal motif 1 and Mto1-like Mto2-binding
+    domain matches, but no exact integrated whole-protein family. O13670 is an unrelated
+    mitochondrial MTO1 homonym.
+  gene_symbols:
+  - mto1
+  protein_examples:
+  - uniprot_id: UniProtKB:O94488
+    protein_label: Gamma tubulin complex adapter mto1
+    gene_symbol: mto1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level localization experiment;
+      not an assertion that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figures 3D, 4 and 5 place Mto1 at telocentrosomes and show greatly reduced
+        Alp4 recruitment and severe clustering defects after mto1 loss.
+    - reference: https://www.uniprot.org/uniprotkb/O94488/entry
+      notes: Reviewed status, primary gene, protein label and source taxon verified
+        natively on 2026-10-05. Localization is supported by the primary experiment.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+    notes: Figures 3D, 4 and 5 place Mto1 at telocentrosomes and show greatly reduced
+      Alp4 recruitment and severe clustering defects after mto1 loss.
+- component_id: gamma_tuc
+  label: gamma-tubulin complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Microtubule-nucleating subcomplex recruited to the telomere environment; Alp4
+    is the directly imaged constituent.
+  grounding: GO:0000930
+  grounding_notes: The native generic gamma-tubulin complex definition fits the source's
+    gamma-TuC claim. GO:0000931 ring complex and GO:0008275 small complex would add
+    unmeasured architectural specificity.
+  gene_symbols:
+  - alp4
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9Y705
+    protein_label: Spindle pole body component alp4
+    gene_symbol: alp4
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Alp4 is one imaged subunit and reporter of the gamma-tubulin complex, not
+      a protein accession for the entire complex. Reference-sequence exemplar; no
+      exact-stock assertion.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figures 3D, 4D and 5 use Alp4 as a gamma-tubulin-complex reporter. This
+        supports complex recruitment without establishing ring geometry, a small-complex
+        stoichiometry, or direct localization of every subunit.
+    - reference: https://www.uniprot.org/uniprotkb/Q9Y705/entry
+      notes: Reviewed status, primary gene, protein label and source taxon verified
+        natively on 2026-10-05. Localization is supported by the primary experiment.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+    notes: Figures 3D, 4D and 5 use Alp4 as a gamma-tubulin-complex reporter. This
+      supports complex recruitment without establishing ring geometry, a small-complex
+      stoichiometry, or direct localization of every subunit.
+  - reference: GO:0000930
+    notes: Authority label and scope checked on 2026-10-05; the primary paper, not
+      the family match alone, establishes residence.
+- component_id: dlc1
+  label: Dynein light chain Tctex-1-like
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident light-chain class with a contribution to gamma-tubulin-complex recruitment
+    separable from heavy-chain motor activity.
+  grounding: InterPro:IPR005334
+  grounding_notes: Exact integrated Tctex-1-like family verified; the broader homologous
+    superfamily is not substituted.
+  gene_symbols:
+  - dlc1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9UTS6
+    protein_label: Dynein light chain Tctex-type
+    gene_symbol: dlc1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level localization experiment;
+      not an assertion that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figures 3C and 5 show Kms1-dependent Dlc1 localization, independent Dhc1
+        recruitment, and reduced Alp4 telomere localization after dlc1 deletion. Early
+        and later stages differ.
+    - reference: https://www.uniprot.org/uniprotkb/Q9UTS6/entry
+      notes: Reviewed status, primary gene, protein label and source taxon verified
+        natively on 2026-10-05. Localization is supported by the primary experiment.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+    notes: Figures 3C and 5 show Kms1-dependent Dlc1 localization, independent Dhc1
+      recruitment, and reduced Alp4 telomere localization after dlc1 deletion. Early
+      and later stages differ.
+  - reference: InterPro:IPR005334
+    notes: Authority label and scope checked on 2026-10-05; the primary paper, not
+      the family match alone, establishes residence.
+- component_id: dhc1
+  label: Cytoplasmic dynein heavy chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: DISPENSABLE
+  role: Resident motor-bearing dynein subunit contributing to telomere clustering.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: O13290 matches IPR026983 Dynein heavy chain plus domains; this
+    family is broader than the cytoplasmic heavy-chain class used here.
+  gene_symbols:
+  - dhc1
+  protein_examples:
+  - uniprot_id: UniProtKB:O13290
+    protein_label: Dynein heavy chain, cytoplasmic
+    gene_symbol: dhc1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level localization experiment;
+      not an assertion that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figure 3C/E localizes Dhc1 and a motor-domain-deleted fragment at Sad1
+        foci. Figure 5 shows that Alp4 still localizes in dhc1-deleted cells, supporting
+        dispensability for nucleation-center recruitment rather than dispensability
+        for efficient clustering.
+    - reference: https://www.uniprot.org/uniprotkb/O13290/entry
+      notes: Reviewed status, primary gene, protein label and source taxon verified
+        natively on 2026-10-05. Localization is supported by the primary experiment.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+    notes: Figure 3C/E localizes Dhc1 and a motor-domain-deleted fragment at Sad1
+      foci. Figure 5 shows that Alp4 still localizes in dhc1-deleted cells, supporting
+      dispensability for nucleation-center recruitment rather than dispensability
+      for efficient clustering.
+- component_id: ssm4
+  label: Ssm4-like dynactin p150 subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident dynactin-associated microtubule-binding subunit recruited in a Dhc1-dependent
+    manner.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: O42667 has CAP Gly-rich domain and superfamily matches, but no
+    exact integrated whole-protein family. The doa10/ssm4 alias O60103 is an unrelated
+    ERAD ligase.
+  gene_symbols:
+  - ssm4
+  protein_examples:
+  - uniprot_id: UniProtKB:O42667
+    protein_label: Microtubule-associated protein ssm4
+    gene_symbol: ssm4
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level localization experiment;
+      not an assertion that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figure 3C localizes Ssm4 at telocentrosomes and shows loss of recruitment
+        without Dhc1; Figure 1C reports an enhanced clustering defect in the dhc1
+        deletion background.
+    - reference: https://www.uniprot.org/uniprotkb/O42667/entry
+      notes: Reviewed status, primary gene, protein label and source taxon verified
+        natively on 2026-10-05. Localization is supported by the primary experiment.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+    notes: Figure 3C localizes Ssm4 at telocentrosomes and shows loss of recruitment
+      without Dhc1; Figure 1C reports an enhanced clustering defect in the dhc1 deletion
+      background.
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1083/jcb.201207168
+  note: Defined in zygotic meiosis and experimentally synchronized mat-gene-induced
+    haploid meiosis. The 2025 ectopic mitotic experiment is a partial reconstitution,
+    not evidence of constitutive mitotic occurrence or broad fungal prevalence.
+functions:
+- function_id: nucleation
+  label: microtubule nucleation by microtubule organizing center
+  grounding: GO:0051418
+  description: Nucleates cytoplasmic microtubules at telomere-associated sites during
+    the tested meiotic conditions.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+    notes: Figure 2D-E and Supplementary Figure S2 use microtubule regrowth after
+      MBC removal; Sad1-marked sites also nucleate microtubules before zygotic conjugation.
+- function_id: clustering
+  label: meiotic telomere clustering
+  grounding: GO:0045141
+  description: Supports motor-dependent gathering of telomeres toward the spindle
+    pole body.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+    notes: Live dynamics, MBC inhibition and kms1/mto1 perturbations connect telocentrosome
+      activity to clustering. A microtubule-nucleating focus alone is not claimed
+      sufficient for a complete bouquet.
+causal_graphs:
+- graph_id: telocentrosome_assembly
+  title: Recruitment dependencies at meiotic telomeres
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Perturbation-defined recruitment relationships in S. pombe, not a purified
+    binding pathway or a stoichiometric model. Dlc1 contribution varies by stage;
+    residual localization is retained in the interpretation.
+  nodes:
+  - node_id: kms1
+    label: Kms1-like KASH protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: kms1
+  - node_id: mto1
+    label: Mto1-like microtubule nucleation adaptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: mto1
+  - node_id: dlc1
+    label: Dynein light chain Tctex-1-like
+    node_type: GENE_OR_PROTEIN
+    component_ref: dlc1
+    grounding: InterPro:IPR005334
+  - node_id: gamma_tuc
+    label: gamma-tubulin complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: gamma_tuc
+    grounding: GO:0000930
+  - node_id: telocentrosome
+    label: Telocentrosome
+    node_type: STRUCTURE
+    grounding: cellstructuremech:telocentrosome
+  edges:
+  - subject: kms1
+    predicate: supports
+    object: mto1
+    description: Kms1 supports Mto1 recruitment to telomere-associated Sad1 foci.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: 'Figure 3D: reduced Mto1 localization in kms1-deleted cells. The edge
+        specifies recruitment dependence, not direct binding.'
+  - subject: kms1
+    predicate: supports
+    object: dlc1
+    description: Kms1 supports telomeric recruitment of Dlc1.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: 'Figure 3C: Dlc1 localization depends on Kms1, independently of Dhc1.'
+  - subject: mto1
+    predicate: supports
+    object: gamma_tuc
+    description: Mto1 supports telomeric gamma-tubulin-complex recruitment.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: 'Figures 3D, 4D and 5B: Alp4 localization is substantially reduced after
+        mto1 deletion.'
+  - subject: dlc1
+    predicate: supports
+    object: gamma_tuc
+    description: Dlc1 contributes to sustained gamma-tubulin-complex localization
+      in the tested meiotic assays.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figure 5B shows reduced Alp4 localization in dlc1-deleted haploid meiotic
+        cells; early preconjugation recruitment can remain, so absolute initial assembly
+        essentiality is not asserted.
+  - subject: gamma_tuc
+    predicate: supports
+    object: telocentrosome
+    description: Recruitment of the nucleating complex establishes the telomeric microtubule-organizing
+      assembly.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figures 2-5 combine regrowth, Alp4 localization and recruitment mutants;
+        this is the source's assembly interpretation, not evidence that isolated gamma-TuC
+        alone is sufficient.
+- graph_id: telocentrosome_function
+  title: Telomeric microtubules support clustering
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Source-bounded live-cell and perturbation evidence; specific motor
+    cross-linking arrangements remain models.
+  nodes:
+  - node_id: telocentrosome
+    label: Telocentrosome
+    node_type: STRUCTURE
+    grounding: cellstructuremech:telocentrosome
+  - node_id: nucleation
+    label: microtubule nucleation by microtubule organizing center
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051418
+  - node_id: clustering
+    label: meiotic telomere clustering
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0045141
+  edges:
+  - subject: telocentrosome
+    predicate: supports
+    object: nucleation
+    description: Telomere-associated nucleation sites generate cytoplasmic microtubules.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figure 2D and Supplementary Figure S2 observe microtubule regrowth near
+        telomeres after MBC washout.
+  - subject: nucleation
+    predicate: supports
+    object: clustering
+    description: The resulting microtubules provide routes for motor-dependent telomere
+      gathering.
+    evidence:
+    - reference: DOI:10.1083/jcb.201207168
+      notes: Figure 2 observes telomeres gathering after microtubule connection, and
+        MBC inhibits clustering; Figure 1 identifies motor contributions. This edge
+        does not claim nucleation alone is sufficient.
+evidence:
+- reference: DOI:10.1083/jcb.201207168
+  notes: Yoshida et al. 2013, PMID 23401002; native PMC3575533.1 Results, relevant
+    imaging/meiotic-induction Methods and figure captions read. Figure 2 inspected
+    unchanged after checksum verification.
+- reference: DOI:10.1038/s41467-025-56049-9
+  notes: Jimenez-Martin et al. 2025, PMID 39833200; native PMC11747273.1 telocentrosome
+    recruitment, kms1 suppression and microscopy Methods read. Ectopic Bqt1/Bqt2 in
+    Rabl-deficient mitotic cells recruits Sad1/Kms1/Mto1/Alp4 without detectable Dhc1
+    or a complete bouquet.
+- reference: GO:0005815
+  notes: Non-obsolete native GO cellular-component term is broader than the telomeric
+    nucleation assembly.
+discussions:
+- discussion_id: identity_and_mereology
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the telomeric nucleation assembly distinct from its tether, products
+    and clustering endpoint.
+  notes: 'Hidden- and ignored-inclusive names, synonyms, core-accession and citation
+    searches plus parsed record identities found no existing record. GO alias searches
+    found no exact telocentrosome term. GO:0005815 is a broader MTOC parent; GO:0034993
+    describes the membrane tether rather than the full nucleation assembly. MULTIPROTEIN_COMPLEX
+    denotes the resident protein assembly. The SPB lacks equivalence: Sid4 does not
+    colocalize at telocentrosomes in Figure 3. Attachment to chromosomes or the envelope
+    is not automatically parthood; no part_of the SPB, a chromosome or completed bouquet
+    is asserted. Nucleated microtubules are products, not the whole nucleation center.'
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+  - reference: GO:0005815
+  - reference: GO:0034993
+- discussion_id: family_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Find exact whole-protein family groundings for five label-only component
+    classes.
+  notes: Complete native InterPro matches were inspected for Kms1 P87245, Kms2 O43087,
+    Mto1 O94488, Dhc1 O13290 and Ssm4 O42667. Domains and superfamilies cannot substitute
+    for families. Nesprin-4 and generic dynein-heavy-chain families are not exact
+    equivalents of the narrower classes used here; their presence is not a claim that
+    no family annotation exists. Keep these classes label-only until an exact authority
+    mapping is justified.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P87245/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O43087/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O94488/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O13290/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O42667/
+- discussion_id: homonymous_proteins
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Disambiguate native gene-name collisions.
+  notes: The nucleation adaptor is O94488/SPCC417.07c, not mitochondrial O13670. Dynactin-associated
+    Ssm4 is O42667, not the doa10/ssm4 ERAD ligase O60103. Both collisions were returned
+    by native reviewed gene-exact queries; protein identity and locus, not the symbol
+    alone, determine the examples.
+  evidence:
+  - reference: https://www.uniprot.org/uniprotkb/O94488/entry
+  - reference: https://www.uniprot.org/uniprotkb/O42667/entry
+- discussion_id: complex_and_essentiality
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not infer architecture or absolute necessity from reporter localization.
+  notes: Alp4 is one gamma-TuC reporter, not a whole-complex accession. No ring geometry,
+    small-complex copy number, exhaustive subunit list or fixed telocentrosome stoichiometry
+    is established here. Kms1 and Mto1 support normal recruitment, but reduced or
+    residual signals are not encoded as complete absence. Dlc1 has a stage-dependent
+    contribution independent of Dhc1; Dhc1 is dispensable for Alp4 recruitment but
+    important for clustering. Resident motors remain constituents without being assigned
+    universal assembly necessity.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+- discussion_id: boundary_declines
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate the nucleation-center core from upstream chromosome tethers and
+    external motor systems.
+  notes: Bqt1/Bqt2, Rap1 and Taz1 supply the chromosome-to-envelope context or markers
+    and are not separately imported into this core nucleation-center composition;
+    this does not assert their absence from the telomere environment. Kinesins Cut7,
+    Tea2, Klp5/Klp6 and Pkl1/Klp2 affect clustering but lack obvious telocentrosomal
+    localization in the defining study, so genetic effects alone do not make them
+    resident components. Sid4 is explicitly absent from telocentrosomal foci. Mto2,
+    all dynactin subunits, all gamma-TuC subunits and alpha/beta tubulin are not imported
+    merely from related-complex membership or from nucleated microtubules.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+  - reference: DOI:10.1038/s41467-025-56049-9
+- discussion_id: motor_model
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  prompt: Resolve the physical motor arrangement without promoting a proposed model
+    to fact.
+  notes: Minus-end-directed telomere movement and contributions from multiple motors
+    are observed. Oligomerized dynein/kinesin-14 cross-linking of telocentrosomal
+    and SPB microtubules, direct motor-specific telomere transport, and the exact
+    maintenance action of Dlc1 remain proposed mechanisms in Figure 5C. The graphs
+    encode recruitment dependencies and supported outputs only.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+- discussion_id: mitotic_reconstitution
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep partial ectopic assembly separate from physiological meiotic telocentrosomes.
+  notes: The 2025 study ectopically expresses Bqt1/Bqt2 in Rabl-deficient haploid
+    mitotic cells. Sad1, Kms1, Mto1 and Alp4 recruit to telomeres, but Dhc1 is not
+    detected and the complete bouquet does not form. Kms1 loss suppresses telomere
+    migration and some growth defects in that engineered context. These observations
+    do not demonstrate a normal mitotic organelle, prove dynein is the only missing
+    factor, or contradict the 2013 physiological meiotic scope.
+  evidence:
+  - reference: DOI:10.1038/s41467-025-56049-9
+- discussion_id: taxon_dataset_measurement
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep organism and measurement claims within the available evidence.
+  notes: Only S. pombe is a canonical species; reference-strain protein accessions
+    do not identify every experimental strain. No prevalence row across fungi or eukaryotes
+    is inferred from proposed evolutionary conservation. No exact structural dataset
+    or Complex Portal equivalent has been verified for this assembly; RNA-seq or generic
+    article aggregations are not adopted as direct structural datasets. No unverified
+    trait link, universal dimension, count or timing is supplied.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+  - reference: DOI:10.1038/s41467-025-56049-9
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+- discussion_id: image_license
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Retain the original figure as a source link, with exact licence and context.
+  notes: PMC3575533.1 metadata and JATS identify CC BY-NC-SA 3.0 after the original
+    six-month interval. The image is link-only with licence OTHER because the schema
+    has no exact enum for that version; no image bytes are added to the corpus. Figure
+    2 contains fluorescence time series, a schematic and plots, not a purified structure.
+    Native MD5 and downloaded SHA-256 were verified before visual inspection; the
+    source figure was not altered.
+  evidence:
+  - reference: DOI:10.1083/jcb.201207168
+images:
+- image_id: pmc3575533_fig2
+  source: PMC
+  source_accession: PMC3575533.1 fig2
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3575533/#fig2
+  licence: OTHER
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  attribution: Masashi Yoshida, Satoshi Katsuyama, Kazuki Tateho, Hiroto Nakamura,
+    Junpei Miyoshi, Tatsunori Ohba, Hirotada Matsuhara, Futaba Miki, Koei Okazaki,
+    Tokuko Haraguchi, et al.; CC BY-NC-SA 3.0, via PubMed Central
+  modality: FLUORESCENCE
+  caption: 'Multipanel Figure 2: A follows telomeres and microtubules before conjugation;
+    B is the haploid-meiosis schematic; C compares MBC and solvent controls. D-E follow
+    telomere-associated microtubule regrowth and clustering after MBC washout in induced
+    haploid meiosis. Microscopy scale bars are 2 micrometers; graphs and schematic
+    are not micrographs.'
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1083/jcb.201207168
+  retrieved_on: '2026-10-05'
+  notes: Link-only CC BY-NC-SA 3.0. Original figure inspected unmodified; native media
+    MD5 ac707f2d44cf3ec1238cb1863a939c1c; downloaded SHA-256 8d3114614d32513832bc7e63ff308e1f8a4475724af6bf9c88e80f04a2dfb1ad.
+    No hosted file or hosted-file checksum is asserted.
