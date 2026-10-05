@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  slug: mitochondrial_derived_compartment
+session:
+  id: 2026-10-05T055600Z-codex-f9b883
+  timestamp: '2026-10-05T05:56:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2055
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2054
+events:
+- type: EDIT
+  outcome: changed
+  summary: Retain spherical MDC diameter sampling scope
+  details: 'Separate adversarial self-review of head ee86ad69d077f7255a0ee3e36faef3384181d76c
+    found the spherical-only sampling qualifier missing from both diameter contexts. Actual
+    Figure 1C and Figure S1C axes label Spherical MDCs; native image MD5 checks passed. Guarded
+    mutation now restricts both contexts and evidence notes to that sampled morphology, preserving
+    numeric values, sample sizes, units and drug conditions. Appended Figure S1 inspection
+    provenance and record curation event. Immutable report: reports/yaml_record_review/20261005T055421Z-mitochondrial_derived_compartment.md,
+    SHA256 4cc068a6f402d6d423051fd17ec4a720d3616a08925940a7290147c01e11d0f8. No independent
+    review claimed. Embeddings require refresh because property context is projected; rerender
+    and full QC follow before fixed-head publication. Close issue only after deployment verification.'

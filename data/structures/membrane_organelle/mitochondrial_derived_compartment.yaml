@@ -20,6 +20,13 @@ curation_history:
     graph, measured dimensions, inspected link-only figure and explicitly limited
     2026 preprint follow-up evidence.
   llm_assisted: true
+- timestamp: '2026-10-05T05:55:38Z'
+  curator: codex
+  action: REFINED_MEASUREMENT_SCOPE
+  changes: Addressed PR 2054 review issue 2055 by restricting both diameter contexts
+    to the spherical MDCs sampled in Figure 1C and Figure S1C; preserved values, units,
+    sample sizes and induction conditions.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 synonyms:
@@ -296,23 +303,25 @@ physical_properties:
 - property: DIAMETER
   value: '0.41'
   unit: UO:0000017
-  context: Mean diameter of 104 rapamycin-induced MDCs in haploid budding yeast; 200
-    nM rapamycin for 2 hours.
+  context: Mean diameter of 104 spherical rapamycin-induced MDCs in haploid budding
+    yeast; 200 nM rapamycin for 2 hours.
   reference: DOI:10.1083/jcb.202307035
   evidence:
   - reference: DOI:10.1083/jcb.202307035
-    notes: Figure 1C reports the mean in micrometers; TEM section thickness is not
-      used as compartment diameter.
+    notes: Figure 1C reports the mean in micrometers for spherical MDCs, as stated
+      on the inspected plot axis. This does not measure elongated extensions or all
+      MDC morphologies; TEM section thickness is not used as compartment diameter.
 - property: DIAMETER
   value: '0.36'
   unit: UO:0000017
-  context: Mean diameter of 49 concanamycin A-induced MDCs in haploid budding yeast;
-    500 nM concanamycin A for 2 hours.
+  context: Mean diameter of 49 spherical concanamycin A-induced MDCs in haploid budding
+    yeast; 500 nM concanamycin A for 2 hours.
   reference: DOI:10.1083/jcb.202307035
   evidence:
   - reference: DOI:10.1083/jcb.202307035
-    notes: Figure S1C reports the mean in micrometers. It is a separate condition,
-      not a universal size range.
+    notes: Figure S1C reports the mean in micrometers for spherical MDCs, as stated
+      on the inspected plot axis. It is a separate condition, not a universal size
+      range or a measurement of all MDC morphologies.
 evidence:
 - reference: DOI:10.7554/eLife.13943
   notes: PMID 27097106, PMC4889329.1. Read Results on MDC formation, fission, cargo
@@ -321,7 +330,9 @@ evidence:
 - reference: DOI:10.1083/jcb.202307035
   notes: PMID 39136939, PMC11320809.1. Read all main Results, Discussion, selected
     strain/culture/imaging Methods and captions; actual Figure 1 inspected. Raw images
-    and tomography were not reanalyzed.
+    and tomography were not reanalyzed. Figure S1 was additionally inspected during
+    PR 2054 review; its native PMC media MD5 5b329e0ccfd3de22c02265e8439eda9f was
+    verified.
 - reference: DOI:10.1083/jcb.202307036
   notes: PMID 39136938, PMC11320589.1. Read Discussion and selected Results on cargo
     and carrier-reporter localization, with figure captions; not every supplementary
