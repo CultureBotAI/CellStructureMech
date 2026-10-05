@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  slug: mitochondrial_derived_compartment
+session:
+  id: 2026-10-05T053555Z-codex-3cbbb9
+  timestamp: '2026-10-05T05:35:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add evidence-backed mitochondrial-derived compartment
+  details: Added one proposed yeast MDC record with native-authority identifiers, five components,
+    nine bounded intervention edges, two measured diameters and one inspected link-only figure.
+    Preserved the 2024 carrier-model revision and conditional contact/lipid dependencies.
+    Two 2026 reviewed preprints remain follow-up evidence with read scope and access limitations
+    explicit. Ignored-inclusive duplicate search covered the worktree and all 887 existing
+    record identities. Guarded write passed; full generated-artifact and QC gates follow before
+    publication. No broad prevalence, fixed composition, exact MDV/IMiQ equivalence or final-version
+    preprint status is inferred.
