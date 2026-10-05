@@ -21346,6 +21346,11 @@
           "cosine_similarity": 0.81081038
         },
         {
+          "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+          "label": "quiescent telomere hypercluster",
+          "cosine_similarity": 0.79336625
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.76987047
@@ -21359,11 +21364,6 @@
           "identifier": "GO:0005634",
           "label": "nucleus",
           "cosine_similarity": 0.75336333
-        },
-        {
-          "identifier": "GO:1990251",
-          "label": "nuclear exosome focus",
-          "cosine_similarity": 0.74239603
         }
       ]
     },
@@ -22387,6 +22387,37 @@
           "identifier": "GO:0009579",
           "label": "thylakoid",
           "cosine_similarity": 0.73383341
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+      "label": "quiescent telomere hypercluster",
+      "neighbors": [
+        {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.79336625
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.77025985
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.72582476
+        },
+        {
+          "identifier": "GO:0000812",
+          "label": "Swr1 complex",
+          "cosine_similarity": 0.71407704
+        },
+        {
+          "identifier": "GO:0005697",
+          "label": "telomerase holoenzyme complex",
+          "cosine_similarity": 0.69821207
         }
       ]
     },
