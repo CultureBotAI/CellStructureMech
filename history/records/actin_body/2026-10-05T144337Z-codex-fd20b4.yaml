@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/actin_body.yaml
+  slug: actin_body
+session:
+  id: 2026-10-05T144337Z-codex-fd20b4
+  timestamp: '2026-10-05T14:43:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - causal_graphs
+  - images
+  - discussions
+  summary: Add evidence-backed yeast actin-body record
+  details: Scaffolded GO:0099079 after hidden/ignored-inclusive deduplication. Verified native
+    GO hierarchy, InterPro family matches, UniProt and taxon identities; curated eleven component
+    classes with fourteen protein examples and two pathway-level disassembly edges. Included
+    original checksum-verified CC BY 4.0 PMC6177259.1 Figure 5 supplement 1 after visual inspection,
+    with panel-specific context. Retained unresolved Abp family and fission-yeast drebrin
+    identity questions, reserve-function uncertainty and conditional cell-fate interpretation.
+    Primary 2011, 2015 and 2018 JATS sections read; 2006 indexed primary Results readable
+    but complete Methods not recovered. LLM-authored record remains PROPOSED. PR and validation
+    outcomes will be recorded in the timestamped review and PR thread.
