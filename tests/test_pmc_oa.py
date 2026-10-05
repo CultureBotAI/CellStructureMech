@@ -129,6 +129,98 @@ def test_missing_or_disagreeing_jats_licence_is_refused():
         pmc.article_license(cc0, "CC BY")
 
 
+@pytest.mark.parametrize("redundant_link", ["", '<ext-link xlink:href="http://creativecommons.org/licenses/by/4.0/"/>'])
+def test_standard_ali_licence_ref_and_equivalent_links(redundant_link):
+    root = pmc.ET.fromstring(
+        '<article xmlns:xlink="http://www.w3.org/1999/xlink" '
+        'xmlns:ali="http://www.niso.org/schemas/ali/1.0/"><license>'
+        '<ali:license_ref specific-use="textmining" content-type="ccbylicense">'
+        ' https://creativecommons.org/licenses/by/4.0/\n</ali:license_ref>'
+        f'{redundant_link}</license></article>'
+    )
+    assert pmc.article_license(root, "CC BY") == (
+        "CC_BY_4_0", "https://creativecommons.org/licenses/by/4.0/"
+    )
+
+
+@pytest.mark.parametrize("other_path", ["licenses/by/3.0", "publicdomain/zero/1.0"])
+def test_ali_licence_ref_cannot_hide_conflicting_link(other_path):
+    root = pmc.ET.fromstring(
+        '<article xmlns:xlink="http://www.w3.org/1999/xlink" '
+        'xmlns:ali="http://www.niso.org/schemas/ali/1.0/"><license>'
+        '<ali:license_ref>https://creativecommons.org/licenses/by/4.0/</ali:license_ref>'
+        f'<ext-link xlink:href="https://creativecommons.org/{other_path}/"/>'
+        '</license></article>'
+    )
+    with pytest.raises(ValueError, match="exactly one recognized"):
+        pmc.article_license(root, "CC BY")
+
+
+@pytest.mark.parametrize("declaration", [
+    '<license_ref>https://creativecommons.org/licenses/by/4.0/</license_ref>',
+    '<license-p>https://creativecommons.org/licenses/by/4.0/</license-p>',
+])
+def test_ali_licence_ref_does_not_expand_the_licence_whitelist(declaration):
+    root = pmc.ET.fromstring(
+        '<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/">'
+        f'<license>{declaration}</license></article>'
+    )
+    with pytest.raises(ValueError, match="exactly one recognized"):
+        pmc.article_license(root, "CC BY")
+
+
+@pytest.mark.parametrize("reference", [
+    "https://creativecommons.org/licenses/by-nc/4.0/",
+    "https://creativecommons.org/licenses/by/2.0/",
+    "https://example.org/private-licence",
+    "ftp://creativecommons.org/licenses/by/4.0/",
+    "",
+])
+@pytest.mark.parametrize("supported_link", ["", '<ext-link xlink:href="https://creativecommons.org/licenses/by/4.0/"/>'])
+def test_unsupported_ali_declaration_is_not_silently_discarded(reference, supported_link):
+    root = pmc.ET.fromstring(
+        '<article xmlns:xlink="http://www.w3.org/1999/xlink" '
+        'xmlns:ali="http://www.niso.org/schemas/ali/1.0/"><license>'
+        f'<ali:license_ref>{reference}</ali:license_ref>{supported_link}'
+        '</license></article>'
+    )
+    with pytest.raises(ValueError, match="requires manual review"):
+        pmc.article_license(root, "CC BY")
+
+
+def test_restrictive_cc_link_cannot_be_hidden_by_supported_ali_declaration():
+    root = pmc.ET.fromstring(
+        '<article xmlns:xlink="http://www.w3.org/1999/xlink" '
+        'xmlns:ali="http://www.niso.org/schemas/ali/1.0/"><license>'
+        '<ali:license_ref>https://creativecommons.org/licenses/by/4.0/</ali:license_ref>'
+        '<ext-link xlink:href="https://creativecommons.org/licenses/by-nc/4.0/"/>'
+        '</license></article>'
+    )
+    with pytest.raises(ValueError, match="requires manual review"):
+        pmc.article_license(root, "CC BY")
+
+
+def test_non_licence_information_link_does_not_conflict():
+    root = pmc.ET.fromstring(
+        '<article xmlns:xlink="http://www.w3.org/1999/xlink" '
+        'xmlns:ali="http://www.niso.org/schemas/ali/1.0/"><license>'
+        '<ali:license_ref>https://creativecommons.org/licenses/by/4.0/</ali:license_ref>'
+        '<ext-link xlink:href="https://creativecommons.org/about/"/>'
+        '</license></article>'
+    )
+    assert pmc.article_license(root, "CC BY")[0] == "CC_BY_4_0"
+
+
+def test_ali_licence_ref_outside_license_is_not_authoritative():
+    root = pmc.ET.fromstring(
+        '<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/">'
+        '<ali:license_ref>https://creativecommons.org/licenses/by/4.0/</ali:license_ref>'
+        '</article>'
+    )
+    with pytest.raises(ValueError, match="exactly one recognized"):
+        pmc.article_license(root, "CC BY")
+
+
 def test_source_figure_id_is_normalized_to_a_safe_collision_resistant_leaf(monkeypatch):
     root = pmc.ET.fromstring(XML.replace(b'id="F1"', b'id="F/../../escape"'))
     monkeypatch.setattr(pmc, "get_bytes", lambda _url: IMAGE)

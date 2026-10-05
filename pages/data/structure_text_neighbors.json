@@ -19119,6 +19119,11 @@
           "cosine_similarity": 0.69966735
         },
         {
+          "identifier": "cellstructuremech:mitochondrial_lon_protease_complex",
+          "label": "mitochondrial Lon protease complex",
+          "cosine_similarity": 0.69069607
+        },
+        {
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.68909489
@@ -19127,11 +19132,6 @@
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.68393058
-        },
-        {
-          "identifier": "GO:0140275",
-          "label": "MIB complex",
-          "cosine_similarity": 0.68109392
         }
       ]
     },
@@ -19362,6 +19362,11 @@
           "cosine_similarity": 0.94922731
         },
         {
+          "identifier": "cellstructuremech:mitochondrial_lon_protease_complex",
+          "label": "mitochondrial Lon protease complex",
+          "cosine_similarity": 0.86470955
+        },
+        {
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.86253292
@@ -19375,11 +19380,6 @@
           "identifier": "GO:0042721",
           "label": "TIM22 mitochondrial import inner membrane insertion complex",
           "cosine_similarity": 0.78467011
-        },
-        {
-          "identifier": "GO:0005742",
-          "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.77938602
         }
       ]
     },
@@ -19641,6 +19641,11 @@
           "cosine_similarity": 0.94922731
         },
         {
+          "identifier": "cellstructuremech:mitochondrial_lon_protease_complex",
+          "label": "mitochondrial Lon protease complex",
+          "cosine_similarity": 0.87537149
+        },
+        {
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.84808703
@@ -19654,11 +19659,6 @@
           "identifier": "GO:0000502",
           "label": "proteasome complex",
           "cosine_similarity": 0.78108971
-        },
-        {
-          "identifier": "GO:0005839",
-          "label": "proteasome core complex",
-          "cosine_similarity": 0.7686922
         }
       ]
     },
@@ -20137,6 +20137,11 @@
           "cosine_similarity": 0.89016573
         },
         {
+          "identifier": "cellstructuremech:mitochondrial_lon_protease_complex",
+          "label": "mitochondrial Lon protease complex",
+          "cosine_similarity": 0.8812701
+        },
+        {
           "identifier": "GO:0042721",
           "label": "TIM22 mitochondrial import inner membrane insertion complex",
           "cosine_similarity": 0.86851136
@@ -20150,11 +20155,37 @@
           "identifier": "GO:0140595",
           "label": "MIM complex",
           "cosine_similarity": 0.85790667
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:mitochondrial_lon_protease_complex",
+      "label": "mitochondrial Lon protease complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.8812701
         },
         {
-          "identifier": "GO:0001401",
-          "label": "SAM complex",
-          "cosine_similarity": 0.8547166
+          "identifier": "GO:0005745",
+          "label": "m-AAA complex",
+          "cosine_similarity": 0.87537149
+        },
+        {
+          "identifier": "GO:0031942",
+          "label": "i-AAA complex",
+          "cosine_similarity": 0.86470955
+        },
+        {
+          "identifier": "GO:0140595",
+          "label": "MIM complex",
+          "cosine_similarity": 0.81662732
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.80201814
         }
       ]
     },

@@ -119,25 +119,35 @@ def article_license(root: ET.Element, metadata_code: str) -> tuple[str, str]:
     terms, so the version comes from the authoritative JATS ``<license>`` link.
     """
     hrefs: set[str] = set()
+    licence_refs: set[str] = set()
     for license_element in root.findall(".//{*}license"):
         for element in license_element.iter():
             href = element.get("{http://www.w3.org/1999/xlink}href")
             if href:
                 hrefs.add(href)
-    recognized = []
+            if element.tag == "{http://www.niso.org/schemas/ali/1.0/}license_ref":
+                licence_refs.add(text_content(element))
+    hrefs.update(licence_refs)
+    recognized = set()
     for href in hrefs:
         parsed = urllib.parse.urlsplit(href)
-        if parsed.netloc.lower() not in {"creativecommons.org", "www.creativecommons.org"}:
-            continue
+        cc_host = parsed.netloc.lower() in {"creativecommons.org", "www.creativecommons.org"}
         key = parsed.path.rstrip("/")
-        if key in JATS_LICENSES:
-            recognized.append(JATS_LICENSES[key])
+        supported = cc_host and parsed.scheme in {"http", "https"} and key in JATS_LICENSES
+        # An unknown declaration cannot be discarded in favor of another link.
+        if not supported and (
+            href in licence_refs
+            or (cc_host and key.startswith(("/licenses/", "/publicdomain/")))
+        ):
+            raise ValueError(f"Unsupported JATS licence declaration requires manual review: {href!r}")
+        if supported:
+            recognized.add(JATS_LICENSES[key])
     if len(recognized) != 1:
         raise ValueError(
             f"JATS must contain exactly one recognized CC BY 3.0/4.0 or CC0 licence URL; "
             f"found {sorted(hrefs)}"
         )
-    family, licence, canonical_url = recognized[0]
+    family, licence, canonical_url = next(iter(recognized))
     if family != metadata_code:
         raise ValueError(
             f"PMC metadata licence {metadata_code!r} disagrees with JATS licence {family!r}"

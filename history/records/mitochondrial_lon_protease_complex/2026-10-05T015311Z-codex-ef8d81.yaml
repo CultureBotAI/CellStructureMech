@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mitochondrial_lon_protease_complex.yaml
+  slug: mitochondrial_lon_protease_complex
+session:
+  id: 2026-10-05T015311Z-codex-ef8d81
+  timestamp: '2026-10-05T01:53:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2046
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - datasets
+  - images
+  - discussions
+  summary: Add evidence-bounded mitochondrial Lon/Pim1 oligomer record
+  details: Minted a matrix Lon assembly after hidden/ignored-inclusive worktree deduplication
+    and native GO searches found no exact cellular-component identity. Curated InterPro IPR027503,
+    reviewed P36775, yeast-scoped examples, a five-edge assay-bounded graph and exact structural-dataset
+    provenance. Inspected 2022 primary Results/Discussion/Methods and Figures 1-3, 1999 publisher
+    text, and native PDB/EMDB records; preserve conflicting oligomer interpretations and the
+    publication accession discrepancy. Hosted only the verified CC BY 4.0 PMC8913295.1 Figure
+    1 with checksum and attribution. No broad taxonomic distribution, fixed stoichiometry,
+    physical mass, inferred Complex Portal identity or physiological insertion-dispensability
+    claim was added. iModulonDB dataset inventory contained no matching yeast dataset. Record
+    remains PROPOSED; source conflicts are explicit open discussions. All record changes use
+    the guarded writer and llm_assisted curation events.
