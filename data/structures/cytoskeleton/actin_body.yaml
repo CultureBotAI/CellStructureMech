@@ -1,0 +1,687 @@
+identifier: GO:0099079
+label: actin body
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: An amorphous cytoplasmic assembly of actin filaments and selected actin-binding
+  proteins in growth-arrested yeast cells, distinct from cortical actin patches and
+  actin cables.
+definition_source: GO:0099079
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T14:39:58Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T14:43:03Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added eleven component classes, fourteen verified protein examples, scoped
+    yeast distribution, a two-edge disassembly mechanism, licensed microscopy and
+    explicit family, reporter-identity and physiological-interpretation boundaries.
+  llm_assisted: true
+- timestamp: '2026-10-05T14:44:18Z'
+  curator: codex
+  action: CORRECTED_FIGURE_REFERENCES
+  changes: Corrected two 2011 glucose-catabolism figure references from Figure 5 to
+    Figure 4 after reading the native JATS captions.
+  llm_assisted: true
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0015629
+- GO:0005737
+components:
+- component_id: actin_family
+  label: Actin family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ACT1
+  - ARP2
+  essentiality: UNKNOWN
+  role: Act1 supplies the filament scaffold. The related Arp2 protein is only a partial
+    colocalizer; shared family identity does not make Arp2 a substitute filament monomer.
+  protein_examples:
+  - uniprot_id: UniProtKB:P60010
+    protein_label: Actin
+    gene_symbol: ACT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Figures 1-2: phalloidin staining and anti-actin immunogold identify
+        F-actin-rich bodies.'
+    - reference: https://www.uniprot.org/uniprotkb/P60010/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  - uniprot_id: UniProtKB:P32381
+    protein_label: Actin-related protein 2
+    gene_symbol: ARP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+        colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+    - reference: https://www.uniprot.org/uniprotkb/P32381/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: Figures 1-2 establish actin-rich bodies; the component-localization Results
+      distinguish partial Arp2 colocalization.
+  grounding: InterPro:IPR004000
+  grounding_notes: Complete native InterPro matches verified for all listed exemplars
+    on 2026-10-05. The integrated family describes identity, not universal actin-body
+    localization or equivalent roles of every family member.
+- component_id: abp1
+  label: Abp1-like actin-binding adaptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ABP1
+  essentiality: UNKNOWN
+  role: Budding-yeast Abp1 colocalizes with bodies and serves as a live-cell reporter.
+  protein_examples:
+  - uniprot_id: UniProtKB:P15891
+    protein_label: Actin-binding protein
+    gene_symbol: ABP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Figure 3: GFP reporter colocalizes with phalloidin-stained actin bodies
+        in stationary budding yeast.'
+    - reference: https://www.uniprot.org/uniprotkb/P15891/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: 'Figure 3: GFP reporter colocalizes with phalloidin-stained actin bodies
+      in stationary budding yeast.'
+  - reference: DOI:10.7554/eLife.35685
+    notes: Figure 5 tracks Abp1-3xGFP bodies and subsequent individual-cell budding.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The complete P15891 InterPro match list contained ADF-H and SH3
+    domains and superfamilies, not an exact whole-protein Abp1 family. No domain is
+    used as whole-component identity.
+- component_id: abp140
+  label: Abp140-like actin-binding methyltransferase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ABP140
+  essentiality: UNKNOWN
+  role: Abp140 colocalizes with bodies; its methyltransferase annotation does not
+    establish a catalytic requirement for body formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08641
+    protein_label: tRNA(Thr) (cytosine(32)-N(3))-methyltransferase
+    gene_symbol: ABP140
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Figure 3: GFP reporter colocalizes with phalloidin-stained actin bodies
+        in stationary budding yeast.'
+    - reference: https://www.uniprot.org/uniprotkb/Q08641/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: 'Figure 3: GFP reporter colocalizes with phalloidin-stained actin bodies
+      in stationary budding yeast.'
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Q08641 matches IPR026113, the broader METTL2/6/8-like tRNA methyltransferase
+    family. That family does not exactly delimit Abp140-like actin-binding proteins;
+    neither it nor a methyltransferase domain is substituted for this narrower class.
+- component_id: fimbrin
+  label: Fimbrin/Plastin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SAC6
+  - fim1
+  essentiality: UNKNOWN
+  role: Fimbrin is a body-localized actin-bundling protein in both studied yeasts.
+    The pleiotropic sac6 deletion phenotype does not establish family-wide body essentiality.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32599
+    protein_label: Fimbrin
+    gene_symbol: SAC6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Figure 3E: Sac6-GFP colocalization; deletion also disrupts proliferating-cell
+        actin.'
+    - reference: https://www.uniprot.org/uniprotkb/P32599/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  - uniprot_id: UniProtKB:O59945
+    protein_label: Fimbrin
+    gene_symbol: fim1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figure 6C: Fim1-GFP localizes to fission-yeast bodies during glucose-exhaustion-induced
+        growth arrest.'
+    - reference: https://www.uniprot.org/uniprotkb/O59945/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: 'Figure 3: Sac6 localization and pleiotropic deletion phenotype.'
+  - reference: DOI:10.1083/jcb.201502025
+    notes: 'Figure 6C: Fim1-GFP localizes to fission-yeast bodies during glucose-exhaustion-induced
+      growth arrest.'
+  grounding: InterPro:IPR039959
+  grounding_notes: Complete native InterPro matches verified for all listed exemplars
+    on 2026-10-05. The integrated family describes identity, not universal actin-body
+    localization or equivalent roles of every family member.
+- component_id: capping_alpha
+  label: F-actin-capping protein subunit alpha
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CAP1
+  essentiality: UNKNOWN
+  role: The budding-yeast alpha subunit colocalizes with bodies.
+  protein_examples:
+  - uniprot_id: UniProtKB:P28495
+    protein_label: F-actin-capping protein subunit alpha
+    gene_symbol: CAP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Figure 3: GFP reporter colocalizes with phalloidin-stained actin bodies
+        in stationary budding yeast.'
+    - reference: https://www.uniprot.org/uniprotkb/P28495/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: 'Figure 3: GFP reporter colocalizes with phalloidin-stained actin bodies
+      in stationary budding yeast.'
+  grounding: InterPro:IPR002189
+  grounding_notes: Complete native InterPro matches verified for all listed exemplars
+    on 2026-10-05. The integrated family describes identity, not universal actin-body
+    localization or equivalent roles of every family member.
+- component_id: capping_beta
+  label: F-actin-capping protein subunit beta
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CAP2
+  - acp2
+  essentiality: UNKNOWN
+  role: The beta subunit localizes to bodies in budding and fission yeast.
+  protein_examples:
+  - uniprot_id: UniProtKB:P13517
+    protein_label: F-actin-capping protein subunit beta
+    gene_symbol: CAP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Figure 3: GFP reporter colocalizes with phalloidin-stained actin bodies
+        in stationary budding yeast.'
+    - reference: https://www.uniprot.org/uniprotkb/P13517/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  - uniprot_id: UniProtKB:Q9HGP5
+    protein_label: F-actin-capping protein subunit beta
+    gene_symbol: acp2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figure 6C: Acp2-GFP localizes to fission-yeast bodies during glucose-exhaustion-induced
+        growth arrest.'
+    - reference: https://www.uniprot.org/uniprotkb/Q9HGP5/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: 'Figure 3: GFP reporter colocalizes with phalloidin-stained actin bodies
+      in stationary budding yeast.'
+  - reference: DOI:10.1083/jcb.201502025
+    notes: 'Figure 6C: Acp2-GFP localizes to fission-yeast bodies during glucose-exhaustion-induced
+      growth arrest.'
+  grounding: InterPro:IPR001698
+  grounding_notes: Complete native InterPro matches verified for all listed exemplars
+    on 2026-10-05. The integrated family describes identity, not universal actin-body
+    localization or equivalent roles of every family member.
+- component_id: arpc5
+  label: Actin-related protein 2/3 complex subunit 5
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARC15
+  essentiality: UNKNOWN
+  role: Partial budding-yeast body colocalizer; whole-complex membership and nucleation
+    activity inside bodies are not established by this observation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40518
+    protein_label: Actin-related protein 2/3 complex subunit 5
+    gene_symbol: ARC15
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+        colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+    - reference: https://www.uniprot.org/uniprotkb/P40518/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+      colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+  grounding: InterPro:IPR006789
+  grounding_notes: Complete native InterPro matches verified for all listed exemplars
+    on 2026-10-05. The integrated family describes identity, not universal actin-body
+    localization or equivalent roles of every family member.
+- component_id: arpc3
+  label: Actin-related protein 2/3 complex subunit 3
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARC18
+  essentiality: UNKNOWN
+  role: Partial budding-yeast body colocalizer, not a fixed stoichiometric constituent.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q05933
+    protein_label: Actin-related protein 2/3 complex subunit 3
+    gene_symbol: ARC18
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+        colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+    - reference: https://www.uniprot.org/uniprotkb/Q05933/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+      colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+  grounding: InterPro:IPR007204
+  grounding_notes: Complete native InterPro matches verified for all listed exemplars
+    on 2026-10-05. The integrated family describes identity, not universal actin-body
+    localization or equivalent roles of every family member.
+- component_id: arpc2
+  label: Actin-related protein 2/3 complex subunit 2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARC35
+  essentiality: UNKNOWN
+  role: Partial budding-yeast body colocalizer, not evidence for all Arp2/3 subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53731
+    protein_label: Actin-related protein 2/3 complex subunit 2
+    gene_symbol: ARC35
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+        colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+    - reference: https://www.uniprot.org/uniprotkb/P53731/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+      colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+  grounding: InterPro:IPR007188
+  grounding_notes: Complete native InterPro matches verified for all listed exemplars
+    on 2026-10-05. The integrated family describes identity, not universal actin-body
+    localization or equivalent roles of every family member.
+- component_id: coronin
+  label: Coronin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CRN1
+  essentiality: UNKNOWN
+  role: Crn1 partially colocalizes in budding yeast. The fission-yeast study did not
+    detect Crn1 in bodies, so membership is not generalized between these organisms.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06440
+    protein_label: Coronin-like protein
+    gene_symbol: CRN1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+        colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+    - reference: https://www.uniprot.org/uniprotkb/Q06440/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+      colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+  - reference: DOI:10.1083/jcb.201502025
+    notes: The actin-body Results and Figure S5A report no Crn1 body localization
+      under the tested condition.
+  grounding: InterPro:IPR015505
+  grounding_notes: Complete native InterPro matches verified for all listed exemplars
+    on 2026-10-05. The integrated family describes identity, not universal actin-body
+    localization or equivalent roles of every family member.
+- component_id: cyclase_associated_cap
+  label: Adenylate cyclase-associated CAP
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SRV2
+  essentiality: UNKNOWN
+  role: Srv2 partially colocalizes with budding-yeast bodies. It is distinct from
+    the capping alpha subunit even though CAP1 is also a historical SRV2 alias.
+  protein_examples:
+  - uniprot_id: UniProtKB:P17555
+    protein_label: Adenylyl cyclase-associated protein
+    gene_symbol: SRV2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+        colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+    - reference: https://www.uniprot.org/uniprotkb/P17555/entry
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+      colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+  grounding: InterPro:IPR001837
+  grounding_notes: Complete native InterPro matches verified for all listed exemplars
+    on 2026-10-05. The integrated family describes identity, not universal actin-body
+    localization or equivalent roles of every family member.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Demonstrated in growth-arrested laboratory cultures; frequency and association
+    with subsequent proliferation depend on culture conditions and cell state.
+  reference: DOI:10.7554/eLife.35685
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: VARIABLE
+  note: Bodies were observed after glucose-exhaustion-induced growth arrest. This
+    does not assert constitutive presence or presence in every strain.
+  reference: DOI:10.1083/jcb.201502025
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Single-cell tracking used BY4741/BY4742-related cultures grown seven days
+    in YPD. The hosted Figure 5 supplement instead shows phalloidin-stained prototrophic
+    rho-zero cells after 24 hours; these contexts are not conflated.
+  reference: DOI:10.7554/eLife.35685
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Figure 6C shows Fim1 and Acp2 localization and phalloidin-stained bodies after
+    glucose exhaustion. The distinct quiescent microtubule bundle is not part of the
+    actin body.
+  reference: DOI:10.1083/jcb.201502025
+evidence:
+- reference: GO:0099079
+  notes: Exact nonobsolete cellular-component identity; native GO and cached OAK agree
+    on actin-cytoskeleton parthood, not an is-a relation to the whole cytoskeleton.
+- reference: GO:0110165
+  notes: 'Native GO is-a parent: cellular anatomical structure.'
+- reference: GO:0015629
+  notes: Actin cytoskeleton is a containing structure, not the record identity.
+- reference: GO:0005737
+  notes: Cytoplasm denotes the cellular compartment containing the observed bodies.
+- reference: DOI:10.1091/mbc.E06-04-0282
+  notes: Sagot et al. 2006 defining study. Indexed primary Results and figure captions
+    were readable; complete Methods were not recovered through the attempted XML/BioC/PDF
+    routes. No verbatim snippets or figure bytes are taken from this source.
+- reference: DOI:10.1083/jcb.201009028
+  notes: Laporte et al. 2011, Metabolic status rather than cell cycle signals control
+    quiescence entry and exit. Native primary Results and Methods support metabolic
+    requirements for body mobilization, not complete proliferation on glucose alone.
+- reference: DOI:10.1083/jcb.201502025
+  notes: Laporte et al. 2015, A stable microtubule array drives fission yeast polarity
+    reestablishment upon quiescence exit. Only the actin-body localization results
+    are used here; microtubule-bundle functions remain outside this record.
+- reference: DOI:10.7554/eLife.35685
+  notes: Laporte et al. 2018, Mitochondria reorganization upon proliferation arrest
+    predicts individual yeast cell fate. Direct cell tracking shows bodies in both
+    quiescent and senescent subpopulations.
+causal_graphs:
+- graph_id: glucose_metabolism_body_disassembly
+  title: Glucose metabolism enables actin-body mobilization
+  graph_kind: DISASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Perturbation-supported pathway-level mechanism in seven-day Saccharomyces
+    cerevisiae cultures. The downstream metabolic signal is unknown. Body mobilization
+    is not equivalent to completion of quiescence exit or new budding.
+  nodes:
+  - node_id: glucose_uptake
+    label: glucose uptake
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: glucose_catabolism
+    label: glucose catabolism
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: body_disassembly
+    label: actin-body disassembly
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: glucose_uptake
+    predicate: provides substrate for
+    object: glucose_catabolism
+    description: Glucose import precedes metabolism in the glucose-only refeeding
+      assay.
+    evidence:
+    - reference: DOI:10.1083/jcb.201009028
+      notes: 'Figure 4B and the glucose-catabolism Results: uptake-defective and hexokinase-deficient
+        mutants fail glucose-triggered mobilization.'
+  - subject: glucose_catabolism
+    predicate: enables
+    object: body_disassembly
+    description: Metabolism through glycolysis is needed for glucose-triggered mobilization;
+      the experiments do not identify the causal metabolite or require an increase
+      in ATP.
+    evidence:
+    - reference: DOI:10.1083/jcb.201009028
+      notes: Blocked glycolytic steps, glucose analogs and iodoacetate prevent mobilization.
+        In pgi1 mutants fructose permits mobilization without ATP replenishment; water
+        can raise ATP without mobilizing bodies.
+discussions:
+- discussion_id: reserve_function_not_proven
+  prompt: Does the actin body directly supply reusable actin to rebuilt patches and
+    cables?
+  kind: OPEN_QUESTION
+  status: OPEN
+  rationale: Rapid refeeding-dependent disappearance and rebuilding without new protein
+    synthesis support a reserve hypothesis, not traced transfer of body subunits.
+    No established storage function or direct body-to-patch conversion is asserted.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: Refeeding and translation-inhibition experiments motivate the proposed
+      reserve role.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: resolve_abp_family_groundings
+  prompt: Resolve exact source-neutral families for Abp1-like adaptors and Abp140-like
+    actin-binding methyltransferases.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Native InterPro matches were inspected completely; generic domains and
+    the broader METTL2/6/8-like family do not precisely identify these components.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/protein/UniProt/P15891/
+    notes: Abp1 domain matches, not a whole-protein family.
+  - reference: https://www.ebi.ac.uk/interpro/protein/UniProt/Q08641/
+    notes: Abp140 methyltransferase-family and domain matches.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  attaches_to:
+  - components#abp1
+  - components#abp140
+- discussion_id: resolve_fission_yeast_drebrin_symbol
+  prompt: Resolve the gene and reporter called drebrin (Aap1) in the fission-yeast
+    actin-body study.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The paper reports a positive localizer, but native UniProt searches for
+    aap1 return an amino-acid permease and an aspartyl aminopeptidase alias, not a
+    verified drebrin. An app1 hit is not sufficient to correct the paper by inference.
+    Supplementary strain and reporter provenance must establish the intended identity
+    before an accession or a new family is assigned.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Actin-body Results attribute drebrin (Aap1) localization to Figure S5A.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: membership_is_contextual
+  prompt: Do partial localizers establish a fixed actin-body composition?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: Membership strength differs between proteins and organisms; co-occurrence
+    is not a stoichiometric reconstruction. Sac6 loss is pleiotropic. Scp1 perturbation
+    does not establish Scp1 residence, and fission-yeast polarity proteins lost from
+    cell tips are not thereby body constituents.
+  evidence:
+  - reference: DOI:10.1091/mbc.E06-04-0282
+    notes: The localization screen distinguishes strict and partial overlap; Scp1-GFP
+      is undetectable in stationary cells.
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Figure 6 and Figure S5A distinguish body-localized proteins from displaced
+      polarity markers.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+  resolution_note: Retain the directly observed partial localizers with explicit scope;
+    omit whole Arp2/3-complex stoichiometry and essentiality claims. Do not add Scp1,
+    Tea1, Exo70 or Sec8 as body components from the cited perturbation/polarity results.
+- discussion_id: not_an_absolute_quiescence_marker
+  prompt: Does an actin body uniquely identify a viable quiescent cell?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: The 2018 study followed individual cells rather than inferring fate from
+    a stationary population. Bodies occurred in cells with different subsequent proliferation
+    outcomes.
+  evidence:
+  - reference: DOI:10.7554/eLife.35685
+    notes: Figure 5 and the cellular-reorganization Discussion explicitly reject an
+      absolute quiescence fingerprint and report bodies in senescent and rho-zero
+      cells.
+  - reference: DOI:10.1128/MCB.00811-15
+    notes: 'Only the readable primary abstract was used for context: dynamic patches/cables
+      and static bodies occur in different stationary-phase subpopulations. Full text
+      was not recovered through the attempted routes.'
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+  resolution_note: Keep the definition at growth-arrested yeast cells, restrict distribution
+    to tested species and conditions, and assert neither universal quiescence diagnosis
+    nor universal loss of viability.
+- discussion_id: downstream_metabolic_signal
+  prompt: Which metabolic signal connects glycolysis to actin-body disassembly?
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Glucose-dependent mobilization requires metabolism, but ATP replenishment
+    is neither necessary nor sufficient in the tested assays. This does not establish
+    that basal ATP is dispensable or that pyruvate itself is the signal.
+  evidence:
+  - reference: DOI:10.1083/jcb.201009028
+    notes: Glucose-catabolism Results and Figure 4 distinguish metabolic flux from
+      ATP replenishment.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  attaches_to:
+  - causal_graphs#glucose_metabolism_body_disassembly
+images:
+- image_id: pmc_pmc6177259_fig5s1
+  file: pmc6177259_fig5s1.jpg
+  file_sha256: 9e19d13e1ff55ea63391b6398cb9950b60c7ff0f0b61695660676dbfa20a3e61
+  source: PMC
+  source_accession: PMC6177259.1 fig5s1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6177259/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC6177259.1/elife-35685-fig5-figsupp1.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Damien Laporte, Laëtitia Gouleme, Laure Jimenez, Ines Khemiri, Isabelle
+    Sagot; CC BY, via PubMed Central
+  modality: FLUORESCENCE
+  caption: Figure 5 supplement 1. Panel A shows phalloidin-stained actin bodies in
+    prototrophic Saccharomyces cerevisiae rho-zero cells after 24 hours in YPD, overlaid
+    with DIC. Panel B instead reports Scl1-GFP proteasome localization after six days;
+    its green puncta are not actin-body staining. Scale bars are 2 micrometers. Panel
+    C compares cell volumes after seven days and does not measure actin-body dimensions.
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.7554/eLife.35685
+  retrieved_on: '2026-10-05'
+  notes: Figure 5—figure supplement 1. from article version PMC6177259.1; exact licence
+    version read from JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied
+    by the curator because PMC has no taxon field. Curator explicitly accepted the
+    multi-panel figure. Original figure bytes visually inspected; no cropping, recoloring
+    or other image modification.
