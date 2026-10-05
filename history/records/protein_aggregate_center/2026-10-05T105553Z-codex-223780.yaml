@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/protein_aggregate_center.yaml
+  slug: protein_aggregate_center
+session:
+  id: 2026-10-05T105553Z-codex-223780
+  timestamp: '2026-10-05T10:55:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - images
+  - datasets
+  - discussions
+  summary: Add GO-grounded protein aggregate center with bounded yeast evidence
+  details: Scaffolded GO:0140453 and curated through a guarded validated writer. Verified
+    QuickGO identity and parent, native UniProt/InterPro/NCBI metadata, readable 2023 primary
+    text, 2020 abstract and Mendeley version-2 metadata. Added four component classes, three
+    reference proteins, three intervention graphs and one inspected unmodified CC BY 4.0 figure.
+    Preserved strain, inhibitor, turnover and identity-overlap limitations; remaining composition
+    and source-access gaps are explicit. Earlier reports and records were not edited. Full
+    derived-artifact and QC gates run before commit; subsequent PR review is recorded separately.
