@@ -7980,6 +7980,11 @@
       "label": "insoluble protein deposit",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
+          "label": "juxtanuclear quality control compartment",
+          "cosine_similarity": 0.69557577
+        },
+        {
           "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
           "label": "intranuclear quality control compartment",
           "cosine_similarity": 0.68285978
@@ -7998,11 +8003,6 @@
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.60860256
-        },
-        {
-          "identifier": "cellstructuremech:bacterial_aggresome",
-          "label": "bacterial aggresome",
-          "cosine_similarity": 0.58503462
         }
       ]
     },
@@ -8010,6 +8010,11 @@
       "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
       "label": "intranuclear quality control compartment",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
+          "label": "juxtanuclear quality control compartment",
+          "cosine_similarity": 0.83958213
+        },
         {
           "identifier": "cellstructuremech:mitostore",
           "label": "MitoStore",
@@ -8029,11 +8034,37 @@
           "identifier": "cellstructuremech:bacterial_aggresome",
           "label": "bacterial aggresome",
           "cosine_similarity": 0.68139703
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
+      "label": "juxtanuclear quality control compartment",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+          "label": "intranuclear quality control compartment",
+          "cosine_similarity": 0.83958213
         },
         {
-          "identifier": "GO:0030896",
-          "label": "checkpoint clamp complex",
-          "cosine_similarity": 0.64420121
+          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
+          "label": "intramitochondrial protein quality control compartment",
+          "cosine_similarity": 0.72828714
+        },
+        {
+          "identifier": "cellstructuremech:mitostore",
+          "label": "MitoStore",
+          "cosine_similarity": 0.71473054
+        },
+        {
+          "identifier": "cellstructuremech:insoluble_protein_deposit",
+          "label": "insoluble protein deposit",
+          "cosine_similarity": 0.69557577
+        },
+        {
+          "identifier": "cellstructuremech:bacterial_aggresome",
+          "label": "bacterial aggresome",
+          "cosine_similarity": 0.67570053
         }
       ]
     },
@@ -8083,6 +8114,11 @@
           "cosine_similarity": 0.72566948
         },
         {
+          "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
+          "label": "juxtanuclear quality control compartment",
+          "cosine_similarity": 0.71473054
+        },
+        {
           "identifier": "cellstructuremech:insoluble_protein_deposit",
           "label": "insoluble protein deposit",
           "cosine_similarity": 0.67962873
@@ -8091,11 +8127,6 @@
           "identifier": "GO:0140595",
           "label": "MIM complex",
           "cosine_similarity": 0.67514053
-        },
-        {
-          "identifier": "cellstructuremech:mitochondrial_derived_compartment",
-          "label": "mitochondrial-derived compartment",
-          "cosine_similarity": 0.66148254
         }
       ]
     },

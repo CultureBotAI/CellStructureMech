@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/juxtanuclear_quality_control_compartment.yaml
+  slug: juxtanuclear_quality_control_compartment
+session:
+  id: 2026-10-05T092128Z-codex-ae83ee
+  timestamp: '2026-10-05T09:21:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - functions
+  - causal_graphs
+  - evidence
+  - discussions
+  - images
+  summary: Add evidence-backed cytoplasmic JUNQ inclusion record
+  details: Distinguish cytoplasmic JUNQ from INQ and IPOD using nuclear-envelope-resolved
+    primary evidence; add conditional cargo and associated machinery, three assay-bounded
+    graphs, verified yeast taxonomy, explicit historical and clearance-route limitations,
+    and an inspected CC BY 4.0 Figure 2 from Rolli et al. (2024). Keep mapping PROPOSED pending
+    human review.
