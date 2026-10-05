@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/pmc_oa.py
+  slug: pmc-ali-license-ref
+session:
+  id: 2026-10-05T021107Z-codex-24c90d
+  timestamp: '2026-10-05T02:11:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2048
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2047
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - article_license
+  - tests
+  summary: Fail closed on unsupported or conflicting licence declarations
+  details: Separate adversarial self-review of PR 2047 at 5eee10a0100cf4ca9ee1f856f64ae7428d7fcf58
+    reproduced acceptance of a restrictive or unknown ALI declaration alongside a CC BY link,
+    and of an FTP licence URL. Require supported HTTP(S) Creative Commons URLs for every ALI
+    declaration; refuse unsupported explicit Creative Commons licence links even when another
+    URL is hostable. Preserve ordinary informational links, canonical-equivalent URLs and
+    metadata-family checks. Expanded offline adapter coverage passes 27 cases. This corrects
+    the incomplete fail-closed behavior of history/infrastructure/pmc-ali-license-ref/2026-10-05T015255Z-codex-c3b7c5.yaml;
+    that append-only entry is preserved. No record, figure or semantic projection change is
+    required.
