@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/chitosome.yaml
+  slug: chitosome
+session:
+  id: 2026-10-05T174721Z-codex-69af44
+  timestamp: '2026-10-05T17:47:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - related_records
+  summary: Add an evidence-backed organism-scoped PathwayMech link
+  details: Reviewed the existing structure functions and exact PathwayMech target at d8ec2b69f7a4c615aecddff80498fef1e1fab0ce.
+    Added a directed relation with claim-level evidence, target taxon and explicit pathway-segment
+    or strain limits. Abstracts and UniProt records were read anonymously; the divisome also
+    gains independently localized K-12 FtsW/FtsI examples. Writes used write_validated_structure
+    after a canary. Closed-schema, pinned source-object, page-coverage and repository QC checks
+    validate the change. See research/cross_mech/2026-10-05-pathway-link-decisions.md.

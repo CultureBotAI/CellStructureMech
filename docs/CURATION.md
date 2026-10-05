@@ -170,7 +170,15 @@ Complex Portal imports are a second, deliberately separate layer:
   entire record. A required scope note says whether the entry is the whole
   record or a subassembly.
 
-## Trait links
+## Pathway and trait links
+
+Pathway links use `related_records`, the evidence-bearing `StructurePathwayLink`
+subtype of claw's shared `CrossCorpusLink`. Choose the relation and organism
+scope from the structure's evidence, then verify the target against the pinned
+snapshot with `just check-pathway-links`. A shared protein is only a lead;
+protein examples still need independent membership evidence and a taxon already
+named by the structure. The rendered page carries the relation, scope,
+provenance and citations. Do not use `xrefs` for these non-equivalence links.
 
 `associated_traits` points at TraitMech / METPO CURIEs. The relation matters:
 the flagellum `CONFERS` motility; the peptidoglycan layer is `DIAGNOSTIC_FOR`

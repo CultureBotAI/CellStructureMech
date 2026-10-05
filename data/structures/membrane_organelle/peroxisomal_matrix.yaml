@@ -26,6 +26,12 @@ curation_history:
     beta-oxidation function and grounding the fatty acid beta-oxidation function and
     graph node to GO:0006635.'
   llm_assisted: true
+- timestamp: '2026-10-05T17:45:01Z'
+  curator: codex
+  action: ADD_PATHWAY_LINK
+  changes: Added an evidence-backed, organism-scoped PathwayMech link with a full
+    source commit and explicit relation limits.
+  llm_assisted: true
 synonyms:
 - synonym_text: peroxisomal lumen
   synonym_type: EXACT_SYNONYM
@@ -149,3 +155,20 @@ discussions:
     notes: GO:0005778 identifies the membrane that bounds the peroxisomal matrix.
   posed_by: codex
   posed_date: '2026-09-15'
+related_records:
+- corpus: PathwayMech
+  identifier: gomodel:YeastPathways_YEAST-FAO-PWY
+  relation: SITE_OF
+  basis: Existing matrix beta-oxidation function reviewed against the organism-scoped
+    pathway; no new protein example or strain-specific experiment is asserted.
+  source_version: d8ec2b69f7a4c615aecddff80498fef1e1fab0ce
+  label: fatty acid oxidation pathway
+  target_taxon_id: NCBITaxon:559292
+  scope_note: This applies to the peroxisomal beta-oxidation reactions in the budding-yeast
+    exemplar. The target is the S288C pathway model; activation and auxiliary reactions
+    are not all asserted to occur in the matrix.
+  evidence:
+  - reference: DOI:10.1093/femsyr/fow038
+    notes: Sibirny 2016 reviews the beta-oxidation role and matrix-soluble enzymes
+      of yeast peroxisomes. Abstract read through Europe PMC on 2026-10-05; matrix
+      localization is already curated on this structure.

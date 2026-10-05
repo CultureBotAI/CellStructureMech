@@ -26,6 +26,11 @@ COMMANDS = [
         "The ranked data-source queue must describe the pipeline that exists, with verified licences.",
     ),
     (
+        "pathway links",
+        [sys.executable, "scripts/check_pathway_links.py"],
+        "Target ids, labels, taxa and revisions must match the pinned PathwayMech snapshot.",
+    ),
+    (
         "text embedding map",
         [sys.executable, "scripts/build_text_embedding_map.py", "--check"],
         "Cached vectors must cover the corpus and match the current semantic text projection.",

@@ -269,6 +269,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-05T17:45:01Z'
+  curator: codex
+  action: ADD_PATHWAY_LINK
+  changes: Added an evidence-backed, organism-scoped PathwayMech link with a full
+    source commit and explicit relation limits.
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
@@ -453,3 +459,20 @@ causal_graphs:
         feedback system for shape maintenance.
       notes: Verbatim from PMC5846203; the same sentence grounds the MreB record's
         MODULATES cell-shape link.
+related_records:
+- corpus: PathwayMech
+  identifier: WikiPathways:WP5060
+  relation: PARTICIPATES_IN
+  basis: The curated sidewall-synthesis function overlaps the peptidoglycan output
+    of WP5060; this is not an exact shared-accession join.
+  source_version: d8ec2b69f7a4c615aecddff80498fef1e1fab0ce
+  label: Peptidoglycan cytoplasmic synthesis and recycling pathways
+  target_taxon_id: NCBITaxon:562
+  scope_note: This refers to sidewall peptidoglycan synthesis in the E. coli exemplar.
+    It does not identify the elongasome with the whole WP5060 pathway or equate the
+    reviewed K-12 PBP2 accession with the separate species-level entry in WP5060.
+  evidence:
+  - reference: DOI:10.1038/nrmicro2677
+    notes: Typas et al. 2011 review peptidoglycan synthesis complexes and cytoskeletal
+      control of sacculus growth; the existing sidewall-synthesis function provides
+      the structure-specific context. Abstract read through Europe PMC on 2026-10-05.

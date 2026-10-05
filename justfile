@@ -49,6 +49,10 @@ render *args:
 render-check:
     uv run python scripts/render_pages.py --check
 
+# Check curated pathway links against their pinned local target snapshot.
+check-pathway-links *args:
+    uv run python scripts/check_pathway_links.py {{args}}
+
 # Corpus report: records per category and status, grounding coverage,
 # components / graphs / traits per record.
 report *args:
