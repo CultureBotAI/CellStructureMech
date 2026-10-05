@@ -1,0 +1,514 @@
+identifier: GO:0140453
+label: protein aggregate center
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A reversible intracellular assembly of misfolded proteins and chaperones
+  that temporarily protects heat-sensitive clients from degradation and can be disassembled
+  when conditions permit recovery.
+definition_source: GO:0140453
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T10:53:12Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T10:55:40Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added bounded GO identity, four component classes, three reference proteins,
+    three intervention graphs, dataset metadata, source-limit discussions and an inspected
+    CC BY 4.0 figure.
+  llm_assisted: true
+synonyms:
+- synonym_text: protein aggregate centre
+  synonym_type: EXACT_SYNONYM
+  source: GO:0140453
+- synonym_text: PAC
+  synonym_type: BROAD_SYNONYM
+  source: GO:0140453
+- synonym_text: protein aggregate-like center
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.3390/ijms241311202
+parent_structures:
+- GO:0043232
+components:
+- component_id: protein_cargo
+  label: heterogeneous misfolded protein cargo
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Variable client material is neither one sequence family nor a fixed
+    complex.
+  role: Reversibly sequestered heat-sensitive protein material. Rho1.C17R-GFP and
+    Guk1-9-GFP are engineered probes of this cargo, not invariant native subunits.
+  evidence:
+  - reference: DOI:10.3390/ijms241311202
+    notes: Results 2.1-2.4 and Figures 1, 3 and 6 track reporter deposition, persistence
+      and turnover.
+- component_id: small_hsp
+  label: Small heat shock protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: InterPro:IPR031107
+  gene_symbols:
+  - HSP42
+  role: Deposited chaperone class exemplified by Hsp42 in budding yeast. Joint loss
+    of Hsp42 and Btn2 impairs reporter PAC formation or persistence; residual foci
+    depend on reporter and strain. This combined perturbation does not establish a
+    universal single-protein or family-wide requirement.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12329
+    protein_label: Heat shock protein 42
+    gene_symbol: HSP42
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example, not a reassignment of W303 or BY4741
+      experimental backgrounds to S288C. Figure 2 shows Hsp42-GFP foci in BY4741;
+      Figure 3 tests joint BTN2/HSP42 deletion.
+    evidence:
+    - reference: UniProtKB:Q12329
+      notes: Native reviewed entry verifies accession, name, gene and reference taxon.
+    - reference: DOI:10.3390/ijms241311202
+      notes: Figure 2 shows Hsp42-GFP foci in BY4741; Figure 3 tests joint BTN2/HSP42
+        deletion.
+  evidence:
+  - reference: DOI:10.3390/ijms241311202
+    notes: Results 2.1-2.2 and Figures 2-3 support residence and context-dependent
+      joint deletion effects.
+  - reference: InterPro:IPR031107
+    notes: Complete native integrated match set has three entries; IPR031107 is the
+      family, while the other matches are a domain and a homologous superfamily.
+- component_id: btn2
+  label: Btn2-type aggregase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The complete native P53286 match set contains only BTN2-like N-terminal
+    domain IPR062150; a domain is not a whole-protein family identity.
+  gene_symbols:
+  - BTN2
+  role: PAC-enriched sorting factor whose formation and maintenance effects depend
+    on substrate, genetic background and stress intensity. Results 2.2 reports that
+    BTN2 loss blocks the Rho1 reporter PACs in W303, but other reporters/backgrounds
+    retain foci; this is not universal essentiality.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53286
+    protein_label: Protein BTN2
+    gene_symbol: BTN2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example, not a reassignment of W303 or BY4741
+      experimental backgrounds to S288C. Figure 2 shows Btn2-GFP foci; Results 2.2
+      separates single-deletion observations from the double-deletion assays in Figure
+      3.
+    evidence:
+    - reference: UniProtKB:P53286
+      notes: Native reviewed entry verifies accession, name, gene and reference taxon.
+    - reference: DOI:10.3390/ijms241311202
+      notes: Figure 2 shows Btn2-GFP foci; Results 2.2 separates single-deletion observations
+        from the double-deletion assays in Figure 3.
+  evidence:
+  - reference: DOI:10.3390/ijms241311202
+    notes: Results 2.1-2.2 and Figures 2-3 distinguish localization, single deletions
+      and joint loss.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P53286/?page_size=200
+    notes: One native integrated match, next=null; domain-only grounding declined.
+- component_id: hsp104
+  label: Hsp104-type disaggregase
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: DISPENSABLE
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: All 11 integrated InterPro matches were inspected. ClpA/B families
+    IPR001270 and IPR050130 are broader than the Hsp104-type class.
+  gene_symbols:
+  - HSP104
+  role: Focus-associated disaggregase that supports PAC clearance during recovery
+    and prolonged heat stress. Reporter PACs still form without Hsp104. Disappearance
+    of fluorescent foci alone is not proof of client degradation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P31539
+    protein_label: Heat shock protein 104
+    gene_symbol: HSP104
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example, not a reassignment of W303 or BY4741
+      experimental backgrounds to S288C. Figures 2 and 4 show focus association and
+      separate PAC formation from Hsp104-dependent clearance.
+    evidence:
+    - reference: UniProtKB:P31539
+      notes: Native reviewed entry verifies accession, name, gene and reference taxon.
+    - reference: DOI:10.3390/ijms241311202
+      notes: Figures 2 and 4 show focus association and separate PAC formation from
+        Hsp104-dependent clearance.
+  evidence:
+  - reference: DOI:10.3390/ijms241311202
+    notes: Results 2.3 and Figure 4 show PACs in deletion cells and delayed clearance;
+      recovery uses CHX after assembly.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: Complete native integrated match set checked through next=null.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.3390/ijms241311202
+  note: W303 and BY4741 derivatives form reporter PACs at 37 C, with different persistence
+    and genetic requirements. Figure 2 images BY4741-derived GFP-tagged chaperones.
+    These are experimental examples, not clade-wide prevalence.
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.3390/ijms241311202
+  note: Figure 1c includes strain 972 in the same Rho1.C17R-GFP heat-shock comparison.
+    Mild-stress fission-yeast PAC localization is not assumed identical to budding-yeast
+    nuclear and cytoplasmic foci.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: UniProtKB:Q12329
+  note: Reference-sequence taxon for the reviewed protein examples; not a reassignment
+    of every source assay or imaged cell to this strain.
+functions:
+- function_id: temporary_sequestration
+  label: temporary sequestration of heat-sensitive protein clients
+  description: Collects misfolding-prone proteins in heat-induced foci. The same reporters
+    persist differently in fission yeast, W303 and BY4741; a fixed lifetime is not
+    part of the structure identity.
+  evidence:
+  - reference: DOI:10.3390/ijms241311202
+    notes: Results 2.1 and Figure 1 compare reporter PAC formation and persistence.
+- function_id: degradation_delay
+  label: postponement of client degradation
+  description: PAC deposition can delay degradation of the tested misfolding reporters.
+    Recovery permits disassembly, whereas prolonged heat can be followed by turnover.
+    The study's folding-versus-degradation model is not proof that every endogenous
+    client follows one fate.
+  evidence:
+  - reference: DOI:10.3390/ijms241311202
+    notes: Results 2.3-2.4 and Figures 4-6 combine deletion, translation inhibition
+      and immunoblot measurements; Figure 6d summarizes the proposed routing model.
+causal_graphs:
+- graph_id: mild_heat_deposition
+  title: Reporter PAC formation during mild heat stress
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Rho1.C17R-GFP and Guk1-9-GFP assays in budding-yeast W303/BY4741 derivatives.
+    The double-deletion phenotype varies by strain and reporter. CHX at induction
+    is distinct from CHX added only during recovery. No proteasome inhibitor is needed
+    for the cited formation assays.
+  nodes:
+  - node_id: heat
+    label: Temperature shift to 37 C
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: pac
+    label: protein aggregate center
+    node_type: STRUCTURE
+    grounding: GO:0140453
+  - node_id: double_loss
+    label: Joint BTN2 and HSP42 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: chx
+    label: Cycloheximide present during 37 C induction
+    node_type: EXPERIMENTAL_FACTOR
+  edges:
+  - subject: heat
+    predicate: induces
+    object: pac
+    description: Heat treatment induces reporter PACs in the tested yeast backgrounds.
+    evidence:
+    - reference: DOI:10.3390/ijms241311202
+      notes: Results 2.1 and Figure 1c.
+  - subject: double_loss
+    predicate: impairs
+    object: pac
+    description: Joint loss blocks Rho1 reporter PAC formation in W303 but permits
+      residual foci in BY4741 and with Guk1-9 in W303; persistence is impaired.
+    evidence:
+    - reference: DOI:10.3390/ijms241311202
+      notes: Results 2.2 and Figure 3, not an inferred identical single-deletion effect.
+  - subject: chx
+    predicate: blocks
+    object: pac
+    description: CHX suppresses the tested mild-heat reporter PAC formation; this
+      is not generalized to all aggregation at 42 C.
+    evidence:
+    - reference: DOI:10.3390/ijms241311202
+      notes: Results 2.4 and Figure 6a; Discussion distinguishes severe heat.
+- graph_id: reporter_turnover
+  title: Perturbations of PAC deposition and reporter turnover
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Immunoblot turnover assays at 37 C. The interventions have effects
+    beyond PAC deposition; the graph records their measured effects without claiming
+    a deposition-only molecular pathway or universal endogenous-client fate.
+  nodes:
+  - node_id: double_loss
+    label: Joint BTN2 and HSP42 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: chx
+    label: Cycloheximide at 37 C
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: degradation
+    label: Misfolding-reporter degradation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: double_loss
+    predicate: accelerates
+    object: degradation
+    description: The double deletion increases turnover of the tested Rho1 and Guk1-9
+      reporters during heat stress.
+    evidence:
+    - reference: DOI:10.3390/ijms241311202
+      notes: Results 2.4 and Figure 6c; reduced PAC persistence accompanies faster
+        turnover.
+  - subject: chx
+    predicate: accelerates
+    object: degradation
+    description: CHX accelerates Rho1.C17R-GFP loss at 37 C, but the same effect is
+      not observed at 25 C.
+    evidence:
+    - reference: DOI:10.3390/ijms241311202
+      notes: Results 2.4 and Figure 6b provide the temperature control.
+- graph_id: pac_clearance
+  title: Hsp104-dependent PAC clearance
+  graph_kind: DISASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: W303 main Figure 4 assays. Recovery follows 30 minutes at 37 C and
+    a shift to 25 C with CHX added to block new synthesis. Chronic-heat turnover is
+    a separate assay, not a necessary consequence of recovery.
+  nodes:
+  - node_id: recovery
+    label: Return to 25 C after PAC assembly, with CHX
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: clearance
+    label: Reporter PAC clearance during recovery
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: hsp104_loss
+    label: HSP104 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: chronic_clearance
+    label: PAC clearance during prolonged 37 C stress
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: turnover
+    label: Rho1.C17R-GFP turnover during prolonged 37 C stress
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: recovery
+    predicate: permits
+    object: clearance
+    description: Wild-type reporter foci disappear during the recovery assay.
+    evidence:
+    - reference: DOI:10.3390/ijms241311202
+      notes: Results 2.3 and Figure 4b; focus disappearance is not equated with proteolysis.
+  - subject: hsp104_loss
+    predicate: impairs
+    object: clearance
+    description: Hsp104-deficient cells retain reporter PACs after the shift to permissive
+      temperature.
+    evidence:
+    - reference: DOI:10.3390/ijms241311202
+      notes: Results 2.3 and Figure 4b.
+  - subject: hsp104_loss
+    predicate: delays
+    object: chronic_clearance
+    description: Reporter foci persist longer in the deletion background during sustained
+      heat.
+    evidence:
+    - reference: DOI:10.3390/ijms241311202
+      notes: Results 2.3 and Figure 4c.
+  - subject: hsp104_loss
+    predicate: delays
+    object: turnover
+    description: Immunoblots show greater reporter stability in Hsp104-deficient cells
+      during prolonged heat.
+    evidence:
+    - reference: DOI:10.3390/ijms241311202
+      notes: Results 2.3 and Figure 4d-e; separate protein-level measurement.
+evidence:
+- reference: GO:0140453
+  notes: Active cellular-component identity verified through native QuickGO; definition
+    paraphrased, and GO's broad PAC abbreviation scope retained.
+- reference: GO:0043232
+  notes: Native QuickGO lists GO:0140453 as an is_a child of intracellular membraneless
+    organelle; no nuclear or cytoplasmic parthood is forced.
+- reference: DOI:10.3390/ijms241311202
+  notes: Boronat et al. (2023), PMID 37446379, PMC10342647.1. Native metadata/JATS,
+    all main Results, Discussion, Methods and seven figure captions read. Figure 2
+    pixels inspected. Supplemental figures/tables and raw data were not independently
+    inspected.
+- reference: DOI:10.1016/j.celrep.2020.01.077
+  notes: Cabrera et al. (2020), PMID 32075773. PubMed abstract and bibliographic metadata
+    read. DOI/Cell PDF routes failed and the publisher full-text route returned 403;
+    NCBI reports no PMC copy, not absence of the paper. Detailed mechanistic claims
+    here rely on the readable 2023 study, not an inferred reading of the 2020 full
+    text.
+datasets:
+- accession: DOI:10.17632/z3hvg9wtvg.2
+  title: Cabrera et al. PAC manuscript dataset, version 2
+  description: Mendeley Data deposit explicitly linked by its native landing page
+    to the 2020 Cell Reports PAC paper.
+  dataset_type: OTHER
+  repository: OTHER
+  url: https://data.mendeley.com/datasets/z3hvg9wtvg/2
+  publication: DOI:10.1016/j.celrep.2020.01.077
+  notes: Metadata-only link. Native version-2 page gives publication date 2023-03-21,
+    contributor Margarita Cabrera and CC BY 4.0. File manifest and raw archives were
+    not inspected; no file count, sample count, assay inventory or reanalysis finding
+    is asserted.
+  evidence:
+  - reference: https://data.mendeley.com/datasets/z3hvg9wtvg/2
+    notes: Native version-2 landing page verifies the dataset identity, date, contributor,
+      publication association and licence.
+discussions:
+- discussion_id: identity_overlap
+  kind: INTERPRETATION
+  status: OPEN
+  prompt: Resolve the operational overlap of PAC with INQ and CytoQ without forcing
+    exact synonymy.
+  rationale: The same protein-quality-control literature uses different names and
+    experimental boundaries.
+  notes: The 2023 Introduction suggests PACs may correspond to INQ plus CytoQ. This
+    GO-grounded umbrella is not asserted distinct from every such focus, nor exactly
+    equivalent to either narrower site. No exact Q-body, CytoQ, INQ, JUNQ, IPOD or
+    Agepod synonym or hierarchy edge is added. Nuclear rings observed under severe
+    heat are discussed separately in the source. Full-name/CURIE/DOI and acronym/old-name
+    searches included hidden and ignored files, excluding only .git; parsed identities
+    of 893 records had no exact PAC match.
+  evidence:
+  - reference: DOI:10.3390/ijms241311202
+    notes: Introduction explicitly qualifies the proposed PAC/INQ/CytoQ correspondence;
+      Results 2.5 separates NuRs.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: component_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact family grounding for Btn2-type, Hsp104-type and heterogeneous
+    cargo classes.
+  rationale: Domains, broad superfamilies and variable cargo cannot be made exact
+    component identities.
+  notes: Three classes retain REVIEWED_LABEL_ONLY. Complete native InterPro sets were
+    inspected for all three protein examples; no domain is promoted to a family.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P53286/?page_size=200
+    notes: Native integrated set contains only one domain.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: Native integrated set includes broader ClpA/B families, not an exact Hsp104
+      family.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: component_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep reporters and upstream or turnover factors separate from demonstrated
+    residents.
+  rationale: Genetic effects do not alone demonstrate membership in the assembled
+    structure.
+  notes: Rho1.C17R-GFP and Guk1-9-GFP remain experimental cargo probes. C-terminal
+    GFP prevents Rho1 geranylgeranylation. Ydj1 and the proposed Rsp5 route are not
+    added as constituents solely from turnover phenotypes or model arrows. CHX, ribosomes
+    and general proteasome machinery are not PAC subunits. Hsp104 is associated machinery
+    and dispensable for formation; Figure 2's description of it as a small HSP is
+    not adopted.
+  evidence:
+  - reference: DOI:10.3390/ijms241311202
+    notes: Figure 1a, Results 2.3-2.4 and Discussion establish these distinctions.
+  - reference: UniProtKB:P31539
+    notes: Reviewed protein identity is Hsp104, not a small-HSP family assignment.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: experimental_scope
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Preserve temperature, strain, inhibitor and readout boundaries.
+  rationale: Reporter foci, protein abundance, refolding and degradation are different
+    measurements.
+  notes: Do not infer identical kinetics across W303, BY4741 and fission yeast, or
+    universal essentiality from a double deletion. The 37 C induction experiments
+    differ from 42 C severe stress. Figure 4 recovery adds CHX after PAC assembly;
+    Figure 6 adds it during induction. Loss of fluorescence need not coincide with
+    degradation. No liquid-state claim, quantitative geometry or fixed client lifetime
+    is inferred.
+  evidence:
+  - reference: DOI:10.3390/ijms241311202
+    notes: Figures 1, 3, 4 and 6, plus Discussion, explicitly distinguish these assays.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: composition_depth
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Extend the bounded component list after inspecting the defining paper and
+    supplemental localization data.
+  rationale: The curated core is not a complete native PAC inventory.
+  notes: The 2020 abstract names Hsp16, Mas5 and Ssa2 but uses contains/requirements
+    collectively; their exact resident and assembly roles need primary figure-level
+    follow-up. The readable 2023 Results 2.1 additionally reports Hsp26 and Sse1 foci
+    with supplemental Figure S2b, not independently inspected here. Full 2020 primary
+    text and 2023 supplemental strain tables remain unverified. Do not treat this
+    incomplete list as evidence of absence or fixed stoichiometry.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.01.077
+    notes: Primary abstract supports a follow-up lead, not a complete independently
+      inspected inventory.
+  - reference: DOI:10.3390/ijms241311202
+    notes: Results 2.1 and 2.5 discuss additional chaperones; supplemental panels
+      are not represented as inspected.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: distribution_and_data
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve native client inventories, prevalence and physical properties with
+    structure-specific evidence.
+  rationale: Two yeast models and reporter assays do not establish pan-fungal or pan-eukaryotic
+    distribution.
+  notes: Leave taxonomic_distribution, associated_traits, complex_compositions, stoichiometry
+    and physical_properties unasserted. Mendeley version 2 is a metadata-only dataset
+    link; no raw measurements were reanalyzed. The live iModulonDB adapter returned
+    28 datasets with neither yeast represented, so it is not applicable and supplies
+    no negative evidence.
+  evidence:
+  - reference: DOI:10.3390/ijms241311202
+    notes: Figure 1 and Discussion define the tested scope and distinguish extrapolation.
+  - reference: DOI:10.17632/z3hvg9wtvg.2
+    notes: Versioned dataset landing page, not a raw-data analysis.
+  posed_by: codex
+  posed_date: '2026-10-05'
+images:
+- image_id: pmc_pmc10342647_ijms_24_11202_f002
+  file: pmc10342647_ijms_24_11202_f002.jpg
+  file_sha256: 7d9c957cdb378c0a51800a3890e66cf2d0d0b05d7596bf0e220e0224b374c6da
+  source: PMC
+  source_accession: PMC10342647.1 ijms-24-11202-f002
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10342647/#ijms-24-11202-f002
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC10342647.1/ijms-24-11202-g002.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Susanna Boronat, Margarita Cabrera, Montserrat Vega, Jorge Alcalá,
+    Silvia Salas-Pino, Rafael R. Daga, José Ayté, Elena Hidalgo; CC BY, via PubMed
+    Central
+  modality: FLUORESCENCE
+  caption: Figure 2. GFP-tagged Hsp42, Hsp104 and Btn2 form heat-induced foci in BY4741-derived
+    budding yeast at 37 C. Rows compare the tagged chaperones over time; dashed outlines
+    mark cells and scale bars are 5 micrometers. Hsp104 is a disaggregase, not a small
+    heat shock protein. Separate single-label images do not establish simultaneous
+    three-way colocalization.
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.3390/ijms241311202
+  retrieved_on: '2026-10-05'
+  notes: 'Figure 2 from article version PMC10342647.1; exact licence version read
+    from JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the
+    curator because PMC has no taxon field. Actual figure pixels inspected: BY4741
+    labels, chaperone rows, time points and scale bar agree with the caption. No separate
+    third-party credit appears in this figure or caption. Unmodified image; a time-course
+    montage, not an ultrastructural or material-state measurement.'

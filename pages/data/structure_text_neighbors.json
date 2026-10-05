@@ -7825,6 +7825,11 @@
       "label": "age-associated protein deposit",
       "neighbors": [
         {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.80515672
+        },
+        {
           "identifier": "cellstructuremech:mitostore",
           "label": "MitoStore",
           "cosine_similarity": 0.77961422
@@ -7843,11 +7848,6 @@
           "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
           "label": "juxtanuclear quality control compartment",
           "cosine_similarity": 0.72148682
-        },
-        {
-          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
-          "label": "intramitochondrial protein quality control compartment",
-          "cosine_similarity": 0.70591954
         }
       ]
     },
@@ -7859,6 +7859,11 @@
           "identifier": "GO:0010494",
           "label": "cytoplasmic stress granule",
           "cosine_similarity": 0.71220655
+        },
+        {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.70037146
         },
         {
           "identifier": "GO:0140365",
@@ -7874,11 +7879,6 @@
           "identifier": "GO:0048500",
           "label": "signal recognition particle",
           "cosine_similarity": 0.68544014
-        },
-        {
-          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
-          "label": "intranuclear quality control compartment",
-          "cosine_similarity": 0.68139703
         }
       ]
     },
@@ -8031,9 +8031,9 @@
           "cosine_similarity": 0.67962873
         },
         {
-          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
-          "label": "intramitochondrial protein quality control compartment",
-          "cosine_similarity": 0.626074
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.67055247
         }
       ]
     },
@@ -8045,6 +8045,11 @@
           "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
           "label": "juxtanuclear quality control compartment",
           "cosine_similarity": 0.83958213
+        },
+        {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.77309148
         },
         {
           "identifier": "cellstructuremech:age_associated_protein_deposit",
@@ -8060,11 +8065,6 @@
           "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
           "label": "intramitochondrial protein quality control compartment",
           "cosine_similarity": 0.70108568
-        },
-        {
-          "identifier": "cellstructuremech:insoluble_protein_deposit",
-          "label": "insoluble protein deposit",
-          "cosine_similarity": 0.68285978
         }
       ]
     },
@@ -8083,6 +8083,11 @@
           "cosine_similarity": 0.72828714
         },
         {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.72794356
+        },
+        {
           "identifier": "cellstructuremech:age_associated_protein_deposit",
           "label": "age-associated protein deposit",
           "cosine_similarity": 0.72148682
@@ -8091,11 +8096,6 @@
           "identifier": "cellstructuremech:mitostore",
           "label": "MitoStore",
           "cosine_similarity": 0.71473054
-        },
-        {
-          "identifier": "cellstructuremech:insoluble_protein_deposit",
-          "label": "insoluble protein deposit",
-          "cosine_similarity": 0.69557577
         }
       ]
     },
@@ -8150,14 +8150,14 @@
           "cosine_similarity": 0.72566948
         },
         {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.71642801
+        },
+        {
           "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
           "label": "juxtanuclear quality control compartment",
           "cosine_similarity": 0.71473054
-        },
-        {
-          "identifier": "cellstructuremech:insoluble_protein_deposit",
-          "label": "insoluble protein deposit",
-          "cosine_similarity": 0.67962873
         }
       ]
     },
@@ -8282,6 +8282,37 @@
           "identifier": "GO:0033172",
           "label": "gas vesicle shell",
           "cosine_similarity": 0.6467729
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0140453",
+      "label": "protein aggregate center",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.80515672
+        },
+        {
+          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+          "label": "intranuclear quality control compartment",
+          "cosine_similarity": 0.77309148
+        },
+        {
+          "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
+          "label": "juxtanuclear quality control compartment",
+          "cosine_similarity": 0.72794356
+        },
+        {
+          "identifier": "cellstructuremech:mitostore",
+          "label": "MitoStore",
+          "cosine_similarity": 0.71642801
+        },
+        {
+          "identifier": "cellstructuremech:bacterial_aggresome",
+          "label": "bacterial aggresome",
+          "cosine_similarity": 0.70037146
         }
       ]
     },
