@@ -1,0 +1,628 @@
+identifier: cellstructuremech:juxtanuclear_quality_control_compartment
+label: juxtanuclear quality control compartment
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A cytoplasmic, perinuclear protein-quality-control inclusion characterized
+  in budding yeast, formed by congregation of misfolded-protein deposits near the
+  nuclear envelope and distinct from the intranuclear quality control compartment.
+definition_source: DOI:10.1038/s41556-023-01128-6
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T09:13:16Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T09:21:09Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added cytoplasmic JUNQ identity, bounded cargo and machinery classes, three
+    intervention graphs, historical and assay-scope discussions, and an inspected
+    CC BY 4.0 figure.
+  llm_assisted: true
+synonyms:
+- synonym_text: JUNQ
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41556-023-01128-6
+parent_structures:
+- GO:0016234
+part_of:
+- GO:0005737
+components:
+- component_id: protein_cargo
+  label: heterogeneous JUNQ protein cargo
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Variable protein cargo is not one sequence family or a fixed complex.
+    Engineered LuciTs, Ubc9Ts and VHL reporters do not define a universal native inventory.
+  role: Misfolded protein material concentrated in cytoplasmic deposits that congregate
+    near the nuclear envelope.
+  evidence:
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Results S1 and S5 and Figures 1 and 4 distinguish cytoplasmic reporter
+      deposits from nuclear INQ and identify a congregation of Q-bodies.
+  - reference: DOI:10.3389/fmolb.2024.1427542
+    notes: Results 3.1-3.4 follow reporter sequestration and perinuclear positioning
+      under heat stress.
+- component_id: hsp104
+  label: Hsp104-type disaggregase
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  gene_symbols:
+  - HSP104
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro matches for P31539 include broader ClpA/B families
+    IPR001270 and IPR050130, not an exact integrated Hsp104-type family.
+  role: Associated disaggregase localized to cytoplasmic JUNQ by correlated microscopy.
+    This association is not a fixed coat or evidence of universal assembly dependence.
+  protein_examples:
+  - uniprot_id: UniProtKB:P31539
+    protein_label: Heat shock protein 104
+    gene_symbol: HSP104
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example, not a reassignment of experimental
+      strains to S288C.
+    evidence:
+    - reference: UniProtKB:P31539
+      notes: Native reviewed entry verifies accession, name, gene and reference taxon.
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Figure 4b-c uses endogenously tagged Hsp104-GFP and correlated cryo-soft
+        X-ray tomography to identify cytoplasmic JUNQ separately from HTT-positive
+        IPOD.
+  evidence:
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Results S5 and Figure 4b-c directly localize Hsp104-positive JUNQ outside
+      the nuclear boundary.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: All 11 integrated matches inspected through next=null; broader family hits
+      are not exact component identities.
+- component_id: proteasome
+  label: proteasome complex
+  component_type: PROTEIN_COMPLEX
+  component_role: ASSOCIATED_MACHINERY
+  grounding: GO:0000502
+  essentiality: UNKNOWN
+  role: Historically reported proteolytic machinery recruited to JUNQ-designated reporter
+    inclusions, not an invariant constituent or universal formation requirement. Early
+    perinuclear assignments can include nuclear INQ and are not all reclassified as
+    modern cytoplasmic JUNQ.
+  evidence:
+  - reference: DOI:10.1038/nature07195
+    notes: Results S4 and Figure 5d describe 26S proteasome enrichment at JUNQ-designated
+      inclusions, including mutant actin without proteasome inhibition; this is conditional
+      historical association.
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Results S2 show that proteasome inhibition can cause additional nuclear
+      reporter inclusions, limiting retrospective interpretation of earlier JUNQ assignments.
+  - reference: GO:0000502
+    notes: Native QuickGO verifies the generic cellular-component class proteasome
+      complex; the label is deliberately not the narrower 26S proteasome identity.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1038/s41556-023-01128-6
+  note: Species demonstrated in nuclear-envelope-resolved microscopy and reporter
+    perturbations. Methods defer strain details to an unread supplemental table; individual
+    2023 assays are not assigned a finer taxon.
+- taxon_id: NCBITaxon:1247190
+  taxon_label: Saccharomyces cerevisiae BY4741
+  reference: DOI:10.3389/fmolb.2024.1427542
+  note: Methods Table 2 identifies BY4741 wild type and derived mutant backgrounds
+    for the 2024 experiments. Native NCBI taxonomy verifies this strain ID; the mutants
+    are derivatives, not assertions that their genotype is wild type.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: UniProtKB:P31539
+  note: Reference-sequence taxon for the reviewed Hsp104 example only, not a replacement
+    for the experimental BY4741 background.
+functions:
+- function_id: sequestration
+  label: spatial sequestration of cytoplasmic misfolded proteins
+  description: Concentrates selected misfolded proteins in cytoplasmic deposits near
+    the nucleus. This does not imply that every misfolded protein enters JUNQ or that
+    deposition universally protects cells.
+  evidence:
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: 'Results S1 and S5, Figures 1 and 4: reporter localization and correlated
+      microscopy resolve cytoplasmic JUNQ.'
+  - reference: DOI:10.3389/fmolb.2024.1427542
+    notes: Results 3.1-3.4 distinguish perinuclear congregation from peripheral reporter
+      deposition.
+- function_id: conditional_clearance
+  label: conditional clearance of sequestered protein cargo
+  description: JUNQ-associated reporter cargo can be cleared through vacuolar and
+    proteasome-associated routes under tested conditions. Their relative contributions
+    depend on reporter and assay; the precise membrane route into the vacuole remains
+    unresolved.
+  evidence:
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Results S8 and Figure 7 combine cytoplasmic Keima acidification, reporter
+      turnover and protease-sensitive fragments; direct time-resolved budding in Figure
+      8 concerns INQ, not JUNQ.
+  - reference: DOI:10.3389/fmolb.2024.1427542
+    notes: Results 3.5 and Discussion show Atg1/Atg8-sensitive clearance but little
+      bortezomib effect in these NES-LuciTs assays, and leave the route into the vacuole
+      open.
+- function_id: recoverable_pool
+  label: conditional retention of recoverable reporter protein
+  description: In the original JUNQ-designated Ubc9Ts assay, cooling restores diffuse
+    fluorescence in an Hsp104-sensitive manner, consistent with a recoverable protein
+    pool. This is not a universal client-refolding claim or a direct activity measurement,
+    and early compartment assignments have nomenclature limitations.
+  evidence:
+  - reference: DOI:10.1038/nature07195
+    notes: Results S6 and Figure 6e describe fluorescence recovery after temperature
+      downshift and Hsp104/guanidinium perturbation.
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Results S2 delimit historical JUNQ assignments in proteasome-inhibited
+      cells by resolving additional nuclear INQ.
+causal_graphs:
+- graph_id: cytoplasmic_deposition
+  title: Conditional assembly and sorting of cytoplasmic reporter deposits
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  description: Heat-induced misfolding, Q-body congregation and sorting perturbations
+    are distinct experimental readouts.
+  scope_notes: Saccharomyces cerevisiae reporter experiments at 37 C; not a universal
+    temporal pathway for native clients. Peripheral puncta are not all established
+    IPOD. Genetic sorting dependence does not establish constituent residence.
+  nodes:
+  - node_id: heat
+    label: Heat shift to 37 C
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: misfolded_cargo
+    label: Temperature-sensitive misfolded reporter cargo
+    node_type: STATE
+    component_ref: protein_cargo
+  - node_id: q_bodies
+    label: Cytoplasmic Q-body deposits
+    node_type: STRUCTURE
+  - node_id: junq
+    label: juxtanuclear quality control compartment
+    node_type: STRUCTURE
+    grounding: cellstructuremech:juxtanuclear_quality_control_compartment
+  - node_id: ssa1_ssa2_loss
+    label: Combined SSA1 and SSA2 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: btn2_loss
+    label: BTN2 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: hsp42_loss
+    label: HSP42 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: peripheral_foci
+    label: Peripheral reporter foci
+    node_type: STATE
+  edges:
+  - subject: heat
+    predicate: induces
+    object: misfolded_cargo
+    description: Temperature-sensitive reporter misfolding accompanies the heat shift
+      in the tested induction protocol.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S1 and Figure 1.
+  - subject: misfolded_cargo
+    predicate: accumulates in
+    object: q_bodies
+    description: Misfolded cytoplasmic reporter accumulates in Q-body deposits.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S5 and Figure 4d-f.
+  - subject: q_bodies
+    predicate: congregate into
+    object: junq
+    description: Q-bodies congregate into a perinuclear JUNQ collection rather than
+      necessarily merging into one homogeneous body.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S5 and Figure 4d describe the cryo-SXT architecture.
+  - subject: misfolded_cargo
+    predicate: can accumulate in
+    object: peripheral_foci
+    description: The assayed cargo can form peripheral foci as well as perinuclear
+      deposits.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2024.1427542
+      notes: Results 3.4 and Figure 4 distinguish reporter locations across sorting
+        mutants.
+  - subject: ssa1_ssa2_loss
+    predicate: impairs
+    object: junq
+    description: Combined loss impairs perinuclear JUNQ positioning and leaves large,
+      static peripheral inclusions; single deletions do not have the same phenotype.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2024.1427542
+      notes: Results 3.2 and Figure 2.
+  - subject: btn2_loss
+    predicate: impairs
+    object: junq
+    description: BTN2 loss shifts reporter deposition toward peripheral sites in the
+      tested sorting assay, not necessarily abolishing all protein aggregation.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2024.1427542
+      notes: Results 3.4 and Figure 4.
+  - subject: hsp42_loss
+    predicate: reduces
+    object: peripheral_foci
+    description: HSP42 loss reduces peripheral reporter foci while allowing predominantly
+      perinuclear JUNQ-like deposition.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2024.1427542
+      notes: Results 3.4 and Figure 4; this is not an obligatory Hsp42 requirement
+        for JUNQ formation.
+- graph_id: perinuclear_positioning
+  title: Conditional positioning and INQ/JUNQ convergence
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  description: Coexpressed inclusions remain separated by the nuclear envelope while
+    converging spatially.
+  scope_notes: 2023 nuclear- and cytoplasmic-targeted reporter assays distinguish
+    positioning from formation. NPC clustering and deletion effects do not prove a
+    physical tether. NVJ deletion does not abolish convergence.
+  nodes:
+  - node_id: junq
+    label: juxtanuclear quality control compartment
+    node_type: STRUCTURE
+    grounding: cellstructuremech:juxtanuclear_quality_control_compartment
+  - node_id: convergence
+    label: Spatial INQ/JUNQ convergence across the nuclear envelope
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: chm7_loss
+    label: CHM7 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: vps23_loss
+    label: VPS23 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: vps34_loss
+    label: VPS34 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: vps15_loss
+    label: VPS15 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: nup120_loss
+    label: NUP120 deletion with clustered nuclear pores
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: pore_adjacency
+    label: JUNQ adjacency to clustered nuclear pores
+    node_type: STATE
+  edges:
+  - subject: junq
+    predicate: participates in
+    object: convergence
+    description: Cytoplasmic JUNQ and nuclear INQ can converge without becoming one
+      compartment.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S3 and Figure 3a-c.
+  - subject: chm7_loss
+    predicate: impairs
+    object: convergence
+    description: A subset of deletion cells forms both inclusions but fails to converge
+      them.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S7 and Figure 6b.
+  - subject: vps23_loss
+    predicate: disrupts
+    object: convergence
+    description: Deletion disrupts the spatial relationship of coexpressed reporter
+      inclusions in this assay.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S7, Figure 6c and described Extended Data Figure 6b; extended-data
+        pixels not inspected.
+  - subject: vps34_loss
+    predicate: disrupts
+    object: convergence
+    description: Deletion disrupts reporter-inclusion convergence in the 2023 assay;
+      the 2024 expression-limited experiment is not used to infer the same result.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S7, Figure 6c and described Extended Data Figure 6b.
+  - subject: vps15_loss
+    predicate: disrupts
+    object: convergence
+    description: Deletion disrupts reporter-inclusion convergence in the 2023 assay;
+      no general formation requirement is asserted.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S7, Figure 6c and described Extended Data Figure 6b.
+  - subject: nup120_loss
+    predicate: biases
+    object: pore_adjacency
+    description: JUNQ is adjacent to clustered nuclear pores in nup120 deletion cells,
+      including when expressed without the nuclear reporter.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S4 and Figure 3d; this is a positioning observation under intervention,
+        not proof that Nup120 is required for JUNQ formation.
+- graph_id: conditional_turnover
+  title: Perturbations of JUNQ-associated cargo clearance
+  graph_kind: DISASSEMBLY
+  scope_status: MECHANISTIC
+  description: Separate reporter assays support conditional vacuolar clearance and
+    persistence phenotypes.
+  scope_notes: Increased puncta, slower reporter degradation, acidification and protease-sensitive
+    fragments are complementary but nonidentical readouts. No edge specifies direct
+    JUNQ budding, engulfment or an obligatory piecemeal microautophagy route.
+  nodes:
+  - node_id: junq
+    label: juxtanuclear quality control compartment
+    node_type: STRUCTURE
+    grounding: cellstructuremech:juxtanuclear_quality_control_compartment
+  - node_id: clearance
+    label: Clearance of JUNQ-associated reporter cargo
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: nvj1_loss
+    label: NVJ1 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: vac8_loss
+    label: VAC8 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: vps4_loss
+    label: VPS4 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: atg1_loss
+    label: ATG1 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: atg8_loss
+    label: ATG8 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: vacuolar_protease_block
+    label: PEP4 deletion with PMSF vacuolar-protease inhibition
+    node_type: EXPERIMENTAL_FACTOR
+  edges:
+  - subject: junq
+    predicate: can undergo
+    object: clearance
+    description: Cytoplasmic reporter cargo encounters an acidic compartment and undergoes
+      protease-sensitive processing consistent with vacuolar clearance.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S8 and Figure 7d,f-g. NES-Keima imaging samples different fields
+        because of photobleaching; the panel-d caption contains an NLS/NES inconsistency.
+  - subject: nvj1_loss
+    predicate: impairs
+    object: clearance
+    description: Junction disruption increases persistence of cytoplasmic reporter
+      inclusions without abolishing initial INQ/JUNQ convergence.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S6 and Figure 5h, right-hand NES-LuciTs quantification.
+  - subject: vac8_loss
+    predicate: impairs
+    object: clearance
+    description: Loss of Vac8 increases persistent cytoplasmic reporter inclusions
+      in the tested assay.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S6 and Figure 5h, right-hand NES-LuciTs quantification.
+  - subject: vps4_loss
+    predicate: impairs
+    object: clearance
+    description: Vps4 loss increases persistence of cytoplasmic reporter inclusions;
+      it does not identify the exact membrane-remodelling step.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S7 and Figure 6e quantify NES- as well as NLS-LuciTs puncta.
+  - subject: atg1_loss
+    predicate: impairs
+    object: clearance
+    description: Atg1 deletion slows NES-LuciTs clearance while inclusions can still
+      localize to the nuclear-vacuolar junction.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2024.1427542
+      notes: Results 3.5 and Figure 5.
+  - subject: atg8_loss
+    predicate: impairs
+    object: clearance
+    description: Atg8 deletion slows reporter clearance and alters the puncta phenotype,
+      not simply preventing all inclusion formation.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2024.1427542
+      notes: Results 3.5 and Figure 5.
+  - subject: vacuolar_protease_block
+    predicate: impairs
+    object: clearance
+    description: Combined perturbation reduces cytoplasmic reporter fragments and
+      partly stabilizes reporter levels, supporting a vacuolar proteolytic contribution.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Results S8 and Figure 7f-g plus Results description of turnover experiments.
+evidence:
+- reference: DOI:10.1038/s41556-023-01128-6
+  notes: Sontag et al. (2023), PMID 37081164, PMC12349969.1. Native metadata/JATS
+    verified, not retracted. Read Results S1-S8, Discussion S9, strain-table pointer
+    S35, Data availability S46 and main Figure 3-7 captions. Actual figures, supplemental
+    strain table and raw source data were not inspected. TDM metadata is not a Creative
+    Commons hosting licence.
+- reference: DOI:10.3389/fmolb.2024.1427542
+  notes: Rolli et al. (2024), PMID 39234568, PMC11372896.1. Read main Methods including
+    strain Table 2, Results 3.1-3.5, Discussion, Data availability and figure captions;
+    actual Figure 2 inspected. Supplemental materials and raw data were not independently
+    inspected.
+- reference: DOI:10.1038/nature07195
+  notes: Kaganovich et al. (2008), PMID 18756251, PMC2746971.1. Native metadata/JATS
+    verified, not retracted. Read Results S3-S6, Discussion S7 and Methods Summary
+    S8. Actual figures and supplements were not inspected in this iteration; historical
+    nomenclature is qualified.
+- reference: GO:0016234
+  notes: Native QuickGO verifies active inclusion body as a broader cellular-component
+    parent.
+- reference: GO:0005737
+  notes: Native QuickGO verifies active cytoplasm; modern nuclear-envelope-resolved
+    imaging supports cytoplasmic parthood, not nuclear or vacuolar parthood.
+discussions:
+- discussion_id: identity_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep modern cytoplasmic JUNQ separate from INQ, IPOD and related deposits.
+  rationale: Shared perinuclear proximity and changing nomenclature do not establish
+    exact identity.
+  notes: Minted after native QuickGO and exact OLS GO label/synonym checks found no
+    exact term; broader inclusion body is a parent. Hidden/ignored-inclusive searches
+    excluding only .git and parsed identities of 891 existing records found no JUNQ
+    duplicate. Existing INQ explicitly excludes cytoplasmic JUNQ as an exact synonym.
+    Q-bodies are deposits that can congregate into JUNQ, not automatically an exact
+    synonym; IPOD, aggresome and MitoStore are not equated with it. Historical JUNQ
+    experiments are not all reassigned to this modern cytoplasmic entity.
+  evidence:
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Results S1-S5 distinguish compartment identity and explain nuclear inclusions
+      induced by proteasome inhibition.
+  - reference: DOI:10.1038/nature07195
+    notes: Original JUNQ nomenclature predates the modern nuclear/cytoplasmic resolution.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: component_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral grounding for variable cargo and Hsp104-type
+    machinery.
+  rationale: Variable client material and a narrow disaggregase class cannot be grounded
+    by broader sequence families.
+  notes: Retain two REVIEWED_LABEL_ONLY classes. All 11 integrated P31539 InterPro
+    results were inspected; ClpA/B families are broader than the Hsp104-type label.
+    Proteasome complex uses the exact generic GO label rather than pretending GO:0000502
+    denotes only 26S proteasomes.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: Native complete integrated match set inspected.
+  - reference: GO:0000502
+    notes: Verified generic class identity.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: component_exclusions
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Separate cargo and directly localized machinery from genetic positioning
+    and clearance factors.
+  rationale: Deletion dependence alone is not direct residence, fixed composition
+    or essentiality.
+  notes: Btn2, Ssa1/Ssa2, Sis1 and Hsp90 perturbations are not automatically converted
+    to constituent entries. NVJ proteins, NPCs, ESCRT and Atg1/Atg8 remain positioning
+    or clearance factors, not invariant JUNQ subunits. Activated Chm7OPEN localization
+    is not a native coat. Hsp104 has direct modern correlated localization; proteasome
+    association is retained with explicit historical-assignment limits. Engineered
+    reporters are variable cargo, not native defining subunits. A 2012 Sis1/Ssa1 localization
+    lead requires primary and compartment-identity review before expansion.
+  evidence:
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Results S4-S8 separate localization, convergence and turnover readouts.
+  - reference: DOI:10.3389/fmolb.2024.1427542
+    notes: Results 3.2-3.5 test genetic dependencies; single Hsp90 paralog loss does
+      not settle redundancy.
+  - reference: DOI:10.1038/nature07195
+    notes: Results S4 supports conditional machinery recruitment in the original reporter
+      assays.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: clearance_boundaries
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Preserve assay-dependent proteasome effects and the unresolved route of
+    JUNQ entry into the vacuole.
+  rationale: Reporter turnover, puncta counts and precise membrane trafficking are
+    different claims.
+  notes: The 2023 study reports partial stabilization with proteasome inhibition,
+    whereas the 2024 NES-LuciTs assay finds little bortezomib effect. This is not
+    resolved into a universal requirement or dispensability. The 2024 VPS15/VPS34
+    experiments have expression limitations and do not overturn the separately assayed
+    2023 positioning phenotypes. NVJ loss does not prevent initial convergence. Direct
+    time-resolved nuclear extrusion in 2023 Figure 8 concerns INQ; no JUNQ budding
+    route is copied from it. Autophagy-factor dependence does not prove obligatory
+    piecemeal microautophagy.
+  evidence:
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Results S6-S8 and Discussion.
+  - reference: DOI:10.3389/fmolb.2024.1427542
+    notes: Results 3.5 and Discussion explicitly consider several unresolved vacuolar
+      routes.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: source_caption_limits
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Preserve caption and reporter-label discrepancies without silently resolving
+    them.
+  rationale: Source metadata, captions, methods and actual pixels do not always agree.
+  notes: The hosted 2024 Figure 2 caption calls the blue nuclear stain Hoechst 33342
+    while the image labels it DAPI; use generic blue nuclear signal. Its mitochondrial
+    heat-treatment timing differs between Methods and caption. Panels D-E are double-mutant
+    peripheral inclusions and an HTT/IPOD comparator, not positive wild-type JUNQ.
+    In 2023 Figure 7d, the caption starts with NES-Keima but later says NLS; the cytoplasmic
+    interpretation follows the experimental construct and Results, not the inconsistent
+    phrase. No raw-image reanalysis resolves these source discrepancies.
+  evidence:
+  - reference: DOI:10.3389/fmolb.2024.1427542
+    notes: Methods, Figure 2 caption and inspected figure pixels.
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Results S8 and Figure 7d caption.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: remaining_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve native client inventories, material state, prevalence and exact
+    strain mapping for older assays.
+  rationale: Induced reporter observations do not establish universal dimensions,
+    composition or lineage distribution.
+  notes: Leave taxonomic_distribution, stoichiometry, physical_properties and dataset
+    accessions empty. Cryo-SXT attenuation suggests liquid-like behavior but does
+    not by itself establish phase-separation physics. No constitutive membrane is
+    inferred from disposal-associated contacts. The 2023 supplemental strain table
+    and raw source data remain unread; 2024 Methods directly identifies BY4741, with
+    native NCBI TaxId 1247190 verified. A general source-data statement is not a dataset
+    accession; the 2024 study reports no large deposited dataset. Mammalian analogies
+    are not imported as microbial prevalence.
+  evidence:
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Results S5, Discussion, strain-table pointer and Data availability.
+  - reference: DOI:10.3389/fmolb.2024.1427542
+    notes: Methods Table 2, Discussion and Data availability.
+  posed_by: codex
+  posed_date: '2026-10-05'
+images:
+- image_id: pmc_pmc11372896_f2
+  file: pmc11372896_f2.jpg
+  file_sha256: 3871c32c4ce764a616c5f0a3967acbad00edb7bc9f89a8621a06209bb2c89060
+  source: PMC
+  source_accession: PMC11372896.1 F2
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11372896/#F2
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11372896.1/fmolb-11-1427542-g002.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Sarah Rolli, Chloe A. Langridge and Emily M. Sontag (2024), Figure
+    2; CC BY 4.0, via PubMed Central. Unmodified.
+  modality: FLUORESCENCE
+  caption: 'Multi-panel yeast JUNQ reporter characterization. Panels A-C compare wild-type
+    and chaperone-perturbed cells: NES-LuciTs is magenta, the nuclear region is marked
+    in yellow and blue, vacuoles are grey and mitochondria are cyan. Microscopy scale
+    bars in A-C are 1 micrometer. Panels D-E compare static peripheral inclusions
+    in the ssa1/ssa2 double mutant with an HTT/IPOD comparator, not positive wild-type
+    JUNQ. Panels F-H show reporter immunoblots and turnover quantification.'
+  taxon_id: NCBITaxon:1247190
+  taxon_label: Saccharomyces cerevisiae BY4741
+  reference: DOI:10.3389/fmolb.2024.1427542
+  retrieved_on: '2026-10-05'
+  notes: FIGURE 2 from article version PMC11372896.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Actual image inspected; no separate third-party credit found in its caption or
+    pixels. Methods Table 2 identifies BY4741 and derived mutants. Native NCBI taxonomy
+    verifies the BY4741 strain ID. The caption calls the blue nuclear stain Hoechst
+    33342 while the image labels it DAPI; generic nuclear-signal wording preserves
+    that discrepancy. Mitochondrial-staining heat-treatment timing differs between
+    Methods and caption and is not silently reconciled. Image is unmodified; not every
+    panel depicts JUNQ.
