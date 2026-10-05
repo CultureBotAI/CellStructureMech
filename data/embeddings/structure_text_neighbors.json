@@ -8047,6 +8047,11 @@
           "cosine_similarity": 0.83958213
         },
         {
+          "identifier": "GO:0140602",
+          "label": "nucleolar peripheral inclusion body",
+          "cosine_similarity": 0.78378774
+        },
+        {
           "identifier": "GO:0140453",
           "label": "protein aggregate center",
           "cosine_similarity": 0.77309148
@@ -8060,11 +8065,6 @@
           "identifier": "cellstructuremech:mitostore",
           "label": "MitoStore",
           "cosine_similarity": 0.72566948
-        },
-        {
-          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
-          "label": "intramitochondrial protein quality control compartment",
-          "cosine_similarity": 0.70108568
         }
       ]
     },
@@ -8193,6 +8193,37 @@
       ]
     },
     {
+      "identifier": "GO:0140602",
+      "label": "nucleolar peripheral inclusion body",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+          "label": "intranuclear quality control compartment",
+          "cosine_similarity": 0.78378774
+        },
+        {
+          "identifier": "GO:0044614",
+          "label": "nuclear pore cytoplasmic filaments",
+          "cosine_similarity": 0.73065877
+        },
+        {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.72558725
+        },
+        {
+          "identifier": "GO:0044611",
+          "label": "nuclear pore inner ring",
+          "cosine_similarity": 0.72265999
+        },
+        {
+          "identifier": "GO:0097165",
+          "label": "nuclear stress granule",
+          "cosine_similarity": 0.71903493
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:parasporal_crystal",
       "label": "parasporal crystal",
       "neighbors": [
@@ -8310,9 +8341,9 @@
           "cosine_similarity": 0.71642801
         },
         {
-          "identifier": "cellstructuremech:bacterial_aggresome",
-          "label": "bacterial aggresome",
-          "cosine_similarity": 0.70037146
+          "identifier": "GO:0140602",
+          "label": "nucleolar peripheral inclusion body",
+          "cosine_similarity": 0.70289319
         }
       ]
     },
@@ -24580,14 +24611,14 @@
           "cosine_similarity": 0.72561953
         },
         {
+          "identifier": "GO:0140602",
+          "label": "nucleolar peripheral inclusion body",
+          "cosine_similarity": 0.71903493
+        },
+        {
           "identifier": "GO:0000228",
           "label": "nuclear chromosome",
           "cosine_similarity": 0.64535222
-        },
-        {
-          "identifier": "GO:0031981",
-          "label": "nuclear lumen",
-          "cosine_similarity": 0.64350626
         }
       ]
     },

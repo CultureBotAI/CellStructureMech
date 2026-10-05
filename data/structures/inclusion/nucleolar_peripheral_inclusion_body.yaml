@@ -1,0 +1,513 @@
+identifier: GO:0140602
+label: nucleolar peripheral inclusion body
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: An intranuclear inclusion at the nucleolar periphery in which nuclear
+  factors collect reversibly during acute heat stress or starvation.
+definition_source: GO:0140602
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T11:39:49Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T11:41:52Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added exact GO identity and hierarchy, six bounded component classes and
+    six reference proteins, two intervention graphs, source-scope discussions and
+    an inspected CC BY 4.0 figure.
+  llm_assisted: true
+synonyms:
+- synonym_text: nucleolar rings
+  synonym_type: EXACT_SYNONYM
+  source: GO:0140602
+- synonym_text: NuRs
+  synonym_type: EXACT_SYNONYM
+  source: GO:0140602
+parent_structures:
+- GO:0042405
+part_of:
+- GO:0005634
+components:
+- component_id: nuclear_cargo
+  label: heterogeneous nuclear protein cargo
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Stress-sequestered material rather than a fixed complex. Heat-stressed fission
+    yeast recruits Alm1, Nup211, Nup132, Pab2, Nab2 and several cell-cycle regulators,
+    among other factors. Nup85 and Mex67 are resolved separately below. These proteins
+    are not asserted to share a family or to be present under every inducing condition.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.108377
+    notes: Results and Figures 1-2 distinguish relocated proteins from unaffected
+      NPC proteins and the central Gar2-positive domain.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: A variable collection of nuclear cargo is not one sequence family
+    or stoichiometric complex.
+- component_id: nup85
+  label: Nucleoporin Nup85-like
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Nup85 leaves the nuclear pore and accumulates in NuRs during acute heat stress
+    in fission yeast. Its fluorescence recovery is reduced at NuRs; during recovery
+    it returns to the nuclear periphery.
+  evidence:
+  - &id001
+    reference: DOI:10.1016/j.celrep.2020.108377
+    notes: Figures 1c and 3b-d show redistribution, reduced mobility and recovery.
+  - reference: InterPro:IPR011502
+    notes: The exact reviewed Q9UUE5 protein has one integrated match, this family.
+  grounding: InterPro:IPR011502
+  gene_symbols:
+  - nup85
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9UUE5
+    protein_label: Nucleoporin nup85
+    gene_symbol: nup85
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence identity for the fission-yeast factor. Localization
+      and role rely on the cited experiments, not on the protein name or a claim that
+      all tagged strains have this exact genotype.
+    evidence:
+    - reference: UniProtKB:Q9UUE5
+      notes: Native reviewed entry verifies accession, gene, name and strain taxon.
+    - *id001
+- component_id: mex67
+  label: Nuclear RNA export factor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Mex67 accumulates in heat-induced NuRs and overlaps Alm1-marked rings in fission
+    yeast. Its ordinary mRNA-export function does not imply that export is active
+    at NuRs or that the complete export machinery is present.
+  evidence:
+  - &id002
+    reference: DOI:10.1016/j.celrep.2020.108377
+    notes: Figures 1e-g and 3c establish localization and reduced mobility.
+  - reference: InterPro:IPR030217
+    notes: Native Q9Y8G3 integrated matches distinguish the family from repeat, domain
+      and superfamily entries.
+  grounding: InterPro:IPR030217
+  gene_symbols:
+  - mex67
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9Y8G3
+    protein_label: mRNA export factor mex67
+    gene_symbol: mex67
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence identity for the fission-yeast factor. Localization
+      and role rely on the cited experiments, not on the protein name or a claim that
+      all tagged strains have this exact genotype.
+    evidence:
+    - reference: UniProtKB:Q9Y8G3
+      notes: Native reviewed entry verifies accession, gene, name and strain taxon.
+    - *id002
+- component_id: hsp70
+  label: Heat shock protein 70 family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Ssa1 and Ssa2 are chaperone residents of severe-heat NuRs in fission yeast.
+    This localization does not establish residence or essentiality for every Hsp70
+    paralogue.
+  evidence:
+  - &id003
+    reference: DOI:10.3390/ijms241311202
+    notes: Results 2.5 and Figure 7b image Ssa1-GFP and GFP-Ssa2 at NuRs after 15
+      minutes at 42 C.
+  - reference: InterPro:IPR013126
+    notes: Both reviewed Ssa1 and Ssa2 have this family in their complete native integrated
+      match sets.
+  grounding: InterPro:IPR013126
+  gene_symbols:
+  - ssa1
+  - ssa2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q10265
+    protein_label: Probable heat shock protein ssa1
+    gene_symbol: ssa1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence identity for the fission-yeast factor. Localization
+      and role rely on the cited experiments, not on the protein name or a claim that
+      all tagged strains have this exact genotype.
+    evidence:
+    - reference: UniProtKB:Q10265
+      notes: Native reviewed entry verifies accession, gene, name and strain taxon.
+    - *id003
+  - uniprot_id: UniProtKB:O59855
+    protein_label: Probable heat shock protein ssa2
+    gene_symbol: ssa2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence identity for the fission-yeast factor. Localization
+      and role rely on the cited experiments, not on the protein name or a claim that
+      all tagged strains have this exact genotype.
+    evidence:
+    - reference: UniProtKB:O59855
+      notes: Native reviewed entry verifies accession, gene, name and strain taxon.
+    - *id003
+- component_id: dnaj
+  label: DnaJ homolog subfamily A member 1/2-like
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  role: Mas5 is a NuR-localized chaperone in fission yeast. Loss of Mas5 blocks the
+    tested severe-heat reporter NuRs; this is an organism- and assay-specific requirement,
+    not family-wide essentiality.
+  evidence:
+  - &id004
+    reference: DOI:10.3390/ijms241311202
+    notes: Results 2.5 and Figure 7a-b show Mas5 localization and loss-of-function
+      effects.
+  - reference: InterPro:IPR044713
+    notes: Native reviewed O74752 matches this family as well as the broader DnaJ
+      family and several domains.
+  grounding: InterPro:IPR044713
+  gene_symbols:
+  - mas5
+  protein_examples:
+  - uniprot_id: UniProtKB:O74752
+    protein_label: Mitochondrial protein import protein mas5
+    gene_symbol: mas5
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence identity for the fission-yeast factor. Localization
+      and role rely on the cited experiments, not on the protein name or a claim that
+      all tagged strains have this exact genotype.
+    evidence:
+    - reference: UniProtKB:O74752
+      notes: Native reviewed entry verifies accession, gene, name and strain taxon.
+    - *id004
+- component_id: hsp104
+  label: Hsp104-type disaggregase
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: DISPENSABLE
+  role: NuR-associated disaggregase in fission yeast that supports timely clearance
+    during recovery. NuRs still form in its absence. Delayed clearance and regrowth
+    after deletion do not isolate a NuR-only survival mechanism.
+  evidence:
+  - &id005
+    reference: DOI:10.1016/j.celrep.2020.108377
+    notes: Figure 4d compares Nup85-marked NuRs in wild type and hsp104 deletion cells
+      during heat stress and recovery.
+  - reference: DOI:10.3390/ijms241311202
+    notes: Figure 7b directly images Hsp104-GFP at severe-heat NuRs.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: All 11 native O94641 InterPro matches were inspected; the ClpA/B
+    families are broader than Hsp104-type disaggregases.
+  gene_symbols:
+  - hsp104
+  protein_examples:
+  - uniprot_id: UniProtKB:O94641
+    protein_label: Heat shock protein 104
+    gene_symbol: hsp104
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence identity for the fission-yeast factor. Localization
+      and role rely on the cited experiments, not on the protein name or a claim that
+      all tagged strains have this exact genotype.
+    evidence:
+    - reference: UniProtKB:O94641
+      notes: Native reviewed entry verifies accession, gene, name and strain taxon.
+    - *id005
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1016/j.celrep.2020.108377
+  note: Defining acute-heat experiments shift cells from 25 C to 42 C for 10 or 20
+    minutes, followed where specified by recovery at 25 C. The later Figure 7 comparison
+    uses 42 C for 15 minutes; these are not one interchangeable protocol.
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.3390/ijms241311202
+  note: Figure 7a reports NuRs in W303 and BY4741 derivatives at 42 C for 15 minutes.
+    Methods 4.3 requires 50-fold concentration of W303 cultures before heat treatment;
+    that preparation is not generalized to BY4741 or fission yeast.
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  reference: UniProtKB:Q9UUE5
+  note: Native NCBI strain taxon for the reviewed reference-sequence examples. This
+    does not assign every tagged or mutant strain in the papers to an independently
+    verified genotype.
+functions:
+- function_id: reversible_sequestration
+  label: reversible sequestration of nuclear proteins
+  description: Collects selected nuclear factors during acute heat stress. Nup85 and
+    Mex67 show reduced mobility; recovery releases factors to their usual locations.
+    Coordinated shutdown of nuclear activities and protection from damage are interpretations,
+    not a proven NuR-specific causal pathway.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.108377
+    notes: Figures 1-3 and Discussion support sequestration and release while distinguishing
+      the proposed physiological model.
+causal_graphs:
+- graph_id: heat_induced_assembly
+  title: NuR formation under acute heat stress
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Fission-yeast assays only. Gallardo uses 25-to-42 C shifts and Nup/NPC
+    or mRNA-factor markers; Boronat uses 42 C for 15 minutes and misfolding reporters.
+    Mas5 deletion effects are not transferred to budding-yeast Btn2/Hsp42 perturbations
+    or to starvation.
+  nodes:
+  - node_id: heat
+    label: Acute 42 C heat stress
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: nur
+    label: nucleolar peripheral inclusion body
+    node_type: STRUCTURE
+    grounding: GO:0140602
+  - node_id: mas5_loss
+    label: mas5 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: preconditioning
+    label: 37 C preconditioning for 45 minutes before 42 C stress
+    node_type: EXPERIMENTAL_FACTOR
+  edges:
+  - subject: heat
+    predicate: induces
+    object: nur
+    description: Acute heat causes the measured nuclear factors to accumulate in NuRs.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.108377
+      notes: Figures 1 and 3a-b.
+  - subject: mas5_loss
+    predicate: blocks
+    object: nur
+    description: Mas5 loss blocks reporter-marked NuR assembly in the tested fission-yeast
+      cells.
+    evidence:
+    - reference: DOI:10.3390/ijms241311202
+      notes: Results 2.5 and Figure 7a-b.
+  - subject: preconditioning
+    predicate: suppresses
+    object: nur
+    description: Preconditioning largely prevents subsequent heat-induced NuR recruitment;
+      residual Ssa2 signal means this is not an absolute block.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.108377
+      notes: Results on thermotolerance report reduced NuR recruitment; supplemental
+        panels were not independently inspected.
+- graph_id: recovery_clearance
+  title: NuR clearance after acute heat stress
+  graph_kind: DISASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Fission yeast shifted back to 25 C after acute 42 C treatment. Hsf1
+    promoter regulation and Hsp104 deletion are separate interventions. Neither demonstrates
+    direct binding of Hsf1 to the inclusion or that every regrowth effect is mediated
+    only by NuRs.
+  nodes:
+  - node_id: recovery
+    label: Return to 25 C after acute heat stress
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: clearance
+    label: NuR disassembly during recovery
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: hsp104_loss
+    label: hsp104 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: hsf1_low
+    label: Repressed purg1-driven hsf1 expression
+    node_type: EXPERIMENTAL_FACTOR
+  edges:
+  - subject: recovery
+    predicate: permits
+    object: clearance
+    description: NuRs progressively dissolve and Nup85 returns to nuclear pores during
+      recovery.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.108377
+      notes: Figure 3d.
+  - subject: hsp104_loss
+    predicate: delays
+    object: clearance
+    description: Deleting hsp104 strongly delays Nup85-marked NuR clearance without
+      preventing initial assembly.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.108377
+      notes: Figure 4d.
+  - subject: hsf1_low
+    predicate: delays
+    object: clearance
+    description: Reduced Hsf1 expression delays NuR dissolution in the promoter-regulation
+      assay.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2020.108377
+      notes: Figure 4c and Results; this is not a direct physical interaction.
+evidence:
+- reference: GO:0140602
+  notes: Active cellular-component identity and exact synonyms verified through native
+    QuickGO. The definition cites PMID 33176152 and PMID 37128864 and includes both
+    heat stress and starvation.
+- reference: GO:0042405
+  notes: QuickGO directly lists GO:0140602 as an is_a child of nuclear inclusion body;
+    nucleus lists nuclear inclusion body as part_of.
+- reference: DOI:10.1016/j.celrep.2020.108377
+  notes: Gallardo et al. (2020), PMID 33176152. Full publisher-version PDF read from
+    the Universidad Pablo de Olavide repository, https://hdl.handle.net/10433/22772.
+    Main Results, Discussion, Methods and captions inspected; Figures 1-2 visually
+    inspected. Supplemental materials and raw data were not independently inspected.
+    CC BY-NC-ND 4.0 figures are not hosted.
+- reference: DOI:10.3390/ijms241311202
+  notes: Boronat et al. (2023), PMID 37446379, PMC10342647.1. Native JATS Results
+    2.5, Discussion, Methods and Figure 7 caption read; figure pixels inspected. Native
+    metadata confirms non-retracted CC BY 4.0 article. Supplemental panels were not
+    independently inspected.
+- reference: DOI:10.1242/jcs.260727
+  notes: 'Hiraoka et al. (2023), PMID 37128864. Publisher Results around Figure 3
+    and Discussion read: Cdc2, Cdc13 and Clp1 accumulate peripherally during stationary
+    phase or glucose depletion, distinct from central Gar1/Gar2. This supports GO''s
+    broader scope, not identical heat-stress composition or mechanism.'
+discussions:
+- discussion_id: identity_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep NuRs distinct from neighboring deposits and similarly abbreviated assemblies.
+  rationale: Spatial similarity and a shared stress response are not exact structure
+    identity.
+  notes: GO:0140602 is retained rather than a local heat-only identity. No exact equivalence
+    to PAC, INQ, amyloid bodies or nucleolar caps is asserted. The MTREC/NURS term
+    on nuclear_exosome_focus is an unrelated RNA-surveillance assembly. Searches covered
+    hidden and ignored files, excluding only .git; parsed identifiers, labels, synonyms
+    and slugs of all 894 baseline records had no exact match.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.108377
+    notes: Discussion proposes functional analogies while leaving the NuR seed and
+      morphology unresolved.
+  - reference: GO:0140602
+    notes: Exact identity and synonym authority.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: component_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Separate sequestered cargo from intact complexes, central nucleolar markers
+    and upstream regulators.
+  rationale: Protein redistribution and perturbation phenotypes do not establish whole-complex
+    membership.
+  notes: Nup85 and Nup132 leave NPCs, but many NPC components remain; no intact NPC
+    or Y-complex is modeled. Hsf1 is mostly excluded from NuRs and acts through stress-response
+    regulation, so is not a component. Gar2, Nuc1 and Acr1 mark the central domain.
+    Poly(A) RNA is reported nearby rather than assigned a fixed NuR subunit. Rho1.C17R
+    and Guk1-9 are engineered cargo reporters. Hsp104 is resident clearance machinery,
+    dispensable for assembly.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.108377
+    notes: Main Results and Figures 1-4 establish these boundaries.
+  - reference: DOI:10.3390/ijms241311202
+    notes: Figure 7 separates reporter and chaperone readouts.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: grounding_and_inventory
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Extend the component inventory and resolve exact Hsp104 and heterogeneous-cargo
+    groundings where possible.
+  rationale: The six-class core is not an exhaustive native composition or a fixed
+    stoichiometry.
+  notes: Native InterPro sets were checked for six reference proteins, with pagination
+    exhausted. Four component families are grounded; Hsp104 and variable cargo retain
+    REVIEWED_LABEL_ONLY. Additional resolved residents could be split out of the heterogeneous
+    cargo class after exact family verification. No broad ClpA/B family, DnaJ domain,
+    entire spliceosome or exosome is substituted for a narrower resident.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O94641/?page_size=200
+    notes: Eleven integrated matches, including broader ClpA/B families.
+  - reference: DOI:10.1016/j.celrep.2020.108377
+    notes: Main Results name additional recruited nuclear factors; this is a bounded
+      curation core.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: condition_scope
+  kind: INTERPRETATION
+  status: OPEN
+  prompt: Determine which composition and clearance mechanisms are shared between
+    heat-induced and starvation-associated inclusions.
+  rationale: GO groups inducing conditions, but this does not make experimental mechanisms
+    interchangeable.
+  notes: The starvation study describes peripheral localization and compares it with
+    heat stress; proposed transcriptional inhibition remains a hypothesis. No starvation-specific
+    assembly or disassembly edge is inferred from heat experiments. In budding yeast,
+    joint Btn2/Hsp42 loss does not block the severe-heat reporter NuRs in the tested
+    backgrounds, unlike the Mas5 phenotype in fission yeast.
+  evidence:
+  - reference: DOI:10.1242/jcs.260727
+    notes: Figure 3 and Discussion distinguish observation from proposed function.
+  - reference: DOI:10.3390/ijms241311202
+    notes: Results 2.5 and Figure 7a compare the two yeast models.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: distribution_and_data
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve broader distribution, native-client datasets and physical properties
+    with structure-specific evidence.
+  rationale: Two yeast models do not establish fungal prevalence or universal condensate
+    physics.
+  notes: 'Taxonomic_distribution, associated_traits, complex_compositions, datasets,
+    stoichiometry and physical_properties remain unasserted. Reduced FRAP mobility
+    is not proof of a liquid or amyloid state; no geometric quantity is extracted
+    from micrograph scale bars. The 2020 paper says no additional datasets were generated
+    and data are available on request. The live iModulonDB adapter returned 28 datasets
+    with neither yeast represented: not applicable, not negative evidence.'
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2020.108377
+    notes: Methods, data availability and Figure 3c set the measurement and data limits.
+  - reference: DOI:10.3390/ijms241311202
+    notes: Figure 7 and Methods 4.3 define the tested organism and preparation scope.
+  posed_by: codex
+  posed_date: '2026-10-05'
+images:
+- image_id: pmc_pmc10342647_ijms_24_11202_f007
+  file: pmc10342647_ijms_24_11202_f007.jpg
+  file_sha256: 58481911ace6752d540bdb673ede896bb5617c60b9565c83ce794a793560e22a
+  source: PMC
+  source_accession: PMC10342647.1 ijms-24-11202-f007
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10342647/#ijms-24-11202-f007
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC10342647.1/ijms-24-11202-g007.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Susanna Boronat, Margarita Cabrera, Montserrat Vega, Jorge Alcalá,
+    Silvia Salas-Pino, Rafael R. Daga, José Ayté, Elena Hidalgo; CC BY, via PubMed
+    Central
+  modality: FLUORESCENCE
+  caption: Figure 7. Severe-heat NuRs at 42 C for 15 minutes. Panel a compares the
+    Rho1 reporter in fission yeast and budding-yeast W303/BY4741 derivatives. Panel
+    b shows fission-yeast Mas5, Ssa2, Ssa1, Hsp104 and Guk1-9 reporter signals, including
+    the mas5 deletion control. Insets enlarge nuclear rings; scale bars are 5 micrometers.
+    Panel c is a proposed assembly/recovery model, not a separate measurement. W303
+    preparation includes 50-fold culture concentration.
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.3390/ijms241311202
+  retrieved_on: '2026-10-05'
+  notes: 'Figure 7 from article version PMC10342647.1; exact licence version read
+    from JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the
+    curator because PMC has no taxon field. Curator explicitly accepted the multi-panel
+    figure. Unmodified mixed-species composite: the taxon field identifies panel b
+    and the left part of panel a; the remaining panel-a cells are Saccharomyces cerevisiae,
+    also listed as a canonical example. Pixels, panel labels and caption inspected.
+    No separate third-party credit appears in this figure or caption. Different single-label
+    images are not simultaneous multicolor colocalization.'
