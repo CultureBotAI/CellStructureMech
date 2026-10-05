@@ -1,0 +1,746 @@
+identifier: cellstructuremech:glycolytic_body
+label: glycolytic body
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: OTHER
+definition: A membraneless cytoplasmic ribonucleoprotein assembly that concentrates
+  glycolytic enzymes and associated RNAs during hypoxic growth of Saccharomyces cerevisiae.
+definition_source: DOI:10.7554/eLife.48480
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T13:36:52Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T13:40:25Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ten component classes, thirteen verified protein exemplars, scoped
+    yeast examples, five mechanistic edges, TEM diameter, licensed microscopy, native
+    GEO metadata and explicit localization/interpretation boundaries.
+  llm_assisted: true
+- timestamp: '2026-10-05T13:41:28Z'
+  curator: codex
+  action: CORRECTED_CITATION_SCOPE
+  changes: Separated the 2017 Eno2 localization note from the 2020 RNA-localization
+    and RNase evidence at both component and protein-example level.
+  llm_assisted: true
+synonyms:
+- synonym_text: G body
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.celrep.2017.06.082
+- synonym_text: G-body
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.7554/eLife.48480
+parent_structures:
+- GO:0036464
+part_of:
+- GO:0005737
+components:
+- component_id: phosphofructokinase
+  label: ATP-dependent 6-phosphofructokinase, eukaryotic-type
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR009161
+  grounding_notes: Complete native InterPro protein-match responses were checked on
+    2026-10-05 for every listed exemplar. This integrated family covers the stated
+    component class; domains and superfamilies are not substituted for whole-family
+    identity.
+  gene_symbols:
+  - PFK1
+  - PFK2
+  essentiality: UNKNOWN
+  role: Pfk1 and Pfk2 concentrate in hypoxic G bodies; Pfk2 contributes to recruitment
+    and daughter-cell assembly, but its deletion does not eliminate mother-cell G
+    bodies.
+  protein_examples:
+  - uniprot_id: UniProtKB:P16861
+    protein_label: ATP-dependent 6-phosphofructokinase subunit alpha
+    gene_symbol: PFK1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Figure 1C directly colocalizes Pfk1-GFP with Pfk2-Azurite. Figures 3
+        and 4 show partial recruitment and cell-lineage-dependent defects, not universal
+        class essentiality.
+    - reference: https://www.uniprot.org/uniprotkb/P16861/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  - uniprot_id: UniProtKB:P16862
+    protein_label: ATP-dependent 6-phosphofructokinase subunit beta
+    gene_symbol: PFK2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Figure 1C directly colocalizes Pfk1-GFP with Pfk2-Azurite. Figures 3
+        and 4 show partial recruitment and cell-lineage-dependent defects, not universal
+        class essentiality.
+    - reference: https://www.uniprot.org/uniprotkb/P16862/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Figure 1C directly colocalizes Pfk1-GFP with Pfk2-Azurite. Figures 3 and
+      4 show partial recruitment and cell-lineage-dependent defects, not universal
+      class essentiality.
+- component_id: aldolase
+  label: Fructose-bisphosphate aldolase, class II, yeast/E. coli subtype
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006411
+  grounding_notes: Complete native InterPro protein-match responses were checked on
+    2026-10-05 for every listed exemplar. This integrated family covers the stated
+    component class; domains and superfamilies are not substituted for whole-family
+    identity.
+  gene_symbols:
+  - FBA1
+  essentiality: UNKNOWN
+  role: Glycolytic enzyme concentrated with phosphofructokinase in the assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P14540
+    protein_label: Fructose-bisphosphate aldolase
+    gene_symbol: FBA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Figure 1C directly colocalizes Fba1-GFP with Pfk2-Azurite under hypoxia.
+    - reference: https://www.uniprot.org/uniprotkb/P14540/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Figure 1C directly colocalizes Fba1-GFP with Pfk2-Azurite under hypoxia.
+- component_id: enolase
+  label: Enolase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000941
+  grounding_notes: Complete native InterPro protein-match responses were checked on
+    2026-10-05 for every listed exemplar. This integrated family covers the stated
+    component class; domains and superfamilies are not substituted for whole-family
+    identity.
+  gene_symbols:
+  - ENO2
+  essentiality: UNKNOWN
+  role: Glycolytic enzyme used as an independent G-body reporter.
+  protein_examples:
+  - uniprot_id: UniProtKB:P00925
+    protein_label: Enolase 2
+    gene_symbol: ENO2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Figure 1A shows hypoxic Eno2 puncta; the proteomic-validation Results
+        explicitly identify Eno2 as a previously validated G-body component.
+    - reference: https://www.uniprot.org/uniprotkb/P00925/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+    - reference: DOI:10.7554/eLife.48480
+      notes: Figure 3 and its supplement use Eno2-GFP for RNA colocalization; targeted-RNase
+        Results report loss of Eno2-GFP G bodies.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Figure 1A shows hypoxic Eno2 puncta; the proteomic-validation Results explicitly
+      identify Eno2 as a previously validated G-body component.
+  - reference: DOI:10.7554/eLife.48480
+    notes: Figure 3 and its supplement use Eno2-GFP for RNA colocalization; targeted-RNase
+      Results report loss of Eno2-GFP G bodies.
+- component_id: pyruvate_kinase
+  label: Pyruvate kinase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR001697
+  grounding_notes: Complete native InterPro protein-match responses were checked on
+    2026-10-05 for every listed exemplar. This integrated family covers the stated
+    component class; domains and superfamilies are not substituted for whole-family
+    identity.
+  gene_symbols:
+  - CDC19
+  essentiality: UNKNOWN
+  role: Glycolytic enzyme concentrated in hypoxic G bodies; not conflated with heat-induced
+    Cdc19 aggregates.
+  protein_examples:
+  - uniprot_id: UniProtKB:P00549
+    protein_label: Pyruvate kinase 1
+    gene_symbol: CDC19
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Figure 1C colocalizes Cdc19-GFP with Pfk2-Azurite. This evidence is for
+        hypoxia-induced G bodies, not every Cdc19 punctum.
+    - reference: https://www.uniprot.org/uniprotkb/P00549/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Figure 1C colocalizes Cdc19-GFP with Pfk2-Azurite. This evidence is for
+      hypoxia-induced G bodies, not every Cdc19 punctum.
+- component_id: hsp70
+  label: Heat shock protein 70 family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR013126
+  grounding_notes: Complete native InterPro protein-match responses were checked on
+    2026-10-05 for every listed exemplar. This integrated family covers the stated
+    component class; domains and superfamilies are not substituted for whole-family
+    identity.
+  gene_symbols:
+  - SSA1
+  - SSA2
+  - SSE2
+  essentiality: UNKNOWN
+  role: Resident chaperone-family members; class membership does not establish a shared
+    assembly requirement.
+  protein_examples:
+  - uniprot_id: UniProtKB:P10591
+    protein_label: Heat shock protein SSA1
+    gene_symbol: SSA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Proteomic Identification Results and Figure 2C report Ssa1/Ssa2 colocalization
+        in 80-100% of cells and high-frequency Sse2 colocalization. Single-gene phenotypes
+        do not establish family-wide essentiality.
+    - reference: https://www.uniprot.org/uniprotkb/P10591/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  - uniprot_id: UniProtKB:P10592
+    protein_label: Heat shock protein SSA2
+    gene_symbol: SSA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Proteomic Identification Results and Figure 2C report Ssa1/Ssa2 colocalization
+        in 80-100% of cells and high-frequency Sse2 colocalization. Single-gene phenotypes
+        do not establish family-wide essentiality.
+    - reference: https://www.uniprot.org/uniprotkb/P10592/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  - uniprot_id: UniProtKB:P32590
+    protein_label: Heat shock protein homolog SSE2
+    gene_symbol: SSE2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Proteomic Identification Results and Figure 2C report Ssa1/Ssa2 colocalization
+        in 80-100% of cells and high-frequency Sse2 colocalization. Single-gene phenotypes
+        do not establish family-wide essentiality.
+    - reference: https://www.uniprot.org/uniprotkb/P32590/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Proteomic Identification Results and Figure 2C report Ssa1/Ssa2 colocalization
+      in 80-100% of cells and high-frequency Sse2 colocalization. Single-gene phenotypes
+      do not establish family-wide essentiality.
+- component_id: small_hsp
+  label: Small heat shock protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR031107
+  grounding_notes: Complete native InterPro protein-match responses were checked on
+    2026-10-05 for every listed exemplar. This integrated family covers the stated
+    component class; domains and superfamilies are not substituted for whole-family
+    identity.
+  gene_symbols:
+  - HSP26
+  - HSP42
+  essentiality: UNKNOWN
+  role: Small heat shock proteins directly associated with hypoxic G bodies.
+  protein_examples:
+  - uniprot_id: UniProtKB:P15992
+    protein_label: Heat shock protein 26
+    gene_symbol: HSP26
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Proteomic Identification Results and Figure 2C report high-frequency
+        Hsp26 and Hsp42 colocalization with Pfk2-Azurite.
+    - reference: https://www.uniprot.org/uniprotkb/P15992/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  - uniprot_id: UniProtKB:Q12329
+    protein_label: Heat shock protein 42
+    gene_symbol: HSP42
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Proteomic Identification Results and Figure 2C report high-frequency
+        Hsp26 and Hsp42 colocalization with Pfk2-Azurite.
+    - reference: https://www.uniprot.org/uniprotkb/Q12329/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Proteomic Identification Results and Figure 2C report high-frequency Hsp26
+      and Hsp42 colocalization with Pfk2-Azurite.
+- component_id: trehalose_phosphate_synthase
+  label: Alpha,alpha-trehalose-phosphate synthase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR012766
+  grounding_notes: Complete native InterPro protein-match responses were checked on
+    2026-10-05 for every listed exemplar. This integrated family covers the stated
+    component class; domains and superfamilies are not substituted for whole-family
+    identity.
+  gene_symbols:
+  - TPS1
+  essentiality: UNKNOWN
+  role: Variable metabolic constituent represented by Tps1, not the whole trehalose-synthase
+    complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q00764
+    protein_label: Alpha,alpha-trehalose-phosphate synthase [UDP-forming] 56 kDa subunit
+    gene_symbol: TPS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Proteomic Identification Results report Tps1 colocalization in 60% of
+        cells. The measurement is a cell-level localization frequency, not a stoichiometric
+        fraction.
+    - reference: https://www.uniprot.org/uniprotkb/Q00764/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Proteomic Identification Results report Tps1 colocalization in 60% of cells.
+      The measurement is a cell-level localization frequency, not a stoichiometric
+      fraction.
+- component_id: acetyl_coa_carboxylase
+  label: Acetyl-CoA carboxylase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR049076
+  grounding_notes: Complete native InterPro protein-match responses were checked on
+    2026-10-05 for every listed exemplar. This integrated family covers the stated
+    component class; domains and superfamilies are not substituted for whole-family
+    identity.
+  gene_symbols:
+  - ACC1
+  essentiality: UNKNOWN
+  role: Variable metabolic constituent observed in a subset of hypoxic cells.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q00955
+    protein_label: Acetyl-CoA carboxylase
+    gene_symbol: ACC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Proteomic Identification Results and Figure 2C report Acc1 colocalization
+        in 27% of cells; no obligatory occupancy or catalytic contribution within
+        G bodies is inferred.
+    - reference: https://www.uniprot.org/uniprotkb/Q00955/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Proteomic Identification Results and Figure 2C report Acc1 colocalization
+      in 27% of cells; no obligatory occupancy or catalytic contribution within G
+      bodies is inferred.
+- component_id: fatty_acid_synthase_alpha
+  label: Fatty acid synthase alpha subunit, yeast
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR026025
+  grounding_notes: Complete native InterPro protein-match responses were checked on
+    2026-10-05 for every listed exemplar. This integrated family covers the stated
+    component class; domains and superfamilies are not substituted for whole-family
+    identity.
+  gene_symbols:
+  - FAS2
+  essentiality: UNKNOWN
+  role: Variable constituent represented by the fatty acid synthase alpha subunit,
+    not an assertion that the entire synthase complex is resident.
+  protein_examples:
+  - uniprot_id: UniProtKB:P19097
+    protein_label: Fatty acid synthase subunit alpha
+    gene_symbol: FAS2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: S288C reference-sequence exemplar for the protein studied in BY4741/BY4742-derived
+      yeast; the accession does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Proteomic Identification Results report Fas2 colocalization in 31% of
+        cells, whereas Fas1 foci were adjacent in 12%. These distinct observations
+        are not combined into a whole-complex composition.
+    - reference: https://www.uniprot.org/uniprotkb/P19097/entry
+      notes: Reviewed UniProtKB identity and gene verified live on 2026-10-05; G-body
+        membership comes from the primary microscopy, not the protein annotation.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Proteomic Identification Results report Fas2 colocalization in 31% of cells,
+      whereas Fas1 foci were adjacent in 12%. These distinct observations are not
+      combined into a whole-complex composition.
+- component_id: rna
+  label: RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding: SO:0000356
+  essentiality: UNKNOWN
+  role: Associated RNA supports G-body assembly and integrity. No single obligatory
+    transcript species, universal RNA stoichiometry or complete RNA-depletion state
+    is established.
+  evidence:
+  - reference: DOI:10.7554/eLife.48480
+    notes: Hypoxic G-body RIP-seq and smFISH demonstrate associated RNAs. G-body-targeted
+      active RNases inhibit nascent formation and fracture preformed bodies; untargeted
+      RNase and inhibited-RNase controls constrain this interpretation. Normoxic PAR-CLIP
+      alone is not localization evidence.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.7554/eLife.48480
+  note: Hypoxic yeast G bodies studied using Pfk2-, Fba1- and Eno2-tagged strains,
+    with BY4742 as the untagged immunoprecipitation control. AnaeroPack cultures used
+    YPD or synthetic medium with 5% glucose. This species example does not assert
+    universal occurrence.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: DOI:10.1016/j.celrep.2017.06.082
+  note: Reference lineage for the BY4741-background experiments and reviewed protein
+    exemplars; not a claim that the unmodified S288C stock was imaged. The study also
+    observed Pfk2 puncta in HAP1-wild-type W303, ruling out restriction to the S288C
+    hap1 allele.
+functions:
+- function_id: glycolytic_organization
+  label: Spatial organization of glycolytic enzymes
+  description: Concentrates several glycolytic enzymes in a non-membrane-bound cytoplasmic
+    compartment during glucose-supported hypoxic growth.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Direct dual-color enzyme colocalization, immunogold TEM and biochemical
+      enrichment support spatial organization. Hypoxia-preconditioned cells with G
+      bodies consume glucose faster than normoxia-preconditioned controls, but preconditioning
+      and Snf1 perturbation have effects beyond the structure.
+- function_id: hypoxic_fitness
+  label: Contribution to competitive growth under hypoxia
+  description: G-body-capable cells have a competitive growth advantage over cells
+    expressing a G-body-targeted active RNase in the tested hypoxic cultures.
+  evidence:
+  - reference: DOI:10.7554/eLife.48480
+    notes: Growth competition after normoxic preculture includes untargeted MqsR and
+      Pfk2-D348S fusion controls. Targeted RNA degradation may affect local RNAs beyond
+      morphology; this does not prove a single exclusive metabolic mechanism or universal
+      survival requirement.
+physical_properties:
+- property: DIAMETER
+  value: 200-500
+  unit: UO:0000018
+  context: Approximate diameter of electron-dense, non-membrane-bound Pfk2-GFP-labeled
+    bodies in hypoxic S. cerevisiae, measured by immunogold TEM in the 2017 study.
+    Not an invariant size or the Gaussian radius inferred from later fluorescence
+    images.
+  reference: DOI:10.1016/j.celrep.2017.06.082
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    notes: Hypoxia triggers glycolytic body formation Results describe the approximate
+      TEM diameter and cite Figures 1D and S2C.
+evidence:
+- reference: DOI:10.1016/j.celrep.2017.06.082
+  notes: Jin et al. 2017; PMID 28746874, PMC5586494.1. Read the defining localization,
+    proteomic-validation, Snf1, metabolism, viability and culture Results/Methods
+    from native JATS. PMC metadata reports not retracted. TDM licensing does not authorize
+    hosting its figures.
+- reference: DOI:10.7554/eLife.48480
+  notes: Fuller et al. 2020; PMID 32298230, PMC7162659.1. Read RNA enrichment/localization,
+    targeted-RNase, multivalency, gel-behavior and competition Results plus relevant
+    Methods and Discussion. Native metadata is not retracted and JATS specifies CC
+    BY 4.0. Figure 3 supplement 1 was visually inspected.
+- reference: DOI:10.1371/journal.pone.0283002
+  notes: Utsumi et al. 2023. Read the publisher's Introduction and Results/Discussion
+    on engineered peptide recruitment. META body is broader terminology; engineered
+    Adh1 recruitment is not native Adh1 membership evidence.
+causal_graphs:
+- graph_id: rna_supported_formation
+  title: RNA-dependent G-body formation during hypoxic growth
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Cell-level interventions in S. cerevisiae. RNA dependence is supported,
+    but an exclusive RNA-scaffold mechanism, transcript identity and a purified phase
+    boundary are not established.
+  nodes:
+  - node_id: hypoxia
+    label: Hypoxia with available glucose
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: rna
+    label: RNA
+    node_type: RNA
+    grounding: SO:0000356
+    component_ref: rna
+  - node_id: targeted_rnase
+    label: Induction of Pfk2-fused active RNase
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: formation
+    label: G-body formation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: hypoxia
+    predicate: promotes
+    object: formation
+    description: Hypoxic growth with glucose induces glycolytic-enzyme foci.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2017.06.082
+      notes: Figure 1 and glucose-deprivation controls establish the tested environmental
+        context.
+  - subject: rna
+    predicate: supports
+    object: formation
+    description: Associated RNA is required for efficient nascent G-body formation
+      under the tested conditions.
+    evidence:
+    - reference: DOI:10.7554/eLife.48480
+      notes: RIP-seq and smFISH establish RNA association; targeted MqsR/RNase A perturbations
+        and activity/targeting controls support the requirement.
+  - subject: targeted_rnase
+    predicate: inhibits
+    object: formation
+    description: G-body-targeted active RNase reduces the fraction of hypoxic cells
+      forming G bodies.
+    evidence:
+    - reference: DOI:10.7554/eLife.48480
+      notes: Pfk2-MqsR acts dose-dependently; untargeted MqsR does not reproduce the
+        effect and MqsA inhibition rescues formation. RNase A provides a second enzyme
+        test; H12A retains residual activity.
+- graph_id: rna_dependent_integrity
+  title: Targeted RNase fractures preformed G bodies
+  graph_kind: DISASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Bodies were first assembled during 20 hours of hypoxia and then followed
+    in normoxia while RNase was induced. Fragmentation is not equated with complete
+    dissolution.
+  nodes:
+  - node_id: targeted_rnase
+    label: Induction of G-body-targeted active RNase
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: body
+    label: Preformed glycolytic body
+    node_type: STRUCTURE
+  - node_id: fracture
+    label: Fragmentation into multiple foci
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: targeted_rnase
+    predicate: promotes
+    object: fracture
+    description: Targeted RNase causes preformed bodies to fragment.
+    evidence:
+    - reference: DOI:10.7554/eLife.48480
+      notes: Preformed-body Results distinguish persistent single foci in vector controls
+        from multiple foci following targeted RNase induction.
+  - subject: body
+    predicate: undergoes
+    object: fracture
+    description: Preformed G bodies lose single-focus integrity under targeted RNA
+      degradation.
+    evidence:
+    - reference: DOI:10.7554/eLife.48480
+      notes: Figure 5 and corresponding Results support partial structural disruption,
+        not complete clearance of every body or degradation of every component.
+discussions:
+- discussion_id: identity_boundary
+  prompt: Which broader or related structures must not be merged with the glycolytic
+    body?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: A local identifier is retained because complete cached OAK label/alias
+    searches and current QuickGO glycolytic searches did not yield an exact cellular-component
+    term. GO:0036464 is a broader class, not identity.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    supports: SUPPORT
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+  resolution_note: The defining microscopy distinguishes Pab1 stress granules and
+    Edc3 P-bodies from G bodies; adjacent puncta do not establish identity. Membrane-bounded
+    glycosomes and mammalian glucosomes are not exact mappings here.
+- discussion_id: meta_and_engineered_clients
+  prompt: Does the META-body terminology or engineered recruitment establish an exact
+    synonym or native constituent?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: Terminology and engineered localization must not inflate the native structural
+    scope.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0283002
+    supports: SUPPORT
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+  resolution_note: The 2023 Introduction uses META body collectively for multiple
+    metabolic condensates, including purinosomes. It is not an exact synonym. Adh1
+    peptide-fusion recruitment is engineered and does not establish unmodified Adh1
+    as a resident.
+- discussion_id: adjacency_and_regulators
+  prompt: Should adjacent proteins, genetic regulators and all proteomics hits be
+    listed as constituents?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: The 2017 workflow distinguishes 156 candidate hits from microscopy-supported
+    localization.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    supports: SUPPORT
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+  resolution_note: Fas1 and Pre3/Pre8/Rpn2 adjacency in the inspected 2017 Results
+    is not counted as residence. Snf1 loss affects formation but does not establish
+    Snf1 residence. Snf1-dependent Pfk2 phosphorylation is dispensable in the tested
+    phosphosite mutants. SOD1, IRA2 and ARD1 deletion phenotypes alone are not component
+    evidence.
+- discussion_id: remaining_inventory
+  prompt: Which additional low-frequency or earlier-study candidates are bona fide
+    G-body residents?
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The inspected Results report more candidates than the conservative high-confidence
+    inventory curated here. Pgi1, Tdh3, Gpm1 and Eno1 form hypoxic puncta with residual
+    cytoplasmic signal, but their dual-label validation and the full supplemental/2013
+    candidate sets have not been independently audited.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2017.06.082
+    supports: SUPPORT
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: physical_state
+  prompt: Do gel-like observations prove a universal liquid-liquid phase-separation
+    mechanism?
+  kind: INTERPRETATION
+  status: RESOLVED
+  rationale: The 2020 study reports slow fusion, limited fluorescence recovery and
+    incomplete sensitivity to 1,6-hexanediol.
+  evidence:
+  - reference: DOI:10.7554/eLife.48480
+    supports: SUPPORT
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+  resolution_note: Describe the observed bodies as membraneless, RNA-containing and
+    gel-like in the tested assays. Do not equate hexanediol resistance with a definitive
+    material-state diagnostic, rapid liquid behavior or reversible dissolution on
+    return to normoxia.
+- discussion_id: metabolic_mechanism
+  prompt: How does G-body organization change metabolic output independently of pleiotropic
+    perturbations?
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Hypoxic preconditioning, Snf1 loss and targeted RNA degradation constrain
+    but do not uniquely isolate the causal contribution of compartmentalization. The
+    2020 Discussion leaves substrate channeling, altered enzyme kinetics and local
+    translation unresolved.
+  evidence:
+  - reference: DOI:10.7554/eLife.48480
+    supports: SUPPORT
+  posed_by: codex
+  posed_date: '2026-10-05'
+datasets:
+- accession: GSE145881
+  title: Glycolytic body (G body) RIP-sequencing
+  description: Two biological replicates with total RNA, immunoprecipitation flow-through
+    RNA and G-body-associated RNA fractions; six samples from hypoxic yeast.
+  organism: Saccharomyces cerevisiae
+  dataset_type: TRANSCRIPTOMICS
+  repository: NCBI_GEO
+  sample_count: 6
+  conditions:
+  - 18 hours of hypoxia
+  - Pfk2-GFP-Flag affinity purification
+  url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145881
+  publication: DOI:10.7554/eLife.48480
+  notes: Metadata-only reference verified from the native GEO SOFT archive on 2026-10-05,
+    matching PMID 32298230 and the paper's Data availability section. No raw reads
+    or processed matrices were reanalyzed. Distinct from normoxic PAR-CLIP evidence.
+  evidence:
+  - reference: https://ftp.ncbi.nlm.nih.gov/geo/series/GSE145nnn/GSE145881/soft/GSE145881_family.soft.gz
+    supports: SUPPORT
+images:
+- image_id: pmc_pmc7162659_fig3s1
+  file: pmc7162659_fig3s1.jpg
+  file_sha256: 2c41ad239ea9da39c77b1354fb4ed08bd8fc029dab236c261c29ba505e75a1fb
+  source: PMC
+  source_accession: PMC7162659.1 fig3s1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7162659/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7162659.1/elife-48480-fig3-figsupp1.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Gregory G Fuller, Ting Han, Mallory A Freeberg, James J Moresco, Amirhossein
+    Ghanbari Niaki, Nathan P Roach, John R Yates, Sua Myong, John K Kim; CC BY, via
+    PubMed Central
+  modality: FLUORESCENCE
+  caption: 'Fuller et al. 2020, Figure 3 supplement 1. Panel A shows Pfk2-, Fba1-
+    or Eno2-GFP puncta (green) with smFISH signals (red) for the indicated yeast RNAs;
+    OLE1 is a negative-enrichment control, not a claimed enriched cargo. Panel B is
+    the no-probe control, and panels C-E summarize transcript counts and positions.
+    Scale bars: 5 micrometers.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.7554/eLife.48480
+  retrieved_on: '2026-10-05'
+  notes: Figure 3—figure supplement 1. from article version PMC7162659.1; exact licence
+    version read from JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied
+    by the curator because PMC has no taxon field. Curator explicitly accepted the
+    multi-panel figure.
