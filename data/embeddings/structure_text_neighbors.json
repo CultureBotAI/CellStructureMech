@@ -19357,6 +19357,11 @@
       "label": "i-AAA complex",
       "neighbors": [
         {
+          "identifier": "GO:0005745",
+          "label": "m-AAA complex",
+          "cosine_similarity": 0.94922731
+        },
+        {
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.86253292
@@ -19375,11 +19380,6 @@
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
           "cosine_similarity": 0.77938602
-        },
-        {
-          "identifier": "GO:0001401",
-          "label": "SAM complex",
-          "cosine_similarity": 0.77666766
         }
       ]
     },
@@ -19628,6 +19628,37 @@
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.60716317
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0005745",
+      "label": "m-AAA complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031942",
+          "label": "i-AAA complex",
+          "cosine_similarity": 0.94922731
+        },
+        {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.84808703
+        },
+        {
+          "identifier": "GO:0140595",
+          "label": "MIM complex",
+          "cosine_similarity": 0.79549615
+        },
+        {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.78108971
+        },
+        {
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.7686922
         }
       ]
     },
@@ -21759,14 +21790,14 @@
           "cosine_similarity": 0.79034522
         },
         {
+          "identifier": "GO:0005745",
+          "label": "m-AAA complex",
+          "cosine_similarity": 0.78108971
+        },
+        {
           "identifier": "GO:0031942",
           "label": "i-AAA complex",
           "cosine_similarity": 0.76864166
-        },
-        {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.76661317
         }
       ]
     },
@@ -21785,6 +21816,11 @@
           "cosine_similarity": 0.89614016
         },
         {
+          "identifier": "GO:0005745",
+          "label": "m-AAA complex",
+          "cosine_similarity": 0.7686922
+        },
+        {
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.74320367
@@ -21793,11 +21829,6 @@
           "identifier": "GO:0031942",
           "label": "i-AAA complex",
           "cosine_similarity": 0.73332556
-        },
-        {
-          "identifier": "GO:1990098",
-          "label": "core primosome complex",
-          "cosine_similarity": 0.7131973
         }
       ]
     },
