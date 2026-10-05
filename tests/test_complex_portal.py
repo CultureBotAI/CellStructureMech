@@ -40,9 +40,12 @@ def test_normalize_entry_keeps_taxon_specific_participants_and_copy_numbers():
     assert result["taxon_id"] == "NCBITaxon:83333"
     assert result["evidence_code"] == "ECO:0005547"
     assert result["participants"][0]["participant_id"] == "UniProtKB:P68699"
+    assert result["participants"][0]["gene_symbol"] == "atpE"
     assert result["participants"][0]["stoichiometry"] == "10"
     assert result["participants"][1]["participant_id"].startswith("RNAcentral:URS")
     assert result["participants"][1]["stoichiometry"] == "1-2"
+    assert result["participants"][1]["source_name"] == "16s_rrna_ecoli"
+    assert "gene_symbol" not in result["participants"][1]
     assert "equivalence xref was inferred" in result["notes"]
 
 
@@ -54,3 +57,26 @@ def test_unrecognized_stoichiometry_is_refused_instead_of_guessed():
 def test_unknown_nonprotein_identifier_has_no_invented_prefix():
     with pytest.raises(ValueError, match="cannot assign a CURIE prefix"):
         cp.participant_curie({"identifier": "mystery", "interactorType": "other"})
+
+
+@pytest.mark.parametrize("identifier,kind,name", [
+    ("CHEBI:29105", "small molecule", "zinc(2+)"),
+    ("URS00005CADE5_83333", "ribosomal rna", "16s_rrna_ecoli"),
+    ("CPX-3802", "protein complex", "30S ribosomal subunit"),
+])
+def test_nonprotein_names_are_preserved_without_gene_assertions(identifier, kind, name):
+    participant = cp.normalize_participant({
+        "identifier": identifier, "interactorType": kind,
+        "name": name, "description": "source description",
+    })
+    assert participant["source_name"] == name
+    assert participant["label"] == "source description"
+    assert "gene_symbol" not in participant
+
+
+def test_missing_participant_name_does_not_invent_a_name():
+    participant = cp.normalize_participant({
+        "identifier": "CHEBI:29105", "interactorType": "small molecule",
+    })
+    assert "source_name" not in participant
+    assert "gene_symbol" not in participant

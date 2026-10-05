@@ -31,6 +31,13 @@ curation_history:
   changes: Added ComplexPortal:CPX-2844 evidence to the PaaA, PaaB, PaaC and PaaE
     stoichiometry claims and to the record-level evidence list.
   llm_assisted: true
+- timestamp: '2026-10-05T00:17:06Z'
+  curator: codex
+  action: CORRECTED_METADATA
+  changes: 'Issue #2043: preserve 3 nonprotein Complex Portal source name(s) in source_name
+    instead of gene_symbol; identities, labels, taxa, membership and stoichiometry
+    unchanged.'
+  llm_assisted: true
 synonyms:
 - synonym_text: paaABCE complex
   synonym_type: NARROW_SYNONYM
@@ -289,7 +296,7 @@ complex_compositions:
   - participant_id: CHEBI:49601
     label: Fe2S2 iron-sulfur cluster
     participant_type: small molecule
-    gene_symbol: fe2s2 iron-sulfur cluster
+    source_name: fe2s2 iron-sulfur cluster
     stoichiometry: '1'
     source_interactor_id: EBI-20710094
   - participant_id: UniProtKB:P76077
@@ -319,13 +326,13 @@ complex_compositions:
   - participant_id: CHEBI:24875
     label: iron cation
     participant_type: small molecule
-    gene_symbol: iron cation
+    source_name: iron cation
     stoichiometry: '4'
     source_interactor_id: EBI-20710086
   - participant_id: CHEBI:57692
     label: FAD(3-)
     participant_type: small molecule
-    gene_symbol: fad(3-)
+    source_name: fad(3-)
     source_interactor_id: EBI-20710102
   retrieved_on: '2026-10-01'
   notes: 'Curator-scoped import: E. coli K-12 PaaABCE phenylacetyl-CoA 1,2-epoxidase

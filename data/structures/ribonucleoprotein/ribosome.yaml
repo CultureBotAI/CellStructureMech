@@ -419,6 +419,13 @@ curation_history:
   changes: Added descriptions to the remaining ribosome elongation-cycle edges so
     every edge now states the substrate or translocation step it represents.
   llm_assisted: true
+- timestamp: '2026-10-05T00:17:06Z'
+  curator: codex
+  action: CORRECTED_METADATA
+  changes: 'Issue #2043: preserve 3 nonprotein Complex Portal source name(s) in source_name
+    instead of gene_symbol; identities, labels, taxa, membership and stoichiometry
+    unchanged.'
+  llm_assisted: true
 complex_compositions:
 - composition_id: complex_portal_cpx_3802
   source: COMPLEX_PORTAL
@@ -439,7 +446,7 @@ complex_compositions:
   - participant_id: RNAcentral:URS00005CADE5_83333
     label: Ribosomal RNA 16S Escherichia coli
     participant_type: ribosomal rna
-    gene_symbol: 16s_rrna_ecoli
+    source_name: 16s_rrna_ecoli
     stoichiometry: '1'
     source_interactor_id: EBI-20767460
   - participant_id: UniProtKB:P02358
@@ -615,13 +622,13 @@ complex_compositions:
   - participant_id: RNAcentral:URS00005B2216_83333
     label: 23S ribosomal RNA
     participant_type: ribosomal rna
-    gene_symbol: 23s_ecoli
+    source_name: 23s_ecoli
     stoichiometry: '1'
     source_interactor_id: EBI-20767697
   - participant_id: RNAcentral:URS000002D309_83333
     label: 5S ribosomal RNA
     participant_type: ribosomal rna
-    gene_symbol: 5s_ecoli
+    source_name: 5s_ecoli
     stoichiometry: '1'
     source_interactor_id: EBI-20767702
   - participant_id: UniProtKB:P60438

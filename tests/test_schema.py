@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import yaml
+from linkml.generators.pydanticgen import PydanticGenerator
 from linkml_runtime.utils.schemaview import SchemaView
 
 
@@ -45,6 +46,18 @@ def test_structure_record_is_the_only_tree_root(schema_path):
     view = _schema(schema_path)
     roots = [name for name, cls in view.all_classes().items() if cls.tree_root]
     assert roots == ["CellStructureRecord"]
+
+
+def test_physical_property_evidence_uses_the_existing_evidence_class(schema_path):
+    view = _schema(schema_path)
+    evidence = view.induced_class("PhysicalProperty").attributes["evidence"]
+    assert evidence.range == "EvidenceItem"
+    assert evidence.range in view.all_classes()
+
+
+def test_pydantic_generation_compiles(schema_path):
+    generated = PydanticGenerator(str(schema_path)).serialize()
+    compile(generated, "cellstructuremech_generated.py", "exec")
 
 
 def test_vendored_canon_ref_is_an_immutable_claw_commit(repo_root):

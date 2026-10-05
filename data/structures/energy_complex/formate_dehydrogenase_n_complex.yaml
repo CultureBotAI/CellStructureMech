@@ -21,6 +21,13 @@ curation_history:
     composition with cofactors, formate dehydrogenase (quinone) activity, literature/database
     evidence, a compact function graph, and a component-family grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-05T00:17:05Z'
+  curator: codex
+  action: CORRECTED_METADATA
+  changes: 'Issue #2043: preserve 4 nonprotein Complex Portal source name(s) in source_name
+    instead of gene_symbol; identities, labels, taxa, membership and stoichiometry
+    unchanged.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Formate dehydrogenase-N complex
   synonym_type: EXACT_SYNONYM
@@ -307,13 +314,13 @@ complex_compositions:
   - participant_id: CHEBI:60539
     label: Mo(=O)-bis(molybdopterin guanine dinucleotide)(4-)
     participant_type: small molecule
-    gene_symbol: mo(=o)-bis(molybdopterin guanine dinucleotide)(4-)
+    source_name: mo(=o)-bis(molybdopterin guanine dinucleotide)(4-)
     stoichiometry: '3'
     source_interactor_id: EBI-6894805
   - participant_id: CHEBI:16374
     label: menaquinone
     participant_type: small molecule
-    gene_symbol: menaquinone
+    source_name: menaquinone
     stoichiometry: '1'
     source_interactor_id: EBI-6894354
   - participant_id: UniProtKB:P24183
@@ -331,13 +338,13 @@ complex_compositions:
   - participant_id: CHEBI:30413
     label: heme
     participant_type: small molecule
-    gene_symbol: heme
+    source_name: heme
     stoichiometry: '6'
     source_interactor_id: EBI-6894358
   - participant_id: CHEBI:33725
     label: tetra-mu3-sulfido-tetrairon
     participant_type: small molecule
-    gene_symbol: fe4-s4
+    source_name: fe4-s4
     stoichiometry: '15'
     source_interactor_id: EBI-6894360
   retrieved_on: '2026-10-02'

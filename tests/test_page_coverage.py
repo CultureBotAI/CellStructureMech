@@ -40,7 +40,9 @@ PROBES = {
     # because the label renders while its evidence does not.
     "snippets": lambda r: [e["snippet"][:60] for e in _every_evidence(r) if e.get("snippet")],
     "images": lambda r: [i.get("caption") or i.get("image_id") for i in r["images"]],
-    "complex_compositions": lambda r: [c["source_accession"] for c in r["complex_compositions"]],
+    "complex_compositions": lambda r: [c["source_accession"] for c in r["complex_compositions"]]
+    + [p["source_name"] for c in r["complex_compositions"] for p in c["participants"]
+       if p.get("source_name")],
     "datasets": lambda r: [d.get("accession") or d.get("dataset_id") for d in r["datasets"]],
     # The page shows the prompt, not the id; the probe must name what a reader sees.
     "discussions": lambda r: [d["prompt"] for d in r["discussions"]],
