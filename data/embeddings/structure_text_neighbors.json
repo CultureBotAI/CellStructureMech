@@ -7845,9 +7845,9 @@
           "cosine_similarity": 0.74806657
         },
         {
-          "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
-          "label": "juxtanuclear quality control compartment",
-          "cosine_similarity": 0.72148682
+          "identifier": "GO:0034515",
+          "label": "proteasome storage granule",
+          "cosine_similarity": 0.7278303
         }
       ]
     },
@@ -8021,6 +8021,11 @@
           "cosine_similarity": 0.69557577
         },
         {
+          "identifier": "GO:0034515",
+          "label": "proteasome storage granule",
+          "cosine_similarity": 0.68922002
+        },
+        {
           "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
           "label": "intranuclear quality control compartment",
           "cosine_similarity": 0.68285978
@@ -8029,11 +8034,6 @@
           "identifier": "cellstructuremech:mitostore",
           "label": "MitoStore",
           "cosine_similarity": 0.67962873
-        },
-        {
-          "identifier": "GO:0140453",
-          "label": "protein aggregate center",
-          "cosine_similarity": 0.67055247
         }
       ]
     },
@@ -8088,14 +8088,14 @@
           "cosine_similarity": 0.72794356
         },
         {
+          "identifier": "GO:0034515",
+          "label": "proteasome storage granule",
+          "cosine_similarity": 0.72587053
+        },
+        {
           "identifier": "cellstructuremech:age_associated_protein_deposit",
           "label": "age-associated protein deposit",
           "cosine_similarity": 0.72148682
-        },
-        {
-          "identifier": "cellstructuremech:mitostore",
-          "label": "MitoStore",
-          "cosine_similarity": 0.71473054
         }
       ]
     },
@@ -8317,6 +8317,37 @@
       ]
     },
     {
+      "identifier": "GO:0034515",
+      "label": "proteasome storage granule",
+      "neighbors": [
+        {
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.76811994
+        },
+        {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.7532035
+        },
+        {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.7278303
+        },
+        {
+          "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
+          "label": "juxtanuclear quality control compartment",
+          "cosine_similarity": 0.72587053
+        },
+        {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.71168721
+        }
+      ]
+    },
+    {
       "identifier": "GO:0140453",
       "label": "protein aggregate center",
       "neighbors": [
@@ -8341,9 +8372,9 @@
           "cosine_similarity": 0.71642801
         },
         {
-          "identifier": "GO:0140602",
-          "label": "nucleolar peripheral inclusion body",
-          "cosine_similarity": 0.70289319
+          "identifier": "GO:0034515",
+          "label": "proteasome storage granule",
+          "cosine_similarity": 0.71168721
         }
       ]
     },
@@ -22162,14 +22193,14 @@
           "cosine_similarity": 0.7686922
         },
         {
+          "identifier": "GO:0034515",
+          "label": "proteasome storage granule",
+          "cosine_similarity": 0.76811994
+        },
+        {
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.74320367
-        },
-        {
-          "identifier": "GO:0031942",
-          "label": "i-AAA complex",
-          "cosine_similarity": 0.73332556
         }
       ]
     },

@@ -1,0 +1,348 @@
+identifier: GO:0034515
+label: proteasome storage granule
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A cytoplasmic, membrane-free accumulation of proteasome core and regulatory
+  particles observed as discrete foci during cellular quiescence.
+definition_source: GO:0034515
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T12:40:28Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T12:42:16Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added five component classes, three reference protein examples, bounded
+    yeast evidence, a recovery graph, explicit retraction/architecture provenance
+    and an inspected link-only figure.
+  llm_assisted: true
+- timestamp: '2026-10-05T12:44:38Z'
+  curator: codex
+  action: CORRECTED_ATTRIBUTION
+  changes: Corrected Salin's given name from native JATS author metadata before publication.
+  llm_assisted: true
+synonyms:
+- synonym_text: PSG
+  synonym_type: RELATED_SYNONYM
+  source: GO:0034515
+parent_structures:
+- GO:0043232
+part_of:
+- GO:0005737
+has_part:
+- GO:0005839
+- GO:0005838
+components:
+- component_id: core_particle
+  label: proteasome core complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005839
+  essentiality: UNKNOWN
+  role: Proteolytic particle represented by the 20S core in the yeast studies. Listing
+    core and regulatory particles separately does not assert that they are physically
+    dissociated within every intact granule.
+  evidence:
+  - reference: DOI:10.1083/jcb.200711154
+    notes: Figures 1-2 localize core subunits to PSGs by immunogold and fluorescence.
+  - reference: DOI:10.1091/mbc.E17-03-0162
+    notes: Figure 5 detects core subunits in enriched cross-linked PSG preparations.
+- component_id: regulatory_particle
+  label: proteasome regulatory particle
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005838
+  essentiality: UNKNOWN
+  role: The 19S particle is represented by both base and lid markers in yeast PSGs.
+    Marker colocalization alone does not determine holoenzyme assembly state.
+  evidence:
+  - reference: DOI:10.1083/jcb.200711154
+    notes: Figure 2 compares core, base and lid markers in the same foci.
+  - reference: DOI:10.1091/mbc.E17-03-0162
+    notes: Figure 5 detects regulatory-particle subunits in enriched PSG preparations.
+- component_id: blm10
+  label: Proteasome activator complex subunit 4
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR035309
+  gene_symbols:
+  - BLM10
+  essentiality: UNKNOWN
+  role: Activator family represented by PSG-associated Blm10 in budding yeast; residence
+    is not generalized to every family member or experimental condition.
+  protein_examples:
+  - uniprot_id: UniProtKB:P43583
+    protein_label: Proteasome activator BLM10
+    gene_symbol: BLM10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence example for the Blm10 colocalization and enrichment assays;
+      the paper's BY4741 and WCGa experiments are not reassigned to S288C.
+    evidence:
+    - reference: UniProtKB:P43583
+      notes: Native reviewed entry verifies accession, name, gene and reference taxon.
+    - reference: DOI:10.1091/mbc.E17-03-0162
+      notes: Figures 4A and 5D support localization and biochemical enrichment.
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-03-0162
+    notes: Figures 4A and 5D support residence independently of the retracted 2018
+      study.
+  - reference: InterPro:IPR035309
+    notes: Native complete six-entry P43583 match set contains this family; domain
+      and superfamily matches were not used as whole-protein identities.
+- component_id: ubp6
+  label: Ubiquitin carboxyl-terminal hydrolase 14-like
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR044635
+  gene_symbols:
+  - UBP6
+  essentiality: UNKNOWN
+  role: Proteasome-associated hydrolase family represented by Ubp6 colocalization
+    with PSGs in budding yeast. Family identity does not imply universal PSG residence.
+  protein_examples:
+  - uniprot_id: UniProtKB:P43593
+    protein_label: Ubiquitin carboxyl-terminal hydrolase 6
+    gene_symbol: UBP6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence example for the Ubp6-GFP localization assay, not a claim
+      that the experiment used the reference strain itself.
+    evidence:
+    - reference: UniProtKB:P43593
+      notes: Native reviewed entry verifies accession, name, gene and reference taxon.
+    - reference: DOI:10.1091/mbc.E17-03-0162
+      notes: Figure 4B compares Ubp6-GFP and Pre2-mCherry in quiescent cells.
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-03-0162
+    notes: Figure 4B supports residence; deletion phenotypes alone are not the basis
+      for component membership or a universal assembly requirement.
+  - reference: InterPro:IPR044635
+    notes: Native complete seven-entry P43593 match set identifies this family.
+- component_id: ubiquitin
+  label: unconjugated ubiquitin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The complete five-entry P0CG63 InterPro set contains ubiquitin
+    domains and the broader Ubiquitin and ubiquitin-like family IPR050158, not an
+    exact identity for mature unconjugated ubiquitin.
+  gene_symbols:
+  - UBI4
+  essentiality: UNKNOWN
+  role: Free ubiquitin enriched in the tested cross-linked PSG preparations. UBI4
+    is an experimentally used precursor source, not the only ubiquitin gene or a claim
+    that intact polyubiquitin precursor chains constitute PSG cargo.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0CG63
+    protein_label: Polyubiquitin
+    gene_symbol: UBI4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Precursor reference sequence whose processed ubiquitin product is relevant.
+      Figure 4C uses a diglycine-deleted GFP reporter; this engineered reporter is
+      not identical to native P0CG63 or proof of unprocessed precursor residence.
+    evidence:
+    - reference: UniProtKB:P0CG63
+      notes: Native reviewed entry explicitly identifies a precursor containing ubiquitin.
+    - reference: DOI:10.1091/mbc.E17-03-0162
+      notes: Figures 4C and 5E distinguish the tagged processed product from free
+        ubiquitin detected in enriched preparations.
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-03-0162
+    notes: Figure 5E supports enrichment of free ubiquitin; weak polyubiquitin detection
+      is not a universal exclusion rule for every PSG condition.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1083/jcb.200711154
+  note: BY4741/BY4742/BY4743-derived strains provide localization and refeeding assays.
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1083/jcb.200711154
+  note: Figure 5 follows endogenous Pad1-GFP foci after four days of culture and their
+    mobilization after refeeding, including cycloheximide-treated cells.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: UniProtKB:P43583
+  note: Reference-sequence taxon for protein examples, not a reassignment of all imaging
+    or biochemical experiments to this strain.
+functions:
+- function_id: reversible_proteasome_reservoir
+  label: reversible proteasome storage
+  description: Concentrates proteasome material during quiescence for subsequent mobilization.
+    This does not assert protection from autophagic degradation.
+  evidence:
+  - reference: DOI:10.1083/jcb.200711154
+    notes: Figures 4-5 test refeeding with water and translation-inhibition controls.
+causal_graphs:
+- graph_id: nutrient_recovery
+  title: Refeeding mobilizes PSG-associated proteasome material
+  graph_kind: DISASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Pre6-GFP in four-day budding-yeast cultures transferred to fresh YPD.
+    Water transfer is a negative control; cycloheximide does not prevent relocalization.
+    These interventions support mobilization without requiring new protein synthesis,
+    not a resolved molecular dissolution mechanism or proteaphagy-protection mechanism.
+  nodes:
+  - node_id: fresh_medium
+    label: Transfer to fresh YPD
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: granule_clearance
+    label: Loss of PSG-localized Pre6-GFP foci
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: nuclear_return
+    label: Nuclear relocalization of Pre6-GFP
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: fresh_medium
+    predicate: induces
+    object: granule_clearance
+    evidence:
+    - reference: DOI:10.1083/jcb.200711154
+      notes: Figure 4B-C compares refeeding with and without cycloheximide; Figure
+        4A supplies the water-transfer control.
+  - subject: fresh_medium
+    predicate: induces
+    object: nuclear_return
+    evidence:
+    - reference: DOI:10.1083/jcb.200711154
+      notes: Figure 4 follows redistribution to the nuclear periphery and nucleus.
+evidence:
+- reference: GO:0034515
+  notes: Native QuickGO verifies active cellular-component identity, related-scope
+    PSG abbreviation, membraneless-organelle parent and cytoplasmic parthood.
+- reference: DOI:10.1083/jcb.200711154
+  notes: Laporte et al. (2008), PMID 18504300, PMC2396804.1. Native metadata reports
+    no retraction. Main Results, figure captions and relevant strain/microscopy methods
+    inspected; Figure 2 pixels inspected. Supplemental files were not inspected.
+- reference: DOI:10.1091/mbc.E17-03-0162
+  notes: Gu et al. (2017), PMID 28768827, PMC5597321.1. Native metadata reports no
+    retraction. Main composition, localization, ubiquitin-overexpression and native-gel
+    Results, figure captions and strain methods inspected. Supplemental files and
+    raw proteomics were not independently inspected.
+- reference: DOI:10.1016/j.cell.2025.12.035
+  notes: Tang et al. (2026), PMID 41605212. Primary abstract reports inactive, doubly
+    capped 26S proteasomes organized into trimer-based paracrystalline arrays by in
+    situ cryo-ET. Only abstract and bibliographic metadata were read; publisher full
+    text and the Max Planck repository PDF returned 403. No detailed assembly graph,
+    quantitative property or accession is inferred from the abstract.
+discussions:
+- discussion_id: retracted_evidence
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Exclude the retracted 2018 study and derivative commentary from positive
+    support.
+  rationale: Ontology citation chains can retain secondary accounts of withdrawn work.
+  notes: DOI 10.7554/eLife.34532 was retracted by DOI 10.7554/eLife.82988 following
+    reported western-blot irregularities and misplaced confocal images. GO's definition
+    also cites PMID 30204036, a commentary on that study, which is not independent
+    support. No proteaphagy-protection or Arabidopsis PSG claim is imported from either.
+    Independent 2008 and 2017 primary evidence supports this record's yeast scope.
+  evidence:
+  - reference: DOI:10.7554/eLife.82988
+    notes: Official retraction notice read; used only for exclusion provenance.
+  - reference: PMID:30204036
+    notes: Native PubMed identifies this as a comment on the retracted study.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: architecture_context
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile in situ PSG architecture with older extract-based assembly assays.
+  rationale: Colocalized subunits and dissociated particles in lysates do not uniquely
+    establish assembly state inside living-cell granules.
+  notes: The 2008 study leaves activity and particle association unresolved. Figure
+    7 of the 2017 study uses lysates and native PAGE; its dissociation model is not
+    imposed universally. The 2026 abstract reports intact 26S arrays in situ. Read
+    its full methods, condition-specific results and deposits before extending architecture
+    claims. No liquid-state, fixed stoichiometry or activity claim is inferred from
+    fluorescence foci or the term membraneless.
+  evidence:
+  - reference: DOI:10.1083/jcb.200711154
+    notes: Results following Figure 2 explicitly delimit assembly/activity inference.
+  - reference: DOI:10.1091/mbc.E17-03-0162
+    notes: Figure 7 describes native-PAGE analysis of lysates, not intact granules.
+  - reference: DOI:10.1016/j.cell.2025.12.035
+    notes: Primary abstract supplies a consequential newer architecture result.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: component_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Separate experimentally observed residents from indirect genetic modifiers.
+  rationale: A deletion phenotype or a different reversible focus is not PSG membership.
+  notes: The 2017 screen's kinases, transcription factors and karyopherins are not
+    added solely from regulatory effects or focus formation. Blm10, Ubp6 and ubiquitin
+    have separate localization or enrichment support. The ubiquitin precursor is distinguished
+    from its processed product. No accession represents an entire proteasome particle,
+    and no universal essentiality is asserted.
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-03-0162
+    notes: Main localization/composition Results distinguish these source observations.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: ubiquitin_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve an exact source-neutral identifier for unconjugated mature ubiquitin.
+  rationale: Domains and a family including other ubiquitin-like proteins are broader
+    than the curated component.
+  notes: Native complete P0CG63 InterPro results were checked through next=null; reviewed
+    precursor identity is retained only as a protein example.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P0CG63/?page_size=200
+    notes: Five integrated matches; no exact mature-product family adopted.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: structure_boundary_and_scope
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep PSG distinct from individual proteasomes and other protein inclusions.
+  rationale: Shared components or transient proximity do not establish identity.
+  notes: GO assigns PSG its own identity, not an is-a subtype of the proteasome complex.
+    No IPOD, JUNQ, actin-body or P-body synonym is asserted. Yeast examples do not
+    establish fungal or eukaryotic prevalence. Taxonomic distribution, traits, complex
+    compositions, physical properties and raw datasets remain unasserted. The live
+    iModulonDB adapter lists 28 datasets, neither yeast represented; this provides
+    no structure-absence evidence. Hidden/ignored-inclusive whole-worktree searches
+    and all 895 parsed record identities found no duplicate before creation.
+  evidence:
+  - reference: GO:0034515
+    notes: Exact ontology identity and hierarchy checked at QuickGO.
+  - reference: DOI:10.1083/jcb.200711154
+    notes: Figure 3 directly distinguishes PSGs from actin bodies and P-bodies.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+images:
+- image_id: laporte_2008_figure2
+  source: PMC
+  source_accession: PMC2396804.1 fig2
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2396804/#fig2
+  licence: OTHER
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  attribution: Damien Laporte, Bénédicte Salin, Bertrand Daignan-Fornier and Isabelle
+    Sagot (2008), Journal of Cell Biology; CC BY-NC-SA 3.0, via PubMed Central.
+  modality: FLUORESCENCE
+  caption: Figure 2. Core, lid and base markers colocalize in budding-yeast PSGs after
+    four days of culture (A); a core-marker time course tracks redistribution (B).
+    Scale bars are 2 micrometers. Colocalization does not establish holoenzyme assembly.
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1083/jcb.200711154
+  retrieved_on: '2026-10-05'
+  notes: Link-only. Native PMC metadata and JATS identify CC BY-NC-SA 3.0, represented
+    by OTHER because the schema has no exact value; no hosted file or file hash is
+    asserted. Source media MD5 verified and actual Figure 2 pixels inspected locally.
