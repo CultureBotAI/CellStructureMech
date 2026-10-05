@@ -3501,6 +3501,15 @@
   "definition": "A tubular structure of relatively uniform size that connects a mitochondrial crista to the mitochondrial inner boundary membrane."
  },
  {
+  "identifier": "cellstructuremech:mitochondrial_derived_compartment",
+  "label": "mitochondrial-derived compartment",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/mitochondrial_derived_compartment.html",
+  "definition": "An inducible compartment characterized in budding yeast that remodels the outer mitochondrial membrane into multilamellar domains, selectively concentrates membrane-associated proteins, and can enclose cytosolic material."
+ },
+ {
   "identifier": "GO:0005740",
   "label": "mitochondrial envelope",
   "category": "MEMBRANE_ORGANELLE",

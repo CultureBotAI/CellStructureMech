@@ -11545,6 +11545,11 @@
       "label": "intramitochondrial protein quality control compartment",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:mitochondrial_derived_compartment",
+          "label": "mitochondrial-derived compartment",
+          "cosine_similarity": 0.83272824
+        },
+        {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
           "cosine_similarity": 0.81587051
@@ -11563,11 +11568,6 @@
           "identifier": "GO:0005741",
           "label": "mitochondrial outer membrane",
           "cosine_similarity": 0.76587824
-        },
-        {
-          "identifier": "GO:0005758",
-          "label": "mitochondrial intermembrane space",
-          "cosine_similarity": 0.75901936
         }
       ]
     },
@@ -12064,6 +12064,37 @@
           "identifier": "GO:0005759",
           "label": "mitochondrial matrix",
           "cosine_similarity": 0.8721493
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:mitochondrial_derived_compartment",
+      "label": "mitochondrial-derived compartment",
+      "neighbors": [
+        {
+          "identifier": "GO:0005739",
+          "label": "mitochondrion",
+          "cosine_similarity": 0.84527298
+        },
+        {
+          "identifier": "GO:0005740",
+          "label": "mitochondrial envelope",
+          "cosine_similarity": 0.84369861
+        },
+        {
+          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
+          "label": "intramitochondrial protein quality control compartment",
+          "cosine_similarity": 0.83272824
+        },
+        {
+          "identifier": "GO:0005741",
+          "label": "mitochondrial outer membrane",
+          "cosine_similarity": 0.81978437
+        },
+        {
+          "identifier": "GO:0097002",
+          "label": "mitochondrial inner boundary membrane",
+          "cosine_similarity": 0.80724719
         }
       ]
     },

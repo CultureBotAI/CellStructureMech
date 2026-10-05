@@ -1,0 +1,499 @@
+identifier: cellstructuremech:mitochondrial_derived_compartment
+label: mitochondrial-derived compartment
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: An inducible compartment characterized in budding yeast that remodels
+  the outer mitochondrial membrane into multilamellar domains, selectively concentrates
+  membrane-associated proteins, and can enclose cytosolic material.
+definition_source: DOI:10.1083/jcb.202307035
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T05:29:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T05:34:35Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added yeast-scoped MDC composition, revised cargo model, bounded intervention
+    graph, measured dimensions, inspected link-only figure and explicitly limited
+    2026 preprint follow-up evidence.
+  llm_assisted: true
+- timestamp: '2026-10-05T05:55:38Z'
+  curator: codex
+  action: REFINED_MEASUREMENT_SCOPE
+  changes: Addressed PR 2054 review issue 2055 by restricting both diameter contexts
+    to the spherical MDCs sampled in Figure 1C and Figure S1C; preserved values, units,
+    sample sizes and induction conditions.
+  llm_assisted: true
+parent_structures:
+- GO:0043231
+synonyms:
+- synonym_text: MDC
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.7554/eLife.13943
+components:
+- component_id: membrane_material
+  label: outer mitochondrial membrane-derived lipid bilayers
+  component_type: LIPID
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Heterogeneous membrane material, not a single chemical species.
+    No isolated-MDC lipid composition is inferred from whole-cell lipid perturbations.
+  role: Membrane material remodeled into multilamellar domains.
+  evidence:
+  - reference: DOI:10.1083/jcb.202307035
+    notes: Results and electron tomography establish outer-membrane-derived multilamellar
+      organization.
+- component_id: tom70
+  label: Mitochondrial outer membrane translocase complex, subunit Tom70
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - TOM70
+  role: Enriched membrane cargo and import receptor implicated in MDC biogenesis;
+    not a claim that the entire TOM complex is enriched.
+  protein_examples:
+  - uniprot_id: UniProtKB:P07213
+    protein_label: Mitochondrial import receptor subunit TOM70
+    gene_symbol: TOM70
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example for the yeast protein.
+    evidence:
+    - reference: UniProtKB:P07213
+      notes: Native reviewed entry verifies name, gene and reference taxon.
+    - reference: DOI:10.1083/jcb.202307035
+      notes: 'Figure 1: fluorescence and immunogold microscopy identify Tom70-enriched
+        multilamellar structures.'
+  evidence:
+  - reference: DOI:10.1083/jcb.202307035
+    notes: 'Figure 1: fluorescence and immunogold microscopy identify Tom70-enriched
+      multilamellar structures.'
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P07213/?page_size=200
+    notes: All integrated matches inspected on 2026-10-05; next=null. Sequence-family
+      identity is distinct from compartment localization.
+  grounding: InterPro:IPR005687
+- component_id: tom71
+  label: Tom71-type mitochondrial import receptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  gene_symbols:
+  - TOM71
+  role: Selected membrane cargo detected in the yeast screen; no invariant abundance
+    or stoichiometry is assigned.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38825
+    protein_label: Protein TOM71
+    gene_symbol: TOM71
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example for the yeast protein.
+    evidence:
+    - reference: UniProtKB:P38825
+      notes: Native reviewed entry verifies name, gene and reference taxon.
+    - reference: DOI:10.7554/eLife.13943
+      notes: Table 1 lists Tom71 among MDC cargo; Figure 7 tests Tom70/Tom71-dependent
+        formation.
+  evidence:
+  - reference: DOI:10.7554/eLife.13943
+    notes: Table 1 lists Tom71 among MDC cargo; Figure 7 tests Tom70/Tom71-dependent
+      formation.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P38825/?page_size=200
+    notes: All integrated matches inspected on 2026-10-05; next=null. Sequence-family
+      identity is distinct from compartment localization.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: P38825 has integrated TPR repeat/superfamily matches but no exact
+    integrated protein family in the inspected endpoint. IPR005687 for Tom70 is not
+    transferred to Tom71.
+- component_id: dnm1
+  label: Dnm1-type mitochondrial fission GTPase
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: DISPENSABLE
+  gene_symbols:
+  - DNM1
+  role: Peripheral fission machinery associated with MDC release, not required for
+    initial compartment formation in the tested concanamycin A assay.
+  protein_examples:
+  - uniprot_id: UniProtKB:P54861
+    protein_label: Dynamin-related protein DNM1
+    gene_symbol: DNM1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example for the yeast protein.
+    evidence:
+    - reference: UniProtKB:P54861
+      notes: Native reviewed entry verifies name, gene and reference taxon.
+    - reference: DOI:10.7554/eLife.13943
+      notes: 'Figure 4 and Figure 4 supplement 1: dnm1 deletion prevents release while
+        MDCs form; Dnm1-GFP foci occur near MDCs.'
+  evidence:
+  - reference: DOI:10.7554/eLife.13943
+    notes: 'Figure 4 and Figure 4 supplement 1: dnm1 deletion prevents release while
+      MDCs form; Dnm1-GFP foci occur near MDCs.'
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P54861/?page_size=200
+    notes: All integrated matches inspected on 2026-10-05; next=null. Sequence-family
+      identity is distinct from compartment localization.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Integrated family IPR022812 denotes Dynamin broadly, not an exact
+    Dnm1-type mitochondrial fission family; domain matches are not exact identities.
+- component_id: cytosolic_cargo
+  label: enclosed cytosolic material
+  component_type: OTHER
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Variable heterogeneous cargo, not one protein family or the experimental
+    GFP reporter as a native subunit.
+  role: Cytosolic material can be enclosed in a subset of MDCs; closure is not demonstrated
+    for every observed structure.
+  evidence:
+  - reference: DOI:10.1083/jcb.202307035
+    notes: Cytosolic GFP-IAA7 capture and auxin-protection experiments support enclosure
+      in a subset of MDCs.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.7554/eLife.13943
+  note: Experimentally characterized budding-yeast MDCs; no broad fungal or eukaryotic
+    prevalence claim.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: DOI:10.1083/jcb.202307035
+  note: Methods identify S288C (BY) derivatives for the imaging and perturbation experiments;
+    reference accessions do not specify one unmodified experimental strain.
+functions:
+- function_id: cargo_sequestration
+  label: selective sequestration of outer mitochondrial membrane proteins
+  description: Concentrates selected membrane-associated cargo while excluding or
+    de-enriching other mitochondrial proteins. Protection of enclosed cargo is partial
+    and condition dependent.
+  evidence:
+  - reference: DOI:10.1083/jcb.202307036
+    notes: The 2024 cargo study distinguishes surplus outer-membrane proteins from
+      correctly localized inner-membrane carriers.
+  - reference: DOI:10.1083/jcb.202307035
+    notes: Membrane-cargo degron experiments show partial protection, not permanent
+      isolation.
+- function_id: vacuolar_routing
+  label: conditional routing of mitochondrial membrane cargo toward vacuolar degradation
+  description: An intermediate in Tom70-GFP delivery to the vacuole after concanamycin
+    A treatment; release and downstream autophagic delivery are distinct from formation.
+  evidence:
+  - reference: DOI:10.7554/eLife.13943
+    notes: 'Figure 4: fission-deficient and atg5 deletion cells still form MDCs but
+      differ in subsequent release and vacuolar delivery. This is not a universal
+      fate of all MDCs.'
+causal_graphs:
+- graph_id: yeast_mdc_interventions
+  title: Conditional MDC formation and release in budding yeast
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  description: Experimentally supported intervention effects and compartment capabilities.
+  scope_notes: Edges retain their individual assay conditions. Genetic dependencies
+    do not demonstrate direct binding, invariant essentiality, or a single universal
+    linear pathway. The 2026 preprint models are not promoted into this graph.
+  nodes:
+  - node_id: rap
+    label: Rapamycin treatment (200 nM, 2 hours)
+    node_type: STATE
+  - node_id: formation
+    label: MDC formation in budding yeast
+    node_type: STATE
+  - node_id: cargo_capture
+    label: Selective concentration of outer-membrane cargo
+    node_type: STATE
+  - node_id: cytosol_capture
+    label: Enclosure of cytosolic material in a subset of MDCs
+    node_type: STATE
+  - node_id: tom_double
+    label: Combined TOM70 and TOM71 deletion
+    node_type: STATE
+  - node_id: mmm1_loss
+    label: MMM1 deletion
+    node_type: STATE
+  - node_id: gem1_loss
+    label: GEM1 deletion
+    node_type: STATE
+  - node_id: dnm1_loss
+    label: DNM1 deletion
+    node_type: STATE
+  - node_id: release
+    label: MDC release from mitochondria during concanamycin A treatment
+    node_type: STATE
+  - node_id: psd1_loss
+    label: PSD1 deletion
+    node_type: STATE
+  - node_id: crd1_loss
+    label: CRD1 deletion
+    node_type: STATE
+  edges:
+  - subject: rap
+    predicate: induces
+    object: formation
+    evidence:
+    - reference: DOI:10.1083/jcb.202307035
+      notes: 'Figure 1 and MDC-assay Methods: rapamycin induces Tom70-enriched, Tim50-depleted
+        structures.'
+  - subject: formation
+    predicate: enables
+    object: cargo_capture
+    evidence:
+    - reference: DOI:10.1083/jcb.202307036
+      notes: Results distinguish enriched selected outer-membrane proteins from non-enriched
+        TOM and inner-membrane proteins.
+  - subject: formation
+    predicate: enables
+    object: cytosol_capture
+    evidence:
+    - reference: DOI:10.1083/jcb.202307035
+      notes: Cytosolic reporter/degron experiments support enclosure in a subset;
+        not every MDC is shown to be closed.
+  - subject: tom_double
+    predicate: impairs
+    object: formation
+    evidence:
+    - reference: DOI:10.7554/eLife.13943
+      notes: 'Figure 7: combined loss of Tom70 and Tom71 blocks formation in the tested
+        assay.'
+  - subject: mmm1_loss
+    predicate: impairs
+    object: formation
+    evidence:
+    - reference: DOI:10.1083/jcb.202002144
+      notes: ERMES-deletion experiments impair formation under the tested induction
+        conditions; later bypass experiments limit claims of absolute essentiality.
+  - subject: gem1_loss
+    predicate: impairs
+    object: formation
+    evidence:
+    - reference: DOI:10.1083/jcb.202002144
+      notes: Gem1-deletion experiments impair induction; the dependency is conditional,
+        not evidence that Gem1 defines the compartment.
+  - subject: dnm1_loss
+    predicate: impairs
+    object: release
+    evidence:
+    - reference: DOI:10.7554/eLife.13943
+      notes: 'Figure 4: initial formation persists but subsequent release is impaired.'
+  - subject: psd1_loss
+    predicate: promotes
+    object: formation
+    evidence:
+    - reference: DOI:10.1083/jcb.202302069
+      notes: PE-biosynthesis perturbation promotes constitutive MDC formation in a
+        subset of cells; this is not a prevalence estimate.
+  - subject: crd1_loss
+    predicate: reduces
+    object: formation
+    evidence:
+    - reference: DOI:10.1083/jcb.202302069
+      notes: CL-biosynthesis perturbation reduces formation without eliminating it
+        from every cell.
+physical_properties:
+- property: DIAMETER
+  value: '0.41'
+  unit: UO:0000017
+  context: Mean diameter of 104 spherical rapamycin-induced MDCs in haploid budding
+    yeast; 200 nM rapamycin for 2 hours.
+  reference: DOI:10.1083/jcb.202307035
+  evidence:
+  - reference: DOI:10.1083/jcb.202307035
+    notes: Figure 1C reports the mean in micrometers for spherical MDCs, as stated
+      on the inspected plot axis. This does not measure elongated extensions or all
+      MDC morphologies; TEM section thickness is not used as compartment diameter.
+- property: DIAMETER
+  value: '0.36'
+  unit: UO:0000017
+  context: Mean diameter of 49 spherical concanamycin A-induced MDCs in haploid budding
+    yeast; 500 nM concanamycin A for 2 hours.
+  reference: DOI:10.1083/jcb.202307035
+  evidence:
+  - reference: DOI:10.1083/jcb.202307035
+    notes: Figure S1C reports the mean in micrometers for spherical MDCs, as stated
+      on the inspected plot axis. It is a separate condition, not a universal size
+      range or a measurement of all MDC morphologies.
+evidence:
+- reference: DOI:10.7554/eLife.13943
+  notes: PMID 27097106, PMC4889329.1. Read Results on MDC formation, fission, cargo
+    and Tom70/71, plus Discussion and associated captions; not all early aging Results
+    or supplemental data.
+- reference: DOI:10.1083/jcb.202307035
+  notes: PMID 39136939, PMC11320809.1. Read all main Results, Discussion, selected
+    strain/culture/imaging Methods and captions; actual Figure 1 inspected. Raw images
+    and tomography were not reanalyzed. Figure S1 was additionally inspected during
+    PR 2054 review; its native PMC media MD5 5b329e0ccfd3de22c02265e8439eda9f was
+    verified.
+- reference: DOI:10.1083/jcb.202307036
+  notes: PMID 39136938, PMC11320589.1. Read Discussion and selected Results on cargo
+    and carrier-reporter localization, with figure captions; not every supplementary
+    experiment.
+- reference: DOI:10.1083/jcb.202002144
+  notes: PMID 33090183, PMC7588143.1. Read combined Results/Discussion and selected
+    strain and MDC-assay Methods.
+- reference: DOI:10.1083/jcb.202302069
+  notes: PMID 38497895, PMC10949074.1. Read Discussion and Results on Ups proteins,
+    CL and PE perturbations and bypass phenotypes; no raw lipidomics reanalysis.
+- reference: GO:0043231
+  notes: Native QuickGO verifies active cellular-component term intracellular membrane-bounded
+    organelle as a broader parent, not exact MDC identity.
+discussions:
+- discussion_id: identity_and_topology
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep the named MDC distinct from other mitochondrial deposits and vesicles.
+  rationale: Outer-membrane remodeling and multilamellar topology define this record;
+    the compartment is not just a protein aggregate or a generic mitochondrion-derived
+    vesicle.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1083/jcb.202307035
+    notes: Discussion distinguishes MDC membrane architecture and unsettled enclosure/fusion
+      mechanisms.
+  - reference: GO:0099073
+    notes: Native term mitochondrion-derived vesicle is not adopted as the exact named
+      MDC identity.
+  resolved_date: '2026-10-05'
+  resolution_note: Mint a local identity after bounded QuickGO/OLS full-name and acronym
+    searches found no exact term. Hidden/ignored-inclusive worktree searches and parsed
+    identifiers, labels and synonyms of all 887 existing records found no duplicate.
+    GO:0043231 is broader. No invariant part_of link, fixed membrane count, fixed
+    copy number, or exact synonym equivalence to MDV, IMiQ, DUMP or SPOT is asserted.
+    Open intermediates and incompletely protected cargo do not establish closure of
+    every MDC.
+- discussion_id: carrier_model_revision
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Use the revised outer-membrane cargo model.
+  rationale: The 2016 carrier interpretation was revised after testing tag orientation,
+    localization and function.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.7554/eLife.13943
+    notes: Initial screen included tagged mitochondrial carriers among candidate cargo.
+  - reference: DOI:10.1083/jcb.202307036
+    notes: Functional N-terminally tagged Oac1 localizes to the inner membrane and
+      is not enriched; the C-terminal fusion is nonfunctional and mislocalized.
+  resolved_date: '2026-10-05'
+  resolution_note: Do not claim routine removal of functional inner-membrane carriers
+    or a demonstrated universal amino-acid restriction mechanism. Selected outer-membrane
+    proteins are enriched; other outer-membrane proteins and core TOM subunits are
+    not uniformly captured.
+- discussion_id: component_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Separate observed cargo and release machinery from upstream regulators.
+  rationale: Colocalization, genetic dependency, and membership in the compartment
+    are different observations.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.7554/eLife.13943
+    notes: Table 1 and Figure 4 distinguish cargo from fission machinery.
+  - reference: DOI:10.1083/jcb.202002144
+    notes: ERMES/Gem1 contacts and perturbations support biogenesis roles, not transfer
+      of the whole ER contact complex into MDC.
+  - reference: DOI:10.1083/jcb.202307035
+    notes: Fzo1 reporter association and fission/fusion perturbations are condition
+      dependent; some experiments use overexpressed fusion proteins.
+  resolved_date: '2026-10-05'
+  resolution_note: Include membrane material, sampled Tom70/Tom71 cargo and variably
+    enclosed cytosol as constituents, with Dnm1 as associated release machinery. Mcp1,
+    Scm4, Msp1 and Fzo1 are additional reported cargo or associated proteins, not
+    excluded by absence evidence and not asserted to be invariant. ERMES, Gem1, Atg5,
+    lipid enzymes, Yme1, Ups proteins, MICOS, Snf1 and Mig1 are not made canonical
+    MDC constituents solely from perturbations. No fixed stoichiometry is assigned.
+- discussion_id: component_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral identities for the label-only component classes.
+  rationale: Heterogeneous membrane/cytosolic material has no single molecular identity;
+    the inspected Tom71 and Dnm1 matches do not support exact family groundings.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P38825/?page_size=200
+    notes: Only repeat/superfamily matches in the integrated results.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P54861/?page_size=200
+    notes: Dynamin family is broader than the curated mitochondrial Dnm1-type class.
+  notes: Retain REVIEWED_LABEL_ONLY without fabricated accessions. The grounded Tom70
+    component uses the authority family label; its demonstrated recruitment is yeast-scoped.
+- discussion_id: lipid_discrepancy
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve differing lipid-perturbation phenotypes between studies.
+  rationale: The 2020 study reports no formation defect for tested crd1/ups1/psd1
+    perturbations, whereas the dedicated 2024 lipid study detects distinct CL- and
+    PE-pathway effects.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1083/jcb.202002144
+    notes: Lipid-transfer discussion and assays do not establish a general lipid requirement.
+  - reference: DOI:10.1083/jcb.202302069
+    notes: CL depletion suppresses formation, whereas PE depletion promotes formation
+      and can bypass some contact-site requirements.
+  notes: Retain the 2024 intervention edges with their study scope and preserve the
+    discrepancy. Do not invent a reconciliation, infer isolated-MDC lipid composition,
+    or turn conditional rescue into universal essentiality.
+- discussion_id: emerging_regulatory_models
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reassess 2026 regulatory and adaptive-function models when full primary
+    evidence and final versions are available.
+  rationale: Two relevant 2026 bioRxiv studies have eLife reviewed-preprint versions;
+    neither is treated here as a version of record or proof of MDC-specific fitness
+    benefit.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.64898/2026.04.03.716366
+    notes: PMID 42798366, PMC13605720.1 metadata and abstract read. The PMC body only
+      reports full-text unavailability; publisher routes did not yield full Results.
+      Abstract proposes Yme1-dependent Ups/MICOS remodeling.
+  - reference: https://elifesciences.org/reviewed-preprints/111713v1
+    notes: Indexed official version identifies reviewed preprint v1, DOI 10.7554/eLife.111713.1;
+      full Results not read.
+  - reference: DOI:10.64898/2026.06.09.731211
+    notes: 'PMID 42327138, PMC13278180.1: abstract, full Discussion, selected strain/MDC-assay
+      Methods and data availability read, not Results. Acute adaptation, Snf1/Mig1
+      regulation and protein-load buffering are proposed; specific buffering benefit
+      remains unisolated.'
+  - reference: https://elifesciences.org/reviewed-preprints/112436v1
+    notes: Official indexed reviewed-preprint version DOI 10.7554/eLife.112436.1;
+      not treated as a final version of record.
+  notes: Keep these as explicit follow-up evidence, not graph edges or canonical component
+    additions. Acute and chronic adaptation differ; glucose restriction is not automatically
+    glucose absence. No dataset accession is invented from data-available-on-request
+    wording.
+images:
+- image_id: wilson_2024_fig1
+  source: PMC
+  source_accession: PMC11320809.1 fig1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11320809/#fig1
+  licence: CC_BY_NC_SA_4_0
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  attribution: Zachary N. Wilson, Matt West, Alyssa M. English, Greg Odorizzi and
+    Adam L. Hughes (2024), Figure 1, DOI 10.1083/jcb.202307035; CC BY-NC-SA 4.0.
+  modality: OTHER
+  caption: 'Tom70/Tim50 fluorescence, MDC frequency and diameter plots, thin-section
+    TEM and immunogold microscopy. Scale bars: A, 1 micrometer; D, 500 nanometers;
+    E-I, 200 nanometers.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1083/jcb.202307035
+  retrieved_on: '2026-10-05'
+  notes: Actual multipanel figure inspected; versioned PMC media MD5 bf54de482c22108855cf3cc0f37eeb8d
+    verified. Native JATS gives CC BY-NC-SA 4.0 after the initial six-month publisher
+    period. Link-only; no image bytes hosted.
