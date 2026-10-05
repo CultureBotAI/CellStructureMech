@@ -14,6 +14,16 @@ def test_identifiers_are_unique(records):
     assert not dupes, f"duplicate identifiers: {dupes}"
 
 
+def test_nonprotein_source_participants_do_not_assert_gene_symbols(records):
+    bad = []
+    for path, doc in records:
+        for composition in doc.get("complex_compositions") or []:
+            for participant in composition["participants"]:
+                if participant["participant_type"] != "protein" and "gene_symbol" in participant:
+                    bad.append(f"{path.name}:{composition['composition_id']}:{participant['participant_id']}")
+    assert not bad, f"nonprotein names belong in source_name, not gene_symbol: {bad}"
+
+
 def test_every_record_validates_closed(records):
     bad = {str(p): [e.message[:120] for e in errs] for p, d in records if (errs := validate_structure(d))}
     assert not bad, bad

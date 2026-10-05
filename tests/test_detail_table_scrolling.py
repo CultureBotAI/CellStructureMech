@@ -50,3 +50,13 @@ def test_every_real_record_table_has_named_focusable_scroll_region(record):
         assert region.get("tabindex") == "0"
         assert region.get("aria-label")
     assert f"CellStructureMech/blob/main/data/structures/{record}" in markup
+
+
+def test_source_composition_names_are_not_presented_as_genes():
+    markup = render_record("other/i_aaa_complex.yaml")
+    composition_table = markup.split('aria-label="Source composition: i-AAA complex"', 1)[1]
+    composition_table = composition_table.split("</table>", 1)[0]
+    assert "<th>Source name</th>" in composition_table
+    assert "<th>Gene</th>" not in composition_table
+    assert "<td>zinc(2+)</td>" in composition_table
+    assert "<td>YME1</td>" in composition_table

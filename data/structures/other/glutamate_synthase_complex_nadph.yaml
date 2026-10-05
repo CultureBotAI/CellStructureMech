@@ -19,6 +19,13 @@ curation_history:
     reviewed-label-only GltB/GltD constituents, reviewed UniProt examples, glutamate
     synthase NADPH activity, a component grounding TODO, and DOI/PMID evidence.
   llm_assisted: true
+- timestamp: '2026-10-05T00:17:05Z'
+  curator: codex
+  action: CORRECTED_METADATA
+  changes: 'Issue #2043: preserve 1 nonprotein Complex Portal source name(s) in source_name
+    instead of gene_symbol; identities, labels, taxa, membership and stoichiometry
+    unchanged.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Glutamate synthase [NADPH] complex
   synonym_type: EXACT_SYNONYM
@@ -202,6 +209,6 @@ complex_compositions:
   - participant_id: CHEBI:49883
     label: tetra-mu3-sulfido-tetrairon
     participant_type: small molecule
-    gene_symbol: 4Fe-4S iron-sulfur cluster
+    source_name: 4Fe-4S iron-sulfur cluster
     stoichiometry: '1'
     source_interactor_id: EBI-22228055

@@ -71,7 +71,8 @@ def normalize_participant(participant: dict) -> dict:
         "participant_type": participant.get("interactorType") or "unknown",
     }
     if participant.get("name"):
-        entry["gene_symbol"] = participant["name"]
+        name_field = "gene_symbol" if participant.get("interactorType") == "protein" else "source_name"
+        entry[name_field] = participant["name"]
     stoichiometry = normalize_stoichiometry(participant.get("stochiometry"))
     if stoichiometry is not None:
         entry["stoichiometry"] = stoichiometry

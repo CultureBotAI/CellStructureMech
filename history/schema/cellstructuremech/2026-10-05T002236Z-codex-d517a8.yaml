@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: schema
+  path: src/cellstructuremech/schema/cellstructuremech.yaml
+  slug: cellstructuremech
+session:
+  id: 2026-10-05T002236Z-codex-d517a8
+  timestamp: '2026-10-05T00:22:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2044
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2042
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - PhysicalProperty
+  - validation
+  summary: Resolve physical-property evidence to its declared class
+  details: 'Issue #2044: Pydantic generation failed on undefined range Evidence, reproduced
+    on the initial PR head before source_name was added. Changed only PhysicalProperty.evidence
+    range to the existing EvidenceItem class, matching the reference/snippet/notes objects
+    already curated. Added range-resolution and Pydantic-generation/compilation regressions.
+    No physical-property evidence records or vendored schemas were changed.'

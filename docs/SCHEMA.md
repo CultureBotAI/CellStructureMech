@@ -18,6 +18,11 @@
 | Discourse | `Discussion`, `Dataset` | From the vendored `mech_shared` module |
 | Lifecycle | `CurationEvent` | `mapping_status` + append-only `curation_history` |
 
+`ComplexParticipant.source_name` preserves a nonprotein participant's source
+name without asserting a gene. The Complex Portal adapter assigns `gene_symbol`
+only to protein participants; the source-composition table displays both under
+the neutral heading "Source name".
+
 `mech_shared.yaml` and `history.yaml` are vendored byte-identically from
 culturebotai-claw at the commit in `scripts/.vendored_canon_ref`, and compared
 against it by `just vendored-check` in the `vendored-sync` workflow. Do not

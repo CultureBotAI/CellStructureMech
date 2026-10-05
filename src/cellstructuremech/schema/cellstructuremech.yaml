@@ -522,7 +522,13 @@ classes:
       participant_type:
         required: true
         range: string
+      source_name:
+        description: >-
+          Source-provided participant name, especially for nonproteins. A
+          molecule or RNA name is not an assertion of a gene symbol.
+        range: string
       gene_symbol:
+        description: Gene symbol for a protein participant; not a nonprotein source name.
         range: string
       stoichiometry:
         description: >-
@@ -652,7 +658,7 @@ classes:
           it is not -- and this is where that check lives. Quoted entries come
           under `just evidence-verify` like any other snippet (#165).
         multivalued: true
-        range: Evidence
+        range: EvidenceItem
 
   StructureImage:
     description: >-

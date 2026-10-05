@@ -21,6 +21,13 @@ curation_history:
     function, five evidence-backed mechanistic edges, strain/architecture limitations
     and a restricted-license link-only biochemical figure.
   llm_assisted: true
+- timestamp: '2026-10-05T00:17:05Z'
+  curator: codex
+  action: CORRECTED_METADATA
+  changes: 'Issue #2043: preserve 1 nonprotein Complex Portal source name(s) in source_name
+    instead of gene_symbol; identities, labels, taxa, membership and stoichiometry
+    unchanged.'
+  llm_assisted: true
 parent_structures:
 - GO:0098800
 part_of:
@@ -331,7 +338,7 @@ complex_compositions:
   - participant_id: CHEBI:29105
     label: zinc(2+)
     participant_type: small molecule
-    gene_symbol: zinc(2+)
+    source_name: zinc(2+)
     source_interactor_id: EBI-22119162
     canonical_component_ref: zinc
   retrieved_on: '2026-10-04'
