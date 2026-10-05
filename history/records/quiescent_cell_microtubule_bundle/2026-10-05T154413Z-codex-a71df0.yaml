@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+  slug: quiescent_cell_microtubule_bundle
+session:
+  id: 2026-10-05T154413Z-codex-a71df0
+  timestamp: '2026-10-05T15:44:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - images
+  - evidence
+  - discussions
+  summary: Add the fission-yeast quiescent cell microtubule bundle
+  details: Created a PROPOSED local record after hidden/ignored-inclusive deduplication and
+    native GO narrow-synonym verification. Read PMC4494004.1 Results, Discussion and Methods;
+    inspected Figures 1 and 4. Added ten component classes and ten reviewed UniProt examples
+    with complete InterPro family lookups, a species example, a bounded two-edge exit function
+    graph, and a checksum-verified link-only CC BY-NC-SA 3.0 image. Distinguished the budding-yeast
+    nuclear array, the Mto1 mitochondrial homonym, inferred beta-tubulin polymer composition,
+    and assembly versus exit requirements. Retained six explicit label-only grounding gaps
+    and unresolved molecular stabilization. Direct authority and comparative-study provenance
+    was refined in a third curation event. Full gates and separate PR review follow; no human
+    REVIEWED status claimed.
