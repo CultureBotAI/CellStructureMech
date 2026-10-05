@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+  slug: nucleolar_peripheral_inclusion_body
+session:
+  id: 2026-10-05T115805Z-codex-2bc107
+  timestamp: '2026-10-05T11:58:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2063
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2062
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  summary: Resolve NuR canonical-example citation scope
+  details: Adversarial self-review of ea512bc2c4e4a90ffe9b39c867d06711eb8695e7 found one minor
+    claim-level source-placement defect. Removed the 2023 Figure 7 condition from the Schizosaccharomyces
+    pombe canonical-example note citing only the defining 2020 paper. The note now describes
+    only the cited 2020 conditions; independently cited 2023 descriptions in components, graphs
+    and image remain. Guarded old-value assertion, LLM-assisted curation event and validated
+    writer used. Original history remains untouched; all derived checks and full QC rerun
+    before merge.

@@ -19,6 +19,13 @@ curation_history:
     six reference proteins, two intervention graphs, source-scope discussions and
     an inspected CC BY 4.0 figure.
   llm_assisted: true
+- timestamp: '2026-10-05T11:57:56Z'
+  curator: codex
+  action: RESOLVED_REVIEW
+  changes: 'Resolved issue #2063 by limiting the fission-yeast canonical-example note
+    to the experiment supported by its own 2020 reference; independently cited 2023
+    assay descriptions remain elsewhere.'
+  llm_assisted: true
 synonyms:
 - synonym_text: nucleolar rings
   synonym_type: EXACT_SYNONYM
@@ -235,8 +242,7 @@ canonical_examples:
   taxon_label: Schizosaccharomyces pombe
   reference: DOI:10.1016/j.celrep.2020.108377
   note: Defining acute-heat experiments shift cells from 25 C to 42 C for 10 or 20
-    minutes, followed where specified by recovery at 25 C. The later Figure 7 comparison
-    uses 42 C for 15 minutes; these are not one interchangeable protocol.
+    minutes, followed where specified by recovery at 25 C.
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   reference: DOI:10.3390/ijms241311202
