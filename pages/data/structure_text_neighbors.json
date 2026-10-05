@@ -19331,6 +19331,11 @@
           "cosine_similarity": 0.81877749
         },
         {
+          "identifier": "cellstructuremech:glycolytic_body",
+          "label": "glycolytic body",
+          "cosine_similarity": 0.69853726
+        },
+        {
           "identifier": "GO:1990065",
           "label": "Dxr protein complex",
           "cosine_similarity": 0.69416357
@@ -19344,11 +19349,6 @@
           "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
           "label": "formate dehydrogenase N complex",
           "cosine_similarity": 0.67107392
-        },
-        {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.66803464
         }
       ]
     },
@@ -24275,9 +24275,9 @@
           "cosine_similarity": 0.71220655
         },
         {
-          "identifier": "GO:0031533",
-          "label": "mRNA capping enzyme complex",
-          "cosine_similarity": 0.68902927
+          "identifier": "cellstructuremech:glycolytic_body",
+          "label": "glycolytic body",
+          "cosine_similarity": 0.70170191
         }
       ]
     },
@@ -24344,6 +24344,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:glycolytic_body",
+      "label": "glycolytic body",
+      "neighbors": [
+        {
+          "identifier": "GO:0020015",
+          "label": "glycosome",
+          "cosine_similarity": 0.70537917
+        },
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.70448087
+        },
+        {
+          "identifier": "cellstructuremech:h_body",
+          "label": "H-body",
+          "cosine_similarity": 0.70213702
+        },
+        {
+          "identifier": "GO:0010494",
+          "label": "cytoplasmic stress granule",
+          "cosine_similarity": 0.70170191
+        },
+        {
+          "identifier": "GO:0005960",
+          "label": "glycine cleavage complex",
+          "cosine_similarity": 0.69853726
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:h_body",
       "label": "H-body",
       "neighbors": [
@@ -24363,14 +24394,14 @@
           "cosine_similarity": 0.70778392
         },
         {
+          "identifier": "cellstructuremech:glycolytic_body",
+          "label": "glycolytic body",
+          "cosine_similarity": 0.70213702
+        },
+        {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.67694471
-        },
-        {
-          "identifier": "GO:0048500",
-          "label": "signal recognition particle",
-          "cosine_similarity": 0.67323723
         }
       ]
     },

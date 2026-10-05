@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/glycolytic_body.yaml
+  slug: glycolytic_body
+session:
+  id: 2026-10-05T134146Z-codex-6eb4c9
+  timestamp: '2026-10-05T13:41:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - physical_properties
+  - images
+  - evidence
+  - causal_graphs
+  - discussions
+  - datasets
+  summary: Add evidence-backed yeast glycolytic body record
+  details: Scaffolded and curated through validated writers. Reviewed primary 2017 and 2020
+    Results and Methods; used the 2023 primary report to distinguish broader META terminology
+    and engineered clients. Verified complete native InterPro family matches and reviewed
+    UniProt identities for thirteen protein exemplars, GO hierarchy, NCBI taxa, SO RNA and
+    UO nanometer. Preserved microscopy/adjacency, phosphosite, pleiotropy and gel-state caveats.
+    Added ten component classes, five scoped mechanistic edges, approximate TEM diameter,
+    checksum-verified CC BY 4.0 PMC7162659.1 fig3s1 and metadata-only six-sample GSE145881
+    from native SOFT. Corrected Eno2 evidence attachments before publication. Hidden/ignored-inclusive
+    dedup found no existing candidate; no exact GO cellular-component identity was found in
+    bounded native and complete cached searches. LLM draft remains PROPOSED. Full QC and generated-artifact
+    gates run separately before commit; reports and caches are excluded.
