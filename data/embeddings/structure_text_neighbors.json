@@ -19114,6 +19114,11 @@
           "cosine_similarity": 0.74236187
         },
         {
+          "identifier": "cellstructuremech:hsp78_chaperone_complex",
+          "label": "Hsp78 chaperone complex",
+          "cosine_similarity": 0.72674939
+        },
+        {
           "identifier": "cellstructuremech:cullin_e_ubiquitin_ligase_complex",
           "label": "Cullin-E ubiquitin ligase complex",
           "cosine_similarity": 0.69966735
@@ -19127,11 +19132,6 @@
           "identifier": "GO:0034044",
           "label": "exomer complex",
           "cosine_similarity": 0.68909489
-        },
-        {
-          "identifier": "GO:0032865",
-          "label": "ERMES complex",
-          "cosine_similarity": 0.68393058
         }
       ]
     },
@@ -19318,6 +19318,37 @@
           "identifier": "GO:1990070",
           "label": "TRAPPI protein complex",
           "cosine_similarity": 0.78010636
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:hsp78_chaperone_complex",
+      "label": "Hsp78 chaperone complex",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:mitochondrial_lon_protease_complex",
+          "label": "mitochondrial Lon protease complex",
+          "cosine_similarity": 0.78576841
+        },
+        {
+          "identifier": "GO:0005745",
+          "label": "m-AAA complex",
+          "cosine_similarity": 0.75831094
+        },
+        {
+          "identifier": "GO:0031942",
+          "label": "i-AAA complex",
+          "cosine_similarity": 0.7466793
+        },
+        {
+          "identifier": "GO:1990220",
+          "label": "GroEL-GroES complex",
+          "cosine_similarity": 0.72674939
+        },
+        {
+          "identifier": "GO:0140595",
+          "label": "MIM complex",
+          "cosine_similarity": 0.72296189
         }
       ]
     },
