@@ -7976,6 +7976,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:insoluble_protein_deposit",
+      "label": "insoluble protein deposit",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+          "label": "intranuclear quality control compartment",
+          "cosine_similarity": 0.68285978
+        },
+        {
+          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
+          "label": "intramitochondrial protein quality control compartment",
+          "cosine_similarity": 0.626074
+        },
+        {
+          "identifier": "GO:0140737",
+          "label": "encapsulin nanocompartment",
+          "cosine_similarity": 0.60860256
+        },
+        {
+          "identifier": "cellstructuremech:bacterial_aggresome",
+          "label": "bacterial aggresome",
+          "cosine_similarity": 0.58503462
+        },
+        {
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.58472564
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
       "label": "intranuclear quality control compartment",
       "neighbors": [
@@ -7983,6 +8014,11 @@
           "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
           "label": "intramitochondrial protein quality control compartment",
           "cosine_similarity": 0.70108568
+        },
+        {
+          "identifier": "cellstructuremech:insoluble_protein_deposit",
+          "label": "insoluble protein deposit",
+          "cosine_similarity": 0.68285978
         },
         {
           "identifier": "cellstructuremech:bacterial_aggresome",
@@ -7998,11 +8034,6 @@
           "identifier": "GO:0097165",
           "label": "nuclear stress granule",
           "cosine_similarity": 0.64154449
-        },
-        {
-          "identifier": "GO:0044615",
-          "label": "nuclear pore nuclear basket",
-          "cosine_similarity": 0.639654
         }
       ]
     },
