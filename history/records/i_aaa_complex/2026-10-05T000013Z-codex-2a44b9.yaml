@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/i_aaa_complex.yaml
+  slug: i_aaa_complex
+session:
+  id: 2026-10-05T000013Z-codex-2a44b9
+  timestamp: '2026-10-05T00:00:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - images
+  summary: Add evidence-bounded yeast i-AAA complex
+  details: Added exact GO:0031942 identity, Yme1/Mgr1/Mgr3 and zinc components, adapter-normalized
+    ComplexPortal:CPX-1655 S288C composition, a strain-qualified 2017 primary mechanism, link-only
+    CC BY-NC-SA Figure 3, and explicit grounding and intact-architecture gaps. Maintained
+    PROPOSED status; no fixed stoichiometry or universal eukaryotic distribution inferred.

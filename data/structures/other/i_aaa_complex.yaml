@@ -1,0 +1,341 @@
+identifier: GO:0031942
+label: i-AAA complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Protease complex of the mitochondrial inner membrane whose catalytic residues
+  lie on the intermembrane space side of the inner membrane; involved in mitochondrial
+  protein turnover. Contains a subunit belonging to the AAA family of ATP-dependent
+  metalloproteases.
+definition_source: GO:0031942
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-04T23:57:39Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-04T23:59:47Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added yeast-scoped components, source-normalized S288C composition, ATP-dependent
+    function, five evidence-backed mechanistic edges, strain/architecture limitations
+    and a restricted-license link-only biochemical figure.
+  llm_assisted: true
+parent_structures:
+- GO:0098800
+part_of:
+- GO:0005743
+components:
+- component_id: yme1
+  label: Yme1 i-AAA protease
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native UniProt P32795 and InterPro checks resolve the broad FtsH
+    family IPR005936 and Yme1-like N-terminal domain IPR048438, not an exact whole-protein
+    Yme1 family. Neither is adopted as Yme1 identity.
+  gene_symbols:
+  - YME1
+  - OSD1
+  - YTA11
+  role: ATP-dependent proteolytic core with its catalytic domains facing the mitochondrial
+    intermembrane space.
+  evidence:
+  - reference: DOI:10.1083/jcb.201702125
+    notes: 'Figure 1 and Results: deletion or ATPase/protease inactivation of Yme1
+      blocks turnover of tested Tom22-HA and Om45-HA substrates.'
+  - reference: ComplexPortal:CPX-1655
+    notes: The exact accession annotates YME1 as an enzymatic participant, separately
+      from MGR1, MGR3 and zinc.
+- component_id: mgr1
+  label: Mitochondrial inner membrane i-AAA protease complex subunit Mgr1
+  grounding: InterPro:IPR013911
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MGR1
+  role: Membrane adaptor that contacts substrates and supports their recruitment to
+    Yme1.
+  evidence:
+  - reference: DOI:10.1083/jcb.201702125
+    notes: 'Figures 3-4: Mgr1 associates with Tom22-HA and contributes to Yme1 recruitment;
+      photo-crosslinking places Mgr1 next to the Tom22 intermembrane-space domain.'
+  - reference: InterPro:IPR013911
+    notes: Issuing-authority entry verifies the Mgr1 family, rather than a generic
+      adaptor domain.
+- component_id: mgr3
+  label: Protein Mrg3-like
+  grounding: InterPro:IPR040201
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - MGR3
+  - FMP24
+  role: Mgr3 membrane adaptor that contacts substrates and cooperates with Mgr1 in
+    recruitment to Yme1.
+  evidence:
+  - reference: DOI:10.1083/jcb.201702125
+    notes: 'Figures 3-4: Mgr3 supports optimal Tom22 recruitment and crosslinks to
+      its intermembrane-space domain. Both adaptors cooperate; Mgr1 can retain some
+      recruitment without Mgr3.'
+  - reference: InterPro:IPR040201
+    notes: The authority spells the family label Mrg3-like; the reviewed MGR3 protein
+      Q04472 maps to this family. The label is preserved, not interpreted as a different
+      gene.
+- component_id: zinc
+  label: zinc(2+)
+  grounding: CHEBI:29105
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  role: Metalloprotease cofactor annotated for the yeast i-AAA complex.
+  evidence:
+  - reference: ComplexPortal:CPX-1655
+    notes: Source participant CHEBI:29105 has the cofactor role; no metal or subunit
+      copy number is supplied.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  reference: DOI:10.1083/jcb.201702125
+  note: Experimentally characterized in laboratory budding yeast; no universal fungal
+    or eukaryotic distribution of the Mgr1/Mgr3-containing assembly is asserted.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1083/jcb.201702125
+  note: Table S1 lists BY4741 derivatives for the tagged-substrate turnover and recruitment
+    assays. Photo-crosslinking methods explicitly use W303 derivatives. These experimental
+    strains are not relabeled as S288C.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: ComplexPortal:CPX-1655
+  note: Reference-strain composition annotation from Complex Portal; distinct from
+    the experimental backgrounds in the 2017 paper.
+functions:
+- function_id: atp_dependent_proteolysis
+  label: ATP-dependent peptidase activity
+  grounding: GO:0004176
+  description: ATP-dependent degradation of selected mitochondrial protein substrates;
+    the curated yeast mechanism includes adaptor-assisted turnover of Tom22 and Om45.
+  evidence:
+  - reference: DOI:10.1083/jcb.201702125
+    notes: Figure 1 tests tagged substrates using deletion and catalytic mutants.
+      Figure 2 separately measures endogenous Tom22 at 37 C in glucose medium and
+      Om45 at 40 C in respiratory medium. Mgr1/Mgr3 deletion blocks both; yme1 deletion
+      cannot be tested for Om45 at 40 C because it fails to grow. Tags accelerate
+      turnover, and these experiments do not show constitutive degradation of all
+      outer-membrane proteins.
+causal_graphs:
+- graph_id: yeast_adaptor_assisted_tom22_turnover
+  title: Adaptor-assisted recruitment and degradation of Tom22
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  description: Mgr1 and Mgr3 contact the substrate and support recruitment to the
+    Yme1 protease.
+  scope_notes: Source-bounded synthesis of BY4741 recruitment/turnover and W303 photo-crosslinking
+    experiments, not one directly observed temporal sequence. Much of the contact
+    evidence uses tagged Tom22 and protease-dead Yme1. The recruitment-to-processing
+    transition is a supported mechanistic interpretation, not a visualized handoff
+    or an exclusive degradation route.
+  nodes:
+  - node_id: mgr1
+    label: Mitochondrial inner membrane i-AAA protease complex subunit Mgr1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR013911
+    component_ref: mgr1
+  - node_id: mgr3
+    label: Protein Mrg3-like
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR040201
+    component_ref: mgr3
+  - node_id: adaptor_engagement
+    label: Tom22 intermembrane-space domain engaged by adaptors
+    node_type: STATE
+  - node_id: yme1_bound_substrate
+    label: Tom22 associated with Yme1
+    node_type: STATE
+  - node_id: iaaa
+    label: i-AAA complex
+    node_type: STRUCTURE
+    grounding: GO:0031942
+  - node_id: turnover
+    label: Turnover of tested Tom22 substrate
+    node_type: STATE
+  edges:
+  - subject: mgr1
+    predicate: participates in
+    object: adaptor_engagement
+    description: Mgr1 contacts the intermembrane-space region of Tom22.
+    evidence:
+    - reference: DOI:10.1083/jcb.201702125
+      notes: 'Figure 4: site-specific photo-crosslinking detects Tom22-Mgr1 products,
+        mainly in the protease-dead background; selected positions also crosslink
+        in wild type.'
+  - subject: mgr3
+    predicate: participates in
+    object: adaptor_engagement
+    description: Mgr3 also contacts the intermembrane-space region of Tom22.
+    evidence:
+    - reference: DOI:10.1083/jcb.201702125
+      notes: 'Figure 4: Tom22-Mgr3 photo-crosslinks have a partly different positional
+        pattern from Tom22-Mgr1 products; the assay does not establish an atomic interface.'
+  - subject: adaptor_engagement
+    predicate: promotes
+    object: yme1_bound_substrate
+    description: The adaptors support efficient recruitment of Tom22 to Yme1.
+    evidence:
+    - reference: DOI:10.1083/jcb.201702125
+      notes: 'Figure 3B-C and F: removing either adaptor reduces substrate association
+        with Yme1. Both optimize recruitment; Mgr1 can bind substrate without Mgr3,
+        so an obligatory simultaneous binding event is not asserted.'
+  - subject: yme1_bound_substrate
+    predicate: is processed by
+    object: iaaa
+    description: Recruited substrate enters the ATP-dependent proteolytic reaction
+      of the complex.
+    evidence:
+    - reference: DOI:10.1083/jcb.201702125
+      notes: 'Figures 1 and 3 jointly support recruitment followed by Yme1-dependent
+        processing: ATPase/protease mutants block turnover and can trap substrate
+        association. This transition is mechanistic interpretation, not direct observation
+        of translocation.'
+  - subject: iaaa
+    predicate: promotes
+    object: turnover
+    description: The functional yeast complex promotes degradation of the tested Tom22
+      substrate.
+    evidence:
+    - reference: DOI:10.1083/jcb.201702125
+      notes: 'Figure 1D-F: adaptor deletion, YME1 deletion or catalytic inactivation
+        impairs Tom22-HA turnover. Figure 2I-J separately tests endogenous Tom22 at
+        37 C in glucose medium; no universal outer-membrane turnover claim follows.'
+evidence:
+- reference: DOI:10.1083/jcb.201702125
+  notes: Wu, Li and Jiang (2017), Mitochondrial inner-membrane protease Yme1 degrades
+    outer-membrane proteins Tom22 and Om45. Main Results/discussion, strain and recruitment/crosslinking
+    methods, Figures 1-4 and Table S1 inspected in checksum-verified PMC5748973 version
+    1.
+- reference: GO:0098800
+  notes: Exact inner mitochondrial membrane protein complex parent; distinct from
+    parthood in the membrane.
+- reference: GO:0005743
+  notes: Containing mitochondrial inner membrane; the protease catalytic domains face
+    the intermembrane space.
+discussions:
+- discussion_id: yme1_exact_family
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve an exact whole-protein family grounding for Yme1 without conflating
+    it with FtsH or one domain.
+  attaches_to:
+  - components#yme1
+  rationale: Bounded native UniProt/InterPro checks verified IPR005936 as a broader
+    FtsH family and IPR048438 as an N-terminal domain. Neither exactly denotes this
+    component class.
+  evidence:
+  - reference: UniProtKB:P32795
+    notes: Reviewed reference sequence used only as an identity/family lookup anchor;
+      organism-specific composition is retained separately.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: complex_and_substrate_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Separate the adaptor-bearing yeast assembly, protease core and substrate
+    proteins.
+  rationale: Substrate binding and catalytic loss of function do not make Tom22 or
+    Om45 constituents or prove that adaptor deletion prevents Yme1 oligomerization.
+  resolution_note: Curate Yme1, Mgr1, Mgr3 and the source-annotated zinc cofactor.
+    Exclude Tom22/Om45 substrates and comparison proteases from composition. Keep
+    the strain-specific Complex Portal assertion separate; its source taxon label
+    is retained even though taxon 559292 denotes S288C. Do not equate an isolated
+    Yme1 oligomer with the intact adaptor-bearing assembly, or the inner-membrane
+    abbreviation MIM in this paper with the outer-membrane MIM insertase. No fixed
+    copy numbers are asserted.
+  evidence:
+  - reference: DOI:10.1083/jcb.201702125
+    notes: Results distinguish substrate recruitment, degradation and Yme1 native-gel
+      behavior.
+  - reference: ComplexPortal:CPX-1655
+    notes: Four source participants; all source stoichiometry values are null.
+  posed_by: codex
+  posed_date: '2026-10-04'
+  resolved_date: '2026-10-04'
+- discussion_id: intact_architecture_and_native_substrates
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Establish intact adaptor-bearing architecture and physiological substrate
+    range with direct structural and condition-matched evidence.
+  rationale: Native-gel migration and trapped photo-crosslinks do not determine stoichiometry
+    or visualize substrate movement. Tagged substrates turn over faster than endogenous
+    proteins, and temperature/media matter. The linked biochemical figure is not a
+    micrograph of the complex. Earlier adaptor papers and the separate Yme1 core structural
+    study require full-text review before extending this record.
+  evidence:
+  - reference: DOI:10.1083/jcb.201702125
+    notes: Figures 1-4 and Results qualify substrate, strain, catalytic-mutant and
+      assay scope.
+  posed_by: codex
+  posed_date: '2026-10-04'
+images:
+- image_id: pmc_pmc5748973_fig3
+  source: PMC
+  source_accession: PMC5748973.1 fig3
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5748973/#fig3
+  licence: CC_BY_NC_SA_4_0
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  attribution: Xi Wu, Lanlan Li and Hui Jiang; CC BY-NC-SA 4.0, via PubMed Central.
+  modality: OTHER
+  caption: Biochemical evidence for adaptor-assisted substrate recruitment, not a
+    micrograph or solved structure. Figure 3A-F shows immunoprecipitation and immunoblots
+    of Tom22-HA, Yme1 and adaptors in wild-type and mutant yeast. Panels G-H show
+    native-gel mobility of tagged Mgr1/Mgr3 with SDS-PAGE controls; apparent masses
+    do not establish subunit copy numbers.
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1083/jcb.201702125
+  retrieved_on: '2026-10-04'
+  notes: JATS licence and full figure inspected in PMC5748973.1; source media MD5
+    ef80f8c8369e0bfd73138fdfd51c77be verified for inspection only. Link-only because
+    the noncommercial/share-alike licence is outside repository hosting policy. No
+    image file is copied into the repository. Taxon supplied from the paper and Table
+    S1, not a PMC taxon field.
+complex_compositions:
+- composition_id: complex_portal_cpx_1655
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-1655
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-1655
+  complex_label: i-AAA complex
+  taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae
+  evidence_code: ECO:0005547
+  participants:
+  - participant_id: UniProtKB:P25573
+    label: Mitochondrial inner membrane i-AAA protease supercomplex subunit MGR1
+    participant_type: protein
+    gene_symbol: MGR1
+    source_interactor_id: EBI-2337393
+    canonical_component_ref: mgr1
+  - participant_id: UniProtKB:Q04472
+    label: Mitochondrial inner membrane i-AAA protease supercomplex subunit MGR3
+    participant_type: protein
+    gene_symbol: MGR3
+    source_interactor_id: EBI-2337396
+    canonical_component_ref: mgr3
+  - participant_id: UniProtKB:P32795
+    label: Mitochondrial inner membrane i-AAA protease supercomplex subunit YME1
+    participant_type: protein
+    gene_symbol: YME1
+    source_interactor_id: EBI-2337394
+    canonical_component_ref: yme1
+  - participant_id: CHEBI:29105
+    label: zinc(2+)
+    participant_type: small molecule
+    gene_symbol: zinc(2+)
+    source_interactor_id: EBI-22119162
+    canonical_component_ref: zinc
+  retrieved_on: '2026-10-04'
+  notes: 'Curator-scoped import: S288C reference-strain i-AAA composition, not the
+    BY4741/W303 experimental strains or a universal fungal assembly. Source evidence:
+    inferred by curator. The accession was resolved through the Complex Portal accession
+    endpoint; no equivalence xref was inferred.'

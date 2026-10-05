@@ -19353,6 +19353,37 @@
       ]
     },
     {
+      "identifier": "GO:0031942",
+      "label": "i-AAA complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0042720",
+          "label": "mitochondrial inner membrane peptidase complex",
+          "cosine_similarity": 0.86253292
+        },
+        {
+          "identifier": "GO:0140595",
+          "label": "MIM complex",
+          "cosine_similarity": 0.82998193
+        },
+        {
+          "identifier": "GO:0042721",
+          "label": "TIM22 mitochondrial import inner membrane insertion complex",
+          "cosine_similarity": 0.78467011
+        },
+        {
+          "identifier": "GO:0005742",
+          "label": "mitochondrial outer membrane translocase complex",
+          "cosine_similarity": 0.77938602
+        },
+        {
+          "identifier": "GO:0001401",
+          "label": "SAM complex",
+          "cosine_similarity": 0.77666766
+        }
+      ]
+    },
+    {
       "identifier": "GO:0031011",
       "label": "Ino80 complex",
       "neighbors": [
@@ -19930,14 +19961,14 @@
           "cosine_similarity": 0.78858969
         },
         {
+          "identifier": "GO:0031942",
+          "label": "i-AAA complex",
+          "cosine_similarity": 0.70193487
+        },
+        {
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.69659342
-        },
-        {
-          "identifier": "GO:0071819",
-          "label": "DUBm complex",
-          "cosine_similarity": 0.69285812
         }
       ]
     },
@@ -19966,9 +19997,9 @@
           "cosine_similarity": 0.70898681
         },
         {
-          "identifier": "GO:0031205",
-          "label": "endoplasmic reticulum Sec complex",
-          "cosine_similarity": 0.70271697
+          "identifier": "GO:0031942",
+          "label": "i-AAA complex",
+          "cosine_similarity": 0.70837401
         }
       ]
     },
@@ -20080,6 +20111,11 @@
           "cosine_similarity": 0.86851136
         },
         {
+          "identifier": "GO:0031942",
+          "label": "i-AAA complex",
+          "cosine_similarity": 0.86253292
+        },
+        {
           "identifier": "GO:0140595",
           "label": "MIM complex",
           "cosine_similarity": 0.85790667
@@ -20088,11 +20124,6 @@
           "identifier": "GO:0001401",
           "label": "SAM complex",
           "cosine_similarity": 0.8547166
-        },
-        {
-          "identifier": "GO:0061617",
-          "label": "MICOS complex",
-          "cosine_similarity": 0.85098369
         }
       ]
     },
@@ -21728,14 +21759,14 @@
           "cosine_similarity": 0.79034522
         },
         {
+          "identifier": "GO:0031942",
+          "label": "i-AAA complex",
+          "cosine_similarity": 0.76864166
+        },
+        {
           "identifier": "GO:0032865",
           "label": "ERMES complex",
           "cosine_similarity": 0.76661317
-        },
-        {
-          "identifier": "GO:1990334",
-          "label": "SIN/MEN two-component GAP complex",
-          "cosine_similarity": 0.74337577
         }
       ]
     },
@@ -21759,14 +21790,14 @@
           "cosine_similarity": 0.74320367
         },
         {
+          "identifier": "GO:0031942",
+          "label": "i-AAA complex",
+          "cosine_similarity": 0.73332556
+        },
+        {
           "identifier": "GO:1990098",
           "label": "core primosome complex",
           "cosine_similarity": 0.7131973
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.71078341
         }
       ]
     },
