@@ -20283,6 +20283,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+      "label": "meiotic telomere bouquet",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+          "label": "quiescent telomere hypercluster",
+          "cosine_similarity": 0.86691408
+        },
+        {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.72408078
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.70498342
+        },
+        {
+          "identifier": "cellstructuremech:meiotic_outer_plaque",
+          "label": "meiotic outer plaque",
+          "cosine_similarity": 0.68472649
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.68115118
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030117",
       "label": "membrane coat",
       "neighbors": [
@@ -22395,6 +22426,11 @@
       "label": "quiescent telomere hypercluster",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+          "label": "meiotic telomere bouquet",
+          "cosine_similarity": 0.86691408
+        },
+        {
           "identifier": "GO:0000228",
           "label": "nuclear chromosome",
           "cosine_similarity": 0.79336625
@@ -22413,11 +22449,6 @@
           "identifier": "GO:0000812",
           "label": "Swr1 complex",
           "cosine_similarity": 0.71407704
-        },
-        {
-          "identifier": "GO:0005697",
-          "label": "telomerase holoenzyme complex",
-          "cosine_similarity": 0.69821207
         }
       ]
     },

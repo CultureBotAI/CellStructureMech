@@ -1,0 +1,819 @@
+identifier: cellstructuremech:meiotic_telomere_bouquet
+label: meiotic telomere bouquet
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A polarized nuclear chromosome assembly in which telomeric ends and their
+  anchoring proteins cluster within a restricted region of the nuclear envelope during
+  meiotic prophase. Characterized in fission and budding yeast, it organizes chromosome
+  ends while chromosome arms extend into the nucleus; its duration and tethering machinery
+  differ between species.
+definition_source: DOI:10.1038/celldisc.2017.41
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T18:42:59Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T18:46:29Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ten component classes, eleven verified protein examples, two species-scoped
+    mechanisms, a verified proteomics dataset, two inspected CC BY figures, and explicit
+    model and access limits.
+  llm_assisted: true
+parent_structures:
+- GO:0032993
+part_of:
+- GO:0005634
+has_part:
+- GO:0000228
+- GO:0000781
+synonyms:
+- synonym_text: telomere bouquet
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/celldisc.2017.41
+- synonym_text: chromosomal bouquet
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/celldisc.2017.41
+components:
+- component_id: telomeric_dna
+  label: telomere
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: SO:0000624
+  grounding_notes: Native SO sequence-feature definition verified. This component
+    denotes the chromosome-end DNA, not the entire bouquet.
+  role: Ends of the linear nuclear chromosomes brought together at the nuclear periphery.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Rap1-marked telomeres cluster at prophase I; the chromosome-end DNA is
+      part of the assembly, not an external substrate.
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Taz1-marked chromosome ends remain associated with the SPB during the fission-yeast
+      bouquet stage.
+- component_id: rap1
+  label: TE2IP/Rap1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Telomere-associated scaffold class in both curated yeast systems.
+  grounding: InterPro:IPR039595
+  grounding_notes: Exact integrated family and both sequence memberships verified
+    at InterPro. This is telomeric Rap1, not the Ras-family GTPase.
+  gene_symbols:
+  - RAP1
+  - rap1
+  protein_examples:
+  - uniprot_id: UniProtKB:P11938
+    protein_label: DNA-binding protein RAP1
+    gene_symbol: RAP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Figure 4 uses Rap1-GFP at clustered meiotic chromosome ends.
+    - reference: https://www.uniprot.org/uniprotkb/P11938/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  - uniprot_id: UniProtKB:Q96TL7
+    protein_label: DNA-binding protein rap1
+    gene_symbol: rap1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1186/s12915-015-0149-x
+      notes: Figure 4 directly images meiotic Rap1-YFP and compares a Bqt1/2-binding-defective
+        mutant.
+    - reference: https://www.uniprot.org/uniprotkb/Q96TL7/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Rap1-GFP marks the budding-yeast bouquet.
+  - reference: DOI:10.1186/s12915-015-0149-x
+    notes: Rap1-DD337AA retains telomeric localization but loses Bqt1/2 interaction
+      and bouquet clustering.
+- component_id: taz1
+  label: Taz1-like telomere-binding protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Fission-yeast chromosome-end DNA-binding constituent.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Complete P79005 matches contain Myb/SANT and dimerization domains,
+    not an exact integrated whole-protein Taz1 family.
+  gene_symbols:
+  - taz1
+  protein_examples:
+  - uniprot_id: UniProtKB:P79005
+    protein_label: Telomere length regulator taz1
+    gene_symbol: taz1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Taz1-YFP tracks telomeres throughout live meiotic imaging.
+    - reference: https://www.uniprot.org/uniprotkb/P79005/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Tagged Taz1 marks the clustered telomeres and their subsequent release.
+- component_id: bqt1
+  label: Bqt1-like meiotic telomere connector
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Fission-yeast constituent of the Rap1-to-Sad1 bridge that maintains the bouquet.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro protein endpoint returned HTTP 204 for Q92358 and
+    UniProt supplied no InterPro entry. No exact family is asserted.
+  gene_symbols:
+  - bqt1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q92358
+    protein_label: Telomere bouquet protein 1
+    gene_symbol: bqt1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Figure 7 follows tagged Bqt1; induced degradation releases telomeres
+        from the SPB.
+    - reference: https://www.uniprot.org/uniprotkb/Q92358/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.01.048
+    notes: Readable primary abstract identifies the joint Bqt1/Bqt2 bridge between
+      Rap1 and Sad1; full publisher text was not accessible.
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Direct live-cell and conditional-degradation experiments support bouquet
+      residence and maintenance.
+- component_id: bqt2
+  label: Bqt2-like meiotic telomere connector
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Partner of Bqt1 in the fission-yeast telomere-to-envelope bridge.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro protein endpoint returned HTTP 204 for Q9US52 and
+    UniProt supplied no InterPro entry. A functional class is retained without a guessed
+    family ID.
+  gene_symbols:
+  - bqt2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9US52
+    protein_label: Telomere bouquet protein 2
+    gene_symbol: bqt2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: Primary abstract directly identifies Bqt2 together with Bqt1 as the Rap1-Sad1
+        connector; no uninspected figure-level detail is inferred.
+    - reference: https://www.uniprot.org/uniprotkb/Q9US52/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.01.048
+    notes: Neither connector alone forms the reported bridge; this is not a whole-bouquet
+      stoichiometry measurement.
+  - reference: DOI:10.1186/s12915-015-0149-x
+    notes: Two-hybrid experiments assay Rap1 binding to a Bqt2-Bqt1 fusion and identify
+      a separation-of-function Rap1 mutant.
+- component_id: sun
+  label: SUN domain-containing protein 1-5
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Inner-nuclear-membrane tether class represented by budding-yeast Mps3 and
+    fission-yeast Sad1.
+  grounding: InterPro:IPR045119
+  grounding_notes: Both proteins have this exact native integrated family match. Family
+    membership does not mean every SUN protein participates in a bouquet.
+  gene_symbols:
+  - MPS3
+  - sad1
+  protein_examples:
+  - uniprot_id: UniProtKB:P47069
+    protein_label: Spindle pole body assembly component MPS3
+    gene_symbol: MPS3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Meiotic Mps3 localizes at chromosome ends; its depletion disrupts Mps2
+        telomere localization.
+    - reference: https://www.uniprot.org/uniprotkb/P47069/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  - uniprot_id: UniProtKB:Q09825
+    protein_label: Spindle pole body-associated protein sad1
+    gene_symbol: sad1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: The primary abstract identifies Sad1 as the envelope/SPB-side binding
+        partner of the Bqt1/Bqt2 bridge.
+    - reference: https://www.uniprot.org/uniprotkb/Q09825/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Mps3-Mps2 co-immunoprecipitation and localization dependencies support
+      the budding-yeast tether.
+  - reference: DOI:10.1016/j.cell.2006.01.048
+    notes: The directly reported Rap1-Bqt1/Bqt2-Sad1 bridge supports the fission-yeast
+      example.
+- component_id: mps2
+  label: Monopolar spindle protein 2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Budding-yeast outer-membrane linker joining telomere-associated Mps3 to Csm4.
+  grounding: InterPro:IPR031433
+  grounding_notes: Exact native integrated family and P53159 membership verified.
+    The KASH-like functional designation is not an asserted shared Kms1 family.
+  gene_symbols:
+  - MPS2
+  protein_examples:
+  - uniprot_id: UniProtKB:P53159
+    protein_label: Monopolar spindle protein 2
+    gene_symbol: MPS2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Figures 1-4 provide co-purification, telomere localization, recruitment
+        dependency and bouquet-depletion evidence.
+    - reference: https://www.uniprot.org/uniprotkb/P53159/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Mps2 colocalizes with Ndj1/Csm4 at chromosome ends; depletion disrupts
+      Csm4 recruitment and bouquet formation.
+- component_id: csm4
+  label: Csm4-like meiotic telomere tether factor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Budding-yeast telomere-associated membrane constituent required for normal
+    clustering in the cited assay.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro protein endpoint returned HTTP 204 for Q08955 and
+    UniProt supplied no InterPro entry. LINC-core membership is disputed, but telomere-tether
+    association is observed.
+  gene_symbols:
+  - CSM4
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08955
+    protein_label: Chromosome segregation in meiosis protein 4
+    gene_symbol: CSM4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Csm4 colocalizes with Mps2 at chromosome ends; deletion abolishes normal
+        bouquet formation.
+    - reference: https://www.uniprot.org/uniprotkb/Q08955/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Co-purification and chromosome spreads support physical association, not
+      only a deletion phenotype.
+  - reference: DOI:10.1016/j.cub.2020.01.054
+    notes: This study interprets Csm4 as an accessory regulator of the Mps2-Myo2 connection
+      rather than the core SUN-KASH link.
+- component_id: ndj1
+  label: Non-disjunction protein 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Budding-yeast telomere-associated connector involved in membrane-tether recruitment.
+  grounding: InterPro:IPR062583
+  grounding_notes: Exact integrated family and Q12366 membership verified.
+  gene_symbols:
+  - NDJ1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12366
+    protein_label: Non-disjunction protein 1
+    gene_symbol: NDJ1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Figure 3 colocalizes Ndj1 and Mps2 at chromosome ends and shows loss
+        of Mps2 localization in ndj1 deletion.
+    - reference: https://www.uniprot.org/uniprotkb/Q12366/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Ndj1 is required for Mps2 association with meiotic chromosome ends; ectopic
+      reconstitution is distinguished from a normal meiotic bouquet.
+- component_id: kms1
+  label: Kms1-like nuclear-envelope tether protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Outer-membrane constituent of the established fission-yeast Sad1-Kms1 bridge.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Complete P87245 InterPro matches contain an EF-hand homologous
+    superfamily, not an exact integrated Kms1 family; no equivalence to budding-yeast
+    Mps2 is asserted.
+  gene_symbols:
+  - kms1
+  protein_examples:
+  - uniprot_id: UniProtKB:P87245
+    protein_label: Karyogamy meiotic segregation protein 1
+    gene_symbol: kms1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-56049-9
+      notes: The paper identifies Kms1 in the telomere-associated LINC system and
+        directly follows its recruitment in a partial mitotic reconstitution, not
+        a complete meiotic bouquet.
+    - reference: https://www.uniprot.org/uniprotkb/P87245/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.1038/s41467-025-56049-9
+    notes: Sad1-Kms1 is the named LINC link in the fission-yeast telomere environment.
+      The new recruitment experiment is explicitly in Rabl-deficient mitotic cells.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.26508/lsa.202000824
+  note: Native meiotic assays use SK1-derived strains. The S288C mitotic reconstitution
+    is not itself an ordinary meiotic bouquet; S288C UniProt entries serve only as
+    sequence references.
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1038/celldisc.2017.41
+  note: Live-cell meiotic prophase and conditional Bqt1-degradation experiments; bouquet
+    persistence is distinguished from the period of horsetail movement.
+functions:
+- function_id: telomere_organization
+  label: telomere organization
+  grounding: GO:0032200
+  description: Polarized organization of chromosome ends during meiotic prophase.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Direct imaging of Rap1-marked peripheral clusters.
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Taz1-marked telomeres remain clustered near the SPB during prophase.
+- function_id: pairing_and_recombination
+  label: Support of homolog pairing and meiotic recombination
+  description: The budding-yeast tether/bouquet system supports efficient homolog
+    pairing and gene conversion, without making clustering alone the exclusive cause.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Mps2-depleted and csm4-deleted cells show delayed pairing at LYS4 and reduced
+      gene conversion at ARG4/HIS4. Tethering, motion and clustering effects are not
+      experimentally isolated from one another.
+- function_id: meiotic_spindle_support
+  label: Support of meiotic spindle formation
+  description: Maintained fission-yeast telomere-SPB attachment supports normal SPB
+    behavior and spindle formation.
+  evidence:
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Premature Bqt1 destruction increases spindle defects. Some bouquet-deficient
+      cells still divide successfully, so no absolute requirement or universal fungal
+      function is asserted.
+causal_graphs:
+- graph_id: budding_yeast_tether_assembly
+  title: Budding-yeast tether recruitment and bouquet formation
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: S. cerevisiae meiosis, principally SK1-derived strains. Dependency
+    edges describe localization/depletion experiments, not proof that every dependency
+    is a direct binding reaction or a universal fungal pathway.
+  nodes:
+  - node_id: ndj1
+    label: Ndj1-class connector
+    node_type: GENE_OR_PROTEIN
+    component_ref: ndj1
+  - node_id: mps3
+    label: Mps3 SUN tether
+    node_type: GENE_OR_PROTEIN
+    component_ref: sun
+  - node_id: mps2
+    label: Mps2 linker
+    node_type: GENE_OR_PROTEIN
+    component_ref: mps2
+  - node_id: csm4
+    label: Csm4 tether factor
+    node_type: GENE_OR_PROTEIN
+    component_ref: csm4
+  - node_id: mps2_at_ends
+    label: Mps2 association with chromosome ends
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: csm4_at_ends
+    label: Csm4 association with chromosome ends
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: clustering
+    label: Meiotic telomere clustering
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: bouquet
+    label: Meiotic telomere bouquet
+    node_type: STRUCTURE
+  edges:
+  - subject: ndj1
+    predicate: supports
+    object: mps2_at_ends
+    description: Ndj1 is required for telomeric Mps2 localization in the tested meiotic
+      cells.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Figure 3C; ndj1 deletion disrupts end-associated Mps2.
+  - subject: mps3
+    predicate: supports
+    object: mps2_at_ends
+    description: Mps3 is required for Mps2 association with meiotic chromosome ends.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Figure 3C; Mps3 depletion disrupts Mps2 localization.
+  - subject: mps2
+    predicate: supports
+    object: csm4_at_ends
+    description: Mps2 supports Csm4 recruitment to chromosome ends.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Figure 3D; depletion removes end-associated Csm4 but preserves end-associated
+        Mps3.
+  - subject: mps2
+    predicate: supports
+    object: clustering
+    description: Meiotic Mps2 supports the clustered Rap1 pattern.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Figure 4 compares wild type with meiosis-specific depletion; its separate
+        SPB functions are not assigned to the bouquet.
+  - subject: csm4
+    predicate: supports
+    object: clustering
+    description: Csm4 supports bouquet clustering.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Figure 4; csm4 deletion disrupts normal clustering. This does not resolve
+        the disputed structural boundary of the smaller t-LINC complex.
+  - subject: clustering
+    predicate: produces
+    object: bouquet
+    description: Peripheral coalescence of meiotic chromosome ends establishes the
+      observed bouquet arrangement.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Live fluorescence identifies clustered Rap1-marked ends at prophase I.
+- graph_id: fission_yeast_bouquet_maintenance
+  title: Fission-yeast bouquet maintenance and meiotic spindle function
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: S. pombe conditional Bqt1 depletion and live-cell experiments. Bouquet
+    maintenance supports normal SPB behavior but is not an absolute requirement for
+    successful division in every mutant cell.
+  nodes:
+  - node_id: bqt1
+    label: Bqt1 connector
+    node_type: GENE_OR_PROTEIN
+    component_ref: bqt1
+  - node_id: maintenance
+    label: Maintenance of the telomere-SPB connection
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: cdk1
+    label: Timely CDK1-cyclin B accumulation at the SPB
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: spindle
+    label: Functional meiotic spindle formation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: bqt1
+    predicate: supports
+    object: maintenance
+    description: Bqt1 maintains the existing bouquet connection.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Conditional Bqt1-AID destruction during prophase releases telomeres,
+        distinguishing maintenance from initial assembly.
+  - subject: maintenance
+    predicate: supports
+    object: cdk1
+    description: The maintained bouquet supports timely accumulation of CDK1-cyclin
+      B at the SPB.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Live-cell Cdc2/Cdc13 localization and bqt1 deletion comparisons; the
+        local molecular transfer mechanism remains unresolved.
+  - subject: maintenance
+    predicate: supports
+    object: spindle
+    description: Premature bouquet disruption increases SPB and spindle defects.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Auxin-dependent Bqt1 destruction yields defective SPBs and spindles;
+        not all cells fail, and controls lacking the degron retain meiosis.
+datasets:
+- accession: PXD001841
+  title: Phosphorylation of S.pombe Rap1 analysed by LC-MS/MS
+  dataset_type: PROTEOMICS
+  repository: PRIDE
+  organism: Schizosaccharomyces pombe
+  url: https://www.ebi.ac.uk/pride/archive/projects/PXD001841
+  publication: DOI:10.1186/s12915-015-0149-x
+  description: Rap1 phosphosite analysis in synchronized meiotic cells at 3.5 and
+    4.5 hours.
+  platform: LC-MS/MS, LTQ Orbitrap Velos
+  notes: Native PRIDE API identity, organism, experimental description and linked
+    DOI/PMID verified on 2026-10-05. Partial submission; no raw spectra were downloaded
+    or independently reanalyzed. A phosphorylation catalog is not proof that phosphorylation
+    triggers bouquet dispersal.
+evidence:
+- reference: DOI:10.26508/lsa.202000824
+  notes: Fan et al. 2020, PMID 32967926; native PMC7536833.1 Results, Discussion and
+    relevant Methods read. Direct budding-yeast tether localization, co-purification,
+    depletion, bouquet imaging and gene-conversion assays.
+- reference: DOI:10.1186/s12915-015-0149-x
+  notes: Amelina et al. 2015, PMID 26058898; native PMC4660835.1 interaction/mutagenesis
+    Results, Discussion, Methods and deposited dataset inspected.
+- reference: DOI:10.1038/celldisc.2017.41
+  notes: 2017 study, PMID 29123917; native PMC5674143.1 bouquet-maintenance/function
+    Results and Methods read. Live-cell and conditional-degradation evidence.
+- reference: DOI:10.1016/j.cub.2020.01.054
+  notes: 2020 study, PMID 32059771; native PMC7181386.1 Results, Discussion and imaging/spread
+    Methods read. Alternative Csm4 interpretation and motor-association evidence retained
+    with limits.
+- reference: DOI:10.1038/s41467-025-56049-9
+  notes: 2025 study, PMID 39833200; native PMC11747273.1 telocentrosome-recruitment
+    and natural meiotic-entry Results read. Partial mitotic recruitment is distinct
+    from complete bouquet formation.
+- reference: DOI:10.1016/j.cell.2006.01.048
+  notes: Chikashige et al. 2006, PMID 16615890; DOI/PMID and complete abstract read
+    via Europe PMC. Publisher access returned 403; Europe PMC lists subscription-only
+    access. Connector claims are limited to the abstract, corroborated by later studies.
+- reference: GO:0032993
+  notes: Native protein-DNA complex definition is broader than this named assembly.
+- reference: GO:0005634
+  notes: Native nucleus definition verifies the encompassing compartment.
+- reference: GO:0000228
+  notes: Native nuclear chromosome definition; chromosomes participate in the polarized
+    assembly.
+- reference: GO:0000781
+  notes: Native chromosome, telomeric region definition denotes the grouped ends,
+    not the whole bouquet.
+discussions:
+- discussion_id: identity_and_mereology
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the chromosome assembly distinct from its formation process and tether
+    subcomplexes.
+  notes: Ignored- and hidden-inclusive name, synonym, identity and citation searches
+    plus parsed YAML identities found no existing bouquet record. GO:0045141 denotes
+    meiotic telomere clustering, a biological process, not the structure. GO:0034993
+    and GO:1990612 denote smaller membrane linkers; neither is an exact identity.
+    The bouquet is a protein-DNA assembly within the nucleus, containing nuclear chromosomes
+    and their telomeric regions, not part of one chromosome or the whole SPB. It is
+    distinct from the quiescent telomere hypercluster, ordinary interphase clusters,
+    telomerase and the entire horsetail nucleus.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+  - reference: DOI:10.1038/celldisc.2017.41
+  - reference: GO:0045141
+  - reference: GO:0034993
+  - reference: GO:1990612
+- discussion_id: grounding_tasks
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Find exact whole-protein family identifiers for Taz1, Bqt1, Bqt2, Csm4 and
+    Kms1.
+  notes: Complete native InterPro protein responses were inspected. Taz1 has only
+    domains/superfamilies, Kms1 an EF-hand superfamily; Bqt1, Bqt2 and Csm4 return
+    HTTP 204 with no matches. UniProt supplies verified sequence exemplars. No isolated
+    domain or guessed family is promoted to whole-protein identity.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P79005/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q92358/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q9US52/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q08955/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P87245/
+- discussion_id: tether_boundary_conflict
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  prompt: Resolve the core-versus-accessory placement of Csm4 within the smaller t-LINC
+    complex.
+  notes: 'The two 2020 studies agree that Csm4 associates with telomeres and Mps2
+    and is required for normal dynamics, but differ in their structural model: Fan
+    et al. call Mps2-Mps3-Csm4 a heterotrimeric t-LINC, while Lee et al. favor Csm4
+    as an accessory regulator. Both place it at the assembled telomere-tether system,
+    so it is retained as a bouquet constituent without deciding the smaller complex
+    boundary. The proposed nonamer in Fan Figure 7 is not measured copy number and
+    is not imported as stoichiometry.'
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+  - reference: DOI:10.1016/j.cub.2020.01.054
+- discussion_id: species_and_essentiality
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep species-specific components and assembly requirements separate.
+  notes: These are component classes with explicitly paired sequence examples, not
+    a claim that every bouquet contains every listed factor. Mps3 and Sad1 share the
+    verified SUN family; Mps2 and Kms1 are not forced into one family. Depletion/deletion
+    requirements in one organism do not establish record-wide universal essentiality,
+    which remains UNKNOWN. The Kms1 recruitment experiment in 2025 is partial ectopic
+    mitotic reconstitution; it is not presented as a normal meiotic localization assay.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+  - reference: DOI:10.1038/celldisc.2017.41
+  - reference: DOI:10.1038/s41467-025-56049-9
+- discussion_id: component_declines
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish telomere tethers from drivers, general envelope anchors and
+    downstream machinery.
+  notes: The composition list focuses on chromosome ends and their bouquet connector
+    system. Bqt3/Bqt4 are general pre-existing envelope anchors discussed by the sources;
+    their importance for encounter/attachment is not by itself bouquet-core occupancy.
+    Myo2 binds the assembled budding-yeast tether and Myo1/Myo4 can label dispersed
+    meiotic ends, but those movement assays do not establish specific residence in
+    the clustered bouquet; external motors and entire actin/microtubule systems are
+    therefore not listed as bouquet constituents. Cdc2/Cdc13 transiently accumulate
+    at the telomere-SPB interface as signaling effectors; no fixed bouquet subunit
+    status is inferred. Rec8 chromosome-axis, histone chromatin, Tub4/Sid4/Ppc89 SPB
+    and envelope markers do not automatically import their entire complexes. The nucleus,
+    SPB, telocentrosome and synaptonemal complex are not collapsed into the bouquet.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+  - reference: DOI:10.1038/celldisc.2017.41
+  - reference: DOI:10.1016/j.cub.2020.01.054
+  - reference: DOI:10.1038/s41467-025-56049-9
+- discussion_id: disassembly_phosphorylation
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  prompt: Identify the physiological release mechanism without equating correlation
+    with causation.
+  notes: Rap1 phosphorylation increases through meiotic prophase, but the tested multi-site
+    phosphomimetic and nonphosphorylatable mutants retain normal bouquet formation
+    and dissociation. Rap1-DD337AA instead specifically disrupts Bqt1/2 binding and
+    clustering. Induced Bqt1-AID destruction demonstrates maintenance dependence,
+    not that auxin or the engineered degron is a natural disassembly pathway. The
+    complete physiological trigger remains unresolved.
+  evidence:
+  - reference: DOI:10.1186/s12915-015-0149-x
+  - reference: DOI:10.1038/celldisc.2017.41
+- discussion_id: function_and_reconstitution_limits
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Avoid making clustering the unique cause of every mutant phenotype.
+  notes: Budding-yeast pairing/gene-conversion experiments perturb tethering and movement
+    together; Mps2 also has independent SPB roles. Fission-yeast bqt1 mutants can
+    still divide successfully in a subset of cells. The 2025 experiments show that
+    retained Ndc80-SPB attachment inhibits meiotic entry/bouquet completion, while
+    ectopic Bqt1/Bqt2 recruitment in mitosis is incomplete. Neither the mitotic reconstituted
+    t-LINC nor a partial telocentrosome is itself the normal meiotic bouquet.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+  - reference: DOI:10.1038/celldisc.2017.41
+  - reference: DOI:10.1038/s41467-025-56049-9
+- discussion_id: taxon_and_measurement_limits
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Preserve experimental taxon and measurement scope.
+  notes: Only the two directly characterized yeast species are canonical examples;
+    no fungal prevalence or absence row is inferred. UniProt strain identities are
+    sequence references, not exact SK1 or mating-stock assignments. Fission-yeast
+    persistence through prophase and transient budding-yeast clustering are not assigned
+    one universal duration. Fluorescent focus counts, spatial resolution, schematic
+    models and culture-hour measurements do not supply molecular stoichiometry, dimensions
+    or universal chromosome counts.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+  - reference: DOI:10.1038/celldisc.2017.41
+- discussion_id: source_access_limits
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Identify which primary sources were read in full relevant sections and which
+    were abstract-only.
+  notes: Current PMC OA native JATS was used for the five later papers cited here.
+    The 2006 Cell publisher page returned 403 and Europe PMC supplied only a subscription-linked
+    abstract. The bridge claim is explicitly abstract-level; no inaccessible Methods,
+    figure or quantitative result is invented. Additional older leads PMC1885593 and
+    PMC1569800 were absent from the current OA metadata bucket; that is a route-specific
+    limit, not a claim that no full text exists.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.01.048
+  - reference: https://europepmc.org/article/MED/16615890
+- discussion_id: image_license_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep figure reuse permissions separate from data waivers and experimental
+    panels.
+  notes: Both original multipanel figures were visually inspected unmodified. PMC7536833.1
+    Figure 4 has exact CC BY 4.0 permission. PMC4660835.1 Figure 4 is an article figure
+    under CC BY 4.0; its separate CC0 data waiver is not substituted for the article
+    licence. The latter was manually scoped from native JATS without relaxing the
+    helper's licence checks. Sequence alignments, asci, mitotic colocalization and
+    meiotic time courses are identified separately, not all called bouquet micrographs.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+  - reference: DOI:10.1186/s12915-015-0149-x
+images:
+- image_id: pmc_pmc7536833_fig4
+  file: pmc7536833_fig4.jpg
+  file_sha256: 940897253f430c6d6d5b4b80b1dca59d2a5b6db16a5bbfa4f3bb531dfc253b07
+  source: PMC
+  source_accession: PMC7536833.1 fig4
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7536833/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7536833.1/LSA-2020-00824_Fig4.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Jinbo Fan, Hui Jin, Bailey A Koch, Hong-Guo Yu; CC BY 4.0, via PubMed
+    Central; unmodified Figure 4.
+  modality: OTHER
+  caption: 'Multipanel Figure 4: Rap1-GFP marks clustered chromosome ends in wild-type
+    budding-yeast prophase I and dispersed ends in Mps2-depleted and csm4-deleted
+    cells. Tub4-mApple marks the SPB; panel A bar is 1 micrometer. Bouquet frequency,
+    viability and ARG4/HIS4 gene-conversion plots accompany the micrographs.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.26508/lsa.202000824
+  retrieved_on: '2026-10-05'
+  notes: Figure 4. from article version PMC7536833.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Original image visually inspected without alteration; meiotic experiments use
+    SK1-derived strains, not the S288C sequence-reference stock.
+- image_id: pmc_pmc4660835_fig4
+  file: pmc4660835_fig4.jpg
+  file_sha256: c38253a30a2f55547b92f39c20ad0308a8ee450d1cf25af84dcc6659d5ac8ca4
+  source: PMC
+  source_accession: PMC4660835.1 Fig4
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4660835/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC4660835.1/12915_2015_149_Fig4_HTML.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Hanna Amelina, Shaan Subramaniam, Vera Moiseeva, Christine Anne Armstrong,
+    Siân Rosanna Pearson, Kazunori Tomita; CC BY 4.0, via PubMed Central; unmodified
+    Figure 4.
+  modality: OTHER
+  caption: Figure 4 combines a Rap1 sequence alignment, asci, mitotic Rap1/Taz1 colocalization,
+    and live meiotic time courses. Panel D compares wild type with Rap1-DD337AA mutants
+    using Sid4-mCherry for the SPB, Rap1-YFP for telomeres and Hht1-Cerulean for chromatin;
+    its bar is 2 micrometers. Panel C is mitotic, not a meiotic bouquet.
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1186/s12915-015-0149-x
+  retrieved_on: '2026-10-05'
+  notes: Article Figure 4 is covered by native JATS CC BY 4.0; the separately scoped
+    CC0 data waiver is not the figure licence. Manual scope-aware licence review leaves
+    automatic checks unchanged. Original media MD5 1fcd660bea0bff0ca9b7e5a108f9b0e9
+    verified and image visually inspected; no crop or alteration.
