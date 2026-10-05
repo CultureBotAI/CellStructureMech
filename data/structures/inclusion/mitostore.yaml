@@ -1,0 +1,576 @@
+identifier: cellstructuremech:mitostore
+label: MitoStore
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A transient cytosolic protein granule characterized in budding yeast that
+  sequesters non-imported mitochondrial precursor proteins, is enriched for presequence-containing
+  cargo and associates with the mitochondrial surface.
+definition_source: DOI:10.15252/embj.2022112309
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T08:21:01Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T08:25:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added source-bounded MitoStore composition, family/reference grounding,
+    precursor recruitment and recovery graphs, dataset-conflict provenance, and an
+    inspected CC BY 4.0 primary figure.
+  llm_assisted: true
+synonyms:
+- synonym_text: MitoStores
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.15252/embj.2022112309
+parent_structures:
+- GO:0016234
+part_of:
+- GO:0005737
+components:
+- component_id: precursor_cargo
+  label: presequence-enriched protein precursor cargo
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: A heterogeneous cargo class, not one protein family or fixed complex.
+    Individual mitochondrial precursor reporters do not define invariant composition.
+  role: Non-imported proteins enriched for mitochondrial precursors with N-terminal
+    targeting sequences. Membership depends on cargo and condition; some secretory
+    precursors are also reported.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Figures 3C and 4A-B compare Hsp104 pulldowns with DHFR controls. Figure
+      5A verifies Aim17, Pdb1 and Mam33 colocalization in specific conditions; enrichment
+      is not an exhaustive constituent list.
+- component_id: small_hsp
+  label: Small heat shock protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding: InterPro:IPR031107
+  gene_symbols:
+  - HSP42
+  - HSP26
+  role: Chaperone class represented by Hsp42 and Hsp26, whose stress-enriched co-purification
+    supports candidate residence. Hsp42 is required for the tested Aim17-positive
+    granules; the same requirement is not established for Hsp26. Neither fixed copy
+    number nor identical functions are asserted.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12329
+    protein_label: Heat shock protein 42
+    gene_symbol: HSP42
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of YPH499-derived
+      experiments to S288C. Figures 4C-D support co-purification; Figures 5B and 6D
+      show the Hsp42-loss granule phenotype.
+    evidence:
+    - reference: UniProtKB:Q12329
+      notes: Native reviewed entry verifies accession, recommended name, gene and
+        taxon 559292.
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figures 4C-D support co-purification; Figures 5B and 6D show the Hsp42-loss
+        granule phenotype.
+  - uniprot_id: UniProtKB:P15992
+    protein_label: Heat shock protein 26
+    gene_symbol: HSP26
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of YPH499-derived
+      experiments to S288C. Figures 4C-D support clogger-dependent co-purification
+      with Hsp104. Hsp26 essentiality and direct granule localization were not established
+      here.
+    evidence:
+    - reference: UniProtKB:P15992
+      notes: Native reviewed entry verifies accession, recommended name, gene and
+        taxon 559292.
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figures 4C-D support clogger-dependent co-purification with Hsp104. Hsp26
+        essentiality and direct granule localization were not established here.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Figures 4C-D and Results identify Hsp26/Hsp42 enrichment in Hsp104 pulldowns
+      under clogger stress and interpret them as MitoStore constituents; this is an
+      association-based composition inference.
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Figures 5B and 6D support Hsp42-dependent reporter-granule formation in
+      the tested yeast backgrounds, not a requirement for every member of the family.
+  - reference: InterPro:IPR031107
+    notes: Native integrated family metadata and complete three-entry match sets for
+      Q12329 and P15992 verify membership in this family. Domain IPR002068 and superfamily
+      IPR008978 are not used as family identities.
+- component_id: hsp104
+  label: Hsp104-type disaggregase
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - HSP104
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The complete 11-entry native InterPro match set for P31539 contains
+    broader ClpA/B families IPR001270 and IPR050130, not an exact Hsp104-type family.
+    The remaining matches are domains, sites or superfamilies.
+  role: Chaperone bound to precursor-containing granules. HSP104 loss prevents the
+    tested Aim17-positive granules, supporting a condition-specific formation requirement.
+    It is not modeled as a fixed coat, nor does this experiment directly measure an
+    Hsp104-mediated cargo-release step.
+  protein_examples:
+  - uniprot_id: UniProtKB:P31539
+    protein_label: Heat shock protein 104
+    gene_symbol: HSP104
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of YPH499-derived
+      experiments to S288C. Figures 3-5 show granule association, cargo co-purification
+      and the HSP104-loss reporter-granule phenotype.
+    evidence:
+    - reference: UniProtKB:P31539
+      notes: Native reviewed entry verifies accession, recommended name, gene and
+        taxon 559292.
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figures 3-5 show granule association, cargo co-purification and the HSP104-loss
+        reporter-granule phenotype.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Figure 5A shows colocalization with precursor reporters and Figure 5B separately
+      tests hsp104 deletion; the actual Figure 5 panels were inspected.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: All 11 integrated matches inspected, next=null; broader ClpA/B families
+      are not substituted for the narrower component.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.15252/embj.2022112309
+  note: The Methods state YPH499deltaarg4 derivatives unless otherwise specified.
+    Native UniProt taxonomy lists YPH499 under species 4932; a bounded NCBI YPH499-name
+    query yielded no separate strain taxid. The supplemental strain table was not
+    independently inspected.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: UniProtKB:Q12329
+  note: Reference-sequence provenance for the reviewed Hsp42, Hsp26 and Hsp104 examples.
+    This is not the asserted background of the YPH499-derived imaging and perturbation
+    experiments.
+functions:
+- function_id: precursor_sequestration
+  label: temporary sequestration of non-imported precursor proteins
+  description: Concentrates a condition-dependent, presequence-enriched protein cargo
+    in cytosolic granules near mitochondria when precursor supply exceeds import capacity.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Figures 3-5 establish the granules, cargo enrichment and condition-dependent
+      reporter incorporation; Figure 6C/E-F supports mitochondrial-surface association.
+- function_id: import_competence
+  label: retention of import-competent mitochondrial precursors
+  description: A pulse/chase split-GFP assay supports later mitochondrial access of
+    Aim17 synthesized during import stress. This does not establish that every stored
+    cargo is import competent, that all imported protein passed through a granule,
+    or that an individual molecule was tracked directly from a granule into mitochondria.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Figure 6A-B and Results follow reporter redistribution and post-induction
+      Aim17-GFP11 access to mitochondrial Oxa1-GFP1-10 after clogger expression stops.
+causal_graphs:
+- graph_id: precursor_granule_assembly
+  title: Condition-dependent precursor recruitment into MitoStores
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Yeast reporter and import-clogger experiments. Granule formation, individual
+    cargo incorporation and mitochondrial import are different readouts. Chaperone-loss
+    effects are limited to the tested conditions; co-purification alone is not treated
+    as a complete inventory.
+  nodes:
+  - node_id: clogger
+    label: Expression of mitochondrial import clogger
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: cargo
+    label: Non-imported precursor protein cargo
+    node_type: GENE_OR_PROTEIN
+    component_ref: precursor_cargo
+  - node_id: mitostore
+    label: MitoStore
+    node_type: STRUCTURE
+  - node_id: hsp42_loss
+    label: HSP42 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: hsp104_loss
+    label: HSP104 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: mam33_mts_loss
+    label: Removal of the Mam33 targeting sequence
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: mam33_recruitment
+    label: Mam33 incorporation into granules
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: clogger
+    predicate: promotes cytosolic accumulation of
+    object: cargo
+    description: Competitive import inhibition increases non-imported precursor availability;
+      the Rpn4 background affects the response.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Results in the Rpn4/proteome sections and Figures 2A, EV1A and 3C support
+        precursor accumulation and Hsp104 association.
+  - subject: cargo
+    predicate: accumulates in
+    object: mitostore
+    description: Selected reporters localize to Hsp104-positive granules; their behavior
+      is not generalized to all mitochondrial proteins.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figures 4A-B and 5A establish enrichment and Aim17/Pdb1/Mam33 reporter
+        localization.
+  - subject: hsp42_loss
+    predicate: impairs formation of
+    object: mitostore
+    description: Aim17-positive granules are not observed in the tested hsp42-deletion
+      condition; Hsp104-positive granules are also lost in the reported assay.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 5B separately tests hsp42 deletion and Figure 6D tests Hsp104-GFP
+        foci.
+  - subject: hsp104_loss
+    predicate: impairs formation of
+    object: mitostore
+    description: Aim17-RFP-containing granules are not observed in the tested hsp104-deletion
+      condition.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 5B contains separate hsp104 and hsp42 deletion panels, not only
+        a double-deletion experiment.
+  - subject: mam33_mts_loss
+    predicate: impairs
+    object: mam33_recruitment
+    description: Removing the N-terminal targeting sequence prevents the tested Mam33
+      reporter from entering the granules. This is not a universal targeting rule
+      for every cargo.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 5C and its Results compare the truncated reporter with the intact-cargo
+        observations.
+  - subject: mam33_recruitment
+    predicate: contributes reporter cargo to
+    object: mitostore
+    description: Intact Mam33-RFP colocalizes with Hsp104 under import-clogger conditions.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 5A demonstrates condition-specific localization; Figure 5C limits
+        the targeting-sequence interpretation.
+- graph_id: precursor_recovery_and_tolerance
+  title: Reporter recovery and chaperone-dependent stress tolerance
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: 'Combines explicitly distinct yeast assays: 4.5-hour induction followed
+    by a 4-hour import chase, and viability after 24-hour clogger exposure in lactate
+    medium. Reporter recovery supports the storage interpretation without direct single-molecule
+    transfer evidence. Chaperone epistasis does not prove that granules alone cause
+    all survival effects.'
+  nodes:
+  - node_id: mitostore
+    label: MitoStore
+    node_type: STRUCTURE
+  - node_id: cargo
+    label: Stored precursor cargo represented by Aim17
+    node_type: GENE_OR_PROTEIN
+    component_ref: precursor_cargo
+  - node_id: clogger_stop
+    label: Stopping galactose-induced clogger expression
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: import
+    label: Post-chase Aim17 access to mitochondria
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: rpn4_loss
+    label: RPN4 deletion in the tested assays
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: hsp42_loss
+    label: HSP42 deletion in the rpn4 background
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: hsp104_loss
+    label: HSP104 deletion in the rpn4 background
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: survival
+    label: Viability during clogger stress
+    node_type: STATE
+  edges:
+  - subject: mitostore
+    predicate: sequesters
+    object: cargo
+    description: Aim17 is one tested precursor reporter, not an invariant structural
+      subunit.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 5A establishes Aim17-RFP localization with Hsp104.
+  - subject: cargo
+    predicate: can remain competent for
+    object: import
+    description: The split-GFP chase supports retained import competence of presynthesized
+      Aim17; not every molecule is directly tracked from a visible granule.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 6B measures Aim17-GFP11 complementation with mitochondrial Oxa1-GFP1-10
+        after induction and chase.
+  - subject: clogger_stop
+    predicate: permits recovery of
+    object: import
+    description: Cells shifted to noninducing medium regain mitochondrial access for
+      the previously induced reporter.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 6A-B and Results compare induction and the four-hour chase.
+  - subject: rpn4_loss
+    predicate: increases the measured recovery of
+    object: import
+    description: More reporter reaches the mitochondrial split-GFP compartment in
+      the tested rpn4-deletion chase.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 6B compares wild-type and rpn4 deletion after clogger expression
+        and recovery.
+  - subject: rpn4_loss
+    predicate: increases
+    object: survival
+    description: Rpn4 deletion improves survival in this import-stress assay when
+      the chaperone system remains available; this is not general resistance to proteotoxic
+      stress.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 6G tests viability after 24-hour clogger exposure; the earlier
+        Results distinguish this from cytosolic aggregation challenges.
+  - subject: hsp42_loss
+    predicate: reduces
+    object: survival
+    description: Removing Hsp42 suppresses the rpn4-background resistance under the
+      tested clogger challenge.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 6G tests the relevant mutant backgrounds.
+  - subject: hsp104_loss
+    predicate: reduces
+    object: survival
+    description: Removing Hsp104 suppresses the rpn4-background resistance under the
+      tested clogger challenge.
+    evidence:
+    - reference: DOI:10.15252/embj.2022112309
+      notes: Figure 6G tests the relevant mutant backgrounds.
+evidence:
+- reference: DOI:10.15252/embj.2022112309
+  notes: Primary definition, precursor/chaperone association, reporter interventions,
+    recovery assay and imaging.
+- reference: DOI:10.1073/pnas.2300475120
+  notes: 'Comparative boundary source: Tom70-associated heat-stress aggregates share
+    features with MitoStores, but its experiments do not establish exact identity
+    for every aggregate.'
+datasets:
+- accession: PXD035762
+  title: Paper-linked Hsp104 AP-MS proteomics deposit
+  description: The MitoStore paper's Data availability links this accession, and native
+    PRIDE metadata names the MitoStore Hsp104 AP-MS dataset. It is retained as provenance
+    with an unresolved metadata conflict, not as an independently reanalyzed composition
+    table.
+  organism: Saccharomyces cerevisiae
+  dataset_type: PROTEOMICS
+  repository: PRIDE
+  url: https://www.ebi.ac.uk/pride/archive/projects/PXD035762
+  publication: DOI:10.15252/embj.2022112309
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: The inspected Data availability statement explicitly cites PXD035762.
+  - reference: https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD035762
+    notes: Native title and sample-processing description concern MitoStores/Hsp104
+      IP-MS; archive bibliographic and processing metadata conflict with that linkage.
+  notes: Native metadata inspected on 2026-10-05. Its references field names the Ubc8
+    paper with DOI 10.26508/LSA.202201526, while its processing narrative reports
+    2920 proteins and the MitoStore Hsp104 IP panel reports 1154. The publication
+    field follows the MitoStore paper's own linkage. No sample count, full constituent
+    inventory or corrected archive bibliography is inferred; raw files were not read.
+discussions:
+- discussion_id: identity_scope
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep the named precursor-rich cytosolic granule separate from other mitochondrial
+    or protein deposits.
+  rationale: Similarity, a shared chaperone marker and organelle proximity do not
+    establish exact structure identity.
+  notes: MitoStore is not an intramitochondrial IMiQ compartment, a mitochondrial-derived
+    membrane compartment, IPOD or INQ. It resembles Q-bodies/CytoQ but these are not
+    asserted as exact synonyms. Cytoplasmic parthood does not mean mitochondrial-matrix
+    localization. Native MitoStore/MitoStores GO searches and exact label/synonym
+    queries found no exact term; the full returned 794-hit precursor-granule fuzzy
+    set was inspected during preparation.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Results naming paragraph, Figure 6 localization experiments and Discussion
+      define the curated scope.
+  - reference: GO:0016234
+    notes: Active inclusion-body term is broader than MitoStore.
+  - reference: GO:0005737
+    notes: Active cytoplasm term supplies parthood vocabulary.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: small_hsp_scope
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Retain the evidence difference between Hsp42 and Hsp26 within the shared
+    small-HSP component class.
+  rationale: A family-level component must not imply identical member requirements
+    or direct localization evidence for every member.
+  notes: IPR031107 denotes the component's deliberately family-level label, not a
+    narrow Hsp42-only identity. Hsp42 and Hsp26 both co-purify in clogger-dependent
+    Hsp104 pull-downs, supporting candidate residence; only Hsp42 is directly tested
+    for granule formation here. Conditional essentiality refers to that Hsp42 result,
+    not to every family member. Neither fixed stoichiometry nor a universal coat is
+    inferred.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Figures 4C-D, 5B and 6D support the distinct association and perturbation
+      claims.
+  - reference: InterPro:IPR031107
+    notes: Native integrated family metadata and both complete protein-match sets
+      verified.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: grounding_and_inventory
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact Hsp104-family grounding and native cargo/resident inventories.
+  rationale: Reporter enrichment and Hsp104 interactors are not a complete source-neutral
+    composition model.
+  notes: Retain Hsp104 and heterogeneous cargo as REVIEWED_LABEL_ONLY. Broader ClpA/B
+    families and domains are not exact Hsp104 identities. The small-HSP class is family-grounded,
+    but direct residence and condition-specific Hsp26 requirements remain open. Mam33/Aim17/Pdb1
+    reporters are not made invariant subunits.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Figures 3-5 support a selected, condition-dependent cargo and chaperone
+      model.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: The complete 11-entry integrated match set has no exact narrower family.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: other_interactors
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Do not import every Hsp104 interactor, regulator or mitochondrial-surface
+    factor as a MitoStore component.
+  rationale: General chaperone interactions and related aggregate assays may denote
+    different structures.
+  notes: Rnq1 and Sis1 co-isolation is not MitoStore-specific; the reported Rnq1-loss
+    test retains granules. Sse1 is a stress-enriched interactor whose stable MitoStore
+    role needs separate confirmation. Rpn4 is an upstream regulator, not a listed
+    constituent. Tom70 manipulations in the comparative heat-stress study do not establish
+    an invariant MitoStore coat or requirement. No proteasome, RNA scaffold or membrane
+    enclosure is inferred.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Figures 3-4 and reported Figure EV5A distinguish background Hsp104 clients
+      from the precursor-granule model; the actual EV5 image was not inspected.
+  - reference: DOI:10.1073/pnas.2300475120
+    notes: Primary Results and Discussion compare mitochondria-associated heat-stress
+      aggregates with MitoStores without proving exact equivalence; actual figures
+      were not inspected.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: recovery_and_survival_scope
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep the import-chase and survival conclusions specific to their measured
+    readouts.
+  rationale: Chaperone perturbations are pleiotropic and a reporter chase does not
+    track every stored molecule.
+  notes: The Aim17 split-GFP assay supports retention of import competence after stress.
+    It does not directly show transfer from each visible granule or universal recovery
+    of cargo. Hsp42/Hsp104 loss affects the tested rpn4-background survival phenotype,
+    but does not prove that granules alone account for resistance. Neither general
+    stress protection nor constitutive degradation is assigned.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Figure 6A-B and 6G are different recovery and viability assays; Results
+      limit broad proteotoxic-resistance interpretations.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: dataset_metadata_conflict
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile the paper-linked PRIDE deposit's bibliography and processing metadata
+    before using its raw-data inventory.
+  rationale: The accession resolves but inconsistent metadata must not silently define
+    composition or sample scope.
+  notes: PXD035762 is explicitly linked by the MitoStore paper and its PRIDE title,
+    yet native references name the Ubc8 publication. Archive processing and paper
+    IP-protein counts also differ. Preserve this conflict and the explicit provenance-only
+    dataset entry. The supplementary spreadsheets and raw mass-spectrometry files
+    have not been reanalyzed.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Inspected Data availability and Hsp104 IP panel identify the linkage and
+      paper scope.
+  - reference: https://www.ebi.ac.uk/pride/ws/archive/v2/projects/PXD035762
+    notes: Native references and processing metadata inspected on 2026-10-05.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: remaining_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve finer granule identity boundaries, experimental strain mappings,
+    prevalence and material properties.
+  rationale: One species and optical reporter assays do not establish universal prevalence,
+    fixed dimensions or a liquid phase.
+  notes: Keep broad distribution, physical properties and stoichiometry unset. Hsp104-positive
+    focus counts and two-dimensional fluorescent diameters are not invariant MitoStore
+    measurements. YPH499-derived experimental provenance remains distinct from S288C
+    reference sequences; supplemental strain tables were not read. Resemblance to
+    Q-bodies/CytoQ remains a future lump/split question, not an exact synonym. No
+    general liquid-liquid phase-separation mechanism is asserted.
+  evidence:
+  - reference: DOI:10.15252/embj.2022112309
+    notes: Methods identify the default strain and optical measurements; Discussion
+      leaves physical and functional surface interactions open.
+  - reference: DOI:10.1073/pnas.2300475120
+    notes: The related Tom70 study's heat-stress and engineered vacuolar relocation
+      assays are not automatically transferred to this narrower precursor-storage
+      record.
+  posed_by: codex
+  posed_date: '2026-10-05'
+images:
+- image_id: pmc_pmc10068336_embj2022112309_fig_0005
+  file: pmc10068336_embj2022112309_fig_0005.jpg
+  file_sha256: 08fe6da4832a3b949f031e367ee32323e88d73b83fece71cfd4ec02fd03e35d0
+  source: PMC
+  source_accession: PMC10068336.1 embj2022112309-fig-0005
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10068336/#embj2022112309-fig-0005
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC10068336.1/EMBJ-42-e112309-g007.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Lena Krämer, Niko Dalheimer, Markus Räschle, Zuzana Storchová, Jan
+    Pielage, Felix Boos, Johannes M Herrmann (2023), Figure 5; CC BY 4.0, via PubMed
+    Central. Unmodified.
+  modality: FLUORESCENCE
+  caption: 'Mitochondrial precursor reporters and Hsp104-positive granules in yeast.
+    A: Aim17, Pdb1 and Mam33 reporter localization in wild-type and rpn4-deletion
+    cells with control or clogger expression. B: separate hsp104- and hsp42-deletion
+    Aim17 assays. C: targeting-sequence-deleted Mam33. D: glucose/lactate growth conditions.
+    Scale bars: A, 2 micrometers; B and D, 10 micrometers; C, 5 micrometers.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.15252/embj.2022112309
+  retrieved_on: '2026-10-05'
+  notes: Figure 5 from article version PMC10068336.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Actual panels A-D and their caption were inspected;
+    no separate third-party credit was found. The Methods identify YPH499deltaarg4
+    derivatives unless otherwise specified. Panel B has separate single-deletion conditions.
+    The image is unmodified; caption wording is curator-authored.

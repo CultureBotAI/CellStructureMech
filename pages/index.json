@@ -2340,6 +2340,15 @@
   "definition": "An intracellular non-membrane-bounded organelle comprising a matrix of coalesced lipids surrounded by a phospholipid monolayer. May include associated proteins."
  },
  {
+  "identifier": "cellstructuremech:mitostore",
+  "label": "MitoStore",
+  "category": "INCLUSION",
+  "kind": "INCLUSION_BODY",
+  "status": "PROPOSED",
+  "page": "structures/inclusion/mitostore.html",
+  "definition": "A transient cytosolic protein granule characterized in budding yeast that sequesters non-imported mitochondrial precursor proteins, is enriched for presequence-containing cargo and associates with the mitochondrial surface."
+ },
+ {
   "identifier": "GO:0034430",
   "label": "monolayer-surrounded lipid storage body outer lipid monolayer",
   "category": "INCLUSION",

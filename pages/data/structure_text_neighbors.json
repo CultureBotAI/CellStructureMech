@@ -7985,6 +7985,11 @@
           "cosine_similarity": 0.68285978
         },
         {
+          "identifier": "cellstructuremech:mitostore",
+          "label": "MitoStore",
+          "cosine_similarity": 0.67962873
+        },
+        {
           "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
           "label": "intramitochondrial protein quality control compartment",
           "cosine_similarity": 0.626074
@@ -7998,11 +8003,6 @@
           "identifier": "cellstructuremech:bacterial_aggresome",
           "label": "bacterial aggresome",
           "cosine_similarity": 0.58503462
-        },
-        {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.58472564
         }
       ]
     },
@@ -8010,6 +8010,11 @@
       "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
       "label": "intranuclear quality control compartment",
       "neighbors": [
+        {
+          "identifier": "cellstructuremech:mitostore",
+          "label": "MitoStore",
+          "cosine_similarity": 0.72566948
+        },
         {
           "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
           "label": "intramitochondrial protein quality control compartment",
@@ -8029,11 +8034,6 @@
           "identifier": "GO:0030896",
           "label": "checkpoint clamp complex",
           "cosine_similarity": 0.64420121
-        },
-        {
-          "identifier": "GO:0097165",
-          "label": "nuclear stress granule",
-          "cosine_similarity": 0.64154449
         }
       ]
     },
@@ -8065,6 +8065,37 @@
           "identifier": "GO:0030663",
           "label": "COPI-coated vesicle membrane",
           "cosine_similarity": 0.66493213
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:mitostore",
+      "label": "MitoStore",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
+          "label": "intramitochondrial protein quality control compartment",
+          "cosine_similarity": 0.78592205
+        },
+        {
+          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+          "label": "intranuclear quality control compartment",
+          "cosine_similarity": 0.72566948
+        },
+        {
+          "identifier": "cellstructuremech:insoluble_protein_deposit",
+          "label": "insoluble protein deposit",
+          "cosine_similarity": 0.67962873
+        },
+        {
+          "identifier": "GO:0140595",
+          "label": "MIM complex",
+          "cosine_similarity": 0.67514053
+        },
+        {
+          "identifier": "cellstructuremech:mitochondrial_derived_compartment",
+          "label": "mitochondrial-derived compartment",
+          "cosine_similarity": 0.66148254
         }
       ]
     },
@@ -8114,6 +8145,11 @@
           "cosine_similarity": 0.61916849
         },
         {
+          "identifier": "cellstructuremech:mitostore",
+          "label": "MitoStore",
+          "cosine_similarity": 0.58277675
+        },
+        {
           "identifier": "GO:0070088",
           "label": "polyhydroxyalkanoate granule",
           "cosine_similarity": 0.58228392
@@ -8122,11 +8158,6 @@
           "identifier": "cellstructuremech:tubz_filament",
           "label": "TubZ filament",
           "cosine_similarity": 0.57556899
-        },
-        {
-          "identifier": "GO:0140737",
-          "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.57515535
         }
       ]
     },
@@ -11622,14 +11653,14 @@
           "cosine_similarity": 0.79526685
         },
         {
+          "identifier": "cellstructuremech:mitostore",
+          "label": "MitoStore",
+          "cosine_similarity": 0.78592205
+        },
+        {
           "identifier": "GO:0140595",
           "label": "MIM complex",
           "cosine_similarity": 0.78025039
-        },
-        {
-          "identifier": "GO:0005741",
-          "label": "mitochondrial outer membrane",
-          "cosine_similarity": 0.76587824
         }
       ]
     },
