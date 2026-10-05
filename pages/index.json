@@ -5886,6 +5886,15 @@
   "definition": "A protein complex containing two transmembrane subunits; a MdtB dimer and one unit of MdtC. Capable of exporting substrates across the cell membrane. Involved in conferring antibiotic resistance of Gram-negative bacteria by transporting drugs across the membrane."
  },
  {
+  "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+  "label": "meiotic telomere bouquet",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/meiotic_telomere_bouquet.html",
+  "definition": "A polarized nuclear chromosome assembly in which telomeric ends and their anchoring proteins cluster within a restricted region of the nuclear envelope during meiotic prophase. Characterized in fission and budding yeast, it organizes chromosome ends while chromosome arms extend into the nucleus; its duration and tethering machinery differ between species."
+ },
+ {
   "identifier": "GO:0030117",
   "label": "membrane coat",
   "category": "OTHER",
