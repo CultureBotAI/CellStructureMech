@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/intranuclear_quality_control_compartment.yaml
+  slug: intranuclear_quality_control_compartment
+session:
+  id: 2026-10-05T064325Z-codex-6d8bba
+  timestamp: '2026-10-05T06:43:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.15252/embj.201489524
+  - https://doi.org/10.1038/ncomms7533
+  - https://doi.org/10.1038/s41556-023-01128-6
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - images
+  - discussions
+  summary: Add evidence-backed yeast INQ inclusion
+  details: Created a PROPOSED INQ record from Miller 2015, Gallina 2015 and Sontag 2023 primary
+    evidence. Distinguishes nuclear INQ from cytoplasmic JUNQ, separates conditional residents
+    and associated machinery from upstream or contact-site regulators, and preserves substrate-specific
+    degradation and taxonomic limits. Native GO, UniProt and InterPro identities checked;
+    Figure 3 of PMC4389229.1 inspected and ingested with exact CC BY 4.0 permission and media
+    checksum. Hidden/ignored-inclusive deduplication covered the worktree and all 888 pre-existing
+    record identities. Validation and adversarial PR review follow before merge.

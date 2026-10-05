@@ -1,0 +1,543 @@
+identifier: cellstructuremech:intranuclear_quality_control_compartment
+label: intranuclear quality control compartment
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A stress-induced membraneless nuclear inclusion characterized in budding
+  yeast that concentrates misfolded and other conditionally recruited proteins near
+  the nuclear envelope, distinct from the cytoplasmic juxtanuclear quality control
+  compartment.
+definition_source: DOI:10.1038/ncomms7533
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T06:40:32Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T06:42:58Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added yeast-scoped INQ identity, conditional resident/machinery classes,
+    two intervention graphs, source-boundary discussions and an inspected CC BY 4.0
+    primary figure.
+  llm_assisted: true
+synonyms:
+- synonym_text: INQ
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/ncomms7533
+parent_structures:
+- GO:0016604
+- GO:0016234
+part_of:
+- GO:0005634
+components:
+- component_id: protein_cargo
+  label: heterogeneous INQ protein cargo
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: A variable cargo class, not one sequence family or a fixed complex.
+    Engineered VHL and luciferase reporters do not define native composition.
+  role: Sequestered protein material; includes misfolded reporters and stress-recruited
+    endogenous proteins. Recruitment does not prove that every endogenous client is
+    misfolded.
+  evidence:
+  - reference: DOI:10.1038/ncomms7533
+    notes: Figure 3 and Discussion distinguish diverse recruited endogenous proteins
+      from a universal set of misfolded substrates.
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Figure 1 and Results use nuclear-targeted misfolding reporters to distinguish
+      INQ from cytoplasmic inclusions.
+- component_id: btn2
+  label: Btn2-type aggregase
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  gene_symbols:
+  - BTN2
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro combined results for P53286 contain BTN2-like N-terminal
+    domain IPR062150, not an exact integrated whole-protein family. A domain is not
+    adopted as the component identity.
+  role: INQ-enriched aggregase supporting nuclear protein deposition in tested yeast
+    assays. Nuclear-targeted Hsp42 can experimentally substitute, so native requirements
+    are not universal essentiality.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53286
+    protein_label: Protein BTN2
+    gene_symbol: BTN2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of the paper's experimental
+      strain background.
+    evidence:
+    - reference: UniProtKB:P53286
+      notes: Native reviewed entry verifies accession, protein name, primary gene
+        and reference taxon.
+    - reference: DOI:10.15252/embj.201489524
+      notes: 'Figures 6 and 7B-D: nuclear deposition requires Btn2 in tested backgrounds;
+        Btn2 is enriched at INQ and engineered Hsp42-NLS can substitute.'
+  evidence:
+  - reference: DOI:10.15252/embj.201489524
+    notes: Figures 6 and 7B-D support INQ enrichment, deletion phenotypes and engineered
+      rescue.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P53286/?page_size=200
+    notes: Native integrated matches checked through next=null on 2026-10-05; domain-only
+      result does not identify a whole-protein family.
+- component_id: hsp104
+  label: Hsp104-type disaggregase
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  gene_symbols:
+  - HSP104
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: P31539 matches the broader ClpA/B families IPR001270 and IPR050130;
+    neither denotes the narrower Hsp104-type class exactly.
+  role: Chaperone recruited to nuclear deposits; Hsp104 inhibition stabilizes reporter
+    INQ during recovery in the tested assay. Recruitment is not an invariant stoichiometric
+    coat.
+  protein_examples:
+  - uniprot_id: UniProtKB:P31539
+    protein_label: Heat shock protein 104
+    gene_symbol: HSP104
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of the paper's experimental
+      strain background.
+    evidence:
+    - reference: UniProtKB:P31539
+      notes: Native reviewed entry verifies accession, protein name, primary gene
+        and reference taxon.
+    - reference: DOI:10.15252/embj.201489524
+      notes: Figure 2 follows Hsp104-marked nuclear deposits by fluorescence and immunogold
+        microscopy; Results describe guanidinium inhibition of dissolution with Supplementary
+        Figure S6.
+  evidence:
+  - reference: DOI:10.15252/embj.201489524
+    notes: Figure 2 and Results on recovery support direct localization and an inhibitor-sensitive
+      dissolution phenotype; the supplementary figure itself was not inspected.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: All integrated native matches inspected on 2026-10-05, next=null; family
+      matches remain broader than the component.
+- component_id: cmr1_family
+  label: WD repeat-containing DNA damage-binding protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR050853
+  essentiality: DISPENSABLE
+  gene_symbols:
+  - CMR1
+  role: Conditionally recruited family member exemplified by Cmr1 in yeast INQ. Cmr1
+    is a stable resident marker in the genotoxic-stress assays, not proven misfolded
+    cargo or an invariant assembly scaffold; Mrc1 foci still form without Cmr1.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12510
+    protein_label: DNA damage-binding protein CMR1
+    gene_symbol: CMR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of the paper's experimental
+      strain background.
+    evidence:
+    - reference: UniProtKB:Q12510
+      notes: Native reviewed entry verifies accession, protein name, primary gene
+        and reference taxon.
+    - reference: DOI:10.1038/ncomms7533
+      notes: Figure 3 localizes Cmr1 to INQ; Results on Mrc1 state that Cmr1 and Mrc1
+        focus formation is independent of each other's presence.
+  evidence:
+  - reference: DOI:10.1038/ncomms7533
+    notes: Figure 3d-g and Results on Mrc1 localization support nuclear recruitment,
+      protein stability and dispensability for the tested Mrc1 focus readout.
+  - reference: InterPro:IPR050853
+    notes: Native integrated family identity, canonical label and Q12510 membership
+      verified. The entry's unchecked LLM-generated description is not used as mechanistic
+      evidence; INQ recruitment is asserted only for the cited yeast example.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1038/ncomms7533
+  note: INQ characterized by nuclear-envelope markers, stress perturbations and fluorescent
+    protein localization. Methods use RAD5 W303 derivatives by default, with S288C
+    libraries and exceptions; unread supplemental strain tables preclude finer reassignment
+    of each assay.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: UniProtKB:P53286
+  note: Reference-sequence taxon for the reviewed Btn2 accession, not an assertion
+    that every image or deletion assay used S288C. The other protein examples have
+    their own accession evidence.
+functions:
+- function_id: sequestration
+  label: spatial sequestration of nuclear protein cargo
+  description: Concentrates selected misfolded and stress-recruited proteins in a
+    nuclear deposit. INQ formation is not obligatory for degradation of every reporter
+    and does not establish universal stress protection.
+  evidence:
+  - reference: DOI:10.15252/embj.201489524
+    notes: Figures 1-3 establish nuclear deposition; Figure 6C finds similar reporter
+      degradation during recovery when BTN2/HSP42-dependent deposition is impaired.
+  - reference: DOI:10.1038/ncomms7533
+    notes: Figure 3 and Discussion show stress-dependent recruitment beyond misfolded
+      reporters.
+- function_id: conditional_clearance
+  label: conditional routing of nuclear quality-control cargo to the vacuole
+  description: Nuclear reporter deposits can undergo nuclear-vacuolar-junction- and
+    Vps4-dependent vacuolar delivery alongside proteasomal clearance. This is a demonstrated
+    route in the tested reporter conditions, not the fate of all INQ clients.
+  evidence:
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Figures 5-8 combine contact-site and ESCRT perturbations, Keima acidification,
+      protease inhibition and live imaging. Exact membrane-budding steps remain a
+      model.
+causal_graphs:
+- graph_id: conditional_nuclear_deposition
+  title: Stress- and cargo-dependent INQ deposition
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  description: Bounded interventions distinguish nuclear deposition from stress-specific
+    recruitment of a resident marker.
+  scope_notes: Separate reporter and genotoxic-stress assays are not one temporal
+    pathway. HSP42 dependence of Cmr1 foci does not make native Hsp42 a universal
+    INQ constituent. Rescue uses an engineered nuclear-targeted construct.
+  nodes:
+  - node_id: reporter_heat
+    label: Nuclear-targeted LuciTs misfolding at 37 C
+    node_type: STATE
+  - node_id: inq
+    label: intranuclear quality control compartment
+    node_type: STRUCTURE
+    grounding: cellstructuremech:intranuclear_quality_control_compartment
+  - node_id: btn2_loss
+    label: BTN2 deletion
+    node_type: STATE
+  - node_id: hsp42_nls
+    label: Engineered nuclear-targeted Hsp42 in btn2 deletion cells
+    node_type: STATE
+  - node_id: mms
+    label: Methyl methanesulfonate treatment
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: cmr1_foci
+    label: Cmr1-positive INQ foci in genotoxic-stress assays
+    node_type: STATE
+  - node_id: hsp42_loss
+    label: HSP42 deletion
+    node_type: STATE
+  edges:
+  - subject: reporter_heat
+    predicate: induces
+    object: inq
+    description: Nuclear-targeted reporter forms a nuclear inclusion after temperature-induced
+      misfolding, with or without MG132.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Figure 1b-c and Results distinguish reporter-induced INQ formation from
+        an obligatory consequence of proteasome inhibition.
+  - subject: btn2_loss
+    predicate: impairs
+    object: inq
+    description: Loss of Btn2 blocks nuclear deposition of the tested VHL reporters
+      without preventing nuclear import.
+    evidence:
+    - reference: DOI:10.15252/embj.201489524
+      notes: Figure 6 separates soluble nuclear reporter from nuclear aggregate deposition.
+  - subject: hsp42_nls
+    predicate: restores
+    object: inq
+    description: Artificial nuclear targeting of Hsp42 can restore nuclear aggregation
+      in the tested btn2 deletion background.
+    evidence:
+    - reference: DOI:10.15252/embj.201489524
+      notes: 'Figure 7C-D: localization-engineered rescue is not native Hsp42 recruitment.'
+  - subject: mms
+    predicate: induces
+    object: cmr1_foci
+    description: Replication stress induces nuclear Cmr1 foci in the assayed yeast
+      background.
+    evidence:
+    - reference: DOI:10.1038/ncomms7533
+      notes: Figure 3c and Results measure stress-induced Cmr1 foci.
+  - subject: btn2_loss
+    predicate: reduces
+    object: cmr1_foci
+    description: BTN2 deletion strongly reduces Cmr1-positive foci under the tested
+      MMS treatment.
+    evidence:
+    - reference: DOI:10.1038/ncomms7533
+      notes: Figure 3c reports residual percentages, not universal absence of all
+        INQ-like material.
+  - subject: hsp42_loss
+    predicate: reduces
+    object: cmr1_foci
+    description: HSP42 deletion strongly reduces Cmr1-positive foci in the genotoxic-stress
+      assay.
+    evidence:
+    - reference: DOI:10.1038/ncomms7533
+      notes: Figure 3c; Discussion distinguishes this dependence from MG132-induced
+        VHL targeting, which requires BTN2 but not HSP42.
+- graph_id: nuclear_vacuolar_clearance
+  title: Conditional INQ positioning and vacuolar disposal
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  description: Nuclear reporter deposition, spatial convergence and vacuolar clearance
+    are separable readouts.
+  scope_notes: Yeast NLS-LuciTs experiments at 37 C. Deletion effects do not identify
+    invariant INQ subunits or direct physical tethers. Nuclear-vacuolar junctions
+    are dispensable for INQ/JUNQ convergence but support correct clearance; molecular
+    membrane-budding steps remain unresolved.
+  nodes:
+  - node_id: inq
+    label: intranuclear quality control compartment
+    node_type: STRUCTURE
+    grounding: cellstructuremech:intranuclear_quality_control_compartment
+  - node_id: homing
+    label: INQ/JUNQ convergence across the nuclear envelope
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: delivery
+    label: Vacuolar delivery and clearance of nuclear reporter cargo
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: nvj1_loss
+    label: NVJ1 deletion
+    node_type: STATE
+  - node_id: vac8_loss
+    label: VAC8 deletion
+    node_type: STATE
+  - node_id: chm7_loss
+    label: CHM7 deletion
+    node_type: STATE
+  - node_id: vps4_loss
+    label: VPS4 deletion
+    node_type: STATE
+  edges:
+  - subject: inq
+    predicate: undergoes
+    object: homing
+    description: Coexpressed nuclear and cytoplasmic reporter inclusions converge
+      on opposite sides of the nuclear envelope without becoming the same structure.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Figure 3 and Results describe distinct compartments homing across the
+        envelope.
+  - subject: inq
+    predicate: can undergo
+    object: delivery
+    description: Nuclear reporter cargo can enter an acidic vacuolar compartment and
+      be cleared in the tested conditions.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: 'Figures 7-8: Keima, protease perturbation, reporter fragments and live
+        imaging provide complementary evidence.'
+  - subject: nvj1_loss
+    predicate: impairs
+    object: delivery
+    description: Disrupting the junction impairs INQ clearance and can redirect nuclear
+      material into the cytoplasm.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Figures 5f-h and 8a distinguish persistent inclusions and failed vacuolar
+        interaction from initial formation.
+  - subject: vac8_loss
+    predicate: impairs
+    object: delivery
+    description: Loss of Vac8 increases persistent nuclear reporter inclusions and
+      permits cytoplasmic egress, consistent with impaired junction-dependent clearance.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Figure 5g-h and Extended Data Figure 5c-e are described in Results; this
+        is not a block of initial convergence.
+  - subject: chm7_loss
+    predicate: disrupts
+    object: homing
+    description: A subset of chm7 deletion cells fails to converge INQ and JUNQ despite
+      forming both inclusions.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Figure 6b separates convergence from formation; activated Chm7OPEN is
+        not an invariant native coat.
+  - subject: vps4_loss
+    predicate: impairs
+    object: delivery
+    description: Vps4-deficient cells retain nuclear reporter deposits and show defective
+      vacuolar clearance.
+    evidence:
+    - reference: DOI:10.1038/s41556-023-01128-6
+      notes: Figures 6e-f and 8a support persistent inclusions and defective clearance;
+        the exact budding mechanism is proposed.
+evidence:
+- reference: DOI:10.15252/embj.201489524
+  notes: Miller et al. (2015), PMID 25672362, PMC4369314. Read all main Results and
+    Discussion and initial Methods via public PMC. Supplementary strain tables and
+    actual figure pixels were not inspected. Heat-induced INQ also forms without MG132;
+    the older JUNQ redefinition is not adopted as exact synonymy.
+- reference: DOI:10.1038/ncomms7533
+  notes: Gallina et al. (2015), PMID 25817432, PMC4389229.1. Verified native metadata/JATS;
+    read INQ characterization, Mrc1 Results, full Discussion and strain Methods. Figure
+    3 caption and actual image inspected. Supplements were not independently inspected.
+- reference: DOI:10.1038/s41556-023-01128-6
+  notes: Sontag et al. (2023), PMID 37081164, PMC12349969.1. Verified native metadata/JATS;
+    read all main Results (S1-S8), Discussion, strain-table pointer and Data availability.
+    Actual figures and supplemental strain tables were not inspected. TDM metadata
+    does not establish a Creative Commons hosting licence.
+- reference: GO:0016604
+  notes: Native QuickGO verifies nuclear body as an active cellular-component class
+    for a membraneless organelle in the nucleoplasm; broader parent only.
+- reference: GO:0016234
+  notes: Native QuickGO verifies inclusion body as a discrete intracellular aggregation;
+    broader parent, not exact INQ identity.
+- reference: GO:0005634
+  notes: Native QuickGO verifies nucleus. Nuclear localization in the cited microscopy
+    supports parthood for INQ, not for cytoplasmic JUNQ or post-extrusion cargo.
+discussions:
+- discussion_id: identity_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep INQ distinct from JUNQ, IPOD and nuclear stress granules.
+  rationale: Early papers use different JUNQ/INQ interpretations; shared perinuclear
+    proximity is not exact identity.
+  notes: Mint after full-name/acronym QuickGO pagination and exact OLS GO label/synonym
+    searches found no exact term. Broader nuclear body and inclusion body are is-a
+    parents; nucleus is parthood. Hidden/ignored-inclusive whole-worktree searches,
+    excluding only .git, and parsed identities of 888 records found no duplicate.
+    Nuclear stress granule GO:0097165 already has a separate RNA/protein record and
+    is not equated with INQ. Cytoplasmic JUNQ is not an exact synonym. Membrane enclosure
+    during disposal is not a constitutive INQ boundary.
+  evidence:
+  - reference: DOI:10.15252/embj.201489524
+    notes: 2015 interprets the prior JUNQ signal as nuclear INQ.
+  - reference: DOI:10.1038/ncomms7533
+    notes: Figure 3 distinguishes nuclear Cmr1-containing foci from cytoplasmic VHL
+      foci.
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Figure 1 and Results distinguish nuclear INQ and cytoplasmic JUNQ, including
+      formation without proteasome inhibition.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: component_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral grounding for Btn2-type, Hsp104-type and heterogeneous
+    cargo classes.
+  rationale: Domain-only and broader family hits cannot serve as exact identities
+    for narrower component classes.
+  notes: Retain three REVIEWED_LABEL_ONLY classes. The Cmr1 component deliberately
+    uses the verified integrated family label, while recruitment is scoped to the
+    yeast example. No functional claim is imported from InterPro's unchecked LLM-generated
+    family description.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P53286/?page_size=200
+    notes: Complete native integrated match set inspected.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: ClpA/B families are broader than Hsp104.
+  - reference: InterPro:IPR050853
+    notes: Verified family identity and label, not authority for an INQ mechanism.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: component_exclusions
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Separate directly localized proteins from regulators, reporters and partially
+    colocalizing complexes.
+  rationale: Genetic dependence, fluorescence overlap and biochemical interaction
+    do not establish fixed composition or universal assembly requirements.
+  notes: 'Keep native Hsp42, Sis1, Sti1 and Nup42 outside the constituent list: stress-specific
+    genetics or upstream sorting are not demonstrated invariant residence. Exclude
+    NVJ/ESCRT proteins as canonical INQ constituents; their perturbations remain in
+    the graph. CCT, proteasome and APC subunit recruitment does not establish whole-complex
+    membership in every INQ. VHL and LuciTs are experimental cargo, not native subunits.
+    Cmr1 is a conditional resident, while Hsp104 is associated machinery, with no
+    fixed stoichiometry.'
+  evidence:
+  - reference: DOI:10.15252/embj.201489524
+    notes: Figures 4-7 distinguish sorting, native localization and engineered Hsp42-NLS
+      rescue.
+  - reference: DOI:10.1038/ncomms7533
+    notes: Results report Rpn11 at 13 percent of Cmr1 foci and Cct6 overlap at approximately
+      12 percent; Discussion distinguishes native Hsp42 dependence from Btn2 residence.
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Figures 5-8 test contact and trafficking factors without defining them
+      as INQ subunits.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: turnover_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Do not equate INQ deposition with obligatory degradation or a universal
+    genome-protection mechanism.
+  rationale: Different substrates and perturbations give different turnover effects;
+    deposition, refolding, degradation and adaptation are distinct claims.
+  notes: Miller Figure 6C reports similar tested reporter degradation despite impaired
+    deposition, whereas Gallina Figure 5 links Btn2 loss to reduced Mrc1 turnover.
+    Gallina Discussion explicitly leaves unresolved whether mutant genome-maintenance
+    phenotypes are directly caused by failed INQ formation. Preserve this substrate-specific
+    scope; no universal protection or required-degradation edge is asserted.
+  evidence:
+  - reference: DOI:10.15252/embj.201489524
+    notes: Figure 6C and Discussion separate aggregation from degradation.
+  - reference: DOI:10.1038/ncomms7533
+    notes: Mrc1 Results and full Discussion distinguish correlation and unresolved
+      causality.
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Figures 7-8 support parallel vacuolar and proteasomal routes for tested
+      reporters.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: remaining_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve native client inventories, material state, precise experimental
+    strain mappings and prevalence.
+  rationale: Reporter induction and one microbial species do not establish lineage
+    prevalence, universal dimensions or fixed molecular composition.
+  notes: Leave taxonomic_distribution, physical_properties and stoichiometry empty.
+    Do not infer liquid-like INQ behavior from cytoplasmic Q-body/JUNQ measurements,
+    or equate human WDR76 foci with yeast INQ. Supplementary strain tables remain
+    unread. No raw source data were reanalyzed or specific dataset accession inferred
+    from a general source-data statement.
+  evidence:
+  - reference: DOI:10.1038/ncomms7533
+    notes: Discussion notes that the nature of human WDR76 foci was not further investigated.
+  - reference: DOI:10.1038/s41556-023-01128-6
+    notes: Cryo-SXT interpretation of Q-body/JUNQ behavior is distinct from INQ; Methods
+      defer strains to a supplemental table.
+  posed_by: codex
+  posed_date: '2026-10-05'
+images:
+- image_id: pmc_pmc4389229_f3
+  file: pmc4389229_f3.jpg
+  file_sha256: 9d15de2925ec7ada38d8b7281ed62110c4073fee15b464ed548b87b3687b1ecb
+  source: PMC
+  source_accession: PMC4389229.1 f3
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4389229/#f3
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC4389229.1/ncomms7533-f3.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Irene Gallina, Camilla Colding, Peter Henriksen, Petra Beli, Kyosuke
+    Nakamura, Judith Offman, David P. Mathiasen, Sonia Silva, Eva Hoffmann, Anja Groth,
+    et al.; CC BY, via PubMed Central
+  modality: FLUORESCENCE
+  caption: 'Multi-panel characterization of yeast INQ. Panels d-e distinguish nuclear
+    Cmr1/VHL colocalization from cytoplasmic VHL foci; panel f shows a subset of Cct6
+    foci overlapping Cmr1. Microscopy scale bars: 2 micrometers. Other panels show
+    screening, deletion phenotypes and immunoblots, not a universal INQ composition.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1038/ncomms7533
+  retrieved_on: '2026-10-05'
+  notes: Figure 3 from article version PMC4389229.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Actual image inspected. Figure-specific caption and pixels show no separate third-party
+    credit. Panel d uses IG66 with induced VHL, 37 C and MG132; panel f uses IG111
+    with MMS. Strain-level taxonomy is not inferred from UniProt reference entries.
+    Image is unmodified.

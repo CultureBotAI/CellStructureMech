@@ -7840,14 +7840,14 @@
           "cosine_similarity": 0.68544014
         },
         {
+          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+          "label": "intranuclear quality control compartment",
+          "cosine_similarity": 0.68139703
+        },
+        {
           "identifier": "GO:0000932",
           "label": "P-body",
           "cosine_similarity": 0.67634006
-        },
-        {
-          "identifier": "cellstructuremech:h_body",
-          "label": "H-body",
-          "cosine_similarity": 0.67033651
         }
       ]
     },
@@ -7972,6 +7972,37 @@
           "identifier": "GO:0033172",
           "label": "gas vesicle shell",
           "cosine_similarity": 0.63621614
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+      "label": "intranuclear quality control compartment",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
+          "label": "intramitochondrial protein quality control compartment",
+          "cosine_similarity": 0.70108568
+        },
+        {
+          "identifier": "cellstructuremech:bacterial_aggresome",
+          "label": "bacterial aggresome",
+          "cosine_similarity": 0.68139703
+        },
+        {
+          "identifier": "GO:0030896",
+          "label": "checkpoint clamp complex",
+          "cosine_similarity": 0.64420121
+        },
+        {
+          "identifier": "GO:0097165",
+          "label": "nuclear stress granule",
+          "cosine_similarity": 0.64154449
+        },
+        {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.639654
         }
       ]
     },
