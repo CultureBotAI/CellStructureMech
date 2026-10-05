@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/age_associated_protein_deposit.yaml
+  slug: age_associated_protein_deposit
+session:
+  id: 2026-10-05T100700Z-codex-a968e2
+  timestamp: '2026-10-05T10:07:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - evidence
+  - discussions
+  - images
+  summary: Add evidence-backed age-associated protein deposit
+  details: Created one PROPOSED age-associated protein deposit record after ignored-inclusive
+    deduplication of 892 records and native GO checks. Read 2015, 2017 and 2025 primary studies;
+    retained APOD synonym provenance from a 2018 review. Verified seven reviewed UniProt entries,
+    their complete InterPro matches and three NCBI taxa. Curated six component classes and
+    four assay-bounded graphs, distinguishing ER/intranuclear topology, precursor confinement,
+    mature-deposit retention, single SSA deletions and age-dependent drug responses. Hosted
+    unmodified PMC4635334.1 Figure 6 after CC BY 4.0 and checksum verification and visual
+    inspection. Guarded mutator validated before write and confirmed byte-identical re-emission.
+    Full derived-artifact, validation and adversarial PR checks follow before merge. No PR
+    existed when this append-only record was created.
