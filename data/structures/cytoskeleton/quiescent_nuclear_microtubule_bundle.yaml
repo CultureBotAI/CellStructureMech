@@ -1,0 +1,696 @@
+identifier: cellstructuremech:quiescent_nuclear_microtubule_bundle
+label: quiescent nuclear microtubule bundle
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A stable monopolar bundle of parallel nuclear microtubules formed during
+  glucose-exhaustion-induced quiescence, characterized in Saccharomyces cerevisiae.
+  The bundle extends from the nuclear face of the spindle pole body and reorganizes
+  kinetochore and centromere distribution; it is distinct from the antiparallel cytoplasmic
+  quiescent-cell bundle of fission yeast.
+definition_source: DOI:10.1083/jcb.201306075
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T16:36:00Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T16:38:33Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added ten component classes, eleven native-verified protein examples, bounded
+    assembly/disassembly graphs, an inspected CC BY 4.0 figure, and explicit identity,
+    component-boundary and evidence limitations.
+  llm_assisted: true
+parent_structures:
+- GO:0099070
+part_of:
+- GO:0005634
+- GO:0015630
+has_part:
+- GO:0005880
+synonyms:
+- synonym_text: Q-nMT bundle
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.7554/eLife.89958
+- synonym_text: quiescent-cell nuclear microtubule bundle
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.7554/eLife.89958
+components:
+- component_id: alpha_tubulin
+  label: Alpha tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Alpha-tubulin subunits of the nuclear bundle; Tub1 and Tub3 colocalize, with
+    distinct contributions to assembly.
+  evidence:
+  - reference: DOI:10.7554/eLife.89958
+    notes: Figure 2 and its supplements localize both isotypes. Tub3 loss impairs
+      phase-II stability, but replacing it with Tub1 restores stable, thinner bundles;
+      Tub3 is not an obligatory unique subunit.
+  - reference: InterPro:IPR002452
+    notes: Complete native InterPro matches checked on 2026-10-05; integrated type=family
+      and exact class scope verified.
+  grounding_notes: Exact Alpha tubulin family verified for both examples.
+  gene_symbols:
+  - TUB1
+  - TUB3
+  protein_examples:
+  - uniprot_id: UniProtKB:P09733
+    protein_label: Tubulin alpha-1 chain
+    gene_symbol: TUB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Tub1 labels Q-nMT bundles throughout the study; Figure 2 compares tagged
+        Tub1 and Tub3.
+    - reference: https://www.uniprot.org/uniprotkb/P09733/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  - uniprot_id: UniProtKB:P09734
+    protein_label: Tubulin alpha-3 chain
+    gene_symbol: TUB3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Figure 2B and expansion microscopy show Tub3 together with Tub1 in Q-nMT
+        bundles.
+    - reference: https://www.uniprot.org/uniprotkb/P09734/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  grounding: InterPro:IPR002452
+- component_id: beta_tubulin
+  label: Beta tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Beta partner class of the alpha/beta microtubule polymer; no beta-isotype
+    localization assay is inferred.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+    notes: TEM and tubulin microscopy establish a microtubule array.
+  - reference: GO:0005874
+    notes: The native microtubule definition specifies alpha/beta subunits; this is
+      a polymer-class assertion, not a TUB2-specific imaging claim.
+  - reference: InterPro:IPR002453
+    notes: Complete native InterPro matches checked on 2026-10-05; integrated type=family
+      and exact class scope verified.
+  grounding_notes: Exact Beta tubulin family checked using S. cerevisiae TUB2 P02557;
+    the identity lookup is not a Q-nMT localization experiment.
+  grounding: InterPro:IPR002453
+- component_id: xmap215
+  label: XMAP215
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Microtubule-associated regulator localized at both bundle ends and occasional
+    intermediate puncta.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+    notes: Figure 1 and Results localize Stu2 at both array ends and occasionally
+      within the array; no bundle-specific necessity is asserted.
+  - reference: InterPro:IPR045110
+    notes: Complete native InterPro matches checked on 2026-10-05; integrated type=family
+      and exact class scope verified.
+  grounding_notes: Exact XMAP215 family verified for Stu2.
+  gene_symbols:
+  - STU2
+  protein_examples:
+  - uniprot_id: UniProtKB:P46675
+    protein_label: Protein STU2
+    gene_symbol: STU2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201306075
+      notes: Stu2-GFP marks both ends of the nuclear array.
+    - reference: https://www.uniprot.org/uniprotkb/P46675/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  grounding: InterPro:IPR045110
+- component_id: bik1
+  label: Bik1-like CLIP-170 microtubule-associated protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident microtubule-associated protein detected at both ends of the quiescent
+    array.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+    notes: Figure 1 and Results place Bik1 at both ends and occasionally at internal
+      dots.
+  grounding_notes: Complete P11709 matches contain a CAP Gly-rich domain and its superfamily,
+    not an exact integrated whole-protein Bik1-like family.
+  gene_symbols:
+  - BIK1
+  protein_examples:
+  - uniprot_id: UniProtKB:P11709
+    protein_label: Nuclear fusion protein BIK1
+    gene_symbol: BIK1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201306075
+      notes: Bik1 localization is directly reported for the nuclear array.
+    - reference: https://www.uniprot.org/uniprotkb/P11709/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+- component_id: rp_eb
+  label: Microtubule-associated protein RP/EB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: DISPENSABLE
+  role: Bundle-associated EB protein; single BIM1 deletion permits stable bundles,
+    with conditional defects when other factors are removed.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+    notes: Bim1 localizes along the full array.
+  - reference: DOI:10.7554/eLife.89958
+    notes: Figure 3 contrasts normal stable bundles in bim1 deletion with severe defects
+      in bir1 bim1 and slk19 bim1 combinations.
+  - reference: InterPro:IPR027328
+    notes: Complete native InterPro matches checked on 2026-10-05; integrated type=family
+      and exact class scope verified.
+  grounding_notes: Exact RP/EB family verified for Bim1.
+  gene_symbols:
+  - BIM1
+  protein_examples:
+  - uniprot_id: UniProtKB:P40013
+    protein_label: Protein BIM1
+    gene_symbol: BIM1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Bim1 is detected along the Q-nMT bundle; single and combined deletions
+        distinguish redundancy.
+    - reference: https://www.uniprot.org/uniprotkb/P40013/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  grounding: InterPro:IPR027328
+- component_id: kar3
+  label: Kar3-like kinesin-14 motor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident motor contributing to early normal bundle assembly; motor-driven
+    crosslinking is not directly resolved.
+  evidence:
+  - reference: DOI:10.7554/eLife.89958
+    notes: Figure 4 detects Kar3-3GFP at the SPB and bundle puncta; kar3 deletion
+      leaves very short structures. This later positive assay supersedes the 2013
+      nondetection.
+  grounding_notes: Complete matches include the broad Kinesin-like protein family
+    IPR027640 and motor domains, not an exact Kar3-like kinesin-14 family.
+  gene_symbols:
+  - KAR3
+  protein_examples:
+  - uniprot_id: UniProtKB:P17119
+    protein_label: Kinesin-like protein KAR3
+    gene_symbol: KAR3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Kar3-3GFP is directly detected along the bundle in Figure 4.
+    - reference: https://www.uniprot.org/uniprotkb/P17119/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+- component_id: kinesin5
+  label: Kinesin-like protein KIF11-like
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: 'Resident kinesin-5 class with distinct activities: Cin8 affects phase-II
+    bundle thickness, whereas Kip1 supports full stabilization.'
+  evidence:
+  - reference: DOI:10.7554/eLife.89958
+    notes: Figure 4 and supplement 1 distinguish cin8 and kip1 phenotypes. Faint Cin8-GFP
+      signal is shown with a Tub1-only channel control; Kip1 is enriched at the bundle
+      distal end. Single deletions do not establish a whole-family assembly requirement.
+  - reference: InterPro:IPR047149
+    notes: Complete native InterPro matches checked on 2026-10-05; integrated type=family
+      and exact class scope verified.
+  grounding_notes: Exact KIF11-like integrated family is present in both Cin8 and
+    Kip1; this does not imply equivalent quiescence roles.
+  gene_symbols:
+  - CIN8
+  - KIP1
+  protein_examples:
+  - uniprot_id: UniProtKB:P27895
+    protein_label: Kinesin-like protein CIN8
+    gene_symbol: CIN8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Figure 4 supplement 1B supports weak bundle-associated Cin8 signal, not
+        uniform high occupancy; inspected native image includes the channel control.
+    - reference: https://www.uniprot.org/uniprotkb/P27895/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  - uniprot_id: UniProtKB:P28742
+    protein_label: Kinesin-like protein KIP1
+    gene_symbol: KIP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Figure 4 places Kip1 at the distal bundle end; kip1 deletion compromises
+        phase-III stabilization.
+    - reference: https://www.uniprot.org/uniprotkb/P28742/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  grounding: InterPro:IPR047149
+- component_id: bir1
+  label: Bir1-like chromosomal passenger protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident chromosomal passenger protein distributed along the bundle and enriched
+    at its distal end.
+  evidence:
+  - reference: DOI:10.7554/eLife.89958
+    notes: Figure 3 localizes Bir1 and shows shortened, incompletely stable bundles
+      after BIR1 loss, with a stronger combined BIM1 defect.
+  grounding_notes: Native matches include the broader Baculoviral IAP repeat-containing
+    family IPR051190 and BIR domain IPR001370. Neither exactly identifies the narrower
+    Bir1-like chromosomal passenger class; the native family description is flagged
+    as unchecked LLM text.
+  gene_symbols:
+  - BIR1
+  protein_examples:
+  - uniprot_id: UniProtKB:P47134
+    protein_label: Chromosomal passenger complex protein BIR1
+    gene_symbol: BIR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Bir1 is directly localized on Q-nMT bundles in Figure 3.
+    - reference: https://www.uniprot.org/uniprotkb/P47134/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+- component_id: sli15
+  label: Sli15-like inner centromere protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident INCENP-like passenger protein associated with assembly and stabilization
+    of the bundle.
+  evidence:
+  - reference: DOI:10.7554/eLife.89958
+    notes: Figure 3 localizes Sli15 along the bundle and at its distal end; early
+      sli15-3 inactivation impairs assembly. Residence of Sli15 does not prove residence
+      of every CPC subunit.
+  grounding_notes: Complete native matches contain the inner-centromere ARK-binding
+    domain IPR005635, not an exact whole-protein Sli15-like family.
+  gene_symbols:
+  - SLI15
+  protein_examples:
+  - uniprot_id: UniProtKB:P38283
+    protein_label: Inner centromere protein SLI15
+    gene_symbol: SLI15
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Direct Q-nMT localization and temperature-sensitive perturbation are
+        reported in Figure 3 and supplement 1.
+    - reference: https://www.uniprot.org/uniprotkb/P38283/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+- component_id: slk19
+  label: Slk19-like microtubule-associated protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident bundle-end protein contributing to mature bundle dimensions and stability.
+  evidence:
+  - reference: DOI:10.7554/eLife.89958
+    notes: Figure 3 localizes Slk19 at both ends; slk19 deletion produces shorter,
+      thinner, nocodazole-sensitive bundles, exacerbated by BIM1 loss.
+  grounding_notes: Complete native matches contain the fungal TACC C-terminal domain
+    IPR024312, not an exact whole-protein Slk19-like family.
+  gene_symbols:
+  - SLK19
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08581
+    protein_label: Kinetochore protein SLK19
+    gene_symbol: SLK19
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not assert that the exact
+      reference stock was imaged.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Slk19 localizes at both Q-nMT ends; a protein name alone is not the basis
+        of the localization assertion.
+    - reference: https://www.uniprot.org/uniprotkb/Q08581/entry
+      notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
+        is supported by the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.7554/eLife.89958
+  note: Budding yeast studied by fluorescence, expansion microscopy, laser ablation
+    and perturbations; the 2013 defining study additionally supplies TEM. Strain backgrounds
+    differ among assays; no all-fungi prevalence is asserted.
+functions:
+- function_id: nuclear_reorganization
+  label: Quiescent nuclear reorganization
+  description: The nuclear array supports relocation of kinetochore-centromere clusters
+    away from the SPB and displacement of the nucleolus.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+    notes: Kinetochore and centromere localization, plus no-array mutants, associate
+      array formation with nuclear reorganization; chromosomes and nucleolus are not
+      treated as bundle constituents.
+- function_id: quiescence_survival
+  label: Support of quiescent survival and recovery
+  description: Bundle formation contributes to survival and subsequent colony formation
+    in the tested glucose-exhaustion conditions.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+    notes: Array-defective mutants lose viability and regrowth capacity; pleiotropic
+      effects limit a uniquely bundle-specific causal claim.
+  - reference: DOI:10.7554/eLife.89958
+    notes: Early nocodazole prevents formation and impairs survival/regrowth, whereas
+      late treatment of stabilized bundles does not have the same effect. This narrows
+      but does not eliminate off-target explanations.
+causal_graphs:
+- graph_id: quiescent_bundle_assembly
+  title: Glucose exhaustion and early bundle assembly
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Physiological and perturbation-defined mechanism in S. cerevisiae;
+    the upstream glucose-exhaustion signal and exact crosslinking reactions are unresolved.
+  nodes:
+  - node_id: glucose_exhaustion
+    label: Glucose exhaustion
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: assembly
+    label: Q-nMT bundle assembly
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: kinetochore_attachment
+    label: Functional kinetochore-microtubule attachment
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: glucose_exhaustion
+    predicate: stimulates
+    object: assembly
+    description: Carbon exhaustion triggers the transition from dynamic nuclear microtubules
+      to a persistent bundle.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Figure 1 and Results identify sequential establishment, growth and stabilization
+        phases; exact timing depends on culture conditions.
+  - subject: kinetochore_attachment
+    predicate: supports
+    object: assembly
+    description: Functional attachment is required early for normal bundle formation,
+      but late Ndc80 inactivation does not dismantle an established bundle.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Figure 3 and supplement 1 compare early and late ndc80-1 restrictive-temperature
+        treatments.
+- graph_id: quiescence_exit_disassembly
+  title: Regulated disassembly on quiescence exit
+  graph_kind: DISASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Exit from glucose-exhaustion-induced quiescence; timing and deletion
+    evidence do not identify a molecular checkpoint. Kip3 and She1 are external regulators,
+    not inferred stable residents.
+  nodes:
+  - node_id: refeeding
+    label: Glucose refeeding
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: disassembly
+    label: Q-nMT bundle disassembly
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: kip3
+    label: Kinesin-like protein KIP3
+    node_type: GENE_OR_PROTEIN
+    grounding: UniProtKB:P53086
+  - node_id: she1
+    label: Mitotic spindle-associated protein SHE1
+    node_type: GENE_OR_PROTEIN
+    grounding: UniProtKB:P38200
+  - node_id: spb_separation
+    label: Spindle pole body separation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: refeeding
+    predicate: stimulates
+    object: disassembly
+    description: Refeeding triggers progressive shortening of the nuclear array; translation
+      inhibition delays efficient disassembly.
+    evidence:
+    - reference: DOI:10.1083/jcb.201306075
+      notes: Quiescence-exit experiments compare glucose alone and cycloheximide treatment.
+  - subject: kip3
+    predicate: supports
+    object: disassembly
+    description: Kip3 supports timely onset of disassembly, without a detected change
+      in the subsequent shortening rate in its deletion.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Figure 5 distinguishes delayed onset from post-onset depolymerization
+        kinetics; Kip3 is resynthesized on exit.
+  - subject: she1
+    predicate: supports
+    object: disassembly
+    description: She1 contributes to efficient disassembly in the tested KIP3-deficient
+      background.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Figure 5 compares kip3 and kip3 she1 deletions. The native spindle-associated
+        She1 accession is P38200, not MYO4's historical SHE1 alias P32492.
+  - subject: disassembly
+    predicate: supports
+    object: spb_separation
+    description: Completion of bundle loss precedes SPB separation; delayed disassembly
+      is associated with delayed separation.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: Figure 5 tracks bundle disappearance and SPB separation in wild type
+        and mutants. The combined deletion also delays separation without delaying
+        overall proliferation; this is not proof of a specific molecular checkpoint.
+evidence:
+- reference: DOI:10.1083/jcb.201306075
+  notes: 'Laporte et al. (2013), PMID 24247429, native PMC3840927.1 Results, Discussion
+    and relevant Methods: defining nuclear-array morphology, localization, perturbation
+    and exit evidence.'
+- reference: DOI:10.7554/eLife.89958
+  notes: Laporte et al. (2024), PMID 38527106, native PMC10963028.1 Results, Discussion
+    and relevant Methods; Figure 3 supplement 1 and Figure 4 supplement 1 visually
+    inspected.
+- reference: GO:0099070
+  notes: Non-obsolete static microtubule bundle term is broader than Q-nMT. Its Q-MT
+    narrow synonyms concern the distinct fission-yeast cytoplasmic bundle.
+- reference: GO:0005634
+  notes: Native nucleus term supports nuclear compartment parthood.
+- reference: GO:0015630
+  notes: Native microtubule cytoskeleton term supports the encompassing framework.
+- reference: GO:0005880
+  notes: Native nuclear microtubule term describes the constituent polymers, not the
+    whole multi-filament array.
+discussions:
+- discussion_id: identity_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the nuclear Q-nMT identity separate from generic nuclear microtubules
+    and cytoplasmic Q-MT.
+  notes: Hidden- and ignored-inclusive identity, synonym and citation searches, plus
+    a parsed identity scan, found no existing record. OAK GO alias searches and native
+    GO definitions do not supply an exact Q-nMT term. GO:0099070 is broader; GO:0005880
+    is a constituent filament. The parallel monopolar nuclear array is not the antiparallel
+    cytoplasmic S. pombe bundle or a bipolar mitotic spindle. OTHER denotes the whole
+    array. Bare nuclear microtubule array is not adopted as an exact synonym.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+  - reference: DOI:10.7554/eLife.89958
+  - reference: GO:0099070
+  - reference: GO:0005880
+- discussion_id: family_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Find exact whole-protein families for five label-only resident classes.
+  notes: Complete native InterPro matches were read for Bik1 P11709, Kar3 P17119,
+    Bir1 P47134, Sli15 P38283 and Slk19 Q08581. Broad kinesin/BIR families and CAP-Gly,
+    ARK-binding or TACC domains do not exactly identify these narrower classes. Label-only
+    grounding is retained pending an exact authority entry.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P11709/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P17119/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P47134/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P38283/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q08581/
+- discussion_id: attached_chromosomes_and_spb
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate bundle composition from its nucleation site and attached chromosomal
+    assemblies.
+  notes: The SPB nucleates the array but is not its containing structure. Tub4/Spc97/Spc72
+    mark the nucleation site. All six kinetochore subcomplexes have array-associated
+    localization in 2013; Dad2 and Nuf2 mark attachments in 2024. These are retained
+    as interacting chromosome-bound machinery rather than asserted stoichiometric
+    building blocks of the microtubule bundle. Centromeric Cse4/chromosomes and the
+    displaced nucleolus are likewise not bundle components. Slk19 is included because
+    its own direct bundle-end localization and perturbation are documented.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+  - reference: DOI:10.7554/eLife.89958
+  - reference: GO:0000776
+- discussion_id: regulators_not_residents
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not turn genetic requirements or expression into residence.
+  notes: Dynein and dynactin are detected on the cytoplasmic SPB face in 2013, not
+    inside the nuclear array. Cik1 requirement, monopolin Mam1/Lrs4/Hrr25/Csm1 expression
+    and deletion phenotypes, Spo13 effects, and tubulin-folding factors do not alone
+    establish Q-nMT residence. Ipl1 activity is required early, but Ipl1 and Nbl1
+    were not detected in quiescence; the whole CPC is not imported from Bir1/Sli15
+    localization. Kip3 and She1 exit phenotypes are modeled as regulatory evidence,
+    not stable-component evidence. She1 P38200 is distinct from the MYO4/SHE1 homonym
+    P32492.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+  - reference: DOI:10.7554/eLife.89958
+  - reference: https://www.uniprot.org/uniprotkb/P38200/entry
+- discussion_id: localization_and_essentiality
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep assay sensitivity and individual deletion effects explicit.
+  notes: Kar3 was not detected in 2013 but later detected with 3GFP in 2024. Cin8
+    localization is faint and channel controls are shown in Figure 4 supplement 1B.
+    Single BIM1 deletion permits stable bundles, whereas combinations expose redundancy.
+    Tub3-specific requirements do not make Tub3 irreplaceable because Tub1 substitution
+    restores stable bundles. Cin8 and Kip1 share a family but have distinct phenotypes;
+    family-wide necessity is not tested. Short residual bundles after several deletions
+    preclude an unqualified assembly-essential claim.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+  - reference: DOI:10.7554/eLife.89958
+- discussion_id: stability_and_function_limits
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  prompt: Resolve stabilization without upgrading models into measured mechanisms.
+  notes: Nocodazole resistance, low tubulin turnover and stability after laser severing
+    bound stability to these assays. A GTP cap inferred from Bim1 binding is not directly
+    measured, and microtubule crosslinking mechanisms remain models. Survival/regrowth
+    effects are supported but perturbations also act beyond this array. Proposed tubulin
+    storage, a molecular SPB-separation checkpoint and homology with primary cilia
+    are not asserted as demonstrated functions.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+  - reference: DOI:10.7554/eLife.89958
+- discussion_id: measurement_and_image_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Avoid mixing biological dimensions, experimental expansion and control cells.
+  notes: 'Bundle length, thickness and maturation timing vary with condition; the
+    2024 Results and Discussion describe different approximate times for full stabilization.
+    No universal size, count or schedule is imposed. Expansion microscopy expands
+    the specimen, not the living bundle. Hosted Figure 3 supplement 1 is the unmodified
+    mixed-modality figure: A and K include Q-nMT imaging; L is a proliferating-cell
+    anaphase-spindle control. Cytoplasmic yellow background in A is explicitly described
+    as nonspecific in Methods, not GFP localization.'
+  evidence:
+  - reference: DOI:10.7554/eLife.89958
+- discussion_id: taxon_dataset_and_license_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep taxonomy, dataset coverage and licence claims bounded.
+  notes: Only S. cerevisiae is a canonical species. Most experiments use BY4741/BY4742
+    backgrounds, with stated S288C and W303 exceptions; reference-sequence examples
+    are not exact-stock assertions. The adopted iModulonDB inventory has 28 datasets
+    and no S. cerevisiae dataset; this is not a search of all omics repositories.
+    Announced source-data spreadsheets were not inspected or promoted to curated datasets.
+    Native PMC10963028.1 JATS and metadata agree on CC BY 4.0; the 2013 CC BY-NC-SA
+    3.0 figure is not hosted. No unverified TraitMech or Complex Portal link is added.
+  evidence:
+  - reference: DOI:10.1083/jcb.201306075
+  - reference: DOI:10.7554/eLife.89958
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  - reference: https://imodulondb.org/
+images:
+- image_id: pmc_pmc10963028_fig3s1
+  file: pmc10963028_fig3s1.jpg
+  file_sha256: 8ecd7a31deabc0c0fb48e8f52a70ad302b8c5cf952e8ae815ace20999832235f
+  source: PMC
+  source_accession: PMC10963028.1 fig3s1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10963028/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC10963028.1/elife-89958-fig3-figsupp1.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Damien Laporte, Aurelie Massoni-Laporte, Charles Lefranc, Jim Dompierre,
+    David Mauboules, Emmanuel T Nsamba, Anne Royou, Lihi Gal, Maya Schuldiner, Mohan
+    L Gupta, et al.; CC BY, via PubMed Central
+  modality: OTHER
+  caption: 'Multipanel figure: A shows tubulin and Dad2 with expansion microscopy
+    and SIM (1 micrometer bars); K follows quiescent bundles after laser severing
+    (2 micrometer bar). L is a proliferating-cell anaphase-spindle control, not a
+    quiescent bundle. Other panels combine perturbation imaging, morphometry, immunoblots
+    and survival assays. Nonspecific cytoplasmic yellow background in A is not GFP
+    localization.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.7554/eLife.89958
+  retrieved_on: '2026-10-05'
+  notes: Figure 3—figure supplement 1. from article version PMC10963028.1; exact licence
+    version read from JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied
+    by the curator because PMC has no taxon field. Curator explicitly accepted the
+    multi-panel figure. Original image checksum-verified and visually inspected; no
+    crop or alteration. Panel L is an explicitly retained proliferating-cell control.
