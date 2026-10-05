@@ -7821,6 +7821,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:age_associated_protein_deposit",
+      "label": "age-associated protein deposit",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:mitostore",
+          "label": "MitoStore",
+          "cosine_similarity": 0.77961422
+        },
+        {
+          "identifier": "cellstructuremech:insoluble_protein_deposit",
+          "label": "insoluble protein deposit",
+          "cosine_similarity": 0.75904961
+        },
+        {
+          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+          "label": "intranuclear quality control compartment",
+          "cosine_similarity": 0.74806657
+        },
+        {
+          "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
+          "label": "juxtanuclear quality control compartment",
+          "cosine_similarity": 0.72148682
+        },
+        {
+          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
+          "label": "intramitochondrial protein quality control compartment",
+          "cosine_similarity": 0.70591954
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:bacterial_aggresome",
       "label": "bacterial aggresome",
       "neighbors": [
@@ -7835,6 +7866,11 @@
           "cosine_similarity": 0.69266883
         },
         {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.69048602
+        },
+        {
           "identifier": "GO:0048500",
           "label": "signal recognition particle",
           "cosine_similarity": 0.68544014
@@ -7843,11 +7879,6 @@
           "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
           "label": "intranuclear quality control compartment",
           "cosine_similarity": 0.68139703
-        },
-        {
-          "identifier": "GO:0000932",
-          "label": "P-body",
-          "cosine_similarity": 0.67634006
         }
       ]
     },
@@ -7980,6 +8011,11 @@
       "label": "insoluble protein deposit",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.75904961
+        },
+        {
           "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
           "label": "juxtanuclear quality control compartment",
           "cosine_similarity": 0.69557577
@@ -7998,11 +8034,6 @@
           "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
           "label": "intramitochondrial protein quality control compartment",
           "cosine_similarity": 0.626074
-        },
-        {
-          "identifier": "GO:0140737",
-          "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.60860256
         }
       ]
     },
@@ -8014,6 +8045,11 @@
           "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
           "label": "juxtanuclear quality control compartment",
           "cosine_similarity": 0.83958213
+        },
+        {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.74806657
         },
         {
           "identifier": "cellstructuremech:mitostore",
@@ -8029,11 +8065,6 @@
           "identifier": "cellstructuremech:insoluble_protein_deposit",
           "label": "insoluble protein deposit",
           "cosine_similarity": 0.68285978
-        },
-        {
-          "identifier": "cellstructuremech:bacterial_aggresome",
-          "label": "bacterial aggresome",
-          "cosine_similarity": 0.68139703
         }
       ]
     },
@@ -8052,6 +8083,11 @@
           "cosine_similarity": 0.72828714
         },
         {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.72148682
+        },
+        {
           "identifier": "cellstructuremech:mitostore",
           "label": "MitoStore",
           "cosine_similarity": 0.71473054
@@ -8060,11 +8096,6 @@
           "identifier": "cellstructuremech:insoluble_protein_deposit",
           "label": "insoluble protein deposit",
           "cosine_similarity": 0.69557577
-        },
-        {
-          "identifier": "cellstructuremech:bacterial_aggresome",
-          "label": "bacterial aggresome",
-          "cosine_similarity": 0.67570053
         }
       ]
     },
@@ -8109,6 +8140,11 @@
           "cosine_similarity": 0.78592205
         },
         {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.77961422
+        },
+        {
           "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
           "label": "intranuclear quality control compartment",
           "cosine_similarity": 0.72566948
@@ -8122,11 +8158,6 @@
           "identifier": "cellstructuremech:insoluble_protein_deposit",
           "label": "insoluble protein deposit",
           "cosine_similarity": 0.67962873
-        },
-        {
-          "identifier": "GO:0140595",
-          "label": "MIM complex",
-          "cosine_similarity": 0.67514053
         }
       ]
     },

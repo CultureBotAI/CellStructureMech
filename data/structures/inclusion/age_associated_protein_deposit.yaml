@@ -1,0 +1,757 @@
+identifier: cellstructuremech:age_associated_protein_deposit
+label: age-associated protein deposit
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: An aging-associated protein inclusion characterized in budding yeast that
+  collects aggregation-prone proteins, usually persists as a single ER-associated
+  deposit, and is preferentially retained in the mother-cell lineage.
+definition_source: DOI:10.1016/j.cub.2017.01.069
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T10:03:31Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T10:06:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added bounded Agepod identity and topology, six component classes, seven
+    reference proteins, four intervention graphs, source-limit discussions and an
+    inspected CC BY 4.0 figure.
+  llm_assisted: true
+synonyms:
+- synonym_text: Agepod
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.jbc.2025.108172
+- synonym_text: APOD
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.3389/fnmol.2018.00249
+- synonym_text: age-associated protein deposit site
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.3389/fnmol.2018.00249
+parent_structures:
+- GO:0016234
+components:
+- component_id: protein_cargo
+  label: heterogeneous age-associated protein cargo
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Variable aggregated client material is not a single sequence family
+    or a fixed complex.
+  role: Protein material collected into a persistent aging-associated inclusion. The
+    complete native inventory is unresolved; the conditional Sup35 example below is
+    part of this cargo, not an additional fixed layer.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Results on early replicative aging and Figures 1-2 establish persistent
+      protein deposition and conditional Sup35 recruitment.
+  - reference: DOI:10.1016/j.cub.2017.01.069
+    notes: Discussion explicitly leaves the full constituent inventory unresolved.
+- component_id: small_hsp
+  label: Small heat shock protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  grounding: InterPro:IPR031107
+  gene_symbols:
+  - HSP42
+  - HSP26
+  role: Deposited chaperone class represented by Hsp42 and conditionally Hsp26. Hsp42
+    appears before Hsp104 and promotes collection into the normal deposit. Hsp26 enrichment
+    occurs in only 15% of assayed deposits; its deletion does not abolish deposition.
+    The formation requirement applies to Hsp42 in the tested assay, not to every family
+    member.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12329
+    protein_label: Heat shock protein 42
+    gene_symbol: HSP42
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of all experimental
+      backgrounds to S288C. Figures 1C and 6 show deposit association, earlier Hsp42
+      recruitment and suppressed normal deposition after HSP42 deletion.
+    evidence:
+    - reference: UniProtKB:Q12329
+      notes: Native reviewed entry verifies accession, protein name, gene and reference
+        taxon.
+    - reference: DOI:10.7554/eLife.06197
+      notes: Figures 1C and 6 show deposit association, earlier Hsp42 recruitment
+        and suppressed normal deposition after HSP42 deletion.
+  - uniprot_id: UniProtKB:P15992
+    protein_label: Heat shock protein 26
+    gene_symbol: HSP26
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of all experimental
+      backgrounds to S288C. Figure 1C reports enrichment in a minority of deposits;
+      inspected Figure 6C shows increased, not abolished, foci after HSP26 deletion.
+    evidence:
+    - reference: UniProtKB:P15992
+      notes: Native reviewed entry verifies accession, protein name, gene and reference
+        taxon.
+    - reference: DOI:10.7554/eLife.06197
+      notes: Figure 1C reports enrichment in a minority of deposits; inspected Figure
+        6C shows increased, not abolished, foci after HSP26 deletion.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Results and Figures 1C, 6-7 distinguish collection by Hsp42 from Hsp26
+      association and mutant phenotypes.
+  - reference: InterPro:IPR031107
+    notes: Native family metadata and complete three-entry integrated match sets for
+      both examples verify the family; domains are not substituted for it.
+- component_id: hsp104
+  label: Hsp104-type disaggregase
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: DISPENSABLE
+  gene_symbols:
+  - HSP104
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: All 11 native integrated InterPro matches for P31539 were inspected.
+    ClpA/B families IPR001270 and IPR050130 are broader than the Hsp104-type class.
+  role: Deposit-associated disaggregase and experimental marker. HSP104 deletion accelerates
+    Ssa1-marked deposit formation, while overexpression suppresses or destabilizes
+    deposits. Hsp104 positivity alone does not identify every focus as Agepod.
+  protein_examples:
+  - uniprot_id: UniProtKB:P31539
+    protein_label: Heat shock protein 104
+    gene_symbol: HSP104
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of all experimental
+      backgrounds to S288C. Figures 1, 6 and 7 establish association and show that
+      the structure can form without Hsp104.
+    evidence:
+    - reference: UniProtKB:P31539
+      notes: Native reviewed entry verifies accession, protein name, gene and reference
+        taxon.
+    - reference: DOI:10.7554/eLife.06197
+      notes: Figures 1, 6 and 7 establish association and show that the structure
+        can form without Hsp104.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Figures 6-7 use different reporters to distinguish Hsp104 marker loss from
+      loss of the deposit.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: Complete native match set checked through next=null.
+- component_id: hsp70
+  label: Heat shock protein 70 family
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  grounding: InterPro:IPR013126
+  gene_symbols:
+  - SSA1
+  - SSA2
+  role: Associated chaperone family represented by Ssa1 and Ssa2. Each single deletion
+    accelerates Hsp104-focus accumulation; this does not establish dispensability
+    of the whole family or a combined-deletion phenotype.
+  protein_examples:
+  - uniprot_id: UniProtKB:P10591
+    protein_label: Heat shock protein SSA1
+    gene_symbol: SSA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of all experimental
+      backgrounds to S288C. Figure 1C supports deposit association; Figure 6C labels
+      a separate ssa1 deletion group.
+    evidence:
+    - reference: UniProtKB:P10591
+      notes: Native reviewed entry verifies accession, protein name, gene and reference
+        taxon.
+    - reference: DOI:10.7554/eLife.06197
+      notes: Figure 1C supports deposit association; Figure 6C labels a separate ssa1
+        deletion group.
+  - uniprot_id: UniProtKB:P10592
+    protein_label: Heat shock protein SSA2
+    gene_symbol: SSA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of all experimental
+      backgrounds to S288C. Figure 1C supports deposit association; Figure 6C labels
+      a separate ssa2 deletion group.
+    evidence:
+    - reference: UniProtKB:P10592
+      notes: Native reviewed entry verifies accession, protein name, gene and reference
+        taxon.
+    - reference: DOI:10.7554/eLife.06197
+      notes: Figure 1C supports deposit association; Figure 6C labels a separate ssa2
+        deletion group.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Figure 1C and inspected Figure 6C support localized examples and distinguish
+      the single deletions.
+  - reference: InterPro:IPR013126
+    notes: Native family metadata and both complete five-entry match sets verify membership.
+      The generic family label does not assert residence of every Hsp70 paralog.
+- component_id: ydj1
+  label: Ydj1-type Hsp40 cochaperone
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  gene_symbols:
+  - YDJ1
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: All nine integrated InterPro matches for P25491 were checked. Chaperone
+    DnaJ and DnaJ homolog subfamily A member 1/2-like families are broader than the
+    Ydj1-type class; other entries are domains or superfamilies.
+  role: Conditionally deposit-enriched cochaperone, not a universal deposit coat.
+    Farnesylatable N-terminal GFP-Ydj1 is enriched in only 9.4% of Hsp104 deposits.
+    Its better-supported upstream role in precursor confinement does not establish
+    that it tethers the assembled deposit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25491
+    protein_label: Mitochondrial protein import protein MAS5
+    gene_symbol: YDJ1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of all experimental
+      backgrounds to S288C. Inspected Supplemental Figure S5A shows conditional enrichment
+      of N-terminal GFP-Ydj1. The native UniProt recommended name is retained without
+      implying a mitochondrial location for Agepod.
+    evidence:
+    - reference: UniProtKB:P25491
+      notes: Native reviewed entry verifies accession, protein name, gene and reference
+        taxon.
+    - reference: DOI:10.1016/j.cub.2017.01.069
+      notes: Inspected Supplemental Figure S5A shows conditional enrichment of N-terminal
+        GFP-Ydj1. The native UniProt recommended name is retained without implying
+        a mitochondrial location for Agepod.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2017.01.069
+    notes: Results and Supplemental Figure S5A contrast functional farnesylation with
+      C-terminal tagging; S5D-E show preserved ER apposition after YDJ1-C406S.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P25491/?page_size=200
+    notes: Complete native match set checked through next=null.
+- component_id: sup35_cargo
+  label: Eukaryotic peptide chain release factor GTP-binding subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: InterPro:IPR003285
+  gene_symbols:
+  - SUP35
+  role: Conditional cargo represented by prion-converted Sup35, enriched in approximately
+    one third of assayed deposits in [PSI+] cells but not in the tested [psi-] cells.
+    This is a subset of heterogeneous cargo, not a universal component or proof that
+    Sup35 prions initiate the structure.
+  protein_examples:
+  - uniprot_id: UniProtKB:P05453
+    protein_label: Eukaryotic peptide chain release factor GTP-binding subunit
+    gene_symbol: SUP35
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example; not a reassignment of all experimental
+      backgrounds to S288C. Figure 2 distinguishes [PSI+] cargo recruitment from the
+      absence of enrichment in the non-prion state.
+    evidence:
+    - reference: UniProtKB:P05453
+      notes: Native reviewed entry verifies accession, protein name, gene and reference
+        taxon.
+    - reference: DOI:10.7554/eLife.06197
+      notes: Figure 2 distinguishes [PSI+] cargo recruitment from the absence of enrichment
+        in the non-prion state.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Figure 2 reports conditional Sup35 deposition and mother retention; prion
+      state did not potentiate overall deposit formation.
+  - reference: InterPro:IPR003285
+    notes: Native family definition and the complete nine-entry P05453 match set verify
+      this exact generic family. The accession denotes the protein class, not its
+      prion conformation.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1016/j.cub.2017.01.069
+  note: Species-level experimental scope for localization, inheritance and precursor-confinement
+    assays. The accepted manuscript includes a strain/genotype table; no finer strain
+    identity is inferred from genotype resemblance.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: DOI:10.7554/eLife.06197
+  note: Figure 1 supplement 2 explicitly describes S288C-background deposition, alongside
+    W303 experiments. This is also the native reference taxon for the reviewed protein
+    examples; not every assay or hosted panel is reassigned to it.
+- taxon_id: NCBITaxon:1247190
+  taxon_label: Saccharomyces cerevisiae BY4741
+  reference: DOI:10.1016/j.jbc.2025.108172
+  note: Methods identifies BY4741 derivatives for the mTOR study. Its aging Hsp104-focus
+    readout is operational and does not independently resolve every focus against
+    INQ or other deposits. Native NCBI taxonomy verifies the strain ID.
+functions:
+- function_id: collection
+  label: collection of aggregation-prone protein material
+  description: Concentrates selected protein cargo into an aging-associated deposit,
+    typically one persistent focus after initial formation. This is not an exhaustive
+    cargo inventory or proof of a fixed material state.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Figures 1-2 and 6-7 support persistent collection and chaperone-dependent
+      organization.
+- function_id: asymmetric_inheritance
+  label: asymmetric retention of deposited protein material
+  description: Preferentially retains assembled deposits in mother cells during division.
+    Retention of the visible deposit and confinement of its proposed smaller precursors
+    are distinct mechanisms.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Figures 1F and 2G measure mother retention of Hsp104- and Sup35-marked
+      deposits.
+  - reference: DOI:10.1016/j.cub.2017.01.069
+    notes: Figures 3-4 distinguish mature-deposit passage from new deposit formation
+      in daughters.
+causal_graphs:
+- graph_id: chaperone_deposition
+  title: Chaperone-dependent deposition and deposit merger
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Separate yeast loss-of-function, overexpression and mating assays.
+    Foci are operational readouts; not every aggregate is an assembled Agepod, and
+    individual chaperone effects do not imply a fixed stoichiometry.
+  nodes:
+  - node_id: deposit
+    label: age-associated protein deposit
+    node_type: STRUCTURE
+    grounding: cellstructuremech:age_associated_protein_deposit
+  - node_id: hsp42_loss
+    label: HSP42 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: hsp104_loss
+    label: HSP104 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: hsp42_oe
+    label: Hsp42 overexpression
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: hsp104_oe
+    label: Hsp104 overexpression
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: ssa1_loss
+    label: SSA1 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: ssa2_loss
+    label: SSA2 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: prm3_loss
+    label: PRM3 deletion in both mating partners
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: merger
+    label: Merger of pre-existing deposits after mating
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: hsp42_loss
+    predicate: suppresses
+    object: deposit
+    description: Loss strongly reduces formation of the normal collected deposit,
+      without proving that all aggregation is absent.
+    evidence:
+    - reference: DOI:10.7554/eLife.06197
+      notes: Figures 6B-C and 7A-C.
+  - subject: hsp104_loss
+    predicate: accelerates formation of
+    object: deposit
+    description: Ssa1-marked deposits appear earlier without Hsp104; its reporter
+      signal is not required to score this phenotype.
+    evidence:
+    - reference: DOI:10.7554/eLife.06197
+      notes: Figure 7A-B.
+  - subject: hsp42_oe
+    predicate: promotes formation of
+    object: deposit
+    description: Overexpression accelerates early deposition and growth in the tested
+      backgrounds.
+    evidence:
+    - reference: DOI:10.7554/eLife.06197
+      notes: Inspected Figure 6D-F.
+  - subject: hsp104_oe
+    predicate: suppresses accumulation of
+    object: deposit
+    description: Overexpression reduces stable Hsp104-marked deposition and can destabilize
+      foci.
+    evidence:
+    - reference: DOI:10.7554/eLife.06197
+      notes: Inspected Figure 6D-E and Results.
+  - subject: ssa1_loss
+    predicate: accelerates accumulation of
+    object: deposit
+    description: A single SSA1 deletion increases focus frequency in the indicated
+      young age groups.
+    evidence:
+    - reference: DOI:10.7554/eLife.06197
+      notes: Inspected Figure 6C; not a double deletion.
+  - subject: ssa2_loss
+    predicate: accelerates accumulation of
+    object: deposit
+    description: A separate SSA2 deletion increases focus frequency.
+    evidence:
+    - reference: DOI:10.7554/eLife.06197
+      notes: Inspected Figure 6C; not a double deletion.
+  - subject: deposit
+    predicate: can undergo
+    object: merger
+    description: Deposits from mating partners can merge after cell fusion.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2017.01.069
+      notes: Figure 2 and associated Results.
+  - subject: prm3_loss
+    predicate: impairs
+    object: merger
+    description: Blocking ER/nuclear-envelope fusion impairs merger of the two pre-existing
+      deposits; this does not make Prm3 a deposit constituent.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2017.01.069
+      notes: Figure 2H-L and Results.
+- graph_id: lineage_confinement
+  title: Deposit appearance in daughters versus mature-deposit retention
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Hsp104 time-lapse assays score daughters born without a deposit that
+    form a stable focus during their first cycle. Precursor capture by ER-bound Ydj1
+    is the authors' model, not direct identification of bound cargo.
+  nodes:
+  - node_id: bud1_loss
+    label: BUD1 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: sur2_loss
+    label: SUR2 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: bud6_loss
+    label: BUD6 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: c406s
+    label: YDJ1-C406S farnesylation-site mutation
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: daughter_formation
+    label: New stable deposit formation in daughter cells
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: retention
+    label: Mother retention of pre-existing deposits
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: bud1_loss
+    predicate: increases
+    object: daughter_formation
+    description: ER-barrier perturbation increases new daughter deposits; mature-deposit
+      passage is not significantly increased in this assay.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2017.01.069
+      notes: Inspected Figure 3B-C and Results.
+  - subject: sur2_loss
+    predicate: increases
+    object: daughter_formation
+    description: Loss increases new daughter deposits, distinct from transfer of a
+      visible maternal deposit.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2017.01.069
+      notes: Inspected Figure 3B-C.
+  - subject: bud6_loss
+    predicate: increases
+    object: daughter_formation
+    description: Loss also increases new daughter deposits, but Bud6 has additional
+      actin-related roles and more mature-deposit passage; the mechanism is not treated
+      as barrier-specific.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2017.01.069
+      notes: Inspected Figure 3B-C and Results.
+  - subject: c406s
+    predicate: increases
+    object: daughter_formation
+    description: Preventing Ydj1 farnesylation accelerates daughter deposition; combining
+      it with barrier mutations does not further increase the tested readout.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2017.01.069
+      notes: Inspected Figure 4D-F.
+  - subject: c406s
+    predicate: does not detectably impair
+    object: retention
+    description: Pre-existing deposits remain mother-retained and ER-apposed despite
+      accelerated new daughter deposition.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2017.01.069
+      notes: Inspected Figure 4C and Supplemental Figure S5D-E.
+- graph_id: tor_regulation
+  title: mTOR-pathway perturbations of aging-associated foci
+  graph_kind: REGULATION
+  scope_status: MECHANISTIC
+  scope_notes: BY4741-derived aging assays from 2025, not the separate acute-heat
+    pro3-1 screen. Hsp104 foci are the operational readout; mTOR regulators are not
+    inferred to reside in Agepod.
+  nodes:
+  - node_id: npr3_loss
+    label: NPR3 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: tco89_loss
+    label: TCO89 deletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: aging_foci
+    label: Hsp104 foci during replicative aging
+    node_type: STATE
+  edges:
+  - subject: npr3_loss
+    predicate: increases and advances
+    object: aging_foci
+    description: The mutant accumulates foci earlier and at higher frequency across
+      assayed ages.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2025.108172
+      notes: Aging Results and Figure 4.
+  - subject: tco89_loss
+    predicate: reduces
+    object: aging_foci
+    description: Manually constructed mutant cells show strongly reduced aging-associated
+      Hsp104 foci.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2025.108172
+      notes: Aging Results and Figure 4; not the discordant original heat-screen hit.
+- graph_id: conditional_clearance
+  title: Age-dependent persistence under aggregation-modifying treatments
+  graph_kind: DISASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Loss of Hsp104 puncta is not a direct assay of proteolysis, client
+    refolding or complete removal of insoluble material. Early foci and mature deposits
+    need not be equivalent.
+  nodes:
+  - node_id: young_rapa
+    label: Rapamycin treatment of younger cells
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: young_chx
+    label: Cycloheximide treatment of younger cells
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: old_rapa
+    label: Rapamycin treatment of older cells
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: young_foci
+    label: Younger-cell Hsp104 foci
+    node_type: STATE
+  - node_id: old_foci
+    label: Older-cell persistent Hsp104 deposits
+    node_type: STATE
+  edges:
+  - subject: young_rapa
+    predicate: reduces
+    object: young_foci
+    description: Foci diminish in younger wild-type and npr3 deletion cells under
+      the tested treatment.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2025.108172
+      notes: Figure 5A and aging Results.
+  - subject: young_chx
+    predicate: reduces
+    object: young_foci
+    description: Younger-cell foci diminish after translation inhibition; the paper's
+      conflicting dose descriptions are not silently reconciled.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2025.108172
+      notes: Figure 5A and Methods.
+  - subject: old_rapa
+    predicate: does not clear
+    object: old_foci
+    description: Foci persist in the assayed older cohort, reported at median 12 divisions;
+      this is not resistance to every clearance treatment.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2025.108172
+      notes: Figure 5B and aging Results.
+evidence:
+- reference: DOI:10.7554/eLife.06197
+  notes: Saarikangas and Barral (2015), PMID 26544680, PMC4635334.1. Native current
+    metadata/JATS verified, not retracted. Read main Results, Discussion, Methods
+    and figure captions; inspected Figure 6. The supplemental strain workbook, videos
+    and raw data were not inspected.
+- reference: DOI:10.1016/j.cub.2017.01.069
+  notes: Saarikangas et al. (2017), PMID 28262489. Read the institutional accepted-manuscript
+    PDF including main Results, Discussion, Methods, figure legends and supplemental
+    strain/procedure text. Inspected main Figures 1, 3, 4 and Supplemental Figures
+    S1 and S5. Raw data and movie were not inspected; no reuse licence is inferred
+    for this PDF.
+- reference: DOI:10.1016/j.jbc.2025.108172
+  notes: 2025 mTOR study, PMID 39798875, PMC11849620.1. Native current metadata/JATS
+    verified, not retracted. Read main Results, aging methods and Data availability;
+    captions inspected but figure pixels and supplemental datasets not independently
+    inspected.
+- reference: DOI:10.3389/fnmol.2018.00249
+  notes: 2018 spatial protein-quality-control review, PMID 30083092, PMC6064742.1.
+    Native metadata and Figure 1 caption verified for APOD and expanded-name synonyms
+    only; not used as primary mechanistic evidence.
+- reference: GO:0016234
+  notes: Native QuickGO verifies active inclusion body as a broader cellular-component
+    parent.
+discussions:
+- discussion_id: identity_and_topology
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep the aging-defined deposit distinct without imposing a universal compartment
+    topology.
+  rationale: Shared markers and perinuclear proximity do not establish exact identity.
+  notes: Exact OLS GO label/synonym checks and complete programmatic label checks
+    of all 3177 fuzzy QuickGO results found no exact Agepod term. GO:0140453 protein
+    aggregate center denotes a reversible thermosensitive-protein shielding aggregate,
+    not this aging-defined entity. Hidden/ignored-inclusive searches excluding only
+    .git and parsed identities of 892 records found no duplicate. The 2015 assays
+    distinguish Q-bodies, IPOD and JUNQ/INQ reporters; the 2017 SIM assay reports
+    intranuclear deposits in 38% of 26 cells and explicitly leaves the INQ/JUNQ relationship
+    unresolved. Do not equate all Hsp104 foci, or add exclusive cytoplasm, nucleus
+    or ER parthood. ER apposition is not a demonstrated enclosing membrane.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Figure 3 comparisons are assay-bounded.
+  - reference: DOI:10.1016/j.cub.2017.01.069
+    notes: Results and inspected Figure 1I-J preserve intranuclear localization and
+      unresolved compartment relationships.
+  - reference: GO:0140453
+    notes: Native active term definition checked; related but not equivalent.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: component_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral groundings for heterogeneous cargo and narrow
+    Hsp104/Ydj1 classes.
+  rationale: Broader chaperone families and variable client inventories are not exact
+    identities.
+  notes: 'Retain three REVIEWED_LABEL_ONLY entries. Complete integrated matches were
+    checked for all seven reference proteins: Hsp104 11, Hsp42/Hsp26 three each, Ssa1/Ssa2
+    five each, Ydj1 nine and Sup35 nine. Generic small-HSP, Hsp70 and release-factor
+    family labels use their exact verified InterPro identities without asserting every
+    family member localizes here.'
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: Complete native Hsp104 match set.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P25491/?page_size=200
+    notes: Complete native Ydj1 match set.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: ydj1_and_precursors
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Separate conditional Ydj1 residence from the proposed precursor-confinement
+    mechanism.
+  rationale: Fluorescent tag placement changes farnesylation and exchange; diffusion
+    is not direct client identification.
+  notes: The 2015 C-terminal Ydj1 localization is not promoted to universal native
+    residence. In 2017, functional N-terminal GFP-Ydj1 enrichment occurs in only 9.4%
+    of 53 deposits. YDJ1-C406S accelerates daughter deposition without disrupting
+    the mature deposit's ER apposition or mother retention. FCS/FLIP and epistasis
+    support the authors' precursor-confinement model, but direct bound precursors
+    were not identified. The Sup35 readthrough assay is a prion-strength proxy, not
+    direct imaging of precursor transport.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Figure 1C and main Results.
+  - reference: DOI:10.1016/j.cub.2017.01.069
+    notes: Results, Figure 5, inspected Supplemental Figure S5 and Discussion.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: noncomponents_and_phenotypes
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Do not convert upstream factors, marker negatives or lifespan correlations
+    into composition and universal function.
+  rationale: Localization, genetic dependence and pleiotropic phenotypes answer different
+    questions.
+  notes: BUD1, SUR2, BUD6, PRM3, NPR3, TCO89 and mTOR-pathway factors remain upstream
+    regulators or experimental perturbations, not fixed components. Sis1, Hsp82, Btn2
+    and Dcp2 are not assigned resident roles from the tested 2015 comparisons; these
+    results are not taxonomic absence. No proteasome coat is inferred from faster
+    cytosolic AID-reporter turnover in deposit-bearing cells. HSP42/HSP104 lifespan
+    changes do not isolate a causal effect of the deposit itself. Early/midlife stress
+    handling is not universal protection throughout aging.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Figures 1-5 and 8; reporter comparisons and pleiotropic deletions.
+  - reference: DOI:10.1016/j.cub.2017.01.069
+    notes: Figures 2-5 separate ER/precursor control from deposit composition.
+  - reference: DOI:10.1016/j.jbc.2025.108172
+    notes: Separate aging and heat-stress assays.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: assay_boundaries
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Preserve single-deletion, tag, dose and assay-context distinctions.
+  rationale: A source inconsistency or readout boundary must not be flattened into
+    a stronger claim.
+  notes: Inspected 2015 Figure 6C contains separate ssa1 and ssa2 deletion groups,
+    not a combined mutant. In 2025, Figure 5A specifies 0.25 micrograms/ml cycloheximide
+    whereas general Methods specifies 250 micrograms/ml; no exact dose is assigned
+    here. The original TCO89 heat-screen hit differs from manually reconstructed mutants.
+    Acute-heat translation/Hsf1 measurements are not recast as direct mechanistic
+    tests of aged deposits. Loss of fluorescent foci is not proof of total cargo degradation.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Inspected Figure 6.
+  - reference: DOI:10.1016/j.jbc.2025.108172
+    notes: Results on screen validation and aging, Figure 5A and Methods.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: remaining_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve complete native cargo, material state, prevalence and the relationship
+    to nuclear inclusions.
+  rationale: A few yeast backgrounds and fluorescence assays do not establish fixed
+    composition, dimensions or lineage-wide presence.
+  notes: Leave taxonomic_distribution, complex_compositions, stoichiometry, physical_properties,
+    trait links and dataset accessions unset. Typical singularity and Hsp104 FRAP
+    are assay observations, not invariant copy number or proof of liquid-liquid phase
+    separation. The 2017 accepted-manuscript supplemental strain table was read but
+    does not justify assigning every assay to one reference strain. The 2015 strain
+    workbook and 2025 supplemental datasets remain unread. Broad data-availability
+    statements are not dataset accessions.
+  evidence:
+  - reference: DOI:10.7554/eLife.06197
+    notes: Figures 1-2, Methods and Discussion.
+  - reference: DOI:10.1016/j.cub.2017.01.069
+    notes: SIM localization, supplemental strain/procedure text and Discussion.
+  - reference: DOI:10.1016/j.jbc.2025.108172
+    notes: Methods and Data availability.
+  posed_by: codex
+  posed_date: '2026-10-05'
+images:
+- image_id: pmc_pmc4635334_fig6
+  file: pmc4635334_fig6.jpg
+  file_sha256: abf686034f035ecdf81b1c3fb79c1504412f436b4c695c07bbcfc31525f8d74a
+  source: PMC
+  source_accession: PMC4635334.1 fig6
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4635334/#fig6
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC4635334.1/elife06197f006.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Juha Saarikangas and Yves Barral (2015), Figure 6; CC BY 4.0, via PubMed
+    Central. Unmodified.
+  modality: FLUORESCENCE
+  caption: Age-associated deposit formation in budding yeast. Panel A follows Hsp42-GFP
+    and Hsp104-mCherry recruitment; B-C compare wild type and separate chaperone deletions.
+    D-F follow Hsp104 and Hsp42 overexpression and focus growth. Arrows mark deposits;
+    microscopy scale bars are 5 micrometers. Panel G is the authors' assembly model,
+    not an additional micrograph.
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.7554/eLife.06197
+  retrieved_on: '2026-10-05'
+  notes: Figure 6. from article version PMC4635334.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Actual image inspected; no separate third-party credit found in the caption or
+    pixels. Figure 6C labels separate ssa1 and ssa2 deletion groups. Panels include
+    mutant comparisons and a schematic, not exclusively positive deposits. Species
+    scope is retained because the supplemental strain workbook was not inspected.
