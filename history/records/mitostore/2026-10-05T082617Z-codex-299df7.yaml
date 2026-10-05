@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/mitostore.yaml
+  slug: mitostore
+session:
+  id: 2026-10-05T082617Z-codex-299df7
+  timestamp: '2026-10-05T08:26:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.15252/embj.2022112309
+  - https://doi.org/10.1073/pnas.2300475120
+  - https://www.ebi.ac.uk/pride/archive/projects/PXD035762
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - datasets
+  - images
+  - discussions
+  summary: Add evidence-backed MitoStore precursor-storage granule
+  details: Added one PROPOSED MitoStore inclusion after hidden/ignored-inclusive duplicate
+    searches and native GO checks. The inspected 2023 primary study supports three component
+    classes, two functions and two mechanistic graphs with thirteen source-local edges. Native
+    InterPro family membership grounds the shared small-HSP class; Hsp42 perturbation and
+    Hsp26 association remain distinguished. Preserved reference-versus-experimental strain
+    scope, related-aggregate identity limits and conflicting PRIDE metadata. Ingested unmodified
+    PMC10068336.1 Figure 5 after native licence, caption, actual-image and checksum verification.
+    The guarded writer rejected an invalid draft node enum before any expanded-record/image
+    write; the corrected STATE node validated and unchanged re-emission was byte-identical.
+    Complete corpus gates follow before publication.
