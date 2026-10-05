@@ -1,0 +1,426 @@
+identifier: cellstructuremech:hsp78_chaperone_complex
+label: Hsp78 chaperone complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An oligomeric mitochondrial matrix chaperone assembly built from Hsp78-type
+  subunits and involved in ATP-dependent solubilization of aggregated proteins.
+definition_source: DOI:10.1016/j.jbc.2022.102494
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T02:53:34Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T02:55:21Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added yeast-scoped Hsp78 assembly composition, reviewed reference protein,
+    assay-bounded function graph, verified PRIDE datasets, link-only licensed figures
+    and explicit source conflicts.
+  llm_assisted: true
+- timestamp: '2026-10-05T03:19:42Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: 'Addressed PR 2049 review issues 2050 and 2051: separated purified-protein
+    and yeast-complementation graph states and attached native InterPro evidence without
+    changing biological scope or label-only grounding.'
+  llm_assisted: true
+parent_structures:
+- GO:0101031
+part_of:
+- GO:0005759
+components:
+- component_id: hsp78
+  label: Hsp78-type chaperone subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro combined matches for reviewed yeast P33416 include
+    the broader ClpA/B families IPR001270 and IPR050130, plus domains, sites and a
+    P-loop superfamily. No exact Hsp78-type family was identified among those matches;
+    none is adopted as an exact component grounding.
+  gene_symbols:
+  - HSP78
+  role: ATPase chaperone subunit forming mitochondrial Hsp78 oligomers. The curated
+    yeast preparations show multiple oligomeric states, so no invariant copy number
+    is assigned.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33416
+    protein_label: Heat shock protein 78, mitochondrial
+    gene_symbol: HSP78
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference sequence for the mitochondrial chaperone subunit, not
+      an identifier for the whole oligomer or the experimental strain.
+    evidence:
+    - reference: UniProtKB:P33416
+      notes: Native reviewed entry verifies HSP78, YDR258C, YD9320A.08C, reference
+        taxon and matrix localization. Its homohexamer annotation does not establish
+        a fixed copy number in every preparation.
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.102494
+    notes: Figure 1E and Results report Hsp78-containing oligomers after digitonin
+      solubilization of isolated yeast mitochondria. Figure 1F analyzes purified bacterially
+      expressed yeast protein by size-exclusion chromatography. Neither assay is an
+      atomic structure or a time-resolved assembly pathway.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200
+    notes: 'Native combined endpoint inspected 2026-10-05: nine integrated matches,
+      next=null. IPR001270 and IPR050130 are broader ClpA/B families; four domains,
+      two conserved sites and one homologous superfamily are not exact Hsp78 family
+      identities. This bounded result motivates label-only grounding, not a claim
+      that every possible authority lacks an exact term.'
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1016/j.jbc.2022.102494
+  note: Yeast Hsp78 oligomerization and disaggregation experiments. Methods identify
+    Y03617-ES for non-qMS work and Y13617-ES for qMS; the experimental strains are
+    not silently equated with S288C. Recombinant protein assays use E. coli as an
+    expression host, not as the native organism for this structure.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: UniProtKB:P33416
+  note: Reference-sequence organism of the reviewed Hsp78 example; this does not reassign
+    the paper's experimental strains.
+functions:
+- function_id: disaggregation
+  label: ATP-dependent protein disaggregase activity
+  grounding: GO:0140545
+  description: Supports resolubilization of heat-aggregated reporter protein in isolated
+    yeast mitochondria. Recovery into a soluble fraction is not itself evidence of
+    refolding or restored reporter enzymatic activity.
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.102494
+    notes: Figure 2 compares recovery of imported radiolabeled b2(107)Delta-DHFRDS
+      reporter in wild-type-complemented, Hsp78TR, deletion and ATP-depleted mitochondria.
+      Organelle-wide ATP depletion is not an Hsp78-specific intervention.
+  - reference: UniProtKB:P33416
+    notes: Reviewed annotation supports ATP-dependent disaggregation and functional
+      cooperation with mitochondrial Hsp70; cooperation does not imply a fixed heteromeric
+      composition.
+- function_id: atp_hydrolysis
+  label: ATP hydrolysis activity
+  grounding: GO:0016887
+  description: ATPase activity of Hsp78, measured with purified recombinant yeast
+    protein.
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.102494
+    notes: Figure 1C measures phosphate release with 0.08 microgram/microliter protein
+      and 0.25 mM ATP at 37 C. The Hsp78TR construct retains residual activity and
+      is not ATPase-null.
+causal_graphs:
+- graph_id: yeast_hsp78_assayed_function
+  title: Yeast Hsp78 oligomer membership and assay-bounded interventions
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  description: Hsp78 membership, purified-protein ATPase activity, mitochondrial reporter
+    resolubilization and post-heat growth assays.
+  scope_notes: Separate assay nodes prevent a direct causal chain from phosphate release
+    to restored protein folding or respiration. The reporter was imported into isolated
+    mitochondria, aggregated for 5 minutes at 42 C and allowed to recover for 60 minutes
+    at 25 C. Hsp78WT and Hsp78TR complementation uses induced C-terminally His-tagged
+    constructs in an hsp78 deletion background. TR expression is somewhat lower than
+    WT, and the mutation affects multiple biochemical properties. Static oligomer
+    assays do not measure an assembly pathway.
+  nodes:
+  - node_id: hsp78
+    label: Hsp78-type chaperone subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hsp78
+  - node_id: assembly
+    label: Hsp78 chaperone complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:hsp78_chaperone_complex
+  - node_id: atpase
+    label: ATP hydrolysis activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0016887
+    description: Phosphate-release assay on bacterially expressed purified yeast protein.
+  - node_id: solubilization
+    label: Recovery of soluble mitochondrial DHFR reporter
+    node_type: STATE
+    description: Recovery into the soluble fraction after heat aggregation; reporter
+      enzymatic activity was not measured.
+  - node_id: tr
+    label: Hsp78TR complementation
+    node_type: STATE
+    description: Yeast hsp78 deletion cells complemented with the induced His-tagged
+      Hsp78TR construct, and mitochondria isolated from those cells. This state is
+      not the bacterially expressed purified-protein preparation.
+  - node_id: deletion
+    label: HSP78 deletion
+    node_type: STATE
+  - node_id: wt_complementation
+    label: Hsp78WT complementation
+    node_type: STATE
+  - node_id: growth
+    label: Growth on glycerol after acquired-thermotolerance treatment
+    node_type: STATE
+    description: Serial-dilution growth readout after sequential temperature treatments,
+      not direct respiration flux.
+  - node_id: purified_tr
+    label: Purified recombinant Hsp78TR assay preparation
+    node_type: STATE
+    description: Yeast Hsp78TR expressed and affinity-purified from E. coli for comparison
+      with purified Hsp78WT in the phosphate-release assay. ATPase activity is reduced,
+      not absent. The source disagrees on the second mutation number, so no single
+      residue pair is asserted.
+  edges:
+  - subject: hsp78
+    predicate: forms
+    object: assembly
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.102494
+      notes: Figure 1E-F supports oligomeric Hsp78 preparations; native-gel migration
+        was interpreted as trimeric and hexameric species, without a universal copy
+        count.
+  - subject: assembly
+    predicate: catalyzes
+    object: atpase
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.102494
+      notes: Figure 1C measures ATP-dependent phosphate release from purified Hsp78.
+        The active oligomeric state was not independently assigned for each assay
+        point.
+  - subject: purified_tr
+    predicate: impairs
+    object: atpase
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.102494
+      notes: Figure 1C reports approximately 70 percent lower ATPase activity of purified
+        Hsp78TR than WT, not complete loss.
+  - subject: tr
+    predicate: impairs
+    object: solubilization
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.102494
+      notes: Figure 2A-C shows reduced reporter recovery in Hsp78TR mitochondria relative
+        to WT complementation. This does not isolate ATP hydrolysis from substrate
+        binding, expression or assembly changes.
+  - subject: deletion
+    predicate: impairs
+    object: solubilization
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.102494
+      notes: Figure 2A-C shows reduced reporter resolubilization in hsp78 deletion
+        mitochondria under the specified heat/recovery conditions.
+  - subject: wt_complementation
+    predicate: restores relative to deletion
+    object: solubilization
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.102494
+      notes: Figure 2A-C shows improved recovery with Hsp78WT complementation, not
+        quantitative recovery of all substrate or demonstration of restored DHFR activity.
+  - subject: tr
+    predicate: impairs
+    object: growth
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.102494
+      notes: Figure 1D compares serial dilutions on glucose and glycerol after 60
+        minutes at 42 C, a 30-minute 30 C regeneration step specified in Methods,
+        and 60 minutes at 48 C. TR impairs subsequent growth on glycerol relative
+        to WT complementation; glucose growth is similar. No direct respiration or
+        universal heat-survival claim is inferred.
+evidence:
+- reference: DOI:10.1016/j.jbc.2022.102494
+  notes: Jaworek, Sylvester, Cenini and Voos (2022), PMID 36115461. Read abstract,
+    Results, Discussion, Methods, Data availability and main-figure captions in PMC9574514.1;
+    actual Figures 1 and 2 inspected. XML SHA-256 75b5f2c13addf3554fbd534e58fea2aa26605afe26987185a88cc7b3c9a5b2d8.
+    Older oligomer studies cited by the authors were not fully accessible and are
+    not independently treated as inspected evidence.
+- reference: UniProtKB:P33416
+  notes: Native reviewed entry supplies matrix location, reference identity and enzyme
+    annotation.
+- reference: GO:0101031
+  notes: Verified active cellular-component term protein folding chaperone complex;
+    broader parent, not exact identity.
+- reference: GO:0005759
+  notes: Verified active cellular-component term mitochondrial matrix; compartment
+    parthood, not is-a parentage.
+datasets:
+- accession: PXD030405
+  title: 'Hsp78 heat-stress proteomics: Part A, protein interactions'
+  dataset_type: PROTEOMICS
+  repository: PRIDE
+  organism: Saccharomyces cerevisiae (NCBITaxon:4932)
+  description: SILAC affinity-copurification study of potential Hsp78 clients and
+    partners from isolated yeast mitochondria.
+  conditions:
+  - His-tagged Hsp78WT and Hsp78TR baits with an untagged background control
+  - Temperature-dependent mitochondrial copurification; abundance normalized to recovered
+    bait
+  platform: SILAC LC-MS/MS with an LTQ Orbitrap Velos
+  url: https://www.ebi.ac.uk/pride/archive/projects/PXD030405
+  publication: DOI:10.1016/j.jbc.2022.102494
+  findings: Enrichment identifies potential interactors, not fixed stoichiometric
+    subunits or binding-affinity constants.
+  notes: Native PRIDE API verified accession, yeast taxon, paired project, publication
+    DOI, instrument and CC0 dataset licence on 2026-10-05. Archive publication PMID
+    is zero, so it is not used as a PMID assertion. Raw mass-spectrometry files were
+    not downloaded or reanalyzed. Dataset CC0 does not change the paper figures' CC
+    BY-NC-ND 4.0 licence.
+  evidence:
+  - reference: https://www.ebi.ac.uk/pride/archive/projects/PXD030405
+    supports: SUPPORT
+    notes: Native project metadata matches the primary paper Data availability assignment.
+- accession: PXD030436
+  title: 'Hsp78 heat-stress proteomics: Part B, aggregation'
+  dataset_type: PROTEOMICS
+  repository: PRIDE
+  organism: Saccharomyces cerevisiae (NCBITaxon:4932)
+  description: SILAC analysis of sedimentable mitochondrial proteins after heat stress
+    and recovery.
+  conditions:
+  - Gradient-purified isolated mitochondria carrying His-tagged Hsp78WT or Hsp78TR
+  - Heat aggregation and recovery conditions; untagged mitochondria excluded from
+    this comparison
+  platform: SILAC LC-MS/MS with an LTQ Orbitrap Velos
+  url: https://www.ebi.ac.uk/pride/archive/projects/PXD030436
+  publication: DOI:10.1016/j.jbc.2022.102494
+  findings: Condition-dependent changes in protein sedimentation support a role in
+    proteostasis; pellet recovery is not direct proof of refolding, physiological
+    client identity or complete disaggregation.
+  notes: Native PRIDE API verified accession, yeast taxon, paired project, publication
+    DOI, instrument and CC0 dataset licence on 2026-10-05. Archive publication PMID
+    is zero, so it is not used as a PMID assertion. Raw mass-spectrometry files were
+    not downloaded or reanalyzed. Dataset CC0 does not change the paper figures' CC
+    BY-NC-ND 4.0 licence.
+  evidence:
+  - reference: https://www.ebi.ac.uk/pride/archive/projects/PXD030436
+    supports: SUPPORT
+    notes: Native project metadata matches the primary paper Data availability assignment.
+discussions:
+- discussion_id: identity_and_component_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Separate the Hsp78 oligomer from its subunit, cooperating chaperones and
+    potential clients.
+  rationale: Hsp78 is one gene product but forms a distinct mitochondrial oligomer.
+    Copurification does not establish invariant structural membership.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.102494
+    notes: Primary study establishes the experimental context and its limitations.
+  resolution_note: Mint the assembly identity after bounded native QuickGO and OLS
+    GO label/synonym searches for Hsp78, ClpB and Hsp100 did not return an exact term.
+    The broad chaperone-complex parent is not equivalent. Keep Ssc1, Mdj1, potential
+    substrates and post-lysis contaminants outside canonical composition; no fixed
+    Hsp78-Hsp70 heteromer is demonstrated. Whole-worktree hidden/ignored-inclusive
+    searches and parsed identity fields of all 885 pre-existing records found no Hsp78
+    duplicate.
+  resolved_date: '2026-10-05'
+- discussion_id: exact_component_family
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve an exact source-neutral Hsp78-type component family if an authority
+    supplies one.
+  rationale: The nine integrated InterPro matches for reviewed P33416 include broader
+    ClpA/B families, domains and sites; using those as an exact Hsp78 identity would
+    overstate specificity.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.102494
+    notes: Primary study establishes the experimental context and its limitations.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200
+    notes: 'Native combined endpoint inspected 2026-10-05: nine integrated matches,
+      next=null. IPR001270 and IPR050130 are broader ClpA/B families; four domains,
+      two conserved sites and one homologous superfamily are not exact Hsp78 family
+      identities. This bounded result motivates label-only grounding, not a claim
+      that every possible authority lacks an exact term.'
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050130/
+    notes: Native family metadata inspected 2026-10-05 marks its description llm=true
+      and checked=false. That description is not used as primary biological evidence.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2051
+    notes: Review identified missing direct database evidence; native endpoint provenance
+      has now been attached without changing the original rationale, date or label-only
+      decision.
+  notes: Leave grounding unset with REVIEWED_LABEL_ONLY. IPR050130 includes an unchecked
+    LLM-generated description, which is not used as primary biological evidence. An
+    unassigned plausible ClpB family is not a verified match.
+- discussion_id: oligomer_and_protocol_conflicts
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve preparation-dependent oligomeric states and source-internal construct/protocol
+    discrepancies before asserting a fixed copy number or residue-specific mechanism.
+  rationale: Figure 1A and Results give E216Q/E614Q for Hsp78TR, whereas Methods give
+    E612Q for the second substitution. High-salt SEC is described with NaCl in Results
+    and KCl in Methods, and the compared buffers also differ in ATP and magnesium.
+    Figure 2D and Methods differ in aggregation and centrifugation conditions.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.102494
+    notes: Primary study establishes the experimental context and its limitations.
+  notes: Use the named TR construct rather than choosing a residue pair. Preserve
+    trimer/hexamer migration interpretations as preparation-specific, not universal
+    stoichiometry. Do not infer a salt-only causal effect or reconcile conflicting
+    protocols silently. The reporter assay and aggregate-binding workflow are distinct
+    experiments; reporter solubility is not refolding activity. Reviewed UniProt homohexamer
+    annotation does not override the primary preparation-dependent observations.
+- discussion_id: assay_state_separation
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Separate purified recombinant Hsp78TR assays from yeast complementation
+    in the causal graph.
+  rationale: The initial graph reused a state labelled Hsp78TR complementation for
+    an ATPase assay performed on bacterially expressed purified protein. Correct edge
+    notes did not repair the mismatched intervention subject.
+  resolution_note: Retarget only the ATPase impairment edge to a distinct purified-protein
+    state. Retain yeast complementation for reporter resolubilization and growth.
+    No new biological edge, native bacterial taxon or residue-specific claim is added.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.102494
+    notes: Figure 1C and Methods, In vitro ATPase assay, explicitly use protein expressed
+      and purified from E. coli; yeast and mitochondrial assays use separate preparations.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2050
+    notes: Adversarial-review finding and required assay-state separation.
+images:
+- image_id: jaworek_2022_fig1
+  source: PMC
+  source_accession: PMC9574514.1 fig1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9574514/#fig1
+  licence: OTHER
+  licence_url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  attribution: Witold Jaworek, Marc Sylvester, Giovanna Cenini and Wolfgang Voos (2022),
+    Figure 1, DOI 10.1016/j.jbc.2022.102494; CC BY-NC-ND 4.0.
+  modality: OTHER
+  caption: Yeast Hsp78 construct, expression, purified-protein ATPase, post-heat growth
+    and oligomerization assays. BN-PAGE and SEC support oligomeric preparations, not
+    an atomic structure or universal subunit count. The recombinant assays use bacterially
+    expressed yeast protein.
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1016/j.jbc.2022.102494
+  retrieved_on: '2026-10-05'
+  notes: Actual multi-panel figure inspected from versioned PMC media; archive MD5
+    d9e29f8d857266d914484f772d55ecac. Biochemical figure, not a micrograph. Exact
+    NC-ND licence verified in JATS and metadata. Link-only; no hosted copy. OTHER
+    retains the combined licence absent from the enum.
+- image_id: jaworek_2022_fig2
+  source: PMC
+  source_accession: PMC9574514.1 fig2
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9574514/#fig2
+  licence: OTHER
+  licence_url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  attribution: Witold Jaworek, Marc Sylvester, Giovanna Cenini and Wolfgang Voos (2022),
+    Figure 2, DOI 10.1016/j.jbc.2022.102494; CC BY-NC-ND 4.0.
+  modality: OTHER
+  caption: Heat-aggregated mitochondrial DHFR reporter recovery and Hsp78 aggregate
+    cosedimentation. Soluble-fraction recovery is distinct from restored enzymatic
+    function; the binding experiment is a separate assay.
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1016/j.jbc.2022.102494
+  retrieved_on: '2026-10-05'
+  notes: Actual multi-panel figure inspected from versioned PMC media; archive MD5
+    9c7316c59aa052f86222a1cc34b03cc8. Biochemical figure, not a micrograph. Exact
+    NC-ND licence verified in JATS and metadata. Link-only; no hosted copy. OTHER
+    retains the combined licence absent from the enum.

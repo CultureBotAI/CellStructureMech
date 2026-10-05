@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hsp78_chaperone_complex.yaml
+  slug: hsp78_chaperone_complex
+session:
+  id: 2026-10-05T025552Z-codex-32b0ac
+  timestamp: '2026-10-05T02:55:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - functions
+  - causal_graphs
+  - datasets
+  - images
+  - discussions
+  summary: Add yeast-supported Hsp78 chaperone complex
+  details: Created one PROPOSED mitochondrial Hsp78 oligomer record after ignored-inclusive
+    repository deduplication and native GO term searches. Read primary 2022 PMC9574514.1 Results,
+    Discussion, Methods, captions, Figures 1-2, reviewed UniProt P33416, combined InterPro
+    matches and PRIDE PXD030405/PXD030436. Preserve variable oligomers, mutation and protocol
+    conflicts, reference-strain boundaries, and solubility-versus-refolding distinction. CC
+    BY-NC-ND figures remain link-only; PRIDE CC0 is dataset-specific. iModulonDB native adapter
+    lists no matching yeast dataset. Older inaccessible full papers are not treated as inspected
+    evidence. Guarded scaffold and mutator append LLM curation events; generated artifacts
+    and full gates follow before commit.
