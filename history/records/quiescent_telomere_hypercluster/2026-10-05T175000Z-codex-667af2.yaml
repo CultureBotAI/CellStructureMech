@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/quiescent_telomere_hypercluster.yaml
+  slug: quiescent_telomere_hypercluster
+session:
+  id: 2026-10-05T175000Z-codex-667af2
+  timestamp: '2026-10-05T17:50:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1186/s13059-015-0766-2
+  - https://doi.org/10.1091/mbc.E16-01-0069
+  - https://doi.org/10.1093/nar/gkaa043
+  - https://doi.org/10.1101/gr.279874.124
+  - https://doi.org/10.1083/jcb.202512168
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - datasets
+  - images
+  - discussions
+  summary: Add evidence-backed quiescent telomere hypercluster
+  details: Created the quiescent telomere hypercluster as a distinct protein-DNA assembly
+    after ignored-inclusive deduplication and GO scope checks. Curated 12 component classes,
+    9 native-verified UniProt examples, 3 species-scoped graphs (6 edges), 2 canonical yeasts,
+    3 native-metadata-verified datasets, one unmodified CC BY 4.0 figure and two noncommercial
+    link-only figures. Primary 2015, 2016, 2020 and clustering-relevant 2025 evidence read;
+    the published 2026 Esc1 abstract is explicitly limited because full text was unavailable.
+    Preserve central/peripheral and survival discrepancies, assembly versus anchoring, reference-strain
+    versus assay-stock distinctions, and component declines. Manual article/data licence-scope
+    review for PMC4581094 leaves the strict importer unchanged. All mutations use the guarded
+    validator and remain PROPOSED. Local full gates, separate adversarial PR self-review,
+    protected merge and timestamped report follow this immutable creation history; no PR existed
+    when this record was written.

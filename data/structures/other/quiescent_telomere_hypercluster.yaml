@@ -1,0 +1,826 @@
+identifier: cellstructuremech:quiescent_telomere_hypercluster
+label: quiescent telomere hypercluster
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A nuclear assembly in which multiple chromosome ends and associated subtelomeric
+  chromatin coalesce into fewer enlarged foci during quiescence, characterized in
+  Saccharomyces cerevisiae and Schizosaccharomyces pombe. Nuclear position and assembly
+  requirements depend on species, strain and starvation conditions.
+definition_source: DOI:10.1186/s13059-015-0766-2
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T17:46:33Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T17:49:23Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added twelve component classes, nine verified protein examples, species-scoped
+    mechanisms, three dataset links, one hosted and two link-only inspected figures,
+    and explicit evidence conflicts and access limits.
+  llm_assisted: true
+parent_structures:
+- GO:0032993
+part_of:
+- GO:0005634
+has_part:
+- GO:0000781
+- GO:0099115
+synonyms:
+- synonym_text: telomere hypercluster
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.1186/s13059-015-0766-2
+- synonym_text: telomeric hypercluster
+  synonym_type: BROAD_SYNONYM
+  source: DOI:10.1091/mbc.E16-01-0069
+components:
+- component_id: telomeric_dna
+  label: telomere
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Chromosome-end DNA brought together within the nuclear assembly.
+  grounding: SO:0000624
+  evidence:
+  - reference: DOI:10.1093/nar/gkaa043
+    notes: Taz1-marked chromosome ends form fewer, brighter foci on nitrogen starvation;
+      this is not a claim that every chromosome end is individually resolved.
+  grounding_notes: Native SO telomere sequence-feature identity verified; the component
+    denotes chromosome-end DNA, not the entire multi-chromosome hypercluster.
+- component_id: subtelomeric_dna
+  label: subtelomere
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Subtelomeric DNA associated with the coalescing chromosome ends.
+  grounding: SO:0001997
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+    notes: Y-prime FISH and chromosome-contact mapping establish subtelomeric association;
+      a Y-prime probe does not label every chromosome end equally.
+  grounding_notes: Native SO subtelomere definition verified; the sequence feature
+    is adjacent to the telomere, not equivalent to the whole hypercluster.
+- component_id: nucleosome
+  label: nucleosome
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: DNA-histone packing unit of the associated subtelomeric chromatin.
+  grounding: GO:0000786
+  evidence:
+  - reference: DOI:10.1091/mbc.E16-01-0069
+    notes: Histone H4 tail and K16 substitutions implicate nucleosomal chromatin in
+      hypercluster formation. This is a chromatin-class assertion, not an isoform-specific
+      localization or copy-number measurement.
+  grounding_notes: Native GO definition specifies DNA wound around a multisubunit
+    histone core. Terminal telomeric repeats are not asserted to be uniformly nucleosomal.
+- component_id: sirtuin
+  label: Sirtuin family
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Sir2-class chromatin factor detected in budding-yeast telomere hyperclusters.
+  grounding: InterPro:IPR003000
+  evidence:
+  - reference: DOI:10.1091/mbc.E16-01-0069
+    notes: Sir2-GFP overlaps telomeric FISH and Sir3/Rap1 foci; sir2 deletion impairs
+      formation in the tested background. Separate nucleolar Sir2 signal must not
+      be called a telomere cluster.
+  grounding_notes: Exact integrated family and P06700 membership verified at InterPro.
+    This class does not assert that every sirtuin is a hypercluster constituent.
+  gene_symbols:
+  - SIR2
+  protein_examples:
+  - uniprot_id: UniProtKB:P06700
+    protein_label: NAD-dependent histone deacetylase SIR2
+    gene_symbol: SIR2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Figure 1 immuno-FISH and dual-color localization identify telomere-associated
+        Sir2.
+    - reference: https://www.uniprot.org/uniprotkb/P06700/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: sir3
+  label: Sir3-like silencing protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Budding-yeast chromatin constituent supporting telomere coalescence.
+  grounding_status: REVIEWED_LABEL_ONLY
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+    notes: Sir3-GFP clusters with telomeres; sir3 deletion removes hyperclustering
+      and increased intertelomeric contacts. Requirement does not prove increased
+      Sir3 abundance or a unique molecular crosslinking reaction.
+  grounding_notes: Complete P06701 InterPro matches include the broader ORC1/CDC6
+    family and BAH/AAA/Sir3 domains, not an exact whole-protein Sir3 family.
+  gene_symbols:
+  - SIR3
+  protein_examples:
+  - uniprot_id: UniProtKB:P06701
+    protein_label: Regulatory protein SIR3
+    gene_symbol: SIR3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Figure 1 directly colocalizes Sir3-RFP with Sir2-marked telomeric foci.
+    - reference: https://www.uniprot.org/uniprotkb/P06701/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: sir4
+  label: Sir4-like silencing protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Budding-yeast SIR constituent associated with clustered chromosome ends.
+  grounding_status: REVIEWED_LABEL_ONLY
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+    notes: Sir4-GFP shows hyperclusters; SIR4 deletion disrupts their formation in
+      stationary-phase budding yeast.
+  grounding_notes: The complete P11978 match list contains the Sir4 SID domain, not
+    an exact integrated whole-protein family.
+  gene_symbols:
+  - SIR4
+  protein_examples:
+  - uniprot_id: UniProtKB:P11978
+    protein_label: Regulatory protein SIR4
+    gene_symbol: SIR4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Results report Sir4-GFP localization with the other SIR factors; SIR4
+        deletion impairs hyperclustering.
+    - reference: https://www.uniprot.org/uniprotkb/P11978/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: rap1
+  label: TE2IP/Rap1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Telomere-associated Rap1 class; the curated direct-localization example is
+    from budding yeast.
+  grounding: InterPro:IPR039595
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+    notes: Rap1-GFP foci coalesce and overlap Y-prime FISH and Sir3. Rap1 abundance
+      does not increase with the brighter clusters.
+  grounding_notes: P11938 has a native integrated TE2IP/Rap1 family match. The family
+    description emphasizes fission yeast and animals; the accession-level match independently
+    verifies the budding-yeast example. This is not the unrelated Ras-family Rap1
+    GTPase.
+  gene_symbols:
+  - RAP1
+  protein_examples:
+  - uniprot_id: UniProtKB:P11938
+    protein_label: DNA-binding protein RAP1
+    gene_symbol: RAP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Figure 1 tracks Rap1 foci and verifies telomeric/subtelomeric association
+        by FISH.
+    - reference: https://www.uniprot.org/uniprotkb/P11938/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: ku80
+  label: Ku80
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: DISPENSABLE
+  role: Ku80-class protein detected at budding-yeast hyperclusters without a single-deletion
+    assembly requirement.
+  grounding: InterPro:IPR024193
+  evidence:
+  - reference: DOI:10.1091/mbc.E16-01-0069
+    notes: Yku80 colocalizes with hyperclusters; its deletion does not prevent formation
+      or peripheral positioning in the tested conditions.
+  grounding_notes: Exact integrated Ku80 family and Q04437 membership verified.
+  gene_symbols:
+  - YKU80
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04437
+    protein_label: ATP-dependent DNA helicase II subunit 2
+    gene_symbol: YKU80
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: The nuclear-positioning Results directly report Yku80 hypercluster colocalization;
+        this does not automatically establish Yku70 residence.
+    - reference: https://www.uniprot.org/uniprotkb/Q04437/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: taz1
+  label: Taz1-like telomere-binding protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Fission-yeast chromosome-end constituent used to image hyperclustering.
+  grounding_status: REVIEWED_LABEL_ONLY
+  evidence:
+  - reference: DOI:10.1093/nar/gkaa043
+    notes: Taz1-GFP marks the bright focus in nitrogen-starved cells; its signal weakens
+      as telomeres erode.
+  grounding_notes: Complete P79005 matches contain Myb/SANT and telomeric-repeat-binding
+    dimerization domains, not an exact integrated Taz1 whole-protein family.
+  gene_symbols:
+  - taz1
+  protein_examples:
+  - uniprot_id: UniProtKB:P79005
+    protein_label: Telomere length regulator taz1
+    gene_symbol: taz1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1093/nar/gkaa043
+      notes: Figure 1 compares Taz1-GFP foci in vegetative and nitrogen-starved cells.
+    - reference: https://www.uniprot.org/uniprotkb/P79005/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: heterochromatin_protein
+  label: Heterochromatin-associated chromo domain-containing protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Swi6-class constituent of fission-yeast subtelomeric heterochromatin followed
+    during hyperclustering.
+  grounding: InterPro:IPR051219
+  evidence:
+  - reference: DOI:10.1093/nar/gkaa043
+    notes: Figure 2 follows Swi6-GFP telomere/subtelomere clusters in wild type and
+      telomerase-deficient cells. The centromeric Swi6 focus is distinguished with
+      the spindle-pole-body marker.
+  grounding_notes: Integrated family and P40381 membership verified. The native family
+    description is marked LLM-generated and checked; localization rests on the primary
+    experiment. Fission-yeast Swi6 is not budding-yeast SWI6 transcription factor.
+  gene_symbols:
+  - swi6
+  protein_examples:
+  - uniprot_id: UniProtKB:P40381
+    protein_label: Chromatin-associated protein swi6
+    gene_symbol: swi6
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1093/nar/gkaa043
+      notes: Figure 2 uses Swi6-GFP to retain visibility of subtelomeric chromatin
+        when terminal-repeat Taz1 signal declines.
+    - reference: https://www.uniprot.org/uniprotkb/P40381/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: esc1
+  label: Esc1-like nuclear-envelope anchoring protein
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: DISPENSABLE
+  role: Condition-dependent peripheral positioning machinery for budding-yeast chromosome-end
+    assemblies, not a stoichiometric focus-core constituent.
+  grounding_status: REVIEWED_LABEL_ONLY
+  evidence:
+  - reference: DOI:10.1091/mbc.E16-01-0069
+    notes: esc1 deletion leaves hyperclusters present but changes their nuclear position.
+      Peripheral localization and positioning genetics support associated anchoring
+      machinery, not direct residence in the focus core.
+  grounding_notes: Complete Q03661 matches contain a leucine-rich-repeat domain, not
+    an exact integrated Esc1 whole-protein family.
+  gene_symbols:
+  - ESC1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03661
+    protein_label: Silent chromatin protein ESC1
+    gene_symbol: ESC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Esc1 nuclear-envelope localization and deletion effects support a positioning
+        role; no claim of uniform core occupancy is made.
+    - reference: https://www.uniprot.org/uniprotkb/Q03661/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+- component_id: bqt4
+  label: Bouquet formation protein 4
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: DISPENSABLE
+  role: Fission-yeast nuclear-envelope machinery retaining chromosome ends at the
+    periphery during quiescence.
+  grounding: InterPro:IPR037548
+  evidence:
+  - reference: DOI:10.1093/nar/gkaa043
+    notes: bqt4 deletion alters G0 telomere position without changing the number of
+      clusters. The established Rap1-Bqt4 tether is distinct from cluster coalescence.
+  grounding_notes: Exact integrated Bqt4 family and O60158 membership verified; the
+    family name does not make this quiescent assembly a meiotic bouquet.
+  gene_symbols:
+  - bqt4
+  protein_examples:
+  - uniprot_id: UniProtKB:O60158
+    protein_label: Bouquet formation protein 4
+    gene_symbol: bqt4
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1093/nar/gkaa043
+      notes: Figure 3 and Results provide G0 positioning genetics; the schematic tether
+        is not direct imaging of Bqt4 inside the telomere focus.
+    - reference: https://www.uniprot.org/uniprotkb/O60158/entry
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1186/s13059-015-0766-2
+  note: Budding yeast studied in W303 and BY backgrounds. Central hyperclusters in
+    density-enriched quiescent populations and peripheral clusters under other published
+    conditions are retained as distinct observations, not forced into one nuclear
+    position.
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1093/nar/gkaa043
+  note: Nitrogen-starved fission yeast forms a predominantly single bright telomeric
+    focus near the nuclear envelope; clustering and envelope attachment are experimentally
+    separable.
+functions:
+- function_id: telomere_organization
+  label: telomere organization
+  grounding: GO:0032200
+  description: Spatial grouping of chromosome ends and associated chromatin during
+    quiescence.
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+    notes: Microscopy and chromosome-contact maps support chromosome-end reorganization.
+  - reference: DOI:10.1093/nar/gkaa043
+    notes: Fission-yeast microscopy supports a quiescent redistribution of telomere
+      foci; envelope-dependent TERRA regulation is not assigned to clustering alone.
+causal_graphs:
+- graph_id: budding_yeast_assembly
+  title: Condition-dependent budding-yeast hypercluster assembly
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Physiological and perturbation evidence in S. cerevisiae, not a universal
+    fungal pathway. Sir3 requirement is distinct from a claim that increased Sir3-mediated
+    attraction drives the transition; the 2026 anchoring model is recorded separately
+    with its access limitation.
+  nodes:
+  - node_id: starvation
+    label: Starvation after respiratory growth
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: assembly
+    label: Telomere hypercluster formation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: sir3
+    label: Sir3-like silencing protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: sir3
+  - node_id: h4_state
+    label: Assembly-compatible histone H4 K16 state
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: starvation
+    predicate: stimulates
+    object: assembly
+    description: Prior respiratory growth favors efficient formation after starvation;
+      arrest alone is insufficient and maturation depends on protocol.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Carbon-exhaustion, abrupt-starvation and respiration perturbations distinguish
+        metabolic history from slow growth alone.
+    - reference: DOI:10.1101/gr.279874.124
+      notes: Density-enriched post-diauxic cells transferred to water also form hyperclusters.
+  - subject: sir3
+    predicate: supports
+    object: assembly
+    description: Sir3 supports normal hypercluster formation in the tested budding-yeast
+      backgrounds.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Deletion and chromosome-contact experiments support the assembly requirement,
+        without proving increased protein abundance.
+  - subject: h4_state
+    predicate: supports
+    object: assembly
+    description: An intact H4 tail and compatible K16 state support formation; K16A
+      and K16Q impair it whereas K16R permits it.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Histone substitutions support a chromatin-state contribution, not direct
+        observation of an exact Sir3 bridging reaction.
+- graph_id: peripheral_positioning
+  title: Anchoring is separable from cluster formation
+  graph_kind: REGULATION
+  scope_status: MECHANISTIC
+  scope_notes: Species- and condition-scoped deletion evidence. These edges concern
+    nuclear position, not a universal requirement to assemble a hypercluster. Central
+    budding-yeast clusters and the newer loss-of-anchoring model are not excluded.
+  nodes:
+  - node_id: esc1
+    label: Esc1-like anchoring machinery
+    node_type: GENE_OR_PROTEIN
+    component_ref: esc1
+  - node_id: bqt4
+    label: Bouquet formation protein 4
+    node_type: GENE_OR_PROTEIN
+    component_ref: bqt4
+  - node_id: budding_position
+    label: Peripheral cluster position in tested budding yeast
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: fission_position
+    label: Peripheral cluster position in nitrogen-starved fission yeast
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: esc1
+    predicate: supports
+    object: budding_position
+    description: Esc1 contributes to peripheral positioning in the 2016 conditions;
+      esc1 deletion does not abolish clustering.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Esc1 deletion separates positioning from cluster formation.
+  - subject: bqt4
+    predicate: supports
+    object: fission_position
+    description: Bqt4 maintains peripheral attachment while G0 cluster counts remain
+      similar without it.
+    evidence:
+    - reference: DOI:10.1093/nar/gkaa043
+      notes: Figure 3 and Results distinguish envelope position from the number of
+        clusters.
+- graph_id: refeeding_disassembly
+  title: Budding-yeast declustering during quiescence exit
+  graph_kind: DISASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Refeeding experiments in S. cerevisiae. Timing varies by assay; transcriptional
+    reactivation and protein synthesis are not inferred obligatory triggers.
+  nodes:
+  - node_id: refeeding
+    label: Nutrient refeeding
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: declustering
+    label: Telomere hypercluster dispersal
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: refeeding
+    predicate: stimulates
+    object: declustering
+    description: Nutrient readdition induces dispersion into multiple smaller foci;
+      transcriptional reactivation is largely dispensable under the tested perturbations.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Cycloheximide, latrunculin A and nocodazole do not prevent dispersal
+        in the reported assay.
+    - reference: DOI:10.1101/gr.279874.124
+      notes: rpb1-1 inactivation and phenanthroline largely preserve declustering
+        despite impaired transcription. Thiolutin differs and has broader effects.
+datasets:
+- accession: 10.6084/m9.figshare.1505174.v1
+  title: Guidi et al. 2015
+  dataset_type: STRUCTURAL_IMAGING
+  repository: FIGSHARE
+  organism: Saccharomyces cerevisiae
+  url: https://figshare.com/articles/dataset/Guidi_et_al_2015/1505174
+  publication: DOI:10.1186/s13059-015-0766-2
+  description: Deposited original microscopy images associated with the 2015 hypercluster
+    study.
+  notes: 'Native Figshare API metadata checked on 2026-10-05: version 1, CC BY 4.0,
+    raw-image ZIP 150807_Guidi_et_al_2015_raw_images.zip, 46976914 bytes. Whole-field
+    Z-stacks and projections differ from cropped publication panels. The ZIP was not
+    downloaded or independently reanalyzed.'
+- accession: PRJNA291473
+  title: Saccharomyces cerevisiae
+  dataset_type: GENOMICS
+  repository: NCBI_BIOPROJECT
+  organism: Saccharomyces cerevisiae
+  url: https://www.ncbi.nlm.nih.gov/bioproject/PRJNA291473
+  publication: DOI:10.1186/s13059-015-0766-2
+  description: Chromosome-conformation sequence project comparing genome organization
+    during quiescence.
+  conditions:
+  - BY4741/W303 strain backgrounds
+  notes: Primary-paper data availability and native ENA project XML checked; secondary
+    accession SRP062308. No raw reads were downloaded and no independent contact-map
+    reconstruction was performed.
+- accession: GSE71273
+  title: Spatial reorganization of telomeres in long-lived quiescent cells
+  dataset_type: GENOMICS
+  repository: NCBI_GEO
+  organism: Saccharomyces cerevisiae
+  url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71273
+  publication: DOI:10.1186/s13059-015-0766-2
+  description: Sir3 ChIP-chip comparison of exponential and dense stationary-phase
+    populations.
+  platform: ChIP-chip
+  notes: 'Native GEO series metadata checked on 2026-10-05: four samples, duplicate
+    comparisons, GPL4131; this is not a transcriptomics assay. Its project PRJNA290776
+    is distinct from chromosome-conformation project PRJNA291473. Raw arrays were
+    not downloaded or reanalyzed.'
+evidence:
+- reference: DOI:10.1186/s13059-015-0766-2
+  notes: Guidi et al. 2015, PMID 26399229; native PMC4581094.1 Results, Discussion
+    and relevant Methods read. Density purification, microscopy, 3C/Hi-C and chronological-survival
+    assays.
+- reference: DOI:10.1091/mbc.E16-01-0069
+  notes: Laporte et al. 2016, PMID 27122604; native PMC4907721.1 Results, Discussion
+    and relevant Methods read. FISH, tagged proteins, positioning, chromatin perturbations
+    and refeeding assays.
+- reference: DOI:10.1093/nar/gkaa043
+  notes: Maestroni et al. 2020, PMID 31980821; native PMC7102995.1 Results, Discussion
+    and relevant Methods read. Nitrogen-starved fission yeast; clustering, attachment,
+    telomere erosion and TERRA accumulation are distinguished.
+- reference: DOI:10.1101/gr.279874.124
+  notes: Baquero Perez et al. 2025, PMID 40796281; native PMC12487827.1 clustering-related
+    Results and Methods read. Transcriptional shutdown and reactivation are separable
+    from cluster formation and dispersal.
+- reference: GO:0032993
+  notes: Native protein-DNA complex definition is broader than the multi-chromosome
+    quiescent assembly.
+- reference: GO:0005634
+  notes: Native nucleus term grounds the encompassing compartment.
+- reference: GO:0000781
+  notes: Native chromosome, telomeric region term denotes a constituent chromosome-end
+    region, not the whole hypercluster.
+- reference: GO:0099115
+  notes: Native chromosome, subtelomeric region term denotes adjacent chromatin participating
+    in the assembly.
+discussions:
+- discussion_id: identity_and_mereology
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the multi-chromosome assembly separate from individual telomeres and
+    other nuclear structures.
+  notes: Ignored- and hidden-inclusive identity, synonym and citation searches plus
+    parsed YAML identities found no duplicate. OAK GO aliases and native definitions
+    supplied no exact hypercluster term. It is a protein-DNA assembly within the nucleus,
+    not part of one chromosome or necessarily the nuclear envelope. It differs from
+    ordinary cycling-cell telomere clusters, the meiotic bouquet, telomerase and the
+    quiescent nuclear microtubule bundle. Bare hypercluster names are broader synonyms
+    because Sir3 overexpression can induce them outside quiescence.
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+  - reference: DOI:10.1091/mbc.E16-01-0069
+  - reference: DOI:10.1093/nar/gkaa043
+  - reference: GO:0032993
+- discussion_id: grounding_tasks
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Find exact whole-protein family identifiers for Sir3, Sir4, Taz1 and Esc1.
+  notes: Complete native InterPro matches were inspected for P06701, P11978, P79005
+    and Q03661. Broad ORC1/CDC6 membership and isolated SID, Myb/SANT or repeat domains
+    do not exactly ground these four classes. Reviewed label-only entries retain verified
+    sequence examples pending exact family terms.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P06701/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P11978/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P79005/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q03661/
+- discussion_id: nuclear_position_conflict
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  prompt: Resolve condition-dependent central versus peripheral hyperclusters without
+    assigning one universal position.
+  notes: The 2015 W303 study places the brightest hyperclusters centrally; the 2016
+    predominantly BY study places them near the envelope and shows Esc1-dependent
+    position. The 2020 fission-yeast study finds peripheral attachment dependent on
+    Bqt4. Population sorting, strain, age and starvation protocol differ, but no single
+    tested explanation is imposed on the discrepancy. A diffraction-limited proximity
+    measurement is not a molecular tether-distance measurement.
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+  - reference: DOI:10.1091/mbc.E16-01-0069
+  - reference: DOI:10.1093/nar/gkaa043
+- discussion_id: newer_anchoring_model
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  prompt: Review the full published 2026 Esc1 study when accessible.
+  notes: 'The published abstract of Ruault et al. (PMID 42584369; electronic publication
+    2026-08-12) proposes redundant PKA-dependent and Esc1-dependent anchoring, progressive
+    loss of anchoring during entry, and central hyperclustering; it argues against
+    altered Sir3-mediated attraction as the main driver. The publisher redirected
+    to an abstract/subscription page and Europe PMC lists no full text. Only the abstract
+    was read: no residue identity, quantitative model parameter or new causal edge
+    is inferred. The 2025 preprint and conference abstract are not treated as independently
+    inspected full-text evidence.'
+  evidence:
+  - reference: DOI:10.1083/jcb.202512168
+  - reference: https://pubmed.ncbi.nlm.nih.gov/42584369/
+- discussion_id: assembly_scope_and_essentiality
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate required factors in specific assays from universal component necessity.
+  notes: Sir2/Sir3/Sir4 deletion impairs budding-yeast assembly, but this does not
+    establish identical requirements across both yeasts or all mutant contexts; their
+    record-wide essentiality is UNKNOWN. Ku80 is directly localized yet individually
+    dispensable. Esc1 and Bqt4 are dispensable positioning machinery, not stoichiometric
+    core residents. Sir3 abundance/spreading is not increased in 2015; 2016 reports
+    a slight abundance change and suggests background differences. No universally
+    increased Sir3 level is asserted.
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+  - reference: DOI:10.1091/mbc.E16-01-0069
+  - reference: DOI:10.1093/nar/gkaa043
+- discussion_id: component_declines
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not import whole regulatory complexes, markers or tethering diagrams
+    as focus composition.
+  notes: Hho1/condensin and H4-state perturbations support chromatin assembly roles,
+    but do not supply hypercluster-specific residence for all regulator subunits.
+    Nucleosomes are retained as the packing class of subtelomeric chromatin, without
+    assigning an H4 isoform or all terminal repeats to nucleosomes. Yku80 localization
+    does not establish Yku70 residence; the 2016 Yku70 nondetection is reported as
+    unpublished. Fission-yeast Rap1 belongs to the same TE2IP/Rap1 family, but the
+    2020 schematic/established tether is not a direct G0 localization experiment,
+    so no second Rap1 sequence example is added. Bqt3, Man1/Fft3, the whole shelterin
+    complex, telomerase, TERRA, nuclear-pore markers, nucleolus and spindle pole body
+    are not automatically constituents.
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+  - reference: DOI:10.1091/mbc.E16-01-0069
+  - reference: DOI:10.1093/nar/gkaa043
+  - reference: GO:0000786
+- discussion_id: function_boundaries
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  prompt: Resolve survival effects without equating grouping, silencing and envelope
+    attachment.
+  notes: The 2015 study reports a modest late chronological-survival benefit associated
+    with Sir3-dependent clustering, including a silencing-defective rescue. The 2016
+    2/7/14-day assays find no significant requirement for survival or early regrowth
+    in their conditions. These differ in strain, population and assay; no universal
+    longevity function is asserted. In 2020, TERRA accumulation and rearrangements
+    primarily track envelope attachment and become especially pronounced with telomere
+    erosion. Those outcomes are not assigned to grouping alone, and steady-state RNA
+    abundance is not a direct transcription-rate measurement.
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+  - reference: DOI:10.1091/mbc.E16-01-0069
+  - reference: DOI:10.1093/nar/gkaa043
+- discussion_id: transcription_and_disassembly
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep transcriptional transitions separate from hypercluster dynamics.
+  notes: The 2025 W303 study finds transcriptional shutdown before hyperclustering
+    and largely unchanged shutdown in sir3 deletion. On refeeding, transcription starts
+    before declustering; rpb1-1 and phenanthroline support largely independent dispersal,
+    whereas thiolutin gives a distinct, pleiotropic result. RNA polymerase II is therefore
+    not inferred a hypercluster constituent or mandatory disassembly trigger. The
+    2016 reverse-acetylation and chromosome-decondensation explanations remain hypotheses.
+  evidence:
+  - reference: DOI:10.1101/gr.279874.124
+  - reference: DOI:10.1091/mbc.E16-01-0069
+- discussion_id: taxon_measurement_and_imaging_limits
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep experimental taxon, microscopy and morphology scope explicit.
+  notes: Only the two characterized yeast species are canonical. Reference-strain
+    UniProt examples do not identify exact W303/BY or fission-yeast assay stocks.
+    No broader fungal prevalence, absence, universal count, dimensions or maturation
+    time is inferred. Foci do not supply molecular stoichiometry; 3C/Hi-C reconstruction
+    is a model, not a micrograph. The 2020 figure captions say live microscopy while
+    Methods describe formaldehyde fixation, so its images are not globally labeled
+    live. The Swi6 centromeric focus and separate nucleolar Sir2 signal must not be
+    mistaken for telomeric foci.
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+  - reference: DOI:10.1091/mbc.E16-01-0069
+  - reference: DOI:10.1093/nar/gkaa043
+  - reference: DOI:10.1101/gr.279874.124
+- discussion_id: image_license_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate article CC BY permission from the accompanying data waiver.
+  notes: 'The PMC4581094.1 JATS explicitly assigns CC BY 4.0 to the article and separately
+    CC0 to data. The strict automatic licence helper rejects the two declarations;
+    it was left unchanged. Manual scope-aware review assigns article Figure 1 CC BY
+    4.0, with native authors, licence URL, source, verified checksum and no alteration.
+    PMC4907721.1 Figure 1 is CC BY-NC-SA 3.0 and PMC7102995.1 Figure 1 CC BY-NC 4.0:
+    both are link-only. All three original multipanel images were visually inspected;
+    schematic panels are not experimental micrographs.'
+  evidence:
+  - reference: DOI:10.1186/s13059-015-0766-2
+  - reference: DOI:10.1091/mbc.E16-01-0069
+  - reference: DOI:10.1093/nar/gkaa043
+images:
+- image_id: pmc_pmc4581094_fig1
+  file: pmc4581094_fig1.jpg
+  file_sha256: e2a046b5d5af1464ed877ec84b1917c42c00da08432b2877d29ddc329c8f343f
+  source: PMC
+  source_accession: PMC4581094.1 Fig1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4581094/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC4581094.1/13059_2015_766_Fig1_HTML.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Micol Guidi, Myriam Ruault, Martial Marbouty, Isabelle Loïodice, Axel
+    Cournac, Cyrille Billaudeau, Antoine Hocher, Julien Mozziconacci, Romain Koszul,
+    Angela Taddei; CC BY 4.0, via PubMed Central; unmodified Figure 1.
+  modality: OTHER
+  caption: 'Multipanel figure: Rap1-GFP foci across growth states, colocalization
+    with subtelomeric Y-prime FISH, a sir3-deletion comparison, and central Rap1-marked
+    hyperclusters relative to the Nup49-marked envelope. Growth and nuclear-zoning
+    diagrams and quantification accompany the micrographs.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1186/s13059-015-0766-2
+  retrieved_on: '2026-10-05'
+  notes: Native JATS article permission is CC BY 4.0; its separate CC0 data waiver
+    is not substituted for the figure licence. Manually reviewed after the automatic
+    helper rejected the two declarations. Original media MD5 42704dff810741261a55bc76024d1b2e
+    verified, then visually inspected; no crop or alteration. W303-based imaging,
+    not an exact S288C-stock assertion.
+- image_id: pmc_pmc4907721_f1
+  source: PMC
+  source_accession: PMC4907721.1 F1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4907721/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC4907721.1/1875fig1.jpg
+  licence: OTHER
+  licence_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  attribution: Damien Laporte, Fabien Courtout, Sylvain Tollis, Isabelle Sagot; CC
+    BY-NC-SA 3.0, via PubMed Central.
+  modality: OTHER
+  caption: Figure 1 combines telomeric FISH, Sir2/Sir3/Rap1 fluorescence and a time
+    course comparing cycling and quiescent budding yeast. Sir2-only nucleolar foci
+    are distinct from telomeric foci; the FISH procedure loses nucleolar Sir2 signal.
+    Source bars are 2 micrometers.
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1091/mbc.E16-01-0069
+  retrieved_on: '2026-10-05'
+  notes: Link-only under the exact native JATS CC BY-NC-SA 3.0 terms, for which the
+    schema has no dedicated enum. Original MD5 b3165723c5c6ad747de4303c6b580ecb verified
+    and image visually inspected; no repository copy.
+- image_id: pmc_pmc7102995_f1
+  source: PMC
+  source_accession: PMC7102995.1 F1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7102995/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7102995.1/gkaa043fig1.jpg
+  licence: CC_BY_NC_4_0
+  licence_url: https://creativecommons.org/licenses/by-nc/4.0/
+  attribution: Laetitia Maestroni, Céline Reyes, Mélina Vaurs, Yannick Gachet, Sylvie
+    Tournier, Vincent Géli, Stéphane Coulon; CC BY-NC 4.0, via PubMed Central.
+  modality: OTHER
+  caption: Figure 1 compares Taz1-GFP telomere foci and Amo1-RFP nuclear envelope
+    in vegetative and nitrogen-starved fission yeast, with focus counts and positional
+    analysis. Panel A is an anchoring model, not direct imaging of all depicted proteins;
+    B includes 5 and 3 micrometer bars.
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1093/nar/gkaa043
+  retrieved_on: '2026-10-05'
+  notes: Link-only; exact CC BY-NC 4.0 permission read from native JATS. Original
+    MD5 91d3a3af18e88af668e4dddfd33c0082 verified and image visually inspected. Caption
+    live-microscopy wording and Methods fixation description are not silently reconciled.
