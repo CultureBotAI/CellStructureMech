@@ -1,0 +1,447 @@
+identifier: cellstructuremech:insoluble_protein_deposit
+label: insoluble protein deposit
+structure_category: INCLUSION
+structure_kind: INCLUSION_BODY
+definition: A perivacuolar cytoplasmic protein inclusion characterized in budding
+  yeast that accumulates poorly mobile, insoluble protein aggregates, including amyloid
+  and prion cargo, at a site distinct from nuclear and juxtanuclear quality-control
+  deposits.
+definition_source: DOI:10.1038/nature07195
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T07:22:50Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T07:25:34Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added yeast-scoped IPOD composition, source-bounded recruitment and turnover
+    graphs, interpretation boundaries, reference metadata and an inspected CC BY 4.0
+    primary figure.
+  llm_assisted: true
+synonyms:
+- synonym_text: IPOD
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nature07195
+parent_structures:
+- GO:0016234
+part_of:
+- GO:0005737
+components:
+- component_id: aggregate_cargo
+  label: heterogeneous IPOD protein aggregate cargo
+  component_type: OTHER
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: A variable aggregate class, not one sequence family or a fixed
+    complex. Reporter identity does not define native composition.
+  role: Deposited insoluble protein material, including prion and amyloid substrates;
+    no single cargo protein is asserted as an invariant scaffold.
+  evidence:
+  - reference: DOI:10.1038/nature07195
+    notes: Results and Figures 2 and 4 identify perivacuolar deposition of Rnq1, Ure2
+      and HttQ103 reporters and low mobility of IPOD-localized Ubc9ts.
+  - reference: DOI:10.1371/journal.pgen.1006324
+    notes: Results use the Sup35 prion-domain reporter PrD-GFP to follow delivery
+      to a central IPOD. This is engineered cargo, not full-length Sup35 membership
+      in every deposit.
+- component_id: hsp104
+  label: Hsp104-type disaggregase
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  gene_symbols:
+  - HSP104
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: All 11 native integrated InterPro matches for P31539 were inspected.
+    IPR001270 and IPR050130 are broader ClpA/B families; domain and superfamily entries
+    do not identify the narrower Hsp104-type class.
+  role: Chaperone associated with assembled IPOD material. In the tested PrD-GFP chase,
+    Hsp104 inhibition prevents slow deposit decay and cargo turnover. This post-assembly
+    intervention does not establish a universal de novo assembly requirement.
+  protein_examples:
+  - uniprot_id: UniProtKB:P31539
+    protein_label: Heat shock protein 104
+    gene_symbol: HSP104
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference-sequence example of yeast Hsp104; not a reassignment
+      of 74D-694 experiments to S288C.
+    evidence:
+    - reference: UniProtKB:P31539
+      notes: Native reviewed entry verifies protein name, HSP104/YLL026W and reference
+        taxon 559292.
+    - reference: DOI:10.1038/nature07195
+      notes: Figure 5e and its Results describe functional GFP-Hsp104 associated with
+        IPOD inclusions.
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figure 6C-G tests Hsp104-sensitive persistence and turnover of previously
+        formed PrD-GFP deposits.
+  evidence:
+  - reference: DOI:10.1038/nature07195
+    notes: Figure 5e and Results report Hsp104 enrichment around the IPOD; this is
+      localization, not a fixed coat stoichiometry.
+  - reference: DOI:10.1371/journal.pgen.1006324
+    notes: Figure 6C-G supports Hsp104-dependent processing in the PrD-GFP chase,
+      using guanidinium inhibition.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: Complete native integrated match set inspected on 2026-10-05; next=null.
+      Family hits remain broader than the curated component.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1371/journal.pgen.1006324
+  note: IPOD cargo recruitment and turnover were studied in 74D-694 derivatives carrying
+    PrD-GFP. Methods distinguish galactose-inducible reporter strains from constitutive
+    reporter strains lacking the endogenous SUP35 prion domain. No exact strain taxon
+    is inferred from reference-protein metadata.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: UniProtKB:P31539
+  note: Reference-sequence provenance for the reviewed Hsp104 example, not an assertion
+    that the imaged 74D-694 derivatives are S288C.
+functions:
+- function_id: aggregate_sequestration
+  label: spatial sequestration of insoluble protein cargo
+  description: Concentrates selected aggregate substrates in a perivacuolar deposit.
+    The entry does not assign universal protection, toxicity or obligatory prion nucleation
+    to every IPOD.
+  evidence:
+  - reference: DOI:10.1038/nature07195
+    notes: Figures 2 and 4 distinguish amyloid-cargo localization and poorly exchanging
+      IPOD material from the juxtanuclear compartment.
+  - reference: DOI:10.1371/journal.pgen.1006324
+    notes: Figures 2, 3 and 5 show reversible defects in accumulation of PrD-GFP at
+      one central IPOD after transport perturbations.
+- function_id: conditional_cargo_processing
+  label: conditional release of sequestered cargo for turnover
+  description: In the PrD-GFP chase, deposits can slowly lose cargo through Hsp104-dependent
+    processing, with subsequent turnover partly sensitive to proteasome inhibition.
+    This is not evidence that all IPOD cargo is recoverable or that deposition is
+    an obligatory degradation intermediate.
+  evidence:
+  - reference: DOI:10.1371/journal.pgen.1006324
+    notes: Figure 6C-G and Results separate slow Hsp104-sensitive deposit decay from
+      downstream, partially MG132-sensitive turnover.
+causal_graphs:
+- graph_id: amyloid_cargo_recruitment
+  title: Recruitment of PrD-GFP to a central IPOD
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Perturbation and rescue results in 74D-694-derived yeast with induced
+    PrD-GFP. Reduced central deposition is distinct from disruption of a preformed
+    IPOD. Transport-factor dependence does not establish stable residence or a direct
+    vesicle-cargo tether.
+  nodes:
+  - node_id: cargo
+    label: Induced PrD-GFP amyloid cargo
+    node_type: GENE_OR_PROTEIN
+    component_ref: aggregate_cargo
+  - node_id: ipod
+    label: Insoluble protein deposit
+    node_type: STRUCTURE
+  - node_id: myo2_depletion
+    label: Myo2 depletion during cargo induction
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: tpm_depletion
+    label: Tpm1 loss with Tpm2 depletion
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: sec18_depletion
+    label: Sec18 depletion during cargo induction
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: myo2_recovery
+    label: Restoration of Myo2 after auxin washout
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: sec18_recovery
+    label: Restoration of Sec18 after auxin washout
+    node_type: EXPERIMENTAL_FACTOR
+  edges:
+  - subject: cargo
+    predicate: accumulates at
+    object: ipod
+    description: Induced PrD-GFP in the prion background concentrates at a central
+      deposit in transport-competent controls.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figures 2A and 2E compare control deposition with depletion conditions.
+  - subject: myo2_depletion
+    predicate: impairs cargo recruitment to
+    object: ipod
+    description: Depletion during reporter induction produces multiple dispersed foci;
+      depletion after deposition does not fragment the existing IPOD.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figures 2E-F and 3E-F separate recruitment from maintenance.
+  - subject: tpm_depletion
+    predicate: impairs cargo recruitment to
+    object: ipod
+    description: Combined reduction of tropomyosin function produces multiple PrD-GFP
+      foci instead of one central deposit in the tested viable cells.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figure 2A-D tests Tpm1/Tpm2 perturbation, auxin controls and viability.
+  - subject: sec18_depletion
+    predicate: impairs cargo recruitment to
+    object: ipod
+    description: Sec18 depletion during reporter induction disrupts central accumulation
+      without simply eliminating cell viability in the assay.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figure 5B-E tests Sec18 depletion, localization and viability.
+  - subject: myo2_recovery
+    predicate: restores cargo accumulation at
+    object: ipod
+    description: Auxin washout allows dispersed reporter foci to coalesce while further
+      reporter induction is stopped; the result is not inferred solely from disappearance
+      of foci.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figure 3A-D includes time-lapse observations of coalescence.
+  - subject: sec18_recovery
+    predicate: restores cargo accumulation at
+    object: ipod
+    description: Ceasing Sec18 depletion restores central PrD-GFP deposition in the
+      tested recovery condition.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figure 5B-C includes the auxin-washout rescue.
+- graph_id: deposit_cargo_turnover
+  title: Hsp104-sensitive processing of deposited PrD-GFP
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Post-induction chase of a model prion-domain reporter. The extraction
+    interpretation is supported by inhibitor-sensitive deposit decay and protein turnover,
+    not direct measurement of every molecular transfer. Proteasome inhibition reduces
+    but does not abolish turnover; bulk autophagic clearance was not demonstrated.
+  nodes:
+  - node_id: ipod
+    label: PrD-GFP-containing IPOD
+    node_type: STRUCTURE
+  - node_id: hsp104
+    label: Hsp104-type disaggregase
+    node_type: GENE_OR_PROTEIN
+    component_ref: hsp104
+  - node_id: release
+    label: Gradual liberation of deposited PrD-GFP
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: turnover
+    label: Turnover of released PrD-GFP
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: guanidinium
+    label: Guanidinium treatment during the chase
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: mg132
+    label: MG132 treatment during the chase
+    node_type: EXPERIMENTAL_FACTOR
+  edges:
+  - subject: ipod
+    predicate: can undergo
+    object: release
+    description: After reporter induction stops, existing deposits gradually decline;
+      this is not asserted for every substrate or condition.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figure 6C-D tracks pre-existing aggregates, accounting for newly budded
+        cells.
+  - subject: hsp104
+    predicate: supports
+    object: release
+    description: The paper interprets the inhibitor-sensitive loss of deposited reporter
+      as Hsp104-dependent extraction.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figure 6C-F compares slow decay with persistence after Hsp104 inhibition.
+  - subject: guanidinium
+    predicate: inhibits
+    object: hsp104
+    description: Guanidinium is used as an Hsp104 inhibitor in the post-formation
+      chase; stable deposits under treatment do not prove that de novo formation is
+      independent of Hsp104.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figure 6E-G uses 5 mM GdnHCl and reports persistent deposits and reporter
+        protein.
+  - subject: release
+    predicate: permits
+    object: turnover
+    description: Reporter loss requires the Hsp104-sensitive processing step in this
+      assay; the record retains this as a substrate-specific interpretation.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figure 6G contrasts chase turnover with reporter retention under GdnHCl.
+  - subject: mg132
+    predicate: reduces
+    object: turnover
+    description: In the pdr5 deletion assay, MG132 attenuates but does not abolish
+      reporter turnover, leaving additional downstream routes unresolved.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006324
+      notes: Figure 6G and accompanying Results compare control, MG132 and GdnHCl
+        treatments.
+evidence:
+- reference: DOI:10.1038/nature07195
+  notes: Original IPOD identity, perivacuolar localization, aggregate mobility and
+    Hsp104 association in yeast.
+- reference: DOI:10.1371/journal.pgen.1006324
+  notes: Primary intervention study of cargo recruitment, recovery and slow Hsp104-sensitive
+    processing.
+- reference: DOI:10.1371/journal.pgen.1011194
+  notes: Figure 6A limits claims that IPOD localization is obligatory for oxidant-induced
+    prion formation in every genetic background.
+discussions:
+- discussion_id: identity_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep IPOD separate from PAS, INQ/JUNQ and a generic inclusion body.
+  rationale: Shared proximity or substrate overlap does not establish exact structure
+    identity.
+  notes: Native GO searches for IPOD, insoluble and deposit, plus exact OLS GO label/synonym
+    queries, found no exact active term. GO:0016234 is a broader parent; GO:0005737
+    is cytoplasmic parthood. PAS adjacency is not identity or vacuolar lumen localization.
+    Neither a mammalian aggresome nor every artificial inclusion is assigned this
+    local identifier.
+  evidence:
+  - reference: DOI:10.1038/nature07195
+    notes: Figures 2, 4 and 5 distinguish IPOD location and material behavior.
+  - reference: DOI:10.1371/journal.pgen.1006324
+    notes: Results distinguish cargo recruitment to IPOD from preApe1 recruitment
+      to the nearby PAS.
+  - reference: GO:0016234
+    notes: Active broader inclusion-body term, not an exact IPOD identity.
+  - reference: GO:0005737
+    notes: Active cytoplasm term supports the parthood vocabulary.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: component_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve exact source-neutral component groundings and native cargo inventories.
+  rationale: A heterogeneous aggregate class and narrower Hsp104-type class cannot
+    inherit arbitrary broader family identities.
+  notes: Keep both component classes REVIEWED_LABEL_ONLY. Hsp104 family matches IPR001270
+    and IPR050130 are broader; the other matches are domains, sites or superfamilies.
+    PrD-GFP is an engineered Sup35 fragment and does not establish a fixed Sup35 subunit.
+    Exact experimental strain mappings remain separate from the S288C reference sequence.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P31539/?page_size=200
+    notes: All 11 integrated matches inspected, with next=null.
+  - reference: DOI:10.1371/journal.pgen.1006324
+    notes: Methods describe 74D-694 derivatives and distinct reporter constructs.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: transport_component_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Distinguish transport machinery and neighboring PAS components from IPOD
+    constituents.
+  rationale: Recruitment defects, pulldown association and partial colocalization
+    do not establish stable composition.
+  notes: Myo2, Tpm1/Tpm2 and Sec18 remain graph-level transport factors, not listed
+    IPOD constituents. Tropomyosin was not detected at IPOD in this study. Atg8, Atg9,
+    preApe1, Atg11 and Atg19 are not made invariant IPOD components; the vesicle-tether
+    mechanism remains a model. ATG11, ATG19 and APE1 deletions did not visibly prevent
+    single-focus PrD-GFP deposition in the reported supplementary experiment. Proteasomes
+    are downstream processing machinery, not an asserted IPOD coat.
+  evidence:
+  - reference: DOI:10.1371/journal.pgen.1006324
+    notes: Results preceding Figure 2, Figures 3-5, the report of Supplementary Figure
+      S8 and the recruitment-model section support these boundaries. S8 itself was
+      not inspected.
+  - reference: DOI:10.1038/nature07195
+    notes: Figure 5d-e distinguishes proteasome distribution from Hsp104 localization.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: turnover_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Do not equate IPOD with mandatory autophagic disposal or irreversible sequestration
+    of every cargo.
+  rationale: The Ubc9ts recovery assay and the PrD-GFP chase test different substrates
+    and conditions.
+  notes: The 2008 Ubc9ts assay did not restore diffuse signal from IPOD after temperature
+    recovery; the 2016 PrD-GFP study found slow Hsp104-sensitive turnover. Its autophagy
+    perturbations did not demonstrate efficient bulk removal of deposited PrD-GFP.
+    Retain both results without turning PAS proximity into a universal degradation
+    route or MG132 sensitivity into exclusive proteasomal turnover.
+  evidence:
+  - reference: DOI:10.1038/nature07195
+    notes: Figure 6e and Results report the Ubc9ts recovery boundary.
+  - reference: DOI:10.1371/journal.pgen.1006324
+    notes: Figure 6A-G and Discussion distinguish bulk autophagy tests, extraction
+      and downstream turnover.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: prion_formation_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Do not assert obligatory IPOD localization for all prion formation.
+  rationale: Perturbation results depend on genotype and stress context.
+  notes: The 2024 ABP1-deletion experiment suppressed oxidant-induced PSI+ formation
+    in the otherwise wild-type background but not the btn2 hsp42 mutant background.
+    The paper interprets this as IPOD-independent prion formation in that mutant context.
+    It neither abolishes all possible IPOD contributions nor defines every Sup35 punctum
+    as IPOD.
+  evidence:
+  - reference: DOI:10.1371/journal.pgen.1011194
+    notes: IPOD-localization Results and Figure 6A test 0.8 mM hydrogen peroxide for
+      one hour; the actual figure was not independently inspected.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: remaining_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve native assembly scaffolds, broader prevalence and condition-specific
+    material properties.
+  rationale: Reporter deposition in one species does not establish a constitutive
+    structure in every lineage or invariant dimensions.
+  notes: Leave broad taxonomic_distribution, stoichiometry and physical_properties
+    unasserted. One central focus in an induction assay is not a universal cellular
+    copy number. Poor mobility is not proof of a liquid condensate. The 2016 study
+    leaves unresolved whether a substrate-independent IPOD site pre-exists. Supplemental
+    strain tables and raw data were not reanalyzed; no standalone dataset accession
+    was inferred from the paper's supporting-information statement.
+  evidence:
+  - reference: DOI:10.1038/nature07195
+    notes: Figure 4 measures reporter mobility rather than establishing a universal
+      material state.
+  - reference: DOI:10.1371/journal.pgen.1006324
+    notes: Recruitment-model section and Discussion explicitly leave site pre-existence
+      and structural components unresolved.
+  posed_by: codex
+  posed_date: '2026-10-05'
+images:
+- image_id: pmc_pmc5045159_pgen_1006324_g003_e27e1f28
+  file: pmc5045159_pgen_1006324_g003_e27e1f28.jpg
+  file_sha256: 89dfdd173c797ff168e0cb7be8cc0547b6b742b26324a3cec906f0d379463bd4
+  source: PMC
+  source_accession: PMC5045159.1 pgen.1006324.g003
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5045159/#pgen.1006324.g003
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5045159.1/pgen.1006324.g003.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Rajesh Kumar, Peter P. Nawroth and Jens Tyedmers (2016), Figure 3;
+    CC BY 4.0, via PubMed Central. Unmodified.
+  modality: FLUORESCENCE
+  caption: 'PrD-GFP recruitment and recovery in yeast Myo2-aid cells. Panels A-D show
+    dispersed foci after depletion and coalescence after auxin washout; E distinguishes
+    persistence of a preformed IPOD from the recruitment defect in F. Microscopy scale
+    bars: 2 micrometers. B, E and F are quantifications, not micrographs.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1371/journal.pgen.1006324
+  retrieved_on: '2026-10-05'
+  notes: Fig 3 from article version PMC5045159.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Actual panels A-F and their caption inspected; no separate third-party credit
+    found. Strain RK1e is a 74D-694 derivative. The image is unmodified; caption terminology
+    is curator-authored.

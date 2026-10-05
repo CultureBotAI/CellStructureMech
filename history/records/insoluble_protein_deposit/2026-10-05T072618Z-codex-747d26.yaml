@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/insoluble_protein_deposit.yaml
+  slug: insoluble_protein_deposit
+session:
+  id: 2026-10-05T072618Z-codex-747d26
+  timestamp: '2026-10-05T07:26:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1038/nature07195
+  - https://doi.org/10.1371/journal.pgen.1006324
+  - https://doi.org/10.1371/journal.pgen.1011194
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - images
+  - discussions
+  summary: Add evidence-backed insoluble protein deposit (IPOD)
+  details: Added one PROPOSED yeast IPOD inclusion after hidden/ignored-inclusive de-duplication
+    and native GO identity checks. Primary 2008 identity/localization evidence and 2016 recruitment/turnover
+    interventions support two component classes, reference-scoped Hsp104 metadata, two functions
+    and two causal graphs with eleven source-local edges. Explicit boundaries separate PAS
+    adjacency, upstream transport factors, unknown assembly essentiality, reporter-specific
+    turnover and 2024 genotype-specific prion formation. Ingested unmodified PMC5045159.1
+    Figure 3 after native licence, caption, actual-image and checksum checks. Scaffold and
+    guarded writer validated the record; complete corpus gates follow before publication.
