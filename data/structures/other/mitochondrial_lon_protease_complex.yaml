@@ -1,0 +1,367 @@
+identifier: cellstructuremech:mitochondrial_lon_protease_complex
+label: mitochondrial Lon protease complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An oligomeric mitochondrial matrix protease assembly built from Lon-family
+  subunits that combine AAA+ ATPase and serine-protease domains to process protein
+  substrates.
+definition_source: DOI:10.1016/j.jbc.2022.101694
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T01:44:41Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T01:52:54Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added yeast-scoped protein-family and reference-sequence grounding, assay-bounded
+    causal edges, verified structural datasets, a CC BY 4.0 figure, and explicit oligomer/source-provenance
+    conflicts.
+  llm_assisted: true
+parent_structures:
+- GO:1905368
+part_of:
+- GO:0005759
+components:
+- component_id: lon
+  label: Lon protease homologue, chloroplastic/mitochondrial
+  grounding: InterPro:IPR027503
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PIM1
+  - LON
+  role: Lon-family ATPase/serine-protease subunit class represented by yeast Pim1
+    in the mitochondrial oligomer. The family label also includes chloroplastic homologues;
+    those are not mitochondrial examples here.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36775
+    protein_label: Lon protease homolog, mitochondrial
+    gene_symbol: PIM1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reviewed reference sequence for the yeast mitochondrial Lon subunit, not
+      an identifier for the entire oligomer.
+    evidence:
+    - reference: UniProtKB:P36775
+      notes: Native reviewed record verifies the gene aliases PIM1/LON, loci YBL022C/YBL0440,
+        matrix localization, organism and InterPro assignment.
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.101694
+    notes: Results and Figure 1 resolve six recombinant yeast Pim1 subunits in a substrate-bound
+      assembly. Mature N-terminally His-tagged protein was expressed in bacteria,
+      not imaged in native yeast mitochondria.
+  - reference: InterPro:IPR027503
+    notes: Native InterPro entry verifies this whole-protein family and its exact
+      label; the source family is broader than its mitochondrial member curated here.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1073/pnas.96.12.6787
+  note: Oligomeric Pim1 was isolated from mitochondria after overexpression in yeast.
+    Its historical seven-subunit interpretation is retained as a preparation-specific
+    conflict, not a fixed copy count.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: UniProtKB:P36775
+  note: Reference-sequence organism, also assigned to the yeast protein entity in
+    PDB 7SXO. The 2022 recombinant expression host was E. coli; this annotation does
+    not establish an in situ S288C experiment.
+functions:
+- function_id: atp_dependent_proteolysis
+  label: ATP-dependent peptidase activity
+  grounding: GO:0004176
+  description: Protein-substrate degradation by the mitochondrial Lon assembly; the
+    curated intervention assay uses purified recombinant yeast protein and beta-casein.
+  evidence:
+  - reference: UniProtKB:P36775
+    notes: Reviewed enzyme annotation supports ATP-dependent proteolysis and mitochondrial
+      matrix localization.
+  - reference: DOI:10.1016/j.jbc.2022.101694
+    notes: Figure 3C and Methods assay beta-casein degradation in 5 mM ATP at 37 C.
+      This assay does not independently measure ATP hydrolysis coupling or identify
+      a physiological yeast substrate.
+causal_graphs:
+- graph_id: pim1_assembly_and_assayed_proteolysis
+  title: Yeast Pim1 assembly and proteolysis interventions
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  description: Structural membership and mutant effects on purified-protein beta-casein
+    degradation.
+  scope_notes: The 2022 study uses bacterially expressed mature yeast Pim1. The assay
+    uses 0.1 mg/ml protease and 0.08 mg/ml beta-casein in 5 mM ATP at 37 C, with gel-based
+    time-course readouts over one hour. Retained activity after insertion changes
+    is limited to this assay, not native yeast viability, all substrates or adaptor
+    binding. Structural membership does not establish a time-resolved assembly pathway.
+  nodes:
+  - node_id: lon
+    label: Lon protease homologue, chloroplastic/mitochondrial
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR027503
+    component_ref: lon
+    description: Yeast Pim1 instance of this family in the experiments.
+  - node_id: assembly
+    label: mitochondrial Lon protease complex
+    node_type: STRUCTURE
+    grounding: cellstructuremech:mitochondrial_lon_protease_complex
+  - node_id: activity
+    label: ATP-dependent peptidase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004176
+    description: Assayed beta-casein degradation by recombinant yeast Pim1 in ATP-containing
+      buffer.
+  - node_id: catalytic_mutant
+    label: Pim1 S1015A substitution
+    node_type: STATE
+    description: Protease-inactive catalytic-serine control, not a separate canonical
+      component.
+  - node_id: insertion_deletion
+    label: Pim1 charged-insertion deletion
+    node_type: STATE
+  - node_id: insertion_replacement
+    label: Pim1 charged-insertion GS-linker replacement
+    node_type: STATE
+    description: The insertion is replaced by a glycine-serine linker of matching
+      length.
+  edges:
+  - subject: lon
+    predicate: forms
+    object: assembly
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.101694
+      notes: Figure 1 and structural Results identify a six-Pim1 assembly in the recombinant
+        substrate-bound preparation; this does not settle all native oligomeric states.
+  - subject: assembly
+    predicate: catalyzes
+    object: activity
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.101694
+      notes: Figure 3C WT control degrades beta-casein under the specified ATP-containing
+        assay conditions. ATP coupling is supported separately by the reviewed enzyme
+        annotation.
+    - reference: UniProtKB:P36775
+      notes: Reviewed ATP-dependent enzyme annotation.
+  - subject: catalytic_mutant
+    predicate: impairs
+    object: activity
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.101694
+      notes: Figure 3C uses S1015A as the protease-inactive control; loss of activity
+        alone does not establish loss of assembly.
+  - subject: insertion_deletion
+    predicate: retains assayed activity
+    object: activity
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.101694
+      notes: PIM1-INSdel retains near-WT beta-casein degradation in Figure 3C. No
+        native yeast or broad substrate-dispensability claim is inferred.
+  - subject: insertion_replacement
+    predicate: retains assayed activity
+    object: activity
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2022.101694
+      notes: PIM1-GSlink retains near-WT beta-casein degradation in Figure 3C. This
+        separates this assay from proposed recruitment or DNA-binding roles of the
+        insertion.
+evidence:
+- reference: DOI:10.1016/j.jbc.2022.101694
+  notes: Yang and colleagues (2022), PMID 35143841, PMC8913295.1. Results, Discussion,
+    Methods, Data availability, all main-figure captions and actual Figures 1-3 inspected.
+    This record uses the yeast experiments, not bacterial or human comparison structures
+    as yeast evidence.
+- reference: DOI:10.1073/pnas.96.12.6787
+  notes: Stahlberg and colleagues (1999), PMID 10359790. Publisher main text and figure
+    captions inspected. Mitochondrial isolation supports native compartment assignment;
+    the historical oligomer interpretation remains explicitly unresolved.
+- reference: UniProtKB:P36775
+  notes: Reviewed native protein record independently supports mitochondrial matrix
+    location.
+- reference: GO:1905368
+  notes: Verified active cellular-component term peptidase complex supplies a broader
+    is-a parent, not exact identity.
+- reference: GO:0005759
+  notes: Verified active cellular-component term mitochondrial matrix supplies compartment
+    parthood, not an is-a relationship.
+datasets:
+- accession: PDB:7SXO
+  title: Cryo-EM structure of substrate-translocating S. cerevisiae Lon (PIM1)
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  organism: Saccharomyces cerevisiae S288C (NCBITaxon:559292)
+  description: Experimental cryo-EM atomic model of a recombinant yeast Lon-substrate
+    preparation, not an identity-equivalent record for every mitochondrial Lon assembly.
+  conditions:
+  - Mature N-terminally His-tagged yeast Pim1 expressed in E. coli BL21 (DE3) Codon
+    Plus RIPL
+  - 3 mg/ml WT protein incubated with 1 mM ATPgammaS on ice for 20 minutes before
+    freezing
+  platform: Single-particle cryo-EM
+  url: https://www.rcsb.org/structure/7SXO
+  publication: DOI:10.1016/j.jbc.2022.101694
+  findings: Assembly 1 contains six Pim1 chains A-F and an additional substrate chain
+    G. Its global A6B1 heptameric annotation counts substrate, not seven Pim1 subunits.
+    The model annotates four ATP and two ADP molecules; this is distinct from ATPgammaS
+    used in preparation.
+  notes: Native entry, polymer entities and assembly inspected. Entity 1 maps to UniProt
+    P36775 and taxon 559292. Entity 2 is a 12-residue unknown-sequence substrate annotated
+    to the E. coli host, but its biological identity is not established. No coordinates
+    are hosted; construct mass and map resolution are not canonical biological properties.
+  evidence:
+  - reference: https://www.rcsb.org/structure/7SXO
+    supports: SUPPORT
+    notes: Native archive crosslinks EMD-25502 and matches the primary title, authors,
+      DOI and PMID. Archive resolution is 3.3 angstrom; the paper reports approximately
+      3.21 angstrom.
+- accession: EMDB:EMD-25502
+  title: Cryo-EM structure of substrate-translocating S. cerevisiae Lon (PIM1)
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  organism: Saccharomyces cerevisiae (NCBITaxon:4932)
+  description: Released density reconstruction corresponding to PDB 7SXO.
+  platform: Talos Arctica at 200 kV with a Gatan K2 detector
+  url: https://www.ebi.ac.uk/emdb/EMD-25502
+  publication: DOI:10.1016/j.jbc.2022.101694
+  findings: Native archive reports 3.3 angstrom resolution and links the yeast Pim1
+    atomic model. This is a purified recombinant preparation, not an in situ mitochondrial
+    image.
+  notes: Full native XML header SHA-256 621e50e914f5184d6f0d6cb5903e4e525221f3dfd703fccc9145befeb9270793.
+    No map is copied into the repository.
+  evidence:
+  - reference: https://www.ebi.ac.uk/emdb/EMD-25502
+    supports: SUPPORT
+    notes: Released archive metadata independently matches the primary DOI, PMID,
+      title, authors and PDB 7SXO.
+discussions:
+- discussion_id: identity_and_substrate_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Distinguish the mitochondrial oligomer from its protein subunit, substrates
+    and related proteases.
+  rationale: Pim1 is a single gene product but forms a structurally resolved oligomer.
+    The InterPro family includes chloroplastic proteins; matrix Lon is distinct from
+    membrane-anchored i-AAA and m-AAA complexes.
+  resolution_note: Mint a mitochondrial assembly identity and use GO peptidase complex
+    only as parent. Fully paginated QuickGO Lon/Pim1 searches and OLS GO label/synonym
+    searches for Lon protease, Pim1, mitochondrial Lon and protease La did not resolve
+    an exact cellular-component term. Keep the cargo chain, assay substrate and expression
+    host outside canonical composition. Do not infer universal copy number or broad
+    taxonomic prevalence from the yeast experiments.
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.101694
+    notes: Structurally distinct oligomer, separate from substrate.
+  - reference: InterPro:IPR027503
+    notes: Broader source-neutral component family.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: historical_oligomer_conflict
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile historical seven-subunit and modern six-subunit Pim1 preparations
+    without assuming a universal native oligomer.
+  rationale: The 1999 study interpreted a seven-subunit ring from mass measurements
+    and electron microscopy of C-terminally His-tagged protein overexpressed in yeast
+    and purified from mitochondria, including cross-linked preparations. The 2022
+    structure instead resolves six subunits of mature N-terminally His-tagged yeast
+    protein expressed in bacteria and frozen with ATPgammaS and copurified substrate.
+  notes: Neither preparation alone establishes an invariant in situ mitochondrial
+    copy count. Canonical stoichiometry and physical mass are therefore omitted; preparation
+    differences and conflicting conclusions remain visible.
+  evidence:
+  - reference: DOI:10.1073/pnas.96.12.6787
+    notes: Primary Methods, Results and Discussion inspected from the publisher.
+  - reference: DOI:10.1016/j.jbc.2022.101694
+    notes: Results explicitly contrast the prior interpretation; the closed substrate-bound
+      hexamer is directly resolved.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: publication_archive_accessions
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Resolve the paper's inconsistent structural accessions against native archives.
+  rationale: The primary Data availability section lists EMD-25505 and PDB 7XSO. Native
+    matching records are EMD-25502 and PDB 7SXO; each cites the exact Pim1 publication
+    and crosslinks the other.
+  resolution_note: Adopt only EMD-25502 and 7SXO as datasets. Native EMD-25505 describes
+    a SARS-CoV-2 spike reconstruction, while 7XSO describes a CRISPR-Cas gRAMP structure.
+    The publication strings are retained here solely to document the discrepancy,
+    not as identifiers for Pim1. Global A6B1 archive stoichiometry includes substrate
+    and does not confirm the 1999 seven-Pim1 interpretation.
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.101694
+    notes: Inspected Data availability section.
+  - reference: https://www.rcsb.org/structure/7SXO
+    notes: Matching entry, primary citation and assembly metadata.
+  - reference: https://www.ebi.ac.uk/emdb/EMD-25502
+    notes: Matching native map header and reciprocal PDB link.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: source_detail_discrepancies
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile publication and archive detail differences before asserting exact
+    substrate or construct boundaries.
+  rationale: The article describes a nine-residue polyalanine substrate model, whereas
+    the native PDB entity is a 12-residue unknown sequence. The paper reports approximately
+    3.21 angstrom resolution versus the archive's 3.3 angstrom. Methods begin the
+    construct at Met182 while the figure schematic labels 181, and Figure 1's pore-loop
+    residue notation is internally inconsistent.
+  notes: These differences do not change the supported six-Pim1 assembly in the 2022
+    preparation. Avoid asserting substrate identity, an exact pore-loop residue claim,
+    universal construct boundaries or biological size from these source details.
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.101694
+    notes: Results, Methods, Figures 1 and 3 and their captions.
+  - reference: https://www.rcsb.org/structure/7SXO
+    notes: Native polymer entity and experimental metadata.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: physiological_roles_unresolved
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Test the insertion and C-terminal extension with physiological substrates
+    or binding partners.
+  rationale: The insertion mutants retain beta-casein degradation in vitro, but that
+    does not establish native dispensability. Substrate/adaptor recruitment, DNA binding,
+    peptide exit and a requirement for substrate in hexamerization are hypotheses
+    in the inspected study. The C-terminal Results heading is stronger than the supporting
+    experiments and Discussion.
+  notes: Do not encode these proposed roles or a two-residue hand-over-hand translocation
+    step as directly measured causal events. The latter is an interpretation of static
+    structural states rather than a time-resolved trajectory.
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.101694
+    notes: Results, Discussion and Figure 3 bound the tested interventions and proposed
+      mechanisms.
+  posed_by: codex
+  posed_date: '2026-10-05'
+images:
+- image_id: pmc_pmc8913295_fig1
+  file: pmc8913295_fig1.jpg
+  file_sha256: a5c78bd75286956f9389092a1f0070b7df894266773b793201748c6a24b3ba6b
+  source: PMC
+  source_accession: PMC8913295.1 fig1
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8913295/#fig1
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC8913295.1/gr1.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Jie Yang, Albert S. Song, R. Luke Wiseman, Gabriel C. Lander; CC BY,
+    via PubMed Central
+  modality: OTHER
+  caption: 'Figure 1: cryo-EM-derived atomic-model views of recombinant yeast Pim1,
+    showing the six-subunit ATPase/protease assembly and substrate-engaging pore.
+    This is a structural model visualization, not a raw micrograph or in situ image.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1016/j.jbc.2022.101694
+  retrieved_on: '2026-10-05'
+  notes: Figure 1 from article version PMC8913295.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Actual figure inspected. The unknown copurified substrate is cargo, not a canonical
+    component.

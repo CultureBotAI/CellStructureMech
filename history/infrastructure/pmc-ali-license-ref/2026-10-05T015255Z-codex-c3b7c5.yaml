@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/pmc_oa.py
+  slug: pmc-ali-license-ref
+session:
+  id: 2026-10-05T015255Z-codex-c3b7c5
+  timestamp: '2026-10-05T01:52:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2046
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - article_license
+  - tests
+  summary: Accept standard ALI licence references in PMC JATS
+  details: PMC8913295.1 reproducibly failed exact licence detection despite CC BY metadata
+    and an ALI namespace license_ref containing the CC BY 4.0 URL. Read that structured text
+    only inside license elements and deduplicate equivalent recognized licences, preserving
+    the existing whitelist and metadata-family check. Nine new offline cases cover ALI-only
+    and redundant declarations, recognized conflicts, nonstandard/free-text/unsupported/foreign-host
+    declarations and out-of-license references; all 17 adapter tests pass. Native PMC JATS
+    now resolves CC_BY_4_0. This defect was discovered during import preflight, not the later
+    adversarial PR review.

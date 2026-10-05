@@ -124,20 +124,22 @@ def article_license(root: ET.Element, metadata_code: str) -> tuple[str, str]:
             href = element.get("{http://www.w3.org/1999/xlink}href")
             if href:
                 hrefs.add(href)
-    recognized = []
+            if element.tag == "{http://www.niso.org/schemas/ali/1.0/}license_ref":
+                hrefs.add(text_content(element))
+    recognized = set()
     for href in hrefs:
         parsed = urllib.parse.urlsplit(href)
         if parsed.netloc.lower() not in {"creativecommons.org", "www.creativecommons.org"}:
             continue
         key = parsed.path.rstrip("/")
         if key in JATS_LICENSES:
-            recognized.append(JATS_LICENSES[key])
+            recognized.add(JATS_LICENSES[key])
     if len(recognized) != 1:
         raise ValueError(
             f"JATS must contain exactly one recognized CC BY 3.0/4.0 or CC0 licence URL; "
             f"found {sorted(hrefs)}"
         )
-    family, licence, canonical_url = recognized[0]
+    family, licence, canonical_url = next(iter(recognized))
     if family != metadata_code:
         raise ValueError(
             f"PMC metadata licence {metadata_code!r} disagrees with JATS licence {family!r}"
