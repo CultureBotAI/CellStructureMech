@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/proteasome_storage_granule.yaml
+  slug: proteasome_storage_granule
+session:
+  id: 2026-10-05T124232Z-codex-5c8e33
+  timestamp: '2026-10-05T12:42:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - evidence
+  - discussions
+  - images
+  summary: Add evidence-backed proteasome storage granule record
+  details: Created GO:0034515 from native QuickGO and independent 2008/2017 primary studies
+    after hidden/ignored-inclusive deduplication and parsed checks of 895 records. Verified
+    two GO particle classes, two exact InterPro families, three reviewed UniProt precursor/protein
+    examples and yeast taxa; kept mature ubiquitin label-only. Added two-edge refeeding graph
+    and link-only CC BY-NC-SA 3.0 Figure 2 after source metadata, media MD5 and pixel inspection.
+    Excluded retracted eLife 34532 and derivative commentary as positive support. Preserved
+    the 2026 in situ architecture result at abstract-only scope and documented inaccessible
+    full text. Native iModulonDB coverage not applicable to either yeast. Guarded scaffold
+    and mutator passed schema validation; generated artifacts and full QC follow before commit.
+    LLM draft remains PROPOSED.
