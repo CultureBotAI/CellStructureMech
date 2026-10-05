@@ -33,6 +33,12 @@ curation_history:
     review; retained directly observed association as an unresolved cargo-versus-machinery
     boundary.
   llm_assisted: true
+- timestamp: '2026-10-05T04:50:09Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE
+  changes: Addressed PR 2052 review issue 2053 by correcting the HSP78 graph evidence
+    locator from Figure 6 to Figure 7A,C-D.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 synonyms:
@@ -221,8 +227,8 @@ causal_graphs:
     object: perinuclear
     evidence:
     - reference: DOI:10.1091/mbc.E17-01-0027
-      notes: 'Figure 6: hsp78 deletion cells carry more small network-associated deposits
-        rather than the normal large perinuclear deposit.'
+      notes: 'Figure 7A,C-D: hsp78 deletion cells carry more small network-associated
+        deposits rather than the normal large perinuclear deposit.'
   - subject: fzo1_deletion
     predicate: impairs
     object: perinuclear
@@ -399,6 +405,23 @@ discussions:
     empty. Do not convert two-dimensional aggregate area or section counts into compartment
     diameter or copy number. No permanent inertness, resolved molecular tether, universal
     protective shell, or demonstrated mitophagic disposal is asserted.
+- discussion_id: hsp78_figure_locator
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Locate the HSP78-deletion morphology evidence in the correct primary figure.
+  rationale: The initial PR graph note pointed to Figure 6, which measures growth
+    and thermotolerance, rather than Figure 7, which measures deposit organization.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+  resolution_note: Correct the edge note to Figure 7A,C-D. The supported phenotype
+    and edge are unchanged.
+  evidence:
+  - reference: DOI:10.1091/mbc.E17-01-0027
+    notes: Native Figure 7A,C-D captions locate microscopy, aggregate counts and perinuclear-localization
+      quantification.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2053
+    notes: Adversarial self-review of PR 2052 identified the incorrect figure locator.
 images:
 - image_id: bruderek_2018_fig1
   source: PMC
