@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/m_aaa_complex.yaml
+  slug: m_aaa_complex
+session:
+  id: 2026-10-05T010321Z-codex-5ae055
+  timestamp: '2026-10-05T01:03:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - functions
+  - causal_graphs
+  - datasets
+  - images
+  - discussions
+  summary: Add evidence-bounded yeast m-AAA complex
+  details: Created exact GO:0005745 m-AAA complex after ignored/hidden-inclusive alias, identifier
+    and publication deduplication plus a parsed identity check. Native GO/OAK, CPX-1654, reviewed
+    UniProt P39925/P40341 and bounded InterPro checks support the yeast-scoped composition.
+    Luo et al. 2026 (DOI:10.1038/s41467-026-73040-0; PMC13376388.1) supports seven intervention-bounded
+    reporter-processing and respiratory-peroxide edges; tagged endpoint assays and domain-linker
+    replacements are explicit. EMD-1712 is retained as a preparation-specific structural dataset,
+    not universal stoichiometry; the inaccessible 2011 full article is not used beyond read
+    archive metadata. Figure 4 is link-only under exact CC BY-NC-ND 4.0 recorded via OTHER
+    plus licence URL. PHB/substrate boundaries, label-only paralog families and native architecture
+    uncertainties remain explicit. No broad prevalence, fixed mass or copy counts asserted.
+    Regenerate embedding maps/site/docs and validate through repository gates. All earlier
+    reviews and unrelated work preserved.

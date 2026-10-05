@@ -1,0 +1,412 @@
+identifier: GO:0005745
+label: m-AAA complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: Protease complex of the mitochondrial inner membrane that is involved
+  in mitochondrial protein turnover and in processing of proteins imported into mitochondria.
+definition_source: GO:0005745
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-05T00:59:44Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-05T01:02:24Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added yeast-scoped subunit classes, normalized source composition, processing
+    and ATP-dependent functions, seven intervention-bounded mechanistic edges, native
+    structural-dataset provenance and a link-only restricted-license figure.
+  llm_assisted: true
+parent_structures:
+- GO:0098800
+- GO:1905368
+part_of:
+- GO:0005743
+components:
+- component_id: yta10
+  label: Yta10-type m-AAA protease subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native reviewed UniProt and InterPro checks resolve shared ATP-dependent
+    Zinc Metalloprotease IPR050928 and broader FtsH IPR005936 families; IPR011546
+    is a domain. These do not distinguish the Yta10 and Yta12 paralog classes, so
+    no broad family or domain is asserted as exact identity.
+  gene_symbols:
+  - AFG3
+  - YTA10
+  role: AAA ATPase/metalloprotease subunit class represented by Yta10 in the studied
+    yeast heteromer; catalytic domains face the matrix.
+  evidence:
+  - reference: ComplexPortal:CPX-1654
+    notes: The source assigns reviewed UniProt P39925, primary gene AFG3 and alias
+      YTA10, as an enzymatic participant.
+  - reference: https://www.ebi.ac.uk/emdb/EMD-1712
+    notes: The deposited yeast preparation contains Yta10 and Yta12. Membership is
+      distinct from an inferred assembly sequence or a universal two-paralog composition.
+- component_id: yta12
+  label: Yta12-type m-AAA protease subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native reviewed UniProt and InterPro checks resolve shared ATP-dependent
+    Zinc Metalloprotease IPR050928 and broader FtsH IPR005936 families; IPR011546
+    is a domain. These do not distinguish the Yta10 and Yta12 paralog classes, so
+    no broad family or domain is asserted as exact identity.
+  gene_symbols:
+  - YTA12
+  - RCA1
+  role: Partner AAA ATPase/metalloprotease subunit class in the studied yeast heteromer;
+    its intermembrane-space region includes the experimentally perturbed SIM segment.
+  evidence:
+  - reference: ComplexPortal:CPX-1654
+    notes: The exact source entry assigns reviewed UniProt P40341 as an enzymatic
+      participant.
+  - reference: DOI:10.1038/s41467-026-73040-0
+    notes: Figure 4 and yeast engineering methods test endogenous Yta12 SIM or larger
+      IMSD replacements in W303-1B. The processing phenotype does not alone establish
+      defective oligomer assembly.
+- component_id: zinc
+  label: zinc(2+)
+  grounding: CHEBI:29105
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  role: Source-annotated metalloprotease cofactor.
+  evidence:
+  - reference: ComplexPortal:CPX-1654
+    notes: CHEBI:29105 is a cofactor participant; no zinc or protein copy number is
+      supplied by Complex Portal.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1038/s41467-026-73040-0
+  note: W303-1B-derived endogenous YTA12 domain-replacement and PHB-deletion strains
+    were used for MrpL32 reporter processing and oxidative-stress assays. This is
+    not evidence that the S288C reference strain was used experimentally.
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  reference: ComplexPortal:CPX-1654
+  note: Reference-strain composition annotation. The source's generic species label
+    is preserved within complex_compositions; its numeric taxon denotes S288C, not
+    W303-1B.
+functions:
+- function_id: mitochondrial_protein_processing
+  label: mitochondrial protein processing
+  grounding: GO:0034982
+  description: Proteolytic maturation of mitochondrial precursor proteins; the curated
+    primary assay monitors a C-terminally Strep-tagged MrpL32 reporter in yeast mitochondria.
+  evidence:
+  - reference: DOI:10.1038/s41467-026-73040-0
+    notes: Figure 4a-b and Methods quantify precursor/total MrpL32 after growth in
+      YPG for 14 h at 30 C, using four biological replicates. This endpoint assay
+      is not a direct measurement of processing rate, endogenous untagged substrate
+      behavior or ribosome incorporation.
+- function_id: atp_dependent_proteolysis
+  label: ATP-dependent peptidase activity
+  grounding: GO:0004176
+  description: ATP-dependent proteolysis by the matrix-facing mitochondrial inner-membrane
+    protease.
+  evidence:
+  - reference: ComplexPortal:CPX-1654
+    notes: Curated source function identifies an ATP-dependent protease with catalytic
+      domains facing the matrix. The 2026 reporter assay does not independently test
+      ATP dependence.
+causal_graphs:
+- graph_id: yeast_mrpL32_processing_control
+  title: Yeast m-AAA processing and perturbation responses
+  graph_kind: REGULATION
+  scope_status: MECHANISTIC
+  description: Domain replacements in Yta12 and loss of Phb1 alter MrpL32 reporter
+    maturation and growth under respiratory oxidative stress.
+  scope_notes: Experiment-bounded intervention-response graph from Figure 4 in W303-1B
+    derivatives. SIM and IMSD intervals are replaced by GGGGGS linkers, not clean
+    deletions of the entire Yta12 protein. Processing is inferred from a precursor/total
+    reporter endpoint; growth is a separate plate assay. No edge claims that altered
+    MrpL32 processing itself causes peroxide sensitivity, or that these experiments
+    resolve a direct atomic PHB-Yta12 interface.
+  nodes:
+  - node_id: maaa
+    label: m-AAA complex
+    node_type: STRUCTURE
+    grounding: GO:0005745
+  - node_id: processing
+    label: mitochondrial protein processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0034982
+    description: Assayed maturation of the C-terminal Strep-tagged MrpL32 reporter,
+      not all mitochondrial proteolysis.
+  - node_id: phb1_loss
+    label: PHB1 deletion
+    node_type: STATE
+    description: Deletion of the external prohibitin regulator in the tested yeast
+      background.
+  - node_id: sim_replacement
+    label: Yta12 SIM replaced by a linker
+    node_type: STATE
+    description: Endogenous Yta12 residues 236-251 replaced by GGGGGS; a perturbed
+      subunit state, not a separate canonical component.
+  - node_id: imsd_replacement
+    label: Yta12 IMSD replaced by a linker
+    node_type: STATE
+    description: Endogenous Yta12 residues 199-290 replaced by GGGGGS; not proof that
+      the entire protease fails to assemble.
+  - node_id: stress_sensitivity
+    label: Reduced growth under respiratory peroxide stress
+    node_type: STATE
+    description: Reduced growth on YPG with 2 mM H2O2 at 30 C relative to the wild-type
+      control; not a universal stress phenotype.
+  edges:
+  - subject: maaa
+    predicate: catalyzes
+    object: processing
+    description: The yeast protease supports maturation of the tested mitochondrial
+      precursor reporter.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-73040-0
+      notes: Introduction, Figure 4a-b and MrpL32 processing methods identify the
+        protease and assay its substrate-processing output. Mature and precursor species
+        are distinguished by anti-Strep immunoblotting.
+  - subject: phb1_loss
+    predicate: enhances assayed maturation
+    object: processing
+    description: Loss of Phb1 lowers the precursor fraction relative to wild type.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-73040-0
+      notes: 'Figure 4a-b: the precursor/total MrpL32 ratio is reduced in the phb1
+        deletion strain. The authors interpret this as enhanced processing; flux and
+        untagged endogenous protein were not measured here.'
+  - subject: sim_replacement
+    predicate: enhances assayed maturation
+    object: processing
+    description: Replacing the Yta12 SIM interval lowers the reporter precursor fraction.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-73040-0
+      notes: 'Figure 4a-b and cloning methods: the GGGGGS replacement of residues
+        236-251 yields a lower precursor/total ratio. This supports SIM-dependent
+        control without directly visualizing a yeast PHB-binding interface.'
+  - subject: imsd_replacement
+    predicate: impairs assayed maturation
+    object: processing
+    description: Replacing the larger intermembrane-space interval increases reporter
+      precursor accumulation.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-73040-0
+      notes: 'Figure 4a-b: the IMSD replacement raises the precursor/total ratio.
+        Compromised protease assembly is the authors'' interpretation, not a directly
+        demonstrated consequence in this assay.'
+  - subject: phb1_loss
+    predicate: increases
+    object: stress_sensitivity
+    description: Loss of Phb1 reduces growth under respiratory peroxide stress.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-73040-0
+      notes: 'Figure 4c: serial-dilution growth on YPG with 2 mM H2O2 is reduced and
+        partially rescued by PHB1 expression. The corresponding sensitivity is not
+        observed on fermentative YPD in this experiment.'
+  - subject: sim_replacement
+    predicate: increases
+    object: stress_sensitivity
+    description: The Yta12 SIM replacement sensitizes yeast in the respiratory peroxide
+      plate assay.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-73040-0
+      notes: 'Figure 4d: compare YPG with and without 2 mM H2O2 and the separate YPD
+        controls; incubation is 3 days on YPG and 2 days on YPD at 30 C.'
+  - subject: imsd_replacement
+    predicate: increases
+    object: stress_sensitivity
+    description: The larger Yta12 IMSD replacement also sensitizes yeast under the
+      tested respiratory peroxide condition.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-73040-0
+      notes: 'Figure 4d: impaired growth under peroxide is distinct from basal viability
+        on YPG. This is not equivalent to deletion of the entire YTA12 gene.'
+evidence:
+- reference: DOI:10.1038/s41467-026-73040-0
+  notes: Luo and colleagues (2026), Structural basis for prohibitin-mediated regulation
+    of mitochondrial m-AAA protease. Introduction, relevant Results, Discussion, yeast
+    engineering/processing/stress methods and Figures 3-4 inspected in PMC13376388.1;
+    the record uses the yeast experiments, not human in situ imaging as yeast evidence.
+- reference: https://www.ebi.ac.uk/emdb/EMD-1712
+  notes: Native released EMDB entry and complete XML header inspected; primary citation
+    metadata matches PMID:21147776 / DOI:10.1074/jbc.M110.158741. The full 2011 article
+    was not accessible through attempted routes, so claims here are limited to directly
+    inspected archive metadata.
+- reference: GO:0098800
+  notes: Native GO/OAK hierarchy places the complex under inner mitochondrial membrane
+    protein complex, whose membrane parthood is inherited.
+- reference: GO:1905368
+  notes: A second verified is-a parent is peptidase complex.
+datasets:
+- accession: EMDB:EMD-1712
+  title: Three-dimensional CryoEM Structure of a Membrane-Anchored AAA Protease
+  dataset_type: STRUCTURAL_IMAGING
+  repository: OTHER
+  organism: Saccharomyces cerevisiae (NCBITaxon:4932)
+  description: Released single-particle cryo-EM reconstruction of a cross-linked,
+    detergent-solubilized yeast m-AAA preparation; a structural sample, not an identity-equivalent
+    cross-reference for every m-AAA complex.
+  conditions:
+  - Glutaraldehyde-cross-linked recombinant yeast preparation
+  - 1% n-octyl-beta-D-glucopyranoside, 5 mM ATP and 10 mM MgCl2
+  - C6 symmetry imposed in reconstruction
+  platform: Single-particle cryo-EM; JEOL 2010F
+  url: https://www.ebi.ac.uk/emdb/EMD-1712
+  publication: DOI:10.1074/jbc.M110.158741
+  findings: Depositor metadata describes a Yta10/Yta12 heterohexamer with three copies
+    of each and 12 angstrom reconstruction resolution. These are sample/model annotations,
+    not universal canonical copy counts or a resolved alternating paralog arrangement.
+  notes: Full native XML SHA-256 723a9513e5b5082264156a59e0bfd49f7e168af9596506a9a0d286446fca0ad4.
+    The entry supersedes EMD-1543. No strain or mutation details absent from the header
+    are filled from search snippets. Resolution and map box dimensions are not biological
+    physical properties; no map or image is hosted.
+  evidence:
+  - reference: https://www.ebi.ac.uk/emdb/EMD-1712
+    supports: SUPPORT
+    notes: Natural source is taxon 4932. Header records sample composition, cross-linking,
+      detergent/ATP conditions and reconstruction symmetry; it does not specify a
+      wild-type physiological structure.
+images:
+- image_id: pmc_pmc13376388_fig4
+  source: PMC
+  source_accession: PMC13376388.1 Fig4
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13376388/#Fig4
+  licence: OTHER
+  licence_url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  attribution: Dingyi Luo, Lvqin Zheng, Ming-Ao Lu, Ziyao Chen, Panpan Wang, Qiang
+    Guo and Ning Gao; CC BY-NC-ND 4.0, via PubMed Central.
+  modality: OTHER
+  caption: 'Figure 4: MrpL32 precursor/mature anti-Strep immunoblots and quantification,
+    followed by yeast serial-dilution growth assays with PHB1 or Yta12-domain perturbations.
+    This is biochemical and growth evidence, not a micrograph or atomic structure.'
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.1038/s41467-026-73040-0
+  retrieved_on: '2026-10-05'
+  notes: Link-only under verified CC BY-NC-ND 4.0; OTHER preserves the exact licence
+    URL because the current enum lacks that combined NC-ND value. Native metadata
+    reports CC BY-NC-ND and no retraction. JATS licence and actual figure inspected;
+    media MD5 8437fa5c981491200b4243f15c6cef68 matches. No figure file is copied into
+    the repository.
+discussions:
+- discussion_id: paralog_family_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve separate exact whole-protein family identities for Yta10-type and
+    Yta12-type subunits.
+  attaches_to:
+  - components#yta10
+  - components#yta12
+  rationale: Native reviewed UniProt and InterPro checks resolve shared ATP-dependent
+    Zinc Metalloprotease IPR050928 and broader FtsH IPR005936 families; IPR011546
+    is a domain. These do not distinguish the Yta10 and Yta12 paralog classes, so
+    no broad family or domain is asserted as exact identity.
+  evidence:
+  - reference: UniProtKB:P39925
+    notes: Reviewed AFG3/YTA10 reference sequence; source-strain accession is not
+      a taxon-agnostic family.
+  - reference: UniProtKB:P40341
+    notes: Reviewed YTA12/RCA1 reference sequence; shared InterPro assignments do
+      not distinguish paralogs.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: protease_partner_and_substrate_boundary
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Distinguish the m-AAA protease from its substrate and the larger prohibitin-protease
+    association.
+  rationale: The same 2026 study combines yeast reporter genetics, C. thermophilum
+    heterologous purification, predicted interfaces and human in situ imaging. Treating
+    all as one endogenous yeast structure would conflate species, preparations and
+    entity boundaries.
+  resolution_note: Curate the Yta10/Yta12 protease with its annotated zinc cofactor.
+    MrpL32 is a substrate, not a component. The separately recorded mitochondrial
+    prohibitin complex is a regulatory partner, not a mandatory protease constituent;
+    PHB1 deletion is represented as an external perturbation. Do not assert a universal
+    PHB-containing assembly, transfer human in situ localization to yeast, or present
+    predicted PHB-protease contacts as atomic experimental contacts. Canonical examples
+    document studied organisms without asserting clade-wide prevalence.
+  evidence:
+  - reference: DOI:10.1038/s41467-026-73040-0
+    notes: Figures 3-4, yeast construction methods and Discussion separate these evidence
+      types.
+  - reference: ComplexPortal:CPX-1654
+    notes: The source composition contains Yta10, Yta12 and zinc, not PHB or MrpL32.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+- discussion_id: native_architecture_and_preparation_scope
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve native yeast architecture and context-specific stoichiometry from
+    fully read primary structural evidence.
+  rationale: EMD-1712 represents a cross-linked detergent sample with C6 symmetry
+    and reported 3:3 subunit counts. Complex Portal leaves copy counts unspecified
+    and lists 1000 kDa, whereas EMDB lists 0.5 MDa for its sample. These source annotations
+    are not reconciled as one physiological mass or fixed family-wide stoichiometry.
+  notes: No canonical copy counts or physical mass are asserted. The full 2011 paper
+    remains unread after PMC CAPTCHA and inaccessible publisher routes; no bypass
+    was attempted. Its exact ATPase-mutant construct must not be filled from search
+    excerpts. The 2026 high-resolution PHB cage is not an atomic structure of the
+    intact yeast m-AAA complex.
+  evidence:
+  - reference: https://www.ebi.ac.uk/emdb/EMD-1712
+    notes: Native XML sample and reconstruction metadata.
+  - reference: ComplexPortal:CPX-1654
+    notes: Native source properties and unspecified stoichiometry.
+  - reference: DOI:10.1038/s41467-026-73040-0
+    notes: Figures 1 and 3 address PHB architecture and PHB-protease models/negative-stain
+      classes in different species and preparations.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: physiological_processing_and_stress_link
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Test endogenous substrate processing and the causal route from protease
+    regulation to respiratory peroxide sensitivity.
+  rationale: The 2026 processing assay uses a TEF-driven C-terminal Strep reporter
+    and endpoint precursor fractions. Domain replacements can affect more than one
+    molecular property, and growth is a distinct assay. Neither reporter changes nor
+    growth phenotypes alone prove assembly failure, general proteome hyperdegradation
+    or a direct MrpL32-to-stress mechanism.
+  evidence:
+  - reference: DOI:10.1038/s41467-026-73040-0
+    notes: Figure 4 and processing/oxidative-stress methods bound the measured interventions
+      and endpoints.
+  posed_by: codex
+  posed_date: '2026-10-05'
+complex_compositions:
+- composition_id: complex_portal_cpx_1654
+  source: COMPLEX_PORTAL
+  source_accession: ComplexPortal:CPX-1654
+  source_url: https://www.ebi.ac.uk/complexportal/complex/CPX-1654
+  complex_label: m-AAA protease complex
+  taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae
+  evidence_code: ECO:0000353
+  participants:
+  - participant_id: UniProtKB:P40341
+    label: Mitochondrial inner membrane m-AAA protease component YTA12
+    participant_type: protein
+    gene_symbol: YTA12
+    source_interactor_id: EBI-2337337
+    canonical_component_ref: yta12
+  - participant_id: UniProtKB:P39925
+    label: Mitochondrial inner membrane m-AAA protease component YTA10
+    participant_type: protein
+    gene_symbol: AFG3
+    source_interactor_id: EBI-2337338
+    canonical_component_ref: yta10
+  - participant_id: CHEBI:29105
+    label: zinc(2+)
+    participant_type: small molecule
+    source_name: zinc(2+)
+    source_interactor_id: EBI-22119059
+    canonical_component_ref: zinc
+  retrieved_on: '2026-10-05'
+  notes: 'Curator-scoped import: S288C reference-strain m-AAA composition, separate
+    from W303-1B assays and the EMD-1712 preparation; not a universal eukaryotic assembly.
+    Source evidence: physical interaction evidence. The accession was resolved through
+    the Complex Portal accession endpoint; no equivalence xref was inferred.'
