@@ -5190,6 +5190,11 @@
       "label": "quiescent cell microtubule bundle",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+          "label": "quiescent nuclear microtubule bundle",
+          "cosine_similarity": 0.93343159
+        },
+        {
           "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
           "label": "basal body A-B inner junction",
           "cosine_similarity": 0.79615281
@@ -5208,11 +5213,37 @@
           "identifier": "cellstructuremech:stentor_km_fiber",
           "label": "Stentor Km fiber",
           "cosine_similarity": 0.77377982
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+      "label": "quiescent nuclear microtubule bundle",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.93343159
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
+          "label": "basal body A-B inner junction",
+          "cosine_similarity": 0.81851054
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.78673303
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_a_c_linker",
+          "label": "basal body A-C linker",
+          "cosine_similarity": 0.78048323
         },
         {
           "identifier": "GO:0005880",
           "label": "nuclear microtubule",
-          "cosine_similarity": 0.77273316
+          "cosine_similarity": 0.76206067
         }
       ]
     },
