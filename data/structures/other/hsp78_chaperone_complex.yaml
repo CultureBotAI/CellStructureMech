@@ -19,6 +19,13 @@ curation_history:
     assay-bounded function graph, verified PRIDE datasets, link-only licensed figures
     and explicit source conflicts.
   llm_assisted: true
+- timestamp: '2026-10-05T03:19:42Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: 'Addressed PR 2049 review issues 2050 and 2051: separated purified-protein
+    and yeast-complementation graph states and attached native InterPro evidence without
+    changing biological scope or label-only grounding.'
+  llm_assisted: true
 parent_structures:
 - GO:0101031
 part_of:
@@ -59,6 +66,12 @@ components:
       solubilization of isolated yeast mitochondria. Figure 1F analyzes purified bacterially
       expressed yeast protein by size-exclusion chromatography. Neither assay is an
       atomic structure or a time-resolved assembly pathway.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200
+    notes: 'Native combined endpoint inspected 2026-10-05: nine integrated matches,
+      next=null. IPR001270 and IPR050130 are broader ClpA/B families; four domains,
+      two conserved sites and one homologous superfamily are not exact Hsp78 family
+      identities. This bounded result motivates label-only grounding, not a claim
+      that every possible authority lacks an exact term.'
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -134,9 +147,9 @@ causal_graphs:
   - node_id: tr
     label: Hsp78TR complementation
     node_type: STATE
-    description: Named double Walker-B mutant with reduced but nonzero ATPase activity.
-      The paper disagrees on the second residue number, so no single residue pair
-      is asserted here.
+    description: Yeast hsp78 deletion cells complemented with the induced His-tagged
+      Hsp78TR construct, and mitochondria isolated from those cells. This state is
+      not the bacterially expressed purified-protein preparation.
   - node_id: deletion
     label: HSP78 deletion
     node_type: STATE
@@ -148,6 +161,13 @@ causal_graphs:
     node_type: STATE
     description: Serial-dilution growth readout after sequential temperature treatments,
       not direct respiration flux.
+  - node_id: purified_tr
+    label: Purified recombinant Hsp78TR assay preparation
+    node_type: STATE
+    description: Yeast Hsp78TR expressed and affinity-purified from E. coli for comparison
+      with purified Hsp78WT in the phosphate-release assay. ATPase activity is reduced,
+      not absent. The source disagrees on the second mutation number, so no single
+      residue pair is asserted.
   edges:
   - subject: hsp78
     predicate: forms
@@ -165,7 +185,7 @@ causal_graphs:
       notes: Figure 1C measures ATP-dependent phosphate release from purified Hsp78.
         The active oligomeric state was not independently assigned for each assay
         point.
-  - subject: tr
+  - subject: purified_tr
     predicate: impairs
     object: atpase
     evidence:
@@ -306,6 +326,19 @@ discussions:
   evidence:
   - reference: DOI:10.1016/j.jbc.2022.102494
     notes: Primary study establishes the experimental context and its limitations.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P33416/?page_size=200
+    notes: 'Native combined endpoint inspected 2026-10-05: nine integrated matches,
+      next=null. IPR001270 and IPR050130 are broader ClpA/B families; four domains,
+      two conserved sites and one homologous superfamily are not exact Hsp78 family
+      identities. This bounded result motivates label-only grounding, not a claim
+      that every possible authority lacks an exact term.'
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050130/
+    notes: Native family metadata inspected 2026-10-05 marks its description llm=true
+      and checked=false. That description is not used as primary biological evidence.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2051
+    notes: Review identified missing direct database evidence; native endpoint provenance
+      has now been attached without changing the original rationale, date or label-only
+      decision.
   notes: Leave grounding unset with REVIEWED_LABEL_ONLY. IPR050130 includes an unchecked
     LLM-generated description, which is not used as primary biological evidence. An
     unassigned plausible ClpB family is not a verified match.
@@ -329,6 +362,26 @@ discussions:
     protocols silently. The reporter assay and aggregate-binding workflow are distinct
     experiments; reporter solubility is not refolding activity. Reviewed UniProt homohexamer
     annotation does not override the primary preparation-dependent observations.
+- discussion_id: assay_state_separation
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Separate purified recombinant Hsp78TR assays from yeast complementation
+    in the causal graph.
+  rationale: The initial graph reused a state labelled Hsp78TR complementation for
+    an ATPase assay performed on bacterially expressed purified protein. Correct edge
+    notes did not repair the mismatched intervention subject.
+  resolution_note: Retarget only the ATPase impairment edge to a distinct purified-protein
+    state. Retain yeast complementation for reporter resolubilization and growth.
+    No new biological edge, native bacterial taxon or residue-specific claim is added.
+  posed_by: codex
+  posed_date: '2026-10-05'
+  resolved_date: '2026-10-05'
+  evidence:
+  - reference: DOI:10.1016/j.jbc.2022.102494
+    notes: Figure 1C and Methods, In vitro ATPase assay, explicitly use protein expressed
+      and purified from E. coli; yeast and mitochondrial assays use separate preparations.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2050
+    notes: Adversarial-review finding and required assay-state separation.
 images:
 - image_id: jaworek_2022_fig1
   source: PMC

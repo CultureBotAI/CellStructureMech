@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hsp78_chaperone_complex.yaml
+  slug: hsp78_chaperone_complex
+session:
+  id: 2026-10-05T032010Z-codex-d8285f
+  timestamp: '2026-10-05T03:20:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2050
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2049
+  urls:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2051
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - components
+  - discussions
+  summary: Address Hsp78 assay-state and native-source review findings
+  details: Adversarial self-review at 381297d1 identified a yeast-complementation state reused
+    for purified recombinant ATPase evidence and missing direct InterPro citations. Guarded
+    mutation adds purified_tr, retargets only its ATPase impairment edge, preserves the other
+    six edge claims and seven-edge count, and attaches the inspected native combined endpoint
+    and IPR050130 description metadata. Existing discussion rationale and posed date are unchanged;
+    a resolved assay-boundary discussion cites issue 2050 and native evidence is attached
+    with issue 2051. Initial review report remains immutable at reports/yaml_record_review/20261005T031817Z-hsp78_chaperone_complex.md.
+    Record remains PROPOSED with no broadened taxa, fixed stoichiometry or invented family
+    grounding. Regeneration and full QC follow before the fix commit.
