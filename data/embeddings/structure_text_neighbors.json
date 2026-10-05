@@ -5186,6 +5186,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+      "label": "quiescent cell microtubule bundle",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
+          "label": "basal body A-B inner junction",
+          "cosine_similarity": 0.79615281
+        },
+        {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.77619723
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.77508902
+        },
+        {
+          "identifier": "cellstructuremech:stentor_km_fiber",
+          "label": "Stentor Km fiber",
+          "cosine_similarity": 0.77377982
+        },
+        {
+          "identifier": "GO:0005880",
+          "label": "nuclear microtubule",
+          "cosine_similarity": 0.77273316
+        }
+      ]
+    },
+    {
       "identifier": "GO:0001534",
       "label": "radial spoke",
       "neighbors": [
@@ -5825,14 +5856,14 @@
           "cosine_similarity": 0.77673779
         },
         {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.77377982
+        },
+        {
           "identifier": "GO:0005881",
           "label": "cytoplasmic microtubule",
           "cosine_similarity": 0.77327717
-        },
-        {
-          "identifier": "cellstructuremech:tubulin_spool",
-          "label": "tubulin spool",
-          "cosine_similarity": 0.76454614
         }
       ]
     },
