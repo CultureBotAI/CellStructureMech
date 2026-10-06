@@ -15,11 +15,13 @@ from __future__ import annotations
 import argparse
 import filecmp
 import json
+import re
 import shutil
 import sys
 import tempfile
 from collections import defaultdict
 from pathlib import Path
+from urllib.parse import quote
 
 from corpus import REPO_ROOT, load_records
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -28,6 +30,7 @@ TEMPLATES_DIR = REPO_ROOT / "src" / "cellstructuremech" / "templates"
 IMAGES_DIR = REPO_ROOT / "data" / "images"
 EMBEDDINGS_DIR = REPO_ROOT / "data" / "embeddings"
 PAGES_DIR = REPO_ROOT / "pages"
+REFERENCES = REPO_ROOT / "data" / "website" / "references.json"
 
 CATEGORY_BLURB = {
     "ENVELOPE": "Membranes, cell wall, S-layer, capsule, outer membrane, periplasm.",
@@ -62,8 +65,7 @@ PREFIX_URL = {
     "PMID": "https://pubmed.ncbi.nlm.nih.gov/",
     "DOI": "https://doi.org/",
     "METPO": "https://w3id.org/metpo/",
-    "traitmech": "https://w3id.org/traitmech/",
-    "MICRO": "http://purl.obolibrary.org/obo/MICRO_",
+    "uniprot.location": "https://www.uniprot.org/locations/",
 }
 
 
@@ -71,6 +73,11 @@ def curie_url(curie: str) -> str | None:
     if ":" not in curie:
         return None
     prefix, local = curie.split(":", 1)
+    if prefix == "MICRO" and re.fullmatch(r"[0-9]{7}", local):
+        iri = "http://purl.obolibrary.org/obo/MICRO_" + local
+        return "https://www.ebi.ac.uk/ols4/ontologies/micro/classes/" + quote(quote(iri, safe=""), safe="")
+    if prefix == "uniprot.location" and not re.fullmatch(r"SL-[0-9]{4}", local):
+        return None
     base = PREFIX_URL.get(prefix)
     return f"{base}{local}" if base else None
 
@@ -88,6 +95,10 @@ def render(out_dir: Path) -> None:
         lstrip_blocks=True,
     )
     env.filters["curie_url"] = curie_url
+    references = json.loads(REFERENCES.read_text(encoding="utf-8"))["references"]
+    env.globals["reference_labels"] = {key: item["label"] for key, item in references.items()}
+    env.filters["curie_url"] = lambda identifier: (
+        references[identifier]["url"] if identifier in references else curie_url(identifier))
 
     records = load_records()
     records_root = REPO_ROOT / "data" / "structures"
@@ -103,9 +114,12 @@ def render(out_dir: Path) -> None:
             "status": doc.get("mapping_status"),
             "page": f"structures/{name}.html",
             "definition": doc.get("definition", ""),
+            "synonyms": " ".join(s["synonym_text"] for s in doc.get("synonyms") or []),
         }
         by_category[entry["category"]].append(entry)
         index.append(entry)
+
+    env.globals["local_records"] = {entry["identifier"]: entry for entry in index}
 
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / ".nojekyll").write_text("")
