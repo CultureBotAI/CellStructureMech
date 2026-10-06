@@ -1940,6 +1940,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0070850",
+  "label": "TACC/TOG complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/tacc_tog_complex.html",
+  "definition": "A protein complex that contains the transforming acidic coiled coil (TACC) protein and the TOG protein (Mia1p/Alp7p and Alp14, respectively, in fission yeast), and is involved in microtubule array remodeling as cells progress through the cell cycle. The TACC/TOG complex is conserved in eukaryotes, associates with microtubules, and shuttles between the nucleus and the cytoplasm during interphase.",
+  "synonyms": "TACC-TOG complex Alp7-Alp14 complex"
+ },
+ {
   "identifier": "cellstructuremech:telocentrosome",
   "label": "telocentrosome",
   "category": "CYTOSKELETON",
