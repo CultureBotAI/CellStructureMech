@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+  slug: equatorial_microtubule_organizing_center
+session:
+  id: 2026-10-06T031631Z-codex-5582be
+  timestamp: '2026-10-06T03:16:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2087
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  summary: Expose equatorial-center evidence limits in the generated page
+  details: A direct template render reproduced omission of all three graph scope paragraphs
+    and eight discussion notes. Following the record-scoped precedent in issue 2007, copied
+    existing scope text into graph descriptions and moved discussion reasoning into rationale.
+    No claims, citations, edges, statuses or shared template changed. A temporary safe_load
+    mutator asserted the complete pre-edit SHA-256, identity, status, history, exact graph
+    IDs and absent destination fields, appended LLM-assisted provenance and wrote through
+    write_validated_structure. It was removed after success. This is a pre-PR finding, not
+    a post-PR independent review. Final generation, direct-render assertions and full validation
+    follow; issue 2087 remains open until merged publication is verified.
