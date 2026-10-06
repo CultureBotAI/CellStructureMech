@@ -30,5 +30,7 @@
   // Native reset restores controls after the event has been dispatched.
   form.addEventListener('reset', function () { setTimeout(apply, 0); });
   form.hidden = false;
+  // pageshow fires after browser-restored controls, including reload-style Back.
+  window.addEventListener('pageshow', apply);
   apply();
 })();

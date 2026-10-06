@@ -1,7 +1,7 @@
 <form id="record-filters" class="record-filters" hidden>
   <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
-  <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option>{% for value in records|map(attribute='category')|unique|sort %}<option value="{{ value }}">{{ value }}</option>{% endfor %}</select></div>
-  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option>{% for value in records|map(attribute='kind')|select|unique|sort %}{% if value %}<option value="{{ value }}">{{ value }}</option>{% endif %}{% endfor %}</select></div>
+  <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option>{% for value in records|map(attribute='category')|unique|sort %}<option value="{{ value }}">{{ value | replace('_', ' ') | lower | capitalize }}</option>{% endfor %}</select></div>
+  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option>{% for value in records|map(attribute='kind')|select|unique|sort %}{% if value %}<option value="{{ value }}">{{ value | replace('_', ' ') | lower | capitalize }}</option>{% endif %}{% endfor %}</select></div>
   <button type="reset">Clear filters</button>
 </form>
 <p id="record-count" role="status" aria-live="polite">{{ records|length }} records</p>
@@ -12,7 +12,7 @@
 <thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
 <tbody>
 {% for r in records %}
-<tr data-category="{{ r.category }}" data-kind="{{ r.kind or '' }}"><td><a href="{{ root }}{{ r.page }}">{{ r.label }}</a><p class="record-definition">{{ r.definition }}</p></td><td><code>{{ r.identifier }}</code></td><td>{{ r.category }}</td><td>{{ r.kind or '' }}</td><td>{{ r.status }}</td></tr>
+<tr data-category="{{ r.category }}" data-kind="{{ r.kind or '' }}" data-synonyms="{{ r.synonyms | default('') }}"><td><a href="{{ root }}{{ r.page }}">{{ r.label }}</a><p class="record-definition">{{ r.definition }}</p></td><td><code>{{ r.identifier }}</code></td><td>{{ r.category | replace('_', ' ') | lower | capitalize }}</td><td>{{ (r.kind or '') | replace('_', ' ') | lower | capitalize }}</td><td>{{ r.status | replace('_', ' ') | lower | capitalize }}</td></tr>
 {% endfor %}
 </tbody>
 </table>

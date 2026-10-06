@@ -148,6 +148,7 @@
   <div class="cards">
     <div class="card">
       <div class="actions"><a class="btn" href="browse.html">Browse records</a></div>
+      <p class="actions"><a class="btn" href="embedding-map.html">MiniLM / PCA text map</a></p>
       <h2>Record browser</h2>
       <p>Every structure in the corpus, with its category, kind, grounding
          status and definition, in one filterable table.</p>
@@ -155,7 +156,7 @@
     <div class="card">
       <div class="actions">
         {% for c in categories %}
-        <a class="btn" href="{{ c.page }}">{{ c.name | capitalize }}</a>
+        <a class="btn" href="{{ c.page }}">{{ c.name | replace('_', ' ') | lower | capitalize }}</a>
         {% endfor %}
       </div>
       <h2>By category</h2>
@@ -181,7 +182,7 @@
         <tbody>
         {% for c in categories %}
           <tr>
-            <td><a href="{{ c.page }}">{{ c.name | capitalize }}</a></td>
+            <td><a href="{{ c.page }}">{{ c.name | replace('_', ' ') | lower | capitalize }}</a></td>
             <td>{{ c.count }}</td>
             <td>{{ c.blurb }}</td>
           </tr>

@@ -24,13 +24,19 @@ definition, canonical components, functions, taxonomic scope, and physical-prope
 Two-dimensional distance is lossy; use cosine neighbours for the full-vector comparison.</p>
 
 <div class="map-controls">
+  <label for="map-query">Find a structure</label>
+  <input id="map-query" type="search" placeholder="Name or identifier">
   <label for="map-category">Category</label>
   <select id="map-category"><option value="">All categories</option></select>
+  <label for="map-record">Matching structures</label>
+  <select id="map-record"><option value="">Select a structure</option></select>
 </div>
+<p id="map-count" role="status"></p>
+<ul id="map-legend" class="map-legend" aria-label="Structure category colors"></ul>
 <div id="embedding-map" class="embedding-map" aria-label="Scatter plot of structure text embeddings"></div>
 <section id="map-details" class="map-details" aria-live="polite">
   <h2>Select a structure</h2>
-  <p>Choose a labelled point to inspect its nearest semantic neighbours.</p>
+  <p>Choose a point or find a structure above to inspect its nearest semantic neighbours. The selected point is labelled. <a href="browse.html">Browse all records as a table</a>.</p>
 </section>
 
 <script>
@@ -59,6 +65,12 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
   const plot = document.getElementById("embedding-map");
   const select = document.getElementById("map-category");
   const details = document.getElementById("map-details");
+  const query = document.getElementById("map-query");
+  const recordSelect = document.getElementById("map-record");
+  const legend = document.getElementById("map-legend");
+  const count = document.getElementById("map-count");
+  const readable = value => value.toLowerCase().replaceAll("_", " ");
+  let selected = "";
   Promise.all([
     fetch("data/structure_text_map.json").then(r => r.json()),
     fetch("data/structure_text_neighbors.json").then(r => r.json())
@@ -67,8 +79,16 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
     [...new Set(map.records.map(r => r.category))].sort().forEach(category => {
       const option = document.createElement("option");
       option.value = category;
-      option.textContent = category;
+      option.textContent = readable(category);
       select.appendChild(option);
+      const item = document.createElement("li");
+      item.dataset.category = category;
+      const swatch = document.createElement("span");
+      swatch.className = "map-swatch";
+      swatch.style.backgroundColor = colors[category] || colors.OTHER;
+      swatch.setAttribute("aria-hidden", "true");
+      item.append(swatch, readable(category));
+      legend.appendChild(item);
     });
     const xs = map.records.map(r => r.x), ys = map.records.map(r => r.y);
     const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
@@ -76,6 +96,7 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
       start + (value - low) * (end - start) / (high - low);
 
     function show(record) {
+      selected = record.identifier;
       const nearest = neighborById[record.identifier].neighbors;
       details.replaceChildren();
       const heading = document.createElement("h2");
@@ -86,7 +107,7 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
       details.appendChild(heading);
       const id = document.createElement("p");
       id.className = "meta";
-      id.textContent = `${record.identifier} · ${record.category}`;
+      id.textContent = `${record.identifier} · ${readable(record.category)}`;
       details.appendChild(id);
       const title = document.createElement("h3");
       title.textContent = "Nearest by full-vector cosine similarity";
@@ -102,6 +123,7 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
         list.appendChild(row);
       });
       details.appendChild(list);
+      draw();
     }
 
     function draw() {
@@ -110,23 +132,44 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
       svg.setAttribute("viewBox", "0 0 900 520");
       svg.setAttribute("role", "img");
       svg.setAttribute("aria-label", "PCA projection of structure text embeddings");
-      map.records.filter(r => !select.value || r.category === select.value).forEach(record => {
+      const term = query.value.trim().toLowerCase();
+      const matches = map.records.filter(r => (!select.value || r.category === select.value) &&
+        (r.label + " " + r.identifier).toLowerCase().includes(term));
+      count.textContent = `${matches.length} of ${map.records.length} structures shown`;
+      recordSelect.replaceChildren(new Option("Select a structure", ""));
+      matches.forEach(record => recordSelect.appendChild(new Option(record.label + " · " + record.identifier, record.identifier)));
+      recordSelect.value = matches.some(record => record.identifier === selected) ? selected : "";
+      for (const item of legend.children) item.hidden = Boolean(select.value && item.dataset.category !== select.value);
+      matches.forEach(record => {
         const x = scale(record.x, minX, maxX, 95, 805);
         const y = scale(record.y, minY, maxY, 440, 70);
         const group = document.createElementNS(ns, "a");
         group.setAttribute("href", record.page);
+        group.setAttribute("aria-label", record.label + " · " + record.identifier);
         group.addEventListener("click", event => { event.preventDefault(); show(record); });
         const circle = document.createElementNS(ns, "circle");
         circle.setAttribute("cx", x); circle.setAttribute("cy", y); circle.setAttribute("r", "9");
         circle.setAttribute("fill", colors[record.category] || colors.OTHER);
-        const label = document.createElementNS(ns, "text");
-        label.setAttribute("x", x + 14); label.setAttribute("y", y + 5);
-        label.textContent = record.label;
-        group.append(circle, label); svg.appendChild(group);
+        const title = document.createElementNS(ns, "title");
+        title.textContent = record.label + " · " + record.identifier;
+        group.append(circle, title);
+        if (record.identifier === selected) {
+          const label = document.createElementNS(ns, "text");
+          label.setAttribute("x", x); label.setAttribute("y", y - 15);
+          label.setAttribute("text-anchor", x > 450 ? "end" : "start");
+          label.textContent = record.label.length > 45 ? record.label.slice(0, 42) + "…" : record.label;
+          group.appendChild(label);
+        }
+        svg.appendChild(group);
       });
       plot.appendChild(svg);
     }
     select.addEventListener("change", draw);
+    query.addEventListener("input", draw);
+    recordSelect.addEventListener("change", () => {
+      const record = map.records.find(item => item.identifier === recordSelect.value);
+      if (record) show(record);
+    });
     draw();
   }).catch(error => {
     plot.textContent = `Could not load embedding artifacts: ${error.message}`;
