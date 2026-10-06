@@ -5241,9 +5241,9 @@
           "cosine_similarity": 0.78048323
         },
         {
-          "identifier": "GO:0005880",
-          "label": "nuclear microtubule",
-          "cosine_similarity": 0.76206067
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.76812849
         }
       ]
     },
@@ -5988,6 +5988,37 @@
           "identifier": "GO:0097649",
           "label": "A axonemal microtubule",
           "cosine_similarity": 0.85101028
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:telocentrosome",
+      "label": "telocentrosome",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+          "label": "meiotic telomere bouquet",
+          "cosine_similarity": 0.82795996
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.76864645
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+          "label": "quiescent nuclear microtubule bundle",
+          "cosine_similarity": 0.76812849
+        },
+        {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.75484901
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+          "label": "quiescent telomere hypercluster",
+          "cosine_similarity": 0.75296717
         }
       ]
     },
@@ -20292,6 +20323,11 @@
           "cosine_similarity": 0.86691408
         },
         {
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.82795996
+        },
+        {
           "identifier": "GO:0035974",
           "label": "meiotic spindle pole body",
           "cosine_similarity": 0.72408078
@@ -20305,11 +20341,6 @@
           "identifier": "cellstructuremech:meiotic_outer_plaque",
           "label": "meiotic outer plaque",
           "cosine_similarity": 0.68472649
-        },
-        {
-          "identifier": "GO:0000347",
-          "label": "THO complex",
-          "cosine_similarity": 0.68115118
         }
       ]
     },
@@ -22441,14 +22472,14 @@
           "cosine_similarity": 0.77025985
         },
         {
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.75296717
+        },
+        {
           "identifier": "GO:0000347",
           "label": "THO complex",
           "cosine_similarity": 0.72582476
-        },
-        {
-          "identifier": "GO:0000812",
-          "label": "Swr1 complex",
-          "cosine_similarity": 0.71407704
         }
       ]
     },

@@ -1930,6 +1930,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "cellstructuremech:telocentrosome",
+  "label": "telocentrosome",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/telocentrosome.html",
+  "definition": "A telomere-associated microtubule organizing assembly formed at the nuclear envelope during meiotic entry in Schizosaccharomyces pombe. It recruits a gamma-tubulin nucleation complex to SUN/KASH-linked telomeres and generates cytoplasmic microtubules that support their clustering at the spindle pole body; it is distinct from the spindle pole body and the completed telomere bouquet.",
+  "synonyms": "meiotic telomeric MTOC"
+ },
+ {
   "identifier": "cellstructuremech:transition_zone_stellate_fiber_system",
   "label": "transition zone stellate fiber system",
   "category": "CYTOSKELETON",

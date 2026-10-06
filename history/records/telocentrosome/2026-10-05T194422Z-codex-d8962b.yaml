@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/telocentrosome.yaml
+  slug: telocentrosome
+session:
+  id: 2026-10-05T194422Z-codex-d8962b
+  timestamp: '2026-10-05T19:44:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - images
+  - discussions
+  summary: Add the meiotic telocentrosome
+  details: Created a PROPOSED telocentrosome record from primary PMC3575533.1 and corroborating
+    partial-reconstitution PMC11747273.1 evidence. Added eight component classes, eight native-verified
+    protein examples, two bounded mechanistic graphs with seven edges and one inspected link-only
+    CC BY-NC-SA 3.0 figure. Resolved Mto1 and Ssm4 gene-name collisions; retained five label-only
+    family mappings and explicit motor-model, taxonomy, parthood and experimental-context
+    limits. No existing records, schema, vendored files or prior reports were changed.
