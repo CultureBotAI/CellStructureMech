@@ -1,0 +1,595 @@
+identifier: GO:0070850
+label: TACC/TOG complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that contains the transforming acidic coiled coil (TACC)
+  protein and the TOG protein (Mia1p/Alp7p and Alp14, respectively, in fission yeast),
+  and is involved in microtubule array remodeling as cells progress through the cell
+  cycle. The TACC/TOG complex is conserved in eukaryotes, associates with microtubules,
+  and shuttles between the nucleus and the cytoplasm during interphase.
+definition_source: GO:0070850
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-06T04:52:04Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-06T04:57:30Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added verified parentage, two protein component classes, fission-yeast
+    exemplar, four functions, three evidence-backed graphs, explicit experimental/model
+    boundaries and eight discussions; imported the inspected unchanged CC BY 4.0 reconstitution
+    figure.
+  llm_assisted: true
+- timestamp: '2026-10-06T05:01:04Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE
+  changes: Addressed issue 2090 by attaching the 2018 study directly to the TACC component
+    recruitment role and the polymerase edge's contrasting elongation result; scientific
+    claims, graph topology and PROPOSED status are unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-06T05:16:46Z'
+  curator: codex
+  action: CORRECTED_ANCHORS
+  changes: Addressed issue 2091 by replacing the native-assembly discussion's bare
+    components anchor with the two existing component IDs; biological text, graph
+    topology and embedding projection are unchanged.
+  llm_assisted: true
+parent_structures:
+- GO:0140535
+synonyms:
+- synonym_text: TACC-TOG complex
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1091/mbc.E13-11-0679
+- synonym_text: Alp7-Alp14 complex
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1038/srep20653
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Fission-yeast Alp7/Alp14 is the experimental exemplar. Purified-protein reconstitution
+    and cellular perturbations do not establish prevalence across all fungi or microbial
+    eukaryotes.
+  reference: DOI:10.1038/srep20653
+components:
+- component_id: tacc
+  label: TACC-family microtubule-associated protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Alp7 is the demonstrated fission-yeast TACC partner; it promotes Alp14 recruitment
+    to organizing centers and carries the complex's nuclear import signal.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native combined InterPro matches for Q9URY2 on 2026-10-06 yielded
+    IPR024312 TACC, C-terminal, fungi (domain) and PF12709 (coiled coil), not an exact
+    whole-protein family. Neither is substituted for this component class.
+  gene_symbols:
+  - alp7
+  - mia1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9URY2
+    protein_label: Microtubule protein alp7
+    gene_symbol: alp7
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments, not an assertion
+      that every experimental strain is this reference stock.
+    evidence:
+    - reference: DOI:10.1038/srep20653
+      notes: Purified full-length S. pombe Alp7 and Alp14 associate in sedimentation
+        experiments; Alp14 binds soluble tubulin whereas Alp7 alone shows no detectable
+        binding under the tested conditions.
+    - reference: https://www.uniprot.org/uniprotkb/Q9URY2/entry
+      notes: Native accession, exact protein name, gene, reviewed status and source
+        taxon verified on 2026-10-06; residence and binding are supported by the primary
+        experiments.
+  evidence:
+  - reference: DOI:10.1038/srep20653
+    notes: Purified full-length S. pombe Alp7 and Alp14 associate in sedimentation
+      experiments; Alp14 binds soluble tubulin whereas Alp7 alone shows no detectable
+      binding under the tested conditions.
+  - reference: DOI:10.1091/mbc.E13-11-0679
+    notes: Alp7 provides the import signal; Alp14 L615A disrupts export while retaining
+      Alp7 association. These transport results do not determine assembly essentiality.
+  - reference: DOI:10.1016/j.cub.2018.04.008
+    notes: Alp7 deletion impairs Alp14 recruitment to MTOCs and efficient nucleation;
+      persistent plus-end tracking distinguishes this recruitment contribution from
+      an absolute requirement for elongation.
+- component_id: xmap215
+  label: XMAP215
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Alp14 is the demonstrated fission-yeast TOG-family partner, tubulin-binding
+    polymerase and carrier of the complex's nuclear export signal.
+  grounding: InterPro:IPR045110
+  grounding_notes: The native InterPro family XMAP215 includes Alp14 and other members.
+    The family match does not establish that Dis1 or every other member binds a TACC
+    partner; only Alp14 is the demonstrated member here.
+  gene_symbols:
+  - alp14
+  - mtc1
+  protein_examples:
+  - uniprot_id: UniProtKB:O94534
+    protein_label: Spindle pole body component alp14
+    gene_symbol: alp14
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments, not an assertion
+      that every experimental strain is this reference stock.
+    evidence:
+    - reference: DOI:10.1038/srep20653
+      notes: Purified full-length S. pombe Alp7 and Alp14 associate in sedimentation
+        experiments; Alp14 binds soluble tubulin whereas Alp7 alone shows no detectable
+        binding under the tested conditions.
+    - reference: https://www.uniprot.org/uniprotkb/O94534/entry
+      notes: Native accession, exact protein name, gene, reviewed status and source
+        taxon verified on 2026-10-06; residence and binding are supported by the primary
+        experiments.
+  evidence:
+  - reference: DOI:10.1038/srep20653
+    notes: Purified full-length S. pombe Alp7 and Alp14 associate in sedimentation
+      experiments; Alp14 binds soluble tubulin whereas Alp7 alone shows no detectable
+      binding under the tested conditions.
+  - reference: DOI:10.1091/mbc.E13-11-0679
+    notes: Alp7 provides the import signal; Alp14 L615A disrupts export while retaining
+      Alp7 association. These transport results do not determine assembly essentiality.
+functions:
+- function_id: polymerase
+  grounding: GO:0061863
+  label: microtubule plus end polymerase activity
+  description: Alp14 mediates polymerase activity; Alp7 enhances tip occupancy in
+    purified-protein assays. Alp7 dependence of cellular elongation differs between
+    the 2016 and 2018 studies, so it is not treated as universally required.
+  evidence:
+  - reference: DOI:10.1038/srep20653
+    notes: Purified S. pombe proteins and tubulin demonstrate plus-end growth regulation;
+      Figure 7 uses a mixed-tubulin TIRF assay.
+  - reference: DOI:10.1016/j.cub.2018.04.008
+    notes: Alp7 deletion impairs nucleation while Alp14 still tracks tips and elongation
+      rates remain normal in this study, unlike the earlier report.
+- function_id: nucleation
+  grounding: GO:0007020
+  label: microtubule nucleation
+  description: The S. pombe complex supports efficient nucleation by recruiting Alp14
+    to organizing centers; loss-of-function and partial tethering rescue do not show
+    that it is sufficient alone or required for every nucleation event.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2018.04.008
+    notes: Alp7 loss impairs Alp14 MTOC recruitment and nucleation. Forced Alp14 targeting
+      to Mto1 partially rescues nucleation in the engineered assay.
+- function_id: spindle
+  grounding: GO:0090307
+  label: mitotic spindle assembly
+  description: Mitotic nuclear accumulation of Alp7/Alp14 supports spindle assembly
+    in S. pombe closed mitosis.
+  evidence:
+  - reference: DOI:10.1091/mbc.E13-11-0679
+    notes: Alp7 CDK-site mutations impair nuclear accumulation and spindle behavior;
+      an added nuclear localization signal suppresses the growth defect, not proof
+      of full spindle-phenotype rescue.
+- function_id: attachment
+  grounding: GO:0051315
+  label: attachment of mitotic spindle microtubules to kinetochore
+  description: Kinetochore-associated Alp7/Alp14 contributes to productive mitotic
+    microtubule attachment in S. pombe.
+  evidence:
+  - reference: DOI:10.1091/mbc.E12-11-0817
+    notes: Ndc80 loop mutation reduces kinetochore recruitment and compromises attachment.
+      Forced Nuf2-Alp7 C-terminal targeting supports a recruitment contribution, without
+      resolving the complete native interface.
+evidence:
+- reference: GO:0070850
+  notes: Native OAK GO identity, definition and cellular-component namespace verified
+    on 2026-10-06; direct is-a parent is GO:0140535 intracellular protein-containing
+    complex. No universal organelle parthood is inferred from dynamic localization.
+- reference: DOI:10.1038/srep20653
+  notes: Purified full-length S. pombe Alp7 and Alp14 associate in sedimentation experiments;
+    Alp14 binds soluble tubulin whereas Alp7 alone shows no detectable binding under
+    the tested conditions.
+- reference: DOI:10.1091/mbc.E13-11-0679
+  notes: Full main Results, Discussion and Methods support the Alp7 import/Alp14 export
+    division and CDK-linked mitotic localization; supplementary material was not read.
+- reference: DOI:10.1016/j.cub.2018.04.008
+  notes: Full main Results, Discussion and STAR Methods distinguish Alp7-dependent
+    recruitment/nucleation from elongation and explicitly discuss the conflicting
+    earlier elongation result; supplementary material was not read.
+- reference: DOI:10.1091/mbc.E12-11-0817
+  notes: Full main Results, Discussion and Methods support Ndc80-loop-dependent kinetochore
+    association and attachment. Purified peptide binding is narrower than a resolved
+    full-complex interface; supplementary material was not read.
+- reference: DOI:10.3390/ijms20205108
+  notes: Full main text, figure captions and strain table distinguish Alp14 and Dis1
+    under tested endogenous-expression and forced-targeting conditions, without claiming
+    universal nonexchangeability at all doses.
+causal_graphs:
+- graph_id: tacc_tog_association
+  title: Purified Alp7-Alp14 association
+  description: S. pombe purified-protein association supports the binary partnership.
+    This is not an ordered assembly pathway, a native subunit count, or a resolved
+    interface.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: tacc
+    label: TACC-family microtubule-associated protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: tacc
+    description: Alp7 is the experimentally tested member.
+  - node_id: xmap215
+    label: XMAP215
+    node_type: GENE_OR_PROTEIN
+    component_ref: xmap215
+    grounding: InterPro:IPR045110
+    description: Alp14, not every XMAP215-family member, is tested here.
+  edges:
+  - subject: tacc
+    predicate: binds
+    object: xmap215
+    description: Purified Alp7 and Alp14 associate in sedimentation assays. Hydrodynamic
+      behavior does not establish a universal native 2:2 stoichiometry.
+    evidence:
+    - reference: DOI:10.1038/srep20653
+      notes: Full-length proteins co-sediment as a complex; tubulin binding is attributable
+        to Alp14 in the tested assay.
+- graph_id: tacc_tog_function
+  title: Recruitment, nucleation and attachment in fission yeast
+  description: S. pombe experiments separate MTOC recruitment/nucleation, plus-end
+    polymerase activity and kinetochore attachment. Ndc80 and the nucleation-site
+    machinery are external context, not extra TACC/TOG subunits.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: tacc
+    label: TACC-family microtubule-associated protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: tacc
+    description: Alp7 is the experimentally tested member.
+  - node_id: complex
+    label: TACC/TOG complex
+    node_type: STRUCTURE
+    grounding: GO:0070850
+  - node_id: mtoc_alp14
+    label: Alp14 recruited to organizing centers
+    node_type: STATE
+  - node_id: nucleation
+    label: microtubule nucleation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007020
+  - node_id: polymerase
+    label: microtubule plus end polymerase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0061863
+  - node_id: ndc80
+    label: Ndc80 kinetochore docking context
+    node_type: GENE_OR_PROTEIN
+    description: External docking protein, not a component of this binary complex.
+  - node_id: kinetochore_complex
+    label: Kinetochore-associated Alp7/Alp14
+    node_type: STATE
+  - node_id: attachment
+    label: attachment of mitotic spindle microtubules to kinetochore
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051315
+  edges:
+  - subject: tacc
+    predicate: supports recruitment of
+    object: mtoc_alp14
+    description: Alp7 loss impairs Alp14 recruitment to MTOCs while allowing plus-end
+      tracking in the 2018 experiments.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2018.04.008
+      notes: Localization, deletion and engineered Mto1-bonsai assays distinguish
+        recruitment from elongation.
+  - subject: mtoc_alp14
+    predicate: promotes
+    object: nucleation
+    description: Forced Alp14 recruitment to Mto1 partially rescues nucleation in
+      alp7-deleted cells. This does not make the binary complex sufficient without
+      the nucleation machinery.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2018.04.008
+      notes: The engineered tether is a partial rescue, with expression and construct
+        context limiting quantitative generalization.
+  - subject: complex
+    predicate: supports
+    object: polymerase
+    description: Alp7 enhances Alp14 tip occupancy and growth in the 2016 reconstitution.
+      Alp7 deletion gives normal growth in the 2018 cellular assays, so no universal
+      Alp7 requirement is asserted.
+    evidence:
+    - reference: DOI:10.1038/srep20653
+      notes: Figure 7 uses S. pombe proteins/tubulin with labelled pig-brain tubulin
+        and stabilized seeds; the claim is assay-specific.
+    - reference: DOI:10.1016/j.cub.2018.04.008
+      notes: The 2018 cellular assays retain normal elongation and Alp14 tip tracking
+        after Alp7 deletion. The authors explicitly contrast this with the earlier
+        reduced-elongation result; the discrepancy remains unresolved.
+  - subject: ndc80
+    predicate: supports recruitment of
+    object: kinetochore_complex
+    description: The Ndc80 F420S loop mutation reduces, rather than abolishes, kinetochore
+      Alp7/Alp14 recruitment. Peptide binding supports contacts but not a solved native
+      interface.
+    evidence:
+    - reference: DOI:10.1091/mbc.E12-11-0817
+      notes: Kinetochore signals decrease while spindle-pole localization is retained;
+        full-complex geometry remains unresolved.
+  - subject: kinetochore_complex
+    predicate: supports
+    object: attachment
+    description: Recruitment mutants and forced Nuf2-Alp7 C-terminal targeting support
+      a contribution to mitotic attachment, not a proven depolymerization reaction.
+    evidence:
+    - reference: DOI:10.1091/mbc.E12-11-0817
+      notes: The forced fusion is a functional perturbation, not a native stoichiometric
+        complex.
+- graph_id: tacc_tog_transport
+  title: CDK-linked nuclear accumulation in closed mitosis
+  description: S. pombe nuclear transport is distributed between the Alp7 import signal
+    and Alp14 export signal. CDK-site evidence supports mitotic accumulation without
+    proving a native importin-affinity mechanism or direct CDK inhibition of export.
+  graph_kind: REGULATION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: tacc
+    label: TACC-family microtubule-associated protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: tacc
+    description: Alp7 is the experimentally tested member.
+  - node_id: xmap215
+    label: XMAP215
+    node_type: GENE_OR_PROTEIN
+    component_ref: xmap215
+    grounding: InterPro:IPR045110
+    description: Alp14, not every XMAP215-family member, is tested here.
+  - node_id: cdk
+    label: Mitotic CDK activity
+    node_type: STATE
+  - node_id: phospho_alp7
+    label: N-terminally phosphorylated Alp7
+    node_type: STATE
+  - node_id: nuclear_complex
+    label: Nuclear Alp7/Alp14 accumulation
+    node_type: STATE
+  - node_id: cytoplasmic_complex
+    label: Cytoplasmic Alp7/Alp14 pool
+    node_type: STATE
+  - node_id: spindle
+    label: mitotic spindle assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0090307
+  edges:
+  - subject: cdk
+    predicate: promotes phosphorylation of
+    object: phospho_alp7
+    description: Kinase and peptide assays support Alp7 N-terminal CDK phosphorylation;
+      this is not evidence that Alp14 is the phosphorylated transport target.
+    evidence:
+    - reference: DOI:10.1091/mbc.E13-11-0679
+      notes: S50, S51, T100, T116 and T131 form the tested five-site alanine mutant;
+        phosphorylation is reduced rather than necessarily eliminated.
+  - subject: phospho_alp7
+    predicate: promotes mitotic accumulation of
+    object: nuclear_complex
+    description: The five-site mutant has impaired mitotic nuclear accumulation but
+      retains Alp14 association and import competence. A direct native Cut15 affinity
+      change remains a model.
+    evidence:
+    - reference: DOI:10.1091/mbc.E13-11-0679
+      notes: Leptomycin B permits delayed mutant nuclear accumulation; truncated-fragment
+        two-hybrid results do not resolve full native importin binding.
+  - subject: tacc
+    predicate: supports import of
+    object: nuclear_complex
+    description: The Alp7 nuclear localization signal supplies the import function
+      for the partnership; the CDK-site mutant is not an import-null protein.
+    evidence:
+    - reference: DOI:10.1091/mbc.E13-11-0679
+      notes: Transport analysis separates the Alp7 NLS from mitotic accumulation control.
+  - subject: xmap215
+    predicate: supports export toward
+    object: cytoplasmic_complex
+    description: Alp14 L615A disrupts the export signal while retaining Alp7 binding
+      and causes nuclear accumulation of both proteins. The older Alp7 L461A phenotype
+      also disrupts the partnership and is not a clean export-only test.
+    evidence:
+    - reference: DOI:10.1091/mbc.E13-11-0679
+      notes: Alp14 residues 601-620 confer export in a reporter; a direct resolved
+        NES-Crm1 interface is not claimed.
+  - subject: nuclear_complex
+    predicate: supports
+    object: spindle
+    description: Mitotic nuclear localization supports spindle assembly; an artificial
+      NLS suppresses the five-site mutant's growth defect, not proof that every spindle
+      phenotype is rescued.
+    evidence:
+    - reference: DOI:10.1091/mbc.E13-11-0679
+      notes: CDK-site localization and spindle phenotypes provide functional evidence
+        in fission-yeast closed mitosis.
+discussions:
+- discussion_id: identity_and_sites
+  prompt: Keep the binary partnership distinct from the sites where it acts.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  rationale: GO:0070850 names a protein complex. MTOCs, microtubule ends, kinetochores
+    and the nucleus are dynamic localization contexts, not universally asserted parent
+    organelles.
+  evidence:
+  - reference: GO:0070850
+    notes: Exact cellular-component identity and direct parent verified by native
+      OAK.
+  - reference: DOI:10.1016/j.cub.2018.04.008
+    notes: Alp14 occupies multiple organizing centers and growing ends.
+  posed_by: codex
+  posed_date: '2026-10-06'
+  resolution_note: Use only the verified intracellular protein-containing-complex
+    parent; do not infer universal parthood.
+  resolved_date: '2026-10-06'
+- discussion_id: tacc_family_grounding
+  prompt: Resolve an exact whole-protein grounding for the TACC component class.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#tacc
+  rationale: Q9URY2's complete native InterPro match result provides a fungal C-terminal
+    domain and a coiled-coil entry, not an exact whole-protein family. This bounded
+    search does not imply homolog absence.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/entry/InterPro/IPR024312/
+    notes: Native entry type is domain; the corresponding PF12709 match is coiled_coil.
+  posed_by: codex
+  posed_date: '2026-10-06'
+- discussion_id: native_assembly
+  prompt: Determine native stoichiometry and assembly dependence separately from activity.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - components#tacc
+  - components#xmap215
+  - causal_graphs#tacc_tog_association
+  rationale: Purified sedimentation supports association but not a universal native
+    2:2 copy count or interface geometry. Cellular growth, nucleation and transport
+    defects do not independently measure whether the defined complex assembles without
+    a constituent; essentiality remains UNKNOWN.
+  evidence:
+  - reference: DOI:10.1038/srep20653
+    notes: Purified full-length S. pombe Alp7 and Alp14 associate in sedimentation
+      experiments; Alp14 binds soluble tubulin whereas Alp7 alone shows no detectable
+      binding under the tested conditions.
+  posed_by: codex
+  posed_date: '2026-10-06'
+- discussion_id: elongation_conflict
+  prompt: Reconcile the different effects of Alp7 loss on microtubule elongation.
+  kind: CONTROVERSY
+  status: OPEN
+  attaches_to:
+  - functions#polymerase
+  rationale: The 2016 study reports reduced elongation after Alp7 deletion and potentiation
+    in reconstitution. The 2018 study finds normal elongation with persistent Alp14
+    tip tracking despite impaired nucleation, explicitly noting the discrepancy. Strain
+    or assay conditions are possible explanations, not established resolutions.
+  evidence:
+  - reference: DOI:10.1038/srep20653
+    notes: Cellular deletion and purified reconstitution experiments support an elongation
+      contribution in the tested contexts.
+  - reference: DOI:10.1016/j.cub.2018.04.008
+    notes: The Discussion explicitly contrasts the normal elongation result with the
+      earlier study.
+  posed_by: codex
+  posed_date: '2026-10-06'
+- discussion_id: external_machinery
+  prompt: Do not turn interaction partners and regulators into core subunits.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  rationale: Ndc80 supplies a kinetochore docking context; Mto1/gamma-tubulin machinery
+    supplies nucleation sites; CDK and transport factors regulate localization. These
+    experiments do not establish them as invariant constituents of the TACC/TOG binary
+    partnership.
+  evidence:
+  - reference: DOI:10.1091/mbc.E12-11-0817
+    notes: Recruitment and peptide-contact evidence concern the kinetochore.
+  - reference: DOI:10.1016/j.cub.2018.04.008
+    notes: MTOC recruitment and engineered tethering are functional context.
+  - reference: DOI:10.1091/mbc.E13-11-0679
+    notes: Transport regulation is distinct from binary association.
+  posed_by: codex
+  posed_date: '2026-10-06'
+  resolution_note: Keep these entities in graph context rather than the component
+    list.
+  resolved_date: '2026-10-06'
+- discussion_id: dis1_not_inferred
+  prompt: Do not infer a Dis1-containing TACC complex from shared family membership.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#xmap215
+  rationale: Alp14 and Dis1 share XMAP215-family membership, but forced targeting
+    at tested endogenous expression did not substitute their functions. Earlier overexpression
+    cross-rescue prevents an absolute claim of nonexchangeability at every dose or
+    in every lineage.
+  evidence:
+  - reference: DOI:10.3390/ijms20205108
+    notes: Reciprocal targeting and double-mutant experiments distinguish the tested
+      Alp14 and Dis1 roles.
+  posed_by: codex
+  posed_date: '2026-10-06'
+  resolution_note: Use Alp14 as the demonstrated member; family grounding alone does
+    not add Dis1 to this complex.
+  resolved_date: '2026-10-06'
+- discussion_id: transport_model_boundary
+  prompt: Separate the revised export assignment from unresolved transport mechanisms.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  rationale: Alp14 L615A retains Alp7 association whereas the older Alp7 L461A perturbation
+    also breaks binding. Alp7 five-site phosphorylation mutants retain import. Truncated-fragment
+    two-hybrid and reporter export data do not resolve native importin affinity or
+    a NES-exportin interface.
+  evidence:
+  - reference: DOI:10.1091/mbc.E13-11-0679
+    notes: Main Results, Discussion and Methods separate association, import competence
+      and mitotic accumulation.
+  posed_by: codex
+  posed_date: '2026-10-06'
+  resolution_note: Assign export to the demonstrated Alp14 NES and keep enhanced native
+    importin affinity as a model, not a graph reaction.
+  resolved_date: '2026-10-06'
+- discussion_id: taxon_scope
+  prompt: Extend direct microbial evidence beyond the fission-yeast exemplar.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The GO definition describes eukaryotic conservation, but the curated
+    mechanistic experiments here concern S. pombe. No clade-wide presence frequency,
+    identical native stock, or universal transport mechanism is asserted.
+  evidence:
+  - reference: GO:0070850
+    notes: The ontology provides generic scope.
+  - reference: DOI:10.1038/srep20653
+    notes: Purified S. pombe proteins were expressed in Sf9 cells; the expression
+      host is not evidence for native complex distribution.
+  posed_by: codex
+  posed_date: '2026-10-06'
+images:
+- image_id: pmc_pmc4749977_f7
+  file: pmc4749977_f7.jpg
+  file_sha256: 435c851418d002e2c49b2ccc3d39eac1f3bf5b30e5881c56f40c8876d81ef752
+  source: PMC
+  source_accession: PMC4749977.1 f7
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4749977/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC4749977.1/srep20653-f7.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Frauke Hussmann, Douglas R. Drummond, Daniel R. Peet, Douglas S. Martin,
+    Robert A. Cross; Figure 7, DOI:10.1038/srep20653; CC BY 4.0, via PubMed Central.
+    Original image unchanged; caption paraphrased.
+  modality: FLUORESCENCE
+  caption: Reconstituted S. pombe Alp7/Alp14 activity. A diagrams the dual-TIRF assay;
+    B-C show microtubule kymographs with Alp14-GFP alone or with Alp7, and D compares
+    plus- and minus-end growth-rate distributions. The assay combines purified S.
+    pombe proteins/tubulin with 2.5% labelled pig-brain tubulin and stabilized seeds.
+    Kymograph bars are 2 micrometers and 1 minute. This is a functional reconstitution,
+    not a resolved complex structure or whole-cell micrograph.
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1038/srep20653
+  retrieved_on: '2026-10-06'
+  notes: 'Figure 7 from article version PMC4749977.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Visually inspected: panel D plots growth rates, not catastrophe frequencies. Supplementary
+    movies were not inspected. The species field identifies the focal proteins, not
+    a whole-cell or single-species assay.'

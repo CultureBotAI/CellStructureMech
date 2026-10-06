@@ -6023,6 +6023,37 @@
       ]
     },
     {
+      "identifier": "GO:0070850",
+      "label": "TACC/TOG complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.74516137
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.74473231
+        },
+        {
+          "identifier": "GO:0044732",
+          "label": "mitotic spindle pole body",
+          "cosine_similarity": 0.72647581
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.72381343
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+          "label": "quiescent nuclear microtubule bundle",
+          "cosine_similarity": 0.70748716
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:telocentrosome",
       "label": "telocentrosome",
       "neighbors": [
