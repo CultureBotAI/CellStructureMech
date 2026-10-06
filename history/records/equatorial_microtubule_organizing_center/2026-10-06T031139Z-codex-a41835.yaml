@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+  slug: equatorial_microtubule_organizing_center
+session:
+  id: 2026-10-06T031139Z-codex-a41835
+  timestamp: '2026-10-06T03:11:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - components
+  - causal_graphs
+  - evidence
+  - images
+  - discussions
+  summary: Add the equatorial microtubule organizing center
+  details: Scaffolded GO:0000923 and curated six component classes, six native-verified protein
+    examples, three bounded causal graphs and an unchanged checksum-verified CC BY 4.0 primary
+    figure. Source access and assay scope are explicit, including residual Mto2 activity,
+    interphase versus equatorial experiments, assembly versus turnover and model-dependent
+    ring mechanics. Four whole-protein family mappings remain label-only; no broad distribution,
+    unverified dataset, trait or copy count was inferred. Native GO, UniProt, InterPro and
+    ENA taxonomy were checked. Guarded YAML expansion used safe_load, exact old-state assertions,
+    LLM-assisted curation provenance and write_image_with_validated_record, which calls write_validated_structure.
+    Temporary mutator removed. Record remains PROPOSED; full validation and adversarial post-PR
+    self-review follow. No PR existed at creation.
