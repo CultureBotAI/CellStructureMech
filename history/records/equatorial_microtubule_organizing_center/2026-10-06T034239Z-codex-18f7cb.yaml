@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+  slug: equatorial_microtubule_organizing_center
+session:
+  id: 2026-10-06T034239Z-codex-18f7cb
+  timestamp: '2026-10-06T03:42:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2089
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2088
+  urls:
+  - https://pubmed.ncbi.nlm.nih.gov/15068790/
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - discussions
+  - curation_history
+  summary: Bound Rsp1 assembly essentiality to accessed evidence
+  details: Post-PR adversarial self-review found that the accessed PMID 15068790 abstract
+    describes loss-of-function persistence, not demonstrated assembly without Rsp1. Set only
+    Rsp1 essentiality to UNKNOWN; expanded both evidence notes and the residual-assembly rationale,
+    and clarified turnover discussion wording. Retained turnover edges and Mto2 deletion-backed
+    DISPENSABLE status. The guarded safe_load mutator asserted the original SHA256, identifier,
+    PROPOSED status, history count and old values, appended an LLM-assisted event, and wrote
+    through write_validated_structure. An initial wrong field-name assertion stopped before
+    writing; after correcting the guard to the schema's identifier/mapping_status keys, the
+    mutation succeeded and the script was removed. Native structure validation passed at write
+    time; derived regeneration and full gates are rerun before the follow-up commit. No original
+    Rsp1 Results/Methods or new null-equatorial assay was accessed.

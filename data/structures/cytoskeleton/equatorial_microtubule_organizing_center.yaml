@@ -34,6 +34,13 @@ curation_history:
     rationales through renderer-supported fields, without changing claims, citations,
     graph edges or the shared template.
   llm_assisted: true
+- timestamp: '2026-10-06T03:42:24Z'
+  curator: codex
+  action: BOUNDED_ASSEMBLY_ESSENTIALITY
+  changes: 'Addressed PR 2088 review issue 2089: set Rsp1 assembly essentiality to
+    UNKNOWN and distinguish loss-of-function persistence from assembly without the
+    protein; retained the supported turnover dependency.'
+  llm_assisted: true
 parent_structures:
 - GO:0005815
 part_of:
@@ -256,7 +263,7 @@ components:
   label: Rsp1-like DnaJ-related cochaperone
   component_type: PROTEIN
   component_role: ASSOCIATED_MACHINERY
-  essentiality: DISPENSABLE
+  essentiality: UNKNOWN
   role: MTOC-associated turnover machinery supporting equatorial-center disassembly
     after cytokinesis.
   grounding_status: REVIEWED_LABEL_ONLY
@@ -278,16 +285,20 @@ components:
       that this exact reference stock was imaged.
     evidence:
     - reference: DOI:10.1016/s1534-5807(04)00096-6
-      notes: The primary abstract reports persistent equatorial asters after Rsp1
-        loss and inhibited center formation after overexpression. The biochemical
+      notes: The primary abstract reports persistent equatorial asters in rsp1 loss-of-function
+        mutants and inhibited center formation after overexpression. Persistence in
+        these mutants does not establish assembly in the complete absence of Rsp1;
+        assembly essentiality remains unknown from the accessed evidence. The biochemical
         disassembly mechanism remains a proposal.
     - reference: https://www.uniprot.org/uniprotkb/O13601/entry
       notes: Native accession, reviewed status, primary gene, protein label and source
         taxon verified on 2026-10-06. Residence and function come from the cited experiments.
   evidence:
   - reference: DOI:10.1016/s1534-5807(04)00096-6
-    notes: The primary abstract reports persistent equatorial asters after Rsp1 loss
-      and inhibited center formation after overexpression. The biochemical disassembly
+    notes: The primary abstract reports persistent equatorial asters in rsp1 loss-of-function
+      mutants and inhibited center formation after overexpression. Persistence in
+      these mutants does not establish assembly in the complete absence of Rsp1; assembly
+      essentiality remains unknown from the accessed evidence. The biochemical disassembly
       mechanism remains a proposal.
 canonical_examples:
 - taxon_id: NCBITaxon:4896
@@ -555,9 +566,12 @@ discussions:
   rationale: Mto2 deletion can leave faint Alp4 recruitment, very limited nucleation
     or an early array that fails to persist. A failure to detect equatorial gamma-tubulin
     in another assay is not proof of zero molecules. Alp7/Mia1 mutants retain initial
-    equatorial markers despite maintenance defects. Rsp1 loss permits assembly but
-    impairs turnover. Unknown assembly essentiality remains UNKNOWN for the other
-    classes; no cell-viability phenotype is substituted for assembly necessity.
+    equatorial markers despite maintenance defects. The accessible Rsp1 abstract reports
+    persistent asters in loss-of-function mutants, not demonstrated assembly in the
+    complete absence of Rsp1. Rsp1 assembly essentiality therefore remains UNKNOWN,
+    separately from its supported turnover role. Unknown assembly essentiality remains
+    UNKNOWN for the other classes; no cell-viability phenotype is substituted for
+    assembly necessity.
 - discussion_id: mechanistic_scope
   kind: CURATION_TODO
   status: RESOLVED
@@ -582,9 +596,10 @@ discussions:
   evidence:
   - reference: DOI:10.1016/s1534-5807(04)00096-6
   - reference: DOI:10.1126/sciadv.adq0670
-  rationale: The Rsp1 loss phenotype supports turnover dependence. Satellite redistribution
-    and chaperone-based breakup remain models in the accessible 2004 account; the
-    2025 lattice experiments do not by themselves close this site-specific gap.
+  rationale: The rsp1 loss-of-function phenotype supports turnover dependence. Satellite
+    redistribution and chaperone-based breakup remain models in the accessible 2004
+    account; the 2025 lattice experiments do not by themselves close this site-specific
+    gap.
 - discussion_id: ring_mechanics
   kind: CURATION_TODO
   status: RESOLVED
