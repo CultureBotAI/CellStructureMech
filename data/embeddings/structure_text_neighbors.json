@@ -3578,6 +3578,11 @@
       "label": "equatorial microtubule organizing center",
       "neighbors": [
         {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.92362405
+        },
+        {
           "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
           "label": "quiescent cell microtubule bundle",
           "cosine_similarity": 0.8663443
@@ -3596,11 +3601,6 @@
           "identifier": "cellstructuremech:telocentrosome",
           "label": "telocentrosome",
           "cosine_similarity": 0.78185016
-        },
-        {
-          "identifier": "GO:0005881",
-          "label": "cytoplasmic microtubule",
-          "cosine_similarity": 0.76730914
         }
       ]
     },
@@ -4159,6 +4159,37 @@
           "identifier": "GO:0005822",
           "label": "inner plaque of spindle pole body",
           "cosine_similarity": 0.92189112
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031021",
+      "label": "interphase microtubule organizing center",
+      "neighbors": [
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.92362405
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.85571694
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+          "label": "quiescent nuclear microtubule bundle",
+          "cosine_similarity": 0.82398854
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
+          "label": "basal body A-B inner junction",
+          "cosine_similarity": 0.7910359
+        },
+        {
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.78798931
         }
       ]
     },
@@ -5231,6 +5262,11 @@
           "cosine_similarity": 0.8663443
         },
         {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.85571694
+        },
+        {
           "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
           "label": "basal body A-B inner junction",
           "cosine_similarity": 0.79615281
@@ -5239,11 +5275,6 @@
           "identifier": "GO:0005881",
           "label": "cytoplasmic microtubule",
           "cosine_similarity": 0.77619723
-        },
-        {
-          "identifier": "GO:0005876",
-          "label": "spindle microtubule",
-          "cosine_similarity": 0.77508902
         }
       ]
     },
@@ -5255,6 +5286,11 @@
           "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
           "label": "quiescent cell microtubule bundle",
           "cosine_similarity": 0.93343159
+        },
+        {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.82398854
         },
         {
           "identifier": "GO:0000923",
@@ -5270,11 +5306,6 @@
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.78673303
-        },
-        {
-          "identifier": "cellstructuremech:basal_body_a_c_linker",
-          "label": "basal body A-C linker",
-          "cosine_similarity": 0.78048323
         }
       ]
     },
@@ -6027,6 +6058,11 @@
       "label": "TACC/TOG complex",
       "neighbors": [
         {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.76546862
+        },
+        {
           "identifier": "GO:0000923",
           "label": "equatorial microtubule organizing center",
           "cosine_similarity": 0.74516137
@@ -6045,11 +6081,6 @@
           "identifier": "GO:0005816",
           "label": "spindle pole body",
           "cosine_similarity": 0.72381343
-        },
-        {
-          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
-          "label": "quiescent nuclear microtubule bundle",
-          "cosine_similarity": 0.70748716
         }
       ]
     },
@@ -6061,6 +6092,11 @@
           "identifier": "cellstructuremech:meiotic_telomere_bouquet",
           "label": "meiotic telomere bouquet",
           "cosine_similarity": 0.82795996
+        },
+        {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.78798931
         },
         {
           "identifier": "GO:0000923",
@@ -6076,11 +6112,6 @@
           "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
           "label": "quiescent nuclear microtubule bundle",
           "cosine_similarity": 0.76812849
-        },
-        {
-          "identifier": "GO:0035974",
-          "label": "meiotic spindle pole body",
-          "cosine_similarity": 0.75484901
         }
       ]
     },

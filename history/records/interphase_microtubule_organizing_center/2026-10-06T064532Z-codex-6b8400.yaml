@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml
+  slug: interphase_microtubule_organizing_center
+session:
+  id: 2026-10-06T064532Z-codex-6b8400
+  timestamp: '2026-10-06T06:45:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2093
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Preserve context while correcting four grounded graph labels
+  details: Pre-PR same-agent review reproduced exactly four MISMATCH verdicts through the
+    unchanged repository classify() implementation using native GO and the configured exact-synonym
+    policy. Replaced the four contextual labels on GO:0031021 and GO:0051415 nodes with verified
+    canonical labels and added descriptions preserving site/assay context. The mutator asserted
+    the full prior record SHA, identity/status, history count, each exact old node label/grounding
+    and absent descriptions, then appended an LLM-assisted event and wrote through write_validated_structure.
+    Graph identifiers, edges, citations, component inventory and PROPOSED status are unchanged;
+    no checker, exception list or schema was weakened. First validation run was intentionally
+    stopped during embedding refresh after strict/history passes; complete regeneration and
+    gates restart on this correction.
