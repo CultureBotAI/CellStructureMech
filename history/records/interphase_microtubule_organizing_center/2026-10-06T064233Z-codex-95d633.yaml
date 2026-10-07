@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml
+  slug: interphase_microtubule_organizing_center
+session:
+  id: 2026-10-06T064233Z-codex-95d633
+  timestamp: '2026-10-06T06:42:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.7554/eLife.33465
+  - https://doi.org/10.1093/jmcb/mjz038
+  - https://doi.org/10.1091/mbc.E18-05-0279
+  - https://doi.org/10.1016/j.cub.2014.03.006
+  - https://doi.org/10.1126/sciadv.adq0670
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  summary: Add evidence-backed interphase microtubule organizing center
+  details: Added GO:0031021 after ignored-inclusive identity, synonym, component and primary-citation
+    deduplication and a parsed 905-record identity audit. Native GO, six reviewed UniProt
+    proteins, complete InterPro responses and ENA taxa verified. Six component classes, two
+    functions and three source-bounded graphs distinguish nuclear-pore docking, MBC recovery
+    and lattice-site regulation. Unchanged PMC6008054.1 Figure6 has checked native CC BY 4.0
+    licence, MD5/SHA256 and visual inspection; nested supplemental graphic was excluded from
+    figure selection, not cropped. The expansion asserted complete scaffold SHA and old identity/field
+    values, appended an LLM event and used write_image_with_validated_record/write_validated_structure.
+    No universal stoichiometry, broad prevalence, direct interface or human-reviewed status
+    inferred. Full validation and adversarial PR review follow; not independent review.

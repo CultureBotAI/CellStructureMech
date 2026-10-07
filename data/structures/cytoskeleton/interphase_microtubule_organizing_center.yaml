@@ -1,0 +1,850 @@
+identifier: GO:0031021
+label: interphase microtubule organizing center
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A microtubule organizing center found in interphase cells, which organize
+  a longitudinal array of three to five MT bundles from the nuclear envelope during
+  interphase. Each MT bundle is composed of two to seven MTs arranged in an antiparallel
+  configuration, with the dynamic MT plus ends extending toward the cell tips and
+  stable minus ends near the nucleus.
+definition_source: GO:0031021
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-06T06:38:06Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-06T06:41:44Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added six source-bounded components with native protein groundings, two
+    functions, three condition-specific causal graphs, eight discussions and an unchanged
+    checksum-verified CC BY 4.0 figure; preserved PROPOSED status.
+  llm_assisted: true
+- timestamp: '2026-10-06T06:45:07Z'
+  curator: codex
+  action: CORRECTED_GROUNDED_NODE_LABELS
+  changes: 'Resolved issue 2093: use canonical GO labels on four grounded graph nodes
+    and preserve site/assay qualifiers in node descriptions; unchanged identifiers,
+    topology and evidence.'
+  llm_assisted: true
+parent_structures:
+- GO:0005815
+synonyms:
+- synonym_text: iMTOC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031021
+- synonym_text: interphase MTOC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031021
+- synonym_text: interphase microtubule organising center
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031021
+components:
+- component_id: mto1
+  label: Mto1-like microtubule nucleation adaptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident adaptor recruiting and activating gamma-tubulin machinery at non-SPB
+    interphase sites; nuclear-envelope docking is one site-specific mechanism.
+  grounding_notes: O94488 has CM1 and Mto2-binding domains, not an exact integrated
+    whole-protein family. The mitochondrial MTO1 homonym is a different protein.
+  gene_symbols:
+  - mto1
+  evidence:
+  - reference: DOI:10.7554/eLife.33465
+    notes: Nuclear-pore docking was dissected with engineered Mto1 reporters and tested
+      functionally with separate full-length cold-regrowth assays.
+  - reference: DOI:10.1093/jmcb/mjz038
+    notes: Mto1 and Alp7 show reciprocal NE localization dependencies during MBC recovery;
+      mto1 deletion eliminates most non-SPB NE regrowth.
+  - reference: DOI:10.1016/j.cub.2014.03.006
+    notes: Mto1 NE-targeting and bonsai constructs separate localization from gamma-tubulin-complex
+      activation; engineered copy counts are not native stoichiometry.
+  protein_examples:
+  - uniprot_id: UniProtKB:O94488
+    protein_label: Gamma tubulin complex adapter mto1
+    gene_symbol: mto1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; not an assertion
+      that every experimental strain is this reference stock.
+    evidence:
+    - reference: DOI:10.7554/eLife.33465
+      notes: Nuclear-pore docking was dissected with engineered Mto1 reporters and
+        tested functionally with separate full-length cold-regrowth assays.
+    - reference: DOI:10.1093/jmcb/mjz038
+      notes: Mto1 and Alp7 show reciprocal NE localization dependencies during MBC
+        recovery; mto1 deletion eliminates most non-SPB NE regrowth.
+    - reference: DOI:10.1016/j.cub.2014.03.006
+      notes: Mto1 NE-targeting and bonsai constructs separate localization from gamma-tubulin-complex
+        activation; engineered copy counts are not native stoichiometry.
+    - reference: https://www.uniprot.org/uniprotkb/O94488/entry
+      notes: Native reviewed accession, label, gene and source taxon verified on 2026-10-06;
+        residence and activity are established by the cited experiments.
+  grounding_status: REVIEWED_LABEL_ONLY
+- component_id: mto2
+  label: Mto2-like microtubule nucleation adaptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Mto1 partner present at interphase nucleation sites and supporting Mto1 association
+    with the gamma-tubulin complex.
+  grounding_notes: The complete combined InterPro request for Q9USP7 returned HTTP204
+    with zero bytes. This bounded lookup does not establish global absence of a family.
+  gene_symbols:
+  - mto2
+  evidence:
+  - reference: DOI:10.1091/mbc.E18-05-0279
+    notes: Mto2 localizes with Mto1 on microtubules and redistributes toward SPB/NE
+      sites in rsp1-deleted cells.
+  - reference: DOI:10.1016/j.cub.2014.03.006
+    notes: Mto2 localizes to the NE in Mto1[NE] cells; association and activation
+      experiments use engineered Mto1 constructs.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9USP7
+    protein_label: Gamma tubulin complex adapter mto2
+    gene_symbol: mto2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; not an assertion
+      that every experimental strain is this reference stock.
+    evidence:
+    - reference: DOI:10.1091/mbc.E18-05-0279
+      notes: Mto2 localizes with Mto1 on microtubules and redistributes toward SPB/NE
+        sites in rsp1-deleted cells.
+    - reference: DOI:10.1016/j.cub.2014.03.006
+      notes: Mto2 localizes to the NE in Mto1[NE] cells; association and activation
+        experiments use engineered Mto1 constructs.
+    - reference: https://www.uniprot.org/uniprotkb/Q9USP7/entry
+      notes: Native reviewed accession, label, gene and source taxon verified on 2026-10-06;
+        residence and activity are established by the cited experiments.
+  grounding_status: REVIEWED_LABEL_ONLY
+- component_id: gamma_tuc
+  label: gamma-tubulin complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Nucleating subcomplex represented experimentally by Alp4; no universal ring
+    geometry, complete subunit inventory or copy number is assigned.
+  grounding_notes: Exact generic complex identity verified at GO. One Alp4 reporter
+    does not demonstrate every subunit at every site or distinguish native TuSC/TuRC
+    geometry.
+  gene_symbols:
+  - alp4
+  evidence:
+  - reference: DOI:10.1016/j.cub.2014.03.006
+    notes: Alp4 reports NE recruitment in Mto1[NE] cells and nucleation from engineered
+      Mto1[bonsai] puncta; targeting and activation are separable.
+  - reference: DOI:10.1091/mbc.E18-05-0279
+    notes: Alp4-containing particles occupy microtubule-associated sites and accumulate
+      toward SPB/NE sites after rsp1 deletion.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9Y705
+    protein_label: Spindle pole body component alp4
+    gene_symbol: alp4
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; not an assertion
+      that every experimental strain is this reference stock. Alp4 reports one subunit,
+      not the entire complex.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2014.03.006
+      notes: Alp4 reports NE recruitment in Mto1[NE] cells and nucleation from engineered
+        Mto1[bonsai] puncta; targeting and activation are separable.
+    - reference: DOI:10.1091/mbc.E18-05-0279
+      notes: Alp4-containing particles occupy microtubule-associated sites and accumulate
+        toward SPB/NE sites after rsp1 deletion.
+    - reference: https://www.uniprot.org/uniprotkb/Q9Y705/entry
+      notes: Native reviewed accession, label, gene and source taxon verified on 2026-10-06;
+        residence and activity are established by the cited experiments.
+  grounding: GO:0000930
+- component_id: alp7
+  label: Alp7-like microtubule-associated protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: TACC-like resident supporting NE enrichment of full-length Mto1 and Alp14
+    during microtubule recovery.
+  grounding_notes: Q9URY2 matches the fungal TACC C-terminal domain IPR024312, not
+    an exact whole-protein family for this Alp7-like class.
+  gene_symbols:
+  - alp7
+  evidence:
+  - reference: DOI:10.1093/jmcb/mjz038
+    notes: Alp7 localizes at NE regrowth foci, supports Mto1/Alp14 recruitment and
+      itself depends on Mto1. Loss reduces, not universally abolishes, NE regrowth;
+      lysate association is not purified direct binding.
+  - reference: DOI:10.7554/eLife.33465
+    notes: Alp7 is not required for NE targeting of the engineered Mto1[9A1-NE] reporter,
+      a distinct experimental context.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9URY2
+    protein_label: Microtubule protein alp7
+    gene_symbol: alp7
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; not an assertion
+      that every experimental strain is this reference stock.
+    evidence:
+    - reference: DOI:10.1093/jmcb/mjz038
+      notes: Alp7 localizes at NE regrowth foci, supports Mto1/Alp14 recruitment and
+        itself depends on Mto1. Loss reduces, not universally abolishes, NE regrowth;
+        lysate association is not purified direct binding.
+    - reference: DOI:10.7554/eLife.33465
+      notes: Alp7 is not required for NE targeting of the engineered Mto1[9A1-NE]
+        reporter, a distinct experimental context.
+    - reference: https://www.uniprot.org/uniprotkb/Q9URY2/entry
+      notes: Native reviewed accession, label, gene and source taxon verified on 2026-10-06;
+        residence and activity are established by the cited experiments.
+  grounding_status: REVIEWED_LABEL_ONLY
+- component_id: xmap215
+  label: XMAP215
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Polymerase-family resident recruited to NE sites through Alp7/Mto1, supporting
+    efficient recovery and elongation.
+  grounding_notes: The complete native InterPro response confirms exact XMAP215-family
+    membership. This is not an Alp14-specific family or evidence that every family
+    member resides at iMTOCs.
+  gene_symbols:
+  - alp14
+  evidence:
+  - reference: DOI:10.1093/jmcb/mjz038
+    notes: Alp14 localizes at the NE after MBC treatment in an Alp7/Mto1-dependent
+      manner. alp14-deleted cells retain short regrowing microtubules, so initial
+      regrowth is not absolutely Alp14-dependent.
+  protein_examples:
+  - uniprot_id: UniProtKB:O94534
+    protein_label: Spindle pole body component alp14
+    gene_symbol: alp14
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; not an assertion
+      that every experimental strain is this reference stock.
+    evidence:
+    - reference: DOI:10.1093/jmcb/mjz038
+      notes: Alp14 localizes at the NE after MBC treatment in an Alp7/Mto1-dependent
+        manner. alp14-deleted cells retain short regrowing microtubules, so initial
+        regrowth is not absolutely Alp14-dependent.
+    - reference: https://www.uniprot.org/uniprotkb/O94534/entry
+      notes: Native reviewed accession, label, gene and source taxon verified on 2026-10-06;
+        residence and activity are established by the cited experiments.
+  grounding: InterPro:IPR045110
+- component_id: rsp1
+  label: Rsp1-like DnaJ-related cochaperone
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: DISPENSABLE
+  role: Dynamically associated machinery regulating Mto1 distribution among interphase
+    sites; effects depend on site and dosage.
+  grounding_notes: DnaJ domain/site/superfamily matches and broad family IPR051964
+    do not exactly denote this Rsp1-like class; a broad family description is not
+    functional or localization evidence.
+  gene_symbols:
+  - rsp1
+  evidence:
+  - reference: DOI:10.1091/mbc.E18-05-0279
+    notes: Endogenous Rsp1 partly colocalizes with Mto1 on microtubules. rsp1 deletion
+      leaves residual newly formed non-SPB microtubules and NE-associated Mto1/Mto2/Alp4,
+      despite major redistribution defects.
+  - reference: DOI:10.1126/sciadv.adq0670
+    notes: Klp2-dependent lattice delivery and Rsp1-Ssa1 regulation of Mto1-Mto2/gamma-TuSC
+      association are site-specific; Klp2 loss does not eliminate every cellular Rsp1
+      pool.
+  protein_examples:
+  - uniprot_id: UniProtKB:O13601
+    protein_label: DnaJ-related protein rsp1
+    gene_symbol: rsp1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; not an assertion
+      that every experimental strain is this reference stock.
+    evidence:
+    - reference: DOI:10.1091/mbc.E18-05-0279
+      notes: Endogenous Rsp1 partly colocalizes with Mto1 on microtubules. rsp1 deletion
+        leaves residual newly formed non-SPB microtubules and NE-associated Mto1/Mto2/Alp4,
+        despite major redistribution defects.
+    - reference: DOI:10.1126/sciadv.adq0670
+      notes: Klp2-dependent lattice delivery and Rsp1-Ssa1 regulation of Mto1-Mto2/gamma-TuSC
+        association are site-specific; Klp2 loss does not eliminate every cellular
+        Rsp1 pool.
+    - reference: https://www.uniprot.org/uniprotkb/O13601/entry
+      notes: Native reviewed accession, label, gene and source taxon verified on 2026-10-06;
+        residence and activity are established by the cited experiments.
+  grounding_status: REVIEWED_LABEL_ONLY
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.7554/eLife.33465
+  note: Non-SPB interphase nucleation sites studied by live imaging and perturbation.
+    NE recovery, engineered docking reporters and steady-state lattice-associated
+    sites are distinguished; no fungal-wide frequency or invariant stock is inferred.
+functions:
+- function_id: nucleation
+  label: microtubule nucleation by interphase microtubule organizing center
+  grounding: GO:0051415
+  description: Organizes non-SPB interphase microtubule initiation; the contributions
+    of NE and microtubule-associated sites vary with experimental conditions.
+  evidence:
+  - reference: DOI:10.7554/eLife.33465
+    notes: Nup146 FG-repeat perturbation changes NE-region nucleation and full-length-Mto1
+      cold regrowth without abolishing cytoplasmic nucleation.
+  - reference: DOI:10.1091/mbc.E18-05-0279
+    notes: Time-lapse imaging measures new non-SPB microtubules on pre-existing microtubules,
+      with residual events after rsp1 deletion.
+- function_id: organization
+  label: microtubule cytoskeleton organization
+  grounding: GO:0000226
+  description: Spatially organizes the interphase microtubule system by positioning
+    nucleation machinery and maintaining dynamic nucleation-site distributions.
+  evidence:
+  - reference: DOI:10.1091/mbc.E18-05-0279
+    notes: Rsp1 perturbations redistribute Mto1/Mto2/Alp4 and alter the organization
+      of interphase arrays.
+  - reference: DOI:10.1093/jmcb/mjz038
+    notes: NE enrichment and partial forced-targeting rescue link local Mto1 accumulation
+      to regrowth organization.
+causal_graphs:
+- graph_id: ne_docking
+  title: Nuclear-pore docking supports a nuclear-envelope iMTOC
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  description: Site-specific S. pombe dependencies, not universal iMTOC composition.
+    The 9A1-NE reporter resolves docking but cannot nucleate. Separate active Mto1[NE]
+    and full-length cold-regrowth assays connect docking to output. RanGTP dependence
+    does not prove physical Ran membership, and crosslink-MS does not resolve direct
+    interfaces.
+  scope_notes: Site-specific S. pombe dependencies, not universal iMTOC composition.
+    The 9A1-NE reporter resolves docking but cannot nucleate. Separate active Mto1[NE]
+    and full-length cold-regrowth assays connect docking to output. RanGTP dependence
+    does not prove physical Ran membership, and crosslink-MS does not resolve direct
+    interfaces.
+  nodes:
+  - node_id: mto1
+    label: Mto1-like microtubule nucleation adaptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: mto1
+  - node_id: crm1
+    label: Crm1 exportin
+    node_type: GENE_OR_PROTEIN
+  - node_id: ran_gtp
+    label: RanGTP-dependent state
+    node_type: STATE
+  - node_id: nup146
+    label: Nup146 with intact FG5-12 region
+    node_type: GENE_OR_PROTEIN
+  - node_id: docked_mto1
+    label: Mto1 docked at the cytoplasmic NPC face
+    node_type: STATE
+  - node_id: imtoc
+    label: interphase microtubule organizing center
+    node_type: STRUCTURE
+    grounding: GO:0031021
+    description: Nuclear-envelope-associated interphase MTOC; the graph concerns NPC
+      docking rather than every interphase site.
+  - node_id: nucleation
+    label: microtubule nucleation by interphase microtubule organizing center
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051415
+    description: Interphase microtubule nucleation from the NE-region organizing site
+      in the specified docking/nucleation assays.
+  edges:
+  - subject: mto1
+    predicate: supports
+    object: docked_mto1
+    description: The Mto1 N-terminal NES mimic supports NPC targeting; the short reporter
+      requires its dimerizing fusion context.
+    evidence:
+    - reference: DOI:10.7554/eLife.33465
+      notes: NES deletion disrupts localization and Crm1 association; GFP-Mto1[1-29]-GST
+        targets NPCs whereas the monomeric comparison does not.
+  - subject: crm1
+    predicate: supports
+    object: docked_mto1
+    description: Crm1 cargo-binding competence supports Mto1 reporter docking.
+    evidence:
+    - reference: DOI:10.7554/eLife.33465
+      notes: LMB displaces Mto1[9A1-NE]; the resistant crm1-C529A allele retains docking
+        under LMB.
+  - subject: ran_gtp
+    predicate: supports
+    object: docked_mto1
+    description: A RanGTP-dependent state supports reporter docking without demonstrating
+      a resident Ran subunit.
+    evidence:
+    - reference: DOI:10.7554/eLife.33465
+      notes: Dominant-negative Spi1[T23N], but not the tested active Spi1[Q68L], disrupts
+        targeting; Ran was not enriched in the comparative interactome.
+  - subject: nup146
+    predicate: supports
+    object: docked_mto1
+    description: Nup146 FG repeats 5-12 support Mto1 docking at NPCs.
+    evidence:
+    - reference: DOI:10.7554/eLife.33465
+      notes: Deleting the repeat segment abolishes 9A1-NE reporter docking while the
+        mutant nucleoporin remains at NPCs.
+  - subject: docked_mto1
+    predicate: positions
+    object: imtoc
+    description: NPC docking positions the NE-associated organizing site when nucleation-competent
+      machinery is present.
+    evidence:
+    - reference: DOI:10.7554/eLife.33465
+      notes: The model is supported by distinct docking and nucleation assays; an
+        inactive 9A1-NE punctum alone is not a complete functional iMTOC.
+  - subject: imtoc
+    predicate: supports
+    object: nucleation
+    description: The NE-associated site supports interphase microtubule initiation.
+    evidence:
+    - reference: DOI:10.7554/eLife.33465
+      notes: Nup146 FG5-12 deletion reduces steady-state NE-region nucleation with
+        Mto1[NE] and redirects full-length-Mto1 cold regrowth into the cytoplasm.
+- graph_id: ne_recovery
+  title: Alp7-Mto1 recruitment and Alp14-supported recovery
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  description: Full-length proteins in S. pombe recovering from MBC, not a purified
+    three-protein reaction or normal-state rate measurement. Residual stubs and SPB
+    regrowth remain possible. Recruitment is reciprocal; partial Nup45-GBP rescue
+    is not autonomous sufficiency, and Alp14 deletion does not abolish initial short
+    regrowth.
+  scope_notes: Full-length proteins in S. pombe recovering from MBC, not a purified
+    three-protein reaction or normal-state rate measurement. Residual stubs and SPB
+    regrowth remain possible. Recruitment is reciprocal; partial Nup45-GBP rescue
+    is not autonomous sufficiency, and Alp14 deletion does not abolish initial short
+    regrowth.
+  nodes:
+  - node_id: alp7
+    label: Alp7-like microtubule-associated protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: alp7
+  - node_id: mto1
+    label: Mto1-like microtubule nucleation adaptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: mto1
+  - node_id: xmap215
+    label: XMAP215
+    node_type: GENE_OR_PROTEIN
+    component_ref: xmap215
+    grounding: InterPro:IPR045110
+  - node_id: imtoc
+    label: interphase microtubule organizing center
+    node_type: STRUCTURE
+    grounding: GO:0031021
+    description: NE-associated interphase MTOC during recovery from MBC treatment,
+      not a normal-state universal composition.
+  - node_id: regrowth
+    label: Microtubule regrowth after MBC washout
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: elongation
+    label: Efficient elongation of recovering microtubules
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: alp7
+    predicate: promotes_recruitment_of
+    object: mto1
+    description: Alp7 supports enrichment of full-length Mto1 at non-SPB NE sites
+      after depolymerization.
+    evidence:
+    - reference: DOI:10.1093/jmcb/mjz038
+      notes: alp7 deletion strongly reduces NE Mto1 and shifts it toward cytoplasmic
+        structures; the remaining large NE focus overlaps the SPB marker.
+  - subject: mto1
+    predicate: promotes_recruitment_of
+    object: alp7
+    description: Mto1 supports Alp7 accumulation at the NE.
+    evidence:
+    - reference: DOI:10.1093/jmcb/mjz038
+      notes: mto1 deletion removes the NE localization of Alp7 in the examined treated
+        and untreated cells.
+  - subject: alp7
+    predicate: promotes_recruitment_of
+    object: xmap215
+    description: Alp7 recruits the demonstrated XMAP215-family member Alp14 to the
+      NE during recovery.
+    evidence:
+    - reference: DOI:10.1093/jmcb/mjz038
+      notes: Alp14 NE localization is lost in alp7-deleted cells, while Alp7 can remain
+        NE-associated without Alp14.
+  - subject: mto1
+    predicate: supports
+    object: imtoc
+    description: NE-localized Mto1 supports the recovering non-SPB organizing site.
+    evidence:
+    - reference: DOI:10.1093/jmcb/mjz038
+      notes: Deleting mto1 removes most NE regrowth; Nup45-GBP tethering of Mto1 in
+        alp7-deleted cells gives only partial rescue.
+  - subject: alp7
+    predicate: supports
+    object: imtoc
+    description: Alp7 supports NE-site recruitment and efficient recovery, not every
+      possible initial event.
+    evidence:
+    - reference: DOI:10.1093/jmcb/mjz038
+      notes: alp7 deletion reduces NE output and delays regrowth; residual events
+        remain.
+  - subject: imtoc
+    predicate: supports
+    object: regrowth
+    description: NE organizing sites support rapid recovery-associated microtubule
+      growth.
+    evidence:
+    - reference: DOI:10.1093/jmcb/mjz038
+      notes: Live imaging follows growth from NE Mto1/Alp7 foci after MBC washout;
+        not every event can be asserted to be de novo because stubs can remain.
+  - subject: xmap215
+    predicate: promotes
+    object: elongation
+    description: Alp14 supports efficient elongation of the recovering microtubules.
+    evidence:
+    - reference: DOI:10.1093/jmcb/mjz038
+      notes: alp14-deleted cells retain initial short NE microtubules with elongation
+        defects and delayed first-visible growth.
+- graph_id: site_regulation
+  title: Rsp1 regulates interphase nucleation-site distribution
+  graph_kind: REGULATION
+  scope_status: MECHANISTIC
+  description: Endogenous colocalization is partial and dynamic. Deletion, truncation
+    and overexpression are distinct perturbations; the graph does not turn the proposed
+    chaperone-driven disassembly mechanism into an established reaction. The cited
+    Mto1/2 activation experiment uses engineered bonsai puncta and is not a native
+    NE stoichiometry measurement.
+  scope_notes: Endogenous colocalization is partial and dynamic. Deletion, truncation
+    and overexpression are distinct perturbations; the graph does not turn the proposed
+    chaperone-driven disassembly mechanism into an established reaction. The cited
+    Mto1/2 activation experiment uses engineered bonsai puncta and is not a native
+    NE stoichiometry measurement.
+  nodes:
+  - node_id: rsp1
+    label: Rsp1-like DnaJ-related cochaperone
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsp1
+  - node_id: mto1
+    label: Mto1-like microtubule nucleation adaptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: mto1
+  - node_id: mto2
+    label: Mto2-like microtubule nucleation adaptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: mto2
+  - node_id: gamma_tuc
+    label: gamma-tubulin complex
+    node_type: GENE_OR_PROTEIN
+    component_ref: gamma_tuc
+    grounding: GO:0000930
+  - node_id: high_rsp1
+    label: Rsp1 overexpression
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: association
+    label: Mto1 association with gamma-tubulin machinery
+    node_type: STATE
+  - node_id: nucleation
+    label: microtubule nucleation by interphase microtubule organizing center
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051415
+    description: Interphase microtubule nucleation in the specified Mto1/2 activation
+      context; engineered bonsai puncta do not establish native site geometry.
+  edges:
+  - subject: rsp1
+    predicate: supports_lattice_localization_of
+    object: mto1
+    description: Endogenous Rsp1 supports distributing Mto1 to pre-existing microtubules.
+    evidence:
+    - reference: DOI:10.1091/mbc.E18-05-0279
+      notes: rsp1 deletion and the interaction-defective truncation reduce lattice
+        Mto1 and enrich Mto1 toward SPB/NE sites without eliminating all nucleation.
+  - subject: rsp1
+    predicate: supports_lattice_localization_of
+    object: mto2
+    description: Rsp1 supports the normal distribution of Mto2-containing particles.
+    evidence:
+    - reference: DOI:10.1091/mbc.E18-05-0279
+      notes: Mto2 particles become fewer and accumulate toward SPB/NE sites in rsp1-deleted
+        cells.
+  - subject: rsp1
+    predicate: supports_lattice_localization_of
+    object: gamma_tuc
+    description: Rsp1 supports the normal distribution of Alp4-reported nucleation
+      machinery.
+    evidence:
+    - reference: DOI:10.1091/mbc.E18-05-0279
+      notes: Alp4 particles redistribute in rsp1-deleted cells; the reporter does
+        not resolve every gamma-tubulin-complex subunit.
+  - subject: mto1
+    predicate: supports_lattice_localization_of
+    object: rsp1
+    description: Mto1 supports Rsp1 localization to microtubules, not its independent
+      SPB pool.
+    evidence:
+    - reference: DOI:10.1091/mbc.E18-05-0279
+      notes: mto1 deletion compromises lattice Rsp1 while SPB Rsp1 remains.
+  - subject: high_rsp1
+    predicate: reduces
+    object: association
+    description: Rsp1 overexpression reduces Mto1-Alp4 association in cell lysates.
+    evidence:
+    - reference: DOI:10.1091/mbc.E18-05-0279
+      notes: Reciprocal co-IP under overexpression shows less associated Alp4/Mto1;
+        this is not a purified dissociation-rate measurement.
+  - subject: mto1
+    predicate: supports
+    object: association
+    description: Intact Mto1 CM1 supports association with gamma-tubulin machinery.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2014.03.006
+      notes: The 9A1 mutation disrupts gamma-TuC association/nucleation in engineered
+        constructs while punctum formation and targeting are separately tested.
+  - subject: mto2
+    predicate: supports
+    object: association
+    description: Mto2 supports Mto1-gamma-TuC association in the tested engineered
+      context.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2014.03.006
+      notes: Mto1[bonsai] co-immunoprecipitation with gamma-TuC depends on Mto2.
+  - subject: association
+    predicate: supports
+    object: nucleation
+    description: Mto1/2-associated gamma-tubulin machinery supports microtubule initiation.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2014.03.006
+      notes: Nucleation from free Mto1[bonsai], Mto2, Alp4 and Alp6 puncta separates
+        activation from normal-site targeting; native site geometry remains unresolved.
+evidence:
+- reference: DOI:10.7554/eLife.33465
+  notes: PMID29809148; full main text read, with separate supplements/raw MS unread.
+    Nuclear-pore docking and site-specific nucleation experiments.
+- reference: DOI:10.1093/jmcb/mjz038
+  notes: PMID31087092; full main text and captions read, supplementary files unread.
+    Reciprocal recruitment and regrowth after MBC treatment.
+- reference: DOI:10.1091/mbc.E18-05-0279
+  notes: PMID30427751; full main text and captions read, supplementary files unread.
+    Rsp1-dependent distribution and dosage effects.
+- reference: DOI:10.1016/j.cub.2014.03.006
+  notes: PMID24704079; main Results/Discussion and brief Experimental Procedures read.
+    Detailed supplemental protocols unread. Engineered targeting/activation experiments.
+- reference: DOI:10.1126/sciadv.adq0670
+  notes: PMID39752482; full main text read; detailed supplementary purification protocols
+    unread. Later site-specific Rsp1-Ssa1/Klp2 evidence.
+- reference: DOI:10.1016/s1534-5807(04)00096-6
+  notes: PMID15068790; primary abstract read, full Results/Methods not accessible
+    through the attempted routes. Historical definition source; satellite/chaperone
+    redistribution is a proposed model.
+discussions:
+- discussion_id: identity_and_sites
+  prompt: Distinguish the organizing center from its arrays and site-specific mechanisms.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  rationale: GO retains a historical NE-oriented definition with bundle counts. Modern
+    S. pombe papers also call microtubule-associated sites iMTOCs. This record follows
+    that named non-SPB interphase organizing entity, not every interphase centrosome,
+    the whole output bundle, eMTOC or nuclear pore. No universal NPC/NE parthood or
+    count is asserted.
+  evidence:
+  - reference: GO:0031021
+    notes: Exact identity and definition.
+  - reference: DOI:10.1091/mbc.E18-05-0279
+    notes: Explicitly distinguishes SPB, NE and pre-existing-microtubule sites.
+  posed_by: codex
+  posed_date: '2026-10-06'
+  resolution_note: Preserve these distinctions in the curated record.
+  resolved_date: '2026-10-06'
+- discussion_id: native_assembly
+  prompt: Resolve native site architecture and assembly essentiality.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: Co-localization and engineered nucleation puncta do not establish invariant
+    stoichiometry or a universal gamma-tubulin-ring geometry. Core assembly essentialities
+    remain UNKNOWN rather than being inferred from cell viability or activity. Rsp1
+    is DISPENSABLE associated machinery because deletion retains newly formed non-SPB
+    microtubules and NE-associated organizing components, despite major defects.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2014.03.006
+    notes: Copy estimates and targeting separation concern engineered constructs.
+  - reference: DOI:10.1091/mbc.E18-05-0279
+    notes: Residual new non-SPB events and NE-associated components remain in rsp1
+      deletion.
+  posed_by: codex
+  posed_date: '2026-10-06'
+- discussion_id: grounding_scope
+  prompt: Find exact source-neutral families for the label-only classes.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#mto1
+  - components#mto2
+  - components#alp7
+  - components#rsp1
+  rationale: Mto1 and Alp7 matches are domains; Mto2's native InterPro endpoint returns
+    no content. Rsp1's broad family IPR051964 is not exactly the narrow Rsp1-like
+    class. XMAP215 family membership alone cannot establish residence of every member,
+    including Dis1.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O94488/
+    notes: Complete native match set inspected.
+  - reference: https://www.uniprot.org/uniprotkb/Q9USP7/entry
+    notes: Reviewed identity verified.
+  - reference: https://www.uniprot.org/uniprotkb/Q9URY2/entry
+    notes: Reviewed identity verified.
+  - reference: https://www.uniprot.org/uniprotkb/O13601/entry
+    notes: Reviewed identity verified.
+  posed_by: codex
+  posed_date: '2026-10-06'
+- discussion_id: docking_boundary
+  prompt: Keep site-specific docking factors separate from invariant core composition.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#ne_docking
+  rationale: Crm1 and Nup146 are demonstrated NE docking machinery, not evidence for
+    the same composition at all iMTOCs; they remain explicit graph context rather
+    than universal components. RanGTP is functionally required in the docking assay
+    but was not enriched with NE-targeted Mto1, so physical membership is unresolved.
+    Nup82/Nsp1 mass-spectrometry enrichment does not establish universal residence.
+    No direct purified interface, high-affinity NES constant or cargo-handover reaction
+    is asserted.
+  evidence:
+  - reference: DOI:10.7554/eLife.33465
+    notes: The Discussion explicitly distinguishes demonstrated docking dependencies
+      from high-affinity, handover and Ran-membership models.
+  posed_by: codex
+  posed_date: '2026-10-06'
+  resolution_note: Preserve these distinctions in the curated record.
+  resolved_date: '2026-10-06'
+- discussion_id: recovery_vs_steady_state
+  prompt: Do not convert recovery assays into normal-state rates or strict de novo
+    counts.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#ne_recovery
+  rationale: High-dose MBC can leave residual stubs; NE-only time-course selection
+    and drug-induced redistribution limit rate comparisons. Alp14 loss retains short
+    regrowth, and Alp7 loss shifts rather than universally abolishes output. Nup45-GBP
+    tethering is engineered and only partially restores numbers. An Alp7-Mto1-Alp14
+    assembly is a proposed working model, not a purified stoichiometric complex.
+  evidence:
+  - reference: DOI:10.1093/jmcb/mjz038
+    notes: Main Results, Discussion and Methods preserve these assay limits.
+  posed_by: codex
+  posed_date: '2026-10-06'
+  resolution_note: Preserve these distinctions in the curated record.
+  resolved_date: '2026-10-06'
+- discussion_id: alp7_construct_difference
+  prompt: Retain the difference between full-length and 9A1-NE Mto1 targeting.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#alp7
+  - causal_graphs#ne_docking
+  - causal_graphs#ne_recovery
+  rationale: Alp7 supports NE localization of full-length Mto1 during MBC recovery,
+    but is not required for localization of Mto1[9A1-NE] in the docking study. Different-region
+    binding is a proposed reconciliation, not an experimentally resolved combined
+    pathway.
+  evidence:
+  - reference: DOI:10.1093/jmcb/mjz038
+    notes: The Discussion explicitly compares the two constructs.
+  - reference: DOI:10.7554/eLife.33465
+    notes: Figure1 supplement3 tests Alp7 independence of the engineered reporter.
+  posed_by: codex
+  posed_date: '2026-10-06'
+  resolution_note: Preserve these distinctions in the curated record.
+  resolved_date: '2026-10-06'
+- discussion_id: rsp1_site_and_dose
+  prompt: Separate whole-cell Rsp1 loss from lattice-specific delivery and biochemical
+    models.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#rsp1
+  - causal_graphs#site_regulation
+  rationale: Rsp1 deletion redistributes Mto1 and leaves residual nucleation. Klp2
+    deletion instead removes much lattice Rsp1 while retaining SPB Rsp1 and does not
+    detectably change NE/cytoplasmic nucleation in the later study. Purified Klp2-Rsp1
+    transport and Rsp1-Ssa1 effects on Mto1-Mto2/gamma-TuSC association support site-specific
+    regulation, not invariant Klp2/Ssa1 membership. The 2018 turnover/affinity/size-control
+    alternatives are not all resolved by those later assays. Whole-cell concentrations
+    are not MTOC stoichiometry.
+  evidence:
+  - reference: DOI:10.1091/mbc.E18-05-0279
+    notes: Partial colocalization, deletion, truncation and dosage experiments.
+  - reference: DOI:10.1126/sciadv.adq0670
+    notes: Later transport and purified-complex evidence; detailed supplementary purification
+      protocols were not read.
+  posed_by: codex
+  posed_date: '2026-10-06'
+  resolution_note: Preserve these distinctions in the curated record.
+  resolved_date: '2026-10-06'
+- discussion_id: taxon_and_access
+  prompt: Extend taxonomic and native structural evidence without importing inaccessible
+    details.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - record
+  rationale: The direct mechanistic exemplar is S. pombe, not a fungal-wide presence
+    frequency. Reference-sequence taxa do not identify every experimental strain.
+    Detailed supplementary files and raw PRIDE datasets were not analyzed. The 2004
+    definition-linked source was read only as an abstract; it does not support uninspected
+    quantitative or direct-binding claims.
+  evidence:
+  - reference: DOI:10.7554/eLife.33465
+    notes: S. pombe experiments and primary source.
+  - reference: DOI:10.1016/s1534-5807(04)00096-6
+    notes: Accessible primary abstract only.
+  posed_by: codex
+  posed_date: '2026-10-06'
+images:
+- image_id: pmc_pmc6008054_fig6
+  file: pmc6008054_fig6.jpg
+  file_sha256: 198bb4cc3881692720e29c525187f21ada7a25145c0f29d3f6eb82ae15070e7f
+  source: PMC
+  source_accession: PMC6008054.1 fig6
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6008054/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC6008054.1/elife-33465-fig6.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Xun X Bao, Christos Spanos, Tomoko Kojidani, Eric M Lynch, Juri Rappsilber,
+    Yasushi Hiraoka, Tokuko Haraguchi, Kenneth E Sawin; Figure 6, DOI:10.7554/eLife.33465;
+    CC BY 4.0, via PubMed Central. Original image unchanged; caption paraphrased.
+  modality: FLUORESCENCE
+  caption: Nuclear-pore targeting and microtubule output in S. pombe. A diagrams the
+    Nup146 FG5-12 deletion; B compares NE localization of the non-nucleating Mto1[9A1-NE]-GFP
+    reporter. C shows anti-tubulin immunofluorescence during cold recovery with full-length
+    wild-type Mto1. D-E show steady-state nucleation imaging and counts with Mto1[NE]-GFP;
+    F compares crosslink-MS enrichment. Image bars are 5 micrometers. These distinct
+    engineered and wild-type contexts must not be combined into a native stoichiometry
+    or a resolved whole-iMTOC structure.
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.7554/eLife.33465
+  retrieved_on: '2026-10-06'
+  notes: Figure 6. from article version PMC6008054.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Visually inspected. The selected parent graphic excludes the separately nested
+    fig6s1 supplemental graphic; no image crop or alteration was made. B/F use 9A1-NE;
+    C uses full-length wild-type Mto1; D/E use Mto1[NE]. These are not interchangeable
+    assay conditions.
