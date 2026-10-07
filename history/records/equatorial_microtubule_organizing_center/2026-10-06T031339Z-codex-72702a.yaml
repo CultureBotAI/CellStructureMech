@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+  slug: equatorial_microtubule_organizing_center
+session:
+  id: 2026-10-06T031339Z-codex-72702a
+  timestamp: '2026-10-06T03:13:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  - evidence
+  summary: Separate Mto1 targeting mutant and truncation evidence
+  details: Pre-PR rereading of DOI:10.1016/j.cub.2010.10.006 showed that explicit equatorial
+    Alp4 localization readouts concern Mto1(1-1051)/(1-1065), not mto1-427. Corrected five
+    repeated notes to keep the constructs and readouts distinct. A guarded temporary safe_load
+    mutator asserted identifier, status, history and exact old notes, appended LLM-assisted
+    provenance, and wrote through write_validated_structure. Expanded shared serialization
+    aliases without changing other claims. Corrects the source-attribution detail in the creation
+    session 2026-10-06T031139Z-codex-a41835; that history record remains immutable. Initial
+    validation was intentionally stopped after three passing gates during embedding refresh;
+    all gates restart on the corrected content. No PR existed yet.

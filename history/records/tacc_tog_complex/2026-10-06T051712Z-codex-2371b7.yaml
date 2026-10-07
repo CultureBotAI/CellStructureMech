@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/tacc_tog_complex.yaml
+  slug: tacc_tog_complex
+session:
+  id: 2026-10-06T051712Z-codex-2371b7
+  timestamp: '2026-10-06T05:17:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2091
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Resolve native-assembly component anchors
+  details: Full QC found the bare components anchor invalid in native_assembly. The failing
+    run was interrupted after 560 passes and one anchor failure, not declared complete. A
+    full-SHA guarded safe_load mutator replaced that anchor with components#tacc and components#xmap215,
+    retained the association-graph anchor, appended an LLM-assisted event and used write_validated_structure.
+    It asserted identical semantic_text before and after; the refreshed embedding vectors
+    remain valid and will be checked/rebuilt without model re-encoding. Biological claims
+    and graph topology are unchanged. Focused regression, rerendering and all gates including
+    complete QC are pending. Keep issue open until merged publication verification.

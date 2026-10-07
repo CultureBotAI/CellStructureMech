@@ -4,14 +4,17 @@ from __future__ import annotations
 
 import copy
 import json
+import subprocess
 from pathlib import Path
 
 import pytest
 import yaml
 
 from cellstructuremech.validation.write_validated import validate_structure
+from scripts import run_qc
 from scripts.check_pathway_links import SNAPSHOT, check_links, check_source
 from scripts.corpus import REPO_ROOT, load_records
+from scripts.validate_id_label_correspondence import iter_yaml
 
 
 @pytest.fixture
@@ -22,6 +25,71 @@ def linked_record():
 
 def test_committed_links_match_the_snapshot():
     assert not check_links(load_records(), json.loads(SNAPSHOT.read_text()))
+
+
+def test_ontology_identity_scan_defers_pathway_links_to_the_pinned_checker(linked_record):
+    path, doc = linked_record
+    config = yaml.safe_load((REPO_ROOT / "conf/id_label_targets.yaml").read_text())
+    target = next(row for row in config["targets"] if row["name"] == "record_identity")
+    pairs = list(iter_yaml(path, target["pairs"], frozenset(target["exclude_keys"])))
+    assert any(curie == doc["identifier"] and label == doc["label"]
+               for _, curie, label, _, _ in pairs)
+    assert not any(".related_records[" in locator for locator, *_ in pairs)
+    assert not {"WikiPathways", "gomodel"}.intersection(config["ignored_prefixes"])
+
+    # Deferring this surface to its own validator must not waive its labels.
+    doc["related_records"][0]["label"] = "Incorrect pathway label"
+    assert check_links([(path, doc)], json.loads(SNAPSHOT.read_text()))
+
+
+@pytest.mark.parametrize("field,value", [
+    ("identifier", "misspelled:structure"),
+    ("label", "Incorrect structure label"),
+])
+def test_bad_root_identity_still_reaches_the_ontology_gate(linked_record, tmp_path, field, value):
+    _, doc = linked_record
+    doc[field] = value
+    path = tmp_path / "structure.yaml"
+    path.write_text(yaml.safe_dump(doc))
+    config = yaml.safe_load((REPO_ROOT / "conf/id_label_targets.yaml").read_text())
+    target = next(row for row in config["targets"] if row["name"] == "record_identity")
+    pairs = list(iter_yaml(path, target["pairs"], frozenset(target["exclude_keys"])))
+    assert ("structure.yaml.identifier", doc["identifier"], doc["label"], False, None) in pairs
+
+
+@pytest.mark.parametrize("target_name", ["record_identity", "grounded_nodes"])
+def test_pathway_routing_preserves_every_other_label_surface(linked_record, tmp_path, target_name):
+    _, doc = linked_record
+    # Exercise nested ontology pairs even when this particular curated record
+    # names its components without ontology groundings.
+    doc["components"].append({
+        "grounding": "GO:1234567", "label": "Incorrect complex label",
+        "protein_examples": [{"grounding": "GO:7654321", "label": "Incorrect protein function"}],
+    })
+    path = tmp_path / "structure.yaml"
+    path.write_text(yaml.safe_dump(doc))
+    config = yaml.safe_load((REPO_ROOT / "conf/id_label_targets.yaml").read_text())
+    target = next(row for row in config["targets"] if row["name"] == target_name)
+    excluded = frozenset(target["exclude_keys"])
+    previous = list(iter_yaml(path, target["pairs"], excluded - {"related_records"}))
+    actual = list(iter_yaml(path, target["pairs"], excluded))
+    expected = [row for row in previous if ".related_records[" not in row[0]]
+    assert actual == expected
+    if target_name == "grounded_nodes":
+        assert {"GO:1234567", "GO:7654321"} <= {row[1] for row in actual}
+
+
+def test_required_qc_runs_pathway_validator_and_stops_on_its_failure(monkeypatch):
+    calls = []
+
+    def run(command, **kwargs):
+        calls.append(command)
+        code = 17 if "scripts/check_pathway_links.py" in command else 0
+        return subprocess.CompletedProcess(command, code)
+
+    monkeypatch.setattr(run_qc.subprocess, "run", run)
+    assert run_qc.main() == 17
+    assert calls[-1][1:] == ["scripts/check_pathway_links.py"]
 
 
 @pytest.mark.parametrize("field,value", [

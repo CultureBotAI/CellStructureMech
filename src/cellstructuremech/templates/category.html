@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block title %}{{ category.name }} · CellStructureMech{% endblock %}
+{% block title %}{{ category.name | replace('_', ' ') | lower | capitalize }} · CellStructureMech{% endblock %}
 {% block content %}
-<h1>{{ category.name }}</h1>
+<h1>{{ category.name | replace('_', ' ') | lower | capitalize }}</h1>
 <p>{{ category.blurb }}</p>
 {% include "record_table.html" %}
 {% endblock %}

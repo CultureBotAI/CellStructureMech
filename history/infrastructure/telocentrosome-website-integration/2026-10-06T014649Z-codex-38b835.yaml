@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/render_pages.py
+  slug: telocentrosome-website-integration
+session:
+  id: 2026-10-06T014649Z-codex-38b835
+  timestamp: '2026-10-06T01:46:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2086
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2083
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - generated_site
+  - integration
+  summary: Regenerate telocentrosome site artifacts with the merged website renderer
+  details: 'Integrated main a66d407e26b707c92e78eccbf0c13d231b659ed5 from website PR #2084
+    into the telocentrosome feature branch. The merge conflicted in pages/browse.html and
+    pages/category/cytoskeleton.html; these outputs and the telocentrosome page were regenerated
+    using the unmodified upstream renderer and templates. Scientific YAML, existing append-only
+    history, upstream website code and reference snapshot are preserved. This addresses integration
+    issue #2086; it does not change the earlier biological review. Full QC and website regression
+    results are to be recorded in PR #2083 before merge.'

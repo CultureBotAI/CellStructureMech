@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/nucleolar_peripheral_inclusion_body.yaml
+  slug: nucleolar_peripheral_inclusion_body
+session:
+  id: 2026-10-05T114203Z-codex-3bb341
+  timestamp: '2026-10-05T11:42:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - components
+  - canonical_examples
+  - functions
+  - causal_graphs
+  - evidence
+  - discussions
+  - images
+  summary: Add GO-grounded nucleolar peripheral inclusion body
+  details: Created GO:0140602 from native QuickGO and inspected Gallardo 2020, Boronat 2023
+    and Hiraoka 2023 evidence. Preserved heat-versus-starvation scope, six bounded component
+    classes, six native UniProt reference examples, two six-edge-total intervention graphs
+    and one unmodified CC BY 4.0 mixed-species figure. Verified native InterPro and NCBI identities.
+    No broader prevalence, fixed stoichiometry, liquid-state inference or raw-data reanalysis.
+    LLM-assisted PROPOSED draft; full gates and post-PR adversarial self-review required before
+    protected merge.

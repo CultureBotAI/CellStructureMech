@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/tacc_tog_complex.yaml
+  slug: tacc_tog_complex
+session:
+  id: 2026-10-06T045811Z-codex-9f640a
+  timestamp: '2026-10-06T04:58:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identifier
+  - components
+  - functions
+  - causal_graphs
+  - images
+  - discussions
+  summary: Add evidence-backed TACC/TOG complex
+  details: Created GO:0070850 after ignored-inclusive deduplication of 904 records and native
+    OAK verification. Curated S. pombe Alp7/Alp14 from primary 2013/2014/2016/2018/2019 studies,
+    two protein classes with verified examples, four functions, eleven graph edges and eight
+    scoped discussions. Retained the 2016/2018 elongation discrepancy and bounded transport/interface
+    claims. Native InterPro supports XMAP215 family but only domain/coiled-coil matches for
+    Alp7, retained label-only. Imported visually inspected unchanged PMC4749977.1 Figure f7
+    under CC BY 4.0 with checksum and mixed-substrate caption. Guarded mutator and validated
+    writer succeeded; full gates and post-PR adversarial self-review remain pending. No prior
+    record/report changed; status stays PROPOSED.

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/proteasome_storage_granule.yaml
+  slug: proteasome_storage_granule
+session:
+  id: 2026-10-05T124458Z-codex-e1b1d2
+  timestamp: '2026-10-05T12:44:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - images
+  summary: Correct PSG figure author attribution before publication
+  details: Follow-up to 2026-10-05T124232Z-codex-5c8e33.yaml. Native PMC2396804.1 JATS author
+    metadata gives Benedicte Salin (accented in the source), not Berenice Salin. Corrected
+    only the image attribution with an old-value assertion, a new curation event and the guarded
+    writer. No biological or semantic-text claims changed. Full artifacts and QC are being
+    regenerated before publication.

@@ -78,7 +78,9 @@ const rows = [
 const map = {'record-filters':form,'record-query':query,'record-category':category,
   'record-kind':kind,'record-count':count,'record-empty':empty};
 const document = {getElementById:id=>map[id],querySelectorAll:()=>rows};
-vm.runInNewContext(fs.readFileSync(process.argv[1], 'utf8'), {document, setTimeout:fn=>fn()});
+const lifecycle = {};
+const window = {addEventListener:(name, fn)=>lifecycle[name]=fn};
+vm.runInNewContext(fs.readFileSync(process.argv[1], 'utf8'), {document, window, setTimeout:fn=>fn()});
 assert.equal(form.hidden,false); assert.match(count.textContent,/2 of 2/);
 query.value='BIOLOGY'; events.input(); assert.equal(rows[0].hidden,false); assert.equal(rows[1].hidden,true);
 
@@ -86,5 +88,9 @@ query.value='';category.value='OTHER';events.change();assert.equal(rows[0].hidde
 kind.value='CLASS';events.change();assert.equal(empty.hidden,false);assert.match(count.textContent,/0 of 2/);
 query.value='';category.value='';kind.value='';events.reset();assert.ok(rows.every(r=>!r.hidden));assert.equal(empty.hidden,true);
 query.value='no-result';events.input();assert.equal(empty.hidden,false);
+query.value='alternate';category.value='TEST';kind.value='CLASS';lifecycle.pageshow();
+assert.equal(rows[0].hidden,false);assert.equal(rows[1].hidden,true);assert.match(count.textContent,/1 of 2/);
+query.value='missing';lifecycle.pageshow();assert.equal(empty.hidden,false);
+assert.match(count.textContent,/0 of 2/);
 """
     subprocess.run([node, "-e", script, str(TEMPLATES / "record-browser.js")], check=True)

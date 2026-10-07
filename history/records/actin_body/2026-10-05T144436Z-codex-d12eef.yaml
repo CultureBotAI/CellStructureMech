@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/actin_body.yaml
+  slug: actin_body
+session:
+  id: 2026-10-05T144436Z-codex-d12eef
+  timestamp: '2026-10-05T14:44:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Correct actin-body glucose experiment figure references
+  details: After inspecting native PMC3063145 Figure 4, corrected two citations previously
+    pointing to Figure 5. The affected edge and discussion now point to the actual glucose-catabolism
+    perturbation and ATP assays. Guarded assertions and schema validation passed; prior repository
+    history retained unchanged.

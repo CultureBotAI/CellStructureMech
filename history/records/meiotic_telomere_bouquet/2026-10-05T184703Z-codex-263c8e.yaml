@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/meiotic_telomere_bouquet.yaml
+  slug: meiotic_telomere_bouquet
+session:
+  id: 2026-10-05T184703Z-codex-263c8e
+  timestamp: '2026-10-05T18:47:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - datasets
+  - images
+  - discussions
+  summary: Add evidence-backed meiotic telomere bouquet
+  details: Added a distinct chromosome-end assembly after ignored-inclusive deduplication
+    and native GO checks. Curated ten component classes with eleven native UniProt examples,
+    two canonical yeasts, two source-scoped causal graphs, a verified PRIDE dataset, and two
+    unmodified visually inspected CC BY 4.0 figures. Preserved Csm4 model disagreement, abstract-only
+    2006 bridge evidence, partial mitotic reconstitution limits, phosphorylation-negative
+    results, and exact image licence scope. Record remains PROPOSED. Full local gates and
+    adversarial PR review follow this immutable creation event; no PR number is guessed before
+    creation.

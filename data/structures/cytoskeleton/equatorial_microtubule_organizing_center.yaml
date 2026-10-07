@@ -1,0 +1,660 @@
+identifier: GO:0000923
+label: equatorial microtubule organizing center
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A microtubule organizing center formed by a band of gamma-tubulin that
+  is recruited to a circumferential band of F-actin at the midpoint of a cell and
+  which nucleates microtubules from the cell division site at the end of mitosis.
+definition_source: GO:0000923
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-06T03:09:14Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-06T03:11:17Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added six source-bounded component classes with verified protein examples,
+    three causal graphs, a checksum-verified CC BY 4.0 primary figure, and explicit
+    identity, access, essentiality and mechanism limits.
+  llm_assisted: true
+- timestamp: '2026-10-06T03:13:21Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_ATTRIBUTION
+  changes: Separated the reported Alp4 localization readouts for Mto1 truncations
+    from mto1-427 targeting/nucleation results; removed shared serialization aliases
+    without changing other claims.
+  llm_assisted: true
+- timestamp: '2026-10-06T03:16:15Z'
+  curator: codex
+  action: EXPOSED_RENDERED_EVIDENCE_LIMITS
+  changes: Exposed the existing three graph scope paragraphs and eight discussion
+    rationales through renderer-supported fields, without changing claims, citations,
+    graph edges or the shared template.
+  llm_assisted: true
+- timestamp: '2026-10-06T03:42:24Z'
+  curator: codex
+  action: BOUNDED_ASSEMBLY_ESSENTIALITY
+  changes: 'Addressed PR 2088 review issue 2089: set Rsp1 assembly essentiality to
+    UNKNOWN and distinguish loss-of-function persistence from assembly without the
+    protein; retained the supported turnover dependency.'
+  llm_assisted: true
+parent_structures:
+- GO:0005815
+part_of:
+- GO:0032153
+synonyms:
+- synonym_text: EMTOC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000923
+- synonym_text: equatorial microtubule organising centre
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000923
+components:
+- component_id: mto1
+  label: Mto1-like microtubule nucleation adaptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Equatorial adaptor supporting recruitment of the gamma-tubulin nucleation
+    machinery.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: O94488 has CM1 and Mto2-binding domain matches, not an exact integrated
+    whole-protein family. The mitochondrial MTO1 homonym O13670 is unrelated to this
+    nucleation adaptor.
+  gene_symbols:
+  - mto1
+  protein_examples:
+  - uniprot_id: UniProtKB:O94488
+    protein_label: Gamma tubulin complex adapter mto1
+    gene_symbol: mto1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; no assertion
+      that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2010.10.006
+      notes: Mto1 localizes to the equator; the mto1-427 targeting mutant loses equatorial
+        Mto1 and post-anaphase microtubules while retaining spindle-pole targeting.
+    - reference: https://www.uniprot.org/uniprotkb/O94488/entry
+      notes: Native accession, reviewed status, primary gene, protein label and source
+        taxon verified on 2026-10-06. Residence and function come from the cited experiments.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2010.10.006
+    notes: Mto1 localizes to the equator; the mto1-427 targeting mutant loses equatorial
+      Mto1 and post-anaphase microtubules while retaining spindle-pole targeting.
+- component_id: mto2
+  label: Mto2-like microtubule nucleation adaptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: DISPENSABLE
+  role: Resident Mto1 partner supporting efficient gamma-tubulin-complex recruitment
+    and sustained nucleation; residual equatorial activity can remain without it.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The complete native InterPro combined-match request for Q9USP7
+    returned HTTP 204. This bounded mapping result is not evidence that fungal homologs
+    do not exist.
+  gene_symbols:
+  - mto2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9USP7
+    protein_label: Gamma tubulin complex adapter mto2
+    gene_symbol: mto2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; no assertion
+      that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E04-11-1003
+      notes: Accessible primary Results and Figure 4 place endogenous Mto2 at the
+        equator with Mto1; deletion permits an early post-anaphase array that is not
+        maintained.
+    - reference: DOI:10.1242/jcs.038414
+      notes: Very limited equatorial nucleation and occasional faint Alp4 localization
+        remain in mto2-deleted cells. DISPENSABLE means initial assembly is possible,
+        not normal maintenance or activity.
+    - reference: https://www.uniprot.org/uniprotkb/Q9USP7/entry
+      notes: Native accession, reviewed status, primary gene, protein label and source
+        taxon verified on 2026-10-06. Residence and function come from the cited experiments.
+  evidence:
+  - reference: DOI:10.1091/mbc.E04-11-1003
+    notes: Accessible primary Results and Figure 4 place endogenous Mto2 at the equator
+      with Mto1; deletion permits an early post-anaphase array that is not maintained.
+  - reference: DOI:10.1242/jcs.038414
+    notes: Very limited equatorial nucleation and occasional faint Alp4 localization
+      remain in mto2-deleted cells. DISPENSABLE means initial assembly is possible,
+      not normal maintenance or activity.
+- component_id: gamma_tuc
+  label: gamma-tubulin complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Nucleating subcomplex recruited to equatorial sites; Alp4 is an experimentally
+    imaged subunit.
+  grounding: GO:0000930
+  grounding_notes: Generic gamma-tubulin complex is supported. A particular ring or
+    small-complex geometry, native equatorial copy number and exhaustive subunit localization
+    are not established by an Alp4 reporter.
+  gene_symbols:
+  - alp4
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9Y705
+    protein_label: Spindle pole body component alp4
+    gene_symbol: alp4
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Alp4 is one imaged subunit and reporter, not an accession for the entire
+      complex. Reference-sequence exemplar for species-level experiments; no assertion
+      that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2010.10.006
+      notes: Alp4 reports equatorial gamma-tubulin-complex recruitment. Equatorial
+        Alp4 is undetected after Myp2 deletion or truncation to Mto1(1-1051), while
+        Mto1(1-1065) supports equatorial Alp4 localization.
+    - reference: DOI:10.1242/jcs.038414
+      notes: Mto1 CM1 mutations separate gamma-tubulin-complex association from Mto1
+        localization; Mto2 loss can leave weak equatorial recruitment.
+    - reference: https://www.uniprot.org/uniprotkb/Q9Y705/entry
+      notes: Native accession, reviewed status, primary gene, protein label and source
+        taxon verified on 2026-10-06. Residence and function come from the cited experiments.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2010.10.006
+    notes: Alp4 reports equatorial gamma-tubulin-complex recruitment. Equatorial Alp4
+      is undetected after Myp2 deletion or truncation to Mto1(1-1051), while Mto1(1-1065)
+      supports equatorial Alp4 localization.
+  - reference: DOI:10.1242/jcs.038414
+    notes: Mto1 CM1 mutations separate gamma-tubulin-complex association from Mto1
+      localization; Mto2 loss can leave weak equatorial recruitment.
+  - reference: GO:0000930
+    notes: Native authority label and scope verified; the family or complex match
+      alone does not establish equatorial residence.
+- component_id: alp7
+  label: Alp7-like microtubule-associated protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Equatorial TACC-like component supporting Alp14 recruitment to microtubule
+    organizing centers.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Q9URY2 matches IPR024312 TACC, C-terminal, fungi, which is a domain
+    rather than an exact whole-protein family. Do not substitute that domain for this
+    component class.
+  gene_symbols:
+  - alp7
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9URY2
+    protein_label: Microtubule protein alp7
+    gene_symbol: alp7
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; no assertion
+      that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2018.04.008
+      notes: Figure 6D-E and Results localize Alp7 to eMTOCs and other MTOCs; Figure
+        6F-G tests Alp14 localization after alp7 deletion. Interphase bonsai nucleation
+        rates are not native equatorial rates.
+    - reference: DOI:10.1091/mbc.E05-08-0811
+      notes: Accessible abstract and Figure 5 caption support Mia1/Alp7 localization
+        and maintenance defects; initial equatorial markers remain in the mutant.
+        Full Methods were not accessible.
+    - reference: https://www.uniprot.org/uniprotkb/Q9URY2/entry
+      notes: Native accession, reviewed status, primary gene, protein label and source
+        taxon verified on 2026-10-06. Residence and function come from the cited experiments.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2018.04.008
+    notes: Figure 6D-E and Results localize Alp7 to eMTOCs and other MTOCs; Figure
+      6F-G tests Alp14 localization after alp7 deletion. Interphase bonsai nucleation
+      rates are not native equatorial rates.
+  - reference: DOI:10.1091/mbc.E05-08-0811
+    notes: Accessible abstract and Figure 5 caption support Mia1/Alp7 localization
+      and maintenance defects; initial equatorial markers remain in the mutant. Full
+      Methods were not accessible.
+- component_id: xmap215
+  label: XMAP215
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident microtubule polymerase-family component with a contribution to nucleation,
+    represented here by Alp14.
+  grounding: InterPro:IPR045110
+  grounding_notes: Exact integrated XMAP215 family includes Alp14 and other family
+    members. This is a family-level class with one evidence-backed example, not an
+    Alp14-specific equivalence or a claim that every XMAP215 protein resides at eMTOCs.
+  gene_symbols:
+  - alp14
+  protein_examples:
+  - uniprot_id: UniProtKB:O94534
+    protein_label: Spindle pole body component alp14
+    gene_symbol: alp14
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; no assertion
+      that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2018.04.008
+      notes: Figure 3A and Results explicitly place Alp14 at eMTOCs. Figure 3B co-immunoprecipitates
+        Mto1 and gamma-tubulin-complex proteins from yeast lysates; it does not establish
+        every direct contact or a native equatorial stoichiometry.
+    - reference: https://www.uniprot.org/uniprotkb/O94534/entry
+      notes: Native accession, reviewed status, primary gene, protein label and source
+        taxon verified on 2026-10-06. Residence and function come from the cited experiments.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2018.04.008
+    notes: Figure 3A and Results explicitly place Alp14 at eMTOCs. Figure 3B co-immunoprecipitates
+      Mto1 and gamma-tubulin-complex proteins from yeast lysates; it does not establish
+      every direct contact or a native equatorial stoichiometry.
+  - reference: InterPro:IPR045110
+    notes: Native authority label and scope verified; the family or complex match
+      alone does not establish equatorial residence.
+- component_id: rsp1
+  label: Rsp1-like DnaJ-related cochaperone
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: UNKNOWN
+  role: MTOC-associated turnover machinery supporting equatorial-center disassembly
+    after cytokinesis.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: O13601 matches DnaJ domain/site/superfamily entries and the broad
+    IPR051964 Multifunctional chaperone and stress response protein family. That family
+    is not an exact equivalent of this Rsp1-like class; its unchecked LLM-generated
+    description was not used as functional evidence.
+  gene_symbols:
+  - rsp1
+  protein_examples:
+  - uniprot_id: UniProtKB:O13601
+    protein_label: DnaJ-related protein rsp1
+    gene_symbol: rsp1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Reference-sequence exemplar for species-level experiments; no assertion
+      that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/s1534-5807(04)00096-6
+      notes: The primary abstract reports persistent equatorial asters in rsp1 loss-of-function
+        mutants and inhibited center formation after overexpression. Persistence in
+        these mutants does not establish assembly in the complete absence of Rsp1;
+        assembly essentiality remains unknown from the accessed evidence. The biochemical
+        disassembly mechanism remains a proposal.
+    - reference: https://www.uniprot.org/uniprotkb/O13601/entry
+      notes: Native accession, reviewed status, primary gene, protein label and source
+        taxon verified on 2026-10-06. Residence and function come from the cited experiments.
+  evidence:
+  - reference: DOI:10.1016/s1534-5807(04)00096-6
+    notes: The primary abstract reports persistent equatorial asters in rsp1 loss-of-function
+      mutants and inhibited center formation after overexpression. Persistence in
+      these mutants does not establish assembly in the complete absence of Rsp1; assembly
+      essentiality remains unknown from the accessed evidence. The biochemical disassembly
+      mechanism remains a proposal.
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1016/j.cub.2010.10.006
+  note: Equatorial assembly in late mitosis/cytokinesis, distinct from the spindle
+    pole body and interphase nucleation sites. No fungal-wide distribution is inferred.
+functions:
+- function_id: nucleation
+  label: microtubule nucleation by microtubule organizing center
+  grounding: GO:0051418
+  description: Nucleates microtubules of the post-anaphase array from the cell division
+    site.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2010.10.006
+    notes: Equator-selective Mto1 targeting defects eliminate post-anaphase microtubules
+      without eliminating spindle-pole nucleation.
+  - reference: DOI:10.3390/cells12060917
+    notes: Time-resolved imaging links equatorial Mto1 recruitment to post-anaphase
+      microtubule production.
+causal_graphs:
+- graph_id: equatorial_recruitment
+  title: Recruitment at the division site
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Perturbation-defined recruitment dependencies in S. pombe, not a purified
+    binding pathway. The F-actin/Myp2 ring context is external to the nucleation-center
+    core; Mto2 loss permits weak residual assembly.
+  nodes:
+  - node_id: f_actin
+    label: Contractile-ring F-actin
+    node_type: STRUCTURE
+  - node_id: myp2
+    label: Myp2 in the contractile ring
+    node_type: GENE_OR_PROTEIN
+  - node_id: mto1
+    label: Mto1-like microtubule nucleation adaptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: mto1
+  - node_id: mto2
+    label: Mto2-like microtubule nucleation adaptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: mto2
+  - node_id: gamma_tuc
+    label: gamma-tubulin complex
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0000930
+    component_ref: gamma_tuc
+  - node_id: emtoc
+    label: equatorial microtubule organizing center
+    node_type: STRUCTURE
+    grounding: GO:0000923
+  edges:
+  - subject: f_actin
+    predicate: supports
+    object: mto1
+    description: Intact F-actin supports equatorial Mto1 localization.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2010.10.006
+      notes: Latrunculin B treatment abolishes equatorial Mto1 localization; no direct
+        actin-Mto1 binding is inferred.
+  - subject: myp2
+    predicate: supports
+    object: mto1
+    description: Contractile-ring Myp2 supports Mto1 recruitment to the equator.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2010.10.006
+      notes: Myp2 deletion removes equatorial Mto1 and Alp4 while retaining spindle-pole
+        Mto1. Co-immunoprecipitation and two-hybrid association do not exclude intermediates.
+    - reference: DOI:10.3390/cells12060917
+      notes: Mto1 occupies an inner layer offset from Myp2; increased Myp2 does not
+        proportionally recruit Mto1. Simple direct coassembly is not established.
+  - subject: mto1
+    predicate: supports
+    object: gamma_tuc
+    description: Equatorial Mto1 targeting supports recruitment of the gamma-tubulin
+      complex.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2010.10.006
+      notes: The paper reports equatorial Alp4 with Mto1(1-1065), but not Mto1(1-1051).
+        Separately, full-length mto1-427 loses equatorial Mto1 and PAA nucleation
+        while retaining spindle-pole targeting; these are distinct readouts and constructs.
+  - subject: mto2
+    predicate: supports
+    object: gamma_tuc
+    description: Mto2 supports efficient equatorial gamma-tubulin-complex recruitment.
+    evidence:
+    - reference: DOI:10.1242/jcs.038414
+      notes: Occasional faint Alp4 and very limited nucleation persist after mto2
+        deletion; this is not an absolute-requirement edge.
+  - subject: gamma_tuc
+    predicate: supports
+    object: emtoc
+    description: Recruitment of nucleating machinery establishes an active equatorial
+      center.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2010.10.006
+      notes: Localization and nucleation assays support this assembly interpretation,
+        not sufficiency of isolated gamma-tubulin complex.
+  description: Perturbation-defined recruitment dependencies in S. pombe, not a purified
+    binding pathway. The F-actin/Myp2 ring context is external to the nucleation-center
+    core; Mto2 loss permits weak residual assembly.
+- graph_id: equatorial_nucleation
+  title: Production of the post-anaphase array
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Equatorial nucleation and its microtubule output, not a claim that
+    the output is the whole center or that it is universally required for cytokinesis.
+  nodes:
+  - node_id: emtoc
+    label: equatorial microtubule organizing center
+    node_type: STRUCTURE
+    grounding: GO:0000923
+  - node_id: nucleation
+    label: microtubule nucleation by microtubule organizing center
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051418
+  - node_id: paa
+    label: post-anaphase microtubule array
+    node_type: STRUCTURE
+    grounding: GO:1990295
+  edges:
+  - subject: emtoc
+    predicate: supports
+    object: nucleation
+    description: The equatorial center initiates post-anaphase microtubules.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2010.10.006
+      notes: Selective disruption of equatorial Mto1 targeting prevents PAA nucleation.
+  - subject: nucleation
+    predicate: generates
+    object: paa
+    description: Microtubule nucleation at the division site supplies the post-anaphase
+      array.
+    evidence:
+    - reference: DOI:10.3390/cells12060917
+      notes: Live-cell imaging follows Mto1 recruitment and subsequent microtubule
+        production and organization.
+    - reference: GO:1990295
+  description: Equatorial nucleation and its microtubule output, not a claim that
+    the output is the whole center or that it is universally required for cytokinesis.
+- graph_id: equatorial_turnover
+  title: Rsp1-dependent center turnover
+  graph_kind: DISASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Genetic dependence reported in the accessible primary abstract. Molecular
+    interfaces and a complete chaperone reaction at the equator remain unresolved;
+    no interphase lattice mechanism is transferred here.
+  nodes:
+  - node_id: rsp1
+    label: Rsp1-like DnaJ-related cochaperone
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsp1
+  - node_id: disassembly
+    label: equatorial microtubule organizing center disassembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031025
+  - node_id: emtoc
+    label: equatorial microtubule organizing center
+    node_type: STRUCTURE
+    grounding: GO:0000923
+  edges:
+  - subject: rsp1
+    predicate: supports
+    object: disassembly
+    description: Rsp1 supports normal equatorial-center disassembly after cytokinesis.
+    evidence:
+    - reference: DOI:10.1016/s1534-5807(04)00096-6
+      notes: Loss-of-function cells retain an equatorial aster.
+  - subject: disassembly
+    predicate: disassembles
+    object: emtoc
+    description: Turnover removes the equatorial nucleation center.
+    evidence:
+    - reference: DOI:10.1016/s1534-5807(04)00096-6
+    - reference: GO:0031025
+  description: Genetic dependence reported in the accessible primary abstract. Molecular
+    interfaces and a complete chaperone reaction at the equator remain unresolved;
+    no interphase lattice mechanism is transferred here.
+evidence:
+- reference: GO:0000923
+  notes: Native non-obsolete cellular-component identity, definition, synonyms, is-a
+    MTOC and part-of cell division site verified through OAK on 2026-10-06.
+- reference: DOI:10.1016/j.cub.2010.10.006
+  notes: PMID 20970338; native PMC2989437.1 Results and Discussion read. Selective
+    Mto1 targeting and Myp2/actin dependencies are the principal assembly evidence.
+- reference: DOI:10.1242/jcs.038414
+  notes: PMID 19001497; native PMC2743986.1 Results and relevant Methods read. Residual
+    equatorial activity limits all-or-none interpretations of Mto2 dependence.
+- reference: DOI:10.1091/mbc.E04-11-1003
+  notes: PMID 15659644, PMC1142446; accessible indexed primary Results and captions
+    read, not complete Methods or supplements.
+- reference: DOI:10.1091/mbc.E04-12-1043
+  notes: PMID 15800064, PMC1142447; accessible indexed primary Results read. Detection
+    and cytokinesis-delay contexts differ from later selective-targeting experiments.
+- reference: DOI:10.1016/j.cub.2018.04.008
+  notes: PMID 29779879; native PMC7263743.1 Results, Discussion, STAR Methods and
+    Figures 3/6 captions read. Direct equatorial localization is distinct from interphase
+    bonsai nucleation quantification.
+- reference: DOI:10.1016/s1534-5807(04)00096-6
+  notes: PMID 15068790; primary abstract accessible, full Results and Methods not
+    read. Used for the genetic turnover dependency, not a fully resolved biochemical
+    mechanism.
+- reference: DOI:10.3390/cells12060917
+  notes: PMID 36980258; native PMC10047812.1 Results, Discussion, Methods and Figure
+    1 caption read; original Figure 1 inspected after native checksum verification.
+discussions:
+- discussion_id: identity_and_mereology
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish the equatorial assembly from other MTOCs and its microtubule
+    output.
+  evidence:
+  - reference: GO:0000923
+  - reference: GO:1990295
+  - reference: DOI:10.1016/j.cub.2010.10.006
+  rationale: Parsed identifiers, labels and synonyms from all 903 pre-existing records
+    and hidden/ignored-inclusive name, accession and citation searches found no duplicate
+    identity. GO:0000923 exactly names this center. GO:0005815 is its parent and GO:0032153
+    its division-site whole. GO:1990295 has-part this center but names the larger
+    post-anaphase array; that class-level existential is not inverted into universal
+    eMTOC part-of PAA. MULTIPROTEIN_COMPLEX describes the resident nucleation assembly,
+    not a single purified stoichiometric complex.
+- discussion_id: external_boundaries
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep ring context, spindle-pole scaffolds and output microtubules separate
+    from the core.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2010.10.006
+  - reference: DOI:10.3390/cells12060917
+  rationale: F-actin and Myp2 supply upstream contractile-ring docking context. Their
+    recruitment dependencies do not make the entire contractile ring an eMTOC component.
+    Sid4/Cdc11 targeting evidence in the 2010 paper concerns spindle poles, not this
+    equatorial assembly. Alpha/beta tubulin and Ase1 occur in the nucleated array
+    rather than establishing core eMTOC membership. Mto1/Myp2 offset and dosage results
+    limit a simple direct-coassembly model without excluding indirect association.
+- discussion_id: family_grounding
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Find exact source-neutral whole-protein mappings for four label-only classes.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O94488/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q9USP7/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q9URY2/
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O13601/
+  - reference: InterPro:IPR045110
+  - reference: DOI:10.1038/ncomms8929
+  rationale: Complete InterPro matches were inspected for Mto1 O94488, Mto2 Q9USP7,
+    Alp7 Q9URY2 and Rsp1 O13601. Domains and superfamilies are not whole-protein family
+    equivalents. Rsp1 has a broad family annotation, but no exact mapping to the narrower
+    class is adopted. Mto2's empty API response is not absence of homologs; divergent
+    fungal homologs are discussed in the 2015 primary study. Alp14 uses the verified
+    XMAP215 family, not a TOG domain.
+- discussion_id: residual_assembly
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate assembly, recruitment, activity and maintenance phenotypes.
+  evidence:
+  - reference: DOI:10.1091/mbc.E04-11-1003
+  - reference: DOI:10.1091/mbc.E04-12-1043
+  - reference: DOI:10.1242/jcs.038414
+  - reference: DOI:10.1091/mbc.E05-08-0811
+  - reference: DOI:10.1016/s1534-5807(04)00096-6
+  rationale: Mto2 deletion can leave faint Alp4 recruitment, very limited nucleation
+    or an early array that fails to persist. A failure to detect equatorial gamma-tubulin
+    in another assay is not proof of zero molecules. Alp7/Mia1 mutants retain initial
+    equatorial markers despite maintenance defects. The accessible Rsp1 abstract reports
+    persistent asters in loss-of-function mutants, not demonstrated assembly in the
+    complete absence of Rsp1. Rsp1 assembly essentiality therefore remains UNKNOWN,
+    separately from its supported turnover role. Unknown assembly essentiality remains
+    UNKNOWN for the other classes; no cell-viability phenotype is substituted for
+    assembly necessity.
+- discussion_id: mechanistic_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Do not transfer interphase or engineered-system mechanisms to the equator.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2018.04.008
+  - reference: DOI:10.1126/sciadv.adq0670
+  - reference: DOI:10.1038/ncomms8929
+  - reference: DOI:10.1016/j.cub.2014.03.006
+  rationale: Alp7 and Alp14 equatorial localization is direct evidence, but bonsai
+    construct nucleation frequencies, interphase satellite dwell times and forced
+    GBP recruitment are not native eMTOC measurements. The 2025 Klp2/Rsp1/Ssa1 study
+    resolves a microtubule-lattice pathway; it does not directly establish the same
+    reaction at an equatorial center. Klp2 and Ssa1 are therefore not imported as
+    universal eMTOC members. Mto2 phosphorylation quantification in the 2015 paper
+    excluded eMTOC-bearing cells. No equator-specific phosphoregulation graph or native
+    copy number is inferred.
+- discussion_id: turnover_mechanism
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  prompt: Resolve the molecular disassembly reaction at equatorial centers.
+  evidence:
+  - reference: DOI:10.1016/s1534-5807(04)00096-6
+  - reference: DOI:10.1126/sciadv.adq0670
+  rationale: The rsp1 loss-of-function phenotype supports turnover dependence. Satellite
+    redistribution and chaperone-based breakup remain models in the accessible 2004
+    account; the 2025 lattice experiments do not by themselves close this site-specific
+    gap.
+- discussion_id: ring_mechanics
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep inferred ring mechanics distinct from universal cytokinesis requirements.
+  evidence:
+  - reference: DOI:10.3390/cells12060917
+  - reference: DOI:10.1091/mbc.E04-12-1043
+  rationale: The 2023 selective mto1-427 perturbation changes inferred contractile-ring
+    stiffness without a measurable cytokinesis or anchoring defect under its tested
+    conditions. Stiffness estimation assumes unchanged initial tension; mutant recoil
+    did not plateau, limiting fitted parameters. Earlier anchoring experiments used
+    cytokinesis delay or actin perturbation. Those contexts are retained rather than
+    declaring a universal requirement or an unexplained contradiction. Array counts
+    and offsets are not universal eMTOC dimensions.
+- discussion_id: taxon_and_access_limits
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Preserve organism, source-access and measurement limits.
+  evidence:
+  - reference: DOI:10.1016/s1534-5807(04)00096-6
+  - reference: DOI:10.1091/mbc.E05-08-0811
+  - reference: DOI:10.1091/mbc.E04-11-1003
+  - reference: DOI:10.1091/mbc.E04-12-1043
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+  rationale: Only S. pombe is a canonical example. Protein accessions identify the
+    reference strain, not every experimental stock. The 2004 Rsp1 paper and 2006 Mia1
+    paper were not read in full; two 2005 papers were accessible as indexed primary
+    Results, not complete Methods. No unverified trait, exact Complex Portal equivalent,
+    direct structural dataset, exhaustive composition or fixed copy number is supplied.
+    The native GO definition is an identity definition, not an independent new quantitative
+    experiment.
+images:
+- image_id: pmc_pmc10047812_cells_12_00917_f001
+  file: pmc10047812_cells_12_00917_f001.jpg
+  file_sha256: e2952aa3563036f2c194633375e5ae6a5c53924da7824537b75828ead16db16b
+  source: PMC
+  source_accession: PMC10047812.1 cells-12-00917-f001
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10047812/#cells-12-00917-f001
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC10047812.1/cells-12-00917-g001.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Kimberly Bellingham-Johnstun, Zoe L. Tyree, Jessica Martinez-Baird,
+    Annelise Thorn, Caroline Laplante; CC BY, via PubMed Central
+  modality: FLUORESCENCE
+  caption: Multipanel Figure 1 follows equatorial Mto1, contractile-ring Myp2 and
+    microtubules through cytokinesis. Fluorescence views and time series are accompanied
+    by timing, intensity and position plots, including wild-type and increased-Myp2
+    comparisons. Microscopy scale bars are 5 or 2 micrometers as marked; plots are
+    not micrographs or a purified-complex structure.
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.3390/cells12060917
+  retrieved_on: '2026-10-06'
+  notes: Figure 1 from article version PMC10047812.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Original multi-panel figure visually inspected unchanged; media MD5 843ebabfa8cd9bb05e6688680e718b14.

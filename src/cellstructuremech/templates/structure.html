@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ r.label }} · CellStructureMech{% endblock %}
-{% macro curie(c) %}{% set u = c | curie_url %}{% if u %}<a href="{{ u }}"><code>{{ c }}</code></a>{% else %}<code>{{ c }}</code>{% endif %}{% endmacro %}
+{% macro curie(c) %}{% set u = c | curie_url %}{% if u %}<a href="{{ u }}"><code>{{ c }}</code></a>{% else %}<code>{{ c }}</code>{% endif %}{% set label = (reference_labels | default({})).get(c) %}{% if label %} — {{ label }}{% endif %}{% endmacro %}
+{% macro related(c) %}{% set target = (local_records | default({})).get(c) %}{% if target %}<a href="{{ root }}{{ target.page }}">{{ target.label }}</a> ({{ curie(c) }}){% else %}{{ curie(c) }} <small>(no local record)</small>{% endif %}{% endmacro %}
 {% macro figure(im, label, cls) %}<figure class="{{ cls }}">
 {% if im.file %}<a href="{{ im.source_url }}"><img src="{{ img_base }}{{ im.file }}" alt="{{ im.caption or label }}"></a>
 {% else %}<p class="linked-image">Image (not hosted — {{ im.licence }}): <a href="{{ im.source_url }}">{{ im.source_accession }}</a></p>{% endif %}
@@ -9,23 +10,25 @@
 {% macro evid(items) %}{% if items %}<ul class="evidence">{% for e in items %}<li>{{ curie(e.reference) }}{% if e.snippet %} — <q>{{ e.snippet }}</q>{% endif %}{% if e.notes %} <small>{{ e.notes }}</small>{% endif %}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
 {% block content %}
 <h1>{{ r.label }}</h1>
-<p class="meta">{{ curie(r.identifier) }} · {{ r.structure_category }}{% if r.structure_kind %} · {{ r.structure_kind }}{% endif %} · <span class="status">{{ r.mapping_status }}</span></p>
+<p class="meta">{{ curie(r.identifier) }} · {{ r.structure_category | replace('_', ' ') | lower | capitalize }}{% if r.structure_kind %} · {{ r.structure_kind | replace('_', ' ') | lower | capitalize }}{% endif %} · <span class="status">{{ r.mapping_status | replace('_', ' ') | lower | capitalize }}</span></p>
 {% if r.definition %}<p class="definition">{{ r.definition }}{% if r.definition_source %} <small>[{{ curie(r.definition_source) }}]</small>{% endif %}</p>{% endif %}
 
 {% if r.images %}
 {{ figure(r.images[0], r.label, "hero") }}
 {% endif %}
 {% if r.synonyms %}<p><strong>Synonyms:</strong> {% for s in r.synonyms %}{{ s.synonym_text }}{% if not loop.last %}; {% endif %}{% endfor %}</p>{% endif %}
-{% if r.part_of %}<p><strong>Part of:</strong> {% for c in r.part_of %}{{ curie(c) }} {% endfor %}</p>{% endif %}
-{% if r.has_part %}<p><strong>Has part:</strong> {% for c in r.has_part %}{{ curie(c) }} {% endfor %}</p>{% endif %}
+{% if r.part_of %}<p><strong>Part of:</strong> {% for c in r.part_of %}{{ related(c) }}{% if not loop.last %}; {% endif %} {% endfor %}</p>{% endif %}
+{% if r.has_part %}<p><strong>Has part:</strong> {% for c in r.has_part %}{{ related(c) }}{% if not loop.last %}; {% endif %} {% endfor %}</p>{% endif %}
 {% if r.xrefs %}<p><strong>Xrefs:</strong> {% for c in r.xrefs %}{{ curie(c) }} {% endfor %}</p>{% endif %}
+
+<p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
 
 {% if r.components %}
 <h2>Components</h2>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 {% for c in r.components %}
-<tr id="components-{{ c.component_id }}"><td>{{ c.label }}</td><td>{{ c.component_type }}</td><td>{% if c.component_role == "ASSOCIATED_MACHINERY" %}<span class="machinery" title="Binds the assembled structure to position, partition or maintain it">acts on</span>{% else %}part of{% endif %}</td><td>{% if c.grounding %}{{ curie(c.grounding) }}{% elif c.grounding_status %}<em>{{ c.grounding_status }}</em>{% endif %}</td><td>{{ (c.gene_symbols or []) | join(", ") }}</td><td>{{ c.stoichiometry or "" }}</td><td>{{ c.essentiality or "" }}</td><td>{{ c.role or "" }}{{ evid(c.evidence) }}</td></tr>
+<tr id="components-{{ c.component_id }}"><td>{{ c.label }}</td><td>{{ c.component_type | replace('_', ' ') | lower | capitalize }}</td><td>{% if c.component_role == "ASSOCIATED_MACHINERY" %}<span class="machinery" title="Binds the assembled structure to position, partition or maintain it">acts on</span>{% else %}part of{% endif %}</td><td>{% if c.grounding %}{{ curie(c.grounding) }}{% elif c.grounding_status %}<em title="{% if c.grounding_status == 'REVIEWED_LABEL_ONLY' %}The component label was reviewed; no accession grounding is asserted.{% else %}{{ c.grounding_notes | default('') }}{% endif %}">{{ c.grounding_status | replace('_', ' ') | lower | capitalize }}</em>{% if c.grounding_status == 'REVIEWED_LABEL_ONLY' %}<small> (reviewed name; no accession asserted)</small>{% endif %}{% endif %}</td><td>{{ (c.gene_symbols or []) | join(", ") }}</td><td>{{ c.stoichiometry or "" }}</td><td>{{ c.essentiality or "" }}</td><td>{{ c.role or "" }}{{ evid(c.evidence) }}</td></tr>
 {% endfor %}
 </tbody></table>
 </div>

@@ -1652,6 +1652,37 @@
       ]
     },
     {
+      "identifier": "GO:0099079",
+      "label": "actin body",
+      "neighbors": [
+        {
+          "identifier": "GO:0030479",
+          "label": "actin cortical patch",
+          "cosine_similarity": 0.79720876
+        },
+        {
+          "identifier": "GO:1990819",
+          "label": "mating projection actin fusion focus",
+          "cosine_similarity": 0.75804179
+        },
+        {
+          "identifier": "GO:0000133",
+          "label": "polarisome",
+          "cosine_similarity": 0.75355237
+        },
+        {
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.74768552
+        },
+        {
+          "identifier": "GO:0035267",
+          "label": "NuA4 histone acetyltransferase complex",
+          "cosine_similarity": 0.74249938
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030479",
       "label": "actin cortical patch",
       "neighbors": [
@@ -1659,6 +1690,11 @@
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
           "cosine_similarity": 0.81972396
+        },
+        {
+          "identifier": "GO:0099079",
+          "label": "actin body",
+          "cosine_similarity": 0.79720876
         },
         {
           "identifier": "GO:0110085",
@@ -1674,11 +1710,6 @@
           "identifier": "GO:1990819",
           "label": "mating projection actin fusion focus",
           "cosine_similarity": 0.79074028
-        },
-        {
-          "identifier": "GO:0032157",
-          "label": "prospore contractile ring",
-          "cosine_similarity": 0.77772237
         }
       ]
     },
@@ -3543,6 +3574,37 @@
       ]
     },
     {
+      "identifier": "GO:0000923",
+      "label": "equatorial microtubule organizing center",
+      "neighbors": [
+        {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.92362405
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.8663443
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+          "label": "quiescent nuclear microtubule bundle",
+          "cosine_similarity": 0.82126253
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
+          "label": "basal body A-B inner junction",
+          "cosine_similarity": 0.78975023
+        },
+        {
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.78185016
+        }
+      ]
+    },
+    {
       "identifier": "GO:0120119",
       "label": "flagellum attachment zone",
       "neighbors": [
@@ -4101,6 +4163,37 @@
       ]
     },
     {
+      "identifier": "GO:0031021",
+      "label": "interphase microtubule organizing center",
+      "neighbors": [
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.92362405
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.85571694
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+          "label": "quiescent nuclear microtubule bundle",
+          "cosine_similarity": 0.82398854
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
+          "label": "basal body A-B inner junction",
+          "cosine_similarity": 0.7910359
+        },
+        {
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.78798931
+        }
+      ]
+    },
+    {
       "identifier": "GO:0160066",
       "label": "interphase SIN signaling complex",
       "neighbors": [
@@ -4213,14 +4306,14 @@
           "cosine_similarity": 0.76357958
         },
         {
+          "identifier": "GO:0099079",
+          "label": "actin body",
+          "cosine_similarity": 0.75804179
+        },
+        {
           "identifier": "GO:0110085",
           "label": "mitotic actomyosin contractile ring",
           "cosine_similarity": 0.75021331
-        },
-        {
-          "identifier": "GO:0043332",
-          "label": "mating projection tip",
-          "cosine_similarity": 0.73365781
         }
       ]
     },
@@ -5155,6 +5248,68 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+      "label": "quiescent cell microtubule bundle",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+          "label": "quiescent nuclear microtubule bundle",
+          "cosine_similarity": 0.93343159
+        },
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.8663443
+        },
+        {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.85571694
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
+          "label": "basal body A-B inner junction",
+          "cosine_similarity": 0.79615281
+        },
+        {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.77619723
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+      "label": "quiescent nuclear microtubule bundle",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.93343159
+        },
+        {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.82398854
+        },
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.82126253
+        },
+        {
+          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
+          "label": "basal body A-B inner junction",
+          "cosine_similarity": 0.81851054
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.78673303
+        }
+      ]
+    },
+    {
       "identifier": "GO:0001534",
       "label": "radial spoke",
       "neighbors": [
@@ -5794,14 +5949,14 @@
           "cosine_similarity": 0.77673779
         },
         {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.77377982
+        },
+        {
           "identifier": "GO:0005881",
           "label": "cytoplasmic microtubule",
           "cosine_similarity": 0.77327717
-        },
-        {
-          "identifier": "cellstructuremech:tubulin_spool",
-          "label": "tubulin spool",
-          "cosine_similarity": 0.76454614
         }
       ]
     },
@@ -5895,6 +6050,68 @@
           "identifier": "GO:0097649",
           "label": "A axonemal microtubule",
           "cosine_similarity": 0.85101028
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0070850",
+      "label": "TACC/TOG complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.76546862
+        },
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.74516137
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.74473231
+        },
+        {
+          "identifier": "GO:0044732",
+          "label": "mitotic spindle pole body",
+          "cosine_similarity": 0.72647581
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.72381343
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:telocentrosome",
+      "label": "telocentrosome",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+          "label": "meiotic telomere bouquet",
+          "cosine_similarity": 0.82795996
+        },
+        {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.78798931
+        },
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.78185016
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.76864645
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+          "label": "quiescent nuclear microtubule bundle",
+          "cosine_similarity": 0.76812849
         }
       ]
     },
@@ -7821,6 +8038,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:age_associated_protein_deposit",
+      "label": "age-associated protein deposit",
+      "neighbors": [
+        {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.80515672
+        },
+        {
+          "identifier": "cellstructuremech:mitostore",
+          "label": "MitoStore",
+          "cosine_similarity": 0.77961422
+        },
+        {
+          "identifier": "cellstructuremech:insoluble_protein_deposit",
+          "label": "insoluble protein deposit",
+          "cosine_similarity": 0.75904961
+        },
+        {
+          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+          "label": "intranuclear quality control compartment",
+          "cosine_similarity": 0.74806657
+        },
+        {
+          "identifier": "GO:0034515",
+          "label": "proteasome storage granule",
+          "cosine_similarity": 0.7278303
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:bacterial_aggresome",
       "label": "bacterial aggresome",
       "neighbors": [
@@ -7830,24 +8078,24 @@
           "cosine_similarity": 0.71220655
         },
         {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.70037146
+        },
+        {
           "identifier": "GO:0140365",
           "label": "RNP body",
           "cosine_similarity": 0.69266883
         },
         {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.69048602
+        },
+        {
           "identifier": "GO:0048500",
           "label": "signal recognition particle",
           "cosine_similarity": 0.68544014
-        },
-        {
-          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
-          "label": "intranuclear quality control compartment",
-          "cosine_similarity": 0.68139703
-        },
-        {
-          "identifier": "GO:0000932",
-          "label": "P-body",
-          "cosine_similarity": 0.67634006
         }
       ]
     },
@@ -7980,9 +8228,19 @@
       "label": "insoluble protein deposit",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.75904961
+        },
+        {
           "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
           "label": "juxtanuclear quality control compartment",
           "cosine_similarity": 0.69557577
+        },
+        {
+          "identifier": "GO:0034515",
+          "label": "proteasome storage granule",
+          "cosine_similarity": 0.68922002
         },
         {
           "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
@@ -7993,16 +8251,6 @@
           "identifier": "cellstructuremech:mitostore",
           "label": "MitoStore",
           "cosine_similarity": 0.67962873
-        },
-        {
-          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
-          "label": "intramitochondrial protein quality control compartment",
-          "cosine_similarity": 0.626074
-        },
-        {
-          "identifier": "GO:0140737",
-          "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.60860256
         }
       ]
     },
@@ -8016,24 +8264,24 @@
           "cosine_similarity": 0.83958213
         },
         {
+          "identifier": "GO:0140602",
+          "label": "nucleolar peripheral inclusion body",
+          "cosine_similarity": 0.78378774
+        },
+        {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.77309148
+        },
+        {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.74806657
+        },
+        {
           "identifier": "cellstructuremech:mitostore",
           "label": "MitoStore",
           "cosine_similarity": 0.72566948
-        },
-        {
-          "identifier": "cellstructuremech:intramitochondrial_protein_quality_control_compartment",
-          "label": "intramitochondrial protein quality control compartment",
-          "cosine_similarity": 0.70108568
-        },
-        {
-          "identifier": "cellstructuremech:insoluble_protein_deposit",
-          "label": "insoluble protein deposit",
-          "cosine_similarity": 0.68285978
-        },
-        {
-          "identifier": "cellstructuremech:bacterial_aggresome",
-          "label": "bacterial aggresome",
-          "cosine_similarity": 0.68139703
         }
       ]
     },
@@ -8052,19 +8300,19 @@
           "cosine_similarity": 0.72828714
         },
         {
-          "identifier": "cellstructuremech:mitostore",
-          "label": "MitoStore",
-          "cosine_similarity": 0.71473054
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.72794356
         },
         {
-          "identifier": "cellstructuremech:insoluble_protein_deposit",
-          "label": "insoluble protein deposit",
-          "cosine_similarity": 0.69557577
+          "identifier": "GO:0034515",
+          "label": "proteasome storage granule",
+          "cosine_similarity": 0.72587053
         },
         {
-          "identifier": "cellstructuremech:bacterial_aggresome",
-          "label": "bacterial aggresome",
-          "cosine_similarity": 0.67570053
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.72148682
         }
       ]
     },
@@ -8109,24 +8357,24 @@
           "cosine_similarity": 0.78592205
         },
         {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.77961422
+        },
+        {
           "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
           "label": "intranuclear quality control compartment",
           "cosine_similarity": 0.72566948
         },
         {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.71642801
+        },
+        {
           "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
           "label": "juxtanuclear quality control compartment",
           "cosine_similarity": 0.71473054
-        },
-        {
-          "identifier": "cellstructuremech:insoluble_protein_deposit",
-          "label": "insoluble protein deposit",
-          "cosine_similarity": 0.67962873
-        },
-        {
-          "identifier": "GO:0140595",
-          "label": "MIM complex",
-          "cosine_similarity": 0.67514053
         }
       ]
     },
@@ -8158,6 +8406,37 @@
           "identifier": "GO:0033118",
           "label": "esterosome membrane",
           "cosine_similarity": 0.78693782
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0140602",
+      "label": "nucleolar peripheral inclusion body",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+          "label": "intranuclear quality control compartment",
+          "cosine_similarity": 0.78378774
+        },
+        {
+          "identifier": "GO:0044614",
+          "label": "nuclear pore cytoplasmic filaments",
+          "cosine_similarity": 0.73065877
+        },
+        {
+          "identifier": "GO:0044615",
+          "label": "nuclear pore nuclear basket",
+          "cosine_similarity": 0.72558725
+        },
+        {
+          "identifier": "GO:0044611",
+          "label": "nuclear pore inner ring",
+          "cosine_similarity": 0.72265999
+        },
+        {
+          "identifier": "GO:0097165",
+          "label": "nuclear stress granule",
+          "cosine_similarity": 0.71903493
         }
       ]
     },
@@ -8251,6 +8530,68 @@
           "identifier": "GO:0033172",
           "label": "gas vesicle shell",
           "cosine_similarity": 0.6467729
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0034515",
+      "label": "proteasome storage granule",
+      "neighbors": [
+        {
+          "identifier": "GO:0005839",
+          "label": "proteasome core complex",
+          "cosine_similarity": 0.76811994
+        },
+        {
+          "identifier": "GO:0000502",
+          "label": "proteasome complex",
+          "cosine_similarity": 0.7532035
+        },
+        {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.7278303
+        },
+        {
+          "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
+          "label": "juxtanuclear quality control compartment",
+          "cosine_similarity": 0.72587053
+        },
+        {
+          "identifier": "GO:0140453",
+          "label": "protein aggregate center",
+          "cosine_similarity": 0.71168721
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0140453",
+      "label": "protein aggregate center",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:age_associated_protein_deposit",
+          "label": "age-associated protein deposit",
+          "cosine_similarity": 0.80515672
+        },
+        {
+          "identifier": "cellstructuremech:intranuclear_quality_control_compartment",
+          "label": "intranuclear quality control compartment",
+          "cosine_similarity": 0.77309148
+        },
+        {
+          "identifier": "cellstructuremech:juxtanuclear_quality_control_compartment",
+          "label": "juxtanuclear quality control compartment",
+          "cosine_similarity": 0.72794356
+        },
+        {
+          "identifier": "cellstructuremech:mitostore",
+          "label": "MitoStore",
+          "cosine_similarity": 0.71642801
+        },
+        {
+          "identifier": "GO:0034515",
+          "label": "proteasome storage granule",
+          "cosine_similarity": 0.71168721
         }
       ]
     },
@@ -19207,6 +19548,11 @@
           "cosine_similarity": 0.81877749
         },
         {
+          "identifier": "cellstructuremech:glycolytic_body",
+          "label": "glycolytic body",
+          "cosine_similarity": 0.69853726
+        },
+        {
           "identifier": "GO:1990065",
           "label": "Dxr protein complex",
           "cosine_similarity": 0.69416357
@@ -19220,11 +19566,6 @@
           "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
           "label": "formate dehydrogenase N complex",
           "cosine_similarity": 0.67107392
-        },
-        {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.66803464
         }
       ]
     },
@@ -20062,6 +20403,37 @@
           "identifier": "cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex",
           "label": "AcrAB-TolC multidrug efflux transport complex",
           "cosine_similarity": 0.73967434
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+      "label": "meiotic telomere bouquet",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+          "label": "quiescent telomere hypercluster",
+          "cosine_similarity": 0.86691408
+        },
+        {
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.82795996
+        },
+        {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.72408078
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.70498342
+        },
+        {
+          "identifier": "cellstructuremech:meiotic_outer_plaque",
+          "label": "meiotic outer plaque",
+          "cosine_similarity": 0.68472649
         }
       ]
     },
@@ -21129,6 +21501,11 @@
           "cosine_similarity": 0.81081038
         },
         {
+          "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+          "label": "quiescent telomere hypercluster",
+          "cosine_similarity": 0.79336625
+        },
+        {
           "identifier": "GO:0035101",
           "label": "FACT complex",
           "cosine_similarity": 0.76987047
@@ -21142,11 +21519,6 @@
           "identifier": "GO:0005634",
           "label": "nucleus",
           "cosine_similarity": 0.75336333
-        },
-        {
-          "identifier": "GO:1990251",
-          "label": "nuclear exosome focus",
-          "cosine_similarity": 0.74239603
         }
       ]
     },
@@ -21888,9 +22260,9 @@
           "cosine_similarity": 0.76808253
         },
         {
-          "identifier": "GO:0030479",
-          "label": "actin cortical patch",
-          "cosine_similarity": 0.73511698
+          "identifier": "GO:0099079",
+          "label": "actin body",
+          "cosine_similarity": 0.75355237
         }
       ]
     },
@@ -22069,14 +22441,14 @@
           "cosine_similarity": 0.7686922
         },
         {
+          "identifier": "GO:0034515",
+          "label": "proteasome storage granule",
+          "cosine_similarity": 0.76811994
+        },
+        {
           "identifier": "GO:0042720",
           "label": "mitochondrial inner membrane peptidase complex",
           "cosine_similarity": 0.74320367
-        },
-        {
-          "identifier": "GO:0031942",
-          "label": "i-AAA complex",
-          "cosine_similarity": 0.73332556
         }
       ]
     },
@@ -22170,6 +22542,37 @@
           "identifier": "GO:0009579",
           "label": "thylakoid",
           "cosine_similarity": 0.73383341
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+      "label": "quiescent telomere hypercluster",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+          "label": "meiotic telomere bouquet",
+          "cosine_similarity": 0.86691408
+        },
+        {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.79336625
+        },
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.77025985
+        },
+        {
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.75296717
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.72582476
         }
       ]
     },
@@ -24151,9 +24554,9 @@
           "cosine_similarity": 0.71220655
         },
         {
-          "identifier": "GO:0031533",
-          "label": "mRNA capping enzyme complex",
-          "cosine_similarity": 0.68902927
+          "identifier": "cellstructuremech:glycolytic_body",
+          "label": "glycolytic body",
+          "cosine_similarity": 0.70170191
         }
       ]
     },
@@ -24220,6 +24623,37 @@
       ]
     },
     {
+      "identifier": "cellstructuremech:glycolytic_body",
+      "label": "glycolytic body",
+      "neighbors": [
+        {
+          "identifier": "GO:0020015",
+          "label": "glycosome",
+          "cosine_similarity": 0.70537917
+        },
+        {
+          "identifier": "GO:0000932",
+          "label": "P-body",
+          "cosine_similarity": 0.70448087
+        },
+        {
+          "identifier": "cellstructuremech:h_body",
+          "label": "H-body",
+          "cosine_similarity": 0.70213702
+        },
+        {
+          "identifier": "GO:0010494",
+          "label": "cytoplasmic stress granule",
+          "cosine_similarity": 0.70170191
+        },
+        {
+          "identifier": "GO:0005960",
+          "label": "glycine cleavage complex",
+          "cosine_similarity": 0.69853726
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:h_body",
       "label": "H-body",
       "neighbors": [
@@ -24239,14 +24673,14 @@
           "cosine_similarity": 0.70778392
         },
         {
+          "identifier": "cellstructuremech:glycolytic_body",
+          "label": "glycolytic body",
+          "cosine_similarity": 0.70213702
+        },
+        {
           "identifier": "GO:0030680",
           "label": "dimeric ribonuclease P complex",
           "cosine_similarity": 0.67694471
-        },
-        {
-          "identifier": "GO:0048500",
-          "label": "signal recognition particle",
-          "cosine_similarity": 0.67323723
         }
       ]
     },
@@ -24518,14 +24952,14 @@
           "cosine_similarity": 0.72561953
         },
         {
+          "identifier": "GO:0140602",
+          "label": "nucleolar peripheral inclusion body",
+          "cosine_similarity": 0.71903493
+        },
+        {
           "identifier": "GO:0000228",
           "label": "nuclear chromosome",
           "cosine_similarity": 0.64535222
-        },
-        {
-          "identifier": "GO:0031981",
-          "label": "nuclear lumen",
-          "cosine_similarity": 0.64350626
         }
       ]
     },
