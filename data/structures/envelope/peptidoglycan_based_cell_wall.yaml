@@ -181,3 +181,26 @@ curation_history:
     nodes to Pfam and InterPro, inserted the MurJ flipping step, and added primary
     evidence for RodA and FtsW peptidoglycan polymerase activity.
   llm_assisted: true
+- timestamp: '2026-10-05T17:45:01Z'
+  curator: codex
+  action: ADD_PATHWAY_LINK
+  changes: Added an evidence-backed, organism-scoped PathwayMech link with a full
+    source commit and explicit relation limits.
+  llm_assisted: true
+related_records:
+- corpus: PathwayMech
+  identifier: WikiPathways:WP5060
+  relation: PRODUCED_BY
+  basis: WP5060 contains a Peptidoglycan Layer product; the structure record describes
+    the E. coli sacculus.
+  source_version: d8ec2b69f7a4c615aecddff80498fef1e1fab0ce
+  label: Peptidoglycan cytoplasmic synthesis and recycling pathways
+  target_taxon_id: NCBITaxon:562
+  scope_note: The E. coli peptidoglycan sacculus is related to the peptidoglycan material
+    produced in WP5060. This is a material-production relation, not equivalence to
+    the entire pathway or a claim about every bacterial wall.
+  evidence:
+  - reference: DOI:10.1111/j.1574-6976.2007.00094.x
+    notes: Vollmer et al. 2008 describe the peptidoglycan sacculus as cross-linked
+      glycan strands forming the bacterial cell-wall structure. Abstract read through
+      Europe PMC on 2026-10-05.

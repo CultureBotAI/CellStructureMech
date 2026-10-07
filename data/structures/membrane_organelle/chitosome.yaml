@@ -35,6 +35,12 @@ curation_history:
     paraphrase synonyms and narrowing the Saccharomyces canonical example to the Ziman
     et al. Chs3p transport claim.'
   llm_assisted: true
+- timestamp: '2026-10-05T17:45:01Z'
+  curator: codex
+  action: ADD_PATHWAY_LINK
+  changes: Added an evidence-backed, organism-scoped PathwayMech link with a full
+    source commit and explicit relation limits.
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 components:
@@ -268,3 +274,20 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-23'
   resolved_date: '2026-09-23'
+related_records:
+- corpus: PathwayMech
+  identifier: gomodel:YeastPathways_PWY3O-15
+  relation: SUPPORTS_ENZYME_DELIVERY
+  basis: The primary Chs3p trafficking experiment supplies the structure-pathway connection;
+    CHS3 is an explicit target-pathway participant.
+  source_version: d8ec2b69f7a4c615aecddff80498fef1e1fab0ce
+  label: chitin biosynthesis
+  target_taxon_id: NCBITaxon:559292
+  scope_note: The S. cerevisiae exemplar stores and delivers Chs3p to the plasma membrane,
+    where it contributes to chitin synthesis. The target is the narrower S288C model;
+    this does not assert that chitin synthesis occurs inside the chitosome.
+  evidence:
+  - reference: DOI:10.1091/mbc.9.6.1565
+    notes: Ziman et al. 1998 show Chs6p-dependent transport of Chs3p from the chitosome
+      to the plasma membrane in S. cerevisiae. Abstract read through Europe PMC on
+      2026-10-05.

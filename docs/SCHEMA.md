@@ -13,6 +13,7 @@
 | Exemplars | `CanonicalExample` | Reference organisms with citations |
 | Function | `StructureFunction` | GO BP / MF with required evidence |
 | Trait hand-off | `TraitLink` | TraitMech / METPO CURIE + relation (CONFERS, REQUIRED_FOR, DIAGNOSTIC_FOR, MODULATES, ASSOCIATED_WITH) + evidence for that relation |
+| Pathway hand-off | `StructurePathwayLink` | Shared `CrossCorpusLink` subtype with exact target id/label, full PathwayMech commit, target taxon, scope note and claim-level evidence |
 | Measurements | `PhysicalProperty` | Dimension / count / mass with UO unit and citation |
 | Mechanism | `CausalGraph` / `CausalNode` / `CausalEdge` | Same shape as TraitMech; `graph_kind`, `STRUCTURE` node type, `component_ref` |
 | Discourse | `Discussion`, `Dataset` | From the vendored `mech_shared` module |
@@ -29,3 +30,13 @@ against it by `just vendored-check` in the `vendored-sync` workflow. Do not
 edit them here — change them in claw and re-sync.
 
 Regenerate Pydantic classes with `just gen-schema` (output is git-ignored).
+
+`related_records` admits directed pathway relations: `PARTICIPATES_IN`,
+`PRODUCED_BY`, `SITE_OF`, and `SUPPORTS_ENZYME_DELIVERY`. The scope note identifies
+the relevant organism exemplar and pathway segment. A yeast S288C pathway is
+not evidence for an E. coli structure, and enzyme trafficking is not proof that
+synthesis occurs inside the trafficking vesicle. `conf/pathwaymech_targets.json`
+pins the checked target metadata and original record SHA-256 digests with source
+attribution. `just check-pathway-links` verifies the links offline; pass
+`--pathwaymech-root /path/to/PathwayMech` to also verify their committed source
+objects. Refresh this snapshot deliberately before using a different revision.

@@ -1,0 +1,37 @@
+{
+  "corpus": "PathwayMech",
+  "source_commit": "d8ec2b69f7a4c615aecddff80498fef1e1fab0ce",
+  "source_url": "https://github.com/CultureBotAI/PathwayMech/tree/d8ec2b69f7a4c615aecddff80498fef1e1fab0ce",
+  "retrieved_on": "2026-10-05",
+  "license": "CC-BY-4.0",
+  "attribution": "PathwayMech contributors; original pathway provenance retained in the linked source records.",
+  "records": [
+    {
+      "id": "WikiPathways:WP5060",
+      "label": "Peptidoglycan cytoplasmic synthesis and recycling pathways",
+      "taxa": [
+        "NCBITaxon:562"
+      ],
+      "path": "data/pathways/peptidoglycan-cytoplasmic-synthesis-and-recycling-pathways.yaml",
+      "sha256": "4c46c46b34a048f0aa91da98c1e1c27d0c223bdbf0fbef590dba1f0c8aaf94a4"
+    },
+    {
+      "id": "gomodel:YeastPathways_YEAST-FAO-PWY",
+      "label": "fatty acid oxidation pathway",
+      "taxa": [
+        "NCBITaxon:559292"
+      ],
+      "path": "data/pathways/fatty-acid-oxidation-pathway.yaml",
+      "sha256": "e905337a760258df02ec780d5997a8fcc703587e11fe2d35a02d4950e22ac3dc"
+    },
+    {
+      "id": "gomodel:YeastPathways_PWY3O-15",
+      "label": "chitin biosynthesis",
+      "taxa": [
+        "NCBITaxon:559292"
+      ],
+      "path": "data/pathways/chitin-biosynthesis.yaml",
+      "sha256": "d02205589a895098dc0a361cd0134f3075895103db2db82f21a1e36d56572a1a"
+    }
+  ]
+}

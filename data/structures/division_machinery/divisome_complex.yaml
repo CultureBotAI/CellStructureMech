@@ -143,6 +143,43 @@ components:
   - reference: DOI:10.1111/j.1749-6632.2012.06818.x
     notes: Egan & Vollmer 2012 review the septal synthases and the membrane anchoring
       of FtsZ.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABG4
+    protein_label: Probable peptidoglycan glycosyltransferase FtsW
+    gene_symbol: ftsW
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: E. coli K-12 subunit of the septal FtsW-FtsI synthase component; septal
+      membership is supported by localization experiments independently of PathwayMech
+      membership.
+    evidence:
+    - reference: PMID:9603865
+      notes: Wang et al. 1998 localized both FtsI and FtsW to the E. coli septum by
+        microscopy. Abstract read through Europe PMC; UniProt cites this primary experiment
+        for these entries.
+    - reference: PMID:11807049
+      notes: Mercer and Weiss 2002 show that septal FtsW is required to recruit FtsI
+        to the division site. Abstract read through Europe PMC.
+  - uniprot_id: UniProtKB:P0AD68
+    protein_label: Peptidoglycan D,D-transpeptidase FtsI
+    gene_symbol: ftsI
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: E. coli K-12 subunit of the septal FtsW-FtsI synthase component; septal
+      membership is supported by localization experiments independently of PathwayMech
+      membership.
+    evidence:
+    - reference: PMID:9603865
+      notes: Wang et al. 1998 localized both FtsI and FtsW to the E. coli septum by
+        microscopy. Abstract read through Europe PMC; UniProt cites this primary experiment
+        for these entries.
+    - reference: PMID:11807049
+      notes: Mercer and Weiss 2002 show that septal FtsW is required to recruit FtsI
+        to the division site. Abstract read through Europe PMC.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -354,6 +391,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-05T17:45:01Z'
+  curator: codex
+  action: ADD_PATHWAY_LINK
+  changes: Added an evidence-backed, organism-scoped PathwayMech link with a full
+    source commit and explicit relation limits. Added experimentally localized E.
+    coli K-12 FtsW and FtsI component examples verified in UniProtKB.
+  llm_assisted: true
 part_of:
 - GO:0032153
 discussions:
@@ -428,3 +472,20 @@ physical_properties:
     notes: Verbatim from PMC8610174. This is the filament-to-membrane spacing, not
       the radial thickness of the Z-ring, which the review reports as unchanged even
       under FtsZ overexpression.
+related_records:
+- corpus: PathwayMech
+  identifier: WikiPathways:WP5060
+  relation: PARTICIPATES_IN
+  basis: Curated septal-synthase function and verified E. coli protein membership;
+    WP5060 names FtsW and FtsI.
+  source_version: d8ec2b69f7a4c615aecddff80498fef1e1fab0ce
+  label: Peptidoglycan cytoplasmic synthesis and recycling pathways
+  target_taxon_id: NCBITaxon:562
+  scope_note: The E. coli exemplar uses FtsW-FtsI for septal peptidoglycan synthesis.
+    The link covers this segment of WP5060, not every cytoplasmic or recycling reaction
+    and not archaeal FtsZ division.
+  evidence:
+  - reference: PMID:11807049
+    notes: Mercer and Weiss 2002 show that E. coli FtsW recruits FtsI to division
+      sites and connects this complex to septal peptidoglycan synthesis. Abstract
+      read through Europe PMC on 2026-10-05.

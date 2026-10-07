@@ -28,6 +28,12 @@ curation_history:
     the peroxisomal matrix from components because it is a lumenal volume rather than
     a molecular constituent.'
   llm_assisted: true
+- timestamp: '2026-10-05T17:45:01Z'
+  curator: codex
+  action: ADD_PATHWAY_LINK
+  changes: Added an evidence-backed, organism-scoped PathwayMech link with a full
+    source commit and explicit relation limits.
+  llm_assisted: true
 has_part:
 - GO:0005778
 - GO:0005782
@@ -158,3 +164,20 @@ discussions:
   - reference: DOI:10.1016/j.bbamcr.2015.09.008
   posed_by: claude
   posed_date: '2026-09-10'
+related_records:
+- corpus: PathwayMech
+  identifier: gomodel:YeastPathways_YEAST-FAO-PWY
+  relation: SITE_OF
+  basis: Existing yeast peroxisomal beta-oxidation function reviewed against the organism-scoped
+    fatty-acid oxidation record.
+  source_version: d8ec2b69f7a4c615aecddff80498fef1e1fab0ce
+  label: fatty acid oxidation pathway
+  target_taxon_id: NCBITaxon:559292
+  scope_note: This applies to the beta-oxidation segment in the budding-yeast exemplar.
+    PathwayMech represents S. cerevisiae S288C, a narrower strain scope; the link
+    does not place all activation or auxiliary reactions in peroxisomes.
+  evidence:
+  - reference: DOI:10.1093/femsyr/fow038
+    notes: Sibirny 2016 reviews fatty-acid beta-oxidation as a metabolic function
+      of yeast peroxisomes. Abstract read through Europe PMC on 2026-10-05; localization
+      follows the existing curated function, not a new strain experiment.

@@ -87,6 +87,36 @@ imports:
 
 classes:
 
+  StructurePathwayLink:
+    is_a: CrossCorpusLink
+    description: >-
+      A claim about a structure's role in an organism-scoped PathwayMech
+      record. Scope and claim-level evidence remain explicit.
+    slot_usage:
+      corpus:
+        pattern: "^PathwayMech$"
+      relation:
+        range: StructurePathwayRelationEnum
+      source_version:
+        required: true
+        pattern: "^[0-9a-f]{40}$"
+    attributes:
+      label:
+        required: true
+        description: Exact target label in the pinned PathwayMech snapshot.
+      target_taxon_id:
+        required: true
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
+        description: The target pathway's taxon, not a claim of universal distribution.
+      scope_note:
+        required: true
+        description: The relevant structure exemplar and limits on taxon or pathway scope.
+      evidence:
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+
   CellStructureRecord:
     class_uri: cellstructuremech:CellStructureRecord
     tree_root: true
@@ -201,6 +231,14 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: StructuralComponent
+
+      related_records:
+        description: >-
+          Evidence-backed links to organism-scoped PathwayMech records. These
+          are directed biological relations, not structure equivalences.
+        range: StructurePathwayLink
+        multivalued: true
+        inlined_as_list: true
 
       complex_compositions:
         description: >-
@@ -882,6 +920,17 @@ classes:
 # ================================================================
 
 enums:
+
+  StructurePathwayRelationEnum:
+    permissible_values:
+      PARTICIPATES_IN:
+        description: The structure's machinery performs a specified part of the pathway.
+      PRODUCED_BY:
+        description: The structure's material is produced by the pathway.
+      SITE_OF:
+        description: The structure contains the specified pathway reactions.
+      SUPPORTS_ENZYME_DELIVERY:
+        description: The structure transports or stores enzymes used by the pathway.
 
   StructuralDatasetTypeEnum:
     description: >-

@@ -34,6 +34,9 @@ PROBES = {
     "taxonomic_distribution": lambda r: [t["taxon_label"] for t in r["taxonomic_distribution"]],
     "canonical_examples": lambda r: [t["taxon_label"] for t in r["canonical_examples"]],
     "associated_traits": lambda r: [t["trait_id"] for t in r["associated_traits"]],
+    "related_records": lambda r: [value for link in r["related_records"]
+                                  for value in (link["identifier"], link["scope_note"],
+                                                link["relation"], link["source_version"])],
     "physical_properties": lambda r: [p["value"] for p in r["physical_properties"]],
     # A quotation that never reaches the page is evidence no reader can weigh --
     # the same omission as #157, one level deeper, which the label probes miss

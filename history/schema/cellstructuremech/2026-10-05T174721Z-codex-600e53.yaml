@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: schema
+  path: src/cellstructuremech/schema/cellstructuremech.yaml
+  slug: cellstructuremech
+session:
+  id: 2026-10-05T174721Z-codex-600e53
+  timestamp: '2026-10-05T17:47:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - related_records
+  summary: Adopt shared CrossCorpusLink with evidence-bearing pathway semantics
+  details: Vendored the shared class from local canonical claw commit 34fa72446c7c8cbcdf0ac084d604d4c8ea0e2c5d
+    and defined a domain subtype that requires a full source version, target taxon, scope
+    note, and claim evidence. Added a pinned target checker, schema rejection tests, renderer
+    and page-coverage probes. Every governed artifact matches immutable local canonical bytes.
+    Public provenance validation remains pending approval and publication of the canonical
+    commit.

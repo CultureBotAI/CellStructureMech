@@ -18,6 +18,13 @@ traitmech:
   # Set local_path (or TRAITMECH_ROOT) to check against a checkout instead of
   # TraitMech's published trait index.
   role: associated_traits
+pathwaymech:
+  name: PathwayMech
+  homepage: https://github.com/CultureBotAI/PathwayMech
+  script: scripts/check_pathway_links.py
+  role: related_records
+  snapshot: conf/pathwaymech_targets.json
+  license: CC-BY-4.0
 wikimedia_commons:
   name: Wikimedia Commons
   homepage: https://commons.wikimedia.org/
