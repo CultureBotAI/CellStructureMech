@@ -8,6 +8,11 @@ UniProt attribution. It does not replace identifiers or associations in the
 structure records. Unknown relationship targets retain their external identifier
 and are explicitly marked as having no local record.
 
+A source entry's `retrieved` date overrides the snapshot-wide date for a scoped
+addition. Such additions preserve all older references and source metadata and
+retain the new source body and checksum; the declared GO list must also include
+the term so that the next full rebuild keeps it.
+
 To refresh, download each URL in `scripts/build_website_references.py`'s `SOURCES`
 mapping into a directory using the corresponding filename. Run
 `python scripts/build_website_references.py INPUT_DIRECTORY --retrieved YYYY-MM-DD`,

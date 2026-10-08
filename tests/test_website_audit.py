@@ -81,3 +81,5 @@ def test_every_relationship_has_a_source_grounded_label(records):
             assert identifier in local or references.get(identifier, {}).get("label"), identifier
     assert references["GO:0005737"]["label"] == "cytoplasm"
     assert references["GO:0005856"]["label"] == "cytoskeleton"
+    assert references["GO:0030981"]["label"] == "cortical microtubule cytoskeleton"
+    assert references["GO:0030981"]["source"] == "go-0030981.json"

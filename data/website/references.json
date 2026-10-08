@@ -165,6 +165,12 @@
       "file": "go-ontology.json",
       "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go",
       "sha256": "ecf0f1bc915733e8662a6dc7174a321d82cbc2de2257d98ff0b6d9c0278e4ae9"
+    },
+    {
+      "file": "go-0030981.json",
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0030981",
+      "sha256": "82236e102856b137d958e792db7dbc20ec108ee6e3813f95f86ec806b12a301b",
+      "retrieved": "2026-10-08"
     }
   ],
   "uniprot_release": "2026_03 of 02-Sep-2026",
@@ -257,6 +263,11 @@
       "label": "cortical cytoskeleton",
       "url": "http://purl.obolibrary.org/obo/GO_0030863",
       "source": "go-0030863.json"
+    },
+    "GO:0030981": {
+      "label": "cortical microtubule cytoskeleton",
+      "url": "http://purl.obolibrary.org/obo/GO_0030981",
+      "source": "go-0030981.json"
     },
     "GO:0031522": {
       "label": "cell envelope Sec protein transport complex",
