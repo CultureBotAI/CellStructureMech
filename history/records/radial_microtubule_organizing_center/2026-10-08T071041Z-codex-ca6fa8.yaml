@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  slug: radial_microtubule_organizing_center
+session:
+  id: 2026-10-08T071041Z-codex-ca6fa8
+  timestamp: '2026-10-08T07:10:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2102
+  urls:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2102#pullrequestreview-5452981956
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  - generated_artifacts
+  summary: Adversarial review of the submitted radial center record
+  details: Separate same-agent adversarial pass of submitted commit d0dd5ccdaccbacef5d093b1e1515f0e140fe62a9
+    in PR2102, not independent approval or human promotion. Verified all14 submitted blobs
+    against the validated local tree. Reread primary Results2.1-2.3 and Figure3 caption; reinspected
+    the committed unchanged CC BY3.0 image. Challenged center/SPB/HAA identity, Hrs1 assembly
+    dependence, gamma-tubulin localization versus dependency, direct binding and sufficiency,
+    experimental versus reference strains, sampling-time disagreement, microscopy modality,
+    image provenance and graph directions. No concrete introduced defect found and no defect
+    issue warranted. Exact Hrs1 family grounding and native architecture remain open scientific
+    gaps. All20 initial stages passed, including774 tests and3 skips,909 schema-valid records
+    and1623 valid history records. Prior records/reports/vectors/catalogue entries preserved.
+    Structural HTML checks are not browser layout QA; movies/raw data and most supplement
+    panels uninspected. Full QC and final-head required checks must pass before protected
+    queue admission. Domain YAML and prior append-only history unchanged by this review.

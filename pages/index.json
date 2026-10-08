@@ -1730,6 +1730,16 @@
   "synonyms": "Q-nMT bundle quiescent-cell nuclear microtubule bundle"
  },
  {
+  "identifier": "cellstructuremech:radial_microtubule_organizing_center",
+  "label": "radial microtubule organizing center",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/radial_microtubule_organizing_center.html",
+  "definition": "A transient, Hrs1/Mcp6-dependent, gamma-tubulin-enriched amorphous microtubule-organizing assembly at the cytoplasmic side of the spindle pole body during Schizosaccharomyces pombe meiotic prophase, distinct from the spindle pole body core, that organizes the radial microtubule array used in horsetail nuclear movement.",
+  "synonyms": "rMTOC rMT organizing center"
+ },
+ {
   "identifier": "GO:0001534",
   "label": "radial spoke",
   "category": "CYTOSKELETON",
