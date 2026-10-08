@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  slug: post_anaphase_microtubule_array
+session:
+  id: 2026-10-08T004915Z-codex-0a9796
+  timestamp: '2026-10-08T00:49:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - images
+  summary: Add source-bounded post-anaphase microtubule array
+  details: Added GO:1990295 as PROPOSED with four constituent classes, two reviewed reference-sequence
+    protein examples, S. pombe exemplar, two source-bounded functions and mechanistic graphs,
+    and checksum-verified CC BY 4.0 Figure 2 from DOI:10.3390/cells12060917. Nuclear positioning
+    uses published DOI:10.1091/mbc.E23-01-0034; equatorial recruitment uses DOI:10.1016/j.cub.2010.10.006.
+    Preserved whole-array/eMTOC distinction, residual assembly, taxon limits and conditional
+    mechanics. Hidden and ignored files were included in deduplication.

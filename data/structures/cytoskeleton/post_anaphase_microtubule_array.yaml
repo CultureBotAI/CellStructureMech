@@ -1,0 +1,496 @@
+identifier: GO:1990295
+label: post-anaphase microtubule array
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A cytoskeletal part that consists of an array of microtubules and associated
+  molecules that forms at the end of anaphase, and in which microtubules are nucleated
+  from an equatorial microtubule organizing center.
+definition_source: GO:1990295
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-08T00:45:29Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-08T00:48:28Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added four source-bounded component classes, two protein examples, two
+    functions, two mechanistic graphs and a checksum-verified CC BY 4.0 figure; preserved
+    identity, taxon and inference limits.
+  llm_assisted: true
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0015630
+has_part:
+- GO:0000923
+synonyms:
+- synonym_text: PAA
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990295
+- synonym_text: post-anaphase array
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990295
+components:
+- component_id: alpha_tubulin
+  label: Alpha tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002452
+  essentiality: UNKNOWN
+  gene_symbols:
+  - tub1
+  - atb2
+  - alp2
+  role: Alpha-tubulin class of the microtubule polymer forming the equatorial and
+    longitudinal array.
+  protein_examples:
+  - uniprot_id: UniProtKB:P04689
+    protein_label: Tubulin alpha-2 chain
+    gene_symbol: tub1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-08'
+    role: Reference-sequence exemplar for species-level experiments; no assertion
+      that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.3390/cells12060917
+      notes: GFP-Atb2 labels PAA microtubules in the Figure 2 localization and dynamics
+        experiments. atb2 is a native alias of tub1; this is not a census of all alpha-tubulin
+        isoforms.
+    - reference: https://www.uniprot.org/uniprotkb/P04689/entry
+      notes: Native accession, reviewed status, protein label, primary gene and source
+        taxon verified on 2026-10-08. Localization comes from the primary experiments,
+        not the sequence lookup.
+  evidence:
+  - reference: DOI:10.3390/cells12060917
+    notes: Figure 2 directly follows GFP-Atb2 in the equatorial polygon and longitudinal
+      extensions.
+  - reference: GO:0005874
+    notes: The microtubule definition supplies alpha/beta polymer composition, not
+      a PAA-specific dimension or deletion phenotype.
+- component_id: beta_tubulin
+  label: Beta tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002453
+  essentiality: UNKNOWN
+  role: Beta-tubulin class paired with alpha tubulin in the array microtubule polymer.
+  evidence:
+  - reference: GO:1990295
+    notes: The whole-array identity explicitly consists of microtubules and associated
+      molecules.
+  - reference: GO:0005874
+    notes: Alpha/beta tubulin composition is inherited from the microtubule definition.
+      No beta-tubulin isoform-specific localization experiment is inferred.
+  - reference: DOI:10.3390/cells12060917
+    notes: Figure 2 establishes the microtubule array to which the generic polymer
+      composition applies.
+- component_id: ase1
+  label: Microtubule-associated protein, MAP65/Ase1/PRC1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR007145
+  essentiality: DISPENSABLE
+  gene_symbols:
+  - ase1
+  role: Resident crosslinker supporting normal equatorial microtubule organization
+    in the S. pombe array; deletion leaves an altered array.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9HDY1
+    protein_label: Anaphase spindle elongation protein 1
+    gene_symbol: ase1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-08'
+    role: Reference-sequence exemplar for species-level experiments; no assertion
+      that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.3390/cells12060917
+      notes: Figure 2F-G follows Ase1 localization at the equatorial array; deletion
+        comparisons in H-I retain PAA microtubules with altered organization.
+    - reference: https://www.uniprot.org/uniprotkb/Q9HDY1/entry
+      notes: Native accession, reviewed status, protein label, primary gene and source
+        taxon verified on 2026-10-08. Localization comes from the primary experiments,
+        not the sequence lookup.
+  evidence:
+  - reference: DOI:10.3390/cells12060917
+    notes: Ase1 appears after equatorial microtubules and before longitudinal extensions.
+      Deletion leaves a dimmer equatorial array and more longitudinal extensions,
+      supporting organization rather than absolute assembly necessity.
+- component_id: emtoc
+  label: equatorial microtubule organizing center
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0000923
+  essentiality: UNKNOWN
+  role: Equatorial nucleating subassembly included within the whole-array boundary;
+    its finer composition is curated in the separate center record.
+  evidence:
+  - reference: GO:1990295
+    notes: The native GO class has-part GO:0000923; the relation is not inverted into
+      universal eMTOC part-of PAA.
+  - reference: DOI:10.1016/j.cub.2010.10.006
+    notes: Equator-selective Mto1 targeting defects prevent PAA nucleation while preserving
+      spindle-pole targeting.
+  - reference: DOI:10.3390/cells12060917
+    notes: Equatorial Mto1 recruitment precedes PAA formation in live-cell time series.
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.3390/cells12060917
+  note: Late-mitotic/cytokinetic arrays studied by live-cell microscopy and genetic
+    perturbations. No fungal-wide prevalence or exact reference-strain identity of
+    all experimental stocks is asserted.
+functions:
+- function_id: nuclear_position
+  label: nucleus localization
+  grounding: GO:0051647
+  description: Limits nuclear migration toward the division plane after anaphase,
+    opposing the displacement produced by mitotic spindle-pole microtubules before
+    septation in S. pombe.
+  evidence:
+  - reference: DOI:10.1091/mbc.E23-01-0034
+    notes: PAA-deficient cells position nuclei closer to the division plane; longitudinal
+      PAA microtubules dynamically contact and deform the nuclear envelope. Later
+      newborn-cell centering is a distinct interphase-network mechanism.
+- function_id: ring_mechanics
+  label: Contribution to effective contractile-ring stiffness
+  description: The PAA is implicated in the effective stiffness inferred from ring-ablation
+    recoil in S. pombe, conditional on unchanged initial ring tension.
+  evidence:
+  - reference: DOI:10.3390/cells12060917
+    notes: Selective mto1-427 PAA impairment increases fitted recoil amplitude. Stiffness
+      interpretation assumes unchanged initial tension; incomplete mutant plateaus
+      and single-plane imaging limit the fitted parameters. This is not a direct stiffness
+      measurement or a universal anchoring requirement.
+causal_graphs:
+- graph_id: array_assembly
+  title: Equatorial nucleation and array organization
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: S. pombe recruitment, nucleation and array organization, bounded by
+    live imaging and genetic perturbations. Contractile-ring Myp2/F-actin is external
+    docking context, not whole-ring membership. Temporal order and recruitment dependencies
+    do not establish a purified binding pathway; Ase1 is not essential for array formation.
+  description: S. pombe recruitment, nucleation and array organization, bounded by
+    live imaging and genetic perturbations. Contractile-ring Myp2/F-actin is external
+    docking context, not whole-ring membership. Temporal order and recruitment dependencies
+    do not establish a purified binding pathway; Ase1 is not essential for array formation.
+  nodes:
+  - node_id: ring_context
+    label: Contractile-ring Myp2 and F-actin context
+    node_type: STRUCTURE
+  - node_id: emtoc
+    label: equatorial microtubule organizing center
+    node_type: STRUCTURE
+    grounding: GO:0000923
+    component_ref: emtoc
+  - node_id: nucleation
+    label: microtubule nucleation by microtubule organizing center
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051418
+  - node_id: alpha
+    label: Alpha tubulin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002452
+    component_ref: alpha_tubulin
+  - node_id: beta
+    label: Beta tubulin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002453
+    component_ref: beta_tubulin
+  - node_id: ase1
+    label: Microtubule-associated protein, MAP65/Ase1/PRC1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR007145
+    component_ref: ase1
+  - node_id: organization
+    label: Equatorial microtubule organization
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: paa
+    label: post-anaphase microtubule array
+    node_type: STRUCTURE
+    grounding: GO:1990295
+  edges:
+  - subject: ring_context
+    predicate: supports
+    object: emtoc
+    description: The ring context supports equatorial recruitment of nucleating machinery.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2010.10.006
+      notes: Myp2 loss and actin disruption impair equatorial Mto1 recruitment. Association
+        assays do not exclude intermediate proteins.
+  - subject: emtoc
+    predicate: supports
+    object: nucleation
+    description: Equatorial centers nucleate array microtubules.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2010.10.006
+      notes: The selective mto1-427 targeting defect prevents PAA nucleation while
+        retaining spindle-pole targeting. Separate Alp4 readouts from Mto1 truncations
+        are not attributed to this allele.
+  - subject: nucleation
+    predicate: generates
+    object: paa
+    description: Equatorial nucleation supplies post-anaphase array microtubules.
+    evidence:
+    - reference: DOI:10.3390/cells12060917
+      notes: Live-cell time series follow equatorial Mto1 recruitment and subsequent
+        microtubule production.
+  - subject: alpha
+    predicate: contributes_to
+    object: paa
+    description: Alpha tubulin supplies the array microtubule polymer.
+    evidence:
+    - reference: DOI:10.3390/cells12060917
+      notes: Figure 2 follows GFP-Atb2 in equatorial and longitudinal PAA microtubules.
+  - subject: beta
+    predicate: contributes_to
+    object: paa
+    description: Beta tubulin supplies the array microtubule polymer.
+    evidence:
+    - reference: GO:0005874
+      notes: Composition of the microtubule class applies to the microtubules in GO:1990295;
+        this is not a beta-isoform-specific experimental result.
+  - subject: ase1
+    predicate: supports
+    object: organization
+    description: Resident Ase1 supports normal array bundling and organization.
+    evidence:
+    - reference: DOI:10.3390/cells12060917
+      notes: Equatorial Ase1 localization and altered arrays after ase1 deletion support
+        this organizational role.
+  - subject: organization
+    predicate: organizes
+    object: paa
+    description: Equatorial organization shapes the polygon and longitudinal extensions.
+    evidence:
+    - reference: DOI:10.3390/cells12060917
+      notes: Ase1-deleted cells retain a dimmer equatorial array and more longitudinal
+        extensions; no all-or-none assembly requirement is asserted.
+- graph_id: nuclear_position
+  title: Opposing microtubule networks position the nucleus
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Post-anaphase/telophase nuclear positioning before septation in S.
+    pombe. The basket/contact mechanism is inferred from localization, envelope deformation
+    and network-selective perturbations, not a resolved attachment interface or calibrated
+    force measurement. Later newborn-cell interphase simulations are not a model of
+    this PAA network.
+  description: Post-anaphase/telophase nuclear positioning before septation in S.
+    pombe. The basket/contact mechanism is inferred from localization, envelope deformation
+    and network-selective perturbations, not a resolved attachment interface or calibrated
+    force measurement. Later newborn-cell interphase simulations are not a model of
+    this PAA network.
+  nodes:
+  - node_id: paa
+    label: post-anaphase microtubule array
+    node_type: STRUCTURE
+    grounding: GO:1990295
+  - node_id: contact
+    label: Longitudinal-array contact with the nuclear envelope
+    node_type: STATE
+  - node_id: restraint
+    label: Limited nuclear migration toward the division plane
+    node_type: STATE
+  - node_id: mspb
+    label: Mitotic spindle-pole microtubule network
+    node_type: STRUCTURE
+  - node_id: toward_plane
+    label: Nuclear displacement away from the cell end
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: position
+    label: nucleus localization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051647
+  edges:
+  - subject: paa
+    predicate: supports
+    object: contact
+    description: Longitudinal PAA microtubules extend around the nucleus.
+    evidence:
+    - reference: DOI:10.1091/mbc.E23-01-0034
+      notes: Live-cell colocalization and nuclear-envelope deformations support a
+        dynamic basket/contact interpretation.
+  - subject: contact
+    predicate: supports
+    object: restraint
+    description: Array contact is interpreted to oppose movement toward the contractile
+      ring.
+    evidence:
+    - reference: DOI:10.1091/mbc.E23-01-0034
+      notes: PAA-selective perturbations permit nuclei nearer the division plane;
+        the precise attachment molecules and force magnitudes are not established.
+  - subject: restraint
+    predicate: contributes_to
+    object: position
+    description: PAA-dependent restraint contributes to nuclear position before septation.
+    evidence:
+    - reference: DOI:10.1091/mbc.E23-01-0034
+      notes: The PAA-dependent direction opposes the mitotic spindle-pole network
+        rather than completing newborn-cell centering.
+  - subject: mspb
+    predicate: supports
+    object: toward_plane
+    description: Mitotic spindle-pole microtubules push the nucleus away from the
+      cell end.
+    evidence:
+    - reference: DOI:10.1091/mbc.E23-01-0034
+      notes: Contact imaging and mSPB-selective mto1(1-1085) perturbation support
+        this opposing network contribution.
+  - subject: toward_plane
+    predicate: contributes_to
+    object: position
+    description: Cell-end-directed microtubule growth contributes an opposing nuclear
+      displacement.
+    evidence:
+    - reference: DOI:10.1091/mbc.E23-01-0034
+      notes: The two networks jointly constrain the post-anaphase position; full mto1
+        deletion and MBC treatment are not PAA-selective tests.
+evidence:
+- reference: GO:1990295
+  notes: Native non-obsolete identity, definition, exact aliases and outgoing mereology
+    verified through OAK on 2026-10-08.
+- reference: DOI:10.3390/cells12060917
+  notes: PMID 36980258; native PMC10047812.1 Results, Discussion, main Methods and
+    figure captions read. Figure 2 inspected unchanged and verified against native
+    media checksums.
+- reference: DOI:10.1091/mbc.E23-01-0034
+  notes: PMID 37099380; published PMC10398876.1 Results, Discussion, main Methods
+    and embedded captions read. Separate movies, strain supplements, raw data and
+    inline equation graphics were not inspected.
+- reference: DOI:10.1016/j.cub.2010.10.006
+  notes: PMID 20970338; native PMC2989437.1 Results and Discussion read, not detailed
+    supplemental methods. Selective targeting separates PAA and spindle-pole networks.
+discussions:
+- discussion_id: identity_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the whole array distinct from its organizing center and other microtubule
+    networks.
+  rationale: Parsed checks over 906 existing records and hidden/ignored-inclusive
+    name, accession and citation searches found no whole-array duplicate. GO:1990295
+    exactly denotes the array, with parent GO:0110165, part-of GO:0015630 and has-part
+    GO:0000923. The has-part existential is not inverted into universal center part-of
+    array. OTHER describes the multi-filament system, not a single filament or fixed
+    stoichiometric complex. ePAA and lPAA are equatorial and longitudinal portions,
+    not early/late arrays or exact whole-array synonyms. Spindle, interphase arrays,
+    individual microtubules and microtubule ends remain distinct.
+  evidence:
+  - reference: GO:1990295
+  - reference: DOI:10.3390/cells12060917
+  - reference: DOI:10.1091/mbc.E23-01-0034
+- discussion_id: component_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Distinguish array constituents, the nucleating subassembly and external
+    ring context.
+  rationale: Alpha/beta tubulin and resident Ase1 belong to the array. Its organizing
+    center is included at subassembly level, without duplicating every center protein.
+    Myp2 and F-actin are upstream ring context; recruitment dependence alone does
+    not make the whole ring a PAA constituent. Mto1/Myp2 spatial offsets and dosage
+    responses constrain simple direct coassembly without excluding indirect association.
+    Unknown tubulin or center assembly essentiality is not replaced by a cell-viability
+    phenotype. Ase1 deletion leaves an altered array, so this constituent is DISPENSABLE
+    for assembly.
+  evidence:
+  - reference: DOI:10.3390/cells12060917
+  - reference: DOI:10.1016/j.cub.2010.10.006
+  - reference: GO:1990295
+  - reference: GO:0005874
+- discussion_id: composition_limits
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Extend PAA-specific composition only after checking localization and assembly
+    evidence.
+  rationale: This is not an exhaustive protein inventory. Mal3 is used as a plus-tip
+    reporter in supplementary Figure S2, which has not been directly inspected; no
+    Mal3 class is added from that lead alone. A beta-tubulin family assignment is
+    not an isoform-specific localization assay, so no Nda3 protein example is supplied.
+    InterPro families define classes, not universal PAA residence of every family
+    member. Direct PAA-specific evidence is needed before adding other motors or microtubule-associated
+    proteins.
+  evidence:
+  - reference: DOI:10.3390/cells12060917
+  - reference: InterPro:IPR002452
+  - reference: InterPro:IPR002453
+  - reference: InterPro:IPR007145
+- discussion_id: nuclear_mechanism_limits
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  prompt: Resolve the physical PAA-nuclear-envelope interface and transmitted forces.
+  rationale: Contact imaging, envelope deformation and selective perturbations support
+    a mechanical basket interpretation, but do not identify a purified interface or
+    calibrated forces. Protection from septal cutting, DNA-damage avoidance and precise
+    inheritance benefits remain hypotheses; no nuclei were cut by the ring after PAA
+    loss under the reported conditions. Later newborn-cell simulations model interphase
+    microtubules and growth, not PAA. MBC affects multiple networks and can leave
+    residual PAA signal.
+  evidence:
+  - reference: DOI:10.1091/mbc.E23-01-0034
+- discussion_id: ring_mechanics_limits
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep inferred effective stiffness separate from direct measurements and
+    universal cytokinesis requirements.
+  rationale: Ablations used rings approximately 20-50 percent constricted, single-plane
+    imaging and recoil fits. Interpreting increased recoil as reduced effective stiffness
+    assumes unchanged initial tension. Mutant recoil often failed to plateau or moved
+    out of plane; fitted amplitudes and timescales are lower bounds. Selective mto1-427
+    PAA impairment did not measurably alter anchoring, constriction or cytokinetic
+    timing under the tested conditions. Complete mto1 deletion affects additional
+    networks and cannot establish a PAA-only healing or timing defect. These experiments
+    do not exclude stress-specific roles.
+  evidence:
+  - reference: DOI:10.3390/cells12060917
+- discussion_id: taxon_and_access
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Preserve taxon, source-access and quantitative limits.
+  rationale: Only S. pombe is a canonical example; reference-sequence taxon 284812
+    does not identify every experimental stock. Main Results, Discussion and Methods
+    of the two 2023 papers and Results/Discussion of the 2010 targeting paper were
+    read. Separate strain supplements, actual movies, raw data and inline equation
+    graphics remain uninspected. No clade-wide prevalence, fixed whole-array copy
+    number, universal dimension, exact Complex Portal composition, trait link or pathway
+    relation is inferred. The hosted figure is the unchanged CC BY 4.0 original; restricted-license
+    imagery from the nuclear-position study is not hosted.
+  evidence:
+  - reference: DOI:10.3390/cells12060917
+  - reference: DOI:10.1091/mbc.E23-01-0034
+  - reference: DOI:10.1016/j.cub.2010.10.006
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+images:
+- image_id: pmc_pmc10047812_cells_12_00917_f002
+  file: pmc10047812_cells_12_00917_f002.jpg
+  file_sha256: e7b4b36cc890afa0a02ef9660162ddb78acbf3a53332515dd8880704e585f317
+  source: PMC
+  source_accession: PMC10047812.1 cells-12-00917-f002
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10047812/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC10047812.1/cells-12-00917-g002.jpg
+  licence: CC_BY_4_0
+  licence_url: https://creativecommons.org/licenses/by/4.0/
+  attribution: Kimberly Bellingham-Johnstun, Zoe L. Tyree, Jessica Martinez-Baird,
+    Annelise Thorn, Caroline Laplante; CC BY, via PubMed Central
+  modality: FLUORESCENCE
+  caption: Multipanel Figure 2 shows the S. pombe post-anaphase microtubule array.
+    A-C and E follow equatorial polygons and longitudinal extensions; D is a schematic,
+    F-G show Ase1 localization and timing, and H-I compare wild type with ase1 deletion.
+    Later projections in B overlap equatorial and longitudinal signals. The scale
+    bar in C is 2 micrometers and the other marked bars are 5 micrometers; these are
+    not fixed array dimensions.
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.3390/cells12060917
+  retrieved_on: '2026-10-08'
+  notes: Figure 2 from article version PMC10047812.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Original multipanel figure visually inspected without editing or cropping; media
+    MD5 38c56497f326242cd4ffaeff8bae8188.

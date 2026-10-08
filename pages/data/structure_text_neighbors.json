@@ -3588,6 +3588,11 @@
           "cosine_similarity": 0.8663443
         },
         {
+          "identifier": "GO:1990295",
+          "label": "post-anaphase microtubule array",
+          "cosine_similarity": 0.84822566
+        },
+        {
           "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
           "label": "quiescent nuclear microtubule bundle",
           "cosine_similarity": 0.82126253
@@ -3596,11 +3601,6 @@
           "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
           "label": "basal body A-B inner junction",
           "cosine_similarity": 0.78975023
-        },
-        {
-          "identifier": "cellstructuremech:telocentrosome",
-          "label": "telocentrosome",
-          "cosine_similarity": 0.78185016
         }
       ]
     },
@@ -4182,14 +4182,14 @@
           "cosine_similarity": 0.82398854
         },
         {
+          "identifier": "GO:1990295",
+          "label": "post-anaphase microtubule array",
+          "cosine_similarity": 0.7942009
+        },
+        {
           "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
           "label": "basal body A-B inner junction",
           "cosine_similarity": 0.7910359
-        },
-        {
-          "identifier": "cellstructuremech:telocentrosome",
-          "label": "telocentrosome",
-          "cosine_similarity": 0.78798931
         }
       ]
     },
@@ -5124,6 +5124,37 @@
       ]
     },
     {
+      "identifier": "GO:1990295",
+      "label": "post-anaphase microtubule array",
+      "neighbors": [
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.84822566
+        },
+        {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.82554904
+        },
+        {
+          "identifier": "GO:0005880",
+          "label": "nuclear microtubule",
+          "cosine_similarity": 0.81756386
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.81356791
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.79987519
+        }
+      ]
+    },
+    {
       "identifier": "GO:0032157",
       "label": "prospore contractile ring",
       "neighbors": [
@@ -5267,14 +5298,14 @@
           "cosine_similarity": 0.85571694
         },
         {
+          "identifier": "GO:1990295",
+          "label": "post-anaphase microtubule array",
+          "cosine_similarity": 0.81356791
+        },
+        {
           "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
           "label": "basal body A-B inner junction",
           "cosine_similarity": 0.79615281
-        },
-        {
-          "identifier": "GO:0005881",
-          "label": "cytoplasmic microtubule",
-          "cosine_similarity": 0.77619723
         }
       ]
     },
@@ -5303,9 +5334,9 @@
           "cosine_similarity": 0.81851054
         },
         {
-          "identifier": "GO:0005816",
-          "label": "spindle pole body",
-          "cosine_similarity": 0.78673303
+          "identifier": "GO:1990295",
+          "label": "post-anaphase microtubule array",
+          "cosine_similarity": 0.79160068
         }
       ]
     },
