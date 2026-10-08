@@ -1,0 +1,356 @@
+identifier: GO:0032117
+label: horsetail-astral microtubule array
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: An array of astral microtubules that emanates from the spindle pole body
+  during meiosis and facilitates horsetail nuclear movement.
+definition_source: GO:0032117
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-08T02:05:54Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-08T02:08:20Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added two tubulin classes, one verified protein example, a source-bounded
+    function and six-edge assembly graph, explicit boundary discussions and an unchanged
+    checksum-verified CC BY 3.0 figure.
+  llm_assisted: true
+parent_structures:
+- GO:0005818
+part_of:
+- GO:0030981
+synonyms:
+- synonym_text: HAA
+  synonym_type: EXACT_SYNONYM
+  source: GO:0032117
+components:
+- component_id: alpha_tubulin
+  label: Alpha tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002452
+  essentiality: UNKNOWN
+  gene_symbols:
+  - tub1
+  - atb2
+  - alp2
+  role: Alpha-tubulin class of the microtubule polymer forming the meiotic radial
+    array.
+  protein_examples:
+  - uniprot_id: UniProtKB:P04689
+    protein_label: Tubulin alpha-2 chain
+    gene_symbol: tub1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-08'
+    role: Reference-sequence exemplar for species-level Atb2 imaging; the exact reference
+      stock is not asserted to be the experimental strain.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Figure 4A follows mCherry-Atb2 in the meiotic radial array before its
+        replacement by the meiosis-I spindle. This is not a census of all alpha-tubulin
+        isoforms.
+    - reference: https://www.uniprot.org/uniprotkb/P04689/entry
+      notes: Native accession, reviewed status, protein label, tub1 primary gene with
+        atb2/alp2 aliases and reference taxon verified on 2026-10-08. The native InterPro
+        response includes the exact Alpha tubulin family; experimental membership
+        comes from the primary study.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Figure 4A directly images mCherry-Atb2-labeled array microtubules in homothallic
+      S. pombe cells.
+  - reference: GO:0005874
+    notes: The microtubule definition supplies alpha/beta polymer composition, not
+      HAA-specific dimensions or an isoform deletion phenotype.
+- component_id: beta_tubulin
+  label: Beta tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002453
+  essentiality: UNKNOWN
+  role: Beta-tubulin class paired with alpha tubulin in the array microtubule polymer.
+  evidence:
+  - reference: GO:0032117
+    notes: The whole-array definition explicitly specifies astral microtubules.
+  - reference: GO:0005874
+    notes: Alpha/beta tubulin composition applies to the array microtubules. No beta-tubulin
+      isoform-specific localization or perturbation is inferred.
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Tomography and fluorescence establish the radial microtubule structure
+      to which the generic polymer composition applies.
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1016/j.cub.2012.02.042
+  note: Meiotic-prophase arrays studied in homothallic cells, including endogenously
+    tagged Hrs1 and mCherry-Atb2 strain KT2901 for Figure 4A, and separately in synchronized
+    pat1 mat-Pc diploids for ultrastructure. No fungal-wide prevalence or identity
+    with the UniProt reference stock is asserted.
+functions:
+- function_id: horsetail_movement
+  label: dynein-driven meiotic oscillatory nuclear movement
+  grounding: GO:0030989
+  description: Provides the radial microtubule array that leads spindle-pole and nuclear
+    oscillations during S. pombe meiotic prophase, acting with dynein-dynactin machinery.
+  evidence:
+  - reference: GO:0032117
+    notes: The exact structure definition specifies facilitation of horsetail nuclear
+      movement.
+  - reference: DOI:10.1016/j.cub.2005.07.058
+    notes: 'Readable primary abstract: Hrs1 loss impairs HAA formation and compromises
+      horsetail movement; ectopic Hrs1 produces HAA-like arrays and nuclear oscillation
+      in interphase. Full text was not accessible, so no detailed motor-interface
+      or quantitative claim is extracted.'
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: The main-text study follows the Hrs1-dependent radial array during meiotic
+      prophase and its replacement at meiosis I. Chromosome pairing and recombination
+      are not asserted as directly quantified array-only outcomes here.
+causal_graphs:
+- graph_id: radial_array_assembly
+  title: Hrs1-dependent radial array organization
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: S. pombe meiotic-prophase radial-array organization. Hrs1-dependent
+    rMTOC assembly is upstream organizing context, not an assertion that the whole
+    center or SPB is an array constituent. Tomography, immunolocalization and deletion
+    phenotypes support minus-end organization; a purified Hrs1 bridge, nucleation
+    sufficiency and universal microtubule counts are not established.
+  description: S. pombe meiotic-prophase radial-array organization. Hrs1-dependent
+    rMTOC assembly is upstream organizing context, not an assertion that the whole
+    center or SPB is an array constituent. Tomography, immunolocalization and deletion
+    phenotypes support minus-end organization; a purified Hrs1 bridge, nucleation
+    sufficiency and universal microtubule counts are not established.
+  nodes:
+  - node_id: center_assembly
+    label: Hrs1-dependent rMTOC assembly
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: rmtoc
+    label: Radial microtubule organizing center near the SPB
+    node_type: STRUCTURE
+  - node_id: minus_ends
+    label: Radial organization of microtubule minus ends
+    node_type: STATE
+  - node_id: alpha
+    label: Alpha tubulin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002452
+    component_ref: alpha_tubulin
+  - node_id: beta
+    label: Beta tubulin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002453
+    component_ref: beta_tubulin
+  - node_id: microtubule
+    label: microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005874
+  - node_id: haa
+    label: horsetail-astral microtubule array
+    node_type: STRUCTURE
+    grounding: GO:0032117
+  edges:
+  - subject: center_assembly
+    predicate: generates
+    object: rmtoc
+    description: Hrs1-dependent assembly establishes the transient radial organizing
+      center.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: 'Results sections 2.1-2.2: Hrs1 immunolabels the amorphous region, whereas
+        hrs1 deletion removes that region and the radial arrangement despite residual
+        SPB-associated microtubules.'
+  - subject: rmtoc
+    predicate: supports
+    object: minus_ends
+    description: The organizing region arranges array microtubule minus ends near,
+      but outside, the SPB core.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Tomography places predominantly capped ends in the cytoplasmic rMTOC
+        region; gamma-tubulin enrichment and its altered localization after hrs1 deletion
+        support the organizing-center interpretation, not purified nucleation or attachment
+        sufficiency.
+  - subject: minus_ends
+    predicate: organizes
+    object: haa
+    description: Spatial organization of microtubule minus ends establishes the radial
+      array geometry.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Wild-type-Hrs1 tomograms show varied microtubule orientations around
+        the center; hrs1 deletion loses radial organization. Residual nonradial microtubules
+        are not a retained normal HAA.
+  - subject: alpha
+    predicate: contributes_to
+    object: microtubule
+    description: Alpha tubulin supplies one subunit class of the microtubule polymer.
+    evidence:
+    - reference: GO:0005874
+      notes: Generic microtubule composition supports this class-level edge; Figure
+        4A of the primary study separately establishes Atb2 localization in this array.
+  - subject: beta
+    predicate: contributes_to
+    object: microtubule
+    description: Beta tubulin supplies the other subunit class of the microtubule
+      polymer.
+    evidence:
+    - reference: GO:0005874
+      notes: This is class-level polymer composition, not an isoform-specific HAA
+        experiment or a claim about beta-tubulin essentiality.
+  - subject: microtubule
+    predicate: contributes_to
+    object: haa
+    description: Astral microtubules form the array framework.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Tomography in Figure 1 and live-cell Atb2 imaging in Figure 4 establish
+        a multi-microtubule array. The whole array is not one filament, a spindle
+        or its organizing center.
+evidence:
+- reference: GO:0032117
+  notes: Native non-obsolete identity, exact synonym, definition, is-a aster and part-of
+    cortical microtubule cytoskeleton verified through OAK on 2026-10-08.
+- reference: DOI:10.1016/j.cub.2012.02.042
+  notes: PMID 22425159; native PMC3382715.1 main text and captions read, with supplemental
+    strain table and methods on pages 13-22. Selected supplemental pages and the unchanged
+    Figure 4 were visually inspected. Movies and raw data were not inspected.
+- reference: DOI:10.1016/j.cub.2005.07.058
+  notes: PMID 16111942; published citation and DOI verified at NCBI. The primary abstract
+    was readable, but the direct publisher returned 403; full text and supplements
+    remain unread. Used only for abstract-scoped naming and function statements.
+discussions:
+- discussion_id: identity_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep the whole meiotic array distinct from its organizer, constituent filaments
+    and neighboring structures.
+  rationale: Parsed checks over 907 records and whole-repository searches including
+    ignored and hidden files found only prior read-ahead notes, not an existing HAA
+    record. GO:0032117 is exact; GO:0005818 is its native is-a parent and GO:0030981
+    its native part-of target. No extra HAA part-of meiotic-spindle claim is inferred
+    from ancestor relations. OTHER denotes a multi-filament system, not one microtubule,
+    the nuclear-movement process, the telomere bouquet, the SPB or the rMTOC. Native
+    GO wording that microtubules emanate from the SPB is retained, while the 2012
+    ultrastructure resolves their organization near but distinct from the SPB core.
+  evidence:
+  - reference: GO:0032117
+  - reference: DOI:10.1016/j.cub.2012.02.042
+- discussion_id: organizing_center_boundary
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Separate the array polymer inventory from the organizing-center composition.
+  rationale: The initial constituent inventory covers alpha/beta-tubulin polymer classes.
+    The 2012 study localizes Hrs1 and gamma tubulin to the rMTOC and tests Hrs1-dependent
+    organization. These proteins are not automatically asserted to be array-lattice
+    constituents; the center remains external assembly context in the graph. Whole-SPB,
+    nuclear-envelope and bouquet membership is not inferred from spatial proximity
+    or recruitment dependence. This boundary does not deny a physical connection to
+    the array minus ends. A separate source-defined rMTOC record and more detailed
+    membership evidence can refine the representation later.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+  - reference: GO:0032117
+  - reference: GO:0005874
+- discussion_id: composition_limits
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Extend array-associated machinery and isoform coverage only with direct
+    membership and role evidence.
+  rationale: This is a bounded polymer inventory, not a complete HAA proteome. The
+    Atb2 reference sequence is not the experimental strain. Beta-tubulin class composition
+    does not justify an Nda3 example without an inspected isoform-specific experiment.
+    Dynein-dynactin participates in movement, but its detailed array-resident composition
+    and assembly essentiality need separate primary-source review before adding machinery
+    rows. Unpublished observations about dynein-assisted radial rearrangement and
+    suggested Hrs1/NudE similarity in the 2012 Discussion are not treated as verified
+    family or component assignments.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+  - reference: DOI:10.1016/j.cub.2005.07.058
+  - reference: InterPro:IPR002452
+  - reference: InterPro:IPR002453
+- discussion_id: assembly_mechanism_limits
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  prompt: Resolve the physical minus-end attachment and nucleation mechanisms within
+    the organizing region.
+  rationale: Ultrastructure, immunolocalization and Hrs1 perturbations establish radial
+    organization but not a purified molecular bridge or sufficiency of an isolated
+    nucleation complex. Yeast-two-hybrid interactions with Kms1 and Alp4 do not establish
+    complete native binding geometry. Gamma-tubulin enrichment is not a census of
+    a fixed ring stoichiometry. Distances and microtubule counts in selected tomograms
+    are assay-specific and are not imported as universal HAA dimensions.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+- discussion_id: transition_scope
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Keep Hrs1 downregulation and meiotic transition phenotypes source-bounded.
+  rationale: Hrs1 degradation and phosphorylation jointly downregulate the radial
+    organizing system near meiosis I. Stabilized nonphosphorylatable Hrs1 can delay
+    bipolar spindle formation; this is not a universal complete block, and outcomes
+    depend on temperature and the spindle checkpoint. Phosphomimetic effects do not
+    prove that every identified phosphorylation has the same native role. Ectopic
+    Hrs1 produces HAA-like arrays in vegetative cells but does not turn every such
+    cell into a native meiotic HAA exemplar. The later spindle is not the HAA, and
+    disappearance of array signal is not direct proof that every tubulin subunit is
+    degraded.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+  - reference: DOI:10.1016/j.cub.2005.07.058
+- discussion_id: taxon_access_and_imaging
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Preserve experimental, access and imaging limits.
+  rationale: Only S. pombe is an organism exemplar; no clade prevalence, fixed whole-array
+    copy number, trait or pathway relation is inferred. Homothallic live-cell imaging
+    and synchronized engineered pat1 mat-Pc diploid EM experiments are distinct. Main
+    Figure 2 text/captions specify 80 minutes for immuno-EM, whereas supplemental
+    methods and the deletion-control caption specify 120 minutes; no single universal
+    sampling time is assigned. Tomography used high-pressure freezing followed by
+    freeze substitution and resin sections, not vitreous cryo-ET. The 2005 source
+    is abstract-only; the 2012 main text, strain table and supplemental methods were
+    read, but movies, raw data and most supplemental image panels remain uninspected.
+    Figure 4 is unchanged CC BY 3.0 material and mixes live-cell images with biochemical
+    and schematic panels; no dimension is inferred from its unquantified scale bars.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+  - reference: DOI:10.1016/j.cub.2005.07.058
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+images:
+- image_id: pmc_pmc3382715_fig4
+  file: pmc3382715_fig4.jpg
+  file_sha256: 6a3cdc8e95796f27389e7bace40a6d68c1f30b810edf9a2bd9bc11dd17b2516c
+  source: PMC
+  source_accession: PMC3382715.1 fig4
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3382715/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/gr4.jpg
+  licence: CC_BY_3_0
+  licence_url: https://creativecommons.org/licenses/by/3.0/
+  attribution: Charlotta Funaya, Shivanthi Samarasinghe, Sabine Pruggnaller, Midori
+    Ohta, Yvonne Connolly, Jan Müller, Hiroshi Murakami, Agnes Grallert, Masayuki
+    Yamamoto, Duncan Smith, et al.; CC BY, via PubMed Central
+  modality: FLUORESCENCE
+  caption: 'Multipanel Figure 4 follows the S. pombe meiotic radial microtubule array
+    and its transition to meiosis I. A shows endogenously tagged wild-type Hrs1 in
+    green and mCherry-Atb2 microtubules in magenta: the prophase array and Hrs1 signal
+    disappear before the later spindle. B and C compare proteasome-impaired and stabilized-Hrs1
+    cells. D-G contain synchronization plots, immunoblots, phosphatase treatment and
+    a phosphorylation-site schematic, not additional array micrographs. Times in A-C
+    are minutes after filming begins, not a universal meiotic clock.'
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1016/j.cub.2012.02.042
+  retrieved_on: '2026-10-08'
+  notes: Figure 4 from article version PMC3382715.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Original complete figure visually inspected without editing or cropping; media
+    MD5 be18716f8492268432db69241123b6d4. The Figure 4A strain is KT2901 in supplemental
+    Table S1, not the UniProt reference stock.

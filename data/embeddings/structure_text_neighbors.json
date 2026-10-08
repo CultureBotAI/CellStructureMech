@@ -984,6 +984,11 @@
           "cosine_similarity": 0.62546721
         },
         {
+          "identifier": "GO:0032117",
+          "label": "horsetail-astral microtubule array",
+          "cosine_similarity": 0.58424614
+        },
+        {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.57328775
@@ -992,11 +997,6 @@
           "identifier": "GO:0009289",
           "label": "pilus",
           "cosine_similarity": 0.5575739
-        },
-        {
-          "identifier": "GO:0097614",
-          "label": "dinoflagellate hypocone",
-          "cosine_similarity": 0.55757301
         }
       ]
     },
@@ -3822,6 +3822,37 @@
       ]
     },
     {
+      "identifier": "GO:0032117",
+      "label": "horsetail-astral microtubule array",
+      "neighbors": [
+        {
+          "identifier": "GO:1990295",
+          "label": "post-anaphase microtubule array",
+          "cosine_similarity": 0.87168976
+        },
+        {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.82251792
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.82222626
+        },
+        {
+          "identifier": "GO:0005880",
+          "label": "nuclear microtubule",
+          "cosine_similarity": 0.79907133
+        },
+        {
+          "identifier": "cellstructuremech:stentor_perialgal_microtubule_meshwork",
+          "label": "Stentor perialgal microtubule meshwork",
+          "cosine_similarity": 0.77884859
+        }
+      ]
+    },
+    {
       "identifier": "GO:0062140",
       "label": "hyphae septin collar",
       "neighbors": [
@@ -5128,6 +5159,11 @@
       "label": "post-anaphase microtubule array",
       "neighbors": [
         {
+          "identifier": "GO:0032117",
+          "label": "horsetail-astral microtubule array",
+          "cosine_similarity": 0.87168976
+        },
+        {
           "identifier": "GO:0000923",
           "label": "equatorial microtubule organizing center",
           "cosine_similarity": 0.84822566
@@ -5146,11 +5182,6 @@
           "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
           "label": "quiescent cell microtubule bundle",
           "cosine_similarity": 0.81356791
-        },
-        {
-          "identifier": "GO:0005876",
-          "label": "spindle microtubule",
-          "cosine_similarity": 0.79987519
         }
       ]
     },
@@ -6047,9 +6078,9 @@
           "cosine_similarity": 0.7832951
         },
         {
-          "identifier": "GO:0033289",
-          "label": "intraconoid microtubule",
-          "cosine_similarity": 0.75768192
+          "identifier": "GO:0032117",
+          "label": "horsetail-astral microtubule array",
+          "cosine_similarity": 0.77884859
         }
       ]
     },
@@ -6233,9 +6264,9 @@
           "cosine_similarity": 0.77244751
         },
         {
-          "identifier": "GO:0020025",
-          "label": "subpellicular microtubule",
-          "cosine_similarity": 0.76953077
+          "identifier": "GO:0032117",
+          "label": "horsetail-astral microtubule array",
+          "cosine_similarity": 0.77016607
         }
       ]
     },

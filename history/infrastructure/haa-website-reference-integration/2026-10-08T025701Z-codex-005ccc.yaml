@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/build_website_references.py
+  slug: haa-website-reference-integration
+session:
+  id: 2026-10-08T025701Z-codex-005ccc
+  timestamp: '2026-10-08T02:57:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2100
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - reference_labels
+  - generated_site
+  - tests
+  summary: Add the source-grounded HAA relationship label
+  details: Full QC for the HAA addition exposed missing GO:0030981 in the offline website
+    reference snapshot. Added the exact term to the fixed builder list, used its native OLS
+    response and existing builder validation to extend the snapshot by one reference, and
+    preserved all 1220 old labels/routes plus their source metadata. The new source has a
+    separate 2026-10-08 retrieval date and checksum; GO release remains 2026-07-26. Retained
+    all 34 downloaded source bodies in reports/website_reference_sources/20261008-haa; rejected
+    an unscoped refresh that would also import 45 unrelated TraitMech references. Added exact
+    label/source regression assertions and documented scoped provenance. Scientific YAML and
+    image bytes are unchanged. Page regeneration and full QC rerun follow.

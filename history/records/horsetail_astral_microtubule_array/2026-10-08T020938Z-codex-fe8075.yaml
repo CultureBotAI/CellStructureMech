@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml
+  slug: horsetail_astral_microtubule_array
+session:
+  id: 2026-10-08T020938Z-codex-fe8075
+  timestamp: '2026-10-08T02:09:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - images
+  summary: Add the evidence-scoped horsetail-astral microtubule array
+  details: Created PROPOSED GO:0032117 with exact native identity and mereology, two tubulin
+    classes, one independently verified Atb2 reference-sequence example, a source-bounded
+    nuclear-movement function and a six-edge assembly graph. Read the 2012 primary main text
+    plus strain table and supplemental methods; the 2005 study is explicitly abstract-scoped.
+    Preserved array/rMTOC/SPB boundaries, deletion versus residual microtubules, transition
+    and access limits. Included an unchanged checksum-verified CC BY 3.0 Figure 4, with wild-type
+    and mutant panels distinguished. Ignored and hidden files were included in duplicate searches.
+    Closed-schema validation passed during guarded curation; full local gates, generated artifacts
+    and PR review follow. No broad prevalence, fixed dimensions, snippets, trait or pathway
+    links were inferred.
