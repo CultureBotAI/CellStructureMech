@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  slug: radial_microtubule_organizing_center
+session:
+  id: 2026-10-08T063733Z-codex-8b8bc8
+  timestamp: '2026-10-08T06:37:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC3382715/
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - discussions
+  - images
+  summary: Add the evidence-scoped radial microtubule organizing center
+  details: Minted the distinct S. pombe rMTOC after ignored/hidden-inclusive corpus deduplication
+    and explicit OAK GO label/alias searches with positive controls. DOI:10.1016/j.cub.2012.02.042
+    supports Hrs1-dependent assembly, gamma-tubulin localization and radial-array organization.
+    Read full main text and supplemental strain table/methods; verified native UniProt, InterPro,
+    taxon and GO identities. Added two constituent classes, two reference protein examples,
+    one function, a six-edge graph, six boundary/gap discussions and unchanged checksum-verified
+    CC BY 3.0 Figure 3. Hrs1 family grounding and molecular architecture remain open; no fixed
+    stoichiometry, broad prevalence or purified bridge is inferred. Guarded validated writer
+    and LLM-assisted curation event preserve PROPOSED status. Generated artifacts and full
+    gates are required before submission.

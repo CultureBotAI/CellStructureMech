@@ -3593,14 +3593,14 @@
           "cosine_similarity": 0.84822566
         },
         {
+          "identifier": "cellstructuremech:radial_microtubule_organizing_center",
+          "label": "radial microtubule organizing center",
+          "cosine_similarity": 0.83202051
+        },
+        {
           "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
           "label": "quiescent nuclear microtubule bundle",
           "cosine_similarity": 0.82126253
-        },
-        {
-          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
-          "label": "basal body A-B inner junction",
-          "cosine_similarity": 0.78975023
         }
       ]
     },
@@ -3841,14 +3841,14 @@
           "cosine_similarity": 0.82222626
         },
         {
+          "identifier": "cellstructuremech:radial_microtubule_organizing_center",
+          "label": "radial microtubule organizing center",
+          "cosine_similarity": 0.80522586
+        },
+        {
           "identifier": "GO:0005880",
           "label": "nuclear microtubule",
           "cosine_similarity": 0.79907133
-        },
-        {
-          "identifier": "cellstructuremech:stentor_perialgal_microtubule_meshwork",
-          "label": "Stentor perialgal microtubule meshwork",
-          "cosine_similarity": 0.77884859
         }
       ]
     },
@@ -4208,6 +4208,11 @@
           "cosine_similarity": 0.85571694
         },
         {
+          "identifier": "cellstructuremech:radial_microtubule_organizing_center",
+          "label": "radial microtubule organizing center",
+          "cosine_similarity": 0.82858164
+        },
+        {
           "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
           "label": "quiescent nuclear microtubule bundle",
           "cosine_similarity": 0.82398854
@@ -4216,11 +4221,6 @@
           "identifier": "GO:1990295",
           "label": "post-anaphase microtubule array",
           "cosine_similarity": 0.7942009
-        },
-        {
-          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
-          "label": "basal body A-B inner junction",
-          "cosine_similarity": 0.7910359
         }
       ]
     },
@@ -5368,6 +5368,37 @@
           "identifier": "GO:1990295",
           "label": "post-anaphase microtubule array",
           "cosine_similarity": 0.79160068
+        }
+      ]
+    },
+    {
+      "identifier": "cellstructuremech:radial_microtubule_organizing_center",
+      "label": "radial microtubule organizing center",
+      "neighbors": [
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.83202051
+        },
+        {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.82858164
+        },
+        {
+          "identifier": "GO:0035974",
+          "label": "meiotic spindle pole body",
+          "cosine_similarity": 0.8218099
+        },
+        {
+          "identifier": "GO:0005816",
+          "label": "spindle pole body",
+          "cosine_similarity": 0.81936888
+        },
+        {
+          "identifier": "GO:0032117",
+          "label": "horsetail-astral microtubule array",
+          "cosine_similarity": 0.80522586
         }
       ]
     },

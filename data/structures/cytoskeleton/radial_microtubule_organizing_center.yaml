@@ -1,0 +1,404 @@
+identifier: cellstructuremech:radial_microtubule_organizing_center
+label: radial microtubule organizing center
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A transient, Hrs1/Mcp6-dependent, gamma-tubulin-enriched amorphous microtubule-organizing
+  assembly at the cytoplasmic side of the spindle pole body during Schizosaccharomyces
+  pombe meiotic prophase, distinct from the spindle pole body core, that organizes
+  the radial microtubule array used in horsetail nuclear movement.
+definition_source: DOI:10.1016/j.cub.2012.02.042
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-08T06:33:22Z'
+  curator: codex
+  action: CREATED_RECORD
+  changes: Scaffolded by scripts/new_record.py
+  llm_assisted: true
+- timestamp: '2026-10-08T06:35:59Z'
+  curator: codex
+  action: EXPANDED_RECORD
+  changes: Added two source-bounded component classes with verified reference proteins,
+    one function and six-edge assembly graph, six boundary/gap discussions and an
+    unchanged checksum-verified CC BY 3.0 figure; retained PROPOSED status.
+  llm_assisted: true
+parent_structures:
+- GO:0005815
+synonyms:
+- synonym_text: rMTOC
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.cub.2012.02.042
+- synonym_text: rMT organizing center
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.cub.2012.02.042
+components:
+- component_id: hrs1
+  label: Hrs1/Mcp6-like meiotic organizing protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Native InterPro combined matches for reviewed Hrs1/Mcp6 Q10336
+    returned HTTP204 on 2026-10-08. UniProt supplies no exact integrated InterPro
+    family; its SUPFAM Tropomyosin match is not an exact Hrs1 grounding. The primary
+    paper treats NudE similarity as a hypothesis. This narrow source-neutral class
+    does not assert membership of all coiled-coil, NudE or tropomyosin proteins.
+  gene_symbols:
+  - mcp6
+  - hrs1
+  - mug3
+  essentiality: ESSENTIAL
+  role: Localized constituent required for the recognizable meiotic rMTOC in S. pombe.
+    A structural-scaffold role is supported as a model; a purified molecular bridge
+    and its stoichiometry are not resolved.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q10336
+    protein_label: Meiotic coiled-coil protein 6
+    gene_symbol: mcp6
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-08'
+    role: Reference-sequence exemplar for the species-level localization experiment;
+      the reference stock is not asserted to be the engineered experimental strain.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Figures 1-2 and the deletion control show Hrs1 enrichment in the organizing
+        region and loss of that region without Hrs1. Experiments use synchronized
+        pat1 mat-Pc diploids, not an asserted 972h- experimental stock.
+    - reference: https://www.uniprot.org/uniprotkb/Q10336/entry
+      notes: Native reviewed accession, recommended protein name, gene and reference
+        taxon verified on 2026-10-08. Experimental membership is established by the
+        primary study, not by sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Immunogold labeling places Hrs1 in the faintly electron-dense, ribosome-excluding
+      region outside the SPB core. hrs1 deletion removes this recognizable region
+      and normal radial geometry while retaining some nonradial SPB-associated microtubules.
+      Essentiality concerns rMTOC formation, not cell viability or all microtubule
+      polymerization.
+- component_id: gamma_tubulin
+  label: Gamma tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002454
+  gene_symbols:
+  - gtb1
+  - tug1
+  essentiality: UNKNOWN
+  role: Gamma-tubulin class enriched in the radial organizing region; local enrichment
+    does not specify a complete ring complex or demonstrate sufficiency for rMTOC
+    assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25295
+    protein_label: Tubulin gamma chain
+    gene_symbol: gtb1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-08'
+    role: Reference-sequence exemplar for the species-level localization experiment;
+      the reference stock is not asserted to be the engineered experimental strain.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Figure 3 detects S. pombe gamma tubulin in the rMTOC with GTU88 immunogold
+        labeling; the signal becomes more dispersed around the SPB in hrs1 deletion.
+        Native InterPro matches for the reference protein include Gamma tubulin IPR002454
+        as a family, not merely a domain.
+    - reference: https://www.uniprot.org/uniprotkb/P25295/entry
+      notes: Native reviewed accession, recommended protein name, gene and reference
+        taxon verified on 2026-10-08. Experimental membership is established by the
+        primary study, not by sequence annotation alone.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Results section 2.3 and Figure 3 establish gamma-tubulin enrichment in
+      the rMTOC. This study does not separately test whether gamma-tubulin removal
+      abolishes the amorphous scaffold, so assembly essentiality is left UNKNOWN.
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1016/j.cub.2012.02.042
+  note: 'Meiotic-prophase ultrastructure in synchronized h-/h- pat1.114/pat1.114 mat-Pc
+    diploids: KT2486 with wild-type hrs1 and KT2919 with hrs1 deletion (supplemental
+    Table S1). Homothallic live-cell transition experiments are separate. No clade
+    prevalence or experimental identity with the UniProt reference stock is inferred.'
+functions:
+- function_id: radial_array_organization
+  label: horsetail-astral microtubule organization
+  grounding: GO:0032118
+  description: Organizes the radial microtubule array during S. pombe meiotic prophase
+    by concentrating organizing material near the SPB and spatially arranging predominantly
+    capped microtubule ends.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Tomography, immunolocalization and hrs1 deletion connect the rMTOC to radial
+      geometry. They do not establish purified nucleation sufficiency or a fixed number
+      of microtubules per center.
+  - reference: GO:0032118
+    notes: Native GO label and definition verified on 2026-10-08; the term denotes
+      the biological process, not the center identity.
+causal_graphs:
+- graph_id: radial_center_assembly
+  title: Hrs1-dependent radial center assembly
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: S. pombe meiotic prophase. Hrs1 loss tests assembly dependence and
+    local gamma-tubulin enrichment; constituent localization is distinct from a purified
+    binding or nucleation reaction. The HAA is the output array, not an rMTOC constituent.
+    Nuclear movement additionally requires motor machinery.
+  description: S. pombe meiotic prophase. Hrs1 loss tests assembly dependence and
+    local gamma-tubulin enrichment; constituent localization is distinct from a purified
+    binding or nucleation reaction. The HAA is the output array, not an rMTOC constituent.
+    Nuclear movement additionally requires motor machinery.
+  nodes:
+  - node_id: hrs1
+    label: Hrs1/Mcp6-like meiotic organizing protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: hrs1
+  - node_id: gamma
+    label: Gamma tubulin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002454
+    component_ref: gamma_tubulin
+  - node_id: rmtoc
+    label: radial microtubule organizing center
+    node_type: STRUCTURE
+    grounding: cellstructuremech:radial_microtubule_organizing_center
+  - node_id: ends
+    label: Radial organization of microtubule minus ends
+    node_type: STATE
+  - node_id: haa
+    label: horsetail-astral microtubule array
+    node_type: STRUCTURE
+    grounding: GO:0032117
+  - node_id: movement
+    label: dynein-driven meiotic oscillatory nuclear movement
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030989
+  edges:
+  - subject: hrs1
+    predicate: supports_assembly_of
+    object: rmtoc
+    description: Hrs1 is required for the recognizable amorphous radial center.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Figures 1-2 and deletion controls show loss of the organizing region
+        and radial arrangement in hrs1-deleted cells; residual nonradial microtubules
+        do not contradict this assembly dependence.
+  - subject: hrs1
+    predicate: supports_local_enrichment_of
+    object: gamma
+    description: Hrs1 supports concentration of gamma tubulin in the rMTOC region.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Figure 3 compares enriched wild-type labeling with more dispersed gamma-tubulin
+        labeling around the SPB after hrs1 deletion. The experiment does not establish
+        direct Hrs1-gamma-tubulin binding.
+  - subject: gamma
+    predicate: localizes_to
+    object: rmtoc
+    description: Gamma tubulin is an enriched constituent of the radial center.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Figure 3 serial-section immunogold localization supports membership;
+        this edge records localization, not a gamma-tubulin assembly-dependency or
+        sufficiency experiment.
+  - subject: rmtoc
+    predicate: organizes
+    object: ends
+    description: The radial center arranges microtubule minus ends outside the SPB
+      core.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Figure 1 tomography places predominantly capped ends in the organizing
+        region, with varied orientations; hrs1 deletion removes normal radial geometry.
+        Not every end was resolved as capped.
+  - subject: ends
+    predicate: organizes
+    object: haa
+    description: Spatial minus-end organization establishes the radial array geometry.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: The wild-type and hrs1-deletion tomograms distinguish radial from residual
+        nonradial SPB-associated microtubules. This is not a complete account of how
+        pre-existing interphase polymers rearrange.
+  - subject: haa
+    predicate: supports
+    object: movement
+    description: The radial array provides the microtubule system used in horsetail
+      movement.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Main Introduction and Results describe radial-array function and live-cell
+        behavior; the array acts with dynein-dynactin and is not itself the motor
+        or proof of recombination outcomes.
+    - reference: GO:0032117
+      notes: Exact GO array definition includes facilitation of horsetail nuclear
+        movement.
+evidence:
+- reference: DOI:10.1016/j.cub.2012.02.042
+  notes: PMID22425159; complete main text and captions read through native PMC3382715.1
+    JATS, plus supplemental Table S1 and methods on PDF pages13-22. Selected supplemental
+    pages and the unchanged Figure 3 were visually inspected. Movies and raw data
+    were not inspected.
+- reference: GO:0005815
+  notes: Verified broader MTOC class, not an exact identity. Explicit SQL-wildcard
+    GO label/alias searches found no exact rMTOC term; HAA and MTOC positive controls
+    returned expected results.
+discussions:
+- discussion_id: identity_boundary
+  prompt: Keep the radial center distinct from the SPB and output array.
+  rationale: Whole-repository searches included hidden/ignored files and parsed identities
+    across 908 records. Earlier HAA/PAA context is not a separate rMTOC record. Native
+    GO label/alias searches with positive HAA/MTOC controls found no exact rMTOC identity,
+    so a local identifier is minted with GO:0005815 as an is-a parent. The source
+    resolves an amorphous assembly near but distinct from the SPB core. GO:0035974
+    denotes the whole meiotic SPB and GO:0032117 the output array, neither an equivalent.
+    MULTIPROTEIN_COMPLEX denotes an assembly, not a claim of fixed stoichiometry or
+    membrane enclosure. No SPB, nuclear-envelope or HAA parthood is asserted solely
+    from proximity.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Primary source and its stated limitations.
+  posed_by: codex
+  posed_date: '2026-10-08'
+  resolved_date: '2026-10-08'
+  resolution_note: Preserve these source boundaries in the record.
+- discussion_id: hrs1_family_grounding
+  prompt: Resolve an exact source-neutral Hrs1/Mcp6 family grounding.
+  rationale: The native InterPro combined endpoint for Q10336 returned HTTP204, and
+    UniProt did not provide an integrated InterPro family. The SUPFAM Tropomyosin
+    match and the paper's tentative NudE similarity do not define the narrow Hrs1/Mcp6-like
+    organizing class. No unverified family accession or universal cross-species equivalence
+    is asserted.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - record
+  evidence:
+  - reference: https://www.uniprot.org/uniprotkb/Q10336/entry
+    notes: Native reviewed reference identity and cross-references inspected.
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Functional NudE orthology remains a question in the Discussion.
+  posed_by: codex
+  posed_date: '2026-10-08'
+- discussion_id: component_boundary
+  prompt: Do not turn neighboring proteins and interaction leads into a complete inventory.
+  rationale: The initial inventory covers directly localized Hrs1 and gamma-tubulin
+    classes. Kms1/Kms2 are membrane/SPB interaction context; Alp4 and Mto1 interactions
+    are leads for broader nucleation machinery. Neither yeast-two-hybrid interaction
+    nor an older whole-SPB annotation establishes every partner as a localized constituent
+    of the 2012-defined amorphous region. These proteins are not imported here as
+    a complete ring, and their omission is a bounded curation decision, not a claim
+    of absence. Alpha/beta polymers are the associated output array, not automatically
+    the center matrix.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Primary source and its stated limitations.
+  posed_by: codex
+  posed_date: '2026-10-08'
+  resolved_date: '2026-10-08'
+  resolution_note: Preserve these source boundaries in the record.
+- discussion_id: native_architecture
+  prompt: Resolve the native molecular bridge, complete composition and nucleation
+    mechanism.
+  rationale: Hrs1 localization and deletion establish membership and assembly dependence,
+    but the detailed scaffold/bridge geometry is proposed. Gamma-tubulin enrichment
+    does not establish a purified nucleation reaction, fixed ring stoichiometry or
+    the necessity of gamma tubulin for forming the amorphous matrix. Dynein-assisted
+    rearrangement includes unpublished observations, and the paper explicitly leaves
+    conversion from interphase arrays unresolved. No distances or counts from selected
+    tomograms are promoted to universal center dimensions.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - record
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Primary source and its stated limitations.
+  posed_by: codex
+  posed_date: '2026-10-08'
+- discussion_id: regulated_transition
+  prompt: Retain the experimental limits of rMTOC downregulation.
+  rationale: Hrs1 degradation and phosphorylation jointly downregulate the organizing
+    system near meiosis I. Stabilized nonphosphorylatable Hrs1 delays bipolar spindle
+    formation under specified temperature/checkpoint conditions; it does not universally
+    block separation. Individual phosphosite functions and the responsible kinases/E3
+    enzymes remain unresolved. Proposed holding of duplicated SPBs is not a purified
+    mechanical measurement. Vegetative overexpression aggregates and HAA-like output
+    are not automatically normal meiotic rMTOCs, and phosphorylation is not proof
+    of destruction of every constituent.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Primary source and its stated limitations.
+  posed_by: codex
+  posed_date: '2026-10-08'
+  resolved_date: '2026-10-08'
+  resolution_note: Preserve these source boundaries in the record.
+- discussion_id: taxon_and_imaging
+  prompt: Keep specimen, imaging and source-access scope explicit.
+  rationale: Only S. pombe is a canonical organism exemplar, with no inferred clade
+    frequency. Reference proteins from taxon284812 are not asserted to be the engineered
+    KT2486/KT2919 experimental stocks. EM used high-pressure freezing, freeze substitution
+    and resin sections, not vitreous cryo-ET. Main immuno-EM text/captions specify
+    80 minutes whereas supplemental immunolabeling methods specify 120 minutes; no
+    single universal sampling time is assigned. Figure 3 includes TEM sections and
+    interpretive 3D models, and contrasts wild-type hrs1 with deletion. The original
+    image is unchanged CC BY 3.0 material; 100 nm bars are image provenance, not a
+    curated whole-center dimension. Main text, captions and supplemental pages13-22
+    were read, but movies, raw data and most supplemental panels were not inspected.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - record
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Primary source and its stated limitations.
+  posed_by: codex
+  posed_date: '2026-10-08'
+  resolved_date: '2026-10-08'
+  resolution_note: Preserve these source boundaries in the record.
+images:
+- image_id: pmc_pmc3382715_fig3
+  file: pmc3382715_fig3.jpg
+  file_sha256: 6cc84756e3217317651dfbb0511d8e4d53796cacde66782a23ec9c22af3dfa1d
+  source: PMC
+  source_accession: PMC3382715.1 fig3
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3382715/
+  download_url: https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/gr3.jpg
+  licence: CC_BY_3_0
+  licence_url: https://creativecommons.org/licenses/by/3.0/
+  attribution: Charlotta Funaya, Shivanthi Samarasinghe, Sabine Pruggnaller, Midori
+    Ohta, Yvonne Connolly, Jan Müller, Hiroshi Murakami, Agnes Grallert, Masayuki
+    Yamamoto, Duncan Smith, et al.; Figure 3, DOI:10.1016/j.cub.2012.02.042; CC BY
+    3.0, via PubMed Central. Original image unchanged; caption paraphrased.
+  modality: TEM
+  caption: Gamma-tubulin localization at the S. pombe radial organizing center. A
+    shows immunogold-labeled TEM serial sections of synchronized meiotic cells with
+    wild-type hrs1; B-C model those labels and the ribosome-excluding amorphous region.
+    D shows hrs1-deletion sections and E their model, with more dispersed gamma-tubulin
+    labels and nonradial microtubules. In the models, yellow marks gamma-tubulin labels,
+    green microtubules and blue the SPB; C highlights the amorphous region. Bars are
+    100 nm. Model surfaces are interpretations, not additional micrographs.
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1016/j.cub.2012.02.042
+  retrieved_on: '2026-10-08'
+  notes: Figure 3 from article version PMC3382715.1; exact licence version read from
+    JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
+    because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+    Original complete figure visually inspected without editing or cropping; media
+    MD5 9d12c4edbf7bbdfcc03ef8d3696aa1fb. Table S1 identifies KT2486 for A and KT2919
+    for D; wild-type denotes the hrs1 allele in engineered pat1 mat-Pc diploids, not
+    a wild-type stock overall. The 80/120-minute main/supplement discrepancy is retained
+    in discussion.
