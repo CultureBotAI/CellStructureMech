@@ -72,11 +72,13 @@ wall was so the next session does not rediscover it.
 
 For structure-record and category reviews, create review-output records only
 when a concrete issue was observed. A clean review produces a response, not a
-new Markdown report or `REVIEW/no_change` history entry. The read-only review
-skills write issue-bearing Markdown reports only; they do not authorize
-repository history writes even when an issue is found. Separately authorized
-curation still requires CREATE/EDIT history for actual changes. Preserve prior
-reports and append-only history, including older clean-review entries.
+new review bundle, legacy Markdown report, or `REVIEW/no_change` history entry.
+The read-only review skills use validated structured YAML/Markdown bundles for
+qualifying observations under the [local persistence gate](../docs/record-review-profile.md#issue-only-persistence);
+they do not authorize repository history writes even when an issue is found.
+Separately authorized curation still requires CREATE/EDIT history for actual
+changes. Preserve prior reports and append-only history, including older
+clean-review entries.
 
 `kind`: `record` · `schema` · `mapping` · `report` · `infrastructure` · `other`
 (`other` requires an explicit `--path`).

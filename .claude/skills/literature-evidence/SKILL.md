@@ -129,6 +129,44 @@ just qc
 `--verify` needs the network. It is not part of `just qc`, which runs offline —
 so it is a discipline, not a gate that will catch you. Run it.
 
+## Structured assessment output
+
+First apply the issue-only persistence gate in
+`docs/record-review-profile.md#issue-only-persistence`. The save instructions
+below apply only to observed issues or supported dispositions of earlier
+findings. Clean assessments and unavailable checks without an established issue
+produce a response, not a saved review. Diagnostic TSVs remain tool outputs,
+not review records.
+
+For a resolved record or bounded corpus evidence audit, follow
+[docs/record-reviews.md](../../../docs/record-reviews.md) and
+[the local profile](../../../docs/record-review-profile.md). Capture the target
+records and inspected inputs before judging with `scripts/record_review.py
+inspect`. Apply the rules above to the actual source text, retaining precise
+locators, source accessibility, citation scope, and the difference between
+unreadable and unchecked. Select `kind: record` for one target, `batch` for an
+explicit sample, or `repository` for a bounded corpus inspection.
+
+`fetch_snippets.py` output remains diagnostic: readability TSVs and candidate
+sentences are not completed scientific reviews. For an assessment based only
+on deterministic readability/quotation matching, set `scientific_review: false`
+and explicitly state that literature support for the biological claims was
+not reassessed. Provider/network failures without assessed content are not
+completed reviews; retain partial/blocked status when required checks fail
+to run after an assessment.
+
+Validate and save the final assessment with:
+
+```bash
+uv run python scripts/record_review.py validate <completed-review.yaml>
+uv run python scripts/record_review.py save --content <completed-review.yaml>
+```
+
+Link `reviews/structured/<YYYYMMDDTHHMMSSZ>-<slug>/review.yaml` and its derived
+`review.md`. Audit requests do not authorize evidence edits, status promotion,
+history events, or issue creation. Native curation and human sign-off gates
+remain in force for separately requested changes.
+
 ## Related
 
 - `scripts/check_curies.py` — does the identifier resolve (not what it says).
