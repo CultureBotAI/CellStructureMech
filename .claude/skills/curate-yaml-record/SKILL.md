@@ -45,6 +45,12 @@ source, attached to the narrowest assertion it actually supports.
 
 ## Structured audit output
 
+First apply the issue-only persistence gate in
+`docs/record-review-profile.md#issue-only-persistence`. The shared audit/save
+instructions above and below apply only to reviews with observed issues or
+supported dispositions of earlier findings. Clean reviews and incomplete
+checks without an established issue produce a response, not a saved review.
+
 For a review, audit, or assessment request, apply the scientific checklist below
 without taking the curation write steps. Follow [docs/record-reviews.md](../../../docs/record-reviews.md)
 and [the local profile](../../../docs/record-review-profile.md): capture target

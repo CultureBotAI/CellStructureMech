@@ -17,9 +17,10 @@ repository's.
 
 Per-record `curation_history` says what changed inside one record. It cannot
 say that a source's licence was re-read at the source, that a gate was adopted
-and what it found, or that a review deliberately changed nothing. Git says a
-commit happened; it does not say which model, using which tool, changed what,
-why, and under which issue. That gap matters more as agents do the changing.
+and what it found, or that a review found an issue requiring later curation.
+Git says a commit happened; it does not say which model, using which tool,
+changed what, why, and under which issue. That gap matters more as agents do
+the changing.
 
 ## Why the layout looks like that
 
@@ -64,10 +65,20 @@ git add history/
 
 `outcome`: `changed` · `no_change` · `needs_followup` · `blocked`
 
-Outcome is **orthogonal** to event on purpose. A `REVIEW` that found nothing is
-`no_change` — a real result, because it says something was checked. An `EDIT`
-that hit a wall is `blocked`, and `details` must say what the wall was so the
-next session does not rediscover it.
+Outcome is **orthogonal** to event on purpose. `no_change` remains valid in the
+shared schema and existing history. It does not require a new entry for every
+check. An `EDIT` that hit a wall is `blocked`, and `details` must say what the
+wall was so the next session does not rediscover it.
+
+For structure-record and category reviews, create review-output records only
+when a concrete issue was observed. A clean review produces a response, not a
+new review bundle, legacy Markdown report, or `REVIEW/no_change` history entry.
+The read-only review skills use validated structured YAML/Markdown bundles for
+qualifying observations under the [local persistence gate](../docs/record-review-profile.md#issue-only-persistence);
+they do not authorize repository history writes even when an issue is found.
+Separately authorized curation still requires CREATE/EDIT history for actual
+changes. Preserve prior reports and append-only history, including older
+clean-review entries.
 
 `kind`: `record` · `schema` · `mapping` · `report` · `infrastructure` · `other`
 (`other` requires an explicit `--path`).

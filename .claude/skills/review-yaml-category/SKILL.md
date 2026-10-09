@@ -15,6 +15,16 @@ metadata:
 - Records: `data/structures/**/*.yaml`
 - Schema: `src/cellstructuremech/schema/cellstructuremech.yaml`
 
+## Local Persistence Gate
+
+Apply the issue-only persistence policy in
+`docs/record-review-profile.md#issue-only-persistence` before invoking the
+shared output workflow below. Only reviews with observed issues or supported
+dispositions of earlier findings produce bundles. Clean reviews and incomplete
+checks without an established issue produce a response, not a saved review.
+This local gate conditions the shared save instructions, including partial or
+blocked output; it does not change their format or validation requirements.
+
 ## The Contract
 
 <!-- canonical:begin the-contract -->

@@ -131,6 +131,13 @@ so it is a discipline, not a gate that will catch you. Run it.
 
 ## Structured assessment output
 
+First apply the issue-only persistence gate in
+`docs/record-review-profile.md#issue-only-persistence`. The save instructions
+below apply only to observed issues or supported dispositions of earlier
+findings. Clean assessments and unavailable checks without an established issue
+produce a response, not a saved review. Diagnostic TSVs remain tool outputs,
+not review records.
+
 For a resolved record or bounded corpus evidence audit, follow
 [docs/record-reviews.md](../../../docs/record-reviews.md) and
 [the local profile](../../../docs/record-review-profile.md). Capture the target

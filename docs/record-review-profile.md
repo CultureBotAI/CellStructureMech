@@ -8,6 +8,10 @@ active routes and local rubrics.
 
 ## Routes and output
 
+Apply the issue-only gate below to every declared route before the shared save
+steps. The shared contract determines the format and validation of qualifying
+observations; this repository-owned profile determines when to persist them.
+
 - `.claude/skills/review-yaml-record/SKILL.md`: one resolved record.
 - `.claude/skills/review-yaml-category/SKILL.md`: a coherent category with
   explicit lump/split/retain/defer decisions; sampled coverage keeps its method,
@@ -33,6 +37,45 @@ and hashes. Checks record actual commands and exit codes, never invented
 success. New observations are immutable; link both saved files in the final
 response. Missing dependencies or required checks are an explicit blocked output
 step or partial assessment, not permission to save unvalidated prose.
+
+## Issue-only persistence
+
+Create a review-output record only when at least one concrete blocker, major,
+or minor issue was observed under the local rubric. A defect or consequential
+curation gap qualifies; an empty optional slot, acknowledged scientific unknown,
+informational observation, or unavailable check alone does not. Never invent a
+finding to justify a bundle. A category boundary or systemic defect qualifies
+even if individual member records pass schema validation.
+
+This gate conditions unconditional save and partial/blocked-save wording in the
+shared skills for this repository. It does not change the governed saver or
+schema, relax validation, or authorize scientific edits or GitHub mutations.
+
+| Assessment | Output |
+|---|---|
+| No observed issue | Response only; no review bundle or legacy Markdown report. |
+| Only unavailable checks or unassessed content | Response only, explicitly incomplete; never call it a pass. |
+| At least one concrete issue | Validate and save the structured YAML/Markdown bundle, including actual check limitations. |
+| Evidence-backed disposition of an earlier finding | Save a validated successor with the stable issue key, exact previous occurrences, inspected evidence, and disposition reason. |
+| Mixed cohorts | Save only issue-bearing cohorts or supported disposition updates; summarize coverage of every cohort in the response. |
+
+Before separately authorized curation changes reviewed inputs, save the
+issue-bearing observation against the inspected bytes. Later fixes do not erase
+that finding. Follow the shared lineage rules for resolution, rejection, or
+accepted-risk updates; a clean review without that lineage cannot close an older
+finding. Never fabricate a predecessor or refresh hashes without reassessment.
+
+For a no-output result, give the target or selection rule, reviewed scope and
+coverage counts, checks performed and limitations, and state `No issues observed;
+no review-output record generated`. Distinguish reviewed, issue-bearing,
+sampled, and unreviewed targets. Absence of a bundle proves neither review
+coverage nor scientific correctness.
+
+Do not create placeholders or `REVIEW/no_change` history for a clean review.
+Actual CREATE/EDIT curation history remains required. Preserve all existing
+bundles, legacy reports and append-only history, including older clean reviews.
+For qualifying new outputs, use only `reviews/structured/` and link both files;
+do not revive `reports/yaml_record_review/` or `reports/yaml_category_review/`.
 
 ## Native questions and ownership
 
