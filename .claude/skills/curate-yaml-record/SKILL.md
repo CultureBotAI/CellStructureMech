@@ -23,6 +23,10 @@ research reports are leads; only inspected sources can support a claim.
 - Review/audit requests are read-only. Curate, improve, complete, correct, or
   add-evidence requests authorize local edits to the named record and the
   smallest necessary provenance/generated paths.
+- For review-only requests, follow
+  `.claude/skills/review-yaml-record/SKILL.md`, including its issue-only output
+  policy. A clean review gets a response, not a saved review report or
+  `REVIEW/no_change` history entry.
 - Never edit generated `pages/`; edit the record or template and regenerate.
 - Never launch paid research, contact anyone, or create/edit a GitHub item or
   outbound message without explicit authorization.

@@ -23,10 +23,11 @@ or internally inconsistent, what is materially incomplete, and what bounded
 checks would resolve the remaining uncertainty.
 
 Reviewing is not curation. A review request authorizes reads, validation
-commands, one new Markdown report under the review-report path named below, and
-a concise final summary; it does not authorize editing a record, regenerating
-products, spending provider credits, contacting anyone, or creating or mutating
-GitHub issues, pull requests, comments, labels, or settings.
+commands, one new Markdown report under the review-report path named below
+only when an issue is observed, and a concise final summary; it does not
+authorize editing a record, regenerating products, spending provider credits,
+contacting anyone, or creating or mutating GitHub issues, pull requests,
+comments, labels, or settings.
 
 Resolve exactly one target before judging anything. If a label, slug, or
 identifier matches several records, stop and disambiguate; a thorough review of
@@ -162,14 +163,32 @@ search, call the miss provisional.
 ## Output
 
 <!-- canonical:begin output -->
-After resolving exactly one target and completing a review, write exactly one
-timestamped Markdown report before the final response:
+Create a review-output record only if the review observes at least one
+concrete blocker, major, or minor issue under the workflow's severity rubric.
+An issue is an evidence-backed defect or consequential curation gap, not merely
+an empty optional field, an acknowledged scientific unknown, or an unavailable
+check. Do not invent a finding to justify an output file. Observed issues still
+qualify if fixed during a separately authorized curation step; report the
+original finding and its resolution without claiming the review authorized
+the fix.
+
+If no issue was observed, create no review report, placeholder, curation event,
+or `REVIEW/no_change` history entry. Give the target path, checks performed,
+coverage limits, and `No issues observed; no review-output record generated`
+in the final response. When checks are incomplete, say the review is incomplete
+rather than declaring a pass. A missing report is not proof a record was
+reviewed: for a multi-record request, summarize reviewed, issue-bearing, and
+unreviewed targets in the response, with no per-record files for clean targets.
+
+For a resolved target with at least one observed issue, write exactly one
+timestamped Markdown report before the final response, even if other checks
+remain incomplete:
 
 - Name it `reports/yaml_record_review/<YYYYMMDDTHHMMSSZ>-<record-stem>.md`.
   Use `date -u +%Y%m%dT%H%M%SZ` for the UTC timestamp. Preserve the target
   file stem when it is already filename-safe; otherwise slugify the stem to
   lower-case ASCII words joined with `-`.
-- Create `reports/yaml_record_review/` if it does not exist.
+- Create `reports/yaml_record_review/` only when writing a qualifying report.
 - Do not overwrite or append to a prior review. If a filename already exists,
   regenerate the timestamp.
 - Keep this section order so review reports are easy to diff across the fleet:
@@ -200,7 +219,8 @@ repo-specific diagnostics, edge cases, and low-signal observations under
 
 The report must cover:
 
-- **Verdict**: pass, pass with minor issues, or needs curation.
+- **Verdict**: pass with minor issues, needs curation, or issues resolved by
+  separately authorized curation; explicitly qualify incomplete reviews.
 - **Target**: the record reviewed, its path, class, ID, label, and generated or
   maintained status.
 - **Validation**: each command run and its result, including unavailable checks.
@@ -210,21 +230,27 @@ The report must cover:
   citation or snippet mismatch.
 - **Completeness**: consequential gaps, empty optional slots correctly left
   empty, and bounded searches that found nothing.
-- **Findings**: blocker, major, and minor findings, each with evidence and a
-  maintained owner path for any fix.
+- **Findings**: at least one blocker, major, or minor finding, each with evidence,
+  a maintained owner path for any fix, and an open or resolved status.
 - **Recommended Edits**: concrete future curation actions, ordered by severity,
   with the maintained path that owns each fix.
 - **Follow-up Checks**: the narrowest validators or manual checks that would
   prove each recommended edit.
 
-Use `None found` or `Not checked: <reason>` when a section has no findings or a
-check cannot run; do not delete required headings.
+Use `None found` outside **Findings**, or `Not checked: <reason>` for a check
+that cannot run; do not delete required headings. **Findings** must never be
+empty in a saved report.
 
 Do not append a curation event, promote a review status, or write a history
 entry from this read-only review. Those belong to a later curation change.
 If the request needs disambiguation before one target is resolved, ask for it
 without creating a report.
 
-In the final response, link the report path and summarize only the verdict,
-finding counts by severity, and any skipped validators or unresolved blockers.
+Preserve existing reports and append-only history; this policy governs new
+outputs, not retrospective deletion. Actual CREATE/EDIT curation history remains
+required under the curation workflow.
+
+When a report was generated, link its path in the final response and summarize
+the verdict, finding counts by severity, and any skipped validators or
+unresolved blockers. Otherwise give the no-output summary described above.
 <!-- canonical:end output -->

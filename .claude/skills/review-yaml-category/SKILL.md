@@ -24,9 +24,10 @@ mix unrelated concepts and should be split, which patterns are well supported,
 and which future curation changes would make the category sound.
 
 Reviewing a category is not curation. A review request authorizes reads,
-validation commands, Markdown reports under the review-report path named below,
-and a concise final summary; it does not authorize editing records,
-regenerating products, spending provider credits, contacting anyone, or
+validation commands, Markdown reports under the review-report path named below
+only for cohorts with observed issues, and a concise final summary; it does not
+authorize editing records, regenerating products, spending provider credits,
+contacting anyone, or
 creating or mutating GitHub issues, pull requests, comments, labels, or
 settings.
 
@@ -188,16 +189,29 @@ search, call the miss provisional.
 ## Output
 
 <!-- canonical:begin output -->
-After resolving at least one coherent target category and completing a review,
-write one timestamped Markdown report per reviewed cohort before the final
-response:
+Apply the issue-only output policy in
+`.claude/skills/review-yaml-record/SKILL.md` to each resolved cohort, using the
+category severity rubric above. Write one timestamped Markdown report only for
+a cohort with at least one observed issue; a category-level boundary or systemic
+defect qualifies even if individual records validate. Do not create reports for
+clean cohorts or clean members merely to document coverage. Issues fixed by
+separately authorized curation still qualify; preserve the finding and its
+resolution. Incomplete checks alone do not qualify as a record defect.
+
+For every cohort without an observed issue, give its selection rule, reviewed
+scope, coverage counts, checks and limitations in the final response, stating
+`No issues observed; no review-output record generated`. Distinguish fully
+reviewed, sampled, and unreviewed members; do not infer review coverage from
+report existence or call an incomplete review a pass.
+
+For each issue-bearing cohort, write the report before the final response:
 
 - Name each report
   `reports/yaml_category_review/<YYYYMMDDTHHMMSSZ>-<category-slug>.md`. Use
   `date -u +%Y%m%dT%H%M%SZ` for the UTC timestamp. Preserve the category slug
   when it is already filename-safe; otherwise slugify it to lower-case ASCII
   words joined with `-`.
-- Create `reports/yaml_category_review/` if it does not exist.
+- Create `reports/yaml_category_review/` only when writing a qualifying report.
 - Do not overwrite or append to a prior review. If a filename already exists,
   regenerate the timestamp.
 - Keep this section order so review reports are easy to diff across the fleet:
@@ -231,7 +245,8 @@ Put repo-specific diagnostics, edge cases, and low-signal observations under
 
 The report must cover:
 
-- **Verdict**: pass, pass with minor issues, or needs curation.
+- **Verdict**: pass with minor issues, needs curation, or issues resolved by
+  separately authorized curation; explicitly qualify incomplete reviews.
 - **Target Category**: the resolved cohort label, source request, selection
   rule, member count, and whether coverage was full, split into subcohorts, or
   sampled.
@@ -248,15 +263,17 @@ The report must cover:
   over-scoped source usage, and citation or snippet mismatches that recur.
 - **Completeness Patterns**: consequential gaps, empty optional slots correctly
   left empty, and bounded searches that found nothing.
-- **Findings**: blocker, major, and minor findings, each with evidence,
-  affected paths, and a maintained owner path for any fix.
+- **Findings**: at least one blocker, major, or minor finding, each with evidence,
+  affected paths, a maintained owner path for any fix, and an open or resolved
+  status.
 - **Recommended Edits**: concrete future curation actions, ordered by severity,
   with the maintained path that owns each fix.
 - **Follow-up Checks**: the narrowest validators or manual checks that would
   prove each recommended edit.
 
-Use `None found` or `Not checked: <reason>` when a section has no findings or a
-check cannot run; do not delete required headings. If only a sample was read,
+Use `None found` outside **Findings**, or `Not checked: <reason>` for a check
+that cannot run; do not delete required headings. **Findings** must never be
+empty in a saved report. If only a sample was read,
 the verdict must say `sampled` and must not claim full-category coverage.
 
 Do not append a curation event, promote a review status, or write a history
@@ -264,6 +281,8 @@ entry from this read-only review. Those belong to a later curation change.
 If the request needs disambiguation before a coherent category is resolved, ask
 for it without creating a report.
 
-In the final response, link every report path and summarize only each verdict,
-finding counts by severity, and any skipped validators or unresolved blockers.
+Preserve existing reports and append-only history. In the final response, link
+only reports actually generated, summarize each verdict and finding counts by
+severity, and include coverage and any skipped validators or unresolved
+blockers for all reviewed cohorts, including those with no output file.
 <!-- canonical:end output -->
