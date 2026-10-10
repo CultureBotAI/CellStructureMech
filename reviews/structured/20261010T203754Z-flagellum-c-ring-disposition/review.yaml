@@ -1,0 +1,461 @@
+schema_version: 1.0.0
+review_id: 20261010T203754Z-flagellum-c-ring-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'bacterial-type flagellum basal body, C ring: finding dispositions'
+started_at: '2026-10-10T20:37:21Z'
+finished_at: '2026-10-10T20:37:54Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same agent reassesses its authorized curation against inspected
+    evidence; not independent human review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Resolved 3 exact findings after checking the narrowed claims and validation
+  results. Earlier limitations remain; no native status promotion.
+source:
+  git_revision: 3cab39043f2cb72283ebd43593d8ccd59924b2e9
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    sha256: 844cba3c5b9efc3f1d498f44f0036b0d94371e3975349942e6a69204b7911dbd
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/bacterial_type_flagellum_basal_body_c_ring/2026-09-08T073805Z-claude-1346a5.yaml
+    sha256: 25730f17e32361641aaa95d945968c8016badd719e81f8205f6a5312b05e1bec
+    role: context
+  - path: history/records/bacterial_type_flagellum_basal_body_c_ring/2026-09-08T075702Z-claude-200cf8.yaml
+    sha256: 34b81316fcb9b95c2d9793b72d6fece3a317ec457353a01d27348d239a0418df
+    role: context
+  - path: history/records/bacterial_type_flagellum_basal_body_c_ring/2026-10-10T202138Z-claude-code-ffe768.yaml
+    sha256: 67e1f5e59419320d66ce3d7f9997c8e6c928ca34922a9a5a0e2d16258fc6550e
+    role: context
+  - path: history/records/bacterial_type_flagellum_basal_body_c_ring/2026-10-10T202822Z-claude-code-1bbe5d.yaml
+    sha256: 53b67484c15fa87516d274aa75921fbdd72807c309c26a45d32954c6c3bab679
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261010T201915Z-flagellum-c-ring/review.yaml
+    sha256: 244e50c1b39cb98f8d99610cba83c6c8b79f149024b60509e9a49a311a27606d
+    role: context
+  - path: reviews/structured/20261010T202810Z-flagellar-c-ring-adversarial/review.yaml
+    sha256: e72ca0a669103707da8689f16a17e0372617202b778f1488c4bca6bc31122722
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_flagellar_review_corrections.py
+    sha256: 26eddfd058819e1c58b28f90e0612bfece5e6c3c118bdc9758ac0797109a8ed7
+    role: context
+targets:
+- target_id: GO:0009433
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  label: bacterial-type flagellum basal body, C ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    role: maintained scientific record
+scope:
+  description: Post-fix reassessment of the exact finding-bearing fields; unchanged
+    fields retain the preceding review and its access limitations.
+  selection: Exact maintained path data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009433
+checks:
+- check_id: c-ring-strict
+  name: c-ring-strict post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009433
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Fresh local check passed after the curation changes. Deterministic validation
+    is not scientific sign-off.
+  scope_note: 2026-10-10T20:28:41.282658+00:00 to 2026-10-10T20:28:44.993708+00:00;
+    log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: labels
+  name: labels post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009433
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Fresh local check passed after the curation changes. Deterministic validation
+    is not scientific sign-off.
+  scope_note: 2026-10-10T20:28:44.994385+00:00 to 2026-10-10T20:30:48.989743+00:00;
+    log SHA-256 553dd4c9f88c8a5289a33f588649f4677e541cc9da09ecd6c78c0e9f3cae8917
+- check_id: traits
+  name: traits post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009433
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Fresh local check passed after the curation changes. Deterministic validation
+    is not scientific sign-off.
+  scope_note: 2026-10-10T20:30:48.990524+00:00 to 2026-10-10T20:31:09.168824+00:00;
+    log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009433
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The authority-liveness gate passed with 4000 OK and 251 SKIPPED identifiers.
+    Unsupported prefixes are explicitly skipped, not certified; resolver controls
+    passed.
+  scope_note: 2026-10-10T20:31:09.169526+00:00 to 2026-10-10T20:33:12.966288+00:00;
+    log SHA-256 8eed1b219537e5b1dd4312e7e88909573790083669b5db7ea3feca3ca05a8186
+- check_id: snippets
+  name: snippets post-curation check
+  status: passed
+  required: false
+  target_ids:
+  - GO:0009433
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/bacterial_type_flagellum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All four existing whole-flagellum quotations matched their cited sources
+    verbatim.
+  scope_note: 2026-10-10T20:33:12.967089+00:00 to 2026-10-10T20:33:45.498947+00:00;
+    log SHA-256 2b9671a0cf2292385c074f4b7cca3e4f217193a465c41225b2d3022e06cc98b0;
+    checks the enclosing whole-flagellum record, not this target, which has no snippets.
+- check_id: history
+  name: history post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009433
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Fresh local check passed after the curation changes. Deterministic validation
+    is not scientific sign-off.
+  scope_note: 2026-10-10T20:33:45.500326+00:00 to 2026-10-10T20:34:07.455486+00:00;
+    log SHA-256 cd1ede9d4a81c377c87a16b4887bfe0d4d500f6bba69a84f56b7ab8216c1e150
+- check_id: qc
+  name: qc post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009433
+  command: gh run view 38084106846 --json headSha,status,conclusion,jobs
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Verified successful full QC and structured-review CI at exact committed
+    head 3cab39043f2cb72283ebd43593d8ccd59924b2e9. Every inspected input hash matches
+    that tree; this is reused CI, not a completed local full-QC run.
+  scope_note: 2026-10-10T20:36:26.166190+00:00 to 2026-10-10T20:36:32.396762+00:00;
+    log SHA-256 3257c203664bc81d236e139d08b0da071b62b645608baaa5c4ef54e8cb65d631
+evidence:
+- evidence_id: paper-10
+  kind: primary_source
+  reference: DOI:10.1038/s41564-020-0788-8
+  locator: 'Primary full text: stator architecture, Coupling of ion-flow to flagellar
+    rotation, discussion and methods'
+  accessed_at: '2026-10-10T20:04:55Z'
+  snapshot_sha256: 2250b535735358b44b02046731afdf6ad1fac623468bfd82d7145248b1a6b072
+  support: supports
+  summary: A5B2 structures support torque models. The authors explicitly allow either
+    processive rotation or oscillating ratchet motion; geometry does not directly
+    establish one dynamic trajectory.
+- evidence_id: paper-18
+  kind: primary_source
+  reference: DOI:10.1128/jb.00626-18
+  locator: Primary abstract
+  accessed_at: '2026-10-10T20:05:07Z'
+  snapshot_sha256: 7e62038b257d8f313145023b06de6fa732c6f3244c01e4c6daf85822cfabc74a
+  support: supports
+  summary: B. subtilis uses FliY in place of FliN and reverses the CheY-P rotational
+    response relative to E. coli. The native record already acknowledges the lineage
+    variant.
+- evidence_id: ipr012826
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012826/
+  locator: InterPro metadata accession/name/type/description
+  accessed_at: '2026-10-10T20:05:43Z'
+  snapshot_sha256: df2eefe695d53d5a6ea98d37ee7972b9f0491ebfbe33aa0d641e85312fecf5ca
+  support: supports
+  summary: Family identity inspected; FliN entry explicitly notes the longer FliY
+    form. Family/domain overlap is not proof that whole proteins are equivalent.
+- evidence_id: fliy
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P24073.json
+  locator: uniProtKBCrossReferences InterPro IPR012826; reviewed FliY identity
+  accessed_at: '2026-10-10T20:05:55Z'
+  snapshot_sha256: fdec67f72bcd246fb0d2bed16f72340f49ddbec5c34a071e23753e8f549543c0
+  support: refutes
+  summary: Bacillus FliY P24073 currently carries IPR012826, contradicting the claimed
+    taxonomic restriction in the resolved discussion.
+- evidence_id: bypass
+  kind: primary_source
+  reference: DOI:10.1128/JB.00601-09
+  locator: 'Results: Sizes of defective C-ring structures; Fig. 4; Table 1'
+  accessed_at: '2026-10-10T20:28:10Z'
+  support: refutes
+  summary: FliI-overproducing Salmonella mutants retain incomplete rings after fliM
+    or fliN deletion, unlike fliG deletion; motor function is not restored. The small-particle
+    sample limits extrapolation.
+- evidence_id: adversarial-review
+  kind: record_content
+  reference: reviews/structured/20261010T202810Z-flagellar-c-ring-adversarial/review.yaml
+  locator: New FliM/FliN finding correcting the original composition assessment
+  accessed_at: '2026-10-10T20:37:54Z'
+  support: context_only
+  snapshot_sha256: e72ca0a669103707da8689f16a17e0372617202b778f1488c4bca6bc31122722
+  summary: The independent review lead was rechecked and saved before the additional
+    component fix.
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  locator: Entire post-fix record; changed claims and preserved histories checked
+    against the preceding review
+  accessed_at: '2026-10-10T20:37:54Z'
+  support: supports
+  snapshot_sha256: 844cba3c5b9efc3f1d498f44f0036b0d94371e3975349942e6a69204b7911dbd
+  summary: The changed claims were reread against their sources. Mapping status remains
+    PROPOSED; original history is intact and a new LLM-assisted curation event and
+    repository history describe the fixes.
+- evidence_id: prior-review
+  kind: record_content
+  reference: reviews/structured/20261010T201915Z-flagellum-c-ring/review.yaml
+  locator: Findings, source-access limitations and input attestation
+  accessed_at: '2026-10-10T20:37:54Z'
+  support: context_only
+  snapshot_sha256: 244e50c1b39cb98f8d99610cba83c6c8b79f149024b60509e9a49a311a27606d
+  summary: Immutable original observation. This successor resolves only its exact
+    issue keys and does not retroactively make the earlier record correct.
+assessments:
+- assessment_id: resolved-f1
+  area: evidence
+  topic: Keep proposed stator rotation labeled as a model
+  outcome: supported
+  target_ids:
+  - GO:0009433
+  evidence_ids:
+  - record
+  - paper-10
+  - prior-review
+  summary: The claim-bearing description now identifies A-ring rotation as a proposed
+    structural model and preserves ion-driven torque coupling as established. Deme
+    2020 allows rotating and oscillating models; no dynamic trajectory is asserted
+    as directly observed.
+- assessment_id: resolved-f2
+  area: grounding
+  topic: Correct the FliY exclusion rationale
+  outcome: supported
+  target_ids:
+  - GO:0009433
+  evidence_ids:
+  - record
+  - fliy
+  - ipr012826
+  - paper-18
+  - prior-review
+  summary: 'The historical rationale is preserved with an explicit dated correction:
+    IPR012826 covers a corresponding region in FliY and P24073 carries that entry.
+    The current boundary explanation concerns whole-protein architecture and phosphatase
+    function, not a false taxonomic restriction. Original dates remain intact.'
+- assessment_id: resolved-f3
+  area: evidence
+  topic: Qualify individual FliM and FliN assembly essentiality
+  outcome: supported
+  target_ids:
+  - GO:0009433
+  evidence_ids:
+  - record
+  - bypass
+  - adversarial-review
+  - prior-review
+  summary: FliM and FliN now carry conditional assembly essentiality and the explicit
+    engineered partial-C-ring bypass. FliG retains its distinct no-ring result and
+    ESSENTIAL status. Source notes distinguish rare incomplete assembly from functional
+    motor recovery; the original review omission is explicitly corrected by the linked
+    adversarial observation.
+findings:
+- finding_id: F1
+  issue_key: flagellar-c-ring-stator-model-evidence-strength
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Keep proposed stator rotation labeled as a model
+  description: The claim-bearing description now identifies A-ring rotation as a proposed
+    structural model and preserves ion-driven torque coupling as established. Deme
+    2020 allows rotating and oscillating models; no dynamic trajectory is asserted
+    as directly observed.
+  target_ids:
+  - GO:0009433
+  field_paths:
+  - functions[1].description
+  evidence_ids:
+  - record
+  - paper-10
+  - prior-review
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: major
+  normalization_reason: Material evidence/scope defect under the native rubric.
+  disposition_reason: The claim-bearing description now identifies A-ring rotation
+    as a proposed structural model and preserves ion-driven torque coupling as established.
+    Deme 2020 allows rotating and oscillating models; no dynamic trajectory is asserted
+    as directly observed.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T201915Z-flagellum-c-ring
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2129
+- finding_id: F2
+  issue_key: flagellar-c-ring-fliy-grounding-rationale
+  category: grounding
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Correct the FliY exclusion rationale
+  description: 'The historical rationale is preserved with an explicit dated correction:
+    IPR012826 covers a corresponding region in FliY and P24073 carries that entry.
+    The current boundary explanation concerns whole-protein architecture and phosphatase
+    function, not a false taxonomic restriction. Original dates remain intact.'
+  target_ids:
+  - GO:0009433
+  field_paths:
+  - discussions[0].rationale
+  - discussions[0].resolution_note
+  evidence_ids:
+  - record
+  - fliy
+  - ipr012826
+  - paper-18
+  - prior-review
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#components
+  native_severity: minor
+  normalization_reason: Bounded misleading curation guidance; native structure identity
+    remains valid.
+  disposition_reason: 'The historical rationale is preserved with an explicit dated
+    correction: IPR012826 covers a corresponding region in FliY and P24073 carries
+    that entry. The current boundary explanation concerns whole-protein architecture
+    and phosphatase function, not a false taxonomic restriction. Original dates remain
+    intact.'
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T201915Z-flagellum-c-ring
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2134
+- finding_id: F3
+  issue_key: flagellar-c-ring-flim-flin-assembly-condition
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Qualify individual FliM and FliN assembly essentiality
+  description: FliM and FliN now carry conditional assembly essentiality and the explicit
+    engineered partial-C-ring bypass. FliG retains its distinct no-ring result and
+    ESSENTIAL status. Source notes distinguish rare incomplete assembly from functional
+    motor recovery; the original review omission is explicitly corrected by the linked
+    adversarial observation.
+  target_ids:
+  - GO:0009433
+  field_paths:
+  - components[1].essentiality
+  - components[2].essentiality
+  evidence_ids:
+  - record
+  - bypass
+  - adversarial-review
+  - prior-review
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    role: maintained scientific record
+  rule_id: src/cellstructuremech/schema/cellstructuremech.yaml#EssentialityEnum
+  native_severity: major
+  normalization_reason: A material assembly claim exceeds the bounded experimental
+    evidence.
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2135
+  disposition_reason: FliM and FliN now carry conditional assembly essentiality and
+    the explicit engineered partial-C-ring bypass. FliG retains its distinct no-ring
+    result and ESSENTIAL status. Source notes distinguish rare incomplete assembly
+    from functional motor recovery; the original review omission is explicitly corrected
+    by the linked adversarial observation.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T202810Z-flagellar-c-ring-adversarial
+    finding_id: F1
+actions: []
+limitations:
+- Scoped reassessment of the listed corrected claims, not a new full-corpus review
+  or human scientific approval. Native status remains PROPOSED.
+- Original source-access limitations remain. Source snapshots and their original access
+  dates are retained; this does not claim that every source was freshly downloaded
+  again.
+- The genomic prevalence proxy does not establish observed flagellation in individual
+  genomes; the engineered assembly bypass does not establish normal motor function.
+- The full-corpus identifier checker skips 251 identifiers in unsupported namespaces.
+  Its successful exit does not certify those identifiers; scoped authority and trait
+  checks retain the earlier source qualifications.
+- This review was authored by the same agent that applied the fixes. A separate adversarial
+  PR pass is not human sign-off.
+- After the generated-only commit advanced HEAD, the saver refused the older working-tree
+  base. Inputs were re-inspected at the tested commit and every original input hash
+  was verified unchanged before this reassessment; the base was not silently refreshed.
+- An initial identifier command used unsupported --strict and exited 2; the documented
+  --check command then passed. The first local full-QC run overlapped an additional
+  correction and was stopped. The second was stopped as redundant after exact-head
+  CI succeeded; neither interrupted local run is reported as passing.
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261010T201915Z-flagellum-c-ring
+  relationship: resolves exact findings
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261010T202810Z-flagellar-c-ring-adversarial
+  relationship: resolves added adversarial finding
