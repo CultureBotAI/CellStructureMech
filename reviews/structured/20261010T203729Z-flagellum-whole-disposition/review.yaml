@@ -1,0 +1,633 @@
+schema_version: 1.0.0
+review_id: 20261010T203729Z-flagellum-whole-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'bacterial-type flagellum: finding dispositions'
+started_at: '2026-10-10T20:37:15Z'
+finished_at: '2026-10-10T20:37:29Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same agent reassesses its authorized curation against inspected
+    evidence; not independent human review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: pass_with_limitations
+scientific_review: true
+summary: Resolved 6 exact findings after checking the narrowed claims and validation
+  results. Earlier limitations remain; no native status promotion.
+source:
+  git_revision: 3cab39043f2cb72283ebd43593d8ccd59924b2e9
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/appendage/bacterial_type_flagellum/escherichia_coli_flagella_tem.png
+    sha256: 370078e7879241342df889b048aaaea27468ae7ed2a8c9509e1f1b16fbdb465e
+    role: context
+  - path: data/structures/appendage/bacterial_type_flagellum.yaml
+    sha256: 4e3e6bf50835a3134d50e5a20a87cdfa86e1e37c21085757402df7dd628095e6
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/bacterial_type_flagellum/2026-08-30T194359Z-codex-e62f9c.yaml
+    sha256: fc231f12920ea3a8f81152480c5a04dbf04b19a1447e3c4ccd772bae53773ddd
+    role: context
+  - path: history/records/bacterial_type_flagellum/2026-09-03T003923Z-claude-code-e5302e.yaml
+    sha256: 0badefa41efdbf808e139d8024bb1992ba3d9a9790491986235050bbc1156db7
+    role: context
+  - path: history/records/bacterial_type_flagellum/2026-09-03T073851Z-claude-code-d38ae5.yaml
+    sha256: 4ec7af7841a3adff1f426adc49401710718d7a2f0fa7aa0c7c080eef03222693
+    role: context
+  - path: history/records/bacterial_type_flagellum/2026-09-04T014136Z-codex-b18360.yaml
+    sha256: b654b69e653e68c1b744252a6001a861f79bfcf6a7878ab735cb081276d47f21
+    role: context
+  - path: history/records/bacterial_type_flagellum/2026-09-08T065716Z-claude-340f8f.yaml
+    sha256: 18313874cff78001e0f882fd684edc2facb73d19c39b64b635b4d08c590b9064
+    role: context
+  - path: history/records/bacterial_type_flagellum/2026-09-09T023556Z-claude-49d259.yaml
+    sha256: 0bbc5786f9d7f49576685ca809b49fdfe6059a14b09f9f872b495f0665c7f34e
+    role: context
+  - path: history/records/bacterial_type_flagellum/2026-09-09T042811Z-claude-e740a7.yaml
+    sha256: a9a7a7438bccfe39d214006c94ea5f105190e8e73c08b09739e7ca3286191936
+    role: context
+  - path: history/records/bacterial_type_flagellum/2026-10-10T202134Z-claude-code-090e89.yaml
+    sha256: e34ee6f7057a2a4ed00c7c3cc1ebf2f2de7a5017a88e859ea7e906d3d562d09e
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261010T201901Z-flagellum-whole/review.yaml
+    sha256: 3cab932e9991d85a3c73a9bc99945adf6d05e8c967970ecef320c807319b2d27
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_flagellar_review_corrections.py
+    sha256: 26eddfd058819e1c58b28f90e0612bfece5e6c3c118bdc9758ac0797109a8ed7
+    role: context
+targets:
+- target_id: GO:0009288
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  label: bacterial-type flagellum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum.yaml
+    role: maintained scientific record
+scope:
+  description: Post-fix reassessment of the exact finding-bearing fields; unchanged
+    fields retain the preceding review and its access limitations.
+  selection: Exact maintained path data/structures/appendage/bacterial_type_flagellum.yaml
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009288
+  exclusions:
+  - target: physical_properties[0].reference
+    reason: Macnab 2003 full text unavailable through tried publisher/index routes;
+      ~20 nm cannot be verified at its attached citation. No claim that the diameter
+      is false.
+checks:
+- check_id: whole-strict
+  name: whole-strict post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009288
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/bacterial_type_flagellum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Fresh local check passed after the curation changes. Deterministic validation
+    is not scientific sign-off.
+  scope_note: 2026-10-10T20:28:32.515685+00:00 to 2026-10-10T20:28:37.231171+00:00;
+    log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: labels
+  name: labels post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009288
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Fresh local check passed after the curation changes. Deterministic validation
+    is not scientific sign-off.
+  scope_note: 2026-10-10T20:28:44.994385+00:00 to 2026-10-10T20:30:48.989743+00:00;
+    log SHA-256 553dd4c9f88c8a5289a33f588649f4677e541cc9da09ecd6c78c0e9f3cae8917
+- check_id: traits
+  name: traits post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009288
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Fresh local check passed after the curation changes. Deterministic validation
+    is not scientific sign-off.
+  scope_note: 2026-10-10T20:30:48.990524+00:00 to 2026-10-10T20:31:09.168824+00:00;
+    log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009288
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The authority-liveness gate passed with 4000 OK and 251 SKIPPED identifiers.
+    Unsupported prefixes are explicitly skipped, not certified; resolver controls
+    passed.
+  scope_note: 2026-10-10T20:31:09.169526+00:00 to 2026-10-10T20:33:12.966288+00:00;
+    log SHA-256 8eed1b219537e5b1dd4312e7e88909573790083669b5db7ea3feca3ca05a8186
+- check_id: snippets
+  name: snippets post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009288
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/bacterial_type_flagellum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All four existing whole-flagellum quotations matched their cited sources
+    verbatim.
+  scope_note: 2026-10-10T20:33:12.967089+00:00 to 2026-10-10T20:33:45.498947+00:00;
+    log SHA-256 2b9671a0cf2292385c074f4b7cca3e4f217193a465c41225b2d3022e06cc98b0
+- check_id: history
+  name: history post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009288
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Fresh local check passed after the curation changes. Deterministic validation
+    is not scientific sign-off.
+  scope_note: 2026-10-10T20:33:45.500326+00:00 to 2026-10-10T20:34:07.455486+00:00;
+    log SHA-256 cd1ede9d4a81c377c87a16b4887bfe0d4d500f6bba69a84f56b7ab8216c1e150
+- check_id: qc
+  name: qc post-curation check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009288
+  command: gh run view 38084106846 --json headSha,status,conclusion,jobs
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Verified successful full QC and structured-review CI at exact committed
+    head 3cab39043f2cb72283ebd43593d8ccd59924b2e9. Every inspected input hash matches
+    that tree; this is reused CI, not a completed local full-QC run.
+  scope_note: 2026-10-10T20:36:26.166190+00:00 to 2026-10-10T20:36:32.396762+00:00;
+    log SHA-256 3257c203664bc81d236e139d08b0da071b62b645608baaa5c4ef54e8cb65d631
+- check_id: diameter-source
+  name: Verify diameter at its attached reference
+  status: unavailable
+  required: true
+  target_ids:
+  - GO:0009288
+  summary: 'Carried forward, not rerun: The source abstract does not contain the diameter
+    and the tried publisher full-text routes were inaccessible. This preserves partial
+    completion; access failure alone is not a finding.'
+evidence:
+- evidence_id: paper-01
+  kind: primary_source
+  reference: DOI:10.1016/j.cell.2020.08.016
+  locator: Primary abstract; author PDF pp. 251-253, rotational model and bidirectional
+    rotation sections
+  accessed_at: '2026-10-10T20:10:25Z'
+  snapshot_sha256: 523d65ad14bfee062c9c8d7a687dd0838b56c7943b2f25212fb9a34f25c09d94
+  support: supports
+  summary: A5B2 architecture is experimentally resolved; detailed torque steps are
+    proposed from structures and functional data, not directly filmed stator rotation.
+- evidence_id: paper-03
+  kind: primary_source
+  reference: DOI:10.1016/j.jmb.2005.07.030
+  locator: Primary abstract
+  accessed_at: '2026-10-10T20:04:44Z'
+  snapshot_sha256: 4a2f9c2a697475905e4f5faf59f098b83e929f124531d47f7e93a50ef6a1aea3
+  support: supports
+  summary: B. subtilis MotAB and MotPS have distinct H+/Na+ coupling; stator-deficient
+    cells retain flagella. Supports the curated MotP/MotS placements.
+- evidence_id: paper-07
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro1887
+  locator: Review abstract only
+  accessed_at: '2026-10-10T20:04:49Z'
+  snapshot_sha256: 648eac60aca511dba55bd983fcc746cd1c173f143b5259fa8bd78daa609ca3c6
+  support: supports
+  summary: The article concerns coupling flagellar gene regulation and assembly in
+    Gram-negative bacteria; its abstract is not a denominator-bearing bacterial prevalence
+    survey.
+- evidence_id: paper-10
+  kind: primary_source
+  reference: DOI:10.1038/s41564-020-0788-8
+  locator: 'Primary full text: stator architecture, Coupling of ion-flow to flagellar
+    rotation, discussion and methods'
+  accessed_at: '2026-10-10T20:04:55Z'
+  snapshot_sha256: 2250b535735358b44b02046731afdf6ad1fac623468bfd82d7145248b1a6b072
+  support: supports
+  summary: A5B2 structures support torque models. The authors explicitly allow either
+    processive rotation or oscillating ratchet motion; geometry does not directly
+    establish one dynamic trajectory.
+- evidence_id: paper-25
+  kind: primary_source
+  reference: DOI:10.3390/biom11020186
+  locator: 'Review full text: core export gate and Model for High-Speed Secretion
+    of Flagellin'
+  accessed_at: '2026-10-10T20:05:19Z'
+  snapshot_sha256: 2f4a7d1f075cdd8f454d354c31192a07f9373119e2cfd15a8d24fe2aaca7e911
+  support: supports
+  summary: The source states about 20,000 flagellin subunits and growth up to 20 micrometers;
+    it does not establish a 5-micrometer minimum. Export-gate composition and FliK
+    context are corroborated.
+- evidence_id: distribution
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12403147/fullTextXML
+  locator: Results phyletic distribution; Methods GTDB v95 and HMM search
+  accessed_at: '2026-10-10T20:11:14Z'
+  snapshot_sha256: 6cedc1bf8fd502b010e3123a8cd40e566506804de364f6d959a52120457af9f6
+  support: refutes
+  summary: A 30,238-genome survey across 131 phyla infers flagellar capacity in about
+    40% from FliPQR markers; not a direct microscopy census.
+- evidence_id: bypass
+  kind: primary_source
+  reference: DOI:10.1128/JB.00601-09
+  accessed_at: '2026-10-10T20:14:58Z'
+  locator: Publisher full text, Results and Discussion, Figs. 3-4, Table 1
+  support: refutes
+  summary: Salmonella SJW1103-derived C-ring deletion mutants overproducing FliI assemble
+    rare paralyzed flagella and partial basal structures. Normal function is not restored.
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/bacterial_type_flagellum.yaml
+  locator: Entire post-fix record; changed claims and preserved histories checked
+    against the preceding review
+  accessed_at: '2026-10-10T20:37:29Z'
+  support: supports
+  snapshot_sha256: 4e3e6bf50835a3134d50e5a20a87cdfa86e1e37c21085757402df7dd628095e6
+  summary: The changed claims were reread against their sources. Mapping status remains
+    PROPOSED; original history is intact and a new LLM-assisted curation event and
+    repository history describe the fixes.
+- evidence_id: prior-review
+  kind: record_content
+  reference: reviews/structured/20261010T201901Z-flagellum-whole/review.yaml
+  locator: Findings, source-access limitations and input attestation
+  accessed_at: '2026-10-10T20:37:29Z'
+  support: context_only
+  snapshot_sha256: 3cab932e9991d85a3c73a9bc99945adf6d05e8c967970ecef320c807319b2d27
+  summary: Immutable original observation. This successor resolves only its exact
+    issue keys and does not retroactively make the earlier record correct.
+assessments:
+- assessment_id: resolved-f1
+  area: quantity
+  topic: Remove or source the 5-micrometer lower bound
+  outcome: supported
+  target_ids:
+  - GO:0009288
+  evidence_ids:
+  - record
+  - paper-25
+  - prior-review
+  summary: The length is now an explicitly review-level up-to-20-micrometer example,
+    with no invented minimum or universal maximum. The source and unchanged verbatim
+    snippet support this narrower claim.
+- assessment_id: resolved-f2
+  area: evidence
+  topic: Keep proposed stator rotation labeled as a model
+  outcome: supported
+  target_ids:
+  - GO:0009288
+  evidence_ids:
+  - record
+  - paper-10
+  - paper-01
+  - prior-review
+  summary: The claim-bearing description now identifies A-ring rotation as a proposed
+    structural model and preserves ion-driven torque coupling as established. Deme
+    2020 allows rotating and oscillating models; no dynamic trajectory is asserted
+    as directly observed.
+- assessment_id: resolved-f3
+  area: graph
+  topic: Distinguish proton and sodium motive forces
+  outcome: supported
+  target_ids:
+  - GO:0009288
+  evidence_ids:
+  - record
+  - paper-03
+  - paper-10
+  - prior-review
+  summary: The graph now begins with ion motive force, explicitly H+ or Na+, and its
+    edge refers to the corresponding ion-coupled stator. The node and description
+    no longer encode sodium coupling as proton motive force.
+- assessment_id: resolved-f4
+  area: scope
+  topic: Use a supported bacterial prevalence category
+  outcome: supported
+  target_ids:
+  - GO:0009288
+  evidence_ids:
+  - record
+  - distribution
+  - paper-07
+  - prior-review
+  summary: The bacterial row is VARIABLE, with the genome-survey method and limitations
+    at the claim. The approximately 40% marker result is not presented as direct observation
+    or proof of individual-genome absence.
+- assessment_id: resolved-f5
+  area: evidence
+  topic: Qualify C-ring assembly essentiality
+  outcome: supported
+  target_ids:
+  - GO:0009288
+  evidence_ids:
+  - record
+  - bypass
+  - prior-review
+  summary: The enclosing structure now marks the intact C ring CONDITIONAL and explicitly
+    limits the bypass to engineered Salmonella mutants overproducing FliI. Rare defective
+    assembly is distinguished from restored motility; individual constituents of the
+    separate C-ring record were not reclassified.
+- assessment_id: resolved-f6
+  area: provenance
+  topic: Narrow the completed portions of the grounding TODO
+  outcome: supported
+  target_ids:
+  - GO:0009288
+  evidence_ids:
+  - record
+  - prior-review
+  summary: The open prompt and attachment list now cover only unresolved complexes.
+    Flagellin grounding and the hook label-only decision remain intact. Original rationale
+    and posed_date are unchanged, with dated current notes and a structured issue
+    link.
+findings:
+- finding_id: F1
+  issue_key: bacterial-flagellum-length-lower-bound
+  category: quantity
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Remove or source the 5-micrometer lower bound
+  description: The length is now an explicitly review-level up-to-20-micrometer example,
+    with no invented minimum or universal maximum. The source and unchanged verbatim
+    snippet support this narrower claim.
+  target_ids:
+  - GO:0009288
+  field_paths:
+  - physical_properties[1]
+  evidence_ids:
+  - record
+  - paper-25
+  - prior-review
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: major
+  normalization_reason: Material evidence/scope defect under the native rubric.
+  disposition_reason: The length is now an explicitly review-level up-to-20-micrometer
+    example, with no invented minimum or universal maximum. The source and unchanged
+    verbatim snippet support this narrower claim.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T201901Z-flagellum-whole
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2128
+- finding_id: F2
+  issue_key: bacterial-flagellum-stator-model-evidence-strength
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Keep proposed stator rotation labeled as a model
+  description: The claim-bearing description now identifies A-ring rotation as a proposed
+    structural model and preserves ion-driven torque coupling as established. Deme
+    2020 allows rotating and oscillating models; no dynamic trajectory is asserted
+    as directly observed.
+  target_ids:
+  - GO:0009288
+  field_paths:
+  - components[4].evidence[0].notes
+  - causal_graphs[0].edges[0:2]
+  evidence_ids:
+  - record
+  - paper-10
+  - paper-01
+  - prior-review
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: major
+  normalization_reason: Material evidence/scope defect under the native rubric.
+  disposition_reason: The claim-bearing description now identifies A-ring rotation
+    as a proposed structural model and preserves ion-driven torque coupling as established.
+    Deme 2020 allows rotating and oscillating models; no dynamic trajectory is asserted
+    as directly observed.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T201901Z-flagellum-whole
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2129
+- finding_id: F3
+  issue_key: bacterial-flagellum-pmf-sodium-conflation
+  category: graph
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Distinguish proton and sodium motive forces
+  description: The graph now begins with ion motive force, explicitly H+ or Na+, and
+    its edge refers to the corresponding ion-coupled stator. The node and description
+    no longer encode sodium coupling as proton motive force.
+  target_ids:
+  - GO:0009288
+  field_paths:
+  - causal_graphs[0].nodes[0]
+  - causal_graphs[0].edges[0].description
+  evidence_ids:
+  - record
+  - paper-03
+  - paper-10
+  - prior-review
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#causal-graphs
+  native_severity: major
+  normalization_reason: Material evidence/scope defect under the native rubric.
+  disposition_reason: The graph now begins with ion motive force, explicitly H+ or
+    Na+, and its edge refers to the corresponding ion-coupled stator. The node and
+    description no longer encode sodium coupling as proton motive force.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T201901Z-flagellum-whole
+    finding_id: F3
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2130
+- finding_id: F4
+  issue_key: bacterial-flagellum-bacterial-presence-common
+  category: scope
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Use a supported bacterial prevalence category
+  description: The bacterial row is VARIABLE, with the genome-survey method and limitations
+    at the claim. The approximately 40% marker result is not presented as direct observation
+    or proof of individual-genome absence.
+  target_ids:
+  - GO:0009288
+  field_paths:
+  - taxonomic_distribution[0].presence
+  - taxonomic_distribution[0].reference
+  evidence_ids:
+  - record
+  - distribution
+  - paper-07
+  - prior-review
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum.yaml
+    role: maintained scientific record
+  rule_id: src/cellstructuremech/schema/cellstructuremech.yaml#PresenceEnum
+  native_severity: major
+  normalization_reason: Material evidence/scope defect under the native rubric.
+  disposition_reason: The bacterial row is VARIABLE, with the genome-survey method
+    and limitations at the claim. The approximately 40% marker result is not presented
+    as direct observation or proof of individual-genome absence.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T201901Z-flagellum-whole
+    finding_id: F4
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2131
+- finding_id: F5
+  issue_key: bacterial-flagellum-c-ring-assembly-condition
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Qualify C-ring assembly essentiality
+  description: The enclosing structure now marks the intact C ring CONDITIONAL and
+    explicitly limits the bypass to engineered Salmonella mutants overproducing FliI.
+    Rare defective assembly is distinguished from restored motility; individual constituents
+    of the separate C-ring record were not reclassified.
+  target_ids:
+  - GO:0009288
+  field_paths:
+  - components[3].essentiality
+  evidence_ids:
+  - record
+  - bypass
+  - prior-review
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#components
+  native_severity: major
+  normalization_reason: Material evidence/scope defect under the native rubric.
+  disposition_reason: The enclosing structure now marks the intact C ring CONDITIONAL
+    and explicitly limits the bypass to engineered Salmonella mutants overproducing
+    FliI. Rare defective assembly is distinguished from restored motility; individual
+    constituents of the separate C-ring record were not reclassified.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T201901Z-flagellum-whole
+    finding_id: F5
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2132
+- finding_id: F6
+  issue_key: bacterial-flagellum-grounding-todo-stale
+  category: provenance
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Narrow the completed portions of the grounding TODO
+  description: The open prompt and attachment list now cover only unresolved complexes.
+    Flagellin grounding and the hook label-only decision remain intact. Original rationale
+    and posed_date are unchanged, with dated current notes and a structured issue
+    link.
+  target_ids:
+  - GO:0009288
+  field_paths:
+  - discussions[0].prompt
+  - discussions[0].attaches_to
+  evidence_ids:
+  - record
+  - prior-review
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#discussions
+  native_severity: minor
+  normalization_reason: Bounded misleading curation guidance; native structure identity
+    remains valid.
+  disposition_reason: The open prompt and attachment list now cover only unresolved
+    complexes. Flagellin grounding and the hook label-only decision remain intact.
+    Original rationale and posed_date are unchanged, with dated current notes and
+    a structured issue link.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T201901Z-flagellum-whole
+    finding_id: F6
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2133
+actions: []
+limitations:
+- Scoped reassessment of the listed corrected claims, not a new full-corpus review
+  or human scientific approval. Native status remains PROPOSED.
+- Original source-access limitations remain. Source snapshots and their original access
+  dates are retained; this does not claim that every source was freshly downloaded
+  again.
+- The genomic prevalence proxy does not establish observed flagellation in individual
+  genomes; the engineered assembly bypass does not establish normal motor function.
+- The full-corpus identifier checker skips 251 identifiers in unsupported namespaces.
+  Its successful exit does not certify those identifiers; scoped authority and trait
+  checks retain the earlier source qualifications.
+- This review was authored by the same agent that applied the fixes. A separate adversarial
+  PR pass is not human sign-off.
+- After the generated-only commit advanced HEAD, the saver refused the older working-tree
+  base. Inputs were re-inspected at the tested commit and every original input hash
+  was verified unchanged before this reassessment; the base was not silently refreshed.
+- An initial identifier command used unsupported --strict and exited 2; the documented
+  --check command then passed. The first local full-QC run overlapped an additional
+  correction and was stopped. The second was stopped as redundant after exact-head
+  CI succeeded; neither interrupted local run is reported as passing.
+- 'The diameter citation at Macnab 2003 remains unverified, as in the original partial
+  review and umbrella issue #171. Resolving these six supported findings does not
+  complete that literature check.'
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261010T201901Z-flagellum-whole
+  relationship: resolves exact findings

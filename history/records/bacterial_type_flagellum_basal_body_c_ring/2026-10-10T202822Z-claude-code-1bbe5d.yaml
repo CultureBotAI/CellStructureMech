@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  slug: bacterial_type_flagellum_basal_body_c_ring
+session:
+  id: 2026-10-10T202822Z-claude-code-1bbe5d
+  timestamp: '2026-10-10T20:28:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2135
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2127
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: 'Addressed adversarial issue #2135: qualified FliM/FliN assembly essentiality with
+    the engineered partial-C-ring bypass, retained the distinct FliG result, and distinguished
+    assembly from motor function.'
+  details: Re-inspected Konishi 2009 results, Figure 4 and Table 1 after independent adversarial
+    review. The native enum includes defective formation. Corrected only FliM and FliN to
+    CONDITIONAL with source-bound mutant context; FliG remains ESSENTIAL. Guarded schema validation
+    passed. Prior histories and the original erroneous supported composition assessment remain
+    immutable; 20261010T202810Z-flagellar-c-ring-adversarial records the new finding. Final
+    regression/full-QC and disposition checks follow.

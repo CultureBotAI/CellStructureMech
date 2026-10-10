@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  slug: bacterial_type_flagellum
+session:
+  id: 2026-10-10T202134Z-claude-code-090e89
+  timestamp: '2026-10-10T20:21:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2128
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2129
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2130
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2131
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2132
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2133
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2127
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - physical_properties
+  - causal_graphs
+  - discussions
+  summary: 'Addressed #2128, #2129, #2130, #2131, #2132, #2133: Remove the unsourced flagellar
+    filament length minimum; Qualify proposed stator rotation in three flagellar records;
+    Distinguish proton and sodium motive forces in the flagellum graph; Correct bacterial
+    flagellum and basal-body prevalence scope; Qualify C-ring assembly essentiality in the
+    enclosing flagellar records; Narrow the completed portions of the flagellum grounding
+    TODO.'
+  details: 'Resolved supported findings from 20261010T201901Z-flagellum-whole using inspected
+    source text and authority metadata. Wrote through the closed-schema guarded writer; retained
+    PROPOSED status, original discussions and historical events. Full QC and post-fix dispositions
+    follow separately. The whole-flagellum diameter remains unverified under #171.'

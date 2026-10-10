@@ -164,12 +164,18 @@ components:
   - fliG
   - fliM
   - fliN
-  essentiality: ESSENTIAL
+  essentiality: CONDITIONAL
   role: Cytoplasmic rotor ring; FliG engages the stator and the complex sets rotational
-    direction in response to CheY-P.
+    direction in response to CheY-P. Normally supports assembly; FliI overproduction
+    can bypass an intact C ring in engineered Salmonella mutants, producing rare,
+    nonmotile flagella with defective C-ring structures.
   evidence:
   - reference: DOI:10.1016/j.tim.2014.12.011
     notes: Minamino & Imada 2015 describe the rotor–stator interface at FliG.
+  - reference: DOI:10.1128/JB.00601-09
+    notes: Konishi et al. 2009 studied Salmonella SJW1103-derived fliG, fliM or fliN
+      deletion mutants overproducing FliI. Low-yield flagellar assembly was recovered,
+      not motility; this does not establish normal assembly without C-ring proteins.
   protein_examples:
   - uniprot_id: UniProtKB:P23448
     protein_label: Flagellar motor switch protein FliG
@@ -227,8 +233,9 @@ components:
     boundary).'
   evidence:
   - reference: DOI:10.1016/j.cell.2020.08.016
-    notes: Santiveri et al. 2020 resolve the 5:2 MotA:MotB stoichiometry and show
-      the unit rotates.
+    notes: Santiveri et al. 2020 resolve the 5:2 MotA:MotB architecture and propose
+      a rotational model; the structure does not directly observe processive MotA
+      rotation.
   - reference: DOI:10.1038/s41564-020-0788-8
     notes: Deme et al. 2020 report the same 5:2 architecture independently.
   - reference: DOI:10.7554/eLife.48979
@@ -451,10 +458,12 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
-  presence: COMMON
-  note: Widespread but repeatedly lost; some lineages (spirochaetes) keep the flagella
-    periplasmic.
-  reference: DOI:10.1038/nrmicro1887
+  presence: VARIABLE
+  note: Patchy across bacterial lineages. A survey of 30,238 representative genomes
+    across 131 phyla detected conserved FliP/Q/R markers in about 40%; this is genomic
+    evidence of flagellar capacity, not direct observation of assembled flagella or
+    proof of absence in every marker-negative genome.
+  reference: DOI:10.1073/pnas.2512476122
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
   presence: ABSENT
@@ -508,18 +517,17 @@ physical_properties:
   context: filament
   reference: DOI:10.1146/annurev.micro.57.030502.090832
 - property: LENGTH
-  value: 5-20
+  value: up to 20
   unit: UO:0000017
-  context: filament
+  context: filament; upper-length example in a review, not a universal maximum or
+    a taxon-specific measurement
   reference: DOI:10.3390/biom11020186
   evidence:
   - reference: DOI:10.3390/biom11020186
     snippet: Around 20,000 subunits of flagellin assemble to form the flagellar filament,
       which can grow up to a 20 µm in length [ 25 , 75 ].
-    notes: Verbatim from the open-access full text (PMC7911332). The source supports
-      the upper bound of the recorded 5-20 um range; the lower bound is not stated
-      here and remains unsourced. Replaces Macnab 2003, which is abstract-only and
-      does not contain the figure (#171).
+    notes: The cited review supports growth up to 20 micrometers, not a lower limit
+      of 5. The unsupported minimum has been removed; no universal size range is inferred.
 - property: ROTATION_SPEED
   value: ~100-300
   unit: UO:0000092
@@ -571,8 +579,8 @@ causal_graphs:
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
-  - node_id: pmf
-    label: proton motive force
+  - node_id: ion_motive_force
+    label: ion motive force (H+ or Na+)
     node_type: STATE
   - node_id: stator
     label: MotA5MotB2 stator unit
@@ -595,21 +603,29 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0071973
   edges:
-  - subject: pmf
+  - subject: ion_motive_force
     predicate: powers
     object: stator
-    description: Proton (or sodium) flux through the MotA/MotB channel drives rotation
-      of the MotA pentamer around MotB.
+    description: An electrochemical H+ or Na+ gradient powers torque generation through
+      the corresponding ion-coupled stator. MotA-ring rotation around MotB is a proposed
+      coupling model.
     evidence:
     - reference: DOI:10.1016/j.cell.2020.08.016
       notes: Santiveri et al. 2020 propose ion flow rotates MotA around the MotB dimer.
+    - reference: DOI:10.1038/s41564-020-0788-8
+      notes: Deme et al. 2020 distinguish proton- and sodium-coupled stators and use
+        MotA/MotB as generic subunit names. Sodium motive force is not proton motive
+        force.
   - subject: stator
     predicate: applies torque to
     object: c_ring
-    description: The rotating MotA ring engages FliG at the rim of the C ring.
+    description: Ion-coupled stator A-subunit motions apply torque to FliG at the
+      C-ring rim. Processive A-ring rotation is a proposed model; the cited structure
+      also permits an oscillating ratchet.
     evidence:
     - reference: DOI:10.1038/s41564-020-0788-8
-      notes: Deme et al. 2020 model the stator as a gear meshing with FliG.
+      notes: Deme et al. 2020 propose rotating and oscillating MotA models compatible
+        with the A5B2 structure; this does not directly establish either dynamic trajectory.
   - subject: c_ring
     predicate: drives
     object: rotation
@@ -637,17 +653,28 @@ causal_graphs:
       notes: Berg 2003.
 discussions:
 - discussion_id: component_groundings
-  prompt: Assign InterPro family groundings to each protein component (flagellin,
-    FlgE, FliF, FliG/M/N, MotA/MotB, rod, FlgH/I, fT3SS).
+  prompt: Resolve exact source-neutral family or complex groundings for the MS ring,
+    C ring, stator, rod, LP rings and membrane export gate.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#flagellin
+  - components#ms_ring
+  - components#c_ring
   - components#stator
+  - components#rod
+  - components#lp_rings
+  - components#export_apparatus
   rationale: Groundings were deliberately left blank rather than guessed; verify each
     accession against InterPro before adding.
   posed_by: claude
   posed_date: '2026-08-29'
+  notes: '2026-10-10: Flagellin is grounded to IPR001492; the hook has a documented
+    REVIEWED_LABEL_ONLY decision. Those completed decisions are not reopened by this
+    remaining-work prompt.'
+  evidence:
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2133
+    notes: Scope the outstanding grounding task without changing the original rationale
+      or posed date.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-29T00:00:00Z'
@@ -790,6 +817,16 @@ curation_history:
   changes: 'Resolved #289 by adding GO:0009421 as a direct has_part of the enclosing
     bacterial-type flagellum after moving the FliD/HAP2 cap out of the GO:0009420
     filament boundary.'
+  llm_assisted: true
+- timestamp: '2026-10-10T20:21:31Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #2128, #2129, #2130, #2131, #2132, #2133: Remove the unsourced
+    flagellar filament length minimum; Qualify proposed stator rotation in three flagellar
+    records; Distinguish proton and sodium motive forces in the flagellum graph; Correct
+    bacterial flagellum and basal-body prevalence scope; Qualify C-ring assembly essentiality
+    in the enclosing flagellar records; Narrow the completed portions of the flagellum
+    grounding TODO.'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307

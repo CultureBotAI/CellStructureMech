@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  slug: bacterial_type_flagellum_basal_body_c_ring
+session:
+  id: 2026-10-10T202138Z-claude-code-ffe768
+  timestamp: '2026-10-10T20:21:38Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2129
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2134
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2127
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  - discussions
+  summary: 'Addressed #2129, #2134: Qualify proposed stator rotation in three flagellar records;
+    Correct the C-ring FliY grounding rationale without erasing history.'
+  details: 'Resolved supported findings from 20261010T201915Z-flagellum-c-ring using inspected
+    source text and authority metadata. Wrote through the closed-schema guarded writer; retained
+    PROPOSED status, original discussions and historical events. Full QC and post-fix dispositions
+    follow separately. The whole-flagellum diameter remains unverified under #171.'
