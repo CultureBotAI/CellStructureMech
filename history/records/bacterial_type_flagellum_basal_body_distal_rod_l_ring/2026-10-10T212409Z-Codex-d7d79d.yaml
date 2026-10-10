@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+  slug: bacterial_type_flagellum_basal_body_distal_rod_l_ring
+session:
+  id: 2026-10-10T212409Z-Codex-d7d79d
+  timestamp: '2026-10-10T21:24:09Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2139
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  summary: Match the L-ring synonym scope to current GO; do not alter the P-ring related synonym.
+  details: Resolves findings from reviews/structured/20261010T212148Z-flagellar-distal-rod-l-ring-audit/review.yaml.
+    Match the L-ring synonym scope to current GO; do not alter the P-ring related synonym.
+    Sources were inspected before curation; source-access limits remain in the original review.
+    Guarded closed-schema write passed. PROPOSED retained; this is not human approval.

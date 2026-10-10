@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_p_ring.yaml
+  slug: bacterial_type_flagellum_basal_body_distal_rod_p_ring
+session:
+  id: 2026-10-10T212411Z-Codex-81622c
+  timestamp: '2026-10-10T21:24:11Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2140
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - components
+  - functions
+  - taxonomic_distribution
+  summary: Remove LP-dependent P-ring exclusion using bounded Borrelia imaging evidence; explicitly
+    scope the LP-bushing functions and graph to Salmonella. Preserve FlgI essentiality and
+    copy count.
+  details: Resolves findings from reviews/structured/20261010T212149Z-flagellar-distal-rod-p-ring-audit/review.yaml.
+    Remove LP-dependent P-ring exclusion using bounded Borrelia imaging evidence; explicitly
+    scope the LP-bushing functions and graph to Salmonella. Preserve FlgI essentiality and
+    copy count. Sources were inspected before curation; source-access limits remain in the
+    original review. Guarded closed-schema write passed. PROPOSED retained; this is not human
+    approval.

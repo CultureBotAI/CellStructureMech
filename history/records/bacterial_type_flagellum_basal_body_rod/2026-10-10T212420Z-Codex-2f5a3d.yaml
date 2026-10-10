@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_rod.yaml
+  slug: bacterial_type_flagellum_basal_body_rod
+session:
+  id: 2026-10-10T212420Z-Codex-2f5a3d
+  timestamp: '2026-10-10T21:24:20Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2144
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2145
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  summary: Replace unsupported majority bacterial prevalence with lineage-dependent occurrence
+    and an explicitly qualified genomic survey. Ground FliE to verified IPR001624/P26462 while
+    retaining the earlier label-only rationale and leaving FlgF unchanged.
+  details: Resolves findings from reviews/structured/20261010T212155Z-flagellar-rod-audit/review.yaml.
+    Replace unsupported majority bacterial prevalence with lineage-dependent occurrence and
+    an explicitly qualified genomic survey. Ground FliE to verified IPR001624/P26462 while
+    retaining the earlier label-only rationale and leaving FlgF unchanged. Sources were inspected
+    before curation; source-access limits remain in the original review. Guarded closed-schema
+    write passed. PROPOSED retained; this is not human approval.

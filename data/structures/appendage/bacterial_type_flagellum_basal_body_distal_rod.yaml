@@ -48,6 +48,12 @@ curation_history:
   changes: '#1233: replaced unreadable Homma and Macnab basal-body distal-rod evidence
     with reachable Saijo-Hamano, Johnson, and Yamaguchi evidence.'
   llm_assisted: true
+- timestamp: '2026-10-10T21:24:04Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2138: Replace unsupported majority bacterial prevalence with lineage-dependent
+    occurrence and an explicitly qualified genomic survey.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, distal rod
   synonym_type: EXACT_SYNONYM
@@ -95,10 +101,12 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
-  presence: COMMON
-  note: Distal rods occur in bacterial-type flagellar basal bodies but are absent
-    from bacteria without flagellar loci.
-  reference: DOI:10.1038/nrmicro1887
+  presence: VARIABLE
+  note: Distal rods belong to bacterial-type flagellar systems, whose occurrence is
+    lineage-dependent. A reference-genome survey found FliPQR markers in approximately
+    40% of 30,238 genomes spanning 131 bacterial phyla. This is a genomic proxy, not
+    direct observation or a prevalence estimate for this particular rod/ring structure.
+  reference: DOI:10.1073/pnas.2512476122
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
   presence: ABSENT

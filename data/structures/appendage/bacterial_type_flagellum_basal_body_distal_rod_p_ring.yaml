@@ -48,6 +48,13 @@ curation_history:
     specific P-ring composition, bushing, and graph claims remain supported by Jones
     1989 and Yamaguchi 2021 evidence.'
   llm_assisted: true
+- timestamp: '2026-10-10T21:24:09Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2140: Remove LP-dependent P-ring exclusion using bounded Borrelia imaging
+    evidence; explicitly scope the LP-bushing functions and graph to Salmonella. Preserve
+    FlgI essentiality and copy count.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, distal rod, P ring
   synonym_type: RELATED_SYNONYM
@@ -67,13 +74,18 @@ components:
   - flgI
   stoichiometry: 26 subunits in the Salmonella P ring
   essentiality: ESSENTIAL
-  role: Oligomerizes into the peptidoglycan-embedded P ring of the LP-ring bushing.
+  role: In Salmonella, oligomerizes into the peptidoglycan-associated P ring of the
+    LP-ring bushing.
   evidence:
   - reference: DOI:10.1128/jb.171.7.3890-3900.1989
     notes: Jones et al. 1989 identified FlgI as the Salmonella P-ring protein.
   - reference: DOI:10.1038/s41467-021-24715-3
     notes: Yamaguchi et al. 2021 resolved Salmonella FlgI as the P-ring subunit in
       the LP-ring bushing.
+  - reference: DOI:10.1128/JB.00340-09
+    notes: Borrelia burgdorferi flgI insertion mutants lose the P-ring torus seen
+      by cryo-electron tomography, while a downstream flgJ control retains it. Mutant
+      motility is not evidence that the P ring forms without FlgI.
   protein_examples:
   - uniprot_id: UniProtKB:P15930
     protein_label: Flagellar P-ring protein
@@ -96,9 +108,11 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   presence: VARIABLE
-  note: FlgI P rings occur in Gram-negative bacterial-type flagellar basal bodies
-    and are absent from bacteria that lack LP-ring-bearing flagella.
-  reference: DOI:10.1038/nrmicro1887
+  note: P-ring occurrence varies among bacterial flagellar systems and does not require
+    an L ring. In-situ tomography identified a FlgI-associated P ring in Borrelia
+    burgdorferi despite absence of the L ring; this observation does not imply identical
+    P-ring localization or function in every lineage.
+  reference: DOI:10.1038/emboj.2011.186
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
   presence: ABSENT
@@ -114,16 +128,17 @@ canonical_examples:
 functions:
 - function_id: peptidoglycan_bushing_anchor
   label: peptidoglycan bushing anchoring
-  description: The P ring associates with the peptidoglycan layer and provides the
-    peptidoglycan-side portion of the LP-ring bushing around the distal rod.
+  description: In Salmonella, the P ring associates with the peptidoglycan layer and
+    provides the peptidoglycan-side portion of the LP-ring bushing around the distal
+    rod.
   evidence:
   - reference: DOI:10.1038/s41467-021-24715-3
     notes: Yamaguchi et al. 2021 placed the Salmonella FlgI P ring in the peptidoglycan-proximal
       part of the LP ring.
 - function_id: lp_ring_bushing_support
   label: LP-ring bushing support
-  description: Together with the L ring, the P ring forms a bushing that surrounds
-    the distal rod and supports rotation of the flagellar drive shaft.
+  description: In Salmonella, together with the L ring, the P ring forms a bushing
+    that surrounds the distal rod and supports rotation of the flagellar drive shaft.
   evidence:
   - reference: DOI:10.1038/s41467-021-24715-3
     notes: Yamaguchi et al. 2021 structurally resolved the LP ring around the distal
@@ -146,10 +161,10 @@ evidence:
     flagellar motor.
 causal_graphs:
 - graph_id: flgi_p_ring_bushing
-  title: FlgI builds the peptidoglycan P-ring bushing
-  description: FlgI oligomers form the P ring around the distal rod. The P ring associates
-    with peptidoglycan and cooperates with the L ring to make the LP-ring bushing
-    that supports flagellar rod rotation.
+  title: FlgI builds the peptidoglycan P-ring bushing in Salmonella
+  description: 'Salmonella LP-ring architecture: FlgI oligomers form the P ring around
+    the distal rod. The P ring associates with peptidoglycan and cooperates with the
+    L ring to make the LP-ring bushing that supports flagellar rod rotation.'
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
@@ -188,16 +203,16 @@ causal_graphs:
   - subject: p_ring
     predicate: associates with
     object: peptidoglycan_layer
-    description: The P ring forms the peptidoglycan-associated portion of the LP-ring
-      bushing.
+    description: In Salmonella, the P ring forms the peptidoglycan-associated portion
+      of the LP-ring bushing.
     evidence:
     - reference: DOI:10.1038/s41467-021-24715-3
       notes: Yamaguchi et al. 2021 placed the FlgI P ring at the peptidoglycan layer.
   - subject: p_ring
     predicate: forms part of
     object: lp_ring
-    description: The P ring contributes the peptidoglycan-side layer of the LP-ring
-      bushing.
+    description: In Salmonella, the P ring contributes the peptidoglycan-side layer
+      of the LP-ring bushing.
     evidence:
     - reference: DOI:10.1038/s41467-021-24715-3
       notes: Yamaguchi et al. 2021 resolved FlgI as the P-ring half of the Salmonella
@@ -205,7 +220,8 @@ causal_graphs:
   - subject: l_ring
     predicate: forms part of
     object: lp_ring
-    description: The L ring contributes the outer-membrane layer of the LP-ring bushing.
+    description: In Salmonella, the L ring contributes the outer-membrane layer of
+      the LP-ring bushing.
     evidence:
     - reference: DOI:10.1038/s41467-021-24715-3
       notes: Yamaguchi et al. 2021 resolved FlgH as the L-ring half of the Salmonella
@@ -213,7 +229,7 @@ causal_graphs:
   - subject: lp_ring
     predicate: surrounds
     object: distal_rod
-    description: The LP ring encircles the distal basal-body rod.
+    description: In Salmonella, the LP ring encircles the distal basal-body rod.
     evidence:
     - reference: DOI:10.1038/s41467-021-24715-3
       notes: Yamaguchi et al. 2021 resolved the LP ring as the bushing around the
@@ -221,8 +237,8 @@ causal_graphs:
   - subject: lp_ring
     predicate: supports
     object: distal_rod
-    description: The LP-ring bushing supports high-speed rotation of the distal basal-body
-      rod.
+    description: In Salmonella, the LP-ring bushing supports high-speed rotation of
+      the distal basal-body rod.
     evidence:
     - reference: DOI:10.1038/s41467-021-24715-3
       notes: Yamaguchi et al. 2021 described the LP ring as the molecular bushing

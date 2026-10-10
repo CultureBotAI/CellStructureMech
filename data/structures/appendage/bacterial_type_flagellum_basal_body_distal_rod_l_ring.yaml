@@ -42,9 +42,15 @@ curation_history:
     specific L-ring composition, bushing, and graph claims remain supported by Jones
     1989 and Yamaguchi 2021 evidence.'
   llm_assisted: true
+- timestamp: '2026-10-10T21:24:07Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2139: Match the L-ring synonym scope to current GO; do not alter the
+    P-ring related synonym.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, distal rod, L ring
-  synonym_type: RELATED_SYNONYM
+  synonym_type: EXACT_SYNONYM
   source: GO:0009427
 - synonym_text: flagellin-based flagellum basal body, distal rod, L ring
   synonym_type: EXACT_SYNONYM

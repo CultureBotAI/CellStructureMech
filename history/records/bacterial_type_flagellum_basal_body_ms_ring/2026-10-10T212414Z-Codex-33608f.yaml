@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_ms_ring.yaml
+  slug: bacterial_type_flagellum_basal_body_ms_ring
+session:
+  id: 2026-10-10T212414Z-Codex-33608f
+  timestamp: '2026-10-10T21:24:14Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2141
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  summary: Replace unsupported majority bacterial prevalence with lineage-dependent occurrence
+    and an explicitly qualified genomic survey.
+  details: Resolves findings from reviews/structured/20261010T212151Z-flagellar-ms-ring-audit/review.yaml.
+    Replace unsupported majority bacterial prevalence with lineage-dependent occurrence and
+    an explicitly qualified genomic survey. Sources were inspected before curation; source-access
+    limits remain in the original review. Guarded closed-schema write passed. PROPOSED retained;
+    this is not human approval.
