@@ -1,0 +1,572 @@
+schema_version: 1.0.0
+review_id: 20261010T201908Z-flagellum-basal-body
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Bacterial-type flagellum basal body: evidence and scope audit'
+started_at: '2026-10-10T20:03:39Z'
+finished_at: '2026-10-10T20:19:08Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent scientific audit; not independent human review or
+    native status promotion.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Issue-bearing claim-level audit of this record. All present material sections
+  assessed with the source-access qualifications below; findings require curation.
+source:
+  git_revision: 49e9ce6b5cbdabce9787d1f51ff09702f306eb61
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+    sha256: f20a2e1c8a4063e45b38ef94d78e46e2f33c65d25d1c21bbba092dc572edf12c
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/bacterial_type_flagellum_basal_body/2026-09-07T012825Z-claude-740574.yaml
+    sha256: 483ac7140c7c5906ace3a57f29df8b68ecda793c1cabfe1536d56aac989e70bc
+    role: context
+  - path: history/records/bacterial_type_flagellum_basal_body/2026-09-08T065716Z-claude-a18230.yaml
+    sha256: b53c877fd746fa0c453d460e41ed02dbb690ffc873b7754d65a08fb57dac287d
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0009425
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+  label: bacterial-type flagellum basal body
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+    role: maintained scientific record
+scope:
+  description: Single maintained structure, all present fields and both history surfaces.
+    No native edits, generators or GitHub mutations.
+  selection: 'Next sequential unassessed target in the all-record operational worklist:
+    data/structures/appendage/bacterial_type_flagellum_basal_body.yaml'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009425
+checks:
+- check_id: schema
+  name: Fresh focused schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009425
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The unchanged target passed.
+  scope_note: 2026-10-10T20:03:48Z to 2026-10-10T20:03:50Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: Fresh focused strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009425
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The unchanged target passed.
+  scope_note: 2026-10-10T20:03:50Z to 2026-10-10T20:03:54Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: traits
+  name: traits verification
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009425
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 10 corpus links match the live index; this target asserts no trait
+    link.
+  scope_note: 2026-10-10T20:08:54.933165+00:00 to 2026-10-10T20:09:17.745540+00:00;
+    log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: ci
+  name: ci verification
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009425
+  command: gh api 'repos/CultureBotAI/CellStructureMech/actions/runs?head_sha=49e9ce6b5cbdabce9787d1f51ff09702f306eb61&event=push&per_page=10'
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Reused successful exact-revision CI at 49e9ce6b: full QC 38081538245,
+    labels 38081538303, identifier-liveness 38081538327, vendored sync 38081538243,
+    merge integrity 38081538330. Native inputs are unchanged; not newly executed local
+    full QC.'
+  scope_note: 2026-10-10T20:09:17.745876+00:00 to 2026-10-10T20:09:18.295687+00:00;
+    log SHA-256 ae2e01f6f7986856204e1ace507e79136878449550b537b4020f3e5244605a35
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+  locator: Entire YAML; native schema enums; append-only histories; full hidden/ignored
+    review search
+  accessed_at: '2026-10-10T20:14:58Z'
+  support: context_only
+  summary: Input hashes captured before assessment; all present sections and history
+    entries read; status PROPOSED retained. No earlier structured bundle for this
+    target found in the searched reviews/reports roots, including ignored files.
+- evidence_id: paper-00
+  kind: primary_source
+  reference: DOI:10.1016/0022-2836(92)90958-m
+  locator: Primary abstract
+  accessed_at: '2026-10-10T20:04:42Z'
+  snapshot_sha256: ed51549b0c8aba6074ccf23c7373a0e3b920cb77a35c5815e6719832e83f66a4
+  support: supports
+  summary: Salmonella assembly intermediates establish autonomous MS-ring formation
+    and cooperative FliE/FlgB/FlgC/FlgF/FlgG rod assembly.
+- evidence_id: paper-02
+  kind: primary_source
+  reference: DOI:10.1016/j.cell.2021.03.057
+  locator: Primary abstract
+  accessed_at: '2026-10-10T20:04:43Z'
+  snapshot_sha256: 7cad5919d0b75e34ceeeece1f50d2ee4b418b5f4124d3ff2f3c638ba9e17a79f
+  support: supports
+  summary: Cryo-EM identifies the Salmonella MS-ring-to-rod structural couplings and
+    LP-ring contact; supports bounded torque-transmission wording.
+- evidence_id: paper-04
+  kind: primary_source
+  reference: DOI:10.1016/j.tim.2014.12.011
+  locator: Review abstract only
+  accessed_at: '2026-10-10T20:04:45Z'
+  snapshot_sha256: ad98d7055c7f2495697e3a5f0856dc19cc1d09131e19e34f31215db0b0238c43
+  support: supports
+  summary: The cited review covers conserved MS ring, C ring, rod and export apparatus,
+    ion-powered motors, and Salmonella/Vibrio structural diversity; detailed unseen
+    text is not certified.
+- evidence_id: paper-07
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro1887
+  locator: Review abstract only
+  accessed_at: '2026-10-10T20:04:49Z'
+  snapshot_sha256: 648eac60aca511dba55bd983fcc746cd1c173f143b5259fa8bd78daa609ca3c6
+  support: supports
+  summary: The article concerns coupling flagellar gene regulation and assembly in
+    Gram-negative bacteria; its abstract is not a denominator-bearing bacterial prevalence
+    survey.
+- evidence_id: paper-08
+  kind: primary_source
+  reference: DOI:10.1038/s41467-021-24507-9
+  locator: 'Primary full text: introduction, native MS/C-ring results, Fig. 1, discussion
+    and strain methods'
+  accessed_at: '2026-10-10T20:04:51Z'
+  snapshot_sha256: 602f3eb50f5f81de1ffa522838f21c064653d23f5bf5e86553ee6c0213017a43
+  support: supports
+  summary: Native Salmonella MS ring has 34 FliF subunits in the studied preparation;
+    C-ring symmetry varies. MS-ring scaffold and export-gate housing are supported.
+- evidence_id: paper-09
+  kind: primary_source
+  reference: DOI:10.1038/s41467-021-24715-3
+  locator: 'Primary full text: results, Figs. 1-4 and methods'
+  accessed_at: '2026-10-10T20:04:53Z'
+  snapshot_sha256: 276579bf73c6911c33fc38b5105f2a1c9f955bd49503b59ec62630f0b9580f00
+  support: supports
+  summary: Salmonella FlgH L ring and FlgI P ring surround the distal rod as an envelope
+    bushing; assignments and topology agree.
+- evidence_id: paper-10
+  kind: primary_source
+  reference: DOI:10.1038/s41564-020-0788-8
+  locator: 'Primary full text: stator architecture, Coupling of ion-flow to flagellar
+    rotation, discussion and methods'
+  accessed_at: '2026-10-10T20:04:55Z'
+  snapshot_sha256: 2250b535735358b44b02046731afdf6ad1fac623468bfd82d7145248b1a6b072
+  support: supports
+  summary: A5B2 structures support torque models. The authors explicitly allow either
+    processive rotation or oscillating ratchet motion; geometry does not directly
+    establish one dynamic trajectory.
+- evidence_id: paper-11
+  kind: primary_source
+  reference: DOI:10.1038/s41564-021-00895-y
+  locator: 'Author manuscript full text via NCBI BioC: introduction, basal-body results
+    and model-building methods'
+  accessed_at: '2026-10-10T20:06:39Z'
+  snapshot_sha256: f3634f84b0d0fdcebd3677b2080c1ec5064e9feac3199142d2adbcc1e01c501b
+  support: supports
+  summary: Intact Salmonella basal-body reconstructions support the envelope-spanning
+    MS-ring, rod, export gate and LP-ring assembly, without making all bacterial architectures
+    identical.
+- evidence_id: paper-23
+  kind: primary_source
+  reference: DOI:10.1146/annurev.micro.57.030502.090832
+  locator: Review abstract only
+  accessed_at: '2026-10-10T20:05:14Z'
+  snapshot_sha256: 68caf42cabe3749c93733a366e2bda96e3fb414eb0f71a846df6d91eb67b7f58
+  support: supports
+  summary: Axial proteins are exported by a flagellar type III pathway and assemble
+    distally. Its accessible abstract does not verify the native ~20 nm diameter.
+- evidence_id: paper-24
+  kind: primary_source
+  reference: DOI:10.3389/fmicb.2015.00023
+  locator: 'Review full text: historical structural comparison and archaellum distinction'
+  accessed_at: '2026-10-10T20:05:15Z'
+  snapshot_sha256: c2cec0461a17865f7242ef36df178bfc68d00c1f1e292b75f9682a6ba5461464
+  support: supports
+  summary: Archaella have a distinct type-IV-filament-related architecture, not the
+    bacterial flagellar apparatus; supports the bounded structural distinction, not
+    an exhaustive new archaeal survey.
+- evidence_id: paper-26
+  kind: primary_source
+  reference: DOI:10.7554/elife.48979
+  locator: 'Primary full text: stator-deletion results, Fig. 1, tomography comparison'
+  accessed_at: '2026-10-10T20:05:22Z'
+  snapshot_sha256: bf6a96bd205a6cbaea786a35c1c2c68367f8d7f97ddddea875c45760113e1b68
+  support: supports
+  summary: Borrelia motA/motB mutants retain paralyzed flagella and motor substructures;
+    supports assembly dispensability of the stator, not normal motor function.
+- evidence_id: go-0009288
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009288
+  locator: Exact OLS GO identifier, definition, synonyms, obsolete flag
+  accessed_at: '2026-10-10T20:05:35Z'
+  snapshot_sha256: d92c7515a86c21f7570660976b4f66561598d312ef830aae7d4b6dfdd328cf21
+  support: supports
+  summary: Exact active structure or process identity checked. GO:0120101 retains
+    an outdated A4B2 definition upstream; the native record does not adopt that stoichiometry.
+- evidence_id: go-0009425
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009425
+  locator: Exact OLS GO identifier, definition, synonyms, obsolete flag
+  accessed_at: '2026-10-10T20:05:38Z'
+  snapshot_sha256: ba237444d9aaed5133ec4da342e0d2d5392ac51591dcbc7fe9f7e8db9127df26
+  support: supports
+  summary: Exact active structure or process identity checked. GO:0120101 retains
+    an outdated A4B2 definition upstream; the native record does not adopt that stoichiometry.
+- evidence_id: taxon-2
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/2.json
+  locator: Active taxonomy identity, rank and parent
+  accessed_at: '2026-10-10T20:05:44Z'
+  snapshot_sha256: 8074c9bcd59cd4da1da4bc9ec98c040bbecd52ef5c91c4c4bb9bed0f3a7cb5a9
+  support: supports
+  summary: Authority identity and exemplar/lineage relationship inspected; authority
+    metadata is not experimental evidence of occurrence.
+- evidence_id: taxon-2157
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/2157.json
+  locator: Active taxonomy identity, rank and parent
+  accessed_at: '2026-10-10T20:05:44Z'
+  snapshot_sha256: 14f5852a1db0f9f5ef8d60e4a11c1916bf005bf549c57dd4bc860d39194a1799
+  support: supports
+  summary: Authority identity and exemplar/lineage relationship inspected; authority
+    metadata is not experimental evidence of occurrence.
+- evidence_id: taxon-90371
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/90371.json
+  locator: Active taxonomy identity, rank and parent
+  accessed_at: '2026-10-10T20:05:47Z'
+  snapshot_sha256: 46c958747209e78a835996643e63aafb6d1e94a8a632f0094dba733eb1bd3dee
+  support: supports
+  summary: Authority identity and exemplar/lineage relationship inspected; authority
+    metadata is not experimental evidence of occurrence.
+- evidence_id: taxon-99287
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/99287.json
+  locator: Active taxonomy identity, rank and parent
+  accessed_at: '2026-10-10T20:05:47Z'
+  snapshot_sha256: 107ebfece75c5a7147abe7547dec9166f87ff267e6cbc3f67bea9ab9df694a59
+  support: supports
+  summary: Authority identity and exemplar/lineage relationship inspected; authority
+    metadata is not experimental evidence of occurrence.
+- evidence_id: sl
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0142.json
+  locator: Name, definition, synonyms, GO cross-reference and parthood
+  accessed_at: '2026-10-10T20:06:05Z'
+  snapshot_sha256: 1ecac0a009b4b9dc189d92f04e605b1b3467ad8a153a0e25ce5531075c247861
+  support: supports
+  summary: Exact flagellum/basal-body equivalence and component topology supported.
+- evidence_id: distribution
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12403147/fullTextXML
+  locator: Results phyletic distribution; Methods GTDB v95 and HMM search
+  accessed_at: '2026-10-10T20:11:14Z'
+  snapshot_sha256: 6cedc1bf8fd502b010e3123a8cd40e566506804de364f6d959a52120457af9f6
+  support: refutes
+  summary: A 30,238-genome survey across 131 phyla infers flagellar capacity in about
+    40% from FliPQR markers; not a direct microscopy census.
+- evidence_id: bypass
+  kind: primary_source
+  reference: DOI:10.1128/JB.00601-09
+  accessed_at: '2026-10-10T20:14:58Z'
+  locator: Publisher full text, Results and Discussion, Figs. 3-4, Table 1
+  support: refutes
+  summary: Salmonella SJW1103-derived C-ring deletion mutants overproducing FliI assemble
+    rare paralyzed flagella and partial basal structures. Normal function is not restored.
+- evidence_id: imodulondb
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Official kg-microbe-sources datasets and fliG searches
+  accessed_at: '2026-10-10T20:14:58Z'
+  support: context_only
+  summary: 'The 28-dataset inventory includes all three model organisms. fliG hits:
+    s_enterica/core/STM1970, b_subtilis/modulome/BSU_16220, e_coli/precise_mg1655/b1939.
+    No iModulon hit; gene identity context only, not assembly or localization evidence.'
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Identity, hierarchy and boundary
+  outcome: supported
+  target_ids:
+  - GO:0009425
+  evidence_ids:
+  - record
+  - go-0009288
+  - go-0009425
+  summary: GO:0009425 denotes the envelope-spanning basal-body subassembly, not a
+    lone protein or phenotype. Its parthood in the whole flagellum and its constituent
+    MS ring, C ring, stators, rod, LP rings and membrane export gate are consistent
+    with this boundary.
+- assessment_id: composition
+  area: evidence
+  topic: Every component, assembly essentiality and quantities
+  outcome: concern
+  target_ids:
+  - GO:0009425
+  evidence_ids:
+  - record
+  - paper-00
+  - paper-08
+  - paper-10
+  - paper-26
+  - bypass
+  - paper-02
+  - paper-09
+  - paper-11
+  summary: Membership, MS-ring scaffold, axial rod, LP bushing, five-protein membrane
+    gate and dispensable stator are supported. C-ring ESSENTIAL needs a condition-bound
+    assembly qualification. The 34-FliF statement is explicitly native Salmonella
+    and source-bound; later recombinant symmetry differences do not refute that bounded
+    result.
+- assessment_id: taxonomy
+  area: scope
+  topic: Both distribution rows and canonical examples
+  outcome: concern
+  target_ids:
+  - GO:0009425
+  evidence_ids:
+  - record
+  - distribution
+  - paper-24
+  - paper-11
+  summary: Examples and the bacterial/archaellum distinction are supported. COMMON
+    means most members under the native schema, stronger than the evidence supports;
+    VARIABLE is the conservative correction.
+  dimensions:
+  - name: survey-method
+    value: Genomic proxy, not observed flagellation
+    definition: Limits on interpreting population evidence
+    evidence_ids:
+    - distribution
+- assessment_id: function-graph
+  area: graph
+  topic: Functions and every causal edge
+  outcome: concern
+  target_ids:
+  - GO:0009425
+  evidence_ids:
+  - record
+  - paper-10
+  - paper-02
+  - paper-08
+  - paper-09
+  summary: All seven edges checked. Assembly scaffold, ring topology, export, rod
+    bushing and rotor coupling are supported; the stator-to-C-ring edge promotes a
+    proposed MotA rotation model to unqualified mechanism.
+- assessment_id: status
+  area: provenance
+  topic: Discussions, lifecycle and optional fields
+  outcome: supported
+  target_ids:
+  - GO:0009425
+  evidence_ids:
+  - record
+  summary: PROPOSED and append-only history are appropriate. No optional absent image,
+    dataset, trait, pathway or composition field is treated as a defect. The open
+    grounding TODO is an explicit uncertainty, not a guessed accession.
+findings:
+- finding_id: F1
+  issue_key: flagellar-basal-body-stator-model-evidence-strength
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Keep proposed stator rotation labeled as a model
+  description: The prose asserts MotA/PomA-subunit rotation as an established mechanical
+    step. The cited 2020 structural studies propose this trajectory; Deme also permits
+    an oscillating ratchet. Preserve the resolved A5B2 architecture and experimentally
+    supported torque coupling without upgrading the dynamic model.
+  target_ids:
+  - GO:0009425
+  field_paths:
+  - causal_graphs[0].edges[5]
+  evidence_ids:
+  - record
+  - paper-10
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: major
+  normalization_reason: Material evidence/scope defect under the native rubric.
+- finding_id: F2
+  issue_key: flagellar-basal-body-bacterial-presence-common
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Use a supported bacterial prevalence category
+  description: COMMON encodes presence in most bacteria, while the note is only conditional/widespread.
+    The inspected genomic survey does not support a majority. Use VARIABLE with its
+    evidence limits.
+  target_ids:
+  - GO:0009425
+  field_paths:
+  - taxonomic_distribution[0].presence
+  - taxonomic_distribution[0].reference
+  evidence_ids:
+  - record
+  - distribution
+  - paper-07
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+    role: maintained scientific record
+  rule_id: src/cellstructuremech/schema/cellstructuremech.yaml#PresenceEnum
+  native_severity: major
+  normalization_reason: Material evidence/scope defect under the native rubric.
+- finding_id: F3
+  issue_key: flagellar-basal-body-c-ring-assembly-condition
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Qualify C-ring assembly essentiality
+  description: Unqualified ESSENTIAL omits the experimentally demonstrated FliI-overproduction
+    bypass. Encode condition-dependent assembly, preserving mutant and partial-structure
+    scope and the lack of restored motility.
+  target_ids:
+  - GO:0009425
+  field_paths:
+  - components[1].essentiality
+  evidence_ids:
+  - record
+  - bypass
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#components
+  native_severity: major
+  normalization_reason: Material evidence/scope defect under the native rubric.
+actions:
+- action_id: A1
+  description: Keep proposed stator rotation labeled as a model
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009425
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+    role: maintained scientific record
+  generator: just text-embeddings-refresh; just render
+  acceptance_checks:
+  - Qualify the dynamic model in the claim-bearing description itself, or attach and
+    inspect primary evidence that directly establishes that stronger claim. Do not
+    imply that stator torque or A5B2 stoichiometry is merely hypothetical.
+  - Use guarded writer and append both histories; preserve PROPOSED and unrelated
+    content. Run strict, labels, traits, history, QC and review-contract gates.
+- action_id: A2
+  description: Use a supported bacterial prevalence category
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0009425
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+    role: maintained scientific record
+  generator: just text-embeddings-refresh; just render
+  acceptance_checks:
+  - Preserve patchy taxon/strain scope; do not turn a genomic proxy into direct observation
+    or absence proof.
+  - Use guarded writer and append both histories; preserve PROPOSED and unrelated
+    content. Run strict, labels, traits, history, QC and review-contract gates.
+- action_id: A3
+  description: Qualify C-ring assembly essentiality
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0009425
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+    role: maintained scientific record
+  generator: just text-embeddings-refresh; just render
+  acceptance_checks:
+  - Prefer CONDITIONAL with explicit bypass context. Do not equate defective flagella
+    with a functional motor or automatically reclassify every component of the separate
+    C-ring record.
+  - Use guarded writer and append both histories; preserve PROPOSED and unrelated
+    content. Run strict, labels, traits, history, QC and review-contract gates.
+limitations:
+- This is one record, not corpus-wide scientific approval. Native records, histories
+  and generated pages were not edited; no GitHub issue was created by this audit.
+- Full deterministic gates reuse verified successful CI at the unchanged durable main
+  commit. Focused schema/strict and live trait checks were rerun; passing them does
+  not establish biological truth.
+- All cited DOI metadata and applicable authority identities were checked. Several
+  older papers were accessible only as primary/review abstracts. Narrow claims supported
+  there are assessed; unseen experimental detail is not certified.
+- Review articles are explicitly labeled in evidence locators despite the shared schema
+  having no separate secondary-source enum. They are not new experimental observations.
+- Initial sandbox requests failed DNS. Some Europe PMC XML routes returned HTTP 500,
+  some BioC requests returned a no-result body despite HTTP 200, and some publisher
+  web routes failed. Actual readable publisher HTML, author manuscripts/PDF and abstracts
+  were distinguished from failures.
+- The first SubtiWiki/trait tool outputs were truncated; their processes were confirmed
+  finished before a captured rerun. The captured dry-run and trait results passed.
+  The PDF text extractor emitted font warnings; no verbatim new quotation or measurement
+  relies on an ambiguous glyph.
+- The iModulonDB adapter found gene identity hits but no module hit for the three
+  explicit fliG searches. It supplies no direct evidence of cell-structure assembly
+  or localization.
+- The native target-kind scratch metadata was corrected from an invalid label to maintained.
+  All original input hashes and the original durable Git base were rechecked unchanged;
+  no scientific byte attestation was silently refreshed.
