@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/ciliary_transition_zone.yaml
+  slug: ciliary_transition_zone
+session:
+  id: 2026-10-10T232709Z-codex-bccaa4
+  timestamp: '2026-10-10T23:27:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2164
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: 'Addressed #2164: grounded the assembled Y-shaped link to GO:0097537, synchronized
+    graph identity, and retained the superseded rationale and unresolved molecular inventory.
+    Preserved PROPOSED status.'
+  details: Evidence-backed correction to reviews/structured/20261010T232629Z-ciliary-transition-zone-audit/review.yaml.
+    Original finding saved before mutation. Active QuickGO exact identity and inspected Craige
+    2010 context support the assembled linker, not a complete molecular inventory. Guarded
+    write passed; post-change checks and affected generated artifacts are verified before
+    publication. Old in-record events and repository history preserved; not human sign-off.
