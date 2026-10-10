@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_stator_complex.yaml
+  slug: bacterial_type_flagellum_stator_complex
+session:
+  id: 2026-10-10T224851Z-codex-3799ac
+  timestamp: '2026-10-10T22:48:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2160
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2161
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2162
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - components
+  - functions
+  - evidence
+  - causal_graphs
+  summary: 'Addressed #2160, #2161, #2162: Rotation claims exceed the context of the cited
+    2020 models; Dynamic exchange lacks a directly matched source and experimental scope;
+    A-subunit label-only decision is contradicted by an exact family. Preserved historical
+    events and PROPOSED status.'
+  details: Evidence-backed fixes to reviews/structured/20261010T224657Z-flagellar-stator-complex-audit/review.yaml.
+    Original issue-bearing review saved before mutation. Inspected source/authority snapshots
+    retain experimental and taxonomic limits. Guarded write passed; post-change gates and
+    generated artifacts checked separately before publication. No human sign-off implied.

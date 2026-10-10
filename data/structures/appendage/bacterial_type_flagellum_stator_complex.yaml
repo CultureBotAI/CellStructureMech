@@ -45,6 +45,14 @@ curation_history:
   changes: Renamed the GO:0009433 C-ring mechanism graph node to the exact Gene Ontology
     canonical label after the PR-review fix surfaced an id-label correspondence mismatch.
   llm_assisted: true
+- timestamp: '2026-10-10T22:48:49Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2160, #2161, #2162: Rotation claims exceed the context of the
+    cited 2020 models; Dynamic exchange lacks a directly matched source and experimental
+    scope; A-subunit label-only decision is contradicted by an exact family. Preserved
+    historical events and PROPOSED status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial-type flagellum motor force generator complex
   synonym_type: EXACT_SYNONYM
@@ -56,26 +64,40 @@ part_of:
 - GO:0120100
 components:
 - component_id: a_subunit
-  label: flagellar stator A subunit
+  label: Motility protein A-like
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: MotA and PomA form homologous A subunits in proton- and sodium-driven
+  grounding_notes: 'MotA and PomA form homologous A subunits in proton- and sodium-driven
     bacterial flagellar stators; no exact integrated InterPro family covering the
-    full MotA/PomA class was identified during curation.
+    full MotA/PomA class was identified during curation. Reassessment on 2026-10-10:
+    the former label-only decision is superseded by InterPro:IPR047055, an integrated
+    family explicitly including MotA, PomA and LafT and matched by reviewed MotA and
+    PomA proteins. The preceding rationale records the earlier search, not current
+    absence.'
   gene_symbols:
   - motA
   - pomA
   stoichiometry: 5 A subunits per solved MotAB stator core
   essentiality: ESSENTIAL
-  role: Builds the pentameric membrane ring that rotates around the anchored B-subunit
-    dimer and engages FliG in the C ring.
+  role: Builds the pentameric A-subunit ring that engages the rotor. The 2020 structures
+    motivated rotation models around the anchored B-subunit dimer; later experiments
+    directly measured MotA rotation in Escherichia coli.
   evidence:
   - reference: DOI:10.1016/j.cell.2020.08.016
     notes: Santiveri et al. 2020 resolved MotA/MotB stator units as MotA5MotB2 assemblies.
   - reference: DOI:10.1038/s41564-020-0788-8
     notes: Deme et al. 2020 independently resolved pentameric MotA rings in bacterial
       flagellar stator complexes.
+  - reference: InterPro:IPR047055
+    notes: Integrated MotA-like family explicitly includes MotA, PomA and LafT; reviewed
+      E. coli MotA P09348 and Vibrio alginolyticus PomA O06873 carry this match. Family
+      identity is separate from experimental stator membership.
+  - reference: DOI:10.1073/pnas.2515291122
+    notes: Hosu et al. 2025 measured MotA rotation relative to anchored MotB in functioning
+      Escherichia coli motors using polarized photobleaching. The experiment measured
+      angular speed, not the direction of MotA rotation, and did not test all Mot/Pom
+      stators.
+  grounding: InterPro:IPR047055
 - component_id: b_subunit
   label: flagellar stator B subunit
   component_type: PROTEIN
@@ -120,9 +142,10 @@ canonical_examples:
 functions:
 - function_id: ion_driven_torque_generation
   label: ion-driven torque generation
-  description: Proton or sodium transit through the stator drives rotation of the
-    A-subunit pentamer around the anchored B-subunit dimer, which applies torque to
-    the flagellar rotor.
+  description: Ion flow powers stator torque on the flagellar rotor. The 2020 structural
+    models propose A-pentamer motion around the B dimer; direct polarized-photobleaching
+    measurements subsequently supported MotA rotation in Escherichia coli, not every
+    Mot/Pom stator.
   evidence:
   - reference: DOI:10.1016/j.cell.2020.08.016
     notes: Santiveri et al. 2020 combined MotAB structures, mutagenesis and functional
@@ -130,15 +153,25 @@ functions:
   - reference: DOI:10.1038/s41564-020-0788-8
     notes: Deme et al. 2020 modeled MotA5MotB2 as the ion-driven gear that drives
       the FliG rotor ring.
+  - reference: DOI:10.1073/pnas.2515291122
+    notes: Hosu et al. 2025 measured MotA rotation relative to anchored MotB in functioning
+      Escherichia coli motors using polarized photobleaching. The experiment measured
+      angular speed, not the direction of MotA rotation, and did not test all Mot/Pom
+      stators.
 - function_id: dynamic_peptidoglycan_anchoring
   label: dynamic peptidoglycan anchoring
-  description: The B-subunit periplasmic domain binds peptidoglycan after activation,
-    positioning stator units around the cytoplasmic rotor while allowing exchange
-    at the motor.
+  description: The B-subunit periplasmic domain binds peptidoglycan after activation.
+    Exchange of motor-bound stators with a membrane pool has been measured in Escherichia
+    coli; this turnover behavior is not assumed for every scaffolded bacterial motor.
   evidence:
   - reference: DOI:10.1016/j.str.2018.02.016
     notes: Kojima et al. 2018 linked B-subunit periplasmic-domain rearrangement to
       peptidoglycan binding and stator activation.
+  - reference: DOI:10.1038/nature05135
+    notes: Leake et al. 2006 measured GFP-MotB turnover between the membrane pool
+      and functioning Escherichia coli motors using fluorescence recovery and loss
+      after photobleaching; this is direct exchange evidence for that system, not
+      every bacterial motor.
 physical_properties:
 - property: SUBUNIT_COUNT
   value: '7'
@@ -159,17 +192,27 @@ evidence:
 - reference: DOI:10.1038/s41564-020-0788-8
   notes: Deme et al. 2020, Structures of the stator complex that drives rotation of
     the bacterial flagellum.
+- reference: DOI:10.1073/pnas.2515291122
+  notes: Hosu et al. 2025 measured MotA rotation relative to anchored MotB in functioning
+    Escherichia coli motors using polarized photobleaching. The experiment measured
+    angular speed, not the direction of MotA rotation, and did not test all Mot/Pom
+    stators.
+- reference: DOI:10.1038/nature05135
+  notes: Leake et al. 2006 measured GFP-MotB turnover between the membrane pool and
+    functioning Escherichia coli motors using fluorescence recovery and loss after
+    photobleaching; this is direct exchange evidence for that system, not every bacterial
+    motor.
 causal_graphs:
 - graph_id: motab_stator_torque
   title: Mot/Pom stators anchor ion-driven torque generation
-  description: A-subunit pentamers and B-subunit dimers form ion-driven stators. B
-    subunits anchor the complex to peptidoglycan, ion flow drives the A ring, and
-    the stator applies torque to the C ring.
+  description: A-subunit pentamers and B-subunit dimers form ion-driven stator cores.
+    B subunits anchor to peptidoglycan; structural models link ion flow to A-ring
+    motion and rotor torque, with direct MotA rotation evidence from Escherichia coli.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
   - node_id: a_subunit
-    label: flagellar stator A subunit
+    label: Motility protein A-like
     node_type: GENE_OR_PROTEIN
     component_ref: a_subunit
   - node_id: b_subunit
@@ -221,17 +264,25 @@ causal_graphs:
   - subject: ion_flux
     predicate: drives
     object: stator_complex
-    description: Ion flow through the stator pore drives A-subunit rotation around
-      the B-subunit dimer.
+    description: The 2020 structural models propose ion-driven A-subunit motion around
+      the B-subunit dimer. Subsequent experiments directly measured MotA rotation
+      in Escherichia coli; rotation direction and all sodium-stator trajectories were
+      not measured.
     evidence:
     - reference: DOI:10.1038/s41564-020-0788-8
       notes: Deme et al. 2020 modeled ion-driven rotation of the MotA pentamer around
         MotB.
+    - reference: DOI:10.1073/pnas.2515291122
+      notes: Hosu et al. 2025 measured MotA rotation relative to anchored MotB in
+        functioning Escherichia coli motors using polarized photobleaching. The experiment
+        measured angular speed, not the direction of MotA rotation, and did not test
+        all Mot/Pom stators.
   - subject: stator_complex
     predicate: applies torque to
     object: c_ring
-    description: The rotating A-subunit ring pushes against FliG in the C ring to
-      turn the flagellar rotor.
+    description: A-subunit contacts with FliG transmit torque to the C ring. A rotating
+      A-ring drive was proposed from the 2020 structures; subsequent Escherichia coli
+      dynamics support coupled stator and rotor rotation.
     evidence:
     - reference: DOI:10.1038/s41564-020-0788-8
       notes: Deme et al. 2020 modeled the stator as a rotating MotA pentamer meshing
@@ -239,6 +290,11 @@ causal_graphs:
     - reference: DOI:10.7554/eLife.48979
       notes: Chang et al. 2019 imaged stator densities around bacterial flagellar
         rotors in cells.
+    - reference: DOI:10.1073/pnas.2515291122
+      notes: Hosu et al. 2025 measured MotA rotation relative to anchored MotB in
+        functioning Escherichia coli motors using polarized photobleaching. The experiment
+        measured angular speed, not the direction of MotA rotation, and did not test
+        all Mot/Pom stators.
 discussions:
 - discussion_id: use_modern_5_to_2_stoichiometry
   prompt: Should GO:0120101's historical A4B2 stator stoichiometry be copied into
