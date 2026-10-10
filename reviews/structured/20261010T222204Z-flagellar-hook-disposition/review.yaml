@@ -1,0 +1,563 @@
+schema_version: 1.0.0
+review_id: 20261010T222204Z-flagellar-hook-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'bacterial-type flagellum hook: finding dispositions'
+started_at: '2026-10-10T22:13:35Z'
+finished_at: '2026-10-10T22:22:04Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent evidence-backed verification of the exact saved findings
+    after curation; separate adversarial diff pass is recorded on the PR. Not independent
+    human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Every finding in the linked predecessor is resolved in the inspected maintained
+  inputs. Native scientific status remains PROPOSED.
+source:
+  git_revision: e5f99e3a62526a098cd8a32729c5777d48eb0396
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/bacterial_type_flagellum.yaml
+    sha256: 4e3e6bf50835a3134d50e5a20a87cdfa86e1e37c21085757402df7dd628095e6
+    role: context
+  - path: data/structures/appendage/bacterial_type_flagellum_hook.yaml
+    sha256: bc9499c1bfdb6d0116caf92be997842277377ed920d871f6680e0e24fb5c821d
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/bacterial_type_flagellum_hook/2026-09-07T033500Z-claude-e75791.yaml
+    sha256: 4585751e89670f4efbb3c9122fecd5627d318ea8e374ffd08798080e30bcc806
+    role: context
+  - path: history/records/bacterial_type_flagellum_hook/2026-09-07T041813Z-claude-code-259069.yaml
+    sha256: dfa0423275b07e1893248371fb344d74174583c0ebc49b44dc5ea64da2b73d12
+    role: context
+  - path: history/records/bacterial_type_flagellum_hook/2026-10-10T221028Z-codex-72a7c1.yaml
+    sha256: bac568054560e9287857e593221e44631fdbef4f5a862965c3de93daf7ae49b6
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261010T220818Z-flagellar-hook-audit/review.yaml
+    sha256: 45c04a1a7337b8d00b1393d98a76ab91d69dfd1a7c93974ed75c0d8a927e1628
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_flagellar_review_corrections.py
+    sha256: d421acdc3f9ed08bad36b96d4897391c8c27f05306f6f178d71d8637576bfc8b
+    role: context
+targets:
+- target_id: GO:0009424
+  path: data/structures/appendage/bacterial_type_flagellum_hook.yaml
+  label: bacterial-type flagellum hook
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_hook.yaml
+    role: maintained scientific record
+scope:
+  description: Reassessment of the exact prior finding fields, changed claim evidence
+    and append-only provenance, not a new whole-record or corpus-wide assessment.
+    Unchanged assertions retain the original review scope and limitations.
+  selection: All findings in 20261010T220818Z-flagellar-hook-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009424
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/bacterial_type_flagellum_hook.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation check passed. Biological support was separately reassessed
+    against inspected source text.
+  scope_note: 2026-10-10T22:12:02Z to 2026-10-10T22:12:05Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/bacterial_type_flagellum_hook.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation check passed. Biological support was separately reassessed
+    against inspected source text.
+  scope_note: 2026-10-10T22:12:05Z to 2026-10-10T22:12:09Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/bacterial_type_flagellum_hook.yaml
+    --report /private/tmp/csm-review-20261010T215400Z/post-checks/bacterial_type_flagellum_hook-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation check passed. Biological support was separately reassessed
+    against inspected source text. There are no quoted snippet fields in this target;
+    this is not validation of paraphrase meaning.
+  scope_note: 2026-10-10T22:12:09Z to 2026-10-10T22:12:34Z; log SHA-256 ebb8fc1f685b987be0bc52c254b442a332c636108b75a31b57bdb2072590a852
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation check passed. Biological support was separately reassessed
+    against inspected source text.
+  scope_note: 2026-10-10T22:13:03Z to 2026-10-10T22:13:19Z; log SHA-256 453a059dea6bf1bb79107a0d2f5efc9bf8f952e10f056940483df1bb3af09972
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation check passed. Biological support was separately reassessed
+    against inspected source text.
+  scope_note: 2026-10-10T22:13:19Z to 2026-10-10T22:15:06Z; log SHA-256 d10699bb2abeb0de144fe64b442a139ade489d962490ec567e25ab8301d90d66
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation check passed. Biological support was separately reassessed
+    against inspected source text.
+  scope_note: 2026-10-10T22:15:06Z to 2026-10-10T22:15:28Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation check passed. Biological support was separately reassessed
+    against inspected source text. Unsupported namespaces remain explicitly skipped;
+    scoped authority verification is retained in source evidence.
+  scope_note: 2026-10-10T22:15:28Z to 2026-10-10T22:16:09Z; log SHA-256 4c6456cba44861f8cec5b1bca7cbe9a95b0af58c95cc855b4f14854bb589a72b
+- check_id: regressions
+  name: regressions
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: .venv/bin/python -m pytest -q tests/test_flagellar_review_corrections.py
+    tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation check passed. Biological support was separately reassessed
+    against inspected source text.
+  scope_note: 2026-10-10T22:16:09Z to 2026-10-10T22:16:56Z; log SHA-256 5d5ade60c286c78e74b3fd49c71173c18a2e77bc609dd5c44db1bfe1d0dfa29e
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: .venv/bin/python scripts/record_review.py check --base be59206109d6b2b31be9f12680e35633831c9682
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation check passed. Biological support was separately reassessed
+    against inspected source text.
+  scope_note: 2026-10-10T22:16:56Z to 2026-10-10T22:17:28Z; log SHA-256 dfe8dfadcc7011bc03f161fd75b7cf99b1afcc6ebb189984f0ec95d0ff0c48b9
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation check passed. Biological support was separately reassessed
+    against inspected source text.
+  scope_note: 2026-10-10T22:17:28Z to 2026-10-10T22:17:29Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: qc
+  name: Exact-fix-commit authoritative CI QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009424
+  command: gh run view 38090614355 --json databaseId,conclusion,headSha,event,jobs,startedAt,updatedAt,url
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Verified successful authoritative QC step on the exact inspected fix commit,
+    including all corpus tests, generated-site and text-map drift checks.
+  scope_note: 2026-10-10T22:14:27Z to 2026-10-10T22:20:37Z; https://github.com/CultureBotAI/CellStructureMech/actions/runs/38090614355;
+    log SHA-256 9a2d142c149d2c38142b8495e73a3e8db4533350d3d3659eaa94785b1147d963
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/bacterial_type_flagellum_hook.yaml
+  locator: Entire YAML, schema and recorded histories
+  accessed_at: '2026-10-10T22:22:04Z'
+  support: context_only
+  summary: Re-read the changed target and complete diff against the predecessor; all
+    identified claim corrections are present, with unchanged prior curation events
+    and PROPOSED status.
+  snapshot_sha256: bc9499c1bfdb6d0116caf92be997842277377ed920d871f6680e0e24fb5c821d
+- evidence_id: paper-02
+  kind: primary_source
+  reference: DOI:10.1038/ncomms13425
+  locator: Full text, Results hook architecture and FlgE interfaces; Methods sample
+  accessed_at: '2026-10-10T21:55:14Z'
+  snapshot_sha256: d024d1c3daf01c30c16d49cd5f3e356b75b1f31df9ef292040490b6a07bc2df0
+  support: supports
+  summary: C. jejuni 81116-derived fliK mutant polyhooks resolve a FlgE tube; this
+    supports the listed constituent and species exemplar.
+- evidence_id: paper-03
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro1887
+  locator: PMC author-manuscript full text, introductory organism comparison and Box
+    1
+  accessed_at: '2026-10-10T22:00:01Z'
+  snapshot_sha256: 6e99f9e9c57ee1fd0ac73d42f6908c2509d60aafa3fc0ac57398f78088ffd68d
+  support: supports
+  summary: Assembly context supports the listed axial parts; Box 1 distinguishes 20-nm
+    thickness from 10-15-micrometer length. It does not establish majority-Bacteria
+    prevalence.
+- evidence_id: paper-04
+  kind: primary_source
+  reference: DOI:10.1038/s41467-019-13252-9
+  locator: Full text, Results/Discussion universal-joint model and Methods
+  accessed_at: '2026-10-10T21:55:17Z'
+  snapshot_sha256: 79b9ff864d5ced183bf60bfbc9f8b7111f550efd2eb792443aed96df4d020d98
+  support: supports
+  summary: Salmonella SJW880 polyhook reconstruction supports torsional rigidity with
+    bending flexibility and hook-to-filament coupling.
+- evidence_id: paper-07
+  kind: primary_source
+  reference: DOI:10.1038/s41564-025-02037-0
+  locator: Full text, native cap/HFJ Results, Figs. 1-6, Discussion, strain Methods
+  accessed_at: '2026-10-10T21:55:23Z'
+  snapshot_sha256: c8d05e1a03bf39c95b7b8e1da4b770b05c8152118e9ffafac7c088b40ced7896
+  support: supports
+  summary: Native Salmonella caps and junctions support five FliD and eleven each
+    of FlgK/FlgL. Campylobacter prefilament caps and Salmonella assembly intermediates
+    support the bounded mechanisms.
+- evidence_id: paper-15
+  kind: primary_source
+  reference: DOI:10.1146/annurev.biochem.72.121801.161737
+  locator: Review abstract
+  accessed_at: '2026-10-10T21:55:32Z'
+  snapshot_sha256: 4c2938da11aeddedf2691f6bca3667182d4a49446eaf8bc12de59bf84c81ac9a
+  support: supports
+  summary: Helical-filament rotation generates swimming; the abstract supports the
+    general function without certifying unseen quantitative motor details.
+- evidence_id: paper-16
+  kind: primary_source
+  reference: DOI:10.1146/annurev.micro.57.030502.090832
+  locator: Review abstract
+  accessed_at: '2026-10-10T21:55:33Z'
+  snapshot_sha256: 68caf42cabe3749c93733a366e2bda96e3fb414eb0f71a846df6d91eb67b7f58
+  support: supports
+  summary: Export through the axial channel and distal assembly are supported; fine-grained
+    assembly evidence is cross-checked with accessible structural papers.
+- evidence_id: paper-17
+  kind: primary_source
+  reference: DOI:10.3389/fmicb.2015.00023
+  locator: Review full text, biochemical/genomic/structural comparison with bacterial
+    flagella
+  accessed_at: '2026-10-10T21:55:34Z'
+  snapshot_sha256: c2cec0461a17865f7242ef36df178bfc68d00c1f1e292b75f9682a6ba5461464
+  support: supports
+  summary: Archaella have distinct type-IV-pilus-related architecture, not bacterial
+    flagellin/FlgE/FlgKL/FliD axial structures.
+- evidence_id: paper-19
+  kind: primary_source
+  reference: DOI:10.3390/biom9090462
+  locator: Full text, Introduction, Results FlgE contacts, Methods
+  accessed_at: '2026-10-10T21:55:38Z'
+  snapshot_sha256: 62513de500f132421593c72d0d62975e2b168cbf9d6156c8fd36216121118f82
+  support: supports
+  summary: Salmonella FlgE polyhooks support the constituent and universal-joint model.
+    The introduction distinguishes micrometer-long filaments from nanometer-scale
+    hook dimensions.
+- evidence_id: paper-21
+  kind: primary_source
+  reference: DOI:10.1073/pnas.2512476122
+  locator: Full text, Results reference-genome survey and Methods
+  accessed_at: '2026-10-10T21:55:42Z'
+  snapshot_sha256: 6cedc1bf8fd502b010e3123a8cd40e566506804de364f6d959a52120457af9f6
+  support: supports
+  summary: FliPQR markers occur in about 40% of 30,238 reference genomes across 131
+    phyla. This genomic proxy does not measure assembled filament/hook prevalence.
+- evidence_id: go-0009288
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009288
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:43Z'
+  snapshot_sha256: f681e68df545139e6df14e2e60d0d507f83f373323aa09f5092914546194dbd3
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: go-0009420
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009420
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:43Z'
+  snapshot_sha256: 7b23f915e8a7ac61a986403d9cc5cc5793acb065a5085838cc9ecf5b94951939
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: go-0009424
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009424
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:45Z'
+  snapshot_sha256: faad16480ea34f9a816b9e5d4d40530337e025152568347f69d56b87192ef99a
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: go-0009425
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009425
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:46Z'
+  snapshot_sha256: 9fce7e21efecbd6edee814457befdcbf6d3ae546aaefe4cc9aa56657b40e75c3
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: go-0071973
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0071973
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:46Z'
+  snapshot_sha256: 4524f50c1c85dc83f482e61a3f8530fb9a760453ef399c9c04194f642c9d04e6
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: uniprotkb-p0a1j1
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P0A1J1.json
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:49Z'
+  snapshot_sha256: d38958f6bab34260fde99a0597b66dbca9ceb127a06edc6287965aed4daa146d
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: ncbitaxon-197
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/197.json
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:53Z'
+  snapshot_sha256: 7346dd32eb9f3fb96e5a5f775bb9a0dc8dc761a5dd41712b84d65f148ed90c77
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: ncbitaxon-2
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/2.json
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:53Z'
+  snapshot_sha256: 8074c9bcd59cd4da1da4bc9ec98c040bbecd52ef5c91c4c4bb9bed0f3a7cb5a9
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: ncbitaxon-2157
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/2157.json
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:54Z'
+  snapshot_sha256: 14f5852a1db0f9f5ef8d60e4a11c1916bf005bf549c57dd4bc860d39194a1799
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: ncbitaxon-90371
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/90371.json
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:56Z'
+  snapshot_sha256: 46c958747209e78a835996643e63aafb6d1e94a8a632f0094dba733eb1bd3dee
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: ncbitaxon-99287
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/99287.json
+  locator: Exact identity, active/reviewed status, definition, typed synonyms, gene/taxon
+    or family metadata as applicable
+  accessed_at: '2026-10-10T21:55:56Z'
+  snapshot_sha256: 107ebfece75c5a7147abe7547dec9166f87ff267e6cbc3f67bea9ab9df694a59
+  support: supports
+  summary: Current authority record inspected. Gene identity is not experimental proof
+    of membership.
+- evidence_id: ipr020013
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020013/
+  locator: Family scope, integrated signatures and description
+  accessed_at: '2026-10-10T21:55:57Z'
+  snapshot_sha256: edb69e1603a4fc1dcbf4cfa68c1a7d8a1298965e9adc73fb85731123c63a648d
+  support: supports
+  summary: Broad FlgE/F/G family and narrow epsilonproteobacterial FlgE family do
+    not justify a common exact grounding for the declared cross-taxon hook scope.
+- evidence_id: ipr012835
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012835/
+  locator: Family scope, integrated signatures and description
+  accessed_at: '2026-10-10T21:55:57Z'
+  snapshot_sha256: 4dd654200d0e65e518424ba3acb2e02e3f3de33f3f4bb8b4da1718efa678e04d
+  support: supports
+  summary: Broad FlgE/F/G family and narrow epsilonproteobacterial FlgE family do
+    not justify a common exact grounding for the declared cross-taxon hook scope.
+- evidence_id: prior-search
+  kind: search
+  reference: reviews/structured/
+  locator: Exact target IDs in all review.yaml files
+  accessed_at: '2026-10-10T22:08:18Z'
+  support: context_only
+  search_scope: Path.rglob of reviews/structured including hidden and ignored entries;
+    40 canonical reviews parsed; exact target ID GO:0009424. Also rg --no-ignore --hidden
+    across reviews and reports/yaml_record_review.
+  summary: No prior canonical target assessment was found; legacy provenance is not
+    silently treated as review coverage.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261010T220818Z-flagellar-hook-audit/review.yaml
+  accessed_at: '2026-10-10T22:22:04Z'
+  snapshot_sha256: 45c04a1a7337b8d00b1393d98a76ab91d69dfd1a7c93974ed75c0d8a927e1628
+  support: context_only
+  summary: Immutable original observation; exact issue keys and finding identities
+    are preserved in the successor.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261010T215400Z/preservation.json
+  accessed_at: '2026-10-10T22:12:56Z'
+  snapshot_sha256: feb9ed368c5790afec60f8a0280f93c51363bd7867135a5cb6b66d0a86a5f271
+  support: supports
+  summary: Verified only four scientific records changed, all pre-existing history/review/legacy-report
+    bytes remained unchanged, and prior in-record events and native PROPOSED status
+    were preserved.
+assessments:
+- assessment_id: resolved-f1
+  area: evidence
+  topic: Bacteria-wide COMMON is not supported by a flagellated-lineage statement
+  outcome: supported
+  target_ids:
+  - GO:0009424
+  evidence_ids:
+  - record
+  - paper-03
+  - paper-21
+  - predecessor
+  - preservation
+  summary: The whole-Bacteria row now uses VARIABLE. Its inspected FliPQR genome survey
+    is explicitly not direct observation of FlgE hooks or proof of this structure
+    in every genome.
+findings:
+- finding_id: F1
+  issue_key: flagellar-hook-bacterial-prevalence-common
+  category: scope
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Bacteria-wide COMMON is not supported by a flagellated-lineage statement
+  description: The whole-Bacteria row now uses VARIABLE. Its inspected FliPQR genome
+    survey is explicitly not direct observation of FlgE hooks or proof of this structure
+    in every genome.
+  target_ids:
+  - GO:0009424
+  field_paths:
+  - taxonomic_distribution[0].presence
+  - taxonomic_distribution[0].reference
+  evidence_ids:
+  - record
+  - paper-03
+  - paper-21
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_hook.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: major
+  normalization_reason: Material unsupported scientific assertion.
+  disposition_reason: The whole-Bacteria row now uses VARIABLE. Its inspected FliPQR
+    genome survey is explicitly not direct observation of FlgE hooks or proof of this
+    structure in every genome. Exact affected fields were checked against the cited
+    primary or authority evidence and passing post-curation gates.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T220818Z-flagellar-hook-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2151
+actions: []
+limitations:
+- Scoped same-agent disposition of prior findings, not human scientific approval or
+  completion of the 909-record review goal.
+- Original source access tiers, snapshots and access times are retained. Historical
+  abstract-only access is not upgraded to unseen full-text evidence; the separately
+  inspected 1987 Discussion scan remains explicit.
+- Genomic marker occurrence is not direct anatomical observation, and structural modeling
+  is not direct observation of molecular trajectories.
+- The global identifier checker skips unsupported namespaces; separately inspected
+  exact authorities provide scoped support, not blanket certification.
+- Full QC is verified CI at the exact fix commit. Final review-only PR-head and merge-queue
+  checks remain separate publication gates.
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261010T220818Z-flagellar-hook-audit
+  relationship: Resolves all exact predecessor findings without rewriting the original
+    observation.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2151

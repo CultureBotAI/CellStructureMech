@@ -37,6 +37,14 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-10T22:10:29Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2152, #2153, #2154: Furukawa 2002 is cited for interactions
+    it did not report; Historical localization and copy-number descriptions exceed
+    the inspected reports; FlgK label-only status is contradicted by an exact matched
+    family. Preserved historical events and PROPOSED status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar hook-filament junction
   synonym_type: EXACT_SYNONYM
@@ -51,11 +59,13 @@ components:
   label: hook-associated protein FlgK/HAP1
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: FlgK is the HAP1 protein of the bacterial flagellar hook-filament
+  grounding_notes: 'FlgK is the HAP1 protein of the bacterial flagellar hook-filament
     junction. No exact integrated family grounding was curated during record creation;
     the component stays label-only rather than reusing broad flagellar axial-protein
-    signatures.
+    signatures. Reassessment on 2026-10-10: the label-only decision is superseded
+    by the exact integrated FlgK/HAP1 family InterPro:IPR002371, independently matched
+    by reviewed Salmonella FlgK UniProtKB:P0A1J5. The former rationale is retained
+    as history, not the current grounding state.'
   gene_symbols:
   - flgK
   stoichiometry: 11 FlgK/HAP1 subunits per Salmonella junction
@@ -64,11 +74,17 @@ components:
     hook and contacts FlgL.
   evidence:
   - reference: DOI:10.1128/jb.169.3.1168-1173.1987
-    notes: Ikeda et al. 1987 localized HAP1 to the Salmonella hook-proximal side of
-      the hook-filament junction and estimated 11 HAP1 copies per flagellum.
+    notes: Ikeda et al. 1987 localized HAP1 to the Salmonella hook-filament junction
+      and estimated 10-20 copies per flagellum by gel electrophoresis. The Discussion
+      states that fine localization within the junction was not determined.
   - reference: DOI:10.1038/s41564-025-02037-0
-    notes: Einenkel et al. 2025 resolved FlgK in the native Salmonella hook-filament
-      junction.
+    notes: Einenkel et al. 2025 resolved eleven FlgK subunits in the proximal layer
+      of the assembled Salmonella hook-filament junction.
+  - reference: InterPro:IPR002371
+    notes: Current InterPro integrated FlgK/HAP1 family; reviewed Salmonella FlgK
+      UniProtKB:P0A1J5 carries this match. Establishes family identity, not independent
+      evidence of junction membership.
+  grounding: InterPro:IPR002371
 - component_id: flgl_hap3
   label: hook-associated protein FlgL/HAP3
   component_type: PROTEIN
@@ -81,12 +97,13 @@ components:
     flagellin subunits of the filament.
   evidence:
   - reference: DOI:10.1128/jb.169.3.1168-1173.1987
-    notes: Ikeda et al. 1987 localized HAP3 to the Salmonella filament-proximal side
-      of the hook-filament junction and estimated 11 HAP3 copies per flagellum.
-  - reference: DOI:10.1016/S0022-2836(02)00139-0
-    notes: Furukawa et al. 2002 detected direct interactions among monomeric FlgK,
-      FlgL and flagellin, supporting the junction interface that couples the junction
-      to the filament.
+    notes: Ikeda et al. 1987 localized HAP3 to the Salmonella hook-filament junction
+      and estimated 10-40 copies per flagellum by gel electrophoresis. The Discussion
+      states that fine localization within the junction was not determined.
+  - reference: DOI:10.1038/s41564-025-02037-0
+    notes: Einenkel et al. 2025 resolved eleven FlgL subunits in the assembled Salmonella
+      junction, contacting FlgK and the first flagellin layer. This is assembled-state
+      structural contact, not soluble monomer binding.
   grounding: InterPro:IPR013384
   protein_examples:
   - uniprot_id: UniProtKB:P16326
@@ -133,8 +150,10 @@ functions:
     rigid flagellin filament.
   evidence:
   - reference: DOI:10.1128/jb.162.1.183-189.1985
-    notes: Homma and Iino 1985 localized HAP1 and HAP3 between the hook and filament
-      in Salmonella.
+    notes: Homma and Iino 1985 localized HAP layers on filamentless Salmonella hooks
+      and HAP1 at the mature hook-filament junction; mature HAP3 localization was
+      not clarified by that procedure. Native FlgK/FlgL layer order is supported by
+      the 2025 reconstruction.
   - reference: DOI:10.1038/s41564-025-02037-0
     notes: Einenkel et al. 2025 resolved the FlgK/FlgL junction connecting the native
       Salmonella hook to the filament.
@@ -169,7 +188,9 @@ evidence:
     within Salmonella typhimurium flagella, Journal of Bacteriology.
 - reference: DOI:10.1016/S0022-2836(02)00139-0
   notes: Furukawa et al. 2002, Interactions between Bacterial Flagellar Axial Proteins
-    in Their Monomeric State in Solution, Journal of Molecular Biology.
+    in Their Monomeric State in Solution, Journal of Molecular Biology. The inspected
+    abstract reports flagellin-induced HAP3 aggregation without stable binding and
+    HAP2-HAP3 heterodimers, not FlgK-FlgL solution binding.
 - reference: DOI:10.1146/annurev.micro.57.030502.090832
   notes: Macnab 2003, How bacteria assemble flagella, Annual Review of Microbiology.
 - reference: DOI:10.1038/s41564-025-02037-0
@@ -222,15 +243,17 @@ causal_graphs:
     object: hook_filament_junction
     description: FlgK/HAP1 subunits form the hook-proximal layer of the junction.
     evidence:
-    - reference: DOI:10.1128/jb.169.3.1168-1173.1987
-      notes: Ikeda et al. 1987 localized HAP1 between the hook and HAP3.
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 resolved FlgK in the hook-proximal layer of the
+        native Salmonella hook-filament junction.
   - subject: flgl_hap3
     predicate: forms distal layer of
     object: hook_filament_junction
     description: FlgL/HAP3 subunits form the filament-proximal layer of the junction.
     evidence:
-    - reference: DOI:10.1128/jb.169.3.1168-1173.1987
-      notes: Ikeda et al. 1987 localized HAP3 between HAP1 and the flagellin filament.
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 resolved FlgL in the filament-proximal layer of
+        the native Salmonella hook-filament junction.
   - subject: flgk_hap1
     predicate: contacts
     object: hook
@@ -245,8 +268,10 @@ causal_graphs:
     description: FlgK and FlgL interact to build the paired junction at the hook-filament
       boundary.
     evidence:
-    - reference: DOI:10.1016/S0022-2836(02)00139-0
-      notes: Furukawa et al. 2002 detected FlgK binding to FlgL in solution.
+    - reference: DOI:10.1038/s41564-025-02037-0
+      notes: Einenkel et al. 2025 resolved contacts between the assembled FlgK and
+        FlgL layers of the native Salmonella junction; this does not assert stable
+        FlgK-FlgL binding in solution.
   - subject: flgl_hap3
     predicate: contacts
     object: filament

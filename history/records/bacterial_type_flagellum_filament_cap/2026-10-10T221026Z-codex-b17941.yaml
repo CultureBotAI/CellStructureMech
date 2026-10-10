@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_filament_cap.yaml
+  slug: bacterial_type_flagellum_filament_cap
+session:
+  id: 2026-10-10T221026Z-codex-b17941
+  timestamp: '2026-10-10T22:10:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2150
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - causal_graphs
+  summary: 'Addressed #2150: A modeled cap-growth interpretation is described as visualized
+    growth conformations. Preserved historical events and PROPOSED status.'
+  details: Evidence-backed curation of reviews/structured/20261010T220818Z-flagellar-filament-cap-audit/review.yaml.
+    Inspected primary-paper text and authority snapshots documented in the immutable review;
+    fixes preserve experimental and taxonomic scope. Closed-schema guarded write passed; full
+    post-change validation and generated-artifact checks are run separately before merge.
+    No human scientific approval is implied.

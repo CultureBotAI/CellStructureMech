@@ -35,6 +35,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-10T22:10:27Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2151: Bacteria-wide COMMON is not supported by a flagellated-lineage
+    statement. Preserved historical events and PROPOSED status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar hook
   synonym_type: EXACT_SYNONYM
@@ -91,10 +97,12 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
-  presence: COMMON
-  note: FlgE hooks are widespread in bacterial-type flagella but are absent from bacteria
-    without flagellar loci.
-  reference: DOI:10.1038/nrmicro1887
+  presence: VARIABLE
+  note: 'Bacterial flagellar systems have a patchy distribution: a survey of 30,238
+    reference genomes from 131 phyla found FliPQR export markers in about 40%. This
+    is genomic marker evidence, not direct observation of assembled FlgE hooks. Marker
+    presence does not establish this particular structure in every genome.'
+  reference: DOI:10.1073/pnas.2512476122
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
   presence: ABSENT

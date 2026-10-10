@@ -2,9 +2,9 @@ identifier: GO:0009420
 label: bacterial-type flagellum filament
 structure_category: APPENDAGE
 structure_kind: FILAMENT
-definition: The long (approximately 20 nm), thin external structure of the bacterial-type
-  flagellum, which acts as a propeller.
-definition_source: GO:0009420
+definition: The long, thin external propeller of the bacterial-type flagellum, formed
+  by polymerized flagellin.
+definition_source: DOI:10.1038/nrmicro1887
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-07T03:11:54Z'
@@ -48,6 +48,14 @@ curation_history:
     list and clarifying that the FliD cap is a separate top-level flagellar substructure
     rather than a flagellin-filament component.'
   llm_assisted: true
+- timestamp: '2026-10-10T22:10:21Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2147, #2148, #2149: Three filament sources have incorrect author
+    attribution; Inherited definition places a nanometer dimension next to length;
+    Bacteria-wide COMMON is not supported by a flagellated-lineage statement. Preserved
+    historical events and PROPOSED status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar filament
   synonym_type: EXACT_SYNONYM
@@ -75,13 +83,13 @@ components:
     notes: Macnab 2003 reviews flagellin export through the central channel and polymerization
       under the FliD cap.
   - reference: DOI:10.3390/biom11020186
-    notes: Minamino and Namba 2021 review the approximate number of flagellin subunits
+    notes: Halte and Erhardt 2021 review the approximate number of flagellin subunits
       in a long bacterial flagellar filament.
   - reference: DOI:10.1038/s41598-019-51440-1
-    notes: Yonekura et al. 2019 resolved an in vivo flagellar filament with 11 protofilaments
+    notes: Blum et al. 2019 resolved an in vivo flagellar filament with 11 protofilaments
       in Kurthia.
   - reference: DOI:10.1038/s41467-026-71203-7
-    notes: Zhu et al. 2026 resolved Vibrio alginolyticus flagellin packing by cryo-EM
+    notes: Qin et al. 2026 resolved Vibrio alginolyticus flagellin packing by cryo-EM
       as independent structural evidence for flagellin as the bacterial filament constituent.
   protein_examples:
   - uniprot_id: UniProtKB:P06179
@@ -121,11 +129,14 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
-  presence: COMMON
-  note: External flagellin filaments are widespread among bacterial-type flagella
-    but are absent from non-flagellated bacterial lineages and from periplasmic spirochete
-    variants whose filaments sit inside the outer membrane.
-  reference: DOI:10.1038/nrmicro1887
+  presence: VARIABLE
+  note: 'Bacterial flagellar systems have a patchy distribution: a survey of 30,238
+    reference genomes from 131 phyla found FliPQR export markers in about 40%. This
+    is genomic marker evidence, not direct observation of assembled external filaments.
+    Marker presence does not establish this particular structure in every genome.
+    This record retains the external-filament scope of GO:0009420; periplasmic spirochete
+    filaments are curated separately.'
+  reference: DOI:10.1073/pnas.2512476122
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
   presence: ABSENT
@@ -158,11 +169,11 @@ evidence:
 - reference: DOI:10.1146/annurev.biochem.72.121801.161737
   notes: Berg HC 2003, The rotary motor of bacterial flagella.
 - reference: DOI:10.1038/s41598-019-51440-1
-  notes: Yonekura K et al. 2019, The wild-type flagellar filament of the Firmicute
-    Kurthia at 2.8 A resolution in vivo.
+  notes: Blum et al. 2019, The wild-type flagellar filament of the Firmicute Kurthia
+    at 2.8 A resolution in vivo.
 - reference: DOI:10.1038/s41467-026-71203-7
-  notes: Zhu et al. 2026, The structure of the Vibrio alginolyticus flagellar filament
-    suggests a mechanism for interspecies motility differences.
+  notes: Qin et al. 2026, The structure of the Vibrio alginolyticus flagellar filament
+    suggests molecular mechanism for the rotation of sheathed flagella.
 causal_graphs:
 - graph_id: flagellin_helical_propeller
   title: Flagellin protofilaments form a rotary propeller
@@ -201,10 +212,10 @@ causal_graphs:
     description: Flagellin molecules stack head-to-tail within longitudinal protofilaments.
     evidence:
     - reference: DOI:10.1038/s41598-019-51440-1
-      notes: Yonekura et al. 2019 resolved repeating flagellin subunits in an 11-protofilament
+      notes: Blum et al. 2019 resolved repeating flagellin subunits in an 11-protofilament
         Kurthia filament.
     - reference: DOI:10.1038/s41467-026-71203-7
-      notes: Zhu et al. 2026 resolved Vibrio alginolyticus flagellin packing by cryo-EM.
+      notes: Qin et al. 2026 resolved Vibrio alginolyticus flagellin packing by cryo-EM.
   - subject: protofilament
     predicate: packs into
     object: filament
@@ -212,8 +223,8 @@ causal_graphs:
       filament.
     evidence:
     - reference: DOI:10.1038/s41598-019-51440-1
-      notes: Yonekura et al. 2019 describe the Kurthia flagellar filament as a tube
-        built from 11 protofilaments.
+      notes: Blum et al. 2019 describe the Kurthia flagellar filament as a tube built
+        from 11 protofilaments.
   - subject: flagellin
     predicate: extends
     object: filament
