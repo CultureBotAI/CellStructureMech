@@ -31,6 +31,13 @@ curation_history:
     note to the cited rotor reconstruction, and resolved #283 by adding bacterial
     flagellar motor literature synonyms.'
   llm_assisted: true
+- timestamp: '2026-10-10T22:48:45Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2155, #2156: Rotation claims exceed the context of the cited
+    2020 models; Dynamic exchange lacks a directly matched source and experimental
+    scope. Preserved historical events and PROPOSED status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial flagellar motor
   synonym_type: RELATED_SYNONYM
@@ -113,10 +120,16 @@ functions:
   - reference: DOI:10.1016/j.cell.2020.08.016
     notes: Santiveri et al. 2020 modeled MotAB stator rotation as the force source
       for flagellar torque generation.
+  - reference: DOI:10.1073/pnas.2515291122
+    notes: Hosu et al. 2025 measured MotA rotation relative to anchored MotB in functioning
+      Escherichia coli motors using polarized photobleaching. The experiment measured
+      angular speed, not the direction of MotA rotation, and did not test all Mot/Pom
+      stators.
 - function_id: dynamic_stator_anchoring
   label: dynamic stator anchoring
-  description: Stator units dock around the rotor and anchor through their B-subunit
-    peptidoglycan-binding domains while dynamically exchanging at the motor.
+  description: Stator B-subunit domains anchor activated units to peptidoglycan. Exchange
+    between motor-bound and membrane-pool stators has been measured in Escherichia
+    coli; turnover behavior need not be identical in scaffolded motors of other bacteria.
   evidence:
   - reference: DOI:10.7554/eLife.48979
     notes: Chang et al. 2019 imaged stator complexes around bacterial flagellar rotors
@@ -124,6 +137,11 @@ functions:
   - reference: DOI:10.1016/j.str.2018.02.016
     notes: Kojima et al. 2018 linked B-subunit rearrangement to peptidoglycan binding
       and stator activation.
+  - reference: DOI:10.1038/nature05135
+    notes: Leake et al. 2006 measured GFP-MotB turnover between the membrane pool
+      and functioning Escherichia coli motors using fluorescence recovery and loss
+      after photobleaching; this is direct exchange evidence for that system, not
+      every bacterial motor.
 - function_id: chemotactic_directional_switching
   label: chemotactic directional switching
   description: Phosphorylated CheY binds FliM in the C-ring switch complex to shift
@@ -166,6 +184,16 @@ evidence:
 - reference: DOI:10.1016/j.cell.2021.03.057
   notes: Tan et al. 2021, Structural basis of assembly and torque transmission of
     the bacterial flagellar motor, Cell.
+- reference: DOI:10.1073/pnas.2515291122
+  notes: Hosu et al. 2025 measured MotA rotation relative to anchored MotB in functioning
+    Escherichia coli motors using polarized photobleaching. The experiment measured
+    angular speed, not the direction of MotA rotation, and did not test all Mot/Pom
+    stators.
+- reference: DOI:10.1038/nature05135
+  notes: Leake et al. 2006 measured GFP-MotB turnover between the membrane pool and
+    functioning Escherichia coli motors using fluorescence recovery and loss after
+    photobleaching; this is direct exchange evidence for that system, not every bacterial
+    motor.
 causal_graphs:
 - graph_id: flagellar_motor_torque_and_switching
   title: Stators drive the MS/C-ring rotor
@@ -211,11 +239,18 @@ causal_graphs:
   - subject: stator_complex
     predicate: docks around
     object: rotor_complex
-    description: Membrane stator units assemble dynamically around the flagellar rotor.
+    description: Stator units dock around the rotor. Cryo-ET localizes these contacts
+      in Borrelia burgdorferi; dynamic exchange has separately been measured in Escherichia
+      coli.
     evidence:
     - reference: DOI:10.7554/eLife.48979
       notes: Chang et al. 2019 imaged stator complexes around bacterial flagellar
         rotors in cells.
+    - reference: DOI:10.1038/nature05135
+      notes: Leake et al. 2006 measured GFP-MotB turnover between the membrane pool
+        and functioning Escherichia coli motors using fluorescence recovery and loss
+        after photobleaching; this is direct exchange evidence for that system, not
+        every bacterial motor.
   - subject: stator_complex
     predicate: anchors to
     object: peptidoglycan
@@ -227,12 +262,19 @@ causal_graphs:
   - subject: ion_flux
     predicate: drives
     object: stator_complex
-    description: Ion flow drives rotation of the stator A-subunit ring around the
-      anchored B-subunit dimer.
+    description: The 2020 structural models propose that ion flow drives A-subunit
+      motion around the anchored B-subunit dimer. Later polarized-photobleaching experiments
+      directly support MotA rotation in Escherichia coli, without establishing every
+      Mot/Pom trajectory.
     evidence:
     - reference: DOI:10.1016/j.cell.2020.08.016
       notes: Santiveri et al. 2020 modeled MotAB stator rotation as the ion-coupled
         force source.
+    - reference: DOI:10.1073/pnas.2515291122
+      notes: Hosu et al. 2025 measured MotA rotation relative to anchored MotB in
+        functioning Escherichia coli motors using polarized photobleaching. The experiment
+        measured angular speed, not the direction of MotA rotation, and did not test
+        all Mot/Pom stators.
   - subject: stator_complex
     predicate: applies torque to
     object: c_ring

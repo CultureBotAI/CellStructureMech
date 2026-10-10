@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_motor.yaml
+  slug: bacterial_type_flagellum_motor
+session:
+  id: 2026-10-10T224847Z-codex-ceb2da
+  timestamp: '2026-10-10T22:48:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2155
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2156
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - functions
+  - evidence
+  - causal_graphs
+  summary: 'Addressed #2155, #2156: Rotation claims exceed the context of the cited 2020 models;
+    Dynamic exchange lacks a directly matched source and experimental scope. Preserved historical
+    events and PROPOSED status.'
+  details: Evidence-backed fixes to reviews/structured/20261010T224657Z-flagellar-motor-audit/review.yaml.
+    Original issue-bearing review saved before mutation. Inspected source/authority snapshots
+    retain experimental and taxonomic limits. Guarded write passed; post-change gates and
+    generated artifacts checked separately before publication. No human sign-off implied.

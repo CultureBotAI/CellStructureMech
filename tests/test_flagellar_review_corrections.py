@@ -229,3 +229,71 @@ def test_exact_flgk_family_does_not_force_a_broad_flge_grounding():
     flge = record("_hook")["components"][0]
     assert "grounding" not in flge
     assert flge["grounding_status"] == "REVIEWED_LABEL_ONLY"
+
+
+@pytest.mark.parametrize("part", ["motor", "stator_complex"])
+def test_stator_dynamics_keep_source_and_organism_context(part):
+    doc = record("_" + part)
+    edges = doc["causal_graphs"][0]["edges"]
+    edge = named(edges, "subject", "ion_flux")
+    assert "model" in edge["description"]
+    assert "Escherichia coli" in edge["description"]
+    direct = named(edge["evidence"], "reference", "DOI:10.1073/pnas.2515291122")
+    assert "not the direction" in direct["notes"]
+    assert "not test all Mot/Pom" in direct["notes"]
+    exchange = doc["functions"][1]
+    assert "Escherichia coli" in exchange["description"]
+    assert any(e["reference"] == "DOI:10.1038/nature05135" for e in exchange["evidence"])
+
+
+def test_stator_a_family_grounding_does_not_overground_b_subunit():
+    a, b = record("_stator_complex")["components"]
+    assert a["grounding"] == "InterPro:IPR047055"
+    assert a["label"] == "Motility protein A-like"
+    assert "grounding_status" not in a
+    assert "former label-only decision is superseded" in a["grounding_notes"]
+    assert a["gene_symbols"] == ["motA", "pomA"]
+    assert "grounding" not in b
+    assert b["grounding_status"] == "REVIEWED_LABEL_ONLY"
+
+
+def test_export_core_counts_keep_the_correct_source_and_organism():
+    doc = record("_secretion_apparatus")
+    for component_id, count in (("flip", "5"), ("fliq", "4"), ("flir", "1")):
+        component = named(doc["components"], "component_id", component_id)
+        assert component["stoichiometry"].startswith(count + " ")
+        assert "Salmonella" in component["stoichiometry"]
+        assert component["evidence"][0]["reference"] == "DOI:10.1038/s41594-018-0086-9"
+    flhb = named(doc["components"], "component_id", "flhb")
+    assert "Vibrio mimicus" in flhb["stoichiometry"]
+    assert flhb["evidence"][0]["reference"] == "DOI:10.1038/s41467-020-15071-9"
+    assert "wrapping around the base" in flhb["role"]
+    assert doc["canonical_examples"][0]["reference"] == "DOI:10.1038/s41594-018-0086-9"
+    edges = doc["causal_graphs"][0]["edges"]
+    assert named(edges, "subject", "flhb")["predicate"] == "contacts"
+    assert "static structure" in edges[0]["description"]
+    assert "does not by itself establish assembly order" in edges[0]["description"]
+    assert "not a FliP5-FliQ4-FliR1-FlhB1 reconstruction" in doc["discussions"][0]["rationale"]
+
+
+def test_export_atpase_model_is_not_a_resolved_complete_complex():
+    doc = record("_secretion_apparatus")
+    for component_id in ("flih", "flii", "flij"):
+        component = named(doc["components"], "component_id", component_id)
+        assert "modeled" in component["stoichiometry"]
+        note = named(component["evidence"], "reference", "DOI:10.1073/pnas.1524025113")["notes"]
+        assert "FliH C-terminal dimer-FliI heterotrimer" in note
+        assert "not a direct reconstruction" in note
+    edge = named(doc["causal_graphs"][0]["edges"], "subject", "flii")
+    assert "In the structural model" in edge["description"]
+
+
+def test_export_sodium_coupling_is_not_assigned_to_intact_atpase_state():
+    doc = record("_secretion_apparatus")
+    function = named(doc["functions"], "function_id", "energy_coupled_export")
+    assert "Salmonella" in function["description"]
+    assert "compromised ATPase system" in function["description"]
+    assert "intact ATPase-assisted system showed no sodium dependence" in function["description"]
+    edge = named(doc["causal_graphs"][0]["edges"], "subject", "ion_motive_force")
+    assert "not with the intact FliH/FliI/FliJ system" in edge["description"]
+    assert edge["evidence"][0]["reference"] == "DOI:10.1371/journal.ppat.1005495"
