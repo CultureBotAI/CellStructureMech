@@ -27,6 +27,14 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-10T06:07:43Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed issues #2112 and #2113: moved the 2013 FlaX/FlaI/FlaH interaction
+    citation from the ArlI/ArlJ motor core to the cytosolic scaffold, with explicit
+    abstract-only access, and narrowed the Sulfolobus canonical example to the cited
+    2012 FlaX/FlaI result. Preserved other biological claims and PROPOSED status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: archaellum
   synonym_type: EXACT_SYNONYM
@@ -79,9 +87,6 @@ components:
   - reference: DOI:10.3389/fmicb.2015.00023
     notes: Albers and Jarrell 2015 review FlaI/ArlI as the assembly ATPase and FlaJ/ArlJ
       as the only polytopic membrane protein conserved in archaellum operons.
-  - reference: DOI:10.1111/febs.12534
-    notes: Banerjee et al. 2013 mapped interactions among Sulfolobus acidocaldarius
-      FlaI, FlaJ and other cytoplasmic archaellum-complex proteins.
 - component_id: arlh_regulator
   label: ArlH motor regulator
   component_type: PROTEIN
@@ -155,6 +160,10 @@ components:
   - reference: DOI:10.1038/s41467-022-28337-1
     notes: Gambelli et al. 2022 summarize ArlX in Crenarchaeota and ArlCDE in Euryarchaeota
       as cytosolic ring modules surrounding the motor.
+  - reference: DOI:10.1111/febs.12534
+    notes: The inspected abstract of Banerjee et al. 2013 reports that Sulfolobus
+      acidocaldarius FlaX interacts with FlaI and FlaH in the cytoplasmic archaellum
+      complex. The full text was not accessible for this curation.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
@@ -171,8 +180,9 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:2285
   taxon_label: Sulfolobus acidocaldarius
-  note: Crenarchaeal genetic and biochemical model for FlaX/FlaI/FlaJ motor assembly
-    and S-layer anchoring.
+  note: Crenarchaeal model for biochemical characterization of FlaX ring formation
+    and interaction with the motor ATPase FlaI, as reported in the inspected primary
+    abstract.
   reference: DOI:10.1074/jbc.M112.414383
 - taxon_id: NCBITaxon:2261
   taxon_label: Pyrococcus furiosus
