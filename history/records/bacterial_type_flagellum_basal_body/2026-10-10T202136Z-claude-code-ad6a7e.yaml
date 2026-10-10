@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+  slug: bacterial_type_flagellum_basal_body
+session:
+  id: 2026-10-10T202136Z-claude-code-ad6a7e
+  timestamp: '2026-10-10T20:21:36Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2129
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2131
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2132
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2127
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - causal_graphs
+  summary: 'Addressed #2129, #2131, #2132: Qualify proposed stator rotation in three flagellar
+    records; Correct bacterial flagellum and basal-body prevalence scope; Qualify C-ring assembly
+    essentiality in the enclosing flagellar records.'
+  details: 'Resolved supported findings from 20261010T201908Z-flagellum-basal-body using inspected
+    source text and authority metadata. Wrote through the closed-schema guarded writer; retained
+    PROPOSED status, original discussions and historical events. Full QC and post-fix dispositions
+    follow separately. The whole-flagellum diameter remains unverified under #171.'

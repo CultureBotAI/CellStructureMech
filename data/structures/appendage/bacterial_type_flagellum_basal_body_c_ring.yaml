@@ -39,6 +39,19 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-10T20:21:32Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #2129, #2134: Qualify proposed stator rotation in three flagellar
+    records; Correct the C-ring FliY grounding rationale without erasing history.'
+  llm_assisted: true
+- timestamp: '2026-10-10T20:28:20Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed adversarial issue #2135: qualified FliM/FliN assembly essentiality
+    with the engineered partial-C-ring bypass, retained the distinct FliG result,
+    and distinguished assembly from motor function.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, C ring
   synonym_type: EXACT_SYNONYM
@@ -72,6 +85,10 @@ components:
   - reference: DOI:10.1016/j.tim.2014.12.011
     notes: Minamino and Imada 2015 review FliG as the C-ring protein that contacts
       the stator to couple ion-driven force to rotor rotation.
+  - reference: DOI:10.1128/JB.00601-09
+    notes: In the same FliI-overproduction experiment, no C ring was visible in the
+      fliG deletion mutant, unlike fliM/fliN mutants. The few-particle analysis does
+      not justify transferring their partial-assembly bypass to FliG.
   protein_examples:
   - uniprot_id: UniProtKB:P0A1J9
     protein_label: Flagellar motor switch protein FliG
@@ -97,9 +114,11 @@ components:
   grounding: InterPro:IPR001689
   gene_symbols:
   - fliM
-  essentiality: ESSENTIAL
+  essentiality: CONDITIONAL
   role: Builds the switch lattice between FliG and FliN and carries phosphorylated
-    CheY input into clockwise/counterclockwise rotational switching.
+    CheY input into clockwise/counterclockwise rotational switching. In engineered
+    Salmonella deletion mutants, FliI overproduction permits an incomplete C ring
+    without this subunit, but does not restore normal motor function.
   evidence:
   - reference: DOI:10.1038/nature09300
     notes: Lee et al. 2010 structurally analyzed FliG, FliM and FliN interactions
@@ -107,6 +126,10 @@ components:
   - reference: DOI:10.1128/mBio.00079-19
     notes: Sakai et al. 2019 probed FliG-FliM rearrangements in the flagellar switch
       complex during rotational biasing.
+  - reference: DOI:10.1128/JB.00601-09
+    notes: Konishi et al. 2009, Fig. 4, observed partial C rings in FliI-overproducing
+      Salmonella fliM and fliN deletion mutants. This supports conditional assembly,
+      not normal function or universal dispensability.
   protein_examples:
   - uniprot_id: UniProtKB:P26418
     protein_label: Flagellar motor switch protein FliM
@@ -132,9 +155,10 @@ components:
   grounding: InterPro:IPR012826
   gene_symbols:
   - fliN
-  essentiality: ESSENTIAL
+  essentiality: CONDITIONAL
   role: Forms the lower switch-complex layer with FliM to stabilize the cytoplasmic
-    C ring.
+    C ring. In engineered Salmonella deletion mutants, FliI overproduction permits
+    an incomplete C ring without this subunit, but does not restore normal motor function.
   evidence:
   - reference: DOI:10.1038/emboj.2011.188
     notes: Paul et al. 2011 mapped FliM and FliN beneath FliG in the Salmonella flagellar
@@ -142,6 +166,10 @@ components:
   - reference: DOI:10.1038/nature09300
     notes: Lee et al. 2010 structurally connected FliN to the FliG/FliM/FliN torque
       ring.
+  - reference: DOI:10.1128/JB.00601-09
+    notes: Konishi et al. 2009, Fig. 4, observed partial C rings in FliI-overproducing
+      Salmonella fliM and fliN deletion mutants. This supports conditional assembly,
+      not normal function or universal dispensability.
   protein_examples:
   - uniprot_id: UniProtKB:P26419
     protein_label: Flagellar motor switch protein FliN
@@ -193,15 +221,16 @@ functions:
       to the FliF MS-ring core.
 - function_id: rotor_stator_torque_coupling
   label: rotor-stator torque coupling
-  description: FliG in the C ring contacts membrane stator units so Mot/Pom A-subunit
-    rotation can apply torque to the basal-body rotor.
+  description: FliG contacts stator A subunits to receive ion-driven torque. Mot/Pom
+    A-ring rotation is a proposed structural model for this coupling; the cited study
+    also permits an oscillating ratchet.
   evidence:
   - reference: DOI:10.1016/j.tim.2014.12.011
     notes: Minamino and Imada 2015 review the FliG-stator interface that transmits
       motor torque to the C ring.
   - reference: DOI:10.1038/s41564-020-0788-8
-    notes: Deme et al. 2020 modeled MotA/PomA-family stator subunits meshing with
-      FliG in the rotor.
+    notes: Deme et al. 2020 resolve A5B2 architecture and propose rotating or oscillating
+      A-subunit mechanisms for transmitting torque to FliG.
 - function_id: rotational_switching
   label: rotational switching
   description: The switch complex changes C-ring conformation to bias the flagellar
@@ -361,15 +390,35 @@ discussions:
   status: RESOLVED
   attaches_to:
   - components#flin
-  rationale: Ward et al. 2019 support FliY as the Bacillus subtilis lower switch-complex
-    protein, but the exact InterPro grounding used for this record's FliN component
-    is restricted to FliN from organisms such as Salmonella and Escherichia.
-  resolution_note: 'Declined: keep the core component grounded to exact FliN and document
-    the FliY replacement as a lineage variant until an exact B. subtilis FliY-family
-    component is modeled.'
+  rationale: 'Ward et al. 2019 support FliY as the Bacillus subtilis lower switch-complex
+    protein, but the exact InterPro grounding used for this record''s FliN component
+    is restricted to FliN from organisms such as Salmonella and Escherichia. Correction
+    (2026-10-10): that taxonomic restriction is incorrect. InterPro IPR012826 also
+    covers the corresponding region of longer FliY proteins, and reviewed Bacillus
+    subtilis FliY P24073 carries this entry. A shared region does not by itself establish
+    equivalent whole-protein scope.'
+  resolution_note: Retain the enteric FliN component and document the Bacillus FliY
+    replacement as a lineage variant. This boundary rests on whole-protein architecture
+    and phosphatase function, not exclusion of FliY from IPR012826. A separate lineage-specific
+    component remains to be modeled; the family match alone does not justify silently
+    merging the proteins.
   posed_by: claude
   posed_date: '2026-09-08'
   resolved_date: '2026-09-08'
+  notes: '2026-10-10: Corrected the basis of the prior decline while retaining its
+    original rationale and dates. Ward et al. 2019 describe the Bacillus switch organization
+    and FliY phosphatase; current InterPro and UniProt demonstrate the shared region.'
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/entry/InterPro/IPR012826/
+    notes: InterPro describes the corresponding FliN-family region in longer FliY
+      proteins.
+  - reference: https://www.uniprot.org/uniprotkb/P24073
+    notes: Reviewed Bacillus subtilis FliY includes the IPR012826 cross-reference.
+  - reference: DOI:10.1128/JB.00626-18
+    notes: Ward et al. 2019 support the Bacillus FliY replacement and its phosphatase
+      role.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2134
+    notes: Corrects the rationale without erasing historical provenance.
 - discussion_id: exclude_neighboring_motor_subcomplexes
   prompt: Should the MS ring, stator units or flagellar export apparatus be components
     of this record?

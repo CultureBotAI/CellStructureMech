@@ -1,0 +1,244 @@
+# C-ring component assembly: adversarial review correction
+
+- Review: 20261010T202810Z-flagellar-c-ring-adversarial
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-10T20:28:04Z
+- Finished UTC: 2026-10-10T20:28:10Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+New scoped finding corrects an omission in the prior full-record composition assessment; other original findings retain their existing lineage.
+
+## Scope And Provenance
+
+Individual FliG/FliM/FliN assembly essentiality, not a new full-record literature pass.
+
+Selection: Exact maintained C-ring record
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 27243291cf4fec2488e41c95f85aa90a1d0d091e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0009433 | data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml | maintained | bacterial-type flagellum basal body, C ring |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused strict validation | passed | True | GO:0009433 | Fresh focused validation passed before the additional component edits; shape validation did not detect the scientific defect. |
+
+## Scientific And Domain Assessments
+
+### Individual assembly essentiality
+
+evidence: concern. Targets: GO:0009433.
+
+Qualify FliM/FliN with the engineered bypass context; preserve the distinct FliG result and the distinction between partial assembly and motor function.
+
+## Findings
+
+### F1: Qualify individual FliM and FliN assembly essentiality
+
+major / open / confirmed; issue key: flagellar-c-ring-flim-flin-assembly-condition.
+
+The original composition assessment overlooked partial C-ring formation in engineered FliM/FliN mutants. Native essentiality includes defective formation, so completeness or motor function does not justify these unconditional ESSENTIAL values. FliG has a distinct result and must not be reclassified by analogy.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Qualify the two affected components, preserving FliG and source scope.
+
+- Record condition-bound assembly with the source at each affected component; distinguish defective structures from functional motors.
+- Append both histories, retain PROPOSED, add regression coverage and pass focused/full validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml; FliG, FliM and FliN essentiality and native assembly enum | context_only | All three components remain ESSENTIAL; defective formation is included in the native vocabulary. |
+| bypass | DOI:10.1128/JB.00601-09; Results: Sizes of defective C-ring structures; Fig. 4; Table 1 | refutes | FliI-overproducing Salmonella mutants retain incomplete rings after fliM or fliN deletion, unlike fliG deletion; motor function is not restored. The small-particle sample limits extrapolation. |
+| prior-review | reviews/structured/20261010T201915Z-flagellum-c-ring/review.yaml; Composition assessment | context_only | The supported composition assessment omitted this individual-component conflict. This new observation corrects the omission without rewriting the saved bundle. |
+
+## Limits And Additional Notes
+
+- Focused correction prompted by adversarial review, not a new all-record or human scientific review.
+- The experiment involves engineered FliI-overproducing mutants and few isolated structures; it is not evidence of universal dispensability.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261010T202810Z-flagellar-c-ring-adversarial
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'C-ring component assembly: adversarial review correction'
+started_at: '2026-10-10T20:28:04Z'
+finished_at: '2026-10-10T20:28:10Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: An independent agent identified the omission; the implementing
+    agent re-inspected the primary results and owns this assessment. Not human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: New scoped finding corrects an omission in the prior full-record composition
+  assessment; other original findings retain their existing lineage.
+source:
+  git_revision: 27243291cf4fec2488e41c95f85aa90a1d0d091e
+  state: working_tree
+  inputs:
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    sha256: 602a9302edbf2d1b7739dbfa5bcac6e50a4c7505b948f31921b17ff6ab7faaf3
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: reviews/structured/20261010T201915Z-flagellum-c-ring/review.yaml
+    sha256: 244e50c1b39cb98f8d99610cba83c6c8b79f149024b60509e9a49a311a27606d
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0009433
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  label: bacterial-type flagellum basal body, C ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    role: maintained scientific record
+scope:
+  description: Individual FliG/FliM/FliN assembly essentiality, not a new full-record
+    literature pass.
+  selection: Exact maintained C-ring record
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009433
+checks:
+- check_id: strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009433
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Fresh focused validation passed before the additional component edits;
+    shape validation did not detect the scientific defect.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  locator: FliG, FliM and FliN essentiality and native assembly enum
+  accessed_at: '2026-10-10T20:28:10Z'
+  support: context_only
+  snapshot_sha256: 602a9302edbf2d1b7739dbfa5bcac6e50a4c7505b948f31921b17ff6ab7faaf3
+  summary: All three components remain ESSENTIAL; defective formation is included
+    in the native vocabulary.
+- evidence_id: bypass
+  kind: primary_source
+  reference: DOI:10.1128/JB.00601-09
+  locator: 'Results: Sizes of defective C-ring structures; Fig. 4; Table 1'
+  accessed_at: '2026-10-10T20:28:10Z'
+  support: refutes
+  summary: FliI-overproducing Salmonella mutants retain incomplete rings after fliM
+    or fliN deletion, unlike fliG deletion; motor function is not restored. The small-particle
+    sample limits extrapolation.
+- evidence_id: prior-review
+  kind: record_content
+  reference: reviews/structured/20261010T201915Z-flagellum-c-ring/review.yaml
+  locator: Composition assessment
+  accessed_at: '2026-10-10T20:28:10Z'
+  support: context_only
+  snapshot_sha256: 244e50c1b39cb98f8d99610cba83c6c8b79f149024b60509e9a49a311a27606d
+  summary: The supported composition assessment omitted this individual-component
+    conflict. This new observation corrects the omission without rewriting the saved
+    bundle.
+assessments:
+- assessment_id: assembly
+  area: evidence
+  topic: Individual assembly essentiality
+  outcome: concern
+  target_ids:
+  - GO:0009433
+  evidence_ids:
+  - record
+  - bypass
+  - prior-review
+  summary: Qualify FliM/FliN with the engineered bypass context; preserve the distinct
+    FliG result and the distinction between partial assembly and motor function.
+findings:
+- finding_id: F1
+  issue_key: flagellar-c-ring-flim-flin-assembly-condition
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Qualify individual FliM and FliN assembly essentiality
+  description: The original composition assessment overlooked partial C-ring formation
+    in engineered FliM/FliN mutants. Native essentiality includes defective formation,
+    so completeness or motor function does not justify these unconditional ESSENTIAL
+    values. FliG has a distinct result and must not be reclassified by analogy.
+  target_ids:
+  - GO:0009433
+  field_paths:
+  - components[1].essentiality
+  - components[2].essentiality
+  evidence_ids:
+  - record
+  - bypass
+  - prior-review
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    role: maintained scientific record
+  rule_id: src/cellstructuremech/schema/cellstructuremech.yaml#EssentialityEnum
+  native_severity: major
+  normalization_reason: A material assembly claim exceeds the bounded experimental
+    evidence.
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2135
+actions:
+- action_id: A1
+  description: Qualify the two affected components, preserving FliG and source scope.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009433
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    role: maintained scientific record
+  generator: just text-embeddings-refresh; just render
+  acceptance_checks:
+  - Record condition-bound assembly with the source at each affected component; distinguish
+    defective structures from functional motors.
+  - Append both histories, retain PROPOSED, add regression coverage and pass focused/full
+    validation.
+limitations:
+- Focused correction prompted by adversarial review, not a new all-record or human
+  scientific review.
+- The experiment involves engineered FliI-overproducing mutants and few isolated structures;
+  it is not evidence of universal dispensability.
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261010T201915Z-flagellum-c-ring
+  relationship: corrects composition assessment omission
+```
