@@ -38,6 +38,13 @@ curation_history:
     essentiality to UNKNOWN, and removing the overbroad GO:0060271 cilium-assembly
     function.'
   llm_assisted: true
+- timestamp: '2026-10-10T23:27:03Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2164: grounded the assembled Y-shaped link to GO:0097537, synchronized
+    graph identity, and retained the superseded rationale and unresolved molecular
+    inventory. Preserved PROPOSED status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cilial transition zone
   synonym_type: EXACT_SYNONYM
@@ -52,13 +59,16 @@ part_of:
 - GO:0005929
 components:
 - component_id: transition_zone_y_linkers
-  label: transition-zone Y-linkers
-  component_type: OTHER
+  label: Y-shaped link
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0035869 defines Y-shaped linkers at this ciliary region, but
-    no exact source-neutral CURIE for the assembled linker material was curated.
+  grounding_notes: 'GO:0035869 defines Y-shaped linkers at this ciliary region, but
+    no exact source-neutral CURIE for the assembled linker material was curated. Reassessment
+    on 2026-10-10: the earlier label-only decision is superseded by GO:0097537, the
+    exact assembled Y-shaped link complex. The preceding rationale records the earlier
+    curation state, not current absence; molecular composition remains incompletely
+    resolved.'
   role: Y-shaped connections spanning from proximal axonemal microtubules to the adjacent
     ciliary membrane.
   evidence:
@@ -68,6 +78,11 @@ components:
   - reference: DOI:10.1083/jcb.201006105
     notes: Craige et al. 2010 showed that Chlamydomonas CEP290 localizes to the flagellar
       transition zone and is needed for normal microtubule-membrane tethering there.
+  - reference: GO:0097537
+    notes: Exact GO cellular-component identity for the Y-shaped protein complex within
+      the ciliary transition zone. This grounds the assembled linker, not a complete
+      list of its constituent protein families or a Y-link-specific gating mechanism.
+  grounding: GO:0097537
 - component_id: transition_zone_axonemal_microtubules
   label: transition-zone axonemal microtubules
   component_type: OTHER
@@ -146,6 +161,10 @@ evidence:
 - reference: DOI:10.1038/s41467-022-31751-0
   notes: Wang et al. 2022, Ciliary transition zone proteins coordinate ciliary protein
     composition and ectosome shedding, Nature Communications.
+- reference: GO:0097537
+  notes: Exact GO cellular-component identity for the Y-shaped protein complex within
+    the ciliary transition zone. This grounds the assembled linker, not a complete
+    list of its constituent protein families or a Y-link-specific gating mechanism.
 causal_graphs:
 - graph_id: ciliary_transition_zone_gates_ciliary_compartment
   title: Ciliary transition zone gates the ciliary compartment
@@ -161,9 +180,10 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0035869
   - node_id: transition_zone_y_linkers
-    label: transition-zone Y-linkers
+    label: Y-shaped link
     node_type: STRUCTURE
     component_ref: transition_zone_y_linkers
+    grounding: GO:0097537
   - node_id: transition_zone_axonemal_microtubules
     label: transition-zone axonemal microtubules
     node_type: STRUCTURE
@@ -219,17 +239,20 @@ causal_graphs:
         TCTN1, CEP290 and NPHP4 transition-zone proteins.
 discussions:
 - discussion_id: resolve_transition_zone_molecular_inventory
-  prompt: Resolve exact conserved ciliary transition-zone proteins and Y-linker families
-    that should replace the label-only aggregates.
+  prompt: Resolve exact molecular constituents of the Y-shaped link and transition-zone
+    protein network, and the segment-specific axonemal microtubule representation.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#transition_zone_y_linkers
   - components#transition_zone_axonemal_microtubules
   - components#transition_zone_protein_network
-  rationale: CEP290, MKS, NPHP and TCTN proteins make up a taxon-specific transition-zone
+  rationale: 'CEP290, MKS, NPHP and TCTN proteins make up a taxon-specific transition-zone
     inventory; this first pass records the conserved architectural parts without asserting
-    exact source-neutral component CURIEs.
+    exact source-neutral component CURIEs. Reassessment on 2026-10-10: GO:0097537
+    now grounds the assembled Y-shaped link. This supersedes the earlier identity
+    gap but does not resolve its molecular constituents or the remaining label-only
+    segment and network; the inventory task remains open.'
   evidence:
   - reference: DOI:10.1101/cshperspect.a028134
     notes: Garcia-Gonzalo and Reiter 2017 review multiple transition-zone protein
@@ -237,5 +260,9 @@ discussions:
   - reference: DOI:10.1038/s41467-022-31751-0
     notes: Wang et al. 2022 assayed Chlamydomonas CEP290, NPHP4 and TCTN1 transition-zone
       proteins.
+  - reference: GO:0097537
+    notes: Exact GO cellular-component identity for the Y-shaped protein complex within
+      the ciliary transition zone. This grounds the assembled linker, not a complete
+      list of its constituent protein families or a Y-link-specific gating mechanism.
   posed_by: codex
   posed_date: '2026-09-15'
