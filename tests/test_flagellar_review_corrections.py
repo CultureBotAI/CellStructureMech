@@ -95,3 +95,54 @@ def test_partial_c_ring_bypass_does_not_extend_to_flig():
         assert "FliI overproduction" in component["role"]
         assert "incomplete C ring" in component["role"]
         assert any(e["reference"] == "DOI:10.1128/JB.00601-09" for e in component["evidence"])
+
+
+@pytest.mark.parametrize("part", ["distal_rod", "ms_ring", "proximal_rod", "rod"])
+def test_rod_ring_prevalence_does_not_turn_genomic_markers_into_observed_anatomy(part):
+    doc = record("_basal_body_" + part)
+    bacteria = named(doc["taxonomic_distribution"], "taxon_id", "NCBITaxon:2")
+    assert bacteria["presence"] == "VARIABLE"
+    assert bacteria["reference"] == "DOI:10.1073/pnas.2512476122"
+    assert "FliPQR" in bacteria["note"]
+    assert "not direct observation" in bacteria["note"]
+    assert "this particular rod/ring" in bacteria["note"]
+
+
+@pytest.mark.parametrize("part", ["proximal_rod", "rod"])
+def test_flie_grounding_supersedes_the_old_decision_without_guessing_flgf(part):
+    components = record("_basal_body_" + part)["components"]
+    flie = named(components, "component_id", "flie")
+    assert flie["grounding"] == "InterPro:IPR001624"
+    assert "grounding_status" not in flie
+    assert flie["grounding_notes"].startswith("No exact integrated InterPro family was identified")
+    assert "label-only decision is superseded" in flie["grounding_notes"]
+    assert "UniProtKB:P26462" in flie["grounding_notes"]
+    assert any(e["reference"] == "InterPro:IPR001624" for e in flie["evidence"])
+    flgf = named(components, "component_id", "flgf")
+    assert "grounding" not in flgf
+    assert flgf["grounding_status"] == "REVIEWED_LABEL_ONLY"
+
+
+def test_l_and_p_ring_synonym_scopes_are_checked_independently():
+    l_ring = record("_basal_body_distal_rod_l_ring")
+    p_ring = record("_basal_body_distal_rod_p_ring")
+    assert l_ring["synonyms"][0]["synonym_type"] == "EXACT_SYNONYM"
+    assert p_ring["synonyms"][0]["synonym_type"] == "RELATED_SYNONYM"
+
+
+def test_p_ring_presence_is_independent_of_l_ring_but_not_of_flgi():
+    doc = record("_basal_body_distal_rod_p_ring")
+    bacteria = named(doc["taxonomic_distribution"], "taxon_id", "NCBITaxon:2")
+    assert bacteria["presence"] == "VARIABLE"
+    assert bacteria["reference"] == "DOI:10.1038/emboj.2011.186"
+    assert "Borrelia burgdorferi" in bacteria["note"]
+    assert "does not require an L ring" in bacteria["note"]
+    flgi = named(doc["components"], "component_id", "flgi")
+    assert flgi["essentiality"] == "ESSENTIAL"
+    assert flgi["stoichiometry"] == "26 subunits in the Salmonella P ring"
+    assert any(e["reference"] == "DOI:10.1128/JB.00340-09" for e in flgi["evidence"])
+    assert "Salmonella" in flgi["role"]
+    assert all("Salmonella" in f["description"] for f in doc["functions"])
+    graph = doc["causal_graphs"][0]
+    assert "Salmonella" in graph["description"]
+    assert all("Salmonella" in edge["description"] for edge in graph["edges"])

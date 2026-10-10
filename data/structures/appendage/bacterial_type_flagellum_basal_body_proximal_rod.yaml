@@ -48,6 +48,14 @@ curation_history:
   changes: '#1233: replaced unreadable Homma, Kubori, Macnab, and Boyd/Gober proximal-rod
     evidence with reachable Johnson, Tan, Saijo-Hamano, and GO evidence.'
   llm_assisted: true
+- timestamp: '2026-10-10T21:24:16Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2142 #2143: Replace unsupported majority bacterial prevalence with lineage-dependent
+    occurrence and an explicitly qualified genomic survey. Ground FliE to verified
+    IPR001624/P26462 while retaining the earlier label-only rationale and leaving
+    FlgF unchanged.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, proximal rod
   synonym_type: EXACT_SYNONYM
@@ -62,9 +70,11 @@ components:
   label: flagellar basal-body protein FliE
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact integrated InterPro family was identified for FliE during
-    curation; the structural identity is curated by label and gene symbol.
+  grounding_notes: 'No exact integrated InterPro family was identified for FliE during
+    curation; the structural identity is curated by label and gene symbol. Reassessed
+    2026-10-10: InterPro IPR001624 is the exact integrated FliE family and is matched
+    by the reviewed Salmonella FliE example UniProtKB:P26462; the earlier label-only
+    decision is superseded.'
   gene_symbols:
   - fliE
   essentiality: ESSENTIAL
@@ -76,6 +86,10 @@ components:
   - reference: DOI:10.1016/j.cell.2021.03.057
     notes: Tan et al. 2021 resolved Salmonella FliE at the base of the rod above the
       export gate.
+  - reference: InterPro:IPR001624
+    notes: Current integrated FliE family verified on 2026-10-10, with a matching
+      cross-reference in reviewed UniProtKB:P26462. Supports family grounding; structural
+      membership remains supported by the primary studies above.
   protein_examples:
   - uniprot_id: UniProtKB:P26462
     protein_label: Flagellar hook-basal body complex protein FliE
@@ -94,6 +108,7 @@ components:
         for gene fliE in Salmonella enterica subsp. enterica serovar Typhimurium str.
         LT2. Establishes the accession and gene identity only; the component's membership
         in this structure rests on the record's own sources.
+  grounding: InterPro:IPR001624
 - component_id: flgb
   label: flagellar basal-body rod protein FlgB
   component_type: PROTEIN
@@ -211,10 +226,12 @@ components:
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
-  presence: COMMON
-  note: Proximal rods occur in bacterial-type flagellar basal bodies but are absent
-    from bacteria without flagellar loci.
-  reference: GO:0009429
+  presence: VARIABLE
+  note: Proximal rods belong to bacterial-type flagellar systems, whose occurrence
+    is lineage-dependent. A reference-genome survey found FliPQR markers in approximately
+    40% of 30,238 genomes spanning 131 bacterial phyla. This is a genomic proxy, not
+    direct observation or a prevalence estimate for this particular rod/ring structure.
+  reference: DOI:10.1073/pnas.2512476122
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
   presence: ABSENT

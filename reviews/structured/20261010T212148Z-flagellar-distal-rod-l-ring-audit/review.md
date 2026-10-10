@@ -1,0 +1,718 @@
+# bacterial-type flagellum basal body, distal rod, L ring: evidence and scope review
+
+- Review: 20261010T212148Z-flagellar-distal-rod-l-ring-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-10T21:01:27Z
+- Finished UTC: 2026-10-10T21:21:48Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+All present native sections assessed at the captured revision. The GO-attributed L-ring synonym scope differs from the current source.
+
+## Scope And Provenance
+
+One complete maintained record, all present scientific fields and both history surfaces; scientific inputs unchanged.
+
+Selection: Next sequential unassessed record in the all-record worklist: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base eb734ac4a4efcfd2cfb3abaf7562a6695f23c74b.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0009427 | data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml | maintained | bacterial-type flagellum basal body, distal rod, L ring |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0009427 | Documented check completed successfully; biological support was assessed separately. |
+| strict | passed | True | GO:0009427 | Documented check completed successfully; biological support was assessed separately. |
+| history | passed | True | GO:0009427 | Documented check completed successfully; biological support was assessed separately. |
+| traits | passed | True | GO:0009427 | Documented check completed successfully; biological support was assessed separately. This target has no trait links; this is a corpus-wide check. |
+| labels | passed | True | GO:0009427 | Documented check completed successfully; biological support was assessed separately. |
+| curies | passed | True | GO:0009427 | Documented check completed successfully; biological support was assessed separately. The full-corpus checker skips unsupported namespaces; a zero exit is not verification of those skipped identifiers. |
+| qc | passed | True | GO:0009427 | Documented check completed successfully; biological support was assessed separately. |
+| imodulondb-datasets | passed | False | GO:0009427 | Structured adapter consulted: exact Salmonella core gene matches, no iModulon hits. Gene identity context only. |
+| imodulondb-flgh | passed | False | GO:0009427 | Structured adapter consulted: exact Salmonella core gene matches, no iModulon hits. Gene identity context only. |
+
+## Scientific And Domain Assessments
+
+### Structure identity, synonyms, hierarchy and parthood
+
+identity: concern. Targets: GO:0009427.
+
+The GO identifier, definition and basal-body parthood match the mature L ring. Its first synonym is exact in current QuickGO but marked related in the native source-attributed row.
+
+### Every listed constituent, role, essentiality and protein example
+
+evidence: supported. Targets: GO:0009427.
+
+FlgH forms the mature L-ring core, with 26 copies in the cited Salmonella reconstruction. The reviewed example P0A1N8, gene flgH, taxon and IPR000527 family match. Mature constituent identity is not confused with transient assembly factors.
+
+### Constituent family scope
+
+grounding: supported. Targets: GO:0009427.
+
+Current exact constituent-family grounding is consistent with the native protein example and does not substitute a broader rod/hook family.
+
+### All distribution rows and organism exemplars
+
+scope: supported. Targets: GO:0009427.
+
+VARIABLE bacterial occurrence and the Salmonella exemplar are appropriately bounded; archaella are structurally distinct. The record does not assert absence in all spirochaetes or universality across Gram-negative bacteria. Parent preview access and delegated full-text review are distinguished.
+
+### Both functions, all graph nodes and every edge
+
+graph: supported. Targets: GO:0009427.
+
+Checked all 6 edges. Axial adjacency, constituent assembly, envelope bushing topology and mechanical coupling are supported in the cited model system. Spatial composition is not interpreted as a directly observed dynamic assembly trajectory. No unsupported stator rotation model is asserted here.
+
+### Stoichiometry and physical properties
+
+quantity: supported. Targets: GO:0009427.
+
+The 26-FlgH count is explicitly Salmonella and agrees with the cited LP-ring reconstruction.
+
+### Discussions, histories, status and omitted optional sections
+
+provenance: supported. Targets: GO:0009427.
+
+Read every discussion and both history surfaces. Resolved boundary decisions distinguish neighboring structures and transient assembly factors; PROPOSED is appropriate. No trait, pathway, image, dataset or external complex-composition claim is present. Their absence is not a finding. Bibliographic abstracts and full-text access limits remain explicit.
+
+## Findings
+
+### F1: GO-attributed L-ring synonym has a different current scope
+
+minor / open / confirmed; issue key: flagellar-l-ring-go-synonym-scope.
+
+The first synonym, flagellar basal body, distal rod, L ring, cites GO:0009427 but is typed RELATED_SYNONYM. Current QuickGO reports the same string as exact. The neighboring P-ring synonym really is related and must not be changed by analogy. Align this bounded source-attribution detail or document a deliberate local scope override.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Change only the first L-ring synonym to the current GO exact scope, or explicitly justify a local override with evidence. Preserve the independently verified RELATED_SYNONYM on the P-ring record.
+
+- Fresh GO source verification agrees with the chosen L-ring synonym scope.
+- The P-ring synonym is unchanged; native strict/schema and history checks pass.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml; Entire native YAML, schema enums, and recorded repository histories | context_only | Full record and histories read. All input hashes remain as captured. PROPOSED status retained; no curation events appended. |
+| paper-01 | DOI:10.1038/nrmicro1887; Review abstract and publisher preview/key points, not subscription main text | supports | The inspected text addresses coordinated flagellar gene regulation and assembly in Gram-negative bacteria, not a denominator-bearing estimate of bacterial prevalence. |
+| paper-03 | DOI:10.1038/s41467-021-24715-3; Full text: Introduction, Results LP-ring reconstruction and FlgH/FlgI structures, Figs. 1-4, methods | supports | Salmonella FlgH and FlgI form the outer-membrane and peptidoglycan sides of a 26-fold LP bushing around the distal rod. |
+| paper-05 | DOI:10.1128/jb.01580-14; Primary abstract | supports | Salmonella L-ring assembly promotes rod-cap removal and the rod-to-hook transition. This is contextual assembly evidence, not grounds to add a transient assembly factor as a mature constituent. |
+| paper-07 | DOI:10.1128/jb.171.7.3890-3900.1989; Primary abstract | supports | The sequenced Salmonella flgH, flgI and fliF genes encode L-, P- and M-ring proteins, respectively. |
+| paper-09 | DOI:10.3389/fmicb.2015.00023; Review full text: historical structural/genomic comparisons, paragraphs 15-18 | supports | Archaella are evolutionarily and structurally distinct from the bacterial rod-and-ring apparatus; the source describes EM and genomic evidence for this distinction. |
+| go-0009279 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009279; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| go-0009425 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009425; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| go-0009426 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009426; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| go-0009427 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009427; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| go-0009428 | https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009428; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| interpro-ipr000527 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR000527/; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| uniprotkb-p0a1n8 | https://rest.uniprot.org/uniprotkb/P0A1N8.json; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| ncbitaxon-2 | https://rest.uniprot.org/taxonomy/2.json; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| ncbitaxon-2157 | https://rest.uniprot.org/taxonomy/2157.json; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| ncbitaxon-90371 | https://rest.uniprot.org/taxonomy/90371.json; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| ncbitaxon-99287 | https://rest.uniprot.org/taxonomy/99287.json; Exact identifier, active status, identity, and relevant source metadata | supports | Authority identity checked; protein examples are gene/taxon identity context, not independent proof of structure membership. |
+| synonym-scopes | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009426,GO:0009427,GO:0009428,GO:0009429,GO:0009431,GO:0030694; Exact six GO records, definitions and typed synonyms | supports | Source synonym types checked against QuickGO, alongside exact OLS identities. |
+| prior-search | reviews/; Recursive structured target-ID inspection | context_only | No previous canonical target review for this record. Prior bibliography mentions are not target assessments. |
+| go-scope-definitions | https://geneontology.org/docs/ontology-documentation/; Optional elements: synonym scopes | context_only | Exact denotes equivalence; related denotes imprecise relationship. These are semantic scopes, not confidence ratings. |
+| chevance-delegated | https://pmc.ncbi.nlm.nih.gov/articles/PMC5963726/; Review article full text, delegated inspection: opening envelope comparison, Box 1 and Figs. 1-2 | context_only | Independent agent inspected the full review article. The parent snapshot covers only abstract/preview; its hash is not a full-text attestation. |
+| cohen-delegated | https://journals.asm.org/doi/10.1128/jb.01580-14; Primary full text, delegated inspection: Introduction, Results and Figs. 1/3/4 | context_only | Independent agent inspected rod-to-hook transition experiments. Parent evidence paper-05 remains an abstract-only snapshot, not a full-text hash. |
+
+## Limits And Additional Notes
+
+- A complete assessment of this record is not completion of the 909-record goal, a new experimental result, or human scientific approval. Proposed fixes are not performed by this review.
+- Some historical sources were inspected as abstracts only. Europe PMC full-text endpoints returned errors for several records; BioC sometimes returned an error document rather than article text. Publisher access attempts included subscription previews and HTTP 403 responses. No unread main-text details or figures are certified.
+- Source-supported assembly and topology primarily concern Salmonella. Broad family labels are not proof of identical stoichiometry or accessory architecture across every bacterial lineage.
+- The full-corpus identifier checker skips unsupported namespaces. Fresh scoped GO, InterPro, UniProt and taxon checks are separately recorded; the successful global exit is not blanket identifier certification.
+- The optional HTML inspection initially found BeautifulSoup unavailable; the standard-library HTMLParser was then used to inspect publisher previews. This was a tooling fallback, not a failed native scientific gate.
+- For Chevance and Cohen, parent full-text retrieval failed but the independent agent inspected the full web source. Separate evidence entries retain that delegated coverage without relabelling abstract snapshot hashes.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261010T212148Z-flagellar-distal-rod-l-ring-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'bacterial-type flagellum basal body, distal rod, L ring: evidence and scope
+  review'
+started_at: '2026-10-10T21:01:27Z'
+finished_at: '2026-10-10T21:21:48Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Agent audit of pre-existing maintained records; not independent
+    human approval. Scientific inputs were not edited in this assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: All present native sections assessed at the captured revision. The GO-attributed
+  L-ring synonym scope differs from the current source.
+source:
+  git_revision: eb734ac4a4efcfd2cfb3abaf7562a6695f23c74b
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+    sha256: 05fee7f9d98947d518249bbad9a4b3feec9631dab4a19e4e8fd1702b99f56314
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/bacterial_type_flagellum_basal_body_distal_rod_l_ring/2026-09-08T021531Z-claude-8368f4.yaml
+    sha256: ba510d527a09405c8db771a44d4fd21f81ccdc053645c0a46869e20ba9478387
+    role: context
+  - path: history/records/bacterial_type_flagellum_basal_body_distal_rod_l_ring/2026-09-21T140304Z-codex-e47b5a.yaml
+    sha256: 3a4a214220da6b5152cfc56208c1946e96b284046d8d7fb72698e39ad2a1ef2f
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0009427
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+  label: bacterial-type flagellum basal body, distal rod, L ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+    role: maintained scientific record
+scope:
+  description: One complete maintained record, all present scientific fields and both
+    history surfaces; scientific inputs unchanged.
+  selection: 'Next sequential unassessed record in the all-record worklist: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009427
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009427
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented check completed successfully; biological support was assessed
+    separately.
+  scope_note: 2026-10-10T21:01:51Z to 2026-10-10T21:01:54Z; log /private/tmp/csm-review-20261010T210100Z/bacterial_type_flagellum_basal_body_distal_rod_l_ring-schema.log;
+    SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009427
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented check completed successfully; biological support was assessed
+    separately.
+  scope_note: 2026-10-10T21:01:54Z to 2026-10-10T21:01:59Z; log /private/tmp/csm-review-20261010T210100Z/bacterial_type_flagellum_basal_body_distal_rod_l_ring-strict.log;
+    SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009427
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented check completed successfully; biological support was assessed
+    separately.
+  scope_note: 2026-10-10T21:02:31Z to 2026-10-10T21:02:46Z; log /private/tmp/csm-review-20261010T210100Z/history.log;
+    SHA-256 cd1ede9d4a81c377c87a16b4887bfe0d4d500f6bba69a84f56b7ab8216c1e150
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009427
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented check completed successfully; biological support was assessed
+    separately. This target has no trait links; this is a corpus-wide check.
+  scope_note: 2026-10-10T21:02:46Z to 2026-10-10T21:03:09Z; log /private/tmp/csm-review-20261010T210100Z/traits.log;
+    SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009427
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented check completed successfully; biological support was assessed
+    separately.
+  scope_note: 2026-10-10T21:03:09Z to 2026-10-10T21:05:56Z; log /private/tmp/csm-review-20261010T210100Z/labels.log;
+    SHA-256 553dd4c9f88c8a5289a33f588649f4677e541cc9da09ecd6c78c0e9f3cae8917
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009427
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented check completed successfully; biological support was assessed
+    separately. The full-corpus checker skips unsupported namespaces; a zero exit
+    is not verification of those skipped identifiers.
+  scope_note: 2026-10-10T21:05:56Z to 2026-10-10T21:07:04Z; log /private/tmp/csm-review-20261010T210100Z/curies.log;
+    SHA-256 8e131ce6be4c631f49ce1e0d8482937405bcc0843606a5008085f409b7fa84e0
+- check_id: qc
+  name: qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009427
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented check completed successfully; biological support was assessed
+    separately.
+  scope_note: 2026-10-10T21:07:04Z to 2026-10-10T21:20:06Z; log /private/tmp/csm-review-20261010T210100Z/qc.log;
+    SHA-256 098224747786ffb3eccf9f4a8d798514935a3fb24b101b78242d2b0fb74f4abc
+- check_id: imodulondb-datasets
+  name: imodulondb-datasets
+  status: passed
+  required: false
+  target_ids:
+  - GO:0009427
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Structured adapter consulted: exact Salmonella core gene matches, no iModulon
+    hits. Gene identity context only.'
+  scope_note: 2026-10-10T21:03:59Z to 2026-10-10T21:04:01Z; log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- check_id: imodulondb-flgh
+  name: imodulondb-flgh
+  status: passed
+  required: false
+  target_ids:
+  - GO:0009427
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism s_enterica --dataset core --query flgH
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Structured adapter consulted: exact Salmonella core gene matches, no iModulon
+    hits. Gene identity context only.'
+  scope_note: 2026-10-10T21:04:03Z to 2026-10-10T21:04:06Z; log SHA-256 9ea86e5c0d699f36d01e486f52a9d93832a10d365e4c0b484355987a761b54d5
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+  locator: Entire native YAML, schema enums, and recorded repository histories
+  accessed_at: '2026-10-10T21:21:46Z'
+  support: context_only
+  summary: Full record and histories read. All input hashes remain as captured. PROPOSED
+    status retained; no curation events appended.
+- evidence_id: paper-01
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro1887
+  locator: Review abstract and publisher preview/key points, not subscription main
+    text
+  accessed_at: '2026-10-10T21:02:11Z'
+  snapshot_sha256: b6de5192cc8b8ac8aa8cb36af2fcd988ba41e8bd360247925f29c3723d5abbf9
+  support: supports
+  summary: The inspected text addresses coordinated flagellar gene regulation and
+    assembly in Gram-negative bacteria, not a denominator-bearing estimate of bacterial
+    prevalence.
+- evidence_id: paper-03
+  kind: primary_source
+  reference: DOI:10.1038/s41467-021-24715-3
+  locator: 'Full text: Introduction, Results LP-ring reconstruction and FlgH/FlgI
+    structures, Figs. 1-4, methods'
+  accessed_at: '2026-10-10T21:02:17Z'
+  snapshot_sha256: 276579bf73c6911c33fc38b5105f2a1c9f955bd49503b59ec62630f0b9580f00
+  support: supports
+  summary: Salmonella FlgH and FlgI form the outer-membrane and peptidoglycan sides
+    of a 26-fold LP bushing around the distal rod.
+- evidence_id: paper-05
+  kind: primary_source
+  reference: DOI:10.1128/jb.01580-14
+  locator: Primary abstract
+  accessed_at: '2026-10-10T21:02:20Z'
+  snapshot_sha256: 85e37f25a3442e41e26997f5c4f6554b76cbcab78cd6b92a484ced7b33124c1c
+  support: supports
+  summary: Salmonella L-ring assembly promotes rod-cap removal and the rod-to-hook
+    transition. This is contextual assembly evidence, not grounds to add a transient
+    assembly factor as a mature constituent.
+- evidence_id: paper-07
+  kind: primary_source
+  reference: DOI:10.1128/jb.171.7.3890-3900.1989
+  locator: Primary abstract
+  accessed_at: '2026-10-10T21:02:23Z'
+  snapshot_sha256: b8d262114b3343f311d435327dce3ed4d55150bce26ae5da088ba883efd6971a
+  support: supports
+  summary: The sequenced Salmonella flgH, flgI and fliF genes encode L-, P- and M-ring
+    proteins, respectively.
+- evidence_id: paper-09
+  kind: primary_source
+  reference: DOI:10.3389/fmicb.2015.00023
+  locator: 'Review full text: historical structural/genomic comparisons, paragraphs
+    15-18'
+  accessed_at: '2026-10-10T21:02:27Z'
+  snapshot_sha256: c2cec0461a17865f7242ef36df178bfc68d00c1f1e292b75f9682a6ba5461464
+  support: supports
+  summary: Archaella are evolutionarily and structurally distinct from the bacterial
+    rod-and-ring apparatus; the source describes EM and genomic evidence for this
+    distinction.
+- evidence_id: go-0009279
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009279
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:14Z'
+  snapshot_sha256: 113aa554d4c4d08d9d4218e5dfd01552dc498f5c651e297960063ca2fe9971eb
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: go-0009425
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009425
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:15Z'
+  snapshot_sha256: ba237444d9aaed5133ec4da342e0d2d5392ac51591dcbc7fe9f7e8db9127df26
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: go-0009426
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009426
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:16Z'
+  snapshot_sha256: 80a529608eb0e2d1f4acc639ea016e6cd38afe34f0a2d4f1fb4dfb8c7029fcb2
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: go-0009427
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009427
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:17Z'
+  snapshot_sha256: 7eba63fd2fcdabbdae2c5adc803cf7d0f03eb1fbbc5c78eb9daf7af9969e785f
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: go-0009428
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0009428
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:17Z'
+  snapshot_sha256: 7a65181a67156eb5867af5379a92cc18c06035562e940c74a367abb7a17ebdfe
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: interpro-ipr000527
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR000527/
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:21Z'
+  snapshot_sha256: ee4d06dc46f797fc38e096fe0da038fe7deb12d82100a6c722931d5d6f087718
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: uniprotkb-p0a1n8
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P0A1N8.json
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:28Z'
+  snapshot_sha256: e41883da65603e5852d8e7ce5fd62caddfb9bfb4867086b0f0a65702db48b6b4
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: ncbitaxon-2
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/2.json
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:24Z'
+  snapshot_sha256: 8074c9bcd59cd4da1da4bc9ec98c040bbecd52ef5c91c4c4bb9bed0f3a7cb5a9
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: ncbitaxon-2157
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/2157.json
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:25Z'
+  snapshot_sha256: 14f5852a1db0f9f5ef8d60e4a11c1916bf005bf549c57dd4bc860d39194a1799
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: ncbitaxon-90371
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/90371.json
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:25Z'
+  snapshot_sha256: 46c958747209e78a835996643e63aafb6d1e94a8a632f0094dba733eb1bd3dee
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: ncbitaxon-99287
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/99287.json
+  locator: Exact identifier, active status, identity, and relevant source metadata
+  accessed_at: '2026-10-10T21:02:26Z'
+  snapshot_sha256: 107ebfece75c5a7147abe7547dec9166f87ff267e6cbc3f67bea9ab9df694a59
+  support: supports
+  summary: Authority identity checked; protein examples are gene/taxon identity context,
+    not independent proof of structure membership.
+- evidence_id: synonym-scopes
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009426,GO:0009427,GO:0009428,GO:0009429,GO:0009431,GO:0030694
+  locator: Exact six GO records, definitions and typed synonyms
+  accessed_at: '2026-10-10T21:07:18Z'
+  snapshot_sha256: e2c49b3c09a47ea7664f38b08da93cb0c6005f67f5d78cfd4375e3fcb55b5fd8
+  support: supports
+  summary: Source synonym types checked against QuickGO, alongside exact OLS identities.
+- evidence_id: prior-search
+  kind: search
+  reference: reviews/
+  locator: Recursive structured target-ID inspection
+  accessed_at: '2026-10-10T21:21:48Z'
+  support: context_only
+  search_scope: All reviews/**/review.yaml, including hidden and ignored files, parsed
+    for exact target ID GO:0009427; 28 canonical bundles inspected.
+  summary: No previous canonical target review for this record. Prior bibliography
+    mentions are not target assessments.
+- evidence_id: go-scope-definitions
+  kind: authority
+  reference: https://geneontology.org/docs/ontology-documentation/
+  locator: 'Optional elements: synonym scopes'
+  accessed_at: '2026-10-10T21:16:13Z'
+  support: context_only
+  summary: Exact denotes equivalence; related denotes imprecise relationship. These
+    are semantic scopes, not confidence ratings.
+- evidence_id: chevance-delegated
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5963726/
+  locator: 'Review article full text, delegated inspection: opening envelope comparison,
+    Box 1 and Figs. 1-2'
+  accessed_at: '2026-10-10T21:03:04Z'
+  support: context_only
+  summary: Independent agent inspected the full review article. The parent snapshot
+    covers only abstract/preview; its hash is not a full-text attestation.
+- evidence_id: cohen-delegated
+  kind: primary_source
+  reference: https://journals.asm.org/doi/10.1128/jb.01580-14
+  locator: 'Primary full text, delegated inspection: Introduction, Results and Figs.
+    1/3/4'
+  accessed_at: '2026-10-10T21:03:04Z'
+  support: context_only
+  summary: Independent agent inspected rod-to-hook transition experiments. Parent
+    evidence paper-05 remains an abstract-only snapshot, not a full-text hash.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Structure identity, synonyms, hierarchy and parthood
+  outcome: concern
+  target_ids:
+  - GO:0009427
+  evidence_ids:
+  - record
+  - synonym-scopes
+  - go-0009427
+  summary: The GO identifier, definition and basal-body parthood match the mature
+    L ring. Its first synonym is exact in current QuickGO but marked related in the
+    native source-attributed row.
+- assessment_id: composition
+  area: evidence
+  topic: Every listed constituent, role, essentiality and protein example
+  outcome: supported
+  target_ids:
+  - GO:0009427
+  evidence_ids:
+  - record
+  - paper-03
+  - paper-07
+  summary: FlgH forms the mature L-ring core, with 26 copies in the cited Salmonella
+    reconstruction. The reviewed example P0A1N8, gene flgH, taxon and IPR000527 family
+    match. Mature constituent identity is not confused with transient assembly factors.
+  dimensions:
+  - name: experimental-scope
+    value: Salmonella preparations; no new all-lineage experimental survey
+    definition: Scope of direct composition and assembly support
+    evidence_ids:
+    - paper-03
+    - paper-07
+- assessment_id: grounding
+  area: grounding
+  topic: Constituent family scope
+  outcome: supported
+  target_ids:
+  - GO:0009427
+  evidence_ids:
+  - record
+  - interpro-ipr000527
+  summary: Current exact constituent-family grounding is consistent with the native
+    protein example and does not substitute a broader rod/hook family.
+- assessment_id: taxonomy
+  area: scope
+  topic: All distribution rows and organism exemplars
+  outcome: supported
+  target_ids:
+  - GO:0009427
+  evidence_ids:
+  - record
+  - paper-09
+  - paper-03
+  - paper-07
+  - chevance-delegated
+  summary: VARIABLE bacterial occurrence and the Salmonella exemplar are appropriately
+    bounded; archaella are structurally distinct. The record does not assert absence
+    in all spirochaetes or universality across Gram-negative bacteria. Parent preview
+    access and delegated full-text review are distinguished.
+- assessment_id: functions-graph
+  area: graph
+  topic: Both functions, all graph nodes and every edge
+  outcome: supported
+  target_ids:
+  - GO:0009427
+  evidence_ids:
+  - record
+  - paper-03
+  summary: Checked all 6 edges. Axial adjacency, constituent assembly, envelope bushing
+    topology and mechanical coupling are supported in the cited model system. Spatial
+    composition is not interpreted as a directly observed dynamic assembly trajectory.
+    No unsupported stator rotation model is asserted here.
+- assessment_id: quantities
+  area: quantity
+  topic: Stoichiometry and physical properties
+  outcome: supported
+  target_ids:
+  - GO:0009427
+  evidence_ids:
+  - record
+  - paper-03
+  summary: The 26-FlgH count is explicitly Salmonella and agrees with the cited LP-ring
+    reconstruction.
+- assessment_id: provenance
+  area: provenance
+  topic: Discussions, histories, status and omitted optional sections
+  outcome: supported
+  target_ids:
+  - GO:0009427
+  evidence_ids:
+  - record
+  - prior-search
+  summary: Read every discussion and both history surfaces. Resolved boundary decisions
+    distinguish neighboring structures and transient assembly factors; PROPOSED is
+    appropriate. No trait, pathway, image, dataset or external complex-composition
+    claim is present. Their absence is not a finding. Bibliographic abstracts and
+    full-text access limits remain explicit.
+findings:
+- finding_id: F1
+  issue_key: flagellar-l-ring-go-synonym-scope
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: GO-attributed L-ring synonym has a different current scope
+  description: The first synonym, flagellar basal body, distal rod, L ring, cites
+    GO:0009427 but is typed RELATED_SYNONYM. Current QuickGO reports the same string
+    as exact. The neighboring P-ring synonym really is related and must not be changed
+    by analogy. Align this bounded source-attribution detail or document a deliberate
+    local scope override.
+  target_ids:
+  - GO:0009427
+  field_paths:
+  - synonyms[0].synonym_type
+  evidence_ids:
+  - record
+  - synonym-scopes
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md#field-by-field-audit
+  native_severity: minor
+  normalization_reason: Nonblocking nomenclature/source-scope mismatch; structure
+    identity and biological assertions remain correct.
+actions:
+- action_id: A1
+  description: Change only the first L-ring synonym to the current GO exact scope,
+    or explicitly justify a local override with evidence. Preserve the independently
+    verified RELATED_SYNONYM on the P-ring record.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009427
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Fresh GO source verification agrees with the chosen L-ring synonym scope.
+  - The P-ring synonym is unchanged; native strict/schema and history checks pass.
+  generator: Guarded writer, curation event, append-only history, and just render.
+limitations:
+- A complete assessment of this record is not completion of the 909-record goal, a
+  new experimental result, or human scientific approval. Proposed fixes are not performed
+  by this review.
+- Some historical sources were inspected as abstracts only. Europe PMC full-text endpoints
+  returned errors for several records; BioC sometimes returned an error document rather
+  than article text. Publisher access attempts included subscription previews and
+  HTTP 403 responses. No unread main-text details or figures are certified.
+- Source-supported assembly and topology primarily concern Salmonella. Broad family
+  labels are not proof of identical stoichiometry or accessory architecture across
+  every bacterial lineage.
+- The full-corpus identifier checker skips unsupported namespaces. Fresh scoped GO,
+  InterPro, UniProt and taxon checks are separately recorded; the successful global
+  exit is not blanket identifier certification.
+- The optional HTML inspection initially found BeautifulSoup unavailable; the standard-library
+  HTMLParser was then used to inspect publisher previews. This was a tooling fallback,
+  not a failed native scientific gate.
+- For Chevance and Cohen, parent full-text retrieval failed but the independent agent
+  inspected the full web source. Separate evidence entries retain that delegated coverage
+  without relabelling abstract snapshot hashes.
+```
