@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/archaeal_type_flagellum.yaml
+  slug: archaeal_type_flagellum
+session:
+  id: 2026-10-10T060746Z-Codex-8e5363
+  timestamp: '2026-10-10T06:07:46Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2112
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2113
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - canonical_examples
+  - curation_history
+  summary: Correct whole-archaellum experimental attributions
+  details: Moved DOI:10.1111/febs.12534 from the ArlI/ArlJ motor core to the cytosolic scaffold
+    and corrected its note to the FlaX/FlaI/FlaH interactions reported in the inspected primary
+    abstract; full text was inaccessible. Narrowed the Sulfolobus canonical-example note to
+    the FlaX ring/FlaI interaction result reported by DOI:10.1074/jbc.M112.414383. Original
+    findings are preserved in reviews/structured/20261010T060647Z-archaellum-evidence/review.yaml.
+    Used write_validated_structure and record_curation_event; preserved PROPOSED, other claims,
+    and the unchanged text-embedding projection. Post-edit validation and generated-page checks
+    will be recorded in the linked disposition and PR; no completed QC run is claimed by this
+    event.
