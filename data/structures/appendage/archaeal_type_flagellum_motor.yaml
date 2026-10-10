@@ -33,6 +33,15 @@ curation_history:
   changes: 'Addressed PR review issue #1359 by narrowing the Sulfolobus canonical-example
     note to the cited FlaX/FlaI scaffold evidence.'
   llm_assisted: true
+- timestamp: '2026-10-10T07:08:31Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #2115: replaced bacterial absence with bounded 2025 experimental
+    and inferred evidence, retaining archaeal graph scope. Addressed #2117: distinguished
+    FlaF binding data and the FlaG/FlaF anchoring model with claim-level, abstract-limited
+    2020 evidence. Addressed #2116: distinguished ArlH ATP binding/autophosphorylation
+    from an unqualified ATPase claim. Preserved PROPOSED status.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -77,14 +86,20 @@ components:
   - flaH
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: ArlH/FlaH is an archaellum-specific P-loop ATPase; no exact family
-    CURIE was verified for the full regulator class in this pass.
+  grounding_notes: ArlH/FlaH is a KaiC-like ATP-binding motor regulator; no exact
+    family CURIE was verified for the full regulator class. ATP binding and autophosphorylation
+    must not be equated with demonstrated ATPase activity.
   role: Nucleotide-dependent regulator that interacts with ArlI/FlaI and is required
     for motor assembly and function in the studied Sulfolobus motor.
   evidence:
   - reference: DOI:10.1111/mmi.13260
-    notes: Chaudhury et al. tested the nucleotide-dependent FlaH-FlaI interaction
-      and showed that it is required for archaellum motor assembly and function.
+    notes: Chaudhury et al. 2016 measured ATP binding and nucleotide-dependent FlaH-FlaI
+      interaction but no detectable in vitro ATPase activity under the tested conditions;
+      this does not establish universal catalytic inactivity.
+  - reference: DOI:10.1111/mmi.14781
+    notes: The 2021 study demonstrated ArlH autophosphorylation and its regulatory
+      relationship to oligomerization and ArlI interaction; phosphorylation is distinct
+      from an unqualified ATPase claim.
 - component_id: arlfg_anchor
   label: ArlF/ArlG S-layer anchor
   component_type: PROTEIN_COMPLEX
@@ -99,15 +114,19 @@ components:
   grounding_notes: ArlF/FlaF and ArlG/FlaG are envelope-side archaellum anchor proteins
     with lineage-specific conservation; no exact CURIE for the two-protein anchor
     module was verified.
-  role: Pseudo-periplasmic envelope module that connects the archaeal-type flagellum
-    motor to the archaeal cell envelope and S-layer in characterized lineages.
+  role: Envelope-side FlaF/FlaG module proposed to anchor the archaellum to the S-layer
+    in characterized archaeal lineages; binding and complex-formation experiments
+    support the model without resolving every motor contact.
   evidence:
   - reference: DOI:10.1016/j.str.2015.03.001
-    notes: Banerjee et al. 2015 showed that Sulfolobus acidocaldarius FlaF binds the
-      S-layer protein and anchors the archaellum in the cell envelope.
-  - reference: DOI:10.7554/eLife.27470
-    notes: Daum et al. 2017 placed the Pyrococcus furiosus archaellum basal machinery
-      at the cell envelope by in situ cryo-electron tomography.
+    notes: Banerjee et al. 2015 demonstrated binding of soluble Sulfolobus acidocaldarius
+      FlaF to isolated S-layer and proposed an anchoring role; the complete FlaF/FlaG-to-motor
+      bridge was not directly resolved.
+  - reference: DOI:10.1038/s41564-019-0622-3
+    notes: The inspected Tsai et al. 2020 primary abstract reports FlaG/FlaF complex
+      formation and motility-disrupting interface mutations, supporting an S-layer-anchoring
+      model. Full text was unavailable; direct contacts to the intact motor are not
+      established by this abstract.
 - component_id: cytosolic_scaffold
   label: ArlX/ArlCDE cytosolic scaffold
   component_type: PROTEIN_COMPLEX
@@ -141,10 +160,13 @@ taxonomic_distribution:
   reference: DOI:10.3389/fmicb.2015.00023
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
-  presence: ABSENT
-  note: Bacterial flagellar motors are non-homologous rotary machines built from FliF/FliG/FliM/FliN
-    rotors and Mot/Pom stators rather than archaellum Arl/Fla subassemblies.
-  reference: DOI:10.3389/fmicb.2015.00023
+  presence: VARIABLE
+  note: Litorilinea aerophila DSM 25763 forms archaellin filaments and swims after
+    growth on motility plates. Other Chloroflexota candidates are supported by genome
+    surveys, not equivalent experimental observations. Its motor architecture is inferred
+    from loci and predicted ArlI/ArlJ structures, not a directly resolved bacterial
+    motor.
+  reference: DOI:10.1038/s41564-025-02110-8
 canonical_examples:
 - taxon_id: NCBITaxon:2285
   taxon_label: Sulfolobus acidocaldarius
@@ -195,12 +217,16 @@ evidence:
     subunits, Nature Communications.
 - reference: GO:0032991
   notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: DOI:10.1038/s41564-025-02110-8
+  notes: Sivabalasarma et al. 2025 experimentally identified archaellum filaments
+    and swimming in Litorilinea aerophila; motor architecture was assessed with genomic
+    and structural predictions.
 causal_graphs:
 - graph_id: archaellum_motor_assembly_rotation
   title: Arl modules build an ATP-powered archaellum motor
   description: Cytosolic scaffold and regulatory proteins organize an ArlI/ArlJ basal
-    core, envelope-side anchor proteins couple that motor to the cell surface, and
-    the ATP-powered motor assembles and rotates the archaellin filament.
+    core; envelope-side FlaF/FlaG proteins are proposed to anchor it to the S-layer.
+    The ATP-powered motor assembles and rotates the archaellin filament.
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
   nodes:
@@ -251,14 +277,21 @@ causal_graphs:
       notes: Chaudhury et al. tested the nucleotide-dependent FlaH-FlaI interaction
         and its role in motor assembly and function.
   - subject: arlfg_anchor
-    predicate: anchors
+    predicate: is proposed to anchor
     object: motor
-    description: Envelope-side ArlF/ArlG or FlaF/FlaG-family proteins connect the
-      motor to the archaeal cell envelope and S-layer.
+    description: FlaF S-layer binding and FlaG/FlaF interaction support an anchoring
+      model in characterized archaea; the complete physical connection to the intact
+      motor remains inferred.
     evidence:
     - reference: DOI:10.1016/j.str.2015.03.001
-      notes: Banerjee et al. 2015 showed that FlaF binds the Sulfolobus S-layer protein
-        and anchors the archaellum in the cell envelope.
+      notes: Banerjee et al. 2015 demonstrated binding of soluble Sulfolobus acidocaldarius
+        FlaF to isolated S-layer and proposed an anchoring role; the complete FlaF/FlaG-to-motor
+        bridge was not directly resolved.
+    - reference: DOI:10.1038/s41564-019-0622-3
+      notes: The inspected Tsai et al. 2020 primary abstract reports FlaG/FlaF complex
+        formation and motility-disrupting interface mutations, supporting an S-layer-anchoring
+        model. Full text was unavailable; direct contacts to the intact motor are
+        not established by this abstract.
   - subject: arli_arlj_motor
     predicate: forms ATP-powered core of
     object: motor
@@ -277,6 +310,9 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2015.00023
       notes: Albers and Jarrell 2015 review the basal ATP-powered machinery that assembles
         and rotates the archaellum filament.
+  scope_notes: The assembly and motor-contact model summarizes characterized archaeal
+    systems; bacterial motor contacts and processing details are not assigned by this
+    graph.
 discussions:
 - discussion_id: resolve_archaellum_motor_grounding
   prompt: Resolve exact source-neutral family or complex CURIEs for the archaellum

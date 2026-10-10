@@ -4,8 +4,8 @@ structure_category: APPENDAGE
 structure_kind: FILAMENT
 definition: An extracellular helical archaellum filament assembled from glycosylated
   type-IV-pilin-like archaellin subunits and rotated by the archaeal-type flagellum
-  motor to propel archaeal cells.
-definition_source: DOI:10.3389/fmicb.2015.00023
+  motor for swimming; characterized in Archaea and in the bacterium Litorilinea aerophila.
+definition_source: DOI:10.1038/s41564-025-02110-8
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-23T04:53:14Z'
@@ -27,6 +27,12 @@ curation_history:
   changes: 'Addressed PR review issues #1356 and #1357 by connecting prearchaellin
     processing to the mature archaellin node and retyping the ArlI/ArlJ motor-core
     graph node from GENE_OR_PROTEIN to STRUCTURE.'
+  llm_assisted: true
+- timestamp: '2026-10-10T07:08:28Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #2115: replaced bacterial absence with bounded 2025 experimental
+    and inferred evidence, retaining archaeal graph scope. Preserved PROPOSED status.'
   llm_assisted: true
 synonyms:
 - synonym_text: archaellum filament
@@ -69,10 +75,11 @@ taxonomic_distribution:
   reference: DOI:10.3389/fmicb.2015.00023
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
-  presence: ABSENT
-  note: Bacteria lack archaellin-based archaellum filaments and instead use non-homologous
-    bacterial flagellin filaments or type IV pili.
-  reference: DOI:10.3389/fmicb.2015.00023
+  presence: VARIABLE
+  note: Litorilinea aerophila DSM 25763 forms archaellin filaments and swims after
+    growth on motility plates. Other Chloroflexota candidates are supported by genome
+    surveys, not equivalent experimental observations.
+  reference: DOI:10.1038/s41564-025-02110-8
 canonical_examples:
 - taxon_id: NCBITaxon:667126
   taxon_label: Methanocaldococcus villosus
@@ -83,12 +90,15 @@ functions:
 - function_id: archaeal_swimming_motility
   label: archaeal-type flagellum-dependent cell motility
   grounding: GO:0097590
-  description: Rotation of the assembled archaellum filament propels archaeal cells
-    through liquid or across semi-solid surfaces.
+  description: Rotation of the archaellum filament drives swimming in characterized
+    archaea and in Litorilinea aerophila.
   evidence:
   - reference: DOI:10.3389/fmicb.2015.00023
     notes: Albers and Jarrell 2015 review archaellum rotation as the archaeal swimming
       mechanism.
+  - reference: DOI:10.1038/s41564-025-02110-8
+    notes: The study links experimentally identified archaellum filaments to swimming
+      in Litorilinea aerophila.
 evidence:
 - reference: DOI:10.3389/fmicb.2015.00023
   notes: 'Albers SV and Jarrell KF 2015, The archaellum: how Archaea swim, Frontiers
@@ -96,6 +106,10 @@ evidence:
 - reference: DOI:10.1038/s41467-022-28337-1
   notes: Gambelli L et al. 2022, An archaellum filament composed of two alternating
     subunits, Nature Communications.
+- reference: DOI:10.1038/s41564-025-02110-8
+  notes: Sivabalasarma et al. 2025 experimentally identified archaellum filaments
+    and swimming in Litorilinea aerophila; motor architecture was assessed with genomic
+    and structural predictions.
 causal_graphs:
 - graph_id: archaellin_filament_rotation
   title: Archaellins assemble into a rotating motility filament
@@ -106,7 +120,9 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: The graph records prearchaellin maturation, filament assembly, and
     motor-driven rotation without asserting the full basal motor, envelope anchor,
-    or chemotaxis-control architecture.
+    or chemotaxis-control architecture. The assembly and motor-contact model summarizes
+    characterized archaeal systems; bacterial motor contacts and processing details
+    are not assigned by this graph.
   nodes:
   - node_id: prearchaellin
     label: prearchaellins

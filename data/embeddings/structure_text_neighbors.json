@@ -15,12 +15,7 @@
         {
           "identifier": "GO:0097589",
           "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.65941551
-        },
-        {
-          "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
-          "label": "archaeal-type flagellum filament",
-          "cosine_similarity": 0.63628077
+          "cosine_similarity": 0.65364535
         },
         {
           "identifier": "cellstructuremech:suctorian_feeding_tentacle",
@@ -31,6 +26,11 @@
           "identifier": "GO:0009289",
           "label": "pilus",
           "cosine_similarity": 0.62800368
+        },
+        {
+          "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
+          "label": "archaeal-type flagellum filament",
+          "cosine_similarity": 0.62128886
         },
         {
           "identifier": "cellstructuremech:diazoplast",
@@ -46,27 +46,27 @@
         {
           "identifier": "cellstructuremech:archaeal_type_flagellum_motor",
           "label": "archaeal-type flagellum motor",
-          "cosine_similarity": 0.94095477
+          "cosine_similarity": 0.93893628
         },
         {
           "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
           "label": "archaeal-type flagellum filament",
-          "cosine_similarity": 0.87984253
-        },
-        {
-          "identifier": "GO:0120101",
-          "label": "bacterial-type flagellum stator complex",
-          "cosine_similarity": 0.77370864
-        },
-        {
-          "identifier": "GO:0009288",
-          "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.76555915
+          "cosine_similarity": 0.89413492
         },
         {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.76528736
+          "cosine_similarity": 0.78248942
+        },
+        {
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.77585143
+        },
+        {
+          "identifier": "GO:0120101",
+          "label": "bacterial-type flagellum stator complex",
+          "cosine_similarity": 0.7720049
         }
       ]
     },
@@ -75,29 +75,29 @@
       "label": "archaeal-type flagellum filament",
       "neighbors": [
         {
-          "identifier": "GO:0009420",
-          "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.88356947
-        },
-        {
           "identifier": "GO:0097589",
           "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.87984253
+          "cosine_similarity": 0.89413492
+        },
+        {
+          "identifier": "GO:0009420",
+          "label": "bacterial-type flagellum filament",
+          "cosine_similarity": 0.89002578
         },
         {
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
-          "cosine_similarity": 0.81513772
+          "cosine_similarity": 0.81522945
         },
         {
           "identifier": "cellstructuremech:archaeal_type_flagellum_motor",
           "label": "archaeal-type flagellum motor",
-          "cosine_similarity": 0.80213115
+          "cosine_similarity": 0.80539773
         },
         {
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
-          "cosine_similarity": 0.80079547
+          "cosine_similarity": 0.80373079
         }
       ]
     },
@@ -108,27 +108,27 @@
         {
           "identifier": "GO:0097589",
           "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.94095477
+          "cosine_similarity": 0.93893628
         },
         {
           "identifier": "GO:0120100",
           "label": "bacterial-type flagellum motor",
-          "cosine_similarity": 0.82970728
+          "cosine_similarity": 0.82737012
         },
         {
           "identifier": "GO:0120101",
           "label": "bacterial-type flagellum stator complex",
-          "cosine_similarity": 0.82429081
+          "cosine_similarity": 0.82117979
         },
         {
           "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
           "label": "archaeal-type flagellum filament",
-          "cosine_similarity": 0.80213115
+          "cosine_similarity": 0.80539773
         },
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.79528125
+          "cosine_similarity": 0.7901845
         }
       ]
     },
@@ -478,14 +478,14 @@
       "label": "bacterial-type flagellum filament",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
+          "label": "archaeal-type flagellum filament",
+          "cosine_similarity": 0.89002578
+        },
+        {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
           "cosine_similarity": 0.88581744
-        },
-        {
-          "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
-          "label": "archaeal-type flagellum filament",
-          "cosine_similarity": 0.88356947
         },
         {
           "identifier": "GO:0009424",
@@ -955,7 +955,7 @@
         {
           "identifier": "GO:0097589",
           "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.63749258
+          "cosine_similarity": 0.62996818
         },
         {
           "identifier": "GO:0033099",
@@ -963,9 +963,9 @@
           "cosine_similarity": 0.62352541
         },
         {
-          "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
-          "label": "archaeal-type flagellum filament",
-          "cosine_similarity": 0.61444854
+          "identifier": "GO:0009289",
+          "label": "pilus",
+          "cosine_similarity": 0.61323214
         }
       ]
     },
@@ -3381,9 +3381,9 @@
           "cosine_similarity": 0.73291709
         },
         {
-          "identifier": "GO:0009421",
-          "label": "bacterial-type flagellum filament cap",
-          "cosine_similarity": 0.7258515
+          "identifier": "cellstructuremech:archaeal_type_flagellum_filament",
+          "label": "archaeal-type flagellum filament",
+          "cosine_similarity": 0.72665088
         }
       ]
     },
@@ -7269,7 +7269,7 @@
         {
           "identifier": "cellstructuremech:archaeal_type_flagellum_motor",
           "label": "archaeal-type flagellum motor",
-          "cosine_similarity": 0.77811681
+          "cosine_similarity": 0.77404417
         },
         {
           "identifier": "GO:0009425",
@@ -20604,7 +20604,7 @@
         {
           "identifier": "GO:0097589",
           "label": "archaeal-type flagellum",
-          "cosine_similarity": 0.68543973
+          "cosine_similarity": 0.6791398
         },
         {
           "identifier": "GO:0120101",

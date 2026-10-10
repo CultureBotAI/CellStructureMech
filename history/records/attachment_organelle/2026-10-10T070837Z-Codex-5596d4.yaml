@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/attachment_organelle.yaml
+  slug: attachment_organelle
+session:
+  id: 2026-10-10T070837Z-Codex-5596d4
+  timestamp: '2026-10-10T07:08:37Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2118
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Resolve saved attachment review findings
+  details: 'Addressed #2118: corrected P1/P40/P90 assembly essentiality to DISPENSABLE using
+    class IV-22 imaging; retained constituent status, functional limits and other component
+    claims. Original observation: reviews/structured/20261010T070627Z-attachment-assembly/review.yaml.
+    Guarded schema validation completed before write; downstream validation is recorded separately
+    after execution.'
