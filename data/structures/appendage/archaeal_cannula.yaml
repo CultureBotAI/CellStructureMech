@@ -28,6 +28,14 @@ curation_history:
     their single direct citations, and resolved #502 by making CanA the subject of
     the calcium-coordination assembly edge.'
   llm_assisted: true
+- timestamp: '2026-10-10T05:19:03Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: Separated native AV2 CanX from recombinant TAG11 CanA evidence, added a
+    label-only CanX constituent, restricted the CanA assembly graph to the demonstrated
+    in vitro system, and named K1-CanA as the solved NMR construct. Preserved PROPOSED
+    status and unresolved family, minor-subunit and physiological-function questions.
+  llm_assisted: true
 synonyms:
 - synonym_text: cannulae
   synonym_type: EXACT_SYNONYM
@@ -41,19 +49,40 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: CanA is a Pyrodictium abyssi cannula-forming glycoprotein, but
-    no exact source-neutral InterPro, Pfam or NCBIfam family grounding for the archaeal
-    cannula subunit class was verified in this pass.
-  role: Extracellular glycoprotein subunit that polymerizes into hollow archaeal cannula
-    fibers in a calcium-dependent, chaperone-free reaction.
+  grounding_notes: CanA is a cannula-forming glycoprotein characterized from Pyrodictium
+    abyssi TAG11, distinct from the native AV2 major subunit CanX. No exact source-neutral
+    InterPro, Pfam or NCBIfam family grounding was verified.
+  role: Cannula glycoprotein whose recombinant mature form assembles into hollow cannula-like
+    fibers in vitro through calcium coordination and donor-strand complementation;
+    warming accelerates assembly under the tested conditions.
   evidence:
   - reference: DOI:10.1038/s41467-025-64120-8
-    notes: Sleutel et al. 2025 used cryo-EM on ex vivo and in vitro Pyrodictium abyssi
-      CanA fibers to resolve calcium-coordinated, donor-strand-complemented cannula
-      polymerization.
+    notes: Sleutel et al. 2025 resolved in vitro filaments assembled from recombinant
+      P. abyssi TAG11 CanA. The native ex vivo AV2 cannula reconstruction in the same
+      paper instead identifies the distinct homologue CanX as its major subunit.
   - reference: DOI:10.1038/s41598-025-13242-6
-    notes: Munte et al. 2025 solved the CanA solution structure and characterized
-      divalent-ion-induced CanA polymerization.
+    notes: Munte et al. 2025 solved the NMR solution structure of the N-terminally
+      truncated K1-CanA construct and separately characterized divalent-ion-induced
+      polymerization of full-length recombinant CanA.
+- component_id: canx_cannula_glycoprotein
+  label: CanX cannula glycoprotein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: CanX names the native cannula major-subunit class identified in
+    P. abyssi AV2, not an alias of TAG11 CanA. Sleutel et al. found no Pfam or PANTHER
+    domain match for the native subunit and placed cannula-like proteins in the broader
+    TasA superfamily; no exact source-neutral family grounding is asserted here.
+  role: Major glycoprotein subunit of native cannulae resolved from P. abyssi AV2,
+    joined by donor-strand complementation and calcium-coordinated interfaces. This
+    does not establish obligatory coassembly with CanA or exclude low-occupancy minor
+    subunits.
+  evidence:
+  - reference: DOI:10.1038/s41467-025-64120-8
+    notes: Sleutel et al. 2025 assigned the native AV2 cannula cryo-EM map to CanX,
+      a homologue distinct from the recombinant TAG11 CanA used in their in vitro
+      assembly experiments.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:54256
   taxon_label: Pyrodictium abyssi
@@ -97,15 +126,17 @@ evidence:
     abyssi, Scientific Reports.
 causal_graphs:
 - graph_id: calcium_dependent_cana_cannula_assembly
-  title: CanA coordinates calcium during cannula-fiber assembly
-  description: Pyrodictium CanA binds calcium ions and undergoes donor-strand complementation
-    to assemble hollow extracellular cannula fibers that extend from the cell envelope
-    and participate in a cell-surface network.
+  title: Recombinant CanA coordinates calcium during in vitro fiber assembly
+  description: Recombinant mature P. abyssi TAG11 CanA coordinates calcium and undergoes
+    donor-strand complementation to assemble hollow cannula-like fibers in vitro.
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
-  scope_notes: This graph is restricted to the CanA polymerization mechanism resolved
-    by structural studies and does not model cell-level nucleation, CanB or CanC incorporation,
-    or the unknown biological cargo of the cannula network.
+  scope_notes: Restricted to the experimentally characterized recombinant CanA assembly
+    system. Calcium was necessary but not sufficient for rapid assembly under the
+    tested conditions; warming accelerated polymerization. Native AV2 CanX fibers
+    provide a distinct structural comparison, not evidence that the native subunit
+    is CanA. Cell-level nucleation, envelope attachment, CanB/CanC incorporation and
+    physiological cargo transport are not modeled.
   nodes:
   - node_id: cana_cannula_glycoprotein
     label: CanA cannula glycoprotein
@@ -115,83 +146,54 @@ causal_graphs:
     label: calcium ion
     node_type: CHEMICAL
   - node_id: hollow_cannula_fiber
-    label: hollow cannula fiber
-    node_type: STRUCTURE
-  - node_id: cell_envelope
-    label: Pyrodictium cell envelope
-    node_type: STRUCTURE
-  - node_id: archaeal_cannula
-    label: archaeal cannula
-    node_type: STRUCTURE
-    grounding: cellstructuremech:archaeal_cannula
-  - node_id: cell_cell_network
-    label: Pyrodictium cell-cell network
+    label: in vitro CanA cannula-like fiber
     node_type: STRUCTURE
   edges:
   - subject: cana_cannula_glycoprotein
     predicate: coordinates
     object: calcium_ion
-    description: CanA calcium-binding interfaces coordinate calcium ions that support
-      chaperone-free polymerization through donor-strand complementation.
+    description: Recombinant CanA interfaces coordinate calcium ions in the in vitro
+      filament, supporting donor-strand-complemented assembly.
     evidence:
     - reference: DOI:10.1038/s41467-025-64120-8
-      notes: Sleutel et al. 2025 resolved calcium-bound CanA interfaces in self-assembled
-        archaeal cannulae.
+      notes: Sleutel et al. 2025 resolved calcium-bound interfaces in recombinant
+        TAG11 CanA filaments assembled in vitro.
   - subject: cana_cannula_glycoprotein
     predicate: polymerizes into
     object: hollow_cannula_fiber
-    description: CanA subunits polymerize into the hollow fiber core of the extracellular
-      cannula.
+    description: Recombinant mature CanA polymerizes into hollow cannula-like fibers
+      under the tested in vitro assembly conditions.
     evidence:
     - reference: DOI:10.1038/s41467-025-64120-8
-      notes: Sleutel et al. 2025 compared native and reassembled CanA cannula fibers
-        by cryo-EM.
+      notes: Sleutel et al. 2025 used cryo-EM to resolve recombinant CanA filaments;
+        their separate native AV2 reconstruction was composed principally of CanX.
     - reference: DOI:10.1038/s41598-025-13242-6
-      notes: Munte et al. 2025 analyzed divalent-ion-induced CanA polymerization into
-        hollow-fiber networks.
-  - subject: hollow_cannula_fiber
-    predicate: forms
-    object: archaeal_cannula
-    description: The cannula is an extracellular hollow tube built from the archaeal
-      cannula fiber.
-    evidence:
-    - reference: DOI:10.1016/S1047-8477(02)00581-6
-      notes: Nickell et al. 2003 resolved hollow Pyrodictium cannulae by cryo-electron
-        tomography.
-  - subject: archaeal_cannula
-    predicate: enters
-    object: cell_envelope
-    description: Pyrodictium cannulae penetrate the archaeal envelope into the periplasmic
-      space but stop outside the cytoplasm.
-    evidence:
-    - reference: DOI:10.1016/S1047-8477(02)00581-6
-      notes: Nickell et al. 2003 found one cannula entering the periplasmic space
-        while a paired cannula contacted the cell surface.
-  - subject: archaeal_cannula
-    predicate: interconnects cells within
-    object: cell_cell_network
-    description: Cell-surface cannulae interconnect Pyrodictium cells within a dense
-      extracellular network.
-    evidence:
-    - reference: DOI:10.1006/jsbi.1995.1032
-      notes: Rieger et al. 1995 characterized the Pyrodictium abyssi cannula network
-        by ultrastructural electron microscopy.
+      notes: Munte et al. 2025 assayed divalent-ion-induced polymerization of full-length
+        recombinant CanA, distinct from the truncated K1-CanA NMR construct.
 discussions:
 - discussion_id: resolve_cana_family_grounding
-  prompt: Resolve exact source-neutral protein-family groundings and component boundaries
-    for Pyrodictium cannula CanA, CanB and CanC glycoproteins.
+  prompt: Resolve exact source-neutral protein-family groundings for CanA and CanX
+    and the component boundaries of CanB and CanC.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - components#cana_cannula_glycoprotein
+  - components#canx_cannula_glycoprotein
   rationale: The first archaeal cannula record keeps only CanA as a reviewed label-only
     component because this pass did not verify an exact Pfam, InterPro or NCBIfam
     family for CanA or resolve whether the homologous CanB and CanC glycoproteins
-    should be separate curated components.
+    should be separate curated components. Follow-up inspection of Sleutel et al.
+    2025 distinguishes the native AV2 major subunit CanX from recombinant TAG11 CanA.
+    Both are now represented separately without implying that they coexist in one
+    native filament; exact family mappings and CanB/CanC component boundaries remain
+    unresolved.
   evidence:
   - reference: DOI:10.1038/s41598-025-13242-6
     notes: Munte et al. 2025 reviewed CanA, CanB and CanC as homologous Pyrodictium
       abyssi glycoproteins present in cannulae.
+  - reference: DOI:10.1038/s41467-025-64120-8
+    notes: Sleutel et al. 2025 distinguish native CanX and recombinant CanA and discuss
+      the unresolved possibility of low-occupancy minor subunits.
   posed_by: codex
   posed_date: '2026-09-11'
 - discussion_id: resolve_cannula_network_function
