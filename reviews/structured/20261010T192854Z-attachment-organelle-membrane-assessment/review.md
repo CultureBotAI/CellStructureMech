@@ -1,0 +1,487 @@
+# Attachment organelle membrane: scientific assessment
+
+- Review: 20261010T192854Z-attachment-organelle-membrane-assessment
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-10T17:29:08Z
+- Finished UTC: 2026-10-10T19:28:54Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Claim-by-claim assessment completed for this one record. Current NCBI taxon scope requires correction.
+
+## Scope And Provenance
+
+Entire maintained record, present material claims and both history surfaces; optional missing fields are not findings.
+
+Selection: Exact path data/structures/appendage/attachment_organelle_membrane.yaml; not a corpus sample.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 478edc23b61f8ea6be66c5b86df04040be08fbdb.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0033111 | data/structures/appendage/attachment_organelle_membrane.yaml | maintained | attachment organelle membrane |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Fresh focused schema | passed | True | GO:0033111 | Passed before curation. |
+| Fresh focused strict | passed | True | GO:0033111 | Passed before curation. |
+| Exact-revision full-corpus gates | passed | True | GO:0033111 | Verified success at unchanged HEAD for Build and test (38043028532), label correspondence (38043028531), identifier/trait checks (38043028562), vendored sync (38043028526), and merge integrity (38043028544). |
+
+## Scientific And Domain Assessments
+
+### Structure identity, category, kind and mereology
+
+identity: supported. Targets: GO:0033111.
+
+Exact GO structure identity, not a protein or phenotype. Membrane is-a/parthood and whole-organelle cell-projection parent/membrane-part boundaries are sound; PROPOSED retained.
+
+### Taxonomic distribution and canonical example
+
+scope: concern. Targets: GO:0033111.
+
+The M129 example and restricted bacterial occurrence are supported, but historical Mollicutes wording has been attached to current NCBITaxon:31969, outside the example lineage. Use the verified encompassing phylum with explicit literature scope, not an asserted taxon synonym or universal presence.
+
+### Lipid boundary component, graph and resolved modeling discussion
+
+evidence: supported. Targets: GO:0033111.
+
+One constituent lipid bilayer is essential to this membrane boundary. Both nonmechanistic edges describe topology, not force production. The discussion deliberately keeps protein maps on the whole organelle; it does not deny membrane protein localization. Optional protein duplication is not required.
+
+### Other fields, status and provenance
+
+completeness: supported. Targets: GO:0033111.
+
+All present material claims assessed. No images, physical measurements, traits, pathway links or datasets are asserted; their optional absence is not a defect. Both history surfaces remain intact. This is agent assessment, not human scientific promotion.
+
+## Findings
+
+### F1: Ground the distribution to a current ancestor taxon
+
+major / open / confirmed; issue key: attachment-organelle-membrane-mollicutes-taxon-scope.
+
+NCBITaxon:31969 is current class Mollicutes, but NCBI full lineage places the characterized M129 example in Mycoplasmoidales directly under Mycoplasmatota. A historical review usage does not establish the current structured scope. Use verified Mycoplasmatota 544448 with VARIABLE and bounded pneumoniae-cluster notes; retain the historical source terminology explicitly.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Ground the distribution to a current ancestor taxon
+
+- NCBITaxon:31969 is current class Mollicutes, but NCBI full lineage places the characterized M129 example in Mycoplasmoidales directly under Mycoplasmatota. A historical review usage does not establish the current structured scope. Use verified Mycoplasmatota 544448 with VARIABLE and bounded pneumoniae-cluster notes; retain the historical source terminology explicitly.
+- Guarded writer; append both histories; preserve PROPOSED and unrelated claims; strict, labels, traits, history, QC and review contract pass.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/attachment_organelle_membrane.yaml; Entire YAML and append-only record histories | context_only | Full record read; native status is PROPOSED; input hashes captured before assessment. |
+| taxonomy | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=272634&amp;retmode=xml; Taxon/LineageEx, every ancestor ID | refutes | M129 lineage includes Mycoplasmatota 544448, Mycoplasmoidales 2790996 and Mycoplasmoidaceae 2790998, but not Mollicutes 31969. |
+| taxon-parent | https://rest.uniprot.org/taxonomy/2790996.json; parent, rank, active, full lineage | supports | The order parent is the phylum Mycoplasmatota, not class Mollicutes. |
+| phylum | https://rest.uniprot.org/taxonomy/544448.json; taxonId, scientificName, rank, active | supports | Taxon 544448 is active Mycoplasmatota, phylum; verified alternative ancestor, not a synonym for Mollicutes. |
+| review2025 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12395765/fullTextXML; Inspected review article: Introduction, The motility of M. pneumoniae cluster, The attachment organelles in M. pneumoniae cluster species | supports | Review uses historical Mollicutes language and describes restricted, variable distribution and characterized pneumoniae-cluster organelles; it does not make current NCBI taxon 31969 an ancestor of M129. |
+| mapping2015 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4669176/fullTextXML; Results protein localization, Fig. 4, immunogold mapping, Discussion model, strain methods | supports | Primary microscopy supports M129 polar organelle architecture, surface P1/P40/P90 and P30, internal HMW2/P65/HMW3 localization and the strain example. |
+| go-identity | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0033111; Inspected source-native identifier, label, definition and hierarchy | supports | Verified the exact cellular-component identity and/or topology. The GO:0033111 definition also has an erroneous mycolate-outer-membrane clause; the native record does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood. |
+| go-membrane | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016020; Inspected source-native identifier, label, definition and hierarchy | supports | Verified the exact cellular-component identity and/or topology. The GO:0033111 definition also has an erroneous mycolate-outer-membrane clause; the native record does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood. |
+| go-plasma | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005886; Inspected source-native identifier, label, definition and hierarchy | supports | Verified the exact cellular-component identity and/or topology. The GO:0033111 definition also has an erroneous mycolate-outer-membrane clause; the native record does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood. |
+| go-whole | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0033099; Inspected source-native identifier, label, definition and hierarchy | supports | Verified the exact cellular-component identity and/or topology. The GO:0033111 definition also has an erroneous mycolate-outer-membrane clause; the native record does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood. |
+| go-projection | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0042995; Inspected source-native identifier, label, definition and hierarchy | supports | Verified the exact cellular-component identity and/or topology. The GO:0033111 definition also has an erroneous mycolate-outer-membrane clause; the native record does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood. |
+| sl | https://rest.uniprot.org/locations/SL-0021.json; Inspected source-native identifier, label, definition and hierarchy | supports | Verified the exact cellular-component identity and/or topology. The GO:0033111 definition also has an erroneous mycolate-outer-membrane clause; the native record does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood. |
+
+## Limits And Additional Notes
+
+- Baseline full-corpus checks are reused exact-revision CI; only focused schema/strict checks were rerun before curation. CI checks are deterministic, not biological evidence.
+- Cached same-day authority/primary files were inspected with original retrieval timestamps and hashes retained. Europe PMC legacy XML routes returned HTTP 500; readable publisher text or primary abstracts supplied the specific claims instead.
+- 1999 and 2004 papers were assessed through their inspected abstracts plus explicit UniProt source annotations, not unavailable full text. No uninspected experimental detail is certified.
+- Chen 2025 and Krause/Balish 2004 are reviews, not new experiments, despite generic source-document typing in this output.
+- GO:0033111 has an upstream mycolate-outer-membrane wording error; it is not adopted by either native record. Independent cell-membrane evidence supports the curated boundary.
+- Complete 28-dataset iModulonDB inventory was checked earlier this day: no applicable Mycoplasma/Mycoplasmoides dataset. This is not evidence of biological absence.
+- Ignored/hidden files were included in local review/history searches. GitHub all-state searches for P30 and Mollicutes returned no matching issue; resolved P1 and gliding issues are distinct.
+- This covers one record, not the remaining corpus. No native record/history edit preceded this saved observation.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261010T192854Z-attachment-organelle-membrane-assessment
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Attachment organelle membrane: scientific assessment'
+started_at: '2026-10-10T17:29:08Z'
+finished_at: '2026-10-10T19:28:54Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same agent performs the audit and separately authorized curation;
+    no independent human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Claim-by-claim assessment completed for this one record. Current NCBI taxon
+  scope requires correction.
+source:
+  git_revision: 478edc23b61f8ea6be66c5b86df04040be08fbdb
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/attachment_organelle_membrane.yaml
+    sha256: 7566687c0ed98d3947eab233f1dd98e36f696a216bff1aacd6d07fd53362475b
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/attachment_organelle_membrane/2026-09-12T235534Z-codex-bb82dc.yaml
+    sha256: 1105386ec3e51123edf13385a6c392a66f72b0ef84226eb03bb81c4fa33a16f2
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0033111
+  path: data/structures/appendage/attachment_organelle_membrane.yaml
+  label: attachment organelle membrane
+  kind: maintained
+  record_class: CellStructureRecord
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/attachment_organelle_membrane.yaml
+    role: maintained scientific record
+scope:
+  description: Entire maintained record, present material claims and both history
+    surfaces; optional missing fields are not findings.
+  selection: Exact path data/structures/appendage/attachment_organelle_membrane.yaml;
+    not a corpus sample.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0033111
+checks:
+- check_id: pre-schema
+  name: Fresh focused schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033111
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/attachment_organelle_membrane.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Passed before curation.
+  scope_note: 2026-10-10T19:26:00Z to 2026-10-10T19:26:06Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: pre-strict
+  name: Fresh focused strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033111
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/attachment_organelle_membrane.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Passed before curation.
+  scope_note: 2026-10-10T19:26:06Z to 2026-10-10T19:26:19Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: baseline-ci
+  name: Exact-revision full-corpus gates
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033111
+  command: gh api 'repos/CultureBotAI/CellStructureMech/actions/runs?head_sha=478edc23b61f8ea6be66c5b86df04040be08fbdb&event=push&per_page=10'
+    --jq '.workflow_runs[] | {id,name,status,conclusion,head_sha}'
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Verified success at unchanged HEAD for Build and test (38043028532), label
+    correspondence (38043028531), identifier/trait checks (38043028562), vendored
+    sync (38043028526), and merge integrity (38043028544).
+  scope_note: Reused exact-commit CI, queried during this assessment, not newly executed
+    local full-corpus gates. The initial sandboxed GitHub query failed; the escalated
+    retry succeeded.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/attachment_organelle_membrane.yaml
+  locator: Entire YAML and append-only record histories
+  accessed_at: '2026-10-10T19:28:54Z'
+  support: context_only
+  summary: Full record read; native status is PROPOSED; input hashes captured before
+    assessment.
+- evidence_id: taxonomy
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=272634&retmode=xml
+  locator: Taxon/LineageEx, every ancestor ID
+  accessed_at: '2026-10-10T19:26:05Z'
+  snapshot_sha256: a18ecdeac4d3e1be78c2cff46314fd76ad82e9d3c1a5e50cb7e884954da736b1
+  support: refutes
+  summary: M129 lineage includes Mycoplasmatota 544448, Mycoplasmoidales 2790996 and
+    Mycoplasmoidaceae 2790998, but not Mollicutes 31969.
+- evidence_id: taxon-parent
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/2790996.json
+  locator: parent, rank, active, full lineage
+  accessed_at: '2026-10-10T19:26:04Z'
+  snapshot_sha256: eb371870be7555aea28686214aeee28f9434c5a204d7a76217b0330b43e4532c
+  support: supports
+  summary: The order parent is the phylum Mycoplasmatota, not class Mollicutes.
+- evidence_id: phylum
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/544448.json
+  locator: taxonId, scientificName, rank, active
+  accessed_at: '2026-10-10T19:26:05Z'
+  snapshot_sha256: 78446f8d85b3f65c7fb1cfa232dba437d794d383edc2ad2bb13d8bf3c870174d
+  support: supports
+  summary: Taxon 544448 is active Mycoplasmatota, phylum; verified alternative ancestor,
+    not a synonym for Mollicutes.
+- evidence_id: review2025
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12395765/fullTextXML
+  locator: 'Inspected review article: Introduction, The motility of M. pneumoniae
+    cluster, The attachment organelles in M. pneumoniae cluster species'
+  accessed_at: '2026-10-10T07:47:51Z'
+  snapshot_sha256: afea635a9be3fb46558d6eb31136fbf46aa3b1407eba1480a1e1ecfc15af351d
+  support: supports
+  summary: Review uses historical Mollicutes language and describes restricted, variable
+    distribution and characterized pneumoniae-cluster organelles; it does not make
+    current NCBI taxon 31969 an ancestor of M129.
+- evidence_id: mapping2015
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4669176/fullTextXML
+  locator: Results protein localization, Fig. 4, immunogold mapping, Discussion model,
+    strain methods
+  accessed_at: '2026-10-10T07:47:49Z'
+  snapshot_sha256: eb873beb04aa5fe98c83fe843d0b7537b62ae2738115308ea9da521d1ed42557
+  support: supports
+  summary: Primary microscopy supports M129 polar organelle architecture, surface
+    P1/P40/P90 and P30, internal HMW2/P65/HMW3 localization and the strain example.
+- evidence_id: go-identity
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0033111
+  locator: Inspected source-native identifier, label, definition and hierarchy
+  accessed_at: '2026-10-10T19:11:13Z'
+  snapshot_sha256: 365232cc804d47ec339091056020ae50aa4343218a20de0c070111be4503d85b
+  support: supports
+  summary: Verified the exact cellular-component identity and/or topology. The GO:0033111
+    definition also has an erroneous mycolate-outer-membrane clause; the native record
+    does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood.
+- evidence_id: go-membrane
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016020
+  locator: Inspected source-native identifier, label, definition and hierarchy
+  accessed_at: '2026-10-10T07:47:55Z'
+  snapshot_sha256: 484c18f341111604e2fe5f98c2c753c8e62366f1fc27064c89697efe3eeb7808
+  support: supports
+  summary: Verified the exact cellular-component identity and/or topology. The GO:0033111
+    definition also has an erroneous mycolate-outer-membrane clause; the native record
+    does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood.
+- evidence_id: go-plasma
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005886
+  locator: Inspected source-native identifier, label, definition and hierarchy
+  accessed_at: '2026-10-10T07:47:55Z'
+  snapshot_sha256: 1e6351cf06b2f8a92e1c37875040ea589d86395bfd25e721ab9e120904ab50af
+  support: supports
+  summary: Verified the exact cellular-component identity and/or topology. The GO:0033111
+    definition also has an erroneous mycolate-outer-membrane clause; the native record
+    does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood.
+- evidence_id: go-whole
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0033099
+  locator: Inspected source-native identifier, label, definition and hierarchy
+  accessed_at: '2026-10-10T07:47:55Z'
+  snapshot_sha256: 7386b48d2989ab4eb1369b50a8f4fb75cc4fd7f1685e63842bacf75d5de52251
+  support: supports
+  summary: Verified the exact cellular-component identity and/or topology. The GO:0033111
+    definition also has an erroneous mycolate-outer-membrane clause; the native record
+    does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood.
+- evidence_id: go-projection
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0042995
+  locator: Inspected source-native identifier, label, definition and hierarchy
+  accessed_at: '2026-10-10T07:47:55Z'
+  snapshot_sha256: b7bc936645b14ccf7b8d96f309e7ff4b3965e82c0b305cc6e5d3c2ae03005bd5
+  support: supports
+  summary: Verified the exact cellular-component identity and/or topology. The GO:0033111
+    definition also has an erroneous mycolate-outer-membrane clause; the native record
+    does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood.
+- evidence_id: sl
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0021.json
+  locator: Inspected source-native identifier, label, definition and hierarchy
+  accessed_at: '2026-10-10T19:11:13Z'
+  snapshot_sha256: 1a59d475631ef5fa44efc1caaa8c6a9663a1ded416fa93716227525261614479
+  support: supports
+  summary: Verified the exact cellular-component identity and/or topology. The GO:0033111
+    definition also has an erroneous mycolate-outer-membrane clause; the native record
+    does not adopt it and UniProt SL-0021 independently supports cell-membrane parthood.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Structure identity, category, kind and mereology
+  outcome: supported
+  target_ids:
+  - GO:0033111
+  evidence_ids:
+  - record
+  - go-identity
+  - go-membrane
+  - go-plasma
+  - go-whole
+  - go-projection
+  - sl
+  - mapping2015
+  summary: Exact GO structure identity, not a protein or phenotype. Membrane is-a/parthood
+    and whole-organelle cell-projection parent/membrane-part boundaries are sound;
+    PROPOSED retained.
+- assessment_id: taxonomy
+  area: scope
+  topic: Taxonomic distribution and canonical example
+  outcome: concern
+  target_ids:
+  - GO:0033111
+  evidence_ids:
+  - record
+  - taxonomy
+  - taxon-parent
+  - phylum
+  - review2025
+  - mapping2015
+  summary: The M129 example and restricted bacterial occurrence are supported, but
+    historical Mollicutes wording has been attached to current NCBITaxon:31969, outside
+    the example lineage. Use the verified encompassing phylum with explicit literature
+    scope, not an asserted taxon synonym or universal presence.
+- assessment_id: composition
+  area: evidence
+  topic: Lipid boundary component, graph and resolved modeling discussion
+  outcome: supported
+  target_ids:
+  - GO:0033111
+  evidence_ids:
+  - record
+  - go-identity
+  - go-plasma
+  - sl
+  - mapping2015
+  summary: One constituent lipid bilayer is essential to this membrane boundary. Both
+    nonmechanistic edges describe topology, not force production. The discussion deliberately
+    keeps protein maps on the whole organelle; it does not deny membrane protein localization.
+    Optional protein duplication is not required.
+- assessment_id: completeness
+  area: completeness
+  topic: Other fields, status and provenance
+  outcome: supported
+  target_ids:
+  - GO:0033111
+  evidence_ids:
+  - record
+  - mapping2015
+  summary: All present material claims assessed. No images, physical measurements,
+    traits, pathway links or datasets are asserted; their optional absence is not
+    a defect. Both history surfaces remain intact. This is agent assessment, not human
+    scientific promotion.
+findings:
+- finding_id: F1
+  issue_key: attachment-organelle-membrane-mollicutes-taxon-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Ground the distribution to a current ancestor taxon
+  description: NCBITaxon:31969 is current class Mollicutes, but NCBI full lineage
+    places the characterized M129 example in Mycoplasmoidales directly under Mycoplasmatota.
+    A historical review usage does not establish the current structured scope. Use
+    verified Mycoplasmatota 544448 with VARIABLE and bounded pneumoniae-cluster notes;
+    retain the historical source terminology explicitly.
+  target_ids:
+  - GO:0033111
+  field_paths:
+  - taxonomic_distribution[0]
+  evidence_ids:
+  - record
+  - taxonomy
+  - taxon-parent
+  - phylum
+  - review2025
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/attachment_organelle_membrane.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: major
+  normalization_reason: Structured clade assertion excludes the characterized lineage;
+    not an id-label spelling issue.
+actions:
+- action_id: A1
+  description: Ground the distribution to a current ancestor taxon
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0033111
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/attachment_organelle_membrane.yaml
+    role: maintained scientific record
+  generator: just text-embeddings-refresh; just render
+  acceptance_checks:
+  - NCBITaxon:31969 is current class Mollicutes, but NCBI full lineage places the
+    characterized M129 example in Mycoplasmoidales directly under Mycoplasmatota.
+    A historical review usage does not establish the current structured scope. Use
+    verified Mycoplasmatota 544448 with VARIABLE and bounded pneumoniae-cluster notes;
+    retain the historical source terminology explicitly.
+  - Guarded writer; append both histories; preserve PROPOSED and unrelated claims;
+    strict, labels, traits, history, QC and review contract pass.
+limitations:
+- Baseline full-corpus checks are reused exact-revision CI; only focused schema/strict
+  checks were rerun before curation. CI checks are deterministic, not biological evidence.
+- Cached same-day authority/primary files were inspected with original retrieval timestamps
+  and hashes retained. Europe PMC legacy XML routes returned HTTP 500; readable publisher
+  text or primary abstracts supplied the specific claims instead.
+- 1999 and 2004 papers were assessed through their inspected abstracts plus explicit
+  UniProt source annotations, not unavailable full text. No uninspected experimental
+  detail is certified.
+- Chen 2025 and Krause/Balish 2004 are reviews, not new experiments, despite generic
+  source-document typing in this output.
+- GO:0033111 has an upstream mycolate-outer-membrane wording error; it is not adopted
+  by either native record. Independent cell-membrane evidence supports the curated
+  boundary.
+- 'Complete 28-dataset iModulonDB inventory was checked earlier this day: no applicable
+  Mycoplasma/Mycoplasmoides dataset. This is not evidence of biological absence.'
+- Ignored/hidden files were included in local review/history searches. GitHub all-state
+  searches for P30 and Mollicutes returned no matching issue; resolved P1 and gliding
+  issues are distinct.
+- This covers one record, not the remaining corpus. No native record/history edit
+  preceded this saved observation.
+```

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/attachment_organelle_membrane.yaml
+  slug: attachment_organelle_membrane
+session:
+  id: 2026-10-10T193016Z-Codex-187f44
+  timestamp: '2026-10-10T19:30:16Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2124
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomy
+  - evidence
+  summary: Resolve attachment-organelle scientific review findings
+  details: 'Addressed #2124: grounded the bounded distribution to current Mycoplasmatota rather
+    than historical Mollicutes usage; retained VARIABLE, M129 example and PROPOSED status.
+    Pre-fix observation: reviews/structured/20261010T192854Z-attachment-organelle-membrane-assessment/review.yaml.
+    Guarded schema validation passed before writing. Downstream checks are recorded separately
+    after execution.'

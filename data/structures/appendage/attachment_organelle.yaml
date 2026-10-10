@@ -49,6 +49,14 @@ curation_history:
     2021 live-tracking result. Retained gliding function, component claims and PROPOSED
     status.'
   llm_assisted: true
+- timestamp: '2026-10-10T19:29:54Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #2124: grounded the bounded distribution to current Mycoplasmatota
+    rather than historical Mollicutes usage; retained VARIABLE, M129 example and PROPOSED
+    status. Addressed #2123: corrected P30 assembly essentiality to DISPENSABLE with
+    II-3 mutant evidence; retained constituent, adhesion and morphology roles.'
+  llm_assisted: true
 synonyms:
 - synonym_text: terminal organelle
   synonym_type: EXACT_SYNONYM
@@ -87,7 +95,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - mpn453
-  essentiality: ESSENTIAL
+  essentiality: DISPENSABLE
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: P30 is a Mycoplasma pneumoniae attachment-organelle adhesin; no
     exact source-neutral protein-family CURIE was curated.
@@ -100,6 +108,12 @@ components:
   - reference: DOI:10.1128/JB.181.4.1079-1087.1999
     notes: Romero-Arroyo et al. 1999 analyzed P30 mutants and connected P30 with cytadherence
       and correct cell extension morphology.
+  - reference: DOI:10.1111/mmi.13937
+    notes: Krause et al. 2018 observed all internal attachment-organelle substructures
+      in the M129-derived II-3 mutant lacking P30, with reduced P65 and fewer surface
+      protein knobs. DISPENSABLE refers to organelle assembly in this mutant, not
+      normal cytadherence, gliding or morphology, or universal dispensability across
+      Mycoplasma.
 - component_id: hmw2_paired_plate_scaffold
   label: HMW2 paired-plate scaffold
   component_type: PROTEIN
@@ -214,11 +228,13 @@ components:
         in Mycoplasma pneumoniae.’, PLoS Pathog. ECO:0000269 experimental evidence
         for the attachment organelle localisation of Q50360, as cited by UniProt.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:31969
-  taxon_label: Mollicutes
+- taxon_id: NCBITaxon:544448
+  taxon_label: Mycoplasmatota
   presence: VARIABLE
-  note: Attachment organelles are polar protrusions of the Mycoplasma pneumoniae cluster
-    rather than a universal feature of wall-less mollicutes.
+  note: Attachment organelles are characterized in the Mycoplasma pneumoniae cluster
+    within Mycoplasmatota, not universally across the phylum. Chen et al. use historical
+    Mollicutes terminology; current NCBI taxonomy places the M129 example in Mycoplasmoidales
+    outside class Mollicutes (NCBITaxon:31969).
   reference: DOI:10.1186/s12866-025-04320-w
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -282,6 +298,17 @@ evidence:
 - reference: DOI:10.1186/s12866-025-04320-w
   notes: Chen et al. 2025, Unraveling the role of distinct cytoskeletal motility structures
     in Mycoplasma pneumoniae relatives, BMC Microbiology.
+- reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=272634
+  notes: NCBI full lineage checked 2026-10-10 places Mycoplasmoides pneumoniae M129
+    under Mycoplasmoidales and Mycoplasmatota (NCBITaxon:544448), not under the current
+    Mollicutes class. This authority supplies identifier scope, not experimental structure-presence
+    evidence.
+- reference: https://rest.uniprot.org/taxonomy/544448.json
+  notes: UniProt taxonomy checked 2026-10-10 confirms active taxon 544448 as phylum
+    Mycoplasmatota; the M129 lineage includes this phylum.
+- reference: DOI:10.1111/mmi.13937
+  notes: Krause et al. 2018, Electron cryotomography of Mycoplasma pneumoniae mutants
+    correlates terminal organelle architectural features and function, Molecular Microbiology.
 causal_graphs:
 - graph_id: polar_core_surface_adhesion
   title: Internal-core proteins organize a polar adhesin-bearing attachment organelle
