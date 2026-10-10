@@ -139,27 +139,27 @@
         {
           "identifier": "cellstructuremech:p_pilus",
           "label": "P pilus",
-          "cosine_similarity": 0.76507082
+          "cosine_similarity": 0.76127803
         },
         {
           "identifier": "GO:0140621",
           "label": "type I pilus",
-          "cosine_similarity": 0.74879311
+          "cosine_similarity": 0.75142088
         },
         {
           "identifier": "cellstructuremech:basal_body_inner_scaffold",
           "label": "basal body inner scaffold",
-          "cosine_similarity": 0.73418661
+          "cosine_similarity": 0.74931268
+        },
+        {
+          "identifier": "GO:0033111",
+          "label": "attachment organelle membrane",
+          "cosine_similarity": 0.73669186
         },
         {
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
-          "cosine_similarity": 0.73308281
-        },
-        {
-          "identifier": "cellstructuremech:suctorian_feeding_tentacle",
-          "label": "suctorian feeding tentacle",
-          "cosine_similarity": 0.73295971
+          "cosine_similarity": 0.73338714
         }
       ]
     },
@@ -168,29 +168,29 @@
       "label": "attachment organelle membrane",
       "neighbors": [
         {
-          "identifier": "GO:0031966",
-          "label": "mitochondrial membrane",
-          "cosine_similarity": 0.84863646
-        },
-        {
           "identifier": "GO:0042170",
           "label": "plastid membrane",
-          "cosine_similarity": 0.84542659
+          "cosine_similarity": 0.84014895
+        },
+        {
+          "identifier": "GO:0031966",
+          "label": "mitochondrial membrane",
+          "cosine_similarity": 0.83929484
+        },
+        {
+          "identifier": "GO:0160211",
+          "label": "apicoplast membrane",
+          "cosine_similarity": 0.82407586
         },
         {
           "identifier": "GO:0097002",
           "label": "mitochondrial inner boundary membrane",
-          "cosine_similarity": 0.83325176
+          "cosine_similarity": 0.81848431
         },
         {
           "identifier": "GO:0031969",
           "label": "chloroplast membrane",
-          "cosine_similarity": 0.82588231
-        },
-        {
-          "identifier": "GO:0005886",
-          "label": "plasma membrane",
-          "cosine_similarity": 0.82437159
+          "cosine_similarity": 0.81568522
         }
       ]
     },
@@ -960,7 +960,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.61952297
+          "cosine_similarity": 0.62269275
         },
         {
           "identifier": "GO:0009289",
@@ -991,7 +991,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.57133787
+          "cosine_similarity": 0.57402436
         },
         {
           "identifier": "GO:0009289",
@@ -1203,7 +1203,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.62744268
+          "cosine_similarity": 0.62584751
         },
         {
           "identifier": "GO:0009424",
@@ -1234,7 +1234,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.6105747
+          "cosine_similarity": 0.60681262
         },
         {
           "identifier": "GO:0009424",
@@ -1265,7 +1265,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.62302383
+          "cosine_similarity": 0.61969117
         },
         {
           "identifier": "GO:0098774",
@@ -1296,7 +1296,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.76507082
+          "cosine_similarity": 0.76127803
         },
         {
           "identifier": "GO:0009289",
@@ -1449,14 +1449,14 @@
           "cosine_similarity": 0.68953298
         },
         {
-          "identifier": "GO:0033111",
-          "label": "attachment organelle membrane",
-          "cosine_similarity": 0.68229356
-        },
-        {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
           "cosine_similarity": 0.67685745
+        },
+        {
+          "identifier": "GO:0033111",
+          "label": "attachment organelle membrane",
+          "cosine_similarity": 0.67572461
         },
         {
           "identifier": "GO:1990207",
@@ -1477,7 +1477,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.73295971
+          "cosine_similarity": 0.72824544
         },
         {
           "identifier": "GO:0044096",
@@ -1549,7 +1549,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.74879311
+          "cosine_similarity": 0.75142088
         },
         {
           "identifier": "GO:0009422",
@@ -1585,7 +1585,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.73215611
+          "cosine_similarity": 0.72391213
         }
       ]
     },
@@ -5145,7 +5145,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.72515351
+          "cosine_similarity": 0.73012184
         },
         {
           "identifier": "GO:0033289",
@@ -7930,7 +7930,7 @@
         {
           "identifier": "GO:0033111",
           "label": "attachment organelle membrane",
-          "cosine_similarity": 0.76619652
+          "cosine_similarity": 0.76766143
         },
         {
           "identifier": "GO:0061701",
@@ -8713,9 +8713,9 @@
           "cosine_similarity": 0.61916849
         },
         {
-          "identifier": "GO:0009428",
-          "label": "bacterial-type flagellum basal body, distal rod, P ring",
-          "cosine_similarity": 0.61191092
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.61586944
         }
       ]
     },
@@ -8853,11 +8853,6 @@
           "cosine_similarity": 0.74272046
         },
         {
-          "identifier": "GO:0033111",
-          "label": "attachment organelle membrane",
-          "cosine_similarity": 0.73122135
-        },
-        {
           "identifier": "GO:0070258",
           "label": "inner membrane pellicle complex",
           "cosine_similarity": 0.72260888
@@ -8866,6 +8861,11 @@
           "identifier": "GO:0005628",
           "label": "prospore membrane",
           "cosine_similarity": 0.71882835
+        },
+        {
+          "identifier": "GO:0033111",
+          "label": "attachment organelle membrane",
+          "cosine_similarity": 0.71729833
         },
         {
           "identifier": "cellstructuremech:microsporidian_posterior_vacuole",
@@ -15120,11 +15120,6 @@
           "cosine_similarity": 0.73424535
         },
         {
-          "identifier": "GO:0033111",
-          "label": "attachment organelle membrane",
-          "cosine_similarity": 0.72911716
-        },
-        {
           "identifier": "GO:0042170",
           "label": "plastid membrane",
           "cosine_similarity": 0.72847739
@@ -15133,6 +15128,11 @@
           "identifier": "GO:0009536",
           "label": "plastid",
           "cosine_similarity": 0.7260916
+        },
+        {
+          "identifier": "GO:0033111",
+          "label": "attachment organelle membrane",
+          "cosine_similarity": 0.71979965
         }
       ]
     },
@@ -15535,7 +15535,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.67319561
+          "cosine_similarity": 0.68107262
         }
       ]
     },
@@ -19896,7 +19896,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.65867217
+          "cosine_similarity": 0.65688261
         },
         {
           "identifier": "cellstructuremech:stalk_crossband",
@@ -20619,7 +20619,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.66919294
+          "cosine_similarity": 0.66854052
         }
       ]
     },
@@ -22185,7 +22185,7 @@
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
-          "cosine_similarity": 0.67681985
+          "cosine_similarity": 0.67450641
         },
         {
           "identifier": "cellstructuremech:type_vi_secretion_system_baseplate",

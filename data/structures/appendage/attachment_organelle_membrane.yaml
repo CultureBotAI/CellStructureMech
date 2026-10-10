@@ -26,6 +26,13 @@ curation_history:
   changes: 'Resolved #722 by adding GO:0005886 evidence to the lipid-bilayer component
     and GO:0033111 evidence to the plasma-membrane parthood edge.'
   llm_assisted: true
+- timestamp: '2026-10-10T19:30:14Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #2124: grounded the bounded distribution to current Mycoplasmatota
+    rather than historical Mollicutes usage; retained VARIABLE, M129 example and PROPOSED
+    status.'
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -56,12 +63,13 @@ components:
     membrane, but no lipid CURIE specific to this Mycoplasma polar membrane patch
     was curated.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:31969
-  taxon_label: Mollicutes
+- taxon_id: NCBITaxon:544448
+  taxon_label: Mycoplasmatota
   presence: VARIABLE
-  note: Attachment organelles and their surrounding membrane patches are polar structures
-    of the Mycoplasma pneumoniae cluster rather than a universal feature of wall-less
-    mollicutes.
+  note: Attachment organelles and their surrounding membrane patches are characterized
+    in the Mycoplasma pneumoniae cluster within Mycoplasmatota, not universally across
+    the phylum. Chen et al. use historical Mollicutes terminology; current NCBI taxonomy
+    places the M129 example in Mycoplasmoidales outside class Mollicutes (NCBITaxon:31969).
   reference: DOI:10.1186/s12866-025-04320-w
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -96,6 +104,14 @@ evidence:
 - reference: DOI:10.1186/s12866-025-04320-w
   notes: Chen et al. 2025 review distinct cytoskeletal motility structures among Mycoplasma
     pneumoniae relatives.
+- reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=272634
+  notes: NCBI full lineage checked 2026-10-10 places Mycoplasmoides pneumoniae M129
+    under Mycoplasmoidales and Mycoplasmatota (NCBITaxon:544448), not under the current
+    Mollicutes class. This authority supplies identifier scope, not experimental structure-presence
+    evidence.
+- reference: https://rest.uniprot.org/taxonomy/544448.json
+  notes: UniProt taxonomy checked 2026-10-10 confirms active taxon 544448 as phylum
+    Mycoplasmatota; the M129 lineage includes this phylum.
 causal_graphs:
 - graph_id: attachment_organelle_membrane_topology
   title: Attachment organelle membrane topology
