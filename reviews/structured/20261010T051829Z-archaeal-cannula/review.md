@@ -1,0 +1,643 @@
+# Archaeal cannula evidence-scope review
+
+- Review: 20261010T051829Z-archaeal-cannula
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-10T04:57:34Z
+- Finished UTC: 2026-10-10T05:18:29Z
+- Reviewer: Codex (unknown)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One major protein/strain conflation and one minor construct-provenance issue were observed. The full record was read, but primary-source coverage is partial; this is not a whole-corpus review.
+
+## Scope And Provenance
+
+One complete YAML read with source-level inspection of available cited claims.
+
+Selection: Exact maintained archaeal_cannula.yaml; one of 909 records inventoried, not a representative sample.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base e16fbaa60b2153cca18692e7c8977a62bb653526.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:archaeal_cannula | data/structures/appendage/archaeal_cannula.yaml | maintained | archaeal cannula |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| target-schema | passed | True | cellstructuremech:archaeal_cannula | Command completed successfully; this is deterministic validation, not scientific sign-off. |
+| target-strict | passed | True | cellstructuremech:archaeal_cannula | Command completed successfully; this is deterministic validation, not scientific sign-off. |
+| label-correspondence | passed | True | cellstructuremech:archaeal_cannula | Command completed successfully; this is deterministic validation, not scientific sign-off. |
+| identifier-liveness | passed | True | cellstructuremech:archaeal_cannula | Command completed successfully; this is deterministic validation, not scientific sign-off. |
+| trait-links | passed | True | cellstructuremech:archaeal_cannula | Command completed successfully; this is deterministic validation, not scientific sign-off. |
+| history | failed | False | cellstructuremech:archaeal_cannula | Initial history invocation selected an unavailable pyenv 3.13 interpreter; superseded by the successful history-retry with .venv/bin first on PATH. |
+| history-retry | passed | True | cellstructuremech:archaeal_cannula | Command completed successfully; this is deterministic validation, not scientific sign-off. |
+| qc-retry | passed | True | cellstructuremech:archaeal_cannula | Authoritative QC completed successfully; pytest reported 778 passed and 3 skipped. Skips are not scientific coverage. History, strict schema, generated-site and corpus gates also ran. |
+| Initial QC attempt | skipped | False | cellstructuremech:archaeal_cannula | Intentionally cancelled with SIGINT after confirming the PATH defect in the preceding history check. The corrected qc-retry is separately recorded; no success is claimed for this attempt. |
+| Claim-level literature inspection | unavailable | True | cellstructuremech:archaeal_cannula | Inspected the 2025 primary results and the 2003 abstract. The 1995 paper remained unreadable, so claims depending solely on it were not independently verified. |
+| Structured transcriptomic-source applicability | passed | False | cellstructuremech:archaeal_cannula | Dataset inventory had no Pyrodictium dataset; no expression-module claim was inferred. Absence is not negative evidence for cannulae. |
+
+## Scientific And Domain Assessments
+
+### Structure granularity and parentage
+
+identity: supported. Targets: cellstructuremech:archaeal_cannula.
+
+A hollow extracellular proteinaceous tube is a structure, not a protein record. Local identity and GO cell-projection parent are appropriate; no identity change is proposed.
+
+### Protein, strain and construct scope
+
+evidence: concern. Targets: cellstructuremech:archaeal_cannula.
+
+Native CanX evidence is conflated with recombinant CanA, and the NMR construct is named imprecisely. Preserve the supported CanA mechanism while correcting provenance.
+
+### Assembly versus native network context
+
+graph: concern. Targets: cellstructuremech:archaeal_cannula.
+
+The CanA polymerization edges have valid in-vitro support, but the graph does not distinguish that experiment from the native CanX comparison and native cellular connectivity. Scope the graph explicitly to tested material.
+
+### Species, exemplar and prevalence
+
+scope: unknown. Targets: cellstructuremech:archaeal_cannula.
+
+The taxon identifier is verified and the canonical example is supported at abstract level. The COMMON distribution assertion cites the unreadable 1995 paper, so prevalence is not independently verified here.
+
+### Physical connection versus physiological transport
+
+evidence: supported. Targets: cellstructuremech:archaeal_cannula.
+
+Physical connection is supported at abstract level. The record appropriately leaves transported cargo and physiological signaling unresolved; this review does not infer active DNA transport.
+
+### Optional slots and unresolved family grounding
+
+completeness: supported. Targets: cellstructuremech:archaeal_cannula.
+
+No images, measurements, traits, protein examples or complex-composition rows are present in the full target. Their absence alone is not a finding. Exact family grounding, CanB/CanC contribution and biological cargo remain bounded unknowns.
+
+### Maintained owner and scientific status
+
+provenance: supported. Targets: cellstructuremech:archaeal_cannula.
+
+The YAML owns future edits; generated pages do not. The agent-curated record remains PROPOSED. Validation does not confer human scientific approval.
+
+## Findings
+
+### F1: Separate native CanX from recombinant CanA evidence
+
+major / open / confirmed; issue key: archaeal-cannula-native-canx-cana-conflation.
+
+The CanA component and polymerization-edge notes describe the 2025 native and recombinant cryo-EM fibers as CanA. The primary source assigns native AV2 fibers to CanX and the recombinant experiment to TAG11 CanA. These are distinct homologues, so the current attribution changes the protein and strain supporting the mechanism. Represent the native subunit without inventing an exact family accession, and bound CanA assembly claims to the recombinant experiment.
+
+### F2: Name K1-CanA as the solved NMR construct
+
+minor / open / confirmed; issue key: archaeal-cannula-nmr-construct-scope.
+
+The second component evidence note says the CanA solution structure was solved. The paper solves the truncated K1-CanA construct and separately assays full-length CanA polymerization. Name the construct and retain the full-length assay evidence.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct component, graph and discussion scope through the guarded curation writer; append actual-edit history without promoting PROPOSED.
+
+- Re-read the cited primary result sections against every changed claim.
+- Native AV2 CanX is not attributed to recombinant TAG11 CanA; K1-CanA is explicitly named.
+- Run strict schema, history, term/trait checks and full QC after regenerating owned products.
+- Save a linked disposition observation; preserve this review byte-for-byte.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| canx | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12518558/fullTextXML; DOI:10.1038/s41467-025-64120-8; Results: CryoEM analysis of ex vivo P. abyssi extracellular filaments; recombinant CanA assembly; Figs. 1-3 | refutes | Sleutel et al. distinguish native AV2 CanX from recombinant TAG11 CanA. CanX is the major subunit fitted to the native map, not an alias of CanA. Recombinant CanA supports the bounded calcium/donor-strand assembly mechanism. |
+| cana | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12326000/fullTextXML; DOI:10.1038/s41598-025-13242-6; Results: Structure of K1-CanA and CanA; Fig. 4; polymerization experiments | refutes | The solved NMR solution structure is the N-terminally truncated K1-CanA construct. Separate full-length recombinant CanA polymerization assays are reported and remain valid evidence. |
+| nickell | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2FS1047-8477%2802%2900581-6%22&amp;format=json&amp;resultType=core; DOI:10.1016/S1047-8477(02)00581-6; PMID:12576018; abstract only | supports | The abstract supports cell interconnection and a cannula entering the periplasm rather than cytoplasm; a paired cannula only contacts the surface. Full text was not inspected. |
+| parent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0042995; GO:0042995 definition, namespace and obsolete flag | supports | Current cellular-component cell projection is an appropriate broader parent, not exact cannula identity. |
+| taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/54256; NCBITaxon:54256 scientificName and rank | supports | ENA taxonomy resolves the cited identifier to Pyrodictium abyssi at species rank; this validates identity, not prevalence. |
+| rieger-access | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1006%2Fjsbi.1995.1032%22&amp;format=json&amp;resultType=core; Exact DOI:10.1006/jsbi.1995.1032 search, not article text | unknown | Europe PMC exact-DOI query returned zero hits. Crossref metadata verified the citation; ScienceDirect article and abstract routes returned 403 and the Elsevier text-mining route returned a metadata stub. These failures do not establish that the paper lacks a PubMed record. |
+| record | data/structures/appendage/archaeal_cannula.yaml; Entire baseline YAML, especially components[0] and causal_graphs[0] | context_only | Read the entire maintained PROPOSED record. Its component notes and assembly edge attribute the native 2025 fibers to CanA; only CanA is represented in the component list. |
+
+## Limits And Additional Notes
+
+- Rieger 1995 full text was not independently readable; claims relying solely on it remain unverified.
+- Nickell 2003 was inspected at abstract level only; raw images, supplementary data and reconstructions were not reanalyzed.
+- No exact protein-family mapping or physiological cargo mechanism was established; absence of optional fields is not a defect.
+- No human scientific sign-off. The broader 909-record review goal remains incomplete.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261010T051829Z-archaeal-cannula
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Archaeal cannula evidence-scope review
+started_at: '2026-10-10T04:57:34Z'
+finished_at: '2026-10-10T05:18:29Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Agent review of a historically agent-curated record; no independent
+    reviewer or human approval is asserted.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: One major protein/strain conflation and one minor construct-provenance issue
+  were observed. The full record was read, but primary-source coverage is partial;
+  this is not a whole-corpus review.
+source:
+  git_revision: e16fbaa60b2153cca18692e7c8977a62bb653526
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/archaeal_cannula.yaml
+    sha256: f70de78f363c1e2e8e5718aa91e7cb5b4ca9bc3bace8ccf38cc37a62ce489c97
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:archaeal_cannula
+  path: data/structures/appendage/archaeal_cannula.yaml
+  label: archaeal cannula
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_cannula.yaml
+    role: maintained scientific record
+scope:
+  description: One complete YAML read with source-level inspection of available cited
+    claims.
+  selection: Exact maintained archaeal_cannula.yaml; one of 909 records inventoried,
+    not a representative sample.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:archaeal_cannula
+  exclusions:
+  - target: Other 908 maintained records
+    reason: Outside this single-record observation; no coverage inferred from deterministic
+      corpus checks.
+checks:
+- check_id: target-schema
+  name: target-schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/linkml-validate
+    -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord
+    data/structures/appendage/archaeal_cannula.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command completed successfully; this is deterministic validation, not scientific
+    sign-off.
+  scope_note: Actual run 2026-10-10T04:59:48Z to 2026-10-10T04:59:50Z; one target;
+    retry commands used project .venv/bin first on PATH.
+- check_id: target-strict
+  name: target-strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/validate_strict.py data/structures/appendage/archaeal_cannula.yaml --out
+    /private/tmp/csm-all-record-review-20261010T045734Z/archaeal-cannula-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command completed successfully; this is deterministic validation, not scientific
+    sign-off.
+  scope_note: Actual run 2026-10-10T04:59:50Z to 2026-10-10T04:59:55Z; one target;
+    retry commands used project .venv/bin first on PATH.
+- check_id: label-correspondence
+  name: label-correspondence
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command completed successfully; this is deterministic validation, not scientific
+    sign-off.
+  scope_note: Actual run 2026-10-10T04:59:55Z to 2026-10-10T05:02:05Z; full corpus;
+    retry commands used project .venv/bin first on PATH.
+- check_id: identifier-liveness
+  name: identifier-liveness
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/check_curies.py --check --report /private/tmp/csm-all-record-review-20261010T045734Z/curie-check.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command completed successfully; this is deterministic validation, not scientific
+    sign-off.
+  scope_note: Actual run 2026-10-10T05:02:05Z to 2026-10-10T05:03:36Z; full corpus;
+    retry commands used project .venv/bin first on PATH.
+- check_id: trait-links
+  name: trait-links
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command completed successfully; this is deterministic validation, not scientific
+    sign-off.
+  scope_note: Actual run 2026-10-10T05:03:36Z to 2026-10-10T05:03:52Z; full corpus;
+    retry commands used project .venv/bin first on PATH.
+- check_id: history
+  name: history
+  status: failed
+  required: false
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/validate_history.py history
+  exit_code: 1
+  expected_exit_code: 0
+  summary: Initial history invocation selected an unavailable pyenv 3.13 interpreter;
+    superseded by the successful history-retry with .venv/bin first on PATH.
+  scope_note: Actual run 2026-10-10T05:03:52Z to 2026-10-10T05:03:59Z; full corpus;
+    retry commands used project .venv/bin first on PATH.
+- check_id: history-retry
+  name: history-retry
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/validate_history.py history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command completed successfully; this is deterministic validation, not scientific
+    sign-off.
+  scope_note: Actual run 2026-10-10T05:05:16Z to 2026-10-10T05:05:28Z; full corpus;
+    retry commands used project .venv/bin first on PATH.
+- check_id: qc-retry
+  name: qc-retry
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Authoritative QC completed successfully; pytest reported 778 passed and
+    3 skipped. Skips are not scientific coverage. History, strict schema, generated-site
+    and corpus gates also ran.
+  scope_note: Actual run 2026-10-10T05:05:48Z to 2026-10-10T05:18:05Z; full corpus;
+    retry commands used project .venv/bin first on PATH.
+- check_id: initial-qc-cancelled
+  name: Initial QC attempt
+  status: skipped
+  required: false
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  command: .venv/bin/python scripts/run_qc.py
+  summary: Intentionally cancelled with SIGINT after confirming the PATH defect in
+    the preceding history check. The corrected qc-retry is separately recorded; no
+    success is claimed for this attempt.
+- check_id: primary-claim-review
+  name: Claim-level literature inspection
+  status: unavailable
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  summary: Inspected the 2025 primary results and the 2003 abstract. The 1995 paper
+    remained unreadable, so claims depending solely on it were not independently verified.
+  evidence_ids:
+  - canx
+  - cana
+  - nickell
+  - rieger-access
+- check_id: imodulondb
+  name: Structured transcriptomic-source applicability
+  status: passed
+  required: false
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Dataset inventory had no Pyrodictium dataset; no expression-module claim
+    was inferred. Absence is not negative evidence for cannulae.
+evidence:
+- evidence_id: canx
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12518558/fullTextXML
+  locator: 'DOI:10.1038/s41467-025-64120-8; Results: CryoEM analysis of ex vivo P.
+    abyssi extracellular filaments; recombinant CanA assembly; Figs. 1-3'
+  accessed_at: '2026-10-10T05:00:11Z'
+  support: refutes
+  summary: Sleutel et al. distinguish native AV2 CanX from recombinant TAG11 CanA.
+    CanX is the major subunit fitted to the native map, not an alias of CanA. Recombinant
+    CanA supports the bounded calcium/donor-strand assembly mechanism.
+  snapshot_sha256: 85218ec390a2d22aa8dca55cea07392c91bf6045b367cacf9c2b5f6dc9cd162e
+- evidence_id: cana
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12326000/fullTextXML
+  locator: 'DOI:10.1038/s41598-025-13242-6; Results: Structure of K1-CanA and CanA;
+    Fig. 4; polymerization experiments'
+  accessed_at: '2026-10-10T05:00:13Z'
+  support: refutes
+  summary: The solved NMR solution structure is the N-terminally truncated K1-CanA
+    construct. Separate full-length recombinant CanA polymerization assays are reported
+    and remain valid evidence.
+  snapshot_sha256: e6c9e6e47a972833a06781d991f1a7b1802530eaccd24fe90d73a0ec35fed955
+- evidence_id: nickell
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2FS1047-8477%2802%2900581-6%22&format=json&resultType=core
+  locator: DOI:10.1016/S1047-8477(02)00581-6; PMID:12576018; abstract only
+  accessed_at: '2026-10-10T05:00:17Z'
+  support: supports
+  summary: The abstract supports cell interconnection and a cannula entering the periplasm
+    rather than cytoplasm; a paired cannula only contacts the surface. Full text was
+    not inspected.
+  snapshot_sha256: 6d193612081a09647107e0c7b1306ab0bb9d09ab8cbd668ed67e7901f818ca42
+- evidence_id: parent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0042995
+  locator: GO:0042995 definition, namespace and obsolete flag
+  accessed_at: '2026-10-10T05:00:15Z'
+  support: supports
+  summary: Current cellular-component cell projection is an appropriate broader parent,
+    not exact cannula identity.
+  snapshot_sha256: b7bc936645b14ccf7b8d96f309e7ff4b3965e82c0b305cc6e5d3c2ae03005bd5
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/54256
+  locator: NCBITaxon:54256 scientificName and rank
+  accessed_at: '2026-10-10T05:00:16Z'
+  support: supports
+  summary: ENA taxonomy resolves the cited identifier to Pyrodictium abyssi at species
+    rank; this validates identity, not prevalence.
+  snapshot_sha256: 65fcfd71ebafcb715ac90c75d141b51cc431166ae21982b0edac4ff821999651
+- evidence_id: rieger-access
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1006%2Fjsbi.1995.1032%22&format=json&resultType=core
+  locator: Exact DOI:10.1006/jsbi.1995.1032 search, not article text
+  accessed_at: '2026-10-10T05:00:17Z'
+  support: unknown
+  summary: Europe PMC exact-DOI query returned zero hits. Crossref metadata verified
+    the citation; ScienceDirect article and abstract routes returned 403 and the Elsevier
+    text-mining route returned a metadata stub. These failures do not establish that
+    the paper lacks a PubMed record.
+  snapshot_sha256: d2d829dc32affbf7f5bddfae7cdbe7aa51f4d2b6d1a6fc59774c278a22a56d18
+  search_scope: One exact DOI across Europe PMC, Crossref and publisher routes. Search
+    snippets were excluded as support. This is a bounded access limitation, not an
+    absence claim.
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/archaeal_cannula.yaml
+  locator: Entire baseline YAML, especially components[0] and causal_graphs[0]
+  accessed_at: '2026-10-10T05:18:29Z'
+  support: context_only
+  snapshot_sha256: f70de78f363c1e2e8e5718aa91e7cb5b4ca9bc3bace8ccf38cc37a62ce489c97
+  summary: Read the entire maintained PROPOSED record. Its component notes and assembly
+    edge attribute the native 2025 fibers to CanA; only CanA is represented in the
+    component list.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Structure granularity and parentage
+  outcome: supported
+  summary: A hollow extracellular proteinaceous tube is a structure, not a protein
+    record. Local identity and GO cell-projection parent are appropriate; no identity
+    change is proposed.
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  evidence_ids:
+  - record
+  - nickell
+  - parent-go
+- assessment_id: components
+  area: evidence
+  topic: Protein, strain and construct scope
+  outcome: concern
+  summary: Native CanX evidence is conflated with recombinant CanA, and the NMR construct
+    is named imprecisely. Preserve the supported CanA mechanism while correcting provenance.
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  evidence_ids:
+  - record
+  - canx
+  - cana
+  dimensions:
+  - name: native-material
+    value: P. abyssi AV2; CanX; ex vivo cryo-EM
+    definition: Source-specific native reconstruction substrate
+    evidence_ids:
+    - canx
+  - name: recombinant-material
+    value: P. abyssi TAG11 CanA expressed recombinantly; in vitro filaments
+    definition: Distinct recombinant assembly substrate, not the native AV2 subunit
+    evidence_ids:
+    - canx
+  - name: nmr-construct
+    value: N-terminally truncated K1-CanA
+    definition: Construct used for the solved NMR solution structure, distinct from
+      the full-length polymerization substrate
+    evidence_ids:
+    - cana
+- assessment_id: graph
+  area: graph
+  topic: Assembly versus native network context
+  outcome: concern
+  summary: The CanA polymerization edges have valid in-vitro support, but the graph
+    does not distinguish that experiment from the native CanX comparison and native
+    cellular connectivity. Scope the graph explicitly to tested material.
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  evidence_ids:
+  - record
+  - canx
+  - cana
+  - nickell
+- assessment_id: taxa
+  area: scope
+  topic: Species, exemplar and prevalence
+  outcome: unknown
+  summary: The taxon identifier is verified and the canonical example is supported
+    at abstract level. The COMMON distribution assertion cites the unreadable 1995
+    paper, so prevalence is not independently verified here.
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  evidence_ids:
+  - taxon
+  - nickell
+  - rieger-access
+- assessment_id: function
+  area: evidence
+  topic: Physical connection versus physiological transport
+  outcome: supported
+  summary: Physical connection is supported at abstract level. The record appropriately
+    leaves transported cargo and physiological signaling unresolved; this review does
+    not infer active DNA transport.
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  evidence_ids:
+  - record
+  - nickell
+  - canx
+- assessment_id: unknowns
+  area: completeness
+  topic: Optional slots and unresolved family grounding
+  outcome: supported
+  summary: No images, measurements, traits, protein examples or complex-composition
+    rows are present in the full target. Their absence alone is not a finding. Exact
+    family grounding, CanB/CanC contribution and biological cargo remain bounded unknowns.
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  evidence_ids:
+  - record
+  - canx
+  - cana
+- assessment_id: status
+  area: provenance
+  topic: Maintained owner and scientific status
+  outcome: supported
+  summary: The YAML owns future edits; generated pages do not. The agent-curated record
+    remains PROPOSED. Validation does not confer human scientific approval.
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  evidence_ids:
+  - record
+findings:
+- finding_id: F1
+  issue_key: archaeal-cannula-native-canx-cana-conflation
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate native CanX from recombinant CanA evidence
+  description: The CanA component and polymerization-edge notes describe the 2025
+    native and recombinant cryo-EM fibers as CanA. The primary source assigns native
+    AV2 fibers to CanX and the recombinant experiment to TAG11 CanA. These are distinct
+    homologues, so the current attribution changes the protein and strain supporting
+    the mechanism. Represent the native subunit without inventing an exact family
+    accession, and bound CanA assembly claims to the recombinant experiment.
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  field_paths:
+  - components[0]
+  - causal_graphs[0]
+  - discussions[0]
+  evidence_ids:
+  - record
+  - canx
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_cannula.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: major
+  normalization_reason: Material experimental-scope conflation, not a claim that CanA
+    cannot polymerize.
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2107
+- finding_id: F2
+  issue_key: archaeal-cannula-nmr-construct-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Name K1-CanA as the solved NMR construct
+  description: The second component evidence note says the CanA solution structure
+    was solved. The paper solves the truncated K1-CanA construct and separately assays
+    full-length CanA polymerization. Name the construct and retain the full-length
+    assay evidence.
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  field_paths:
+  - components[0].evidence[1].notes
+  evidence_ids:
+  - record
+  - cana
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_cannula.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: minor
+  normalization_reason: Bounded provenance wording; does not invalidate the independently
+    supported CanA polymerization role.
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2108
+actions:
+- action_id: A1
+  description: Correct component, graph and discussion scope through the guarded curation
+    writer; append actual-edit history without promoting PROPOSED.
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - cellstructuremech:archaeal_cannula
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_cannula.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Re-read the cited primary result sections against every changed claim.
+  - Native AV2 CanX is not attributed to recombinant TAG11 CanA; K1-CanA is explicitly
+    named.
+  - Run strict schema, history, term/trait checks and full QC after regenerating owned
+    products.
+  - Save a linked disposition observation; preserve this review byte-for-byte.
+  generator: just render; refresh text-embedding products only if their maintained
+    semantic projection changes
+limitations:
+- Rieger 1995 full text was not independently readable; claims relying solely on it
+  remain unverified.
+- Nickell 2003 was inspected at abstract level only; raw images, supplementary data
+  and reconstructions were not reanalyzed.
+- No exact protein-family mapping or physiological cargo mechanism was established;
+  absence of optional fields is not a defect.
+- No human scientific sign-off. The broader 909-record review goal remains incomplete.
+```
