@@ -47,6 +47,12 @@ curation_history:
     with readable Postel 2016 and Einenkel 2025 support for FliD caps and cap-mediated
     filament elongation.'
   llm_assisted: true
+- timestamp: '2026-10-10T22:10:24Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2150: A modeled cap-growth interpretation is described as visualized
+    growth conformations. Preserved historical events and PROPOSED status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar filament cap
   synonym_type: EXACT_SYNONYM
@@ -241,8 +247,10 @@ causal_graphs:
       grows.
     evidence:
     - reference: DOI:10.1073/pnas.2534343100
-      notes: Maki-Yonekura et al. 2003 visualized cap-filament conformations during
-        flagellar growth.
+      notes: Maki-Yonekura et al. 2003 combined isolated-cap cryo-EM with structural
+        modeling of the cap-filament complex to infer domain rearrangements during
+        flagellin incorporation; these were modeled growth conformations, not a directly
+        imaged growth sequence.
   - subject: filament_cap
     predicate: promotes
     object: filament_elongation

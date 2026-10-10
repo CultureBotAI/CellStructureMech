@@ -146,3 +146,86 @@ def test_p_ring_presence_is_independent_of_l_ring_but_not_of_flgi():
     graph = doc["causal_graphs"][0]
     assert "Salmonella" in graph["description"]
     assert all("Salmonella" in edge["description"] for edge in graph["edges"])
+
+
+@pytest.mark.parametrize("part", ["filament", "hook"])
+def test_axial_prevalence_distinguishes_marker_survey_from_anatomy(part):
+    bacteria = named(record("_" + part)["taxonomic_distribution"], "taxon_id", "NCBITaxon:2")
+    assert bacteria["presence"] == "VARIABLE"
+    assert bacteria["reference"] == "DOI:10.1073/pnas.2512476122"
+    assert "FliPQR" in bacteria["note"]
+    assert "not direct observation" in bacteria["note"]
+    assert "does not establish this particular structure" in bacteria["note"]
+
+
+def test_filament_definition_does_not_mistake_thickness_for_length():
+    doc = record("_filament")
+    assert doc["identifier"] == "GO:0009420"
+    assert "20 nm" not in doc["definition"]
+    assert "external" in doc["definition"]
+    assert "flagellin" in doc["definition"]
+    assert doc["definition_source"] == "DOI:10.1038/nrmicro1887"
+    assert any("#230" in event["changes"] for event in doc["curation_history"])
+
+
+def test_filament_author_corrections_do_not_rewrite_historical_events():
+    doc = record("_filament")
+    by_doi = {
+        "DOI:10.3390/biom11020186": ("Halte and Erhardt", "Minamino and Namba"),
+        "DOI:10.1038/s41598-019-51440-1": ("Blum", "Yonekura"),
+        "DOI:10.1038/s41467-026-71203-7": ("Qin", "Zhu"),
+    }
+    entries = doc["evidence"] + doc["components"][0]["evidence"]
+    entries += [e for edge in doc["causal_graphs"][0]["edges"] for e in edge["evidence"]]
+    for entry in entries:
+        if entry["reference"] in by_doi:
+            author, former_author = by_doi[entry["reference"]]
+            assert author in entry["notes"]
+            assert former_author not in entry["notes"]
+    assert any("Zhu et al. 2026" in event["changes"] for event in doc["curation_history"])
+
+
+def test_cap_model_is_not_recast_as_direct_growth_imaging():
+    edge = named(record("_filament_cap")["causal_graphs"][0]["edges"], "predicate", "incorporates below")
+    note = named(edge["evidence"], "reference", "DOI:10.1073/pnas.2534343100")["notes"]
+    assert "isolated-cap cryo-EM" in note
+    assert "structural modeling" in note
+    assert "not a directly imaged growth sequence" in note
+
+
+def test_junction_assembled_contacts_are_not_solution_binding_claims():
+    doc = record("_hook_filament_junction")
+    flgl = named(doc["components"], "component_id", "flgl_hap3")
+    modern = named(flgl["evidence"], "reference", "DOI:10.1038/s41564-025-02037-0")
+    assert "assembled" in modern["notes"]
+    for edge in doc["causal_graphs"][0]["edges"]:
+        if edge["predicate"] == "contacts":
+            assert all(e["reference"] != "DOI:10.1016/S0022-2836(02)00139-0" for e in edge["evidence"])
+    bounding = named(doc["evidence"], "reference", "DOI:10.1016/S0022-2836(02)00139-0")
+    assert "not FlgK-FlgL solution binding" in bounding["notes"]
+
+
+def test_junction_historical_precision_does_not_replace_native_stoichiometry():
+    doc = record("_hook_filament_junction")
+    for component_id, count in (("flgk_hap1", "10-20"), ("flgl_hap3", "10-40")):
+        component = named(doc["components"], "component_id", component_id)
+        old = named(component["evidence"], "reference", "DOI:10.1128/jb.169.3.1168-1173.1987")
+        assert count in old["notes"]
+        assert "fine localization within the junction was not determined" in old["notes"]
+        assert component["stoichiometry"].startswith("11 ")
+    for edge in doc["causal_graphs"][0]["edges"][:2]:
+        assert edge["evidence"][0]["reference"] == "DOI:10.1038/s41564-025-02037-0"
+    assert doc["physical_properties"][0]["value"] == "22"
+    old = doc["functions"][0]["evidence"][0]
+    assert "filamentless" in old["notes"] and "mature HAP3" in old["notes"]
+
+
+def test_exact_flgk_family_does_not_force_a_broad_flge_grounding():
+    flgk = named(record("_hook_filament_junction")["components"], "component_id", "flgk_hap1")
+    assert flgk["grounding"] == "InterPro:IPR002371"
+    assert "grounding_status" not in flgk
+    assert "label-only decision is superseded" in flgk["grounding_notes"]
+    assert "UniProtKB:P0A1J5" in flgk["grounding_notes"]
+    flge = record("_hook")["components"][0]
+    assert "grounding" not in flge
+    assert flge["grounding_status"] == "REVIEWED_LABEL_ONLY"
