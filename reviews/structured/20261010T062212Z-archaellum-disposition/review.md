@@ -1,0 +1,592 @@
+# Disposition of whole-archaellum attribution findings
+
+- Review: 20261010T062212Z-archaellum-disposition
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-10T06:22:03Z
+- Finished UTC: 2026-10-10T06:22:12Z
+- Reviewer: Codex (self_review)
+- Completion: partial
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+F1 and F2 are resolved in the inspected working-tree bytes after guarded curation and successful post-edit QC. This disposition covers those two findings only; the broader scientific review remains partial.
+
+## Scope And Provenance
+
+Re-read the full corrected target and reassessed the two prior findings against their inspected primary abstracts, corrected evidence placement, history and generated page.
+
+Selection: Exact GO:0097589 target and F1/F2 from 20261010T060647Z-archaellum-evidence; no additional scientific coverage is inferred.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base ee177f0fe3ac60ebbab79e42bd3be58fba2d0844.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0097589 | data/structures/appendage/archaeal_type_flagellum.yaml | maintained | archaeal-type flagellum |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Post-edit schema | passed | True | GO:0097589 | Documented native validator completed successfully on the corrected input. |
+| Post-edit strict | passed | True | GO:0097589 | Documented native validator completed successfully on the corrected input. |
+| Post-edit history | passed | True | GO:0097589 | Documented native validator completed successfully on the corrected input. |
+| Post-edit labels | passed | True | GO:0097589 | Documented native validator completed successfully on the corrected input. |
+| Post-edit traits | passed | True | GO:0097589 | Documented native validator completed successfully on the corrected input. |
+| Post-edit qc | passed | True | GO:0097589 | Authoritative local QC passed: 778 tests passed, 3 skipped; strict schema, history, generated-page and other native gates passed. This ran before adding this disposition; the new bundle is separately validated by the review contract. |
+| Full claim-level literature coverage | unavailable | True | GO:0097589 | The primary abstracts were inspected. PubMed additionally exposed the 2012 figure legends; full articles remained inaccessible through publisher/PMC routes. All remaining claims need further assessment. |
+| Official PMC full-text fallback | failed | False | GO:0097589 | The documented PMC helper found no metadata object for PMC3527919 in its current OA S3 dataset. This is an access limitation, not evidence that the article does not exist. |
+| Structured expression-source inventory | passed | False | GO:0097589 | The inventory includes s_acidocaldarius/modulome. |
+| Bounded Fla expression-source lookup | failed | False | GO:0097589 | Adapter rejected a null regulator field: imodulons[0].regulator must be a JSON list, got NoneType. No expression evidence was inferred or used for either finding. |
+| Targeted diff and preservation assertions | passed | True | GO:0097589 | All 908 other native records, all 210 legacy report files and the eight pre-existing review files were hash-verified unchanged, including ignored files. Scientific edits are confined to the two evidence corrections and one appended curation event. The embedding projection is unchanged. |
+| Earlier persistence attempt | failed | False | GO:0097589 | The saver rejected the earlier draft after the feature-branch commit changed HEAD from its captured working-tree base. No bundle was created. The corrected inputs were reconstructed and freshly inspected in an isolated worktree at the durable main base; all input hashes match the validated corrected bytes. No governed validation rule was changed. |
+
+## Scientific And Domain Assessments
+
+### Whole archaellum identity
+
+identity: supported. Targets: GO:0097589.
+
+The target is the GO whole-archaellum record. No identity change or status promotion is proposed.
+
+### Two primary-study attribution claims
+
+evidence: supported. Targets: GO:0097589.
+
+The corrected statements are supported at the declared abstract-only access tier. The motor model and independently cited anchoring statements were not deleted or newly certified.
+
+### Remaining scientific claims
+
+completeness: unknown. Targets: GO:0097589.
+
+Other component, graph, taxonomic and functional claims are not certified by this partial review. No finding is inferred from optional missing fields or acknowledged unknowns.
+
+## Findings
+
+### F1: Do not attribute FlaJ interaction experiments to the FlaX/FlaI/FlaH abstract
+
+major / resolved / confirmed; issue key: archaellum-flaij-misattributed-2013-interactions.
+
+The prior FlaJ experimental attribution is removed; the 2013 citation is retained with the scaffold and accurately names FlaX/FlaI/FlaH and the inspected abstract.
+
+Disposition: Inspected the corrected evidence lists and source abstract; the wrong-protein attribution is gone without removing the independently supported motor model. Native and generated-product checks passed.
+
+### F2: Narrow the Sulfolobus exemplar to the cited FlaX/FlaI evidence
+
+minor / resolved / confirmed; issue key: archaellum-sulfolobus-example-2012-citation-scope.
+
+The prior overbroad Sulfolobus note is narrowed to the FlaX ring/FlaI interaction result, retaining the same species and citation.
+
+Disposition: Inspected the corrected exemplar against the primary abstract; the unsupported bundled clauses are removed. Other anchoring claims remain unchanged and outside this disposition.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| interactions | https://pubmed.ncbi.nlm.nih.gov/24103130/; DOI:10.1111/febs.12534; primary abstract in Europe PMC exact-DOI core JSON | supports | The primary abstract supports the corrected Sulfolobus FlaX/FlaI/FlaH scaffold note. Full-text access remains unavailable. |
+| flax | https://pubmed.ncbi.nlm.nih.gov/23129770/; DOI:10.1074/jbc.M112.414383; primary abstract in Europe PMC exact-DOI core JSON | supports | The primary abstract supports the narrowed FlaX ring/FlaI interaction exemplar. No FlaJ assembly or S-layer-anchoring clause remains in that example. |
+| identity | https://www.ebi.ac.uk/QuickGO/term/GO:0097589; Current name, cellular_component aspect, definition, synonyms and isObsolete=false | supports | GO identifies the whole archaeal-type flagellum, not just its motor or filament. |
+| taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2285; taxId, scientificName and species rank | supports | NCBITaxon:2285 resolves to Sulfolobus acidocaldarius. |
+| record | data/structures/appendage/archaeal_type_flagellum.yaml; Entire corrected YAML; components[1].evidence, components[4].evidence[2], canonical_examples[0], appended curation event | supports | The 2013 citation is now attached to the FlaX scaffold with FlaI/FlaH and abstract-only scope; the exemplar is narrowed to the 2012 FlaX/FlaI result. Other native claims and PROPOSED are unchanged. |
+| prior | reviews/structured/20261010T060647Z-archaellum-evidence/review.yaml; F1 and F2; exact predecessor issue keys | context_only | The immutable original observation establishes the two findings addressed here. |
+| post-qc | scripts/run_qc.py; /private/tmp/csm-all-record-review-20261010T045734Z/archaellum-post-qc.log | context_only | Authoritative local QC completed with exit 0 from 2026-10-10T06:10:12Z to 2026-10-10T06:20:00Z. This is not scientific sign-off or a claim that CI has already passed. |
+| history | history/records/archaeal_type_flagellum/2026-10-10T060746Z-Codex-8e5363.yaml; EDIT event and issue links #2112/#2113 | supports | Append-only repository history describes the two actual edits and does not claim prematurely completed validation. |
+
+## Limits And Additional Notes
+
+- The two primary papers were not read in full; source access and expression-adapter failures are recorded explicitly.
+- The remaining record claims, including ArlF/ArlG anchoring scope, still require independent source assessment.
+- Only identity, the affected species and two cited study attributions were scientifically assessed here. Other identifier liveness and claims are not certified.
+- No human scientific sign-off. The all-record review goal remains incomplete.
+- Corrected bytes and original-review/history hashes were freshly inspected and reassessed in an isolated worktree at durable main base ee177f0fe3ac60ebbab79e42bd3be58fba2d0844, with the five-file PR diff applied but not committed. Every captured input matches the corrected bytes validated on the PR branch. No disposable feature-only Git base is required.
+- The PR is not declared merged by this observation. Required current-head CI and merge-queue checks are separate publication gates.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261010T062212Z-archaellum-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Disposition of whole-archaellum attribution findings
+started_at: '2026-10-10T06:22:03Z'
+finished_at: '2026-10-10T06:22:12Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: 'The same Codex agent reviewed and curated these two findings.
+    A separate adversarial pass is documented on PR #2114; it is not independent human
+    approval.'
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: pass_with_limitations
+scientific_review: true
+summary: F1 and F2 are resolved in the inspected working-tree bytes after guarded
+  curation and successful post-edit QC. This disposition covers those two findings
+  only; the broader scientific review remains partial.
+source:
+  git_revision: ee177f0fe3ac60ebbab79e42bd3be58fba2d0844
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/archaeal_type_flagellum.yaml
+    sha256: a530ce0e281e35ea6fd630411c63471fe44f3e9820a67127dfa5239ec8e83c8a
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/archaeal_type_flagellum/2026-10-10T060746Z-Codex-8e5363.yaml
+    sha256: 30d6304719531bf043f441d11fbff242ddbfc94fc2f82f0a10d19c163638edd1
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261010T060647Z-archaellum-evidence/review.yaml
+    sha256: e86be00b8c726b0fdcf979c02b1417c35ec6c1bd49aadf8bd37372e0e6c96454
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0097589
+  path: data/structures/appendage/archaeal_type_flagellum.yaml
+  label: archaeal-type flagellum
+  kind: maintained
+  record_class: CellStructureRecord
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum.yaml
+    role: maintained scientific record
+scope:
+  description: Re-read the full corrected target and reassessed the two prior findings
+    against their inspected primary abstracts, corrected evidence placement, history
+    and generated page.
+  selection: Exact GO:0097589 target and F1/F2 from 20261010T060647Z-archaellum-evidence;
+    no additional scientific coverage is inferred.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0097589
+  exclusions:
+  - target: Remaining claims and other maintained records
+    reason: Outside this bounded observation; deterministic corpus checks do not establish
+      scientific coverage.
+checks:
+- check_id: post-schema
+  name: Post-edit schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097589
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/archaeal_type_flagellum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented native validator completed successfully on the corrected input.
+  scope_note: Actual run 2026-10-10T06:08:06Z to 2026-10-10T06:08:08Z; single target;
+    project .venv/bin first on PATH.
+- check_id: post-strict
+  name: Post-edit strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097589
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/archaeal_type_flagellum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented native validator completed successfully on the corrected input.
+  scope_note: Actual run 2026-10-10T06:08:08Z to 2026-10-10T06:08:12Z; single target;
+    project .venv/bin first on PATH.
+- check_id: post-history
+  name: Post-edit history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097589
+  command: .venv/bin/python scripts/validate_history.py history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented native validator completed successfully on the corrected input.
+  scope_note: Actual run 2026-10-10T06:08:12Z to 2026-10-10T06:08:26Z; full corpus;
+    project .venv/bin first on PATH.
+- check_id: post-labels
+  name: Post-edit labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097589
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented native validator completed successfully on the corrected input.
+  scope_note: Actual run 2026-10-10T06:08:26Z to 2026-10-10T06:09:52Z; full corpus;
+    project .venv/bin first on PATH.
+- check_id: post-traits
+  name: Post-edit traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097589
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented native validator completed successfully on the corrected input.
+  scope_note: Actual run 2026-10-10T06:09:52Z to 2026-10-10T06:10:12Z; full corpus;
+    project .venv/bin first on PATH.
+- check_id: post-qc
+  name: Post-edit qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097589
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Authoritative local QC passed: 778 tests passed, 3 skipped; strict schema,
+    history, generated-page and other native gates passed. This ran before adding
+    this disposition; the new bundle is separately validated by the review contract.'
+  scope_note: Actual run 2026-10-10T06:10:12Z to 2026-10-10T06:20:00Z; full corpus;
+    project .venv/bin first on PATH.
+- check_id: literature-coverage
+  name: Full claim-level literature coverage
+  status: unavailable
+  required: true
+  target_ids:
+  - GO:0097589
+  evidence_ids:
+  - interactions
+  - flax
+  summary: The primary abstracts were inspected. PubMed additionally exposed the 2012
+    figure legends; full articles remained inaccessible through publisher/PMC routes.
+    All remaining claims need further assessment.
+  scope_note: Access/applicability result retained from the preceding observation,
+    not a newly repeated command. These limitations remain unresolved.
+- check_id: pmc-fallback
+  name: Official PMC full-text fallback
+  status: failed
+  required: false
+  target_ids:
+  - GO:0097589
+  command: .venv/bin/python /private/tmp/csm-all-record-review-20261010T045734Z/fetch_flax.py
+  exit_code: 1
+  expected_exit_code: 0
+  summary: The documented PMC helper found no metadata object for PMC3527919 in its
+    current OA S3 dataset. This is an access limitation, not evidence that the article
+    does not exist.
+  scope_note: Access/applicability result retained from the preceding observation,
+    not a newly repeated command. These limitations remain unresolved.
+- check_id: expression-inventory
+  name: Structured expression-source inventory
+  status: passed
+  required: false
+  target_ids:
+  - GO:0097589
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The inventory includes s_acidocaldarius/modulome.
+  scope_note: Access/applicability result retained from the preceding observation,
+    not a newly repeated command. These limitations remain unresolved.
+- check_id: expression-search
+  name: Bounded Fla expression-source lookup
+  status: failed
+  required: false
+  target_ids:
+  - GO:0097589
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism s_acidocaldarius --dataset modulome --query fla
+  exit_code: 2
+  expected_exit_code: 0
+  summary: 'Adapter rejected a null regulator field: imodulons[0].regulator must be
+    a JSON list, got NoneType. No expression evidence was inferred or used for either
+    finding.'
+  scope_note: Access/applicability result retained from the preceding observation,
+    not a newly repeated command. These limitations remain unresolved.
+- check_id: preservation
+  name: Targeted diff and preservation assertions
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097589
+  command: env PYTHONPATH=. .venv/bin/python /private/tmp/csm-all-record-review-20261010T045734Z/check_archaellum_diff.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 908 other native records, all 210 legacy report files and the eight
+    pre-existing review files were hash-verified unchanged, including ignored files.
+    Scientific edits are confined to the two evidence corrections and one appended
+    curation event. The embedding projection is unchanged.
+- check_id: earlier-save-attempt
+  name: Earlier persistence attempt
+  status: failed
+  required: false
+  target_ids:
+  - GO:0097589
+  command: .venv/bin/python scripts/record_review.py save --content /private/tmp/csm-all-record-review-20261010T045734Z/archaellum-disposition.yaml
+  exit_code: 1
+  expected_exit_code: 0
+  summary: The saver rejected the earlier draft after the feature-branch commit changed
+    HEAD from its captured working-tree base. No bundle was created. The corrected
+    inputs were reconstructed and freshly inspected in an isolated worktree at the
+    durable main base; all input hashes match the validated corrected bytes. No governed
+    validation rule was changed.
+evidence:
+- evidence_id: interactions
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/24103130/
+  locator: DOI:10.1111/febs.12534; primary abstract in Europe PMC exact-DOI core JSON
+  accessed_at: '2026-10-10T05:04:02Z'
+  snapshot_sha256: 21526e358b3f10876259faf59afc0a47faedb36edaf004fa0e6566c986f5f05b
+  summary: The primary abstract supports the corrected Sulfolobus FlaX/FlaI/FlaH scaffold
+    note. Full-text access remains unavailable.
+  support: supports
+- evidence_id: flax
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/23129770/
+  locator: DOI:10.1074/jbc.M112.414383; primary abstract in Europe PMC exact-DOI core
+    JSON
+  accessed_at: '2026-10-10T05:03:55Z'
+  snapshot_sha256: fe0bfb9548001123d7b635b152981e3c19ca549332bf44e466dd16cdd27351c9
+  summary: The primary abstract supports the narrowed FlaX ring/FlaI interaction exemplar.
+    No FlaJ assembly or S-layer-anchoring clause remains in that example.
+  support: supports
+- evidence_id: identity
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/term/GO:0097589
+  locator: Current name, cellular_component aspect, definition, synonyms and isObsolete=false
+  accessed_at: '2026-10-10T05:04:03Z'
+  snapshot_sha256: 136977fcd947e027684e55ebfdd698cf4f17470777c56a3693ccc858ca104ce1
+  summary: GO identifies the whole archaeal-type flagellum, not just its motor or
+    filament.
+  support: supports
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2285
+  locator: taxId, scientificName and species rank
+  accessed_at: '2026-10-10T05:04:07Z'
+  snapshot_sha256: 1d5a3970abbb1b837fc33a6900e102c20c4b0cfa68b371c6d9cd135f3ee18293
+  summary: NCBITaxon:2285 resolves to Sulfolobus acidocaldarius.
+  support: supports
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/archaeal_type_flagellum.yaml
+  locator: Entire corrected YAML; components[1].evidence, components[4].evidence[2],
+    canonical_examples[0], appended curation event
+  accessed_at: '2026-10-10T06:22:12Z'
+  support: supports
+  snapshot_sha256: a530ce0e281e35ea6fd630411c63471fe44f3e9820a67127dfa5239ec8e83c8a
+  summary: The 2013 citation is now attached to the FlaX scaffold with FlaI/FlaH and
+    abstract-only scope; the exemplar is narrowed to the 2012 FlaX/FlaI result. Other
+    native claims and PROPOSED are unchanged.
+- evidence_id: prior
+  kind: prior_review
+  reference: reviews/structured/20261010T060647Z-archaellum-evidence/review.yaml
+  locator: F1 and F2; exact predecessor issue keys
+  accessed_at: '2026-10-10T06:22:12Z'
+  snapshot_sha256: e86be00b8c726b0fdcf979c02b1417c35ec6c1bd49aadf8bd37372e0e6c96454
+  support: context_only
+  summary: The immutable original observation establishes the two findings addressed
+    here.
+- evidence_id: post-qc
+  kind: validation
+  reference: scripts/run_qc.py
+  locator: /private/tmp/csm-all-record-review-20261010T045734Z/archaellum-post-qc.log
+  accessed_at: '2026-10-10T06:20:00Z'
+  snapshot_sha256: 8dc415b02ab5f0789dcec128cfa764edb72bd55c87a2457076cc32bf594f182a
+  support: context_only
+  summary: Authoritative local QC completed with exit 0 from 2026-10-10T06:10:12Z
+    to 2026-10-10T06:20:00Z. This is not scientific sign-off or a claim that CI has
+    already passed.
+- evidence_id: history
+  kind: record_content
+  reference: history/records/archaeal_type_flagellum/2026-10-10T060746Z-Codex-8e5363.yaml
+  locator: 'EDIT event and issue links #2112/#2113'
+  accessed_at: '2026-10-10T06:22:12Z'
+  support: supports
+  snapshot_sha256: 30d6304719531bf043f441d11fbff242ddbfc94fc2f82f0a10d19c163638edd1
+  summary: Append-only repository history describes the two actual edits and does
+    not claim prematurely completed validation.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Whole archaellum identity
+  outcome: supported
+  target_ids:
+  - GO:0097589
+  evidence_ids:
+  - record
+  - identity
+  summary: The target is the GO whole-archaellum record. No identity change or status
+    promotion is proposed.
+- assessment_id: scope
+  area: evidence
+  topic: Two primary-study attribution claims
+  outcome: supported
+  target_ids:
+  - GO:0097589
+  evidence_ids:
+  - record
+  - interactions
+  - flax
+  - taxon
+  - prior
+  - history
+  summary: The corrected statements are supported at the declared abstract-only access
+    tier. The motor model and independently cited anchoring statements were not deleted
+    or newly certified.
+  dimensions:
+  - name: organism
+    value: Sulfolobus acidocaldarius; NCBITaxon:2285
+    definition: Species named by the affected experimental claims
+    evidence_ids:
+    - taxon
+    - interactions
+    - flax
+  - name: access-tier
+    value: Primary abstracts; 2012 figure legends additionally read at PubMed
+    definition: Not a full-text or raw-data reanalysis
+    evidence_ids:
+    - interactions
+    - flax
+- assessment_id: remaining
+  area: completeness
+  topic: Remaining scientific claims
+  outcome: unknown
+  target_ids:
+  - GO:0097589
+  evidence_ids:
+  - record
+  summary: Other component, graph, taxonomic and functional claims are not certified
+    by this partial review. No finding is inferred from optional missing fields or
+    acknowledged unknowns.
+findings:
+- finding_id: F1
+  issue_key: archaellum-flaij-misattributed-2013-interactions
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Do not attribute FlaJ interaction experiments to the FlaX/FlaI/FlaH abstract
+  description: The prior FlaJ experimental attribution is removed; the 2013 citation
+    is retained with the scaffold and accurately names FlaX/FlaI/FlaH and the inspected
+    abstract.
+  target_ids:
+  - GO:0097589
+  field_paths:
+  - components[1].evidence
+  - components[4].evidence[2]
+  evidence_ids:
+  - record
+  - interactions
+  - prior
+  - history
+  - post-qc
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: major
+  normalization_reason: A material wrong-protein experimental attribution, not evidence
+    against the existence of the ArlI/ArlJ motor.
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2112
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T060647Z-archaellum-evidence
+    finding_id: F1
+  disposition_reason: Inspected the corrected evidence lists and source abstract;
+    the wrong-protein attribution is gone without removing the independently supported
+    motor model. Native and generated-product checks passed.
+- finding_id: F2
+  issue_key: archaellum-sulfolobus-example-2012-citation-scope
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Narrow the Sulfolobus exemplar to the cited FlaX/FlaI evidence
+  description: The prior overbroad Sulfolobus note is narrowed to the FlaX ring/FlaI
+    interaction result, retaining the same species and citation.
+  target_ids:
+  - GO:0097589
+  field_paths:
+  - canonical_examples[0].note
+  evidence_ids:
+  - record
+  - flax
+  - taxon
+  - prior
+  - history
+  - post-qc
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: minor
+  normalization_reason: Bounded citation scope; the taxon and canonical-example identity
+    remain valid.
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2113
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T060647Z-archaellum-evidence
+    finding_id: F2
+  disposition_reason: Inspected the corrected exemplar against the primary abstract;
+    the unsupported bundled clauses are removed. Other anchoring claims remain unchanged
+    and outside this disposition.
+actions: []
+limitations:
+- The two primary papers were not read in full; source access and expression-adapter
+  failures are recorded explicitly.
+- The remaining record claims, including ArlF/ArlG anchoring scope, still require
+  independent source assessment.
+- Only identity, the affected species and two cited study attributions were scientifically
+  assessed here. Other identifier liveness and claims are not certified.
+- No human scientific sign-off. The all-record review goal remains incomplete.
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261010T060647Z-archaellum-evidence
+  relationship: Resolves exactly F1 and F2; preserves the original observation and
+    its partial coverage.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/pull/2114
+notes:
+- Corrected bytes and original-review/history hashes were freshly inspected and reassessed
+  in an isolated worktree at durable main base ee177f0fe3ac60ebbab79e42bd3be58fba2d0844,
+  with the five-file PR diff applied but not committed. Every captured input matches
+  the corrected bytes validated on the PR branch. No disposable feature-only Git base
+  is required.
+- The PR is not declared merged by this observation. Required current-head CI and
+  merge-queue checks are separate publication gates.
+```
