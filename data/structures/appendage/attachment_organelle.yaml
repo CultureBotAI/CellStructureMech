@@ -41,6 +41,14 @@ curation_history:
     using class IV-22 imaging; retained constituent status, functional limits and
     other component claims. Preserved PROPOSED status.'
   llm_assisted: true
+- timestamp: '2026-10-10T07:54:18Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #2120: qualified internal-core deformation coupling as a proposed
+    gliding mechanism, corrected frozen ECT imaging context, and attached the bounded
+    2021 live-tracking result. Retained gliding function, component claims and PROPOSED
+    status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: terminal organelle
   synonym_type: EXACT_SYNONYM
@@ -237,15 +245,23 @@ functions:
     notes: Romero-Arroyo et al. 1999 showed P30 is required for normal cytadherence.
 - function_id: attachment_organelle_gliding
   label: attachment-organelle-dependent gliding motility
-  description: The polar protrusion couples internal-core deformation to surface adhesins
-    to move M. pneumoniae over host surfaces.
+  description: The polar protrusion supports M. pneumoniae gliding over host surfaces.
+    Coupling of internal-core deformation to surface adhesins is a proposed mechanism,
+    not directly established by the cited structural imaging.
   evidence:
   - reference: DOI:10.1128/mBio.00243-16
-    notes: Kawamoto et al. 2016 used electron cryotomography to analyze periodicity
-      in attachment organelles during gliding.
+    notes: Kawamoto et al. 2016 measured structural periodicity in frozen-hydrated
+      attachment organelles by electron cryotomography and proposed a gliding mechanism
+      from the observed variation. The cryotomograms do not directly image internal-core
+      deformation during live gliding.
   - reference: DOI:10.1371/journal.ppat.1005299
     notes: Nakane et al. 2015 integrated surface and internal-core protein maps into
       a model for gliding motility.
+  - reference: DOI:10.1371/journal.ppat.1009621
+    notes: Nakane et al. 2021 linked engineered HMW2 length to organelle length and
+      gliding speed. Dual-color fluorescence tracking at 50 Hz in 20 cells did not
+      detect large stepwise displacement. This limits the large-deformation model
+      without excluding all smaller conformational changes.
 evidence:
 - reference: DOI:10.1046/j.1365-2958.2003.03899.x
   notes: 'Krause and Balish 2004, Cellular engineering in a minimal microbe: structure
