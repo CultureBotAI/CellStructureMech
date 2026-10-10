@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+  slug: archaeal_type_flagellum_motor
+session:
+  id: 2026-10-10T070832Z-Codex-77d6e2
+  timestamp: '2026-10-10T07:08:32Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2115
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2116
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2117
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - causal_graphs
+  - components
+  summary: Resolve saved motor review findings
+  details: 'Addressed #2115: replaced bacterial absence with bounded 2025 experimental and
+    inferred evidence, retaining archaeal graph scope. Addressed #2117: distinguished FlaF
+    binding data and the FlaG/FlaF anchoring model with claim-level, abstract-limited 2020
+    evidence. Addressed #2116: distinguished ArlH ATP binding/autophosphorylation from an
+    unqualified ATPase claim. Original observation: reviews/structured/20261010T070623Z-archaellum-motor-scope/review.yaml.
+    Guarded schema validation completed before write; downstream validation is recorded separately
+    after execution.'

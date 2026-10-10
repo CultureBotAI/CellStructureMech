@@ -34,6 +34,13 @@ curation_history:
   changes: Added 3 taxon-paired protein example(s) from UniProtKB reviewed entries
     annotated to SL-0020 (Attachment organelle), matched to components by gene symbol,
     each carrying UniProt's ECO:0000269 PubMed evidence for the localisation.
+- timestamp: '2026-10-10T07:08:35Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: 'Addressed #2118: corrected P1/P40/P90 assembly essentiality to DISPENSABLE
+    using class IV-22 imaging; retained constituent status, functional limits and
+    other component claims. Preserved PROPOSED status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: terminal organelle
   synonym_type: EXACT_SYNONYM
@@ -50,7 +57,7 @@ components:
   gene_symbols:
   - mpn141
   - mpn142
-  essentiality: ESSENTIAL
+  essentiality: DISPENSABLE
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The Mycoplasma P1/P40/P90 adhesin surface complex has no exact
     taxon-neutral complex CURIE curated yet.
@@ -61,6 +68,11 @@ components:
     notes: Nakane et al. 2015 review prior localization of P1, P40, and P90 on the
       surface around the internal core and include them among the known organelle
       components.
+  - reference: DOI:10.1128/mBio.00243-16
+    notes: Kawamoto et al. 2016 imaged the Mycoplasma pneumoniae class IV-22 mutant
+      lacking P1/P40/P90 and surface nap but retaining the attachment-organelle membrane
+      and internal core. DISPENSABLE refers to this assembly phenotype, not normal
+      cytadherence or gliding, or universal dispensability across Mycoplasma.
 - component_id: p30_tip_adhesin
   label: P30 tip adhesin
   component_type: PROTEIN

@@ -1,0 +1,567 @@
+schema_version: 1.0.0
+review_id: 20261010T072539Z-motor-finding-dispositions
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Disposition of motor record findings
+started_at: '2026-10-10T07:25:37Z'
+finished_at: '2026-10-10T07:25:39Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same Codex agent performed curation and this disposition. A
+    separate AI adversarial reassessment is reported on the PR; neither constitutes
+    human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: pass_with_limitations
+scientific_review: true
+summary: All 3 prior findings are resolved within this scoped reassessment. This does
+  not certify unreviewed claims or human scientific approval.
+source:
+  git_revision: f346ba56ced970ce94afed30ec349a61b3982c17
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+    sha256: 84cf09e2b0ea571f46c1f5582abfb9d7cef31b4177a22dfcca9abbc01a9a0942
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/archaeal_type_flagellum_motor/2026-09-23T052726Z-codex-48afce.yaml
+    sha256: 57df7276fffc3a9831d6b820c50e5d884ae8f2ee3fe1a67222939ee870c61349
+    role: context
+  - path: history/records/archaeal_type_flagellum_motor/2026-09-23T053720Z-codex-db54a4.yaml
+    sha256: c6d2e88f07963744fb97e4482fe2d02d8ec3f8490b96cf5c01de2a90f7e9f0bf
+    role: context
+  - path: history/records/archaeal_type_flagellum_motor/2026-10-10T070832Z-Codex-77d6e2.yaml
+    sha256: 4fa0e73874be0fd258b442425bf0403b87bd487ec89dbb19a524d26320d09d15
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261010T070623Z-archaellum-motor-scope/review.yaml
+    sha256: 45c67dc4fd0abe5ba4a955d2c15538e0179e8189b18dbc3f44d65cd5d251592b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:archaeal_type_flagellum_motor
+  path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+  label: archaeal-type flagellum motor
+  kind: maintained
+  record_class: CellStructureRecord
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+    role: maintained scientific record
+scope:
+  description: Re-read the corrected record and reassess exactly the predecessor findings
+    against their inspected evidence and native rules.
+  selection: All findings from 20261010T070623Z-archaellum-motor-scope; no added corpus
+    coverage.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+checks:
+- check_id: post-motor-schema
+  name: Post-edit motor-schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/archaeal_type_flagellum_motor.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented validation completed on the corrected bytes before this successor
+    bundle was added; review output is separately validated.
+  scope_note: 2026-10-10T07:11:51Z to 2026-10-10T07:11:53Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: post-motor-strict
+  name: Post-edit motor-strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/archaeal_type_flagellum_motor.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented validation completed on the corrected bytes before this successor
+    bundle was added; review output is separately validated.
+  scope_note: 2026-10-10T07:11:53Z to 2026-10-10T07:11:57Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: post-motor-snippets
+  name: Post-edit motor-snippets
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/archaeal_type_flagellum_motor.yaml
+    --report /private/tmp/csm-all-record-review-20261010T045734Z/motor-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented validation completed on the corrected bytes before this successor
+    bundle was added; review output is separately validated.
+  scope_note: 2026-10-10T07:11:57Z to 2026-10-10T07:12:18Z; log SHA-256 96484872b8a36a9b40f652af8074f462bd6c194a3da6665cabd2e6805e993505
+- check_id: post-history
+  name: Post-edit history
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  command: .venv/bin/python scripts/validate_history.py history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented validation completed on the corrected bytes before this successor
+    bundle was added; review output is separately validated.
+  scope_note: 2026-10-10T07:13:12Z to 2026-10-10T07:13:25Z; log SHA-256 93b3169f8b92ab2b60919adcac2994723dd741de791680ffe216e57579cc44ea
+- check_id: post-labels
+  name: Post-edit labels
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented validation completed on the corrected bytes before this successor
+    bundle was added; review output is separately validated.
+  scope_note: 2026-10-10T07:13:25Z to 2026-10-10T07:14:49Z; log SHA-256 553dd4c9f88c8a5289a33f588649f4677e541cc9da09ecd6c78c0e9f3cae8917
+- check_id: post-traits
+  name: Post-edit traits
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented validation completed on the corrected bytes before this successor
+    bundle was added; review output is separately validated.
+  scope_note: 2026-10-10T07:14:49Z to 2026-10-10T07:15:09Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: post-qc
+  name: Post-edit qc
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Documented validation completed on the corrected bytes before this successor
+    bundle was added; review output is separately validated.
+  scope_note: 2026-10-10T07:15:09Z to 2026-10-10T07:25:08Z; log SHA-256 5d6dae8832a7bbe86a0779ba5b25367480370feb8c5f53667d1aa87c17e5b7af
+- check_id: expression-search
+  name: Sulfolobus expression lookup
+  status: failed
+  required: false
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism s_acidocaldarius --dataset modulome --query fla
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Adapter rejected imodulons[0].regulator=None. Native iModulonDB page fallback
+    also failed to load; no expression evidence used.
+  scope_note: Retained access or scope limitation from the predecessor; not a newly
+    repeated command.
+- check_id: fulltext-depth
+  name: Remaining full-text evidence depth
+  status: unavailable
+  required: true
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  evidence_ids:
+  - flax
+  - flafg
+  summary: 2012 FlaX and 2020 FlaG/FlaF assessments are abstract-bounded; attempted
+    publisher/PMC/Europe PMC routes did not yield full articles. Review remains partial,
+    not a complete scientific pass.
+  scope_note: Retained access or scope limitation from the predecessor; not a newly
+    repeated command.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+  locator: Entire corrected target; fields cited by resolved findings
+  accessed_at: '2026-10-10T07:25:39Z'
+  support: supports
+  snapshot_sha256: 84cf09e2b0ea571f46c1f5582abfb9d7cef31b4177a22dfcca9abbc01a9a0942
+  summary: Re-read corrected claims, their citations and scope qualifiers; verified
+    PROPOSED and appended curation history.
+- evidence_id: bacterial
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41564-025-02110-8
+  locator: 'Results: L. aerophila, an archaellated bacterium; filament cryoEM; motor
+    predictions; Methods: growth and motility plates; Figs 3-5'
+  accessed_at: '2026-10-10T06:51:21Z'
+  snapshot_sha256: e3f6b0250391b28747f24fcf3f2621d85db8f9a4b6a96866ad566af095f96afe
+  summary: Litorilinea aerophila has experimentally identified archaellum filaments
+    and swimming motility. Motor architecture is supported partly by predicted structures,
+    not a resolved bacterial motor. This evidence now supports the corrected, bounded
+    claim.
+  support: supports
+- evidence_id: synthesis
+  kind: primary_source
+  reference: https://doi.org/10.3389/fmicb.2015.00023
+  locator: Source-native secondary review; processing, assembly machinery, rotation,
+    glycosylation and distribution sections
+  accessed_at: '2026-10-10T05:03:52Z'
+  snapshot_sha256: c2cec0461a17865f7242ef36df178bfc68d00c1f1e292b75f9682a6ba5461464
+  summary: Inspected as a secondary synthesis, not a new primary experiment. Supports
+    the historical model but predates the bacterial exception.
+  support: partial
+- evidence_id: arlb
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41467-022-28337-1
+  locator: 'Results: The M. villosus archaellum consists of the subunits ArlB1 and
+    ArlB2; Figs 1-4; Discussion; culture and filament methods'
+  accessed_at: '2026-10-10T05:03:54Z'
+  snapshot_sha256: def26a9b9abd602bf1d23d61ce02a180a603d91852544f5d76b4bc32825f8ae1
+  summary: The species-specific alternating ArlB1/ArlB2 filament is supported; the
+    record does not universalize its stoichiometry or hypothetical dimer-assembly
+    mechanism.
+  support: supports
+- evidence_id: go-whole
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/term/GO:0097589
+  locator: Current term ID, name, definition, synonyms, aspect and obsolete status
+  accessed_at: '2026-10-10T05:04:03Z'
+  snapshot_sha256: 136977fcd947e027684e55ebfdd698cf4f17470777c56a3693ccc858ca104ce1
+  summary: The term denotes the whole archaellum, not a filament-only or motor-only
+    entity.
+  support: supports
+- evidence_id: go-motility
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/term/GO:0097590
+  locator: Current name, definition and biological_process aspect
+  accessed_at: '2026-10-10T05:04:04Z'
+  snapshot_sha256: fef853d9ce6a36042c99450a6a8a5cdb7373120539d157e459b393864c6e6ddc
+  summary: The motility grounding is specific to the archaellum.
+  support: supports
+- evidence_id: go-search
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=archaellum&limit=100
+  locator: QuickGO query archaellum, complete one-result response; separate broad
+    name searches inspected only their first page
+  accessed_at: '2026-10-10T06:49:17Z'
+  snapshot_sha256: be2922ae316517bc6802975dc8726012799d214d3c577c24a9d4cea5e29d7235
+  summary: The exact archaellum query returns the whole-structure term. Neither that
+    term nor bacterial motor/filament terms are exact replacements for the local subassemblies.
+  support: context_only
+  search_scope: QuickGO archaellum query complete at one hit. Broad multiword motor/filament
+    queries returned more than one page; only first-page candidates were inspected.
+    No exhaustive ontology-absence claim.
+- evidence_id: taxon-2
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: taxId, scientificName, rank and available lineage/synonyms
+  accessed_at: '2026-10-10T05:04:05Z'
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+  summary: The identifier and label agree; taxon identity does not validate the associated
+    presence assertion.
+  support: supports
+- evidence_id: taxon-2157
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2157
+  locator: taxId, scientificName, rank and available lineage/synonyms
+  accessed_at: '2026-10-10T05:04:05Z'
+  snapshot_sha256: c6e652011b95e43e933983bf5f3f5cec9508c1925adae00dc55e46cd4e816b19
+  summary: The identifier and label agree; taxon identity does not validate the associated
+    presence assertion.
+  support: supports
+- evidence_id: taxon-2285
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2285
+  locator: taxId, scientificName, rank and available lineage/synonyms
+  accessed_at: '2026-10-10T05:04:07Z'
+  snapshot_sha256: 1d5a3970abbb1b837fc33a6900e102c20c4b0cfa68b371c6d9cd135f3ee18293
+  summary: The identifier and label agree; taxon identity does not validate the associated
+    presence assertion.
+  support: supports
+- evidence_id: taxon-2261
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2261
+  locator: taxId, scientificName, rank and available lineage/synonyms
+  accessed_at: '2026-10-10T05:04:07Z'
+  snapshot_sha256: 42be3ef89d164a780682596a5f4de3790826010ba93cfd7569729a878216d916
+  summary: The identifier and label agree; taxon identity does not validate the associated
+    presence assertion.
+  support: supports
+- evidence_id: parent
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/term/GO:0032991
+  locator: Current definition, aspect and obsolete status
+  accessed_at: '2026-10-10T05:04:04Z'
+  snapshot_sha256: 480165003b2c8a406006ff17c4cfe836fc000541ad5dac1ca0f585ed30c02e87
+  summary: The broader parent is appropriate; it is not asserted as exact identity.
+  support: supports
+- evidence_id: flaf
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.str.2015.03.001
+  locator: Soluble Domain of FlaF Binds to S-layer Proteins; Discussion; Experimental
+    Procedures
+  accessed_at: '2026-10-10T05:03:57Z'
+  snapshot_sha256: 1f91e3ad404aef42c701b0962abc53e1be639c62e98d86c1af3d5f6a57c9af65
+  summary: Experiments establish soluble FlaF binding to isolated S-layer. The stator
+    model is proposed, and collaboration with FlaG remains hypothetical in this article.
+  support: partial
+- evidence_id: flafg
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41564-019-0622-3
+  locator: Primary abstract from exact-DOI Europe PMC core response; PMID:31844299;
+    full article unavailable through attempted routes
+  accessed_at: '2026-10-10T06:49:15Z'
+  snapshot_sha256: 61854286ef7c29e7105eac43e88f489463345053233d2ebb5f299c2ae7c70b12
+  summary: Later FlaG-FlaF interaction and mutagenesis experiments support a combined
+    anchor model. This is a suitable evidence lead, not proof of every motor-contact
+    detail.
+  support: partial
+- evidence_id: pyrococcus
+  kind: primary_source
+  reference: https://doi.org/10.7554/eLife.27470
+  locator: 'Results: Architecture; Integration into periplasm; Location of motor subunits;
+    Discussion; Figures 1-3'
+  accessed_at: '2026-10-10T05:04:01Z'
+  snapshot_sha256: 8d3388daf8be92d10a276aa67596fefd9424c7102908782b9665a742072cd37a
+  summary: In situ motor densities and docking support the envelope-associated example.
+    The article leaves periplasmic density assignments uncertain and does not resolve
+    a combined FlaF/FlaG bridge.
+  support: partial
+- evidence_id: flax
+  kind: primary_source
+  reference: https://doi.org/10.1074/jbc.M112.414383
+  locator: Primary abstract in exact-DOI core JSON; PubMed figure legends inspected
+    earlier; publisher full text returned 403
+  accessed_at: '2026-10-10T05:03:55Z'
+  snapshot_sha256: fe0bfb9548001123d7b635b152981e3c19ca549332bf44e466dd16cdd27351c9
+  summary: Supports FlaX ring formation and FlaI interaction in the narrow exemplar
+    and scaffold claims.
+  support: partial
+- evidence_id: flah
+  kind: primary_source
+  reference: https://onlinelibrary.wiley.com/doi/full/10.1111/mmi.13260
+  locator: 'Summary; Results: Walker motifs, FlaI interaction and assembly complementation;
+    Discussion'
+  accessed_at: '2026-10-10T06:53:20Z'
+  support: partial
+  summary: FlaH binds ATP and supports nucleotide-dependent interactions; the tested
+    proteins lacked detectable in vitro ATPase activity. ATP binding must not be conflated
+    with demonstrated hydrolysis.
+- evidence_id: arlh-update
+  kind: primary_source
+  reference: https://onlinelibrary.wiley.com/doi/full/10.1111/mmi.14781
+  locator: Introduction; Results 2.1-2.3; matched primary abstract PMID:34219289
+  accessed_at: '2026-10-10T06:53:20Z'
+  support: context_only
+  summary: Later experiments demonstrate ArlH autophosphorylation in two species.
+    This supports regulation and does not warrant an unqualified conventional ATPase
+    label.
+- evidence_id: prior
+  kind: prior_review
+  reference: reviews/structured/20261010T070623Z-archaellum-motor-scope/review.yaml
+  locator: Exact finding IDs and stable issue keys
+  accessed_at: '2026-10-10T07:25:39Z'
+  snapshot_sha256: 45c67dc4fd0abe5ba4a955d2c15538e0179e8189b18dbc3f44d65cd5d251592b
+  support: context_only
+  summary: Immutable predecessor preserved; no finding is silently deleted.
+- evidence_id: curation
+  kind: record_content
+  reference: history/records/archaeal_type_flagellum_motor/2026-10-10T070832Z-Codex-77d6e2.yaml
+  locator: Append-only EDIT event and issue links
+  accessed_at: '2026-10-10T07:25:39Z'
+  snapshot_sha256: 4fa0e73874be0fd258b442425bf0403b87bd487ec89dbb19a524d26320d09d15
+  support: supports
+  summary: Records the guarded changes and scope without claiming premature downstream
+    validation.
+assessments:
+- assessment_id: resolution
+  area: evidence
+  topic: Disposition of the exact saved findings
+  outcome: supported
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  evidence_ids:
+  - record
+  - bacterial
+  - synthesis
+  - arlb
+  - go-whole
+  - go-motility
+  - taxon-2
+  - taxon-2157
+  - taxon-2285
+  - taxon-2261
+  - parent
+  - flaf
+  - flafg
+  - pyrococcus
+  - flax
+  - flah
+  - arlh-update
+  - prior
+  - curation
+  summary: The changed assertions now match their inspected evidence at the declared
+    experimental or abstract-only level. Model-versus-measurement and assembly-versus-function
+    distinctions are retained.
+- assessment_id: limits
+  area: completeness
+  topic: Unreviewed content and incomplete full-text access
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  evidence_ids:
+  - record
+  - prior
+  summary: This successor resolves the named findings only. It does not expand the
+    predecessor scientific coverage or remove its access limitations.
+findings:
+- finding_id: F1
+  issue_key: archaellum-motor-bacterial-absence-2025
+  category: scope
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Remove the blanket bacterial absence assertion
+  description: Replaced ABSENT with bounded VARIABLE distribution cited to the 2025
+    study; reconciled identity/function wording where needed and retained archaeal-only
+    mechanistic graph scope. The bacterial motor is not described as directly resolved.
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  field_paths:
+  - taxonomic_distribution[1].presence
+  - taxonomic_distribution[1].note
+  evidence_ids:
+  - record
+  - bacterial
+  - taxon-2
+  - prior
+  - curation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: major
+  normalization_reason: A false domain-wide taxonomic exclusion, not merely a missing
+    optional exemplar.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T070623Z-archaellum-motor-scope
+    finding_id: F1
+  disposition_reason: Reassessed corrected bytes against the inspected sources and
+    native rubric. Replaced ABSENT with bounded VARIABLE distribution cited to the
+    2025 study; reconciled identity/function wording where needed and retained archaeal-only
+    mechanistic graph scope. The bacterial motor is not described as directly resolved.
+- finding_id: F2
+  issue_key: archaellum-motor-flah-atpase-overclaim
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Distinguish FlaH ATP binding from ATPase activity
+  description: Replaced unqualified ATPase classification with ATP-binding KaiC-like
+    regulation and separated autophosphorylation from ATPase activity without asserting
+    universal inactivity.
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  field_paths:
+  - components[1].grounding_notes
+  evidence_ids:
+  - record
+  - flah
+  - arlh-update
+  - prior
+  - curation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: major
+  normalization_reason: A biochemical activity is asserted beyond the cited experimental
+    result; the surrounding regulator role remains supported.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T070623Z-archaellum-motor-scope
+    finding_id: F2
+  disposition_reason: Reassessed corrected bytes against the inspected sources and
+    native rubric. Replaced unqualified ATPase classification with ATP-binding KaiC-like
+    regulation and separated autophosphorylation from ATPase activity without asserting
+    universal inactivity.
+- finding_id: F3
+  issue_key: archaellum-motor-flafg-anchor-citation-scope
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Separate FlaF binding data from the combined FlaF/FlaG model
+  description: Qualified component, graph description and edge predicate as an anchoring
+    model; attached the 2020 abstract and narrowed 2015 evidence to direct FlaF binding,
+    retaining explicit source-access limits.
+  target_ids:
+  - cellstructuremech:archaeal_type_flagellum_motor
+  field_paths:
+  - components[2].evidence
+  - causal_graphs[0].edges[2].evidence
+  evidence_ids:
+  - record
+  - flaf
+  - pyrococcus
+  - flafg
+  - prior
+  - curation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#evidence
+  native_severity: minor
+  normalization_reason: Bounded claim-level citation and certainty gap; later evidence
+    supports the module, so this is not a claim that the biology is false.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261010T070623Z-archaellum-motor-scope
+    finding_id: F3
+  disposition_reason: Reassessed corrected bytes against the inspected sources and
+    native rubric. Qualified component, graph description and edge predicate as an
+    anchoring model; attached the 2020 abstract and narrowed 2015 evidence to direct
+    FlaF binding, retaining explicit source-access limits.
+actions: []
+limitations:
+- Scoped agent reassessment, not a full-corpus review or human promotion of PROPOSED.
+- Original full-text and unassessed-claim limitations remain; the 2020 anchor citation
+  explicitly remains abstract-only where used.
+- Local validation passed; remote PR and merge-queue status must be checked separately
+  before merge.
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261010T070623Z-archaellum-motor-scope
+  relationship: Resolves exactly the predecessor findings; other earlier dispositions
+    remain unchanged.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2115
+- https://github.com/CultureBotAI/CellStructureMech/issues/2116
+- https://github.com/CultureBotAI/CellStructureMech/issues/2117

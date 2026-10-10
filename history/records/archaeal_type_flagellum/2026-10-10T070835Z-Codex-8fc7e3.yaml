@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/archaeal_type_flagellum.yaml
+  slug: archaeal_type_flagellum
+session:
+  id: 2026-10-10T070835Z-Codex-8fc7e3
+  timestamp: '2026-10-10T07:08:35Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2115
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2117
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - causal_graphs
+  - definition
+  - functions
+  - components
+  summary: Resolve saved whole review findings
+  details: 'Addressed #2115: replaced bacterial absence with bounded 2025 experimental and
+    inferred evidence, retaining archaeal graph scope. Addressed #2117: distinguished FlaF
+    binding data and the FlaG/FlaF anchoring model with claim-level, abstract-limited 2020
+    evidence. Original observation: reviews/structured/20261010T070625Z-archaellum-whole-scope/review.yaml.
+    Guarded schema validation completed before write; downstream validation is recorded separately
+    after execution.'
