@@ -26,6 +26,13 @@ curation_history:
     claims covered by Zhou et al. 2015; resolved #566 by changing the FAZ filament
     component type from PROTEIN_COMPLEX to OTHER.'
   llm_assisted: true
+- timestamp: '2026-10-11T23:33:49Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2269: retained FAZ1 normal-structure function while leaving
+    assembly essentiality UNKNOWN because RNAi retains abnormal FAZ structures and
+    does not prove complete protein loss.'
+  llm_assisted: true
 synonyms:
 - synonym_text: FAZ
   synonym_type: RELATED_SYNONYM
@@ -54,13 +61,18 @@ components:
   gene_symbols:
   - FAZ1
   - Tb927.4.3740
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   role: Large repetitive protein that marks the FAZ filament and is required for normal
     FAZ filament structure and function.
   evidence:
   - reference: DOI:10.1016/j.protis.2007.08.005
     notes: Vaughan et al. 2008 identified FAZ1 as a repetitive T. brucei FAZ filament
       protein and tested its requirement for FAZ filament structure and function.
+      In procyclic T. brucei, FAZ1 RNAi left aberrant FAZ-like structures and other
+      filament markers despite attachment and cytokinesis defects. Because knockdown
+      does not establish complete protein absence, these results leave assembly essentiality
+      UNKNOWN; they support a requirement for normal filament organization, not an
+      absolute block of FAZ formation.
   - reference: DOI:10.1016/j.pt.2015.12.010
     notes: Sunter and Gull 2016 list Tb927.4.3740/FAZ1 in the FAZ filament domain
       in their FAZ protein summary.

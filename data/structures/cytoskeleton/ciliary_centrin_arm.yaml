@@ -20,6 +20,12 @@ curation_history:
     scope, hook/FAZ and flagellum-inheritance functions, core literature evidence,
     and open component-boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-11T23:33:45Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2266: distinguished centrin-arm and hook-complex terminology
+    in assertion-local source notes and occurrence wording.'
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 part_of:
@@ -39,8 +45,9 @@ components:
     notes: GO:0120269 defines the ciliary centrin arm as a rod-shaped protein complex
       containing Centrin4.
   - reference: DOI:10.3390/cells4040726
-    notes: Morriswood 2015 reviewed the TbCentrin4-positive arm as part of the flagellum-associated
-      bilobe/hook complex in T. brucei.
+    notes: Morriswood 2015 distinguished the TbCentrin4-positive centrin arm from
+      the TbMORN1-positive hook complex in T. brucei, while discussing their historical
+      grouping as the bilobe and unresolved physical boundaries.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: General centrin-family accessions are broader than the T. brucei
     Centrin4 protein at the ciliary centrin arm. No exact source-neutral Centrin4
@@ -49,8 +56,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei
   presence: COMMON
-  note: The ciliary centrin arm has been studied as a Centrin4-positive arm of the
-    trypanosome hook complex that neighbors the microtubule quartet and FAZ filament.
+  note: The ciliary centrin arm has been studied as a Centrin4-positive rod alongside
+    the trypanosome hook complex, neighboring the microtubule quartet and FAZ filament.
   reference: DOI:10.1242/jcs.230581
 canonical_examples:
 - taxon_id: NCBITaxon:5691
@@ -68,8 +75,9 @@ functions:
     notes: The GO definition places the ciliary centrin arm beside the FAZ filament
       and quartet microtubules.
   - reference: DOI:10.3390/cells4040726
-    notes: Morriswood 2015 reviewed the hook complex as a Centrin4-positive arm of
-      the trypanosome bilobe.
+    notes: Morriswood 2015 described the Centrin4-positive centrin arm alongside the
+      MORN1-positive hook complex, distinguishing these terms within the historical
+      trypanosome bilobe region.
 - function_id: flagellum_inheritance_support
   label: flagellum inheritance support
   description: Hook-complex integrity and ciliary centrin arm assembly support flagellum

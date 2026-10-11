@@ -36,6 +36,12 @@ curation_history:
     plus FPC/hook/proximal-MtQ localization; resolved #296 by removing the broad Eukaryota
     taxonomic-distribution row that was backed only by GO term scope.'
   llm_assisted: true
+- timestamp: '2026-10-11T23:33:47Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2267, #2268: corrected the three-protein occurrence citation
+    and qualified the proposed FPC4 native linking role.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cilium pocket collar
   synonym_type: EXACT_SYNONYM
@@ -80,7 +86,7 @@ components:
   gene_symbols:
   - FPC4
   role: A BILBO1-interacting protein that localizes to the FPC and hook complex and
-    links the collar to microtubule-associated cytoskeletal elements.
+    is proposed to link the collar to microtubule-associated cytoskeletal elements.
   evidence:
   - reference: DOI:10.1371/journal.ppat.1006710
     notes: Albisetti et al. 2017 identified FPC4 as a BILBO1 partner whose C-terminal
@@ -114,9 +120,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei
   presence: COMMON
-  note: The BILBO1/FPC4/BILBO2 collar has been characterized at the flagellar pocket
-    neck in Trypanosoma brucei.
-  reference: DOI:10.3390/cells5010009
+  note: BILBO1, FPC4 and BILBO2 have been characterized as proteins associated with
+    the flagellar pocket collar in Trypanosoma brucei.
+  reference: DOI:10.1371/journal.ppat.1009329
 canonical_examples:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei

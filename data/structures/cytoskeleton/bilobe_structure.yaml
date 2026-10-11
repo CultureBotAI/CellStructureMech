@@ -27,12 +27,16 @@ curation_history:
     hooked TbMORN1-positive bilobe region; resolved #635 by removing broad Morriswood
     2015 review support from the centrin component evidence.'
   llm_assisted: true
+- timestamp: '2026-10-11T23:33:43Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2265: corrected cytoskeleton parthood without changing bilobe
+    identity or historical morphology.'
+  llm_assisted: true
 synonyms:
 - synonym_text: kinetoplastid flagellar hook complex
   synonym_type: EXACT_SYNONYM
   source: GO:0120120
-parent_structures:
-- GO:0005856
 components:
 - component_id: bilobe_morn_repeat_protein
   label: bilobe MORN-repeat protein
@@ -226,3 +230,5 @@ discussions:
   - reference: DOI:10.3390/cells4040726
   posed_by: codex
   posed_date: '2026-09-12'
+part_of:
+- GO:0005856

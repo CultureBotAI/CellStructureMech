@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+  slug: flagellum_attachment_zone
+session:
+  id: 2026-10-11T233615Z-codex-660d58
+  timestamp: '2026-10-11T23:36:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2270
+events:
+- type: GENERAL
+  outcome: changed
+  sections:
+  - repository_history
+  summary: Correct earlier EDIT touched-section metadata; no additional scientific mutation
+  details: 'Erratum to history/records/flagellum_attachment_zone/2026-10-11T233351Z-codex-646fe5.yaml:
+    its EDIT event sections list over-reported the batch-wide union. The actual scientific
+    fields changed in that curation are exactly components, curation_history, verified against
+    base 6b8e8880fd22415798fab889eacb8db10bddead2. All other native fields, including graphs
+    and discussions, are unchanged. This new GENERAL event corrects provenance only; it is
+    not another scientific edit or a no-issue review. Preserve the original history file verbatim.'

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ciliary_pocket_collar.yaml
+  slug: ciliary_pocket_collar
+session:
+  id: 2026-10-11T233349Z-codex-0adccc
+  timestamp: '2026-10-11T23:33:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2267
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - functions
+  - parent_structures
+  - part_of
+  - curation_history
+  summary: 'Addressed #2267, #2268: corrected the three-protein occurrence citation and qualified
+    the proposed FPC4 native linking role.'
+  details: 'Original immutable scientific review: reviews/structured/20261011T233241Z-ciliary_pocket_collar-audit/review.yaml.
+    Issue keys: pocket-collar-distribution-citation, pocket-collar-fpc4-linking-scope. All
+    exact source references and acceptance criteria are in that saved observation. Guarded
+    writer used. Original inline and repository history, open discussions, identity, mapping
+    status, graph content and unrelated records retained.'
