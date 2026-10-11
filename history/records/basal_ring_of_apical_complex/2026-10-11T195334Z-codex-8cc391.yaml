@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_ring_of_apical_complex.yaml
+  slug: basal_ring_of_apical_complex
+session:
+  id: 2026-10-11T195334Z-codex-8cc391
+  timestamp: '2026-10-11T19:53:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2247
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  - discussions
+  - evidence
+  - functions
+  - synonyms
+  - taxonomic_distribution
+  summary: 'Addressed #2247: Separated the active basal-ring topology from preconoidal-ring
+    synonym conflation and qualified conoid-relative position for extrusion. The GO/source
+    conflict and original rationale remain explicit.'
+  details: 'Immutable pre-edit observation: reviews/structured/20261011T194833Z-basal_ring_of_apical_complex-audit/review.yaml.
+    Separated the active basal-ring topology from preconoidal-ring synonym conflation and
+    qualified conoid-relative position for extrusion. The GO/source conflict and original
+    rationale remain explicit. Original history, discussion wording and dates retained; only
+    removed-component anchors redirected. PROPOSED unchanged.'

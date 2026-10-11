@@ -29,6 +29,16 @@ curation_history:
     and APR2 perturbation evidence, and changed APR2 structural essentiality from
     CONDITIONAL to UNKNOWN.
   llm_assisted: true
+- timestamp: '2026-10-11T19:53:35Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2248, #2249: Retained the exact anterior GO identity and replaced
+    the wrongly assigned whole-APR biology with source-supported anterior-ring topology.
+    Broader APR protein/function research remains explicitly separate in a discussion,
+    without forcing all APR layers onto the basal GO ring. Retained APR2 context now
+    distinguishes the middle layer in the resolved three-layer model from broader
+    upper-APR wording. It does not claim APR2 is indispensable for whole-ring assembly.'
+  llm_assisted: true
 synonyms:
 - synonym_text: anterior polar ring of apical complex
   synonym_type: EXACT_SYNONYM
@@ -36,90 +46,34 @@ synonyms:
 - synonym_text: upper polar ring of apical complex
   synonym_type: EXACT_SYNONYM
   source: GO:0020031
-- synonym_text: apical polar ring
-  synonym_type: EXACT_SYNONYM
-  source: DOI:10.1073/pnas.2416602121
 part_of:
 - GO:0020007
-components:
-- component_id: apr2_to_apr7_ring_proteins
-  label: APR2-to-APR7 apical polar ring proteins
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: APR2 to APR7 are Toxoplasma apical-polar-ring proteins; no exact
-    source-neutral protein-family CURIE for the APR2-to-APR7 cohort was curated.
-  role: APR proteins that localize to upper, middle, and bottom layers of the Toxoplasma
-    apical polar ring.
-  evidence:
-  - reference: DOI:10.1073/pnas.2416602121
-    notes: Ren et al. 2024 localized APR2 through APR7 to fixed layers of the Toxoplasma
-      apical polar ring.
-- component_id: apr2_upper_layer_protein
-  label: APR2 upper-layer protein
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: APR2 is a Toxoplasma apical-polar-ring protein; no exact source-neutral
-    protein-family CURIE was curated.
-  role: Upper-layer apical polar ring protein that supports normal APR integrity,
-    conoid extrusion, motility, and invasion in Toxoplasma.
-  evidence:
-  - reference: DOI:10.1073/pnas.2416602121
-    notes: Ren et al. 2024 identified APR2 as a key structural component of the upper
-      APR layer.
-- component_id: rng1_apr_marker
-  label: RNG1 apical polar ring marker
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: DISPENSABLE
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: RNG1 is a Toxoplasma apical-polar-ring marker; no exact source-neutral
-    protein-family CURIE was curated.
-  role: A late marker that localizes to the mature Toxoplasma apical polar ring.
-  evidence:
-  - reference: DOI:10.1002/cm.20469
-    notes: Tran et al. 2010 identified RNG1 as a late Toxoplasma apical polar ring
-      marker.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:2759
-  taxon_label: Eukaryota
-  presence: RARE
-  note: Polar rings of the apical complex are apicomplexan cytoskeletal structures
-    rather than broadly conserved eukaryotic structures.
-  reference: DOI:10.1371/journal.pbio.3001081
-- taxon_id: NCBITaxon:5794
-  taxon_label: Apicomplexa
-  presence: VARIABLE
-  note: The anterior polar ring is formed during invasive apicomplexan life-cycle
-    stages; the Toxoplasma tachyzoite APR is the canonical experimentally resolved
-    example in this record.
-  reference: DOI:10.1371/journal.pbio.3001081
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
+  presence: COMMON
+  note: The anterior conoid-fiber-origin ring is represented in the Toxoplasma tachyzoite
+    apical complex; modern preconoidal rings are distinguished from the fixed SPMT-origin
+    APR.
+  reference: DOI:10.1371/journal.ppat.0020013
 canonical_examples:
 - taxon_id: NCBITaxon:5811
   taxon_label: Toxoplasma gondii
-  note: Apicomplexan model in which APR layers, APR2-to-APR7 localization, and APR2-dependent
-    APR integrity have been experimentally studied.
-  reference: DOI:10.1073/pnas.2416602121
+  note: Model in which distal preconoidal rings, conoid fibers and the separate SPMT-origin
+    polar ring are distinguished.
+  reference: DOI:10.1371/journal.ppat.0020013
 functions:
-- function_id: apr_f_actin_flux_control
-  label: apical F-actin flux control
-  description: The fixed multilayered apical polar ring helps route F-actin into the
-    pellicular space during conoid extrusion.
+- function_id: anterior_conoid_fiber_origin
+  label: anterior conoid-fiber origin
+  description: The anterior ring marks the distal origin of the conoid fibers, rather
+    than the origin of subpellicular microtubules.
   evidence:
-  - reference: DOI:10.1073/pnas.2416602121
-    notes: Ren et al. 2024 showed that APR2 depletion disrupts APR integrity and leaks
-      F-actin into the cytosol.
-- function_id: apr_motility_invasion
-  label: gliding motility and host cell invasion
-  description: The APR2-containing apical polar ring supports normal Toxoplasma gliding
-    motility and host-cell invasion.
-  evidence:
-  - reference: DOI:10.1073/pnas.2416602121
-    notes: Ren et al. 2024 found that conditional APR2 depletion impaired Toxoplasma
-      motility and invasion.
+  - reference: GO:0020031
+    notes: The GO definition specifies the anterior ring from which conoid fibers
+      originate.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: The Introduction places conoid-fiber origins at the distal preconoidal
+      rings, separate from the SPMT-origin polar ring.
 evidence:
 - reference: DOI:10.1002/cm.20469
   notes: Tran et al. 2010, RNG1 is a late marker of the apical polar ring in Toxoplasma
@@ -132,106 +86,67 @@ evidence:
   notes: Koreny et al. 2021, Molecular characterization of the conoid complex in Toxoplasma
     reveals its conservation in all apicomplexans, including Plasmodium species, PLOS
     Biology.
+- reference: GO:0020031
+  notes: Retained anterior conoid-fiber-origin identity, distinct from the whole modern
+    APR.
+- reference: DOI:10.1083/jcb.200112086
+  notes: Hu, Roos and Murray 2002 distinguish historical anterior and posterior polar
+    rings around the conoid.
+- reference: DOI:10.1371/journal.ppat.0020013
+  notes: Hu et al. 2006 distinguish distal preconoidal rings from the SPMT-origin
+    polar ring.
 causal_graphs:
-- graph_id: apr2_apr_f_actin_motility_invasion
-  title: APR2 maintains the APR gate for F-actin flux, motility, and invasion
-  description: APR proteins occupy layered positions in the Toxoplasma apical polar
-    ring; APR2 in the upper layer maintains APR integrity, supports conoid extrusion,
-    and helps route F-actin through the pellicular space to sustain gliding motility
-    and host-cell invasion.
-  graph_kind: FUNCTION
-  scope_status: MECHANISTIC
+- graph_id: anterior_ring_topology
+  title: Anterior ring and conoid-fiber topology
+  description: The anterior conoid-fiber-origin ring belongs to the apical complex.
+    This historical GO identity is not the fixed multilayer APR of modern protein-localization
+    studies.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: Static conoid-fiber origin and parthood only; no specific ring protein,
+    assembly mechanism, APR2 phenotype or whole-APR function is assigned to GO:0020031.
   nodes:
-  - node_id: apr2_to_apr7_ring_proteins
-    label: APR2-to-APR7 apical polar ring proteins
-    node_type: GENE_OR_PROTEIN
-    component_ref: apr2_to_apr7_ring_proteins
-  - node_id: apr2_upper_layer_protein
-    label: APR2 upper-layer protein
-    node_type: GENE_OR_PROTEIN
-    component_ref: apr2_upper_layer_protein
-  - node_id: upper_apr_layer
-    label: upper APR layer
-    node_type: STRUCTURE
   - node_id: polar_ring_of_apical_complex
     label: polar ring of apical complex
     node_type: STRUCTURE
     grounding: GO:0020031
-  - node_id: conoid_extrusion
-    label: conoid extrusion
-    node_type: BIOLOGICAL_PROCESS
-  - node_id: pellicular_f_actin_flux
-    label: pellicular F-actin flux
-    node_type: BIOLOGICAL_PROCESS
-  - node_id: gliding_motility
-    label: gliding motility
-    node_type: BIOLOGICAL_PROCESS
-  - node_id: host_cell_invasion
-    label: host cell invasion
-    node_type: BIOLOGICAL_PROCESS
+  - node_id: conoid_fibers
+    label: conoid tubulin fibers
+    node_type: STRUCTURE
+  - node_id: conoid
+    label: conoid
+    node_type: STRUCTURE
+    grounding: GO:0020010
+  - node_id: apical_complex
+    label: apical complex
+    node_type: STRUCTURE
+    grounding: GO:0020007
   edges:
-  - subject: apr2_to_apr7_ring_proteins
-    predicate: localize to
-    object: polar_ring_of_apical_complex
-    description: APR2 through APR7 localize to layers of the Toxoplasma apical polar
-      ring.
-    evidence:
-    - reference: DOI:10.1073/pnas.2416602121
-      notes: Ren et al. 2024 used ultrastructure expansion microscopy to assign APR
-        proteins to upper, middle, and bottom APR layers.
-  - subject: apr2_upper_layer_protein
-    predicate: localizes to
-    object: upper_apr_layer
-    description: APR2 occupies the upper layer of the apical polar ring.
-    evidence:
-    - reference: DOI:10.1073/pnas.2416602121
-      notes: Ren et al. 2024 identified APR2 as a key structural component of the
-        upper APR layer.
-  - subject: upper_apr_layer
+  - subject: polar_ring_of_apical_complex
     predicate: is part of
+    object: apical_complex
+    description: The anterior ring is part of the apical complex.
+    evidence:
+    - reference: GO:0020007
+      notes: GO lists the anterior polar-ring term as part of the apical complex.
+  - subject: conoid_fibers
+    predicate: originate from
     object: polar_ring_of_apical_complex
-    description: The upper APR layer is one layer of the fixed multilayered apical
-      polar ring.
+    description: Conoid fibers originate at the distal anterior ring, not at the basal
+      SPMT-origin ring.
     evidence:
-    - reference: DOI:10.1073/pnas.2416602121
-      notes: Ren et al. 2024 resolved the Toxoplasma APR as a fixed multilayered structure.
-  - subject: apr2_upper_layer_protein
-    predicate: maintains integrity of
-    object: polar_ring_of_apical_complex
-    description: APR2 depletion alters apical polar ring integrity.
+    - reference: GO:0020031
+      notes: Exact GO definition identifies the anterior conoid-fiber-origin ring.
+    - reference: DOI:10.1371/journal.ppat.0020013
+      notes: Introduction and Figure 1 locate the conoid-fiber origin at the distal
+        preconoidal rings.
+  - subject: conoid_fibers
+    predicate: form
+    object: conoid
+    description: Tubulin-containing ribbon fibers form the spiral conoid body.
     evidence:
-    - reference: DOI:10.1073/pnas.2416602121
-      notes: Ren et al. 2024 observed altered APR integrity after conditional APR2
-        depletion.
-  - subject: polar_ring_of_apical_complex
-    predicate: supports
-    object: conoid_extrusion
-    description: Intact APR architecture supports even conoid extrusion.
-    evidence:
-    - reference: DOI:10.1073/pnas.2416602121
-      notes: Ren et al. 2024 found that APR2 depletion alters APR integrity and affects
-        conoid extrusion.
-  - subject: polar_ring_of_apical_complex
-    predicate: routes
-    object: pellicular_f_actin_flux
-    description: The APR helps direct F-actin into the pellicular space.
-    evidence:
-    - reference: DOI:10.1073/pnas.2416602121
-      notes: Ren et al. 2024 implicated the APR in directing apico-basal F-actin flux.
-  - subject: pellicular_f_actin_flux
-    predicate: supports
-    object: gliding_motility
-    description: Pellicular F-actin flux supports Toxoplasma gliding motility.
-    evidence:
-    - reference: DOI:10.1073/pnas.2416602121
-      notes: Ren et al. 2024 linked APR-dependent F-actin routing to parasite motility.
-  - subject: pellicular_f_actin_flux
-    predicate: supports
-    object: host_cell_invasion
-    description: Pellicular F-actin flux supports Toxoplasma host-cell invasion.
-    evidence:
-    - reference: DOI:10.1073/pnas.2416602121
-      notes: Ren et al. 2024 linked APR-dependent F-actin routing to host-cell invasion.
+    - reference: DOI:10.1083/jcb.200112086
+      notes: Microscopy resolves the unusual tubulin polymer that forms the conoid.
 discussions:
 - discussion_id: ground_apical_polar_ring_proteins
   prompt: Resolve exact source-neutral groundings for Toxoplasma APR2-to-APR7 and
@@ -239,11 +154,51 @@ discussions:
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#apr2_to_apr7_ring_proteins
-  - components#apr2_upper_layer_protein
-  - components#rng1_apr_marker
+  - discussions#separate_modern_multilayer_apr
   rationale: The first polar-ring record keeps Toxoplasma APR protein cohorts label-only
     because no exact cross-source protein-family CURIEs were curated for APR2-to-APR7
     or RNG1.
   posed_by: claude
   posed_date: '2026-09-10'
+- discussion_id: separate_modern_multilayer_apr
+  prompt: Keep modern APR composition and gatekeeper evidence separate from GO:0020031.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - definition
+  - causal_graphs#anterior_ring_topology
+  - discussions#ground_apical_polar_ring_proteins
+  rationale: The former component list and graph assigned the fixed multilayer APR
+    to the historical anterior conoid-fiber-origin ring. Tran 2010 places RNG1 below
+    the extruded conoid at the SPMT-origin APR; Ren 2024 places APR2-to-APR7 across
+    fixed APR layers. Koreny 2021 also distinguishes canopy rings from APR1/2. These
+    names and layer numbers cannot be equated directly with the two GO ring identifiers.
+  resolution_note: 'Retain the anterior GO identity and narrow the active example,
+    function and graph to its conoid-fiber topology. Preserve the broader research
+    here: Ren resolves APR2 in the middle layer of a three-layer APR, despite broader
+    upper-APR wording in the Significance section; APR2 depletion destabilizes that
+    layer, alters conoid positioning, redirects F-actin toward the cytosol and impairs
+    gliding/invasion. APR2-to-APR7 localize across APR layers, while RNG1 is a late
+    bottom-layer marker. Tran infers dispensability of RNG1 for early microtubule
+    nucleation, not parasite survival. No whole-APR assembly-essentiality claim follows.
+    An exact whole-APR identity remains to be curated; these proteins and functions
+    are not blindly transferred to GO:0020032. The original grounding TODO retains
+    its wording and dates, with its anchors redirected here because its former component
+    entries were removed.'
+  evidence:
+  - reference: DOI:10.1002/cm.20469
+    notes: Results localize RNG1 below the extended conoid; Discussion separates late
+      incorporation from early SPMT nucleation.
+  - reference: DOI:10.1073/pnas.2416602121
+    notes: Figures 1 and 4 and Discussion resolve APR2 middle-layer localization and
+      depletion phenotypes; Figure 2 distinguishes fixed APR proteins from the moving
+      conoid.
+  - reference: DOI:10.1371/journal.pbio.3001081
+    notes: Figure 1 and Results distinguish canopy rings, conoid body and the two
+      APR positions.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Historical distal preconoidal and SPMT-origin polar-ring positions are
+      distinct.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'

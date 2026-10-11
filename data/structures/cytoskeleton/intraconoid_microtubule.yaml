@@ -27,6 +27,13 @@ curation_history:
     TODO evidence note and moving the Toxoplasma canonical-example note onto direct
     Hu et al. 2006 evidence.'
   llm_assisted: true
+- timestamp: '2026-10-11T19:53:40Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2253: Removed the over-specific anterior-ring projection edge
+    and matching prose, retaining the GO definition with explicit ambiguity and primary
+    basal-extension context.'
+  llm_assisted: true
 parent_structures:
 - GO:0005874
 part_of:
@@ -67,9 +74,8 @@ canonical_examples:
 functions:
 - function_id: conoid_center_microtubule_scaffold
   label: conoid-center microtubule scaffold
-  description: The two intraconoid microtubules provide conventional microtubule filaments
-    that pass through the center of the Toxoplasma conoid and extend through the apical
-    polar ring.
+  description: The two intraconoid microtubules provide conventional tubulin filaments
+    that run through the center of the Toxoplasma conoid.
   evidence:
   - reference: DOI:10.1371/journal.ppat.0020013
     notes: Hu et al. 2006 described a pair of Toxoplasma intraconoid microtubules
@@ -87,12 +93,15 @@ evidence:
 - reference: DOI:10.1371/journal.ppat.0020013
   notes: Hu et al. 2006, Cytoskeletal Components of an Invasion Machine--the Apical
     Complex of Toxoplasma gondii, PLOS Pathogens.
+- reference: DOI:10.1002/advs.202206595
+  notes: Li et al. 2023, Cryo-Electron Tomography of Toxoplasma gondii Indicates That
+    the Conoid Fiber May Be Derived from Microtubules. Results and Figure 2 independently
+    resolve basal-directed ICMT extension.
 causal_graphs:
 - graph_id: toxoplasma_intraconoid_microtubule_topology
   title: Two tubulin microtubules thread through the Toxoplasma conoid
   description: Alpha- and beta-tubulins polymerize into a pair of conventional intraconoid
-    microtubules that run through the center of the Toxoplasma conoid and project
-    through the apical polar ring.
+    microtubules that run through the center of the Toxoplasma conoid.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph records mature intraconoid-microtubule topology. It leaves
@@ -110,10 +119,6 @@ causal_graphs:
     label: conoid
     node_type: STRUCTURE
     grounding: GO:0020010
-  - node_id: polar_ring_of_apical_complex
-    label: polar ring of apical complex
-    node_type: STRUCTURE
-    grounding: GO:0020031
   - node_id: apical_complex
     label: apical complex
     node_type: STRUCTURE
@@ -139,15 +144,6 @@ causal_graphs:
     - reference: DOI:10.1371/journal.ppat.0020013
       notes: Hu et al. 2006 placed the two intraconoid microtubules inside the Toxoplasma
         conoid.
-  - subject: intraconoid_microtubule
-    predicate: projects through
-    object: polar_ring_of_apical_complex
-    description: The distal ends of the intraconoid microtubules project through the
-      apical polar ring.
-    evidence:
-    - reference: GO:0033289
-      notes: Gene Ontology defines the intraconoid microtubule by its path through
-        the conoid and projection through the polar ring.
   - subject: intraconoid_microtubule
     predicate: is part of
     object: apical_complex
@@ -196,3 +192,35 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-22'
   resolved_date: '2026-09-22'
+- discussion_id: intraconoid_ring_projection_scope
+  prompt: Do not infer a specific anterior-ring endpoint from the generic GO polar-ring
+    wording.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - definition
+  - functions#conoid_center_microtubule_scaffold
+  - causal_graphs#toxoplasma_intraconoid_microtubule_topology
+  rationale: GO:0033289 describes projection through a polar ring without selecting
+    a ring identifier or filament endpoint. The earlier graph added distal ends and
+    GO:0020031, the anterior conoid-fiber-origin ring. Historical schematic terminology
+    is not enough to establish that precise edge; modern studies distinguish preconoidal
+    rings from the fixed APR.
+  resolution_note: Retain the attributed GO definition but remove the unsupported
+    anterior-ring projection edge and matching prose. Hu 2006 supports the pair of
+    conventional microtubules inside the conoid; Li 2023 Figure 2 and polarity analysis
+    of 13 ICMTs support basal-directed extension in Toxoplasma tachyzoites. No alternative
+    ring attachment, organizer identity or general assembly mechanism is inferred.
+    Original end-factor TODO and prior evidence-placement fixes remain unchanged.
+  evidence:
+  - reference: GO:0033289
+    notes: Authority wording does not specify the distal endpoint or GO ring identifier.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: The pair of conventional intraconoid microtubules is distinguished from
+      conoid fibers and SPMTs.
+  - reference: DOI:10.1002/advs.202206595
+    notes: Results and Figure 2C/D show ICMTs extending from the inner conoid toward
+      the basal end.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'

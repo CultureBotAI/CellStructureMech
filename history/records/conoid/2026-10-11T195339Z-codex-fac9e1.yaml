@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/conoid.yaml
+  slug: conoid
+session:
+  id: 2026-10-11T195339Z-codex-fac9e1
+  timestamp: '2026-10-11T19:53:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2250
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2251
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2252
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - components
+  - curation_history
+  - discussions
+  - taxonomic_distribution
+  summary: 'Addressed #2250, #2251, #2252: Removed the heterogeneous whole-complex cohort
+    from body constituents and the reside-in edge, retaining proteomic/conservation context
+    in an appended discussion. Typed the conoid fiber polymer as a protein complex and the
+    assembled fiber/protofilament graph nodes as structures; tubulin composition and scaffold
+    relationships are unchanged. Replaced whole-phylum majority inference with Toxoplasma
+    body occurrence, preserving the distinct reduced Plasmodium conoid-complex evidence as
+    context without an absence claim.'
+  details: 'Immutable pre-edit observation: reviews/structured/20261011T194847Z-conoid-audit/review.yaml.
+    Removed the heterogeneous whole-complex cohort from body constituents and the reside-in
+    edge, retaining proteomic/conservation context in an appended discussion. Typed the conoid
+    fiber polymer as a protein complex and the assembled fiber/protofilament graph nodes as
+    structures; tubulin composition and scaffold relationships are unchanged. Replaced whole-phylum
+    majority inference with Toxoplasma body occurrence, preserving the distinct reduced Plasmodium
+    conoid-complex evidence as context without an absence claim. Original history, discussion
+    wording and dates retained; only removed-component anchors redirected. PROPOSED unchanged.'

@@ -28,6 +28,13 @@ curation_history:
     direct Sheriff et al. 2014 evidence for excluded Trypanosoma subpellicular microtubule
     usage.'
   llm_assisted: true
+- timestamp: '2026-10-11T19:53:42Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2254: Retargeted the SPMT attachment node and edge coherently
+    to GO:0020032, preserving the lattice, molecular constituents and Trypanosoma
+    boundary.'
+  llm_assisted: true
 parent_structures:
 - GO:0005874
 part_of:
@@ -99,6 +106,9 @@ evidence:
   notes: Sheriff, Lim and He 2014 tracked YFP-alpha-tubulin incorporation into Trypanosoma
     brucei subpellicular microtubules; the article is cited here only to distinguish
     kinetoplastid cortical arrays from GO:0020025.
+- reference: GO:0020032
+  notes: Exact basal-ring identity for the SPMT-origin attachment site; not a synonym
+    for the entire modern multilayer APR.
 causal_graphs:
 - graph_id: toxoplasma_subpellicular_microtubule_cortex
   title: Tubulin singlets extend from the polar ring under the Toxoplasma IMC
@@ -121,10 +131,10 @@ causal_graphs:
     label: subpellicular microtubule
     node_type: STRUCTURE
     grounding: GO:0020025
-  - node_id: polar_ring_of_apical_complex
-    label: polar ring of apical complex
+  - node_id: basal_ring_of_apical_complex
+    label: basal ring of apical complex
     node_type: STRUCTURE
-    grounding: GO:0020031
+    grounding: GO:0020032
   - node_id: inner_membrane_pellicle_complex
     label: inner membrane pellicle complex
     node_type: ORGANELLE
@@ -146,13 +156,16 @@ causal_graphs:
         the parasite's conventional alpha/beta-tubulin microtubules.
   - subject: subpellicular_microtubule
     predicate: attaches to
-    object: polar_ring_of_apical_complex
-    description: The minus end of each subpellicular microtubule attaches to the apical
-      polar ring.
+    object: basal_ring_of_apical_complex
+    description: The minus end of each subpellicular microtubule attaches at the basal,
+      SPMT-origin ring of the apical complex.
     evidence:
     - reference: DOI:10.1371/journal.ppat.0020013
       notes: Hu et al. 2006 localized EGFP-TgDLC at the sites where Toxoplasma subpellicular
         microtubules attach to the polar ring.
+    - reference: GO:0020032
+      notes: GO distinguishes the basal SPMT-origin ring from the anterior conoid-fiber-origin
+        ring GO:0020031.
   - subject: subpellicular_microtubule
     predicate: lies underneath
     object: inner_membrane_pellicle_complex
@@ -220,3 +233,26 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-22'
   resolved_date: '2026-09-22'
+- discussion_id: subpellicular_basal_ring_grounding
+  prompt: Use the exact basal SPMT-origin ring in the attachment graph.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#toxoplasma_subpellicular_microtubule_cortex
+  rationale: The former graph grounded the generic polar-ring name to GO:0020031,
+    whose definition denotes the anterior conoid-fiber-origin ring. GO:0020025 and
+    GO:0020032 identify the basal SPMT-origin topology, in agreement with the primary
+    anatomical distinction.
+  resolution_note: Retarget only the attachment node and edge to the basal GO:0020032
+    ring, with supporting authority context. Keep the 22 Toxoplasma singlets, alpha/beta-tubulins,
+    32 nm lattice evidence and explicit Trypanosoma boundary unchanged. This does
+    not equate the basal ring with every layer of the modern APR.
+  evidence:
+  - reference: GO:0020032
+    notes: Basal-ring definition specifies SPMT origins.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Introduction, Figure 1 and TgDLC localization distinguish the SPMT attachment
+      sites from distal preconoidal structures.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/conoid.yaml
+  slug: conoid
+session:
+  id: 2026-10-11T201037Z-codex-779a00
+  timestamp: '2026-10-11T20:10:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2255
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: 'Addressed #2255: made the new conoid scope discussion anchor reference the declared
+    conoid_tubulin_fibers component, as required by the corpus anchor contract. No scientific
+    claim, original discussion or earlier event changed.'
+  details: Detected by the first full QC; original scientific observations and initial remediation
+    history remain immutable. The existing corpus test is retained unchanged.
