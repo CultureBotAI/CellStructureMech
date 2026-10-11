@@ -1,0 +1,464 @@
+schema_version: 1.0.0
+review_id: 20261011T085537Z-axoneme-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Axoneme: scientific record review'
+started_at: '2026-10-11T08:44:51Z'
+finished_at: '2026-10-11T08:55:37Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent source and record assessment; not independent human
+    scientific sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Whole native record reviewed; one minor discussion-provenance defect saved
+  before separately authorized curation.
+source:
+  git_revision: d01b9d412c3f5a0d08b0f2fab6d08b33a5fe88ab
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 64862db2087298ae832b8a8410185349cc277151af31d88ce231e43201ab9440
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+    sha256: 74e419f358ba3717a764cd93cb5c0e4e892c7015094ed6457518994526ee1899
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+    sha256: c13cdaf4797fb4905470b312cf1c024005f77aa311ab3d62dd4d59c0a6d9b916
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_doublet_microtubule.yaml
+    sha256: 6a44e0a145c3ba58c9649ca75093614cd97001a451021dc2becf8c170824b270
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_dynein_complex.yaml
+    sha256: 9158b3b827892de2d3f14320353af5fbd6ef8ef3cfae114687b9e6725f7ce44e
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_microtubule.yaml
+    sha256: 480cd29d1f2e87c07c19dd8d60e50768cdcce29223b28ce2df1d4c956dc46282
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_junction.yaml
+    sha256: 1f4100cb6277d96af447d994d4f9749df7ae5038cd507dc5da3c833faf498013
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_sheath.yaml
+    sha256: 2b964f29a3a4cd6b72ad12c06c411a2df5e19969033b52bfd27b33148b08576d
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+    sha256: b9147816869cf7d715ba4bbe9ae68ea2a2af15001c05ad83e539b74bbe2a7933
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_microtubule_doublet_ribbon.yaml
+    sha256: 68b8a96e0ef8454f126a22a7a5b3df710fec63ea67b6b7978ff7064852d5060d
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_nexin_link.yaml
+    sha256: 4415aab73c5b36e1ae80542d11995651b8b280dbba975dbb1d993cb2b5c6b90c
+    role: context
+  - path: data/structures/cytoskeleton/axoneme.yaml
+    sha256: bed33d25739148035e6e753a535ec90e7d3f7c16f246d6d79a074609156c1536
+    role: target
+  - path: data/structures/cytoskeleton/inner_dynein_arm.yaml
+    sha256: 6ea8fde6434c952487523b582d7f7d4ab3b109b43d8ebcdff95b05e8792b5efa
+    role: context
+  - path: data/structures/cytoskeleton/outer_dynein_arm.yaml
+    sha256: 603e0ea1e7be6fd3394503046ecdcf070ac1b772f44da330293712359c4ddfa8
+    role: context
+  - path: data/structures/cytoskeleton/radial_spoke.yaml
+    sha256: 765856f9781ddd459ca382005572f3d455bd3ad0055228bb4b57a9ba57815bc1
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/axoneme/2026-09-11T093320Z-codex-8124bd.yaml
+    sha256: f94a2860ca7b55de10966482e4c7e6a924a10e87c28c68a9325d5d6663d59a91
+    role: context
+  - path: history/records/axoneme/2026-09-11T094130Z-codex-4b142c.yaml
+    sha256: 732670efedb8e7a9ab1036309e5da27b3bbcb7d20129aa31c820e6121a7422a3
+    role: context
+  - path: history/records/axoneme/2026-09-23T090844Z-codex-20d48d.yaml
+    sha256: 7ce163965db5aca74cdac184e33a6d2280f88d38ed90ceaecabec2be8000ca9c
+    role: context
+  - path: history/records/axoneme/2026-09-23T091322Z-codex-0a7cb9.yaml
+    sha256: 2fba78143647f0ba5bf7f0fe855c2966fa4a5923a2c0635f0744641538ef91e6
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0005930
+  path: data/structures/cytoskeleton/axoneme.yaml
+  label: axoneme
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axoneme.yaml
+    role: maintained scientific record
+scope:
+  description: Whole native YAML, every causal edge, identity and typed hierarchy,
+    composition, taxonomy, functions, optional resources, discussion lifecycle and
+    both history surfaces.
+  selection: One exact target in the 909-record review goal; adjacent records are
+    supporting context, not additional certified reviews.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0005930
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005930
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/axoneme.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic validation passed; scientific claim assessment is separate.
+  scope_note: 2026-10-11T08:48:15Z to 2026-10-11T08:48:21Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005930
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/axoneme.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic validation passed; scientific claim assessment is separate.
+  scope_note: 2026-10-11T08:48:21Z to 2026-10-11T08:48:31Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005930
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/axoneme.yaml
+    --report /private/tmp/csm-review-20261011T084242Z/axoneme-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets asserted. Paraphrased claim support was inspected
+    separately.
+  scope_note: 2026-10-11T08:48:31Z to 2026-10-11T08:49:13Z; log SHA-256 d5410cb4043ed5e182322a5b6ed767a778104ffad00e966c87fd22a49a4c4f22
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005930
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic validation passed; scientific claim assessment is separate.
+  scope_note: 2026-10-11T08:49:13Z to 2026-10-11T08:49:32Z; log SHA-256 a334cb99b68bf9bff7dc6f7cbf42e376c52117e8773d42811c4f87cdf4e017da
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005930
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T08:49:32Z to 2026-10-11T08:51:19Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005930
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic validation passed; scientific claim assessment is separate.
+  scope_note: 2026-10-11T08:51:19Z to 2026-10-11T08:51:43Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005930
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4014\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T08:51:43Z to 2026-10-11T08:52:40Z; log SHA-256 ee1c5f2e78a2d29fcb6781a8ecd722934376595042d2cc261b4465b361d19b79
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005930
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic validation passed; scientific claim assessment is separate.
+  scope_note: 2026-10-11T08:52:40Z to 2026-10-11T08:54:22Z; log SHA-256 82b4ed449d60e1c91478d89ecc61151db2576619a6c70b3f993966645a35fdb6
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005930
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic validation passed; scientific claim assessment is separate.
+  scope_note: 2026-10-11T08:54:22Z to 2026-10-11T08:54:22Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: qc
+  name: Exact-baseline CI full QC and review contract
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005930
+  command: gh run view 38125277347 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Full native QC (840 passed, 3 skipped) and review-contract gates passed
+    on the exact captured baseline. This is a verified CI receipt, not a fresh local
+    QC execution.
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38125277347;
+    log SHA-256 81088c4381fa395d4cbe8386a0dc7e302d47e650bbac9dde14238e2dc869afc6
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/axoneme.yaml
+  accessed_at: '2026-10-11T08:55:37Z'
+  snapshot_sha256: bed33d25739148035e6e753a535ec90e7d3f7c16f246d6d79a074609156c1536
+  support: context_only
+  summary: Entire native YAML read; formal input capture preceded assessment, though
+    initial reading preceded capture.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T08:55:37Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Discussion rationale must be appended, not replaced; dates and resolved
+    lifecycle must be preserved.
+- evidence_id: history
+  kind: record_content
+  reference: /private/tmp/csm-review-20261011T084242Z/axoneme-discussion-history.json
+  accessed_at: '2026-10-11T08:55:37Z'
+  snapshot_sha256: 4381ab7e160131b0f300dd495546665c8e05c9767ff4230bf97909b021eae5b8
+  support: context_only
+  summary: All committed revisions of this target inspected, including full discussion
+    objects and curation events.
+- evidence_id: context
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T084242Z/context-read.log
+  accessed_at: '2026-10-11T08:55:37Z'
+  snapshot_sha256: 8466ad636fabe3c2dbacb9d558bcf8c0c730dc79fbc31cba6398e99ab9912815
+  support: context_only
+  summary: Maintained neighboring structures and append-only repository history inspected
+    for current boundaries and earlier corrections.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T084242Z/exact-target-predecessors.json
+  accessed_at: '2026-10-11T08:55:37Z'
+  snapshot_sha256: 19d6b776c97937ed352ae43a2425b13c15aafca39b6ff6d45cd3a74be34e1d1f
+  support: context_only
+  summary: Ignored-inclusive recursive structured-review target search found no exact-target
+    predecessor; references to the term in another review are not target coverage.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0001534,GO:0003352,GO:0005858,GO:0005879,GO:0005881,GO:0005930,GO:0005931,GO:0030286,GO:0036156,GO:0036157,GO:0051012,GO:0097540,GO:0097545,GO:0097649,GO:0097650,GO:0160110,GO:0160111,GO:0160112,GO:0160113,GO:0160114,GO:0160115,GO:1990716,GO:1990718,GO:1990719,GO:1990720
+  locator: Exact term definitions, aspect, obsolescence, synonyms and typed reverse
+    children for all 25 asserted GO identifiers in the ten-target selection
+  accessed_at: '2026-10-11T08:43:40Z'
+  snapshot_sha256: 93097af320ac100c3e65e327a67a93a3c21ade82457eb1ad668d05cd6ab52345
+  support: supports
+  summary: Current GO supports these exact structure identities and typed parthood.
+    Upstream central-pair doublets wording and B-sheath A-tubule relationship conflicts
+    are not adopted as biological facts.
+- evidence_id: taxa
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=3055%2C5911
+  locator: Top-level taxa 3055 and 5911
+  accessed_at: '2026-10-11T08:43:41Z'
+  snapshot_sha256: 8f418aa735d12049673dbd5bee57296b8ec2586d6d63ddb63c93e415ac0fe3d7
+  support: supports
+  summary: Chlamydomonas reinhardtii and Tetrahymena thermophila identities resolve.
+    Authority identity alone is not occurrence evidence.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T084242Z/adapter.log
+  accessed_at: '2026-10-11T08:55:37Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: The live 28-dataset iModulonDB inventory includes neither reviewed organism.
+    No applicable dataset search; absence is not negative biological evidence.
+- evidence_id: nicastro-abstract
+  kind: primary_source
+  reference: DOI:10.1126/science.1128618
+  locator: Exact DOI/PMID metadata and primary abstract
+  accessed_at: '2026-10-11T08:44:01Z'
+  snapshot_sha256: dc5a628f1cfe67da937413ea897415a623f29682c4fcc83f9a7540d564467a27
+  support: supports
+  summary: The paper describes frozen Chlamydomonas and sea-urchin axoneme structures
+    and proposes a dynein-sliding model.
+- evidence_id: nicastro-full
+  kind: primary_source
+  reference: DOI:10.1126/science.1128618
+  locator: 'Author-uploaded full text: https://www.researchgate.net/publication/6871150_The_Molecular_Architecture_of_Axonemes_Revealed_by_Cryoelectron_Tomography
+    ; introductory architecture, specimen preparation, mechanistic interpretation
+    and Figures 1-5 captions'
+  accessed_at: '2026-10-11T08:55:37Z'
+  support: supports
+  summary: Actual author-uploaded article text was read through the browser. Frozen,
+    ATP-free Chlamydomonas architecture and the proposed force-generation interpretation
+    support the coarse native structural model; no active-beating experiment is inferred.
+- evidence_id: heuser
+  kind: primary_source
+  reference: DOI:10.1083/jcb.200908067
+  locator: Results DRC base plate/linker and nexin identity; Figures 2-5 captions
+    and regulatory Discussion
+  accessed_at: '2026-10-11T08:43:57Z'
+  snapshot_sha256: f6a5c833f64a84386a04be58bfb4a547f17d9ebc99eb4193398c9cbf41d2be18
+  support: supports
+  summary: Primary mutant cryo-ET supports N-DRC identity, interdoublet connections
+    and the bounded regulatory interpretation. Static preparation does not settle
+    link stretching during active beating.
+assessments:
+- assessment_id: biology
+  area: evidence
+  topic: Identity, hierarchy, composition, species scope, functions and every graph
+    edge
+  outcome: supported
+  target_ids:
+  - GO:0005930
+  evidence_ids:
+  - record
+  - go
+  - taxa
+  - nicastro-full
+  - heuser
+  summary: GO:0005930 denotes the axonemal scaffold broadly; the native definition
+    does not restrict every axoneme to motile 9+2 architecture. Chlamydomonas 9+2
+    is explicitly the taxon-scoped example. All six has_part links and seven graph
+    edges preserve distinct doublet, radial-spoke, central-apparatus, inner/outer
+    dynein and nexin owners. Nicastro supports the observed arrangement and its force/sliding
+    interpretation as a model, not a new dynamic measurement. Heuser establishes N-DRC/nexin
+    identity and interdoublet connectivity; regulation remains qualified in the NONMECHANISTIC
+    graph.
+- assessment_id: provenance
+  area: provenance
+  topic: Historical rationale and current task lifecycle
+  outcome: concern
+  target_ids:
+  - GO:0005930
+  evidence_ids:
+  - record
+  - history
+  - rules
+  - context
+  summary: The original dd83f845 rationale explains the initial coarse-substructure
+    representation. Six successive additions rewrote it at 0b7c77d1, 3304899a, e7aa953a,
+    7102642e, 9f7ca79b and 8b410f98. The current narrowed prompt is appropriate, but
+    replacing the earlier rationale removes provenance required by CURATION.md.
+- assessment_id: resources
+  area: completeness
+  topic: Optional resources, conservative groundings and status
+  outcome: supported
+  target_ids:
+  - GO:0005930
+  evidence_ids:
+  - record
+  - rules
+  summary: No native images, quantitative property measurements, protein/dataset accessions
+    or trait links require additional resource verification. Coarse label-only groups
+    and acknowledged open molecular tasks are not invented defects. Native status
+    remains PROPOSED.
+findings:
+- finding_id: F1
+  issue_key: axoneme-discussion-rationale-preservation
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Restore the axoneme discussion rationale history
+  description: The original dd83f845 rationale explains the initial coarse-substructure
+    representation. Six successive additions rewrote it at 0b7c77d1, 3304899a, e7aa953a,
+    7102642e, 9f7ca79b and 8b410f98. The current narrowed prompt is appropriate, but
+    replacing the earlier rationale removes provenance required by CURATION.md.
+  target_ids:
+  - GO:0005930
+  field_paths:
+  - discussions[0].rationale
+  evidence_ids:
+  - record
+  - history
+  - rules
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axoneme.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: minor
+  normalization_reason: A bounded source-attribution or discussion-provenance defect;
+    the biological identity and structure boundaries remain supported.
+actions:
+- action_id: A1
+  description: Restore the axoneme discussion rationale history
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0005930
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axoneme.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Restore the exact original rationale and every distinct later version, with revision-labelled
+    historical context rather than current absence claims.
+  - Preserve current discussion IDs, narrowed prompts, live attachments, original
+    posed dates and authors, statuses, all has_part links, all graph edges and earlier
+    scientific scope corrections.
+  - Use the guarded writer, append Codex curation and EDIT history, preserve PROPOSED,
+    prior history/reviews and unrelated records, regenerate pages, and pass focused
+    regressions and native QC.
+limitations:
+- Same-agent review, not independent human sign-off; no scientific-status promotion.
+- Full baseline QC was verified in exact-revision CI; local scoped/global checks have
+  their actual namespace and label skips retained. Automated validation is not scientific
+  coverage.
+- No raw micrograph, map, movie or experimental-data reanalysis; unresolved protein-family
+  mappings and stoichiometries are not certified.
+- Three Europe PMC XML requests returned errors; corresponding official PMC HTML was
+  inspected. Nicastro full text was read through an author-uploaded browser page,
+  not a downloaded publisher PDF.
+- Current GO source conflicts affecting central-pair definition and B-inner-sheath
+  typed placement are retained as authority limitations, not silently substituted
+  for primary-supported native biology.
