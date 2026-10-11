@@ -1,5 +1,7 @@
 """Keep filament hierarchy, primary citations and retained components explicit."""
 
+import hashlib
+import json
 from pathlib import Path
 
 import yaml
@@ -97,3 +99,27 @@ def test_alfa_becker_citation_does_not_invent_authors():
     assert "Becker et al. 2006" in note
     assert "Moller-Jensen" not in note
     assert "Gerdes" not in note
+
+
+def test_new_hierarchy_labels_have_retained_authority_sources():
+    from scripts.build_website_references import GO_RELATIONSHIP_TERMS
+
+    snapshot = json.loads((ROOT / "data/website/references.json").read_text())
+    expected = {
+        "0030864": "cortical actin cytoskeleton",
+        "0061645": "endocytic patch",
+        "0099513": "polymeric cytoskeletal fiber",
+    }
+    for number, label in expected.items():
+        assert number in GO_RELATIONSHIP_TERMS
+        name = f"go-{number}.json"
+        entry = snapshot["references"][f"GO:{number}"]
+        assert entry["label"] == label
+        assert entry["source"] == name
+        source = next(s for s in snapshot["sources"] if s["file"] == name)
+        path = ROOT / "reports/website_reference_sources/20261011-cytoskeleton" / name
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == source["sha256"]
+        term, = json.loads(path.read_text())["_embedded"]["terms"]
+        assert term["obo_id"] == f"GO:{number}"
+        assert term["label"] == label
+        assert term["is_obsolete"] is False

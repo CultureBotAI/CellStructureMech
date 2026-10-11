@@ -1,0 +1,91 @@
+{
+  "_embedded" : {
+    "terms" : [ {
+      "iri" : "http://purl.obolibrary.org/obo/GO_0030864",
+      "lang" : "en",
+      "description" : [ "The portion of the actin cytoskeleton, comprising filamentous actin and associated proteins, that lies just beneath the plasma membrane." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "Conforms To" : [ "http://purl.obolibrary.org/obo/go/patterns/part_of_cell_component.yaml" ],
+        "has_obo_namespace" : [ "cellular_component" ],
+        "id" : [ "GO:0030864" ]
+      },
+      "label" : "cortical actin cytoskeleton",
+      "ontology_name" : "go",
+      "ontology_prefix" : "GO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/go/extensions/go-plus.ofn",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : true,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "GO_0030864",
+      "obo_id" : "GO:0030864",
+      "in_subset" : null,
+      "obo_definition_citation" : [ {
+        "definition" : "The portion of the actin cytoskeleton, comprising filamentous actin and associated proteins, that lies just beneath the plasma membrane.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "mah",
+          "description" : null,
+          "url" : null
+        } ]
+      } ],
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/graph"
+        },
+        "part_of" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000050"
+        },
+        "in_taxon" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0030864/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002162"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0030864"
+    }
+  },
+  "page" : {
+    "size" : 1,
+    "totalElements" : 1,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

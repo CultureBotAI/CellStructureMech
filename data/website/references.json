@@ -171,6 +171,24 @@
       "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0030981",
       "sha256": "82236e102856b137d958e792db7dbc20ec108ee6e3813f95f86ec806b12a301b",
       "retrieved": "2026-10-08"
+    },
+    {
+      "file": "go-0030864.json",
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0030864",
+      "retrieved": "2026-10-11",
+      "sha256": "9db30bf8c07fd4c3b343d8a1c6f320d1186a9b854dae296a6f606297baa560ac"
+    },
+    {
+      "file": "go-0061645.json",
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0061645",
+      "retrieved": "2026-10-11",
+      "sha256": "16e20065f9b08c55b577c91692bb6c852d8bf92c187828db621cafab690a0c00"
+    },
+    {
+      "file": "go-0099513.json",
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0099513",
+      "retrieved": "2026-10-11",
+      "sha256": "89187d136f3c3754e51f50d21064fa345ba71105af505853d6484be1a553165f"
     }
   ],
   "uniprot_release": "2026_03 of 02-Sep-2026",
@@ -264,6 +282,11 @@
       "url": "http://purl.obolibrary.org/obo/GO_0030863",
       "source": "go-0030863.json"
     },
+    "GO:0030864": {
+      "label": "cortical actin cytoskeleton",
+      "url": "http://purl.obolibrary.org/obo/GO_0030864",
+      "source": "go-0030864.json"
+    },
     "GO:0030981": {
       "label": "cortical microtubule cytoskeleton",
       "url": "http://purl.obolibrary.org/obo/GO_0030981",
@@ -299,6 +322,11 @@
       "url": "http://purl.obolibrary.org/obo/GO_0043601",
       "source": "go-0043601.json"
     },
+    "GO:0061645": {
+      "label": "endocytic patch",
+      "url": "http://purl.obolibrary.org/obo/GO_0061645",
+      "source": "go-0061645.json"
+    },
     "GO:0071944": {
       "label": "cell periphery",
       "url": "http://purl.obolibrary.org/obo/GO_0071944",
@@ -313,6 +341,11 @@
       "label": "chromosome, subtelomeric region",
       "url": "http://purl.obolibrary.org/obo/GO_0099115",
       "source": "go-0099115.json"
+    },
+    "GO:0099513": {
+      "label": "polymeric cytoskeletal fiber",
+      "url": "http://purl.obolibrary.org/obo/GO_0099513",
+      "source": "go-0099513.json"
     },
     "GO:0120280": {
       "label": "ciliary pro-basal body",
