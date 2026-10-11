@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/inner_dynein_arm.yaml
+  slug: inner_dynein_arm
+session:
+  id: 2026-10-11T120441Z-codex-ca9e0e
+  timestamp: '2026-10-11T12:04:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2210
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Addressed #2210: aligned the nonmechanistic dynein-arm graph with source-supported
+    constituent parthood rather than assembly.'
+  details: 'Original immutable observation: reviews/structured/20261011T120358Z-inner_dynein_arm-audit/review.yaml.
+    Bounded guarded correction preserves component inventory, local evidence, outer-doublet
+    attachment and sliding edges, discussions, earlier history and PROPOSED status. No assembly
+    pathway, protein grounding or stoichiometry inferred.'

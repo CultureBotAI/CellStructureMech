@@ -21,6 +21,12 @@ curation_history:
     and DOI evidence, a nonmechanistic outer-arm motility graph, and a component-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-11T12:04:42Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2211: aligned the nonmechanistic dynein-arm graph with source-supported
+    constituent parthood rather than assembly.'
+  llm_assisted: true
 parent_structures:
 - GO:0005858
 part_of:
@@ -105,8 +111,8 @@ evidence:
 causal_graphs:
 - graph_id: chlamydomonas_outer_dynein_arm_motility
   title: Outer dynein arms drive Chlamydomonas axonemal sliding
-  description: Outer-arm heavy, intermediate and light chains assemble into an outer
-    dynein arm that projects from Chlamydomonas axonemal outer doublet microtubules
+  description: Outer-arm heavy, intermediate and light chains are constituents of
+    an outer dynein arm that projects from Chlamydomonas axonemal outer doublet microtubules
     and contributes to sliding force generation.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
@@ -139,7 +145,7 @@ causal_graphs:
     grounding: GO:0051012
   edges:
   - subject: outer_arm_dynein_heavy_chains
-    predicate: assemble into
+    predicate: are part of
     object: outer_dynein_arm
     description: Dynein heavy chains are constituent chains of the outer dynein arm.
     evidence:
@@ -147,7 +153,7 @@ causal_graphs:
       notes: GO describes outer dynein arms as containing two to three dynein heavy
         chains.
   - subject: outer_arm_dynein_intermediate_chains
-    predicate: assemble into
+    predicate: are part of
     object: outer_dynein_arm
     description: Dynein intermediate chains are constituent chains of the outer dynein
       arm.
@@ -156,7 +162,7 @@ causal_graphs:
       notes: GO describes outer dynein arms as containing two or more intermediate
         chains.
   - subject: outer_arm_dynein_light_chains
-    predicate: assemble into
+    predicate: are part of
     object: outer_dynein_arm
     description: Dynein light chains are constituent chains of the outer dynein arm.
     evidence:
