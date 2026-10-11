@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_a_c_linker.yaml
+  slug: basal_body_a_c_linker
+session:
+  id: 2026-10-11T103637Z-codex-093184
+  timestamp: '2026-10-11T10:36:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2206
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - images
+  - curation_history
+  summary: 'Addressed #2206: corrected the A-C linker figure caption from raw to denoised
+    in-situ tomography and documented the source DeepDeWedge processing, retaining image bytes
+    and all biological claims.'
+  details: 'Saved observation committed before correction: reviews/structured/20261011T103510Z-basal_body_a_c_linker-audit/review.yaml.
+    Guarded edit changes only caption, appended image-processing note and curation event.
+    Original image, provenance, biological fields, discussions, earlier history and PROPOSED
+    status remain unchanged.'
