@@ -1,0 +1,562 @@
+schema_version: 1.0.0
+review_id: 20261011T045750Z-periplasmic_flagellum-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Periplasmic flagellum: scientific evidence review'
+started_at: '2026-10-11T04:48:10Z'
+finished_at: '2026-10-11T04:57:50Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent source assessment before mutation, not independent
+    human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Entire native record assessed at the source access tiers stated; two concrete
+  evidence issues observed. Optional empty fields and explicitly deferred molecular
+  grounding are not findings.
+source:
+  git_revision: fe0a41e4cd9c1bfa27f72ef427f045022df862c0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/bacterial_type_flagellum.yaml
+    sha256: 4e3e6bf50835a3134d50e5a20a87cdfa86e1e37c21085757402df7dd628095e6
+    role: context
+  - path: data/structures/appendage/cilium.yaml
+    sha256: 2536d421f9c482abf35c2d2bf026eb6158ddfec5c2df1f319ca80698cbb56bb8
+    role: context
+  - path: data/structures/appendage/p_pilus.yaml
+    sha256: c9e8371a5cc6cda0a28d5264a6a2c2368a703670b3c285fc12f1aa58b6adafa9
+    role: context
+  - path: data/structures/appendage/paraflagellar_rod.yaml
+    sha256: e6aac3ef5683759fa8ddc609e8768e2ad265b134bcbd4b1b6012458a713eccdf
+    role: context
+  - path: data/structures/appendage/periplasmic_flagellum.yaml
+    sha256: 5ab5ca72079de286b8efd85459da9f3bb2851a22ce75caa658277a22b740c79b
+    role: target
+  - path: data/structures/appendage/pilus.yaml
+    sha256: b82205e792d181aa2e2cb76eb56a2ecafdb3021302c7b86a5819c649528bc06b
+    role: context
+  - path: data/structures/appendage/type_i_pilus.yaml
+    sha256: 35b161df2bab54d5b56efde936dc2ee7e5de57789ae583a26a8265b04dc17f00
+    role: context
+  - path: data/structures/appendage/type_iv_pilus.yaml
+    sha256: 744f19aeb3b62c9f4d470fcbf47038056069904d998eb7c5e2b83f6821037d4e
+    role: context
+  - path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+    sha256: a3c88e9e9a6b27327238a732a4d6cdc4740ba50f26c581d251bfb5ad12f7dc0c
+    role: context
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/periplasmic_flagellum/2026-09-06T114213Z-claude-0ed7e0.yaml
+    sha256: 62bad23a92f6ae71568a6e407e8340e790177c35a104436057b0338bb7bfaa17
+    role: context
+  - path: history/records/periplasmic_flagellum/2026-09-06T123801Z-claude-cb3b36.yaml
+    sha256: 9a77a06c7cae366c95bd2293fc096b09c16907fd69e13d369eb5a48baeee21cf
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/evidence_readability.periplasmic_flagellum.tsv
+    sha256: 970a896af9d89fbfc08b9e266b82e60501429712f3a254a0863f42d3dae1ad52
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0055040
+  path: data/structures/appendage/periplasmic_flagellum.yaml
+  label: periplasmic flagellum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/periplasmic_flagellum.yaml
+    role: maintained scientific record
+scope:
+  description: Entire native YAML, present scientific claims, exact authorities and
+    both history surfaces.
+  selection: One sequential unassessed target from the all-909-record goal; not a
+    sampled corpus verdict.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0055040
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/periplasmic_flagellum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command passed; deterministic validity is not scientific support.
+  scope_note: 2026-10-11T04:49:26Z to 2026-10-11T04:49:29Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/periplasmic_flagellum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command passed; deterministic validity is not scientific support.
+  scope_note: 2026-10-11T04:49:29Z to 2026-10-11T04:49:34Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/periplasmic_flagellum.yaml
+    --report /private/tmp/csm-review-20261011T044732Z/periplasmic_flagellum-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No quoted snippets present; the successful command did not test paraphrase
+    accuracy. Paraphrases were inspected separately.
+  scope_note: 2026-10-11T04:49:34Z to 2026-10-11T04:50:08Z; log SHA-256 bb2e2205e95926940d59429adf3ce1d86803dd1b24e70acb2d0d75e5a369320d
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command passed; deterministic validity is not scientific support.
+  scope_note: 2026-10-11T04:50:08Z to 2026-10-11T04:50:28Z; log SHA-256 1681e9bb52c501d5ad826d30ec6540fee542dcf71d98302d7a1b47ebde38f150
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 3544 canonical labels, 50 synonyms and six exceptions accepted; 603 non-adapter
+    pairs skipped. Exact relevant target authorities were separately inspected.
+  scope_note: 2026-10-11T04:50:28Z to 2026-10-11T04:52:22Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command passed; deterministic validity is not scientific support.
+  scope_note: 2026-10-11T04:52:22Z to 2026-10-11T04:52:46Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 4010 identifiers resolved; 251 skipped. BFO controls were not exercised
+    because its authority was unreachable. Skips and unexercised controls are not
+    certified; relevant target authorities were separately inspected.
+  scope_note: 2026-10-11T04:52:46Z to 2026-10-11T04:53:51Z; log SHA-256 3f7e468a7e37b80629f887d91075f58243b0dabfc8af4a9f34cc5da087b7fc49
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command passed; deterministic validity is not scientific support.
+  scope_note: 2026-10-11T04:53:51Z to 2026-10-11T04:54:47Z; log SHA-256 cc3452fe5ee816c2bdb2cc44d11e93bc3792f9eadd679e9158087b3c368811ce
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command passed; deterministic validity is not scientific support.
+  scope_note: 2026-10-11T04:54:47Z to 2026-10-11T04:54:47Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: contract
+  name: contract
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Command passed; deterministic validity is not scientific support.
+  scope_note: 2026-10-11T04:53:39Z to 2026-10-11T04:54:39Z; log SHA-256 f9141701da44994bf8584f4d0678e4b743aa2c3a067ebfd12fc995df82c07678
+- check_id: qc
+  name: Exact-baseline authoritative CI QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0055040
+  command: gh run view 38111375021 --json status,conclusion,headSha,event,name,url,jobs;
+    gh run view 38111375021 --log
+  exit_code: 0
+  summary: Full QC passed on the exact unchanged baseline; not a newly run local full
+    QC.
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38111375021;
+    full-log SHA-256 7b39c8b7ee34bf9650709933427d04ebd01fdb8fc544a5849b662860c5b8ccbe
+- check_id: adapter
+  name: Structured-source applicability
+  status: passed
+  required: false
+  target_ids:
+  - GO:0055040
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  summary: iModulonDB dataset inventory has no matching trypanosome, Leishmania or
+    spirochete dataset. Not applicable; absence from the adapter is not biological
+    absence.
+  scope_note: 2026-10-11T04:48:16Z to 2026-10-11T04:48:17Z; log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/periplasmic_flagellum.yaml
+  locator: Full native YAML and exact append-only record histories
+  accessed_at: '2026-10-11T04:57:50Z'
+  snapshot_sha256: 5ab5ca72079de286b8efd85459da9f3bb2851a22ce75caa658277a22b740c79b
+  support: context_only
+  summary: Pre-mutation native record; original status and historical events retained.
+- evidence_id: prior
+  kind: search
+  reference: reviews/structured/ and reports/yaml_record_review/
+  locator: Exact slugs and GO identifiers
+  accessed_at: '2026-10-11T04:57:50Z'
+  support: context_only
+  search_scope: rg --no-ignore --hidden across both review roots included ignored
+    files. GitHub all-state bounded query paraflagellar OR periplasmic returned nine
+    items, below the 100-result limit.
+  summary: 'No earlier exact-target saved review bundle found in these two roots.
+    Closed issue #203 concerns introducing an active rotation node, not the static-versus-dynamic
+    evidence mismatch; #293 concerns the PFR synonym citation, not family mapping.
+    Earlier histories remain authoritative historical observations.'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009289,GO:0097740,GO:0097729,GO:0005930,GO:0055040,GO:0009288,GO:0120100,GO:0071973
+  locator: Exact target term and asserted parent/parthood/function terms only
+  accessed_at: '2026-10-11T04:49:10Z'
+  snapshot_sha256: 58999ee2fac67a7a971a451530f3a1fa4281636cf7762a139ead03851aa01c92
+  support: supports
+  summary: Active GO identifiers and current relations match the native identity and
+    hierarchy. Ontology wording is not experimental validation of uniform molecular
+    architecture.
+- evidence_id: nakamura
+  kind: primary_source
+  reference: DOI:10.3390/biom10040550
+  locator: Review sections 2, 3.1-3.3 and 4.1-4.3; secondary synthesis
+  accessed_at: '2026-10-11T04:49:09Z'
+  snapshot_sha256: 8dbfe5794bbdda7bc2815bec1b378cffc6d423b09774d9dda579084b8e2e1a13
+  support: supports
+  summary: 'The cited review distinguishes FlaA architecture by lineage and discusses
+    swimming from flagellar rotation. It is not a primary experiment: Borrelia FlaA
+    placement near the base is tentative, and Leptospira sheath persists after FlaA
+    deletion.'
+- evidence_id: ge
+  kind: primary_source
+  reference: DOI:10.1128/JB.180.9.2418-2425.1998
+  locator: Abstract, FlaA copurification Results and final Discussion paragraph
+  accessed_at: '2026-10-11T04:49:46Z'
+  snapshot_sha256: ea87f6e484e41b9f7bc4d789ff4e308862b3f312b34482070d4ac0ee4accbf69
+  support: supports
+  summary: FlaA copurifies with Borrelia flagella using gentle extraction. Its precise
+    location and a sheath role were not determined; localization near the hook was
+    a hypothesis.
+- evidence_id: motaleb
+  kind: primary_source
+  reference: DOI:10.1073/pnas.200221797
+  locator: Abstract, flaB mutant Results, CCCP immobilization Methods and Results,
+    Discussion
+  accessed_at: '2026-10-11T04:49:45Z'
+  snapshot_sha256: 875f84fd1957f40c55df1386e8ea6022d95c025e8060a11369438b8a8b44e76c
+  support: supports
+  summary: Loss of flaB eliminates filaments and changes morphology; CCCP-immobilized
+    cells retain flat-wave shape. This distinguishes the resting skeletal effect from
+    dynamic wave propagation.
+- evidence_id: qin
+  kind: primary_source
+  reference: DOI:10.1371/journal.pbio.3000050
+  locator: Abstract, Introduction, motor/ATPase structural Results and Fig. 1-3 captions
+  accessed_at: '2026-10-11T04:49:05Z'
+  snapshot_sha256: 5ece51b43bb79ce73973dd4ec25e9a57ab33436c13f62b0e167f38f780e10739
+  support: supports
+  summary: CryoET places the filament and motor assembly in Borrelia and resolves
+    collar/ATPase architecture. Static reconstructions support proposed rotary arrangement,
+    not direct movies of filament rotation.
+- evidence_id: san-martin
+  kind: primary_source
+  reference: DOI:10.1016/j.tim.2022.09.010
+  locator: Bibliographic identity and primary abstract only
+  accessed_at: '2026-10-11T04:48:44Z'
+  snapshot_sha256: 671692ad7126c403cbbf268cbe38b59d54476b37ab980ae21fa14400c0081f49
+  support: context_only
+  summary: Supports endoflagellum/periplasmic placement. Publisher retrieval returned
+    an HTML shell without article text; it does not establish the record generic FlaA
+    sheath edge.
+- evidence_id: uniprot
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P70856.json
+  locator: Reviewed accession, gene, source protein label and taxonomy
+  accessed_at: '2026-10-11T04:49:04Z'
+  snapshot_sha256: da4ffcfbdb420013638a05f24b2c8b8ec1d0cc4286b0f4da18af45e6e2c32694
+  support: supports
+  summary: P70856 matches flaA and B31; the historical source protein name is retained
+    as provenance, not proof of a continuous Borrelia sheath.
+- evidence_id: taxon-203691
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/203691.json
+  locator: Exact taxonomy identity
+  accessed_at: '2026-10-11T04:49:08Z'
+  snapshot_sha256: 57da54f373467c59ca5cf1a136267cf9b8b48f38e6c5bb7b3f91bc264b54eba8
+  support: supports
+  summary: Taxon identity, rank and source name match the native row at the stated
+    scope.
+- evidence_id: taxon-2
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/2.json
+  locator: Exact taxonomy identity
+  accessed_at: '2026-10-11T04:49:09Z'
+  snapshot_sha256: 8074c9bcd59cd4da1da4bc9ec98c040bbecd52ef5c91c4c4bb9bed0f3a7cb5a9
+  support: supports
+  summary: Taxon identity, rank and source name match the native row at the stated
+    scope.
+- evidence_id: taxon-139
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/139.json
+  locator: Exact taxonomy identity
+  accessed_at: '2026-10-11T04:49:10Z'
+  snapshot_sha256: 821432967fae0153b376db0094d7e72e19814b2f592007e4c4d269d47fa799dc
+  support: supports
+  summary: Taxon identity, rank and source name match the native row at the stated
+    scope.
+- evidence_id: taxon-224326
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/224326.json
+  locator: Exact taxonomy identity
+  accessed_at: '2026-10-11T04:49:08Z'
+  snapshot_sha256: 2c1f7467e9b5f58df305e9ad8ba853fa379e41de29a7b53a851a89cc9dcad70b
+  support: supports
+  summary: Taxon identity, rank and source name match the native row at the stated
+    scope.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Structure identity, appendage boundary, synonyms and parent
+  outcome: supported
+  target_ids:
+  - GO:0055040
+  evidence_ids:
+  - record
+  - go
+  - nakamura
+  - san-martin
+  summary: Exact periplasmic flagellum term and bacterial-type flagellum parentage
+    are retained. Filament is a narrower part, not the whole apparatus.
+- assessment_id: scope
+  area: scope
+  topic: Distribution and canonical example
+  outcome: supported
+  target_ids:
+  - GO:0055040
+  evidence_ids:
+  - nakamura
+  - qin
+  - taxon-203691
+  - taxon-139
+  - taxon-224326
+  - taxon-2
+  summary: Motile-spirochete COMMON and bacterial RARE wording plus Borrelia example
+    are appropriately qualified.
+- assessment_id: composition
+  area: grounding
+  topic: Three components and protein example
+  outcome: concern
+  target_ids:
+  - GO:0055040
+  evidence_ids:
+  - ge
+  - nakamura
+  - motaleb
+  - qin
+  - uniprot
+  summary: FlaB and the basal-body assembly are supported. FlaA membership is distinct
+    from sheath architecture and cannot be generalized across these lineages.
+- assessment_id: graph
+  area: evidence
+  topic: Motility and all seven causal edges
+  outcome: concern
+  target_ids:
+  - GO:0055040
+  evidence_ids:
+  - record
+  - nakamura
+  - motaleb
+  - qin
+  summary: 'General motility pathway is supported, but a uniform FlaA sheath and the
+    use of resting-shape loss as rotation evidence need correction. Preserve the active
+    rotation node introduced for #203.'
+- assessment_id: provenance
+  area: provenance
+  topic: Status, histories, optional fields and source access
+  outcome: supported
+  target_ids:
+  - GO:0055040
+  evidence_ids:
+  - record
+  summary: PROPOSED status and append-only histories remain unchanged. No asserted
+    images, physical measurements, trait links or datasets require additional verification.
+    Unpopulated optional fields are not defects.
+findings:
+- finding_id: F1
+  issue_key: periplasmic-flagellum-flaa-sheath-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Scope FlaA architecture to the demonstrated spirochete lineage
+  description: The record describes FlaA as a generic sheath around FlaB and calls
+    every graph filament sheathed. Ge 1998 explicitly leaves the Borrelia FlaA location/sheath
+    role unresolved. Nakamura 2020 distinguishes Brachyspira sheath architecture,
+    tentative basal localization in Borrelia, and a Leptospira sheath that persists
+    after FlaA deletion. Generic membership is not universal sheath architecture.
+  target_ids:
+  - GO:0055040
+  field_paths:
+  - components[1]
+  - causal_graphs[0].title
+  - causal_graphs[0].description
+  - causal_graphs[0].nodes
+  - causal_graphs[0].edges
+  evidence_ids:
+  - record
+  - ge
+  - nakamura
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/periplasmic_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Material component identity, scope or edge-evidence defect;
+    the structure record itself retains valid identity.
+- finding_id: F2
+  issue_key: periplasmic-flagellum-static-shape-rotation-evidence
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate static skeletal shape from rotation-driven deformation
+  description: The rotation-to-deformation edge cites only the flaB mutant skeletal
+    phenotype. In the same Motaleb study, paralyzed CCCP-treated cells retain flat-wave
+    shape, showing that resting shape does not require rotation. Dynamic deformation
+    during swimming is a distinct mechanism; the edge needs evidence and wording for
+    that process rather than using static skeletal loss as proof.
+  target_ids:
+  - GO:0055040
+  field_paths:
+  - causal_graphs[0].nodes
+  - causal_graphs[0].edges[5]
+  - functions[0].evidence
+  evidence_ids:
+  - record
+  - motaleb
+  - nakamura
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/periplasmic_flagellum.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Material component identity, scope or edge-evidence defect;
+    the structure record itself retains valid identity.
+actions:
+- action_id: A1
+  description: Scope FlaA architecture to the demonstrated spirochete lineage
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0055040
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/periplasmic_flagellum.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Retain FlaA membership and the source-native P70856 example without treating its
+    protein name as structural proof.
+  - Qualify component and graph prose by lineage; remove generic sheathed-filament
+    assertions.
+  - Do not promote tentative Borrelia localization to established fact or infer that
+    Leptospira FlaA is absent.
+  - Use the guarded writer, preserve prior histories and PROPOSED status, append EDIT
+    provenance, regenerate affected products and pass focused tests plus authoritative
+    QC.
+- action_id: A2
+  description: Separate static skeletal shape from rotation-driven deformation
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0055040
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/periplasmic_flagellum.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - 'Preserve the motor-to-rotation-to-dynamic-deformation pathway from #203, with
+    a swimming-specific state label and appropriate evidence.'
+  - Explicitly retain the Motaleb static shape/CCCP result without representing it
+    as direct proof of active rotation.
+  - Do not claim that rotation is unnecessary for swimming.
+  - Use the guarded writer, preserve prior histories and PROPOSED status, append EDIT
+    provenance, regenerate affected products and pass focused tests plus authoritative
+    QC.
+limitations:
+- San Martin 2023 was accessible only at primary-abstract level; its publisher response
+  was an unreadable HTML shell. No unseen text or supplements are claimed as inspected.
+- Nakamura is secondary synthesis. Ge, Motaleb and Qin main-text sections were inspected;
+  raw tomograms, supplemental movies and experimental data were not reanalysed.
+- Same-agent review, not independent human sign-off or completion of the 909-record
+  goal.
+- Exact-baseline CI supplies full QC; skipped namespaces, unexercised BFO controls
+  and non-adapter label pairs are explicit limits.
+- No relevant iModulonDB coverage. No quoted snippets to verify; identifier/label
+  validation cannot establish scientific accuracy.

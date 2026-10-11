@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/paraflagellar_rod.yaml
+  slug: paraflagellar_rod
+session:
+  id: 2026-10-11T045845Z-codex-719d6f
+  timestamp: '2026-10-11T04:58:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2171
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: 'Addressed #2171 and #2172: reconciled consolidated PFR1/PFR2 families with historical
+    PFRC/PFRA, moved examples and citations with their families, and qualified PFR2 essentiality
+    and assembly scope for full versus reduced rods.'
+  details: 'Original observations saved before mutation in reviews/structured/20261011T045745Z-paraflagellar_rod-audit/review.yaml.
+    Addresses GitHub issues #2171, #2172. Guarded writer validated the record; PROPOSED status
+    and prior histories remain unchanged. Source access tiers and uncertainty are recorded
+    in the original review. Post-change validation, regression tests and generated-product
+    checks required before publication.'

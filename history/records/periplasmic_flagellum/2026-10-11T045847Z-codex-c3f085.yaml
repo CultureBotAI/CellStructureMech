@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/periplasmic_flagellum.yaml
+  slug: periplasmic_flagellum
+session:
+  id: 2026-10-11T045847Z-codex-c3f085
+  timestamp: '2026-10-11T04:58:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2173
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - functions
+  - causal_graphs
+  - curation_history
+  summary: 'Addressed #2173 and #2174: qualified lineage-dependent FlaA architecture, removed
+    generic sheathed-filament assertions, and separated static skeletal shape evidence from
+    rotation-driven swimming deformation while retaining the active pathway introduced for
+    #203.'
+  details: 'Original observations saved before mutation in reviews/structured/20261011T045750Z-periplasmic_flagellum-audit/review.yaml.
+    Addresses GitHub issues #2173, #2174. Guarded writer validated the record; PROPOSED status
+    and prior histories remain unchanged. Source access tiers and uncertainty are recorded
+    in the original review. Post-change validation, regression tests and generated-product
+    checks required before publication.'

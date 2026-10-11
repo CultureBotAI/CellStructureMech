@@ -500,7 +500,7 @@
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
-          "cosine_similarity": 0.86700157
+          "cosine_similarity": 0.8633017
         }
       ]
     },
@@ -550,14 +550,14 @@
           "cosine_similarity": 0.87395147
         },
         {
-          "identifier": "GO:0055040",
-          "label": "periplasmic flagellum",
-          "cosine_similarity": 0.84521548
-        },
-        {
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
           "cosine_similarity": 0.84162753
+        },
+        {
+          "identifier": "GO:0055040",
+          "label": "periplasmic flagellum",
+          "cosine_similarity": 0.84009135
         },
         {
           "identifier": "GO:0009422",
@@ -914,7 +914,7 @@
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
-          "cosine_similarity": 0.7488781
+          "cosine_similarity": 0.75126183
         },
         {
           "identifier": "GO:0120120",
@@ -1041,14 +1041,14 @@
           "cosine_similarity": 0.72585066
         },
         {
+          "identifier": "GO:0055040",
+          "label": "periplasmic flagellum",
+          "cosine_similarity": 0.7058285
+        },
+        {
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
           "cosine_similarity": 0.70031419
-        },
-        {
-          "identifier": "GO:0055040",
-          "label": "periplasmic flagellum",
-          "cosine_similarity": 0.69989582
         },
         {
           "identifier": "GO:0009420",
@@ -1317,27 +1317,27 @@
         {
           "identifier": "GO:0030694",
           "label": "bacterial-type flagellum basal body, rod",
-          "cosine_similarity": 0.76864969
+          "cosine_similarity": 0.76633947
         },
         {
           "identifier": "GO:0009429",
           "label": "bacterial-type flagellum basal body, proximal rod",
-          "cosine_similarity": 0.76209114
+          "cosine_similarity": 0.76135475
         },
         {
           "identifier": "GO:0009426",
           "label": "bacterial-type flagellum basal body, distal rod",
-          "cosine_similarity": 0.74752347
+          "cosine_similarity": 0.74828087
         },
         {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.72691913
+          "identifier": "GO:0009428",
+          "label": "bacterial-type flagellum basal body, distal rod, P ring",
+          "cosine_similarity": 0.72607261
         },
         {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.72603554
+          "cosine_similarity": 0.71790458
         }
       ]
     },
@@ -1348,27 +1348,27 @@
         {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.86700157
+          "cosine_similarity": 0.8633017
         },
         {
           "identifier": "GO:0009288",
           "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.86236684
+          "cosine_similarity": 0.85361518
         },
         {
           "identifier": "GO:0009424",
           "label": "bacterial-type flagellum hook",
-          "cosine_similarity": 0.84521548
+          "cosine_similarity": 0.84009135
         },
         {
           "identifier": "GO:0009427",
           "label": "bacterial-type flagellum basal body, distal rod, L ring",
-          "cosine_similarity": 0.83162465
+          "cosine_similarity": 0.83995272
         },
         {
           "identifier": "GO:0009421",
           "label": "bacterial-type flagellum filament cap",
-          "cosine_similarity": 0.83117824
+          "cosine_similarity": 0.83310862
         }
       ]
     },
@@ -2758,7 +2758,7 @@
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
-          "cosine_similarity": 0.74734662
+          "cosine_similarity": 0.74538848
         },
         {
           "identifier": "GO:0120118",
