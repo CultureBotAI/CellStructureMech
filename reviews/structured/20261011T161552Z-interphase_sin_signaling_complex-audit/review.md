@@ -1,0 +1,574 @@
+# interphase SIN signaling complex: whole-record scientific review
+
+- Review: 20261011T161552Z-interphase_sin_signaling_complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-11T16:09:24Z
+- Finished UTC: 2026-10-11T16:15:52Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Entire native record reviewed; one major finding saved before scientific curation.
+
+## Scope And Provenance
+
+Entire maintained YAML: identity, definition, hierarchy, taxonomic examples, functions, evidence, optional fields, discussions and both history surfaces.
+
+Selection: Exact record in the four-record SIN/MEN signaling cohort of the 909-record goal.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base ccc6aabffa4d212fbc05cc948bc3f6d071e46f0f.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0160066 | data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml | maintained | interphase SIN signaling complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0160066 | Actual deterministic check passed; scientific support assessed separately. |
+| strict | passed | True | GO:0160066 | Actual deterministic check passed; scientific support assessed separately. |
+| snippets | passed | True | GO:0160066 | No verbatim snippets; paraphrases assessed separately against inspected text. |
+| history | passed | True | GO:0160066 | Actual deterministic check passed; scientific support assessed separately. |
+| labels | passed | True | GO:0160066 | id↔label correspondence summary:<br>          OK_CANONICAL: 3544<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| traits | passed | True | GO:0160066 | Actual deterministic check passed; scientific support assessed separately. |
+| curies | passed | True | GO:0160066 | resolver control: every resolver accepts a known id and rejects a fabricated one<br><br>identifier liveness summary:<br>  OK             4014<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| reviews | passed | True | GO:0160066 | Actual deterministic check passed; scientific support assessed separately. |
+| diff | passed | True | GO:0160066 | Actual deterministic check passed; scientific support assessed separately. |
+| contract | passed | True | GO:0160066 | ....                                                                     [100%]<br>4 passed in 124.51s (0:02:04) |
+| Exact-baseline native CI QC | passed | True | GO:0160066 | Exact baseline merge-group QC passed, including 870 tests passed and 3 skipped; not a new local full-QC run. |
+
+## Scientific And Domain Assessments
+
+### Interphase configuration versus whole pathway, new-SPB configuration and GAP
+
+grounding: supported. Targets: GO:0160066.
+
+Exact GO:0160066 identity, synonym, MULTIPROTEIN_COMPLEX kind and GO:0160065 parent are retained. Lack of a direct local parthood edge preserves association versus mereology.
+
+### Inhibitory roles and stage scope
+
+evidence: concern. Targets: GO:0160066.
+
+The definition copies the current GO error that calls Spg1 a GTPase activator. Spg1 is instead the GTPase inhibited by the Byr4-Cdc16 GAP. The function additionally claims SIN remains inactive before anaphase, whereas the cited paper describes Spg1 activation during metaphase and distinguishes normal progression from checkpoint arrest. An earlier inline event corrected function wording but left the erroneous definition. Use a literature-backed local definition and stage-bounded inhibitory function, retaining the inherited source conflict explicitly.
+
+### Taxon, optional claims and history
+
+completeness: supported. Targets: GO:0160066.
+
+S. pombe context is supported. No component accession, essentiality, stoichiometry, causal graph, image, measurement, dataset, trait or pathway assertion is present. Deferred family groundings are legitimate, not defects.
+
+## Findings
+
+### F1: Correct interphase SIN inhibitory roles and cell-cycle scope
+
+major / open / confirmed; issue key: interphase-sin-inhibitory-roles-and-phase-scope.
+
+The definition copies the current GO error that calls Spg1 a GTPase activator. Spg1 is instead the GTPase inhibited by the Byr4-Cdc16 GAP. The function additionally claims SIN remains inactive before anaphase, whereas the cited paper describes Spg1 activation during metaphase and distinguishes normal progression from checkpoint arrest. An earlier inline event corrected function wording but left the erroneous definition. Use a literature-backed local definition and stage-bounded inhibitory function, retaining the inherited source conflict explicitly.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct interphase SIN inhibitory roles and cell-cycle scope
+
+- Use a local literature-backed definition distinguishing Spg1 GTPase from the Byr4-Cdc16 GAP while preserving GO:0160066 identity.
+- Bound Dma1/Sid4/Plo1 evidence to G2 and mitotic-checkpoint contexts and remove the blanket inactive-before-anaphase assertion.
+- Keep the canonical example and claim-local evidence consistent; append a resolved source-conflict clarification without rewriting original discussions or history.
+- Preserve the exact synonym, GO:0160065 parent, S. pombe scope, open component-grounding task and PROPOSED status.
+- Guarded writer, actual Codex event and append-only EDIT history; focused regressions, regenerated artifacts, full QC and immutable review checks must pass.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml | context_only | Entire native record read; captured inputs unchanged. |
+| rules | docs/CURATION.md | context_only | Evidence must support the narrowest molecular role and experimental context. |
+| history | /private/tmp/csm-review-20261011T160813Z/interphase_sin_signaling_complex-discussion-history.json | context_only | All committed discussions and inline events inspected; prior rationale and dates remain provenance. |
+| history-0 | history/records/interphase_sin_signaling_complex/2026-09-29T192945Z-codex-8d248d.yaml | context_only | Original append-only CREATE history inspected. |
+| predecessors | /private/tmp/csm-review-20261011T160813Z/exact-target-predecessors.json | context_only | Ignored-inclusive canonical scan found no exact-target predecessor. |
+| issue-search | /private/tmp/csm-review-20261011T160813Z/sin-issues.log | context_only | All-state SIN, Spg1, Bub2 and exact-slug issue searches inspected. Prior #2220 concerns a distinct old-SPB record, not these findings. |
+| exact-issues | /private/tmp/csm-review-20261011T160813Z/interphase_sin_signaling_complex-issues.log | context_only | No duplicate exact-slug issue returned by all-state search. |
+| adapter | /private/tmp/csm-review-20261011T160813Z/adapter.log | context_only | Live iModulonDB inventory has no matching fungal dataset; absence is not biological evidence. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005816,GO:0032991,GO:0061499,GO:0071957,GO:0071958,GO:0160065,GO:0160066,GO:0160067,GO:1902773,GO:1990334; Exact identities, definitions, synonyms and typed children of all ten cited GO terms | supports | Nonobsolete exact identities and is-a/parthood relations verified. Interphase GO definition itself contains the Spg1/GAP role error. |
+| pombe | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896; TaxId, scientificName and rank | supports | Schizosaccharomyces pombe species identity verified. |
+| johnson | DOI:10.1038/emboj.2010.317; Introduction; Results, Figures 5 and 7; Discussion; microscopy and synchronization methods | supports | Spg1 is the GTPase and Byr4-Cdc16 its GAP. G2 and nda3 checkpoint experiments support Dma1-dependent Sid4 ubiquitination limiting Plo1 recruitment. The introduction describes Spg1 activation in metaphase, not uniform pre-anaphase inhibition. |
+| figure-5 | /private/tmp/csm-review-20261011T160813Z/johnson-fig5.jpg | context_only | Actual Figure 5 inspected with caption: G2, S phase, normal prometaphase and checkpoint-arrest Dma1 localization are distinguished. |
+| figure-7 | /private/tmp/csm-review-20261011T160813Z/johnson-fig7.jpg | context_only | Actual Figure 7 inspected with caption: checkpoint-arrest Byr4 retention and Plo1 recruitment differ in sid4N-ppc89C cells. |
+
+## Limits And Additional Notes
+
+- Same-agent whole-native-record review, not independent human approval or raw experimental-data reanalysis.
+- Exact-baseline native CI supplies full QC. Local scoped/global and contract checks ran separately; resolver/label namespace skips and three empty-parameter test skips are explicit.
+- Initial Europe PMC XML requests and normal PMC pages failed or returned interstitials. Actual article text was inspected from alternate official PMC representations; HTTP 200 alone was not treated as readable.
+- The two other cohort records have separate clean coverage accounting; no review output is created for absent optional fields or acknowledged unknowns.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T161552Z-interphase_sin_signaling_complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'interphase SIN signaling complex: whole-record scientific review'
+started_at: '2026-10-11T16:09:24Z'
+finished_at: '2026-10-11T16:15:52Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent scientific review, not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Entire native record reviewed; one major finding saved before scientific
+  curation.
+source:
+  git_revision: ccc6aabffa4d212fbc05cc948bc3f6d071e46f0f
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 7354ab3cdd2e80719041752e623b51c95369a7f1463ce3cf615d196448b156ce
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+    sha256: 4b0e362cb8ffe1656a428f80a2893ddb06cbb889bef27d9d433a82e52e3a61e2
+    role: target
+  - path: data/structures/cytoskeleton/new_spindle_pole_body_sin_signaling_complex.yaml
+    sha256: 84ade1d5217bae8fa401f096724d0892e76378469bec45c6ea25e961a0e28cae
+    role: context
+  - path: data/structures/cytoskeleton/sin_men_signaling_complex.yaml
+    sha256: b55ca6d18a6a88c237076c582ebce7d4531e7c0a01bd0cf4edab8286c34f5ec0
+    role: context
+  - path: data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+    sha256: 922665d09fdb8ddf24c904aefc3ccd0ec99a36f92d4d33f71a42c732036ecbdd
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/interphase_sin_signaling_complex/2026-09-29T192945Z-codex-8d248d.yaml
+    sha256: 64eb5530fb6c7be4fd4cff1e852764592a8adb0575e35a19f564f241c2de77b9
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/yaml_record_review/20260929T194850Z-interphase_sin_signaling_complex.md
+    sha256: 0664a6b22fe857a22627398dc562700dac1d1c17d7c332301acc371e9570fd59
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0160066
+  path: data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+  label: interphase SIN signaling complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire maintained YAML: identity, definition, hierarchy, taxonomic
+    examples, functions, evidence, optional fields, discussions and both history surfaces.'
+  selection: Exact record in the four-record SIN/MEN signaling cohort of the 909-record
+    goal.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0160066
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T16:10:24Z to 2026-10-11T16:10:27Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T16:10:27Z to 2026-10-11T16:10:33Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+    --report /private/tmp/csm-review-20261011T160813Z/interphase_sin_signaling_complex-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-11T16:10:33Z to 2026-10-11T16:11:14Z; log SHA-256 0f88b3b7496e573cc36b6d7584c06b922922d244b1ee497ab0f886874603c23d
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T16:11:44Z to 2026-10-11T16:12:00Z; log SHA-256 5176da9b48957f964a8a859b60ee792cb11f0923ef13345fbc9515affa329825
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T16:12:00Z to 2026-10-11T16:13:27Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T16:13:27Z to 2026-10-11T16:13:46Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4014\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T16:13:46Z to 2026-10-11T16:14:33Z; log SHA-256 ee1c5f2e78a2d29fcb6781a8ecd722934376595042d2cc261b4465b361d19b79
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: .venv/bin/python scripts/record_review.py check --base ccc6aabffa4d212fbc05cc948bc3f6d071e46f0f
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T16:14:33Z to 2026-10-11T16:15:37Z; log SHA-256 178fc02e47efe3f0ef3334ea51eb36c180497b72f9c24b0a27ac8aa8458d2037
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T16:15:37Z to 2026-10-11T16:15:37Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: contract
+  name: contract
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '....                                                                     [100%]
+
+    4 passed in 124.51s (0:02:04)'
+  scope_note: 2026-10-11T16:08:52Z to 2026-10-11T16:10:57Z; log SHA-256 303d818f895774b3b8b6633d08ca9f9da310cd3c9963b0331791f443b31ffc6e
+- check_id: qc
+  name: Exact-baseline native CI QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160066
+  command: gh run view 38153527070 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exact baseline merge-group QC passed, including 870 tests passed and 3
+    skipped; not a new local full-QC run.
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38153527070;
+    log SHA-256 b7a8e8bda85017955dfefbee655844bbebbfb1ffac6b02372a0a5598bdf1feba
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+  accessed_at: '2026-10-11T16:15:52Z'
+  snapshot_sha256: 4b0e362cb8ffe1656a428f80a2893ddb06cbb889bef27d9d433a82e52e3a61e2
+  support: context_only
+  summary: Entire native record read; captured inputs unchanged.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T16:15:52Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Evidence must support the narrowest molecular role and experimental context.
+- evidence_id: history
+  kind: record_content
+  reference: /private/tmp/csm-review-20261011T160813Z/interphase_sin_signaling_complex-discussion-history.json
+  accessed_at: '2026-10-11T16:15:52Z'
+  snapshot_sha256: 7e66df4daa19e50a2a3333e7ae5421bf1c5f46fa981367ce20d89cf24f370059
+  support: context_only
+  summary: All committed discussions and inline events inspected; prior rationale
+    and dates remain provenance.
+- evidence_id: history-0
+  kind: record_content
+  reference: history/records/interphase_sin_signaling_complex/2026-09-29T192945Z-codex-8d248d.yaml
+  accessed_at: '2026-10-11T16:15:52Z'
+  snapshot_sha256: 64eb5530fb6c7be4fd4cff1e852764592a8adb0575e35a19f564f241c2de77b9
+  support: context_only
+  summary: Original append-only CREATE history inspected.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T160813Z/exact-target-predecessors.json
+  accessed_at: '2026-10-11T16:15:52Z'
+  snapshot_sha256: 33a10072c6ed2937e408183317e1cad173e154bca268ef2ad9824f8ac2b9c7e0
+  support: context_only
+  summary: Ignored-inclusive canonical scan found no exact-target predecessor.
+- evidence_id: issue-search
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T160813Z/sin-issues.log
+  accessed_at: '2026-10-11T16:15:52Z'
+  snapshot_sha256: 5d832bed44ec67e5691e41903869175a80db31283dbd9b4bda9662225ca81e86
+  support: context_only
+  summary: 'All-state SIN, Spg1, Bub2 and exact-slug issue searches inspected. Prior
+    #2220 concerns a distinct old-SPB record, not these findings.'
+- evidence_id: exact-issues
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T160813Z/interphase_sin_signaling_complex-issues.log
+  accessed_at: '2026-10-11T16:15:52Z'
+  snapshot_sha256: 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570
+  support: context_only
+  summary: No duplicate exact-slug issue returned by all-state search.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T160813Z/adapter.log
+  accessed_at: '2026-10-11T16:15:52Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: Live iModulonDB inventory has no matching fungal dataset; absence is not
+    biological evidence.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005816,GO:0032991,GO:0061499,GO:0071957,GO:0071958,GO:0160065,GO:0160066,GO:0160067,GO:1902773,GO:1990334
+  locator: Exact identities, definitions, synonyms and typed children of all ten cited
+    GO terms
+  accessed_at: '2026-10-11T16:09:44Z'
+  snapshot_sha256: 955957c96302813b49581c5d1bee32ebe2e8db24bd4139ec1f7dabaab125e398
+  support: supports
+  summary: Nonobsolete exact identities and is-a/parthood relations verified. Interphase
+    GO definition itself contains the Spg1/GAP role error.
+- evidence_id: pombe
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: TaxId, scientificName and rank
+  accessed_at: '2026-10-11T16:09:45Z'
+  snapshot_sha256: cdb53b3f4ab5e6bb4476de3bf0db333ae647e307a9fa8f98108827f98fe7f4d3
+  support: supports
+  summary: Schizosaccharomyces pombe species identity verified.
+- evidence_id: johnson
+  kind: primary_source
+  reference: DOI:10.1038/emboj.2010.317
+  locator: Introduction; Results, Figures 5 and 7; Discussion; microscopy and synchronization
+    methods
+  accessed_at: '2026-10-11T16:10:11Z'
+  snapshot_sha256: dbe1a1ec2e907299e89b1aac957a57abf54070e018514d7db25bf19de53d6383
+  support: supports
+  summary: Spg1 is the GTPase and Byr4-Cdc16 its GAP. G2 and nda3 checkpoint experiments
+    support Dma1-dependent Sid4 ubiquitination limiting Plo1 recruitment. The introduction
+    describes Spg1 activation in metaphase, not uniform pre-anaphase inhibition.
+- evidence_id: figure-5
+  kind: record_content
+  reference: /private/tmp/csm-review-20261011T160813Z/johnson-fig5.jpg
+  accessed_at: '2026-10-11T16:15:52Z'
+  snapshot_sha256: b8491069be3c71f70b5298b0c484c3c34c13845cc4f7da65f26b3228ca6b7fcc
+  support: context_only
+  summary: 'Actual Figure 5 inspected with caption: G2, S phase, normal prometaphase
+    and checkpoint-arrest Dma1 localization are distinguished.'
+- evidence_id: figure-7
+  kind: record_content
+  reference: /private/tmp/csm-review-20261011T160813Z/johnson-fig7.jpg
+  accessed_at: '2026-10-11T16:15:52Z'
+  snapshot_sha256: 6080a40076748b93905f18f946821d283a3f40b9f4d355f9c7dd151f88378259
+  support: context_only
+  summary: 'Actual Figure 7 inspected with caption: checkpoint-arrest Byr4 retention
+    and Plo1 recruitment differ in sid4N-ppc89C cells.'
+assessments:
+- assessment_id: identity
+  area: grounding
+  topic: Interphase configuration versus whole pathway, new-SPB configuration and
+    GAP
+  outcome: supported
+  target_ids:
+  - GO:0160066
+  evidence_ids:
+  - record
+  - go
+  summary: Exact GO:0160066 identity, synonym, MULTIPROTEIN_COMPLEX kind and GO:0160065
+    parent are retained. Lack of a direct local parthood edge preserves association
+    versus mereology.
+- assessment_id: scope
+  area: evidence
+  topic: Inhibitory roles and stage scope
+  outcome: concern
+  target_ids:
+  - GO:0160066
+  evidence_ids:
+  - record
+  - go
+  - johnson
+  - figure-5
+  - figure-7
+  - history
+  - rules
+  summary: The definition copies the current GO error that calls Spg1 a GTPase activator.
+    Spg1 is instead the GTPase inhibited by the Byr4-Cdc16 GAP. The function additionally
+    claims SIN remains inactive before anaphase, whereas the cited paper describes
+    Spg1 activation during metaphase and distinguishes normal progression from checkpoint
+    arrest. An earlier inline event corrected function wording but left the erroneous
+    definition. Use a literature-backed local definition and stage-bounded inhibitory
+    function, retaining the inherited source conflict explicitly.
+- assessment_id: remaining
+  area: completeness
+  topic: Taxon, optional claims and history
+  outcome: supported
+  target_ids:
+  - GO:0160066
+  evidence_ids:
+  - record
+  - pombe
+  - johnson
+  - history
+  summary: S. pombe context is supported. No component accession, essentiality, stoichiometry,
+    causal graph, image, measurement, dataset, trait or pathway assertion is present.
+    Deferred family groundings are legitimate, not defects.
+findings:
+- finding_id: F1
+  issue_key: interphase-sin-inhibitory-roles-and-phase-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct interphase SIN inhibitory roles and cell-cycle scope
+  description: The definition copies the current GO error that calls Spg1 a GTPase
+    activator. Spg1 is instead the GTPase inhibited by the Byr4-Cdc16 GAP. The function
+    additionally claims SIN remains inactive before anaphase, whereas the cited paper
+    describes Spg1 activation during metaphase and distinguishes normal progression
+    from checkpoint arrest. An earlier inline event corrected function wording but
+    left the erroneous definition. Use a literature-backed local definition and stage-bounded
+    inhibitory function, retaining the inherited source conflict explicitly.
+  target_ids:
+  - GO:0160066
+  field_paths:
+  - definition
+  - definition_source
+  - canonical_examples[0].note
+  - functions[0].description
+  - functions[0].evidence
+  - evidence
+  - discussions
+  evidence_ids:
+  - record
+  - go
+  - johnson
+  - figure-5
+  - figure-7
+  - history
+  - rules
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Wrong regulator/substrate role in the definition plus overbroad
+    cell-cycle inhibition is a substantive mechanism/scope defect; exact complex identity
+    remains correct.
+actions:
+- action_id: A1
+  description: Correct interphase SIN inhibitory roles and cell-cycle scope
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0160066
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Use a local literature-backed definition distinguishing Spg1 GTPase from the Byr4-Cdc16
+    GAP while preserving GO:0160066 identity.
+  - Bound Dma1/Sid4/Plo1 evidence to G2 and mitotic-checkpoint contexts and remove
+    the blanket inactive-before-anaphase assertion.
+  - Keep the canonical example and claim-local evidence consistent; append a resolved
+    source-conflict clarification without rewriting original discussions or history.
+  - Preserve the exact synonym, GO:0160065 parent, S. pombe scope, open component-grounding
+    task and PROPOSED status.
+  - Guarded writer, actual Codex event and append-only EDIT history; focused regressions,
+    regenerated artifacts, full QC and immutable review checks must pass.
+limitations:
+- Same-agent whole-native-record review, not independent human approval or raw experimental-data
+  reanalysis.
+- Exact-baseline native CI supplies full QC. Local scoped/global and contract checks
+  ran separately; resolver/label namespace skips and three empty-parameter test skips
+  are explicit.
+- Initial Europe PMC XML requests and normal PMC pages failed or returned interstitials.
+  Actual article text was inspected from alternate official PMC representations; HTTP
+  200 alone was not treated as readable.
+- The two other cohort records have separate clean coverage accounting; no review
+  output is created for absent optional fields or acknowledged unknowns.
+```

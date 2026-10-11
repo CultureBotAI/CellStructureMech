@@ -21,6 +21,13 @@ curation_history:
     fission- and budding-yeast scope, a SIN/MEN mitotic-exit signaling function, GO
     and literature evidence, and boundary/component discussions.
   llm_assisted: true
+- timestamp: '2026-10-11T16:16:38Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2224: Corrected the Grallert 2012 evidence note to distinguish
+    cytoplasmic G2 Sid2-Fin1 activity outside the SIN from the whole SPB-associated
+    SIN complex; retained all other biological claims.'
+  llm_assisted: true
 synonyms:
 - synonym_text: SIN/MEN signalling complex
   synonym_type: EXACT_SYNONYM
@@ -88,8 +95,10 @@ evidence:
   notes: Hergovich and Hemmings 2012 reviewed Hippo signaling in the G2/M cell-cycle
     phase, including lessons from the yeast MEN and SIN pathways.
 - reference: DOI:10.1038/ncb2514
-  notes: Grallert et al. 2012 studied fission-yeast Sid2 and Fin1 signaling that links
-    the SIN pathway to mitotic commitment.
+  notes: Grallert et al. 2012 showed that Sid2 activates Fin1 to regulate mitotic
+    commitment in S. pombe. SIN-ablation experiments and localization of untagged
+    Sid2 support a cytoplasmic G2 population operating outside the SIN context, not
+    evidence that the whole SPB-associated SIN complex controls this G2 function.
 discussions:
 - discussion_id: sin_men_signaling_complex_boundary
   prompt: Keep GO:0160065 broad enough for both yeast SIN and MEN branches and distinct

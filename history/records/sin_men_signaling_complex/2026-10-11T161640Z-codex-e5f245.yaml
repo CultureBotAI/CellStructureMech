@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/sin_men_signaling_complex.yaml
+  slug: sin_men_signaling_complex
+session:
+  id: 2026-10-11T161640Z-codex-e5f245
+  timestamp: '2026-10-11T16:16:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2224
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - evidence
+  summary: 'Addressed #2224: Corrected the Grallert 2012 evidence note to distinguish cytoplasmic
+    G2 Sid2-Fin1 activity outside the SIN from the whole SPB-associated SIN complex; retained
+    all other biological claims.'
+  details: 'Immutable observation: reviews/structured/20261011T161557Z-sin_men_signaling_complex-audit/review.yaml.
+    Corrected the Grallert 2012 evidence note to distinguish cytoplasmic G2 Sid2-Fin1 activity
+    outside the SIN from the whole SPB-associated SIN complex; retained all other biological
+    claims. Guarded writer; original audit history and PROPOSED status retained.'
