@@ -1,0 +1,650 @@
+# Type i pilus: finding dispositions
+
+- Review: 20261011T064651Z-type_i_pilus-disposition
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-11T06:36:58Z
+- Finished UTC: 2026-10-11T06:46:51Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact predecessor findings resolved; source tiers and biological uncertainties remain explicit. No scientific status promotion.
+
+## Scope And Provenance
+
+Exact predecessor findings and changed fields, including append-only provenance; not a repeated whole-record scientific review.
+
+Selection: 20261011T063133Z-type_i_pilus-audit
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 7214d5ae8dc9664472ed965a9bc8c0534a0c0bfd.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0140621 | data/structures/appendage/type_i_pilus.yaml | maintained | type I pilus |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0140621 | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| strict | passed | True | GO:0140621 | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| snippets | passed | True | GO:0140621 | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| history | passed | True | GO:0140621 | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| labels | passed | True | GO:0140621 | id↔label correspondence summary:<br>          OK_CANONICAL: 3544<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| traits | passed | True | GO:0140621 | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| curies | passed | True | GO:0140621 | resolver control: every resolver accepts a known id and rejects a fabricated one<br>resolving 1 DOI identifier(s)...<br><br>identifier liveness summary:<br>  OK             4012<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| regressions | passed | True | GO:0140621 | .................................                                        [100%]<br>33 passed in 37.32s |
+| reviews | passed | True | GO:0140621 | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| diff | passed | True | GO:0140621 | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| release-qc | passed | True | GO:0140621 | Authoritative full local QC passed, including tests, all-record schema, histories and generated-product checks. PR and native merge-group checks are separate publication gates. |
+
+## Scientific And Domain Assessments
+
+### Separate type I pilus identity from the E. coli subunit model
+
+scope: supported. Targets: GO:0140621.
+
+The definition separates general mannose-sensitive CU identity from the E. coli Fim inventory. All constituent roles and the graph carry the model scope, while the broader Salmonella distribution remains. Separate FimG and FimF rows and all previous grounding attachments are retained.
+
+### Attach the confirmed FimI termination source to the assembly function
+
+evidence: supported. Targets: GO:0140621.
+
+The E. coli assembly function now directly cites Bachmann 2025 for the tip-to-rod and FimI-terminated structures, preserving the older review for its supported assembly context and explicitly noting its earlier uncertainty.
+
+## Findings
+
+### F1: Separate type I pilus identity from the E. coli subunit model
+
+major / resolved / confirmed; issue key: type-i-pilus-ecoli-architecture-scope.
+
+The definition separates general mannose-sensitive CU identity from the E. coli Fim inventory. All constituent roles and the graph carry the model scope, while the broader Salmonella distribution remains. Separate FimG and FimF rows and all previous grounding attachments are retained.
+
+Disposition: The definition separates general mannose-sensitive CU identity from the E. coli Fim inventory. All constituent roles and the graph carry the model scope, while the broader Salmonella distribution remains. Separate FimG and FimF rows and all previous grounding attachments are retained. Verified against inspected evidence, focused regressions and full QC.
+
+### F2: Attach the confirmed FimI termination source to the assembly function
+
+minor / resolved / confirmed; issue key: type-i-pilus-termination-function-citation.
+
+The E. coli assembly function now directly cites Bachmann 2025 for the tip-to-rod and FimI-terminated structures, preserving the older review for its supported assembly context and explicitly noting its earlier uncertainty.
+
+Disposition: The E. coli assembly function now directly cites Bachmann 2025 for the tip-to-rod and FimI-terminated structures, preserving the older review for its supported assembly context and explicitly noting its earlier uncertainty. Verified against inspected evidence, focused regressions and full QC.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/type_i_pilus.yaml | context_only | Corrected native bytes reread against exact predecessor findings and the stated source tiers. |
+| rules | docs/CURATION.md | context_only | Requires exact claim-level scope, constituent/machinery distinction and append-only discussion rationale. |
+| go-0140621 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0140621; Exact current QuickGO term | supports | Active exact term agrees with native identity, relation or process use. |
+| go-0140623 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0140623; Exact current QuickGO term | supports | Active exact term agrees with native identity, relation or process use. |
+| go-0009289 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009289; Exact current QuickGO term | supports | Active exact term agrees with native identity, relation or process use. |
+| taxon-2 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=2&amp;retmode=xml; Exact NCBI Taxonomy identity and names | supports | Taxon and current scientific name resolve; taxonomy is not evidence of prevalence. |
+| taxon-562 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=562&amp;retmode=xml; Exact NCBI Taxonomy identity and names | supports | Taxon and current scientific name resolve; taxonomy is not evidence of prevalence. |
+| adapter-inventory | /private/tmp/csm-review-20261011T062301Z/adapter.log | context_only | Live 28-dataset iModulonDB inventory; no matching Caulobacter coverage. E. coli and P. aeruginosa searches were inspected. |
+| cu2018 | DOI:10.1128/ecosalplus.ESP-0007-2017; Architecture, type 1 E. coli and Salmonella sections and assembly mechanism | supports | The E. coli FimH-FimG-FimF order differs from Salmonella, which has FimF but not FimG in the listed operon. FimI termination is still unconfirmed in this review. |
+| bachmann | DOI:10.1038/s41467-025-60325-z; Introduction, FimA incorporation, tip-to-rod transition, FimI termination and Discussion; Figures 2-3 visually inspected | supports | E. coli FimH/FimG/FimF order, long FimA rod and single FimI terminator are supported; chaperone/usher machinery remains outside this filament record. |
+| jones | DOI:10.1073/pnas.92.6.2081; Primary abstract | supports | Purified FimG-FimH fibrillae and mutant/complemented pili support tip architecture and mannose binding. |
+| hospenthal | DOI:10.1038/nrmicro.2017.40; Author manuscript pages 3-14; assembly-platform/filament distinction | supports | CU chaperone and usher drive ordered assembly; the filament is distinct from its assembly platform. |
+| fim-module | /private/tmp/csm-review-20261011T062301Z/adapter-fim-summary.log | context_only | e_coli/modulome/39 contains seven fim genes. Computational coexpression is not localization, stoichiometry or assembly evidence. |
+| predecessor | reviews/structured/20261011T063133Z-type_i_pilus-audit/review.yaml | context_only | Immutable original observations committed before mutation. |
+| preservation | /private/tmp/csm-review-20261011T062301Z/preservation.json | supports | Only four native records changed; 905 others and all prior histories, canonical reviews and legacy reports are byte-preserved. |
+| embeddings | /private/tmp/csm-review-20261011T062301Z/embedding-refresh.json | supports | Only three pilus semantic vectors changed; the provenance-only stalk correction is outside the semantic projection. The other 906 vectors are preserved. |
+
+## Limits And Additional Notes
+
+- Same-agent review, not human sign-off or completion of the 909-record goal.
+- Identifier resolver skips and label pairs without adapters are not certified. Exact target GO/taxon authorities were separately inspected for the scientific reviews.
+- Jones 1995 was assessed at primary-abstract level. The 2018 review and 2017 author manuscript were reread from prior authenticated private snapshots, retaining original access times; current 2018 PMC access returned a challenge. No raw cryo-EM reanalysis.
+- Original source-access tiers and snapshot times are retained; no raw experimental reanalysis or independent approval is implied.
+- Five focused tests failed against original inputs; the corrected focused/guarded-writer suite passes. A preliminary lint check required an explicit strict zip argument, corrected before QC.
+- The scratch embedding refresh initially expected four semantic changes and refused before writing. Inspection of the maintained semantic projection showed the stalk rationale/history are excluded; only the three real semantic changes were refreshed.
+- Disposition inputs are retained by review-base/pilus-scope-20261011. Final PR and merge-group results are verified separately.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T064651Z-type_i_pilus-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Type i pilus: finding dispositions'
+started_at: '2026-10-11T06:36:58Z'
+finished_at: '2026-10-11T06:46:51Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent source-backed reassessment and separate adversarial
+    diff inspection; not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact predecessor findings resolved; source tiers and biological uncertainties
+  remain explicit. No scientific status promotion.
+source:
+  git_revision: 7214d5ae8dc9664472ed965a9bc8c0534a0c0bfd
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 64862db2087298ae832b8a8410185349cc277151af31d88ce231e43201ab9440
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/appendage/p_pilus.yaml
+    sha256: c9e8371a5cc6cda0a28d5264a6a2c2368a703670b3c285fc12f1aa58b6adafa9
+    role: context
+  - path: data/structures/appendage/pilus.yaml
+    sha256: b82205e792d181aa2e2cb76eb56a2ecafdb3021302c7b86a5819c649528bc06b
+    role: context
+  - path: data/structures/appendage/suctorian_feeding_tentacle.yaml
+    sha256: 6165bcfed6515881367eba4fe55aafd95e31be8c42f55d78179ceecb93f27400
+    role: context
+  - path: data/structures/appendage/tad_pilus.yaml
+    sha256: 34bb82ab5fe3599c02d673a2b8b80fe7ec12fa4228d504e1ad7cd028a61bca93
+    role: context
+  - path: data/structures/appendage/type_i_pilus.yaml
+    sha256: 4c628643f9f8e5360cd1a8f1129ec9f5101978f37555e8e5005cd2ff18781cca
+    role: target
+  - path: data/structures/appendage/type_iv_pilus.yaml
+    sha256: 21347bc455f18fe18d71eeb73a2f0a48d8a3ced0d8ff27e04ec6e844c2f52ca4
+    role: context
+  - path: data/structures/appendage/y_shaped_link.yaml
+    sha256: 89637052ba32ba24d695d33a540116783a09124de805feeaa9430f1f5c702841
+    role: context
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/type_i_pilus/2026-09-11T014721Z-codex-c18ff2.yaml
+    sha256: a65f6a5acf556d397906d39b5360c97a94b69be59b2e96e9c244fdc6a80b32ff
+    role: context
+  - path: history/records/type_i_pilus/2026-09-11T015420Z-codex-d9fc51.yaml
+    sha256: 649717a99709e25c52357666cf63db1d5196fab5523bee5619826a838f312b15
+    role: context
+  - path: history/records/type_i_pilus/2026-10-11T063323Z-codex-755499.yaml
+    sha256: 676b246618faa5f58846097472885c8e9f20376977cf1e26b671dd74f0142233
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/evidence_readability.type_i_pilus.tsv
+    sha256: 1687fb0f76e818a9221287ed25a873de0d2e2dc743161f80f7e2dae2759d84dc
+    role: context
+  - path: reviews/structured/20261011T063133Z-type_i_pilus-audit/review.yaml
+    sha256: 338142ae8f8595f2c2a5804cd206dda36abcb8a1148a51e18713142f4ae23431
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_pilus_scope_review.py
+    sha256: 9c92e7a829bbbb6525bf63c3459e9957383cbe969e1a112f89a60ec5b30fa4d3
+    role: context
+targets:
+- target_id: GO:0140621
+  path: data/structures/appendage/type_i_pilus.yaml
+  label: type I pilus
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/type_i_pilus.yaml
+    role: maintained scientific record
+scope:
+  description: Exact predecessor findings and changed fields, including append-only
+    provenance; not a repeated whole-record scientific review.
+  selection: 20261011T063133Z-type_i_pilus-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0140621
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/type_i_pilus.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:34:08Z to 2026-10-11T06:34:11Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/type_i_pilus.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:34:11Z to 2026-10-11T06:34:16Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/type_i_pilus.yaml
+    --report /private/tmp/csm-review-20261011T062301Z/type_i_pilus-post-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:34:16Z to 2026-10-11T06:34:39Z; log SHA-256 de9faf19a7e23567a4f265a15230abeeeb10e323c5faa912b8de69817048befb
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:35:26Z to 2026-10-11T06:35:47Z; log SHA-256 e836c3a60d88b76a8f3886dd6bf8d339fcbd2229409e99019ae17006c6c6f673
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T06:35:47Z to 2026-10-11T06:37:28Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:37:28Z to 2026-10-11T06:37:45Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\nresolving 1 DOI identifier(s)...\n\nidentifier liveness summary:\n  OK\
+    \             4012\n  SKIPPED         251\n\nEvery identifier resolves at its\
+    \ issuing authority."
+  scope_note: 2026-10-11T06:37:45Z to 2026-10-11T06:38:37Z; log SHA-256 689f734e0d1a1d4dcd14294887e0791542956f43f22b8ac6ad2578c8e214e200
+- check_id: regressions
+  name: regressions
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: .venv/bin/python -m pytest -q tests/test_pilus_scope_review.py tests/test_stalk_evidence_review.py
+    tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '.................................                                        [100%]
+
+    33 passed in 37.32s'
+  scope_note: 2026-10-11T06:38:37Z to 2026-10-11T06:39:15Z; log SHA-256 d80be767bcfe8b26473cf122a106daa0d66b1522063250ed94a9e59a10a22c77
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: .venv/bin/python scripts/record_review.py check --base 617a24ae7989e21e482bb32d3d527b05d5b475b6
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:39:15Z to 2026-10-11T06:39:57Z; log SHA-256 6f78a061ae40b61bbe5427b44d8a84cfda7f9cb6dfca451b6a3a5cc0158fd313
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:39:57Z to 2026-10-11T06:39:57Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: release-qc
+  name: release-qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140621
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Authoritative full local QC passed, including tests, all-record schema,
+    histories and generated-product checks. PR and native merge-group checks are separate
+    publication gates.
+  scope_note: 2026-10-11T06:36:52Z to 2026-10-11T06:46:42Z; log SHA-256 60e18bf851ba93585d294e573bda35d7743a0a5da277bed4d7aedc7d1ed6c861
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/type_i_pilus.yaml
+  accessed_at: '2026-10-11T06:46:51Z'
+  snapshot_sha256: 4c628643f9f8e5360cd1a8f1129ec9f5101978f37555e8e5005cd2ff18781cca
+  support: context_only
+  summary: Corrected native bytes reread against exact predecessor findings and the
+    stated source tiers.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T06:31:33Z'
+  snapshot_sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+  support: context_only
+  summary: Requires exact claim-level scope, constituent/machinery distinction and
+    append-only discussion rationale.
+- evidence_id: go-0140621
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0140621
+  locator: Exact current QuickGO term
+  accessed_at: '2026-10-11T06:27:24Z'
+  snapshot_sha256: ca839e7e9bdf396cb9162f5036a959c36050545ad3bb1afb4011520df9a7dabb
+  support: supports
+  summary: Active exact term agrees with native identity, relation or process use.
+- evidence_id: go-0140623
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0140623
+  locator: Exact current QuickGO term
+  accessed_at: '2026-10-11T06:27:25Z'
+  snapshot_sha256: 68a8c6ed61a488d6699914cae15550cba899b430a4e5acfccdbdd3bda1ea1242
+  support: supports
+  summary: Active exact term agrees with native identity, relation or process use.
+- evidence_id: go-0009289
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009289
+  locator: Exact current QuickGO term
+  accessed_at: '2026-10-11T06:27:16Z'
+  snapshot_sha256: bc564119fe5e6d56127346948989278deecab0f5ad24cb75366edb2d3d6d63cb
+  support: supports
+  summary: Active exact term agrees with native identity, relation or process use.
+- evidence_id: taxon-2
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=2&retmode=xml
+  locator: Exact NCBI Taxonomy identity and names
+  accessed_at: '2026-10-11T06:27:28Z'
+  snapshot_sha256: d62facd350ac66acdd551e03af2eef6a55a96cd0d4c90e8d7e7205870896efa7
+  support: supports
+  summary: Taxon and current scientific name resolve; taxonomy is not evidence of
+    prevalence.
+- evidence_id: taxon-562
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=562&retmode=xml
+  locator: Exact NCBI Taxonomy identity and names
+  accessed_at: '2026-10-11T06:27:29Z'
+  snapshot_sha256: 1d5618066f7d7b5fbf62b33b00b8928382362d9b9e017076caeb654151d980f8
+  support: supports
+  summary: Taxon and current scientific name resolve; taxonomy is not evidence of
+    prevalence.
+- evidence_id: adapter-inventory
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/adapter.log
+  accessed_at: '2026-10-11T06:31:33Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: Live 28-dataset iModulonDB inventory; no matching Caulobacter coverage.
+    E. coli and P. aeruginosa searches were inspected.
+- evidence_id: cu2018
+  kind: primary_source
+  reference: DOI:10.1128/ecosalplus.ESP-0007-2017
+  locator: Architecture, type 1 E. coli and Salmonella sections and assembly mechanism
+  accessed_at: '2026-10-11T04:49:47Z'
+  snapshot_sha256: 52f625f1c984760f352c8e215786748c64dcbdf2523ff532164c810e958aabac
+  support: supports
+  summary: The E. coli FimH-FimG-FimF order differs from Salmonella, which has FimF
+    but not FimG in the listed operon. FimI termination is still unconfirmed in this
+    review.
+- evidence_id: bachmann
+  kind: primary_source
+  reference: DOI:10.1038/s41467-025-60325-z
+  locator: Introduction, FimA incorporation, tip-to-rod transition, FimI termination
+    and Discussion; Figures 2-3 visually inspected
+  accessed_at: '2026-10-11T06:24:48Z'
+  snapshot_sha256: 7326486f3d7796d8498002c80e035c58504625da89b54054c5fd058ca009622d
+  support: supports
+  summary: E. coli FimH/FimG/FimF order, long FimA rod and single FimI terminator
+    are supported; chaperone/usher machinery remains outside this filament record.
+- evidence_id: jones
+  kind: primary_source
+  reference: DOI:10.1073/pnas.92.6.2081
+  locator: Primary abstract
+  accessed_at: '2026-10-11T06:24:52Z'
+  snapshot_sha256: 61d225b9bd7d634614c8212176b22d322e129ebd2f9c2733132f9f8c0ca2559a
+  support: supports
+  summary: Purified FimG-FimH fibrillae and mutant/complemented pili support tip architecture
+    and mannose binding.
+- evidence_id: hospenthal
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro.2017.40
+  locator: Author manuscript pages 3-14; assembly-platform/filament distinction
+  accessed_at: '2026-10-11T05:17:41Z'
+  snapshot_sha256: 5c2dbbd1f8f92499fdda542390ccd97ce5e82ee7c2f785c61d7a118ee82a2a7d
+  support: supports
+  summary: CU chaperone and usher drive ordered assembly; the filament is distinct
+    from its assembly platform.
+- evidence_id: fim-module
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/adapter-fim-summary.log
+  accessed_at: '2026-10-11T06:31:33Z'
+  snapshot_sha256: 9918a3ccd92558dc215baaf1f9a4b87de08b623cfdd5bc70a1bc7e7f037c3111
+  support: context_only
+  summary: e_coli/modulome/39 contains seven fim genes. Computational coexpression
+    is not localization, stoichiometry or assembly evidence.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T063133Z-type_i_pilus-audit/review.yaml
+  accessed_at: '2026-10-11T06:46:51Z'
+  snapshot_sha256: 338142ae8f8595f2c2a5804cd206dda36abcb8a1148a51e18713142f4ae23431
+  support: context_only
+  summary: Immutable original observations committed before mutation.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/preservation.json
+  accessed_at: '2026-10-11T06:46:51Z'
+  snapshot_sha256: beb90d8207e154d1bac8a0082ae7d81f39f3648695308b74264174304ef4b19c
+  support: supports
+  summary: Only four native records changed; 905 others and all prior histories, canonical
+    reviews and legacy reports are byte-preserved.
+- evidence_id: embeddings
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/embedding-refresh.json
+  accessed_at: '2026-10-11T06:46:51Z'
+  snapshot_sha256: a2e2b42849fa18abdffd855d2ee91e221053532cfb740760f8c14ee9d34175a9
+  support: supports
+  summary: Only three pilus semantic vectors changed; the provenance-only stalk correction
+    is outside the semantic projection. The other 906 vectors are preserved.
+assessments:
+- assessment_id: resolved-f1
+  area: scope
+  topic: Separate type I pilus identity from the E. coli subunit model
+  outcome: supported
+  target_ids:
+  - GO:0140621
+  evidence_ids:
+  - record
+  - cu2018
+  - bachmann
+  - go-0140621
+  - predecessor
+  - preservation
+  summary: The definition separates general mannose-sensitive CU identity from the
+    E. coli Fim inventory. All constituent roles and the graph carry the model scope,
+    while the broader Salmonella distribution remains. Separate FimG and FimF rows
+    and all previous grounding attachments are retained.
+- assessment_id: resolved-f2
+  area: evidence
+  topic: Attach the confirmed FimI termination source to the assembly function
+  outcome: supported
+  target_ids:
+  - GO:0140621
+  evidence_ids:
+  - record
+  - cu2018
+  - bachmann
+  - predecessor
+  - preservation
+  summary: The E. coli assembly function now directly cites Bachmann 2025 for the
+    tip-to-rod and FimI-terminated structures, preserving the older review for its
+    supported assembly context and explicitly noting its earlier uncertainty.
+findings:
+- finding_id: F1
+  issue_key: type-i-pilus-ecoli-architecture-scope
+  category: scope
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Separate type I pilus identity from the E. coli subunit model
+  description: The definition separates general mannose-sensitive CU identity from
+    the E. coli Fim inventory. All constituent roles and the graph carry the model
+    scope, while the broader Salmonella distribution remains. Separate FimG and FimF
+    rows and all previous grounding attachments are retained.
+  target_ids:
+  - GO:0140621
+  field_paths:
+  - definition
+  - components
+  - causal_graphs[0]
+  evidence_ids:
+  - record
+  - cu2018
+  - bachmann
+  - go-0140621
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/type_i_pilus.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Material model-to-class scope or composition-boundary defect.
+  disposition_reason: The definition separates general mannose-sensitive CU identity
+    from the E. coli Fim inventory. All constituent roles and the graph carry the
+    model scope, while the broader Salmonella distribution remains. Separate FimG
+    and FimF rows and all previous grounding attachments are retained. Verified against
+    inspected evidence, focused regressions and full QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T063133Z-type_i_pilus-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2182
+- finding_id: F2
+  issue_key: type-i-pilus-termination-function-citation
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Attach the confirmed FimI termination source to the assembly function
+  description: The E. coli assembly function now directly cites Bachmann 2025 for
+    the tip-to-rod and FimI-terminated structures, preserving the older review for
+    its supported assembly context and explicitly noting its earlier uncertainty.
+  target_ids:
+  - GO:0140621
+  field_paths:
+  - functions[0].evidence
+  evidence_ids:
+  - record
+  - cu2018
+  - bachmann
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/type_i_pilus.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: minor
+  normalization_reason: Bounded citation or append-only provenance defect; biological
+    identity remains valid.
+  disposition_reason: The E. coli assembly function now directly cites Bachmann 2025
+    for the tip-to-rod and FimI-terminated structures, preserving the older review
+    for its supported assembly context and explicitly noting its earlier uncertainty.
+    Verified against inspected evidence, focused regressions and full QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T063133Z-type_i_pilus-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2183
+actions: []
+limitations:
+- Same-agent review, not human sign-off or completion of the 909-record goal.
+- Identifier resolver skips and label pairs without adapters are not certified. Exact
+  target GO/taxon authorities were separately inspected for the scientific reviews.
+- Jones 1995 was assessed at primary-abstract level. The 2018 review and 2017 author
+  manuscript were reread from prior authenticated private snapshots, retaining original
+  access times; current 2018 PMC access returned a challenge. No raw cryo-EM reanalysis.
+- Original source-access tiers and snapshot times are retained; no raw experimental
+  reanalysis or independent approval is implied.
+- Five focused tests failed against original inputs; the corrected focused/guarded-writer
+  suite passes. A preliminary lint check required an explicit strict zip argument,
+  corrected before QC.
+- The scratch embedding refresh initially expected four semantic changes and refused
+  before writing. Inspection of the maintained semantic projection showed the stalk
+  rationale/history are excluded; only the three real semantic changes were refreshed.
+- Disposition inputs are retained by review-base/pilus-scope-20261011. Final PR and
+  merge-group results are verified separately.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2182
+- https://github.com/CultureBotAI/CellStructureMech/issues/2183
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T063133Z-type_i_pilus-audit
+  relationship: Resolves exact predecessor findings without rewriting the original
+    observation.
+```

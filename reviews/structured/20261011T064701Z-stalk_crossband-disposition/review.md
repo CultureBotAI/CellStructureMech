@@ -1,0 +1,450 @@
+# Stalk crossband: finding dispositions
+
+- Review: 20261011T064701Z-stalk_crossband-disposition
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-11T06:37:02Z
+- Finished UTC: 2026-10-11T06:47:01Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: false
+
+## Summary
+
+Exact predecessor findings resolved; source tiers and biological uncertainties remain explicit. No scientific status promotion.
+
+## Scope And Provenance
+
+Exact predecessor findings and changed fields, including append-only provenance; not a repeated whole-record scientific review.
+
+Selection: 20261011T063146Z-stalk_crossband-audit
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 7214d5ae8dc9664472ed965a9bc8c0534a0c0bfd.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:stalk_crossband | data/structures/appendage/stalk_crossband.yaml | maintained | stalk crossband |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | cellstructuremech:stalk_crossband | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| strict | passed | True | cellstructuremech:stalk_crossband | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| snippets | passed | True | cellstructuremech:stalk_crossband | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| history | passed | True | cellstructuremech:stalk_crossband | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| labels | passed | True | cellstructuremech:stalk_crossband | id↔label correspondence summary:<br>          OK_CANONICAL: 3544<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| traits | passed | True | cellstructuremech:stalk_crossband | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| curies | passed | True | cellstructuremech:stalk_crossband | resolver control: every resolver accepts a known id and rejects a fabricated one<br>resolving 1 DOI identifier(s)...<br><br>identifier liveness summary:<br>  OK             4012<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| regressions | passed | True | cellstructuremech:stalk_crossband | .................................                                        [100%]<br>33 passed in 37.32s |
+| reviews | passed | True | cellstructuremech:stalk_crossband | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| diff | passed | True | cellstructuremech:stalk_crossband | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| release-qc | passed | True | cellstructuremech:stalk_crossband | Authoritative full local QC passed, including tests, all-record schema, histories and generated-product checks. PR and native merge-group checks are separate publication gates. |
+
+## Scientific And Domain Assessments
+
+### Restore the original grounding discussion rationale
+
+provenance: supported. Targets: cellstructuremech:stalk_crossband.
+
+The exact original StpABCD grounding rationale is restored as the prefix, followed by a dated reassessment retaining the complete later scaffold/sealing explanation. Discussion identity, original posed date, OPEN state, updated attachments and prior histories/reviews remain unchanged.
+
+## Findings
+
+### F1: Restore the original grounding discussion rationale
+
+minor / resolved / confirmed; issue key: stalk-crossband-grounding-rationale-preservation.
+
+The exact original StpABCD grounding rationale is restored as the prefix, followed by a dated reassessment retaining the complete later scaffold/sealing explanation. Discussion identity, original posed date, OPEN state, updated attachments and prior histories/reviews remain unchanged.
+
+Disposition: The exact original StpABCD grounding rationale is restored as the prefix, followed by a dated reassessment retaining the complete later scaffold/sealing explanation. Discussion identity, original posed date, OPEN state, updated attachments and prior histories/reviews remain unchanged. Verified against inspected evidence, focused regressions and full QC.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/stalk_crossband.yaml | context_only | Corrected native bytes reread against exact predecessor findings and the stated source tiers. |
+| rules | docs/CURATION.md | context_only | Requires exact claim-level scope, constituent/machinery distinction and append-only discussion rationale. |
+| old-record | git:aa74419b62aaba390ab49cb40d430b394c933baa:data/structures/appendage/stalk_crossband.yaml | context_only | Pre-PR2180 native text independently read through git show. |
+| predecessor | reviews/structured/20261011T063146Z-stalk_crossband-audit/review.yaml | context_only | Immutable original observations committed before mutation. |
+| preservation | /private/tmp/csm-review-20261011T062301Z/preservation.json | supports | Only four native records changed; 905 others and all prior histories, canonical reviews and legacy reports are byte-preserved. |
+| embeddings | /private/tmp/csm-review-20261011T062301Z/embedding-refresh.json | supports | Only three pilus semantic vectors changed; the provenance-only stalk correction is outside the semantic projection. The other 906 vectors are preserved. |
+
+## Limits And Additional Notes
+
+- Same-agent review, not human sign-off or completion of the 909-record goal.
+- Identifier resolver skips and label pairs without adapters are not certified. Exact target GO/taxon authorities were separately inspected for the scientific reviews.
+- The defect was first noticed while rereading curation guidance; formal source capture precedes this saved bounded assessment, not the initial lead. No new whole-record scientific completion is claimed.
+- Original source-access tiers and snapshot times are retained; no raw experimental reanalysis or independent approval is implied.
+- Five focused tests failed against original inputs; the corrected focused/guarded-writer suite passes. A preliminary lint check required an explicit strict zip argument, corrected before QC.
+- The scratch embedding refresh initially expected four semantic changes and refused before writing. Inspection of the maintained semantic projection showed the stalk rationale/history are excluded; only the three real semantic changes were refreshed.
+- Disposition inputs are retained by review-base/pilus-scope-20261011. Final PR and merge-group results are verified separately.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T064701Z-stalk_crossband-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Stalk crossband: finding dispositions'
+started_at: '2026-10-11T06:37:02Z'
+finished_at: '2026-10-11T06:47:01Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent source-backed reassessment and separate adversarial
+    diff inspection; not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: false
+summary: Exact predecessor findings resolved; source tiers and biological uncertainties
+  remain explicit. No scientific status promotion.
+source:
+  git_revision: 7214d5ae8dc9664472ed965a9bc8c0534a0c0bfd
+  state: working_tree
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/stalk_crossband.yaml
+    sha256: f399e9e742a6fdf470450694748bf4c7061df527ee54d5eec6010f065d6d3040
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/stalk_crossband/2026-09-11T033043Z-codex-c3a7c2.yaml
+    sha256: 58f27cd1e0a5c7dafed30a5887dc40f9dd747ea23a8a8b90996f69f45a3b6b8b
+    role: context
+  - path: history/records/stalk_crossband/2026-09-11T033759Z-codex-f4cbcb.yaml
+    sha256: 02f764cfd4948b17ea6d7407c3198c3911f82b3982cca440d6e44b1613566ae9
+    role: context
+  - path: history/records/stalk_crossband/2026-10-11T055305Z-codex-608143.yaml
+    sha256: 5cc713fc37925a54eb09c747333951126d241819da8408d8b9844730c6e5424e
+    role: context
+  - path: history/records/stalk_crossband/2026-10-11T063327Z-codex-bbea6c.yaml
+    sha256: 3205289afe19161072f4a9193b52c89fde6f522efae287733b9825c4cb34f9af
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261011T055235Z-stalk_crossband-audit/review.yaml
+    sha256: 77b98224e32ed4f65e7fdc67524a4c6fdc85cdd90e8b0e51d580322bb1bbebf8
+    role: context
+  - path: reviews/structured/20261011T060948Z-stalk_crossband-disposition/review.yaml
+    sha256: 526fdc31053ded4b5a2773b582e3c85115a2b5389c298f1615b0f62c28021907
+    role: context
+  - path: reviews/structured/20261011T063146Z-stalk_crossband-audit/review.yaml
+    sha256: c3991699c352381875a4a43e78665e31a17295edab6cf3b5d45803f69b3b25e2
+    role: context
+  - path: tests/test_pilus_scope_review.py
+    sha256: 9c92e7a829bbbb6525bf63c3459e9957383cbe969e1a112f89a60ec5b30fa4d3
+    role: context
+targets:
+- target_id: cellstructuremech:stalk_crossband
+  path: data/structures/appendage/stalk_crossband.yaml
+  label: stalk crossband
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/stalk_crossband.yaml
+    role: maintained scientific record
+scope:
+  description: Exact predecessor findings and changed fields, including append-only
+    provenance; not a repeated whole-record scientific review.
+  selection: 20261011T063146Z-stalk_crossband-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:stalk_crossband
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/stalk_crossband.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:35:01Z to 2026-10-11T06:35:04Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/stalk_crossband.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:35:04Z to 2026-10-11T06:35:07Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/stalk_crossband.yaml
+    --report /private/tmp/csm-review-20261011T062301Z/stalk_crossband-post-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:35:07Z to 2026-10-11T06:35:26Z; log SHA-256 d49e29334eae27377bfe9c6ab1d28415d37c5813dc7bb6096715ab0efd9929cd
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:35:26Z to 2026-10-11T06:35:47Z; log SHA-256 e836c3a60d88b76a8f3886dd6bf8d339fcbd2229409e99019ae17006c6c6f673
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T06:35:47Z to 2026-10-11T06:37:28Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:37:28Z to 2026-10-11T06:37:45Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\nresolving 1 DOI identifier(s)...\n\nidentifier liveness summary:\n  OK\
+    \             4012\n  SKIPPED         251\n\nEvery identifier resolves at its\
+    \ issuing authority."
+  scope_note: 2026-10-11T06:37:45Z to 2026-10-11T06:38:37Z; log SHA-256 689f734e0d1a1d4dcd14294887e0791542956f43f22b8ac6ad2578c8e214e200
+- check_id: regressions
+  name: regressions
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python -m pytest -q tests/test_pilus_scope_review.py tests/test_stalk_evidence_review.py
+    tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '.................................                                        [100%]
+
+    33 passed in 37.32s'
+  scope_note: 2026-10-11T06:38:37Z to 2026-10-11T06:39:15Z; log SHA-256 d80be767bcfe8b26473cf122a106daa0d66b1522063250ed94a9e59a10a22c77
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/record_review.py check --base 617a24ae7989e21e482bb32d3d527b05d5b475b6
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:39:15Z to 2026-10-11T06:39:57Z; log SHA-256 6f78a061ae40b61bbe5427b44d8a84cfda7f9cb6dfca451b6a3a5cc0158fd313
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:39:57Z to 2026-10-11T06:39:57Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: release-qc
+  name: release-qc
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Authoritative full local QC passed, including tests, all-record schema,
+    histories and generated-product checks. PR and native merge-group checks are separate
+    publication gates.
+  scope_note: 2026-10-11T06:36:52Z to 2026-10-11T06:46:42Z; log SHA-256 60e18bf851ba93585d294e573bda35d7743a0a5da277bed4d7aedc7d1ed6c861
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/stalk_crossband.yaml
+  accessed_at: '2026-10-11T06:47:01Z'
+  snapshot_sha256: f399e9e742a6fdf470450694748bf4c7061df527ee54d5eec6010f065d6d3040
+  support: context_only
+  summary: Corrected native bytes reread against exact predecessor findings and the
+    stated source tiers.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T06:31:46Z'
+  snapshot_sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+  support: context_only
+  summary: Requires exact claim-level scope, constituent/machinery distinction and
+    append-only discussion rationale.
+- evidence_id: old-record
+  kind: record_content
+  reference: git:aa74419b62aaba390ab49cb40d430b394c933baa:data/structures/appendage/stalk_crossband.yaml
+  accessed_at: '2026-10-11T06:31:46Z'
+  snapshot_sha256: 1a86dbf57b3ed4cecb2b5aed03eaf49f6408eff1b2a029a5516880b0ee1206d2
+  support: context_only
+  summary: Pre-PR2180 native text independently read through git show.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T063146Z-stalk_crossband-audit/review.yaml
+  accessed_at: '2026-10-11T06:47:01Z'
+  snapshot_sha256: c3991699c352381875a4a43e78665e31a17295edab6cf3b5d45803f69b3b25e2
+  support: context_only
+  summary: Immutable original observations committed before mutation.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/preservation.json
+  accessed_at: '2026-10-11T06:47:01Z'
+  snapshot_sha256: beb90d8207e154d1bac8a0082ae7d81f39f3648695308b74264174304ef4b19c
+  support: supports
+  summary: Only four native records changed; 905 others and all prior histories, canonical
+    reviews and legacy reports are byte-preserved.
+- evidence_id: embeddings
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/embedding-refresh.json
+  accessed_at: '2026-10-11T06:47:01Z'
+  snapshot_sha256: a2e2b42849fa18abdffd855d2ee91e221053532cfb740760f8c14ee9d34175a9
+  support: supports
+  summary: Only three pilus semantic vectors changed; the provenance-only stalk correction
+    is outside the semantic projection. The other 906 vectors are preserved.
+assessments:
+- assessment_id: resolved-f1
+  area: provenance
+  topic: Restore the original grounding discussion rationale
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  evidence_ids:
+  - record
+  - old-record
+  - rules
+  - predecessor
+  - preservation
+  summary: The exact original StpABCD grounding rationale is restored as the prefix,
+    followed by a dated reassessment retaining the complete later scaffold/sealing
+    explanation. Discussion identity, original posed date, OPEN state, updated attachments
+    and prior histories/reviews remain unchanged.
+findings:
+- finding_id: F1
+  issue_key: stalk-crossband-grounding-rationale-preservation
+  category: provenance
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Restore the original grounding discussion rationale
+  description: The exact original StpABCD grounding rationale is restored as the prefix,
+    followed by a dated reassessment retaining the complete later scaffold/sealing
+    explanation. Discussion identity, original posed date, OPEN state, updated attachments
+    and prior histories/reviews remain unchanged.
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  field_paths:
+  - discussions[0].rationale
+  evidence_ids:
+  - record
+  - old-record
+  - rules
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/stalk_crossband.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: minor
+  normalization_reason: Bounded citation or append-only provenance defect; biological
+    identity remains valid.
+  disposition_reason: The exact original StpABCD grounding rationale is restored as
+    the prefix, followed by a dated reassessment retaining the complete later scaffold/sealing
+    explanation. Discussion identity, original posed date, OPEN state, updated attachments
+    and prior histories/reviews remain unchanged. Verified against inspected evidence,
+    focused regressions and full QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T063146Z-stalk_crossband-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2185
+actions: []
+limitations:
+- Same-agent review, not human sign-off or completion of the 909-record goal.
+- Identifier resolver skips and label pairs without adapters are not certified. Exact
+  target GO/taxon authorities were separately inspected for the scientific reviews.
+- The defect was first noticed while rereading curation guidance; formal source capture
+  precedes this saved bounded assessment, not the initial lead. No new whole-record
+  scientific completion is claimed.
+- Original source-access tiers and snapshot times are retained; no raw experimental
+  reanalysis or independent approval is implied.
+- Five focused tests failed against original inputs; the corrected focused/guarded-writer
+  suite passes. A preliminary lint check required an explicit strict zip argument,
+  corrected before QC.
+- The scratch embedding refresh initially expected four semantic changes and refused
+  before writing. Inspection of the maintained semantic projection showed the stalk
+  rationale/history are excluded; only the three real semantic changes were refreshed.
+- Disposition inputs are retained by review-base/pilus-scope-20261011. Final PR and
+  merge-group results are verified separately.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2185
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T063146Z-stalk_crossband-audit
+  relationship: Resolves exact predecessor findings without rewriting the original
+    observation.
+```
