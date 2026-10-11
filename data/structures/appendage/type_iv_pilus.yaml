@@ -25,24 +25,6 @@ components:
   evidence:
   - reference: DOI:10.1038/nrmicro.2017.40
     notes: Hospenthal et al. review T4P filament architecture.
-- component_id: extension_atpase
-  label: PilB-family extension ATPase
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: ESSENTIAL
-  role: Powers pilin polymerization and filament extension.
-  evidence:
-  - reference: DOI:10.1038/nrmicro.2017.40
-    notes: The cytoplasmic ATPase drives assembly.
-- component_id: retraction_atpase
-  label: PilT-family retraction ATPase
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: CONDITIONAL
-  role: Powers retraction in retractile type IV pilus systems.
-  evidence:
-  - reference: DOI:10.1038/nrmicro.2017.40
-    notes: Retraction ATPases distinguish dynamic systems.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -73,7 +55,7 @@ evidence:
   notes: A comprehensive guide to pilus biogenesis in Gram-negative bacteria.
 causal_graphs:
 - graph_id: extension_retraction_twitching
-  title: PilB and PilT drive type IV pilus extension-retraction cycles
+  title: PilB and PilT drive a type IVa pilus extension-retraction cycle
   description: The extension ATPase assembles pilin subunits into the extracellular
     filament, and the retraction ATPase pulls an attached filament back through the
     envelope. Surface-attached retraction generates the force used for twitching motility.
@@ -83,7 +65,6 @@ causal_graphs:
   - node_id: extension_atpase
     label: PilB-family extension ATPase
     node_type: GENE_OR_PROTEIN
-    component_ref: extension_atpase
   - node_id: major_pilin
     label: major type IV pilin
     node_type: GENE_OR_PROTEIN
@@ -98,7 +79,6 @@ causal_graphs:
   - node_id: retraction_atpase
     label: PilT-family retraction ATPase
     node_type: GENE_OR_PROTEIN
-    component_ref: retraction_atpase
   - node_id: twitching_motility
     label: type IV pilus-dependent motility
     node_type: BIOLOGICAL_PROCESS
@@ -150,6 +130,11 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.121171698
       notes: Skerker and Berg 2001 directly observed Pseudomonas aeruginosa pili alternating
         extension and retraction during surface motility.
+  scope_notes: This separate-motor model describes type IVa systems, using Pseudomonas
+    nomenclature and Pseudomonas/Neisseria experiments. It does not assert that every
+    type IV subtype uses separate PilB and PilT motors. Cytoplasmic motors belong
+    to the envelope-spanning pilus machine, not the pilin filament denoted by this
+    record.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-30T19:30:00Z'
@@ -193,6 +178,13 @@ curation_history:
     cycle that assembles type IV pili and pulls surface-bound cells during twitching
     motility.
   llm_assisted: true
+- timestamp: '2026-10-11T06:33:24Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2184: Removed cytoplasmic motor constituent rows, retained
+    their evidenced external graph nodes, and scoped the separate-motor mechanism
+    to type IVa systems.'
+  llm_assisted: true
 datasets:
 - accession: CryoETDataPortal:10155
   title: Bdellovibrio attack-phase
@@ -220,3 +212,39 @@ datasets:
     submissions are CC0 (https://cryoetdataportal.czscience.com/data-submission-policy).
     Metadata-only ingest: no tomogram or annotation volume was requested, downloaded
     or hosted.'
+discussions:
+- discussion_id: motor_machine_not_pilus_filament
+  prompt: Keep PilB and PilT in the mechanism graph rather than the filament constituent
+    table.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#extension_retraction_twitching
+  rationale: The cited review distinguishes the pilin filament from the cytoplasmic
+    PilB/PilT motor subcomplex and its PilC platform. Motor activity is required for
+    extension/retraction in the described type IVa systems but does not make either
+    motor a filament constituent. Keeping motors as external graph nodes avoids assigning
+    filament-formation essentiality to nonconstituents.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2017.40
+    notes: T4P biogenesis and structure sections explicitly distinguish motor, alignment
+      and secretin subcomplexes from the pilin filament.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'
+- discussion_id: resolve_type_iv_pilin_family_grounding
+  prompt: Resolve exact family groundings for the pilins represented by this broad
+    type IV filament record.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#major_pilin
+  rationale: The component is the major type IV pilin class. An exact family accession
+    has not been verified for the full subtype scope; do not substitute a broader
+    type-IV-filament or secretion-system domain match.
+  evidence:
+  - reference: DOI:10.1038/nrmicro.2017.40
+    notes: The source separates pilin filament architecture from machinery and discusses
+      distinct T4aP/T4bP systems.
+  posed_by: codex
+  posed_date: '2026-10-11'

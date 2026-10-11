@@ -2,10 +2,10 @@ identifier: cellstructuremech:tad_pilus
 label: Tad pilus
 structure_category: APPENDAGE
 structure_kind: APPENDAGE
-definition: A tight-adherence subtype of type IV pilus that extends and retracts from
-  a bacterial cell pole. In Caulobacter vibrioides, Tad pili are polar PilA filaments
-  whose dynamic activity promotes surface sensing, surface colonization and holdfast-dependent
-  permanent attachment.
+definition: A tight-adherence (Tad/Flp) subtype of type IV pilus involved in bacterial
+  adhesion and colonization. In the Caulobacter vibrioides model, polar PilA filaments
+  extend and retract during surface exploration and promote holdfast-dependent permanent
+  attachment; this dynamic behavior is not asserted for every Tad system.
 definition_source: DOI:10.1128/mBio.01237-19
 mapping_status: PROPOSED
 curation_history:
@@ -27,6 +27,12 @@ curation_history:
   changes: 'Resolved PR #395 issues #396 and #397 by collapsing duplicate CpaF retraction
     edges into one motor edge and typing the terminal surface-colonization outcome
     as a biological process.'
+  llm_assisted: true
+- timestamp: '2026-10-11T06:33:19Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2181: Bounded the generic Tad identity separately from Caulobacter
+    polar PilA/CpaF dynamics and attached the direct 2019 motor evidence.'
   llm_assisted: true
 synonyms:
 - synonym_text: tight-adherence pilus
@@ -83,6 +89,10 @@ functions:
       Caulobacter Tad pili.
   - reference: DOI:10.1038/s41467-024-50280-6
     notes: Hohl et al. 2024 show bidirectional processing by the Tad pilus CpaF motor.
+  - reference: DOI:10.1126/sciadv.aay2591
+    notes: Ellison et al. 2019 correlate CpaF ATPase mutations with reduced extension/retraction
+      rates, ATP hydrolysis and retraction force in Caulobacter; the tested Asticcacaulis
+      system differs in the fraction of dynamic pili.
 - function_id: surface_colonization
   label: surface colonization
   description: Cycles of Tad pilus extension, surface contact and retraction help
@@ -103,10 +113,10 @@ evidence:
     motor CpaF', Nature Communications.
 causal_graphs:
 - graph_id: cpaf_pila_tad_pilus_dynamics
-  title: CpaF extends and retracts PilA Tad pili
-  description: PilA subunits polymerize into a polar Tad pilus filament, the CpaF
-    motor drives filament extension and retraction, and retraction after surface contact
-    keeps the cell near abiotic surfaces during early colonization.
+  title: Caulobacter CpaF extends and retracts PilA Tad pili
+  description: In Caulobacter, PilA subunits polymerize into a polar Tad pilus filament,
+    the CpaF motor drives filament extension and retraction, and surface-contact dynamics
+    support early colonization.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
@@ -139,8 +149,8 @@ causal_graphs:
   - subject: cpaf_motor
     predicate: extends and retracts
     object: tad_pilus
-    description: CpaF is the Tad pilus motor that supports bidirectional processing
-      of PilA subunits, enabling pilus extension and retraction.
+    description: In Caulobacter, CpaF ATPase activity powers both PilA filament extension
+      and retraction.
     evidence:
     - reference: DOI:10.1038/s41467-024-50280-6
       notes: Hohl et al. 2024 structurally and biochemically analyze bidirectional
@@ -148,6 +158,10 @@ causal_graphs:
     - reference: DOI:10.1126/science.aan5706
       notes: Ellison et al. 2017 show that Caulobacter Tad pili retract and that retraction
         obstruction stimulates surface sensing.
+    - reference: DOI:10.1126/sciadv.aay2591
+      notes: Ellison et al. 2019 correlate CpaF ATPase mutations with reduced extension/retraction
+        rates, ATP hydrolysis and retraction force in Caulobacter; the tested Asticcacaulis
+        system differs in the fraction of dynamic pili.
   - subject: tad_pilus
     predicate: contacts
     object: abiotic_surface
@@ -166,6 +180,10 @@ causal_graphs:
     - reference: DOI:10.1128/mBio.01237-19
       notes: Sangermani et al. 2019 describe Tad pili as dynamic structures that promote
         surface colonization.
+  scope_notes: The PilA/CpaF mechanism is scoped to the experimentally studied Caulobacter
+    system. Broader conservation of CpaF bidirectionality and polar retraction across
+    Tad systems is unresolved; no molecular rotation or nucleotide-switch model is
+    asserted as a demonstrated reaction.
 discussions:
 - discussion_id: cpaf_cpa_boundary
   prompt: Keep CpaF and the rest of the Cpa assembly machinery out of the component
@@ -194,3 +212,24 @@ discussions:
     Pfam or NCBIfam identifier for Caulobacter PilA-family Tad pilins can be verified.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: tad_dynamics_model_scope
+  kind: INTERPRETATION
+  status: OPEN
+  prompt: Determine how broadly the Caulobacter polar retraction mechanism applies
+    across Tad systems.
+  attaches_to:
+  - causal_graphs#cpaf_pila_tad_pilus_dynamics
+  rationale: The record retains the broad Tad subtype identity while curating the
+    demonstrated Caulobacter PilA/CpaF model. Differences between species and unresolved
+    conservation prevent treating dynamic polar retraction as a defining property
+    of every Tad pilus.
+  evidence:
+  - reference: DOI:10.1038/s41467-024-50280-6
+    notes: The Introduction explicitly leaves conservation of CpaF motor bifunctionality
+      across the Tad family unresolved.
+  - reference: DOI:10.1126/sciadv.aay2591
+    notes: Ellison et al. 2019 correlate CpaF ATPase mutations with reduced extension/retraction
+      rates, ATP hydrolysis and retraction force in Caulobacter; the tested Asticcacaulis
+      system differs in the fraction of dynamic pili.
+  posed_by: codex
+  posed_date: '2026-10-11'
