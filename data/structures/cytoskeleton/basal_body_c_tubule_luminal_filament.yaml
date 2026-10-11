@@ -22,8 +22,16 @@ curation_history:
     identity, mechanics and assembly unresolved and separated the distal filament
     from proximal MIP assignments.
   llm_assisted: true
+- timestamp: '2026-10-11T09:48:34Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2204: Replaced the unsupported cytoskeleton is-a parent with
+    conservative cellular-component classification, retained basal-body parthood and
+    unknown molecular identity, and corrected current classification notes without
+    rewriting original discussion provenance.'
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0005575
 part_of:
 - GO:0036064
 canonical_examples:
@@ -117,21 +125,33 @@ discussions:
   kind: CURATION_TODO
   status: RESOLVED
   prompt: Separate the luminal filament from neighboring assemblies.
-  rationale: A resolved filament is a structural entity even without a molecular assignment.
+  rationale: 'A resolved filament is a structural entity even without a molecular
+    assignment. Classification reassessment on 2026-10-11: the previous GO:0005856
+    is-a parent conflated a subassembly with its containing framework. GO:0005575
+    is retained conservatively because the inspected density does not establish a
+    protein-complex or polymeric-fiber classification; morphology and basal-body parthood
+    are unchanged.'
   notes: The curated name denotes the crescent-shaped filament and its axial repetition
     in Li et al., not the C-tubule wall, external hook, B-C inner junction or Y-shaped
     scaffold. Hidden/ignored-inclusive identity and citation searches found no existing
     record. Complete GO searches for C-tubule luminal filament, microtubule inner
     filament and C-tubule brace found no exact cellular-component term. GO:0160110
     and its A/B inner-sheath children concern axonemal doublets, not this basal-body
-    C-tubule filament. GO:0005856 supplies the broader cytoskeletal class and GO:0036064
-    supplies parthood. FILAMENT describes observed morphology, not a claimed protein
-    family or complex stoichiometry.
+    C-tubule filament. GO:0005575 cellular component is the conservative broader class;
+    GO:0036064 retains basal-body parthood. GO:0005856 denotes the containing cytoskeletal
+    framework, not an is-a parent of this individual subassembly. FILAMENT describes
+    observed morphology, not a claimed protein family or complex stoichiometry.
   evidence:
   - reference: DOI:10.1038/emboj.2011.460
   - reference: GO:0005856
   - reference: GO:0036064
   - reference: GO:0160110
+  - reference: GO:0005575
+    notes: Conservative broader cellular-component class, not an exact identity. The
+      original minted identifier and observed morphology are retained.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2204
+    notes: Saved review finding and bounded curation correction; original scientific
+      scope and discussion lifecycle are retained.
   posed_by: codex
   posed_date: '2026-10-04'
   resolved_date: '2026-10-04'

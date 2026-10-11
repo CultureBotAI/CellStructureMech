@@ -28,8 +28,16 @@ curation_history:
     reinspection of Nazarov et al. Figure 4 and full-name Results. Chlamydomonas-only
     hook scope and unresolved homology are unchanged.
   llm_assisted: true
+- timestamp: '2026-10-11T09:48:32Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2203: Replaced the unsupported cytoskeleton is-a parent with
+    conservative cellular-component classification, retained basal-body parthood and
+    unknown molecular identity, and corrected current classification notes without
+    rewriting original discussion provenance.'
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0005575
 part_of:
 - GO:0036064
 canonical_examples:
@@ -117,21 +125,32 @@ discussions:
   kind: CURATION_TODO
   status: RESOLVED
   prompt: Separate the external C-tubule hook from other triplet linkers.
-  rationale: This is an imaged named subassembly, not a gene product.
+  rationale: 'This is an imaged named subassembly, not a gene product. Classification
+    reassessment on 2026-10-11: the previous GO:0005856 is-a parent conflated a subassembly
+    with its containing framework. GO:0005575 is retained conservatively because the
+    inspected density does not establish a protein-complex or polymeric-fiber classification;
+    morphology and basal-body parthood are unchanged.'
   notes: The curated label denotes the hook-shaped arm and its axial repetition described
     by Li et al., not the whole C-tubule or every outer B-C contact. Hidden/ignored-inclusive
     label, synonym, slug and citation searches found no existing record. Complete
     C-tubule-hook, C-stretch and outer-junction GO searches found no exact cellular-component
     term. GO:0160114 denotes an axonemal A-B outer junction, not this B-C structure.
-    GO:0005856 is the broader cytoskeletal class and GO:0036064 is parthood. OTHER
-    avoids asserting an identified multiprotein composition. The B-C inner junction,
-    intertriplet A-C linker, Y-shaped inner scaffold and luminal C-tubule filaments
-    are outside this boundary.
+    GO:0005575 cellular component is the conservative broader class; GO:0036064 retains
+    basal-body parthood. GO:0005856 denotes the containing cytoskeletal framework,
+    not an is-a parent of this individual subassembly. OTHER avoids asserting an identified
+    multiprotein composition. The B-C inner junction, intertriplet A-C linker, Y-shaped
+    inner scaffold and luminal C-tubule filaments are outside this boundary.
   evidence:
   - reference: DOI:10.1038/emboj.2011.460
   - reference: GO:0005856
   - reference: GO:0036064
   - reference: GO:0160114
+  - reference: GO:0005575
+    notes: Conservative broader cellular-component class, not an exact identity. The
+      original minted identifier and observed morphology are retained.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2203
+    notes: Saved review finding and bounded curation correction; original scientific
+      scope and discussion lifecycle are retained.
   posed_by: codex
   posed_date: '2026-10-04'
   resolved_date: '2026-10-04'

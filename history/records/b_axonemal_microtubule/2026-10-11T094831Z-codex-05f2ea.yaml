@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/b_axonemal_microtubule.yaml
+  slug: b_axonemal_microtubule
+session:
+  id: 2026-10-11T094831Z-codex-05f2ea
+  timestamp: '2026-10-11T09:48:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2202
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - discussions
+  summary: 'Addressed #2202: Restored the exact original B-tubule rationale and retained the
+    later inner-sheath reassessment with revision context, preserving the current prompt and
+    scientific scope.'
+  details: Original observation saved and committed before curation in reviews/structured/20261011T094735Z-b_axonemal_microtubule-audit/review.yaml.
+    Guarded correction preserves definition, structure kind, taxonomy, graph edges, functions,
+    measurements, link-only image license, dataset scope, all earlier events and PROPOSED
+    status. Composition and homology unknowns remain OPEN.

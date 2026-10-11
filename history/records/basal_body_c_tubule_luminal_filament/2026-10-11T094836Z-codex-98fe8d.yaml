@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_c_tubule_luminal_filament.yaml
+  slug: basal_body_c_tubule_luminal_filament
+session:
+  id: 2026-10-11T094836Z-codex-98fe8d
+  timestamp: '2026-10-11T09:48:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2204
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - discussions
+  - parent_structures
+  summary: 'Addressed #2204: Replaced the unsupported cytoskeleton is-a parent with conservative
+    cellular-component classification, retained basal-body parthood and unknown molecular
+    identity, and corrected current classification notes without rewriting original discussion
+    provenance.'
+  details: Original observation saved and committed before curation in reviews/structured/20261011T094748Z-basal_body_c_tubule_luminal_filament-audit/review.yaml.
+    Guarded correction preserves definition, structure kind, taxonomy, graph edges, functions,
+    measurements, link-only image license, dataset scope, all earlier events and PROPOSED
+    status. Composition and homology unknowns remain OPEN.

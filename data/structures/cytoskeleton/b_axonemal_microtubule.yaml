@@ -24,6 +24,13 @@ curation_history:
   changes: Linked GO:0160112 from the B-tubule parent and narrowed the remaining B-tubule
     MIP TODO.
   llm_assisted: true
+- timestamp: '2026-10-11T09:48:28Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2202: Restored the exact original B-tubule rationale and retained
+    the later inner-sheath reassessment with revision context, preserving the current
+    prompt and scientific scope.'
+  llm_assisted: true
 synonyms:
 - synonym_text: B tubule
   synonym_type: BROAD_SYNONYM
@@ -145,13 +152,21 @@ discussions:
   status: OPEN
   attaches_to:
   - causal_graphs#chlamydomonas_b_tubule_doublet_scaffold
-  rationale: GO exactly identifies the B axonemal microtubule and GO:0160112 now captures
-    the B-tubule inner sheath, but this pass curates only the B tubule's coarse role
-    in the outer doublet and leaves exact protofilament and non-inner-sheath MIP placement
-    unresolved.
+  rationale: 'GO exactly identifies the B axonemal microtubule, but this pass curates
+    only its coarse role in the outer doublet and leaves exact protofilament and MIP
+    placement unresolved. Historical reassessment at git 871db9b2b9d6: GO exactly
+    identifies the B axonemal microtubule and GO:0160112 now captures the B-tubule
+    inner sheath, but this pass curates only the B tubule''s coarse role in the outer
+    doublet and leaves exact protofilament and non-inner-sheath MIP placement unresolved.'
   evidence:
   - reference: DOI:10.1016/j.cell.2019.09.030
     notes: Ma et al. 2019 resolved the Chlamydomonas doublet lattice and several B-tubule-associated
       microtubule inner proteins.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2202
+    notes: Saved review finding and bounded curation correction; original scientific
+      scope and discussion lifecycle are retained.
   posed_by: codex
   posed_date: '2026-09-23'
+  notes: Restored on 2026-10-11 from committed discussion history. Historical scope
+    statements describe the cited revisions, not a new claim of missing child records.
+    The current narrowed prompt and OPEN molecular tasks remain unchanged.
