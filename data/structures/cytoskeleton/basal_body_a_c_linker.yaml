@@ -21,6 +21,13 @@ curation_history:
     polymorphism, uncertain groundings and conflicting protein assignments without
     inferring temporal assembly or stoichiometry.
   llm_assisted: true
+- timestamp: '2026-10-11T10:36:33Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2206: corrected the A-C linker figure caption from raw to denoised
+    in-situ tomography and documented the source DeepDeWedge processing, retaining
+    image bytes and all biological claims.'
+  llm_assisted: true
 synonyms:
 - synonym_text: A-C linker
   synonym_type: EXACT_SYNONYM
@@ -393,9 +400,9 @@ images:
     al.; CC BY, via PubMed Central
   modality: CRYO_ET
   caption: 'Figure 1: Tetrahymena basal-body A-C linkers in situ and after isolation.
-    A-C show segmented and raw in-situ cryotomograms; F-G show isolated basal bodies
-    with A-C linkers labeled. D is the isolation schematic and E is an SDS-PAGE gel,
-    not microscopy. Scale bars: A, 200 nm; B-C and F-G, 100 nm.'
+    A-C show segmented and denoised in-situ cryotomograms; F-G show isolated basal
+    bodies with A-C linkers labeled. D is the isolation schematic and E is an SDS-PAGE
+    gel, not microscopy. Scale bars: A, 200 nm; B-C and F-G, 100 nm.'
   taxon_id: NCBITaxon:5911
   taxon_label: Tetrahymena thermophila
   reference: DOI:10.1126/sciadv.ady3689
@@ -405,4 +412,6 @@ images:
     because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
     The entire multi-panel figure was visually inspected; source bytes are reproduced
     unchanged. Tomograms support structure identity, not individual protein identity
-    or a mechanical perturbation assay.
+    or a mechanical perturbation assay. Source Methods describe DeepDeWedge denoising
+    of the FIB-milled cell tomograms and segmentation of the denoised Figure 1A volume;
+    this processing was performed by the source authors, not by this repository.
