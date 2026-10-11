@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/alfa_filament.yaml
+  slug: alfa_filament
+session:
+  id: 2026-10-11T071423Z-codex-49a2a2
+  timestamp: '2026-10-11T07:14:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2190
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - components
+  - curation_history
+  - discussions
+  - evidence
+  - parent_structures
+  - part_of
+  summary: 'Addressed #2190, #2191, #2192: Replaced four ParM DOI miscitations with the intended
+    AlfA paper, corrected the journal and Becker author attribution, and separated filament
+    is-a from cytoskeleton parthood without changing the minted identity.'
+  details: 'Original findings saved before mutation in reviews/structured/20261011T071302Z-alfa_filament-audit/review.yaml.
+    Addresses #2190, #2191, #2192. Guarded curation retained PROPOSED, prior events and discussions;
+    post-change tests and full QC are required before publication.'

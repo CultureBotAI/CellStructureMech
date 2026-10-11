@@ -30,6 +30,13 @@ curation_history:
   changes: 'Resolved PR #1414 issue #1415 by linking GO:0160111 from the A-tubule
     parent and narrowing the remaining A-tubule MIP TODO.'
   llm_assisted: true
+- timestamp: '2026-10-11T07:14:15Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2187: Restored the exact original discussion rationale and
+    retained the complete inner-sheath reassessment, narrowed prompt and original
+    posed date.'
+  llm_assisted: true
 synonyms:
 - synonym_text: A tubule
   synonym_type: BROAD_SYNONYM
@@ -209,10 +216,13 @@ discussions:
   status: OPEN
   attaches_to:
   - causal_graphs#chlamydomonas_a_tubule_doublet_scaffold
-  rationale: GO exactly identifies the A axonemal microtubule and GO:0160111 now captures
-    the A-tubule inner sheath, but this pass curates only the A tubule's coarse role
+  rationale: 'GO exactly identifies the A axonemal microtubule, but this pass curates
+    only its coarse role in the outer doublet and leaves exact protofilament, MIP,
+    radial-spoke and dynein-arm attachment placement unresolved. Reassessment on 2026-10-11:
+    GO exactly identifies the A axonemal microtubule and GO:0160111 now captures the
+    A-tubule inner sheath, but this pass curates only the A tubule''s coarse role
     in the outer doublet and leaves exact protofilament, non-inner-sheath MIP, radial-spoke
-    and dynein-arm attachment placement unresolved.
+    and dynein-arm attachment placement unresolved.'
   evidence:
   - reference: DOI:10.1016/j.cell.2019.09.030
     notes: Ma et al. 2019 resolved the Chlamydomonas doublet lattice and several A-tubule-associated

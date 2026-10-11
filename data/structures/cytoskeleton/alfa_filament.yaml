@@ -40,8 +40,16 @@ curation_history:
     citation note and simplifying the AlfB/parN graph to a graph-scoped centromere-complex
     adapter node.'
   llm_assisted: true
+- timestamp: '2026-10-11T07:14:22Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2190, #2191, #2192: Replaced four ParM DOI miscitations with
+    the intended AlfA paper, corrected the journal and Becker author attribution,
+    and separated filament is-a from cytoskeleton parthood without changing the minted
+    identity.'
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0099513
 components:
 - component_id: alfa
   label: AlfA
@@ -59,7 +67,7 @@ components:
   - reference: DOI:10.1038/sj.emboj.7601443
     notes: Becker et al. 2006 tied the Bacillus subtilis AlfA protein to actin-like
       filaments and active plasmid segregation.
-  - reference: DOI:10.1016/j.str.2009.07.008
+  - reference: DOI:10.1128/JB.00676-09
     notes: Polka et al. 2009 analyzed purified AlfA polymerization and filament ultrastructure.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1423
@@ -89,11 +97,11 @@ functions:
       positioning.
 evidence:
 - reference: DOI:10.1038/sj.emboj.7601443
-  notes: Becker, Moller-Jensen, Jensen and Gerdes 2006, DNA segregation by the bacterial
-    actin AlfA during Bacillus subtilis growth and development, EMBO Journal.
-- reference: DOI:10.1016/j.str.2009.07.008
+  notes: Becker et al. 2006, DNA segregation by the bacterial actin AlfA during Bacillus
+    subtilis growth and development, EMBO Journal.
+- reference: DOI:10.1128/JB.00676-09
   notes: Polka, Kollman, Agard and Mullins 2009, The Structure and Assembly Dynamics
-    of Plasmid Actin AlfA Imply a Novel Mechanism of DNA Segregation, Structure.
+    of Plasmid Actin AlfA Imply a Novel Mechanism of DNA Segregation, Journal of Bacteriology.
 - reference: DOI:10.1073/pnas.1304127111
   notes: Polka et al. 2014, Accessory factors promote AlfA-dependent plasmid segregation
     by regulating filament nucleation, disassembly, and bundling, PNAS.
@@ -105,6 +113,12 @@ evidence:
   notes: Tanaka 2010, Functional analysis of the stability determinant AlfB of pBET131,
     a miniplasmid derivative of Bacillus subtilis (natto) plasmid pLS32, Journal of
     Bacteriology.
+- reference: GO:0099513
+  notes: Polymeric cytoskeletal fiber is the broader class for a filament assembled
+    from AlfA protein subunits, not an exact AlfA identity.
+- reference: GO:0005856
+  notes: Cytoskeleton is the containing framework; GO places polymeric cytoskeletal
+    fiber part_of this structure, not is_a.
 causal_graphs:
 - graph_id: alfa_pls32_family_partitioning
   title: AlfA filaments support pLS32-family plasmid segregation
@@ -136,7 +150,7 @@ causal_graphs:
     object: alfa_filament
     description: AlfA subunits polymerize into actin-like cytoskeletal filaments.
     evidence:
-    - reference: DOI:10.1016/j.str.2009.07.008
+    - reference: DOI:10.1128/JB.00676-09
       notes: Polka et al. 2009 purified AlfA and analyzed its assembly into actin-like
         filaments.
     - reference: DOI:10.1073/pnas.1716424115
@@ -174,7 +188,7 @@ discussions:
     partition system without asserting that a broad actin ATPase or bacterial actin-like
     family accession exactly denotes filament-forming AlfA proteins.
   evidence:
-  - reference: DOI:10.1016/j.str.2009.07.008
+  - reference: DOI:10.1128/JB.00676-09
     notes: Polka et al. 2009 modeled AlfA as a plasmid-encoded actin without resolving
       a source-neutral protein-family identifier.
   posed_by: codex
@@ -195,3 +209,5 @@ discussions:
       filament.
   posed_by: codex
   posed_date: '2026-09-22'
+part_of:
+- GO:0005856
