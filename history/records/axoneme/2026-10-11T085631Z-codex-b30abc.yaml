@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axoneme.yaml
+  slug: axoneme
+session:
+  id: 2026-10-11T085631Z-codex-b30abc
+  timestamp: '2026-10-11T08:56:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2200
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: 'Addressed #2200: restored original and intermediate discussion rationales with
+    revision context; preserved the current prompt, task lifecycle, original dates, scientific
+    claims and child-record boundaries.'
+  details: Original finding saved and committed before curation in reviews/structured/20261011T085537Z-axoneme-audit/review.yaml.
+    Guarded rationale restoration changes no scientific claims, graph edges, taxonomy, identity,
+    PROPOSED status or previous events. The inner-sheath split remains resolved with its original
+    resolution date and explicit molecular-task handoff.
