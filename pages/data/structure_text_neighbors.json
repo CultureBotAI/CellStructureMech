@@ -914,27 +914,27 @@
         {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
-          "cosine_similarity": 0.75635256
+          "cosine_similarity": 0.7488781
         },
         {
           "identifier": "GO:0120120",
           "label": "bilobe structure",
-          "cosine_similarity": 0.75019052
+          "cosine_similarity": 0.7449643
         },
         {
-          "identifier": "GO:1990900",
-          "label": "ciliary pocket collar",
-          "cosine_similarity": 0.72495896
+          "identifier": "GO:0009424",
+          "label": "bacterial-type flagellum hook",
+          "cosine_similarity": 0.7276274
+        },
+        {
+          "identifier": "GO:0030694",
+          "label": "bacterial-type flagellum basal body, rod",
+          "cosine_similarity": 0.7187234
         },
         {
           "identifier": "GO:0009431",
           "label": "bacterial-type flagellum basal body, MS ring",
-          "cosine_similarity": 0.72495142
-        },
-        {
-          "identifier": "GO:0020016",
-          "label": "flagellar pocket",
-          "cosine_similarity": 0.72236934
+          "cosine_similarity": 0.71736568
         }
       ]
     },
@@ -2756,14 +2756,14 @@
           "cosine_similarity": 0.75232431
         },
         {
-          "identifier": "GO:0120118",
-          "label": "flagella connector",
-          "cosine_similarity": 0.75019052
-        },
-        {
           "identifier": "GO:0055040",
           "label": "periplasmic flagellum",
           "cosine_similarity": 0.74734662
+        },
+        {
+          "identifier": "GO:0120118",
+          "label": "flagella connector",
+          "cosine_similarity": 0.7449643
         }
       ]
     },
