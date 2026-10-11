@@ -1,0 +1,552 @@
+schema_version: 1.0.0
+review_id: 20261011T205812Z-mitotic_spindle-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Mitotic spindle: claim-local citation review'
+started_at: '2026-10-11T20:48:50Z'
+finished_at: '2026-10-11T20:58:12Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same coding agent inspected sources and native record; not independent
+    human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Entire mitotic-spindle record reviewed. One minor citation-scope finding
+  affects two example notes; saved before native edits.
+source:
+  git_revision: 4ee81da6e6cb308bffad6138d704e39b49235e87
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 3acb13884094f40c840ed3452a6209ee9a38b479ae16e4c0bca390c3c290828a
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+    sha256: 23b89e56b6a009464465814315eaa0f663df8429a15f78dc62bcc79711b82005
+    role: context
+  - path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+    sha256: 7e26dc96147d0fefc4f28ac7f012dcc69bc1f9a1ace03e94bf488a33ec59fd48
+    role: context
+  - path: data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml
+    sha256: 230c0195bc1178cffbad27e77f4a1a4da56f20ec28dab5a43e192ed75d27dbbc
+    role: context
+  - path: data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml
+    sha256: adbd6ee4c956bfcb1a93d1d015b351adf92d66c025e980bfcd34630f1e8e6fb5
+    role: context
+  - path: data/structures/cytoskeleton/mitotic_spindle.yaml
+    sha256: 397bfe6ce0d6b561b3bca10671956ce5fe438cfe6db2c733900db5c74b658ed7
+    role: target
+  - path: data/structures/cytoskeleton/nuclear_microtubule.yaml
+    sha256: 09096977c74bdb36271d09b2a8aa1ac4c269ff8f3adbc854beae8b348f8aa252
+    role: context
+  - path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    sha256: ec1b57e0607bc93e00bc6387142d7c452dec557894eb358423b3710ae06be7a3
+    role: context
+  - path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+    sha256: 89e8f6036ea81883a342e0be4ca69d5874576105269d57e916ae1053d8d6a8c5
+    role: context
+  - path: data/structures/cytoskeleton/quiescent_nuclear_microtubule_bundle.yaml
+    sha256: 673f9f540f3c32112680f797801aac0ba5c2a1cc8e196c2125e36907e6c89166
+    role: context
+  - path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+    sha256: e42a1fd89a69cc61b886ae054a2f27f3477c526c7a4cfca8b63254264aa6858d
+    role: context
+  - path: data/structures/cytoskeleton/spindle_microtubule.yaml
+    sha256: 8c4540139f7192fea26caf2f828c71d831118482f5188e17b18e33c17e4a64d4
+    role: context
+  - path: data/structures/cytoskeleton/tacc_tog_complex.yaml
+    sha256: 315d74b63309947276838f52dc5c9d7a63bc747efede86d6a7138c765afd7336
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/mitotic_spindle/2026-09-18T232025Z-claude-code-759998.yaml
+    sha256: 284239d99b7c9c774f9609df2a25060f0447924ddbb74f3da19afe0a76f6a368
+    role: context
+  - path: history/records/mitotic_spindle/2026-09-18T233500Z-claude-code-eeb830.yaml
+    sha256: e9cec343073d13155b0d53602de855fa7af492aa36a97efe3188c6c8b4402131
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/yaml_record_review/20260929T092834Z-half_bridge_of_mitotic_spindle_pole_body.md
+    sha256: 4ea26a6603a2dc1e756e4ac0ff9cbfe219588ae7f58c98600a5a880b40ee1c52
+    role: context
+  - path: reports/yaml_record_review/20260929T102555Z-intermediate_layer_of_mitotic_spindle_pole_body.md
+    sha256: bcbdbb7d6e79e1d880058b09094f0348926fee3df0738efce95022a39ab67990
+    role: context
+  - path: reports/yaml_record_review/20260929T142459Z-mitotic_spindle_pole_body.md
+    sha256: 192ea85279145b2bdfd7031a3cf5b36fe29a7799e06f4bc7e7cee01d9bcf7c9b
+    role: context
+  - path: reports/yaml_record_review/20260929T153001Z-inner_plaque_of_mitotic_spindle_pole_body.md
+    sha256: a294e6fa690af32e1492806168fc99cba8d7354e0a5e8a520c2b32643de2d066
+    role: context
+  - path: reports/yaml_record_review/20260929T160041Z-outer_plaque_of_mitotic_spindle_pole_body.md
+    sha256: d87c4709a77ea255357451ff8faff02a9efea7ca0d79f84b6b11f4437c226d9a
+    role: context
+  - path: reports/yaml_record_review/20260929T163916Z-central_plaque_of_mitotic_spindle_pole_body.md
+    sha256: 9ce8ea291d7741b7adbeb728d614b9a5bb5f3d66cf3e4fb9ba663dfc77582a44
+    role: context
+  - path: reports/yaml_record_review/20260929T174425Z-new_mitotic_spindle_pole_body.md
+    sha256: 4fa5bb6f54e32712838b455149328e9a60d969913d4119b4082cc140f4a8ffa5
+    role: context
+  - path: reports/yaml_record_review/20260929T182700Z-old_mitotic_spindle_pole_body.md
+    sha256: 5051119982a5d0d8c79a057319a088cee51ba607b91279edde26466d490ff837
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0072686
+  path: data/structures/cytoskeleton/mitotic_spindle.yaml
+  label: mitotic spindle
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mitotic_spindle.yaml
+    role: maintained scientific record
+scope:
+  description: Entire maintained YAML, all three graph edges, component/essentiality,
+    taxonomy, example, function, authority relations, discussions and both history
+    surfaces.
+  selection: Exact GO:0072686 record in the all-909-record review goal. Other captured
+    cohort records have separate coverage; input capture is not review completion.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0072686
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/mitotic_spindle.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:50:24Z to 2026-10-11T20:50:26Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/mitotic_spindle.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:50:26Z to 2026-10-11T20:50:31Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/mitotic_spindle.yaml
+    --report /private/tmp/csm-review-20261011T204757Z/mitotic_spindle-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-11T20:50:31Z to 2026-10-11T20:50:48Z; log SHA-256 ce3f8b903c129e79d003c3769d89f364c4afeb3dcf52c486d926dbc4ede9f157
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:54:19Z to 2026-10-11T20:54:32Z; log SHA-256 5a1de30954e7886b803d2a3b15cee5378ca41770372bec294659c5d0c49bca1d
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3545\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T20:54:32Z to 2026-10-11T20:55:51Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:55:51Z to 2026-10-11T20:56:08Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4016\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T20:56:08Z to 2026-10-11T20:56:51Z; log SHA-256 f38fdf2889286b712ede050fc9d6de36ecb8830b57fbc4dfbf38421c176168c8
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: .venv/bin/python scripts/record_review.py check --base 4ee81da6e6cb308bffad6138d704e39b49235e87
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:56:51Z to 2026-10-11T20:58:06Z; log SHA-256 9d610e0fb86761f469d0b4cdf3e5b305ac776c62f96f4e855cf449e527159e0e
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:58:06Z to 2026-10-11T20:58:06Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: contract
+  name: contract
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '....                                                                     [100%]
+
+    4 passed in 92.04s (0:01:32)'
+  scope_note: 2026-10-11T20:48:32Z to 2026-10-11T20:50:06Z; log SHA-256 05476c45a55de5cca155be41c9d1c09aac2ca5e7d8373f9c83f42161cf750ff3
+- check_id: qc
+  name: Exact-baseline merge-group full QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0072686
+  command: gh run view 38172984863 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Live-verified exact-base native CI QC: 932 passed, 3 skipped. Not a new
+    local full-QC run.'
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38172984863;
+    log SHA-256 3b05428a40cf9e443c968b2813f34fd5813b969ee8e79c4874818d3c3e518234
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/mitotic_spindle.yaml
+  accessed_at: '2026-10-11T20:58:12Z'
+  snapshot_sha256: 397bfe6ce0d6b561b3bca10671956ce5fe438cfe6db2c733900db5c74b658ed7
+  support: context_only
+  summary: Entire native record read; inspected bytes unchanged.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  accessed_at: '2026-10-11T20:58:12Z'
+  snapshot_sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+  support: context_only
+  summary: Evidence belongs on the narrowest supported claim; optional gaps alone
+    are not findings.
+- evidence_id: history
+  kind: record_content
+  reference: /private/tmp/csm-review-20261011T204757Z/mitotic_spindle-discussion-history.json
+  accessed_at: '2026-10-11T20:58:12Z'
+  snapshot_sha256: a134914fbf3d3a6812fc781231d6768a7986eef16286540206f0b72a97c32fc4
+  support: context_only
+  summary: Both committed versions of discussions and inline history inspected; preserve
+    prior graph-kind and tubulin-evidence fixes.
+- evidence_id: issues
+  kind: prior_review
+  reference: /private/tmp/csm-review-20261011T204757Z/context-mitotic-spindle.log
+  accessed_at: '2026-10-11T20:58:12Z'
+  snapshot_sha256: 1a4f31ad763820ed6c7207c892df18ff19a31ba42543463e940d5ffcb5fec72c
+  support: context_only
+  summary: All-state label search includes closed issues 1204, 1205 and analogous
+    sibling issue 1423. The latter concerns a different record, already fixed; no
+    canonical predecessor for this target.
+- evidence_id: sibling-issue
+  kind: prior_review
+  reference: /private/tmp/csm-review-20261011T204757Z/spindle_microtubule-issues.log
+  accessed_at: '2026-10-11T20:58:12Z'
+  snapshot_sha256: 3491531bf7f78c95fefb1fe0c590ec295ba27a0801ddc74d9c0a5830a9f3361f
+  support: context_only
+  summary: Issue 1423 narrowed spindle_microtubule, not mitotic_spindle. It is contextual
+    precedent, not fabricated canonical lineage.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T204757Z/exact-target-predecessors.json
+  accessed_at: '2026-10-11T20:58:12Z'
+  snapshot_sha256: ab89a2c2351211c206d4038459a174857a92e3ef5ad384f98de7dbfa9eb0a90f
+  support: context_only
+  summary: Ignored-inclusive canonical scan finds no exact-target predecessor.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T204757Z/adapter.log
+  accessed_at: '2026-10-11T20:58:12Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: Current 28-dataset inventory has no Saccharomyces or Schizosaccharomyces
+    dataset; not negative biological evidence.
+- evidence_id: append-history-0
+  kind: record_content
+  reference: history/records/mitotic_spindle/2026-09-18T232025Z-claude-code-759998.yaml
+  accessed_at: '2026-10-11T20:58:12Z'
+  snapshot_sha256: 284239d99b7c9c774f9609df2a25060f0447924ddbb74f3da19afe0a76f6a368
+  support: context_only
+  summary: Original CREATE and REVIEW events inspected, including historical tool
+    attribution; preserved unchanged.
+- evidence_id: append-history-1
+  kind: record_content
+  reference: history/records/mitotic_spindle/2026-09-18T233500Z-claude-code-eeb830.yaml
+  accessed_at: '2026-10-11T20:58:12Z'
+  snapshot_sha256: e9cec343073d13155b0d53602de855fa7af492aa36a97efe3188c6c8b4402131
+  support: context_only
+  summary: Original CREATE and REVIEW events inspected, including historical tool
+    attribution; preserved unchanged.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000226,GO:0000776,GO:0000923,GO:0000930,GO:0005634,GO:0005737,GO:0005815,GO:0005816,GO:0005818,GO:0005819,GO:0005822,GO:0005824,GO:0005874,GO:0005876,GO:0005879,GO:0005880,GO:0005881,GO:0007020,GO:0007059,GO:0015630,GO:0030981,GO:0030989,GO:0031021,GO:0031025,GO:0032117,GO:0032118,GO:0032153,GO:0051315,GO:0051415,GO:0051418,GO:0051647,GO:0061863,GO:0070850,GO:0072686,GO:0090307,GO:0099070,GO:0110165,GO:0140535,GO:1905720,GO:1990295
+  locator: GO:0072686, GO:0005819, GO:0005876, GO:0005874, GO:0005816, GO:0000776
+    and GO:0007059 definitions and typed relations
+  accessed_at: '2026-10-11T20:51:58Z'
+  snapshot_sha256: b4a25cd70fae0cba6cddd4a8e5712338ace5b06060e4e6112b8a71d52a5506b1
+  support: supports
+  summary: Verified exact structure/function identities and distinction between spindle
+    array, tubulin filament, organizing pole and kinetochore.
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: taxId, scientificName, species rank
+  accessed_at: '2026-10-11T20:52:00Z'
+  snapshot_sha256: c4e5f7b0462251e0d309ae5ad59f47eb6b3846cbe9fcb8506648a7898d4ad1a8
+  support: supports
+  summary: Saccharomyces cerevisiae species identity verified; not proof of an experimental
+    result.
+- evidence_id: winey
+  kind: primary_source
+  reference: DOI:10.1083/jcb.129.6.1601
+  locator: 'PMC2291174: abstract, Materials and Methods (cell preparation, microscopy,
+    reconstruction), Results and figure captions; OCR preformat full text'
+  accessed_at: '2026-10-11T20:50:55Z'
+  snapshot_sha256: 784485e5de21b3b0d05f4c3ebf3390c2720611f7be34d9cf6e9a81dabe62591e
+  support: supports
+  summary: Winey 1995 reconstructs serial-section electron micrographs of fixed yeast
+    spindles; it does not perform the live-cell tracking attributed to it by the two
+    notes.
+- evidence_id: straight
+  kind: primary_source
+  reference: DOI:10.1126/science.277.5325.574
+  locator: Exact DOI/PMID 9228009 and primary abstract
+  accessed_at: '2026-10-11T20:51:19Z'
+  snapshot_sha256: c4738e76d7a623c5921191562b5c21372122563e6e6f6042d26a989719b9f8bd
+  support: supports
+  summary: Straight 1997 directly reports live-cell chromosome/spindle imaging and
+    GFP-Tub1 detection. The record already cites this source locally for its component
+    and function, not the two example notes.
+- evidence_id: jaspersen-id
+  kind: primary_source
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  locator: Exact DOI/PMID 15473833, title and source abstract
+  accessed_at: '2026-10-11T20:51:20Z'
+  snapshot_sha256: 8979c5d9e2c5cd8beecce7ff11b7ea31d5a4dbb6fb49886f3fffb6ecaa8c3a73
+  support: supports
+  summary: Jaspersen/Winey 2004 review identity verified; abstract alone does not
+    establish plaque-specific details.
+- evidence_id: jaspersen-text
+  kind: primary_source
+  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  locator: 'Author-uploaded article text: https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function
+    ; SPB Structure, The Core SPB, Microtubule-Dependent SPB Functions'
+  accessed_at: '2026-10-11T20:58:12Z'
+  support: supports
+  summary: Inspected cited review text distinguishes nuclear microtubules at the inner
+    plaque from cytoplasmic microtubules at the outer plaque and half-bridge. This
+    supports the bounded budding-yeast organization context; it is secondary synthesis,
+    not a new direct experiment.
+assessments:
+- assessment_id: identity
+  area: grounding
+  topic: Identity, kind, hierarchy and parthood
+  outcome: supported
+  target_ids:
+  - GO:0072686
+  evidence_ids:
+  - record
+  - go
+  summary: GO:0072686 denotes the mitotic spindle array, a subtype of spindle containing
+    spindle microtubules. OTHER avoids representing the entire array as one filament.
+    The exact GO definition is preserved.
+- assessment_id: composition
+  area: evidence
+  topic: Tubulin composition and essentiality
+  outcome: supported
+  target_ids:
+  - GO:0072686
+  evidence_ids:
+  - record
+  - go
+  - straight
+  summary: Alpha/beta-tubulin is the defining polymer constituent, not a single strain-specific
+    protein. Label-only grounding and unresolved accessory proteins are explicit.
+    No accession, fixed copy number or assembly sufficiency is invented.
+- assessment_id: functions-graph
+  area: evidence
+  topic: Function and all graph edges
+  outcome: supported
+  target_ids:
+  - GO:0072686
+  evidence_ids:
+  - record
+  - go
+  - winey
+  - straight
+  - jaspersen-text
+  summary: Chromosome segregation is supported by the primary live-cell abstract.
+    The NONMECHANISTIC FUNCTION graph retains pole anchoring, microtubule array membership
+    and subset kinetochore attachment; sources distinguish presumptive kinetochore/interpolar
+    microtubules and do not claim every filament contacts a kinetochore.
+- assessment_id: example-attribution
+  area: evidence
+  topic: Single-reference example notes
+  outcome: concern
+  target_ids:
+  - GO:0072686
+  evidence_ids:
+  - record
+  - winey
+  - straight
+  - rubric
+  summary: Both taxonomic_distribution[0].note and canonical_examples[0].note combine
+    serial-section structural reconstruction with live-cell imaging/tracking, but
+    each single reference is Winey et al. 1995 (DOI:10.1083/jcb.129.6.1601). Its inspected
+    methods prepare fixed samples for EM and computational reconstruction. Live-cell
+    GFP-Tub1/chromosome tracking comes from Straight et al. 1997, cited elsewhere
+    in the record. Narrow both notes to the serial-section result supported by their
+    own reference; preserve the separately cited live-cell component/function evidence.
+- assessment_id: provenance
+  area: completeness
+  topic: Discussions, history and optional resources
+  outcome: supported
+  target_ids:
+  - GO:0072686
+  evidence_ids:
+  - record
+  - history
+  - rubric
+  summary: Existing SPB/kinetochore boundary and MAP grounding TODO are meaningful
+    and preserved. No image, direct measurement, dataset, trait/pathway link or exact
+    protein accession is asserted. Old Codex inline and claude-code history attribution
+    is retained rather than retroactively rewritten.
+findings:
+- finding_id: F1
+  issue_key: mitotic-spindle-example-single-citation-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Keep mitotic-spindle example notes within their cited experiment
+  description: Both taxonomic_distribution[0].note and canonical_examples[0].note
+    combine serial-section structural reconstruction with live-cell imaging/tracking,
+    but each single reference is Winey et al. 1995 (DOI:10.1083/jcb.129.6.1601). Its
+    inspected methods prepare fixed samples for EM and computational reconstruction.
+    Live-cell GFP-Tub1/chromosome tracking comes from Straight et al. 1997, cited
+    elsewhere in the record. Narrow both notes to the serial-section result supported
+    by their own reference; preserve the separately cited live-cell component/function
+    evidence.
+  target_ids:
+  - GO:0072686
+  field_paths:
+  - taxonomic_distribution[0].note
+  - canonical_examples[0].note
+  evidence_ids:
+  - record
+  - winey
+  - straight
+  - rubric
+  - sibling-issue
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mitotic_spindle.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: minor
+  normalization_reason: Bounded, non-blocking claim-local provenance mismatch. The
+    live-cell result itself is supported by another cited paper, and structure identity,
+    taxon and function remain sound.
+actions:
+- action_id: A1
+  description: Narrow both Winey-only example notes to serial-section electron-microscopy
+    reconstruction.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0072686
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mitotic_spindle.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Both example notes describe only the serial-section EM result and retain DOI:10.1083/jcb.129.6.1601.
+  - Preserve Straight 1997 evidence on the tubulin component and chromosome-segregation
+    function, all graph edges and existing discussions/history.
+  - Use the guarded writer, actual Codex curation and append-only EDIT history; retain
+    PROPOSED status.
+  - Demonstrate red/green regressions for both affected fields; regenerate derived
+    products and pass native QC and canonical review checks.
+limitations:
+- Same-agent scientific review, not independent human approval or raw-data reanalysis.
+- Straight 1997 was inspected at primary-abstract scope, sufficient for the asserted
+  GFP-Tub1/live-cell claims; no uninspected quantitative claim is added. Jaspersen
+  2004 cited review text was inspected through its public author-uploaded copy; publisher
+  retrieval exposed only the abstract.
+- Full QC uses live-verified exact-baseline CI; local scoped/global gates and contract
+  tests ran separately. Known resolver/label namespaces and three existing test skips
+  remain explicit.
+- No verbatim snippets in this record; paraphrases were checked scientifically. Optional
+  unresolved associated proteins are not defects.
+- Twelve records were captured. This single-target bundle certifies only mitotic_spindle
+  review scope, not the eight larger records whose source/figure review remains incomplete.
