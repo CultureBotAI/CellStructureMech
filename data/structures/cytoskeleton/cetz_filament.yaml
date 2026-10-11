@@ -27,8 +27,14 @@ curation_history:
     taxonomic row, narrowing the CetZ component and graph from CetZ1/CetZ2 proteins
     to CetZ1-like proteins, and adding a resolved CetZ2 boundary discussion.'
   llm_assisted: true
+- timestamp: '2026-10-11T17:56:32Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2232: Corrected cytoskeleton parthood and retained the specific
+    filament-system identity.'
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0099513
 components:
 - component_id: cetz1_like_proteins
   label: CetZ1-like proteins
@@ -81,6 +87,12 @@ evidence:
 - reference: DOI:10.3390/biom13010134
   notes: Brown and Duggin 2023, 'Diversity and Potential Multifunctionality of Archaeal
     CetZ Tubulin-like Cytoskeletal Proteins', Biomolecules.
+- reference: GO:0005856
+  notes: The containing cytoskeletal framework; this filament system is part of it,
+    not a type of the whole framework.
+- reference: GO:0099513
+  notes: Broader polymeric cytoskeletal fiber class; this specific protein polymer
+    retains its local identity.
 causal_graphs:
 - graph_id: cetz1_rod_cell_development
   title: CetZ filaments support Haloferax rod-cell development
@@ -184,3 +196,5 @@ discussions:
       class.
   posed_by: codex
   posed_date: '2026-09-11'
+part_of:
+- GO:0005856

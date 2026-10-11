@@ -26,8 +26,14 @@ curation_history:
     PhuZ rotation function and broadening PhuZ component/grounding wording from strictly
     nucleus-positioning to positioning-or-rotation cytoskeletal systems.'
   llm_assisted: true
-parent_structures:
-- GO:0005856
+- timestamp: '2026-10-11T17:56:38Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2234, #2235: Corrected cytoskeleton parthood and retained the
+    specific filament-system identity. Separated the Goslar vortex into an explicit
+    boundary discussion and grounded retained spindle rotation in primary 201phi2-1
+    experiments.'
+  llm_assisted: true
 synonyms:
 - synonym_text: phage tubulin spindle
   synonym_type: RELATED_SYNONYM
@@ -41,12 +47,12 @@ components:
   - phuZ
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact source-neutral CURIE for phage PhuZ tubulin proteins that
-    build nucleus-positioning or nucleus-rotating cytoskeletal systems was verified
-    in this pass.
+  grounding_notes: No exact source-neutral CURIE for spindle-forming phage PhuZ tubulins
+    was verified in this pass; a broad tubulin/FtsZ domain or a phage-specific accession
+    is not an exact family grounding.
   role: Phage-encoded tubulin-like protein that polymerizes into dynamic filaments
-    of spindles or vortex arrays that position or rotate jumbo-phage nuclei in infected
-    bacterial cells.
+    of bipolar spindles that position and can rotate jumbo-phage nuclei in infected
+    Pseudomonas cells.
   evidence:
   - reference: DOI:10.7554/eLife.03197
     notes: Erb et al. 2014 characterized Pseudomonas phage 201phi2-1 PhuZ as a dynamically
@@ -55,9 +61,6 @@ components:
   - reference: DOI:10.1016/j.celrep.2017.07.064
     notes: Chaikeeratisak et al. 2017 showed that dynamic PhuZ polymers form bipolar
       spindles associated with nucleus-like compartments in large Pseudomonas phages.
-  - reference: DOI:10.1016/j.celrep.2022.111179
-    notes: Birkholz et al. 2022 showed that Goslar PhuZ filaments form a vortex-like
-      cytoskeleton that rotates the mature phage nucleus.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:198110
   taxon_label: Pseudomonas phage 201phi2-1
@@ -65,24 +68,12 @@ taxonomic_distribution:
   note: Pseudomonas phage 201phi2-1 uses PhuZ polymers to center replicating phage
     DNA during infection of Pseudomonas chlororaphis.
   reference: DOI:10.7554/eLife.03197
-- taxon_id: NCBITaxon:2502409
-  taxon_label: Escherichia phage vB_EcoM_Goslar
-  presence: COMMON
-  note: Escherichia phage vB_EcoM_Goslar encodes PhuZ filaments that assemble into
-    a vortex-like cytoskeleton and rotate the phage nucleus during infection of Escherichia
-    coli.
-  reference: DOI:10.1016/j.celrep.2022.111179
 canonical_examples:
 - taxon_id: NCBITaxon:198110
   taxon_label: Pseudomonas phage 201phi2-1
   note: Jumbo phage whose dynamically unstable PhuZ filaments established the phage-encoded
     tubulin spindle as a nucleus-positioning system.
   reference: DOI:10.7554/eLife.03197
-- taxon_id: NCBITaxon:2502409
-  taxon_label: Escherichia phage vB_EcoM_Goslar
-  note: Jumbo Escherichia phage used to connect a vortex-like PhuZ cytoskeleton with
-    rotation of mature phage nuclei.
-  reference: DOI:10.1016/j.celrep.2022.111179
 functions:
 - function_id: phage_nucleus_positioning
   label: phage nucleus positioning
@@ -97,12 +88,14 @@ functions:
       compartment positioning in PhiKZ and PhiPA3 infections.
 - function_id: phage_nucleus_rotation
   label: phage nucleus rotation
-  description: A vortex-like PhuZ cytoskeleton can rotate a mature phage nucleus during
-    jumbo-phage replication.
+  description: The bipolar PhuZ spindle can rotate the phage nucleus during Pseudomonas
+    phage 201phi2-1 infection, as opposing filaments act on opposite sides of the
+    nucleus.
   evidence:
-  - reference: DOI:10.1016/j.celrep.2022.111179
-    notes: Birkholz et al. 2022 showed that Goslar PhuZ filaments form a vortex-like
-      cytoskeleton that drives phage nucleus rotation during Escherichia coli infection.
+  - reference: DOI:10.1126/science.aal2130
+    notes: Chaikeeratisak et al. 2017 Figure 1 and time-lapse experiments show nucleus
+      movement and rotation with dynamic PhuZ; the static D190A mutant strongly disrupts
+      both.
 evidence:
 - reference: DOI:10.7554/eLife.03197
   notes: Erb, Kraemer, Coker, Chaikeeratisak, Nonejuie, Agard and Pogliano 2014, 'A
@@ -112,8 +105,16 @@ evidence:
   notes: Chaikeeratisak et al. 2017, 'The Phage Nucleus and Tubulin Spindle Are Conserved
     among Large Pseudomonas Phages', Cell Reports.
 - reference: DOI:10.1016/j.celrep.2022.111179
-  notes: Birkholz et al. 2022, 'A cytoskeletal vortex drives phage nucleus rotation
-    during jumbo phage replication in E. coli', Cell Reports.
+  notes: 'Birkholz et al. 2022, A cytoskeletal vortex drives phage nucleus rotation
+    during jumbo phage replication in E. coli, Cell Reports. Contrasting boundary
+    evidence: Goslar forms a vortex rather than the bipolar spindle curated here.'
+- reference: GO:0005856
+  notes: The containing cytoskeletal framework; this filament system is part of it,
+    not a type of the whole framework.
+- reference: DOI:10.1126/science.aal2130
+  notes: Chaikeeratisak et al. 2017, Assembly of a nucleus-like structure during viral
+    replication in bacteria, Science. Figure 1 supports spindle-mediated positioning
+    and rotation in 201phi2-1 infection.
 causal_graphs:
 - graph_id: phuz_spindle_positioning
   title: PhuZ spindles position jumbo-phage nuclei
@@ -210,3 +211,35 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-11'
   resolved_date: '2026-09-11'
+- discussion_id: phuz_spindle_excludes_goslar_vortex
+  prompt: Keep the bipolar spindle distinct from the Goslar PhuZ cytoskeletal vortex.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - definition
+  - components#phuz
+  - functions#phage_nucleus_rotation
+  - causal_graphs#phuz_spindle_positioning
+  rationale: 'Earlier review issues #481 and #482 added Goslar occurrence and broadened
+    PhuZ component wording to match the then-curated vortex rotation function. Birkholz
+    et al. 2022 explicitly distinguish the Goslar vortex from a bipolar spindle and
+    report that it does not center the nucleus at midcell. The existing record identifier,
+    definition and positioning graph denote the spindle, not every PhuZ array.'
+  resolution_note: Retain the spindle identity and supported Pseudomonas positioning
+    graph. Remove Goslar as a spindle example and keep its evidence here as a contrast.
+    Rotation remains a spindle function with direct 201phi2-1 evidence from Chaikeeratisak
+    et al. 2017, rather than borrowing the Goslar vortex mechanism. Original discussions
+    and history remain unchanged as provenance; this clarification narrows their earlier
+    broad family rationale. A separate vortex record is outside this correction.
+  evidence:
+  - reference: DOI:10.1016/j.celrep.2022.111179
+    notes: Results and Figures 2-5 distinguish the vortex from a bipolar spindle and
+      separate rotation from midcell positioning.
+  - reference: DOI:10.1126/science.aal2130
+    notes: Figure 1 and time-lapse experiments connect the bipolar spindle with both
+      nucleus positioning and rotation.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'
+part_of:
+- GO:0005856

@@ -33,8 +33,14 @@ curation_history:
     TubR-tubC graph node and retargeting the adapter edge from TubZ monomers to TubZ
     filaments.'
   llm_assisted: true
+- timestamp: '2026-10-11T17:56:35Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2233: Corrected cytoskeleton parthood and retained the specific
+    filament-system identity.'
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0099513
 components:
 - component_id: tubz
   label: TubZ
@@ -97,6 +103,12 @@ evidence:
 - reference: DOI:10.1073/pnas.1210899109
   notes: Aylett and Lowe 2012, 'Superstructure of the centromeric complex of TubZRC
     plasmid partitioning systems', PNAS.
+- reference: GO:0005856
+  notes: The containing cytoskeletal framework; this filament system is part of it,
+    not a type of the whole framework.
+- reference: GO:0099513
+  notes: Broader polymeric cytoskeletal fiber class; this specific protein polymer
+    retains its local identity.
 causal_graphs:
 - graph_id: tubzrc_pbtoxis_partitioning
   title: TubZ filaments support pBtoxis plasmid partitioning
@@ -186,3 +198,5 @@ discussions:
       of the TubZ partition filament.
   posed_by: codex
   posed_date: '2026-09-11'
+part_of:
+- GO:0005856

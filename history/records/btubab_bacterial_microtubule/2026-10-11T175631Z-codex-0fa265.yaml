@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/btubab_bacterial_microtubule.yaml
+  slug: btubab_bacterial_microtubule
+session:
+  id: 2026-10-11T175631Z-codex-0fa265
+  timestamp: '2026-10-11T17:56:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2231
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - evidence
+  - parent_structures
+  - part_of
+  summary: 'Addressed #2231: Corrected cytoskeleton parthood and retained the specific filament-system
+    identity.'
+  details: 'Original immutable observation: reviews/structured/20261011T175513Z-btubab_bacterial_microtubule-audit/review.yaml.
+    Corrected cytoskeleton parthood and retained the specific filament-system identity. Guarded
+    writer; original discussions/history and PROPOSED status retained.'
