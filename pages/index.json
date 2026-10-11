@@ -486,7 +486,7 @@
   "kind": "APPENDAGE",
   "status": "PROPOSED",
   "page": "structures/appendage/tad_pilus.html",
-  "definition": "A tight-adherence subtype of type IV pilus that extends and retracts from a bacterial cell pole. In Caulobacter vibrioides, Tad pili are polar PilA filaments whose dynamic activity promotes surface sensing, surface colonization and holdfast-dependent permanent attachment.",
+  "definition": "A tight-adherence (Tad/Flp) subtype of type IV pilus involved in bacterial adhesion and colonization. In the Caulobacter vibrioides model, polar PilA filaments extend and retract during surface exploration and promote holdfast-dependent permanent attachment; this dynamic behavior is not asserted for every Tad system.",
   "synonyms": "tight-adherence pilus type IVc pilus Flp pilus"
  },
  {
@@ -496,7 +496,7 @@
   "kind": "APPENDAGE",
   "status": "PROPOSED",
   "page": "structures/appendage/type_i_pilus.html",
-  "definition": "A chaperone-usher bacterial pilus assembled from a helical FimA rod tipped by the adaptor subunits FimG and FimF and the mannose-binding FimH adhesin. In Escherichia coli, the type I pilus is polymerized through the outer-membrane FimD usher and terminated by a basal FimI subunit that anchors the completed rod to the assembly platform.",
+  "definition": "A mannose-sensitive adhesive bacterial pilus assembled by the chaperone-usher pathway. In the Escherichia coli model, a helical FimA rod carries an ordered FimH-FimG-FimF tip, is polymerized through the FimD usher, and ends in a basal FimI terminator. Other type I systems, including Salmonella, have different subunit inventories.",
   "synonyms": "type 1 pilus type 1 fimbria mannose-sensitive pilus"
  },
  {

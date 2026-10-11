@@ -42,6 +42,12 @@ curation_history:
     constituents, assigned structural rather than functional essentiality, and updated
     graph references and the existing grounding discussion.'
   llm_assisted: true
+- timestamp: '2026-10-11T06:33:26Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2185: Restored the exact original StpABCD grounding rationale
+    and retained the scaffold/sealing explanation as a dated append-only reassessment.'
+  llm_assisted: true
 synonyms:
 - synonym_text: stalk band
   synonym_type: EXACT_SYNONYM
@@ -218,10 +224,12 @@ discussions:
   attaches_to:
   - components#stp_ab_crossband_scaffold
   - components#stp_cd_barrier_sealing_proteins
-  rationale: The record separates the StpAB scaffold cohort from StpCD sealing constituents.
+  rationale: 'The first record uses a reviewed label for the StpABCD cohort until
+    an exact protein-family or complex identifier is verified. Reassessment on 2026-10-11:
+    The record separates the StpAB scaffold cohort from StpCD sealing constituents.
     Both use reviewed labels until exact protein-family or complex identifiers are
     verified; historical StpABCD membership is retained without conflating their structural
-    essentiality.
+    essentiality.'
   posed_by: codex
   posed_date: '2026-09-11'
 - discussion_id: separate_from_prostheca

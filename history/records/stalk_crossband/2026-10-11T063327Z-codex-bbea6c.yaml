@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/stalk_crossband.yaml
+  slug: stalk_crossband
+session:
+  id: 2026-10-11T063327Z-codex-bbea6c
+  timestamp: '2026-10-11T06:33:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2185
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - discussions
+  summary: 'Addressed #2185: Restored the exact original StpABCD grounding rationale and retained
+    the scaffold/sealing explanation as a dated append-only reassessment.'
+  details: 'Original findings saved before mutation in reviews/structured/20261011T063146Z-stalk_crossband-audit/review.yaml.
+    Addresses #2185. Guarded curation preserved PROPOSED, prior events, histories and discussion
+    rationale; post-change tests and full QC required before publication.'

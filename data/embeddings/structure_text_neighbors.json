@@ -142,11 +142,6 @@
           "cosine_similarity": 0.76127803
         },
         {
-          "identifier": "GO:0140621",
-          "label": "type I pilus",
-          "cosine_similarity": 0.75142088
-        },
-        {
           "identifier": "cellstructuremech:basal_body_inner_scaffold",
           "label": "basal body inner scaffold",
           "cosine_similarity": 0.74931268
@@ -160,6 +155,11 @@
           "identifier": "GO:0140737",
           "label": "encapsulin nanocompartment",
           "cosine_similarity": 0.73338714
+        },
+        {
+          "identifier": "GO:0020031",
+          "label": "polar ring of apical complex",
+          "cosine_similarity": 0.73012184
         }
       ]
     },
@@ -855,6 +855,11 @@
           "cosine_similarity": 0.72769845
         },
         {
+          "identifier": "GO:0044096",
+          "label": "type IV pilus",
+          "cosine_similarity": 0.65671565
+        },
+        {
           "identifier": "GO:0062155",
           "label": "curli secretion complex",
           "cosine_similarity": 0.64812663
@@ -865,14 +870,9 @@
           "cosine_similarity": 0.64666853
         },
         {
-          "identifier": "GO:0044096",
-          "label": "type IV pilus",
-          "cosine_similarity": 0.63795796
-        },
-        {
-          "identifier": "cellstructuremech:tad_pilus",
-          "label": "Tad pilus",
-          "cosine_similarity": 0.63494731
+          "identifier": "GO:0140621",
+          "label": "type I pilus",
+          "cosine_similarity": 0.63392944
         }
       ]
     },
@@ -994,9 +994,9 @@
           "cosine_similarity": 0.57402436
         },
         {
-          "identifier": "GO:0009289",
-          "label": "pilus",
-          "cosine_similarity": 0.5575739
+          "identifier": "GO:0044096",
+          "label": "type IV pilus",
+          "cosine_similarity": 0.57114426
         }
       ]
     },
@@ -1286,17 +1286,17 @@
         {
           "identifier": "GO:0140621",
           "label": "type I pilus",
-          "cosine_similarity": 0.85709926
-        },
-        {
-          "identifier": "GO:0044096",
-          "label": "type IV pilus",
-          "cosine_similarity": 0.77983089
+          "cosine_similarity": 0.82452522
         },
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.76127803
+        },
+        {
+          "identifier": "GO:0044096",
+          "label": "type IV pilus",
+          "cosine_similarity": 0.74151577
         },
         {
           "identifier": "GO:0009289",
@@ -1306,7 +1306,7 @@
         {
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
-          "cosine_similarity": 0.70199153
+          "cosine_similarity": 0.70295548
         }
       ]
     },
@@ -1377,19 +1377,19 @@
       "label": "pilus",
       "neighbors": [
         {
-          "identifier": "cellstructuremech:tad_pilus",
-          "label": "Tad pilus",
-          "cosine_similarity": 0.82037848
-        },
-        {
           "identifier": "GO:0044096",
           "label": "type IV pilus",
-          "cosine_similarity": 0.80981144
+          "cosine_similarity": 0.8452913
+        },
+        {
+          "identifier": "cellstructuremech:tad_pilus",
+          "label": "Tad pilus",
+          "cosine_similarity": 0.81429979
         },
         {
           "identifier": "GO:0140621",
           "label": "type I pilus",
-          "cosine_similarity": 0.75182468
+          "cosine_similarity": 0.7944674
         },
         {
           "identifier": "GO:0009420",
@@ -1420,7 +1420,7 @@
         {
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
-          "cosine_similarity": 0.72155508
+          "cosine_similarity": 0.72298225
         },
         {
           "identifier": "GO:0009289",
@@ -1470,6 +1470,11 @@
       "label": "suctorian feeding tentacle",
       "neighbors": [
         {
+          "identifier": "GO:0044096",
+          "label": "type IV pilus",
+          "cosine_similarity": 0.74699159
+        },
+        {
           "identifier": "GO:0005929",
           "label": "cilium",
           "cosine_similarity": 0.7448613
@@ -1478,11 +1483,6 @@
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.72824544
-        },
-        {
-          "identifier": "GO:0044096",
-          "label": "type IV pilus",
-          "cosine_similarity": 0.7158859
         },
         {
           "identifier": "GO:0001400",
@@ -1503,27 +1503,27 @@
         {
           "identifier": "GO:0044096",
           "label": "type IV pilus",
-          "cosine_similarity": 0.82228522
+          "cosine_similarity": 0.81958654
         },
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.82037848
+          "cosine_similarity": 0.81429979
         },
         {
           "identifier": "cellstructuremech:prostheca",
           "label": "prostheca",
-          "cosine_similarity": 0.72155508
+          "cosine_similarity": 0.72298225
         },
         {
           "identifier": "GO:0140621",
           "label": "type I pilus",
-          "cosine_similarity": 0.71221259
+          "cosine_similarity": 0.71605609
         },
         {
           "identifier": "cellstructuremech:p_pilus",
           "label": "P pilus",
-          "cosine_similarity": 0.70199153
+          "cosine_similarity": 0.70295548
         }
       ]
     },
@@ -1534,27 +1534,27 @@
         {
           "identifier": "cellstructuremech:p_pilus",
           "label": "P pilus",
-          "cosine_similarity": 0.85709926
-        },
-        {
-          "identifier": "GO:0044096",
-          "label": "type IV pilus",
-          "cosine_similarity": 0.81818511
+          "cosine_similarity": 0.82452522
         },
         {
           "identifier": "GO:0009289",
           "label": "pilus",
-          "cosine_similarity": 0.75182468
+          "cosine_similarity": 0.7944674
         },
         {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.75142088
+          "identifier": "GO:0044096",
+          "label": "type IV pilus",
+          "cosine_similarity": 0.77911835
+        },
+        {
+          "identifier": "GO:0009421",
+          "label": "bacterial-type flagellum filament cap",
+          "cosine_similarity": 0.75743282
         },
         {
           "identifier": "GO:0009422",
           "label": "bacterial-type flagellum hook-filament junction",
-          "cosine_similarity": 0.72858771
+          "cosine_similarity": 0.72922934
         }
       ]
     },
@@ -1563,29 +1563,29 @@
       "label": "type IV pilus",
       "neighbors": [
         {
+          "identifier": "GO:0009289",
+          "label": "pilus",
+          "cosine_similarity": 0.8452913
+        },
+        {
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
-          "cosine_similarity": 0.82228522
+          "cosine_similarity": 0.81958654
         },
         {
           "identifier": "GO:0140621",
           "label": "type I pilus",
-          "cosine_similarity": 0.81818511
+          "cosine_similarity": 0.77911835
         },
         {
-          "identifier": "GO:0009289",
-          "label": "pilus",
-          "cosine_similarity": 0.80981144
+          "identifier": "cellstructuremech:suctorian_feeding_tentacle",
+          "label": "suctorian feeding tentacle",
+          "cosine_similarity": 0.74699159
         },
         {
           "identifier": "cellstructuremech:p_pilus",
           "label": "P pilus",
-          "cosine_similarity": 0.77983089
-        },
-        {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.72391213
+          "cosine_similarity": 0.74151577
         }
       ]
     },
@@ -19884,14 +19884,14 @@
       "label": "holdfast",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:tad_pilus",
+          "label": "Tad pilus",
+          "cosine_similarity": 0.69289194
+        },
+        {
           "identifier": "cellstructuremech:prostheca",
           "label": "prostheca",
           "cosine_similarity": 0.68276843
-        },
-        {
-          "identifier": "cellstructuremech:tad_pilus",
-          "label": "Tad pilus",
-          "cosine_similarity": 0.68020067
         },
         {
           "identifier": "cellstructuremech:stalk_crossband",

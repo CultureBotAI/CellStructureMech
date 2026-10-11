@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/type_i_pilus.yaml
+  slug: type_i_pilus
+session:
+  id: 2026-10-11T063323Z-codex-755499
+  timestamp: '2026-10-11T06:33:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2182
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - components
+  - curation_history
+  - definition
+  - discussions
+  - functions
+  summary: 'Addressed #2182, #2183: Separated broad type I identity from the E. coli Fim inventory
+    and added the confirmed 2025 FimI termination source to the assembly function.'
+  details: 'Original findings saved before mutation in reviews/structured/20261011T063133Z-type_i_pilus-audit/review.yaml.
+    Addresses #2182, #2183. Guarded curation preserved PROPOSED, prior events, histories and
+    discussion rationale; post-change tests and full QC required before publication.'

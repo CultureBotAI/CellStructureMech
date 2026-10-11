@@ -1,0 +1,456 @@
+schema_version: 1.0.0
+review_id: 20261011T064645Z-tad_pilus-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Tad pilus: finding dispositions'
+started_at: '2026-10-11T06:36:55Z'
+finished_at: '2026-10-11T06:46:45Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent source-backed reassessment and separate adversarial
+    diff inspection; not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact predecessor findings resolved; source tiers and biological uncertainties
+  remain explicit. No scientific status promotion.
+source:
+  git_revision: 7214d5ae8dc9664472ed965a9bc8c0534a0c0bfd
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 64862db2087298ae832b8a8410185349cc277151af31d88ce231e43201ab9440
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/appendage/p_pilus.yaml
+    sha256: c9e8371a5cc6cda0a28d5264a6a2c2368a703670b3c285fc12f1aa58b6adafa9
+    role: context
+  - path: data/structures/appendage/pilus.yaml
+    sha256: b82205e792d181aa2e2cb76eb56a2ecafdb3021302c7b86a5819c649528bc06b
+    role: context
+  - path: data/structures/appendage/suctorian_feeding_tentacle.yaml
+    sha256: 6165bcfed6515881367eba4fe55aafd95e31be8c42f55d78179ceecb93f27400
+    role: context
+  - path: data/structures/appendage/tad_pilus.yaml
+    sha256: 34bb82ab5fe3599c02d673a2b8b80fe7ec12fa4228d504e1ad7cd028a61bca93
+    role: target
+  - path: data/structures/appendage/type_i_pilus.yaml
+    sha256: 4c628643f9f8e5360cd1a8f1129ec9f5101978f37555e8e5005cd2ff18781cca
+    role: context
+  - path: data/structures/appendage/type_iv_pilus.yaml
+    sha256: 21347bc455f18fe18d71eeb73a2f0a48d8a3ced0d8ff27e04ec6e844c2f52ca4
+    role: context
+  - path: data/structures/appendage/y_shaped_link.yaml
+    sha256: 89637052ba32ba24d695d33a540116783a09124de805feeaa9430f1f5c702841
+    role: context
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/tad_pilus/2026-09-11T024246Z-codex-b2dd41.yaml
+    sha256: a9f6e19598489f32a8d637d7ba2db7eb64afa39836e865228eee9d5a59164b81
+    role: context
+  - path: history/records/tad_pilus/2026-09-11T025159Z-codex-82e70f.yaml
+    sha256: 26ff6b134d34d6206b62a8e70d23c9ea7603d6f1e1e15ed1e8de5cb956693c96
+    role: context
+  - path: history/records/tad_pilus/2026-10-11T063321Z-codex-1c202e.yaml
+    sha256: dd77c4093c20f87bf291247a671a41680227b62d4ac043ba328acb2136b1f2ec
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/evidence_readability.tad_pilus.tsv
+    sha256: 09e9d4e2d3fd0b4e8cd7505f7be3daf4b24a3cfd5e22392ec08f1358e7a42d68
+    role: context
+  - path: reviews/structured/20261011T063126Z-tad_pilus-audit/review.yaml
+    sha256: d93a292abae2bd3d36427e7aff7f83e4497d825219b6ee48910812e7ba826620
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_pilus_scope_review.py
+    sha256: 9c92e7a829bbbb6525bf63c3459e9957383cbe969e1a112f89a60ec5b30fa4d3
+    role: context
+targets:
+- target_id: cellstructuremech:tad_pilus
+  path: data/structures/appendage/tad_pilus.yaml
+  label: Tad pilus
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/tad_pilus.yaml
+    role: maintained scientific record
+scope:
+  description: Exact predecessor findings and changed fields, including append-only
+    provenance; not a repeated whole-record scientific review.
+  selection: 20261011T063126Z-tad_pilus-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:tad_pilus
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/tad_pilus.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:33:37Z to 2026-10-11T06:33:40Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/tad_pilus.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:33:40Z to 2026-10-11T06:33:44Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/tad_pilus.yaml
+    --report /private/tmp/csm-review-20261011T062301Z/tad_pilus-post-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:33:44Z to 2026-10-11T06:34:08Z; log SHA-256 2ec08b67f30e2c8e9749d3452814664dd824d228b1e37e2d799b6b14f06b211d
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:35:26Z to 2026-10-11T06:35:47Z; log SHA-256 e836c3a60d88b76a8f3886dd6bf8d339fcbd2229409e99019ae17006c6c6f673
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T06:35:47Z to 2026-10-11T06:37:28Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:37:28Z to 2026-10-11T06:37:45Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\nresolving 1 DOI identifier(s)...\n\nidentifier liveness summary:\n  OK\
+    \             4012\n  SKIPPED         251\n\nEvery identifier resolves at its\
+    \ issuing authority."
+  scope_note: 2026-10-11T06:37:45Z to 2026-10-11T06:38:37Z; log SHA-256 689f734e0d1a1d4dcd14294887e0791542956f43f22b8ac6ad2578c8e214e200
+- check_id: regressions
+  name: regressions
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: .venv/bin/python -m pytest -q tests/test_pilus_scope_review.py tests/test_stalk_evidence_review.py
+    tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '.................................                                        [100%]
+
+    33 passed in 37.32s'
+  scope_note: 2026-10-11T06:38:37Z to 2026-10-11T06:39:15Z; log SHA-256 d80be767bcfe8b26473cf122a106daa0d66b1522063250ed94a9e59a10a22c77
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: .venv/bin/python scripts/record_review.py check --base 617a24ae7989e21e482bb32d3d527b05d5b475b6
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:39:15Z to 2026-10-11T06:39:57Z; log SHA-256 6f78a061ae40b61bbe5427b44d8a84cfda7f9cb6dfca451b6a3a5cc0158fd313
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T06:39:57Z to 2026-10-11T06:39:57Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: release-qc
+  name: release-qc
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tad_pilus
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Authoritative full local QC passed, including tests, all-record schema,
+    histories and generated-product checks. PR and native merge-group checks are separate
+    publication gates.
+  scope_note: 2026-10-11T06:36:52Z to 2026-10-11T06:46:42Z; log SHA-256 60e18bf851ba93585d294e573bda35d7743a0a5da277bed4d7aedc7d1ed6c861
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/tad_pilus.yaml
+  accessed_at: '2026-10-11T06:46:45Z'
+  snapshot_sha256: 34bb82ab5fe3599c02d673a2b8b80fe7ec12fa4228d504e1ad7cd028a61bca93
+  support: context_only
+  summary: Corrected native bytes reread against exact predecessor findings and the
+    stated source tiers.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T06:31:26Z'
+  snapshot_sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+  support: context_only
+  summary: Requires exact claim-level scope, constituent/machinery distinction and
+    append-only discussion rationale.
+- evidence_id: go-0044096
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0044096
+  locator: Exact current QuickGO term
+  accessed_at: '2026-10-11T06:27:20Z'
+  snapshot_sha256: 2d0550e159fe884cb3dbf4bfed109d00edab2a4ac93b6a5e5f1c13670fc37e3d
+  support: supports
+  summary: Active exact term agrees with native identity, relation or process use.
+- evidence_id: taxon-155892
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=155892&retmode=xml
+  locator: Exact NCBI Taxonomy identity and names
+  accessed_at: '2026-10-11T06:27:27Z'
+  snapshot_sha256: 5ea1a8caecaa970cbcd5ee3ea31b633d6f7c1fae0b182c957f8bd620afbdac99
+  support: supports
+  summary: Taxon and current scientific name resolve; taxonomy is not evidence of
+    prevalence.
+- evidence_id: taxon-565050
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=565050&retmode=xml
+  locator: Exact NCBI Taxonomy identity and names
+  accessed_at: '2026-10-11T06:27:29Z'
+  snapshot_sha256: decdfae2f628710ac8c7251a3d7d9800a969779330cb19b44403604f9f172899
+  support: supports
+  summary: Taxon and current scientific name resolve; taxonomy is not evidence of
+    prevalence.
+- evidence_id: adapter-inventory
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/adapter.log
+  accessed_at: '2026-10-11T06:31:26Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: Live 28-dataset iModulonDB inventory; no matching Caulobacter coverage.
+    E. coli and P. aeruginosa searches were inspected.
+- evidence_id: sangermani
+  kind: primary_source
+  reference: DOI:10.1128/mBio.01237-19
+  locator: Introduction, Results, Discussion, strain Methods and figure captions
+  accessed_at: '2026-10-11T06:25:02Z'
+  snapshot_sha256: f60983d463d55b2cef6f51f8207d73093f54dec1db93ba65b57f8146a0921a0f
+  support: supports
+  summary: Caulobacter polar PilA pili are dynamic; broader Tad dynamics are not universal.
+    NA1000 is holdfast-deficient, with restored derivatives used where holdfast is
+    needed.
+- evidence_id: hohl
+  kind: primary_source
+  reference: DOI:10.1038/s41467-024-50280-6
+  locator: Abstract, Introduction, CpaF motor results and Discussion
+  accessed_at: '2026-10-11T06:24:46Z'
+  snapshot_sha256: 9473143a8348384d948f0c77d7e4457061ec71f93d45787a689f82ff45194461
+  support: supports
+  summary: CpaF bidirectionality is Caulobacter-scoped; its conservation throughout
+    Tad systems is explicitly unresolved. Proposed nucleotide-switch mechanism is
+    a model.
+- evidence_id: ellison2017
+  kind: primary_source
+  reference: DOI:10.1126/science.aan5706
+  locator: Primary abstract only
+  accessed_at: '2026-10-11T06:24:57Z'
+  snapshot_sha256: 8d9bd9bb98948c01e9bd5883e8a6194970efdd99f4df0dcfc8ec30cf1dd152bf
+  support: supports
+  summary: Direct pilus imaging and obstructed retraction support Caulobacter surface
+    sensing; not the original motor-identification experiment.
+- evidence_id: ellison2019
+  kind: primary_source
+  reference: DOI:10.1126/sciadv.aay2591
+  locator: Abstract, CpaF mutation/ATPase/force results and species-comparison results
+  accessed_at: '2026-10-11T06:28:15Z'
+  snapshot_sha256: a6c788d6dbca1ed9d620403164c27ce262344ef8260dd47d902f3d0c866228d5
+  support: supports
+  summary: Correlated biochemical and movement changes directly support Caulobacter
+    CpaF dual activity; related Asticcacaulis populations differ in dynamic fraction.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T063126Z-tad_pilus-audit/review.yaml
+  accessed_at: '2026-10-11T06:46:45Z'
+  snapshot_sha256: d93a292abae2bd3d36427e7aff7f83e4497d825219b6ee48910812e7ba826620
+  support: context_only
+  summary: Immutable original observations committed before mutation.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/preservation.json
+  accessed_at: '2026-10-11T06:46:45Z'
+  snapshot_sha256: beb90d8207e154d1bac8a0082ae7d81f39f3648695308b74264174304ef4b19c
+  support: supports
+  summary: Only four native records changed; 905 others and all prior histories, canonical
+    reviews and legacy reports are byte-preserved.
+- evidence_id: embeddings
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/embedding-refresh.json
+  accessed_at: '2026-10-11T06:46:45Z'
+  snapshot_sha256: a2e2b42849fa18abdffd855d2ee91e221053532cfb740760f8c14ee9d34175a9
+  support: supports
+  summary: Only three pilus semantic vectors changed; the provenance-only stalk correction
+    is outside the semantic projection. The other 906 vectors are preserved.
+assessments:
+- assessment_id: resolved-f1
+  area: scope
+  topic: Restrict polar retraction to the demonstrated Tad model
+  outcome: supported
+  target_ids:
+  - cellstructuremech:tad_pilus
+  evidence_ids:
+  - record
+  - sangermani
+  - hohl
+  - ellison2019
+  - predecessor
+  - preservation
+  summary: The generic definition no longer requires polar retraction. Caulobacter
+    PilA/CpaF dynamics are explicit in the definition, graph and existing functions.
+    An OPEN scope discussion preserves broader uncertainty, and the 2019 mutation/ATPase/force
+    experiment is attached to the single motor edge without asserting a molecular
+    rotation model.
+findings:
+- finding_id: F1
+  issue_key: tad-pilus-polar-retraction-scope
+  category: scope
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Restrict polar retraction to the demonstrated Tad model
+  description: The generic definition no longer requires polar retraction. Caulobacter
+    PilA/CpaF dynamics are explicit in the definition, graph and existing functions.
+    An OPEN scope discussion preserves broader uncertainty, and the 2019 mutation/ATPase/force
+    experiment is attached to the single motor edge without asserting a molecular
+    rotation model.
+  target_ids:
+  - cellstructuremech:tad_pilus
+  field_paths:
+  - definition
+  - causal_graphs[0]
+  evidence_ids:
+  - record
+  - sangermani
+  - hohl
+  - ellison2019
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/tad_pilus.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Material model-to-class scope or composition-boundary defect.
+  disposition_reason: The generic definition no longer requires polar retraction.
+    Caulobacter PilA/CpaF dynamics are explicit in the definition, graph and existing
+    functions. An OPEN scope discussion preserves broader uncertainty, and the 2019
+    mutation/ATPase/force experiment is attached to the single motor edge without
+    asserting a molecular rotation model. Verified against inspected evidence, focused
+    regressions and full QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T063126Z-tad_pilus-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2181
+actions: []
+limitations:
+- Same-agent review, not human sign-off or completion of the 909-record goal.
+- Identifier resolver skips and label pairs without adapters are not certified. Exact
+  target GO/taxon authorities were separately inspected for the scientific reviews.
+- Ellison 2017 was read at primary-abstract level because the PMC body route returned
+  a browser challenge; its bounded surface-sensing claim is supported there. Hohl
+  and Sangermani full-text sections and the 2019 motor experiments were inspected.
+- Original source-access tiers and snapshot times are retained; no raw experimental
+  reanalysis or independent approval is implied.
+- Five focused tests failed against original inputs; the corrected focused/guarded-writer
+  suite passes. A preliminary lint check required an explicit strict zip argument,
+  corrected before QC.
+- The scratch embedding refresh initially expected four semantic changes and refused
+  before writing. Inspection of the maintained semantic projection showed the stalk
+  rationale/history are excluded; only the three real semantic changes were refreshed.
+- Disposition inputs are retained by review-base/pilus-scope-20261011. Final PR and
+  merge-group results are verified separately.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2181
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T063126Z-tad_pilus-audit
+  relationship: Resolves exact predecessor findings without rewriting the original
+    observation.

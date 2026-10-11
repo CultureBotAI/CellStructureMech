@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/tad_pilus.yaml
+  slug: tad_pilus
+session:
+  id: 2026-10-11T063321Z-codex-1c202e
+  timestamp: '2026-10-11T06:33:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2181
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  - definition
+  - discussions
+  - functions
+  summary: 'Addressed #2181: Bounded the generic Tad identity separately from Caulobacter
+    polar PilA/CpaF dynamics and attached the direct 2019 motor evidence.'
+  details: 'Original findings saved before mutation in reviews/structured/20261011T063126Z-tad_pilus-audit/review.yaml.
+    Addresses #2181. Guarded curation preserved PROPOSED, prior events, histories and discussion
+    rationale; post-change tests and full QC required before publication.'

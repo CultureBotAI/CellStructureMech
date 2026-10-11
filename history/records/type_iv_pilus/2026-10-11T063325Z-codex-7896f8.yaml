@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/type_iv_pilus.yaml
+  slug: type_iv_pilus
+session:
+  id: 2026-10-11T063325Z-codex-7896f8
+  timestamp: '2026-10-11T06:33:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2184
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - components
+  - curation_history
+  - discussions
+  summary: 'Addressed #2184: Removed cytoplasmic motor constituent rows, retained their evidenced
+    external graph nodes, and scoped the separate-motor mechanism to type IVa systems.'
+  details: 'Original findings saved before mutation in reviews/structured/20261011T063139Z-type_iv_pilus-audit/review.yaml.
+    Addresses #2184. Guarded curation preserved PROPOSED, prior events, histories and discussion
+    rationale; post-change tests and full QC required before publication.'
