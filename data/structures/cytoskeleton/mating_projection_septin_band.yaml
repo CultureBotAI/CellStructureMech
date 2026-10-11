@@ -27,10 +27,18 @@ curation_history:
   changes: 'Added an open CURATION_TODO discussion for the reviewed-label-only septin
     proteins component, addressing issue #1734.'
   llm_assisted: true
+- timestamp: '2026-10-11T14:27:25Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2218: Corrected the is-a parent to GO:0032158 septin band and
+    represented the containing GO:0032156 septin cytoskeleton with part_of, retaining
+    mating-projection parthood and adding typed GO evidence.'
+  llm_assisted: true
 parent_structures:
-- GO:0032156
+- GO:0032158
 part_of:
 - GO:0005937
+- GO:0032156
 components:
 - component_id: septin_proteins
   label: septin proteins
@@ -78,8 +86,13 @@ functions:
 evidence:
 - reference: GO:0032162
   notes: Gene Ontology cellular-component term for the mating projection septin band.
+- reference: GO:0032158
+  notes: Gene Ontology places GO:0032162 mating projection septin band directly under
+    GO:0032158 septin band by is_a.
 - reference: GO:0032156
-  notes: Gene Ontology cellular-component term for the septin cytoskeleton.
+  notes: Gene Ontology places GO:0032158 septin band in a part_of relation to GO:0032156
+    septin cytoskeleton. Cytoskeleton parthood is inherited by the GO:0032162 mating-projection
+    band subtype; this is not an is-a relationship.
 - reference: GO:0005937
   notes: Gene Ontology cellular-component term for the mating projection.
 - reference: DOI:10.1083/jcb.143.3.719
