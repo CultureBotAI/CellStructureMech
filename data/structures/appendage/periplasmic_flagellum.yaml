@@ -40,6 +40,14 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-11T04:58:45Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2173 and #2174: qualified lineage-dependent FlaA architecture,
+    removed generic sheathed-filament assertions, and separated static skeletal shape
+    evidence from rotation-driven swimming deformation while retaining the active
+    pathway introduced for #203.'
+  llm_assisted: true
 synonyms:
 - synonym_text: endoflagellum
   synonym_type: EXACT_SYNONYM
@@ -72,24 +80,30 @@ components:
       periplasmic flagella are required for both motility and the normal flat-wave
       cell shape.
 - component_id: flaA_sheath
-  label: FlaA sheath proteins
+  label: FlaA flagellar proteins
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
   - flaA
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: FlaA sheath proteins are spirochete-specific periplasmic flagellar
-    constituents without a curated exact source-neutral family CURIE.
-  role: Minor flagellar proteins that form the spirochete sheath around the FlaB core
-    filament.
+  grounding_notes: FlaA proteins are spirochete periplasmic flagellar constituents
+    with lineage-dependent localization; no exact source-neutral family CURIE was
+    curated here. The retained component ID is historical and does not assert a universal
+    sheath.
+  role: Flagellar constituents whose architecture varies by lineage. FlaA forms a
+    sheath around the FlaB core in Brachyspira hyodysenteriae; Borrelia burgdorferi
+    FlaA is a minor filament-associated protein with unresolved precise localization,
+    and Leptospira sheath formation does not require FlaA in the cited deletion studies.
   evidence:
   - reference: DOI:10.3390/biom10040550
-    notes: Nakamura 2020 reviews the FlaA sheath plus FlaB core architecture of known
-      spirochete periplasmic flagella.
+    notes: Nakamura 2020 distinguishes Brachyspira FlaA sheath architecture from tentative
+      basal FlaA localization in Borrelia and a Leptospira sheath that persists after
+      flaA deletion, with FcpA a major sheath constituent.
   - reference: DOI:10.1128/JB.180.9.2418-2425.1998
-    notes: Ge et al. 1998 detected FlaA and FlaB in Borrelia burgdorferi periplasmic
-      flagella and found FlaA in several spirochete species.
+    notes: Ge et al. 1998 copurified FlaA with Borrelia burgdorferi periplasmic flagella
+      but did not establish a sheath location. The proposed localization near the
+      hook was explicitly tentative.
   protein_examples:
   - uniprot_id: UniProtKB:P70856
     protein_label: Flagellar filament outer layer protein
@@ -153,8 +167,9 @@ functions:
     notes: Nakamura 2020 reviews propulsion by rotation of periplasmic flagella inside
       the narrow spirochete periplasmic space.
   - reference: DOI:10.1073/pnas.200221797
-    notes: Motaleb et al. 2000 showed that Borrelia burgdorferi periplasmic flagella
-      have both motility and skeletal roles.
+    notes: Motaleb et al. 2000 found flaB mutants nonmotile and rod-shaped, but CCCP-immobilized
+      wild-type cells retained flat-wave shape. The skeletal shape contribution therefore
+      does not require rotation and is distinct from dynamic deformation during swimming.
 evidence:
 - reference: DOI:10.3390/biom10040550
   notes: Nakamura 2020, Spirochete Flagella and Motility, Biomolecules.
@@ -169,10 +184,12 @@ evidence:
     Trends in Microbiology.
 causal_graphs:
 - graph_id: periplasmic_flagellum_cell_deformation
-  title: A sheathed FlaB filament rotates in the periplasm to deform the cell cylinder
-  description: FlaB proteins form the core of a sheathed periplasmic filament, the
-    polar basal body anchors and drives rotation of that filament, and internal flagellar
-    rotation changes spirochete cell shape to generate motility.
+  title: Periplasmic flagellar rotation drives dynamic cell-body deformation during
+    swimming
+  description: FlaB builds the periplasmic filament; FlaA association and sheath architecture
+    differ across spirochete lineages. The polar basal body drives filament rotation
+    and dynamic cell-body deformation during swimming. This motility pathway is distinct
+    from the rotation-independent skeletal contribution to resting Borrelia shape.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
@@ -181,7 +198,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: flaB_core
   - node_id: flaA_sheath
-    label: FlaA sheath proteins
+    label: FlaA flagellar proteins
     node_type: GENE_OR_PROTEIN
     component_ref: flaA_sheath
   - node_id: basal_body_motor
@@ -189,13 +206,13 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: basal_body_motor
   - node_id: filament
-    label: sheathed periplasmic flagellar filament
+    label: periplasmic flagellar filament
     node_type: STRUCTURE
   - node_id: flagellar_rotation
     label: flagellar rotation
     node_type: BIOLOGICAL_PROCESS
   - node_id: cell_deformation
-    label: spirochete cell-body deformation
+    label: dynamic spirochete cell-body deformation during swimming
     node_type: STATE
   - node_id: motility
     label: bacterial-type flagellum-dependent cell motility
@@ -215,19 +232,23 @@ causal_graphs:
       notes: Nakamura 2020 reviews the conserved FlaB core of spirochete periplasmic
         flagellar filaments.
   - subject: flaA_sheath
-    predicate: forms sheath around
+    predicate: associates with
     object: filament
-    description: FlaA proteins form the sheath that surrounds the FlaB core in the
-      spirochete filament.
+    description: FlaA associates with periplasmic flagella; a sheath role is lineage-specific
+      rather than a universal property of spirochete filaments.
     evidence:
-    - reference: DOI:10.1016/j.tim.2022.09.010
-      notes: San Martin et al. 2023 review the FlaA sheath surrounding polymerized
-        FlaB protomers in the spirochete periplasmic flagellar filament.
+    - reference: DOI:10.1128/JB.180.9.2418-2425.1998
+      notes: Ge et al. copurified Borrelia FlaA with flagella but left its precise
+        localization unresolved.
+    - reference: DOI:10.3390/biom10040550
+      notes: Nakamura distinguishes Brachyspira FlaA sheath architecture, tentative
+        basal localization in Borrelia and Leptospira sheath retention after FlaA
+        deletion.
   - subject: filament
     predicate: is part of
     object: periplasmic_flagellum
-    description: The sheathed filament is the elongated axial part of the periplasmic
-      flagellum.
+    description: The filament is the elongated axial part of the periplasmic flagellum;
+      its sheath composition is not uniform across spirochetes.
     evidence:
     - reference: DOI:10.1371/journal.pbio.3000050
       notes: Qin et al. 2018 resolved filaments connected to polar periplasmic flagellar
@@ -244,7 +265,7 @@ causal_graphs:
   - subject: flagellar_rotation
     predicate: turns
     object: filament
-    description: Flagellar rotation turns the internal sheathed filament in the spirochete
+    description: Flagellar rotation turns the internal filament in the spirochete
       periplasm.
     evidence:
     - reference: DOI:10.3390/biom10040550
@@ -253,18 +274,22 @@ causal_graphs:
   - subject: flagellar_rotation
     predicate: produces
     object: cell_deformation
-    description: Rotation of periplasmic filaments imposes shape changes on the spirochete
-      cell cylinder.
+    description: During swimming, periplasmic flagellar rotation drives dynamic deformation
+      such as wave propagation along Borrelia and Brachyspira cell bodies.
     evidence:
+    - reference: DOI:10.3390/biom10040550
+      notes: Section 4.1 reviews wave propagation driven by periplasmic flagellar
+        rotation in Borrelia and Brachyspira. This swimming mechanism is distinct
+        from maintenance of resting flat-wave shape.
     - reference: DOI:10.1073/pnas.200221797
-      notes: Motaleb et al. 2000 used Borrelia burgdorferi flaB mutants to show that
-        periplasmic flagella provide a skeletal contribution to the normal flat-wave
-        cell shape.
+      notes: 'Boundary evidence, not proof of this active edge: Motaleb et al. found
+        that CCCP-paralyzed Borrelia cells retain flat-wave shape. The resting skeletal
+        contribution therefore does not require rotation.'
   - subject: cell_deformation
     predicate: drives
     object: motility
-    description: Periplasmic-flagellum-driven cell-body deformation produces spirochete
-      motility.
+    description: Dynamic cell-body deformation during swimming, including propagating
+      waves, produces spirochete propulsion.
     evidence:
     - reference: DOI:10.3390/biom10040550
       notes: Nakamura 2020 reviews fluid and surface propulsion driven by periplasmic

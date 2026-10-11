@@ -39,6 +39,13 @@ curation_history:
     canonical example to the Alves et al. 2020 PFR-AF deletion study it cites; resolved
     #293 by moving the paraxial rod synonym to Farina et al. 1986.'
   llm_assisted: true
+- timestamp: '2026-10-11T04:58:43Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2171 and #2172: reconciled consolidated PFR1/PFR2 families
+    with historical PFRC/PFRA, moved examples and citations with their families, and
+    qualified PFR2 essentiality and assembly scope for full versus reduced rods.'
+  llm_assisted: true
 synonyms:
 - synonym_text: PFR
   synonym_type: RELATED_SYNONYM
@@ -50,61 +57,28 @@ part_of:
 - GO:0097729
 components:
 - component_id: pfr1
-  label: 69 kDa paraflagellar rod protein PFR1
+  label: paraflagellar rod protein PFR1
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
   - PFR1
-  - PFRA
-  - PFRB
-  essentiality: ESSENTIAL
-  role: A major coiled-coil lattice protein that co-assembles with PFR2 to build the
-    extra-axonemal paraflagellar rod.
-  evidence:
-  - reference: DOI:10.1083/jcb.109.4.1695
-    notes: Schlaeppi et al. 1989 identified the tandem PFRA/PFRB gene product as a
-      major helical protein of the Trypanosoma brucei paraflagellar rod.
-  - reference: DOI:10.1242/jcs.112.16.2753
-    notes: Maga et al. 1999 showed that Leishmania mexicana PFR1 is distributed through
-      the PFR and is required for native PFR formation.
-  protein_examples:
-  - uniprot_id: UniProtKB:P22225
-    protein_label: 69 kDa paraflagellar rod protein
-    gene_symbol: PFRA
-    taxon_id: NCBITaxon:5702
-    taxon_label: Trypanosoma brucei brucei
-    entry_status: REVIEWED
-    retrieved_on: '2026-09-08'
-    role: Reviewed UniProtKB entry for the PFRA/PFRB-encoded 69 kDa PFR1 protein in
-      Trypanosoma brucei brucei. Identifier for the component's declared gene symbols;
-      PFR membership rests on the record's own sources.
-    evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P22225
-      notes: UniProtKB reviewed Swiss-Prot entry P22225, PFR1_TRYBB, retrieved as
-        a T. brucei brucei 69 kDa paraflagellar rod protein carrying PFRA and PFRB
-        gene names.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: InterPro:IPR007824 / Pfam:PF05149 covers eukaryotic paraflagellar-rod
-    proteins including PFR1 and PFR2, so it is broader than the individual PFR1 paralogue
-    family. No exact source-neutral PFR1-only CURIE was curated.
-- component_id: pfr2
-  label: 73 kDa paraflagellar rod protein PFR2
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  gene_symbols:
-  - PFR2
   - PFRC
   - PFRD
   essentiality: ESSENTIAL
-  role: A second major PFR lattice protein that is distinct from PFR1 and required
-    for the complete paraflagellar rod.
+  role: Major lattice protein that co-assembles with PFR2 in the full paraflagellar
+    rod of the studied trypanosome and Leishmania models; Leishmania PFR1 can associate
+    with axoneme attachment fibers without PFR2.
   evidence:
   - reference: PMID:7961827
-    notes: Deflorin et al. 1994 separated the Trypanosoma brucei 73 kDa PFR-C/PFR-D
-      protein from the related 69 kDa PFR-A/PFR-B protein.
+    notes: Deflorin et al. 1994 distinguished the T. brucei 73 kDa PFRC/PFRD product
+      from 69 kDa PFRA/PFRB.
+  - reference: DOI:10.1016/j.molbiopara.2004.03.006
+    notes: Gadelha et al. 2004 consolidate T. brucei PFRC as PFR1, orthologous to
+      Leishmania PFR1.
   - reference: DOI:10.1242/jcs.112.16.2753
-    notes: Maga et al. 1999 found that Leishmania mexicana PFR2 is synthesized, transported
-      to the flagellum and required for full PFR assembly.
+    notes: Maga et al. 1999 found Leishmania mexicana PFR1 throughout the PFR and
+      required for native formation; PFR1 can associate with attachment fibers without
+      PFR2.
   protein_examples:
   - uniprot_id: UniProtKB:Q26789
     protein_label: 73 kDa paraflagellar rod protein
@@ -113,18 +87,74 @@ components:
     taxon_label: Trypanosoma brucei brucei
     entry_status: REVIEWED
     retrieved_on: '2026-09-08'
-    role: Reviewed UniProtKB entry for the PFRC/PFRD-encoded 73 kDa PFR2 protein in
-      Trypanosoma brucei brucei. Identifier for the component's declared gene symbols;
-      PFR membership rests on the record's own sources.
+    role: Reviewed UniProtKB entry for the PFRC/PFRD-encoded 73 kDa protein in Trypanosoma
+      brucei brucei, assigned to consolidated PFR1 by Gadelha et al. 2004. The source
+      protein name and historical UniProt mnemonic PFR2_TRYBB are not a cross-species
+      orthology assertion.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q26789
-      notes: UniProtKB reviewed Swiss-Prot entry Q26789, PFR2_TRYBB, retrieved as
-        a T. brucei brucei 73 kDa paraflagellar rod protein carrying PFRC and PFRD
-        gene names.
+      notes: UniProtKB reviewed entry Q26789 verifies the source-native 73 kDa protein
+        name and PFRC/PFRD genes. The consolidated family assignment follows Gadelha
+        et al. 2004, not the ordinal UniProt mnemonic.
+    - reference: DOI:10.1016/j.molbiopara.2004.03.006
+      notes: Table 1 and Fig. 1 map T. brucei PFRC to PFR1 and PFRA to PFR2, consistently
+        with Leishmania nomenclature.
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: InterPro:IPR007824 / Pfam:PF05149 covers the broader paraflagellar-rod
-    protein family rather than PFR2 alone; Q26789 also matches that same family. No
-    exact source-neutral PFR2-only CURIE was curated.
+  grounding_notes: InterPro:IPR007824 / Pfam:PF05149 covers both PFR1 and PFR2 rather
+    than the individual consolidated PFR1 family. No exact source-neutral PFR1-only
+    CURIE was curated.
+- component_id: pfr2
+  label: paraflagellar rod protein PFR2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PFR2
+  - PFRA
+  - PFRB
+  essentiality: CONDITIONAL
+  role: Major lattice protein required for full native PFR architecture in the studied
+    trypanosome and Leishmania models, not for every reduced PFR. Gadelha et al. found
+    no evidence for PFR2 in the reduced Crithidia deanei rod using several assays,
+    while noting their detection limitations.
+  evidence:
+  - reference: DOI:10.1083/jcb.109.4.1695
+    notes: Schlaeppi et al. 1989 characterized the helical PFRA/PFRB product, subsequently
+      assigned to consolidated PFR2.
+  - reference: DOI:10.1016/j.molbiopara.2004.03.006
+    notes: Gadelha et al. 2004 consolidate T. brucei PFRA as PFR2, orthologous to
+      Leishmania PFR2.
+  - reference: DOI:10.1242/jcs.112.16.2753
+    notes: Maga et al. 1999 showed that Leishmania PFR2 is required for native full
+      PFR assembly, while PFR1 can form stable associations with attachment fibers
+      without it.
+  - reference: DOI:10.1128/EC.4.3.516-525.2005
+    notes: Gadelha et al. 2005 imaged a reduced PFR in Crithidia deanei and found
+      no PFR2 with PCR, hybridization and protein assays. The combined negative results
+      support a lineage distinction, not proof of universal gene absence.
+  protein_examples:
+  - uniprot_id: UniProtKB:P22225
+    protein_label: 69 kDa paraflagellar rod protein
+    gene_symbol: PFRA
+    taxon_id: NCBITaxon:5702
+    taxon_label: Trypanosoma brucei brucei
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: Reviewed UniProtKB entry for the PFRA/PFRB-encoded 69 kDa protein in Trypanosoma
+      brucei brucei, assigned to consolidated PFR2 by Gadelha et al. 2004. The source
+      protein name and historical UniProt mnemonic PFR1_TRYBB are not a cross-species
+      orthology assertion.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22225
+      notes: UniProtKB reviewed entry P22225 verifies the source-native 69 kDa protein
+        name and PFRA/PFRB genes. The consolidated family assignment follows Gadelha
+        et al. 2004, not the ordinal UniProt mnemonic.
+    - reference: DOI:10.1016/j.molbiopara.2004.03.006
+      notes: Table 1 and Fig. 1 map T. brucei PFRC to PFR1 and PFRA to PFR2, consistently
+        with Leishmania nomenclature.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro:IPR007824 / Pfam:PF05149 covers both PFR1 and PFR2 rather
+    than the individual consolidated PFR2 family. No exact source-neutral PFR2-only
+    CURIE was curated.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota
@@ -216,19 +246,20 @@ evidence:
 causal_graphs:
 - graph_id: pfr1_pfr2_lattice_assembly
   title: PFR1 and PFR2 build the paraflagellar rod lattice
-  description: PFR1 and PFR2 are transported into the flagellum and co-assemble into
-    the extra-axonemal paraflagellar rod lattice. Cytoplasmic PFR-AF1 and PFR-AF2
-    act before flagellar entry and are needed to accumulate the major PFR proteins
-    and form the mature rod.
+  description: PFR1 and PFR2 co-assemble into the full PFR lattice in the studied
+    Trypanosoma and Leishmania models. In T. brucei, cytoplasmic PFR-AF1 and PFR-AF2
+    act upstream of flagellar assembly and support major PFR protein accumulation.
+    This model does not require the same composition in reduced rods such as that
+    of Crithidia deanei.
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
   nodes:
   - node_id: pfr1
-    label: 69 kDa paraflagellar rod protein PFR1
+    label: paraflagellar rod protein PFR1
     node_type: GENE_OR_PROTEIN
     component_ref: pfr1
   - node_id: pfr2
-    label: 73 kDa paraflagellar rod protein PFR2
+    label: paraflagellar rod protein PFR2
     node_type: GENE_OR_PROTEIN
     component_ref: pfr2
   - node_id: paraflagellar_rod
@@ -249,21 +280,26 @@ causal_graphs:
   - subject: pfr1
     predicate: co-assembles into
     object: paraflagellar_rod
-    description: PFR1 is transported into the flagellum and forms a major structural
-      constituent throughout the PFR.
+    description: Leishmania PFR1 is a major structural constituent throughout the
+      native PFR and can associate with axoneme attachment fibers without PFR2.
     evidence:
-    - reference: DOI:10.1128/MCB.19.12.8191
-      notes: Bastin et al. 1999 tracked tagged PFRA/PFR1 addition to new and old T.
-        brucei PFRs.
+    - reference: DOI:10.1242/jcs.112.16.2753
+      notes: Maga et al. 1999 examined PFR1 localization and its requirement for native
+        Leishmania PFR formation.
   - subject: pfr2
     predicate: co-assembles into
     object: paraflagellar_rod
-    description: PFR2 partners with PFR1 in PFR filaments and is required to assemble
-      a native PFR.
+    description: PFR2 partners with PFR1 in the full native PFR of the studied trypanosome
+      and Leishmania models; this is not a universal requirement for reduced rods.
     evidence:
+    - reference: DOI:10.1128/MCB.19.12.8191
+      notes: Bastin et al. 1999 tracked tagged PFRA, now consolidated as PFR2, into
+        new and old T. brucei PFRs.
+    - reference: DOI:10.1016/j.molbiopara.2004.03.006
+      notes: The nomenclature crosswalk maps historical T. brucei PFRA to PFR2.
     - reference: DOI:10.1242/jcs.112.16.2753
-      notes: Maga et al. 1999 showed that Leishmania PFR filaments contain PFR1 and
-        PFR2 and that PFR2 mutants fail to assemble a native PFR.
+      notes: Maga et al. 1999 showed Leishmania PFR2 is required for the full native
+        PFR, with residual PFR1-containing material possible without PFR2.
   - subject: paraflagellar_rod
     predicate: anchors to
     object: axoneme
@@ -322,3 +358,24 @@ discussions:
   posed_by: claude
   posed_date: '2026-09-09'
   resolved_date: '2026-09-09'
+- discussion_id: consolidated_pfr_nomenclature
+  prompt: Reconcile historical PFRA/PFRC and UniProt names with cross-species PFR1/PFR2
+    orthology.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#pfr1
+  - components#pfr2
+  rationale: Gadelha et al. 2004 Table 1 and Fig. 1 consolidate T. brucei PFRC/PFRD
+    (Q26789, 73 kDa) as PFR1 and PFRA/PFRB (P22225, 69 kDa) as PFR2. Historical UniProt
+    mnemonics use the opposite ordinal numbering and must not substitute for this
+    cross-species family assignment.
+  resolution_note: Aligned modern component families, gene symbols, protein examples
+    and graph citations; retained source-native protein labels and all previous curation
+    events.
+  evidence:
+  - reference: DOI:10.1016/j.molbiopara.2004.03.006
+    notes: Primary nomenclature table and phylogeny establish the crosswalk.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'
