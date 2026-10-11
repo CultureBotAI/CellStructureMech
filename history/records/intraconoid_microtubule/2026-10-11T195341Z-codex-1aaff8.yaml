@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/intraconoid_microtubule.yaml
+  slug: intraconoid_microtubule
+session:
+  id: 2026-10-11T195341Z-codex-1aaff8
+  timestamp: '2026-10-11T19:53:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2253
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  - discussions
+  - evidence
+  - functions
+  summary: 'Addressed #2253: Removed the over-specific anterior-ring projection edge and matching
+    prose, retaining the GO definition with explicit ambiguity and primary basal-extension
+    context.'
+  details: 'Immutable pre-edit observation: reviews/structured/20261011T194853Z-intraconoid_microtubule-audit/review.yaml.
+    Removed the over-specific anterior-ring projection edge and matching prose, retaining
+    the GO definition with explicit ambiguity and primary basal-extension context. Original
+    history, discussion wording and dates retained; only removed-component anchors redirected.
+    PROPOSED unchanged.'

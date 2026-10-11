@@ -1,0 +1,774 @@
+# intraconoid microtubule: finding dispositions
+
+- Review: 20261011T202450Z-intraconoid_microtubule-disposition
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-11T20:24:30Z
+- Finished UTC: 2026-10-11T20:24:50Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact saved findings resolved; original observations, scientific scope and prior rationale preserved.
+
+## Scope And Provenance
+
+Exact findings and surrounding-claim preservation, not a repeated whole-record review.
+
+Selection: 20261011T194853Z-intraconoid_microtubule-audit
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8c4d87926a031b54661b1f80393da603f4d1f8c3.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0033289 | data/structures/cytoskeleton/intraconoid_microtubule.yaml | maintained | intraconoid microtubule |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| intraconoid_microtubule-schema | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| intraconoid_microtubule-strict | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| intraconoid_microtubule-snippets | passed | True | GO:0033289 | No verbatim snippets; paraphrases assessed separately against inspected text. |
+| history | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| labels | passed | True | GO:0033289 | id↔label correspondence summary:<br>          OK_CANONICAL: 3545<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| traits | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| curies | passed | True | GO:0033289 | resolver control: every resolver accepts a known id and rejects a fabricated one<br>resolving 1 DOI identifier(s)...<br><br>identifier liveness summary:<br>  OK             4016<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| focused | passed | True | GO:0033289 | .......................................                                  [100%]<br>39 passed in 38.43s |
+| reviews | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| diff | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| anchor-pages | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| anchor-schema | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| anchor-strict | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| anchor-history | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| anchor-focused | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| anchor-reviews | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| anchor-diff | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+| release-qc-final | passed | True | GO:0033289 | Actual deterministic check passed; scientific support assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Remove the unsupported anterior-ring endpoint inference
+
+evidence: supported. Targets: GO:0033289.
+
+Removed the over-specific anterior-ring projection edge and matching prose, retaining the GO definition with explicit ambiguity and primary basal-extension context.
+
+## Findings
+
+### F1: Remove the unsupported anterior-ring endpoint inference
+
+major / resolved / confirmed; issue key: intraconoid-microtubule-anterior-ring-projection.
+
+Removed the over-specific anterior-ring projection edge and matching prose, retaining the GO definition with explicit ambiguity and primary basal-extension context.
+
+Disposition: Removed the over-specific anterior-ring projection edge and matching prose, retaining the GO definition with explicit ambiguity and primary basal-extension context. Verified against inspected sources, bounded diff, red/green regressions and full local QC.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/intraconoid_microtubule.yaml | context_only | Corrected entire native YAML reinspected against sources and original. |
+| rules | docs/CURATION.md | context_only | Exact structure identity, narrow source support and conserved component scope. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml | context_only | Components are molecular building blocks; essentiality concerns formation, not survival. COMMON denotes most members, not merely homologous proteins. |
+| history | /private/tmp/csm-review-20261011T193501Z/intraconoid_microtubule-discussion-history.json | context_only | All committed discussion and inline-history versions read, including prior evidence-placement rationale. |
+| predecessors | /private/tmp/csm-review-20261011T193501Z/exact-target-predecessors.json | context_only | Ignored-inclusive canonical search found no exact-target predecessor. |
+| identity | /private/tmp/csm-review-20261011T193501Z/identity-matches.json | context_only | Ignored-inclusive native identity enumeration distinguishes both GO rings, conoid and microtubules. |
+| adapter | /private/tmp/csm-review-20261011T193501Z/adapter.log | context_only | Fresh 28-dataset iModulonDB inventory has no applicable Toxoplasma, Apicomplexa or Trypanosoma dataset; not negative biological evidence. |
+| append-history-0 | history/records/intraconoid_microtubule/2026-09-22T131003Z-codex-0e4ca6.yaml | context_only | Original append-only event inspected; author metadata and dates preserved. |
+| append-history-1 | history/records/intraconoid_microtubule/2026-09-22T132053Z-codex-8c24a0.yaml | context_only | Original append-only event inspected; author metadata and dates preserved. |
+| issues-conoid | /private/tmp/csm-review-20261011T193501Z/conoid-all-issues.log | context_only | All-state issue search; relevant #325/#327/#1278/#1279/#1284/#1285 are closed, distinct earlier scope fixes. |
+| issues-polar-ring | /private/tmp/csm-review-20261011T193501Z/polar-ring-all-issues.log | context_only | All-state issue search; relevant #325/#327/#1278/#1279/#1284/#1285 are closed, distinct earlier scope fixes. |
+| issues-subpellicular | /private/tmp/csm-review-20261011T193501Z/subpellicular-all-issues.log | context_only | All-state issue search; relevant #325/#327/#1278/#1279/#1284/#1285 are closed, distinct earlier scope fixes. |
+| issues-basal-ring | /private/tmp/csm-review-20261011T193501Z/basal-ring-all-issues.log | context_only | All-state issue search; relevant #325/#327/#1278/#1279/#1284/#1285 are closed, distinct earlier scope fixes. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020032,GO:0020031,GO:0020010,GO:0033289,GO:0020025,GO:0005874,GO:0020007,GO:0005856,GO:0070258; Nine exact cellular-component definitions, synonyms and typed relations | supports | GO anterior fiber-origin and posterior SPMT-origin definitions must not be replaced by a name-only APR match; the basal preconoidal synonym conflicts with primary anatomy. |
+| taxon-5811 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5811; Exact taxon identity | supports | Taxonomic identity verified; this is not a structure-prevalence measurement. |
+| paper-id-2 | DOI:10.1083/jcb.200112086; Exact DOI/PMID/title and abstract | supports | A novel polymer of tubulin forms the conoid of Toxoplasma gondii. |
+| paper-2 | DOI:10.1083/jcb.200112086; Primary Results, Discussion and relevant figure captions; claim-local inspection | supports | Hu 2002 directly resolves the unusual spiral tubulin-polymer conoid body and distinguishes extension/retraction and historical anterior/posterior ring topology. |
+| paper-id-6 | DOI:10.1371/journal.ppat.0020013; Exact DOI/PMID/title and abstract | supports | Cytoskeletal components of an invasion machine--the apical complex of Toxoplasma gondii. |
+| paper-6 | DOI:10.1371/journal.ppat.0020013; Primary Results, Discussion and relevant figure captions; claim-local inspection | supports | Hu 2006 distinguishes distal preconoidal rings, the SPMT-origin polar ring, conoid fibers and the two intraconoid microtubules. Partially enriched preparations identify candidates rather than a pure conoid-body inventory. |
+| hu2002-figure | DOI:10.1083/jcb.200112086; Figure 1, visually inspected | supports | Historical anterior ring above conoid and lower SPMT-origin ring are distinct; positions differ with conoid state. |
+| hu2006-figure | DOI:10.1371/journal.ppat.0020013; Figure 1, visually inspected | supports | Historical anterior ring above conoid and lower SPMT-origin ring are distinct; positions differ with conoid state. |
+| li2023 | DOI:10.1002/advs.202206595; Results on microtubule orientation, Figure 2 and Methods | supports | Primary cryo-ET of 13 ICMTs finds basal-directed extension from within the conoid, not an established distal projection through the GO anterior fiber-origin ring. |
+| li-figure | DOI:10.1002/advs.202206595; Figure 2C/D, visually inspected | supports | ICMTs extend basally from within the conoid; PCR and APR are explicitly separate structures. |
+| predecessor | reviews/structured/20261011T194853Z-intraconoid_microtubule-audit/review.yaml | context_only | Immutable pre-edit finding; no original review rewritten. |
+| preservation | /private/tmp/csm-review-20261011T193501Z/preservation-final.json | context_only | 904 other native records, 905 vectors and all prior history/review/legacy bytes preserved. Only two obsolete component anchors redirected; original discussion wording and dates retained. |
+| red | /private/tmp/csm-review-20261011T193501Z/regressions-red-final.log | context_only | Nine failures reproduce the defects on original native inputs; six preservation controls pass. |
+| green | /private/tmp/csm-review-20261011T193501Z/post-focused.log | context_only | All fifteen regressions/preservation tests and twenty-four guarded-writer tests pass. |
+| edit-history | history/records/intraconoid_microtubule/2026-10-11T195341Z-codex-1aaff8.yaml | context_only | Actual Codex EDIT links original observation and exact issues. |
+
+## Limits And Additional Notes
+
+- Same-agent scoped disposition, not independent scientific approval or raw-data reanalysis.
+- Historical anterior/posterior ring names and modern APR layer names are not interchangeable. Whole modern APR identity remains uncurated; neither GO ring is automatically assigned all layers.
+- The conflicting GO preconoidal synonym and ambiguous ICMT polar-ring wording remain explicitly attributed. No new ring attachment, nucleation mechanism, Plasmodium absence or phylum-wide morphology prevalence is inferred.
+- Original source-access limitations remain. Actual NCBI XML replaced the failed Tran full-text request; HTML constraint responses were not JSON evidence. All eight native papers were inspected through primary XML or an author-hosted PDF.
+- Known resolver namespaces and three test skips retained. No verbatim snippets occur in these five records; paraphrases received scientific source review.
+- First local full QC exposed a new conoid discussion-anchor error introduced during remediation. A separate issue and actual EDIT event record its fix; the final full QC and unchanged corpus anchor test passed.
+- Corrected source retained by review-base/apical-complex-identity-20261011. Four PR gates and separate native merge-group gates remain required.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T202450Z-intraconoid_microtubule-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'intraconoid microtubule: finding dispositions'
+started_at: '2026-10-11T20:24:30Z'
+finished_at: '2026-10-11T20:24:50Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent source and record review, not independent human scientific
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact saved findings resolved; original observations, scientific scope and
+  prior rationale preserved.
+source:
+  git_revision: 8c4d87926a031b54661b1f80393da603f4d1f8c3
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 3acb13884094f40c840ed3452a6209ee9a38b479ae16e4c0bca390c3c290828a
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/basal_ring_of_apical_complex.yaml
+    sha256: 72cfdcad53fe8d4a31deb6bfcab9454b8ef840b5ea6aebefb35256140e4fc649
+    role: context
+  - path: data/structures/cytoskeleton/conoid.yaml
+    sha256: 3cfe8c4f6f720dd0586745c0a196d7b9f4bc7e693ae40a5df7e2bf8ec4b39bd3
+    role: context
+  - path: data/structures/cytoskeleton/intraconoid_microtubule.yaml
+    sha256: 12dfa3be1b93306a3de04fd6f5db5a1a3218a2f058aba2400fc07b50423dc48a
+    role: target
+  - path: data/structures/cytoskeleton/microtubule.yaml
+    sha256: 29404191864964cf5b86c3894c7b942d63b83fc4bb1b6b461d7677baad6af305
+    role: context
+  - path: data/structures/cytoskeleton/polar_ring_of_apical_complex.yaml
+    sha256: ec70822af034fd9e33585bf8fa8894a6fd97cf8c2127fb6e29d91d842efd278b
+    role: context
+  - path: data/structures/cytoskeleton/subpellicular_microtubule.yaml
+    sha256: d761325eaf83e1798f00fb8a90759af7a8216928232ba5517672f47150ef64d5
+    role: context
+  - path: data/structures/other/apical_complex.yaml
+    sha256: 72b670707751292b450e4c8bccddb25a4a14e482fc0eaaa85975681694f55952
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/intraconoid_microtubule/2026-09-22T131003Z-codex-0e4ca6.yaml
+    sha256: 7b95a5c5a1d43b55c9e40acf1df5d37cb6e97fcf4acd189e956243c0a106be40
+    role: context
+  - path: history/records/intraconoid_microtubule/2026-09-22T132053Z-codex-8c24a0.yaml
+    sha256: 8f045d21cf424072f8998dd21ed7c29819c86f89c292a299ffefd9bbeab5d1fc
+    role: context
+  - path: history/records/intraconoid_microtubule/2026-10-11T195341Z-codex-1aaff8.yaml
+    sha256: 6481148089ae6158d9c4d55182b20a2bd48364d35219c19b99d8c785642a623e
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261011T194853Z-intraconoid_microtubule-audit/review.yaml
+    sha256: 9d2afc2d28c8b446cd3a67bbfff381234daaa2249fa7adc21207cacb564c5531
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_apical_complex_identity.py
+    sha256: 921da48e696b723c2e56b2c0b48d7f24debddef57b5be76251bf2f8f7922cf0e
+    role: context
+targets:
+- target_id: GO:0033289
+  path: data/structures/cytoskeleton/intraconoid_microtubule.yaml
+  label: intraconoid microtubule
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/intraconoid_microtubule.yaml
+    role: maintained scientific record
+scope:
+  description: Exact findings and surrounding-claim preservation, not a repeated whole-record
+    review.
+  selection: 20261011T194853Z-intraconoid_microtubule-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0033289
+checks:
+- check_id: intraconoid_microtubule-schema
+  name: intraconoid_microtubule-schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/intraconoid_microtubule.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T19:58:36Z to 2026-10-11T19:58:38Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: intraconoid_microtubule-strict
+  name: intraconoid_microtubule-strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/intraconoid_microtubule.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T19:58:38Z to 2026-10-11T19:58:43Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: intraconoid_microtubule-snippets
+  name: intraconoid_microtubule-snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/intraconoid_microtubule.yaml
+    --report /private/tmp/csm-review-20261011T193501Z/post-intraconoid_microtubule-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-11T19:58:43Z to 2026-10-11T19:59:04Z; log SHA-256 dcaf5b9dfacf71de98bb95ec16cf870fbad4758354ffcad0ef4d5903fd2ac10e
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T19:59:36Z to 2026-10-11T19:59:55Z; log SHA-256 e30b93ee14962238a1eefa2790c6f7916327d1ee77b87f08def9e37c43d267d5
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3545\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T19:59:55Z to 2026-10-11T20:01:23Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:01:23Z to 2026-10-11T20:01:43Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\nresolving 1 DOI identifier(s)...\n\nidentifier liveness summary:\n  OK\
+    \             4016\n  SKIPPED         251\n\nEvery identifier resolves at its\
+    \ issuing authority."
+  scope_note: 2026-10-11T20:01:43Z to 2026-10-11T20:02:38Z; log SHA-256 eaedee606ea23bd6d49de3831375a192c142af75afa8b6d4d41425c664914dde
+- check_id: focused
+  name: focused
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python -m pytest -q tests/test_apical_complex_identity.py tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '.......................................                                  [100%]
+
+    39 passed in 38.43s'
+  scope_note: 2026-10-11T20:02:38Z to 2026-10-11T20:03:17Z; log SHA-256 d7ae164490c682109ca10542fcdf57603c04537008df7048f61099295a13a30d
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/record_review.py check --base decd7c3bffae01c2096c071dc503662b9e71537e
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:03:17Z to 2026-10-11T20:04:58Z; log SHA-256 599d023c107a2555c90c5d193b26e8d7aa135f7097b077d900a5a5bafcfe608c
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:04:58Z to 2026-10-11T20:04:59Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: anchor-pages
+  name: anchor-pages
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/render_pages.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:10:38Z to 2026-10-11T20:11:12Z; log SHA-256 4c56c037ad334a4629db5c24de168dd94cfbb8945fc70e61abcc11db167241c0
+- check_id: anchor-schema
+  name: anchor-schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/conoid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:11:12Z to 2026-10-11T20:11:16Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: anchor-strict
+  name: anchor-strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/conoid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:11:16Z to 2026-10-11T20:11:20Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: anchor-history
+  name: anchor-history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:11:20Z to 2026-10-11T20:11:40Z; log SHA-256 5a1de30954e7886b803d2a3b15cee5378ca41770372bec294659c5d0c49bca1d
+- check_id: anchor-focused
+  name: anchor-focused
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python -m pytest -q tests/test_apical_complex_identity.py tests/test_write_validated.py
+    tests/test_corpus_integrity.py::test_discussion_anchors_resolve
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:11:40Z to 2026-10-11T20:12:31Z; log SHA-256 bef574d097b83152af3c483997ebb2e0bebc35cb30b9314b1d919481ae48d939
+- check_id: anchor-reviews
+  name: anchor-reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/record_review.py check --base decd7c3bffae01c2096c071dc503662b9e71537e
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:12:31Z to 2026-10-11T20:14:13Z; log SHA-256 599d023c107a2555c90c5d193b26e8d7aa135f7097b077d900a5a5bafcfe608c
+- check_id: anchor-diff
+  name: anchor-diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:14:13Z to 2026-10-11T20:14:15Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: release-qc-final
+  name: release-qc-final
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033289
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T20:11:27Z to 2026-10-11T20:23:52Z; log SHA-256 eb4cd1b3310b2e54b5c4b09bf848d18d68660918da1268dbf00debb26f18a236
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/intraconoid_microtubule.yaml
+  accessed_at: '2026-10-11T20:24:50Z'
+  snapshot_sha256: 12dfa3be1b93306a3de04fd6f5db5a1a3218a2f058aba2400fc07b50423dc48a
+  support: context_only
+  summary: Corrected entire native YAML reinspected against sources and original.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Exact structure identity, narrow source support and conserved component
+    scope.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+  support: context_only
+  summary: Components are molecular building blocks; essentiality concerns formation,
+    not survival. COMMON denotes most members, not merely homologous proteins.
+- evidence_id: history
+  kind: record_content
+  reference: /private/tmp/csm-review-20261011T193501Z/intraconoid_microtubule-discussion-history.json
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: e491f90a65741ab42b961c376e5704bd23b94c5b5039bc56c3df043f1878bc63
+  support: context_only
+  summary: All committed discussion and inline-history versions read, including prior
+    evidence-placement rationale.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T193501Z/exact-target-predecessors.json
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: d0841513bf1b0a191371501f5f3a56e12093739b0a821d29da881d298c76ef7c
+  support: context_only
+  summary: Ignored-inclusive canonical search found no exact-target predecessor.
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T193501Z/identity-matches.json
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: ed9c902d12e2a155a62c4ab4c00a65c86590ac99122b521bc1908fd81d63a995
+  support: context_only
+  summary: Ignored-inclusive native identity enumeration distinguishes both GO rings,
+    conoid and microtubules.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T193501Z/adapter.log
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: Fresh 28-dataset iModulonDB inventory has no applicable Toxoplasma, Apicomplexa
+    or Trypanosoma dataset; not negative biological evidence.
+- evidence_id: append-history-0
+  kind: record_content
+  reference: history/records/intraconoid_microtubule/2026-09-22T131003Z-codex-0e4ca6.yaml
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: 7b95a5c5a1d43b55c9e40acf1df5d37cb6e97fcf4acd189e956243c0a106be40
+  support: context_only
+  summary: Original append-only event inspected; author metadata and dates preserved.
+- evidence_id: append-history-1
+  kind: record_content
+  reference: history/records/intraconoid_microtubule/2026-09-22T132053Z-codex-8c24a0.yaml
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: 8f045d21cf424072f8998dd21ed7c29819c86f89c292a299ffefd9bbeab5d1fc
+  support: context_only
+  summary: Original append-only event inspected; author metadata and dates preserved.
+- evidence_id: issues-conoid
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T193501Z/conoid-all-issues.log
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: 164bcac2e5821041d6052d8b2a9d7b0808b24b08d459c4dd5811d6655e7abae7
+  support: context_only
+  summary: 'All-state issue search; relevant #325/#327/#1278/#1279/#1284/#1285 are
+    closed, distinct earlier scope fixes.'
+- evidence_id: issues-polar-ring
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T193501Z/polar-ring-all-issues.log
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: 7a031d03103036fe2c21b65176b9b5467795b5ac57920179bef06c46c49bda7c
+  support: context_only
+  summary: 'All-state issue search; relevant #325/#327/#1278/#1279/#1284/#1285 are
+    closed, distinct earlier scope fixes.'
+- evidence_id: issues-subpellicular
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T193501Z/subpellicular-all-issues.log
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: 9c5646441328b9656f41ecf30951e5b2bc7f86d4098fcd4e5a291e0eaa8a74ae
+  support: context_only
+  summary: 'All-state issue search; relevant #325/#327/#1278/#1279/#1284/#1285 are
+    closed, distinct earlier scope fixes.'
+- evidence_id: issues-basal-ring
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T193501Z/basal-ring-all-issues.log
+  accessed_at: '2026-10-11T19:48:53Z'
+  snapshot_sha256: d790eab41acfead93e20c8b60b5e5df1ec030d472c7901dcf95ac402ab24cc91
+  support: context_only
+  summary: 'All-state issue search; relevant #325/#327/#1278/#1279/#1284/#1285 are
+    closed, distinct earlier scope fixes.'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020032,GO:0020031,GO:0020010,GO:0033289,GO:0020025,GO:0005874,GO:0020007,GO:0005856,GO:0070258
+  locator: Nine exact cellular-component definitions, synonyms and typed relations
+  accessed_at: '2026-10-11T19:38:04Z'
+  snapshot_sha256: 4148a58bcec8ed0265ac75202c4d9f0212ae36d059ed734289e2e60437cfe22b
+  support: supports
+  summary: GO anterior fiber-origin and posterior SPMT-origin definitions must not
+    be replaced by a name-only APR match; the basal preconoidal synonym conflicts
+    with primary anatomy.
+- evidence_id: taxon-5811
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5811
+  locator: Exact taxon identity
+  accessed_at: '2026-10-11T19:38:05Z'
+  snapshot_sha256: cbb209002c87051ce78d0a34bc169d2f6623f6bbfbb21edad170d43eb16d4032
+  support: supports
+  summary: Taxonomic identity verified; this is not a structure-prevalence measurement.
+- evidence_id: paper-id-2
+  kind: primary_source
+  reference: DOI:10.1083/jcb.200112086
+  locator: Exact DOI/PMID/title and abstract
+  accessed_at: '2026-10-11T19:39:07Z'
+  snapshot_sha256: 6b818ee604c5bc4bd06629be3d318cda4d2f8e91b1363f1c622cfa9653c5bcb8
+  support: supports
+  summary: A novel polymer of tubulin forms the conoid of Toxoplasma gondii.
+- evidence_id: paper-2
+  kind: primary_source
+  reference: DOI:10.1083/jcb.200112086
+  locator: Primary Results, Discussion and relevant figure captions; claim-local inspection
+  accessed_at: '2026-10-11T19:39:09Z'
+  snapshot_sha256: c677539617169e02dc6d430a39f94635c3a114b94e880cff322d4581cb818b70
+  support: supports
+  summary: Hu 2002 directly resolves the unusual spiral tubulin-polymer conoid body
+    and distinguishes extension/retraction and historical anterior/posterior ring
+    topology.
+- evidence_id: paper-id-6
+  kind: primary_source
+  reference: DOI:10.1371/journal.ppat.0020013
+  locator: Exact DOI/PMID/title and abstract
+  accessed_at: '2026-10-11T19:39:15Z'
+  snapshot_sha256: 01d184f8d009f4db3522c1d575aac4ffe23b8d7c06d18847e868014adbd6a52c
+  support: supports
+  summary: Cytoskeletal components of an invasion machine--the apical complex of Toxoplasma
+    gondii.
+- evidence_id: paper-6
+  kind: primary_source
+  reference: DOI:10.1371/journal.ppat.0020013
+  locator: Primary Results, Discussion and relevant figure captions; claim-local inspection
+  accessed_at: '2026-10-11T19:39:16Z'
+  snapshot_sha256: dae4c4fe8cc077716338da2deccb2dea30a94147adc3fd3d81f778421cda256d
+  support: supports
+  summary: Hu 2006 distinguishes distal preconoidal rings, the SPMT-origin polar ring,
+    conoid fibers and the two intraconoid microtubules. Partially enriched preparations
+    identify candidates rather than a pure conoid-body inventory.
+- evidence_id: hu2002-figure
+  kind: primary_source
+  reference: DOI:10.1083/jcb.200112086
+  locator: Figure 1, visually inspected
+  accessed_at: '2026-10-11T19:43:45Z'
+  snapshot_sha256: e07ce1a5d003fc30bf35f56984bfe6d83c7bc919b1578fcd4fbec51ed6ff5fe5
+  support: supports
+  summary: Historical anterior ring above conoid and lower SPMT-origin ring are distinct;
+    positions differ with conoid state.
+- evidence_id: hu2006-figure
+  kind: primary_source
+  reference: DOI:10.1371/journal.ppat.0020013
+  locator: Figure 1, visually inspected
+  accessed_at: '2026-10-11T19:43:45Z'
+  snapshot_sha256: e8cb2be02c6748963937ec56fea7f46edabab3412c64a366743ce203ef38c1da
+  support: supports
+  summary: Historical anterior ring above conoid and lower SPMT-origin ring are distinct;
+    positions differ with conoid state.
+- evidence_id: li2023
+  kind: primary_source
+  reference: DOI:10.1002/advs.202206595
+  locator: Results on microtubule orientation, Figure 2 and Methods
+  accessed_at: '2026-10-11T19:44:47Z'
+  snapshot_sha256: 37079db35056aa0b4a8afdbe487e70f88f099b995dc00fa002bc122ec966bae6
+  support: supports
+  summary: Primary cryo-ET of 13 ICMTs finds basal-directed extension from within
+    the conoid, not an established distal projection through the GO anterior fiber-origin
+    ring.
+- evidence_id: li-figure
+  kind: primary_source
+  reference: DOI:10.1002/advs.202206595
+  locator: Figure 2C/D, visually inspected
+  accessed_at: '2026-10-11T19:46:22Z'
+  snapshot_sha256: dab0e3d9aa6e2b8504ca0af3872e5fef67b1d550ff0d9b5c83c2cae238b19fd9
+  support: supports
+  summary: ICMTs extend basally from within the conoid; PCR and APR are explicitly
+    separate structures.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T194853Z-intraconoid_microtubule-audit/review.yaml
+  accessed_at: '2026-10-11T20:24:50Z'
+  snapshot_sha256: 9d2afc2d28c8b446cd3a67bbfff381234daaa2249fa7adc21207cacb564c5531
+  support: context_only
+  summary: Immutable pre-edit finding; no original review rewritten.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T193501Z/preservation-final.json
+  accessed_at: '2026-10-11T20:24:50Z'
+  snapshot_sha256: 612f1b10981748bc96ba32ab0c75f7643b910dd457e88489838fa56f6e21a724
+  support: context_only
+  summary: 904 other native records, 905 vectors and all prior history/review/legacy
+    bytes preserved. Only two obsolete component anchors redirected; original discussion
+    wording and dates retained.
+- evidence_id: red
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T193501Z/regressions-red-final.log
+  accessed_at: '2026-10-11T20:24:50Z'
+  snapshot_sha256: 5e4eea00aaabf33df6e97ae30d06803fae2504d11c4bd7240a36c45d17ca3c63
+  support: context_only
+  summary: Nine failures reproduce the defects on original native inputs; six preservation
+    controls pass.
+- evidence_id: green
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T193501Z/post-focused.log
+  accessed_at: '2026-10-11T20:24:50Z'
+  snapshot_sha256: d7ae164490c682109ca10542fcdf57603c04537008df7048f61099295a13a30d
+  support: context_only
+  summary: All fifteen regressions/preservation tests and twenty-four guarded-writer
+    tests pass.
+- evidence_id: edit-history
+  kind: record_content
+  reference: history/records/intraconoid_microtubule/2026-10-11T195341Z-codex-1aaff8.yaml
+  accessed_at: '2026-10-11T20:24:50Z'
+  snapshot_sha256: 6481148089ae6158d9c4d55182b20a2bd48364d35219c19b99d8c785642a623e
+  support: context_only
+  summary: Actual Codex EDIT links original observation and exact issues.
+assessments:
+- assessment_id: resolved-F1
+  area: evidence
+  topic: Remove the unsupported anterior-ring endpoint inference
+  outcome: supported
+  target_ids:
+  - GO:0033289
+  evidence_ids:
+  - record
+  - go
+  - paper-2
+  - paper-6
+  - li2023
+  - li-figure
+  - hu2006-figure
+  - predecessor
+  - preservation
+  - red
+  - green
+  - edit-history
+  summary: Removed the over-specific anterior-ring projection edge and matching prose,
+    retaining the GO definition with explicit ambiguity and primary basal-extension
+    context.
+findings:
+- finding_id: F1
+  issue_key: intraconoid-microtubule-anterior-ring-projection
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Remove the unsupported anterior-ring endpoint inference
+  description: Removed the over-specific anterior-ring projection edge and matching
+    prose, retaining the GO definition with explicit ambiguity and primary basal-extension
+    context.
+  target_ids:
+  - GO:0033289
+  field_paths:
+  - functions[0].description
+  - causal_graphs[0].description
+  - causal_graphs[0].nodes[3]
+  - causal_graphs[0].edges[2]
+  evidence_ids:
+  - record
+  - go
+  - paper-2
+  - paper-6
+  - li2023
+  - li-figure
+  - hu2006-figure
+  - predecessor
+  - preservation
+  - red
+  - green
+  - edit-history
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/intraconoid_microtubule.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Material claim-scope, topology or grounding error.
+  disposition_reason: Removed the over-specific anterior-ring projection edge and
+    matching prose, retaining the GO definition with explicit ambiguity and primary
+    basal-extension context. Verified against inspected sources, bounded diff, red/green
+    regressions and full local QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T194853Z-intraconoid_microtubule-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2253
+actions: []
+limitations:
+- Same-agent scoped disposition, not independent scientific approval or raw-data reanalysis.
+- Historical anterior/posterior ring names and modern APR layer names are not interchangeable.
+  Whole modern APR identity remains uncurated; neither GO ring is automatically assigned
+  all layers.
+- The conflicting GO preconoidal synonym and ambiguous ICMT polar-ring wording remain
+  explicitly attributed. No new ring attachment, nucleation mechanism, Plasmodium
+  absence or phylum-wide morphology prevalence is inferred.
+- Original source-access limitations remain. Actual NCBI XML replaced the failed Tran
+  full-text request; HTML constraint responses were not JSON evidence. All eight native
+  papers were inspected through primary XML or an author-hosted PDF.
+- Known resolver namespaces and three test skips retained. No verbatim snippets occur
+  in these five records; paraphrases received scientific source review.
+- First local full QC exposed a new conoid discussion-anchor error introduced during
+  remediation. A separate issue and actual EDIT event record its fix; the final full
+  QC and unchanged corpus anchor test passed.
+- Corrected source retained by review-base/apical-complex-identity-20261011. Four
+  PR gates and separate native merge-group gates remain required.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2253
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T194853Z-intraconoid_microtubule-audit
+  relationship: Resolves exact predecessor without replacing the original observation.
+```

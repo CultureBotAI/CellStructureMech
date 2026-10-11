@@ -39,13 +39,31 @@ curation_history:
     proteomics or Graindorge et al. 2016 MyoH entry/exit evidence under one canonical-example
     reference.
   llm_assisted: true
+- timestamp: '2026-10-11T19:53:37Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2250, #2251, #2252: Removed the heterogeneous whole-complex
+    cohort from body constituents and the reside-in edge, retaining proteomic/conservation
+    context in an appended discussion. Typed the conoid fiber polymer as a protein
+    complex and the assembled fiber/protofilament graph nodes as structures; tubulin
+    composition and scaffold relationships are unchanged. Replaced whole-phylum majority
+    inference with Toxoplasma body occurrence, preserving the distinct reduced Plasmodium
+    conoid-complex evidence as context without an absence claim.'
+  llm_assisted: true
+- timestamp: '2026-10-11T20:10:34Z'
+  curator: codex
+  action: FIX_REMEDIATION_ANCHOR
+  changes: 'Addressed #2255: made the new conoid scope discussion anchor reference
+    the declared conoid_tubulin_fibers component, as required by the corpus anchor
+    contract. No scientific claim, original discussion or earlier event changed.'
+  llm_assisted: true
 part_of:
 - GO:0005856
 - GO:0020007
 components:
 - component_id: conoid_tubulin_fibers
   label: conoid tubulin fibers
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
@@ -57,23 +75,6 @@ components:
   - reference: DOI:10.1083/jcb.200112086
     notes: Hu et al. 2002 identified Toxoplasma conoid fibers as an unusual tubulin
       polymer.
-- component_id: conserved_conoid_complex_proteins
-  label: conserved conoid complex proteins
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The conserved conoid proteome contains multiple unrelated proteins;
-    no exact CURIE for the whole conoid-complex protein cohort was curated.
-  role: Protein cohort detected in Toxoplasma conoid preparations and conserved across
-    apicomplexan lineages.
-  evidence:
-  - reference: DOI:10.1371/journal.ppat.0020013
-    notes: Hu et al. 2006 partially purified the Toxoplasma conoid/apical complex
-      and identified approximately 200 candidate cytoskeletal proteins.
-  - reference: DOI:10.1371/journal.pbio.3001081
-    notes: Koreny et al. 2021 molecularly characterized conserved conoid-complex proteins
-      across apicomplexans.
 - component_id: myoh_motor
   label: conoid-associated MyoH motor
   component_type: PROTEIN
@@ -97,12 +98,12 @@ taxonomic_distribution:
   note: Conoids are apicomplexan cytoskeletal structures rather than conserved eukaryotic
     cytoskeleton features.
   reference: DOI:10.1371/journal.pbio.3001081
-- taxon_id: NCBITaxon:5794
-  taxon_label: Apicomplexa
+- taxon_id: NCBITaxon:5811
+  taxon_label: Toxoplasma gondii
   presence: COMMON
-  note: Conoid-complex proteins are conserved across apicomplexans, including lineages
-    such as Plasmodium that lack a canonical protrusible conoid.
-  reference: DOI:10.1371/journal.pbio.3001081
+  note: Toxoplasma tachyzoites have the spiral ribbon-tubulin conoid body defined
+    here. This occurrence is distinct from broader conoid-complex protein conservation.
+  reference: DOI:10.1083/jcb.200112086
 canonical_examples:
 - taxon_id: NCBITaxon:5811
   taxon_label: Toxoplasma gondii
@@ -143,18 +144,19 @@ evidence:
 causal_graphs:
 - graph_id: conoid_tubulin_myoH_host_cell_entry
   title: Tubulin conoid fibers and MyoH support parasite entry and exit
-  description: Tubulin protofilament ribbons form the spiral conoid at the apical
-    complex, where conoid-complex proteins and the MyoH motor support Toxoplasma entry
-    into and exit from host cells.
+  description: Tubulin protofilament ribbons form the spiral conoid body at the apical
+    complex. The associated MyoH motor supports Toxoplasma entry into and exit from
+    host cells; heterogeneous whole-complex proteomic cohorts are not asserted as
+    body constituents.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
   - node_id: tubulin_protofilaments
     label: tubulin protofilaments
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
   - node_id: conoid_tubulin_fibers
     label: conoid tubulin fibers
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: conoid_tubulin_fibers
   - node_id: conoid
     label: conoid
@@ -164,10 +166,6 @@ causal_graphs:
     label: apical complex
     node_type: STRUCTURE
     grounding: GO:0020007
-  - node_id: conserved_conoid_complex_proteins
-    label: conserved conoid complex proteins
-    node_type: GENE_OR_PROTEIN
-    component_ref: conserved_conoid_complex_proteins
   - node_id: myoh_motor
     label: conoid-associated MyoH motor
     node_type: GENE_OR_PROTEIN
@@ -202,14 +200,6 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1083/jcb.200112086
       notes: Hu et al. 2002 resolved the conoid fibers as a spiral tubulin polymer.
-  - subject: conserved_conoid_complex_proteins
-    predicate: reside in
-    object: conoid
-    description: A conserved protein cohort is associated with the conoid complex.
-    evidence:
-    - reference: DOI:10.1371/journal.pbio.3001081
-      notes: Koreny et al. 2021 molecularly characterized conserved conoid-complex
-        proteins.
   - subject: myoh_motor
     predicate: localizes to
     object: conoid
@@ -243,10 +233,44 @@ discussions:
   status: OPEN
   attaches_to:
   - components#conoid_tubulin_fibers
-  - components#conserved_conoid_complex_proteins
+  - discussions#conoid_body_versus_complex_scope
   - components#myoh_motor
   rationale: The first conoid record keeps Toxoplasma-localized protein cohorts label-only
     because no exact cross-source protein-family CURIE was curated for the unusual
     conoid tubulin polymer, the conserved conoid proteome, or apicomplexan MyoH.
   posed_by: claude
   posed_date: '2026-09-10'
+- discussion_id: conoid_body_versus_complex_scope
+  prompt: Distinguish the spiral conoid body from the larger conoid-complex proteome.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - components#conoid_tubulin_fibers
+  - taxonomic_distribution
+  - causal_graphs#conoid_tubulin_myoH_host_cell_entry
+  - discussions#ground_conoid_protein_cohorts
+  rationale: Hu 2006 enriched apical cytoskeletal preparations contain candidate proteins,
+    not a pure inventory of conoid-body constituents. Koreny 2021 directly resolves
+    distinct body, base, canopy and APR locations and documents reduced conoid-derived
+    ring structures in Plasmodium. Homology or broad complex membership does not put
+    every protein inside the ribbon-tubulin body or establish majority prevalence
+    of that morphology.
+  resolution_note: Remove the heterogeneous cohort as a body constituent and its reside-in
+    edge, while retaining both papers as research context. Keep the Hu 2002 Toxoplasma
+    spiral-body evidence, polymer-level fiber identity, and independently supported
+    MyoH machinery and entry/exit claims. Replace the broad Apicomplexa COMMON inference
+    with the bounded Toxoplasma occurrence. This is not an absence claim for Plasmodium
+    conoid-derived structures. Original grounding rationale and dates remain, with
+    the removed-cohort anchor redirected to this scope discussion.
+  evidence:
+  - reference: DOI:10.1083/jcb.200112086
+    notes: Direct unusual conoid-body tubulin polymer evidence.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Partial apical-complex enrichment and candidate localization; not every
+      detected protein is a body constituent.
+  - reference: DOI:10.1371/journal.pbio.3001081
+    notes: Results and Figures 1, 3-5 and 8 distinguish substructures and reduced
+      Plasmodium conoid-complex morphology.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/subpellicular_microtubule.yaml
+  slug: subpellicular_microtubule
+session:
+  id: 2026-10-11T195343Z-codex-d31047
+  timestamp: '2026-10-11T19:53:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2254
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  - discussions
+  - evidence
+  summary: 'Addressed #2254: Retargeted the SPMT attachment node and edge coherently to GO:0020032,
+    preserving the lattice, molecular constituents and Trypanosoma boundary.'
+  details: 'Immutable pre-edit observation: reviews/structured/20261011T194858Z-subpellicular_microtubule-audit/review.yaml.
+    Retargeted the SPMT attachment node and edge coherently to GO:0020032, preserving the
+    lattice, molecular constituents and Trypanosoma boundary. Original history, discussion
+    wording and dates retained; only removed-component anchors redirected. PROPOSED unchanged.'

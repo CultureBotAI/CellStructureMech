@@ -157,9 +157,9 @@
           "cosine_similarity": 0.73338714
         },
         {
-          "identifier": "GO:0020031",
-          "label": "polar ring of apical complex",
-          "cosine_similarity": 0.73012184
+          "identifier": "GO:0020007",
+          "label": "apical complex",
+          "cosine_similarity": 0.72841915
         }
       ]
     },
@@ -2384,14 +2384,14 @@
           "cosine_similarity": 0.71670507
         },
         {
+          "identifier": "GO:0020010",
+          "label": "conoid",
+          "cosine_similarity": 0.71254038
+        },
+        {
           "identifier": "cellstructuremech:entodiniomorphid_subkinetal_myoneme_system",
           "label": "Entodiniomorphid subkinetal myoneme system",
           "cosine_similarity": 0.7088319
-        },
-        {
-          "identifier": "cellstructuremech:nucleus_basal_body_connector",
-          "label": "nucleus-basal body connector",
-          "cosine_similarity": 0.70532979
         }
       ]
     },
@@ -2712,27 +2712,27 @@
         {
           "identifier": "GO:0020031",
           "label": "polar ring of apical complex",
-          "cosine_similarity": 0.86894922
+          "cosine_similarity": 0.948028
         },
         {
           "identifier": "GO:0020007",
           "label": "apical complex",
-          "cosine_similarity": 0.81693761
+          "cosine_similarity": 0.81932939
         },
         {
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
-          "cosine_similarity": 0.79672364
+          "cosine_similarity": 0.79083123
         },
         {
           "identifier": "GO:0020010",
           "label": "conoid",
-          "cosine_similarity": 0.78098876
+          "cosine_similarity": 0.7882197
         },
         {
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
-          "cosine_similarity": 0.77753271
+          "cosine_similarity": 0.75686051
         }
       ]
     },
@@ -3270,27 +3270,27 @@
         {
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
-          "cosine_similarity": 0.83268359
+          "cosine_similarity": 0.85291163
         },
         {
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
-          "cosine_similarity": 0.7912867
+          "cosine_similarity": 0.81537235
         },
         {
           "identifier": "GO:0020031",
           "label": "polar ring of apical complex",
-          "cosine_similarity": 0.78421532
+          "cosine_similarity": 0.79866389
         },
         {
           "identifier": "GO:0020032",
           "label": "basal ring of apical complex",
-          "cosine_similarity": 0.78098876
+          "cosine_similarity": 0.7882197
         },
         {
-          "identifier": "GO:0020007",
-          "label": "apical complex",
-          "cosine_similarity": 0.76821312
+          "identifier": "GO:0005930",
+          "label": "axoneme",
+          "cosine_similarity": 0.76091984
         }
       ]
     },
@@ -3435,7 +3435,7 @@
         {
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
-          "cosine_similarity": 0.77816026
+          "cosine_similarity": 0.77301705
         },
         {
           "identifier": "GO:0020025",
@@ -4262,27 +4262,27 @@
         {
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
-          "cosine_similarity": 0.93848554
+          "cosine_similarity": 0.9385595
         },
         {
           "identifier": "GO:0005874",
           "label": "microtubule",
-          "cosine_similarity": 0.86932674
+          "cosine_similarity": 0.87239222
         },
         {
           "identifier": "GO:0005881",
           "label": "cytoplasmic microtubule",
-          "cosine_similarity": 0.86339316
+          "cosine_similarity": 0.8628576
+        },
+        {
+          "identifier": "GO:0020010",
+          "label": "conoid",
+          "cosine_similarity": 0.85291163
         },
         {
           "identifier": "GO:0097649",
           "label": "A axonemal microtubule",
-          "cosine_similarity": 0.84907673
-        },
-        {
-          "identifier": "GO:0005880",
-          "label": "nuclear microtubule",
-          "cosine_similarity": 0.84755435
+          "cosine_similarity": 0.84827903
         }
       ]
     },
@@ -4623,7 +4623,7 @@
         {
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
-          "cosine_similarity": 0.86932674
+          "cosine_similarity": 0.87239222
         }
       ]
     },
@@ -4871,7 +4871,7 @@
         {
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
-          "cosine_similarity": 0.84755435
+          "cosine_similarity": 0.84591822
         }
       ]
     },
@@ -5130,27 +5130,27 @@
         {
           "identifier": "GO:0020032",
           "label": "basal ring of apical complex",
-          "cosine_similarity": 0.86894922
+          "cosine_similarity": 0.948028
         },
         {
           "identifier": "GO:0020007",
           "label": "apical complex",
-          "cosine_similarity": 0.83939683
+          "cosine_similarity": 0.81188241
         },
         {
           "identifier": "GO:0020010",
           "label": "conoid",
-          "cosine_similarity": 0.78421532
-        },
-        {
-          "identifier": "GO:0033099",
-          "label": "attachment organelle",
-          "cosine_similarity": 0.73012184
+          "cosine_similarity": 0.79866389
         },
         {
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
-          "cosine_similarity": 0.70282526
+          "cosine_similarity": 0.7228171
+        },
+        {
+          "identifier": "GO:0020025",
+          "label": "subpellicular microtubule",
+          "cosine_similarity": 0.71874226
         }
       ]
     },
@@ -6122,7 +6122,7 @@
         {
           "identifier": "GO:0033289",
           "label": "intraconoid microtubule",
-          "cosine_similarity": 0.93848554
+          "cosine_similarity": 0.9385595
         },
         {
           "identifier": "GO:0005881",
@@ -14975,9 +14975,9 @@
           "cosine_similarity": 0.73038092
         },
         {
-          "identifier": "GO:0020031",
-          "label": "polar ring of apical complex",
-          "cosine_similarity": 0.67125491
+          "identifier": "GO:0020032",
+          "label": "basal ring of apical complex",
+          "cosine_similarity": 0.66703523
         }
       ]
     },
@@ -16226,24 +16226,24 @@
       "label": "apical complex",
       "neighbors": [
         {
-          "identifier": "GO:0020031",
-          "label": "polar ring of apical complex",
-          "cosine_similarity": 0.83939683
-        },
-        {
           "identifier": "GO:0020032",
           "label": "basal ring of apical complex",
-          "cosine_similarity": 0.81693761
+          "cosine_similarity": 0.81932939
         },
         {
-          "identifier": "GO:0020010",
-          "label": "conoid",
-          "cosine_similarity": 0.76821312
+          "identifier": "GO:0020031",
+          "label": "polar ring of apical complex",
+          "cosine_similarity": 0.81188241
         },
         {
           "identifier": "GO:1990225",
           "label": "rhoptry neck",
           "cosine_similarity": 0.75539723
+        },
+        {
+          "identifier": "GO:0020010",
+          "label": "conoid",
+          "cosine_similarity": 0.74885861
         },
         {
           "identifier": "GO:0070258",
@@ -27995,9 +27995,9 @@
           "cosine_similarity": 0.71579867
         },
         {
-          "identifier": "GO:0033289",
-          "label": "intraconoid microtubule",
-          "cosine_similarity": 0.68711513
+          "identifier": "GO:0090641",
+          "label": "microsporidian-type endospore",
+          "cosine_similarity": 0.68263179
         }
       ]
     },

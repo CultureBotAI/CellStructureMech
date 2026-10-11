@@ -21,14 +21,18 @@ curation_history:
     and curation discussions for unresolved constituents and the anterior/posterior
     polar-ring boundary.
   llm_assisted: true
+- timestamp: '2026-10-11T19:53:32Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2247: Separated the active basal-ring topology from preconoidal-ring
+    synonym conflation and qualified conoid-relative position for extrusion. The GO/source
+    conflict and original rationale remain explicit.'
+  llm_assisted: true
 synonyms:
 - synonym_text: lower polar ring of apical complex
   synonym_type: EXACT_SYNONYM
   source: GO:0020032
 - synonym_text: posterior polar ring of apical complex
-  synonym_type: EXACT_SYNONYM
-  source: GO:0020032
-- synonym_text: preconoidal ring of apical complex
   synonym_type: EXACT_SYNONYM
   source: GO:0020032
 part_of:
@@ -37,8 +41,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:5811
   taxon_label: Toxoplasma gondii
   presence: COMMON
-  note: Toxoplasma tachyzoite daughter scaffolds contain lower polar or preconoidal
-    rings at the posterior end of the conoid, where subpellicular microtubules originate.
+  note: Toxoplasma tachyzoites have a lower polar ring at the origin of the subpellicular
+    microtubules. The conoid extends and retracts relative to this ring.
   reference: DOI:10.1371/journal.ppat.0020013
 canonical_examples:
 - taxon_id: NCBITaxon:5811
@@ -50,15 +54,15 @@ canonical_examples:
 functions:
 - function_id: subpellicular_microtubule_origin
   label: subpellicular microtubule origin
-  description: The basal ring of the apical complex marks the posterior preconoidal
-    ring from which apicomplexan subpellicular microtubules originate.
+  description: The basal ring of the apical complex marks the origin of the subpellicular
+    microtubules; it is distinct from the preconoidal rings at the conoid tip.
   evidence:
   - reference: GO:0020032
     notes: Gene Ontology defines the basal ring of the apical complex by the origin
       of the subpellicular microtubules.
   - reference: DOI:10.1371/journal.ppat.0020013
-    notes: Hu et al. 2006 localized the lower polar rings and the subpellicular microtubules
-      in the Toxoplasma daughter apical scaffold.
+    notes: Hu et al. 2006 distinguish the polar ring from which the 22 subpellicular
+      microtubules originate from the distal preconoidal rings.
 evidence:
 - reference: GO:0020032
   notes: Gene Ontology cellular-component term for the basal ring of the apical complex.
@@ -68,17 +72,20 @@ evidence:
 - reference: DOI:10.1371/journal.ppat.0020013
   notes: Hu et al. 2006, Cytoskeletal Components of an Invasion Machine--the Apical
     Complex of Toxoplasma gondii, PLOS Pathogens.
+- reference: DOI:10.1083/jcb.200112086
+  notes: Hu, Roos and Murray 2002, A novel polymer of tubulin forms the conoid of
+    Toxoplasma gondii. Figure 1 supports state-dependent conoid/ring topology.
 causal_graphs:
 - graph_id: toxoplasma_basal_ring_topology
   title: The lower polar ring marks the origin of subpellicular microtubules
-  description: The basal ring of the apical complex is the lower or preconoidal ring
-    at the posterior side of the Toxoplasma conoid; subpellicular microtubules originate
-    from this region in the apical scaffold.
+  description: The lower polar ring marks the origin of Toxoplasma subpellicular microtubules.
+    Its posterior position relative to the conoid is shown for the extruded conoid,
+    not asserted for every conoid state.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records basal-ring topology in the mature apical complex.
-    It does not assert the proteins that form the ring or the mechanism that nucleates
-    subpellicular microtubules.
+  scope_notes: Mature topology, not a protein inventory or microtubule-nucleation
+    mechanism. The posterior-to-conoid edge applies when the conoid is extruded; the
+    conoid lies within the surrounding microtubule scaffold when retracted.
   nodes:
   - node_id: basal_ring_of_apical_complex
     label: basal ring of apical complex
@@ -109,15 +116,15 @@ causal_graphs:
   - subject: basal_ring_of_apical_complex
     predicate: is posterior to
     object: conoid
-    description: The basal ring occupies the lower or preconoidal ring position at
-      the posterior end of the conoid.
+    description: When the conoid is extruded, the lower SPMT-origin polar ring lies
+      posterior to the conoid; the ring does not follow the retracting conoid.
     evidence:
-    - reference: GO:0020032
-      notes: Gene Ontology lists lower, posterior and preconoidal ring exact synonyms
-        for the basal ring of the apical complex.
+    - reference: DOI:10.1083/jcb.200112086
+      notes: Figure 1 and Results distinguish the moving anterior ring/conoid from
+        the lower polar ring during extension and retraction.
     - reference: DOI:10.1371/journal.ppat.0020013
-      notes: Hu et al. 2006 distinguished upper and lower polar rings in the Toxoplasma
-        apical scaffold.
+      notes: Introduction and Figure 1 distinguish the distal preconoidal rings from
+        the SPMT-origin polar ring.
   - subject: subpellicular_microtubule
     predicate: originates from
     object: basal_ring_of_apical_complex
@@ -166,3 +173,33 @@ discussions:
   posed_by: codex
   posed_date: '2026-10-02'
   resolved_date: '2026-10-02'
+- discussion_id: basal_preconoidal_source_conflict
+  prompt: Separate the GO synonym conflict from the demonstrated basal-ring anatomy.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - synonyms
+  - causal_graphs#toxoplasma_basal_ring_topology
+  - discussions#distinguish_anterior_polar_ring
+  rationale: The original discussion faithfully recorded a GO:0020032 exact synonym,
+    preconoidal ring of apical complex. Hu 2006 instead places preconoidal rings at
+    the distal conoid tip and the SPMT-origin polar ring at the base. Hu 2002 distinguishes
+    the moving anterior ring/conoid from the lower ring. Thus the GO synonym conflicts
+    with the primary anatomy and cannot establish biological equivalence.
+  resolution_note: Remove the active preconoidal synonym and equivalent anatomical
+    wording while preserving the original discussion, source attribution and dates
+    as historical rationale. Retain GO:0020032 for the SPMT-origin ring and qualify
+    its conoid-relative position by extrusion. Do not equate this one GO ring with
+    all layers of the modern multilayer APR.
+  evidence:
+  - reference: GO:0020032
+    notes: Current authority still lists the conflicting preconoidal exact synonym;
+      this local interpretation does not silently alter the source.
+  - reference: DOI:10.1371/journal.ppat.0020013
+    notes: Introduction and Figure 1 explicitly separate distal preconoidal rings
+      from the SPMT-origin polar ring.
+  - reference: DOI:10.1083/jcb.200112086
+    notes: Figure 1 distinguishes extended and retracted conoid states.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'
