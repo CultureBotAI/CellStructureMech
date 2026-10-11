@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+  slug: mating_projection_septin_band
+session:
+  id: 2026-10-11T142727Z-codex-9e9ea0
+  timestamp: '2026-10-11T14:27:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2218
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_structures
+  - part_of
+  - evidence
+  - curation_history
+  summary: 'Addressed #2218: Corrected the is-a parent to GO:0032158 septin band and represented
+    the containing GO:0032156 septin cytoskeleton with part_of, retaining mating-projection
+    parthood and adding typed GO evidence.'
+  details: 'Original immutable review: reviews/structured/20261011T142654Z-mating_projection_septin_band-audit/review.yaml.
+    Corrected the is-a parent to GO:0032158 septin band and represented the containing GO:0032156
+    septin cytoskeleton with part_of, retaining mating-projection parthood and adding typed
+    GO evidence. Guarded writer; all other scientific fields, original discussions and history,
+    and PROPOSED status preserved.'

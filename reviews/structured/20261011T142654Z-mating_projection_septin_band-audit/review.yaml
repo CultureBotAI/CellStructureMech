@@ -1,0 +1,512 @@
+schema_version: 1.0.0
+review_id: 20261011T142654Z-mating_projection_septin_band-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'mating projection septin band: whole-record scientific review'
+started_at: '2026-10-11T14:18:32Z'
+finished_at: '2026-10-11T14:26:54Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent scientific review; not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Entire native record reviewed. One major is-a versus parthood defect is saved
+  before curation.
+source:
+  git_revision: 6a89c927c1a1143b9e41b5390b8edee3b403e5d9
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 7354ab3cdd2e80719041752e623b51c95369a7f1463ce3cf615d196448b156ce
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/appendage/mating_projection.yaml
+    sha256: bab39726b1ad7003dbf3f66e8d48d088365fac303dcbfeef0aae4009b26cc1b0
+    role: context
+  - path: data/structures/cytoskeleton/chlamydospore_septin_filament_array.yaml
+    sha256: 716764f6ed0bcbbb41f86d89e51272e96c0ac83ca56ef41c71dd5ff23f7a3481
+    role: context
+  - path: data/structures/cytoskeleton/germ_tube_septin_cap.yaml
+    sha256: 2b38e6f9051b64b36fe4bb52206122b35d060e5146d548622573303fe0378732
+    role: context
+  - path: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+    sha256: f1420625e020c7842cf281f96450b246edd350c32060c3d3186130d45ec012a0
+    role: context
+  - path: data/structures/cytoskeleton/hyphae_septin_collar.yaml
+    sha256: f189ba415c146bff4a6378b089b66a2864b3f1b4d2a48467d5b99c3c3d69527d
+    role: context
+  - path: data/structures/cytoskeleton/hyphal_septin_band.yaml
+    sha256: ca28b60ce59664d282f0379709392c10f211dbc1be34fc1bab90840285a429d7
+    role: context
+  - path: data/structures/cytoskeleton/hyphal_septin_cap.yaml
+    sha256: ca2f4c8585ae8b00261d85983033efe1b63fc690a5f316d4b0506200927a9d2f
+    role: context
+  - path: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+    sha256: 9b8a399ed470a314cf73b6a4df6c4e14bf8d2cda618eb091f7c02f557c5252cf
+    role: context
+  - path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+    sha256: 22a6e761bc8372bb3ef7721263e7815cbc83ef1ef92626361d33b2a8a5131744
+    role: target
+  - path: data/structures/cytoskeleton/mating_projection_septin_ring.yaml
+    sha256: 1829e9907009f5d72966b7b14936288c5bb5d141ea0fb043058a6e1939a078b6
+    role: context
+  - path: data/structures/cytoskeleton/medial_cortex_septin_ring.yaml
+    sha256: 9286b6cd14a1d4ee846f71768e3e2c167d3254af72efc0e9437738dd16caddb6
+    role: context
+  - path: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+    sha256: 725c892c096cf75b48bb0a26a1aad5d657d9e5e716851f07211b161ba4d04533
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/mating_projection_septin_band/2026-09-28T171654Z-claude-code-08ea43.yaml
+    sha256: 09cc1c377e0e5fb98346ba68332c2cada92e29fdccaa10c9586f2a19c960837d
+    role: context
+  - path: history/records/mating_projection_septin_band/2026-09-28T174252Z-claude-code-09339e.yaml
+    sha256: 50d7a6ac47e710c211e726462df89507cb805dbd5a987cb84343de6d26ea4a5d
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0032162
+  path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+  label: mating projection septin band
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+    role: maintained scientific record
+scope:
+  description: Entire native YAML, exact identity, hierarchy, components, taxon and
+    example, functions, every graph edge, discussions and both history surfaces.
+  selection: Exact record within an eleven-record septin cohort of the 909-record
+    goal. Other records have separate coverage accounting.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0032162
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/mating_projection_septin_band.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T14:21:12Z to 2026-10-11T14:21:15Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/mating_projection_septin_band.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T14:21:15Z to 2026-10-11T14:21:20Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/mating_projection_septin_band.yaml
+    --report /private/tmp/csm-review-20261011T141712Z/mating_projection_septin_band-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-11T14:21:20Z to 2026-10-11T14:21:42Z; log SHA-256 b41106f1d4a64e426fc27cb63d054abb9210750d25de4645791b671210a2fe76
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T14:22:56Z to 2026-10-11T14:23:09Z; log SHA-256 87f6e0276531bc60d78359853ebfda8bb817f50c271e400d5e94bbdbeb93e2cd
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T14:23:09Z to 2026-10-11T14:24:25Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T14:24:25Z to 2026-10-11T14:24:45Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4014\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T14:24:45Z to 2026-10-11T14:25:33Z; log SHA-256 ee1c5f2e78a2d29fcb6781a8ecd722934376595042d2cc261b4465b361d19b79
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: .venv/bin/python scripts/record_review.py check --base 6a89c927c1a1143b9e41b5390b8edee3b403e5d9
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T14:25:33Z to 2026-10-11T14:26:43Z; log SHA-256 3a7b0204d4b6d26fe6f7692a660f81298fa463814e5ca6a2b38b2b1a897c33a5
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T14:26:43Z to 2026-10-11T14:26:43Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: contract
+  name: contract
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '....                                                                     [100%]
+
+    4 passed in 84.82s (0:01:24)'
+  scope_note: 2026-10-11T14:17:46Z to 2026-10-11T14:19:11Z; log SHA-256 727f3528cc6d2fa25477678fba301d2e7a0927426c9a24582bdd542c1887e066
+- check_id: qc
+  name: Exact-baseline native CI QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032162
+  command: gh run view 38146043949 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Exact baseline merge-group QC verified: 861 passed, 3 skipped. Not a fresh
+    local full QC run.'
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38146043949;
+    log SHA-256 aac6453a76ed19f25edcb2e5cbc40b39b6822dd85b95787a7e21b8ac04d3ee98
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+  accessed_at: '2026-10-11T14:26:54Z'
+  snapshot_sha256: 22a6e761bc8372bb3ef7721263e7815cbc83ef1ef92626361d33b2a8a5131744
+  support: context_only
+  summary: Entire native record read before judgement; captured bytes unchanged.
+- evidence_id: generic-band
+  kind: record_content
+  reference: data/structures/cytoskeleton/septin_band.yaml
+  accessed_at: '2026-10-11T14:26:54Z'
+  snapshot_sha256: 41d269f0b9bd3a3814d8fd2bb5e3e26e933763e1b06c42a30e8b13e20f2865da
+  support: context_only
+  summary: Entire maintained parent record reread; it independently retains cytoskeleton
+    parthood and explicitly identifies this localized band subtype.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T14:26:54Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: parent_structures is is-a; containing frameworks use part_of.
+- evidence_id: history
+  kind: record_content
+  reference: /private/tmp/csm-review-20261011T141712Z/mating_projection_septin_band-discussion-history.json
+  accessed_at: '2026-10-11T14:26:54Z'
+  snapshot_sha256: 55872b8029fc78cc38d98fb6fe857245ffe831e5e52e4219f3c2e61cb4022837
+  support: context_only
+  summary: Committed discussions and inline events inspected; historical parentage
+    wording is retained as history, not rewritten.
+- evidence_id: append-history-0
+  kind: record_content
+  reference: history/records/mating_projection_septin_band/2026-09-28T171654Z-claude-code-08ea43.yaml
+  accessed_at: '2026-10-11T14:26:54Z'
+  snapshot_sha256: 09cc1c377e0e5fb98346ba68332c2cada92e29fdccaa10c9586f2a19c960837d
+  support: context_only
+  summary: Existing append-only history inspected, including legacy actor metadata;
+    preserved.
+- evidence_id: append-history-1
+  kind: record_content
+  reference: history/records/mating_projection_septin_band/2026-09-28T174252Z-claude-code-09339e.yaml
+  accessed_at: '2026-10-11T14:26:54Z'
+  snapshot_sha256: 50d7a6ac47e710c211e726462df89507cb805dbd5a987cb84343de6d26ea4a5d
+  support: context_only
+  summary: Existing append-only history inspected, including legacy actor metadata;
+    preserved.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T141712Z/exact-target-predecessors.json
+  accessed_at: '2026-10-11T14:26:54Z'
+  snapshot_sha256: 141710953fbedf87ef49d6bcfee8ae9f4f78e75c51c0eb108cc4aee8d446e334
+  support: context_only
+  summary: Ignored-inclusive canonical inventory found no exact-target predecessor.
+- evidence_id: issue-search
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T141712Z/septin-issues.log
+  accessed_at: '2026-10-11T14:26:54Z'
+  snapshot_sha256: 1073bef50ca42063349afb2365c9044558e5072223939bbc2fa32d21a7e7bc77
+  support: context_only
+  summary: All 26 results in the all-state septin issue search inspected; no duplicate
+    hierarchy issue. Closed issue 1734 concerned the component-grounding TODO.
+- evidence_id: prior-issue
+  kind: prior_review
+  reference: /private/tmp/csm-review-20261011T141712Z/issue-1734.log
+  accessed_at: '2026-10-11T14:26:54Z'
+  snapshot_sha256: 1dc70e2aa41a1023a2a32f6390f6960981c6ed3d79cecb6aba643c88bdebdb43
+  support: context_only
+  summary: The label-only grounding TODO fix remains present; not a canonical predecessor.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T141712Z/adapter.log
+  accessed_at: '2026-10-11T14:26:54Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: Live 28-dataset iModulonDB inventory has no matching fungal dataset. Not
+    negative biological evidence.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000144,GO:0005937,GO:0005940,GO:0032156,GO:0032158,GO:0032159,GO:0032160,GO:0032162,GO:0032163,GO:0032164,GO:0032165,GO:0032166,GO:0032168,GO:0032169,GO:0032170,GO:0032171,GO:0032172,GO:0032173,GO:0032175,GO:0032177,GO:0032179,GO:0036391,GO:0062140
+  locator: GO:0032158 children; GO:0032156 children; GO:0032162 definition; GO:0005937
+    children
+  accessed_at: '2026-10-11T14:20:40Z'
+  snapshot_sha256: bd1ef9cb82aff899e513296efa572b02347077b37f6388e6340434235c6f3306
+  support: supports
+  summary: GO:0032162 is_a GO:0032158 and part_of GO:0005937. GO:0032158 is part_of,
+    not is_a, GO:0032156.
+- evidence_id: ancestry
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032162/ancestors?relations=is_a
+  locator: QuickGO ancestors restricted to relations=is_a
+  accessed_at: '2026-10-11T14:21:38Z'
+  snapshot_sha256: 32d211149104be5f303532f35c6feea8d00d0325c0bca3fcd657ceab90e3a99c
+  support: supports
+  summary: Complete is-a ancestry is GO:0032162, GO:0032158, GO:0110165, GO:0005575.
+    GO:0032156 is not an is-a ancestor.
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: taxId, scientificName and rank
+  accessed_at: '2026-10-11T14:20:41Z'
+  snapshot_sha256: 1b79642cb4b3456a0052da6a42229ed8ac0f854f94ae735db59031f0665bfa1d
+  support: supports
+  summary: NCBITaxon:4932 is Saccharomyces cerevisiae, species.
+- evidence_id: longtine
+  kind: primary_source
+  reference: DOI:10.1083/jcb.143.3.719
+  locator: Results, Figure 9 D/E/I and paragraph beginning Interestingly, in cells
+    undergoing polarized morphogenesis
+  accessed_at: '2026-10-11T14:20:43Z'
+  snapshot_sha256: 8f950518eeeae555b39269b2740506d145ffe8148d6b021f7ca9e86cca841b15
+  support: supports
+  summary: Pheromone-treated SY2625 cells show fuzzy bands or bars parallel to the
+    projection axis; localization corresponds to a broad chitin band. Template function
+    is presented as an interpretation, not an ordered assembly mechanism.
+- evidence_id: douglas
+  kind: authority
+  reference: DOI:10.1128/EC.4.9.1503-1512.2005
+  locator: Septin function during mating, paragraphs 47-49 in retained extraction
+  accessed_at: '2026-10-11T14:20:43Z'
+  snapshot_sha256: 5bbfbcf9e4bce9c73981ca3d9162ae66469640d693bd7ff929d7020c2bf20a11
+  support: supports
+  summary: 'Secondary review, not a primary experiment: distinguishes diffuse bars
+    from tight mitotic rings and discusses Afr1/Glc7 scaffolding. The native bounded
+    can-organize function is consistent with this synthesis.'
+assessments:
+- assessment_id: identity
+  area: grounding
+  topic: Exact structure identity
+  outcome: supported
+  target_ids:
+  - GO:0032162
+  evidence_ids:
+  - record
+  - go
+  summary: Nonobsolete GO cellular-component identity, label, definition, category
+    and filament kind denote the diffuse shmoo-neck band, not the ring sibling or
+    an individual septin.
+- assessment_id: hierarchy
+  area: grounding
+  topic: Band parent versus containing cytoskeleton
+  outcome: concern
+  target_ids:
+  - GO:0032162
+  evidence_ids:
+  - record
+  - go
+  - ancestry
+  - rules
+  summary: parent_structures contains GO:0032156 septin cytoskeleton, asserting an
+    is-a relation. GO instead places GO:0032162 under GO:0032158 septin band; the
+    generic band is part_of the septin cytoskeleton. A part-of path cannot be converted
+    into an is-a path. The current encoding bypasses the correct local band parent
+    and misrepresents the containing framework as the structure class.
+- assessment_id: biology
+  area: evidence
+  topic: Components, species occurrence, example and function
+  outcome: supported
+  target_ids:
+  - GO:0032162
+  evidence_ids:
+  - record
+  - go
+  - taxon
+  - longtine
+  - douglas
+  summary: Grouped septin GTPase constituents, UNKNOWN essentiality, pheromone-dependent
+    S. cerevisiae occurrence and the bounded scaffold function are supported. No individual
+    paralog accession, universal essentiality, fixed stoichiometry or experimental
+    sufficiency is inferred.
+- assessment_id: graph
+  area: evidence
+  topic: All graph edges and ring/band boundary
+  outcome: supported
+  target_ids:
+  - GO:0032162
+  evidence_ids:
+  - record
+  - go
+  - longtine
+  summary: The two NONMECHANISTIC edges express septin band formation and mating-projection
+    parthood. Their evidence supports that coarse composition/topology; no recruitment
+    order or ring-specific species claim is made.
+- assessment_id: audit
+  area: completeness
+  topic: Discussions, optional resources and audit status
+  outcome: supported
+  target_ids:
+  - GO:0032162
+  evidence_ids:
+  - record
+  - history
+  - prior-issue
+  - rules
+  summary: The explicit open grounding TODO and resolved ring/band distinction are
+    retained. No unsupported measurement, image, dataset, trait or pathway assertion
+    is present. Both history surfaces and PROPOSED status remain intact.
+findings:
+- finding_id: F1
+  issue_key: mating-projection-septin-band-is-a-versus-parthood
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct septin-band is-a parent and cytoskeleton parthood
+  description: parent_structures contains GO:0032156 septin cytoskeleton, asserting
+    an is-a relation. GO instead places GO:0032162 under GO:0032158 septin band; the
+    generic band is part_of the septin cytoskeleton. A part-of path cannot be converted
+    into an is-a path. The current encoding bypasses the correct local band parent
+    and misrepresents the containing framework as the structure class.
+  target_ids:
+  - GO:0032162
+  field_paths:
+  - parent_structures
+  - part_of
+  - evidence
+  evidence_ids:
+  - record
+  - go
+  - ancestry
+  - rules
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Wrong typed ontology relation affects structure classification
+    and downstream hierarchy traversal; identity itself remains correct, so not a
+    blocker.
+actions:
+- action_id: A1
+  description: Use GO:0032158 as the band is-a parent and retain the cytoskeleton
+    relationship as parthood.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0032162
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Replace GO:0032156 in parent_structures with GO:0032158.
+  - Keep GO:0005937 in part_of and add GO:0032156 as inferred cytoskeleton parthood;
+    add precise GO hierarchy evidence.
+  - Preserve exact identity, components, taxon/example, functions, graph, discussions,
+    old history and PROPOSED status.
+  - Use the guarded writer and append actual Codex curation and EDIT history.
+  - Focused red/green regressions, regenerated pages, embedding consistency, full
+    native QC and canonical review checks pass.
+limitations:
+- Same-agent whole-record review, not independent human approval or raw experimental-data
+  reanalysis.
+- Full QC was verified from exact-baseline native CI; local scoped/global and contract
+  checks ran separately. Existing namespace resolver/label skips and three empty-parameter
+  test skips remain explicit.
+- Douglas 2005 is a review, not a new direct experiment. The native scaffold claim
+  remains bounded; individual cohort groundings and accessory boundaries remain open.
+- The other ten records have separate clean coverage accounting and no new review-output
+  records.
