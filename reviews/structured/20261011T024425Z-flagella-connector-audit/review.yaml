@@ -1,0 +1,493 @@
+schema_version: 1.0.0
+review_id: 20261011T024425Z-flagella-connector-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Flagella connector: scientific evidence review'
+started_at: '2026-10-11T02:32:58Z'
+finished_at: '2026-10-11T02:44:25Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent assessment of existing inputs before scientific mutation;
+    not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Entire native record assessed. One incorrect spatial claim conflates the
+  old-flagellum lateral attachment with its distal tip. Open molecular-inventory questions
+  are not findings.
+source:
+  git_revision: f2a8f453dd512d2f5ba3ff5dd15fddbe1b329d02
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/flagella_connector.yaml
+    sha256: b441eee2907413a83cf94897a252dd2adacf51502de05cd764ea559fea833d4d
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/flagella_connector/2026-10-03T035306Z-codex-6e9b37.yaml
+    sha256: 7a3e2d7dd5dfe362fd97d945484a9b724653ac0663d1ac1d6c33c67479c109c0
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0120118
+  path: data/structures/appendage/flagella_connector.yaml
+  label: flagella connector
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/flagella_connector.yaml
+    role: maintained scientific record
+scope:
+  description: Entire native record and histories; every present biological claim,
+    evidence entry and discussion.
+  selection: Sequential unassessed record in the all-909-record worklist.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0120118
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120118
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/flagella_connector.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native command passed. Resolver namespace skips and unavailable controls
+    are not positive identifier verification; empty quote fields do not validate paraphrases.
+    Exact target authorities and scientific support inspected separately.
+  scope_note: 2026-10-11T02:35:37Z to 2026-10-11T02:35:50Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120118
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/flagella_connector.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native command passed. Resolver namespace skips and unavailable controls
+    are not positive identifier verification; empty quote fields do not validate paraphrases.
+    Exact target authorities and scientific support inspected separately.
+  scope_note: 2026-10-11T02:35:50Z to 2026-10-11T02:36:09Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120118
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/flagella_connector.yaml
+    --report /private/tmp/csm-review-20261010T234956Z/checks/flagella_connector-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'No quoted snippets: 0 of 15 citations carry a snippet, including 13 evidence
+    items and two bare references. The command exits successfully without quotation
+    matching; scientific paraphrases were assessed separately.'
+  scope_note: 2026-10-11T02:36:09Z to 2026-10-11T02:37:39Z; log SHA-256 785078ce2bcf1768a1c53d29d9a373434d5679e0deb020f7e9d6b4131fd08e86
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120118
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native command passed. Resolver namespace skips and unavailable controls
+    are not positive identifier verification; empty quote fields do not validate paraphrases.
+    Exact target authorities and scientific support inspected separately.
+  scope_note: 2026-10-11T02:39:24Z to 2026-10-11T02:39:46Z; log SHA-256 087db2f1d2d2af6ce25e6ecdfd166a152d5cc0e25521151fe3cbb0c59df1a223
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120118
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 3544 canonical labels, 50 synonyms and six configured exceptions accepted;
+    603 non-adapter pairs skipped. Target ontology/taxon authorities separately inspected.
+  scope_note: 2026-10-11T02:39:46Z to 2026-10-11T02:42:00Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120118
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native command passed. Resolver namespace skips and unavailable controls
+    are not positive identifier verification; empty quote fields do not validate paraphrases.
+    Exact target authorities and scientific support inspected separately.
+  scope_note: 2026-10-11T02:42:00Z to 2026-10-11T02:42:28Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120118
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Resolver positive/negative controls passed; 4009 identifiers OK and 251
+    skipped. Success does not certify skipped namespaces; target authorities separately
+    inspected.
+  scope_note: 2026-10-11T02:42:28Z to 2026-10-11T02:43:14Z; log SHA-256 22cafeea4eafe84d9ebe3dba07b73cf3e93c8bc9f25e824a31c7484d28e09072
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120118
+  command: .venv/bin/python scripts/record_review.py check --base f2a8f453dd512d2f5ba3ff5dd15fddbe1b329d02
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native command passed. Resolver namespace skips and unavailable controls
+    are not positive identifier verification; empty quote fields do not validate paraphrases.
+    Exact target authorities and scientific support inspected separately.
+  scope_note: 2026-10-11T02:43:14Z to 2026-10-11T02:44:22Z; log SHA-256 53189295ad9b7d2c6f99907c4ba85b0b79c384bde7e4a986f9e2cfd99aaf1667
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120118
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native command passed. Resolver namespace skips and unavailable controls
+    are not positive identifier verification; empty quote fields do not validate paraphrases.
+    Exact target authorities and scientific support inspected separately.
+  scope_note: 2026-10-11T02:44:22Z to 2026-10-11T02:44:22Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: qc
+  name: Exact-baseline authoritative CI QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120118
+  command: gh run view 38096286710 --repo CultureBotAI/CellStructureMech --json status,conclusion,headSha,event,name,url,jobs;
+    gh run view 38096286710 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful authoritative QC on the exact unchanged baseline; not a new
+    local full-QC run.
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38096286710;
+    log SHA-256 786b79a23c6c752a343cdc8e938b9a3a63e8477b59abf564c175963aae2a462d
+- check_id: adapter
+  name: iModulonDB applicability
+  status: passed
+  required: false
+  target_ids:
+  - GO:0120118
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  summary: Inventory has no applicable Trypanosoma dataset; no expression-module query
+    applied. Lack of coverage is not negative biological evidence.
+  scope_note: 2026-10-11T02:37:15Z to 2026-10-11T02:37:17Z; log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/flagella_connector.yaml
+  locator: Entire native YAML and append-only history
+  accessed_at: '2026-10-11T02:44:25Z'
+  snapshot_sha256: b441eee2907413a83cf94897a252dd2adacf51502de05cd764ea559fea833d4d
+  support: context_only
+  summary: First function correctly places the old-side attachment on its flank; third
+    function and its Varga note incorrectly refer to distal tips on both sides. No
+    components or graph are asserted; PROPOSED status and two OPEN inventory/mechanism
+    discussions remain.
+- evidence_id: identity
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0120118
+  locator: Exact identity and definition
+  accessed_at: '2026-10-10T23:52:26Z'
+  snapshot_sha256: fac7fdf4268012f42e4109dac495e2d6fe7b5d5f85907c50b4b02cba8cad37e9
+  support: supports
+  summary: Active mobile-junction GO identity links the new growing tip to an older
+    flagellum.
+- evidence_id: parent
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030054/children
+  locator: Direct child relation
+  accessed_at: '2026-10-10T23:53:08Z'
+  snapshot_sha256: 189fc976bd9acb72c113f1823f2a3017cf57a55486b3ec8610eeb265ec02f167
+  support: supports
+  summary: GO:0120118 is an is-a child of cell junction GO:0030054; not an entire
+    flagellum or axonemal cap.
+- evidence_id: taxon
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/5691.json
+  locator: Exact taxonomic identity
+  accessed_at: '2026-10-10T23:52:30Z'
+  snapshot_sha256: ba9038d5f102216021b07100e77422e8d003d03a92ef27c739c69f9f699104b9
+  support: supports
+  summary: Trypanosoma brucei identity matches the scoped examples and distribution.
+- evidence_id: briggs
+  kind: primary_source
+  reference: DOI:10.1242/jcs.00995
+  locator: Inspected primary abstract
+  accessed_at: '2026-10-10T23:52:12Z'
+  snapshot_sha256: 2e16f9bebcd99ec575fd56ef590c5e8bef2a7e12ca9fea7cf5b72982590fbae0
+  support: supports
+  summary: New growing tip is linked to the lateral aspect of the old flagellum; old-side
+    filaments attach to three axonemal doublets. Supports the division-stage junction,
+    not distal-to-distal attachment.
+- evidence_id: hoog
+  kind: primary_source
+  reference: DOI:10.1371/journal.pntd.0004312
+  locator: Introduction, Results architecture and cell-cycle sections, Figures 1-3,
+    Discussion
+  accessed_at: '2026-10-10T23:52:15Z'
+  snapshot_sha256: e8fad5c3502ea4711666a118d187f6e037cafa0682f7153f2cf018fb8201135d
+  support: supports
+  summary: Electron and cryo-electron tomography define layers between the new tip
+    and old side. The connector stops roughly halfway along the old flagellum. Preparation-dependent
+    plates and filament visibility are distinguished, not promoted to a molecular
+    inventory.
+- evidence_id: varga
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1703553114
+  locator: Inspected primary abstract; not inaccessible article Results
+  accessed_at: '2026-10-10T23:51:59Z'
+  snapshot_sha256: fcedd74e6f61e92f73c391a5ff2d17b11a662028bb1fd4b9c125248a473f9d3b
+  support: supports
+  summary: Seven connector proteins are distinguished from three axonemal-cap proteins.
+    A kinesin-15 links the new-side junction to extending microtubule tips; a different
+    kinesin facilitates attachment to mature-flagellum microtubules, without asserting
+    an old distal-tip location.
+- evidence_id: moreira
+  kind: primary_source
+  reference: DOI:10.1126/science.1063775
+  locator: Inspected primary abstract
+  accessed_at: '2026-10-10T23:52:05Z'
+  snapshot_sha256: f02e37e902434c17a389dc663db27acdba6bf3e7f6c22137be6cfc82b6ff7fd5
+  support: supports
+  summary: New flagellum tip is attached to the old flagellum by a motile transmembrane
+    junction during division; supports the bounded linkage/motility statement.
+- evidence_id: davidge
+  kind: primary_source
+  reference: DOI:10.1242/jcs.03203
+  locator: Inspected primary abstract
+  accessed_at: '2026-10-10T23:52:13Z'
+  snapshot_sha256: a5336929bfddef7182662b5b168546d0569c05fa13dc733388f185b23132ffe8
+  support: supports
+  summary: IFT perturbation suppresses new axoneme formation while a connector and
+    sleeve of membrane still track along the old flagellum. Movement is therefore
+    distinguishable from new-axoneme extension; exact motor details remain unmodeled.
+- evidence_id: prior-search
+  kind: search
+  reference: reviews/structured/ and reports/yaml_record_review/
+  locator: GO:0120118, flagella.connector, connector-old-shaft-attachment
+  accessed_at: '2026-10-11T02:44:25Z'
+  support: context_only
+  search_scope: rg --no-ignore --hidden searched both canonical and legacy review
+    roots, including ignored files.
+  summary: No earlier exact-target bundle or same finding found within these roots.
+    Three legacy hits concern distinct structures and explicitly use the connector
+    only as a non-equivalent identity.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Identity, category, definition, synonym and parent
+  outcome: supported
+  target_ids:
+  - GO:0120118
+  evidence_ids:
+  - record
+  - identity
+  - parent
+  - hoog
+  summary: Exact mobile junction, with FC as a related synonym and cell-junction is-a
+    parent. Neither entire flagellum nor separate axonemal capping structure is substituted.
+- assessment_id: scope
+  area: scope
+  topic: Taxon distribution and canonical example
+  outcome: supported
+  target_ids:
+  - GO:0120118
+  evidence_ids:
+  - record
+  - taxon
+  - briggs
+  - hoog
+  summary: VARIABLE presence explicitly restricted to dividing procyclic T. brucei;
+    no universal kinetoplastid or bloodstream-form claim is made.
+- assessment_id: linkage
+  area: evidence
+  topic: First and second functions and their evidence
+  outcome: supported
+  target_ids:
+  - GO:0120118
+  evidence_ids:
+  - record
+  - briggs
+  - hoog
+  - moreira
+  - davidge
+  summary: New tip to old flank linkage and movement along the older flagellum are
+    supported. IFT perturbation is represented as separation from axoneme extension,
+    not proof of a fully resolved motor.
+- assessment_id: third-function
+  area: evidence
+  topic: Third function and Varga evidence note
+  outcome: concern
+  target_ids:
+  - GO:0120118
+  evidence_ids:
+  - record
+  - briggs
+  - hoog
+  - varga
+  summary: Distal tips on both assembling and mature flagella is incorrect. Varga
+    distinguishes a new-tip attachment from attachment to microtubules of the mature
+    flagellum; independent primary ultrastructure puts the latter along its shaft.
+  dimensions:
+  - name: evidence_tier
+    value: Primary microscopy/tomography and primary localization/function abstract
+    definition: Spatial architecture is independently established; abstract-level
+      protein results do not justify unseen residue-level or complete molecular mechanism
+      claims.
+    evidence_ids:
+    - briggs
+    - hoog
+    - varga
+- assessment_id: inventory
+  area: grounding
+  topic: Deferred constituents and mechanistic graph
+  outcome: supported
+  target_ids:
+  - GO:0120118
+  evidence_ids:
+  - record
+  - varga
+  - davidge
+  summary: OPEN discussions deliberately separate seven connector constituents from
+    three cap constituents and defer exact protein boundaries. Optional absent constituents/graph
+    are not fabricated as defects.
+- assessment_id: provenance
+  area: provenance
+  topic: Evidence placement, history, optional fields and status
+  outcome: supported
+  target_ids:
+  - GO:0120118
+  evidence_ids:
+  - record
+  - moreira
+  - briggs
+  - davidge
+  - hoog
+  - varga
+  summary: All five DOI identities verified and nearest claims examined. No trait,
+    image, count, physical property, dataset, protein example or stoichiometry is
+    asserted. Both history surfaces preserve earlier curation; agent-authored status
+    is PROPOSED.
+findings:
+- finding_id: F1
+  issue_key: connector-old-shaft-attachment
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Old-side connector attachment is mislocated at the distal tip
+  description: functions[2] and its Varga evidence note say the connector attaches
+    to distal microtubule tips in both assembling and mature flagella. The old-side
+    attachment is lateral, along the mature flagellar shaft, as shown by primary ultrastructure
+    and already stated in functions[0]. Varga places only the new-side attachment
+    at extending microtubule tips; cap proteins at both distal tips are a different
+    structure.
+  target_ids:
+  - GO:0120118
+  field_paths:
+  - functions[2].label
+  - functions[2].description
+  - functions[2].evidence[0].notes
+  evidence_ids:
+  - record
+  - briggs
+  - hoog
+  - varga
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/flagella_connector.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Incorrect biological location and source attribution alter
+    the represented coupling function. Whole-record identity remains correct, so this
+    is not an identity blocker.
+actions:
+- action_id: A1
+  description: Correct the third function to distinguish new distal microtubule tips
+    from microtubules along the old flagellum shaft. Retain the stable function ID,
+    primary evidence, PROPOSED status and unresolved molecular inventory.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0120118
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/flagella_connector.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Function label, description and evidence note consistently state new-tip to old-shaft
+    attachment.
+  - Varga protein assignment is bounded to its inspected abstract; independent Hoog
+    or Briggs evidence supports lateral old-side geometry.
+  - No axonemal-cap proteins, unverified constituents or motor sufficiency claims
+    are imported.
+  - Guarded write, append-only native/repository history, focused regression tests
+    and affected generated artifacts pass native gates.
+limitations:
+- Same-agent scientific review, not independent human sign-off or completion of the
+  all-909-record goal.
+- Briggs, Moreira-Leite, Davidge and Varga were assessed from primary abstracts. Hoog
+  full-text sections provide independent spatial corroboration. Varga full Results
+  were inaccessible through attempted official routes; a downloaded PubMed cookie
+  challenge is not article evidence.
+- The bounded native claims assessed here are supported or contradicted by the inspected
+  sections; no assertion is made about unseen experiments, a complete protein inventory
+  or detailed kinesin motility mechanism.
+- Full QC is verified CI on the exact unchanged baseline, with separately recorded
+  local checks. Resolver skips and quote verification do not establish scientific
+  support.
+- No applicable iModulonDB Trypanosoma dataset was available; this is not negative
+  evidence.

@@ -19,6 +19,14 @@ curation_history:
     scope, new-to-old flagellar-tip coupling functions, core literature evidence,
     and open component-boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-11T02:44:54Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2166: corrected connector coupling from distal tips on both
+    flagella to new-tip versus old-shaft attachment, with scoped Varga protein evidence
+    and independent Hoog spatial evidence. Preserved stable function ID, open molecular
+    inventory and PROPOSED status.'
+  llm_assisted: true
 synonyms:
 - synonym_text: FC
   synonym_type: RELATED_SYNONYM
@@ -63,14 +71,22 @@ functions:
     notes: Davidge et al. 2006 used intraflagellar-transport mutants to dissect FC
       movement from extension of the new flagellar axoneme.
 - function_id: distal_flagellar_tip_coupling
-  label: distal flagellar-tip coupling
-  description: FC-associated proteins couple the connector membrane junction to microtubules
-    at the distal tips of the assembling and mature trypanosome flagella.
+  label: new-tip to old-shaft microtubule coupling
+  description: FC-associated proteins link the connector membrane junction to extending
+    microtubule tips in the assembling new flagellum and to axonemal microtubules
+    along the lateral shaft of the mature old flagellum.
   evidence:
   - reference: DOI:10.1073/pnas.1703553114
-    notes: Varga et al. 2017 identified FC constituents and assigned kinesin-family
-      proteins to the links between the FC membrane junction and microtubules at the
-      distal new- and old-flagellum tips.
+    notes: Varga et al. 2017 assigned a kinesin-15 family member to the link with
+      extending new-flagellum microtubule tips and a kinetoplastid-specific kinesin
+      to attachment to mature-flagellum microtubules. This does not place the old-side
+      attachment at the old distal tip or equate the connector with the separate axonemal
+      cap.
+  - reference: DOI:10.1371/journal.pntd.0004312
+    notes: Hoog et al. 2016 resolved the connector between the new flagellum tip and
+      the lateral side of the old flagellum; it travels along the old flagellum and
+      stops roughly halfway along its length. This supplies the spatial context for
+      the mature-flagellum microtubule attachment.
 evidence:
 - reference: DOI:10.1126/science.1063775
   notes: Moreira-Leite, Sherwin, Kohl and Gull 2001, A trypanosome structure involved
