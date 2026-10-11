@@ -32,6 +32,12 @@ curation_history:
   changes: 'Resolved PR #1384 review issue #1385 by changing the inner-arm heavy-chain
     graph edge from assembly to static parthood.'
   llm_assisted: true
+- timestamp: '2026-10-11T12:04:36Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2210: aligned the nonmechanistic dynein-arm graph with source-supported
+    constituent parthood rather than assembly.'
+  llm_assisted: true
 parent_structures:
 - GO:0005858
 part_of:
@@ -90,9 +96,9 @@ evidence:
 causal_graphs:
 - graph_id: chlamydomonas_inner_dynein_arm_motility
   title: Inner dynein arms drive Chlamydomonas axonemal sliding
-  description: Inner-arm dynein heavy chains assemble into inner dynein arms that
-    project from Chlamydomonas axonemal outer doublet microtubules and contribute
-    to sliding force generation.
+  description: Inner-arm dynein heavy chains are motor-chain constituents of inner
+    dynein arms that project from Chlamydomonas axonemal outer doublet microtubules
+    and contribute to sliding force generation.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph records the coarse inner-arm dynein complex boundary and
