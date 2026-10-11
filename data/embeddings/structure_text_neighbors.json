@@ -1671,14 +1671,14 @@
           "cosine_similarity": 0.75355237
         },
         {
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.75170515
+        },
+        {
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
           "cosine_similarity": 0.74507692
-        },
-        {
-          "identifier": "GO:0035267",
-          "label": "NuA4 histone acetyltransferase complex",
-          "cosine_similarity": 0.74249938
         }
       ]
     },
@@ -1692,14 +1692,14 @@
           "cosine_similarity": 0.81573999
         },
         {
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.80170607
+        },
+        {
           "identifier": "GO:0099079",
           "label": "actin body",
           "cosine_similarity": 0.79720876
-        },
-        {
-          "identifier": "GO:0110085",
-          "label": "mitotic actomyosin contractile ring",
-          "cosine_similarity": 0.79696101
         },
         {
           "identifier": "GO:0110086",
@@ -1720,7 +1720,7 @@
         {
           "identifier": "GO:0110085",
           "label": "mitotic actomyosin contractile ring",
-          "cosine_similarity": 0.95600476
+          "cosine_similarity": 0.95932934
         },
         {
           "identifier": "GO:0110086",
@@ -2872,7 +2872,7 @@
         {
           "identifier": "GO:0110085",
           "label": "mitotic actomyosin contractile ring",
-          "cosine_similarity": 0.86741735
+          "cosine_similarity": 0.86923078
         },
         {
           "identifier": "GO:0000144",
@@ -4311,9 +4311,9 @@
           "cosine_similarity": 0.78394336
         },
         {
-          "identifier": "GO:0110085",
-          "label": "mitotic actomyosin contractile ring",
-          "cosine_similarity": 0.77915265
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.77866414
         }
       ]
     },
@@ -4344,7 +4344,7 @@
         {
           "identifier": "GO:0110085",
           "label": "mitotic actomyosin contractile ring",
-          "cosine_similarity": 0.75021331
+          "cosine_similarity": 0.75501792
         }
       ]
     },
@@ -4479,7 +4479,7 @@
         {
           "identifier": "GO:0110085",
           "label": "mitotic actomyosin contractile ring",
-          "cosine_similarity": 0.95878522
+          "cosine_similarity": 0.96063216
         },
         {
           "identifier": "GO:0005826",
@@ -4634,27 +4634,27 @@
         {
           "identifier": "GO:0110086",
           "label": "meiotic actomyosin contractile ring",
-          "cosine_similarity": 0.95878522
+          "cosine_similarity": 0.96063216
         },
         {
           "identifier": "GO:0005826",
           "label": "actomyosin contractile ring",
-          "cosine_similarity": 0.95600476
+          "cosine_similarity": 0.95932934
         },
         {
           "identifier": "GO:0032157",
           "label": "prospore contractile ring",
-          "cosine_similarity": 0.89630868
+          "cosine_similarity": 0.89818473
         },
         {
           "identifier": "GO:0000142",
           "label": "cellular bud neck contractile ring",
-          "cosine_similarity": 0.86741735
+          "cosine_similarity": 0.86923078
         },
         {
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
-          "cosine_similarity": 0.79696101
+          "cosine_similarity": 0.80170607
         }
       ]
     },
@@ -5202,7 +5202,7 @@
         {
           "identifier": "GO:0110085",
           "label": "mitotic actomyosin contractile ring",
-          "cosine_similarity": 0.89630868
+          "cosine_similarity": 0.89818473
         },
         {
           "identifier": "GO:0000142",
