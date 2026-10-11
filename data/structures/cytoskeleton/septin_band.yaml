@@ -4,7 +4,7 @@ structure_category: CYTOSKELETON
 structure_kind: FILAMENT
 definition: A diffuse ring composed of a series of septin bars that run parallel to
   the long axis of the cell. This type of septin structure has been observed in a
-  number of locations associated with polarized grown and/or deposition of new membrane,
+  number of locations associated with polarized growth and/or deposition of new membrane,
   but not with cytokinesis, such as at the shmoo (mating projection) neck, at the
   junction between the mother cell and the germ tube (hypha) of a fungal cell growing
   filamentously.
@@ -22,6 +22,12 @@ curation_history:
   changes: Added cellular-anatomical-structure parentage, septin-cytoskeleton parthood,
     a reviewed-label-only septin constituent, GO-backed band topology, and boundary
     and component-grounding discussions.
+  llm_assisted: true
+- timestamp: '2026-10-11T13:43:17Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2216: Corrected the inherited GO definition typo polarized
+    grown to polarized growth without changing scientific meaning or source.'
   llm_assisted: true
 parent_structures:
 - GO:0110165

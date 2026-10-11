@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_band.yaml
+  slug: septin_band
+session:
+  id: 2026-10-11T134319Z-codex-ed0221
+  timestamp: '2026-10-11T13:43:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2216
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - curation_history
+  summary: 'Addressed #2216: Corrected the inherited GO definition typo polarized grown to
+    polarized growth without changing scientific meaning or source.'
+  details: 'Original immutable review: reviews/structured/20261011T134159Z-septin_band-audit/review.yaml.
+    Corrected the inherited GO definition typo polarized grown to polarized growth without
+    changing scientific meaning or source. Guarded writer; identity, citations, graph, component
+    boundaries, prior discussions, prior history and PROPOSED status preserved.'
