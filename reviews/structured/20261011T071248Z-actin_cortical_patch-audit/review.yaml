@@ -1,0 +1,410 @@
+schema_version: 1.0.0
+review_id: 20261011T071248Z-actin_cortical_patch-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Actin cortical patch: scientific record review'
+started_at: '2026-10-11T07:03:31Z'
+finished_at: '2026-10-11T07:12:48Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent review before curation, not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Entire native record assessed; concrete findings saved before separately
+  authorized curation.
+source:
+  git_revision: d9cea09379282886022064c57c012efe0db3beaf
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 64862db2087298ae832b8a8410185349cc277151af31d88ce231e43201ab9440
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+    sha256: 69d877184d26cad12996c067faf588ed2aae4c33518a904a75459cd8c80de62b
+    role: context
+  - path: data/structures/cytoskeleton/actin_body.yaml
+    sha256: b0abd6f5cb40fec99ab2d5a23a56b7307041f4ac8eda2a32b9db8d57680f22ea
+    role: context
+  - path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+    sha256: fcbfc85680d23109790a85ffb36bc4741fd234d0b8ea0e08daeb3a968a83a98d
+    role: target
+  - path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+    sha256: e5f2ff579535048e3d07b5b7b1284ce798cc61bc15f035a0bdf9eefad82af972
+    role: context
+  - path: data/structures/cytoskeleton/alfa_filament.yaml
+    sha256: 0de91b02762d26df788d87897737eafac9de142277c77712ce4d2892c6156ffd
+    role: context
+  - path: data/structures/other/cell_cortex.yaml
+    sha256: 5335ecdc090d19feeccf80b52e7f52231efcc7a92bfa2a00f920704673038b2d
+    role: context
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/actin_cortical_patch/2026-09-12T084055Z-codex-b520e4.yaml
+    sha256: 08e20884df606105a945c551d5e8d6896ec6c394300ca125841cd2d86c7878f2
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0030479
+  path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+  label: actin cortical patch
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire native YAML: identity, synonyms, hierarchy, composition, taxonomy,
+    functions, each causal edge, optional resources and provenance.'
+  selection: One resolved sequential target in the all-record goal; not a sampled
+    verdict for other records.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030479
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/actin_cortical_patch.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:04:17Z to 2026-10-11T07:04:19Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/actin_cortical_patch.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:04:19Z to 2026-10-11T07:04:23Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/actin_cortical_patch.yaml
+    --report /private/tmp/csm-review-20261011T070221Z/actin_cortical_patch-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets. This does not validate paraphrases.
+  scope_note: 2026-10-11T07:04:23Z to 2026-10-11T07:04:41Z; log SHA-256 b41106f1d4a64e426fc27cb63d054abb9210750d25de4645791b671210a2fe76
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:05:30Z to 2026-10-11T07:05:43Z; log SHA-256 e836c3a60d88b76a8f3886dd6bf8d339fcbd2229409e99019ae17006c6c6f673
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T07:05:43Z to 2026-10-11T07:07:05Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:07:05Z to 2026-10-11T07:07:33Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\nresolving 6 CHEBI identifier(s)...\nresolving 77 DOI identifier(s)...\n\
+    resolving 30 GO identifier(s)...\nresolving 1 InterPro identifier(s)...\nresolving\
+    \ 12 NCBITaxon identifier(s)...\nresolving 1 PMID identifier(s)...\nresolving\
+    \ 2 uniprot.location identifier(s)...\n\nidentifier liveness summary:\n  OK  \
+    \           4012\n  SKIPPED         251\n\nEvery identifier resolves at its issuing\
+    \ authority."
+  scope_note: 2026-10-11T07:07:33Z to 2026-10-11T07:09:55Z; log SHA-256 e06f3f324434626cb1076037e7014bae54ba5e379333ec2cb3f4ef1b0e8c9ee1
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:09:55Z to 2026-10-11T07:10:42Z; log SHA-256 c3d95a55b38dffd1274c02af55e2b3f708b154d2f63e072edb88aba988128971
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:10:42Z to 2026-10-11T07:10:42Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: contract
+  name: contract
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:03:13Z to 2026-10-11T07:04:12Z; log SHA-256 5ddb5253163bef2fb3581b178616966b159be8fb066c81fdfe022c6d78405a37
+- check_id: qc
+  name: Exact-baseline authoritative CI QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030479
+  command: gh run view 38119529229 --json status,conclusion,headSha,event,name,url,jobs;
+    gh run view 38119529229 --log
+  exit_code: 0
+  summary: Full native QC passed on this exact unchanged input revision, including
+    generated products; not newly run local full QC.
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38119529229;
+    full-log SHA-256 3fbc61430d4f984ff00dcdd8fea2fa5ca825a06e78e302342089a4fef8294c49
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/actin_cortical_patch.yaml
+  accessed_at: '2026-10-11T07:12:48Z'
+  snapshot_sha256: fcbfc85680d23109790a85ffb36bc4741fd234d0b8ea0e08daeb3a968a83a98d
+  support: context_only
+  summary: Full native YAML read and exact inputs captured before the formal assessment.
+    Initial source leads preceded some captures.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T07:12:48Z'
+  snapshot_sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+  support: context_only
+  summary: Requires claim-specific evidence, is-a versus parthood, constituent/machinery
+    distinction and append-only rationale.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000147,GO:0001534,GO:0005737,GO:0005826,GO:0005856,GO:0005879,GO:0005885,GO:0005938,GO:0015629,GO:0030479,GO:0030864,GO:0036156,GO:0036157,GO:0061645,GO:0097545,GO:0097649,GO:0097650,GO:0099079,GO:0099513,GO:0110165,GO:0160111,GO:0160113,GO:0160114
+  locator: Current native definitions, synonyms, obsolescence flags and typed child
+    relationships
+  accessed_at: '2026-10-11T07:04:57Z'
+  snapshot_sha256: 71f14150527ed018024bb5682b4d3b88750c50919ca386ca9bac5766e8df4480
+  support: supports
+  summary: Exact native GO identities and roles checked. Reverse child lists confirm
+    is-a versus part_of; untyped ancestor reachability alone is not treated as an
+    is-a assertion.
+- evidence_id: taxa
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1423%2C284812%2C3055%2C4896%2C4932%2C559292
+  locator: Top-level requested NCBI Taxon entries
+  accessed_at: '2026-10-11T07:05:02Z'
+  snapshot_sha256: 785915aef9110dcf4728409ac02274f8c858aba27b08779ae5e3b0d2c5a37108
+  support: supports
+  summary: The six requested taxa and reference-strain names resolve. Taxonomy is
+    not evidence of structure prevalence.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/adapter.log
+  accessed_at: '2026-10-11T07:12:48Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: 'Live 28-dataset inventory: no matching yeast or Chlamydomonas dataset.
+    Bacillus searches are described separately; noncoverage is not negative biology.'
+- evidence_id: young
+  kind: primary_source
+  reference: DOI:10.1083/jcb.200404159
+  locator: Abstract, Introduction, purification/correlative microscopy Results, captions
+    and Methods
+  accessed_at: '2026-10-11T07:03:35Z'
+  snapshot_sha256: 5a6f0446a535227487e0108c1d836c7fe8abf1efc2fb4bf80a6021dbd00a79d6
+  support: supports
+  summary: Partially purified budding-yeast patches contain short branched actin networks
+    with Arp2/3-characteristic geometry; mutant and sample conditions limit ultrastructural
+    interpretation.
+- evidence_id: kaksonen
+  kind: primary_source
+  reference: DOI:10.1016/S0092-8674(03)00883-3
+  locator: Primary abstract only
+  accessed_at: '2026-10-11T07:03:25Z'
+  snapshot_sha256: c1da2ad4f795c637d623200c59a870e5a559b81b1c0c0741763ae45b2030e7e4
+  support: supports
+  summary: Real-time cortical-patch tracking connects ordered actin recruitment to
+    endocytic internalization and patch disassembly; all native uses are within this
+    explicit result.
+- evidence_id: galletta
+  kind: primary_source
+  reference: DOI:10.1371/journal.pbio.0060001
+  locator: Abstract and author summary
+  accessed_at: '2026-10-11T07:03:51Z'
+  snapshot_sha256: b5697da51a17ac95ed187ddabaf240f3b8fcc0a965e3c70716fc5960ff98a19d
+  support: supports
+  summary: Systematic Arp2/3-regulator mutants and high-speed tracking support distinct/overlapping
+    roles in patch formation and movement; not evidence for all regulators as permanent
+    constituents.
+assessments:
+- assessment_id: hierarchy
+  area: identity
+  topic: Exact identity versus containment
+  outcome: concern
+  target_ids:
+  - GO:0030479
+  evidence_ids:
+  - record
+  - go
+  summary: GO:0030479 is an endocytic patch (GO:0061645) and part of cortical actin
+    cytoskeleton (GO:0030864). The current is-a edge to the whole actin cytoskeleton
+    is wrong.
+- assessment_id: biology
+  area: evidence
+  topic: Components, taxon, functions and each graph edge
+  outcome: supported
+  target_ids:
+  - GO:0030479
+  evidence_ids:
+  - young
+  - kaksonen
+  - galletta
+  - taxa
+  - go
+  summary: Actin and the Arp2/3 branch nucleator, budding-yeast scope and the three
+    coarse assembly edges are supported. The separate internalization function remains
+    outside the ASSEMBLY graph. Optional accessory groundings are explicitly deferred;
+    no image, dataset or quantitative measurement is claimed.
+- assessment_id: resources-provenance
+  area: provenance
+  topic: Prior history, omitted optional fields and review coverage
+  outcome: supported
+  target_ids:
+  - GO:0030479
+  evidence_ids:
+  - record
+  - rules
+  summary: Both history surfaces and previous issue fixes were read. No empty optional
+    field or acknowledged unknown is counted as a finding. Ignored-inclusive canonical-review
+    search found no exact-target predecessor; existing legacy reports remain historical.
+    No claims of reviewing adjacent records are made.
+findings:
+- finding_id: F1
+  issue_key: actin-cortical-patch-hierarchy-parthood
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate endocytic-patch identity from cytoskeleton parthood
+  description: parent_structures currently asserts GO:0015629 actin cytoskeleton as
+    an is-a parent. Current GO defines this patch as a subtype of GO:0061645 endocytic
+    patch and part of GO:0030864 cortical actin cytoskeleton. The record evidence
+    repeats the erroneous parent interpretation.
+  target_ids:
+  - GO:0030479
+  field_paths:
+  - parent_structures
+  - part_of
+  - evidence
+  evidence_ids:
+  - record
+  - go
+  - rules
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Incorrect evidence identity, ontology relationship or structure
+    composition.
+actions:
+- action_id: A1
+  description: Separate endocytic-patch identity from cytoskeleton parthood
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030479
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Use GO:0061645 for is-a and GO:0030864 for cortical actin-cytoskeleton parthood,
+    preserving the existing cortex relation.
+  - Correct the hierarchy evidence and preserve the prior assembly-only graph and
+    regulator-evidence placement fixes.
+  - Use guarded curation, append Codex curation and EDIT history, retain PROPOSED,
+    previous histories/reviews and discussion rationale; regenerate affected products
+    and pass focused tests plus native QC.
+limitations:
+- Same-agent assessment; no independent or human sign-off and no promotion of PROPOSED.
+- Identifier check has 251 skipped identifiers; label check has 603 pairs without
+  adapters. Exact target authorities were inspected separately; global skipped namespaces
+  are not certified.
+- Full QC uses the verified exact-baseline merge-group CI run. No raw experimental
+  data or movies were reanalysed.
+- Europe PMC fullTextXML failed for several sources; official PMC full HTML supplied
+  the readable fallback. Access tiers are specified per source below.
+- Kaksonen 2003 uses primary-abstract evidence. Galletta abstract/author summary supports
+  the coarse regulator-context claims; no specific mutant effect or full supplementary-data
+  reconstruction is asserted.
