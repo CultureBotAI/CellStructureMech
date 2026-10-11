@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mitotic_spindle.yaml
+  slug: mitotic_spindle
+session:
+  id: 2026-10-11T210158Z-codex-47cc5e
+  timestamp: '2026-10-11T21:01:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2257
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - canonical_examples
+  - curation_history
+  summary: 'Addressed #2257: narrowed both Winey 1995 example notes to serial-section electron-microscopy
+    reconstruction; preserved separately cited Straight 1997 live-cell evidence.'
+  details: 'Original immutable finding: reviews/structured/20261011T205812Z-mitotic_spindle-audit/review.yaml.
+    Only two example notes and a new curation event change. Prior graph-kind/tubulin-evidence
+    fixes, all discussions/history, references, taxon and PROPOSED status preserved.'
