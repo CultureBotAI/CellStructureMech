@@ -2,13 +2,10 @@ identifier: GO:0097597
 label: ventral disc
 structure_category: CYTOSKELETON
 structure_kind: OTHER
-definition: Specialized organelle found in Giardia species (trophozoite stage) and
-  characterized by a spiral array of microtubules and microtubule-associated structures
-  including dorsal microribbons and crossbridges. The edge of the ventral disc narrows
-  into a lateral crest. The ventral disk mediates mechanical attachment of the trophozoite
-  to the host's intestinal wall, and contains the contractile proteins actinin, alpha-actinin,
-  myosin, and tropomyosin working towards contraction of the disk involved in adherence.
-definition_source: GO:0097597
+definition: A specialized organelle in Giardia trophozoites that supports attachment
+  to host intestinal epithelium. Its spiral microtubule array bears dorsal microribbons
+  linked by crossbridges, and a lateral crest surrounds the disc edge.
+definition_source: DOI:10.1371/journal.pone.0043783
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-11T13:00:45Z'
@@ -49,15 +46,23 @@ curation_history:
   changes: Expanded a repeated graph-edge evidence mapping into an independent YAML
     mapping so the record does not emit anchors and aliases.
   llm_assisted: true
+- timestamp: '2026-10-11T17:03:36Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2226, #2227, #2228: Replaced the inherited classical contractile-protein
+    assertion with a structural definition and appended its source conflict; corrected
+    two GO synonym scopes and source-neutral tubulin labels while preserving IDs and
+    original rationale.'
+  llm_assisted: true
 synonyms:
 - synonym_text: ventral adhesive disc
   synonym_type: EXACT_SYNONYM
   source: GO:0097597
 - synonym_text: adhesive disc
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GO:0097597
 - synonym_text: ventral disk
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GO:0097597
 has_part:
 - GO:0097593
@@ -68,7 +73,7 @@ has_part:
 - GO:0097596
 components:
 - component_id: ventral_disc_tubulins
-  label: ventral disc tubulins
+  label: alpha- and beta-tubulins
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
@@ -164,7 +169,7 @@ causal_graphs:
     mechanisms unresolved.
   nodes:
   - node_id: ventral_disc_tubulins
-    label: ventral disc tubulins
+    label: alpha- and beta-tubulins
     node_type: GENE_OR_PROTEIN
     component_ref: ventral_disc_tubulins
   - node_id: ventral_disc_microtubule_array
@@ -283,3 +288,38 @@ discussions:
       proteins.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: ventral_disc_contractile_source_conflict
+  prompt: Distinguish supported disc architecture and attachment from the inherited
+    classical contractile-protein claim.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - definition
+  - causal_graphs#ventral_disc_architecture_attachment
+  rationale: The current GO:0097597 definition repeats an older assertion that actinin,
+    alpha-actinin, myosin and tropomyosin drive disc contraction. Hagen et al. 2011
+    discuss contradictory heterologous-antibody evidence, lack of actin in their disc
+    proteome and absence of a myosin homolog in the then-known Giardia genomes. Hagen
+    et al. 2025 distinguish the early actin-based lateral-crest contraction hypothesis
+    from later localization evidence.
+  resolution_note: The local definition follows the primary structural account rather
+    than asserting this classical contractile machinery. Disc architecture and attachment
+    remain supported; the exact force-generating mechanism remains unresolved. This
+    does not rule out every form of actin-associated regulation, dynamic disc deformation
+    or contraction.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Primary electron tomography supports the spiral microtubule scaffold, microribbons,
+      crossbridges and surrounding crest.
+  - reference: DOI:10.1371/journal.pntd.0001442
+    notes: Discussion evaluates conflicting early actin localization and the lack
+      of support for classical myosin-based disc machinery.
+  - reference: DOI:10.1091/mbc.E23-12-0515
+    notes: Discussion revisits the early actin-based crest model while distinguishing
+      supported architecture from unresolved attachment-force generation.
+  - reference: GO:0097597
+    notes: Exact identity and partonomy retained; inherited contractile-protein wording
+      conflicts with later primary evidence.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'

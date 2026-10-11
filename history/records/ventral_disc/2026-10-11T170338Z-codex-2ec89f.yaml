@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ventral_disc.yaml
+  slug: ventral_disc
+session:
+  id: 2026-10-11T170338Z-codex-2ec89f
+  timestamp: '2026-10-11T17:03:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2226
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2227
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2228
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - components
+  - curation_history
+  - definition
+  - definition_source
+  - discussions
+  - synonyms
+  summary: 'Addressed #2226, #2227, #2228: Replaced the inherited classical contractile-protein
+    assertion with a structural definition and appended its source conflict; corrected two
+    GO synonym scopes and source-neutral tubulin labels while preserving IDs and original
+    rationale.'
+  details: 'Immutable pre-curation observation: reviews/structured/20261011T170255Z-ventral_disc-audit/review.yaml.
+    Replaced the inherited classical contractile-protein assertion with a structural definition
+    and appended its source conflict; corrected two GO synonym scopes and source-neutral tubulin
+    labels while preserving IDs and original rationale. Guarded writer; original discussions,
+    dates, history and PROPOSED status retained.'
