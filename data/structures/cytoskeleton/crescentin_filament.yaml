@@ -34,8 +34,16 @@ curation_history:
     Charbon 2009, and Woldemeskel and Goley 2018 support for crescentin filament structure,
     localization, and curvature-maintenance claims.'
   llm_assisted: true
+- timestamp: '2026-10-11T18:52:25Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2244, #2245: Corrected cytoskeletal fiber is-a and containing-framework
+    parthood. Corrected four active evidence notes to 2017 and appended an explicit
+    correction discussion. Original #1260 curation history, DOI, biology and graph
+    relations are preserved.'
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0099513
 synonyms:
 - synonym_text: CreS filament
   synonym_type: RELATED_SYNONYM
@@ -58,7 +66,7 @@ components:
     Caulobacter crescentin filament.
   evidence:
   - reference: DOI:10.1016/j.tim.2017.03.006
-    notes: Woldemeskel and Goley 2018 review CreS/crescentin as the Caulobacter cytoskeletal
+    notes: Woldemeskel and Goley 2017 review CreS/crescentin as the Caulobacter cytoskeletal
       protein responsible for curvature.
   - reference: DOI:10.1073/pnas.2309984121
     notes: Liu et al. 2024 determined the cryo-EM structure of Caulobacter crescentin
@@ -84,14 +92,14 @@ functions:
     cells and maintains the vibrioid or crescent cell shape.
   evidence:
   - reference: DOI:10.1016/j.tim.2017.03.006
-    notes: Woldemeskel and Goley 2018 review crescentin as the CreS-encoded Caulobacter
+    notes: Woldemeskel and Goley 2017 review crescentin as the CreS-encoded Caulobacter
       cytoskeletal protein for curvature whose deletion yields straight rods.
   - reference: DOI:10.1101/gad.1795509
     notes: Charbon et al. 2009 followed crescentin assembly, organization and dynamics
       in vivo.
 evidence:
 - reference: DOI:10.1016/j.tim.2017.03.006
-  notes: 'Woldemeskel and Goley 2018, ''Shapeshifting to survive: shape determination
+  notes: 'Woldemeskel and Goley 2017, ''Shapeshifting to survive: shape determination
     and regulation in Caulobacter crescentus'', Trends in Microbiology.'
 - reference: DOI:10.1101/gad.1795509
   notes: 'Charbon, Cabeen and Jacobs-Wagner 2009, ''Bacterial intermediate filaments:
@@ -99,6 +107,12 @@ evidence:
 - reference: DOI:10.1073/pnas.2309984121
   notes: Liu, van den Ent and Lowe 2024, 'Filament structure and subcellular organization
     of the bacterial intermediate filament-like protein crescentin', PNAS.
+- reference: GO:0099513
+  notes: Broader polymeric cytoskeletal fiber class; this protein filament retains
+    its specific local identity.
+- reference: GO:0005856
+  notes: The cytoskeletal framework contains this filament; the filament is part of
+    it, not a type of the entire framework.
 causal_graphs:
 - graph_id: crescentin_filament_curves_caulobacter
   title: Crescentin filaments maintain Caulobacter curvature
@@ -152,7 +166,7 @@ causal_graphs:
       to retain its curved morphology.
     evidence:
     - reference: DOI:10.1016/j.tim.2017.03.006
-      notes: Woldemeskel and Goley 2018 review creS deletion as producing straight
+      notes: Woldemeskel and Goley 2017 review creS deletion as producing straight
         Caulobacter rods.
 discussions:
 - discussion_id: resolve_crescentin_family_grounding
@@ -171,3 +185,25 @@ discussions:
       work.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: woldemeskel_goley_2017_citation_date
+  prompt: Correct the active citation year without rewriting the original curation
+    event.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - evidence
+  - curation_history
+  rationale: 'The article front matter for DOI:10.1016/j.tim.2017.03.006 gives electronic
+    publication on 27 March 2017 and print publication in August 2017, volume 25 issue
+    8. Four active notes and the historical #1260 event incorrectly said 2018.'
+  resolution_note: 'Correct the four active notes to 2017. Retain the original #1260
+    event unchanged as append-only provenance; its 2018 date is a citation typo, not
+    a separate publication. The DOI and biological claims are unchanged.'
+  evidence:
+  - reference: DOI:10.1016/j.tim.2017.03.006
+    notes: Article front matter and PMID:28359631 agree on the 2017 publication year.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'
+part_of:
+- GO:0005856

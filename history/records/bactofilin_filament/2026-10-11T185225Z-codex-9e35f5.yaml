@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/bactofilin_filament.yaml
+  slug: bactofilin_filament
+session:
+  id: 2026-10-11T185225Z-codex-9e35f5
+  timestamp: '2026-10-11T18:52:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2242
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2243
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  - definition
+  - definition_source
+  - discussions
+  - evidence
+  - parent_structures
+  - part_of
+  summary: 'Addressed #2242, #2243: Corrected cytoskeletal fiber is-a and containing-framework
+    parthood. Removed bacteria-specific family wording and grounded the broader architecture
+    in Deng 2019. An appended discussion distinguishes demonstrated recombinant PiBac polymerization
+    from unproven native oomycete function and archaeal sequence hits. Existing bacterial
+    occurrences and Caulobacter graph are unchanged.'
+  details: 'Immutable original observation: reviews/structured/20261011T185005Z-bactofilin_filament-audit/review.yaml.
+    Corrected cytoskeletal fiber is-a and containing-framework parthood. Removed bacteria-specific
+    family wording and grounded the broader architecture in Deng 2019. An appended discussion
+    distinguishes demonstrated recombinant PiBac polymerization from unproven native oomycete
+    function and archaeal sequence hits. Existing bacterial occurrences and Caulobacter graph
+    are unchanged. Guarded writer; original discussions/history and PROPOSED status retained.'

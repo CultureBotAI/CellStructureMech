@@ -27,8 +27,14 @@ curation_history:
   changes: Narrowed the MamK grounding note to the exact InterPro families reviewed
     for the AMB-1 and MSR-1 MamK examples.
   llm_assisted: true
+- timestamp: '2026-10-11T18:52:17Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2240: Corrected cytoskeletal fiber is-a and containing-framework
+    parthood. '
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0099513
 synonyms:
 - synonym_text: MamK actin-like filament
   synonym_type: EXACT_SYNONYM
@@ -128,6 +134,12 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2016.99
   notes: Uebe and Schuler 2016 reviewed MamK/MamJ-dependent magnetosome chain organization
     in magnetotactic bacteria.
+- reference: GO:0099513
+  notes: Broader polymeric cytoskeletal fiber class; this protein filament retains
+    its specific local identity.
+- reference: GO:0005856
+  notes: The cytoskeletal framework contains this filament; the filament is part of
+    it, not a type of the entire framework.
 causal_graphs:
 - graph_id: mamk_filament_aligns_magnetosomes
   title: MamK filaments organize magnetosome chains
@@ -197,3 +209,5 @@ discussions:
       but not to a source-neutral exact MamK-family accession.
   posed_by: codex
   posed_date: '2026-09-13'
+part_of:
+- GO:0005856

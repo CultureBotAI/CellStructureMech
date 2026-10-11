@@ -36,8 +36,14 @@ curation_history:
     for R1 plasmid segregation, and retargeting the ParR/parC component-boundary discussion
     to the causal graph.'
   llm_assisted: true
+- timestamp: '2026-10-11T18:52:20Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2241: Corrected cytoskeletal fiber is-a and containing-framework
+    parthood. '
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0099513
 synonyms:
 - synonym_text: R1 ParM filament
   synonym_type: RELATED_SYNONYM
@@ -107,6 +113,12 @@ evidence:
 - reference: DOI:10.1038/nrmicro2425
   notes: 'Salje, Gayathri and Lowe 2010, ''The ParMRC system: molecular mechanisms
     of plasmid segregation by actin-like filaments'', Nature Reviews Microbiology.'
+- reference: GO:0099513
+  notes: Broader polymeric cytoskeletal fiber class; this protein filament retains
+    its specific local identity.
+- reference: GO:0005856
+  notes: The cytoskeletal framework contains this filament; the filament is part of
+    it, not a type of the entire framework.
 causal_graphs:
 - graph_id: parmrc_plasmid_segregation
   title: ParM filaments separate R1 plasmids
@@ -194,3 +206,5 @@ discussions:
       to ParR/parC-coated beads.
   posed_by: codex
   posed_date: '2026-09-11'
+part_of:
+- GO:0005856

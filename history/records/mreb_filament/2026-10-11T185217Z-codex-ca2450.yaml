@@ -1,0 +1,43 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mreb_filament.yaml
+  slug: mreb_filament
+session:
+  id: 2026-10-11T185217Z-codex-ca2450
+  timestamp: '2026-10-11T18:52:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2237
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2238
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2239
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  - definition_source
+  - discussions
+  - evidence
+  - parent_structures
+  - part_of
+  - taxonomic_distribution
+  summary: 'Addressed #2237, #2238, #2239: Corrected cytoskeletal fiber is-a and containing-framework
+    parthood. Removed the unsupported affirmative Archaea RARE row and appended a scope discussion
+    distinguishing actin-fold homology from evidence for this bacterial filament system. This
+    is not an archaeal absence claim. Definition now cites the inspected 2018 review; the
+    RodA/PBP2 synthesis edge also cites the 2016 primary experiments. Earlier bibliography,
+    graph relations and verbatim trait evidence remain intact.'
+  details: 'Immutable original observation: reviews/structured/20261011T184948Z-mreb_filament-audit/review.yaml.
+    Corrected cytoskeletal fiber is-a and containing-framework parthood. Removed the unsupported
+    affirmative Archaea RARE row and appended a scope discussion distinguishing actin-fold
+    homology from evidence for this bacterial filament system. This is not an archaeal absence
+    claim. Definition now cites the inspected 2018 review; the RodA/PBP2 synthesis edge also
+    cites the 2016 primary experiments. Earlier bibliography, graph relations and verbatim
+    trait evidence remain intact. Guarded writer; original discussions/history and PROPOSED
+    status retained.'

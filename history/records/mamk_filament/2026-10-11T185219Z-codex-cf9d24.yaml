@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mamk_filament.yaml
+  slug: mamk_filament
+session:
+  id: 2026-10-11T185219Z-codex-cf9d24
+  timestamp: '2026-10-11T18:52:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2240
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - evidence
+  - parent_structures
+  - part_of
+  summary: 'Addressed #2240: Corrected cytoskeletal fiber is-a and containing-framework parthood. '
+  details: 'Immutable original observation: reviews/structured/20261011T184954Z-mamk_filament-audit/review.yaml.
+    Corrected cytoskeletal fiber is-a and containing-framework parthood.  Guarded writer;
+    original discussions/history and PROPOSED status retained.'
