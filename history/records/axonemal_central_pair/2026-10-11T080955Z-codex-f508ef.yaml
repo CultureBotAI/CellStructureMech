@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_pair.yaml
+  slug: axonemal_central_pair
+session:
+  id: 2026-10-11T080955Z-codex-f508ef
+  timestamp: '2026-10-11T08:09:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2196
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - discussions
+  summary: 'Addressed #2196: Restored the deleted central-pair discussion with original identity,
+    rationale and posed date, retained its intermediate narrowing, and resolved only child
+    creation with explicit handoff of open component tasks.'
+  details: Original finding saved before curation in reviews/structured/20261011T080734Z-axonemal_central_pair-audit/review.yaml.
+    Guarded correction preserves biological identity, all graph edges, PROPOSED status and
+    earlier events. Source discrepancies and open child-level science are not asserted resolved.

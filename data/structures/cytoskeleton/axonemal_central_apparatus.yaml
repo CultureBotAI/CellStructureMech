@@ -97,6 +97,13 @@ curation_history:
   changes: Renamed the central-apparatus graph title after the C1/C2 microtubule edges
     moved into the GO:0097540 axonemal central pair child record.
   llm_assisted: true
+- timestamp: '2026-10-11T08:09:51Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2195: Restored every distinct committed central-apparatus rationale
+    and retained the current prompt, attachment, original date, OPEN status and child-structure
+    graph.'
+  llm_assisted: true
 part_of:
 - GO:0005930
 has_part:
@@ -190,9 +197,21 @@ discussions:
   status: OPEN
   attaches_to:
   - causal_graphs#chlamydomonas_central_apparatus_architecture
-  rationale: GO exactly identifies the axonemal central pair, central bridge and broad
-    central-pair projection structures, but this pass leaves exact central-pair cap
+  rationale: 'GO exactly identifies the axonemal central apparatus and the C1 and
+    C2 axonemal microtubules, but no exact source-neutral term was verified for the
+    broader central projection or bridge classes, central-pair caps, or named projection
+    subcomplexes. Historical reassessment at git 0f8108780c5c: GO exactly identifies
+    the axonemal central apparatus, axonemal central bridge, broad axonemal central-pair
+    projection structures, and C1/C2 microtubules, but this pass leaves exact central-pair
+    cap structures and named projection subcomplex boundaries for later curation.
+    Historical reassessment at git 81057840432d: GO exactly identifies the axonemal
+    central apparatus, axonemal central bridge, broad axonemal central-pair projection
+    structures, and C1/C2 microtubules, but this pass leaves exact central-pair cap
     structures and finer named projection subcomplex boundaries for later curation.
+    Historical reassessment at git 11903e2fbf98: GO exactly identifies the axonemal
+    central pair, central bridge and broad central-pair projection structures, but
+    this pass leaves exact central-pair cap structures and finer named projection
+    subcomplex boundaries for later curation.'
   evidence:
   - reference: GO:1990718
     notes: GO identifies the broad axonemal central pair projection class, but not
@@ -200,5 +219,12 @@ discussions:
   - reference: GO:1990716
     notes: GO includes central pair projections and caps in the axonemal central apparatus
       boundary.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2195
+    notes: Restores the original and intermediate rationale text while preserving
+      the latest narrowed scope.
   posed_by: codex
   posed_date: '2026-09-23'
+  notes: 'Restored on 2026-10-11 from the committed discussion history. Earlier discussion
+    ID: resolve_central_pair_projection_groundings. The current narrowed prompt and
+    live graph attachment remain; historical unverified-grounding statements are not
+    current absence claims.'

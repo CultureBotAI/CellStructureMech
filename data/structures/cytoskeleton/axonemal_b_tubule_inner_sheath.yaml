@@ -19,6 +19,13 @@ curation_history:
     evidence, a nonmechanistic B-tubule inner-sheath graph, and a B-tubule MIP-family
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-11T08:09:49Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2194: Corrected B-sheath ontology attribution and retained
+    the current source discrepancy explicitly without changing primary-supported B-tubule
+    containment or the existing MIP-family TODO.'
+  llm_assisted: true
 part_of:
 - GO:0160110
 - GO:0097650
@@ -54,11 +61,14 @@ evidence:
   notes: Gene Ontology places the axonemal B tubule inner sheath within the axonemal
     microtubule doublet inner sheath.
 - reference: GO:0097650
-  notes: Gene Ontology places the axonemal B tubule inner sheath inside the B axonemal
-    microtubule.
+  notes: GO identifies the B axonemal microtubule. B-lumen containment is supported
+    by the GO:0160112 textual definition and Ma et al. 2019, not by its current typed
+    GO parthood edge, which names the A tubule.
 - reference: DOI:10.1016/j.cell.2019.09.030
   notes: Ma et al. 2019, 'Structure of the Decorated Ciliary Doublet Microtubule',
-    Cell.
+    Cell. The luminal-coating and MIP-network Results support the B-lumen network
+    and its B-tubule containment; this evidence is retained separately from the conflicting
+    GO relationship.
 causal_graphs:
 - graph_id: chlamydomonas_b_tubule_inner_sheath
   title: B-tubule MIPs form a luminal inner sheath
@@ -125,3 +135,27 @@ discussions:
       axonemal doublets.
   posed_by: codex
   posed_date: '2026-09-23'
+- discussion_id: b_inner_sheath_go_relationship_discrepancy
+  prompt: Reconcile the GO:0160112 typed A-tubule parthood relation with its B-lumen
+    definition and primary structural evidence.
+  kind: INTERPRETATION
+  status: OPEN
+  attaches_to:
+  - causal_graphs#chlamydomonas_b_tubule_inner_sheath
+  rationale: On 2026-10-11, QuickGO, the typed OLS part_of endpoint and AmiGO expose
+    GO:0097649 A axonemal microtubule for GO:0160112, while the term definition locates
+    the sheath in the B lumen. Ma et al. 2019 independently supports B-lumen MIP networks.
+    The native GO:0097650 parthood is retained on that biological evidence; the conflicting
+    ontology relationship is not copied or claimed to be corrected.
+  evidence:
+  - reference: GO:0160112
+    notes: Current term definition and typed relationship disagree on the A/B-tubule
+      placement; checked on 2026-10-11.
+  - reference: DOI:10.1016/j.cell.2019.09.030
+    notes: Results on interconnected MIP networks and luminal coating distinguish
+      MIPs in the A and B tubules.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2194
+    notes: Saved review finding and bounded native source-attribution correction;
+      not an upstream ontology fix.
+  posed_by: codex
+  posed_date: '2026-10-11'
