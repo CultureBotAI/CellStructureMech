@@ -1,0 +1,441 @@
+schema_version: 1.0.0
+review_id: 20261011T041425Z-mastigoneme-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Mastigoneme: finding disposition'
+started_at: '2026-10-11T04:08:57Z'
+finished_at: '2026-10-11T04:14:25Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent reassessment of the exact fix commit and adversarial
+    diff inspection; not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The exact predecessor evidence finding is resolved; unresolved biological
+  mechanisms are not claimed to be settled.
+source:
+  git_revision: 0de38b61d476d122c1d840698ce6e4e0b2eda0a4
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/mastigoneme.yaml
+    sha256: c319678bfeca5fe1a4712613db4dde57b58313abe11729efd83cc1e0bc302cf9
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/mastigoneme/2026-09-13T102018Z-codex-be2059.yaml
+    sha256: 03eb6304dab2a50e474efa9a040a0fd89181c3968acc83a34dd6ec2b15152eb6
+    role: context
+  - path: history/records/mastigoneme/2026-10-11T040644Z-codex-a8b2af.yaml
+    sha256: 93514aad5c82d98dd58ce06999decad47aa3070b8807aeb494eba0f14687218a
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261011T040606Z-mastigoneme-audit/review.yaml
+    sha256: cde70579806e11a7d07524ad7299e4dc7d19acffc6929e6ad22187bd4cbcbfb9
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_appendage_evidence_review.py
+    sha256: 651e4aa9d83431cdf509b9f5556a36cdb6d998cebdaa45336d02e06b927b3c51
+    role: context
+targets:
+- target_id: GO:0097741
+  path: data/structures/appendage/mastigoneme.yaml
+  label: mastigoneme
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/mastigoneme.yaml
+    role: maintained scientific record
+scope:
+  description: Exact predecessor finding, changed claim/evidence and append-only provenance;
+    not a new whole-record review.
+  selection: F1 in 20261011T040606Z-mastigoneme-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0097741
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/mastigoneme.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks, resolver skips
+    and unavailable controls do not establish scientific correctness; claim support
+    and target authorities assessed separately.
+  scope_note: 2026-10-11T04:07:34Z to 2026-10-11T04:07:37Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/mastigoneme.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks, resolver skips
+    and unavailable controls do not establish scientific correctness; claim support
+    and target authorities assessed separately.
+  scope_note: 2026-10-11T04:07:37Z to 2026-10-11T04:07:43Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/mastigoneme.yaml
+    --report /private/tmp/csm-review-20261011T035459Z/mastigoneme-post-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'No quotations present: 0 of 21 citations carry a snippet. No quotation
+    matching occurred; scientific paraphrases were assessed separately.'
+  scope_note: 2026-10-11T04:07:43Z to 2026-10-11T04:08:15Z; log SHA-256 dcaf5b9dfacf71de98bb95ec16cf870fbad4758354ffcad0ef4d5903fd2ac10e
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks, resolver skips
+    and unavailable controls do not establish scientific correctness; claim support
+    and target authorities assessed separately.
+  scope_note: 2026-10-11T04:08:15Z to 2026-10-11T04:08:37Z; log SHA-256 1681e9bb52c501d5ad826d30ec6540fee542dcf71d98302d7a1b47ebde38f150
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks, resolver skips
+    and unavailable controls do not establish scientific correctness; claim support
+    and target authorities assessed separately.
+  scope_note: 2026-10-11T04:08:37Z to 2026-10-11T04:10:24Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks, resolver skips
+    and unavailable controls do not establish scientific correctness; claim support
+    and target authorities assessed separately.
+  scope_note: 2026-10-11T04:10:24Z to 2026-10-11T04:10:49Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All resolver positive/negative controls passed on this rerun; 4010 identifiers
+    OK and 251 skipped. This includes the added Amador DOI; skipped namespaces are
+    not certified.
+  scope_note: 2026-10-11T04:10:49Z to 2026-10-11T04:11:49Z; log SHA-256 3af0d37cc5343e69b09927707d77aaf28fff7efc5ab0269c7f614e76e80384c2
+- check_id: regressions
+  name: regressions
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: .venv/bin/python -m pytest -q tests/test_appendage_evidence_review.py tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '27 tests passed: the three targeted evidence-boundary regressions and
+    the guarded-writer test suite.'
+  scope_note: 2026-10-11T04:11:49Z to 2026-10-11T04:12:37Z; log SHA-256 b381cdec8d1cd302489092ca64605a1c379dd82650c39fdd00f6277c381e8ef8
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: .venv/bin/python scripts/record_review.py check --base 7dc2dbb326ca4e7c2f6d8e9cc24859dd3afdbc23
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks, resolver skips
+    and unavailable controls do not establish scientific correctness; claim support
+    and target authorities assessed separately.
+  scope_note: 2026-10-11T04:12:37Z to 2026-10-11T04:13:36Z; log SHA-256 5c590b541f02777c8b0077e3b5a13cc5cbe12919aa28a246a2827587f270e5b9
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks, resolver skips
+    and unavailable controls do not establish scientific correctness; claim support
+    and target authorities assessed separately.
+  scope_note: 2026-10-11T04:13:36Z to 2026-10-11T04:13:36Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: qc
+  name: Exact-fix authoritative CI QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097741
+  command: gh run view 38110671225 --json databaseId,status,conclusion,headSha,event,jobs,startedAt,updatedAt,url;
+    gh run view 38110671225 --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Full authoritative QC passed on the exact inspected fix commit, including
+    corpus tests and generated site/embedding checks.
+  scope_note: 2026-10-11T04:09:48Z to 2026-10-11T04:14:00Z; https://github.com/CultureBotAI/CellStructureMech/actions/runs/38110671225;
+    log SHA-256 3a31320371f9a6b35f9e8f2f71c5fd58a9c1a93f5b6c34c68354d0256719e272
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/mastigoneme.yaml
+  locator: Entire native YAML and append-only histories
+  accessed_at: '2026-10-11T04:14:25Z'
+  snapshot_sha256: c319678bfeca5fe1a4712613db4dde57b58313abe11729efd83cc1e0bc302cf9
+  support: context_only
+  summary: 'The stable function now presents the context-dependent swimming evidence:
+    Liu mst1 LMJ.RY0402.052413 slower swimming and Amador mstg LMJ.RY0402.136134 no
+    significant speed/flow enhancement. Amador increased turning is retained, not
+    misrepresented as absence of every phenotype. A new OPEN interpretation preserves
+    the unresolved cause of the conflict. Ontology definition, component roles, three
+    assembly edges, prior discussions and PROPOSED status are unchanged.'
+- evidence_id: prior-search
+  kind: search
+  reference: reviews/structured/ and reports/yaml_record_review/
+  locator: mastigoneme and exact identifier
+  accessed_at: '2026-10-11T04:06:06Z'
+  support: context_only
+  search_scope: rg --no-ignore --hidden in both review roots and the exact history
+    directory included ignored files. GitHub all-state search for mastigoneme OR haptonema
+    returned three earlier distinct, closed issues.
+  summary: 'No earlier exact-target review finding found in these bounded roots. Prior
+    issues #773 and #775 concern canonical-example citation and clade presence respectively,
+    not these new findings.'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097741
+  locator: Exact active GO term and definition
+  accessed_at: '2026-10-11T03:59:37Z'
+  snapshot_sha256: c451dc67bafe182c9a6d792bc1a2ddba13051be0573f457b7d5840ee1fd3857a
+  support: supports
+  summary: Native identity and literal definition match active GO:0097741. Its broad
+    may-assist wording is not a demonstrated Chlamydomonas hydrodynamic effect.
+- evidence_id: cilium
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030990,GO:0032991,GO:0005929,GO:0005930,GO:0060271
+  locator: GO:0005929 only
+  accessed_at: '2026-10-11T03:58:11Z'
+  snapshot_sha256: 9ce454502c5d2142bff87ef5e6a404ddd3ed1c217e42561118d11b0f50c9514a
+  support: supports
+  summary: Cilium identity supports the part_of context; mastigonemes are surface
+    hairs, not the whole cilium.
+- evidence_id: taxon
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/3055.json
+  locator: Exact taxonomy identity
+  accessed_at: '2026-10-11T03:58:13Z'
+  snapshot_sha256: 31e68163918c110c000e261d4edc5ae389b11e9992f43540ba3b89a9471ce850
+  support: supports
+  summary: Chlamydomonas reinhardtii matches the scoped distribution and example.
+- evidence_id: dai
+  kind: primary_source
+  reference: DOI:10.1016/j.cell.2024.03.005
+  locator: Introduction, structural Results and relevant Discussion
+  accessed_at: '2026-10-11T03:59:14Z'
+  snapshot_sha256: 318002363a183e30fd21030d7a9eee614044173ee614a578f00b62c62e3e7de2
+  support: supports
+  summary: Cryo-EM resolves an MST1 filament around a single MST3 and supports both
+    structural constituents. A proposed PKD2/SIP anchoring model is not treated as
+    directly measured stoichiometry. Introduction notes conflicting motility studies;
+    mst3 mutants have a modest swimming phenotype in this experiment.
+- evidence_id: liu
+  kind: primary_source
+  reference: DOI:10.1083/jcb.202001122
+  locator: PKD2 organization and motility Results, Discussion and strain/motility
+    Methods
+  accessed_at: '2026-10-11T03:59:17Z'
+  snapshot_sha256: 862f84b42b73f5a05c8b8904980229a1c49f22f8ef2c99586a1b112c5d9b4f9b
+  support: supports
+  summary: PKD2 loss and rescue establish ciliary mastigoneme organization. mst1 LMJ.RY0402.052413
+    swam about 15% slower under the tested conditions; pkd2 phenotypes and nonadditivity
+    do not establish a universal drag mechanism.
+- evidence_id: amador
+  kind: primary_source
+  reference: DOI:10.1016/j.bpj.2020.05.003
+  locator: Materials and Methods, Results and Discussion, Conclusions
+  accessed_at: '2026-10-11T04:00:17Z'
+  snapshot_sha256: 1355c58c828fd7e26de26ed2e36174bd1272d89f6bae4b13733ab6e78dd4fa2d
+  support: supports
+  summary: Different mstg line LMJ.RY0402.136134, compared with cw15 and cc125, lacked
+    mastigonemes by TEM but showed no significant mean/normalized-maximum speed, waveform
+    or propulsive-flow advantage from mastigonemes. Increased turning was observed;
+    this does not mean all motility phenotypes were absent.
+- evidence_id: chen
+  kind: primary_source
+  reference: PMID:943397
+  locator: Primary abstract and bibliographic identity only
+  accessed_at: '2026-10-11T03:59:17Z'
+  snapshot_sha256: 066cf464fcfa83bab820c8db34f36ef34b2a9ad0a44df02b67f3540719692e2e
+  support: supports
+  summary: Ochromonas mastigoneme isolation and glycoprotein analysis match the background
+    citation. No Chlamydomonas stoichiometry or broader distribution is inferred from
+    it.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T040606Z-mastigoneme-audit/review.yaml
+  accessed_at: '2026-10-11T04:14:25Z'
+  snapshot_sha256: cde70579806e11a7d07524ad7299e4dc7d19acffc6929e6ad22187bd4cbcbfb9
+  support: context_only
+  summary: Immutable pre-mutation finding, with exact F1 and stable-key lineage preserved.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T035459Z/preservation.json
+  accessed_at: '2026-10-11T04:08:07Z'
+  snapshot_sha256: 811516e3467cb183ec94aad29391e5a34769d7e2cf3233365da7f0c25b327809
+  support: supports
+  summary: Only haptonema and mastigoneme native records changed; the other 907 and
+    all prior history/review/report bytes are preserved.
+- evidence_id: embeddings
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T035459Z/embedding-refresh.json
+  accessed_at: '2026-10-11T04:14:25Z'
+  snapshot_sha256: dbdc194f210274a19e3bb6cc2d29290117a725e81013190511cdd9d6e3627f70
+  support: supports
+  summary: Pinned-model regeneration changed only the mastigoneme semantic vector;
+    908 other embedding records remained identical. Derived map and neighbors were
+    regenerated.
+assessments:
+- assessment_id: resolved-f1
+  area: evidence
+  topic: Qualify motility contribution with conflicting primary results
+  outcome: supported
+  target_ids:
+  - GO:0097741
+  evidence_ids:
+  - record
+  - liu
+  - amador
+  - dai
+  - predecessor
+  - preservation
+  summary: 'The stable function now presents the context-dependent swimming evidence:
+    Liu mst1 LMJ.RY0402.052413 slower swimming and Amador mstg LMJ.RY0402.136134 no
+    significant speed/flow enhancement. Amador increased turning is retained, not
+    misrepresented as absence of every phenotype. A new OPEN interpretation preserves
+    the unresolved cause of the conflict. Ontology definition, component roles, three
+    assembly edges, prior discussions and PROPOSED status are unchanged.'
+findings:
+- finding_id: F1
+  issue_key: mastigoneme-motility-evidence-conflict
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Qualify motility contribution with conflicting primary results
+  description: 'The stable function now presents the context-dependent swimming evidence:
+    Liu mst1 LMJ.RY0402.052413 slower swimming and Amador mstg LMJ.RY0402.136134 no
+    significant speed/flow enhancement. Amador increased turning is retained, not
+    misrepresented as absence of every phenotype. A new OPEN interpretation preserves
+    the unresolved cause of the conflict. Ontology definition, component roles, three
+    assembly edges, prior discussions and PROPOSED status are unchanged.'
+  target_ids:
+  - GO:0097741
+  field_paths:
+  - functions[0].label
+  - functions[0].description
+  - functions[0].evidence
+  evidence_ids:
+  - record
+  - liu
+  - amador
+  - dai
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/mastigoneme.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Material scope inflation in the represented biological function;
+    identity and assembly remain valid.
+  disposition_reason: 'The stable function now presents the context-dependent swimming
+    evidence: Liu mst1 LMJ.RY0402.052413 slower swimming and Amador mstg LMJ.RY0402.136134
+    no significant speed/flow enhancement. Amador increased turning is retained, not
+    misrepresented as absence of every phenotype. A new OPEN interpretation preserves
+    the unresolved cause of the conflict. Ontology definition, component roles, three
+    assembly edges, prior discussions and PROPOSED status are unchanged. Verified
+    against the original inspected primary sources, focused regressions, preservation
+    assertions and exact-fix CI.'
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T040606Z-mastigoneme-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2169
+actions: []
+limitations:
+- Both 2020 papers were inspected at full main-text Methods/Results level; Dai structural
+  sections and its conflicting-motility discussion were read, not every supplemental
+  dataset.
+- Chen 1976 was inspected at primary-abstract level and is only background provenance
+  here. No reanalysis of swimming data or experimental resolution of the conflict
+  was performed.
+- Same-agent assessment, not independent human sign-off or completion of the 909-record
+  goal.
+- No applicable iModulonDB dataset; this is not evidence of biological absence. No
+  quotations were present to verify, so paraphrases required separate source inspection.
+- This successor resolves only the exact prior finding, not all remaining biological
+  uncertainty. Original source access tiers and snapshot times are preserved.
+- Full QC is CI on the exact fix commit. Final review-only head and merge-group checks
+  are separate publication gates. Resolver namespace skips and unavailable controls
+  are not positive verification.
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T040606Z-mastigoneme-audit
+  relationship: Resolves F1 without rewriting the original observation.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2169

@@ -28,6 +28,13 @@ curation_history:
     row from COMMON to VARIABLE and citing Andersen 2004 for haptophyte lineages with
     secondary haptonema loss.'
   llm_assisted: true
+- timestamp: '2026-10-11T04:06:38Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2168: bounded the Nomura taxol/calcium evidence note to the
+    observed coiling inhibition and calcium-induced shape response, without treating
+    it as a direct influx measurement.'
+  llm_assisted: true
 components:
 - component_id: haptonemal_singlet_microtubules
   label: haptonemal singlet microtubules
@@ -138,8 +145,10 @@ causal_graphs:
       are required for rapid coiling.
     evidence:
     - reference: DOI:10.1242/bio.036590
-      notes: Nomura et al. 2019 found that a microtubule stabilizer blocked rapid
-        haptonemal coiling without preventing Ca2+ influx.
+      notes: Nomura et al. 2019 found that taxol blocked rapid haptonemal coiling.
+        After taxol treatment in calcium-free conditions, calcium addition converted
+        the right-handed helical shape toward a planar bend. This demonstrates a calcium-dependent
+        shape response, not a direct measurement of unchanged Ca2+ influx.
   - subject: haptonemal_singlet_microtubules
     predicate: drive
     object: rapid_coiling

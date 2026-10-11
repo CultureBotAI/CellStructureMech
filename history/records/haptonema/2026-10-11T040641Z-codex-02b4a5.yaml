@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/haptonema.yaml
+  slug: haptonema
+session:
+  id: 2026-10-11T040641Z-codex-02b4a5
+  timestamp: '2026-10-11T04:06:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2168
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Addressed #2168: bounded the Nomura taxol/calcium evidence note to the observed
+    coiling inhibition and calcium-induced shape response, without treating it as a direct
+    influx measurement.'
+  details: Original issue saved before mutation in reviews/structured/20261011T040559Z-haptonema-audit/review.yaml.
+    Guarded writer validated the record. Source tiers and limitations remain in the original
+    review; corrections do not resolve unknown biological mechanisms or promote PROPOSED status.
+    Prior histories and discussions preserved. Post-change validation, focused regressions
+    and generated-artifact checks are required before publication.

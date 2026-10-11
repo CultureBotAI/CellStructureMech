@@ -30,6 +30,13 @@ curation_history:
     organization claim supported by its 2020 JCB reference; tracked by GitHub issue
     #773.'
   llm_assisted: true
+- timestamp: '2026-10-11T04:06:42Z'
+  curator: claude
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2169: qualified the swimming function with distinct Liu and
+    Amador mutant/assay results and added an OPEN interpretation of the conflict,
+    preserving the supported assembly graph.'
+  llm_assisted: true
 part_of:
 - GO:0005929
 components:
@@ -95,13 +102,24 @@ canonical_examples:
   reference: DOI:10.1083/jcb.202001122
 functions:
 - function_id: ciliary_surface_motility_modulation
-  label: ciliary surface motility modulation
-  description: Chlamydomonas mastigoneme glycoprotein polymers are organized on the
-    ciliary surface by PKD2 and contribute to ciliary motility.
+  label: context-dependent contribution to swimming
+  description: Chlamydomonas mastigoneme-associated swimming phenotypes depend on
+    the tested mutant and assay. Liu et al. 2020 observed slower swimming in an mst1
+    mutant, whereas Amador et al. 2020 found no significant forward-swimming speed
+    or propulsive-flow benefit from mastigonemes using a different mstg line. A general
+    hydrodynamic contribution is therefore not established.
   evidence:
   - reference: DOI:10.1083/jcb.202001122
-    notes: Liu et al. 2020 connected PKD2-dependent mastigoneme organization to Chlamydomonas
-      ciliary motility.
+    notes: Liu et al. 2020 found that mst1 line LMJ.RY0402.052413 lacked mastigonemes
+      and swam about 15% slower than their control. PKD2 organization and swimming
+      phenotypes support a context-specific association, not a resolved universal
+      hydrodynamic mechanism.
+  - reference: DOI:10.1016/j.bpj.2020.05.003
+    notes: Amador et al. 2020 used mastigoneme-deficient mstg line LMJ.RY0402.136134
+      and compared it with cw15 and cc125. Mean swimming speed, normalized maximum
+      speed, flagellar waveform and propulsive flows did not show significant enhancement
+      by mastigonemes under these conditions. Increased turning in mstg was observed,
+      so this is not evidence that all motility phenotypes are absent.
 evidence:
 - reference: GO:0097741
   notes: Gene Ontology cellular-component term for mastigoneme.
@@ -196,3 +214,23 @@ discussions:
   - reference: GO:0097741
   posed_by: codex
   posed_date: '2026-09-13'
+- discussion_id: resolve_mastigoneme_swimming_conflict
+  prompt: Resolve why mastigoneme-deficient Chlamydomonas lines show different swimming
+    results across experiments before assigning a general hydrodynamic or sensory
+    mechanism.
+  kind: INTERPRETATION
+  status: OPEN
+  attaches_to:
+  - functions#ciliary_surface_motility_modulation
+  rationale: Liu et al. 2020 reported slower swimming for mst1 LMJ.RY0402.052413,
+    whereas Amador et al. 2020 found no forward-speed or flow enhancement in comparisons
+    using mstg LMJ.RY0402.136134. These are distinct mutant lines and assay contexts.
+    Dai et al. 2024 also notes the conflicting literature while reporting a modest
+    mst3 swimming phenotype. Neither a universal propulsion benefit nor a demonstrated
+    sensory mechanism follows from these results.
+  evidence:
+  - reference: DOI:10.1083/jcb.202001122
+  - reference: DOI:10.1016/j.bpj.2020.05.003
+  - reference: DOI:10.1016/j.cell.2024.03.005
+  posed_by: codex
+  posed_date: '2026-10-11'
