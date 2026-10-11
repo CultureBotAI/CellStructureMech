@@ -5,8 +5,7 @@ structure_kind: APPENDAGE
 definition: A tubular projection of the bacterial cell envelope and cytoplasm that
   extends away from the main cell body in prosthecate bacteria. In stalked Caulobacter
   cells, the prostheca contains the inner membrane, peptidoglycan and outer membrane
-  layers of the Gram-negative envelope and supports stalk-specific compartmentalization
-  and nutrient uptake.
+  layers of the Gram-negative envelope and supports stalk-specific protein localization.
 definition_source: DOI:10.1073/pnas.0909119107
 mapping_status: PROPOSED
 curation_history:
@@ -34,6 +33,13 @@ curation_history:
   changes: 'Resolved PR #398 issues #399 and #400 by adding the plasma membrane to
     the prostheca has_part list and replacing the dilute-nutrients chemical graph
     endpoint with a nutrient-uptake biological process.'
+  llm_assisted: true
+- timestamp: '2026-10-11T05:53:01Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2177, #2178: separated observed stalk FDP uptake/hydrolysis
+    from unresolved whole-cell nutrient delivery, retained conflicting transport evidence,
+    and narrowed the NA1000 example to its attached StpX source.'
   llm_assisted: true
 synonyms:
 - synonym_text: bacterial stalk
@@ -100,8 +106,8 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:565050
   taxon_label: Caulobacter vibrioides NA1000
-  note: Model strain used to dissect cell-cycle-coupled stalk biogenesis, StpX stalk
-    localization and MreB-dependent stalk-specific peptidoglycan assembly.
+  note: Model strain used to dissect cell-cycle-coupled StpX stalk localization and
+    the contribution of StpX to stalk elongation under phosphate limitation.
   reference: DOI:10.1073/pnas.0909119107
 functions:
 - function_id: stalk_envelope_extension
@@ -113,16 +119,28 @@ functions:
     notes: Biondi et al. 2006 identify a phosphorelay system that controls Caulobacter
       stalk biogenesis during cell-cycle progression.
 - function_id: dilute_nutrient_scavenging
-  label: nutrient uptake from dilute media
-  description: The narrow envelope extension can increase the cell surface available
-    for nutrient uptake in dilute media.
+  label: stalk nutrient capture and hydrolysis
+  description: Caulobacter stalks can take up and hydrolyze the organic phosphate
+    substrate fluorescein diphosphate. Modeling predicts that a long, thin stalk can
+    improve diffusive nutrient capture, but delivery of captured nutrients to the
+    cell-body cytoplasm and the resulting nutritional benefit remain unresolved.
   evidence:
   - reference: DOI:10.1073/pnas.0602047103
-    notes: Wagner et al. 2006 test a nutrient-uptake role for bacterial cell-envelope
-      extensions.
+    notes: Wagner et al. 2006 directly observed uptake and hydrolysis of fluorescein
+      diphosphate by attached and isolated stalks. Their diffusive-capture model predicts
+      a length/geometry advantage, not direct proof of whole-cell nutritional benefit.
   - reference: DOI:10.1046/j.1365-2958.2002.03071.x
-    notes: Ireland et al. 2002 find transport-related proteins in isolated Caulobacter
-      stalks.
+    notes: Ireland et al. 2002 identified transport-related proteins in isolated stalks,
+      consistent with uptake competence but not proof of nutrient delivery to the
+      cell body.
+  - reference: DOI:10.1016/j.cell.2012.10.046
+    notes: Schlimpert et al. 2012 show that mature crossbands block PstS protein exchange,
+      challenging the proposed PstS-mediated phosphate shuttle. Possible small-molecule
+      routes were not established.
+  - reference: DOI:10.1371/journal.pone.0184063
+    notes: Curtis 2017 discusses the unresolved Caulobacter nutritional role and shows
+      PstA-GFP in some Brevundimonas stalks; that localization does not demonstrate
+      a complete transporter or justify a shared mechanism across species.
 - function_id: stalk_compartmentalization
   label: stalk compartmentalization
   description: Protein diffusion barriers divide the Caulobacter stalk from the cell
@@ -186,7 +204,7 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: cellstructuremech:prostheca
   - node_id: dilute_nutrient_scavenging
-    label: nutrient uptake from dilute media
+    label: stalk uptake and hydrolysis of fluorescein diphosphate
     node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: shpa_taca_phosphorelay
@@ -251,11 +269,19 @@ causal_graphs:
   - subject: prostheca
     predicate: supports
     object: dilute_nutrient_scavenging
-    description: The envelope extension can increase the cell surface available for
-      uptake from dilute nutrient pools.
+    description: Attached and isolated Caulobacter stalks take up and hydrolyze fluorescein
+      diphosphate. This experimentally observed stalk activity does not establish
+      delivery to the cell-body cytoplasm or a general whole-cell nutrient benefit.
     evidence:
     - reference: DOI:10.1073/pnas.0602047103
-      notes: Wagner et al. 2006 test nutrient uptake by bacterial cell-envelope extensions.
+      notes: Wagner et al. 2006 directly observed uptake and hydrolysis of fluorescein
+        diphosphate by attached and isolated stalks. Their diffusive-capture model
+        predicts a length/geometry advantage, not direct proof of whole-cell nutritional
+        benefit.
+    - reference: DOI:10.1016/j.cell.2012.10.046
+      notes: Schlimpert et al. 2012 show that mature crossbands block PstS protein
+        exchange, challenging the proposed PstS-mediated phosphate shuttle. Possible
+        small-molecule routes were not established.
 discussions:
 - discussion_id: stalk_machinery_boundary
   prompt: Keep Caulobacter-specific StpX, crossband proteins and stalk wall-synthesis
@@ -289,3 +315,26 @@ discussions:
     CURIEs.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: stalk_capture_vs_cell_body_delivery
+  prompt: Distinguish demonstrated stalk substrate capture from an unresolved whole-cell
+    nutritional role.
+  kind: INTERPRETATION
+  status: OPEN
+  attaches_to:
+  - functions#dilute_nutrient_scavenging
+  - causal_graphs#caulobacter_stalk_wall_synthesis_extension
+  rationale: Wagner 2006 demonstrated FDP uptake/hydrolysis and modeled diffusive
+    capture, but later crossband experiments block the proposed PstS shuttle toward
+    the cell body. Small-molecule delivery and surface-elevation benefits remain hypotheses;
+    Brevundimonas PstA localization does not resolve the Caulobacter transport route.
+    The graph therefore records the measured substrate-specific activity rather than
+    a settled whole-cell nutrient mechanism.
+  evidence:
+  - reference: DOI:10.1073/pnas.0602047103
+    notes: Direct FDP experiment and geometric capture model.
+  - reference: DOI:10.1016/j.cell.2012.10.046
+    notes: Crossband restriction of PstS challenges the earlier shuttle model.
+  - reference: DOI:10.1371/journal.pone.0184063
+    notes: Comparative results and discussion retain the unresolved nutritional role.
+  posed_by: codex
+  posed_date: '2026-10-11'

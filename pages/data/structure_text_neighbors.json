@@ -1410,27 +1410,27 @@
         {
           "identifier": "cellstructuremech:stalk_crossband",
           "label": "stalk crossband",
-          "cosine_similarity": 0.81140412
-        },
-        {
-          "identifier": "GO:0009289",
-          "label": "pilus",
-          "cosine_similarity": 0.72628076
+          "cosine_similarity": 0.80015034
         },
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.71956422
-        },
-        {
-          "identifier": "GO:0009276",
-          "label": "Gram-negative-bacterium-type cell wall",
-          "cosine_similarity": 0.71921611
+          "cosine_similarity": 0.74273363
         },
         {
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
-          "cosine_similarity": 0.71803352
+          "cosine_similarity": 0.72155508
+        },
+        {
+          "identifier": "GO:0009289",
+          "label": "pilus",
+          "cosine_similarity": 0.72131652
+        },
+        {
+          "identifier": "GO:0097268",
+          "label": "cytoophidium",
+          "cosine_similarity": 0.71447669
         }
       ]
     },
@@ -1441,27 +1441,27 @@
         {
           "identifier": "cellstructuremech:prostheca",
           "label": "prostheca",
-          "cosine_similarity": 0.81140412
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.68953298
+          "cosine_similarity": 0.80015034
         },
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.67685745
+          "cosine_similarity": 0.69195608
         },
         {
-          "identifier": "GO:0033111",
-          "label": "attachment organelle membrane",
-          "cosine_similarity": 0.67572461
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.68340195
         },
         {
           "identifier": "GO:1990207",
           "label": "EmrE multidrug transporter complex",
-          "cosine_similarity": 0.67487693
+          "cosine_similarity": 0.67148346
+        },
+        {
+          "identifier": "cellstructuremech:holdfast",
+          "label": "holdfast",
+          "cosine_similarity": 0.66914371
         }
       ]
     },
@@ -1513,7 +1513,7 @@
         {
           "identifier": "cellstructuremech:prostheca",
           "label": "prostheca",
-          "cosine_similarity": 0.71803352
+          "cosine_similarity": 0.72155508
         },
         {
           "identifier": "GO:0140621",
@@ -19884,24 +19884,24 @@
       "label": "holdfast",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:prostheca",
+          "label": "prostheca",
+          "cosine_similarity": 0.68276843
+        },
+        {
           "identifier": "cellstructuremech:tad_pilus",
           "label": "Tad pilus",
           "cosine_similarity": 0.68020067
         },
         {
-          "identifier": "cellstructuremech:prostheca",
-          "label": "prostheca",
-          "cosine_similarity": 0.67357029
+          "identifier": "cellstructuremech:stalk_crossband",
+          "label": "stalk crossband",
+          "cosine_similarity": 0.66914371
         },
         {
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.65688261
-        },
-        {
-          "identifier": "cellstructuremech:stalk_crossband",
-          "label": "stalk crossband",
-          "cosine_similarity": 0.65062495
         },
         {
           "identifier": "cellstructuremech:popz_polar_microdomain",
@@ -22364,6 +22364,11 @@
       "label": "PopZ polar microdomain",
       "neighbors": [
         {
+          "identifier": "cellstructuremech:prostheca",
+          "label": "prostheca",
+          "cosine_similarity": 0.6719369
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.66181332
@@ -22374,11 +22379,6 @@
           "cosine_similarity": 0.66107984
         },
         {
-          "identifier": "cellstructuremech:prostheca",
-          "label": "prostheca",
-          "cosine_similarity": 0.65904021
-        },
-        {
           "identifier": "cellstructuremech:holdfast",
           "label": "holdfast",
           "cosine_similarity": 0.6456226
@@ -22386,7 +22386,7 @@
         {
           "identifier": "cellstructuremech:stalk_crossband",
           "label": "stalk crossband",
-          "cosine_similarity": 0.63608065
+          "cosine_similarity": 0.63848386
         }
       ]
     },

@@ -1,0 +1,482 @@
+schema_version: 1.0.0
+review_id: 20261011T060948Z-stalk_crossband-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Stalk crossband: finding dispositions'
+started_at: '2026-10-11T05:57:24Z'
+finished_at: '2026-10-11T06:09:48Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent source-backed reassessment and separate adversarial
+    inspection of corrected native, generated and provenance diffs; not independent
+    human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: All exact predecessor findings are resolved. Source-access limitations and
+  scientific uncertainty remain explicit; native status is not promoted.
+source:
+  git_revision: 658d0e02cc435f97c3f75f288a2cd5069a1c3645
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 64862db2087298ae832b8a8410185349cc277151af31d88ce231e43201ab9440
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/appendage/prostheca.yaml
+    sha256: e6b70310f99b48ba8551b649774ddd5c1c372757329f5f851008360655c4c9d1
+    role: context
+  - path: data/structures/appendage/stalk_crossband.yaml
+    sha256: 33a5c6fe2e72c5a86bd4056f8b8f35854f8da953d34b5664a6529f06d84feca4
+    role: target
+  - path: data/structures/envelope/cell_outer_membrane.yaml
+    sha256: 3becd0f494ef6cc70d352f21ea5f5231d70265edecde25c6f827a31b6c821dcf
+    role: context
+  - path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    sha256: 9c953c54e9f54eba9cbe7b658046a7910b2e9a42d41246d2ce3c2acf9693bef6
+    role: context
+  - path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    sha256: 893883fe6827f7bd64eb8d07855e5592cedb0e1c0d368e8d42153521575a0911
+    role: context
+  - path: data/structures/envelope/plasma_membrane.yaml
+    sha256: e8dcf1af1e9d5cf91056b26f09ed6bd95e092ced315abf7d4feca64f74ae819b
+    role: context
+  - path: data/structures/other/holdfast.yaml
+    sha256: 6becc2beb9df3e1f8fe0c6384c2bed7191577a0f04fbb0de1c0086553e894f54
+    role: context
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/stalk_crossband/2026-09-11T033043Z-codex-c3a7c2.yaml
+    sha256: 58f27cd1e0a5c7dafed30a5887dc40f9dd747ea23a8a8b90996f69f45a3b6b8b
+    role: context
+  - path: history/records/stalk_crossband/2026-09-11T033759Z-codex-f4cbcb.yaml
+    sha256: 02f764cfd4948b17ea6d7407c3198c3911f82b3982cca440d6e44b1613566ae9
+    role: context
+  - path: history/records/stalk_crossband/2026-10-11T055305Z-codex-608143.yaml
+    sha256: 5cc713fc37925a54eb09c747333951126d241819da8408d8b9844730c6e5424e
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/evidence_readability.stalk_crossband.tsv
+    sha256: de3cebbf3dbe6db1d5d9dc19f404e417338128adb717c060e8f51a14d9f2d083
+    role: context
+  - path: reviews/structured/20261011T055235Z-stalk_crossband-audit/review.yaml
+    sha256: 77b98224e32ed4f65e7fdc67524a4c6fdc85cdd90e8b0e51d580322bb1bbebf8
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_stalk_evidence_review.py
+    sha256: 2aa19fa0da18b06dd6d0ef659c124c4d85afaa279f887ec509701ff060a68098
+    role: context
+targets:
+- target_id: cellstructuremech:stalk_crossband
+  path: data/structures/appendage/stalk_crossband.yaml
+  label: stalk crossband
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/stalk_crossband.yaml
+    role: maintained scientific record
+scope:
+  description: Exact predecessor findings, changed fields and append-only provenance;
+    not a new whole-record review.
+  selection: F1 in 20261011T055235Z-stalk_crossband-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:stalk_crossband
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/stalk_crossband.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:53:39Z to 2026-10-11T05:53:41Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/stalk_crossband.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:53:41Z to 2026-10-11T05:53:44Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/stalk_crossband.yaml
+    --report /private/tmp/csm-review-20261011T054444Z/stalk_crossband-post-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:53:44Z to 2026-10-11T05:54:06Z; log SHA-256 d49e29334eae27377bfe9c6ab1d28415d37c5813dc7bb6096715ab0efd9929cd
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:54:06Z to 2026-10-11T05:54:21Z; log SHA-256 ec4802743686962e3e9ec0534e2a9fb4ca76e92b15ecc0cb7f607d8ce80a96a8
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T05:54:21Z to 2026-10-11T05:55:39Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:55:39Z to 2026-10-11T05:56:08Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "[not exercised] BFO: the issuing authority was unreachable after 1 attempts,\
+    \ so this resolver was not exercised\nresolver control: 1 resolver(s) could not\
+    \ be exercised because their authority was unreachable; the rest accept a known\
+    \ id and reject a fabricated one\n\nidentifier liveness summary:\n  OK       \
+    \      4011\n  SKIPPED         251\n\nEvery identifier resolves at its issuing\
+    \ authority."
+  scope_note: 2026-10-11T05:56:08Z to 2026-10-11T05:57:07Z; log SHA-256 f5ce04439ea674c0c9e2be6a4cd273a11c51dda129d6f9a3915c30a445ed1bb1
+- check_id: regressions
+  name: regressions
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python -m pytest -q tests/test_stalk_evidence_review.py tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '............................                                             [100%]
+
+    28 passed in 44.29s'
+  scope_note: 2026-10-11T05:57:07Z to 2026-10-11T05:57:52Z; log SHA-256 201c872d5a96ed2fdfcba75456651ed6566b1d6afcad47684c4a726c28875f0b
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/record_review.py check --base aa74419b62aaba390ab49cb40d430b394c933baa
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:57:52Z to 2026-10-11T05:58:47Z; log SHA-256 bfe4d7e589e8bd0784ed2f3889d109dd1eae4bf76270cc7485bcbb7d0200eccf
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:58:47Z to 2026-10-11T05:58:47Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: qc
+  name: Authoritative local full QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Full native QC passed on the unchanged corrected inputs: 825 tests passed
+    and 3 skipped, plus all-record schema, histories and generated site/embedding
+    checks. Skipped tests are not certified. Final PR and merge-group checks are separate
+    gates.'
+  scope_note: 2026-10-11T05:57:21Z to 2026-10-11T06:09:37Z; log SHA-256 7234e3ebcd66891d6b48f91851284836e22c317b8ca4b2430adcc366d05fec48;
+    RECORD_REVIEW_BASE=aa74419b62aaba390ab49cb40d430b394c933baa
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/stalk_crossband.yaml
+  locator: Full native YAML and both append-only record histories
+  accessed_at: '2026-10-11T06:09:48Z'
+  snapshot_sha256: 33a5c6fe2e72c5a86bd4056f8b8f35854f8da953d34b5664a6529f06d84feca4
+  support: context_only
+  summary: Corrected native bytes reread against the original findings and inspected
+    sources; status and old histories retained.
+- evidence_id: prior
+  kind: search
+  reference: reviews/structured/ and reports/yaml_record_review/
+  locator: Exact identifiers, labels and slugs
+  accessed_at: '2026-10-11T05:52:35Z'
+  support: context_only
+  search_scope: rg --no-ignore --hidden across data/structures, history and both review
+    roots included ignored files. GitHub all-state query prostheca OR crossband OR
+    StpABCD returned four closed items, below the 100-result limit.
+  summary: 'No prior exact-target review bundle found in these roots. Issues #399/#400
+    added the prostheca plasma membrane and typed the uptake process; #402/#403 removed
+    age marking as a function and typed compartmentalization. These are not the present
+    findings.'
+- evidence_id: taxon-2
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/2.json
+  locator: Exact NCBI-derived taxon identity, synonym, parent and strain names
+  accessed_at: '2026-10-11T05:47:20Z'
+  snapshot_sha256: 8074c9bcd59cd4da1da4bc9ec98c040bbecd52ef5c91c4c4bb9bed0f3a7cb5a9
+  support: supports
+  summary: Bacteria domain identity is valid; taxonomy metadata alone is not distribution
+    evidence.
+- evidence_id: taxon-155892
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/155892.json
+  locator: Exact NCBI-derived taxon identity, synonym, parent and strain names
+  accessed_at: '2026-10-11T05:47:21Z'
+  snapshot_sha256: bb62df49943694589f201ba87a84dc3f34fb5a96c8577bd005914f695df7cd0e
+  support: supports
+  summary: Current authority recognizes C. vibrioides, historical C. crescentus nomenclature,
+    and NA1000/CB15N at the asserted taxonomic levels.
+- evidence_id: taxon-565050
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/565050.json
+  locator: Exact NCBI-derived taxon identity, synonym, parent and strain names
+  accessed_at: '2026-10-11T05:47:22Z'
+  snapshot_sha256: f82c9e5906404b4e68229cdde10bd11dda11c16be678086d1a104f651a852683
+  support: supports
+  summary: Current authority recognizes C. vibrioides, historical C. crescentus nomenclature,
+    and NA1000/CB15N at the asserted taxonomic levels.
+- evidence_id: go-0032991
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0032991
+  locator: Exact QuickGO term
+  accessed_at: '2026-10-11T05:47:14Z'
+  snapshot_sha256: 480165003b2c8a406006ff17c4cfe836fc000541ad5dac1ca0f585ed30c02e87
+  support: supports
+  summary: Active term matches the asserted parent or part; no exact structure identity
+    is inferred from a broader term.
+- evidence_id: go-search
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=stalk+crossband&limit=100
+  locator: Bounded QuickGO search, limit 100
+  accessed_at: '2026-10-11T05:47:18Z'
+  snapshot_sha256: f83b272c1f2e980580e7fac68cf969183f99d3ec225c30f0599630fa5d76575b
+  support: supports
+  summary: No exact bacterial structure match in this returned set. This is not an
+    exhaustive assertion that no term exists in any ontology.
+  search_scope: Bounded QuickGO search, limit 100; https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=stalk+crossband&limit=100
+- evidence_id: paper-0
+  kind: primary_source
+  reference: DOI:10.1016/j.cell.2012.10.046
+  locator: Main-text Results, Figures 1-7 captions, Discussion and Methods
+  accessed_at: '2026-10-11T05:47:09Z'
+  snapshot_sha256: d44137d5f9c67b54f59fe54840fe7b1d0b82bf3734641c1b540d55b7e6d52681
+  support: supports
+  summary: StpAB deletion abolishes visible crossbands. StpC/D mutants retain crossbands
+    with leaky barriers. StpAB provides the scaffold and StpC/D seals it. Protein
+    trapping improves recovery from starvation. PstS cannot shuttle across mature
+    crossbands; small-molecule routes remain possibilities, not established mechanisms.
+- evidence_id: paper-6
+  kind: primary_source
+  reference: DOI:10.1128/JB.178.13.3939-3948.1996
+  locator: Primary abstract
+  accessed_at: '2026-10-11T05:46:24Z'
+  snapshot_sha256: 29b0d99ff99c8507f9b15f397a423b2d9e43bf5241f4538e286e0e726d4b6c43
+  support: supports
+  summary: More than 7000 Caulobacter stalks and Asticcacaulis twin-stalk comparisons
+    establish stalk bands in these genera and age correlations, not an active age-marking
+    function.
+- evidence_id: paper-9
+  kind: primary_source
+  reference: PMID:4126821
+  locator: Primary abstract
+  accessed_at: '2026-10-11T05:46:31Z'
+  snapshot_sha256: adf1fb5d390f040b10bf04323f6aeb749da3cc6e2e8989d781083b5290abdd0b
+  support: supports
+  summary: Isolated Sk1 418 crossbands span the stalk width; the historical support
+    hypothesis does not establish modern molecular composition.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T055235Z-stalk_crossband-audit/review.yaml
+  accessed_at: '2026-10-11T06:09:48Z'
+  snapshot_sha256: 77b98224e32ed4f65e7fdc67524a4c6fdc85cdd90e8b0e51d580322bb1bbebf8
+  support: context_only
+  summary: Immutable original observations saved and committed before mutation.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T054444Z/preservation.json
+  accessed_at: '2026-10-11T05:53:21Z'
+  snapshot_sha256: ac675a5d5109ad91a38fa0312bd178efee78b1f39cf755b1a5ea394b67202ab1
+  support: supports
+  summary: Only these two native records changed; 907 others and all prior histories,
+    canonical reviews and legacy reports are byte-preserved.
+- evidence_id: embeddings
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T054444Z/embedding-refresh.json
+  accessed_at: '2026-10-11T06:09:48Z'
+  snapshot_sha256: 4e5b2c355616ed622312ac02a10b6a94ba6b964b6393290f29ec67a40bce8fe5
+  support: supports
+  summary: Only these two semantic vectors changed under the pinned local model; 907
+    others retained exactly, with derived maps/neighbors and pages regenerated.
+assessments:
+- assessment_id: resolved-f1
+  area: evidence
+  topic: Separate structural scaffold requirements from barrier sealing
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  evidence_ids:
+  - record
+  - paper-0
+  - predecessor
+  - preservation
+  summary: The component table separates StpAB scaffold proteins (ESSENTIAL for visible
+    structural formation) from StpCD sealing constituents (DISPENSABLE for visible
+    formation, explicitly required for efficient barrier function). Separate source-backed
+    graph edges and component references distinguish scaffold construction from sealing;
+    the grounding discussion points to both current cohorts. All four proteins remain
+    constituents and prior history is preserved.
+findings:
+- finding_id: F1
+  issue_key: stalk-crossband-assembly-barrier-essentiality
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Separate structural scaffold requirements from barrier sealing
+  description: The component table separates StpAB scaffold proteins (ESSENTIAL for
+    visible structural formation) from StpCD sealing constituents (DISPENSABLE for
+    visible formation, explicitly required for efficient barrier function). Separate
+    source-backed graph edges and component references distinguish scaffold construction
+    from sealing; the grounding discussion points to both current cohorts. All four
+    proteins remain constituents and prior history is preserved.
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  field_paths:
+  - components[0]
+  - causal_graphs[0].description
+  - causal_graphs[0].nodes[0]
+  - causal_graphs[0].edges[0]
+  - discussions[0]
+  evidence_ids:
+  - record
+  - paper-0
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/stalk_crossband.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Material scientific scope or component-essentiality defect.
+  disposition_reason: The component table separates StpAB scaffold proteins (ESSENTIAL
+    for visible structural formation) from StpCD sealing constituents (DISPENSABLE
+    for visible formation, explicitly required for efficient barrier function). Separate
+    source-backed graph edges and component references distinguish scaffold construction
+    from sealing; the grounding discussion points to both current cohorts. All four
+    proteins remain constituents and prior history is preserved. Verified against
+    inspected source text, regression tests and full local QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T055235Z-stalk_crossband-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2179
+actions: []
+limitations:
+- Poindexter 1996 and Jones 1973 claims were assessed at primary-abstract level. Their
+  scanned full article pages were not inspected; the bounded parthood/spanning claims
+  also have Schlimpert main-text support.
+- Schlimpert main-text HTML and figure captions were inspected after Europe PMC XML
+  returned HTTP 500; raw tomograms, images and supplemental movies were not reanalysed.
+- Same-agent assessment, not independent human sign-off or completion of the 909-record
+  goal.
+- No relevant iModulonDB coverage. No quoted snippets are present; snippet-check success
+  is not paraphrase validation.
+- A repeated documentation check overlapped the running README generator and saw the
+  earlier count again; it was not accepted as verification. Final input capture and
+  QC were repeated only after the generator completed and the README change was committed.
+- Original source-access tiers and snapshot times are retained. Resolution covers
+  these exact findings, not unseen experiments or the unreviewed corpus.
+- Full QC here is local. PR and merge-group checks remain separate publication gates.
+  Exact inspected revision is retained by review-base/stalk-evidence-final-20261011.
+- The first local QC attempt failed at lint on two overlong test lines (exit 1; log
+  SHA-256 a8682035d6b8a9741155174f7d99c16afa437ad53e6a75b9022fb55e5595f872). Formatting
+  was corrected. A second attempt caught stale generated README edge counts (exit
+  1; log SHA-256 ec9e17f08a2fe9b1f57816a3b54a9b47ef3f0075e6643745e366ffa951de346e);
+  the documented generator refreshed the count. Full QC was then rerun successfully.
+  The provenance regression was also scoped to this review event rather than the latest
+  event, so subsequent curation can append history.
+- Same-agent adversarial diff review confirmed structural DISPENSABLE does not mean
+  functional dispensability, the uptake edge is restricted to measured FDP activity,
+  graph/discussion references resolve, and prior issue fixes and Codex attribution
+  remain intact. No additional scientific issue was observed.
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T055235Z-stalk_crossband-audit
+  relationship: Resolves exact F1 without rewriting the original observation.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2179
