@@ -45,6 +45,13 @@ curation_history:
   changes: Linked GO:0005876 to its own spindle microtubule child record while preserving
     the budding-yeast spindle architecture graph on the parent.
   llm_assisted: true
+- timestamp: '2026-10-11T21:01:56Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2257: narrowed both Winey 1995 example notes to serial-section
+    electron-microscopy reconstruction; preserved separately cited Straight 1997 live-cell
+    evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0005819
 has_part:
@@ -76,14 +83,13 @@ taxonomic_distribution:
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
   note: Budding yeast has a nuclear mitotic spindle whose microtubule organization
-    has been reconstructed by serial-section electron microscopy and imaged in living
-    cells.
+    has been reconstructed by serial-section electron microscopy.
   reference: DOI:10.1083/jcb.129.6.1601
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Reference microbial eukaryote in which mitotic spindle microtubules were mapped
-    structurally and tracked during chromosome separation in vivo.
+  note: Reference microbial eukaryote in which mitotic spindle microtubules were reconstructed
+    by serial-section electron microscopy.
   reference: DOI:10.1083/jcb.129.6.1601
 functions:
 - function_id: chromosome_segregation
