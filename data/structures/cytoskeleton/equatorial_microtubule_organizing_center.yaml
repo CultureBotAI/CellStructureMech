@@ -41,6 +41,13 @@ curation_history:
     UNKNOWN and distinguish loss-of-function persistence from assembly without the
     protein; retained the supported turnover dependency.'
   llm_assisted: true
+- timestamp: '2026-10-11T22:42:47Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2263: recorded deletion-backed residual equatorial assembly
+    without Alp7, retaining defective maintenance and site-specific scope; appended
+    updated source-access accounting.'
+  llm_assisted: true
 parent_structures:
 - GO:0005815
 part_of:
@@ -180,7 +187,7 @@ components:
   label: Alp7-like microtubule-associated protein
   component_type: PROTEIN
   component_role: CONSTITUENT
-  essentiality: UNKNOWN
+  essentiality: DISPENSABLE
   role: Equatorial TACC-like component supporting Alp14 recruitment to microtubule
     organizing centers.
   grounding_status: REVIEWED_LABEL_ONLY
@@ -205,9 +212,15 @@ components:
         6F-G tests Alp14 localization after alp7 deletion. Interphase bonsai nucleation
         rates are not native equatorial rates.
     - reference: DOI:10.1091/mbc.E05-08-0811
-      notes: Accessible abstract and Figure 5 caption support Mia1/Alp7 localization
+      notes: 'Accessible abstract and Figure 5 caption support Mia1/Alp7 localization
         and maintenance defects; initial equatorial markers remain in the mutant.
-        Full Methods were not accessible.
+        Full Methods were not accessible. Review update 2026-10-11: the equatorial
+        Results section, main Methods, Discussion and Figure 5 were inspected directly.
+        In S. pombe mia1-deletion cells, Figure 5C-E shows transient nucleation and
+        retained equatorial Mto1, Alp4 and Rsp1 markers, but defective sustained use
+        of nucleation sites and PAA maintenance. DISPENSABLE refers only to initial,
+        possibly defective equatorial assembly under these conditions, not normal
+        maintenance or all MTOCs. Separate supplements and movies were not inspected.'
     - reference: https://www.uniprot.org/uniprotkb/Q9URY2/entry
       notes: Native accession, reviewed status, primary gene, protein label and source
         taxon verified on 2026-10-06. Residence and function come from the cited experiments.
@@ -217,9 +230,15 @@ components:
       6F-G tests Alp14 localization after alp7 deletion. Interphase bonsai nucleation
       rates are not native equatorial rates.
   - reference: DOI:10.1091/mbc.E05-08-0811
-    notes: Accessible abstract and Figure 5 caption support Mia1/Alp7 localization
+    notes: 'Accessible abstract and Figure 5 caption support Mia1/Alp7 localization
       and maintenance defects; initial equatorial markers remain in the mutant. Full
-      Methods were not accessible.
+      Methods were not accessible. Review update 2026-10-11: the equatorial Results
+      section, main Methods, Discussion and Figure 5 were inspected directly. In S.
+      pombe mia1-deletion cells, Figure 5C-E shows transient nucleation and retained
+      equatorial Mto1, Alp4 and Rsp1 markers, but defective sustained use of nucleation
+      sites and PAA maintenance. DISPENSABLE refers only to initial, possibly defective
+      equatorial assembly under these conditions, not normal maintenance or all MTOCs.
+      Separate supplements and movies were not inspected.'
 - component_id: xmap215
   label: XMAP215
   component_type: PROTEIN
@@ -563,7 +582,7 @@ discussions:
   - reference: DOI:10.1242/jcs.038414
   - reference: DOI:10.1091/mbc.E05-08-0811
   - reference: DOI:10.1016/s1534-5807(04)00096-6
-  rationale: Mto2 deletion can leave faint Alp4 recruitment, very limited nucleation
+  rationale: 'Mto2 deletion can leave faint Alp4 recruitment, very limited nucleation
     or an early array that fails to persist. A failure to detect equatorial gamma-tubulin
     in another assay is not proof of zero molecules. Alp7/Mia1 mutants retain initial
     equatorial markers despite maintenance defects. The accessible Rsp1 abstract reports
@@ -571,7 +590,12 @@ discussions:
     complete absence of Rsp1. Rsp1 assembly essentiality therefore remains UNKNOWN,
     separately from its supported turnover role. Unknown assembly essentiality remains
     UNKNOWN for the other classes; no cell-viability phenotype is substituted for
-    assembly necessity.
+    assembly necessity. Review update 2026-10-11: direct inspection of the 2006 equatorial
+    Results and Figure 5C-E confirms residual equatorial assembly in mia1-deletion
+    cells. Alp7 assembly essentiality is therefore now DISPENSABLE under the tested
+    S. pombe conditions, superseding its earlier UNKNOWN classification; sustained
+    nucleation-site use remains defective. The other unresolved essentiality values,
+    including Rsp1 UNKNOWN, are unchanged.'
 - discussion_id: mechanistic_scope
   kind: CURATION_TODO
   status: RESOLVED
@@ -625,13 +649,18 @@ discussions:
   - reference: DOI:10.1091/mbc.E04-12-1043
   - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
   - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
-  rationale: Only S. pombe is a canonical example. Protein accessions identify the
+  rationale: 'Only S. pombe is a canonical example. Protein accessions identify the
     reference strain, not every experimental stock. The 2004 Rsp1 paper and 2006 Mia1
     paper were not read in full; two 2005 papers were accessible as indexed primary
     Results, not complete Methods. No unverified trait, exact Complex Portal equivalent,
     direct structural dataset, exhaustive composition or fixed copy number is supplied.
     The native GO definition is an identity definition, not an independent new quantitative
-    experiment.
+    experiment. Review update 2026-10-11: both 2005 studies were subsequently read
+    through primary PMC HTML, including full main Results, Discussion and Methods.
+    The 2006 paper was assessed through its equatorial Results section, main Methods,
+    Discussion, abstract and Figure 5, not all Results or separate supplements/movies.
+    The 2004 Rsp1 study remains abstract-only. Earlier access statements above describe
+    the initial curation, not current access availability.'
 images:
 - image_id: pmc_pmc10047812_cells_12_00917_f001
   file: pmc10047812_cells_12_00917_f001.jpg

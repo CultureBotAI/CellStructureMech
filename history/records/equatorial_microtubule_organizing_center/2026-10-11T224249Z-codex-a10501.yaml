@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+  slug: equatorial_microtubule_organizing_center
+session:
+  id: 2026-10-11T224249Z-codex-a10501
+  timestamp: '2026-10-11T22:42:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2263
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - discussions
+  - curation_history
+  summary: 'Addressed #2263: recorded deletion-backed residual equatorial assembly without
+    Alp7, retaining defective maintenance and site-specific scope; appended updated source-access
+    accounting.'
+  details: 'Original immutable review: reviews/structured/20261011T224106Z-equatorial_microtubule_organizing_center-audit/review.yaml.
+    Primary 2006 equatorial Results and Figure 5C-E inspected. Only Alp7 essentiality changes;
+    evidence/discussion additions retain original text and chronology. No other component,
+    graph, identity, status, old event or source media changed.'

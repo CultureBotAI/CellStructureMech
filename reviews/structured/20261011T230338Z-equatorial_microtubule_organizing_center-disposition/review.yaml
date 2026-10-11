@@ -1,0 +1,706 @@
+schema_version: 1.0.0
+review_id: 20261011T230338Z-equatorial_microtubule_organizing_center-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Equatorial MTOC: supported Alp7 assembly disposition'
+started_at: '2026-10-11T23:03:33Z'
+finished_at: '2026-10-11T23:03:38Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent source and whole-record assessment; not independent
+    human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Saved minor Alp7 assembly finding resolved with deletion-backed, site-bounded
+  evidence; immutable original and historical provenance retained.
+source:
+  git_revision: 7318a7f2874b664833969e40822808b1c5fe55a2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 3acb13884094f40c840ed3452a6209ee9a38b479ae16e4c0bca390c3c290828a
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/images/cytoskeleton/equatorial_microtubule_organizing_center/pmc10047812_cells_12_00917_f001.jpg
+    sha256: e2952aa3563036f2c194633375e5ae6a5c53924da7824537b75828ead16db16b
+    role: context
+  - path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+    sha256: 05661fbe13d41a62499240f9e8aa2b95c7dade62f8eda1db49b4d4ddec9d4e6a
+    role: target
+  - path: data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml
+    sha256: 230c0195bc1178cffbad27e77f4a1a4da56f20ec28dab5a43e192ed75d27dbbc
+    role: context
+  - path: data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml
+    sha256: adbd6ee4c956bfcb1a93d1d015b351adf92d66c025e980bfcd34630f1e8e6fb5
+    role: context
+  - path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    sha256: ec1b57e0607bc93e00bc6387142d7c452dec557894eb358423b3710ae06be7a3
+    role: context
+  - path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+    sha256: 3ed050a7a95e721705ce773d2ac3093e0cc82c76b7061c5d6f76dc6703a280d1
+    role: context
+  - path: data/structures/cytoskeleton/quiescent_nuclear_microtubule_bundle.yaml
+    sha256: c0a1869b5f5a4f4d81e55121c86afcbae0601961994cd79dd32b8a05163f37d5
+    role: context
+  - path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+    sha256: e42a1fd89a69cc61b886ae054a2f27f3477c526c7a4cfca8b63254264aa6858d
+    role: context
+  - path: data/structures/cytoskeleton/tacc_tog_complex.yaml
+    sha256: 315d74b63309947276838f52dc5c9d7a63bc747efede86d6a7138c765afd7336
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/equatorial_microtubule_organizing_center/2026-10-06T031139Z-codex-a41835.yaml
+    sha256: 82ef9f5cce2cf3ec99fe20a83bcd131c13d7e427d6bd169c09c146ec24b4b6ec
+    role: context
+  - path: history/records/equatorial_microtubule_organizing_center/2026-10-06T031339Z-codex-72702a.yaml
+    sha256: 891832e88b93d24c6209bca588d0870d900b68cc6fe24d9fa6c248390baec090
+    role: context
+  - path: history/records/equatorial_microtubule_organizing_center/2026-10-06T031631Z-codex-5582be.yaml
+    sha256: db0c1789bb6cce0addd5decdf334bbbb6d743ac520eb0149b8e3ae30bc64d379
+    role: context
+  - path: history/records/equatorial_microtubule_organizing_center/2026-10-06T034239Z-codex-18f7cb.yaml
+    sha256: c3a6568e957c02da61fa2fb34cd846475488ba6a581101af4b68460873ee13dd
+    role: context
+  - path: history/records/equatorial_microtubule_organizing_center/2026-10-11T224249Z-codex-a10501.yaml
+    sha256: 85f02f324341563190679ee5f0c6dbbedd97ee306c2cdc59c1a83ef6417f19b0
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: pages/structures/cytoskeleton/equatorial_microtubule_organizing_center.html
+    sha256: 9fe6bb2126d170b71f712a94e166f95be5cd4e979c1227a73e482a10fb228ba0
+    role: context
+  - path: reports/yaml_record_review/20261006T031137Z-equatorial_microtubule_organizing_center.md
+    sha256: 205ad4e583be00db97e0933ece069432d3cb0a9d0ab7a8fa87d9f417e34d6983
+    role: context
+  - path: reviews/structured/20261011T224106Z-equatorial_microtubule_organizing_center-audit/review.yaml
+    sha256: e45576c638f4584ae5002d7f4720489e3c52574915f52aea0bd2769694cf0a7c
+    role: context
+  - path: scripts/render_pages.py
+    sha256: b5be74a8a3a0f7190b63da47a86cd8b48cbce4bb955ea0896f29d24f214a9b22
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/cellstructuremech/templates/structure.html
+    sha256: 417b020a6eda677a1e40ecd3d849bfd5063d83291d7496e1c52a1a3a321f35ed
+    role: context
+  - path: tests/test_equatorial_alp7_assembly.py
+    sha256: 8aa5098adcac2681ee8758289594a023de1c12bfea9894c0e6789f1e3ad46120
+    role: context
+targets:
+- target_id: GO:0000923
+  path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+  label: equatorial microtubule organizing center
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+    role: maintained scientific record
+scope:
+  description: Exact saved finding and surrounding-content preservation reassessed,
+    not a repeated whole-record review.
+  selection: 20261011T224106Z-equatorial_microtubule_organizing_center-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000923
+checks:
+- check_id: focused
+  name: focused
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000923
+  command: .venv/bin/python -m pytest -q tests/test_equatorial_alp7_assembly.py tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '............................                                             [100%]
+
+    28 passed in 57.62s'
+  scope_note: 2026-10-11T22:44:27Z to 2026-10-11T22:45:26Z; log SHA-256 55cf51f8c00a147554c57331f3e1e6b15810f35ec506ecf129cc4e5951676921
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000923
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T22:45:26Z to 2026-10-11T22:45:31Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000923
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+    --report /private/tmp/csm-review-20261011T222903Z/emtoc-post-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-11T22:45:31Z to 2026-10-11T22:46:04Z; log SHA-256 6d08feea17b930a312a8587710fef382068359a9b2f40568f3de6a114e167b58
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000923
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T22:46:04Z to 2026-10-11T22:46:29Z; log SHA-256 e2ce523e6e88c9e5ea99c23750f1c095bb4476f6573aead8b46a1d5d8ff2e754
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000923
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3545\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T22:46:29Z to 2026-10-11T22:48:24Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000923
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4016\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T22:48:24Z to 2026-10-11T22:49:15Z; log SHA-256 f38fdf2889286b712ede050fc9d6de36ecb8830b57fbc4dfbf38421c176168c8
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000923
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T22:49:15Z to 2026-10-11T22:49:34Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: release-qc
+  name: release-qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000923
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Full local QC passed: 948 passed, 3 skipped in 643.47s (0:10:43). PR and
+    native merge-group gates remain separate.'
+  scope_note: 2026-10-11T22:49:34Z to 2026-10-11T23:03:18Z; log SHA-256 4bcc81eaff8f1fcb54580dac59dfb8252fa1313ce537a2755096d0145b895e5f
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+  accessed_at: '2026-10-11T23:03:38Z'
+  snapshot_sha256: 05661fbe13d41a62499240f9e8aa2b95c7dade62f8eda1db49b4d4ddec9d4e6a
+  support: context_only
+  summary: Corrected whole YAML reread. Only Alp7 essentiality, appended evidence/discussion
+    chronology and one new curation event differ.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Essentiality concerns structure formation, not normal maintenance or cell
+    viability.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+  support: context_only
+  summary: EssentialityEnum DISPENSABLE means formation, possibly defectively, without
+    the component.
+- evidence_id: source-checks
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T222903Z/emtoc-source-checks.json
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: 55a2504019146412a840be5644b49656e81aca3409fdef359fedc82443f529db
+  support: context_only
+  summary: Current visual/media and generated-text checks; historical discussion/history
+    byte identity verified.
+- evidence_id: legacy
+  kind: prior_review
+  reference: reports/yaml_record_review/20261006T031137Z-equatorial_microtubule_organizing_center.md
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: 205ad4e583be00db97e0933ece069432d3cb0a9d0ab7a8fa87d9f417e34d6983
+  support: context_only
+  summary: Original report and past issue resolutions inspected; retain access history
+    and all original artifacts.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T222903Z/emtoc-predecessors.json
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: 39a13cd491019e538e62f292a043e11646206ad95b7e478e6897c61729d5a25b
+  support: context_only
+  summary: Ignored-inclusive structured predecessor scan has no exact-target predecessor.
+- evidence_id: dedup
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T222903Z/emtoc-issue-key.log
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570
+  support: context_only
+  summary: Fresh all-state exact-key dedup plus target issue search inspected.
+- evidence_id: history-0
+  kind: record_content
+  reference: history/records/equatorial_microtubule_organizing_center/2026-10-06T031139Z-codex-a41835.yaml
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: 82ef9f5cce2cf3ec99fe20a83bcd131c13d7e427d6bd169c09c146ec24b4b6ec
+  support: context_only
+  summary: Original append-only CREATE/EDIT history preserved.
+- evidence_id: history-1
+  kind: record_content
+  reference: history/records/equatorial_microtubule_organizing_center/2026-10-06T031339Z-codex-72702a.yaml
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: 891832e88b93d24c6209bca588d0870d900b68cc6fe24d9fa6c248390baec090
+  support: context_only
+  summary: Original append-only CREATE/EDIT history preserved.
+- evidence_id: history-2
+  kind: record_content
+  reference: history/records/equatorial_microtubule_organizing_center/2026-10-06T031631Z-codex-5582be.yaml
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: db0c1789bb6cce0addd5decdf334bbbb6d743ac520eb0149b8e3ae30bc64d379
+  support: context_only
+  summary: Original append-only CREATE/EDIT history preserved.
+- evidence_id: history-3
+  kind: record_content
+  reference: history/records/equatorial_microtubule_organizing_center/2026-10-06T034239Z-codex-18f7cb.yaml
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: c3a6568e957c02da61fa2fb34cd846475488ba6a581101af4b68460873ee13dd
+  support: context_only
+  summary: Original append-only CREATE/EDIT history preserved.
+- evidence_id: mia1-2006
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1446099/
+  locator: DOI:10.1091/mbc.E05-08-0811; Results sec14, Figure 5C-E, Methods and Discussion
+  accessed_at: '2026-10-11T22:37:37Z'
+  snapshot_sha256: 3b176d49607b7e0cdbace2c179088cd322f81ebfc88e67ecf461a7d0edcda4cc
+  support: supports
+  summary: 'Actual primary full text: mia1 deletion retains equatorial Mto1/Alp4/Rsp1
+    markers and transient nucleation, but fails sustained use of nucleation sites.
+    This is stronger than the historical abstract/caption access; no claim of normal
+    maintenance.'
+- evidence_id: mia1-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ef7c/1446099/bd45711eb974/zmk0050676170005.jpg
+  locator: Original Figure 5, especially C/D time series and E marker images
+  accessed_at: '2026-10-11T22:38:45Z'
+  snapshot_sha256: 6ff2edde2cf018e79f01e49547b9ed6a0e81201a684174c3a1630585eb5de2e5
+  support: supports
+  summary: Visually inspected wild-type/deletion comparison and equatorial markers;
+    private review source only, no image import.
+- evidence_id: mto2-2005
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1142446/
+  locator: DOI:10.1091/mbc.E04-11-1003; full Results, Discussion, Methods and main
+    captions
+  accessed_at: '2026-10-11T22:37:00Z'
+  snapshot_sha256: e24899419a8fb1e5edb6799547fc0307f38ded5ea95d548353b11e0cccaed4cb
+  support: supports
+  summary: Mto2 deletion permits weak/transient PAA and faint Alp4; endogenous targeting
+    differs from overexpression and cold shock.
+- evidence_id: mto2-second
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1142447/
+  locator: DOI:10.1091/mbc.E04-12-1043; full Results, Discussion, Methods and main
+    captions
+  accessed_at: '2026-10-11T22:37:37Z'
+  snapshot_sha256: 1bd492fb8438308b0af674676862f8624cb117ea428015fab4e6dd3e1e6ccfd7
+  support: supports
+  summary: Stronger nondetection in a separate assay is preserved; ring-anchoring
+    defects are bounded to cytokinesis delay or LatA perturbation.
+- evidence_id: mto1-2008
+  kind: primary_source
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC2743986&retmode=xml
+  locator: Full Results, Discussion, Methods and Figures 1-6 captions
+  accessed_at: '2026-10-11T20:52:27Z'
+  snapshot_sha256: 0de5fdf675e8d4f305b3d3a8248b5d26f9b314da51222a8db5e36409beac5a39
+  support: supports
+  summary: CM1 mutations distinguish localization from gamma-TuC association; Figure
+    4E/F retains weak equatorial recruitment/nucleation in mto2 deletion.
+- evidence_id: mto1-2010
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2989437/fullTextXML
+  locator: Results/Discussion and main captions, previously read and hash-verified
+  accessed_at: '2026-10-11T20:50:43Z'
+  snapshot_sha256: 844941c6aefa5a0b9b86bfa8918a7a8657637a1f5088cc8122483d67ca452616
+  support: supports
+  summary: Myp2/F-actin recruitment and Mto1 truncations support site-specific assembly
+    dependencies. mto1-427 is not conflated with 1-1051/1-1065 Alp4 readouts; association
+    need not be direct.
+- evidence_id: alp14-2018
+  kind: primary_source
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC7263743&retmode=xml
+  locator: Results/Discussion/STAR Methods and main captions, previously read and
+    hash-verified
+  accessed_at: '2026-10-11T20:51:51Z'
+  snapshot_sha256: d734ac81e937c81ee8901e14a79bf581a3aa0cb2df184d6387e6ad014346fa75
+  support: supports
+  summary: Alp7/Alp14 equatorial residence is supported; engineered interphase recruitment
+    and nucleation-rate results are not equatorial measurements.
+- evidence_id: ring-2023
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10047812/fullTextXML
+  locator: Results/Discussion/Methods and Figure 1 caption, previously read and hash-verified
+  accessed_at: '2026-10-11T20:51:23Z'
+  snapshot_sha256: 02fb84ec9de76eeae0fee1c5c7750b2641de9497a1ffa9904898e17864eb910e
+  support: supports
+  summary: Offset/dosage and conditional stiffness inference are preserved; no universal
+    cytokinesis anchoring requirement.
+- evidence_id: activation-2014
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3989768/fullTextXML
+  locator: Results/Discussion
+  accessed_at: '2026-10-11T20:50:47Z'
+  snapshot_sha256: 7fd53c538d7300534143ca9ca8c68dc322982939aad5ec87eb7c58a3fb1d40a4
+  support: supports
+  summary: Engineered bonsai stoichiometry and activation do not supply native equatorial
+    copy counts.
+- evidence_id: phospho-2015
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4918325/fullTextXML
+  locator: Mto2 homolog and quantification paragraphs
+  accessed_at: '2026-10-11T20:50:52Z'
+  snapshot_sha256: 7db79b1ff5c9f12e41fbb77e955fe363c467bfd467950a204cfb3236b1c5c286
+  support: supports
+  summary: Highly divergent fungal homologs exist; cytoplasmic mitotic quantification
+    excluded equatorial-center-bearing cells.
+- evidence_id: lattice-2025
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11698074/fullTextXML
+  locator: Discussion and main captions/context
+  accessed_at: '2026-10-11T20:51:18Z'
+  snapshot_sha256: b8fe2d3705650333215b17946f293e9d10a512ea21bcc26052ddb983839d0ff1
+  support: supports
+  summary: Klp2/Rsp1/Ssa1 pathway addresses lattice nucleation; not demonstrated equatorial
+    turnover chemistry.
+- evidence_id: rsp1-2004
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs1534-5807%2804%2900096-6%22&format=json&resultType=core
+  locator: Primary abstract DOI:10.1016/s1534-5807(04)00096-6
+  accessed_at: '2026-10-11T20:50:49Z'
+  snapshot_sha256: 5e862e9293ee598835c0c101db4948afc4b6391130e3835fe4c69a284fd189da
+  support: supports
+  summary: Loss-of-function persistence supports turnover dependency, not complete
+    protein absence or a resolved molecular disassembly reaction.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000226,GO:0000776,GO:0000923,GO:0000930,GO:0005634,GO:0005737,GO:0005815,GO:0005816,GO:0005818,GO:0005819,GO:0005822,GO:0005824,GO:0005874,GO:0005876,GO:0005879,GO:0005880,GO:0005881,GO:0007020,GO:0007059,GO:0015630,GO:0030981,GO:0030989,GO:0031021,GO:0031025,GO:0032117,GO:0032118,GO:0032153,GO:0051315,GO:0051415,GO:0051418,GO:0051647,GO:0061863,GO:0070850,GO:0072686,GO:0090307,GO:0099070,GO:0110165,GO:0140535,GO:1905720,GO:1990295
+  locator: Exact identities, definitions, synonyms and typed relations
+  accessed_at: '2026-10-11T20:51:58Z'
+  snapshot_sha256: b4a25cd70fae0cba6cddd4a8e5712338ace5b06060e4e6112b8a71d52a5506b1
+  support: supports
+  summary: Exact eMTOC identity/parent/division-site whole; PAA has-part is not inverted
+    to universal parthood; gamma-TuC and function/disassembly scope verified.
+- evidence_id: protein-O94488
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/O94488.json
+  locator: Accession, reviewed status, names/aliases, source taxon
+  accessed_at: '2026-10-11T20:52:06Z'
+  snapshot_sha256: 4903509b256bf5164ea7e5b80970bbb89056a71a4ea4a257e9feb8adcaf0e46b
+  support: supports
+  summary: Identity verified; 972h- is a reference exemplar, not every experimental
+    stock.
+- evidence_id: family-O94488
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O94488/?page_size=200
+  locator: Complete native matches and entry types
+  accessed_at: '2026-10-11T20:52:09Z'
+  snapshot_sha256: 475c2fa2c23696d5933a5f8278316b1d74bb8b282f9d954daa3b084e382dd7a9
+  support: supports
+  summary: Whole-family/domain/broad-family distinctions preserved; empty Mto2 response
+    is not global homology absence.
+- evidence_id: protein-Q9USP7
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q9USP7.json
+  locator: Accession, reviewed status, names/aliases, source taxon
+  accessed_at: '2026-10-11T20:53:07Z'
+  snapshot_sha256: ae275cdd142bdffa04ce4e120465b57fbd20dbe1223de0be9a72966ec6e40698
+  support: supports
+  summary: Identity verified; 972h- is a reference exemplar, not every experimental
+    stock.
+- evidence_id: family-Q9USP7
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q9USP7/?page_size=200
+  locator: Complete native matches and entry types
+  accessed_at: '2026-10-11T20:53:08Z'
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  support: supports
+  summary: Whole-family/domain/broad-family distinctions preserved; empty Mto2 response
+    is not global homology absence.
+- evidence_id: protein-Q9Y705
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q9Y705.json
+  locator: Accession, reviewed status, names/aliases, source taxon
+  accessed_at: '2026-10-11T20:53:09Z'
+  snapshot_sha256: 1735b88bbff6bce84e252460f2f8e64bb72fbe3901bd81b9f1db63cba4d23682
+  support: supports
+  summary: Identity verified; 972h- is a reference exemplar, not every experimental
+    stock.
+- evidence_id: family-Q9Y705
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q9Y705/?page_size=200
+  locator: Complete native matches and entry types
+  accessed_at: '2026-10-11T20:53:12Z'
+  snapshot_sha256: e6cb5f9d94ae430dd59a84be23c1c0b122e8cc79f7a5cffdcdeefe4c93bb89a9
+  support: supports
+  summary: Whole-family/domain/broad-family distinctions preserved; empty Mto2 response
+    is not global homology absence.
+- evidence_id: protein-Q9URY2
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q9URY2.json
+  locator: Accession, reviewed status, names/aliases, source taxon
+  accessed_at: '2026-10-11T20:53:02Z'
+  snapshot_sha256: 69a22093a5968e9a614a5170718632ab935b0628867cab263df68ad3bb240fe7
+  support: supports
+  summary: Identity verified; 972h- is a reference exemplar, not every experimental
+    stock.
+- evidence_id: family-Q9URY2
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q9URY2/?page_size=200
+  locator: Complete native matches and entry types
+  accessed_at: '2026-10-11T20:53:04Z'
+  snapshot_sha256: 03fb62580d358165f529e289536f7dbf5f6bdaf12119343b73f88db231a224f9
+  support: supports
+  summary: Whole-family/domain/broad-family distinctions preserved; empty Mto2 response
+    is not global homology absence.
+- evidence_id: protein-O94534
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/O94534.json
+  locator: Accession, reviewed status, names/aliases, source taxon
+  accessed_at: '2026-10-11T20:52:10Z'
+  snapshot_sha256: 257ba28d9d0e8203582177682405142bf2445317baad602e9f31a1171e13a722
+  support: supports
+  summary: Identity verified; 972h- is a reference exemplar, not every experimental
+    stock.
+- evidence_id: family-O94534
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O94534/?page_size=200
+  locator: Complete native matches and entry types
+  accessed_at: '2026-10-11T20:52:12Z'
+  snapshot_sha256: f62d9723b32a2c5c0641202d2b4296c8edf971796e4d4c18b72950a047b2aef7
+  support: supports
+  summary: Whole-family/domain/broad-family distinctions preserved; empty Mto2 response
+    is not global homology absence.
+- evidence_id: protein-O13601
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/O13601.json
+  locator: Accession, reviewed status, names/aliases, source taxon
+  accessed_at: '2026-10-11T20:52:01Z'
+  snapshot_sha256: f2fe8b41baa1ba1a11a257e091c9b73b5133e8c61ce97d53456d7ddaf9430936
+  support: supports
+  summary: Identity verified; 972h- is a reference exemplar, not every experimental
+    stock.
+- evidence_id: family-O13601
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O13601/?page_size=200
+  locator: Complete native matches and entry types
+  accessed_at: '2026-10-11T20:52:03Z'
+  snapshot_sha256: 757e197bfcbfbd3f5d70da4ffd10b5d83af022b6a572775a95431f6995a88394
+  support: supports
+  summary: Whole-family/domain/broad-family distinctions preserved; empty Mto2 response
+    is not global homology absence.
+- evidence_id: taxon-4896
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: ENA taxId/name/rank
+  accessed_at: '2026-10-11T20:51:59Z'
+  snapshot_sha256: 42c5b7d3d99341137803612d6404cd3884e2d06ec8a740b1ad38163c678f6721
+  support: supports
+  summary: Species and reference strain distinguished.
+- evidence_id: taxon-284812
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+  locator: ENA taxId/name/rank
+  accessed_at: '2026-10-11T20:51:59Z'
+  snapshot_sha256: 948c040cabf6c036dff451c7b6eac22605d0ed5d60a74f471e4431e63f82f721
+  support: supports
+  summary: Species and reference strain distinguished.
+- evidence_id: figure-proof
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T222903Z/emtoc-image-source-proof.json
+  accessed_at: '2026-10-11T22:41:06Z'
+  snapshot_sha256: 017ad80acd9b936eb9b27f73d02460ab62b65660d546545a3ed0dc780de79837
+  support: context_only
+  summary: Exact-version metadata/JATS/licence and media checksums agree with hosted
+    figure; later visual result in source-checks.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T224106Z-equatorial_microtubule_organizing_center-audit/review.yaml
+  accessed_at: '2026-10-11T23:03:38Z'
+  snapshot_sha256: e45576c638f4584ae5002d7f4720489e3c52574915f52aea0bd2769694cf0a7c
+  support: context_only
+  summary: Original issue-bearing observation committed before native changes.
+- evidence_id: red-tests
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T222903Z/emtoc-regressions-red.log
+  accessed_at: '2026-10-11T23:03:38Z'
+  snapshot_sha256: 2b10da9ba98c424f1d1907e8f36a939de54d60ba3545ecbcd0d4a5b1f7c92f3b
+  support: context_only
+  summary: Four focused regressions failed on original inputs.
+- evidence_id: green-tests
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T222903Z/emtoc-post-focused.log
+  accessed_at: '2026-10-11T23:03:38Z'
+  snapshot_sha256: 55cf51f8c00a147554c57331f3e1e6b15810f35ec506ecf129cc4e5951676921
+  support: context_only
+  summary: All focused and guarded-writer tests pass on corrected inputs.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T222903Z/emtoc-preservation.json
+  accessed_at: '2026-10-11T23:03:38Z'
+  snapshot_sha256: dffae5a396411890dfeec222cf48958fd4cfc3f11936ee9d7812b3e1f3705d87
+  support: context_only
+  summary: 908 other native records, 909 semantic vectors and all previous history/review/legacy
+    files preserved.
+- evidence_id: edit-history
+  kind: record_content
+  reference: history/records/equatorial_microtubule_organizing_center/2026-10-11T224249Z-codex-a10501.yaml
+  accessed_at: '2026-10-11T23:03:38Z'
+  snapshot_sha256: 85f02f324341563190679ee5f0c6dbbedd97ee306c2cdc59c1a83ef6417f19b0
+  support: context_only
+  summary: Actual Codex append-only EDIT links the original saved review and issue.
+assessments:
+- assessment_id: resolved
+  area: completeness
+  topic: Record deletion-backed residual equatorial assembly without Alp7
+  outcome: supported
+  target_ids:
+  - GO:0000923
+  evidence_ids:
+  - record
+  - schema
+  - rules
+  - mia1-2006
+  - mia1-figure
+  - predecessor
+  - red-tests
+  - green-tests
+  - preservation
+  - edit-history
+  summary: Alp7 is now DISPENSABLE for initial, possibly defective equatorial assembly
+    in tested S. pombe mia1-deletion cells; two assertion-local notes cite the inspected
+    Results and Figure 5C-E while preserving maintenance defects. Dated rationale/access
+    additions retain original chronology. Rsp1 UNKNOWN, Mto2 DISPENSABLE, all other
+    components/graphs and PROPOSED status are unchanged.
+findings:
+- finding_id: F1
+  issue_key: equatorial-mtoc-alp7-residual-assembly
+  category: completeness
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Record deletion-backed residual equatorial assembly without Alp7
+  description: Alp7 is now DISPENSABLE for initial, possibly defective equatorial
+    assembly in tested S. pombe mia1-deletion cells; two assertion-local notes cite
+    the inspected Results and Figure 5C-E while preserving maintenance defects. Dated
+    rationale/access additions retain original chronology. Rsp1 UNKNOWN, Mto2 DISPENSABLE,
+    all other components/graphs and PROPOSED status are unchanged.
+  target_ids:
+  - GO:0000923
+  field_paths:
+  - components[3].essentiality
+  - components[3].evidence
+  - components[3].protein_examples[0].evidence
+  - discussions[3].rationale
+  evidence_ids:
+  - record
+  - schema
+  - rules
+  - mia1-2006
+  - mia1-figure
+  - predecessor
+  - red-tests
+  - green-tests
+  - preservation
+  - edit-history
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#components
+  native_severity: minor
+  normalization_reason: Bounded evidence-resolved classification gap. Identity and
+    maintenance claims remain supported; no unsupported mechanism or essential-assembly
+    assertion is alleged.
+  disposition_reason: Alp7 is now DISPENSABLE for initial, possibly defective equatorial
+    assembly in tested S. pombe mia1-deletion cells; two assertion-local notes cite
+    the inspected Results and Figure 5C-E while preserving maintenance defects. Dated
+    rationale/access additions retain original chronology. Rsp1 UNKNOWN, Mto2 DISPENSABLE,
+    all other components/graphs and PROPOSED status are unchanged. Verified by primary
+    text/image inspection, exact diff, red/green regressions and full local QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T224106Z-equatorial_microtubule_organizing_center-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2263
+actions: []
+limitations:
+- Same-agent review, not independent human approval or raw-data reanalysis.
+- 2004 Rsp1 study remains abstract-only. The 2006 study assessment reads its equatorial
+  Results section, main Methods, Discussion, abstract and Figure 5, not all Results,
+  supplements or movies. Two 2005 full main Results/Discussion/Methods are now accessible;
+  historical access notes remain factual for their original dates.
+- Prior-continuation source text is reused only with verified hashes and original
+  access dates. Site-specific evidence is not generalized to all MTOCs.
+- Image pixels/captions and generated text were inspected; no browser-layout certification.
+  The source Figure 5 is review-only and is not imported.
+- Interphase MTOC remains partial; TACC/TOG has a separate clean completion without
+  an output record.
+- The original observation used exact-baseline CI. This disposition additionally records
+  fresh full local QC and scoped/global gates on corrected inputs; skipped tests/authority
+  namespaces remain explicit. PR and native merge-group gates remain separate.
+- Exact corrected input revision retained by review-base/equatorial-alp7-assembly-20261011.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2263
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T224106Z-equatorial_microtubule_organizing_center-audit
+  relationship: Resolves exact original finding without replacing its bundle.
