@@ -27,6 +27,12 @@ curation_history:
     taxonomic-distribution and canonical-example notes to cite the Spn1/Spn2/Spn3/Spn4
     oligomeric septin complex.'
   llm_assisted: true
+- timestamp: '2026-10-11T13:43:15Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2215: Qualified the detected minimum of two Spn1-4 copies versus
+    the proposed exact two-copy model in An et al. 2004.'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -54,8 +60,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe
   presence: COMMON
-  note: Fission yeast Spn1, Spn2, Spn3 and Spn4 form an oligomeric septin complex
-    containing two copies of each septin.
+  note: Fission yeast Spn1, Spn2, Spn3 and Spn4 form an oligomeric septin complex.
+    An et al. 2004 detected at least two copies of each septin and proposed a two-copy-per-subunit
+    model, while noting that the exact stoichiometry remained to be proven rigorously.
   reference: DOI:10.1091/mbc.E04-07-0640
 canonical_examples:
 - taxon_id: NCBITaxon:4896

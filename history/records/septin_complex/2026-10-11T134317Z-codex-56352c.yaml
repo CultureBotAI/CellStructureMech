@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_complex.yaml
+  slug: septin_complex
+session:
+  id: 2026-10-11T134317Z-codex-56352c
+  timestamp: '2026-10-11T13:43:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2215
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - curation_history
+  summary: 'Addressed #2215: Qualified the detected minimum of two Spn1-4 copies versus the
+    proposed exact two-copy model in An et al. 2004.'
+  details: 'Original immutable review: reviews/structured/20261011T134151Z-septin_complex-audit/review.yaml.
+    Qualified the detected minimum of two Spn1-4 copies versus the proposed exact two-copy
+    model in An et al. 2004. Guarded writer; identity, citations, graph, component boundaries,
+    prior discussions, prior history and PROPOSED status preserved.'
