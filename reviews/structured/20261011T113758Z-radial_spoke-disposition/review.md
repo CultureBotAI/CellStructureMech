@@ -1,0 +1,646 @@
+# Radial spoke: stalk-base finding disposition
+
+- Review: 20261011T113758Z-radial_spoke-disposition
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-11T11:37:51Z
+- Finished UTC: 2026-10-11T11:37:58Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The exact predecessor major finding is resolved by a bounded topology correction; original observation and scientific status are preserved.
+
+## Scope And Provenance
+
+Reassessment of the saved stalk-base boundary finding and surrounding-claim preservation, not another whole-record review.
+
+Selection: 20261011T112135Z-radial_spoke-audit
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base ac3afc1e51164e41c6509e5568d6a6da7a4c6ece.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0001534 | data/structures/cytoskeleton/radial_spoke.yaml | maintained | radial spoke |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0001534 | Actual post-curation deterministic check passed; not scientific certification. |
+| strict | passed | True | GO:0001534 | Actual post-curation deterministic check passed; not scientific certification. |
+| snippets | passed | True | GO:0001534 | No verbatim snippets; source-supported graph statements assessed separately. |
+| history | passed | True | GO:0001534 | Actual post-curation deterministic check passed; not scientific certification. |
+| labels | passed | True | GO:0001534 | id↔label correspondence summary:<br>          OK_CANONICAL: 3544<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| traits | passed | True | GO:0001534 | Actual post-curation deterministic check passed; not scientific certification. |
+| curies | passed | True | GO:0001534 | resolver control: every resolver accepts a known id and rejects a fabricated one<br><br>identifier liveness summary:<br>  OK             4014<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| focused | passed | True | GO:0001534 | ...........................                                              [100%]<br>27 passed in 52.64s |
+| reviews | passed | True | GO:0001534 | Actual post-curation deterministic check passed; not scientific certification. |
+| diff | passed | True | GO:0001534 | Actual post-curation deterministic check passed; not scientific certification. |
+| release-qc | passed | True | GO:0001534 | Full local QC passed: 851 passed, 3 skipped in 648.53s (0:10:48). PR and native merge-group checks remain separate gates. |
+
+## Scientific And Domain Assessments
+
+### Keep the GO-grounded stalk distinct from the radial-spoke base
+
+grounding: supported. Targets: GO:0001534.
+
+The exact GO:0001536 stalk now connects to a separate base node, which binds the outer-doublet A-tubule. Component role and graph description agree. The neck-to-stalk endpoint, head parthood, central-pair orientation and regulation edge are unchanged. The whole-spoke definition and all discussions remain intact; no protein identities, stoichiometry or direct biochemical assay are inferred.
+
+## Findings
+
+### F1: Keep the GO-grounded stalk distinct from the radial-spoke base
+
+major / resolved / confirmed; issue key: radial-spoke-stalk-base-boundary.
+
+The exact GO:0001536 stalk now connects to a separate base node, which binds the outer-doublet A-tubule. Component role and graph description agree. The neck-to-stalk endpoint, head parthood, central-pair orientation and regulation edge are unchanged. The whole-spoke definition and all discussions remain intact; no protein identities, stoichiometry or direct biochemical assay are inferred.
+
+Disposition: The exact GO:0001536 stalk now connects to a separate base node, which binds the outer-doublet A-tubule. Component role and graph description agree. The neck-to-stalk endpoint, head parthood, central-pair orientation and regulation edge are unchanged. The whole-spoke definition and all discussions remain intact; no protein identities, stoichiometry or direct biochemical assay are inferred. Verified with inspected GO definitions, primary structural context, red/green tests and full QC.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/radial_spoke.yaml | context_only | Corrected native record reread; structured diff permits only declared topology fields and appended event. |
+| rules | docs/CURATION.md | context_only | Exact groundings and edge-local evidence must preserve the scope of the source. |
+| stalk-record | data/structures/cytoskeleton/radial_spoke_stalk.yaml | context_only | The exact GO:0001536 child defines the stalk between a separate base and neck; its graph retains both connections. |
+| stalk-legacy | reports/yaml_record_review/20260930T012747Z-radial_spoke_stalk.md | context_only | Historical same-agent review explicitly checked separate-base topology. Not a canonical predecessor for this target. |
+| history | /private/tmp/csm-review-20261011T111233Z/radial_spoke-discussion-history.json | context_only | Committed rationale and inline Codex events remain unchanged. Append-only records attribute their sessions to claude-code; historical actor metadata is not reattributed without session evidence. |
+| append-history-0 | history/records/radial_spoke/2026-09-23T093704Z-claude-code-f34960.yaml | context_only | Historical CREATE/review details and original actor metadata inspected and preserved. |
+| append-history-1 | history/records/radial_spoke/2026-09-23T095542Z-claude-code-fc7128.yaml | context_only | Historical CREATE/review details and original actor metadata inspected and preserved. |
+| prior-issues | /private/tmp/csm-review-20261011T111233Z/radial_spoke_head-issues.log | context_only | Issues 1378/1379 established neck-to-stalk connectivity and static head parthood; both fixes remain correct. |
+| predecessors | /private/tmp/csm-review-20261011T111233Z/exact-target-predecessors.json | context_only | Ignored-inclusive canonical scan found no exact-target predecessor. |
+| adapter | /private/tmp/csm-review-20261011T111233Z/adapter.log | context_only | Live iModulonDB inventory has no Chlamydomonas dataset; not applicable, not evidence of biological absence. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0001534,GO:0001535,GO:0001536,GO:0003352,GO:0005929,GO:0005930,GO:0009288,GO:0030990,GO:0032991,GO:0035869,GO:0036064,GO:0060170,GO:0060271,GO:0060285,GO:0097540,GO:0097546,GO:0097589,GO:0120343,GO:0140513; GO:0001534/0001535/0001536/0120343 definitions and typed part_of/is_a relations; GO:0003352 and GO:0097540 labels | supports | The exact stalk term separates base and neck. The whole-spoke definition uses coarser stalk-attachment wording, which does not override the narrower GO:0001536 boundary. |
+| taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055; ENA taxonomy taxId 3055, species rank and scientificName | supports | Chlamydomonas reinhardtii identity verified; prevalence is assessed from structural evidence, not this authority record. |
+| poghosyan-abstract | DOI:10.1242/jcs.245233; DOI/PMID identity and abstract | supports | Exact article identity verified: DOI 10.1242/jcs.245233, PMID 32694165. |
+| nicastro-abstract | DOI:10.1126/science.1128618; DOI/PMID identity and abstract | supports | Exact article identity verified: DOI 10.1126/science.1128618, PMID 16917055. |
+| primary-text | /private/tmp/csm-review-20261011T111233Z/web-primary-text.json | context_only | Actual primary-paper text inspected via web retrieval, not search snippets; primary publication identity cross-checked. |
+| poghosyan-full | DOI:10.1242/jcs.245233; Publisher-supplied full text at https://www.researchgate.net/publication/343123729_The_structure_and_symmetry_of_the_radial_spoke_protein_complex_in_Chlamydomonas_flagella ; Introduction, 3D structure Results, protein-organization Discussion | partial | Chlamydomonas whole-spoke cryo-EM and tomography support the coarse head/neck/stalk architecture and motility-transducer context. Detailed assignments focus on head/neck. The paper mentions a base of the stalk but does not establish that the narrower GO:0001536 class includes the binding base. |
+| nicastro-full | DOI:10.1126/science.1128618; Author-uploaded full text at https://www.researchgate.net/publication/6871150_The_Molecular_Architecture_of_Axonemes_Revealed_by_Cryoelectron_Tomography ; opening paragraphs, Fig. 1 caption and Chlamydomonas specimen paragraph | supports | Isolated Chlamydomonas axonemes show radial spokes oriented toward the central apparatus; coarse structural observations support the occurrence and orientation claims, not a biochemical proof of signal transmission. |
+| predecessor | reviews/structured/20261011T112135Z-radial_spoke-audit/review.yaml | context_only | Immutable observation committed before scientific edits. |
+| preservation | /private/tmp/csm-review-20261011T111233Z/preservation.json | context_only | All 908 other records and prior review/history/legacy bytes preserved. |
+| embeddings | /private/tmp/csm-review-20261011T111233Z/embedding-refresh.json | context_only | Only GO:0001534 semantic vector refreshed using the pinned local model; 908 vectors preserved. |
+| red-tests | /private/tmp/csm-review-20261011T111233Z/regressions-red.log | context_only | Both parent tests failed before correction; child topology test passed. |
+| green-tests | /private/tmp/csm-review-20261011T111233Z/post-focused.log | context_only | All three boundary tests and guarded-writer tests pass. |
+| edit-history | history/records/radial_spoke/2026-10-11T112205Z-codex-749eb1.yaml | context_only | New append-only Codex EDIT history links issue 2208 and saved observation. |
+
+## Limits And Additional Notes
+
+- Same-agent disposition, not independent human approval or a repeated whole-record review.
+- Coarse ontology-defined topology is not direct experimental proof of protein contacts, order of assembly or forces. No raw data reanalysis.
+- Resolver/label namespace skips and the three existing empty-parameter test skips remain explicit.
+- Disposition source revision retained by review-base/radial-spoke-base-boundary-20261011. Required PR and native merge-group checks are separate publication gates.
+- Cilium remains partial because the cited Silflow and Lefebvre body was not readable. Three radial-spoke child records have separate clean coverage accounting and no saved output.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T113758Z-radial_spoke-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Radial spoke: stalk-base finding disposition'
+started_at: '2026-10-11T11:37:51Z'
+finished_at: '2026-10-11T11:37:58Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent correction and adversarial source/diff review, not
+    independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The exact predecessor major finding is resolved by a bounded topology correction;
+  original observation and scientific status are preserved.
+source:
+  git_revision: ac3afc1e51164e41c6509e5568d6a6da7a4c6ece
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 7354ab3cdd2e80719041752e623b51c95369a7f1463ce3cf615d196448b156ce
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/appendage/cilium.yaml
+    sha256: 2536d421f9c482abf35c2d2bf026eb6158ddfec5c2df1f319ca80698cbb56bb8
+    role: context
+  - path: data/structures/cytoskeleton/axoneme.yaml
+    sha256: 0b91b4cd41d1a34bdc3883d988f31009effc74347b881cdc5c9b66014704e223
+    role: context
+  - path: data/structures/cytoskeleton/radial_spoke.yaml
+    sha256: c5407b7d401033548f3235336b679c3c0e4b431fb198448ca98375ceadf502c6
+    role: target
+  - path: data/structures/cytoskeleton/radial_spoke_head.yaml
+    sha256: 81bb02c21dd3015549a7674a25e3289d841ee92407b0889759d9e096163a06ab
+    role: context
+  - path: data/structures/cytoskeleton/radial_spoke_neck.yaml
+    sha256: b9de7ee7d3f20588af7accec2fb1715175340069c5d565158b4a7408e5bd636e
+    role: context
+  - path: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+    sha256: 33bd01eecccc7ea46db7b09708029fa1f85def8588af7802fa2d3768a2ff2101
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/radial_spoke/2026-09-23T093704Z-claude-code-f34960.yaml
+    sha256: 149c047ec61b9ac60edbfd6f064f4274100befb2c45d319b5ed3a6a38f8e8117
+    role: context
+  - path: history/records/radial_spoke/2026-09-23T095542Z-claude-code-fc7128.yaml
+    sha256: 1deb9c53a9cf8d49c9691f24be62b84d59ee5246185af9191e4da5cfafa32d7b
+    role: context
+  - path: history/records/radial_spoke/2026-10-11T112205Z-codex-749eb1.yaml
+    sha256: 0bef9b7ac764ea759b354a08f290569b96786a000a759f0782b5249dd806002c
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/yaml_record_review/20260929T235204Z-radial_spoke_head.md
+    sha256: 186418f898a93b7c6c803511446effb8efc693bd53b06b952b3231408816a2ae
+    role: context
+  - path: reports/yaml_record_review/20260930T003455Z-radial_spoke_head_parent_fix.md
+    sha256: 3158d63f6f53c11c6b6e5bd04711129fdec867618f4b36911e5008c7336b245e
+    role: context
+  - path: reports/yaml_record_review/20260930T012747Z-radial_spoke_stalk.md
+    sha256: ddefc7f60968e9b08ef8a2b73f98479c32933788acf97c2bb43ad76d7a3f956a
+    role: context
+  - path: reports/yaml_record_review/20260930T020721Z-radial_spoke_neck.md
+    sha256: dae589c20fd786b507d0eba0b38292a1d773efd769d27c547556e6350c6b412e
+    role: context
+  - path: reviews/structured/20261011T112135Z-radial_spoke-audit/review.yaml
+    sha256: 67fa21732fdecb8a61eb222ba29c757339f7aa2a1a4c2103e5aee9c3f40f7d02
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_radial_spoke_boundary.py
+    sha256: dbaf0bc22ec25759c14571f5a84665112df587c5ea0e7cdb7a053f0f067f7c52
+    role: context
+targets:
+- target_id: GO:0001534
+  path: data/structures/cytoskeleton/radial_spoke.yaml
+  label: radial spoke
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke.yaml
+    role: maintained scientific record
+scope:
+  description: Reassessment of the saved stalk-base boundary finding and surrounding-claim
+    preservation, not another whole-record review.
+  selection: 20261011T112135Z-radial_spoke-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0001534
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/radial_spoke.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation deterministic check passed; not scientific certification.
+  scope_note: 2026-10-11T11:22:15Z to 2026-10-11T11:22:17Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/radial_spoke.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation deterministic check passed; not scientific certification.
+  scope_note: 2026-10-11T11:22:17Z to 2026-10-11T11:22:22Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/radial_spoke.yaml
+    --report /private/tmp/csm-review-20261011T111233Z/post-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; source-supported graph statements assessed separately.
+  scope_note: 2026-10-11T11:22:22Z to 2026-10-11T11:22:44Z; log SHA-256 6a477d7854e348d5246aeec780fc33edf2e96d7656eac1a844b6e886d9be5e5b
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation deterministic check passed; not scientific certification.
+  scope_note: 2026-10-11T11:22:44Z to 2026-10-11T11:22:57Z; log SHA-256 b6444e684401cdf21a031611896cf2c8abe38a769f74d7f2494567d4ca7eea04
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T11:22:57Z to 2026-10-11T11:24:18Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation deterministic check passed; not scientific certification.
+  scope_note: 2026-10-11T11:24:18Z to 2026-10-11T11:24:41Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4014\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T11:24:41Z to 2026-10-11T11:25:26Z; log SHA-256 ee1c5f2e78a2d29fcb6781a8ecd722934376595042d2cc261b4465b361d19b79
+- check_id: focused
+  name: focused
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: .venv/bin/python -m pytest -q tests/test_radial_spoke_boundary.py tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '...........................                                              [100%]
+
+    27 passed in 52.64s'
+  scope_note: 2026-10-11T11:25:26Z to 2026-10-11T11:26:20Z; log SHA-256 76e6fdc5e58c6fcc190f1c3e2a326d9f5fc663bb09c6f89b38f18ea27dd6d427
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: .venv/bin/python scripts/record_review.py check --base de6f330d635b75a66bae9f60c6cd69a33789513e
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation deterministic check passed; not scientific certification.
+  scope_note: 2026-10-11T11:26:20Z to 2026-10-11T11:27:28Z; log SHA-256 6c5eb4ed864fb6e5fdc54a2cb1a3dd55d617f9d35ff201fe93653ff36e74106c
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation deterministic check passed; not scientific certification.
+  scope_note: 2026-10-11T11:27:28Z to 2026-10-11T11:27:28Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: release-qc
+  name: release-qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:0001534
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Full local QC passed: 851 passed, 3 skipped in 648.53s (0:10:48). PR and
+    native merge-group checks remain separate gates.'
+  scope_note: 2026-10-11T11:23:58Z to 2026-10-11T11:37:18Z; log SHA-256 5423807e181bff192deda5f26cfc1ec1b216580b15cf0228af9f2bd8e663d723
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_spoke.yaml
+  accessed_at: '2026-10-11T11:37:58Z'
+  snapshot_sha256: c5407b7d401033548f3235336b679c3c0e4b431fb198448ca98375ceadf502c6
+  support: context_only
+  summary: Corrected native record reread; structured diff permits only declared topology
+    fields and appended event.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T11:21:35Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Exact groundings and edge-local evidence must preserve the scope of the
+    source.
+- evidence_id: stalk-record
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+  accessed_at: '2026-10-11T11:21:35Z'
+  snapshot_sha256: 33bd01eecccc7ea46db7b09708029fa1f85def8588af7802fa2d3768a2ff2101
+  support: context_only
+  summary: The exact GO:0001536 child defines the stalk between a separate base and
+    neck; its graph retains both connections.
+- evidence_id: stalk-legacy
+  kind: prior_review
+  reference: reports/yaml_record_review/20260930T012747Z-radial_spoke_stalk.md
+  accessed_at: '2026-10-11T11:21:35Z'
+  snapshot_sha256: ddefc7f60968e9b08ef8a2b73f98479c32933788acf97c2bb43ad76d7a3f956a
+  support: context_only
+  summary: Historical same-agent review explicitly checked separate-base topology.
+    Not a canonical predecessor for this target.
+- evidence_id: history
+  kind: record_content
+  reference: /private/tmp/csm-review-20261011T111233Z/radial_spoke-discussion-history.json
+  accessed_at: '2026-10-11T11:21:35Z'
+  snapshot_sha256: 3cc725ecc9c8105a157dfab03049518acf4d4f5968d9a90f414e098c86c186df
+  support: context_only
+  summary: Committed rationale and inline Codex events remain unchanged. Append-only
+    records attribute their sessions to claude-code; historical actor metadata is
+    not reattributed without session evidence.
+- evidence_id: append-history-0
+  kind: record_content
+  reference: history/records/radial_spoke/2026-09-23T093704Z-claude-code-f34960.yaml
+  accessed_at: '2026-10-11T11:21:35Z'
+  snapshot_sha256: 149c047ec61b9ac60edbfd6f064f4274100befb2c45d319b5ed3a6a38f8e8117
+  support: context_only
+  summary: Historical CREATE/review details and original actor metadata inspected
+    and preserved.
+- evidence_id: append-history-1
+  kind: record_content
+  reference: history/records/radial_spoke/2026-09-23T095542Z-claude-code-fc7128.yaml
+  accessed_at: '2026-10-11T11:21:35Z'
+  snapshot_sha256: 1deb9c53a9cf8d49c9691f24be62b84d59ee5246185af9191e4da5cfafa32d7b
+  support: context_only
+  summary: Historical CREATE/review details and original actor metadata inspected
+    and preserved.
+- evidence_id: prior-issues
+  kind: record_content
+  reference: /private/tmp/csm-review-20261011T111233Z/radial_spoke_head-issues.log
+  accessed_at: '2026-10-11T11:21:35Z'
+  snapshot_sha256: 0a7e4a5810cd7e9289c45c0f0845840495fc142c272ae49d1349761d270d6afb
+  support: context_only
+  summary: Issues 1378/1379 established neck-to-stalk connectivity and static head
+    parthood; both fixes remain correct.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T111233Z/exact-target-predecessors.json
+  accessed_at: '2026-10-11T11:21:35Z'
+  snapshot_sha256: ae57977b4a22b5088d44fe500ec4bce9c32ab73015e0bd9c31070619389a6848
+  support: context_only
+  summary: Ignored-inclusive canonical scan found no exact-target predecessor.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T111233Z/adapter.log
+  accessed_at: '2026-10-11T11:21:35Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: Live iModulonDB inventory has no Chlamydomonas dataset; not applicable,
+    not evidence of biological absence.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0001534,GO:0001535,GO:0001536,GO:0003352,GO:0005929,GO:0005930,GO:0009288,GO:0030990,GO:0032991,GO:0035869,GO:0036064,GO:0060170,GO:0060271,GO:0060285,GO:0097540,GO:0097546,GO:0097589,GO:0120343,GO:0140513
+  locator: GO:0001534/0001535/0001536/0120343 definitions and typed part_of/is_a relations;
+    GO:0003352 and GO:0097540 labels
+  accessed_at: '2026-10-11T11:14:50Z'
+  snapshot_sha256: 446775ccc66e2c36dc82727f8946615a6d2ed38996bb7dd36a1e0fe93ba9e0c0
+  support: supports
+  summary: The exact stalk term separates base and neck. The whole-spoke definition
+    uses coarser stalk-attachment wording, which does not override the narrower GO:0001536
+    boundary.
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055
+  locator: ENA taxonomy taxId 3055, species rank and scientificName
+  accessed_at: '2026-10-11T11:17:50Z'
+  snapshot_sha256: e3861fe6706cefe2e079e15c0178a65e95efaad3890f548f25e721553eaa93a0
+  support: supports
+  summary: Chlamydomonas reinhardtii identity verified; prevalence is assessed from
+    structural evidence, not this authority record.
+- evidence_id: poghosyan-abstract
+  kind: primary_source
+  reference: DOI:10.1242/jcs.245233
+  locator: DOI/PMID identity and abstract
+  accessed_at: '2026-10-11T11:13:42Z'
+  snapshot_sha256: 9a45cf10a8d516a8c11469a37f3b5ced46f01cb6426db60118e96fd08cfb9611
+  support: supports
+  summary: 'Exact article identity verified: DOI 10.1242/jcs.245233, PMID 32694165.'
+- evidence_id: nicastro-abstract
+  kind: primary_source
+  reference: DOI:10.1126/science.1128618
+  locator: DOI/PMID identity and abstract
+  accessed_at: '2026-10-11T11:13:41Z'
+  snapshot_sha256: dc5a628f1cfe67da937413ea897415a623f29682c4fcc83f9a7540d564467a27
+  support: supports
+  summary: 'Exact article identity verified: DOI 10.1126/science.1128618, PMID 16917055.'
+- evidence_id: primary-text
+  kind: primary_source
+  reference: /private/tmp/csm-review-20261011T111233Z/web-primary-text.json
+  accessed_at: '2026-10-11T11:21:35Z'
+  snapshot_sha256: a4329d6204a5b26da703e19df7a41c108a875d4ba968323c032a6fd902e5da50
+  support: context_only
+  summary: Actual primary-paper text inspected via web retrieval, not search snippets;
+    primary publication identity cross-checked.
+- evidence_id: poghosyan-full
+  kind: primary_source
+  reference: DOI:10.1242/jcs.245233
+  locator: Publisher-supplied full text at https://www.researchgate.net/publication/343123729_The_structure_and_symmetry_of_the_radial_spoke_protein_complex_in_Chlamydomonas_flagella
+    ; Introduction, 3D structure Results, protein-organization Discussion
+  accessed_at: '2026-10-11T11:21:35Z'
+  support: partial
+  summary: Chlamydomonas whole-spoke cryo-EM and tomography support the coarse head/neck/stalk
+    architecture and motility-transducer context. Detailed assignments focus on head/neck.
+    The paper mentions a base of the stalk but does not establish that the narrower
+    GO:0001536 class includes the binding base.
+- evidence_id: nicastro-full
+  kind: primary_source
+  reference: DOI:10.1126/science.1128618
+  locator: Author-uploaded full text at https://www.researchgate.net/publication/6871150_The_Molecular_Architecture_of_Axonemes_Revealed_by_Cryoelectron_Tomography
+    ; opening paragraphs, Fig. 1 caption and Chlamydomonas specimen paragraph
+  accessed_at: '2026-10-11T11:21:35Z'
+  support: supports
+  summary: Isolated Chlamydomonas axonemes show radial spokes oriented toward the
+    central apparatus; coarse structural observations support the occurrence and orientation
+    claims, not a biochemical proof of signal transmission.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T112135Z-radial_spoke-audit/review.yaml
+  accessed_at: '2026-10-11T11:37:58Z'
+  snapshot_sha256: 67fa21732fdecb8a61eb222ba29c757339f7aa2a1a4c2103e5aee9c3f40f7d02
+  support: context_only
+  summary: Immutable observation committed before scientific edits.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T111233Z/preservation.json
+  accessed_at: '2026-10-11T11:37:58Z'
+  snapshot_sha256: 4713c88604236d827fb0af88dd143e4eefa269964a500e1b16563a619ef788dd
+  support: context_only
+  summary: All 908 other records and prior review/history/legacy bytes preserved.
+- evidence_id: embeddings
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T111233Z/embedding-refresh.json
+  accessed_at: '2026-10-11T11:37:58Z'
+  snapshot_sha256: 98238eaf87d98643abebb03358cdde8c7132f65d76cbbb6e2937c9c9480fcc57
+  support: context_only
+  summary: Only GO:0001534 semantic vector refreshed using the pinned local model;
+    908 vectors preserved.
+- evidence_id: red-tests
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T111233Z/regressions-red.log
+  accessed_at: '2026-10-11T11:37:58Z'
+  snapshot_sha256: e1a9089c0464ca7b2ebf7e5846928474a71f765c94716db6e7d476fd26052768
+  support: context_only
+  summary: Both parent tests failed before correction; child topology test passed.
+- evidence_id: green-tests
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T111233Z/post-focused.log
+  accessed_at: '2026-10-11T11:37:58Z'
+  snapshot_sha256: 76e6fdc5e58c6fcc190f1c3e2a326d9f5fc663bb09c6f89b38f18ea27dd6d427
+  support: context_only
+  summary: All three boundary tests and guarded-writer tests pass.
+- evidence_id: edit-history
+  kind: record_content
+  reference: history/records/radial_spoke/2026-10-11T112205Z-codex-749eb1.yaml
+  accessed_at: '2026-10-11T11:37:58Z'
+  snapshot_sha256: 0bef9b7ac764ea759b354a08f290569b96786a000a759f0782b5249dd806002c
+  support: context_only
+  summary: New append-only Codex EDIT history links issue 2208 and saved observation.
+assessments:
+- assessment_id: resolved-boundary
+  area: grounding
+  topic: Keep the GO-grounded stalk distinct from the radial-spoke base
+  outcome: supported
+  target_ids:
+  - GO:0001534
+  evidence_ids:
+  - record
+  - go
+  - stalk-record
+  - stalk-legacy
+  - poghosyan-full
+  - rules
+  - predecessor
+  - preservation
+  - red-tests
+  - green-tests
+  - edit-history
+  summary: The exact GO:0001536 stalk now connects to a separate base node, which
+    binds the outer-doublet A-tubule. Component role and graph description agree.
+    The neck-to-stalk endpoint, head parthood, central-pair orientation and regulation
+    edge are unchanged. The whole-spoke definition and all discussions remain intact;
+    no protein identities, stoichiometry or direct biochemical assay are inferred.
+findings:
+- finding_id: F1
+  issue_key: radial-spoke-stalk-base-boundary
+  category: grounding
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Keep the GO-grounded stalk distinct from the radial-spoke base
+  description: The exact GO:0001536 stalk now connects to a separate base node, which
+    binds the outer-doublet A-tubule. Component role and graph description agree.
+    The neck-to-stalk endpoint, head parthood, central-pair orientation and regulation
+    edge are unchanged. The whole-spoke definition and all discussions remain intact;
+    no protein identities, stoichiometry or direct biochemical assay are inferred.
+  target_ids:
+  - GO:0001534
+  field_paths:
+  - components[2].role
+  - causal_graphs[0].description
+  - causal_graphs[0].edges[3]
+  evidence_ids:
+  - record
+  - go
+  - stalk-record
+  - stalk-legacy
+  - poghosyan-full
+  - rules
+  - predecessor
+  - preservation
+  - red-tests
+  - green-tests
+  - edit-history
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: The structured edge changes the boundary of an exactly grounded
+    subcomplex and asserts direct anchoring not supported for that narrower class;
+    this is more than wording.
+  disposition_reason: The exact GO:0001536 stalk now connects to a separate base node,
+    which binds the outer-doublet A-tubule. Component role and graph description agree.
+    The neck-to-stalk endpoint, head parthood, central-pair orientation and regulation
+    edge are unchanged. The whole-spoke definition and all discussions remain intact;
+    no protein identities, stoichiometry or direct biochemical assay are inferred.
+    Verified with inspected GO definitions, primary structural context, red/green
+    tests and full QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T112135Z-radial_spoke-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2208
+actions: []
+limitations:
+- Same-agent disposition, not independent human approval or a repeated whole-record
+  review.
+- Coarse ontology-defined topology is not direct experimental proof of protein contacts,
+  order of assembly or forces. No raw data reanalysis.
+- Resolver/label namespace skips and the three existing empty-parameter test skips
+  remain explicit.
+- Disposition source revision retained by review-base/radial-spoke-base-boundary-20261011.
+  Required PR and native merge-group checks are separate publication gates.
+- Cilium remains partial because the cited Silflow and Lefebvre body was not readable.
+  Three radial-spoke child records have separate clean coverage accounting and no
+  saved output.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2208
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T112135Z-radial_spoke-audit
+  relationship: Resolves the exact predecessor finding without overwriting it.
+```

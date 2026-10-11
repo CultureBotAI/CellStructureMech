@@ -5409,27 +5409,27 @@
         {
           "identifier": "GO:0001535",
           "label": "radial spoke head",
-          "cosine_similarity": 0.93800821
-        },
-        {
-          "identifier": "GO:0001536",
-          "label": "radial spoke stalk",
-          "cosine_similarity": 0.91393924
+          "cosine_similarity": 0.9429032
         },
         {
           "identifier": "GO:0120343",
           "label": "radial spoke neck",
-          "cosine_similarity": 0.90460161
+          "cosine_similarity": 0.92007822
+        },
+        {
+          "identifier": "GO:0001536",
+          "label": "radial spoke stalk",
+          "cosine_similarity": 0.91944172
         },
         {
           "identifier": "GO:1990716",
           "label": "axonemal central apparatus",
-          "cosine_similarity": 0.77061307
+          "cosine_similarity": 0.76451195
         },
         {
           "identifier": "cellstructuremech:basal_body_cartwheel",
           "label": "basal body cartwheel",
-          "cosine_similarity": 0.75635616
+          "cosine_similarity": 0.76169101
         }
       ]
     },
@@ -5438,14 +5438,14 @@
       "label": "radial spoke head",
       "neighbors": [
         {
+          "identifier": "GO:0001534",
+          "label": "radial spoke",
+          "cosine_similarity": 0.9429032
+        },
+        {
           "identifier": "GO:0001536",
           "label": "radial spoke stalk",
           "cosine_similarity": 0.94208438
-        },
-        {
-          "identifier": "GO:0001534",
-          "label": "radial spoke",
-          "cosine_similarity": 0.93800821
         },
         {
           "identifier": "GO:0120343",
@@ -5481,7 +5481,7 @@
         {
           "identifier": "GO:0001534",
           "label": "radial spoke",
-          "cosine_similarity": 0.90460161
+          "cosine_similarity": 0.92007822
         },
         {
           "identifier": "cellstructuremech:basal_body_pinhead",
@@ -5512,7 +5512,7 @@
         {
           "identifier": "GO:0001534",
           "label": "radial spoke",
-          "cosine_similarity": 0.91393924
+          "cosine_similarity": 0.91944172
         },
         {
           "identifier": "cellstructuremech:basal_body_pinhead",

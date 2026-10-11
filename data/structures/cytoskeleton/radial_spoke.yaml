@@ -33,6 +33,12 @@ curation_history:
   changes: 'Resolved PR #1377 review issues #1378 and #1379 by changing the radial-spoke-head
     edge to static parthood and adding the missing neck-to-stalk edge.'
   llm_assisted: true
+- timestamp: '2026-10-11T11:22:03Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2208: separated the A-tubule-binding base from the GO:0001536
+    stalk in the component role and whole-spoke topology graph.'
+  llm_assisted: true
 part_of:
 - GO:0005930
 components:
@@ -71,8 +77,8 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   grounding: GO:0001536
-  role: Elongated subcomplex that attaches the radial spoke to the A-tubule of an
-    axonemal outer doublet.
+  role: Elongated subcomplex that connects the A-tubule-binding radial-spoke base
+    to the neck.
   evidence:
   - reference: GO:0001536
     notes: GO identifies the radial spoke stalk as the elongated radial-spoke portion
@@ -124,9 +130,9 @@ evidence:
 causal_graphs:
 - graph_id: chlamydomonas_radial_spoke_transduction
   title: Head, neck and stalk organize the radial spoke
-  description: In Chlamydomonas flagella, the radial-spoke stalk anchors the complex
-    to outer doublets, the neck connects the stalk to the head, and the head projects
-    toward the central pair to help regulate axonemal beating.
+  description: In Chlamydomonas flagella, the radial-spoke base binds an outer-doublet
+    A-tubule, the stalk connects the base to the neck, and the neck connects to the
+    head, which projects toward the central pair to help regulate axonemal beating.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: This graph records the coarse radial-spoke head, neck and stalk architecture
@@ -152,6 +158,9 @@ causal_graphs:
     label: radial spoke
     node_type: STRUCTURE
     grounding: GO:0001534
+  - node_id: radial_spoke_base
+    label: radial spoke base
+    node_type: STRUCTURE
   - node_id: outer_doublet_microtubule
     label: outer doublet microtubule
     node_type: STRUCTURE
@@ -190,17 +199,22 @@ causal_graphs:
       notes: GO defines the radial spoke neck by its connection between the stalk
         and head.
   - subject: radial_spoke_stalk
-    predicate: anchors to
-    object: outer_doublet_microtubule
-    description: The radial spoke stalk includes the base that binds the A-tubule
-      of an outer doublet.
+    predicate: connects to
+    object: radial_spoke_base
+    description: The radial spoke stalk connects to the separate A-tubule-binding
+      base at its microtubule-proximal end.
     evidence:
     - reference: GO:0001536
-      notes: GO defines the stalk as the elongated spoke portion between the A-tubule-binding
-        base and the neck.
-    - reference: DOI:10.1242/jcs.245233
-      notes: Poghosyan et al. 2020 structurally assigned radial-spoke stalk proteins
-        in Chlamydomonas.
+      notes: GO defines the stalk as the elongated portion between the A-tubule-binding
+        base and the neck; the base is not included in this exact stalk grounding.
+  - subject: radial_spoke_base
+    predicate: binds to
+    object: outer_doublet_microtubule
+    description: The radial-spoke base binds the A-tubule of an axonemal outer doublet.
+    evidence:
+    - reference: GO:0001536
+      notes: The stalk definition identifies the base as the portion that binds the
+        outer-doublet A-tubule.
   - subject: radial_spoke_head
     predicate: projects toward
     object: axonemal_central_pair
