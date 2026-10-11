@@ -22,6 +22,13 @@ curation_history:
     assembly/disassembly graphs, an inspected CC BY 4.0 figure, and explicit identity,
     component-boundary and evidence limitations.
   llm_assisted: true
+- timestamp: '2026-10-11T21:55:51Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2260, #2261: exposed preserved discussion explanations and
+    graph scope in supported display fields; corrected Tub3 localization to Figure
+    2A and Figure 2 supplement 1A.'
+  llm_assisted: true
 parent_structures:
 - GO:0099070
 part_of:
@@ -84,8 +91,8 @@ components:
       reference stock was imaged.
     evidence:
     - reference: DOI:10.7554/eLife.89958
-      notes: Figure 2B and expansion microscopy show Tub3 together with Tub1 in Q-nMT
-        bundles.
+      notes: Figure 2A shows tagged Tub3 together with Tub1 in Q-nMT bundles; Figure
+        2 supplement 1A localizes Tub3-3GFP alongside alpha-tubulin by expansion microscopy.
     - reference: https://www.uniprot.org/uniprotkb/P09734/entry
       notes: Reviewed entry, gene and source taxon verified live on 2026-10-05; localization
         is supported by the primary experiment.
@@ -464,6 +471,8 @@ causal_graphs:
     - reference: DOI:10.7554/eLife.89958
       notes: Figure 3 and supplement 1 compare early and late ndc80-1 restrictive-temperature
         treatments.
+  description: Physiological and perturbation-defined mechanism in S. cerevisiae;
+    the upstream glucose-exhaustion signal and exact crosslinking reactions are unresolved.
 - graph_id: quiescence_exit_disassembly
   title: Regulated disassembly on quiescence exit
   graph_kind: DISASSEMBLY
@@ -526,6 +535,9 @@ causal_graphs:
       notes: Figure 5 tracks bundle disappearance and SPB separation in wild type
         and mutants. The combined deletion also delays separation without delaying
         overall proliferation; this is not proof of a specific molecular checkpoint.
+  description: Exit from glucose-exhaustion-induced quiescence; timing and deletion
+    evidence do not identify a molecular checkpoint. Kip3 and She1 are external regulators,
+    not inferred stable residents.
 evidence:
 - reference: DOI:10.1083/jcb.201306075
   notes: 'Laporte et al. (2013), PMID 24247429, native PMC3840927.1 Results, Discussion
@@ -562,6 +574,13 @@ discussions:
   - reference: DOI:10.7554/eLife.89958
   - reference: GO:0099070
   - reference: GO:0005880
+  rationale: Hidden- and ignored-inclusive identity, synonym and citation searches,
+    plus a parsed identity scan, found no existing record. OAK GO alias searches and
+    native GO definitions do not supply an exact Q-nMT term. GO:0099070 is broader;
+    GO:0005880 is a constituent filament. The parallel monopolar nuclear array is
+    not the antiparallel cytoplasmic S. pombe bundle or a bipolar mitotic spindle.
+    OTHER denotes the whole array. Bare nuclear microtubule array is not adopted as
+    an exact synonym.
 - discussion_id: family_grounding
   kind: CURATION_TODO
   status: OPEN
@@ -576,6 +595,10 @@ discussions:
   - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P47134/
   - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P38283/
   - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q08581/
+  rationale: Complete native InterPro matches were read for Bik1 P11709, Kar3 P17119,
+    Bir1 P47134, Sli15 P38283 and Slk19 Q08581. Broad kinesin/BIR families and CAP-Gly,
+    ARK-binding or TACC domains do not exactly identify these narrower classes. Label-only
+    grounding is retained pending an exact authority entry.
 - discussion_id: attached_chromosomes_and_spb
   kind: CURATION_TODO
   status: RESOLVED
@@ -592,6 +615,13 @@ discussions:
   - reference: DOI:10.1083/jcb.201306075
   - reference: DOI:10.7554/eLife.89958
   - reference: GO:0000776
+  rationale: The SPB nucleates the array but is not its containing structure. Tub4/Spc97/Spc72
+    mark the nucleation site. All six kinetochore subcomplexes have array-associated
+    localization in 2013; Dad2 and Nuf2 mark attachments in 2024. These are retained
+    as interacting chromosome-bound machinery rather than asserted stoichiometric
+    building blocks of the microtubule bundle. Centromeric Cse4/chromosomes and the
+    displaced nucleolus are likewise not bundle components. Slk19 is included because
+    its own direct bundle-end localization and perturbation are documented.
 - discussion_id: regulators_not_residents
   kind: CURATION_TODO
   status: RESOLVED
@@ -608,6 +638,14 @@ discussions:
   - reference: DOI:10.1083/jcb.201306075
   - reference: DOI:10.7554/eLife.89958
   - reference: https://www.uniprot.org/uniprotkb/P38200/entry
+  rationale: Dynein and dynactin are detected on the cytoplasmic SPB face in 2013,
+    not inside the nuclear array. Cik1 requirement, monopolin Mam1/Lrs4/Hrr25/Csm1
+    expression and deletion phenotypes, Spo13 effects, and tubulin-folding factors
+    do not alone establish Q-nMT residence. Ipl1 activity is required early, but Ipl1
+    and Nbl1 were not detected in quiescence; the whole CPC is not imported from Bir1/Sli15
+    localization. Kip3 and She1 exit phenotypes are modeled as regulatory evidence,
+    not stable-component evidence. She1 P38200 is distinct from the MYO4/SHE1 homonym
+    P32492.
 - discussion_id: localization_and_essentiality
   kind: CURATION_TODO
   status: RESOLVED
@@ -622,6 +660,13 @@ discussions:
   evidence:
   - reference: DOI:10.1083/jcb.201306075
   - reference: DOI:10.7554/eLife.89958
+  rationale: Kar3 was not detected in 2013 but later detected with 3GFP in 2024. Cin8
+    localization is faint and channel controls are shown in Figure 4 supplement 1B.
+    Single BIM1 deletion permits stable bundles, whereas combinations expose redundancy.
+    Tub3-specific requirements do not make Tub3 irreplaceable because Tub1 substitution
+    restores stable bundles. Cin8 and Kip1 share a family but have distinct phenotypes;
+    family-wide necessity is not tested. Short residual bundles after several deletions
+    preclude an unqualified assembly-essential claim.
 - discussion_id: stability_and_function_limits
   kind: KNOWLEDGE_GAP
   status: OPEN
@@ -635,6 +680,12 @@ discussions:
   evidence:
   - reference: DOI:10.1083/jcb.201306075
   - reference: DOI:10.7554/eLife.89958
+  rationale: Nocodazole resistance, low tubulin turnover and stability after laser
+    severing bound stability to these assays. A GTP cap inferred from Bim1 binding
+    is not directly measured, and microtubule crosslinking mechanisms remain models.
+    Survival/regrowth effects are supported but perturbations also act beyond this
+    array. Proposed tubulin storage, a molecular SPB-separation checkpoint and homology
+    with primary cilia are not asserted as demonstrated functions.
 - discussion_id: measurement_and_image_scope
   kind: CURATION_TODO
   status: RESOLVED
@@ -648,6 +699,13 @@ discussions:
     as nonspecific in Methods, not GFP localization.'
   evidence:
   - reference: DOI:10.7554/eLife.89958
+  rationale: 'Bundle length, thickness and maturation timing vary with condition;
+    the 2024 Results and Discussion describe different approximate times for full
+    stabilization. No universal size, count or schedule is imposed. Expansion microscopy
+    expands the specimen, not the living bundle. Hosted Figure 3 supplement 1 is the
+    unmodified mixed-modality figure: A and K include Q-nMT imaging; L is a proliferating-cell
+    anaphase-spindle control. Cytoplasmic yellow background in A is explicitly described
+    as nonspecific in Methods, not GFP localization.'
 - discussion_id: taxon_dataset_and_license_scope
   kind: CURATION_TODO
   status: RESOLVED
@@ -665,6 +723,13 @@ discussions:
   - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
   - reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
   - reference: https://imodulondb.org/
+  rationale: Only S. cerevisiae is a canonical species. Most experiments use BY4741/BY4742
+    backgrounds, with stated S288C and W303 exceptions; reference-sequence examples
+    are not exact-stock assertions. The adopted iModulonDB inventory has 28 datasets
+    and no S. cerevisiae dataset; this is not a search of all omics repositories.
+    Announced source-data spreadsheets were not inspected or promoted to curated datasets.
+    Native PMC10963028.1 JATS and metadata agree on CC BY 4.0; the 2013 CC BY-NC-SA
+    3.0 figure is not hosted. No unverified TraitMech or Complex Portal link is added.
 images:
 - image_id: pmc_pmc10963028_fig3s1
   file: pmc10963028_fig3s1.jpg
