@@ -8,9 +8,10 @@ definition: A cytoskeletal structure composed of actin filaments, myosin, and my
   i.e. the cell division plane. Ring contraction is associated with centripetal growth
   of the membrane that divides the cytoplasm of the two future daughter cells. In
   animal cells, the mitotic contractile ring is located inside the plasma membrane
-  at the location of the cleavage furrow. In budding fungal cells, e.g. mitotic S.
-  cerevisiae cells, the mitotic contractile ring forms beneath the plasma membrane
-  at the mother-bud neck before mitosis.
+  at the location of the cleavage furrow. In Saccharomyces cerevisiae, Myo1 localizes
+  to a ring at the future bud site before bud emergence; actin joins this ring at
+  the mother-bud neck near the end of anaphase to form the cytokinetic actomyosin
+  ring.
 definition_source: GO:0110085
 mapping_status: PROPOSED
 curation_history:
@@ -32,6 +33,13 @@ curation_history:
   action: REFINED_RECORD
   changes: Tightened the boundary resolution note so GO:0110086 is described only
     as a meiotic sibling class rather than as an existing exact record.
+  llm_assisted: true
+- timestamp: '2026-10-11T12:55:41Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2213: distinguished early budding-yeast Myo1 localization from
+    late actin recruitment, with primary evidence and a preserved GO source-conflict
+    discussion.'
   llm_assisted: true
 parent_structures:
 - GO:0005826
@@ -115,6 +123,11 @@ evidence:
 - reference: DOI:10.1083/jcb.200602032
   notes: Wu and Pollard 2006, 'Assembly of the cytokinetic contractile ring from a
     broad band of nodes in fission yeast', Journal of Cell Biology.
+- reference: DOI:10.1083/jcb.142.5.1301
+  notes: Bi et al. 1998 distinguish Myo1 localization before bud emergence from actin
+    recruitment near the end of anaphase in Saccharomyces cerevisiae. This primary
+    evidence qualifies the budding-yeast timing clause of the GO-derived definition,
+    not the separate fission-yeast model.
 causal_graphs:
 - graph_id: fission_yeast_mitotic_ring_topology
   title: Fission-yeast mitotic actomyosin-ring topology
@@ -208,3 +221,33 @@ discussions:
       multiple accessory factors during mitotic contractile-ring assembly.
   posed_by: codex
   posed_date: '2026-09-29'
+- discussion_id: budding_yeast_mitotic_ring_timing
+  prompt: Distinguish the early budding-yeast Myo1 precursor ring from the later actin-containing
+    contractile ring.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - definition
+  rationale: The GO:0110085 definition inspected on 2026-10-11 says the budding-yeast
+    mitotic contractile ring forms before mitosis. Bi et al. 1998 instead distinguish
+    an early Myo1 ring from actin recruitment near the end of anaphase. Applying the
+    early myosin-only timing to the actomyosin structure conflates assembly states.
+  resolution_note: Retained the GO class identity and general definition but qualified
+    the Saccharomyces cerevisiae sentence using the primary experiments. Myo1 localization
+    before budding is distinguished from late-anaphase actin recruitment; no budding-yeast
+    chronology is transferred to the fission-yeast example or graph, and no upstream
+    GO correction is claimed.
+  evidence:
+  - reference: GO:0110085
+    notes: Current source of the general definition and the conflicting premitotic
+      budding-yeast timing.
+  - reference: DOI:10.1083/jcb.142.5.1301
+    notes: Bi et al. 1998 distinguish Myo1 localization before bud emergence from
+      actin recruitment near the end of anaphase in Saccharomyces cerevisiae. This
+      primary evidence qualifies the budding-yeast timing clause of the GO-derived
+      definition, not the separate fission-yeast model.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2213
+    notes: Saved whole-record review F1 and bounded timing correction.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'
