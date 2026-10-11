@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+  slug: quiescent_cell_microtubule_bundle
+session:
+  id: 2026-10-11T215550Z-codex-3f381a
+  timestamp: '2026-10-11T21:55:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2259
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - causal_graphs
+  - curation_history
+  summary: 'Addressed #2259: exposed preserved discussion explanations and graph scope in
+    supported display fields.'
+  details: 'Original immutable review: reviews/structured/20261011T215456Z-quiescent_cell_microtubule_bundle-audit/review.yaml.
+    Existing notes and scope_notes retained verbatim. Scientific identities, graph edges/evidence,
+    old history, discussion status/dates and PROPOSED status preserved.'

@@ -28,6 +28,12 @@ curation_history:
   changes: Added direct GO, comparative literature, InterPro, taxonomy and dataset-inventory
     provenance to boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-11T21:55:48Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2259: exposed preserved discussion explanations and graph scope
+    in supported display fields.'
+  llm_assisted: true
 parent_structures:
 - GO:0099070
 - GO:1905720
@@ -457,6 +463,9 @@ causal_graphs:
         or delay repolarization and alter subsequent cell shape. These perturbations
         affect microtubules beyond the pre-existing bundle; no unique sufficiency
         or exclusive pathway is asserted.'
+  description: S. pombe quiescence exit; a physiological mechanism, not a resolved
+    glucose-sensing pathway. Recovery includes elongation of the old bundle and new
+    interphase microtubules, which the perturbations do not selectively separate.
 images:
 - image_id: pmc4494004_fig1
   source: PMC
@@ -516,6 +525,12 @@ discussions:
   - reference: DOI:10.7554/eLife.89958
     notes: Native PMC10963028.1 abstract identifies the budding-yeast nuclear bundle,
       not the fission-yeast cytoplasmic record.
+  rationale: GO:0099070 is broader and explicitly marks Q-MT names as narrow synonyms.
+    GO:1905720 is also broader. Hidden- and ignored-inclusive searches and parsed
+    corpus identities found no existing Q-MT record. The 2015 Discussion distinguishes
+    antiparallel cytoplasmic Q-MT from the parallel nuclear S. cerevisiae array; the
+    2024 eLife study concerns the latter. OTHER denotes the whole multi-filament array,
+    not a single FILAMENT.
 - discussion_id: spb_association_not_parthood
   kind: CURATION_TODO
   status: RESOLVED
@@ -525,6 +540,9 @@ discussions:
     of the spindle pole body.
   evidence:
   - reference: DOI:10.1083/jcb.201502025
+  rationale: Figure 1C and Discussion include unattached bundles. The array is part
+    of the cytoplasm and microtubule cytoskeleton, not modeled as a constitutive subpart
+    of the spindle pole body.
 - discussion_id: family_grounding
   kind: CURATION_TODO
   status: OPEN
@@ -553,6 +571,10 @@ discussions:
   - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P87061/
     notes: Complete native combined match lookup inspected on 2026-10-05; only exact
       integrated families qualify.
+  rationale: Live complete InterPro lookups were checked for Mto1 O94488, Mto2 Q9USP7,
+    Cls1/Peg1 O42874, Alp7 Q9URY2, Klp2 Q9US03 and Tea1 P87061. Missing exact family
+    grounding remains explicit; domains, repeats and the generic kinesin family are
+    not substituted. Revisit when an authority supplies an exact family.
 - discussion_id: localization_boundaries
   kind: CURATION_TODO
   status: RESOLVED
@@ -565,6 +587,11 @@ discussions:
     the proposed Mto1/Mto2 assembly model.
   evidence:
   - reference: DOI:10.1083/jcb.201502025
+  rationale: Mal3 and Tip1 were not detected in quiescent cells; Klp5/Klp6 deletion
+    changes bundle dimensions but does not itself show residence in the read experiments.
+    Actin-body proteins Fim1, Acp2 and App1, plus cell-pole markers/exocyst subunits,
+    are not imported as Q-MT residents. No gamma-tubulin complex is added solely from
+    the proposed Mto1/Mto2 assembly model.
 - discussion_id: assembly_and_stability_model
   kind: KNOWLEDGE_GAP
   status: OPEN
@@ -576,6 +603,11 @@ discussions:
     measured assays rather than proving zero turnover indefinitely.
   evidence:
   - reference: DOI:10.1083/jcb.201502025
+  rationale: Mto1 deletion supports a requirement for the bona fide stable architecture,
+    while proposed Mto1/Mto2-dependent nucleation and microtubule pile-up in Figure
+    8 remain models. The paper does not identify a quiescence-specific capper or establish
+    a GTP-depletion mechanism. FRAP, drug and cold resistance bound stability to the
+    measured assays rather than proving zero turnover indefinitely.
 - discussion_id: function_and_storage_limits
   kind: CURATION_TODO
   status: RESOLVED
@@ -589,6 +621,12 @@ discussions:
     function.
   evidence:
   - reference: DOI:10.1083/jcb.201502025
+  rationale: Refeeding stimulates growth from bundle ends while early bundle intensity
+    persists, supporting use of free cytoplasmic tubulin. MBC and alp14 deletion affect
+    both old-bundle elongation and new interphase bundles; cold-treated mto1 deletion
+    removes cytoplasmic microtubules more broadly. These interventions support microtubule-dependent
+    repolarization, not an exclusive Q-MT-only pathway or demonstrated survival/protein-protection
+    function.
 - discussion_id: measurement_scope
   kind: CURATION_TODO
   status: RESOLVED
@@ -600,6 +638,11 @@ discussions:
     is imposed.
   evidence:
   - reference: DOI:10.1083/jcb.201502025
+  rationale: Figure 1B microtubule numbers are estimated from calibrated GFP-Atb2
+    intensity, as specified in fluorescence microscopy Methods, not directly counted
+    in every bundle. Bundle lengths, occupancy and polymer number vary with culture
+    age and mutant. TEM/tomography establish architecture; no fixed physical-property
+    value is imposed.
 - discussion_id: taxon_and_dataset_scope
   kind: CURATION_TODO
   status: RESOLVED
@@ -618,3 +661,8 @@ discussions:
   - reference: https://imodulondb.org/
     notes: Adopted dataset-inventory CLI checked on 2026-10-05; bounded inventory
       claim, not an exhaustive search of all omics repositories.
+  rationale: Only S. pombe is a canonical example. Protein accessions are reference-sequence
+    exemplars, not a claim that reference strain 972h- was the imaged stock; supplementary
+    strain Table S1 was not inspected. The adopted iModulonDB inventory lists 28 datasets
+    and no S. pombe dataset. No broad fungal distribution, TraitMech link, exact Complex
+    Portal composition or structural dataset is inferred.
