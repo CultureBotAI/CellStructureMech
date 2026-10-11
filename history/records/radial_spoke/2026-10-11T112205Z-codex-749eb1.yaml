@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/radial_spoke.yaml
+  slug: radial_spoke
+session:
+  id: 2026-10-11T112205Z-codex-749eb1
+  timestamp: '2026-10-11T11:22:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2208
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  - curation_history
+  summary: 'Addressed #2208: separated the A-tubule-binding base from the GO:0001536 stalk
+    in the component role and whole-spoke topology graph.'
+  details: 'Original immutable observation: reviews/structured/20261011T112135Z-radial_spoke-audit/review.yaml.
+    Guarded edit preserves whole-spoke definition, other components, all unrelated graph edges,
+    original discussions, earlier history and PROPOSED status. No new exact base grounding
+    or protein assignment is inferred.'
