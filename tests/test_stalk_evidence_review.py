@@ -56,7 +56,9 @@ def test_prostheca_capture_does_not_assert_resolved_nutrient_delivery():
     edge = next(e for e in graph["edges"] if e["object"] == node["node_id"])
     assert "does not establish delivery" in edge["description"]
     assert {e["reference"] for e in edge["evidence"]} == {CAPTURE, BARRIER}
-    discussion = next(d for d in doc["discussions"] if d["discussion_id"] == "stalk_capture_vs_cell_body_delivery")
+    discussion = next(
+        d for d in doc["discussions"] if d["discussion_id"] == "stalk_capture_vs_cell_body_delivery"
+    )
     assert discussion["status"] == "OPEN"
     assert "hypotheses" in discussion["rationale"]
 
@@ -68,15 +70,20 @@ def test_na1000_example_stays_with_its_attached_stpx_source():
     assert example["reference"] == "DOI:10.1073/pnas.0909119107"
     assert "StpX" in example["note"]
     assert "peptidoglycan" not in example["note"]
-    edge = next(e for e in doc["causal_graphs"][0]["edges"] if e["subject"] == "stalk_wall_synthesis_machinery")
+    edge = next(
+        e for e in doc["causal_graphs"][0]["edges"] if e["subject"] == "stalk_wall_synthesis_machinery"
+    )
     assert "DOI:10.1371/journal.pgen.1007897" in {e["reference"] for e in edge["evidence"]}
 
 
 def test_stalk_curation_retains_proposed_status_and_actual_agent_identity():
-    for slug in ["prostheca", "stalk_crossband"]:
+    for slug, issue in [("prostheca", "#2177"), ("stalk_crossband", "#2179")]:
         doc = record(slug)
         assert doc["mapping_status"] == "PROPOSED"
-        event = doc["curation_history"][-1]
+        event = next(
+            e for e in doc["curation_history"]
+            if e["action"] == "ADDRESS_SAVED_REVIEW" and issue in e["changes"]
+        )
         assert event["curator"] == "codex"
         assert event["llm_assisted"] is True
         assert event["action"] == "ADDRESS_SAVED_REVIEW"
