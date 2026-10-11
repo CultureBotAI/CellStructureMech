@@ -1,0 +1,622 @@
+schema_version: 1.0.0
+review_id: 20261011T060941Z-prostheca-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Prostheca: finding dispositions'
+started_at: '2026-10-11T05:57:22Z'
+finished_at: '2026-10-11T06:09:41Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent source-backed reassessment and separate adversarial
+    inspection of corrected native, generated and provenance diffs; not independent
+    human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: All exact predecessor findings are resolved. Source-access limitations and
+  scientific uncertainty remain explicit; native status is not promoted.
+source:
+  git_revision: 658d0e02cc435f97c3f75f288a2cd5069a1c3645
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 64862db2087298ae832b8a8410185349cc277151af31d88ce231e43201ab9440
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/appendage/prostheca.yaml
+    sha256: e6b70310f99b48ba8551b649774ddd5c1c372757329f5f851008360655c4c9d1
+    role: target
+  - path: data/structures/appendage/stalk_crossband.yaml
+    sha256: 33a5c6fe2e72c5a86bd4056f8b8f35854f8da953d34b5664a6529f06d84feca4
+    role: context
+  - path: data/structures/envelope/cell_outer_membrane.yaml
+    sha256: 3becd0f494ef6cc70d352f21ea5f5231d70265edecde25c6f827a31b6c821dcf
+    role: context
+  - path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    sha256: 9c953c54e9f54eba9cbe7b658046a7910b2e9a42d41246d2ce3c2acf9693bef6
+    role: context
+  - path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    sha256: 893883fe6827f7bd64eb8d07855e5592cedb0e1c0d368e8d42153521575a0911
+    role: context
+  - path: data/structures/envelope/plasma_membrane.yaml
+    sha256: e8dcf1af1e9d5cf91056b26f09ed6bd95e092ced315abf7d4feca64f74ae819b
+    role: context
+  - path: data/structures/other/holdfast.yaml
+    sha256: 6becc2beb9df3e1f8fe0c6384c2bed7191577a0f04fbb0de1c0086553e894f54
+    role: context
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/prostheca/2026-09-11T031031Z-codex-486d6e.yaml
+    sha256: 1d3c7d64069b3820db140c35984764bef473191e368de4a989ab665209ec99bf
+    role: context
+  - path: history/records/prostheca/2026-09-11T031906Z-codex-61b46f.yaml
+    sha256: edf591770b260cf098927faf43db08a3e9495b075b359bf9a47acbcfd59436b8
+    role: context
+  - path: history/records/prostheca/2026-10-11T055303Z-codex-716b30.yaml
+    sha256: 2ee43aafe715aa113389b3e0a513efa2c4894bae21329681edb5db0f880aacd0
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/evidence_readability.prostheca.tsv
+    sha256: 075f89f690d7053b4bb82373f892b272b8cdec0d1aa69c2f5a18ac495488f73f
+    role: context
+  - path: reviews/structured/20261011T055230Z-prostheca-audit/review.yaml
+    sha256: c47170c3a30c07500767ca0bff0a5a8e88e36ddd62b5029a519d94eb0dc6fe38
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_stalk_evidence_review.py
+    sha256: 2aa19fa0da18b06dd6d0ef659c124c4d85afaa279f887ec509701ff060a68098
+    role: context
+targets:
+- target_id: cellstructuremech:prostheca
+  path: data/structures/appendage/prostheca.yaml
+  label: prostheca
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/prostheca.yaml
+    role: maintained scientific record
+scope:
+  description: Exact predecessor findings, changed fields and append-only provenance;
+    not a new whole-record review.
+  selection: F1, F2 in 20261011T055230Z-prostheca-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:prostheca
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/prostheca.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:53:14Z to 2026-10-11T05:53:16Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/prostheca.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:53:16Z to 2026-10-11T05:53:20Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/prostheca.yaml
+    --report /private/tmp/csm-review-20261011T054444Z/prostheca-post-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:53:20Z to 2026-10-11T05:53:39Z; log SHA-256 55f46bfa7f93d4d7292d8fe547fc65f3770e3d84651f11e6e22ed907593ce679
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:54:06Z to 2026-10-11T05:54:21Z; log SHA-256 ec4802743686962e3e9ec0534e2a9fb4ca76e92b15ecc0cb7f607d8ce80a96a8
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T05:54:21Z to 2026-10-11T05:55:39Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:55:39Z to 2026-10-11T05:56:08Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "[not exercised] BFO: the issuing authority was unreachable after 1 attempts,\
+    \ so this resolver was not exercised\nresolver control: 1 resolver(s) could not\
+    \ be exercised because their authority was unreachable; the rest accept a known\
+    \ id and reject a fabricated one\n\nidentifier liveness summary:\n  OK       \
+    \      4011\n  SKIPPED         251\n\nEvery identifier resolves at its issuing\
+    \ authority."
+  scope_note: 2026-10-11T05:56:08Z to 2026-10-11T05:57:07Z; log SHA-256 f5ce04439ea674c0c9e2be6a4cd273a11c51dda129d6f9a3915c30a445ed1bb1
+- check_id: regressions
+  name: regressions
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python -m pytest -q tests/test_stalk_evidence_review.py tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '............................                                             [100%]
+
+    28 passed in 44.29s'
+  scope_note: 2026-10-11T05:57:07Z to 2026-10-11T05:57:52Z; log SHA-256 201c872d5a96ed2fdfcba75456651ed6566b1d6afcad47684c4a726c28875f0b
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python scripts/record_review.py check --base aa74419b62aaba390ab49cb40d430b394c933baa
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:57:52Z to 2026-10-11T05:58:47Z; log SHA-256 bfe4d7e589e8bd0784ed2f3889d109dd1eae4bf76270cc7485bcbb7d0200eccf
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Scientific support assessed separately;
+    resolver skips and empty quotation checks are not biological proof.
+  scope_note: 2026-10-11T05:58:47Z to 2026-10-11T05:58:47Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: qc
+  name: Authoritative local full QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:prostheca
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Full native QC passed on the unchanged corrected inputs: 825 tests passed
+    and 3 skipped, plus all-record schema, histories and generated site/embedding
+    checks. Skipped tests are not certified. Final PR and merge-group checks are separate
+    gates.'
+  scope_note: 2026-10-11T05:57:21Z to 2026-10-11T06:09:37Z; log SHA-256 7234e3ebcd66891d6b48f91851284836e22c317b8ca4b2430adcc366d05fec48;
+    RECORD_REVIEW_BASE=aa74419b62aaba390ab49cb40d430b394c933baa
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/prostheca.yaml
+  locator: Full native YAML and both append-only record histories
+  accessed_at: '2026-10-11T06:09:41Z'
+  snapshot_sha256: e6b70310f99b48ba8551b649774ddd5c1c372757329f5f851008360655c4c9d1
+  support: context_only
+  summary: Corrected native bytes reread against the original findings and inspected
+    sources; status and old histories retained.
+- evidence_id: prior
+  kind: search
+  reference: reviews/structured/ and reports/yaml_record_review/
+  locator: Exact identifiers, labels and slugs
+  accessed_at: '2026-10-11T05:52:30Z'
+  support: context_only
+  search_scope: rg --no-ignore --hidden across data/structures, history and both review
+    roots included ignored files. GitHub all-state query prostheca OR crossband OR
+    StpABCD returned four closed items, below the 100-result limit.
+  summary: 'No prior exact-target review bundle found in these roots. Issues #399/#400
+    added the prostheca plasma membrane and typed the uptake process; #402/#403 removed
+    age marking as a function and typed compartmentalization. These are not the present
+    findings.'
+- evidence_id: taxon-2
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/2.json
+  locator: Exact NCBI-derived taxon identity, synonym, parent and strain names
+  accessed_at: '2026-10-11T05:47:20Z'
+  snapshot_sha256: 8074c9bcd59cd4da1da4bc9ec98c040bbecd52ef5c91c4c4bb9bed0f3a7cb5a9
+  support: supports
+  summary: Bacteria domain identity is valid; taxonomy metadata alone is not distribution
+    evidence.
+- evidence_id: taxon-155892
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/155892.json
+  locator: Exact NCBI-derived taxon identity, synonym, parent and strain names
+  accessed_at: '2026-10-11T05:47:21Z'
+  snapshot_sha256: bb62df49943694589f201ba87a84dc3f34fb5a96c8577bd005914f695df7cd0e
+  support: supports
+  summary: Current authority recognizes C. vibrioides, historical C. crescentus nomenclature,
+    and NA1000/CB15N at the asserted taxonomic levels.
+- evidence_id: taxon-565050
+  kind: authority
+  reference: https://rest.uniprot.org/taxonomy/565050.json
+  locator: Exact NCBI-derived taxon identity, synonym, parent and strain names
+  accessed_at: '2026-10-11T05:47:22Z'
+  snapshot_sha256: f82c9e5906404b4e68229cdde10bd11dda11c16be678086d1a104f651a852683
+  support: supports
+  summary: Current authority recognizes C. vibrioides, historical C. crescentus nomenclature,
+    and NA1000/CB15N at the asserted taxonomic levels.
+- evidence_id: go-0042995
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0042995
+  locator: Exact QuickGO term
+  accessed_at: '2026-10-11T05:47:14Z'
+  snapshot_sha256: b7bc936645b14ccf7b8d96f309e7ff4b3965e82c0b305cc6e5d3c2ae03005bd5
+  support: supports
+  summary: Active term matches the asserted parent or part; no exact structure identity
+    is inferred from a broader term.
+- evidence_id: go-0005886
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0005886
+  locator: Exact QuickGO term
+  accessed_at: '2026-10-11T05:47:15Z'
+  snapshot_sha256: 1e6351cf06b2f8a92e1c37875040ea589d86395bfd25e721ab9e120904ab50af
+  support: supports
+  summary: Active term matches the asserted parent or part; no exact structure identity
+    is inferred from a broader term.
+- evidence_id: go-0009274
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0009274
+  locator: Exact QuickGO term
+  accessed_at: '2026-10-11T05:47:16Z'
+  snapshot_sha256: 7537b72bc1f481b91ed2b9eb404bf7b61ddc0c3d4c04a1745d5c33ad7af1b604
+  support: supports
+  summary: Active term matches the asserted parent or part; no exact structure identity
+    is inferred from a broader term.
+- evidence_id: go-0009279
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0009279
+  locator: Exact QuickGO term
+  accessed_at: '2026-10-11T05:47:17Z'
+  snapshot_sha256: e409d4cc35ee2bc43ec4277998ff26a6d1b08138f2a7047601bc60d82f66ffa8
+  support: supports
+  summary: Active term matches the asserted parent or part; no exact structure identity
+    is inferred from a broader term.
+- evidence_id: go-search
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=prostheca&limit=100
+  locator: Bounded QuickGO search, limit 100
+  accessed_at: '2026-10-11T05:47:18Z'
+  snapshot_sha256: f3a7dae9b1e9335291e3940cdf0e5f8dadf9335da7b9547710606b5106c63f86
+  support: supports
+  summary: No exact bacterial structure match in this returned set. This is not an
+    exhaustive assertion that no term exists in any ontology.
+  search_scope: Bounded QuickGO search, limit 100; https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=prostheca&limit=100
+- evidence_id: paper-0
+  kind: primary_source
+  reference: DOI:10.1016/j.cell.2012.10.046
+  locator: Main-text Results, Figures 1-7 captions, Discussion and Methods
+  accessed_at: '2026-10-11T05:47:09Z'
+  snapshot_sha256: d44137d5f9c67b54f59fe54840fe7b1d0b82bf3734641c1b540d55b7e6d52681
+  support: supports
+  summary: StpAB deletion abolishes visible crossbands. StpC/D mutants retain crossbands
+    with leaky barriers. StpAB provides the scaffold and StpC/D seals it. Protein
+    trapping improves recovery from starvation. PstS cannot shuttle across mature
+    crossbands; small-molecule routes remain possibilities, not established mechanisms.
+- evidence_id: paper-1
+  kind: primary_source
+  reference: DOI:10.1046/j.1365-2958.2002.03071.x
+  locator: Primary abstract only
+  accessed_at: '2026-10-11T05:46:18Z'
+  snapshot_sha256: 1bad08b0adc754825c30f8e8e7a4c9823f919547a45103dab75b5bc53a76ec61
+  support: supports
+  summary: Proteomics identifies transport-related proteins in purified stalks, consistent
+    with nutrient-uptake competence, not direct proof of whole-cell nutrient delivery.
+- evidence_id: paper-2
+  kind: primary_source
+  reference: DOI:10.1073/pnas.0602047103
+  locator: Abstract, all Results and Discussion
+  accessed_at: '2026-10-11T05:47:10Z'
+  snapshot_sha256: fe19851f972f26edebeb7b4486bb081c1e570b1b8dc1814c5861304902cc472b
+  support: supports
+  summary: Isolated and attached stalks take up and hydrolyze FDP. PstS is present
+    but PstA was not detected. Diffusive-capture modeling predicts a length/geometry
+    advantage, not simply a surface-area rule; its periplasmic shuttle model was challenged
+    by later crossband experiments.
+- evidence_id: paper-3
+  kind: primary_source
+  reference: DOI:10.1073/pnas.0909119107
+  locator: Abstract, all Results/Discussion and Methods
+  accessed_at: '2026-10-11T05:47:11Z'
+  snapshot_sha256: 0529ee25921feb0b94673415dc85e46d5d9287433ffa2d97b4a5765a1fde9255
+  support: supports
+  summary: All envelope layers extend into the stalk. NA1000 StpX localization, A22
+    sensitivity and conditional elongation phenotypes are demonstrated. Stalk-specific
+    PG chemistry/assembly is not established by this experiment.
+- evidence_id: paper-4
+  kind: primary_source
+  reference: DOI:10.1111/j.1365-2958.2005.04970.x
+  locator: Primary abstract only
+  accessed_at: '2026-10-11T05:46:22Z'
+  snapshot_sha256: 05dd3b3a89541e18a1adffab38c7883dcd2ec7d2340941acc802ed04192db05d
+  support: supports
+  summary: ShkA-ShpA-TacA phosphorelay activates developmental stalk biogenesis; TacA
+    and ShpA are required in this cell-cycle setting, not universally across bacteria.
+- evidence_id: paper-5
+  kind: primary_source
+  reference: DOI:10.1111/mmi.12422
+  locator: Abstract, PbpC localization and coupled synthesis Results, Discussion
+  accessed_at: '2026-10-11T05:47:12Z'
+  snapshot_sha256: b6ebe1a54eae5fbcc89d5f077299cfc9f29b13227bf48611b6a63d3373f27114
+  support: supports
+  summary: PbpC contributes to stalk synthesis and separately anchors StpX during
+    growth; its nonenzymatic localization function is distinct from wall synthesis.
+- evidence_id: paper-7
+  kind: primary_source
+  reference: DOI:10.1371/journal.pgen.1007897
+  locator: 'Results: PG architecture, DD/LD transpeptidases, MreB orchestration; media
+    Methods'
+  accessed_at: '2026-10-11T05:46:28Z'
+  snapshot_sha256: 8613129d3276fe91b2bf814de6166af483df3b1c8e9524abfe48a16eb59b82a0
+  support: supports
+  summary: NA1000-derived mutants and compartment-resolved muropeptide analyses establish
+    distinct stalk PG architecture; MreB-dependent polar machinery supports stalk
+    formation under phosphate limitation.
+- evidence_id: paper-8
+  kind: primary_source
+  reference: DOI:10.1371/journal.pone.0184063
+  locator: Introduction, Methods, Results including Table 1, Discussion
+  accessed_at: '2026-10-11T05:46:30Z'
+  snapshot_sha256: 8688b79620912364e69bfa9d370f99b27db7a9d0fffe1d6e39c4d80d65f639e6
+  support: supports
+  summary: Brevundimonas stalk incidence and protein conservation differ from Caulobacter.
+    PstA-GFP enters some Brevundimonas stalks without proving a complete transporter.
+    Discussion explicitly challenges the direct phosphate-uptake interpretation for
+    Caulobacter.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T055230Z-prostheca-audit/review.yaml
+  accessed_at: '2026-10-11T06:09:41Z'
+  snapshot_sha256: c47170c3a30c07500767ca0bff0a5a8e88e36ddd62b5029a519d94eb0dc6fe38
+  support: context_only
+  summary: Immutable original observations saved and committed before mutation.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T054444Z/preservation.json
+  accessed_at: '2026-10-11T05:53:21Z'
+  snapshot_sha256: ac675a5d5109ad91a38fa0312bd178efee78b1f39cf755b1a5ea394b67202ab1
+  support: supports
+  summary: Only these two native records changed; 907 others and all prior histories,
+    canonical reviews and legacy reports are byte-preserved.
+- evidence_id: embeddings
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T054444Z/embedding-refresh.json
+  accessed_at: '2026-10-11T06:09:41Z'
+  snapshot_sha256: 4e5b2c355616ed622312ac02a10b6a94ba6b964b6393290f29ec67a40bce8fe5
+  support: supports
+  summary: Only these two semantic vectors changed under the pinned local model; 907
+    others retained exactly, with derived maps/neighbors and pages regenerated.
+assessments:
+- assessment_id: resolved-f1
+  area: evidence
+  topic: Distinguish stalk nutrient capture from unresolved whole-cell delivery
+  outcome: supported
+  target_ids:
+  - cellstructuremech:prostheca
+  evidence_ids:
+  - record
+  - paper-0
+  - paper-1
+  - paper-2
+  - paper-8
+  - predecessor
+  - preservation
+  summary: The definition no longer asserts an established nutrient function. The
+    function separates experimentally observed FDP uptake/hydrolysis from geometric
+    capture modeling and unresolved whole-cell nutrient delivery. The graph keeps
+    a substrate-specific observed activity with the historical biological-process
+    node type, and an OPEN discussion preserves the PstS/crossband conflict without
+    substituting an unproven transport or surface-elevation mechanism.
+- assessment_id: resolved-f2
+  area: evidence
+  topic: Narrow the NA1000 example to the attached primary citation
+  outcome: supported
+  target_ids:
+  - cellstructuremech:prostheca
+  evidence_ids:
+  - record
+  - paper-3
+  - paper-7
+  - predecessor
+  - preservation
+  summary: The NA1000 example now states only cell-cycle-coupled StpX localization
+    and its phosphate-limited elongation phenotype under Hughes 2010. The exact taxon
+    is unchanged. Billini 2019 remains attached to the PG constituent and MreB-dependent
+    assembly edge rather than being silently borrowed as support for the example.
+findings:
+- finding_id: F1
+  issue_key: prostheca-nutrient-uptake-conflict
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Distinguish stalk nutrient capture from unresolved whole-cell delivery
+  description: The definition no longer asserts an established nutrient function.
+    The function separates experimentally observed FDP uptake/hydrolysis from geometric
+    capture modeling and unresolved whole-cell nutrient delivery. The graph keeps
+    a substrate-specific observed activity with the historical biological-process
+    node type, and an OPEN discussion preserves the PstS/crossband conflict without
+    substituting an unproven transport or surface-elevation mechanism.
+  target_ids:
+  - cellstructuremech:prostheca
+  field_paths:
+  - definition
+  - functions[1]
+  - causal_graphs[0].edges[7]
+  - discussions
+  evidence_ids:
+  - record
+  - paper-0
+  - paper-1
+  - paper-2
+  - paper-8
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/prostheca.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Material scientific scope or component-essentiality defect.
+  disposition_reason: The definition no longer asserts an established nutrient function.
+    The function separates experimentally observed FDP uptake/hydrolysis from geometric
+    capture modeling and unresolved whole-cell nutrient delivery. The graph keeps
+    a substrate-specific observed activity with the historical biological-process
+    node type, and an OPEN discussion preserves the PstS/crossband conflict without
+    substituting an unproven transport or surface-elevation mechanism. Verified against
+    inspected source text, regression tests and full local QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T055230Z-prostheca-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2177
+- finding_id: F2
+  issue_key: prostheca-na1000-example-citation
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Narrow the NA1000 example to the attached primary citation
+  description: The NA1000 example now states only cell-cycle-coupled StpX localization
+    and its phosphate-limited elongation phenotype under Hughes 2010. The exact taxon
+    is unchanged. Billini 2019 remains attached to the PG constituent and MreB-dependent
+    assembly edge rather than being silently borrowed as support for the example.
+  target_ids:
+  - cellstructuremech:prostheca
+  field_paths:
+  - canonical_examples[0]
+  evidence_ids:
+  - record
+  - paper-3
+  - paper-7
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/prostheca.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: minor
+  normalization_reason: Claim is supported elsewhere in the record, but its nearest
+    citation is overextended.
+  disposition_reason: The NA1000 example now states only cell-cycle-coupled StpX localization
+    and its phosphate-limited elongation phenotype under Hughes 2010. The exact taxon
+    is unchanged. Billini 2019 remains attached to the PG constituent and MreB-dependent
+    assembly edge rather than being silently borrowed as support for the example.
+    Verified against inspected source text, regression tests and full local QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T055230Z-prostheca-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2178
+actions: []
+limitations:
+- Ireland 2002 and Biondi 2006 were assessed at primary-abstract level for their bounded
+  claims; their unseen bodies/supplements are not claimed as inspected.
+- Main-text HTML was used for Schlimpert 2012, Wagner 2006 and Hughes 2010/2013 after
+  Europe PMC XML returned HTTP 500. Billini 2019 and Curtis 2017 full-text XML was
+  inspected. No raw images, supplementary movies or experimental datasets were reanalysed.
+- Same-agent assessment, not independent human sign-off or completion of the 909-record
+  goal.
+- No relevant iModulonDB coverage. No quoted snippets are present; snippet-check success
+  is not paraphrase validation.
+- A repeated documentation check overlapped the running README generator and saw the
+  earlier count again; it was not accepted as verification. Final input capture and
+  QC were repeated only after the generator completed and the README change was committed.
+- Original source-access tiers and snapshot times are retained. Resolution covers
+  these exact findings, not unseen experiments or the unreviewed corpus.
+- Full QC here is local. PR and merge-group checks remain separate publication gates.
+  Exact inspected revision is retained by review-base/stalk-evidence-final-20261011.
+- The first local QC attempt failed at lint on two overlong test lines (exit 1; log
+  SHA-256 a8682035d6b8a9741155174f7d99c16afa437ad53e6a75b9022fb55e5595f872). Formatting
+  was corrected. A second attempt caught stale generated README edge counts (exit
+  1; log SHA-256 ec9e17f08a2fe9b1f57816a3b54a9b47ef3f0075e6643745e366ffa951de346e);
+  the documented generator refreshed the count. Full QC was then rerun successfully.
+  The provenance regression was also scoped to this review event rather than the latest
+  event, so subsequent curation can append history.
+- Same-agent adversarial diff review confirmed structural DISPENSABLE does not mean
+  functional dispensability, the uptake edge is restricted to measured FDP activity,
+  graph/discussion references resolve, and prior issue fixes and Codex attribution
+  remain intact. No additional scientific issue was observed.
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T055230Z-prostheca-audit
+  relationship: Resolves exact F1, F2 without rewriting the original observation.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2177
+- https://github.com/CultureBotAI/CellStructureMech/issues/2178
