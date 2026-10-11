@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+  slug: axonemal_central_apparatus
+session:
+  id: 2026-10-11T080953Z-codex-88ca4e
+  timestamp: '2026-10-11T08:09:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2195
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - discussions
+  summary: 'Addressed #2195: Restored every distinct committed central-apparatus rationale
+    and retained the current prompt, attachment, original date, OPEN status and child-structure
+    graph.'
+  details: Original finding saved before curation in reviews/structured/20261011T080729Z-axonemal_central_apparatus-audit/review.yaml.
+    Guarded correction preserves biological identity, all graph edges, PROPOSED status and
+    earlier events. Source discrepancies and open child-level science are not asserted resolved.

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_b_tubule_inner_sheath.yaml
+  slug: axonemal_b_tubule_inner_sheath
+session:
+  id: 2026-10-11T080951Z-codex-51d7e4
+  timestamp: '2026-10-11T08:09:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2194
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - evidence
+  - discussions
+  summary: 'Addressed #2194: Corrected B-sheath ontology attribution and retained the current
+    source discrepancy explicitly without changing primary-supported B-tubule containment
+    or the existing MIP-family TODO.'
+  details: Original finding saved before curation in reviews/structured/20261011T080723Z-axonemal_b_tubule_inner_sheath-audit/review.yaml.
+    Guarded correction preserves biological identity, all graph edges, PROPOSED status and
+    earlier events. Source discrepancies and open child-level science are not asserted resolved.

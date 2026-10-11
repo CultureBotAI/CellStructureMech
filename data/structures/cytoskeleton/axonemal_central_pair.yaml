@@ -38,6 +38,13 @@ curation_history:
     graph scope note after splitting GO:1990720 into a C2 axonemal microtubule child
     record.
   llm_assisted: true
+- timestamp: '2026-10-11T08:09:53Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2196: Restored the deleted central-pair discussion with original
+    identity, rationale and posed date, retained its intermediate narrowing, and resolved
+    only child creation with explicit handoff of open component tasks.'
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal microtubule central pair
   synonym_type: EXACT_SYNONYM
@@ -185,3 +192,36 @@ causal_graphs:
     evidence:
     - reference: GO:0097540
       notes: GO places the axonemal central pair within the axonemal central apparatus.
+discussions:
+- discussion_id: resolve_c1_c2_microtubule_children
+  prompt: Add exact C1 and C2 axonemal microtubule child records.
+  kind: CURATION_TODO
+  status: RESOLVED
+  attaches_to:
+  - causal_graphs#chlamydomonas_central_pair_architecture
+  rationale: 'GO exactly identifies the C1 and C2 axonemal microtubules, but this
+    pass only curates their parent GO:0097540 central pair and leaves the individual
+    asymmetric microtubules for later records. Historical narrowing at git 03c7f770a3a5:
+    GO exactly identifies the C2 axonemal microtubule, but this pass leaves the second
+    asymmetric microtubule of GO:0097540 for a later record.'
+  evidence:
+  - reference: GO:1990719
+    notes: GO exactly identifies the C1 axonemal microtubule.
+  - reference: GO:1990720
+    notes: GO exactly identifies the C2 axonemal microtubule.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2196
+    notes: Restores retained native discussion provenance and records the child-task
+      handoff.
+  posed_by: codex
+  posed_date: '2026-09-23'
+  resolved_date: '2026-10-11'
+  resolution_note: 'Both exact child records now exist: GO:1990719 C1 axonemal microtubule
+    and GO:1990720 C2 axonemal microtubule. Only the child-record split is resolved.
+    Microtubule-wall, projection and MIP composition/grounding tasks remain OPEN in
+    resolve_c1_projection_and_wall_boundaries and resolve_c2_projection_mip_and_wall_boundaries
+    on those children; their completion is not implied.'
+  notes: 'Restored on 2026-10-11 after deletion in git dbd0246870a6. Original prompt:
+    Add exact C1 and C2 axonemal microtubule child records and resolve their microtubule-specific
+    component boundaries. Intermediate ID: resolve_c2_microtubule_child. Intermediate
+    prompt: Add an exact C2 axonemal microtubule child record and resolve microtubule-specific
+    component boundaries.'
