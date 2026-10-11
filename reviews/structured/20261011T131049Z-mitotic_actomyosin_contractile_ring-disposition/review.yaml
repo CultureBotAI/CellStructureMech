@@ -1,0 +1,498 @@
+schema_version: 1.0.0
+review_id: 20261011T131049Z-mitotic_actomyosin_contractile_ring-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Mitotic actomyosin ring: timing finding disposition'
+started_at: '2026-10-11T12:59:44Z'
+finished_at: '2026-10-11T13:10:49Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent source and record review, not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact timing finding resolved. Budding-yeast precursor and actomyosin states
+  are distinguished; source disagreement and earlier observations remain visible.
+source:
+  git_revision: b840d17a526e6be8867a8dbfd466c9e462864b47
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 7354ab3cdd2e80719041752e623b51c95369a7f1463ce3cf615d196448b156ce
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+    sha256: 28a3e7b12391a9d3a16eb453974d6e0ed5ab92b925092e395e88f64fa6fe5ab0
+    role: context
+  - path: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+    sha256: d1f8d46a6a0f9d76873166cbb22365e787189f3d05b08e8aac334d320331f2dd
+    role: context
+  - path: data/structures/cytoskeleton/cellular_bud_neck_septin_collar.yaml
+    sha256: d7865addf83d9295f0c8f8c73f9604f12b3fe95bbe8ea2de209298ddab022b94
+    role: context
+  - path: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+    sha256: 7f05e8a5a7fe577b0e47118606fc1a3e6a87b5ed57cec09c1f5346b8fd6993e9
+    role: context
+  - path: data/structures/cytoskeleton/cellular_bud_neck_split_septin_rings.yaml
+    sha256: c76ed8c617acf9966daa42ca587f49cc352795bc3e2b9fe702359075c49a9cff
+    role: context
+  - path: data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+    sha256: d90e4f93479d2774c995e54dcd260859b8a855a4c6c7241a7d46b76d6db352af
+    role: target
+  - path: data/structures/cytoskeleton/septin_collar.yaml
+    sha256: 163589ad60ecc9dac5684babab33dc3b88a16ee87823fadcf69f7afca437d63d
+    role: context
+  - path: data/structures/cytoskeleton/septin_ring.yaml
+    sha256: 78bdf9cfbc79c52a73cd1368f4e2d3dee46fb94a5bcf860477cc02057569bfec
+    role: context
+  - path: data/structures/cytoskeleton/split_septin_rings.yaml
+    sha256: 580abb6f00c144e871e1fded7fbb2dca8584ecf0d47a599f646558642c3027ff
+    role: context
+  - path: data/structures/other/cellular_bud_neck.yaml
+    sha256: 5c7f0d1c4c048d162593483fc2e0210697dff88f4dcf5d7e3b1d194f35e7e6e8
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/cellular_bud_neck_contractile_ring/2026-09-29T213316Z-codex-c2ac04.yaml
+    sha256: ec0cf44fe919676b404c23157c7599df2518e04366f530c7010d956e54a74807
+    role: context
+  - path: history/records/mitotic_actomyosin_contractile_ring/2026-09-29T221314Z-codex-93751d.yaml
+    sha256: 1ebe3b607c361d7d9eeca034e1f1d868c6908d08d858e9597b489a9484e959a4
+    role: context
+  - path: history/records/mitotic_actomyosin_contractile_ring/2026-10-11T125543Z-codex-58bb9b.yaml
+    sha256: de2c7f2dabd9bb91d9db36923a5d9e1b7850a15370b9f39a37c16f69eedf3944
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/yaml_record_review/20260929T215210Z-cellular_bud_neck_contractile_ring.md
+    sha256: 84da52fee7ed252c1c95c08eb9cfbfdc9527ebdc4b1ea339bb9d8bc9d283d224
+    role: context
+  - path: reports/yaml_record_review/20260929T223341Z-mitotic_actomyosin_contractile_ring.md
+    sha256: 44eec0f12c5ab85a124ec086a7c827b8f683001f63fad400beec15f9a729dad0
+    role: context
+  - path: reviews/structured/20261011T125502Z-mitotic_actomyosin_contractile_ring-audit/review.yaml
+    sha256: d38b7fd8b297634bc1712f69ca88dbca728bf96aadc37dfd5b0b1f9339c84be6
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_mitotic_ring_timing.py
+    sha256: d971a0b734624c43537c26d4202b5b818aa530514b1e97899e358336162f4a29
+    role: context
+targets:
+- target_id: GO:0110085
+  path: data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+  label: mitotic actomyosin contractile ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+    role: maintained scientific record
+scope:
+  description: Reassessment of the exact timing finding plus bounded preservation,
+    not another whole-record review.
+  selection: 20261011T125502Z-mitotic_actomyosin_contractile_ring-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0110085
+checks:
+- check_id: mitotic_actomyosin_contractile_ring-schema
+  name: mitotic_actomyosin_contractile_ring-schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T12:56:08Z to 2026-10-11T12:56:10Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: mitotic_actomyosin_contractile_ring-strict
+  name: mitotic_actomyosin_contractile_ring-strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T12:56:10Z to 2026-10-11T12:56:14Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: mitotic_actomyosin_contractile_ring-snippets
+  name: mitotic_actomyosin_contractile_ring-snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+    --report /private/tmp/csm-review-20261011T123803Z/post-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-11T12:56:14Z to 2026-10-11T12:56:31Z; log SHA-256 6a477d7854e348d5246aeec780fc33edf2e96d7656eac1a844b6e886d9be5e5b
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T12:56:31Z to 2026-10-11T12:56:43Z; log SHA-256 2ea781ddb421fcf9ff276e5aeb3a53ba372d2bc06d83404b0289983e98c3f5b3
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T12:56:43Z to 2026-10-11T12:57:53Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T12:57:53Z to 2026-10-11T12:58:13Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4014\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T12:58:13Z to 2026-10-11T12:59:08Z; log SHA-256 ee1c5f2e78a2d29fcb6781a8ecd722934376595042d2cc261b4465b361d19b79
+- check_id: focused
+  name: focused
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: .venv/bin/python -m pytest -q tests/test_mitotic_ring_timing.py tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '...........................                                              [100%]
+
+    27 passed in 50.92s'
+  scope_note: 2026-10-11T12:59:08Z to 2026-10-11T13:00:00Z; log SHA-256 e1b7243121bf3c7205988a50736f5ddab12ea98e7661af7319d3b876b2038460
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: .venv/bin/python scripts/record_review.py check --base 1d21cc572172b0e9c3d01f39231c82ce45fa4ffa
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T13:00:00Z to 2026-10-11T13:01:16Z; log SHA-256 73b365cd16943c6fd9d5a0635782ec41d5abb1112f6beeaebfe814205918b527
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T13:01:16Z to 2026-10-11T13:01:16Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: release-qc
+  name: release-qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110085
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Full local QC passed: 858 passed, 3 skipped in 655.24s (0:10:55). PR and
+    native merge-group gates remain separate.'
+  scope_note: 2026-10-11T12:57:18Z to 2026-10-11T13:10:43Z; log SHA-256 d0908de7381ee26d9ec54702eff3a2f9a425b8d8015e3bd1040901d76e2c6806
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+  accessed_at: '2026-10-11T13:10:49Z'
+  snapshot_sha256: d90e4f93479d2774c995e54dcd260859b8a855a4c6c7241a7d46b76d6db352af
+  support: context_only
+  summary: Corrected entire native record reread. Only localized timing, its evidence/discussion
+    and appended audit event changed.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T12:55:02Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Narrow claim support and preservation of biological state and taxonomic
+    context.
+- evidence_id: history
+  kind: record_content
+  reference: history/records/mitotic_actomyosin_contractile_ring/2026-09-29T221314Z-codex-93751d.yaml
+  accessed_at: '2026-10-11T12:55:02Z'
+  snapshot_sha256: 1ebe3b607c361d7d9eeca034e1f1d868c6908d08d858e9597b489a9484e959a4
+  support: context_only
+  summary: Original CREATE history agrees with record scope; status remains PROPOSED.
+- evidence_id: legacy
+  kind: prior_review
+  reference: reports/yaml_record_review/20260929T223341Z-mitotic_actomyosin_contractile_ring.md
+  accessed_at: '2026-10-11T12:55:02Z'
+  snapshot_sha256: 44eec0f12c5ab85a124ec086a7c827b8f683001f63fad400beec15f9a729dad0
+  support: context_only
+  summary: Historical clean review compared the GO payload; it did not reconcile its
+    timing with budding-yeast experiments. Retained unchanged.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T123803Z/parent-predecessors.json
+  accessed_at: '2026-10-11T12:55:02Z'
+  snapshot_sha256: 25df8e19ea163d1cb8575eec3b42fa7898543c6e60c5871b97a94d6b2c96793c
+  support: context_only
+  summary: Ignored-inclusive canonical scan found no exact-target predecessor.
+- evidence_id: issue-search
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T123803Z/parent-bud-timing-issues.log
+  accessed_at: '2026-10-11T12:55:02Z'
+  snapshot_sha256: 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570
+  support: context_only
+  summary: All-state issue search for the exact timing phrase returned no hits; checked
+    alongside record-label search.
+- evidence_id: myo1-issue-search
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T123803Z/myo1-issues.log
+  accessed_at: '2026-10-11T12:55:02Z'
+  snapshot_sha256: 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570
+  support: context_only
+  summary: All-state Myo1 issue search returned no hits; broader wording checked before
+    filing.
+- evidence_id: anaphase-issue-search
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T123803Z/anaphase-issues.log
+  accessed_at: '2026-10-11T12:55:02Z'
+  snapshot_sha256: 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570
+  support: context_only
+  summary: All-state anaphase issue search returned no hits; broader timing wording
+    checked before filing.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T123803Z/adapter.log
+  accessed_at: '2026-10-11T12:55:02Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: Live iModulonDB inventory has no relevant fungal dataset; absence is not
+    negative biological evidence.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005826,GO:0110085,GO:0110086,GO:0000142
+  locator: GO:0110085 definition; GO:0005826 typed children; GO:0000142 and GO:0110086
+    boundaries
+  accessed_at: '2026-10-11T12:42:57Z'
+  snapshot_sha256: 9c298f0690a87d7f7702c2738ff7f82d59d2cef4f62d55c401fa3c78b3eeab0f
+  support: supports
+  summary: Exact class, parent, child and meiotic sibling identities are sound. The
+    current GO definition itself contains the disputed premitotic timing, so this
+    is an inherited scientific error, not a copying mistake.
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: TaxId 4896, scientificName and species rank
+  accessed_at: '2026-10-11T12:42:58Z'
+  snapshot_sha256: 42c5b7d3d99341137803612d6404cd3884e2d06ec8a740b1ad38163c678f6721
+  support: supports
+  summary: Schizosaccharomyces pombe taxon identity verified.
+- evidence_id: bi
+  kind: primary_source
+  reference: DOI:10.1083/jcb.142.5.1301
+  locator: 'Results: actin ring timing, Myo1 ring timing, coincidence of actin and
+    Myo1 rings; Discussion: Sequential Assembly of Myosin and Actin into the Contractile
+    Ring'
+  accessed_at: '2026-10-11T12:39:09Z'
+  snapshot_sha256: 7eaa6a99a99ef3faca62f60be5e7f93c3c3fbb2ed328003fc9b88e1eedff54a5
+  support: supports
+  summary: Bi et al. distinguish early Myo1 localization from actin recruitment near
+    the end of anaphase. The actin-containing contractile ring is not already assembled
+    before mitosis. The study uses Myo1-GFP, phalloidin staining and cell-cycle staging
+    in S. cerevisiae.
+- evidence_id: wu
+  kind: primary_source
+  reference: DOI:10.1083/jcb.200602032
+  locator: 'Results: node composition, Myo2-positive nodes and actin-dependent coalescence;
+    Discussion; Materials and methods'
+  accessed_at: '2026-10-11T12:42:57Z'
+  snapshot_sha256: e7500572069d2c5a68fe4c52694b55638d7a8a07ae9eb134feee4843c7e92865
+  support: supports
+  summary: Wu et al. support the separate fission-yeast claims using tagged proteins
+    expressed from native loci, live imaging and Lat-A perturbation. These results
+    do not establish budding-yeast timing.
+- evidence_id: wu-id
+  kind: primary_source
+  reference: DOI:10.1083/jcb.200602032
+  locator: DOI, PMID16864655, title, year and authors
+  accessed_at: '2026-10-11T12:42:55Z'
+  snapshot_sha256: ef5627f473f84a107a3bf6d2a78ff8c444ab9c1abf5dd561fecfb373d9a960c5
+  support: supports
+  summary: Exact cited article identity verified; informal lead/senior-author wording
+    does not change the resolved DOI or the supported experimental claim.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T125502Z-mitotic_actomyosin_contractile_ring-audit/review.yaml
+  accessed_at: '2026-10-11T13:10:49Z'
+  snapshot_sha256: d38b7fd8b297634bc1712f69ca88dbca728bf96aadc37dfd5b0b1f9339c84be6
+  support: context_only
+  summary: Immutable original finding committed before scientific mutation.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T123803Z/preservation.json
+  accessed_at: '2026-10-11T13:10:49Z'
+  snapshot_sha256: 2ca97b5028660a07d15a0ec60f2c8ac4de6493b71b52245678a0e6fc26aac008
+  support: context_only
+  summary: All 908 other records, original history/reviews/legacy reports and 908
+    unaffected semantic vectors preserved.
+- evidence_id: red
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T123803Z/regressions-red.log
+  accessed_at: '2026-10-11T13:10:49Z'
+  snapshot_sha256: 2b854ad3bfa536a5eaba654731f61ba0273503baa97330854993925e631506df
+  support: context_only
+  summary: Focused timing/provenance regressions fail on the original input.
+- evidence_id: green
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T123803Z/post-focused.log
+  accessed_at: '2026-10-11T13:10:49Z'
+  snapshot_sha256: e1b7243121bf3c7205988a50736f5ddab12ea98e7661af7319d3b876b2038460
+  support: context_only
+  summary: Focused tests and guarded-writer tests pass after correction.
+- evidence_id: edit-history
+  kind: record_content
+  reference: history/records/mitotic_actomyosin_contractile_ring/2026-10-11T125543Z-codex-58bb9b.yaml
+  accessed_at: '2026-10-11T13:10:49Z'
+  snapshot_sha256: de2c7f2dabd9bb91d9db36923a5d9e1b7850a15370b9f39a37c16f69eedf3944
+  support: context_only
+  summary: New append-only Codex EDIT links the saved finding and GitHub issue.
+assessments:
+- assessment_id: resolved
+  area: evidence
+  topic: Distinguish early Myo1 localization from late actomyosin-ring assembly
+  outcome: supported
+  target_ids:
+  - GO:0110085
+  evidence_ids:
+  - record
+  - go
+  - bi
+  - rules
+  - predecessor
+  - preservation
+  - red
+  - green
+  - edit-history
+  summary: The S. cerevisiae sentence now distinguishes early Myo1 localization from
+    actin recruitment near the end of anaphase. Added Bi et al. evidence and an explicit
+    source-conflict discussion support the qualification without altering GO identity
+    or the fission-yeast model.
+findings:
+- finding_id: F1
+  issue_key: mitotic-ring-budding-yeast-premitotic-actomyosin-conflation
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Distinguish early Myo1 localization from late actomyosin-ring assembly
+  description: The S. cerevisiae sentence now distinguishes early Myo1 localization
+    from actin recruitment near the end of anaphase. Added Bi et al. evidence and
+    an explicit source-conflict discussion support the qualification without altering
+    GO identity or the fission-yeast model.
+  target_ids:
+  - GO:0110085
+  field_paths:
+  - definition
+  evidence_ids:
+  - record
+  - go
+  - bi
+  - rules
+  - predecessor
+  - preservation
+  - red
+  - green
+  - edit-history
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: A material cell-cycle claim conflates distinct assembly states;
+    identity remains valid, so this is not an identity blocker.
+  disposition_reason: The S. cerevisiae sentence now distinguishes early Myo1 localization
+    from actin recruitment near the end of anaphase. Added Bi et al. evidence and
+    an explicit source-conflict discussion support the qualification without altering
+    GO identity or the fission-yeast model. Verified by primary text, bounded diff,
+    red/green tests and full local QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T125502Z-mitotic_actomyosin_contractile_ring-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2213
+actions: []
+limitations:
+- Same-agent scoped disposition, not independent human approval or a new whole-record
+  review.
+- Current GO text still carries the old timing; the local primary-evidence qualification
+  is explicit and no upstream fix is claimed.
+- Existing unknown component boundaries, species scope, graph and PROPOSED status
+  remain unchanged.
+- PR and native merge-group gates are separate; corrected source is retained by review-base/mitotic-ring-timing-20261011.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2213
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T125502Z-mitotic_actomyosin_contractile_ring-audit
+  relationship: Resolves the exact predecessor without replacing it.
