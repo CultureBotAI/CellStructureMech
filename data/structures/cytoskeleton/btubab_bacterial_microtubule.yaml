@@ -28,8 +28,14 @@ curation_history:
     to UNKNOWN, removing the in vitro membrane-linking edge from the assembly graph,
     and adding resolved boundary discussions.'
   llm_assisted: true
+- timestamp: '2026-10-11T17:56:28Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2231: Corrected cytoskeleton parthood and retained the specific
+    filament-system identity.'
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0099513
 synonyms:
 - synonym_text: bacterial microtubule
   synonym_type: EXACT_SYNONYM
@@ -130,6 +136,12 @@ evidence:
 - reference: DOI:10.1038/srep45668
   notes: Akendengue et al. 2017, 'Bacterial Kinesin Light Chain (Bklc) Links the Btub
     Cytoskeleton to Membranes', Scientific Reports.
+- reference: GO:0005856
+  notes: The containing cytoskeletal framework; this filament system is part of it,
+    not a type of the whole framework.
+- reference: GO:0099513
+  notes: Broader polymeric cytoskeletal fiber class; this specific protein polymer
+    retains its local identity.
 causal_graphs:
 - graph_id: btubabc_microtubule_assembly
   title: BtubA/B subunits form a bacterial microtubule
@@ -283,3 +295,5 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-11'
   resolved_date: '2026-09-11'
+part_of:
+- GO:0005856

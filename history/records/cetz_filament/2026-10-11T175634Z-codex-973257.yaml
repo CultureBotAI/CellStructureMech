@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cetz_filament.yaml
+  slug: cetz_filament
+session:
+  id: 2026-10-11T175634Z-codex-973257
+  timestamp: '2026-10-11T17:56:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2232
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - evidence
+  - parent_structures
+  - part_of
+  summary: 'Addressed #2232: Corrected cytoskeleton parthood and retained the specific filament-system
+    identity.'
+  details: 'Original immutable observation: reviews/structured/20261011T175524Z-cetz_filament-audit/review.yaml.
+    Corrected cytoskeleton parthood and retained the specific filament-system identity. Guarded
+    writer; original discussions/history and PROPOSED status retained.'

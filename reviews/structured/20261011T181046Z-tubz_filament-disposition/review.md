@@ -1,0 +1,605 @@
+# TubZ filament: finding dispositions
+
+- Review: 20261011T181046Z-tubz_filament-disposition
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-11T18:10:20Z
+- Finished UTC: 2026-10-11T18:10:46Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Saved findings resolved through bounded evidence-backed corrections; original observations retained.
+
+## Scope And Provenance
+
+Exact saved findings and preservation of surrounding claims; not a second whole-record review.
+
+Selection: 20261011T175539Z-tubz_filament-audit
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 2157c7bca99e2814d9a816a49299034bd190e671.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:tubz_filament | data/structures/cytoskeleton/tubz_filament.yaml | maintained | TubZ filament |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| tubz_filament-schema | passed | True | cellstructuremech:tubz_filament | Actual deterministic check passed; scientific support assessed separately. |
+| tubz_filament-strict | passed | True | cellstructuremech:tubz_filament | Actual deterministic check passed; scientific support assessed separately. |
+| tubz_filament-snippets | passed | True | cellstructuremech:tubz_filament | No verbatim snippets; paraphrases assessed separately against inspected text. |
+| history | passed | True | cellstructuremech:tubz_filament | Actual deterministic check passed; scientific support assessed separately. |
+| labels | passed | True | cellstructuremech:tubz_filament | id↔label correspondence summary:<br>          OK_CANONICAL: 3544<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| traits | passed | True | cellstructuremech:tubz_filament | Actual deterministic check passed; scientific support assessed separately. |
+| curies | passed | True | cellstructuremech:tubz_filament | [not exercised] BFO: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] CHEBI: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] ComplexPortal: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] DOI: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] GO: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] InterPro: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] NCBITaxon: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] PATO: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] PMID: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] RO: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] SO: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] UO: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] UniProtKB: the issuing authority was unreachable after 1 attempts, so this resolver was not exercised<br>  [not exercised] DOI: DataCite was unreachable, so DOI:10.22002/D1.1355 was not exercised<br>resolver control: 14 resolver(s) could not be exercised because their authority was unreachable; the rest accept a known id and reject a fabricated one<br><br>identifier liveness summary:<br>  OK             4013<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| focused | passed | True | cellstructuremech:tubz_filament | ......................................                                   [100%]<br>38 passed in 44.21s |
+| reviews | passed | True | cellstructuremech:tubz_filament | Actual deterministic check passed; scientific support assessed separately. |
+| diff | passed | True | cellstructuremech:tubz_filament | Actual deterministic check passed; scientific support assessed separately. |
+| release-qc | passed | True | cellstructuremech:tubz_filament | Full local QC passed: 897 passed, 3 skipped in 509.54s (0:08:29). PR and native merge-group gates remain separate. |
+
+## Scientific And Domain Assessments
+
+### Correct cytoskeleton is-a versus parthood
+
+evidence: supported. Targets: cellstructuremech:tubz_filament.
+
+GO:0005856 is now part_of; individual polymers use GO:0099513 as their fiber parent. The multi-filament spindle is not forced into a single-fiber identity.
+
+## Findings
+
+### F1: Correct cytoskeleton is-a versus parthood
+
+major / resolved / confirmed; issue key: tubz-filament-cytoskeleton-is-a.
+
+GO:0005856 is now part_of; individual polymers use GO:0099513 as their fiber parent. The multi-filament spindle is not forced into a single-fiber identity.
+
+Disposition: GO:0005856 is now part_of; individual polymers use GO:0099513 as their fiber parent. The multi-filament spindle is not forced into a single-fiber identity. Verified by scoped diff, inspected sources, red/green tests and full local QC.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/tubz_filament.yaml | context_only | Corrected full record reread and compared with original and sources. |
+| rules | docs/CURATION.md | context_only | Explicitly separates cytoskeletal fiber is-a from containing cytoskeleton part_of. |
+| schema | docs/SCHEMA.md | context_only | parent_structures is-a; part_of is parthood. |
+| history | /private/tmp/csm-review-20261011T174605Z/tubz_filament-discussion-history.json | context_only | All committed discussion/inline-history versions inspected; prior rationale retained. |
+| history-0 | history/records/tubz_filament/2026-09-11T112636Z-claude-code-65346f.yaml | context_only | Original CREATE and correction events inspected. |
+| history-1 | history/records/tubz_filament/2026-09-11T113509Z-claude-code-7c58c1.yaml | context_only | Original CREATE and correction events inspected. |
+| predecessors | /private/tmp/csm-review-20261011T174605Z/exact-target-predecessors.json | context_only | Ignored-inclusive canonical scan found no exact target predecessor. |
+| identity-search | /private/tmp/csm-review-20261011T174605Z/identity-matches.json | context_only | Ignored-inclusive native identity enumeration: retain distinct tubulin-family structures; do not equate generic microtubule, division ring, phage nucleus or vortex with the spindle. |
+| issues | /private/tmp/csm-review-20261011T174605Z/tubz-all-issues.log | context_only | All-state issue search inspected, including earlier component/scope fixes; no existing open issue resolves these findings. |
+| adapter | /private/tmp/csm-review-20261011T174605Z/adapter.log | context_only | No matching source-organism dataset for these encoded structural proteins; host E. coli/Pseudomonas expression modules do not establish phage-encoded PhuZ structure. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005856,GO:0005874,GO:0099513,GO:0015630; GO:0005856 definition; GO:0099513 definition and part_of relation | supports | Cytoskeleton is the containing framework; polymeric fibers are components, not types of that entire framework. |
+| taxon-1428 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1428; taxId, scientificName, rank and aliases | supports | Exact taxon identifier/label verified; presence claims evaluated from papers, not taxonomic rank. |
+| paper-5 | DOI:10.1073/pnas.1003817107; Relevant Results, Discussion, methods and figure captions for native claims | supports | Inspected primary source text for structure, component and experimental scope. |
+| paper-6 | DOI:10.1073/pnas.1010176107; Relevant Results, Discussion, methods and figure captions for native claims | supports | Inspected primary source text for structure, component and experimental scope. |
+| paper-7 | DOI:10.1073/pnas.1210899109; Relevant Results, Discussion, methods and figure captions for native claims | supports | Inspected primary source text for structure, component and experimental scope. |
+| paper-9 | DOI:10.1101/gad.1546107; Relevant Results, Discussion, methods and figure captions for native claims | supports | Inspected primary source text for structure, component and experimental scope. |
+| predecessor | reviews/structured/20261011T175539Z-tubz_filament-audit/review.yaml | context_only | Immutable pre-edit finding. |
+| preservation | /private/tmp/csm-review-20261011T174605Z/preservation.json | context_only | Untouched native records, vectors and prior history/review/legacy files preserved. |
+| red | /private/tmp/csm-review-20261011T174605Z/regressions-red.log | context_only | Baseline failures demonstrate the defects. |
+| green | /private/tmp/csm-review-20261011T174605Z/post-focused.log | context_only | Focused tests and guarded-writer tests passed. |
+| edit-history | history/records/tubz_filament/2026-10-11T175637Z-codex-455b37.yaml | context_only | Actual Codex EDIT links original observation and issues. |
+
+## Limits And Additional Notes
+
+- Same-agent scoped disposition, not independent human sign-off.
+- Original primary snapshots remain the evidence basis; no raw-data reanalysis. Protein groundings and experimental scope remain bounded.
+- Native PR and separate merge-group gates remain required; existing resolver/test skips retained. Corrected source retained by review-base/tubulin-family-boundaries-20261011.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T181046Z-tubz_filament-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'TubZ filament: finding dispositions'
+started_at: '2026-10-11T18:10:20Z'
+finished_at: '2026-10-11T18:10:46Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent review; not independent human scientific approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Saved findings resolved through bounded evidence-backed corrections; original
+  observations retained.
+source:
+  git_revision: 2157c7bca99e2814d9a816a49299034bd190e671
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 7354ab3cdd2e80719041752e623b51c95369a7f1463ce3cf615d196448b156ce
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/btubab_bacterial_microtubule.yaml
+    sha256: 9dad1b4ea650b206b4d5005f63805f2f8ec586b4c942c0663da3df94b9367284
+    role: context
+  - path: data/structures/cytoskeleton/cetz_filament.yaml
+    sha256: fd116102dcb2f7c9dc89aa074142d8224fd910b8199ddf816881716f6116ede9
+    role: context
+  - path: data/structures/cytoskeleton/microtubule.yaml
+    sha256: 29404191864964cf5b86c3894c7b942d63b83fc4bb1b6b461d7677baad6af305
+    role: context
+  - path: data/structures/cytoskeleton/phuz_spindle.yaml
+    sha256: 4a319827b4a744aadeb7827c470defa533270bbc990afef9ec024ec5365e8459
+    role: context
+  - path: data/structures/cytoskeleton/tubz_filament.yaml
+    sha256: 32bd17ec65c8b2d36716dd3df603beebe144d34ea4af986b0c041d8cc49b5f8d
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/tubz_filament/2026-09-11T112636Z-claude-code-65346f.yaml
+    sha256: b98a78ef5f22e62ae11e962e74044e21097564ef72a9a6a7899140dea221b824
+    role: context
+  - path: history/records/tubz_filament/2026-09-11T113509Z-claude-code-7c58c1.yaml
+    sha256: 1501efb2f7ec560ab4a56f08b5ee5055d4c2c995159b39a1261e5e7f1426e5ee
+    role: context
+  - path: history/records/tubz_filament/2026-10-11T175637Z-codex-455b37.yaml
+    sha256: 4151ac5908fbe579f39eb9b4d0e35ffb87f525b6e88880ca6a2b5b15c7169bc3
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261011T175539Z-tubz_filament-audit/review.yaml
+    sha256: 92056ba5122f3f3f61b9115b57b13512bff507ea113c48b89a1d1a1f029016aa
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_tubulin_family_boundaries.py
+    sha256: 81a2a97813e7e4b75b28a5f06779d4ead81b36c7a27d7cb2e040bdb00bf1bbd3
+    role: context
+targets:
+- target_id: cellstructuremech:tubz_filament
+  path: data/structures/cytoskeleton/tubz_filament.yaml
+  label: TubZ filament
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/tubz_filament.yaml
+    role: maintained scientific record
+scope:
+  description: Exact saved findings and preservation of surrounding claims; not a
+    second whole-record review.
+  selection: 20261011T175539Z-tubz_filament-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:tubz_filament
+checks:
+- check_id: tubz_filament-schema
+  name: tubz_filament-schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/tubz_filament.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T17:58:09Z to 2026-10-11T17:58:12Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: tubz_filament-strict
+  name: tubz_filament-strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/tubz_filament.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T17:58:12Z to 2026-10-11T17:58:18Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: tubz_filament-snippets
+  name: tubz_filament-snippets
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/tubz_filament.yaml
+    --report /private/tmp/csm-review-20261011T174605Z/post-tubz_filament-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-11T17:58:18Z to 2026-10-11T17:58:47Z; log SHA-256 b41106f1d4a64e426fc27cb63d054abb9210750d25de4645791b671210a2fe76
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T17:59:23Z to 2026-10-11T17:59:42Z; log SHA-256 4f6b05d12a24e704b5b087418a3dec5d72f923f73be7080e8103d2b0be9094e0
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T17:59:42Z to 2026-10-11T18:01:09Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T18:01:09Z to 2026-10-11T18:01:32Z; log SHA-256 553832e049eb99562adc0d8260a3f74f18342e6aa8261c4cbc33b824c4f6332c
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "[not exercised] BFO: the issuing authority was unreachable after 1 attempts,\
+    \ so this resolver was not exercised\n  [not exercised] CHEBI: the issuing authority\
+    \ was unreachable after 1 attempts, so this resolver was not exercised\n  [not\
+    \ exercised] ComplexPortal: the issuing authority was unreachable after 1 attempts,\
+    \ so this resolver was not exercised\n  [not exercised] DOI: the issuing authority\
+    \ was unreachable after 1 attempts, so this resolver was not exercised\n  [not\
+    \ exercised] GO: the issuing authority was unreachable after 1 attempts, so this\
+    \ resolver was not exercised\n  [not exercised] InterPro: the issuing authority\
+    \ was unreachable after 1 attempts, so this resolver was not exercised\n  [not\
+    \ exercised] NCBITaxon: the issuing authority was unreachable after 1 attempts,\
+    \ so this resolver was not exercised\n  [not exercised] PATO: the issuing authority\
+    \ was unreachable after 1 attempts, so this resolver was not exercised\n  [not\
+    \ exercised] PMID: the issuing authority was unreachable after 1 attempts, so\
+    \ this resolver was not exercised\n  [not exercised] RO: the issuing authority\
+    \ was unreachable after 1 attempts, so this resolver was not exercised\n  [not\
+    \ exercised] SO: the issuing authority was unreachable after 1 attempts, so this\
+    \ resolver was not exercised\n  [not exercised] UO: the issuing authority was\
+    \ unreachable after 1 attempts, so this resolver was not exercised\n  [not exercised]\
+    \ UniProtKB: the issuing authority was unreachable after 1 attempts, so this resolver\
+    \ was not exercised\n  [not exercised] DOI: DataCite was unreachable, so DOI:10.22002/D1.1355\
+    \ was not exercised\nresolver control: 14 resolver(s) could not be exercised because\
+    \ their authority was unreachable; the rest accept a known id and reject a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4013\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T18:01:32Z to 2026-10-11T18:01:57Z; log SHA-256 800d5c4ef6c7964ccbd1a80a4be5c5f7e04774af577c1544c94abaa18c2326b3
+- check_id: focused
+  name: focused
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: .venv/bin/python -m pytest -q tests/test_tubulin_family_boundaries.py tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '......................................                                   [100%]
+
+    38 passed in 44.21s'
+  scope_note: 2026-10-11T18:01:57Z to 2026-10-11T18:02:42Z; log SHA-256 6e640f1ba6ef4107aa281f81192503e0aadd3f41192157c8c14b163a4981b234
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: .venv/bin/python scripts/record_review.py check --base a8bab45f6868c61fad49550ea05bc10167c27689
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T18:02:42Z to 2026-10-11T18:04:05Z; log SHA-256 ea3f8b4b85974547f68746fef4b708ef2f67e6082b0712bbdddae6b46a591d97
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T18:04:05Z to 2026-10-11T18:04:06Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: release-qc
+  name: release-qc
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:tubz_filament
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Full local QC passed: 897 passed, 3 skipped in 509.54s (0:08:29). PR and
+    native merge-group gates remain separate.'
+  scope_note: 2026-10-11T17:58:49Z to 2026-10-11T18:10:01Z; log SHA-256 505b68a7863a797e081efe5832e9cdeaaa90b33eb3ec8042e434cd2fdcae782f
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/tubz_filament.yaml
+  accessed_at: '2026-10-11T18:10:46Z'
+  snapshot_sha256: 32bd17ec65c8b2d36716dd3df603beebe144d34ea4af986b0c041d8cc49b5f8d
+  support: context_only
+  summary: Corrected full record reread and compared with original and sources.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T17:55:39Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Explicitly separates cytoskeletal fiber is-a from containing cytoskeleton
+    part_of.
+- evidence_id: schema
+  kind: record_content
+  reference: docs/SCHEMA.md
+  accessed_at: '2026-10-11T17:55:39Z'
+  snapshot_sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+  support: context_only
+  summary: parent_structures is-a; part_of is parthood.
+- evidence_id: history
+  kind: record_content
+  reference: /private/tmp/csm-review-20261011T174605Z/tubz_filament-discussion-history.json
+  accessed_at: '2026-10-11T17:55:39Z'
+  snapshot_sha256: 0679575c2bc4b431bdc1f91872eb99d1234ce29c8df4a8a8d6ea96f965feb337
+  support: context_only
+  summary: All committed discussion/inline-history versions inspected; prior rationale
+    retained.
+- evidence_id: history-0
+  kind: record_content
+  reference: history/records/tubz_filament/2026-09-11T112636Z-claude-code-65346f.yaml
+  accessed_at: '2026-10-11T17:55:39Z'
+  snapshot_sha256: b98a78ef5f22e62ae11e962e74044e21097564ef72a9a6a7899140dea221b824
+  support: context_only
+  summary: Original CREATE and correction events inspected.
+- evidence_id: history-1
+  kind: record_content
+  reference: history/records/tubz_filament/2026-09-11T113509Z-claude-code-7c58c1.yaml
+  accessed_at: '2026-10-11T17:55:39Z'
+  snapshot_sha256: 1501efb2f7ec560ab4a56f08b5ee5055d4c2c995159b39a1261e5e7f1426e5ee
+  support: context_only
+  summary: Original CREATE and correction events inspected.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T174605Z/exact-target-predecessors.json
+  accessed_at: '2026-10-11T17:55:39Z'
+  snapshot_sha256: b58274921260ac2318a673d931246261d1b7ea598c7a3d2eb5013f3ff36dfbbc
+  support: context_only
+  summary: Ignored-inclusive canonical scan found no exact target predecessor.
+- evidence_id: identity-search
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T174605Z/identity-matches.json
+  accessed_at: '2026-10-11T17:55:39Z'
+  snapshot_sha256: c026bdc56a293d9fc1419efd2f0798c6ec25e7c3f9b51a44a4bae7e231256ab2
+  support: context_only
+  summary: 'Ignored-inclusive native identity enumeration: retain distinct tubulin-family
+    structures; do not equate generic microtubule, division ring, phage nucleus or
+    vortex with the spindle.'
+- evidence_id: issues
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T174605Z/tubz-all-issues.log
+  accessed_at: '2026-10-11T17:55:39Z'
+  snapshot_sha256: 115bc5844f493dcaef7441478141bb4a9cdf578479f329a0e0a40311c2eb1727
+  support: context_only
+  summary: All-state issue search inspected, including earlier component/scope fixes;
+    no existing open issue resolves these findings.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T174605Z/adapter.log
+  accessed_at: '2026-10-11T17:55:39Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: No matching source-organism dataset for these encoded structural proteins;
+    host E. coli/Pseudomonas expression modules do not establish phage-encoded PhuZ
+    structure.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005856,GO:0005874,GO:0099513,GO:0015630
+  locator: GO:0005856 definition; GO:0099513 definition and part_of relation
+  accessed_at: '2026-10-11T17:50:36Z'
+  snapshot_sha256: 3f5a3dd27abf49ffd043baef1f9e0730ddd2274ecad7b0cc2f5a52aea7516850
+  support: supports
+  summary: Cytoskeleton is the containing framework; polymeric fibers are components,
+    not types of that entire framework.
+- evidence_id: taxon-1428
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1428
+  locator: taxId, scientificName, rank and aliases
+  accessed_at: '2026-10-11T17:50:41Z'
+  snapshot_sha256: 31450ca97a53c6b24dcd18dc4eaec93f08f57546200ab19206c21f2ac961f953
+  support: supports
+  summary: Exact taxon identifier/label verified; presence claims evaluated from papers,
+    not taxonomic rank.
+- evidence_id: paper-5
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1003817107
+  locator: Relevant Results, Discussion, methods and figure captions for native claims
+  accessed_at: '2026-10-11T17:49:44Z'
+  snapshot_sha256: 34cbe48aa89819d7aa4fe12a55a5bb0477b6352ce3ad32596e00d58083895375
+  support: supports
+  summary: Inspected primary source text for structure, component and experimental
+    scope.
+- evidence_id: paper-6
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1010176107
+  locator: Relevant Results, Discussion, methods and figure captions for native claims
+  accessed_at: '2026-10-11T17:49:44Z'
+  snapshot_sha256: a7b38b70e6479e634ece4ba02a371c65a9a32e7ab4f79f730c0a164ec328781d
+  support: supports
+  summary: Inspected primary source text for structure, component and experimental
+    scope.
+- evidence_id: paper-7
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1210899109
+  locator: Relevant Results, Discussion, methods and figure captions for native claims
+  accessed_at: '2026-10-11T17:49:44Z'
+  snapshot_sha256: c1faa60b216ce2ad391bfd88f86fcfc08124a890141d9e3174ae28be98099994
+  support: supports
+  summary: Inspected primary source text for structure, component and experimental
+    scope.
+- evidence_id: paper-9
+  kind: primary_source
+  reference: DOI:10.1101/gad.1546107
+  locator: Relevant Results, Discussion, methods and figure captions for native claims
+  accessed_at: '2026-10-11T17:49:45Z'
+  snapshot_sha256: ce712ca32f9108f647c8aade15f5ece9bc0aa598463c3d674d96c98e2caf6c65
+  support: supports
+  summary: Inspected primary source text for structure, component and experimental
+    scope.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T175539Z-tubz_filament-audit/review.yaml
+  accessed_at: '2026-10-11T18:10:46Z'
+  snapshot_sha256: 92056ba5122f3f3f61b9115b57b13512bff507ea113c48b89a1d1a1f029016aa
+  support: context_only
+  summary: Immutable pre-edit finding.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T174605Z/preservation.json
+  accessed_at: '2026-10-11T18:10:46Z'
+  snapshot_sha256: 788bec1b0614a7621d6c344299aa8012f139a1683eb41c3742730f6fed024cba
+  support: context_only
+  summary: Untouched native records, vectors and prior history/review/legacy files
+    preserved.
+- evidence_id: red
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T174605Z/regressions-red.log
+  accessed_at: '2026-10-11T18:10:46Z'
+  snapshot_sha256: c69b7206201befb5d17cc4d2384edaa5b2def9885eaefcc05f0a51cec3c427a1
+  support: context_only
+  summary: Baseline failures demonstrate the defects.
+- evidence_id: green
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T174605Z/post-focused.log
+  accessed_at: '2026-10-11T18:10:46Z'
+  snapshot_sha256: 6e640f1ba6ef4107aa281f81192503e0aadd3f41192157c8c14b163a4981b234
+  support: context_only
+  summary: Focused tests and guarded-writer tests passed.
+- evidence_id: edit-history
+  kind: record_content
+  reference: history/records/tubz_filament/2026-10-11T175637Z-codex-455b37.yaml
+  accessed_at: '2026-10-11T18:10:46Z'
+  snapshot_sha256: 4151ac5908fbe579f39eb9b4d0e35ffb87f525b6e88880ca6a2b5b15c7169bc3
+  support: context_only
+  summary: Actual Codex EDIT links original observation and issues.
+assessments:
+- assessment_id: resolved-F1
+  area: evidence
+  topic: Correct cytoskeleton is-a versus parthood
+  outcome: supported
+  target_ids:
+  - cellstructuremech:tubz_filament
+  evidence_ids:
+  - record
+  - go
+  - rules
+  - schema
+  - predecessor
+  - preservation
+  - red
+  - green
+  - edit-history
+  summary: GO:0005856 is now part_of; individual polymers use GO:0099513 as their
+    fiber parent. The multi-filament spindle is not forced into a single-fiber identity.
+findings:
+- finding_id: F1
+  issue_key: tubz-filament-cytoskeleton-is-a
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Correct cytoskeleton is-a versus parthood
+  description: GO:0005856 is now part_of; individual polymers use GO:0099513 as their
+    fiber parent. The multi-filament spindle is not forced into a single-fiber identity.
+  target_ids:
+  - cellstructuremech:tubz_filament
+  field_paths:
+  - parent_structures
+  evidence_ids:
+  - record
+  - go
+  - rules
+  - schema
+  - predecessor
+  - preservation
+  - red
+  - green
+  - edit-history
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/tubz_filament.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Material hierarchy or structure-scope assertion, not an optional
+    completeness suggestion.
+  disposition_reason: GO:0005856 is now part_of; individual polymers use GO:0099513
+    as their fiber parent. The multi-filament spindle is not forced into a single-fiber
+    identity. Verified by scoped diff, inspected sources, red/green tests and full
+    local QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T175539Z-tubz_filament-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2233
+actions: []
+limitations:
+- Same-agent scoped disposition, not independent human sign-off.
+- Original primary snapshots remain the evidence basis; no raw-data reanalysis. Protein
+  groundings and experimental scope remain bounded.
+- Native PR and separate merge-group gates remain required; existing resolver/test
+  skips retained. Corrected source retained by review-base/tubulin-family-boundaries-20261011.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2233
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T175539Z-tubz_filament-audit
+  relationship: Resolves exact predecessor findings without replacing the observation.
+```
