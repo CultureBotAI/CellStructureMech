@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/old_mitotic_spindle_pole_body.yaml
+  slug: old_mitotic_spindle_pole_body
+session:
+  id: 2026-10-11T152858Z-codex-6a3a89
+  timestamp: '2026-10-11T15:28:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2220
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  - definition
+  - definition_source
+  - discussions
+  - evidence
+  summary: 'Addressed #2220: Bound old-SPB SIN activity to the supported S. pombe cell-cycle
+    context, replaced the unqualified definition with a literature-backed local definition,
+    scoped the example, and appended a source-conflict clarification without rewriting prior
+    discussions.'
+  details: 'Immutable observation: reviews/structured/20261011T152738Z-old_mitotic_spindle_pole_body-audit/review.yaml.
+    Bound old-SPB SIN activity to the supported S. pombe cell-cycle context, replaced the
+    unqualified definition with a literature-backed local definition, scoped the example,
+    and appended a source-conflict clarification without rewriting prior discussions. Guarded
+    writer; original audit history and PROPOSED status retained.'

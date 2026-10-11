@@ -28,6 +28,12 @@ curation_history:
     plaque structure rather than the remodeling process and used primary literature
     as the local definition source.
   llm_assisted: true
+- timestamp: '2026-10-11T15:29:00Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2221: Corrected the Nickas 2003 article-title phrase from Spores
+    to Prospore Membrane, preserving the DOI and biological claims.'
+  llm_assisted: true
 synonyms:
 - synonym_text: meiosis II outer plaque
   synonym_type: EXACT_SYNONYM
@@ -95,8 +101,8 @@ evidence:
     of the Spindle Pole Body in Yeast, Molecular Biology of the Cell.
 - reference: DOI:10.1128/EC.2.3.431-445.2003
   notes: Nickas et al. 2003, Ady4p and Spo74p Are Components of the Meiotic Spindle
-    Pole Body That Promote Growth of the Spores in Saccharomyces cerevisiae, Eukaryotic
-    Cell.
+    Pole Body That Promote Growth of the Prospore Membrane in Saccharomyces cerevisiae,
+    Eukaryotic Cell.
 - reference: DOI:10.1091/mbc.E10-07-0563
   notes: Mathieson et al. 2010, Vesicle Docking to the Spindle Pole Body Is Necessary
     to Recruit the Exocyst During Membrane Formation in Saccharomyces cerevisiae,
