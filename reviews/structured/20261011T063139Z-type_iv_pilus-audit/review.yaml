@@ -1,0 +1,519 @@
+schema_version: 1.0.0
+review_id: 20261011T063139Z-type_iv_pilus-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Type iv pilus: evidence and provenance review'
+started_at: '2026-10-11T06:24:13Z'
+finished_at: '2026-10-11T06:31:39Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent review before mutation; not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Concrete issues observed; save immutable findings before separately authorized
+  curation.
+source:
+  git_revision: 617a24ae7989e21e482bb32d3d527b05d5b475b6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 64862db2087298ae832b8a8410185349cc277151af31d88ce231e43201ab9440
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/appendage/p_pilus.yaml
+    sha256: c9e8371a5cc6cda0a28d5264a6a2c2368a703670b3c285fc12f1aa58b6adafa9
+    role: context
+  - path: data/structures/appendage/pilus.yaml
+    sha256: b82205e792d181aa2e2cb76eb56a2ecafdb3021302c7b86a5819c649528bc06b
+    role: context
+  - path: data/structures/appendage/suctorian_feeding_tentacle.yaml
+    sha256: 6165bcfed6515881367eba4fe55aafd95e31be8c42f55d78179ceecb93f27400
+    role: context
+  - path: data/structures/appendage/tad_pilus.yaml
+    sha256: ba94edab94e997876d50e0302b5b6b5055743f6c742da986b4b73b60dbcc89c1
+    role: context
+  - path: data/structures/appendage/type_i_pilus.yaml
+    sha256: 35b161df2bab54d5b56efde936dc2ee7e5de57789ae583a26a8265b04dc17f00
+    role: context
+  - path: data/structures/appendage/type_iv_pilus.yaml
+    sha256: 744f19aeb3b62c9f4d470fcbf47038056069904d998eb7c5e2b83f6821037d4e
+    role: target
+  - path: data/structures/appendage/y_shaped_link.yaml
+    sha256: 89637052ba32ba24d695d33a540116783a09124de805feeaa9430f1f5c702841
+    role: context
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/type_iv_pilus/2026-08-30T193104Z-codex-e15285.yaml
+    sha256: 3e70fe83ee675a8f5cb666489a783bd65d0c92634dc955288883b511a1abbaed
+    role: context
+  - path: history/records/type_iv_pilus/2026-08-30T203001Z-codex-9e92ab.yaml
+    sha256: d993750541e3a1da1836d8f2b6e5b0cc19772e69fc86f8ee926d5eab3ba562d8
+    role: context
+  - path: history/records/type_iv_pilus/2026-09-04T005809Z-codex-a42bf8.yaml
+    sha256: 2ea548e1e5f99a82a11cdfd312b92db6d70182f329bd51d59905d999c2565777
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/evidence_readability.type_iv_pilus.tsv
+    sha256: a076ddf9f62b8ddfe7c74fbb2d769dd2f32e46889110386214ca5dc26f293884
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0044096
+  path: data/structures/appendage/type_iv_pilus.yaml
+  label: type IV pilus
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/type_iv_pilus.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire native YAML: identity, composition, taxonomy, functions, every
+    graph edge, present resources and provenance.'
+  selection: One resolved sequential target in the all-record goal, not a sampled
+    corpus verdict.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0044096
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/type_iv_pilus.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:25:54Z to 2026-10-11T06:25:56Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: .venv/bin/python scripts/validate_strict.py data/structures/appendage/type_iv_pilus.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:25:56Z to 2026-10-11T06:26:00Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/appendage/type_iv_pilus.yaml
+    --report /private/tmp/csm-review-20261011T062301Z/type_iv_pilus-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No quoted snippets; success is not a test of paraphrase accuracy.
+  scope_note: 2026-10-11T06:26:00Z to 2026-10-11T06:26:21Z; log SHA-256 ea0b7017567ede828820d78f7473524f8b65c0c47b98b2794783eb5c77cff18f
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:26:53Z to 2026-10-11T06:27:08Z; log SHA-256 ec4802743686962e3e9ec0534e2a9fb4ca76e92b15ecc0cb7f607d8ce80a96a8
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T06:27:08Z to 2026-10-11T06:28:20Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:28:20Z to 2026-10-11T06:28:37Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4011\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T06:28:37Z to 2026-10-11T06:29:27Z; log SHA-256 dc5ed8534cf356581f142af6232079d99cab71fde9815408309aac234b468667
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:29:27Z to 2026-10-11T06:30:11Z; log SHA-256 5614362bbb86fa7e780a9ccce9e9eaced4fbf482469bd124dcd222da72633c46
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:30:11Z to 2026-10-11T06:30:11Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: contract
+  name: contract
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:24:22Z to 2026-10-11T06:25:22Z; log SHA-256 1bfa2c402d877089e25c6111113d3b329d85327841ca8ad98ce94631c2845de1
+- check_id: qc
+  name: Exact-baseline authoritative CI QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044096
+  command: gh run view 38117523970 --json status,conclusion,headSha,event,name,url,jobs;
+    gh run view 38117523970 --log
+  exit_code: 0
+  summary: Full QC passed on this exact unchanged baseline, including generated products;
+    not a newly run local full QC.
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38117523970;
+    full-log SHA-256 483d49589927059d90b64d291148e5e3c0461580ef9fffdf21fb2add7f56f4b3
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/type_iv_pilus.yaml
+  accessed_at: '2026-10-11T06:31:39Z'
+  snapshot_sha256: 744f19aeb3b62c9f4d470fcbf47038056069904d998eb7c5e2b83f6821037d4e
+  support: context_only
+  summary: Full native YAML read before findings; original status and histories captured.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T06:31:39Z'
+  snapshot_sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+  support: context_only
+  summary: Requires exact claim-level scope, constituent/machinery distinction and
+    append-only discussion rationale.
+- evidence_id: go-0044096
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0044096
+  locator: Exact current QuickGO term
+  accessed_at: '2026-10-11T06:27:20Z'
+  snapshot_sha256: 2d0550e159fe884cb3dbf4bfed109d00edab2a4ac93b6a5e5f1c13670fc37e3d
+  support: supports
+  summary: Active exact term agrees with native identity, relation or process use.
+- evidence_id: go-0043107
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043107
+  locator: Exact current QuickGO term
+  accessed_at: '2026-10-11T06:27:19Z'
+  snapshot_sha256: f19c65bbfa350fd8d69a5e98977ba6a2f71254d285626b8d0bddb530c13bd88f
+  support: supports
+  summary: Active exact term agrees with native identity, relation or process use.
+- evidence_id: go-0009289
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009289
+  locator: Exact current QuickGO term
+  accessed_at: '2026-10-11T06:27:16Z'
+  snapshot_sha256: bc564119fe5e6d56127346948989278deecab0f5ad24cb75366edb2d3d6d63cb
+  support: supports
+  summary: Active exact term agrees with native identity, relation or process use.
+- evidence_id: taxon-2
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=2&retmode=xml
+  locator: Exact NCBI Taxonomy identity and names
+  accessed_at: '2026-10-11T06:27:28Z'
+  snapshot_sha256: d62facd350ac66acdd551e03af2eef6a55a96cd0d4c90e8d7e7205870896efa7
+  support: supports
+  summary: Taxon and current scientific name resolve; taxonomy is not evidence of
+    prevalence.
+- evidence_id: taxon-287
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=287&retmode=xml
+  locator: Exact NCBI Taxonomy identity and names
+  accessed_at: '2026-10-11T06:27:28Z'
+  snapshot_sha256: 8b8b55851c1c84bc3d3eb9cbc0e9dfc52d784a43b6c07d0f7aaa540be42697cf
+  support: supports
+  summary: Taxon and current scientific name resolve; taxonomy is not evidence of
+    prevalence.
+- evidence_id: taxon-264462
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=264462&retmode=xml
+  locator: Exact NCBI Taxonomy identity and names
+  accessed_at: '2026-10-11T06:27:28Z'
+  snapshot_sha256: 2f4a3f21c9f8c729a4d9ab59be950742d7c1aa7dc6d45a33fe4290bdedbde2ca
+  support: supports
+  summary: Taxon and current scientific name resolve; taxonomy is not evidence of
+    prevalence.
+- evidence_id: adapter-inventory
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/adapter.log
+  accessed_at: '2026-10-11T06:31:39Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: Live 28-dataset iModulonDB inventory; no matching Caulobacter coverage.
+    E. coli and P. aeruginosa searches were inspected.
+- evidence_id: hospenthal
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro.2017.40
+  locator: 'Author manuscript pages 9-14: T4P biogenesis, machinery, filament and
+    function'
+  accessed_at: '2026-10-11T05:17:41Z'
+  snapshot_sha256: 5c2dbbd1f8f92499fdda542390ccd97ce5e82ee7c2f785c61d7a118ee82a2a7d
+  support: supports
+  summary: Major/minor pilins form the filament. Cytoplasmic PilB/PilT belong to the
+    motor subcomplex with PilC; the detailed motor account uses type IVa models.
+- evidence_id: skerker
+  kind: primary_source
+  reference: DOI:10.1073/pnas.121171698
+  locator: Abstract, Methods, Results and Discussion
+  accessed_at: '2026-10-11T06:27:04Z'
+  snapshot_sha256: 9368e051d922e74cbddd61be6a8b85360d8a95ce36942611360ce254a64ecc5c
+  support: supports
+  summary: Direct Pseudomonas imaging supports extension, distal attachment, force
+    and retraction-driven cell movement.
+- evidence_id: merz
+  kind: primary_source
+  reference: DOI:10.1038/35024105
+  locator: Primary abstract
+  accessed_at: '2026-10-11T06:24:43Z'
+  snapshot_sha256: 43b3fa6ad96295c0388aeb1d822465b265b335595a16acfc87f474909aabf43a
+  support: supports
+  summary: Neisseria optical-tweezer experiments establish PilT-dependent retraction
+    and motility, not PilT filament membership.
+- evidence_id: bdellovibrio
+  kind: primary_source
+  reference: DOI:10.1038/s41564-023-01401-2
+  locator: Attack-phase results, Figure 1 caption, attachment results and Methods
+  accessed_at: '2026-10-11T06:27:04Z'
+  snapshot_sha256: 231e87b13effe61c6ef8151e91c3d886ee64c567f69f32144c92c0ffd223fc92
+  support: supports
+  summary: HD100 cryo-ET observes pili and distinguishes them from empty basal machines;
+    uncertain non-piliated structures are not used as pilus identity proof.
+- evidence_id: cryo-dataset
+  kind: authority
+  reference: /private/tmp/csm-review-20261011T062301Z/cryo-dataset.json
+  accessed_at: '2026-10-11T06:31:39Z'
+  snapshot_sha256: 33ecb09fd8d1440b3804f27f5ee682ebc061188e6ac58b1b5438a7949209707f
+  support: context_only
+  summary: 'Exact official GraphQL metadata: dataset 10155, run 7978, annotation 30707
+    with eight GO:0044096 objects, manual IMOD labeling and both quality flags true.'
+- evidence_id: cryo-run
+  kind: authority
+  reference: /private/tmp/csm-review-20261011T062301Z/cryo-run.json
+  accessed_at: '2026-10-11T06:31:39Z'
+  snapshot_sha256: f94da0f7220eb742a38647ba47cd85dcaebf36c39162df6957733e932224d293
+  support: context_only
+  summary: 'Exact official GraphQL metadata: dataset 10155, run 7978, annotation 30707
+    with eight GO:0044096 objects, manual IMOD labeling and both quality flags true.'
+- evidence_id: cryo-annotation
+  kind: authority
+  reference: /private/tmp/csm-review-20261011T062301Z/cryo-annotation.json
+  accessed_at: '2026-10-11T06:31:39Z'
+  snapshot_sha256: a92d6209e73fc7a22cc6aff7fb591958eda45e461f5da1da46f73557eeff200d
+  support: context_only
+  summary: 'Exact official GraphQL metadata: dataset 10155, run 7978, annotation 30707
+    with eight GO:0044096 objects, manual IMOD labeling and both quality flags true.'
+- evidence_id: pilB-adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/adapter-pilB.log
+  accessed_at: '2026-10-11T06:31:39Z'
+  snapshot_sha256: b3ff8b47b8768c945c82d609f80fdee253e29c46f3a3afcebd36904d276a9e81
+  support: context_only
+  summary: p_aeruginosa/precise364/PA4526 gene hit, no module hit; not composition
+    proof.
+- evidence_id: pilT-adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T062301Z/adapter-pilT.log
+  accessed_at: '2026-10-11T06:31:39Z'
+  snapshot_sha256: d9490e1a2c4e3f28618a3e87e44a384fa37558ffaeffc38cfa08b9a9e60471c6
+  support: context_only
+  summary: p_aeruginosa/precise364/PA0395 gene hit, no module hit; not composition
+    proof.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact filament and functional identity
+  outcome: supported
+  target_ids:
+  - GO:0044096
+  evidence_ids:
+  - go-0044096
+  - go-0043107
+  - hospenthal
+  summary: GO identities, pilus parentage, qualified bacterial distribution and variable
+    functions are supported.
+- assessment_id: composition
+  area: grounding
+  topic: Components and motor scope
+  outcome: concern
+  target_ids:
+  - GO:0044096
+  evidence_ids:
+  - record
+  - hospenthal
+  - rules
+  summary: PilB and PilT are incorrectly CONSTITUENT rows for a surface-filament record.
+    Their motor functions should remain in the model-scoped graph, without claiming
+    structural essentiality of filament members.
+- assessment_id: graph
+  area: evidence
+  topic: All five functional edges
+  outcome: supported
+  target_ids:
+  - GO:0044096
+  evidence_ids:
+  - hospenthal
+  - skerker
+  - merz
+  summary: Evidence supports the type IVa model with distinct extension/retraction
+    motors, surface attachment and movement; not a uniform mechanism for all type
+    IV subtypes.
+- assessment_id: dataset
+  area: provenance
+  topic: HD100 and exact metadata-only dataset
+  outcome: supported
+  target_ids:
+  - GO:0044096
+  evidence_ids:
+  - bdellovibrio
+  - cryo-dataset
+  - cryo-run
+  - cryo-annotation
+  - taxon-264462
+  summary: Exact taxon, publication, run, object identity/count, methods, dates and
+    flags agree. Dataset-level component is unreported; the exact annotation establishes
+    the GO link. No volume was downloaded.
+- assessment_id: provenance
+  area: provenance
+  topic: History, discussions and optional slots
+  outcome: supported
+  target_ids:
+  - GO:0044096
+  evidence_ids:
+  - record
+  - rules
+  summary: Prior fixes, both history surfaces and PROPOSED status are intact. No empty
+    optional field is a finding. No exact-target canonical predecessor was found by
+    ignored-inclusive review-root search; adjacent Y-link grounding reviews concern
+    the whole transition-zone record.
+findings:
+- finding_id: F1
+  issue_key: type-iv-pilus-filament-motor-boundary
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Keep cytoplasmic motors out of the pilus filament composition
+  description: The record denotes GO:0044096, an extracellular pilin filament, but
+    calls cytoplasmic PilB and PilT CONSTITUENT components and assigns formation essentiality.
+    The cited source separates the motor subcomplex from the filament. The graph also
+    needs explicit type IVa model scope so the dual-motor account is not generalized
+    to Tad/other type IV systems.
+  target_ids:
+  - GO:0044096
+  field_paths:
+  - components[1]
+  - components[2]
+  - causal_graphs[0]
+  evidence_ids:
+  - record
+  - hospenthal
+  - merz
+  - rules
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/type_iv_pilus.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Material model-to-class scope or composition-boundary defect.
+actions:
+- action_id: A1
+  description: Keep cytoplasmic motors out of the pilus filament composition
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0044096
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/type_iv_pilus.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Remove motor constituent rows and their component_ref links while retaining evidenced
+    motor nodes and edges.
+  - Record the exclusion rationale in a RESOLVED discussion, and explicitly scope
+    the graph to the separate-motor type IVa model.
+  - Preserve the valid major-pilin constituent and exact CryoET metadata unchanged;
+    do not replace removed motors with invented filament constituents.
+  - Use guarded curation, append Codex curation and EDIT history, retain PROPOSED
+    and all earlier histories/reviews/discussion rationale, regenerate affected products,
+    and pass focused tests plus native QC.
+limitations:
+- Same-agent review, not human sign-off or completion of the 909-record goal.
+- Identifier resolver skips and label pairs without adapters are not certified. Exact
+  target GO/taxon authorities were separately inspected for the scientific reviews.
+- Full QC uses the verified exact-baseline CI run. No raw experimental data or movies
+  were reanalysed.
+- Merz 2000 was assessed at primary-abstract level. Hospenthal was reread from the
+  authenticated author manuscript. CryoET assessment is metadata-only; raw volumes
+  and annotation geometry were not inspected.

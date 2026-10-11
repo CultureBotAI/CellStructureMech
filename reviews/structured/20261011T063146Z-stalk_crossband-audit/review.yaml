@@ -1,0 +1,263 @@
+schema_version: 1.0.0
+review_id: 20261011T063146Z-stalk_crossband-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Stalk crossband: evidence and provenance review'
+started_at: '2026-10-11T06:28:55Z'
+finished_at: '2026-10-11T06:31:46Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent review before mutation; not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: false
+summary: Concrete issues observed; save immutable findings before separately authorized
+  curation.
+source:
+  git_revision: 617a24ae7989e21e482bb32d3d527b05d5b475b6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/stalk_crossband.yaml
+    sha256: 33a5c6fe2e72c5a86bd4056f8b8f35854f8da953d34b5664a6529f06d84feca4
+    role: target
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/stalk_crossband/2026-09-11T033043Z-codex-c3a7c2.yaml
+    sha256: 58f27cd1e0a5c7dafed30a5887dc40f9dd747ea23a8a8b90996f69f45a3b6b8b
+    role: context
+  - path: history/records/stalk_crossband/2026-09-11T033759Z-codex-f4cbcb.yaml
+    sha256: 02f764cfd4948b17ea6d7407c3198c3911f82b3982cca440d6e44b1613566ae9
+    role: context
+  - path: history/records/stalk_crossband/2026-10-11T055305Z-codex-608143.yaml
+    sha256: 5cc713fc37925a54eb09c747333951126d241819da8408d8b9844730c6e5424e
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261011T055235Z-stalk_crossband-audit/review.yaml
+    sha256: 77b98224e32ed4f65e7fdc67524a4c6fdc85cdd90e8b0e51d580322bb1bbebf8
+    role: context
+  - path: reviews/structured/20261011T060948Z-stalk_crossband-disposition/review.yaml
+    sha256: 526fdc31053ded4b5a2773b582e3c85115a2b5389c298f1615b0f62c28021907
+    role: context
+targets:
+- target_id: cellstructuremech:stalk_crossband
+  path: data/structures/appendage/stalk_crossband.yaml
+  label: stalk crossband
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/stalk_crossband.yaml
+    role: maintained scientific record
+scope:
+  description: Discussion rationale preservation only; the previous scientific review
+    is not repeated.
+  selection: A bounded follow-up to the previous merged fix.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:stalk_crossband
+checks:
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:26:53Z to 2026-10-11T06:27:08Z; log SHA-256 ec4802743686962e3e9ec0534e2a9fb4ca76e92b15ecc0cb7f607d8ce80a96a8
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T06:27:08Z to 2026-10-11T06:28:20Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:28:20Z to 2026-10-11T06:28:37Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4011\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T06:28:37Z to 2026-10-11T06:29:27Z; log SHA-256 dc5ed8534cf356581f142af6232079d99cab71fde9815408309aac234b468667
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:29:27Z to 2026-10-11T06:30:11Z; log SHA-256 5614362bbb86fa7e780a9ccce9e9eaced4fbf482469bd124dcd222da72633c46
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:30:11Z to 2026-10-11T06:30:11Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: contract
+  name: contract
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; scientific support assessed separately.
+  scope_note: 2026-10-11T06:24:22Z to 2026-10-11T06:25:22Z; log SHA-256 1bfa2c402d877089e25c6111113d3b329d85327841ca8ad98ce94631c2845de1
+- check_id: qc
+  name: Exact-baseline authoritative CI QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  command: gh run view 38117523970 --json status,conclusion,headSha,event,name,url,jobs;
+    gh run view 38117523970 --log
+  exit_code: 0
+  summary: Full QC passed on this exact unchanged baseline, including generated products;
+    not a newly run local full QC.
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38117523970;
+    full-log SHA-256 483d49589927059d90b64d291148e5e3c0461580ef9fffdf21fb2add7f56f4b3
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/stalk_crossband.yaml
+  accessed_at: '2026-10-11T06:31:46Z'
+  snapshot_sha256: 33a5c6fe2e72c5a86bd4056f8b8f35854f8da953d34b5664a6529f06d84feca4
+  support: context_only
+  summary: Full native YAML read before findings; original status and histories captured.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T06:31:46Z'
+  snapshot_sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+  support: context_only
+  summary: Requires exact claim-level scope, constituent/machinery distinction and
+    append-only discussion rationale.
+- evidence_id: old-record
+  kind: record_content
+  reference: git:aa74419b62aaba390ab49cb40d430b394c933baa:data/structures/appendage/stalk_crossband.yaml
+  accessed_at: '2026-10-11T06:31:46Z'
+  snapshot_sha256: 1a86dbf57b3ed4cecb2b5aed03eaf49f6408eff1b2a029a5516880b0ee1206d2
+  support: context_only
+  summary: Pre-PR2180 native text independently read through git show.
+assessments:
+- assessment_id: rationale
+  area: provenance
+  topic: Existing discussion rationale
+  outcome: concern
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  evidence_ids:
+  - record
+  - old-record
+  - rules
+  summary: PR2180 replaced rather than appended the original stp_abcd_grounding rationale.
+    Scientific cohort changes are outside this bounded assessment.
+findings:
+- finding_id: F1
+  issue_key: stalk-crossband-grounding-rationale-preservation
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Restore the original grounding discussion rationale
+  description: The merged stalk fix replaced the original stp_abcd_grounding rationale
+    with a new explanation. CURATION.md requires preserving the original rationale
+    and appending new reasoning. Git history retains the old bytes, but the maintained
+    discussion no longer does; this is a new provenance issue, not a reopening of
+    the resolved Stp essentiality finding.
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  field_paths:
+  - discussions[0].rationale
+  evidence_ids:
+  - record
+  - old-record
+  - rules
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/stalk_crossband.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: minor
+  normalization_reason: Bounded citation or append-only provenance defect; biological
+    identity remains valid.
+actions:
+- action_id: A1
+  description: Restore the original grounding discussion rationale
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:stalk_crossband
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/stalk_crossband.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Restore the exact original rationale as a prefix and append the current scaffold/sealing
+    explanation with a dated reassessment marker.
+  - Retain discussion identity, original posed date, OPEN status, updated attachments,
+    and all earlier curation/review/history files.
+  - Use guarded curation, append Codex curation and EDIT history, retain PROPOSED
+    and all earlier histories/reviews/discussion rationale, regenerate affected products,
+    and pass focused tests plus native QC.
+limitations:
+- Same-agent review, not human sign-off or completion of the 909-record goal.
+- Identifier resolver skips and label pairs without adapters are not certified. Exact
+  target GO/taxon authorities were separately inspected for the scientific reviews.
+- Full QC uses the verified exact-baseline CI run. No raw experimental data or movies
+  were reanalysed.
+- The defect was first noticed while rereading curation guidance; formal source capture
+  precedes this saved bounded assessment, not the initial lead. No new whole-record
+  scientific completion is claimed.
