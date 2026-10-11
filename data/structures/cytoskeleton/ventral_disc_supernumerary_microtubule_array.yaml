@@ -2,9 +2,10 @@ identifier: GO:0097596
 label: ventral disc supernumerary microtubule array
 structure_category: CYTOSKELETON
 structure_kind: FILAMENT
-definition: A partial left-handed spiral array of microtubules that lies generally
-  dorsal to the main ventral disc microtubule array in Giardia species trophozoites.
-definition_source: GO:0097596
+definition: A partial spiral microtubule array associated with the Giardia trophozoite
+  ventral disc and distinct from its main microtubule array. Schwartz et al. 2012
+  reconstructed a short right-handed fragment lying ventral to the main array.
+definition_source: DOI:10.1371/journal.pone.0043783
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-15T16:31:51Z'
@@ -25,6 +26,13 @@ curation_history:
   changes: 'Addressed PR #999 review issue #1001 by removing the structural topology
     function and generic tubulin assembly edge, then retargeting the graph to the
     GO-backed supernumerary-array topology relation.'
+  llm_assisted: true
+- timestamp: '2026-10-11T17:03:39Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2229: Bound the supernumerary-array orientation to Schwartz
+    2012 and preserved the GO/Hagen source conflict explicitly; did not restore unsupported
+    assembly or function.'
   llm_assisted: true
 part_of:
 - GO:0097597
@@ -69,19 +77,28 @@ evidence:
   notes: Gene Ontology cellular-component term for the Giardia ventral-disc supernumerary
     microtubule array.
 - reference: DOI:10.1371/journal.pone.0043783
-  notes: Schwartz, Heumann, Dawson and Hoenger 2012, 'A Detailed, Hierarchical Study
-    of Giardia lamblia's Ventral Disc Reveals Novel Microtubule-Associated Protein
-    Complexes', PLOS ONE.
+  notes: Schwartz et al. 2012 reconstructed Giardia ventral-disc architecture. Figure
+    1F places the supernumerary array ventral to the main array, and Results describe
+    a short right-handed fragment.
+- reference: DOI:10.1371/journal.pntd.0001442
+  notes: Hagen et al. 2011 describe a partial left-handed supernumerary array; Figure
+    5 reports tagged supernumerary proteins slightly dorsal or ventral to the main
+    array. These descriptions are retained as a conflict with Schwartz et al. 2012,
+    not combined into a universal geometry.
 causal_graphs:
 - graph_id: giardia_supernumerary_microtubule_array_topology
-  title: Giardia supernumerary microtubules lie dorsal to the main ventral-disc array
-  description: In Giardia, the supernumerary microtubule array is a partial left-handed
-    spiral that lies generally dorsal to the main ventral-disc microtubule array.
+  title: Supernumerary-array topology in the Schwartz 2012 reconstruction
+  description: In the Giardia reconstruction reported by Schwartz et al. 2012, the
+    supernumerary microtubules form a short right-handed spiral fragment ventral to
+    the main ventral-disc array.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph records GO-backed topology for the named supernumerary microtubule
-    array while leaving its exact accessory microtubule-associated proteins and assembly
-    order unresolved.
+  scope_notes: This NONMECHANISTIC topology graph is bounded to the Schwartz et al.
+    2012 reconstruction, not a universal orientation claim. Current GO describes a
+    generally dorsal, left-handed array, whereas Hagen et al. 2011 describe a left-handed
+    partial array with slightly dorsal or ventral localization. The disagreement is
+    retained explicitly; exact accessory proteins, assembly order and function remain
+    unresolved.
   nodes:
   - node_id: supernumerary_microtubule_array
     label: ventral disc supernumerary microtubule array
@@ -97,14 +114,14 @@ causal_graphs:
     grounding: GO:0097597
   edges:
   - subject: supernumerary_microtubule_array
-    predicate: lies dorsal to
+    predicate: lies ventral to
     object: ventral_disc_microtubule_array
-    description: The supernumerary microtubule array lies generally dorsal to the
-      main Giardia ventral-disc microtubule array.
+    description: In the reconstruction shown by Schwartz et al. 2012 in Figure 1F,
+      the supernumerary microtubules lie ventral to the main ventral-disc microtubules.
     evidence:
-    - reference: GO:0097596
-      notes: Gene Ontology defines GO:0097596 as dorsal to the main ventral-disc microtubule
-        array.
+    - reference: DOI:10.1371/journal.pone.0043783
+      notes: Figure 1F and its caption place the yellow supernumerary array ventral
+        to the white main array; Results describe a short right-handed spiral fragment.
   - subject: supernumerary_microtubule_array
     predicate: is part of
     object: ventral_disc
@@ -133,3 +150,35 @@ discussions:
       curation pass.
   posed_by: codex
   posed_date: '2026-09-15'
+- discussion_id: supernumerary_array_orientation_conflict
+  prompt: Preserve conflicting source descriptions of supernumerary-array position
+    and handedness.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - definition
+  - causal_graphs#giardia_supernumerary_microtubule_array_topology
+  rationale: GO:0097596 describes a partial left-handed array generally dorsal to
+    the main array. The cited Schwartz et al. 2012 reconstruction instead shows a
+    ventral array in Figure 1F and describes a short right-handed fragment in Results.
+    Hagen et al. 2011 describe a left-handed partial array with slightly dorsal or
+    ventral localization in Figure 5.
+  resolution_note: Keep exact GO identity and neutral partial-array identity; bound
+    the right-handed/ventral description and graph edge to the Schwartz 2012 reconstruction.
+    The sources are not reconciled into a universal handedness or dorsal/ventral rule.
+    Prior removal of unsupported generic assembly and function remains in force; this
+    resolution concerns local evidence representation, not a settled biological explanation
+    of the disagreement.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0043783
+    notes: Whole-cell architecture Results and Figure 1F specify the reconstructed
+      right-handed, ventral supernumerary array.
+  - reference: DOI:10.1371/journal.pntd.0001442
+    notes: Introduction and Figure 5 describe the left-handed partial array and dorsal-or-ventral
+      localization.
+  - reference: GO:0097596
+    notes: The current source definition gives generally dorsal, left-handed topology;
+      that wording is not silently treated as agreement with the primary reconstruction.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'
