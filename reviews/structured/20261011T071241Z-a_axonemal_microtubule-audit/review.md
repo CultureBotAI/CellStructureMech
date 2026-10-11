@@ -1,0 +1,532 @@
+# A axonemal microtubule: scientific record review
+
+- Review: 20261011T071241Z-a_axonemal_microtubule-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-11T07:03:17Z
+- Finished UTC: 2026-10-11T07:12:41Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Entire native record assessed; concrete findings saved before separately authorized curation.
+
+## Scope And Provenance
+
+Entire native YAML: identity, synonyms, hierarchy, composition, taxonomy, functions, each causal edge, optional resources and provenance.
+
+Selection: One resolved sequential target in the all-record goal; not a sampled verdict for other records.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base d9cea09379282886022064c57c012efe0db3beaf.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0097649 | data/structures/cytoskeleton/a_axonemal_microtubule.yaml | maintained | A axonemal microtubule |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0097649 | Deterministic command passed; not scientific verification. |
+| strict | passed | True | GO:0097649 | Deterministic command passed; not scientific verification. |
+| snippets | passed | True | GO:0097649 | No verbatim snippets. This does not validate paraphrases. |
+| history | passed | True | GO:0097649 | Deterministic command passed; not scientific verification. |
+| labels | passed | True | GO:0097649 | id↔label correspondence summary:<br>          OK_CANONICAL: 3544<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| traits | passed | True | GO:0097649 | Deterministic command passed; not scientific verification. |
+| curies | passed | True | GO:0097649 | resolver control: every resolver accepts a known id and rejects a fabricated one<br>resolving 6 CHEBI identifier(s)...<br>resolving 77 DOI identifier(s)...<br>resolving 30 GO identifier(s)...<br>resolving 1 InterPro identifier(s)...<br>resolving 12 NCBITaxon identifier(s)...<br>resolving 1 PMID identifier(s)...<br>resolving 2 uniprot.location identifier(s)...<br><br>identifier liveness summary:<br>  OK             4012<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| reviews | passed | True | GO:0097649 | Deterministic command passed; not scientific verification. |
+| diff | passed | True | GO:0097649 | Deterministic command passed; not scientific verification. |
+| contract | passed | True | GO:0097649 | Deterministic command passed; not scientific verification. |
+| Exact-baseline authoritative CI QC | passed | True | GO:0097649 | Full native QC passed on this exact unchanged input revision, including generated products; not newly run local full QC. |
+
+## Scientific And Domain Assessments
+
+### Identity, synonym, topology, taxonomy, function and graph
+
+evidence: supported. Targets: GO:0097649.
+
+Exact A-axonemal-microtubule identity and broad A-tubule synonym are valid. Axonemal MT parent, doublet parthood, inner-sheath child, B-tubule junctions and dynein/spoke attachments are supported. Chlamydomonas scope and explicit deferred molecular details avoid extrapolation. No native image, dataset, component accession or numeric measurement is asserted.
+
+### Discussion rationale preservation
+
+provenance: concern. Targets: GO:0097649.
+
+The inner-sheath update preserved the original question date but replaced its rationale rather than appending the narrowing.
+
+### Prior history, omitted optional fields and review coverage
+
+provenance: supported. Targets: GO:0097649.
+
+Both history surfaces and previous issue fixes were read. No empty optional field or acknowledged unknown is counted as a finding. Ignored-inclusive canonical-review search found no exact-target predecessor; existing legacy reports remain historical. No claims of reviewing adjacent records are made.
+
+## Findings
+
+### F1: Restore the original A-tubule discussion rationale
+
+minor / open / confirmed; issue key: a-tubule-original-rationale-preservation.
+
+Commit d1389131 replaced the original resolve_a_tubule_protofilaments_and_mips rationale while narrowing the prompt after adding GO:0160111. The narrowing and new biological content are valid, but the maintained rationale violates the append-only provenance rule.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Restore the original A-tubule discussion rationale
+
+- Restore the exact original rationale as a prefix and retain the current complete rationale as a dated reassessment.
+- Preserve the narrowed prompt, original posed date, OPEN status, GO:0160111 child and all dynein/spoke graph edges.
+- Use guarded curation, append Codex curation and EDIT history, retain PROPOSED, previous histories/reviews and discussion rationale; regenerate affected products and pass focused tests plus native QC.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/a_axonemal_microtubule.yaml | context_only | Full native YAML read and exact inputs captured before the formal assessment. Initial source leads preceded some captures. |
+| rules | docs/CURATION.md | context_only | Requires claim-specific evidence, is-a versus parthood, constituent/machinery distinction and append-only rationale. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000147,GO:0001534,GO:0005737,GO:0005826,GO:0005856,GO:0005879,GO:0005885,GO:0005938,GO:0015629,GO:0030479,GO:0030864,GO:0036156,GO:0036157,GO:0061645,GO:0097545,GO:0097649,GO:0097650,GO:0099079,GO:0099513,GO:0110165,GO:0160111,GO:0160113,GO:0160114; Current native definitions, synonyms, obsolescence flags and typed child relationships | supports | Exact native GO identities and roles checked. Reverse child lists confirm is-a versus part_of; untyped ancestor reachability alone is not treated as an is-a assertion. |
+| taxa | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=1423%2C284812%2C3055%2C4896%2C4932%2C559292; Top-level requested NCBI Taxon entries | supports | The six requested taxa and reference-strain names resolve. Taxonomy is not evidence of structure prevalence. |
+| adapter | /private/tmp/csm-review-20261011T070221Z/adapter.log | context_only | Live 28-dataset inventory: no matching yeast or Chlamydomonas dataset. Bacillus searches are described separately; noncoverage is not negative biology. |
+| ma | DOI:10.1016/j.cell.2019.09.030; Results, Figures 1 and 6 captions, network/junction sections and strain/sample Methods | supports | Chlamydomonas isolated doublets have the complete A tubule and partial B tubule, inner and outer junctions, MIP networks and A-tubule attachments. Coarse current graph is supported without claiming all molecular positions or unprocessed in-situ imaging. |
+| nicastro | DOI:10.1126/science.1128618; Primary abstract only | supports | Cryoelectron tomography of Chlamydomonas and sea-urchin axonemes establishes architecture and internal doublet densities; no finer claim relies solely on this abstract. |
+| original | git:1ebfb77f:data/structures/cytoskeleton/a_axonemal_microtubule.yaml | context_only | Original discussion inspected via git show; later inner-sheath commit replaced its rationale. |
+
+## Limits And Additional Notes
+
+- Same-agent assessment; no independent or human sign-off and no promotion of PROPOSED.
+- Identifier check has 251 skipped identifiers; label check has 603 pairs without adapters. Exact target authorities were inspected separately; global skipped namespaces are not certified.
+- Full QC uses the verified exact-baseline merge-group CI run. No raw experimental data or movies were reanalysed.
+- Europe PMC fullTextXML failed for several sources; official PMC full HTML supplied the readable fallback. Access tiers are specified per source below.
+- Nicastro 2006 was inspected at primary-abstract level; GO and Ma 2019 full text provide the coarse claim support. Fine MIP composition remains an acknowledged TODO, not a defect.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T071241Z-a_axonemal_microtubule-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'A axonemal microtubule: scientific record review'
+started_at: '2026-10-11T07:03:17Z'
+finished_at: '2026-10-11T07:12:41Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent review before curation, not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Entire native record assessed; concrete findings saved before separately
+  authorized curation.
+source:
+  git_revision: d9cea09379282886022064c57c012efe0db3beaf
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 64862db2087298ae832b8a8410185349cc277151af31d88ce231e43201ab9440
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+    sha256: 69d877184d26cad12996c067faf588ed2aae4c33518a904a75459cd8c80de62b
+    role: target
+  - path: data/structures/cytoskeleton/actin_body.yaml
+    sha256: b0abd6f5cb40fec99ab2d5a23a56b7307041f4ac8eda2a32b9db8d57680f22ea
+    role: context
+  - path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+    sha256: fcbfc85680d23109790a85ffb36bc4741fd234d0b8ea0e08daeb3a968a83a98d
+    role: context
+  - path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+    sha256: e5f2ff579535048e3d07b5b7b1284ce798cc61bc15f035a0bdf9eefad82af972
+    role: context
+  - path: data/structures/cytoskeleton/alfa_filament.yaml
+    sha256: 0de91b02762d26df788d87897737eafac9de142277c77712ce4d2892c6156ffd
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+    sha256: 23bcdab335f1f6b6f39da802471c2336ab47ed2083b4986133b9558f42d4f7c0
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_doublet_microtubule.yaml
+    sha256: 6a44e0a145c3ba58c9649ca75093614cd97001a451021dc2becf8c170824b270
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_microtubule.yaml
+    sha256: 480cd29d1f2e87c07c19dd8d60e50768cdcce29223b28ce2df1d4c956dc46282
+    role: context
+  - path: docs/CURATION.md
+    sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/a_axonemal_microtubule/2026-09-23T171258Z-claude-code-e68e55.yaml
+    sha256: f1649edbe615d3e9edc180628b02c89411cfa544196076629840578f2ae41f0a
+    role: context
+  - path: history/records/a_axonemal_microtubule/2026-09-23T172416Z-claude-code-55b697.yaml
+    sha256: cf039672ef5471c092ab9483845d733edc1d52d2a623f428d080c7826c18db31
+    role: context
+  - path: history/records/a_axonemal_microtubule/2026-09-23T181240Z-claude-code-cdd7da.yaml
+    sha256: d62229e60036d4a79c05fe92259e9bab47a00cc7d9fc3566493f50ec225a65d3
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0097649
+  path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+  label: A axonemal microtubule
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire native YAML: identity, synonyms, hierarchy, composition, taxonomy,
+    functions, each causal edge, optional resources and provenance.'
+  selection: One resolved sequential target in the all-record goal; not a sampled
+    verdict for other records.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0097649
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:03:19Z to 2026-10-11T07:03:22Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:03:22Z to 2026-10-11T07:03:27Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+    --report /private/tmp/csm-review-20261011T070221Z/a_axonemal_microtubule-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets. This does not validate paraphrases.
+  scope_note: 2026-10-11T07:03:27Z to 2026-10-11T07:03:50Z; log SHA-256 ecd0efc8a56a310b96762f36b527925f72a30e7945c22e9cb19b4442726aca15
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:05:30Z to 2026-10-11T07:05:43Z; log SHA-256 e836c3a60d88b76a8f3886dd6bf8d339fcbd2229409e99019ae17006c6c6f673
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T07:05:43Z to 2026-10-11T07:07:05Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:07:05Z to 2026-10-11T07:07:33Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\nresolving 6 CHEBI identifier(s)...\nresolving 77 DOI identifier(s)...\n\
+    resolving 30 GO identifier(s)...\nresolving 1 InterPro identifier(s)...\nresolving\
+    \ 12 NCBITaxon identifier(s)...\nresolving 1 PMID identifier(s)...\nresolving\
+    \ 2 uniprot.location identifier(s)...\n\nidentifier liveness summary:\n  OK  \
+    \           4012\n  SKIPPED         251\n\nEvery identifier resolves at its issuing\
+    \ authority."
+  scope_note: 2026-10-11T07:07:33Z to 2026-10-11T07:09:55Z; log SHA-256 e06f3f324434626cb1076037e7014bae54ba5e379333ec2cb3f4ef1b0e8c9ee1
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:09:55Z to 2026-10-11T07:10:42Z; log SHA-256 c3d95a55b38dffd1274c02af55e2b3f708b154d2f63e072edb88aba988128971
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:10:42Z to 2026-10-11T07:10:42Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: contract
+  name: contract
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Deterministic command passed; not scientific verification.
+  scope_note: 2026-10-11T07:03:13Z to 2026-10-11T07:04:12Z; log SHA-256 5ddb5253163bef2fb3581b178616966b159be8fb066c81fdfe022c6d78405a37
+- check_id: qc
+  name: Exact-baseline authoritative CI QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097649
+  command: gh run view 38119529229 --json status,conclusion,headSha,event,name,url,jobs;
+    gh run view 38119529229 --log
+  exit_code: 0
+  summary: Full native QC passed on this exact unchanged input revision, including
+    generated products; not newly run local full QC.
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38119529229;
+    full-log SHA-256 3fbc61430d4f984ff00dcdd8fea2fa5ca825a06e78e302342089a4fef8294c49
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+  accessed_at: '2026-10-11T07:12:41Z'
+  snapshot_sha256: 69d877184d26cad12996c067faf588ed2aae4c33518a904a75459cd8c80de62b
+  support: context_only
+  summary: Full native YAML read and exact inputs captured before the formal assessment.
+    Initial source leads preceded some captures.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T07:12:41Z'
+  snapshot_sha256: c3e482fbf381edcf0238e579648b779c3a8803a1d888b89397ad6fc8808dd07d
+  support: context_only
+  summary: Requires claim-specific evidence, is-a versus parthood, constituent/machinery
+    distinction and append-only rationale.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000147,GO:0001534,GO:0005737,GO:0005826,GO:0005856,GO:0005879,GO:0005885,GO:0005938,GO:0015629,GO:0030479,GO:0030864,GO:0036156,GO:0036157,GO:0061645,GO:0097545,GO:0097649,GO:0097650,GO:0099079,GO:0099513,GO:0110165,GO:0160111,GO:0160113,GO:0160114
+  locator: Current native definitions, synonyms, obsolescence flags and typed child
+    relationships
+  accessed_at: '2026-10-11T07:04:57Z'
+  snapshot_sha256: 71f14150527ed018024bb5682b4d3b88750c50919ca386ca9bac5766e8df4480
+  support: supports
+  summary: Exact native GO identities and roles checked. Reverse child lists confirm
+    is-a versus part_of; untyped ancestor reachability alone is not treated as an
+    is-a assertion.
+- evidence_id: taxa
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1423%2C284812%2C3055%2C4896%2C4932%2C559292
+  locator: Top-level requested NCBI Taxon entries
+  accessed_at: '2026-10-11T07:05:02Z'
+  snapshot_sha256: 785915aef9110dcf4728409ac02274f8c858aba27b08779ae5e3b0d2c5a37108
+  support: supports
+  summary: The six requested taxa and reference-strain names resolve. Taxonomy is
+    not evidence of structure prevalence.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/adapter.log
+  accessed_at: '2026-10-11T07:12:41Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: 'Live 28-dataset inventory: no matching yeast or Chlamydomonas dataset.
+    Bacillus searches are described separately; noncoverage is not negative biology.'
+- evidence_id: ma
+  kind: primary_source
+  reference: DOI:10.1016/j.cell.2019.09.030
+  locator: Results, Figures 1 and 6 captions, network/junction sections and strain/sample
+    Methods
+  accessed_at: '2026-10-11T07:05:01Z'
+  snapshot_sha256: da58fc1d507070c2a51f1a87287cf2210df6616a0cd05e933b37e9ee081d580c
+  support: supports
+  summary: Chlamydomonas isolated doublets have the complete A tubule and partial
+    B tubule, inner and outer junctions, MIP networks and A-tubule attachments. Coarse
+    current graph is supported without claiming all molecular positions or unprocessed
+    in-situ imaging.
+- evidence_id: nicastro
+  kind: primary_source
+  reference: DOI:10.1126/science.1128618
+  locator: Primary abstract only
+  accessed_at: '2026-10-11T07:03:44Z'
+  snapshot_sha256: dc5a628f1cfe67da937413ea897415a623f29682c4fcc83f9a7540d564467a27
+  support: supports
+  summary: Cryoelectron tomography of Chlamydomonas and sea-urchin axonemes establishes
+    architecture and internal doublet densities; no finer claim relies solely on this
+    abstract.
+- evidence_id: original
+  kind: record_content
+  reference: git:1ebfb77f:data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+  accessed_at: '2026-10-11T07:12:41Z'
+  snapshot_sha256: 2275b63b64ca99958fac185dc313de99055d16ab515bb6a27039847f5fc4df3b
+  support: context_only
+  summary: Original discussion inspected via git show; later inner-sheath commit replaced
+    its rationale.
+assessments:
+- assessment_id: biology
+  area: evidence
+  topic: Identity, synonym, topology, taxonomy, function and graph
+  outcome: supported
+  target_ids:
+  - GO:0097649
+  evidence_ids:
+  - record
+  - go
+  - taxa
+  - ma
+  - nicastro
+  summary: Exact A-axonemal-microtubule identity and broad A-tubule synonym are valid.
+    Axonemal MT parent, doublet parthood, inner-sheath child, B-tubule junctions and
+    dynein/spoke attachments are supported. Chlamydomonas scope and explicit deferred
+    molecular details avoid extrapolation. No native image, dataset, component accession
+    or numeric measurement is asserted.
+- assessment_id: provenance
+  area: provenance
+  topic: Discussion rationale preservation
+  outcome: concern
+  target_ids:
+  - GO:0097649
+  evidence_ids:
+  - original
+  - record
+  - rules
+  summary: The inner-sheath update preserved the original question date but replaced
+    its rationale rather than appending the narrowing.
+- assessment_id: resources-provenance
+  area: provenance
+  topic: Prior history, omitted optional fields and review coverage
+  outcome: supported
+  target_ids:
+  - GO:0097649
+  evidence_ids:
+  - record
+  - rules
+  summary: Both history surfaces and previous issue fixes were read. No empty optional
+    field or acknowledged unknown is counted as a finding. Ignored-inclusive canonical-review
+    search found no exact-target predecessor; existing legacy reports remain historical.
+    No claims of reviewing adjacent records are made.
+findings:
+- finding_id: F1
+  issue_key: a-tubule-original-rationale-preservation
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Restore the original A-tubule discussion rationale
+  description: Commit d1389131 replaced the original resolve_a_tubule_protofilaments_and_mips
+    rationale while narrowing the prompt after adding GO:0160111. The narrowing and
+    new biological content are valid, but the maintained rationale violates the append-only
+    provenance rule.
+  target_ids:
+  - GO:0097649
+  field_paths:
+  - discussions[0].rationale
+  evidence_ids:
+  - original
+  - record
+  - rules
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: minor
+  normalization_reason: Bounded bibliographic or append-only provenance defect; biological
+    identity remains valid.
+actions:
+- action_id: A1
+  description: Restore the original A-tubule discussion rationale
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0097649
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Restore the exact original rationale as a prefix and retain the current complete
+    rationale as a dated reassessment.
+  - Preserve the narrowed prompt, original posed date, OPEN status, GO:0160111 child
+    and all dynein/spoke graph edges.
+  - Use guarded curation, append Codex curation and EDIT history, retain PROPOSED,
+    previous histories/reviews and discussion rationale; regenerate affected products
+    and pass focused tests plus native QC.
+limitations:
+- Same-agent assessment; no independent or human sign-off and no promotion of PROPOSED.
+- Identifier check has 251 skipped identifiers; label check has 603 pairs without
+  adapters. Exact target authorities were inspected separately; global skipped namespaces
+  are not certified.
+- Full QC uses the verified exact-baseline merge-group CI run. No raw experimental
+  data or movies were reanalysed.
+- Europe PMC fullTextXML failed for several sources; official PMC full HTML supplied
+  the readable fallback. Access tiers are specified per source below.
+- Nicastro 2006 was inspected at primary-abstract level; GO and Ma 2019 full text
+  provide the coarse claim support. Fine MIP composition remains an acknowledged TODO,
+  not a defect.
+```

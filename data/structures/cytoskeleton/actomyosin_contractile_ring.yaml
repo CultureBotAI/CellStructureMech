@@ -28,6 +28,13 @@ curation_history:
     Wu et al. 2003 evidence and by converting fission-yeast gene symbols to PomBase-style
     lowercase.'
   llm_assisted: true
+- timestamp: '2026-10-11T07:14:19Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2189: Classified Cdc12 as a retained ring constituent with
+    local primary localization evidence, preserving conservative family grounding,
+    unknown essentiality and the accessory-component TODO.'
+  llm_assisted: true
 synonyms:
 - synonym_text: contractile ring
   synonym_type: RELATED_SYNONYM
@@ -77,7 +84,7 @@ components:
 - component_id: cdc12_formin_family
   label: Cdc12-family cytokinetic formin
   component_type: PROTEIN
-  component_role: ASSOCIATED_MACHINERY
+  component_role: CONSTITUENT
   essentiality: UNKNOWN
   gene_symbols:
   - cdc12
@@ -85,12 +92,14 @@ components:
   grounding_notes: This first fission-yeast actomyosin-ring record keeps broad actin,
     myosin-II, and formin labels until exact source-neutral family groundings are
     reviewed.
-  role: Cytokinesis-node formin that nucleates actin filaments during contractile-ring
-    assembly.
+  role: Cytokinetic formin retained in cytokinesis nodes and the assembled contractile
+    ring; nucleates actin filaments during ring assembly and remains associated with
+    their barbed ends.
   evidence:
   - reference: DOI:10.1083/jcb.200602032
-    notes: Wu et al. 2006 modeled fission-yeast contractile-ring assembly from Cdc12-containing
-      cytokinesis nodes.
+    notes: 'Wu et al. 2006, node-composition Results and Figure 2: functional Cdc12
+      reporters enter nodes that coalesce into a normally constricting ring. The Discussion
+      describes formin retention at actin barbed ends.'
   - reference: DOI:10.1002/cm.21052
     notes: Lee et al. 2012 review Cdc12-mediated actin assembly in fission-yeast cytokinesis
       nodes and rings.

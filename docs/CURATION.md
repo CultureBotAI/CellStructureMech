@@ -43,9 +43,11 @@ the cell*, not how many gene products build it.
 allocator, so two curators cannot collide on a counter, and it reads in a URL.
 The cost is that it looks stale if the preferred label later changes; that is
 accepted, because rule 3 forbids renaming an identifier anyway. Before minting,
-search GO properly: `MreB` and `bacterial actin cytoskeleton` return nothing,
-which is what justified the mint, and `GO:0005856 cytoskeleton` — the whole
-framework of any cell — is the parent, not the identity.
+search GO and inspect the definitions of candidate matches. For a distinct
+protein filament such as AlfA, `GO:0099513 polymeric cytoskeletal fiber` can
+supply a broader is-a parent without replacing the minted identity.
+`GO:0005856 cytoskeleton` denotes the containing framework and belongs in
+`part_of`, not `parent_structures`, for an individual cytoskeletal filament.
 
 **An empty category is a fine result.** `OTHER` exists so a record that fits
 nowhere has a home, and it is currently empty. Filling it to make a coverage

@@ -28,10 +28,18 @@ curation_history:
     endocytic-internalization node from the assembly graph and moving Arp2/3-regulator
     evidence off the Arp2/3 component.'
   llm_assisted: true
+- timestamp: '2026-10-11T07:14:17Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2188: Corrected endocytic-patch is-a parent and cortical actin-cytoskeleton
+    parthood while retaining cell-cortex parthood and prior graph/evidence placement
+    fixes.'
+  llm_assisted: true
 parent_structures:
-- GO:0015629
+- GO:0061645
 part_of:
 - GO:0005938
+- GO:0030864
 synonyms:
 - synonym_text: actin patch
   synonym_type: EXACT_SYNONYM
@@ -103,7 +111,8 @@ evidence:
 - reference: GO:0030479
   notes: Gene Ontology cellular-component term for the actin cortical patch.
 - reference: GO:0015629
-  notes: Gene Ontology cellular-component parent for the actin cytoskeleton.
+  notes: Actin cytoskeleton is a containing structure, not an is-a parent of the patch;
+    the direct GO parthood relation uses cortical actin cytoskeleton.
 - reference: GO:0005885
   notes: Gene Ontology cellular-component term for the Arp2/3 protein complex.
 - reference: GO:0000147
@@ -117,6 +126,12 @@ evidence:
 - reference: DOI:10.1371/journal.pbio.0060001
   notes: Galletta, Chuang and Cooper 2008, Distinct Roles for Arp2/3 Regulators in
     Actin Assembly and Endocytosis, PLoS Biology.
+- reference: GO:0061645
+  notes: Endocytic patch is the native GO is-a parent of GO:0030479 actin cortical
+    patch.
+- reference: GO:0030864
+  notes: Cortical actin cytoskeleton contains the actin cortical patch through the
+    native GO part_of relation.
 causal_graphs:
 - graph_id: arp2_3_branched_actin_patch_assembly
   title: Arp2/3 nucleates a branched actin network in yeast cortical patches

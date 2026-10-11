@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+  slug: actomyosin_contractile_ring
+session:
+  id: 2026-10-11T071421Z-codex-901583
+  timestamp: '2026-10-11T07:14:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2189
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Addressed #2189: Classified Cdc12 as a retained ring constituent with local primary
+    localization evidence, preserving conservative family grounding, unknown essentiality
+    and the accessory-component TODO.'
+  details: 'Original findings saved before mutation in reviews/structured/20261011T071255Z-actomyosin_contractile_ring-audit/review.yaml.
+    Addresses #2189. Guarded curation retained PROPOSED, prior events and discussions; post-change
+    tests and full QC are required before publication.'

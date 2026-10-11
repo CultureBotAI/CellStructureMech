@@ -1,0 +1,837 @@
+# Alfa filament: finding dispositions
+
+- Review: 20261011T074304Z-alfa_filament-disposition
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-11T07:31:44Z
+- Finished UTC: 2026-10-11T07:43:04Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact predecessor findings resolved; original evidence-access tiers and biological uncertainties retained. No scientific status promotion.
+
+## Scope And Provenance
+
+Exact predecessor findings, corrected fields and preservation of surrounding claims; not a repeated whole-record scientific review.
+
+Selection: 20261011T071302Z-alfa_filament-audit
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 7b2a10264b5217ea5be79569b2355f2dbdc4424c.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:alfa_filament | data/structures/cytoskeleton/alfa_filament.yaml | maintained | AlfA filament |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | cellstructuremech:alfa_filament | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| strict | passed | True | cellstructuremech:alfa_filament | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| snippets | passed | True | cellstructuremech:alfa_filament | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| history | passed | True | cellstructuremech:alfa_filament | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| labels | passed | True | cellstructuremech:alfa_filament | id↔label correspondence summary:<br>          OK_CANONICAL: 3544<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| traits | passed | True | cellstructuremech:alfa_filament | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| curies | passed | True | cellstructuremech:alfa_filament | resolver control: every resolver accepts a known id and rejects a fabricated one<br>resolving 1 DOI identifier(s)...<br>resolving 2 GO identifier(s)...<br><br>identifier liveness summary:<br>  OK             4014<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| regressions | passed | True | cellstructuremech:alfa_filament | ..............................                                           [100%]<br>30 passed in 41.06s |
+| reviews | passed | True | cellstructuremech:alfa_filament | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| diff | passed | True | cellstructuremech:alfa_filament | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| website-focused | passed | True | cellstructuremech:alfa_filament | Actual post-curation command passed. Empty quotation checks and resolver skips are not scientific proof. |
+| release-qc2 | passed | True | cellstructuremech:alfa_filament | Authoritative full local QC passed, including tests, all-record schema/history, generated products and contract checks. Remote PR and merge-group checks remain separate publication gates. |
+| Initial QC before website-reference integration fix | failed | False | cellstructuremech:alfa_filament | Historical failed attempt: one missing external GO website-label assertion, 835 passed and 3 skipped. The catalog, retained sources and rebuild list were corrected; release-qc2 is the final required passing gate. |
+
+## Scientific And Domain Assessments
+
+### Replace the ParM DOI with the intended AlfA paper
+
+evidence: supported. Targets: cellstructuremech:alfa_filament.
+
+All four mistaken ParM DOI occurrences now cite the intended Polka et al. 2009 AlfA study, DOI:10.1128/JB.00676-09. Its journal is corrected to Journal of Bacteriology. No AlfA claim is expanded or ParM behavior imported.
+
+### Separate AlfA filament class from cytoskeleton parthood
+
+identity: supported. Targets: cellstructuremech:alfa_filament.
+
+The minted AlfA identifier is retained with GO:0099513 as the broader filament parent and GO:0005856 as containing cytoskeleton. Local evidence explains both relations. CURATION.md now distinguishes filament is-a from whole-framework parthood without altering other records.
+
+### Correct the Becker 2006 author attribution
+
+provenance: supported. Targets: cellstructuremech:alfa_filament.
+
+The incorrect explicit author list is replaced with Becker et al. 2006. The verified title, EMBO Journal and DOI remain, as do the supported biological claims.
+
+## Findings
+
+### F1: Replace the ParM DOI with the intended AlfA paper
+
+major / resolved / confirmed; issue key: alfa-filament-parm-citation-mismatch.
+
+All four mistaken ParM DOI occurrences now cite the intended Polka et al. 2009 AlfA study, DOI:10.1128/JB.00676-09. Its journal is corrected to Journal of Bacteriology. No AlfA claim is expanded or ParM behavior imported.
+
+Disposition: All four mistaken ParM DOI occurrences now cite the intended Polka et al. 2009 AlfA study, DOI:10.1128/JB.00676-09. Its journal is corrected to Journal of Bacteriology. No AlfA claim is expanded or ParM behavior imported. Verified with source-backed inspection, focused regressions and full QC.
+
+### F2: Separate AlfA filament class from cytoskeleton parthood
+
+major / resolved / confirmed; issue key: alfa-filament-hierarchy-parthood.
+
+The minted AlfA identifier is retained with GO:0099513 as the broader filament parent and GO:0005856 as containing cytoskeleton. Local evidence explains both relations. CURATION.md now distinguishes filament is-a from whole-framework parthood without altering other records.
+
+Disposition: The minted AlfA identifier is retained with GO:0099513 as the broader filament parent and GO:0005856 as containing cytoskeleton. Local evidence explains both relations. CURATION.md now distinguishes filament is-a from whole-framework parthood without altering other records. Verified with source-backed inspection, focused regressions and full QC.
+
+### F3: Correct the Becker 2006 author attribution
+
+minor / resolved / confirmed; issue key: alfa-becker-bibliographic-authors.
+
+The incorrect explicit author list is replaced with Becker et al. 2006. The verified title, EMBO Journal and DOI remain, as do the supported biological claims.
+
+Disposition: The incorrect explicit author list is replaced with Becker et al. 2006. The verified title, EMBO Journal and DOI remain, as do the supported biological claims. Verified with source-backed inspection, focused regressions and full QC.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/alfa_filament.yaml | context_only | Corrected native bytes reread against exact predecessor findings and surrounding source-backed claims. |
+| rules | docs/CURATION.md | context_only | Current corrected input reread against the predecessor and inspected authorities; hierarchy guidance now distinguishes filament is-a from framework parthood. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000147,GO:0001534,GO:0005737,GO:0005826,GO:0005856,GO:0005879,GO:0005885,GO:0005938,GO:0015629,GO:0030479,GO:0030864,GO:0036156,GO:0036157,GO:0061645,GO:0097545,GO:0097649,GO:0097650,GO:0099079,GO:0099513,GO:0110165,GO:0160111,GO:0160113,GO:0160114; Current native definitions, synonyms, obsolescence flags and typed child relationships | supports | Exact native GO identities and roles checked. Reverse child lists confirm is-a versus part_of; untyped ancestor reachability alone is not treated as an is-a assertion. |
+| taxa | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=1423%2C284812%2C3055%2C4896%2C4932%2C559292; Top-level requested NCBI Taxon entries | supports | The six requested taxa and reference-strain names resolve. Taxonomy is not evidence of structure prevalence. |
+| adapter | /private/tmp/csm-review-20261011T070221Z/adapter.log | context_only | Live 28-dataset inventory: no matching yeast or Chlamydomonas dataset. Bacillus searches are described separately; noncoverage is not negative biology. |
+| becker | DOI:10.1038/sj.emboj.7601443; Author list, AlfA/AlfB Results, Figures 4-6 and Discussion | supports | AlfA forms dynamic filaments in B. subtilis and supports pBET131 segregation; AlfB is part of the partition system. Actual authors are Becker, Herrera, Gunderson, Derman, Dance, Sims, Larsen and Pogliano. |
+| polka2009 | DOI:10.1128/JB.00676-09; Abstract, protein-purification/EM Methods and filament-assembly Results | supports | Polka, Kollman, Agard and Mullins study purified AlfA filaments in Journal of Bacteriology. ATP/GTP-dependent assembly and stable bundles are not ParM dynamic instability. |
+| wrong-parm | DOI:10.1016/j.str.2009.07.008; Primary abstract and bibliographic metadata | supports | This DOI denotes Structural polymorphism of the ParM filament and dynamic instability, not the cited AlfA paper. |
+| polka2014 | DOI:10.1073/pnas.1304127111; Abstract, in-vivo motion Results and AlfB/parN regulation Results with Figures 1-3 captions | supports | AlfB-parN nucleates and stabilizes AlfA; free AlfB has different effects. Graph-scoped centromere complex and nonmechanistic segregation support remain appropriate. |
+| szewczak | DOI:10.1073/pnas.1716424115; Abstract, filament-reconstruction Results and Figure 1 caption | supports | Near-atomic cryo-EM of a nonbundling AlfA variant establishes filament architecture; the native record does not misrepresent it as in-situ wild-type reconstruction. |
+| tanaka | DOI:10.1128/JB.01312-09; Abstract and Introduction | supports | Single-author Tanaka paper characterizes AlfB/parN and pBET131; the earlier corrected citation is valid. |
+| go-search | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=AlfA&amp;limit=100; Complete exact-name query response, two unrelated interferon-alpha hits | supports | No exact AlfA cellular-component identity was returned. Minted identity is retained; polymeric cytoskeletal fiber is only the broader class. |
+| modulome-alfa | /private/tmp/csm-review-20261011T070221Z/adapter-modulome-alfA.log | context_only | B. subtilis structured adapter query returned no gene/module hits. This is not evidence against plasmid localization. |
+| modulome-alfb | /private/tmp/csm-review-20261011T070221Z/adapter-modulome-alfB.log | context_only | B. subtilis structured adapter query returned no gene/module hits. This is not evidence against plasmid localization. |
+| modulome-parn | /private/tmp/csm-review-20261011T070221Z/adapter-modulome-parN.log | context_only | B. subtilis structured adapter query returned no gene/module hits. This is not evidence against plasmid localization. |
+| nicolas-alfa | /private/tmp/csm-review-20261011T070221Z/adapter-nicolas-alfA.log | context_only | B. subtilis structured adapter query returned no gene/module hits. This is not evidence against plasmid localization. |
+| nicolas-alfb | /private/tmp/csm-review-20261011T070221Z/adapter-nicolas-alfB.log | context_only | B. subtilis structured adapter query returned no gene/module hits. This is not evidence against plasmid localization. |
+| nicolas-parn | /private/tmp/csm-review-20261011T070221Z/adapter-nicolas-parN.log | context_only | B. subtilis structured adapter query returned no gene/module hits. This is not evidence against plasmid localization. |
+| predecessor | reviews/structured/20261011T071302Z-alfa_filament-audit/review.yaml | context_only | Immutable original observation committed before mutation. |
+| preservation | /private/tmp/csm-review-20261011T070221Z/preservation.json | supports | Exactly four native records changed; 905 others and every previous history, canonical review and legacy report remain byte-identical. |
+| embeddings | /private/tmp/csm-review-20261011T070221Z/embedding-refresh.json | supports | Only the ring role prose changes the semantic projection. Its pinned-model vector was refreshed; 908 vectors are unchanged. |
+| initial-qc | /private/tmp/csm-review-20261011T070221Z/release-qc-command.json | supports | Initial full QC failed one website-label test (835 passed, 3 skipped). New external GO targets required a scoped reference-catalog addition; the final QC supersedes this failed attempt. |
+| website-labels | /private/tmp/csm-review-20261011T070221Z/website-reference-fix.json | supports | Added three verified OLS GO source labels and retained their exact response bodies/checksums, preserving every previous catalog reference and source. The declared rebuild list and regression cover all three additions. |
+
+## Limits And Additional Notes
+
+- Same-agent assessment; no independent or human sign-off and no promotion of PROPOSED.
+- Europe PMC fullTextXML failed for several sources; official PMC full HTML supplied the readable fallback. Access tiers are specified per source below.
+- The broader AlfA filament query is a nonexhaustive 100-result lexical search; the exact AlfA query is complete. No claim that all ontology synonyms were exhaustively excluded. AlfA family grounding remains reviewed-label-only.
+- Original access tiers are retained; no new primary experiments, raw-data reanalysis or independent approval are implied. Post-change resolver skips and label pairs without adapters are not certified.
+- All six scientific/provenance regressions failed on original records. Initial full QC then exposed a missing website relationship label; a seventh regression failed before the scoped catalog fix. The final 36-test focused/guarded-writer/website suite passes. The failed QC receipt is retained as evidence, not overwritten.
+- Disposition inputs are retained by review-base/cytoskeleton-evidence-20261011-r2 after the website-reference integration fix. Final PR and native merge-group results are verified separately.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T074304Z-alfa_filament-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Alfa filament: finding dispositions'
+started_at: '2026-10-11T07:31:44Z'
+finished_at: '2026-10-11T07:43:04Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent evidence reassessment and adversarial diff inspection,
+    not independent human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact predecessor findings resolved; original evidence-access tiers and biological
+  uncertainties retained. No scientific status promotion.
+source:
+  git_revision: 7b2a10264b5217ea5be79569b2355f2dbdc4424c
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 64862db2087298ae832b8a8410185349cc277151af31d88ce231e43201ab9440
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+    sha256: ce35e4855b506178485b229b515c89a717ddee0a5a9d26fff88ba991fac5b06b
+    role: context
+  - path: data/structures/cytoskeleton/actin_body.yaml
+    sha256: b0abd6f5cb40fec99ab2d5a23a56b7307041f4ac8eda2a32b9db8d57680f22ea
+    role: context
+  - path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+    sha256: 4f089bd321dd3aaf0b6ae169a0f411b48f292efd94cc5bda6c514c47ee093d67
+    role: context
+  - path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+    sha256: 28a3e7b12391a9d3a16eb453974d6e0ed5ab92b925092e395e88f64fa6fe5ab0
+    role: context
+  - path: data/structures/cytoskeleton/alfa_filament.yaml
+    sha256: 546afa4d749c9fe7dd056d62aad7f25d8fcd11b44565974e233abe8b47287bc4
+    role: target
+  - path: data/website/references.json
+    sha256: c927b0e3450345f1cedf484bf3c5901b1ef246418cb65b5ae307f709cdae6cae
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/WEBSITE_REFERENCES.md
+    sha256: 4630510ad5ce5152204fd101dd3f41ca20a32f3e954f23906a165a4f05fa83ca
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/alfa_filament/2026-09-22T042634Z-codex-25f78a.yaml
+    sha256: b1ccd139072f92280690d068ae556e95ca4b07634147abbb3866b2d9c37ed141
+    role: context
+  - path: history/records/alfa_filament/2026-09-22T070127Z-codex-75e31b.yaml
+    sha256: a00d21a852a8cf2c4bd387cf5b3c2e3b49d65deeb054acfca5b42585e3651fc2
+    role: context
+  - path: history/records/alfa_filament/2026-10-11T071423Z-codex-49a2a2.yaml
+    sha256: 622c014eaf78f34296cffc3dd99b91d33e7ae9fada23dbd637e8e8f7b2180ee7
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/website_reference_sources/20261011-cytoskeleton/go-0030864.json
+    sha256: 9db30bf8c07fd4c3b343d8a1c6f320d1186a9b854dae296a6f606297baa560ac
+    role: context
+  - path: reports/website_reference_sources/20261011-cytoskeleton/go-0061645.json
+    sha256: 16e20065f9b08c55b577c91692bb6c852d8bf92c187828db621cafab690a0c00
+    role: context
+  - path: reports/website_reference_sources/20261011-cytoskeleton/go-0099513.json
+    sha256: 89187d136f3c3754e51f50d21064fa345ba71105af505853d6484be1a553165f
+    role: context
+  - path: reviews/structured/20261011T071302Z-alfa_filament-audit/review.yaml
+    sha256: d46949144ceca9996ec4d37388a687d91f58eb1e5c8e6c29077b8eb8f8e71cba
+    role: context
+  - path: scripts/build_website_references.py
+    sha256: 58d3f40f6c22962916fd114e0eee3b8fae1ce9d05f1bd028e00f56d3c5eb4973
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_cytoskeleton_evidence_review.py
+    sha256: f41626b355d49deb8b3e358af6f240c44ef28ecf3f0ed0f910acdee7bd68120d
+    role: context
+  - path: tests/test_website_audit.py
+    sha256: 87350de86ced60895216ab7e78388bfc1a917a901024e33c45c6c27c9a4476ae
+    role: context
+targets:
+- target_id: cellstructuremech:alfa_filament
+  path: data/structures/cytoskeleton/alfa_filament.yaml
+  label: AlfA filament
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/alfa_filament.yaml
+    role: maintained scientific record
+scope:
+  description: Exact predecessor findings, corrected fields and preservation of surrounding
+    claims; not a repeated whole-record scientific review.
+  selection: 20261011T071302Z-alfa_filament-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:alfa_filament
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/alfa_filament.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T07:16:54Z to 2026-10-11T07:16:57Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/alfa_filament.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T07:16:57Z to 2026-10-11T07:17:04Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/alfa_filament.yaml
+    --report /private/tmp/csm-review-20261011T070221Z/alfa_filament-post-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T07:17:04Z to 2026-10-11T07:17:40Z; log SHA-256 2ec08b67f30e2c8e9749d3452814664dd824d228b1e37e2d799b6b14f06b211d
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T07:17:40Z to 2026-10-11T07:18:03Z; log SHA-256 43df0083dc52abe9dcf42ffb28027516bf341d2f07b59a1fef83be3ad7095c99
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3544\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T07:18:03Z to 2026-10-11T07:20:08Z; log SHA-256 d423103555a6a5b538a7c811a73a29c24ed0e5a2eae00d1bb94715295f23f7cb
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T07:20:08Z to 2026-10-11T07:20:33Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\nresolving 1 DOI identifier(s)...\nresolving 2 GO identifier(s)...\n\nidentifier\
+    \ liveness summary:\n  OK             4014\n  SKIPPED         251\n\nEvery identifier\
+    \ resolves at its issuing authority."
+  scope_note: 2026-10-11T07:20:33Z to 2026-10-11T07:21:26Z; log SHA-256 50e90c5e078fa1a80bc98cbcf63406c48835855a34569abb5fa8367b605a10fb
+- check_id: regressions
+  name: regressions
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python -m pytest -q tests/test_cytoskeleton_evidence_review.py
+    tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '..............................                                           [100%]
+
+    30 passed in 41.06s'
+  scope_note: 2026-10-11T07:21:26Z to 2026-10-11T07:22:08Z; log SHA-256 eee409a9ff5e8aea0c93184f64a23f06f11ca564d09e8d6f7f8dccfce218177a
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python scripts/record_review.py check --base d9cea09379282886022064c57c012efe0db3beaf
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T07:22:08Z to 2026-10-11T07:22:58Z; log SHA-256 66cc7b44151eb9d7ab3d0a63c5bf146c2180025929640e06c6a11b4e61bcda45
+- check_id: diff
+  name: diff
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T07:22:58Z to 2026-10-11T07:22:58Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- check_id: website-focused
+  name: website-focused
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python -m pytest -q tests/test_cytoskeleton_evidence_review.py
+    tests/test_write_validated.py tests/test_website_audit.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual post-curation command passed. Empty quotation checks and resolver
+    skips are not scientific proof.
+  scope_note: 2026-10-11T07:30:30Z to 2026-10-11T07:31:16Z; log SHA-256 8bf7d26f3470b6750a036f9fbd30b42775c0702e35e55cd4c1b8f02cb9911706
+- check_id: release-qc2
+  name: release-qc2
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Authoritative full local QC passed, including tests, all-record schema/history,
+    generated products and contract checks. Remote PR and merge-group checks remain
+    separate publication gates.
+  scope_note: 2026-10-11T07:31:34Z to 2026-10-11T07:42:35Z; log SHA-256 98a3036efdb29edc42c613dc0e46ce11261f0a4f509f07406b0db78bece55ee4
+- check_id: initial-qc-superseded
+  name: Initial QC before website-reference integration fix
+  status: failed
+  required: false
+  target_ids:
+  - cellstructuremech:alfa_filament
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 1
+  expected_exit_code: 0
+  summary: 'Historical failed attempt: one missing external GO website-label assertion,
+    835 passed and 3 skipped. The catalog, retained sources and rebuild list were
+    corrected; release-qc2 is the final required passing gate.'
+  scope_note: Superseded candidate 027cbb55ab63bc21417ee964617fc8edc2c85ca0; 2026-10-11T07:16:54Z
+    to 2026-10-11T07:28:34Z; log SHA-256 9c517a6729ccdc107e20eef7432b990f7f3d89abab59200eadbcd2057c23c975
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/alfa_filament.yaml
+  accessed_at: '2026-10-11T07:43:03Z'
+  snapshot_sha256: 546afa4d749c9fe7dd056d62aad7f25d8fcd11b44565974e233abe8b47287bc4
+  support: context_only
+  summary: Corrected native bytes reread against exact predecessor findings and surrounding
+    source-backed claims.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T07:43:03Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Current corrected input reread against the predecessor and inspected authorities;
+    hierarchy guidance now distinguishes filament is-a from framework parthood.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000147,GO:0001534,GO:0005737,GO:0005826,GO:0005856,GO:0005879,GO:0005885,GO:0005938,GO:0015629,GO:0030479,GO:0030864,GO:0036156,GO:0036157,GO:0061645,GO:0097545,GO:0097649,GO:0097650,GO:0099079,GO:0099513,GO:0110165,GO:0160111,GO:0160113,GO:0160114
+  locator: Current native definitions, synonyms, obsolescence flags and typed child
+    relationships
+  accessed_at: '2026-10-11T07:04:57Z'
+  snapshot_sha256: 71f14150527ed018024bb5682b4d3b88750c50919ca386ca9bac5766e8df4480
+  support: supports
+  summary: Exact native GO identities and roles checked. Reverse child lists confirm
+    is-a versus part_of; untyped ancestor reachability alone is not treated as an
+    is-a assertion.
+- evidence_id: taxa
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1423%2C284812%2C3055%2C4896%2C4932%2C559292
+  locator: Top-level requested NCBI Taxon entries
+  accessed_at: '2026-10-11T07:05:02Z'
+  snapshot_sha256: 785915aef9110dcf4728409ac02274f8c858aba27b08779ae5e3b0d2c5a37108
+  support: supports
+  summary: The six requested taxa and reference-strain names resolve. Taxonomy is
+    not evidence of structure prevalence.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/adapter.log
+  accessed_at: '2026-10-11T07:13:02Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: 'Live 28-dataset inventory: no matching yeast or Chlamydomonas dataset.
+    Bacillus searches are described separately; noncoverage is not negative biology.'
+- evidence_id: becker
+  kind: primary_source
+  reference: DOI:10.1038/sj.emboj.7601443
+  locator: Author list, AlfA/AlfB Results, Figures 4-6 and Discussion
+  accessed_at: '2026-10-11T07:05:02Z'
+  snapshot_sha256: e54d7e366d613615e1ea6046d4dd554195c2baab479a3c9d5d6c4caed5b55ba5
+  support: supports
+  summary: AlfA forms dynamic filaments in B. subtilis and supports pBET131 segregation;
+    AlfB is part of the partition system. Actual authors are Becker, Herrera, Gunderson,
+    Derman, Dance, Sims, Larsen and Pogliano.
+- evidence_id: polka2009
+  kind: primary_source
+  reference: DOI:10.1128/JB.00676-09
+  locator: Abstract, protein-purification/EM Methods and filament-assembly Results
+  accessed_at: '2026-10-11T07:05:06Z'
+  snapshot_sha256: 38e3194799870f08e9213176bd5fd349d54995871b52f02c5b1c8946e2cfe9f3
+  support: supports
+  summary: Polka, Kollman, Agard and Mullins study purified AlfA filaments in Journal
+    of Bacteriology. ATP/GTP-dependent assembly and stable bundles are not ParM dynamic
+    instability.
+- evidence_id: wrong-parm
+  kind: primary_source
+  reference: DOI:10.1016/j.str.2009.07.008
+  locator: Primary abstract and bibliographic metadata
+  accessed_at: '2026-10-11T07:05:02Z'
+  snapshot_sha256: 52188337181be37ef3c0fd7d751b184250c7ca3bac55f7a2496e34da1853195e
+  support: supports
+  summary: This DOI denotes Structural polymorphism of the ParM filament and dynamic
+    instability, not the cited AlfA paper.
+- evidence_id: polka2014
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1304127111
+  locator: Abstract, in-vivo motion Results and AlfB/parN regulation Results with
+    Figures 1-3 captions
+  accessed_at: '2026-10-11T07:05:02Z'
+  snapshot_sha256: 8374efa31ef6582a77fea8c7897841f9cf9f607928fd762205a326f3682d978b
+  support: supports
+  summary: AlfB-parN nucleates and stabilizes AlfA; free AlfB has different effects.
+    Graph-scoped centromere complex and nonmechanistic segregation support remain
+    appropriate.
+- evidence_id: szewczak
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1716424115
+  locator: Abstract, filament-reconstruction Results and Figure 1 caption
+  accessed_at: '2026-10-11T07:05:03Z'
+  snapshot_sha256: 44079e2855dadb59452576b405c2c9fa0cf39f42dce7422d82617af8c526a175
+  support: supports
+  summary: Near-atomic cryo-EM of a nonbundling AlfA variant establishes filament
+    architecture; the native record does not misrepresent it as in-situ wild-type
+    reconstruction.
+- evidence_id: tanaka
+  kind: primary_source
+  reference: DOI:10.1128/JB.01312-09
+  locator: Abstract and Introduction
+  accessed_at: '2026-10-11T07:05:03Z'
+  snapshot_sha256: bec32b7c640f7d4a16971a2ef4c37943d12dc4548e54af46481a8548c55deb32
+  support: supports
+  summary: Single-author Tanaka paper characterizes AlfB/parN and pBET131; the earlier
+    corrected citation is valid.
+- evidence_id: go-search
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=AlfA&limit=100
+  locator: Complete exact-name query response, two unrelated interferon-alpha hits
+  accessed_at: '2026-10-11T07:10:57Z'
+  snapshot_sha256: aa6e86dd9bffcc15cb5fdd07001747ed7240e916277fdb1ba1bea05c12db6bc4
+  support: supports
+  summary: No exact AlfA cellular-component identity was returned. Minted identity
+    is retained; polymeric cytoskeletal fiber is only the broader class.
+- evidence_id: modulome-alfa
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/adapter-modulome-alfA.log
+  accessed_at: '2026-10-11T07:13:02Z'
+  snapshot_sha256: d56b906358d6d9631453ea7b3159fbde817c3ce6117b37b77f509b52ec033393
+  support: context_only
+  summary: B. subtilis structured adapter query returned no gene/module hits. This
+    is not evidence against plasmid localization.
+- evidence_id: modulome-alfb
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/adapter-modulome-alfB.log
+  accessed_at: '2026-10-11T07:13:02Z'
+  snapshot_sha256: f29a074a453390a3389a8547b5a5c4d5cd98deeb08b0fec3b936781c929f7356
+  support: context_only
+  summary: B. subtilis structured adapter query returned no gene/module hits. This
+    is not evidence against plasmid localization.
+- evidence_id: modulome-parn
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/adapter-modulome-parN.log
+  accessed_at: '2026-10-11T07:13:02Z'
+  snapshot_sha256: 61e296ecae9a9d65121a8780ac4dc873af5162799224abf5f6a0846cbe4832b6
+  support: context_only
+  summary: B. subtilis structured adapter query returned no gene/module hits. This
+    is not evidence against plasmid localization.
+- evidence_id: nicolas-alfa
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/adapter-nicolas-alfA.log
+  accessed_at: '2026-10-11T07:13:02Z'
+  snapshot_sha256: b7bd30afad89c9b46f2a58728aeb684e044ec95f5b3d20d0da6e51b9c6c3c13f
+  support: context_only
+  summary: B. subtilis structured adapter query returned no gene/module hits. This
+    is not evidence against plasmid localization.
+- evidence_id: nicolas-alfb
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/adapter-nicolas-alfB.log
+  accessed_at: '2026-10-11T07:13:02Z'
+  snapshot_sha256: b84b7693612711a6842fb7191cba54214332eb009d6853e6d96715ff94680b53
+  support: context_only
+  summary: B. subtilis structured adapter query returned no gene/module hits. This
+    is not evidence against plasmid localization.
+- evidence_id: nicolas-parn
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/adapter-nicolas-parN.log
+  accessed_at: '2026-10-11T07:13:02Z'
+  snapshot_sha256: a03cd523367b7a537b7c2379226caef74ca8c98e9508b8a8c0167b99a6819c59
+  support: context_only
+  summary: B. subtilis structured adapter query returned no gene/module hits. This
+    is not evidence against plasmid localization.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T071302Z-alfa_filament-audit/review.yaml
+  accessed_at: '2026-10-11T07:43:03Z'
+  snapshot_sha256: d46949144ceca9996ec4d37388a687d91f58eb1e5c8e6c29077b8eb8f8e71cba
+  support: context_only
+  summary: Immutable original observation committed before mutation.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/preservation.json
+  accessed_at: '2026-10-11T07:43:03Z'
+  snapshot_sha256: a8380b5cd1ad915ceb45ab1209a052728fb829c9b9a5795aa0caab6cf628d09f
+  support: supports
+  summary: Exactly four native records changed; 905 others and every previous history,
+    canonical review and legacy report remain byte-identical.
+- evidence_id: embeddings
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/embedding-refresh.json
+  accessed_at: '2026-10-11T07:43:03Z'
+  snapshot_sha256: a0724280c8297248e06d86cc721000f9aec28383b8a764dd398784170079d031
+  support: supports
+  summary: Only the ring role prose changes the semantic projection. Its pinned-model
+    vector was refreshed; 908 vectors are unchanged.
+- evidence_id: initial-qc
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/release-qc-command.json
+  accessed_at: '2026-10-11T07:43:03Z'
+  snapshot_sha256: ea3e136d333665286973ed46dc9dd1f9b19f5360e6649a4de95da7ecbd480cec
+  support: supports
+  summary: Initial full QC failed one website-label test (835 passed, 3 skipped).
+    New external GO targets required a scoped reference-catalog addition; the final
+    QC supersedes this failed attempt.
+- evidence_id: website-labels
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T070221Z/website-reference-fix.json
+  accessed_at: '2026-10-11T07:43:04Z'
+  snapshot_sha256: d83f8b7e28d7b9b6f0d25ac26dbf3b6afc0ead54c589ac12ccba3d296f5f7457
+  support: supports
+  summary: Added three verified OLS GO source labels and retained their exact response
+    bodies/checksums, preserving every previous catalog reference and source. The
+    declared rebuild list and regression cover all three additions.
+assessments:
+- assessment_id: resolved-f1
+  area: evidence
+  topic: Replace the ParM DOI with the intended AlfA paper
+  outcome: supported
+  target_ids:
+  - cellstructuremech:alfa_filament
+  evidence_ids:
+  - record
+  - wrong-parm
+  - polka2009
+  - predecessor
+  - preservation
+  summary: All four mistaken ParM DOI occurrences now cite the intended Polka et al.
+    2009 AlfA study, DOI:10.1128/JB.00676-09. Its journal is corrected to Journal
+    of Bacteriology. No AlfA claim is expanded or ParM behavior imported.
+- assessment_id: resolved-f2
+  area: identity
+  topic: Separate AlfA filament class from cytoskeleton parthood
+  outcome: supported
+  target_ids:
+  - cellstructuremech:alfa_filament
+  evidence_ids:
+  - record
+  - go
+  - polka2009
+  - rules
+  - predecessor
+  - preservation
+  summary: The minted AlfA identifier is retained with GO:0099513 as the broader filament
+    parent and GO:0005856 as containing cytoskeleton. Local evidence explains both
+    relations. CURATION.md now distinguishes filament is-a from whole-framework parthood
+    without altering other records.
+- assessment_id: resolved-f3
+  area: provenance
+  topic: Correct the Becker 2006 author attribution
+  outcome: supported
+  target_ids:
+  - cellstructuremech:alfa_filament
+  evidence_ids:
+  - record
+  - becker
+  - predecessor
+  - preservation
+  summary: The incorrect explicit author list is replaced with Becker et al. 2006.
+    The verified title, EMBO Journal and DOI remain, as do the supported biological
+    claims.
+findings:
+- finding_id: F1
+  issue_key: alfa-filament-parm-citation-mismatch
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Replace the ParM DOI with the intended AlfA paper
+  description: All four mistaken ParM DOI occurrences now cite the intended Polka
+    et al. 2009 AlfA study, DOI:10.1128/JB.00676-09. Its journal is corrected to Journal
+    of Bacteriology. No AlfA claim is expanded or ParM behavior imported.
+  target_ids:
+  - cellstructuremech:alfa_filament
+  field_paths:
+  - components[0].evidence
+  - evidence
+  - causal_graphs[0].edges[0].evidence
+  - discussions[0].evidence
+  evidence_ids:
+  - record
+  - wrong-parm
+  - polka2009
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/alfa_filament.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Incorrect evidence identity, ontology relationship or structure
+    composition.
+  disposition_reason: All four mistaken ParM DOI occurrences now cite the intended
+    Polka et al. 2009 AlfA study, DOI:10.1128/JB.00676-09. Its journal is corrected
+    to Journal of Bacteriology. No AlfA claim is expanded or ParM behavior imported.
+    Verified with source-backed inspection, focused regressions and full QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T071302Z-alfa_filament-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2190
+- finding_id: F2
+  issue_key: alfa-filament-hierarchy-parthood
+  category: identity
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Separate AlfA filament class from cytoskeleton parthood
+  description: The minted AlfA identifier is retained with GO:0099513 as the broader
+    filament parent and GO:0005856 as containing cytoskeleton. Local evidence explains
+    both relations. CURATION.md now distinguishes filament is-a from whole-framework
+    parthood without altering other records.
+  target_ids:
+  - cellstructuremech:alfa_filament
+  field_paths:
+  - parent_structures
+  - part_of
+  - evidence
+  - docs/CURATION.md#identifiers
+  evidence_ids:
+  - record
+  - go
+  - polka2009
+  - rules
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/alfa_filament.yaml
+    role: maintained scientific record
+  - repository: CultureBotAI/CellStructureMech
+    path: docs/CURATION.md
+    role: maintained identifier and hierarchy guidance
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Incorrect evidence identity, ontology relationship or structure
+    composition.
+  disposition_reason: The minted AlfA identifier is retained with GO:0099513 as the
+    broader filament parent and GO:0005856 as containing cytoskeleton. Local evidence
+    explains both relations. CURATION.md now distinguishes filament is-a from whole-framework
+    parthood without altering other records. Verified with source-backed inspection,
+    focused regressions and full QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T071302Z-alfa_filament-audit
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2191
+- finding_id: F3
+  issue_key: alfa-becker-bibliographic-authors
+  category: provenance
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Correct the Becker 2006 author attribution
+  description: The incorrect explicit author list is replaced with Becker et al. 2006.
+    The verified title, EMBO Journal and DOI remain, as do the supported biological
+    claims.
+  target_ids:
+  - cellstructuremech:alfa_filament
+  field_paths:
+  - evidence[0].notes
+  evidence_ids:
+  - record
+  - becker
+  - predecessor
+  - preservation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/alfa_filament.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: minor
+  normalization_reason: Bounded bibliographic or append-only provenance defect; biological
+    identity remains valid.
+  disposition_reason: The incorrect explicit author list is replaced with Becker et
+    al. 2006. The verified title, EMBO Journal and DOI remain, as do the supported
+    biological claims. Verified with source-backed inspection, focused regressions
+    and full QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T071302Z-alfa_filament-audit
+    finding_id: F3
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2192
+actions: []
+limitations:
+- Same-agent assessment; no independent or human sign-off and no promotion of PROPOSED.
+- Europe PMC fullTextXML failed for several sources; official PMC full HTML supplied
+  the readable fallback. Access tiers are specified per source below.
+- The broader AlfA filament query is a nonexhaustive 100-result lexical search; the
+  exact AlfA query is complete. No claim that all ontology synonyms were exhaustively
+  excluded. AlfA family grounding remains reviewed-label-only.
+- Original access tiers are retained; no new primary experiments, raw-data reanalysis
+  or independent approval are implied. Post-change resolver skips and label pairs
+  without adapters are not certified.
+- All six scientific/provenance regressions failed on original records. Initial full
+  QC then exposed a missing website relationship label; a seventh regression failed
+  before the scoped catalog fix. The final 36-test focused/guarded-writer/website
+  suite passes. The failed QC receipt is retained as evidence, not overwritten.
+- Disposition inputs are retained by review-base/cytoskeleton-evidence-20261011-r2
+  after the website-reference integration fix. Final PR and native merge-group results
+  are verified separately.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2190
+- https://github.com/CultureBotAI/CellStructureMech/issues/2191
+- https://github.com/CultureBotAI/CellStructureMech/issues/2192
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T071302Z-alfa_filament-audit
+  relationship: Resolves exact predecessor findings without rewriting their original
+    observations.
+```
