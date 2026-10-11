@@ -35,6 +35,13 @@ curation_history:
     functions and replacing the stalk-compartments state with a stalk-compartmentalization
     biological-process graph node.'
   llm_assisted: true
+- timestamp: '2026-10-11T05:53:03Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2179: split StpAB structural scaffold from StpCD barrier-sealing
+    constituents, assigned structural rather than functional essentiality, and updated
+    graph references and the existing grounding discussion.'
+  llm_assisted: true
 synonyms:
 - synonym_text: stalk band
   synonym_type: EXACT_SYNONYM
@@ -47,25 +54,44 @@ parent_structures:
 part_of:
 - cellstructuremech:prostheca
 components:
-- component_id: stp_abcd_crossband_proteins
-  label: StpA/StpB/StpC/StpD crossband proteins
+- component_id: stp_ab_crossband_scaffold
+  label: StpA/StpB crossband scaffold proteins
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
   - stpA
   - stpB
-  - stpC
-  - stpD
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: StpA, StpB, StpC and StpD are the Caulobacter proteins identified
-    in stalk crossbands; no exact source-neutral family CURIE was curated.
-  role: Assemble into the proteinaceous crossband that spans the stalk and forms a
-    diffusion barrier.
+  grounding_notes: Caulobacter StpA and StpB form the crossband scaffold; no exact
+    source-neutral family CURIE was curated.
+  role: Form the basic crossband scaffold in Caulobacter. StpAB-deficient cells lack
+    microscopically discernible crossbands, while StpC/D-deficient cells retain them.
   evidence:
   - reference: DOI:10.1016/j.cell.2012.10.046
-    notes: Schlimpert et al. 2012 identify StpA, StpB, StpC and StpD as proteins required
-      to form Caulobacter stalk crossbands.
+    notes: Schlimpert et al. 2012 show loss of visible crossbands after stpAB deletion
+      and a hierarchical StpA/StpB assembly scaffold, distinct from StpC/D-dependent
+      sealing.
+- component_id: stp_cd_barrier_sealing_proteins
+  label: StpC/StpD crossband barrier-sealing proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - stpC
+  - stpD
+  essentiality: DISPENSABLE
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Caulobacter StpC and StpD are crossband constituents that tighten
+    the diffusion barrier; no exact source-neutral family CURIE was curated.
+  role: Seal the StpA/StpB scaffold to produce an efficient protein diffusion barrier.
+    Structural essentiality is DISPENSABLE because crossbands remain visible without
+    StpC/D, but those barriers are leaky; this does not mean normal barrier function
+    is dispensable.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2012.10.046
+    notes: Schlimpert et al. 2012 observe visible crossbands in stpC/stpD mutants
+      and partial loss of periplasmic compartmentalization in the stpCD deletion strain,
+      distinguishing structural formation from barrier sealing.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -106,15 +132,20 @@ evidence:
 causal_graphs:
 - graph_id: stp_crossband_stalk_barrier
   title: StpABCD proteins assemble stalk-compartment diffusion barriers
-  description: StpA, StpB, StpC and StpD build crossbands that span the prostheca
-    and limit exchange of soluble and membrane proteins across stalk compartments.
+  description: In Caulobacter, StpA and StpB form the crossband scaffold; StpC and
+    StpD tighten its diffusion barrier. Crossbands span the prostheca, and intact
+    barriers limit soluble and membrane-protein exchange across stalk compartments.
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
   nodes:
-  - node_id: stp_abcd_crossband_proteins
-    label: StpA/StpB/StpC/StpD crossband proteins
+  - node_id: stp_ab_crossband_scaffold
+    label: StpA/StpB crossband scaffold proteins
     node_type: GENE_OR_PROTEIN
-    component_ref: stp_abcd_crossband_proteins
+    component_ref: stp_ab_crossband_scaffold
+  - node_id: stp_cd_barrier_sealing_proteins
+    label: StpC/StpD crossband barrier-sealing proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: stp_cd_barrier_sealing_proteins
   - node_id: stalk_crossband
     label: stalk crossband
     node_type: STRUCTURE
@@ -130,14 +161,26 @@ causal_graphs:
     label: stalk compartmentalization
     node_type: BIOLOGICAL_PROCESS
   edges:
-  - subject: stp_abcd_crossband_proteins
-    predicate: assemble into
+  - subject: stp_ab_crossband_scaffold
+    predicate: forms scaffold of
     object: stalk_crossband
-    description: StpA, StpB, StpC and StpD form the proteinaceous crossband complex.
+    description: StpA and StpB form the basic crossband scaffold; loss of StpAB eliminates
+      visible crossbands.
     evidence:
     - reference: DOI:10.1016/j.cell.2012.10.046
-      notes: Schlimpert et al. 2012 show that at least four Stp proteins comprise
-        the crossband barrier.
+      notes: Schlimpert et al. 2012 show loss of visible crossbands after stpAB deletion
+        and a hierarchical StpA/StpB assembly scaffold, distinct from StpC/D-dependent
+        sealing.
+  - subject: stp_cd_barrier_sealing_proteins
+    predicate: seals diffusion barrier of
+    object: stalk_crossband
+    description: StpC and StpD tighten the crossband diffusion barrier. Their loss
+      leaves visible crossbands with impaired compartmentalization.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2012.10.046
+      notes: Schlimpert et al. 2012 observe visible crossbands in stpC/stpD mutants
+        and partial loss of periplasmic compartmentalization in the stpCD deletion
+        strain, distinguishing structural formation from barrier sealing.
   - subject: stalk_crossband
     predicate: spans
     object: prostheca
@@ -173,9 +216,12 @@ discussions:
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
-  - components#stp_abcd_crossband_proteins
-  rationale: The first record uses a reviewed label for the StpABCD cohort until an
-    exact protein-family or complex identifier is verified.
+  - components#stp_ab_crossband_scaffold
+  - components#stp_cd_barrier_sealing_proteins
+  rationale: The record separates the StpAB scaffold cohort from StpCD sealing constituents.
+    Both use reviewed labels until exact protein-family or complex identifiers are
+    verified; historical StpABCD membership is retained without conflating their structural
+    essentiality.
   posed_by: codex
   posed_date: '2026-09-11'
 - discussion_id: separate_from_prostheca
