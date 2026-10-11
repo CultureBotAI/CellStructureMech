@@ -78,6 +78,13 @@ curation_history:
   changes: Linked GO:0160114 as an axonemal doublet substructure and narrowed the
     remaining doublet-substructure TODO to other doublet-specific accessories.
   llm_assisted: true
+- timestamp: '2026-10-11T08:56:24Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2198: restored original and intermediate discussion rationales
+    with revision context; preserved the current prompt, task lifecycle, original
+    dates, scientific claims and child-record boundaries.'
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal outer doublet
   synonym_type: EXACT_SYNONYM
@@ -272,12 +279,29 @@ discussions:
   status: OPEN
   attaches_to:
   - causal_graphs#chlamydomonas_doublet_scaffold
-  rationale: GO:0160110 inner sheath, GO:0160113 inner junction, GO:0160114 outer
-    junction and GO:0160115 ribbon now have child records, but this GO:0097545 pass
-    leaves any other doublet-specific accessory structures for later curation.
+  rationale: 'GO now identifies multiple named doublet substructures, and cryo-EM
+    has mapped many Chlamydomonas MIPs, but this first GO:0097545 pass curates only
+    the coarse A/B doublet scaffold. Historical reassessment at git 1a6f714581ad:
+    GO still identifies named inner-junction, outer-junction and ribbon substructures,
+    but this GO:0097545 pass leaves those finer child records for later curation.
+    Historical reassessment at git 5b2752fe91a2: GO still identifies named outer-junction
+    and ribbon substructures, but this GO:0097545 pass leaves those finer child records
+    and other doublet-specific accessory structures for later curation. Historical
+    reassessment at git 8885f3fcea2c: GO still identifies the named outer-junction
+    substructure, but this GO:0097545 pass leaves that finer child record and other
+    doublet-specific accessory structures for later curation. Historical reassessment
+    at git 16734f1265fe: GO:0160110 inner sheath, GO:0160113 inner junction, GO:0160114
+    outer junction and GO:0160115 ribbon now have child records, but this GO:0097545
+    pass leaves any other doublet-specific accessory structures for later curation.'
   evidence:
   - reference: DOI:10.1016/j.cell.2019.09.030
     notes: Ma et al. 2019 resolved Chlamydomonas microtubule-inner proteins and axonemal
       proteins associated with several doublet microtubule regions.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2198
+    notes: Restores original and intermediate rationale without reopening completed
+      child creation or changing the remaining scientific tasks.
   posed_by: codex
   posed_date: '2026-09-23'
+  notes: Restored on 2026-10-11 from committed discussion history. Historical statements
+    about missing child records describe their cited revisions, not current absence.
+    The current narrowed prompt, original dates and task status remain unchanged.

@@ -112,6 +112,13 @@ curation_history:
   changes: 'Resolved PR #1390 review issue #1392 by changing the singular axonemal
     doublet microtubule graph predicate to forms scaffold of.'
   llm_assisted: true
+- timestamp: '2026-10-11T08:56:29Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2200: restored original and intermediate discussion rationales
+    with revision context; preserved the current prompt, task lifecycle, original
+    dates, scientific claims and child-record boundaries.'
+  llm_assisted: true
 has_part:
 - GO:0001534
 - GO:0005931
@@ -295,14 +302,44 @@ discussions:
     axoneme subcomplexes.
   kind: CURATION_TODO
   status: OPEN
-  rationale: The axonemal doublet microtubule, radial spoke, axonemal central apparatus,
+  rationale: 'The Chlamydomonas axoneme has many named regulatory, projection, and
+    microtubule-associated complexes. This first record curates coarse substructure
+    classes until their exact complex-level boundaries can be reviewed. Historical
+    reassessment at git 0b7c77d1f1d0: The outer and inner dynein arm classes now have
+    GO-backed boundaries in this axoneme record. The Chlamydomonas axoneme has additional
+    named regulatory, projection, inner-arm isoform, and microtubule-associated complexes
+    whose exact source-neutral groundings and record boundaries still need review.
+    Historical reassessment at git 3304899aaa6f: The radial spoke and outer and inner
+    dynein arm classes now have GO-backed boundaries in this axoneme record. The Chlamydomonas
+    axoneme has additional named regulatory, projection, inner-arm isoform, and microtubule-associated
+    complexes whose exact source-neutral groundings and record boundaries still need
+    review. Historical reassessment at git e7aa953abdb8: The radial spoke, axonemal
+    central apparatus, and outer and inner dynein arm classes now have GO-backed boundaries
+    in this axoneme record. The Chlamydomonas axoneme has additional named regulatory,
+    inner-arm isoform, and microtubule-associated complexes whose exact source-neutral
+    groundings and record boundaries still need review. Historical reassessment at
+    git 7102642edca7: The radial spoke, axonemal central apparatus, and outer and
+    inner dynein arm classes now have GO-backed child-record boundaries. The Chlamydomonas
+    axoneme has additional named regulatory and microtubule-associated complexes whose
+    exact source-neutral groundings and record boundaries still need review. Historical
+    reassessment at git 9f7ca79bbf4d: The radial spoke, axonemal central apparatus,
     outer and inner dynein arms, and axonemal nexin link now have GO-backed child-record
     boundaries. The Chlamydomonas axoneme has additional named regulatory and microtubule-associated
     complexes whose exact source-neutral groundings and record boundaries still need
-    review.
+    review. Historical reassessment at git 8b410f98eccd: The axonemal doublet microtubule,
+    radial spoke, axonemal central apparatus, outer and inner dynein arms, and axonemal
+    nexin link now have GO-backed child-record boundaries. The Chlamydomonas axoneme
+    has additional named regulatory and microtubule-associated complexes whose exact
+    source-neutral groundings and record boundaries still need review.'
   evidence:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 resolved repeated and asymmetric axonemal densities
       beyond the coarse substructure classes modeled here.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2200
+    notes: Restores original and intermediate rationale without reopening completed
+      child creation or changing the remaining scientific tasks.
   posed_by: codex
   posed_date: '2026-09-11'
+  notes: Restored on 2026-10-11 from committed discussion history. Historical statements
+    about missing child records describe their cited revisions, not current absence.
+    The current narrowed prompt, original dates and task status remain unchanged.

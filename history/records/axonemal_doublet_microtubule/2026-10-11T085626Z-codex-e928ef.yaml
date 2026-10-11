@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_doublet_microtubule.yaml
+  slug: axonemal_doublet_microtubule
+session:
+  id: 2026-10-11T085626Z-codex-e928ef
+  timestamp: '2026-10-11T08:56:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2198
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: 'Addressed #2198: restored original and intermediate discussion rationales with
+    revision context; preserved the current prompt, task lifecycle, original dates, scientific
+    claims and child-record boundaries.'
+  details: Original finding saved and committed before curation in reviews/structured/20261011T085523Z-axonemal_doublet_microtubule-audit/review.yaml.
+    Guarded rationale restoration changes no scientific claims, graph edges, taxonomy, identity,
+    PROPOSED status or previous events. The inner-sheath split remains resolved with its original
+    resolution date and explicit molecular-task handoff.
