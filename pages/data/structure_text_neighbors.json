@@ -1415,7 +1415,7 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.74273363
+          "cosine_similarity": 0.74761162
         },
         {
           "identifier": "cellstructuremech:tad_pilus",
@@ -1446,7 +1446,7 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.69195608
+          "cosine_similarity": 0.69665513
         },
         {
           "identifier": "cellstructuremech:elongasome",
@@ -1754,14 +1754,14 @@
           "cosine_similarity": 0.86129032
         },
         {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.79814747
-        },
-        {
           "identifier": "cellstructuremech:tubz_filament",
           "label": "TubZ filament",
           "cosine_similarity": 0.79753777
+        },
+        {
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.7968213
         },
         {
           "identifier": "GO:0032160",
@@ -1769,9 +1769,9 @@
           "cosine_similarity": 0.76016022
         },
         {
-          "identifier": "GO:0009420",
-          "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.75141144
+          "identifier": "cellstructuremech:bactofilin_filament",
+          "label": "bactofilin filament",
+          "cosine_similarity": 0.75322995
         }
       ]
     },
@@ -2278,27 +2278,27 @@
         {
           "identifier": "cellstructuremech:crescentin_filament",
           "label": "crescentin filament",
-          "cosine_similarity": 0.83524267
-        },
-        {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.79860145
+          "cosine_similarity": 0.84094647
         },
         {
           "identifier": "GO:0097268",
           "label": "cytoophidium",
-          "cosine_similarity": 0.78796422
+          "cosine_similarity": 0.79442723
+        },
+        {
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.79134723
         },
         {
           "identifier": "GO:0009420",
           "label": "bacterial-type flagellum filament",
-          "cosine_similarity": 0.78551402
+          "cosine_similarity": 0.78990894
         },
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.76383502
+          "cosine_similarity": 0.7687168
         }
       ]
     },
@@ -2787,14 +2787,14 @@
           "cosine_similarity": 0.76782998
         },
         {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.7668843
-        },
-        {
           "identifier": "GO:0005881",
           "label": "cytoplasmic microtubule",
           "cosine_similarity": 0.76204505
+        },
+        {
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.75666403
         }
       ]
     },
@@ -3301,17 +3301,17 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.83524267
+          "cosine_similarity": 0.84094647
+        },
+        {
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.81176683
         },
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
           "cosine_similarity": 0.8106903
-        },
-        {
-          "identifier": "cellstructuremech:mreb_filament",
-          "label": "MreB filament",
-          "cosine_similarity": 0.80379718
         },
         {
           "identifier": "GO:0032166",
@@ -3363,12 +3363,12 @@
         {
           "identifier": "cellstructuremech:bactofilin_filament",
           "label": "bactofilin filament",
-          "cosine_similarity": 0.78796422
+          "cosine_similarity": 0.79442723
         },
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.76972824
+          "cosine_similarity": 0.73375884
         },
         {
           "identifier": "GO:0009532",
@@ -3538,7 +3538,7 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.78791317
+          "cosine_similarity": 0.78803451
         }
       ]
     },
@@ -4293,7 +4293,7 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.84739768
+          "cosine_similarity": 0.84739121
         },
         {
           "identifier": "cellstructuremech:parm_filament",
@@ -4756,29 +4756,29 @@
       "label": "MreB filament",
       "neighbors": [
         {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.85022894
-        },
-        {
           "identifier": "cellstructuremech:mamk_filament",
           "label": "MamK filament",
-          "cosine_similarity": 0.84739768
+          "cosine_similarity": 0.84739121
         },
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.83609744
+          "cosine_similarity": 0.83915091
+        },
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.83485976
         },
         {
           "identifier": "cellstructuremech:crescentin_filament",
           "label": "crescentin filament",
-          "cosine_similarity": 0.80379718
+          "cosine_similarity": 0.81176683
         },
         {
-          "identifier": "cellstructuremech:bactofilin_filament",
-          "label": "bactofilin filament",
-          "cosine_similarity": 0.79860145
+          "identifier": "cellstructuremech:alfa_filament",
+          "label": "AlfA filament",
+          "cosine_similarity": 0.7968213
         }
       ]
     },
@@ -5042,7 +5042,7 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.83609744
+          "cosine_similarity": 0.83915091
         },
         {
           "identifier": "cellstructuremech:crescentin_filament",
@@ -5114,7 +5114,7 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.71470357
+          "cosine_similarity": 0.72149351
         },
         {
           "identifier": "cellstructuremech:btubab_bacterial_microtubule",
@@ -6326,9 +6326,9 @@
           "cosine_similarity": 0.76612009
         },
         {
-          "identifier": "cellstructuremech:cetz_filament",
-          "label": "CetZ filament",
-          "cosine_similarity": 0.75052593
+          "identifier": "cellstructuremech:mreb_filament",
+          "label": "MreB filament",
+          "cosine_similarity": 0.75228847
         }
       ]
     },
@@ -6587,7 +6587,7 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.85022894
+          "cosine_similarity": 0.83485976
         },
         {
           "identifier": "GO:0009425",
@@ -22369,14 +22369,14 @@
           "cosine_similarity": 0.6719369
         },
         {
+          "identifier": "cellstructuremech:bactofilin_filament",
+          "label": "bactofilin filament",
+          "cosine_similarity": 0.66481035
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
           "cosine_similarity": 0.66181332
-        },
-        {
-          "identifier": "cellstructuremech:bactofilin_filament",
-          "label": "bactofilin filament",
-          "cosine_similarity": 0.66107984
         },
         {
           "identifier": "cellstructuremech:holdfast",

@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/crescentin_filament.yaml
+  slug: crescentin_filament
+session:
+  id: 2026-10-11T185227Z-codex-67d17a
+  timestamp: '2026-10-11T18:52:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2244
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2245
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - components
+  - curation_history
+  - discussions
+  - evidence
+  - functions
+  - parent_structures
+  - part_of
+  summary: 'Addressed #2244, #2245: Corrected cytoskeletal fiber is-a and containing-framework
+    parthood. Corrected four active evidence notes to 2017 and appended an explicit correction
+    discussion. Original #1260 curation history, DOI, biology and graph relations are preserved.'
+  details: 'Immutable original observation: reviews/structured/20261011T185011Z-crescentin_filament-audit/review.yaml.
+    Corrected cytoskeletal fiber is-a and containing-framework parthood. Corrected four active
+    evidence notes to 2017 and appended an explicit correction discussion. Original #1260
+    curation history, DOI, biology and graph relations are preserved. Guarded writer; original
+    discussions/history and PROPOSED status retained.'

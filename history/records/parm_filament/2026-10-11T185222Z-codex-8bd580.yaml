@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/parm_filament.yaml
+  slug: parm_filament
+session:
+  id: 2026-10-11T185222Z-codex-8bd580
+  timestamp: '2026-10-11T18:52:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2241
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  - evidence
+  - parent_structures
+  - part_of
+  summary: 'Addressed #2241: Corrected cytoskeletal fiber is-a and containing-framework parthood. '
+  details: 'Immutable original observation: reviews/structured/20261011T185000Z-parm_filament-audit/review.yaml.
+    Corrected cytoskeletal fiber is-a and containing-framework parthood.  Guarded writer;
+    original discussions/history and PROPOSED status retained.'

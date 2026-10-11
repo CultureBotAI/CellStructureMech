@@ -2,10 +2,10 @@ identifier: cellstructuremech:bactofilin_filament
 label: bactofilin filament
 structure_category: CYTOSKELETON
 structure_kind: FILAMENT
-definition: A bacterial cytoskeletal filament assembled from bactofilin proteins that
-  forms beta-helical scaffolds for species-specific cellular organization processes,
+definition: A cytoskeletal filament assembled from beta-helical bactofilin proteins.
+  In bacteria, these filaments provide scaffolds for species-specific cellular organization,
   including polar stalk biogenesis in Caulobacter vibrioides.
-definition_source: DOI:10.1038/emboj.2009.358
+definition_source: DOI:10.1038/s41564-019-0544-0
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-11T10:12:30Z'
@@ -28,8 +28,17 @@ curation_history:
     BacA/BacB synonym from a narrow filament synonym to a related polar-scaffold synonym
     and removing unsupported BacM gene-symbol scope.'
   llm_assisted: true
+- timestamp: '2026-10-11T18:52:23Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2242, #2243: Corrected cytoskeletal fiber is-a and containing-framework
+    parthood. Removed bacteria-specific family wording and grounded the broader architecture
+    in Deng 2019. An appended discussion distinguishes demonstrated recombinant PiBac
+    polymerization from unproven native oomycete function and archaeal sequence hits.
+    Existing bacterial occurrences and Caulobacter graph are unchanged.'
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0099513
 synonyms:
 - synonym_text: bactofilin cytoskeleton
   synonym_type: RELATED_SYNONYM
@@ -49,15 +58,16 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for full-length filament-forming
     bactofilin proteins was verified in this pass.
-  role: Bacteria-specific beta-helical cytoskeletal proteins that self-assemble into
-    bactofilin filaments.
+  role: Beta-helical cytoskeletal proteins that self-assemble into bactofilin filaments;
+    the bacterial family is not exclusive to Bacteria.
   evidence:
   - reference: DOI:10.1038/emboj.2009.358
     notes: Kuhn et al. 2010 identified BacA and BacB as Caulobacter bactofilins that
       assemble into a membrane-proximal polar cytoskeletal structure.
   - reference: DOI:10.1038/s41564-019-0544-0
-    notes: Deng et al. 2019 structurally analyzed filaments assembled from bacterial
-      bactofilin proteins.
+    notes: Deng et al. 2019 structurally analyzed bactofilin filaments and demonstrated
+      in vitro polymerization of recombinant Phytophthora infestans PiBac as well
+      as bacterial proteins.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -97,6 +107,12 @@ evidence:
 - reference: DOI:10.1038/s41564-019-0544-0
   notes: Deng et al. 2019, 'The structure of bactofilin filaments reveals their mode
     of membrane binding and lack of polarity', Nature Microbiology.
+- reference: GO:0099513
+  notes: Broader polymeric cytoskeletal fiber class; this protein filament retains
+    its specific local identity.
+- reference: GO:0005856
+  notes: The cytoskeletal framework contains this filament; the filament is part of
+    it, not a type of the entire framework.
 causal_graphs:
 - graph_id: caulobacter_bactofilins_recruit_pbpc
   title: BacA/BacB bactofilins recruit PbpC to the Caulobacter stalked pole
@@ -177,3 +193,32 @@ discussions:
     notes: Deng et al. 2019 structurally compared multiple bacterial bactofilin filaments.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: bactofilin_family_not_bacteria_exclusive
+  prompt: Separate bactofilin family scope from native structural occurrence.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - definition
+  - components#bactofilin_proteins
+  - taxonomic_distribution
+  rationale: Deng et al. 2019 demonstrate in vitro filament formation by recombinant
+    PiBac from the oomycete Phytophthora infestans. Their archaeal bactofilin-domain
+    sequence hits are a different evidence level and do not establish archaeal filament
+    formation.
+  resolution_note: Remove bacteria-specific family exclusivity while retaining the
+    experimentally grounded bacterial/Caulobacter occurrence, NA1000 example and Caulobacter
+    PbpC graph. Recombinant PiBac polymerization does not establish its native cellular
+    organization or function, and no native oomycete or archaeal occurrence is added.
+    Original BacA/BacB and BacM boundary rationale remains unchanged.
+  evidence:
+  - reference: DOI:10.1038/s41564-019-0544-0
+    notes: Results and Methods distinguish recombinant PiBac filament experiments
+      from sequence-domain distribution.
+  - reference: DOI:10.1038/emboj.2009.358
+    notes: Caulobacter NA1000 experiments support the retained polar BacA/BacB scaffold
+      and PbpC recruitment.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'
+part_of:
+- GO:0005856

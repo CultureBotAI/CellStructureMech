@@ -6,7 +6,7 @@ definition: The actin-like cytoskeletal filament of rod-shaped bacteria. MreB po
   synthases that widen the sidewall — so that new wall material is inserted where
   the filaments travel. It is a homologue of eukaryotic actin by fold, not by sequence
   identity.
-definition_source: DOI:10.1146/annurev-genet-102108-134845
+definition_source: DOI:10.1016/j.cell.2018.02.050
 synonyms:
 - synonym_text: bacterial actin
   synonym_type: RELATED_SYNONYM
@@ -14,7 +14,7 @@ synonyms:
 structure_category: CYTOSKELETON
 structure_kind: FILAMENT
 parent_structures:
-- GO:0005856
+- GO:0099513
 components:
 - component_id: mreb
   label: MreB
@@ -87,12 +87,6 @@ taxonomic_distribution:
     but the correlation is not tight: Actinobacteria and Rhizobiales are rod-like
     or curved and lack MreB altogether.'
   reference: DOI:10.1016/j.cell.2018.02.050
-- taxon_id: NCBITaxon:2157
-  taxon_label: Archaea
-  presence: RARE
-  note: Actin-fold proteins occur in archaea, but the MreB-elongasome system is a
-    bacterial arrangement.
-  reference: DOI:10.1146/annurev-genet-102108-134845
 canonical_examples:
 - taxon_id: NCBITaxon:83333
   taxon_label: Escherichia coli K-12
@@ -119,6 +113,16 @@ evidence:
 - reference: DOI:10.1016/j.cell.2018.02.050
   notes: 'Shi H, Bratton BP, Gitai Z, Huang KC 2018, ''How to Build a Bacterial Cell:
     MreB as the Foreman of E. coli Construction'', Cell.'
+- reference: GO:0099513
+  notes: Broader polymeric cytoskeletal fiber class; this protein filament retains
+    its specific local identity.
+- reference: GO:0005856
+  notes: The cytoskeletal framework contains this filament; the filament is part of
+    it, not a type of the entire framework.
+- reference: DOI:10.1038/nmicrobiol.2016.172
+  notes: Cho et al. 2016, Bacterial cell wall biogenesis is mediated by SEDS and PBP
+    polymerase families functioning semi-autonomously, Nature Microbiology. Primary
+    support for the Rod-system synthase-pair claim.
 causal_graphs:
 - graph_id: filament_guided_sidewall_synthesis
   title: MreB and RodZ orient sidewall synthesis to preserve a rod
@@ -188,6 +192,10 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2677
       notes: Typas, Banzhaf, Gross and Vollmer 2011 review the elongation complex
         that builds sidewall peptidoglycan.
+    - reference: DOI:10.1038/nmicrobiol.2016.172
+      notes: Cho et al. 2016 use E. coli cell-wall synthesis and MreB-motion experiments
+        to support a RodA/PBP2 synthase pair in the Rod system; the earlier 2011 review
+        supplies broader elongation context.
   - subject: sidewall_synthesis
     predicate: maintains
     object: rod_shape
@@ -226,6 +234,34 @@ discussions:
     the link lives in the RodZ component role and in this discussion.'
   posed_by: claude
   posed_date: '2026-09-02'
+- discussion_id: archaeal_actin_fold_is_not_filament_occurrence
+  prompt: Bound archaeal homology separately from occurrence of this MreB filament
+    system.
+  kind: INTERPRETATION
+  status: RESOLVED
+  attaches_to:
+  - definition
+  - taxonomic_distribution
+  rationale: The earlier Archaea RARE row cited actin-fold proteins, while its own
+    note identified the MreB-elongasome arrangement as bacterial. Homology alone does
+    not establish the occurrence or prevalence of the bacterial filament system defined
+    in this record. Archaeal actin-like Ta0583 polymerization is a distinct experimental
+    observation, not proof of this MreB-elongasome system.
+  resolution_note: Remove the unsupported affirmative occurrence row without asserting
+    absence of MreB homologues or actin-like polymers in Archaea. Retain the bacterial
+    definition, supported occurrences and original history. An archaeal structural
+    example would need direct identity and assembly evidence before curation here.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: Inspected review supports the bacterial MreB/elongasome scope and explicitly
+      bounded bacterial distribution.
+  - reference: DOI:10.1128/JB.01454-06
+    notes: Inspected abstract reports polymerization of the Thermoplasma acidophilum
+      actin-like protein Ta0583; it does not establish this bacterial filament system
+      or its archaeal prevalence.
+  posed_by: codex
+  posed_date: '2026-10-11'
+  resolved_date: '2026-10-11'
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-01T03:41:49Z'
@@ -296,6 +332,17 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-11T18:52:14Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2237, #2238, #2239: Corrected cytoskeletal fiber is-a and containing-framework
+    parthood. Removed the unsupported affirmative Archaea RARE row and appended a
+    scope discussion distinguishing actin-fold homology from evidence for this bacterial
+    filament system. This is not an archaeal absence claim. Definition now cites the
+    inspected 2018 review; the RodA/PBP2 synthesis edge also cites the 2016 primary
+    experiments. Earlier bibliography, graph relations and verbatim trait evidence
+    remain intact.'
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
@@ -324,3 +371,5 @@ associated_traits:
     notes: 'Verbatim from the open-access full text (PMC5846203). MODULATES rather
       than CONFERS: the filament is described as sensing and adjusting shape, not
       dictating it.'
+part_of:
+- GO:0005856
