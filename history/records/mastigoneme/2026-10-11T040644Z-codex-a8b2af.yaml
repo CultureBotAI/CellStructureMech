@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/mastigoneme.yaml
+  slug: mastigoneme
+session:
+  id: 2026-10-11T040644Z-codex-a8b2af
+  timestamp: '2026-10-11T04:06:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2169
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  - discussions
+  - curation_history
+  summary: 'Addressed #2169: qualified the swimming function with distinct Liu and Amador
+    mutant/assay results and added an OPEN interpretation of the conflict, preserving the
+    supported assembly graph.'
+  details: Original issue saved before mutation in reviews/structured/20261011T040606Z-mastigoneme-audit/review.yaml.
+    Guarded writer validated the record. Source tiers and limitations remain in the original
+    review; corrections do not resolve unknown biological mechanisms or promote PROPOSED status.
+    Prior histories and discussions preserved. Post-change validation, focused regressions
+    and generated-artifact checks are required before publication.
