@@ -28,6 +28,19 @@ curation_history:
     it was a clade-level assertion that needs direct literature support; kept the
     directly supported Chlamydomonas reinhardtii row.'
   llm_assisted: true
+- timestamp: '2026-10-12T01:19:47Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2275, #2276: corrected the organizing-center is-a parent, set
+    triplet/cartwheel assembly essentiality to UNKNOWN with bounded primary evidence,
+    and made normal wild-type architecture scope explicit.'
+  llm_assisted: true
+- timestamp: '2026-10-12T01:28:50Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2277: exposed the existing graph scope and nonmechanistic classification
+    in the displayed description; original scope fields and graph relations retained.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cilial basal body
   synonym_type: EXACT_SYNONYM
@@ -45,7 +58,7 @@ synonyms:
   synonym_type: BROAD_SYNONYM
   source: GO:0036064
 parent_structures:
-- GO:0005856
+- GO:0005815
 part_of:
 - GO:0005929
 components:
@@ -53,7 +66,7 @@ components:
   label: basal-body triplet microtubules
   component_type: OTHER
   component_role: CONSTITUENT
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: GO:0005874 denotes generic microtubules rather than the A-, B-
     and C-tubule triplet blades of the ciliary basal-body cylinder. No exact source-neutral
@@ -66,11 +79,19 @@ components:
   - reference: DOI:10.3390/cells7070079
     notes: Wingfield and Lechtreck 2018 describe wild-type Chlamydomonas basal bodies
       as nine triplet microtubules around a central cartwheel.
+  - reference: DOI:10.1091/mbc.9.6.1293
+    notes: Dutcher and Trabuco 1998 observed proximal doublets rather than triplets
+      in uni3-1 basal bodies, with zero-, one- and two-flagellum cells in the mutant
+      population. Their Discussion leaves a requirement for triplets in flagellar
+      nucleation open. These observations distinguish normal triplet architecture
+      from malformed basal-body formation but do not establish complete loss of all
+      triplet material in every functional ciliary basal body. Assembly essentiality
+      remains UNKNOWN, not a claim of universal dispensability.
 - component_id: cartwheel
   label: basal-body cartwheel
   component_type: OTHER
   component_role: CONSTITUENT
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The basal-body cartwheel is a conserved ninefold-symmetric substructure,
     but this first record did not resolve exact source-neutral terms for its SAS-6
@@ -85,6 +106,14 @@ components:
   - reference: DOI:10.1186/s13630-016-0039-z
     notes: Dutcher and O'Toole 2016 review the cartwheel among the conserved Chlamydomonas
       basal-body substructures.
+  - reference: DOI:10.1016/j.cub.2007.11.046
+    notes: The inspected Nakazawa et al. 2007 primary abstract reports that SAS-6-null
+      bld12 lacks the central cartwheel part yet retains centrioles with variable
+      triplet counts. Loss of the central part is not demonstrated removal of every
+      cartwheel or spoke-tip component. These results support a role in normal organization
+      without establishing an absolute whole-substructure formation requirement; assembly
+      essentiality remains UNKNOWN. Full experimental text of the 2007 source was
+      not inspected.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
@@ -114,7 +143,7 @@ functions:
 physical_properties:
 - property: SUBUNIT_COUNT
   value: '9'
-  context: triplet microtubule blades per Chlamydomonas basal body
+  context: triplet microtubule blades per wild-type Chlamydomonas basal body
   reference: DOI:10.1186/s13630-016-0039-z
 evidence:
 - reference: GO:0036064
@@ -135,17 +164,27 @@ evidence:
 - reference: DOI:10.1104/pp.010807
   notes: Silflow and Lefebvre 2001, Assembly and motility of eukaryotic cilia and
     flagella. Lessons from Chlamydomonas reinhardtii, Plant Physiology.
+- reference: GO:0005815
+  notes: Gene Ontology places GO:0036064 ciliary basal body as is_a microtubule organizing
+    center. This is a class relationship, not equivalence to the whole cytoskeleton.
 causal_graphs:
 - graph_id: cartwheel_templates_triplet_cylinder
   title: The cartwheel organizes the triplet microtubule cylinder
   description: A proximal cartwheel organizes ninefold basal-body symmetry, nine triplet
     microtubule blades form the basal-body cylinder, and the assembled basal body
-    anchors the cilium and nucleates axonemal microtubules.
+    anchors the cilium and nucleates axonemal microtubules. This is a nonmechanistic
+    summary. This graph summarizes major Chlamydomonas basal-body substructures and
+    leaves cartwheel protein stoichiometry, centriole maturation, transition fibers
+    and rootlet attachments for later component-level curation. The graph describes
+    normal wild-type architecture, not an absolute substructure-essentiality claim
+    or the morphology of every mutant basal body.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: This graph summarizes major Chlamydomonas basal-body substructures
     and leaves cartwheel protein stoichiometry, centriole maturation, transition fibers
-    and rootlet attachments for later component-level curation.
+    and rootlet attachments for later component-level curation. The graph describes
+    normal wild-type architecture, not an absolute substructure-essentiality claim
+    or the morphology of every mutant basal body.
   nodes:
   - node_id: cartwheel
     label: basal-body cartwheel

@@ -1,0 +1,205 @@
+schema_version: 1.0.0
+review_id: 20261012T012821Z-ciliary_basal_body-publication-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Ciliary basal body: rendered graph scope'
+started_at: '2026-10-12T01:28:18Z'
+finished_at: '2026-10-12T01:28:21Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent whole-record and source review; not independent human
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: false
+summary: One minor publication finding; a scoped rendering review, not a repeated
+  whole-record scientific assessment.
+source:
+  git_revision: 2116a7db5d01c2679eabb6d0f09d14f024f80d45
+  state: working_tree
+  inputs:
+  - path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+    sha256: 707d82f2bdd0e42f37986ebe2dfcc9b17c6ab7af9a7e71a33c0caf380053e45a
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: pages/structures/cytoskeleton/ciliary_basal_body.html
+    sha256: 31fa9a500b9677b6fb2649068a553dc4d6f1b6afed7a17ed9f74a7a8826592a4
+    role: context
+  - path: src/cellstructuremech/templates/structure.html
+    sha256: 417b020a6eda677a1e40ecd3d849bfd5063d83291d7496e1c52a1a3a321f35ed
+    role: context
+  - path: tests/test_basal_body_evidence_scope.py
+    sha256: a7f67dc5cdfcdc6312e711e5b5cc2b81118e1575d7876b72e7c10f9452aafc71
+    role: context
+targets:
+- target_id: GO:0036064
+  path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+  label: ciliary basal body
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+    role: maintained scientific record
+scope:
+  description: Exact graph description, scope fields, renderer and generated page.
+  selection: Same-agent pre-publication adversarial review of the corrected working
+    tree.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0036064
+checks:
+- check_id: pages-check
+  name: pages-check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036064
+  command: .venv/bin/python scripts/render_pages.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T01:21:19Z to 2026-10-12T01:21:48Z; log SHA-256 b798d21a609b296cdc2aeb317f68fc259c4e86ee43942b4a3c5008b32b9bfa5e
+- check_id: post-ciliary_basal_body-strict
+  name: post-ciliary_basal_body-strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036064
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/ciliary_basal_body.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T01:23:30Z to 2026-10-12T01:23:37Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: post-focused
+  name: post-focused
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036064
+  command: .venv/bin/python -m pytest -q tests/test_basal_body_evidence_scope.py tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T01:22:37Z to 2026-10-12T01:23:30Z; log SHA-256 aac88d0e7044f03665bb1da0babb06296e9dac8feab59107b1be232fdc874a15
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/ciliary_basal_body.yaml
+  accessed_at: '2026-10-12T01:28:21Z'
+  snapshot_sha256: 707d82f2bdd0e42f37986ebe2dfcc9b17c6ab7af9a7e71a33c0caf380053e45a
+  support: context_only
+  summary: Whole corrected record reread; the wild-type and nonmechanistic scope is
+    present in native graph fields.
+- evidence_id: page
+  kind: record_content
+  reference: pages/structures/cytoskeleton/ciliary_basal_body.html
+  accessed_at: '2026-10-12T01:28:21Z'
+  snapshot_sha256: 31fa9a500b9677b6fb2649068a553dc4d6f1b6afed7a17ed9f74a7a8826592a4
+  support: context_only
+  summary: Whole graph section inspected; description and evidence render, but scope_status
+    and scope_notes do not.
+- evidence_id: template
+  kind: record_content
+  reference: src/cellstructuremech/templates/structure.html
+  accessed_at: '2026-10-12T01:28:21Z'
+  snapshot_sha256: 417b020a6eda677a1e40ecd3d849bfd5063d83291d7496e1c52a1a3a321f35ed
+  support: context_only
+  summary: Graph loop displays description, not scope_status or scope_notes.
+- evidence_id: precedents
+  kind: record_content
+  reference: /private/tmp/csm-review-20261012T010700Z/publication-precedents.log
+  accessed_at: '2026-10-12T01:28:21Z'
+  snapshot_sha256: d2a3f4600f7a89cde7c05ccfe4cf2a7f606c13a074a24f50366c6498ecd2da20
+  support: context_only
+  summary: All-state search includes closed record-scoped publication precedents 2007,2087,2259,2260;
+    no global template rewrite required.
+- evidence_id: dedup
+  kind: record_content
+  reference: /private/tmp/csm-review-20261012T010700Z/publication-dedup.log
+  accessed_at: '2026-10-12T01:28:21Z'
+  snapshot_sha256: 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570
+  support: context_only
+  summary: Exact issue-key all-state search returned no match.
+assessments:
+- assessment_id: published-scope
+  area: evidence
+  topic: Visible graph qualifiers
+  outcome: concern
+  target_ids:
+  - GO:0036064
+  evidence_ids:
+  - record
+  - page
+  - template
+  - precedents
+  summary: The new wild-type architecture and non-essentiality qualifier is only in
+    scope_notes, which the current template does not display. The graph table remains
+    under Mechanism graphs without its NONMECHANISTIC classification. Nearby component
+    notes and the property retain some caveats, so this is a bounded publication gap,
+    not absent scientific evidence. Copy the scope paragraph and an explicit nonmechanistic
+    label into the displayed graph description while retaining the original fields
+    and all edges.
+findings:
+- finding_id: F1
+  issue_key: ciliary-basal-body-published-graph-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Expose basal-body graph scope in the rendered description
+  description: The new wild-type architecture and non-essentiality qualifier is only
+    in scope_notes, which the current template does not display. The graph table remains
+    under Mechanism graphs without its NONMECHANISTIC classification. Nearby component
+    notes and the property retain some caveats, so this is a bounded publication gap,
+    not absent scientific evidence. Copy the scope paragraph and an explicit nonmechanistic
+    label into the displayed graph description while retaining the original fields
+    and all edges.
+  target_ids:
+  - GO:0036064
+  field_paths:
+  - causal_graphs[0].description
+  evidence_ids:
+  - record
+  - page
+  - template
+  - precedents
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: minor
+  normalization_reason: Bounded rendered-publication omission; native scope and nearby
+    caveats already exist.
+actions:
+- action_id: A1
+  description: Publish the existing graph scope without changing scientific relations.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0036064
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Append the complete existing scope_notes and an explicit nonmechanistic qualifier
+    to the displayed description.
+  - Preserve original description text, scope fields, components, nodes/edges, discussions
+    and statuses.
+  - Guarded writer, actual append-only EDIT, generated page, red/green visible-text
+    regressions and final native gates pass.
+limitations:
+- Same-agent scoped publication check, not independent approval or another whole-record
+  scientific review.
+- Full corrected-state QC is still running; no completion claim for that gate. Original
+  two major findings and their planned dispositions remain separate.
