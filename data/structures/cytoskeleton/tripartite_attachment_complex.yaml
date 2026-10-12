@@ -27,24 +27,31 @@ curation_history:
   changes: '#769: removed the unverified p166 gene_symbols value and narrowed the
     Trypanosoma brucei canonical example to the directly cited TAC102 study.'
   llm_assisted: true
+- timestamp: '2026-10-12T04:59:13Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed issues 2284 and 2285: correct exclusion-zone versus unilateral
+    filament compartments and the four bridge links from the defining primary paper;
+    move cytoskeleton from is-a parentage to GO-supported parthood. Identity, protein
+    claims, scientific status and earlier history are retained.'
+  llm_assisted: true
 synonyms:
 - synonym_text: TAC
   synonym_type: RELATED_SYNONYM
   source: GO:0120121
-parent_structures:
-- GO:0005856
 components:
 - component_id: unilateral_filaments
   label: unilateral filaments
   component_type: OTHER
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  role: Basal-body-proximal filaments that form the cytoplasmic side of the TAC and
-    extend toward the mitochondrial outer membrane.
+  role: Intramitochondrial filaments that connect the differentiated inner mitochondrial
+    membrane to the flagellar face of the kDNA disk.
   evidence:
   - reference: DOI:10.1091/mbc.E02-08-0525
-    notes: Ogbadoyi, Robinson and Gull 2003 resolved unilateral filaments as the cytoplasmic
-      arm of the structural link between flagellar basal bodies and the kDNA disk.
+    notes: 'Ogbadoyi, Robinson and Gull 2003, Results and Figures 2, 3 and 6: unilateral
+      filaments occupy the intramitochondrial gap between the inner membrane and the
+      kDNA disk, not the cytoplasmic basal-body side.'
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral ontology term for the unilateral filament
     domain of the kinetoplastid TAC was curated.
@@ -54,7 +61,7 @@ components:
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   role: Specialized mitochondrial outer- and inner-membrane regions crossed by the
-    TAC as it links cytoplasmic unilateral filaments to the matrix-facing exclusion-zone
+    TAC as it links cytoplasmic exclusion-zone filaments to intramitochondrial unilateral
     filaments.
   evidence:
   - reference: DOI:10.1091/mbc.E02-08-0525
@@ -72,12 +79,13 @@ components:
   component_type: OTHER
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  role: Mitochondrial-matrix-side filaments that occupy the exclusion zone between
-    the differentiated inner membrane and the kDNA disk.
+  role: Cytoplasmic filaments that link the proximal basal-body region to the differentiated
+    outer mitochondrial membrane, occupying a zone depleted of cytoplasmic ribosomes.
   evidence:
   - reference: DOI:10.1091/mbc.E02-08-0525
-    notes: Ogbadoyi, Robinson and Gull 2003 resolved exclusion-zone filaments as the
-      kDNA-proximal arm of the TAC.
+    notes: 'Ogbadoyi, Robinson and Gull 2003, Results and Figures 2, 3 and 6: exclusion-zone
+      filaments connect basal bodies to the outer mitochondrial membrane, not the
+      inner membrane to kDNA.'
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for the TAC exclusion-zone filaments
     was curated.
@@ -170,12 +178,17 @@ evidence:
 - reference: DOI:10.1371/journal.ppat.1005586
   notes: Trikin et al. 2016, TAC102 Is a Novel Component of the Mitochondrial Genome
     Segregation Machinery in Trypanosomes, PLOS Pathogens.
+- reference: GO:0005856
+  notes: Gene Ontology lists GO:0120121 tripartite attachment complex as part_of cytoskeleton.
+    This is parthood, not an is-a relation to the whole cytoskeletal framework.
 causal_graphs:
 - graph_id: tac_links_basal_body_to_kdna
   title: TAC domains bridge basal bodies to the kDNA disk
-  description: The tripartite attachment complex is organized as unilateral filaments,
-    specialized mitochondrial membranes and exclusion-zone filaments that span from
-    the flagellar basal body side of the cell to the kinetoplast DNA disk.
+  description: 'A nonmechanistic structural summary of the TAC bridge in T. brucei:
+    basal bodies connect through cytoplasmic exclusion-zone filaments, differentiated
+    mitochondrial membranes and intramitochondrial unilateral filaments to the kDNA
+    disk. This is a spatial linkage, not a temporal assembly sequence or a resolved
+    protein-by-protein force-transfer mechanism.'
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   nodes:
@@ -208,40 +221,41 @@ causal_graphs:
   edges:
   - subject: ciliary_basal_body
     predicate: aligns with
-    object: unilateral_filaments
-    description: The cytoplasmic side of the TAC lies adjacent to the mature basal
-      body and pro-basal body region.
+    object: exclusion_zone_filaments
+    description: Exclusion-zone filaments extend from the proximal basal-body region
+      toward the outer mitochondrial membrane on the cytoplasmic side.
     evidence:
     - reference: DOI:10.1091/mbc.E02-08-0525
-      notes: Ogbadoyi, Robinson and Gull 2003 placed unilateral filaments on the basal-body-facing
-        side of the TAC.
-  - subject: unilateral_filaments
+      notes: Ogbadoyi, Robinson and Gull 2003, Results and Figures 2, 3 and 6 place
+        exclusion-zone filaments on the basal-body-facing, cytoplasmic side of the
+        TAC.
+  - subject: exclusion_zone_filaments
     predicate: connect through
     object: mitochondrial_tac_membranes
-    description: Unilateral filaments connect to the mitochondrial membrane-spanning
-      region of the TAC.
+    description: Exclusion-zone filaments link the basal-body region to the differentiated
+      outer mitochondrial membrane.
     evidence:
     - reference: DOI:10.1091/mbc.E02-08-0525
-      notes: Ogbadoyi, Robinson and Gull 2003 resolved a tripartite linkage with cytoplasmic
-        filaments, differentiated mitochondrial membranes and matrix-side filaments.
+      notes: Ogbadoyi, Robinson and Gull 2003, Results and Figure 3 show exclusion-zone
+        filaments terminating at the outer-membrane remnant after extraction.
   - subject: mitochondrial_tac_membranes
     predicate: connect to
-    object: exclusion_zone_filaments
-    description: The differentiated membrane domain links the cytoplasmic and matrix-facing
-      filament systems of the TAC.
+    object: unilateral_filaments
+    description: The differentiated inner mitochondrial membrane connects to the unilateral
+      filament domain on the kDNA-facing side.
     evidence:
     - reference: DOI:10.1091/mbc.E02-08-0525
-      notes: Ogbadoyi, Robinson and Gull 2003 resolved exclusion-zone filaments on
-        the kinetoplast side of the differentiated membrane domain.
-  - subject: exclusion_zone_filaments
+      notes: Ogbadoyi, Robinson and Gull 2003, Results and Figures 2, 3 and 6 place
+        unilateral filaments between the inner membrane and the kDNA disk.
+  - subject: unilateral_filaments
     predicate: link to
     object: kdna_disk
-    description: Exclusion-zone filaments are positioned between the inner mitochondrial
-      membrane and the kinetoplast DNA disk.
+    description: Unilateral filaments link the differentiated inner membrane to the
+      flagellar face of the kinetoplast DNA disk.
     evidence:
     - reference: DOI:10.1091/mbc.E02-08-0525
-      notes: Ogbadoyi, Robinson and Gull 2003 described the exclusion-zone filaments
-        as the TAC region near the kDNA disk.
+      notes: Ogbadoyi, Robinson and Gull 2003, Results and Figures 2, 3 and 6 identify
+        unilateral filaments as the intramitochondrial, kDNA-proximal arm of the TAC.
   - subject: unilateral_filaments
     predicate: form
     object: tripartite_attachment_complex
@@ -281,3 +295,5 @@ discussions:
     as exact groundings.
   posed_by: codex
   posed_date: '2026-09-13'
+part_of:
+- GO:0005856

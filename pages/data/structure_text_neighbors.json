@@ -6244,29 +6244,29 @@
       "label": "tripartite attachment complex",
       "neighbors": [
         {
-          "identifier": "GO:0020023",
-          "label": "kinetoplast",
-          "cosine_similarity": 0.74816416
-        },
-        {
           "identifier": "GO:0042645",
           "label": "mitochondrial nucleoid",
-          "cosine_similarity": 0.74318469
+          "cosine_similarity": 0.75755644
         },
         {
           "identifier": "GO:0005742",
           "label": "mitochondrial outer membrane translocase complex",
-          "cosine_similarity": 0.7429889
+          "cosine_similarity": 0.74973284
         },
         {
           "identifier": "GO:0140595",
           "label": "MIM complex",
-          "cosine_similarity": 0.73783627
+          "cosine_similarity": 0.74870753
+        },
+        {
+          "identifier": "GO:0020023",
+          "label": "kinetoplast",
+          "cosine_similarity": 0.74831633
         },
         {
           "identifier": "GO:0005739",
           "label": "mitochondrion",
-          "cosine_similarity": 0.73531074
+          "cosine_similarity": 0.74748599
         }
       ]
     },
@@ -15618,7 +15618,7 @@
         {
           "identifier": "GO:0120121",
           "label": "tripartite attachment complex",
-          "cosine_similarity": 0.74816416
+          "cosine_similarity": 0.74831633
         },
         {
           "identifier": "GO:0042645",
