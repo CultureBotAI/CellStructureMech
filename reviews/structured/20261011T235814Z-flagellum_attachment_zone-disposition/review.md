@@ -1,0 +1,632 @@
+# flagellum attachment zone: supported finding disposition
+
+- Review: 20261011T235814Z-flagellum_attachment_zone-disposition
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-11T23:58:11Z
+- Finished UTC: 2026-10-11T23:58:14Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact original findings resolved by narrowly scoped, source-backed curation; original observation, history and PROPOSED status retained.
+
+## Scope And Provenance
+
+Exact saved findings and surrounding-content preservation reassessed, not another whole-record review.
+
+Selection: 20261011T233246Z-flagellum_attachment_zone-audit
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 0294a9e09591b5b9cb1b3d2b0d6b5fc80bec6f0a.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0120119 | data/structures/cytoskeleton/flagellum_attachment_zone.yaml | maintained | flagellum attachment zone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| focused | passed | True | GO:0120119 | ...................................                                      [100%]<br>35 passed in 42.26s |
+| flagellum_attachment_zone-strict | passed | True | GO:0120119 | Actual deterministic check passed; scientific support assessed separately. |
+| flagellum_attachment_zone-snippets | passed | True | GO:0120119 | No verbatim snippets; paraphrases assessed separately against inspected text. |
+| history | passed | True | GO:0120119 | Actual deterministic check passed; scientific support assessed separately. |
+| labels | passed | True | GO:0120119 | id↔label correspondence summary:<br>          OK_CANONICAL: 3545<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| curies | passed | True | GO:0120119 | resolver control: every resolver accepts a known id and rejects a fabricated one<br><br>identifier liveness summary:<br>  OK             4016<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| traits | passed | True | GO:0120119 | Actual deterministic check passed; scientific support assessed separately. |
+| release-qc | passed | True | GO:0120119 | Full local QC passed: 959 passed, 3 skipped in 719.63s (0:11:59). PR and native merge-group gates remain separate. |
+
+## Scientific And Domain Assessments
+
+### Do not infer absolute FAZ assembly essentiality from FAZ1 knockdown
+
+evidence: supported. Targets: GO:0120119.
+
+Only FAZ1 assembly essentiality changes to UNKNOWN, with an assertion-local explanation of residual abnormal FAZ after RNAi and the unproven complete-loss condition. Its normal-structure role and all FAZ2/CC2D evidence remain unchanged.
+
+## Findings
+
+### F1: Do not infer absolute FAZ assembly essentiality from FAZ1 knockdown
+
+major / resolved / confirmed; issue key: faz1-assembly-essentiality-rnai-scope.
+
+Only FAZ1 assembly essentiality changes to UNKNOWN, with an assertion-local explanation of residual abnormal FAZ after RNAi and the unproven complete-loss condition. Its normal-structure role and all FAZ2/CC2D evidence remain unchanged.
+
+Disposition: Only FAZ1 assembly essentiality changes to UNKNOWN, with an assertion-local explanation of residual abnormal FAZ after RNAi and the unproven complete-loss condition. Its normal-structure role and all FAZ2/CC2D evidence remain unchanged. Verified by inspected source evidence, exact preservation checks, red/green tests and full local QC.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/flagellum_attachment_zone.yaml | context_only | Corrected whole YAML reread; exact expected mutation and append-only event verified against baseline. |
+| rules | docs/CURATION.md | context_only | Typed parthood, assertion-local evidence and assembly-only essentiality rules. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml | context_only | Essentiality concerns structure formation, possibly defectively; gene symbols are metadata, not component identity. |
+| reading | /private/tmp/csm-review-20261011T232800Z/reading-checkpoint.json | context_only | Preserved source reading chronology and explicit abstract/full-text/visual limits. |
+| predecessors | /private/tmp/csm-review-20261011T232800Z/predecessors.json | context_only | Ignored-inclusive canonical bundle scan; no exact-target predecessor. |
+| go-relations | /private/tmp/csm-review-20261011T222903Z/next-go-relations.log | context_only | Source-native OAK typed relations inspected, independently consistent with QuickGO terms. |
+| context | /private/tmp/csm-review-20261011T232800Z/context-search.log | context_only | Identifier/label/slug search includes ignored and hidden repository files, excluding Git internals and dependency trees. |
+| adapter | /private/tmp/csm-review-20261011T222903Z/next-adapter.log | context_only | All 28 iModulonDB dataset rows inspected; no matching Trypanosoma dataset. Not negative biological evidence. |
+| history-0 | history/records/flagellum_attachment_zone/2026-09-12T021349Z-codex-3c7249.yaml | context_only | Entire original append-only history read; preserve historical actors and resolved issue scope. |
+| dedup-faz1-assembly-essentiality-rnai-scope | /private/tmp/csm-review-20261011T232800Z/dedup-faz1-assembly-essentiality-rnai-scope.log | context_only | All-state exact-key GitHub issue search checked before creation. Any earlier sandbox network failure remains in separate receipt. |
+| paper-1 | https://wheelerlab.net/publications/17945531.pdf; DOI:10.1016/j.protis.2007.08.005; complete main text and all six captions; Figure 4 page 132 visually inspected | supports | Procyclic PTP-line FAZ1 RNAi leaves aberrant FAZ-like material and other filament markers despite attachment/cytokinesis defects. Knockdown degree is an explicit caveat; not a complete null experiment. |
+| paper-2 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4827413/fullTextXML; DOI:10.1016/j.pt.2015.12.010; complete main text, Table 1 and four captions | supports | Review distinguishes FAZ zones, species/life-stage expression, gene IDs and a disorganized but retained FAZ after FAZ1 knockdown. Models of pulling, targeting and assembly hierarchy are not established native mechanisms. This is a literature review, not a new primary experiment. |
+| paper-6 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1111%2Fj.1550-7408.1999.tb04592.x%22&amp;format=json&amp;resultType=core; DOI:10.1111/j.1550-7408.1999.tb04592.x; primary abstract and metadata only | supports | FAZ filament and PFR antibody localization and differing assembly timing/rates support the narrow record note. No claim that full methods or original figures were read. |
+| paper-8 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1242%2Fjcs.087676%22&amp;format=json&amp;resultType=core; DOI:10.1242/jcs.087676; primary abstract and metadata only | supports | CC2D is reported at the filament, adjacent ER and basal bodies; RNAi yields a short FAZ stub and altered morphology. Not a protein-null or exclusive-localization claim. |
+| paper-9 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4524107/; DOI:10.1242/jcs.168377; abstract, entire Results, Discussion, Methods and eight captions | supports | Procyclic 427/29-13 experiments identify FAZ2, retain old and short new FAZ after RNAi, destabilize other proteins, recover CC2D/KMP11 by affinity purification/co-IP and track proximal incorporation. Association is not purified direct binary binding. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0005856,GO%3A0020016,GO%3A0120119,GO%3A0120120,GO%3A0120269,GO%3A0140535,GO%3A1990900; Exact GO IDs, definitions, synonyms and child relation types | supports | Identity terms denote the requested structures; GO lexical synonymy is not an assertion that all historical protein cohorts are physically identical. |
+| taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5691; TaxId/name/rank | supports | T. brucei species identity verified; experiments remain limited to named laboratory forms/lines. |
+| figure-4 | /private/tmp/csm-review-20261011T232800Z/faz1-page6.png | context_only | Actual original PDF page 132 visually inspected: Figure 4 TEM/IF panels show aberrant residual structure and patchy markers, with its complete caption. |
+| predecessor | reviews/structured/20261011T233246Z-flagellum_attachment_zone-audit/review.yaml | context_only | Original immutable observation committed before scientific edits. |
+| red-tests | /private/tmp/csm-review-20261011T232800Z/regressions-red.log | context_only | Seven new regressions fail on baseline; four status/discussion controls pass. |
+| green-tests | /private/tmp/csm-review-20261011T232800Z/post-focused.log | context_only | Focused regressions and guarded-writer tests all pass after correction. |
+| preservation | /private/tmp/csm-review-20261011T232800Z/preservation.json | context_only | All 905 other native records, 908 unaffected vectors and all prior history/review/legacy files unchanged. All four original graph/discussion bodies unchanged. |
+| edit-history | history/records/flagellum_attachment_zone/2026-10-11T233351Z-codex-646fe5.yaml | context_only | Actual Codex EDIT links saved observation and issue; no no-change history generated. |
+| history-erratum | history/records/flagellum_attachment_zone/2026-10-11T233615Z-codex-660d58.yaml | context_only | Append-only correction supersedes overbroad touched-section metadata in the new EDIT event; no further native mutation. |
+
+## Limits And Additional Notes
+
+- Same-agent scientific review, not independent human approval or raw-data reanalysis.
+- Original source access dates/hashes are retained from the read-ahead phase. Actual reading scope is recorded per source; separate supplements, movies and raw experiments were not reviewed.
+- 2009 MORN1, 1999 FAZ assembly and 2011 CC2D remain primary-abstract-only for narrow supported claims; full-text inaccessibility is not asserted globally. Other material sources have the inspected main-text scope stated in evidence.
+- The 2008 FAZ1 Figure 4 is visually inspected only for the FAZ review; other main figures were read as captions, not certified pixel-level reanalyses. No source media adopted.
+- No exact whole-family accession is invented and no absence from iModulonDB is biological evidence. Neighboring flagellar pocket and newer-publication leads are not counted as completed reviews.
+- This is a same-agent disposition, not independent human approval or a repeated full scientific review. Full local QC is now recorded; PR and native merge-group checks remain separate publication gates.
+- Exact corrected input revision retained by review-base/trypanosome-structure-evidence-20261011. Existing policy/no-adapter and test skips remain explicit.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T235814Z-flagellum_attachment_zone-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'flagellum attachment zone: supported finding disposition'
+started_at: '2026-10-11T23:58:11Z'
+finished_at: '2026-10-11T23:58:14Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent whole-record and primary-source assessment, not independent
+    human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact original findings resolved by narrowly scoped, source-backed curation;
+  original observation, history and PROPOSED status retained.
+source:
+  git_revision: 0294a9e09591b5b9cb1b3d2b0d6b5fc80bec6f0a
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 3acb13884094f40c840ed3452a6209ee9a38b479ae16e4c0bca390c3c290828a
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/bilobe_structure.yaml
+    sha256: 877769175369aac52173c3951681b76181ad7c6eff8e387de837b46a86404a08
+    role: context
+  - path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+    sha256: 483507c171218f013e0bfaaa4aa3c77c1cedb91cecb105d1b1a342bb3b914543
+    role: context
+  - path: data/structures/cytoskeleton/ciliary_pocket_collar.yaml
+    sha256: 3c9ec665546d0e2aa52e9a6f0cc7ea10c4f6b6abc1f6e18569f8866c996376f4
+    role: context
+  - path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+    sha256: aeb93a2f7f26d3aa442eac1e5227b43d50333ceb7771912faab985fb23598d24
+    role: target
+  - path: data/structures/membrane_organelle/flagellar_pocket.yaml
+    sha256: d67c465d104f21905f63ea994b6f4f526a51502cefccf79e9e732698f4971fa8
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/SOURCE_QUEUE.md
+    sha256: 793e9a16435684b90b0d64b7be4bdfeffbba5ab6ac0ca99eadf25c8548e22729
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/flagellum_attachment_zone/2026-09-12T021349Z-codex-3c7249.yaml
+    sha256: 428a3afaa3d407d620cb07027273f1bfe65a45deaee9012da96b90da500b28ff
+    role: context
+  - path: history/records/flagellum_attachment_zone/2026-10-11T233351Z-codex-646fe5.yaml
+    sha256: a5e2c70df091d1c8830b5bd557ca6b9d55b0c86ddf28260ac46bdc95e9065345
+    role: context
+  - path: history/records/flagellum_attachment_zone/2026-10-11T233615Z-codex-660d58.yaml
+    sha256: c9950a0f8811407611806c4ef17c0f37ff541e403483205a9da8be01d4a65e72
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: pages/structures/cytoskeleton/flagellum_attachment_zone.html
+    sha256: 3e8dfe77951da6d04f122dee28a8f5f018cb94ae6de91dfbb86d47ca2676ab45
+    role: context
+  - path: reviews/structured/20261011T233246Z-flagellum_attachment_zone-audit/review.yaml
+    sha256: ea7f85dff2b32c2f49de26d6bb24b8b031cc63df9e47b11cfad80fcac32b48fb
+    role: context
+  - path: scripts/render_pages.py
+    sha256: b5be74a8a3a0f7190b63da47a86cd8b48cbce4bb955ea0896f29d24f214a9b22
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/cellstructuremech/templates/structure.html
+    sha256: 417b020a6eda677a1e40ecd3d849bfd5063d83291d7496e1c52a1a3a321f35ed
+    role: context
+  - path: tests/test_trypanosome_structure_evidence.py
+    sha256: 7ce1dfa869f9295e836fff7a7956e62685ac291969283c5311e08c7fad5cf79b
+    role: context
+targets:
+- target_id: GO:0120119
+  path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+  label: flagellum attachment zone
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+    role: maintained scientific record
+scope:
+  description: Exact saved findings and surrounding-content preservation reassessed,
+    not another whole-record review.
+  selection: 20261011T233246Z-flagellum_attachment_zone-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0120119
+checks:
+- check_id: focused
+  name: focused
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120119
+  command: .venv/bin/python -m pytest -q tests/test_trypanosome_structure_evidence.py
+    tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '...................................                                      [100%]
+
+    35 passed in 42.26s'
+  scope_note: 2026-10-11T23:36:27Z to 2026-10-11T23:37:11Z; log SHA-256 65341ae56b212029e3fad52c31e7e9d558bca6631d1d6718b0e6351be092f153
+- check_id: flagellum_attachment_zone-strict
+  name: flagellum_attachment_zone-strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120119
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T23:38:48Z to 2026-10-11T23:38:53Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: flagellum_attachment_zone-snippets
+  name: flagellum_attachment_zone-snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120119
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+    --report /private/tmp/csm-review-20261011T232800Z/post-flagellum_attachment_zone-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-11T23:38:53Z to 2026-10-11T23:39:19Z; log SHA-256 ce3f8b903c129e79d003c3769d89f364c4afeb3dcf52c486d926dbc4ede9f157
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120119
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T23:39:19Z to 2026-10-11T23:39:36Z; log SHA-256 8163609c40c8a98151ad394b3e718c92826ba2960c070eb74781ee8947cde044
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120119
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3545\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T23:39:36Z to 2026-10-11T23:41:17Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120119
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4016\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T23:41:17Z to 2026-10-11T23:42:13Z; log SHA-256 f38fdf2889286b712ede050fc9d6de36ecb8830b57fbc4dfbf38421c176168c8
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120119
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T23:42:13Z to 2026-10-11T23:42:31Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: release-qc
+  name: release-qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120119
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Full local QC passed: 959 passed, 3 skipped in 719.63s (0:11:59). PR and
+    native merge-group gates remain separate.'
+  scope_note: 2026-10-11T23:42:31Z to 2026-10-11T23:57:13Z; log SHA-256 0c5ea0c7c9e8d7ed4640dc508435ad2f0cab9d40638b913b168e074ade488c4c
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+  accessed_at: '2026-10-11T23:58:14Z'
+  snapshot_sha256: aeb93a2f7f26d3aa442eac1e5227b43d50333ceb7771912faab985fb23598d24
+  support: context_only
+  summary: Corrected whole YAML reread; exact expected mutation and append-only event
+    verified against baseline.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T23:32:46Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Typed parthood, assertion-local evidence and assembly-only essentiality
+    rules.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  accessed_at: '2026-10-11T23:32:46Z'
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+  support: context_only
+  summary: Essentiality concerns structure formation, possibly defectively; gene symbols
+    are metadata, not component identity.
+- evidence_id: reading
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/reading-checkpoint.json
+  accessed_at: '2026-10-11T23:32:46Z'
+  snapshot_sha256: eacec47a4ec83f7aea2dc57abf00b895a6e216bf1d1c76ee2f5c9855606301c6
+  support: context_only
+  summary: Preserved source reading chronology and explicit abstract/full-text/visual
+    limits.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/predecessors.json
+  accessed_at: '2026-10-11T23:32:46Z'
+  snapshot_sha256: 4f1c46b912fe671dcc64a5d99949cef6f94e3090587c5806a3ba5a876602b212
+  support: context_only
+  summary: Ignored-inclusive canonical bundle scan; no exact-target predecessor.
+- evidence_id: go-relations
+  kind: authority
+  reference: /private/tmp/csm-review-20261011T222903Z/next-go-relations.log
+  accessed_at: '2026-10-11T23:32:46Z'
+  snapshot_sha256: a262339b1fbbc4277e13ac20c44b1875fd6042cc5209596e64eed932c6413396
+  support: context_only
+  summary: Source-native OAK typed relations inspected, independently consistent with
+    QuickGO terms.
+- evidence_id: context
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/context-search.log
+  accessed_at: '2026-10-11T23:32:46Z'
+  snapshot_sha256: 1ba49870de1404b7f4c562c367b0563ca9ce248e3d0349886dd8ae944b8a267a
+  support: context_only
+  summary: Identifier/label/slug search includes ignored and hidden repository files,
+    excluding Git internals and dependency trees.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T222903Z/next-adapter.log
+  accessed_at: '2026-10-11T23:32:46Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: All 28 iModulonDB dataset rows inspected; no matching Trypanosoma dataset.
+    Not negative biological evidence.
+- evidence_id: history-0
+  kind: record_content
+  reference: history/records/flagellum_attachment_zone/2026-09-12T021349Z-codex-3c7249.yaml
+  accessed_at: '2026-10-11T23:32:46Z'
+  snapshot_sha256: 428a3afaa3d407d620cb07027273f1bfe65a45deaee9012da96b90da500b28ff
+  support: context_only
+  summary: Entire original append-only history read; preserve historical actors and
+    resolved issue scope.
+- evidence_id: dedup-faz1-assembly-essentiality-rnai-scope
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/dedup-faz1-assembly-essentiality-rnai-scope.log
+  accessed_at: '2026-10-11T23:32:46Z'
+  snapshot_sha256: 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570
+  support: context_only
+  summary: All-state exact-key GitHub issue search checked before creation. Any earlier
+    sandbox network failure remains in separate receipt.
+- evidence_id: paper-1
+  kind: primary_source
+  reference: https://wheelerlab.net/publications/17945531.pdf
+  locator: DOI:10.1016/j.protis.2007.08.005; complete main text and all six captions;
+    Figure 4 page 132 visually inspected
+  accessed_at: '2026-10-11T23:21:28Z'
+  snapshot_sha256: b396a9805e20bbf2b0fe72c148fb1217dda4589e0d9a6ed265d16c712c451ac6
+  support: supports
+  summary: Procyclic PTP-line FAZ1 RNAi leaves aberrant FAZ-like material and other
+    filament markers despite attachment/cytokinesis defects. Knockdown degree is an
+    explicit caveat; not a complete null experiment.
+- evidence_id: paper-2
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4827413/fullTextXML
+  locator: DOI:10.1016/j.pt.2015.12.010; complete main text, Table 1 and four captions
+  accessed_at: '2026-10-11T22:54:07Z'
+  snapshot_sha256: 616b6f43ba776fdf150e6a39c41fe056779efa6f9a3a540a372167dd70c1e67f
+  support: supports
+  summary: Review distinguishes FAZ zones, species/life-stage expression, gene IDs
+    and a disorganized but retained FAZ after FAZ1 knockdown. Models of pulling, targeting
+    and assembly hierarchy are not established native mechanisms. This is a literature
+    review, not a new primary experiment.
+- evidence_id: paper-6
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1111%2Fj.1550-7408.1999.tb04592.x%22&format=json&resultType=core
+  locator: DOI:10.1111/j.1550-7408.1999.tb04592.x; primary abstract and metadata only
+  accessed_at: '2026-10-11T22:54:12Z'
+  snapshot_sha256: 505a42a6e88acc382a5595a6648e621a228689d30601de45f92b7e0a83d2949b
+  support: supports
+  summary: FAZ filament and PFR antibody localization and differing assembly timing/rates
+    support the narrow record note. No claim that full methods or original figures
+    were read.
+- evidence_id: paper-8
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1242%2Fjcs.087676%22&format=json&resultType=core
+  locator: DOI:10.1242/jcs.087676; primary abstract and metadata only
+  accessed_at: '2026-10-11T22:54:14Z'
+  snapshot_sha256: 5ca9f8602a88065868f02ea09b1753a8708a001adbe0b4db527da6fd31f718ba
+  support: supports
+  summary: CC2D is reported at the filament, adjacent ER and basal bodies; RNAi yields
+    a short FAZ stub and altered morphology. Not a protein-null or exclusive-localization
+    claim.
+- evidence_id: paper-9
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4524107/
+  locator: DOI:10.1242/jcs.168377; abstract, entire Results, Discussion, Methods and
+    eight captions
+  accessed_at: '2026-10-11T22:54:50Z'
+  snapshot_sha256: 09cf00b49c01059a1b81c5912c994204218addefdd5f2cd24344a1a9d2fccd32
+  support: supports
+  summary: Procyclic 427/29-13 experiments identify FAZ2, retain old and short new
+    FAZ after RNAi, destabilize other proteins, recover CC2D/KMP11 by affinity purification/co-IP
+    and track proximal incorporation. Association is not purified direct binary binding.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0005856,GO%3A0020016,GO%3A0120119,GO%3A0120120,GO%3A0120269,GO%3A0140535,GO%3A1990900
+  locator: Exact GO IDs, definitions, synonyms and child relation types
+  accessed_at: '2026-10-11T22:57:55Z'
+  snapshot_sha256: 2193158f92fafcc78c308b1ae6dcbcb7483113522fe12b201f3665c879e99c2e
+  support: supports
+  summary: Identity terms denote the requested structures; GO lexical synonymy is
+    not an assertion that all historical protein cohorts are physically identical.
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5691
+  locator: TaxId/name/rank
+  accessed_at: '2026-10-11T22:57:55Z'
+  snapshot_sha256: ba78ff6fe5de62b2654b61e249c2c87b239dca0208950b0e4ecf3ef2d81c99be
+  support: supports
+  summary: T. brucei species identity verified; experiments remain limited to named
+    laboratory forms/lines.
+- evidence_id: figure-4
+  kind: primary_source
+  reference: /private/tmp/csm-review-20261011T232800Z/faz1-page6.png
+  accessed_at: '2026-10-11T23:32:46Z'
+  snapshot_sha256: a88175bae6e04cb95df8c34e83f10a872548ac740824b1af0a66f5c9734ea9ae
+  support: context_only
+  summary: 'Actual original PDF page 132 visually inspected: Figure 4 TEM/IF panels
+    show aberrant residual structure and patchy markers, with its complete caption.'
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T233246Z-flagellum_attachment_zone-audit/review.yaml
+  accessed_at: '2026-10-11T23:58:14Z'
+  snapshot_sha256: ea7f85dff2b32c2f49de26d6bb24b8b031cc63df9e47b11cfad80fcac32b48fb
+  support: context_only
+  summary: Original immutable observation committed before scientific edits.
+- evidence_id: red-tests
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/regressions-red.log
+  accessed_at: '2026-10-11T23:58:14Z'
+  snapshot_sha256: a5508bf595bf2069cf0de9b9207db82de1c03a699889b575b8fcbdb739f6f7ef
+  support: context_only
+  summary: Seven new regressions fail on baseline; four status/discussion controls
+    pass.
+- evidence_id: green-tests
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/post-focused.log
+  accessed_at: '2026-10-11T23:58:14Z'
+  snapshot_sha256: 65341ae56b212029e3fad52c31e7e9d558bca6631d1d6718b0e6351be092f153
+  support: context_only
+  summary: Focused regressions and guarded-writer tests all pass after correction.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/preservation.json
+  accessed_at: '2026-10-11T23:58:14Z'
+  snapshot_sha256: a3421353696a6714b2a92dc635a8dc47e0f0266ab381ab9914d3233bc5a13cdb
+  support: context_only
+  summary: All 905 other native records, 908 unaffected vectors and all prior history/review/legacy
+    files unchanged. All four original graph/discussion bodies unchanged.
+- evidence_id: edit-history
+  kind: record_content
+  reference: history/records/flagellum_attachment_zone/2026-10-11T233351Z-codex-646fe5.yaml
+  accessed_at: '2026-10-11T23:58:14Z'
+  snapshot_sha256: a5e2c70df091d1c8830b5bd557ca6b9d55b0c86ddf28260ac46bdc95e9065345
+  support: context_only
+  summary: Actual Codex EDIT links saved observation and issue; no no-change history
+    generated.
+- evidence_id: history-erratum
+  kind: record_content
+  reference: history/records/flagellum_attachment_zone/2026-10-11T233615Z-codex-660d58.yaml
+  accessed_at: '2026-10-11T23:58:14Z'
+  snapshot_sha256: c9950a0f8811407611806c4ef17c0f37ff541e403483205a9da8be01d4a65e72
+  support: context_only
+  summary: Append-only correction supersedes overbroad touched-section metadata in
+    the new EDIT event; no further native mutation.
+assessments:
+- assessment_id: resolved-f1
+  area: evidence
+  topic: Do not infer absolute FAZ assembly essentiality from FAZ1 knockdown
+  outcome: supported
+  target_ids:
+  - GO:0120119
+  evidence_ids:
+  - record
+  - rules
+  - schema
+  - paper-1
+  - paper-2
+  - figure-4
+  - predecessor
+  - red-tests
+  - green-tests
+  - preservation
+  - edit-history
+  - history-erratum
+  summary: Only FAZ1 assembly essentiality changes to UNKNOWN, with an assertion-local
+    explanation of residual abnormal FAZ after RNAi and the unproven complete-loss
+    condition. Its normal-structure role and all FAZ2/CC2D evidence remain unchanged.
+findings:
+- finding_id: F1
+  issue_key: faz1-assembly-essentiality-rnai-scope
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Do not infer absolute FAZ assembly essentiality from FAZ1 knockdown
+  description: Only FAZ1 assembly essentiality changes to UNKNOWN, with an assertion-local
+    explanation of residual abnormal FAZ after RNAi and the unproven complete-loss
+    condition. Its normal-structure role and all FAZ2/CC2D evidence remain unchanged.
+  target_ids:
+  - GO:0120119
+  field_paths:
+  - components[1].essentiality
+  - components[1].evidence[0].notes
+  evidence_ids:
+  - record
+  - rules
+  - schema
+  - paper-1
+  - paper-2
+  - figure-4
+  - predecessor
+  - red-tests
+  - green-tests
+  - preservation
+  - edit-history
+  - history-erratum
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Wrong typed ontology relation or unsupported assembly-essentiality
+    classification affects structured biological interpretation.
+  disposition_reason: Only FAZ1 assembly essentiality changes to UNKNOWN, with an
+    assertion-local explanation of residual abnormal FAZ after RNAi and the unproven
+    complete-loss condition. Its normal-structure role and all FAZ2/CC2D evidence
+    remain unchanged. Verified by inspected source evidence, exact preservation checks,
+    red/green tests and full local QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T233246Z-flagellum_attachment_zone-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2269
+actions: []
+limitations:
+- Same-agent scientific review, not independent human approval or raw-data reanalysis.
+- Original source access dates/hashes are retained from the read-ahead phase. Actual
+  reading scope is recorded per source; separate supplements, movies and raw experiments
+  were not reviewed.
+- 2009 MORN1, 1999 FAZ assembly and 2011 CC2D remain primary-abstract-only for narrow
+  supported claims; full-text inaccessibility is not asserted globally. Other material
+  sources have the inspected main-text scope stated in evidence.
+- The 2008 FAZ1 Figure 4 is visually inspected only for the FAZ review; other main
+  figures were read as captions, not certified pixel-level reanalyses. No source media
+  adopted.
+- No exact whole-family accession is invented and no absence from iModulonDB is biological
+  evidence. Neighboring flagellar pocket and newer-publication leads are not counted
+  as completed reviews.
+- This is a same-agent disposition, not independent human approval or a repeated full
+  scientific review. Full local QC is now recorded; PR and native merge-group checks
+  remain separate publication gates.
+- Exact corrected input revision retained by review-base/trypanosome-structure-evidence-20261011.
+  Existing policy/no-adapter and test skips remain explicit.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2269
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T233246Z-flagellum_attachment_zone-audit
+  relationship: Resolves exact original finding occurrences without replacing the
+    bundle.
+```
