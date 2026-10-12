@@ -19,14 +19,20 @@ curation_history:
     canonical example, GO-backed topology evidence, a nonmechanistic deep-fiber topology
     graph, and boundary and component grounding discussions.
   llm_assisted: true
+- timestamp: '2026-10-12T00:29:11Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2272: represented cytoskeleton as a containing whole via part_of,
+    corrected relationship evidence, and preserved exact structure identity and all
+    existing biological claims.'
+  llm_assisted: true
 synonyms:
 - synonym_text: deep fibre
   synonym_type: EXACT_SYNONYM
   source: GO:0032123
-parent_structures:
-- GO:0005856
 part_of:
 - GO:0031912
+- GO:0005856
 canonical_examples:
 - taxon_id: NCBITaxon:5911
   taxon_label: Tetrahymena thermophila
@@ -38,7 +44,8 @@ evidence:
   notes: Gene Ontology cellular-component term for the ciliate oral-apparatus deep
     fiber.
 - reference: GO:0005856
-  notes: OLS reports GO:0005856 cytoskeleton as a direct GO:0032123 parent.
+  notes: Gene Ontology relates GO:0032123 deep fiber to GO:0005856 cytoskeleton by
+    part_of (BFO:0000050), not by is-a.
 - reference: GO:0031912
   notes: OLS reports GO:0032123 deep fiber as part of the oral apparatus.
 - reference: DOI:10.1016/S0091-679X(08)61528-9

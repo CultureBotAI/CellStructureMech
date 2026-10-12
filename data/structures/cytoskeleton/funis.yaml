@@ -22,8 +22,15 @@ curation_history:
     funis topology graph, and open TODOs for dense-rod grounding and tail-flexion
     mechanism.
   llm_assisted: true
+- timestamp: '2026-10-12T00:29:13Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2273: represented cytoskeleton as a containing whole via part_of,
+    corrected relationship evidence, and preserved exact structure identity and all
+    existing biological claims.'
+  llm_assisted: true
 parent_structures:
-- GO:0005856
+- GO:0005622
 has_part:
 - GO:0005874
 components:
@@ -63,6 +70,13 @@ evidence:
     new insights, Journal of Structural Biology.'
 - reference: DOI:10.1016/bs.apar.2019.11.001
   notes: Microtubule organelles in Giardia, Advances in Parasitology.
+- reference: GO:0005622
+  notes: Intracellular anatomical structure is a broader is-a class for the Giardia
+    funis, without equating it to one microtubule or the whole cytoskeleton.
+- reference: GO:0005856
+  notes: Cytoskeleton denotes the containing cellular framework. Benchimol et al.
+    2004 describe funis as one of several microtubular structures composing the Giardia
+    cytoskeleton, supporting part_of rather than is-a.
 causal_graphs:
 - graph_id: giardia_funis_microtubule_topology
   title: Funis microtubules link Giardia flagellar axonemes to the tail cortex
@@ -177,3 +191,5 @@ discussions:
     notes: Benchimol et al. 2004 proposed a tail-flexion model from the funis topology.
   posed_by: codex
   posed_date: '2026-09-22'
+part_of:
+- GO:0005856
