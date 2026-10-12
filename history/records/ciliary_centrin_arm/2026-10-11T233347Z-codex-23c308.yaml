@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+  slug: ciliary_centrin_arm
+session:
+  id: 2026-10-11T233347Z-codex-23c308
+  timestamp: '2026-10-11T23:33:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2266
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - functions
+  - parent_structures
+  - part_of
+  - curation_history
+  summary: 'Addressed #2266: distinguished centrin-arm and hook-complex terminology in assertion-local
+    source notes and occurrence wording.'
+  details: 'Original immutable scientific review: reviews/structured/20261011T233236Z-ciliary_centrin_arm-audit/review.yaml.
+    Issue keys: centrin-arm-hook-terminology. All exact source references and acceptance criteria
+    are in that saved observation. Guarded writer used. Original inline and repository history,
+    open discussions, identity, mapping status, graph content and unrelated records retained.'

@@ -1,0 +1,597 @@
+# ciliary centrin arm: supported finding disposition
+
+- Review: 20261011T235755Z-ciliary_centrin_arm-disposition
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-11T23:57:53Z
+- Finished UTC: 2026-10-11T23:57:55Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact original findings resolved by narrowly scoped, source-backed curation; original observation, history and PROPOSED status retained.
+
+## Scope And Provenance
+
+Exact saved findings and surrounding-content preservation reassessed, not another whole-record review.
+
+Selection: 20261011T233236Z-ciliary_centrin_arm-audit
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 0294a9e09591b5b9cb1b3d2b0d6b5fc80bec6f0a.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0120269 | data/structures/cytoskeleton/ciliary_centrin_arm.yaml | maintained | ciliary centrin arm |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| focused | passed | True | GO:0120269 | ...................................                                      [100%]<br>35 passed in 42.26s |
+| ciliary_centrin_arm-strict | passed | True | GO:0120269 | Actual deterministic check passed; scientific support assessed separately. |
+| ciliary_centrin_arm-snippets | passed | True | GO:0120269 | No verbatim snippets; paraphrases assessed separately against inspected text. |
+| history | passed | True | GO:0120269 | Actual deterministic check passed; scientific support assessed separately. |
+| labels | passed | True | GO:0120269 | id↔label correspondence summary:<br>          OK_CANONICAL: 3545<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| curies | passed | True | GO:0120269 | resolver control: every resolver accepts a known id and rejects a fabricated one<br><br>identifier liveness summary:<br>  OK             4016<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| traits | passed | True | GO:0120269 | Actual deterministic check passed; scientific support assessed separately. |
+| release-qc | passed | True | GO:0120269 | Full local QC passed: 959 passed, 3 skipped in 719.63s (0:11:59). PR and native merge-group gates remain separate. |
+
+## Scientific And Domain Assessments
+
+### Distinguish the centrin arm from hook-complex terminology
+
+evidence: supported. Targets: GO:0120269.
+
+Component/function notes now distinguish the Centrin4-positive arm from the MORN1-positive hook complex, retain historical bilobe context and unresolved physical boundaries, and describe arm occurrence alongside the hook.
+
+## Findings
+
+### F1: Distinguish the centrin arm from hook-complex terminology
+
+minor / resolved / confirmed; issue key: centrin-arm-hook-terminology.
+
+Component/function notes now distinguish the Centrin4-positive arm from the MORN1-positive hook complex, retain historical bilobe context and unresolved physical boundaries, and describe arm occurrence alongside the hook.
+
+Disposition: Component/function notes now distinguish the Centrin4-positive arm from the MORN1-positive hook complex, retain historical bilobe context and unresolved physical boundaries, and describe arm occurrence alongside the hook. Verified by inspected source evidence, exact preservation checks, red/green tests and full local QC.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/ciliary_centrin_arm.yaml | context_only | Corrected whole YAML reread; exact expected mutation and append-only event verified against baseline. |
+| rules | docs/CURATION.md | context_only | Typed parthood, assertion-local evidence and assembly-only essentiality rules. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml | context_only | Essentiality concerns structure formation, possibly defectively; gene symbols are metadata, not component identity. |
+| reading | /private/tmp/csm-review-20261011T232800Z/reading-checkpoint.json | context_only | Preserved source reading chronology and explicit abstract/full-text/visual limits. |
+| predecessors | /private/tmp/csm-review-20261011T232800Z/predecessors.json | context_only | Ignored-inclusive canonical bundle scan; no exact-target predecessor. |
+| go-relations | /private/tmp/csm-review-20261011T222903Z/next-go-relations.log | context_only | Source-native OAK typed relations inspected, independently consistent with QuickGO terms. |
+| context | /private/tmp/csm-review-20261011T232800Z/context-search.log | context_only | Identifier/label/slug search includes ignored and hidden repository files, excluding Git internals and dependency trees. |
+| adapter | /private/tmp/csm-review-20261011T222903Z/next-adapter.log | context_only | All 28 iModulonDB dataset rows inspected; no matching Trypanosoma dataset. Not negative biological evidence. |
+| history-0 | history/records/ciliary_centrin_arm/2026-10-03T043017Z-codex-db3543.yaml | context_only | Entire original append-only history read; preserve historical actors and resolved issue scope. |
+| dedup-centrin-arm-hook-terminology | /private/tmp/csm-review-20261011T232800Z/dedup-centrin-arm-hook-terminology.log | context_only | All-state exact-key GitHub issue search checked before creation. Any earlier sandbox network failure remains in separate receipt. |
+| paper-5 | https://pmc.ncbi.nlm.nih.gov/articles/PMC7489904/; DOI:10.1074/jbc.RA120.014237; Results, Discussion, Experimental Procedures, eight captions | supports | Procyclic BOH2 depletion impairs new-hook integrity and arm assembly; BOH2/BOH1 localization dependence is asymmetric. BioID proximity is not direct binding and negative co-IP is retained. |
+| paper-10 | https://pmc.ncbi.nlm.nih.gov/articles/PMC6679579/; DOI:10.1242/jcs.230581; entire Results, Discussion, Methods and eight captions | supports | Procyclic BOH1 depletion impairs arm elongation and new FAZ; TbPLK pull-down uses cell lysate, not purified binary components. Arm and hook are distinguished and isolated-arm function remains unresolved. |
+| paper-15 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4695855/fullTextXML; DOI:10.3390/cells4040726; Sections 2 Form, 3 Fabric, 4 Function and 5 Conclusions | supports | Review names the MORN1-positive structure hook complex and the Centrin4-positive rod centrin arm. Historical bilobe nomenclature and unresolved physical boundaries are retained; BioID is proximity evidence. This is a literature review, not a new primary experiment. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0005856,GO%3A0020016,GO%3A0120119,GO%3A0120120,GO%3A0120269,GO%3A0140535,GO%3A1990900; Exact GO IDs, definitions, synonyms and child relation types | supports | Identity terms denote the requested structures; GO lexical synonymy is not an assertion that all historical protein cohorts are physically identical. |
+| taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5691; TaxId/name/rank | supports | T. brucei species identity verified; experiments remain limited to named laboratory forms/lines. |
+| predecessor | reviews/structured/20261011T233236Z-ciliary_centrin_arm-audit/review.yaml | context_only | Original immutable observation committed before scientific edits. |
+| red-tests | /private/tmp/csm-review-20261011T232800Z/regressions-red.log | context_only | Seven new regressions fail on baseline; four status/discussion controls pass. |
+| green-tests | /private/tmp/csm-review-20261011T232800Z/post-focused.log | context_only | Focused regressions and guarded-writer tests all pass after correction. |
+| preservation | /private/tmp/csm-review-20261011T232800Z/preservation.json | context_only | All 905 other native records, 908 unaffected vectors and all prior history/review/legacy files unchanged. All four original graph/discussion bodies unchanged. |
+| edit-history | history/records/ciliary_centrin_arm/2026-10-11T233347Z-codex-23c308.yaml | context_only | Actual Codex EDIT links saved observation and issue; no no-change history generated. |
+| history-erratum | history/records/ciliary_centrin_arm/2026-10-11T233609Z-codex-34b612.yaml | context_only | Append-only correction supersedes overbroad touched-section metadata in the new EDIT event; no further native mutation. |
+
+## Limits And Additional Notes
+
+- Same-agent scientific review, not independent human approval or raw-data reanalysis.
+- Original source access dates/hashes are retained from the read-ahead phase. Actual reading scope is recorded per source; separate supplements, movies and raw experiments were not reviewed.
+- 2009 MORN1, 1999 FAZ assembly and 2011 CC2D remain primary-abstract-only for narrow supported claims; full-text inaccessibility is not asserted globally. Other material sources have the inspected main-text scope stated in evidence.
+- The 2008 FAZ1 Figure 4 is visually inspected only for the FAZ review; other main figures were read as captions, not certified pixel-level reanalyses. No source media adopted.
+- No exact whole-family accession is invented and no absence from iModulonDB is biological evidence. Neighboring flagellar pocket and newer-publication leads are not counted as completed reviews.
+- This is a same-agent disposition, not independent human approval or a repeated full scientific review. Full local QC is now recorded; PR and native merge-group checks remain separate publication gates.
+- Exact corrected input revision retained by review-base/trypanosome-structure-evidence-20261011. Existing policy/no-adapter and test skips remain explicit.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T235755Z-ciliary_centrin_arm-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'ciliary centrin arm: supported finding disposition'
+started_at: '2026-10-11T23:57:53Z'
+finished_at: '2026-10-11T23:57:55Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent whole-record and primary-source assessment, not independent
+    human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact original findings resolved by narrowly scoped, source-backed curation;
+  original observation, history and PROPOSED status retained.
+source:
+  git_revision: 0294a9e09591b5b9cb1b3d2b0d6b5fc80bec6f0a
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 3acb13884094f40c840ed3452a6209ee9a38b479ae16e4c0bca390c3c290828a
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/bilobe_structure.yaml
+    sha256: 877769175369aac52173c3951681b76181ad7c6eff8e387de837b46a86404a08
+    role: context
+  - path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+    sha256: 483507c171218f013e0bfaaa4aa3c77c1cedb91cecb105d1b1a342bb3b914543
+    role: target
+  - path: data/structures/cytoskeleton/ciliary_pocket_collar.yaml
+    sha256: 3c9ec665546d0e2aa52e9a6f0cc7ea10c4f6b6abc1f6e18569f8866c996376f4
+    role: context
+  - path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+    sha256: aeb93a2f7f26d3aa442eac1e5227b43d50333ceb7771912faab985fb23598d24
+    role: context
+  - path: data/structures/membrane_organelle/flagellar_pocket.yaml
+    sha256: d67c465d104f21905f63ea994b6f4f526a51502cefccf79e9e732698f4971fa8
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/SOURCE_QUEUE.md
+    sha256: 793e9a16435684b90b0d64b7be4bdfeffbba5ab6ac0ca99eadf25c8548e22729
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/ciliary_centrin_arm/2026-10-03T043017Z-codex-db3543.yaml
+    sha256: ab1593643b0d24bc43edf33563f08c8b0d73bb7a3ce5f9621e8abaf1705e91e4
+    role: context
+  - path: history/records/ciliary_centrin_arm/2026-10-11T233347Z-codex-23c308.yaml
+    sha256: d2bd9d98030f534d8fc2edd0a2ee0e1e0612dc22b379bbf60900fb8587c561ea
+    role: context
+  - path: history/records/ciliary_centrin_arm/2026-10-11T233609Z-codex-34b612.yaml
+    sha256: c3fc0e3cb1a390c11235f1045b462ccc71271a41ee65699c14531f30c04b5c34
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: pages/structures/cytoskeleton/ciliary_centrin_arm.html
+    sha256: 792a0c6975921b03f9044225430d3e698d3d20655c2123b47a8ebd1fdc071286
+    role: context
+  - path: reviews/structured/20261011T233236Z-ciliary_centrin_arm-audit/review.yaml
+    sha256: c9d676bbe7452dd82265d7eebf457369ef37ee2f83b06729696ba49bb9148277
+    role: context
+  - path: scripts/render_pages.py
+    sha256: b5be74a8a3a0f7190b63da47a86cd8b48cbce4bb955ea0896f29d24f214a9b22
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/cellstructuremech/templates/structure.html
+    sha256: 417b020a6eda677a1e40ecd3d849bfd5063d83291d7496e1c52a1a3a321f35ed
+    role: context
+  - path: tests/test_trypanosome_structure_evidence.py
+    sha256: 7ce1dfa869f9295e836fff7a7956e62685ac291969283c5311e08c7fad5cf79b
+    role: context
+targets:
+- target_id: GO:0120269
+  path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+  label: ciliary centrin arm
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+    role: maintained scientific record
+scope:
+  description: Exact saved findings and surrounding-content preservation reassessed,
+    not another whole-record review.
+  selection: 20261011T233236Z-ciliary_centrin_arm-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0120269
+checks:
+- check_id: focused
+  name: focused
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120269
+  command: .venv/bin/python -m pytest -q tests/test_trypanosome_structure_evidence.py
+    tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '...................................                                      [100%]
+
+    35 passed in 42.26s'
+  scope_note: 2026-10-11T23:36:27Z to 2026-10-11T23:37:11Z; log SHA-256 65341ae56b212029e3fad52c31e7e9d558bca6631d1d6718b0e6351be092f153
+- check_id: ciliary_centrin_arm-strict
+  name: ciliary_centrin_arm-strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120269
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T23:37:45Z to 2026-10-11T23:37:50Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: ciliary_centrin_arm-snippets
+  name: ciliary_centrin_arm-snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120269
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+    --report /private/tmp/csm-review-20261011T232800Z/post-ciliary_centrin_arm-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-11T23:37:50Z to 2026-10-11T23:38:15Z; log SHA-256 08e7608d0335fe274a4dbfc3f88fd0ce8b255edb4ecd2053cef3ebf6fc1f1f13
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120269
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T23:39:19Z to 2026-10-11T23:39:36Z; log SHA-256 8163609c40c8a98151ad394b3e718c92826ba2960c070eb74781ee8947cde044
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120269
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3545\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-11T23:39:36Z to 2026-10-11T23:41:17Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120269
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4016\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-11T23:41:17Z to 2026-10-11T23:42:13Z; log SHA-256 f38fdf2889286b712ede050fc9d6de36ecb8830b57fbc4dfbf38421c176168c8
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120269
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-11T23:42:13Z to 2026-10-11T23:42:31Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: release-qc
+  name: release-qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:0120269
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Full local QC passed: 959 passed, 3 skipped in 719.63s (0:11:59). PR and
+    native merge-group gates remain separate.'
+  scope_note: 2026-10-11T23:42:31Z to 2026-10-11T23:57:13Z; log SHA-256 0c5ea0c7c9e8d7ed4640dc508435ad2f0cab9d40638b913b168e074ade488c4c
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+  accessed_at: '2026-10-11T23:57:55Z'
+  snapshot_sha256: 483507c171218f013e0bfaaa4aa3c77c1cedb91cecb105d1b1a342bb3b914543
+  support: context_only
+  summary: Corrected whole YAML reread; exact expected mutation and append-only event
+    verified against baseline.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-11T23:32:36Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Typed parthood, assertion-local evidence and assembly-only essentiality
+    rules.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  accessed_at: '2026-10-11T23:32:36Z'
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+  support: context_only
+  summary: Essentiality concerns structure formation, possibly defectively; gene symbols
+    are metadata, not component identity.
+- evidence_id: reading
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/reading-checkpoint.json
+  accessed_at: '2026-10-11T23:32:36Z'
+  snapshot_sha256: eacec47a4ec83f7aea2dc57abf00b895a6e216bf1d1c76ee2f5c9855606301c6
+  support: context_only
+  summary: Preserved source reading chronology and explicit abstract/full-text/visual
+    limits.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/predecessors.json
+  accessed_at: '2026-10-11T23:32:36Z'
+  snapshot_sha256: 4f1c46b912fe671dcc64a5d99949cef6f94e3090587c5806a3ba5a876602b212
+  support: context_only
+  summary: Ignored-inclusive canonical bundle scan; no exact-target predecessor.
+- evidence_id: go-relations
+  kind: authority
+  reference: /private/tmp/csm-review-20261011T222903Z/next-go-relations.log
+  accessed_at: '2026-10-11T23:32:36Z'
+  snapshot_sha256: a262339b1fbbc4277e13ac20c44b1875fd6042cc5209596e64eed932c6413396
+  support: context_only
+  summary: Source-native OAK typed relations inspected, independently consistent with
+    QuickGO terms.
+- evidence_id: context
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/context-search.log
+  accessed_at: '2026-10-11T23:32:36Z'
+  snapshot_sha256: 1ba49870de1404b7f4c562c367b0563ca9ce248e3d0349886dd8ae944b8a267a
+  support: context_only
+  summary: Identifier/label/slug search includes ignored and hidden repository files,
+    excluding Git internals and dependency trees.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T222903Z/next-adapter.log
+  accessed_at: '2026-10-11T23:32:36Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: All 28 iModulonDB dataset rows inspected; no matching Trypanosoma dataset.
+    Not negative biological evidence.
+- evidence_id: history-0
+  kind: record_content
+  reference: history/records/ciliary_centrin_arm/2026-10-03T043017Z-codex-db3543.yaml
+  accessed_at: '2026-10-11T23:32:36Z'
+  snapshot_sha256: ab1593643b0d24bc43edf33563f08c8b0d73bb7a3ce5f9621e8abaf1705e91e4
+  support: context_only
+  summary: Entire original append-only history read; preserve historical actors and
+    resolved issue scope.
+- evidence_id: dedup-centrin-arm-hook-terminology
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/dedup-centrin-arm-hook-terminology.log
+  accessed_at: '2026-10-11T23:32:36Z'
+  snapshot_sha256: 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570
+  support: context_only
+  summary: All-state exact-key GitHub issue search checked before creation. Any earlier
+    sandbox network failure remains in separate receipt.
+- evidence_id: paper-5
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC7489904/
+  locator: DOI:10.1074/jbc.RA120.014237; Results, Discussion, Experimental Procedures,
+    eight captions
+  accessed_at: '2026-10-11T22:54:50Z'
+  snapshot_sha256: 33b305ec7094d3e5bae9e9a976cc92faa501ae5f069b9662764ffd6ccf559f3e
+  support: supports
+  summary: Procyclic BOH2 depletion impairs new-hook integrity and arm assembly; BOH2/BOH1
+    localization dependence is asymmetric. BioID proximity is not direct binding and
+    negative co-IP is retained.
+- evidence_id: paper-10
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6679579/
+  locator: DOI:10.1242/jcs.230581; entire Results, Discussion, Methods and eight captions
+  accessed_at: '2026-10-11T22:54:51Z'
+  snapshot_sha256: d04cdcda6ae480214344e22f9e59513797471f2134feb963d3598d9d27e27956
+  support: supports
+  summary: Procyclic BOH1 depletion impairs arm elongation and new FAZ; TbPLK pull-down
+    uses cell lysate, not purified binary components. Arm and hook are distinguished
+    and isolated-arm function remains unresolved.
+- evidence_id: paper-15
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4695855/fullTextXML
+  locator: DOI:10.3390/cells4040726; Sections 2 Form, 3 Fabric, 4 Function and 5 Conclusions
+  accessed_at: '2026-10-11T22:54:27Z'
+  snapshot_sha256: 79679e98c1f9f4b932373ea451482d4464a6843bfcdb741347344bc8e763a6e8
+  support: supports
+  summary: Review names the MORN1-positive structure hook complex and the Centrin4-positive
+    rod centrin arm. Historical bilobe nomenclature and unresolved physical boundaries
+    are retained; BioID is proximity evidence. This is a literature review, not a
+    new primary experiment.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0005856,GO%3A0020016,GO%3A0120119,GO%3A0120120,GO%3A0120269,GO%3A0140535,GO%3A1990900
+  locator: Exact GO IDs, definitions, synonyms and child relation types
+  accessed_at: '2026-10-11T22:57:55Z'
+  snapshot_sha256: 2193158f92fafcc78c308b1ae6dcbcb7483113522fe12b201f3665c879e99c2e
+  support: supports
+  summary: Identity terms denote the requested structures; GO lexical synonymy is
+    not an assertion that all historical protein cohorts are physically identical.
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5691
+  locator: TaxId/name/rank
+  accessed_at: '2026-10-11T22:57:55Z'
+  snapshot_sha256: ba78ff6fe5de62b2654b61e249c2c87b239dca0208950b0e4ecf3ef2d81c99be
+  support: supports
+  summary: T. brucei species identity verified; experiments remain limited to named
+    laboratory forms/lines.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261011T233236Z-ciliary_centrin_arm-audit/review.yaml
+  accessed_at: '2026-10-11T23:57:55Z'
+  snapshot_sha256: c9d676bbe7452dd82265d7eebf457369ef37ee2f83b06729696ba49bb9148277
+  support: context_only
+  summary: Original immutable observation committed before scientific edits.
+- evidence_id: red-tests
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/regressions-red.log
+  accessed_at: '2026-10-11T23:57:55Z'
+  snapshot_sha256: a5508bf595bf2069cf0de9b9207db82de1c03a699889b575b8fcbdb739f6f7ef
+  support: context_only
+  summary: Seven new regressions fail on baseline; four status/discussion controls
+    pass.
+- evidence_id: green-tests
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/post-focused.log
+  accessed_at: '2026-10-11T23:57:55Z'
+  snapshot_sha256: 65341ae56b212029e3fad52c31e7e9d558bca6631d1d6718b0e6351be092f153
+  support: context_only
+  summary: Focused regressions and guarded-writer tests all pass after correction.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/preservation.json
+  accessed_at: '2026-10-11T23:57:55Z'
+  snapshot_sha256: a3421353696a6714b2a92dc635a8dc47e0f0266ab381ab9914d3233bc5a13cdb
+  support: context_only
+  summary: All 905 other native records, 908 unaffected vectors and all prior history/review/legacy
+    files unchanged. All four original graph/discussion bodies unchanged.
+- evidence_id: edit-history
+  kind: record_content
+  reference: history/records/ciliary_centrin_arm/2026-10-11T233347Z-codex-23c308.yaml
+  accessed_at: '2026-10-11T23:57:55Z'
+  snapshot_sha256: d2bd9d98030f534d8fc2edd0a2ee0e1e0612dc22b379bbf60900fb8587c561ea
+  support: context_only
+  summary: Actual Codex EDIT links saved observation and issue; no no-change history
+    generated.
+- evidence_id: history-erratum
+  kind: record_content
+  reference: history/records/ciliary_centrin_arm/2026-10-11T233609Z-codex-34b612.yaml
+  accessed_at: '2026-10-11T23:57:55Z'
+  snapshot_sha256: c3fc0e3cb1a390c11235f1045b462ccc71271a41ee65699c14531f30c04b5c34
+  support: context_only
+  summary: Append-only correction supersedes overbroad touched-section metadata in
+    the new EDIT event; no further native mutation.
+assessments:
+- assessment_id: resolved-f1
+  area: evidence
+  topic: Distinguish the centrin arm from hook-complex terminology
+  outcome: supported
+  target_ids:
+  - GO:0120269
+  evidence_ids:
+  - record
+  - paper-15
+  - paper-10
+  - go
+  - predecessor
+  - red-tests
+  - green-tests
+  - preservation
+  - edit-history
+  - history-erratum
+  summary: Component/function notes now distinguish the Centrin4-positive arm from
+    the MORN1-positive hook complex, retain historical bilobe context and unresolved
+    physical boundaries, and describe arm occurrence alongside the hook.
+findings:
+- finding_id: F1
+  issue_key: centrin-arm-hook-terminology
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Distinguish the centrin arm from hook-complex terminology
+  description: Component/function notes now distinguish the Centrin4-positive arm
+    from the MORN1-positive hook complex, retain historical bilobe context and unresolved
+    physical boundaries, and describe arm occurrence alongside the hook.
+  target_ids:
+  - GO:0120269
+  field_paths:
+  - components[0].evidence[1].notes
+  - taxonomic_distribution[0].note
+  - functions[0].evidence[1].notes
+  evidence_ids:
+  - record
+  - paper-15
+  - paper-10
+  - go
+  - predecessor
+  - red-tests
+  - green-tests
+  - preservation
+  - edit-history
+  - history-erratum
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: minor
+  normalization_reason: Bounded evidence-note, citation or role wording defect; structure
+    identity and occurrence remain supported.
+  disposition_reason: Component/function notes now distinguish the Centrin4-positive
+    arm from the MORN1-positive hook complex, retain historical bilobe context and
+    unresolved physical boundaries, and describe arm occurrence alongside the hook.
+    Verified by inspected source evidence, exact preservation checks, red/green tests
+    and full local QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261011T233236Z-ciliary_centrin_arm-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2266
+actions: []
+limitations:
+- Same-agent scientific review, not independent human approval or raw-data reanalysis.
+- Original source access dates/hashes are retained from the read-ahead phase. Actual
+  reading scope is recorded per source; separate supplements, movies and raw experiments
+  were not reviewed.
+- 2009 MORN1, 1999 FAZ assembly and 2011 CC2D remain primary-abstract-only for narrow
+  supported claims; full-text inaccessibility is not asserted globally. Other material
+  sources have the inspected main-text scope stated in evidence.
+- The 2008 FAZ1 Figure 4 is visually inspected only for the FAZ review; other main
+  figures were read as captions, not certified pixel-level reanalyses. No source media
+  adopted.
+- No exact whole-family accession is invented and no absence from iModulonDB is biological
+  evidence. Neighboring flagellar pocket and newer-publication leads are not counted
+  as completed reviews.
+- This is a same-agent disposition, not independent human approval or a repeated full
+  scientific review. Full local QC is now recorded; PR and native merge-group checks
+  remain separate publication gates.
+- Exact corrected input revision retained by review-base/trypanosome-structure-evidence-20261011.
+  Existing policy/no-adapter and test skips remain explicit.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2266
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261011T233236Z-ciliary_centrin_arm-audit
+  relationship: Resolves exact original finding occurrences without replacing the
+    bundle.
+```
