@@ -1,0 +1,792 @@
+# TAC review resolution: filament compartments and parthood corrected
+
+- Review: 20261012T052500Z-tac-topology-and-parthood-resolved
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-12T05:00:43Z
+- Finished UTC: 2026-10-12T05:25:00Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Both major findings are resolved in the inspected maintained TAC record and rendered page. Filament compartments and the four bridge links now agree with the defining paper, and GO-supported cytoskeleton parthood replaces is-a. Whole-record reassessment and fresh local full QC passed with explicit reading limits. This is a local disposition, not a claim of completed PR merge.
+
+## Scope And Provenance
+
+Entire maintained TAC record and every material claim, with source and history checks.
+
+Selection: Exact GO0120121 target, not the other three pending cytoskeletal records captured for context.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f60d7c84f643d9bba17a88657aaa4e451f2319c1.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0120121 | data/structures/cytoskeleton/tripartite_attachment_complex.yaml | maintained | tripartite attachment complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| render-fixed | passed | True | GO:0120121 | Actual command exit0; deterministic validation does not replace scientific assessment. |
+| fixed-schema | passed | True | GO:0120121 | Actual command exit0; deterministic validation does not replace scientific assessment. |
+| fixed-strict | passed | True | GO:0120121 | Actual command exit0; deterministic validation does not replace scientific assessment. |
+| fixed-snippets | passed | True | GO:0120121 | Actual command exit0; deterministic validation does not replace scientific assessment. |
+| fixed-qc | passed | True | GO:0120121 | 987 passed, 3 skipped in 810.43s (0:13:30); all native gates passed. |
+| fixed-labels | passed | True | GO:0120121 | Actual command exit0; deterministic validation does not replace scientific assessment. |
+| fixed-curies | passed | True | GO:0120121 | Actual command exit0; deterministic validation does not replace scientific assessment. |
+| fixed-traits | passed | True | GO:0120121 | Actual command exit0; deterministic validation does not replace scientific assessment. |
+| fixed-reviews | passed | True | GO:0120121 | Actual command exit0; deterministic validation does not replace scientific assessment. |
+| fixed-diff | passed | True | GO:0120121 | Actual command exit0; deterministic validation does not replace scientific assessment. |
+| TAC topology and patch preservation | passed | True | GO:0120121 | Correct four-link order and parthood; protein roles, UNKNOWN essentialities, IDs, status, taxa, old histories, all earlier bundles and62 legacy reports preserved. One embedding vector regenerated with pinned native helper;908 unchanged. |
+
+## Scientific And Domain Assessments
+
+### Exact structure identity and synonym
+
+identity: supported. Targets: GO:0120121.
+
+GO0120121, its definition and RELATED TAC synonym correctly identify the multi-domain bridge, not a single protein or kDNA itself. CYTOSKELETON/OTHER and PROPOSED remain appropriate.
+
+### Is-a versus parthood
+
+grounding: supported. Targets: GO:0120121.
+
+GO0005856 is now part_of, not an is-a parent. No guessed replacement parent is introduced; exact GO0120121 identity is unchanged.
+
+### Domains and three protein constituents
+
+evidence: supported. Targets: GO:0120121.
+
+Both named filament regions and the differentiated membrane description now match Ogbadoyi2003. The three protein components, all UNKNOWN assembly essentialities, reviewed label-only grounding and taxonomic limits remain unchanged.
+
+### Distribution and canonical example
+
+scope: supported. Targets: GO:0120121.
+
+The T. brucei model and TAC102-specific example match cited experiments. COMMON is a qualitative model-species assertion, not measured prevalence across isolates. No claim that every kinetoplastid has the same protein inventory.
+
+### Genome positioning and segregation
+
+evidence: supported. Targets: GO:0120121.
+
+Physical attachment, basal-body separation and depletion phenotypes support kDNA segregation. No direct DNA binding, complete molecular mechanism or universal viability requirement is asserted.
+
+### Bridge sequence and evidence
+
+graph: supported. Targets: GO:0120121.
+
+The four-link chain is basal body -&gt; exclusion-zone filaments -&gt; mitochondrial membranes -&gt; unilateral filaments -&gt; kDNA. This is explicitly spatial and nonmechanistic, not temporal assembly or a protein-level force-transfer mechanism. Existing constituent and whole-TAC segregation links are preserved.
+
+### Optional fields, source correction and unknowns
+
+completeness: supported. Targets: GO:0120121.
+
+No invented physical measurements, images, datasets or traits are required. The component-grounding TODO remains meaningful; the list is not claimed exhaustive. TAC102 figure-legend correction does not invalidate the qualitative Results-based claims.
+
+### Prior fixes, status and ownership
+
+ownership: supported. Targets: GO:0120121.
+
+Old histories, issue769 fixes, all earlier bundles and62 legacy reports preserved. New EDIT provenance accompanies the guarded correction. One semantic vector changed,908 preserved, maps/site regenerated and full local QC passed; no human sign-off or completed publication is implied.
+
+## Findings
+
+### F1: Restore the correct TAC filament compartments and bridge order
+
+major / resolved / confirmed; issue key: tac-filament-compartment-reversal.
+
+The predecessor documents the reversed filament compartments. Current component roles, source notes, membrane description and four structural graph links now put exclusion-zone filaments outside the mitochondrion and unilateral filaments between inner membrane and kDNA.
+
+Disposition: Inspected the whole fixed record, generated page and Ogbadoyi Methods/Results/Discussion plus Figures2/6. Correct spatial order, matching citations and explicit nonmechanistic scope are present. Protein claims, UNKNOWN essentialities and identity remain intact; guarded history, scope assertions and fresh full QC passed.
+
+### F2: Represent cytoskeleton as TAC parthood instead of an is-a parent
+
+major / resolved / confirmed; issue key: tac-cytoskeleton-is-a-versus-part-of.
+
+The predecessor records the wrong cytoskeleton is-a relation. Current YAML removes that parent and records GO0005856 under part_of with explicit GO evidence.
+
+Disposition: Verified the live GO child relation, corrected YAML and visible Part of relation in generated HTML. No replacement parent was guessed and exact GO0120121 identity remains intact. Native validators, full QC, history and preservation assertions passed.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/cytoskeleton/tripartite_attachment_complex.yaml; Entire corrected YAML, new EDIT history and rendered page after fixed-input capture | supports | Whole corrected record reread. Exclusion-zone filaments occupy the cytoplasmic basal-body/outer-membrane region; unilateral filaments occupy the inner-membrane/kDNA gap. Matching graph relations and visible nonmechanistic wording agree. Cytoskeleton is part_of; all other claims and prior fixes retained. |
+| ogbadoyi | DOI:10.1091/mbc.E02-08-0525; Oxford institutional PDF; printed1770-1777 Methods, Results and Discussion; Figure2 and Figure6 pixels | supports | Exclusion-zone filaments connect basal bodies to outer mitochondrial membrane; unilateral filaments connect the inner membrane to the flagellar face of kDNA. Fixation/extraction, cell-cycle and segregation experiments support the physical bridge. Figure6 is an idealized schematic, not molecular stoichiometry. Procyclic T. brucei427 and C. fasciculata were studied. |
+| zhao | DOI:10.1038/sj.emboj.7601956; Complete PubMed abstract PMID18059470; PMC full-page Introduction and Results through p166 localization, immunoEM and initial RNAi network phenotype read before access challenge | supports | p166 localizes between basal body and kDNA and remains in isolated flagellum-kDNA complexes. RNAi causes strong segregation defects with smaller replication effects. Introduction independently locates exclusion-zone filaments outside and unilateral filaments inside the mitochondrion. Later full Methods were not accessible in this pass. |
+| tac40 | DOI:10.1073/pnas.1404854111; Author-laboratory PDF pages2-6 complete Results, Discussion and Methods | supports | TAC40/Tb927.4.1610 is an outer-membrane beta-barrel TAC constituent. Localization, detergent-resistant association, SAM50 dependence and RNAi support inheritance function. Engineered kDNA-independent bloodstream cells separate genome maintenance from general viability. TAC40 is not equated with MDM10 or an ERMES complex. |
+| tac102 | DOI:10.1371/journal.ppat.1005586; Checksum-verified PMC4864229.1 JATS: RNAi, ultrastructure, localization, cell-cycle and replication Results; complete Discussion and Methods | supports | TAC102/Tb927.7.2390 membership and biogenesis/segregation roles supported in bloodstream and procyclic T. brucei. Fractionation and imaging support matrix/unilateral-filament localization. The gammaL262P strain avoids universal viability interpretation. No direct DNA-binding, stoichiometric inventory or protein-by-protein force-transfer mechanism is claimed. |
+| correction | DOI:10.1371/journal.ppat.1005750; PMC4930209.1 complete notice of republication | supports | The 2016 TAC102 paper was republished June16 to correct typesetting errors in figure legends. The current review relies on inspected Results/Discussion/Methods, not a new figure-derived measurement; the correction is not a retraction or evidence against TAC102 membership. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005856; Live GO0005856 children plus GO0120121 and GO0036064 labels, definitions, aspects and obsolete flags in captured response | supports | All three are current cellular-component terms. TAC exact definition and RELATED TAC synonym match. GO0005856 lists GO0120121 with relation part_of, not is_a. Basal body is a distinct external bridge endpoint. Local schema reserves parent_structures for is-a. |
+| taxon | NCBITaxon:5691; ENA live species-level identity | supports | Trypanosoma brucei is the correct species. Experimental laboratory lines support the named model; no cross-kinetoplastid prevalence estimate or protein-family-presence inference is curated. |
+| bibliography | https://pubmed.ncbi.nlm.nih.gov/; Four complete primary abstracts and metadata; Crossref title/author/DOI/date and correction relations | supports | PMIDs12802053,18059470,24821793,27168148 match all four native papers. Zhao online2007 versus issue2008 is not a citation error. TAC102 correction was followed; inspected metadata have no retraction signal, not an exhaustive misconduct search. |
+| prior | https://github.com/CultureBotAI/CellStructureMech/issues/769; Direct issue state/body/comments, native CREATE history, four all-state issue searches and ignored-inclusive canonical exact-ID/path scan | supports | Issue769 is CLOSED/COMPLETED for earlier p166 gene-symbol and example-citation fixes, both retained. No canonical predecessor among189 bundles. All-state TAC slug/name searches returned769 only; both filament-phrase searches empty. These are new findings, not a reopening of769. |
+| baseline-qc | https://github.com/CultureBotAI/CellStructureMech/actions/runs/38204436708; Successful exact-base merge-group run metadata and complete QC log | supports | Unchanged baseline f60d7c84f643d9bba17a88657aaa4e451f2319c1:987 tests passed,3 skipped;909 strict records,1723 histories. Current target checks and authority/archive/contract checks separately passed. Validation does not detect these scientific errors. |
+| observation | reviews/structured/20261012T045744Z-tac-filament-topology-and-parthood/review.yaml; F1 and F2 with exact stable issue keys | context_only | Immutable pre-curation observation remains unchanged. Both original major findings receive explicit successor dispositions, not deletion or an unrelated clean report. |
+| fixed-qc | /private/tmp/csm-review-20261012T044500Z/fixed-qc.log; Fresh complete local native QC log | supports | 987 passed, 3 skipped in 810.43s (0:13:30);909 strict records,1724 histories, generated site and embedding products valid. |
+| fixed-history | history/records/tripartite_attachment_complex/2026-10-12T045915Z-codex-97eba9.yaml; Append-only EDIT with issues2284/2285 | supports | One guarded target change, new inline and repository histories, old CREATE history and issue769 fixes retained. Same-agent curation with PROPOSED status. |
+
+## Limits And Additional Notes
+
+- Same-agent scientific review, not human sign-off or raw microscopy reanalysis. iModulonDB28-dataset inventory has no matching eukaryotic dataset; inapplicability is not negative biological evidence.
+- Ogbadoyi complete Methods/Results/Discussion and Figures2/6 pixels inspected from Oxford PDF. TAC40 Results/Discussion/Methods read from author-lab PDF. Neither public institutional copy is a newly hosted repository asset.
+- Zhao complete primary abstract and initial full-page localization/RNAi results read; later Methods were inaccessible when PMC presented a challenge and the publisher route failed. Challenges were not bypassed. PMC efetch fallback contained front matter only and is not counted as full text.
+- TAC102 relevant Results, complete Discussion and Methods inspected in official checksum-verified XML; terminal-domain Results and raw figure/supplementary pixels not fully inspected. The separate correction concerns figure legends. No new measurement or terminal-domain mechanism is inferred.
+- Fresh local QC passed: 987 passed, 3 skipped in 810.43s (0:13:30). Live authority/trait and archive checks passed. Global label checker retains603 no-adapter skips and identifier checker251 skips; target GO and taxon authorities were separately inspected. Target snippet check has0 quoted snippets, not a literature-support proof.
+- The complete canonical archive and contract checks passed at the inspected local state. PR and native merge-group gates remain publication requirements; this saved disposition does not claim they have run or that issues have already closed.
+- One changed semantic text was re-encoded offline using the native pinned ONNX helper and versions.908 other vectors were byte-preserved at structured record level; PCA coordinates and nearest-neighbor products were regenerated for consistency. No corpus text was sent to an external embedding service.
+- The other three records in this source-gathering checkpoint remain pending. Bounded ontology name probes are not exhaustive absence proof; no new family grounding or native stoichiometry is inferred.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T052500Z-tac-topology-and-parthood-resolved
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'TAC review resolution: filament compartments and parthood corrected'
+started_at: '2026-10-12T05:00:43Z'
+finished_at: '2026-10-12T05:25:00Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding agent; no independent or human scientific review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Both major findings are resolved in the inspected maintained TAC record and
+  rendered page. Filament compartments and the four bridge links now agree with the
+  defining paper, and GO-supported cytoskeleton parthood replaces is-a. Whole-record
+  reassessment and fresh local full QC passed with explicit reading limits. This is
+  a local disposition, not a claim of completed PR merge.
+source:
+  git_revision: f60d7c84f643d9bba17a88657aaa4e451f2319c1
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/SKILL.md
+    sha256: efb5aa79a0016ae7f1e53e40a9f5789930d152686ea6467aefce0928f7d1900f
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/embeddings/structure_text_embeddings.json
+    sha256: d9371764029a494115d814605d23be3d1ca7c1ec654eec944bf12399963be747
+    role: context
+  - path: data/embeddings/structure_text_map.json
+    sha256: 8329fc9d8a7d5dc46b81e425343e0a6ec8fc67666cdb94793699a58002da53bc
+    role: context
+  - path: data/embeddings/structure_text_neighbors.json
+    sha256: ec82e13125f72c12619551584aacbb282fb8e240077c2d866b40d0be86ca008d
+    role: context
+  - path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+    sha256: 46027bf3d3d8b3011803fa72d1229a892d34b7233d48ca290466b9afefb6b7ef
+    role: context
+  - path: data/structures/cytoskeleton/telocentrosome.yaml
+    sha256: 05d5a42ee4b63bd62b3e8c6c0137e2268964980fcc00f27769e29498cf67dca7
+    role: context
+  - path: data/structures/cytoskeleton/transition_zone_stellate_fiber_system.yaml
+    sha256: ee5fc36bcda7810c550cfef29146f6b124f79703e6b73832b6f005583884ba36
+    role: context
+  - path: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+    sha256: 5350d6dbed484e29310b0de49ef10df0a14a3874aba1b4dd1a7ad2c717359a57
+    role: target
+  - path: data/structures/cytoskeleton/tubulin_spool.yaml
+    sha256: 1180c5c0b3a5c67f58a23b99913f7b78202beb8cf3e01c40ca5aac9c56dcf072
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/tripartite_attachment_complex/2026-09-13T094234Z-codex-091969.yaml
+    sha256: 4763bf746c386808597c8e4671b209a295807d56859eb9345a46228345dc90d8
+    role: context
+  - path: history/records/tripartite_attachment_complex/2026-10-12T045915Z-codex-97eba9.yaml
+    sha256: 1e3f2c631836618ad47297c72d3e5cb7293ca506a082804f8337a2908c4b9e5b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: pages/structures/cytoskeleton/tripartite_attachment_complex.html
+    sha256: 335aadeb8f391ef2daa1116ca8d82c340aa75979e161c344738792784b14027f
+    role: context
+  - path: reviews/structured/20261012T045744Z-tac-filament-topology-and-parthood/review.md
+    sha256: 494e17260cdec2e3a1301f7ad5ed224fd8f9e28a3e7db6445b3059a630b094c3
+    role: context
+  - path: reviews/structured/20261012T045744Z-tac-filament-topology-and-parthood/review.yaml
+    sha256: f0a60c98d0727fa33f4467ac5973647ba0ed04436e069a773473ab682826a345
+    role: context
+  - path: scripts/build_text_embedding_map.py
+    sha256: 59e7f7cc19a5c99476b71ed0c16b552dd482cc34302f1295e8b65a5e634cab2b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0120121
+  path: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+  label: tripartite attachment complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Entire maintained TAC record and every material claim, with source
+    and history checks.
+  selection: Exact GO0120121 target, not the other three pending cytoskeletal records
+    captured for context.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0120121
+checks:
+- check_id: render-fixed
+  name: render-fixed
+  status: passed
+  required: true
+  summary: Actual command exit0; deterministic validation does not replace scientific
+    assessment.
+  command: .venv/bin/python scripts/render_pages.py
+  exit_code: 0
+  target_ids:
+  - GO:0120121
+- check_id: fixed-schema
+  name: fixed-schema
+  status: passed
+  required: true
+  summary: Actual command exit0; deterministic validation does not replace scientific
+    assessment.
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0120121
+- check_id: fixed-strict
+  name: fixed-strict
+  status: passed
+  required: true
+  summary: Actual command exit0; deterministic validation does not replace scientific
+    assessment.
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0120121
+- check_id: fixed-snippets
+  name: fixed-snippets
+  status: passed
+  required: true
+  summary: Actual command exit0; deterministic validation does not replace scientific
+    assessment.
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+    --report /private/tmp/csm-review-20261012T044500Z/fixed-snippets.md
+  exit_code: 0
+  target_ids:
+  - GO:0120121
+- check_id: fixed-qc
+  name: fixed-qc
+  status: passed
+  required: true
+  summary: 987 passed, 3 skipped in 810.43s (0:13:30); all native gates passed.
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  target_ids:
+  - GO:0120121
+- check_id: fixed-labels
+  name: fixed-labels
+  status: passed
+  required: true
+  summary: Actual command exit0; deterministic validation does not replace scientific
+    assessment.
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0120121
+- check_id: fixed-curies
+  name: fixed-curies
+  status: passed
+  required: true
+  summary: Actual command exit0; deterministic validation does not replace scientific
+    assessment.
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  target_ids:
+  - GO:0120121
+- check_id: fixed-traits
+  name: fixed-traits
+  status: passed
+  required: true
+  summary: Actual command exit0; deterministic validation does not replace scientific
+    assessment.
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  target_ids:
+  - GO:0120121
+- check_id: fixed-reviews
+  name: fixed-reviews
+  status: passed
+  required: true
+  summary: Actual command exit0; deterministic validation does not replace scientific
+    assessment.
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  target_ids:
+  - GO:0120121
+- check_id: fixed-diff
+  name: fixed-diff
+  status: passed
+  required: true
+  summary: Actual command exit0; deterministic validation does not replace scientific
+    assessment.
+  command: git diff --check
+  exit_code: 0
+  target_ids:
+  - GO:0120121
+- check_id: fix-scope
+  name: TAC topology and patch preservation
+  status: passed
+  required: true
+  command: .venv/bin/python /private/tmp/csm-review-20261012T044500Z/verify_fix.py
+  exit_code: 0
+  summary: Correct four-link order and parthood; protein roles, UNKNOWN essentialities,
+    IDs, status, taxa, old histories, all earlier bundles and62 legacy reports preserved.
+    One embedding vector regenerated with pinned native helper;908 unchanged.
+  target_ids:
+  - GO:0120121
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+  locator: Entire corrected YAML, new EDIT history and rendered page after fixed-input
+    capture
+  accessed_at: '2026-10-12T05:25:00Z'
+  support: supports
+  summary: Whole corrected record reread. Exclusion-zone filaments occupy the cytoplasmic
+    basal-body/outer-membrane region; unilateral filaments occupy the inner-membrane/kDNA
+    gap. Matching graph relations and visible nonmechanistic wording agree. Cytoskeleton
+    is part_of; all other claims and prior fixes retained.
+  snapshot_sha256: 5350d6dbed484e29310b0de49ef10df0a14a3874aba1b4dd1a7ad2c717359a57
+- evidence_id: ogbadoyi
+  kind: primary_source
+  reference: DOI:10.1091/mbc.E02-08-0525
+  locator: Oxford institutional PDF; printed1770-1777 Methods, Results and Discussion;
+    Figure2 and Figure6 pixels
+  accessed_at: '2026-10-12T04:50:12Z'
+  support: supports
+  summary: Exclusion-zone filaments connect basal bodies to outer mitochondrial membrane;
+    unilateral filaments connect the inner membrane to the flagellar face of kDNA.
+    Fixation/extraction, cell-cycle and segregation experiments support the physical
+    bridge. Figure6 is an idealized schematic, not molecular stoichiometry. Procyclic
+    T. brucei427 and C. fasciculata were studied.
+  snapshot_sha256: a42ce2e9c14b82d2c9e5944d71beede929a86aa40a8ccaf653958243841d36fd
+- evidence_id: zhao
+  kind: primary_source
+  reference: DOI:10.1038/sj.emboj.7601956
+  locator: Complete PubMed abstract PMID18059470; PMC full-page Introduction and Results
+    through p166 localization, immunoEM and initial RNAi network phenotype read before
+    access challenge
+  accessed_at: '2026-10-12T04:48:18Z'
+  support: supports
+  summary: p166 localizes between basal body and kDNA and remains in isolated flagellum-kDNA
+    complexes. RNAi causes strong segregation defects with smaller replication effects.
+    Introduction independently locates exclusion-zone filaments outside and unilateral
+    filaments inside the mitochondrion. Later full Methods were not accessible in
+    this pass.
+  snapshot_sha256: 0da7e0918c76c5942bf67cf4402fc9fd7d4df591af74f865fa4c053deabefe74
+- evidence_id: tac40
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1404854111
+  locator: Author-laboratory PDF pages2-6 complete Results, Discussion and Methods
+  accessed_at: '2026-10-12T04:50:14Z'
+  support: supports
+  summary: TAC40/Tb927.4.1610 is an outer-membrane beta-barrel TAC constituent. Localization,
+    detergent-resistant association, SAM50 dependence and RNAi support inheritance
+    function. Engineered kDNA-independent bloodstream cells separate genome maintenance
+    from general viability. TAC40 is not equated with MDM10 or an ERMES complex.
+  snapshot_sha256: e654778448d7cba18ac5ddc0c46d947140cfd273a097410dfb706dfcfd39899f
+- evidence_id: tac102
+  kind: primary_source
+  reference: DOI:10.1371/journal.ppat.1005586
+  locator: 'Checksum-verified PMC4864229.1 JATS: RNAi, ultrastructure, localization,
+    cell-cycle and replication Results; complete Discussion and Methods'
+  accessed_at: '2026-10-12T04:50:06Z'
+  support: supports
+  summary: TAC102/Tb927.7.2390 membership and biogenesis/segregation roles supported
+    in bloodstream and procyclic T. brucei. Fractionation and imaging support matrix/unilateral-filament
+    localization. The gammaL262P strain avoids universal viability interpretation.
+    No direct DNA-binding, stoichiometric inventory or protein-by-protein force-transfer
+    mechanism is claimed.
+  snapshot_sha256: 8cdf220e01a1ec4e1949e1039f97673d12ec71864edfc723b1fd795f1bd69788
+- evidence_id: correction
+  kind: primary_source
+  reference: DOI:10.1371/journal.ppat.1005750
+  locator: PMC4930209.1 complete notice of republication
+  accessed_at: '2026-10-12T04:55:33Z'
+  support: supports
+  summary: The 2016 TAC102 paper was republished June16 to correct typesetting errors
+    in figure legends. The current review relies on inspected Results/Discussion/Methods,
+    not a new figure-derived measurement; the correction is not a retraction or evidence
+    against TAC102 membership.
+  snapshot_sha256: 79bf482b49254f1ee76abe9f9253df2c11bdc422c36ec48a121e78e24439d42e
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005856
+  locator: Live GO0005856 children plus GO0120121 and GO0036064 labels, definitions,
+    aspects and obsolete flags in captured response
+  accessed_at: '2026-10-12T04:48:23Z'
+  support: supports
+  summary: All three are current cellular-component terms. TAC exact definition and
+    RELATED TAC synonym match. GO0005856 lists GO0120121 with relation part_of, not
+    is_a. Basal body is a distinct external bridge endpoint. Local schema reserves
+    parent_structures for is-a.
+  snapshot_sha256: d39c8334334cff531b8a628f7fcfa1690ef337f841f2f2dd95fdb3e7c94f7a8d
+- evidence_id: taxon
+  kind: authority
+  reference: NCBITaxon:5691
+  locator: ENA live species-level identity
+  accessed_at: '2026-10-12T04:48:51Z'
+  support: supports
+  summary: Trypanosoma brucei is the correct species. Experimental laboratory lines
+    support the named model; no cross-kinetoplastid prevalence estimate or protein-family-presence
+    inference is curated.
+  snapshot_sha256: ba78ff6fe5de62b2654b61e249c2c87b239dca0208950b0e4ecf3ef2d81c99be
+- evidence_id: bibliography
+  kind: authority
+  reference: https://pubmed.ncbi.nlm.nih.gov/
+  locator: Four complete primary abstracts and metadata; Crossref title/author/DOI/date
+    and correction relations
+  accessed_at: '2026-10-12T04:48:18Z'
+  support: supports
+  summary: PMIDs12802053,18059470,24821793,27168148 match all four native papers.
+    Zhao online2007 versus issue2008 is not a citation error. TAC102 correction was
+    followed; inspected metadata have no retraction signal, not an exhaustive misconduct
+    search.
+  snapshot_sha256: 0da7e0918c76c5942bf67cf4402fc9fd7d4df591af74f865fa4c053deabefe74
+- evidence_id: prior
+  kind: prior_review
+  reference: https://github.com/CultureBotAI/CellStructureMech/issues/769
+  locator: Direct issue state/body/comments, native CREATE history, four all-state
+    issue searches and ignored-inclusive canonical exact-ID/path scan
+  accessed_at: '2026-10-12T04:57:44Z'
+  support: supports
+  summary: Issue769 is CLOSED/COMPLETED for earlier p166 gene-symbol and example-citation
+    fixes, both retained. No canonical predecessor among189 bundles. All-state TAC
+    slug/name searches returned769 only; both filament-phrase searches empty. These
+    are new findings, not a reopening of769.
+- evidence_id: baseline-qc
+  kind: validation
+  reference: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38204436708
+  locator: Successful exact-base merge-group run metadata and complete QC log
+  accessed_at: '2026-10-12T04:57:44Z'
+  support: supports
+  summary: Unchanged baseline f60d7c84f643d9bba17a88657aaa4e451f2319c1:987 tests passed,3
+    skipped;909 strict records,1723 histories. Current target checks and authority/archive/contract
+    checks separately passed. Validation does not detect these scientific errors.
+- evidence_id: observation
+  kind: prior_review
+  reference: reviews/structured/20261012T045744Z-tac-filament-topology-and-parthood/review.yaml
+  locator: F1 and F2 with exact stable issue keys
+  accessed_at: '2026-10-12T05:25:00Z'
+  support: context_only
+  snapshot_sha256: f0a60c98d0727fa33f4467ac5973647ba0ed04436e069a773473ab682826a345
+  summary: Immutable pre-curation observation remains unchanged. Both original major
+    findings receive explicit successor dispositions, not deletion or an unrelated
+    clean report.
+- evidence_id: fixed-qc
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T044500Z/fixed-qc.log
+  locator: Fresh complete local native QC log
+  accessed_at: '2026-10-12T05:25:00Z'
+  support: supports
+  snapshot_sha256: ba0bd32a7c0ed39afb72a1c4632672421154383a431be00ad465bc2b6200707e
+  summary: 987 passed, 3 skipped in 810.43s (0:13:30);909 strict records,1724 histories,
+    generated site and embedding products valid.
+- evidence_id: fixed-history
+  kind: record_content
+  reference: history/records/tripartite_attachment_complex/2026-10-12T045915Z-codex-97eba9.yaml
+  locator: Append-only EDIT with issues2284/2285
+  accessed_at: '2026-10-12T05:25:00Z'
+  support: supports
+  summary: One guarded target change, new inline and repository histories, old CREATE
+    history and issue769 fixes retained. Same-agent curation with PROPOSED status.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure identity and synonym
+  outcome: supported
+  summary: GO0120121, its definition and RELATED TAC synonym correctly identify the
+    multi-domain bridge, not a single protein or kDNA itself. CYTOSKELETON/OTHER and
+    PROPOSED remain appropriate.
+  target_ids:
+  - GO:0120121
+  evidence_ids:
+  - native
+  - go
+  - ogbadoyi
+- assessment_id: hierarchy
+  area: grounding
+  topic: Is-a versus parthood
+  outcome: supported
+  summary: GO0005856 is now part_of, not an is-a parent. No guessed replacement parent
+    is introduced; exact GO0120121 identity is unchanged.
+  target_ids:
+  - GO:0120121
+  evidence_ids:
+  - native
+  - go
+  - ogbadoyi
+- assessment_id: components
+  area: evidence
+  topic: Domains and three protein constituents
+  outcome: supported
+  summary: Both named filament regions and the differentiated membrane description
+    now match Ogbadoyi2003. The three protein components, all UNKNOWN assembly essentialities,
+    reviewed label-only grounding and taxonomic limits remain unchanged.
+  target_ids:
+  - GO:0120121
+  evidence_ids:
+  - native
+  - ogbadoyi
+  - zhao
+  - tac40
+  - tac102
+- assessment_id: taxonomic
+  area: scope
+  topic: Distribution and canonical example
+  outcome: supported
+  summary: The T. brucei model and TAC102-specific example match cited experiments.
+    COMMON is a qualitative model-species assertion, not measured prevalence across
+    isolates. No claim that every kinetoplastid has the same protein inventory.
+  target_ids:
+  - GO:0120121
+  evidence_ids:
+  - taxon
+  - ogbadoyi
+  - tac102
+- assessment_id: function
+  area: evidence
+  topic: Genome positioning and segregation
+  outcome: supported
+  summary: Physical attachment, basal-body separation and depletion phenotypes support
+    kDNA segregation. No direct DNA binding, complete molecular mechanism or universal
+    viability requirement is asserted.
+  target_ids:
+  - GO:0120121
+  evidence_ids:
+  - native
+  - ogbadoyi
+  - zhao
+  - tac40
+  - tac102
+- assessment_id: graph
+  area: graph
+  topic: Bridge sequence and evidence
+  outcome: supported
+  summary: The four-link chain is basal body -> exclusion-zone filaments -> mitochondrial
+    membranes -> unilateral filaments -> kDNA. This is explicitly spatial and nonmechanistic,
+    not temporal assembly or a protein-level force-transfer mechanism. Existing constituent
+    and whole-TAC segregation links are preserved.
+  target_ids:
+  - GO:0120121
+  evidence_ids:
+  - native
+  - ogbadoyi
+  - tac102
+- assessment_id: completeness
+  area: completeness
+  topic: Optional fields, source correction and unknowns
+  outcome: supported
+  summary: No invented physical measurements, images, datasets or traits are required.
+    The component-grounding TODO remains meaningful; the list is not claimed exhaustive.
+    TAC102 figure-legend correction does not invalidate the qualitative Results-based
+    claims.
+  target_ids:
+  - GO:0120121
+  evidence_ids:
+  - native
+  - correction
+  - tac102
+- assessment_id: history
+  area: ownership
+  topic: Prior fixes, status and ownership
+  outcome: supported
+  summary: Old histories, issue769 fixes, all earlier bundles and62 legacy reports
+    preserved. New EDIT provenance accompanies the guarded correction. One semantic
+    vector changed,908 preserved, maps/site regenerated and full local QC passed;
+    no human sign-off or completed publication is implied.
+  target_ids:
+  - GO:0120121
+  evidence_ids:
+  - native
+  - prior
+  - baseline-qc
+  - observation
+  - fixed-qc
+  - fixed-history
+findings:
+- finding_id: F1
+  issue_key: tac-filament-compartment-reversal
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Restore the correct TAC filament compartments and bridge order
+  description: The predecessor documents the reversed filament compartments. Current
+    component roles, source notes, membrane description and four structural graph
+    links now put exclusion-zone filaments outside the mitochondrion and unilateral
+    filaments between inner membrane and kDNA.
+  target_ids:
+  - GO:0120121
+  field_paths:
+  - components[unilateral_filaments]
+  - components[exclusion_zone_filaments]
+  - components[differentiated_mitochondrial_membrane_regions].role
+  - causal_graphs[tac_links_basal_body_to_kdna]
+  evidence_ids:
+  - native
+  - ogbadoyi
+  - zhao
+  - tac102
+  - observation
+  - fixed-qc
+  - fixed-history
+  rule_id: review-checklist:components-and-causal-graph
+  native_severity: P2
+  normalization_reason: 'Major: experimentally defined compartments and four structural
+    relations are assigned to the wrong domains; exact record identity remains correct.'
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+    role: maintained scientific record
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261012T045744Z-tac-filament-topology-and-parthood
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2284
+  disposition_reason: Inspected the whole fixed record, generated page and Ogbadoyi
+    Methods/Results/Discussion plus Figures2/6. Correct spatial order, matching citations
+    and explicit nonmechanistic scope are present. Protein claims, UNKNOWN essentialities
+    and identity remain intact; guarded history, scope assertions and fresh full QC
+    passed.
+- finding_id: F2
+  issue_key: tac-cytoskeleton-is-a-versus-part-of
+  category: grounding
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Represent cytoskeleton as TAC parthood instead of an is-a parent
+  description: The predecessor records the wrong cytoskeleton is-a relation. Current
+    YAML removes that parent and records GO0005856 under part_of with explicit GO
+    evidence.
+  target_ids:
+  - GO:0120121
+  field_paths:
+  - parent_structures
+  - part_of
+  evidence_ids:
+  - native
+  - go
+  - ogbadoyi
+  - observation
+  - fixed-qc
+  - fixed-history
+  rule_id: docs/CURATION.md:hierarchy-versus-parthood; review-checklist:hierarchy-parthood
+  native_severity: P2
+  normalization_reason: 'Major: wrong relation type changes machine-readable ontology
+    semantics, despite valid CURIE syntax.'
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+    role: maintained scientific record
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261012T045744Z-tac-filament-topology-and-parthood
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2285
+  disposition_reason: Verified the live GO child relation, corrected YAML and visible
+    Part of relation in generated HTML. No replacement parent was guessed and exact
+    GO0120121 identity remains intact. Native validators, full QC, history and preservation
+    assertions passed.
+actions: []
+limitations:
+- Same-agent scientific review, not human sign-off or raw microscopy reanalysis. iModulonDB28-dataset
+  inventory has no matching eukaryotic dataset; inapplicability is not negative biological
+  evidence.
+- Ogbadoyi complete Methods/Results/Discussion and Figures2/6 pixels inspected from
+  Oxford PDF. TAC40 Results/Discussion/Methods read from author-lab PDF. Neither public
+  institutional copy is a newly hosted repository asset.
+- Zhao complete primary abstract and initial full-page localization/RNAi results read;
+  later Methods were inaccessible when PMC presented a challenge and the publisher
+  route failed. Challenges were not bypassed. PMC efetch fallback contained front
+  matter only and is not counted as full text.
+- TAC102 relevant Results, complete Discussion and Methods inspected in official checksum-verified
+  XML; terminal-domain Results and raw figure/supplementary pixels not fully inspected.
+  The separate correction concerns figure legends. No new measurement or terminal-domain
+  mechanism is inferred.
+- 'Fresh local QC passed: 987 passed, 3 skipped in 810.43s (0:13:30). Live authority/trait
+  and archive checks passed. Global label checker retains603 no-adapter skips and
+  identifier checker251 skips; target GO and taxon authorities were separately inspected.
+  Target snippet check has0 quoted snippets, not a literature-support proof.'
+- The complete canonical archive and contract checks passed at the inspected local
+  state. PR and native merge-group gates remain publication requirements; this saved
+  disposition does not claim they have run or that issues have already closed.
+- One changed semantic text was re-encoded offline using the native pinned ONNX helper
+  and versions.908 other vectors were byte-preserved at structured record level; PCA
+  coordinates and nearest-neighbor products were regenerated for consistency. No corpus
+  text was sent to an external embedding service.
+- The other three records in this source-gathering checkpoint remain pending. Bounded
+  ontology name probes are not exhaustive absence proof; no new family grounding or
+  native stoichiometry is inferred.
+tags:
+- scientific-review
+- tac
+- topology
+- parthood
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261012T045744Z-tac-filament-topology-and-parthood
+  relationship: Evidence-backed resolutions of F1 and F2; predecessor remains immutable.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2284
+- https://github.com/CultureBotAI/CellStructureMech/issues/2285
+```

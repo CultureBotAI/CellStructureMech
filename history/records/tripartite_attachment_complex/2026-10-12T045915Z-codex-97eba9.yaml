@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+  slug: tripartite_attachment_complex
+session:
+  id: 2026-10-12T045915Z-codex-97eba9
+  timestamp: '2026-10-12T04:59:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2284
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2285
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  - part_of
+  - parent_structures
+  - evidence
+  summary: Correct TAC filament topology and cytoskeleton parthood
+  details: Corrected the two saved major findings from 20261012T045744Z-tac-filament-topology-and-parthood.
+    Ogbadoyi2003 Results and Figures2/3/6 place exclusion-zone filaments between basal bodies
+    and outer membrane and unilateral filaments between inner membrane and kDNA. Current GO
+    places TAC part_of cytoskeleton. Guarded writer and append-only inline event used; existing
+    2026-09-13 CREATE history and issue769 fixes preserved. Rebuild local semantic embedding
+    products and rendered page, run fresh full QC and authority/archive checks, and save successor
+    dispositions before PR publication. Same-agent curation; mapping remains PROPOSED.
