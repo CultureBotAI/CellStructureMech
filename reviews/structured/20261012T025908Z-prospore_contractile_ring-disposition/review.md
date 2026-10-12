@@ -1,0 +1,682 @@
+# prospore contractile ring: supported finding disposition
+
+- Review: 20261012T025908Z-prospore_contractile_ring-disposition
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-12T02:59:05Z
+- Finished UTC: 2026-10-12T02:59:08Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact saved finding resolved by bounded evidence-backed curation; original observation, history and PROPOSED status retained.
+
+## Scope And Provenance
+
+Exact saved finding and surrounding-content preservation reassessed; not another whole-record review.
+
+Selection: 20261012T023617Z-prospore_contractile_ring-audit
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base d6ab7e93e8097c4398ca4545788272e27e830d42.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0032157 | data/structures/cytoskeleton/prospore_contractile_ring.yaml | maintained | prospore contractile ring |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| focused | passed | True | GO:0032157 | ................................                                         [100%]<br>32 passed in 30.80s |
+| prospore_contractile_ring-schema | passed | True | GO:0032157 | Actual deterministic check passed; scientific support assessed separately. |
+| prospore_contractile_ring-strict | passed | True | GO:0032157 | Actual deterministic check passed; scientific support assessed separately. |
+| prospore_contractile_ring-snippets | passed | True | GO:0032157 | No verbatim snippets; paraphrases assessed separately against inspected text. |
+| history | passed | True | GO:0032157 | Actual deterministic check passed; scientific support assessed separately. |
+| labels | passed | True | GO:0032157 | id↔label correspondence summary:<br>          OK_CANONICAL: 3545<br>            OK_SYNONYM: 50<br>          OK_EXCEPTION: 6<br>    SKIPPED_NO_ADAPTER: 603<br><br>✅ All id↔label pairs correspond. |
+| curies | passed | True | GO:0032157 | resolver control: every resolver accepts a known id and rejects a fabricated one<br>resolving 2 DOI identifier(s)...<br><br>identifier liveness summary:<br>  OK             4019<br>  SKIPPED         251<br><br>Every identifier resolves at its issuing authority. |
+| traits | passed | True | GO:0032157 | Actual deterministic check passed; scientific support assessed separately. |
+| map | passed | True | GO:0032157 | Actual deterministic check passed; scientific support assessed separately. |
+| render | passed | True | GO:0032157 | Actual deterministic check passed; scientific support assessed separately. |
+| render-check | passed | True | GO:0032157 | Actual deterministic check passed; scientific support assessed separately. |
+| release-qc | passed | True | GO:0032157 | Full local QC passed: 987 passed, 3 skipped in 671.85s (0:11:11). PR and native merge-group gates remain separate. |
+
+## Scientific And Domain Assessments
+
+### Do not infer prospore-ring assembly essentiality from composition
+
+evidence: supported. Targets: GO:0032157.
+
+Both actin and myosin component assembly-essentiality flags are UNKNOWN. Each GO-local note distinguishes composition and location from component-removal assembly evidence. Constituent roles remain unchanged; neither universal necessity nor dispensability is inferred.
+
+## Findings
+
+### F1: Do not infer prospore-ring assembly essentiality from composition
+
+major / resolved / confirmed; issue key: prospore-ring-composition-not-essentiality.
+
+Both actin and myosin component assembly-essentiality flags are UNKNOWN. Each GO-local note distinguishes composition and location from component-removal assembly evidence. Constituent roles remain unchanged; neither universal necessity nor dispensability is inferred.
+
+Disposition: Both actin and myosin component assembly-essentiality flags are UNKNOWN. Each GO-local note distinguishes composition and location from component-removal assembly evidence. Constituent roles remain unchanged; neither universal necessity nor dispensability is inferred. Verified by inspected authority/primary evidence, bounded diff, red/green regressions and full local QC.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/prospore_contractile_ring.yaml | context_only | Whole corrected YAML reread; exact bounded mutation and appended event verified against baseline. |
+| rules | docs/CURATION.md | context_only | Component membership and assembly necessity are distinct; scientific status is not promoted. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml | context_only | ESSENTIAL means the structure does not form without the component. |
+| predecessors | /private/tmp/csm-review-20261012T023100Z/predecessors.json | context_only | Ignored-inclusive recursive canonical scan matched exact targetID OR path; no match. |
+| reading | /private/tmp/csm-review-20261012T023100Z/reading-checkpoint.json | context_only | Actual reading scope and explicit source-access limits; source text, not search snippets. |
+| typed-go | /private/tmp/csm-review-20261012T023100Z/typed-go.log | context_only | Exact OAK typed relations: prospore is_a meiotic ring; meiotic is_a generic actomyosin ring. |
+| adapter | /private/tmp/csm-review-20261012T023100Z/adapter.log | context_only | Fresh28-dataset iModulonDB inventory has no matching S.pombe/Giardia coverage; not negative biological evidence. |
+| history-0 | history/records/prospore_contractile_ring/2026-09-29T062145Z-codex-1b6685.yaml | context_only | Whole append-only history read and preserved. |
+| history-1 | history/records/prospore_contractile_ring/2026-09-29T063511Z-codex-cf9e8a.yaml | context_only | Whole append-only history read and preserved. |
+| legacy | reports/yaml_record_review/20260929T063404Z-prospore_contractile_ring.md | context_only | Whole historical PR review read; not substituted for fresh source assessment. |
+| issues | /private/tmp/csm-review-20261012T023100Z/issues-2.log | context_only | All-state target searches include already-closed1767 parentage correction, still present. No related open finding in these bounded searches. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0097568%2CGO%3A0005856%2CGO%3A0005874%2CGO%3A0110086%2CGO%3A0032157%2CGO%3A0005826%2CGO%3A0110085%2CGO%3A0032169; Exact eight terms, current definitions/synonym types/typed children | supports | Both exact identities and direct is-a relations agree. Definitions assert composition and location, not component-depletion outcomes. |
+| taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896; ENA4896 species identity | supports | S.pombe verified; source experiments establish the occurrence, not the taxonomic resolver. |
+| paper-metadata | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1242%2Fjcs.091561%22&amp;format=json&amp;resultType=core; PMID22526418 primary abstract and original DOI metadata | supports | MeiAR forms during meiosisII and coordinates forespore membranes; PubMed retains the original DOI. |
+| corrected-doi | https://api.crossref.org/works/10.1242%2Fjcs.jcs091561; Issuing DOI metadata | supports | Canonical deposited DOI is10.1242/jcs.jcs091561. The original alias also resolves to this canonical object. |
+| erratum-doi | https://api.crossref.org/works/10.1242%2Fjcs.113316; DOI10.1242/jcs.113316 metadata | supports | Publisher erratum identity verified. |
+| erratum | DOI:10.1242/jcs.113316; Publisher full correction: https://journals.biologists.com/jcs/article/125/10/2544/32305/Meiotic-actin-rings-are-essential-for-proper | supports | The correction explicitly gives10.1242/jcs.jcs091561 as the correct paper DOI. It changes provenance, not experimental conclusions. |
+| yan | DOI:10.1242/jcs.jcs091561; Publisher full main text and six captions at https://journals.biologists.com/jcs/article/125/6/1429/33273/Meiotic-actin-rings-are-essential-for-proper | supports | Fission-yeast actin ring expansion/closure and membrane coordination are observed. Myo1 and Rlc1 localize; individual myosinII mutants sporulate, and the double mutant was not testable. Ring closure is not demonstrated typeII-myosin force generation. |
+| predecessor | reviews/structured/20261012T023617Z-prospore_contractile_ring-audit/review.yaml | context_only | Immutable original observation committed before native mutation. |
+| red-tests | /private/tmp/csm-review-20261012T023100Z/regressions-red.log | context_only | Six new regressions failed before correction; two preservation controls passed. |
+| green-tests | /private/tmp/csm-review-20261012T023100Z/post-focused.log | context_only | All eight record regressions and guarded-writer tests pass after correction. |
+| preservation | /private/tmp/csm-review-20261012T023100Z/preservation.json | context_only | All907 other native records, all three embedding files, prior histories/reviews/legacy files and all images unchanged. Both corrected records preserve original graph/discussion rationale and dates. |
+| publication-proof | /private/tmp/csm-review-20261012T023100Z/publication-proof.json | context_only | Parsed generated HTML verifies all five public article links, the visible erratum and both UNKNOWN component rows with their complete evidence limits; source captures are hash-verified. |
+| edit-history | history/records/prospore_contractile_ring/2026-10-12T023914Z-codex-2ed886.yaml | context_only | Actual Codex EDIT links saved observation and issue; sections match the exact native diff. |
+
+## Limits And Additional Notes
+
+- Same-agent scientific review; no independent human sign-off or raw-data reanalysis.
+- Yan2012 full scientific text/captions read via publisher web retrieval; local requests returned403. Figure pixels, movies and supplements not inspected. No quantitative or exact-myofibril-mechanism claim introduced.
+- Myo2/Myp2 individual mutant sporulation is not a complete myosin-class deletion or a direct assembly assay. Current generic composition claims remain ontology-tier; force mechanism unresolved.
+- No matching adopted iModulonDB dataset; not negative evidence. Alias-bounded GitHub search and ignored-inclusive canonical scan have different scopes.
+- Median body has separate whole-record coverage; no clean bundle or no-change history will be generated.
+- Full local QC passed with existing skips retained; PR and native merge-group checks remain separate publication gates.
+- Same-agent scoped disposition, not a repeated whole-record review or independent approval. Exact corrected inputs retained by review-base/meiotic-ring-evidence-20261012.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T025908Z-prospore_contractile_ring-disposition
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'prospore contractile ring: supported finding disposition'
+started_at: '2026-10-12T02:59:05Z'
+finished_at: '2026-10-12T02:59:08Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent claim-by-claim scientific review, not independent
+    human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact saved finding resolved by bounded evidence-backed curation; original
+  observation, history and PROPOSED status retained.
+source:
+  git_revision: d6ab7e93e8097c4398ca4545788272e27e830d42
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/SKILL.md
+    sha256: efb5aa79a0016ae7f1e53e40a9f5789930d152686ea6467aefce0928f7d1900f
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+    sha256: 28a3e7b12391a9d3a16eb453974d6e0ed5ab92b925092e395e88f64fa6fe5ab0
+    role: context
+  - path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+    sha256: 483507c171218f013e0bfaaa4aa3c77c1cedb91cecb105d1b1a342bb3b914543
+    role: context
+  - path: data/structures/cytoskeleton/deep_fiber.yaml
+    sha256: 7868013c7bf3ce1c327c9106136b716f305afebe4efe5d49412e69278d26d702
+    role: context
+  - path: data/structures/cytoskeleton/infraciliary_lattice.yaml
+    sha256: 4c0d123ba0fcc1f65ea9ccf7d139013039bf1db51f987dec87b6df5286e5c00e
+    role: context
+  - path: data/structures/cytoskeleton/meiotic_actomyosin_contractile_ring.yaml
+    sha256: 4dba03262cc797ce98c0564dcfb520aaac6d377ae89eba226139e8ad4e09b3f5
+    role: context
+  - path: data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+    sha256: d90e4f93479d2774c995e54dcd260859b8a855a4c6c7241a7d46b76d6db352af
+    role: context
+  - path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+    sha256: 85563af4f17c846111f087a0c6bd31b6480a9b5fff05df9a3eff79e0b25418f9
+    role: context
+  - path: data/structures/cytoskeleton/prospore_contractile_ring.yaml
+    sha256: 86ff161d77dbd6b182aab5d48cf4fa4376ad69ec739305c9b3c25c8aef103e51
+    role: target
+  - path: data/structures/cytoskeleton/spirostomum_myoneme_fishnet.yaml
+    sha256: 23c2668330bc68a88153d7ed54feb0a5626a88d4ae53a8da6e250d2dda8d71af
+    role: context
+  - path: data/structures/cytoskeleton/stentor_myoneme_system.yaml
+    sha256: 5d79ebc4d1396dc1a3e8d7e840a2aba6ed8dc37114846e4405df82c965b10b28
+    role: context
+  - path: data/structures/other/oral_apparatus.yaml
+    sha256: 55dd7652482846930c83b0340be155e52c094dbdf9232427bc76580cbe65a372
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/prospore_contractile_ring/2026-09-29T062145Z-codex-1b6685.yaml
+    sha256: dab868c88ada0b92b09ed7a2e219ecbc470cb6eb175da1834ab04bf2ddca36cf
+    role: context
+  - path: history/records/prospore_contractile_ring/2026-09-29T063511Z-codex-cf9e8a.yaml
+    sha256: 972381d61619c22ccd85852e491bf8c85e2a7d5e26701757a6801c5ecce3daf6
+    role: context
+  - path: history/records/prospore_contractile_ring/2026-10-12T023914Z-codex-2ed886.yaml
+    sha256: 95f2fa203f5836b39091727476ca9efc3e991826e710c5c3427cc8620e2d414f
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reports/yaml_record_review/20260929T063404Z-prospore_contractile_ring.md
+    sha256: de0233a57c202380831e13a327d9919c4f6e51fcaa6d95ac0966a2f576bf5c41
+    role: context
+  - path: reviews/structured/20261012T023617Z-prospore_contractile_ring-audit/review.yaml
+    sha256: e0f32a973c0d43e01cd4b8eba1a4d2431cc88f0e86a7457e7f8555ea99288524
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: tests/test_meiotic_ring_evidence.py
+    sha256: 14c9dfc181b41af4e08ac2e6f5c3210f953f33c547913fe631566eb8ce3d0e34
+    role: context
+targets:
+- target_id: GO:0032157
+  path: data/structures/cytoskeleton/prospore_contractile_ring.yaml
+  label: prospore contractile ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_contractile_ring.yaml
+    role: maintained scientific record
+scope:
+  description: Exact saved finding and surrounding-content preservation reassessed;
+    not another whole-record review.
+  selection: 20261012T023617Z-prospore_contractile_ring-audit
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0032157
+checks:
+- check_id: focused
+  name: focused
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/python -m pytest -q tests/test_meiotic_ring_evidence.py tests/test_write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '................................                                         [100%]
+
+    32 passed in 30.80s'
+  scope_note: 2026-10-12T02:39:25Z to 2026-10-12T02:39:57Z; log SHA-256 92c99942267d1bb5450db7b4514b46d65888df9c929b215215ae327faa057a14
+- check_id: prospore_contractile_ring-schema
+  name: prospore_contractile_ring-schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/prospore_contractile_ring.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T02:40:20Z to 2026-10-12T02:40:22Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: prospore_contractile_ring-strict
+  name: prospore_contractile_ring-strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/prospore_contractile_ring.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T02:40:22Z to 2026-10-12T02:40:26Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: prospore_contractile_ring-snippets
+  name: prospore_contractile_ring-snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/prospore_contractile_ring.yaml
+    --report /private/tmp/csm-review-20261012T023100Z/post-prospore_contractile_ring-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-12T02:40:26Z to 2026-10-12T02:40:44Z; log SHA-256 dacae70cab85c712573a47b3ea98915804f8f472c72aa698b630c7a0fa0e1ae1
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T02:40:44Z to 2026-10-12T02:41:00Z; log SHA-256 6d1a2f403cd962c8a094818546b4c3f9de9a7798cefe9e36da5e50bbcad0c370
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3545\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-12T02:41:00Z to 2026-10-12T02:42:58Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\nresolving 2 DOI identifier(s)...\n\nidentifier liveness summary:\n  OK\
+    \             4019\n  SKIPPED         251\n\nEvery identifier resolves at its\
+    \ issuing authority."
+  scope_note: 2026-10-12T02:42:58Z to 2026-10-12T02:43:47Z; log SHA-256 fd427460e3a8770ea4ad920076a53e67d76da3b9b9975035e750ab53ae23fb4b
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T02:43:47Z to 2026-10-12T02:44:05Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: map
+  name: map
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/python scripts/build_text_embedding_map.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T02:44:05Z to 2026-10-12T02:44:25Z; log SHA-256 faab91135b11d9032aedb96eee09f6eac44ff7c58be84c007d155ecb4d3220a4
+- check_id: render
+  name: render
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/python scripts/render_pages.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T02:44:25Z to 2026-10-12T02:44:43Z; log SHA-256 4c56c037ad334a4629db5c24de168dd94cfbb8945fc70e61abcc11db167241c0
+- check_id: render-check
+  name: render-check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: .venv/bin/python scripts/render_pages.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T02:44:43Z to 2026-10-12T02:45:00Z; log SHA-256 b798d21a609b296cdc2aeb317f68fc259c4e86ee43942b4a3c5008b32b9bfa5e
+- check_id: release-qc
+  name: release-qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032157
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Full local QC passed: 987 passed, 3 skipped in 671.85s (0:11:11). PR and
+    native merge-group gates remain separate.'
+  scope_note: 2026-10-12T02:45:02Z to 2026-10-12T02:58:39Z; log SHA-256 8b3bab05517a5b0fea2fe98a390b9ea7359111e26af2572f0de3b0d2148f465b
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/prospore_contractile_ring.yaml
+  accessed_at: '2026-10-12T02:59:08Z'
+  snapshot_sha256: 86ff161d77dbd6b182aab5d48cf4fa4376ad69ec739305c9b3c25c8aef103e51
+  support: context_only
+  summary: Whole corrected YAML reread; exact bounded mutation and appended event
+    verified against baseline.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-12T02:36:17Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Component membership and assembly necessity are distinct; scientific status
+    is not promoted.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  accessed_at: '2026-10-12T02:36:17Z'
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+  support: context_only
+  summary: ESSENTIAL means the structure does not form without the component.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T023100Z/predecessors.json
+  accessed_at: '2026-10-12T02:36:17Z'
+  snapshot_sha256: a0aa0a6697475908e7fed115e5756d08d4c28993782bdd89d5b34afe3696d08f
+  support: context_only
+  summary: Ignored-inclusive recursive canonical scan matched exact targetID OR path;
+    no match.
+- evidence_id: reading
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T023100Z/reading-checkpoint.json
+  accessed_at: '2026-10-12T02:36:17Z'
+  snapshot_sha256: 08399c7b74512de2df5c4023b7127ce5e544ce30b52b3cc0f00c6863e9422c74
+  support: context_only
+  summary: Actual reading scope and explicit source-access limits; source text, not
+    search snippets.
+- evidence_id: typed-go
+  kind: authority
+  reference: /private/tmp/csm-review-20261012T023100Z/typed-go.log
+  accessed_at: '2026-10-12T02:36:17Z'
+  snapshot_sha256: c6bc0bac9dfb120a6b52beafa6233c2a28238a3a6c963591efa963822ad78d7d
+  support: context_only
+  summary: 'Exact OAK typed relations: prospore is_a meiotic ring; meiotic is_a generic
+    actomyosin ring.'
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T023100Z/adapter.log
+  accessed_at: '2026-10-12T02:36:17Z'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  support: context_only
+  summary: Fresh28-dataset iModulonDB inventory has no matching S.pombe/Giardia coverage;
+    not negative biological evidence.
+- evidence_id: history-0
+  kind: record_content
+  reference: history/records/prospore_contractile_ring/2026-09-29T062145Z-codex-1b6685.yaml
+  accessed_at: '2026-10-12T02:36:17Z'
+  snapshot_sha256: dab868c88ada0b92b09ed7a2e219ecbc470cb6eb175da1834ab04bf2ddca36cf
+  support: context_only
+  summary: Whole append-only history read and preserved.
+- evidence_id: history-1
+  kind: record_content
+  reference: history/records/prospore_contractile_ring/2026-09-29T063511Z-codex-cf9e8a.yaml
+  accessed_at: '2026-10-12T02:36:17Z'
+  snapshot_sha256: 972381d61619c22ccd85852e491bf8c85e2a7d5e26701757a6801c5ecce3daf6
+  support: context_only
+  summary: Whole append-only history read and preserved.
+- evidence_id: legacy
+  kind: prior_review
+  reference: reports/yaml_record_review/20260929T063404Z-prospore_contractile_ring.md
+  accessed_at: '2026-10-12T02:36:17Z'
+  snapshot_sha256: de0233a57c202380831e13a327d9919c4f6e51fcaa6d95ac0966a2f576bf5c41
+  support: context_only
+  summary: Whole historical PR review read; not substituted for fresh source assessment.
+- evidence_id: issues
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T023100Z/issues-2.log
+  accessed_at: '2026-10-12T02:36:17Z'
+  snapshot_sha256: 6b413d54db0fe0ccf201a9177a2bdef7b8dfad7729b1980c96bbb0adfca90005
+  support: context_only
+  summary: All-state target searches include already-closed1767 parentage correction,
+    still present. No related open finding in these bounded searches.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0097568%2CGO%3A0005856%2CGO%3A0005874%2CGO%3A0110086%2CGO%3A0032157%2CGO%3A0005826%2CGO%3A0110085%2CGO%3A0032169
+  locator: Exact eight terms, current definitions/synonym types/typed children
+  accessed_at: '2026-10-12T02:28:49Z'
+  snapshot_sha256: aca4fbd868bfa4d9ff3630394b6d07d493b8cad1e353f87a985ded4fcc13cc31
+  support: supports
+  summary: Both exact identities and direct is-a relations agree. Definitions assert
+    composition and location, not component-depletion outcomes.
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: ENA4896 species identity
+  accessed_at: '2026-10-12T02:28:50Z'
+  snapshot_sha256: cdb53b3f4ab5e6bb4476de3bf0db333ae647e307a9fa8f98108827f98fe7f4d3
+  support: supports
+  summary: S.pombe verified; source experiments establish the occurrence, not the
+    taxonomic resolver.
+- evidence_id: paper-metadata
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1242%2Fjcs.091561%22&format=json&resultType=core
+  locator: PMID22526418 primary abstract and original DOI metadata
+  accessed_at: '2026-10-12T02:28:48Z'
+  snapshot_sha256: 28f45a9d4240feb58fb29234f538e81e982a87423044d465dbf7360a0e03b506
+  support: supports
+  summary: MeiAR forms during meiosisII and coordinates forespore membranes; PubMed
+    retains the original DOI.
+- evidence_id: corrected-doi
+  kind: authority
+  reference: https://api.crossref.org/works/10.1242%2Fjcs.jcs091561
+  locator: Issuing DOI metadata
+  accessed_at: '2026-10-12T02:31:46Z'
+  snapshot_sha256: 70798c15f31460a5370d28c26d9a45ad415b377d052010c778858ad68e62f965
+  support: supports
+  summary: Canonical deposited DOI is10.1242/jcs.jcs091561. The original alias also
+    resolves to this canonical object.
+- evidence_id: erratum-doi
+  kind: authority
+  reference: https://api.crossref.org/works/10.1242%2Fjcs.113316
+  locator: DOI10.1242/jcs.113316 metadata
+  accessed_at: '2026-10-12T02:31:47Z'
+  snapshot_sha256: e4a6e6996974ec8be2a88eb0625ce31899852cf8e4f2a7e3d37a2c22c792cf0b
+  support: supports
+  summary: Publisher erratum identity verified.
+- evidence_id: erratum
+  kind: primary_source
+  reference: DOI:10.1242/jcs.113316
+  locator: 'Publisher full correction: https://journals.biologists.com/jcs/article/125/10/2544/32305/Meiotic-actin-rings-are-essential-for-proper'
+  accessed_at: '2026-10-12T02:36:17Z'
+  support: supports
+  summary: The correction explicitly gives10.1242/jcs.jcs091561 as the correct paper
+    DOI. It changes provenance, not experimental conclusions.
+- evidence_id: yan
+  kind: primary_source
+  reference: DOI:10.1242/jcs.jcs091561
+  locator: Publisher full main text and six captions at https://journals.biologists.com/jcs/article/125/6/1429/33273/Meiotic-actin-rings-are-essential-for-proper
+  accessed_at: '2026-10-12T02:36:17Z'
+  support: supports
+  summary: Fission-yeast actin ring expansion/closure and membrane coordination are
+    observed. Myo1 and Rlc1 localize; individual myosinII mutants sporulate, and the
+    double mutant was not testable. Ring closure is not demonstrated typeII-myosin
+    force generation.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261012T023617Z-prospore_contractile_ring-audit/review.yaml
+  accessed_at: '2026-10-12T02:59:08Z'
+  snapshot_sha256: e0f32a973c0d43e01cd4b8eba1a4d2431cc88f0e86a7457e7f8555ea99288524
+  support: context_only
+  summary: Immutable original observation committed before native mutation.
+- evidence_id: red-tests
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T023100Z/regressions-red.log
+  accessed_at: '2026-10-12T02:59:08Z'
+  snapshot_sha256: 6c21e39686b6d762df43b8fdd1d91da472d85f4bc3bdc095e50c5a71600c488b
+  support: context_only
+  summary: Six new regressions failed before correction; two preservation controls
+    passed.
+- evidence_id: green-tests
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T023100Z/post-focused.log
+  accessed_at: '2026-10-12T02:59:08Z'
+  snapshot_sha256: 92c99942267d1bb5450db7b4514b46d65888df9c929b215215ae327faa057a14
+  support: context_only
+  summary: All eight record regressions and guarded-writer tests pass after correction.
+- evidence_id: preservation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T023100Z/preservation.json
+  accessed_at: '2026-10-12T02:59:08Z'
+  snapshot_sha256: 7cdd5fea8ce5fd66deca9edee7e56b32f8d3fbf83946cf40af1eabc3aca2f727
+  support: context_only
+  summary: All907 other native records, all three embedding files, prior histories/reviews/legacy
+    files and all images unchanged. Both corrected records preserve original graph/discussion
+    rationale and dates.
+- evidence_id: publication-proof
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T023100Z/publication-proof.json
+  accessed_at: '2026-10-12T02:59:08Z'
+  snapshot_sha256: 68ab8fe15807e862cfd4d44240517a01425c8da75ed32ac6aaef6bc9bb10623e
+  support: context_only
+  summary: Parsed generated HTML verifies all five public article links, the visible
+    erratum and both UNKNOWN component rows with their complete evidence limits; source
+    captures are hash-verified.
+- evidence_id: edit-history
+  kind: record_content
+  reference: history/records/prospore_contractile_ring/2026-10-12T023914Z-codex-2ed886.yaml
+  accessed_at: '2026-10-12T02:59:08Z'
+  snapshot_sha256: 95f2fa203f5836b39091727476ca9efc3e991826e710c5c3427cc8620e2d414f
+  support: context_only
+  summary: Actual Codex EDIT links saved observation and issue; sections match the
+    exact native diff.
+assessments:
+- assessment_id: resolved-f1
+  area: evidence
+  topic: Do not infer prospore-ring assembly essentiality from composition
+  outcome: supported
+  target_ids:
+  - GO:0032157
+  evidence_ids:
+  - record
+  - rules
+  - schema
+  - go
+  - yan
+  - predecessor
+  - red-tests
+  - green-tests
+  - preservation
+  - publication-proof
+  - edit-history
+  summary: Both actin and myosin component assembly-essentiality flags are UNKNOWN.
+    Each GO-local note distinguishes composition and location from component-removal
+    assembly evidence. Constituent roles remain unchanged; neither universal necessity
+    nor dispensability is inferred.
+findings:
+- finding_id: F1
+  issue_key: prospore-ring-composition-not-essentiality
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Do not infer prospore-ring assembly essentiality from composition
+  description: Both actin and myosin component assembly-essentiality flags are UNKNOWN.
+    Each GO-local note distinguishes composition and location from component-removal
+    assembly evidence. Constituent roles remain unchanged; neither universal necessity
+    nor dispensability is inferred.
+  target_ids:
+  - GO:0032157
+  field_paths:
+  - components[0].essentiality
+  - components[0].evidence
+  - components[1].essentiality
+  - components[1].evidence
+  evidence_ids:
+  - record
+  - rules
+  - schema
+  - go
+  - yan
+  - predecessor
+  - red-tests
+  - green-tests
+  - preservation
+  - publication-proof
+  - edit-history
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_contractile_ring.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md#components
+  native_severity: major
+  normalization_reason: Corrected resolving alias is nonblocking provenance; unsupported
+    categorical assembly requirements change structured scientific meaning.
+  disposition_reason: Both actin and myosin component assembly-essentiality flags
+    are UNKNOWN. Each GO-local note distinguishes composition and location from component-removal
+    assembly evidence. Constituent roles remain unchanged; neither universal necessity
+    nor dispensability is inferred. Verified by inspected authority/primary evidence,
+    bounded diff, red/green regressions and full local QC.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261012T023617Z-prospore_contractile_ring-audit
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2280
+actions: []
+limitations:
+- Same-agent scientific review; no independent human sign-off or raw-data reanalysis.
+- Yan2012 full scientific text/captions read via publisher web retrieval; local requests
+  returned403. Figure pixels, movies and supplements not inspected. No quantitative
+  or exact-myofibril-mechanism claim introduced.
+- Myo2/Myp2 individual mutant sporulation is not a complete myosin-class deletion
+  or a direct assembly assay. Current generic composition claims remain ontology-tier;
+  force mechanism unresolved.
+- No matching adopted iModulonDB dataset; not negative evidence. Alias-bounded GitHub
+  search and ignored-inclusive canonical scan have different scopes.
+- Median body has separate whole-record coverage; no clean bundle or no-change history
+  will be generated.
+- Full local QC passed with existing skips retained; PR and native merge-group checks
+  remain separate publication gates.
+- Same-agent scoped disposition, not a repeated whole-record review or independent
+  approval. Exact corrected inputs retained by review-base/meiotic-ring-evidence-20261012.
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2280
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261012T023617Z-prospore_contractile_ring-audit
+  relationship: Resolves the exact original finding occurrence without replacing its
+    immutable bundle.
+```
