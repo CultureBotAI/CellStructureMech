@@ -34,6 +34,13 @@ curation_history:
     graph scope and mediation limits visible; retained PROPOSED status and linked
     both review issues.
   llm_assisted: true
+- timestamp: '2026-10-12T04:02:04Z'
+  curator: codex
+  action: RECONCILED_SOURCE_VERSIONS
+  changes: 'Addressed issue 2282: reconcile dissertation Sfi1 localization with the
+    final-paper cortical-depth account; update inspected methods and RNAi specificity
+    limits without changing identity, status or graph topology.'
+  llm_assisted: true
 parent_structures:
 - GO:0005622
 part_of:
@@ -80,11 +87,18 @@ components:
     notes: 'Yan dissertation, Chapter 2, pp. 26-32: Sfi1-1 (SteCoe_17904), Sfi1-2
       (SteCoe_25973) and Sfi1-3 (SteCoe_10021) localize to myonemes and posterior
       lateral bands, but not the anterior centrin mesh. Antibody blots contain nonspecific
-      bands; peptide-block and RNAi immunofluorescence controls are reported.'
+      bands; peptide-block and RNAi immunofluorescence controls are reported. This
+      is the dissertation conclusion; the later final-paper manuscript resolves additional
+      cortical layers as described below.'
   - reference: DOI:10.1016/j.cub.2026.06.062
-    notes: Published abstract supports regional Sfi1-dependent centrin patterning.
-      Detailed isoform localization is sourced separately to the dissertation, not
-      to inaccessible final methods.
+    notes: 'Final-paper author manuscript PMC13637444.1, Sfi1 Results and Figure 3
+      legend: outer lateral Sfi1 bands are distinct from the anterior centrin mesh,
+      but deeper anterior layers show Sfi1/centrin mesh colocalization. In the posterior
+      outer cortex, centrin surrounds rather than colocalizes with the lateral bands.
+      This depth-resolved account qualifies the dissertation conclusion; it does not
+      equate every centrin-positive structure with posterior myonemes. Peptide-block
+      and immunofluorescence controls are reported, with nonspecific Western bands
+      and Sfi1-2/Sfi1-3 RNAi cross-depletion as specificity limits.'
 canonical_examples:
 - taxon_id: NCBITaxon:5963
   taxon_label: Stentor coeruleus
@@ -103,17 +117,22 @@ functions:
       regional body shortening. Mechanical and electrical stimulation differ in the
       spatial progression of contraction; the signal is not directly identified.
   - reference: DOI:10.1016/j.cub.2026.06.062
-    notes: Published abstract reports impaired or incomplete contraction in Sfi1 knockdowns
-      with reduced myoneme cables.
+    notes: 'Final-paper author manuscript PMC13637444.1, contractile-machinery Results
+      and STAR Methods: Sfi1-1 and Sfi1-2 RNAi conditions impair stimulus-evoked contraction;
+      responses depend on the stimulus and isoform-targeting condition. Sfi1-2/Sfi1-3
+      cross-depletion prevents an isoform-exclusive interpretation. No exact kinetics
+      or native force-generation mechanism is asserted here.'
 causal_graphs:
 - graph_id: sfi1_knockdown_phenotypes
   title: Nonmechanistic summary of Sfi1 knockdown phenotypes
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: Experimental perturbation summary in S. coeruleus, limited to the published
-    abstract. The two outcomes are not connected by a claimed causal mediation step.
-    This is not a resolved molecular contraction mechanism or a claim about every
-    Sfi1 isoform.
+  scope_notes: Experimental perturbation summary in S. coeruleus, checked against
+    the final-paper author manuscript Results and STAR Methods. The cable-reducing
+    conditions target Sfi1-1 or Sfi1-2; Sfi1-2/Sfi1-3 cross-depletion limits isoform-specific
+    attribution. The two outcomes are not connected by a claimed causal mediation
+    step. This is not a resolved molecular contraction mechanism or a claim about
+    every Sfi1 isoform.
   nodes:
   - node_id: sfi1_rnai
     label: RNAi against the implicated Sfi1 isoforms
@@ -131,10 +150,12 @@ causal_graphs:
     description: The reported Sfi1 knockdown conditions reduce myoneme cables.
     evidence:
     - reference: DOI:10.1016/j.cub.2026.06.062
-      notes: Nonmechanistic intervention summary from the published abstract; final
-        experimental methods were inaccessible. Cable reduction and contraction impairment
-        are parallel outcomes, not proof that cable loss mediates the contractile
-        defect.
+      notes: 'PMC13637444.1 cortical-patterning Results report reduced centrin incorporation
+        in posterior myonemes in Sfi1-1 and Sfi1-2 RNAi conditions, with altered anterior/posterior
+        patterning rather than reduced total centrin fluorescence. Sfi1-2/Sfi1-3 cross-depletion
+        limits isoform attribution. This remains a nonmechanistic intervention summary:
+        cable-pattern changes and contraction impairment are parallel outcomes, not
+        proof that cable loss mediates the defect.'
   - subject: sfi1_rnai
     predicate: produces
     object: impaired_contraction
@@ -142,10 +163,11 @@ causal_graphs:
       incompletely.
     evidence:
     - reference: DOI:10.1016/j.cub.2026.06.062
-      notes: Abstract-level phenotype in cable-reducing knockdowns; no exact kinetics
-        or universal Sfi1 requirement is inferred. This outcome does not resolve native
-        force generation or establish mediation by cable loss; final methods remain
-        inaccessible.
+      notes: PMC13637444.1 contractile-machinery Results and STAR Methods report reduced
+        or incomplete contraction in the implicated knockdown conditions. Sfi1-2/Sfi1-3
+        cross-depletion and stimulus-dependent responses preclude a universal or isoform-exclusive
+        requirement. No exact kinetics, native force-generation mechanism or mediation
+        by cable loss is inferred.
 evidence:
 - reference: DOI:10.1083/jcb.57.3.704
   notes: Huang and Pitelka (1973). Full primary PDF and Figures 16/17 inspected; versioned
@@ -159,9 +181,13 @@ evidence:
     access was not obtained. Localization at membranelle bases is additional centrin
     distribution, not evidence that those bases are the myoneme system.
 - reference: DOI:10.1016/j.cub.2026.06.062
-  notes: Yan et al. (2026), PMID 42476139. Published abstract and bibliographic metadata
-    verified; Cell and ScienceDirect full-text routes were inaccessible. No unpublished
-    numeric values are attributed to this DOI.
+  notes: Yan et al. (2026), PMID 42476139. At initial curation on 2026-10-04, only
+    the published abstract and metadata were readable through the checked Cell/ScienceDirect
+    routes. The final-paper author manuscript PMC13637444.1 became available on 2026-10-05.
+    Relevant centrin/Sfi1 localization, cortical-patterning and contraction Results,
+    Discussion and STAR Methods were read on 2026-10-12 in official checksum-verified
+    JATS. This is not the dissertation or the publisher typeset PDF; supplementary
+    movies were not inspected and no new numeric values are curated.
 - reference: https://escholarship.org/content/qt48v7x2m3/qt48v7x2m3_noSplash_81e16ae35ca9c5219383afd7085febfb.pdf
   notes: 'Connie Yan, Oral Regeneration in Stentor coeruleus: Cytoskeletal Patterning
     and Cell Cycle Control. Chapter 2 localization and RNAi results and relevant methods
@@ -216,10 +242,12 @@ discussions:
   status: RESOLVED
   prompt: Keep other cortical assemblies out of the myoneme constituent list.
   rationale: Adjacency or shared centrin labeling does not establish molecular membership.
-  notes: Km microtubules, nearby ER, basal bodies and membranelles are excluded as
+  notes: 'Km microtubules, nearby ER, basal bodies and membranelles are excluded as
     constituents. The anterior centrin mesh is not equated with posterior myoneme
     cables; Sfi1-positive lateral connections are included as associated architecture.
-    No unidentified linker or calcium pump is invented.
+    No unidentified linker or calcium pump is invented. This structural boundary does
+    not imply that Sfi1 is absent from every anterior centrin layer: the final-paper
+    manuscript distinguishes outer lateral bands from deeper anterior mesh colocalization.'
   evidence:
   - reference: DOI:10.1083/jcb.57.3.704
     notes: Separate cortical fiber systems and adjacent membranes are described.
@@ -228,25 +256,30 @@ discussions:
   - reference: https://escholarship.org/content/qt48v7x2m3/qt48v7x2m3_noSplash_81e16ae35ca9c5219383afd7085febfb.pdf
     notes: Chapter 2, pp. 30-32 separates posterior Sfi1/centrin structures from the
       anterior centrin mesh.
+  - reference: DOI:10.1016/j.cub.2026.06.062
+    notes: PMC13637444.1 Sfi1 Results and Figure 3 legend distinguish longitudinal
+      position from cortical depth.
   posed_by: codex
   posed_date: '2026-10-04'
   resolved_date: '2026-10-04'
 - discussion_id: mechanism_and_source_versions
   kind: CURATION_TODO
   status: OPEN
-  prompt: Resolve native force generation and check detailed Sfi1 results against
-    accessible final methods.
+  prompt: Resolve native force generation beyond the observed Sfi1 perturbation outcomes.
   rationale: Fixed-state morphology, localization and knockdown do not uniquely determine
     a molecular motor cycle.
-  notes: The graph retains only published intervention outcomes. It does not claim
-    direct Sfi1-centrin binding, complete reconstitution, an ATP-free recovery cycle
-    or mediation of every phenotype by posterior cables. Selected dissertation evidence
-    is explicitly versioned; the linked 2025 preprint's full text was not obtained
-    through checked PMC, Europe PMC or bioRxiv routes. Do not treat either as the
-    final 2026 methods.
+  notes: The graph retains intervention outcomes, not direct Sfi1-centrin binding,
+    complete reconstitution, an ATP-free recovery cycle or mediation of every phenotype
+    by posterior cables. The initial 2026-10-04 source-access gap is now partly closed
+    by the final-paper author manuscript PMC13637444.1; relevant Results and STAR
+    Methods were inspected on 2026-10-12. Its cortical-depth localization and RNAi
+    cross-depletion limits are kept distinct from the older dissertation account.
+    The molecular force-generation question remains open; no preprint or dissertation
+    is substituted for final experimental methods.
   evidence:
   - reference: DOI:10.1016/j.cub.2026.06.062
-    notes: Published abstract is the available final-version evidence.
+    notes: Final-paper author manuscript Results and STAR Methods bound the perturbation
+      evidence without resolving a native motor cycle.
   - reference: DOI:10.1083/jcb.57.3.704
     notes: Fixed-state comparisons do not directly observe a molecular shortening
       trajectory.
@@ -277,6 +310,28 @@ discussions:
   posed_by: codex
   posed_date: '2026-10-04'
   resolved_date: '2026-10-04'
+- discussion_id: sfi1_localization_source_versions
+  kind: CURATION_TODO
+  status: RESOLVED
+  prompt: Reconcile the dissertation and final-paper Sfi1 localization accounts.
+  rationale: Cortical depth and source version affect how colocalization can be interpreted.
+  notes: The dissertation reports no overlap with the anterior centrin mesh for the
+    three tested Sfi1 proteins. The later author manuscript distinguishes outer lateral
+    bands from deeper anterior layers with mesh overlap, and reports posterior outer-layer
+    centrin surrounding the lateral bands. Both accounts are retained with their versions;
+    neither defines every centrin assembly as a posterior myoneme or proves direct
+    binding. This is same-agent curation, not human sign-off.
+  evidence:
+  - reference: https://escholarship.org/content/qt48v7x2m3/qt48v7x2m3_noSplash_81e16ae35ca9c5219383afd7085febfb.pdf
+    notes: 'Chapter 2, printed pp. 31-32: older localization conclusion.'
+  - reference: DOI:10.1016/j.cub.2026.06.062
+    notes: 'PMC13637444.1 Sfi1 Results, Figure 3 legend and STAR Methods: depth-resolved
+      interpretation and specificity controls.'
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/2282
+    notes: Saved scientific review finding F1; source-version reconciliation.
+  posed_by: codex
+  posed_date: '2026-10-12'
+  resolved_date: '2026-10-12'
 images:
 - image_id: pmc2108994_figure16
   source: PMC
