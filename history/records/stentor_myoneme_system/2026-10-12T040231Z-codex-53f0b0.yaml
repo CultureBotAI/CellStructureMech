@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/stentor_myoneme_system.yaml
+  slug: stentor_myoneme_system
+session:
+  id: 2026-10-12T040231Z-codex-53f0b0
+  timestamp: '2026-10-12T04:02:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2282
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - functions
+  - causal_graphs
+  - evidence
+  - discussions
+  summary: Reconcile Stentor Sfi1 localization across source versions
+  details: Observed finding F1 was saved before mutation in reviews/structured/20261012T035945Z-stentor-myoneme-sfi1-source-version/review.yaml.
+    Read the dissertation Chapter 2 pp. 24-33 and checksum-verified final-paper author manuscript
+    PMC13637444.1 relevant Results, Discussion and STAR Methods. Preserve the earlier localization
+    account while adding the final cortical-depth distinction and RNAi cross-depletion limits.
+    Updated evidence through write_validated_structure and appended the inline event. Identity,
+    PROPOSED status, UNKNOWN essentiality, family grounding, graph topology, historical entries
+    and semantic embedding projection are unchanged. Guarded validation passed; post-edit
+    strict/history/full-QC and rendered-output checks will be recorded in the successor review
+    and PR, not asserted in advance.
