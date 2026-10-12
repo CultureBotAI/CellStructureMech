@@ -1,9 +1,9 @@
 identifier: GO:1990586
 label: divisome complex
-definition: The membrane-associated protein machine that constricts a dividing bacterial
-  cell. It is organised by the FtsZ ring — treadmilling filaments of the tubulin homologue
-  FtsZ tethered to the inner membrane — which positions and moves the septal peptidoglycan
-  synthases that build the division septum.
+definition: The membrane-associated protein machine that builds the peptidoglycan
+  division septum in FtsZ-dependent bacterial cytokinesis. Membrane-tethered FtsZ
+  filaments organize the division site and help distribute septal synthases; movement
+  during active synthesis is not universally driven by FtsZ treadmilling.
 definition_source: GO:1990586
 synonyms:
 - synonym_text: Z ring
@@ -19,8 +19,9 @@ components:
   gene_symbols:
   - ftsZ
   essentiality: ESSENTIAL
-  role: Tubulin homologue whose GTP-dependent treadmilling filaments form the ring
-    and distribute the septal synthases.
+  role: Tubulin homologue whose GTP-dependent filaments form the Z ring and whose
+    treadmilling helps distribute septal synthases; this does not make treadmilling
+    the universal rate-setting motor of active synthesis.
   evidence:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
     notes: McQuillen & Xiao 2020 review FtsZ filament treadmilling and its role in
@@ -55,13 +56,19 @@ components:
   - zipA
   - sepF
   essentiality: ESSENTIAL
-  role: Anchor FtsZ filaments to the inner membrane; the anchor differs between lineages.
+  role: Anchor FtsZ filaments to the inner membrane. The listed anchors are lineage-dependent
+    alternatives or partners; ESSENTIAL describes the tethering function, not independent
+    essentiality of every listed gene in every lineage.
   evidence:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
     notes: McQuillen & Xiao 2020 describe FtsA and ZipA tethering FtsZ to the membrane.
   - reference: DOI:10.1111/j.1749-6632.2012.06818.x
     notes: Egan & Vollmer 2012 review the septal synthases and the membrane anchoring
       of FtsZ.
+  - reference: DOI:10.1038/s41467-021-23099-8
+    notes: Introduction reviews lineage-dependent bacterial FtsZ anchors and overlapping
+      FtsA/SepF functions. Its M. smithii experiments concern a distinct archaeal
+      system, not occurrence of this bacterial peptidoglycan machine.
   protein_examples:
   - uniprot_id: UniProtKB:P0ABH0
     protein_label: Cell division protein FtsA
@@ -134,8 +141,10 @@ components:
   - ftsW
   - ftsI
   essentiality: ESSENTIAL
-  role: Builds the septal cell wall; its movement is guided by the treadmilling FtsZ
-    filaments.
+  role: Builds the septal cell wall. In the E. coli two-track model, fast FtsZ-dependent
+    movement distributes synthesis-inactive molecules, whereas slow processive movement
+    is coupled to active peptidoglycan synthesis and is independent of FtsZ treadmilling
+    speed.
   evidence:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
     notes: McQuillen & Xiao 2020 review FtsW-FtsI septal synthesis and its coupling
@@ -143,6 +152,11 @@ components:
   - reference: DOI:10.1111/j.1749-6632.2012.06818.x
     notes: Egan & Vollmer 2012 review the septal synthases and the membrane anchoring
       of FtsZ.
+  - reference: DOI:10.1038/s41564-020-00853-0
+    notes: 'Yang et al. 2021, Results and Discussion: single-molecule tracking and
+      perturbations distinguish fast FtsZ-dependent and slow synthesis-dependent FtsW/FtsI
+      populations in E. coli. Two-track interpretation is a model, not a universal
+      rate law for all bacteria.'
   protein_examples:
   - uniprot_id: UniProtKB:P0ABG4
     protein_label: Probable peptidoglycan glycosyltransferase FtsW
@@ -184,14 +198,9 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   presence: COMMON
-  note: FtsZ-based division is the norm; a few lineages (e.g. Chlamydiae, some Planctomycetes)
-    divide without FtsZ.
-  reference: DOI:10.1146/annurev-biophys-121219-081703
-- taxon_id: NCBITaxon:2157
-  taxon_label: Archaea
-  presence: VARIABLE
-  note: Euryarchaeota use FtsZ; some other archaea divide with an ESCRT-III-related
-    system instead.
+  note: FtsZ-dependent peptidoglycan division is widespread in bacteria, with E. coli
+    and B. subtilis as the reference systems here. COMMON is qualitative, not a census
+    of all bacterial taxa.
   reference: DOI:10.1146/annurev-biophys-121219-081703
 canonical_examples:
 - taxon_id: NCBITaxon:83333
@@ -228,9 +237,15 @@ evidence:
   notes: Egan AJF & Vollmer W 2012, 'The physiology of bacterial cell division', Annals
     of the New York Academy of Sciences — independent review of divisome composition
     and septal synthesis.
+- reference: DOI:10.1038/s41467-021-23099-8
+  notes: 'Scope boundary: archaeal FtsZ/SepF division systems exist, including M.
+    smithii with a pseudomurein wall. Shared FtsZ is not evidence for the bacterial
+    FtsW-FtsI peptidoglycan inventory curated here. Removing the earlier Archaea occurrence
+    row does not assert absence of archaeal divisomes.'
 causal_graphs:
 - graph_id: treadmilling_guides_septum
-  title: FtsZ treadmilling distributes the septal synthases
+  title: FtsZ-dependent distribution and synthesis-dependent motion in the E. coli
+    two-track model
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
@@ -239,9 +254,11 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     component_ref: ftsz
   - node_id: tether
-    label: membrane tethers
+    label: E. coli FtsA/ZipA membrane tethers
     node_type: GENE_OR_PROTEIN
     component_ref: membrane_tethers
+    description: The E. coli subset of the cross-lineage membrane-tether component
+      group; SepF is not asserted as an E. coli anchor.
   - node_id: ring
     label: FtsZ ring
     node_type: STRUCTURE
@@ -256,15 +273,25 @@ causal_graphs:
     label: division septum assembly
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0000917
+  - node_id: fast_population
+    label: fast synthesis-inactive FtsW-FtsI population
+    node_type: STATE
+  - node_id: active_population
+    label: slow synthesis-active FtsW-FtsI population
+    node_type: STATE
   edges:
   - subject: tether
     predicate: anchors
     object: ftsz
-    description: FtsA, ZipA or SepF-family membrane tethers attach FtsZ protofilaments
-      to the cytoplasmic membrane at the division site.
+    description: In E. coli, FtsA and ZipA anchor FtsZ filaments to the inner membrane.
+      SepF belongs to other bacterial lineage examples in the component group, not
+      the E. coli inventory of this graph.
     evidence:
     - reference: DOI:10.1146/annurev-biophys-121219-081703
       notes: 'McQuillen & Xiao 2020: FtsA and ZipA hold FtsZ filaments at the membrane.'
+    - reference: DOI:10.1038/s41467-021-23099-8
+      notes: Introduction describes lineage-dependent bacterial membrane anchors;
+        FtsA, ZipA and SepF are not an obligatory universal three-protein set.
   - subject: ftsz
     predicate: assembles into
     object: ring
@@ -274,30 +301,64 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-biophys-121219-081703
       notes: McQuillen & Xiao 2020 describe filament assembly into the Z ring at midcell.
   - subject: ftsz
-    predicate: treadmills within
-    object: ring
-    description: Dynamic FtsZ filaments treadmill around the circumference of the
-      ring.
+    predicate: undergoes
+    object: treadmilling
+    description: Membrane-associated FtsZ polymers undergo GTPase-dependent treadmilling
+      within the ring.
     evidence:
     - reference: DOI:10.1146/annurev-biophys-121219-081703
-      notes: McQuillen & Xiao 2020 review FtsZ treadmilling around the division site.
-  - subject: ring
-    predicate: distributes
-    object: synthase
-    description: Treadmilling filaments move the synthases around the division site,
-      spreading septal synthesis.
-    evidence:
-    - reference: DOI:10.1146/annurev-biophys-121219-081703
-      notes: McQuillen & Xiao 2020 review treadmilling-guided motion of the septal
-        synthases.
+      notes: Review of bacterial FtsZ dynamics; polymer turnover is distinct from
+        bulk translocation of a fixed polymer.
   - subject: synthase
+    predicate: has population
+    object: fast_population
+    description: E. coli septal FtsW/FtsI includes a fast-moving population whose
+      movement depends on FtsZ treadmilling.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-00853-0
+      notes: Results distinguish fast and slow moving populations by tracking and
+        perturbation.
+  - subject: treadmilling
+    predicate: drives movement of
+    object: fast_population
+    description: In the E. coli two-track model, FtsZ-dependent fast movement distributes
+      synthesis-inactive synthases, rather than driving their active polymerization.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-00853-0
+      notes: Changing FtsZ GTPase activity changes the fast population; inhibiting
+        peptidoglycan synthesis preferentially eliminates the slow population.
+  - subject: synthase
+    predicate: has population
+    object: active_population
+    description: A slow population moves processively during active septal peptidoglycan
+      synthesis.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-00853-0
+      notes: Slow movement depends on active synthesis and not FtsZ treadmilling speed.
+  - subject: fast_population
+    predicate: can enter
+    object: active_population
+    description: The proposed two-track model places FtsN-promoted release from the
+      FtsZ track into the synthesis-active population; this is the model interpretation,
+      not a resolved molecular transition mechanism.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-00853-0
+      notes: Results show that FtsN promotes the slow active population; Discussion
+        proposes the transition between tracks.
+  - subject: active_population
     predicate: carries out
     object: septum
-    description: FtsW-FtsI enzymes synthesize the septal peptidoglycan that closes
-      the division plane.
+    description: The synthesis-active FtsW-FtsI population polymerizes and crosslinks
+      septal peptidoglycan in the E. coli model.
     evidence:
-    - reference: DOI:10.1146/annurev-biophys-121219-081703
-      notes: 'McQuillen & Xiao 2020: FtsW-FtsI builds the septal peptidoglycan.'
+    - reference: DOI:10.1038/s41564-020-00853-0
+      notes: FtsW glycosyltransferase and FtsI transpeptidase perturbations tie the
+        slow population to septal synthesis.
+  description: 'E. coli model supported by single-molecule tracking and perturbations:
+    fast, synthesis-inactive FtsW/FtsI follows treadmilling FtsZ, whereas slow movement
+    accompanies active septal synthesis independently of FtsZ treadmilling speed.
+    FtsN promotes the active population. This does not assert identical rate coupling
+    in B. subtilis or all bacteria, or a fully resolved molecular coupling mechanism.'
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-31T03:48:12Z'
@@ -398,17 +459,44 @@ curation_history:
     source commit and explicit relation limits. Added experimentally localized E.
     coli K-12 FtsW and FtsI component examples verified in UniProtKB.
   llm_assisted: true
+- timestamp: '2026-10-12T06:19:58Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed 20261012T061610Z-divisome-complex-evidence-review: divisome-bacterial-archaeal-scope;
+    divisome-active-synthesis-versus-treadmilling; divisome-dimension-provenance.
+    Corrected evidence scope and mechanism claims using inspected sources. Original
+    history/rationale and posed dates remain intact; source discrepancies are explicitly
+    retained.'
+  llm_assisted: true
+- timestamp: '2026-10-12T06:25:02Z'
+  curator: codex
+  action: ADDRESS_ADVERSARIAL_REVIEW
+  changes: 'Addressed 20261012T062353Z-divisome-adversarial-anchor-scope F1, a residual
+    acceptance condition under divisome-active-synthesis-versus-treadmilling: restrict
+    the E. coli-specific graph tether node and edge to FtsA/ZipA while preserving
+    the cross-lineage component group and its SepF example.'
+  llm_assisted: true
+- timestamp: '2026-10-12T06:31:59Z'
+  curator: codex
+  action: CORRECT_RESOLVED_DISCUSSION_PROMPT
+  changes: 'Complete rendered acceptance for 20261012T061610Z-divisome-complex-evidence-review
+    F3: replace the unchanged false premise in the visible resolved-discussion prompt.
+    The template does not display resolution_note. Preserve original rationale, posed
+    date and all previous history; the pre-edit prompt remains in Git and the immutable
+    observation.'
+  llm_assisted: true
 part_of:
 - GO:0032153
 discussions:
 - discussion_id: ring_dimensions_unsourced
-  prompt: Z-ring radial thickness is still unsourced. FtsZ protofilament length (40-160
-    nm) and diameter (~5 nm) now carry verbatim snippets, but the review reports the
-    Z-ring's radial thickness only negatively -- it did not increase even when FtsZ
-    was overexpressed -- and gives no figure. Find a source that states it, or record
-    that the quantity is not established.
+  prompt: Which organism- and method-specific measurements describe FtsZ filament
+    dimensions, membrane spacing and Z-ring radial thickness? The cited review gives
+    E. coli fluorescence-based radial estimates and discusses disagreement with cryo-electron
+    tomography; these are not a universal ring thickness. The separate C. crescentus
+    membrane-spacing property now identifies its primary experiment and retains the
+    review/primary discrepancy.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - components#ftsz
   rationale: A first pass added filament length and ring thickness attributed to McQuillen
@@ -421,12 +509,30 @@ discussions:
     diameter (~5 nm) now carry verbatim snippets, so only the Z-ring''s radial thickness
     remains. The ~13 nm THICKNESS property on this record is the filament-to-membrane
     spacing at the constriction site, a different quantity, as its evidence notes
-    state.'
+    state. Resolution in the current review supersedes the historical prompt that
+    the review gives no radial-thickness figure. Original rationale and posed_date
+    are preserved; membrane spacing and ring radial thickness remain distinct.'
+  resolved_date: '2026-10-12'
+  evidence:
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    notes: Z-ring structure and microscopy comparison sections give radial estimates
+      and methodological qualifications.
+  - reference: DOI:10.1038/sj.emboj.7601895
+    notes: Figure6 density-profile spacing is a different quantity from ring radial
+      thickness.
+  resolution_note: 'The original no-number premise is corrected: McQuillen and Xiao2020
+    report approximately40-60nm radial thickness from E. coli single-molecule localization
+    studies and discuss their disagreement with single-layer cryo-ECT observations.
+    No method-independent radial thickness is asserted. Filament dimensions now name
+    C. crescentus and cryo-ECT; the separate membrane-spacing property uses the primary16nm
+    peak-to-peak experiment and explicitly retains the unresolved13nm review discrepancy.'
 physical_properties:
 - property: LENGTH
   value: 40-160
   unit: UO:0000018
-  context: individual FtsZ protofilaments at midcell, by cryo-electron tomography
+  context: individual arc-like FtsZ protofilaments in dividing Caulobacter crescentus
+    NA1000 cells, by cryo-electron tomography; range summarized by the cited review,
+    not a universal filament length
   reference: DOI:10.1146/annurev-biophys-121219-081703
   evidence:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
@@ -434,10 +540,15 @@ physical_properties:
       in diameter, consistent with the dimensions of single FtsZ protofilaments based
       on previous calculations and in vitro EM studies ( 93 , 183 ).
     notes: Verbatim from the open-access full text (PMC8610174).
+  - reference: DOI:10.1038/sj.emboj.7601895
+    notes: Results describe predominantly40-120nm filaments, longest about160nm, in
+      the NA1000 pseudo-time course; initial predivisional reconstructions give80-160nm.
+      Overexpressed FtsZG109S filaments can be much longer.
 - property: DIAMETER
   value: ~5
   unit: UO:0000018
-  context: single FtsZ protofilament
+  context: individual arc-like FtsZ protofilaments in Caulobacter crescentus, by cryo-electron
+    tomography; not whole-ring diameter
   reference: DOI:10.1146/annurev-biophys-121219-081703
   evidence:
   - reference: DOI:10.1146/annurev-biophys-121219-081703
@@ -445,6 +556,9 @@ physical_properties:
       in diameter, consistent with the dimensions of single FtsZ protofilaments based
       on previous calculations and in vitro EM studies ( 93 , 183 ).
     notes: Verbatim; the same sentence gives filament length and diameter.
+  - reference: DOI:10.1038/sj.emboj.7601895
+    notes: Results report approximately5nm diameter for arc-like filaments. Cryo-ECT
+      resolution is anisotropic and individual monomers are not resolved.
 - property: TRANSLOCATION_SPEED
   value: 25-30 nm/s
   context: apparent directional movement of FtsZ clusters at midcell in E. coli and
@@ -458,20 +572,24 @@ physical_properties:
     notes: Verbatim from PMC8610174. The rate is carried in `value` because UO has
       no nanometre-per-second term, and tagging a speed with UO:0000018 (nanometer)
       would state the wrong dimension.
-- property: THICKNESS
-  value: ~13
+- property: OTHER
+  value: ~16
   unit: UO:0000018
-  context: distance from the inner membrane to arc-like FtsZ filaments at the constriction
-    site
-  reference: DOI:10.1146/annurev-biophys-121219-081703
+  context: peak-to-peak separation of inner-membrane and FtsZ density at a constriction
+    in a Caulobacter crescentus cell overexpressing FtsZG109S, by cryo-electron tomography;
+    not Z-ring radial thickness
+  reference: DOI:10.1038/sj.emboj.7601895
   evidence:
+  - reference: DOI:10.1038/sj.emboj.7601895
+    notes: 'Results, Figure6 caption and Methods: a density profile through a constricted
+      region of an FtsZG109S-overexpressing cell has an FtsZ peak16nm inside the inner-membrane
+      peak; an unconstricted NA1000 region is the negative control. This is an experiment-specific
+      spacing, not a universal physiological value.'
   - reference: DOI:10.1146/annurev-biophys-121219-081703
-    snippet: It was observed that individual, arc-like FtsZ filaments were positioned
-      approximately 13 nm underneath the inner membrane at the site of midcell constriction
-      ( 116 ) ( Figure 4c ).
-    notes: Verbatim from PMC8610174. This is the filament-to-membrane spacing, not
-      the radial thickness of the Z-ring, which the review reports as unchanged even
-      under FtsZ overexpression.
+    notes: The review instead summarizes approximately13nm beneath the membrane. The
+      inspected texts do not explain the13-versus16nm difference. The maintained value
+      follows the explicitly defined primary peak-to-peak experiment; the review discrepancy
+      remains unresolved, not silently reconciled.
 related_records:
 - corpus: PathwayMech
   identifier: WikiPathways:WP5060

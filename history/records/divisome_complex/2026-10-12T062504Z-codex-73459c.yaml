@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/divisome_complex.yaml
+  slug: divisome_complex
+session:
+  id: 2026-10-12T062504Z-codex-73459c
+  timestamp: '2026-10-12T06:25:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Resolve adversarial E. coli graph anchor scope finding
+  details: Addresses reviews/structured/20261012T062353Z-divisome-adversarial-anchor-scope/review.yaml
+    F1 and original divisome review F2. The graph now explicitly uses the E. coli FtsA/ZipA
+    subset of a cross-lineage component group. SepF remains a supported example from other
+    bacterial lineages, not an E. coli anchor. Guarded write and new inline event; all prior
+    history and PROPOSED status retained. Rebuild generated products, refresh input capture
+    and rerun final full QC.
