@@ -1,0 +1,483 @@
+schema_version: 1.0.0
+review_id: 20261012T002824Z-deep_fiber-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'deep fiber: scientific structure review'
+started_at: '2026-10-12T00:20:16Z'
+finished_at: '2026-10-12T00:28:24Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent whole-record and source assessment; not independent
+    human approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Entire native record assessed; one major hierarchy finding saved before curation.
+source:
+  git_revision: 21420b489a82660e13015ae46ad5abc0b74a63f5
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: README.md
+    sha256: 3acb13884094f40c840ed3452a6209ee9a38b479ae16e4c0bca390c3c290828a
+    role: context
+  - path: curation/source_queue.tsv
+    sha256: 55d8fe79b5edd7d6b42bf4ca9168fe4878240417716e2f4ba423489144b89284
+    role: context
+  - path: data/structures/cytoskeleton/ciliary_rootlet.yaml
+    sha256: 7e83f24e1bd10b9945a81a6f912aae66c8ca18a751aa4147a7d0a5bcf3fa88c9
+    role: context
+  - path: data/structures/cytoskeleton/cryptophyte_cortical_centrin_network.yaml
+    sha256: cb0d5b64a7ea83ca03ae0ec91abad982f682314b29d0e89fe0f62cbaa2072819
+    role: context
+  - path: data/structures/cytoskeleton/deep_fiber.yaml
+    sha256: bba717719df53ad6c4ca0ea41f30d0f4456918fba07f4a014ab45871326f3c63
+    role: target
+  - path: data/structures/cytoskeleton/funis.yaml
+    sha256: afc408aedaadc8673ad4e382300015b1d5253aa1cb0d38a75fc1482e7b634711
+    role: context
+  - path: data/structures/other/cytostome.yaml
+    sha256: e098724aea296245130198ea537eab00b38dd2429c7d91aeac78d09efab7d735
+    role: context
+  - path: data/structures/other/oral_apparatus.yaml
+    sha256: 55dd7652482846930c83b0340be155e52c094dbdf9232427bc76580cbe65a372
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/SOURCE_QUEUE.md
+    sha256: 793e9a16435684b90b0d64b7be4bdfeffbba5ab6ac0ca99eadf25c8548e22729
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/records/deep_fiber/2026-09-30T205246Z-codex-e344a9.yaml
+    sha256: 67414867e0ebb5fb943582da52fbe9faca2b9b74faa95bc89ac636469eac391f
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: pages/structures/cytoskeleton/deep_fiber.html
+    sha256: 1c3e53e577d730ae6b7529e34aad43e43d18c6c92af44667346d4793f7caa63e
+    role: context
+  - path: reports/yaml_record_review/20260930T211259Z-deep_fiber.md
+    sha256: 28ca68d44a477ed38fdd5de78bafe3c40ca930338c6ded0716b51d831330c588
+    role: context
+  - path: scripts/render_pages.py
+    sha256: b5be74a8a3a0f7190b63da47a86cd8b48cbce4bb955ea0896f29d24f214a9b22
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/cellstructuremech/templates/structure.html
+    sha256: 417b020a6eda677a1e40ecd3d849bfd5063d83291d7496e1c52a1a3a321f35ed
+    role: context
+targets:
+- target_id: GO:0032123
+  path: data/structures/cytoskeleton/deep_fiber.yaml
+  label: deep fiber
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/deep_fiber.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire native record: identity, hierarchy/parthood, components, taxon
+    and example, every graph edge, discussions, optional surfaces and both history
+    surfaces.'
+  selection: One exact record within the active 909-record goal; no sampling.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0032123
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032123
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/deep_fiber.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T00:21:25Z to 2026-10-12T00:21:27Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032123
+  command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/deep_fiber.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T00:21:27Z to 2026-10-12T00:21:32Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032123
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/cytoskeleton/deep_fiber.yaml
+    --report /private/tmp/csm-review-20261012T002200Z/deep_fiber-snippets.md
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No verbatim snippets; paraphrases assessed separately against inspected
+    text.
+  scope_note: 2026-10-12T00:21:32Z to 2026-10-12T00:21:55Z; log SHA-256 175dbdb3bfd35e578ce80cae9ef6a9f9e38d33c1ff5a403a277ade19e99a0d9c
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032123
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T00:22:26Z to 2026-10-12T00:22:41Z; log SHA-256 8163609c40c8a98151ad394b3e718c92826ba2960c070eb74781ee8947cde044
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032123
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "id↔label correspondence summary:\n          OK_CANONICAL: 3545\n     \
+    \       OK_SYNONYM: 50\n          OK_EXCEPTION: 6\n    SKIPPED_NO_ADAPTER: 603\n\
+    \n✅ All id↔label pairs correspond."
+  scope_note: 2026-10-12T00:22:41Z to 2026-10-12T00:24:43Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032123
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T00:26:14Z to 2026-10-12T00:26:43Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032123
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: "resolver control: every resolver accepts a known id and rejects a fabricated\
+    \ one\n\nidentifier liveness summary:\n  OK             4016\n  SKIPPED      \
+    \   251\n\nEvery identifier resolves at its issuing authority."
+  scope_note: 2026-10-12T00:26:43Z to 2026-10-12T00:27:40Z; log SHA-256 f38fdf2889286b712ede050fc9d6de36ecb8830b57fbc4dfbf38421c176168c8
+- check_id: reviews
+  name: reviews
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032123
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual deterministic check passed; scientific support assessed separately.
+  scope_note: 2026-10-12T00:25:48Z to 2026-10-12T00:27:58Z; log SHA-256 7a153a0528763c0dbabfdaa82c957635fc432ed958a90b63f79839185f71ae5f
+- check_id: baseline-qc
+  name: Exact-base native merge-group QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032123
+  command: gh run view 38186944460 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  summary: Exact 21420b48 merge-group QC success verified from live metadata and complete
+    log; not a fresh full local run.
+  scope_note: https://github.com/CultureBotAI/CellStructureMech/actions/runs/38186944460;
+    log SHA256 d7423238dd0e83b14727b8773ce006520a760886b10c09dc9daee18be472d654
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/deep_fiber.yaml
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: bba717719df53ad6c4ca0ea41f30d0f4456918fba07f4a014ab45871326f3c63
+  support: context_only
+  summary: Whole native YAML read before findings; unchanged captured bytes verified.
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+  support: context_only
+  summary: Parent means is-a; cytoskeletal substructures use part_of the whole framework.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+  support: context_only
+  summary: Typed is-a, proper-parthood and evidence-bearing component/graph contracts
+    read.
+- evidence_id: reading
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T002200Z/reading-checkpoint.json
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: 1892aa466bea1ad65c69242c2a47aa1607ebec569557c6be532c8e23cae6ff6a
+  support: context_only
+  summary: Actual source-reading chronology and abstract/full-text/visual limits retained.
+- evidence_id: predecessors
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T002200Z/predecessors.json
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: 119428c024fe92271825015756b954df34b27304b559895c8c99912b4c573cb3
+  support: context_only
+  summary: Ignored-inclusive canonical scan found no exact-target predecessor.
+- evidence_id: context
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T002200Z/context-search.log
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: 34448ef49a4cc26fe4a72fb1813acf298576382550c772c1fe4c87f25a06cffa
+  support: context_only
+  summary: Ignored/hidden-inclusive identifier and slug search; Git internals and
+    dependency trees excluded.
+- evidence_id: go-relations
+  kind: authority
+  reference: /private/tmp/csm-review-20261011T232800Z/read-ahead/go-relations.log
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: fecf076834d1980872137b74aa8029c6a0e0a3657684d9dfe0c5f73078bbff7f
+  support: context_only
+  summary: Complete source-native typed OAK relations inspected; independent QuickGO
+    child relation agrees.
+- evidence_id: adapter
+  kind: validation
+  reference: /private/tmp/csm-review-20261011T232800Z/read-ahead/adapter-and-search.json
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: a875b409f9a310bf6cf60e00bf7dfab5ba819e21a4cf33ced0109b185f6aafad
+  support: context_only
+  summary: Verified 28-row iModulonDB inventory has no applicable Giardia or Tetrahymena
+    dataset; not biological absence evidence.
+- evidence_id: issue-dedup
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T002200Z/dedup-deep-fiber-cytoskeleton-parthood-retry.log
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570
+  support: context_only
+  summary: All-state exact-key GitHub issue search checked before creation.
+- evidence_id: history-0
+  kind: record_content
+  reference: history/records/deep_fiber/2026-09-30T205246Z-codex-e344a9.yaml
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: 67414867e0ebb5fb943582da52fbe9faca2b9b74faa95bc89ac636469eac391f
+  support: context_only
+  summary: Complete existing append-only history read; old actor metadata preserved.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0035253,GO%3A0036064,GO%3A0032123,GO%3A0031912,GO%3A0031910,GO%3A0005856,GO%3A0005874,GO%3A0005622,GO%3A0020038
+  locator: Exact definitions, synonyms, current status and relation types
+  accessed_at: '2026-10-11T23:40:12Z'
+  snapshot_sha256: 4e17ce630b3097095683c4e2cb5d087a27eccc9bfef5168522e532c407d6b9a3
+  support: supports
+  summary: Deep fiber and cytoskeleton denote distinct scopes; intracellular anatomical
+    structure is a broad class, not a claim of resolved polymer identity.
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5911
+  locator: NCBI taxon via ENA; species5911
+  accessed_at: '2026-10-11T23:40:26Z'
+  snapshot_sha256: 42cc1d612d8aa31ffc6e484dfb7b846348bea7e26ca272eb4b5f4e7739df4ce6
+  support: supports
+  summary: Tetrahymena thermophila species identity verified.
+- evidence_id: chapter
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2FS0091-679X%2808%2961528-9%22&format=json&resultType=core
+  locator: DOI10.1016/S0091-679X(08)61528-9; PMID10503189 metadata only
+  accessed_at: '2026-10-11T23:38:31Z'
+  snapshot_sha256: fe3ae541b1471f03cb8561839e7120df46c9586b5384310f026cadad5e6e9fc8
+  support: supports
+  summary: Frankel chapter identity matches the exact GO definition PMID. No abstract
+    or main text inspected; GO is the immediate topology source.
+- evidence_id: legacy
+  kind: prior_review
+  reference: reports/yaml_record_review/20260930T211259Z-deep_fiber.md
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: 28ca68d44a477ed38fdd5de78bafe3c40ca930338c6ded0716b51d831330c588
+  support: context_only
+  summary: Historical clean report repeats the untyped cytoskeleton-parent claim.
+    Preserve it; it is not a canonical predecessor.
+- evidence_id: whole
+  kind: record_content
+  reference: data/structures/other/oral_apparatus.yaml
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: 55dd7652482846930c83b0340be155e52c094dbdf9232427bc76580cbe65a372
+  support: context_only
+  summary: Whole native context read; has_part GO0032123 reciprocates supported oral-apparatus
+    parthood.
+- evidence_id: neighbor
+  kind: record_content
+  reference: data/structures/other/cytostome.yaml
+  accessed_at: '2026-10-12T00:28:24Z'
+  snapshot_sha256: e098724aea296245130198ea537eab00b38dd2429c7d91aeac78d09efab7d735
+  support: context_only
+  summary: Native cytostome context read, not counted as a completed scientific review.
+assessments:
+- assessment_id: biology
+  area: evidence
+  topic: Identity, components, taxon, every graph edge and discussions
+  outcome: supported
+  target_ids:
+  - GO:0032123
+  evidence_ids:
+  - record
+  - go
+  - go-relations
+  - chapter
+  - taxon
+  - whole
+  summary: 'Exact GO identity, definition and exact synonym are supported. CYTOSKELETON/FILAMENT
+    identifies a cytoskeletal fiber, not a protein. Both NONMECHANISTIC graph edges
+    match the GO definition: part of oral apparatus and extends past cytostome. The
+    Tetrahymena example only states that the GO-cited chapter covers the model; metadata
+    and GO provenance support that narrow note. Unknown molecular constituents remain
+    an honest open task, not an empty-slot defect.'
+  dimensions:
+  - name: evidence-tier
+    value: GO-backed topology; publication metadata only
+    definition: Immediate evidence for the two coarse topology edges, distinct from
+      unread primary experiments.
+    evidence_ids:
+    - go
+    - chapter
+  - name: taxon-scope
+    value: Tetrahymena thermophila NCBITaxon:5911
+    definition: Named canonical model; not universal ciliate prevalence.
+    evidence_ids:
+    - taxon
+    - chapter
+- assessment_id: relation
+  area: grounding
+  topic: Typed cytoskeleton relationship
+  outcome: concern
+  target_ids:
+  - GO:0032123
+  evidence_ids:
+  - record
+  - rules
+  - schema
+  - go
+  - go-relations
+  summary: parent_structures lists GO:0005856 as an is-a class, and its evidence note
+    calls cytoskeleton a direct parent. The actual GO:0032123 relation is BFO:0000050
+    part_of GO:0005856, separately from part_of GO:0031912 oral apparatus. The untyped
+    OLS parent interpretation changes the structure into a kind of whole framework.
+    Move only the cytoskeleton link to part_of and correct the evidence note; retain
+    exact identity and oral-apparatus parthood.
+- assessment_id: provenance
+  area: completeness
+  topic: Evidence boundaries, optional resources and status
+  outcome: supported
+  target_ids:
+  - GO:0032123
+  evidence_ids:
+  - record
+  - rules
+  - reading
+  - context
+  summary: All represented claims and both history surfaces reviewed. Optional exact
+    family groundings, measurements, images, datasets, trait/pathway links and mature
+    mechanisms are not fabricated. No exact funis GO replacement appeared in the bounded
+    QuickGO search. Original legacy assessments remain historical and PROPOSED is
+    unchanged.
+findings:
+- finding_id: F1
+  issue_key: deep-fiber-cytoskeleton-parthood
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Represent deep fiber as part of the cytoskeleton
+  description: parent_structures lists GO:0005856 as an is-a class, and its evidence
+    note calls cytoskeleton a direct parent. The actual GO:0032123 relation is BFO:0000050
+    part_of GO:0005856, separately from part_of GO:0031912 oral apparatus. The untyped
+    OLS parent interpretation changes the structure into a kind of whole framework.
+    Move only the cytoskeleton link to part_of and correct the evidence note; retain
+    exact identity and oral-apparatus parthood.
+  target_ids:
+  - GO:0032123
+  field_paths:
+  - parent_structures
+  - part_of
+  - evidence[1].notes
+  evidence_ids:
+  - record
+  - rules
+  - schema
+  - go
+  - go-relations
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/deep_fiber.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md
+  native_severity: major
+  normalization_reason: Wrong is-a versus proper-parthood relation changes structured
+    biological meaning; exact record identity otherwise remains supported.
+actions:
+- action_id: A1
+  description: Represent deep fiber as part of the cytoskeleton
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0032123
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/deep_fiber.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Remove GO:0005856 from parent_structures; keep GO:0031912 in part_of and add GO:0005856
+    once.
+  - Correct the GO:0005856 evidence note to typed parthood rather than an untyped
+    direct parent; no replacement identity or new mechanistic claim.
+  - Guarded writer; append actual Codex event and EDIT history with exact changed
+    sections; preserve prior histories, reviews, all discussions and PROPOSED status.
+  - Focused regressions, regenerated products and full native gates pass; save an
+    evidence-backed exact-lineage successor.
+limitations:
+- Same-agent review, not independent human approval or experimental/raw-image reanalysis.
+- Frankel chapter metadata only; primary Benchimol paper abstract only, with later
+  Hagen review sections6/7 and Table3 as secondary context. Scope is stated per source;
+  no global full-text inaccessibility claim.
+- Source downloads and read-ahead preserve original timestamps and hashes. Current
+  native files, schema, all original histories and local rules were reread and captured
+  against merged main.
+- Exact-base QC verified from live CI; fresh local scoped/global validators are separate.
+  Resolver namespace/no-adapter and existing test skips remain explicit.
+- Unknown constituent families and mechanisms remain genuine uncertainties, not absence
+  assertions. iModulonDB lacks applicable taxa and supplies no negative evidence.
+- Ciliary rootlet and cryptophyte cortical centrin network are separately reviewed
+  targets; this issue-bearing bundle does not certify them.
