@@ -27,6 +27,12 @@ curation_history:
     evidence, a nonmechanistic topology graph, and boundary and component-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-10-12T02:39:11Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2279: Use the publisher-corrected MeiAR DOI and preserve erratum
+    provenance.'
+  llm_assisted: true
 parent_structures:
 - GO:0005826
 components:
@@ -44,7 +50,7 @@ components:
   - reference: GO:0110086
     notes: GO:0110086 defines the meiotic actomyosin contractile ring as composed
       of actin filaments, myosin, and myosin-associated proteins.
-  - reference: DOI:10.1242/jcs.091561
+  - reference: DOI:10.1242/jcs.jcs091561
     notes: Yan and Balasubramanian 2012 characterized the F-actin-containing meiotic
       actin ring in fission yeast.
 - component_id: myosin_proteins
@@ -67,13 +73,13 @@ taxonomic_distribution:
   taxon_label: Schizosaccharomyces pombe
   presence: COMMON
   note: Fission yeast assembles meiotic actin ring structures during meiosis II sporulation.
-  reference: DOI:10.1242/jcs.091561
+  reference: DOI:10.1242/jcs.jcs091561
 canonical_examples:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe
   note: Fission-yeast meiotic model in which the MeiAR expands during early meiosis
     II and closes during forespore membrane assembly.
-  reference: DOI:10.1242/jcs.091561
+  reference: DOI:10.1242/jcs.jcs091561
 functions:
 - function_id: meiotic_actomyosin_cytokinesis
   label: meiotic actomyosin cytokinesis
@@ -83,7 +89,7 @@ functions:
   - reference: GO:0110086
     notes: GO:0110086 defines the ring by its meiotic cytokinesis location and association
       with division-plane membrane ingrowth.
-  - reference: DOI:10.1242/jcs.091561
+  - reference: DOI:10.1242/jcs.jcs091561
     notes: Yan and Balasubramanian 2012 followed fission-yeast meiotic actin ring
       expansion and closure during forespore membrane assembly.
 evidence:
@@ -98,9 +104,13 @@ evidence:
 - reference: GO:0032157
   notes: Gene Ontology cellular-component child term for the localized prospore contractile
     ring.
-- reference: DOI:10.1242/jcs.091561
+- reference: DOI:10.1242/jcs.jcs091561
   notes: Yan and Balasubramanian 2012, 'Meiotic actin rings are essential for proper
     sporulation in fission yeast', Journal of Cell Science.
+- reference: DOI:10.1242/jcs.113316
+  notes: The publisher correction to Yan and Balasubramanian 2012 identifies 10.1242/jcs.jcs091561
+    as the correct article DOI, replacing the originally printed 10.1242/jcs.091561.
+    This is a publication-identifier correction, not a change to the biological results.
 causal_graphs:
 - graph_id: meiotic_actomyosin_ring_topology
   title: Meiotic actomyosin-ring topology
@@ -188,7 +198,7 @@ discussions:
   - reference: GO:0110086
     notes: GO:0110086 names myosin-associated proteins in the meiotic actomyosin-ring
       definition.
-  - reference: DOI:10.1242/jcs.091561
+  - reference: DOI:10.1242/jcs.jcs091561
     notes: Yan and Balasubramanian 2012 characterized the fission-yeast MeiAR and
       its relationship to forespore membrane assembly.
   posed_by: codex

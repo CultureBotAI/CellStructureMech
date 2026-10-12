@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/prospore_contractile_ring.yaml
+  slug: prospore_contractile_ring
+session:
+  id: 2026-10-12T023914Z-codex-2ed886
+  timestamp: '2026-10-12T02:39:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2280
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Addressed #2280: Keep ontology-defined prospore-ring membership separate from
+    unverified assembly essentiality.'
+  details: 'Original issue-bearing review saved and committed before mutation: reviews/structured/20261012T023617Z-prospore_contractile_ring-audit/review.yaml.
+    Addressed #2280: Keep ontology-defined prospore-ring membership separate from unverified
+    assembly essentiality. All prior events and discussion rationale remain intact. Exact
+    class identity, hierarchy, graph nodes/edges/descriptions, biological scope and PROPOSED
+    status are unchanged. No myosin-II force-generation or universal dispensability conclusion
+    is inferred. Changed sections derive from the exact before/after diff.'

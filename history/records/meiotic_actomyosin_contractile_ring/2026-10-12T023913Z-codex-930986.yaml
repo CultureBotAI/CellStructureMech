@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/meiotic_actomyosin_contractile_ring.yaml
+  slug: meiotic_actomyosin_contractile_ring
+session:
+  id: 2026-10-12T023913Z-codex-930986
+  timestamp: '2026-10-12T02:39:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2279
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - components
+  - curation_history
+  - discussions
+  - evidence
+  - functions
+  - taxonomic_distribution
+  summary: 'Addressed #2279: Use the publisher-corrected MeiAR DOI and preserve erratum provenance.'
+  details: 'Original issue-bearing review saved and committed before mutation: reviews/structured/20261012T023600Z-meiotic_actomyosin_contractile_ring-audit/review.yaml.
+    Addressed #2279: Use the publisher-corrected MeiAR DOI and preserve erratum provenance.
+    All prior events and discussion rationale remain intact. Exact class identity, hierarchy,
+    graph nodes/edges/descriptions, biological scope and PROPOSED status are unchanged. No
+    myosin-II force-generation or universal dispensability conclusion is inferred. Changed
+    sections derive from the exact before/after diff.'

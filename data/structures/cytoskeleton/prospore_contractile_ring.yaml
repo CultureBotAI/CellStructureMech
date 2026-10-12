@@ -26,6 +26,12 @@ curation_history:
   changes: 'Resolved PR #1766 review issue #1767 by replacing the generic GO:0005826
     parent with the nearer GO:0110086 meiotic actomyosin contractile ring parent.'
   llm_assisted: true
+- timestamp: '2026-10-12T02:39:13Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2280: Keep ontology-defined prospore-ring membership separate
+    from unverified assembly essentiality.'
+  llm_assisted: true
 synonyms:
 - synonym_text: actomyosin ring
   synonym_type: RELATED_SYNONYM
@@ -43,7 +49,7 @@ components:
   label: actin filaments
   component_type: PROTEIN
   component_role: CONSTITUENT
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: Prospore contractile rings are actomyosin structures, but no exact
     source-neutral protein-family CURIE was assigned for the complete prospore-localized
@@ -53,12 +59,15 @@ components:
   evidence:
   - reference: GO:0032157
     notes: GO:0032157 defines the prospore contractile ring as a cytoskeletal structure
-      composed of actin filaments and myosin.
+      composed of actin filaments and myosin. This ontology definition supports composition
+      and location, not a component-removal test of ring assembly. Assembly essentiality
+      remains UNKNOWN pending organism- and component-scoped experimental evidence;
+      membership alone does not establish a universal requirement.
 - component_id: myosin_proteins
   label: myosin proteins
   component_type: PROTEIN
   component_role: CONSTITUENT
-  essentiality: ESSENTIAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The first prospore contractile ring record keeps myosin at a reviewed-label-only
     level until exact source-neutral groundings and the Saccharomyces or Schizosaccharomyces
@@ -68,7 +77,10 @@ components:
   evidence:
   - reference: GO:0032157
     notes: GO:0032157 defines the prospore contractile ring as a cytoskeletal structure
-      composed of actin filaments and myosin.
+      composed of actin filaments and myosin. This ontology definition supports composition
+      and location, not a component-removal test of ring assembly. Assembly essentiality
+      remains UNKNOWN pending organism- and component-scoped experimental evidence;
+      membership alone does not establish a universal requirement.
 evidence:
 - reference: GO:0032157
   notes: Gene Ontology cellular-component term for the prospore contractile ring.
