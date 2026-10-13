@@ -1449,19 +1449,19 @@
           "cosine_similarity": 0.69665513
         },
         {
+          "identifier": "GO:1990586",
+          "label": "divisome complex",
+          "cosine_similarity": 0.68506819
+        },
+        {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.68340195
+          "cosine_similarity": 0.6846419
         },
         {
           "identifier": "GO:1990207",
           "label": "EmrE multidrug transporter complex",
           "cosine_similarity": 0.67148346
-        },
-        {
-          "identifier": "cellstructuremech:holdfast",
-          "label": "holdfast",
-          "cosine_similarity": 0.66914371
         }
       ]
     },
@@ -4768,7 +4768,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.83485976
+          "cosine_similarity": 0.83057765
         },
         {
           "identifier": "cellstructuremech:crescentin_filament",
@@ -6556,27 +6556,27 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.72624247
-        },
-        {
-          "identifier": "GO:1990716",
-          "label": "axonemal central apparatus",
-          "cosine_similarity": 0.72537978
+          "cosine_similarity": 0.72784702
         },
         {
           "identifier": "cellstructuremech:parm_filament",
           "label": "ParM filament",
-          "cosine_similarity": 0.72273141
+          "cosine_similarity": 0.71334169
         },
         {
-          "identifier": "GO:0160113",
-          "label": "axonemal microtubule doublet inner junction",
-          "cosine_similarity": 0.72166761
+          "identifier": "GO:0009288",
+          "label": "bacterial-type flagellum",
+          "cosine_similarity": 0.69365453
         },
         {
-          "identifier": "GO:0032170",
-          "label": "pseudohyphal septin ring",
-          "cosine_similarity": 0.70630875
+          "identifier": "GO:1990716",
+          "label": "axonemal central apparatus",
+          "cosine_similarity": 0.68603682
+        },
+        {
+          "identifier": "cellstructuremech:stalk_crossband",
+          "label": "stalk crossband",
+          "cosine_similarity": 0.68506819
         }
       ]
     },
@@ -6587,27 +6587,27 @@
         {
           "identifier": "cellstructuremech:mreb_filament",
           "label": "MreB filament",
-          "cosine_similarity": 0.83485976
+          "cosine_similarity": 0.83057765
         },
         {
           "identifier": "GO:0009425",
           "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.76550357
+          "cosine_similarity": 0.75286126
         },
         {
-          "identifier": "GO:0009288",
-          "label": "bacterial-type flagellum",
-          "cosine_similarity": 0.75479789
+          "identifier": "GO:0097347",
+          "label": "TAM protein secretion complex",
+          "cosine_similarity": 0.75163497
         },
         {
           "identifier": "GO:0120101",
           "label": "bacterial-type flagellum stator complex",
-          "cosine_similarity": 0.74968026
+          "cosine_similarity": 0.7500975
         },
         {
-          "identifier": "GO:0022624",
-          "label": "proteasome accessory complex",
-          "cosine_similarity": 0.74081512
+          "identifier": "GO:1990199",
+          "label": "MsbA transporter complex",
+          "cosine_similarity": 0.73451252
         }
       ]
     },
@@ -7184,14 +7184,14 @@
           "cosine_similarity": 0.91382162
         },
         {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.70051449
-        },
-        {
           "identifier": "GO:0030076",
           "label": "light-harvesting complex",
           "cosine_similarity": 0.68560323
+        },
+        {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.68187377
         },
         {
           "identifier": "GO:0030094",
@@ -15440,9 +15440,9 @@
           "cosine_similarity": 0.70318426
         },
         {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.68712037
+          "identifier": "GO:0033099",
+          "label": "attachment organelle",
+          "cosine_similarity": 0.67558766
         }
       ]
     },
@@ -16360,6 +16360,11 @@
           "cosine_similarity": 0.72760636
         },
         {
+          "identifier": "cellstructuremech:elongasome",
+          "label": "elongasome",
+          "cosine_similarity": 0.71572643
+        },
+        {
           "identifier": "GO:7770042",
           "label": "bindosome complex",
           "cosine_similarity": 0.71019836
@@ -16368,11 +16373,6 @@
           "identifier": "GO:0140275",
           "label": "MIB complex",
           "cosine_similarity": 0.70813183
-        },
-        {
-          "identifier": "cellstructuremech:elongasome",
-          "label": "elongasome",
-          "cosine_similarity": 0.70066013
         }
       ]
     },
@@ -22376,7 +22376,7 @@
         {
           "identifier": "cellstructuremech:elongasome",
           "label": "elongasome",
-          "cosine_similarity": 0.66181332
+          "cosine_similarity": 0.65212782
         },
         {
           "identifier": "cellstructuremech:holdfast",

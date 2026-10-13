@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/elongasome.yaml
+  slug: elongasome
+session:
+  id: 2026-10-12T063203Z-codex-781f86
+  timestamp: '2026-10-12T06:32:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Correct visible resolved-discussion premise
+  details: Completes existing saved finding 20261012T061610Z-elongasome-evidence-review F1.
+    The native prompt still contained the original incorrect factual premise and the renderer
+    displays prompts/rationale but not resolution_note. Update the prompt to the evidence-backed
+    resolved question and result, preserving rationale, posed date, status, detailed resolution
+    note and all previous history. No template or unrelated-record edit; rerender and rerun
+    full QC.

@@ -2116,7 +2116,7 @@
   "kind": "MULTIPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/division_machinery/divisome_complex.html",
-  "definition": "The membrane-associated protein machine that constricts a dividing bacterial cell. It is organised by the FtsZ ring — treadmilling filaments of the tubulin homologue FtsZ tethered to the inner membrane — which positions and moves the septal peptidoglycan synthases that build the division septum.",
+  "definition": "The membrane-associated protein machine that builds the peptidoglycan division septum in FtsZ-dependent bacterial cytokinesis. Membrane-tethered FtsZ filaments organize the division site and help distribute septal synthases; movement during active synthesis is not universally driven by FtsZ treadmilling.",
   "synonyms": "Z ring"
  },
  {
@@ -2126,7 +2126,7 @@
   "kind": "MULTIPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/division_machinery/elongasome.html",
-  "definition": "The sidewall peptidoglycan-synthesis machine of rod-shaped bacteria, also called the Rod complex. A SEDS-family glycosyltransferase (RodA) works with a class B penicillin-binding protein (PBP2) to polymerise and crosslink new wall material into the cylinder, while MreC, MreD and RodZ couple the complex to MreB filaments, which distribute it around the circumference. It is the elongation counterpart of the divisome.",
+  "definition": "The membrane-associated Rod complex that synthesizes lateral peptidoglycan during rod-shaped growth in model bacteria such as Escherichia coli and Bacillus subtilis. Its SEDS-family RodA polymerase works with an elongation-specific class B penicillin-binding transpeptidase, PBP2 in E. coli. Associated MreB filaments orient synthesis, while wall synthesis and filament motion are coupled; this is not a universal mechanism of rod shape in all bacteria.",
   "synonyms": "Rod complex RodA-PBP2 complex"
  },
  {

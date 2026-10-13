@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/divisome_complex.yaml
+  slug: divisome_complex
+session:
+  id: 2026-10-12T062000Z-codex-eaa2fc
+  timestamp: '2026-10-12T06:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - components
+  - curation_history
+  - definition
+  - discussions
+  - evidence
+  - physical_properties
+  - taxonomic_distribution
+  summary: Resolve saved divisome_complex evidence and scope findings
+  details: Addresses reviews/structured/20261012T061610Z-divisome-complex-evidence-review/review.yaml
+    and stable findings divisome-bacterial-archaeal-scope, divisome-active-synthesis-versus-treadmilling,
+    divisome-dimension-provenance. Used guarded writer, preserved previous inline and repository
+    history, canonical identities, protein example identities, pathway links and PROPOSED
+    status. Source-reading limitations and unresolved measurement discrepancy remain explicit.
+    Regenerate embeddings/rendered products, run fresh full QC and save successor dispositions
+    before any publication.

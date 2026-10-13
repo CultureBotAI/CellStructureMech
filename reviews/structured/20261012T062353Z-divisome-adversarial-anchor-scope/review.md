@@ -1,0 +1,362 @@
+# Adversarial review: keep SepF outside the E. coli-specific anchor graph
+
+- Review: 20261012T062353Z-divisome-adversarial-anchor-scope
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-12T06:22:22Z
+- Finished UTC: 2026-10-12T06:23:53Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Focused same-agent adversarial review of the candidate divisome correction found a residual scope error under the existing motion/scope finding. The newly E. coli-specific graph still lists the cross-lineage SepF anchor. Observation precedes the follow-up fix.
+
+## Scope And Provenance
+
+Focused candidate-change review of graph species scope, not a second whole-corpus or whole-record completion.
+
+Selection: data/structures/division_machinery/divisome_complex.yaml
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 937ba6254eb987adcbd92e82b21b2ce8651dc5e3.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:1990586 | data/structures/division_machinery/divisome_complex.yaml | maintained | divisome complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| divisome_complex-schema | passed | True | GO:1990586 | Candidate schema and strict checks exited0 at06:21UTC; they do not prove species-specific anchor membership. |
+| divisome_complex-strict | passed | True | GO:1990586 | Candidate schema and strict checks exited0 at06:21UTC; they do not prove species-specific anchor membership. |
+| Candidate full QC | failed | True | GO:1990586 | Lint passed; documentation gate stopped on stale README corpus statistics. Regenerate through the native docs-stats command before final full QC. |
+
+## Scientific And Domain Assessments
+
+### E. coli-specific graph versus cross-lineage component group
+
+graph: concern. Targets: GO:1990586.
+
+The candidate graph title and description now restrict the two-track mechanism to E. coli, but its first edge still says FtsA, ZipA or SepF-family anchors tether FtsZ. The component group legitimately spans lineages; its unqualified graph reuse leaks SepF into the E. coli inventory. Label the graph tether subset as E. coli FtsA/ZipA and keep SepF only in the cross-lineage component context.
+
+## Findings
+
+### F1: Exclude cross-lineage SepF from the E. coli-specific anchor edge
+
+major / open / confirmed; issue key: divisome-active-synthesis-versus-treadmilling.
+
+The candidate graph title and description now restrict the two-track mechanism to E. coli, but its first edge still says FtsA, ZipA or SepF-family anchors tether FtsZ. The component group legitimately spans lineages; its unqualified graph reuse leaks SepF into the E. coli inventory. Label the graph tether subset as E. coli FtsA/ZipA and keep SepF only in the cross-lineage component context.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Keep the component group cross-lineage but explicitly restrict the E. coli graph tether to FtsA/ZipA; state that SepF is not asserted as an E. coli anchor.
+
+- Node and edge agree with the E. coli graph scope.
+- Guarded append-only follow-up, rendered consistency, refreshed capture and final full QC pass.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/division_machinery/divisome_complex.yaml; Candidate full YAML and complete maintained diff; graph title/description and first edge compared | supports | Graph is now explicitly E. coli-specific, but the tether node/edge still names the generic FtsA,ZipA,SepF group. Source notes warn against a universal three-anchor set but the edge still makes SepF part of the E. coli-scoped mechanism. |
+| mcquillen | DOI:10.1146/annurev-biophys-121219-081703; Entire review body63919 characters; radial-thickness and two-track sections reread | supports | Secondary review explicitly distinguishes a fast FtsZ-dependent inactive FtsW population from a slow synthesis-dependent active population in E. coli. It gives method-dependent ring radial-thickness estimates and summarizes C. crescentus filament dimensions. Its approximately13nm membrane-spacing statement differs from the inspected primary16nm peak-to-peak experiment. |
+| pende | DOI:10.1038/s41467-021-23099-8; Verified PMID34088904; entire Introduction and Discussion, first Results localization section | supports | M. smithii has an archaeal FtsZ/SepF division system and pseudomurein wall chemically distinct from bacterial peptidoglycan. Shared FtsZ does not establish occurrence of the bacterial FtsW/FtsI PG machine. Removing an occurrence assertion is not asserting no archaeal divisomes. |
+| original | reviews/structured/20261012T061610Z-divisome-complex-evidence-review/review.yaml; F2 divisome-active-synthesis-versus-treadmilling | context_only | Original finding requires an organism-scoped two-track graph. This is an unresolved acceptance condition discovered while reviewing its candidate correction. |
+
+## Limits And Additional Notes
+
+- Same-agent adversarial review, not an independent reviewer or a GitHub review submission. This focused finding does not create a new whole-record completion.
+- Candidate QC failed on stale generated README corpus statistics before reaching later gates. Direct schema/strict checks passed. Network-unavailable quote checks are not counted as verified quotations.
+- GitHub issue/PR publication is awaiting explicit approval after the publication approval check rejected the issue-creation request. The existing seven issue drafts include this finding under the original F2 stable key.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T062353Z-divisome-adversarial-anchor-scope
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Adversarial review: keep SepF outside the E. coli-specific anchor graph'
+started_at: '2026-10-12T06:22:22Z'
+finished_at: '2026-10-12T06:23:53Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding agent; not independent human review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Focused same-agent adversarial review of the candidate divisome correction
+  found a residual scope error under the existing motion/scope finding. The newly
+  E. coli-specific graph still lists the cross-lineage SepF anchor. Observation precedes
+  the follow-up fix.
+source:
+  git_revision: 937ba6254eb987adcbd92e82b21b2ce8651dc5e3
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/pathwaymech_targets.json
+    sha256: 625e474ce45903a482587deb9b26237088d1298d88a017920a69370c89db5dd0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/embeddings/structure_text_embeddings.json
+    sha256: 054f3856e4753be858b2a7fb1b85c7004f3810fdebd2031cbba72a70fcf23ea7
+    role: context
+  - path: data/structures/cytoskeleton/mreb_filament.yaml
+    sha256: b27d315ff07c11f2aa9eb1f1c1f4c65203ba62509fe6999c7804397e76ab9711
+    role: context
+  - path: data/structures/division_machinery/divisome_complex.yaml
+    sha256: f2da12926ca08fa5f9134565859b596ed5d9aaab37d6a04add86bb352bbe4b62
+    role: target
+  - path: data/structures/envelope/division_septum.yaml
+    sha256: 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/divisome_complex/2026-09-03T000833Z-claude-code-8eb575.yaml
+    sha256: fdda4d601b0d6148e79fe62517b17e0d0bb9d79aa5df5cec5b877fda4b9067cb
+    role: context
+  - path: history/records/divisome_complex/2026-09-04T013928Z-codex-034eb4.yaml
+    sha256: 33ead9a0b7e38b1d839a151c11aafd454babe50d84dd12339933fa84400ff2d6
+    role: context
+  - path: history/records/divisome_complex/2026-10-05T174720Z-codex-288e61.yaml
+    sha256: 5ce8117f17c47fad8092d781a6fd5e265d90815bc51d98f000140811ec3422d1
+    role: context
+  - path: history/records/divisome_complex/2026-10-12T062000Z-codex-eaa2fc.yaml
+    sha256: 483811ab47415530c9445ea32540af0efb9a86204a9239e3c34866e471333a49
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: pages/structures/division_machinery/divisome_complex.html
+    sha256: 0ec49d084da4dbdaf0ef8829e8199818206c1edfb362a0b692fb22582ae638b3
+    role: context
+  - path: reviews/structured/20261012T061610Z-divisome-complex-evidence-review/review.yaml
+    sha256: b2405935de3b0d559bb5e7a8d6485faf349d91006304b09d90ef8dcdaf7086e8
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:1990586
+  path: data/structures/division_machinery/divisome_complex.yaml
+  label: divisome complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/divisome_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Focused candidate-change review of graph species scope, not a second
+    whole-corpus or whole-record completion.
+  selection: data/structures/division_machinery/divisome_complex.yaml
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990586
+checks:
+- check_id: candidate-divisome_complex-schema
+  name: divisome_complex-schema
+  status: passed
+  required: true
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/division_machinery/divisome_complex.yaml
+  exit_code: 0
+  summary: Candidate schema and strict checks exited0 at06:21UTC; they do not prove
+    species-specific anchor membership.
+  target_ids:
+  - GO:1990586
+- check_id: candidate-divisome_complex-strict
+  name: divisome_complex-strict
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py data/structures/division_machinery/divisome_complex.yaml
+  exit_code: 0
+  summary: Candidate schema and strict checks exited0 at06:21UTC; they do not prove
+    species-specific anchor membership.
+  target_ids:
+  - GO:1990586
+- check_id: candidate-qc
+  name: Candidate full QC
+  status: failed
+  required: true
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 1
+  summary: Lint passed; documentation gate stopped on stale README corpus statistics.
+    Regenerate through the native docs-stats command before final full QC.
+  target_ids:
+  - GO:1990586
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/division_machinery/divisome_complex.yaml
+  locator: Candidate full YAML and complete maintained diff; graph title/description
+    and first edge compared
+  summary: Graph is now explicitly E. coli-specific, but the tether node/edge still
+    names the generic FtsA,ZipA,SepF group. Source notes warn against a universal
+    three-anchor set but the edge still makes SepF part of the E. coli-scoped mechanism.
+  support: supports
+  accessed_at: '2026-10-12T06:23:53Z'
+  snapshot_sha256: f2da12926ca08fa5f9134565859b596ed5d9aaab37d6a04add86bb352bbe4b62
+- evidence_id: mcquillen
+  kind: primary_source
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+  locator: Entire review body63919 characters; radial-thickness and two-track sections
+    reread
+  summary: Secondary review explicitly distinguishes a fast FtsZ-dependent inactive
+    FtsW population from a slow synthesis-dependent active population in E. coli.
+    It gives method-dependent ring radial-thickness estimates and summarizes C. crescentus
+    filament dimensions. Its approximately13nm membrane-spacing statement differs
+    from the inspected primary16nm peak-to-peak experiment.
+  support: supports
+  accessed_at: '2026-10-12T06:05:55Z'
+  snapshot_sha256: 7505fc0aee367d900e0c370e3fac89266b3cf6467aad3e721df3c7507834b373
+- evidence_id: pende
+  kind: primary_source
+  reference: DOI:10.1038/s41467-021-23099-8
+  locator: Verified PMID34088904; entire Introduction and Discussion, first Results
+    localization section
+  summary: M. smithii has an archaeal FtsZ/SepF division system and pseudomurein wall
+    chemically distinct from bacterial peptidoglycan. Shared FtsZ does not establish
+    occurrence of the bacterial FtsW/FtsI PG machine. Removing an occurrence assertion
+    is not asserting no archaeal divisomes.
+  support: supports
+  accessed_at: '2026-10-12T06:09:48Z'
+  snapshot_sha256: 1a4c3f61e079a23268586ca7325bca848974cfd8e932d6a256953cbb9b91313f
+- evidence_id: original
+  kind: prior_review
+  reference: reviews/structured/20261012T061610Z-divisome-complex-evidence-review/review.yaml
+  locator: F2 divisome-active-synthesis-versus-treadmilling
+  accessed_at: '2026-10-12T06:23:53Z'
+  support: context_only
+  snapshot_sha256: b2405935de3b0d559bb5e7a8d6485faf349d91006304b09d90ef8dcdaf7086e8
+  summary: Original finding requires an organism-scoped two-track graph. This is an
+    unresolved acceptance condition discovered while reviewing its candidate correction.
+assessments:
+- assessment_id: anchor-scope
+  area: graph
+  topic: E. coli-specific graph versus cross-lineage component group
+  outcome: concern
+  summary: The candidate graph title and description now restrict the two-track mechanism
+    to E. coli, but its first edge still says FtsA, ZipA or SepF-family anchors tether
+    FtsZ. The component group legitimately spans lineages; its unqualified graph reuse
+    leaks SepF into the E. coli inventory. Label the graph tether subset as E. coli
+    FtsA/ZipA and keep SepF only in the cross-lineage component context.
+  target_ids:
+  - GO:1990586
+  evidence_ids:
+  - native
+  - mcquillen
+  - pende
+  - original
+findings:
+- finding_id: F1
+  issue_key: divisome-active-synthesis-versus-treadmilling
+  category: graph
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Exclude cross-lineage SepF from the E. coli-specific anchor edge
+  description: The candidate graph title and description now restrict the two-track
+    mechanism to E. coli, but its first edge still says FtsA, ZipA or SepF-family
+    anchors tether FtsZ. The component group legitimately spans lineages; its unqualified
+    graph reuse leaks SepF into the E. coli inventory. Label the graph tether subset
+    as E. coli FtsA/ZipA and keep SepF only in the cross-lineage component context.
+  target_ids:
+  - GO:1990586
+  field_paths:
+  - causal_graphs[treadmilling_guides_septum].nodes[tether]
+  - causal_graphs[treadmilling_guides_septum].edges[0]
+  evidence_ids:
+  - native
+  - mcquillen
+  - pende
+  - original
+  rule_id: review-checklist:claim-scope-evidence-and-relations
+  native_severity: P2
+  normalization_reason: Major scientific evidence or relation error affecting machine-readable
+    interpretation; exact record identity is retained.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/divisome_complex.yaml
+    role: maintained scientific record
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261012T061610Z-divisome-complex-evidence-review
+    finding_id: F2
+actions:
+- action_id: A1
+  description: Keep the component group cross-lineage but explicitly restrict the
+    E. coli graph tether to FtsA/ZipA; state that SepF is not asserted as an E. coli
+    anchor.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990586
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/divisome_complex.yaml
+    role: maintained scientific record
+  generator: just render
+  acceptance_checks:
+  - Node and edge agree with the E. coli graph scope.
+  - Guarded append-only follow-up, rendered consistency, refreshed capture and final
+    full QC pass.
+limitations:
+- Same-agent adversarial review, not an independent reviewer or a GitHub review submission.
+  This focused finding does not create a new whole-record completion.
+- Candidate QC failed on stale generated README corpus statistics before reaching
+  later gates. Direct schema/strict checks passed. Network-unavailable quote checks
+  are not counted as verified quotations.
+- GitHub issue/PR publication is awaiting explicit approval after the publication
+  approval check rejected the issue-creation request. The existing seven issue drafts
+  include this finding under the original F2 stable key.
+tags:
+- scientific-review
+- division-machinery
+- evidence-scope
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261012T061610Z-divisome-complex-evidence-review
+  relationship: Focused adversarial continuation of F2 against its candidate local
+    fix.
+```

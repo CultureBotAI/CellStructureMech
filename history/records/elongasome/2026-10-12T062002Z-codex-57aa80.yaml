@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/elongasome.yaml
+  slug: elongasome
+session:
+  id: 2026-10-12T062002Z-codex-57aa80
+  timestamp: '2026-10-12T06:20:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - associated_traits
+  - causal_graphs
+  - components
+  - curation_history
+  - definition
+  - definition_source
+  - discussions
+  - evidence
+  - part_of
+  - synonyms
+  - taxonomic_distribution
+  summary: Resolve saved elongasome evidence and scope findings
+  details: Addresses reviews/structured/20261012T061610Z-elongasome-evidence-review/review.yaml
+    and stable findings elongasome-definition-source-residual, elongasome-wall-parthood, elongasome-motion-and-shape-scope,
+    elongasome-archaeal-negative-evidence. Used guarded writer, preserved previous inline
+    and repository history, canonical identities, protein example identities, pathway links
+    and PROPOSED status. Source-reading limitations and unresolved measurement discrepancy
+    remain explicit. Regenerate embeddings/rendered products, run fresh full QC and save successor
+    dispositions before any publication.

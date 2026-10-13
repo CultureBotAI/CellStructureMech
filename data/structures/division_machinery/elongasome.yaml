@@ -1,19 +1,19 @@
 identifier: cellstructuremech:elongasome
 label: elongasome
-definition: The sidewall peptidoglycan-synthesis machine of rod-shaped bacteria, also
-  called the Rod complex. A SEDS-family glycosyltransferase (RodA) works with a class
-  B penicillin-binding protein (PBP2) to polymerise and crosslink new wall material
-  into the cylinder, while MreC, MreD and RodZ couple the complex to MreB filaments,
-  which distribute it around the circumference. It is the elongation counterpart of
-  the divisome.
-definition_source: DOI:10.1038/nrmicro2677
+definition: The membrane-associated Rod complex that synthesizes lateral peptidoglycan
+  during rod-shaped growth in model bacteria such as Escherichia coli and Bacillus
+  subtilis. Its SEDS-family RodA polymerase works with an elongation-specific class
+  B penicillin-binding transpeptidase, PBP2 in E. coli. Associated MreB filaments
+  orient synthesis, while wall synthesis and filament motion are coupled; this is
+  not a universal mechanism of rod shape in all bacteria.
+definition_source: DOI:10.1038/nmicrobiol.2016.172
 synonyms:
 - synonym_text: Rod complex
   synonym_type: EXACT_SYNONYM
-  source: DOI:10.1038/nrmicro2677
+  source: DOI:10.1038/nature19331
 - synonym_text: RodA-PBP2 complex
   synonym_type: NARROW_SYNONYM
-  source: DOI:10.1016/j.cell.2018.02.050
+  source: DOI:10.1038/nmicrobiol.2016.172
 structure_category: DIVISION_MACHINERY
 structure_kind: MULTIPROTEIN_COMPLEX
 parent_structures:
@@ -32,10 +32,11 @@ components:
     snippet: Here, we have presented evidence that the SEDS family protein RodA is
       the principal PGT in the Rod complex and is likely to be responsible for its
       dynamic movement.
-    notes: Verbatim from the open-access full text (PMC5161649). This is the finding
-      that establishes RodA as the glycan polymerase; it postdates Typas et al. 2011
-      by five years, and neither that review nor Shi et al. 2018 mentions RodA or
-      SEDS at all.
+    notes: Verbatim from PMC5161649. Meeske et al.2016 establish RodA polymerase activity
+      in B. subtilis. Typas et al.2011 do mention RodA in Table1 and Figure1, with
+      a then-proposed flippase function; mentioning the protein is different from
+      establishing its later polymerase activity. Earlier history asserting the name
+      was absent is retained as historical provenance, not current evidence.
   - reference: DOI:10.1038/nature19331
     snippet: RodA is a member of the SEDS family of proteins that play essential but
       ill-defined roles in cell wall biogenesis during growth, division and sporulation.
@@ -147,11 +148,16 @@ components:
   gene_symbols:
   - rodZ
   essentiality: CONDITIONAL
-  role: Bridges the assembled complex to MreB filaments; acts on the machine rather
-    than forming it.
+  role: Couples MreB to wall-synthesis proteins in E. coli. RodZ loss impairs MreB
+    rotation in ordinary backgrounds, but suppressors can restore rod shape without
+    restoring rotation.
   evidence:
   - reference: DOI:10.1016/j.cell.2018.02.050
     notes: Shi et al. 2018 describe RodZ coupling MreB to the synthetic complex.
+  - reference: DOI:10.1073/pnas.1509610112
+    notes: 'Complete primary abstract: RodZ links MreB rotation to wall synthesis;
+      suppressors restore shape without rotation in standard laboratory conditions.
+      Full Methods were not available in this review.'
   protein_examples:
   - uniprot_id: UniProtKB:P27434
     protein_label: Cytoskeleton protein RodZ
@@ -174,14 +180,10 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   presence: VARIABLE
-  note: Present with mreB in rod-shaped lineages; cocci that lost the rod generally
-    lost both.
-  reference: DOI:10.1038/nrmicro2677
-- taxon_id: NCBITaxon:2157
-  taxon_label: Archaea
-  presence: ABSENT
-  note: Archaea build no peptidoglycan sacculus.
-  reference: DOI:10.1038/nrmicro2677
+  note: Characterized in E. coli and B. subtilis and distributed among many MreB-dependent
+    rod-shaped bacteria; not inferred from rod morphology alone. Some rod-shaped lineages
+    use MreB-independent growth systems.
+  reference: DOI:10.1016/j.cell.2018.02.050
 canonical_examples:
 - taxon_id: NCBITaxon:83333
   taxon_label: Escherichia coli K-12
@@ -202,8 +204,6 @@ functions:
     notes: Typas et al. 2011 tie elongation-complex activity to cell shape.
   - reference: DOI:10.1016/j.cell.2018.02.050
     notes: Shi et al. 2018 link the complex's circumferential motion to rod maintenance.
-part_of:
-- GO:0009274
 evidence:
 - reference: DOI:10.1038/nrmicro2677
   notes: Typas A, Banzhaf M, Gross CA, Vollmer W 2011, 'From the regulation of peptidoglycan
@@ -211,6 +211,16 @@ evidence:
 - reference: DOI:10.1016/j.cell.2018.02.050
   notes: 'Shi H, Bratton BP, Gitai Z, Huang KC 2018, ''How to Build a Bacterial Cell:
     MreB as the Foreman of E. coli Construction'', Cell.'
+- reference: DOI:10.1038/nmicrobiol.2016.172
+  notes: Primary E. coli radiolabeling, perturbation and imaging experiments distinguish
+    RodA/PBP2 synthesis from semi-autonomous aPBP activity and the wall product.
+- reference: DOI:10.1038/nature19331
+  notes: Primary B. subtilis work establishes RodA as the Rod-complex glycan polymerase.
+- reference: DOI:10.1038/s41467-021-23099-8
+  notes: 'Scope comparison only: archaeal pseudomurein is distinct from bacterial
+    peptidoglycan. This paper does not establish a domain-wide negative assay for
+    the elongasome; the unsupported Archaea ABSENT row is removed without asserting
+    presence.'
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-02T04:49:54Z'
@@ -275,15 +285,36 @@ curation_history:
   changes: Added an evidence-backed, organism-scoped PathwayMech link with a full
     source commit and explicit relation limits.
   llm_assisted: true
+- timestamp: '2026-10-12T06:20:01Z'
+  curator: codex
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed 20261012T061610Z-elongasome-evidence-review: elongasome-definition-source-residual;
+    elongasome-wall-parthood; elongasome-motion-and-shape-scope; elongasome-archaeal-negative-evidence.
+    Corrected evidence scope and mechanism claims using inspected sources. Original
+    history/rationale and posed dates remain intact; source discrepancies are explicitly
+    retained.'
+  llm_assisted: true
+- timestamp: '2026-10-12T06:32:01Z'
+  curator: codex
+  action: CORRECT_RESOLVED_DISCUSSION_PROMPT
+  changes: 'Complete rendered acceptance for 20261012T061610Z-elongasome-evidence-review
+    F1: replace the unchanged false premise in the visible resolved-discussion prompt.
+    The template does not display resolution_note. Preserve original rationale, posed
+    date and all previous history; the pre-edit prompt remains in Git and the immutable
+    observation.'
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
-  relation: REQUIRED_FOR
+  relation: MODULATES
   evidence:
-  - reference: DOI:10.1038/nrmicro2677
-    notes: Typas et al. 2011 tie elongation-complex activity to the maintenance of
-      rod shape; losing it loses the rod, so the machine is required for the phenotype
-      rather than sufficient for it.
+  - reference: DOI:10.1038/nmicrobiol.2016.172
+    notes: The Rod system supports rod-shaped growth in E. coli; this is not universal
+      necessity for every rod-shaped bacterium.
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: The review describes MreB-independent rod-shaped lineages and shape-restoring
+      suppressors. MODULATES denotes the bounded shape-maintenance role, not sufficiency
+      or universal necessity.
 discussions:
 - discussion_id: guided_by_mreb
   prompt: This machine is guided by the MreB filament, and the schema has no relation
@@ -298,13 +329,12 @@ discussions:
   posed_by: claude
   posed_date: '2026-09-02'
 - discussion_id: definition_source_predates_roda
-  prompt: definition_source cites Typas et al. 2011 for a definition that names RodA
-    as a SEDS-family glycosyltransferase, but RodA was shown to be the polymerase
-    in 2016 and the string RodA does not occur in that review. Should the definition
-    be reworded to what Typas supports, or the definition_source changed to Meeske
-    et al. 2016 (DOI:10.1038/nature19331)?
+  prompt: Which source establishes the RodA polymerase assignment used in the definition?
+    The definition and synonyms now cite inspected 2016 primary evidence. Typas et
+    al. 2011 mention RodA, but predate the polymerase discovery; absence of that later
+    finding is not absence of the protein name.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - definition
   - definition_source
@@ -315,15 +345,28 @@ discussions:
     edit.
   posed_by: claude
   posed_date: '2026-09-02'
+  resolved_date: '2026-10-12'
+  evidence:
+  - reference: DOI:10.1038/nmicrobiol.2016.172
+    notes: Primary E. coli RodA/PBP2 synthesis evidence.
+  - reference: DOI:10.1038/nature19331
+    notes: Primary RodA polymerase evidence in B. subtilis.
+  - reference: DOI:10.1038/nrmicro2677
+    notes: Table1 includes RodA with a proposed flippase assignment.
+  resolution_note: Rebased the bounded definition on Cho et al.2016 and the Rod-complex
+    synonym on Meeske et al.2016. Typas2011 predates the polymerase discovery but
+    does mention RodA; the historical prompt and history overstated absence of the
+    name. Current component evidence explicitly corrects that distinction. Rationale
+    and posed_date are preserved.
 causal_graphs:
 - graph_id: elongasome_sidewall_elongation
-  title: Peptidoglycan synthesis moves the complex, and the sidewall extends without
-    widening
-  description: The cited sources put the motor in the synthase, not the filament.
-    Inhibiting the elongation-specific transpeptidase stops filament movement, so
-    peptidoglycan synthesis drives the motion rather than being carried by it. MreB
-    and RodZ set where and in which direction that synthesis happens; losing either
-    gives a round cell.
+  title: Rod-system synthesis, MreB rotation and model-specific shape maintenance
+  description: E. coli RodA/PBP2 synthesize lateral wall, and inhibition experiments
+    couple synthesis to MreB rotation. MreB rotation and synthase movement are separate
+    readouts, not interchangeable with rod shape. RodZ promotes normal MreB rotation,
+    but suppressor backgrounds can retain rod shape without rotation. B. subtilis
+    uses related machinery, including its own elongation-specific transpeptidases;
+    this graph is not a universal inventory or necessity claim.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
@@ -349,116 +392,101 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0009252
   - node_id: complex_motion
-    label: circumferential movement of the synthesis complex
+    label: circumferential MreB filament rotation
     node_type: BIOLOGICAL_PROCESS
+    description: The filament-motion readout measured in the cited perturbation studies;
+      not all movement of every synthase molecule.
   - node_id: sidewall
     label: cylindrical sidewall extension
     node_type: BIOLOGICAL_PROCESS
   - node_id: rod_shape
     label: rod-shaped cell
     node_type: STATE
+  - node_id: synthase_motion
+    label: directional RodA-PBP2 movement in E. coli
+    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: roda
-    predicate: polymerises
+    predicate: polymerizes glycans during
     object: pg_synthesis
-    description: RodA is the glycan-strand polymerase of the Rod complex.
+    description: RodA polymerase activity supplies new glycan strands in the Rod system.
     evidence:
     - reference: DOI:10.1038/nature19331
-      snippet: Here, we have presented evidence that the SEDS family protein RodA
-        is the principal PGT in the Rod complex and is likely to be responsible for
-        its dynamic movement.
-      notes: Verbatim from PMC5161649.
+      notes: B. subtilis biochemical and genetic experiments establish RodA polymerase
+        activity; Cho2016 supplies complementary E. coli evidence.
   - subject: pbp2
-    predicate: is required for
-    object: complex_motion
-    description: Depleting the elongation-specific transpeptidase abolishes movement,
-      which is what identifies synthesis as the motor.
+    predicate: crosslinks peptides during
+    object: pg_synthesis
+    description: E. coli PBP2 provides elongation-specific transpeptidase activity;
+      B. subtilis uses related but differently named class B PBPs.
     evidence:
-    - reference: DOI:10.1038/nrmicro2677
-      snippet: Interestingly, inhibition or depletion of the specific elongation class
-        B TPases (PBP2 in E. coli , and PBP2A and PBPH in B. subtilis) eliminates
-        filament movement in both organisms, suggesting that peptidoglycan synthesis
-        itself is the motor that drives filament movement
-      notes: Verbatim from the open-access full text (PMC5433867). The authors hedge
-        with 'suggesting', and the edge is no stronger than that.
+    - reference: DOI:10.1038/nmicrobiol.2016.172
+      notes: Mecillinam perturbation separates glycan polymerization from crosslinking
+        in the E. coli Rod system.
   - subject: pg_synthesis
-    predicate: drives
+    predicate: drives coupled
     object: complex_motion
-    description: Synthesis is the motor; the filament is steered by it rather than
-      pulling it.
+    description: In the studied E. coli conditions, inhibiting Rod-system synthesis
+      arrests MreB rotation, supporting synthesis-coupled movement rather than an
+      MreB polymerization motor.
     evidence:
-    - reference: DOI:10.1038/nrmicro2677
-      snippet: Interestingly, inhibition or depletion of the specific elongation class
-        B TPases (PBP2 in E. coli , and PBP2A and PBPH in B. subtilis) eliminates
-        filament movement in both organisms, suggesting that peptidoglycan synthesis
-        itself is the motor that drives filament movement
-      notes: 'Verbatim from PMC5433867. This is the sentence that supports the predicate:
-        stopping synthesis stops the movement. The velocity correlation below shows
-        the two are coupled, which on its own would not establish which drives which.'
-    - reference: DOI:10.1038/nrmicro2677
-      snippet: Consistent with this idea, both MreB and the peptidoglycan synthesis
-        complexes move with comparable velocities in roughly similar circumferential
-        directions 47 – 48 , mirroring the position of glycan chains in the sacculus
-        22 .
-      notes: Verbatim. Comparable velocities in a shared direction show the filament
-        and the synthesis complex are coupled; they do not by themselves say which
-        moves the other.
+    - reference: DOI:10.1038/nmicrobiol.2016.172
+      notes: RodA(D262N) inhibits Rod-system polymerization and MreB rotation; aPBP
+        inhibition does not eliminate that rotation before lysis.
   - subject: rodz
     predicate: couples
     object: mreb
-    description: RodZ bridges the filament to the wall-synthesis enzymes across the
-      membrane.
+    description: RodZ connects MreB to wall-synthesis proteins in the E. coli model.
     evidence:
     - reference: DOI:10.1016/j.cell.2018.02.050
-      snippet: In E. coli, RodZ’s cytoplasmic domain binds MreB ( Van den Ent et al.,
-        2010 ) while its periplasmic domain binds several cell-wall synthesis enzymes
-        ( Morgenstein et al., 2015 ; Shiomi et al., 2013 ).
-      notes: Verbatim from PMC5846203.
+      notes: Review discusses cytoplasmic MreB binding and periplasmic interactions
+        with synthetic proteins.
   - subject: rodz
-    predicate: is required for
+    predicate: promotes
     object: complex_motion
-    description: Without RodZ the filament stops rotating and the cell rounds.
+    description: RodZ supports normal MreB rotation. Shape-restoring suppressors can
+      bypass RodZ loss without restoring rotation under standard laboratory conditions.
     evidence:
-    - reference: DOI:10.1016/j.cell.2018.02.050
-      snippet: Deletion of rodZ leads to round cells, in which MreB no longer rotates
-        around the cell circumference ( Morgenstein et al., 2015 ) but instead moves
-        diffusively.
-      notes: Verbatim from PMC5846203.
-  - subject: complex_motion
+    - reference: DOI:10.1073/pnas.1509610112
+      notes: Complete primary abstract distinguishes normal rotation from suppressor-restored
+        rod shape; not evidence that all synthase movement is absent.
+  - subject: pg_synthesis
+    predicate: is coupled to
+    object: synthase_motion
+    description: A directionally moving fraction of E. coli RodA/PBP2 accompanies
+      the active Rod system; not every molecule is processive.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2016.172
+      notes: Imaging resolves both nondirectional diffusion and MreB-like circumferential
+        motion for RodA/PBP2; directional fractions respond to Rod-system perturbation.
+  - subject: pg_synthesis
     predicate: produces
     object: sidewall
-    description: Insertion along a circumferential track lengthens the cylinder rather
-      than widening it.
+    description: Polymerization and crosslinking insert lateral peptidoglycan; filament
+      rotation alone is not asserted to produce the wall.
     evidence:
-    - reference: DOI:10.1038/nrmicro2677
-      snippet: Consistent with this idea, both MreB and the peptidoglycan synthesis
-        complexes move with comparable velocities in roughly similar circumferential
-        directions 47 – 48 , mirroring the position of glycan chains in the sacculus
-        22 .
-      notes: The circumferential direction of travel is what makes the product elongation
-        rather than widening.
+    - reference: DOI:10.1038/nmicrobiol.2016.172
+      notes: Primary radiolabeling and synthesis perturbations support the wall-producing
+        activity of the Rod system.
   - subject: mreb
-    predicate: is required for
+    predicate: supports
     object: rod_shape
-    description: 'Losing the filament loses the rod: cells stop elongating and widen.'
+    description: MreB-dependent wall organization supports rod shape in the studied
+      model systems; this does not exclude MreB-independent rods or suppressor-dependent
+      phenotypes.
     evidence:
-    - reference: DOI:10.1038/nrmicro2677
-      snippet: When MreB is depleted, or filament formation is specifically inhibited
-        (for example, with A22 ( S -(3,4-dichlorobenzyl)isothiourea)), cells rapidly
-        stop elongating, increase their diameter and grow with spherical morphology,
-        indicating that MreB is required for rod-shaped growth 40 – 42 .
-      notes: Verbatim from PMC5433867.
+    - reference: DOI:10.1016/j.cell.2018.02.050
+      notes: Review describes morphology perturbations, geometric organization and
+        lineage-specific exceptions.
   - subject: sidewall
     predicate: maintains
     object: rod_shape
-    description: Sustained circumferential insertion is what keeps the cylinder a
-      cylinder.
+    description: Organized lateral wall growth contributes to maintaining width and
+      elongation in these rod-shaped model systems.
     evidence:
-    - reference: DOI:10.1016/j.cell.2018.02.050
-      snippet: MreB both senses and changes cell shape, thereby generating a self-organizing
-        feedback system for shape maintenance.
-      notes: Verbatim from PMC5846203; the same sentence grounds the MreB record's
-        MODULATES cell-shape link.
+    - reference: DOI:10.1038/nrmicro2677
+      notes: Review connects spatial control of peptidoglycan growth to bacterial
+        morphology; no universal constant-width law is inferred.
 related_records:
 - corpus: PathwayMech
   identifier: WikiPathways:WP5060
