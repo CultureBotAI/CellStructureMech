@@ -20,6 +20,12 @@ curation_history:
     primary Abramson et al. literature/PDB evidence, and a compact terminal-oxidase
     function graph.
   llm_assisted: true
+- timestamp: '2026-10-16T01:45:26Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2298: Use a neutral CyoA structural role and qualify historical quinol-binding
+    evidence.'
+  llm_assisted: true
 parent_structures:
 - GO:0098803
 components:
@@ -47,7 +53,8 @@ components:
   gene_symbols:
   - cyoA
   essentiality: UNKNOWN
-  role: Quinol-side subunit of the cytochrome o ubiquinol oxidase terminal oxidase.
+  role: Subunit II (CyoA) of the cytochrome o ubiquinol oxidase terminal oxidase;
+    this structural assignment does not by itself locate the quinol-binding site.
   evidence:
   - reference: InterPro:IPR006333
     notes: InterPro IPR006333 is the source-neutral family for cytochrome o ubiquinol
@@ -55,6 +62,13 @@ components:
   - reference: PDB:1FFT
     notes: The PDB:1FFT deposition maps polymer entity 2 of the E. coli ubiquinol
       oxidase structure to UniProtKB:P0ABJ1/CYOA_ECOLI.
+  - reference: DOI:10.1038/82824
+    notes: Abramson et al. 2000 abstract assigns the candidate quinone-binding polar
+      cluster to subunit I (CyoB).
+  - reference: DOI:10.1021/bi9809977
+    notes: Tsatsos et al. 1998 abstract reports a sixfold increase in apparent ubiquinol
+      Km for CyoA W136A, suggesting proximity to or involvement in quinol binding;
+      this is not an exclusive structural localization of the site to CyoA.
 - component_id: cyo_subunit_iii
   label: Cytochrome o ubiquinol oxidase, subunit III
   component_type: PROTEIN

@@ -34,6 +34,12 @@ curation_history:
   changes: '#1455/#1457: added the PDB:2QJP petB and petA gene-symbol aliases and
     the GO exact cytochrome bc(1) complex synonym.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:49:03Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2308: Retain the Rieske subunit label-only instead of using a domain
+    as a protein-family grounding.'
+  llm_assisted: true
 synonyms:
 - synonym_text: complex III
   synonym_type: EXACT_SYNONYM
@@ -84,7 +90,6 @@ components:
   label: Rieske iron-sulfur subunit
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding: InterPro:IPR006317
   gene_symbols:
   - fbcF
   - petA
@@ -96,12 +101,16 @@ components:
     notes: GO:0045275 defines the Rieske iron-sulfur protein as one of the three catalytic
       core subunits.
   - reference: InterPro:IPR006317
-    notes: InterPro IPR006317 names the ubiquinol-cytochrome c reductase iron-sulphur
-      subunit family and separates it from the cyanobacterial and chloroplast b6f
-      Rieske protein.
+    notes: InterPro IPR006317 is the ubiquinol-cytochrome c reductase iron-sulphur
+      domain entry; it supports domain context, not an exact whole-protein family
+      grounding.
   - reference: PDB:2QJP
     notes: RCSB maps PDB:2QJP polymer entity 3 to Cereibacter sphaeroides ubiquinol-cytochrome
       c reductase iron-sulfur subunit, UniProtKB:Q02762.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: IPR006317 is a domain entry, not an integrated whole-protein family.
+    The broader Rieske family IPR014349 also spans other electron-transfer systems.
+    No exact whole-protein family was verified for this complex-III subunit.
 - component_id: cytochrome_c1
   label: cytochrome c1
   component_type: PROTEIN
@@ -189,7 +198,6 @@ causal_graphs:
   - node_id: rieske_iron_sulfur_subunit
     label: Rieske iron-sulfur subunit
     node_type: GENE_OR_PROTEIN
-    grounding: InterPro:IPR006317
     component_ref: rieske_iron_sulfur_subunit
   - node_id: cytochrome_c1
     label: cytochrome c1

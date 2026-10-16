@@ -61,7 +61,7 @@ evidence:
 - reference: PMID:8177173
   notes: Walsby 1994 comprehensive review.
 - reference: PMID:22147705
-  notes: Belenky et al. 2012 structural evidence for the GvpA shell.
+  notes: Bayro et al. 2012 structural evidence for the GvpA shell.
 causal_graphs:
 - graph_id: gvpa_gvpc_buoyancy
   title: GvpA and GvpC build gas-filled buoyancy bodies
@@ -303,6 +303,12 @@ curation_history:
   changes: Added an ASSEMBLY graph for accessory-Gvp interaction networks that recruit
     GvpA-family shell proteins, and anchored GvpA, GvpC, and GvpF/GvpL-family graph
     nodes with Pfam identifiers.
+  llm_assisted: true
+- timestamp: '2026-10-16T01:51:23Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2318: Correct the Bayro first-author attribution without changing rejected
+    shell or GvpC findings.'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0125

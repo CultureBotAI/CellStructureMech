@@ -32,6 +32,12 @@ curation_history:
     data, and resolved #488 by adding Caedibacter taeniospiralis as a directly observed
     natural producer.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:51:31Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2323: Correct the Wang 2021 article title while preserving the earlier
+    pH-trigger scope correction.'
+  llm_assisted: true
 parent_structures:
 - GO:0016234
 synonyms:
@@ -112,7 +118,7 @@ evidence:
     Production in Legume Symbiont Azorhizobium caulinodans', mBio.
 - reference: DOI:10.1038/s41467-021-24796-0
   notes: Wang et al. 2021, 'Pseudomonas aeruginosa PA14 produces R-bodies, extendable
-    sheaths formed from polymorphic proteins', Nature Communications.
+    protein polymers with roles in host colonization and virulence', Nature Communications.
 causal_graphs:
 - graph_id: reb_r_body_extension
   title: Reb proteins build extendable R-body ribbons

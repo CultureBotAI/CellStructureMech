@@ -33,6 +33,12 @@ curation_history:
   changes: Removed GO:0016234 parentage because the GO inclusion body term denotes
     aggregated proteins or other biopolymers, not elemental sulfur storage globules.
   llm_assisted: true
+- timestamp: '2026-10-16T01:55:44Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2324: Correct redundant Sgp roles and conditional mutant backgrounds,
+    repair the Prange title, and remove unsupported majority-absence wording.'
+  llm_assisted: true
 synonyms:
 - synonym_text: intracellular sulfur globule
   synonym_type: EXACT_SYNONYM
@@ -62,12 +68,15 @@ components:
   grounding_notes: SgpA and SgpB are treated as a sulfur-globule envelope protein
     pair in Allochromatium vinosum; no exact source-neutral family CURIE was chosen
     for these hydrophobic, partially redundant globule proteins.
-  role: Hydrophobic envelope proteins that coat sulfur globules and are jointly required
-    for normal globule formation.
+  role: 'Partially redundant envelope proteins in Allochromatium vinosum: either single
+    sgpA or sgpB disruption retained normal globules. The sgpBC double mutant failed
+    to form globules; the conditional formation phenotype concerns SgpB when SgpC
+    is also absent, not joint requirement for SgpA and SgpB.'
   evidence:
   - reference: DOI:10.1007/s00203-004-0683-3
-    notes: Prange et al. 2004 mutagenized Allochromatium vinosum sgpA, sgpB and sgpC
-      and showed that SgpA/SgpB support normal sulfur-globule formation.
+    notes: Prange et al. 2004 report normal globules after individual sgpA or sgpB
+      inactivation, smaller globules after sgpC inactivation, and no sulfur globules
+      in the sgpBC double mutant.
   - reference: DOI:10.1159/000351335
     notes: Maki 2013 reviews SgpA-family proteins as structural proteins associated
       with bacterial intracellular sulfur globules.
@@ -82,18 +91,21 @@ components:
   grounding_notes: SgpC is curated by its experimentally defined sulfur-globule envelope
     role in Allochromatium vinosum; exact homologous families outside this model system
     need additional review.
-  role: Small sulfur-globule envelope protein required for normal globule expansion
-    in Allochromatium vinosum.
+  role: Supports normal globule expansion in Allochromatium vinosum. Single sgpC disruption
+    produced smaller globules, whereas the sgpBC double mutant did not form globules;
+    conditional formation dependence is restricted to that mutant background.
   evidence:
   - reference: DOI:10.1007/s00203-004-0683-3
-    notes: Prange et al. 2004 found that sgpC disruption affected Allochromatium vinosum
-      sulfur-globule expansion.
+    notes: Prange et al. 2004 report normal globules after individual sgpA or sgpB
+      inactivation, smaller globules after sgpC inactivation, and no sulfur globules
+      in the sgpBC double mutant.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   presence: VARIABLE
   note: Intracellular sulfur globules occur in multiple sulfur-oxidizing bacterial
-    groups but are absent from most bacteria.
+    groups; the cited review establishes positive occurrences, not a quantitative
+    estimate of absence across all bacteria.
   reference: DOI:10.1159/000351335
 canonical_examples:
 - taxon_id: NCBITaxon:572477
@@ -115,9 +127,9 @@ evidence:
   notes: 'Maki 2013, Bacterial intracellular sulfur globules: structure and function,
     Journal of Molecular Microbiology and Biotechnology.'
 - reference: DOI:10.1007/s00203-004-0683-3
-  notes: Prange et al. 2004, Characterization of the sulfur globule proteins of Allochromatium
-    vinosum and mutational analysis of the sulfur globule protein genes, Archives
-    of Microbiology.
+  notes: 'Prange et al. 2004, The role of the sulfur globule proteins of Allochromatium
+    vinosum: mutagenesis of the sulfur globule protein genes and expression studies
+    by real-time RT-PCR, Archives of Microbiology.'
 causal_graphs:
 - graph_id: sgp_envelope_elemental_sulfur_storage
   title: Sgp envelope proteins package stored sulfur
@@ -126,7 +138,9 @@ causal_graphs:
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
   scope_notes: The graph links the Sgp envelope proteins to globule formation without
-    asserting a complete sulfur deposition or oxidation mechanism.
+    asserting a complete sulfur deposition or oxidation mechanism. Sgp roles and mutant-background
+    qualifications refer to Allochromatium vinosum; single sgpA or sgpB deletions
+    retain globules and single sgpC deletion reduces size, not formation.
   nodes:
   - node_id: elemental_sulfur_core
     label: elemental sulfur

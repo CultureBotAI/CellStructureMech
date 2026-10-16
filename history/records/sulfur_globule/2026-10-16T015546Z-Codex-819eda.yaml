@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/sulfur_globule.yaml
+  slug: sulfur_globule
+session:
+  id: 2026-10-16T015546Z-Codex-819eda
+  timestamp: '2026-10-16T01:55:46Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2324
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - taxonomic_distribution
+  - evidence
+  - causal_graphs
+  summary: Correct redundant Sgp roles and conditional mutant backgrounds, repair the Prange
+    title, and remove unsupported majority-absence wording.
+  details: 'Correct redundant Sgp roles and conditional mutant backgrounds, repair the Prange
+    title, and remove unsupported majority-absence wording. Inspected sources: DOI:10.1007/s00203-004-0683-3
+    primary abstract and bibliographic metadata; DOI:10.1159/000351335 distribution context
+    retained from prior scoped review. Other claims and prior partial-review limitations remain
+    outside this remediation scope.'

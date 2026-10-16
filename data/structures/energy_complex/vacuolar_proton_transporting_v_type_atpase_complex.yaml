@@ -45,6 +45,12 @@ curation_history:
     readable Kane 2006 support and tightening the V0 component role to the supported
     membrane-sector claim.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:49:13Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2311: Type the rotary activity correctly, assign it to the assembled
+    pump and distinguish rotor motion from whole V0 motion.'
+  llm_assisted: true
 parent_structures:
 - GO:0033176
 part_of:
@@ -78,8 +84,9 @@ components:
   component_role: CONSTITUENT
   grounding: GO:0000221
   essentiality: ESSENTIAL
-  role: Cytosolic catalytic sector of the vacuolar V-ATPase that hydrolyzes ATP and
-    couples catalysis to rotation of the membrane V0 sector.
+  role: Cytosolic catalytic sector that hydrolyzes ATP and couples catalysis to rotation
+    of the central rotor and membrane proteolipid ring, not rotation of the entire
+    V0 sector.
   evidence:
   - reference: GO:0000221
     notes: GO:0000221 defines the vacuolar V1 domain as a V-ATPase domain found in
@@ -87,6 +94,9 @@ components:
   - reference: DOI:10.1128/MMBR.70.1.177-191.2006
     notes: Kane 2006 reviews organelle acidification by the yeast vacuolar H+-ATPase
       and the soluble V1 sector.
+  - reference: DOI:10.1038/nature14365
+    notes: Zhao et al. 2015 abstract distinguishes the rotating central subcomplex
+      from peripheral stalks that prevent the entire membrane-bound region from turning.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -189,7 +199,7 @@ causal_graphs:
     grounding: GO:0005775
   - node_id: rotary_atpase_activity
     label: proton-transporting ATPase activity, rotational mechanism
-    node_type: BIOLOGICAL_PROCESS
+    node_type: MOLECULAR_FUNCTION
     grounding: GO:0046961
   - node_id: vacuolar_acidification
     label: vacuolar acidification
@@ -220,18 +230,19 @@ causal_graphs:
     evidence:
     - reference: GO:0000221
       notes: GO places the vacuolar V1 domain in a part-of relation to GO:0016471.
-  - subject: v1_domain
-    predicate: catalyses
+  - subject: vacuolar_v_atpase
+    predicate: enables
     object: rotary_atpase_activity
     predicate_id: RO:0002327
-    description: The V1 sector couples ATP hydrolysis to rotation of the V-ATPase
-      rotor.
+    description: The assembled V1/V0 complex enables ATP-driven proton translocation
+      across the membrane; V1 alone is not assigned the whole-pump activity.
     evidence:
-    - reference: GO:0000221
-      notes: GO:0000221 identifies V1 as the catalytic vacuolar V-ATPase domain.
-    - reference: DOI:10.1038/nrm2272
-      notes: Forgac 2007 reviews ATP hydrolysis in V1 as the source of rotary proton-pump
-        activity.
+    - reference: GO:0033176
+      notes: The complete V-type ATPase couples ATP hydrolysis in V1 to membrane proton
+        transport through V0.
+    - reference: GO:0046961
+      notes: This molecular function includes proton transfer across a membrane by
+        a rotational mechanism.
   - subject: v0_domain
     predicate: transports protons across
     object: vacuolar_membrane
@@ -266,6 +277,15 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbamcr.2008.08.003
       notes: Li and Kane 2009 review V-ATPase-dependent acidification of the yeast
         lysosome-like vacuole.
+  - subject: v1_domain
+    predicate: contributes ATP hydrolysis to
+    object: rotary_atpase_activity
+    description: V1 supplies ATP hydrolysis to the assembled pump's coupled activity,
+      without independently carrying out membrane proton transport.
+    evidence:
+    - reference: GO:0033176
+      notes: The V1 cytoplasmic sector catalyzes ATP hydrolysis while V0 carries out
+        proton transport.
 discussions:
 - discussion_id: resolve_vma_subunits_and_isoforms
   prompt: Resolve exact source-neutral family groundings and Saccharomyces protein

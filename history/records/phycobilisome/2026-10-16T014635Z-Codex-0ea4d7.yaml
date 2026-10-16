@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/phycobilisome.yaml
+  slug: phycobilisome
+session:
+  id: 2026-10-16T014635Z-Codex-0ea4d7
+  timestamp: '2026-10-16T01:46:35Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2304
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Correct PCC 6803 source attribution and qualify core-dependent architecture with
+    the coreless antenna exception.
+  details: 'Correct PCC 6803 source attribution and qualify core-dependent architecture with
+    the coreless antenna exception. Inspected sources: Zheng et al. 2021 DOI:10.1038/s41467-021-25813-y
+    abstract and Results; Dominguez-Martin et al. 2022 DOI:10.1038/s41586-022-05156-4 abstract;
+    Kondo et al. 2007 PMID:17468217 abstract. Other claims and prior partial-review limitations
+    remain outside this remediation scope.'

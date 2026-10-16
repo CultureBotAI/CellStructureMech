@@ -6636,9 +6636,9 @@
           "cosine_similarity": 0.77107358
         },
         {
-          "identifier": "GO:0030094",
-          "label": "plasma membrane-derived photosystem I",
-          "cosine_similarity": 0.74441505
+          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
+          "label": "chromatophore cytochrome bc1 complex",
+          "cosine_similarity": 0.75182094
         }
       ]
     },
@@ -6649,27 +6649,27 @@
         {
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.87016635
+          "cosine_similarity": 0.87662677
         },
         {
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
-          "cosine_similarity": 0.85369527
+          "cosine_similarity": 0.84450671
         },
         {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
-          "cosine_similarity": 0.78840366
+          "cosine_similarity": 0.80440838
         },
         {
           "identifier": "GO:0045277",
           "label": "respiratory chain complex IV",
-          "cosine_similarity": 0.78110907
+          "cosine_similarity": 0.78935191
         },
         {
-          "identifier": "cellstructuremech:rc_lh1_pufx_core_complex",
-          "label": "RC-LH1-PufX core complex",
-          "cosine_similarity": 0.75536221
+          "identifier": "GO:0030096",
+          "label": "plasma membrane-derived thylakoid photosystem II",
+          "cosine_similarity": 0.76844064
         }
       ]
     },
@@ -6690,7 +6690,7 @@
         {
           "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
           "label": "chromatophore cytochrome bc1 complex",
-          "cosine_similarity": 0.87016635
+          "cosine_similarity": 0.87662677
         },
         {
           "identifier": "GO:0009523",
@@ -6700,7 +6700,7 @@
         {
           "identifier": "GO:0009522",
           "label": "photosystem I",
-          "cosine_similarity": 0.82120004
+          "cosine_similarity": 0.82668832
         }
       ]
     },
@@ -6711,7 +6711,7 @@
         {
           "identifier": "GO:0009319",
           "label": "cytochrome o ubiquinol oxidase complex",
-          "cosine_similarity": 0.89475588
+          "cosine_similarity": 0.89438489
         },
         {
           "identifier": "GO:0045277",
@@ -6731,7 +6731,7 @@
         {
           "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
           "label": "chromatophore cytochrome bc1 complex",
-          "cosine_similarity": 0.70178276
+          "cosine_similarity": 0.70521537
         }
       ]
     },
@@ -6742,27 +6742,27 @@
         {
           "identifier": "cellstructuremech:cytochrome_bd_i_ubiquinol_oxidase_complex",
           "label": "cytochrome bd-I ubiquinol oxidase complex",
-          "cosine_similarity": 0.89475588
+          "cosine_similarity": 0.89438489
         },
         {
           "identifier": "GO:0045277",
           "label": "respiratory chain complex IV",
-          "cosine_similarity": 0.78668437
+          "cosine_similarity": 0.78961291
         },
         {
           "identifier": "GO:0045275",
           "label": "respiratory chain complex III",
-          "cosine_similarity": 0.74646071
+          "cosine_similarity": 0.7529743
         },
         {
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
-          "cosine_similarity": 0.70210282
+          "cosine_similarity": 0.70851826
         },
         {
           "identifier": "GO:0009334",
           "label": "3-phenylpropionate dioxygenase complex",
-          "cosine_similarity": 0.6652186
+          "cosine_similarity": 0.66897653
         }
       ]
     },
@@ -6822,9 +6822,9 @@
           "cosine_similarity": 0.76351251
         },
         {
-          "identifier": "GO:0009334",
-          "label": "3-phenylpropionate dioxygenase complex",
-          "cosine_similarity": 0.75717558
+          "identifier": "GO:0016610",
+          "label": "nitrogenase complex",
+          "cosine_similarity": 0.75800857
         }
       ]
     },
@@ -6838,6 +6838,11 @@
           "cosine_similarity": 0.74576656
         },
         {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.68414533
+        },
+        {
           "identifier": "GO:0005960",
           "label": "glycine cleavage complex",
           "cosine_similarity": 0.68296478
@@ -6846,11 +6851,6 @@
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.67851564
-        },
-        {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.67366815
         },
         {
           "identifier": "GO:1990065",
@@ -6941,14 +6941,14 @@
           "cosine_similarity": 0.80511983
         },
         {
+          "identifier": "GO:0009522",
+          "label": "photosystem I",
+          "cosine_similarity": 0.78937018
+        },
+        {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
           "cosine_similarity": 0.78863074
-        },
-        {
-          "identifier": "GO:0009522",
-          "label": "photosystem I",
-          "cosine_similarity": 0.78156305
         }
       ]
     },
@@ -6990,7 +6990,7 @@
         {
           "identifier": "GO:0016610",
           "label": "nitrogenase complex",
-          "cosine_similarity": 0.77405991
+          "cosine_similarity": 0.78143219
         },
         {
           "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
@@ -7021,27 +7021,27 @@
         {
           "identifier": "GO:0044799",
           "label": "NarGHI complex",
-          "cosine_similarity": 0.77405991
+          "cosine_similarity": 0.78143219
         },
         {
           "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
           "label": "formate dehydrogenase N complex",
-          "cosine_similarity": 0.74818638
+          "cosine_similarity": 0.75800857
         },
         {
           "identifier": "GO:1990202",
           "label": "FMN reductase complex",
-          "cosine_similarity": 0.71416678
+          "cosine_similarity": 0.70369888
         },
         {
           "identifier": "GO:0160292",
           "label": "sodium-translocating NADH:quinone reductase complex",
-          "cosine_similarity": 0.69987486
+          "cosine_similarity": 0.69320713
         },
         {
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
-          "cosine_similarity": 0.67660632
+          "cosine_similarity": 0.67109775
         }
       ]
     },
@@ -7052,27 +7052,27 @@
         {
           "identifier": "GO:0009523",
           "label": "photosystem II",
-          "cosine_similarity": 0.90788322
+          "cosine_similarity": 0.90423215
         },
         {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
-          "cosine_similarity": 0.8509529
+          "cosine_similarity": 0.86259845
         },
         {
           "identifier": "GO:0030096",
           "label": "plasma membrane-derived thylakoid photosystem II",
-          "cosine_similarity": 0.83431321
+          "cosine_similarity": 0.84608441
         },
         {
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
-          "cosine_similarity": 0.82120004
+          "cosine_similarity": 0.82668832
         },
         {
           "identifier": "GO:0030076",
           "label": "light-harvesting complex",
-          "cosine_similarity": 0.78156305
+          "cosine_similarity": 0.78937018
         }
       ]
     },
@@ -7083,7 +7083,7 @@
         {
           "identifier": "GO:0009522",
           "label": "photosystem I",
-          "cosine_similarity": 0.90788322
+          "cosine_similarity": 0.90423215
         },
         {
           "identifier": "GO:0030096",
@@ -7114,27 +7114,27 @@
         {
           "identifier": "cellstructuremech:phycobilisome_rod",
           "label": "phycobilisome rod",
-          "cosine_similarity": 0.94099616
+          "cosine_similarity": 0.94538585
         },
         {
           "identifier": "cellstructuremech:phycobilisome_core",
           "label": "phycobilisome core",
-          "cosine_similarity": 0.93514415
+          "cosine_similarity": 0.92881428
         },
         {
           "identifier": "GO:0030076",
           "label": "light-harvesting complex",
-          "cosine_similarity": 0.77339866
+          "cosine_similarity": 0.75737425
         },
         {
           "identifier": "GO:0030094",
           "label": "plasma membrane-derived photosystem I",
-          "cosine_similarity": 0.76272451
+          "cosine_similarity": 0.73417416
         },
         {
           "identifier": "GO:0009522",
           "label": "photosystem I",
-          "cosine_similarity": 0.75533959
+          "cosine_similarity": 0.73237313
         }
       ]
     },
@@ -7145,7 +7145,7 @@
         {
           "identifier": "GO:0030089",
           "label": "phycobilisome",
-          "cosine_similarity": 0.93514415
+          "cosine_similarity": 0.92881428
         },
         {
           "identifier": "cellstructuremech:phycobilisome_rod",
@@ -7163,9 +7163,9 @@
           "cosine_similarity": 0.7390786
         },
         {
-          "identifier": "GO:0030076",
-          "label": "light-harvesting complex",
-          "cosine_similarity": 0.71902838
+          "identifier": "GO:0009522",
+          "label": "photosystem I",
+          "cosine_similarity": 0.73601666
         }
       ]
     },
@@ -7176,7 +7176,7 @@
         {
           "identifier": "GO:0030089",
           "label": "phycobilisome",
-          "cosine_similarity": 0.94099616
+          "cosine_similarity": 0.94538585
         },
         {
           "identifier": "cellstructuremech:phycobilisome_core",
@@ -7217,7 +7217,7 @@
         {
           "identifier": "GO:0009522",
           "label": "photosystem I",
-          "cosine_similarity": 0.8509529
+          "cosine_similarity": 0.86259845
         },
         {
           "identifier": "GO:0009523",
@@ -7251,14 +7251,14 @@
           "cosine_similarity": 0.85718387
         },
         {
+          "identifier": "GO:0009522",
+          "label": "photosystem I",
+          "cosine_similarity": 0.84608441
+        },
+        {
           "identifier": "GO:0030075",
           "label": "bacterial thylakoid",
           "cosine_similarity": 0.84464104
-        },
-        {
-          "identifier": "GO:0009522",
-          "label": "photosystem I",
-          "cosine_similarity": 0.83431321
         }
       ]
     },
@@ -7267,29 +7267,29 @@
       "label": "proton-transporting ATP synthase complex",
       "neighbors": [
         {
+          "identifier": "GO:0016471",
+          "label": "vacuolar proton-transporting V-type ATPase complex",
+          "cosine_similarity": 0.76133702
+        },
+        {
           "identifier": "cellstructuremech:archaeal_type_flagellum_motor",
           "label": "archaeal-type flagellum motor",
-          "cosine_similarity": 0.77404417
-        },
-        {
-          "identifier": "GO:0009425",
-          "label": "bacterial-type flagellum basal body",
-          "cosine_similarity": 0.75859069
-        },
-        {
-          "identifier": "GO:0120100",
-          "label": "bacterial-type flagellum motor",
-          "cosine_similarity": 0.75602302
-        },
-        {
-          "identifier": "GO:0120101",
-          "label": "bacterial-type flagellum stator complex",
-          "cosine_similarity": 0.74706351
+          "cosine_similarity": 0.73920242
         },
         {
           "identifier": "GO:0120102",
           "label": "bacterial-type flagellum secretion apparatus",
-          "cosine_similarity": 0.73427148
+          "cosine_similarity": 0.73676701
+        },
+        {
+          "identifier": "GO:0009425",
+          "label": "bacterial-type flagellum basal body",
+          "cosine_similarity": 0.73151693
+        },
+        {
+          "identifier": "GO:0000220",
+          "label": "vacuolar proton-transporting V-type ATPase, V0 domain",
+          "cosine_similarity": 0.73017118
         }
       ]
     },
@@ -7310,12 +7310,12 @@
         {
           "identifier": "GO:0009522",
           "label": "photosystem I",
-          "cosine_similarity": 0.76273303
+          "cosine_similarity": 0.76067277
         },
         {
           "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
           "label": "chromatophore cytochrome bc1 complex",
-          "cosine_similarity": 0.75536221
+          "cosine_similarity": 0.75066506
         },
         {
           "identifier": "GO:0030094",
@@ -7396,14 +7396,14 @@
           "cosine_similarity": 0.86281853
         },
         {
-          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
-          "label": "chromatophore cytochrome bc1 complex",
-          "cosine_similarity": 0.85369527
-        },
-        {
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.85249225
+        },
+        {
+          "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
+          "label": "chromatophore cytochrome bc1 complex",
+          "cosine_similarity": 0.84450671
         },
         {
           "identifier": "GO:0009512",
@@ -7434,12 +7434,12 @@
         {
           "identifier": "GO:0009319",
           "label": "cytochrome o ubiquinol oxidase complex",
-          "cosine_similarity": 0.78668437
+          "cosine_similarity": 0.78961291
         },
         {
           "identifier": "cellstructuremech:chromatophore_cytochrome_bc1_complex",
           "label": "chromatophore cytochrome bc1 complex",
-          "cosine_similarity": 0.78110907
+          "cosine_similarity": 0.78935191
         },
         {
           "identifier": "GO:0045271",
@@ -7486,27 +7486,27 @@
         {
           "identifier": "GO:0000221",
           "label": "vacuolar proton-transporting V-type ATPase, V1 domain",
-          "cosine_similarity": 0.95148455
+          "cosine_similarity": 0.95269692
         },
         {
           "identifier": "GO:0000220",
           "label": "vacuolar proton-transporting V-type ATPase, V0 domain",
-          "cosine_similarity": 0.9502476
+          "cosine_similarity": 0.95095884
+        },
+        {
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.76133702
         },
         {
           "identifier": "GO:0043291",
           "label": "RAVE complex",
-          "cosine_similarity": 0.73856934
+          "cosine_similarity": 0.74001584
         },
         {
           "identifier": "GO:0005774",
           "label": "vacuolar membrane",
-          "cosine_similarity": 0.7373608
-        },
-        {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.72997641
+          "cosine_similarity": 0.73556982
         }
       ]
     },
@@ -7522,7 +7522,7 @@
         {
           "identifier": "GO:0016471",
           "label": "vacuolar proton-transporting V-type ATPase complex",
-          "cosine_similarity": 0.9502476
+          "cosine_similarity": 0.95095884
         },
         {
           "identifier": "GO:0043291",
@@ -7553,7 +7553,7 @@
         {
           "identifier": "GO:0016471",
           "label": "vacuolar proton-transporting V-type ATPase complex",
-          "cosine_similarity": 0.95148455
+          "cosine_similarity": 0.95269692
         },
         {
           "identifier": "GO:0043291",
@@ -7566,9 +7566,9 @@
           "cosine_similarity": 0.7487364
         },
         {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.72671629
+          "identifier": "GO:0045259",
+          "label": "proton-transporting ATP synthase complex",
+          "cosine_similarity": 0.7284859
         }
       ]
     },
@@ -7597,9 +7597,9 @@
           "cosine_similarity": 0.7140668
         },
         {
-          "identifier": "GO:0030115",
-          "label": "S-layer",
-          "cosine_similarity": 0.7111489
+          "identifier": "GO:0000935",
+          "label": "division septum",
+          "cosine_similarity": 0.70404045
         }
       ]
     },
@@ -7721,9 +7721,9 @@
           "cosine_similarity": 0.64278547
         },
         {
-          "identifier": "GO:0030115",
-          "label": "S-layer",
-          "cosine_similarity": 0.63572043
+          "identifier": "GO:0042603",
+          "label": "capsule",
+          "cosine_similarity": 0.63139019
         }
       ]
     },
@@ -7902,14 +7902,14 @@
           "cosine_similarity": 0.78063564
         },
         {
-          "identifier": "GO:0030115",
-          "label": "S-layer",
-          "cosine_similarity": 0.7773098
-        },
-        {
           "identifier": "GO:0009526",
           "label": "plastid envelope",
           "cosine_similarity": 0.76336699
+        },
+        {
+          "identifier": "GO:0030115",
+          "label": "S-layer",
+          "cosine_similarity": 0.75011484
         }
       ]
     },
@@ -7990,11 +7990,6 @@
           "cosine_similarity": 0.74676186
         },
         {
-          "identifier": "GO:0030115",
-          "label": "S-layer",
-          "cosine_similarity": 0.74233641
-        },
-        {
           "identifier": "GO:0009277",
           "label": "fungal-type cell wall",
           "cosine_similarity": 0.74098527
@@ -8003,6 +7998,11 @@
           "identifier": "GO:0036014",
           "label": "cyanelle intermembrane space",
           "cosine_similarity": 0.72841094
+        },
+        {
+          "identifier": "GO:0009279",
+          "label": "cell outer membrane",
+          "cosine_similarity": 0.72760128
         }
       ]
     },
@@ -8075,27 +8075,27 @@
         {
           "identifier": "GO:0009276",
           "label": "Gram-negative-bacterium-type cell wall",
-          "cosine_similarity": 0.7773098
+          "cosine_similarity": 0.75011484
         },
         {
           "identifier": "GO:0043591",
           "label": "endospore external encapsulating structure",
-          "cosine_similarity": 0.74491561
-        },
-        {
-          "identifier": "GO:0009274",
-          "label": "peptidoglycan-based cell wall",
-          "cosine_similarity": 0.74233641
+          "cosine_similarity": 0.74318534
         },
         {
           "identifier": "GO:0009279",
           "label": "cell outer membrane",
-          "cosine_similarity": 0.71909581
+          "cosine_similarity": 0.71084807
+        },
+        {
+          "identifier": "GO:0009274",
+          "label": "peptidoglycan-based cell wall",
+          "cosine_similarity": 0.70804051
         },
         {
           "identifier": "GO:0042603",
           "label": "capsule",
-          "cosine_similarity": 0.7111489
+          "cosine_similarity": 0.69888875
         }
       ]
     },
@@ -8114,11 +8114,6 @@
           "cosine_similarity": 0.72250381
         },
         {
-          "identifier": "GO:0030115",
-          "label": "S-layer",
-          "cosine_similarity": 0.6802834
-        },
-        {
           "identifier": "GO:0009526",
           "label": "plastid envelope",
           "cosine_similarity": 0.66589755
@@ -8127,6 +8122,11 @@
           "identifier": "GO:0042603",
           "label": "capsule",
           "cosine_similarity": 0.64079685
+        },
+        {
+          "identifier": "GO:0009274",
+          "label": "peptidoglycan-based cell wall",
+          "cosine_similarity": 0.6327667
         }
       ]
     },
@@ -8204,7 +8204,7 @@
         {
           "identifier": "GO:0070088",
           "label": "polyhydroxyalkanoate granule",
-          "cosine_similarity": 0.74995545
+          "cosine_similarity": 0.75080641
         },
         {
           "identifier": "GO:0097614",
@@ -8297,7 +8297,7 @@
         {
           "identifier": "GO:0070088",
           "label": "polyhydroxyalkanoate granule",
-          "cosine_similarity": 0.75125271
+          "cosine_similarity": 0.75127104
         },
         {
           "identifier": "cellstructuremech:bacterial_aggresome",
@@ -8548,14 +8548,14 @@
           "cosine_similarity": 0.61916849
         },
         {
+          "identifier": "GO:0070088",
+          "label": "polyhydroxyalkanoate granule",
+          "cosine_similarity": 0.58299926
+        },
+        {
           "identifier": "cellstructuremech:mitostore",
           "label": "MitoStore",
           "cosine_similarity": 0.58277675
-        },
-        {
-          "identifier": "GO:0070088",
-          "label": "polyhydroxyalkanoate granule",
-          "cosine_similarity": 0.58228392
         },
         {
           "identifier": "cellstructuremech:tubz_filament",
@@ -8571,27 +8571,27 @@
         {
           "identifier": "GO:0009526",
           "label": "plastid envelope",
-          "cosine_similarity": 0.79175243
+          "cosine_similarity": 0.78341958
         },
         {
           "identifier": "GO:0009529",
           "label": "plastid intermembrane space",
-          "cosine_similarity": 0.76177286
-        },
-        {
-          "identifier": "GO:0009527",
-          "label": "plastid outer membrane",
-          "cosine_similarity": 0.75314485
+          "cosine_similarity": 0.7681166
         },
         {
           "identifier": "GO:0009536",
           "label": "plastid",
-          "cosine_similarity": 0.75192881
+          "cosine_similarity": 0.76131807
         },
         {
-          "identifier": "GO:0009507",
-          "label": "chloroplast",
-          "cosine_similarity": 0.74228964
+          "identifier": "GO:0009527",
+          "label": "plastid outer membrane",
+          "cosine_similarity": 0.74668671
+        },
+        {
+          "identifier": "GO:0009532",
+          "label": "plastid stroma",
+          "cosine_similarity": 0.73490719
         }
       ]
     },
@@ -8602,27 +8602,27 @@
         {
           "identifier": "cellstructuremech:glycogen_granule",
           "label": "glycogen granule",
-          "cosine_similarity": 0.75125271
+          "cosine_similarity": 0.75127104
         },
         {
           "identifier": "cellstructuremech:cyanophycin_granule",
           "label": "cyanophycin granule",
-          "cosine_similarity": 0.74995545
+          "cosine_similarity": 0.75080641
         },
         {
           "identifier": "GO:0020026",
           "label": "apicomplexan dense granule",
-          "cosine_similarity": 0.69110811
+          "cosine_similarity": 0.68756898
         },
         {
           "identifier": "GO:0020022",
           "label": "acidocalcisome",
-          "cosine_similarity": 0.67467033
+          "cosine_similarity": 0.67207247
         },
         {
           "identifier": "GO:0033172",
           "label": "gas vesicle shell",
-          "cosine_similarity": 0.6467729
+          "cosine_similarity": 0.64127815
         }
       ]
     },
@@ -8726,27 +8726,27 @@
         {
           "identifier": "cellstructuremech:glycogen_granule",
           "label": "glycogen granule",
-          "cosine_similarity": 0.6316245
+          "cosine_similarity": 0.63481886
         },
         {
           "identifier": "cellstructuremech:bacterial_aggresome",
           "label": "bacterial aggresome",
-          "cosine_similarity": 0.60822446
+          "cosine_similarity": 0.62953638
         },
         {
           "identifier": "GO:0031411",
           "label": "gas vesicle",
-          "cosine_similarity": 0.60296122
+          "cosine_similarity": 0.60706138
         },
         {
           "identifier": "GO:0033172",
           "label": "gas vesicle shell",
-          "cosine_similarity": 0.60237019
+          "cosine_similarity": 0.60525579
         },
         {
           "identifier": "GO:0031469",
           "label": "bacterial microcompartment",
-          "cosine_similarity": 0.59810245
+          "cosine_similarity": 0.60424991
         }
       ]
     },
@@ -20607,11 +20607,6 @@
           "cosine_similarity": 0.6791398
         },
         {
-          "identifier": "GO:0045259",
-          "label": "proton-transporting ATP synthase complex",
-          "cosine_similarity": 0.67199394
-        },
-        {
           "identifier": "GO:0120101",
           "label": "bacterial-type flagellum stator complex",
           "cosine_similarity": 0.66869219
@@ -20620,6 +20615,11 @@
           "identifier": "GO:0033099",
           "label": "attachment organelle",
           "cosine_similarity": 0.66854052
+        },
+        {
+          "identifier": "cellstructuremech:diazoplast",
+          "label": "diazoplast",
+          "cosine_similarity": 0.66739849
         }
       ]
     },

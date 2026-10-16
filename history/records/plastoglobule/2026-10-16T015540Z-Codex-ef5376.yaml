@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/plastoglobule.yaml
+  slug: plastoglobule
+session:
+  id: 2026-10-16T015540Z-Codex-ef5376
+  timestamp: '2026-10-16T01:55:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2321
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Qualify plant versus algal topology, mark lipid exchange as proposed, and correct
+    the GO composition attribution.
+  details: 'Qualify plant versus algal topology, mark lipid exchange as proposed, and correct
+    the GO composition attribution. Inspected sources: GO:0010287 cached definition; DOI:10.7554/eLife.04889
+    full-text plastoglobule paragraph and Fig. 4 captions; DOI:10.1105/tpc.105.039859 abstract;
+    DOI:10.1016/j.bbabio.2015.02.002 PDF pages 1-7. Other claims and prior partial-review
+    limitations remain outside this remediation scope.'

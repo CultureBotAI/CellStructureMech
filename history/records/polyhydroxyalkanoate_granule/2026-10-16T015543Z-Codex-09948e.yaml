@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/polyhydroxyalkanoate_granule.yaml
+  slug: polyhydroxyalkanoate_granule
+session:
+  id: 2026-10-16T015543Z-Codex-09948e
+  timestamp: '2026-10-16T01:55:43Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2322
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  - discussions
+  summary: Correct the Bresan assay attribution and separate phasin membership/size effects
+    from an unverified formation requirement.
+  details: 'Correct the Bresan assay attribution and separate phasin membership/size effects
+    from an unverified formation requirement. Inspected sources: DOI:10.1038/srep26612 full-text
+    Results and Discussion; DOI:10.1128/JB.00779-12 full-text abstract and introduction. Other
+    claims and prior partial-review limitations remain outside this remediation scope.'

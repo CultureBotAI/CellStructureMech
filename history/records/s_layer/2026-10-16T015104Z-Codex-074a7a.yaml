@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/s_layer.yaml
+  slug: s_layer
+session:
+  id: 2026-10-16T015104Z-Codex-074a7a
+  timestamp: '2026-10-16T01:51:04Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2316
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - functions
+  - physical_properties
+  - images
+  summary: Bound bacterial thickness and subunit mass, qualify speculative phage roles and
+    correct the link-only license rationale.
+  details: 'Bound bacterial thickness and subunit mass, qualify speculative phage roles and
+    correct the link-only license rationale. Inspected sources: Sleytr et al. 2014 DOI:10.1111/1574-6976.12063
+    lattice and composition paragraphs; Fagan and Fairweather 2014 DOI:10.1038/nrmicro3213
+    author PDF pages 20 and 29; CC BY-NC 4.0 official deed and repository image policy. Other
+    claims and prior partial-review limitations remain outside this remediation scope.'

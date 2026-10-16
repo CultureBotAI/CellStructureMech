@@ -28,6 +28,12 @@ curation_history:
   changes: '#758: grounded the LH2 light-harvesting function and graph endpoint to
     GO:0009765.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:45:29Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2299: Scope the PufX-containing graph receiver to the C. sphaeroides
+    example.'
+  llm_assisted: true
 synonyms:
 - synonym_text: LH2 antenna complex
   synonym_type: EXACT_SYNONYM
@@ -84,14 +90,14 @@ evidence:
 causal_graphs:
 - graph_id: lh2_excitation_transfer
   title: LH2 antennae feed purple-bacterial reaction-center cores
-  description: LH2 antenna complexes reside in the plasma membrane-derived chromatophore
-    membrane and transfer captured excitation energy toward RC-LH1-PufX reaction-center
-    core complexes.
+  description: In Cereibacter (Rhodobacter) sphaeroides, LH2 complexes in the chromatophore
+    membrane transfer captured excitation toward RC-LH1-PufX cores.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph records chromatophore residence and directional excitation
     flow without resolving LH2 alpha/beta subunit stoichiometry, pigment cofactors
-    or the RC-LH1-PufX core composition.
+    or the RC-LH1-PufX core composition. The PufX-containing receiver is the C. sphaeroides
+    example of Bahatyrova et al. 2004, not a universal partner of all LH2 complexes.
   nodes:
   - node_id: chromatophore_membrane
     label: plasma membrane-derived chromatophore membrane
@@ -104,8 +110,8 @@ causal_graphs:
   - node_id: rc_lh1_pufx
     label: RC-LH1-PufX core complex
     node_type: GENE_OR_PROTEIN
-    description: Purple-bacterial reaction-center and LH1 antenna core that receives
-      excitation energy from surrounding LH2 complexes.
+    description: C. sphaeroides RC-LH1-PufX core receiving excitation from surrounding
+      LH2 complexes in the cited native-membrane study.
   - node_id: light_harvesting
     label: photosynthesis, light harvesting
     node_type: BIOLOGICAL_PROCESS
@@ -126,8 +132,8 @@ causal_graphs:
   - subject: lh2
     predicate: transfers excitation energy to
     object: rc_lh1_pufx
-    description: LH2 antenna complexes form peripheral light-capture domains that
-      feed excitation energy inward to RC-LH1-PufX reaction-center cores.
+    description: In the C. sphaeroides example, peripheral LH2 domains supply excitation
+      to RC-LH1-PufX cores.
     evidence:
     - reference: DOI:10.1038/nature02823
       notes: Bahatyrova et al. 2004 resolved LH2 complexes interconnecting and clustering

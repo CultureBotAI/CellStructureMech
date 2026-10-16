@@ -29,6 +29,12 @@ curation_history:
     sodium ion to the sodium-pumping activity and expanded the InterPro:IPR010205
     NqrF evidence note to cite its FAD-binding and 2Fe-2S-binding GO annotations.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:49:10Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2310: Source the NqrF FAD role to the primary structure instead of a
+    missing InterPro GO annotation.'
+  llm_assisted: true
 synonyms:
 - synonym_text: Na+-NQR complex
   synonym_type: EXACT_SYNONYM
@@ -131,12 +137,16 @@ components:
   role: NqrF constituent of the complex that carries FAD and an iron-sulfur center.
   evidence:
   - reference: InterPro:IPR010205
-    notes: InterPro IPR010205 is a family entry named Na(+)-translocating NADH-quinone
-      reductase subunit F; its GO annotations include FAD binding and 2 iron, 2 sulfur
-      cluster binding, matching the NqrF cofactor role.
+    notes: InterPro IPR010205 identifies the NqrF family and includes 2 iron, 2 sulfur
+      cluster binding among its GO annotations; its inspected GO list does not include
+      FAD binding.
   - reference: PDB:7XK3
     notes: RCSB maps PDB:7XK3 polymer entity 6 to Vibrio cholerae O395 Na(+)-translocating
       NADH-quinone reductase subunit F, UniProtKB:A5F5Y4.
+  - reference: DOI:10.1038/s41467-022-31718-1
+    notes: Kishikawa et al. 2022 identify FAD and the 2Fe-2S center in the NqrF structure
+      (Results, NqrA/NqrF arrangement); this primary structure supports the FAD cofactor
+      role.
 canonical_examples:
 - taxon_id: NCBITaxon:345073
   taxon_label: Vibrio cholerae O395

@@ -31,6 +31,12 @@ curation_history:
   changes: '#1440: removed an uncited cytochrome c6 alternate-donor claim from the
     Cyanobacteriota distribution note.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:47:31Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2303: Expose the unresolved Jordan source-taxon conflict and limit P700
+    wording to oxygenic PSI.'
+  llm_assisted: true
 parent_structures:
 - GO:0009521
 components:
@@ -96,16 +102,20 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:32046
   taxon_label: Synechococcus elongatus
-  note: Thermophilic cyanobacterial source used by Jordan et al. to solve the 2.5
-    A crystal structure of PSI.
+  note: 'Historical source-name attribution: Jordan et al. 2001 and PDB:1JB0 use Synechococcus
+    elongatus (PDB taxon 32046). Linked UniProt proteins such as P0A405 instead name
+    Thermosynechococcus vestitus BP-1 (taxon 197221). The current taxonomic reconciliation
+    is unresolved; this row preserves the depositor''s attribution, not a verified
+    modern strain identity.'
   reference: PMID:11418848
 functions:
 - function_id: photosynthetic_electron_transport
   label: photosynthetic electron transport chain
   grounding: GO:0009767
-  description: PSI accepts electrons from an upstream soluble carrier, oxidizes the
-    P700 special pair after light absorption, and transfers electrons through iron-sulfur
-    centers toward ferredoxin.
+  description: In oxygenic/cyanobacterial PSI, light excitation of P700 drives electron
+    transfer through iron-sulfur centers toward ferredoxin, with upstream soluble
+    donors restoring the reaction center. This P700 description does not cover all
+    bacterial type-I reaction centers included in the generic GO definition.
   evidence:
   - reference: GO:0009522
     notes: GO:0009522 defines PSI as a light-dependent plastocyanin-ferredoxin oxidoreductase
@@ -213,3 +223,21 @@ discussions:
       useful but not universal subunit boundaries.
   posed_by: codex
   posed_date: '2026-09-24'
+- discussion_id: jordan_source_taxon_reconciliation
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile the historical Jordan/PDB organism attribution with the linked
+    UniProt BP-1 entries before assigning a modern source strain.
+  attaches_to:
+  - canonical_examples
+  rationale: PDB:1JB0 reports taxon 32046, whereas UniProtKB:P0A405 reports taxon
+    197221. A historical name cannot be silently treated as an unambiguous modern
+    species or changed solely from the linked protein cross-reference.
+  evidence:
+  - reference: PDB:1JB0
+    notes: Entity source organism uses Synechococcus elongatus, NCBI taxon 32046.
+  - reference: UniProtKB:P0A405
+    notes: Linked PSI core protein is assigned to Thermosynechococcus vestitus BP-1,
+      NCBI taxon 197221.
+  posed_by: claude
+  posed_date: '2026-10-16'

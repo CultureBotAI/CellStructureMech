@@ -30,6 +30,12 @@ curation_history:
   changes: Removed the overbroad GO:0006797 function grounding from acidocalcisome
     polyphosphate storage.
   llm_assisted: true
+- timestamp: '2026-10-16T01:56:14Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2325: Expose the unresolved bacterial identity conflict and correct the
+    sole-author attribution to Docampo 2024.'
+  llm_assisted: true
 synonyms:
 - synonym_text: metachromatic granule
   synonym_type: EXACT_SYNONYM
@@ -57,7 +63,9 @@ components:
       stores in acidocalcisomes.
   - reference: DOI:10.1074/jbc.M304548200
     notes: Seufferheld et al. 2003 detected phosphorus-rich volutin granules with
-      acidocalcisome-like properties in Agrobacterium tumefaciens.
+      acidocalcisome-like properties in Agrobacterium tumefaciens. This is the 2003
+      interpretation; see the bacterial_identity_conflict discussion for contrary
+      C58 results and the later counterargument.
 - component_id: bound_cations
   label: bound calcium and magnesium cations
   component_type: SMALL_MOLECULE
@@ -70,7 +78,9 @@ components:
       constituents of acidocalcisomes.
   - reference: DOI:10.1074/jbc.M304548200
     notes: Seufferheld et al. 2003 analysed acidocalcisome-like bacterial granules
-      as calcium- and polyphosphate-rich compartments.
+      as calcium- and polyphosphate-rich compartments. This is the 2003 interpretation;
+      see the bacterial_identity_conflict discussion for contrary C58 results and
+      the later counterargument.
 - component_id: acidocalcisome_membrane
   label: acidocalcisome membrane
   component_type: LIPID
@@ -80,10 +90,11 @@ components:
   evidence:
   - reference: DOI:10.1074/jbc.M304548200
     notes: Seufferheld et al. 2003 reported membrane-bounded acidocalcisome-like volutin
-      granules in bacteria.
+      granules in bacteria. This is the 2003 interpretation; see the bacterial_identity_conflict
+      discussion for contrary C58 results and the later counterargument.
   - reference: DOI:10.1128/MMBR.00042-23
-    notes: Docampo and Huang 2024 review acidocalcisomes as membrane-bound polyphosphate
-      organelles across bacteria and eukaryotes.
+    notes: Docampo 2024 review acidocalcisomes as membrane-bound polyphosphate organelles
+      across bacteria and eukaryotes.
 - component_id: proton_pumps
   label: acidocalcisome proton pumps
   component_type: PROTEIN
@@ -98,7 +109,9 @@ components:
     notes: Docampo et al. 2005 review proton pumps as acidocalcisome membrane components.
   - reference: DOI:10.1074/jbc.M304548200
     notes: Seufferheld et al. 2003 localized vacuolar proton pyrophosphatase activity
-      to bacterial acidocalcisome-like organelles.
+      to bacterial acidocalcisome-like organelles. This is the 2003 interpretation;
+      see the bacterial_identity_conflict discussion for contrary C58 results and
+      the later counterargument.
 - component_id: cation_transporters
   label: acidocalcisome cation transporters
   component_type: PROTEIN
@@ -111,14 +124,17 @@ components:
   role: Calcium and cation transporters that move ions across the acidocalcisome membrane.
   evidence:
   - reference: DOI:10.1128/MMBR.00042-23
-    notes: Docampo and Huang 2024 review cation transport systems of acidocalcisome
-      membranes.
+    notes: Docampo 2024 review cation transport systems of acidocalcisome membranes.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   presence: VARIABLE
-  note: Acidocalcisome-like volutin granules have been characterized in bacteria including
-    Agrobacterium tumefaciens and Rhodospirillum rubrum.
+  note: 'Acidocalcisome-like compartments have been reported in Agrobacterium tumefaciens
+    and Rhodospirillum rubrum. The bacterial identification is disputed: Frank and
+    Jendrossek 2020 found distinct polyphosphate granules and HppA-associated structures
+    in C58 by fluorescence and mutant analysis, without TEM confirmation; Docampo
+    2024 disputes that interpretation. These observations do not establish universal
+    identity of bacterial polyphosphate granules with membrane-bounded acidocalcisomes.'
   reference: DOI:10.1038/nrmicro1097
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota
@@ -129,8 +145,14 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:358
   taxon_label: Agrobacterium tumefaciens
-  note: Bacterial model in which volutin granules were shown to have acidocalcisome-like
-    membrane, cation and polyphosphate properties.
+  note: 'Seufferheld et al. 2003 reported membrane, cation and polyphosphate properties
+    consistent with acidocalcisome-like granules. The bacterial identification is
+    disputed: Frank and Jendrossek 2020 found distinct polyphosphate granules and
+    HppA-associated structures in C58 by fluorescence and mutant analysis, without
+    TEM confirmation; Docampo 2024 disputes that interpretation. These observations
+    do not establish universal identity of bacterial polyphosphate granules with membrane-bounded
+    acidocalcisomes. The original 2003 strain assignment has not been reverified here;
+    the historical species-level exemplar is retained.'
   reference: DOI:10.1074/jbc.M304548200
 functions:
 - function_id: polyphosphate_storage
@@ -146,7 +168,7 @@ functions:
     in an acidic lumen.
   evidence:
   - reference: DOI:10.1128/MMBR.00042-23
-    notes: Docampo and Huang 2024 review the ion storage roles of acidocalcisomes.
+    notes: Docampo 2024 review the ion storage roles of acidocalcisomes.
 evidence:
 - reference: DOI:10.1038/nrmicro1097
   notes: Docampo R, de Souza W, Miranda K, Rohloff P and Moreno SNJ 2005, Acidocalcisomes
@@ -155,8 +177,13 @@ evidence:
   notes: Seufferheld et al. 2003, Identification of organelles in bacteria similar
     to acidocalcisomes of unicellular eukaryotes, Journal of Biological Chemistry.
 - reference: DOI:10.1128/MMBR.00042-23
-  notes: Docampo and Huang 2024 review acidocalcisome cell biology, biochemistry and
-    physiological roles.
+  notes: Docampo 2024 review acidocalcisome cell biology, biochemistry and physiological
+    roles.
+- reference: DOI:10.1128/AEM.02759-19
+  notes: Frank and Jendrossek 2020, Acidocalcisomes and Polyphosphate Granules Are
+    Different Subcellular Structures in Agrobacterium tumefaciens. Fluorescence and
+    mutant experiments in C58 distinguish the structures; the authors did not perform
+    TEM and leave the HppA-associated structures incompletely characterized.
 causal_graphs:
 - graph_id: acidic_polyphosphate_cation_store
   title: Proton pumps and polyphosphate build an acidic cation store
@@ -199,7 +226,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1074/jbc.M304548200
       notes: Seufferheld et al. 2003 reported membrane-bounded acidocalcisome-like
-        organelles in bacteria.
+        organelles in bacteria. This interpretation is disputed for the bacterial
+        model; see bacterial_identity_conflict.
   - subject: proton_pumps
     predicate: acidify
     object: acidic_lumen
@@ -217,7 +245,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1074/jbc.M304548200
       notes: Seufferheld et al. 2003 characterized bacterial volutin granules as phosphorus-rich
-        acidocalcisome-like organelles.
+        acidocalcisome-like organelles. This interpretation is disputed for the bacterial
+        model; see bacterial_identity_conflict.
   - subject: polyphosphate
     predicate: chelates
     object: cations
@@ -225,8 +254,7 @@ causal_graphs:
       other cations in the electron-dense core.
     evidence:
     - reference: DOI:10.1128/MMBR.00042-23
-      notes: Docampo and Huang 2024 review cations bound to acidocalcisome polyphosphate
-        stores.
+      notes: Docampo 2024 review cations bound to acidocalcisome polyphosphate stores.
   - subject: acidic_lumen
     predicate: stabilizes
     object: polyphosphate
@@ -236,6 +264,10 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1097
       notes: Docampo et al. 2005 describe acidity and polyphosphate-rich ion storage
         as defining acidocalcisome properties.
+  scope_notes: Model of membrane-bounded acidocalcisomes, not every bacterial polyphosphate
+    granule. Bacterial membrane/polyphosphate evidence from Seufferheld et al. 2003
+    is contested by Frank and Jendrossek 2020 and defended by Docampo 2024; see bacterial_identity_conflict.
+    This graph does not settle that disagreement.
 discussions:
 - discussion_id: ground_acidocalcisome_transporters
   prompt: Resolve exact bacterial and eukaryotic acidocalcisome proton-pump and cation-transporter
@@ -250,3 +282,31 @@ discussions:
     vary by lineage.
   posed_by: claude
   posed_date: '2026-09-04'
+- discussion_id: bacterial_identity_conflict
+  prompt: How do bacterial polyphosphate granules relate to acidocalcisome-like membrane
+    structures?
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#acidocalcisome_membrane
+  - components#polyphosphate_matrix
+  rationale: Seufferheld et al. 2003 reported membrane-bounded, acidic, polyphosphate-
+    and cation-rich Agrobacterium granules using microscopy, localization and fractionation.
+    Frank and Jendrossek 2020 instead separated polyphosphate granules from HppA-associated
+    foci in C58 using fluorescence and mutants; they did not perform TEM. Docampo
+    2024 counters that growth phase, fluorescent tags and detection of short polyphosphate
+    chains limit the contrary interpretation. The disagreement remains unresolved
+    and does not justify declaring bacterial acidocalcisomes absent or all bacterial
+    polyphosphate granules equivalent to this organelle. Original 2003 strain context
+    still requires direct verification.
+  evidence:
+  - reference: DOI:10.1074/jbc.M304548200
+    notes: Original positive identification.
+  - reference: DOI:10.1128/AEM.02759-19
+    notes: Contrary C58 fluorescence and mutant evidence, with explicit methodological
+      limits.
+  - reference: DOI:10.1128/MMBR.00042-23
+    notes: Later review counterargument; prior saved review inspected the distribution
+      section, not the complete transporter/biogenesis discussion.
+  posed_by: claude
+  posed_date: '2026-10-16'

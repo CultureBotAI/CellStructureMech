@@ -22,6 +22,11 @@ curation_history:
     primary literature/database evidence, and a compact NarI-to-NarH-to-NarG electron-transfer
     graph.
   llm_assisted: true
+- timestamp: '2026-10-16T01:47:22Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2301: Correct authorship of the two nitrate-reductase review citations.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cytoplasmic membrane-bound quinol-nitrate oxidoreductase
   synonym_type: EXACT_SYNONYM
@@ -181,14 +186,15 @@ evidence:
 - reference: DOI:10.1038/nsb969
   notes: DOI for the Bertero et al. 2003 NarGHI structure paper.
 - reference: PMID:11289299
-  notes: Moreno-Vivian et al. 2001, Functional, biochemical and genetic diversity
-    of prokaryotic nitrate reductases.
+  notes: Richardson et al. 2001, Functional, biochemical and genetic diversity of
+    prokaryotic nitrate reductases.
 - reference: DOI:10.1007/PL00000845
-  notes: DOI for the Moreno-Vivian et al. 2001 nitrate reductase review.
+  notes: DOI for the Richardson et al. 2001 nitrate reductase review.
 - reference: PMID:17964535
-  notes: Jormakka et al. 2008, The prokaryotic complex iron-sulfur molybdoenzyme family.
+  notes: Rothery, Workun and Weiner 2008, The prokaryotic complex iron-sulfur molybdoenzyme
+    family.
 - reference: DOI:10.1016/j.bbamem.2007.09.002
-  notes: DOI for the Jormakka et al. 2008 review cited by GO:0044799.
+  notes: DOI for the Rothery, Workun and Weiner 2008 review cited by GO:0044799.
 causal_graphs:
 - graph_id: narghi_quinol_nitrate_electron_transfer
   title: NarGHI routes quinol electrons to nitrate

@@ -41,6 +41,12 @@ curation_history:
     Fukala and Kucera 2024, Kelly 2024, Bresan 2016, and Pfeiffer and Jendrossek 2012
     support.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:55:41Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2322: Correct the Bresan assay attribution and separate phasin membership/size
+    effects from an unverified formation requirement.'
+  llm_assisted: true
 synonyms:
 - synonym_text: PHA granule
   synonym_type: EXACT_SYNONYM
@@ -65,8 +71,10 @@ components:
     notes: Kelly et al. 2024 describe Pseudomonas putida PHA as a polymeric carbon-rich
       storage material sequestered in carbonosomes.
   - reference: DOI:10.1038/srep26612
-    notes: Bresan et al. 2016 analyzed isolated PHA granules and found PHA polymer
-      plus protein, with no detectable phospholipid monolayer.
+    notes: Bresan et al. 2016 used fluorescent phospholipid-binding LactC2 probes
+      in vivo, not a quantitative chemical-fraction analysis. Native producer granules
+      lacked detectable probe labeling; rare labeling of isolated granules was interpreted
+      as membrane contamination. Recombinant E. coli granules were a distinct context.
 - component_id: pha_synthases
   label: PHA synthases
   component_type: PROTEIN
@@ -91,17 +99,20 @@ components:
   label: phasins
   component_type: PROTEIN
   component_role: CONSTITUENT
-  essentiality: CONDITIONAL
+  essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: Phasins are curated as a granule-surface protein class; no single
     InterPro, Pfam, or NCBIfam accession was chosen as exact for the heterogeneous
     phasins that decorate PHA granules across PHA-producing bacteria.
   role: Amphipathic granule-surface proteins that bind the PHA core and influence
-    granule size, number and surface coverage.
+    granule size, number and surface coverage. A formation requirement for the heterogeneous
+    phasin class is not established here; changes in granule size or number are not
+    failure to form granules.
   evidence:
   - reference: DOI:10.1128/JB.00779-12
     notes: Pfeiffer and Jendrossek 2012 localized multiple Cupriavidus necator H16
-      phasins to PHB granules.
+      phasins to PHB granules. Single phaP6 or phaP7 deletions did not visibly alter
+      granule formation, but do not establish dispensability of all phasins.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -186,9 +197,10 @@ causal_graphs:
     object: polyhydroxyalkanoate_granule
     description: The PHA polyester forms the hydrophobic storage core of the granule.
     evidence:
-    - reference: DOI:10.1038/srep26612
-      notes: Bresan et al. 2016 measured PHA polymer as the dominant chemical fraction
-        of isolated PHA granules.
+    - reference: DOI:10.1128/JB.00779-12
+      notes: Pfeiffer and Jendrossek 2012 describe the amorphous PHB polymer core
+        and associated surface proteins in their introduction. This is not a claim
+        that Bresan et al. measured the polymer fraction.
   - subject: phasins
     predicate: coat
     object: polyhydroxyalkanoate_granule
@@ -214,14 +226,23 @@ discussions:
   status: RESOLVED
   attaches_to:
   - components#pha_polymer_core
-  rationale: GO:0070088 still mentions a phospholipid monolayer from the older structural
+  rationale: 'GO:0070088 still mentions a phospholipid monolayer from the older structural
     model, but Bresan et al. 2016 reported that purified PHA granules contain PHA
     and protein and no detectable phospholipids, so the monolayer is deliberately
-    not curated as a component.
-  resolution_note: Leave phospholipids out of components and document the literature
-    conflict here.
+    not curated as a component. Correction (2026-10-16): the earlier experiment description
+    above was inaccurate. Bresan et al. used phospholipid-binding fluorescent probes
+    in vivo; rare labeling of isolated granules was attributed to contamination, not
+    a bulk chemical composition measurement. The native-producer results and recombinant
+    E. coli observations must be distinguished.'
+  resolution_note: Do not add a universal phospholipid-monolayer component on this
+    evidence. The decision is bounded to the tested native producer systems and probe
+    sensitivity; it does not assert that phospholipids can never associate with any
+    recombinant or isolated PHA granule.
   evidence:
   - reference: DOI:10.1038/srep26612
+    notes: 'Bresan et al. 2016 Results: native producer in vivo LactC2 assays; isolated
+      granules had less than 1% fluorescent particles, interpreted as contamination;
+      recombinant E. coli granules sometimes labeled.'
   posed_by: claude
   posed_date: '2026-09-10'
   resolved_date: '2026-09-10'

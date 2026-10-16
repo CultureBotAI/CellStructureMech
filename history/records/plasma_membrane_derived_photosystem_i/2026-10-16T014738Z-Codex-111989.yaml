@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/plasma_membrane_derived_photosystem_i.yaml
+  slug: plasma_membrane_derived_photosystem_i
+session:
+  id: 2026-10-16T014738Z-Codex-111989
+  timestamp: '2026-10-16T01:47:38Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2306
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Align the Casella example and graph with Synechococcus elongatus PCC 7942.
+  details: 'Align the Casella example and graph with Synechococcus elongatus PCC 7942. Inspected
+    sources: Casella et al. 2017 DOI:10.1016/j.molp.2017.09.019 abstract; NCBI Taxonomy 1140
+    record. Other claims and prior partial-review limitations remain outside this remediation
+    scope.'

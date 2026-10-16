@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  slug: peptidoglycan_based_cell_wall
+session:
+  id: 2026-10-16T015100Z-Codex-271ad6
+  timestamp: '2026-10-16T01:51:00Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2315
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Remove lysyl-specific Lipid II groundings from generic nodes and correct the turgor-capacity
+    relation.
+  details: 'Remove lysyl-specific Lipid II groundings from generic nodes and correct the turgor-capacity
+    relation. Inspected sources: ChEBI CHEBI:27692 explicit lysyl chemical definition; Native
+    E. coli MurJ example and turgor-capacity graph. Other claims and prior partial-review
+    limitations remain outside this remediation scope.'

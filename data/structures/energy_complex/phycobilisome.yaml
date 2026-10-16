@@ -2,10 +2,11 @@ identifier: GO:0030089
 label: phycobilisome
 structure_category: ENERGY_COMPLEX
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: A membrane-associated light-harvesting pigment-protein complex of cyanobacteria
-  and red algae, built from phycobiliprotein core and rod cylinders plus linker polypeptides,
-  that funnels phycobilin excitation energy to photosynthetic reaction centers.
-definition_source: GO:0030089
+definition: A membrane-associated phycobiliprotein antenna complex of cyanobacteria
+  and red algae that transfers absorbed light energy to photosystems. Conventional
+  phycobilisomes contain an allophycocyanin core and peripheral rods organized by
+  linkers; coreless rod-type antennas are also documented.
+definition_source: PMID:17468217
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-04T18:36:29Z'
@@ -27,6 +28,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-16T01:46:32Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2304: Correct PCC 6803 source attribution and qualify core-dependent
+    architecture with the coreless antenna exception.'
+  llm_assisted: true
 synonyms:
 - synonym_text: PBS
   synonym_type: RELATED_SYNONYM
@@ -103,19 +110,24 @@ components:
   - apcB
   - apcD
   - apcF
-  essentiality: ESSENTIAL
+  essentiality: CONDITIONAL
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: This component spans allophycocyanin alpha, beta and terminal-emitter
     subunits rather than one exact protein family.
-  role: Core phycobiliproteins that receive excitation from the rods and pass it toward
-    chlorophyll-containing photosystems.
+  role: Core cylinders of conventional core-and-rod phycobilisomes, absent from the
+    functional coreless CpcG2 antenna. Required for the conventional core architecture,
+    not for every phycobilisome subtype.
   evidence:
   - reference: DOI:10.1146/annurev-biophys-062920-063657
     notes: Sui 2021 reviews the allophycocyanin core as the central cylinder assembly
       that receives rod energy.
   - reference: DOI:10.1038/s41467-021-25813-y
-    notes: Sauer et al. 2021 resolved the Synechocystis phycobilisome core and its
-      allophycocyanin subunits by cryo-EM.
+    notes: Zheng et al. 2021 resolved PCC 7002 and PCC 7120 phycobilisome cores and
+      its allophycocyanin subunits by cryo-EM.
+  - reference: PMID:17468217
+    notes: Kondo et al. 2007 abstract describes functional CpcG2-phycobilisomes in
+      Synechocystis sp. PCC 6803 that retain phycocyanin rods but lack the central
+      core and preferentially transfer energy to PSI.
   protein_examples:
   - uniprot_id: UniProtKB:Q01951
     protein_label: Allophycocyanin alpha chain
@@ -326,7 +338,7 @@ canonical_examples:
   taxon_label: Synechocystis sp. PCC 6803
   note: Cyanobacterial model used for a cryo-EM structure of the complete phycobilisome
     in light-harvesting and photoprotected states.
-  reference: DOI:10.1038/s41467-021-25813-y
+  reference: DOI:10.1038/s41586-022-05156-4
 - taxon_id: NCBITaxon:32053
   taxon_label: Thermostichus vulcanus
   note: Thermophilic cyanobacterium whose phycobilisome core and rods were resolved
@@ -340,13 +352,17 @@ canonical_examples:
 functions:
 - function_id: photosynthetic_light_harvesting
   label: photosynthetic light harvesting
-  description: Phycobilisomes absorb visible light through phycobilin-bearing rods
-    and transfer excitation through the allophycocyanin core to photosystem II and,
-    in some states, photosystem I.
+  description: Phycobilisomes absorb light in phycobiliproteins and deliver excitation
+    to photosystems. Conventional core-and-rod antennas transfer through allophycocyanin;
+    coreless CpcG2 antennas preferentially supply PSI without that core.
   evidence:
   - reference: DOI:10.1146/annurev-biophys-062920-063657
     notes: Sui 2021 reviews phycobilisome light capture and downhill excitation-energy
       transfer to photosystems.
+  - reference: PMID:17468217
+    notes: Kondo et al. 2007 abstract describes functional CpcG2-phycobilisomes in
+      Synechocystis sp. PCC 6803 that retain phycocyanin rods but lack the central
+      core and preferentially transfer energy to PSI.
 - function_id: photoprotection
   label: photoprotection
   description: Some cyanobacterial phycobilisomes switch to quenched or orange-carotenoid-protein-bound
@@ -359,7 +375,7 @@ evidence:
 - reference: DOI:10.1146/annurev-biophys-062920-063657
   notes: Sui 2021, Structure of Phycobilisomes, Annual Review of Biophysics.
 - reference: DOI:10.1038/s41467-021-25813-y
-  notes: Sauer et al. 2021, Structural insight into the mechanism of energy transfer
+  notes: Zheng et al. 2021, Structural insight into the mechanism of energy transfer
     in cyanobacterial phycobilisomes, Nature Communications.
 - reference: DOI:10.1038/s41467-022-30962-9
   notes: Kawakami et al. 2022, Core and rod structures of a thermophilic cyanobacterial
@@ -367,13 +383,21 @@ evidence:
 - reference: DOI:10.1038/cr.2015.59
   notes: Chang et al. 2015, Structural organization of an intact phycobilisome and
     its association with photosystem II, Cell Research.
+- reference: DOI:10.1038/s41586-022-05156-4
+  notes: Dominguez-Martin et al. 2022, Structures of a phycobilisome in light-harvesting
+    and photoprotected states; cryo-EM of Synechocystis sp. PCC 6803 with and without
+    OCP.
+- reference: PMID:17468217
+  notes: Kondo et al. 2007 abstract describes functional CpcG2-phycobilisomes in Synechocystis
+    sp. PCC 6803 that retain phycocyanin rods but lack the central core and preferentially
+    transfer energy to PSI.
 causal_graphs:
 - graph_id: rod_core_energy_funnel
   title: Rods and linkers funnel bilin excitation through the allophycocyanin core
-  description: Phycobilins covalently attached to rod phycobiliproteins absorb visible
-    light. Linker proteins order stacked rod and core cylinders so excitation energy
-    moves from rods into the allophycocyanin core and then into chlorophyll-containing
-    photosystems.
+  description: In conventional core-and-rod phycobilisomes, phycobilins covalently
+    attached to rod phycobiliproteins absorb visible light. Linker proteins order
+    stacked rod and core cylinders so excitation energy moves from rods into the allophycocyanin
+    core and then into chlorophyll-containing photosystems.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
@@ -428,7 +452,8 @@ causal_graphs:
       rods dock.
     evidence:
     - reference: DOI:10.1038/s41467-021-25813-y
-      notes: Sauer et al. 2021 resolved the Synechocystis phycobilisome core by cryo-EM.
+      notes: Zheng et al. 2021 resolved PCC 7002 and PCC 7120 phycobilisome cores
+        by cryo-EM.
   - subject: linkers
     predicate: stabilize and tune
     object: phycobilisome
@@ -454,7 +479,7 @@ causal_graphs:
       photosystems.
     evidence:
     - reference: DOI:10.1038/s41467-021-25813-y
-      notes: Sauer et al. 2021 modelled energy transfer through the allophycocyanin
+      notes: Zheng et al. 2021 modelled energy transfer through the allophycocyanin
         core toward photosystem acceptors.
   - subject: photosystems
     predicate: perform
@@ -465,6 +490,9 @@ causal_graphs:
     - reference: DOI:10.1038/cr.2015.59
       notes: Chang et al. 2015 visualized phycobilisomes associated with photosystem
         II from Nostoc sp. PCC 7120.
+  scope_notes: This graph models conventional core-and-rod architecture only. It excludes
+    functional coreless CpcG2/CpcL rod-type antennas and does not assert that an allophycocyanin
+    core is universal.
 discussions:
 - discussion_id: ground_phycobilisome_families
   prompt: Resolve exact InterPro or Pfam accessions for rod phycobiliprotein, allophycocyanin,
@@ -480,3 +508,23 @@ discussions:
     that could blur rods, core subunits and specialized terminal emitters.
   posed_by: claude
   posed_date: '2026-09-04'
+- discussion_id: coreless_phycobilisome_scope
+  kind: INTERPRETATION
+  status: OPEN
+  prompt: Retain the literature-supported coreless antenna exception when aligning
+    the record with GO:0030089's core-centric definition.
+  attaches_to:
+  - definition
+  - components#allophycocyanin_core
+  - causal_graphs#rod_core_energy_funnel
+  rationale: GO's conventional core-and-rod wording does not exhaust the phycobilisome
+    architectures described in the cited primary literature. The generic identity
+    is retained, with the core component and graph explicitly scoped to conventional
+    antennas.
+  evidence:
+  - reference: PMID:17468217
+    notes: Kondo et al. 2007 abstract describes functional CpcG2-phycobilisomes in
+      Synechocystis sp. PCC 6803 that retain phycocyanin rods but lack the central
+      core and preferentially transfer energy to PSI.
+  posed_by: claude
+  posed_date: '2026-10-16'

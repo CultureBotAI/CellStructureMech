@@ -29,6 +29,12 @@ curation_history:
   changes: 'Addressed PR #576 review issues #577 and #578 by removing periplasm boundary
     membranes from components and adding an LPS-to-outer-membrane topology edge.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:50:53Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2314: Make LPS, rather than the Lpt machine, the cargo moving across
+    the periplasm.'
+  llm_assisted: true
 synonyms:
 - synonym_text: outer membrane bounded periplasmic space
   synonym_type: EXACT_SYNONYM
@@ -112,8 +118,8 @@ causal_graphs:
 - graph_id: diderm_periplasm_topology
   title: Inner and outer membranes bound the Gram-negative periplasm
   description: The plasma membrane and cell outer membrane delimit the diderm periplasmic
-    region, which contains the thin Gram-negative peptidoglycan wall and is crossed
-    by LPS transport machinery during outer-membrane assembly.
+    region, which contains the thin peptidoglycan wall and is crossed by LPS cargo
+    during Lpt-mediated outer-membrane assembly.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures envelope topology and LPS transit across the periplasm
@@ -172,11 +178,11 @@ causal_graphs:
     - reference: DOI:10.1101/cshperspect.a000414
       notes: Silhavy, Kahne and Walker 2010 describe the Gram-negative envelope as
         a thin peptidoglycan wall surrounded by an outer membrane.
-  - subject: lpt_machine
+  - subject: lps
     predicate: moves across
     object: periplasm
-    description: The Lpt transport machine ferries LPS from the inner membrane across
-      the periplasmic region to the outer membrane.
+    description: LPS is the cargo transported from the inner membrane across the periplasm
+      to the outer membrane by the Lpt machinery.
     evidence:
     - reference: DOI:10.1074/jbc.R117.802512
       notes: Sperandeo, Martorana and Polissi 2017 review LPS transport across the

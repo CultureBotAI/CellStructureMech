@@ -26,6 +26,12 @@ curation_history:
     #650 by changing plastoglobule parthood to the immediate GO:0009570 chloroplast
     stroma compartment and adding GO:0009570 evidence.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:55:37Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2321: Qualify plant versus algal topology, mark lipid exchange as proposed,
+    and correct the GO composition attribution.'
+  llm_assisted: true
 part_of:
 - GO:0009570
 xrefs:
@@ -37,9 +43,10 @@ components:
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0010287 defines plastoglobules as rich in mixed non-polar lipids
-    plus prenylquinones, plastoquinone and carotenoids; no single source-neutral ChEBI
-    identifier denotes that plastoglobule cargo mixture.
+  grounding_notes: GO:0010287 lists non-polar lipids, prenylquinones, plastoquinone
+    and tocopherols; no single source-neutral ChEBI identifier denotes that mixture.
+    Carotenoids are discussed separately in the Rottet et al. 2015 review, not in
+    this GO definition.
   role: Hydrophobic lipid-rich interior that stores neutral lipids and prenyl lipids
     inside the chloroplast plastoglobule.
   evidence:
@@ -55,16 +62,22 @@ components:
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: Plastoglobules are covered by a half-unit lipid membrane that is
-    continuous with the thylakoid outer leaflet; GO:0034430 is available for generic
-    lipid-droplet monolayers but is not specific to plastoglobules.
-  role: Half-unit lipid boundary surrounding the plastoglobule lipid core and coupling
-    plastoglobules to chloroplast thylakoid membranes.
+  grounding_notes: Austin et al. 2006 resolved a half-unit lipid membrane continuous
+    with the thylakoid outer leaflet in higher plants. Engel et al. 2015 observed
+    apparently discontinuous Chlamydomonas plastoglobules with occasional punctate
+    contacts, subject to tomogram resolution limits. GO:0034430 denotes a generic
+    lipid-droplet monolayer, not a plastoglobule-specific boundary.
+  role: Lipid boundary surrounding the plastoglobule core; permanent thylakoid continuity
+    is a higher-plant observation, not established for the algal example.
   evidence:
   - reference: DOI:10.1105/tpc.105.039859
-    notes: Austin et al. 2006 used freeze-fracture electron microscopy to show plastoglobules
-      surrounded by a half-unit lipid membrane continuous with the thylakoid outer
-      leaflet.
+    notes: Austin et al. 2006 used electron tomography and freeze-fracture imaging
+      of higher-plant chloroplasts to resolve a half-unit membrane continuous with
+      the thylakoid outer leaflet.
+  - reference: DOI:10.7554/eLife.04889
+    notes: Engel et al. 2015 found Chlamydomonas plastoglobules apparently discontinuous
+      from adjacent thylakoids, sometimes with punctate contacts; their tomograms
+      did not resolve the two lipid-bilayer leaflets.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
@@ -82,9 +95,10 @@ canonical_examples:
 functions:
 - function_id: thylakoid_lipid_remodeling
   label: thylakoid lipid remodeling
-  description: Plastoglobules exchange lipid metabolites with adjacent thylakoid membranes
-    and participate in thylakoid lipid remodeling during chloroplast development and
-    stress responses.
+  description: Plastoglobules participate in chloroplast lipid metabolism and thylakoid
+    remodeling. Exchange of lipid metabolites with thylakoids is a proposed model,
+    not a directly established transport mechanism in the cited review or the Chlamydomonas
+    example.
   evidence:
   - reference: DOI:10.1016/j.bbabio.2015.02.002
     notes: Rottet, Besagni and Kessler 2015 review evidence that plastoglobules participate
@@ -104,21 +118,25 @@ evidence:
   notes: Engel et al. 2015 resolved the native Chlamydomonas reinhardtii chloroplast
     by in situ cryo-electron tomography.
 - reference: DOI:10.1105/tpc.105.039859
-  notes: Austin et al. 2006 showed that plastoglobules are lipoprotein subcompartments
-    permanently coupled to thylakoid membranes.
+  notes: Austin et al. 2006 reported permanent plastoglobule-thylakoid coupling in
+    the higher-plant chloroplasts studied; this topology is not established as universal
+    in algae.
 - reference: DOI:10.1016/j.bbabio.2015.02.002
   notes: Rottet, Besagni and Kessler 2015 reviewed plastoglobule roles in thylakoid
     lipid remodeling.
 causal_graphs:
 - graph_id: plastoglobule_thylakoid_lipid_exchange
-  title: Plastoglobule monolayer organizes lipid exchange
-  description: A hydrophobic plastoglobule lipid core is surrounded by a lipid monolayer
-    that remains physically continuous with the thylakoid outer leaflet, positioning
-    the plastoglobule to exchange lipid-derived metabolites with thylakoid membranes.
+  title: Higher-plant plastoglobule architecture and proposed lipid exchange
+  description: The higher-plant model places a lipid core within a monolayer continuous
+    with the thylakoid outer leaflet. This architecture motivates a lipid-exchange
+    hypothesis; it is not evidence for universal continuity or direct transport in
+    algae.
   graph_kind: ASSEMBLY
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures plastoglobule lipid architecture and thylakoid association
-    without asserting enzymes for specific prenyl-lipid or carotenoid reactions.
+  scope_notes: Higher-plant architecture from Austin et al. 2006 and a proposed lipid-remodeling
+    model from Rottet et al. 2015. Engel et al. 2015 instead observed apparently discontinuous
+    Chlamydomonas plastoglobules, with resolution caveats. No specific transport mechanism
+    is established here.
   nodes:
   - node_id: plastoglobule_lipid_core
     label: plastoglobule lipid core
@@ -152,21 +170,23 @@ causal_graphs:
   - subject: plastoglobule_lipid_monolayer
     predicate: is continuous with
     object: thylakoid_membrane
-    description: The plastoglobule half-unit membrane stays continuous with the outer
-      leaflet of adjacent thylakoids.
+    description: In the higher-plant chloroplasts examined by Austin et al. 2006,
+      the plastoglobule half-unit membrane was continuous with the outer thylakoid
+      leaflet.
     evidence:
     - reference: DOI:10.1105/tpc.105.039859
-      notes: Austin et al. 2006 connected the plastoglobule half-unit membrane to
+      notes: Austin et al. 2006 used electron tomography and freeze-fracture imaging
+        of higher-plant chloroplasts to resolve a half-unit membrane continuous with
         the thylakoid outer leaflet.
   - subject: plastoglobule
-    predicate: supports
+    predicate: is proposed to support
     object: thylakoid_lipid_remodeling
-    description: Physical coupling between plastoglobules and thylakoids allows lipid
-      metabolites to move between the compartments during remodeling.
+    description: Lipid supply and exchange during thylakoid remodeling are proposed
+      roles; structural contact alone does not demonstrate metabolite movement.
     evidence:
     - reference: DOI:10.1016/j.bbabio.2015.02.002
-      notes: Rottet, Besagni and Kessler 2015 describe plastoglobules as participants
-        in thylakoid lipid remodeling.
+      notes: Rottet, Besagni and Kessler 2015 discuss a proposed lipid-supply and
+        remodeling model alongside evidence for plastoglobule lipid metabolism.
 synonyms:
 - synonym_text: PG
   synonym_type: EXACT_SYNONYM

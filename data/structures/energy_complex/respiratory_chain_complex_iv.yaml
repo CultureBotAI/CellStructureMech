@@ -36,6 +36,12 @@ curation_history:
     and replaced broad subunit-II graph evidence with the cytochrome-c-specific InterPro
     subunit-II domain entry.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:49:06Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2309: Retain bacterial aa3 subunit IV label-only instead of using a domain
+    grounding.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cytochrome c oxidase complex
   synonym_type: EXACT_SYNONYM
@@ -118,7 +124,6 @@ components:
   label: bacterial aa3-type cytochrome c oxidase subunit IV
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding: InterPro:IPR012422
   gene_symbols:
   - ctaH
   essentiality: UNKNOWN
@@ -126,11 +131,15 @@ components:
     such as the Paracoccus complex.
   evidence:
   - reference: InterPro:IPR012422
-    notes: InterPro IPR012422 is the source-neutral entry for bacterial aa3-type cytochrome
-      c oxidase subunit IV.
+    notes: InterPro IPR012422 is a domain entry for bacterial aa3-type cytochrome
+      c oxidase subunit IV, retained as context rather than whole-protein grounding.
   - reference: PDB:1QLE
     notes: RCSB maps PDB:1QLE polymer entity 4 to Paracoccus denitrificans cytochrome
       c oxidase subunit 4, UniProtKB:P77921.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro IPR012422 is a domain entry and IPR036596 is a homologous
+    superfamily, neither an exact integrated protein family under the curation policy.
+    Retain the PDB-supported subunit as label-only pending an exact family.
 canonical_examples:
 - taxon_id: NCBITaxon:266
   taxon_label: Paracoccus denitrificans

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/lipid_droplet.yaml
+  slug: lipid_droplet
+session:
+  id: 2026-10-16T015620Z-Codex-2f37f1
+  timestamp: '2026-10-16T01:56:20Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2320
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - history
+  summary: Retrospectively document the existing lipid-droplet record creation without changing
+    its scientific YAML.
+  details: 'Recorded now, not backdated: git commit 9a6ab4ed3aead813f3c6de82d2714a0b265c90a8
+    (2026-09-10T03:36:41-07:00, Add lipid droplet structure record) introduced this file.
+    Existing inline creation/curation events remain authoritative historical evidence. An
+    ignored-inclusive search of history found no previous entry for this path, slug or GO:0005811.
+    This CREATE event documents that historical creation; it does not claim the record was
+    newly created today. Native bytes are unchanged. Literature and scientific claims were
+    not reassessed for this provenance-only correction.'

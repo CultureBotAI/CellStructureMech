@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/glycogen_granule.yaml
+  slug: glycogen_granule
+session:
+  id: 2026-10-16T015129Z-Codex-6cdd7d
+  timestamp: '2026-10-16T01:51:29Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2319
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Correct Damrow authorship and identify the citation as a primary mutant study.
+  details: 'Correct Damrow authorship and identify the citation as a primary mutant study.
+    Inspected sources: Damrow et al. 2016 DOI:10.3389/fmicb.2016.00966 author list and complete
+    abstract. Other claims and prior partial-review limitations remain outside this remediation
+    scope.'
