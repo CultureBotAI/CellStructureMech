@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/appendage.html">Appendage</a> · bacterial-type flagellum filament</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>bacterial-type flagellum filament</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009420"><code>GO:0009420</code></a> · Appendage · Filament · <span class="status">Proposed</span></p>
 <p class="definition">The long, thin external propeller of the bacterial-type flagellum, formed by polymerized flagellin. <small>[<a href="https://doi.org/10.1038/nrmicro1887"><code>DOI:10.1038/nrmicro1887</code></a>]</small></p>
@@ -60,12 +70,12 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-flagellin_helical_propeller">Flagellin protofilaments form a rotary propeller <small>(FUNCTION)</small></h3>
 <p>Flagellin subunits pack into protofilaments that form a long tubular helix. When the basal body transmits torque through the hook, rotation of that helical filament generates thrust for swimming motility.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Flagellin protofilaments form a rotary propeller">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>flagellin</td><td>polymerizes into</td><td>flagellin protofilament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41598-019-51440-1"><code>DOI:10.1038/s41598-019-51440-1</code></a> <small>Blum et al. 2019 resolved repeating flagellin subunits in an 11-protofilament Kurthia filament.</small></li><li><a href="https://doi.org/10.1038/s41467-026-71203-7"><code>DOI:10.1038/s41467-026-71203-7</code></a> <small>Qin et al. 2026 resolved Vibrio alginolyticus flagellin packing by cryo-EM.</small></li></ul></td></tr>
-<tr><td>flagellin protofilament</td><td>packs into</td><td>bacterial-type flagellum filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41598-019-51440-1"><code>DOI:10.1038/s41598-019-51440-1</code></a> <small>Blum et al. 2019 describe the Kurthia flagellar filament as a tube built from 11 protofilaments.</small></li></ul></td></tr>
-<tr><td>flagellin</td><td>extends</td><td>bacterial-type flagellum filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.micro.57.030502.090832"><code>DOI:10.1146/annurev.micro.57.030502.090832</code></a> <small>Macnab 2003 reviews filament growth by flagellin export through the flagellar channel and assembly beneath FliD.</small></li></ul></td></tr>
-<tr><td>flagellar rotation</td><td>turns</td><td>bacterial-type flagellum filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.biochem.72.121801.161737"><code>DOI:10.1146/annurev.biochem.72.121801.161737</code></a> <small>Berg 2003 reviews the bacterial flagellar motor and helical filament as the rotary swimming organelle.</small></li></ul></td></tr>
-<tr><td>bacterial-type flagellum filament</td><td>generates</td><td>propulsive thrust</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.biochem.72.121801.161737"><code>DOI:10.1146/annurev.biochem.72.121801.161737</code></a> <small>Berg 2003 reviews the hydrodynamic role of helical flagellar filaments in swimming.</small></li></ul></td></tr>
-<tr><td>propulsive thrust</td><td>enables</td><td>bacterial-type flagellum-dependent cell motility</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.biochem.72.121801.161737"><code>DOI:10.1146/annurev.biochem.72.121801.161737</code></a> <small>Berg 2003 reviews swimming by rotating flagellar filaments.</small></li></ul></td></tr>
+<tr><td>flagellin <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001492"><code>InterPro:IPR001492</code></a>)</small></td><td>polymerizes into</td><td>flagellin protofilament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41598-019-51440-1"><code>DOI:10.1038/s41598-019-51440-1</code></a> <small>Blum et al. 2019 resolved repeating flagellin subunits in an 11-protofilament Kurthia filament.</small></li><li><a href="https://doi.org/10.1038/s41467-026-71203-7"><code>DOI:10.1038/s41467-026-71203-7</code></a> <small>Qin et al. 2026 resolved Vibrio alginolyticus flagellin packing by cryo-EM.</small></li></ul></td></tr>
+<tr><td>flagellin protofilament</td><td>packs into</td><td>bacterial-type flagellum filament <small>(<a href="http://purl.obolibrary.org/obo/GO_0009420"><code>GO:0009420</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41598-019-51440-1"><code>DOI:10.1038/s41598-019-51440-1</code></a> <small>Blum et al. 2019 describe the Kurthia flagellar filament as a tube built from 11 protofilaments.</small></li></ul></td></tr>
+<tr><td>flagellin <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001492"><code>InterPro:IPR001492</code></a>)</small></td><td>extends</td><td>bacterial-type flagellum filament <small>(<a href="http://purl.obolibrary.org/obo/GO_0009420"><code>GO:0009420</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.micro.57.030502.090832"><code>DOI:10.1146/annurev.micro.57.030502.090832</code></a> <small>Macnab 2003 reviews filament growth by flagellin export through the flagellar channel and assembly beneath FliD.</small></li></ul></td></tr>
+<tr><td>flagellar rotation</td><td>turns</td><td>bacterial-type flagellum filament <small>(<a href="http://purl.obolibrary.org/obo/GO_0009420"><code>GO:0009420</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.biochem.72.121801.161737"><code>DOI:10.1146/annurev.biochem.72.121801.161737</code></a> <small>Berg 2003 reviews the bacterial flagellar motor and helical filament as the rotary swimming organelle.</small></li></ul></td></tr>
+<tr><td>bacterial-type flagellum filament <small>(<a href="http://purl.obolibrary.org/obo/GO_0009420"><code>GO:0009420</code></a>)</small></td><td>generates</td><td>propulsive thrust</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.biochem.72.121801.161737"><code>DOI:10.1146/annurev.biochem.72.121801.161737</code></a> <small>Berg 2003 reviews the hydrodynamic role of helical flagellar filaments in swimming.</small></li></ul></td></tr>
+<tr><td>propulsive thrust</td><td>enables</td><td>bacterial-type flagellum-dependent cell motility <small>(<a href="http://purl.obolibrary.org/obo/GO_0071973"><code>GO:0071973</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.biochem.72.121801.161737"><code>DOI:10.1146/annurev.biochem.72.121801.161737</code></a> <small>Berg 2003 reviews swimming by rotating flagellar filaments.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -81,7 +91,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/bacterial_type_flagellum_filament.yaml"><code>data/structures/appendage/bacterial_type_flagellum_filament.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -26,10 +26,25 @@
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
   .hero{position:relative;background:linear-gradient(135deg,var(--pastel-a),var(--pastel-b));
-        padding:64px 24px 52px;text-align:center;border-bottom:1px solid var(--line)}
+        padding:56px 24px 52px;text-align:center;border-bottom:1px solid var(--line)}
   .hero h1{margin:0 0 .2em;font-size:2.7rem;letter-spacing:-.02em;overflow-wrap:anywhere}
   .hero .tagline{margin:0 auto;max-width:680px;font-size:1.15rem}
-  .stats{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:30px}
+  .site-header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;
+               padding:.75rem 1.4rem;background:rgba(255,255,255,.55);border-bottom:1px solid var(--line)}
+  .site-header .brand{font-weight:700;color:var(--ink);text-decoration:none}
+  .site-header nav{display:flex;flex-wrap:wrap;gap:.35rem 1rem;font-size:.92rem}
+  .site-header nav a{color:var(--muted);text-decoration:none}
+  .site-header nav a:hover{color:var(--accent)}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+  .hero-search{display:flex;gap:.5rem;max-width:640px;margin:24px auto 0;padding:6px;
+               background:var(--card);border:1px solid var(--line);border-radius:999px;
+               box-shadow:0 4px 18px rgba(0,0,0,.07)}
+  .hero-search input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);
+                     padding:.55rem 1rem;font-size:1rem;outline:none}
+  .hero-search button{border:0;background:var(--accent);color:var(--on-accent);font-weight:600;
+                      padding:.55rem 1.25rem;border-radius:999px;font-size:.95rem;cursor:pointer}
+  .hero-search button:hover{filter:brightness(.93)}
+  .stats{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:26px}
   .stat{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:12px;
         padding:12px 20px;min-width:110px;text-decoration:none;color:inherit}
   a.stat:hover{background:rgba(255,255,255,.85);text-decoration:none}
@@ -81,6 +96,7 @@
     }
     :root:not([data-theme="light"]) .stat{background:rgba(255,255,255,.05)}
     :root:not([data-theme="light"]) a.stat:hover{background:rgba(255,255,255,.09)}
+    :root:not([data-theme="light"]) .site-header{background:rgba(255,255,255,.04)}
     :root:not([data-theme="light"]) footer{background:rgba(255,255,255,.04)}
     :root:not([data-theme="light"]) table code{background:rgba(255,255,255,.08)}
     :root:not([data-theme="light"]) tbody tr:hover{background:rgba(139,143,232,.10)}
@@ -105,6 +121,7 @@
 }
   :root[data-theme="dark"] .stat{background:rgba(255,255,255,.05)}
   :root[data-theme="dark"] a.stat:hover{background:rgba(255,255,255,.09)}
+  :root[data-theme="dark"] .site-header{background:rgba(255,255,255,.04)}
   :root[data-theme="dark"] footer{background:rgba(255,255,255,.04)}
   :root[data-theme="dark"] table code{background:rgba(255,255,255,.08)}
   :root[data-theme="dark"] tbody tr:hover{background:rgba(139,143,232,.10)}
@@ -126,6 +143,19 @@
 </head>
 <body>
 
+<header class="site-header">
+  <a class="brand" href="index.html">CellStructureMech</a>
+  <nav>
+    <a href="browse.html">Browse</a>
+    <a href="embedding-map.html">Text map</a>
+    <a href="sequence-map.html">Sequence map</a>
+    <a href="corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
+  </nav>
+</header>
+
 <div class="hero">
   <h1>CellStructureMech</h1>
   <p class="tagline">
@@ -133,6 +163,11 @@
     multi-protein complexes of microbial cells — each grounded in GO cellular
     component where a term exists, and backed by cited evidence.
   </p>
+  <form class="hero-search" action="browse.html" method="get" role="search">
+    <label class="sr-only" for="hero-q">Search structures</label>
+    <input id="hero-q" name="q" type="search" placeholder="Search 909 cell structures by name, GO/METPO ID, component, or function…" autocomplete="off">
+    <button type="submit">Search</button>
+  </form>
   <div class="stats">
     <a class="stat" href="browse.html"><b>909</b><span>structure records</span></a>
     <a class="stat" href="index.html#categories"><b>13</b><span>categories</span></a>
@@ -145,10 +180,16 @@
   <div class="cards">
     <div class="card">
       <div class="actions"><a class="btn" href="browse.html">Browse records</a></div>
-      <p class="actions"><a class="btn" href="embedding-map.html">MiniLM / PCA text map</a></p>
+      <p class="actions"><a class="btn" href="embedding-map.html">MiniLM / PCA text map</a> <a class="btn" href="sequence-map.html">ESM-2 sequence map</a></p>
       <h2>Record browser</h2>
       <p>Every structure in the corpus, with its category, kind, grounding
          status and definition, in one filterable table.</p>
+    </div>
+    <div class="card">
+      <div class="actions"><a class="btn" href="sequence-map.html">Explore pLM map</a></div>
+      <h2>Sequence map (pLM)</h2>
+      <p>2D UMAP projection of ESM-2 protein language model embeddings across
+         structural components and associated machinery proteins.</p>
     </div>
     <div class="card">
       <div class="actions">
@@ -172,11 +213,14 @@
     </div>
     <div class="card">
       <div class="actions">
+        <a class="btn" href="corpus.json">Full corpus JSON</a>
+        <a class="btn" href="index.json">Catalogue index JSON</a>
+        <a class="btn" href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a>
         <a class="btn" href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
       </div>
-      <h2>Source and schema</h2>
+      <h2>Source, downloads &amp; schema</h2>
       <p>Records are LinkML-validated YAML under <code>data/structures/</code>.
-         The schema, curation history and pipeline all live in the repository.</p>
+         Download the complete corpus JSON export, inspect the LinkML schema, or browse the repository.</p>
     </div>
   </div>
 
@@ -260,7 +304,7 @@
 </main>
 
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="corpus.json">corpus JSON</a> · <a href="index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

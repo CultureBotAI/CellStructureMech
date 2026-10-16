@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · nuclear pore</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>nuclear pore</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A membrane-embedded eukaryotic protein complex that forms a discrete pore in the nuclear envelope where the inner and outer nuclear membranes join and mediates exchange between the nucleus and cytoplasm. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a>]</small></p>
@@ -48,9 +58,9 @@
 <h3 id="causal_graphs-nucleoporin_scaffold_transport_channel">Nucleoporins build a nuclear-envelope pore <small>(ASSEMBLY)</small></h3>
 <p>Membrane nucleoporins anchor the nuclear pore at the fused nuclear-envelope membrane, scaffold nucleoporins build the pore architecture, and FG-repeat nucleoporins line the central channel.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Nucleoporins build a nuclear-envelope pore">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>transmembrane nucleoporins</td><td>anchor</td><td>nuclear pore</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> <small>GO:0005643 places the pore at the junction between the inner and outer nuclear membranes.</small></li><li><a href="https://doi.org/10.1016/j.cell.2021.12.015"><code>DOI:10.1016/j.cell.2021.12.015</code></a> <small>Akey et al. 2022 modeled membrane anchors in the yeast NPC.</small></li></ul></td></tr>
-<tr><td>scaffold nucleoporins</td><td>assemble into</td><td>nuclear pore</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.148.4.635"><code>DOI:10.1083/jcb.148.4.635</code></a> <small>Rout et al. 2000 mapped the yeast NPC composition and architecture.</small></li></ul></td></tr>
-<tr><td>FG-repeat nucleoporins</td><td>line</td><td>nuclear pore</td><td><ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.111.127803"><code>DOI:10.1534/genetics.111.127803</code></a> <small>Aitchison and Rout 2012 review FG nucleoporins in yeast NPC transport.</small></li></ul></td></tr>
+<tr><td>transmembrane nucleoporins</td><td>anchor</td><td>nuclear pore <small>(<a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> <small>GO:0005643 places the pore at the junction between the inner and outer nuclear membranes.</small></li><li><a href="https://doi.org/10.1016/j.cell.2021.12.015"><code>DOI:10.1016/j.cell.2021.12.015</code></a> <small>Akey et al. 2022 modeled membrane anchors in the yeast NPC.</small></li></ul></td></tr>
+<tr><td>scaffold nucleoporins</td><td>assemble into</td><td>nuclear pore <small>(<a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.148.4.635"><code>DOI:10.1083/jcb.148.4.635</code></a> <small>Rout et al. 2000 mapped the yeast NPC composition and architecture.</small></li></ul></td></tr>
+<tr><td>FG-repeat nucleoporins</td><td>line</td><td>nuclear pore <small>(<a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.111.127803"><code>DOI:10.1534/genetics.111.127803</code></a> <small>Aitchison and Rout 2012 review FG nucleoporins in yeast NPC transport.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -66,7 +76,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/nuclear_pore.yaml"><code>data/structures/other/nuclear_pore.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

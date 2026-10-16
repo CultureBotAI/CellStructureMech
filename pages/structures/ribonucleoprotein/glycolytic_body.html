@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/ribonucleoprotein.html">Ribonucleoprotein</a> · glycolytic body</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>glycolytic body</h1>
 <p class="meta"><code>cellstructuremech:glycolytic_body</code> · Ribonucleoprotein · Other · <span class="status">Proposed</span></p>
 <p class="definition">A membraneless cytoplasmic ribonucleoprotein assembly that concentrates glycolytic enzymes and associated RNAs during hypoxic growth of Saccharomyces cerevisiae. <small>[<a href="https://doi.org/10.7554/eLife.48480"><code>DOI:10.7554/eLife.48480</code></a>]</small></p>
@@ -39,7 +49,7 @@
 <tr id="components-trehalose_phosphate_synthase"><td>Alpha,alpha-trehalose-phosphate synthase</td><td>Protein</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR012766"><code>InterPro:IPR012766</code></a></td><td>TPS1</td><td></td><td>UNKNOWN</td><td>Variable metabolic constituent represented by Tps1, not the whole trehalose-synthase complex.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2017.06.082"><code>DOI:10.1016/j.celrep.2017.06.082</code></a> <small>Proteomic Identification Results report Tps1 colocalization in 60% of cells. The measurement is a cell-level localization frequency, not a stoichiometric fraction.</small></li></ul></td></tr>
 <tr id="components-acetyl_coa_carboxylase"><td>Acetyl-CoA carboxylase</td><td>Protein</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR049076"><code>InterPro:IPR049076</code></a></td><td>ACC1</td><td></td><td>UNKNOWN</td><td>Variable metabolic constituent observed in a subset of hypoxic cells.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2017.06.082"><code>DOI:10.1016/j.celrep.2017.06.082</code></a> <small>Proteomic Identification Results and Figure 2C report Acc1 colocalization in 27% of cells; no obligatory occupancy or catalytic contribution within G bodies is inferred.</small></li></ul></td></tr>
 <tr id="components-fatty_acid_synthase_alpha"><td>Fatty acid synthase alpha subunit, yeast</td><td>Protein</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR026025"><code>InterPro:IPR026025</code></a></td><td>FAS2</td><td></td><td>UNKNOWN</td><td>Variable constituent represented by the fatty acid synthase alpha subunit, not an assertion that the entire synthase complex is resident.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2017.06.082"><code>DOI:10.1016/j.celrep.2017.06.082</code></a> <small>Proteomic Identification Results report Fas2 colocalization in 31% of cells, whereas Fas1 foci were adjacent in 12%. These distinct observations are not combined into a whole-complex composition.</small></li></ul></td></tr>
-<tr id="components-rna"><td>RNA</td><td>Rna</td><td>part of</td><td><code>SO:0000356</code></td><td></td><td></td><td>UNKNOWN</td><td>Associated RNA supports G-body assembly and integrity. No single obligatory transcript species, universal RNA stoichiometry or complete RNA-depletion state is established.<ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.48480"><code>DOI:10.7554/eLife.48480</code></a> <small>Hypoxic G-body RIP-seq and smFISH demonstrate associated RNAs. G-body-targeted active RNases inhibit nascent formation and fracture preformed bodies; untargeted RNase and inhibited-RNase controls constrain this interpretation. Normoxic PAR-CLIP alone is not localization evidence.</small></li></ul></td></tr>
+<tr id="components-rna"><td>RNA</td><td>Rna</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/SO_0000356"><code>SO:0000356</code></a></td><td></td><td></td><td>UNKNOWN</td><td>Associated RNA supports G-body assembly and integrity. No single obligatory transcript species, universal RNA stoichiometry or complete RNA-depletion state is established.<ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.48480"><code>DOI:10.7554/eLife.48480</code></a> <small>Hypoxic G-body RIP-seq and smFISH demonstrate associated RNAs. G-body-targeted active RNases inhibit nascent formation and fracture preformed bodies; untargeted RNase and inhibited-RNase controls constrain this interpretation. Normoxic PAR-CLIP alone is not localization evidence.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -129,14 +139,14 @@ family; these are the specific entries behind it.</small></p>
 
 
 <h2>Physical properties</h2>
-<ul><li>DIAMETER: 200-500 <code>UO:0000018</code> (Approximate diameter of electron-dense, non-membrane-bound Pfk2-GFP-labeled bodies in hypoxic S. cerevisiae, measured by immunogold TEM in the 2017 study. Not an invariant size or the Gaussian radius inferred from later fluorescence images.)<ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2017.06.082"><code>DOI:10.1016/j.celrep.2017.06.082</code></a> <small>Hypoxia triggers glycolytic body formation Results describe the approximate TEM diameter and cite Figures 1D and S2C.</small></li></ul></li></ul>
+<ul><li>DIAMETER: 200-500 <a href="http://purl.obolibrary.org/obo/UO_0000018"><code>UO:0000018</code></a> (Approximate diameter of electron-dense, non-membrane-bound Pfk2-GFP-labeled bodies in hypoxic S. cerevisiae, measured by immunogold TEM in the 2017 study. Not an invariant size or the Gaussian radius inferred from later fluorescence images.)<ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2017.06.082"><code>DOI:10.1016/j.celrep.2017.06.082</code></a> <small>Hypoxia triggers glycolytic body formation Results describe the approximate TEM diameter and cite Figures 1D and S2C.</small></li></ul></li></ul>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-rna_supported_formation">RNA-dependent G-body formation during hypoxic growth <small>(ASSEMBLY)</small></h3>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: RNA-dependent G-body formation during hypoxic growth">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Hypoxia with available glucose</td><td>promotes</td><td>G-body formation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2017.06.082"><code>DOI:10.1016/j.celrep.2017.06.082</code></a> <small>Figure 1 and glucose-deprivation controls establish the tested environmental context.</small></li></ul></td></tr>
-<tr><td>RNA</td><td>supports</td><td>G-body formation</td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.48480"><code>DOI:10.7554/eLife.48480</code></a> <small>RIP-seq and smFISH establish RNA association; targeted MqsR/RNase A perturbations and activity/targeting controls support the requirement.</small></li></ul></td></tr>
+<tr><td>RNA <small>(<a href="http://purl.obolibrary.org/obo/SO_0000356"><code>SO:0000356</code></a>)</small></td><td>supports</td><td>G-body formation</td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.48480"><code>DOI:10.7554/eLife.48480</code></a> <small>RIP-seq and smFISH establish RNA association; targeted MqsR/RNase A perturbations and activity/targeting controls support the requirement.</small></li></ul></td></tr>
 <tr><td>Induction of Pfk2-fused active RNase</td><td>inhibits</td><td>G-body formation</td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.48480"><code>DOI:10.7554/eLife.48480</code></a> <small>Pfk2-MqsR acts dose-dependently; untargeted MqsR does not reproduce the effect and MqsA inhibition rescues formation. RNase A provides a second enzyme test; H12A retains residual activity.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -162,7 +172,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/glycolytic_body.yaml"><code>data/structures/ribonucleoprotein/glycolytic_body.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/ribonucleoprotein.html">Ribonucleoprotein</a> · large ribosomal subunit</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>large ribosomal subunit</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0015934"><code>GO:0015934</code></a> · Ribonucleoprotein · Ribonucleoprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">The larger of the two subunits of a ribosome. Two sites on the ribosomal large subunit are involved in translation, namely the aminoacyl site (A site) and peptidyl site (P site). <small>[<a href="http://purl.obolibrary.org/obo/GO_0015934"><code>GO:0015934</code></a>]</small></p>
@@ -27,7 +37,7 @@
 <div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 <tr id="components-major_lsu_rrna"><td>major large-subunit rRNA</td><td>Rna</td><td>part of</td><td><em title="The component label was reviewed; no accession grounding is asserted.">Reviewed label only</em><small> (reviewed name; no accession asserted)</small></td><td></td><td>1</td><td>ESSENTIAL</td><td>Catalytic rRNA scaffold of the large ribosomal subunit that forms the peptidyl transferase center.<ul class="evidence"><li><a href="https://doi.org/10.1126/science.289.5481.920"><code>DOI:10.1126/science.289.5481.920</code></a> <small>Nissen et al. 2000 located the Haloarcula marismortui 50S peptidyl transferase center in 23S rRNA.</small></li><li><a href="https://doi.org/10.1126/science.289.5481.905"><code>DOI:10.1126/science.289.5481.905</code></a> <small>Ban et al. 2000 resolved the Haloarcula marismortui 50S large subunit with 23S and 5S rRNAs in the RNA core.</small></li></ul></td></tr>
-<tr id="components-rrna_5s"><td>5S rRNA</td><td>Rna</td><td>part of</td><td><code>SO:0000652</code></td><td></td><td>1 in archaeal and bacterial 50S subunits</td><td>CONDITIONAL</td><td>Small structural RNA of the large-subunit central protuberance.<ul class="evidence"><li><a href="https://doi.org/10.1126/science.289.5481.905"><code>DOI:10.1126/science.289.5481.905</code></a> <small>Ban et al. 2000 resolved 5S rRNA within the Haloarcula marismortui 50S large-subunit central protuberance.</small></li></ul></td></tr>
+<tr id="components-rrna_5s"><td>5S rRNA</td><td>Rna</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/SO_0000652"><code>SO:0000652</code></a></td><td></td><td>1 in archaeal and bacterial 50S subunits</td><td>CONDITIONAL</td><td>Small structural RNA of the large-subunit central protuberance.<ul class="evidence"><li><a href="https://doi.org/10.1126/science.289.5481.905"><code>DOI:10.1126/science.289.5481.905</code></a> <small>Ban et al. 2000 resolved 5S rRNA within the Haloarcula marismortui 50S large-subunit central protuberance.</small></li></ul></td></tr>
 <tr id="components-lsu_protein_cohort"><td>large-subunit ribosomal proteins</td><td>Protein</td><td>part of</td><td><em title="The component label was reviewed; no accession grounding is asserted.">Reviewed label only</em><small> (reviewed name; no accession asserted)</small></td><td></td><td>33 proteins in Escherichia coli</td><td>CONDITIONAL</td><td>Proteins that bind and stabilize the folded large-subunit rRNA scaffold to form a functional peptidyl-transferase subunit.<ul class="evidence"><li><a href="https://doi.org/10.1126/science.289.5481.905"><code>DOI:10.1126/science.289.5481.905</code></a> <small>Ban et al. 2000 describe proteins decorating the Haloarcula marismortui 50S rRNA surface.</small></li><li><a href="https://doi.org/10.1128/MMBR.00013-07"><code>DOI:10.1128/MMBR.00013-07</code></a> <small>Kaczanowska and Ryden-Aulin 2007 report 33 protein constituents for the Escherichia coli 50S subunit.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -46,7 +56,7 @@
 <h3 id="causal_graphs-lsu_peptidyl_transferase_center">50S peptidyl transferase center forms peptide bonds <small>(FUNCTION)</small></h3>
 <p>In the archaeal 50S subunit, large-subunit rRNA forms a peptidyl transferase center where peptide bonds are made.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: 50S peptidyl transferase center forms peptide bonds">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>major large-subunit rRNA</td><td>forms peptidyl transferase center of</td><td>large ribosomal subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.289.5481.920"><code>DOI:10.1126/science.289.5481.920</code></a> <small>Nissen et al. 2000 localized all 50S peptidyl-transferase-center contacts to 23S rRNA.</small></li></ul></td></tr>
+<tr><td>major large-subunit rRNA</td><td>forms peptidyl transferase center of</td><td>large ribosomal subunit <small>(<a href="http://purl.obolibrary.org/obo/GO_0015934"><code>GO:0015934</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.289.5481.920"><code>DOI:10.1126/science.289.5481.920</code></a> <small>Nissen et al. 2000 localized all 50S peptidyl-transferase-center contacts to 23S rRNA.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -62,7 +72,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/large_ribosomal_subunit.yaml"><code>data/structures/ribonucleoprotein/large_ribosomal_subunit.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · basal ring of apical complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>basal ring of apical complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0020032"><code>GO:0020032</code></a> · Cytoskeleton · Other · <span class="status">Proposed</span></p>
 <p class="definition">An electron dense ring at the most posterior position of the apical complex, from which the subpellicular microtubules originate; formed during an invasive life cycle stage of an apicomplexan parasite. <small>[<a href="http://purl.obolibrary.org/obo/GO_0020032"><code>GO:0020032</code></a>]</small></p>
@@ -40,9 +50,9 @@
 <h3 id="causal_graphs-toxoplasma_basal_ring_topology">The lower polar ring marks the origin of subpellicular microtubules <small>(ASSEMBLY)</small></h3>
 <p>The lower polar ring marks the origin of Toxoplasma subpellicular microtubules. Its posterior position relative to the conoid is shown for the extruded conoid, not asserted for every conoid state.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: The lower polar ring marks the origin of subpellicular microtubules">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>basal ring of apical complex</td><td>is part of</td><td>apical complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0020007"><code>GO:0020007</code></a> <small>Gene Ontology places the basal ring of the apical complex under the apical-complex cellular-component term.</small></li></ul></td></tr>
-<tr><td>basal ring of apical complex</td><td>is posterior to</td><td>conoid</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200112086"><code>DOI:10.1083/jcb.200112086</code></a> <small>Figure 1 and Results distinguish the moving anterior ring/conoid from the lower polar ring during extension and retraction.</small></li><li><a href="https://doi.org/10.1371/journal.ppat.0020013"><code>DOI:10.1371/journal.ppat.0020013</code></a> <small>Introduction and Figure 1 distinguish the distal preconoidal rings from the SPMT-origin polar ring.</small></li></ul></td></tr>
-<tr><td>subpellicular microtubule</td><td>originates from</td><td>basal ring of apical complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0020032"><code>GO:0020032</code></a> <small>Gene Ontology defines the basal ring by the origin of the subpellicular microtubules.</small></li></ul></td></tr>
+<tr><td>basal ring of apical complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0020032"><code>GO:0020032</code></a>)</small></td><td>is part of</td><td>apical complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0020007"><code>GO:0020007</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0020007"><code>GO:0020007</code></a> <small>Gene Ontology places the basal ring of the apical complex under the apical-complex cellular-component term.</small></li></ul></td></tr>
+<tr><td>basal ring of apical complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0020032"><code>GO:0020032</code></a>)</small></td><td>is posterior to</td><td>conoid <small>(<a href="http://purl.obolibrary.org/obo/GO_0020010"><code>GO:0020010</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200112086"><code>DOI:10.1083/jcb.200112086</code></a> <small>Figure 1 and Results distinguish the moving anterior ring/conoid from the lower polar ring during extension and retraction.</small></li><li><a href="https://doi.org/10.1371/journal.ppat.0020013"><code>DOI:10.1371/journal.ppat.0020013</code></a> <small>Introduction and Figure 1 distinguish the distal preconoidal rings from the SPMT-origin polar ring.</small></li></ul></td></tr>
+<tr><td>subpellicular microtubule <small>(<a href="http://purl.obolibrary.org/obo/GO_0020025"><code>GO:0020025</code></a>)</small></td><td>originates from</td><td>basal ring of apical complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0020032"><code>GO:0020032</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0020032"><code>GO:0020032</code></a> <small>Gene Ontology defines the basal ring by the origin of the subpellicular microtubules.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -58,7 +68,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/basal_ring_of_apical_complex.yaml"><code>data/structures/cytoskeleton/basal_ring_of_apical_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

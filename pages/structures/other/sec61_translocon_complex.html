@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · Sec61 translocon complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>Sec61 translocon complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A heterotrimeric endoplasmic-reticulum membrane translocon that forms a protein-conducting channel for co- and post-translational substrate movement across or into the ER membrane. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a>]</small></p>
@@ -48,11 +58,11 @@
 <h3 id="causal_graphs-sec61_er_translocation">Sec61 forms the ER protein channel <small>(FUNCTION)</small></h3>
 <p>The Sec61 alpha subunit forms the ER protein-conducting channel, the Sec61 beta and gamma subunits associate with that channel in the Sec61 heterotrimer, and the complex resides in the ER membrane during substrate translocation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Sec61 forms the ER protein channel">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Sec61 alpha protein-conducting channel subunit</td><td>forms pore of</td><td>Sec61 translocon complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> <small>GO:0005784 identifies the Sec61 alpha subunit as the protein-conducting channel core.</small></li><li><a href="https://doi.org/10.1091/mbc.3.2.129"><code>DOI:10.1091/mbc.3.2.129</code></a> <small>Stirling et al. 1992 localized Saccharomyces Sec61p as an integral ER membrane protein.</small></li></ul></td></tr>
+<tr><td>Sec61 alpha protein-conducting channel subunit</td><td>forms pore of</td><td>Sec61 translocon complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> <small>GO:0005784 identifies the Sec61 alpha subunit as the protein-conducting channel core.</small></li><li><a href="https://doi.org/10.1091/mbc.3.2.129"><code>DOI:10.1091/mbc.3.2.129</code></a> <small>Stirling et al. 1992 localized Saccharomyces Sec61p as an integral ER membrane protein.</small></li></ul></td></tr>
 <tr><td>Sec61 beta subunit</td><td>associates with</td><td>Sec61 alpha protein-conducting channel subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.M701840200"><code>DOI:10.1074/jbc.M701840200</code></a> <small>Feng et al. 2007 showed that the Sbh1p transmembrane domain coimmunoprecipitates with Sec61p and Sss1p.</small></li></ul></td></tr>
 <tr><td>Sec61 gamma subunit</td><td>associates with</td><td>Sec61 alpha protein-conducting channel subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/j.1460-2075.1993.tb06092.x"><code>DOI:10.1002/j.1460-2075.1993.tb06092.x</code></a> <small>Esnault et al. 1993 identified Sss1p as a conserved ER membrane protein required for secretory-protein translocation.</small></li></ul></td></tr>
-<tr><td>Sec61 translocon complex</td><td>is embedded in</td><td>endoplasmic reticulum membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> <small>GO:0005784 defines Sec61 as an endoplasmic-reticulum membrane translocon complex.</small></li></ul></td></tr>
-<tr><td>Sec61 translocon complex</td><td>supports</td><td>Sec61-dependent ER protein translocation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/0092-8674(95)90077-2"><code>DOI:10.1016/0092-8674(95)90077-2</code></a> <small>Panzner et al. 1995 reconstituted yeast posttranslational protein transport with purified Sec proteins and Kar2p.</small></li></ul></td></tr>
+<tr><td>Sec61 translocon complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a>)</small></td><td>is embedded in</td><td>endoplasmic reticulum membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a> <small>GO:0005784 defines Sec61 as an endoplasmic-reticulum membrane translocon complex.</small></li></ul></td></tr>
+<tr><td>Sec61 translocon complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0005784"><code>GO:0005784</code></a>)</small></td><td>supports</td><td>Sec61-dependent ER protein translocation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/0092-8674(95)90077-2"><code>DOI:10.1016/0092-8674(95)90077-2</code></a> <small>Panzner et al. 1995 reconstituted yeast posttranslational protein transport with purified Sec proteins and Kar2p.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -68,7 +78,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/sec61_translocon_complex.yaml"><code>data/structures/other/sec61_translocon_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

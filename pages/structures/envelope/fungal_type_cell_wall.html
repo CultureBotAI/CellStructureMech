@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/envelope.html">Envelope</a> · fungal-type cell wall</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>fungal-type cell wall</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009277"><code>GO:0009277</code></a> · Envelope · Envelope layer · <span class="status">Proposed</span></p>
 <p class="definition">A rigid but dynamic carbohydrate- and glycoprotein-rich wall surrounding the fungal plasma membrane, built from a variable cross-linked matrix of glucans, wall glycoproteins, and often chitin and kept distinct from fungal capsules outside the wall. <small>[<a href="http://purl.obolibrary.org/obo/GO_0009277"><code>GO:0009277</code></a>]</small></p>
@@ -48,11 +58,11 @@
 <h3 id="causal_graphs-crosslinked_polysaccharide_wall_network">Glucans, chitin and mannoproteins form a fungal wall matrix <small>(ASSEMBLY)</small></h3>
 <p>In well-studied fungal walls, branched beta-glucans form a cross-linked matrix with chitin and mannoproteins. This carbohydrate-rich matrix surrounds the plasma membrane to maintain shape and provide a fungal cell surface.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Glucans, chitin and mannoproteins form a fungal wall matrix">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>beta-D-glucan</td><td>cross-links with</td><td>chitin</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/microbiolspec.FUNK-0035-2016"><code>DOI:10.1128/microbiolspec.FUNK-0035-2016</code></a> <small>Gow, Latge and Munro 2017 review glucan-chitin cross-linking in fungal cell walls.</small></li></ul></td></tr>
-<tr><td>fungal cell-wall mannoproteins</td><td>decorate</td><td>beta-D-glucan</td><td><ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.112.144485"><code>DOI:10.1534/genetics.112.144485</code></a> <small>Orlean 2012 reviews Saccharomyces cerevisiae wall mannoproteins as part of the cross-linked beta-glucan wall matrix.</small></li></ul></td></tr>
-<tr><td>beta-D-glucan</td><td>forms scaffold of</td><td>fungal-type cell wall</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/microbiolspec.FUNK-0035-2016"><code>DOI:10.1128/microbiolspec.FUNK-0035-2016</code></a> <small>Gow, Latge and Munro 2017 review beta-glucans as major structural components of many fungal walls.</small></li><li><a href="https://doi.org/10.1534/genetics.112.144485"><code>DOI:10.1534/genetics.112.144485</code></a> <small>Orlean 2012 reviews beta-glucans as central, cross-linked Saccharomyces cerevisiae wall polymers.</small></li></ul></td></tr>
-<tr><td>fungal-type cell wall</td><td>surrounds</td><td>plasma membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009277"><code>GO:0009277</code></a> <small>GO:0009277 defines the fungal-type wall as surrounding the plasma membrane.</small></li></ul></td></tr>
-<tr><td>fungal-type cell wall</td><td>maintains</td><td>fungal cell shape</td><td><ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.112.144485"><code>DOI:10.1534/genetics.112.144485</code></a> <small>Orlean 2012 reviews Saccharomyces cerevisiae wall roles in osmotic integrity and cell shape.</small></li></ul></td></tr>
+<tr><td>beta-D-glucan <small>(<a href="http://purl.obolibrary.org/obo/CHEBI_28793"><code>CHEBI:28793</code></a>)</small></td><td>cross-links with</td><td>chitin <small>(<a href="http://purl.obolibrary.org/obo/CHEBI_17029"><code>CHEBI:17029</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/microbiolspec.FUNK-0035-2016"><code>DOI:10.1128/microbiolspec.FUNK-0035-2016</code></a> <small>Gow, Latge and Munro 2017 review glucan-chitin cross-linking in fungal cell walls.</small></li></ul></td></tr>
+<tr><td>fungal cell-wall mannoproteins</td><td>decorate</td><td>beta-D-glucan <small>(<a href="http://purl.obolibrary.org/obo/CHEBI_28793"><code>CHEBI:28793</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.112.144485"><code>DOI:10.1534/genetics.112.144485</code></a> <small>Orlean 2012 reviews Saccharomyces cerevisiae wall mannoproteins as part of the cross-linked beta-glucan wall matrix.</small></li></ul></td></tr>
+<tr><td>beta-D-glucan <small>(<a href="http://purl.obolibrary.org/obo/CHEBI_28793"><code>CHEBI:28793</code></a>)</small></td><td>forms scaffold of</td><td>fungal-type cell wall <small>(<a href="http://purl.obolibrary.org/obo/GO_0009277"><code>GO:0009277</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/microbiolspec.FUNK-0035-2016"><code>DOI:10.1128/microbiolspec.FUNK-0035-2016</code></a> <small>Gow, Latge and Munro 2017 review beta-glucans as major structural components of many fungal walls.</small></li><li><a href="https://doi.org/10.1534/genetics.112.144485"><code>DOI:10.1534/genetics.112.144485</code></a> <small>Orlean 2012 reviews beta-glucans as central, cross-linked Saccharomyces cerevisiae wall polymers.</small></li></ul></td></tr>
+<tr><td>fungal-type cell wall <small>(<a href="http://purl.obolibrary.org/obo/GO_0009277"><code>GO:0009277</code></a>)</small></td><td>surrounds</td><td>plasma membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005886"><code>GO:0005886</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009277"><code>GO:0009277</code></a> <small>GO:0009277 defines the fungal-type wall as surrounding the plasma membrane.</small></li></ul></td></tr>
+<tr><td>fungal-type cell wall <small>(<a href="http://purl.obolibrary.org/obo/GO_0009277"><code>GO:0009277</code></a>)</small></td><td>maintains</td><td>fungal cell shape</td><td><ul class="evidence"><li><a href="https://doi.org/10.1534/genetics.112.144485"><code>DOI:10.1534/genetics.112.144485</code></a> <small>Orlean 2012 reviews Saccharomyces cerevisiae wall roles in osmotic integrity and cell shape.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -68,7 +78,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/envelope/fungal_type_cell_wall.yaml"><code>data/structures/envelope/fungal_type_cell_wall.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

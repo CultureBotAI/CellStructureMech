@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import filecmp
+import hashlib
 import json
 import re
 import shutil
@@ -52,6 +53,12 @@ PREFIX_URL = {
     "GO": "http://purl.obolibrary.org/obo/GO_",
     "CHEBI": "http://purl.obolibrary.org/obo/CHEBI_",
     "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+    "RO": "http://purl.obolibrary.org/obo/RO_",
+    "BFO": "http://purl.obolibrary.org/obo/BFO_",
+    "UO": "http://purl.obolibrary.org/obo/UO_",
+    "SO": "http://purl.obolibrary.org/obo/SO_",
+    "CL": "http://purl.obolibrary.org/obo/CL_",
+    "UBERON": "http://purl.obolibrary.org/obo/UBERON_",
     "InterPro": "https://www.ebi.ac.uk/interpro/entry/InterPro/",
     "Pfam": "https://www.ebi.ac.uk/interpro/entry/pfam/",
     "UniProtKB": "https://www.uniprot.org/uniprotkb/",
@@ -104,8 +111,12 @@ def render(out_dir: Path) -> None:
     records_root = REPO_ROOT / "data" / "structures"
     by_category: dict[str, list[dict]] = defaultdict(list)
     index = []
+    timestamps: list[str] = []
     for path, doc in records:
         name = page_name(path, records_root)
+        for ev in doc.get("curation_history") or []:
+            if ts := ev.get("timestamp"):
+                timestamps.append(str(ts))
         entry = {
             "identifier": doc["identifier"],
             "label": doc["label"],
@@ -119,7 +130,15 @@ def render(out_dir: Path) -> None:
         by_category[entry["category"]].append(entry)
         index.append(entry)
 
+    latest_ts = max(timestamps) if timestamps else "unknown"
+    corpus_date = latest_ts.replace("T", " ").replace("Z", " UTC") if "T" in latest_ts else latest_ts
+    corpus_digest = hashlib.sha256(
+        json.dumps([doc for _, doc in records], sort_keys=True, ensure_ascii=False).encode("utf-8")
+    ).hexdigest()[:12]
     env.globals["local_records"] = {entry["identifier"]: entry for entry in index}
+    env.globals["corpus_date"] = corpus_date
+    env.globals["corpus_digest"] = corpus_digest
+    env.globals["total_records"] = len(index)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / ".nojekyll").write_text("")
@@ -162,6 +181,22 @@ def render(out_dir: Path) -> None:
     (out_dir / "index.json").write_text(
         json.dumps(index, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
     )
+    (out_dir / "corpus.json").write_text(
+        json.dumps(
+            {
+                "corpus": "CellStructureMech",
+                "record_count": len(records),
+                "corpus_updated": corpus_date,
+                "corpus_digest": corpus_digest,
+                "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
+                "records": [doc for _, doc in records],
+            },
+            indent=1,
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
     embedding_map = json.loads((EMBEDDINGS_DIR / "structure_text_map.json").read_text())
     data_dir = out_dir / "data"
     data_dir.mkdir(exist_ok=True)
@@ -173,6 +208,21 @@ def render(out_dir: Path) -> None:
         ),
         encoding="utf-8",
     )
+    seq_map_path = EMBEDDINGS_DIR / "sequence_map.json"
+    if seq_map_path.exists():
+        seq_map = json.loads(seq_map_path.read_text(encoding="utf-8"))
+        shutil.copy(seq_map_path, data_dir / "sequence_map.json")
+        (out_dir / "sequence-map.html").write_text(
+            env.get_template("sequence_map.html").render(
+                root="",
+                seq_map=seq_map,
+                seq_map_json=json.dumps(seq_map, separators=(",", ":"))
+                .replace("<", "\\u003c")
+                .replace("\u2028", "\\u2028")
+                .replace("\u2029", "\\u2029"),
+            ),
+            encoding="utf-8",
+        )
 
     for cat in categories:
         p = out_dir / cat["page"]

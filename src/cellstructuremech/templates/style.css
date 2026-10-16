@@ -124,12 +124,12 @@ figure.hero figcaption{font-size:.85rem;color:var(--muted);margin-top:.3rem}
    Reworked onto the brand tokens: the original hardcoded #fcfcfc, which is
    invisible against the dark theme's card colour. */
 .machinery { font-style:italic; color:var(--muted); }
-.map-controls { display:flex; flex-wrap:wrap; gap:.5rem; align-items:center; margin:1rem 0 .5rem; }
-.map-controls input, .map-controls select { max-width:100%; min-width:0; font:inherit; color:var(--ink); background:var(--card); }
-.map-legend { display:flex; flex-wrap:wrap; gap:.5rem 1rem; list-style:none; padding:0; }
-.map-legend li { display:flex; align-items:center; gap:.3rem; }
+.map-controls { display:flex; flex-direction:column; gap:.65rem; margin:0 0 .6rem; }
+.map-controls input, .map-controls select { width:100%; max-width:100%; min-width:0; font:inherit; padding:.45rem .55rem; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:6px; }
+.map-legend { display:flex; flex-direction:column; gap:.35rem; list-style:none; padding:0; margin:.35rem 0 0; font-size:.84rem; }
+.map-legend li { display:flex; align-items:center; gap:.4rem; }
 .map-legend li[hidden] { display:none; }
-.map-swatch { display:inline-block; width:1rem; height:1rem; border:1px solid var(--ink); border-radius:50%; }
+.map-swatch { display:inline-block; width:.85rem; height:.85rem; border:1px solid var(--ink); border-radius:50%; flex-shrink:0; }
 .embedding-map { border:1px solid var(--line); border-radius:10px;
                  background:var(--card); min-height:300px; }
 .embedding-map svg { display:block; width:100%; height:auto; }
@@ -137,16 +137,18 @@ figure.hero figcaption{font-size:.85rem;color:var(--muted);margin-top:.3rem}
 .embedding-map a:hover text, .embedding-map a:focus text { text-decoration:underline; font-weight:600; }
 .embedding-map circle { stroke:var(--card); stroke-width:2; }
 .embedding-map text { fill:var(--ink); font-size:15px; }
-.map-details { margin-top:1rem; border-left:4px solid var(--accent); padding:.2rem 1rem; }
+.map-details { margin-top:1rem; border-left:4px solid var(--accent); padding:.2rem 1rem; background:var(--card); border-radius:0 10px 10px 0; }
 .map-details h2, .map-details h3 { margin-bottom:.2rem; }
 
 /* Keep the full catalogue usable without JavaScript and within narrow screens. */
-.record-filters { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; margin: 1rem 0; }
+.record-filters { display: flex; flex-direction: column; gap: .75rem; margin: 0; }
 .record-filters[hidden], #record-empty[hidden], #record-table tr[hidden] { display: none !important; }
-.record-filters > div { min-width: 0; flex: 1 1 12rem; }
-.record-filters label { display: block; font-weight: 600; }
-.record-filters input, .record-filters select, .record-filters button { font: inherit; padding: .55rem; color: inherit; background: var(--card); border: 1px solid var(--line); border-radius: .3rem; max-width: 100%; }
+.record-filters > div { min-width: 0; }
+.record-filters label { display: block; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: .25rem; }
+.record-filters input, .record-filters select, .record-filters button { font: inherit; padding: .48rem .6rem; color: inherit; background: var(--card); border: 1px solid var(--line); border-radius: 6px; max-width: 100%; }
 .record-filters input, .record-filters select { width: 100%; }
+.record-filters button { cursor: pointer; font-weight: 600; color: var(--muted); }
+.record-filters button:hover { color: var(--accent); border-color: var(--accent); }
 .record-filters :focus-visible, .record-table-scroll:focus-visible, .table-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .record-table-scroll, .table-scroll { max-width: 100%; overflow-x: auto; }
 .record-table-scroll table { min-width: 42rem; }
@@ -157,3 +159,31 @@ figure.hero figcaption{font-size:.85rem;color:var(--muted);margin-top:.3rem}
 
 /* Additional evidence images retain their aspect ratio within the record. */
 main figure img { max-width: 100%; height: auto; }
+
+/* ---- Unified sidebar facets, record topbar, and sequence map ---- */
+main.wide { max-width: 1320px; }
+.record-topbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: .4rem; }
+.record-topbar .crumbs { margin: 0; font-size: .88rem; color: var(--muted); }
+.record-search { display: flex; align-items: center; }
+.record-search input { width: 240px; max-width: 100%; padding: .36rem .7rem; font: inherit; font-size: .86rem; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 999px; }
+.record-search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.page-with-sidebar { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 1.5rem; align-items: start; margin-top: 1rem; }
+.facet-sidebar { position: sticky; top: 1rem; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: .75rem; max-height: calc(100vh - 2rem); overflow-y: auto; }
+.facet-form { display: flex; flex-direction: column; gap: .75rem; margin: 0; }
+.facet-group { display: flex; flex-direction: column; gap: .25rem; }
+.facet-title { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 0; }
+.facet-form input, .facet-form select, .facet-form button { width: 100%; font: inherit; font-size: .88rem; padding: .45rem .55rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+.facet-form button { cursor: pointer; font-weight: 600; color: var(--muted); }
+.facet-form button:hover { color: var(--accent); border-color: var(--accent); }
+.results-main { min-width: 0; }
+
+#seq-wrap { position: relative; border: 1px solid var(--line); border-radius: 10px; background: var(--card); overflow: hidden; }
+#seq-canvas { display: block; width: 100%; cursor: grab; }
+#seq-canvas:active { cursor: grabbing; }
+.seq-tip { position: absolute; pointer-events: none; background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: .45rem .65rem; font-size: .82rem; line-height: 1.35; max-width: 280px; box-shadow: 0 4px 14px rgba(0,0,0,.12); z-index: 5; }
+
+@media (max-width: 860px) {
+  .page-with-sidebar { grid-template-columns: 1fr; }
+  .facet-sidebar { position: static; max-height: none; }
+}

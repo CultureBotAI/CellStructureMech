@@ -13,33 +13,45 @@
   <nav>
     <a href="../browse.html">Browse</a>
     <a href="../embedding-map.html">Text map</a>
+    <a href="../sequence-map.html">Sequence map</a>
+    <a href="../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="wide">
 <h1>Division machinery</h1>
 <p>Divisome, Z ring, Min system, elongasome.</p>
-<form id="record-filters" class="record-filters" hidden>
-  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
-  <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option><option value="DIVISION_MACHINERY">Division machinery</option></select></div>
-  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option><option value="MULTIPROTEIN_COMPLEX">Multiprotein complex</option></select></div>
-  <button type="reset">Clear filters</button>
-</form>
-<p id="record-count" role="status" aria-live="polite">2 records</p>
-<p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
-<div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
-<table id="record-table">
-<caption>Records</caption>
-<thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
-<tbody>
-<tr data-category="DIVISION_MACHINERY" data-kind="MULTIPROTEIN_COMPLEX" data-synonyms="Z ring"><td><a href="../structures/division_machinery/divisome_complex.html">divisome complex</a><p class="record-definition">The membrane-associated protein machine that builds the peptidoglycan division septum in FtsZ-dependent bacterial cytokinesis. Membrane-tethered FtsZ filaments organize the division site and help distribute septal synthases; movement during active synthesis is not universally driven by FtsZ treadmilling.</p></td><td><code>GO:1990586</code></td><td>Division machinery</td><td>Multiprotein complex</td><td>Proposed</td></tr>
-<tr data-category="DIVISION_MACHINERY" data-kind="MULTIPROTEIN_COMPLEX" data-synonyms="Rod complex RodA-PBP2 complex"><td><a href="../structures/division_machinery/elongasome.html">elongasome</a><p class="record-definition">The membrane-associated Rod complex that synthesizes lateral peptidoglycan during rod-shaped growth in model bacteria such as Escherichia coli and Bacillus subtilis. Its SEDS-family RodA polymerase works with an elongation-specific class B penicillin-binding transpeptidase, PBP2 in E. coli. Associated MreB filaments orient synthesis, while wall synthesis and filament motion are coupled; this is not a universal mechanism of rod shape in all bacteria.</p></td><td><code>cellstructuremech:elongasome</code></td><td>Division machinery</td><td>Multiprotein complex</td><td>Proposed</td></tr>
-</tbody>
-</table>
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Structure filters">
+    <form id="record-filters" class="record-filters" hidden>
+      <div><label for="record-query">Search records</label><input id="record-query" name="q" type="search" placeholder="Label, identifier, definition…"></div>
+      <div><label for="record-category">Category</label><select id="record-category" name="category"><option value="">All categories</option><option value="DIVISION_MACHINERY">Division machinery</option></select></div>
+      <div><label for="record-kind">Kind</label><select id="record-kind" name="kind"><option value="">All kinds</option><option value="MULTIPROTEIN_COMPLEX">Multiprotein complex</option></select></div>
+      <div><label for="record-status">Mapping status</label><select id="record-status" name="status"><option value="">All statuses</option><option value="PROPOSED">Proposed</option></select></div>
+      <div><label for="record-sort">Sort by</label><select id="record-sort" name="sort"><option value="">Label (A–Z)</option><option value="label-desc">Label (Z–A)</option><option value="id-asc">Identifier (A–Z)</option><option value="category-asc">Category</option><option value="kind-asc">Kind</option><option value="status-asc">Mapping status</option></select></div>
+      <button type="reset">Clear filters</button>
+    </form>
+  </aside>
+  <div class="results-main">
+    <p id="record-count" role="status" aria-live="polite">2 records</p>
+    <p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
+    <div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
+    <table id="record-table">
+    <caption>Records</caption>
+    <thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
+    <tbody>
+    <tr data-label="divisome complex" data-id="go:1990586" data-category="DIVISION_MACHINERY" data-kind="MULTIPROTEIN_COMPLEX" data-status="PROPOSED" data-synonyms="Z ring"><td><a href="../structures/division_machinery/divisome_complex.html">divisome complex</a><p class="record-definition">The membrane-associated protein machine that builds the peptidoglycan division septum in FtsZ-dependent bacterial cytokinesis. Membrane-tethered FtsZ filaments organize the division site and help distribute septal synthases; movement during active synthesis is not universally driven by FtsZ treadmilling.</p></td><td><code>GO:1990586</code></td><td>Division machinery</td><td>Multiprotein complex</td><td>Proposed</td></tr>
+    <tr data-label="elongasome" data-id="cellstructuremech:elongasome" data-category="DIVISION_MACHINERY" data-kind="MULTIPROTEIN_COMPLEX" data-status="PROPOSED" data-synonyms="Rod complex RodA-PBP2 complex"><td><a href="../structures/division_machinery/elongasome.html">elongasome</a><p class="record-definition">The membrane-associated Rod complex that synthesizes lateral peptidoglycan during rod-shaped growth in model bacteria such as Escherichia coli and Bacillus subtilis. Its SEDS-family RodA polymerase works with an elongation-specific class B penicillin-binding transpeptidase, PBP2 in E. coli. Associated MreB filaments orient synthesis, while wall synthesis and filament motion are coupled; this is not a universal mechanism of rod shape in all bacteria.</p></td><td><code>cellstructuremech:elongasome</code></td><td>Division machinery</td><td>Multiprotein complex</td><td>Proposed</td></tr>
+    </tbody>
+    </table>
+    </div>
+  </div>
 </div>
 <script src="../record-browser.js" defer></script></main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../corpus.json">corpus JSON</a> · <a href="../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

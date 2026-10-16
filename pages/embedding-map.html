@@ -13,31 +13,48 @@
   <nav>
     <a href="browse.html">Browse</a>
     <a href="embedding-map.html">Text map</a>
+    <a href="sequence-map.html">Sequence map</a>
+    <a href="corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="wide">
 <h1>Text embedding map</h1>
 <p class="definition">An exploratory semantic view of the corpus. Each point embeds the record's
 definition, canonical components, functions, taxonomic scope, and physical-property context.</p>
 <p class="meta">The committed sentence-transformers/all-MiniLM-L6-v2 vectors are projected with PCA after unit normalization.
 Two-dimensional distance is lossy; use cosine neighbours for the full-vector comparison.</p>
 
-<div class="map-controls">
-  <label for="map-query">Find a structure</label>
-  <input id="map-query" type="search" placeholder="Name or identifier">
-  <label for="map-category">Category</label>
-  <select id="map-category"><option value="">All categories</option></select>
-  <label for="map-record">Matching structures</label>
-  <select id="map-record"><option value="">Select a structure</option></select>
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Text map filters">
+    <div class="map-controls">
+      <div class="facet-group">
+        <label class="facet-title" for="map-query">Find a structure</label>
+        <input id="map-query" type="search" placeholder="Name or identifier">
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="map-category">Category</label>
+        <select id="map-category"><option value="">All categories</option></select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="map-record">Matching structures</label>
+        <select id="map-record"><option value="">Select a structure</option></select>
+      </div>
+    </div>
+    <p id="map-count" class="meta" role="status"></p>
+    <p class="facet-title">Category legend</p>
+    <ul id="map-legend" class="map-legend" aria-label="Structure category colors"></ul>
+  </aside>
+  <div class="results-main">
+    <div id="embedding-map" class="embedding-map" aria-label="Scatter plot of structure text embeddings"></div>
+    <section id="map-details" class="map-details" aria-live="polite">
+      <h2>Select a structure</h2>
+      <p>Choose a point or find a structure in the sidebar to inspect its nearest semantic neighbours. The selected point is labelled. <a href="browse.html">Browse all records as a table</a>.</p>
+    </section>
+  </div>
 </div>
-<p id="map-count" role="status"></p>
-<ul id="map-legend" class="map-legend" aria-label="Structure category colors"></ul>
-<div id="embedding-map" class="embedding-map" aria-label="Scatter plot of structure text embeddings"></div>
-<section id="map-details" class="map-details" aria-live="polite">
-  <h2>Select a structure</h2>
-  <p>Choose a point or find a structure above to inspect its nearest semantic neighbours. The selected point is labelled. <a href="browse.html">Browse all records as a table</a>.</p>
-</section>
 
 <script>
 (() => {
@@ -133,6 +150,11 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
       svg.setAttribute("role", "img");
       svg.setAttribute("aria-label", "PCA projection of structure text embeddings");
       const term = query.value.trim().toLowerCase();
+      if (window.history && window.history.replaceState) {
+        const url = new URL(window.location.href);
+        if (term) url.searchParams.set("q", query.value.trim()); else url.searchParams.delete("q");
+        window.history.replaceState(null, "", url);
+      }
       const matches = map.records.filter(r => (!select.value || r.category === select.value) &&
         (r.label + " " + r.identifier).toLowerCase().includes(term));
       count.textContent = `${matches.length} of ${map.records.length} structures shown`;
@@ -170,6 +192,10 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
       const record = map.records.find(item => item.identifier === recordSelect.value);
       if (record) show(record);
     });
+    if (window.location && window.location.search) {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("q")) query.value = params.get("q");
+    }
     draw();
   }).catch(error => {
     plot.textContent = `Could not load embedding artifacts: ${error.message}`;
@@ -178,7 +204,7 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
 </script>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="corpus.json">corpus JSON</a> · <a href="index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

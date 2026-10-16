@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · glideosome</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>glideosome</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0160055"><code>GO:0160055</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A protein complex composed of at least GAP45 (gliding-associated protein), GAP50 and myosin heavy and light chains. Anchored via GAP50 to the inner membrane complex of motile and invasive forms of apicomplexan parasites and regulates parasite gliding motility and invasion of host cells. <small>[<a href="http://purl.obolibrary.org/obo/GO_0160055"><code>GO:0160055</code></a>]</small></p>
@@ -49,13 +59,13 @@
 <h3 id="causal_graphs-gap50_anchored_glideosome_motor">GAP50 anchors the MyoA glideosome at the IMC <small>(FUNCTION)</small></h3>
 <p>MyoA, MLC1, GAP45 and GAP50 form an apicomplexan actomyosin motor complex that is anchored to the inner membrane complex and supports parasite gliding motility and host-cell invasion.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: GAP50 anchors the MyoA glideosome at the IMC">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>MyoA class XIV myosin heavy chain</td><td>assembles into</td><td>glideosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200311137"><code>DOI:10.1083/jcb.200311137</code></a> <small>Gaskins et al. 2004 identified TgMyoA in the Toxoplasma glideosome complex.</small></li></ul></td></tr>
-<tr><td>glideosome myosin light chains</td><td>assembles into</td><td>glideosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200311137"><code>DOI:10.1083/jcb.200311137</code></a> <small>Gaskins et al. 2004 identified TgMLC1 in the Toxoplasma glideosome complex.</small></li></ul></td></tr>
-<tr><td>Glideosome-associated protein 45</td><td>assembles into</td><td>glideosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200311137"><code>DOI:10.1083/jcb.200311137</code></a> <small>Gaskins et al. 2004 identified TgGAP45 in the Toxoplasma glideosome complex.</small></li></ul></td></tr>
-<tr><td>GAP50 membrane receptor</td><td>anchors</td><td>glideosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200311137"><code>DOI:10.1083/jcb.200311137</code></a> <small>Gaskins et al. 2004 identified TgGAP50 as an integral membrane anchor for the glideosome complex.</small></li></ul></td></tr>
-<tr><td>glideosome</td><td>localizes to</td><td>inner membrane pellicle complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200311137"><code>DOI:10.1083/jcb.200311137</code></a> <small>Gaskins et al. 2004 localized the Toxoplasma glideosome complex to the IMC.</small></li></ul></td></tr>
-<tr><td>glideosome</td><td>supports</td><td>cell surface adhesin-mediated gliding motility</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.mib.2009.06.008"><code>DOI:10.1016/j.mib.2009.06.008</code></a> <small>Daher and Soldati-Favre 2009 review glideosome function in apicomplexan motility.</small></li></ul></td></tr>
-<tr><td>glideosome</td><td>supports</td><td>host-cell invasion</td><td><ul class="evidence"><li><a href="https://doi.org/10.1046/j.1365-2958.2002.03056.x"><code>DOI:10.1046/j.1365-2958.2002.03056.x</code></a> <small>Opitz and Soldati 2002 review the glideosome as a Toxoplasma invasion motor.</small></li><li><a href="https://doi.org/10.1016/j.mib.2009.06.008"><code>DOI:10.1016/j.mib.2009.06.008</code></a> <small>Daher and Soldati-Favre 2009 review glideosome roles in host-cell invasion.</small></li></ul></td></tr>
+<tr><td>MyoA class XIV myosin heavy chain</td><td>assembles into</td><td>glideosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0160055"><code>GO:0160055</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200311137"><code>DOI:10.1083/jcb.200311137</code></a> <small>Gaskins et al. 2004 identified TgMyoA in the Toxoplasma glideosome complex.</small></li></ul></td></tr>
+<tr><td>glideosome myosin light chains</td><td>assembles into</td><td>glideosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0160055"><code>GO:0160055</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200311137"><code>DOI:10.1083/jcb.200311137</code></a> <small>Gaskins et al. 2004 identified TgMLC1 in the Toxoplasma glideosome complex.</small></li></ul></td></tr>
+<tr><td>Glideosome-associated protein 45</td><td>assembles into</td><td>glideosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0160055"><code>GO:0160055</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200311137"><code>DOI:10.1083/jcb.200311137</code></a> <small>Gaskins et al. 2004 identified TgGAP45 in the Toxoplasma glideosome complex.</small></li></ul></td></tr>
+<tr><td>GAP50 membrane receptor</td><td>anchors</td><td>glideosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0160055"><code>GO:0160055</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200311137"><code>DOI:10.1083/jcb.200311137</code></a> <small>Gaskins et al. 2004 identified TgGAP50 as an integral membrane anchor for the glideosome complex.</small></li></ul></td></tr>
+<tr><td>glideosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0160055"><code>GO:0160055</code></a>)</small></td><td>localizes to</td><td>inner membrane pellicle complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0070258"><code>GO:0070258</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200311137"><code>DOI:10.1083/jcb.200311137</code></a> <small>Gaskins et al. 2004 localized the Toxoplasma glideosome complex to the IMC.</small></li></ul></td></tr>
+<tr><td>glideosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0160055"><code>GO:0160055</code></a>)</small></td><td>supports</td><td>cell surface adhesin-mediated gliding motility <small>(<a href="http://purl.obolibrary.org/obo/GO_0071980"><code>GO:0071980</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.mib.2009.06.008"><code>DOI:10.1016/j.mib.2009.06.008</code></a> <small>Daher and Soldati-Favre 2009 review glideosome function in apicomplexan motility.</small></li></ul></td></tr>
+<tr><td>glideosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0160055"><code>GO:0160055</code></a>)</small></td><td>supports</td><td>host-cell invasion</td><td><ul class="evidence"><li><a href="https://doi.org/10.1046/j.1365-2958.2002.03056.x"><code>DOI:10.1046/j.1365-2958.2002.03056.x</code></a> <small>Opitz and Soldati 2002 review the glideosome as a Toxoplasma invasion motor.</small></li><li><a href="https://doi.org/10.1016/j.mib.2009.06.008"><code>DOI:10.1016/j.mib.2009.06.008</code></a> <small>Daher and Soldati-Favre 2009 review glideosome roles in host-cell invasion.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -71,7 +81,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/glideosome.yaml"><code>data/structures/other/glideosome.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · TACC/TOG complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>TACC/TOG complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0070850"><code>GO:0070850</code></a> · Cytoskeleton · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A protein complex that contains the transforming acidic coiled coil (TACC) protein and the TOG protein (Mia1p/Alp7p and Alp14, respectively, in fission yeast), and is involved in microtubule array remodeling as cells progress through the cell cycle. The TACC/TOG complex is conserved in eukaryotes, associates with microtubules, and shuttles between the nucleus and the cytoplasm during interphase. <small>[<a href="http://purl.obolibrary.org/obo/GO_0070850"><code>GO:0070850</code></a>]</small></p>
@@ -68,17 +78,17 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-tacc_tog_association">Purified Alp7-Alp14 association <small>(ASSEMBLY)</small></h3>
 <p>S. pombe purified-protein association supports the binary partnership. This is not an ordered assembly pathway, a native subunit count, or a resolved interface.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Purified Alp7-Alp14 association">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>TACC-family microtubule-associated protein</td><td>binds</td><td>XMAP215</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/srep20653"><code>DOI:10.1038/srep20653</code></a> <small>Full-length proteins co-sediment as a complex; tubulin binding is attributable to Alp14 in the tested assay.</small></li></ul></td></tr>
+<tr><td>TACC-family microtubule-associated protein</td><td>binds</td><td>XMAP215 <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR045110"><code>InterPro:IPR045110</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/srep20653"><code>DOI:10.1038/srep20653</code></a> <small>Full-length proteins co-sediment as a complex; tubulin binding is attributable to Alp14 in the tested assay.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 <h3 id="causal_graphs-tacc_tog_function">Recruitment, nucleation and attachment in fission yeast <small>(FUNCTION)</small></h3>
 <p>S. pombe experiments separate MTOC recruitment/nucleation, plus-end polymerase activity and kinetochore attachment. Ndc80 and the nucleation-site machinery are external context, not extra TACC/TOG subunits.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Recruitment, nucleation and attachment in fission yeast">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>TACC-family microtubule-associated protein</td><td>supports recruitment of</td><td>Alp14 recruited to organizing centers</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cub.2018.04.008"><code>DOI:10.1016/j.cub.2018.04.008</code></a> <small>Localization, deletion and engineered Mto1-bonsai assays distinguish recruitment from elongation.</small></li></ul></td></tr>
-<tr><td>Alp14 recruited to organizing centers</td><td>promotes</td><td>microtubule nucleation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cub.2018.04.008"><code>DOI:10.1016/j.cub.2018.04.008</code></a> <small>The engineered tether is a partial rescue, with expression and construct context limiting quantitative generalization.</small></li></ul></td></tr>
-<tr><td>TACC/TOG complex</td><td>supports</td><td>microtubule plus end polymerase activity</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/srep20653"><code>DOI:10.1038/srep20653</code></a> <small>Figure 7 uses S. pombe proteins/tubulin with labelled pig-brain tubulin and stabilized seeds; the claim is assay-specific.</small></li><li><a href="https://doi.org/10.1016/j.cub.2018.04.008"><code>DOI:10.1016/j.cub.2018.04.008</code></a> <small>The 2018 cellular assays retain normal elongation and Alp14 tip tracking after Alp7 deletion. The authors explicitly contrast this with the earlier reduced-elongation result; the discrepancy remains unresolved.</small></li></ul></td></tr>
+<tr><td>Alp14 recruited to organizing centers</td><td>promotes</td><td>microtubule nucleation <small>(<a href="http://purl.obolibrary.org/obo/GO_0007020"><code>GO:0007020</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cub.2018.04.008"><code>DOI:10.1016/j.cub.2018.04.008</code></a> <small>The engineered tether is a partial rescue, with expression and construct context limiting quantitative generalization.</small></li></ul></td></tr>
+<tr><td>TACC/TOG complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0070850"><code>GO:0070850</code></a>)</small></td><td>supports</td><td>microtubule plus end polymerase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0061863"><code>GO:0061863</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/srep20653"><code>DOI:10.1038/srep20653</code></a> <small>Figure 7 uses S. pombe proteins/tubulin with labelled pig-brain tubulin and stabilized seeds; the claim is assay-specific.</small></li><li><a href="https://doi.org/10.1016/j.cub.2018.04.008"><code>DOI:10.1016/j.cub.2018.04.008</code></a> <small>The 2018 cellular assays retain normal elongation and Alp14 tip tracking after Alp7 deletion. The authors explicitly contrast this with the earlier reduced-elongation result; the discrepancy remains unresolved.</small></li></ul></td></tr>
 <tr><td>Ndc80 kinetochore docking context</td><td>supports recruitment of</td><td>Kinetochore-associated Alp7/Alp14</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E12-11-0817"><code>DOI:10.1091/mbc.E12-11-0817</code></a> <small>Kinetochore signals decrease while spindle-pole localization is retained; full-complex geometry remains unresolved.</small></li></ul></td></tr>
-<tr><td>Kinetochore-associated Alp7/Alp14</td><td>supports</td><td>attachment of mitotic spindle microtubules to kinetochore</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E12-11-0817"><code>DOI:10.1091/mbc.E12-11-0817</code></a> <small>The forced fusion is a functional perturbation, not a native stoichiometric complex.</small></li></ul></td></tr>
+<tr><td>Kinetochore-associated Alp7/Alp14</td><td>supports</td><td>attachment of mitotic spindle microtubules to kinetochore <small>(<a href="http://purl.obolibrary.org/obo/GO_0051315"><code>GO:0051315</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E12-11-0817"><code>DOI:10.1091/mbc.E12-11-0817</code></a> <small>The forced fusion is a functional perturbation, not a native stoichiometric complex.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 <h3 id="causal_graphs-tacc_tog_transport">CDK-linked nuclear accumulation in closed mitosis <small>(REGULATION)</small></h3>
@@ -87,8 +97,8 @@ family; these are the specific entries behind it.</small></p>
 <tr><td>Mitotic CDK activity</td><td>promotes phosphorylation of</td><td>N-terminally phosphorylated Alp7</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E13-11-0679"><code>DOI:10.1091/mbc.E13-11-0679</code></a> <small>S50, S51, T100, T116 and T131 form the tested five-site alanine mutant; phosphorylation is reduced rather than necessarily eliminated.</small></li></ul></td></tr>
 <tr><td>N-terminally phosphorylated Alp7</td><td>promotes mitotic accumulation of</td><td>Nuclear Alp7/Alp14 accumulation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E13-11-0679"><code>DOI:10.1091/mbc.E13-11-0679</code></a> <small>Leptomycin B permits delayed mutant nuclear accumulation; truncated-fragment two-hybrid results do not resolve full native importin binding.</small></li></ul></td></tr>
 <tr><td>TACC-family microtubule-associated protein</td><td>supports import of</td><td>Nuclear Alp7/Alp14 accumulation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E13-11-0679"><code>DOI:10.1091/mbc.E13-11-0679</code></a> <small>Transport analysis separates the Alp7 NLS from mitotic accumulation control.</small></li></ul></td></tr>
-<tr><td>XMAP215</td><td>supports export toward</td><td>Cytoplasmic Alp7/Alp14 pool</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E13-11-0679"><code>DOI:10.1091/mbc.E13-11-0679</code></a> <small>Alp14 residues 601-620 confer export in a reporter; a direct resolved NES-Crm1 interface is not claimed.</small></li></ul></td></tr>
-<tr><td>Nuclear Alp7/Alp14 accumulation</td><td>supports</td><td>mitotic spindle assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E13-11-0679"><code>DOI:10.1091/mbc.E13-11-0679</code></a> <small>CDK-site localization and spindle phenotypes provide functional evidence in fission-yeast closed mitosis.</small></li></ul></td></tr>
+<tr><td>XMAP215 <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR045110"><code>InterPro:IPR045110</code></a>)</small></td><td>supports export toward</td><td>Cytoplasmic Alp7/Alp14 pool</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E13-11-0679"><code>DOI:10.1091/mbc.E13-11-0679</code></a> <small>Alp14 residues 601-620 confer export in a reporter; a direct resolved NES-Crm1 interface is not claimed.</small></li></ul></td></tr>
+<tr><td>Nuclear Alp7/Alp14 accumulation</td><td>supports</td><td>mitotic spindle assembly <small>(<a href="http://purl.obolibrary.org/obo/GO_0090307"><code>GO:0090307</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E13-11-0679"><code>DOI:10.1091/mbc.E13-11-0679</code></a> <small>CDK-site localization and spindle phenotypes provide functional evidence in fission-yeast closed mitosis.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -104,7 +114,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/tacc_tog_complex.yaml"><code>data/structures/cytoskeleton/tacc_tog_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

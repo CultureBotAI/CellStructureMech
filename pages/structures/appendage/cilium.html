@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/appendage.html">Appendage</a> · cilium</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>cilium</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005929"><code>GO:0005929</code></a> · Appendage · Appendage · <span class="status">Proposed</span></p>
 <p class="definition">A specialized eukaryotic organelle that consists of a filiform extrusion of the cell surface and of some cytoplasmic parts; it is largely bounded by an extrusion of the plasma membrane, contains a longitudinal microtubule array, and is anchored to a basal body. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005929"><code>GO:0005929</code></a>]</small></p>
@@ -50,12 +60,12 @@
 <h3 id="causal_graphs-ift_builds_membrane_sheathed_axoneme">Intraflagellar transport builds the ciliary axoneme <small>(ASSEMBLY)</small></h3>
 <p>A basal body seeds axoneme extension, a transition-zone gate organizes entry into the membrane-bounded ciliary compartment, and intraflagellar-transport particles move cargo along axonemal microtubules for cilium assembly.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Intraflagellar transport builds the ciliary axoneme">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>ciliary basal body</td><td>nucleates</td><td>axoneme</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036064"><code>GO:0036064</code></a> <small>GO:0036064 defines the ciliary basal body as the axoneme-growth nucleation site.</small></li></ul></td></tr>
-<tr><td>axoneme</td><td>forms core of</td><td>cilium</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1128618"><code>DOI:10.1126/science.1128618</code></a> <small>Nicastro et al. 2006 resolved the axonemal core from Chlamydomonas flagella.</small></li></ul></td></tr>
-<tr><td>ciliary membrane</td><td>bounds</td><td>cilium</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0060170"><code>GO:0060170</code></a> <small>GO:0060170 defines the ciliary membrane as the plasma-membrane portion around the cilium.</small></li></ul></td></tr>
-<tr><td>ciliary transition zone</td><td>gates entry into</td><td>cilium</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035869"><code>GO:0035869</code></a> <small>GO:0035869 identifies the ciliary transition zone as a membrane-linked ciliary gate.</small></li></ul></td></tr>
-<tr><td>intraciliary transport particle</td><td>transports cargo along</td><td>axoneme</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrm952"><code>DOI:10.1038/nrm952</code></a> <small>Rosenbaum and Witman 2002 review bidirectional IFT-particle transport along the Chlamydomonas axoneme.</small></li></ul></td></tr>
-<tr><td>intraciliary transport particle</td><td>supports</td><td>cilium assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrm952"><code>DOI:10.1038/nrm952</code></a> <small>Rosenbaum and Witman 2002 review IFT as a requirement for cilium and flagellum assembly and maintenance.</small></li></ul></td></tr>
+<tr><td>ciliary basal body <small>(<a href="http://purl.obolibrary.org/obo/GO_0036064"><code>GO:0036064</code></a>)</small></td><td>nucleates</td><td>axoneme <small>(<a href="http://purl.obolibrary.org/obo/GO_0005930"><code>GO:0005930</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036064"><code>GO:0036064</code></a> <small>GO:0036064 defines the ciliary basal body as the axoneme-growth nucleation site.</small></li></ul></td></tr>
+<tr><td>axoneme <small>(<a href="http://purl.obolibrary.org/obo/GO_0005930"><code>GO:0005930</code></a>)</small></td><td>forms core of</td><td>cilium <small>(<a href="http://purl.obolibrary.org/obo/GO_0005929"><code>GO:0005929</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1128618"><code>DOI:10.1126/science.1128618</code></a> <small>Nicastro et al. 2006 resolved the axonemal core from Chlamydomonas flagella.</small></li></ul></td></tr>
+<tr><td>ciliary membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0060170"><code>GO:0060170</code></a>)</small></td><td>bounds</td><td>cilium <small>(<a href="http://purl.obolibrary.org/obo/GO_0005929"><code>GO:0005929</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0060170"><code>GO:0060170</code></a> <small>GO:0060170 defines the ciliary membrane as the plasma-membrane portion around the cilium.</small></li></ul></td></tr>
+<tr><td>ciliary transition zone <small>(<a href="http://purl.obolibrary.org/obo/GO_0035869"><code>GO:0035869</code></a>)</small></td><td>gates entry into</td><td>cilium <small>(<a href="http://purl.obolibrary.org/obo/GO_0005929"><code>GO:0005929</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035869"><code>GO:0035869</code></a> <small>GO:0035869 identifies the ciliary transition zone as a membrane-linked ciliary gate.</small></li></ul></td></tr>
+<tr><td>intraciliary transport particle <small>(<a href="http://purl.obolibrary.org/obo/GO_0030990"><code>GO:0030990</code></a>)</small></td><td>transports cargo along</td><td>axoneme <small>(<a href="http://purl.obolibrary.org/obo/GO_0005930"><code>GO:0005930</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrm952"><code>DOI:10.1038/nrm952</code></a> <small>Rosenbaum and Witman 2002 review bidirectional IFT-particle transport along the Chlamydomonas axoneme.</small></li></ul></td></tr>
+<tr><td>intraciliary transport particle <small>(<a href="http://purl.obolibrary.org/obo/GO_0030990"><code>GO:0030990</code></a>)</small></td><td>supports</td><td>cilium assembly <small>(<a href="http://purl.obolibrary.org/obo/GO_0060271"><code>GO:0060271</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrm952"><code>DOI:10.1038/nrm952</code></a> <small>Rosenbaum and Witman 2002 review IFT as a requirement for cilium and flagellum assembly and maintenance.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -71,7 +81,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/cilium.yaml"><code>data/structures/appendage/cilium.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

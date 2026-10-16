@@ -9,6 +9,12 @@
 </figure>{% endmacro %}
 {% macro evid(items) %}{% if items %}<ul class="evidence">{% for e in items %}<li>{{ curie(e.reference) }}{% if e.snippet %} — <q>{{ e.snippet }}</q>{% endif %}{% if e.notes %} <small>{{ e.notes }}</small>{% endif %}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
 {% block content %}
+<div class="record-topbar">
+  <p class="crumbs"><a href="{{ root }}browse.html">Browse</a> · <a href="{{ root }}category/{{ r.structure_category | lower }}.html">{{ r.structure_category | replace('_', ' ') | lower | capitalize }}</a> · {{ r.label }}</p>
+  <form class="record-search" action="{{ root }}browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>{{ r.label }}</h1>
 <p class="meta">{{ curie(r.identifier) }} · {{ r.structure_category | replace('_', ' ') | lower | capitalize }}{% if r.structure_kind %} · {{ r.structure_kind | replace('_', ' ') | lower | capitalize }}{% endif %} · <span class="status">{{ r.mapping_status | replace('_', ' ') | lower | capitalize }}</span></p>
 {% if r.definition %}<p class="definition">{{ r.definition }}{% if r.definition_source %} <small>[{{ curie(r.definition_source) }}]</small>{% endif %}</p>{% endif %}
@@ -111,7 +117,7 @@ family; these are the specific entries behind it.</small></p>
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 {% set nodes = {} %}{% for n in g.nodes %}{% set _ = nodes.update({n.node_id: n}) %}{% endfor %}
 {% for e in g.edges %}
-<tr><td>{{ nodes[e.subject].label if e.subject in nodes else e.subject }}</td><td>{{ e.predicate }}{% if e.predicate_id %} <small>{{ curie(e.predicate_id) }}</small>{% endif %}</td><td>{{ nodes[e.object].label if e.object in nodes else e.object }}</td><td>{{ evid(e.evidence) }}</td></tr>
+<tr><td>{% if e.subject in nodes %}{{ nodes[e.subject].label }}{% if nodes[e.subject].grounding %} <small>({{ curie(nodes[e.subject].grounding) }})</small>{% endif %}{% else %}{{ e.subject }}{% endif %}</td><td>{{ e.predicate }}{% if e.predicate_id %} <small>{{ curie(e.predicate_id) }}</small>{% endif %}</td><td>{% if e.object in nodes %}{{ nodes[e.object].label }}{% if nodes[e.object].grounding %} <small>({{ curie(nodes[e.object].grounding) }})</small>{% endif %}{% else %}{{ e.object }}{% endif %}</td><td>{{ evid(e.evidence) }}</td></tr>
 {% endfor %}
 </tbody></table>
 </div>

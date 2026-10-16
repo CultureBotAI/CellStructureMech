@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/appendage.html">Appendage</a> · ciliary transition zone</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>ciliary transition zone</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0035869"><code>GO:0035869</code></a> · Appendage · Subcellular region · <span class="status">Proposed</span></p>
 <p class="definition">A region of the cilium between the basal body and proximal segment that is characterized by Y-shaped assemblages that connect axonemal microtubules to the ciliary membrane. The ciliary transition zone appears to function as a gate that controls ciliary membrane composition and separates the cytosol from the ciliary plasm. <small>[<a href="http://purl.obolibrary.org/obo/GO_0035869"><code>GO:0035869</code></a>]</small></p>
@@ -48,9 +58,9 @@
 <h3 id="causal_graphs-ciliary_transition_zone_gates_ciliary_compartment">Ciliary transition zone gates the ciliary compartment <small>(FUNCTION)</small></h3>
 <p>Transition-zone Y-linkers and proteins organize a gate between axonemal microtubules and the ciliary membrane at the proximal cilium.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Ciliary transition zone gates the ciliary compartment">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Y-shaped link</td><td>connect</td><td>transition-zone axonemal microtubules</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035869"><code>GO:0035869</code></a> <small>GO:0035869 defines Y-shaped assemblages that connect axonemal microtubules to the ciliary membrane.</small></li></ul></td></tr>
-<tr><td>Y-shaped link</td><td>tether to</td><td>ciliary membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201006105"><code>DOI:10.1083/jcb.201006105</code></a> <small>Craige et al. 2010 used Chlamydomonas cep290 mutants to link a transition-zone protein to normal microtubule-membrane connections.</small></li></ul></td></tr>
-<tr><td>ciliary transition zone</td><td>is part of</td><td>cilium</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035869"><code>GO:0035869</code></a> <small>GO relates the ciliary transition zone as part of the cilium.</small></li></ul></td></tr>
+<tr><td>Y-shaped link <small>(<a href="http://purl.obolibrary.org/obo/GO_0097537"><code>GO:0097537</code></a>)</small></td><td>connect</td><td>transition-zone axonemal microtubules</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035869"><code>GO:0035869</code></a> <small>GO:0035869 defines Y-shaped assemblages that connect axonemal microtubules to the ciliary membrane.</small></li></ul></td></tr>
+<tr><td>Y-shaped link <small>(<a href="http://purl.obolibrary.org/obo/GO_0097537"><code>GO:0097537</code></a>)</small></td><td>tether to</td><td>ciliary membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0060170"><code>GO:0060170</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201006105"><code>DOI:10.1083/jcb.201006105</code></a> <small>Craige et al. 2010 used Chlamydomonas cep290 mutants to link a transition-zone protein to normal microtubule-membrane connections.</small></li></ul></td></tr>
+<tr><td>ciliary transition zone <small>(<a href="http://purl.obolibrary.org/obo/GO_0035869"><code>GO:0035869</code></a>)</small></td><td>is part of</td><td>cilium <small>(<a href="http://purl.obolibrary.org/obo/GO_0005929"><code>GO:0005929</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035869"><code>GO:0035869</code></a> <small>GO relates the ciliary transition zone as part of the cilium.</small></li></ul></td></tr>
 <tr><td>transition-zone protein network</td><td>gates</td><td>ciliary protein pool</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-31751-0"><code>DOI:10.1038/s41467-022-31751-0</code></a> <small>Wang et al. 2022 compared ciliary composition after disrupting Chlamydomonas TCTN1, CEP290 and NPHP4 transition-zone proteins.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -67,7 +77,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/ciliary_transition_zone.yaml"><code>data/structures/appendage/ciliary_transition_zone.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

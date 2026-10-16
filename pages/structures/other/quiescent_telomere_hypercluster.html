@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · quiescent telomere hypercluster</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>quiescent telomere hypercluster</h1>
 <p class="meta"><code>cellstructuremech:quiescent_telomere_hypercluster</code> · Other · Nucleoprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A nuclear assembly in which multiple chromosome ends and associated subtelomeric chromatin coalesce into fewer enlarged foci during quiescence, characterized in Saccharomyces cerevisiae and Schizosaccharomyces pombe. Nuclear position and assembly requirements depend on species, strain and starvation conditions. <small>[<a href="https://doi.org/10.1186/s13059-015-0766-2"><code>DOI:10.1186/s13059-015-0766-2</code></a>]</small></p>
@@ -30,8 +40,8 @@
 <h2>Components</h2>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
-<tr id="components-telomeric_dna"><td>telomere</td><td>Dna</td><td>part of</td><td><code>SO:0000624</code></td><td></td><td></td><td>UNKNOWN</td><td>Chromosome-end DNA brought together within the nuclear assembly.<ul class="evidence"><li><a href="https://doi.org/10.1093/nar/gkaa043"><code>DOI:10.1093/nar/gkaa043</code></a> <small>Taz1-marked chromosome ends form fewer, brighter foci on nitrogen starvation; this is not a claim that every chromosome end is individually resolved.</small></li></ul></td></tr>
-<tr id="components-subtelomeric_dna"><td>subtelomere</td><td>Dna</td><td>part of</td><td><code>SO:0001997</code></td><td></td><td></td><td>UNKNOWN</td><td>Subtelomeric DNA associated with the coalescing chromosome ends.<ul class="evidence"><li><a href="https://doi.org/10.1186/s13059-015-0766-2"><code>DOI:10.1186/s13059-015-0766-2</code></a> <small>Y-prime FISH and chromosome-contact mapping establish subtelomeric association; a Y-prime probe does not label every chromosome end equally.</small></li></ul></td></tr>
+<tr id="components-telomeric_dna"><td>telomere</td><td>Dna</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/SO_0000624"><code>SO:0000624</code></a></td><td></td><td></td><td>UNKNOWN</td><td>Chromosome-end DNA brought together within the nuclear assembly.<ul class="evidence"><li><a href="https://doi.org/10.1093/nar/gkaa043"><code>DOI:10.1093/nar/gkaa043</code></a> <small>Taz1-marked chromosome ends form fewer, brighter foci on nitrogen starvation; this is not a claim that every chromosome end is individually resolved.</small></li></ul></td></tr>
+<tr id="components-subtelomeric_dna"><td>subtelomere</td><td>Dna</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/SO_0001997"><code>SO:0001997</code></a></td><td></td><td></td><td>UNKNOWN</td><td>Subtelomeric DNA associated with the coalescing chromosome ends.<ul class="evidence"><li><a href="https://doi.org/10.1186/s13059-015-0766-2"><code>DOI:10.1186/s13059-015-0766-2</code></a> <small>Y-prime FISH and chromosome-contact mapping establish subtelomeric association; a Y-prime probe does not label every chromosome end equally.</small></li></ul></td></tr>
 <tr id="components-nucleosome"><td>nucleosome</td><td>Other</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0000786"><code>GO:0000786</code></a></td><td></td><td></td><td>UNKNOWN</td><td>DNA-histone packing unit of the associated subtelomeric chromatin.<ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E16-01-0069"><code>DOI:10.1091/mbc.E16-01-0069</code></a> <small>Histone H4 tail and K16 substitutions implicate nucleosomal chromatin in hypercluster formation. This is a chromatin-class assertion, not an isoform-specific localization or copy-number measurement.</small></li></ul></td></tr>
 <tr id="components-sirtuin"><td>Sirtuin family</td><td>Protein</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR003000"><code>InterPro:IPR003000</code></a></td><td>SIR2</td><td></td><td>UNKNOWN</td><td>Sir2-class chromatin factor detected in budding-yeast telomere hyperclusters.<ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E16-01-0069"><code>DOI:10.1091/mbc.E16-01-0069</code></a> <small>Sir2-GFP overlaps telomeric FISH and Sir3/Rap1 foci; sir2 deletion impairs formation in the tested background. Separate nucleolar Sir2 signal must not be called a telomere cluster.</small></li></ul></td></tr>
 <tr id="components-sir3"><td>Sir3-like silencing protein</td><td>Protein</td><td>part of</td><td><em title="The component label was reviewed; no accession grounding is asserted.">Reviewed label only</em><small> (reviewed name; no accession asserted)</small></td><td>SIR3</td><td></td><td>UNKNOWN</td><td>Budding-yeast chromatin constituent supporting telomere coalescence.<ul class="evidence"><li><a href="https://doi.org/10.1186/s13059-015-0766-2"><code>DOI:10.1186/s13059-015-0766-2</code></a> <small>Sir3-GFP clusters with telomeres; sir3 deletion removes hyperclustering and increased intertelomeric contacts. Requirement does not prove increased Sir3 abundance or a unique molecular crosslinking reaction.</small></li></ul></td></tr>
@@ -167,7 +177,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/quiescent_telomere_hypercluster.yaml"><code>data/structures/other/quiescent_telomere_hypercluster.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

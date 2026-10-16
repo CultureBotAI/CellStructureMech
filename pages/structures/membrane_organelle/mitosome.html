@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · mitosome</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>mitosome</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0032047"><code>GO:0032047</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span></p>
 <p class="definition">A double-membrane-bounded organelle that functions in iron-sulfur protein maturation; evolutionarily derived from mitochondria. The mitosome has been detected only in anaerobic or microaerophilic organisms that do not have mitochondria, such as Entamoeba histolytica, Giardia intestinalis and several species of Microsporidia. These organisms are not capable of gaining energy from oxidative phosphorylation, which is normally performed by mitochondria. <small>[<a href="http://purl.obolibrary.org/obo/GO_0032047"><code>GO:0032047</code></a>]</small></p>
@@ -47,9 +57,9 @@
 <h3 id="causal_graphs-mitosomal_isc_assembly">Mitosomal import supports iron-sulfur cluster assembly <small>(FUNCTION)</small></h3>
 <p>A double mitosomal envelope encloses imported mitochondrial-type ISC proteins that drive iron-sulfur cluster assembly in the reduced organelle.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Mitosomal import supports iron-sulfur cluster assembly">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>mitosomal double-membrane envelope</td><td>bounds</td><td>mitosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1046/j.1365-2958.1999.01414.x"><code>DOI:10.1046/j.1365-2958.1999.01414.x</code></a> <small>Tovar et al. 1999 defined the Entamoeba mitosome as a mitochondrion-related organelle.</small></li><li><a href="https://www.uniprot.org/locations/SL-0438"><code>uniprot.location:SL-0438</code></a> — Mitosome envelope <small>UniProt SL-0438 identifies the mitosome envelope as the inner and outer mitosomal membranes plus intermembrane space.</small></li></ul></td></tr>
+<tr><td>mitosomal double-membrane envelope <small>(<code>cellstructuremech:mitosome_envelope</code>)</small></td><td>bounds</td><td>mitosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0032047"><code>GO:0032047</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1046/j.1365-2958.1999.01414.x"><code>DOI:10.1046/j.1365-2958.1999.01414.x</code></a> <small>Tovar et al. 1999 defined the Entamoeba mitosome as a mitochondrion-related organelle.</small></li><li><a href="https://www.uniprot.org/locations/SL-0438"><code>uniprot.location:SL-0438</code></a> — Mitosome envelope <small>UniProt SL-0438 identifies the mitosome envelope as the inner and outer mitosomal membranes plus intermembrane space.</small></li></ul></td></tr>
 <tr><td>mitosomal protein-import machinery</td><td>imports</td><td>mitosomal iron-sulfur cluster assembly machinery</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.0500349102"><code>DOI:10.1073/pnas.0500349102</code></a> <small>Dolezal et al. 2005 tested Giardia mitosomal protein targeting using N-terminal targeting sequences.</small></li></ul></td></tr>
-<tr><td>mitosomal iron-sulfur cluster assembly machinery</td><td>resides in</td><td>mitosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature06606"><code>DOI:10.1038/nature06606</code></a> <small>Goldberg et al. 2008 localized functional ISC proteins to microsporidian mitosomes.</small></li></ul></td></tr>
+<tr><td>mitosomal iron-sulfur cluster assembly machinery</td><td>resides in</td><td>mitosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0032047"><code>GO:0032047</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature06606"><code>DOI:10.1038/nature06606</code></a> <small>Goldberg et al. 2008 localized functional ISC proteins to microsporidian mitosomes.</small></li></ul></td></tr>
 <tr><td>mitosomal iron-sulfur cluster assembly machinery</td><td>supports</td><td>iron-sulfur cluster assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature01945"><code>DOI:10.1038/nature01945</code></a> <small>Tovar et al. 2003 showed that Giardia mitosomes function in iron-sulfur protein maturation.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -66,7 +76,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/mitosome.yaml"><code>data/structures/membrane_organelle/mitosome.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
