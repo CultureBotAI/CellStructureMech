@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/appendage.html">Appendage</a> · mating projection</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>mating projection</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005937"><code>GO:0005937</code></a> · Appendage · Appendage · <span class="status">Proposed</span></p>
 <p class="definition">The projection formed by unicellular fungi in response to mating pheromone. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005937"><code>GO:0005937</code></a>]</small></p>
@@ -40,13 +50,13 @@
 <h3 id="causal_graphs-mating_projection_polarity_topology">Mating-projection polarity topology <small>(FUNCTION)</small></h3>
 <p>The fungal mating projection has a surrounding membrane, a polarized-growth tip, a basal region, septin structures at the neck, and a tip-localized polarisome.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Mating-projection polarity topology">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>mating projection membrane</td><td>surrounds</td><td>mating projection</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070250"><code>GO:0070250</code></a> <small>GO:0070250 identifies the mating projection membrane.</small></li></ul></td></tr>
-<tr><td>mating projection tip membrane</td><td>is part of</td><td>mating projection tip</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070867"><code>GO:0070867</code></a> <small>GO:0070867 identifies the membrane portion surrounding the mating projection tip.</small></li></ul></td></tr>
-<tr><td>mating projection tip</td><td>is part of</td><td>mating projection</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0043332"><code>GO:0043332</code></a> <small>GO:0043332 identifies the mating projection tip as a part of the mating projection.</small></li></ul></td></tr>
-<tr><td>mating projection base</td><td>is part of</td><td>mating projection</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001400"><code>GO:0001400</code></a> <small>GO:0001400 identifies the mating projection base as a part of the mating projection.</small></li></ul></td></tr>
-<tr><td>mating projection septin ring</td><td>is part of</td><td>mating projection</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032175"><code>GO:0032175</code></a> <small>GO:0032175 identifies the mating projection septin ring as a part of the mating projection.</small></li><li><a href="https://doi.org/10.1128/EC.4.9.1503-1512.2005"><code>DOI:10.1128/EC.4.9.1503-1512.2005</code></a> <small>Douglas et al. 2005 reviewed septin structures at yeast shmoo necks.</small></li></ul></td></tr>
-<tr><td>mating projection septin band</td><td>is part of</td><td>mating projection</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032162"><code>GO:0032162</code></a> <small>GO:0032162 identifies the mating projection septin band as a part of the mating projection.</small></li></ul></td></tr>
-<tr><td>mating projection tip polarisome</td><td>localizes to</td><td>mating projection tip</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031563"><code>GO:0031563</code></a> <small>GO:0031563 identifies the polarisome localized to the mating projection tip.</small></li><li><a href="https://doi.org/10.1083/jcb.200307065"><code>DOI:10.1083/jcb.200307065</code></a> <small>Bidlingmaier and Snyder 2004 studied Spa2, Pea2, and Bni1 polarisome components in yeast mating projections.</small></li></ul></td></tr>
+<tr><td>mating projection membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0070250"><code>GO:0070250</code></a>)</small></td><td>surrounds</td><td>mating projection <small>(<a href="http://purl.obolibrary.org/obo/GO_0005937"><code>GO:0005937</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070250"><code>GO:0070250</code></a> <small>GO:0070250 identifies the mating projection membrane.</small></li></ul></td></tr>
+<tr><td>mating projection tip membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0070867"><code>GO:0070867</code></a>)</small></td><td>is part of</td><td>mating projection tip <small>(<a href="http://purl.obolibrary.org/obo/GO_0043332"><code>GO:0043332</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070867"><code>GO:0070867</code></a> <small>GO:0070867 identifies the membrane portion surrounding the mating projection tip.</small></li></ul></td></tr>
+<tr><td>mating projection tip <small>(<a href="http://purl.obolibrary.org/obo/GO_0043332"><code>GO:0043332</code></a>)</small></td><td>is part of</td><td>mating projection <small>(<a href="http://purl.obolibrary.org/obo/GO_0005937"><code>GO:0005937</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0043332"><code>GO:0043332</code></a> <small>GO:0043332 identifies the mating projection tip as a part of the mating projection.</small></li></ul></td></tr>
+<tr><td>mating projection base <small>(<a href="http://purl.obolibrary.org/obo/GO_0001400"><code>GO:0001400</code></a>)</small></td><td>is part of</td><td>mating projection <small>(<a href="http://purl.obolibrary.org/obo/GO_0005937"><code>GO:0005937</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001400"><code>GO:0001400</code></a> <small>GO:0001400 identifies the mating projection base as a part of the mating projection.</small></li></ul></td></tr>
+<tr><td>mating projection septin ring <small>(<a href="http://purl.obolibrary.org/obo/GO_0032175"><code>GO:0032175</code></a>)</small></td><td>is part of</td><td>mating projection <small>(<a href="http://purl.obolibrary.org/obo/GO_0005937"><code>GO:0005937</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032175"><code>GO:0032175</code></a> <small>GO:0032175 identifies the mating projection septin ring as a part of the mating projection.</small></li><li><a href="https://doi.org/10.1128/EC.4.9.1503-1512.2005"><code>DOI:10.1128/EC.4.9.1503-1512.2005</code></a> <small>Douglas et al. 2005 reviewed septin structures at yeast shmoo necks.</small></li></ul></td></tr>
+<tr><td>mating projection septin band <small>(<a href="http://purl.obolibrary.org/obo/GO_0032162"><code>GO:0032162</code></a>)</small></td><td>is part of</td><td>mating projection <small>(<a href="http://purl.obolibrary.org/obo/GO_0005937"><code>GO:0005937</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032162"><code>GO:0032162</code></a> <small>GO:0032162 identifies the mating projection septin band as a part of the mating projection.</small></li></ul></td></tr>
+<tr><td>mating projection tip polarisome <small>(<a href="http://purl.obolibrary.org/obo/GO_0031563"><code>GO:0031563</code></a>)</small></td><td>localizes to</td><td>mating projection tip <small>(<a href="http://purl.obolibrary.org/obo/GO_0043332"><code>GO:0043332</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031563"><code>GO:0031563</code></a> <small>GO:0031563 identifies the polarisome localized to the mating projection tip.</small></li><li><a href="https://doi.org/10.1083/jcb.200307065"><code>DOI:10.1083/jcb.200307065</code></a> <small>Bidlingmaier and Snyder 2004 studied Spa2, Pea2, and Bni1 polarisome components in yeast mating projections.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -62,7 +72,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/mating_projection.yaml"><code>data/structures/appendage/mating_projection.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

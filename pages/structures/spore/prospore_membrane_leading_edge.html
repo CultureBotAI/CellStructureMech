@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/spore.html">Spore</a> · prospore membrane leading edge</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>prospore membrane leading edge</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a> · Spore · Subcellular region · <span class="status">Proposed</span></p>
 <p class="definition">The region of the prospore membrane that extends to surround the spore nucleus; coated with specific proteins that are thought to play a role in prospore membrane organization. <small>[<a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a>]</small></p>
@@ -46,9 +56,9 @@
 <h3 id="causal_graphs-leading_edge_coat_marks_prospore_membrane_rim">Leading-edge coat proteins mark the open prospore membrane rim <small>(ASSEMBLY)</small></h3>
 <p>The leading-edge protein coat localizes to the protein-coated region at the open lip of the extending prospore membrane in budding yeast.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Leading-edge coat proteins mark the open prospore membrane rim">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>prospore membrane leading edge protein coat</td><td>localizes to</td><td>prospore membrane leading edge</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/20.24.6946"><code>DOI:10.1093/emboj/20.24.6946</code></a> <small>Moreno-Borchart et al. 2001 tied LEP coat assembly to formation of the growing prospore membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a> <small>GO:0070056 describes a protein-coated leading-edge region on the prospore membrane.</small></li></ul></td></tr>
-<tr><td>prospore membrane leading edge</td><td>is part of</td><td>prospore membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a> <small>GO:0070056 identifies the prospore membrane leading edge.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005628"><code>GO:0005628</code></a> <small>GO:0005628 identifies the parent prospore membrane.</small></li></ul></td></tr>
-<tr><td>prospore membrane leading edge</td><td>extends around</td><td>haploid meiotic nucleus</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a> <small>GO:0070056 defines the leading edge as the region of the prospore membrane that extends to surround the spore nucleus.</small></li></ul></td></tr>
+<tr><td>prospore membrane leading edge protein coat</td><td>localizes to</td><td>prospore membrane leading edge <small>(<a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/20.24.6946"><code>DOI:10.1093/emboj/20.24.6946</code></a> <small>Moreno-Borchart et al. 2001 tied LEP coat assembly to formation of the growing prospore membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a> <small>GO:0070056 describes a protein-coated leading-edge region on the prospore membrane.</small></li></ul></td></tr>
+<tr><td>prospore membrane leading edge <small>(<a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a>)</small></td><td>is part of</td><td>prospore membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005628"><code>GO:0005628</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a> <small>GO:0070056 identifies the prospore membrane leading edge.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005628"><code>GO:0005628</code></a> <small>GO:0005628 identifies the parent prospore membrane.</small></li></ul></td></tr>
+<tr><td>prospore membrane leading edge <small>(<a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a>)</small></td><td>extends around</td><td>haploid meiotic nucleus</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070056"><code>GO:0070056</code></a> <small>GO:0070056 defines the leading edge as the region of the prospore membrane that extends to surround the spore nucleus.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -64,7 +74,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/spore/prospore_membrane_leading_edge.yaml"><code>data/structures/spore/prospore_membrane_leading_edge.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

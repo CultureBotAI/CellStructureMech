@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · nucleolus</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>nucleolus</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a> · Other · Other · <span class="status">Proposed</span></p>
 <p class="definition">A dense, non-membrane-bounded body in the eukaryotic nuclear lumen that concentrates ribosomal DNA transcription, pre-rRNA processing, and early ribosomal subunit assembly. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a>]</small></p>
@@ -49,11 +59,11 @@
 <h3 id="causal_graphs-yeast_nucleolar_ribosome_biogenesis">Nucleolar RNPs support ribosome biogenesis <small>(FUNCTION)</small></h3>
 <p>In the Saccharomyces cerevisiae nucleolus, RNA polymerase I transcribes rDNA within nucleolar chromatin while snoRNP-containing preribosomal complexes process pre-rRNA during early ribosome biogenesis.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Nucleolar RNPs support ribosome biogenesis">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>RNA polymerase I complex</td><td>transcribes rDNA within</td><td>nucleolar chromatin</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0006360"><code>GO:0006360</code></a> <small>GO:0006360 covers RNA polymerase I transcription from DNA templates.</small></li><li><a href="https://doi.org/10.1146/annurev.genet.33.1.261"><code>DOI:10.1146/annurev.genet.33.1.261</code></a> <small>Venema and Tollervey 1999 review RNA polymerase I transcription of ribosomal DNA in Saccharomyces ribosome synthesis.</small></li></ul></td></tr>
-<tr><td>RNA polymerase I complex</td><td>produces</td><td>pre-rRNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.genet.33.1.261"><code>DOI:10.1146/annurev.genet.33.1.261</code></a> <small>Venema and Tollervey 1999 review pre-rRNA production during budding-yeast ribosome synthesis.</small></li></ul></td></tr>
-<tr><td>small-subunit processome</td><td>processes</td><td>pre-rRNA</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032040"><code>GO:0032040</code></a> <small>GO:0032040 defines the small-subunit processome as an early preribosomal complex that includes the 35S pre-rRNA and U3 snoRNA in S. cerevisiae.</small></li><li><a href="https://doi.org/10.1038/nature00769"><code>DOI:10.1038/nature00769</code></a> <small>Dragon et al. 2002 characterized the nucleolar U3 ribonucleoprotein required for 18S rRNA biogenesis.</small></li></ul></td></tr>
-<tr><td>box H/ACA snoRNP complex</td><td>modifies</td><td>pre-rRNA</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031429"><code>GO:0031429</code></a> <small>GO:0031429 defines a nucleolar H/ACA snoRNP complex that catalyzes rRNA pseudouridylation.</small></li></ul></td></tr>
-<tr><td>nucleolus</td><td>organizes</td><td>ribosome biogenesis</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrm2184"><code>DOI:10.1038/nrm2184</code></a> <small>Boisvert et al. 2007 review the nucleolus as a major site of eukaryotic ribosome biogenesis.</small></li></ul></td></tr>
+<tr><td>RNA polymerase I complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0005736"><code>GO:0005736</code></a>)</small></td><td>transcribes rDNA within</td><td>nucleolar chromatin <small>(<a href="http://purl.obolibrary.org/obo/GO_0030874"><code>GO:0030874</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0006360"><code>GO:0006360</code></a> <small>GO:0006360 covers RNA polymerase I transcription from DNA templates.</small></li><li><a href="https://doi.org/10.1146/annurev.genet.33.1.261"><code>DOI:10.1146/annurev.genet.33.1.261</code></a> <small>Venema and Tollervey 1999 review RNA polymerase I transcription of ribosomal DNA in Saccharomyces ribosome synthesis.</small></li></ul></td></tr>
+<tr><td>RNA polymerase I complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0005736"><code>GO:0005736</code></a>)</small></td><td>produces</td><td>pre-rRNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev.genet.33.1.261"><code>DOI:10.1146/annurev.genet.33.1.261</code></a> <small>Venema and Tollervey 1999 review pre-rRNA production during budding-yeast ribosome synthesis.</small></li></ul></td></tr>
+<tr><td>small-subunit processome <small>(<a href="http://purl.obolibrary.org/obo/GO_0032040"><code>GO:0032040</code></a>)</small></td><td>processes</td><td>pre-rRNA</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0032040"><code>GO:0032040</code></a> <small>GO:0032040 defines the small-subunit processome as an early preribosomal complex that includes the 35S pre-rRNA and U3 snoRNA in S. cerevisiae.</small></li><li><a href="https://doi.org/10.1038/nature00769"><code>DOI:10.1038/nature00769</code></a> <small>Dragon et al. 2002 characterized the nucleolar U3 ribonucleoprotein required for 18S rRNA biogenesis.</small></li></ul></td></tr>
+<tr><td>box H/ACA snoRNP complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031429"><code>GO:0031429</code></a>)</small></td><td>modifies</td><td>pre-rRNA</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031429"><code>GO:0031429</code></a> <small>GO:0031429 defines a nucleolar H/ACA snoRNP complex that catalyzes rRNA pseudouridylation.</small></li></ul></td></tr>
+<tr><td>nucleolus <small>(<a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a>)</small></td><td>organizes</td><td>ribosome biogenesis <small>(<a href="http://purl.obolibrary.org/obo/GO_0042254"><code>GO:0042254</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrm2184"><code>DOI:10.1038/nrm2184</code></a> <small>Boisvert et al. 2007 review the nucleolus as a major site of eukaryotic ribosome biogenesis.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -69,7 +79,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/nucleolus.yaml"><code>data/structures/other/nucleolus.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

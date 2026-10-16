@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · crescentin filament</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>crescentin filament</h1>
 <p class="meta"><code>cellstructuremech:crescentin_filament</code> · Cytoskeleton · Filament · <span class="status">Proposed</span></p>
 <p class="definition">A bacterial intermediate filament-like cytoskeletal filament assembled from crescentin that localizes along the inner curvature of Caulobacter vibrioides cells and helps maintain their curved cell shape. <small>[<a href="https://doi.org/10.1073/pnas.2309984121"><code>DOI:10.1073/pnas.2309984121</code></a>]</small></p>
@@ -46,9 +56,9 @@
 <h3 id="causal_graphs-crescentin_filament_curves_caulobacter">Crescentin filaments maintain Caulobacter curvature <small>(FUNCTION)</small></h3>
 <p>Crescentin assembles into a membrane-associated filament that follows the inner curvature of Caulobacter cells and supports curved cell morphology.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Crescentin filaments maintain Caulobacter curvature">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>crescentin</td><td>assembles into</td><td>crescentin filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1101/gad.1795509"><code>DOI:10.1101/gad.1795509</code></a> <small>Charbon et al. 2009 analyzed crescentin assembly and organization in Caulobacter cells.</small></li><li><a href="https://doi.org/10.1073/pnas.2309984121"><code>DOI:10.1073/pnas.2309984121</code></a> <small>Liu et al. 2024 resolved the assembled crescentin filament by cryo-EM.</small></li></ul></td></tr>
-<tr><td>crescentin filament</td><td>localizes to</td><td>Caulobacter inner cell curvature</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.2309984121"><code>DOI:10.1073/pnas.2309984121</code></a> <small>Liu et al. 2024 used cryo-ET to localize crescentin filaments on the concave side of curved Caulobacter cells near the inner membrane.</small></li></ul></td></tr>
-<tr><td>crescentin filament</td><td>maintains</td><td>curved Caulobacter morphology</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.tim.2017.03.006"><code>DOI:10.1016/j.tim.2017.03.006</code></a> <small>Woldemeskel and Goley 2017 review creS deletion as producing straight Caulobacter rods.</small></li></ul></td></tr>
+<tr><td>crescentin</td><td>assembles into</td><td>crescentin filament <small>(<code>cellstructuremech:crescentin_filament</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1101/gad.1795509"><code>DOI:10.1101/gad.1795509</code></a> <small>Charbon et al. 2009 analyzed crescentin assembly and organization in Caulobacter cells.</small></li><li><a href="https://doi.org/10.1073/pnas.2309984121"><code>DOI:10.1073/pnas.2309984121</code></a> <small>Liu et al. 2024 resolved the assembled crescentin filament by cryo-EM.</small></li></ul></td></tr>
+<tr><td>crescentin filament <small>(<code>cellstructuremech:crescentin_filament</code>)</small></td><td>localizes to</td><td>Caulobacter inner cell curvature</td><td><ul class="evidence"><li><a href="https://doi.org/10.1073/pnas.2309984121"><code>DOI:10.1073/pnas.2309984121</code></a> <small>Liu et al. 2024 used cryo-ET to localize crescentin filaments on the concave side of curved Caulobacter cells near the inner membrane.</small></li></ul></td></tr>
+<tr><td>crescentin filament <small>(<code>cellstructuremech:crescentin_filament</code>)</small></td><td>maintains</td><td>curved Caulobacter morphology</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.tim.2017.03.006"><code>DOI:10.1016/j.tim.2017.03.006</code></a> <small>Woldemeskel and Goley 2017 review creS deletion as producing straight Caulobacter rods.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -64,7 +74,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/crescentin_filament.yaml"><code>data/structures/cytoskeleton/crescentin_filament.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

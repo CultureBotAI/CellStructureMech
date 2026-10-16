@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · mitochondrial Lon protease complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>mitochondrial Lon protease complex</h1>
 <p class="meta"><code>cellstructuremech:mitochondrial_lon_protease_complex</code> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">An oligomeric mitochondrial matrix protease assembly built from Lon-family subunits that combine AAA+ ATPase and serine-protease domains to process protein substrates. <small>[<a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a>]</small></p>
@@ -60,11 +70,11 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-pim1_assembly_and_assayed_proteolysis">Yeast Pim1 assembly and proteolysis interventions <small>(FUNCTION)</small></h3>
 <p>Structural membership and mutant effects on purified-protein beta-casein degradation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Yeast Pim1 assembly and proteolysis interventions">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Lon protease homologue, chloroplastic/mitochondrial</td><td>forms</td><td>mitochondrial Lon protease complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a> <small>Figure 1 and structural Results identify a six-Pim1 assembly in the recombinant substrate-bound preparation; this does not settle all native oligomeric states.</small></li></ul></td></tr>
-<tr><td>mitochondrial Lon protease complex</td><td>catalyzes</td><td>ATP-dependent peptidase activity</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a> <small>Figure 3C WT control degrades beta-casein under the specified ATP-containing assay conditions. ATP coupling is supported separately by the reviewed enzyme annotation.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P36775"><code>UniProtKB:P36775</code></a> <small>Reviewed ATP-dependent enzyme annotation.</small></li></ul></td></tr>
-<tr><td>Pim1 S1015A substitution</td><td>impairs</td><td>ATP-dependent peptidase activity</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a> <small>Figure 3C uses S1015A as the protease-inactive control; loss of activity alone does not establish loss of assembly.</small></li></ul></td></tr>
-<tr><td>Pim1 charged-insertion deletion</td><td>retains assayed activity</td><td>ATP-dependent peptidase activity</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a> <small>PIM1-INSdel retains near-WT beta-casein degradation in Figure 3C. No native yeast or broad substrate-dispensability claim is inferred.</small></li></ul></td></tr>
-<tr><td>Pim1 charged-insertion GS-linker replacement</td><td>retains assayed activity</td><td>ATP-dependent peptidase activity</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a> <small>PIM1-GSlink retains near-WT beta-casein degradation in Figure 3C. This separates this assay from proposed recruitment or DNA-binding roles of the insertion.</small></li></ul></td></tr>
+<tr><td>Lon protease homologue, chloroplastic/mitochondrial <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR027503"><code>InterPro:IPR027503</code></a>)</small></td><td>forms</td><td>mitochondrial Lon protease complex <small>(<code>cellstructuremech:mitochondrial_lon_protease_complex</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a> <small>Figure 1 and structural Results identify a six-Pim1 assembly in the recombinant substrate-bound preparation; this does not settle all native oligomeric states.</small></li></ul></td></tr>
+<tr><td>mitochondrial Lon protease complex <small>(<code>cellstructuremech:mitochondrial_lon_protease_complex</code>)</small></td><td>catalyzes</td><td>ATP-dependent peptidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004176"><code>GO:0004176</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a> <small>Figure 3C WT control degrades beta-casein under the specified ATP-containing assay conditions. ATP coupling is supported separately by the reviewed enzyme annotation.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P36775"><code>UniProtKB:P36775</code></a> <small>Reviewed ATP-dependent enzyme annotation.</small></li></ul></td></tr>
+<tr><td>Pim1 S1015A substitution</td><td>impairs</td><td>ATP-dependent peptidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004176"><code>GO:0004176</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a> <small>Figure 3C uses S1015A as the protease-inactive control; loss of activity alone does not establish loss of assembly.</small></li></ul></td></tr>
+<tr><td>Pim1 charged-insertion deletion</td><td>retains assayed activity</td><td>ATP-dependent peptidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004176"><code>GO:0004176</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a> <small>PIM1-INSdel retains near-WT beta-casein degradation in Figure 3C. No native yeast or broad substrate-dispensability claim is inferred.</small></li></ul></td></tr>
+<tr><td>Pim1 charged-insertion GS-linker replacement</td><td>retains assayed activity</td><td>ATP-dependent peptidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004176"><code>GO:0004176</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2022.101694"><code>DOI:10.1016/j.jbc.2022.101694</code></a> <small>PIM1-GSlink retains near-WT beta-casein degradation in Figure 3C. This separates this assay from proposed recruitment or DNA-binding roles of the insertion.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -82,7 +92,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mitochondrial_lon_protease_complex.yaml"><code>data/structures/other/mitochondrial_lon_protease_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

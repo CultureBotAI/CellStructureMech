@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · ciliary pocket collar</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>ciliary pocket collar</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990900"><code>GO:1990900</code></a> · Cytoskeleton · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A constriction site at the junction of the plasma, flagellar and flagellar pocket membranes where the flagellum emerges from the cell body. Observed in some unicellular eukaryotic species such as Chlamydomonas, Giardia and Trypanosoma. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990900"><code>GO:1990900</code></a>]</small></p>
@@ -50,11 +60,11 @@
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>BILBO1</td><td>dimerizes into</td><td>BILBO1 antiparallel dimer</td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.M114.554659"><code>DOI:10.1074/jbc.M114.554659</code></a> <small>Vidilaseris et al. 2014 dissected BILBO1 domains and linked the coiled coil and leucine zipper to dimerization and filament formation.</small></li></ul></td></tr>
 <tr><td>BILBO1 antiparallel dimer</td><td>polymerizes into</td><td>BILBO1 polymer</td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.M114.554659"><code>DOI:10.1074/jbc.M114.554659</code></a> <small>Vidilaseris et al. 2014 connected BILBO1 leucine-zipper interdimer interactions with extended in-vitro filament assembly.</small></li></ul></td></tr>
-<tr><td>BILBO1 polymer</td><td>scaffolds</td><td>ciliary pocket collar</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.1004654"><code>DOI:10.1371/journal.ppat.1004654</code></a> <small>Florimond et al. 2015 showed that BILBO1 has intrinsic polymer-forming properties and that its coiled-coil domain targets BILBO1 to the FPC.</small></li></ul></td></tr>
+<tr><td>BILBO1 polymer</td><td>scaffolds</td><td>ciliary pocket collar <small>(<a href="http://purl.obolibrary.org/obo/GO_1990900"><code>GO:1990900</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.1004654"><code>DOI:10.1371/journal.ppat.1004654</code></a> <small>Florimond et al. 2015 showed that BILBO1 has intrinsic polymer-forming properties and that its coiled-coil domain targets BILBO1 to the FPC.</small></li></ul></td></tr>
 <tr><td>FPC4</td><td>binds</td><td>BILBO1</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.1006710"><code>DOI:10.1371/journal.ppat.1006710</code></a> <small>Albisetti et al. 2017 identified FPC4 as a BILBO1 partner and mapped the interaction to the FPC4 C-terminal domain and BILBO1 N-terminal domain.</small></li></ul></td></tr>
 <tr><td>FPC4</td><td>binds</td><td>microtubules</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.1006710"><code>DOI:10.1371/journal.ppat.1006710</code></a> <small>Albisetti et al. 2017 localized FPC4 to the FPC and hook complex, noted possible proximal microtubule-quartet localization, and found that the FPC4 N-terminal domain binds microtubules.</small></li></ul></td></tr>
 <tr><td>BILBO2</td><td>binds</td><td>FPC4</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.1009329"><code>DOI:10.1371/journal.ppat.1009329</code></a> <small>Isch et al. 2021 demonstrated BILBO1, BILBO2 and FPC4 interactions and solved the BILBO2 NTD-FPC4 complex.</small></li></ul></td></tr>
-<tr><td>ciliary pocket collar</td><td>is required for</td><td>flagellar pocket biogenesis</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.0060105"><code>DOI:10.1371/journal.pbio.0060105</code></a> <small>Bonhivers et al. 2008 showed that BILBO1 RNAi prevents new FPC and flagellar pocket biogenesis in procyclic trypanosomes.</small></li></ul></td></tr>
+<tr><td>ciliary pocket collar <small>(<a href="http://purl.obolibrary.org/obo/GO_1990900"><code>GO:1990900</code></a>)</small></td><td>is required for</td><td>flagellar pocket biogenesis</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.0060105"><code>DOI:10.1371/journal.pbio.0060105</code></a> <small>Bonhivers et al. 2008 showed that BILBO1 RNAi prevents new FPC and flagellar pocket biogenesis in procyclic trypanosomes.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -70,7 +80,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/ciliary_pocket_collar.yaml"><code>data/structures/cytoskeleton/ciliary_pocket_collar.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

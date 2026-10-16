@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · CHRAC</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>CHRAC</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0008623"><code>GO:0008623</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">An ISWI complex that contains an ATPase subunit of the ISWI family (SNF2H in mammals, Isw2 in S. cerevisiae), an ACF1 homolog, and additional small histone fold subunits (generally two of these, but Xenopus has only one and some additional non-conserved subunits). CHRAC plays roles in the regulation of RNA polymerase II transcription and in DNA replication and repair. <small>[<a href="http://purl.obolibrary.org/obo/GO_0008623"><code>GO:0008623</code></a>]</small></p>
@@ -49,11 +59,11 @@
 <h3 id="causal_graphs-yeast_chrac_chromatin_remodeling">CHRAC supports yeast chromatin remodeling <small>(FUNCTION)</small></h3>
 <p>In Saccharomyces cerevisiae, Isw2, Itc1, Dpb4, and Dls1 form a CHRAC-like four-subunit Isw2 chromatin-remodeling complex.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: CHRAC supports yeast chromatin remodeling">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Isw2 CHRAC ATPase subunit</td><td>contributes to</td><td>CHRAC</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MCB.24.7.2605-2613.2004"><code>DOI:10.1128/MCB.24.7.2605-2613.2004</code></a> <small>McConnell et al. 2004 found this constituent in a purified Saccharomyces cerevisiae four-subunit Isw2 complex.</small></li></ul></td></tr>
-<tr><td>Itc1 CHRAC ACF1-homolog subunit</td><td>contributes to</td><td>CHRAC</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MCB.24.7.2605-2613.2004"><code>DOI:10.1128/MCB.24.7.2605-2613.2004</code></a> <small>McConnell et al. 2004 found this constituent in a purified Saccharomyces cerevisiae four-subunit Isw2 complex.</small></li></ul></td></tr>
-<tr><td>Dpb4 CHRAC histone-fold subunit</td><td>contributes to</td><td>CHRAC</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MCB.24.7.2605-2613.2004"><code>DOI:10.1128/MCB.24.7.2605-2613.2004</code></a> <small>McConnell et al. 2004 found this constituent in a purified Saccharomyces cerevisiae four-subunit Isw2 complex.</small></li></ul></td></tr>
-<tr><td>Dls1 CHRAC histone-fold subunit</td><td>contributes to</td><td>CHRAC</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MCB.24.7.2605-2613.2004"><code>DOI:10.1128/MCB.24.7.2605-2613.2004</code></a> <small>McConnell et al. 2004 found this constituent in a purified Saccharomyces cerevisiae four-subunit Isw2 complex.</small></li></ul></td></tr>
-<tr><td>CHRAC</td><td>enables</td><td>chromatin remodeling</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0008623"><code>GO:0008623</code></a> <small>GO:0008623 defines CHRAC as an ISWI complex with a role in RNA polymerase II transcription.</small></li><li><a href="https://doi.org/10.1128/MCB.24.7.2605-2613.2004"><code>DOI:10.1128/MCB.24.7.2605-2613.2004</code></a> <small>McConnell et al. 2004 found that Dls1p was required for Isw2-dependent chromatin remodeling in vivo.</small></li></ul></td></tr>
+<tr><td>Isw2 CHRAC ATPase subunit</td><td>contributes to</td><td>CHRAC <small>(<a href="http://purl.obolibrary.org/obo/GO_0008623"><code>GO:0008623</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MCB.24.7.2605-2613.2004"><code>DOI:10.1128/MCB.24.7.2605-2613.2004</code></a> <small>McConnell et al. 2004 found this constituent in a purified Saccharomyces cerevisiae four-subunit Isw2 complex.</small></li></ul></td></tr>
+<tr><td>Itc1 CHRAC ACF1-homolog subunit</td><td>contributes to</td><td>CHRAC <small>(<a href="http://purl.obolibrary.org/obo/GO_0008623"><code>GO:0008623</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MCB.24.7.2605-2613.2004"><code>DOI:10.1128/MCB.24.7.2605-2613.2004</code></a> <small>McConnell et al. 2004 found this constituent in a purified Saccharomyces cerevisiae four-subunit Isw2 complex.</small></li></ul></td></tr>
+<tr><td>Dpb4 CHRAC histone-fold subunit</td><td>contributes to</td><td>CHRAC <small>(<a href="http://purl.obolibrary.org/obo/GO_0008623"><code>GO:0008623</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MCB.24.7.2605-2613.2004"><code>DOI:10.1128/MCB.24.7.2605-2613.2004</code></a> <small>McConnell et al. 2004 found this constituent in a purified Saccharomyces cerevisiae four-subunit Isw2 complex.</small></li></ul></td></tr>
+<tr><td>Dls1 CHRAC histone-fold subunit</td><td>contributes to</td><td>CHRAC <small>(<a href="http://purl.obolibrary.org/obo/GO_0008623"><code>GO:0008623</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/MCB.24.7.2605-2613.2004"><code>DOI:10.1128/MCB.24.7.2605-2613.2004</code></a> <small>McConnell et al. 2004 found this constituent in a purified Saccharomyces cerevisiae four-subunit Isw2 complex.</small></li></ul></td></tr>
+<tr><td>CHRAC <small>(<a href="http://purl.obolibrary.org/obo/GO_0008623"><code>GO:0008623</code></a>)</small></td><td>enables</td><td>chromatin remodeling <small>(<a href="http://purl.obolibrary.org/obo/GO_0006338"><code>GO:0006338</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0008623"><code>GO:0008623</code></a> <small>GO:0008623 defines CHRAC as an ISWI complex with a role in RNA polymerase II transcription.</small></li><li><a href="https://doi.org/10.1128/MCB.24.7.2605-2613.2004"><code>DOI:10.1128/MCB.24.7.2605-2613.2004</code></a> <small>McConnell et al. 2004 found that Dls1p was required for Isw2-dependent chromatin remodeling in vivo.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -69,7 +79,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/chrac.yaml"><code>data/structures/other/chrac.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

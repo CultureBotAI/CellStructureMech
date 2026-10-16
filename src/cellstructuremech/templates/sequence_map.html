@@ -1,0 +1,400 @@
+{% extends "base.html" %}
+{% block mainclass %}wide{% endblock %}
+{% block title %}Protein sequence map (ESM-2) · CellStructureMech{% endblock %}
+{% block content %}
+<h1>Protein sequence map (pLM)</h1>
+<p class="definition">2D {{ seq_map.method | upper }} projection of <strong>{{ seq_map.n_proteins }} unique protein sequences</strong>
+across <strong>{{ seq_map.n_records }} microbial cell structures</strong> ({{ seq_map.n_mentions }} protein&ndash;structure mentions), embedded with
+<code>{{ seq_map.model }}</code> (revision <code>{{ seq_map.revision }}</code>, {{ seq_map.dim }}-d mean-pooled residue representations).</p>
+<p class="meta">Each point represents a curated UniProtKB protein from a cell structure component or
+assembly machinery entry. Positions depend only on amino-acid sequence; structure categories, component roles,
+and extraction channels are layered on as colors and filters. Click a protein to inspect its linked structure records;
+scroll to zoom, drag to pan, double-click to reset view.</p>
+
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Sequence map filters">
+    <form id="seq-form" class="facet-form" role="search">
+      <div class="facet-group">
+        <label class="facet-title" for="seq-q">Search proteins or structures</label>
+        <input id="seq-q" name="q" type="search" placeholder="UniProt ID, protein, organism, structure…" autocomplete="off">
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="seq-color">Color points by</label>
+        <select id="seq-color">
+          <option value="group">{{ seq_map.group_label }}</option>
+          <option value="role">Component role</option>
+          <option value="channel">Extraction channel</option>
+          <option value="length_bin">Sequence length</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="seq-cat">{{ seq_map.group_label }}</label>
+        <select id="seq-cat">
+          <option value="">All categories ({{ seq_map.n_proteins }})</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="seq-role">Component role</label>
+        <select id="seq-role">
+          <option value="">All component roles</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="seq-channel">Extraction channel</label>
+        <select id="seq-channel">
+          <option value="">All channels</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="seq-length">Sequence length</label>
+        <select id="seq-length">
+          <option value="">All lengths</option>
+        </select>
+      </div>
+      <button type="reset" id="seq-reset">Clear filters</button>
+    </form>
+    <p id="seq-status" class="meta" role="status" aria-live="polite">{{ seq_map.n_proteins }} proteins shown</p>
+    <p class="facet-title">Legend (click to toggle)</p>
+    <ul id="seq-legend" class="map-legend" aria-label="Sequence map legend"></ul>
+  </aside>
+
+  <div class="results-main">
+    <div id="seq-wrap">
+      <canvas id="seq-canvas" width="920" height="580" aria-label="ESM-2 PaCMAP embedding scatter plot of cell structure proteins"></canvas>
+      <div id="seq-tip" class="seq-tip" hidden></div>
+    </div>
+    <section id="seq-details" class="map-details" aria-live="polite">
+      <h2>Select a protein</h2>
+      <p>Click any point on the map to inspect its parent cell structure records, component role, organism, and sequence length.</p>
+    </section>
+  </div>
+</div>
+
+<script id="seq-data" type="application/json">{{ seq_map_json|safe }}</script>
+<script>
+(function () {
+  var DATA = JSON.parse(document.getElementById('seq-data').textContent);
+  var pts = (DATA.proteins || []).map(function (p) {
+    var recText = (p.records || []).map(function (r) { return r.id + ' ' + r.label; }).join(' ');
+    p._search = [
+      p.id, p.label, p.organism, p.taxon_id, p.primary_group, p.primary_role_label,
+      (p.groups || []).join(' '), (p.channels || []).join(' '), recText
+    ].filter(Boolean).join(' ').toLowerCase();
+    return p;
+  });
+
+  var PALETTE = {
+    APPENDAGE: '#CC6677', ENVELOPE: '#117733', MICROCOMPARTMENT: '#DDCC77',
+    RIBONUCLEOPROTEIN: '#332288', CYTOSKELETON: '#88CCEE', DIVISION_MACHINERY: '#882255',
+    ENERGY_COMPLEX: '#44AA99', INCLUSION: '#999933', MEMBRANE_ORGANELLE: '#AA4499',
+    NUCLEOID: '#6699CC', SECRETION_SYSTEM: '#EE8866', SPORE: '#BBCC33',
+    OTHER: '#777777'
+  };
+  var FALLBACK = [
+    '#5257C9', '#117733', '#CC6677', '#88CCEE', '#DDCC77', '#AA4499',
+    '#44AA99', '#882255', '#6699CC', '#EE8866', '#999933', '#332288'
+  ];
+
+  function readable(s) {
+    return String(s || '').replace(/_/g, ' ');
+  }
+  function esc(t) {
+    return String(t || '').replace(/[&<>"]/g, function (c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c];
+    });
+  }
+
+  var form = document.getElementById('seq-form');
+  var qBox = document.getElementById('seq-q');
+  var colorSel = document.getElementById('seq-color');
+  var catSel = document.getElementById('seq-cat');
+  var roleSel = document.getElementById('seq-role');
+  var chanSel = document.getElementById('seq-channel');
+  var lenSel = document.getElementById('seq-length');
+  var statusEl = document.getElementById('seq-status');
+  var legendEl = document.getElementById('seq-legend');
+  var detailsEl = document.getElementById('seq-details');
+
+  (DATA.groups || []).forEach(function (g) {
+    var opt = document.createElement('option');
+    opt.value = g;
+    opt.textContent = readable(g);
+    catSel.appendChild(opt);
+  });
+  (DATA.roles || []).forEach(function (r) {
+    var opt = document.createElement('option');
+    opt.value = r.id;
+    opt.textContent = r.label;
+    roleSel.appendChild(opt);
+  });
+  (DATA.channels || []).forEach(function (c) {
+    var opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    chanSel.appendChild(opt);
+  });
+  (DATA.length_bins || []).forEach(function (lb) {
+    var opt = document.createElement('option');
+    opt.value = lb;
+    opt.textContent = lb;
+    lenSel.appendChild(opt);
+  });
+
+  var hiddenCats = new Set();
+  var colorMap = new Map();
+
+  function categoryOf(p) {
+    var mode = colorSel.value;
+    if (mode === 'role') return p.primary_role_label || p.primary_role || 'Unspecified';
+    if (mode === 'channel') return (p.channels && p.channels[0]) || 'Unspecified';
+    if (mode === 'length_bin') return p.length_bin || 'Unspecified';
+    return p.primary_group || 'OTHER';
+  }
+
+  function rebuildColors() {
+    colorMap.clear();
+    hiddenCats.clear();
+    var cats = Array.from(new Set(pts.map(categoryOf))).sort();
+    cats.forEach(function (c, i) {
+      colorMap.set(c, PALETTE[c] || FALLBACK[i % FALLBACK.length]);
+    });
+  }
+
+  function rebuildLegend() {
+    legendEl.replaceChildren();
+    var counts = new Map();
+    pts.forEach(function (p) {
+      var c = categoryOf(p);
+      counts.set(c, (counts.get(c) || 0) + 1);
+    });
+    colorMap.forEach(function (color, c) {
+      var li = document.createElement('li');
+      li.style.cursor = 'pointer';
+      li.style.opacity = hiddenCats.has(c) ? '0.35' : '1';
+      var sw = document.createElement('span');
+      sw.className = 'map-swatch';
+      sw.style.backgroundColor = color;
+      li.appendChild(sw);
+      li.appendChild(document.createTextNode(readable(c) + ' (' + (counts.get(c) || 0) + ')'));
+      li.addEventListener('click', function () {
+        if (hiddenCats.has(c)) hiddenCats.delete(c);
+        else hiddenCats.add(c);
+        applyFilter();
+      });
+      legendEl.appendChild(li);
+    });
+  }
+
+  var canvas = document.getElementById('seq-canvas');
+  var ctx = canvas.getContext('2d');
+  var tip = document.getElementById('seq-tip');
+  var dpr = window.devicePixelRatio || 1;
+  var W = 920, H = 580;
+
+  var xMin = Infinity, xMax = -Infinity, yMin = Infinity, yMax = -Infinity;
+  pts.forEach(function (p) {
+    if (p.x < xMin) xMin = p.x;
+    if (p.x > xMax) xMax = p.x;
+    if (p.y < yMin) yMin = p.y;
+    if (p.y > yMax) yMax = p.y;
+  });
+  var pad = 36;
+  var zoom = 1, panX = 0, panY = 0;
+
+  function toScreen(x, y) {
+    var sx = pad + (x - xMin) / (xMax - xMin || 1) * (W - 2 * pad);
+    var sy = H - pad - (y - yMin) / (yMax - yMin || 1) * (H - 2 * pad);
+    return [ (sx - W / 2) * zoom + W / 2 + panX, (sy - H / 2) * zoom + H / 2 + panY ];
+  }
+
+  var matchMask = new Array(pts.length).fill(true);
+  var hovered = -1, selected = -1;
+
+  function resize() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    W = Math.max(320, Math.floor(rect.width));
+    H = Math.max(420, Math.min(640, Math.floor(W * 0.64)));
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    draw();
+  }
+
+  function applyFilter() {
+    var q = qBox.value.trim().toLowerCase();
+    var cVal = catSel.value;
+    var rVal = roleSel.value;
+    var chVal = chanSel.value;
+    var lVal = lenSel.value;
+
+    if (window.history && window.history.replaceState) {
+      var url = new URL(window.location.href);
+      if (q) url.searchParams.set('q', qBox.value.trim()); else url.searchParams.delete('q');
+      window.history.replaceState(null, '', url);
+    }
+
+    var shown = 0;
+    pts.forEach(function (p, i) {
+      var ok = true;
+      if (hiddenCats.has(categoryOf(p))) ok = false;
+      if (ok && cVal !== '' && (p.groups || []).indexOf(cVal) === -1) ok = false;
+      if (ok && rVal !== '' && (p.roles || []).indexOf(rVal) === -1) ok = false;
+      if (ok && chVal !== '' && (p.channels || []).indexOf(chVal) === -1) ok = false;
+      if (ok && lVal !== '' && p.length_bin !== lVal) ok = false;
+      if (ok && q && p._search.indexOf(q) === -1) ok = false;
+      matchMask[i] = ok;
+      if (ok) shown++;
+    });
+    statusEl.textContent = shown + ' of ' + pts.length + ' proteins shown';
+    rebuildLegend();
+    draw();
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    for (var pass = 0; pass < 2; pass++) {
+      for (var i = 0; i < pts.length; i++) {
+        var active = matchMask[i];
+        if ((pass === 0 && active) || (pass === 1 && !active)) continue;
+        var p = pts[i];
+        var xy = toScreen(p.x, p.y);
+        ctx.beginPath();
+        ctx.arc(xy[0], xy[1], active ? 5.2 : 3.2, 0, Math.PI * 2);
+        ctx.fillStyle = colorMap.get(categoryOf(p)) || '#777777';
+        ctx.globalAlpha = active ? 0.88 : 0.14;
+        ctx.fill();
+      }
+    }
+    ctx.globalAlpha = 1;
+    [selected, hovered].forEach(function (idx, isHover) {
+      if (idx < 0) return;
+      var p = pts[idx];
+      var xy = toScreen(p.x, p.y);
+      ctx.beginPath();
+      ctx.arc(xy[0], xy[1], isHover ? 7.5 : 8.5, 0, Math.PI * 2);
+      ctx.strokeStyle = isHover ? '#5257C9' : '#1a1a1a';
+      ctx.lineWidth = 2.2;
+      ctx.stroke();
+    });
+  }
+
+  function extUrl(id) {
+    if (id.indexOf('UniProtKB:') === 0) {
+      return 'https://www.uniprot.org/uniprotkb/' + id.slice('UniProtKB:'.length) + '/entry';
+    }
+    return '';
+  }
+
+  function showDetails(idx) {
+    selected = idx;
+    var p = pts[idx];
+    var url = extUrl(p.id);
+    var recHtml = (p.records || []).map(function (r) {
+      return "<li><a href='" + esc(r.page) + "'><strong>" + esc(r.label) + "</strong></a>" +
+        ' (<code>' + esc(r.id) + '</code>) — <span class="meta">' +
+        esc(r.role_label || r.role) + ' · ' + esc(readable(r.group)) + '</span></li>';
+    }).join('');
+    detailsEl.innerHTML =
+      '<h2>' + (url ? "<a href='" + esc(url) + "'>" + esc(p.id) + '</a>' : esc(p.id)) + ' — ' + esc(p.label) + '</h2>' +
+      '<p class="meta">' +
+        (p.organism ? 'Organism: <em>' + esc(p.organism) + '</em> · ' : '') +
+        'Length: ' + esc(p.length) + ' aa (' + esc(p.length_bin) + ') · ' +
+        'Primary category: <strong>' + esc(readable(p.primary_group)) + '</strong> · ' +
+        'Role: ' + esc(p.primary_role_label || p.primary_role) +
+      '</p>' +
+      '<h3>Cell structure records (' + (p.records || []).length + ')</h3>' +
+      '<ol>' + recHtml + '</ol>';
+    draw();
+  }
+
+  function hitTest(mx, my) {
+    var best = -1, bestD = 144;
+    for (var i = 0; i < pts.length; i++) {
+      if (!matchMask[i]) continue;
+      var xy = toScreen(pts[i].x, pts[i].y);
+      var dx = xy[0] - mx, dy = xy[1] - my;
+      var d = dx * dx + dy * dy;
+      if (d < bestD) { bestD = d; best = i; }
+    }
+    return best;
+  }
+
+  var dragging = false, dragMoved = false, lastX = 0, lastY = 0;
+  canvas.addEventListener('mousedown', function (e) {
+    dragging = true; dragMoved = false; lastX = e.clientX; lastY = e.clientY;
+  });
+  window.addEventListener('mouseup', function () { dragging = false; });
+  window.addEventListener('mousemove', function (e) {
+    if (!dragging) return;
+    var dx = e.clientX - lastX, dy = e.clientY - lastY;
+    if (Math.abs(dx) > 2 || Math.abs(dy) > 2) dragMoved = true;
+    panX += dx; panY += dy; lastX = e.clientX; lastY = e.clientY;
+    draw();
+  });
+
+  canvas.addEventListener('mousemove', function (e) {
+    if (dragging) { tip.hidden = true; return; }
+    var rect = canvas.getBoundingClientRect();
+    var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    var h = hitTest(mx, my);
+    if (h !== hovered) { hovered = h; draw(); }
+    if (h >= 0) {
+      var p = pts[h];
+      var r0 = (p.records && p.records[0]) ? p.records[0].label : '';
+      tip.innerHTML = '<strong>' + esc(p.label) + '</strong>' +
+        '<div class="meta">' + esc(p.id) + (r0 ? ' · ' + esc(r0) : '') + ' (' + esc(readable(p.primary_group)) + ')</div>' +
+        (p.organism ? '<div class="meta"><em>' + esc(p.organism) + '</em> · ' + p.length + ' aa</div>' : '');
+      tip.style.left = Math.min(W - 260, mx + 14) + 'px';
+      tip.style.top = Math.max(8, my - 10) + 'px';
+      tip.hidden = false;
+      canvas.style.cursor = 'pointer';
+    } else {
+      tip.hidden = true;
+      canvas.style.cursor = 'grab';
+    }
+  });
+  canvas.addEventListener('mouseleave', function () { hovered = -1; tip.hidden = true; draw(); });
+  canvas.addEventListener('click', function () {
+    if (!dragMoved && hovered >= 0) showDetails(hovered);
+  });
+  canvas.addEventListener('dblclick', function () { zoom = 1; panX = 0; panY = 0; draw(); });
+  canvas.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    var rect = canvas.getBoundingClientRect();
+    var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    var factor = e.deltaY < 0 ? 1.18 : 1 / 1.18;
+    var next = Math.max(0.6, Math.min(18, zoom * factor));
+    panX = mx - (mx - W / 2 - panX) * (next / zoom) - W / 2;
+    panY = my - (my - H / 2 - panY) * (next / zoom) - H / 2;
+    zoom = next;
+    draw();
+  }, {passive: false});
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); applyFilter(); });
+  colorSel.addEventListener('change', function () { rebuildColors(); applyFilter(); });
+  qBox.addEventListener('input', applyFilter);
+  catSel.addEventListener('change', applyFilter);
+  roleSel.addEventListener('change', applyFilter);
+  chanSel.addEventListener('change', applyFilter);
+  lenSel.addEventListener('change', applyFilter);
+  form.addEventListener('reset', function () {
+    setTimeout(function () {
+      rebuildColors();
+      applyFilter();
+    }, 0);
+  });
+  window.addEventListener('resize', resize);
+
+  if (window.location && window.location.search) {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('q')) qBox.value = params.get('q');
+  }
+  rebuildColors();
+  resize();
+  applyFilter();
+  if (pts.length) showDetails(0);
+})();
+</script>
+{% endblock %}

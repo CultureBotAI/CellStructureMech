@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · early endosome lumen</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>early endosome lumen</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031905"><code>GO:0031905</code></a> · Membrane organelle · Subcellular region · <span class="status">Proposed</span></p>
 <p class="definition">The volume enclosed by the membrane of an early endosome. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031905"><code>GO:0031905</code></a>]</small></p>
@@ -40,9 +50,9 @@
 <h3 id="causal_graphs-early_endosome_lumen_topology">Early endosome lumen topology <small>(FUNCTION)</small></h3>
 <p>The early endosome lumen is the bounded internal volume of an early endosome.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Early endosome lumen topology">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>early endosome lumen</td><td>is a</td><td>endosome lumen</td><td><ul class="evidence"><li><a href="https://www.uniprot.org/locations/SL-0337"><code>uniprot.location:SL-0337</code></a> — Early endosome lumen <small>UniProt SL-0337 places the early endosome lumen under endosome lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031904"><code>GO:0031904</code></a> <small>GO:0031904 identifies the broader endosome lumen class.</small></li></ul></td></tr>
-<tr><td>early endosome lumen</td><td>is part of</td><td>early endosome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031905"><code>GO:0031905</code></a> <small>GO:0031905 defines the early endosome lumen as the volume enclosed by the membrane of an early endosome.</small></li></ul></td></tr>
-<tr><td>early endosome membrane</td><td>bounds</td><td>early endosome lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031901"><code>GO:0031901</code></a> <small>GO:0031901 identifies the early endosome membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031905"><code>GO:0031905</code></a> <small>GO:0031905 defines the early endosome lumen by enclosure within the membrane of an early endosome.</small></li></ul></td></tr>
+<tr><td>early endosome lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0031905"><code>GO:0031905</code></a>)</small></td><td>is a</td><td>endosome lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0031904"><code>GO:0031904</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.uniprot.org/locations/SL-0337"><code>uniprot.location:SL-0337</code></a> — Early endosome lumen <small>UniProt SL-0337 places the early endosome lumen under endosome lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031904"><code>GO:0031904</code></a> <small>GO:0031904 identifies the broader endosome lumen class.</small></li></ul></td></tr>
+<tr><td>early endosome lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0031905"><code>GO:0031905</code></a>)</small></td><td>is part of</td><td>early endosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0005769"><code>GO:0005769</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031905"><code>GO:0031905</code></a> <small>GO:0031905 defines the early endosome lumen as the volume enclosed by the membrane of an early endosome.</small></li></ul></td></tr>
+<tr><td>early endosome membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0031901"><code>GO:0031901</code></a>)</small></td><td>bounds</td><td>early endosome lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0031905"><code>GO:0031905</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031901"><code>GO:0031901</code></a> <small>GO:0031901 identifies the early endosome membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031905"><code>GO:0031905</code></a> <small>GO:0031905 defines the early endosome lumen by enclosure within the membrane of an early endosome.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -58,7 +68,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/early_endosome_lumen.yaml"><code>data/structures/membrane_organelle/early_endosome_lumen.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

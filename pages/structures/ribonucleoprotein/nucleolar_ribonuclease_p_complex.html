@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/ribonucleoprotein.html">Ribonucleoprotein</a> · nucleolar ribonuclease P complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>nucleolar ribonuclease P complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> · Ribonucleoprotein · Ribonucleoprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A ribonuclease P complex located in the nucleolus of a eukaryotic cell, where it catalyzes the 5&#39; endonucleolytic cleavage of precursor tRNAs to yield mature tRNAs. Eukaryotic nucleolar ribonuclease P complexes generally contain a single RNA molecule that is necessary but not sufficient for catalysis, and several protein molecules. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a>]</small></p>
@@ -26,7 +36,7 @@
 <h2>Components</h2>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
-<tr id="components-rnase_p_rna"><td>RNase P RNA</td><td>Rna</td><td>part of</td><td><code>SO:0000386</code></td><td></td><td></td><td></td><td>Single RNA constituent of eukaryotic nucleolar RNase P complexes that is necessary but not sufficient for catalysis.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>GO:0005655 defines nucleolar ribonuclease P complexes as generally containing a single necessary RNA molecule.</small></li><li><code>SO:0000386</code> <small>SO:0000386 is the Sequence Ontology term for RNase_P_RNA.</small></li></ul></td></tr>
+<tr id="components-rnase_p_rna"><td>RNase P RNA</td><td>Rna</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/SO_0000386"><code>SO:0000386</code></a></td><td></td><td></td><td></td><td>Single RNA constituent of eukaryotic nucleolar RNase P complexes that is necessary but not sufficient for catalysis.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>GO:0005655 defines nucleolar ribonuclease P complexes as generally containing a single necessary RNA molecule.</small></li><li><a href="http://purl.obolibrary.org/obo/SO_0000386"><code>SO:0000386</code></a> <small>SO:0000386 is the Sequence Ontology term for RNase_P_RNA.</small></li></ul></td></tr>
 <tr id="components-nucleolar_rnase_p_protein_subunits"><td>nucleolar RNase P protein subunits</td><td>Protein</td><td>part of</td><td><em title="The component label was reviewed; no accession grounding is asserted.">Reviewed label only</em><small> (reviewed name; no accession asserted)</small></td><td></td><td></td><td></td><td>Protein constituents that accompany RNase P RNA in eukaryotic nucleolar RNase P complexes.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>GO:0005655 defines nucleolar ribonuclease P complexes as generally containing several protein molecules.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -43,9 +53,9 @@
 <h3 id="causal_graphs-nucleolar_rnase_p_constituents">RNase P RNA and proteins form nucleolar RNase P <small>(ASSEMBLY)</small></h3>
 <p>Eukaryotic nucleolar ribonuclease P complexes generally contain a single RNase P RNA and several protein molecules.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: RNase P RNA and proteins form nucleolar RNase P">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>RNase P RNA</td><td>contributes constituents to</td><td>nucleolar ribonuclease P complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>GO:0005655 defines the complex as generally containing a single RNA molecule.</small></li></ul></td></tr>
-<tr><td>nucleolar RNase P protein subunits</td><td>contributes constituents to</td><td>nucleolar ribonuclease P complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>GO:0005655 defines the complex as generally containing several protein molecules.</small></li></ul></td></tr>
-<tr><td>nucleolar ribonuclease P complex</td><td>localizes to</td><td>nucleolus</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>GO:0005655 defines this RNase P complex by its nucleolar localization.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a> <small>GO:0005730 is the nucleolus cellular-component term.</small></li></ul></td></tr>
+<tr><td>RNase P RNA <small>(<a href="http://purl.obolibrary.org/obo/SO_0000386"><code>SO:0000386</code></a>)</small></td><td>contributes constituents to</td><td>nucleolar ribonuclease P complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>GO:0005655 defines the complex as generally containing a single RNA molecule.</small></li></ul></td></tr>
+<tr><td>nucleolar RNase P protein subunits</td><td>contributes constituents to</td><td>nucleolar ribonuclease P complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>GO:0005655 defines the complex as generally containing several protein molecules.</small></li></ul></td></tr>
+<tr><td>nucleolar ribonuclease P complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a>)</small></td><td>localizes to</td><td>nucleolus <small>(<a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>GO:0005655 defines this RNase P complex by its nucleolar localization.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a> <small>GO:0005730 is the nucleolus cellular-component term.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -54,14 +64,14 @@
 
 
 <h2>Evidence</h2>
-<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>Gene Ontology cellular-component term for the nucleolar ribonuclease P complex and its exact synonym.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030681"><code>GO:0030681</code></a> <small>Gene Ontology cellular-component parent term for multimeric ribonuclease P complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0140513"><code>GO:0140513</code></a> <small>Gene Ontology cellular-component parent term for nuclear protein-containing complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a> <small>Gene Ontology cellular-component term for the nucleolus.</small></li><li><code>SO:0000386</code> <small>Sequence Ontology term for RNase_P_RNA.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0004526"><code>GO:0004526</code></a> <small>Gene Ontology molecular-function term for ribonuclease P activity.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0001682"><code>GO:0001682</code></a> <small>Gene Ontology biological-process term for tRNA 5&#39;-leader removal.</small></li></ul>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005655"><code>GO:0005655</code></a> <small>Gene Ontology cellular-component term for the nucleolar ribonuclease P complex and its exact synonym.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0030681"><code>GO:0030681</code></a> <small>Gene Ontology cellular-component parent term for multimeric ribonuclease P complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0140513"><code>GO:0140513</code></a> <small>Gene Ontology cellular-component parent term for nuclear protein-containing complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005730"><code>GO:0005730</code></a> <small>Gene Ontology cellular-component term for the nucleolus.</small></li><li><a href="http://purl.obolibrary.org/obo/SO_0000386"><code>SO:0000386</code></a> <small>Sequence Ontology term for RNase_P_RNA.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0004526"><code>GO:0004526</code></a> <small>Gene Ontology molecular-function term for ribonuclease P activity.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0001682"><code>GO:0001682</code></a> <small>Gene Ontology biological-process term for tRNA 5&#39;-leader removal.</small></li></ul>
 
 <h2>Curation history</h2>
 <ul class="history"><li><code>2026-09-25T12:56:06Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-25T12:56:55Z</code> codex · EXPANDED_RECORD — Added nucleolar RNase P parentage and parthood, GO exact synonymy, SO-grounded RNase P RNA plus reviewed-label-only nucleolar RNase P protein components, conservative function terms, an assembly graph and a TODO for exact eukaryotic protein-family boundaries.</li></ul>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/nucleolar_ribonuclease_p_complex.yaml"><code>data/structures/ribonucleoprotein/nucleolar_ribonuclease_p_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

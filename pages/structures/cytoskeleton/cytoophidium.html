@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · cytoophidium</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>cytoophidium</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a> · Cytoskeleton · Filament · <span class="status">Proposed</span></p>
 <p class="definition">A filamentous, membrane-less subcellular structure composed primarily of polymerized metabolic enzymes, most notably cytidine triphosphate synthase (CTPS). Cytoophidia are evolutionarily conserved structures found across archaea, bacteria, and eukaryotes. <small>[<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>]</small></p>
@@ -60,10 +70,10 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-ctps_cytoophidium_curves_caulobacter">CtpS cytoophidia regulate Caulobacter curvature <small>(FUNCTION)</small></h3>
 <p>Caulobacter CtpS polymerizes into an inner-curvature filament that functionally interacts with crescentin and supports curved cell morphology.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: CtpS cytoophidia regulate Caulobacter curvature">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>CTP synthase</td><td>polymerizes into</td><td>cytoophidium</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 used fluorescence microscopy and electron cryo-tomography to identify CtpS as the Caulobacter inner-curvature filament protein.</small></li></ul></td></tr>
-<tr><td>cytoophidium</td><td>localizes to</td><td>Caulobacter inner cell curvature</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 followed mCherry-CtpS structures that elongated and moved to the inner cell curvature.</small></li></ul></td></tr>
-<tr><td>cytoophidium</td><td>functionally interacts with</td><td>crescentin filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 connected the CtpS morphogenic role to a functional interaction with crescentin.</small></li></ul></td></tr>
-<tr><td>cytoophidium</td><td>regulates</td><td>curved Caulobacter morphology</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 showed that Caulobacter CtpS overexpression and depletion perturb cell curvature and that the morphogenic effect is separable from catalytic activity.</small></li></ul></td></tr>
+<tr><td>CTP synthase</td><td>polymerizes into</td><td>cytoophidium <small>(<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 used fluorescence microscopy and electron cryo-tomography to identify CtpS as the Caulobacter inner-curvature filament protein.</small></li></ul></td></tr>
+<tr><td>cytoophidium <small>(<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>)</small></td><td>localizes to</td><td>Caulobacter inner cell curvature</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 followed mCherry-CtpS structures that elongated and moved to the inner cell curvature.</small></li></ul></td></tr>
+<tr><td>cytoophidium <small>(<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>)</small></td><td>functionally interacts with</td><td>crescentin filament <small>(<code>cellstructuremech:crescentin_filament</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 connected the CtpS morphogenic role to a functional interaction with crescentin.</small></li></ul></td></tr>
+<tr><td>cytoophidium <small>(<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>)</small></td><td>regulates</td><td>curved Caulobacter morphology</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 showed that Caulobacter CtpS overexpression and depletion perturb cell curvature and that the morphogenic effect is separable from catalytic activity.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -79,7 +89,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/cytoophidium.yaml"><code>data/structures/cytoskeleton/cytoophidium.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

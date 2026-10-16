@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · Bam protein complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>Bam protein complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990063"><code>GO:1990063</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A bacterial outer-membrane beta-barrel protein assembly machine in which the BamA beta-barrel core and associated outer-membrane lipoproteins fold and insert beta-barrel proteins into the outer membrane. <small>[<a href="https://doi.org/10.1146/annurev-biochem-061408-144611"><code>DOI:10.1146/annurev-biochem-061408-144611</code></a>]</small></p>
@@ -46,19 +56,19 @@
 
 
 <h2>Physical properties</h2>
-<ul><li>MOLECULAR_MASS: ~203 <code>UO:0000222</code> (E. coli BamABCDE complex) [<a href="https://doi.org/10.1038/ncomms12865"><code>DOI:10.1038/ncomms12865</code></a>]</li></ul>
+<ul><li>MOLECULAR_MASS: ~203 <a href="http://purl.obolibrary.org/obo/UO_0000222"><code>UO:0000222</code></a> (E. coli BamABCDE complex) [<a href="https://doi.org/10.1038/ncomms12865"><code>DOI:10.1038/ncomms12865</code></a>]</li></ul>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-bam_omp_folding_and_insertion">BAM folds and inserts beta-barrel OMP substrates <small>(FUNCTION)</small></h3>
 <p>The outer-membrane BamA beta barrel and associated BamB-E lipoproteins form a machine that receives unfolded beta-barrel substrates and catalyzes their folding and insertion into the outer membrane.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: BAM folds and inserts beta-barrel OMP substrates">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>BamA beta-barrel core</td><td>organizes with</td><td>BamB-E lipoproteins</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990063"><code>GO:1990063</code></a> <small>The GO Bam protein complex definition states that E. coli BamA interacts directly with BamB and with the BamCDE subcomplex.</small></li></ul></td></tr>
-<tr><td>BamA beta-barrel core</td><td>forms core of</td><td>Bam protein complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature17199"><code>DOI:10.1038/nature17199</code></a> <small>Gu et al. 2016 resolved the BamA barrel and POTRA domains within E. coli BAM structures.</small></li></ul></td></tr>
+<tr><td>BamA beta-barrel core</td><td>forms core of</td><td>Bam protein complex <small>(<a href="http://purl.obolibrary.org/obo/GO_1990063"><code>GO:1990063</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature17199"><code>DOI:10.1038/nature17199</code></a> <small>Gu et al. 2016 resolved the BamA barrel and POTRA domains within E. coli BAM structures.</small></li></ul></td></tr>
 <tr><td>BamB-E lipoproteins</td><td>assemble with</td><td>BamA beta-barrel core</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms12865"><code>DOI:10.1038/ncomms12865</code></a> <small>Iadanza et al. 2016 captured the intact BamABCDE complex by cryo-EM.</small></li></ul></td></tr>
-<tr><td>Bam protein complex</td><td>folds and inserts</td><td>unfolded outer-membrane beta-barrel protein substrate</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1188919"><code>DOI:10.1126/science.1188919</code></a> <small>Hagan, Kim and Kahne 2010 reconstituted OmpT folding and insertion with purified E. coli BAM components.</small></li></ul></td></tr>
-<tr><td>Bam protein complex</td><td>samples</td><td>laterally open BamA barrel</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms12865"><code>DOI:10.1038/ncomms12865</code></a> <small>Iadanza et al. 2016 observed a laterally open BamA barrel in an intact BamABCDE cryo-EM structure.</small></li><li><a href="https://doi.org/10.1038/nature17199"><code>DOI:10.1038/nature17199</code></a> <small>Gu et al. 2016 reported E. coli BAM crystal structures in inward-open and lateral-open states.</small></li></ul></td></tr>
-<tr><td>Bam protein complex</td><td>inserts</td><td>assembled outer-membrane beta-barrel protein</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-061408-144611"><code>DOI:10.1146/annurev-biochem-061408-144611</code></a> <small>Hagan, Silhavy and Kahne 2011 review Bam-mediated beta-barrel assembly in the Gram-negative outer membrane.</small></li></ul></td></tr>
-<tr><td>assembled outer-membrane beta-barrel protein</td><td>embeds in</td><td>cell outer membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1188919"><code>DOI:10.1126/science.1188919</code></a> <small>Hagan, Kim and Kahne 2010 used proteoliposomes to reconstitute E. coli outer-membrane protein assembly.</small></li></ul></td></tr>
+<tr><td>Bam protein complex <small>(<a href="http://purl.obolibrary.org/obo/GO_1990063"><code>GO:1990063</code></a>)</small></td><td>folds and inserts</td><td>unfolded outer-membrane beta-barrel protein substrate</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1188919"><code>DOI:10.1126/science.1188919</code></a> <small>Hagan, Kim and Kahne 2010 reconstituted OmpT folding and insertion with purified E. coli BAM components.</small></li></ul></td></tr>
+<tr><td>Bam protein complex <small>(<a href="http://purl.obolibrary.org/obo/GO_1990063"><code>GO:1990063</code></a>)</small></td><td>samples</td><td>laterally open BamA barrel</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms12865"><code>DOI:10.1038/ncomms12865</code></a> <small>Iadanza et al. 2016 observed a laterally open BamA barrel in an intact BamABCDE cryo-EM structure.</small></li><li><a href="https://doi.org/10.1038/nature17199"><code>DOI:10.1038/nature17199</code></a> <small>Gu et al. 2016 reported E. coli BAM crystal structures in inward-open and lateral-open states.</small></li></ul></td></tr>
+<tr><td>Bam protein complex <small>(<a href="http://purl.obolibrary.org/obo/GO_1990063"><code>GO:1990063</code></a>)</small></td><td>inserts</td><td>assembled outer-membrane beta-barrel protein</td><td><ul class="evidence"><li><a href="https://doi.org/10.1146/annurev-biochem-061408-144611"><code>DOI:10.1146/annurev-biochem-061408-144611</code></a> <small>Hagan, Silhavy and Kahne 2011 review Bam-mediated beta-barrel assembly in the Gram-negative outer membrane.</small></li></ul></td></tr>
+<tr><td>assembled outer-membrane beta-barrel protein</td><td>embeds in</td><td>cell outer membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0009279"><code>GO:0009279</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/science.1188919"><code>DOI:10.1126/science.1188919</code></a> <small>Hagan, Kim and Kahne 2010 used proteoliposomes to reconstitute E. coli outer-membrane protein assembly.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -74,7 +84,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/bam_protein_complex.yaml"><code>data/structures/other/bam_protein_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
