@@ -1,0 +1,996 @@
+# Gas vesicle finding reassessment and evidence limits
+
+- Review: 20261014T054100Z-gas-vesicle-finding-reassessment
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-14T05:40:48Z
+- Finished UTC: 2026-10-14T05:41:00Z
+- Reviewer: Codex (self_review)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+A confirmed minor Bayro-author attribution issue remains. The earlier shell/whole containment finding is rejected because native GO wording and the free-text edge context support a boundary interpretation. The earlier GvpC finding is also rejected as insufficiently established: dispensability in one context does not refute conditional assembly need elsewhere. GvpC conditional-assembly support remains an incomplete scientific check, not an issue by itself.
+
+## Scope And Provenance
+
+Whole unchanged gas-vesicle record reconsidered, with focused reassessment of all three prior findings and additional shell ontology context. Original supported dimensions retained; conditional GvpC assembly need remains incompletely verified.
+
+Selection: data/structures/inclusion/gas_vesicle.yaml
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 6c33c1c78494e7f0623cf2b157f4036d737196d7.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0031411 | data/structures/inclusion/gas_vesicle.yaml | maintained | gas vesicle |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T05:20:36Z to 2026-10-14T05:20:39Z; verified log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de. |
+| strict | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T05:20:39Z to 2026-10-14T05:20:43Z; verified log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e. |
+| snippets | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T05:20:43Z to 2026-10-14T05:21:09Z; verified log SHA-256 3ecdbdb982e3fe85221f259f8617ccdbb4417c7fef9456ee6c312f16c0a5b092. |
+| history-venv | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T04:32:04Z to 2026-10-14T04:32:32Z; verified log SHA-256 6dbe137325eb5631697951ee6e0c1e8e6e240b64f91e92d72121ea298cef2a92. |
+| labels | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T04:32:17Z to 2026-10-14T04:36:35Z; verified log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286. |
+| curies-live | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T04:39:48Z to 2026-10-14T04:43:30Z; verified log SHA-256 7b26794ff07cf822cd706e14ae709be9c14effff0addebe45c1c9a353444dd88. |
+| curies-controls-live | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T04:38:51Z to 2026-10-14T04:39:24Z; verified log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8. |
+| traits-live | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T04:43:30Z to 2026-10-14T04:44:38Z; verified log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f. |
+| merged-main-checks | passed | False | GO:0031411 | Reused unchanged-input result from 2026-10-14T04:32:37Z to 2026-10-14T04:32:38Z; verified log SHA-256 a9f9e132540c77e055a43ab74c88db14f7f677d9ad40e6ae5ed7aefa9f5bacfc. |
+| merged-main-qc | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T04:32:38Z to 2026-10-14T04:32:41Z; verified log SHA-256 5a1c26e21239fbbe53a8892902d6fd7a3a28379b4d17457302a700420a60c864. |
+| adapter-datasets-live | passed | False | GO:0031411 | Reused unchanged-input result from 2026-10-14T04:33:30Z to 2026-10-14T04:33:33Z; verified log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549. |
+| post-save-archive | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T05:30:56Z to 2026-10-14T05:34:16Z; verified log SHA-256 8bcb97bf693a211415353c7a1f8e448d95382de2a6be79fc339675a0be3585df. |
+| post-save-contract | passed | True | GO:0031411 | Reused unchanged-input result from 2026-10-14T05:34:16Z to 2026-10-14T05:37:39Z; verified log SHA-256 5ca616ade7743ff7dd56340b40dcad6ebc1ebb9f524b4db2659d5d55e6e8641e. |
+| Evidence for conditional GvpC assembly requirement | unavailable | True | GO:0031411 | The older cited review body was unavailable through inspected routes. Accessible stripping/reconstitution evidence concerns stability of assembled shells, and one deletion context establishes local dispensability, not absence of conditional assembly requirements. The earlier definite finding exceeded this evidence. |
+
+## Scientific And Domain Assessments
+
+### Organelle identity and ontology scope
+
+identity: supported. Targets: GO:0031411.
+
+GO definition, related synonym, inclusion category and protein-shelled organelle kind agree. This is not a lipid vesicle or isolated shell protein. MicrO term definition agrees despite an inconsistent imported definition-source annotation. No native hierarchy assertions need correction.
+
+### GvpA and GvpC roles versus assembly requirement
+
+grounding: unknown. Targets: GO:0031411.
+
+GvpA/GvpC composition and mechanical roles are supported. GvpC stripping and the inspected single deletion context do not establish whether all possible conditional assembly dependencies are absent. The schema does not require a separate condition field. No concrete error in CONDITIONAL is established; verifying its source support requires additional accessible formation evidence or the cited review body. This limitation prevents a completed whole-record verdict.
+
+### Variable bacterial/archaeal occurrence and exact strain
+
+scope: supported. Targets: GO:0031411.
+
+Both VARIABLE rows are supported by the cited review abstract without asserting universal presence or unsupported absence. The renamed exact strain is confirmed by ENA and the publication-associated CryoET dataset. Broad clades are not used as experimental strain substitutes.
+
+### Buoyancy function and five function-graph edges
+
+evidence: supported. Targets: GO:0031411.
+
+The five edges are readable as GvpA shell formation, a boundary around the vesicle, exterior strengthening, gas-filled interior maintenance and buoyancy. Native GO itself describes the shell as surrounding the vesicle. The earlier categorical claim that this edge must encode an impossible nested organelle was not justified by this free-text predicate and explicit wall-forming description.
+
+### All six assembly-graph edges and hypothesis qualifiers
+
+evidence: supported. Targets: GO:0031411.
+
+Accessory interaction organization and GvpF-GvpA contacts are supported at the assay/species level. The nucleation edge explicitly says consistent with a transient complex and cites a proposed model; together with graph scope_notes this preserves uncertainty. Bicone elongation is the cited coarse assembly model, exterior GvpC is supported in GvpC-bearing systems, and the terminal wall/organelle edge is a coarse structural description, not a measured kinetic maturation sequence. No extra finding is inferred solely from MECHANISTIC scope_status.
+
+### Structural dataset, imaging context and references
+
+provenance: concern. Targets: GO:0031411.
+
+CryoET metadata remains supported and the incorrect top-level lead-author attribution remains a confirmed minor provenance issue. No record or history edits occurred.
+
+### Optional fields and experimental precision
+
+completeness: supported. Targets: GO:0031411.
+
+No optional image, physical-property, trait, discussion or protein-example row is required solely because absent. The record does not claim exhaustive minor-component composition or fixed stoichiometry. Assembly-factor nodes are distinguished from the two maintained core constituents. No unsupported quantitative measurement is encoded.
+
+### Status, immutable history and maintained owner
+
+ownership: supported. Targets: GO:0031411.
+
+The whole maintained record and both history surfaces were inspected. Agent-authored PROPOSED status is preserved. Future scientific fixes belong in this YAML via guarded curation and history, not in rendered products or this review.
+
+## Findings
+
+### F1: Withdraw the unsupported shell-containment defect finding
+
+major / rejected / confirmed; issue key: gas-vesicle-shell-lumen.
+
+The earlier observation treated encloses as a formal strict-containment relation. This repository permits free-text predicates and the adjacent description explains that the shell forms the body and caps. GO:0033172 explicitly uses surrounding a gas vesicle. An anatomical defect is therefore not established by the wording.
+
+Disposition: New source-native GO shell context undermines the categorical inference behind F1. Reject this as an actionable scientific defect; optional clearer wording is not sufficient to preserve the major finding.
+
+### F2: Withdraw the unproven GvpC conditional-essentiality defect finding
+
+major / rejected / confirmed; issue key: gas-vesicle-gvpc-essentiality.
+
+The earlier inference conflated missing inspected evidence for an explicit condition with evidence of a wrong conditional requirement. One gvpC deletion context and stripping already assembled vesicles cannot refute a requirement under another pressure, condition or lineage. No separate condition field is mandatory in the native schema, and the cited review body was not accessible.
+
+Disposition: The issue-only gate does not permit an unavailable check or incompletely supported reviewer inference to become a scientific issue. Reject F2 as unproven while keeping the GvpC scientific check explicitly incomplete; this does not certify CONDITIONAL or replace it with universal DISPENSABLE.
+
+### F3: Attribute the cited NMR paper to Bayro et al.
+
+minor / open / confirmed; issue key: gas-vesicle-bayro-attribution.
+
+Top-level evidence[1].notes calls PMID:22147705 Belenky et al. 2012. Source author order is Bayro, Daviso, Belenky, Griffin and Herzfeld. Belenky is a coauthor, not the first author. The same paper is correctly called Bayro et al. in the function graph; harmonize the top-level attribution while retaining the correct PMID and supported NMR claim. Rechecked unchanged source metadata and record bytes; this finding remains open.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the top-level author attribution to Bayro et al. 2012 without changing the PMID or supported shell evidence.
+
+- All author-attribution notes for PMID:22147705 agree with the source author order.
+- Keep PROPOSED and use write_validated_structure, an LLM-assisted curation event and append-only history if a later scientific edit is authorized.
+- Run fresh target schema, strict and evidence checks plus native QC/product/history gates, then save an evidence-backed successor retaining each issue key and exact previous occurrence.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/inclusion/gas_vesicle.yaml; Entire 335-line native YAML and all three native history files | supports | GO-grounded protein organelle with two components, two taxon rows, one strain example, one function, two graphs containing eleven edges and one CryoET dataset. PROPOSED remains appropriate. |
+| go | GO:0031411; Complete current QuickGO term, definition, synonym and cellular-component aspect | supports | Active gas-vesicle identity; the protein organelle includes its shell rather than being an enclosed object inside that shell. The gas-vacuole synonym is explicitly related. |
+| walsby | PMID:8177173; Source-native abstract in NCBI efetch and Europe PMC; publisher abstract also inspected | supports | Supports protein shell, usual capped-cylinder shape, gas permeability and water exclusion, buoyancy, occurrence in several bacterial phyla and two archaeal groups, and distinct GvpA structural versus GvpC strengthening roles. Full 51-page body was not available through tested routes. |
+| bayro | PMID:22147705; NCBI article front matter, author order and abstract; Europe PMC citation identity | supports | Bayro, Daviso, Belenky, Griffin and Herzfeld authored the NMR paper. Its abstract supports GvpA cross-beta shell assembly; Belenky is not its lead author. Journal issue is 2012, online publication December 2011. |
+| dutka | DOI:10.1016/j.str.2023.03.011; Full JATS: Introduction, Results, Discussion, limitations and Methods; especially GV preparation, cryo-ET and shell averaging | supports | Purified intact Ana vesicles and GvpC-stripped particles reveal a GvpA shell enclosing gas, exterior GvpC reinforcement and helical architecture. Structural observations suggest, but do not directly time-resolve, elongation at the inversion point. |
+| dutka-figure1 | DOI:10.1016/j.str.2023.03.011; Figure 1A-E, actual image pixels and JATS caption | supports | Schematic and tomographic sections distinguish the protein wall from the lumen and the whole gas vesicle. No new dimensional measurement was extracted. |
+| dutka-figure3 | DOI:10.1016/j.str.2023.03.011; Figure 3A-H, actual image pixels and JATS caption | supports | Native and GvpC-stripped shell averages retain the GvpA wall; external rods are assigned to GvpC by comparison. This is removal from assembled vesicles, not by itself an assembly deletion experiment. |
+| voelkner | DOI:10.3389/fmicb.2020.610179; Full JATS: methods, accessory pull-down/split-GFP results, GvpA contact mapping, discussion and conclusion | supports | H. salinarum p-vac proteins expressed in Hfx. volcanii establish pairwise interaction evidence. GvpL has multiple partners and GvpF is the sole clear GvpA partner in these tests. A nucleation/chaperoning complex is proposed, not directly observed; existing record qualifiers preserve that distinction. |
+| iburg | DOI:10.1038/s44318-024-00178-2; JATS Introduction, pNL29 assay construction, Results for Figures 4-5 and Discussion assembly stages I-V | supports | B. megaterium pNL29 proteins were assayed in E. coli using split NanoLuc. GvpA2-GvpF interaction reappears upon removal of background Gvps or GvpG specifically. The five-stage assembly scheme remains a hypothesis, consistent with the record scope notes. |
+| gvpc-deletion | PMID:8606186; Europe PMC source-native abstract, DOI 10.1128/jb.178.7.2071-2078.1996 | supports | Offner et al. experimentally removed gvpC from the p-vac region in Hfx. volcanii and obtained abundant irregular vesicles; complementation restored normal shape. This supports dispensability for assembly in that tested context, not universal dispensability in every possible condition. |
+| identifiers | Pfam:PF00741; Pfam:PF01304; Pfam:PF06386; MICRO:0000214; uniprot.location:SL-0125; Full source-native InterPro/Pfam, OLS MicrO and UniProt location responses | supports | PF00741 and PF06386 are families. PF01304 is the repeated GvpC domain, not an exact whole-protein family; it appears as a graph cross-reference rather than a component identity assertion. MicrO and UniProt location descriptions match the protein organelle; no obsolete identity was observed. |
+| taxa | NCBITaxon:2; NCBITaxon:2157; NCBITaxon:315271; Three full ENA taxonomy responses | supports | Bacteria, Archaea and Dolichospermum flos-aquae CCAP 1403/13F agree with their identifiers. Historical Anabaena names appear in the strain synonyms. |
+| portal | CryoETDataPortal:10014; Official GraphQL dataset and canary run 14004; native resolve() checks; public submission policy | supports | Exact strain, GO, publication, run name pda2021-06-24-66, 217-run count, dates and EMDB related entries match. Public submission policy explicitly states CC0. Related EMDB entries are portal metadata, not independent volume inspections. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructureComponent.component_role/essentiality, EssentialityEnum, CausalNode/CausalEdge and CausalGraphScopeEnum | supports | Essentiality refers to formation without a component, not strengthening or occurrence only in some lineages. DISPENSABLE permits defective structures. Graph edges are directed relationships, and the native checklist requires correct direction and experimental scope. |
+| adapter | https://imodulondb.org/; Live inventory from 2026-10-14T04:33:30Z, 28 datasets | supports | No matched native source-organism dataset; no absence-of-structure inference from this applicability result. |
+| validation | /private/tmp/csm-review-20261014T051943Z-gas-vesicle/baseline-verification.json; Fresh target logs, hash-verified historical baseline receipts and exact-main CI logs | supports | Target schema/strict pass. None of 23 citations contains a snippet, so snippet success is vacuous. Prior whole-corpus validators and exact-main QC remain applicable to unchanged maintained inputs; none proves scientific correctness. |
+| predecessors | reviews/structured; history; reports; data/structures; Path.rglob full canonical inventory and rg --no-ignore --hidden identifier/slug/label/new-issue-key searches | supports | No predecessor for this target among 217 canonical bundles. The three new issue keys have no earlier occurrence in the named roots. Existing native history and unrelated reports are preserved. |
+| go-shell | GO:0033172; Full current QuickGO shell term definition and synonyms | refutes | The active shell term is defined as the proteinaceous structure surrounding a gas vesicle. With the native graph description, this supports an ordinary boundary interpretation of the free-text encloses edge, rather than proving an anatomically wrong nested organelle. |
+
+## Limits And Additional Notes
+
+- Same-agent scientific review, not independent human sign-off, exhaustive literature discovery, a new taxonomic census or raw-data reanalysis.
+- Walsby 1994 and Bayro 2012 were inspected at source-native abstract and metadata level. Europe PMC full XML returned HTTP 500, NCBI efetch explicitly omitted their bodies, PMC PDF requests returned HTML browser challenges, and the Walsby publisher PDF route exposed an abstract/access page. These are access limitations, not proof of absent full text. Abstract scope suffices for their coarse recorded claims; detailed shell and assembly claims were additionally checked in cited accessible primary articles.
+- Dutka, Voelkner and Iburg full JATS were available. Relevant Results, Discussion, Methods and figure captions were inspected; Dutka Figures 1 and 3 actual pixels were also viewed. No supplementary dataset, original tomogram, NMR spectrum or split-reporter raw measurements were reanalyzed.
+- CryoET metadata and CC0 submission policy were freshly checked, but no imaging volumes or individual related EMDB records were downloaded. Dataset metadata is not independent confirmation of every annotated image.
+- PF01304 is a repeat cross-reference, not an exact GvpC whole-protein family identity. No protein-accession sequence or comprehensive minor-component search was performed. iModulonDB has no matching native source-organism dataset.
+- Fresh schema and strict checks pass; the snippet check has zero snippets among 23 citations and cannot validate scientific support. The missing requested snippet report file reflects the no-snippet outcome, not an inspected report.
+- Global checks are reused with verified unchanged input roots/log hashes and original execution times: history 1729 valid; identifiers 4023 OK, 251 configured skips; labels 603 no-adapter skips. Exact-main CI reports 987 passed, 3 skipped. These are not fresh local whole-corpus QC or post-review CI runs.
+- This successor corrects overconfident inferences in the earlier review; it does not erase it. Two major findings are rejected, one minor author-attribution issue remains open.
+- Conditional GvpC assembly need remains unverified. A cited abstract about strengthening or a deletion in one host is insufficient to prove or refute all conditional dependencies. Whole-record completion is partial until that evidence check is resolved.
+- The gas-vesicle shell sibling YAML was read as boundary context only. It has not received a completed review in this continuation and remains in the pending corpus.
+- All checks here reuse verified unchanged inputs with their actual original times. Pre-save archive/contract covers 218 bundles. Post-save checks are recorded separately after saving.
+- Only a new immutable successor is added. No prior bundle, scientific record, curation history, generated product or GitHub state is edited.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261014T054100Z-gas-vesicle-finding-reassessment
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Gas vesicle finding reassessment and evidence limits
+started_at: '2026-10-14T05:40:48Z'
+finished_at: '2026-10-14T05:41:00Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same coding-agent context; no independent human or second-agent
+    scientific sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'A confirmed minor Bayro-author attribution issue remains. The earlier shell/whole
+  containment finding is rejected because native GO wording and the free-text edge
+  context support a boundary interpretation. The earlier GvpC finding is also rejected
+  as insufficiently established: dispensability in one context does not refute conditional
+  assembly need elsewhere. GvpC conditional-assembly support remains an incomplete
+  scientific check, not an issue by itself.'
+source:
+  git_revision: 6c33c1c78494e7f0623cf2b157f4036d737196d7
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/inclusion/gas_vesicle.yaml
+    sha256: 1ec13274f54fa099e647f85f1491d2ea7f0978e321676538bcb1ba0d6ed2f920
+    role: target
+  - path: data/structures/inclusion/gas_vesicle_shell.yaml
+    sha256: 2967da698ee7edee34caa52e039b7316392d5e048c4af45a716cf814d10d3a8b
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/gas_vesicle/2026-08-30T193105Z-codex-d69a01.yaml
+    sha256: 803fa3f4b756d4a3790f851e99273a8d1e0d32d3d6c60c94356d3902be75b199
+    role: context
+  - path: history/records/gas_vesicle/2026-09-04T011557Z-codex-73a905.yaml
+    sha256: 7f984615935d6f0a3c8980ac1bac9e244168e2c78d1b0f6630d1097e27bd3e65
+    role: context
+  - path: history/records/gas_vesicle/2026-09-04T041400Z-codex-c2ee88.yaml
+    sha256: 6ecb9980703bb62810582d251c136e90e136c744d3551dc3dca11612e87c4b20
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: reviews/structured/20261014T052950Z-gas-vesicle-composition-and-graph/review.yaml
+    sha256: 19f5ddd5d0954d015902ca9d63ad57fc278b26e79ca4ef0b382476902f7c6b40
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/cryoet_data_portal.py
+    sha256: 861c52a67d6c3cecf8d944d7bbe510f87f968d6a296d70b14aaea10463157bd0
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0031411
+  path: data/structures/inclusion/gas_vesicle.yaml
+  label: gas vesicle
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/gas_vesicle.yaml
+    role: maintained scientific record
+scope:
+  description: Whole unchanged gas-vesicle record reconsidered, with focused reassessment
+    of all three prior findings and additional shell ontology context. Original supported
+    dimensions retained; conditional GvpC assembly need remains incompletely verified.
+  selection: data/structures/inclusion/gas_vesicle.yaml
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0031411
+checks:
+- check_id: reused-schema
+  name: schema
+  status: passed
+  required: true
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/inclusion/gas_vesicle.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T05:20:36Z to 2026-10-14T05:20:39Z;
+    verified log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-strict
+  name: strict
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py data/structures/inclusion/gas_vesicle.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T05:20:39Z to 2026-10-14T05:20:43Z;
+    verified log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-snippets
+  name: snippets
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/inclusion/gas_vesicle.yaml
+    --report /private/tmp/csm-review-20261014T051943Z-gas-vesicle/snippets.md
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T05:20:43Z to 2026-10-14T05:21:09Z;
+    verified log SHA-256 3ecdbdb982e3fe85221f259f8617ccdbb4417c7fef9456ee6c312f16c0a5b092.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-history-venv
+  name: history-venv
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T04:32:04Z to 2026-10-14T04:32:32Z;
+    verified log SHA-256 6dbe137325eb5631697951ee6e0c1e8e6e240b64f91e92d72121ea298cef2a92.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-labels
+  name: labels
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T04:32:17Z to 2026-10-14T04:36:35Z;
+    verified log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-curies-live
+  name: curies-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_curies.py --check --report /private/tmp/csm-review-20261014T042923Z-slime-layer/curies-live.tsv
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T04:39:48Z to 2026-10-14T04:43:30Z;
+    verified log SHA-256 7b26794ff07cf822cd706e14ae709be9c14effff0addebe45c1c9a353444dd88.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-curies-controls-live
+  name: curies-controls-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_curies.py --self-test
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T04:38:51Z to 2026-10-14T04:39:24Z;
+    verified log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-traits-live
+  name: traits-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T04:43:30Z to 2026-10-14T04:44:38Z;
+    verified log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-merged-main-checks
+  name: merged-main-checks
+  status: passed
+  required: false
+  command: gh run list --repo CultureBotAI/CellStructureMech --commit 6c33c1c78494e7f0623cf2b157f4036d737196d7
+    --limit 30 --json databaseId,name,event,status,conclusion,headSha,url
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T04:32:37Z to 2026-10-14T04:32:38Z;
+    verified log SHA-256 a9f9e132540c77e055a43ab74c88db14f7f677d9ad40e6ae5ed7aefa9f5bacfc.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-merged-main-qc
+  name: merged-main-qc
+  status: passed
+  required: true
+  command: gh run view 38339564555 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T04:32:38Z to 2026-10-14T04:32:41Z;
+    verified log SHA-256 5a1c26e21239fbbe53a8892902d6fd7a3a28379b4d17457302a700420a60c864.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-adapter-datasets-live
+  name: adapter-datasets-live
+  status: passed
+  required: false
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T04:33:30Z to 2026-10-14T04:33:33Z;
+    verified log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-post-save-archive
+  name: post-save-archive
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T05:30:56Z to 2026-10-14T05:34:16Z;
+    verified log SHA-256 8bcb97bf693a211415353c7a1f8e448d95382de2a6be79fc339675a0be3585df.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: reused-post-save-contract
+  name: post-save-contract
+  status: passed
+  required: true
+  command: .venv/bin/pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - validation
+  summary: Reused unchanged-input result from 2026-10-14T05:34:16Z to 2026-10-14T05:37:39Z;
+    verified log SHA-256 5ca616ade7743ff7dd56340b40dcad6ebc1ebb9f524b4db2659d5d55e6e8641e.
+  scope_note: Pre-save baseline only, not a future post-save result.
+- check_id: gvpc-condition-evidence
+  name: Evidence for conditional GvpC assembly requirement
+  status: unavailable
+  required: true
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - walsby
+  - gvpc-deletion
+  - schema
+  summary: The older cited review body was unavailable through inspected routes. Accessible
+    stripping/reconstitution evidence concerns stability of assembled shells, and
+    one deletion context establishes local dispensability, not absence of conditional
+    assembly requirements. The earlier definite finding exceeded this evidence.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/inclusion/gas_vesicle.yaml
+  locator: Entire 335-line native YAML and all three native history files
+  accessed_at: '2026-10-14T05:29:50Z'
+  support: supports
+  summary: GO-grounded protein organelle with two components, two taxon rows, one
+    strain example, one function, two graphs containing eleven edges and one CryoET
+    dataset. PROPOSED remains appropriate.
+  snapshot_sha256: 1ec13274f54fa099e647f85f1491d2ea7f0978e321676538bcb1ba0d6ed2f920
+- evidence_id: go
+  kind: authority
+  reference: GO:0031411
+  locator: Complete current QuickGO term, definition, synonym and cellular-component
+    aspect
+  accessed_at: '2026-10-14T05:20:40Z'
+  support: supports
+  summary: Active gas-vesicle identity; the protein organelle includes its shell rather
+    than being an enclosed object inside that shell. The gas-vacuole synonym is explicitly
+    related.
+  snapshot_sha256: a760db0109edc9db1b64e1fc24e126dbc37d842b31f36668164413a44a9bfe7a
+- evidence_id: walsby
+  kind: authority
+  reference: PMID:8177173
+  locator: Source-native abstract in NCBI efetch and Europe PMC; publisher abstract
+    also inspected
+  accessed_at: '2026-10-14T05:24:12Z'
+  support: supports
+  summary: Supports protein shell, usual capped-cylinder shape, gas permeability and
+    water exclusion, buoyancy, occurrence in several bacterial phyla and two archaeal
+    groups, and distinct GvpA structural versus GvpC strengthening roles. Full 51-page
+    body was not available through tested routes.
+  snapshot_sha256: cdfcde05e43055484cc10c17ac4e9c43baa4925adbf3baaca37e12baccac4361
+- evidence_id: bayro
+  kind: primary_source
+  reference: PMID:22147705
+  locator: NCBI article front matter, author order and abstract; Europe PMC citation
+    identity
+  accessed_at: '2026-10-14T05:24:12Z'
+  support: supports
+  summary: Bayro, Daviso, Belenky, Griffin and Herzfeld authored the NMR paper. Its
+    abstract supports GvpA cross-beta shell assembly; Belenky is not its lead author.
+    Journal issue is 2012, online publication December 2011.
+  snapshot_sha256: cdfcde05e43055484cc10c17ac4e9c43baa4925adbf3baaca37e12baccac4361
+- evidence_id: dutka
+  kind: primary_source
+  reference: DOI:10.1016/j.str.2023.03.011
+  locator: 'Full JATS: Introduction, Results, Discussion, limitations and Methods;
+    especially GV preparation, cryo-ET and shell averaging'
+  accessed_at: '2026-10-14T05:23:45Z'
+  support: supports
+  summary: Purified intact Ana vesicles and GvpC-stripped particles reveal a GvpA
+    shell enclosing gas, exterior GvpC reinforcement and helical architecture. Structural
+    observations suggest, but do not directly time-resolve, elongation at the inversion
+    point.
+  snapshot_sha256: 75a80e7b19b5cfee665f00e02c08d9e4882888832e30ab6862e12204b085b9b8
+- evidence_id: dutka-figure1
+  kind: primary_source
+  reference: DOI:10.1016/j.str.2023.03.011
+  locator: Figure 1A-E, actual image pixels and JATS caption
+  accessed_at: '2026-10-14T05:25:38Z'
+  support: supports
+  summary: Schematic and tomographic sections distinguish the protein wall from the
+    lumen and the whole gas vesicle. No new dimensional measurement was extracted.
+  snapshot_sha256: 37fe143cf2a0b03c02c6959d4d6e76a52149c838a76ad61056f255a2d070248e
+- evidence_id: dutka-figure3
+  kind: primary_source
+  reference: DOI:10.1016/j.str.2023.03.011
+  locator: Figure 3A-H, actual image pixels and JATS caption
+  accessed_at: '2026-10-14T05:25:39Z'
+  support: supports
+  summary: Native and GvpC-stripped shell averages retain the GvpA wall; external
+    rods are assigned to GvpC by comparison. This is removal from assembled vesicles,
+    not by itself an assembly deletion experiment.
+  snapshot_sha256: 06b68a34a9ccc9c3e65b31c8ef980d48f243682213712dbf2a10dc4ef4eb0135
+- evidence_id: voelkner
+  kind: primary_source
+  reference: DOI:10.3389/fmicb.2020.610179
+  locator: 'Full JATS: methods, accessory pull-down/split-GFP results, GvpA contact
+    mapping, discussion and conclusion'
+  accessed_at: '2026-10-14T05:23:46Z'
+  support: supports
+  summary: H. salinarum p-vac proteins expressed in Hfx. volcanii establish pairwise
+    interaction evidence. GvpL has multiple partners and GvpF is the sole clear GvpA
+    partner in these tests. A nucleation/chaperoning complex is proposed, not directly
+    observed; existing record qualifiers preserve that distinction.
+  snapshot_sha256: 2255a0321c5e2adcb589f7203ea93b03b1b88882e32b31202c9dc183652f08b8
+- evidence_id: iburg
+  kind: primary_source
+  reference: DOI:10.1038/s44318-024-00178-2
+  locator: JATS Introduction, pNL29 assay construction, Results for Figures 4-5 and
+    Discussion assembly stages I-V
+  accessed_at: '2026-10-14T05:23:47Z'
+  support: supports
+  summary: B. megaterium pNL29 proteins were assayed in E. coli using split NanoLuc.
+    GvpA2-GvpF interaction reappears upon removal of background Gvps or GvpG specifically.
+    The five-stage assembly scheme remains a hypothesis, consistent with the record
+    scope notes.
+  snapshot_sha256: a4ad19a1c094917b4c93baad960285afb458a4df30e9a3c555c14a3b288e58f0
+- evidence_id: gvpc-deletion
+  kind: primary_source
+  reference: PMID:8606186
+  locator: Europe PMC source-native abstract, DOI 10.1128/jb.178.7.2071-2078.1996
+  accessed_at: '2026-10-14T05:25:09Z'
+  support: supports
+  summary: Offner et al. experimentally removed gvpC from the p-vac region in Hfx.
+    volcanii and obtained abundant irregular vesicles; complementation restored normal
+    shape. This supports dispensability for assembly in that tested context, not universal
+    dispensability in every possible condition.
+  snapshot_sha256: 91d92324c122bdc0f2104b8008a3d89b506137675062d9753f8bc5f167f431fe
+- evidence_id: identifiers
+  kind: authority
+  reference: Pfam:PF00741; Pfam:PF01304; Pfam:PF06386; MICRO:0000214; uniprot.location:SL-0125
+  locator: Full source-native InterPro/Pfam, OLS MicrO and UniProt location responses
+  accessed_at: '2026-10-14T05:29:50Z'
+  support: supports
+  summary: PF00741 and PF06386 are families. PF01304 is the repeated GvpC domain,
+    not an exact whole-protein family; it appears as a graph cross-reference rather
+    than a component identity assertion. MicrO and UniProt location descriptions match
+    the protein organelle; no obsolete identity was observed.
+- evidence_id: taxa
+  kind: authority
+  reference: NCBITaxon:2; NCBITaxon:2157; NCBITaxon:315271
+  locator: Three full ENA taxonomy responses
+  accessed_at: '2026-10-14T05:29:50Z'
+  support: supports
+  summary: Bacteria, Archaea and Dolichospermum flos-aquae CCAP 1403/13F agree with
+    their identifiers. Historical Anabaena names appear in the strain synonyms.
+- evidence_id: portal
+  kind: database
+  reference: CryoETDataPortal:10014
+  locator: Official GraphQL dataset and canary run 14004; native resolve() checks;
+    public submission policy
+  accessed_at: '2026-10-14T05:24:01Z'
+  support: supports
+  summary: Exact strain, GO, publication, run name pda2021-06-24-66, 217-run count,
+    dates and EMDB related entries match. Public submission policy explicitly states
+    CC0. Related EMDB entries are portal metadata, not independent volume inspections.
+  snapshot_sha256: cd03704d09062525a1067cec16bee5c1f1e3d72eb3e74cb0baefde5ab760e00a
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructureComponent.component_role/essentiality, EssentialityEnum, CausalNode/CausalEdge
+    and CausalGraphScopeEnum
+  accessed_at: '2026-10-14T05:29:50Z'
+  support: supports
+  summary: Essentiality refers to formation without a component, not strengthening
+    or occurrence only in some lineages. DISPENSABLE permits defective structures.
+    Graph edges are directed relationships, and the native checklist requires correct
+    direction and experimental scope.
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Live inventory from 2026-10-14T04:33:30Z, 28 datasets
+  accessed_at: '2026-10-14T05:29:50Z'
+  support: supports
+  summary: No matched native source-organism dataset; no absence-of-structure inference
+    from this applicability result.
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261014T051943Z-gas-vesicle/baseline-verification.json
+  locator: Fresh target logs, hash-verified historical baseline receipts and exact-main
+    CI logs
+  accessed_at: '2026-10-14T05:29:50Z'
+  support: supports
+  summary: Target schema/strict pass. None of 23 citations contains a snippet, so
+    snippet success is vacuous. Prior whole-corpus validators and exact-main QC remain
+    applicable to unchanged maintained inputs; none proves scientific correctness.
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured; history; reports; data/structures
+  locator: Path.rglob full canonical inventory and rg --no-ignore --hidden identifier/slug/label/new-issue-key
+    searches
+  accessed_at: '2026-10-14T05:29:50Z'
+  support: supports
+  summary: No predecessor for this target among 217 canonical bundles. The three new
+    issue keys have no earlier occurrence in the named roots. Existing native history
+    and unrelated reports are preserved.
+  search_scope: Named local roots include hidden and ignored files; no repository-wide
+    remote issue absence claim.
+- evidence_id: go-shell
+  kind: authority
+  reference: GO:0033172
+  locator: Full current QuickGO shell term definition and synonyms
+  accessed_at: '2026-10-14T05:38:36Z'
+  support: refutes
+  snapshot_sha256: 995dbf7bd09465f06221131beada091e5e72238fd891ecd5fdfa15539ce2328c
+  summary: The active shell term is defined as the proteinaceous structure surrounding
+    a gas vesicle. With the native graph description, this supports an ordinary boundary
+    interpretation of the free-text encloses edge, rather than proving an anatomically
+    wrong nested organelle.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Organelle identity and ontology scope
+  outcome: supported
+  summary: GO definition, related synonym, inclusion category and protein-shelled
+    organelle kind agree. This is not a lipid vesicle or isolated shell protein. MicrO
+    term definition agrees despite an inconsistent imported definition-source annotation.
+    No native hierarchy assertions need correction.
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - native
+  - go
+  - walsby
+  - identifiers
+  - go-shell
+- assessment_id: components
+  area: grounding
+  topic: GvpA and GvpC roles versus assembly requirement
+  outcome: unknown
+  summary: GvpA/GvpC composition and mechanical roles are supported. GvpC stripping
+    and the inspected single deletion context do not establish whether all possible
+    conditional assembly dependencies are absent. The schema does not require a separate
+    condition field. No concrete error in CONDITIONAL is established; verifying its
+    source support requires additional accessible formation evidence or the cited
+    review body. This limitation prevents a completed whole-record verdict.
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - native
+  - schema
+  - dutka
+  - gvpc-deletion
+  - identifiers
+- assessment_id: taxonomy
+  area: scope
+  topic: Variable bacterial/archaeal occurrence and exact strain
+  outcome: supported
+  summary: Both VARIABLE rows are supported by the cited review abstract without asserting
+    universal presence or unsupported absence. The renamed exact strain is confirmed
+    by ENA and the publication-associated CryoET dataset. Broad clades are not used
+    as experimental strain substitutes.
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - native
+  - walsby
+  - taxa
+  - portal
+- assessment_id: function
+  area: evidence
+  topic: Buoyancy function and five function-graph edges
+  outcome: supported
+  summary: The five edges are readable as GvpA shell formation, a boundary around
+    the vesicle, exterior strengthening, gas-filled interior maintenance and buoyancy.
+    Native GO itself describes the shell as surrounding the vesicle. The earlier categorical
+    claim that this edge must encode an impossible nested organelle was not justified
+    by this free-text predicate and explicit wall-forming description.
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - native
+  - go
+  - go-shell
+  - dutka
+  - dutka-figure1
+  - walsby
+  - bayro
+- assessment_id: assembly
+  area: evidence
+  topic: All six assembly-graph edges and hypothesis qualifiers
+  outcome: supported
+  summary: Accessory interaction organization and GvpF-GvpA contacts are supported
+    at the assay/species level. The nucleation edge explicitly says consistent with
+    a transient complex and cites a proposed model; together with graph scope_notes
+    this preserves uncertainty. Bicone elongation is the cited coarse assembly model,
+    exterior GvpC is supported in GvpC-bearing systems, and the terminal wall/organelle
+    edge is a coarse structural description, not a measured kinetic maturation sequence.
+    No extra finding is inferred solely from MECHANISTIC scope_status.
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - native
+  - voelkner
+  - iburg
+  - dutka
+  - walsby
+  dimensions:
+  - name: haloarchaeal_assay_context
+    value: H. salinarum PHH1 p-vac proteins in Hfx. volcanii WR340
+    definition: Protein origin and heterologous interaction-assay host, not interchangeable
+      native occurrence claims.
+    evidence_ids:
+    - voelkner
+  - name: bacterial_assay_context
+    value: B. megaterium pNL29 proteins expressed in E. coli
+    definition: Split-NanoLuc interaction background for the GvpA2/F/G observations.
+    evidence_ids:
+    - iburg
+  - name: evidence_tier
+    value: PPI experiments plus explicitly proposed assembly model
+    definition: Nucleation, chaperoning and precise temporal order were not directly
+      reconstructed.
+    evidence_ids:
+    - voelkner
+    - iburg
+- assessment_id: data
+  area: provenance
+  topic: Structural dataset, imaging context and references
+  outcome: concern
+  summary: CryoET metadata remains supported and the incorrect top-level lead-author
+    attribution remains a confirmed minor provenance issue. No record or history edits
+    occurred.
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - native
+  - portal
+  - taxa
+  - bayro
+  - dutka
+- assessment_id: completeness
+  area: completeness
+  topic: Optional fields and experimental precision
+  outcome: supported
+  summary: No optional image, physical-property, trait, discussion or protein-example
+    row is required solely because absent. The record does not claim exhaustive minor-component
+    composition or fixed stoichiometry. Assembly-factor nodes are distinguished from
+    the two maintained core constituents. No unsupported quantitative measurement
+    is encoded.
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - native
+  - dutka
+  - voelkner
+  - iburg
+  - adapter
+- assessment_id: ownership
+  area: ownership
+  topic: Status, immutable history and maintained owner
+  outcome: supported
+  summary: The whole maintained record and both history surfaces were inspected. Agent-authored
+    PROPOSED status is preserved. Future scientific fixes belong in this YAML via
+    guarded curation and history, not in rendered products or this review.
+  target_ids:
+  - GO:0031411
+  evidence_ids:
+  - native
+  - schema
+  - validation
+  - predecessors
+findings:
+- finding_id: F1
+  issue_key: gas-vesicle-shell-lumen
+  category: representation
+  severity: major
+  status: rejected
+  certainty: confirmed
+  title: Withdraw the unsupported shell-containment defect finding
+  description: The earlier observation treated encloses as a formal strict-containment
+    relation. This repository permits free-text predicates and the adjacent description
+    explains that the shell forms the body and caps. GO:0033172 explicitly uses surrounding
+    a gas vesicle. An anatomical defect is therefore not established by the wording.
+  target_ids:
+  - GO:0031411
+  field_paths:
+  - causal_graphs[0].edges[1]
+  - causal_graphs[0].nodes[3]
+  - causal_graphs[0].nodes[4]
+  evidence_ids:
+  - native
+  - schema
+  - go-shell
+  - dutka
+  - dutka-figure1
+  rule_id: review-checklist:causal-direction-and-parthood
+  native_severity: major
+  normalization_reason: The major severity is retained as historical lineage metadata
+    for the rejected finding, not a current open defect.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/gas_vesicle.yaml
+    role: maintained scientific record
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261014T052950Z-gas-vesicle-composition-and-graph
+    finding_id: F1
+  disposition_reason: New source-native GO shell context undermines the categorical
+    inference behind F1. Reject this as an actionable scientific defect; optional
+    clearer wording is not sufficient to preserve the major finding.
+- finding_id: F2
+  issue_key: gas-vesicle-gvpc-essentiality
+  category: evidence
+  severity: major
+  status: rejected
+  certainty: confirmed
+  title: Withdraw the unproven GvpC conditional-essentiality defect finding
+  description: The earlier inference conflated missing inspected evidence for an explicit
+    condition with evidence of a wrong conditional requirement. One gvpC deletion
+    context and stripping already assembled vesicles cannot refute a requirement under
+    another pressure, condition or lineage. No separate condition field is mandatory
+    in the native schema, and the cited review body was not accessible.
+  target_ids:
+  - GO:0031411
+  field_paths:
+  - components[1].essentiality
+  - components[1].evidence
+  evidence_ids:
+  - native
+  - schema
+  - walsby
+  - gvpc-deletion
+  - dutka-figure3
+  rule_id: review-checklist:component-essentiality-evidence
+  native_severity: major
+  normalization_reason: The major severity is historical metadata of the rejected
+    inference; no corrective essentiality edit is justified by this review.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/gas_vesicle.yaml
+    role: maintained scientific record
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261014T052950Z-gas-vesicle-composition-and-graph
+    finding_id: F2
+  disposition_reason: The issue-only gate does not permit an unavailable check or
+    incompletely supported reviewer inference to become a scientific issue. Reject
+    F2 as unproven while keeping the GvpC scientific check explicitly incomplete;
+    this does not certify CONDITIONAL or replace it with universal DISPENSABLE.
+- finding_id: F3
+  issue_key: gas-vesicle-bayro-attribution
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Attribute the cited NMR paper to Bayro et al.
+  description: Top-level evidence[1].notes calls PMID:22147705 Belenky et al. 2012.
+    Source author order is Bayro, Daviso, Belenky, Griffin and Herzfeld. Belenky is
+    a coauthor, not the first author. The same paper is correctly called Bayro et
+    al. in the function graph; harmonize the top-level attribution while retaining
+    the correct PMID and supported NMR claim. Rechecked unchanged source metadata
+    and record bytes; this finding remains open.
+  target_ids:
+  - GO:0031411
+  field_paths:
+  - evidence[1].notes
+  evidence_ids:
+  - native
+  - bayro
+  rule_id: review-checklist:reference-provenance
+  native_severity: minor
+  normalization_reason: Non-blocking author attribution mismatch; citation identifier
+    and scientific paper identity remain correct.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/gas_vesicle.yaml
+    role: maintained scientific record
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261014T052950Z-gas-vesicle-composition-and-graph
+    finding_id: F3
+actions:
+- action_id: A1
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0031411
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/gas_vesicle.yaml
+    role: maintained scientific record
+  description: Correct the top-level author attribution to Bayro et al. 2012 without
+    changing the PMID or supported shell evidence.
+  acceptance_checks:
+  - All author-attribution notes for PMID:22147705 agree with the source author order.
+  - Keep PROPOSED and use write_validated_structure, an LLM-assisted curation event
+    and append-only history if a later scientific edit is authorized.
+  - Run fresh target schema, strict and evidence checks plus native QC/product/history
+    gates, then save an evidence-backed successor retaining each issue key and exact
+    previous occurrence.
+limitations:
+- Same-agent scientific review, not independent human sign-off, exhaustive literature
+  discovery, a new taxonomic census or raw-data reanalysis.
+- Walsby 1994 and Bayro 2012 were inspected at source-native abstract and metadata
+  level. Europe PMC full XML returned HTTP 500, NCBI efetch explicitly omitted their
+  bodies, PMC PDF requests returned HTML browser challenges, and the Walsby publisher
+  PDF route exposed an abstract/access page. These are access limitations, not proof
+  of absent full text. Abstract scope suffices for their coarse recorded claims; detailed
+  shell and assembly claims were additionally checked in cited accessible primary
+  articles.
+- Dutka, Voelkner and Iburg full JATS were available. Relevant Results, Discussion,
+  Methods and figure captions were inspected; Dutka Figures 1 and 3 actual pixels
+  were also viewed. No supplementary dataset, original tomogram, NMR spectrum or split-reporter
+  raw measurements were reanalyzed.
+- CryoET metadata and CC0 submission policy were freshly checked, but no imaging volumes
+  or individual related EMDB records were downloaded. Dataset metadata is not independent
+  confirmation of every annotated image.
+- PF01304 is a repeat cross-reference, not an exact GvpC whole-protein family identity.
+  No protein-accession sequence or comprehensive minor-component search was performed.
+  iModulonDB has no matching native source-organism dataset.
+- Fresh schema and strict checks pass; the snippet check has zero snippets among 23
+  citations and cannot validate scientific support. The missing requested snippet
+  report file reflects the no-snippet outcome, not an inspected report.
+- 'Global checks are reused with verified unchanged input roots/log hashes and original
+  execution times: history 1729 valid; identifiers 4023 OK, 251 configured skips;
+  labels 603 no-adapter skips. Exact-main CI reports 987 passed, 3 skipped. These
+  are not fresh local whole-corpus QC or post-review CI runs.'
+- This successor corrects overconfident inferences in the earlier review; it does
+  not erase it. Two major findings are rejected, one minor author-attribution issue
+  remains open.
+- Conditional GvpC assembly need remains unverified. A cited abstract about strengthening
+  or a deletion in one host is insufficient to prove or refute all conditional dependencies.
+  Whole-record completion is partial until that evidence check is resolved.
+- The gas-vesicle shell sibling YAML was read as boundary context only. It has not
+  received a completed review in this continuation and remains in the pending corpus.
+- All checks here reuse verified unchanged inputs with their actual original times.
+  Pre-save archive/contract covers 218 bundles. Post-save checks are recorded separately
+  after saving.
+- Only a new immutable successor is added. No prior bundle, scientific record, curation
+  history, generated product or GitHub state is edited.
+tags:
+- scientific-review
+- inclusion
+- causal-graph
+- essentiality
+- provenance
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261014T052950Z-gas-vesicle-composition-and-graph
+  relationship: Reassesses all three findings; withdraws F1/F2 and retains F3 without
+    editing the predecessor.
+```

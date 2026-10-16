@@ -1,0 +1,561 @@
+schema_version: 1.0.0
+review_id: 20261012T121420Z-periplasm-lpt-cargo-subject
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Outer membrane-bounded periplasm Lpt transit semantics review
+started_at: '2026-10-12T12:10:29Z'
+finished_at: '2026-10-12T12:14:20Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no independent human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: One minor machine-versus-cargo transit label defect. Region identity, boundary/containment
+  separation and delivery topology are supported; detailed Silhavy tethering verification
+  remains incomplete.
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+    sha256: bb353e664707cd5d1472747dfc3b0a3568179ebf198b0d52b56a34195d817dd3
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/outer_membrane_bounded_periplasmic_space/2026-09-12T041459Z-codex-01fc5e.yaml
+    sha256: 48120c5a01d2fb541484c6886f2046e06a19454839db15d0c1767ebb26b744aa
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0030288
+  path: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+  label: outer membrane-bounded periplasmic space
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+    role: maintained scientific record
+scope:
+  description: One entire record, one append-only history, three native events, all
+    identifiers, one component, taxonomy/example, both functions, six graph nodes/six
+    edges and two resolved discussions assessed. No sampling; nearest-source coverage
+    remains partial.
+  selection: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030288
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Actual UTC: 2026-10-12T12:10:45Z to 2026-10-12T12:10:47Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Actual UTC: 2026-10-12T12:10:47Z to 2026-10-12T12:10:50Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+    --report /private/tmp/csm-review-20261012T120957Z-periplasm/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Snippet coverage is zero, not a full-text pass. Actual
+    UTC: 2026-10-12T12:10:50Z to 2026-10-12T12:11:05Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse: QC987 passed/3 skipped, cached labels
+    with603 no-adapter skips, cached traits after earlier network failure; not fresh
+    CI. Actual UTC: 2026-10-12T06:33:07Z to 2026-10-12T06:45:16Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse: QC987 passed/3 skipped, cached labels
+    with603 no-adapter skips, cached traits after earlier network failure; not fresh
+    CI. Actual UTC: 2026-10-12T06:45:16Z to 2026-10-12T06:47:16Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse: QC987 passed/3 skipped, cached labels
+    with603 no-adapter skips, cached traits after earlier network failure; not fresh
+    CI. Actual UTC: 2026-10-12T06:48:15Z to 2026-10-12T06:48:52Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: liveCURIE4023 OK/251 SKIP/0 unreachable;213 valid bundles
+    and4 contract tests. Post-save validation follows separately. Actual UTC: 2026-10-12T07:05:41Z
+    to 2026-10-12T07:10:58Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: liveCURIE4023 OK/251 SKIP/0 unreachable;213 valid bundles
+    and4 contract tests. Post-save validation follows separately. Actual UTC: 2026-10-12T12:00:48Z
+    to 2026-10-12T12:02:25Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: liveCURIE4023 OK/251 SKIP/0 unreachable;213 valid bundles
+    and4 contract tests. Post-save validation follows separately. Actual UTC: 2026-10-12T12:02:25Z
+    to 2026-10-12T12:04:08Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh expression-database context, not mechanism proof. Actual UTC: 2026-10-12T12:10:32Z
+    to 2026-10-12T12:10:33Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - adapter
+- check_id: adapter-lpt
+  name: adapter-lpt
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query lpt
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh expression-database context, not mechanism proof. Actual UTC: 2026-10-12T12:10:33Z
+    to 2026-10-12T12:10:33Z.'
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - adapter
+- check_id: silhavy-tethering-passage
+  name: Inspect detailed nearest-source wall-tethering passage
+  status: unavailable
+  required: true
+  summary: Abstract, introduction, envelope opening and Fig2 caption inspected, but
+    detailed tethering text remained inaccessible. GO corroboration is not an assertion
+    that this paper passage was read.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - silhavy
+  - go
+  - access
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+  locator: Entire YAML, three native events and one append-only history file
+  summary: The graph triple says lpt_machine moves across periplasm, while its description
+    correctly identifies LPS as cargo. Earlier fixes keep boundary membranes out of
+    components and add LPS insertion. PROPOSED and all native content remain unchanged.
+  support: supports
+  accessed_at: '2026-10-12T12:14:20Z'
+  snapshot_sha256: bb353e664707cd5d1472747dfc3b0a3568179ebf198b0d52b56a34195d817dd3
+- evidence_id: rules
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Causal-edge semantics, source scope and native review profile
+  summary: Read the directed subject/predicate/object as a claim. Narrow wording defects
+    can be minor when surrounding prose already states the correct biology; inaccessible
+    text alone is not a finding.
+  support: supports
+  accessed_at: '2026-10-12T12:14:20Z'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030288,GO:0042597,GO:0005886,GO:0009276,GO:0009279
+  locator: Five active term definitions, synonyms and child relations
+  summary: GO:0030288 is the inner-to-outer membrane region containing thin peptidoglycan.
+    GO:0042597 explicitly lists it as an is-a child. GO:0009276 denotes the contained
+    wall and includes lipoprotein links in its definition. GO:0005886 and GO:0009279
+    denote the boundary membranes.
+  support: supports
+  accessed_at: '2026-10-12T12:10:44Z'
+  snapshot_sha256: 5d5f3f25b63ba1b6096382cf98103c8565aaae5a3d71b363610773ce9e10d40a
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_16412
+  locator: Exact active CHEBI:16412 term
+  summary: The chemical node is grounded to the lipopolysaccharide class, not to a
+    particular strain-specific LPS composition.
+  support: supports
+  accessed_at: '2026-10-12T12:10:45Z'
+  snapshot_sha256: 41eae094d6dea7c3d06569dcb1121f8c401afee6380796b3545c57a54b3252f8
+- evidence_id: sperandeo
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5672026
+  locator: 'Sperandeo et al.2017 cited review: Introduction, Fig1 caption, LPS biogenesis,
+    Lpt machine/bridge and OM-insertion sections; DOI:10.1074/jbc.R117.802512'
+  summary: The review describes LPS crossing the periplasm through an envelope-spanning
+    protein assembly. It supports extraction, transit and insertion, while distinguishing
+    cargo from machinery. This supports correcting the ambiguous machine-transit edge;
+    it is review synthesis, not a newly performed experiment.
+  support: refutes
+  accessed_at: '2026-10-12T12:14:20Z'
+- evidence_id: silhavy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2857177
+  locator: 'Cited review: complete abstract, Introduction and beginning of Gram-negative-envelope/outer-membrane
+    sections through the opening peptidoglycan paragraph'
+  summary: The authors explicitly use E.coli as the Gram-negative model and describe
+    two bounding membranes, periplasm and thin wall. Detailed wall-lipoprotein tethering
+    text was not exposed before subsequent requests returned challenges.
+  support: partial
+  accessed_at: '2026-10-12T12:14:20Z'
+- evidence_id: silhavy-figure2
+  kind: primary_source
+  reference: https://cshperspectives.cshlp.org/content/2/5/a000414/F2.expansion.html
+  locator: Original publisher Fig2 caption
+  summary: The caption directly supports LPS delivery by Lpt and protein/lipoprotein
+    biogenesis involving periplasmic handling. Reading the caption does not establish
+    that the remainder of the article body was inspected.
+  support: supports
+  accessed_at: '2026-10-12T12:14:20Z'
+- evidence_id: metadata
+  kind: authority
+  reference: /private/tmp/csm-review-20261012T120957Z-periplasm
+  locator: Both EuropePMC complete abstracts and Crossref identity responses; ENA
+    taxa2/562
+  summary: DOIs, author sets and publication years agree. The native Sperandeo title
+    is abbreviated but not misidentified. Bacteria and E.coli identifiers agree with
+    their labels.
+  support: supports
+  accessed_at: '2026-10-12T12:14:20Z'
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh28-dataset inventory; e_coli/precise1k lpt search
+  summary: 'Exact matches: lptD/b0054, lptE/b0641, lptC/b3199, lptA/b3200, lptB/b3201,
+    lptG/b4262 and lptF/b4261. glpT/b2240 is a substring false positive, not Lpt.
+    No iModulon hits; gene context does not prove topology or motion.'
+  support: supports
+  accessed_at: '2026-10-12T12:14:20Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T120957Z-periplasm/baseline-verification.json
+  locator: Fresh target gates and unchanged-input wider receipts
+  summary: Schema and strict pass. Zero of23 citations carries a snippet,21 evidence
+    entries and2 bare references; snippet success is not full-text review. Original
+    QC, cached labels/traits, live CURIE and213-bundle/four-test receipts are reused
+    with their original limits.
+  support: supports
+  accessed_at: '2026-10-12T12:14:20Z'
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T120957Z-periplasm/source-access.jsonl
+  locator: Ten hashed captures, two failed S3 originals and separate browser source
+    reading
+  summary: Both attempted S3 originals returned404. Sperandeo PMC later supplied the
+    relevant body. Silhavy PMC supplied only the recorded portion before access became
+    intermittent; publisher Fig2 caption succeeded, publisher full HTML/PDF and institutional
+    Sperandeo PDF attempts did not supply bodies.
+  support: context_only
+  accessed_at: '2026-10-12T12:14:20Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: Ignored-inclusive canonical target scan and local identifier/key search
+  summary: No canonical predecessor among213 bundles and no proposed issue-key match.
+    Historical curation links and readability inventories are not formal review lineage.
+  support: supports
+  accessed_at: '2026-10-12T12:14:20Z'
+  search_scope: Path.rglob includes ignored/hidden canonical files. rg --no-ignore
+    --hidden searched reports, research, reviews, curation and history for GO:0030288,
+    the target slug and periplasm-lpt-cargo-subject. Matches were native history/readability/CURIE
+    entries, not a proposed-key predecessor. Bounded local scope, not GitHub-wide
+    absence.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Region versus wall and membranes
+  outcome: supported
+  summary: Exact identity, category, kind and synonyms agree. Parentage is is-a; the
+    wall is a contained part, not an equivalent structure. The resolved boundary discussions
+    correctly exclude bounding membranes from component membership.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - native
+  - go
+- assessment_id: component
+  area: evidence
+  topic: Contained wall and lipoprotein links
+  outcome: unknown
+  summary: Peptidoglycan location is supported. Tethering is consistent with the active
+    grounded wall definition, but detailed verification against the accompanying Silhavy
+    paper remains incomplete. UNKNOWN essentiality does not claim universal viability.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - native
+  - go
+  - silhavy
+- assessment_id: taxa
+  area: scope
+  topic: Diderm distribution and E.coli example
+  outcome: supported
+  summary: VARIABLE bacteria and explicit diderm restriction do not claim all bacteria
+    have this region. Silhavy explicitly selects E.coli; source and ontology support
+    the topology. No universal seven-subunit inventory is asserted.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - go
+  - silhavy
+  - metadata
+  - sperandeo
+- assessment_id: functions
+  area: evidence
+  topic: Compartmentalization and outer-membrane biogenesis
+  outcome: supported
+  summary: GO supports compartment topology; the original biogenesis caption and cited
+    Lpt review support envelope-spanning transport. The region hosts the processes
+    rather than acting as an enzyme.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - go
+  - silhavy-figure2
+  - sperandeo
+- assessment_id: graph
+  area: graph
+  topic: Six topology and cargo edges
+  outcome: concern
+  summary: Boundary, containment, delivery and insertion edges are coherent. One transit
+    label assigns motion to the machinery rather than clearly specifying cargo. Its
+    description already gives the intended interpretation, making this a local wording/representation
+    defect.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - native
+  - go
+  - sperandeo
+- assessment_id: node-types
+  area: representation
+  topic: Localization, chemical and protein-machine nodes
+  outcome: supported
+  summary: Periplasm is a cellular localization, LPS a chemical, and Lpt a multi-protein
+    complex. Unlike a whole pathway mislabeled as a protein, the Lpt node denotes
+    an actual assembly supported by the source.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - native
+  - chebi
+  - sperandeo
+- assessment_id: provenance
+  area: provenance
+  topic: Citations and source limits
+  outcome: unknown
+  summary: Both bibliographic identities are correct. Relevant Lpt body and original
+    Silhavy biogenesis caption were inspected. The specific Silhavy tethering passage
+    remains pending; earlier access failures are preserved.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - metadata
+  - silhavy
+  - silhavy-figure2
+  - access
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded nonmechanistic coverage
+  outcome: supported
+  summary: No mandatory omitted measurement, image, dataset, trait link or sequence
+    grounding was identified. Optional chaperone/subunit enumeration is not required
+    by this explicitly nonmechanistic graph.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - native
+  - rules
+  - adapter
+- assessment_id: checks
+  area: schema
+  topic: Deterministic checks versus scientific judgment
+  outcome: supported
+  summary: Fresh target checks pass; reused full-corpus receipts were accepted only
+    after exact input/log verification. They do not rule out the semantic edge defect.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - validation
+- assessment_id: ownership
+  area: ownership
+  topic: Status, historical changes and maintained owner
+  outcome: supported
+  summary: All native events and append-only history read, including earlier boundary
+    and insertion fixes. Future curation belongs to guarded edits of the maintained
+    YAML, not rendered pages. No status/history changes or current GitHub-status inference.
+  target_ids:
+  - GO:0030288
+  evidence_ids:
+  - native
+  - rules
+  - predecessors
+findings:
+- finding_id: F1
+  issue_key: periplasm-lpt-cargo-subject
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Distinguish Lpt spanning from LPS transit in the edge label
+  description: The triple lpt_machine -- moves across --> periplasm reads as movement
+    of the assembled machine, unlike the correct cargo description. Use a spanning
+    relation for the machine or make LPS the subject of a transit relation. Preserve
+    the existing delivery and membrane-insertion edges.
+  target_ids:
+  - GO:0030288
+  field_paths:
+  - causal_graphs[graph_id=diderm_periplasm_topology].edges[subject=lpt_machine,predicate=moves
+    across,object=periplasm]
+  evidence_ids:
+  - native
+  - sperandeo
+  - rules
+  rule_id: review-checklist:causal-edge-subject-predicate-object
+  native_severity: minor
+  normalization_reason: The standalone triple is misleading, but its own description
+    and adjacent edges correctly identify LPS cargo; localized wording defect, not
+    wrong identity or wholesale mechanism failure.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Make the topology/transit triple unambiguous while preserving its existing
+    biological scope.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030288
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Reading the subject/predicate/object alone no longer says the Lpt assembly is
+    transported across the region.
+  - Keep explicit LPS delivery and outer-membrane insertion; do not add unsupported
+    detailed assembly claims.
+  - Inspect the pending Silhavy tethering passage before marking scientific coverage
+    complete.
+  - For separately authorized curation use the guarded writer, real history and native
+    checks; preserve PROPOSED and save exact-key lineage disposition.
+limitations:
+- 'Partial scientific review: the detailed Silhavy tethering passage remains unverified,
+  despite supporting ontology and inspected surrounding source text. No access-only
+  finding.'
+- Relevant Sperandeo review body sections and Fig1 caption read, not every figure
+  pixel or underlying experiment. The machine/cargo distinction follows explicit prose,
+  not a visual measurement.
+- 'Silhavy PMC access was intermittent: the abstract/introduction and envelope opening
+  were read; later body requests returned challenges. Original publisher Fig2 caption
+  supplied biogenesis evidence. Failed S3, publisher PDF/HTML and institutional PDF
+  routes are not source bodies.'
+- Same-agent review, not independent human sign-off or exhaustive literature surveillance.
+  Original wider-gate timestamps, caches and skips remain in force; no fresh CI.
+- No native scientific YAML, status, history, generated product, earlier review or
+  legacy report changed. External publication approval remains unanswered; no GitHub
+  mutation.
+tags:
+- scientific-review
+- envelope
+- graph
+- partial

@@ -1,0 +1,730 @@
+# Cyanophycin granule taxonomic-absence review
+
+- Review: 20261014T051318Z-cyanophycin-bacterial-absence
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-14T05:07:41Z
+- Finished UTC: 2026-10-14T05:13:18Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Entire native record reviewed. One minor taxonomic wording finding: documented occurrence is overextended into majority absence across bacterial lineages. Core identity, polymer constituent, example, storage function and coarse graph are supported within the stated reading limits.
+
+## Scope And Provenance
+
+Entire native record, one component, distribution row, canonical example, function, all three graph edges, discussion and both history surfaces; no sampling.
+
+Selection: data/structures/inclusion/cyanophycin_granule.yaml
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 6c33c1c78494e7f0623cf2b157f4036d737196d7.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:cyanophycin_granule | data/structures/inclusion/cyanophycin_granule.yaml | maintained | cyanophycin granule |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | cellstructuremech:cyanophycin_granule | Fresh target check. Actual execution: 2026-10-14T05:07:51Z to 2026-10-14T05:07:55Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de. |
+| strict | passed | True | cellstructuremech:cyanophycin_granule | Fresh target check. Actual execution: 2026-10-14T05:07:55Z to 2026-10-14T05:08:02Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e. |
+| snippets | passed | True | cellstructuremech:cyanophycin_granule | Fresh target check. Actual execution: 2026-10-14T05:08:02Z to 2026-10-14T05:08:31Z; log SHA-256 0805a8c1c7f9477fbb857f14b39ec7bd84c8a8ad91d67b9a7a403e94819c977e. |
+| history-venv | passed | True | cellstructuremech:cyanophycin_granule | Reused, not rerun for this target; unchanged input roots and original log hash verified. Actual execution: 2026-10-14T04:32:04Z to 2026-10-14T04:32:32Z; log SHA-256 6dbe137325eb5631697951ee6e0c1e8e6e240b64f91e92d72121ea298cef2a92. |
+| labels | passed | True | cellstructuremech:cyanophycin_granule | Reused, not rerun for this target; unchanged input roots and original log hash verified. Actual execution: 2026-10-14T04:32:17Z to 2026-10-14T04:36:35Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286. |
+| curies-live | passed | True | cellstructuremech:cyanophycin_granule | Reused, not rerun for this target; unchanged input roots and original log hash verified. Actual execution: 2026-10-14T04:39:48Z to 2026-10-14T04:43:30Z; log SHA-256 7b26794ff07cf822cd706e14ae709be9c14effff0addebe45c1c9a353444dd88. |
+| curies-controls-live | passed | True | cellstructuremech:cyanophycin_granule | Reused, not rerun for this target; unchanged input roots and original log hash verified. Actual execution: 2026-10-14T04:38:51Z to 2026-10-14T04:39:24Z; log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8. |
+| traits-live | passed | True | cellstructuremech:cyanophycin_granule | Reused, not rerun for this target; unchanged input roots and original log hash verified. Actual execution: 2026-10-14T04:43:30Z to 2026-10-14T04:44:38Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f. |
+| archive | passed | True | cellstructuremech:cyanophycin_granule | Reused, not rerun for this target; unchanged input roots and original log hash verified. Actual execution: 2026-10-14T04:33:27Z to 2026-10-14T04:36:58Z; log SHA-256 a82447669eabbbb7eaf167e922df06f708ebdeb609e560269d0958f1acb8178e. |
+| contract | passed | True | cellstructuremech:cyanophycin_granule | Reused, not rerun for this target; unchanged input roots and original log hash verified. Actual execution: 2026-10-14T04:36:58Z to 2026-10-14T04:40:45Z; log SHA-256 c429f21b078ca00288a0eb1ae9c0a1a14ff1f1eb6f94b86c2a611ea77b0482fd. |
+| merged-main-checks | passed | False | cellstructuremech:cyanophycin_granule | Reused, not rerun for this target; unchanged input roots and original log hash verified. Actual execution: 2026-10-14T04:32:37Z to 2026-10-14T04:32:38Z; log SHA-256 a9f9e132540c77e055a43ab74c88db14f7f677d9ad40e6ae5ed7aefa9f5bacfc. |
+| merged-main-qc | passed | True | cellstructuremech:cyanophycin_granule | Reused, not rerun for this target; unchanged input roots and original log hash verified. Actual execution: 2026-10-14T04:32:38Z to 2026-10-14T04:32:41Z; log SHA-256 5a1c26e21239fbbe53a8892902d6fd7a3a28379b4d17457302a700420a60c864. |
+| adapter-datasets-live | passed | False | cellstructuremech:cyanophycin_granule | Reused, not rerun for this target; unchanged input roots and original log hash verified. Actual execution: 2026-10-14T04:33:30Z to 2026-10-14T04:33:33Z; log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549. |
+| Target-specific iModulonDB applicability | not_applicable | False | cellstructuremech:cyanophycin_granule | The 28-dataset live inventory contains no Synechocystis dataset. Synechococcus elongatus is a different organism and is not substituted. No query result is interpreted as biological absence. |
+| Initial draft contract validation | failed | False | cellstructuremech:cyanophycin_granule | PyYAML emitted aliases for shared Python lists. The contract forbids aliases. Corrected by serializing independent values; biological assessment unchanged. Original failed draft and receipt retained in scratch. |
+
+## Scientific And Domain Assessments
+
+### Structure identity and hierarchy
+
+identity: supported. Targets: cellstructuremech:cyanophycin_granule.
+
+The record denotes an intracellular storage inclusion, not the soluble polymer molecule or its synthetase. No unsupported hierarchy is forced. Missing optional parentage is not a finding.
+
+### Polymer identity, role and essentiality
+
+grounding: supported. Targets: cellstructuremech:cyanophycin_granule.
+
+The core chemical grounding and native storage-polymer type agree. CphA is retained as machinery rather than a permanent constituent; the family-grounding TODO is explicit rather than a guessed identity.
+
+### Positive occurrence versus majority absence
+
+scope: concern. Targets: cellstructuremech:cyanophycin_granule.
+
+VARIABLE distribution and the PCC 6803 example are supported. The final majority-absence clause is not established by the cited source and should be narrowed.
+
+### Storage function and three assembly edges
+
+evidence: supported. Targets: cellstructuremech:cyanophycin_granule.
+
+Polymer formation, accumulation and storage are supported at the encoded coarse level. NONMECHANISTIC scope avoids a complete nucleation or degradation mechanism. No fixed stoichiometry, universal growth advantage or exact rate is asserted. Localization evidence is the PCC 6803 experiment, not a family-wide screen.
+
+### Discussions and optional fields
+
+completeness: supported. Targets: cellstructuremech:cyanophycin_granule.
+
+The open CphA-family grounding task is actionable. Empty optional images, properties, traits, datasets and protein examples do not alone establish a curation gap. Source author/title/identifier identities agree.
+
+### Maintained owner, status and history
+
+ownership: supported. Targets: cellstructuremech:cyanophycin_granule.
+
+Both history surfaces were read and preserved. Future fixes belong in the maintained YAML through guarded curation, not generated products. This review does not promote PROPOSED or create history.
+
+## Findings
+
+### F1: Narrow the unsupported majority-of-bacterial-lineages absence statement
+
+minor / open / confirmed; issue key: cyanophycin-unsupported-bacterial-absence.
+
+The final clause of taxonomic_distribution[0].note says the structure is absent from most bacterial lineages. The cited chapter reports occurrence and gene diversity, not a survey with a defined lineage population and detection method that demonstrates this negative majority claim. Keep VARIABLE and the documented positive scope, but remove or qualify the absence clause unless suitable evidence is supplied. This is an unsupported extrapolation, not a finding that most lineages necessarily possess granules.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Narrow only the unsupported majority-absence clause to documented occurrence, retaining the VARIABLE row and valid example, or supply evidence with an explicit taxonomic denominator and adequate detection method.
+
+- The distribution note no longer treats limited positive reports or gene occurrence as proof of broad granule absence.
+- Any retained absence claim identifies surveyed taxa, conditions, method and denominator in inspected evidence.
+- Keep PROPOSED; use write_validated_structure, an LLM-assisted curation event and append-only history for a future edit.
+- Run fresh target schema/strict/evidence checks and native QC, then save a lineage-linked successor for F1.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/inclusion/cyanophycin_granule.yaml; Entire native YAML; both append-only history entries | supports | The distribution note adds an unqualified majority-of-lineages absence clause to a VARIABLE Bacteria row. The record otherwise separates the polymer constituent from CphA assembly machinery and remains PROPOSED. |
+| chapter | DOI:10.5772/intechopen.77049; Publisher full HTML: abstract and sections 1-4; entire reader-body searched for absence and phylogenetic scope | partial | The cited review supports storage, insolubility and documented occurrence. It also discusses biosynthetic genes across diverse bacterial taxa, but supplies no lineage denominator or detection-based survey establishing majority absence. |
+| experiment | https://journals.asm.org/doi/10.1128/aem.01298-18; Web-readable publisher text: Results, Discussion, Methods, Table 3, main figure legends and main-text descriptions of supplemental localization images | supports | PCC 6803 reporter experiments support CphA redistribution from cytoplasmic foci to growing granule surfaces and later release. Nitrogen-shift experiments support accumulation and mobilization. The paper does not sample bacterial lineages for absence. |
+| chemical | CHEBI:65319; Complete OLS ChEBI native term | supports | Active cyanophycin polymer identity agrees with the constituent and graph node. |
+| taxa | NCBITaxon:2; NCBITaxon:1148; Two complete ENA taxonomy responses | supports | The identifiers resolve to Bacteria and Synechocystis sp. PCC 6803. Identity does not prove prevalence or absence. |
+| metadata | DOI:10.5772/intechopen.77049; DOI:10.1128/AEM.01298-18; Crossref records and Europe PMC metadata; publisher author/title/date headers | supports | Both citations identify Watzer and Forchhammer 2018 works. The experiment is PMID 30120117 / PMC6182900. Crossref has no update-to entry; no exhaustive retraction survey is claimed. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; ComponentTypeEnum and EssentialityEnum | supports | SMALL_MOLECULE explicitly includes storage polymers in this schema. ESSENTIAL denotes structure formation, not cell viability. These are not findings. |
+| ontology-search | https://www.ebi.ac.uk/ols4/api/search; Exact GO label/synonym query cyanophycin granule; inclusion body positive and synthetic negative controls | supports | No exact hit in this bounded query; the positive control resolves GO:0016234 and negative control has no hit. A local structure identifier is not contradicted. |
+| adapter | https://imodulondb.org/; Live 28-dataset inventory from 2026-10-14T04:33:30Z | supports | No matching Synechocystis dataset is listed; no expression-module or localization inference is drawn. |
+| validation | /private/tmp/csm-review-20261014T050717Z-cyanophycin/baseline-verification.json; Fresh target checks plus original logs and receipts for hash-verified baseline reuse | supports | Schema, strict and snippet checks pass. Zero of ten citations carry snippets. Baseline history, identifiers, labels, trait links, archive and contract checks passed; exact-main CI reports 987 passed and 3 skipped. Deterministic results are not scientific evidence. |
+| predecessors | reviews/structured; reports; history; data/structures; Path.rglob canonical inventory and rg --no-ignore --hidden name/slug/ID/issue-key searches | supports | No matching canonical predecessor among 216 bundles and no existing occurrence of the new issue key in the searched roots. The native history links a separate CphA-component correction, not this new finding. |
+
+## Limits And Additional Notes
+
+- Same-agent review, not independent human sign-off, exhaustive literature discovery, primary-data reanalysis or a new taxonomic census.
+- The cited secondary chapter was read as full publisher HTML in the relevant identity, occurrence, properties and metabolism sections; the whole reader body was searched for the absence claim. Its outdated PDF link returned 404. The chapter is not recast as a new primary experiment.
+- The primary paper was read through web-tool publisher HTML, including relevant Results, Discussion, Methods and legends. Direct publisher retrieval returned 403, PMC web access a browser challenge, NCBI efetch metadata without body, BioC an error body with HTTP 200, and Europe PMC XML HTTP 500. These are retained access limitations, not evidence that the article lacks full text. No hash is invented for web-only article body.
+- Actual primary figure pixels and supplementary PDF were not inspected. Main-text descriptions and captions support the bounded localization claims; no image reuse, raw image verification or detailed panel quantification is asserted. Two web image requests timed out.
+- The native family-grounding TODO remains open; no exhaustive homology search or exact protein accession is claimed. The iModulonDB inventory has no matching Synechocystis dataset.
+- Fresh target schema, strict and snippet checks passed. Snippet check is vacuous for ten citations without quoted snippets. Scientific support was separately read.
+- Global history, identifiers/resolver controls, labels, trait links and pre-save archive/contract checks are reused after input/log hash verification with original execution times. Identifier results: 4023 OK, 251 configured skips, no unresolved results. Labels retain 603 no-adapter skips. Existing exact-main CI: 987 passed, 3 skipped. These are not fresh target-only or post-save CI runs.
+- Pre-save archive/contract baseline covers 216 bundles. Post-save checks are executed and recorded separately; this immutable document does not claim their future success.
+- No scientific record, prior review, history or product is changed. No GitHub issue, PR, commit, merge or status promotion is performed.
+- The first draft failed contract parsing because of serializer-emitted YAML aliases. It was not saved. An alias-free corrected draft was separately validated before persistence.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261014T051318Z-cyanophycin-bacterial-absence
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Cyanophycin granule taxonomic-absence review
+started_at: '2026-10-14T05:07:41Z'
+finished_at: '2026-10-14T05:13:18Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same coding-agent context; no independent human or second-agent
+    scientific sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Entire native record reviewed. One minor taxonomic wording finding: documented
+  occurrence is overextended into majority absence across bacterial lineages. Core
+  identity, polymer constituent, example, storage function and coarse graph are supported
+  within the stated reading limits.'
+source:
+  git_revision: 6c33c1c78494e7f0623cf2b157f4036d737196d7
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/inclusion/cyanophycin_granule.yaml
+    sha256: 1a0c53ed4953ac213e65dba909f7c86c842c27e5527f6ec7e0b5ce21bb016b20
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/cyanophycin_granule/2026-09-10T093106Z-claude-code-ee3e61.yaml
+    sha256: 56f5f18d15b5be1de2ab90e0e358de1c9f327a50288bb88cf9f6179925217790
+    role: context
+  - path: history/records/cyanophycin_granule/2026-09-10T094119Z-claude-code-7971a0.yaml
+    sha256: 474eee06c2f5e25e4ef68bac98de340a04b588cdc93b484ea9acded5a5709e4a
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: cellstructuremech:cyanophycin_granule
+  path: data/structures/inclusion/cyanophycin_granule.yaml
+  label: cyanophycin granule
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/cyanophycin_granule.yaml
+    role: maintained scientific record
+scope:
+  description: Entire native record, one component, distribution row, canonical example,
+    function, all three graph edges, discussion and both history surfaces; no sampling.
+  selection: data/structures/inclusion/cyanophycin_granule.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:cyanophycin_granule
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/inclusion/cyanophycin_granule.yaml
+  exit_code: 0
+  summary: 'Fresh target check. Actual execution: 2026-10-14T05:07:51Z to 2026-10-14T05:07:55Z;
+    log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py data/structures/inclusion/cyanophycin_granule.yaml
+  exit_code: 0
+  summary: 'Fresh target check. Actual execution: 2026-10-14T05:07:55Z to 2026-10-14T05:08:02Z;
+    log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/inclusion/cyanophycin_granule.yaml
+    --report /private/tmp/csm-review-20261014T050717Z-cyanophycin/snippets.md
+  exit_code: 0
+  summary: 'Fresh target check. Actual execution: 2026-10-14T05:08:02Z to 2026-10-14T05:08:31Z;
+    log SHA-256 0805a8c1c7f9477fbb857f14b39ec7bd84c8a8ad91d67b9a7a403e94819c977e.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: reused-history-venv
+  name: history-venv
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  summary: 'Reused, not rerun for this target; unchanged input roots and original
+    log hash verified. Actual execution: 2026-10-14T04:32:04Z to 2026-10-14T04:32:32Z;
+    log SHA-256 6dbe137325eb5631697951ee6e0c1e8e6e240b64f91e92d72121ea298cef2a92.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: reused-labels
+  name: labels
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  summary: 'Reused, not rerun for this target; unchanged input roots and original
+    log hash verified. Actual execution: 2026-10-14T04:32:17Z to 2026-10-14T04:36:35Z;
+    log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: reused-curies-live
+  name: curies-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_curies.py --check --report /private/tmp/csm-review-20261014T042923Z-slime-layer/curies-live.tsv
+  exit_code: 0
+  summary: 'Reused, not rerun for this target; unchanged input roots and original
+    log hash verified. Actual execution: 2026-10-14T04:39:48Z to 2026-10-14T04:43:30Z;
+    log SHA-256 7b26794ff07cf822cd706e14ae709be9c14effff0addebe45c1c9a353444dd88.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: reused-curies-controls-live
+  name: curies-controls-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_curies.py --self-test
+  exit_code: 0
+  summary: 'Reused, not rerun for this target; unchanged input roots and original
+    log hash verified. Actual execution: 2026-10-14T04:38:51Z to 2026-10-14T04:39:24Z;
+    log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: reused-traits-live
+  name: traits-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  summary: 'Reused, not rerun for this target; unchanged input roots and original
+    log hash verified. Actual execution: 2026-10-14T04:43:30Z to 2026-10-14T04:44:38Z;
+    log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: reused-archive
+  name: archive
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  summary: 'Reused, not rerun for this target; unchanged input roots and original
+    log hash verified. Actual execution: 2026-10-14T04:33:27Z to 2026-10-14T04:36:58Z;
+    log SHA-256 a82447669eabbbb7eaf167e922df06f708ebdeb609e560269d0958f1acb8178e.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Pre-save baseline of 216 bundles. Fresh post-save archive and contract
+    checks will be recorded separately.
+- check_id: reused-contract
+  name: contract
+  status: passed
+  required: true
+  command: .venv/bin/pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  summary: 'Reused, not rerun for this target; unchanged input roots and original
+    log hash verified. Actual execution: 2026-10-14T04:36:58Z to 2026-10-14T04:40:45Z;
+    log SHA-256 c429f21b078ca00288a0eb1ae9c0a1a14ff1f1eb6f94b86c2a611ea77b0482fd.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Pre-save baseline of 216 bundles. Fresh post-save archive and contract
+    checks will be recorded separately.
+- check_id: reused-merged-main-checks
+  name: merged-main-checks
+  status: passed
+  required: false
+  command: gh run list --repo CultureBotAI/CellStructureMech --commit 6c33c1c78494e7f0623cf2b157f4036d737196d7
+    --limit 30 --json databaseId,name,event,status,conclusion,headSha,url
+  exit_code: 0
+  summary: 'Reused, not rerun for this target; unchanged input roots and original
+    log hash verified. Actual execution: 2026-10-14T04:32:37Z to 2026-10-14T04:32:38Z;
+    log SHA-256 a9f9e132540c77e055a43ab74c88db14f7f677d9ad40e6ae5ed7aefa9f5bacfc.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: reused-merged-main-qc
+  name: merged-main-qc
+  status: passed
+  required: true
+  command: gh run view 38339564555 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  summary: 'Reused, not rerun for this target; unchanged input roots and original
+    log hash verified. Actual execution: 2026-10-14T04:32:38Z to 2026-10-14T04:32:41Z;
+    log SHA-256 5a1c26e21239fbbe53a8892902d6fd7a3a28379b4d17457302a700420a60c864.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: reused-adapter-datasets-live
+  name: adapter-datasets-live
+  status: passed
+  required: false
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  summary: 'Reused, not rerun for this target; unchanged input roots and original
+    log hash verified. Actual execution: 2026-10-14T04:33:30Z to 2026-10-14T04:33:33Z;
+    log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549.'
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+  scope_note: Original cache and skip limits retained; see limitations.
+- check_id: adapter-target
+  name: Target-specific iModulonDB applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - adapter
+  summary: The 28-dataset live inventory contains no Synechocystis dataset. Synechococcus
+    elongatus is a different organism and is not substituted. No query result is interpreted
+    as biological absence.
+- check_id: draft-aliases
+  name: Initial draft contract validation
+  status: failed
+  required: false
+  command: .venv/bin/python scripts/record_review.py validate /private/tmp/csm-review-20261014T050717Z-cyanophycin/observation.yaml
+  exit_code: 1
+  summary: PyYAML emitted aliases for shared Python lists. The contract forbids aliases.
+    Corrected by serializing independent values; biological assessment unchanged.
+    Original failed draft and receipt retained in scratch.
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/inclusion/cyanophycin_granule.yaml
+  locator: Entire native YAML; both append-only history entries
+  accessed_at: '2026-10-14T05:12:35Z'
+  support: supports
+  summary: The distribution note adds an unqualified majority-of-lineages absence
+    clause to a VARIABLE Bacteria row. The record otherwise separates the polymer
+    constituent from CphA assembly machinery and remains PROPOSED.
+  snapshot_sha256: 1a0c53ed4953ac213e65dba909f7c86c842c27e5527f6ec7e0b5ce21bb016b20
+- evidence_id: chapter
+  kind: authority
+  reference: DOI:10.5772/intechopen.77049
+  locator: 'Publisher full HTML: abstract and sections 1-4; entire reader-body searched
+    for absence and phylogenetic scope'
+  accessed_at: '2026-10-14T05:08:04Z'
+  support: partial
+  summary: The cited review supports storage, insolubility and documented occurrence.
+    It also discusses biosynthetic genes across diverse bacterial taxa, but supplies
+    no lineage denominator or detection-based survey establishing majority absence.
+  snapshot_sha256: 35914fe5a5927928b1a083127e1677feb581d7a19db6dc2662dc6d8dd011c314
+- evidence_id: experiment
+  kind: primary_source
+  reference: https://journals.asm.org/doi/10.1128/aem.01298-18
+  locator: 'Web-readable publisher text: Results, Discussion, Methods, Table 3, main
+    figure legends and main-text descriptions of supplemental localization images'
+  accessed_at: '2026-10-14T05:12:35Z'
+  support: supports
+  summary: PCC 6803 reporter experiments support CphA redistribution from cytoplasmic
+    foci to growing granule surfaces and later release. Nitrogen-shift experiments
+    support accumulation and mobilization. The paper does not sample bacterial lineages
+    for absence.
+- evidence_id: chemical
+  kind: authority
+  reference: CHEBI:65319
+  locator: Complete OLS ChEBI native term
+  accessed_at: '2026-10-14T05:07:51Z'
+  support: supports
+  summary: Active cyanophycin polymer identity agrees with the constituent and graph
+    node.
+  snapshot_sha256: 130d2bb92ae552b0c5d8005c0ea0da9a92a65bd063a69eca13a845d1b6c1346b
+- evidence_id: taxa
+  kind: authority
+  reference: NCBITaxon:2; NCBITaxon:1148
+  locator: Two complete ENA taxonomy responses
+  accessed_at: '2026-10-14T05:12:35Z'
+  support: supports
+  summary: The identifiers resolve to Bacteria and Synechocystis sp. PCC 6803. Identity
+    does not prove prevalence or absence.
+- evidence_id: metadata
+  kind: authority
+  reference: DOI:10.5772/intechopen.77049; DOI:10.1128/AEM.01298-18
+  locator: Crossref records and Europe PMC metadata; publisher author/title/date headers
+  accessed_at: '2026-10-14T05:12:35Z'
+  support: supports
+  summary: Both citations identify Watzer and Forchhammer 2018 works. The experiment
+    is PMID 30120117 / PMC6182900. Crossref has no update-to entry; no exhaustive
+    retraction survey is claimed.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: ComponentTypeEnum and EssentialityEnum
+  accessed_at: '2026-10-14T05:12:35Z'
+  support: supports
+  summary: SMALL_MOLECULE explicitly includes storage polymers in this schema. ESSENTIAL
+    denotes structure formation, not cell viability. These are not findings.
+- evidence_id: ontology-search
+  kind: search
+  reference: https://www.ebi.ac.uk/ols4/api/search
+  locator: Exact GO label/synonym query cyanophycin granule; inclusion body positive
+    and synthetic negative controls
+  accessed_at: '2026-10-14T05:10:53Z'
+  support: supports
+  summary: No exact hit in this bounded query; the positive control resolves GO:0016234
+    and negative control has no hit. A local structure identifier is not contradicted.
+  snapshot_sha256: cac1862a7c2e1d8e0bff5e2c8151518e5999d881d486ea4c3c74a438e13abd63
+  search_scope: Exact current GO label/synonym query only, not all fuzzy matches or
+    definitions.
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Live 28-dataset inventory from 2026-10-14T04:33:30Z
+  accessed_at: '2026-10-14T05:12:35Z'
+  support: supports
+  summary: No matching Synechocystis dataset is listed; no expression-module or localization
+    inference is drawn.
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261014T050717Z-cyanophycin/baseline-verification.json
+  locator: Fresh target checks plus original logs and receipts for hash-verified baseline
+    reuse
+  accessed_at: '2026-10-14T05:12:35Z'
+  support: supports
+  summary: Schema, strict and snippet checks pass. Zero of ten citations carry snippets.
+    Baseline history, identifiers, labels, trait links, archive and contract checks
+    passed; exact-main CI reports 987 passed and 3 skipped. Deterministic results
+    are not scientific evidence.
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured; reports; history; data/structures
+  locator: Path.rglob canonical inventory and rg --no-ignore --hidden name/slug/ID/issue-key
+    searches
+  accessed_at: '2026-10-14T05:12:35Z'
+  support: supports
+  summary: No matching canonical predecessor among 216 bundles and no existing occurrence
+    of the new issue key in the searched roots. The native history links a separate
+    CphA-component correction, not this new finding.
+  search_scope: Hidden and ignored files included in named local roots; no GitHub-wide
+    absence claim.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Structure identity and hierarchy
+  outcome: supported
+  summary: The record denotes an intracellular storage inclusion, not the soluble
+    polymer molecule or its synthetase. No unsupported hierarchy is forced. Missing
+    optional parentage is not a finding.
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - native
+  - chapter
+  - ontology-search
+- assessment_id: components
+  area: grounding
+  topic: Polymer identity, role and essentiality
+  outcome: supported
+  summary: The core chemical grounding and native storage-polymer type agree. CphA
+    is retained as machinery rather than a permanent constituent; the family-grounding
+    TODO is explicit rather than a guessed identity.
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - native
+  - chemical
+  - schema
+  - experiment
+- assessment_id: taxonomy
+  area: scope
+  topic: Positive occurrence versus majority absence
+  outcome: concern
+  summary: VARIABLE distribution and the PCC 6803 example are supported. The final
+    majority-absence clause is not established by the cited source and should be narrowed.
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - native
+  - taxa
+  - chapter
+  - experiment
+- assessment_id: function
+  area: evidence
+  topic: Storage function and three assembly edges
+  outcome: supported
+  summary: Polymer formation, accumulation and storage are supported at the encoded
+    coarse level. NONMECHANISTIC scope avoids a complete nucleation or degradation
+    mechanism. No fixed stoichiometry, universal growth advantage or exact rate is
+    asserted. Localization evidence is the PCC 6803 experiment, not a family-wide
+    screen.
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - native
+  - chapter
+  - experiment
+- assessment_id: completeness
+  area: completeness
+  topic: Discussions and optional fields
+  outcome: supported
+  summary: The open CphA-family grounding task is actionable. Empty optional images,
+    properties, traits, datasets and protein examples do not alone establish a curation
+    gap. Source author/title/identifier identities agree.
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - native
+  - metadata
+  - adapter
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained owner, status and history
+  outcome: supported
+  summary: Both history surfaces were read and preserved. Future fixes belong in the
+    maintained YAML through guarded curation, not generated products. This review
+    does not promote PROPOSED or create history.
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  evidence_ids:
+  - native
+  - predecessors
+  - validation
+findings:
+- finding_id: F1
+  issue_key: cyanophycin-unsupported-bacterial-absence
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Narrow the unsupported majority-of-bacterial-lineages absence statement
+  description: The final clause of taxonomic_distribution[0].note says the structure
+    is absent from most bacterial lineages. The cited chapter reports occurrence and
+    gene diversity, not a survey with a defined lineage population and detection method
+    that demonstrates this negative majority claim. Keep VARIABLE and the documented
+    positive scope, but remove or qualify the absence clause unless suitable evidence
+    is supplied. This is an unsupported extrapolation, not a finding that most lineages
+    necessarily possess granules.
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  field_paths:
+  - taxonomic_distribution[0].note
+  evidence_ids:
+  - native
+  - chapter
+  - experiment
+  rule_id: review-checklist:taxonomic-distribution-absence-evidence
+  native_severity: minor
+  normalization_reason: Bounded prose qualification in an otherwise correctly VARIABLE
+    distribution row. The structured taxon identity, experimental example and storage
+    mechanism remain intact; no ABSENT row or wrong structure identity is asserted.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/cyanophycin_granule.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Narrow only the unsupported majority-absence clause to documented occurrence,
+    retaining the VARIABLE row and valid example, or supply evidence with an explicit
+    taxonomic denominator and adequate detection method.
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:cyanophycin_granule
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/cyanophycin_granule.yaml
+    role: maintained scientific record
+  generator: Use the native guarded writer and documented product workflow if later
+    curation is authorized.
+  acceptance_checks:
+  - The distribution note no longer treats limited positive reports or gene occurrence
+    as proof of broad granule absence.
+  - Any retained absence claim identifies surveyed taxa, conditions, method and denominator
+    in inspected evidence.
+  - Keep PROPOSED; use write_validated_structure, an LLM-assisted curation event and
+    append-only history for a future edit.
+  - Run fresh target schema/strict/evidence checks and native QC, then save a lineage-linked
+    successor for F1.
+limitations:
+- Same-agent review, not independent human sign-off, exhaustive literature discovery,
+  primary-data reanalysis or a new taxonomic census.
+- The cited secondary chapter was read as full publisher HTML in the relevant identity,
+  occurrence, properties and metabolism sections; the whole reader body was searched
+  for the absence claim. Its outdated PDF link returned 404. The chapter is not recast
+  as a new primary experiment.
+- The primary paper was read through web-tool publisher HTML, including relevant Results,
+  Discussion, Methods and legends. Direct publisher retrieval returned 403, PMC web
+  access a browser challenge, NCBI efetch metadata without body, BioC an error body
+  with HTTP 200, and Europe PMC XML HTTP 500. These are retained access limitations,
+  not evidence that the article lacks full text. No hash is invented for web-only
+  article body.
+- Actual primary figure pixels and supplementary PDF were not inspected. Main-text
+  descriptions and captions support the bounded localization claims; no image reuse,
+  raw image verification or detailed panel quantification is asserted. Two web image
+  requests timed out.
+- The native family-grounding TODO remains open; no exhaustive homology search or
+  exact protein accession is claimed. The iModulonDB inventory has no matching Synechocystis
+  dataset.
+- Fresh target schema, strict and snippet checks passed. Snippet check is vacuous
+  for ten citations without quoted snippets. Scientific support was separately read.
+- 'Global history, identifiers/resolver controls, labels, trait links and pre-save
+  archive/contract checks are reused after input/log hash verification with original
+  execution times. Identifier results: 4023 OK, 251 configured skips, no unresolved
+  results. Labels retain 603 no-adapter skips. Existing exact-main CI: 987 passed,
+  3 skipped. These are not fresh target-only or post-save CI runs.'
+- Pre-save archive/contract baseline covers 216 bundles. Post-save checks are executed
+  and recorded separately; this immutable document does not claim their future success.
+- No scientific record, prior review, history or product is changed. No GitHub issue,
+  PR, commit, merge or status promotion is performed.
+- The first draft failed contract parsing because of serializer-emitted YAML aliases.
+  It was not saved. An alias-free corrected draft was separately validated before
+  persistence.
+tags:
+- scientific-review
+- inclusion
+- taxonomic-scope
+- minor
+```

@@ -1,0 +1,636 @@
+schema_version: 1.0.0
+review_id: 20261012T111514Z-capsule-ecoli-example-scope
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Capsule canonical-example scope review
+started_at: '2026-10-12T11:07:21Z'
+finished_at: '2026-10-12T11:15:14Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no independent human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: One minor canonical-example scope finding. Capsule identity, constituent
+  representation and coarse assembly graph are supported; detailed Roberts1996 source
+  verification remains incomplete.
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/envelope/capsule.yaml
+    sha256: 3730dc3fcc251b0bf7d7765343c7d6a583fc93882b7268fe86dbb802524eb6c0
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/capsule/2026-09-11T035341Z-codex-b94d57.yaml
+    sha256: d7a7b1ab27e76b9044c8969f54ae48951d03d2e1625b40a3f82ad2f79fe6919b
+    role: context
+  - path: history/records/capsule/2026-09-11T040338Z-codex-61b923.yaml
+    sha256: fbcddc3b61f2d3b921429fb5cad633b60a0727678e358c90ad6b42a24bf9518d
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0042603
+  path: data/structures/envelope/capsule.yaml
+  label: capsule
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/capsule.yaml
+    role: maintained scientific record
+scope:
+  description: One entire native record, both histories, all stable identities, both
+    functions, component and three graph edges assessed. No sampling; nearest-source
+    coverage remains incomplete.
+  selection: data/structures/envelope/capsule.yaml
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0042603
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/envelope/capsule.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Actual UTC: 2026-10-12T11:07:31Z to 2026-10-12T11:07:33Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/envelope/capsule.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Actual UTC: 2026-10-12T11:07:33Z to 2026-10-12T11:07:37Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/envelope/capsule.yaml
+    --report /private/tmp/csm-review-20261012T110656Z-capsule/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate; snippet coverage is not full-text validation. Actual
+    UTC: 2026-10-12T11:07:37Z to 2026-10-12T11:07:53Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse. QC987 passed/3 skipped, labels603 no-adapter
+    skips, cached traits after prior network failure. Not fresh CI. Actual UTC: 2026-10-12T06:33:07Z
+    to 2026-10-12T06:45:16Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse. QC987 passed/3 skipped, labels603 no-adapter
+    skips, cached traits after prior network failure. Not fresh CI. Actual UTC: 2026-10-12T06:45:16Z
+    to 2026-10-12T06:47:16Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse. QC987 passed/3 skipped, labels603 no-adapter
+    skips, cached traits after prior network failure. Not fresh CI. Actual UTC: 2026-10-12T06:48:15Z
+    to 2026-10-12T06:48:52Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: liveCURIE4023 OK/251 SKIP/0 unreachable;211 valid bundles
+    and4 contract tests. Post-save checks follow separately. Actual UTC: 2026-10-12T07:05:41Z
+    to 2026-10-12T07:10:58Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: liveCURIE4023 OK/251 SKIP/0 unreachable;211 valid bundles
+    and4 contract tests. Post-save checks follow separately. Actual UTC: 2026-10-12T10:58:30Z
+    to 2026-10-12T10:59:50Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: liveCURIE4023 OK/251 SKIP/0 unreachable;211 valid bundles
+    and4 contract tests. Post-save checks follow separately. Actual UTC: 2026-10-12T10:59:50Z
+    to 2026-10-12T11:01:14Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured source check; expression context only. Actual UTC: 2026-10-12T11:07:30Z
+    to 2026-10-12T11:07:30Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - adapter
+- check_id: adapter-e_coli
+  name: adapter-e_coli
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query capsule
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured source check; expression context only. Actual UTC: 2026-10-12T11:07:30Z
+    to 2026-10-12T11:07:31Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - adapter
+- check_id: adapter-s_pneumoniae
+  name: adapter-s_pneumoniae
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism s_pneumoniae --dataset precise718 --query capsule
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured source check; expression context only. Actual UTC: 2026-10-12T11:07:31Z
+    to 2026-10-12T11:07:31Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - adapter
+- check_id: adapter-capsule-summary
+  name: adapter-capsule-summary
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb summarize --organism e_coli --dataset precise1k --k 139
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured source check; expression context only. Actual UTC: 2026-10-12T11:08:11Z
+    to 2026-10-12T11:08:12Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - adapter
+- check_id: roberts-full-text
+  name: Inspect detailed Roberts1996 nearest-source claims
+  status: unavailable
+  required: true
+  summary: Abstract and bibliography inspected; publisher body inaccessible and bounded
+    public searches yielded no inspected original body. No access-only defect asserted.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - roberts
+  - access
+- check_id: pdf-pixels
+  name: Optional Table1 image inspection
+  command: pdftoppm -f 4 -l 4 -singlefile -scale-to 1800 -png /private/tmp/csm-review-20261012T110656Z-capsule/whitfield-2006.pdf
+    /private/tmp/csm-review-20261012T110656Z-capsule/whitfield-table1
+  exit_code: 127
+  status: failed
+  required: false
+  summary: pdftoppm not installed; fitz/pypdfium2/pypdf also unavailable in the repository
+    environment. Web screenshot returned a reference but no inspectable image. Finding
+    uses explicit prose corroborated by extracted table text, not an alleged visual
+    inspection.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - whitfield
+- check_id: draft-validation-initial
+  name: Initial draft validation
+  command: .venv/bin/python scripts/record_review.py validate /private/tmp/csm-review-20261012T110656Z-capsule/observation.yaml
+  exit_code: 1
+  status: failed
+  required: false
+  summary: 'Initial draft used unavailable with exit127 for an executed renderer command.
+    Contract rejected that reporting combination; corrected to failed before saving.
+    Original draft and failure receipt retained. Actual UTC: 2026-10-12T11:14:27Z
+    to 2026-10-12T11:14:29Z.'
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/envelope/capsule.yaml
+  locator: Entire YAML and both repository histories
+  summary: The E.coli canonical-example note names K-antigen capsules without a capsule-group
+    qualifier. The separate graph scope already recognizes distinct export routes.
+    PROPOSED status and both resolved curation discussions remain unchanged.
+  support: supports
+  accessed_at: '2026-10-12T11:14:27Z'
+  snapshot_sha256: 3730dc3fcc251b0bf7d7765343c7d6a583fc93882b7268fe86dbb802524eb6c0
+- evidence_id: rules
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Taxonomic distribution, canonical examples and narrow evidence support
+  summary: Example-specific scope must agree with its nearest source. Optional slots
+    and access failures alone do not warrant a finding.
+  support: supports
+  accessed_at: '2026-10-12T11:14:27Z'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0042603,GO:0030112
+  locator: Complete active terms, definitions, aspects and child relationships
+  summary: GO:0042603 denotes an organized, strongly surface-associated capsule in
+    bacteria and fungi; GO:0030112 is its glycocalyx is-a parent. The definition says
+    primarily polysaccharide, not exclusively polysaccharide.
+  support: supports
+  accessed_at: '2026-10-12T11:07:37Z'
+  snapshot_sha256: 15cc848af4c73a1c64388c93f8f3bce068ceeeb42e0a2f0105df797f71b3aa77
+- evidence_id: whitfield
+  kind: primary_source
+  reference: https://kaiserlab.stanford.edu/PDF/whitfield_2006.pdf
+  locator: 'Cited 2006 review PDF: pp40-44 introductory/surface-association text,
+    Table1 extracted text, pp53-55 group2/3 discussion and p57 ABC-export heading;
+    bibliographic title/DOI match'
+  summary: The prose distinguishes group1/4 from group2/3 systems. Group2 examples
+    include K1 and K5 and use KpsMT; Table1 lists no ABC transporter for groups1/4.
+    This is the cited review, not a primary experiment. The PDF was downloaded and
+    hashed; table pixels were not inspected.
+  support: supports
+  accessed_at: '2026-10-12T11:12:08Z'
+  snapshot_sha256: 3115d4a3915d94ccfc83ad295250b4691a386cf7a94cc0de9becb676f5c58f2f
+- evidence_id: hyams
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2812187/
+  locator: Primary article abstract, methods strains/complement assays, complement
+    and neutrophil results, discussion opening; DOI:10.1128/IAI.00881-09
+  summary: Encapsulated versus unencapsulated D39 and TIGR4 comparisons support reduced
+    opsonization and neutrophil phagocytosis in those pneumococcal models. Serum composition
+    and strain affect outcomes; this is not proof of one universal immune mechanism.
+  support: supports
+  accessed_at: '2026-10-12T11:14:27Z'
+- evidence_id: omeara
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3416491/
+  locator: Cited review introduction, capsule structure, synthesis/secretion and attachment
+    sections; DOI:10.1128/CMR.00001-12
+  summary: The review supports the GXM-rich fungal example, immune shielding, intracellular
+    synthesis, export and surface attachment. It distinguishes attached from secreted
+    polymer and calls environmental desiccation protection speculative in its introduction.
+    The native generic protection statement is not treated as proof of that specific
+    fungal hypothesis.
+  support: supports
+  accessed_at: '2026-10-12T11:14:27Z'
+- evidence_id: candela
+  kind: primary_source
+  reference: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2005.04718.x
+  locator: Candela and Fouet2005 primary-paper summary and introductory capsule-chemistry
+    discussion
+  summary: The stated poly-D-glutamate capsule exception is biologically supported
+    for B.anthracis. This corroborates broad polymer representation but does not establish
+    what the inaccessible Roberts1996 text says.
+  support: supports
+  accessed_at: '2026-10-12T11:14:27Z'
+- evidence_id: roberts
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1146%2Fannurev.micro.50.1.285%22&format=json&resultType=core
+  locator: Complete abstract and metadata; Crossref bibliographic identity also checked
+  summary: Roberts1996, DOI:10.1146/annurev.micro.50.1.285 and PMID:8905082 match.
+    The abstract supports organized bacterial polysaccharide capsules but does not
+    expose all chemical-diversity and environmental-protection details cited in the
+    native record.
+  support: partial
+  accessed_at: '2026-10-12T11:07:41Z'
+  snapshot_sha256: 49ee2ba901785abc26b471859f93df3756a831f7e6f5c674d519b50bebd43377
+- evidence_id: metadata
+  kind: authority
+  reference: /private/tmp/csm-review-20261012T110656Z-capsule
+  locator: All four EuropePMC abstracts/identities and Crossref titles/authors/years;
+    all five ENA taxonomy responses
+  summary: Native DOI identities and publication years agree. Taxa2,4751,562,1313,5207
+    resolve respectively to Bacteria, Fungi, E.coli, S.pneumoniae and C.neoformans;
+    variable distribution is not a universal presence claim.
+  support: supports
+  accessed_at: '2026-10-12T11:14:27Z'
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh28-dataset inventory, e_coli/precise1k and s_pneumoniae/precise718
+    capsule searches; e_coli/precise1k/139 summary
+  summary: E.coli hits include genes b4028/yjbG and b0985/gfcC and module139 Capsule/RcsAB
+    with38 genes and38 UniProt maps. Its colanic-acid/envelope context is expression
+    evidence, not evidence of ABC export, capsule chemistry or immunity. Pneumococcal
+    zero hits and no covered Cryptococcus dataset imply no biological absence.
+  support: supports
+  accessed_at: '2026-10-12T11:14:27Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T110656Z-capsule/baseline-verification.json
+  locator: Fresh target gates and unchanged-byte wider receipts
+  summary: Schema, strict and snippet checks pass. Zero of20 citations has a snippet:15
+    evidence items and5 bare references. Wider QC, cached labels/traits, live CURIE
+    and211-bundle/four-contract-test checks retain their original limits, not fresh
+    CI.
+  support: supports
+  accessed_at: '2026-10-12T11:14:27Z'
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T110656Z-capsule/source-access.jsonl
+  locator: Seventeen hashed capture receipts plus separate web access attempts
+  summary: The two BioC responses are HTTP200 error bodies, not full text. Both papers
+    were subsequently inspected through PMC HTML. Whitfield publisher preview was
+    abstract-only before the Stanford PDF succeeded. Roberts publisher access failed
+    and bounded searches did not yield an inspected public body.
+  support: context_only
+  accessed_at: '2026-10-12T11:14:27Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: Ignored-inclusive canonical scan and local searches
+  summary: No capsule predecessor among211 bundles, and no proposed issue-key match
+    in the declared roots. Readability inventories are leads, not completed scientific
+    reviews.
+  support: supports
+  accessed_at: '2026-10-12T11:14:27Z'
+  search_scope: Path.rglob includes hidden/ignored canonical bundles and histories.
+    rg --no-ignore --hidden searched reports/research for GO:0042603 and capsule target
+    identifiers; matches were readability/CURIE inventories and a website reference
+    text, not a target legacy review. The same ignored-inclusive search searched reviews/reports/research/curation/history
+    for capsule-ecoli-abc-example-scope and returned no match. Bounded local scope,
+    not GitHub-wide absence.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Capsule versus diffuse slime and envelope machinery
+  outcome: supported
+  summary: Identity, category, kind and glycocalyx hierarchy agree with GO; the record
+    is a retained envelope layer, not its biosynthetic proteins.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - native
+  - go
+- assessment_id: polymer
+  area: representation
+  topic: Cross-chemistry constituent
+  outcome: supported
+  summary: OTHER with reviewed-label grounding represents a material class, not an
+    invented exact CHEBI identity. ESSENTIAL applies to capsule formation, not cell
+    viability. No copy numbers or universal subunit machinery are asserted.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - native
+  - go
+  - candela
+  - omeara
+- assessment_id: examples
+  area: scope
+  topic: Canonical E.coli model specificity
+  outcome: concern
+  summary: The E.coli ABC-example note needs a narrower prototype qualifier; the species
+    itself is an appropriate example.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - native
+  - whitfield
+- assessment_id: taxa
+  area: scope
+  topic: Distribution and other canonical examples
+  outcome: supported
+  summary: Authority identities and qualitative VARIABLE bacteria/fungi distribution
+    are consistent. Native example evidence is species-contextual, not evidence for
+    every strain or all fungal lineages.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - metadata
+  - hyams
+  - omeara
+  - roberts
+- assessment_id: functions
+  area: evidence
+  topic: Immune shielding and generic protection
+  outcome: unknown
+  summary: The pneumococcal immune claim is directly supported; fungal shielding is
+    also supported. Complete verification of the nearest bacterial environmental-protection
+    citation remains pending. No defect is inferred solely from inaccessible detail.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - hyams
+  - omeara
+  - roberts
+- assessment_id: graph
+  area: graph
+  topic: Three class-level assembly edges
+  outcome: supported
+  summary: All nodes, references and edges were inspected. NONMECHANISTIC and explicit
+    differing-route scope avoid asserting one shared molecular machine. Synthesis/export,
+    surface retention and organized-layer assembly are supported at this coarse level;
+    the graph does not require all polymer to remain attached.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - native
+  - whitfield
+  - omeara
+  - go
+- assessment_id: citations
+  area: provenance
+  topic: Exact identities versus incomplete body access
+  outcome: unknown
+  summary: All native DOI identities verified, with direct reading of relevant text
+    from three papers. Detailed Roberts support remains unverified; corroboration
+    by another source is not equivalent to reading that citation.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - metadata
+  - roberts
+  - access
+  - candela
+- assessment_id: completeness
+  area: completeness
+  topic: Optional content and durable discussions
+  outcome: supported
+  summary: No required protein-family, quantitative-property, image, dataset or trait
+    representation was identified as missing. The resolved boundary discussions remain
+    meaningful. No defect is invented for a broad record omitting optional organism-specific
+    machinery.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - native
+  - rules
+  - adapter
+- assessment_id: checks
+  area: schema
+  topic: Native validation
+  outcome: supported
+  summary: Fresh target checks pass. Reused full-corpus checks were accepted only
+    after exact input/log hash verification; they do not complete the scientific evidence
+    audit.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - validation
+  - access
+- assessment_id: ownership
+  area: ownership
+  topic: Status, history and correction owner
+  outcome: supported
+  summary: Both histories and all native events were read; earlier protection/graph-scope
+    corrections are present. Scientific changes belong to the maintained YAML via
+    the guarded writer, not a rendered page. Prior GitHub links do not establish formal
+    review lineage.
+  target_ids:
+  - GO:0042603
+  evidence_ids:
+  - native
+  - predecessors
+  - rules
+findings:
+- finding_id: F1
+  issue_key: capsule-ecoli-abc-example-scope
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the E.coli ABC-export example
+  description: The unqualified K-antigen example makes a subgroup-specific route sound
+    characteristic of the entire example class. Specify group2 capsules, for example
+    K1/K5, or describe E.coli as a model for multiple export routes. The graph already
+    acknowledges route diversity; no generic-graph defect is alleged.
+  target_ids:
+  - GO:0042603
+  field_paths:
+  - canonical_examples[taxon_id=NCBITaxon:562].note
+  evidence_ids:
+  - native
+  - whitfield
+  - rules
+  rule_id: review-checklist:taxonomic-distribution-and-evidence-scope
+  native_severity: minor
+  normalization_reason: 'Non-blocking example wording: correct species and supported
+    process, but insufficient prototype qualification. Not wrong record identity or
+    universal mechanistic graph inflation.'
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/capsule.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Narrow the canonical-example note to the source-supported prototype;
+    preserve the existing nonmechanistic graph and species identity.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0042603
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/capsule.yaml
+    role: maintained scientific record
+  generator: 'Only during separately authorized curation: guarded writer, real history
+    event and documented product workflow.'
+  acceptance_checks:
+  - Example qualification agrees with the cited passage; do not change the graph into
+    a universal molecular mechanism.
+  - Inspect Roberts1996 relevant passages before declaring complete evidence coverage.
+  - Preserve PROPOSED, run native gates/QC for actual curation and save a lineage-linked
+    disposition with this exact issue key.
+limitations:
+- 'Partial, not a completed scientific pass: Roberts1996 detailed chemical-diversity
+  and environmental-protection support was not inspected. Access alone is not a finding.'
+- Hyams primary-paper relevant methods/results and discussion opening read via PMC;
+  not all unrelated discussion paragraphs or figure pixels. O'Meara relevant introduction/structure/export/attachment
+  review sections read; no exhaustive signaling-pathway audit needed for this generic
+  record.
+- Whitfield relevant PDF text read and downloaded with a hash. Table1 pixels were
+  unavailable; the explicit body prose independently supports the bounded wording
+  finding. No maps, experiments or numerical measurements were reanalyzed.
+- Both BioC HTTP200 error bodies are retained; successful PMC HTML reading did not
+  turn those captures into full text. Candela2005 corroborates only the chemical exception
+  and does not stand in for Roberts1996.
+- Same-agent review, not independent human sign-off or exhaustive literature surveillance.
+  Wider gates preserve original times, cache reliance and skips; no fresh CI claim.
+- No scientific YAML, status, history, generated product, existing review or legacy
+  report changed. No GitHub mutation; existing publication approval remains unanswered.
+tags:
+- scientific-review
+- envelope
+- scope
+- partial

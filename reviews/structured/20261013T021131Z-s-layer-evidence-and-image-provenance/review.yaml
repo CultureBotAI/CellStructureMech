@@ -1,0 +1,737 @@
+schema_version: 1.0.0
+review_id: 20261013T021131Z-s-layer-evidence-and-image-provenance
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: S-layer numerical evidence, phage scope and image provenance review
+started_at: '2026-10-13T02:03:17Z'
+finished_at: '2026-10-13T02:11:31Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no independent human review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Two major evidence/scope findings and one minor image-license rationale finding.
+  Target gates pass. Archaeal nearest-source functional evidence and raw-image verification
+  remain incomplete.
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/envelope/s_layer.yaml
+    sha256: 9e82c35e8d589856f93f239642c1309670be299cac9b9f23e5a31e57ecb4a994
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/s_layer/2026-08-30T194400Z-codex-abb967.yaml
+    sha256: 404c6aafef5183a90f5416d65e8bf2ed2e48bbdc46f59e63c14210b590df532e
+    role: context
+  - path: history/records/s_layer/2026-09-04T013816Z-codex-b5801a.yaml
+    sha256: a05664dab5a9127b2df0fe008bec7f0c1143bd474fedd7ba65a96d01a96aa9ee
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0030115
+  path: data/structures/envelope/s_layer.yaml
+  label: S-layer
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+scope:
+  description: Entire GO:0030115 native record read without sampling, including all
+    three components,two examples,two functions,one trait,one measurement,one image,five
+    nodes/six edges and both history surfaces. Full target selection does not imply
+    complete source coverage.
+  selection: data/structures/envelope/s_layer.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030115
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/envelope/s_layer.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Target gate; zero snippet coverage is not source verification. Actual
+    UTC: 2026-10-13T02:03:54Z to 2026-10-13T02:03:58Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/envelope/s_layer.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Target gate; zero snippet coverage is not source verification. Actual
+    UTC: 2026-10-13T02:03:58Z to 2026-10-13T02:04:03Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/envelope/s_layer.yaml
+    --report /private/tmp/csm-review-20261013T020254Z-s-layer/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Target gate; zero snippet coverage is not source verification. Actual
+    UTC: 2026-10-13T02:04:03Z to 2026-10-13T02:05:11Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Same-input reuse: QC987 passed/3 skipped; cached label and trait limitations,
+    including603 no-adapter label skips. Not fresh CI. Actual UTC: 2026-10-12T06:33:07Z
+    to 2026-10-12T06:45:16Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Same-input reuse: QC987 passed/3 skipped; cached label and trait limitations,
+    including603 no-adapter label skips. Not fresh CI. Actual UTC: 2026-10-12T06:45:16Z
+    to 2026-10-12T06:47:16Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Same-input reuse: QC987 passed/3 skipped; cached label and trait limitations,
+    including603 no-adapter label skips. Not fresh CI. Actual UTC: 2026-10-12T06:48:15Z
+    to 2026-10-12T06:48:52Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Same-input reuse: CURIE4023 OK/251 SKIP/0 unreachable;215 valid bundles
+    and4 contract tests before this save. Actual UTC: 2026-10-12T07:05:41Z to 2026-10-12T07:10:58Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive-retry
+  name: reused-post-save-archive-retry
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Same-input reuse: CURIE4023 OK/251 SKIP/0 unreachable;215 valid bundles
+    and4 contract tests before this save. Actual UTC: 2026-10-12T18:15:53Z to 2026-10-12T18:17:45Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Same-input reuse: CURIE4023 OK/251 SKIP/0 unreachable;215 valid bundles
+    and4 contract tests before this save. Actual UTC: 2026-10-12T18:17:45Z to 2026-10-12T18:19:19Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Bounded context/search; neither is biological proof. Actual UTC: 2026-10-13T02:05:30Z
+    to 2026-10-13T02:05:31Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+- check_id: local-search
+  name: local-search
+  command: rg --no-ignore --hidden -n 'GO:0030115|s_layer.yaml|s-layer-numeric-source-scope|s-layer-phage-citation-scope|s-layer-image-license-rationale'
+    history reviews/structured reports/yaml_record_review research curation -g '*.yaml'
+    -g '*.md'
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Bounded context/search; neither is biological proof. Actual UTC: 2026-10-13T02:08:57Z
+    to 2026-10-13T02:08:58Z.'
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/envelope/s_layer.yaml
+  locator: Entire YAML; six native events and two append-only histories
+  summary: Reviewed definition, three components, two distribution entries, two examples,
+    two functions, trait, physical property, image, five graph nodes and six edges.
+    Native source and prior-review bytes remain unchanged.
+  support: supports
+  accessed_at: '2026-10-13T02:11:31Z'
+  snapshot_sha256: 9e82c35e8d589856f93f239642c1309670be299cac9b9f23e5a31e57ecb4a994
+- evidence_id: rules
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Component boundary; schema StructureComponent.stoichiometry, PhysicalProperty.context
+    and images; local review checklist
+  summary: Stoichiometry denotes copies per structure. Numerical measurements need
+    their source and biological context. Local image policy restricts hosted licenses;
+    it does not define the legal meaning of CC BY-NC.
+  support: supports
+  accessed_at: '2026-10-13T02:11:31Z'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030115
+  locator: GO:0030115 active cellular-component definition
+  summary: S-layer identity resolves. Its brief bacterial wording is supplemented
+    by the broader microbial scope in the native cited literature and UniProt location,
+    not treated as evidence excluding archaea.
+  support: supports
+  accessed_at: '2026-10-13T02:05:41Z'
+  snapshot_sha256: 6afd86320a08b726d03fda6ead941fb4afb36f06be2b7d2f940c35a190616249
+- evidence_id: location
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0262.json
+  locator: SL-0262 definition and GO cross-reference
+  summary: Exact S-layer cross-reference; bacterial attachment and common archaeal
+    occurrence agree with the intended record identity.
+  support: supports
+  accessed_at: '2026-10-13T02:05:43Z'
+  snapshot_sha256: 88e1837db7cae05fd96bf15148bba38b29a760f0dbbdda4f7de124e7f264e14d
+- evidence_id: domain
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001119/
+  locator: IPR001119 identity, type and description
+  summary: This is an SLH domain, not a full S-layer protein family. Native prose
+    and the part-of edge explicitly place it within the protein. The authority distinguishes
+    SCWP anchoring from direct peptidoglycan binding.
+  support: supports
+  accessed_at: '2026-10-13T02:05:42Z'
+  snapshot_sha256: 3e678dd397336fbc1e8250d41745644ddce372d1a7801c2dfb2090695006d5c7
+- evidence_id: sleytr
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4232325/fullTextXML
+  locator: DOI:10.1111/1574-6976.12063; Introduction, Occurrence/location/structure,
+    Isolation/chemistry, assembly and SCWP passages, Functional aspects opening, Cell
+    shape determination
+  summary: The original review supports lattice symmetry, self-assembly, variable
+    occurrence, laboratory selection of deficient variants, and Geobacillus examples.
+    Its typical bacterial thickness is 5-10 nm, with thicker archaeal architectures
+    distinguished; its general protein mass range is 40-170 kDa. These differ from
+    the native 5-25 nm and 40-200 kDa attributions. Whole-body numeric searches found
+    no matching ranges.
+  support: supports
+  accessed_at: '2026-10-13T02:06:18Z'
+  snapshot_sha256: faa0e6915639d14dade033d27315fe24d6ef4d8c5d0c6d76ca7f1428e21de309
+- evidence_id: fagan
+  kind: primary_source
+  reference: https://eprints.whiterose.ac.uk/id/eprint/97080/1/Fagan%20and%20Fairweather_for%20deposit.pdf
+  locator: Accepted manuscript, identity/Introduction pp1-4; anchoring pp10-12; functions
+    pp16-20; RsaA Table1 p24 (printed manuscript pages)
+  summary: Supports RsaA identity, lineage-bounded SLH/SCWP anchoring, adhesion/immune
+    examples, and experimental permeability limits. Page19 explicitly treats a bacteriophage-receptor
+    role as speculation without evidence. That cannot substantiate the native unqualified
+    phage clause. This is a citation-scope finding, not a claim that no S-layer/phage
+    biology exists.
+  support: supports
+  accessed_at: '2026-10-13T02:06:21Z'
+  snapshot_sha256: 95d51a7989d8e179ec0f688f3759d4cb8be8cd78c47f3233c2997163463826be
+- evidence_id: albers
+  kind: primary_source
+  reference: https://www.nature.com/articles/nrmicro2576
+  locator: DOI:10.1038/nrmicro2576; complete original abstract and publisher key points
+    only
+  summary: Common archaeal S-layers are supported. Full passages for the shape/osmotic-stability
+    claim were not accessible; the prior publisher capture contains a subscription
+    preview, not the body.
+  support: context_only
+  accessed_at: '2026-10-12T20:53:11Z'
+  snapshot_sha256: f4e450a5a4ec8fc32fe29d44bc8da3ab618f89306f03c6927e0d8b16d0b44dbe
+- evidence_id: metadata
+  kind: authority
+  reference: /private/tmp/csm-review-20261013T020254Z-s-layer
+  locator: EuropePMC and Crossref records for all three native papers; ENA taxon2/2157/1422/155892;
+    OLS UO:0000018
+  summary: Titles, authors and publication years agree. All four taxon labels resolve;
+    Caulobacter crescentus is a synonym of taxon155892, now Caulobacter vibrioides.
+    The unit denotes nanometer.
+  support: supports
+  accessed_at: '2026-10-13T02:11:31Z'
+- evidence_id: trait
+  kind: database
+  reference: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/traits/morphology/s_layer.yaml
+  locator: traitmech:000064 local maintained YAML, read in full
+  summary: The trait denotes the phenotype of a crystalline self-assembled proteinaceous
+    surface coating. The CONFERS link matches that scope; no sibling status or graph
+    is endorsed by this review.
+  support: supports
+  accessed_at: '2026-10-13T02:11:31Z'
+  snapshot_sha256: 5dc05d23c31e1b3247ac63b94b39527e1e2568fb21584380b79886eb89921284
+- evidence_id: caltech
+  kind: database
+  reference: https://data.caltech.edu/api/records/qgffm-kzf88
+  locator: qgffm-kzf88 metadata, DOI, rights, creators, contributor and file entries
+  summary: DOI10.22002/D1.1355, file2_6_Ccrescentus.mp4, authors, Ariane Briegel attribution
+    and cc-by-nc-4.0 rights match. The historical derived-tomogram URL is present.
+    No current access claim is made about that old URL.
+  support: supports
+  accessed_at: '2026-10-13T02:05:44Z'
+  snapshot_sha256: cbe9e54196711302222dd8a6fe8fced07f59b345f553a46554a6976e9eb2e864
+- evidence_id: atlas
+  kind: primary_source
+  reference: https://www.cellstructureatlas.org/2-6-surface-layer.html
+  locator: Section2.6 Surface Layer prose and preview image
+  summary: The Atlas describes the Caulobacter surface lattice and its outer-membrane
+    attachment. The inspected thumbnail is a title/attribution slate, not a tomographic
+    slice; the video pixels were not reviewed. Its discussion of viral exclusion is
+    not direct support for the distinct nearest-cited phage-receptor claim.
+  support: context_only
+  accessed_at: '2026-10-13T02:06:22Z'
+  snapshot_sha256: bd8f3f0cb84fecd78ceea7ae9b389cc6c4f0d1c808aa1d64beed188948e79f63
+- evidence_id: license
+  kind: authority
+  reference: https://creativecommons.org/licenses/by-nc/4.0/legalcode.en
+  locator: CC BY-NC4.0 legal code, sections2(a)(1),2(a)(4),3(a); official deed also
+    read
+  summary: The license permits reproduction and sharing for noncommercial purposes,
+    subject to attribution and other conditions. The blanket statement that it forbids
+    hosting a copy is inaccurate. This does not establish that any particular deployment
+    qualifies or authorize hosting.
+  support: refutes
+  accessed_at: '2026-10-13T02:08:27Z'
+  snapshot_sha256: 3307f50ad87c95b551b6a9c4e30c7fc4408f15e5b0e957542b2883f24df74474
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Actual28-dataset inventory in adapter-datasets.log
+  summary: Neither named example genus is covered. RsaA/SbsA/SbsB have no matching
+    organism/dataset pair in this inventory, so no neighboring-organism substitute
+    or iModulon summary was used. Absence is not negative biological evidence.
+  support: context_only
+  accessed_at: '2026-10-13T02:11:31Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261013T020254Z-s-layer
+  locator: Target checks and hash-verified wider-check receipts
+  summary: Schema, strict and snippet commands passed. Snippet coverage is0/21:15
+    evidence items and6 bare references. Wider validations retain original times/cache/skip
+    limitations; none is a new scientific or GitHub CI pass.
+  support: supports
+  accessed_at: '2026-10-13T02:11:31Z'
+- evidence_id: search
+  kind: search
+  reference: reviews/structured/
+  locator: Canonical target scan and ignored-inclusive local-search.log
+  summary: No target predecessor among215 bundles; no proposed issue-key matches in
+    the searched local roots. This is not remote issue deduplication.
+  support: supports
+  accessed_at: '2026-10-13T02:11:31Z'
+  search_scope: Path.rglob includes ignored/hidden canonical bundles; rg --no-ignore
+    --hidden covered history,reviews/structured,reports/yaml_record_review,research,curation
+    for GO:0030115,target path and all three proposed issue keys.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Structure versus protein or phenotype
+  outcome: supported
+  summary: Identifier, label, category and kind denote the surface lattice. Synonyms
+    agree with the source terminology. No unsupported hierarchy or parthood relation
+    is added.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - native
+  - go
+  - location
+  - sleytr
+- assessment_id: composition
+  area: representation
+  topic: Subunit, domain and external anchor boundaries
+  outcome: unknown
+  summary: SLP essentiality is structural, not cellular viability. SLH is conditional
+    and explicitly part of SLP. Whether the external SCWP anchor should remain a lattice
+    CONSTITUENT needs a bounded ownership decision; the source supports anchoring,
+    not an automatic part-of inference. No separate confirmed issue is asserted on
+    that ambiguous boundary.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - native
+  - domain
+  - sleytr
+  - rules
+- assessment_id: numbers
+  area: evidence
+  topic: Thickness, subunit mass and field meaning
+  outcome: concern
+  summary: The two cited numerical ranges do not agree with their nearest source.
+    The unscoped thickness loses taxonomic context; the stoichiometry field also mixes
+    protein-species count with molecular mass rather than copies per structure.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - native
+  - sleytr
+  - rules
+  - metadata
+- assessment_id: taxonomy
+  area: scope
+  topic: Occurrence and examples
+  outcome: supported
+  summary: COMMON/VARIABLE avoid universality. Named examples and strain-dependent
+    bacterial occurrence are supported. The RsaA example is supported as well studied;
+    its unsupported superlative is not used as comparative evidence.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - native
+  - sleytr
+  - fagan
+  - metadata
+- assessment_id: archaea
+  area: evidence
+  topic: Archaeal shape and osmotic function
+  outcome: unknown
+  summary: Sleytr corroborates shape-related context, but nearest-source Albers full-text
+    assessment remains incomplete, especially osmotic stability. No unsupportedness
+    finding is inferred solely from source inaccessibility.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - albers
+  - sleytr
+  - native
+- assessment_id: surface-functions
+  area: evidence
+  topic: Sieving, adhesion, immunity and phage clause
+  outcome: concern
+  summary: Supported bacterial examples do not make every listed activity universal.
+    The phage clause requires separate evidence and must distinguish protective exclusion
+    from receptor activity; its attached source does not establish the latter.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - native
+  - fagan
+  - atlas
+- assessment_id: graph
+  area: graph
+  topic: Self-assembly and conditional anchoring
+  outcome: supported
+  summary: All five nodes and six edge descriptions read; component references resolve.
+    The Gram-positive/SLH qualification is explicit and prevents treating that branch
+    as an archaeal or all-bacterial mechanism. The external-anchor component classification
+    remains separately uncertain.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - native
+  - domain
+  - sleytr
+  - fagan
+- assessment_id: trait
+  area: grounding
+  topic: TraitMech link
+  outcome: supported
+  summary: Exact native trait identity and structure-to-phenotype direction agree.
+    Label validation alone was supplemented with the sibling definition.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - native
+  - trait
+  - fagan
+- assessment_id: image
+  area: provenance
+  topic: Image identity, attribution and license rationale
+  outcome: concern
+  summary: Metadata and taxonomic reconciliation agree. The link-only outcome follows
+    repository policy, but its explanatory license prohibition is wrong. Preview inspection
+    does not establish tomogram contents.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - native
+  - caltech
+  - atlas
+  - license
+  - rules
+  - metadata
+- assessment_id: checks
+  area: schema
+  topic: Deterministic gates and search scope
+  outcome: supported
+  summary: Target checks passed. Broader receipts were reused only after file/hash
+    checks; retained archive checks predate this new bundle.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  - search
+- assessment_id: audit
+  area: ownership
+  topic: Maintained owner and history
+  outcome: supported
+  summary: Six native and two append-only events preserve earlier qualified-composition
+    and graph work. Native YAML owns future fixes. PROPOSED remains unchanged; no
+    clean placeholder/history or new optional-data requirement is introduced.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - native
+  - rules
+  - search
+findings:
+- finding_id: F1
+  issue_key: s-layer-numeric-source-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Reconcile numerical ranges and their biological scope
+  description: The attributed 5-25 nm thickness is unscoped across Bacteria/Archaea,
+    although the cited source distinguishes typical bacterial5-10 nm from thicker
+    archaeal architectures. The attributed40-200 kDa subunit range also differs from
+    its40-170 kDa statement. Correct the values and context or cite directly supporting
+    evidence; do not simply apply the bacterial range to the whole class. Molecular
+    mass is not stoichiometry.
+  target_ids:
+  - GO:0030115
+  field_paths:
+  - physical_properties[property=THICKNESS]
+  - components[component_id=slp].stoichiometry
+  evidence_ids:
+  - native
+  - sleytr
+  - rules
+  - metadata
+  rule_id: review-checklist:measurement-source-and-context
+  native_severity: major
+  normalization_reason: Unsupported numerical evidence and omitted measurement context,
+    not a unit-label error.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+- finding_id: F2
+  issue_key: s-layer-phage-citation-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate phage protection from unsupported receptor activity
+  description: The function says the outer face mediates phage interactions without
+    qualifying the activity or organism. Its Fagan2014 citation specifically treats
+    receptor activity as unestablished speculation. The cited permeability and immune
+    examples do not fill that gap. Qualify/remove the phage clause or attach inspected,
+    activity-specific evidence; later protection claims must not be silently substituted
+    for receptor evidence.
+  target_ids:
+  - GO:0030115
+  field_paths:
+  - functions[function_id=molecular_sieve].description
+  - functions[function_id=molecular_sieve].evidence
+  evidence_ids:
+  - native
+  - fagan
+  - atlas
+  - rules
+  rule_id: review-checklist:function-claim-nearest-source
+  native_severity: major
+  normalization_reason: A functional clause is presented as established with a citation
+    that does not establish it. This is not a finding that phage interactions are
+    biologically impossible.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+- finding_id: F3
+  issue_key: s-layer-image-license-rationale
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Explain link-only handling as repository policy
+  description: The note states that CC BY-NC forbids hosting a copy. The official
+    license permits conditional noncommercial reproduction and sharing. Preserve the
+    repository link-only policy and the verified rights/attribution, but replace the
+    categorical prohibition with the actual policy rationale.
+  target_ids:
+  - GO:0030115
+  field_paths:
+  - images[image_id=caltechdata_atlas_ccrescentus_slayer].notes
+  evidence_ids:
+  - native
+  - license
+  - caltech
+  - rules
+  rule_id: review-checklist:image-rights-provenance
+  native_severity: minor
+  normalization_reason: Bounded misleading provenance wording; the actual link-only
+    behavior and license enum are consistent with repository policy.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Repair numerical provenance and distinguish mass from subunit copy
+    counts.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030115
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Each retained range has an inspected supporting passage and explicit organism/condition
+    context.
+  - Do not replace an unscoped thickness with a bacterial value presented as universal.
+  - Keep mass outside the copies-per-structure slot; any physical-property representation
+    must identify subunit versus whole lattice.
+  - Any separately authorized fix uses guarded native writing, real curation/history
+    events and native schema,strict,history,generated-output gates; retain PROPOSED.
+  - Save an evidence-backed successor with the exact issue key and previous occurrence;
+    do not overwrite this review.
+- action_id: A2
+  description: Reassess the exact phage activity with primary evidence or narrow the
+    function wording.
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0030115
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Distinguish exclusion/protection, adsorption/receptor activity and host immune
+    effects.
+  - A nearest citation supports the retained activity and taxonomic scope; predictions
+    remain qualified.
+  - Any separately authorized fix uses guarded native writing, real curation/history
+    events and native schema,strict,history,generated-output gates; retain PROPOSED.
+  - Save an evidence-backed successor with the exact issue key and previous occurrence;
+    do not overwrite this review.
+- action_id: A3
+  description: Correct the license explanation without changing image-hosting policy.
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0030115
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - The note no longer attributes a blanket copying prohibition to CC BY-NC.
+  - The source URL, attribution, license enum and link-only policy remain intact.
+  - Any separately authorized fix uses guarded native writing, real curation/history
+    events and native schema,strict,history,generated-output gates; retain PROPOSED.
+  - Save an evidence-backed successor with the exact issue key and previous occurrence;
+    do not overwrite this review.
+limitations:
+- Initial unsaved-draft validation rejected two assessment outcomes named uncertain;
+  corrected to the schema enum unknown. The original draft and failed receipt remain
+  in scratch, with no scientific conclusion changed.
+- Partial scientific review, not a completed clean pass. Full Albers2011 text remains
+  unread; the original publisher key points/abstract are available but the authors
+  repository route returned403. Finish the nearest-source archaeal function assessment
+  before claiming completion.
+- SCWP external-anchor versus lattice-constituent representation remains an explicit
+  unresolved boundary question. No automatic reclassification or separate confirmed
+  finding was made.
+- The original Sleytr JATS body was available. Fagan was read as the institutional
+  accepted manuscript with identified page locations, not claimed to be the typeset
+  version. Search-result snippets supplied leads only.
+- Numerical searches included the full Sleytr body and context passages; the absence
+  result is bounded to this cited source, not all literature. The Fagan phage finding
+  concerns the attached evidence and unqualified activity, not a claim of universal
+  absence of phage biology.
+- Atlas metadata and section prose were verified; the inspected preview is only a
+  title slate. The114MB tomogram video and raw data were not downloaded or analyzed.
+  Its pixels and precise layer localization remain unverified.
+- The CC check compares recorded wording with the official license text. It is not
+  deployment-specific legal clearance or permission to change hosting policy.
+- Same-agent review, not independent human sign-off. Wider gates preserve actual earlier
+  dates,caches,skips and network limitations. No GitHub CI or remote-publication claim;
+  post-save archive/contract checks are separate receipts.
+- One exploratory rg included a nonexistent .cache path and exited2, but positively
+  located the sibling trait. No absence conclusion used that failed search; complete
+  canonical/local root searches used ignored-inclusive traversal.
+- Only a new immutable review bundle is written to the repository. Native scientific
+  YAML,history,status,generated products and earlier reviews remain unchanged; no
+  GitHub mutation.
+tags:
+- scientific-review
+- envelope
+- evidence-scope
+- image-provenance

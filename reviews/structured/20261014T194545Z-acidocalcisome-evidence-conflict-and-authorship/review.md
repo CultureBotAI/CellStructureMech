@@ -1,0 +1,984 @@
+# Acidocalcisome partial scientific and evidence review
+
+- Review: 20261014T194545Z-acidocalcisome-evidence-conflict-and-authorship
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-14T08:23:22Z
+- Finished UTC: 2026-10-14T19:45:45Z
+- Reviewer: Codex (self_review)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Entire native YAML read. One major omitted-evidence-conflict finding and one minor authorship finding are confirmed. Essentiality, detailed transport evidence, fifth-edge source support and original strain context remain incomplete. No scientific input changed.
+
+## Scope And Provenance
+
+Entire YAML read: identity/synonyms, parent, five components, distribution/example, functions, three papers, five edges, discussion and both histories. Scientific verification remains partial in explicitly listed areas.
+
+Selection: data/structures/membrane_organelle/acidocalcisome.yaml
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 6c33c1c78494e7f0623cf2b157f4036d737196d7.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0020022 | data/structures/membrane_organelle/acidocalcisome.yaml | maintained | acidocalcisome |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0020022 | Fresh target check. Executed 2026-10-14T08:23:29Z to 2026-10-14T08:23:31Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de. |
+| strict | passed | True | GO:0020022 | Fresh target check. Executed 2026-10-14T08:23:31Z to 2026-10-14T08:23:34Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e. |
+| snippets | passed | True | GO:0020022 | Fresh target check. Executed 2026-10-14T08:23:34Z to 2026-10-14T08:23:51Z; log SHA-256 bb2e2205e95926940d59429adf3ce1d86803dd1b24e70acb2d0d75e5a369320d. |
+| history-venv | passed | True | GO:0020022 | Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:32:04Z to 2026-10-14T04:32:32Z; log SHA-256 6dbe137325eb5631697951ee6e0c1e8e6e240b64f91e92d72121ea298cef2a92. |
+| labels | passed | True | GO:0020022 | Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:32:17Z to 2026-10-14T04:36:35Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286. |
+| curies-live | passed | True | GO:0020022 | Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:39:48Z to 2026-10-14T04:43:30Z; log SHA-256 7b26794ff07cf822cd706e14ae709be9c14effff0addebe45c1c9a353444dd88. |
+| curies-controls-live | passed | True | GO:0020022 | Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:38:51Z to 2026-10-14T04:39:24Z; log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8. |
+| traits-live | passed | True | GO:0020022 | Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:43:30Z to 2026-10-14T04:44:38Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f. |
+| merged-main-checks | passed | False | GO:0020022 | Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:32:37Z to 2026-10-14T04:32:38Z; log SHA-256 a9f9e132540c77e055a43ab74c88db14f7f677d9ad40e6ae5ed7aefa9f5bacfc. |
+| merged-main-qc | passed | True | GO:0020022 | Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:32:38Z to 2026-10-14T04:32:41Z; log SHA-256 5a1c26e21239fbbe53a8892902d6fd7a3a28379b4d17457302a700420a60c864. |
+| adapter-datasets-live | passed | False | GO:0020022 | Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:33:30Z to 2026-10-14T04:33:33Z; log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549. |
+| post-save-archive | passed | True | GO:0020022 | Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T08:18:12Z to 2026-10-14T08:19:54Z; log SHA-256 b1fe47dbb9bc20e6eca68547eb8a76f9d31f23debf8f8a368fbffefc06333ae4. |
+| post-save-contract | passed | True | GO:0020022 | Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T08:19:54Z to 2026-10-14T08:21:33Z; log SHA-256 7e5ac74d9cd70059d191816bf5868ffad17e1055deea017b1a8f9c96b0b14bb4. |
+| iModulonDB target applicability | not_applicable | False | GO:0020022 | The verified 28-dataset inventory has no Agrobacterium or Rhodospirillum dataset. No unrelated strain was queried; module membership would not prove organelle identity. |
+| Complete claim-level literature verification | unavailable | True | GO:0020022 | Partial: original 2003 strain passage, 2005 detailed graph support, and 2024 transporter/biogenesis sections could not all be directly inspected. All-pump formation necessity and two matrix essentiality values remain unverified. |
+
+## Scientific And Domain Assessments
+
+### identity and ontology
+
+identity: supported. Targets: GO:0020022.
+
+The maintained record denotes the GO organelle, with matching category, parent and ontology synonyms. F1 concerns unqualified use of disputed bacterial evidence, not deletion of the organelle or automatic rejection of the GO synonym mapping.
+
+### chemical grounding
+
+grounding: supported. Targets: GO:0020022.
+
+Polyphosphate grounding is correct. Matrix cations and a membrane are consistent with the cited primary abstract and organelle definition.
+
+### formation essentiality
+
+consistency: unknown. Targets: GO:0020022.
+
+The membrane is definitional for this bounded organelle. Formation requirements for polyphosphate, bound cations and the entire mixed proton-pump cohort remain unverified. Membership, acidification, and formation are different claims; neither single-pump RNAi nor uncertain bacterial foci settle the group-level question.
+
+### transporter membership
+
+evidence: unknown. Targets: GO:0020022.
+
+Grouped pump/transporter roles are biologically plausible and the record openly defers exact family grounding. The 2024 detailed transport section remains uninspected; no false exact family mapping is alleged.
+
+### bacterial evidence conflict
+
+scope: concern. Targets: GO:0020022.
+
+The older source supports the reported bacterial identification, but contrary primary results require an explicit conflict note. F1 preserves the disagreement without declaring either model conclusively true.
+
+### taxon distribution and example
+
+scope: unknown. Targets: GO:0020022.
+
+Domain-level VARIABLE distributions are coherent. Original-paper strain identity remains unverified. C58 is a follow-up lead, not a confirmed native taxon error, because the direct 2003 strain passage was unavailable.
+
+### functions and graph
+
+graph: unknown. Targets: GO:0020022.
+
+Storage functions and the first four edge concepts have support in the inspected sources, subject to F1 for bacterial evidence. The fifth edge, acidic_lumen stabilizes polyphosphate, has relevant perturbation context but its exact source support remains unverified. No new mechanistic edge is inferred.
+
+### citation authorship
+
+provenance: concern. Targets: GO:0020022.
+
+All three native DOI identities resolve. F2 corrects a repeated author attribution; the 2024 issue year is valid.
+
+### optional coverage and audit
+
+completeness: supported. Targets: GO:0020022.
+
+No image, quantitative property, trait, protein-example accession or dataset claim is present to verify. The family-grounding discussion is relevant. Both history surfaces were read and no scientific status change is authorized.
+
+## Findings
+
+### F1: Preserve conflicting evidence about bacterial polyphosphate granules and acidocalcisomes
+
+major / open / confirmed; issue key: acidocalcisome-bacterial-identity-conflict.
+
+The bacterial exemplar and graph rely on the 2003 identification without acknowledging the contrary 2020 primary study. The current discussion addresses only transporter grounding. Add an explicit, scoped disagreement, including the 2024 counterargument; do not replace the older result with an assertion that bacterial acidocalcisomes do not exist.
+
+### F2: Correct the repeated author attribution for the 2024 review
+
+minor / open / confirmed; issue key: acidocalcisome-docampo2024-authorship.
+
+Five notes call the DOI-identified review Docampo and Huang 2024. Its sole author is Roberto Docampo. Preserve the DOI and valid issue year while correcting the author wording.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+During separately authorized curation, add the conflicting primary study and the cited newer review interpretation at the bacterial claims and a durable discussion.
+
+- Retain the original positive evidence and the methodological limits of the contrary study. State the unresolved scope rather than deciding the debate by citation age.
+- Do not generalize a C58 result to all bacteria or use it to erase established eukaryotic organelle identity.
+- Use guarded curation and append-only history; preserve PROPOSED and save a lineage-linked successor for this issue key.
+
+### A2
+
+During separately authorized curation, correct all five author attributions to Docampo 2024.
+
+- Match the DOI-specific author list; do not substitute the separate Docampo/Huang 2022 paper or flag the valid 2024 issue date.
+- Run native schema, strict, history and affected product/QC gates after a guarded edit; save a lineage-linked successor.
+
+### A3
+
+Complete the remaining read-only review with directly readable cited full text and original strain context.
+
+- Inspect formation evidence for the matrix, cations and mixed pump cohort without equating functional loss with nonformation.
+- Read the detailed 2024 transporter section and verify the nearest 2005 support for the fifth graph edge.
+- Inspect the original 2003 strain passage before deciding whether the exemplar needs taxonomic correction; do not treat a search snippet as that passage.
+- Save a successor retaining both exact finding lineages if this partial review is superseded.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/membrane_organelle/acidocalcisome.yaml; Entire 252-line maintained YAML | supports | Read identity, three synonyms, parent, five components, two domain distributions, example, two functions, three papers, five graph edges, discussion and four inline events. No scientific field was edited. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent essentiality and EssentialityEnum | supports | Essentiality means whether the structure forms, not whether acidification or growth is normal. Grouped proteins must not be assessed as though one member represents every pump. |
+| go | GO:0020022; OLS active cellular-component term, definition and synonyms | supports | ID, label and imported synonym scopes match the ontology. This confirms ontology transcription, not universal equivalence of every bacterial polyphosphate granule. |
+| parent | GO:0043231; OLS active parent term and returned children | supports | Intracellular membrane-bounded organelle is the matching parent; the child response includes GO:0020022 with is_a relation. |
+| chebi | CHEBI:16838; OLS ChEBI term | supports | Active polyphosphate term with the native canonical label. |
+| taxa | NCBITaxon:2; NCBITaxon:2759; NCBITaxon:358; Three ENA tax-id responses | supports | Bacteria and Eukaryota resolve at domain rank; Agrobacterium tumefaciens resolves at species rank. Label validity does not establish which strain was studied. |
+| c58 | NCBITaxon:176299; ENA tax-id response | context_only | C58 resolves as Agrobacterium fabrum str. C58 with historical A. tumefaciens names. The original 2003 methods/acknowledgments still need direct inspection before claiming the native exemplar is wrongly mapped. |
+| seufferheld | DOI:10.1074/jbc.M304548200; EPMC primary abstract and Crossref bibliographic metadata; original full Methods/Results unavailable | supports | The 2003 study reports a membrane, elemental cations/phosphorus, acidic staining, H+-pyrophosphatase localization and biochemical fractionation consistent with bacterial acidocalcisome-like granules. Its DOI and title agree with the record. |
+| docampo2005 | DOI:10.1038/nrmicro1097; Cited review, not a primary experiment: EPMC abstract plus publisher abstract/key points | partial | Supports the storage-organelle concept, polyphosphate/cation content and diverse occurrence. The subscription body was not read; it cannot certify every essentiality value or the exact stabilization edge. |
+| docampo2024-authors | DOI:10.1128/MMBR.00042-23; Crossref author array, confirmed by PMC front matter and publisher heading | supports | Roberto Docampo is the sole author. Online publication was in December 2023 and the issue date is March 2024; 2024 is not an error. |
+| docampo2024-scope | https://pmc.ncbi.nlm.nih.gov/articles/PMC10966946/; Earlier inspected Introduction, Phylogenetic Distribution and initial composition sections; last reaccess at the timestamp below returned a browser challenge | partial | The inspected distribution section disputes the 2020 interpretation, citing growth-stage, fluorescent-tag and short-polyphosphate detection limitations. It leaves further work necessary. It also supports variable eukaryotic occurrence. Remaining transporter/biogenesis text was not read. |
+| frank | https://journals.asm.org/doi/full/10.1128/aem.02759-19; Abstract, Results/Discussion, Conclusions, Methods/Table 1; figure captions, not pixels or supplementary movies | supports | Frank and Jendrossek 2020 used C58, fluorescence and mutants. They report distinct polyphosphate and HppA-associated structures; the latter persisted after ppk deletions. They did not perform TEM and describe the second structure cautiously. The full HTML was readable through the web tool; the separate local request returned 403. |
+| lemercier | DOI:10.1074/jbc.M204744200; EPMC primary abstract, not full methods/images | context_only | T. brucei V-H+-PPase RNAi reduced acidity and polyphosphate while acidocalcisomes remained described. This distinguishes dysfunction from disappearance, but one pump perturbation cannot establish dispensability of the entire mixed pump set. |
+| ruiz | DOI:10.1074/jbc.M102402200; EPMC primary abstract, not full text | context_only | T. cruzi alkaline stress and ionophore-mediated calcium release accompanied polyphosphate loss. This provides relevant context for the graph but does not by itself verify its unrestricted causal claim or its nearest 2005 citation. |
+| history | history/records/acidocalcisome/2026-09-04T191726Z-claude-c0534b.yaml; Entire creation event and all four native inline events | supports | The creation and initial curation are recorded. PROPOSED remains unchanged. No missing-event finding is inferred merely because the initial-session adjustments have fewer separate repository events. |
+| identity-search | /private/tmp/csm-review-20261014T082215Z-acidocalcisome/identity-audit.json; 909 native identity/label/slug/synonym rows; 225 canonical bundles; legacy review roots | supports | Ignored-inclusive structured parsing resolves one exact target and no canonical predecessor. Ignored-inclusive review/history text search found only target creation history. |
+| adapter | https://imodulondb.org/; Verified 28-dataset inventory, obtained 2026-10-14T04:33:30Z to 04:33:33Z | supports | No matched bacterial exemplar dataset is listed. No expression-module result is used as organelle evidence. |
+| validation | /private/tmp/csm-review-20261014T082215Z-acidocalcisome/baseline-verification.json; Fresh target checks and byte-verified whole-corpus gates | supports | Schema, strict and snippet commands passed. None of 22 citations has a snippet, so snippet success is not validation of paraphrased biological claims. |
+| access | /private/tmp/csm-review-20261014T082215Z-acidocalcisome/source-access.jsonl; 33 HTTP receipts plus connection errors and separately inspected web pages | context_only | PMC efetch files contain front matter only. The 2005 PDF route returns HTML, and the 2024 PMC PDF route also returns HTML. Other routes returned 403/404/500. A guessed supplemental DOI returned zero hits and was not used. Missing bs4 was handled with installed lxml; neither failure is a passed scientific check. |
+
+## Limits And Additional Notes
+
+- Same-agent review; no experimental replication, independent approval or exhaustive component discovery. Partial coverage is not a scientific pass or completed record review.
+- The native 2003 primary abstract was inspected, but not full Methods/Results or original image pixels. Search results suggested C58 in the acknowledgments; that lead is not used as confirmed source evidence or a taxonomic finding.
+- The native 2005 review was available as abstract/key points, not complete body. The 2024 review initially exposed introductory distribution/composition text; later attempts returned a browser challenge or abstract-only publisher page. Its evidence access timestamp marks the last actual reaccess attempt, not a claim that the complete body was then read.
+- Frank 2020 relevant full HTML and captions were inspected via web retrieval; local HTML download returned 403. No figure pixels, supplement or movies were inspected. The 2024 rebuttal is retained rather than treating the contrary primary study as final truth.
+- Lemercier and Ruiz primary abstracts provide bounded context only. Formation requirements for the grouped components, detailed transporter support, and exact nearest-citation support for the fifth graph edge remain unverified. These uncertainties are not promoted to invented findings.
+- Source receipts retain 33 responses, including unsuccessful routes and metadata-only responses. The UMass HTTPS connection failure was visible in tool output; the later HTTP failure has a timestamped error receipt. An unmatched guessed DOI is unused, not evidence that a paper is absent. No paid access, credential use or author contact occurred.
+- Whole-corpus gates were reused only after maintained/history/image/review/input/log hashes remained unchanged. Original limits: 603 no-adapter label entries, 251 configured CURIE skips, and exact-HEAD QC 987 passed/3 skipped. No citation snippets exist in this target.
+- Pre-save archive/contract cover 225 existing bundles. New validation/save/archive/contract results will be recorded only after execution. Ignored files were included in identity and review searches.
+- Scientific YAML, history, images, products and old review bytes are unchanged. No GitHub mutation or publication was performed. Both findings remain open, and the target remains pending completion in the all-record goal.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261014T194545Z-acidocalcisome-evidence-conflict-and-authorship
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Acidocalcisome partial scientific and evidence review
+started_at: '2026-10-14T08:23:22Z'
+finished_at: '2026-10-14T19:45:45Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent scientific review, not independent human or second-agent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Entire native YAML read. One major omitted-evidence-conflict finding and
+  one minor authorship finding are confirmed. Essentiality, detailed transport evidence,
+  fifth-edge source support and original strain context remain incomplete. No scientific
+  input changed.
+source:
+  git_revision: 6c33c1c78494e7f0623cf2b157f4036d737196d7
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/membrane_organelle/acidocalcisome.yaml
+    sha256: eff25c1fcbbfbc6d55e1bbae8f5959aa9740ccac4c4b0c6314d05b45f36c9789
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/acidocalcisome/2026-09-04T191726Z-claude-c0534b.yaml
+    sha256: 4f7ff08fba087529ed81f941350ef3d2bbc31d34b529b46148961a48ef466e22
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0020022
+  path: data/structures/membrane_organelle/acidocalcisome.yaml
+  label: acidocalcisome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/acidocalcisome.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire YAML read: identity/synonyms, parent, five components, distribution/example,
+    functions, three papers, five edges, discussion and both histories. Scientific
+    verification remains partial in explicitly listed areas.'
+  selection: data/structures/membrane_organelle/acidocalcisome.yaml
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0020022
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/acidocalcisome.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Fresh target check. Executed 2026-10-14T08:23:29Z to 2026-10-14T08:23:31Z;
+    log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py data/structures/membrane_organelle/acidocalcisome.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Fresh target check. Executed 2026-10-14T08:23:31Z to 2026-10-14T08:23:34Z;
+    log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/membrane_organelle/acidocalcisome.yaml
+    --report /private/tmp/csm-review-20261014T082215Z-acidocalcisome/snippets.md
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Fresh target check. Executed 2026-10-14T08:23:34Z to 2026-10-14T08:23:51Z;
+    log SHA-256 bb2e2205e95926940d59429adf3ce1d86803dd1b24e70acb2d0d75e5a369320d.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: reused-history-venv
+  name: history-venv
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:32:04Z
+    to 2026-10-14T04:32:32Z; log SHA-256 6dbe137325eb5631697951ee6e0c1e8e6e240b64f91e92d72121ea298cef2a92.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: reused-labels
+  name: labels
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:32:17Z
+    to 2026-10-14T04:36:35Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: reused-curies-live
+  name: curies-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_curies.py --check --report /private/tmp/csm-review-20261014T042923Z-slime-layer/curies-live.tsv
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:39:48Z
+    to 2026-10-14T04:43:30Z; log SHA-256 7b26794ff07cf822cd706e14ae709be9c14effff0addebe45c1c9a353444dd88.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: reused-curies-controls-live
+  name: curies-controls-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_curies.py --self-test
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:38:51Z
+    to 2026-10-14T04:39:24Z; log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: reused-traits-live
+  name: traits-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:43:30Z
+    to 2026-10-14T04:44:38Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: reused-merged-main-checks
+  name: merged-main-checks
+  status: passed
+  required: false
+  command: gh run list --repo CultureBotAI/CellStructureMech --commit 6c33c1c78494e7f0623cf2b157f4036d737196d7
+    --limit 30 --json databaseId,name,event,status,conclusion,headSha,url
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:32:37Z
+    to 2026-10-14T04:32:38Z; log SHA-256 a9f9e132540c77e055a43ab74c88db14f7f677d9ad40e6ae5ed7aefa9f5bacfc.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: reused-merged-main-qc
+  name: merged-main-qc
+  status: passed
+  required: true
+  command: gh run view 38339564555 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:32:38Z
+    to 2026-10-14T04:32:41Z; log SHA-256 5a1c26e21239fbbe53a8892902d6fd7a3a28379b4d17457302a700420a60c864.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: reused-adapter-datasets-live
+  name: adapter-datasets-live
+  status: passed
+  required: false
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - adapter
+  summary: Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T04:33:30Z
+    to 2026-10-14T04:33:33Z; log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: reused-post-save-archive
+  name: post-save-archive
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T08:18:12Z
+    to 2026-10-14T08:19:54Z; log SHA-256 b1fe47dbb9bc20e6eca68547eb8a76f9d31f23debf8f8a368fbffefc06333ae4.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: reused-post-save-contract
+  name: post-save-contract
+  status: passed
+  required: true
+  command: .venv/bin/pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged root/input/log hashes; not rerun. Executed 2026-10-14T08:19:54Z
+    to 2026-10-14T08:21:33Z; log SHA-256 7e5ac74d9cd70059d191816bf5868ffad17e1055deea017b1a8f9c96b0b14bb4.
+  scope_note: Original skips retained. Pre-save archive and contract cover 225 prior
+    bundles, not this unsaved observation.
+- check_id: adapter-target-applicability
+  name: iModulonDB target applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - adapter
+  summary: The verified 28-dataset inventory has no Agrobacterium or Rhodospirillum
+    dataset. No unrelated strain was queried; module membership would not prove organelle
+    identity.
+- check_id: material-source-completion
+  name: Complete claim-level literature verification
+  status: unavailable
+  required: true
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - access
+  - lemercier
+  - ruiz
+  summary: 'Partial: original 2003 strain passage, 2005 detailed graph support, and
+    2024 transporter/biogenesis sections could not all be directly inspected. All-pump
+    formation necessity and two matrix essentiality values remain unverified.'
+  scope_note: HTTP success alone is not readability. This unavailable scientific check
+    prevents completed status; it does not invalidate the two confirmed findings.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/membrane_organelle/acidocalcisome.yaml
+  locator: Entire 252-line maintained YAML
+  accessed_at: '2026-10-14T19:45:45Z'
+  support: supports
+  summary: Read identity, three synonyms, parent, five components, two domain distributions,
+    example, two functions, three papers, five graph edges, discussion and four inline
+    events. No scientific field was edited.
+  snapshot_sha256: eff25c1fcbbfbc6d55e1bbae8f5959aa9740ccac4c4b0c6314d05b45f36c9789
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent essentiality and EssentialityEnum
+  accessed_at: '2026-10-14T19:45:45Z'
+  support: supports
+  summary: Essentiality means whether the structure forms, not whether acidification
+    or growth is normal. Grouped proteins must not be assessed as though one member
+    represents every pump.
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: go
+  kind: authority
+  reference: GO:0020022
+  locator: OLS active cellular-component term, definition and synonyms
+  accessed_at: '2026-10-14T08:23:33Z'
+  support: supports
+  summary: ID, label and imported synonym scopes match the ontology. This confirms
+    ontology transcription, not universal equivalence of every bacterial polyphosphate
+    granule.
+  snapshot_sha256: 240ce725b0734cf39d981d5974e4d5601e65063b3c3928b696d261e70528d1d5
+- evidence_id: parent
+  kind: authority
+  reference: GO:0043231
+  locator: OLS active parent term and returned children
+  accessed_at: '2026-10-14T08:23:34Z'
+  support: supports
+  summary: Intracellular membrane-bounded organelle is the matching parent; the child
+    response includes GO:0020022 with is_a relation.
+  snapshot_sha256: 633262bf25df8960e37134d348c2a702c8886dbb7c352b683f5cf43c8058158b
+- evidence_id: chebi
+  kind: authority
+  reference: CHEBI:16838
+  locator: OLS ChEBI term
+  accessed_at: '2026-10-14T08:23:34Z'
+  support: supports
+  summary: Active polyphosphate term with the native canonical label.
+  snapshot_sha256: 5ab860a29fe8bf3cbf3962e0846b903793f594965fb6b24e467e2aac093841ca
+- evidence_id: taxa
+  kind: authority
+  reference: NCBITaxon:2; NCBITaxon:2759; NCBITaxon:358
+  locator: Three ENA tax-id responses
+  accessed_at: '2026-10-14T19:45:45Z'
+  support: supports
+  summary: Bacteria and Eukaryota resolve at domain rank; Agrobacterium tumefaciens
+    resolves at species rank. Label validity does not establish which strain was studied.
+- evidence_id: c58
+  kind: authority
+  reference: NCBITaxon:176299
+  locator: ENA tax-id response
+  accessed_at: '2026-10-14T19:42:37Z'
+  support: context_only
+  summary: C58 resolves as Agrobacterium fabrum str. C58 with historical A. tumefaciens
+    names. The original 2003 methods/acknowledgments still need direct inspection
+    before claiming the native exemplar is wrongly mapped.
+  snapshot_sha256: 920121de0007212138c13d5ed7e2991f753695ac92e0dfb5d067229ea69d8f28
+- evidence_id: seufferheld
+  kind: primary_source
+  reference: DOI:10.1074/jbc.M304548200
+  locator: EPMC primary abstract and Crossref bibliographic metadata; original full
+    Methods/Results unavailable
+  accessed_at: '2026-10-14T08:23:39Z'
+  support: supports
+  summary: The 2003 study reports a membrane, elemental cations/phosphorus, acidic
+    staining, H+-pyrophosphatase localization and biochemical fractionation consistent
+    with bacterial acidocalcisome-like granules. Its DOI and title agree with the
+    record.
+  snapshot_sha256: 1a48abeb6b33964b2d23f36b528511123fe884db36b7bbaa0e4166ab602b0a24
+- evidence_id: docampo2005
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro1097
+  locator: 'Cited review, not a primary experiment: EPMC abstract plus publisher abstract/key
+    points'
+  accessed_at: '2026-10-14T08:23:37Z'
+  support: partial
+  summary: Supports the storage-organelle concept, polyphosphate/cation content and
+    diverse occurrence. The subscription body was not read; it cannot certify every
+    essentiality value or the exact stabilization edge.
+  snapshot_sha256: ce03bc7f2e797f6fb885d0add76bba98669bd213cc25965882f1fd4241b6affc
+- evidence_id: docampo2024-authors
+  kind: database
+  reference: DOI:10.1128/MMBR.00042-23
+  locator: Crossref author array, confirmed by PMC front matter and publisher heading
+  accessed_at: '2026-10-14T08:23:41Z'
+  support: supports
+  summary: Roberto Docampo is the sole author. Online publication was in December
+    2023 and the issue date is March 2024; 2024 is not an error.
+  snapshot_sha256: e47a04ab298a31bbdbf8c0fb4e606d2b6d6efc94ff1cd0c31f4a4d9ca450a240
+- evidence_id: docampo2024-scope
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10966946/
+  locator: Earlier inspected Introduction, Phylogenetic Distribution and initial composition
+    sections; last reaccess at the timestamp below returned a browser challenge
+  accessed_at: '2026-10-14T19:43:48Z'
+  support: partial
+  summary: The inspected distribution section disputes the 2020 interpretation, citing
+    growth-stage, fluorescent-tag and short-polyphosphate detection limitations. It
+    leaves further work necessary. It also supports variable eukaryotic occurrence.
+    Remaining transporter/biogenesis text was not read.
+- evidence_id: frank
+  kind: primary_source
+  reference: https://journals.asm.org/doi/full/10.1128/aem.02759-19
+  locator: Abstract, Results/Discussion, Conclusions, Methods/Table 1; figure captions,
+    not pixels or supplementary movies
+  accessed_at: '2026-10-14T19:43:48Z'
+  support: supports
+  summary: Frank and Jendrossek 2020 used C58, fluorescence and mutants. They report
+    distinct polyphosphate and HppA-associated structures; the latter persisted after
+    ppk deletions. They did not perform TEM and describe the second structure cautiously.
+    The full HTML was readable through the web tool; the separate local request returned
+    403.
+- evidence_id: lemercier
+  kind: primary_source
+  reference: DOI:10.1074/jbc.M204744200
+  locator: EPMC primary abstract, not full methods/images
+  accessed_at: '2026-10-14T19:42:38Z'
+  support: context_only
+  summary: T. brucei V-H+-PPase RNAi reduced acidity and polyphosphate while acidocalcisomes
+    remained described. This distinguishes dysfunction from disappearance, but one
+    pump perturbation cannot establish dispensability of the entire mixed pump set.
+  snapshot_sha256: 9ed8e984724a9e44a7376cbd624d6d7c73db95c9ebdf5f05e8bb74b5d47a5c67
+- evidence_id: ruiz
+  kind: primary_source
+  reference: DOI:10.1074/jbc.M102402200
+  locator: EPMC primary abstract, not full text
+  accessed_at: '2026-10-14T19:42:39Z'
+  support: context_only
+  summary: T. cruzi alkaline stress and ionophore-mediated calcium release accompanied
+    polyphosphate loss. This provides relevant context for the graph but does not
+    by itself verify its unrestricted causal claim or its nearest 2005 citation.
+  snapshot_sha256: ab76d58b010266733e292e7f7d5c08b7de8091ec1dd2d893d181ce0087a80787
+- evidence_id: history
+  kind: record_content
+  reference: history/records/acidocalcisome/2026-09-04T191726Z-claude-c0534b.yaml
+  locator: Entire creation event and all four native inline events
+  accessed_at: '2026-10-14T19:45:45Z'
+  support: supports
+  summary: The creation and initial curation are recorded. PROPOSED remains unchanged.
+    No missing-event finding is inferred merely because the initial-session adjustments
+    have fewer separate repository events.
+- evidence_id: identity-search
+  kind: search
+  reference: /private/tmp/csm-review-20261014T082215Z-acidocalcisome/identity-audit.json
+  locator: 909 native identity/label/slug/synonym rows; 225 canonical bundles; legacy
+    review roots
+  accessed_at: '2026-10-14T19:45:45Z'
+  support: supports
+  summary: Ignored-inclusive structured parsing resolves one exact target and no canonical
+    predecessor. Ignored-inclusive review/history text search found only target creation
+    history.
+  snapshot_sha256: 76c87f5947d08f8822afd298b302d2936fc030a0ffa84536211aa3a7a8c1495e
+  search_scope: Path.rglob includes hidden/ignored files. rg --no-ignore --hidden
+    searched reviews/structured, reports/yaml_record_review and target history for
+    ID, slug, label and proposed issue keys. No GitHub-wide absence claim.
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Verified 28-dataset inventory, obtained 2026-10-14T04:33:30Z to 04:33:33Z
+  accessed_at: '2026-10-14T19:45:45Z'
+  support: supports
+  summary: No matched bacterial exemplar dataset is listed. No expression-module result
+    is used as organelle evidence.
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261014T082215Z-acidocalcisome/baseline-verification.json
+  locator: Fresh target checks and byte-verified whole-corpus gates
+  accessed_at: '2026-10-14T19:45:45Z'
+  support: supports
+  summary: Schema, strict and snippet commands passed. None of 22 citations has a
+    snippet, so snippet success is not validation of paraphrased biological claims.
+- evidence_id: access
+  kind: database
+  reference: /private/tmp/csm-review-20261014T082215Z-acidocalcisome/source-access.jsonl
+  locator: 33 HTTP receipts plus connection errors and separately inspected web pages
+  accessed_at: '2026-10-14T19:45:45Z'
+  support: context_only
+  summary: PMC efetch files contain front matter only. The 2005 PDF route returns
+    HTML, and the 2024 PMC PDF route also returns HTML. Other routes returned 403/404/500.
+    A guessed supplemental DOI returned zero hits and was not used. Missing bs4 was
+    handled with installed lxml; neither failure is a passed scientific check.
+assessments:
+- assessment_id: identity-and-ontology
+  area: identity
+  topic: identity and ontology
+  outcome: supported
+  summary: The maintained record denotes the GO organelle, with matching category,
+    parent and ontology synonyms. F1 concerns unqualified use of disputed bacterial
+    evidence, not deletion of the organelle or automatic rejection of the GO synonym
+    mapping.
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - native
+  - go
+  - parent
+  - identity-search
+- assessment_id: chemical-grounding
+  area: grounding
+  topic: chemical grounding
+  outcome: supported
+  summary: Polyphosphate grounding is correct. Matrix cations and a membrane are consistent
+    with the cited primary abstract and organelle definition.
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - native
+  - chebi
+  - seufferheld
+  - go
+- assessment_id: formation-essentiality
+  area: consistency
+  topic: formation essentiality
+  outcome: unknown
+  summary: The membrane is definitional for this bounded organelle. Formation requirements
+    for polyphosphate, bound cations and the entire mixed proton-pump cohort remain
+    unverified. Membership, acidification, and formation are different claims; neither
+    single-pump RNAi nor uncertain bacterial foci settle the group-level question.
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - native
+  - schema
+  - lemercier
+  - access
+  dimensions:
+  - name: essentiality_semantics
+    value: Structure formation, not activity or cell growth
+    definition: Native EssentialityEnum; a single pump does not stand for a taxon-agnostic
+      mixed pump cohort
+    evidence_ids:
+    - schema
+    - lemercier
+- assessment_id: transporter-membership
+  area: evidence
+  topic: transporter membership
+  outcome: unknown
+  summary: Grouped pump/transporter roles are biologically plausible and the record
+    openly defers exact family grounding. The 2024 detailed transport section remains
+    uninspected; no false exact family mapping is alleged.
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - native
+  - docampo2024-scope
+  - access
+- assessment_id: bacterial-evidence-conflict
+  area: scope
+  topic: bacterial evidence conflict
+  outcome: concern
+  summary: The older source supports the reported bacterial identification, but contrary
+    primary results require an explicit conflict note. F1 preserves the disagreement
+    without declaring either model conclusively true.
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - native
+  - seufferheld
+  - frank
+  - docampo2024-scope
+  dimensions:
+  - name: assay_context
+    value: 2003 membrane/element/fractionation evidence versus 2020 C58 fluorescence/mutant
+      study
+    definition: Different readouts and methodological limitations must remain visible
+    evidence_ids:
+    - seufferheld
+    - frank
+- assessment_id: taxon-distribution-and-example
+  area: scope
+  topic: taxon distribution and example
+  outcome: unknown
+  summary: Domain-level VARIABLE distributions are coherent. Original-paper strain
+    identity remains unverified. C58 is a follow-up lead, not a confirmed native taxon
+    error, because the direct 2003 strain passage was unavailable.
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - native
+  - taxa
+  - c58
+  - docampo2005
+  - docampo2024-scope
+  - access
+- assessment_id: functions-and-graph
+  area: graph
+  topic: functions and graph
+  outcome: unknown
+  summary: Storage functions and the first four edge concepts have support in the
+    inspected sources, subject to F1 for bacterial evidence. The fifth edge, acidic_lumen
+    stabilizes polyphosphate, has relevant perturbation context but its exact source
+    support remains unverified. No new mechanistic edge is inferred.
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - native
+  - seufferheld
+  - docampo2005
+  - docampo2024-scope
+  - ruiz
+- assessment_id: citation-authorship
+  area: provenance
+  topic: citation authorship
+  outcome: concern
+  summary: All three native DOI identities resolve. F2 corrects a repeated author
+    attribution; the 2024 issue year is valid.
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - native
+  - docampo2024-authors
+- assessment_id: optional-coverage-and-audit
+  area: completeness
+  topic: optional coverage and audit
+  outcome: supported
+  summary: No image, quantitative property, trait, protein-example accession or dataset
+    claim is present to verify. The family-grounding discussion is relevant. Both
+    history surfaces were read and no scientific status change is authorized.
+  target_ids:
+  - GO:0020022
+  evidence_ids:
+  - native
+  - history
+  - adapter
+  - validation
+findings:
+- finding_id: F1
+  issue_key: acidocalcisome-bacterial-identity-conflict
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Preserve conflicting evidence about bacterial polyphosphate granules and
+    acidocalcisomes
+  description: The bacterial exemplar and graph rely on the 2003 identification without
+    acknowledging the contrary 2020 primary study. The current discussion addresses
+    only transporter grounding. Add an explicit, scoped disagreement, including the
+    2024 counterargument; do not replace the older result with an assertion that bacterial
+    acidocalcisomes do not exist.
+  target_ids:
+  - GO:0020022
+  field_paths:
+  - canonical_examples[taxon_id=NCBITaxon:358]
+  - components[component_id=acidocalcisome_membrane].evidence
+  - causal_graphs[graph_id=acidic_polyphosphate_cation_store].edges
+  - discussions
+  evidence_ids:
+  - native
+  - seufferheld
+  - frank
+  - docampo2024-scope
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/acidocalcisome.yaml
+    role: maintained scientific record
+  rule_id: review-yaml-record:preserve-conflicting-evidence
+  native_severity: major
+  normalization_reason: A material identity/evidence uncertainty in the exemplar and
+    mechanism is hidden, not merely a missing optional citation.
+- finding_id: F2
+  issue_key: acidocalcisome-docampo2024-authorship
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the repeated author attribution for the 2024 review
+  description: Five notes call the DOI-identified review Docampo and Huang 2024. Its
+    sole author is Roberto Docampo. Preserve the DOI and valid issue year while correcting
+    the author wording.
+  target_ids:
+  - GO:0020022
+  field_paths:
+  - components[component_id=acidocalcisome_membrane].evidence
+  - components[component_id=cation_transporters].evidence
+  - functions[function_id=calcium_storage].evidence
+  - evidence[reference=DOI:10.1128/MMBR.00042-23]
+  - causal_graphs[graph_id=acidic_polyphosphate_cation_store].edges[subject=polyphosphate,predicate=chelates].evidence
+  evidence_ids:
+  - native
+  - docampo2024-authors
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/acidocalcisome.yaml
+    role: maintained scientific record
+  rule_id: review-yaml-record:verify-source-identity-and-provenance
+  native_severity: minor
+  normalization_reason: Non-blocking bibliographic error; the DOI still identifies
+    the intended source.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0020022
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/acidocalcisome.yaml
+    role: maintained scientific record
+  description: During separately authorized curation, add the conflicting primary
+    study and the cited newer review interpretation at the bacterial claims and a
+    durable discussion.
+  acceptance_checks:
+  - Retain the original positive evidence and the methodological limits of the contrary
+    study. State the unresolved scope rather than deciding the debate by citation
+    age.
+  - Do not generalize a C58 result to all bacteria or use it to erase established
+    eukaryotic organelle identity.
+  - Use guarded curation and append-only history; preserve PROPOSED and save a lineage-linked
+    successor for this issue key.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0020022
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/acidocalcisome.yaml
+    role: maintained scientific record
+  description: During separately authorized curation, correct all five author attributions
+    to Docampo 2024.
+  acceptance_checks:
+  - Match the DOI-specific author list; do not substitute the separate Docampo/Huang
+    2022 paper or flag the valid 2024 issue date.
+  - Run native schema, strict, history and affected product/QC gates after a guarded
+    edit; save a lineage-linked successor.
+- action_id: A3
+  finding_ids: []
+  target_ids:
+  - GO:0020022
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/acidocalcisome.yaml
+    role: maintained scientific record
+  description: Complete the remaining read-only review with directly readable cited
+    full text and original strain context.
+  acceptance_checks:
+  - Inspect formation evidence for the matrix, cations and mixed pump cohort without
+    equating functional loss with nonformation.
+  - Read the detailed 2024 transporter section and verify the nearest 2005 support
+    for the fifth graph edge.
+  - Inspect the original 2003 strain passage before deciding whether the exemplar
+    needs taxonomic correction; do not treat a search snippet as that passage.
+  - Save a successor retaining both exact finding lineages if this partial review
+    is superseded.
+limitations:
+- Same-agent review; no experimental replication, independent approval or exhaustive
+  component discovery. Partial coverage is not a scientific pass or completed record
+  review.
+- The native 2003 primary abstract was inspected, but not full Methods/Results or
+  original image pixels. Search results suggested C58 in the acknowledgments; that
+  lead is not used as confirmed source evidence or a taxonomic finding.
+- The native 2005 review was available as abstract/key points, not complete body.
+  The 2024 review initially exposed introductory distribution/composition text; later
+  attempts returned a browser challenge or abstract-only publisher page. Its evidence
+  access timestamp marks the last actual reaccess attempt, not a claim that the complete
+  body was then read.
+- Frank 2020 relevant full HTML and captions were inspected via web retrieval; local
+  HTML download returned 403. No figure pixels, supplement or movies were inspected.
+  The 2024 rebuttal is retained rather than treating the contrary primary study as
+  final truth.
+- Lemercier and Ruiz primary abstracts provide bounded context only. Formation requirements
+  for the grouped components, detailed transporter support, and exact nearest-citation
+  support for the fifth graph edge remain unverified. These uncertainties are not
+  promoted to invented findings.
+- Source receipts retain 33 responses, including unsuccessful routes and metadata-only
+  responses. The UMass HTTPS connection failure was visible in tool output; the later
+  HTTP failure has a timestamped error receipt. An unmatched guessed DOI is unused,
+  not evidence that a paper is absent. No paid access, credential use or author contact
+  occurred.
+- 'Whole-corpus gates were reused only after maintained/history/image/review/input/log
+  hashes remained unchanged. Original limits: 603 no-adapter label entries, 251 configured
+  CURIE skips, and exact-HEAD QC 987 passed/3 skipped. No citation snippets exist
+  in this target.'
+- Pre-save archive/contract cover 225 existing bundles. New validation/save/archive/contract
+  results will be recorded only after execution. Ignored files were included in identity
+  and review searches.
+- Scientific YAML, history, images, products and old review bytes are unchanged. No
+  GitHub mutation or publication was performed. Both findings remain open, and the
+  target remains pending completion in the all-record goal.
+tags:
+- scientific-review
+- membrane-organelle
+- conflicting-evidence
+- source-provenance
+- partial
+```

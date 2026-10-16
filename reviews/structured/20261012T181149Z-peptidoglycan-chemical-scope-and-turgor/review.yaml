@@ -1,0 +1,774 @@
+schema_version: 1.0.0
+review_id: 20261012T181149Z-peptidoglycan-chemical-scope-and-turgor
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Peptidoglycan wall chemical grounding and turgor-edge review
+started_at: '2026-10-12T12:17:57Z'
+finished_at: '2026-10-12T18:11:49Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no independent human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One major Lipid II chemical-scope grounding defect and one minor turgor-capacity
+  edge defect. Wall identity, composition, broad distribution, model-system assembly
+  evidence and the pinned material-production link are otherwise supported within
+  the stated evidence limits.
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    sha256: 893883fe6827f7bd64eb8d07855e5592cedb0e1c0d368e8d42153521575a0911
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/peptidoglycan_based_cell_wall/2026-08-30T193100Z-codex-e2d8e9.yaml
+    sha256: 4c7a3881b03ebf473b977f2b6534e94181c79577fbb6a3c34b0881dbd4704415
+    role: context
+  - path: history/records/peptidoglycan_based_cell_wall/2026-09-04T011330Z-codex-0fcf20.yaml
+    sha256: ac95b879380bb7f46842539caa489a914e2b68511aa5da8bb2140554b5ffd807
+    role: context
+  - path: history/records/peptidoglycan_based_cell_wall/2026-09-04T034706Z-codex-fc9767.yaml
+    sha256: 6b7533be76fb891b49a08bb3a2a0f576372a425cc45c1a55ded1167ff672cf2a
+    role: context
+  - path: history/records/peptidoglycan_based_cell_wall/2026-10-05T174720Z-codex-23865d.yaml
+    sha256: 1807a3015bc974754d15b3c39c3280275803ceff19ee43b9c9780e6ac4ec637a
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0009274
+  path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  label: peptidoglycan-based cell wall
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    role: maintained scientific record
+scope:
+  description: Entire GO:0009274 record, five native events, four append-only histories,
+    all stable identifiers, one component, distribution/example/function, nine nodes/six
+    edges and the pinned PathwayMech link assessed. No sampling; completion denotes
+    review coverage, not resolution of the two open findings.
+  selection: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009274
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Target gate before access interruption, retained after exact input recheck.
+    Actual UTC: 2026-10-12T12:18:19Z to 2026-10-12T12:18:20Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Target gate before access interruption, retained after exact input recheck.
+    Actual UTC: 2026-10-12T12:18:20Z to 2026-10-12T12:18:24Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    --report /private/tmp/csm-review-20261012T121735Z-peptidoglycan/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Target gate before access interruption, retained after exact input recheck.
+    Zero snippet coverage is not a literature pass. Actual UTC: 2026-10-12T12:18:24Z
+    to 2026-10-12T12:18:39Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: QC987 passed/3 skipped; cached labels with603 no-adapter
+    skips; cached traits after earlier network failure. Not fresh CI. Actual UTC:
+    2026-10-12T06:33:07Z to 2026-10-12T06:45:16Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: QC987 passed/3 skipped; cached labels with603 no-adapter
+    skips; cached traits after earlier network failure. Not fresh CI. Actual UTC:
+    2026-10-12T06:45:16Z to 2026-10-12T06:47:16Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: QC987 passed/3 skipped; cached labels with603 no-adapter
+    skips; cached traits after earlier network failure. Not fresh CI. Actual UTC:
+    2026-10-12T06:48:15Z to 2026-10-12T06:48:52Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: liveCURIE4023 OK/251 SKIP/0 unreachable;214 valid bundles
+    and4 contract tests. These archive checks predate this new observation. Actual
+    UTC: 2026-10-12T07:05:41Z to 2026-10-12T07:10:58Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: liveCURIE4023 OK/251 SKIP/0 unreachable;214 valid bundles
+    and4 contract tests. These archive checks predate this new observation. Actual
+    UTC: 2026-10-12T12:14:28Z to 2026-10-12T12:15:49Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified reuse: liveCURIE4023 OK/251 SKIP/0 unreachable;214 valid bundles
+    and4 contract tests. These archive checks predate this new observation. Actual
+    UTC: 2026-10-12T12:15:49Z to 2026-10-12T12:17:18Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Expression-database context, not mechanism proof. Actual UTC: 2026-10-12T12:18:29Z
+    to 2026-10-12T12:18:29Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - adapter
+- check_id: adapter-murJ
+  name: adapter-murJ
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query murJ
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Expression-database context, not mechanism proof. Actual UTC: 2026-10-12T12:18:29Z
+    to 2026-10-12T12:18:30Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - adapter
+- check_id: adapter-mrdB
+  name: adapter-mrdB
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query mrdB
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Expression-database context, not mechanism proof. Actual UTC: 2026-10-12T12:18:30Z
+    to 2026-10-12T12:18:30Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - adapter
+- check_id: adapter-ftsW
+  name: adapter-ftsW
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query ftsW
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Expression-database context, not mechanism proof. Actual UTC: 2026-10-12T12:18:30Z
+    to 2026-10-12T12:18:30Z.'
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - adapter
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  locator: Entire YAML; five native events and four append-only histories
+  summary: Both generic Lipid II nodes use CHEBI:27692. The final edge says peptidoglycan
+    resists a resistance capacity, although its description correctly identifies internal
+    pressure. The input bytes were reread and verified unchanged after the access
+    interruption.
+  support: supports
+  accessed_at: '2026-10-12T18:11:49Z'
+  snapshot_sha256: 893883fe6827f7bd64eb8d07855e5592cedb0e1c0d368e8d42153521575a0911
+- evidence_id: rules
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity, chemical grounding, source scope and causal-edge rubric
+  summary: Exact grounding requires entity-level agreement, not a shared short label.
+    Directed triples must agree with their descriptions. Optional omissions and temporary
+    access failures are not findings.
+  support: supports
+  accessed_at: '2026-10-12T18:11:49Z'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009274
+  locator: Active GO:0009274 definition and synonyms
+  summary: Exact peptidoglycan-based wall identity and related murein-sacculus synonym
+    agree; the term is a cellular component and distinguishes the wall from its synthesis
+    machinery.
+  support: supports
+  accessed_at: '2026-10-12T12:18:09Z'
+  snapshot_sha256: 7537b72bc1f481b91ed2b9eb404bf7b61ddc0c3d4c04a1745d5c33ad7af1b604
+- evidence_id: lysine-lipid-ii
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_27692
+  locator: Active CHEBI:27692 definition and chemical identity
+  summary: The entry called lipid II explicitly specifies an L-lysyl pentapeptide.
+    It is not an unrestricted class for all bacterial Lipid II variants.
+  support: refutes
+  accessed_at: '2026-10-12T12:18:10Z'
+  snapshot_sha256: 39d0a2cb4cb3d0955d255c1e999175328781469c783c0155d4956da88ad513ef
+- evidence_id: dap-lipid-ii
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_28138
+  locator: Active CHEBI:28138 definition
+  summary: This separate entry specifies the meso-diaminopimelate-containing species.
+    It demonstrates the distinction, not an automatic replacement for a generic node.
+  support: supports
+  accessed_at: '2026-10-12T12:19:49Z'
+  snapshot_sha256: 5a4860dd275487a310b47af0f689bb00301731fddb819fb9d37ee2d0d5baff5e
+- evidence_id: families
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/
+  locator: PF03023, IPR001182 and IPR001460 complete identity/description metadata
+    in the source captures
+  summary: PF03023 identifies MurJ; IPR001182 the FtsW/RodA SEDS family. IPR001460
+    is a broader penicillin-binding transpeptidase domain; it is a contextual xref
+    here, not a statement that every matching protein crosslinks this wall.
+  support: supports
+  accessed_at: '2026-10-12T18:11:49Z'
+- evidence_id: vollmer
+  kind: primary_source
+  reference: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1574-6976.2007.00094.x
+  locator: 'Cited 2008 review: Introduction, chemistry, peptide-stem variation, crosslinking,
+    E.coli examples and sacculus elasticity sections; Introduction and chemical sections
+    reopened after restored access'
+  summary: The original review supports the stress-bearing sacculus, glycan/peptide
+    architecture and common bacterial occurrence with exceptions. It distinguishes
+    lysine and meso-DAP stem chemistry. No explicit L-form passage was established
+    in this paper; that exception was checked separately.
+  support: supports
+  accessed_at: '2026-10-12T18:10:54Z'
+- evidence_id: sham
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4163187.1/PMC4163187.1.xml
+  locator: DOI:10.1126/science.1254522; verified JATS identity and all direct body
+    paragraphs
+  summary: The E.coli study supports MurJ-dependent flipping and explicitly follows
+    meso-DAP-containing precursor material. It does not establish that the lysine-containing
+    ChEBI species is the generic substrate across taxa.
+  support: supports
+  accessed_at: '2026-10-12T12:20:36Z'
+  snapshot_sha256: 8929ebfe451fe6796dffecc763f4b782cad11f379adafb2bf4b4ef4c2ac61865
+- evidence_id: egan
+  kind: primary_source
+  reference: https://eprints.ncl.ac.uk/261899
+  locator: 'DOI:10.1038/s41579-020-0366-3 accepted manuscript: Introduction, Lipid
+    II transport, synthase regulation and relevant figure captions'
+  summary: The review supports translocation before polymerization and PBP-mediated
+    peptide crosslinking. It preserves uncertainty about additional flipping contributions
+    and alternative synthases; the native graph is not interpreted as proving universal
+    exclusivity of MurJ or SEDS.
+  support: supports
+  accessed_at: '2026-10-12T12:19:51Z'
+  snapshot_sha256: 53cf52553e916bad55d71a2deffc3bae14f5fb014680195f44f05dc64a767964
+- evidence_id: emami
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5568705.1/PMC5568705.1.xml
+  locator: DOI:10.1038/nmicrobiol.2016.253; verified original JATS Introduction, RodA
+    evidence section and Discussion
+  summary: Genetic and physiological evidence supports a RodA glycosyltransferase
+    role in B.subtilis. This is not itself a purified-enzyme reconstitution; the native
+    note does not claim it is.
+  support: supports
+  accessed_at: '2026-10-12T12:20:37Z'
+  snapshot_sha256: 6177508d9853ad529a2c56c143d582822e06da9cd4b0704ff96545e2a0c4af22
+- evidence_id: emami-correction
+  kind: primary_source
+  reference: https://www.nature.com/articles/nmicrobiol201719.pdf
+  locator: DOI:10.1038/nmicrobiol.2017.19; entire one-page correction extracted with
+    temporary pypdf
+  summary: The correction restores missing online supplementary tables. It does not
+    retract or change the RodA conclusion. Original publisher PDF, not the subscription-preview
+    page, supplied the text.
+  support: supports
+  accessed_at: '2026-10-12T12:20:39Z'
+  snapshot_sha256: 689f74c24014dc5dc268930000a259b74ac35e683b1c782fb1a5dca0996a4075
+- evidence_id: taguchi
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6430707/fullTextXML
+  locator: DOI:10.1038/s41564-018-0345-x; verified JATS identity and all eleven main-body
+    paragraphs
+  summary: Direct biochemical results establish FtsW polymerase activity with its
+    cognate class B PBP, with supporting cellular evidence. Organism scope and the
+    distinction from historical flippase proposals are retained.
+  support: supports
+  accessed_at: '2026-10-12T12:19:48Z'
+  snapshot_sha256: 45434d6983f90904b1f0ecf7143b9bf9e1d25ed4486876e87ccccb58124f144e
+- evidence_id: lform-review
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3603455.1/PMC3603455.1.xml
+  locator: DOI:10.1098/rsob.120143; abstract, cell-wall unifying-trait section and
+    opening L-form section
+  summary: This additional review explicitly distinguishes naturally wall-less lineages
+    and wall-deficient variants of normally walled bacteria. It corroborates the boundary
+    note, not a claim that all bacteria dispense with walls.
+  support: supports
+  accessed_at: '2026-10-12T12:25:19.013757Z'
+  snapshot_sha256: 01007efe39f7a853a72461f7ff3c9161852b2eb3b38e4a3d8b6722dda88074be
+- evidence_id: lform-primary
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4244569.1/PMC4244569.1.xml
+  locator: DOI:10.7554/eLife.04629; identity, complete abstract and Introduction
+  summary: The original research report corroborates wall-free states across multiple
+    lineages, including E.coli. Only that existence claim is assessed; raw data and
+    experimental procedures were not independently audited.
+  support: supports
+  accessed_at: '2026-10-12T12:25:19.676697Z'
+  snapshot_sha256: 0b6c1ba6d528780007380caade3fb46229b8bc4a2f4d27df36e8376692e23e72
+- evidence_id: pathway
+  kind: database
+  reference: CultureBotAI/PathwayMech@d8ec2b69f7a4c615aecddff80498fef1e1fab0ce
+  locator: data/pathways/peptidoglycan-cytoplasmic-synthesis-and-recycling-pathways.yaml;
+    pinned-pathway.json and original git object
+  summary: WP5060 identity, taxon562, Peptidoglycan Layer participant and edge-036
+    product relation agree with the native bounded PRODUCED_BY link. The target uses
+    the meso-DAP precursor. This is not a review of all sibling-pathway edges.
+  support: supports
+  accessed_at: '2026-10-12T18:11:49Z'
+  snapshot_sha256: 4c46c46b34a048f0aa91da98c1e1c27d0c223bdbf0fbef590dba1f0c8aaf94a4
+- evidence_id: metadata
+  kind: authority
+  reference: /private/tmp/csm-review-20261012T121735Z-peptidoglycan
+  locator: Five complete EuropePMC abstracts and Crossref identities; correction metadata;
+    ENA2/562
+  summary: Publication identifiers, author sets and years agree. Taxon labels match.
+    All native stable identifiers have been checked; ontology-label success alone
+    would not detect the chemical scope mismatch.
+  support: supports
+  accessed_at: '2026-10-12T18:11:49Z'
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Twenty-eight-dataset inventory; e_coli/precise1k searches
+  summary: murJ/b1069, mrdB/b0634 and ftsW/b0089 each matched. No iModulon hits, so
+    no component summary was needed. The adapter retains a putative-flippase product
+    annotation for FtsW; that context does not override the primary polymerase evidence.
+  support: supports
+  accessed_at: '2026-10-12T18:11:49Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T121735Z-peptidoglycan/baseline-verification.json
+  locator: Target checks, same-input wider receipts and restored-input-verification.json
+  summary: Schema, strict and snippet checks passed before interruption. Zero of13
+    citations have snippets:11 evidence items and2 bare references. Broader checks
+    retain original cache/skip/timing limits; input and receipt hashes were rechecked
+    after restoration.
+  support: supports
+  accessed_at: '2026-10-12T18:11:49Z'
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T121735Z-peptidoglycan/source-access.jsonl
+  locator: Twenty-six initial captures plus two in lform-source-access.json
+  summary: Initial EuropePMC requests for Sham/Emami returned500 and browser routes
+    challenged; later original PMC S3 bodies succeeded. Egan and the correction PDFs
+    were retrieved. Missing local PDF tools were handled with an isolated temporary
+    parser, without repository dependency changes. The checkout outage was resolved
+    before saving.
+  support: context_only
+  accessed_at: '2026-10-12T18:11:49Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: Ignored-inclusive target and issue-key search
+  summary: No canonical target predecessor among214 bundles. Prior reviews mentioning
+    this wall use it as supporting input, not as their review target.
+  support: supports
+  accessed_at: '2026-10-12T18:11:49Z'
+  search_scope: Path.rglob scanned canonical reviews including ignored/hidden files.
+    rg --no-ignore --hidden searched reports,research,reviews,curation,history for
+    target slug,GO:0009274,WP5060 and the two proposed issue keys. This is a bounded
+    local absence result, not GitHub-wide deduplication.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Wall versus material and synthesis machinery
+  outcome: supported
+  summary: Exact GO identity, category, kind and related synonym agree. The constituent
+    and machinery boundaries are coherent; no erroneous is-a or parthood claim is
+    present.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - native
+  - go
+  - vollmer
+- assessment_id: component
+  area: representation
+  topic: Identity-defining constituent
+  outcome: supported
+  summary: Peptidoglycan is a constituent required for this structure, not a universal
+    viability requirement. No fixed protein stoichiometry or universal precursor composition
+    is claimed in components.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - native
+  - vollmer
+  - rules
+- assessment_id: chemistry
+  area: grounding
+  topic: Generic Lipid II versus exact chemical species
+  outcome: concern
+  summary: Both generic/localized precursor nodes use a lysine-specific chemical identifier
+    despite the broader graph and E.coli evidence. The same short label does not make
+    the chemical entities equivalent.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - native
+  - lysine-lipid-ii
+  - dap-lipid-ii
+  - sham
+  - pathway
+- assessment_id: taxonomy
+  area: scope
+  topic: Common occurrence and bounded exceptions
+  outcome: supported
+  summary: COMMON is not universal bacterial presence; E.coli is an established example.
+    L-form exceptions are independently corroborated, while explicit attribution of
+    that clause to Vollmer remains a citation-precision limitation.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - vollmer
+  - metadata
+  - lform-review
+  - lform-primary
+- assessment_id: functions
+  area: evidence
+  topic: Shape and osmotic integrity
+  outcome: supported
+  summary: The cited review supports stress-bearing wall function and cellular shape
+    maintenance. No numerical property or claim to one exact mechanical model is asserted.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - vollmer
+  - egan
+- assessment_id: mechanism
+  area: graph
+  topic: Translocation, synthesis and crosslinking
+  outcome: supported
+  summary: All six edge descriptions were checked. Primary MurJ, RodA and FtsW evidence
+    supports the bounded model-system roles; cited reviews support precursor flow
+    and crosslinking. The generic graph does not assert exclusion of all alternative
+    synthases or flippases.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - sham
+  - emami
+  - taguchi
+  - egan
+  - vollmer
+- assessment_id: edge-label
+  area: graph
+  topic: Turgor capacity endpoint
+  outcome: concern
+  summary: The final triple opposes resistance itself rather than linking the sacculus
+    to the protective capacity. Its explanatory prose is correct, so this is a bounded
+    semantic defect.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - native
+  - vollmer
+  - rules
+- assessment_id: families
+  area: grounding
+  topic: Protein-family xrefs and chemical grounding distinction
+  outcome: supported
+  summary: Protein identifiers resolve at their stated family/domain scope. The broader
+    PBP domain is an xref, not exact grounding to a single enzyme or proof that every
+    relative performs the stated role.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - families
+  - native
+  - taguchi
+- assessment_id: pathway
+  area: evidence
+  topic: Pinned material-production link
+  outcome: supported
+  summary: The exact pinned source contains the E.coli material and product edge claimed.
+    Native wording avoids whole-pathway equivalence and all-bacteria generalization.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - pathway
+  - native
+- assessment_id: provenance
+  area: provenance
+  topic: Original papers, correction and scientific limits
+  outcome: supported
+  summary: All five native paper identities and relevant original text were inspected.
+    The RodA correction concerns supplementary availability. Review synthesis is distinguished
+    from direct experiments; supplemental L-form corroboration is not misattributed
+    to the nearest native citation.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - metadata
+  - emami-correction
+  - access
+  - lform-review
+  - lform-primary
+- assessment_id: completeness
+  area: completeness
+  topic: Optional fields and source bounds
+  outcome: supported
+  summary: No mandatory image, numerical property, dataset, sequence or trait claim
+    is omitted. No raw-data or figure reanalysis was required by the curated high-level
+    claims. Missing optional detail is not a finding.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - native
+  - rules
+  - adapter
+- assessment_id: checks
+  area: schema
+  topic: Deterministic gates
+  outcome: supported
+  summary: Original target and wider gates retain real results and times. All native
+    inputs and prior files match the pre-interruption snapshot; the successful validators
+    do not establish scientific correctness.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - validation
+- assessment_id: ownership
+  area: ownership
+  topic: Guarded native owner and audit history
+  outcome: supported
+  summary: Five native events and four append-only histories were read. The maintained
+    YAML owns future changes; no native status or history was modified. Earlier canonical
+    outputs remain unchanged.
+  target_ids:
+  - GO:0009274
+  evidence_ids:
+  - native
+  - rules
+  - predecessors
+findings:
+- finding_id: F1
+  issue_key: peptidoglycan-lipid-ii-chemical-scope
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Do not ground generic Lipid II to the lysine-only species
+  description: CHEBI:27692 specifies an L-lysyl pentapeptide, while both nodes denote
+    generic Lipid II in a graph supported in part by meso-DAP-containing E.coli material.
+    Distinct localization states may share chemistry, but this exact chemical identity
+    is too narrow for their declared scope. Preserve the generic concept with verified
+    matching grounding or explicit label-only scope; alternatively distinguish clearly
+    scoped chemical variants.
+  target_ids:
+  - GO:0009274
+  field_paths:
+  - causal_graphs[graph_id=lipid_ii_polymerisation_crosslinking].nodes[node_id=lipid_ii].grounding
+  - causal_graphs[graph_id=lipid_ii_polymerisation_crosslinking].nodes[node_id=exported_lipid_ii].grounding
+  evidence_ids:
+  - native
+  - lysine-lipid-ii
+  - dap-lipid-ii
+  - sham
+  - pathway
+  - rules
+  rule_id: review-checklist:exact-chemical-grounding-and-scope
+  native_severity: major
+  normalization_reason: Wrong exact chemical grounding on two mechanistic nodes, not
+    a harmless preferred-label discrepancy or wrong top-level wall identity.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    role: maintained scientific record
+- finding_id: F2
+  issue_key: peptidoglycan-turgor-capacity-predicate
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Make the turgor edge enable resistance rather than resist it
+  description: peptidoglycan -- resists --> turgor_resistance targets a CAPACITY labelled
+    resistance to turgor pressure. The triple therefore opposes resistance, unlike
+    the correct protective description. Link the structure to the capacity with a
+    suitable enabling relation, or represent pressure as the stressor endpoint.
+  target_ids:
+  - GO:0009274
+  field_paths:
+  - causal_graphs[graph_id=lipid_ii_polymerisation_crosslinking].edges[subject=peptidoglycan,predicate=resists,object=turgor_resistance]
+  evidence_ids:
+  - native
+  - vollmer
+  - rules
+  rule_id: review-checklist:causal-edge-subject-predicate-object
+  native_severity: minor
+  normalization_reason: Localized triple wording; both accompanying prose and function
+    state the correct biology.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Align both Lipid II node groundings with the intended generic or explicitly
+    scoped chemical identity.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009274
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Verify full authority definitions rather than short labels.
+  - Do not blindly replace the generic class with another specific chemical; retain
+    localization distinctions and cited organism scope.
+  - Use guarded native writing, real curation/history events and native gates only
+    when separately authorized; preserve PROPOSED.
+  - Save an evidence-backed successor retaining the exact issue key after a supported
+    correction.
+- action_id: A2
+  description: Correct the final triple while preserving its supported protective-function
+    meaning.
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0009274
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - The standalone triple says the sacculus contributes to resistance or counters
+    pressure, not that it opposes resistance.
+  - Keep node type, endpoint label, edge description and function consistent.
+  - Native schema, strict, history and generated-output checks pass for any later
+    guarded curation change.
+  - Retain the exact issue key in any successor disposition.
+limitations:
+- Initial unsaved-draft validation rejected two UTC timestamps written with +00:00
+  rather than the required Z suffix. They were normalized without changing the instants;
+  the original draft and failed validation receipt are retained in scratch.
+- Same-agent scientific review, not independent human sign-off or an exhaustive literature
+  update. Relevant original source passages were read; raw experiments, all supplements
+  and figure pixels were not reanalyzed.
+- The native Vollmer citation supports broad distribution and natural wall-less examples.
+  The explicit L-form clause was corroborated with additional original sources, not
+  found as an explicit Vollmer passage; adding a more precise citation is a bounded
+  provenance improvement, not evidence the biological exception is false.
+- Egan preserves historical uncertainty about flipping contributions. This review
+  does not convert a model-system graph into a universal statement excluding other
+  flippases, glycosyltransferases or crosslinking routes.
+- Initial source-route errors and local PDF-tool failures remain documented. Later
+  original JATS/PDF retrieval supplied the assessed text. A wrong initial supplemental
+  eLife URL supplied no evidence and was not used.
+- The checkout became inaccessible mid-review. After restoration, HEAD, all captured
+  native inputs, prior files, untracked set and ledger were verified unchanged; original
+  start time and real check times were retained.
+- Wider gates retain their original cache, skip and network limitations and are not
+  fresh CI. Post-save archive checks will be run separately.
+- No native scientific YAML, status, history, generated artifact or prior review changed.
+  GitHub publication approval remains unanswered; no remote mutation.
+tags:
+- scientific-review
+- envelope
+- chemical-grounding
+- graph

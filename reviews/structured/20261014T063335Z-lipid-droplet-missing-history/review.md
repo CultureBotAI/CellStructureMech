@@ -1,0 +1,800 @@
+# Lipid droplet evidence and history review
+
+- Review: 20261014T063335Z-lipid-droplet-missing-history
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-14T06:27:15Z
+- Finished UTC: 2026-10-14T06:33:35Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Entire record reviewed. Scientific identity, chemical composition, fungal scope and coarse storage graph are supported; one minor missing repository-history finding requires follow-up.
+
+## Scope And Provenance
+
+All 182 maintained YAML lines: exact identity/synonyms, has_part, two components, fungal distribution, yeast example, storage function, five graph nodes/four edges, all citations and inline events; repository-history coverage checked separately.
+
+Selection: data/structures/inclusion/lipid_droplet.yaml
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 6c33c1c78494e7f0623cf2b157f4036d737196d7.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0005811 | data/structures/inclusion/lipid_droplet.yaml | maintained | lipid droplet |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0005811 | Fresh target check. Executed 2026-10-14T06:27:30Z to 2026-10-14T06:27:33Z; log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de. |
+| strict | passed | True | GO:0005811 | Fresh target check. Executed 2026-10-14T06:27:33Z to 2026-10-14T06:27:39Z; log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e. |
+| snippets | passed | True | GO:0005811 | Fresh target check. Executed 2026-10-14T06:27:39Z to 2026-10-14T06:28:18Z; log SHA-256 4a688dfe5311e8e53e6b6d3107d7e4367146d2bfdef0635b78df791ed6ec924a. |
+| history-venv | passed | True | GO:0005811 | Reused after byte/hash verification; not rerun for this target. Executed 2026-10-14T04:32:04Z to 2026-10-14T04:32:32Z; log SHA-256 6dbe137325eb5631697951ee6e0c1e8e6e240b64f91e92d72121ea298cef2a92. |
+| labels | passed | True | GO:0005811 | Reused after byte/hash verification; not rerun for this target. Executed 2026-10-14T04:32:17Z to 2026-10-14T04:36:35Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286. |
+| curies-live | passed | True | GO:0005811 | Reused after byte/hash verification; not rerun for this target. Executed 2026-10-14T04:39:48Z to 2026-10-14T04:43:30Z; log SHA-256 7b26794ff07cf822cd706e14ae709be9c14effff0addebe45c1c9a353444dd88. |
+| curies-controls-live | passed | True | GO:0005811 | Reused after byte/hash verification; not rerun for this target. Executed 2026-10-14T04:38:51Z to 2026-10-14T04:39:24Z; log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8. |
+| traits-live | passed | True | GO:0005811 | Reused after byte/hash verification; not rerun for this target. Executed 2026-10-14T04:43:30Z to 2026-10-14T04:44:38Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f. |
+| merged-main-checks | passed | False | GO:0005811 | Reused after byte/hash verification; not rerun for this target. Executed 2026-10-14T04:32:37Z to 2026-10-14T04:32:38Z; log SHA-256 a9f9e132540c77e055a43ab74c88db14f7f677d9ad40e6ae5ed7aefa9f5bacfc. |
+| merged-main-qc | passed | True | GO:0005811 | Reused after byte/hash verification; not rerun for this target. Executed 2026-10-14T04:32:38Z to 2026-10-14T04:32:41Z; log SHA-256 5a1c26e21239fbbe53a8892902d6fd7a3a28379b4d17457302a700420a60c864. |
+| adapter-datasets-live | passed | False | GO:0005811 | Reused after byte/hash verification; not rerun for this target. Executed 2026-10-14T04:33:30Z to 2026-10-14T04:33:33Z; log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549. |
+| post-save-archive | passed | True | GO:0005811 | Reused after byte/hash verification; not rerun for this target. Executed 2026-10-14T05:59:53Z to 2026-10-14T06:02:48Z; log SHA-256 f7f5bf05f7bbb344b23b0f9e0c3b390dfa9a1b21d4bb425e842fd497956528e1. |
+| post-save-contract | passed | True | GO:0005811 | Reused after byte/hash verification; not rerun for this target. Executed 2026-10-14T06:02:48Z to 2026-10-14T06:05:41Z; log SHA-256 07b38f45577b155ca82bb67c1ddebe4fbef3c29d76780ec0107fcf8b4e06353b. |
+| Target-specific iModulonDB applicability | not_applicable | False | GO:0005811 | No Saccharomyces or Aspergillus dataset in the previously read live inventory; no gene-level transcriptomic assertion in this target. |
+
+## Scientific And Domain Assessments
+
+### identity and topology
+
+identity: supported. Targets: GO:0005811.
+
+Exact GO identity, three synonyms, inclusion category, outer-monolayer parthood and the explicitly nonmechanistic surrounds edge are supported. The monolayer is not a bilayer vesicle.
+
+### chemical components
+
+grounding: supported. Targets: GO:0005811.
+
+Both chemical classes match authority definitions and measured yeast storage lipids. CONDITIONAL does not assert invariant universal co-occurrence, stoichiometry or organism viability dependence.
+
+### taxonomic scope
+
+scope: supported. Targets: GO:0005811.
+
+Species-level yeast example and variable fungal distribution agree with inspected primary evidence. No unsupported S288C assay reassignment or all-fungi presence is retained.
+
+### storage and four edges
+
+evidence: supported. Targets: GO:0005811.
+
+The function and four graph edges describe neutral core storage, monolayer enclosure and possible mobilization. They do not claim that coalescence alone supplies a full assembly mechanism; graph scope explicitly excludes ER budding and machinery.
+
+### bibliography and completeness
+
+completeness: supported. Targets: GO:0005811.
+
+All four cited publications identify correctly with the stated years and authors. Two cited reviews are labeled as reviews. No native image, numeric property, protein inventory, trait link or dataset assertion requires invented content; future mechanistic expansion is not a current mandatory fix.
+
+### missing repository history
+
+provenance: concern. Targets: GO:0005811.
+
+Required repository-level history is missing despite three valid inline events. Creation-time policy and whole-history inventory establish a concrete provenance gap; current green history validation does not detect missing coverage.
+
+### ownership and status
+
+ownership: supported. Targets: GO:0005811.
+
+A later authorized fix belongs in append-only repository history, transparently documenting historical creation at the current recording time. Scientific YAML and PROPOSED need no change solely to repair this gap.
+
+## Findings
+
+### F1: Add the missing repository-level creation provenance
+
+minor / open / confirmed; issue key: lipid-droplet-missing-history.
+
+Lipid droplet was added by commit 9a6ab4ed3aead813f3c6de82d2714a0b265c90a8 on September 10, 2026 without a repository-level history entry, although the then-current CLAUDE.md required one for every curation change. Its inline creation/expansion/correction events are present but do not replace this second audit surface. The complete ignored-inclusive history inventory has no covering target or later retrospective entry. Existing history validation only validates entries that exist.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+When history remediation is authorized, append a transparent retrospective provenance entry targeting data/structures/inclusion/lipid_droplet.yaml, citing the original creation commit and its inline events.
+
+- Use the actual present recording/session timestamp; describe September 10 creation and corrections as historical facts, not a newly performed scientific edit. Do not backdate or invent actor actions.
+- Record the exact target path, original commit and established creation/expansion/correction scope. Preserve existing inline events and all previous histories.
+- Run native history schema/link validation, explicitly verify target coverage, and run native QC. Schema validation alone is insufficient evidence of coverage.
+- Keep scientific YAML, generated products and PROPOSED unchanged if the only remediation is history backfill; save a lineage-linked disposition of lipid-droplet-missing-history after verification.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/inclusion/lipid_droplet.yaml; All 182 lines, including three inline curation events | supports | Record has creation, expansion and correction events from September 10. The current species-level example and corrected Al Mamun citation are preserved; no scientific mutation is proposed. |
+| go | GO:0005811; GO:0034430; Current QuickGO definitions, synonyms, active status and term names | supports | Lipid droplet definition and all three exact synonyms match. The outer monolayer is the phospholipid layer surrounding the storage body and supports has_part and the nonmechanistic topology edge. |
+| chemistry | CHEBI:17855; CHEBI:35915; Current OLS ChEBI term objects | supports | Active triglyceride and sterol ester classes match the constituent labels and chemical graph nodes; individual exact lipid species or invariant proportions are not asserted. |
+| grillitsch | DOI:10.1016/j.bbalip.2011.07.015; Introduction, culture/fractionation/lipid-analysis Methods, Tables 1-2, neutral-lipid Results and lipidome Discussion | supports | Saccharomyces lipid-particle fractions contain triglycerides and steryl esters. Composition varies between glucose and oleate; the species-level example is supported. Source-reported proteome results are not promoted to invariant components. |
+| graef | PMID:29397034; Introduction, neutral-lipid synthesis, TAG/SE lipases, mobilization and lipophagy sections | supports | The explicitly identified review supports a neutral core enclosed by one phospholipid leaflet, dynamic storage, and lipase/hydrolase-mediated mobilization. It distinguishes synthesis and variable machinery; the target does not pretend its coarse graph encodes that mechanism. |
+| wang | DOI:10.1007/s00018-015-1903-5; Publisher/PubMed abstract and authority metadata only | supports | Abstract supports neutral-lipid storage and catabolism supplying metabolic pathways. Full text was not recovered from attempted public routes; specific lipase support comes from the separately inspected, co-cited Graef sections. |
+| fungi | DOI:10.1111/mmi.15170; Native Europe PMC abstract and Crossref author/year/title metadata | supports | The primary abstract explicitly identifies Aspergillus oryzae lipid droplets and associated-protein experiments. This supports the narrow occurrence statement, not all-fungi ubiquity or the paper's detailed mechanisms. Al Mamun, Reza and Islam 2023 attribution is correct. |
+| taxa | NCBITaxon:4751; NCBITaxon:4932; Fresh ENA taxonomy responses | supports | Fungi and Saccharomyces cerevisiae identifiers and labels agree. VARIABLE fungal occurrence is not a universal distribution claim. |
+| history-search | /private/tmp/csm-review-20261014T062648Z-lipid-droplet/history-audit.json; Ignored-inclusive parsed inventory of every YAML under history/ | supports | All 1729 entries inspected for exact/ancestor target coverage. No exact target exists. Eight broad-target entries predate lipid-droplet creation; two name near-matches document only GO:0034430 outer monolayer. No corresponding canonical predecessor exists among 220 bundles. |
+| history-rule | CLAUDE.md; history/README.md; scripts/validate_history.py; Current native history requirement, creation-commit CLAUDE.md, and validator main()/records() | supports | Repository history is required in addition to inline events. The same rule was present in creation commit 9a6ab4ed3aead813f3c6de82d2714a0b265c90a8, whose 13-file addition contains no history. Existing-entry validation has no record-to-history coverage check. |
+| adapter | https://imodulondb.org/; Previously read live 28-dataset inventory with byte/hash verification | supports | No covered fungal dataset applies; lack of catalogue coverage is not biological absence. |
+| validation | /private/tmp/csm-review-20261014T062648Z-lipid-droplet/baseline-verification.json; Fresh target logs and byte-verified whole-corpus receipts | supports | Schema, strict and snippet checks pass; none of 17 citations carries a snippet. Identifier/label skips remain explicit and scientific evidence was assessed separately. |
+
+## Limits And Additional Notes
+
+- The initial unsaved draft failed contract validation because two evidence kinds used the unsupported value publication. They were corrected to primary_source, meaning the directly inspected original publication text; both papers remain explicitly identified as review synthesis, not primary experiments. The failed validation receipt is retained in the operational scratch directory.
+- Same-agent review, not independent human approval, exhaustive discovery or primary-data reanalysis.
+- Grillitsch reading was bounded to structure/composition context, relevant Methods, Tables 1-2, lipid Results and Discussion. Proteomic inventories, figure pixels, raw spectra and supplemental files were not independently reanalyzed; the target does not encode those details.
+- Graef composition, synthesis, lipase/hydrolase mobilization and lipophagy sections were inspected as review synthesis, not new primary experiments.
+- Wang was verified from the abstract and metadata. PMC S3 requests returned 404 and publisher HTML exposed an abstract/subscription preview, not full main text. Its broad storage/catabolism claim is readable; the co-cited Graef full text supports specific mobilization wording.
+- Al Mamun was assessed from its primary abstract and metadata, sufficient for the narrow Aspergillus occurrence assertion. Full Methods/results, strains, images and detailed LDR mechanisms were not reviewed or imported.
+- No source had a correction relation in the inspected metadata; this is not an exhaustive notice survey. Current GO/CHEBI and taxon identities were checked live.
+- No snippets among 17 citations. Reused whole-corpus checks retain original times: history 1729 valid, identifiers 4023 OK/251 configured skips, labels 603 no-adapter skips, traits 477 indexed/10 linked, exact-main CI 987 passed/3 skipped. History validity is not target-history coverage.
+- The eight broad history targets predate creation; the two textual near-matches belong to the distinct outer-monolayer record. Absence searches include hidden/ignored files in named roots. No wider GitHub history absence is claimed.
+- Pre-save archive/contract baseline covers 220 bundles. Fresh post-save checks are recorded separately; future success is not asserted in this immutable observation.
+- No history backfill, scientific edit, generated-product change, issue creation, PR, publication or scientific-status promotion was performed.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261014T063335Z-lipid-droplet-missing-history
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Lipid droplet evidence and history review
+started_at: '2026-10-14T06:27:15Z'
+finished_at: '2026-10-14T06:33:35Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent review; no independent human or second-agent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Entire record reviewed. Scientific identity, chemical composition, fungal
+  scope and coarse storage graph are supported; one minor missing repository-history
+  finding requires follow-up.
+source:
+  git_revision: 6c33c1c78494e7f0623cf2b157f4036d737196d7
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/inclusion/lipid_droplet.yaml
+    sha256: 379b5b516486c6bc55055e3289a565c7854b3088a5c13ebe6f614df5c1688a7a
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 1636df44f28547f440242afcb4a05ac293b9714b4d7b809cecc30b975e44a522
+    role: context
+  - path: history/mappings/protein-example-accessions/2026-09-08T043348Z-claude-8ddb80.yaml
+    sha256: b6222110be5b820a57b90d7e5bac8346913a3b4cec75c0eed8bc39ea5ef008b4
+    role: context
+  - path: history/mappings/protein-example-accessions/2026-09-08T064823Z-claude-f9b0cf.yaml
+    sha256: 7dd6983d5d623dde8367fd767ef38395247a824dd8520090685ace010e30f29c
+    role: context
+  - path: history/mappings/protein-example-accessions/2026-09-08T074134Z-claude-495c71.yaml
+    sha256: 33da103a6014727125504902e8d16666fa345ad7d4390c90b3c958af285bbf65
+    role: context
+  - path: history/mappings/protein-example-accessions/2026-09-10T021352Z-claude-f7f4c0.yaml
+    sha256: bfb3a57f699366f6760ced04af71516acd3722a13541af90691425ffd00e6ce9
+    role: context
+  - path: history/mappings/protein-example-accessions/2026-09-10T022549Z-claude-00d1fa.yaml
+    sha256: 3579f8fa4796abd131f82b440cec0440f1f87afbd407e481cb9d605d0f4742fe
+    role: context
+  - path: history/records/monolayer_surrounded_lipid_storage_body_outer_lipid_monolayer/2026-09-16T002730Z-codex-75a53a.yaml
+    sha256: ef3cf6b41f9525a1f139a0f6d57c15aa5dc41f520a5ae0649f6645a95746784f
+    role: context
+  - path: history/records/monolayer_surrounded_lipid_storage_body_outer_lipid_monolayer/2026-09-16T003906Z-codex-6aa4f1.yaml
+    sha256: a6e54102fa1e43776c9d126d311135faf0ccade598677b377f24d482a2095827
+    role: context
+  - path: history/records/records-tranche-1/2026-08-31T035150Z-claude-code-3c4cb0.yaml
+    sha256: 9ab5b285c306aabd932aa81ed631507131865e3a72faeb52685c85aa7e65d4c5
+    role: context
+  - path: history/records/records-tranche-2/2026-09-01T034403Z-claude-code-5d72b9.yaml
+    sha256: 08220d0409b7952026683cc2155346ffe33bfe28b7d2659d1f07a5dd5665b37f
+    role: context
+  - path: history/records/records-tranche-3/2026-09-02T045256Z-claude-code-85440a.yaml
+    sha256: 4d0f5a23a7597421f072841194d22aa77ae2dd3666a2f562371ef7097e71e496
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/validate_history.py
+    sha256: 6c5f657e42683a385f2da03fb8a63c77565be398cfa62179d6c49c9e25df4308
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0005811
+  path: data/structures/inclusion/lipid_droplet.yaml
+  label: lipid droplet
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/lipid_droplet.yaml
+    role: maintained scientific record
+scope:
+  description: 'All 182 maintained YAML lines: exact identity/synonyms, has_part,
+    two components, fungal distribution, yeast example, storage function, five graph
+    nodes/four edges, all citations and inline events; repository-history coverage
+    checked separately.'
+  selection: data/structures/inclusion/lipid_droplet.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0005811
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/inclusion/lipid_droplet.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Fresh target check. Executed 2026-10-14T06:27:30Z to 2026-10-14T06:27:33Z;
+    log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py data/structures/inclusion/lipid_droplet.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Fresh target check. Executed 2026-10-14T06:27:33Z to 2026-10-14T06:27:39Z;
+    log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/inclusion/lipid_droplet.yaml
+    --report /private/tmp/csm-review-20261014T062648Z-lipid-droplet/snippets.md
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Fresh target check. Executed 2026-10-14T06:27:39Z to 2026-10-14T06:28:18Z;
+    log SHA-256 4a688dfe5311e8e53e6b6d3107d7e4367146d2bfdef0635b78df791ed6ec924a.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: reused-history-venv
+  name: history-venv
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Reused after byte/hash verification; not rerun for this target. Executed
+    2026-10-14T04:32:04Z to 2026-10-14T04:32:32Z; log SHA-256 6dbe137325eb5631697951ee6e0c1e8e6e240b64f91e92d72121ea298cef2a92.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: reused-labels
+  name: labels
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Reused after byte/hash verification; not rerun for this target. Executed
+    2026-10-14T04:32:17Z to 2026-10-14T04:36:35Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: reused-curies-live
+  name: curies-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_curies.py --check --report /private/tmp/csm-review-20261014T042923Z-slime-layer/curies-live.tsv
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Reused after byte/hash verification; not rerun for this target. Executed
+    2026-10-14T04:39:48Z to 2026-10-14T04:43:30Z; log SHA-256 7b26794ff07cf822cd706e14ae709be9c14effff0addebe45c1c9a353444dd88.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: reused-curies-controls-live
+  name: curies-controls-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_curies.py --self-test
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Reused after byte/hash verification; not rerun for this target. Executed
+    2026-10-14T04:38:51Z to 2026-10-14T04:39:24Z; log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: reused-traits-live
+  name: traits-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Reused after byte/hash verification; not rerun for this target. Executed
+    2026-10-14T04:43:30Z to 2026-10-14T04:44:38Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: reused-merged-main-checks
+  name: merged-main-checks
+  status: passed
+  required: false
+  command: gh run list --repo CultureBotAI/CellStructureMech --commit 6c33c1c78494e7f0623cf2b157f4036d737196d7
+    --limit 30 --json databaseId,name,event,status,conclusion,headSha,url
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Reused after byte/hash verification; not rerun for this target. Executed
+    2026-10-14T04:32:37Z to 2026-10-14T04:32:38Z; log SHA-256 a9f9e132540c77e055a43ab74c88db14f7f677d9ad40e6ae5ed7aefa9f5bacfc.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: reused-merged-main-qc
+  name: merged-main-qc
+  status: passed
+  required: true
+  command: gh run view 38339564555 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Reused after byte/hash verification; not rerun for this target. Executed
+    2026-10-14T04:32:38Z to 2026-10-14T04:32:41Z; log SHA-256 5a1c26e21239fbbe53a8892902d6fd7a3a28379b4d17457302a700420a60c864.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: reused-adapter-datasets-live
+  name: adapter-datasets-live
+  status: passed
+  required: false
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Reused after byte/hash verification; not rerun for this target. Executed
+    2026-10-14T04:33:30Z to 2026-10-14T04:33:33Z; log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: reused-post-save-archive
+  name: post-save-archive
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Reused after byte/hash verification; not rerun for this target. Executed
+    2026-10-14T05:59:53Z to 2026-10-14T06:02:48Z; log SHA-256 f7f5bf05f7bbb344b23b0f9e0c3b390dfa9a1b21d4bb425e842fd497956528e1.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: reused-post-save-contract
+  name: post-save-contract
+  status: passed
+  required: true
+  command: .venv/bin/pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - validation
+  summary: Reused after byte/hash verification; not rerun for this target. Executed
+    2026-10-14T06:02:48Z to 2026-10-14T06:05:41Z; log SHA-256 07b38f45577b155ca82bb67c1ddebe4fbef3c29d76780ec0107fcf8b4e06353b.
+  scope_note: Original skips retained. History validation checks existing entries,
+    not target coverage. Archive/contract baseline covers 220 bundles, not this unsaved
+    observation.
+- check_id: adapter-target
+  name: Target-specific iModulonDB applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - adapter
+  summary: No Saccharomyces or Aspergillus dataset in the previously read live inventory;
+    no gene-level transcriptomic assertion in this target.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/inclusion/lipid_droplet.yaml
+  locator: All 182 lines, including three inline curation events
+  accessed_at: '2026-10-14T06:33:35Z'
+  support: supports
+  summary: Record has creation, expansion and correction events from September 10.
+    The current species-level example and corrected Al Mamun citation are preserved;
+    no scientific mutation is proposed.
+  snapshot_sha256: 379b5b516486c6bc55055e3289a565c7854b3088a5c13ebe6f614df5c1688a7a
+- evidence_id: go
+  kind: authority
+  reference: GO:0005811; GO:0034430
+  locator: Current QuickGO definitions, synonyms, active status and term names
+  accessed_at: '2026-10-14T06:33:35Z'
+  support: supports
+  summary: Lipid droplet definition and all three exact synonyms match. The outer
+    monolayer is the phospholipid layer surrounding the storage body and supports
+    has_part and the nonmechanistic topology edge.
+- evidence_id: chemistry
+  kind: authority
+  reference: CHEBI:17855; CHEBI:35915
+  locator: Current OLS ChEBI term objects
+  accessed_at: '2026-10-14T06:33:35Z'
+  support: supports
+  summary: Active triglyceride and sterol ester classes match the constituent labels
+    and chemical graph nodes; individual exact lipid species or invariant proportions
+    are not asserted.
+- evidence_id: grillitsch
+  kind: primary_source
+  reference: DOI:10.1016/j.bbalip.2011.07.015
+  locator: Introduction, culture/fractionation/lipid-analysis Methods, Tables 1-2,
+    neutral-lipid Results and lipidome Discussion
+  accessed_at: '2026-10-14T06:28:05Z'
+  support: supports
+  summary: Saccharomyces lipid-particle fractions contain triglycerides and steryl
+    esters. Composition varies between glucose and oleate; the species-level example
+    is supported. Source-reported proteome results are not promoted to invariant components.
+  snapshot_sha256: 557af7ea56ca661d74f43edabb9ad51b40ba8fe267d6d907f975306e2ff20cd2
+- evidence_id: graef
+  kind: primary_source
+  reference: PMID:29397034
+  locator: Introduction, neutral-lipid synthesis, TAG/SE lipases, mobilization and
+    lipophagy sections
+  accessed_at: '2026-10-14T06:28:04Z'
+  support: supports
+  summary: The explicitly identified review supports a neutral core enclosed by one
+    phospholipid leaflet, dynamic storage, and lipase/hydrolase-mediated mobilization.
+    It distinguishes synthesis and variable machinery; the target does not pretend
+    its coarse graph encodes that mechanism.
+  snapshot_sha256: 8c520a2ae66e79618d8112cd69b5c8712ef50fcddda7e2bc07ebf920f344ef7d
+- evidence_id: wang
+  kind: primary_source
+  reference: DOI:10.1007/s00018-015-1903-5
+  locator: Publisher/PubMed abstract and authority metadata only
+  accessed_at: '2026-10-14T06:27:26Z'
+  support: supports
+  summary: Abstract supports neutral-lipid storage and catabolism supplying metabolic
+    pathways. Full text was not recovered from attempted public routes; specific lipase
+    support comes from the separately inspected, co-cited Graef sections.
+  snapshot_sha256: edfda812d536ff09b4e50d8e049a8bedc9e354a255ca81a2e27c97967a0938d5
+- evidence_id: fungi
+  kind: primary_source
+  reference: DOI:10.1111/mmi.15170
+  locator: Native Europe PMC abstract and Crossref author/year/title metadata
+  accessed_at: '2026-10-14T06:27:30Z'
+  support: supports
+  summary: The primary abstract explicitly identifies Aspergillus oryzae lipid droplets
+    and associated-protein experiments. This supports the narrow occurrence statement,
+    not all-fungi ubiquity or the paper's detailed mechanisms. Al Mamun, Reza and
+    Islam 2023 attribution is correct.
+  snapshot_sha256: 7b0b7e0ea2725413363308c7f0e4fe487c980faa54511f7314af2f64efcb1418
+- evidence_id: taxa
+  kind: authority
+  reference: NCBITaxon:4751; NCBITaxon:4932
+  locator: Fresh ENA taxonomy responses
+  accessed_at: '2026-10-14T06:33:35Z'
+  support: supports
+  summary: Fungi and Saccharomyces cerevisiae identifiers and labels agree. VARIABLE
+    fungal occurrence is not a universal distribution claim.
+- evidence_id: history-search
+  kind: search
+  reference: /private/tmp/csm-review-20261014T062648Z-lipid-droplet/history-audit.json
+  locator: Ignored-inclusive parsed inventory of every YAML under history/
+  accessed_at: '2026-10-14T06:31:28Z'
+  support: supports
+  summary: All 1729 entries inspected for exact/ancestor target coverage. No exact
+    target exists. Eight broad-target entries predate lipid-droplet creation; two
+    name near-matches document only GO:0034430 outer monolayer. No corresponding canonical
+    predecessor exists among 220 bundles.
+  snapshot_sha256: 1e496a6fb8bf093fb19b81f9d1f4524576f0c24a0c0dfc89c1deafac7706b7f8
+  search_scope: All history/**/*.yaml using Path.rglob; rg --no-ignore --hidden across
+    history, reviews/structured and legacy reports for identifier, label/slug, creation
+    commit and stable issue key. Hidden/ignored files included. No GitHub-wide absence
+    assertion.
+- evidence_id: history-rule
+  kind: record_content
+  reference: CLAUDE.md; history/README.md; scripts/validate_history.py
+  locator: Current native history requirement, creation-commit CLAUDE.md, and validator
+    main()/records()
+  accessed_at: '2026-10-14T06:33:35Z'
+  support: supports
+  summary: Repository history is required in addition to inline events. The same rule
+    was present in creation commit 9a6ab4ed3aead813f3c6de82d2714a0b265c90a8, whose
+    13-file addition contains no history. Existing-entry validation has no record-to-history
+    coverage check.
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Previously read live 28-dataset inventory with byte/hash verification
+  accessed_at: '2026-10-14T06:33:35Z'
+  support: supports
+  summary: No covered fungal dataset applies; lack of catalogue coverage is not biological
+    absence.
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261014T062648Z-lipid-droplet/baseline-verification.json
+  locator: Fresh target logs and byte-verified whole-corpus receipts
+  accessed_at: '2026-10-14T06:33:35Z'
+  support: supports
+  summary: Schema, strict and snippet checks pass; none of 17 citations carries a
+    snippet. Identifier/label skips remain explicit and scientific evidence was assessed
+    separately.
+assessments:
+- assessment_id: identity-and-topology
+  area: identity
+  topic: identity and topology
+  outcome: supported
+  summary: Exact GO identity, three synonyms, inclusion category, outer-monolayer
+    parthood and the explicitly nonmechanistic surrounds edge are supported. The monolayer
+    is not a bilayer vesicle.
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - native
+  - go
+  - grillitsch
+- assessment_id: chemical-components
+  area: grounding
+  topic: chemical components
+  outcome: supported
+  summary: Both chemical classes match authority definitions and measured yeast storage
+    lipids. CONDITIONAL does not assert invariant universal co-occurrence, stoichiometry
+    or organism viability dependence.
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - native
+  - chemistry
+  - grillitsch
+  - graef
+- assessment_id: taxonomic-scope
+  area: scope
+  topic: taxonomic scope
+  outcome: supported
+  summary: Species-level yeast example and variable fungal distribution agree with
+    inspected primary evidence. No unsupported S288C assay reassignment or all-fungi
+    presence is retained.
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - native
+  - taxa
+  - grillitsch
+  - fungi
+- assessment_id: storage-and-four-edges
+  area: evidence
+  topic: storage and four edges
+  outcome: supported
+  summary: The function and four graph edges describe neutral core storage, monolayer
+    enclosure and possible mobilization. They do not claim that coalescence alone
+    supplies a full assembly mechanism; graph scope explicitly excludes ER budding
+    and machinery.
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - native
+  - go
+  - grillitsch
+  - graef
+  - wang
+- assessment_id: bibliography-and-completeness
+  area: completeness
+  topic: bibliography and completeness
+  outcome: supported
+  summary: All four cited publications identify correctly with the stated years and
+    authors. Two cited reviews are labeled as reviews. No native image, numeric property,
+    protein inventory, trait link or dataset assertion requires invented content;
+    future mechanistic expansion is not a current mandatory fix.
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - native
+  - grillitsch
+  - graef
+  - wang
+  - fungi
+  - adapter
+- assessment_id: missing-repository-history
+  area: provenance
+  topic: missing repository history
+  outcome: concern
+  summary: Required repository-level history is missing despite three valid inline
+    events. Creation-time policy and whole-history inventory establish a concrete
+    provenance gap; current green history validation does not detect missing coverage.
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - native
+  - history-search
+  - history-rule
+  - validation
+- assessment_id: ownership-and-status
+  area: ownership
+  topic: ownership and status
+  outcome: supported
+  summary: A later authorized fix belongs in append-only repository history, transparently
+    documenting historical creation at the current recording time. Scientific YAML
+    and PROPOSED need no change solely to repair this gap.
+  target_ids:
+  - GO:0005811
+  evidence_ids:
+  - native
+  - history-rule
+findings:
+- finding_id: F1
+  issue_key: lipid-droplet-missing-history
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Add the missing repository-level creation provenance
+  description: Lipid droplet was added by commit 9a6ab4ed3aead813f3c6de82d2714a0b265c90a8
+    on September 10, 2026 without a repository-level history entry, although the then-current
+    CLAUDE.md required one for every curation change. Its inline creation/expansion/correction
+    events are present but do not replace this second audit surface. The complete
+    ignored-inclusive history inventory has no covering target or later retrospective
+    entry. Existing history validation only validates entries that exist.
+  target_ids:
+  - GO:0005811
+  field_paths:
+  - curation_history
+  evidence_ids:
+  - native
+  - history-search
+  - history-rule
+  rule_id: CLAUDE.md:repository-level-history-for-every-curation-change
+  native_severity: minor
+  normalization_reason: Non-blocking provenance gap, not wrong biological identity
+    or unsupported scientific content. Inline history and Git preserve the original
+    facts needed for a transparent backfill.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: history/records/lipid_droplet
+    role: append-only record-level provenance owner; currently absent
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0005811
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: history/records/lipid_droplet
+    role: append-only record-level provenance owner; currently absent
+  description: When history remediation is authorized, append a transparent retrospective
+    provenance entry targeting data/structures/inclusion/lipid_droplet.yaml, citing
+    the original creation commit and its inline events.
+  acceptance_checks:
+  - Use the actual present recording/session timestamp; describe September 10 creation
+    and corrections as historical facts, not a newly performed scientific edit. Do
+    not backdate or invent actor actions.
+  - Record the exact target path, original commit and established creation/expansion/correction
+    scope. Preserve existing inline events and all previous histories.
+  - Run native history schema/link validation, explicitly verify target coverage,
+    and run native QC. Schema validation alone is insufficient evidence of coverage.
+  - Keep scientific YAML, generated products and PROPOSED unchanged if the only remediation
+    is history backfill; save a lineage-linked disposition of lipid-droplet-missing-history
+    after verification.
+limitations:
+- The initial unsaved draft failed contract validation because two evidence kinds
+  used the unsupported value publication. They were corrected to primary_source, meaning
+  the directly inspected original publication text; both papers remain explicitly
+  identified as review synthesis, not primary experiments. The failed validation receipt
+  is retained in the operational scratch directory.
+- Same-agent review, not independent human approval, exhaustive discovery or primary-data
+  reanalysis.
+- Grillitsch reading was bounded to structure/composition context, relevant Methods,
+  Tables 1-2, lipid Results and Discussion. Proteomic inventories, figure pixels,
+  raw spectra and supplemental files were not independently reanalyzed; the target
+  does not encode those details.
+- Graef composition, synthesis, lipase/hydrolase mobilization and lipophagy sections
+  were inspected as review synthesis, not new primary experiments.
+- Wang was verified from the abstract and metadata. PMC S3 requests returned 404 and
+  publisher HTML exposed an abstract/subscription preview, not full main text. Its
+  broad storage/catabolism claim is readable; the co-cited Graef full text supports
+  specific mobilization wording.
+- Al Mamun was assessed from its primary abstract and metadata, sufficient for the
+  narrow Aspergillus occurrence assertion. Full Methods/results, strains, images and
+  detailed LDR mechanisms were not reviewed or imported.
+- No source had a correction relation in the inspected metadata; this is not an exhaustive
+  notice survey. Current GO/CHEBI and taxon identities were checked live.
+- 'No snippets among 17 citations. Reused whole-corpus checks retain original times:
+  history 1729 valid, identifiers 4023 OK/251 configured skips, labels 603 no-adapter
+  skips, traits 477 indexed/10 linked, exact-main CI 987 passed/3 skipped. History
+  validity is not target-history coverage.'
+- The eight broad history targets predate creation; the two textual near-matches belong
+  to the distinct outer-monolayer record. Absence searches include hidden/ignored
+  files in named roots. No wider GitHub history absence is claimed.
+- Pre-save archive/contract baseline covers 220 bundles. Fresh post-save checks are
+  recorded separately; future success is not asserted in this immutable observation.
+- No history backfill, scientific edit, generated-product change, issue creation,
+  PR, publication or scientific-status promotion was performed.
+tags:
+- scientific-review
+- inclusion
+- history
+- provenance
+- minor
+```

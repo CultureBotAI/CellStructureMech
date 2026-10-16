@@ -1,0 +1,943 @@
+# Vacuolar V-ATPase activity scope and node-type review
+
+- Review: 20261012T105804Z-vacuolar-v-atpase-graph-scope
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-12T10:51:24Z
+- Finished UTC: 2026-10-12T10:58:04Z
+- Reviewer: Codex (self_review)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Two major graph findings (molecular-function node typed as biological process; complete proton-pumping function assigned to V1) and one minor whole-V0 rotation wording finding. Identity, parthood, sector groundings and whole-complex acidification are supported. Detailed Kane2006 source verification remains incomplete.
+
+## Scope And Provenance
+
+One entire native record and both histories read; eight GO terms, RO relation, taxon and all native DOIs inspected; both components and seven graph edges assessed. No sampling. Detailed nearest-source Kane2006 reading remains partial.
+
+Selection: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base e74d0c3e33df7e44348afbba1695b61c23262ab0.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0016471 | data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml | maintained | vacuolar proton-transporting V-type ATPase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0016471 | Fresh target gate. Actual UTC: 2026-10-12T10:51:33Z to 2026-10-12T10:51:36Z. |
+| strict | passed | True | GO:0016471 | Fresh target gate. Actual UTC: 2026-10-12T10:51:36Z to 2026-10-12T10:51:41Z. |
+| snippets | passed | True | GO:0016471 | Fresh target gate; zero of 33 citations has a snippet, not full-text verification. Actual UTC: 2026-10-12T10:51:41Z to 2026-10-12T10:51:58Z. |
+| reused-release-qc | passed | True | GO:0016471 | Unchanged-input reuse: QC 987 passed/3 skipped, labels 603 no-adapter skips, cached traits after earlier network failure. Original times, not fresh CI. Actual UTC: 2026-10-12T06:33:07Z to 2026-10-12T06:45:16Z. |
+| reused-release-labels | passed | True | GO:0016471 | Unchanged-input reuse: QC 987 passed/3 skipped, labels 603 no-adapter skips, cached traits after earlier network failure. Original times, not fresh CI. Actual UTC: 2026-10-12T06:45:16Z to 2026-10-12T06:47:16Z. |
+| reused-release-traits | passed | True | GO:0016471 | Unchanged-input reuse: QC 987 passed/3 skipped, labels 603 no-adapter skips, cached traits after earlier network failure. Original times, not fresh CI. Actual UTC: 2026-10-12T06:48:15Z to 2026-10-12T06:48:52Z. |
+| reused-curies-live | passed | True | GO:0016471 | Unchanged-byte reuse: live CURIE 4023 OK/251 SKIP/0 unreachable; 210 valid bundles and four contract tests. Post-save checks follow separately. Actual UTC: 2026-10-12T07:05:41Z to 2026-10-12T07:10:58Z. |
+| reused-post-save-archive | passed | True | GO:0016471 | Unchanged-byte reuse: live CURIE 4023 OK/251 SKIP/0 unreachable; 210 valid bundles and four contract tests. Post-save checks follow separately. Actual UTC: 2026-10-12T10:46:49Z to 2026-10-12T10:48:38Z. |
+| reused-post-save-contract | passed | True | GO:0016471 | Unchanged-byte reuse: live CURIE 4023 OK/251 SKIP/0 unreachable; 210 valid bundles and four contract tests. Post-save checks follow separately. Actual UTC: 2026-10-12T10:48:38Z to 2026-10-12T10:50:17Z. |
+| adapter-datasets-initial | failed | False | GO:0016471 | Initial DNS failure preserved; successful separately logged retry supersedes the access limitation. Actual UTC: 2026-10-12T10:51:32Z to 2026-10-12T10:51:33Z. |
+| adapter-datasets-retry | passed | False | GO:0016471 | Fresh complete inventory; no matching yeast dataset. Actual UTC: 2026-10-12T10:52:15Z to 2026-10-12T10:52:16Z. |
+| Inspect detailed Kane2006 nearest-source claims | unavailable | True | GO:0016471 | Full-text XML returned500, HTML403, PMC web routes presented a challenge, publisher exposed abstract only, BioC returned an error body despite HTTP200, and the public PDF mirror was inaccessible. No claim of body inspection or false-source inference. |
+| Initial review-draft validation | failed | False | GO:0016471 | Initial draft used unsupported assessment area hierarchy; corrected to scope before saving. Actual UTC: 2026-10-12T10:56:56Z to 2026-10-12T10:56:58Z. This is a review-draft formatting failure, not a native-record validation failure. |
+| Review-draft timestamp validation | failed | False | GO:0016471 | Second draft had a review_id prefix older than its updated finished_at timestamp; both aligned before saving. Actual UTC: 2026-10-12T10:57:29Z to 2026-10-12T10:57:31Z. Not a native-record validation failure. |
+
+## Scientific And Domain Assessments
+
+### Vacuolar V-type ATPase identity and boundaries
+
+identity: supported. Targets: GO:0016471.
+
+The record denotes the assembled vacuolar proton pump, not a soluble V1 sector, F-type synthase or vacuole itself. Its definition and exact synonym agree with active GO:0016471.
+
+### Is-a versus parthood
+
+scope: supported. Targets: GO:0016471.
+
+Current GO explicitly places GO:0016471 under GO:0033176 and in the vacuolar membrane, and places V0/V1 in the whole complex. Native parent, part_of and has_part choices are not interchanged.
+
+### Two-sector model, grounding and essentiality scope
+
+quantity: supported. Targets: GO:0016471.
+
+Both component groundings are cellular-component complexes of the correct sector. Each sector is required for the defined assembled two-sector complex. This does not imply that detached sectors cannot assemble independently or that deletion of every individual subunit prevents assembly. Individual subunits and copy numbers are explicitly deferred, not fabricated.
+
+### V1 role distinguishes rotor from stationary V0
+
+scope: concern. Targets: GO:0016471.
+
+The statement that catalysis couples to rotation of the membrane V0 sector is too broad: the central rotor includes membrane proteolipids, but stationary portions of V0 do not turn with it. This can be corrected without expanding the graph to a complete subunit-level mechanism.
+
+### Yeast distribution and canonical example
+
+scope: supported. Targets: GO:0016471.
+
+Species identity and qualitative COMMON yeast presence agree with inspected acidification/model-system evidence. COMMON is not interpreted as an estimated prevalence percentage or constant activity under all conditions.
+
+### Whole-complex acidification and rotary proton transport
+
+evidence: supported. Targets: GO:0016471.
+
+Both record-level functions are correctly attributed to the assembled complex. GO:0007035 is vacuolar acidification, and GO:0046961 is ATP-driven rotational proton transport. The complete Li/Kane acidification section and Forgac Key Points support these bounded claims.
+
+### All seven node types and references
+
+graph: concern. Targets: GO:0016471.
+
+V0/V1 nodes are correctly STRUCTURE after the native fix, the lumen is a location, and acidification is a biological process. The rotary ATPase activity node alone is incorrectly typed BIOLOGICAL_PROCESS despite molecular_function authority.
+
+### All seven coarse graph edges
+
+graph: concern. Targets: GO:0016471.
+
+Location, V0/V1 parthood, V0 proton-translocation context, intact-complex acidification and participation edges are supported. The V1 catalyses/enables edge instead points to the complete membrane proton-transport function rather than its narrower ATP-hydrolysis contribution. The surrounding assembled-complex context does not remove that categorical mismatch.
+
+### Stable identities and nearest-source reading
+
+provenance: unknown. Targets: GO:0016471.
+
+All native DOI and ontology identities were verified. Li/Kane acidification claims and Forgac rotary Key Points were read directly. Kane2006 sector/assembly/isoform passages remain unverified against the cited full text despite alternative support for the biology. This prevents a completed whole-record evidence review.
+
+### Explicit subunit TODO and optional content
+
+completeness: supported. Targets: GO:0016471.
+
+The Vma-family/isoform discussion is a specific curation TODO, not an asserted resolved subunit model. No native image, quantitative measurement, hosted dataset or trait link requires an invented finding.
+
+### Native gates versus scientific validation
+
+schema: supported. Targets: GO:0016471.
+
+Target gates pass but do not detect ontology-aspect or activity-scope errors. Wider receipts are reused only after file/hash checks; unresolved source access remains explicit.
+
+### History, status and correction owner
+
+ownership: supported. Targets: GO:0016471.
+
+Both histories and all native events were read. Earlier fixes correctly assign acidification to the intact complex and retype V0/V1. No canonical finding is fabricated from historical GitHub references. Scientific fixes belong in maintained YAML via the guarded writer; PROPOSED status remains unchanged.
+
+## Findings
+
+### F1: Type the rotary ATPase node as a molecular function
+
+major / open / confirmed; issue key: vacuolar-v-atpase-rotary-function-node-type.
+
+The node grounded to GO:0046961 is BIOLOGICAL_PROCESS, but the current authority explicitly classifies the exact activity as molecular_function and the native schema provides MOLECULAR_FUNCTION. Keeping the correct GO identifier while assigning an incompatible graph class misrepresents the function to typed graph consumers.
+
+### F2: Do not assign the complete proton-pumping activity to V1
+
+major / open / confirmed; issue key: vacuolar-v-atpase-v1-whole-pump-activity.
+
+The V1-sector edge uses catalyses with RO:0002327 to the GO:0046961 activity, whose definition includes transmembrane proton transport. Sources distinguish V1 ATP hydrolysis from V0 proton translocation in the assembled enzyme. The edge description discusses the narrower hydrolysis-to-rotation contribution but the formal object asserts the whole pump reaction. Attribute that whole function to the intact V-ATPase and represent any V1 contribution at the appropriate narrower scope.
+
+### F3: Distinguish the rotating V0 proteolipids from the entire membrane sector
+
+minor / open / confirmed; issue key: vacuolar-v-atpase-whole-v0-rotation.
+
+The V1 component role refers to rotation of the membrane V0 sector. The primary-study abstract explicitly distinguishes the rotating central subcomplex from the stationary membrane-bound region restrained by peripheral stalks. Revise the wording to describe rotation of the central rotor and membrane proteolipid ring coupled to proton translocation, without claiming that all of V0 rotates.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the activity node to MOLECULAR_FUNCTION; make the intact complex the subject of the complete proton-transporting ATPase activity. Remove or narrow the V1 edge to an evidence-backed ATP-hydrolysis/rotor contribution, with a verified predicate and object. Clarify the V1 role so the rotor/ring rotates, not the entire V0 sector. Preserve the other supported edges, sector groundings and open subunit TODO.
+
+- GO:0046961 node is MOLECULAR_FUNCTION and is enabled by the assembled complex.
+- V1 no longer directly executes the complete membrane-spanning pump function; any retained V1 edge has exact local evidence for its narrower scope.
+- Role wording distinguishes the central rotor/proteolipid ring from stationary V0 elements.
+- Inspect the detailed Kane2006 passages to finish the still-partial evidence audit; do not treat alternative biological support as inspection of that paper.
+- Preserve PROPOSED, append actual correction history only when changed, run fresh native gates/QC, and save a successor with all affected stable issue keys and exact occurrences.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml; Entire YAML, both sector rows, seven graph edges, open subunit TODO, six native events and both repository histories | supports | The rotary activity node is BIOLOGICAL_PROCESS despite GO:0046961 grounding. The V1 sector is the subject of its catalyses/RO:0002327 edge. The V1 component role also refers to rotation of the membrane V0 sector without distinguishing its rotary and stationary portions. |
+| rules | .claude/skills/curate-yaml-record/references/review-checklist.md; Causal graph, component roles and narrow evidence support; CausalNodeTypeEnum in the native schema | supports | Graph node identity/type, edge direction and scope must agree with the exact authority and evidence. The native enum has a distinct MOLECULAR_FUNCTION value. The audit does not require filling every optional subunit slot. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016471,GO:0033176,GO:0005774,GO:0005775,GO:0000220,GO:0000221,GO:0007035,GO:0046961; All eight active term definitions, aspects, synonyms and child relationships | supports | The complex identity, exact synonym, is-a V-type ATPase parent, membrane parthood and V0/V1 parts match current GO. GO:0046961 is molecular_function and includes proton transfer across a membrane; it is not just soluble ATP hydrolysis. GO:0033176 explicitly separates cytoplasmic V1 hydrolysis from V0 proton transport. |
+| ro | https://www.ebi.ac.uk/ols4/api/ontologies/ro/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002327; Entire current RO property record | supports | RO:0002327 is enables, with catalyzes as an alternative label. Its definition requires the subject to execute the activity. British-spelling catalyses is not treated as a separate label defect; the material concern is assigning the membrane-spanning activity to the soluble sector. |
+| li-body | https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/PMC2906225/unicode; Li and Kane 2009 review: complete section 5 and subsections 5.1-5.3, Figure 3 caption; additional V-ATPase-relevant paragraphs and introductory context | supports | The cited review directly separates V1 ATP hydrolysis from the V0 proton pore. It supports yeast vacuolar acidification, Vph1/Stv1 compartment differences, and reversible assembly/disassembly, including inactivation of detached V1 and free V0. This is inspected review text, not a newly performed primary experiment. |
+| forgac-preview | https://www.nature.com/articles/nrm2272; Publisher Key Points, abstract and bibliographic identity; full subscription body not read | supports | The inspected Key Points explicitly state that V1 ATP hydrolysis drives the central rotary complex and thereby proton translocation through V0. This directly supports the native coarse rotary description but not assignment of the complete proton-pumping activity to V1 alone. The page is a review, not new experimental evidence. |
+| zhao-abstract | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature14365%22&amp;format=json&amp;resultType=core; Complete primary-study abstract and bibliographic identity, DOI:10.1038/nature14365, PMID:25971514 | supports | Zhao, Benlekbir and Rubinstein 2015 examined three rotational states of yeast V-ATPase. Their abstract explicitly distinguishes the rotating central subcomplex from peripheral stalks that keep the entire membrane-bound region from rotating. This bounded direct statement supports the rotor-versus-whole-V0 wording finding; full figures, maps and article body were not inspected. |
+| taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete species identity and rank | supports | NCBITaxon:4932 is Saccharomyces cerevisiae. Native species-level scope is not a strain claim or a claim of universal activity under every condition. |
+| kane-metadata | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FMMBR.70.1.177-191.2006%22&amp;format=json&amp;resultType=core; Complete abstract and bibliographic metadata; Crossref title, author and publication date also checked | partial | DOI:10.1128/MMBR.70.1.177-191.2006 is Patricia Kane 2006, PMID:16524922. The abstract supports yeast as a model of organelle acidification and regulation. It does not expose all detailed sector/assembly passages cited by the native record. |
+| li-metadata | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bbamcr.2008.08.003%22&amp;format=json&amp;resultType=core; Complete metadata/abstract and Crossref title, authors, DOI and print date | supports | Li and Kane 2009 matches DOI:10.1016/j.bbamcr.2008.08.003, PMID:18786576 and PMC2906225. The 2008 DOI string is not a mismatch with the 2009 publication year. |
+| forgac-metadata | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnrm2272%22&amp;format=json&amp;resultType=core; Complete metadata/abstract and Crossref title, author, DOI and publication date | supports | Michael Forgac 2007 matches DOI:10.1038/nrm2272 and PMID:17912264. |
+| source-access | /private/tmp/csm-review-20261012T105056Z-vatpase/source-access.jsonl; All 18 local capture receipts and content inspection; separate web access attempts described in limitations | context_only | The initial RO term route returned404; the actual property route resolved200. EuropePMC fullTextXML for both papers returned500; HTML routes returned403. NCBI BioC supplied the Li/Kane body, but Kane2006 returned an error body despite HTTP200. Source failure is not evidence of a false native claim. |
+| adapter | https://imodulondb.org/; Fresh complete 28-dataset inventory after one recorded DNS failure | supports | The successful retry lists no Saccharomyces dataset. Expression-module searches are not applicable; no absence or mechanism inference is drawn. |
+| validation | /private/tmp/csm-review-20261012T105056Z-vatpase/baseline-verification.json; Fresh target gates and unchanged-byte wider-check receipts | supports | Schema, strict and snippet checks pass; zero of 33 citations has a snippet (31 evidence items and two bare references). Wider QC, labels, cached traits, live CURIE and 210-bundle/four-contract-test checks are reused with original limits, not fresh CI. |
+| predecessors | reviews/structured/; Ignored-inclusive canonical and local text searches | supports | No canonical predecessor among 210 bundles. The reports/research target search found readability inventories and the CURIE report, not a target legacy scientific review. No proposed issue key matched the declared local roots. |
+
+## Limits And Additional Notes
+
+- Partial whole-record evidence review: Kane2006 detailed sector/assembly/isoform text remains unread despite bounded public-source attempts. Its abstract and bibliography were inspected. Source access alone is not a native defect, and the confirmed findings do not depend on the inaccessible body.
+- Li and Kane2009 was inspected through NCBI BioC: complete acidification section5 and subsections, Figure3 caption and relevant contextual paragraphs. This is a review article; no claim of new primary experimentation. Some unrelated manuscript paragraphs have extraction artifacts and were not used.
+- Forgac2007 publisher Key Points and abstract were read, not the full subscription body. Zhao2015 was used only for an explicit primary-abstract rotor/stator distinction; its full body, structural maps and figure pixels were unavailable/not inspected. No native numerical/image claims depend on them.
+- The initially attempted PMC1393256 URL was a mistyped lead, not evidence; the correct Kane2006 PMC1393255 identity came from the local readability inventory and was separately attempted. A retrieved 2007 Kane paper was a different work and was not substituted for Kane2006.
+- RO term404 was an endpoint-type mismatch, not a missing identifier; the RO property endpoint succeeds. Initial adapter DNS failure is retained alongside the successful inventory retry. No covered Saccharomyces dataset was listed.
+- Same-agent review, not independent human sign-off or exhaustive literature/retraction surveillance. Wider checks reused after exact byte/hash verification retain their original cache/skip limits and are not fresh CI.
+- No scientific YAML, status, history, generated product or prior review changed. No GitHub mutation or publication; the previous external-publication approval remains unanswered.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T105804Z-vacuolar-v-atpase-graph-scope
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Vacuolar V-ATPase activity scope and node-type review
+started_at: '2026-10-12T10:51:24Z'
+finished_at: '2026-10-12T10:58:04Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context, not independent human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Two major graph findings (molecular-function node typed as biological process;
+  complete proton-pumping function assigned to V1) and one minor whole-V0 rotation
+  wording finding. Identity, parthood, sector groundings and whole-complex acidification
+  are supported. Detailed Kane2006 source verification remains incomplete.
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+    sha256: f3e0a8e552cdff05117f60b8a10bac82834c80769efbe4f014fc6ae5cbc52f6b
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/vacuolar_proton_transporting_v_type_atpase_complex/2026-09-12T071431Z-codex-8cd91a.yaml
+    sha256: 55b2570b6d6b9f73faabecb31a325521d7c32461de7767afe9324748678a28bf
+    role: context
+  - path: history/records/vacuolar_proton_transporting_v_type_atpase_complex/2026-09-21T143856Z-codex-4f7211.yaml
+    sha256: 94cb7d72535f55eba6a1b229002bd17482369bd31724b3fd8aef9e0b9fe46c98
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0016471
+  path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+  label: vacuolar proton-transporting V-type ATPase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: One entire native record and both histories read; eight GO terms, RO
+    relation, taxon and all native DOIs inspected; both components and seven graph
+    edges assessed. No sampling. Detailed nearest-source Kane2006 reading remains
+    partial.
+  selection: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0016471
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Actual UTC: 2026-10-12T10:51:33Z to 2026-10-12T10:51:36Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Actual UTC: 2026-10-12T10:51:36Z to 2026-10-12T10:51:41Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+    --report /private/tmp/csm-review-20261012T105056Z-vatpase/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate; zero of 33 citations has a snippet, not full-text verification.
+    Actual UTC: 2026-10-12T10:51:41Z to 2026-10-12T10:51:58Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Unchanged-input reuse: QC 987 passed/3 skipped, labels 603 no-adapter
+    skips, cached traits after earlier network failure. Original times, not fresh
+    CI. Actual UTC: 2026-10-12T06:33:07Z to 2026-10-12T06:45:16Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Unchanged-input reuse: QC 987 passed/3 skipped, labels 603 no-adapter
+    skips, cached traits after earlier network failure. Original times, not fresh
+    CI. Actual UTC: 2026-10-12T06:45:16Z to 2026-10-12T06:47:16Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Unchanged-input reuse: QC 987 passed/3 skipped, labels 603 no-adapter
+    skips, cached traits after earlier network failure. Original times, not fresh
+    CI. Actual UTC: 2026-10-12T06:48:15Z to 2026-10-12T06:48:52Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Unchanged-byte reuse: live CURIE 4023 OK/251 SKIP/0 unreachable; 210 valid
+    bundles and four contract tests. Post-save checks follow separately. Actual UTC:
+    2026-10-12T07:05:41Z to 2026-10-12T07:10:58Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Unchanged-byte reuse: live CURIE 4023 OK/251 SKIP/0 unreachable; 210 valid
+    bundles and four contract tests. Post-save checks follow separately. Actual UTC:
+    2026-10-12T10:46:49Z to 2026-10-12T10:48:38Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Unchanged-byte reuse: live CURIE 4023 OK/251 SKIP/0 unreachable; 210 valid
+    bundles and four contract tests. Post-save checks follow separately. Actual UTC:
+    2026-10-12T10:48:38Z to 2026-10-12T10:50:17Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets-initial
+  name: adapter-datasets-initial
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 2
+  status: failed
+  required: false
+  summary: 'Initial DNS failure preserved; successful separately logged retry supersedes
+    the access limitation. Actual UTC: 2026-10-12T10:51:32Z to 2026-10-12T10:51:33Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - adapter
+- check_id: adapter-datasets-retry
+  name: adapter-datasets-retry
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh complete inventory; no matching yeast dataset. Actual UTC: 2026-10-12T10:52:15Z
+    to 2026-10-12T10:52:16Z.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - adapter
+- check_id: kane-full-text
+  name: Inspect detailed Kane2006 nearest-source claims
+  status: unavailable
+  required: true
+  summary: Full-text XML returned500, HTML403, PMC web routes presented a challenge,
+    publisher exposed abstract only, BioC returned an error body despite HTTP200,
+    and the public PDF mirror was inaccessible. No claim of body inspection or false-source
+    inference.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - source-access
+  - kane-metadata
+- check_id: draft-validation-initial
+  name: Initial review-draft validation
+  command: .venv/bin/python scripts/record_review.py validate /private/tmp/csm-review-20261012T105056Z-vatpase/observation.yaml
+  exit_code: 1
+  status: failed
+  required: false
+  summary: 'Initial draft used unsupported assessment area hierarchy; corrected to
+    scope before saving. Actual UTC: 2026-10-12T10:56:56Z to 2026-10-12T10:56:58Z.
+    This is a review-draft formatting failure, not a native-record validation failure.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+- check_id: draft-validation-timestamp
+  name: Review-draft timestamp validation
+  command: .venv/bin/python scripts/record_review.py validate /private/tmp/csm-review-20261012T105056Z-vatpase/observation.yaml
+  exit_code: 1
+  status: failed
+  required: false
+  summary: 'Second draft had a review_id prefix older than its updated finished_at
+    timestamp; both aligned before saving. Actual UTC: 2026-10-12T10:57:29Z to 2026-10-12T10:57:31Z.
+    Not a native-record validation failure.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+  locator: Entire YAML, both sector rows, seven graph edges, open subunit TODO, six
+    native events and both repository histories
+  summary: The rotary activity node is BIOLOGICAL_PROCESS despite GO:0046961 grounding.
+    The V1 sector is the subject of its catalyses/RO:0002327 edge. The V1 component
+    role also refers to rotation of the membrane V0 sector without distinguishing
+    its rotary and stationary portions.
+  support: supports
+  accessed_at: '2026-10-12T10:56:56Z'
+  snapshot_sha256: f3e0a8e552cdff05117f60b8a10bac82834c80769efbe4f014fc6ae5cbc52f6b
+- evidence_id: rules
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Causal graph, component roles and narrow evidence support; CausalNodeTypeEnum
+    in the native schema
+  summary: Graph node identity/type, edge direction and scope must agree with the
+    exact authority and evidence. The native enum has a distinct MOLECULAR_FUNCTION
+    value. The audit does not require filling every optional subunit slot.
+  support: supports
+  accessed_at: '2026-10-12T10:56:56Z'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016471,GO:0033176,GO:0005774,GO:0005775,GO:0000220,GO:0000221,GO:0007035,GO:0046961
+  locator: All eight active term definitions, aspects, synonyms and child relationships
+  summary: The complex identity, exact synonym, is-a V-type ATPase parent, membrane
+    parthood and V0/V1 parts match current GO. GO:0046961 is molecular_function and
+    includes proton transfer across a membrane; it is not just soluble ATP hydrolysis.
+    GO:0033176 explicitly separates cytoplasmic V1 hydrolysis from V0 proton transport.
+  support: supports
+  accessed_at: '2026-10-12T10:51:50Z'
+  snapshot_sha256: 90a81de9ba6a4baef98ff800d3e56d5ed5320b1dba13d63f886df590e24b35fc
+- evidence_id: ro
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/ro/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002327
+  locator: Entire current RO property record
+  summary: RO:0002327 is enables, with catalyzes as an alternative label. Its definition
+    requires the subject to execute the activity. British-spelling catalyses is not
+    treated as a separate label defect; the material concern is assigning the membrane-spanning
+    activity to the soluble sector.
+  support: supports
+  accessed_at: '2026-10-12T10:53:27Z'
+  snapshot_sha256: 2fb52fbf2f0e1da35fe2afb348111a8a5f2b14310d75431b929cca16cd7e996f
+- evidence_id: li-body
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/PMC2906225/unicode
+  locator: 'Li and Kane 2009 review: complete section 5 and subsections 5.1-5.3, Figure
+    3 caption; additional V-ATPase-relevant paragraphs and introductory context'
+  summary: The cited review directly separates V1 ATP hydrolysis from the V0 proton
+    pore. It supports yeast vacuolar acidification, Vph1/Stv1 compartment differences,
+    and reversible assembly/disassembly, including inactivation of detached V1 and
+    free V0. This is inspected review text, not a newly performed primary experiment.
+  support: supports
+  accessed_at: '2026-10-12T10:54:00Z'
+  snapshot_sha256: 6b603b0eab5460f3e3f41d44ccfe945b331ab7bb5920b5dae401f7c9f84112c2
+- evidence_id: forgac-preview
+  kind: primary_source
+  reference: https://www.nature.com/articles/nrm2272
+  locator: Publisher Key Points, abstract and bibliographic identity; full subscription
+    body not read
+  summary: The inspected Key Points explicitly state that V1 ATP hydrolysis drives
+    the central rotary complex and thereby proton translocation through V0. This directly
+    supports the native coarse rotary description but not assignment of the complete
+    proton-pumping activity to V1 alone. The page is a review, not new experimental
+    evidence.
+  support: supports
+  accessed_at: '2026-10-12T10:56:56Z'
+- evidence_id: zhao-abstract
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature14365%22&format=json&resultType=core
+  locator: Complete primary-study abstract and bibliographic identity, DOI:10.1038/nature14365,
+    PMID:25971514
+  summary: Zhao, Benlekbir and Rubinstein 2015 examined three rotational states of
+    yeast V-ATPase. Their abstract explicitly distinguishes the rotating central subcomplex
+    from peripheral stalks that keep the entire membrane-bound region from rotating.
+    This bounded direct statement supports the rotor-versus-whole-V0 wording finding;
+    full figures, maps and article body were not inspected.
+  support: supports
+  accessed_at: '2026-10-12T10:52:53Z'
+  snapshot_sha256: 63c3d04dbab684bc823932428523e177846dd1e4eb46f07179f9c487f594e130
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete species identity and rank
+  summary: NCBITaxon:4932 is Saccharomyces cerevisiae. Native species-level scope
+    is not a strain claim or a claim of universal activity under every condition.
+  support: supports
+  accessed_at: '2026-10-12T10:52:17Z'
+  snapshot_sha256: 1b79642cb4b3456a0052da6a42229ed8ac0f854f94ae735db59031f0665bfa1d
+- evidence_id: kane-metadata
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FMMBR.70.1.177-191.2006%22&format=json&resultType=core
+  locator: Complete abstract and bibliographic metadata; Crossref title, author and
+    publication date also checked
+  summary: DOI:10.1128/MMBR.70.1.177-191.2006 is Patricia Kane 2006, PMID:16524922.
+    The abstract supports yeast as a model of organelle acidification and regulation.
+    It does not expose all detailed sector/assembly passages cited by the native record.
+  support: partial
+  accessed_at: '2026-10-12T10:52:18Z'
+  snapshot_sha256: 0eb60b2cec58ace0742ae077718494d3a2dcd99b2e927dd3501898e712a91d8b
+- evidence_id: li-metadata
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bbamcr.2008.08.003%22&format=json&resultType=core
+  locator: Complete metadata/abstract and Crossref title, authors, DOI and print date
+  summary: Li and Kane 2009 matches DOI:10.1016/j.bbamcr.2008.08.003, PMID:18786576
+    and PMC2906225. The 2008 DOI string is not a mismatch with the 2009 publication
+    year.
+  support: supports
+  accessed_at: '2026-10-12T10:52:22Z'
+  snapshot_sha256: b012be937e5911a18b7bef3f18fbecd9380b8eabebcde25a18948d9437631abf
+- evidence_id: forgac-metadata
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnrm2272%22&format=json&resultType=core
+  locator: Complete metadata/abstract and Crossref title, author, DOI and publication
+    date
+  summary: Michael Forgac 2007 matches DOI:10.1038/nrm2272 and PMID:17912264.
+  support: supports
+  accessed_at: '2026-10-12T10:52:19Z'
+  snapshot_sha256: 9c22352f0b753a47ac1ac362ba652699ad7445be72184723fb7bb124f899e424
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T105056Z-vatpase/source-access.jsonl
+  locator: All 18 local capture receipts and content inspection; separate web access
+    attempts described in limitations
+  summary: The initial RO term route returned404; the actual property route resolved200.
+    EuropePMC fullTextXML for both papers returned500; HTML routes returned403. NCBI
+    BioC supplied the Li/Kane body, but Kane2006 returned an error body despite HTTP200.
+    Source failure is not evidence of a false native claim.
+  support: context_only
+  accessed_at: '2026-10-12T10:56:56Z'
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh complete 28-dataset inventory after one recorded DNS failure
+  summary: The successful retry lists no Saccharomyces dataset. Expression-module
+    searches are not applicable; no absence or mechanism inference is drawn.
+  support: supports
+  accessed_at: '2026-10-12T10:56:56Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T105056Z-vatpase/baseline-verification.json
+  locator: Fresh target gates and unchanged-byte wider-check receipts
+  summary: Schema, strict and snippet checks pass; zero of 33 citations has a snippet
+    (31 evidence items and two bare references). Wider QC, labels, cached traits,
+    live CURIE and 210-bundle/four-contract-test checks are reused with original limits,
+    not fresh CI.
+  support: supports
+  accessed_at: '2026-10-12T10:56:56Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: Ignored-inclusive canonical and local text searches
+  summary: No canonical predecessor among 210 bundles. The reports/research target
+    search found readability inventories and the CURIE report, not a target legacy
+    scientific review. No proposed issue key matched the declared local roots.
+  support: supports
+  accessed_at: '2026-10-12T10:56:56Z'
+  search_scope: Path.rglob includes hidden/ignored canonical bundles and histories.
+    rg --no-ignore --hidden searched reports/research for GO:0016471 and the slug,
+    and reviews/reports/research/curation/history for all three proposed issue keys.
+    No GitHub-wide absence claim. A separate ignored-inclusive XML/TXT/HTML search
+    of /private/tmp/csm-review-* found no cached Kane2006 full text.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Vacuolar V-type ATPase identity and boundaries
+  outcome: supported
+  summary: The record denotes the assembled vacuolar proton pump, not a soluble V1
+    sector, F-type synthase or vacuole itself. Its definition and exact synonym agree
+    with active GO:0016471.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - native
+  - go
+- assessment_id: hierarchy
+  area: scope
+  topic: Is-a versus parthood
+  outcome: supported
+  summary: Current GO explicitly places GO:0016471 under GO:0033176 and in the vacuolar
+    membrane, and places V0/V1 in the whole complex. Native parent, part_of and has_part
+    choices are not interchanged.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - go
+  - native
+- assessment_id: sectors
+  area: quantity
+  topic: Two-sector model, grounding and essentiality scope
+  outcome: supported
+  summary: Both component groundings are cellular-component complexes of the correct
+    sector. Each sector is required for the defined assembled two-sector complex.
+    This does not imply that detached sectors cannot assemble independently or that
+    deletion of every individual subunit prevents assembly. Individual subunits and
+    copy numbers are explicitly deferred, not fabricated.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - go
+  - li-body
+  - native
+- assessment_id: rotor
+  area: scope
+  topic: V1 role distinguishes rotor from stationary V0
+  outcome: concern
+  summary: 'The statement that catalysis couples to rotation of the membrane V0 sector
+    is too broad: the central rotor includes membrane proteolipids, but stationary
+    portions of V0 do not turn with it. This can be corrected without expanding the
+    graph to a complete subunit-level mechanism.'
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - native
+  - zhao-abstract
+  - forgac-preview
+- assessment_id: taxon
+  area: scope
+  topic: Yeast distribution and canonical example
+  outcome: supported
+  summary: Species identity and qualitative COMMON yeast presence agree with inspected
+    acidification/model-system evidence. COMMON is not interpreted as an estimated
+    prevalence percentage or constant activity under all conditions.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - taxon
+  - kane-metadata
+  - li-body
+  - zhao-abstract
+- assessment_id: functions
+  area: evidence
+  topic: Whole-complex acidification and rotary proton transport
+  outcome: supported
+  summary: Both record-level functions are correctly attributed to the assembled complex.
+    GO:0007035 is vacuolar acidification, and GO:0046961 is ATP-driven rotational
+    proton transport. The complete Li/Kane acidification section and Forgac Key Points
+    support these bounded claims.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - go
+  - li-body
+  - forgac-preview
+- assessment_id: graph-types
+  area: graph
+  topic: All seven node types and references
+  outcome: concern
+  summary: V0/V1 nodes are correctly STRUCTURE after the native fix, the lumen is
+    a location, and acidification is a biological process. The rotary ATPase activity
+    node alone is incorrectly typed BIOLOGICAL_PROCESS despite molecular_function
+    authority.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - native
+  - go
+  - rules
+- assessment_id: graph-edges
+  area: graph
+  topic: All seven coarse graph edges
+  outcome: concern
+  summary: Location, V0/V1 parthood, V0 proton-translocation context, intact-complex
+    acidification and participation edges are supported. The V1 catalyses/enables
+    edge instead points to the complete membrane proton-transport function rather
+    than its narrower ATP-hydrolysis contribution. The surrounding assembled-complex
+    context does not remove that categorical mismatch.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - native
+  - go
+  - ro
+  - li-body
+  - forgac-preview
+- assessment_id: citations
+  area: provenance
+  topic: Stable identities and nearest-source reading
+  outcome: unknown
+  summary: All native DOI and ontology identities were verified. Li/Kane acidification
+    claims and Forgac rotary Key Points were read directly. Kane2006 sector/assembly/isoform
+    passages remain unverified against the cited full text despite alternative support
+    for the biology. This prevents a completed whole-record evidence review.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - kane-metadata
+  - li-metadata
+  - forgac-metadata
+  - li-body
+  - forgac-preview
+  - source-access
+- assessment_id: completeness
+  area: completeness
+  topic: Explicit subunit TODO and optional content
+  outcome: supported
+  summary: The Vma-family/isoform discussion is a specific curation TODO, not an asserted
+    resolved subunit model. No native image, quantitative measurement, hosted dataset
+    or trait link requires an invented finding.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - native
+  - li-body
+  - adapter
+- assessment_id: checks
+  area: schema
+  topic: Native gates versus scientific validation
+  outcome: supported
+  summary: Target gates pass but do not detect ontology-aspect or activity-scope errors.
+    Wider receipts are reused only after file/hash checks; unresolved source access
+    remains explicit.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - validation
+  - source-access
+  - go
+- assessment_id: ownership
+  area: ownership
+  topic: History, status and correction owner
+  outcome: supported
+  summary: Both histories and all native events were read. Earlier fixes correctly
+    assign acidification to the intact complex and retype V0/V1. No canonical finding
+    is fabricated from historical GitHub references. Scientific fixes belong in maintained
+    YAML via the guarded writer; PROPOSED status remains unchanged.
+  target_ids:
+  - GO:0016471
+  evidence_ids:
+  - native
+  - predecessors
+  - rules
+findings:
+- finding_id: F1
+  issue_key: vacuolar-v-atpase-rotary-function-node-type
+  category: graph
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Type the rotary ATPase node as a molecular function
+  description: The node grounded to GO:0046961 is BIOLOGICAL_PROCESS, but the current
+    authority explicitly classifies the exact activity as molecular_function and the
+    native schema provides MOLECULAR_FUNCTION. Keeping the correct GO identifier while
+    assigning an incompatible graph class misrepresents the function to typed graph
+    consumers.
+  target_ids:
+  - GO:0016471
+  field_paths:
+  - causal_graphs[graph_id=yeast_v_atpase_rotary_acidification].nodes[node_id=rotary_atpase_activity].node_type
+  evidence_ids:
+  - native
+  - go
+  - rules
+  rule_id: review-checklist:causal-graph-and-components
+  native_severity: major
+  normalization_reason: Wrong ontology-aspect representation affects graph semantics,
+    not merely a display label.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+    role: maintained scientific record
+- finding_id: F2
+  issue_key: vacuolar-v-atpase-v1-whole-pump-activity
+  category: graph
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Do not assign the complete proton-pumping activity to V1
+  description: The V1-sector edge uses catalyses with RO:0002327 to the GO:0046961
+    activity, whose definition includes transmembrane proton transport. Sources distinguish
+    V1 ATP hydrolysis from V0 proton translocation in the assembled enzyme. The edge
+    description discusses the narrower hydrolysis-to-rotation contribution but the
+    formal object asserts the whole pump reaction. Attribute that whole function to
+    the intact V-ATPase and represent any V1 contribution at the appropriate narrower
+    scope.
+  target_ids:
+  - GO:0016471
+  field_paths:
+  - causal_graphs[graph_id=yeast_v_atpase_rotary_acidification].edges[subject=v1_domain,object=rotary_atpase_activity]
+  evidence_ids:
+  - native
+  - go
+  - ro
+  - li-body
+  - forgac-preview
+  rule_id: review-checklist:causal-graph-and-components
+  native_severity: major
+  normalization_reason: A sector contribution is promoted to execution of the complete
+    membrane-transport function.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+    role: maintained scientific record
+- finding_id: F3
+  issue_key: vacuolar-v-atpase-whole-v0-rotation
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Distinguish the rotating V0 proteolipids from the entire membrane sector
+  description: The V1 component role refers to rotation of the membrane V0 sector.
+    The primary-study abstract explicitly distinguishes the rotating central subcomplex
+    from the stationary membrane-bound region restrained by peripheral stalks. Revise
+    the wording to describe rotation of the central rotor and membrane proteolipid
+    ring coupled to proton translocation, without claiming that all of V0 rotates.
+  target_ids:
+  - GO:0016471
+  field_paths:
+  - components[component_id=v1_domain].role
+  evidence_ids:
+  - native
+  - zhao-abstract
+  - forgac-preview
+  rule_id: review-checklist:causal-graph-and-components
+  native_severity: minor
+  normalization_reason: Bounded overbroad role wording; the overall rotary-coupling
+    concept remains supported.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Correct the activity node to MOLECULAR_FUNCTION; make the intact complex
+    the subject of the complete proton-transporting ATPase activity. Remove or narrow
+    the V1 edge to an evidence-backed ATP-hydrolysis/rotor contribution, with a verified
+    predicate and object. Clarify the V1 role so the rotor/ring rotates, not the entire
+    V0 sector. Preserve the other supported edges, sector groundings and open subunit
+    TODO.
+  finding_ids:
+  - F1
+  - F2
+  - F3
+  target_ids:
+  - GO:0016471
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_complex.yaml
+    role: maintained scientific record
+  generator: Guarded native writer and documented product workflow only for a separately
+    authorized correction.
+  acceptance_checks:
+  - GO:0046961 node is MOLECULAR_FUNCTION and is enabled by the assembled complex.
+  - V1 no longer directly executes the complete membrane-spanning pump function; any
+    retained V1 edge has exact local evidence for its narrower scope.
+  - Role wording distinguishes the central rotor/proteolipid ring from stationary
+    V0 elements.
+  - Inspect the detailed Kane2006 passages to finish the still-partial evidence audit;
+    do not treat alternative biological support as inspection of that paper.
+  - Preserve PROPOSED, append actual correction history only when changed, run fresh
+    native gates/QC, and save a successor with all affected stable issue keys and
+    exact occurrences.
+limitations:
+- 'Partial whole-record evidence review: Kane2006 detailed sector/assembly/isoform
+  text remains unread despite bounded public-source attempts. Its abstract and bibliography
+  were inspected. Source access alone is not a native defect, and the confirmed findings
+  do not depend on the inaccessible body.'
+- 'Li and Kane2009 was inspected through NCBI BioC: complete acidification section5
+  and subsections, Figure3 caption and relevant contextual paragraphs. This is a review
+  article; no claim of new primary experimentation. Some unrelated manuscript paragraphs
+  have extraction artifacts and were not used.'
+- Forgac2007 publisher Key Points and abstract were read, not the full subscription
+  body. Zhao2015 was used only for an explicit primary-abstract rotor/stator distinction;
+  its full body, structural maps and figure pixels were unavailable/not inspected.
+  No native numerical/image claims depend on them.
+- The initially attempted PMC1393256 URL was a mistyped lead, not evidence; the correct
+  Kane2006 PMC1393255 identity came from the local readability inventory and was separately
+  attempted. A retrieved 2007 Kane paper was a different work and was not substituted
+  for Kane2006.
+- RO term404 was an endpoint-type mismatch, not a missing identifier; the RO property
+  endpoint succeeds. Initial adapter DNS failure is retained alongside the successful
+  inventory retry. No covered Saccharomyces dataset was listed.
+- Same-agent review, not independent human sign-off or exhaustive literature/retraction
+  surveillance. Wider checks reused after exact byte/hash verification retain their
+  original cache/skip limits and are not fresh CI.
+- No scientific YAML, status, history, generated product or prior review changed.
+  No GitHub mutation or publication; the previous external-publication approval remains
+  unanswered.
+tags:
+- scientific-review
+- energy-complex
+- graph
+- partial
+```
