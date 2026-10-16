@@ -26,6 +26,12 @@ curation_history:
   changes: '#754: replaced GO-only evidence on the PSI electron-transport graph edge
     with literature evidence for the process claim.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:47:34Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2306: Align the Casella example and graph with Synechococcus elongatus
+    PCC 7942.'
+  llm_assisted: true
 synonyms:
 - synonym_text: cyanobacterial PSI
   synonym_type: RELATED_SYNONYM
@@ -42,8 +48,8 @@ taxonomic_distribution:
     thylakoid membranes as part of oxygenic photosynthetic electron transport.
   reference: DOI:10.1146/annurev-cellbio-120823-022747
 canonical_examples:
-- taxon_id: NCBITaxon:1148
-  taxon_label: Synechocystis sp. PCC 6803
+- taxon_id: NCBITaxon:1140
+  taxon_label: Synechococcus elongatus PCC 7942 = FACHB-805
   note: Cyanobacterial model used to map photosystem I distribution and mobility in
     native thylakoid membranes.
   reference: DOI:10.1016/j.molp.2017.09.019
@@ -83,9 +89,9 @@ evidence:
 causal_graphs:
 - graph_id: cyanobacterial_psi_electron_input
   title: Cyanobacterial PSI receives downstream thylakoid electrons
-  description: In Synechocystis, plasma membrane-derived PSI complexes reside in the
-    thylakoid membrane and act downstream of cytochrome b6f in photosynthetic electron
-    transport.
+  description: In Synechococcus elongatus PCC 7942, plasma membrane-derived PSI complexes
+    reside in the thylakoid membrane and act downstream of cytochrome b6f in photosynthetic
+    electron transport.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
   scope_notes: The graph places bacterial PSI at the downstream thylakoid electron-transport
@@ -120,12 +126,12 @@ causal_graphs:
   - subject: thylakoid_membrane
     predicate: houses
     object: psi
-    description: Native Synechocystis thylakoid membranes contain and organize PSI
-      complexes.
+    description: Native Synechococcus elongatus PCC 7942 thylakoid membranes contain
+      and organize PSI complexes.
     evidence:
     - reference: DOI:10.1016/j.molp.2017.09.019
-      notes: Casella et al. 2017 mapped PSI distribution and mobility in native Synechocystis
-        thylakoid membranes.
+      notes: Casella et al. 2017 mapped PSI distribution and mobility in native Synechococcus
+        elongatus PCC 7942 thylakoid membranes.
   - subject: cytb6f
     predicate: feeds electrons to
     object: psi
@@ -157,7 +163,7 @@ discussions:
     or phycobilisome attachment factors.
   evidence:
   - reference: DOI:10.1016/j.molp.2017.09.019
-    notes: Casella et al. 2017 mapped PSI organization and mobility in Synechocystis
-      thylakoid membranes.
+    notes: Casella et al. 2017 mapped PSI organization and mobility in Synechococcus
+      elongatus PCC 7942 thylakoid membranes.
   posed_by: codex
   posed_date: '2026-09-13'

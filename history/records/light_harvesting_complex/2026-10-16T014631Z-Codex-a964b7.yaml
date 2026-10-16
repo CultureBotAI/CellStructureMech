@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/light_harvesting_complex.yaml
+  slug: light_harvesting_complex
+session:
+  id: 2026-10-16T014631Z-Codex-a964b7
+  timestamp: '2026-10-16T01:46:31Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2300
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - taxonomic_distribution
+  - canonical_examples
+  - evidence
+  - discussions
+  summary: Separate Zheng 2021 architecture evidence from the PCC 6803 photoprotection study.
+  details: 'Separate Zheng 2021 architecture evidence from the PCC 6803 photoprotection study.
+    Inspected sources: Zheng et al. 2021 DOI:10.1038/s41467-021-25813-y abstract and Results;
+    Dominguez-Martin et al. 2022 DOI:10.1038/s41586-022-05156-4 abstract. Other claims and
+    prior partial-review limitations remain outside this remediation scope.'

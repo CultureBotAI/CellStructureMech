@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+  slug: respiratory_chain_complex_iii
+session:
+  id: 2026-10-16T014905Z-Codex-36819e
+  timestamp: '2026-10-16T01:49:05Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2308
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  summary: Retain the Rieske subunit label-only instead of using a domain as a protein-family
+    grounding.
+  details: 'Retain the Rieske subunit label-only instead of using a domain as a protein-family
+    grounding. Inspected sources: InterPro IPR006317 metadata.type=domain; Native PDB:2QJP
+    membership retained. Other claims and prior partial-review limitations remain outside
+    this remediation scope.'

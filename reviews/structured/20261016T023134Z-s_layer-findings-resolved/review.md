@@ -1,0 +1,571 @@
+# S-layer: scoped finding dispositions
+
+- Review: 20261016T023134Z-s_layer-findings-resolved
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-16T02:23:00Z
+- Finished UTC: 2026-10-16T02:31:34Z
+- Reviewer: Codex (self_review)
+- Completion: partial
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Resolved 3 previously observed finding(s) in issue #2316. Bound bacterial thickness and subunit mass, qualify speculative phage roles and correct the link-only license rationale.
+
+## Scope And Provenance
+
+Reassess only the listed predecessor findings against corrected maintained fields and preserved source scope.
+
+Selection: data/structures/envelope/s_layer.yaml
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base fb9cc359dff64d09193399c63d5650f9ef75656d.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0030115 | data/structures/envelope/s_layer.yaml | maintained | S-layer |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| ci-qc | passed | True | GO:0030115 | Executed 2026-10-16T02:23:11Z to 2026-10-16T02:26:28Z; log SHA-256 bf293f5df5e6d265e50eadbb1376b4568d20a16a491e9b3dbbdb62a3c92c4caf. |
+| history | passed | True | GO:0030115 | Executed 2026-10-16T02:21:55Z to 2026-10-16T02:22:11Z; log SHA-256 f2b178c96cecd3568904a23477f3849af3781b06d1293fb6daee625454acdc6e. |
+| strict | passed | True | GO:0030115 | Executed 2026-10-16T02:22:11Z to 2026-10-16T02:22:27Z; log SHA-256 4b444ea3fc980fd4c8e810a737238daf08760933c04ded087fb2bc78166fe1c7. |
+| render-check | passed | True | GO:0030115 | Executed 2026-10-16T02:22:27Z to 2026-10-16T02:23:03Z; log SHA-256 b798d21a609b296cdc2aeb317f68fc259c4e86ee43942b4a3c5008b32b9bfa5e. |
+| review-archive | passed | True | GO:0030115 | Executed 2026-10-16T02:23:33Z to 2026-10-16T02:25:59Z; log SHA-256 c5396768e27f8e9f7d783841b4bbc23801ceabfd8bbba6f1194f675723be2814. |
+| diff-check | passed | True | GO:0030115 | Executed 2026-10-16T02:25:59Z to 2026-10-16T02:25:59Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855. |
+| labels | passed | True | GO:0030115 | Executed 2026-10-16T01:58:15Z to 2026-10-16T02:03:51Z; log SHA-256 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d. |
+| traits | passed | True | GO:0030115 | Executed 2026-10-16T02:03:51Z to 2026-10-16T02:04:36Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f. |
+| curie-self-test | passed | True | GO:0030115 | Executed 2026-10-16T02:04:36Z to 2026-10-16T02:05:09Z; log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8. |
+| curies | passed | True | GO:0030115 | Executed 2026-10-16T02:05:09Z to 2026-10-16T02:06:58Z; log SHA-256 ebd9ac70fa2773f37d94819e5fa2e4bb4fad813ec79dbf9c59eb386d446f8a77. |
+| Local aggregate QC invocation | failed | False | GO:0030115 | 1003 tests passed and 3 skipped, then the history subprocess selected an unavailable pyenv shim because the virtual environment was not first on PATH. Remaining local gates were rerun with PATH corrected; required aggregate QC is supplied by the passing ci-qc check, not this failed invocation. |
+
+## Scientific And Domain Assessments
+
+### Evidence and representation changes for the listed finding keys
+
+consistency: supported. Targets: GO:0030115.
+
+Bound bacterial thickness and subunit mass, qualify speculative phage roles and correct the link-only license rationale.
+
+Checked the diff against each predecessor description and acceptance intent. Taxon-specific examples are not promoted to universal mechanisms; unknown formation requirements and disputed observations remain explicit. This is not a new comprehensive record review.
+
+## Findings
+
+### F1: Reconcile numerical ranges and their biological scope
+
+major / resolved / confirmed; issue key: s-layer-numeric-source-scope.
+
+The attributed 5-25 nm thickness is unscoped across Bacteria/Archaea, although the cited source distinguishes typical bacterial5-10 nm from thicker archaeal architectures. The attributed40-200 kDa subunit range also differs from its40-170 kDa statement. Correct the values and context or cite directly supporting evidence; do not simply apply the bacterial range to the whole class. Molecular mass is not stoichiometry.
+
+Disposition: Bound bacterial thickness and subunit mass, qualify speculative phage roles and correct the link-only license rationale. The listed maintained fields now address this earlier defect; validation passed. This closes the missing qualification, representation or provenance issue, not any underlying scientific uncertainty documented in the record.
+
+### F2: Separate phage protection from unsupported receptor activity
+
+major / resolved / confirmed; issue key: s-layer-phage-citation-scope.
+
+The function says the outer face mediates phage interactions without qualifying the activity or organism. Its Fagan2014 citation specifically treats receptor activity as unestablished speculation. The cited permeability and immune examples do not fill that gap. Qualify/remove the phage clause or attach inspected, activity-specific evidence; later protection claims must not be silently substituted for receptor evidence.
+
+Disposition: Bound bacterial thickness and subunit mass, qualify speculative phage roles and correct the link-only license rationale. The listed maintained fields now address this earlier defect; validation passed. This closes the missing qualification, representation or provenance issue, not any underlying scientific uncertainty documented in the record.
+
+### F3: Explain link-only handling as repository policy
+
+minor / resolved / confirmed; issue key: s-layer-image-license-rationale.
+
+The note states that CC BY-NC forbids hosting a copy. The official license permits conditional noncommercial reproduction and sharing. Preserve the repository link-only policy and the verified rights/attribution, but replace the categorical prohibition with the actual policy rationale.
+
+Disposition: Bound bacterial thickness and subunit mass, qualify speculative phage roles and correct the link-only license rationale. The listed maintained fields now address this earlier defect; validation passed. This closes the missing qualification, representation or provenance issue, not any underlying scientific uncertainty documented in the record.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/envelope/s_layer.yaml; Post-fix YAML; specific field paths retained on each finding | supports | Bound bacterial thickness and subunit mass, qualify speculative phage roles and correct the link-only license rationale. |
+| history | history/records/s_layer/2026-10-16T015104Z-Codex-074a7a.yaml; Entire appended event, including source scope and issue/PR links | supports | New append-only provenance documents the authorized correction. Original history and discussion rationale prefixes are preserved; native mapping_status remains PROPOSED. |
+| prior | reviews/structured/20261013T021131Z-s-layer-evidence-and-image-provenance/review.yaml; Exact findings and their original evidence/limitations | context_only | Original issue-bearing observations retained byte-identically. Their full-record coverage and source-access limitations are not promoted by this finding-only follow-up. |
+| sources | reviews/structured/20261013T021131Z-s-layer-evidence-and-image-provenance/review.yaml; Source observations reassessed during remediation, with claim-level scope retained in the appended history | supports | Remediation source checks: Sleytr et al. 2014 DOI:10.1111/1574-6976.12063 lattice and composition paragraphs; Fagan and Fairweather 2014 DOI:10.1038/nrmicro3213 author PDF pages 20 and 29; CC BY-NC 4.0 official deed and repository image policy. This entry records the source reassessment scope, not a claim that every cited full text was freshly fetched or completely read. Primary abstracts remain abstract-only evidence; prior readable passages are distinguished from failed reaccess. |
+| validation | PR #2296 local verification; Commands and log hashes in Checks | supports | Fresh repository gates passed against corrected records. Deterministic checks do not prove scientific completeness. The separate preservation audit includes ignored files. |
+
+## Limits And Additional Notes
+
+- Same-agent adversarial self-review of the remediation diff, not independent human or second-agent approval.
+- Partial, finding-only review: all listed issue keys were reassessed, not all claims in this record or the 909-record corpus. Earlier partial-review limitations and open native curation TODOs remain. No native scientific-status promotion.
+- Only new supported dispositions are saved. Original review bundles, historical reports and append-only events were preserved. No clean-review placeholder was created.
+- No new quotation snippets were added. Source access was bounded by the listed abstract/full-text/authority observations; inaccessible or error responses were not used as source text.
+- The first local aggregate QC attempt failed at history-command startup after the full test suite passed. PATH was corrected for remaining local gates; the complete required QC run passed in GitHub CI on the inspected committed native bytes.
+- Prior whole-record review remains incomplete. Previously unverified topics: Subunit, domain and external anchor boundaries; Archaeal shape and osmotic function.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261016T023134Z-s_layer-findings-resolved
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'S-layer: scoped finding dispositions'
+started_at: '2026-10-16T02:23:00Z'
+finished_at: '2026-10-16T02:31:34Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Separate adversarial pass by the same agent that implemented
+    the corrections.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'Resolved 3 previously observed finding(s) in issue #2316. Bound bacterial
+  thickness and subunit mass, qualify speculative phage roles and correct the link-only
+  license rationale.'
+source:
+  git_revision: fb9cc359dff64d09193399c63d5650f9ef75656d
+  state: working_tree
+  inputs:
+  - path: data/structures/envelope/s_layer.yaml
+    sha256: 48b060cfcac84708550d6c48a0a7c6a41262ed805e4b5e68c738360d1252ef0b
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: history/records/s_layer/2026-10-16T015104Z-Codex-074a7a.yaml
+    sha256: a062af587a3658c9614872bf960954daba4de11ef7b3d5505173e34b49e5f6f7
+    role: context
+  - path: reviews/structured/20261013T021131Z-s-layer-evidence-and-image-provenance/review.yaml
+    sha256: 31d60e6b93ebe5ee74758a39b7a4a5a82b943faab856dfa121450b6063f19db1
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: tests/test_energy_envelope_inclusion_review.py
+    sha256: 7382113a3b52dc3f9dc8368df26f9c024fc35c6862c008f491c802d64274a93d
+    role: context
+targets:
+- target_id: GO:0030115
+  path: data/structures/envelope/s_layer.yaml
+  label: S-layer
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+scope:
+  description: Reassess only the listed predecessor findings against corrected maintained
+    fields and preserved source scope.
+  selection: data/structures/envelope/s_layer.yaml
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030115
+checks:
+- check_id: ci-qc
+  name: ci-qc
+  status: passed
+  required: true
+  command: gh run watch 38840066294 --repo CultureBotAI/CellStructureMech --interval
+    15 --exit-status
+  exit_code: 0
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: Executed 2026-10-16T02:23:11Z to 2026-10-16T02:26:28Z; log SHA-256 bf293f5df5e6d265e50eadbb1376b4568d20a16a491e9b3dbbdb62a3c92c4caf.
+  scope_note: Full-corpus gate on unchanged scientific input bytes. ci-qc is the GitHub
+    clean-environment full QC run on the inspected committed remediation snapshot.
+    Original configured skips and non-adapter identifiers remain outside coverage.
+    Pre-save archive check covers the 226 earlier bundles, not these successors.
+- check_id: history
+  name: history
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/validate_history.py
+  exit_code: 0
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: Executed 2026-10-16T02:21:55Z to 2026-10-16T02:22:11Z; log SHA-256 f2b178c96cecd3568904a23477f3849af3781b06d1293fb6daee625454acdc6e.
+  scope_note: Full-corpus gate on unchanged scientific input bytes. ci-qc is the GitHub
+    clean-environment full QC run on the inspected committed remediation snapshot.
+    Original configured skips and non-adapter identifiers remain outside coverage.
+    Pre-save archive check covers the 226 earlier bundles, not these successors.
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/validate_strict.py --quiet
+  exit_code: 0
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: Executed 2026-10-16T02:22:11Z to 2026-10-16T02:22:27Z; log SHA-256 4b444ea3fc980fd4c8e810a737238daf08760933c04ded087fb2bc78166fe1c7.
+  scope_note: Full-corpus gate on unchanged scientific input bytes. ci-qc is the GitHub
+    clean-environment full QC run on the inspected committed remediation snapshot.
+    Original configured skips and non-adapter identifiers remain outside coverage.
+    Pre-save archive check covers the 226 earlier bundles, not these successors.
+- check_id: render-check
+  name: render-check
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/render_pages.py --check
+  exit_code: 0
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: Executed 2026-10-16T02:22:27Z to 2026-10-16T02:23:03Z; log SHA-256 b798d21a609b296cdc2aeb317f68fc259c4e86ee43942b4a3c5008b32b9bfa5e.
+  scope_note: Full-corpus gate on unchanged scientific input bytes. ci-qc is the GitHub
+    clean-environment full QC run on the inspected committed remediation snapshot.
+    Original configured skips and non-adapter identifiers remain outside coverage.
+    Pre-save archive check covers the 226 earlier bundles, not these successors.
+- check_id: review-archive
+  name: review-archive
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/record_review.py check
+  exit_code: 0
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: Executed 2026-10-16T02:23:33Z to 2026-10-16T02:25:59Z; log SHA-256 c5396768e27f8e9f7d783841b4bbc23801ceabfd8bbba6f1194f675723be2814.
+  scope_note: Full-corpus gate on unchanged scientific input bytes. ci-qc is the GitHub
+    clean-environment full QC run on the inspected committed remediation snapshot.
+    Original configured skips and non-adapter identifiers remain outside coverage.
+    Pre-save archive check covers the 226 earlier bundles, not these successors.
+- check_id: diff-check
+  name: diff-check
+  status: passed
+  required: true
+  command: git diff --check
+  exit_code: 0
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: Executed 2026-10-16T02:25:59Z to 2026-10-16T02:25:59Z; log SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.
+  scope_note: Full-corpus gate on unchanged scientific input bytes. ci-qc is the GitHub
+    clean-environment full QC run on the inspected committed remediation snapshot.
+    Original configured skips and non-adapter identifiers remain outside coverage.
+    Pre-save archive check covers the 226 earlier bundles, not these successors.
+- check_id: labels
+  name: labels
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: Executed 2026-10-16T01:58:15Z to 2026-10-16T02:03:51Z; log SHA-256 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d.
+  scope_note: Full-corpus gate on unchanged scientific input bytes. ci-qc is the GitHub
+    clean-environment full QC run on the inspected committed remediation snapshot.
+    Original configured skips and non-adapter identifiers remain outside coverage.
+    Pre-save archive check covers the 226 earlier bundles, not these successors.
+- check_id: traits
+  name: traits
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/check_trait_links.py --check
+  exit_code: 0
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: Executed 2026-10-16T02:03:51Z to 2026-10-16T02:04:36Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f.
+  scope_note: Full-corpus gate on unchanged scientific input bytes. ci-qc is the GitHub
+    clean-environment full QC run on the inspected committed remediation snapshot.
+    Original configured skips and non-adapter identifiers remain outside coverage.
+    Pre-save archive check covers the 226 earlier bundles, not these successors.
+- check_id: curie-self-test
+  name: curie-self-test
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/check_curies.py --self-test
+  exit_code: 0
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: Executed 2026-10-16T02:04:36Z to 2026-10-16T02:05:09Z; log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8.
+  scope_note: Full-corpus gate on unchanged scientific input bytes. ci-qc is the GitHub
+    clean-environment full QC run on the inspected committed remediation snapshot.
+    Original configured skips and non-adapter identifiers remain outside coverage.
+    Pre-save archive check covers the 226 earlier bundles, not these successors.
+- check_id: curies
+  name: curies
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/check_curies.py --check --report /private/tmp/csm-pr-20261016T013940Z/curie-report.tsv
+  exit_code: 0
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: Executed 2026-10-16T02:05:09Z to 2026-10-16T02:06:58Z; log SHA-256 ebd9ac70fa2773f37d94819e5fa2e4bb4fad813ec79dbf9c59eb386d446f8a77.
+  scope_note: Full-corpus gate on unchanged scientific input bytes. ci-qc is the GitHub
+    clean-environment full QC run on the inspected committed remediation snapshot.
+    Original configured skips and non-adapter identifiers remain outside coverage.
+    Pre-save archive check covers the 226 earlier bundles, not these successors.
+- check_id: local-qc-environment
+  name: Local aggregate QC invocation
+  status: failed
+  required: false
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CellStructureMech/.venv/bin/python
+    scripts/run_qc.py
+  exit_code: 1
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - validation
+  summary: 1003 tests passed and 3 skipped, then the history subprocess selected an
+    unavailable pyenv shim because the virtual environment was not first on PATH.
+    Remaining local gates were rerun with PATH corrected; required aggregate QC is
+    supplied by the passing ci-qc check, not this failed invocation.
+  scope_note: Original log SHA-256 6ba6de0909cb40a58a06305657c9a4259a8c42bbdde2b4e9da60d37a79e7773d;
+    no validator was weakened or tests skipped to pass.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/envelope/s_layer.yaml
+  locator: Post-fix YAML; specific field paths retained on each finding
+  accessed_at: '2026-10-16T02:31:34Z'
+  snapshot_sha256: 48b060cfcac84708550d6c48a0a7c6a41262ed805e4b5e68c738360d1252ef0b
+  support: supports
+  summary: Bound bacterial thickness and subunit mass, qualify speculative phage roles
+    and correct the link-only license rationale.
+- evidence_id: history
+  kind: record_content
+  reference: history/records/s_layer/2026-10-16T015104Z-Codex-074a7a.yaml
+  locator: Entire appended event, including source scope and issue/PR links
+  accessed_at: '2026-10-16T02:31:34Z'
+  support: supports
+  summary: New append-only provenance documents the authorized correction. Original
+    history and discussion rationale prefixes are preserved; native mapping_status
+    remains PROPOSED.
+- evidence_id: prior
+  kind: prior_review
+  reference: reviews/structured/20261013T021131Z-s-layer-evidence-and-image-provenance/review.yaml
+  locator: Exact findings and their original evidence/limitations
+  accessed_at: '2026-10-16T02:31:34Z'
+  support: context_only
+  summary: Original issue-bearing observations retained byte-identically. Their full-record
+    coverage and source-access limitations are not promoted by this finding-only follow-up.
+- evidence_id: sources
+  kind: prior_review
+  reference: reviews/structured/20261013T021131Z-s-layer-evidence-and-image-provenance/review.yaml
+  locator: Source observations reassessed during remediation, with claim-level scope
+    retained in the appended history
+  accessed_at: '2026-10-16T02:31:34Z'
+  support: supports
+  summary: 'Remediation source checks: Sleytr et al. 2014 DOI:10.1111/1574-6976.12063
+    lattice and composition paragraphs; Fagan and Fairweather 2014 DOI:10.1038/nrmicro3213
+    author PDF pages 20 and 29; CC BY-NC 4.0 official deed and repository image policy.
+    This entry records the source reassessment scope, not a claim that every cited
+    full text was freshly fetched or completely read. Primary abstracts remain abstract-only
+    evidence; prior readable passages are distinguished from failed reaccess.'
+- evidence_id: validation
+  kind: validation
+  reference: 'PR #2296 local verification'
+  locator: Commands and log hashes in Checks
+  accessed_at: '2026-10-16T02:31:34Z'
+  support: supports
+  summary: Fresh repository gates passed against corrected records. Deterministic
+    checks do not prove scientific completeness. The separate preservation audit includes
+    ignored files.
+assessments:
+- assessment_id: scoped-remediation
+  area: consistency
+  topic: Evidence and representation changes for the listed finding keys
+  outcome: supported
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - native
+  - history
+  - prior
+  - sources
+  - validation
+  summary: Bound bacterial thickness and subunit mass, qualify speculative phage roles
+    and correct the link-only license rationale.
+  details: Checked the diff against each predecessor description and acceptance intent.
+    Taxon-specific examples are not promoted to universal mechanisms; unknown formation
+    requirements and disputed observations remain explicit. This is not a new comprehensive
+    record review.
+findings:
+- finding_id: F1
+  issue_key: s-layer-numeric-source-scope
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Reconcile numerical ranges and their biological scope
+  description: The attributed 5-25 nm thickness is unscoped across Bacteria/Archaea,
+    although the cited source distinguishes typical bacterial5-10 nm from thicker
+    archaeal architectures. The attributed40-200 kDa subunit range also differs from
+    its40-170 kDa statement. Correct the values and context or cite directly supporting
+    evidence; do not simply apply the bacterial range to the whole class. Molecular
+    mass is not stoichiometry.
+  target_ids:
+  - GO:0030115
+  field_paths:
+  - physical_properties[property=THICKNESS]
+  - components[component_id=slp].stoichiometry
+  evidence_ids:
+  - native
+  - history
+  - prior
+  - sources
+  - validation
+  rule_id: review-checklist:measurement-source-and-context
+  native_severity: major
+  normalization_reason: Unsupported numerical evidence and omitted measurement context,
+    not a unit-label error.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+  disposition_reason: Bound bacterial thickness and subunit mass, qualify speculative
+    phage roles and correct the link-only license rationale. The listed maintained
+    fields now address this earlier defect; validation passed. This closes the missing
+    qualification, representation or provenance issue, not any underlying scientific
+    uncertainty documented in the record.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261013T021131Z-s-layer-evidence-and-image-provenance
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2316
+- finding_id: F2
+  issue_key: s-layer-phage-citation-scope
+  category: evidence
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Separate phage protection from unsupported receptor activity
+  description: The function says the outer face mediates phage interactions without
+    qualifying the activity or organism. Its Fagan2014 citation specifically treats
+    receptor activity as unestablished speculation. The cited permeability and immune
+    examples do not fill that gap. Qualify/remove the phage clause or attach inspected,
+    activity-specific evidence; later protection claims must not be silently substituted
+    for receptor evidence.
+  target_ids:
+  - GO:0030115
+  field_paths:
+  - functions[function_id=molecular_sieve].description
+  - functions[function_id=molecular_sieve].evidence
+  evidence_ids:
+  - native
+  - history
+  - prior
+  - sources
+  - validation
+  rule_id: review-checklist:function-claim-nearest-source
+  native_severity: major
+  normalization_reason: A functional clause is presented as established with a citation
+    that does not establish it. This is not a finding that phage interactions are
+    biologically impossible.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+  disposition_reason: Bound bacterial thickness and subunit mass, qualify speculative
+    phage roles and correct the link-only license rationale. The listed maintained
+    fields now address this earlier defect; validation passed. This closes the missing
+    qualification, representation or provenance issue, not any underlying scientific
+    uncertainty documented in the record.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261013T021131Z-s-layer-evidence-and-image-provenance
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2316
+- finding_id: F3
+  issue_key: s-layer-image-license-rationale
+  category: provenance
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Explain link-only handling as repository policy
+  description: The note states that CC BY-NC forbids hosting a copy. The official
+    license permits conditional noncommercial reproduction and sharing. Preserve the
+    repository link-only policy and the verified rights/attribution, but replace the
+    categorical prohibition with the actual policy rationale.
+  target_ids:
+  - GO:0030115
+  field_paths:
+  - images[image_id=caltechdata_atlas_ccrescentus_slayer].notes
+  evidence_ids:
+  - native
+  - history
+  - prior
+  - sources
+  - validation
+  rule_id: review-checklist:image-rights-provenance
+  native_severity: minor
+  normalization_reason: Bounded misleading provenance wording; the actual link-only
+    behavior and license enum are consistent with repository policy.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained scientific record
+  disposition_reason: Bound bacterial thickness and subunit mass, qualify speculative
+    phage roles and correct the link-only license rationale. The listed maintained
+    fields now address this earlier defect; validation passed. This closes the missing
+    qualification, representation or provenance issue, not any underlying scientific
+    uncertainty documented in the record.
+  previous_occurrences:
+  - repository: CultureBotAI/CellStructureMech
+    review_id: 20261013T021131Z-s-layer-evidence-and-image-provenance
+    finding_id: F3
+  external_issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2316
+actions: []
+limitations:
+- Same-agent adversarial self-review of the remediation diff, not independent human
+  or second-agent approval.
+- 'Partial, finding-only review: all listed issue keys were reassessed, not all claims
+  in this record or the 909-record corpus. Earlier partial-review limitations and
+  open native curation TODOs remain. No native scientific-status promotion.'
+- Only new supported dispositions are saved. Original review bundles, historical reports
+  and append-only events were preserved. No clean-review placeholder was created.
+- No new quotation snippets were added. Source access was bounded by the listed abstract/full-text/authority
+  observations; inaccessible or error responses were not used as source text.
+- The first local aggregate QC attempt failed at history-command startup after the
+  full test suite passed. PATH was corrected for remaining local gates; the complete
+  required QC run passed in GitHub CI on the inspected committed native bytes.
+- 'Prior whole-record review remains incomplete. Previously unverified topics: Subunit,
+  domain and external anchor boundaries; Archaeal shape and osmotic function.'
+related_reviews:
+- repository: CultureBotAI/CellStructureMech
+  review_id: 20261013T021131Z-s-layer-evidence-and-image-provenance
+  relationship: Scoped successor for the explicitly cited finding occurrences only
+links:
+- https://github.com/CultureBotAI/CellStructureMech/issues/2316
+- https://github.com/CultureBotAI/CellStructureMech/pull/2296
+```

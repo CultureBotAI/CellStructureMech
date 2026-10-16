@@ -1,0 +1,818 @@
+# Cytochrome o oxidase CyoA role review
+
+- Review: 20261012T073436Z-cytochrome-o-cyoa-role
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-12T07:29:25Z
+- Finished UTC: 2026-10-12T07:34:36Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Whole-record review completed with one minor issue: qualify the CyoA quinol-side role and preserve the conflicting evidence. Identity, composition, example and all six coarse graph edges are supported within stated reading limits.
+
+## Scope And Provenance
+
+One entire native record, every material assertion, all six graph edges and append-only history; no sampling.
+
+Selection: data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base e74d0c3e33df7e44348afbba1695b61c23262ab0.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0009319 | data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml | maintained | cytochrome o ubiquinol oxidase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0009319 | Fresh target check. See captured log and actual timestamps in operational receipts. |
+| strict | passed | True | GO:0009319 | Fresh target check. See captured log and actual timestamps in operational receipts. |
+| snippets | passed | True | GO:0009319 | Fresh target check. Zero of23 citations carry snippets; not a full-text test. |
+| release-qc reused unchanged corpus | passed | True | GO:0009319 | Reused actual result from 2026-10-12T06:45:16Z; input bytes and log hashes verified against the unchanged local commit. QC987/3 skips; labels603 no-adapter skips; trait index cached and no target trait links. |
+| release-labels reused unchanged corpus | passed | True | GO:0009319 | Reused actual result from 2026-10-12T06:47:16Z; input bytes and log hashes verified against the unchanged local commit. QC987/3 skips; labels603 no-adapter skips; trait index cached and no target trait links. |
+| release-traits reused unchanged corpus | passed | True | GO:0009319 | Reused actual result from 2026-10-12T06:48:52Z; input bytes and log hashes verified against the unchanged local commit. QC987/3 skips; labels603 no-adapter skips; trait index cached and no target trait links. |
+| curies-live reused prior result | passed | True | GO:0009319 | Reused actual result from 2026-10-12T07:10:58Z on unchanged scientific/archive inputs before this new bundle. CURIE4023 OK/251 skips, archive197 valid, contract4 passed. Post-save checks run separately after saving. |
+| post-save-archive reused prior result | passed | True | GO:0009319 | Reused actual result from 2026-10-12T07:17:11Z on unchanged scientific/archive inputs before this new bundle. CURIE4023 OK/251 skips, archive197 valid, contract4 passed. Post-save checks run separately after saving. |
+| post-save-contract reused prior result | passed | True | GO:0009319 | Reused actual result from 2026-10-12T07:19:28Z on unchanged scientific/archive inputs before this new bundle. CURIE4023 OK/251 skips, archive197 valid, contract4 passed. Post-save checks run separately after saving. |
+| adapter-datasets | passed | False | GO:0009319 | Public expression-context check; not structure or mechanism proof. |
+| adapter-cyoA | passed | False | GO:0009319 | Public expression-context check; not structure or mechanism proof. |
+| adapter-cyoB | failed | False | GO:0009319 | Null regulator parse failure retained; raw public response and successful component summaries inspected as fallback. |
+| adapter-cyoC | passed | False | GO:0009319 | Public expression-context check; not structure or mechanism proof. |
+| adapter-cyoD | passed | False | GO:0009319 | Public expression-context check; not structure or mechanism proof. |
+| adapter-component-78 | passed | False | GO:0009319 | Public expression-context check; not structure or mechanism proof. |
+| adapter-component-171 | passed | False | GO:0009319 | Public expression-context check; not structure or mechanism proof. |
+| adapter-component-193 | passed | False | GO:0009319 | Public expression-context check; not structure or mechanism proof. |
+
+## Scientific And Domain Assessments
+
+### Identity, definition, class and hierarchy
+
+identity: supported. Targets: GO:0009319.
+
+Exact current GO complex identity; four constituent types and associated prosthetic groups, not a single oxidase subunit or bd oxidase. Respiratory-chain parentage agrees.
+
+### All four components and their roles
+
+evidence: concern. Targets: GO:0009319.
+
+All family/accession/gene identities and membrane membership agree. The sole concern is the unqualified quinol-side wording for CyoA, which conceals a source conflict instead of describing a bounded structural role.
+
+### Example and complex composition
+
+scope: supported. Targets: GO:0009319.
+
+The E. coli example and four polymer-entity model are supported. The record does not assert a measured oligomeric stoichiometry, universal taxonomic distribution or essentiality.
+
+### Whole-complex function and evidence placement
+
+evidence: supported. Targets: GO:0009319.
+
+Ubiquinol oxidation, oxygen reduction to water and outward proton movement are supported. The original paper abstract supports the structure and proposed binding-site context; no detailed binding chemistry is asserted in the function.
+
+### All six NONMECHANISTIC edges
+
+graph: supported. Targets: GO:0009319.
+
+Complex enables activity, substrate electron donation, oxygen acceptance, ubiquinone/water production and PMF contribution agree with the cited GO definitions. The graph intentionally excludes site-level chemistry and never assigns a catalytic edge to CyoA.
+
+### Optional slots, discussions and datasets
+
+completeness: supported. Targets: GO:0009319.
+
+No required composition detail is missing. Empty optional dimensions, images, trait links, protein examples and datasets are not issues. Conflict qualification is covered by F1, not by inventing a generic requirement for discussion slots.
+
+### Source identities and bounded access
+
+provenance: supported. Targets: GO:0009319.
+
+Native stable references resolved and their relevant source text was inspected. The original DOI is corroborated by PubMed/PDB despite sparse Crossref title metadata. Primary experimental observations are distinguished from inference and authority summaries.
+
+### Maintained owner, status and history
+
+ownership: supported. Targets: GO:0009319.
+
+The entire native record and creation history were read. Review-only work leaves PROPOSED and both history surfaces unchanged. Any future correction belongs in the guarded native YAML workflow.
+
+## Findings
+
+### F1: Qualify the CyoA quinol-side role and preserve conflicting source support
+
+minor / open / confirmed; issue key: cytochrome-o-cyoa-quinol-role-qualification.
+
+The component role uses Quinol-side subunit as an unqualified assignment. Its InterPro source gives a stronger binding/oxidation role, whereas the record's cited primary paper proposes the binding region in CyoB/subunit I. Later structures reinforce that distinction. Older biochemical results suggest CyoA proximity or involvement, so neither an unqualified role nor a categorical denial reflects the inspected evidence. Use a neutral structural role and retain the historical inference in a bounded evidence note or discussion.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Narrow CyoA role to a supported membrane-complex subunit description. If quinol involvement is retained, label its historical/inferential support and explicitly distinguish the structural assignment in subunit I. Preserve protein identity, UNKNOWN essentiality and whole-complex graph.
+
+- CyoA is not presented as an established quinol-binding/oxidizing subunit on family annotation alone; conflicting historical evidence remains inspectable.
+- Claim-level evidence accurately distinguishes primary structural results from biochemical inference and authority description.
+- Guarded native write with llm_assisted curation event and append-only history; status remains PROPOSED.
+- Fresh target validation, native QC and a lineage-linked successor disposition; preserve every earlier bundle.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml; Entire native YAML and append-only creation history | supports | Four component rows; CyoA role says Quinol-side subunit without qualification or a conflict discussion. All six graph edges describe the whole-complex reaction, not CyoA-specific electron transfer. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009319,GO:0098803,GO:0009486; Complete current names, definitions, aspects, child relations and obsolete flags | supports | Exact complex identity and respiratory-chain parentage agree. GO0009486 supplies the donor, oxygen acceptor, products and periplasmic proton direction used by all six coarse graph edges. No exact energetic ratio is asserted natively. |
+| ipr-cyoa | InterPro:IPR006333; Complete current metadata description and integrated families | partial | The authority describes subunit II as binding/oxidizing a quinone substrate. This is the apparent basis of the native role, but it is not an uncontested current mechanistic assignment. |
+| abramson | DOI:10.1038/82824; Complete primary abstract via PMID11017202 and Europe PMC; PubMed and PDB citation identity cross-check | supports | The original structural paper places a proposed quinone-binding region in subunit I and supports it with mutagenesis. It supports the named E. coli structural exemplar and is narrower than a direct bound-substrate structure claim. |
+| li | DOI:10.1073/pnas.2106750118; OSTI public primary PDF, pages1-4: Abstract, Introduction and structural Results through the start of zinc-site discussion; pages2 and4 visually inspected including Fig.3 | supports | Two E. coli nanodisc preparations resolve a UQ8 site within subunit I. This supports qualification of the CyoA wording, not a claim that all possible CyoA effects are disproven. |
+| tsatsos | PMID:9718303; Complete primary abstract, DOI10.1021/bi9809977 | partial | A subunit-II W136A mutant altered the apparent ubiquinol-1 Km; the authors propose proximity to a binding site rather than an established exclusive catalytic assignment. |
+| welter | PMID:7961841; Complete primary abstract, DOI10.1016/S0021-9258(19)61982-4 | partial | A photoreactive quinone analog preferentially labeled subunit II, leading to a proposed partial binding-site contribution. This older biochemical evidence must not be erased when qualifying the role. |
+| pdb | PDB:1FFT; Entry plus all four polymer-entity records, entity-to-UniProt mappings, primary citation and organism | supports | Four polymer entities from E. coli; entities1/2/3 map to P0ABI8/P0ABJ1/P0ABJ3 as stated. Entity4 has no UniProt mapping; the native CyoD row correctly uses P0ABJ6 separately. Model multiplicity is not silently turned into native stoichiometry. |
+| other-families | InterPro:IPR014207; InterPro:IPR014206; InterPro:IPR014210; Complete descriptions and integrated model metadata, separately captured in source-access receipts | supports | CyoB/CyoC/CyoD family identities agree. Historical cofactor wording in these family descriptions is not reproduced in the native record and is not used as exact heme chemistry evidence. |
+| uniprot | UniProtKB:P0ABI8; UniProtKB:P0ABJ1; UniProtKB:P0ABJ3; UniProtKB:P0ABJ6; Current identities, genes and aliases, function/subunit/location annotations from four JSON captures | supports | All four accessions and genes agree; membrane localization and bo3 complex membership are consistent. Heterooctamer annotation is not a required native stoichiometry claim. The record describes four subunit types, not a universal oligomeric assembly. |
+| taxon | NCBITaxon:562; ENA live species record and PDB source organisms | supports | The E. coli species exemplar is correctly identified. |
+| adapter | https://imodulondb.org/; Fresh datasets and cyoA/B/C/D search; raw public cyoB response and component78/171/193 summaries | supports | All four E. coli genes are found. cyoB adapter search fails on a null regulator, but the raw response and three successful summaries establish bounded expression context. Module78 includes all four structural genes plus cyoE; module membership is not proof of assembled subunit composition. No native expression claim is present. |
+| validation | /private/tmp/csm-review-20261012T072151Z/reused-current-checks.json; Fresh target schema/strict/snippets; checksum-verified unchanged-corpus QC/history/labels/traits/CURIE/archive/contract receipts | supports | Target checks pass. Reused QC987 passed/3 skipped, live CURIE4023 OK/251 skips, archive197 valid and four contract tests. Label check has603 no-adapter skips; trait index cached. These are reused actual results, not new GitHub CI. |
+| predecessors | reviews/structured/; 197 canonical bundles scanned for target ID/path; rg -uu over reviews/reports/history/research/curation | supports | No canonical predecessor for this target in the inspected local archive; historical creation history is retained. No GitHub-wide absence claim. |
+
+## Limits And Additional Notes
+
+- Same-agent review, not independent human sign-off or an exhaustive literature/retraction survey.
+- Abramson2000 and the1994/1998 biochemical studies were read as complete primary abstracts, not full papers. Their narrower claims suffice for the native structural exemplar and for preserving the historical conflict; no uninspected experiment is asserted.
+- Li2021 PDF pages1-4 were read, with rendered pages2/4 inspected including Fig.3. Later Results, Methods, supplementary material and raw cryo-EM maps were not reviewed. No new structural measurements or kinetic conclusions were made.
+- NCBI efetch for Li2021 returned front matter only; PMC web returned a browser challenge and OSTI web retrieval failed. The public OSTI PDF download succeeded directly. No challenge was bypassed. Pypdf emitted font warnings; pymupdf extraction and page rendering were used for the inspected text.
+- The CyoA issue is a bounded wording/evidence-qualification defect, not a finding that CyoA has no quinone-related effect or that historical experimental observations are invalid.
+- Target validation is fresh; broader QC/history/label/trait/live-CURIE/contract results are checksum-verified reuse with their recorded skips. No new GitHub CI run, issue, push, PR or merge.
+- This immutable issue-only bundle changes no scientific record, history, generated artifact or mapping status. External publication remains dependent on the existing unanswered approval.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T073436Z-cytochrome-o-cyoa-role
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Cytochrome o oxidase CyoA role review
+started_at: '2026-10-12T07:29:25Z'
+finished_at: '2026-10-12T07:34:36Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no separate reviewer or human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Whole-record review completed with one minor issue: qualify the CyoA quinol-side
+  role and preserve the conflicting evidence. Identity, composition, example and all
+  six coarse graph edges are supported within stated reading limits.'
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+    sha256: 4612bf80a3ecb4c9090b9ff6e1571fad304cc16c36b000dddb55014e49268c2a
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/cytochrome_o_ubiquinol_oxidase_complex/2026-09-24T042141Z-codex-6911c8.yaml
+    sha256: 8bd3dcea13d62f30b09ab4d7b419c272a3760e9ebaa152c4915ac79b2dbd6617
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0009319
+  path: data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+  label: cytochrome o ubiquinol oxidase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: One entire native record, every material assertion, all six graph edges
+    and append-only history; no sampling.
+  selection: data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009319
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Fresh target check. See captured log and actual timestamps in operational
+    receipts.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Fresh target check. See captured log and actual timestamps in operational
+    receipts.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+    --report /private/tmp/csm-review-20261012T072151Z-o/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Fresh target check. Zero of23 citations carry snippets; not a full-text
+    test.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - validation
+- check_id: release-qc
+  name: release-qc reused unchanged corpus
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T06:45:16Z; input bytes and log hashes
+    verified against the unchanged local commit. QC987/3 skips; labels603 no-adapter
+    skips; trait index cached and no target trait links.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - validation
+- check_id: release-labels
+  name: release-labels reused unchanged corpus
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T06:47:16Z; input bytes and log hashes
+    verified against the unchanged local commit. QC987/3 skips; labels603 no-adapter
+    skips; trait index cached and no target trait links.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - validation
+- check_id: release-traits
+  name: release-traits reused unchanged corpus
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T06:48:52Z; input bytes and log hashes
+    verified against the unchanged local commit. QC987/3 skips; labels603 no-adapter
+    skips; trait index cached and no target trait links.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: curies-live reused prior result
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T07:10:58Z on unchanged scientific/archive
+    inputs before this new bundle. CURIE4023 OK/251 skips, archive197 valid, contract4
+    passed. Post-save checks run separately after saving.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: post-save-archive reused prior result
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T07:17:11Z on unchanged scientific/archive
+    inputs before this new bundle. CURIE4023 OK/251 skips, archive197 valid, contract4
+    passed. Post-save checks run separately after saving.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: post-save-contract reused prior result
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T07:19:28Z on unchanged scientific/archive
+    inputs before this new bundle. CURIE4023 OK/251 skips, archive197 valid, contract4
+    passed. Post-save checks run separately after saving.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: Public expression-context check; not structure or mechanism proof.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - adapter
+- check_id: adapter-cyoA
+  name: adapter-cyoA
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query cyoA
+  exit_code: 0
+  status: passed
+  required: false
+  summary: Public expression-context check; not structure or mechanism proof.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - adapter
+- check_id: adapter-cyoB
+  name: adapter-cyoB
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query cyoB
+  exit_code: 2
+  status: failed
+  required: false
+  summary: Null regulator parse failure retained; raw public response and successful
+    component summaries inspected as fallback.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - adapter
+- check_id: adapter-cyoC
+  name: adapter-cyoC
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query cyoC
+  exit_code: 0
+  status: passed
+  required: false
+  summary: Public expression-context check; not structure or mechanism proof.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - adapter
+- check_id: adapter-cyoD
+  name: adapter-cyoD
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query cyoD
+  exit_code: 0
+  status: passed
+  required: false
+  summary: Public expression-context check; not structure or mechanism proof.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - adapter
+- check_id: adapter-component-78
+  name: adapter-component-78
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb summarize --organism e_coli --dataset precise1k --k 78
+  exit_code: 0
+  status: passed
+  required: false
+  summary: Public expression-context check; not structure or mechanism proof.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - adapter
+- check_id: adapter-component-171
+  name: adapter-component-171
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb summarize --organism e_coli --dataset precise1k --k 171
+  exit_code: 0
+  status: passed
+  required: false
+  summary: Public expression-context check; not structure or mechanism proof.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - adapter
+- check_id: adapter-component-193
+  name: adapter-component-193
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb summarize --organism e_coli --dataset precise1k --k 193
+  exit_code: 0
+  status: passed
+  required: false
+  summary: Public expression-context check; not structure or mechanism proof.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - adapter
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+  locator: Entire native YAML and append-only creation history
+  summary: Four component rows; CyoA role says Quinol-side subunit without qualification
+    or a conflict discussion. All six graph edges describe the whole-complex reaction,
+    not CyoA-specific electron transfer.
+  support: supports
+  accessed_at: '2026-10-12T07:34:36Z'
+  snapshot_sha256: 4612bf80a3ecb4c9090b9ff6e1571fad304cc16c36b000dddb55014e49268c2a
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009319,GO:0098803,GO:0009486
+  locator: Complete current names, definitions, aspects, child relations and obsolete
+    flags
+  summary: Exact complex identity and respiratory-chain parentage agree. GO0009486
+    supplies the donor, oxygen acceptor, products and periplasmic proton direction
+    used by all six coarse graph edges. No exact energetic ratio is asserted natively.
+  support: supports
+  accessed_at: '2026-10-12T07:30:18Z'
+  snapshot_sha256: b022a345c38f1c338a838f81e52cacf0afa3526679b00df71c718b1206e09df0
+- evidence_id: ipr-cyoa
+  kind: authority
+  reference: InterPro:IPR006333
+  locator: Complete current metadata description and integrated families
+  summary: The authority describes subunit II as binding/oxidizing a quinone substrate.
+    This is the apparent basis of the native role, but it is not an uncontested current
+    mechanistic assignment.
+  support: partial
+  accessed_at: '2026-10-12T07:30:21Z'
+  snapshot_sha256: 57c0a96617cf783eba0646119c1636c2e24b89b53ba55d750485d1861a3527d5
+- evidence_id: abramson
+  kind: primary_source
+  reference: DOI:10.1038/82824
+  locator: Complete primary abstract via PMID11017202 and Europe PMC; PubMed and PDB
+    citation identity cross-check
+  summary: The original structural paper places a proposed quinone-binding region
+    in subunit I and supports it with mutagenesis. It supports the named E. coli structural
+    exemplar and is narrower than a direct bound-substrate structure claim.
+  support: supports
+  accessed_at: '2026-10-12T07:30:17Z'
+  snapshot_sha256: 5e975e6336c8d95c8723488108d1b324c3c187619479712cbf640d0b6053b788
+- evidence_id: li
+  kind: primary_source
+  reference: DOI:10.1073/pnas.2106750118
+  locator: 'OSTI public primary PDF, pages1-4: Abstract, Introduction and structural
+    Results through the start of zinc-site discussion; pages2 and4 visually inspected
+    including Fig.3'
+  summary: Two E. coli nanodisc preparations resolve a UQ8 site within subunit I.
+    This supports qualification of the CyoA wording, not a claim that all possible
+    CyoA effects are disproven.
+  support: supports
+  accessed_at: '2026-10-12T07:31:31Z'
+  snapshot_sha256: 1c1bc7ca1c55faf170d9a24deeeb18280ce12b4829d4844587c68b9dd74683ac
+- evidence_id: tsatsos
+  kind: primary_source
+  reference: PMID:9718303
+  locator: Complete primary abstract, DOI10.1021/bi9809977
+  summary: A subunit-II W136A mutant altered the apparent ubiquinol-1 Km; the authors
+    propose proximity to a binding site rather than an established exclusive catalytic
+    assignment.
+  support: partial
+  accessed_at: '2026-10-12T07:31:06Z'
+  snapshot_sha256: 8216c8eb9de8c52e938aff8b2f0c6a2c6d38b0f87a9c5efe3f58cea284a466b0
+- evidence_id: welter
+  kind: primary_source
+  reference: PMID:7961841
+  locator: Complete primary abstract, DOI10.1016/S0021-9258(19)61982-4
+  summary: A photoreactive quinone analog preferentially labeled subunit II, leading
+    to a proposed partial binding-site contribution. This older biochemical evidence
+    must not be erased when qualifying the role.
+  support: partial
+  accessed_at: '2026-10-12T07:31:08Z'
+  snapshot_sha256: e7f1c9015dc8f43d9d2d1cd8ff5837e63c032bd5b8901daf2d5a17bdd247ef0d
+- evidence_id: pdb
+  kind: primary_source
+  reference: PDB:1FFT
+  locator: Entry plus all four polymer-entity records, entity-to-UniProt mappings,
+    primary citation and organism
+  summary: Four polymer entities from E. coli; entities1/2/3 map to P0ABI8/P0ABJ1/P0ABJ3
+    as stated. Entity4 has no UniProt mapping; the native CyoD row correctly uses
+    P0ABJ6 separately. Model multiplicity is not silently turned into native stoichiometry.
+  support: supports
+  accessed_at: '2026-10-12T07:30:19Z'
+  snapshot_sha256: c4a145f6fdaad70cf2c10b1b0e375e1b6773b666be802879a0320d143c9dc2a7
+- evidence_id: other-families
+  kind: authority
+  reference: InterPro:IPR014207; InterPro:IPR014206; InterPro:IPR014210
+  locator: Complete descriptions and integrated model metadata, separately captured
+    in source-access receipts
+  summary: CyoB/CyoC/CyoD family identities agree. Historical cofactor wording in
+    these family descriptions is not reproduced in the native record and is not used
+    as exact heme chemistry evidence.
+  support: supports
+  accessed_at: '2026-10-12T07:34:36Z'
+- evidence_id: uniprot
+  kind: authority
+  reference: UniProtKB:P0ABI8; UniProtKB:P0ABJ1; UniProtKB:P0ABJ3; UniProtKB:P0ABJ6
+  locator: Current identities, genes and aliases, function/subunit/location annotations
+    from four JSON captures
+  summary: All four accessions and genes agree; membrane localization and bo3 complex
+    membership are consistent. Heterooctamer annotation is not a required native stoichiometry
+    claim. The record describes four subunit types, not a universal oligomeric assembly.
+  support: supports
+  accessed_at: '2026-10-12T07:34:36Z'
+- evidence_id: taxon
+  kind: authority
+  reference: NCBITaxon:562
+  locator: ENA live species record and PDB source organisms
+  summary: The E. coli species exemplar is correctly identified.
+  support: supports
+  accessed_at: '2026-10-12T07:30:19Z'
+  snapshot_sha256: b25ec1722ed0d05d0f1ff813184c59ce4c9c521138da68c40aebd1cc9f293ffd
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh datasets and cyoA/B/C/D search; raw public cyoB response and component78/171/193
+    summaries
+  summary: All four E. coli genes are found. cyoB adapter search fails on a null regulator,
+    but the raw response and three successful summaries establish bounded expression
+    context. Module78 includes all four structural genes plus cyoE; module membership
+    is not proof of assembled subunit composition. No native expression claim is present.
+  support: supports
+  accessed_at: '2026-10-12T07:31:08Z'
+  snapshot_sha256: 5b470b00ab192b903637184245fb0e7cf8c856553fa76fdf6e2f35ce54b300d2
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T072151Z/reused-current-checks.json
+  locator: Fresh target schema/strict/snippets; checksum-verified unchanged-corpus
+    QC/history/labels/traits/CURIE/archive/contract receipts
+  summary: Target checks pass. Reused QC987 passed/3 skipped, live CURIE4023 OK/251
+    skips, archive197 valid and four contract tests. Label check has603 no-adapter
+    skips; trait index cached. These are reused actual results, not new GitHub CI.
+  support: supports
+  accessed_at: '2026-10-12T07:34:36Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: 197 canonical bundles scanned for target ID/path; rg -uu over reviews/reports/history/research/curation
+  summary: No canonical predecessor for this target in the inspected local archive;
+    historical creation history is retained. No GitHub-wide absence claim.
+  support: supports
+  accessed_at: '2026-10-12T07:34:36Z'
+  search_scope: Path.rglob includes ignored and hidden canonical bundles; rg -uu searched
+    identifier GO:0009319, label and slug in reviews, reports, history, research and
+    curation. No current GitHub triage performed.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Identity, definition, class and hierarchy
+  outcome: supported
+  summary: Exact current GO complex identity; four constituent types and associated
+    prosthetic groups, not a single oxidase subunit or bd oxidase. Respiratory-chain
+    parentage agrees.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - native
+  - go
+  - pdb
+- assessment_id: components
+  area: evidence
+  topic: All four components and their roles
+  outcome: concern
+  summary: All family/accession/gene identities and membrane membership agree. The
+    sole concern is the unqualified quinol-side wording for CyoA, which conceals a
+    source conflict instead of describing a bounded structural role.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - native
+  - ipr-cyoa
+  - other-families
+  - uniprot
+  - pdb
+  - abramson
+  - li
+  - tsatsos
+  - welter
+  dimensions:
+  - name: scope
+    value: Escherichia coli CyoA / subunit II
+    definition: Component role affected by the wording finding; no claim of wrong
+      protein identity.
+    evidence_ids:
+    - native
+    - pdb
+    - uniprot
+  - name: evidence_tiers
+    value: Family annotation; historical biochemical inference; primary structures
+    definition: Different support types are preserved rather than silently treating
+      one authority as definitive.
+    evidence_ids:
+    - ipr-cyoa
+    - tsatsos
+    - welter
+    - abramson
+    - li
+- assessment_id: example
+  area: scope
+  topic: Example and complex composition
+  outcome: supported
+  summary: The E. coli example and four polymer-entity model are supported. The record
+    does not assert a measured oligomeric stoichiometry, universal taxonomic distribution
+    or essentiality.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - native
+  - pdb
+  - taxon
+  - go
+- assessment_id: function
+  area: evidence
+  topic: Whole-complex function and evidence placement
+  outcome: supported
+  summary: Ubiquinol oxidation, oxygen reduction to water and outward proton movement
+    are supported. The original paper abstract supports the structure and proposed
+    binding-site context; no detailed binding chemistry is asserted in the function.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - native
+  - go
+  - abramson
+  - uniprot
+- assessment_id: graph
+  area: graph
+  topic: All six NONMECHANISTIC edges
+  outcome: supported
+  summary: Complex enables activity, substrate electron donation, oxygen acceptance,
+    ubiquinone/water production and PMF contribution agree with the cited GO definitions.
+    The graph intentionally excludes site-level chemistry and never assigns a catalytic
+    edge to CyoA.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - native
+  - go
+- assessment_id: completeness
+  area: completeness
+  topic: Optional slots, discussions and datasets
+  outcome: supported
+  summary: No required composition detail is missing. Empty optional dimensions, images,
+    trait links, protein examples and datasets are not issues. Conflict qualification
+    is covered by F1, not by inventing a generic requirement for discussion slots.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - native
+- assessment_id: provenance
+  area: provenance
+  topic: Source identities and bounded access
+  outcome: supported
+  summary: Native stable references resolved and their relevant source text was inspected.
+    The original DOI is corroborated by PubMed/PDB despite sparse Crossref title metadata.
+    Primary experimental observations are distinguished from inference and authority
+    summaries.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - abramson
+  - pdb
+  - uniprot
+  - validation
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained owner, status and history
+  outcome: supported
+  summary: The entire native record and creation history were read. Review-only work
+    leaves PROPOSED and both history surfaces unchanged. Any future correction belongs
+    in the guarded native YAML workflow.
+  target_ids:
+  - GO:0009319
+  evidence_ids:
+  - native
+  - predecessors
+findings:
+- finding_id: F1
+  issue_key: cytochrome-o-cyoa-quinol-role-qualification
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the CyoA quinol-side role and preserve conflicting source support
+  description: The component role uses Quinol-side subunit as an unqualified assignment.
+    Its InterPro source gives a stronger binding/oxidation role, whereas the record's
+    cited primary paper proposes the binding region in CyoB/subunit I. Later structures
+    reinforce that distinction. Older biochemical results suggest CyoA proximity or
+    involvement, so neither an unqualified role nor a categorical denial reflects
+    the inspected evidence. Use a neutral structural role and retain the historical
+    inference in a bounded evidence note or discussion.
+  target_ids:
+  - GO:0009319
+  field_paths:
+  - components[cyo_subunit_ii].role
+  - components[cyo_subunit_ii].evidence
+  evidence_ids:
+  - native
+  - ipr-cyoa
+  - abramson
+  - li
+  - tsatsos
+  - welter
+  rule_id: review-checklist:component-role-and-evidence-conflicts
+  native_severity: minor
+  normalization_reason: A bounded ambiguous role and missing evidence qualification;
+    exact protein/complex identities and whole-complex reaction graph remain correct.
+    This is not a major identity or mechanism failure.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Narrow CyoA role to a supported membrane-complex subunit description.
+    If quinol involvement is retained, label its historical/inferential support and
+    explicitly distinguish the structural assignment in subunit I. Preserve protein
+    identity, UNKNOWN essentiality and whole-complex graph.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009319
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/cytochrome_o_ubiquinol_oxidase_complex.yaml
+    role: maintained scientific record
+  generator: Native guarded writer, then documented render/embedding drift workflow
+    if semantic content changes.
+  acceptance_checks:
+  - CyoA is not presented as an established quinol-binding/oxidizing subunit on family
+    annotation alone; conflicting historical evidence remains inspectable.
+  - Claim-level evidence accurately distinguishes primary structural results from
+    biochemical inference and authority description.
+  - Guarded native write with llm_assisted curation event and append-only history;
+    status remains PROPOSED.
+  - Fresh target validation, native QC and a lineage-linked successor disposition;
+    preserve every earlier bundle.
+limitations:
+- Same-agent review, not independent human sign-off or an exhaustive literature/retraction
+  survey.
+- Abramson2000 and the1994/1998 biochemical studies were read as complete primary
+  abstracts, not full papers. Their narrower claims suffice for the native structural
+  exemplar and for preserving the historical conflict; no uninspected experiment is
+  asserted.
+- Li2021 PDF pages1-4 were read, with rendered pages2/4 inspected including Fig.3.
+  Later Results, Methods, supplementary material and raw cryo-EM maps were not reviewed.
+  No new structural measurements or kinetic conclusions were made.
+- NCBI efetch for Li2021 returned front matter only; PMC web returned a browser challenge
+  and OSTI web retrieval failed. The public OSTI PDF download succeeded directly.
+  No challenge was bypassed. Pypdf emitted font warnings; pymupdf extraction and page
+  rendering were used for the inspected text.
+- The CyoA issue is a bounded wording/evidence-qualification defect, not a finding
+  that CyoA has no quinone-related effect or that historical experimental observations
+  are invalid.
+- Target validation is fresh; broader QC/history/label/trait/live-CURIE/contract results
+  are checksum-verified reuse with their recorded skips. No new GitHub CI run, issue,
+  push, PR or merge.
+- This immutable issue-only bundle changes no scientific record, history, generated
+  artifact or mapping status. External publication remains dependent on the existing
+  unanswered approval.
+tags:
+- scientific-review
+- energy-complex
+- component-role
+- minor
+```

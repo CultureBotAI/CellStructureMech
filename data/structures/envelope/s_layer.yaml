@@ -19,13 +19,13 @@ components:
   label: S-layer protein (SLP)
   component_type: PROTEIN
   component_role: CONSTITUENT
-  stoichiometry: typically one dominant protein species; subunits are usually 40–200
-    kDa
   essentiality: ESSENTIAL
   role: The lattice-forming subunit; self-assembles in vitro.
   evidence:
   - reference: DOI:10.1111/1574-6976.12063
-    notes: Sleytr et al. 2014 review SLP self-assembly and lattice types.
+    notes: Sleytr et al. 2014 review SLP self-assembly and lattice types. The review
+      reports generally one protein/glycoprotein species with molecular masses of
+      40-170 kDa; this is subunit mass, not copies per lattice.
 - component_id: slh_domain
   label: S-layer homology (SLH) domain
   component_type: PROTEIN
@@ -78,11 +78,15 @@ functions:
     notes: Albers & Meyer 2011.
 - function_id: molecular_sieve
   label: molecular sieving and surface interaction
-  description: Lattice pores set a size cut-off; the outer face mediates adhesion
-    and phage or immune interactions.
+  description: Lattice pores can impose size exclusion, and particular bacterial S-layers
+    mediate adhesion and host immune interactions. Bacteriophage-receptor and bacteriocin
+    roles are speculative in the cited Fagan and Fairweather review, not established
+    functions here.
   evidence:
   - reference: DOI:10.1038/nrmicro3213
-    notes: Fagan & Fairweather 2014.
+    notes: Fagan and Fairweather 2014 discuss molecular sieving and host interactions,
+      but explicitly describe phage/bacteriocin receptor roles as speculation lacking
+      evidence at the time.
 associated_traits:
 - trait_id: traitmech:000064
   trait_label: S-layer
@@ -92,8 +96,15 @@ associated_traits:
     notes: Fagan and Fairweather 2014 define and review the bacterial S-layer phenotype.
 physical_properties:
 - property: THICKNESS
-  value: 5-25
+  value: 5-10
   unit: UO:0000018
+  reference: DOI:10.1111/1574-6976.12063
+  context: General bacterial S-layer thickness reported by Sleytr et al. 2014; not
+    a universal archaeal range.
+- property: MOLECULAR_MASS
+  value: 40-170 kDa
+  context: General range for individual S-layer protein/glycoprotein species reported
+    by Sleytr et al. 2014, not the whole lattice mass.
   reference: DOI:10.1111/1574-6976.12063
 images:
 - image_id: caltechdata_atlas_ccrescentus_slayer
@@ -112,9 +123,11 @@ images:
   taxon_label: Caulobacter vibrioides
   reference: DOI:10.22002/D1.1355
   retrieved_on: '2026-08-29'
-  notes: 'Link-only: CC BY-NC forbids hosting a copy. Title, rights, creators and
-    contributor read from the CaltechDATA records API at retrieval; isderivedfrom
-    points at https://etdb.caltech.edu/tomogram/52a866, which was unreachable.'
+  notes: Link-only under this repository's image-reuse policy for NC-licensed media;
+    CC BY-NC itself permits reuse subject to attribution and noncommercial conditions.
+    Title, rights, creators and contributor read from the CaltechDATA records API
+    at retrieval; isderivedfrom points at https://etdb.caltech.edu/tomogram/52a866,
+    which was unreachable.
 evidence:
 - reference: DOI:10.1111/1574-6976.12063
   notes: Sleytr et al. 2014, "S-layers - principles and applications".
@@ -245,6 +258,12 @@ curation_history:
   action: ENHANCE_CAUSAL_GRAPH
   changes: Expanded the S-layer assembly graph with SLH-domain and secondary-cell-wall
     polymer anchoring nodes and evidence-backed edges.
+  llm_assisted: true
+- timestamp: '2026-10-16T01:51:01Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2316: Bound bacterial thickness and subunit mass, qualify speculative
+    phage roles and correct the link-only license rationale.'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0262

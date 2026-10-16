@@ -57,8 +57,9 @@ causal_graphs:
   - node_id: lipid_ii
     label: Lipid II
     node_type: CHEMICAL
-    grounding: CHEBI:27692
     description: Cytoplasmic-leaflet lipid-linked disaccharide-pentapeptide precursor.
+      Generic precursor class here, not the lysyl-specific chemical defined by CHEBI:27692;
+      peptide chemistry varies, including the meso-DAP form in E. coli.
   - node_id: murj_flippase
     label: MurJ Lipid II flippase
     node_type: GENE_OR_PROTEIN
@@ -67,9 +68,10 @@ causal_graphs:
   - node_id: exported_lipid_ii
     label: lipid II
     node_type: CHEMICAL
-    grounding: CHEBI:27692
     description: Lipid II after translocation to the growth side of the cytoplasmic
-      membrane.
+      membrane. Generic precursor class here, not the lysyl-specific chemical defined
+      by CHEBI:27692; peptide chemistry varies, including the meso-DAP form in E.
+      coli.
   - node_id: seds_polymerases
     label: RodA/FtsW SEDS peptidoglycan polymerases
     node_type: GENE_OR_PROTEIN
@@ -144,7 +146,7 @@ causal_graphs:
       notes: Vollmer, Blanot and de Pedro 2008 describe the bacterial sacculus as
         glycan strands crosslinked by short peptides.
   - subject: peptidoglycan
-    predicate: resists
+    predicate: confers
     object: turgor_resistance
     description: The closed, crosslinked sacculus is the stress-bearing layer that
       keeps internal turgor pressure from rupturing the cell.
@@ -186,6 +188,12 @@ curation_history:
   action: ADD_PATHWAY_LINK
   changes: Added an evidence-backed, organism-scoped PathwayMech link with a full
     source commit and explicit relation limits.
+  llm_assisted: true
+- timestamp: '2026-10-16T01:50:57Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2315: Remove lysyl-specific Lipid II groundings from generic nodes and
+    correct the turgor-capacity relation.'
   llm_assisted: true
 related_records:
 - corpus: PathwayMech

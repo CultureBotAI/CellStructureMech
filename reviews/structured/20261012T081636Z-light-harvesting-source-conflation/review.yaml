@@ -1,0 +1,601 @@
+schema_version: 1.0.0
+review_id: 20261012T081636Z-light-harvesting-source-conflation
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Light-harvesting complex phycobilisome source review
+started_at: '2026-10-12T08:11:15Z'
+finished_at: '2026-10-12T08:16:36Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no independent human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Whole-record review completed with one major citation/experimental-scope
+  issue: the PCC6803 light-harvesting and photoprotected-state example cites a different
+  organism study, with an incorrect author attribution. Generic antenna identity,
+  constituents, function and all five coarse graph edges are otherwise supported within
+  stated reading limits.'
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/light_harvesting_complex.yaml
+    sha256: 13a970052543fcca6e01d8848aeeafeb54d43e193776ed870841a1f43ea4f30e
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/light_harvesting_complex/2026-09-16T013259Z-codex-1da31c.yaml
+    sha256: 46d49c1cb6249e42d9f0a9a607b4670278f5285f61f2e58650e8799ac115a7bb
+    role: context
+  - path: history/records/light_harvesting_complex/2026-09-16T014513Z-codex-0117b6.yaml
+    sha256: df2cc72f60f65b6b02ead2f6191404199c9f42dfc9936708cf24023221105904
+    role: context
+  - path: history/records/light_harvesting_complex/2026-09-21T173810Z-codex-9f2c1a.yaml
+    sha256: 7d9c72c45dd009509fcc81afe0569ec76b5dfce0bad1b6563dbd2dede1802301
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0030076
+  path: data/structures/energy_complex/light_harvesting_complex.yaml
+  label: light-harvesting complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/light_harvesting_complex.yaml
+    role: maintained scientific record
+scope:
+  description: One entire native record, all material claims, both component groups,
+    all three organism examples, all five graph edges and three append-only histories;
+    no sampling.
+  selection: data/structures/energy_complex/light_harvesting_complex.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030076
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/light_harvesting_complex.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target check; actual timestamps and logs retained. '
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/energy_complex/light_harvesting_complex.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target check; actual timestamps and logs retained. '
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/energy_complex/light_harvesting_complex.yaml
+    --report /private/tmp/csm-review-20261012T081100Z-light/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Fresh target check; actual timestamps and logs retained. Zero of42 citations
+    carries snippets; not a full-text check.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Actual result from 2026-10-12T06:45:16Z reused on verified unchanged scientific
+    inputs. QC987/3 skipped; labels603 no-adapter skips; trait index cached. No new
+    execution or CI.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Actual result from 2026-10-12T06:47:16Z reused on verified unchanged scientific
+    inputs. QC987/3 skipped; labels603 no-adapter skips; trait index cached. No new
+    execution or CI.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Actual result from 2026-10-12T06:48:52Z reused on verified unchanged scientific
+    inputs. QC987/3 skipped; labels603 no-adapter skips; trait index cached. No new
+    execution or CI.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Actual result from 2026-10-12T07:10:58Z reused with log/input hashes verified:
+    live CURIE4023 OK/251 skips, archive199 valid, contract4 passed. Fresh post-save
+    checks follow separately.'
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Actual result from 2026-10-12T08:10:34Z reused with log/input hashes verified:
+    live CURIE4023 OK/251 skips, archive199 valid, contract4 passed. Fresh post-save
+    checks follow separately.'
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Actual result from 2026-10-12T08:12:30Z reused with log/input hashes verified:
+    live CURIE4023 OK/251 skips, archive199 valid, contract4 passed. Fresh post-save
+    checks follow separately.'
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: Fresh28-dataset inventory; exact native organisms not covered. Target gene
+    queries not applicable, with no biological absence inference.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - adapter
+- check_id: draft-contract-corrected
+  name: Initial draft contract validation
+  command: .venv/bin/python scripts/record_review.py validate /private/tmp/csm-review-20261012T081100Z-light/observation.yaml
+  exit_code: 1
+  status: failed
+  required: false
+  summary: Draft used unsupported evidence kind literature for two secondary reviews.
+    Replaced with allowed authority category while preserving explicit secondary-review
+    scope. Corrected draft is validated separately before save; no native scientific
+    check failed.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/energy_complex/light_harvesting_complex.yaml
+  locator: Entire native YAML and all three append-only history files
+  summary: The Synechocystis canonical example claims cryo-EM light-harvesting and
+    photoprotected states under DOI10.1038/s41467-021-25813-y. Two evidence notes
+    call that paper Sauer2021. Other content intentionally represents a generic protein-pigment
+    antenna class.
+  support: supports
+  accessed_at: '2026-10-12T08:16:03Z'
+  snapshot_sha256: 13a970052543fcca6e01d8848aeeafeb54d43e193776ed870841a1f43ea4f30e
+- evidence_id: go
+  kind: authority
+  reference: GO:0030076; GO:0032991; GO:0009765
+  locator: Complete current names, definitions, aspects, synonym and parent-child
+    relation
+  summary: Exact complex definition, related antenna synonym, protein-containing-complex
+    parent and light-harvesting process endpoint agree.
+  support: supports
+  accessed_at: '2026-10-12T08:11:30Z'
+  snapshot_sha256: 21ac668d33963941a86a3297dda9ec542279f0891e43057e198f9950f9a358d0
+- evidence_id: zheng
+  kind: primary_source
+  reference: DOI:10.1038/s41467-021-25813-y
+  locator: Complete abstract; Introduction and Results through bilin distribution
+    via publisher text; XML overall/core-structure sections and Fig.4 caption; Europe
+    PMC/Crossref authors
+  summary: Zheng et al.2021 solved PCC7002 and PCC7120 PBS, without observed OCP in
+    those preparations. Fig.4 fits a PCC7002 model into a published PCC6803 array;
+    that is not a newly solved PCC6803 photoprotected-state structure.
+  support: partial
+  accessed_at: '2026-10-12T08:12:24Z'
+  snapshot_sha256: 1726fe18d49fc2e19a9fe0846a7d6879eb72b486b58cf84cd033d33794251ef1
+- evidence_id: dominguez
+  kind: primary_source
+  reference: DOI:10.1038/s41586-022-05156-4
+  locator: Complete primary abstract and publisher authors/date, corroborated by PMID36045294
+    metadata
+  summary: Dominguez-Martin, Sauer and colleagues2022 report PCC6803 PBS structures
+    with and without OCP, including light-harvesting and photoprotected states. This
+    is an evidence-backed candidate to support the retained native example.
+  support: supports
+  accessed_at: '2026-10-12T08:12:22Z'
+  snapshot_sha256: 73e6dd276b76e387ca31f452fdda68f103981020dcee334a56ff4c89ec00fcdd
+- evidence_id: nielsen
+  kind: primary_source
+  reference: DOI:10.1038/ncomms12454
+  locator: Complete abstract and Introduction, Results, Discussion body text; no Methods
+    or supplementary-data reanalysis
+  summary: CsmA and BChl a form the baseplate protein-pigment lattice. The study used
+    bchK carotenosomes and compared baseplate organization to wild-type chlorosomes.
+    Native species-level baseplate and coarse transfer claims do not assert wild-type-only
+    atomic resolution or exact energetic kinetics.
+  support: supports
+  accessed_at: '2026-10-12T08:12:26Z'
+  snapshot_sha256: 2433c1f99932a7b8d267fc38dedfc159d80ba0bc0814611c6bf96fcd229546b1
+- evidence_id: olsen
+  kind: primary_source
+  reference: DOI:10.1074/jbc.M804824200
+  locator: Complete abstract in Europe PMC and NCBI front matter; Crossref title/date
+    identity
+  summary: AFM of the DPF2G mutant resolves LH2-only membrane organization, with membrane
+    flattening altering packing. Native notes explicitly retain the mutant and do
+    not infer a wild-type-only arrangement or exact geometry.
+  support: supports
+  accessed_at: '2026-10-12T08:11:35Z'
+  snapshot_sha256: 0062745ba814b3a74c0e49985a9eacf63363ae399a831960f412c86cad6e69a4
+- evidence_id: frese
+  kind: primary_source
+  reference: DOI:10.1073/pnas.0407295102
+  locator: Complete abstract and Crossref identity
+  summary: Polarized spectroscopy on native R. sphaeroides membranes supports LH2
+    as a major absorber and a model of organized cores interspersed with LH2 plus
+    separate domains. Native wording preserves a model and does not claim direct visualization
+    of every core constituent.
+  support: supports
+  accessed_at: '2026-10-12T08:11:36Z'
+  snapshot_sha256: 6c637db6e31989a26a5ceddc56a7eff9c6bc86e624568187f454770de8ee9970
+- evidence_id: sui
+  kind: authority
+  reference: DOI:10.1146/annurev-biophys-062920-063657
+  locator: Complete review abstract and bibliographic identity, not full review; secondary
+    synthesis, not a new primary experiment
+  summary: Phycobiliproteins and linker proteins form PBS; linkers organize assembly
+    and tune chromophore energy. Primary Zheng and Dominguez evidence corroborates
+    the broad biological claims independently.
+  support: supports
+  accessed_at: '2026-10-12T08:11:33Z'
+  snapshot_sha256: 3b34576930f6587e4869a25f3956bb75a65884be66ad2fbd0c3b77cec53c2436
+- evidence_id: orf
+  kind: authority
+  reference: DOI:10.1007/s11120-013-9869-3
+  locator: Complete review abstract and bibliographic identity, not full review; secondary
+    synthesis, not a new primary experiment
+  summary: Distinguishes protein-free bulk chlorosome pigment self-assembly from the
+    CsmA-BChl a baseplate. This supports the native component-boundary TODO without
+    treating all chlorosome pigments as protein-bound.
+  support: supports
+  accessed_at: '2026-10-12T08:12:21Z'
+  snapshot_sha256: c1480403f0750ae42c45f871761ce75e6e4e9896f52d4f08a0e6ea7f4db6afba
+- evidence_id: taxa
+  kind: authority
+  reference: NCBITaxon:1148; NCBITaxon:1063; NCBITaxon:1097
+  locator: All three complete current ENA taxon records
+  summary: All identifiers and native labels resolve; historical Rhodobacter and Chlorobium
+    names are synonyms. Presence of antennae in the three examples is supported, independently
+    of the incorrect canonical-example citation.
+  support: supports
+  accessed_at: '2026-10-12T08:16:03Z'
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh complete28-dataset inventory
+  summary: None of the three exact native organisms is covered. Synechococcus elongatus
+    is not substituted for Synechocystis PCC6803. No applicable gene search or negative
+    biological inference.
+  support: supports
+  accessed_at: '2026-10-12T08:16:03Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T081100Z-light/baseline-verification.json
+  locator: Fresh target checks plus hash-verified unchanged-corpus checks
+  summary: Schema, strict and snippet checks pass; zero of42 citations carries a snippet.
+    Reused QC987 passed/3 skipped, labels603 no-adapter skips, cached trait index,
+    live CURIE4023 OK/251 skips, archive199 valid and four contract tests. No new
+    CI.
+  support: supports
+  accessed_at: '2026-10-12T08:16:03Z'
+- evidence_id: prior-search
+  kind: search
+  reference: reviews/structured/
+  locator: 199 canonical bundles and ignored-inclusive rg -uu search over local review/report/history/research/curation
+    roots
+  summary: No canonical predecessor for this target. A historical phycobilisome-core
+    report flags a related organism/source mismatch in another record; it is a lead,
+    not evidence that this parent was reviewed or fixed.
+  support: supports
+  accessed_at: '2026-10-12T08:16:03Z'
+  search_scope: Path.rglob includes hidden/ignored canonical bundles; rg -uu searched
+    target slug, GO identifier, label, disputed DOI and new issue key across reviews,
+    reports, history, research and curation. No GitHub-wide absence claim.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Generic antenna identity, definition, synonym and hierarchy
+  outcome: supported
+  summary: Exact active GO protein-pigment complex, not a single photosynthetic protein
+    or whole photosystem. Generic parentage is correct and lineage-specific subtype
+    boundaries are intentionally deferred.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - native
+  - go
+- assessment_id: components
+  area: evidence
+  topic: Both component groups and essentiality
+  outcome: supported
+  summary: Antenna proteins include pigment-binding and accessory scaffold/linker
+    types; pigments form a collective constituent group, not one asserted universal
+    molecule. ESSENTIAL describes these broad constituent categories, not necessity
+    of every accessory polypeptide for viability. Label-only grounding and explicit
+    TODOs avoid guessing a single family or pigment accession.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - native
+  - go
+  - zheng
+  - nielsen
+  - sui
+  - orf
+- assessment_id: scope
+  area: scope
+  topic: Three distributions and examples
+  outcome: concern
+  summary: Taxon identities and antenna occurrence are supported. COMMON is qualitative,
+    not measured strain-wide prevalence. Purple-bacterial and baseplate examples retain
+    their source scope. The PCC6803 state-resolved canonical example has the wrong
+    cited study and author attribution; F1 does not dispute biological presence.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - native
+  - taxa
+  - zheng
+  - dominguez
+  - frese
+  - nielsen
+  dimensions:
+  - name: affected_model
+    value: Synechocystis sp. PCC6803 / NCBITaxon1148
+    definition: Native canonical example whose cryo-EM state claim needs the correct
+      study.
+    evidence_ids:
+    - native
+    - taxa
+    - dominguez
+  - name: evidence_boundary
+    value: Newly solved structure versus fitting into a previously published array
+    definition: Zheng2021 Fig.4 mentions PCC6803, so a claim of total organism absence
+      from that paper would be false.
+    evidence_ids:
+    - zheng
+- assessment_id: function
+  area: evidence
+  topic: Light absorption and directed transfer
+  outcome: supported
+  summary: GO and inspected primary sources support a coarse protein-pigment antenna
+    role. The baseplate routes excitation toward reaction centers via downstream complexes;
+    the native record does not claim one obligatory direct molecular jump or a detailed
+    kinetic pathway.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - native
+  - go
+  - nielsen
+  - frese
+  - zheng
+- assessment_id: graph
+  area: graph
+  topic: All five NONMECHANISTIC edges
+  outcome: supported
+  summary: Proteins organize pigments and assemble into the complex; pigments are
+    bound in it; the complex routes energy toward reaction centers and contributes
+    to light harvesting. Component references and GO process aspect agree. Scope expressly
+    omits lineage-specific excitonic details and does not require PufX universally.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - native
+  - go
+  - zheng
+  - nielsen
+  - sui
+  - frese
+- assessment_id: completeness
+  area: completeness
+  topic: Discussions and optional slots
+  outcome: supported
+  summary: Component grounding and child-architecture TODOs are relevant and actionable.
+    No asserted stoichiometry, image license, physical measurement, trait or dataset
+    requires additional mandatory representation. Protein-free chlorosome bulk pigments
+    are not silently included as protein-bound constituents.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - native
+  - orf
+  - nielsen
+- assessment_id: provenance
+  area: provenance
+  topic: Stable references and bibliographic/source attribution
+  outcome: concern
+  summary: All native GO/taxon/DOI references resolve, but resolution does not validate
+    the attached scientific claim. The 2021 DOI belongs to Zheng et al.; native Sauer2021
+    wording and the state-resolved example conflate it with a different study. Other
+    DOI identities agree.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - native
+  - go
+  - taxa
+  - zheng
+  - dominguez
+  - validation
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained owner, history and status
+  outcome: supported
+  summary: Entire record and three append-only histories read. Prior1048/1049/1251
+    changes remain intact; no old report is overwritten or old issue silently retired.
+    Native YAML owns any future guarded correction; PROPOSED remains unchanged.
+  target_ids:
+  - GO:0030076
+  evidence_ids:
+  - native
+  - prior-search
+findings:
+- finding_id: F1
+  issue_key: light-harvesting-phycobilisome-source-conflation
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate the PCC6803 state-resolved example from the Zheng2021 citation
+  description: The canonical PCC6803 example assigns light-harvesting and photoprotected
+    cryo-EM states to DOI10.1038/s41467-021-25813-y. That is Zheng et al.2021, not
+    Sauer2021, and its newly solved specimens are PCC7002/PCC7120. The stated PCC6803
+    result is supported by Dominguez-Martin, Sauer and colleagues2022 under DOI10.1038/s41586-022-05156-4.
+    Correct the claim-level source and author notes without denying PCC6803 antenna
+    occurrence or its secondary array-model mention in Zheng Fig.4.
+  target_ids:
+  - GO:0030076
+  field_paths:
+  - canonical_examples[taxon_id=NCBITaxon:1148].reference
+  - canonical_examples[taxon_id=NCBITaxon:1148].note
+  - evidence[reference=DOI:10.1038/s41467-021-25813-y].notes
+  - discussions[defer_lineage_specific_antenna_subtypes].evidence[reference=DOI:10.1038/s41467-021-25813-y].notes
+  evidence_ids:
+  - native
+  - zheng
+  - dominguez
+  rule_id: review-checklist:exact-source-and-experimental-scope
+  native_severity: major
+  normalization_reason: Wrong study assigned to a material organism/state-specific
+    structural example, not merely citation formatting. The parent complex identity
+    remains valid, so not a blocker.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/light_harvesting_complex.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Prefer retaining the supported PCC6803 example with DOI10.1038/s41586-022-05156-4
+    and accurate2022 author attribution. Retain Zheng2021 only for its actual generic/core
+    architecture or explicitly bounded array comparison; correct Sauer2021 notes.
+    Alternatively choose a correctly scoped2021 specimen and remove the unsupported
+    state claim. Reassess nearby distribution references for direct evidence without
+    claiming PCC6803 is absent.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030076
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/light_harvesting_complex.yaml
+    role: maintained scientific record
+  generator: Native guarded writer and documented generated-page/embedding checks
+    after semantic changes.
+  acceptance_checks:
+  - The canonical taxon, experimental states and attached DOI agree with an inspected
+    primary source.
+  - Zheng2021 is not attributed to Sauer and is distinguished from the2022 Dominguez-Martin/Sauer
+    paper; Fig.4 array fitting is not described as a new state-resolved PCC6803 structure.
+  - Generic light-harvesting identity and supported cyanobacterial occurrence remain
+    intact; no automatic broad rewrite of other records.
+  - Guarded llm_assisted curation with append-only history and PROPOSED status; fresh
+    target/native QC and lineage-linked successor disposition.
+limitations:
+- Same-agent review, not independent human sign-off, an exhaustive literature/retraction
+  search or new experimental validation.
+- Zheng2021 relevant abstract, introduction, early Results and Fig.4 caption inspected;
+  not every later experiment, figure pixel, raw map or supplementary file. The inspected
+  source explicitly distinguishes its structural specimens and array-model comparison.
+- Nielsen2016 abstract, Introduction, Results and Discussion read as full text; Methods
+  and supplementary materials not reanalysed. The mutant carotenosome context is retained;
+  no new numeric or wild-type-specific structural claim inferred.
+- Olsen2008 and Frese2004 assessed as complete primary abstracts with identity verification,
+  not full papers. Europe PMC full-text endpoints returned500; PMC web access showed
+  challenges; NCBI Olsen retrieval contained front matter and abstract only. Challenges
+  were not bypassed.
+- Sui2021 and Orf2013 assessed as complete review abstracts; broad claims independently
+  corroborated by primary sources. Dominguez-Martin2022 assessed as complete primary
+  abstract and publisher identity, not subscription full text. A future citation correction
+  must stay within inspected support.
+- Fresh target validation plus checksum-verified broader-check reuse with original
+  cache/skips. No GitHub CI, new issue, PR, push or merge. Existing publication approval
+  unanswered.
+- No native scientific, generated, history or mapping-status changes. Related historical
+  reports for other targets are leads, not canonical predecessors or resolved findings
+  for this record.
+tags:
+- scientific-review
+- energy-complex
+- source-scope
+- major

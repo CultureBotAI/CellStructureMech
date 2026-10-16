@@ -1,0 +1,706 @@
+schema_version: 1.0.0
+review_id: 20261012T102837Z-complex-iii-rieske-entry-type
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Complex III Rieske protein-family grounding review
+started_at: '2026-10-12T10:23:00Z'
+finished_at: '2026-10-12T10:28:37Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no independent reviewer or human
+    sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Whole-record review completed with one major grounding finding: the Rieske
+  protein component and node use an InterPro domain as family identity. Complex identity,
+  source mappings, core composition and coarse function are supported within the stated
+  reading scope.'
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+    sha256: 4d1bda4c62236492d5c7e1be66372b83ea5b769770bd2c8543016552b368e6c5
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/respiratory_chain_complex_iii/2026-09-24T055642Z-codex-001a22.yaml
+    sha256: ff7ff50b14a7d268c7cd3fa527ca3357c01b0d1576fa9c9143e74a5ff14dba66
+    role: context
+  - path: history/records/respiratory_chain_complex_iii/2026-09-24T060544Z-codex-acf0a3.yaml
+    sha256: af7a51d8a362d0cb892ffdf333b10163e1ecda4ac23b0ec7e02ad1a497934838
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0045275
+  path: data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+  label: respiratory chain complex III
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+    role: maintained scientific record
+scope:
+  description: One entire native record and both histories; all material claims, seven
+    graph edges and every stable reference assessed. No sampling.
+  selection: data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0045275
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target check. Actual UTC: 2026-10-12T10:23:35Z to 2026-10-12T10:23:38Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target check. Actual UTC: 2026-10-12T10:23:38Z to 2026-10-12T10:23:41Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+    --report /private/tmp/csm-review-20261012T102234Z-ciii/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target check. Zero of28 citations has a snippet; the snippet gate
+    is not full-text validation. Actual UTC: 2026-10-12T10:23:41Z to 2026-10-12T10:24:01Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Reused original result after maintained-input and receipt hash verification.987passing/3skipped
+    QC tests; cached label check603no-adapter skips; cached TraitMech after earlier
+    network failure. No fresh CI. Actual UTC: 2026-10-12T06:33:07Z to 2026-10-12T06:45:16Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Reused original result after maintained-input and receipt hash verification.987passing/3skipped
+    QC tests; cached label check603no-adapter skips; cached TraitMech after earlier
+    network failure. No fresh CI. Actual UTC: 2026-10-12T06:45:16Z to 2026-10-12T06:47:16Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Reused original result after maintained-input and receipt hash verification.987passing/3skipped
+    QC tests; cached label check603no-adapter skips; cached TraitMech after earlier
+    network failure. No fresh CI. Actual UTC: 2026-10-12T06:48:15Z to 2026-10-12T06:48:52Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Reused original result on unchanged inputs: live CURIE4023OK/251SKIP/0unreachable,207valid
+    bundles and4contract tests. Fresh post-save archive/contract checks follow separately.
+    Actual UTC: 2026-10-12T07:05:41Z to 2026-10-12T07:10:58Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Reused original result on unchanged inputs: live CURIE4023OK/251SKIP/0unreachable,207valid
+    bundles and4contract tests. Fresh post-save archive/contract checks follow separately.
+    Actual UTC: 2026-10-12T10:05:18Z to 2026-10-12T10:07:03Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Reused original result on unchanged inputs: live CURIE4023OK/251SKIP/0unreachable,207valid
+    bundles and4contract tests. Fresh post-save archive/contract checks follow separately.
+    Actual UTC: 2026-10-12T10:07:03Z to 2026-10-12T10:08:44Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh inventory; no matching species dataset and no gene searches warranted.
+    Actual UTC: 2026-10-12T10:23:23Z to 2026-10-12T10:23:24Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - adapter
+- check_id: draft-contract-aliases
+  name: Initial draft contract validation
+  command: .venv/bin/python scripts/record_review.py validate /private/tmp/csm-review-20261012T102234Z-ciii/observation.yaml
+  exit_code: 1
+  status: failed
+  required: false
+  summary: 'Initial serializer emitted YAML aliases for repeated owner objects; rejected
+    before save. Corrected by eliminating shared object references. No scientific
+    assessment change. Actual UTC: 2026-10-12T10:28:11Z to 2026-10-12T10:28:12Z.'
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+  locator: Entire YAML, four native history events and both append-only repository
+    histories
+  summary: The Rieske component and its protein graph node use IPR006317 as identity,
+    and the nearest evidence note calls it a family. The rest of the record describes
+    a catalytic core, not an exhaustive universal subunit inventory.
+  support: supports
+  accessed_at: '2026-10-12T10:28:11Z'
+  snapshot_sha256: 4d1bda4c62236492d5c7e1be66372b83ea5b769770bd2c8543016552b368e6c5
+- evidence_id: rules
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent description and grounding attribute; docs/CURATION.md
+    integrated-family policy
+  summary: Component grounding identifies a taxon-agnostic protein family. Domain
+    and homologous-superfamily evidence are not automatically equivalent to a whole-protein
+    family identity.
+  support: supports
+  accessed_at: '2026-10-12T10:28:11Z'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0045275,GO:0098803,GO:0008121
+  locator: All three complete current term definitions, synonyms and relationships
+  summary: GO0045275 agrees with identity, three catalytic core constituents and all
+    seven native synonym scopes. GO0098803 explicitly lists it as an is-a child; GO0008121
+    defines the quinol-to-cytochrome-c coupled reaction.
+  support: supports
+  accessed_at: '2026-10-12T10:23:35Z'
+  snapshot_sha256: dce6ca78a34cd519ba985dfada3a5f352df494005ab46b4f6f4c9e6a527df5c0
+- evidence_id: rieske-domain
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006317/
+  locator: metadata.type, complete description and hierarchy type
+  summary: IPR006317 is currently classified as a domain in both machine-readable
+    type fields. Its description distinguishes proteobacterial/mitochondrial bc1 sequences
+    from b6f. That biological specificity does not make its entry type family.
+  support: refutes
+  accessed_at: '2026-10-12T10:23:38Z'
+  snapshot_sha256: b7ab52ab9dc4fd9425e54b268daae8cb4ed1464e604048c7ea40761ffd851fc2
+- evidence_id: rieske-mapping
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q02762/
+  locator: Complete eight-entry response; reviewed protein identity and all fragment
+    spans
+  summary: The reviewed Q02762 sequence is187 residues at taxon1063. IPR006317 is
+    a domain match at10-187, while IPR014349 is the actual integrated family at7-187.
+    Near-full-length coverage does not change the declared entry type.
+  support: refutes
+  accessed_at: '2026-10-12T10:25:25Z'
+  snapshot_sha256: fbea99d98007848f0f5edca0be07bf74b8a48c2dac089254515822bafa8d14c0
+- evidence_id: rieske-family
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014349/
+  locator: Complete entry type and description
+  summary: The family IPR014349 includes bc1 and b6f Rieske proteins and arsenite
+    oxidase AioB. It is broader than the native bc1 constituent and is not an automatically
+    acceptable exact replacement.
+  support: context_only
+  accessed_at: '2026-10-12T10:25:26Z'
+  snapshot_sha256: d89e4335501f85cf9d13109310cf3d7c2388d0f512b17f35f56eee7884f77bfa
+- evidence_id: cytb
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030689/
+  locator: Complete family type, description and hierarchy
+  summary: IPR030689 is the cytochrome-b family with the expected central quinone-binding
+    redox role in complex III.
+  support: supports
+  accessed_at: '2026-10-12T10:23:37Z'
+  snapshot_sha256: 21fc5d54f29fa99604389262d5718ea9d397824e29df3136d4e3bfdfad92b69d
+- evidence_id: cytc1
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002326/
+  locator: Complete family type and both description paragraphs
+  summary: IPR002326 is the cytochrome-c1 family; the description supports the bc1
+    core and coupled reaction. It also lists a recruited Nitrosomonas petC member,
+    so membership is not proof that every family hit forms bc1. The native record
+    makes no such inference.
+  support: supports
+  accessed_at: '2026-10-12T10:23:39Z'
+  snapshot_sha256: 8c89666bce6cb3689dbdcad495e45d0fe8127cb9197c97a40242bb1e83c1ab43
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1063
+  locator: Current species identity and former-name context
+  summary: Cereibacter sphaeroides is current taxon1063, matching the deposited organism
+    historically called Rhodobacter sphaeroides.
+  support: supports
+  accessed_at: '2026-10-12T10:23:36Z'
+  snapshot_sha256: 6786b8940b983f2c115679686c62d1f01961ac101e6555652a0a592ad2f7c8f2
+- evidence_id: pdb
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/2QJP
+  locator: Entry title, experimental method, resolution and primary citation
+  summary: 2QJP is the wild-type stigmatellin/antimycin-inhibited structure, with
+    the correct Esser2008 DOI and PMID18039651. Native wording does not confuse it
+    with the double-mutant entries from the same study.
+  support: supports
+  accessed_at: '2026-10-12T10:23:37Z'
+  snapshot_sha256: 1f31ed292bc683c6c2899944b4666244819eb07945bdd32e4db7ea086cd9c73a
+- evidence_id: assembly
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/2QJP/1
+  locator: Assembly1 multiplicity and global symmetry
+  summary: The author/software assembly has two copies of each of three polymer types.
+    This dimer of catalytic units is not a contradictory six-subunit core; the native
+    record asserts no numerical stoichiometry.
+  support: supports
+  accessed_at: '2026-10-12T10:23:37Z'
+  snapshot_sha256: d99dd3ed1423e9e106cc559ff911c0f50102178ea9ccdaa84de700db38888e66
+- evidence_id: citation
+  kind: authority
+  reference: https://api.crossref.org/works/10.1074/jbc.M708608200
+  locator: Full author list, title, DOI, print date, volume and pages; PMID metadata
+    independently checked
+  summary: The DOI, PMID, authors, journal and2008 print date agree. The2007 online
+    date is not a contradictory publication year.
+  support: supports
+  accessed_at: '2026-10-12T10:23:37Z'
+  snapshot_sha256: 0af040de371351fffbf9efe854541505706fc5fd603e876016194e713a696308
+- evidence_id: paper
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/5807477_Inhibitor-complexed_Structures_of_the_Cytochrome_bc1_from_the_Photosynthetic_Bacterium_Rhodobacter_sphaeroides
+  locator: 'Primary article text: abstract/introduction; Experimental Procedures;
+    overall structure and b/c1/ISP sections; inhibitor-binding opening; Fate of Subunit
+    IV; functional implications and positional-anisotropy discussion; selected captions'
+  summary: Esser2008 supports the bacterial catalytic core, redox constituents and
+    coarse reaction. The crystallized core lost accessory subunit IV. Stigmatellin
+    locks the Rieske head; the discussion distinguishes structural variability from
+    observed motion. Native NONMECHANISTIC scope does not claim a movie of catalysis.
+    This web-read body is not the403 local HTML capture.
+  support: supports
+  accessed_at: '2026-10-12T10:28:11Z'
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh complete28-dataset inventory
+  summary: No Cereibacter/Rhodobacter sphaeroides dataset is listed, so gene/module
+    lookup is not applicable to the cited example; no biological absence inference.
+  support: supports
+  accessed_at: '2026-10-12T10:28:11Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T102234Z-ciii/baseline-verification.json
+  locator: Fresh schema/strict/snippet receipts and hash-verified wider-check reuse
+  summary: All target checks pass; zero of28 citations carries a snippet. Wider QC987passed/3skipped,
+    label/trait cache limits, live CURIE4023OK/251skips and207-bundle/four-contract-test
+    checks are explicitly reused on unchanged maintained inputs, not fresh CI.
+  support: supports
+  accessed_at: '2026-10-12T10:28:11Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: Ignored-inclusive canonical target matching and local slug/label/identifier/issue-key
+    searches
+  summary: No canonical predecessor among207 bundles and no target legacy report in
+    the searched reports/research roots. No existing local use of the new issue key.
+    Historical GitHub corrections are retained, not remotely re-triaged.
+  support: supports
+  accessed_at: '2026-10-12T10:28:11Z'
+  search_scope: Path.rglob included hidden/ignored canonical bundles and histories.
+    rg --no-ignore --hidden searched reports/research by label,slug,GO ID and reviews/reports/research/curation/history
+    by new issue key. An initial nonexistent reports/yaml_category_review argument
+    caused exit2; the subsequent reports/research search completed and found only
+    reports/curie_check.tsv. No repository-wide or GitHub-wide absence claim.
+- evidence_id: entity-1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/2QJP/1
+  locator: Polymer identity, source taxonomy, deposited gene aliases and complete
+    SIFTS alignment
+  summary: Entity1 maps toQ02761 from taxon1063. Source gene aliases and protein identity
+    agree with the native note. Partial reference-sequence coverage is not claimed
+    to be a new full-length model.
+  support: supports
+  accessed_at: '2026-10-12T10:23:39Z'
+  snapshot_sha256: 5e8da634cd43b46b1fd284785c03e0c1ff6c2e6bbbbd90da1281fabacbaa2cd9
+- evidence_id: protein-q02761
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q02761.json
+  locator: Reviewed identity, genes, source taxon, function/subunit notes and all
+    InterPro cross-references
+  summary: The reviewed protein matches the source organism and native constituent.
+    Family/domain cross-references were checked as annotations, not independent proof
+    of complex assembly or component essentiality.
+  support: supports
+  accessed_at: '2026-10-12T10:23:40Z'
+  snapshot_sha256: e7735cdabb97caf68b9c821f79c7795a0bad1e1b1294c3e4e2b640df9d934141
+- evidence_id: entity-2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/2QJP/2
+  locator: Polymer identity, source taxonomy, deposited gene aliases and complete
+    SIFTS alignment
+  summary: Entity2 maps toQ02760 from taxon1063. Source gene aliases and protein identity
+    agree with the native note. Partial reference-sequence coverage is not claimed
+    to be a new full-length model.
+  support: supports
+  accessed_at: '2026-10-12T10:23:39Z'
+  snapshot_sha256: 7f25365bc6254443eb793a36e5a4c8499c9edcfc67d6f9398fa13c4e6ffb4f2a
+- evidence_id: protein-q02760
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q02760.json
+  locator: Reviewed identity, genes, source taxon, function/subunit notes and all
+    InterPro cross-references
+  summary: The reviewed protein matches the source organism and native constituent.
+    Family/domain cross-references were checked as annotations, not independent proof
+    of complex assembly or component essentiality.
+  support: supports
+  accessed_at: '2026-10-12T10:23:41Z'
+  snapshot_sha256: db0c0729b8e3750330653a16dfd5fdd41380e00a93018d1f201df8286905e95f
+- evidence_id: entity-3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/2QJP/3
+  locator: Polymer identity, source taxonomy, deposited gene aliases and complete
+    SIFTS alignment
+  summary: Entity3 maps toQ02762 from taxon1063. Source gene aliases and protein identity
+    agree with the native note. Partial reference-sequence coverage is not claimed
+    to be a new full-length model.
+  support: supports
+  accessed_at: '2026-10-12T10:23:39Z'
+  snapshot_sha256: f90c8d4ed7ba5a002744e8897197454b5e1ea6004b8cf57a5a490707f9f0eade
+- evidence_id: protein-q02762
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q02762.json
+  locator: Reviewed identity, genes, source taxon, function/subunit notes and all
+    InterPro cross-references
+  summary: The reviewed protein matches the source organism and native constituent.
+    Family/domain cross-references were checked as annotations, not independent proof
+    of complex assembly or component essentiality.
+  support: supports
+  accessed_at: '2026-10-12T10:23:41Z'
+  snapshot_sha256: a4e91737412bd308c04e6264d288689607432ad783271cfb2d08056bd8a99c6f
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Complex identity, synonyms and parentage
+  outcome: supported
+  summary: Exact whole-complex GO identity, energy category, multiprotein kind, seven
+    synonym scopes and is-a parent agree. This is not the related b6f complex or a
+    single Rieske protein.
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - native
+  - go
+  - paper
+- assessment_id: grounding
+  area: grounding
+  topic: Protein-family versus domain identifiers
+  outcome: concern
+  summary: Cytochrome b and c1 use verified family entries. Rieske uses a declared
+    domain as a protein-family identity in both component and graph. The matching
+    full protein and biological role are not disproven; the identity representation
+    and family attribution need correction.
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - native
+  - rules
+  - rieske-domain
+  - rieske-mapping
+  - rieske-family
+  - cytb
+  - cytc1
+- assessment_id: components
+  area: evidence
+  topic: Three core constituents, roles and essentiality
+  outcome: supported
+  summary: GO, primary structural text and deposited protein identities support the
+    three-member catalytic core and roles. ESSENTIAL is interpreted at complete-core
+    formation, not growth viability or the inability to form an incomplete subassembly.
+    Accessory subunit IV is not required by this generic core description.
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - native
+  - go
+  - paper
+  - entity-1
+  - entity-2
+  - entity-3
+- assessment_id: composition
+  area: quantity
+  topic: Source assembly versus universal composition
+  outcome: supported
+  summary: Assembly1 is a dimer of three-protein catalytic units. No native stoichiometric
+    or universal total-subunit claim is asserted. The cited structure loses subunit
+    IV during crystallization; this does not invalidate its use as a core example.
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - native
+  - assembly
+  - paper
+- assessment_id: function
+  area: evidence
+  topic: Whole-complex coupled electron transfer
+  outcome: supported
+  summary: Quinol oxidation, cytochrome-c reduction and proton translocation agree
+    with the GO molecular function and inspected primary context. Complete activity
+    is assigned to the complex, not to an isolated subunit.
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - native
+  - go
+  - paper
+- assessment_id: graph
+  area: graph
+  topic: All seven NONMECHANISTIC edges
+  outcome: concern
+  summary: All seven coarse reaction/contribution directions are supported at the
+    stated nonmechanistic level. Component nodes contribute to activity, avoiding
+    a fabricated b-to-Rieske electron path. The Rieske node repeats the domain-as-protein
+    identity finding; its biological contribution is supported. GO supports its core
+    membership while inspected primary text supplies mobility context.
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - native
+  - go
+  - cytb
+  - cytc1
+  - paper
+  - rieske-domain
+- assessment_id: provenance
+  area: provenance
+  topic: Taxonomy, citation and PDB-to-UniProt mappings
+  outcome: supported
+  summary: All cited stable identifiers resolve and the three deposition mappings
+    match. Gene aliases petB/fbcB and petA/fbcF are confirmed; fbcC is valid even
+    though UniProt also lists petC. No requirement to enumerate every alias is invented.
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - taxon
+  - pdb
+  - citation
+  - entity-1
+  - entity-2
+  - entity-3
+  - protein-q02761
+  - protein-q02760
+  - protein-q02762
+- assessment_id: scope
+  area: scope
+  topic: Optional fields and organism boundaries
+  outcome: supported
+  summary: The sole canonical example is correctly species-scoped. No prevalence census,
+    trait link, image, measured property or transcriptomics result is asserted. Empty
+    optional fields and a non-applicable adapter do not constitute findings.
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - native
+  - taxon
+  - adapter
+- assessment_id: checks
+  area: schema
+  topic: Validation versus scientific assessment
+  outcome: supported
+  summary: Fresh target gates pass and broader gates are explicitly reused on unchanged
+    bytes with their original limitations. The scientific finding is not inferred
+    from a validator failure; current source type inspection reveals it.
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - validation
+  - rieske-domain
+  - rieske-mapping
+- assessment_id: ownership
+  area: ownership
+  topic: Native status, histories and future correction owner
+  outcome: supported
+  summary: Entire YAML and both repository histories were read. Earlier alias/synonym
+    corrections are present. PROPOSED remains unchanged; a future fix belongs in maintained
+    YAML via the guarded writer, not generated pages. No prior finding disposition
+    is fabricated.
+  target_ids:
+  - GO:0045275
+  evidence_ids:
+  - native
+  - predecessors
+  - validation
+findings:
+- finding_id: F1
+  issue_key: complex-iii-rieske-entry-type
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Do not use an InterPro domain as the Rieske whole-protein family identity
+  description: The Rieske component and its GENE_OR_PROTEIN node both ground to IPR006317,
+    and the component evidence note calls that entry a family. Current standalone
+    and reviewed-protein InterPro responses instead classify it as a domain. The187-residue
+    Q02762 match spans10-187; matching almost all of this example does not turn a
+    domain accession into an integrated protein-family identity. This violates the
+    native grounding distinction, not the supported biological membership or reaction.
+    IPR014349 is a family but includes b6f Rieske and AioB, so replacing the identifier
+    with that broader family would create a different scope error.
+  target_ids:
+  - GO:0045275
+  field_paths:
+  - components[component_id=rieske_iron_sulfur_subunit].grounding
+  - components[component_id=rieske_iron_sulfur_subunit].evidence[reference=InterPro:IPR006317].notes
+  - causal_graphs[graph_id=complex_iii_quinol_cytochrome_c_coupling].nodes[node_id=rieske_iron_sulfur_subunit].grounding
+  evidence_ids:
+  - native
+  - rules
+  - rieske-domain
+  - rieske-mapping
+  - rieske-family
+  rule_id: review-checklist:component-identity-and-source-type
+  native_severity: major
+  normalization_reason: Wrong identifier granularity is used as formal component/node
+    identity and repeated as family evidence. This is a grounding defect, not merely
+    spelling; the complete complex identity and biological roles remain supported.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Reassess the Rieske whole-protein grounding and correct the family
+    attribution. Verify an exact whole-protein model across the intended scope before
+    substituting it. If none is established, remove the component and graph identity
+    groundings, use REVIEWED_LABEL_ONLY with specific grounding_notes on the component,
+    and retain IPR006317 as correctly typed domain evidence. Do not substitute the
+    broader IPR014349 merely because it is typed family.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0045275
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/respiratory_chain_complex_iii.yaml
+    role: maintained scientific record
+  generator: Use write_validated_structure and the documented product-generation workflow
+    for a separately authorized native correction.
+  acceptance_checks:
+  - Current authority responses establish the chosen identity type and exact component
+    scope, or an explicit reviewed-label-only decision records the unresolved identity.
+  - Both component and graph groundings agree; all IPR006317 prose distinguishes domain
+    evidence from whole-protein family identity.
+  - Preserve supported catalytic roles, source species, exact PDB mappings and PROPOSED
+    status; append real curation/history events only for the correction.
+  - Run native target validation and QC; save a lineage-linked successor retaining
+    complex-iii-rieske-entry-type and this exact occurrence.
+limitations:
+- Same-agent scientific review, not independent human sign-off or an exhaustive literature/retraction
+  survey.
+- 'Paper body inspected through the web-readable primary article reproduction, not
+  search snippets: introduction, methods, overall/core-subunit structure, inhibitor-binding
+  opening, subunit-IV and functional/anisotropy sections, and selected captions. Detailed
+  intervening insertion/lipid sections, supplements, figure pixels, raw diffraction
+  data and coordinate re-refinement were not inspected. No native quantitative claim
+  requires those omitted details.'
+- Direct ResearchGate HTML capture returned403 and was not used as paper text. ScienceDirect/JBC
+  web routes and the linked PDF were unavailable; publisher XML returned200 but contained
+  metadata only. No local body snapshot hash is claimed for the separately web-read
+  text.
+- All three PDB polymer mappings, current UniProt identities and assembly1 were inspected.
+  Assembly2, individual ligand instances and original coordinates were not reanalyzed;
+  no native claim about those omitted surfaces was added.
+- Fresh target gates passed; broader gates are verified reuse with original times/cache/skips,
+  not fresh GitHub CI. Source receipts contain18HTTP200 captures and one403; some
+  initial overlong prints were truncated, followed by complete focused identity/mapping
+  outputs.
+- Ignored-inclusive predecessor/search scope is bounded to the declared roots. No
+  remote issue-status or global absence claim. Existing external-publication approval
+  remains unanswered; no GitHub mutation or workaround.
+- Only this immutable issue-bearing bundle is written in the repository. No native
+  YAML, status, history, generated product or prior review is changed. The source-specific
+  match supports the Rieske example but cannot on its own settle a new exact family
+  grounding.
+tags:
+- scientific-review
+- energy-complex
+- grounding

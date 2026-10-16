@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/photosystem_i.yaml
+  slug: photosystem_i
+session:
+  id: 2026-10-16T014733Z-Codex-4b9838
+  timestamp: '2026-10-16T01:47:33Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2303
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - functions
+  - discussions
+  summary: Expose the unresolved Jordan source-taxon conflict and limit P700 wording to oxygenic
+    PSI.
+  details: 'Expose the unresolved Jordan source-taxon conflict and limit P700 wording to oxygenic
+    PSI. Inspected sources: Jordan et al. 2001 PMID:11418848 abstract; PDB:1JB0 entity1 source
+    organism; UniProtKB:P0A405 organism; GO:0009522 native generic and cyanobacterial scope.
+    Other claims and prior partial-review limitations remain outside this remediation scope.'

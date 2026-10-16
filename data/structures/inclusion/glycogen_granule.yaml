@@ -25,6 +25,12 @@ curation_history:
   changes: Changed the glycogen storage function from cyanobacterium-specific photosynthetically
     fixed carbon wording to taxon-neutral glucose-derived carbon and energy wording.
   llm_assisted: true
+- timestamp: '2026-10-16T01:51:27Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2319: Correct Damrow authorship and identify the citation as a primary
+    mutant study.'
+  llm_assisted: true
 components:
 - component_id: glycogen_core
   label: glycogen
@@ -36,8 +42,8 @@ components:
     carbon and energy during subsequent mobilization.
   evidence:
   - reference: DOI:10.3389/fmicb.2016.00966
-    notes: Koch et al. 2016 review cyanobacterial glycogen granules as carbohydrate
-      storage bodies formed during macronutrient starvation.
+    notes: Damrow, Maldener and Zilliges 2016 study cyanobacterial glycogen granules
+      as carbohydrate storage bodies formed during macronutrient starvation.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -58,12 +64,14 @@ functions:
     glycogen polymer that can be degraded when external nutrients limit growth.
   evidence:
   - reference: DOI:10.3389/fmicb.2016.00966
-    notes: Koch et al. 2016 review glycogen as a common microbial carbon polymer that
-      accumulates in Synechocystis during macronutrient starvation.
+    notes: Damrow, Maldener and Zilliges 2016 study glycogen as a common microbial
+      carbon polymer that accumulates in Synechocystis during macronutrient starvation.
 evidence:
 - reference: DOI:10.3389/fmicb.2016.00966
-  notes: Koch et al. 2016, The Multiple Functions of Common Microbial Carbon Polymers,
-    Frontiers in Microbiology.
+  notes: Damrow, Maldener and Zilliges 2016, The Multiple Functions of Common Microbial
+    Carbon Polymers, Glycogen and PHB, during Stress Responses in the Non-Diazotrophic
+    Cyanobacterium Synechocystis sp. PCC 6803. This is a comparative mutant study,
+    not a review.
 causal_graphs:
 - graph_id: glycogen_polymer_storage_granule
   title: Glycogen polymer forms carbon-storage granules
@@ -94,8 +102,8 @@ causal_graphs:
       granules.
     evidence:
     - reference: DOI:10.3389/fmicb.2016.00966
-      notes: Koch et al. 2016 discuss glycogen granule formation in starved Synechocystis
-        cells.
+      notes: Damrow, Maldener and Zilliges 2016 discuss glycogen granule formation
+        in starved Synechocystis cells.
   - subject: glycogen_granule
     predicate: stores
     object: carbon_energy_store
@@ -103,4 +111,5 @@ causal_graphs:
       glycogen polymer.
     evidence:
     - reference: DOI:10.3389/fmicb.2016.00966
-      notes: Koch et al. 2016 review glycogen as a microbial carbon storage polymer.
+      notes: Damrow, Maldener and Zilliges 2016 study glycogen as a microbial carbon
+        storage polymer.

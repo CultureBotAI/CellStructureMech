@@ -1,0 +1,733 @@
+schema_version: 1.0.0
+review_id: 20261012T103636Z-complex-iv-subunit-iv-grounding
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Complex IV subunit-IV grounding review
+started_at: '2026-10-12T10:32:53Z'
+finished_at: '2026-10-12T10:36:36Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no independent reviewer or human
+    sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Whole-record review completed with one major finding: bacterial aa3 subunit
+  IV uses a domain as protein-family identity. The explicitly scoped Paracoccus example,
+  four oxidase mappings, core reaction and seven coarse graph edges are otherwise
+  supported within the recorded limits.'
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+    sha256: f40c5dded5d838ec5384102d6ea7383e6fdb5e09ce6259b3ccc8eb66b5d7d40b
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/respiratory_chain_complex_iv/2026-09-24T062837Z-claude-code-cf6322.yaml
+    sha256: 60d04b6f3334745631b8fe33e73dec8222603eea09dae046cb0d99cd82b77e38
+    role: context
+  - path: history/records/respiratory_chain_complex_iv/2026-09-24T064021Z-claude-code-0690ce.yaml
+    sha256: 696aa36fb9b33b2692d14090dee68d51b02765b76667c19551318d25849a4131
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0045277
+  path: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+  label: respiratory chain complex IV
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+    role: maintained scientific record
+scope:
+  description: One complete native record and both histories; all material claims,
+    four component mappings, seven graph edges and every native stable identifier
+    assessed. No sampling.
+  selection: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0045277
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Actual UTC: 2026-10-12T10:33:13Z to 2026-10-12T10:33:15Z.'
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Actual UTC: 2026-10-12T10:33:15Z to 2026-10-12T10:33:20Z.'
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+    --report /private/tmp/csm-review-20261012T103209Z-civ/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate; zero of33 citations carries a snippet, so this is not
+    automated full-text verification. Actual UTC: 2026-10-12T10:33:20Z to 2026-10-12T10:33:40Z.'
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Original result reused after input and receipt hash checks. QC987passed/3skipped,
+    labels603no-adapter skips, cached TraitMech after earlier network failure. No
+    fresh CI. Actual UTC: 2026-10-12T06:33:07Z to 2026-10-12T06:45:16Z.'
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Original result reused after input and receipt hash checks. QC987passed/3skipped,
+    labels603no-adapter skips, cached TraitMech after earlier network failure. No
+    fresh CI. Actual UTC: 2026-10-12T06:45:16Z to 2026-10-12T06:47:16Z.'
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Original result reused after input and receipt hash checks. QC987passed/3skipped,
+    labels603no-adapter skips, cached TraitMech after earlier network failure. No
+    fresh CI. Actual UTC: 2026-10-12T06:48:15Z to 2026-10-12T06:48:52Z.'
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Original result reused on unchanged bytes. Live CURIE4023OK/251SKIP/0unreachable;208valid
+    bundles and4contract tests. New post-save archive/contract checks follow separately.
+    Actual UTC: 2026-10-12T07:05:41Z to 2026-10-12T07:10:58Z.'
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Original result reused on unchanged bytes. Live CURIE4023OK/251SKIP/0unreachable;208valid
+    bundles and4contract tests. New post-save archive/contract checks follow separately.
+    Actual UTC: 2026-10-12T10:28:46Z to 2026-10-12T10:30:13Z.'
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Original result reused on unchanged bytes. Live CURIE4023OK/251SKIP/0unreachable;208valid
+    bundles and4contract tests. New post-save archive/contract checks follow separately.
+    Actual UTC: 2026-10-12T10:30:13Z to 2026-10-12T10:31:48Z.'
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh inventory; no matching Paracoccus dataset. Actual UTC: 2026-10-12T10:33:02Z
+    to 2026-10-12T10:33:03Z.'
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - adapter
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+  locator: Entire YAML, all four component rows, seven graph edges, open discussion,
+    four native events and two repository histories
+  summary: Subunits II and III are deliberately label-only because their sources are
+    broad or domain-only. Subunit IV instead uses IPR012422 as protein-family grounding.
+    The discussion explicitly limits the initial component model to Paracoccus aa3
+    and leaves lineage expansion open.
+  support: supports
+  accessed_at: '2026-10-12T10:36:36Z'
+  snapshot_sha256: f40c5dded5d838ec5384102d6ea7383e6fdb5e09ce6259b3ccc8eb66b5d7d40b
+- evidence_id: rules
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent.grounding description; docs/CURATION.md integrated-family
+    distinction
+  summary: Protein grounding is a taxon-agnostic protein-family identity, not a promotion
+    of a domain or homologous superfamily to that identity. The native model supplies
+    REVIEWED_LABEL_ONLY plus grounding_notes for unresolved exact terms.
+  support: supports
+  accessed_at: '2026-10-12T10:36:36Z'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0045277,GO:0098803,GO:0004129
+  locator: Complete current term definitions, synonyms and explicit relationships
+  summary: Complex IV label/exact synonym and respiratory-chain is-a parent agree.
+    GO0004129 states cytochrome-c oxidation, oxygen reduction, water formation and
+    proton movement. The GO0045277 definition mentions13 polypeptides; that is not
+    used as a bacterial count, and the native record does not assert13.
+  support: supports
+  accessed_at: '2026-10-12T10:33:06Z'
+  snapshot_sha256: 4fedaed4526203c66e07b7d8bc77688beb32c886079188e05fa04810ddc8bf4d
+- evidence_id: subunit-i
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014241/
+  locator: Current family type, full description and hierarchy
+  summary: IPR014241 is a bacterial-type subunit-I family and supports the catalytic
+    heme-copper center. The native label is correspondingly bacterial; related quinol,
+    cbb3 and ba3 families remain distinct.
+  support: supports
+  accessed_at: '2026-10-12T10:33:09Z'
+  snapshot_sha256: 5c82e0338f01295a756fc6866eaec4fa075e78d815d4bc398c27a766fa14b1f9
+- evidence_id: subunit-ii-family
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045187/
+  locator: Full family description and quinol-oxidase children
+  summary: IPR045187 covers cytochrome-c/quinol oxidase subunit II and describes CuA
+    electron entry with a cbb3 exception. The native row declines it as an exact identity,
+    preserving its broad evidence scope.
+  support: supports
+  accessed_at: '2026-10-12T10:33:10Z'
+  snapshot_sha256: 7569c81f9f2dc440c34ccc4fb7ba8405a8e9090c6b6254abf81bd48b804317e0
+- evidence_id: subunit-ii-domain
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014222/
+  locator: Current domain type and complete description
+  summary: IPR014222 is cytochrome-c-specific subunit-II domain evidence, not an exact
+    whole-protein family; the record explicitly treats it that way. CuA detail is
+    supported by the other local family and deposited protein evidence, not this short
+    description alone.
+  support: supports
+  accessed_at: '2026-10-12T10:33:10Z'
+  snapshot_sha256: a3209b4d8e040bb47f07aece8e0a389ace4f45febe4d7fba9d8d4e67d27f3676
+- evidence_id: subunit-iii
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR024791/
+  locator: Complete family description and two quinol-oxidase child families
+  summary: The source includes related subunit-III proteins beyond cytochrome-c oxidases.
+    The label-only choice, aa3-scoped role and UNKNOWN assembly essentiality preserve
+    that uncertainty.
+  support: supports
+  accessed_at: '2026-10-12T10:33:11Z'
+  snapshot_sha256: a096452c0435d2cd5d18986ffc1b2845278f5525b4401243af2452ecd9fefe2f
+- evidence_id: subunit-iv-domain
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR012422/
+  locator: metadata.type, hierarchy type and complete description
+  summary: IPR012422 is a domain entry. Its single-transmembrane-helix description
+    supports the subunit-IV role but does not establish a protein-family identity.
+  support: refutes
+  accessed_at: '2026-10-12T10:33:12Z'
+  snapshot_sha256: bfefc778d553077a9936cdd7a74a6800b5670ba0ef807340c2e964e63e334131
+- evidence_id: subunit-iv-mapping
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P77921/
+  locator: Complete two-result response for reviewed P77921
+  summary: The50-residue source protein at taxon266 matches IPR012422 as a domain
+    at10-49 and IPR036596 as a homologous superfamily at8-50. This complete response
+    contains no integrated family; it is not a global claim that no exact model could
+    exist.
+  support: refutes
+  accessed_at: '2026-10-12T10:34:27Z'
+  snapshot_sha256: 0ae25e1b95d29a356e1b95529bba642150157e5a0ddeb8c96f598d8bb2eadd80
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/266
+  locator: Complete species record
+  summary: Taxon266 is Paracoccus denitrificans, matching the native example and all
+    four oxidase polymers.
+  support: supports
+  accessed_at: '2026-10-12T10:33:07Z'
+  snapshot_sha256: e3c7672b85749cd668a3ef41779234356674402d499021da0185849c72da6c9c
+- evidence_id: pdb
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/1QLE
+  locator: Full title, method, resolution and primary citation
+  summary: 1QLE is the completely oxidized four-subunit Paracoccus oxidase with an
+    antibody Fv fragment; the Harrenga/Michel1999 DOI and PMID10559205 match. The
+    native record makes no unsupported state or method claim.
+  support: supports
+  accessed_at: '2026-10-12T10:33:08Z'
+  snapshot_sha256: dc8121bd460e21f38ab1c61321f584f2f91e77e1bd1a9d815e23a302f0ad81c0
+- evidence_id: assembly
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/1QLE/1
+  locator: Software-defined assembly1 multiplicity and global/pseudo symmetry
+  summary: 'The assembly contains six polymer instances: four oxidase proteins plus
+    two antibody chains. Its hetero6-mer annotation is not an enzyme subunit count.
+    The native four-subunit oxidase description is correct.'
+  support: supports
+  accessed_at: '2026-10-12T10:33:08Z'
+  snapshot_sha256: 9a92acf91d6862f35850da774dfc2af31227ea46d03b600570d57006aed191d0
+- evidence_id: citation
+  kind: authority
+  reference: https://api.crossref.org/works/10.1074/jbc.274.47.33296
+  locator: Complete DOI/title/authors/print year, journal and pages; PMID metadata
+    independently inspected
+  summary: Harrenga and Michel,1999,JBC274:33296-33299 agree with the native source
+    attribution.
+  support: supports
+  accessed_at: '2026-10-12T10:33:08Z'
+  snapshot_sha256: 0cfe43270da76d7209b651c68156bc4e1e011a5d6ee5820d4158d1bcf031043d
+- evidence_id: paper
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/12742151_The_Cytochrome_c_Oxidase_from_Paracoccus_denitrificans_Does_Not_Change_the_Metal_Center_Ligation_upon_Reduction
+  locator: 'Entire main text: introduction, all Materials and Methods, Results and
+    Discussion; Table I and Figures1-2 captions'
+  summary: The study compared oxidized and reduced enzyme at100K using antibody-assisted
+    crystals and spectroscopy. It supports the bacterial oxygen-reducing proton-pumping
+    core. Its model-specific ligation conclusions are not promoted into a universal
+    dynamic mechanism; the native graph deliberately omits that detail. Figure pixels
+    and raw data were not reanalyzed.
+  support: supports
+  accessed_at: '2026-10-12T10:36:36Z'
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh complete28-dataset inventory
+  summary: No Paracoccus dataset is listed. Adapter gene/module search is not applicable
+    to this example, and no absence or mechanism inference is drawn.
+  support: supports
+  accessed_at: '2026-10-12T10:36:36Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T103209Z-civ/baseline-verification.json
+  locator: Fresh target receipts plus unchanged-input wider-check reuse
+  summary: Schema/strict/snippet gates pass; zero of33 citations carries a snippet.
+    Reused wider QC987passed/3skipped, label603no-adapter skips, cached traits, live
+    CURIE4023OK/251SKIP/0unreachable and208-bundle/four-contract-test receipts are
+    not fresh CI.
+  support: supports
+  accessed_at: '2026-10-12T10:36:36Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: Ignored-inclusive canonical and local text searches
+  summary: No canonical predecessor among208 bundles. The reports/research target
+    search found only the CURIE report, not a target legacy review. The proposed issue
+    key had no match in the declared local roots.
+  support: supports
+  accessed_at: '2026-10-12T10:36:36Z'
+  search_scope: Path.rglob includes hidden/ignored reviews and histories; rg --no-ignore
+    --hidden searched reports/research for GO0045277,label,slug and reviews/reports/research/curation/history
+    for complex-iv-subunit-iv-domain-grounding. No GitHub-wide or global-filesystem
+    absence claim.
+- evidence_id: entity-1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1QLE/1
+  locator: Polymer identity, source taxon and complete SIFTS alignment
+  summary: Entity1 maps toP98002 at taxon266, matching the native component evidence.
+    Deposited fragments are not claimed to be full reference sequences.
+  support: supports
+  accessed_at: '2026-10-12T10:33:12Z'
+  snapshot_sha256: 974fb055d6ec9c492fdaf3b0f3ea42c4c770214fd0d2a76c9553af0739fc51e1
+- evidence_id: protein-p98002
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P98002.json
+  locator: Reviewed identity, source taxon, gene aliases, function/subunit notes and
+    InterPro cross-references
+  summary: Protein identity and native source-gene aliases agree. Functional or domain
+    annotation alone is not treated as an assembly-essentiality experiment.
+  support: supports
+  accessed_at: '2026-10-12T10:33:13Z'
+  snapshot_sha256: 598306a09837b8371d03ecb118ef48ab4b45a0261bc220083e15cb876595287c
+- evidence_id: entity-2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1QLE/2
+  locator: Polymer identity, source taxon and complete SIFTS alignment
+  summary: Entity2 maps toP08306 at taxon266, matching the native component evidence.
+    Deposited fragments are not claimed to be full reference sequences.
+  support: supports
+  accessed_at: '2026-10-12T10:33:12Z'
+  snapshot_sha256: e532c9f189d88142ca90ef59ff1608ee3f9ebd0f1d3bbbd3a09b807492bb7935
+- evidence_id: protein-p08306
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P08306.json
+  locator: Reviewed identity, source taxon, gene aliases, function/subunit notes and
+    InterPro cross-references
+  summary: Protein identity and native source-gene aliases agree. Functional or domain
+    annotation alone is not treated as an assembly-essentiality experiment.
+  support: supports
+  accessed_at: '2026-10-12T10:33:14Z'
+  snapshot_sha256: 839510ccd4a940524eafe968c56a044313929f48717017a3a43e9fea813f78ea
+- evidence_id: entity-3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1QLE/3
+  locator: Polymer identity, source taxon and complete SIFTS alignment
+  summary: Entity3 maps toP06030 at taxon266, matching the native component evidence.
+    Deposited fragments are not claimed to be full reference sequences.
+  support: supports
+  accessed_at: '2026-10-12T10:33:12Z'
+  snapshot_sha256: 281a5800fa2785396ef61d82b8a894f4b8692483419adc716048d38c49f22b72
+- evidence_id: protein-p06030
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P06030.json
+  locator: Reviewed identity, source taxon, gene aliases, function/subunit notes and
+    InterPro cross-references
+  summary: Protein identity and native source-gene aliases agree. Functional or domain
+    annotation alone is not treated as an assembly-essentiality experiment.
+  support: supports
+  accessed_at: '2026-10-12T10:33:14Z'
+  snapshot_sha256: fbf04c50ee82816571222715865dae284f1fd10b55c6836e2b80ab98ae758018
+- evidence_id: entity-4
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1QLE/4
+  locator: Polymer identity, source taxon and complete SIFTS alignment
+  summary: Entity4 maps toP77921 at taxon266, matching the native component evidence.
+    Deposited fragments are not claimed to be full reference sequences.
+  support: supports
+  accessed_at: '2026-10-12T10:33:12Z'
+  snapshot_sha256: 5faf24d8e0ce63e1d0779eb09767ff2552d7382fb195db0eac24e5deae36e6b5
+- evidence_id: protein-p77921
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P77921.json
+  locator: Reviewed identity, source taxon, gene aliases, function/subunit notes and
+    InterPro cross-references
+  summary: Protein identity and native source-gene aliases agree. Functional or domain
+    annotation alone is not treated as an assembly-essentiality experiment.
+  support: supports
+  accessed_at: '2026-10-12T10:33:15Z'
+  snapshot_sha256: 293a06fd2f4a1d665ed4eef2dfdc0808cfdd659d90ce468e613a13b951e9b4c7
+- evidence_id: entity-5
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1QLE/5
+  locator: Polymer name and source organism
+  summary: This polymer is an antibody Fv chain, not a fifth or sixth oxidase subunit.
+  support: supports
+  accessed_at: '2026-10-12T10:34:28Z'
+  snapshot_sha256: 4861c8f8fb9ed852a8bef8324dcd3c635387ba4a3b1a53b9fc484438e8fe33b1
+- evidence_id: entity-6
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1QLE/6
+  locator: Polymer name and source organism
+  summary: This polymer is an antibody Fv chain, not a fifth or sixth oxidase subunit.
+  support: supports
+  accessed_at: '2026-10-12T10:34:28Z'
+  snapshot_sha256: 60597d7d42807b818f0260bd3fe11cd38f1ced7d7a4353cbca968f48c7e58810
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Complex IV identity, definition and parentage
+  outcome: supported
+  summary: The exact cytochrome-c oxidase complex synonym, reaction and primary bacterial
+    example agree. GO source prose with13 polypeptides is not a basis for assigning
+    that count to Paracoccus. No native universal count is asserted.
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - native
+  - go
+  - paper
+  - pdb
+- assessment_id: grounding
+  area: grounding
+  topic: All four component groundings
+  outcome: concern
+  summary: Subunit I has the intended bacterial family. Subunits II/III correctly
+    preserve broad/domain evidence without asserting exact grounding. Subunit IV inconsistently
+    uses a domain accession as its whole-protein family identity.
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - native
+  - rules
+  - subunit-i
+  - subunit-ii-family
+  - subunit-ii-domain
+  - subunit-iii
+  - subunit-iv-domain
+  - subunit-iv-mapping
+- assessment_id: composition
+  area: quantity
+  topic: Four oxidase subunits versus crystallization chains
+  outcome: supported
+  summary: All four oxidase entity-to-UniProt mappings match the native notes. The
+    two extra chains are antibody fragments. The source-specific four-subunit model
+    and UNKNOWN flags for III/IV do not assert universal accessory composition.
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - pdb
+  - assembly
+  - paper
+  - entity-1
+  - entity-2
+  - entity-3
+  - entity-4
+  - entity-5
+  - entity-6
+- assessment_id: components
+  area: scope
+  topic: Roles, aliases and initial-model scope
+  outcome: supported
+  summary: The open discussion explicitly anchors the first component model to Paracoccus
+    aa3 and warns against collapsing mitochondrial,cbb3,ba3,caa3 variants into it.
+    Within that scope I/II form the catalytic core, III is membrane-associated and
+    IV is a small single-pass constituent. The known cbb3 CuA exception is not evidence
+    that the Paracoccus row is false. Source-neutral lineage expansion remains an
+    acknowledged TODO, not a claim of completed universal coverage.
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - native
+  - subunit-i
+  - subunit-ii-family
+  - subunit-iii
+  - subunit-iv-domain
+  - protein-p98002
+  - protein-p08306
+  - protein-p06030
+  - protein-p77921
+- assessment_id: function
+  area: evidence
+  topic: Coupled cytochrome-c oxidation and oxygen reduction
+  outcome: supported
+  summary: GO0004129 and the inspected primary paper support electron donor/acceptor
+    identity, water formation and proton translocation. The entire reaction belongs
+    to the complex, not isolated subunit II.
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - native
+  - go
+  - paper
+- assessment_id: graph
+  area: graph
+  topic: All seven coarse FUNCTION edges
+  outcome: supported
+  summary: Seven described enable/contribution/substrate/product directions agree
+    at NONMECHANISTIC resolution with the stated initial component model. No histidine
+    exchange, channel pathway, or movement is asserted. The subunit-IV grounding defect
+    is not repeated in this graph because no subunit-IV node exists.
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - native
+  - go
+  - subunit-i
+  - subunit-ii-domain
+  - subunit-ii-family
+  - protein-p08306
+  - paper
+- assessment_id: provenance
+  area: provenance
+  topic: Source species, genes and citation identities
+  outcome: supported
+  summary: Species266, four UniProt identities, ctaDII/ctaC/ctaB/coiI/ctaE/coiII/ctaH
+    source aliases and DOI/PMID match. Generic gene names from family descriptions
+    are not recast as aliases of every source protein.
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - taxon
+  - citation
+  - pdb
+  - protein-p98002
+  - protein-p08306
+  - protein-p06030
+  - protein-p77921
+  - subunit-i
+- assessment_id: completeness
+  area: completeness
+  topic: Optional fields and acknowledged gaps
+  outcome: supported
+  summary: No image, quantitative property, taxonomic prevalence, trait link or hosted
+    dataset is asserted. Missing optional content and explicit lineage/grounding TODOs
+    are not independent defects. The existing incorrect subunit-IV identity, rather
+    than an empty slot, warrants this bundle.
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - native
+  - adapter
+  - subunit-iv-domain
+- assessment_id: checks
+  area: schema
+  topic: Native gates and scientific evidence
+  outcome: supported
+  summary: Target gates pass. The authority type mismatch is a scientific grounding
+    finding that syntactic validation cannot detect. Wider checks are exact reuse
+    with original limitations.
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - validation
+  - subunit-iv-domain
+- assessment_id: ownership
+  area: ownership
+  topic: History, status and correction ownership
+  outcome: supported
+  summary: Both append-only histories and all native events were read. Earlier bacterial-label
+    and domain-evidence fixes are present. No current remote issue status is inferred.
+    PROPOSED remains unchanged; later fixes belong in maintained YAML through the
+    guarded writer.
+  target_ids:
+  - GO:0045277
+  evidence_ids:
+  - native
+  - predecessors
+  - validation
+findings:
+- finding_id: F1
+  issue_key: complex-iv-subunit-iv-domain-grounding
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Do not ground the subunit-IV protein family to an InterPro domain
+  description: The bacterial aa3 subunit-IV component grounds to IPR012422, but both
+    the standalone entry and the reviewed P77921 combined endpoint classify it as
+    a domain. The component-grounding slot requires a taxon-agnostic protein-family
+    identity. Its example matches the domain at residues10-49 of50; a small single-domain
+    protein does not change the accession type. The only other returned InterPro assignment
+    is homologous superfamily IPR036596. Preserve the supported subunit identity and
+    membership while correcting the formal grounding, consistently with the label-only
+    treatment already used for subunits II and III.
+  target_ids:
+  - GO:0045277
+  field_paths:
+  - components[component_id=bacterial_aa3_subunit_iv].grounding
+  evidence_ids:
+  - native
+  - rules
+  - subunit-iv-domain
+  - subunit-iv-mapping
+  - protein-p77921
+  rule_id: review-checklist:component-identity-and-source-type
+  native_severity: major
+  normalization_reason: A domain accession is used as formal whole-protein-family
+    identity. This is a wrong grounding granularity, not a refutation of the subunit
+    role or a missing optional field.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Verify an exact protein-family model for bacterial aa3 subunit IV before
+    substituting an identifier. If none can be established, remove the component grounding,
+    set REVIEWED_LABEL_ONLY with specific grounding_notes, and retain IPR012422 as
+    explicitly domain-level evidence. Do not substitute the homologous superfamily.
+    Preserve source-supported component membership and do not change essentiality
+    solely from a functional annotation.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0045277
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+    role: maintained scientific record
+  generator: Guarded native writer and documented product workflow for a separately
+    authorized correction.
+  acceptance_checks:
+  - Exact proposed family type and scope are verified against the reviewed source
+    protein, or the label-only rationale records what remains unresolved.
+  - IPR012422 is not asserted as protein-family identity; domain evidence and correct
+    P77921/PDB mappings remain traceable.
+  - Native PROPOSED status preserved, with real curation/history events only for the
+    later correction.
+  - Fresh target gates/QC and a lineage-linked successor retaining complex-iv-subunit-iv-domain-grounding
+    and this exact occurrence.
+limitations:
+- Same-agent review, not independent human sign-off or exhaustive literature/retraction
+  surveillance.
+- The full primary main text, Table I and Figures1-2 captions were inspected through
+  the web-readable reproduction. Figure pixels, original diffraction data, coordinates
+  and raw spectra were not reanalyzed. The JBC PDF route was unavailable; no local
+  article-body snapshot hash is claimed.
+- Current GO definition contains13-polypeptide wording. The native bacterial example
+  is verified directly, not by importing that count; this review does not certify
+  all possible lineage-specific component models or resolve the open cross-lineage
+  TODO.
+- The P77921 combined response contains only a domain and homologous superfamily.
+  This is a bounded source result, not an exhaustive proof that no suitable Pfam/NCBIfam/family
+  identifier can ever be established.
+- Fresh target gates and22successful public-source captures; wider checks reused on
+  unchanged bytes with original cache/skips, not fresh CI. All six PDB polymer identities
+  and assembly1 were inspected, but individual ligand instances and raw coordinates
+  were not analyzed.
+- No new GitHub issue, PR, push or merge. Existing external-publication approval remains
+  unanswered; no workaround. No scientific YAML, status, history, generated product
+  or prior review is changed.
+tags:
+- scientific-review
+- energy-complex
+- grounding

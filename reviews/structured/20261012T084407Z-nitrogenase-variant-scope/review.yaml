@@ -1,0 +1,723 @@
+schema_version: 1.0.0
+review_id: 20261012T084407Z-nitrogenase-variant-scope
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Nitrogenase cross-variant composition and family-scope review
+started_at: '2026-10-12T08:37:37Z'
+finished_at: '2026-10-12T08:44:07Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no separate reviewer or human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Whole-record scientific review completed: one major finding for generic
+  tetrameric catalytic-component wording and one minor finding for an over-narrow
+  family-scope rationale. Generic identity, parents, bounded Mo example and coarse
+  reaction are supported. GO itself retains conflicting composition prose; the review
+  preserves that conflict.'
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/nitrogenase_complex.yaml
+    sha256: 42214d8ca0f0b2b1eb05c9b6b0fd64526be03948a282ad746985abacf01b78b2
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/nitrogenase_complex/2026-09-24T044401Z-codex-e57a71.yaml
+    sha256: 4bbee2af8e87c33e221ea5dda1857ad656f4aad90c7689c49323c1ab5dbe7aa7
+    role: context
+  - path: history/records/nitrogenase_complex/2026-09-24T045353Z-codex-3c4b28.yaml
+    sha256: cb8dd767aeb9d74918cabc33bb889bc8e5180ab83865af5835bf687b178def61
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0016610
+  path: data/structures/energy_complex/nitrogenase_complex.yaml
+  label: nitrogenase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrogenase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: One entire native record, all material claims and eight graph edges,
+    two retained history entries, source-native authorities and bounded primary structural
+    counterexamples; no sampling.
+  selection: data/structures/energy_complex/nitrogenase_complex.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0016610
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/nitrogenase_complex.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target check with actual UTC/log receipts. '
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/energy_complex/nitrogenase_complex.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target check with actual UTC/log receipts. '
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/energy_complex/nitrogenase_complex.yaml
+    --report /private/tmp/csm-review-20261012T083700Z-nitrogenase/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Fresh target check with actual UTC/log receipts. Zero of23 citations carry
+    snippets; not full-text validation.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T06:45:16Z after unchanged scientific-input
+    verification. QC987passed/3skipped; labels603 no-adapter skips; cached trait index.
+    Not a fresh execution or CI result.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T06:47:16Z after unchanged scientific-input
+    verification. QC987passed/3skipped; labels603 no-adapter skips; cached trait index.
+    Not a fresh execution or CI result.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T06:48:52Z after unchanged scientific-input
+    verification. QC987passed/3skipped; labels603 no-adapter skips; cached trait index.
+    Not a fresh execution or CI result.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T07:10:58Z; log hash and unchanged
+    inputs verified. Live CURIE4023OK/251skips, archive201valid, contract4passed.
+    Fresh post-save archive/contract checks follow.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T08:34:10Z; log hash and unchanged
+    inputs verified. Live CURIE4023OK/251skips, archive201valid, contract4passed.
+    Fresh post-save archive/contract checks follow.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T08:36:28Z; log hash and unchanged
+    inputs verified. Live CURIE4023OK/251skips, archive201valid, contract4passed.
+    Fresh post-save archive/contract checks follow.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - validation
+- check_id: adapter-sandbox-attempt
+  name: adapter-sandbox-attempt
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 2
+  status: failed
+  required: false
+  summary: Initial inventory read failed on sandbox DNS; retained honestly. Approved
+    read-only retry succeeded below.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - adapter
+- check_id: adapter-live
+  name: adapter-live
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: Fresh complete28-dataset inventory; exact exemplar not covered. Target-specific
+    query not applicable; no negative biological inference.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - adapter
+- check_id: draft-contract-corrected
+  name: Initial draft contract validation
+  command: .venv/bin/python scripts/record_review.py validate /private/tmp/csm-review-20261012T083700Z-nitrogenase/observation.yaml
+  exit_code: 1
+  status: failed
+  required: false
+  summary: Draft described an executed adapter failure with exit2 as unavailable.
+    Corrected to failed; the separately recorded approved retry passed. Scientific
+    findings unchanged, and corrected draft is validated before save.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/energy_complex/nitrogenase_complex.yaml
+  locator: Entire YAML and both append-only history events
+  summary: Generic Mo/V/Fe-only scope is explicit in the component notes and discussion,
+    while definition, dinitrogenase role and graph descriptions call the catalytic
+    component tetrameric. The grounding rationale also describes the named NifH family
+    as narrower molybdenum-iron coverage.
+  support: supports
+  accessed_at: '2026-10-12T08:43:27Z'
+  snapshot_sha256: 42214d8ca0f0b2b1eb05c9b6b0fd64526be03948a282ad746985abacf01b78b2
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016610,GO:0140535,GO:1990204,GO:0016163
+  locator: 'All four active terms: definitions, names, aspects and child relationships'
+  summary: Correct generic identity and both is-a parents. GO itself currently describes
+    tetrameric dinitrogenase; the native record accurately follows that authority.
+    GO activity supplies the net ferredoxin/ATP reaction and ammonium/H2 endpoints.
+  support: supports
+  accessed_at: '2026-10-12T08:37:56Z'
+  snapshot_sha256: 774f90bd9932582e7984ccb8129f43094ce877f6c3ac978c294b641a7263b83e
+- evidence_id: go-variants
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016611,GO:0016612,GO:0016613
+  locator: Three subclass names and complete definitions; parent links established
+    by generic term children
+  summary: Generic nitrogenase subsumes iron-only, Mo-iron and V-iron forms. Current
+    subclass prose also contains older oligomer descriptions. This authority-versus-primary-evidence
+    conflict must be retained, not represented as a failed GO lookup.
+  support: supports
+  accessed_at: '2026-10-12T08:39:21Z'
+  snapshot_sha256: db99ef369533ca31aa1f3a228ade3eea1c41fc96a96e202d8b24296faeb7eaee
+- evidence_id: schindelin
+  kind: primary_source
+  reference: https://doi.org/10.1038/387370a0
+  locator: Complete PMID9163420 abstract; title/authors/DOI checked against Crossref
+    and RCSB
+  summary: The 1997 study captures association of Fe protein and MoFe protein stabilized
+    by ADP-tetrafluoroaluminate. It supports the bounded Mo docking example, not a
+    universal catalytic-subunit count.
+  support: supports
+  accessed_at: '2026-10-12T08:37:58Z'
+  snapshot_sha256: 2a307571d0fce62e82cdd7f862c6611f2f71d9d40c0ae0d0d3d4c5667a7c35be
+- evidence_id: pdb-mo
+  kind: database
+  reference: https://www.rcsb.org/structure/1N2C
+  locator: Entry, assembly1 and all three polymer entity records; species, entity
+    names, chains and citation
+  summary: 'A. vinelandii Mo-nitrogenase has two alpha, two beta and four NifH chains
+    in the deposited trapped assembly: a MoFe tetramer with two reductase dimers.
+    This does not imply that the generic record asserts an incorrect total hexamer.'
+  support: supports
+  accessed_at: '2026-10-12T08:37:59Z'
+  snapshot_sha256: 3891ca782d9016aa1c276b7d1a391e31c2bc0def95fce1f45e5c5a4884d14e02
+- evidence_id: nifh
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P00459.json
+  locator: Reviewed name, gene, organism and InterPro cross-references; linked from1N2C
+    entity3
+  summary: P00459 is A. vinelandii nitrogenase iron protein1, nifH1, confirming the
+    native entity3 note.
+  support: supports
+  accessed_at: '2026-10-12T08:39:28Z'
+  snapshot_sha256: 04158a48a73d0d31f1e7e5a78a275a52f00574169607a24ba5e59180d7cf2cf8
+- evidence_id: taxon
+  kind: authority
+  reference: NCBITaxon:354
+  locator: Complete ENA taxonomy record
+  summary: The canonical example is correctly identified as Azotobacter vinelandii
+    at species rank.
+  support: supports
+  accessed_at: '2026-10-12T08:37:56Z'
+  snapshot_sha256: 38679248614ff58289dae5e99ef4017b290943511d78cf2363f9e3bbfb759a33
+- evidence_id: sippel
+  kind: primary_source
+  reference: https://doi.org/10.1038/nchembio.2428
+  locator: PMC5563456 full main text, Results overall architecture, Figure1 caption
+    and Online Methods; figure pixels/supplement files not inspected
+  summary: Sippel and Einsle2017 directly resolve A. vinelandii VFe protein as VnfD2K2G2,
+    with two additional VnfG subunits. The material was purified from unmodified type-strain
+    cells grown with Mo depletion and vanadium. This is a counterexample to universally
+    tetrameric dinitrogenase.
+  support: refutes
+  accessed_at: '2026-10-12T08:39:26Z'
+  snapshot_sha256: e579699d18c0bbac023611ed1b093ce053db81d85b68330234f8e17803134ce8
+- evidence_id: pdb-v
+  kind: database
+  reference: https://www.rcsb.org/structure/5N6Y
+  locator: Entry primary citation and assembly1
+  summary: 'Current deposition agrees with the primary VFe structure: a six-chain
+    assembly and DOI10.1038/nchembio.2428.'
+  support: supports
+  accessed_at: '2026-10-12T08:39:27Z'
+  snapshot_sha256: 547cec88856b577f1edb292e31957bf5996c903856279ce4de09ef706eff5792
+- evidence_id: schmidt
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41594-023-01124-2
+  locator: 'PMC10803253: complete abstract/Main, relevant Results including purified
+    assembly/structure, and selected purification/cryo-EM/model-building Methods'
+  summary: Schmidt et al.2024 (online2023) report engineered R. capsulatus Fe-only
+    nitrogenase with an Anf(DGK)2 catalytic component and two bound AnfH2 dimers in
+    an ADP-AlF3-trapped complex. The catalytic component includes AnfG and is not
+    merely a tetramer.
+  support: refutes
+  accessed_at: '2026-10-12T08:39:49Z'
+  snapshot_sha256: 7359a6d2661166658c1758a101236ed639b5221bccaa80fe446d75043c53a0c3
+- evidence_id: pdb-fe
+  kind: database
+  reference: https://www.rcsb.org/structure/8OIE
+  locator: Entry citation, method and author-defined assembly1
+  summary: The deposited trapped whole Fe-nitrogenase assembly contains ten chains;
+    this is distinct from the six-chain catalytic component described in the paper.
+  support: supports
+  accessed_at: '2026-10-12T08:40:55Z'
+  snapshot_sha256: e722dd74be06a2ea2ea46ebf7e994e65a66a887ce898e588e415731da4fb2e1e
+- evidence_id: interpro
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005977/
+  locator: Full metadata, description, integrated signatures, hierarchy and representative
+    structure
+  summary: IPR005977 is named Nitrogenase iron protein NifH but its current representative
+    structure is iron-only AnfH,7QQA. The broader IPR000392 hierarchy also includes
+    chlorophyll-biosynthesis families, supporting the native warning against substituting
+    that broad family.
+  support: supports
+  accessed_at: '2026-10-12T08:37:57Z'
+  snapshot_sha256: b91ba43e58b435a4d4db4434788005d72e9550fdd946c4ccacaeb1a94258ff11
+- evidence_id: anfh-structure
+  kind: database
+  reference: https://www.rcsb.org/structure/7QQA
+  locator: Entry title/citation and entity1 UniProt mapping
+  summary: 7QQA is the MgADP-bound Fe protein of iron-only nitrogenase from A. vinelandii;
+    its polymer maps to C1DK95. This independently identifies the InterPro representative
+    as an alternative-nitrogenase reductase.
+  support: supports
+  accessed_at: '2026-10-12T08:39:27Z'
+  snapshot_sha256: a9ec735a620347d54698261be10e732ca98ac62acabd378ebc23290331bf8359
+- evidence_id: anfh-family
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/C1DK95.json
+  locator: Entry status, anfH gene/Avin_49000 locus, strain and InterPro cross-references
+  summary: The unreviewed A. vinelandii DJ AnfH entry carries IPR005977. Together
+    with the InterPro representative and PDB mapping, it refutes a Mo-only interpretation
+    of current family coverage. It does not establish exhaustive variant coverage
+    or a CURIE for the assembled homodimer.
+  support: refutes
+  accessed_at: '2026-10-12T08:39:49Z'
+  snapshot_sha256: 5b56dc3bffa97f76f8ef0c68cff14396ac65857c7ad1e1753535e0cbcf10317a
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh complete28-dataset inventory after an approved read-only network
+    retry
+  summary: No exact A. vinelandii dataset is available. Unrelated diazotroph coverage
+    is not substituted; no gene-query or expression-module conclusion is required
+    for this exemplar.
+  support: supports
+  accessed_at: '2026-10-12T08:43:27Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T083700Z-nitrogenase/baseline-verification.json
+  locator: Fresh schema/strict/snippet checks; hash-verified wider validation reuse
+  summary: Target checks pass; zero of23 citations carry snippets. Wider QC987passed/3skipped,
+    label/trait limitations and live CURIE checks are reused on unchanged scientific
+    inputs. Previous201-bundle archive and four contract tests are reused; fresh post-save
+    checks follow.
+  support: supports
+  accessed_at: '2026-10-12T08:43:27Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: Ignored-inclusive canonical scan plus rg -uu across reviews/reports/history/research/curation
+  summary: No canonical predecessor among201 bundles. The two retained history events
+    document creation and the earlier ammonium wording fix linked to issue1450/PR1449;
+    this review does not reopen or silently dispose of that historical issue.
+  support: supports
+  accessed_at: '2026-10-12T08:43:27Z'
+  search_scope: Path.rglob included hidden/ignored canonical bundles; rg -uu searched
+    slug, generic label, GO identifier, original primary DOI/PMID and both new issue
+    keys across reviews, reports/yaml_record_review, history, research and curation.
+    No remote issue-absence claim.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Generic structure identity and hierarchy
+  outcome: supported
+  summary: GO:0016610 correctly identifies the cross-variant nitrogenase complex.
+    Both parent relations are is-a, and no single protein or phenotype is substituted.
+    Keep this generic identity when correcting over-specific composition prose.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - native
+  - go
+  - go-variants
+- assessment_id: composition
+  area: quantity
+  topic: Catalytic-component stoichiometry across variants
+  outcome: concern
+  summary: The generic tetramer assertion conflicts with inspected alternative-nitrogenase
+    structures. A tetrameric D/K core must not be equated with the complete catalytic
+    component when G subunits are present. The native GO attribution is faithful,
+    but the scientific scope still needs qualification.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - native
+  - go
+  - go-variants
+  - pdb-mo
+  - sippel
+  - pdb-v
+  - schmidt
+  - pdb-fe
+  dimensions:
+  - name: variant_scope
+    value: Generic Mo-, V- and Fe-only nitrogenase
+    definition: Explicit intended scope of the native GO identity and component discussion.
+    evidence_ids:
+    - native
+    - go-variants
+  - name: experimental_examples
+    value: A. vinelandii Mo/V structures and engineered R. capsulatus Fe-only complex
+    definition: Bounded structural counterexamples, not an exhaustive census or universal
+      alternative-variant stoichiometry.
+    evidence_ids:
+    - pdb-mo
+    - sippel
+    - schmidt
+  - name: authority_conflict
+    value: GO prose retains older catalytic-component counts
+    definition: Identifier correctness does not independently establish biological
+      completeness.
+    evidence_ids:
+    - go
+    - go-variants
+    - sippel
+    - schmidt
+- assessment_id: grounding
+  area: grounding
+  topic: Label-only components and family-scope rationale
+  outcome: concern
+  summary: Keeping assembled components label-only is defensible and no replacement
+    CURIE is established. However, describing IPR005977 coverage as confined to narrower
+    Mo-associated NifH is misleading in light of its current AnfH representative and
+    matching protein annotation.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - native
+  - interpro
+  - anfh-structure
+  - anfh-family
+- assessment_id: example
+  area: scope
+  topic: Canonical organism and trapped Mo assembly
+  outcome: supported
+  summary: The1N2C example and NifH1 entity claim are accurate. Two reductase dimers
+    bound to a MoFe tetramer are not a contradiction of homodimeric reductase identity.
+    Native evidence already identifies the stabilized state; no constitutive in-vivo
+    particle is asserted.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - schindelin
+  - pdb-mo
+  - nifh
+  - taxon
+- assessment_id: function
+  area: evidence
+  topic: Nitrogen reduction and energy/electron donors
+  outcome: supported
+  summary: ATP consumption, reduced-ferredoxin donor and ammonium/H2 products match
+    the cited GO-level reaction. Native graph scope excludes donor choice and variant
+    chemistry; it does not assert a universal ATP/H2 ratio. Retain the earlier ammonium
+    correction.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - native
+  - go
+  - schindelin
+- assessment_id: graph
+  area: graph
+  topic: All eight NONMECHANISTIC edges
+  outcome: concern
+  summary: Six donor, ATP, contribution and product assertions are supported at the
+    stated coarse functional level. The docking and catalytic-component contribution
+    descriptions repeat unqualified tetramer wording and are included in the composition
+    finding. Docking itself is supported for the cited Mo example.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - native
+  - go
+  - pdb-mo
+  - schindelin
+  - sippel
+  - schmidt
+- assessment_id: completeness
+  area: completeness
+  topic: Optional fields and actionable discussions
+  outcome: supported
+  summary: No optional quantitative property, image, trait, distribution census or
+    transcriptomic claim requires invented supplementation. A variant-grounding TODO
+    is appropriate; revise its misleading family rationale rather than assuming a
+    universal protein-family or complex mapping.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - native
+  - interpro
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Source identity and reading boundaries
+  outcome: supported
+  summary: Every native stable reference resolves, including IPR005977 mentioned in
+    prose. Source-native data, full primary text, abstract-only evidence and computational
+    family membership are distinguished. No authority conflict is hidden as a validator
+    failure.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - go
+  - go-variants
+  - schindelin
+  - pdb-mo
+  - interpro
+  - validation
+- assessment_id: ownership
+  area: ownership
+  topic: Read-only review, status and history
+  outcome: supported
+  summary: Maintained YAML owns future corrections. Entire record and both append-only
+    history entries read; PROPOSED status and prior bytes remain unchanged. No prior
+    canonical finding is silently closed.
+  target_ids:
+  - GO:0016610
+  evidence_ids:
+  - native
+  - predecessors
+findings:
+- finding_id: F1
+  issue_key: nitrogenase-generic-dinitrogenase-stoichiometry
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Do not universalize tetrameric dinitrogenase across nitrogenase variants
+  description: The generic record expressly includes Mo-, V- and Fe-only forms, but
+    definition, component role and two graph descriptions call the complete catalytic
+    component tetrameric. Inspected primary structures include additional G subunits
+    in alternative catalytic components. GO currently has the same older wording,
+    so this is an authority-versus-primary-evidence conflict, not an incorrect transcription
+    of GO. Retain the generic identity; scope the Mo tetramer example and qualify
+    variant-dependent composition.
+  target_ids:
+  - GO:0016610
+  field_paths:
+  - definition
+  - components[dinitrogenase].role
+  - components[dinitrogenase].evidence[reference=GO:0016610]
+  - causal_graphs[nitrogenase_ferredoxin_dinitrogen_reduction].edges[nitrogenase_reductase
+    docks with dinitrogenase].description
+  - causal_graphs[nitrogenase_ferredoxin_dinitrogen_reduction].edges[dinitrogenase
+    contributes to nitrogenase_activity].description
+  evidence_ids:
+  - native
+  - go
+  - go-variants
+  - pdb-mo
+  - sippel
+  - schmidt
+  rule_id: review-checklist:components-stoichiometry-and-scope
+  native_severity: major
+  normalization_reason: Material composition scope inflation in a cross-variant record,
+    not an empty optional field. Correct GO identity and Mo exemplar prevent blocker
+    classification.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrogenase_complex.yaml
+    role: maintained scientific record
+- finding_id: F2
+  issue_key: nitrogenase-ipr005977-variant-scope
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the Mo-specific rationale for the NifH family
+  description: The component grounding rationale and discussion characterize the cited
+    NifH family among narrower molybdenum-iron families. Current IPR005977 instead
+    includes an iron-only AnfH structural representative and matching C1DK95 annotation.
+    Revise the rationale to reflect this coverage without claiming the family is exhaustive
+    across variants or suitable as an identifier for an assembled reductase homodimer.
+    The label-only component itself need not be replaced.
+  target_ids:
+  - GO:0016610
+  field_paths:
+  - components[nitrogenase_reductase].grounding_notes
+  - discussions[nitrogenase_variant_component_groundings].rationale
+  evidence_ids:
+  - native
+  - interpro
+  - anfh-structure
+  - anfh-family
+  rule_id: review-checklist:family-identity-and-source-scope
+  native_severity: minor
+  normalization_reason: Non-blocking explanatory scope defect; the maintained record
+    has not assigned the questionable family as a complex grounding, and the deferred-mapping
+    decision can remain.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrogenase_complex.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Generalize catalytic-component wording and qualify the Mo tetramer
+    example. Record the GO definition conflict explicitly and attach bounded primary
+    variant evidence. Keep the generic GO identity and correct existing reaction.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0016610
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrogenase_complex.yaml
+    role: maintained scientific record
+  generator: Native guarded writer and documented render/embedding workflow when required.
+  acceptance_checks:
+  - No generic field or graph description asserts universally tetrameric complete
+    dinitrogenase.
+  - Variant-specific examples distinguish catalytic core, full catalytic component
+    and trapped whole-enzyme assembly; no universal hexamer/decamer replacement.
+  - GO authority wording is represented honestly alongside the primary-evidence qualification;
+    generic identity and valid Mo example remain.
+  - Guarded curation event and append-only history; PROPOSED status retained; fresh
+    native validation/QC and lineage-linked successor.
+- action_id: A2
+  description: Correct the IPR005977 coverage explanation while retaining the defensible
+    label-only complex representation and broader NifH/frxC caution.
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0016610
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/nitrogenase_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Grounding note and discussion no longer imply IPR005977 excludes all alternative-nitrogenase
+    reductases.
+  - No claim that one observed AnfH match proves exhaustive family coverage or authorizes
+    a protein-family-to-homodimer equivalence.
+  - Maintain source/version context and validate the guarded correction; retain this
+    issue key in a supported successor disposition.
+limitations:
+- Same-agent review, not independent human sign-off or an exhaustive literature/retraction
+  survey.
+- Schindelin1997 was inspected as complete abstract plus deposited source-native structure
+  metadata, not its full article body or raw diffraction data.
+- Sippel2017 main article text, methods and captions were read; figure pixels, supplementary
+  files and raw data were not inspected. Schmidt2024 abstract/Main, relevant Results
+  and selected Methods were inspected, not every supplementary item, statistics table
+  or raw cryo-EM map. Structural examples are not an exhaustive variant survey.
+- C1DK95 is an unreviewed UniProt entry. The finding concerns observed authority coverage
+  corroborated by InterPro and PDB, not a new experimental family assignment or proof
+  that an exact generic-complex CURIE exists.
+- Initial public-source and adapter reads encountered sandbox DNS failure; approved
+  read-only retries succeeded. Browser PMC/Nature opens were unavailable, but the
+  two comparator bodies were obtained from Europe PMC XML and read directly.
+- Fresh target checks; wider checks are checksum-verified reuse with original caches/skips.
+  No fresh GitHub CI, issue creation, PR, merge or publication. Existing publication
+  approval remains unanswered.
+- This issue-only observation does not mutate native records, products, mapping status,
+  append-only history or earlier reviews.
+tags:
+- scientific-review
+- energy-complex
+- variant-scope
+- major
+- minor

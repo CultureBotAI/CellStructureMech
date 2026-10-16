@@ -148,7 +148,7 @@ causal_graphs:
     - Pfam:PF04728
   - node_id: lol_pathway
     label: Lol lipoprotein-trafficking pathway
-    node_type: GENE_OR_PROTEIN
+    node_type: PATHWAY
   - node_id: outer_membrane
     label: cell outer membrane
     node_type: STRUCTURE
@@ -203,14 +203,15 @@ causal_graphs:
         that can independently catalyze covalent anchoring of Braun lipoprotein to
         peptidoglycan.
   - subject: ldt_lpp
-    predicate: uses acceptor
+    predicate: uses acyl donor from
     object: thin_peptidoglycan
-    description: Lpp-anchoring L,D-transpeptidation uses meso-diaminopimelate in the
-      peptidoglycan stem peptide as the acceptor for the Lpp C-terminal lysine.
+    description: Lpp-anchoring L,D-transpeptidation uses a peptidoglycan stem as the
+      acyl donor; the epsilon-amino group of the Lpp C-terminal lysine is the acceptor,
+      forming the linkage to peptidoglycan meso-diaminopimelate.
     evidence:
     - reference: DOI:10.1128/JB.00084-07
-      notes: Magnet et al. 2007 mapped the E. coli Lpp-peptidoglycan linkage to the
-        meso-diaminopimelate residue of a disaccharide-tripeptide muropeptide.
+      notes: Magnet et al. 2007 identify Braun lipoprotein as the protein acyl acceptor
+        in L,D-transpeptidation and characterize the Lpp-peptidoglycan linkage.
   - subject: mature_lpp
     predicate: forms
     object: lpp_pg_tether
@@ -254,6 +255,12 @@ curation_history:
   changes: Added an ASSEMBLY graph for Lpp maturation, Lol trafficking to the outer
     membrane, and L,D-transpeptidase-mediated peptidoglycan tethering; anchored Lpp
     nodes with exact UniProt and Pfam identifiers.
+  llm_assisted: true
+- timestamp: '2026-10-16T01:50:49Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2313: Correct peptidoglycan/Lpp acyl donor-acceptor direction and type
+    Lol as a pathway.'
   llm_assisted: true
 datasets:
 - accession: S-BIAD2294

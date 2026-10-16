@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/gas_vesicle.yaml
+  slug: gas_vesicle
+session:
+  id: 2026-10-16T015126Z-Codex-34bbd6
+  timestamp: '2026-10-16T01:51:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2318
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Correct the Bayro first-author attribution without changing rejected shell or GvpC
+    findings.
+  details: 'Correct the Bayro first-author attribution without changing rejected shell or
+    GvpC findings. Inspected sources: PubMed PMID:22147705 author list. Other claims and prior
+    partial-review limitations remain outside this remediation scope.'

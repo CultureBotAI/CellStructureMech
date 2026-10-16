@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/respiratory_chain_complex_iv.yaml
+  slug: respiratory_chain_complex_iv
+session:
+  id: 2026-10-16T014909Z-Codex-1b994d
+  timestamp: '2026-10-16T01:49:09Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2309
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Retain bacterial aa3 subunit IV label-only instead of using a domain grounding.
+  details: 'Retain bacterial aa3 subunit IV label-only instead of using a domain grounding.
+    Inspected sources: InterPro IPR012422 metadata.type=domain; Native PDB:1QLE membership
+    retained. Other claims and prior partial-review limitations remain outside this remediation
+    scope.'

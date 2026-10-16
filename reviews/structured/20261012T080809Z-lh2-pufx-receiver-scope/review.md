@@ -1,0 +1,659 @@
+# LH2 receiving-core scope review
+
+- Review: 20261012T080809Z-lh2-pufx-receiver-scope
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-12T08:00:26Z
+- Finished UTC: 2026-10-12T08:08:09Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Whole-record review completed with one minor wording issue: explicitly scope the PufX-bearing receiving core to the cited organism example. LH2 identity, hierarchy, example and coarse light-harvesting function are supported within the stated reading limits.
+
+## Scope And Provenance
+
+One entire native record, every material assertion, all three graph edges and creation history; no sampling.
+
+Selection: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base e74d0c3e33df7e44348afbba1695b61c23262ab0.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml | maintained | LH2 peripheral light-harvesting antenna complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | Fresh target check. Actual logs and timestamps retained in operational receipts. |
+| strict | passed | True | cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | Fresh target check. Actual logs and timestamps retained in operational receipts. |
+| snippets | passed | True | cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | Fresh target check. Zero of14 citations carry snippets; not a full-text check. |
+| reused-release-qc | passed | True | cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | Reused actual result from 2026-10-12T06:45:16Z on the hash-verified unchanged local commit. QC987/3 skipped; labels603 no-adapter skips; trait index cached. Not a new execution or CI result. |
+| reused-release-labels | passed | True | cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | Reused actual result from 2026-10-12T06:47:16Z on the hash-verified unchanged local commit. QC987/3 skipped; labels603 no-adapter skips; trait index cached. Not a new execution or CI result. |
+| reused-release-traits | passed | True | cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | Reused actual result from 2026-10-12T06:48:52Z on the hash-verified unchanged local commit. QC987/3 skipped; labels603 no-adapter skips; trait index cached. Not a new execution or CI result. |
+| reused-curies-live | passed | True | cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | Reused actual result from 2026-10-12T07:10:58Z with log hash and unchanged inputs verified. Live CURIE4023 OK/251 skips, archive198 valid, contract4 passed. Fresh post-save archive and contract checks follow separately. |
+| reused-post-save-archive | passed | True | cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | Reused actual result from 2026-10-12T07:36:57Z with log hash and unchanged inputs verified. Live CURIE4023 OK/251 skips, archive198 valid, contract4 passed. Fresh post-save archive and contract checks follow separately. |
+| reused-post-save-contract | passed | True | cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | Reused actual result from 2026-10-12T07:39:42Z with log hash and unchanged inputs verified. Live CURIE4023 OK/251 skips, archive198 valid, contract4 passed. Fresh post-save archive and contract checks follow separately. |
+| adapter-datasets | passed | False | cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex | Fresh28-dataset inventory; exact example not covered, so gene queries not applicable. Noncoverage is not negative evidence. |
+
+## Scientific And Domain Assessments
+
+### Identity, definition, synonyms and hierarchy
+
+identity: supported. Targets: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex.
+
+Peripheral LH2 antenna identity is distinct from the LH1 core or whole chromatophore. Local identifier, protein-complex kind, GO parent and membrane parthood agree with inspected sources.
+
+### Distribution and canonical example
+
+scope: supported. Targets: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex.
+
+Purple-bacterial rather than general bacterial distribution is supported. RARE is treated as qualitative restriction, not a measured prevalence. Native Cereibacter name and historical Rhodobacter synonym correctly identify the AFM exemplar.
+
+### Light capture and excitation transfer
+
+evidence: supported. Targets: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex.
+
+Bacteriochlorophyll-containing LH2 broadens light capture and transfers toward RC-LH1. The paper supports that bounded function; the location authority supplies membrane context, not independent spectroscopy.
+
+### All three NONMECHANISTIC edges and receiver scope
+
+graph: concern. Targets: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex.
+
+Membrane residence, transfer to core antenna and contribution to light harvesting are supported. Only the PufX-specific receiver wording needs an explicit example scope; evidence notes name the correct organism but graph-level wording can read as generic purple-bacterial composition.
+
+### Component boundaries and optional fields
+
+completeness: supported. Targets: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex.
+
+The explicit source-neutral alpha/beta-family and pigment-boundary TODO preserves uncertainty without guessing identifiers. No exact stoichiometry is asserted. Empty optional components, images, measurements, traits and datasets do not alone justify findings.
+
+### Identifiers, source identity and access
+
+provenance: supported. Targets: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex.
+
+All native stable references resolved. Both primary DOI/PMID identities were checked. Relevant inspected body text and complete abstracts are distinguished from inaccessible later text and uninspected figures; no source snippet is asserted as a verified quotation.
+
+### Maintained owner and status
+
+ownership: supported. Targets: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex.
+
+Native YAML owns any later guarded correction. Entire record and creation history read; PROPOSED status, native bytes and history remain unchanged. No predecessor is silently closed.
+
+## Findings
+
+### F1: Scope the PufX-bearing receiving core to its organism example
+
+minor / open / confirmed; issue key: lh2-pufx-receiver-scope-qualification.
+
+The broadly purple-bacterial LH2 record uses RC-LH1-PufX in graph description, scope and receiver/edge wording without a graph-level organism qualifier. Attached evidence notes correctly identify Rhodobacter sphaeroides, but a reader or graph consumer can interpret PufX as generic purple-bacterial core composition. Explicitly scope this graph to the cited Cereibacter example, or use a generic RC-LH1 receiver and retain PufX as an example-specific qualification. Do not narrow the entire LH2 identity to one species.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Add explicit Cereibacter sphaeroides scope to the graph and PufX-specific receiver, or use generic RC-LH1 wording with a bounded PufX example. Retain the broad LH2 definition and already correct organism-specific evidence.
+
+- Graph-level scope and receiver/edge wording do not imply PufX in every purple-bacterial core.
+- The cited Cereibacter/Rhodobacter example remains represented accurately; no claim that PufX has no role or is genomically absent elsewhere.
+- Guarded write with llm_assisted curation event and append-only history; status remains PROPOSED.
+- Fresh native target validation and QC, plus lineage-linked successor disposition retaining this finding.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml; Entire YAML and append-only creation history | supports | Definition and function use generic RC-LH1. The graph title, scope and receiver description use purple-bacterial wording with an RC-LH1-PufX receiver; attached literature notes name the Rhodobacter example but the graph scope itself does not. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030076,GO:0042717,GO:0009765; Complete active names, definitions, aspects and relationships | supports | Light-harvesting-complex parent, chromatophore-membrane parthood and biological-process endpoint agree. |
+| location | uniprot.location:SL-0042; Complete location definition and GO mapping | supports | Purple photosynthetic bacterial chromatophore membranes contain reaction centers and antenna complexes and derive from the plasma membrane. This authority is not an LH2-specific prevalence census. |
+| bahatyrova-abstract | DOI:10.1038/nature02823; Complete PubMed abstract, PMID15329728; Crossref identity verified separately | supports | Native AFM reveals LH2 light-capture domains interconnecting RC-LH1-PufX arrays and larger clusters. LH1 acts as an energy collection hub before transfer to the reaction center. |
+| bahatyrova-body | https://eprints.whiterose.ac.uk/id/eprint/102/1/huntercn1.pdf; Public PDF text returned by web access: article pages1058-1060 and opening portion of1061; later text and figure pixels not inspected | supports | The experiment is explicitly wild-type Rhodobacter sphaeroides. Inspected text supports peripheral pigment-protein LH2, native membrane organization and LH2-to-LH1-to-RC excitation flow. It does not establish PufX as universal to purple-bacterial core complexes. |
+| ranck | DOI:10.1016/j.bbabio.2005.08.002; Complete PubMed abstract, PMID16139787; Crossref title and DOI verified separately | supports | In an LH2-deficient Rubrivivax gelatinosus mutant, isolated core organization agreed with intact mutant membranes. Detected components were RC, tetraheme cytochrome c and LH1 alpha/beta; no additional PufX-role protein was detected. This bounded comparator argues against universal PufX wording; it does not measure LH2 transfer in the mutant or prove genomic absence. |
+| taxon | NCBITaxon:1063; ENA current name, rank and synonyms; NCBITaxon2 separately resolved | supports | Cereibacter sphaeroides is the current species name with Rhodobacter sphaeroides among its synonyms; Bacteria is the correct broader taxon. |
+| adapter | https://imodulondb.org/; Fresh complete 28-dataset inventory | supports | No dataset for the native Cereibacter/Rhodobacter sphaeroides example. Bradyrhizobium coverage is not substituted. Target-specific expression search is not applicable and noncoverage is not negative biology. |
+| validation | /private/tmp/csm-review-20261012T080007Z/baseline-verification.json; Fresh target schema, strict and snippet checks; checksum-verified broader checks on unchanged scientific inputs | supports | Target checks pass. Reused QC987 passed/3 skipped; labels603 no-adapter skips; cached trait index; live CURIE4023 OK/251 skips; prior archive198 valid and four contract tests. These are not new CI results. |
+| predecessors | reviews/structured/; Ignored-inclusive canonical scan and rg -uu across reviews/reports/history/research/curation | supports | No canonical predecessor among198 bundles for this target. Its retained creation history documents earlier function-grounding correction and is not replaced. |
+
+## Limits And Additional Notes
+
+- Same-agent review, not independent human sign-off or an exhaustive literature/retraction survey.
+- Bahatyrova2004 complete abstract and relevant body text on pages1058-1060 plus the opening portion of1061 were inspected. Remaining text, methods and reference details were not fully inspected; no figure pixels or raw AFM data were reviewed.
+- The public PDF text was returned once by web access, but subsequent opens/screenshots did not yield inspectable images. Direct download returned404 HTML saved under a .pdf filename, not a usable PDF; an alternate URL timed out. No PDF snapshot hash is claimed for the web-read body.
+- Ranck2005 was assessed as a complete primary abstract with verified bibliographic metadata, not full text. Its LH2-deficient mutant core comparison is not evidence of LH2 excitation transfer or genomic PufX absence.
+- RARE is qualitative; no exhaustive bacterial prevalence survey was performed. Source-neutral LH2 subunit identifiers remain an acknowledged native TODO, not an inferred absence.
+- Target checks are fresh; wider checks are explicitly reused after hash verification with their original caches/skips. No new GitHub CI, publication, issue, PR or merge.
+- This issue-only bundle changes no native scientific record, generated artifact, history or mapping status. Existing external-publication approval remains unanswered.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T080809Z-lh2-pufx-receiver-scope
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: LH2 receiving-core scope review
+started_at: '2026-10-12T08:00:26Z'
+finished_at: '2026-10-12T08:08:09Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no separate reviewer or human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Whole-record review completed with one minor wording issue: explicitly scope
+  the PufX-bearing receiving core to the cited organism example. LH2 identity, hierarchy,
+  example and coarse light-harvesting function are supported within the stated reading
+  limits.'
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+    sha256: 7b90c869f717cb16f21cd04270bd5af4c7bb60338f70539428480cabca87a301
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/lh2_peripheral_light_harvesting_antenna_complex/2026-09-13T062238Z-codex-94112d.yaml
+    sha256: cc267ca3934bf9cd1e1d3c46ef360fc89d528d86ec53163389affb6433a6ea20
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  path: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+  label: LH2 peripheral light-harvesting antenna complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+    role: maintained scientific record
+scope:
+  description: One entire native record, every material assertion, all three graph
+    edges and creation history; no sampling.
+  selection: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Fresh target check. Actual logs and timestamps retained in operational
+    receipts.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Fresh target check. Actual logs and timestamps retained in operational
+    receipts.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+    --report /private/tmp/csm-review-20261012T080007Z/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Fresh target check. Zero of14 citations carry snippets; not a full-text
+    check.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T06:45:16Z on the hash-verified unchanged
+    local commit. QC987/3 skipped; labels603 no-adapter skips; trait index cached.
+    Not a new execution or CI result.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T06:47:16Z on the hash-verified unchanged
+    local commit. QC987/3 skipped; labels603 no-adapter skips; trait index cached.
+    Not a new execution or CI result.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T06:48:52Z on the hash-verified unchanged
+    local commit. QC987/3 skipped; labels603 no-adapter skips; trait index cached.
+    Not a new execution or CI result.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T07:10:58Z with log hash and unchanged
+    inputs verified. Live CURIE4023 OK/251 skips, archive198 valid, contract4 passed.
+    Fresh post-save archive and contract checks follow separately.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T07:36:57Z with log hash and unchanged
+    inputs verified. Live CURIE4023 OK/251 skips, archive198 valid, contract4 passed.
+    Fresh post-save archive and contract checks follow separately.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: Reused actual result from 2026-10-12T07:39:42Z with log hash and unchanged
+    inputs verified. Live CURIE4023 OK/251 skips, archive198 valid, contract4 passed.
+    Fresh post-save archive and contract checks follow separately.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: Fresh28-dataset inventory; exact example not covered, so gene queries not
+    applicable. Noncoverage is not negative evidence.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - adapter
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+  locator: Entire YAML and append-only creation history
+  summary: Definition and function use generic RC-LH1. The graph title, scope and
+    receiver description use purple-bacterial wording with an RC-LH1-PufX receiver;
+    attached literature notes name the Rhodobacter example but the graph scope itself
+    does not.
+  support: supports
+  accessed_at: '2026-10-12T08:08:09Z'
+  snapshot_sha256: 7b90c869f717cb16f21cd04270bd5af4c7bb60338f70539428480cabca87a301
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030076,GO:0042717,GO:0009765
+  locator: Complete active names, definitions, aspects and relationships
+  summary: Light-harvesting-complex parent, chromatophore-membrane parthood and biological-process
+    endpoint agree.
+  support: supports
+  accessed_at: '2026-10-12T08:01:01Z'
+  snapshot_sha256: a6d62e0c336e8be2e75247c4e80eb7d414600278a76170bb6bfed55316124822
+- evidence_id: location
+  kind: authority
+  reference: uniprot.location:SL-0042
+  locator: Complete location definition and GO mapping
+  summary: Purple photosynthetic bacterial chromatophore membranes contain reaction
+    centers and antenna complexes and derive from the plasma membrane. This authority
+    is not an LH2-specific prevalence census.
+  support: supports
+  accessed_at: '2026-10-12T08:01:02Z'
+  snapshot_sha256: f16f40b6a8cfdb7911506598df2106649cf2e49643691a2077726a4384262ead
+- evidence_id: bahatyrova-abstract
+  kind: primary_source
+  reference: DOI:10.1038/nature02823
+  locator: Complete PubMed abstract, PMID15329728; Crossref identity verified separately
+  summary: Native AFM reveals LH2 light-capture domains interconnecting RC-LH1-PufX
+    arrays and larger clusters. LH1 acts as an energy collection hub before transfer
+    to the reaction center.
+  support: supports
+  accessed_at: '2026-10-12T08:01:02Z'
+  snapshot_sha256: d49e116bf94a603fdc530918773017cf1e734f8fe04255856026881e6be175f7
+- evidence_id: bahatyrova-body
+  kind: primary_source
+  reference: https://eprints.whiterose.ac.uk/id/eprint/102/1/huntercn1.pdf
+  locator: 'Public PDF text returned by web access: article pages1058-1060 and opening
+    portion of1061; later text and figure pixels not inspected'
+  summary: The experiment is explicitly wild-type Rhodobacter sphaeroides. Inspected
+    text supports peripheral pigment-protein LH2, native membrane organization and
+    LH2-to-LH1-to-RC excitation flow. It does not establish PufX as universal to purple-bacterial
+    core complexes.
+  support: supports
+  accessed_at: '2026-10-12T08:08:09Z'
+- evidence_id: ranck
+  kind: primary_source
+  reference: DOI:10.1016/j.bbabio.2005.08.002
+  locator: Complete PubMed abstract, PMID16139787; Crossref title and DOI verified
+    separately
+  summary: In an LH2-deficient Rubrivivax gelatinosus mutant, isolated core organization
+    agreed with intact mutant membranes. Detected components were RC, tetraheme cytochrome
+    c and LH1 alpha/beta; no additional PufX-role protein was detected. This bounded
+    comparator argues against universal PufX wording; it does not measure LH2 transfer
+    in the mutant or prove genomic absence.
+  support: supports
+  accessed_at: '2026-10-12T08:03:31Z'
+  snapshot_sha256: 0c3a6bd3ff8c0573407dea5f2d535c5b3caed7a48df6fa42538a4c21b0a60829
+- evidence_id: taxon
+  kind: authority
+  reference: NCBITaxon:1063
+  locator: ENA current name, rank and synonyms; NCBITaxon2 separately resolved
+  summary: Cereibacter sphaeroides is the current species name with Rhodobacter sphaeroides
+    among its synonyms; Bacteria is the correct broader taxon.
+  support: supports
+  accessed_at: '2026-10-12T08:01:03Z'
+  snapshot_sha256: fa64efd9e90dfef7e7b8c197e6e6449c311f1bb11557801f0d11551e830c23e8
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh complete 28-dataset inventory
+  summary: No dataset for the native Cereibacter/Rhodobacter sphaeroides example.
+    Bradyrhizobium coverage is not substituted. Target-specific expression search
+    is not applicable and noncoverage is not negative biology.
+  support: supports
+  accessed_at: '2026-10-12T08:08:09Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T080007Z/baseline-verification.json
+  locator: Fresh target schema, strict and snippet checks; checksum-verified broader
+    checks on unchanged scientific inputs
+  summary: Target checks pass. Reused QC987 passed/3 skipped; labels603 no-adapter
+    skips; cached trait index; live CURIE4023 OK/251 skips; prior archive198 valid
+    and four contract tests. These are not new CI results.
+  support: supports
+  accessed_at: '2026-10-12T08:08:09Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: Ignored-inclusive canonical scan and rg -uu across reviews/reports/history/research/curation
+  summary: No canonical predecessor among198 bundles for this target. Its retained
+    creation history documents earlier function-grounding correction and is not replaced.
+  support: supports
+  accessed_at: '2026-10-12T08:08:09Z'
+  search_scope: Path.rglob includes hidden/ignored canonical bundles; rg -uu searched
+    the slug, label and source DOI in reviews, reports, history, research and curation.
+    No GitHub-wide absence claim.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Identity, definition, synonyms and hierarchy
+  outcome: supported
+  summary: Peripheral LH2 antenna identity is distinct from the LH1 core or whole
+    chromatophore. Local identifier, protein-complex kind, GO parent and membrane
+    parthood agree with inspected sources.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - native
+  - go
+  - location
+  - bahatyrova-body
+- assessment_id: scope
+  area: scope
+  topic: Distribution and canonical example
+  outcome: supported
+  summary: Purple-bacterial rather than general bacterial distribution is supported.
+    RARE is treated as qualitative restriction, not a measured prevalence. Native
+    Cereibacter name and historical Rhodobacter synonym correctly identify the AFM
+    exemplar.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - native
+  - taxon
+  - location
+  - bahatyrova-body
+- assessment_id: function
+  area: evidence
+  topic: Light capture and excitation transfer
+  outcome: supported
+  summary: Bacteriochlorophyll-containing LH2 broadens light capture and transfers
+    toward RC-LH1. The paper supports that bounded function; the location authority
+    supplies membrane context, not independent spectroscopy.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - native
+  - go
+  - bahatyrova-abstract
+  - bahatyrova-body
+  - location
+- assessment_id: graph
+  area: graph
+  topic: All three NONMECHANISTIC edges and receiver scope
+  outcome: concern
+  summary: Membrane residence, transfer to core antenna and contribution to light
+    harvesting are supported. Only the PufX-specific receiver wording needs an explicit
+    example scope; evidence notes name the correct organism but graph-level wording
+    can read as generic purple-bacterial composition.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - native
+  - go
+  - location
+  - bahatyrova-body
+  - ranck
+  dimensions:
+  - name: experimental_model
+    value: Cereibacter sphaeroides (published as Rhodobacter sphaeroides)
+    definition: Organism in the cited native-membrane AFM study supporting the PufX-bearing
+      core example.
+    evidence_ids:
+    - taxon
+    - bahatyrova-body
+  - name: evidence_boundary
+    value: Native AFM organization plus coarse functional interpretation
+    definition: Not a universal core-composition claim or direct visualization of
+      every PufX constituent.
+    evidence_ids:
+    - bahatyrova-body
+    - ranck
+- assessment_id: components
+  area: completeness
+  topic: Component boundaries and optional fields
+  outcome: supported
+  summary: The explicit source-neutral alpha/beta-family and pigment-boundary TODO
+    preserves uncertainty without guessing identifiers. No exact stoichiometry is
+    asserted. Empty optional components, images, measurements, traits and datasets
+    do not alone justify findings.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - native
+  - bahatyrova-body
+- assessment_id: provenance
+  area: provenance
+  topic: Identifiers, source identity and access
+  outcome: supported
+  summary: All native stable references resolved. Both primary DOI/PMID identities
+    were checked. Relevant inspected body text and complete abstracts are distinguished
+    from inaccessible later text and uninspected figures; no source snippet is asserted
+    as a verified quotation.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - go
+  - location
+  - taxon
+  - bahatyrova-abstract
+  - bahatyrova-body
+  - ranck
+  - validation
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained owner and status
+  outcome: supported
+  summary: Native YAML owns any later guarded correction. Entire record and creation
+    history read; PROPOSED status, native bytes and history remain unchanged. No predecessor
+    is silently closed.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  evidence_ids:
+  - native
+  - predecessors
+findings:
+- finding_id: F1
+  issue_key: lh2-pufx-receiver-scope-qualification
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Scope the PufX-bearing receiving core to its organism example
+  description: The broadly purple-bacterial LH2 record uses RC-LH1-PufX in graph description,
+    scope and receiver/edge wording without a graph-level organism qualifier. Attached
+    evidence notes correctly identify Rhodobacter sphaeroides, but a reader or graph
+    consumer can interpret PufX as generic purple-bacterial core composition. Explicitly
+    scope this graph to the cited Cereibacter example, or use a generic RC-LH1 receiver
+    and retain PufX as an example-specific qualification. Do not narrow the entire
+    LH2 identity to one species.
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  field_paths:
+  - causal_graphs[lh2_excitation_transfer].description
+  - causal_graphs[lh2_excitation_transfer].scope_notes
+  - causal_graphs[lh2_excitation_transfer].nodes[rc_lh1_pufx]
+  - causal_graphs[lh2_excitation_transfer].edges[lh2 transfers excitation energy to
+    rc_lh1_pufx]
+  evidence_ids:
+  - native
+  - bahatyrova-body
+  - bahatyrova-abstract
+  - ranck
+  rule_id: review-checklist:taxonomic-and-graph-evidence-scope
+  native_severity: minor
+  normalization_reason: 'Bounded wording ambiguity: cited example and direction of
+    coarse excitation transfer are correct, and evidence notes already name the organism.
+    Not a wrong LH2 identity or confirmed universal mechanistic error.'
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Add explicit Cereibacter sphaeroides scope to the graph and PufX-specific
+    receiver, or use generic RC-LH1 wording with a bounded PufX example. Retain the
+    broad LH2 definition and already correct organism-specific evidence.
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+    role: maintained scientific record
+  generator: Native guarded writer; documented render and embedding workflow if semantic
+    content changes.
+  acceptance_checks:
+  - Graph-level scope and receiver/edge wording do not imply PufX in every purple-bacterial
+    core.
+  - The cited Cereibacter/Rhodobacter example remains represented accurately; no claim
+    that PufX has no role or is genomically absent elsewhere.
+  - Guarded write with llm_assisted curation event and append-only history; status
+    remains PROPOSED.
+  - Fresh native target validation and QC, plus lineage-linked successor disposition
+    retaining this finding.
+limitations:
+- Same-agent review, not independent human sign-off or an exhaustive literature/retraction
+  survey.
+- Bahatyrova2004 complete abstract and relevant body text on pages1058-1060 plus the
+  opening portion of1061 were inspected. Remaining text, methods and reference details
+  were not fully inspected; no figure pixels or raw AFM data were reviewed.
+- The public PDF text was returned once by web access, but subsequent opens/screenshots
+  did not yield inspectable images. Direct download returned404 HTML saved under a
+  .pdf filename, not a usable PDF; an alternate URL timed out. No PDF snapshot hash
+  is claimed for the web-read body.
+- Ranck2005 was assessed as a complete primary abstract with verified bibliographic
+  metadata, not full text. Its LH2-deficient mutant core comparison is not evidence
+  of LH2 excitation transfer or genomic PufX absence.
+- RARE is qualitative; no exhaustive bacterial prevalence survey was performed. Source-neutral
+  LH2 subunit identifiers remain an acknowledged native TODO, not an inferred absence.
+- Target checks are fresh; wider checks are explicitly reused after hash verification
+  with their original caches/skips. No new GitHub CI, publication, issue, PR or merge.
+- This issue-only bundle changes no native scientific record, generated artifact,
+  history or mapping status. Existing external-publication approval remains unanswered.
+tags:
+- scientific-review
+- energy-complex
+- graph-scope
+- minor
+```

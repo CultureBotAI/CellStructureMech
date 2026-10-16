@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/r_body.yaml
+  slug: r_body
+session:
+  id: 2026-10-16T015133Z-Codex-13229b
+  timestamp: '2026-10-16T01:51:33Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2323
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Correct the Wang 2021 article title while preserving the earlier pH-trigger scope
+    correction.
+  details: 'Correct the Wang 2021 article title while preserving the earlier pH-trigger scope
+    correction. Inspected sources: Wang et al. 2021 DOI:10.1038/s41467-021-24796-0 registered
+    title and abstract. Other claims and prior partial-review limitations remain outside this
+    remediation scope.'

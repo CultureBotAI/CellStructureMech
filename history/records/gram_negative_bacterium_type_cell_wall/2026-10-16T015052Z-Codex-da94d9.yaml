@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+  slug: gram_negative_bacterium_type_cell_wall
+session:
+  id: 2026-10-16T015052Z-Codex-da94d9
+  timestamp: '2026-10-16T01:50:52Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2313
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct peptidoglycan/Lpp acyl donor-acceptor direction and type Lol as a pathway.
+  details: 'Correct peptidoglycan/Lpp acyl donor-acceptor direction and type Lol as a pathway.
+    Inspected sources: Magnet et al. 2007 DOI:10.1128/JB.00084-07 NCBI full-text abstract
+    and linkage analysis; Native LolCDE/LolA/LolB pathway scope. Other claims and prior partial-review
+    limitations remain outside this remediation scope.'

@@ -2,10 +2,11 @@ identifier: GO:0016610
 label: nitrogenase complex
 structure_category: ENERGY_COMPLEX
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: A nitrogenase enzyme complex composed of tetrameric dinitrogenase and
-  homodimeric nitrogenase reductase subcomplexes that together catalyze ATP-dependent
-  reduction of dinitrogen to ammonia.
-definition_source: GO:0016610
+definition: A nitrogenase enzyme assembly comprising a metal-cluster-containing dinitrogenase
+  catalytic component and a homodimeric nitrogenase reductase that together support
+  ATP-dependent dinitrogen reduction. Catalytic-component subunit composition varies
+  among molybdenum, vanadium and iron-only nitrogenases.
+definition_source: DOI:10.1038/s41594-023-01124-2
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-09-24T04:40:50Z'
@@ -40,6 +41,12 @@ curation_history:
   changes: 'Resolved issue #1450 by aligning the GO:0016163-backed nitrogenase activity
     product wording with ammonium in the function description and causal graph node/edge.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:47:27Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2302: Remove universal catalytic tetramer wording and correct the Mo-exclusive
+    IPR005977 claim.'
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 - GO:1990204
@@ -49,8 +56,9 @@ components:
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
-  role: Tetrameric metal-cluster subcomplex required with nitrogenase reductase for
-    nitrogenase activity.
+  role: Metal-cluster catalytic subcomplex partnered with nitrogenase reductase. The
+    molybdenum example has an alpha2beta2 core; alternative vanadium and iron-only
+    enzymes contain additional G subunits.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE was asserted for the generic dinitrogenase
     subcomplex across molybdenum-iron, vanadium-iron, and iron-iron nitrogenase subclasses;
@@ -59,10 +67,18 @@ components:
   evidence:
   - reference: GO:0016610
     notes: GO:0016610 defines nitrogenase as containing a tetrameric dinitrogenase
-      protein component.
+      protein component. This is retained as source wording, not generalized over
+      the alternative variants documented by primary structures.
   - reference: PDB:1N2C
     notes: The PDB:1N2C deposition maps two polymer entities to the Azotobacter vinelandii
       molybdenum-iron dinitrogenase alpha and beta chains.
+  - reference: DOI:10.1038/nchembio.2428
+    notes: Sippel and Einsle 2017 report an additional alpha-helical subunit in the
+      A. vinelandii vanadium catalytic component, absent from molybdenum nitrogenase.
+  - reference: DOI:10.1038/s41594-023-01124-2
+    notes: Schmidt et al. 2024 resolve the R. capsulatus iron nitrogenase complex
+      including its G subunit; a universal dinitrogenase tetramer is therefore not
+      asserted.
 - component_id: nitrogenase_reductase
   label: nitrogenase reductase
   component_type: PROTEIN_COMPLEX
@@ -71,10 +87,10 @@ components:
   role: Homodimeric ATP-dependent reductase subcomplex required with dinitrogenase
     for nitrogenase activity.
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact source-neutral CURIE was asserted for all nitrogenase
-    reductase families; InterPro IPR005977 exactly covers NifH for molybdenum nitrogenase,
-    while broader NifH/frxC signatures include non-nitrogenase chlorophyll biosynthesis
-    proteins.
+  grounding_notes: Retained label-only for the assembled reductase homodimer rather
+    than assigning a chain-family term to an oligomer. InterPro IPR005977 includes
+    iron-only AnfH examples (including representative structure PDB:7QQA) and is not
+    Mo-exclusive; its exact coverage across all variants is not asserted here.
   evidence:
   - reference: GO:0016610
     notes: GO:0016610 defines nitrogenase as containing a homodimeric nitrogenase
@@ -82,6 +98,9 @@ components:
   - reference: PDB:1N2C
     notes: The PDB:1N2C deposition maps polymer entity 3 to Azotobacter vinelandii
       NifH1, the molybdenum nitrogenase iron protein.
+  - reference: InterPro:IPR005977
+    notes: The inspected family entry lists iron-only nitrogenase Fe protein PDB:7QQA
+      as its representative structure, despite the NifH family name.
 canonical_examples:
 - taxon_id: NCBITaxon:354
   taxon_label: Azotobacter vinelandii
@@ -120,6 +139,12 @@ evidence:
 - reference: PDB:1N2C
   notes: RCSB Protein Data Bank entry for the Azotobacter vinelandii nitrogenase complex
     structure from Schindelin et al. 1997.
+- reference: DOI:10.1038/nchembio.2428
+  notes: Sippel and Einsle 2017 report an additional alpha-helical subunit in the
+    A. vinelandii vanadium catalytic component, absent from molybdenum nitrogenase.
+- reference: DOI:10.1038/s41594-023-01124-2
+  notes: Schmidt et al. 2024 resolve the R. capsulatus iron nitrogenase complex including
+    its G subunit; a universal dinitrogenase tetramer is therefore not asserted.
 causal_graphs:
 - graph_id: nitrogenase_ferredoxin_dinitrogen_reduction
   title: Nitrogenase couples ATP to dinitrogen reduction
@@ -131,7 +156,8 @@ causal_graphs:
   scope_notes: The graph captures the two-component enzyme layout and GO-level net
     reaction without resolving ferredoxin/flavodoxin choice, Fe-protein docking geometry,
     P-cluster electron relay, FeMo-cofactor intermediates, or Mo/V/Fe-only variant
-    chemistry.
+    chemistry. The tetrameric docking example is specifically Mo nitrogenase PDB:1N2C;
+    alternative catalytic-component stoichiometries are not represented.
   nodes:
   - node_id: reduced_ferredoxin
     label: reduced ferredoxin
@@ -182,8 +208,8 @@ causal_graphs:
   - subject: nitrogenase_reductase
     predicate: docks with
     object: dinitrogenase
-    description: The nitrogenase reductase homodimer associates with the dinitrogenase
-      tetramer in the assembled nitrogenase complex.
+    description: In the A. vinelandii Mo-nitrogenase PDB:1N2C example, reductase homodimers
+      dock with the alpha2beta2 dinitrogenase component.
     evidence:
     - reference: PDB:1N2C
       notes: PDB:1N2C captures A. vinelandii nitrogenase reductase chains bound to
@@ -200,8 +226,8 @@ causal_graphs:
   - subject: dinitrogenase
     predicate: contributes to
     object: nitrogenase_activity
-    description: The dinitrogenase tetramer is required for the assembled nitrogenase
-      complex to carry out nitrogenase activity.
+    description: The dinitrogenase catalytic component contributes to nitrogenase
+      activity together with its reductase partner; its subunit count is variant-dependent.
     evidence:
     - reference: GO:0016610
       notes: GO:0016610 defines both dinitrogenase and nitrogenase reductase as required
@@ -236,13 +262,18 @@ discussions:
   attaches_to:
   - components#dinitrogenase
   - components#nitrogenase_reductase
-  rationale: GO:0016610 exactly grounds the complete nitrogenase complex across multiple
+  rationale: 'GO:0016610 exactly grounds the complete nitrogenase complex across multiple
     metal variants; the verified InterPro terms cover narrower molybdenum-iron NifD,
     NifK, and NifH families or broader families that also include non-nitrogenase
-    proteins.
+    proteins. Subsequent source inspection corrects the earlier Mo-exclusive characterization
+    of IPR005977: the family includes AnfH. The oligomer-level component remains label-only,
+    and catalytic stoichiometry must be variant-scoped.'
   evidence:
   - reference: GO:0016610
     notes: GO:0016610 subsumes the molybdenum-iron, vanadium-iron, and iron-iron nitrogenase
       complex subclasses.
+  - reference: InterPro:IPR005977
+    notes: Representative iron-only Fe protein PDB:7QQA contradicts Mo-exclusive family
+      scope.
   posed_by: codex
   posed_date: '2026-09-24'

@@ -1,0 +1,898 @@
+# Photosystem I organism attribution and function-scope review
+
+- Review: 20261012T085824Z-photosystem-i-taxon-function-scope
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-12T08:49:03Z
+- Finished UTC: 2026-10-12T08:58:24Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Whole-record review completed with two minor findings: an unreconciled historical-versus-modern canonical-organism attribution and unqualified P700/soluble-donor wording in a broadly scoped function. Generic GO identity, component classes, parent, qualitative distribution and already cyanobacteria-bounded graph are supported. No definitive replacement taxon is asserted.
+
+## Scope And Provenance
+
+One entire native record, all material claims and four graph edges, two retained history entries, current authorities and selected primary evidence; no sampling.
+
+Selection: data/structures/energy_complex/photosystem_i.yaml
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base e74d0c3e33df7e44348afbba1695b61c23262ab0.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0009522 | data/structures/energy_complex/photosystem_i.yaml | maintained | photosystem I |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0009522 | Fresh target check. Actual run: 2026-10-12T08:49:03Z to 2026-10-12T08:49:05Z. |
+| strict | passed | True | GO:0009522 | Fresh target check. Actual run: 2026-10-12T08:49:05Z to 2026-10-12T08:49:09Z. |
+| snippets | passed | True | GO:0009522 | Fresh target check. Zero of20 citations carry snippets; not full-text validation. Actual run: 2026-10-12T08:49:09Z to 2026-10-12T08:49:25Z. |
+| reused-release-qc | passed | True | GO:0009522 | Hash-verified unchanged-input reuse, not a fresh execution. QC987passed/3skipped; labels603 no-adapter skips; cached trait index. Actual run: 2026-10-12T06:33:07Z to 2026-10-12T06:45:16Z. |
+| reused-release-labels | passed | True | GO:0009522 | Hash-verified unchanged-input reuse, not a fresh execution. QC987passed/3skipped; labels603 no-adapter skips; cached trait index. Actual run: 2026-10-12T06:45:16Z to 2026-10-12T06:47:16Z. |
+| reused-release-traits | passed | True | GO:0009522 | Hash-verified unchanged-input reuse, not a fresh execution. QC987passed/3skipped; labels603 no-adapter skips; cached trait index. Actual run: 2026-10-12T06:48:15Z to 2026-10-12T06:48:52Z. |
+| reused-curies-live | passed | True | GO:0009522 | Reused actual result; log hash and unchanged inputs verified. Live CURIE4023OK/251skips, archive202valid, contract4passed. Fresh post-save checks follow. Actual run: 2026-10-12T07:05:41Z to 2026-10-12T07:10:58Z. |
+| reused-post-save-archive | passed | True | GO:0009522 | Reused actual result; log hash and unchanged inputs verified. Live CURIE4023OK/251skips, archive202valid, contract4passed. Fresh post-save checks follow. Actual run: 2026-10-12T08:44:46Z to 2026-10-12T08:46:38Z. |
+| reused-post-save-contract | passed | True | GO:0009522 | Reused actual result; log hash and unchanged inputs verified. Live CURIE4023OK/251skips, archive202valid, contract4passed. Fresh post-save checks follow. Actual run: 2026-10-12T08:46:38Z to 2026-10-12T08:48:12Z. |
+| adapter-datasets | passed | False | GO:0009522 | Fresh read-only adapter check. PCC7942 query results do not establish thermophilic BP-1 identity; zero module hits require no summaries. Actual run: 2026-10-12T08:49:16Z to 2026-10-12T08:49:17Z. |
+| adapter-psaA | passed | False | GO:0009522 | Fresh read-only adapter check. PCC7942 query results do not establish thermophilic BP-1 identity; zero module hits require no summaries. Actual run: 2026-10-12T08:49:52Z to 2026-10-12T08:49:53Z. |
+| adapter-psaB | passed | False | GO:0009522 | Fresh read-only adapter check. PCC7942 query results do not establish thermophilic BP-1 identity; zero module hits require no summaries. Actual run: 2026-10-12T08:49:53Z to 2026-10-12T08:49:54Z. |
+
+## Scientific And Domain Assessments
+
+### Broad GO identity and hierarchy
+
+identity: supported. Targets: GO:0009522.
+
+The generic GO structure identity and is-a parent are correct at the expressly broad native scope. Keep this identity; do not force the entire record into a single cyanobacterial structure or confuse type-I RCs with type-II RCs.
+
+### Three reviewed-label-only component classes
+
+grounding: supported. Targets: GO:0009522.
+
+Core polypeptides, terminal FeS acceptors and mixed pigments are supported coarse classes. No universal subunit count or single CHEBI compound is asserted. Deferred family mapping is defensible across Psa/Psc systems; essentiality describes constituent function, not demonstrated cellular viability.
+
+### Canonical organism attribution and resolution
+
+provenance: concern. Targets: GO:0009522.
+
+The historical name and2.5A value accurately follow the publication/deposition. However, current linked reviewed protein records attach the same experiment to a different modern taxon. The native example provides neither reconciliation nor an uncertainty note; exact strain replacement remains to be verified.
+
+### Cyanobacterial occurrence
+
+scope: supported. Targets: GO:0009522.
+
+Qualitative common occurrence and the plastocyanin-to-ferredoxin route are supported within the stated cyanobacterial scope. No taxon-wide absence, mandatory donor exclusivity or numerical prevalence is claimed. Preserve the earlier donor-claim correction.
+
+### Generic function description
+
+scope: concern. Targets: GO:0009522.
+
+The P700/soluble-donor wording needs an explicit cyanobacterial or oxygenic boundary, or a more generic description. P840 and transmembrane PscC in the included green-sulfur type-I scope show why that boundary matters. The GO process grounding itself is sound.
+
+### All four NONMECHANISTIC functional edges
+
+graph: supported. Targets: GO:0009522.
+
+The graph already limits itself to cyanobacterial PSI. Pigment excitation, core-to-FeS transfer, ferredoxin reduction and contribution to photosynthetic electron transport are supported at this coarse level. It excludes individual cofactors, subfamilies and cyclic paths; do not apply the function-scope finding to the already bounded graph.
+
+### Optional fields and deferred mapping discussion
+
+completeness: supported. Targets: GO:0009522.
+
+No missing required quantity, image, trait or dataset representation was established. The Psa/Psc family-grounding TODO is actionable. No universal exact family or mixed-pigment CURIE should be invented to fill an optional field.
+
+### Citation identity, source scope and validators
+
+evidence: supported. Targets: GO:0009522.
+
+All native stable identifiers and the original PMID/DOI resolve. Full-text sections, abstract metadata, structure entries, linked protein annotation and authority taxonomy are distinguished. Automatic label validity does not reconcile biological identity across sources.
+
+### Native status and read-only boundary
+
+ownership: supported. Targets: GO:0009522.
+
+Maintained YAML owns any future correction. Entire target and both history files were read; native PROPOSED status, products, all previous review bundles and history bytes remain unchanged.
+
+## Findings
+
+### F1: Reconcile the historical source name with linked modern organism authorities
+
+minor / open / confirmed; issue key: photosystem-i-jordan-source-taxon.
+
+The canonical example assigns the thermophilic Jordan2001 source to current Synechococcus elongatus tax32046. This is faithful to the original article and PDB1JB0, but all three inspected PDB-linked reviewed core-protein entries assign the same crystallographic reference to Thermosynechococcus vestitus BP-1 tax197221. Current taxonomy distinguishes those taxa. Record this source conflict and verify the original material before choosing a modern taxon; do not silently treat a historical name match as settled modern organism grounding or blindly substitute BP-1.
+
+### F2: Bound the P700 function wording to its supported oxygenic scope
+
+minor / open / confirmed; issue key: photosystem-i-p700-function-scope.
+
+The record deliberately includes green-sulfur-bacterial single type-I/Psc systems, but the generic function description specifies P700 and an upstream soluble donor without an organism boundary. Inspected C.tepidum primary evidence concerns P840 and PscC. Add an explicit supported cyanobacterial/oxygenic scope or generalize the donor description with appropriate evidence. The separate graph already says cyanobacterial PSI and does not need the same correction.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Trace Jordan source-material provenance and reconcile modern canonical-example taxonomy while preserving historical publication/PDB naming. If exact strain identity remains unresolved, persist the bounded authority conflict instead of inventing a replacement.
+
+- Example distinguishes original published/deposited name from verified current taxonomy or explicitly records remaining uncertainty.
+- Any replacement taxon is supported by a documented strain/material crosswalk, not a same-name guess or PCC7942 expression dataset.
+- No incorrect claim that PDB1JB0 itself currently names BP-1; authority disagreement remains traceable.
+- Guarded curation/history event, retained PROPOSED status, fresh native validation and lineage-linked successor review.
+
+### A2
+
+Scope the function description to the supported cyanobacterial or oxygenic case, or use generic primary-donor wording with bounded variant evidence. Preserve the broad GO identity and existing graph boundary.
+
+- P700 and soluble-donor wording is not asserted universally across Psa/Psc systems.
+- The four-edge cyanobacterial graph retains its existing correct boundary.
+- No universal replacement of P700 by P840 and no unexplained narrowing of the native GO definition.
+- Validate guarded changes and save a successor using this stable issue key.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/energy_complex/photosystem_i.yaml; Entire YAML and two append-only history events | supports | The definition and component rationale explicitly include bacterial single type-I/Psc systems. The function uses unqualified P700 and soluble-carrier wording, whereas the graph explicitly limits itself to cyanobacterial PSI. The example assigns the thermophilic Jordan source to NCBITaxon:32046. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009522,GO:0009521,GO:0009767; All three active terms, complete definitions, names, aspects and hierarchy | supports | Generic PSI identity, is-a photosystem parent and photosynthetic electron-transport process are correct. The broad GO definition explicitly covers cyanobacterial/chloroplast PSI and green-sulfur-bacterial single type-I systems. |
+| jordan-metadata | https://doi.org/10.1038/35082000; Complete PMID11418848 abstract and bibliographic identity; cross-checked Europe PMC, Crossref and PDB | supports | Jordan et al.2001 describe cyanobacterial PSI at2.5A resolution. The published organism name is Synechococcus elongatus. No exact BP-1 strain code was established from the inspected article text. |
+| jordan-body | https://www.researchgate.net/publication/11921224_Jordan_P_Fromme_P_Witt_HT_Klukas_O_Saenger_W_Krausz_N_Three-dimensional_structure_of_cyanobacterial_photosystem_I_at_25_A_resolution_Nature_411_909-917; Author-uploaded paper, rendered text: abstract/introduction, structure determination/overall architecture and selected polypeptide, FeS and pigment/antenna sections; not all article sections | supports | The inspected text supports the PsaA/PsaB core, PsaC iron-sulfur centers, pigment excitation and transfer toward ferredoxin at the coarse cyanobacterial scope. Detailed excitation routes remain interpretation rather than a measured complete kinetic mechanism. |
+| pdb | https://www.rcsb.org/structure/1JB0; Entry, author-defined assembly1 and polymer entities1-3 | supports | The2.5A X-ray entry cites Jordan2001 and retains source taxonomy32046/Synechococcus elongatus. Entities1-3 map PsaA, PsaB and PsaC to P0A405, P0A407 and P0A415. This matches the historical native attribution but creates a conflict with the linked modern protein authorities. |
+| psaa | https://rest.uniprot.org/uniprotkb/P0A405.json; Reviewed entry status, organism, gene and original Jordan reference positions | supports | PsaA is assigned to Thermosynechococcus vestitus BP-1, tax197221, and its reference explicitly attributes the2.5A structure to PMID11418848. This is a direct linked-authority conflict, not an unrelated homolog search. |
+| psab | https://rest.uniprot.org/uniprotkb/P0A407.json; Reviewed entry status, organism, gene and Jordan reference positions | supports | The linked PsaB entry independently uses tax197221 and attributes2.5A crystallography to PMID11418848. |
+| psac | https://rest.uniprot.org/uniprotkb/P0A415.json; Reviewed entry status, organism, gene and Jordan reference positions | supports | The linked PsaC entry also uses tax197221 and cites the original2.5A structure with an FeS cluster. |
+| taxon-old | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/32046; Complete current taxonomy record | supports | NCBITaxon:32046 still denotes Synechococcus elongatus in Synechococcales. It is not presented as a current synonym of the Thermosynechococcus BP-1 taxon. |
+| taxon-bp1 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/197221; Complete current taxonomy record including equivalent names | supports | NCBITaxon:197221 denotes Thermosynechococcus vestitus BP-1; Thermosynechococcus elongatus BP-1, IAM M-273 and NIES-2133 are equivalent names. Its lineage differs from the current tax32046 lineage. |
+| taxon-name | https://lpsn.dsmz.de/species/thermosynechococcus-vestitus; Name, status, holotype and publication fields | supports | LPSN identifies Thermosynechococcus vestitus as the correct name with BP-1/NIES2133 reference material and a2020 taxonomic publication. It does not itself prove which strain Jordan used. |
+| distribution | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1117; Complete current taxonomy record | supports | NCBITaxon:1117 is Cyanobacteriota. The record uses qualitative COMMON wording, not a measured prevalence or claim of universal plastocyanin use. |
+| azai | https://doi.org/10.1038/srep19878; PMC4726426: abstract, selected Results on site-directed PscA mutants and spectroelectrochemistry/FTIR, Discussion and FTIR method paragraph | refutes | Azai et al.2016 investigate the P840 special pair in Chlorobaculum tepidum by mutagenesis and spectroscopy. The inspected WT and mutant charge-separation and oxidation measurements establish a non-P700 type-I reaction-center example within the native broad scope. |
+| gsbrc | https://doi.org/10.1073/pnas.2216734120; PMC9945994: abstract, selected Results on whole-complex structure, energy/electron transfer and model-building method | refutes | The2023 C.tepidum FMO-RC study models PscA/PscC membrane-core subunits, PscB/D, pigments and FeS acceptors. It discusses P840 oxidation, PscC donor and ferredoxin transfer. The flexible cytochrome domain was not resolved and its docking is modeled; it is not a directly observed complete transfer trajectory. |
+| adapter | https://imodulondb.org/; Fresh complete28-dataset inventory and exact psaA/psaB searches in s_elongatus/elprecise300 | supports | PCC7942 genes Synpcc7942_2049 and Synpcc7942_2048 match psaA/psaB, with zero iModulon hits. PCC7942 must not be substituted for thermophilic BP-1. No exact BP-1 dataset was listed; these results do not establish example identity or biological absence. |
+| validation | /private/tmp/csm-review-20261012T084840Z-psi/baseline-verification.json; Fresh target schema/strict/snippet checks; hash-verified wider checks | supports | Target checks pass; zero of20 citations carry snippets. Wider QC987passed/3skipped and cached label/trait checks are reused on unchanged scientific inputs. Latest live CURIE check reports4023OK/251skips and no unreachable identifiers;202-bundle archive and four contract tests previously passed. Fresh post-save checks follow. |
+| predecessors | reviews/structured/; Ignored-inclusive canonical scan and rg -uu across reviews/reports/history/research/curation | supports | No target canonical predecessor among202 bundles. Two append-only history entries record creation and issue1440 donor-wording correction. This observation neither reopens nor silently disposes of that earlier issue. |
+
+## Limits And Additional Notes
+
+- Same-agent review, not independent human sign-off or an exhaustive literature/retraction survey.
+- Jordan2001 was inspected as complete abstract, author-uploaded selected main-text sections and source-native deposited metadata. Not all article sections, figure pixels, supplementary files or diffraction data were inspected. The rendered main text did not establish the original BP-1 strain code.
+- The organism finding preserves a real cross-authority conflict. Exact material provenance and the definitive replacement taxon remain unresolved; linked reviewed protein records do not alone prove original strain material identity.
+- Azai2016 and the2023 FMO-RC paper were read in the selected abstract/Results/Discussion/Methods sections identified in Evidence, not every paragraph, figure pixel, supplementary file or raw spectrum/map. Flexible-domain docking and proposed transfer paths are not upgraded to directly resolved motion.
+- The Fottea2020 PDF abstract/methods were accessible through the browser, but the later species-section request timed out; no unread species paragraph is used as evidence. A PubMed browser request for PMID12240834 returned a challenge and is not supporting evidence. LPSN taxonomy was directly inspected.
+- All17 local public-source captures and three adapter commands succeeded. Fresh target validation is distinguished from hash-verified wider-check reuse, including original cache/no-adapter/test skips. No target trait links exist; wider trait checks retain their cached-source limitation.
+- PCC7942 adapter genes are only bounded gene-context results and must not be conflated with the thermophilic source. Zero module hits and lack of a BP-1 dataset are not biological absence evidence.
+- No native scientific edits, product regeneration, status promotion, history mutation, issue creation, PR, fresh GitHub CI, merge or push. Existing publication approval remains unanswered.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T085824Z-photosystem-i-taxon-function-scope
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Photosystem I organism attribution and function-scope review
+started_at: '2026-10-12T08:49:03Z'
+finished_at: '2026-10-12T08:58:24Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no separate reviewer or human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Whole-record review completed with two minor findings: an unreconciled historical-versus-modern
+  canonical-organism attribution and unqualified P700/soluble-donor wording in a broadly
+  scoped function. Generic GO identity, component classes, parent, qualitative distribution
+  and already cyanobacteria-bounded graph are supported. No definitive replacement
+  taxon is asserted.'
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/photosystem_i.yaml
+    sha256: 9671bd3562199c69bd7493f65a44fdf3f44107d20bf75ee78bf4385bf08e6d66
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/photosystem_i/2026-09-24T014002Z-codex-748ad4.yaml
+    sha256: 269376c78c958cc1bc6e9d793ce8e3d5c9c5061630d4f3e74d39eecee3d6afd9
+    role: context
+  - path: history/records/photosystem_i/2026-09-24T014905Z-codex-87460b.yaml
+    sha256: bc7fd6f82fba0e9c8517104e3e42806a4bc10c27bbb8b7648689e132a807aeb6
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0009522
+  path: data/structures/energy_complex/photosystem_i.yaml
+  label: photosystem I
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem_i.yaml
+    role: maintained scientific record
+scope:
+  description: One entire native record, all material claims and four graph edges,
+    two retained history entries, current authorities and selected primary evidence;
+    no sampling.
+  selection: data/structures/energy_complex/photosystem_i.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009522
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/photosystem_i.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target check. Actual run: 2026-10-12T08:49:03Z to 2026-10-12T08:49:05Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/energy_complex/photosystem_i.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target check. Actual run: 2026-10-12T08:49:05Z to 2026-10-12T08:49:09Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/energy_complex/photosystem_i.yaml
+    --report /private/tmp/csm-review-20261012T084840Z-psi/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target check. Zero of20 citations carry snippets; not full-text
+    validation. Actual run: 2026-10-12T08:49:09Z to 2026-10-12T08:49:25Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Hash-verified unchanged-input reuse, not a fresh execution. QC987passed/3skipped;
+    labels603 no-adapter skips; cached trait index. Actual run: 2026-10-12T06:33:07Z
+    to 2026-10-12T06:45:16Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Hash-verified unchanged-input reuse, not a fresh execution. QC987passed/3skipped;
+    labels603 no-adapter skips; cached trait index. Actual run: 2026-10-12T06:45:16Z
+    to 2026-10-12T06:47:16Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Hash-verified unchanged-input reuse, not a fresh execution. QC987passed/3skipped;
+    labels603 no-adapter skips; cached trait index. Actual run: 2026-10-12T06:48:15Z
+    to 2026-10-12T06:48:52Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Reused actual result; log hash and unchanged inputs verified. Live CURIE4023OK/251skips,
+    archive202valid, contract4passed. Fresh post-save checks follow. Actual run: 2026-10-12T07:05:41Z
+    to 2026-10-12T07:10:58Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Reused actual result; log hash and unchanged inputs verified. Live CURIE4023OK/251skips,
+    archive202valid, contract4passed. Fresh post-save checks follow. Actual run: 2026-10-12T08:44:46Z
+    to 2026-10-12T08:46:38Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Reused actual result; log hash and unchanged inputs verified. Live CURIE4023OK/251skips,
+    archive202valid, contract4passed. Fresh post-save checks follow. Actual run: 2026-10-12T08:46:38Z
+    to 2026-10-12T08:48:12Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh read-only adapter check. PCC7942 query results do not establish
+    thermophilic BP-1 identity; zero module hits require no summaries. Actual run:
+    2026-10-12T08:49:16Z to 2026-10-12T08:49:17Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - adapter
+- check_id: adapter-psaA
+  name: adapter-psaA
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism s_elongatus --dataset elprecise300 --query psaA
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh read-only adapter check. PCC7942 query results do not establish
+    thermophilic BP-1 identity; zero module hits require no summaries. Actual run:
+    2026-10-12T08:49:52Z to 2026-10-12T08:49:53Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - adapter
+- check_id: adapter-psaB
+  name: adapter-psaB
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism s_elongatus --dataset elprecise300 --query psaB
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh read-only adapter check. PCC7942 query results do not establish
+    thermophilic BP-1 identity; zero module hits require no summaries. Actual run:
+    2026-10-12T08:49:53Z to 2026-10-12T08:49:54Z.'
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - adapter
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/energy_complex/photosystem_i.yaml
+  locator: Entire YAML and two append-only history events
+  summary: The definition and component rationale explicitly include bacterial single
+    type-I/Psc systems. The function uses unqualified P700 and soluble-carrier wording,
+    whereas the graph explicitly limits itself to cyanobacterial PSI. The example
+    assigns the thermophilic Jordan source to NCBITaxon:32046.
+  support: supports
+  accessed_at: '2026-10-12T08:58:24Z'
+  snapshot_sha256: 9671bd3562199c69bd7493f65a44fdf3f44107d20bf75ee78bf4385bf08e6d66
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009522,GO:0009521,GO:0009767
+  locator: All three active terms, complete definitions, names, aspects and hierarchy
+  summary: Generic PSI identity, is-a photosystem parent and photosynthetic electron-transport
+    process are correct. The broad GO definition explicitly covers cyanobacterial/chloroplast
+    PSI and green-sulfur-bacterial single type-I systems.
+  support: supports
+  accessed_at: '2026-10-12T08:49:14Z'
+  snapshot_sha256: 758bc6868771f91a73744f6becf5605dffe471865606a82814ddd3195e4a27bc
+- evidence_id: jordan-metadata
+  kind: primary_source
+  reference: https://doi.org/10.1038/35082000
+  locator: Complete PMID11418848 abstract and bibliographic identity; cross-checked
+    Europe PMC, Crossref and PDB
+  summary: Jordan et al.2001 describe cyanobacterial PSI at2.5A resolution. The published
+    organism name is Synechococcus elongatus. No exact BP-1 strain code was established
+    from the inspected article text.
+  support: supports
+  accessed_at: '2026-10-12T08:49:15Z'
+  snapshot_sha256: 9e466dfd8717dd8f89771ee7193bef28527ce06ee1efa4cbade8b96cdc774937
+- evidence_id: jordan-body
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/11921224_Jordan_P_Fromme_P_Witt_HT_Klukas_O_Saenger_W_Krausz_N_Three-dimensional_structure_of_cyanobacterial_photosystem_I_at_25_A_resolution_Nature_411_909-917
+  locator: 'Author-uploaded paper, rendered text: abstract/introduction, structure
+    determination/overall architecture and selected polypeptide, FeS and pigment/antenna
+    sections; not all article sections'
+  summary: The inspected text supports the PsaA/PsaB core, PsaC iron-sulfur centers,
+    pigment excitation and transfer toward ferredoxin at the coarse cyanobacterial
+    scope. Detailed excitation routes remain interpretation rather than a measured
+    complete kinetic mechanism.
+  support: supports
+  accessed_at: '2026-10-12T08:58:24Z'
+- evidence_id: pdb
+  kind: database
+  reference: https://www.rcsb.org/structure/1JB0
+  locator: Entry, author-defined assembly1 and polymer entities1-3
+  summary: The2.5A X-ray entry cites Jordan2001 and retains source taxonomy32046/Synechococcus
+    elongatus. Entities1-3 map PsaA, PsaB and PsaC to P0A405, P0A407 and P0A415. This
+    matches the historical native attribution but creates a conflict with the linked
+    modern protein authorities.
+  support: supports
+  accessed_at: '2026-10-12T08:49:49Z'
+  snapshot_sha256: 0607776f9e475c0c64d3ebbc906824cb850d0a5c61028e73d48995c2b4419cf2
+- evidence_id: psaa
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0A405.json
+  locator: Reviewed entry status, organism, gene and original Jordan reference positions
+  summary: PsaA is assigned to Thermosynechococcus vestitus BP-1, tax197221, and its
+    reference explicitly attributes the2.5A structure to PMID11418848. This is a direct
+    linked-authority conflict, not an unrelated homolog search.
+  support: supports
+  accessed_at: '2026-10-12T08:50:39Z'
+  snapshot_sha256: 3f75a6d7039c196dbb903666fd04356a55d7a35713c6ae2aa897fd6ac5586d8a
+- evidence_id: psab
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0A407.json
+  locator: Reviewed entry status, organism, gene and Jordan reference positions
+  summary: The linked PsaB entry independently uses tax197221 and attributes2.5A crystallography
+    to PMID11418848.
+  support: supports
+  accessed_at: '2026-10-12T08:50:40Z'
+  snapshot_sha256: 3433cedc457b54b8480127e24ca8f3f8d213529d7f6c8955bcf662eff64d4c92
+- evidence_id: psac
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0A415.json
+  locator: Reviewed entry status, organism, gene and Jordan reference positions
+  summary: The linked PsaC entry also uses tax197221 and cites the original2.5A structure
+    with an FeS cluster.
+  support: supports
+  accessed_at: '2026-10-12T08:50:41Z'
+  snapshot_sha256: 3ffe57432a5c55bfa300fbcea637116221f678e7d8a9c9febe567788ba283e01
+- evidence_id: taxon-old
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/32046
+  locator: Complete current taxonomy record
+  summary: NCBITaxon:32046 still denotes Synechococcus elongatus in Synechococcales.
+    It is not presented as a current synonym of the Thermosynechococcus BP-1 taxon.
+  support: supports
+  accessed_at: '2026-10-12T08:49:15Z'
+  snapshot_sha256: b7aac872a40661f808e3fa17a661bb4b29ea7c857fe30e1b636be882fed66e01
+- evidence_id: taxon-bp1
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/197221
+  locator: Complete current taxonomy record including equivalent names
+  summary: NCBITaxon:197221 denotes Thermosynechococcus vestitus BP-1; Thermosynechococcus
+    elongatus BP-1, IAM M-273 and NIES-2133 are equivalent names. Its lineage differs
+    from the current tax32046 lineage.
+  support: supports
+  accessed_at: '2026-10-12T08:51:32Z'
+  snapshot_sha256: f30dcc28777baef3bbc3b81cbc0c94af4d350e9043dfb33913f0aab1b50601d0
+- evidence_id: taxon-name
+  kind: authority
+  reference: https://lpsn.dsmz.de/species/thermosynechococcus-vestitus
+  locator: Name, status, holotype and publication fields
+  summary: LPSN identifies Thermosynechococcus vestitus as the correct name with BP-1/NIES2133
+    reference material and a2020 taxonomic publication. It does not itself prove which
+    strain Jordan used.
+  support: supports
+  accessed_at: '2026-10-12T08:58:24Z'
+- evidence_id: distribution
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1117
+  locator: Complete current taxonomy record
+  summary: NCBITaxon:1117 is Cyanobacteriota. The record uses qualitative COMMON wording,
+    not a measured prevalence or claim of universal plastocyanin use.
+  support: supports
+  accessed_at: '2026-10-12T08:49:14Z'
+  snapshot_sha256: 5f4919ad6f362a82291b587d27134147f277ffc5fa593f6076f1983a704cd985
+- evidence_id: azai
+  kind: primary_source
+  reference: https://doi.org/10.1038/srep19878
+  locator: 'PMC4726426: abstract, selected Results on site-directed PscA mutants and
+    spectroelectrochemistry/FTIR, Discussion and FTIR method paragraph'
+  summary: Azai et al.2016 investigate the P840 special pair in Chlorobaculum tepidum
+    by mutagenesis and spectroscopy. The inspected WT and mutant charge-separation
+    and oxidation measurements establish a non-P700 type-I reaction-center example
+    within the native broad scope.
+  support: refutes
+  accessed_at: '2026-10-12T08:51:33Z'
+  snapshot_sha256: 16df3b90d8d2ea128bd1668281d980b7c062906d047bce39cfde80c1922cf706
+- evidence_id: gsbrc
+  kind: primary_source
+  reference: https://doi.org/10.1073/pnas.2216734120
+  locator: 'PMC9945994: abstract, selected Results on whole-complex structure, energy/electron
+    transfer and model-building method'
+  summary: The2023 C.tepidum FMO-RC study models PscA/PscC membrane-core subunits,
+    PscB/D, pigments and FeS acceptors. It discusses P840 oxidation, PscC donor and
+    ferredoxin transfer. The flexible cytochrome domain was not resolved and its docking
+    is modeled; it is not a directly observed complete transfer trajectory.
+  support: refutes
+  accessed_at: '2026-10-12T08:51:35Z'
+  snapshot_sha256: 4da60f1b272051df0d3b6974fed3ffb4925246a26ffe61c6045cff37702e3bcd
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh complete28-dataset inventory and exact psaA/psaB searches in s_elongatus/elprecise300
+  summary: PCC7942 genes Synpcc7942_2049 and Synpcc7942_2048 match psaA/psaB, with
+    zero iModulon hits. PCC7942 must not be substituted for thermophilic BP-1. No
+    exact BP-1 dataset was listed; these results do not establish example identity
+    or biological absence.
+  support: supports
+  accessed_at: '2026-10-12T08:58:24Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T084840Z-psi/baseline-verification.json
+  locator: Fresh target schema/strict/snippet checks; hash-verified wider checks
+  summary: Target checks pass; zero of20 citations carry snippets. Wider QC987passed/3skipped
+    and cached label/trait checks are reused on unchanged scientific inputs. Latest
+    live CURIE check reports4023OK/251skips and no unreachable identifiers;202-bundle
+    archive and four contract tests previously passed. Fresh post-save checks follow.
+  support: supports
+  accessed_at: '2026-10-12T08:58:24Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: Ignored-inclusive canonical scan and rg -uu across reviews/reports/history/research/curation
+  summary: No target canonical predecessor among202 bundles. Two append-only history
+    entries record creation and issue1440 donor-wording correction. This observation
+    neither reopens nor silently disposes of that earlier issue.
+  support: supports
+  accessed_at: '2026-10-12T08:58:24Z'
+  search_scope: Path.rglob included hidden/ignored canonical bundles; rg -uu searched
+    identifier, label, slug, original DOI/PMID and both new issue keys in reviews,
+    reports/yaml_record_review, history, research and curation. No remote issue-absence
+    claim.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Broad GO identity and hierarchy
+  outcome: supported
+  summary: The generic GO structure identity and is-a parent are correct at the expressly
+    broad native scope. Keep this identity; do not force the entire record into a
+    single cyanobacterial structure or confuse type-I RCs with type-II RCs.
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - native
+  - go
+- assessment_id: components
+  area: grounding
+  topic: Three reviewed-label-only component classes
+  outcome: supported
+  summary: Core polypeptides, terminal FeS acceptors and mixed pigments are supported
+    coarse classes. No universal subunit count or single CHEBI compound is asserted.
+    Deferred family mapping is defensible across Psa/Psc systems; essentiality describes
+    constituent function, not demonstrated cellular viability.
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - native
+  - go
+  - jordan-body
+  - gsbrc
+- assessment_id: example
+  area: provenance
+  topic: Canonical organism attribution and resolution
+  outcome: concern
+  summary: The historical name and2.5A value accurately follow the publication/deposition.
+    However, current linked reviewed protein records attach the same experiment to
+    a different modern taxon. The native example provides neither reconciliation nor
+    an uncertainty note; exact strain replacement remains to be verified.
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - native
+  - jordan-metadata
+  - pdb
+  - psaa
+  - psab
+  - psac
+  - taxon-old
+  - taxon-bp1
+  - taxon-name
+  dimensions:
+  - name: historical_attribution
+    value: 'Jordan2001 and PDB1JB0: Synechococcus elongatus / tax32046'
+    definition: Publication/deposition naming retained as evidence, not silently rewritten.
+    evidence_ids:
+    - jordan-metadata
+    - pdb
+  - name: linked_modern_authorities
+    value: 'P0A405/P0A407/P0A415: Thermosynechococcus vestitus BP-1 / tax197221'
+    definition: Reviewed sequence records cite the same original experiment, but do
+      not replace verification of original material provenance.
+    evidence_ids:
+    - psaa
+    - psab
+    - psac
+    - taxon-bp1
+- assessment_id: distribution
+  area: scope
+  topic: Cyanobacterial occurrence
+  outcome: supported
+  summary: Qualitative common occurrence and the plastocyanin-to-ferredoxin route
+    are supported within the stated cyanobacterial scope. No taxon-wide absence, mandatory
+    donor exclusivity or numerical prevalence is claimed. Preserve the earlier donor-claim
+    correction.
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - native
+  - go
+  - distribution
+- assessment_id: function
+  area: scope
+  topic: Generic function description
+  outcome: concern
+  summary: The P700/soluble-donor wording needs an explicit cyanobacterial or oxygenic
+    boundary, or a more generic description. P840 and transmembrane PscC in the included
+    green-sulfur type-I scope show why that boundary matters. The GO process grounding
+    itself is sound.
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - native
+  - go
+  - jordan-body
+  - azai
+  - gsbrc
+- assessment_id: graph
+  area: graph
+  topic: All four NONMECHANISTIC functional edges
+  outcome: supported
+  summary: The graph already limits itself to cyanobacterial PSI. Pigment excitation,
+    core-to-FeS transfer, ferredoxin reduction and contribution to photosynthetic
+    electron transport are supported at this coarse level. It excludes individual
+    cofactors, subfamilies and cyclic paths; do not apply the function-scope finding
+    to the already bounded graph.
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - native
+  - go
+  - jordan-body
+- assessment_id: completeness
+  area: completeness
+  topic: Optional fields and deferred mapping discussion
+  outcome: supported
+  summary: No missing required quantity, image, trait or dataset representation was
+    established. The Psa/Psc family-grounding TODO is actionable. No universal exact
+    family or mixed-pigment CURIE should be invented to fill an optional field.
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - native
+  - go
+  - adapter
+- assessment_id: provenance
+  area: evidence
+  topic: Citation identity, source scope and validators
+  outcome: supported
+  summary: All native stable identifiers and the original PMID/DOI resolve. Full-text
+    sections, abstract metadata, structure entries, linked protein annotation and
+    authority taxonomy are distinguished. Automatic label validity does not reconcile
+    biological identity across sources.
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - go
+  - jordan-metadata
+  - pdb
+  - validation
+- assessment_id: ownership
+  area: ownership
+  topic: Native status and read-only boundary
+  outcome: supported
+  summary: Maintained YAML owns any future correction. Entire target and both history
+    files were read; native PROPOSED status, products, all previous review bundles
+    and history bytes remain unchanged.
+  target_ids:
+  - GO:0009522
+  evidence_ids:
+  - native
+  - predecessors
+findings:
+- finding_id: F1
+  issue_key: photosystem-i-jordan-source-taxon
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Reconcile the historical source name with linked modern organism authorities
+  description: The canonical example assigns the thermophilic Jordan2001 source to
+    current Synechococcus elongatus tax32046. This is faithful to the original article
+    and PDB1JB0, but all three inspected PDB-linked reviewed core-protein entries
+    assign the same crystallographic reference to Thermosynechococcus vestitus BP-1
+    tax197221. Current taxonomy distinguishes those taxa. Record this source conflict
+    and verify the original material before choosing a modern taxon; do not silently
+    treat a historical name match as settled modern organism grounding or blindly
+    substitute BP-1.
+  target_ids:
+  - GO:0009522
+  field_paths:
+  - canonical_examples[taxon_id=NCBITaxon:32046].taxon_id
+  - canonical_examples[taxon_id=NCBITaxon:32046].taxon_label
+  - canonical_examples[taxon_id=NCBITaxon:32046].note
+  evidence_ids:
+  - native
+  - jordan-metadata
+  - pdb
+  - psaa
+  - psab
+  - psac
+  - taxon-old
+  - taxon-bp1
+  - taxon-name
+  rule_id: review-checklist:taxon-strain-and-source-agreement
+  native_severity: minor
+  normalization_reason: Confirmed unreconciled attribution conflict is a bounded provenance
+    defect. The historical source attribution is faithful and exact replacement has
+    not been independently established, so this is not presented as a confirmed wrong-taxonomy
+    blocker or an asserted mandatory BP-1 substitution.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem_i.yaml
+    role: maintained scientific record
+- finding_id: F2
+  issue_key: photosystem-i-p700-function-scope
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Bound the P700 function wording to its supported oxygenic scope
+  description: The record deliberately includes green-sulfur-bacterial single type-I/Psc
+    systems, but the generic function description specifies P700 and an upstream soluble
+    donor without an organism boundary. Inspected C.tepidum primary evidence concerns
+    P840 and PscC. Add an explicit supported cyanobacterial/oxygenic scope or generalize
+    the donor description with appropriate evidence. The separate graph already says
+    cyanobacterial PSI and does not need the same correction.
+  target_ids:
+  - GO:0009522
+  field_paths:
+  - functions[photosynthetic_electron_transport].description
+  evidence_ids:
+  - native
+  - go
+  - jordan-body
+  - azai
+  - gsbrc
+  rule_id: review-checklist:function-organism-context-and-evidence
+  native_severity: minor
+  normalization_reason: Bounded description-scope defect with valid process grounding
+    and an already correctly bounded graph. A local qualifier can resolve it without
+    changing the generic structure identity.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem_i.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Trace Jordan source-material provenance and reconcile modern canonical-example
+    taxonomy while preserving historical publication/PDB naming. If exact strain identity
+    remains unresolved, persist the bounded authority conflict instead of inventing
+    a replacement.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009522
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem_i.yaml
+    role: maintained scientific record
+  generator: Native guarded writer and documented product workflow, only during separately
+    authorized curation.
+  acceptance_checks:
+  - Example distinguishes original published/deposited name from verified current
+    taxonomy or explicitly records remaining uncertainty.
+  - Any replacement taxon is supported by a documented strain/material crosswalk,
+    not a same-name guess or PCC7942 expression dataset.
+  - No incorrect claim that PDB1JB0 itself currently names BP-1; authority disagreement
+    remains traceable.
+  - Guarded curation/history event, retained PROPOSED status, fresh native validation
+    and lineage-linked successor review.
+- action_id: A2
+  description: Scope the function description to the supported cyanobacterial or oxygenic
+    case, or use generic primary-donor wording with bounded variant evidence. Preserve
+    the broad GO identity and existing graph boundary.
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0009522
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem_i.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - P700 and soluble-donor wording is not asserted universally across Psa/Psc systems.
+  - The four-edge cyanobacterial graph retains its existing correct boundary.
+  - No universal replacement of P700 by P840 and no unexplained narrowing of the native
+    GO definition.
+  - Validate guarded changes and save a successor using this stable issue key.
+limitations:
+- Same-agent review, not independent human sign-off or an exhaustive literature/retraction
+  survey.
+- Jordan2001 was inspected as complete abstract, author-uploaded selected main-text
+  sections and source-native deposited metadata. Not all article sections, figure
+  pixels, supplementary files or diffraction data were inspected. The rendered main
+  text did not establish the original BP-1 strain code.
+- The organism finding preserves a real cross-authority conflict. Exact material provenance
+  and the definitive replacement taxon remain unresolved; linked reviewed protein
+  records do not alone prove original strain material identity.
+- Azai2016 and the2023 FMO-RC paper were read in the selected abstract/Results/Discussion/Methods
+  sections identified in Evidence, not every paragraph, figure pixel, supplementary
+  file or raw spectrum/map. Flexible-domain docking and proposed transfer paths are
+  not upgraded to directly resolved motion.
+- The Fottea2020 PDF abstract/methods were accessible through the browser, but the
+  later species-section request timed out; no unread species paragraph is used as
+  evidence. A PubMed browser request for PMID12240834 returned a challenge and is
+  not supporting evidence. LPSN taxonomy was directly inspected.
+- All17 local public-source captures and three adapter commands succeeded. Fresh target
+  validation is distinguished from hash-verified wider-check reuse, including original
+  cache/no-adapter/test skips. No target trait links exist; wider trait checks retain
+  their cached-source limitation.
+- PCC7942 adapter genes are only bounded gene-context results and must not be conflated
+  with the thermophilic source. Zero module hits and lack of a BP-1 dataset are not
+  biological absence evidence.
+- No native scientific edits, product regeneration, status promotion, history mutation,
+  issue creation, PR, fresh GitHub CI, merge or push. Existing publication approval
+  remains unanswered.
+tags:
+- scientific-review
+- energy-complex
+- taxon-provenance
+- function-scope
+- minor
+```

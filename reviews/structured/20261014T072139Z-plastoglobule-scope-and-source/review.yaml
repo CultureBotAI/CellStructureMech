@@ -1,0 +1,720 @@
+schema_version: 1.0.0
+review_id: 20261014T072139Z-plastoglobule-scope-and-source
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Plastoglobule scientific scope and source review
+started_at: '2026-10-14T07:15:17Z'
+finished_at: '2026-10-14T07:21:39Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same-agent review; no independent human or second-agent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Entire record assessed. One major plant-to-alga topology scope finding and
+  two minor transport-wording/source-attribution findings require curation. Identity,
+  parthood and algal occurrence are supported.
+source:
+  git_revision: 6c33c1c78494e7f0623cf2b157f4036d737196d7
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/inclusion/plastoglobule.yaml
+    sha256: 1f956940772fc1052b4c5c43ec80214b9b7f91ef847308a5da26ae683f78fd17
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/plastoglobule/2026-09-12T130346Z-codex-7dd10f.yaml
+    sha256: ed91159e28486da6fd77ee451b8ec3bbbe7fc18b02c6549be6dc562b05f15eb0
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0010287
+  path: data/structures/inclusion/plastoglobule.yaml
+  label: plastoglobule
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/plastoglobule.yaml
+    role: maintained scientific record
+scope:
+  description: 'All 176 maintained YAML lines: identity/synonyms, parthood/xref, two
+    lipid components, algal distribution/example, function, all three graph edges,
+    citations and both history surfaces.'
+  selection: data/structures/inclusion/plastoglobule.yaml
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0010287
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/inclusion/plastoglobule.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Fresh target check. Executed 2026-10-14T07:15:24Z to 2026-10-14T07:15:27Z;
+    log SHA-256 de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py data/structures/inclusion/plastoglobule.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Fresh target check. Executed 2026-10-14T07:15:27Z to 2026-10-14T07:15:34Z;
+    log SHA-256 a67df3fa0fed08c890b70f50cf5ad0c76ab853928d5a9088693d9f5a06605b1e.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/inclusion/plastoglobule.yaml
+    --report /private/tmp/csm-review-20261014T071520Z-plastoglobule/snippets.md
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Fresh target check. Executed 2026-10-14T07:15:34Z to 2026-10-14T07:16:05Z;
+    log SHA-256 76a62fd5ec31e6ba130825b4a29c72af0af9ccf523b06b12b351759481bf488c.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: reused-history-venv
+  name: history-venv
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged input/root/log hashes; not rerun for this target.
+    Executed 2026-10-14T04:32:04Z to 2026-10-14T04:32:32Z; log SHA-256 6dbe137325eb5631697951ee6e0c1e8e6e240b64f91e92d72121ea298cef2a92.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: reused-labels
+  name: labels
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged input/root/log hashes; not rerun for this target.
+    Executed 2026-10-14T04:32:17Z to 2026-10-14T04:36:35Z; log SHA-256 459523b233cf29c593d6ebe49a38d5ed4484b1f98496dc47ea4fdc17be729286.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: reused-curies-live
+  name: curies-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_curies.py --check --report /private/tmp/csm-review-20261014T042923Z-slime-layer/curies-live.tsv
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged input/root/log hashes; not rerun for this target.
+    Executed 2026-10-14T04:39:48Z to 2026-10-14T04:43:30Z; log SHA-256 7b26794ff07cf822cd706e14ae709be9c14effff0addebe45c1c9a353444dd88.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: reused-curies-controls-live
+  name: curies-controls-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_curies.py --self-test
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged input/root/log hashes; not rerun for this target.
+    Executed 2026-10-14T04:38:51Z to 2026-10-14T04:39:24Z; log SHA-256 de2bcfc9df8102d7a85eea7bee03e76f6f978cf22673a2a241ea01f865b3b2b8.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: reused-traits-live
+  name: traits-live
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged input/root/log hashes; not rerun for this target.
+    Executed 2026-10-14T04:43:30Z to 2026-10-14T04:44:38Z; log SHA-256 c492eea742fc96aff67bb3d0570a24a4c3c20c30e436cedc85f2c3969114d31f.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: reused-merged-main-checks
+  name: merged-main-checks
+  status: passed
+  required: false
+  command: gh run list --repo CultureBotAI/CellStructureMech --commit 6c33c1c78494e7f0623cf2b157f4036d737196d7
+    --limit 30 --json databaseId,name,event,status,conclusion,headSha,url
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged input/root/log hashes; not rerun for this target.
+    Executed 2026-10-14T04:32:37Z to 2026-10-14T04:32:38Z; log SHA-256 a9f9e132540c77e055a43ab74c88db14f7f677d9ad40e6ae5ed7aefa9f5bacfc.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: reused-merged-main-qc
+  name: merged-main-qc
+  status: passed
+  required: true
+  command: gh run view 38339564555 --repo CultureBotAI/CellStructureMech --log
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged input/root/log hashes; not rerun for this target.
+    Executed 2026-10-14T04:32:38Z to 2026-10-14T04:32:41Z; log SHA-256 5a1c26e21239fbbe53a8892902d6fd7a3a28379b4d17457302a700420a60c864.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: reused-adapter-datasets-live
+  name: adapter-datasets-live
+  status: passed
+  required: false
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged input/root/log hashes; not rerun for this target.
+    Executed 2026-10-14T04:33:30Z to 2026-10-14T04:33:33Z; log SHA-256 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: reused-post-save-archive
+  name: post-save-archive
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged input/root/log hashes; not rerun for this target.
+    Executed 2026-10-14T06:35:24Z to 2026-10-14T06:38:49Z; log SHA-256 f28d98b405648b4317a7e4b7f5b5a4ee7bbc74c5c69a238ab6da3b0f903d73a9.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: reused-post-save-contract
+  name: post-save-contract
+  status: passed
+  required: true
+  command: .venv/bin/pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - validation
+  summary: Reused after unchanged input/root/log hashes; not rerun for this target.
+    Executed 2026-10-14T06:38:49Z to 2026-10-14T06:42:27Z; log SHA-256 a878bb4faf02d7fe7ff296f7e3a551c901f33eb11b0ca9ded5e614bfd33c3ab1.
+  scope_note: Original skips retained. Pre-save archive/contract baseline covers 221
+    bundles, not this unsaved observation. Scientific evidence assessed separately.
+- check_id: adapter-target
+  name: Target-specific iModulonDB applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - adapter
+  summary: The verified 28-dataset inventory contains no Chlamydomonas or higher-plant
+    dataset. No gene-level adapter search is applicable.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/inclusion/plastoglobule.yaml
+  locator: All 176 lines, especially lipid-core grounding_notes, monolayer role and
+    graph, and function
+  accessed_at: '2026-10-14T07:21:39Z'
+  support: supports
+  summary: The record has two lipid components, unqualified continuity and exchange
+    claims, one algal example, two exact synonyms and three graph edges. Its core
+    note attributes carotenoids to the GO definition.
+  snapshot_sha256: 1f956940772fc1052b4c5c43ec80214b9b7f91ef847308a5da26ae683f78fd17
+- evidence_id: go
+  kind: authority
+  reference: GO:0010287; GO:0009570; GO:0009507; GO:0034430; GO:0009535
+  locator: QuickGO active term definitions, synonyms, labels and direct parthood children
+  accessed_at: '2026-10-14T07:15:42Z'
+  support: supports
+  summary: Identity, PG/plastoglobuli synonyms and stroma parthood match. GO composition
+    names tocopherols, not carotenoids. The broader outer-monolayer term is not falsely
+    adopted as exact component identity.
+  snapshot_sha256: 026f1512c440bbd1c1a20f447b190631124900b9cad738c4f295cfc2a4835f42
+- evidence_id: location
+  kind: authority
+  reference: uniprot.location:SL-0217
+  locator: Current native UniProt location object
+  accessed_at: '2026-10-14T07:15:44Z'
+  support: supports
+  summary: Plastoglobule maps exactly to GO:0010287 and is placed in the chloroplast.
+    The definition uses a reservoir interpretation, not direct evidence for a transport
+    route.
+  snapshot_sha256: 48d64d27028d7a69b946a2f222adb8295a985b5b36233c6cd98732f615414b47
+- evidence_id: taxon
+  kind: authority
+  reference: NCBITaxon:3055
+  locator: Current ENA taxonomy object
+  accessed_at: '2026-10-14T07:15:43Z'
+  support: supports
+  summary: Accession and species name Chlamydomonas reinhardtii match.
+  snapshot_sha256: a24c8f85014097148d9e865ea324b01b8d04f6bae27e893834f8abb5bd8b6a1f
+- evidence_id: austin
+  kind: primary_source
+  reference: DOI:10.1105/tpc.105.039859
+  locator: PMC1488921 abstract; Results on blistering and permanent coupling; Discussion;
+    Plant Material Methods; relevant figure captions
+  accessed_at: '2026-10-14T06:54:32Z'
+  support: supports
+  summary: Electron tomography and freeze-fracture support monolayer continuity in
+    sampled Arabidopsis, tobacco and spinach chloroplasts. The study is not an algal
+    continuity experiment. It also supports carotenoids in the core, but that does
+    not make carotenoids part of the GO definition.
+  snapshot_sha256: 6ab21ed5fdb35ebc2eeee582f97da282f6b03c12660129d079525915f3ea0249
+- evidence_id: engel
+  kind: primary_source
+  reference: DOI:10.7554/eLife.04889
+  locator: 'PMC4292175.1 Results: Starch structures and plastoglobules; Figure 4 caption;
+    Cell culture/Cryo-FIB/Cryo-ET Methods'
+  accessed_at: '2026-10-14T07:16:26Z'
+  support: supports
+  summary: CC-124 algal plastoglobules occur beside thylakoids, often flat sheets.
+    Authors contrast apparent discontinuity and occasional punctate contacts with
+    higher-plant continuity, while explicitly limiting inference because CCD data
+    do not resolve bilayer leaflets. Their 20 globules from nine tomograms support
+    occurrence, not proven universal continuity or a complete algal lipidome.
+  snapshot_sha256: 16b5f264ce209350b41d8797dc53e59d7e3d2b1b8f14ca35ca21c0752e7bcb4e
+- evidence_id: rottet
+  kind: primary_source
+  reference: DOI:10.1016/j.bbabio.2015.02.002
+  locator: University of Neuchatel full PDF, pages 1-3, Figure 1, sections 2.1/2.3/3.1
+    and Conclusion on pages 7-8
+  accessed_at: '2026-10-14T07:17:19Z'
+  support: supports
+  summary: This review supports mixed neutral-lipid cores, monolayers and participation
+    in lipid remodeling. Figure 1 and section 2.1 frame contact-site transport as
+    a proposed conduit; Conclusion lists indirect evidence and leaves the transport
+    mechanism unresolved. It is synthesis, not a direct flux measurement.
+  snapshot_sha256: 33e047a275209ef415a672a2483c0aaf20caa1a978a4b52bb4b05b5319c7872e
+- evidence_id: metadata
+  kind: database
+  reference: PMID:16731586; PMID:25584625; PMID:25667966
+  locator: Fresh Europe PMC and Crossref metadata for all three native DOI references
+  accessed_at: '2026-10-14T07:21:39Z'
+  support: supports
+  summary: Titles, authors, dates and DOI/PMID mappings agree. No correction relation
+    was found in the inspected metadata; no exhaustive correction-notice survey is
+    claimed.
+- evidence_id: history
+  kind: record_content
+  reference: history/records/plastoglobule/2026-09-12T130346Z-codex-7dd10f.yaml
+  locator: Repository CREATE entry and all three inline events
+  accessed_at: '2026-10-14T07:21:39Z'
+  support: supports
+  summary: 'Creation history includes prior synonym/parthood fixes for #649/#650.
+    Those changes remain present. No new history event or native status promotion
+    is authorized.'
+- evidence_id: identity-search
+  kind: search
+  reference: /private/tmp/csm-review-20261014T071520Z-plastoglobule/identity-audit.json
+  locator: All maintained YAML identities, labels, slugs and synonyms; existing review
+    corpus
+  accessed_at: '2026-10-14T07:21:39Z'
+  support: supports
+  summary: All 909 native records parsed including ignored files; only the target
+    matches. All 221 structured bundles scanned for target IDs/paths, with no predecessor.
+    Ignored-inclusive textual search of structured and legacy record reviews found
+    no target or proposed issue-key match.
+  snapshot_sha256: 1c1432284e5987278c5d4bce1794f131fb5da20c80db6818199b3c8b4719bc0c
+  search_scope: Path.rglob parsing includes hidden/ignored files under data/structures
+    and reviews/structured. rg --no-ignore --hidden covered reviews/structured and
+    reports/yaml_record_review for target ID/name/synonyms and proposed stable issue
+    keys. No wider GitHub absence claim.
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Verified live inventory captured 2026-10-14T04:33:30Z to 04:33:33Z
+  accessed_at: '2026-10-14T07:21:39Z'
+  support: supports
+  summary: No matching algal or higher-plant dataset among 28 entries. Catalogue absence
+    is not biological absence.
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261014T071520Z-plastoglobule/baseline-verification.json
+  locator: Target checks plus unchanged-input whole-corpus baseline
+  accessed_at: '2026-10-14T07:21:39Z'
+  support: supports
+  summary: Schema, strict and citation checks passed; none of 16 citations has a snippet.
+    Global checks retain configured skips. Green gates do not resolve biological scope
+    or attribution defects.
+assessments:
+- assessment_id: identity-and-parthood
+  area: identity
+  topic: identity and parthood
+  outcome: supported
+  summary: GO identity, exact synonyms, stroma parthood and UniProt location equivalence
+    are supported. The record is a lipoprotein particle rather than a single lipid
+    or protein.
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - native
+  - go
+  - location
+  - identity-search
+- assessment_id: lipid-classes-and-provenance
+  area: grounding
+  topic: lipid classes and provenance
+  outcome: concern
+  summary: Mixed lipid core and monolayer classes are supported; essentiality is constitutive
+    architecture, not gene deletion or viability. Label-only groundings avoid equating
+    a mixture with a single chemical. The core note misattributes carotenoids to GO.
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - native
+  - go
+  - austin
+  - rottet
+- assessment_id: algal-occurrence
+  area: scope
+  topic: algal occurrence
+  outcome: supported
+  summary: The species example and native imaging method are supported for CC-124.
+    COMMON is not a measured population frequency, and no precise abundance or universal
+    condition is claimed.
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - native
+  - taxon
+  - engel
+- assessment_id: continuity-scope
+  area: scope
+  topic: continuity scope
+  outcome: concern
+  summary: The generic monolayer continuity wording fails to preserve the explicit
+    higher-plant/algal contrast in its own sources. Algal discontinuity is only apparent
+    at limited resolution, not proof that connections are absent.
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - native
+  - austin
+  - engel
+  dimensions:
+  - name: plant_evidence
+    value: Arabidopsis, tobacco and spinach
+    definition: Taxonomic scope of directly imaged half-monolayer continuity in Austin
+      2006
+    evidence_ids:
+    - austin
+  - name: algal_evidence
+    value: Chlamydomonas reinhardtii CC-124; apparent discontinuity with resolution
+      caveat
+    definition: Observed condition and interpretive limit in Engel 2015
+    evidence_ids:
+    - engel
+- assessment_id: remodeling-and-transport
+  area: graph
+  topic: remodeling and transport
+  outcome: concern
+  summary: General involvement in lipid remodeling is supported. The physical connection
+    as the transport conduit is a proposed interpretation, not demonstrated trafficking.
+    The function and graph prose need this qualification despite NONMECHANISTIC status.
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - native
+  - rottet
+  - austin
+- assessment_id: bounded-completeness
+  area: completeness
+  topic: bounded completeness
+  outcome: supported
+  summary: No images, quantities, datasets, protein-accession examples or cross-Mech
+    trait links are asserted. A fuller protein inventory could be curated later; optional
+    expansion alone is not a finding. No algal composition or plant protein family
+    is newly inferred.
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - native
+  - engel
+  - rottet
+  - adapter
+- assessment_id: history-and-ownership
+  area: provenance
+  topic: history and ownership
+  outcome: supported
+  summary: Both audit surfaces and bibliography are present. Future fixes belong to
+    maintained YAML through the guarded writer with append-only history and native
+    gates; PROPOSED is unchanged.
+  target_ids:
+  - GO:0010287
+  evidence_ids:
+  - native
+  - metadata
+  - history
+findings:
+- finding_id: F1
+  issue_key: plastoglobule-thylakoid-continuity-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Restrict permanent thylakoid continuity to the demonstrated plant scope
+  description: The monolayer role and graph say plastoglobules remain continuous with
+    thylakoid outer leaflets without organism qualification. Austin demonstrates this
+    in higher plants. The co-cited algal study explicitly reports apparent discontinuity
+    with occasional contacts and limited leaflet resolution. Applying the plant model
+    without that contrast overstates what is established for the record's sole canonical
+    microbial example.
+  target_ids:
+  - GO:0010287
+  field_paths:
+  - components[component_id=plastoglobule_lipid_monolayer].grounding_notes
+  - components[component_id=plastoglobule_lipid_monolayer].role
+  - causal_graphs[graph_id=plastoglobule_thylakoid_lipid_exchange].description
+  - causal_graphs[graph_id=plastoglobule_thylakoid_lipid_exchange].scope_notes
+  - causal_graphs[graph_id=plastoglobule_thylakoid_lipid_exchange].edges[1]
+  evidence_ids:
+  - native
+  - austin
+  - engel
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/plastoglobule.yaml
+    role: maintained scientific record
+  rule_id: review-yaml-record:preserve-organism-scope-and-conflicts
+  native_severity: major
+  normalization_reason: Material scope inflation across the structural relation, not
+    a cosmetic qualifier. The correct fix preserves uncertainty rather than asserting
+    algal absence of continuity.
+- finding_id: F2
+  issue_key: plastoglobule-exchange-hypothesis
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Label the proposed contact-site transport route as interpretation
+  description: The function and graph describe exchange through physical coupling
+    as established. The cited review supports lipid remodeling but presents the contact
+    site as a likely conduit and leaves transport unresolved. Add a clear hypothesis
+    qualifier to that route while retaining the supported broader remodeling role.
+  target_ids:
+  - GO:0010287
+  field_paths:
+  - functions[function_id=thylakoid_lipid_remodeling].description
+  - causal_graphs[graph_id=plastoglobule_thylakoid_lipid_exchange].description
+  - causal_graphs[graph_id=plastoglobule_thylakoid_lipid_exchange].edges[2].description
+  evidence_ids:
+  - native
+  - rottet
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/plastoglobule.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:causal-graph-predictions-remain-labeled
+  native_severity: minor
+  normalization_reason: Bounded certainty wording; general lipid-remodeling involvement
+    is supported and the graph already declares NONMECHANISTIC scope. No finding that
+    lipid exchange is biologically impossible.
+- finding_id: F3
+  issue_key: plastoglobule-go-lipid-source
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the lipid list attributed to GO
+  description: The core grounding note says GO:0010287 names carotenoids. The inspected
+    GO definition instead names tocopherols. Carotenoids have literature support,
+    so retain that claim only with the appropriate paper attribution or match the
+    GO list when paraphrasing GO.
+  target_ids:
+  - GO:0010287
+  field_paths:
+  - components[component_id=plastoglobule_lipid_core].grounding_notes
+  evidence_ids:
+  - native
+  - go
+  - austin
+  - rottet
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/plastoglobule.yaml
+    role: maintained scientific record
+  rule_id: review-yaml-record:source-support-at-narrowest-claim
+  native_severity: minor
+  normalization_reason: A source-specific provenance mismatch, not an incorrect conclusion
+    that carotenoids may occur in plastoglobules.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0010287
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/plastoglobule.yaml
+    role: maintained scientific record
+  description: In a separately authorized curation, scope the continuity component/edge
+    to the directly studied higher plants and preserve the algal observations in a
+    source-linked discussion or explicit scope note.
+  acceptance_checks:
+  - Retain CC-124 apparent discontinuity, occasional contacts and unresolved leaflet
+    resolution together; do not convert these into proven absence.
+  - All generic continuity claims must identify their experimental scope; taxonomic
+    examples must not silently inherit unsupported topology.
+  - Re-read Austin Results/Plant Material and Engel Starch structures and plastoglobules
+    against every revised field.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0010287
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/plastoglobule.yaml
+    role: maintained scientific record
+  description: Qualify the contact-site transport explanation as proposed while retaining
+    supported lipid remodeling.
+  acceptance_checks:
+  - Function and graph distinguish supported remodeling from the hypothesized physical
+    conduit.
+  - Use Rottet Figure 1, section 2.1 and Conclusion; do not imply a direct flux experiment
+    or settled transport mechanism.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0010287
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/plastoglobule.yaml
+    role: maintained scientific record
+  description: Correct the GO paraphrase or explicitly attribute carotenoid composition
+    to inspected literature.
+  acceptance_checks:
+  - The lipid list described as GO-derived matches the authority text, including tocopherols.
+  - Any retained carotenoid statement has its actual literature source and is not
+    attributed to GO.
+- action_id: A4
+  finding_ids:
+  - F1
+  - F2
+  - F3
+  target_ids:
+  - GO:0010287
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/plastoglobule.yaml
+    role: maintained scientific record
+  depends_on:
+  - A1
+  - A2
+  - A3
+  description: After separately authorized fixes, use guarded scientific writes, preserve
+    append-only history and validate the revised record before a lineage-linked disposition.
+  generator: just render; just docs-stats only as required by actual curation changes
+  acceptance_checks:
+  - Run just validate, just validate-strict, just validate-products, just validate-history
+    and just qc for the resulting change.
+  - Check references and snippets, regenerate affected products through maintained
+    generators, and leave PROPOSED unchanged.
+  - Save a new validated disposition naming these exact stable issue keys and previous
+    occurrences; never edit this review.
+limitations:
+- Same-agent review, not independent human approval, exhaustive literature discovery
+  or experimental replication.
+- Austin main structural Results, related Discussion, abstract, Plant Material Methods
+  and captions were read from hash-verified PMC HTML retained with its original access
+  time. Figure pixels, raw tomograms and supplements were not independently reanalyzed.
+- Engel Starch structures and plastoglobules, Figure 4 caption, Cell culture/Cryo-FIB/Cryo-ET
+  Methods and relevant architectural context were read in native JATS. No new pixel-based
+  inference was made. The authors' explicit resolution limitation is preserved.
+- Rottet institutional full PDF was recovered after publisher access failed. Composition/topology
+  and transport discussion, differentiation/stress context and Conclusion were inspected;
+  pages 2-3 including Figure 1/Table 1 were also visually checked. No full audit of
+  every cited primary experiment or protein-family assignment was performed.
+- Optional protein inventory, images, geometry, datasets and traits were not populated.
+  An unfilled optional field alone is not a finding.
+- 'Global gates reused only after unchanged protected roots, captured guidance/record
+  inputs and log hashes. Original counts/skips retained: 1729 histories; labels 3545
+  canonical/50 synonym/6 exceptions/603 no-adapter; CURIE 4023 OK/251 skips/0 unresolved;
+  exact-main QC 987 passed/3 skipped.'
+- No snippets among 16 citations. Pre-save archive/contract baseline covers 221 existing
+  bundles. Fresh checks of the newly saved observation are recorded separately; future
+  success is not claimed here.
+- No prior canonical or legacy target review was found in the named hidden/ignored-inclusive
+  searches. Historical issue numbers in curation history are not fabricated predecessors
+  for these new findings.
+- No scientific YAML, history, images, generated products, GitHub issues/PRs or scientific
+  status was changed. Findings remain open; proposed actions are not performed fixes.
+tags:
+- scientific-review
+- inclusion
+- scope
+- provenance

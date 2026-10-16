@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/nitrogenase_complex.yaml
+  slug: nitrogenase_complex
+session:
+  id: 2026-10-16T014730Z-Codex-fe73b3
+  timestamp: '2026-10-16T01:47:30Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2302
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - components
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Remove universal catalytic tetramer wording and correct the Mo-exclusive IPR005977
+    claim.
+  details: 'Remove universal catalytic tetramer wording and correct the Mo-exclusive IPR005977
+    claim. Inspected sources: Sippel and Einsle 2017 DOI:10.1038/nchembio.2428 abstract; Schmidt
+    et al. 2024 DOI:10.1038/s41594-023-01124-2 abstract; InterPro IPR005977 metadata and representative
+    structure. Other claims and prior partial-review limitations remain outside this remediation
+    scope.'

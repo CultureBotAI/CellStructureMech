@@ -94,29 +94,25 @@ components:
         inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
         by UniProt for the 'Cell inner membrane' localisation of P0AB98.
 - component_id: peripheral_stalk
-  label: peripheral stalk (b2, delta)
+  label: F-type ATP synthase peripheral stalk
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
-  gene_symbols:
-  - atpF
-  - atpH
   essentiality: ESSENTIAL
-  role: 'Stator: holds the alpha3beta3 head against the torque of the rotating central
-    stalk.'
+  role: Stator connecting the catalytic head to the membrane sector. The E. coli prototype
+    contains a b-subunit homodimer linked to delta; this subunit composition is not
+    universal across F-type ATP synthases.
   evidence:
   - reference: DOI:10.1146/annurev-biochem-013118-110903
     notes: Kuehlbrandt 2019 describes the peripheral stalk as the stator resisting
       rotation of the head.
+  - reference: DOI:10.1038/s41467-020-16387-2
+    notes: Sobti et al. 2020 describe the E. coli b2 peripheral stalk and delta attachment
+      and compare it with the distinct Polytomella mitochondrial stalk/OSCP arrangement.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   presence: UNIVERSAL
   note: Lost only in a few lineages with no membrane bioenergetics.
-  reference: DOI:10.1146/annurev-biochem-013118-110903
-- taxon_id: NCBITaxon:2157
-  taxon_label: Archaea
-  presence: UNIVERSAL
-  note: Archaea use the related A-type ATP synthase, homologous to the V-type ATPase.
   reference: DOI:10.1146/annurev-biochem-013118-110903
 canonical_examples:
 - taxon_id: NCBITaxon:83333
@@ -226,7 +222,6 @@ causal_graphs:
   - subject: head
     predicate: catalyses formation of
     object: atp
-    predicate_id: RO:0002327
     description: Catalytic nucleotide-binding interfaces in the F1 head synthesize
       ATP from ADP and phosphate.
     evidence:
@@ -291,6 +286,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-16T01:48:57Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2307: Remove family-mismatched archaeal occurrence, scope the stalk prototype
+    and unground the ATP-product predicate.'
+  llm_assisted: true
 datasets:
 - accession: PDB:6OQR
   title: E. coli ATP Synthase ADP State 1a
@@ -328,3 +329,27 @@ datasets:
     archive and API data are CC0 (https://www.rcsb.org/pages/usage-policy). Metadata-only
     ingest: the RCSB molecular render is not ingested as an image or counted as a
     micrograph.'
+discussions:
+- discussion_id: f_type_family_distribution_scope
+  kind: INTERPRETATION
+  status: RESOLVED
+  prompt: Keep the F-type identity separate from the occurrence of related A-type
+    ATP synthases.
+  attaches_to:
+  - taxonomic_distribution
+  - components#peripheral_stalk
+  rationale: Occurrence of an archaeal A-type enzyme does not establish occurrence
+    of the F-type complex denoted by this record. The unsupported domain-wide archaeal
+    row was removed without asserting archaeal absence. Stalk composition is represented
+    generically with a bounded E. coli prototype.
+  resolution_note: Removed the family-mismatched occurrence assertion; any future
+    archaeal F-type row needs direct family-specific evidence.
+  evidence:
+  - reference: GO:0045259
+    notes: The record's F1Fo identity must not be conflated with a related A-type
+      enzyme.
+  - reference: DOI:10.1038/s41467-020-16387-2
+    notes: Primary E. coli structure bounds the b2/delta prototype and compares mitochondrial
+      stalks.
+  posed_by: claude
+  posed_date: '2026-10-16'

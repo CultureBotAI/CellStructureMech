@@ -34,6 +34,12 @@ curation_history:
     2021 with Picosynechococcus sp. PCC 7002 and strain-neutral PCC 7002/PCC 7120
     evidence notes.'
   llm_assisted: true
+- timestamp: '2026-10-16T01:46:35Z'
+  curator: claude
+  action: ADDRESS_REVIEW
+  changes: '#2305: Correct Zheng authorship and state attribution, and qualify the
+    separate Kawakami core/rod preparations.'
+  llm_assisted: true
 synonyms:
 - synonym_text: allophycocyanin core
   synonym_type: EXACT_SYNONYM
@@ -65,7 +71,7 @@ components:
     notes: Sui 2021 reviews the allophycocyanin core as the central cylinder assembly
       that accepts excitation from peripheral phycobilisome rods.
   - reference: DOI:10.1038/s41467-021-25813-y
-    notes: Sauer et al. 2021 resolved PCC 7002 and PCC 7120 allophycocyanin core subunits
+    notes: Zheng et al. 2021 resolved PCC 7002 and PCC 7120 allophycocyanin core subunits
       within intact phycobilisomes by cryo-EM.
 - component_id: core_linkers_and_terminal_emitters
   label: phycobilisome core linker and terminal emitter polypeptides
@@ -89,8 +95,9 @@ components:
     notes: Sui 2021 reviews core linker and terminal-emitter roles in phycobilisome
       assembly and downhill energy transfer.
   - reference: DOI:10.1038/s41467-021-25813-y
-    notes: Sauer et al. 2021 modeled PCC 7002 and PCC 7120 core linkers and terminal
-      emitters in light-harvesting and photoprotected phycobilisome states.
+    notes: Zheng et al. 2021 modeled PCC 7002 and PCC 7120 core linkers and terminal
+      emitters in cryo-EM phycobilisome structures; this paper is not the PCC 6803
+      OCP-bound photoprotection study.
 - component_id: core_phycobilin_chromophores
   label: allophycocyanin-bound phycobilin chromophores
   component_type: SMALL_MOLECULE
@@ -127,8 +134,9 @@ canonical_examples:
   reference: DOI:10.1038/s41467-021-25813-y
 - taxon_id: NCBITaxon:32053
   taxon_label: Thermostichus vulcanus
-  note: Thermophilic cyanobacterium whose core and rods were resolved in an intact
-    light-harvesting phycobilisome.
+  note: Thermophilic cyanobacterium whose pentacylindrical core and dissociated rods
+    were analyzed separately by cryo-EM. Most rods dissociated during preparation;
+    the core reconstruction did not provide a fully resolved intact core-and-rod antenna.
   reference: DOI:10.1038/s41467-022-30962-9
 functions:
 - function_id: allophycocyanin_core_energy_transfer
@@ -142,17 +150,18 @@ functions:
     notes: Sui 2021 reviews rod-to-core energy transfer through allophycocyanin and
       terminal emitters in phycobilisomes.
   - reference: DOI:10.1038/s41467-021-25813-y
-    notes: Sauer et al. 2021 modeled excitation-energy transfer through cyanobacterial
+    notes: Zheng et al. 2021 modeled excitation-energy transfer through cyanobacterial
       phycobilisome cores.
 evidence:
 - reference: DOI:10.1146/annurev-biophys-062920-063657
   notes: Sui 2021, Structure of Phycobilisomes, Annual Review of Biophysics.
 - reference: DOI:10.1038/s41467-021-25813-y
-  notes: Sauer et al. 2021, Structural insight into the mechanism of energy transfer
+  notes: Zheng et al. 2021, Structural insight into the mechanism of energy transfer
     in cyanobacterial phycobilisomes, Nature Communications.
 - reference: DOI:10.1038/s41467-022-30962-9
   notes: Kawakami et al. 2022, Core and rod structures of a thermophilic cyanobacterial
-    light-harvesting phycobilisome, Nature Communications.
+    light-harvesting phycobilisome, Nature Communications. Results and Methods describe
+    separate core and dissociated-rod preparations, not a fully resolved intact phycobilisome.
 - reference: GO:0030076
   notes: Gene Ontology cellular-component term for the broader light-harvesting complex
     class.
@@ -214,7 +223,7 @@ causal_graphs:
       phycobilisome core cylinders.
     evidence:
     - reference: DOI:10.1038/s41467-021-25813-y
-      notes: Sauer et al. 2021 resolved allophycocyanin subunits in the PCC 7002 and
+      notes: Zheng et al. 2021 resolved allophycocyanin subunits in the PCC 7002 and
         PCC 7120 cores by cryo-EM.
   - subject: core_linkers
     predicate: stabilize and tune
@@ -248,7 +257,7 @@ causal_graphs:
       toward thylakoid photosystems.
     evidence:
     - reference: DOI:10.1038/s41467-021-25813-y
-      notes: Sauer et al. 2021 modeled energy transfer through the PCC 7002 allophycocyanin
+      notes: Zheng et al. 2021 modeled energy transfer through the PCC 7002 allophycocyanin
         core toward photosystem acceptors.
   - subject: phycobilisome_core
     predicate: contributes to

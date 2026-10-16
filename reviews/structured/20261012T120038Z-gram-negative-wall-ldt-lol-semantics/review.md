@@ -1,0 +1,994 @@
+# Gram-negative wall tether chemistry and pathway typing review
+
+- Review: 20261012T120038Z-gram-negative-wall-ldt-lol-semantics
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-12T11:53:14Z
+- Finished UTC: 2026-10-12T12:00:38Z
+- Reviewer: Codex (self_review)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One major reversed donor/acceptor edge and one minor Lol pathway typing defect. Identity and bounded tether mechanics are supported; two nearest-source full-text checks remain incomplete.
+
+## Scope And Provenance
+
+One entire record, three append-only histories, two constituents, taxonomy, function, both graphs (11 edges), all identifiers, dataset and exact image provenance assessed. No sampling; nearest-source coverage remains incomplete.
+
+Selection: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base e74d0c3e33df7e44348afbba1695b61c23262ab0.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0009276 | data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml | maintained | Gram-negative-bacterium-type cell wall |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0009276 | Fresh target gate. Actual UTC: 2026-10-12T11:53:25Z to 2026-10-12T11:53:27Z. |
+| strict | passed | True | GO:0009276 | Fresh target gate. Actual UTC: 2026-10-12T11:53:27Z to 2026-10-12T11:53:30Z. |
+| snippets | passed | True | GO:0009276 | Fresh target gate; zero snippet coverage is not evidence of inspected full text. Actual UTC: 2026-10-12T11:53:30Z to 2026-10-12T11:53:46Z. |
+| reused-release-qc | passed | True | GO:0009276 | Verified unchanged-input reuse: QC987 passed/3 skipped; cached labels with603 no-adapter skips; traits used cached index after an earlier network failure. Not fresh CI. Actual UTC: 2026-10-12T06:33:07Z to 2026-10-12T06:45:16Z. |
+| reused-release-labels | passed | True | GO:0009276 | Verified unchanged-input reuse: QC987 passed/3 skipped; cached labels with603 no-adapter skips; traits used cached index after an earlier network failure. Not fresh CI. Actual UTC: 2026-10-12T06:45:16Z to 2026-10-12T06:47:16Z. |
+| reused-release-traits | passed | True | GO:0009276 | Verified unchanged-input reuse: QC987 passed/3 skipped; cached labels with603 no-adapter skips; traits used cached index after an earlier network failure. Not fresh CI. Actual UTC: 2026-10-12T06:48:15Z to 2026-10-12T06:48:52Z. |
+| reused-curies-live | passed | True | GO:0009276 | Verified unchanged-input reuse: live CURIE4023 OK/251 SKIP/0 unreachable;212 valid bundles and4 contract tests. Post-save checks follow separately. Actual UTC: 2026-10-12T07:05:41Z to 2026-10-12T07:10:58Z. |
+| reused-post-save-archive | passed | True | GO:0009276 | Verified unchanged-input reuse: live CURIE4023 OK/251 SKIP/0 unreachable;212 valid bundles and4 contract tests. Post-save checks follow separately. Actual UTC: 2026-10-12T11:15:27Z to 2026-10-12T11:16:45Z. |
+| reused-post-save-contract | passed | True | GO:0009276 | Verified unchanged-input reuse: live CURIE4023 OK/251 SKIP/0 unreachable;212 valid bundles and4 contract tests. Post-save checks follow separately. Actual UTC: 2026-10-12T11:16:45Z to 2026-10-12T11:18:13Z. |
+| adapter-datasets | passed | False | GO:0009276 | Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:18Z to 2026-10-12T11:53:19Z. |
+| adapter-lpp | passed | False | GO:0009276 | Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:19Z to 2026-10-12T11:53:19Z. |
+| adapter-lolC | passed | False | GO:0009276 | Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:19Z to 2026-10-12T11:53:20Z. |
+| adapter-lolD | passed | False | GO:0009276 | Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:20Z to 2026-10-12T11:53:20Z. |
+| adapter-lolE | passed | False | GO:0009276 | Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:20Z to 2026-10-12T11:53:21Z. |
+| adapter-lolA | passed | False | GO:0009276 | Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:21Z to 2026-10-12T11:53:21Z. |
+| adapter-lolB | passed | False | GO:0009276 | Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:21Z to 2026-10-12T11:53:21Z. |
+| adapter-erfK | passed | False | GO:0009276 | Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:21Z to 2026-10-12T11:53:22Z. |
+| adapter-ycfS | passed | False | GO:0009276 | Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:22Z to 2026-10-12T11:53:22Z. |
+| adapter-ybiS | passed | False | GO:0009276 | Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:22Z to 2026-10-12T11:53:23Z. |
+| image-integrity | passed | True | GO:0009276 | Exact source/channel/native-byte validation. Actual UTC: 2026-10-12T11:55:35Z to 2026-10-12T11:55:38Z. |
+| Inspect remaining nearest-source body: silhavy | unavailable | True | GO:0009276 | Bibliography and complete abstract read; original body not inspected after bounded public access attempts. Other-source corroboration is not full nearest-citation verification. |
+| Inspect remaining nearest-source body: grabowicz | unavailable | True | GO:0009276 | Bibliography and complete abstract read; original body not inspected after bounded public access attempts. Other-source corroboration is not full nearest-citation verification. |
+
+## Scientific And Domain Assessments
+
+### Thin wall versus entire envelope
+
+identity: supported. Targets: GO:0009276.
+
+Identifier, category, kind, label and is-a parent match the native wall concept; outer membrane is represented separately.
+
+### Constituents and conditional links
+
+representation: supported. Targets: GO:0009276.
+
+Thin peptidoglycan is essential to this structure definition, not a universal viability claim. Conditional lipoprotein links and no fixed copy numbers avoid universalizing one tether stoichiometry.
+
+### Taxonomy and prototype limits
+
+scope: unknown. Targets: GO:0009276.
+
+Taxon identities and E.coli prototype agree. COMMON plus acknowledged variants is not universal presence. Detailed Silhavy distribution support is pending; no scope defect inferred from inaccessible text.
+
+### Five function-graph edges and mechanical role
+
+graph: supported. Targets: GO:0009276.
+
+All function edges were inspected. The bounded E.coli graph coherently separates wall position, lipid anchoring, covalent tethering and mechanical coupling; Mathelie supports these distinctions. It does not claim peptidoglycan alone determines stiffness.
+
+### Six assembly edges and reaction direction
+
+graph: concern. Targets: GO:0009276.
+
+Maturation, membrane insertion, attachment and tether formation have relevant support. The uses-acceptor edge reverses the cited chemical roles. Exact nearest-source verification for the Lol trafficking edge remains incomplete.
+
+### Lol pathway versus protein entity
+
+representation: concern. Targets: GO:0009276.
+
+The whole Lol route is typed as a protein despite spanning distinct machinery and carriers. A pathway type or explicit protein actors would preserve the intended semantics.
+
+### Nearest-source coverage
+
+evidence: unknown. Targets: GO:0009276.
+
+Bibliographic identities and abstracts were checked for all five papers. Relevant bodies were read for three. Silhavy and Grabowicz detailed claims need follow-up; access failure alone is not a finding.
+
+### Dataset, channel identity and caption
+
+provenance: supported. Targets: GO:0009276.
+
+Archive, manifest, exact source bytes, native image and linked paper support the curated image context. Preserve the upstream Figure3-to-Figure5 association conflict as a limitation; corroboration does not establish a target caption defect.
+
+### Required versus optional representation
+
+completeness: supported. Targets: GO:0009276.
+
+No additional mandatory measurement, trait, stoichiometry or imaging entry was identified. Adapter gene hits do not mandate new graph nodes. No issue is invented for optional omissions.
+
+### Deterministic gates
+
+schema: supported. Targets: GO:0009276.
+
+Target gates pass. Wider receipts were reused only after unchanged-input and log-hash verification; they do not certify the scientific chemistry.
+
+### Native status, history and correction owner
+
+ownership: supported. Targets: GO:0009276.
+
+Three append-only histories and five native events were inspected. Fixes belong to guarded curation of the maintained YAML, with real history and native validation; no status promotion or current scientific edits.
+
+## Findings
+
+### F1: Correct the Lpp-anchoring donor/acceptor roles
+
+major / open / confirmed; issue key: gram-negative-wall-ldt-donor-acceptor.
+
+The directed uses-acceptor edge and its description reverse the roles assigned by the cited paper. Peptidoglycan supplies the acyl donor; the Lpp terminal-lysine side-chain amine is the acceptor. Correct the edge and prose while retaining the original paper's distinction between observed linkage and catalytic interpretation.
+
+### F2: Do not type the Lol pathway as one protein entity
+
+minor / open / confirmed; issue key: gram-negative-wall-lol-pathway-node-type.
+
+The node label denotes a pathway spanning distinct proteins, but GENE_OR_PROTEIN is restricted to proteins, families and complexes. Use the native PATHWAY type, or remodel with source-supported protein actors and matching edges; do not relabel the entire route as one complex.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the tether-assembly reaction predicate and description against the cited linkage evidence.
+
+- Peptidoglycan and Lpp donor/acceptor roles agree with Magnet2007; no inverted edge remains.
+- Preserve evidence tier and E.coli scope; do not introduce experimental procedures.
+
+### A2
+
+Represent the Lol route using a semantically correct native node type and compatible edge.
+
+- Whole-pathway label no longer uses GENE_OR_PROTEIN; individual actors, if introduced, have narrow evidence support.
+- Inspect the pending Silhavy/Grabowicz passages before declaring complete scientific coverage.
+- For separately authorized curation, use the guarded writer, real history and native gates; preserve PROPOSED and save an exact-key lineage disposition.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml; Entire YAML, all five native events and three append-only history files | supports | The assembly graph labels peptidoglycan as the Lpp-anchoring acceptor and types the entire Lol pathway as GENE_OR_PROTEIN. The function graph explicitly uses canonical E.coli scope. PROPOSED and all scientific inputs are unchanged. |
+| rules | src/cellstructuremech/schema/cellstructuremech.yaml; CausalNode description and CausalNodeTypeEnum; local review checklist | supports | GENE_OR_PROTEIN is restricted to proteins, families and complexes. PATHWAY and BIOLOGICAL_PROCESS are separate allowed types. Claims and directed edges need narrow source support. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009276,GO:0009274,GO:0009279; Active GO terms, definitions and is-a relationships | supports | GO:0009276 denotes the thin Gram-negative wall linked to the outer membrane, with GO:0009274 as parent. GO:0009279 is the separate outer membrane. |
+| magnet | https://journals.asm.org/doi/10.1128/jb.00084-07; Magnet et al.2007 original body, linkage results, concluding donor/acceptor discussion and Fig1B caption; PMID:17369299 | refutes | The mapped linkage joins the peptidoglycan mDAP carboxyl to the Lpp terminal-lysine side-chain amine. The authors assign peptidoglycan as acyl donor and Lpp as acceptor, discussing the catalytic mechanism by analogy. This contradicts the native acceptor edge. |
+| konovalova | https://pmc.ncbi.nlm.nih.gov/articles/PMC4632606/; Konovalova and Silhavy2015 review: introduction, maturation/export sections and Fig1 caption; DOI:10.1098/rstb.2015.0030 | supports | Inspected review text supports triacylated lipoprotein maturation and a route involving distinct LolCDE, LolA and LolB actors. The pathway is not itself one protein or one stable complex. Relevant PMC text was accessible earlier in this session; a later re-open returned a challenge. |
+| mathelie | https://pmc-oa-opendata.s3.amazonaws.com/PMC7156740.1/PMC7156740.1.xml; Mathelie-Guinlet et al.2020 JATS: introduction, Results Sec4, discussion and Fig1/4/5 captions; DOI:10.1038/s41467-020-15489-1 | supports | The E.coli study supports N-terminal membrane anchoring, covalent peptidoglycan attachment of a subset of Lpp, and a contribution of tethering to envelope mechanics. It does not justify extending one prototype to every diderm. |
+| silhavy | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1101%2Fcshperspect.a000414%22&amp;format=json&amp;resultType=core; Silhavy et al.2010 complete abstract and bibliographic metadata; DOI:10.1101/cshperspect.a000414 | partial | Identity and basic thin-wall/outer-membrane architecture are supported. Detailed nearest-source coupling, mechanical and distribution passages have not been inspected. |
+| grabowicz | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.1702248114%22&amp;format=json&amp;resultType=core; Grabowicz and Silhavy2017 complete abstract and bibliographic metadata; DOI:10.1073/pnas.1702248114 | partial | The abstract describes conditional bypass of LolA/B requirements. It is not full verification of the exact LolCDE-A-B sequence attributed to this citation; Konovalova corroboration does not substitute for inspecting this body. |
+| identifiers | /private/tmp/csm-review-20261012T115308Z-gram-negative-wall; All five EuropePMC/Crossref identities; UniProt P69776, Pfam PF04728 and ENA taxa1224/562 responses | supports | DOI titles, authors and years agree. P69776 is reviewed E.coli Lpp/b1677; PF04728 denotes its lipoprotein leucine-zipper coiled-coil region. It is an xref, not a claim that a domain equals the wall. Taxa resolve to Pseudomonadota and E.coli. |
+| archive | https://www.ebi.ac.uk/biostudies/api/v1/studies/S-BIAD2294; Complete study metadata, Figure3 file manifest and named channel; matching source TIFF | supports | S-BIAD2294, dataset DOI, CC0 and author attribution agree. The exact source appears in a 69-file manifest with channel3 HADA. Figure3 study-component metadata links to a specimen named Figure5, an upstream association conflict; the separately named Figure3 specimen, filename and published paper corroborate the native caption. |
+| image-paper | https://link.springer.com/article/10.1038/s44319-025-00669-1; Results subsection about new-pole localization, Fig3 caption and Data availability | supports | Published text independently links HADA to peptidoglycan and the stated label-free growth context. Data availability explicitly names S-BIAD2294. This supports caption context, not a claim to have corrected archive metadata. |
+| image-check | /private/tmp/csm-review-20261012T115308Z-gram-negative-wall/image-integrity.json; Exact TIFF frame3 versus native PNG bytes; native PNG also visually inspected | supports | Three-frame TIFF, channel3 grayscale1392x1040, source4382973 bytes and expected SHA match. Lossless PNG rendering is byte-identical to the stored484180-byte image. Nonblank rod-shaped cells are visible; this fluorescence image does not resolve wall thickness or individual Lpp tethers. |
+| adapter | https://imodulondb.org/; Fresh28-dataset inventory and nine e_coli/precise1k gene searches | supports | Exact hits: lpp/b1677, lolC/b1116, lolD/b1117, lolE/b1118, lolA/b0891, lolB/b1209, erfK/ldtA/b1990, ycfS/ldtC/b1113 and ybiS/ldtB/b0819. Extra clpP/clpS substring hits were excluded. No iModulon hits needed summary; gene presence is context, not mechanistic proof. |
+| validation | /private/tmp/csm-review-20261012T115308Z-gram-negative-wall/baseline-verification.json; Fresh target checks plus exact unchanged-input wider receipts | supports | Schema and strict pass. Snippet check passes with0/18 citations carrying snippets,15 evidence entries and3 bare references; this is not full-text validation. Reused native QC, labels, traits, live CURIE and212-bundle/4-test receipts retain original cache/skip/time limitations. |
+| access | /private/tmp/csm-review-20261012T115308Z-gram-negative-wall/source-access.jsonl; Twenty-three hashed source captures and separately inspected web text | context_only | Four attempted S3 full-text captures returned404, retained as failures rather than paper bodies. Mathelie JATS succeeded; Magnet publisher and Konovalova PMC text were inspected. Silhavy/Grabowicz full text remains unverified after bounded access attempts. |
+| predecessors | reviews/structured/; Canonical predecessor scan and ignored-inclusive issue-key search | supports | No canonical predecessor among212 bundles and no proposed-key match in the declared local roots; not a GitHub-wide absence claim. |
+
+## Limits And Additional Notes
+
+- Partial scientific review: Silhavy2010 and Grabowicz2017 body passages remain unverified. No access-only finding; this target is not counted as fully reviewed.
+- Relevant Mathelie JATS sections and captions, Magnet original body and Fig1B caption, and Konovalova relevant review sections were inspected; no raw experimental data or figure measurements were reanalyzed.
+- The archive Figure3 component links to a specimen named Figure5. Exact manifest/channel, separately named specimen, source filename and published paper corroborate the target caption; the archive conflict itself is not resolved.
+- Konovalova PMC reading succeeded earlier; a later re-open returned a challenge. Failed S3 captures are not full-text evidence. The image-paper inspection covers the relevant Results/caption/data-availability passages, not every experiment.
+- Same-agent assessment, not independent human review. Wider gates retain original timestamps, caches and skips; no new CI or publication claim.
+- No native scientific YAML, image, status, history, generated product, earlier review or legacy report changed. External publication approval remains unanswered; no GitHub mutation.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T120038Z-gram-negative-wall-ldt-lol-semantics
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Gram-negative wall tether chemistry and pathway typing review
+started_at: '2026-10-12T11:53:14Z'
+finished_at: '2026-10-12T12:00:38Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same coding-agent context; no independent human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: One major reversed donor/acceptor edge and one minor Lol pathway typing defect.
+  Identity and bounded tether mechanics are supported; two nearest-source full-text
+  checks remain incomplete.
+source:
+  git_revision: e74d0c3e33df7e44348afbba1695b61c23262ab0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/envelope/gram_negative_bacterium_type_cell_wall/bia_s_biad2294_series002_1_c3_5447ba73fb.png
+    sha256: 0c1c9b9e31d3affaec5166fefa61ecd937cc0bdb55d0bcfacc5096b0af03f40a
+    role: context
+  - path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    sha256: 9c953c54e9f54eba9cbe7b658046a7910b2e9a42d41246d2ce3c2acf9693bef6
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/gram_negative_bacterium_type_cell_wall/2026-08-30T193101Z-codex-593cbf.yaml
+    sha256: c185213f47170a49348fe8b28b5e15946cbc264f2324322dfabdfc042f28d5b5
+    role: context
+  - path: history/records/gram_negative_bacterium_type_cell_wall/2026-09-04T011223Z-codex-b5961f.yaml
+    sha256: 57aee413ae9a446894a555b4687a38adf4910a0c987170f42ca9f97b43ecf5e2
+    role: context
+  - path: history/records/gram_negative_bacterium_type_cell_wall/2026-09-04T044300Z-codex-f64c03.yaml
+    sha256: 87d691af71db0e619880149cbb674a623f82863c56053db3c3bc574bb83a2884
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: research/2026-09-01-bioimage-archive.md
+    sha256: 497d2f824f87d78147cfc96a616e7d55deb25001f48d8feab309f391830bfcd7
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/bioimage_archive.py
+    sha256: 53d49cefca0bd7f7c20f639a1eb5bf105b1bef56006104ad752d6f6cd854cfbc
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:0009276
+  path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+  label: Gram-negative-bacterium-type cell wall
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    role: maintained scientific record
+scope:
+  description: One entire record, three append-only histories, two constituents, taxonomy,
+    function, both graphs (11 edges), all identifiers, dataset and exact image provenance
+    assessed. No sampling; nearest-source coverage remains incomplete.
+  selection: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009276
+checks:
+- check_id: schema
+  name: schema
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Actual UTC: 2026-10-12T11:53:25Z to 2026-10-12T11:53:27Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  command: .venv/bin/python scripts/validate_strict.py data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate. Actual UTC: 2026-10-12T11:53:27Z to 2026-10-12T11:53:30Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - validation
+- check_id: snippets
+  name: snippets
+  command: .venv/bin/python scripts/fetch_snippets.py --verify --check --record data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    --report /private/tmp/csm-review-20261012T115308Z-gram-negative-wall/snippets.md
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Fresh target gate; zero snippet coverage is not evidence of inspected
+    full text. Actual UTC: 2026-10-12T11:53:30Z to 2026-10-12T11:53:46Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - validation
+- check_id: reused-release-qc
+  name: reused-release-qc
+  command: .venv/bin/python scripts/run_qc.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse: QC987 passed/3 skipped; cached labels
+    with603 no-adapter skips; traits used cached index after an earlier network failure.
+    Not fresh CI. Actual UTC: 2026-10-12T06:33:07Z to 2026-10-12T06:45:16Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - validation
+- check_id: reused-release-labels
+  name: reused-release-labels
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse: QC987 passed/3 skipped; cached labels
+    with603 no-adapter skips; traits used cached index after an earlier network failure.
+    Not fresh CI. Actual UTC: 2026-10-12T06:45:16Z to 2026-10-12T06:47:16Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - validation
+- check_id: reused-release-traits
+  name: reused-release-traits
+  command: .venv/bin/python scripts/check_trait_links.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse: QC987 passed/3 skipped; cached labels
+    with603 no-adapter skips; traits used cached index after an earlier network failure.
+    Not fresh CI. Actual UTC: 2026-10-12T06:48:15Z to 2026-10-12T06:48:52Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - validation
+- check_id: reused-curies-live
+  name: reused-curies-live
+  command: .venv/bin/python scripts/check_curies.py --check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse: live CURIE4023 OK/251 SKIP/0 unreachable;212
+    valid bundles and4 contract tests. Post-save checks follow separately. Actual
+    UTC: 2026-10-12T07:05:41Z to 2026-10-12T07:10:58Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-archive
+  name: reused-post-save-archive
+  command: .venv/bin/python scripts/record_review.py check
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse: live CURIE4023 OK/251 SKIP/0 unreachable;212
+    valid bundles and4 contract tests. Post-save checks follow separately. Actual
+    UTC: 2026-10-12T11:15:27Z to 2026-10-12T11:16:45Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - validation
+- check_id: reused-post-save-contract
+  name: reused-post-save-contract
+  command: .venv/bin/python -m pytest -q tests/test_record_review_contract.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Verified unchanged-input reuse: live CURIE4023 OK/251 SKIP/0 unreachable;212
+    valid bundles and4 contract tests. Post-save checks follow separately. Actual
+    UTC: 2026-10-12T11:16:45Z to 2026-10-12T11:18:13Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - validation
+- check_id: adapter-datasets
+  name: adapter-datasets
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:18Z
+    to 2026-10-12T11:53:19Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - adapter
+- check_id: adapter-lpp
+  name: adapter-lpp
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query lpp
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:19Z
+    to 2026-10-12T11:53:19Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - adapter
+- check_id: adapter-lolC
+  name: adapter-lolC
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query lolC
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:19Z
+    to 2026-10-12T11:53:20Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - adapter
+- check_id: adapter-lolD
+  name: adapter-lolD
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query lolD
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:20Z
+    to 2026-10-12T11:53:20Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - adapter
+- check_id: adapter-lolE
+  name: adapter-lolE
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query lolE
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:20Z
+    to 2026-10-12T11:53:21Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - adapter
+- check_id: adapter-lolA
+  name: adapter-lolA
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query lolA
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:21Z
+    to 2026-10-12T11:53:21Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - adapter
+- check_id: adapter-lolB
+  name: adapter-lolB
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query lolB
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:21Z
+    to 2026-10-12T11:53:21Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - adapter
+- check_id: adapter-erfK
+  name: adapter-erfK
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query erfK
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:21Z
+    to 2026-10-12T11:53:22Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - adapter
+- check_id: adapter-ycfS
+  name: adapter-ycfS
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query ycfS
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:22Z
+    to 2026-10-12T11:53:22Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - adapter
+- check_id: adapter-ybiS
+  name: adapter-ybiS
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise1k --query ybiS
+  exit_code: 0
+  status: passed
+  required: false
+  summary: 'Fresh structured-source context only. Actual UTC: 2026-10-12T11:53:22Z
+    to 2026-10-12T11:53:23Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - adapter
+- check_id: image-integrity
+  name: image-integrity
+  command: .venv/bin/python /private/tmp/csm-review-20261012T115308Z-gram-negative-wall/check_image.py
+  exit_code: 0
+  status: passed
+  required: true
+  summary: 'Exact source/channel/native-byte validation. Actual UTC: 2026-10-12T11:55:35Z
+    to 2026-10-12T11:55:38Z.'
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - image-check
+  - archive
+- check_id: silhavy-full-text
+  name: 'Inspect remaining nearest-source body: silhavy'
+  status: unavailable
+  required: true
+  summary: Bibliography and complete abstract read; original body not inspected after
+    bounded public access attempts. Other-source corroboration is not full nearest-citation
+    verification.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - silhavy
+  - access
+- check_id: grabowicz-full-text
+  name: 'Inspect remaining nearest-source body: grabowicz'
+  status: unavailable
+  required: true
+  summary: Bibliography and complete abstract read; original body not inspected after
+    bounded public access attempts. Other-source corroboration is not full nearest-citation
+    verification.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - grabowicz
+  - access
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+  locator: Entire YAML, all five native events and three append-only history files
+  summary: The assembly graph labels peptidoglycan as the Lpp-anchoring acceptor and
+    types the entire Lol pathway as GENE_OR_PROTEIN. The function graph explicitly
+    uses canonical E.coli scope. PROPOSED and all scientific inputs are unchanged.
+  support: supports
+  accessed_at: '2026-10-12T12:00:38Z'
+  snapshot_sha256: 9c953c54e9f54eba9cbe7b658046a7910b2e9a42d41246d2ce3c2acf9693bef6
+- evidence_id: rules
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: CausalNode description and CausalNodeTypeEnum; local review checklist
+  summary: GENE_OR_PROTEIN is restricted to proteins, families and complexes. PATHWAY
+    and BIOLOGICAL_PROCESS are separate allowed types. Claims and directed edges need
+    narrow source support.
+  support: supports
+  accessed_at: '2026-10-12T12:00:38Z'
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009276,GO:0009274,GO:0009279
+  locator: Active GO terms, definitions and is-a relationships
+  summary: GO:0009276 denotes the thin Gram-negative wall linked to the outer membrane,
+    with GO:0009274 as parent. GO:0009279 is the separate outer membrane.
+  support: supports
+  accessed_at: '2026-10-12T11:53:22Z'
+  snapshot_sha256: 20481f966a6f783edb948b5d1d03f6971e41445a122ca8489b2744fd06cc12df
+- evidence_id: magnet
+  kind: primary_source
+  reference: https://journals.asm.org/doi/10.1128/jb.00084-07
+  locator: Magnet et al.2007 original body, linkage results, concluding donor/acceptor
+    discussion and Fig1B caption; PMID:17369299
+  summary: The mapped linkage joins the peptidoglycan mDAP carboxyl to the Lpp terminal-lysine
+    side-chain amine. The authors assign peptidoglycan as acyl donor and Lpp as acceptor,
+    discussing the catalytic mechanism by analogy. This contradicts the native acceptor
+    edge.
+  support: refutes
+  accessed_at: '2026-10-12T12:00:38Z'
+- evidence_id: konovalova
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4632606/
+  locator: 'Konovalova and Silhavy2015 review: introduction, maturation/export sections
+    and Fig1 caption; DOI:10.1098/rstb.2015.0030'
+  summary: Inspected review text supports triacylated lipoprotein maturation and a
+    route involving distinct LolCDE, LolA and LolB actors. The pathway is not itself
+    one protein or one stable complex. Relevant PMC text was accessible earlier in
+    this session; a later re-open returned a challenge.
+  support: supports
+  accessed_at: '2026-10-12T12:00:38Z'
+- evidence_id: mathelie
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC7156740.1/PMC7156740.1.xml
+  locator: 'Mathelie-Guinlet et al.2020 JATS: introduction, Results Sec4, discussion
+    and Fig1/4/5 captions; DOI:10.1038/s41467-020-15489-1'
+  summary: The E.coli study supports N-terminal membrane anchoring, covalent peptidoglycan
+    attachment of a subset of Lpp, and a contribution of tethering to envelope mechanics.
+    It does not justify extending one prototype to every diderm.
+  support: supports
+  accessed_at: '2026-10-12T11:54:32Z'
+  snapshot_sha256: 5adefa95f216e3bec8c3f4daaa40dd280a264260dfd5142d0942bacc762dee02
+- evidence_id: silhavy
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1101%2Fcshperspect.a000414%22&format=json&resultType=core
+  locator: Silhavy et al.2010 complete abstract and bibliographic metadata; DOI:10.1101/cshperspect.a000414
+  summary: Identity and basic thin-wall/outer-membrane architecture are supported.
+    Detailed nearest-source coupling, mechanical and distribution passages have not
+    been inspected.
+  support: partial
+  accessed_at: '2026-10-12T11:53:29Z'
+  snapshot_sha256: a890f723ab434edb0d8946e83606a912bb70c26a673faba98e6e7671a14fe55e
+- evidence_id: grabowicz
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.1702248114%22&format=json&resultType=core
+  locator: Grabowicz and Silhavy2017 complete abstract and bibliographic metadata;
+    DOI:10.1073/pnas.1702248114
+  summary: The abstract describes conditional bypass of LolA/B requirements. It is
+    not full verification of the exact LolCDE-A-B sequence attributed to this citation;
+    Konovalova corroboration does not substitute for inspecting this body.
+  support: partial
+  accessed_at: '2026-10-12T11:53:32Z'
+  snapshot_sha256: e6f8b76d48cf5428f671d6c3d437b34900aef78ddeb242dbdad6164305b5d0b4
+- evidence_id: identifiers
+  kind: authority
+  reference: /private/tmp/csm-review-20261012T115308Z-gram-negative-wall
+  locator: All five EuropePMC/Crossref identities; UniProt P69776, Pfam PF04728 and
+    ENA taxa1224/562 responses
+  summary: DOI titles, authors and years agree. P69776 is reviewed E.coli Lpp/b1677;
+    PF04728 denotes its lipoprotein leucine-zipper coiled-coil region. It is an xref,
+    not a claim that a domain equals the wall. Taxa resolve to Pseudomonadota and
+    E.coli.
+  support: supports
+  accessed_at: '2026-10-12T12:00:38Z'
+- evidence_id: archive
+  kind: database
+  reference: https://www.ebi.ac.uk/biostudies/api/v1/studies/S-BIAD2294
+  locator: Complete study metadata, Figure3 file manifest and named channel; matching
+    source TIFF
+  summary: S-BIAD2294, dataset DOI, CC0 and author attribution agree. The exact source
+    appears in a 69-file manifest with channel3 HADA. Figure3 study-component metadata
+    links to a specimen named Figure5, an upstream association conflict; the separately
+    named Figure3 specimen, filename and published paper corroborate the native caption.
+  support: supports
+  accessed_at: '2026-10-12T11:53:24Z'
+  snapshot_sha256: 1c9bb66df61e288ed1724e4a40fc80430c0af057d2f4c00216131139940d5516
+- evidence_id: image-paper
+  kind: primary_source
+  reference: https://link.springer.com/article/10.1038/s44319-025-00669-1
+  locator: Results subsection about new-pole localization, Fig3 caption and Data availability
+  summary: Published text independently links HADA to peptidoglycan and the stated
+    label-free growth context. Data availability explicitly names S-BIAD2294. This
+    supports caption context, not a claim to have corrected archive metadata.
+  support: supports
+  accessed_at: '2026-10-12T12:00:38Z'
+- evidence_id: image-check
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T115308Z-gram-negative-wall/image-integrity.json
+  locator: Exact TIFF frame3 versus native PNG bytes; native PNG also visually inspected
+  summary: Three-frame TIFF, channel3 grayscale1392x1040, source4382973 bytes and
+    expected SHA match. Lossless PNG rendering is byte-identical to the stored484180-byte
+    image. Nonblank rod-shaped cells are visible; this fluorescence image does not
+    resolve wall thickness or individual Lpp tethers.
+  support: supports
+  accessed_at: '2026-10-12T12:00:38Z'
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: Fresh28-dataset inventory and nine e_coli/precise1k gene searches
+  summary: 'Exact hits: lpp/b1677, lolC/b1116, lolD/b1117, lolE/b1118, lolA/b0891,
+    lolB/b1209, erfK/ldtA/b1990, ycfS/ldtC/b1113 and ybiS/ldtB/b0819. Extra clpP/clpS
+    substring hits were excluded. No iModulon hits needed summary; gene presence is
+    context, not mechanistic proof.'
+  support: supports
+  accessed_at: '2026-10-12T12:00:38Z'
+- evidence_id: validation
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T115308Z-gram-negative-wall/baseline-verification.json
+  locator: Fresh target checks plus exact unchanged-input wider receipts
+  summary: Schema and strict pass. Snippet check passes with0/18 citations carrying
+    snippets,15 evidence entries and3 bare references; this is not full-text validation.
+    Reused native QC, labels, traits, live CURIE and212-bundle/4-test receipts retain
+    original cache/skip/time limitations.
+  support: supports
+  accessed_at: '2026-10-12T12:00:38Z'
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/csm-review-20261012T115308Z-gram-negative-wall/source-access.jsonl
+  locator: Twenty-three hashed source captures and separately inspected web text
+  summary: Four attempted S3 full-text captures returned404, retained as failures
+    rather than paper bodies. Mathelie JATS succeeded; Magnet publisher and Konovalova
+    PMC text were inspected. Silhavy/Grabowicz full text remains unverified after
+    bounded access attempts.
+  support: context_only
+  accessed_at: '2026-10-12T12:00:38Z'
+- evidence_id: predecessors
+  kind: search
+  reference: reviews/structured/
+  locator: Canonical predecessor scan and ignored-inclusive issue-key search
+  summary: No canonical predecessor among212 bundles and no proposed-key match in
+    the declared local roots; not a GitHub-wide absence claim.
+  support: supports
+  accessed_at: '2026-10-12T12:00:38Z'
+  search_scope: Path.rglob included hidden/ignored canonical bundles. rg --no-ignore
+    --hidden searched reviews, reports, research, curation and history for gram-negative-wall-ldt-donor-acceptor
+    and gram-negative-wall-lol-pathway-node-type; no matches. Bounded local scope
+    only.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Thin wall versus entire envelope
+  outcome: supported
+  summary: Identifier, category, kind, label and is-a parent match the native wall
+    concept; outer membrane is represented separately.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - native
+  - go
+- assessment_id: components
+  area: representation
+  topic: Constituents and conditional links
+  outcome: supported
+  summary: Thin peptidoglycan is essential to this structure definition, not a universal
+    viability claim. Conditional lipoprotein links and no fixed copy numbers avoid
+    universalizing one tether stoichiometry.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - native
+  - go
+  - mathelie
+- assessment_id: scope
+  area: scope
+  topic: Taxonomy and prototype limits
+  outcome: unknown
+  summary: Taxon identities and E.coli prototype agree. COMMON plus acknowledged variants
+    is not universal presence. Detailed Silhavy distribution support is pending; no
+    scope defect inferred from inaccessible text.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - native
+  - identifiers
+  - silhavy
+- assessment_id: function
+  area: graph
+  topic: Five function-graph edges and mechanical role
+  outcome: supported
+  summary: All function edges were inspected. The bounded E.coli graph coherently
+    separates wall position, lipid anchoring, covalent tethering and mechanical coupling;
+    Mathelie supports these distinctions. It does not claim peptidoglycan alone determines
+    stiffness.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - native
+  - go
+  - mathelie
+- assessment_id: assembly
+  area: graph
+  topic: Six assembly edges and reaction direction
+  outcome: concern
+  summary: Maturation, membrane insertion, attachment and tether formation have relevant
+    support. The uses-acceptor edge reverses the cited chemical roles. Exact nearest-source
+    verification for the Lol trafficking edge remains incomplete.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - native
+  - magnet
+  - konovalova
+  - mathelie
+  - grabowicz
+- assessment_id: node-type
+  area: representation
+  topic: Lol pathway versus protein entity
+  outcome: concern
+  summary: The whole Lol route is typed as a protein despite spanning distinct machinery
+    and carriers. A pathway type or explicit protein actors would preserve the intended
+    semantics.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - native
+  - rules
+  - konovalova
+- assessment_id: sources
+  area: evidence
+  topic: Nearest-source coverage
+  outcome: unknown
+  summary: Bibliographic identities and abstracts were checked for all five papers.
+    Relevant bodies were read for three. Silhavy and Grabowicz detailed claims need
+    follow-up; access failure alone is not a finding.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - identifiers
+  - silhavy
+  - grabowicz
+  - access
+- assessment_id: image
+  area: provenance
+  topic: Dataset, channel identity and caption
+  outcome: supported
+  summary: Archive, manifest, exact source bytes, native image and linked paper support
+    the curated image context. Preserve the upstream Figure3-to-Figure5 association
+    conflict as a limitation; corroboration does not establish a target caption defect.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - archive
+  - image-paper
+  - image-check
+- assessment_id: completeness
+  area: completeness
+  topic: Required versus optional representation
+  outcome: supported
+  summary: No additional mandatory measurement, trait, stoichiometry or imaging entry
+    was identified. Adapter gene hits do not mandate new graph nodes. No issue is
+    invented for optional omissions.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - native
+  - rules
+  - adapter
+- assessment_id: checks
+  area: schema
+  topic: Deterministic gates
+  outcome: supported
+  summary: Target gates pass. Wider receipts were reused only after unchanged-input
+    and log-hash verification; they do not certify the scientific chemistry.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - validation
+  - image-check
+- assessment_id: ownership
+  area: ownership
+  topic: Native status, history and correction owner
+  outcome: supported
+  summary: Three append-only histories and five native events were inspected. Fixes
+    belong to guarded curation of the maintained YAML, with real history and native
+    validation; no status promotion or current scientific edits.
+  target_ids:
+  - GO:0009276
+  evidence_ids:
+  - native
+  - rules
+  - predecessors
+findings:
+- finding_id: F1
+  issue_key: gram-negative-wall-ldt-donor-acceptor
+  category: graph
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct the Lpp-anchoring donor/acceptor roles
+  description: The directed uses-acceptor edge and its description reverse the roles
+    assigned by the cited paper. Peptidoglycan supplies the acyl donor; the Lpp terminal-lysine
+    side-chain amine is the acceptor. Correct the edge and prose while retaining the
+    original paper's distinction between observed linkage and catalytic interpretation.
+  target_ids:
+  - GO:0009276
+  field_paths:
+  - causal_graphs[graph_id=lpp_lol_pg_tether_assembly].edges[subject=ldt_lpp,predicate=uses
+    acceptor,object=thin_peptidoglycan]
+  evidence_ids:
+  - native
+  - magnet
+  - rules
+  rule_id: review-checklist:causal-edge-mechanistic-evidence
+  native_severity: major
+  normalization_reason: Wrong directed chemical mechanism, not merely prose style;
+    record identity remains correct.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    role: maintained scientific record
+- finding_id: F2
+  issue_key: gram-negative-wall-lol-pathway-node-type
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Do not type the Lol pathway as one protein entity
+  description: The node label denotes a pathway spanning distinct proteins, but GENE_OR_PROTEIN
+    is restricted to proteins, families and complexes. Use the native PATHWAY type,
+    or remodel with source-supported protein actors and matching edges; do not relabel
+    the entire route as one complex.
+  target_ids:
+  - GO:0009276
+  field_paths:
+  - causal_graphs[graph_id=lpp_lol_pg_tether_assembly].nodes[node_id=lol_pathway].node_type
+  evidence_ids:
+  - native
+  - rules
+  - konovalova
+  rule_id: cellstructuremech:CausalNode-type-semantics
+  native_severity: minor
+  normalization_reason: Localized semantic typing defect; the intended traffic route
+    is understandable and structure identity is unaffected.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Correct the tether-assembly reaction predicate and description against
+    the cited linkage evidence.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009276
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Peptidoglycan and Lpp donor/acceptor roles agree with Magnet2007; no inverted
+    edge remains.
+  - Preserve evidence tier and E.coli scope; do not introduce experimental procedures.
+- action_id: A2
+  description: Represent the Lol route using a semantically correct native node type
+    and compatible edge.
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0009276
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Whole-pathway label no longer uses GENE_OR_PROTEIN; individual actors, if introduced,
+    have narrow evidence support.
+  - Inspect the pending Silhavy/Grabowicz passages before declaring complete scientific
+    coverage.
+  - For separately authorized curation, use the guarded writer, real history and native
+    gates; preserve PROPOSED and save an exact-key lineage disposition.
+limitations:
+- 'Partial scientific review: Silhavy2010 and Grabowicz2017 body passages remain unverified.
+  No access-only finding; this target is not counted as fully reviewed.'
+- Relevant Mathelie JATS sections and captions, Magnet original body and Fig1B caption,
+  and Konovalova relevant review sections were inspected; no raw experimental data
+  or figure measurements were reanalyzed.
+- The archive Figure3 component links to a specimen named Figure5. Exact manifest/channel,
+  separately named specimen, source filename and published paper corroborate the target
+  caption; the archive conflict itself is not resolved.
+- Konovalova PMC reading succeeded earlier; a later re-open returned a challenge.
+  Failed S3 captures are not full-text evidence. The image-paper inspection covers
+  the relevant Results/caption/data-availability passages, not every experiment.
+- Same-agent assessment, not independent human review. Wider gates retain original
+  timestamps, caches and skips; no new CI or publication claim.
+- No native scientific YAML, image, status, history, generated product, earlier review
+  or legacy report changed. External publication approval remains unanswered; no GitHub
+  mutation.
+tags:
+- scientific-review
+- envelope
+- graph
+- partial
+```
