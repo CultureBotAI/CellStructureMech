@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/ribonucleoprotein.html">Ribonucleoprotein</a> · P-body</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>P-body</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0000932"><code>GO:0000932</code></a> · Ribonucleoprotein · Other · <span class="status">Proposed</span></p>
 <p class="definition">A focus in the cytoplasm where mRNAs may become inactivated by decapping or some other mechanism. Protein and RNA localized to these foci are involved in mRNA degradation, nonsense-mediated mRNA decay (NMD), translational repression, and RNA-mediated gene silencing. <small>[<a href="http://purl.obolibrary.org/obo/GO_0000932"><code>GO:0000932</code></a>]</small></p>
@@ -77,11 +87,11 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-yeast_p_body_assembly">Yeast mRNPs and Edc3/Lsm4 scaffolds assemble P-bodies <small>(ASSEMBLY)</small></h3>
 <p>In Saccharomyces cerevisiae, nontranslating mRNPs enter cytoplasmic P-bodies, while Edc3 and the Q/N-rich Lsm4 tail promote aggregation into microscopically visible foci.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Yeast mRNPs and Edc3/Lsm4 scaffolds assemble P-bodies">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>nontranslating mRNA cargo</td><td>promotes</td><td>P-body assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1261/rna.7258505"><code>DOI:10.1261/rna.7258505</code></a> <small>Teixeira et al. 2005 showed RNA dependence of yeast P-body assembly and detected nontranslating mRNAs in P-bodies.</small></li><li><a href="https://doi.org/10.1126/science.1115791"><code>DOI:10.1126/science.1115791</code></a> <small>Brengues, Teixeira and Parker 2005 tracked movement of mRNAs between polysomes and cytoplasmic processing bodies.</small></li></ul></td></tr>
-<tr><td>Edc3/Lsm4 P-body assembly scaffolds</td><td>promotes</td><td>P-body assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200704147"><code>DOI:10.1083/jcb.200704147</code></a> <small>Decker, Teixeira and Parker 2007 connected Edc3p and the Lsm4p Q/N-rich domain to P-body assembly in S. cerevisiae.</small></li></ul></td></tr>
-<tr><td>nontranslating mRNA cargo</td><td>is concentrated in</td><td>P-body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1261/rna.7258505"><code>DOI:10.1261/rna.7258505</code></a> <small>Teixeira et al. 2005 reported that yeast processing bodies contain nontranslating mRNAs.</small></li></ul></td></tr>
-<tr><td>Edc3/Lsm4 P-body assembly scaffolds</td><td>supports assembly of</td><td>P-body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200704147"><code>DOI:10.1083/jcb.200704147</code></a> <small>Decker, Teixeira and Parker 2007 tied Edc3p and the Lsm4p Q/N-rich domain to formation of microscopically visible P-bodies.</small></li></ul></td></tr>
-<tr><td>P-body assembly</td><td>produces</td><td>P-body</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033962"><code>GO:0033962</code></a> <small>GO:0033962 defines P-body assembly as the aggregation, arrangement and bonding of proteins and RNA molecules to form a cytoplasmic mRNA processing body.</small></li></ul></td></tr>
+<tr><td>nontranslating mRNA cargo</td><td>promotes</td><td>P-body assembly <small>(<a href="http://purl.obolibrary.org/obo/GO_0033962"><code>GO:0033962</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1261/rna.7258505"><code>DOI:10.1261/rna.7258505</code></a> <small>Teixeira et al. 2005 showed RNA dependence of yeast P-body assembly and detected nontranslating mRNAs in P-bodies.</small></li><li><a href="https://doi.org/10.1126/science.1115791"><code>DOI:10.1126/science.1115791</code></a> <small>Brengues, Teixeira and Parker 2005 tracked movement of mRNAs between polysomes and cytoplasmic processing bodies.</small></li></ul></td></tr>
+<tr><td>Edc3/Lsm4 P-body assembly scaffolds</td><td>promotes</td><td>P-body assembly <small>(<a href="http://purl.obolibrary.org/obo/GO_0033962"><code>GO:0033962</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200704147"><code>DOI:10.1083/jcb.200704147</code></a> <small>Decker, Teixeira and Parker 2007 connected Edc3p and the Lsm4p Q/N-rich domain to P-body assembly in S. cerevisiae.</small></li></ul></td></tr>
+<tr><td>nontranslating mRNA cargo</td><td>is concentrated in</td><td>P-body <small>(<a href="http://purl.obolibrary.org/obo/GO_0000932"><code>GO:0000932</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1261/rna.7258505"><code>DOI:10.1261/rna.7258505</code></a> <small>Teixeira et al. 2005 reported that yeast processing bodies contain nontranslating mRNAs.</small></li></ul></td></tr>
+<tr><td>Edc3/Lsm4 P-body assembly scaffolds</td><td>supports assembly of</td><td>P-body <small>(<a href="http://purl.obolibrary.org/obo/GO_0000932"><code>GO:0000932</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200704147"><code>DOI:10.1083/jcb.200704147</code></a> <small>Decker, Teixeira and Parker 2007 tied Edc3p and the Lsm4p Q/N-rich domain to formation of microscopically visible P-bodies.</small></li></ul></td></tr>
+<tr><td>P-body assembly <small>(<a href="http://purl.obolibrary.org/obo/GO_0033962"><code>GO:0033962</code></a>)</small></td><td>produces</td><td>P-body <small>(<a href="http://purl.obolibrary.org/obo/GO_0000932"><code>GO:0000932</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033962"><code>GO:0033962</code></a> <small>GO:0033962 defines P-body assembly as the aggregation, arrangement and bonding of proteins and RNA molecules to form a cytoplasmic mRNA processing body.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -97,7 +107,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/p_body.yaml"><code>data/structures/ribonucleoprotein/p_body.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

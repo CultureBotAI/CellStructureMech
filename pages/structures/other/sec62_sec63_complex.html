@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · Sec62/Sec63 complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>Sec62/Sec63 complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">An endoplasmic-reticulum protein complex that supports posttranslational targeting of proteins to the ER and is represented in yeast by a Sec62p, Sec63p, Sec71p, and Sec72p tetramer. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a>]</small></p>
@@ -82,13 +92,13 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-sec62_sec63_posttranslational_er_import">Sec62/Sec63 organizes posttranslational ER import <small>(FUNCTION)</small></h3>
 <p>The Sec62/Sec63 tetramer forms the ER Sec complex with the Sec61 channel and supports posttranslational protein import into the endoplasmic reticulum.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Sec62/Sec63 organizes posttranslational ER import">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Sec62 translocon subunit</td><td>is core subunit of</td><td>Sec62/Sec63 complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a> <small>GO:0031207 lists Sec62p in the yeast Sec62/Sec63 tetramer.</small></li></ul></td></tr>
-<tr><td>Sec63 translocon subunit</td><td>is core subunit of</td><td>Sec62/Sec63 complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/yea.954"><code>DOI:10.1002/yea.954</code></a> <small>Willer et al. 2003 identified a specific Sec62p-Sec63p interaction at the cytosolic surface of the Sec63 complex.</small></li></ul></td></tr>
-<tr><td>Sec71 translocon subunit</td><td>is accessory subunit of</td><td>Sec62/Sec63 complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a> <small>GO:0031207 lists Sec71p in the yeast Sec62/Sec63 tetramer.</small></li></ul></td></tr>
-<tr><td>Sec72 translocon subunit</td><td>is accessory subunit of</td><td>Sec62/Sec63 complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a> <small>GO:0031207 lists Sec72p in the yeast Sec62/Sec63 tetramer.</small></li></ul></td></tr>
-<tr><td>Sec62/Sec63 complex</td><td>is subcomplex of</td><td>endoplasmic reticulum Sec complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031205"><code>GO:0031205</code></a> <small>GO:0031205 defines the yeast ER Sec complex as containing the Sec61 and Sec62/Sec63 subcomplexes.</small></li></ul></td></tr>
-<tr><td>Sec62/Sec63 complex</td><td>is embedded in</td><td>endoplasmic reticulum membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/yea.954"><code>DOI:10.1002/yea.954</code></a> <small>Willer et al. 2003 studied the Sec63 complex in the yeast ER membrane.</small></li></ul></td></tr>
-<tr><td>Sec62/Sec63 complex</td><td>supports</td><td>Sec62/Sec63-dependent posttranslational ER protein targeting</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.e03-06-0390"><code>DOI:10.1091/mbc.e03-06-0390</code></a> <small>Plath et al. 2004 showed that a posttranslational signal sequence contacts Sec62p and Sec61p in the yeast Sec complex.</small></li><li><a href="https://doi.org/10.1038/s41586-018-0856-x"><code>DOI:10.1038/s41586-018-0856-x</code></a> <small>Wu et al. 2019 resolved a yeast post-translational ER translocation assembly containing Sec61 and the Sec62/Sec63 subcomplex.</small></li></ul></td></tr>
+<tr><td>Sec62 translocon subunit</td><td>is core subunit of</td><td>Sec62/Sec63 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a> <small>GO:0031207 lists Sec62p in the yeast Sec62/Sec63 tetramer.</small></li></ul></td></tr>
+<tr><td>Sec63 translocon subunit</td><td>is core subunit of</td><td>Sec62/Sec63 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/yea.954"><code>DOI:10.1002/yea.954</code></a> <small>Willer et al. 2003 identified a specific Sec62p-Sec63p interaction at the cytosolic surface of the Sec63 complex.</small></li></ul></td></tr>
+<tr><td>Sec71 translocon subunit</td><td>is accessory subunit of</td><td>Sec62/Sec63 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a> <small>GO:0031207 lists Sec71p in the yeast Sec62/Sec63 tetramer.</small></li></ul></td></tr>
+<tr><td>Sec72 translocon subunit</td><td>is accessory subunit of</td><td>Sec62/Sec63 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a> <small>GO:0031207 lists Sec72p in the yeast Sec62/Sec63 tetramer.</small></li></ul></td></tr>
+<tr><td>Sec62/Sec63 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a>)</small></td><td>is subcomplex of</td><td>endoplasmic reticulum Sec complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031205"><code>GO:0031205</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031205"><code>GO:0031205</code></a> <small>GO:0031205 defines the yeast ER Sec complex as containing the Sec61 and Sec62/Sec63 subcomplexes.</small></li></ul></td></tr>
+<tr><td>Sec62/Sec63 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a>)</small></td><td>is embedded in</td><td>endoplasmic reticulum membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005789"><code>GO:0005789</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/yea.954"><code>DOI:10.1002/yea.954</code></a> <small>Willer et al. 2003 studied the Sec63 complex in the yeast ER membrane.</small></li></ul></td></tr>
+<tr><td>Sec62/Sec63 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031207"><code>GO:0031207</code></a>)</small></td><td>supports</td><td>Sec62/Sec63-dependent posttranslational ER protein targeting</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.e03-06-0390"><code>DOI:10.1091/mbc.e03-06-0390</code></a> <small>Plath et al. 2004 showed that a posttranslational signal sequence contacts Sec62p and Sec61p in the yeast Sec complex.</small></li><li><a href="https://doi.org/10.1038/s41586-018-0856-x"><code>DOI:10.1038/s41586-018-0856-x</code></a> <small>Wu et al. 2019 resolved a yeast post-translational ER translocation assembly containing Sec61 and the Sec62/Sec63 subcomplex.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -104,7 +114,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/sec62_sec63_complex.yaml"><code>data/structures/other/sec62_sec63_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

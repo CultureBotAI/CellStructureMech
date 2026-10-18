@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · spindle microtubule</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>spindle microtubule</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a> · Cytoskeleton · Filament · <span class="status">Proposed</span></p>
 <p class="definition">Any microtubule that is part of a mitotic or meiotic spindle; anchored at one spindle pole. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a>]</small></p>
@@ -62,10 +72,10 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-budding_yeast_spindle_microtubule_architecture">Spindle microtubules bridge budding-yeast spindle poles and kinetochores <small>(FUNCTION)</small></h3>
 <p>Alpha- and beta-tubulins polymerize into budding-yeast spindle microtubules that are organized by spindle pole bodies and attach to kinetochores during mitosis.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Spindle microtubules bridge budding-yeast spindle poles and kinetochores">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>alpha- and beta-tubulins</td><td>polymerize into</td><td>spindle microtubule</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a> <small>GO:0005876 identifies spindle microtubules as microtubules.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005874"><code>GO:0005874</code></a> <small>GO defines microtubules as polymeric tubulin protofilament tubes.</small></li></ul></td></tr>
-<tr><td>spindle pole body</td><td>anchors</td><td>spindle microtubule</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a> <small>GO:0005876 defines spindle microtubules as anchored at one spindle pole.</small></li><li><a href="https://doi.org/10.1146/annurev.cellbio.20.022003.114106"><code>DOI:10.1146/annurev.cellbio.20.022003.114106</code></a> <small>Jaspersen and Winey 2004 reviewed the budding-yeast spindle pole body as the nuclear microtubule-organizing center.</small></li></ul></td></tr>
-<tr><td>spindle microtubule</td><td>is part of</td><td>mitotic spindle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0072686"><code>GO:0072686</code></a> <small>GO:0072686 identifies the mitotic spindle as a spindle that forms during mitosis.</small></li><li><a href="https://doi.org/10.1083/jcb.129.6.1601"><code>DOI:10.1083/jcb.129.6.1601</code></a> <small>Winey et al. 1995 reconstructed budding-yeast mitotic spindles from serial electron micrographs and classified their microtubule bundles.</small></li></ul></td></tr>
-<tr><td>spindle microtubule</td><td>attaches to</td><td>kinetochore</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000776"><code>GO:0000776</code></a> <small>GO:0000776 defines the kinetochore as a centromeric complex that provides a spindle-microtubule attachment point.</small></li><li><a href="https://doi.org/10.1083/jcb.129.6.1601"><code>DOI:10.1083/jcb.129.6.1601</code></a> <small>Winey et al. 1995 reconstructed budding-yeast spindles containing presumptive kinetochore microtubules and interpolar microtubules.</small></li></ul></td></tr>
+<tr><td>alpha- and beta-tubulins</td><td>polymerize into</td><td>spindle microtubule <small>(<a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a> <small>GO:0005876 identifies spindle microtubules as microtubules.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005874"><code>GO:0005874</code></a> <small>GO defines microtubules as polymeric tubulin protofilament tubes.</small></li></ul></td></tr>
+<tr><td>spindle pole body <small>(<a href="http://purl.obolibrary.org/obo/GO_0005816"><code>GO:0005816</code></a>)</small></td><td>anchors</td><td>spindle microtubule <small>(<a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a> <small>GO:0005876 defines spindle microtubules as anchored at one spindle pole.</small></li><li><a href="https://doi.org/10.1146/annurev.cellbio.20.022003.114106"><code>DOI:10.1146/annurev.cellbio.20.022003.114106</code></a> <small>Jaspersen and Winey 2004 reviewed the budding-yeast spindle pole body as the nuclear microtubule-organizing center.</small></li></ul></td></tr>
+<tr><td>spindle microtubule <small>(<a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a>)</small></td><td>is part of</td><td>mitotic spindle <small>(<a href="http://purl.obolibrary.org/obo/GO_0072686"><code>GO:0072686</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0072686"><code>GO:0072686</code></a> <small>GO:0072686 identifies the mitotic spindle as a spindle that forms during mitosis.</small></li><li><a href="https://doi.org/10.1083/jcb.129.6.1601"><code>DOI:10.1083/jcb.129.6.1601</code></a> <small>Winey et al. 1995 reconstructed budding-yeast mitotic spindles from serial electron micrographs and classified their microtubule bundles.</small></li></ul></td></tr>
+<tr><td>spindle microtubule <small>(<a href="http://purl.obolibrary.org/obo/GO_0005876"><code>GO:0005876</code></a>)</small></td><td>attaches to</td><td>kinetochore <small>(<a href="http://purl.obolibrary.org/obo/GO_0000776"><code>GO:0000776</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000776"><code>GO:0000776</code></a> <small>GO:0000776 defines the kinetochore as a centromeric complex that provides a spindle-microtubule attachment point.</small></li><li><a href="https://doi.org/10.1083/jcb.129.6.1601"><code>DOI:10.1083/jcb.129.6.1601</code></a> <small>Winey et al. 1995 reconstructed budding-yeast spindles containing presumptive kinetochore microtubules and interpolar microtubules.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -81,7 +91,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/spindle_microtubule.yaml"><code>data/structures/cytoskeleton/spindle_microtubule.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

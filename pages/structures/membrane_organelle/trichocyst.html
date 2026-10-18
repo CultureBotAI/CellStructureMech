@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · trichocyst</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>trichocyst</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0055039"><code>GO:0055039</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span></p>
 <p class="definition">A crystalline exocytotic organelle composed of small, acidic proteins existing primarily as disulphide-linked dimers. The trichocyst releases long filamentous proteins that capture predators in net-like structures to slow them down when the cell is disturbed. <small>[<a href="http://purl.obolibrary.org/obo/GO_0055039"><code>GO:0055039</code></a>]</small></p>
@@ -63,8 +73,8 @@ family; these are the specific entries behind it.</small></p>
 <p>Paramecium trichocyst matrix proteins coassemble into a crystalline trichocyst matrix that is stored in the organelle. After stimulated exocytosis, extracellular Ca2+ triggers matrix recrystallization and extension into the discharged filament.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Calcium-triggered matrix proteins discharge as a filament">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>trichocyst matrix proteins</td><td>coassemble into</td><td>crystalline trichocyst matrix</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.6.6.649"><code>DOI:10.1091/mbc.6.6.649</code></a> <small>Madeddu et al. 1995 identified the TMP multigene family encoding crystalline trichocyst matrix polypeptides in Paramecium.</small></li></ul></td></tr>
-<tr><td>crystalline trichocyst matrix</td><td>is stored in</td><td>trichocyst</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12332"><code>DOI:10.1111/jeu.12332</code></a> <small>Plattner 2017 reviewed Paramecium trichocyst bodies as condensed crystalline secretory matrices.</small></li></ul></td></tr>
-<tr><td>calcium(2+)</td><td>triggers recrystallization of</td><td>crystalline trichocyst matrix</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12332"><code>DOI:10.1111/jeu.12332</code></a> <small>Plattner 2017 reviewed extracellular Ca2+-triggered matrix recrystallization as the transition that powers Paramecium trichocyst projection.</small></li></ul></td></tr>
+<tr><td>crystalline trichocyst matrix</td><td>is stored in</td><td>trichocyst <small>(<a href="http://purl.obolibrary.org/obo/GO_0055039"><code>GO:0055039</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12332"><code>DOI:10.1111/jeu.12332</code></a> <small>Plattner 2017 reviewed Paramecium trichocyst bodies as condensed crystalline secretory matrices.</small></li></ul></td></tr>
+<tr><td>calcium(2+) <small>(<a href="http://purl.obolibrary.org/obo/CHEBI_29108"><code>CHEBI:29108</code></a>)</small></td><td>triggers recrystallization of</td><td>crystalline trichocyst matrix</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12332"><code>DOI:10.1111/jeu.12332</code></a> <small>Plattner 2017 reviewed extracellular Ca2+-triggered matrix recrystallization as the transition that powers Paramecium trichocyst projection.</small></li></ul></td></tr>
 <tr><td>crystalline trichocyst matrix</td><td>recrystallizes into</td><td>extended trichocyst filament</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12332"><code>DOI:10.1111/jeu.12332</code></a> <small>Plattner 2017 described the rapid extracellular-Ca2+-driven discharge of condensed Paramecium trichocysts into extended projectile-like structures.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -81,7 +91,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/trichocyst.yaml"><code>data/structures/membrane_organelle/trichocyst.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

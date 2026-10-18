@@ -13,36 +13,48 @@
   <nav>
     <a href="../browse.html">Browse</a>
     <a href="../embedding-map.html">Text map</a>
+    <a href="../sequence-map.html">Sequence map</a>
+    <a href="../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="wide">
 <h1>Nucleoid</h1>
 <p>The chromosome-organising structure and its condensation machinery.</p>
-<form id="record-filters" class="record-filters" hidden>
-  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
-  <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option><option value="NUCLEOID">Nucleoid</option></select></div>
-  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option><option value="SUBCELLULAR_REGION">Subcellular region</option></select></div>
-  <button type="reset">Clear filters</button>
-</form>
-<p id="record-count" role="status" aria-live="polite">5 records</p>
-<p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
-<div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
-<table id="record-table">
-<caption>Records</caption>
-<thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
-<tbody>
-<tr data-category="NUCLEOID" data-kind="SUBCELLULAR_REGION" data-synonyms=""><td><a href="../structures/nucleoid/chloroplast_nucleoid.html">chloroplast nucleoid</a><p class="record-definition">The region of a chloroplast to which the DNA is confined.</p></td><td><code>GO:0042644</code></td><td>Nucleoid</td><td>Subcellular region</td><td>Proposed</td></tr>
-<tr data-category="NUCLEOID" data-kind="SUBCELLULAR_REGION" data-synonyms="kinetoplast DNA network kDNA network"><td><a href="../structures/nucleoid/kinetoplast.html">kinetoplast</a><p class="record-definition">A sub-structure within the large single mitochondrion of kinetoplastid parasites and which is closely associated with the flagellar pocket and basal body of the flagellum.</p></td><td><code>GO:0020023</code></td><td>Nucleoid</td><td>Subcellular region</td><td>Proposed</td></tr>
-<tr data-category="NUCLEOID" data-kind="SUBCELLULAR_REGION" data-synonyms="mitochondrion nucleoid mitochromosome"><td><a href="../structures/nucleoid/mitochondrial_nucleoid.html">mitochondrial nucleoid</a><p class="record-definition">The region of a mitochondrion to which the DNA is confined.</p></td><td><code>GO:0042645</code></td><td>Nucleoid</td><td>Subcellular region</td><td>Proposed</td></tr>
-<tr data-category="NUCLEOID" data-kind="SUBCELLULAR_REGION" data-synonyms=""><td><a href="../structures/nucleoid/nucleoid.html">nucleoid</a><p class="record-definition">The non-membrane-bounded subcellular region in which a bacterial chromosome is compacted and organized with nucleoid-associated proteins while remaining dynamically coupled to transcription and replication.</p></td><td><code>GO:0009295</code></td><td>Nucleoid</td><td>Subcellular region</td><td>Proposed</td></tr>
-<tr data-category="NUCLEOID" data-kind="SUBCELLULAR_REGION" data-synonyms="Plastidic nucleoid"><td><a href="../structures/nucleoid/plastid_nucleoid.html">plastid nucleoid</a><p class="record-definition">A region of a plastid to which the DNA is confined.</p></td><td><code>GO:0042646</code></td><td>Nucleoid</td><td>Subcellular region</td><td>Proposed</td></tr>
-</tbody>
-</table>
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Structure filters">
+    <form id="record-filters" class="record-filters" hidden>
+      <div><label for="record-query">Search records</label><input id="record-query" name="q" type="search" placeholder="Label, identifier, definition…"></div>
+      <div><label for="record-category">Category</label><select id="record-category" name="category"><option value="">All categories</option><option value="NUCLEOID">Nucleoid</option></select></div>
+      <div><label for="record-kind">Kind</label><select id="record-kind" name="kind"><option value="">All kinds</option><option value="SUBCELLULAR_REGION">Subcellular region</option></select></div>
+      <div><label for="record-status">Mapping status</label><select id="record-status" name="status"><option value="">All statuses</option><option value="PROPOSED">Proposed</option></select></div>
+      <div><label for="record-sort">Sort by</label><select id="record-sort" name="sort"><option value="">Label (A–Z)</option><option value="label-desc">Label (Z–A)</option><option value="id-asc">Identifier (A–Z)</option><option value="category-asc">Category</option><option value="kind-asc">Kind</option><option value="status-asc">Mapping status</option></select></div>
+      <button type="reset">Clear filters</button>
+    </form>
+  </aside>
+  <div class="results-main">
+    <p id="record-count" role="status" aria-live="polite">5 records</p>
+    <p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
+    <div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
+    <table id="record-table">
+    <caption>Records</caption>
+    <thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
+    <tbody>
+    <tr data-label="chloroplast nucleoid" data-id="go:0042644" data-category="NUCLEOID" data-kind="SUBCELLULAR_REGION" data-status="PROPOSED" data-synonyms=""><td><a href="../structures/nucleoid/chloroplast_nucleoid.html">chloroplast nucleoid</a><p class="record-definition">The region of a chloroplast to which the DNA is confined.</p></td><td><code>GO:0042644</code></td><td>Nucleoid</td><td>Subcellular region</td><td>Proposed</td></tr>
+    <tr data-label="kinetoplast" data-id="go:0020023" data-category="NUCLEOID" data-kind="SUBCELLULAR_REGION" data-status="PROPOSED" data-synonyms="kinetoplast DNA network kDNA network"><td><a href="../structures/nucleoid/kinetoplast.html">kinetoplast</a><p class="record-definition">A sub-structure within the large single mitochondrion of kinetoplastid parasites and which is closely associated with the flagellar pocket and basal body of the flagellum.</p></td><td><code>GO:0020023</code></td><td>Nucleoid</td><td>Subcellular region</td><td>Proposed</td></tr>
+    <tr data-label="mitochondrial nucleoid" data-id="go:0042645" data-category="NUCLEOID" data-kind="SUBCELLULAR_REGION" data-status="PROPOSED" data-synonyms="mitochondrion nucleoid mitochromosome"><td><a href="../structures/nucleoid/mitochondrial_nucleoid.html">mitochondrial nucleoid</a><p class="record-definition">The region of a mitochondrion to which the DNA is confined.</p></td><td><code>GO:0042645</code></td><td>Nucleoid</td><td>Subcellular region</td><td>Proposed</td></tr>
+    <tr data-label="nucleoid" data-id="go:0009295" data-category="NUCLEOID" data-kind="SUBCELLULAR_REGION" data-status="PROPOSED" data-synonyms=""><td><a href="../structures/nucleoid/nucleoid.html">nucleoid</a><p class="record-definition">The non-membrane-bounded subcellular region in which a bacterial chromosome is compacted and organized with nucleoid-associated proteins while remaining dynamically coupled to transcription and replication.</p></td><td><code>GO:0009295</code></td><td>Nucleoid</td><td>Subcellular region</td><td>Proposed</td></tr>
+    <tr data-label="plastid nucleoid" data-id="go:0042646" data-category="NUCLEOID" data-kind="SUBCELLULAR_REGION" data-status="PROPOSED" data-synonyms="Plastidic nucleoid"><td><a href="../structures/nucleoid/plastid_nucleoid.html">plastid nucleoid</a><p class="record-definition">A region of a plastid to which the DNA is confined.</p></td><td><code>GO:0042646</code></td><td>Nucleoid</td><td>Subcellular region</td><td>Proposed</td></tr>
+    </tbody>
+    </table>
+    </div>
+  </div>
 </div>
 <script src="../record-browser.js" defer></script></main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../corpus.json">corpus JSON</a> · <a href="../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

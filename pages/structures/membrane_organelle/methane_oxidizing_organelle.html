@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · methane-oxidizing organelle</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>methane-oxidizing organelle</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0044227"><code>GO:0044227</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span></p>
 <p class="definition">A cytoplasmic, membrane-bounded organelle in aerobic methanotrophic bacteria, built from intracytoplasmic membranes that house particulate methane monooxygenase and associated electron-transfer proteins for methane catabolism. <small>[<a href="http://purl.obolibrary.org/obo/GO_0044227"><code>GO:0044227</code></a>]</small></p>
@@ -61,13 +71,13 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-pmmo_array_methane_oxidation">ICM-embedded pMMO trimers oxidize methane in ordered arrays <small>(FUNCTION)</small></h3>
 <p>Methanotroph intracytoplasmic membranes derive from the inner cell membrane, house pMMO trimers, and organize them into native hexagonal arrays. pMMO carries out the membrane-bound oxidation of methane to methanol that starts methane catabolism.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: ICM-embedded pMMO trimers oxidize methane in ordered arrays">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>methanotroph intracytoplasmic membrane bilayer</td><td>bounds</td><td>methane-oxidizing organelle</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-32752-9"><code>DOI:10.1038/s41467-022-32752-9</code></a> <small>Zhu et al. 2022 visualized Methylococcus capsulatus Bath cells by serial cryoFIB/SEM and cryoET and interpreted ICMs as cytoplasmic-membrane invaginations.</small></li></ul></td></tr>
+<tr><td>methanotroph intracytoplasmic membrane bilayer</td><td>bounds</td><td>methane-oxidizing organelle <small>(<a href="http://purl.obolibrary.org/obo/GO_0044227"><code>GO:0044227</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-32752-9"><code>DOI:10.1038/s41467-022-32752-9</code></a> <small>Zhu et al. 2022 visualized Methylococcus capsulatus Bath cells by serial cryoFIB/SEM and cryoET and interpreted ICMs as cytoplasmic-membrane invaginations.</small></li></ul></td></tr>
 <tr><td>methanotroph intracytoplasmic membrane bilayer</td><td>houses</td><td>particulate methane monooxygenase complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-32752-9"><code>DOI:10.1038/s41467-022-32752-9</code></a> <small>Zhu et al. 2022 resolved pMMO trimers within isolated native ICMs and imaged pMMO particle arrays in intact-cell lamellae.</small></li></ul></td></tr>
 <tr><td>particulate methane monooxygenase complex</td><td>forms</td><td>hexagonal pMMO array</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-32752-9"><code>DOI:10.1038/s41467-022-32752-9</code></a> <small>Zhu et al. 2022 showed by cellular and isolated ICM cryoET that pMMO trimers are arranged in hexagonal arrays.</small></li></ul></td></tr>
-<tr><td>hexagonal pMMO array</td><td>is located in</td><td>methane-oxidizing organelle</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-32752-9"><code>DOI:10.1038/s41467-022-32752-9</code></a> <small>Zhu et al. 2022 detected pMMO hexagonal arrays covering the ICM surface in intact methanotroph cells.</small></li></ul></td></tr>
+<tr><td>hexagonal pMMO array</td><td>is located in</td><td>methane-oxidizing organelle <small>(<a href="http://purl.obolibrary.org/obo/GO_0044227"><code>GO:0044227</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-32752-9"><code>DOI:10.1038/s41467-022-32752-9</code></a> <small>Zhu et al. 2022 detected pMMO hexagonal arrays covering the ICM surface in intact methanotroph cells.</small></li></ul></td></tr>
 <tr><td>particulate methane monooxygenase complex</td><td>oxidizes</td><td>methane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-32752-9"><code>DOI:10.1038/s41467-022-32752-9</code></a> <small>Zhu et al. 2022 describe pMMO as the membrane-bound MMO that catalyzes methane C-H bond activation and oxidation to methanol.</small></li></ul></td></tr>
 <tr><td>particulate methane monooxygenase complex</td><td>produces</td><td>methanol</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-32752-9"><code>DOI:10.1038/s41467-022-32752-9</code></a> <small>Zhu et al. 2022 state that methane monooxygenases oxidize methane to methanol in methanotrophs.</small></li></ul></td></tr>
-<tr><td>particulate methane monooxygenase complex</td><td>initiates</td><td>methane catabolic process</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-32752-9"><code>DOI:10.1038/s41467-022-32752-9</code></a> <small>Zhu et al. 2022 identify pMMO as the primary membrane enzyme for methane oxidation in copper-replete methanotrophs.</small></li></ul></td></tr>
+<tr><td>particulate methane monooxygenase complex</td><td>initiates</td><td>methane catabolic process <small>(<a href="http://purl.obolibrary.org/obo/GO_0046188"><code>GO:0046188</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-32752-9"><code>DOI:10.1038/s41467-022-32752-9</code></a> <small>Zhu et al. 2022 identify pMMO as the primary membrane enzyme for methane oxidation in copper-replete methanotrophs.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -81,7 +91,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/methane_oxidizing_organelle.yaml"><code>data/structures/membrane_organelle/methane_oxidizing_organelle.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

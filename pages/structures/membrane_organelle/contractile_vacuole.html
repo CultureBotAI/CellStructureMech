@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · contractile vacuole</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>contractile vacuole</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0000331"><code>GO:0000331</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span></p>
 <p class="definition">A specialized vacuole of eukaryotic cells, especially Protozoa, that fills with water from the cytoplasm and then discharges this externally by the opening of contractile vacuole pores. One of its functions is osmoregulatory. <small>[<a href="http://purl.obolibrary.org/obo/GO_0000331"><code>GO:0000331</code></a>]</small></p>
@@ -74,10 +84,10 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-proton_gradient_water_filling_and_discharge">Membrane pumps and water channels fill a contractile vacuole <small>(FUNCTION)</small></h3>
 <p>Contractile-vacuole membrane proteins generate osmotic gradients and water permeability that fill the vacuole. The filled vacuole then rounds and discharges through a plasma-membrane pore.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Membrane pumps and water channels fill a contractile vacuole">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>contractile vacuolar membrane</td><td>bounds</td><td>water-filled contractile vacuole</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031164"><code>GO:0031164</code></a> <small>GO:0031164 defines the contractile vacuolar membrane as the lipid bilayer surrounding a contractile vacuole.</small></li></ul></td></tr>
-<tr><td>contractile vacuole V-ATPase</td><td>resides in</td><td>contractile vacuolar membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.115.14.2893"><code>DOI:10.1242/jcs.115.14.2893</code></a> <small>Clarke et al. 2002 used GFP-tagged V-ATPase to track its dynamics in the Dictyostelium contractile-vacuole complex.</small></li></ul></td></tr>
+<tr><td>contractile vacuolar membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0031164"><code>GO:0031164</code></a>)</small></td><td>bounds</td><td>water-filled contractile vacuole</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031164"><code>GO:0031164</code></a> <small>GO:0031164 defines the contractile vacuolar membrane as the lipid bilayer surrounding a contractile vacuole.</small></li></ul></td></tr>
+<tr><td>contractile vacuole V-ATPase</td><td>resides in</td><td>contractile vacuolar membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0031164"><code>GO:0031164</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.115.14.2893"><code>DOI:10.1242/jcs.115.14.2893</code></a> <small>Clarke et al. 2002 used GFP-tagged V-ATPase to track its dynamics in the Dictyostelium contractile-vacuole complex.</small></li></ul></td></tr>
 <tr><td>contractile vacuole V-ATPase</td><td>generates</td><td>osmotic gradient toward the vacuole lumen</td><td><ul class="evidence"><li><a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a> <small>Nishihara et al. 2008 interpreted V-ATPase-positive vesicles around the Amoeba contractile vacuole as participants in osmotic-gradient generation.</small></li></ul></td></tr>
-<tr><td>contractile vacuole aquaporins</td><td>increase water permeability of</td><td>contractile vacuolar membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a> <small>Nishihara et al. 2008 localized Amoeba ApAQP to the contractile vacuole membrane and perivacuolar vesicles.</small></li></ul></td></tr>
+<tr><td>contractile vacuole aquaporins</td><td>increase water permeability of</td><td>contractile vacuolar membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0031164"><code>GO:0031164</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1042/BC20070091"><code>DOI:10.1042/BC20070091</code></a> <small>Nishihara et al. 2008 localized Amoeba ApAQP to the contractile vacuole membrane and perivacuolar vesicles.</small></li></ul></td></tr>
 <tr><td>osmotic gradient toward the vacuole lumen</td><td>fills</td><td>water-filled contractile vacuole</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/S0074-7696(02)15015-7"><code>DOI:10.1016/S0074-7696(02)15015-7</code></a> <small>Allen and Naitoh 2002 review fluid filling as a phase of the contractile-vacuole cycle.</small></li></ul></td></tr>
 <tr><td>water-filled contractile vacuole</td><td>discharges</td><td>external water discharge</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/EC.00163-14"><code>DOI:10.1128/EC.00163-14</code></a> <small>Komsic-Buchmann et al. 2014 measured osmolarity-dependent pulse-frequency and size changes during contractile-vacuole function in Chlamydomonas.</small></li></ul></td></tr>
 </tbody></table>
@@ -95,7 +105,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/contractile_vacuole.yaml"><code>data/structures/membrane_organelle/contractile_vacuole.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

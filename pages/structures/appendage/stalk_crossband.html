@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/appendage.html">Appendage</a> · stalk crossband</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>stalk crossband</h1>
 <p class="meta"><code>cellstructuremech:stalk_crossband</code> · Appendage · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A disk-like multiprotein diffusion barrier that spans the Caulobacter stalk cross-section. StpABCD-containing stalk crossbands partition the prostheca into compartments by limiting exchange of soluble and membrane proteins between the cell body and stalk segments. <small>[<a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a>]</small></p>
@@ -70,11 +80,11 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-stp_crossband_stalk_barrier">StpABCD proteins assemble stalk-compartment diffusion barriers <small>(ASSEMBLY)</small></h3>
 <p>In Caulobacter, StpA and StpB form the crossband scaffold; StpC and StpD tighten its diffusion barrier. Crossbands span the prostheca, and intact barriers limit soluble and membrane-protein exchange across stalk compartments.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: StpABCD proteins assemble stalk-compartment diffusion barriers">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>StpA/StpB crossband scaffold proteins</td><td>forms scaffold of</td><td>stalk crossband</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 show loss of visible crossbands after stpAB deletion and a hierarchical StpA/StpB assembly scaffold, distinct from StpC/D-dependent sealing.</small></li></ul></td></tr>
-<tr><td>StpC/StpD crossband barrier-sealing proteins</td><td>seals diffusion barrier of</td><td>stalk crossband</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 observe visible crossbands in stpC/stpD mutants and partial loss of periplasmic compartmentalization in the stpCD deletion strain, distinguishing structural formation from barrier sealing.</small></li></ul></td></tr>
-<tr><td>stalk crossband</td><td>spans</td><td>prostheca</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 describe crossbands as spanning the stalk.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/4126821"><code>PMID:4126821</code></a> <small>Jones and Schmidt 1973 imaged electron-dense crossbands in Caulobacter stalks.</small></li></ul></td></tr>
-<tr><td>stalk crossband</td><td>restricts</td><td>protein diffusion</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 tested soluble and membrane-protein diffusion across crossbands.</small></li></ul></td></tr>
-<tr><td>stalk crossband</td><td>supports</td><td>stalk compartmentalization</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 connect crossband diffusion barriers with bacterial stalk compartments.</small></li></ul></td></tr>
+<tr><td>StpA/StpB crossband scaffold proteins</td><td>forms scaffold of</td><td>stalk crossband <small>(<code>cellstructuremech:stalk_crossband</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 show loss of visible crossbands after stpAB deletion and a hierarchical StpA/StpB assembly scaffold, distinct from StpC/D-dependent sealing.</small></li></ul></td></tr>
+<tr><td>StpC/StpD crossband barrier-sealing proteins</td><td>seals diffusion barrier of</td><td>stalk crossband <small>(<code>cellstructuremech:stalk_crossband</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 observe visible crossbands in stpC/stpD mutants and partial loss of periplasmic compartmentalization in the stpCD deletion strain, distinguishing structural formation from barrier sealing.</small></li></ul></td></tr>
+<tr><td>stalk crossband <small>(<code>cellstructuremech:stalk_crossband</code>)</small></td><td>spans</td><td>prostheca <small>(<code>cellstructuremech:prostheca</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 describe crossbands as spanning the stalk.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/4126821"><code>PMID:4126821</code></a> <small>Jones and Schmidt 1973 imaged electron-dense crossbands in Caulobacter stalks.</small></li></ul></td></tr>
+<tr><td>stalk crossband <small>(<code>cellstructuremech:stalk_crossband</code>)</small></td><td>restricts</td><td>protein diffusion</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 tested soluble and membrane-protein diffusion across crossbands.</small></li></ul></td></tr>
+<tr><td>stalk crossband <small>(<code>cellstructuremech:stalk_crossband</code>)</small></td><td>supports</td><td>stalk compartmentalization</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2012.10.046"><code>DOI:10.1016/j.cell.2012.10.046</code></a> <small>Schlimpert et al. 2012 connect crossband diffusion barriers with bacterial stalk compartments.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -90,7 +100,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/stalk_crossband.yaml"><code>data/structures/appendage/stalk_crossband.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/ribonucleoprotein.html">Ribonucleoprotein</a> · U2-type precatalytic spliceosome</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>U2-type precatalytic spliceosome</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0071005"><code>GO:0071005</code></a> · Ribonucleoprotein · Ribonucleoprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A spliceosomal complex that is formed by the recruitment of the preassembled U4/U6.U5 tri-snRNP to the prespliceosome. Although all 5 snRNPs are present, the precatalytic spliceosome is catalytically inactive. The precatalytic spliceosome includes many proteins in addition to those found in the U1, U2 and U4/U6.U5 snRNPs. <small>[<a href="http://purl.obolibrary.org/obo/GO_0071005"><code>GO:0071005</code></a>]</small></p>
@@ -46,10 +56,10 @@
 <h3 id="causal_graphs-u2_type_b_complex_assembly">U4/U6.U5 tri-snRNP recruitment forms the precatalytic B complex <small>(ASSEMBLY)</small></h3>
 <p>The U2-type precatalytic spliceosome forms when preassembled U4/U6.U5 tri-snRNP joins the U1- and U2-containing prespliceosome on pre-mRNA, creating a catalytically inactive complex poised for RNA-RNA remodeling.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: U4/U6.U5 tri-snRNP recruitment forms the precatalytic B complex">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>U1 snRNP</td><td>associates with</td><td>U2-type prespliceosome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071004"><code>GO:0071004</code></a> <small>GO:0071004 defines the U2-type prespliceosome by 5-prime splice-site association with U1 snRNP and branch-point recognition by U2 snRNP.</small></li></ul></td></tr>
-<tr><td>U4/U6 x U5 tri-snRNP complex</td><td>is recruited to form</td><td>U2-type precatalytic spliceosome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071005"><code>GO:0071005</code></a> <small>GO:0071005 defines the U2-type precatalytic spliceosome as the state formed by recruitment of U4/U6.U5 tri-snRNP to the prespliceosome.</small></li></ul></td></tr>
-<tr><td>U2-type prespliceosome</td><td>receives</td><td>U4/U6 x U5 tri-snRNP complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071005"><code>GO:0071005</code></a> <small>GO:0071005 defines the U2-type precatalytic spliceosome as formed by tri-snRNP recruitment to the prespliceosome.</small></li></ul></td></tr>
-<tr><td>U2 snRNP</td><td>interfaces with</td><td>U4/U6 x U5 tri-snRNP complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature22799"><code>DOI:10.1038/nature22799</code></a> <small>Plaschka, Lin and Nagai 2017 modeled the yeast B-complex U2/U6 helix II and U2 SF3b to U4/U6 di-snRNP contacts.</small></li></ul></td></tr>
+<tr><td>U1 snRNP <small>(<a href="http://purl.obolibrary.org/obo/GO_0005685"><code>GO:0005685</code></a>)</small></td><td>associates with</td><td>U2-type prespliceosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0071004"><code>GO:0071004</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071004"><code>GO:0071004</code></a> <small>GO:0071004 defines the U2-type prespliceosome by 5-prime splice-site association with U1 snRNP and branch-point recognition by U2 snRNP.</small></li></ul></td></tr>
+<tr><td>U4/U6 x U5 tri-snRNP complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0046540"><code>GO:0046540</code></a>)</small></td><td>is recruited to form</td><td>U2-type precatalytic spliceosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0071005"><code>GO:0071005</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071005"><code>GO:0071005</code></a> <small>GO:0071005 defines the U2-type precatalytic spliceosome as the state formed by recruitment of U4/U6.U5 tri-snRNP to the prespliceosome.</small></li></ul></td></tr>
+<tr><td>U2-type prespliceosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0071004"><code>GO:0071004</code></a>)</small></td><td>receives</td><td>U4/U6 x U5 tri-snRNP complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0046540"><code>GO:0046540</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071005"><code>GO:0071005</code></a> <small>GO:0071005 defines the U2-type precatalytic spliceosome as formed by tri-snRNP recruitment to the prespliceosome.</small></li></ul></td></tr>
+<tr><td>U2 snRNP <small>(<a href="http://purl.obolibrary.org/obo/GO_0005686"><code>GO:0005686</code></a>)</small></td><td>interfaces with</td><td>U4/U6 x U5 tri-snRNP complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0046540"><code>GO:0046540</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature22799"><code>DOI:10.1038/nature22799</code></a> <small>Plaschka, Lin and Nagai 2017 modeled the yeast B-complex U2/U6 helix II and U2 SF3b to U4/U6 di-snRNP contacts.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -65,7 +75,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/u2_type_precatalytic_spliceosome.yaml"><code>data/structures/ribonucleoprotein/u2_type_precatalytic_spliceosome.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

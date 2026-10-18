@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · meiotic telomere bouquet</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>meiotic telomere bouquet</h1>
 <p class="meta"><code>cellstructuremech:meiotic_telomere_bouquet</code> · Other · Nucleoprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A polarized nuclear chromosome assembly in which telomeric ends and their anchoring proteins cluster within a restricted region of the nuclear envelope during meiotic prophase. Characterized in fission and budding yeast, it organizes chromosome ends while chromosome arms extend into the nucleus; its duration and tethering machinery differ between species. <small>[<a href="https://doi.org/10.1038/celldisc.2017.41"><code>DOI:10.1038/celldisc.2017.41</code></a>]</small></p>
@@ -30,7 +40,7 @@
 <h2>Components</h2>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
-<tr id="components-telomeric_dna"><td>telomere</td><td>Dna</td><td>part of</td><td><code>SO:0000624</code></td><td></td><td></td><td>UNKNOWN</td><td>Ends of the linear nuclear chromosomes brought together at the nuclear periphery.<ul class="evidence"><li><a href="https://doi.org/10.26508/lsa.202000824"><code>DOI:10.26508/lsa.202000824</code></a> <small>Rap1-marked telomeres cluster at prophase I; the chromosome-end DNA is part of the assembly, not an external substrate.</small></li><li><a href="https://doi.org/10.1038/celldisc.2017.41"><code>DOI:10.1038/celldisc.2017.41</code></a> <small>Taz1-marked chromosome ends remain associated with the SPB during the fission-yeast bouquet stage.</small></li></ul></td></tr>
+<tr id="components-telomeric_dna"><td>telomere</td><td>Dna</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/SO_0000624"><code>SO:0000624</code></a></td><td></td><td></td><td>UNKNOWN</td><td>Ends of the linear nuclear chromosomes brought together at the nuclear periphery.<ul class="evidence"><li><a href="https://doi.org/10.26508/lsa.202000824"><code>DOI:10.26508/lsa.202000824</code></a> <small>Rap1-marked telomeres cluster at prophase I; the chromosome-end DNA is part of the assembly, not an external substrate.</small></li><li><a href="https://doi.org/10.1038/celldisc.2017.41"><code>DOI:10.1038/celldisc.2017.41</code></a> <small>Taz1-marked chromosome ends remain associated with the SPB during the fission-yeast bouquet stage.</small></li></ul></td></tr>
 <tr id="components-rap1"><td>TE2IP/Rap1</td><td>Protein</td><td>part of</td><td><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR039595"><code>InterPro:IPR039595</code></a></td><td>RAP1, rap1</td><td></td><td>UNKNOWN</td><td>Telomere-associated scaffold class in both curated yeast systems.<ul class="evidence"><li><a href="https://doi.org/10.26508/lsa.202000824"><code>DOI:10.26508/lsa.202000824</code></a> <small>Rap1-GFP marks the budding-yeast bouquet.</small></li><li><a href="https://doi.org/10.1186/s12915-015-0149-x"><code>DOI:10.1186/s12915-015-0149-x</code></a> <small>Rap1-DD337AA retains telomeric localization but loses Bqt1/2 interaction and bouquet clustering.</small></li></ul></td></tr>
 <tr id="components-taz1"><td>Taz1-like telomere-binding protein</td><td>Protein</td><td>part of</td><td><em title="The component label was reviewed; no accession grounding is asserted.">Reviewed label only</em><small> (reviewed name; no accession asserted)</small></td><td>taz1</td><td></td><td>UNKNOWN</td><td>Fission-yeast chromosome-end DNA-binding constituent.<ul class="evidence"><li><a href="https://doi.org/10.1038/celldisc.2017.41"><code>DOI:10.1038/celldisc.2017.41</code></a> <small>Tagged Taz1 marks the clustered telomeres and their subsequent release.</small></li></ul></td></tr>
 <tr id="components-bqt1"><td>Bqt1-like meiotic telomere connector</td><td>Protein</td><td>part of</td><td><em title="The component label was reviewed; no accession grounding is asserted.">Reviewed label only</em><small> (reviewed name; no accession asserted)</small></td><td>bqt1</td><td></td><td>UNKNOWN</td><td>Fission-yeast constituent of the Rap1-to-Sad1 bridge that maintains the bouquet.<ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2006.01.048"><code>DOI:10.1016/j.cell.2006.01.048</code></a> <small>Readable primary abstract identifies the joint Bqt1/Bqt2 bridge between Rap1 and Sad1; full publisher text was not accessible.</small></li><li><a href="https://doi.org/10.1038/celldisc.2017.41"><code>DOI:10.1038/celldisc.2017.41</code></a> <small>Direct live-cell and conditional-degradation experiments support bouquet residence and maintenance.</small></li></ul></td></tr>
@@ -165,7 +175,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/meiotic_telomere_bouquet.yaml"><code>data/structures/other/meiotic_telomere_bouquet.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

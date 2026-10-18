@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · telocentrosome</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>telocentrosome</h1>
 <p class="meta"><code>cellstructuremech:telocentrosome</code> · Cytoskeleton · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A telomere-associated microtubule organizing assembly formed at the nuclear envelope during meiotic entry in Schizosaccharomyces pombe. It recruits a gamma-tubulin nucleation complex to SUN/KASH-linked telomeres and generates cytoplasmic microtubules that support their clustering at the spindle pole body; it is distinct from the spindle pole body and the completed telomere bouquet. <small>[<a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a>]</small></p>
@@ -116,17 +126,17 @@ family; these are the specific entries behind it.</small></p>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Recruitment dependencies at meiotic telomeres">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Kms1-like KASH protein</td><td>supports</td><td>Mto1-like microtubule nucleation adaptor</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figure 3D: reduced Mto1 localization in kms1-deleted cells. The edge specifies recruitment dependence, not direct binding.</small></li></ul></td></tr>
-<tr><td>Kms1-like KASH protein</td><td>supports</td><td>Dynein light chain Tctex-1-like</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figure 3C: Dlc1 localization depends on Kms1, independently of Dhc1.</small></li></ul></td></tr>
-<tr><td>Mto1-like microtubule nucleation adaptor</td><td>supports</td><td>gamma-tubulin complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figures 3D, 4D and 5B: Alp4 localization is substantially reduced after mto1 deletion.</small></li></ul></td></tr>
-<tr><td>Dynein light chain Tctex-1-like</td><td>supports</td><td>gamma-tubulin complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figure 5B shows reduced Alp4 localization in dlc1-deleted haploid meiotic cells; early preconjugation recruitment can remain, so absolute initial assembly essentiality is not asserted.</small></li></ul></td></tr>
-<tr><td>gamma-tubulin complex</td><td>supports</td><td>Telocentrosome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figures 2-5 combine regrowth, Alp4 localization and recruitment mutants; this is the source&#39;s assembly interpretation, not evidence that isolated gamma-TuC alone is sufficient.</small></li></ul></td></tr>
+<tr><td>Kms1-like KASH protein</td><td>supports</td><td>Dynein light chain Tctex-1-like <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR005334"><code>InterPro:IPR005334</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figure 3C: Dlc1 localization depends on Kms1, independently of Dhc1.</small></li></ul></td></tr>
+<tr><td>Mto1-like microtubule nucleation adaptor</td><td>supports</td><td>gamma-tubulin complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0000930"><code>GO:0000930</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figures 3D, 4D and 5B: Alp4 localization is substantially reduced after mto1 deletion.</small></li></ul></td></tr>
+<tr><td>Dynein light chain Tctex-1-like <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR005334"><code>InterPro:IPR005334</code></a>)</small></td><td>supports</td><td>gamma-tubulin complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0000930"><code>GO:0000930</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figure 5B shows reduced Alp4 localization in dlc1-deleted haploid meiotic cells; early preconjugation recruitment can remain, so absolute initial assembly essentiality is not asserted.</small></li></ul></td></tr>
+<tr><td>gamma-tubulin complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0000930"><code>GO:0000930</code></a>)</small></td><td>supports</td><td>Telocentrosome <small>(<code>cellstructuremech:telocentrosome</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figures 2-5 combine regrowth, Alp4 localization and recruitment mutants; this is the source&#39;s assembly interpretation, not evidence that isolated gamma-TuC alone is sufficient.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 <h3 id="causal_graphs-telocentrosome_function">Telomeric microtubules support clustering <small>(FUNCTION)</small></h3>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Telomeric microtubules support clustering">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Telocentrosome</td><td>supports</td><td>microtubule nucleation by microtubule organizing center</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figure 2D and Supplementary Figure S2 observe microtubule regrowth near telomeres after MBC washout.</small></li></ul></td></tr>
-<tr><td>microtubule nucleation by microtubule organizing center</td><td>supports</td><td>meiotic telomere clustering</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figure 2 observes telomeres gathering after microtubule connection, and MBC inhibits clustering; Figure 1 identifies motor contributions. This edge does not claim nucleation alone is sufficient.</small></li></ul></td></tr>
+<tr><td>Telocentrosome <small>(<code>cellstructuremech:telocentrosome</code>)</small></td><td>supports</td><td>microtubule nucleation by microtubule organizing center <small>(<a href="http://purl.obolibrary.org/obo/GO_0051418"><code>GO:0051418</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figure 2D and Supplementary Figure S2 observe microtubule regrowth near telomeres after MBC washout.</small></li></ul></td></tr>
+<tr><td>microtubule nucleation by microtubule organizing center <small>(<a href="http://purl.obolibrary.org/obo/GO_0051418"><code>GO:0051418</code></a>)</small></td><td>supports</td><td>meiotic telomere clustering <small>(<a href="http://purl.obolibrary.org/obo/GO_0045141"><code>GO:0045141</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.201207168"><code>DOI:10.1083/jcb.201207168</code></a> <small>Figure 2 observes telomeres gathering after microtubule connection, and MBC inhibits clustering; Figure 1 identifies motor contributions. This edge does not claim nucleation alone is sufficient.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -142,7 +152,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/telocentrosome.yaml"><code>data/structures/cytoskeleton/telocentrosome.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

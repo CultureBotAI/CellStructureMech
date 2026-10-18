@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · TRAMP complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>TRAMP complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A multiprotein complex having distributive polyadenylation activity of a variety of RNA substrates including hypomodified and incorrectly folded tRNAs, pre-snRNAs, pre-snoRNAs, incorrectly spliced or processed pre-mRNAs, cryptic unstable transcripts (CUTs), pre-rRNAs and rRNA fragments released as part of rRNA processing. In S. cerevisiae, the complex consists of either Pap2 (also known as Trf4) or Trf5, Air1 or Air2, and Mtr4, and is involved in RNA 3&#39;-end processing and in RNA surveillance and quality control. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a>]</small></p>
@@ -78,11 +88,11 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-tramp_polyadenylation_rna_surveillance">TRAMP polyadenylates RNAs for surveillance <small>(FUNCTION)</small></h3>
 <p>The Saccharomyces Trf4/Trf5, Air1/Air2 and Mtr4 proteins form TRAMP complexes that polyadenylate RNA substrates for surveillance-linked degradation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: TRAMP polyadenylates RNAs for surveillance">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Trf4/Trf5 poly(A) polymerase subunit</td><td>contributes to</td><td>TRAMP complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a> <small>GO:0031499 defines Saccharomyces TRAMP as containing either Pap2/Trf4 or Trf5.</small></li></ul></td></tr>
-<tr><td>Air1/Air2 RNA-binding subunit</td><td>contributes to</td><td>TRAMP complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a> <small>GO:0031499 defines Saccharomyces TRAMP as containing Air1 or Air2.</small></li></ul></td></tr>
-<tr><td>Mtr4 RNA helicase subunit</td><td>contributes to</td><td>TRAMP complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a> <small>GO:0031499 defines Saccharomyces TRAMP as containing Mtr4.</small></li></ul></td></tr>
-<tr><td>TRAMP complex</td><td>supports</td><td>polyadenylation-dependent RNA catabolic process</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.0030189"><code>DOI:10.1371/journal.pbio.0030189</code></a> <small>Vanacova et al. 2005 connected Trf4-complex polyadenylation activity to nuclear exosome degradation of an RNA substrate.</small></li></ul></td></tr>
-<tr><td>TRAMP complex</td><td>supports</td><td>nuclear RNA surveillance</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a> <small>GO:0031499 defines TRAMP as involved in RNA surveillance and quality control.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0071027"><code>GO:0071027</code></a> <small>GO:0071027 is the biological-process term for nuclear RNA surveillance.</small></li></ul></td></tr>
+<tr><td>Trf4/Trf5 poly(A) polymerase subunit</td><td>contributes to</td><td>TRAMP complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a> <small>GO:0031499 defines Saccharomyces TRAMP as containing either Pap2/Trf4 or Trf5.</small></li></ul></td></tr>
+<tr><td>Air1/Air2 RNA-binding subunit</td><td>contributes to</td><td>TRAMP complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a> <small>GO:0031499 defines Saccharomyces TRAMP as containing Air1 or Air2.</small></li></ul></td></tr>
+<tr><td>Mtr4 RNA helicase subunit</td><td>contributes to</td><td>TRAMP complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a> <small>GO:0031499 defines Saccharomyces TRAMP as containing Mtr4.</small></li></ul></td></tr>
+<tr><td>TRAMP complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a>)</small></td><td>supports</td><td>polyadenylation-dependent RNA catabolic process <small>(<a href="http://purl.obolibrary.org/obo/GO_0043633"><code>GO:0043633</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.pbio.0030189"><code>DOI:10.1371/journal.pbio.0030189</code></a> <small>Vanacova et al. 2005 connected Trf4-complex polyadenylation activity to nuclear exosome degradation of an RNA substrate.</small></li></ul></td></tr>
+<tr><td>TRAMP complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a>)</small></td><td>supports</td><td>nuclear RNA surveillance <small>(<a href="http://purl.obolibrary.org/obo/GO_0071027"><code>GO:0071027</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031499"><code>GO:0031499</code></a> <small>GO:0031499 defines TRAMP as involved in RNA surveillance and quality control.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0071027"><code>GO:0071027</code></a> <small>GO:0071027 is the biological-process term for nuclear RNA surveillance.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -98,7 +108,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/tramp_complex.yaml"><code>data/structures/other/tramp_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

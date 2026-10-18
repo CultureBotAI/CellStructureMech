@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/ribonucleoprotein.html">Ribonucleoprotein</a> · paraspeckles</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>paraspeckles</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0042382"><code>GO:0042382</code></a> · Ribonucleoprotein · Other · <span class="status">Proposed</span></p>
 <p class="definition">Discrete subnuclear bodies in the interchromatin nucleoplasmic space, often located adjacent to nuclear specks. 10-20 paraspeckles are typically found in human cell nuclei. <small>[<a href="http://purl.obolibrary.org/obo/GO_0042382"><code>GO:0042382</code></a>]</small></p>
@@ -63,11 +73,11 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-neat1_dbhs_paraspeckle_assembly">NEAT1 and DBHS proteins assemble paraspeckles <small>(ASSEMBLY)</small></h3>
 <p>Paraspeckles are nuclear ribonucleoprotein granules scaffolded by NEAT1 lncRNA and DBHS-family RNA-binding proteins.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: NEAT1 and DBHS proteins assemble paraspeckles">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>NEAT1 lncRNA</td><td>scaffolds</td><td>paraspeckles</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2009.01.026"><code>DOI:10.1016/j.molcel.2009.01.026</code></a> <small>Clemson et al. 2009 found that NEAT1 RNA is required for paraspeckle structure.</small></li></ul></td></tr>
+<tr><td>NEAT1 lncRNA</td><td>scaffolds</td><td>paraspeckles <small>(<a href="http://purl.obolibrary.org/obo/GO_0042382"><code>GO:0042382</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2009.01.026"><code>DOI:10.1016/j.molcel.2009.01.026</code></a> <small>Clemson et al. 2009 found that NEAT1 RNA is required for paraspeckle structure.</small></li></ul></td></tr>
 <tr><td>DBHS paraspeckle proteins</td><td>associate with</td><td>NEAT1 lncRNA</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200906113"><code>DOI:10.1083/jcb.200906113</code></a> <small>Bond and Fox 2009 reviewed the association of core DBHS paraspeckle proteins with NEAT1.</small></li></ul></td></tr>
 <tr><td>NEAT1 lncRNA</td><td>promotes</td><td>paraspeckle assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.molcel.2018.05.019"><code>DOI:10.1016/j.molcel.2018.05.019</code></a> <small>Yamazaki et al. 2018 mapped NEAT1 domains that induce paraspeckle assembly through phase separation.</small></li></ul></td></tr>
-<tr><td>DBHS paraspeckle proteins</td><td>maintain integrity of</td><td>paraspeckles</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200906113"><code>DOI:10.1083/jcb.200906113</code></a> <small>Bond and Fox 2009 reviewed core DBHS paraspeckle proteins in the context of NEAT1 association and paraspeckle integrity.</small></li></ul></td></tr>
-<tr><td>paraspeckles</td><td>are associated with</td><td>nuclear RNA retention</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200906113"><code>DOI:10.1083/jcb.200906113</code></a> <small>Bond and Fox 2009 reviewed paraspeckle nuclear bodies in relation to RNA nuclear retention.</small></li></ul></td></tr>
+<tr><td>DBHS paraspeckle proteins</td><td>maintain integrity of</td><td>paraspeckles <small>(<a href="http://purl.obolibrary.org/obo/GO_0042382"><code>GO:0042382</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200906113"><code>DOI:10.1083/jcb.200906113</code></a> <small>Bond and Fox 2009 reviewed core DBHS paraspeckle proteins in the context of NEAT1 association and paraspeckle integrity.</small></li></ul></td></tr>
+<tr><td>paraspeckles <small>(<a href="http://purl.obolibrary.org/obo/GO_0042382"><code>GO:0042382</code></a>)</small></td><td>are associated with</td><td>nuclear RNA retention</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200906113"><code>DOI:10.1083/jcb.200906113</code></a> <small>Bond and Fox 2009 reviewed paraspeckle nuclear bodies in relation to RNA nuclear retention.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -83,7 +93,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/paraspeckles.yaml"><code>data/structures/ribonucleoprotein/paraspeckles.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

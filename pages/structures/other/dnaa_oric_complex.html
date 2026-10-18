@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · DnaA-oriC complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>DnaA-oriC complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> · Other · Nucleoprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A protein-DNA complex containing the initiator protein DnaA bound to high-affinity recognition sites in the unique origin of replication, oriC. DnaA-oriC binding is the first step in assembly of a bacterial pre-replicative complex (pre-RC) and is responsible for the timely initiation of replication once per cell cycle. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a>]</small></p>
@@ -59,9 +69,9 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-dnaa_oric_initiation">DnaA-oriC seeds initiation <small>(FUNCTION)</small></h3>
 <p>DnaA bound to high-affinity oriC recognition sites forms a nucleoprotein complex that seeds bacterial pre-RC assembly during DNA replication initiation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: DnaA-oriC seeds initiation">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>DnaA replication initiation protein</td><td>contributes to</td><td>DnaA-oriC complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines the complex as containing initiator protein DnaA.</small></li></ul></td></tr>
-<tr><td>oriC origin DNA</td><td>scaffolds</td><td>DnaA-oriC complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines the complex around DnaA bound to high-affinity oriC sites.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a> <small>Miller et al. 2009 studied DnaA binding to the E. coli oriC origin.</small></li></ul></td></tr>
-<tr><td>DnaA-oriC complex</td><td>supports</td><td>DNA replication initiation</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC assembly.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006270"><code>GO:0006270</code></a> <small>GO:0006270 is the DNA replication initiation process term.</small></li></ul></td></tr>
+<tr><td>DnaA replication initiation protein</td><td>contributes to</td><td>DnaA-oriC complex <small>(<a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines the complex as containing initiator protein DnaA.</small></li></ul></td></tr>
+<tr><td>oriC origin DNA</td><td>scaffolds</td><td>DnaA-oriC complex <small>(<a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines the complex around DnaA bound to high-affinity oriC sites.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19833870"><code>PMID:19833870</code></a> <small>Miller et al. 2009 studied DnaA binding to the E. coli oriC origin.</small></li></ul></td></tr>
+<tr><td>DnaA-oriC complex <small>(<a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a>)</small></td><td>supports</td><td>DNA replication initiation <small>(<a href="http://purl.obolibrary.org/obo/GO_0006270"><code>GO:0006270</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990101"><code>GO:1990101</code></a> <small>GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC assembly.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006270"><code>GO:0006270</code></a> <small>GO:0006270 is the DNA replication initiation process term.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -77,7 +87,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dnaa_oric_complex.yaml"><code>data/structures/other/dnaa_oric_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

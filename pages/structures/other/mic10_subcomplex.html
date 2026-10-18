@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · MIC10 subcomplex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>MIC10 subcomplex</h1>
 <p class="meta"><code>cellstructuremech:mic10_subcomplex</code> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A mitochondrial inner-membrane MICOS subcomplex containing Mic10, Mic12, Mic26 and Mic27, organized around Mic10 oligomers and involved in crista architecture. <small>[<a href="https://doi.org/10.1016/j.jmb.2018.04.037"><code>DOI:10.1016/j.jmb.2018.04.037</code></a>]</small></p>
@@ -86,11 +96,11 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-yeast_mic10_subcomplex_assembly">Mic10 oligomer regulation and conditional Mic27 focal assembly <small>(ASSEMBLY)</small></h3>
 <p>Protein-specific perturbations distinguish regulation of Mic10 oligomers from focal assembly of a Mic27-containing organizing center.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Mic10 oligomer regulation and conditional Mic27 focal assembly">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>MICOS complex subunit Mic10</td><td>oligomerizes into</td><td>Higher-order Mic10 assemblies</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jmb.2018.04.037"><code>DOI:10.1016/j.jmb.2018.04.037</code></a> <small>Native-gel ladders and in-organello cross-linking provide complementary assembly evidence.</small></li></ul></td></tr>
-<tr><td>MICOS subunit Mic26, fungi</td><td>destabilizes</td><td>Higher-order Mic10 assemblies</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jmb.2018.04.037"><code>DOI:10.1016/j.jmb.2018.04.037</code></a> <small>Deletion shifts Mic10 toward larger assemblies and increases cross-linking adducts.</small></li></ul></td></tr>
-<tr><td>MICOS complex subunit MIC27</td><td>stabilizes</td><td>Higher-order Mic10 assemblies</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jmb.2018.04.037"><code>DOI:10.1016/j.jmb.2018.04.037</code></a> <small>Deletion favors smaller assemblies and reduces Mic10 cross-linking adducts.</small></li></ul></td></tr>
-<tr><td>MICOS complex subunit Mic10</td><td>is required for</td><td>Focal Mic27-containing assemblies without Mic60</td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/elife.07739"><code>DOI:10.7554/elife.07739</code></a> <small>Figure 3E-F: mic60 mic10 double-deletion cells lack detectable Mic27 foci; reconstitution with Mic10 supports some focal assembly.</small></li></ul></td></tr>
-<tr><td>MICOS complex subunit Mic12</td><td>promotes</td><td>Focal Mic27-containing assemblies without Mic60</td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/elife.07739"><code>DOI:10.7554/elife.07739</code></a> <small>Figure 3C-F: Mic10 plus Mic12 restores prominent Mic27 foci in cells lacking the other MICOS proteins; Mic12 loss reduces, rather than abolishes, foci in mic60-deletion cells.</small></li></ul></td></tr>
+<tr><td>MICOS complex subunit Mic10 <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR007512"><code>InterPro:IPR007512</code></a>)</small></td><td>oligomerizes into</td><td>Higher-order Mic10 assemblies</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jmb.2018.04.037"><code>DOI:10.1016/j.jmb.2018.04.037</code></a> <small>Native-gel ladders and in-organello cross-linking provide complementary assembly evidence.</small></li></ul></td></tr>
+<tr><td>MICOS subunit Mic26, fungi <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033181"><code>InterPro:IPR033181</code></a>)</small></td><td>destabilizes</td><td>Higher-order Mic10 assemblies</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jmb.2018.04.037"><code>DOI:10.1016/j.jmb.2018.04.037</code></a> <small>Deletion shifts Mic10 toward larger assemblies and increases cross-linking adducts.</small></li></ul></td></tr>
+<tr><td>MICOS complex subunit MIC27 <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR061953"><code>InterPro:IPR061953</code></a>)</small></td><td>stabilizes</td><td>Higher-order Mic10 assemblies</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jmb.2018.04.037"><code>DOI:10.1016/j.jmb.2018.04.037</code></a> <small>Deletion favors smaller assemblies and reduces Mic10 cross-linking adducts.</small></li></ul></td></tr>
+<tr><td>MICOS complex subunit Mic10 <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR007512"><code>InterPro:IPR007512</code></a>)</small></td><td>is required for</td><td>Focal Mic27-containing assemblies without Mic60</td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/elife.07739"><code>DOI:10.7554/elife.07739</code></a> <small>Figure 3E-F: mic60 mic10 double-deletion cells lack detectable Mic27 foci; reconstitution with Mic10 supports some focal assembly.</small></li></ul></td></tr>
+<tr><td>MICOS complex subunit Mic12 <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR031463"><code>InterPro:IPR031463</code></a>)</small></td><td>promotes</td><td>Focal Mic27-containing assemblies without Mic60</td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/elife.07739"><code>DOI:10.7554/elife.07739</code></a> <small>Figure 3C-F: Mic10 plus Mic12 restores prominent Mic27 foci in cells lacking the other MICOS proteins; Mic12 loss reduces, rather than abolishes, foci in mic60-deletion cells.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -106,7 +116,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mic10_subcomplex.yaml"><code>data/structures/other/mic10_subcomplex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

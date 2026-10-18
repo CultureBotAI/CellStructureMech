@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · PotABCD spermidine ABC transporter complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>PotABCD spermidine ABC transporter complex</h1>
 <p class="meta"><code>cellstructuremech:potabcd_spermidine_abc_transporter_complex</code> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">An Escherichia coli PotABCD ATP-binding cassette importer composed of two PotA ATP-binding subunits, one PotB permease, one PotC permease, and one PotD periplasmic substrate-binding protein that imports spermidine and can also import putrescine. <small>[<a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4383"><code>ComplexPortal:CPX-4383</code></a>]</small></p>
@@ -91,12 +101,12 @@ family; these are the specific entries behind it.</small></p>
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Spermidine/putrescine-binding periplasmic protein PotD</td><td>delivers substrate to</td><td>Spermidine/putrescine transport system permease protein PotB</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4383"><code>ComplexPortal:CPX-4383</code></a> <small>CPX-4383 curates PotD, PotB, and PotC as participants in the E. coli K-12 spermidine ABC transporter complex.</small></li></ul></td></tr>
 <tr><td>Spermidine/putrescine-binding periplasmic protein PotD</td><td>delivers substrate to</td><td>Spermidine/putrescine transport system permease protein PotC</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4383"><code>ComplexPortal:CPX-4383</code></a> <small>CPX-4383 curates PotD, PotB, and PotC as participants in the E. coli K-12 spermidine ABC transporter complex.</small></li></ul></td></tr>
-<tr><td>Spermidine/putrescine import ATP-binding protein PotA</td><td>powers</td><td>ABC-type polyamine transporter activity</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4383"><code>ComplexPortal:CPX-4383</code></a> <small>CPX-4383 curates PotA as two copies in a complex annotated with GO:0015417.</small></li></ul></td></tr>
+<tr><td>Spermidine/putrescine import ATP-binding protein PotA</td><td>powers</td><td>ABC-type polyamine transporter activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0015417"><code>GO:0015417</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4383"><code>ComplexPortal:CPX-4383</code></a> <small>CPX-4383 curates PotA as two copies in a complex annotated with GO:0015417.</small></li></ul></td></tr>
 <tr><td>Spermidine/putrescine transport system permease protein PotB</td><td>forms channel with</td><td>Spermidine/putrescine transport system permease protein PotC</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4383"><code>ComplexPortal:CPX-4383</code></a> <small>CPX-4383 curates PotB and PotC as one copy each in the E. coli K-12 spermidine ABC transporter complex.</small></li></ul></td></tr>
-<tr><td>PotABCD spermidine ABC transporter complex</td><td>enables</td><td>ABC-type polyamine transporter activity</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4383"><code>ComplexPortal:CPX-4383</code></a> <small>Complex Portal cross-references GO:0015417 for the E. coli K-12 PotABCD complex.</small></li></ul></td></tr>
-<tr><td>PotABCD spermidine ABC transporter complex</td><td>enables</td><td>ABC-type putrescine transporter activity</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4383"><code>ComplexPortal:CPX-4383</code></a> <small>Complex Portal cross-references GO:0015594 for the E. coli K-12 PotABCD complex.</small></li></ul></td></tr>
-<tr><td>ABC-type polyamine transporter activity</td><td>moves</td><td>periplasmic polyamine</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0015417"><code>GO:0015417</code></a> <small>GO:0015417 defines ATP-dependent ABC-type polyamine import from outside to inside.</small></li></ul></td></tr>
-<tr><td>ABC-type polyamine transporter activity</td><td>targets</td><td>cytoplasmic polyamine</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0015417"><code>GO:0015417</code></a> <small>GO:0015417 states the outside-to-inside polyamine ABC-transporter reaction.</small></li></ul></td></tr>
+<tr><td>PotABCD spermidine ABC transporter complex <small>(<code>cellstructuremech:potabcd_spermidine_abc_transporter_complex</code>)</small></td><td>enables</td><td>ABC-type polyamine transporter activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0015417"><code>GO:0015417</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4383"><code>ComplexPortal:CPX-4383</code></a> <small>Complex Portal cross-references GO:0015417 for the E. coli K-12 PotABCD complex.</small></li></ul></td></tr>
+<tr><td>PotABCD spermidine ABC transporter complex <small>(<code>cellstructuremech:potabcd_spermidine_abc_transporter_complex</code>)</small></td><td>enables</td><td>ABC-type putrescine transporter activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0015594"><code>GO:0015594</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4383"><code>ComplexPortal:CPX-4383</code></a> <small>Complex Portal cross-references GO:0015594 for the E. coli K-12 PotABCD complex.</small></li></ul></td></tr>
+<tr><td>ABC-type polyamine transporter activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0015417"><code>GO:0015417</code></a>)</small></td><td>moves</td><td>periplasmic polyamine</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0015417"><code>GO:0015417</code></a> <small>GO:0015417 defines ATP-dependent ABC-type polyamine import from outside to inside.</small></li></ul></td></tr>
+<tr><td>ABC-type polyamine transporter activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0015417"><code>GO:0015417</code></a>)</small></td><td>targets</td><td>cytoplasmic polyamine</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0015417"><code>GO:0015417</code></a> <small>GO:0015417 states the outside-to-inside polyamine ABC-transporter reaction.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -112,7 +122,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/potabcd_spermidine_abc_transporter_complex.yaml"><code>data/structures/other/potabcd_spermidine_abc_transporter_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

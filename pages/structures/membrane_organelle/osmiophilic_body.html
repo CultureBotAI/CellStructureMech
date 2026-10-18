@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · osmiophilic body</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>osmiophilic body</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0044310"><code>GO:0044310</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span></p>
 <p class="definition">A membrane-bounded vesicle found predominantly in Plasmodium female gametocytes, that becomes progressively more abundant as the gametocyte reaches full maturity. These vesicles lie beneath the subpellicular membrane of the gametocyte, and the release of their contents into the parasitophorous vacuole has been postulated to aid in the escape of gametocytes from the erythrocyte after ingestion by the mosquito. <small>[<a href="http://purl.obolibrary.org/obo/GO_0044310"><code>GO:0044310</code></a>]</small></p>
@@ -59,10 +69,10 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-pfg377_osmiophilic_body_emergence">Pfg377 supports osmiophilic-body abundance and gametocyte emergence <small>(FUNCTION)</small></h3>
 <p>Pfg377 associates with P. falciparum osmiophilic bodies and supports normal osmiophilic-body formation; female gametocytes with a reduced organelle complement emerge from erythrocytes less efficiently and are defective in mosquito infection.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Pfg377 supports osmiophilic-body abundance and gametocyte emergence">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>osmiophilic body membrane</td><td>bounds</td><td>osmiophilic body</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044310"><code>GO:0044310</code></a> <small>GO defines osmiophilic bodies as membrane-bounded vesicles of Plasmodium female gametocytes.</small></li></ul></td></tr>
-<tr><td>Pfg377 osmiophilic body protein</td><td>associates with</td><td>osmiophilic body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/0166-6851(95)02491-3"><code>DOI:10.1016/0166-6851(95)02491-3</code></a> <small>Alano et al. 1995 identified Pfg377 as a P. falciparum gametocyte antigen associated with osmiophilic bodies.</small></li></ul></td></tr>
-<tr><td>Pfg377 osmiophilic body protein</td><td>supports formation of</td><td>osmiophilic body</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/j.1365-2958.2007.06039.x"><code>DOI:10.1111/j.1365-2958.2007.06039.x</code></a> <small>De Koning-Ward et al. 2008 found fewer osmiophilic bodies in Pfg377-negative female gametocytes.</small></li></ul></td></tr>
-<tr><td>osmiophilic body</td><td>supports</td><td>female gametocyte emergence</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/j.1365-2958.2007.06039.x"><code>DOI:10.1111/j.1365-2958.2007.06039.x</code></a> <small>De Koning-Ward et al. 2008 connected the Pfg377 osmiophilic-body defect to reduced female gametocyte emergence.</small></li></ul></td></tr>
+<tr><td>osmiophilic body membrane</td><td>bounds</td><td>osmiophilic body <small>(<a href="http://purl.obolibrary.org/obo/GO_0044310"><code>GO:0044310</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044310"><code>GO:0044310</code></a> <small>GO defines osmiophilic bodies as membrane-bounded vesicles of Plasmodium female gametocytes.</small></li></ul></td></tr>
+<tr><td>Pfg377 osmiophilic body protein</td><td>associates with</td><td>osmiophilic body <small>(<a href="http://purl.obolibrary.org/obo/GO_0044310"><code>GO:0044310</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/0166-6851(95)02491-3"><code>DOI:10.1016/0166-6851(95)02491-3</code></a> <small>Alano et al. 1995 identified Pfg377 as a P. falciparum gametocyte antigen associated with osmiophilic bodies.</small></li></ul></td></tr>
+<tr><td>Pfg377 osmiophilic body protein</td><td>supports formation of</td><td>osmiophilic body <small>(<a href="http://purl.obolibrary.org/obo/GO_0044310"><code>GO:0044310</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/j.1365-2958.2007.06039.x"><code>DOI:10.1111/j.1365-2958.2007.06039.x</code></a> <small>De Koning-Ward et al. 2008 found fewer osmiophilic bodies in Pfg377-negative female gametocytes.</small></li></ul></td></tr>
+<tr><td>osmiophilic body <small>(<a href="http://purl.obolibrary.org/obo/GO_0044310"><code>GO:0044310</code></a>)</small></td><td>supports</td><td>female gametocyte emergence</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/j.1365-2958.2007.06039.x"><code>DOI:10.1111/j.1365-2958.2007.06039.x</code></a> <small>De Koning-Ward et al. 2008 connected the Pfg377 osmiophilic-body defect to reduced female gametocyte emergence.</small></li></ul></td></tr>
 <tr><td>female gametocyte emergence</td><td>supports</td><td>mosquito oocyst formation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/j.1365-2958.2007.06039.x"><code>DOI:10.1111/j.1365-2958.2007.06039.x</code></a> <small>De Koning-Ward et al. 2008 found that the reduced emergence of Pfg377-negative gametocytes strongly impaired mosquito oocyst formation.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -79,7 +89,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/osmiophilic_body.yaml"><code>data/structures/membrane_organelle/osmiophilic_body.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

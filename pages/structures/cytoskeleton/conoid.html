@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · conoid</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>conoid</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0020010"><code>GO:0020010</code></a> · Cytoskeleton · Other · <span class="status">Proposed</span></p>
 <p class="definition">A spiral cytoskeletal structure located at the apical end of the apical complex in some apicomplexan parasites. Fibers form a left-handed spiral, and are comprised of tubulin protofilaments organized in a ribbon-like structure that differs from the conventional tubular structure characteristic of microtubules. <small>[<a href="http://purl.obolibrary.org/obo/GO_0020010"><code>GO:0020010</code></a>]</small></p>
@@ -59,10 +69,10 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-conoid_tubulin_myoH_host_cell_entry">Tubulin conoid fibers and MyoH support parasite entry and exit <small>(FUNCTION)</small></h3>
 <p>Tubulin protofilament ribbons form the spiral conoid body at the apical complex. The associated MyoH motor supports Toxoplasma entry into and exit from host cells; heterogeneous whole-complex proteomic cohorts are not asserted as body constituents.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Tubulin conoid fibers and MyoH support parasite entry and exit">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>conoid</td><td>is part of</td><td>apical complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.0020013"><code>DOI:10.1371/journal.ppat.0020013</code></a> <small>Hu et al. 2006 studied the Toxoplasma conoid as part of the apical complex.</small></li></ul></td></tr>
+<tr><td>conoid <small>(<a href="http://purl.obolibrary.org/obo/GO_0020010"><code>GO:0020010</code></a>)</small></td><td>is part of</td><td>apical complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0020007"><code>GO:0020007</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.0020013"><code>DOI:10.1371/journal.ppat.0020013</code></a> <small>Hu et al. 2006 studied the Toxoplasma conoid as part of the apical complex.</small></li></ul></td></tr>
 <tr><td>tubulin protofilaments</td><td>form</td><td>conoid tubulin fibers</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200112086"><code>DOI:10.1083/jcb.200112086</code></a> <small>Hu et al. 2002 found tubulin protofilaments within Toxoplasma conoid fibers.</small></li></ul></td></tr>
-<tr><td>conoid tubulin fibers</td><td>form</td><td>conoid</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200112086"><code>DOI:10.1083/jcb.200112086</code></a> <small>Hu et al. 2002 resolved the conoid fibers as a spiral tubulin polymer.</small></li></ul></td></tr>
-<tr><td>conoid-associated MyoH motor</td><td>localizes to</td><td>conoid</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.1005388"><code>DOI:10.1371/journal.ppat.1005388</code></a> <small>Graindorge et al. 2016 localized MyoH to the conoid in Toxoplasma.</small></li></ul></td></tr>
+<tr><td>conoid tubulin fibers</td><td>form</td><td>conoid <small>(<a href="http://purl.obolibrary.org/obo/GO_0020010"><code>GO:0020010</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200112086"><code>DOI:10.1083/jcb.200112086</code></a> <small>Hu et al. 2002 resolved the conoid fibers as a spiral tubulin polymer.</small></li></ul></td></tr>
+<tr><td>conoid-associated MyoH motor</td><td>localizes to</td><td>conoid <small>(<a href="http://purl.obolibrary.org/obo/GO_0020010"><code>GO:0020010</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.1005388"><code>DOI:10.1371/journal.ppat.1005388</code></a> <small>Graindorge et al. 2016 localized MyoH to the conoid in Toxoplasma.</small></li></ul></td></tr>
 <tr><td>conoid-associated MyoH motor</td><td>supports</td><td>host cell entry</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.1005388"><code>DOI:10.1371/journal.ppat.1005388</code></a> <small>Graindorge et al. 2016 found that MyoH is indispensable for Toxoplasma entry.</small></li></ul></td></tr>
 <tr><td>conoid-associated MyoH motor</td><td>supports</td><td>host cell exit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1371/journal.ppat.1005388"><code>DOI:10.1371/journal.ppat.1005388</code></a> <small>Graindorge et al. 2016 found that MyoH is indispensable for Toxoplasma exit.</small></li></ul></td></tr>
 </tbody></table>
@@ -80,7 +90,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/conoid.yaml"><code>data/structures/cytoskeleton/conoid.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

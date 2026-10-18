@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · LolCDE lipoprotein ABC transporter complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>LolCDE lipoprotein ABC transporter complex</h1>
 <p class="meta"><code>cellstructuremech:lolcde_lipoprotein_abc_transporter_complex</code> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">An Escherichia coli inner-membrane ABC transporter complex composed of one LolC transmembrane subunit, two LolD ATP-binding subunits, and one LolE transmembrane subunit that uses LolD ATP hydrolysis to release outer membrane-specific lipoproteins from the inner membrane for periplasmic trafficking. <small>[<a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4262"><code>ComplexPortal:CPX-4262</code></a>]</small></p>
@@ -82,11 +92,11 @@ family; these are the specific entries behind it.</small></p>
 <p>LolC, LolE, and two LolD copies form an ATP-powered inner-membrane complex that releases mature lipoproteins for delivery to the outer membrane.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: LolCDE releases outer-membrane lipoproteins from the inner membrane">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Lipoprotein-releasing system transmembrane protein LolC</td><td>recognizes with</td><td>Lipoprotein-releasing system transmembrane protein LolE</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4262"><code>ComplexPortal:CPX-4262</code></a> <small>CPX-4262 describes lipoprotein recognition by LolC and/or LolE on the periplasmic side of the inner membrane.</small></li></ul></td></tr>
-<tr><td>Lipoprotein-releasing system ATP-binding protein LolD</td><td>powers</td><td>lipoprotein releasing activity</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4262"><code>ComplexPortal:CPX-4262</code></a> <small>CPX-4262 describes LolD ATP hydrolysis as the driving force for lipoprotein release.</small></li></ul></td></tr>
-<tr><td>LolCDE lipoprotein ABC transporter complex</td><td>enables</td><td>lipoprotein releasing activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140306"><code>GO:0140306</code></a> <small>GO:0140306 defines lipoprotein releasing activity as mediated by the LolCDE complex.</small></li></ul></td></tr>
-<tr><td>lipoprotein releasing activity</td><td>releases</td><td>mature outer-membrane lipoprotein</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140306"><code>GO:0140306</code></a> <small>GO:0140306 specifies mature outer membrane lipoproteins in the inner membrane as the substrates of LolCDE-mediated release.</small></li></ul></td></tr>
+<tr><td>Lipoprotein-releasing system ATP-binding protein LolD</td><td>powers</td><td>lipoprotein releasing activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0140306"><code>GO:0140306</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-4262"><code>ComplexPortal:CPX-4262</code></a> <small>CPX-4262 describes LolD ATP hydrolysis as the driving force for lipoprotein release.</small></li></ul></td></tr>
+<tr><td>LolCDE lipoprotein ABC transporter complex <small>(<code>cellstructuremech:lolcde_lipoprotein_abc_transporter_complex</code>)</small></td><td>enables</td><td>lipoprotein releasing activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0140306"><code>GO:0140306</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140306"><code>GO:0140306</code></a> <small>GO:0140306 defines lipoprotein releasing activity as mediated by the LolCDE complex.</small></li></ul></td></tr>
+<tr><td>lipoprotein releasing activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0140306"><code>GO:0140306</code></a>)</small></td><td>releases</td><td>mature outer-membrane lipoprotein</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140306"><code>GO:0140306</code></a> <small>GO:0140306 specifies mature outer membrane lipoproteins in the inner membrane as the substrates of LolCDE-mediated release.</small></li></ul></td></tr>
 <tr><td>mature outer-membrane lipoprotein</td><td>leaves</td><td>inner membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140306"><code>GO:0140306</code></a> <small>GO:0140306 describes release of mature outer-membrane lipoproteins from the inner membrane.</small></li></ul></td></tr>
-<tr><td>lipoprotein localization to outer membrane</td><td>targets</td><td>outer membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044874"><code>GO:0044874</code></a> <small>GO:0044874 is the biological-process term for localization of lipoproteins to an outer membrane.</small></li></ul></td></tr>
+<tr><td>lipoprotein localization to outer membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0044874"><code>GO:0044874</code></a>)</small></td><td>targets</td><td>outer membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044874"><code>GO:0044874</code></a> <small>GO:0044874 is the biological-process term for localization of lipoproteins to an outer membrane.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -102,7 +112,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml"><code>data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

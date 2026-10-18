@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · cyanelle</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>cyanelle</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009842"><code>GO:0009842</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span></p>
 <p class="definition">A plastid that contains unstacked, phycobilisome-bearing thylakoid membranes and is surrounded by a double membrane with a peptidoglycan layer in the intermembrane space between the two envelope membranes. Cyanelles are characteristic of algae in the class Glaucophyta, and may represent an ancestral form of plastid. <small>[<a href="http://purl.obolibrary.org/obo/GO_0009842"><code>GO:0009842</code></a>]</small></p>
@@ -49,11 +59,11 @@
 <h3 id="causal_graphs-cyanelle_envelope_thylakoid_topology">Cyanelle envelope and thylakoid topology <small>(FUNCTION)</small></h3>
 <p>The cyanelle is bounded by inner and outer envelope membranes with peptidoglycan in the intermembrane space, and it carries internal thylakoid membranes for photosynthesis.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Cyanelle envelope and thylakoid topology">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>cyanelle outer membrane</td><td>bounds</td><td>cyanelle</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036013"><code>GO:0036013</code></a> <small>GO:0036013 defines the cyanelle outer membrane as the cytoplasm-facing envelope membrane.</small></li></ul></td></tr>
-<tr><td>cyanelle inner membrane</td><td>bounds</td><td>cyanelle stroma</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036012"><code>GO:0036012</code></a> <small>GO:0036012 defines the cyanelle inner membrane as the envelope bilayer that faces the cyanelle stroma.</small></li></ul></td></tr>
-<tr><td>cyanelle peptidoglycan layer</td><td>resides in</td><td>cyanelle intermembrane space</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036014"><code>GO:0036014</code></a> <small>GO:0036014 defines the cyanelle intermembrane space as including the peptidoglycan layer.</small></li><li><a href="https://doi.org/10.1128/jb.178.2.332-339.1996"><code>DOI:10.1128/jb.178.2.332-339.1996</code></a> <small>Pfanzagl et al. 1996 biochemically characterized Cyanophora paradoxa cyanelle peptidoglycan.</small></li></ul></td></tr>
-<tr><td>cyanelle thylakoid membrane</td><td>is part of</td><td>cyanelle thylakoid</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033115"><code>GO:0033115</code></a> <small>GO:0033115 defines the cyanelle thylakoid membrane as the bilayer of cyanelle thylakoids.</small></li></ul></td></tr>
-<tr><td>cyanelle thylakoid membrane</td><td>supports</td><td>photosynthesis</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009842"><code>GO:0009842</code></a> <small>GO:0009842 defines cyanelles as plastids with phycobilisome-bearing thylakoid membranes.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/31098614"><code>PMID:31098614</code></a> <small>Price et al. 2019 describe peptidoglycan and phycobilisomes as retained cyanobacterial plastid traits in glaucophytes.</small></li></ul></td></tr>
+<tr><td>cyanelle outer membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0036013"><code>GO:0036013</code></a>)</small></td><td>bounds</td><td>cyanelle <small>(<a href="http://purl.obolibrary.org/obo/GO_0009842"><code>GO:0009842</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036013"><code>GO:0036013</code></a> <small>GO:0036013 defines the cyanelle outer membrane as the cytoplasm-facing envelope membrane.</small></li></ul></td></tr>
+<tr><td>cyanelle inner membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0036012"><code>GO:0036012</code></a>)</small></td><td>bounds</td><td>cyanelle stroma <small>(<a href="http://purl.obolibrary.org/obo/GO_0034060"><code>GO:0034060</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036012"><code>GO:0036012</code></a> <small>GO:0036012 defines the cyanelle inner membrane as the envelope bilayer that faces the cyanelle stroma.</small></li></ul></td></tr>
+<tr><td>cyanelle peptidoglycan layer</td><td>resides in</td><td>cyanelle intermembrane space <small>(<a href="http://purl.obolibrary.org/obo/GO_0036014"><code>GO:0036014</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0036014"><code>GO:0036014</code></a> <small>GO:0036014 defines the cyanelle intermembrane space as including the peptidoglycan layer.</small></li><li><a href="https://doi.org/10.1128/jb.178.2.332-339.1996"><code>DOI:10.1128/jb.178.2.332-339.1996</code></a> <small>Pfanzagl et al. 1996 biochemically characterized Cyanophora paradoxa cyanelle peptidoglycan.</small></li></ul></td></tr>
+<tr><td>cyanelle thylakoid membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0033115"><code>GO:0033115</code></a>)</small></td><td>is part of</td><td>cyanelle thylakoid <small>(<a href="http://purl.obolibrary.org/obo/GO_0009843"><code>GO:0009843</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0033115"><code>GO:0033115</code></a> <small>GO:0033115 defines the cyanelle thylakoid membrane as the bilayer of cyanelle thylakoids.</small></li></ul></td></tr>
+<tr><td>cyanelle thylakoid membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0033115"><code>GO:0033115</code></a>)</small></td><td>supports</td><td>photosynthesis <small>(<a href="http://purl.obolibrary.org/obo/GO_0015979"><code>GO:0015979</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009842"><code>GO:0009842</code></a> <small>GO:0009842 defines cyanelles as plastids with phycobilisome-bearing thylakoid membranes.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/31098614"><code>PMID:31098614</code></a> <small>Price et al. 2019 describe peptidoglycan and phycobilisomes as retained cyanobacterial plastid traits in glaucophytes.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -69,7 +79,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/cyanelle.yaml"><code>data/structures/membrane_organelle/cyanelle.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · nuclear outer membrane</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>nuclear outer membrane</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> · Membrane organelle · Membrane · <span class="status">Proposed</span></p>
 <p class="definition">The outer, i.e. cytoplasm-facing, lipid bilayer of the nuclear envelope. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a>]</small></p>
@@ -46,11 +56,11 @@
 <h3 id="causal_graphs-yeast_nuclear_outer_membrane_contacts">Yeast nuclear outer membrane forms vacuole contacts <small>(FUNCTION)</small></h3>
 <p>The nuclear outer membrane is the cytoplasm-facing nuclear envelope membrane and carries Nvj1p for yeast nucleus-vacuole junction formation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Yeast nuclear outer membrane forms vacuole contacts">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>nuclear outer membrane</td><td>is part of</td><td>nuclear envelope</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> <small>GO:0005640 defines the nuclear outer membrane as the cytoplasm-facing lipid bilayer of the nuclear envelope.</small></li></ul></td></tr>
-<tr><td>nuclear envelope lumen</td><td>lies between</td><td>nuclear outer membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a> <small>GO:0005641 defines the nuclear envelope lumen as the region between the two nuclear envelope bilayers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 identifies the inner nuclear envelope bilayer.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> <small>GO:0005640 identifies the outer nuclear envelope bilayer.</small></li></ul></td></tr>
-<tr><td>nuclear envelope lumen</td><td>lies between</td><td>nuclear inner membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a> <small>GO:0005641 defines the nuclear envelope lumen as the region between the two nuclear envelope bilayers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 identifies the inner nuclear envelope bilayer.</small></li></ul></td></tr>
-<tr><td>Nvj1p</td><td>localizes to</td><td>nuclear outer membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.11.7.2445"><code>DOI:10.1091/mbc.11.7.2445</code></a> <small>Pan et al. 2000 identified Nvj1p as an outer nuclear membrane protein at nucleus-vacuole junctions.</small></li></ul></td></tr>
-<tr><td>Vac8p</td><td>localizes to</td><td>vacuolar membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.11.7.2445"><code>DOI:10.1091/mbc.11.7.2445</code></a> <small>Pan et al. 2000 identified Vac8p as the vacuolar Nvj1p partner that forms nucleus-vacuole junctions.</small></li></ul></td></tr>
+<tr><td>nuclear outer membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a>)</small></td><td>is part of</td><td>nuclear envelope <small>(<a href="http://purl.obolibrary.org/obo/GO_0005635"><code>GO:0005635</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> <small>GO:0005640 defines the nuclear outer membrane as the cytoplasm-facing lipid bilayer of the nuclear envelope.</small></li></ul></td></tr>
+<tr><td>nuclear envelope lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a>)</small></td><td>lies between</td><td>nuclear outer membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a> <small>GO:0005641 defines the nuclear envelope lumen as the region between the two nuclear envelope bilayers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 identifies the inner nuclear envelope bilayer.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a> <small>GO:0005640 identifies the outer nuclear envelope bilayer.</small></li></ul></td></tr>
+<tr><td>nuclear envelope lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a>)</small></td><td>lies between</td><td>nuclear inner membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005641"><code>GO:0005641</code></a> <small>GO:0005641 defines the nuclear envelope lumen as the region between the two nuclear envelope bilayers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005637"><code>GO:0005637</code></a> <small>GO:0005637 identifies the inner nuclear envelope bilayer.</small></li></ul></td></tr>
+<tr><td>Nvj1p</td><td>localizes to</td><td>nuclear outer membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005640"><code>GO:0005640</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.11.7.2445"><code>DOI:10.1091/mbc.11.7.2445</code></a> <small>Pan et al. 2000 identified Nvj1p as an outer nuclear membrane protein at nucleus-vacuole junctions.</small></li></ul></td></tr>
+<tr><td>Vac8p</td><td>localizes to</td><td>vacuolar membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005774"><code>GO:0005774</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.11.7.2445"><code>DOI:10.1091/mbc.11.7.2445</code></a> <small>Pan et al. 2000 identified Vac8p as the vacuolar Nvj1p partner that forms nucleus-vacuole junctions.</small></li></ul></td></tr>
 <tr><td>Nvj1p</td><td>interacts with</td><td>Vac8p</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.11.7.2445"><code>DOI:10.1091/mbc.11.7.2445</code></a> <small>Pan et al. 2000 found that Nvj1p directly interacts with Vac8p to form nucleus-vacuole junctions.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -67,7 +77,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/nuclear_outer_membrane.yaml"><code>data/structures/membrane_organelle/nuclear_outer_membrane.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

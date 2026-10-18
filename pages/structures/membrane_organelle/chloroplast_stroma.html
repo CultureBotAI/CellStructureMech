@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · chloroplast stroma</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>chloroplast stroma</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009570"><code>GO:0009570</code></a> · Membrane organelle · Subcellular region · <span class="status">Proposed</span></p>
 <p class="definition">The internal space enclosed by the chloroplast double membrane but excluding the thylakoid space. <small>[<a href="http://purl.obolibrary.org/obo/GO_0009570"><code>GO:0009570</code></a>]</small></p>
@@ -40,10 +50,10 @@
 <h3 id="causal_graphs-chloroplast_stroma_topology_and_import">Chloroplast stroma topology and import <small>(FUNCTION)</small></h3>
 <p>The chloroplast envelope encloses the stroma, stromal protein import terminates in the stroma after precursor transit across the envelope, and chloroplast nucleoids and plastoglobules occupy the stromal compartment.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Chloroplast stroma topology and import">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>chloroplast envelope</td><td>encloses</td><td>chloroplast stroma</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009570"><code>GO:0009570</code></a> <small>GO:0009570 defines the stroma as the chloroplast internal space enclosed by the double membrane.</small></li></ul></td></tr>
-<tr><td>chloroplast nucleoid</td><td>is part of</td><td>chloroplast stroma</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/mp/ssp083"><code>DOI:10.1093/mp/ssp083</code></a> <small>Karcher et al. 2009 assayed Chlamydomonas chloroplast DNA organization as HLP-containing nucleoids.</small></li></ul></td></tr>
-<tr><td>plastoglobule</td><td>is part of</td><td>chloroplast stroma</td><td><ul class="evidence"><li><a href="https://www.uniprot.org/locations/SL-0217"><code>uniprot.location:SL-0217</code></a> — Plastoglobule <small>UniProt SL-0217 describes plastoglobules as lipid-containing structures in the chloroplast stroma.</small></li></ul></td></tr>
-<tr><td>protein import into chloroplast stroma</td><td>terminates in</td><td>chloroplast stroma</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0045037"><code>GO:0045037</code></a> <small>GO:0045037 defines protein import into the chloroplast stroma as transport from the cytosol into the stroma.</small></li><li><a href="https://doi.org/10.1016/j.cell.2022.10.030"><code>DOI:10.1016/j.cell.2022.10.030</code></a> <small>Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex spanning both chloroplast envelope membranes.</small></li></ul></td></tr>
+<tr><td>chloroplast envelope <small>(<a href="http://purl.obolibrary.org/obo/GO_0009941"><code>GO:0009941</code></a>)</small></td><td>encloses</td><td>chloroplast stroma <small>(<a href="http://purl.obolibrary.org/obo/GO_0009570"><code>GO:0009570</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009570"><code>GO:0009570</code></a> <small>GO:0009570 defines the stroma as the chloroplast internal space enclosed by the double membrane.</small></li></ul></td></tr>
+<tr><td>chloroplast nucleoid <small>(<a href="http://purl.obolibrary.org/obo/GO_0042644"><code>GO:0042644</code></a>)</small></td><td>is part of</td><td>chloroplast stroma <small>(<a href="http://purl.obolibrary.org/obo/GO_0009570"><code>GO:0009570</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/mp/ssp083"><code>DOI:10.1093/mp/ssp083</code></a> <small>Karcher et al. 2009 assayed Chlamydomonas chloroplast DNA organization as HLP-containing nucleoids.</small></li></ul></td></tr>
+<tr><td>plastoglobule <small>(<a href="http://purl.obolibrary.org/obo/GO_0010287"><code>GO:0010287</code></a>)</small></td><td>is part of</td><td>chloroplast stroma <small>(<a href="http://purl.obolibrary.org/obo/GO_0009570"><code>GO:0009570</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.uniprot.org/locations/SL-0217"><code>uniprot.location:SL-0217</code></a> — Plastoglobule <small>UniProt SL-0217 describes plastoglobules as lipid-containing structures in the chloroplast stroma.</small></li></ul></td></tr>
+<tr><td>protein import into chloroplast stroma <small>(<a href="http://purl.obolibrary.org/obo/GO_0045037"><code>GO:0045037</code></a>)</small></td><td>terminates in</td><td>chloroplast stroma <small>(<a href="http://purl.obolibrary.org/obo/GO_0009570"><code>GO:0009570</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0045037"><code>GO:0045037</code></a> <small>GO:0045037 defines protein import into the chloroplast stroma as transport from the cytosol into the stroma.</small></li><li><a href="https://doi.org/10.1016/j.cell.2022.10.030"><code>DOI:10.1016/j.cell.2022.10.030</code></a> <small>Jin et al. 2022 resolved a Chlamydomonas TOC-TIC supercomplex spanning both chloroplast envelope membranes.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -59,7 +69,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/chloroplast_stroma.yaml"><code>data/structures/membrane_organelle/chloroplast_stroma.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

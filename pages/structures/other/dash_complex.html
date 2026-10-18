@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · DASH complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>DASH complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0042729"><code>GO:0042729</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A large protein complex, containing around 8-10 subunits in yeast, including Duo1p, Dam1p, Dad1p and Ask1p. The complex forms part of the outer kinetochore, associates with microtubules when the kinetochore attaches to the spindle, and plays a role in spindle attachment, chromosome segregation and spindle stability. <small>[<a href="http://purl.obolibrary.org/obo/GO_0042729"><code>GO:0042729</code></a>]</small></p>
@@ -106,9 +116,9 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-dash_outer_kinetochore_microtubule_attachment">DASH links the outer kinetochore to spindle microtubules <small>(ASSEMBLY)</small></h3>
 <p>In budding yeast, the DASH/Dam1 complex is an outer-kinetochore multiprotein complex that binds microtubules and contributes to kinetochore-spindle attachment.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: DASH links the outer kinetochore to spindle microtubules">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>DASH complex</td><td>is part of</td><td>outer kinetochore</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042729"><code>GO:0042729</code></a> <small>Gene Ontology cellular-component term for the DASH complex.</small></li></ul></td></tr>
-<tr><td>outer kinetochore</td><td>is part of</td><td>kinetochore</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000940"><code>GO:0000940</code></a> <small>GO:0000940 defines the outer kinetochore as the kinetochore region most external to centromeric DNA.</small></li></ul></td></tr>
-<tr><td>DASH complex</td><td>contributes to</td><td>attachment of spindle microtubules to kinetochore</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042729"><code>GO:0042729</code></a> <small>Gene Ontology cellular-component term for the DASH complex.</small></li><li><a href="https://doi.org/10.1083/jcb.200109063"><code>DOI:10.1083/jcb.200109063</code></a> <small>Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex to outer kinetochore function.</small></li><li><a href="https://doi.org/10.1038/nsmb896"><code>DOI:10.1038/nsmb896</code></a> <small>Miranda et al. 2005 reconstituted the yeast DASH complex and showed that it can form closed rings on microtubules.</small></li></ul></td></tr>
+<tr><td>DASH complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0042729"><code>GO:0042729</code></a>)</small></td><td>is part of</td><td>outer kinetochore <small>(<a href="http://purl.obolibrary.org/obo/GO_0000940"><code>GO:0000940</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042729"><code>GO:0042729</code></a> <small>Gene Ontology cellular-component term for the DASH complex.</small></li></ul></td></tr>
+<tr><td>outer kinetochore <small>(<a href="http://purl.obolibrary.org/obo/GO_0000940"><code>GO:0000940</code></a>)</small></td><td>is part of</td><td>kinetochore <small>(<a href="http://purl.obolibrary.org/obo/GO_0000776"><code>GO:0000776</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000940"><code>GO:0000940</code></a> <small>GO:0000940 defines the outer kinetochore as the kinetochore region most external to centromeric DNA.</small></li></ul></td></tr>
+<tr><td>DASH complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0042729"><code>GO:0042729</code></a>)</small></td><td>contributes to</td><td>attachment of spindle microtubules to kinetochore <small>(<a href="http://purl.obolibrary.org/obo/GO_0008608"><code>GO:0008608</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042729"><code>GO:0042729</code></a> <small>Gene Ontology cellular-component term for the DASH complex.</small></li><li><a href="https://doi.org/10.1083/jcb.200109063"><code>DOI:10.1083/jcb.200109063</code></a> <small>Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex to outer kinetochore function.</small></li><li><a href="https://doi.org/10.1038/nsmb896"><code>DOI:10.1038/nsmb896</code></a> <small>Miranda et al. 2005 reconstituted the yeast DASH complex and showed that it can form closed rings on microtubules.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -124,7 +134,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dash_complex.yaml"><code>data/structures/other/dash_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

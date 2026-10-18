@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/appendage.html">Appendage</a> · bacterial-type flagellum rotor complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>bacterial-type flagellum rotor complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0120107"><code>GO:0120107</code></a> · Appendage · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">The bacterial flagellar basal-body rotor built from the membrane-anchored FliF MS ring and the cytoplasmic FliG/FliM/FliN C ring, which together receive torque from stator units, rotate the axial rod, and bias clockwise or counterclockwise motor output. <small>[<a href="https://doi.org/10.1016/j.tim.2014.12.011"><code>DOI:10.1016/j.tim.2014.12.011</code></a>]</small></p>
@@ -70,12 +80,12 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-ms_c_ring_rotor_function">MS and C rings form the flagellar rotor <small>(FUNCTION)</small></h3>
 <p>The C ring assembles on the MS ring, the C ring receives stator torque, the MS ring transmits rotation into the rod, and C-ring switching sets clockwise or counterclockwise output.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MS and C rings form the flagellar rotor">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>bacterial-type flagellum basal body, MS ring</td><td>forms membrane-anchored ring in</td><td>bacterial-type flagellum rotor complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-021-24507-9"><code>DOI:10.1038/s41467-021-24507-9</code></a> <small>Kawamoto et al. 2021 resolved the native Salmonella MS ring that anchors the rotor around the export gate.</small></li></ul></td></tr>
-<tr><td>bacterial-type flagellum basal body, C ring</td><td>forms cytoplasmic switch ring in</td><td>bacterial-type flagellum rotor complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/emboj.2011.188"><code>DOI:10.1038/emboj.2011.188</code></a> <small>Paul et al. 2011 mapped the FliG/FliM/FliN subunits in the Salmonella rotor architecture.</small></li></ul></td></tr>
-<tr><td>bacterial-type flagellum basal body, MS ring</td><td>templates</td><td>bacterial-type flagellum basal body, C ring</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-021-24507-9"><code>DOI:10.1038/s41467-021-24507-9</code></a> <small>Kawamoto et al. 2021 measured native Salmonella C-ring symmetry relative to the FliF MS ring.</small></li></ul></td></tr>
-<tr><td>bacterial-type flagellum stator complex</td><td>applies torque to</td><td>bacterial-type flagellum basal body, C ring</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.tim.2014.12.011"><code>DOI:10.1016/j.tim.2014.12.011</code></a> <small>Minamino and Imada 2015 review the C-ring FliG interface used for stator-rotor torque coupling.</small></li></ul></td></tr>
-<tr><td>bacterial-type flagellum basal body, MS ring</td><td>transmits rotation to</td><td>bacterial-type flagellum basal body, rod</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2021.03.057"><code>DOI:10.1016/j.cell.2021.03.057</code></a> <small>Tan et al. 2021 resolved structural coupling between the MS ring, FliE and the proximal rod.</small></li></ul></td></tr>
-<tr><td>bacterial-type flagellum basal body, C ring</td><td>controls</td><td>flagellar motor switching</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature09300"><code>DOI:10.1038/nature09300</code></a> <small>Lee et al. 2010 connected C-ring architecture to the molecular basis of rotational switching.</small></li></ul></td></tr>
+<tr><td>bacterial-type flagellum basal body, MS ring <small>(<a href="http://purl.obolibrary.org/obo/GO_0009431"><code>GO:0009431</code></a>)</small></td><td>forms membrane-anchored ring in</td><td>bacterial-type flagellum rotor complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0120107"><code>GO:0120107</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-021-24507-9"><code>DOI:10.1038/s41467-021-24507-9</code></a> <small>Kawamoto et al. 2021 resolved the native Salmonella MS ring that anchors the rotor around the export gate.</small></li></ul></td></tr>
+<tr><td>bacterial-type flagellum basal body, C ring <small>(<a href="http://purl.obolibrary.org/obo/GO_0009433"><code>GO:0009433</code></a>)</small></td><td>forms cytoplasmic switch ring in</td><td>bacterial-type flagellum rotor complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0120107"><code>GO:0120107</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/emboj.2011.188"><code>DOI:10.1038/emboj.2011.188</code></a> <small>Paul et al. 2011 mapped the FliG/FliM/FliN subunits in the Salmonella rotor architecture.</small></li></ul></td></tr>
+<tr><td>bacterial-type flagellum basal body, MS ring <small>(<a href="http://purl.obolibrary.org/obo/GO_0009431"><code>GO:0009431</code></a>)</small></td><td>templates</td><td>bacterial-type flagellum basal body, C ring <small>(<a href="http://purl.obolibrary.org/obo/GO_0009433"><code>GO:0009433</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-021-24507-9"><code>DOI:10.1038/s41467-021-24507-9</code></a> <small>Kawamoto et al. 2021 measured native Salmonella C-ring symmetry relative to the FliF MS ring.</small></li></ul></td></tr>
+<tr><td>bacterial-type flagellum stator complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0120101"><code>GO:0120101</code></a>)</small></td><td>applies torque to</td><td>bacterial-type flagellum basal body, C ring <small>(<a href="http://purl.obolibrary.org/obo/GO_0009433"><code>GO:0009433</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.tim.2014.12.011"><code>DOI:10.1016/j.tim.2014.12.011</code></a> <small>Minamino and Imada 2015 review the C-ring FliG interface used for stator-rotor torque coupling.</small></li></ul></td></tr>
+<tr><td>bacterial-type flagellum basal body, MS ring <small>(<a href="http://purl.obolibrary.org/obo/GO_0009431"><code>GO:0009431</code></a>)</small></td><td>transmits rotation to</td><td>bacterial-type flagellum basal body, rod <small>(<a href="http://purl.obolibrary.org/obo/GO_0030694"><code>GO:0030694</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.cell.2021.03.057"><code>DOI:10.1016/j.cell.2021.03.057</code></a> <small>Tan et al. 2021 resolved structural coupling between the MS ring, FliE and the proximal rod.</small></li></ul></td></tr>
+<tr><td>bacterial-type flagellum basal body, C ring <small>(<a href="http://purl.obolibrary.org/obo/GO_0009433"><code>GO:0009433</code></a>)</small></td><td>controls</td><td>flagellar motor switching</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature09300"><code>DOI:10.1038/nature09300</code></a> <small>Lee et al. 2010 connected C-ring architecture to the molecular basis of rotational switching.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -91,7 +101,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/bacterial_type_flagellum_rotor_complex.yaml"><code>data/structures/appendage/bacterial_type_flagellum_rotor_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

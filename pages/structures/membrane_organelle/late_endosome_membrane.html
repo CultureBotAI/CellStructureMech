@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · late endosome membrane</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>late endosome membrane</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a> · Membrane organelle · Membrane · <span class="status">Proposed</span></p>
 <p class="definition">The lipid bilayer surrounding a late endosome. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a>]</small></p>
@@ -46,9 +56,9 @@
 <h3 id="causal_graphs-late_endosome_membrane_topology">Late endosome membrane topology <small>(FUNCTION)</small></h3>
 <p>The late endosome membrane is a specialized endosome membrane that forms part of the late endosome and bounds its lumen.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Late endosome membrane topology">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>late endosome membrane</td><td>is a</td><td>endosome membrane</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a> <small>GO:0031902 identifies late endosome membrane as an endosome-membrane child.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0010008"><code>GO:0010008</code></a> <small>GO:0010008 defines the broader endosome membrane class.</small></li></ul></td></tr>
-<tr><td>late endosome membrane</td><td>is part of</td><td>late endosome</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a> <small>GO:0031902 defines the late endosome membrane as surrounding a late endosome.</small></li></ul></td></tr>
-<tr><td>late endosome membrane</td><td>bounds</td><td>late endosome lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a> <small>GO:0031902 identifies the late endosome membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031906"><code>GO:0031906</code></a> <small>GO:0031906 defines the late endosome lumen by enclosure within the membrane of a late endosome.</small></li></ul></td></tr>
+<tr><td>late endosome membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a>)</small></td><td>is a</td><td>endosome membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0010008"><code>GO:0010008</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a> <small>GO:0031902 identifies late endosome membrane as an endosome-membrane child.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0010008"><code>GO:0010008</code></a> <small>GO:0010008 defines the broader endosome membrane class.</small></li></ul></td></tr>
+<tr><td>late endosome membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a>)</small></td><td>is part of</td><td>late endosome <small>(<a href="http://purl.obolibrary.org/obo/GO_0005770"><code>GO:0005770</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a> <small>GO:0031902 defines the late endosome membrane as surrounding a late endosome.</small></li></ul></td></tr>
+<tr><td>late endosome membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a>)</small></td><td>bounds</td><td>late endosome lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0031906"><code>GO:0031906</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031902"><code>GO:0031902</code></a> <small>GO:0031902 identifies the late endosome membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031906"><code>GO:0031906</code></a> <small>GO:0031906 defines the late endosome lumen by enclosure within the membrane of a late endosome.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -64,7 +74,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/late_endosome_membrane.yaml"><code>data/structures/membrane_organelle/late_endosome_membrane.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

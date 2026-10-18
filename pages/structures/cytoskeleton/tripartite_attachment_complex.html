@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · tripartite attachment complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>tripartite attachment complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0120121"><code>GO:0120121</code></a> · Cytoskeleton · Other · <span class="status">Proposed</span></p>
 <p class="definition">A three-part cytoskeletal structure in kinetoplastid species linking mitochondrial DNA organised in a kinetoplast through the mitochondrial membranes to the basal body. <small>[<a href="http://purl.obolibrary.org/obo/GO_0120121"><code>GO:0120121</code></a>]</small></p>
@@ -70,12 +80,12 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-tac_links_basal_body_to_kdna">TAC domains bridge basal bodies to the kDNA disk <small>(FUNCTION)</small></h3>
 <p>A nonmechanistic structural summary of the TAC bridge in T. brucei: basal bodies connect through cytoplasmic exclusion-zone filaments, differentiated mitochondrial membranes and intramitochondrial unilateral filaments to the kDNA disk. This is a spatial linkage, not a temporal assembly sequence or a resolved protein-by-protein force-transfer mechanism.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: TAC domains bridge basal bodies to the kDNA disk">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>ciliary basal body</td><td>aligns with</td><td>exclusion-zone filaments</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E02-08-0525"><code>DOI:10.1091/mbc.E02-08-0525</code></a> <small>Ogbadoyi, Robinson and Gull 2003, Results and Figures 2, 3 and 6 place exclusion-zone filaments on the basal-body-facing, cytoplasmic side of the TAC.</small></li></ul></td></tr>
+<tr><td>ciliary basal body <small>(<a href="http://purl.obolibrary.org/obo/GO_0036064"><code>GO:0036064</code></a>)</small></td><td>aligns with</td><td>exclusion-zone filaments</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E02-08-0525"><code>DOI:10.1091/mbc.E02-08-0525</code></a> <small>Ogbadoyi, Robinson and Gull 2003, Results and Figures 2, 3 and 6 place exclusion-zone filaments on the basal-body-facing, cytoplasmic side of the TAC.</small></li></ul></td></tr>
 <tr><td>exclusion-zone filaments</td><td>connect through</td><td>differentiated mitochondrial TAC membrane regions</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E02-08-0525"><code>DOI:10.1091/mbc.E02-08-0525</code></a> <small>Ogbadoyi, Robinson and Gull 2003, Results and Figure 3 show exclusion-zone filaments terminating at the outer-membrane remnant after extraction.</small></li></ul></td></tr>
 <tr><td>differentiated mitochondrial TAC membrane regions</td><td>connect to</td><td>unilateral filaments</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E02-08-0525"><code>DOI:10.1091/mbc.E02-08-0525</code></a> <small>Ogbadoyi, Robinson and Gull 2003, Results and Figures 2, 3 and 6 place unilateral filaments between the inner membrane and the kDNA disk.</small></li></ul></td></tr>
 <tr><td>unilateral filaments</td><td>link to</td><td>kinetoplast DNA disk</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E02-08-0525"><code>DOI:10.1091/mbc.E02-08-0525</code></a> <small>Ogbadoyi, Robinson and Gull 2003, Results and Figures 2, 3 and 6 identify unilateral filaments as the intramitochondrial, kDNA-proximal arm of the TAC.</small></li></ul></td></tr>
-<tr><td>unilateral filaments</td><td>form</td><td>tripartite attachment complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E02-08-0525"><code>DOI:10.1091/mbc.E02-08-0525</code></a> <small>Ogbadoyi, Robinson and Gull 2003 defined the tripartite architecture of the basal-body-to-kDNA linkage.</small></li></ul></td></tr>
-<tr><td>tripartite attachment complex</td><td>mediates</td><td>basal-body-linked kinetoplast segregation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E02-08-0525"><code>DOI:10.1091/mbc.E02-08-0525</code></a> <small>Ogbadoyi, Robinson and Gull 2003 connected the trans-membrane linkage to basal-body-driven mitochondrial genome segregation.</small></li><li><a href="https://doi.org/10.1371/journal.ppat.1005586"><code>DOI:10.1371/journal.ppat.1005586</code></a> <small>Trikin et al. 2016 characterized TAC102 as a TAC component in the mitochondrial genome segregation machinery.</small></li></ul></td></tr>
+<tr><td>unilateral filaments</td><td>form</td><td>tripartite attachment complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0120121"><code>GO:0120121</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E02-08-0525"><code>DOI:10.1091/mbc.E02-08-0525</code></a> <small>Ogbadoyi, Robinson and Gull 2003 defined the tripartite architecture of the basal-body-to-kDNA linkage.</small></li></ul></td></tr>
+<tr><td>tripartite attachment complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0120121"><code>GO:0120121</code></a>)</small></td><td>mediates</td><td>basal-body-linked kinetoplast segregation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E02-08-0525"><code>DOI:10.1091/mbc.E02-08-0525</code></a> <small>Ogbadoyi, Robinson and Gull 2003 connected the trans-membrane linkage to basal-body-driven mitochondrial genome segregation.</small></li><li><a href="https://doi.org/10.1371/journal.ppat.1005586"><code>DOI:10.1371/journal.ppat.1005586</code></a> <small>Trikin et al. 2016 characterized TAC102 as a TAC component in the mitochondrial genome segregation machinery.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -91,7 +101,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/tripartite_attachment_complex.yaml"><code>data/structures/cytoskeleton/tripartite_attachment_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · ciliary rootlet</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>ciliary rootlet</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0035253"><code>GO:0035253</code></a> · Cytoskeleton · Other · <span class="status">Proposed</span></p>
 <p class="definition">A cytoskeleton-like structure, originating from the basal body at the proximal end of a cilium, and extending proximally toward the cell nucleus. Rootlets are typically 80-100 nm in diameter and contain cross striae distributed at regular intervals of approximately 55-70 nm. <small>[<a href="http://purl.obolibrary.org/obo/GO_0035253"><code>GO:0035253</code></a>]</small></p>
@@ -56,9 +66,9 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-sf_assemblin_ciliary_rootlet_topology">SF-assemblin homologs build striated ciliary rootlets <small>(FUNCTION)</small></h3>
 <p>In microbial eukaryotes, segmented coiled-coil SF-assemblin homologs assemble into striated ciliary or flagellar rootlets that originate at ciliary basal bodies.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: SF-assemblin homologs build striated ciliary rootlets">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>SF-assemblin homologs</td><td>polymerize into</td><td>ciliary rootlet</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.121.4.837"><code>DOI:10.1083/jcb.121.4.837</code></a> <small>Weber et al. 1993 identified SF-assemblin as the structural protein of 2-nm filaments from algal flagellar-root fibers.</small></li><li><a href="https://doi.org/10.1242/jcs.115.7.1511"><code>DOI:10.1242/jcs.115.7.1511</code></a> <small>Lechtreck et al. 2002 observed SFA-GFP assembling into striated fibers in Chlamydomonas transformants.</small></li></ul></td></tr>
-<tr><td>ciliary rootlet</td><td>originates at</td><td>ciliary basal body</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035253"><code>GO:0035253</code></a> <small>GO defines the ciliary rootlet as a cytoskeleton-like structure originating from the ciliary basal body.</small></li></ul></td></tr>
-<tr><td>ciliary rootlet</td><td>supports</td><td>flagellar assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.115.7.1511"><code>DOI:10.1242/jcs.115.7.1511</code></a> <small>Lechtreck et al. 2002 reduced SF-assemblin and observed defects in flagellar assembly.</small></li></ul></td></tr>
+<tr><td>SF-assemblin homologs</td><td>polymerize into</td><td>ciliary rootlet <small>(<a href="http://purl.obolibrary.org/obo/GO_0035253"><code>GO:0035253</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.121.4.837"><code>DOI:10.1083/jcb.121.4.837</code></a> <small>Weber et al. 1993 identified SF-assemblin as the structural protein of 2-nm filaments from algal flagellar-root fibers.</small></li><li><a href="https://doi.org/10.1242/jcs.115.7.1511"><code>DOI:10.1242/jcs.115.7.1511</code></a> <small>Lechtreck et al. 2002 observed SFA-GFP assembling into striated fibers in Chlamydomonas transformants.</small></li></ul></td></tr>
+<tr><td>ciliary rootlet <small>(<a href="http://purl.obolibrary.org/obo/GO_0035253"><code>GO:0035253</code></a>)</small></td><td>originates at</td><td>ciliary basal body <small>(<a href="http://purl.obolibrary.org/obo/GO_0036064"><code>GO:0036064</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0035253"><code>GO:0035253</code></a> <small>GO defines the ciliary rootlet as a cytoskeleton-like structure originating from the ciliary basal body.</small></li></ul></td></tr>
+<tr><td>ciliary rootlet <small>(<a href="http://purl.obolibrary.org/obo/GO_0035253"><code>GO:0035253</code></a>)</small></td><td>supports</td><td>flagellar assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.115.7.1511"><code>DOI:10.1242/jcs.115.7.1511</code></a> <small>Lechtreck et al. 2002 reduced SF-assemblin and observed defects in flagellar assembly.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -74,7 +84,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/ciliary_rootlet.yaml"><code>data/structures/cytoskeleton/ciliary_rootlet.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

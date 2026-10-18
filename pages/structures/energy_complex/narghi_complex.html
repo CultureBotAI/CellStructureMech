@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/energy_complex.html">Energy complex</a> · NarGHI complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>NarGHI complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0044799"><code>GO:0044799</code></a> · Energy complex · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A cytoplasmic membrane-bound NarGHI nitrate reductase complex with iron-sulfur, heme, and molybdenum-bis(molybdopterin guanine dinucleotide) cofactors that serves as a terminal reductase during anaerobic nitrate respiration. <small>[<a href="http://purl.obolibrary.org/obo/GO_0044799"><code>GO:0044799</code></a>]</small></p>
@@ -79,11 +89,11 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-narghi_quinol_nitrate_electron_transfer">NarGHI routes quinol electrons to nitrate <small>(FUNCTION)</small></h3>
 <p>NarI accepts quinol-derived electrons through hemes and passes them through NarH iron-sulfur centers to the NarG Mo-bisMGD site that reduces nitrate to nitrite.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: NarGHI routes quinol electrons to nitrate">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>respiratory nitrate reductase subunit gamma</td><td>receives electrons from</td><td>quinol</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044799"><code>GO:0044799</code></a> <small>GO:0044799 states that NarGHI electrons pass from NarI hemes down a NarH/NarG iron-sulfur chain.</small></li></ul></td></tr>
-<tr><td>nitrate reductase beta subunit</td><td>relays electrons toward</td><td>nitrate reductase alpha subunit</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044799"><code>GO:0044799</code></a> <small>GO:0044799 places NarH between the NarI hemes and the Mo-bisMGD cofactor in NarG.</small></li></ul></td></tr>
-<tr><td>nitrate</td><td>accepts electrons in</td><td>nitrate reductase (quinone) activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0160182"><code>GO:0160182</code></a> <small>GO:0160182 defines the reaction as quinol plus nitrate yielding quinone, water, and nitrite.</small></li></ul></td></tr>
-<tr><td>respiratory nitrate reductase subunit gamma</td><td>contributes to</td><td>nitrate reductase (quinone) activity</td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/12910261"><code>PMID:12910261</code></a> <small>Bertero et al. 2003 resolved the NarI transmembrane electron-entry subunit in the nitrate reductase A structure.</small></li></ul></td></tr>
-<tr><td>NarGHI complex</td><td>enables</td><td>nitrate reductase (quinone) activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044799"><code>GO:0044799</code></a> <small>GO:0044799 defines NarGHI as the terminal reductase in anaerobic nitrate-respiration electron transport.</small></li><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-1974"><code>ComplexPortal:CPX-1974</code></a> <small>Complex Portal CPX-1974 curates the E. coli K-12 NarGHI nitrate reductase A complex.</small></li></ul></td></tr>
+<tr><td>respiratory nitrate reductase subunit gamma <small>(<code>NCBIfam:TIGR00351</code>)</small></td><td>receives electrons from</td><td>quinol</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044799"><code>GO:0044799</code></a> <small>GO:0044799 states that NarGHI electrons pass from NarI hemes down a NarH/NarG iron-sulfur chain.</small></li></ul></td></tr>
+<tr><td>nitrate reductase beta subunit <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR006547"><code>InterPro:IPR006547</code></a>)</small></td><td>relays electrons toward</td><td>nitrate reductase alpha subunit <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR006468"><code>InterPro:IPR006468</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044799"><code>GO:0044799</code></a> <small>GO:0044799 places NarH between the NarI hemes and the Mo-bisMGD cofactor in NarG.</small></li></ul></td></tr>
+<tr><td>nitrate</td><td>accepts electrons in</td><td>nitrate reductase (quinone) activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0160182"><code>GO:0160182</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0160182"><code>GO:0160182</code></a> <small>GO:0160182 defines the reaction as quinol plus nitrate yielding quinone, water, and nitrite.</small></li></ul></td></tr>
+<tr><td>respiratory nitrate reductase subunit gamma <small>(<code>NCBIfam:TIGR00351</code>)</small></td><td>contributes to</td><td>nitrate reductase (quinone) activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0160182"><code>GO:0160182</code></a>)</small></td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/12910261"><code>PMID:12910261</code></a> <small>Bertero et al. 2003 resolved the NarI transmembrane electron-entry subunit in the nitrate reductase A structure.</small></li></ul></td></tr>
+<tr><td>NarGHI complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0044799"><code>GO:0044799</code></a>)</small></td><td>enables</td><td>nitrate reductase (quinone) activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0160182"><code>GO:0160182</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044799"><code>GO:0044799</code></a> <small>GO:0044799 defines NarGHI as the terminal reductase in anaerobic nitrate-respiration electron transport.</small></li><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-1974"><code>ComplexPortal:CPX-1974</code></a> <small>Complex Portal CPX-1974 curates the E. coli K-12 NarGHI nitrate reductase A complex.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -97,7 +107,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/energy_complex/narghi_complex.yaml"><code>data/structures/energy_complex/narghi_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

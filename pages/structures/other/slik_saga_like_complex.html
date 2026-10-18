@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · SLIK (SAGA-like) complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>SLIK (SAGA-like) complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0046695"><code>GO:0046695</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A SAGA-type histone acetyltransferase complex that contains a smaller form of Spt7 (lacking the SPT8 binding region) than the fungal SAGA complex, and consequently lacks Spt8. The complex is involved in the yeast retrograde response pathway, which is important for gene expression changes during mitochondrial dysfunction. <small>[<a href="http://purl.obolibrary.org/obo/GO_0046695"><code>GO:0046695</code></a>]</small></p>
@@ -194,10 +204,10 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-yeast_slik_histone_modification">SLIK supports histone modification activities <small>(FUNCTION)</small></h3>
 <p>In Saccharomyces cerevisiae, the Gcn5-containing HAT module and Ubp8-containing DUB module contribute the histone acetyltransferase and deubiquitinating activities of the SLIK coactivator complex.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: SLIK supports histone modification activities">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Gcn5 SLIK HAT subunit</td><td>contributes to</td><td>SLIK (SAGA-like) complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2021.100671"><code>DOI:10.1016/j.jbc.2021.100671</code></a> <small>Adamus et al. 2021 detected the Ada2/Ada3/Gcn5/Sgf29 HAT module in purified SLIK and showed SAGA and SLIK had indistinguishable HAT activity on an H3 peptide minimal substrate.</small></li></ul></td></tr>
-<tr><td>Ubp8 SLIK DUB subunit</td><td>contributes to</td><td>SLIK (SAGA-like) complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2021.100671"><code>DOI:10.1016/j.jbc.2021.100671</code></a> <small>Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified SLIK and showed SAGA and SLIK had identical deubiquitination activity on a minimal substrate.</small></li></ul></td></tr>
-<tr><td>SLIK (SAGA-like) complex</td><td>supports</td><td>histone acetyltransferase activity</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2021.100671"><code>DOI:10.1016/j.jbc.2021.100671</code></a> <small>Adamus et al. 2021 detected the Ada2/Ada3/Gcn5/Sgf29 HAT module in purified SLIK and showed SAGA and SLIK had indistinguishable HAT activity on an H3 peptide minimal substrate.</small></li></ul></td></tr>
-<tr><td>SLIK (SAGA-like) complex</td><td>supports</td><td>cysteine-type deubiquitinase activity</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2021.100671"><code>DOI:10.1016/j.jbc.2021.100671</code></a> <small>Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified SLIK and showed SAGA and SLIK had identical deubiquitination activity on a minimal substrate.</small></li></ul></td></tr>
+<tr><td>Gcn5 SLIK HAT subunit</td><td>contributes to</td><td>SLIK (SAGA-like) complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0046695"><code>GO:0046695</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2021.100671"><code>DOI:10.1016/j.jbc.2021.100671</code></a> <small>Adamus et al. 2021 detected the Ada2/Ada3/Gcn5/Sgf29 HAT module in purified SLIK and showed SAGA and SLIK had indistinguishable HAT activity on an H3 peptide minimal substrate.</small></li></ul></td></tr>
+<tr><td>Ubp8 SLIK DUB subunit</td><td>contributes to</td><td>SLIK (SAGA-like) complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0046695"><code>GO:0046695</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2021.100671"><code>DOI:10.1016/j.jbc.2021.100671</code></a> <small>Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified SLIK and showed SAGA and SLIK had identical deubiquitination activity on a minimal substrate.</small></li></ul></td></tr>
+<tr><td>SLIK (SAGA-like) complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0046695"><code>GO:0046695</code></a>)</small></td><td>supports</td><td>histone acetyltransferase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004402"><code>GO:0004402</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2021.100671"><code>DOI:10.1016/j.jbc.2021.100671</code></a> <small>Adamus et al. 2021 detected the Ada2/Ada3/Gcn5/Sgf29 HAT module in purified SLIK and showed SAGA and SLIK had indistinguishable HAT activity on an H3 peptide minimal substrate.</small></li></ul></td></tr>
+<tr><td>SLIK (SAGA-like) complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0046695"><code>GO:0046695</code></a>)</small></td><td>supports</td><td>cysteine-type deubiquitinase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004843"><code>GO:0004843</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.jbc.2021.100671"><code>DOI:10.1016/j.jbc.2021.100671</code></a> <small>Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified SLIK and showed SAGA and SLIK had identical deubiquitination activity on a minimal substrate.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -213,7 +223,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/slik_saga_like_complex.yaml"><code>data/structures/other/slik_saga_like_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

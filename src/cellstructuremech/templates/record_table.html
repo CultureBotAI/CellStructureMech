@@ -1,20 +1,28 @@
-<form id="record-filters" class="record-filters" hidden>
-  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
-  <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option>{% for value in records|map(attribute='category')|unique|sort %}<option value="{{ value }}">{{ value | replace('_', ' ') | lower | capitalize }}</option>{% endfor %}</select></div>
-  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option>{% for value in records|map(attribute='kind')|select|unique|sort %}{% if value %}<option value="{{ value }}">{{ value | replace('_', ' ') | lower | capitalize }}</option>{% endif %}{% endfor %}</select></div>
-  <button type="reset">Clear filters</button>
-</form>
-<p id="record-count" role="status" aria-live="polite">{{ records|length }} records</p>
-<p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
-<div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
-<table id="record-table">
-<caption>{{ table_caption | default('Records') }}</caption>
-<thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
-<tbody>
-{% for r in records %}
-<tr data-category="{{ r.category }}" data-kind="{{ r.kind or '' }}" data-synonyms="{{ r.synonyms | default('') }}"><td><a href="{{ root }}{{ r.page }}">{{ r.label }}</a><p class="record-definition">{{ r.definition }}</p></td><td><code>{{ r.identifier }}</code></td><td>{{ r.category | replace('_', ' ') | lower | capitalize }}</td><td>{{ (r.kind or '') | replace('_', ' ') | lower | capitalize }}</td><td>{{ r.status | replace('_', ' ') | lower | capitalize }}</td></tr>
-{% endfor %}
-</tbody>
-</table>
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Structure filters">
+    <form id="record-filters" class="record-filters" hidden>
+      <div><label for="record-query">Search records</label><input id="record-query" name="q" type="search" placeholder="Label, identifier, definition…"></div>
+      <div><label for="record-category">Category</label><select id="record-category" name="category"><option value="">All categories</option>{% for value in records|map(attribute='category')|unique|sort %}<option value="{{ value }}">{{ value | replace('_', ' ') | lower | capitalize }}</option>{% endfor %}</select></div>
+      <div><label for="record-kind">Kind</label><select id="record-kind" name="kind"><option value="">All kinds</option>{% for value in records|map(attribute='kind')|select|unique|sort %}{% if value %}<option value="{{ value }}">{{ value | replace('_', ' ') | lower | capitalize }}</option>{% endif %}{% endfor %}</select></div>
+      <div><label for="record-status">Mapping status</label><select id="record-status" name="status"><option value="">All statuses</option>{% for value in records|map(attribute='status')|select|unique|sort %}{% if value %}<option value="{{ value }}">{{ value | replace('_', ' ') | lower | capitalize }}</option>{% endif %}{% endfor %}</select></div>
+      <div><label for="record-sort">Sort by</label><select id="record-sort" name="sort"><option value="">Label (A–Z)</option><option value="label-desc">Label (Z–A)</option><option value="id-asc">Identifier (A–Z)</option><option value="category-asc">Category</option><option value="kind-asc">Kind</option><option value="status-asc">Mapping status</option></select></div>
+      <button type="reset">Clear filters</button>
+    </form>
+  </aside>
+  <div class="results-main">
+    <p id="record-count" role="status" aria-live="polite">{{ records|length }} records</p>
+    <p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
+    <div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
+    <table id="record-table">
+    <caption>{{ table_caption | default('Records') }}</caption>
+    <thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
+    <tbody>
+    {% for r in records %}
+    <tr data-label="{{ r.label | lower }}" data-id="{{ r.identifier | lower }}" data-category="{{ r.category }}" data-kind="{{ r.kind or '' }}" data-status="{{ r.status or '' }}" data-synonyms="{{ r.synonyms | default('') }}"><td><a href="{{ root }}{{ r.page }}">{{ r.label }}</a><p class="record-definition">{{ r.definition }}</p></td><td><code>{{ r.identifier }}</code></td><td>{{ r.category | replace('_', ' ') | lower | capitalize }}</td><td>{{ (r.kind or '') | replace('_', ' ') | lower | capitalize }}</td><td>{{ r.status | replace('_', ' ') | lower | capitalize }}</td></tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
+  </div>
 </div>
 <script src="{{ root }}record-browser.js" defer></script>

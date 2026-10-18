@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/spore.html">Spore</a> · spore wall</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>spore wall</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031160"><code>GO:0031160</code></a> · Spore · Envelope layer · <span class="status">Proposed</span></p>
 <p class="definition">The specialized envelope lying outside the cell membrane of a spore. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031160"><code>GO:0031160</code></a>]</small></p>
@@ -40,10 +50,10 @@
 <h3 id="causal_graphs-microsporidian_endospore_exospore_wall_layering">Microsporidian endospore and exospore form a protective wall <small>(FUNCTION)</small></h3>
 <p>Microsporidian spores carry a chitin-rich endospore underneath a protein-rich exospore; together those envelope layers form the thick spore wall around the infectious spore.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Microsporidian endospore and exospore form a protective wall">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>microsporidian-type endospore</td><td>is part of</td><td>spore wall</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0090641"><code>GO:0090641</code></a> <small>GO:0090641 places the microsporidian-type endospore as part of GO:0031160 spore wall.</small></li><li><a href="https://doi.org/10.1016/j.ijpara.2005.10.005"><code>DOI:10.1016/j.ijpara.2005.10.005</code></a> <small>Peuvel-Fanget et al. 2006 assigned Encephalitozoon EnP1 and EnP2 proteins to the mature-spore endospore.</small></li></ul></td></tr>
-<tr><td>microsporidian-type exospore</td><td>is part of</td><td>spore wall</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0090642"><code>GO:0090642</code></a> <small>GO:0090642 places the microsporidian-type exospore as part of GO:0031160 spore wall.</small></li><li><a href="https://doi.org/10.1002/pmic.200700584"><code>DOI:10.1002/pmic.200700584</code></a> <small>Wu et al. 2008 localized Nosema bombycis SWP32 to the exospore by immunofluorescence and immunoelectron microscopy.</small></li></ul></td></tr>
-<tr><td>microsporidian-type exospore</td><td>overlies</td><td>microsporidian-type endospore</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0090642"><code>GO:0090642</code></a> <small>GO:0090642 defines the exospore as the outermost microsporidian spore-wall layer above the endospore.</small></li></ul></td></tr>
-<tr><td>spore wall</td><td>provides</td><td>spore wall protection</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/pmic.200700584"><code>DOI:10.1002/pmic.200700584</code></a> <small>Wu et al. 2008 describe the microsporidian spore wall as a thick wall with a glycoprotein-rich exospore and chitin-rich endospore.</small></li><li><a href="https://doi.org/10.1128/IAI.68.4.2268-2275.2000"><code>DOI:10.1128/IAI.68.4.2268-2275.2000</code></a> <small>Bohne et al. 2000 describe the Encephalitozoon cuniculi wall as a rigid spore wall that provides mechanical resistance.</small></li></ul></td></tr>
+<tr><td>microsporidian-type endospore <small>(<a href="http://purl.obolibrary.org/obo/GO_0090641"><code>GO:0090641</code></a>)</small></td><td>is part of</td><td>spore wall <small>(<a href="http://purl.obolibrary.org/obo/GO_0031160"><code>GO:0031160</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0090641"><code>GO:0090641</code></a> <small>GO:0090641 places the microsporidian-type endospore as part of GO:0031160 spore wall.</small></li><li><a href="https://doi.org/10.1016/j.ijpara.2005.10.005"><code>DOI:10.1016/j.ijpara.2005.10.005</code></a> <small>Peuvel-Fanget et al. 2006 assigned Encephalitozoon EnP1 and EnP2 proteins to the mature-spore endospore.</small></li></ul></td></tr>
+<tr><td>microsporidian-type exospore <small>(<a href="http://purl.obolibrary.org/obo/GO_0090642"><code>GO:0090642</code></a>)</small></td><td>is part of</td><td>spore wall <small>(<a href="http://purl.obolibrary.org/obo/GO_0031160"><code>GO:0031160</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0090642"><code>GO:0090642</code></a> <small>GO:0090642 places the microsporidian-type exospore as part of GO:0031160 spore wall.</small></li><li><a href="https://doi.org/10.1002/pmic.200700584"><code>DOI:10.1002/pmic.200700584</code></a> <small>Wu et al. 2008 localized Nosema bombycis SWP32 to the exospore by immunofluorescence and immunoelectron microscopy.</small></li></ul></td></tr>
+<tr><td>microsporidian-type exospore <small>(<a href="http://purl.obolibrary.org/obo/GO_0090642"><code>GO:0090642</code></a>)</small></td><td>overlies</td><td>microsporidian-type endospore <small>(<a href="http://purl.obolibrary.org/obo/GO_0090641"><code>GO:0090641</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0090642"><code>GO:0090642</code></a> <small>GO:0090642 defines the exospore as the outermost microsporidian spore-wall layer above the endospore.</small></li></ul></td></tr>
+<tr><td>spore wall <small>(<a href="http://purl.obolibrary.org/obo/GO_0031160"><code>GO:0031160</code></a>)</small></td><td>provides</td><td>spore wall protection</td><td><ul class="evidence"><li><a href="https://doi.org/10.1002/pmic.200700584"><code>DOI:10.1002/pmic.200700584</code></a> <small>Wu et al. 2008 describe the microsporidian spore wall as a thick wall with a glycoprotein-rich exospore and chitin-rich endospore.</small></li><li><a href="https://doi.org/10.1128/IAI.68.4.2268-2275.2000"><code>DOI:10.1128/IAI.68.4.2268-2275.2000</code></a> <small>Bohne et al. 2000 describe the Encephalitozoon cuniculi wall as a rigid spore wall that provides mechanical resistance.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -59,7 +69,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/spore/spore_wall.yaml"><code>data/structures/spore/spore_wall.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

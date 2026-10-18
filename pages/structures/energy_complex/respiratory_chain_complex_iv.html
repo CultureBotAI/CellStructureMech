@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/energy_complex.html">Energy complex</a> · respiratory chain complex IV</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>respiratory chain complex IV</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0045277"><code>GO:0045277</code></a> · Energy complex · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">Respiratory chain complex IV is a membrane-bound cytochrome c oxidase complex that transfers electrons from reduced cytochrome c to dioxygen and couples oxygen reduction to proton translocation across a respiratory membrane. <small>[<a href="http://purl.obolibrary.org/obo/GO_0045277"><code>GO:0045277</code></a>]</small></p>
@@ -82,13 +92,13 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-complex_iv_cytochrome_c_oxygen_coupling">Complex IV reduces oxygen with cytochrome c electrons <small>(FUNCTION)</small></h3>
 <p>Respiratory complex IV oxidizes reduced cytochrome c, reduces oxygen to water, and contributes to a proton motive force across the respiratory membrane.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Complex IV reduces oxygen with cytochrome c electrons">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>respiratory chain complex IV</td><td>enables</td><td>cytochrome-c oxidase activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0045277"><code>GO:0045277</code></a> <small>GO:0045277 defines complex IV as the respiratory chain cytochrome c oxidase complex.</small></li></ul></td></tr>
-<tr><td>reduced cytochrome c</td><td>donates electrons to</td><td>cytochrome-c oxidase activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a> <small>GO:0004129 defines the reaction with reduced cytochrome c as the electron donor.</small></li></ul></td></tr>
-<tr><td>bacterial cytochrome c oxidase subunit I</td><td>contributes to</td><td>cytochrome-c oxidase activity</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR014241"><code>InterPro:IPR014241</code></a> <small>InterPro IPR014241 describes bacterial cytochrome c oxidase subunit I as the catalytic subunit containing the heme-copper binuclear center.</small></li></ul></td></tr>
-<tr><td>cytochrome c oxidase subunit II</td><td>contributes to</td><td>cytochrome-c oxidase activity</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR014222"><code>InterPro:IPR014222</code></a> <small>InterPro IPR014222 describes the cytochrome c oxidase subunit-II domain that forms the cytochrome-c electron-entry side of complex IV.</small></li></ul></td></tr>
-<tr><td>molecular oxygen</td><td>accepts electrons in</td><td>cytochrome-c oxidase activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a> <small>GO:0004129 records oxygen as the acceptor in the cytochrome-c oxidase reaction.</small></li></ul></td></tr>
-<tr><td>cytochrome-c oxidase activity</td><td>produces</td><td>water</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a> <small>GO:0004129 records water as the product of oxygen reduction by cytochrome-c oxidase.</small></li></ul></td></tr>
-<tr><td>cytochrome-c oxidase activity</td><td>contributes to</td><td>transmembrane proton motive force</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a> <small>GO:0004129 defines cytochrome-c oxidase activity as oxygen reduction coupled to proton movement.</small></li></ul></td></tr>
+<tr><td>respiratory chain complex IV <small>(<a href="http://purl.obolibrary.org/obo/GO_0045277"><code>GO:0045277</code></a>)</small></td><td>enables</td><td>cytochrome-c oxidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0045277"><code>GO:0045277</code></a> <small>GO:0045277 defines complex IV as the respiratory chain cytochrome c oxidase complex.</small></li></ul></td></tr>
+<tr><td>reduced cytochrome c</td><td>donates electrons to</td><td>cytochrome-c oxidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a> <small>GO:0004129 defines the reaction with reduced cytochrome c as the electron donor.</small></li></ul></td></tr>
+<tr><td>bacterial cytochrome c oxidase subunit I <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR014241"><code>InterPro:IPR014241</code></a>)</small></td><td>contributes to</td><td>cytochrome-c oxidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR014241"><code>InterPro:IPR014241</code></a> <small>InterPro IPR014241 describes bacterial cytochrome c oxidase subunit I as the catalytic subunit containing the heme-copper binuclear center.</small></li></ul></td></tr>
+<tr><td>cytochrome c oxidase subunit II</td><td>contributes to</td><td>cytochrome-c oxidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR014222"><code>InterPro:IPR014222</code></a> <small>InterPro IPR014222 describes the cytochrome c oxidase subunit-II domain that forms the cytochrome-c electron-entry side of complex IV.</small></li></ul></td></tr>
+<tr><td>molecular oxygen</td><td>accepts electrons in</td><td>cytochrome-c oxidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a> <small>GO:0004129 records oxygen as the acceptor in the cytochrome-c oxidase reaction.</small></li></ul></td></tr>
+<tr><td>cytochrome-c oxidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a>)</small></td><td>produces</td><td>water</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a> <small>GO:0004129 records water as the product of oxygen reduction by cytochrome-c oxidase.</small></li></ul></td></tr>
+<tr><td>cytochrome-c oxidase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a>)</small></td><td>contributes to</td><td>transmembrane proton motive force</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0004129"><code>GO:0004129</code></a> <small>GO:0004129 defines cytochrome-c oxidase activity as oxygen reduction coupled to proton movement.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -104,7 +114,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/energy_complex/respiratory_chain_complex_iv.yaml"><code>data/structures/energy_complex/respiratory_chain_complex_iv.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

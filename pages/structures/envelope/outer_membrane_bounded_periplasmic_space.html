@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/envelope.html">Envelope</a> · outer membrane-bounded periplasmic space</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>outer membrane-bounded periplasmic space</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a> · Envelope · Subcellular region · <span class="status">Proposed</span></p>
 <p class="definition">The region between the inner (cytoplasmic or plasma) membrane and outer membrane of organisms with two membranes such as Gram negative bacteria. These periplasmic spaces are relatively thick and contain a thin peptidoglycan layer (PGL), also referred to as a thin cell wall. <small>[<a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a>]</small></p>
@@ -46,12 +56,12 @@
 <h3 id="causal_graphs-diderm_periplasm_topology">Inner and outer membranes bound the Gram-negative periplasm <small>(FUNCTION)</small></h3>
 <p>The plasma membrane and cell outer membrane delimit the diderm periplasmic region, which contains the thin peptidoglycan wall and is crossed by LPS cargo during Lpt-mediated outer-membrane assembly.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Inner and outer membranes bound the Gram-negative periplasm">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>plasma membrane</td><td>bounds the inner side of</td><td>outer membrane-bounded periplasmic space</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a> <small>GO:0030288 defines this periplasmic space as the region between the inner and outer membranes.</small></li></ul></td></tr>
-<tr><td>cell outer membrane</td><td>bounds the outer side of</td><td>outer membrane-bounded periplasmic space</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a> <small>GO:0030288 defines this periplasmic space as the region enclosed by the inner and outer membranes.</small></li></ul></td></tr>
-<tr><td>Gram-negative-bacterium-type cell wall</td><td>resides in</td><td>outer membrane-bounded periplasmic space</td><td><ul class="evidence"><li><a href="https://doi.org/10.1101/cshperspect.a000414"><code>DOI:10.1101/cshperspect.a000414</code></a> <small>Silhavy, Kahne and Walker 2010 describe the Gram-negative envelope as a thin peptidoglycan wall surrounded by an outer membrane.</small></li></ul></td></tr>
-<tr><td>lipopolysaccharide</td><td>moves across</td><td>outer membrane-bounded periplasmic space</td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.R117.802512"><code>DOI:10.1074/jbc.R117.802512</code></a> <small>Sperandeo, Martorana and Polissi 2017 review LPS transport across the Gram-negative envelope and through the periplasm.</small></li></ul></td></tr>
-<tr><td>Lpt lipopolysaccharide transport machinery</td><td>delivers</td><td>lipopolysaccharide</td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.R117.802512"><code>DOI:10.1074/jbc.R117.802512</code></a> <small>Sperandeo, Martorana and Polissi 2017 review the Lpt pathway as the Gram-negative LPS transport system.</small></li></ul></td></tr>
-<tr><td>lipopolysaccharide</td><td>is inserted into</td><td>cell outer membrane</td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.R117.802512"><code>DOI:10.1074/jbc.R117.802512</code></a> <small>Sperandeo, Martorana and Polissi 2017 review LPS delivery to the outer membrane by the Lpt pathway.</small></li></ul></td></tr>
+<tr><td>plasma membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005886"><code>GO:0005886</code></a>)</small></td><td>bounds the inner side of</td><td>outer membrane-bounded periplasmic space <small>(<a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a> <small>GO:0030288 defines this periplasmic space as the region between the inner and outer membranes.</small></li></ul></td></tr>
+<tr><td>cell outer membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0009279"><code>GO:0009279</code></a>)</small></td><td>bounds the outer side of</td><td>outer membrane-bounded periplasmic space <small>(<a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a> <small>GO:0030288 defines this periplasmic space as the region enclosed by the inner and outer membranes.</small></li></ul></td></tr>
+<tr><td>Gram-negative-bacterium-type cell wall <small>(<a href="http://purl.obolibrary.org/obo/GO_0009276"><code>GO:0009276</code></a>)</small></td><td>resides in</td><td>outer membrane-bounded periplasmic space <small>(<a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1101/cshperspect.a000414"><code>DOI:10.1101/cshperspect.a000414</code></a> <small>Silhavy, Kahne and Walker 2010 describe the Gram-negative envelope as a thin peptidoglycan wall surrounded by an outer membrane.</small></li></ul></td></tr>
+<tr><td>lipopolysaccharide <small>(<a href="http://purl.obolibrary.org/obo/CHEBI_16412"><code>CHEBI:16412</code></a>)</small></td><td>moves across</td><td>outer membrane-bounded periplasmic space <small>(<a href="http://purl.obolibrary.org/obo/GO_0030288"><code>GO:0030288</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.R117.802512"><code>DOI:10.1074/jbc.R117.802512</code></a> <small>Sperandeo, Martorana and Polissi 2017 review LPS transport across the Gram-negative envelope and through the periplasm.</small></li></ul></td></tr>
+<tr><td>Lpt lipopolysaccharide transport machinery</td><td>delivers</td><td>lipopolysaccharide <small>(<a href="http://purl.obolibrary.org/obo/CHEBI_16412"><code>CHEBI:16412</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.R117.802512"><code>DOI:10.1074/jbc.R117.802512</code></a> <small>Sperandeo, Martorana and Polissi 2017 review the Lpt pathway as the Gram-negative LPS transport system.</small></li></ul></td></tr>
+<tr><td>lipopolysaccharide <small>(<a href="http://purl.obolibrary.org/obo/CHEBI_16412"><code>CHEBI:16412</code></a>)</small></td><td>is inserted into</td><td>cell outer membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0009279"><code>GO:0009279</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.R117.802512"><code>DOI:10.1074/jbc.R117.802512</code></a> <small>Sperandeo, Martorana and Polissi 2017 review LPS delivery to the outer membrane by the Lpt pathway.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -67,7 +77,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml"><code>data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

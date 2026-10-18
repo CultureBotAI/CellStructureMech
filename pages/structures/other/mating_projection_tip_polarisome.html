@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · mating projection tip polarisome</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>mating projection tip polarisome</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031563"><code>GO:0031563</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">Protein complex that has a role in determining cell polarity, found at the tip of the mating projection in unicellular fungi exposed to mating pheromone. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031563"><code>GO:0031563</code></a>]</small></p>
@@ -76,9 +86,9 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-shmoo_tip_polarisome_topology">Shmoo-tip polarisome topology <small>(FUNCTION)</small></h3>
 <p>Spa2/Pea2 scaffold and Bni1 formin proteins act in a polarisome at the mating-projection tip during pheromone-induced polarized growth.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Shmoo-tip polarisome topology">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Spa2/Pea2 polarisome scaffold</td><td>localizes to</td><td>mating projection tip polarisome</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.135.3.725"><code>DOI:10.1083/jcb.135.3.725</code></a> <small>Valtz and Herskowitz 1996 localized Pea2 and Spa2 to polarized-growth sites in budding and mating cells.</small></li><li><a href="https://doi.org/10.1083/jcb.200307065"><code>DOI:10.1083/jcb.200307065</code></a> <small>Bidlingmaier and Snyder 2004 treated Spa2 and Pea2 as polarisome components during mating-projection formation.</small></li></ul></td></tr>
-<tr><td>Bni1 formin</td><td>supports</td><td>mating projection formation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200307065"><code>DOI:10.1083/jcb.200307065</code></a> <small>Bidlingmaier and Snyder 2004 showed that Bni1, Spa2, and Pea2 regulate mating-projection initiation timing.</small></li></ul></td></tr>
-<tr><td>mating projection tip polarisome</td><td>localizes to</td><td>mating projection tip</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031563"><code>GO:0031563</code></a> <small>GO:0031563 defines the polarisome as localized to the mating projection tip.</small></li></ul></td></tr>
+<tr><td>Spa2/Pea2 polarisome scaffold</td><td>localizes to</td><td>mating projection tip polarisome <small>(<a href="http://purl.obolibrary.org/obo/GO_0031563"><code>GO:0031563</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.135.3.725"><code>DOI:10.1083/jcb.135.3.725</code></a> <small>Valtz and Herskowitz 1996 localized Pea2 and Spa2 to polarized-growth sites in budding and mating cells.</small></li><li><a href="https://doi.org/10.1083/jcb.200307065"><code>DOI:10.1083/jcb.200307065</code></a> <small>Bidlingmaier and Snyder 2004 treated Spa2 and Pea2 as polarisome components during mating-projection formation.</small></li></ul></td></tr>
+<tr><td>Bni1 formin</td><td>supports</td><td>mating projection formation <small>(<a href="http://purl.obolibrary.org/obo/GO_0031382"><code>GO:0031382</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.200307065"><code>DOI:10.1083/jcb.200307065</code></a> <small>Bidlingmaier and Snyder 2004 showed that Bni1, Spa2, and Pea2 regulate mating-projection initiation timing.</small></li></ul></td></tr>
+<tr><td>mating projection tip polarisome <small>(<a href="http://purl.obolibrary.org/obo/GO_0031563"><code>GO:0031563</code></a>)</small></td><td>localizes to</td><td>mating projection tip <small>(<a href="http://purl.obolibrary.org/obo/GO_0043332"><code>GO:0043332</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031563"><code>GO:0031563</code></a> <small>GO:0031563 defines the polarisome as localized to the mating projection tip.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -94,7 +104,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mating_projection_tip_polarisome.yaml"><code>data/structures/other/mating_projection_tip_polarisome.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

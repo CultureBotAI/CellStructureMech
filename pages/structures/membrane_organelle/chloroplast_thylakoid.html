@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · chloroplast thylakoid</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>chloroplast thylakoid</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009534"><code>GO:0009534</code></a> · Membrane organelle · Other · <span class="status">Proposed</span></p>
 <p class="definition">Sac-like membranous structures in a chloroplast combined into stacks, or grana, and present singly in the stroma as stroma thylakoids or frets that interconnect grana. <small>[<a href="http://purl.obolibrary.org/obo/GO_0009534"><code>GO:0009534</code></a>]</small></p>
@@ -46,9 +56,9 @@
 <h3 id="causal_graphs-chloroplast_thylakoid_topology">Chloroplast thylakoid topology <small>(FUNCTION)</small></h3>
 <p>The chloroplast thylakoid is an internal chloroplast compartment embedded in the stroma and bounded by a pigmented membrane that encloses the thylakoid lumen.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Chloroplast thylakoid topology">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>chloroplast thylakoid</td><td>is embedded in</td><td>chloroplast stroma</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009507"><code>GO:0009507</code></a> <small>GO:0009507 defines chloroplasts as chlorophyll-containing plastids with thylakoids embedded in a stroma.</small></li></ul></td></tr>
-<tr><td>chloroplast thylakoid membrane</td><td>encloses</td><td>chloroplast thylakoid lumen</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009543"><code>GO:0009543</code></a> <small>GO:0009543 identifies the chloroplast thylakoid lumen enclosed by thylakoid membranes.</small></li><li><a href="https://www.uniprot.org/locations/SL-0057"><code>uniprot.location:SL-0057</code></a> — Chloroplast thylakoid lumen <small>UniProt SL-0057 identifies the chloroplast thylakoid lumen as a child compartment of the chloroplast thylakoid.</small></li></ul></td></tr>
-<tr><td>chloroplast thylakoid</td><td>supports</td><td>photosynthetic electron transport chain</td><td><ul class="evidence"><li><a href="https://www.uniprot.org/locations/SL-0056"><code>uniprot.location:SL-0056</code></a> — Chloroplast thylakoid <small>UniProt SL-0056 describes chloroplast thylakoids as carrying out the light reactions of photosynthesis.</small></li></ul></td></tr>
+<tr><td>chloroplast thylakoid <small>(<a href="http://purl.obolibrary.org/obo/GO_0009534"><code>GO:0009534</code></a>)</small></td><td>is embedded in</td><td>chloroplast stroma <small>(<a href="http://purl.obolibrary.org/obo/GO_0009570"><code>GO:0009570</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009507"><code>GO:0009507</code></a> <small>GO:0009507 defines chloroplasts as chlorophyll-containing plastids with thylakoids embedded in a stroma.</small></li></ul></td></tr>
+<tr><td>chloroplast thylakoid membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0009535"><code>GO:0009535</code></a>)</small></td><td>encloses</td><td>chloroplast thylakoid lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0009543"><code>GO:0009543</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009543"><code>GO:0009543</code></a> <small>GO:0009543 identifies the chloroplast thylakoid lumen enclosed by thylakoid membranes.</small></li><li><a href="https://www.uniprot.org/locations/SL-0057"><code>uniprot.location:SL-0057</code></a> — Chloroplast thylakoid lumen <small>UniProt SL-0057 identifies the chloroplast thylakoid lumen as a child compartment of the chloroplast thylakoid.</small></li></ul></td></tr>
+<tr><td>chloroplast thylakoid <small>(<a href="http://purl.obolibrary.org/obo/GO_0009534"><code>GO:0009534</code></a>)</small></td><td>supports</td><td>photosynthetic electron transport chain <small>(<a href="http://purl.obolibrary.org/obo/GO_0009767"><code>GO:0009767</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.uniprot.org/locations/SL-0056"><code>uniprot.location:SL-0056</code></a> — Chloroplast thylakoid <small>UniProt SL-0056 describes chloroplast thylakoids as carrying out the light reactions of photosynthesis.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -64,7 +74,7 @@
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/chloroplast_thylakoid.yaml"><code>data/structures/membrane_organelle/chloroplast_thylakoid.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

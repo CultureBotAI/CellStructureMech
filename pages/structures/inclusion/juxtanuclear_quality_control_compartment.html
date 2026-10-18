@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/inclusion.html">Inclusion</a> · juxtanuclear quality control compartment</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>juxtanuclear quality control compartment</h1>
 <p class="meta"><code>cellstructuremech:juxtanuclear_quality_control_compartment</code> · Inclusion · Inclusion body · <span class="status">Proposed</span></p>
 <p class="definition">A cytoplasmic, perinuclear protein-quality-control inclusion characterized in budding yeast, formed by congregation of misfolded-protein deposits near the nuclear envelope and distinct from the intranuclear quality control compartment. <small>[<a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a>]</small></p>
@@ -64,17 +74,17 @@ family; these are the specific entries behind it.</small></p>
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Heat shift to 37 C</td><td>induces</td><td>Temperature-sensitive misfolded reporter cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S1 and Figure 1.</small></li></ul></td></tr>
 <tr><td>Temperature-sensitive misfolded reporter cargo</td><td>accumulates in</td><td>Cytoplasmic Q-body deposits</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S5 and Figure 4d-f.</small></li></ul></td></tr>
-<tr><td>Cytoplasmic Q-body deposits</td><td>congregate into</td><td>juxtanuclear quality control compartment</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S5 and Figure 4d describe the cryo-SXT architecture.</small></li></ul></td></tr>
+<tr><td>Cytoplasmic Q-body deposits</td><td>congregate into</td><td>juxtanuclear quality control compartment <small>(<code>cellstructuremech:juxtanuclear_quality_control_compartment</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S5 and Figure 4d describe the cryo-SXT architecture.</small></li></ul></td></tr>
 <tr><td>Temperature-sensitive misfolded reporter cargo</td><td>can accumulate in</td><td>Peripheral reporter foci</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmolb.2024.1427542"><code>DOI:10.3389/fmolb.2024.1427542</code></a> <small>Results 3.4 and Figure 4 distinguish reporter locations across sorting mutants.</small></li></ul></td></tr>
-<tr><td>Combined SSA1 and SSA2 deletion</td><td>impairs</td><td>juxtanuclear quality control compartment</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmolb.2024.1427542"><code>DOI:10.3389/fmolb.2024.1427542</code></a> <small>Results 3.2 and Figure 2.</small></li></ul></td></tr>
-<tr><td>BTN2 deletion</td><td>impairs</td><td>juxtanuclear quality control compartment</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmolb.2024.1427542"><code>DOI:10.3389/fmolb.2024.1427542</code></a> <small>Results 3.4 and Figure 4.</small></li></ul></td></tr>
+<tr><td>Combined SSA1 and SSA2 deletion</td><td>impairs</td><td>juxtanuclear quality control compartment <small>(<code>cellstructuremech:juxtanuclear_quality_control_compartment</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmolb.2024.1427542"><code>DOI:10.3389/fmolb.2024.1427542</code></a> <small>Results 3.2 and Figure 2.</small></li></ul></td></tr>
+<tr><td>BTN2 deletion</td><td>impairs</td><td>juxtanuclear quality control compartment <small>(<code>cellstructuremech:juxtanuclear_quality_control_compartment</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmolb.2024.1427542"><code>DOI:10.3389/fmolb.2024.1427542</code></a> <small>Results 3.4 and Figure 4.</small></li></ul></td></tr>
 <tr><td>HSP42 deletion</td><td>reduces</td><td>Peripheral reporter foci</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmolb.2024.1427542"><code>DOI:10.3389/fmolb.2024.1427542</code></a> <small>Results 3.4 and Figure 4; this is not an obligatory Hsp42 requirement for JUNQ formation.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 <h3 id="causal_graphs-perinuclear_positioning">Conditional positioning and INQ/JUNQ convergence <small>(FUNCTION)</small></h3>
 <p>Coexpressed inclusions remain separated by the nuclear envelope while converging spatially.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Conditional positioning and INQ/JUNQ convergence">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>juxtanuclear quality control compartment</td><td>participates in</td><td>Spatial INQ/JUNQ convergence across the nuclear envelope</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S3 and Figure 3a-c.</small></li></ul></td></tr>
+<tr><td>juxtanuclear quality control compartment <small>(<code>cellstructuremech:juxtanuclear_quality_control_compartment</code>)</small></td><td>participates in</td><td>Spatial INQ/JUNQ convergence across the nuclear envelope</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S3 and Figure 3a-c.</small></li></ul></td></tr>
 <tr><td>CHM7 deletion</td><td>impairs</td><td>Spatial INQ/JUNQ convergence across the nuclear envelope</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S7 and Figure 6b.</small></li></ul></td></tr>
 <tr><td>VPS23 deletion</td><td>disrupts</td><td>Spatial INQ/JUNQ convergence across the nuclear envelope</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S7, Figure 6c and described Extended Data Figure 6b; extended-data pixels not inspected.</small></li></ul></td></tr>
 <tr><td>VPS34 deletion</td><td>disrupts</td><td>Spatial INQ/JUNQ convergence across the nuclear envelope</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S7, Figure 6c and described Extended Data Figure 6b.</small></li></ul></td></tr>
@@ -85,7 +95,7 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-conditional_turnover">Perturbations of JUNQ-associated cargo clearance <small>(DISASSEMBLY)</small></h3>
 <p>Separate reporter assays support conditional vacuolar clearance and persistence phenotypes.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Perturbations of JUNQ-associated cargo clearance">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>juxtanuclear quality control compartment</td><td>can undergo</td><td>Clearance of JUNQ-associated reporter cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S8 and Figure 7d,f-g. NES-Keima imaging samples different fields because of photobleaching; the panel-d caption contains an NLS/NES inconsistency.</small></li></ul></td></tr>
+<tr><td>juxtanuclear quality control compartment <small>(<code>cellstructuremech:juxtanuclear_quality_control_compartment</code>)</small></td><td>can undergo</td><td>Clearance of JUNQ-associated reporter cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S8 and Figure 7d,f-g. NES-Keima imaging samples different fields because of photobleaching; the panel-d caption contains an NLS/NES inconsistency.</small></li></ul></td></tr>
 <tr><td>NVJ1 deletion</td><td>impairs</td><td>Clearance of JUNQ-associated reporter cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S6 and Figure 5h, right-hand NES-LuciTs quantification.</small></li></ul></td></tr>
 <tr><td>VAC8 deletion</td><td>impairs</td><td>Clearance of JUNQ-associated reporter cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S6 and Figure 5h, right-hand NES-LuciTs quantification.</small></li></ul></td></tr>
 <tr><td>VPS4 deletion</td><td>impairs</td><td>Clearance of JUNQ-associated reporter cargo</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41556-023-01128-6"><code>DOI:10.1038/s41556-023-01128-6</code></a> <small>Results S7 and Figure 6e quantify NES- as well as NLS-LuciTs puncta.</small></li></ul></td></tr>
@@ -107,7 +117,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/inclusion/juxtanuclear_quality_control_compartment.yaml"><code>data/structures/inclusion/juxtanuclear_quality_control_compartment.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

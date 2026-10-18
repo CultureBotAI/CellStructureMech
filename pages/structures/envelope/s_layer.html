@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/envelope.html">Envelope</a> · S-layer</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>S-layer</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0030115"><code>GO:0030115</code></a> · Envelope · Envelope layer · <span class="status">Proposed</span></p>
 <p class="definition">A paracrystalline monomolecular array of one or more (glyco)protein species that self-assemble on the outermost surface of the cell envelope, with oblique, square or hexagonal lattice symmetry. S-layers are common in Archaea, where they are often the sole wall component, and widespread but patchily distributed in Bacteria. <small>[<a href="https://doi.org/10.1111/1574-6976.12063"><code>DOI:10.1111/1574-6976.12063</code></a>]</small></p>
@@ -70,18 +80,18 @@ family; these are the specific entries behind it.</small></p>
 <ul><li>CONFERS <a href="https://culturebotai.github.io/TraitMech/pages/traits/morphology/s_layer.html"><code>traitmech:000064</code></a> — S-layer S-layer<ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro3213"><code>DOI:10.1038/nrmicro3213</code></a> <small>Fagan and Fairweather 2014 define and review the bacterial S-layer phenotype.</small></li></ul></li></ul>
 
 <h2>Physical properties</h2>
-<ul><li>THICKNESS: 5-10 <code>UO:0000018</code> (General bacterial S-layer thickness reported by Sleytr et al. 2014; not a universal archaeal range.) [<a href="https://doi.org/10.1111/1574-6976.12063"><code>DOI:10.1111/1574-6976.12063</code></a>]</li><li>MOLECULAR_MASS: 40-170 kDa (General range for individual S-layer protein/glycoprotein species reported by Sleytr et al. 2014, not the whole lattice mass.) [<a href="https://doi.org/10.1111/1574-6976.12063"><code>DOI:10.1111/1574-6976.12063</code></a>]</li></ul>
+<ul><li>THICKNESS: 5-10 <a href="http://purl.obolibrary.org/obo/UO_0000018"><code>UO:0000018</code></a> (General bacterial S-layer thickness reported by Sleytr et al. 2014; not a universal archaeal range.) [<a href="https://doi.org/10.1111/1574-6976.12063"><code>DOI:10.1111/1574-6976.12063</code></a>]</li><li>MOLECULAR_MASS: 40-170 kDa (General range for individual S-layer protein/glycoprotein species reported by Sleytr et al. 2014, not the whole lattice mass.) [<a href="https://doi.org/10.1111/1574-6976.12063"><code>DOI:10.1111/1574-6976.12063</code></a>]</li></ul>
 
 <h2>Mechanism graphs</h2>
 <h3 id="causal_graphs-s_layer_self_assembly">S-layer proteins self-assemble into a surface lattice <small>(ASSEMBLY)</small></h3>
 <p>Secreted S-layer proteins self-assemble into a crystalline two-dimensional lattice that coats the outer face of the cell. In many Gram-positive S-layers, SLH domains within the lattice-forming protein bind secondary cell-wall polymers to retain the lattice on the peptidoglycan-linked envelope surface.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: S-layer proteins self-assemble into a surface lattice">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>S-layer homology domain</td><td>is part of</td><td>S-layer (glyco)protein subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro3213"><code>DOI:10.1038/nrmicro3213</code></a> <small>Fagan and Fairweather 2014 review SLH-domain-mediated anchoring of bacterial S-layer proteins.</small></li></ul></td></tr>
-<tr><td>S-layer (glyco)protein subunit</td><td>self-assembles into</td><td>S-layer</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/1574-6976.12063"><code>DOI:10.1111/1574-6976.12063</code></a> <small>Sleytr et al. 2014 review S-layer self-assembly and lattice symmetry.</small></li></ul></td></tr>
-<tr><td>S-layer</td><td>coats</td><td>cell envelope outer surface</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro3213"><code>DOI:10.1038/nrmicro3213</code></a> <small>Fagan and Fairweather 2014 describe bacterial S-layers as cell-surface coats.</small></li></ul></td></tr>
+<tr><td>S-layer (glyco)protein subunit</td><td>self-assembles into</td><td>S-layer <small>(<a href="http://purl.obolibrary.org/obo/GO_0030115"><code>GO:0030115</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/1574-6976.12063"><code>DOI:10.1111/1574-6976.12063</code></a> <small>Sleytr et al. 2014 review S-layer self-assembly and lattice symmetry.</small></li></ul></td></tr>
+<tr><td>S-layer <small>(<a href="http://purl.obolibrary.org/obo/GO_0030115"><code>GO:0030115</code></a>)</small></td><td>coats</td><td>cell envelope outer surface</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro3213"><code>DOI:10.1038/nrmicro3213</code></a> <small>Fagan and Fairweather 2014 describe bacterial S-layers as cell-surface coats.</small></li></ul></td></tr>
 <tr><td>secondary cell-wall polymer</td><td>localizes to</td><td>cell envelope outer surface</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/1574-6976.12063"><code>DOI:10.1111/1574-6976.12063</code></a> <small>Sleytr et al. 2014 review the peptidoglycan-linked secondary cell-wall polymers that anchor S-layer proteins in many Gram-positive bacteria.</small></li></ul></td></tr>
 <tr><td>S-layer homology domain</td><td>binds</td><td>secondary cell-wall polymer</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro3213"><code>DOI:10.1038/nrmicro3213</code></a> <small>Fagan and Fairweather 2014 describe the interaction between SLH domains and pyruvylated secondary cell-wall polymers.</small></li></ul></td></tr>
-<tr><td>secondary cell-wall polymer</td><td>anchors</td><td>S-layer</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro3213"><code>DOI:10.1038/nrmicro3213</code></a> <small>Fagan and Fairweather 2014 review non-covalent S-layer anchoring through SLH domains and secondary cell-wall polymers.</small></li></ul></td></tr>
+<tr><td>secondary cell-wall polymer</td><td>anchors</td><td>S-layer <small>(<a href="http://purl.obolibrary.org/obo/GO_0030115"><code>GO:0030115</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrmicro3213"><code>DOI:10.1038/nrmicro3213</code></a> <small>Fagan and Fairweather 2014 review non-covalent S-layer anchoring through SLH domains and secondary cell-wall polymers.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -95,7 +105,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/envelope/s_layer.yaml"><code>data/structures/envelope/s_layer.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block mainclass %}wide{% endblock %}
 {% block title %}Text embedding map · CellStructureMech{% endblock %}
 {% block content %}
 <h1>Text embedding map</h1>
@@ -7,21 +8,34 @@ definition, canonical components, functions, taxonomic scope, and physical-prope
 <p class="meta">The committed {{ model }} vectors are projected with PCA after unit normalization.
 Two-dimensional distance is lossy; use cosine neighbours for the full-vector comparison.</p>
 
-<div class="map-controls">
-  <label for="map-query">Find a structure</label>
-  <input id="map-query" type="search" placeholder="Name or identifier">
-  <label for="map-category">Category</label>
-  <select id="map-category"><option value="">All categories</option></select>
-  <label for="map-record">Matching structures</label>
-  <select id="map-record"><option value="">Select a structure</option></select>
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Text map filters">
+    <div class="map-controls">
+      <div class="facet-group">
+        <label class="facet-title" for="map-query">Find a structure</label>
+        <input id="map-query" type="search" placeholder="Name or identifier">
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="map-category">Category</label>
+        <select id="map-category"><option value="">All categories</option></select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="map-record">Matching structures</label>
+        <select id="map-record"><option value="">Select a structure</option></select>
+      </div>
+    </div>
+    <p id="map-count" class="meta" role="status"></p>
+    <p class="facet-title">Category legend</p>
+    <ul id="map-legend" class="map-legend" aria-label="Structure category colors"></ul>
+  </aside>
+  <div class="results-main">
+    <div id="embedding-map" class="embedding-map" aria-label="Scatter plot of structure text embeddings"></div>
+    <section id="map-details" class="map-details" aria-live="polite">
+      <h2>Select a structure</h2>
+      <p>Choose a point or find a structure in the sidebar to inspect its nearest semantic neighbours. The selected point is labelled. <a href="browse.html">Browse all records as a table</a>.</p>
+    </section>
+  </div>
 </div>
-<p id="map-count" role="status"></p>
-<ul id="map-legend" class="map-legend" aria-label="Structure category colors"></ul>
-<div id="embedding-map" class="embedding-map" aria-label="Scatter plot of structure text embeddings"></div>
-<section id="map-details" class="map-details" aria-live="polite">
-  <h2>Select a structure</h2>
-  <p>Choose a point or find a structure above to inspect its nearest semantic neighbours. The selected point is labelled. <a href="browse.html">Browse all records as a table</a>.</p>
-</section>
 
 <script>
 (() => {
@@ -117,6 +131,11 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
       svg.setAttribute("role", "img");
       svg.setAttribute("aria-label", "PCA projection of structure text embeddings");
       const term = query.value.trim().toLowerCase();
+      if (window.history && window.history.replaceState) {
+        const url = new URL(window.location.href);
+        if (term) url.searchParams.set("q", query.value.trim()); else url.searchParams.delete("q");
+        window.history.replaceState(null, "", url);
+      }
       const matches = map.records.filter(r => (!select.value || r.category === select.value) &&
         (r.label + " " + r.identifier).toLowerCase().includes(term));
       count.textContent = `${matches.length} of ${map.records.length} structures shown`;
@@ -154,6 +173,10 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
       const record = map.records.find(item => item.identifier === recordSelect.value);
       if (record) show(record);
     });
+    if (window.location && window.location.search) {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("q")) query.value = params.get("q");
+    }
     draw();
   }).catch(error => {
     plot.textContent = `Could not load embedding artifacts: ${error.message}`;

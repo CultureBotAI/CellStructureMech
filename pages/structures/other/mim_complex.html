@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · MIM complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>MIM complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0140595"><code>GO:0140595</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A protein complex located in the mitochondrial outer membrane that functions as an insertase, mediating the insertion of alpha-helical proteins from the cytosol into the outer membrane. Client proteins are usually single- and multi-span proteins that include components of the TOM complex. <small>[<a href="http://purl.obolibrary.org/obo/GO_0140595"><code>GO:0140595</code></a>]</small></p>
@@ -70,11 +80,11 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-yeast_mim_import_and_partner_populations">MIM-dependent import and distinct TOM/SAM-associated populations <small>(FUNCTION)</small></h3>
 <p>MIM promotes selected precursor-import and assembly reactions and associates separately with TOM and SAM.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MIM-dependent import and distinct TOM/SAM-associated populations">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>MIM complex</td><td>associates with</td><td>mitochondrial outer membrane translocase complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2020.107567"><code>DOI:10.1016/j.celrep.2020.107567</code></a> <small>Figure 3A: Tom20-His affinity purification and BN-PAGE recover a TOM-MIM population distinct from free MIM and SAM-associated MIM.</small></li></ul></td></tr>
-<tr><td>MIM complex</td><td>associates with</td><td>SAM complex</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2020.107567"><code>DOI:10.1016/j.celrep.2020.107567</code></a> <small>Figure 3A: Sam35-His affinity purification and BN-PAGE recover SAM-associated MIM. Apparent native-gel size does not determine stoichiometry.</small></li></ul></td></tr>
-<tr><td>MIM complex</td><td>promotes</td><td>Import of tested signal-anchored precursors</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2020.107567"><code>DOI:10.1016/j.celrep.2020.107567</code></a> <small>Figure 1: deletion and mim1-23 import assays plus substrate co-purification distinguish MIM involvement from secondary loss of TOM/SAM. The Mcr1 claim concerns the membrane form, not the soluble intermembrane-space isoform.</small></li></ul></td></tr>
-<tr><td>MIM complex</td><td>promotes</td><td>Import of tested tail-anchored precursors</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2020.107567"><code>DOI:10.1016/j.celrep.2020.107567</code></a> <small>Figure 2: import is impaired in mim1-deletion and mim1-23 mitochondria; imported His-Fis1 co-purifies Mim1 and Mim2. MIM assistance is not equivalent to absolute dependence.</small></li></ul></td></tr>
-<tr><td>MIM complex</td><td>promotes formation of</td><td>SAM-associated Tom6 assembly intermediate</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2020.107567"><code>DOI:10.1016/j.celrep.2020.107567</code></a> <small>Figure 4C-D: mim1 perturbations reduce the intermediate, Sam35-HA antibody shift identifies SAM association, and a Sam50 POTRA deletion enhances both MIM-SAM association and Tom6 intermediate formation. Direct molecular handoff is inferred rather than visualized.</small></li></ul></td></tr>
+<tr><td>MIM complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0140595"><code>GO:0140595</code></a>)</small></td><td>associates with</td><td>mitochondrial outer membrane translocase complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0005742"><code>GO:0005742</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2020.107567"><code>DOI:10.1016/j.celrep.2020.107567</code></a> <small>Figure 3A: Tom20-His affinity purification and BN-PAGE recover a TOM-MIM population distinct from free MIM and SAM-associated MIM.</small></li></ul></td></tr>
+<tr><td>MIM complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0140595"><code>GO:0140595</code></a>)</small></td><td>associates with</td><td>SAM complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2020.107567"><code>DOI:10.1016/j.celrep.2020.107567</code></a> <small>Figure 3A: Sam35-His affinity purification and BN-PAGE recover SAM-associated MIM. Apparent native-gel size does not determine stoichiometry.</small></li></ul></td></tr>
+<tr><td>MIM complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0140595"><code>GO:0140595</code></a>)</small></td><td>promotes</td><td>Import of tested signal-anchored precursors</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2020.107567"><code>DOI:10.1016/j.celrep.2020.107567</code></a> <small>Figure 1: deletion and mim1-23 import assays plus substrate co-purification distinguish MIM involvement from secondary loss of TOM/SAM. The Mcr1 claim concerns the membrane form, not the soluble intermembrane-space isoform.</small></li></ul></td></tr>
+<tr><td>MIM complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0140595"><code>GO:0140595</code></a>)</small></td><td>promotes</td><td>Import of tested tail-anchored precursors</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2020.107567"><code>DOI:10.1016/j.celrep.2020.107567</code></a> <small>Figure 2: import is impaired in mim1-deletion and mim1-23 mitochondria; imported His-Fis1 co-purifies Mim1 and Mim2. MIM assistance is not equivalent to absolute dependence.</small></li></ul></td></tr>
+<tr><td>MIM complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0140595"><code>GO:0140595</code></a>)</small></td><td>promotes formation of</td><td>SAM-associated Tom6 assembly intermediate</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.celrep.2020.107567"><code>DOI:10.1016/j.celrep.2020.107567</code></a> <small>Figure 4C-D: mim1 perturbations reduce the intermediate, Sam35-HA antibody shift identifies SAM association, and a Sam50 POTRA deletion enhances both MIM-SAM association and Tom6 intermediate formation. Direct molecular handoff is inferred rather than visualized.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -90,7 +100,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mim_complex.yaml"><code>data/structures/other/mim_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

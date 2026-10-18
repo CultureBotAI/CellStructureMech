@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · radial spoke</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>radial spoke</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0001534"><code>GO:0001534</code></a> · Cytoskeleton · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A ciliary and flagellar axonemal protein complex with a stalk attached to each outer-doublet A-tubule and a head that projects toward the central-pair microtubule sheath. <small>[<a href="http://purl.obolibrary.org/obo/GO_0001534"><code>GO:0001534</code></a>]</small></p>
@@ -90,13 +100,13 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-chlamydomonas_radial_spoke_transduction">Head, neck and stalk organize the radial spoke <small>(FUNCTION)</small></h3>
 <p>In Chlamydomonas flagella, the radial-spoke base binds an outer-doublet A-tubule, the stalk connects the base to the neck, and the neck connects to the head, which projects toward the central pair to help regulate axonemal beating.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Head, neck and stalk organize the radial spoke">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>radial spoke head</td><td>is part of</td><td>radial spoke</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001535"><code>GO:0001535</code></a> <small>GO places the radial spoke head as part of the radial spoke.</small></li></ul></td></tr>
-<tr><td>radial spoke neck</td><td>connects to</td><td>radial spoke head</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0120343"><code>GO:0120343</code></a> <small>GO defines the radial spoke neck by its connection between the stalk and head.</small></li></ul></td></tr>
-<tr><td>radial spoke neck</td><td>connects to</td><td>radial spoke stalk</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0120343"><code>GO:0120343</code></a> <small>GO defines the radial spoke neck by its connection between the stalk and head.</small></li></ul></td></tr>
-<tr><td>radial spoke stalk</td><td>connects to</td><td>radial spoke base</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001536"><code>GO:0001536</code></a> <small>GO defines the stalk as the elongated portion between the A-tubule-binding base and the neck; the base is not included in this exact stalk grounding.</small></li></ul></td></tr>
+<tr><td>radial spoke head <small>(<a href="http://purl.obolibrary.org/obo/GO_0001535"><code>GO:0001535</code></a>)</small></td><td>is part of</td><td>radial spoke <small>(<a href="http://purl.obolibrary.org/obo/GO_0001534"><code>GO:0001534</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001535"><code>GO:0001535</code></a> <small>GO places the radial spoke head as part of the radial spoke.</small></li></ul></td></tr>
+<tr><td>radial spoke neck <small>(<a href="http://purl.obolibrary.org/obo/GO_0120343"><code>GO:0120343</code></a>)</small></td><td>connects to</td><td>radial spoke head <small>(<a href="http://purl.obolibrary.org/obo/GO_0001535"><code>GO:0001535</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0120343"><code>GO:0120343</code></a> <small>GO defines the radial spoke neck by its connection between the stalk and head.</small></li></ul></td></tr>
+<tr><td>radial spoke neck <small>(<a href="http://purl.obolibrary.org/obo/GO_0120343"><code>GO:0120343</code></a>)</small></td><td>connects to</td><td>radial spoke stalk <small>(<a href="http://purl.obolibrary.org/obo/GO_0001536"><code>GO:0001536</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0120343"><code>GO:0120343</code></a> <small>GO defines the radial spoke neck by its connection between the stalk and head.</small></li></ul></td></tr>
+<tr><td>radial spoke stalk <small>(<a href="http://purl.obolibrary.org/obo/GO_0001536"><code>GO:0001536</code></a>)</small></td><td>connects to</td><td>radial spoke base</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001536"><code>GO:0001536</code></a> <small>GO defines the stalk as the elongated portion between the A-tubule-binding base and the neck; the base is not included in this exact stalk grounding.</small></li></ul></td></tr>
 <tr><td>radial spoke base</td><td>binds to</td><td>outer doublet microtubule</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001536"><code>GO:0001536</code></a> <small>The stalk definition identifies the base as the portion that binds the outer-doublet A-tubule.</small></li></ul></td></tr>
-<tr><td>radial spoke head</td><td>projects toward</td><td>axonemal central pair</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001535"><code>GO:0001535</code></a> <small>GO defines the radial spoke head as the radial-spoke portion that projects toward the central pair.</small></li><li><a href="https://doi.org/10.1126/science.1128618"><code>DOI:10.1126/science.1128618</code></a> <small>Nicastro et al. 2006 visualized radial spokes in Chlamydomonas 9+2 axonemes.</small></li></ul></td></tr>
-<tr><td>radial spoke</td><td>participates in</td><td>regulation of cilium movement</td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.245233"><code>DOI:10.1242/jcs.245233</code></a> <small>Poghosyan et al. 2020 frame the radial spoke as a complex in the ciliary motility transducer apparatus.</small></li></ul></td></tr>
+<tr><td>radial spoke head <small>(<a href="http://purl.obolibrary.org/obo/GO_0001535"><code>GO:0001535</code></a>)</small></td><td>projects toward</td><td>axonemal central pair <small>(<a href="http://purl.obolibrary.org/obo/GO_0097540"><code>GO:0097540</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0001535"><code>GO:0001535</code></a> <small>GO defines the radial spoke head as the radial-spoke portion that projects toward the central pair.</small></li><li><a href="https://doi.org/10.1126/science.1128618"><code>DOI:10.1126/science.1128618</code></a> <small>Nicastro et al. 2006 visualized radial spokes in Chlamydomonas 9+2 axonemes.</small></li></ul></td></tr>
+<tr><td>radial spoke <small>(<a href="http://purl.obolibrary.org/obo/GO_0001534"><code>GO:0001534</code></a>)</small></td><td>participates in</td><td>regulation of cilium movement <small>(<a href="http://purl.obolibrary.org/obo/GO_0003352"><code>GO:0003352</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1242/jcs.245233"><code>DOI:10.1242/jcs.245233</code></a> <small>Poghosyan et al. 2020 frame the radial spoke as a complex in the ciliary motility transducer apparatus.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -112,7 +122,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/radial_spoke.yaml"><code>data/structures/cytoskeleton/radial_spoke.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

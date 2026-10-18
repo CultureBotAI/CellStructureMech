@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · MlaFEDB lipid transport complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>MlaFEDB lipid transport complex</h1>
 <p class="meta"><code>cellstructuremech:mlafedb_lipid_transport_complex</code> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">An Escherichia coli inner-membrane ABC transporter complex composed of MlaE, MlaF, MlaD, and MlaB subunits that participates in phospholipid transport during maintenance of outer-membrane lipid asymmetry. <small>[<a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3464"><code>ComplexPortal:CPX-3464</code></a>]</small></p>
@@ -89,11 +99,11 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-mlafedb_phospholipid_transport">MlaFEDB participates in phospholipid transport <small>(FUNCTION)</small></h3>
 <p>MlaE, MlaF, MlaD, and MlaB form the MlaFEDB inner-membrane ABC transporter that receives MlaC phospholipid substrates in the Mla outer-membrane lipid-asymmetry system.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MlaFEDB participates in phospholipid transport">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Intermembrane phospholipid transport system permease protein MlaE</td><td>assembles with</td><td>Intermembrane phospholipid transport system ATP-binding protein MlaF</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3464"><code>ComplexPortal:CPX-3464</code></a> <small>CPX-3464 curates MlaE and MlaF as participants in the E. coli MlaFEDB lipid transport complex.</small></li></ul></td></tr>
-<tr><td>Intermembrane phospholipid transport system binding protein MlaD</td><td>forms hexameric ring in</td><td>MlaFEDB lipid transport complex</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3464"><code>ComplexPortal:CPX-3464</code></a> <small>CPX-3464 curates six MlaD copies.</small></li><li><a href="https://www.rcsb.org/structure/7CGE"><code>PDB:7CGE</code></a> <small>RCSB maps chains G-L of PDB:7CGE to MlaD UniProtKB:P64604.</small></li></ul></td></tr>
-<tr><td>Intermembrane phospholipid transport system binding protein MlaB</td><td>assembles with</td><td>Intermembrane phospholipid transport system ATP-binding protein MlaF</td><td><ul class="evidence"><li><a href="https://www.rcsb.org/structure/7CGE"><code>PDB:7CGE</code></a> <small>RCSB maps PDB:7CGE chains C and F to MlaB and chains B and E to MlaF.</small></li></ul></td></tr>
-<tr><td>Intermembrane phospholipid transport system MlaC</td><td>delivers phospholipids to</td><td>MlaFEDB lipid transport complex</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3464"><code>ComplexPortal:CPX-3464</code></a> <small>CPX-3464 describes MlaC shuttling phospholipid substrates between the inner-membrane MlaFEDB transporter and an outer-membrane complex.</small></li></ul></td></tr>
-<tr><td>MlaFEDB lipid transport complex</td><td>enables</td><td>phospholipid transport</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3464"><code>ComplexPortal:CPX-3464</code></a> <small>Complex Portal cross-references GO:0015914 on the E. coli K-12 MlaFEDB lipid transport complex.</small></li></ul></td></tr>
+<tr><td>Intermembrane phospholipid transport system permease protein MlaE <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR053408"><code>InterPro:IPR053408</code></a>)</small></td><td>assembles with</td><td>Intermembrane phospholipid transport system ATP-binding protein MlaF</td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3464"><code>ComplexPortal:CPX-3464</code></a> <small>CPX-3464 curates MlaE and MlaF as participants in the E. coli MlaFEDB lipid transport complex.</small></li></ul></td></tr>
+<tr><td>Intermembrane phospholipid transport system binding protein MlaD <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR030970"><code>InterPro:IPR030970</code></a>)</small></td><td>forms hexameric ring in</td><td>MlaFEDB lipid transport complex <small>(<code>cellstructuremech:mlafedb_lipid_transport_complex</code>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3464"><code>ComplexPortal:CPX-3464</code></a> <small>CPX-3464 curates six MlaD copies.</small></li><li><a href="https://www.rcsb.org/structure/7CGE"><code>PDB:7CGE</code></a> <small>RCSB maps chains G-L of PDB:7CGE to MlaD UniProtKB:P64604.</small></li></ul></td></tr>
+<tr><td>Intermembrane phospholipid transport system binding protein MlaB <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR049743"><code>InterPro:IPR049743</code></a>)</small></td><td>assembles with</td><td>Intermembrane phospholipid transport system ATP-binding protein MlaF</td><td><ul class="evidence"><li><a href="https://www.rcsb.org/structure/7CGE"><code>PDB:7CGE</code></a> <small>RCSB maps PDB:7CGE chains C and F to MlaB and chains B and E to MlaF.</small></li></ul></td></tr>
+<tr><td>Intermembrane phospholipid transport system MlaC</td><td>delivers phospholipids to</td><td>MlaFEDB lipid transport complex <small>(<code>cellstructuremech:mlafedb_lipid_transport_complex</code>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3464"><code>ComplexPortal:CPX-3464</code></a> <small>CPX-3464 describes MlaC shuttling phospholipid substrates between the inner-membrane MlaFEDB transporter and an outer-membrane complex.</small></li></ul></td></tr>
+<tr><td>MlaFEDB lipid transport complex <small>(<code>cellstructuremech:mlafedb_lipid_transport_complex</code>)</small></td><td>enables</td><td>phospholipid transport <small>(<a href="http://purl.obolibrary.org/obo/GO_0015914"><code>GO:0015914</code></a>)</small></td><td><ul class="evidence"><li><a href="https://www.ebi.ac.uk/complexportal/complex/CPX-3464"><code>ComplexPortal:CPX-3464</code></a> <small>Complex Portal cross-references GO:0015914 on the E. coli K-12 MlaFEDB lipid transport complex.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -109,7 +119,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mlafedb_lipid_transport_complex.yaml"><code>data/structures/other/mlafedb_lipid_transport_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

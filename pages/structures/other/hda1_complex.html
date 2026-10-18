@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · HDA1 complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>HDA1 complex</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A tetrameric histone deacetylase complex that contains a Class II deacetylase catalytic subunit. In S. cerevisiae it is composed of two Hda1p subunits along with Hda2p and Hda3p. <small>[<a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a>]</small></p>
@@ -74,10 +84,10 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-yeast_hda1_histone_deacetylase_activity">HDA1 complex carries yeast histone deacetylase activity <small>(FUNCTION)</small></h3>
 <p>In Saccharomyces cerevisiae, two Hda1p copies and the Hda2p and Hda3p proteins form the HDA1 histone deacetylase complex.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: HDA1 complex carries yeast histone deacetylase activity">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Hda1 HDA1 catalytic subunit</td><td>contributes to</td><td>HDA1 complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a> <small>GO:0070823 defines the HDA1 complex as containing two Hda1p subunits.</small></li><li><a href="https://doi.org/10.1073/pnas.081560698"><code>DOI:10.1073/pnas.081560698</code></a> <small>Wu et al. 2001 reported HDA1 self-interaction and HDA1 complex membership.</small></li></ul></td></tr>
-<tr><td>Hda2 HDA1 subunit</td><td>contributes to</td><td>HDA1 complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a> <small>GO:0070823 defines the HDA1 complex as containing Hda2p.</small></li><li><a href="https://doi.org/10.1073/pnas.081560698"><code>DOI:10.1073/pnas.081560698</code></a> <small>Wu et al. 2001 identified HDA2 in the HDA1 complex and assigned it to the Hda2-Hda3 subcomplex.</small></li></ul></td></tr>
-<tr><td>Hda3 HDA1 subunit</td><td>contributes to</td><td>HDA1 complex</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a> <small>GO:0070823 defines the HDA1 complex as containing Hda3p.</small></li><li><a href="https://doi.org/10.1073/pnas.081560698"><code>DOI:10.1073/pnas.081560698</code></a> <small>Wu et al. 2001 identified HDA3 in the HDA1 complex and assigned it to the Hda2-Hda3 subcomplex.</small></li><li><a href="https://doi.org/10.1074/jbc.271.26.15837"><code>DOI:10.1074/jbc.271.26.15837</code></a> <small>Carmen et al. 1996 identified HDA3 as a subunit of the 350-kDa HDA complex.</small></li></ul></td></tr>
-<tr><td>HDA1 complex</td><td>supports</td><td>histone deacetylase activity</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a> <small>GO:0070823 defines HDA1 as a histone deacetylase complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0004407"><code>GO:0004407</code></a> <small>GO:0004407 is the molecular-function term for histone deacetylase activity.</small></li><li><a href="https://doi.org/10.1073/pnas.081560698"><code>DOI:10.1073/pnas.081560698</code></a> <small>Wu et al. 2001 found that mutations in HDA1, HDA2 or HDA3 disrupted HDA1 catalytic activity.</small></li></ul></td></tr>
+<tr><td>Hda1 HDA1 catalytic subunit</td><td>contributes to</td><td>HDA1 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a> <small>GO:0070823 defines the HDA1 complex as containing two Hda1p subunits.</small></li><li><a href="https://doi.org/10.1073/pnas.081560698"><code>DOI:10.1073/pnas.081560698</code></a> <small>Wu et al. 2001 reported HDA1 self-interaction and HDA1 complex membership.</small></li></ul></td></tr>
+<tr><td>Hda2 HDA1 subunit</td><td>contributes to</td><td>HDA1 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a> <small>GO:0070823 defines the HDA1 complex as containing Hda2p.</small></li><li><a href="https://doi.org/10.1073/pnas.081560698"><code>DOI:10.1073/pnas.081560698</code></a> <small>Wu et al. 2001 identified HDA2 in the HDA1 complex and assigned it to the Hda2-Hda3 subcomplex.</small></li></ul></td></tr>
+<tr><td>Hda3 HDA1 subunit</td><td>contributes to</td><td>HDA1 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a> <small>GO:0070823 defines the HDA1 complex as containing Hda3p.</small></li><li><a href="https://doi.org/10.1073/pnas.081560698"><code>DOI:10.1073/pnas.081560698</code></a> <small>Wu et al. 2001 identified HDA3 in the HDA1 complex and assigned it to the Hda2-Hda3 subcomplex.</small></li><li><a href="https://doi.org/10.1074/jbc.271.26.15837"><code>DOI:10.1074/jbc.271.26.15837</code></a> <small>Carmen et al. 1996 identified HDA3 as a subunit of the 350-kDa HDA complex.</small></li></ul></td></tr>
+<tr><td>HDA1 complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a>)</small></td><td>supports</td><td>histone deacetylase activity <small>(<a href="http://purl.obolibrary.org/obo/GO_0004407"><code>GO:0004407</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070823"><code>GO:0070823</code></a> <small>GO:0070823 defines HDA1 as a histone deacetylase complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0004407"><code>GO:0004407</code></a> <small>GO:0004407 is the molecular-function term for histone deacetylase activity.</small></li><li><a href="https://doi.org/10.1073/pnas.081560698"><code>DOI:10.1073/pnas.081560698</code></a> <small>Wu et al. 2001 found that mutations in HDA1, HDA2 or HDA3 disrupted HDA1 catalytic activity.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -93,7 +103,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/hda1_complex.yaml"><code>data/structures/other/hda1_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

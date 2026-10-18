@@ -13,37 +13,49 @@
   <nav>
     <a href="../browse.html">Browse</a>
     <a href="../embedding-map.html">Text map</a>
+    <a href="../sequence-map.html">Sequence map</a>
+    <a href="../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="wide">
 <h1>Microcompartment</h1>
 <p>Protein-shelled organelles — carboxysomes, metabolosomes, encapsulins.</p>
-<form id="record-filters" class="record-filters" hidden>
-  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
-  <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option><option value="MICROCOMPARTMENT">Microcompartment</option></select></div>
-  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option><option value="MULTIPROTEIN_COMPLEX">Multiprotein complex</option><option value="PROTEIN_SHELLED_ORGANELLE">Protein shelled organelle</option></select></div>
-  <button type="reset">Clear filters</button>
-</form>
-<p id="record-count" role="status" aria-live="polite">6 records</p>
-<p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
-<div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
-<table id="record-table">
-<caption>Records</caption>
-<thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
-<tbody>
-<tr data-category="MICROCOMPARTMENT" data-kind="PROTEIN_SHELLED_ORGANELLE" data-synonyms="BMC metabolosome"><td><a href="../structures/microcompartment/bacterial_microcompartment.html">bacterial microcompartment</a><p class="record-definition">A bacterial protein-shelled organelle in which a selectively permeable polyhedral shell encapsulates pathway enzymes to segregate segments of metabolism from the cytosol.</p></td><td><code>GO:0031469</code></td><td>Microcompartment</td><td>Protein shelled organelle</td><td>Proposed</td></tr>
-<tr data-category="MICROCOMPARTMENT" data-kind="PROTEIN_SHELLED_ORGANELLE" data-synonyms="polyhedral body"><td><a href="../structures/microcompartment/carboxysome.html">carboxysome</a><p class="record-definition">A bacterial microcompartment — a polyhedral, selectively permeable protein shell about 100–200 nm across — that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2 around RuBisCO in cyanobacteria and many chemoautotrophs. Alpha-carboxysomes (cso genes) and beta-carboxysomes (ccm genes) evolved their shells and scaffolds independently.</p></td><td><code>GO:0031470</code></td><td>Microcompartment</td><td>Protein shelled organelle</td><td>Proposed</td></tr>
-<tr data-category="MICROCOMPARTMENT" data-kind="MULTIPROTEIN_COMPLEX" data-synonyms="carboxysome protein shell alpha-carboxysome shell beta-carboxysome shell"><td><a href="../structures/microcompartment/carboxysome_shell.html">carboxysome shell</a><p class="record-definition">The polyhedral protein coat of alpha- and beta-carboxysomes, built from BMC-H, BMC-T, and BMC-P shell proteins that enclose RuBisCO and carbonic anhydrase while controlling metabolite traffic between the lumen and cytosol.</p></td><td><code>cellstructuremech:carboxysome_shell</code></td><td>Microcompartment</td><td>Multiprotein complex</td><td>Proposed</td></tr>
-<tr data-category="MICROCOMPARTMENT" data-kind="PROTEIN_SHELLED_ORGANELLE" data-synonyms="protein nanocompartment"><td><a href="../structures/microcompartment/encapsulin_nanocompartment.html">encapsulin nanocompartment</a><p class="record-definition">A proteinaceous nanocompartment, 24 to 42 nm across, built from a single HK97-fold shell protein that self-assembles into an icosahedron. Cargo enzymes are packaged inside by a short targeting peptide that binds the shell interior; the commonest cargoes are ferritin-like iron-mineralising proteins and peroxidases.</p></td><td><code>GO:0140737</code></td><td>Microcompartment</td><td>Protein shelled organelle</td><td>Proposed</td></tr>
-<tr data-category="MICROCOMPARTMENT" data-kind="PROTEIN_SHELLED_ORGANELLE" data-synonyms="Eut metabolosome ethanolamine utilization bacterial microcompartment"><td><a href="../structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.html">ethanolamine degradation polyhedral organelle</a><p class="record-definition">An organelle found in bacteria consisting of a proteinaceous coat containing enzymes for the degradation of ethanolamine whose purpose is the protection of the rest of the cell from the toxic acetaldehyde product of the enzyme ethanolamine ammonia lyase.</p></td><td><code>GO:0031471</code></td><td>Microcompartment</td><td>Protein shelled organelle</td><td>Proposed</td></tr>
-<tr data-category="MICROCOMPARTMENT" data-kind="PROTEIN_SHELLED_ORGANELLE" data-synonyms="Pdu microcompartment propanediol-utilizing metabolosome"><td><a href="../structures/microcompartment/propanediol_degradation_polyhedral_organelle.html">propanediol degradation polyhedral organelle</a><p class="record-definition">An organelle found in bacteria consisting of a proteinaceous coat containing enzymes for the degradation of 1,2-propanediol whose purpose is the protection of the rest of the cell from the toxic propionaldehyde product of the enzyme diol dehydratase.</p></td><td><code>GO:0031472</code></td><td>Microcompartment</td><td>Protein shelled organelle</td><td>Proposed</td></tr>
-</tbody>
-</table>
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Structure filters">
+    <form id="record-filters" class="record-filters" hidden>
+      <div><label for="record-query">Search records</label><input id="record-query" name="q" type="search" placeholder="Label, identifier, definition…"></div>
+      <div><label for="record-category">Category</label><select id="record-category" name="category"><option value="">All categories</option><option value="MICROCOMPARTMENT">Microcompartment</option></select></div>
+      <div><label for="record-kind">Kind</label><select id="record-kind" name="kind"><option value="">All kinds</option><option value="MULTIPROTEIN_COMPLEX">Multiprotein complex</option><option value="PROTEIN_SHELLED_ORGANELLE">Protein shelled organelle</option></select></div>
+      <div><label for="record-status">Mapping status</label><select id="record-status" name="status"><option value="">All statuses</option><option value="PROPOSED">Proposed</option></select></div>
+      <div><label for="record-sort">Sort by</label><select id="record-sort" name="sort"><option value="">Label (A–Z)</option><option value="label-desc">Label (Z–A)</option><option value="id-asc">Identifier (A–Z)</option><option value="category-asc">Category</option><option value="kind-asc">Kind</option><option value="status-asc">Mapping status</option></select></div>
+      <button type="reset">Clear filters</button>
+    </form>
+  </aside>
+  <div class="results-main">
+    <p id="record-count" role="status" aria-live="polite">6 records</p>
+    <p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
+    <div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
+    <table id="record-table">
+    <caption>Records</caption>
+    <thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
+    <tbody>
+    <tr data-label="bacterial microcompartment" data-id="go:0031469" data-category="MICROCOMPARTMENT" data-kind="PROTEIN_SHELLED_ORGANELLE" data-status="PROPOSED" data-synonyms="BMC metabolosome"><td><a href="../structures/microcompartment/bacterial_microcompartment.html">bacterial microcompartment</a><p class="record-definition">A bacterial protein-shelled organelle in which a selectively permeable polyhedral shell encapsulates pathway enzymes to segregate segments of metabolism from the cytosol.</p></td><td><code>GO:0031469</code></td><td>Microcompartment</td><td>Protein shelled organelle</td><td>Proposed</td></tr>
+    <tr data-label="carboxysome" data-id="go:0031470" data-category="MICROCOMPARTMENT" data-kind="PROTEIN_SHELLED_ORGANELLE" data-status="PROPOSED" data-synonyms="polyhedral body"><td><a href="../structures/microcompartment/carboxysome.html">carboxysome</a><p class="record-definition">A bacterial microcompartment — a polyhedral, selectively permeable protein shell about 100–200 nm across — that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2 around RuBisCO in cyanobacteria and many chemoautotrophs. Alpha-carboxysomes (cso genes) and beta-carboxysomes (ccm genes) evolved their shells and scaffolds independently.</p></td><td><code>GO:0031470</code></td><td>Microcompartment</td><td>Protein shelled organelle</td><td>Proposed</td></tr>
+    <tr data-label="carboxysome shell" data-id="cellstructuremech:carboxysome_shell" data-category="MICROCOMPARTMENT" data-kind="MULTIPROTEIN_COMPLEX" data-status="PROPOSED" data-synonyms="carboxysome protein shell alpha-carboxysome shell beta-carboxysome shell"><td><a href="../structures/microcompartment/carboxysome_shell.html">carboxysome shell</a><p class="record-definition">The polyhedral protein coat of alpha- and beta-carboxysomes, built from BMC-H, BMC-T, and BMC-P shell proteins that enclose RuBisCO and carbonic anhydrase while controlling metabolite traffic between the lumen and cytosol.</p></td><td><code>cellstructuremech:carboxysome_shell</code></td><td>Microcompartment</td><td>Multiprotein complex</td><td>Proposed</td></tr>
+    <tr data-label="encapsulin nanocompartment" data-id="go:0140737" data-category="MICROCOMPARTMENT" data-kind="PROTEIN_SHELLED_ORGANELLE" data-status="PROPOSED" data-synonyms="protein nanocompartment"><td><a href="../structures/microcompartment/encapsulin_nanocompartment.html">encapsulin nanocompartment</a><p class="record-definition">A proteinaceous nanocompartment, 24 to 42 nm across, built from a single HK97-fold shell protein that self-assembles into an icosahedron. Cargo enzymes are packaged inside by a short targeting peptide that binds the shell interior; the commonest cargoes are ferritin-like iron-mineralising proteins and peroxidases.</p></td><td><code>GO:0140737</code></td><td>Microcompartment</td><td>Protein shelled organelle</td><td>Proposed</td></tr>
+    <tr data-label="ethanolamine degradation polyhedral organelle" data-id="go:0031471" data-category="MICROCOMPARTMENT" data-kind="PROTEIN_SHELLED_ORGANELLE" data-status="PROPOSED" data-synonyms="Eut metabolosome ethanolamine utilization bacterial microcompartment"><td><a href="../structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.html">ethanolamine degradation polyhedral organelle</a><p class="record-definition">An organelle found in bacteria consisting of a proteinaceous coat containing enzymes for the degradation of ethanolamine whose purpose is the protection of the rest of the cell from the toxic acetaldehyde product of the enzyme ethanolamine ammonia lyase.</p></td><td><code>GO:0031471</code></td><td>Microcompartment</td><td>Protein shelled organelle</td><td>Proposed</td></tr>
+    <tr data-label="propanediol degradation polyhedral organelle" data-id="go:0031472" data-category="MICROCOMPARTMENT" data-kind="PROTEIN_SHELLED_ORGANELLE" data-status="PROPOSED" data-synonyms="Pdu microcompartment propanediol-utilizing metabolosome"><td><a href="../structures/microcompartment/propanediol_degradation_polyhedral_organelle.html">propanediol degradation polyhedral organelle</a><p class="record-definition">An organelle found in bacteria consisting of a proteinaceous coat containing enzymes for the degradation of 1,2-propanediol whose purpose is the protection of the rest of the cell from the toxic propionaldehyde product of the enzyme diol dehydratase.</p></td><td><code>GO:0031472</code></td><td>Microcompartment</td><td>Protein shelled organelle</td><td>Proposed</td></tr>
+    </tbody>
+    </table>
+    </div>
+  </div>
 </div>
 <script src="../record-browser.js" defer></script></main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../corpus.json">corpus JSON</a> · <a href="../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

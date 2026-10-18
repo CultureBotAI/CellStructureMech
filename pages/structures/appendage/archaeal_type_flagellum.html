@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/appendage.html">Appendage</a> · archaeal-type flagellum</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>archaeal-type flagellum</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0097589"><code>GO:0097589</code></a> · Appendage · Appendage · <span class="status">Proposed</span></p>
 <p class="definition">A non-membrane-bounded motility organelle, also called the archaellum, characterized in Archaea and in the bacterium Litorilinea aerophila; a membrane-associated motor drives swimming through rotation of extracellular type-IV-pilin-like archaellin filaments. <small>[<a href="https://doi.org/10.1038/s41564-025-02110-8"><code>DOI:10.1038/s41564-025-02110-8</code></a>]</small></p>
@@ -95,12 +105,12 @@ family; these are the specific entries behind it.</small></p>
 <p>Prearchaellins are processed and assembled by an ATP-powered ArlI/ArlJ motor. ArlH and lineage-specific scaffold proteins organize that motor; envelope-side FlaF/FlaG proteins are proposed to anchor it to the S-layer. Motor-driven filament rotation propels archaeal cells.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: ATP-driven basal assembly builds and rotates the archaellum filament">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>PibD/FlaK prepilin peptidase</td><td>matures</td><td>prearchaellins</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review class-3 signal-peptide processing of prearchaellins by PibD or FlaK-like enzymes.</small></li></ul></td></tr>
-<tr><td>mature archaellins</td><td>polymerize into</td><td>archaeal-type flagellum</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-28337-1"><code>DOI:10.1038/s41467-022-28337-1</code></a> <small>Gambelli et al. 2022 resolved the Methanocaldococcus villosus filament as a polymer of alternating ArlB1 and ArlB2 archaellins.</small></li></ul></td></tr>
+<tr><td>mature archaellins</td><td>polymerize into</td><td>archaeal-type flagellum <small>(<a href="http://purl.obolibrary.org/obo/GO_0097589"><code>GO:0097589</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-28337-1"><code>DOI:10.1038/s41467-022-28337-1</code></a> <small>Gambelli et al. 2022 resolved the Methanocaldococcus villosus filament as a polymer of alternating ArlB1 and ArlB2 archaellins.</small></li></ul></td></tr>
 <tr><td>ArlX/ArlCDE cytosolic scaffold</td><td>organizes</td><td>ArlI/ArlJ motor core</td><td><ul class="evidence"><li><a href="https://doi.org/10.1074/jbc.M112.414383"><code>DOI:10.1074/jbc.M112.414383</code></a> <small>Banerjee et al. 2012 showed that FlaX forms oligomeric rings and interacts with FlaI in the Sulfolobus acidocaldarius motor.</small></li><li><a href="https://doi.org/10.1038/s41467-022-28337-1"><code>DOI:10.1038/s41467-022-28337-1</code></a> <small>Gambelli et al. 2022 summarize the Crenarchaeota versus Euryarchaeota ring modules surrounding ArlI/ArlJ.</small></li></ul></td></tr>
 <tr><td>ArlH motor regulator</td><td>regulates</td><td>ArlI/ArlJ motor core</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/mmi.13260"><code>DOI:10.1111/mmi.13260</code></a> <small>Chaudhury et al. 2016 established the nucleotide-dependent FlaH-FlaI interaction and its requirement for archaellum assembly and function.</small></li></ul></td></tr>
 <tr><td>ArlF/ArlG S-layer anchor</td><td>is proposed to anchor</td><td>ArlI/ArlJ motor core</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/j.str.2015.03.001"><code>DOI:10.1016/j.str.2015.03.001</code></a> <small>Banerjee et al. 2015 demonstrated binding of soluble Sulfolobus acidocaldarius FlaF to isolated S-layer and proposed an anchoring role; the complete FlaF/FlaG-to-motor bridge was not directly resolved.</small></li><li><a href="https://doi.org/10.1038/s41564-019-0622-3"><code>DOI:10.1038/s41564-019-0622-3</code></a> <small>The inspected Tsai et al. 2020 primary abstract reports FlaG/FlaF complex formation and motility-disrupting interface mutations, supporting an S-layer-anchoring model. Full text was unavailable; direct contacts to the intact motor are not established by this abstract.</small></li></ul></td></tr>
-<tr><td>ArlI/ArlJ motor core</td><td>assembles and rotates</td><td>archaeal-type flagellum</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review FlaI/ArlI as the ATPase that powers archaeal flagellum assembly and rotation.</small></li></ul></td></tr>
-<tr><td>archaeal-type flagellum</td><td>drives</td><td>archaeal-type flagellum-dependent cell motility</td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review archaellum rotation as the archaeal swimming mechanism.</small></li></ul></td></tr>
+<tr><td>ArlI/ArlJ motor core</td><td>assembles and rotates</td><td>archaeal-type flagellum <small>(<a href="http://purl.obolibrary.org/obo/GO_0097589"><code>GO:0097589</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review FlaI/ArlI as the ATPase that powers archaeal flagellum assembly and rotation.</small></li></ul></td></tr>
+<tr><td>archaeal-type flagellum <small>(<a href="http://purl.obolibrary.org/obo/GO_0097589"><code>GO:0097589</code></a>)</small></td><td>drives</td><td>archaeal-type flagellum-dependent cell motility <small>(<a href="http://purl.obolibrary.org/obo/GO_0097590"><code>GO:0097590</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.3389/fmicb.2015.00023"><code>DOI:10.3389/fmicb.2015.00023</code></a> <small>Albers and Jarrell 2015 review archaellum rotation as the archaeal swimming mechanism.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -116,7 +126,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/archaeal_type_flagellum.yaml"><code>data/structures/appendage/archaeal_type_flagellum.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

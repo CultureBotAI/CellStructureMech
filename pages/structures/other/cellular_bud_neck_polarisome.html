@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · cellular bud neck polarisome</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>cellular bud neck polarisome</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">Protein complex that has a role in determining cell polarity, found at the neck of a fungal bud before and during cytokinesis. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a>]</small></p>
@@ -60,9 +70,9 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-bud_neck_polarisome_topology">Bud-neck polarisome topology <small>(FUNCTION)</small></h3>
 <p>Spa2 and Pea2 mark the Saccharomyces mother-daughter neck occupied by the GO-defined bud-neck polarisome before cytokinesis.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Bud-neck polarisome topology">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>cellular bud neck polarisome</td><td>is part of</td><td>cellular bud neck</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a> <small>GO:0031560 defines this polarisome as being found at the neck of a fungal bud.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005935"><code>GO:0005935</code></a> <small>GO:0005935 identifies the cellular bud neck.</small></li></ul></td></tr>
-<tr><td>Spa2/Pea2 polarisome scaffold</td><td>localizes to</td><td>cellular bud neck</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.135.3.725"><code>DOI:10.1083/jcb.135.3.725</code></a> <small>Valtz and Herskowitz 1996 localized Pea2 to the mother-daughter neck before cytokinesis and described Pea2 and Spa2 localization as the same general pattern.</small></li></ul></td></tr>
-<tr><td>cellular bud neck polarisome</td><td>supports</td><td>bud-neck cell-polarity organization</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a> <small>GO:0031560 defines the bud-neck polarisome by its role in cell-polarity determination at the fungal bud neck.</small></li></ul></td></tr>
+<tr><td>cellular bud neck polarisome <small>(<a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a>)</small></td><td>is part of</td><td>cellular bud neck <small>(<a href="http://purl.obolibrary.org/obo/GO_0005935"><code>GO:0005935</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a> <small>GO:0031560 defines this polarisome as being found at the neck of a fungal bud.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005935"><code>GO:0005935</code></a> <small>GO:0005935 identifies the cellular bud neck.</small></li></ul></td></tr>
+<tr><td>Spa2/Pea2 polarisome scaffold</td><td>localizes to</td><td>cellular bud neck <small>(<a href="http://purl.obolibrary.org/obo/GO_0005935"><code>GO:0005935</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.135.3.725"><code>DOI:10.1083/jcb.135.3.725</code></a> <small>Valtz and Herskowitz 1996 localized Pea2 to the mother-daughter neck before cytokinesis and described Pea2 and Spa2 localization as the same general pattern.</small></li></ul></td></tr>
+<tr><td>cellular bud neck polarisome <small>(<a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a>)</small></td><td>supports</td><td>bud-neck cell-polarity organization</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031560"><code>GO:0031560</code></a> <small>GO:0031560 defines the bud-neck polarisome by its role in cell-polarity determination at the fungal bud neck.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -78,7 +88,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/cellular_bud_neck_polarisome.yaml"><code>data/structures/other/cellular_bud_neck_polarisome.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/energy_complex.html">Energy complex</a> · phycobilisome rod</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>phycobilisome rod</h1>
 <p class="meta"><code>cellstructuremech:phycobilisome_rod</code> · Energy complex · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">Peripheral phycobiliprotein cylinder subassembly of a phycobilisome that binds phycobilin chromophores, absorbs excitation energy, and transfers it inward to the allophycocyanin core. <small>[<a href="https://doi.org/10.1038/s41467-022-30962-9"><code>DOI:10.1038/s41467-022-30962-9</code></a>]</small></p>
@@ -71,11 +81,11 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-phycobilisome_rod_light_capture">Peripheral rods absorb light and transfer excitation to the core <small>(FUNCTION)</small></h3>
 <p>Rod phycobiliproteins bind phycobilin chromophores that capture light. Rod linkers stabilize disk stacking and tune the downhill transfer path toward the allophycocyanin core.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Peripheral rods absorb light and transfer excitation to the core">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>rod phycobiliproteins</td><td>assemble into</td><td>phycobilisome rod</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-30962-9"><code>DOI:10.1038/s41467-022-30962-9</code></a> <small>Kawakami et al. 2022 resolved stacked phycocyanin disks in thermophilic cyanobacterial rods.</small></li></ul></td></tr>
-<tr><td>phycobilisome rod linker polypeptides</td><td>stabilize and tune</td><td>phycobilisome rod</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-30962-9"><code>DOI:10.1038/s41467-022-30962-9</code></a> <small>Kawakami et al. 2022 classified the rod, rod-terminal, and rod-core linker proteins in T. vulcanus and resolved linker positions in the phycocyanin rod.</small></li></ul></td></tr>
+<tr><td>rod phycobiliproteins</td><td>assemble into</td><td>phycobilisome rod <small>(<code>cellstructuremech:phycobilisome_rod</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-30962-9"><code>DOI:10.1038/s41467-022-30962-9</code></a> <small>Kawakami et al. 2022 resolved stacked phycocyanin disks in thermophilic cyanobacterial rods.</small></li></ul></td></tr>
+<tr><td>phycobilisome rod linker polypeptides</td><td>stabilize and tune</td><td>phycobilisome rod <small>(<code>cellstructuremech:phycobilisome_rod</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-30962-9"><code>DOI:10.1038/s41467-022-30962-9</code></a> <small>Kawakami et al. 2022 classified the rod, rod-terminal, and rod-core linker proteins in T. vulcanus and resolved linker positions in the phycocyanin rod.</small></li></ul></td></tr>
 <tr><td>rod-bound phycobilin chromophores</td><td>are bound by</td><td>rod phycobiliproteins</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-30962-9"><code>DOI:10.1038/s41467-022-30962-9</code></a> <small>Kawakami et al. 2022 describe phycocyanobilins covalently bound to the phycocyanin alpha and beta subunits of PBS rods.</small></li></ul></td></tr>
-<tr><td>phycobilisome rod</td><td>transfers excitation to</td><td>allophycocyanin core</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-30962-9"><code>DOI:10.1038/s41467-022-30962-9</code></a> <small>Kawakami et al. 2022 discuss excitation movement from PC rods through the allophycocyanin core cylinders toward terminal emitters.</small></li></ul></td></tr>
-<tr><td>phycobilisome rod</td><td>contributes to</td><td>photosynthesis, light harvesting</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-30962-9"><code>DOI:10.1038/s41467-022-30962-9</code></a> <small>Kawakami et al. 2022 resolved phycocyanin rods from T. vulcanus phycobilisome preparations as light-harvesting subassemblies.</small></li></ul></td></tr>
+<tr><td>phycobilisome rod <small>(<code>cellstructuremech:phycobilisome_rod</code>)</small></td><td>transfers excitation to</td><td>allophycocyanin core <small>(<code>cellstructuremech:phycobilisome_core</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-30962-9"><code>DOI:10.1038/s41467-022-30962-9</code></a> <small>Kawakami et al. 2022 discuss excitation movement from PC rods through the allophycocyanin core cylinders toward terminal emitters.</small></li></ul></td></tr>
+<tr><td>phycobilisome rod <small>(<code>cellstructuremech:phycobilisome_rod</code>)</small></td><td>contributes to</td><td>photosynthesis, light harvesting <small>(<a href="http://purl.obolibrary.org/obo/GO_0009765"><code>GO:0009765</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-022-30962-9"><code>DOI:10.1038/s41467-022-30962-9</code></a> <small>Kawakami et al. 2022 resolved phycocyanin rods from T. vulcanus phycobilisome preparations as light-harvesting subassemblies.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -91,7 +101,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/energy_complex/phycobilisome_rod.yaml"><code>data/structures/energy_complex/phycobilisome_rod.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

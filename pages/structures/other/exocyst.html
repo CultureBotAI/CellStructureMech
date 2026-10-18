@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · exocyst</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>exocyst</h1>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0000145"><code>GO:0000145</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A vesicle tethering complex peripherally associated with the plasma membrane that determines where vesicles dock and fuse. At least eight complex components are conserved between yeast and mammals. <small>[<a href="http://purl.obolibrary.org/obo/GO_0000145"><code>GO:0000145</code></a>]</small></p>
@@ -113,9 +123,9 @@ family; these are the specific entries behind it.</small></p>
 <p>In budding yeast, Sec4p interacts with the exocyst component Sec15p on secretory vesicles, Sec3p marks polarized plasma-membrane sites, and the exocyst targets vesicles to those sites.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Sec4 and Sec15 link secretory vesicles to exocytic sites">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Sec4p</td><td>interacts with</td><td>Sec15 exocyst subunit</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/18.4.1071"><code>DOI:10.1093/emboj/18.4.1071</code></a> <small>Guo et al. 1999 tested GTP-bound Sec4p interaction with Sec15p during vesicle targeting.</small></li></ul></td></tr>
-<tr><td>Sec15 exocyst subunit</td><td>is constituent of</td><td>exocyst</td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.130.2.299"><code>DOI:10.1083/jcb.130.2.299</code></a> <small>TerBush and Novick 1995 identified Sec15p in the Sec6/Sec8/Sec15 complex.</small></li><li><a href="https://doi.org/10.1002/j.1460-2075.1996.tb01039.x"><code>DOI:10.1002/j.1460-2075.1996.tb01039.x</code></a> <small>TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p complex the exocyst and showed that it is required for exocytosis in Saccharomyces cerevisiae.</small></li></ul></td></tr>
+<tr><td>Sec15 exocyst subunit</td><td>is constituent of</td><td>exocyst <small>(<a href="http://purl.obolibrary.org/obo/GO_0000145"><code>GO:0000145</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1083/jcb.130.2.299"><code>DOI:10.1083/jcb.130.2.299</code></a> <small>TerBush and Novick 1995 identified Sec15p in the Sec6/Sec8/Sec15 complex.</small></li><li><a href="https://doi.org/10.1002/j.1460-2075.1996.tb01039.x"><code>DOI:10.1002/j.1460-2075.1996.tb01039.x</code></a> <small>TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p complex the exocyst and showed that it is required for exocytosis in Saccharomyces cerevisiae.</small></li></ul></td></tr>
 <tr><td>Sec3 exocyst subunit</td><td>marks</td><td>polarized exocytic sites</td><td><ul class="evidence"><li><a href="https://doi.org/10.1016/S0092-8674(00)80948-4"><code>DOI:10.1016/S0092-8674(00)80948-4</code></a> <small>Finger et al. 1998 characterized Sec3p as a spatial landmark for polarized secretion.</small></li></ul></td></tr>
-<tr><td>exocyst</td><td>targets</td><td>secretory vesicles</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/18.4.1071"><code>DOI:10.1093/emboj/18.4.1071</code></a> <small>Guo et al. 1999 framed the exocyst as a Sec4p effector system for targeted secretion.</small></li></ul></td></tr>
+<tr><td>exocyst <small>(<a href="http://purl.obolibrary.org/obo/GO_0000145"><code>GO:0000145</code></a>)</small></td><td>targets</td><td>secretory vesicles</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/emboj/18.4.1071"><code>DOI:10.1093/emboj/18.4.1071</code></a> <small>Guo et al. 1999 framed the exocyst as a Sec4p effector system for targeted secretion.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -131,7 +141,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/exocyst.yaml"><code>data/structures/other/exocyst.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

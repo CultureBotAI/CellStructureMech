@@ -13,10 +13,20 @@
   <nav>
     <a href="../../browse.html">Browse</a>
     <a href="../../embedding-map.html">Text map</a>
+    <a href="../../sequence-map.html">Sequence map</a>
+    <a href="../../corpus.json">Data JSON</a>
+    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main>
+<main class="">
+<div class="record-topbar">
+  <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · Mic60-Mic19 complex</p>
+  <form class="record-search" action="../../browse.html" method="get" role="search">
+    <input name="q" type="search" placeholder="Search structures…" aria-label="Search structures" autocomplete="off">
+  </form>
+</div>
 <h1>Mic60-Mic19 complex</h1>
 <p class="meta"><code>cellstructuremech:mic60_mic19_complex</code> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
 <p class="definition">A heteromeric MICOS subcomplex composed of Mic60 and Mic19 that couples protein assembly to mitochondrial inner-membrane remodeling and crista-junction organization. <small>[<a href="https://doi.org/10.1126/sciadv.abo4946"><code>DOI:10.1126/sciadv.abo4946</code></a>]</small></p>
@@ -70,10 +80,10 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-mic60_mic19_membrane_remodeling">Direct binding and cooperative membrane remodeling by fungal Mic60 and Mic19 <small>(FUNCTION)</small></h3>
 <p>Purified fungal proteins establish direct interaction, Mic60-dependent lipid recruitment, Mic19-enhanced oligomerization and membrane tubulation.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Direct binding and cooperative membrane remodeling by fungal Mic60 and Mic19">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>MICOS complex subunit Mic19</td><td>directly binds</td><td>MICOS complex subunit MIC60</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms15258"><code>DOI:10.1038/ncomms15258</code></a> <small>Isothermal titration calorimetry and domain deletions establish direct binding; isolated Mic19 coiled-coil region does not bind Mic60.</small></li><li><a href="https://doi.org/10.1126/sciadv.abo4946"><code>DOI:10.1126/sciadv.abo4946</code></a> <small>Fusion-domain crystal structures and binding-interface substitutions resolve the heteromeric contact.</small></li></ul></td></tr>
-<tr><td>MICOS complex subunit MIC60</td><td>recruits Mic19 into</td><td>Lipid-associated Mic60-Mic19 assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms15258"><code>DOI:10.1038/ncomms15258</code></a> <small>Liposome co-sedimentation detects Mic19 in the presence of Mic60; Mic19 alone does not bind the tested membranes.</small></li></ul></td></tr>
+<tr><td>MICOS complex subunit Mic19</td><td>directly binds</td><td>MICOS complex subunit MIC60 <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR019133"><code>InterPro:IPR019133</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms15258"><code>DOI:10.1038/ncomms15258</code></a> <small>Isothermal titration calorimetry and domain deletions establish direct binding; isolated Mic19 coiled-coil region does not bind Mic60.</small></li><li><a href="https://doi.org/10.1126/sciadv.abo4946"><code>DOI:10.1126/sciadv.abo4946</code></a> <small>Fusion-domain crystal structures and binding-interface substitutions resolve the heteromeric contact.</small></li></ul></td></tr>
+<tr><td>MICOS complex subunit MIC60 <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR019133"><code>InterPro:IPR019133</code></a>)</small></td><td>recruits Mic19 into</td><td>Lipid-associated Mic60-Mic19 assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms15258"><code>DOI:10.1038/ncomms15258</code></a> <small>Liposome co-sedimentation detects Mic19 in the presence of Mic60; Mic19 alone does not bind the tested membranes.</small></li></ul></td></tr>
 <tr><td>MICOS complex subunit Mic19</td><td>promotes</td><td>Higher-order Mic60-Mic19 assembly</td><td><ul class="evidence"><li><a href="https://doi.org/10.1126/sciadv.abo4946"><code>DOI:10.1126/sciadv.abo4946</code></a> <small>Hydrodynamic and cross-linking experiments support Mic19-induced oligomerization, with an inferred tetrameric Mic60 arrangement rather than a universal native copy count.</small></li></ul></td></tr>
-<tr><td>MICOS complex subunit MIC60</td><td>drives</td><td>Liposome tubulation and branching</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms15258"><code>DOI:10.1038/ncomms15258</code></a> <small>Electron microscopy shows tubulation with purified Mic60; deletion of the amphipathic LBS1 region abolishes lipid binding and remodeling.</small></li></ul></td></tr>
+<tr><td>MICOS complex subunit MIC60 <small>(<a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR019133"><code>InterPro:IPR019133</code></a>)</small></td><td>drives</td><td>Liposome tubulation and branching</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms15258"><code>DOI:10.1038/ncomms15258</code></a> <small>Electron microscopy shows tubulation with purified Mic60; deletion of the amphipathic LBS1 region abolishes lipid binding and remodeling.</small></li></ul></td></tr>
 <tr><td>Lipid-associated Mic60-Mic19 assembly</td><td>enhances</td><td>Liposome tubulation and branching</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms15258"><code>DOI:10.1038/ncomms15258</code></a> <small>Figure 3 reconstitution assays compare Mic60 alone with full Mic19 and Mic19 domain constructs. Full Mic19 stimulates membrane deformation; its domains have different effects on dye leakage.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -90,7 +100,7 @@ family; these are the specific entries behind it.</small></p>
 <p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mic60_mic19_complex.yaml"><code>data/structures/other/mic60_mic19_complex.yaml</code></a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · generated by <code>scripts/render_pages.py</code></p>
+  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-16 01:56:14 UTC</code> (digest <code>fae9526a8beb</code>, 909 records)</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
