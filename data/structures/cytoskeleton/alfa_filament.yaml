@@ -77,14 +77,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:O52947
     protein_label: Actin-like protein N-terminal domain-containing protein
-    gene_symbol: alfA
+    gene_symbol: B4U62_22515
     taxon_id: NCBITaxon:1423
     taxon_label: Bacillus subtilis
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene alfA in Bacillus
-      subtilis. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene alfA, which
+      UniProt lists under the primary name B4U62_22515, in Bacillus subtilis. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/O52947
       notes: UniProtKB unreviewed (TrEMBL) entry O52947 for gene alfA in Bacillus

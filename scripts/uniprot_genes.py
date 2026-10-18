@@ -156,7 +156,7 @@ def search_gene(symbol: str, taxon_id: int) -> list[dict]:
 
 
 def fetch_entries_by_accession(accessions: list[str]) -> dict[str, dict]:
-    """Fetch UniProt entries for a batch of accessions, keyed by primaryAccession."""
+    """Fetch UniProt entries for a batch of accessions, keyed by primary and secondary accessions."""
     unique = sorted({a.split(":")[-1] for a in accessions if a})
     out: dict[str, dict] = {}
     batch_size = 100
@@ -170,6 +170,9 @@ def fetch_entries_by_accession(accessions: list[str]) -> dict[str, dict]:
             acc = entry.get("primaryAccession")
             if acc:
                 out[acc] = entry
+            for sec in entry.get("secondaryAccessions") or []:
+                if sec and sec not in out:
+                    out[sec] = entry
     return out
 
 
@@ -192,13 +195,63 @@ def entry_status(entry: dict) -> str | None:
 
 
 def gene_names(entry: dict) -> list[str]:
-    """Every gene name and synonym UniProt lists on the entry."""
+    """Every gene name, synonym, ordered locus name, and ORF name UniProt lists on the entry."""
     names = []
     for gene in entry.get("genes") or []:
         value = (gene.get("geneName") or {}).get("value")
         if value:
             names.append(value)
         names += [s["value"] for s in gene.get("synonyms") or [] if s.get("value")]
+        names += [loc["value"] for loc in gene.get("orderedLocusNames") or [] if loc.get("value")]
+        names += [orf["value"] for orf in gene.get("orfNames") or [] if orf.get("value")]
+    return names
+
+
+def primary_gene_token(entry: dict) -> str | None:
+    """The primary gene symbol, or first ordered locus / ORF / synonym token on the entry."""
+    for gene in entry.get("genes") or []:
+        val = (gene.get("geneName") or {}).get("value")
+        if val:
+            return val
+    all_loci = []
+    for gene in entry.get("genes") or []:
+        for key in ("orderedLocusNames", "orfNames", "synonyms"):
+            for item in gene.get(key) or []:
+                if item.get("value"):
+                    all_loci.append(item["value"])
+    for tok in all_loci:
+        if tok.startswith("Tb927."):
+            return tok
+    return all_loci[0] if all_loci else None
+
+
+def entry_protein_names(entry: dict) -> set[str]:
+    """All full and short protein names listed on the UniProt entry."""
+    names: set[str] = set()
+    desc = entry.get("proteinDescription") or {}
+
+    def _extract_block(block: dict) -> None:
+        if not isinstance(block, dict):
+            return
+        rec = block.get("recommendedName") or {}
+        if (rec.get("fullName") or {}).get("value"):
+            names.add(rec["fullName"]["value"])
+        for s in rec.get("shortNames") or []:
+            if s.get("value"):
+                names.add(s["value"])
+        for alt in (block.get("alternativeNames") or []) + (block.get("submissionNames") or []):
+            if (alt.get("fullName") or {}).get("value"):
+                names.add(alt["fullName"]["value"])
+            for s in alt.get("shortNames") or []:
+                if s.get("value"):
+                    names.add(s["value"])
+        for cd in block.get("cdAntigenNames") or []:
+            if cd.get("value"):
+                names.add(cd["value"])
+
+    _extract_block(desc)
+    for part in (desc.get("components") or []) + (desc.get("includes") or []):
+        _extract_block(part)
     return names
 
 
@@ -233,7 +286,9 @@ def localisation_note(acc: str, location: str, citation: str | None) -> str:
     return f"{citation} {base}" if citation else base
 
 
-_SYNONYM_ROLE_RE = re.compile(r"\bgene ([^\s,()]+), which UniProt lists under the primary name\b")
+_SYNONYM_ROLE_RE = re.compile(
+    r"\bgene ([^\s,()]+), which UniProt lists (?:under the primary name\b|without a gene symbol\b)"
+)
 _ALSO_SYNONYM_RE = re.compile(r"\(also declared as (?:synonym|locus tag)[s]? ([^)]+)\)")
 
 
@@ -459,6 +514,7 @@ CG_COVERED = "COVERED"
 CG_PARTIAL = "PARTIAL_EXAMPLES"
 CG_SEEDABLE = "HAS_SYMBOLS_NO_EXAMPLES"
 CG_NO_SYMBOL = "NO_GENE_SYMBOLS"
+CG_DANGLING_REF = "DANGLING_COMPONENT_REF"
 CG_UNANCHORED_XREF = "UNANCHORED_WITH_UNIPROT"
 CG_UNANCHORED = "UNANCHORED_NO_UNIPROT"
 
@@ -467,6 +523,7 @@ CG_MEANING = {
     CG_PARTIAL: "component_ref target holds protein_examples but has unrepresented symbols",
     CG_SEEDABLE: "component_ref target declares gene_symbols but holds no protein_examples",
     CG_NO_SYMBOL: "component_ref target declares no gene_symbols and holds no protein_examples",
+    CG_DANGLING_REF: "component_ref names a component_id that does not exist on the record",
     CG_UNANCHORED_XREF: "no component_ref, but node carries a UniProtKB grounding or xref",
     CG_UNANCHORED: "no component_ref and no UniProtKB grounding or xref on the node",
 }
@@ -504,6 +561,8 @@ def causal_graph_report(doc: dict) -> list[tuple[str, str, str, str]]:
                     ctype = comp.get("component_type")
                     detail = f"->{cref} ({ctype}: {comp.get('label')})"
                     rows.append((gname, nid, CG_NO_SYMBOL, detail))
+            elif cref:
+                rows.append((gname, nid, CG_DANGLING_REF, f"->{cref} (missing component)"))
             else:
                 grounding = node.get("grounding") or ""
                 xrefs = node.get("xrefs") or []
@@ -544,8 +603,9 @@ def verify_records(records: list[tuple[Path, dict]]) -> list[tuple[Path, str, st
     for _path, doc in records:
         for comp in doc.get("components") or []:
             for ex in comp.get("protein_examples") or []:
-                if ex.get("uniprot_id"):
-                    all_accs.append(ex["uniprot_id"])
+                uid = ex.get("uniprot_id")
+                if uid and str(uid).startswith("UniProtKB:"):
+                    all_accs.append(str(uid))
         for graph in doc.get("causal_graphs") or []:
             for node in graph.get("nodes") or []:
                 if node.get("node_type") != "GENE_OR_PROTEIN":
@@ -553,9 +613,7 @@ def verify_records(records: list[tuple[Path, dict]]) -> list[tuple[Path, str, st
                 for x in [node.get("grounding"), *(node.get("xrefs") or [])]:
                     if x and str(x).startswith("UniProtKB:"):
                         all_accs.append(str(x))
-    if not all_accs:
-        return []
-    entries = fetch_entries_by_accession(all_accs)
+    entries = fetch_entries_by_accession(all_accs) if all_accs else {}
     taxon_ids = [
         str((e.get("organism") or {}).get("taxonId"))
         for e in entries.values()
@@ -565,6 +623,7 @@ def verify_records(records: list[tuple[Path, dict]]) -> list[tuple[Path, str, st
 
     issues: list[tuple[Path, str, str, str]] = []
     for path, doc in records:
+        comp_ids = {c.get("component_id") for c in doc.get("components") or [] if c.get("component_id")}
         record_labels = {
             t["taxon_id"].split(":")[1]: t["taxon_label"]
             for t in doc.get("canonical_examples") or []
@@ -573,16 +632,53 @@ def verify_records(records: list[tuple[Path, dict]]) -> list[tuple[Path, str, st
         for comp in doc.get("components") or []:
             cid = comp.get("component_id") or "<component>"
             for ex in comp.get("protein_examples") or []:
-                uid = ex.get("uniprot_id") or ""
-                acc = uid.split(":")[-1]
+                uid = str(ex.get("uniprot_id") or "")
+                if not uid.startswith("UniProtKB:") or not uid.split(":", 1)[1]:
+                    issues.append((
+                        path, f"components.{cid}", uid,
+                        "uniprot_id must carry the 'UniProtKB:' prefix",
+                    ))
+                    continue
+                acc = uid.split(":", 1)[1]
                 entry = entries.get(acc)
                 if not entry:
                     issues.append((path, f"components.{cid}", uid, "accession did not resolve in UniProtKB"))
                     continue
+                primary_acc = entry.get("primaryAccession")
+                if primary_acc and primary_acc != acc:
+                    issues.append((
+                        path, f"components.{cid}", uid,
+                        f"secondary accession; superseded by UniProtKB:{primary_acc}",
+                    ))
                 actual_status = entry_status(entry)
                 if ex.get("entry_status") != actual_status:
                     msg = f"entry_status is {ex.get('entry_status')!r}, UniProt says {actual_status!r}"
                     issues.append((path, f"components.{cid}", uid, msg))
+                valid_labels = entry_protein_names(entry)
+                if ex.get("protein_label") and valid_labels and ex["protein_label"] not in valid_labels:
+                    msg = (
+                        f"protein_label is {ex.get('protein_label')!r}, "
+                        f"expected one of {sorted(valid_labels)}"
+                    )
+                    issues.append((path, f"components.{cid}", uid, msg))
+                tokens = {t.lower() for t in gene_names(entry)}
+                gs = ex.get("gene_symbol")
+                if gs:
+                    if tokens and gs.lower() not in tokens:
+                        msg = (
+                            f"gene_symbol {gs!r} not in UniProt gene/locus tokens "
+                            f"{sorted(gene_names(entry))}"
+                        )
+                        issues.append((path, f"components.{cid}", uid, msg))
+                    elif (
+                        not tokens
+                        and "which UniProt lists without a gene symbol" not in (ex.get("role") or "")
+                    ):
+                        msg = (
+                            f"gene_symbol {gs!r} set on entry with no UniProt gene tokens "
+                            "without role disclosure"
+                        )
+                        issues.append((path, f"components.{cid}", uid, msg))
                 actual_taxon = (entry.get("organism") or {}).get("taxonId")
                 if actual_taxon and ex.get("taxon_id") != f"NCBITaxon:{actual_taxon}":
                     msg = f"taxon_id is {ex.get('taxon_id')!r}, UniProt says 'NCBITaxon:{actual_taxon}'"
@@ -603,15 +699,27 @@ def verify_records(records: list[tuple[Path, dict]]) -> list[tuple[Path, str, st
         for graph in doc.get("causal_graphs") or []:
             gname = graph.get("graph_id") or graph.get("name") or graph.get("label") or "<graph>"
             for node in graph.get("nodes") or []:
+                nid = node.get("node_id") or node.get("id") or "<node>"
+                cref = node.get("component_ref")
+                if cref and cref not in comp_ids:
+                    issues.append((
+                        path, f"causal_graphs.{gname}.{nid}", str(cref),
+                        f"dangling component_ref {cref!r} (not in components)",
+                    ))
                 if node.get("node_type") != "GENE_OR_PROTEIN":
                     continue
-                nid = node.get("node_id") or node.get("id") or "<node>"
                 for x in [node.get("grounding"), *(node.get("xrefs") or [])]:
                     if x and str(x).startswith("UniProtKB:"):
-                        acc = str(x).split(":")[-1]
-                        if acc not in entries:
+                        acc = str(x).split(":", 1)[1]
+                        entry = entries.get(acc)
+                        if not entry:
                             issues.append((path, f"causal_graphs.{gname}.{nid}", str(x),
                                            "accession did not resolve in UniProtKB"))
+                        elif entry.get("primaryAccession") and entry["primaryAccession"] != acc:
+                            issues.append((
+                                path, f"causal_graphs.{gname}.{nid}", str(x),
+                                f"secondary accession; superseded by UniProtKB:{entry['primaryAccession']}",
+                            ))
     return issues
 
 
@@ -652,7 +760,8 @@ def build_example(hit: dict, today: str, citations: dict[str, str],
     organism_name = (record_labels or {}).get(str(taxon)) or taxon_names.get(str(taxon))
     if not organism_name:
         return None
-    primary = (entry.get("genes") or [{}])[0].get("geneName", {}).get("value") or hit["symbol"]
+    primary_tok = primary_gene_token(entry)
+    primary = primary_tok or hit["symbol"]
     desc = entry.get("proteinDescription") or {}
     label = ((desc.get("recommendedName") or {}).get("fullName") or {}).get("value") or acc
 
@@ -674,8 +783,12 @@ def build_example(hit: dict, today: str, citations: dict[str, str],
                 "is the one at the taxon the record names" if hit.get("narrowed") else "")
     # rodA and mrdB are one gene; say so rather than leaving the record's symbol and
     # UniProt's primary name looking like two different things.
-    named = (f"gene {hit['symbol']}, which UniProt lists under the primary name {primary},"
-             if primary.lower() != hit["symbol"].lower() else f"gene {hit['symbol']}")
+    if primary_tok is None:
+        named = f"gene {hit['symbol']}, which UniProt lists without a gene symbol,"
+    elif primary.lower() != hit["symbol"].lower():
+        named = f"gene {hit['symbol']}, which UniProt lists under the primary name {primary},"
+    else:
+        named = f"gene {hit['symbol']}"
     role = (f"The single reviewed UniProtKB entry for {named} in "
             f"{organism_name}, a taxon this record names{narrowed}. Identifier for the "
             f"component's declared gene symbol; it is not itself evidence that the protein "

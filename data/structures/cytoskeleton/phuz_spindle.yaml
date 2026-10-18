@@ -69,14 +69,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:B3FK34
     protein_label: Phage tubulin-like protein
-    gene_symbol: phuZ
+    gene_symbol: 201phi2-1p059
     taxon_id: NCBITaxon:198110
     taxon_label: Pseudomonas phage 201phi2-1
     entry_status: REVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative reviewed UniProtKB entry for gene phuZ in Pseudomonas phage
-      201phi2-1. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+    role: Representative reviewed UniProtKB entry for gene phuZ, which UniProt lists
+      under the primary name 201phi2-1p059, in Pseudomonas phage 201phi2-1. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
     evidence:
     - reference: PMID:22726436
       notes: Kraemer JA et al. 2012, ‘A phage tubulin assembles dynamic filaments

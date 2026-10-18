@@ -87,14 +87,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q382W6
     protein_label: EF-hand domain-containing protein
-    gene_symbol: BILBO1
+    gene_symbol: Tb11.01.3960
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BILBO1 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BILBO1, which
+      UniProt lists under the primary name Tb11.01.3960, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q382W6
       notes: UniProtKB unreviewed (TrEMBL) entry Q382W6 for gene BILBO1 in Trypanosoma
@@ -107,9 +108,10 @@ components:
     taxon_label: Trypanosoma brucei
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BILBO1 in Trypanosoma
-      brucei. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BILBO1, which
+      UniProt lists without a gene symbol, in Trypanosoma brucei. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/B2B9C5
       notes: UniProtKB unreviewed (TrEMBL) entry B2B9C5 for gene BILBO1 in Trypanosoma
@@ -137,14 +139,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q582Y1
     protein_label: Serine/threonine-protein
-    gene_symbol: FPC4
+    gene_symbol: Tb927.3.2690
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FPC4 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FPC4, which
+      UniProt lists under the primary name Tb927.3.2690, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q582Y1
       notes: UniProtKB unreviewed (TrEMBL) entry Q582Y1 for gene FPC4 in Trypanosoma
@@ -171,15 +174,16 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q584W7
     protein_label: BILBO1 N-terminal domain-containing protein
-    gene_symbol: BILBO2
+    gene_symbol: Tb927.6.3240
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BILBO2 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure (also declared
-      as synonym Tb927.6.3240).
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BILBO2, which
+      UniProt lists under the primary name Tb927.6.3240, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure (also declared as synonym
+      Tb927.6.3240).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q584W7
       notes: UniProtKB unreviewed (TrEMBL) entry Q584W7 for gene BILBO2 in Trypanosoma

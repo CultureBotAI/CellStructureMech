@@ -83,9 +83,10 @@ components:
     taxon_label: Lingulaulax polyedra
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene lbp in Lingulaulax
-      polyedra. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene lbp, which UniProt
+      lists without a gene symbol, in Lingulaulax polyedra. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q39913
       notes: UniProtKB unreviewed (TrEMBL) entry Q39913 for gene lbp in Lingulaulax

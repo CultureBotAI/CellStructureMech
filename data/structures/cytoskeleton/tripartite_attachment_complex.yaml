@@ -127,14 +127,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q581S0
     protein_label: Uncharacterized protein
-    gene_symbol: TAC40
+    gene_symbol: Tb927.4.1610
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TAC40 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TAC40, which
+      UniProt lists under the primary name Tb927.4.1610, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q581S0
       notes: UniProtKB unreviewed (TrEMBL) entry Q581S0 for gene TAC40 in Trypanosoma
@@ -159,14 +160,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q57XN5
     protein_label: Uncharacterized protein
-    gene_symbol: TAC102
+    gene_symbol: Tb927.7.2390
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TAC102 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TAC102, which
+      UniProt lists under the primary name Tb927.7.2390, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q57XN5
       notes: UniProtKB unreviewed (TrEMBL) entry Q57XN5 for gene TAC102 in Trypanosoma

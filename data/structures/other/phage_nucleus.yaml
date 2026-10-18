@@ -68,14 +68,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:B3FIW8
     protein_label: Chimallin
-    gene_symbol: chmA
+    gene_symbol: 201phi2-1p105
     taxon_id: NCBITaxon:198110
     taxon_label: Pseudomonas phage 201phi2-1
     entry_status: REVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative reviewed UniProtKB entry for gene chmA in Pseudomonas phage
-      201phi2-1. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+    role: Representative reviewed UniProtKB entry for gene chmA, which UniProt lists
+      under the primary name 201phi2-1p105, in Pseudomonas phage 201phi2-1. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
     evidence:
     - reference: PMID:28082593
       notes: Chaikeeratisak V et al. 2017, ‘Assembly of a nucleus-like structure during

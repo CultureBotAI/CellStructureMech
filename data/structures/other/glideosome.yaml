@@ -67,9 +67,10 @@ components:
     taxon_label: Toxoplasma gondii
     entry_status: REVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative reviewed UniProtKB entry for gene MyoA in Toxoplasma gondii.
-      Identifier for the component's declared gene symbol; it is not itself evidence
-      that the protein is part of this structure.
+    role: Representative reviewed UniProtKB entry for gene MyoA, which UniProt lists
+      without a gene symbol, in Toxoplasma gondii. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
     evidence:
     - reference: PMID:10749937
       notes: Hettmann C et al. 2000, ‘A dibasic motif in the tail of a class XIV apicomplexan
@@ -96,14 +97,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:A0A125YYD4
     protein_label: Myosin light chain MLC1
-    gene_symbol: MLC1
+    gene_symbol: TGME49_257680
     taxon_id: NCBITaxon:508771
     taxon_label: Toxoplasma gondii ME49
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene MLC1 in Toxoplasma
-      gondii ME49. Identifier for the component's declared gene symbol; it is not
-      itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene MLC1, which
+      UniProt lists under the primary name TGME49_257680, in Toxoplasma gondii ME49.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/A0A125YYD4
       notes: UniProtKB unreviewed (TrEMBL) entry A0A125YYD4 for gene MLC1 in Toxoplasma

@@ -56,14 +56,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q22WR6
     protein_label: Sperm-tail PG-rich repeat protein
-    gene_symbol: CFAP77
+    gene_symbol: TTHERM_00974270
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CFAP77 in Tetrahymena
-      thermophila SB210. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CFAP77, which
+      UniProt lists under the primary name TTHERM_00974270, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q22WR6
       notes: UniProtKB unreviewed (TrEMBL) entry Q22WR6 for gene CFAP77 in Tetrahymena

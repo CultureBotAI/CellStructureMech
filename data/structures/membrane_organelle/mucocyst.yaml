@@ -199,14 +199,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:I7M6L0
     protein_label: Ubiquitin interaction motif protein
-    gene_symbol: MDL1
+    gene_symbol: TTHERM_00471830
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene MDL1 in Tetrahymena
-      thermophila SB210. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene MDL1, which
+      UniProt lists under the primary name TTHERM_00471830, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/I7M6L0
       notes: UniProtKB unreviewed (TrEMBL) entry I7M6L0 for gene MDL1 in Tetrahymena

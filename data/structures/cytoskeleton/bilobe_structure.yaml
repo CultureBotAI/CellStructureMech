@@ -67,14 +67,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q587D3
     protein_label: MORN repeat-containing protein 1
-    gene_symbol: TbMORN1
+    gene_symbol: Tb927.6.4670
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TbMORN1 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TbMORN1, which
+      UniProt lists under the primary name Tb927.6.4670, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q587D3
       notes: UniProtKB unreviewed (TrEMBL) entry Q587D3 for gene TbMORN1 in Trypanosoma
@@ -101,14 +102,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q57VP6
     protein_label: Centrin, putative
-    gene_symbol: TbCentrin2
+    gene_symbol: Tb927.8.1080
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TbCentrin2 in
-      Trypanosoma brucei brucei TREU927. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TbCentrin2,
+      which UniProt lists under the primary name Tb927.8.1080, in Trypanosoma brucei
+      brucei TREU927. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q57VP6
       notes: UniProtKB unreviewed (TrEMBL) entry Q57VP6 for gene TbCentrin2 in Trypanosoma
@@ -116,14 +118,15 @@ components:
         component's membership in this structure rests on the record's own sources.
   - uniprot_id: UniProtKB:Q57WF6
     protein_label: Centrin, putative
-    gene_symbol: TbCentrin4
+    gene_symbol: Tb927.7.3410
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TbCentrin4 in
-      Trypanosoma brucei brucei TREU927. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TbCentrin4,
+      which UniProt lists under the primary name Tb927.7.3410, in Trypanosoma brucei
+      brucei TREU927. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q57WF6
       notes: UniProtKB unreviewed (TrEMBL) entry Q57WF6 for gene TbCentrin4 in Trypanosoma

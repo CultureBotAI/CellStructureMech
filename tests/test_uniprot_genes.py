@@ -513,6 +513,12 @@ def test_causal_graph_report_classifies_gene_or_protein_nodes():
                 {"id": "n2", "node_type": "GENE_OR_PROTEIN", "label": "AB", "component_ref": "partial_comp"},
                 {"id": "n3", "node_type": "GENE_OR_PROTEIN", "label": "C", "component_ref": "seedable_comp"},
                 {"id": "n4", "node_type": "GENE_OR_PROTEIN", "label": "D", "component_ref": "nosym_comp"},
+                {
+                    "id": "n_dangling",
+                    "node_type": "GENE_OR_PROTEIN",
+                    "label": "Ghost",
+                    "component_ref": "no_such_comp",
+                },
                 {"id": "n5", "node_type": "GENE_OR_PROTEIN", "label": "Ext1", "xrefs": ["UniProtKB:P99999"]},
                 {"id": "n6", "node_type": "GENE_OR_PROTEIN", "label": "Ext2"},
                 {"id": "n7", "node_type": "BIOLOGICAL_PROCESS", "label": "Proc"},
@@ -525,6 +531,7 @@ def test_causal_graph_report_classifies_gene_or_protein_nodes():
         ("n2", G.CG_PARTIAL),
         ("n3", G.CG_SEEDABLE),
         ("n4", G.CG_NO_SYMBOL),
+        ("n_dangling", G.CG_DANGLING_REF),
         ("n5", G.CG_UNANCHORED_XREF),
         ("n6", G.CG_UNANCHORED),
     ]
@@ -542,6 +549,8 @@ def test_verify_records_checks_status_taxon_and_label(monkeypatch, tmp_path):
             "component_id": "mreb",
             "protein_examples": [{
                 "uniprot_id": "UniProtKB:P0A9X4",
+                "protein_label": "A protein",
+                "gene_symbol": "mreB",
                 "entry_status": "REVIEWED",
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
@@ -556,6 +565,8 @@ def test_verify_records_checks_status_taxon_and_label(monkeypatch, tmp_path):
             "component_id": "mreb",
             "protein_examples": [{
                 "uniprot_id": "UniProtKB:P0A9X4",
+                "protein_label": "A protein",
+                "gene_symbol": "mreB",
                 "entry_status": "REVIEWED",
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli (strain K12)",
@@ -565,6 +576,94 @@ def test_verify_records_checks_status_taxon_and_label(monkeypatch, tmp_path):
     issues = G.verify_records([(tmp_path / "bad.yaml", bad_doc)])
     assert len(issues) == 1
     assert "taxon_label" in issues[0][3]
+
+
+def test_verify_records_rejects_unprefixed_curie_secondary_acc_protein_label_and_dangling_ref(
+    monkeypatch, tmp_path
+):
+    merged_entry = entry("P0A9X4", ["mreB"], 83333, label="Rod shape-determining protein MreB")
+    merged_entry["secondaryAccessions"] = ["P13519"]
+    monkeypatch.setattr(
+        G, "fetch_entries_by_accession",
+        lambda accs: {"P0A9X4": merged_entry, "P13519": merged_entry},
+    )
+    monkeypatch.setattr(G, "ncbi_taxon_names", lambda tids: {"83333": "Escherichia coli K-12"})
+    doc = {
+        "canonical_examples": [{"taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12"}],
+        "components": [{
+            "component_id": "mreb",
+            "protein_examples": [
+                {
+                    "uniprot_id": "P0A9X4",
+                    "protein_label": "Rod shape-determining protein MreB",
+                    "gene_symbol": "mreB",
+                    "entry_status": "REVIEWED",
+                    "taxon_id": "NCBITaxon:83333",
+                    "taxon_label": "Escherichia coli K-12",
+                },
+                {
+                    "uniprot_id": "UniProtKB:P13519",
+                    "protein_label": "Stale protein label",
+                    "gene_symbol": "wrongSym",
+                    "entry_status": "REVIEWED",
+                    "taxon_id": "NCBITaxon:83333",
+                    "taxon_label": "Escherichia coli K-12",
+                },
+            ],
+        }],
+        "causal_graphs": [{
+            "name": "g1",
+            "nodes": [{
+                "id": "n1",
+                "node_type": "GENE_OR_PROTEIN",
+                "label": "MreB",
+                "component_ref": "nonexistent_comp",
+                "xrefs": ["UniProtKB:P13519"],
+            }],
+        }],
+    }
+    issues = G.verify_records([(tmp_path / "doc.yaml", doc)])
+    problems = [p for _, _, _, p in issues]
+    assert any("must carry the 'UniProtKB:' prefix" in p for p in problems)
+    assert sum("secondary accession; superseded by UniProtKB:P0A9X4" in p for p in problems) == 2
+    assert any("protein_label is 'Stale protein label'" in p for p in problems)
+    assert any("gene_symbol 'wrongSym' not in UniProt gene/locus tokens" in p for p in problems)
+    assert any("dangling component_ref 'nonexistent_comp'" in p for p in problems)
+
+
+def test_gene_names_and_build_example_support_ordered_locus_and_orfs():
+    locus_entry = {
+        "primaryAccession": "Q9KN58",
+        "entryType": "UniProtKB reviewed (Swiss-Prot)",
+        "genes": [{"orderedLocusNames": [{"value": "VC_A0107"}], "orfNames": [{"value": "VCA0107"}]}],
+        "organism": {"taxonId": 243277, "scientificName": "Vibrio cholerae"},
+        "proteinDescription": {"recommendedName": {"fullName": {"value": "T6SS sheath protein VipA"}}},
+        "comments": [],
+    }
+    assert G.gene_names(locus_entry) == ["VC_A0107", "VCA0107"]
+    assert G.primary_gene_token(locus_entry) == "VC_A0107"
+    hit = {"entry": locus_entry, "symbol": "vipA", "taxon_label": "Vibrio cholerae", "narrowed": False}
+    ex = G.build_example(hit, "2026-10-17", {}, {"243277": "Vibrio cholerae O1 biovar El Tor str. N16961"})
+    assert ex["gene_symbol"] == "VC_A0107"
+    assert "gene vipA, which UniProt lists under the primary name VC_A0107," in ex["role"]
+    assert G.missing_symbols({"gene_symbols": ["vipA", "VC_A0107"], "protein_examples": [ex]}) == []
+
+
+def test_build_example_discloses_when_entry_has_no_gene_tokens():
+    geneless_entry = {
+        "primaryAccession": "A0ACM8DFF3",
+        "entryType": "UniProtKB unreviewed (TrEMBL)",
+        "genes": [],
+        "organism": {"taxonId": 29292, "scientificName": "Pyrodictium abyssi"},
+        "proteinDescription": {"submissionNames": [{"fullName": {"value": "Cannula protein"}}]},
+        "comments": [],
+    }
+    assert G.primary_gene_token(geneless_entry) is None
+    hit = {"entry": geneless_entry, "symbol": "canA", "taxon_label": "Pyrodictium abyssi", "narrowed": False}
+    ex = G.build_example(hit, "2026-10-17", {}, {"29292": "Pyrodictium abyssi"})
+    assert ex["gene_symbol"] == "canA"
+    assert "gene canA, which UniProt lists without a gene symbol," in ex["role"]
+    assert G.missing_symbols({"gene_symbols": ["canA"], "protein_examples": [ex]}) == []
 
 
 def test_missing_symbols_recognizes_synonym_recorded_in_role():

@@ -70,9 +70,10 @@ components:
     taxon_label: Chlamydomonas reinhardtii
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene MST1 in Chlamydomonas
-      reinhardtii. Identifier for the component's declared gene symbol; it is not
-      itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene MST1, which
+      UniProt lists without a gene symbol, in Chlamydomonas reinhardtii. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q8LRM7
       notes: UniProtKB unreviewed (TrEMBL) entry Q8LRM7 for gene MST1 in Chlamydomonas

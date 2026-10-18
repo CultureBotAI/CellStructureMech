@@ -79,9 +79,10 @@ components:
     taxon_label: Pyrodictium abyssi
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene canA in Pyrodictium
-      abyssi. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene canA, which
+      UniProt lists without a gene symbol, in Pyrodictium abyssi. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/A0ACM8DFF3
       notes: UniProtKB unreviewed (TrEMBL) entry A0ACM8DFF3 for gene canA in Pyrodictium

@@ -68,10 +68,16 @@ uv run python scripts/uniprot_genes.py --verify
    the protein). When a symbol returns multiple reviewed paralogs/alleles in a
    taxon (e.g. `pilA` in *P. aeruginosa*), automatic seeding skips it; a curator
    must inspect the literature cited on the record before choosing an accession.
-2. **Re-check the entry's own gene names.**
+2. **Re-check the entry's own gene and locus tokens.**
    UniProt's search index is looser than case-insensitive equality. Always check
-   that the returned entry's primary `geneName` or `synonyms` actually match the
-   declared symbol before accepting it.
+   that the returned entry's primary `geneName`, `synonyms`, `orderedLocusNames`,
+   or `orfNames` actually match the declared symbol before accepting it. When
+   UniProt lists an entry only under an ordered locus or ORF name (e.g.
+   `VC_A0107` or `TTHERM_01308010`), set `gene_symbol` to that primary UniProt
+   token and record the literature symbol mapping in `role` (`gene <symbol>,
+   which UniProt lists under the primary name <locus_or_orf>`). When a UniProt
+   entry carries no gene tokens at all, disclose `which UniProt lists without a
+   gene symbol` in `role`.
 3. **`taxon_id` and `taxon_label` must match the entry and NCBI Taxonomy (#270).**
    - Record the entry's own `organism.taxonId` as `NCBITaxon:<id>`, because a
      record often names a species (*Pseudomonas aeruginosa*, `NCBITaxon:287`)
@@ -89,7 +95,7 @@ uv run python scripts/uniprot_genes.py --verify
    without checking `entryType`. Prefer `REVIEWED` entries; use an `UNREVIEWED`
    TrEMBL entry only when a non-model organism has no Swiss-Prot entry for that
    gene and the literature on the record unambiguously identifies the protein.
-5. **State honestly what the accession proves.**
+5. **State honestly what the accession proves and pass `--verify`.**
    - When seeded by gene symbol (`uniprot_genes.py`), the `role` must state that
      the accession is the reviewed UniProtKB entry for the declared gene symbol
      in that taxon and is not itself independent evidence of structure
@@ -100,24 +106,31 @@ uv run python scripts/uniprot_genes.py --verify
      experimental localisation citation exists on the entry, cite the UniProt
      entry URL (`https://www.uniprot.org/uniprotkb/<acc>`) with an identity-only
      note.
+   - `scripts/uniprot_genes.py --verify` checks that every `uniprot_id` carries
+     the `UniProtKB:` prefix, resolves as a primary (non-secondary) accession,
+     matches `entry_status`, `protein_label`, `gene_symbol` (or `role`
+     attribution for gene-less entries), `taxon_id`, and `taxon_label`, and that
+     no `causal_graphs` node carries a dangling `component_ref`.
 
 ## Workflow for reviewing a record (or the corpus)
 
 ### Step 1: Audit `causal_graphs` `GENE_OR_PROTEIN` elements
 
 Run `uv run python scripts/uniprot_genes.py --causal-graphs` (with `--record` for
-a single record). Every `GENE_OR_PROTEIN` causal node falls into one of four
+a single record). Every `GENE_OR_PROTEIN` causal node falls into one of five
 states:
 
-1. **Anchored (`component_ref` set) and target component has `protein_examples`**:
+1. **Anchored (`component_ref` set) and target component has `protein_examples`
+   (`COVERED` / `PARTIAL_EXAMPLES`)**:
    Verify that every declared subunit symbol on the component is represented,
    not just the first symbol (#261, #298).
 2. **Anchored (`component_ref` set), target component has `gene_symbols` but no
-   `protein_examples`**:
+   `protein_examples` (`HAS_SYMBOLS_NO_EXAMPLES`)**:
    Run `scripts/uniprot_genes.py` (with `--include-complexes` if the target
    component has `component_type: PROTEIN_COMPLEX`) to resolve each declared
    symbol against the record's `canonical_examples` taxa.
-3. **Anchored (`component_ref` set), target component has no `gene_symbols`**:
+3. **Anchored (`component_ref` set), target component has no `gene_symbols`
+   (`NO_GENE_SYMBOLS`)**:
    Inspect the component's `component_id`, `label`, `description`, `evidence`,
    and the causal node's `label` and `description`.
    - If the component represents a specific protein or a complex of specific
@@ -129,7 +142,12 @@ states:
      `gene_symbols` or `protein_examples` unless correcting an actual scientific
      error, because `label` and `role` are hashed by
      `scripts/build_text_embedding_map.py`.
-4. **Unanchored (`component_ref` absent)**:
+4. **Dangling `component_ref` (`DANGLING_COMPONENT_REF`)**:
+   The causal node's `component_ref` does not match any `component_id` in
+   `components`. Fix `component_ref` to point to the valid `component_id` (this
+   is also flagged as an error by `--verify`).
+5. **Unanchored (`component_ref` absent: `UNANCHORED_WITH_UNIPROT` /
+   `UNANCHORED_NO_UNIPROT`)**:
    - First check whether the node actually denotes one of the record's existing
      `components` (for example, node `mature_lpp` matching component
      `outer_membrane_lipoprotein_links`, or node `prearchaellin` matching

@@ -81,14 +81,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:A0A2K3DWT6
     protein_label: Cep290 middle coiled-coil region domain-containing protein
-    gene_symbol: CEP290
+    gene_symbol: CHLRE_03g167550v5
     taxon_id: NCBITaxon:3055
     taxon_label: Chlamydomonas reinhardtii
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP290 in Chlamydomonas
-      reinhardtii. Identifier for the component's declared gene symbol; it is not
-      itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP290, which
+      UniProt lists under the primary name CHLRE_03g167550v5, in Chlamydomonas reinhardtii.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/A0A2K3DWT6
       notes: UniProtKB unreviewed (TrEMBL) entry A0A2K3DWT6 for gene CEP290 in Chlamydomonas

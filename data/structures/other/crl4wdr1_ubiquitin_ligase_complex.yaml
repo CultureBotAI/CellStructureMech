@@ -57,14 +57,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q57XW2
     protein_label: Cullin 4B, putative
-    gene_symbol: CUL4
+    gene_symbol: Tb927.3.1290
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CUL4 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CUL4, which
+      UniProt lists under the primary name Tb927.3.1290, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q57XW2
       notes: UniProtKB unreviewed (TrEMBL) entry Q57XW2 for gene CUL4 in Trypanosoma
@@ -91,14 +92,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q586I3
     protein_label: DNA damage-binding protein 1
-    gene_symbol: DDB1
+    gene_symbol: Tb927.6.5110
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene DDB1 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene DDB1, which
+      UniProt lists under the primary name Tb927.6.5110, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q586I3
       notes: UniProtKB unreviewed (TrEMBL) entry Q586I3 for gene DDB1 in Trypanosoma
@@ -130,14 +132,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q582R9
     protein_label: Uncharacterized protein
-    gene_symbol: WDR1
+    gene_symbol: Tb927.3.4660
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene WDR1 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene WDR1, which
+      UniProt lists under the primary name Tb927.3.4660, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q582R9
       notes: UniProtKB unreviewed (TrEMBL) entry Q582R9 for gene WDR1 in Trypanosoma

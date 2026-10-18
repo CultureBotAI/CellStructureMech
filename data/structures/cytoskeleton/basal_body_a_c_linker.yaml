@@ -66,14 +66,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:I7MIG5
     protein_label: WD repeat WRAP73-like protein, putative
-    gene_symbol: WRAP73
+    gene_symbol: TTHERM_00614690
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene WRAP73 in Tetrahymena
-      thermophila SB210. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene WRAP73, which
+      UniProt lists under the primary name TTHERM_00614690, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/I7MIG5
       notes: UniProtKB unreviewed (TrEMBL) entry I7MIG5 for gene WRAP73 in Tetrahymena
@@ -105,14 +106,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q24GZ2
     protein_label: Centrosomal protein, putative
-    gene_symbol: CEP135
+    gene_symbol: TTHERM_01457090
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP135 in Tetrahymena
-      thermophila SB210. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP135, which
+      UniProt lists under the primary name TTHERM_01457090, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q24GZ2
       notes: UniProtKB unreviewed (TrEMBL) entry Q24GZ2 for gene CEP135 in Tetrahymena
@@ -146,14 +148,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q23KH2
     protein_label: MORN motif protein
-    gene_symbol: TBC1D31
+    gene_symbol: TTHERM_00193630
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TBC1D31 in Tetrahymena
-      thermophila SB210. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TBC1D31, which
+      UniProt lists under the primary name TTHERM_00193630, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q23KH2
       notes: UniProtKB unreviewed (TrEMBL) entry Q23KH2 for gene TBC1D31 in Tetrahymena
@@ -182,14 +185,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q229Z6
     protein_label: POC1 centriolar protein homolog
-    gene_symbol: POC1
+    gene_symbol: TTHERM_01308010
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: REVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative reviewed UniProtKB entry for gene POC1 in Tetrahymena thermophila
-      SB210. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+    role: Representative reviewed UniProtKB entry for gene POC1, which UniProt lists
+      under the primary name TTHERM_01308010, in Tetrahymena thermophila SB210. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
     evidence:
     - reference: PMID:20008567
       notes: Pearson CG et al. 2009, ‘Basal body stability and ciliogenesis requires

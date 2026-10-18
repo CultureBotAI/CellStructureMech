@@ -59,14 +59,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q229Z6
     protein_label: POC1 centriolar protein homolog
-    gene_symbol: POC1
+    gene_symbol: TTHERM_01308010
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: REVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative reviewed UniProtKB entry for gene POC1 in Tetrahymena thermophila
-      SB210. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+    role: Representative reviewed UniProtKB entry for gene POC1, which UniProt lists
+      under the primary name TTHERM_01308010, in Tetrahymena thermophila SB210. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
     evidence:
     - reference: PMID:20008567
       notes: Pearson CG et al. 2009, ‘Basal body stability and ciliogenesis requires
@@ -96,14 +97,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q22ZH2
     protein_label: Cilia- and flagella-associated protein 52
-    gene_symbol: FAP52
+    gene_symbol: TTHERM_01094880
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAP52 in Tetrahymena
-      thermophila SB210. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAP52, which
+      UniProt lists under the primary name TTHERM_01094880, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q22ZH2
       notes: UniProtKB unreviewed (TrEMBL) entry Q22ZH2 for gene FAP52 in Tetrahymena
@@ -131,14 +133,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:I7LU20
     protein_label: DNA polymerase delta C4-type zinc-finger protein
-    gene_symbol: FAP106
+    gene_symbol: TTHERM_00370750
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAP106 in Tetrahymena
-      thermophila SB210. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAP106, which
+      UniProt lists under the primary name TTHERM_00370750, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/I7LU20
       notes: UniProtKB unreviewed (TrEMBL) entry I7LU20 for gene FAP106 in Tetrahymena
@@ -178,14 +181,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:W7XCX2
     protein_label: Cilia- and flagella-associated protein 45
-    gene_symbol: FAP45
+    gene_symbol: TTHERM_001164064
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAP45 in Tetrahymena
-      thermophila SB210. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAP45, which
+      UniProt lists under the primary name TTHERM_001164064, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/W7XCX2
       notes: UniProtKB unreviewed (TrEMBL) entry W7XCX2 for gene FAP45 in Tetrahymena
@@ -209,14 +213,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:W7XDG5
     protein_label: Trichohyalin-plectin-homology domain-containing protein
-    gene_symbol: FAP210
+    gene_symbol: TTHERM_000300119
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAP210 in Tetrahymena
-      thermophila SB210. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAP210, which
+      UniProt lists under the primary name TTHERM_000300119, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/W7XDG5
       notes: UniProtKB unreviewed (TrEMBL) entry W7XDG5 for gene FAP210 in Tetrahymena

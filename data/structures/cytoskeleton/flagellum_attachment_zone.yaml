@@ -133,15 +133,16 @@ components:
   - uniprot_id: UniProtKB:Q4GYE7
     protein_label: Flagellar attachment zone protein 1 conserved domain-containing
       protein
-    gene_symbol: FAZ2
+    gene_symbol: TB927.1.4310
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAZ2 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure (also declared
-      as synonym Tb927.1.4310).
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAZ2, which
+      UniProt lists under the primary name TB927.1.4310, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure (also declared as synonym
+      Tb927.1.4310).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q4GYE7
       notes: UniProtKB unreviewed (TrEMBL) entry Q4GYE7 for gene FAZ2 in Trypanosoma
@@ -169,15 +170,16 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q583I5
     protein_label: C2 domain-containing protein
-    gene_symbol: CC2D
+    gene_symbol: Tb927.4.2080
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CC2D in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure (also declared
-      as synonym Tb927.4.2080).
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CC2D, which
+      UniProt lists under the primary name Tb927.4.2080, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure (also declared as synonym
+      Tb927.4.2080).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q583I5
       notes: UniProtKB unreviewed (TrEMBL) entry Q583I5 for gene CC2D in Trypanosoma

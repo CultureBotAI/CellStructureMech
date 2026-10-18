@@ -9,6 +9,13 @@ session:
   actors:
   - type: ai_agent
     name: claude-code
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2328
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2329
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2330
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2331
 events:
 - type: EDIT
   outcome: changed
@@ -18,3 +25,13 @@ events:
     protein_examples (1,952 total across 1,417 components) and CausalNode UniProtKB xrefs
     across the 909-record corpus, increasing GENE_OR_PROTEIN causal node UniProt coverage
     from 23.1% (300/1,296) to 91.6% (1,187/1,296) with 0 verification errors.
+- type: REVIEW
+  outcome: changed
+  summary: Adversarial review of PR #2328 and remediation of issues #2329, #2330, and #2331
+  details: Extended gene_names() with orderedLocusNames and orfNames (#2329) and updated
+    all 90 affected protein_examples across 39 structure YAML records with UniProt primary
+    locus/ORF attribution; hardened verify_records() to reject unprefixed UniProt CURIEs,
+    secondary/demerged accessions, protein_label drift, and undocumented synonym/no-gene
+    symbols (#2330); added DANGLING_COMPONENT_REF classification and verification check for
+    broken causal_graphs component_ref pointers (#2331); added regression tests in
+    tests/test_uniprot_genes.py.

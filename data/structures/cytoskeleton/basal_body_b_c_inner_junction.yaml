@@ -64,14 +64,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q229Z6
     protein_label: POC1 centriolar protein homolog
-    gene_symbol: POC1
+    gene_symbol: TTHERM_01308010
     taxon_id: NCBITaxon:312017
     taxon_label: Tetrahymena thermophila SB210
     entry_status: REVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative reviewed UniProtKB entry for gene POC1 in Tetrahymena thermophila
-      SB210. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+    role: Representative reviewed UniProtKB entry for gene POC1, which UniProt lists
+      under the primary name TTHERM_01308010, in Tetrahymena thermophila SB210. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
     evidence:
     - reference: PMID:20008567
       notes: Pearson CG et al. 2009, ‘Basal body stability and ciliogenesis requires

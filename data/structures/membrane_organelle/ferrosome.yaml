@@ -62,14 +62,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:C4XH20
     protein_label: Uncharacterized protein
-    gene_symbol: fezA
+    gene_symbol: DMR_28320
     taxon_id: NCBITaxon:573370
     taxon_label: Solidesulfovibrio magneticus RS-1
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene fezA in Solidesulfovibrio
-      magneticus RS-1. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene fezA, which
+      UniProt lists under the primary name DMR_28320, in Solidesulfovibrio magneticus
+      RS-1. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/C4XH20
       notes: UniProtKB unreviewed (TrEMBL) entry C4XH20 for gene fezA in Solidesulfovibrio
@@ -77,14 +78,15 @@ components:
         membership in this structure rests on the record's own sources.
   - uniprot_id: UniProtKB:C4XH21
     protein_label: P-type Zn(2+) transporter
-    gene_symbol: fezB
+    gene_symbol: DMR_28330
     taxon_id: NCBITaxon:573370
     taxon_label: Solidesulfovibrio magneticus RS-1
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene fezB in Solidesulfovibrio
-      magneticus RS-1. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene fezB, which
+      UniProt lists under the primary name DMR_28330, in Solidesulfovibrio magneticus
+      RS-1. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/C4XH21
       notes: UniProtKB unreviewed (TrEMBL) entry C4XH21 for gene fezB in Solidesulfovibrio
@@ -92,14 +94,15 @@ components:
         membership in this structure rests on the record's own sources.
   - uniprot_id: UniProtKB:C4XH22
     protein_label: HMA domain-containing protein
-    gene_symbol: fezC
+    gene_symbol: DMR_28340
     taxon_id: NCBITaxon:573370
     taxon_label: Solidesulfovibrio magneticus RS-1
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene fezC in Solidesulfovibrio
-      magneticus RS-1. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene fezC, which
+      UniProt lists under the primary name DMR_28340, in Solidesulfovibrio magneticus
+      RS-1. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/C4XH22
       notes: UniProtKB unreviewed (TrEMBL) entry C4XH22 for gene fezC in Solidesulfovibrio

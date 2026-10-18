@@ -64,14 +64,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:G4ML89
     protein_label: Septin like spn2
-    gene_symbol: SEP3
+    gene_symbol: MGG_06726
     taxon_id: NCBITaxon:242507
     taxon_label: Pyricularia oryzae 70-15
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SEP3 in Pyricularia
-      oryzae 70-15. Identifier for the component's declared gene symbol; it is not
-      itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SEP3, which
+      UniProt lists under the primary name MGG_06726, in Pyricularia oryzae 70-15.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/G4ML89
       notes: UniProtKB unreviewed (TrEMBL) entry G4ML89 for gene SEP3 in Pyricularia
@@ -79,14 +80,15 @@ components:
         membership in this structure rests on the record's own sources.
   - uniprot_id: UniProtKB:G4NJK4
     protein_label: Septin
-    gene_symbol: SEP4
+    gene_symbol: MGG_02626
     taxon_id: NCBITaxon:242507
     taxon_label: Pyricularia oryzae 70-15
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SEP4 in Pyricularia
-      oryzae 70-15. Identifier for the component's declared gene symbol; it is not
-      itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SEP4, which
+      UniProt lists under the primary name MGG_02626, in Pyricularia oryzae 70-15.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/G4NJK4
       notes: UniProtKB unreviewed (TrEMBL) entry G4NJK4 for gene SEP4 in Pyricularia
@@ -94,14 +96,15 @@ components:
         membership in this structure rests on the record's own sources.
   - uniprot_id: UniProtKB:G4N7W8
     protein_label: Septin-type G domain-containing protein
-    gene_symbol: SEP5
+    gene_symbol: MGG_06341
     taxon_id: NCBITaxon:242507
     taxon_label: Pyricularia oryzae 70-15
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SEP5 in Pyricularia
-      oryzae 70-15. Identifier for the component's declared gene symbol; it is not
-      itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SEP5, which
+      UniProt lists under the primary name MGG_06341, in Pyricularia oryzae 70-15.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/G4N7W8
       notes: UniProtKB unreviewed (TrEMBL) entry G4N7W8 for gene SEP5 in Pyricularia

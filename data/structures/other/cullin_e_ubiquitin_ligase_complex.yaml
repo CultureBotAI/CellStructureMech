@@ -53,14 +53,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q383D5
     protein_label: Cullin 1, putative
-    gene_symbol: Cul-E
+    gene_symbol: Tb11.01.3260
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Cul-E in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Cul-E, which
+      UniProt lists under the primary name Tb11.01.3260, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q383D5
       notes: UniProtKB unreviewed (TrEMBL) entry Q383D5 for gene Cul-E in Trypanosoma
@@ -90,14 +91,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q38C61
     protein_label: RING-type domain-containing protein
-    gene_symbol: Rbx1
+    gene_symbol: Tb10.70.6035
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Rbx1 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Rbx1, which
+      UniProt lists under the primary name Tb10.70.6035, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q38C61
       notes: UniProtKB unreviewed (TrEMBL) entry Q38C61 for gene Rbx1 in Trypanosoma
@@ -124,14 +126,15 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:Q384S1
     protein_label: SKP1 component POZ domain-containing protein
-    gene_symbol: Skp1.2
+    gene_symbol: Tb11.02.5340
     taxon_id: NCBITaxon:185431
     taxon_label: Trypanosoma brucei brucei TREU927
     entry_status: UNREVIEWED
     retrieved_on: '2026-10-17'
-    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Skp1.2 in Trypanosoma
-      brucei brucei TREU927. Identifier for the component's declared gene symbol;
-      it is not itself evidence that the protein is part of this structure.
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Skp1.2, which
+      UniProt lists under the primary name Tb11.02.5340, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q384S1
       notes: UniProtKB unreviewed (TrEMBL) entry Q384S1 for gene Skp1.2 in Trypanosoma
