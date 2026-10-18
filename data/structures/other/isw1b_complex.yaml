@@ -19,6 +19,13 @@ curation_history:
     constituent rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI evidence,
     a nonmechanistic function graph, and a subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:25:35Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: ISW1b
   synonym_type: EXACT_SYNONYM
@@ -43,6 +50,22 @@ components:
   - reference: DOI:10.1128/MCB.23.1.80-91.2003
     notes: Vary et al. 2003 separated the budding-yeast Isw1b complex from Isw1a and
       identified Isw1p as the shared ATPase subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38144
+    protein_label: ISWI chromatin-remodeling complex ATPase ISW1
+    gene_symbol: ISW1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ISW1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38144.
 - component_id: ioc2_isw1b_subunit
   label: Ioc2 Isw1b subunit
   component_type: PROTEIN
@@ -60,6 +83,22 @@ components:
     notes: Vary et al. 2003 found that Ioc2p and Ioc4p were mutually dependent for
       stable association with Isw1p and that Ioc2p copurified near-stoichiometric
       Isw1p and Ioc4p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12072
+    protein_label: ISWI one complex protein 2
+    gene_symbol: IOC2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IOC2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q12072.
 - component_id: ioc4_isw1b_subunit
   label: Ioc4 Isw1b subunit
   component_type: PROTEIN
@@ -77,6 +116,22 @@ components:
     notes: Vary et al. 2003 found that Ioc2p and Ioc4p were mutually dependent for
       stable association with Isw1p and that Ioc2p copurified near-stoichiometric
       Isw1p and Ioc4p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04213
+    protein_label: ISWI one complex protein 4
+    gene_symbol: IOC4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IOC4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q04213.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

@@ -22,6 +22,13 @@ curation_history:
     evidence, a nonmechanistic function graph, and a piccolo NuA4 subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:41Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Piccolo NuA4 complex
   synonym_type: EXACT_SYNONYM
@@ -53,6 +60,23 @@ components:
   - reference: DOI:10.1128/MCB.25.13.5535-5542.2005
     notes: Selleck et al. 2005 reconstituted Piccolo with Esa1 and minimal Epl1/Yng2
       segments.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08649
+    protein_label: Histone acetyltransferase ESA1
+    gene_symbol: ESA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ESA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q08649
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q08649, the single reviewed entry
+        for gene ESA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: epl1_piccolo_bridging_subunit
   label: Epl1 piccolo NuA4 bridging subunit
   component_type: PROTEIN
@@ -74,6 +98,22 @@ components:
   - reference: DOI:10.1128/MCB.25.13.5535-5542.2005
     notes: Selleck et al. 2005 tested the Epl1 minimal region that supports Piccolo
       nucleosome activity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P43572
+    protein_label: Enhancer of polycomb-like protein 1
+    gene_symbol: EPL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EPL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P43572.
 - component_id: yng2_piccolo_subunit
   label: Yng2 piccolo NuA4 subunit
   component_type: PROTEIN
@@ -94,6 +134,31 @@ components:
   - reference: DOI:10.1128/MCB.25.13.5535-5542.2005
     notes: Selleck et al. 2005 tested the Yng2 minimal region that supports Piccolo
       nucleosome activity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38806
+    protein_label: Chromatin modification-related protein YNG2
+    gene_symbol: YNG2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YNG2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10805724
+      notes: Loewith R et al. 2000, ‘Three yeast proteins related to the human candidate
+        tumor suppressor p33(ING1) are associated with histone acetyltransferase activities.’,
+        Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38806.
+    - reference: PMID:11544250
+      notes: Choy JS et al. 2001, ‘Yng2p-dependent NuA4 histone H4 acetylation activity
+        is required for mitotic and meiotic progression.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P38806.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38806.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

@@ -27,6 +27,13 @@ curation_history:
   changes: Replaced the bare CMG-boundary discussion components anchor with concrete
     GINS component anchors.
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:29Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Go, Ichi, Ni and San complex
   synonym_type: EXACT_SYNONYM
@@ -53,6 +60,22 @@ components:
   - reference: DOI:10.1101/gad.1065903
     notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
       Psf1, Psf2 and Psf3 proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03406
+    protein_label: DNA replication complex GINS protein SLD5
+    gene_symbol: SLD5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SLD5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12730134
+      notes: Takayama Y et al. 2003, ‘GINS, a novel multiprotein complex required
+        for chromosomal DNA replication in budding yeast.’, Genes Dev. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q03406.
 - component_id: psf1_subunit
   label: Psf1 GINS subunit
   component_type: PROTEIN
@@ -72,6 +95,22 @@ components:
   - reference: DOI:10.1101/gad.1065903
     notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
       Psf1, Psf2 and Psf3 proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12488
+    protein_label: DNA replication complex GINS protein PSF1
+    gene_symbol: PSF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PSF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12730134
+      notes: Takayama Y et al. 2003, ‘GINS, a novel multiprotein complex required
+        for chromosomal DNA replication in budding yeast.’, Genes Dev. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12488.
 - component_id: psf2_subunit
   label: Psf2 GINS subunit
   component_type: PROTEIN
@@ -91,6 +130,22 @@ components:
   - reference: DOI:10.1101/gad.1065903
     notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
       Psf1, Psf2 and Psf3 proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40359
+    protein_label: DNA replication complex GINS protein PSF2
+    gene_symbol: PSF2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PSF2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12730134
+      notes: Takayama Y et al. 2003, ‘GINS, a novel multiprotein complex required
+        for chromosomal DNA replication in budding yeast.’, Genes Dev. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P40359.
 - component_id: psf3_subunit
   label: Psf3 GINS subunit
   component_type: PROTEIN
@@ -110,6 +165,22 @@ components:
   - reference: DOI:10.1101/gad.1065903
     notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
       Psf1, Psf2 and Psf3 proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12146
+    protein_label: DNA replication complex GINS protein PSF3
+    gene_symbol: PSF3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PSF3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12730134
+      notes: Takayama Y et al. 2003, ‘GINS, a novel multiprotein complex required
+        for chromosomal DNA replication in budding yeast.’, Genes Dev. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12146.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

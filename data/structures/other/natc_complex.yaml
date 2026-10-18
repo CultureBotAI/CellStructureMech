@@ -22,6 +22,13 @@ curation_history:
     function, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:27:04Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: N-terminal acetyltransferase C complex
   synonym_type: EXACT_SYNONYM
@@ -51,6 +58,22 @@ components:
     notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
       complexes and describe yeast NatC as Mak3p with the Mak10 and Mak31p auxiliary
       subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03503
+    protein_label: N-alpha-acetyltransferase 30
+    gene_symbol: MAK3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MAK3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q03503.
 - component_id: mak10_natc_auxiliary_subunit
   label: Mak10 NatC auxiliary subunit
   component_type: PROTEIN
@@ -73,6 +96,22 @@ components:
     notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
       complexes and describe yeast NatC as Mak3p with the Mak10 and Mak31p auxiliary
       subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02197
+    protein_label: N-alpha-acetyltransferase 35, NatC auxiliary subunit
+    gene_symbol: MAK10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MAK10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q02197.
 - component_id: mak31_natc_auxiliary_subunit
   label: Mak31 NatC auxiliary subunit
   component_type: PROTEIN
@@ -95,6 +134,23 @@ components:
     notes: Polevoda and Sherman 2003 review the eukaryotic N-terminal acetyltransferase
       complexes and describe yeast NatC as Mak3p with the Mak10 and Mak31p auxiliary
       subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23059
+    protein_label: N-alpha-acetyltransferase 38, NatC auxiliary subunit
+    gene_symbol: MAK31
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MAK31 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P23059
+      notes: UniProtKB reviewed (Swiss-Prot) entry P23059, the single reviewed entry
+        for gene MAK31 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

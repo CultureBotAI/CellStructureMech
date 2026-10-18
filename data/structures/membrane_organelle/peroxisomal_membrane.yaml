@@ -26,6 +26,11 @@ curation_history:
     peroxisomal matrix wording and narrowing the membrane-localized peroxin graph
     node to membrane-associated docking and translocation factors.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: peroxisome membrane
   synonym_type: EXACT_SYNONYM
@@ -132,6 +137,8 @@ causal_graphs:
   - node_id: pex_import_machinery
     label: membrane-associated peroxin docking machinery
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P53112
   - node_id: matrix_protein_import
     label: peroxisomal matrix protein import
     node_type: BIOLOGICAL_PROCESS

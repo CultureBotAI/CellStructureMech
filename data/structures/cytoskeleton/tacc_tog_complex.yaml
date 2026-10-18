@@ -37,6 +37,11 @@ curation_history:
     components anchor with the two existing component IDs; biological text, graph
     topology and embedding projection are unchanged.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 synonyms:
@@ -77,7 +82,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-06'
     role: Reference-sequence exemplar for species-level experiments, not an assertion
-      that every experimental strain is this reference stock.
+      that every experimental strain is this reference stock (also declared as synonym
+      mia1).
     evidence:
     - reference: DOI:10.1038/srep20653
       notes: Purified full-length S. pombe Alp7 and Alp14 associate in sedimentation
@@ -122,7 +128,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-06'
     role: Reference-sequence exemplar for species-level experiments, not an assertion
-      that every experimental strain is this reference stock.
+      that every experimental strain is this reference stock (also declared as synonym
+      mtc1).
     evidence:
     - reference: DOI:10.1038/srep20653
       notes: Purified full-length S. pombe Alp7 and Alp14 associate in sedimentation
@@ -270,6 +277,8 @@ causal_graphs:
     label: Ndc80 kinetochore docking context
     node_type: GENE_OR_PROTEIN
     description: External docking protein, not a component of this binary complex.
+    xrefs:
+    - UniProtKB:Q10198
   - node_id: kinetochore_complex
     label: Kinetochore-associated Alp7/Alp14
     node_type: STATE

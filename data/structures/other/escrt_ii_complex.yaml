@@ -50,6 +50,13 @@ curation_history:
     backed by directly reachable Teo 2004, Lata 2008, Im and Hurley 2008, and Hierro
     2004 evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:35Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0036452
 part_of:
@@ -78,6 +85,24 @@ components:
   - reference: DOI:10.1016/j.devcel.2004.09.003
     notes: Teo et al. 2004 solved a Saccharomyces cerevisiae ESCRT-II core structure
       containing Vps22, Vps25 and the C-terminal region of Vps36.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12483
+    protein_label: Vacuolar-sorting protein SNF8
+    gene_symbol: SNF8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS22, which UniProt lists
+      under the primary name SNF8, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12194858
+      notes: Babst M et al. 2002, ‘Endosome-associated complex, ESCRT-II, recruits
+        transport machinery for protein sorting at the multivesicular body.’, Dev
+        Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm'
+        localisation of Q12483.
 - component_id: vps25_escrt_ii_subunit
   label: Vps25 ESCRT-II subunit
   component_type: PROTEIN
@@ -95,6 +120,23 @@ components:
     notes: Teo et al. 2004 solved the Saccharomyces cerevisiae ESCRT-II core as a
       trilobal complex with two Vps25 copies plus Vps22 and the C-terminal region
       of Vps36.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47142
+    protein_label: Vacuolar protein-sorting-associated protein 25
+    gene_symbol: VPS25
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS25 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12194858
+      notes: Babst M et al. 2002, ‘Endosome-associated complex, ESCRT-II, recruits
+        transport machinery for protein sorting at the multivesicular body.’, Dev
+        Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm'
+        localisation of P47142.
 - component_id: vps36_escrt_ii_subunit
   label: Vps36 ESCRT-II subunit
   component_type: PROTEIN
@@ -111,6 +153,23 @@ components:
   - reference: DOI:10.1016/j.devcel.2004.09.003
     notes: Teo et al. 2004 solved a Saccharomyces cerevisiae ESCRT-II core structure
       containing the C-terminal region of Vps36 together with Vps22 and Vps25.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06696
+    protein_label: Vacuolar protein-sorting-associated protein 36
+    gene_symbol: VPS36
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS36 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12194858
+      notes: Babst M et al. 2002, ‘Endosome-associated complex, ESCRT-II, recruits
+        transport machinery for protein sorting at the multivesicular body.’, Dev
+        Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm'
+        localisation of Q06696.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

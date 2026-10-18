@@ -33,6 +33,18 @@ curation_history:
   action: NORMALIZE_ORDER
   changes: Moved Ssh1 component rows into the canonical components slot after part_of.
   llm_assisted: true
+- timestamp: '2026-10-18T03:30:44Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Ssh1p-Sss1p-Sbh2p complex
   synonym_type: NARROW_SYNONYM
@@ -64,6 +76,23 @@ components:
   - reference: PMID:8612571
     notes: Finke et al. 1996 identified Ssh1p in a second trimeric yeast ER translocon
       related to the Sec61p complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38353
+    protein_label: Sec sixty-one protein homolog
+    gene_symbol: SSH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene SSH1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38353
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38353, the single reviewed entry
+        for gene SSH1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sbh2_beta_subunit
   label: Sbh2 beta translocon subunit
   component_type: PROTEIN
@@ -83,6 +112,23 @@ components:
   - reference: PMID:8612571
     notes: Finke et al. 1996 identified Sbh2p in the Ssh1p-containing trimeric ER
       translocon.
+  protein_examples:
+  - uniprot_id: UniProtKB:P52871
+    protein_label: Protein transport protein SBH2
+    gene_symbol: SBH2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SBH2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P52871
+      notes: UniProtKB reviewed (Swiss-Prot) entry P52871, the single reviewed entry
+        for gene SBH2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sss1_gamma_subunit
   label: Sss1 gamma translocon subunit
   component_type: PROTEIN
@@ -102,6 +148,22 @@ components:
   - reference: PMID:8612571
     notes: Finke et al. 1996 identified Sss1p in the Ssh1p-containing trimeric ER
       translocon.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35179
+    protein_label: Protein transport protein SSS1
+    gene_symbol: SSS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SSS1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Endoplasmic reticulum membrane' localisation of P35179.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

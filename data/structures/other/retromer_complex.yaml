@@ -29,6 +29,13 @@ curation_history:
   changes: 'Added Seaman 1998 evidence to the retromer subcomplex-to-parent graph
     edges for PR #1112 / issue #1113.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:29:07Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0098796
 has_part:
@@ -61,6 +68,23 @@ components:
   - reference: GO:0030904
     notes: The GO retromer-complex definition names this budding-yeast protein as
       one of the Vps subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P34110
+    protein_label: Vacuolar protein sorting-associated protein 35
+    gene_symbol: VPS35
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS35 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P34110
+      notes: UniProtKB reviewed (Swiss-Prot) entry P34110, the single reviewed entry
+        for gene VPS35 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps29_retromer_subunit
   label: Vps29 retromer subunit
   component_type: PROTEIN
@@ -80,6 +104,23 @@ components:
   - reference: GO:0030904
     notes: The GO retromer-complex definition names this budding-yeast protein as
       one of the Vps subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38759
+    protein_label: Vacuolar protein sorting-associated protein 29
+    gene_symbol: VPS29
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS29 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38759
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38759, the single reviewed entry
+        for gene VPS29 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps26_retromer_subunit
   label: Vps26 retromer subunit
   component_type: PROTEIN
@@ -99,6 +140,24 @@ components:
   - reference: GO:0030904
     notes: The GO retromer-complex definition names this budding-yeast protein as
       one of the Vps subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40335
+    protein_label: Carboxypeptidase Y-deficient protein 8
+    gene_symbol: PEP8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS26, which UniProt lists
+      under the primary name PEP8, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40335
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40335, the single reviewed entry
+        for gene VPS26 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps5_retromer_subunit
   label: Vps5 retromer subunit
   component_type: PROTEIN
@@ -118,6 +177,23 @@ components:
   - reference: GO:0030904
     notes: The GO retromer-complex definition names this budding-yeast protein as
       one of the Vps subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q92331
+    protein_label: Vacuolar protein sorting-associated protein 5
+    gene_symbol: VPS5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q92331
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q92331, the single reviewed entry
+        for gene VPS5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps17_retromer_subunit
   label: Vps17 retromer subunit
   component_type: PROTEIN
@@ -137,6 +213,22 @@ components:
   - reference: GO:0030904
     notes: The GO retromer-complex definition names this budding-yeast protein as
       one of the Vps subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32913
+    protein_label: Vacuolar protein sorting-associated protein 17
+    gene_symbol: VPS17
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS17 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9700157
+      notes: Seaman MN et al. 1998, ‘A membrane coat complex essential for endosome-to-Golgi
+        retrograde transport in yeast.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Endomembrane system' localisation of P32913.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

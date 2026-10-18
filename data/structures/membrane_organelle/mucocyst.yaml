@@ -34,6 +34,11 @@ curation_history:
     from gene_symbols, and adding direct Kaur 2017 evidence for AP-3/endosomal syntaxin
     boundary exclusions.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 6 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0030141
 components:
@@ -75,6 +80,55 @@ components:
   - reference: DOI:10.1534/g3.116.028878
     notes: Kontur et al. 2016 connect mucocyst maturation defects to altered processing
       of granule cargo proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:P90618
+    protein_label: Granule lattice protein 1
+    gene_symbol: GRL1
+    taxon_id: NCBITaxon:5911
+    taxon_label: Tetrahymena thermophila
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene GRL, which UniProt
+      lists under the primary name GRL1, in Tetrahymena thermophila. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P90618
+      notes: UniProtKB unreviewed (TrEMBL) entry P90618 for gene GRL in Tetrahymena
+        thermophila. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:O76218
+    protein_label: Granule lattice protein 3
+    gene_symbol: GRL3
+    taxon_id: NCBITaxon:5911
+    taxon_label: Tetrahymena thermophila
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene GRL, which UniProt
+      lists under the primary name GRL3, in Tetrahymena thermophila. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O76218
+      notes: UniProtKB unreviewed (TrEMBL) entry O76218 for gene GRL in Tetrahymena
+        thermophila. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:O76219
+    protein_label: Granule lattice protein 4
+    gene_symbol: GRL4
+    taxon_id: NCBITaxon:5911
+    taxon_label: Tetrahymena thermophila
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene GRL, which UniProt
+      lists under the primary name GRL4, in Tetrahymena thermophila. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O76219
+      notes: UniProtKB unreviewed (TrEMBL) entry O76219 for gene GRL in Tetrahymena
+        thermophila. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: granule_tip_proteins
   label: granule tip proteins
   component_type: PROTEIN
@@ -92,6 +146,39 @@ components:
   - reference: DOI:10.1128/EC.00151-09
     notes: Rahaman et al. 2009 analyze Tetrahymena Grt1p and Grt2p as dense-core granule
       proteins distinct from the Grl lattice-protein cargo class.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q3S4V5
+    protein_label: Granule tip protein 1
+    gene_symbol: GRT1
+    taxon_id: NCBITaxon:5911
+    taxon_label: Tetrahymena thermophila
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene GRT, which UniProt
+      lists under the primary name GRT1, in Tetrahymena thermophila. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q3S4V5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q3S4V5 for gene GRT in Tetrahymena
+        thermophila. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q2I2L7
+    protein_label: Granule tip protein 2
+    gene_symbol: GRT2
+    taxon_id: NCBITaxon:5911
+    taxon_label: Tetrahymena thermophila
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene GRT, which UniProt
+      lists under the primary name GRT2, in Tetrahymena thermophila. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q2I2L7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q2I2L7 for gene GRT in Tetrahymena
+        thermophila. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: mucocyst_docking_discharge_complex
   label: MDD mucocyst docking and discharge complex
   component_type: PROTEIN_COMPLEX
@@ -109,6 +196,23 @@ components:
   - reference: DOI:10.1371/journal.pgen.1010194
     notes: Kuppannan et al. 2022 identify Mdl1p and associated MDD proteins as a Tetrahymena
       mucocyst membrane complex needed for organelle docking and regulated exocytosis.
+  protein_examples:
+  - uniprot_id: UniProtKB:I7M6L0
+    protein_label: Ubiquitin interaction motif protein
+    gene_symbol: TTHERM_00471830
+    taxon_id: NCBITaxon:312017
+    taxon_label: Tetrahymena thermophila SB210
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene MDL1, which
+      UniProt lists under the primary name TTHERM_00471830, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/I7M6L0
+      notes: UniProtKB unreviewed (TrEMBL) entry I7M6L0 for gene MDL1 in Tetrahymena
+        thermophila SB210. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5911
   taxon_label: Tetrahymena thermophila

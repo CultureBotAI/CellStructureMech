@@ -38,6 +38,11 @@ curation_history:
   changes: 'Resolved #666 by typing the broad reviewed-label PAS Atg machinery graph
     node as STRUCTURE instead of GENE_OR_PROTEIN.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 5 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 part_of:
@@ -71,6 +76,121 @@ components:
   - reference: DOI:10.1093/emboj/20.21.5971
     notes: Suzuki et al. 2001 localized multiple Apg proteins to the yeast pre-autophagosomal
       structure and showed APG gene function is required for its organization.
+  gene_symbols:
+  - ATG1
+  - ATG8
+  - ATG9
+  - ATG13
+  - ATG17
+  protein_examples:
+  - uniprot_id: UniProtKB:P53104
+    protein_label: Serine/threonine-protein kinase ATG1
+    gene_symbol: ATG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ATG1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53104
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53104, the single reviewed entry
+        for gene ATG1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P38182
+    protein_label: Autophagy-related protein 8
+    gene_symbol: ATG8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ATG8 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11149920
+      notes: Kim J et al. 2001, ‘Membrane recruitment of Aut7p in the autophagy and
+        cytoplasm to vacuole targeting pathways requires Aut1p, Aut2p, and the autophagy
+        conjugation complex.’, J Cell Biol. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cytoplasmic vesicle, autophagosome membrane' localisation
+        of P38182.
+    - reference: PMID:11689437
+      notes: Suzuki K et al. 2001, ‘The pre-autophagosomal structure organized by
+        concerted functions of APG genes is essential for autophagosome formation.’,
+        EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasmic
+        vesicle, autophagosome membrane' localisation of P38182.
+    - reference: PMID:15659643
+      notes: Yorimitsu T et al. 2005, ‘Atg11 links cargo to the vesicle-forming machinery
+        in the cytoplasm to vacuole targeting pathway.’, Mol Biol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasmic vesicle, autophagosome
+        membrane' localisation of P38182.
+  - uniprot_id: UniProtKB:Q12142
+    protein_label: Autophagy-related protein 9
+    gene_symbol: ATG9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ATG9 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14723849
+      notes: Reggiori F et al. 2004, ‘The Atg1-Atg13 complex regulates Atg9 and Atg23
+        retrieval transport from the pre-autophagosomal structure.’, Dev Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Preautophagosomal structure
+        membrane' localisation of Q12142.
+    - reference: PMID:15138258
+      notes: Shintani T et al. 2004, ‘Cargo proteins facilitate the formation of transport
+        vesicles in the cytoplasm to vacuole targeting pathway.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Preautophagosomal structure
+        membrane' localisation of Q12142.
+    - reference: PMID:16874040
+      notes: Reggiori F et al. 2005, ‘Atg9 cycles between mitochondria and the pre-autophagosomal
+        structure in yeasts.’, Autophagy. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Preautophagosomal structure membrane' localisation of
+        Q12142.
+  - uniprot_id: UniProtKB:Q06628
+    protein_label: Autophagy-related protein 13
+    gene_symbol: ATG13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ATG13 in Saccharomyces
+      cerevisiae S288C. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q06628.
+    - reference: PMID:17295840
+      notes: Suzuki K et al. 2007, ‘Hierarchy of Atg proteins in pre-autophagosomal
+        structure organization.’, Genes Cells. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Preautophagosomal structure' localisation of Q06628.
+    - reference: PMID:21468027
+      notes: Graef M et al. 2011, ‘Mitochondria regulate autophagy by conserved signalling
+        pathways.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Preautophagosomal structure' localisation of Q06628.
+  - uniprot_id: UniProtKB:Q06410
+    protein_label: Autophagy-related protein 17
+    gene_symbol: ATG17
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ATG17 in Saccharomyces
+      cerevisiae S288C. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q06410
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q06410, the single reviewed entry
+        for gene ATG17 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

@@ -38,6 +38,11 @@ curation_history:
   changes: 'Narrowed the Plasmodium falciparum canonical example to segmenter-stage
     merozoites for consistency with PR #1280 review issue #1281.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -61,6 +66,23 @@ components:
   - reference: DOI:10.1073/pnas.0709999104
     notes: Singh et al. 2007 identified PfROM1 as a rhomboid protease in the newly
       named mononeme and followed its redistribution after merozoite release.
+  protein_examples:
+  - uniprot_id: UniProtKB:A8IWX2
+    protein_label: Rhomboid-like protease
+    gene_symbol: Rom1
+    taxon_id: NCBITaxon:5833
+    taxon_label: Plasmodium falciparum
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene PfROM1, which
+      UniProt lists under the primary name Rom1, in Plasmodium falciparum. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A8IWX2
+      notes: UniProtKB unreviewed (TrEMBL) entry A8IWX2 for gene PfROM1 in Plasmodium
+        falciparum. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5833
   taxon_label: Plasmodium falciparum

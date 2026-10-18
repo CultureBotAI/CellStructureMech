@@ -53,6 +53,11 @@ curation_history:
   changes: 'Addressed #2150: A modeled cap-growth interpretation is described as visualized
     growth conformations. Preserved historical events and PROPOSED status.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar filament cap
   synonym_type: EXACT_SYNONYM
@@ -203,6 +208,8 @@ causal_graphs:
     label: flagellin
     node_type: GENE_OR_PROTEIN
     grounding: InterPro:IPR001492
+    xrefs:
+    - UniProtKB:P06179
   - node_id: filament
     label: bacterial-type flagellum filament
     node_type: STRUCTURE

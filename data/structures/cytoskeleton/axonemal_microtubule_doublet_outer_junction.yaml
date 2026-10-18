@@ -26,6 +26,11 @@ curation_history:
     avoid treating CFAP77 loss alone as a direct full-outer-junction destabilization
     assay.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 part_of:
 - GO:0097545
 components:
@@ -46,6 +51,25 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for the mixed conserved and species-specific
     axonemal outer-junction protein set was verified in this pass.
+  gene_symbols:
+  - CFAP77
+  protein_examples:
+  - uniprot_id: UniProtKB:Q22WR6
+    protein_label: Sperm-tail PG-rich repeat protein
+    gene_symbol: TTHERM_00974270
+    taxon_id: NCBITaxon:312017
+    taxon_label: Tetrahymena thermophila SB210
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CFAP77, which
+      UniProt lists under the primary name TTHERM_00974270, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q22WR6
+      notes: UniProtKB unreviewed (TrEMBL) entry Q22WR6 for gene CFAP77 in Tetrahymena
+        thermophila SB210. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5911
   taxon_label: Tetrahymena thermophila

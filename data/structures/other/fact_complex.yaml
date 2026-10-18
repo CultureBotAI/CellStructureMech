@@ -21,6 +21,13 @@ curation_history:
     function graph, a resolved Nhp6 boundary discussion, and a FACT subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:05Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Facilitates chromatin transcription complex
   synonym_type: EXACT_SYNONYM
@@ -44,6 +51,23 @@ components:
   - reference: DOI:10.1093/emboj/20.13.3506
     notes: Formosa et al. 2001 reported that the Saccharomyces cerevisiae Spt16/Cdc68
       and Pob3 proteins form the yeast Spt16-Pob3 heterodimer.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32558
+    protein_label: FACT complex subunit SPT16
+    gene_symbol: SPT16
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPT16 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10413469
+      notes: Wittmeyer J et al. 1999, ‘Spt16 and Pob3 of Saccharomyces cerevisiae
+        form an essential, abundant heterodimer that is nuclear, chromatin-associated,
+        and copurifies with DNA polymerase alpha.’, Biochemistry. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P32558.
 - component_id: pob3_fact_subunit
   label: Pob3 FACT subunit
   component_type: PROTEIN
@@ -61,6 +85,28 @@ components:
   - reference: DOI:10.1093/emboj/20.13.3506
     notes: Formosa et al. 2001 reported that the Saccharomyces cerevisiae Spt16/Cdc68
       and Pob3 proteins form the yeast Spt16-Pob3 heterodimer.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04636
+    protein_label: FACT complex subunit POB3
+    gene_symbol: POB3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POB3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10413469
+      notes: Wittmeyer J et al. 1999, ‘Spt16 and Pob3 of Saccharomyces cerevisiae
+        form an essential, abundant heterodimer that is nuclear, chromatin-associated,
+        and copurifies with DNA polymerase alpha.’, Biochemistry. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q04636.
+    - reference: PMID:14585989
+      notes: Mason PB et al. 2003, ‘The FACT complex travels with elongating RNA polymerase
+        II and is important for the fidelity of transcriptional initiation in vivo.’,
+        Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Chromosome' localisation of Q04636.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

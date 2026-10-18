@@ -27,6 +27,11 @@ curation_history:
   changes: Narrowed the Eukaryota taxonomic-distribution note so its row-level PubMed
     reference supports the whole assertion.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: unwindosome
   synonym_type: EXACT_SYNONYM
@@ -82,6 +87,24 @@ components:
   - reference: PMID:19228417
     notes: Akman and MacNeill 2009 describe Cdc45 as one of the three individual components
       of the eukaryotic CMG complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:O74113
+    protein_label: Cell division control protein 45 homolog
+    gene_symbol: sna41
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene CDC45, which UniProt lists
+      under the primary name sna41, in Schizosaccharomyces pombe. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:9619628
+      notes: Miyake S et al. 1998, ‘Identification of sna41 gene, which is the suppressor
+        of nda4 mutation and is involved in DNA replication in Schizosaccharomyces
+        pombe.’, Genes Cells. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Nucleus' localisation of O74113.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

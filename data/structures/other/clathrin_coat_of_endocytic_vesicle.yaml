@@ -25,6 +25,18 @@ curation_history:
   changes: 'Resolved PR #1076 review issue #1077 by narrowing the coarse endocytic
     adaptor component wording around the exact AP-2 has-part assertion.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:21:02Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0030125
 part_of:
@@ -53,6 +65,42 @@ components:
   grounding_notes: The clathrin triskelion is represented here at the source-neutral
     protein-complex level; no exact Complex Portal, GO, InterPro, Pfam, or NCBIfam
     CURIE was curated in this pass.
+  gene_symbols:
+  - CHC1
+  - CLC1
+  protein_examples:
+  - uniprot_id: UniProtKB:P22137
+    protein_label: Clathrin heavy chain
+    gene_symbol: CHC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CHC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22137
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22137, the single reviewed entry
+        for gene CHC1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P17891
+    protein_label: Clathrin light chain
+    gene_symbol: CLC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CLC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P17891
+      notes: UniProtKB reviewed (Swiss-Prot) entry P17891, the single reviewed entry
+        for gene CLC1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: endocytic_clathrin_adaptors
   label: endocytic clathrin adaptor and cargo-selection factors
   component_type: PROTEIN
@@ -75,6 +123,80 @@ components:
   grounding_notes: GO:0030122 captures the exact AP-2 adaptor-complex part of GO:0030128.
     This broader component covers additional endocytic adaptor and cargo-selection
     factors; no exact source-neutral CURIE was curated for that residual class.
+  gene_symbols:
+  - ENT1
+  - ENT2
+  - SLA2
+  - YAP1801
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12518
+    protein_label: Epsin-1
+    gene_symbol: ENT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ENT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12518
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12518, the single reviewed entry
+        for gene ENT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q05785
+    protein_label: Epsin-2
+    gene_symbol: ENT2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ENT2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q05785
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q05785, the single reviewed entry
+        for gene ENT2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P33338
+    protein_label: Protein SLA2
+    gene_symbol: SLA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SLA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P33338
+      notes: UniProtKB reviewed (Swiss-Prot) entry P33338, the single reviewed entry
+        for gene SLA2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P38856
+    protein_label: Clathrin coat assembly protein AP180A
+    gene_symbol: YAP1801
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YAP1801 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9531549
+      notes: Wendland B et al. 1998, ‘Pan1p, yeast eps15, functions as a multivalent
+        adaptor that coordinates protein-protein interactions essential for endocytosis.’,
+        J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Bud'
+        localisation of P38856.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P38856.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -152,6 +274,8 @@ causal_graphs:
     label: AP-2 adaptor complex
     node_type: GENE_OR_PROTEIN
     grounding: GO:0030122
+    xrefs:
+    - UniProtKB:P27351
   - node_id: clathrin_coat_of_endocytic_vesicle
     label: clathrin coat of endocytic vesicle
     node_type: STRUCTURE

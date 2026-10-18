@@ -47,6 +47,19 @@ curation_history:
   changes: '#2302: Remove universal catalytic tetramer wording and correct the Mo-exclusive
     IPR005977 claim.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:13:35Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s); added 1 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 - GO:1990204
@@ -79,6 +92,42 @@ components:
     notes: Schmidt et al. 2024 resolve the R. capsulatus iron nitrogenase complex
       including its G subunit; a universal dinitrogenase tetramer is therefore not
       asserted.
+  gene_symbols:
+  - nifD
+  - nifK
+  protein_examples:
+  - uniprot_id: UniProtKB:P07328
+    protein_label: Nitrogenase molybdenum-iron protein alpha chain
+    gene_symbol: nifD
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nifD in Azotobacter vinelandii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P07328
+      notes: UniProtKB reviewed (Swiss-Prot) entry P07328, the single reviewed entry
+        for gene nifD in Azotobacter vinelandii. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P07329
+    protein_label: Nitrogenase molybdenum-iron protein beta chain
+    gene_symbol: nifK
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nifK in Azotobacter vinelandii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P07329
+      notes: UniProtKB reviewed (Swiss-Prot) entry P07329, the single reviewed entry
+        for gene nifK in Azotobacter vinelandii. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: nitrogenase_reductase
   label: nitrogenase reductase
   component_type: PROTEIN_COMPLEX
@@ -101,6 +150,24 @@ components:
   - reference: InterPro:IPR005977
     notes: The inspected family entry lists iron-only nitrogenase Fe protein PDB:7QQA
       as its representative structure, despite the NifH family name.
+  gene_symbols:
+  - nifH
+  protein_examples:
+  - uniprot_id: UniProtKB:C1DGZ6
+    protein_label: Nitrogenase iron protein
+    gene_symbol: nifH
+    taxon_id: NCBITaxon:322710
+    taxon_label: Azotobacter vinelandii DJ
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene nifH in Azotobacter
+      vinelandii DJ. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/C1DGZ6
+      notes: UniProtKB unreviewed (TrEMBL) entry C1DGZ6 for gene nifH in Azotobacter
+        vinelandii DJ. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:354
   taxon_label: Azotobacter vinelandii
@@ -162,6 +229,8 @@ causal_graphs:
   - node_id: reduced_ferredoxin
     label: reduced ferredoxin
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P00214
   - node_id: nitrogenase_reductase
     label: nitrogenase reductase
     node_type: GENE_OR_PROTEIN

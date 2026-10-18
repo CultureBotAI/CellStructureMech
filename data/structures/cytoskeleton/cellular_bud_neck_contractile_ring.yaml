@@ -23,6 +23,13 @@ curation_history:
     a nonmechanistic actomyosin-ring topology graph, and boundary and component-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-10-18T03:10:51Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: neck ring
   synonym_type: EXACT_SYNONYM
@@ -52,6 +59,23 @@ components:
   - reference: DOI:10.1083/jcb.142.5.1301
     notes: Bi et al. 1998 characterized the Saccharomyces actin ring at the mother-bud
       neck during cytokinesis.
+  protein_examples:
+  - uniprot_id: UniProtKB:P60010
+    protein_label: Actin
+    gene_symbol: ACT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ACT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P60010
+      notes: UniProtKB reviewed (Swiss-Prot) entry P60010, the single reviewed entry
+        for gene ACT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: myo1_family_myosin_ii
   label: Myo1-family myosin-II motor
   component_type: PROTEIN
@@ -72,6 +96,23 @@ components:
   - reference: DOI:10.1083/jcb.142.5.1301
     notes: Bi et al. 1998 used Saccharomyces Myo1 localization at the mother-bud neck
       to study the cytokinetic actomyosin ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P08964
+    protein_label: Myosin-1
+    gene_symbol: MYO1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MYO1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P08964
+      notes: UniProtKB reviewed (Swiss-Prot) entry P08964, the single reviewed entry
+        for gene MYO1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

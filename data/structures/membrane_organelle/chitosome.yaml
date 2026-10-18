@@ -41,6 +41,13 @@ curation_history:
   changes: Added an evidence-backed, organism-scoped PathwayMech link with a full
     source commit and explicit relation limits.
   llm_assisted: true
+- timestamp: '2026-10-18T03:16:15Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0031410
 components:
@@ -79,6 +86,51 @@ components:
   - reference: DOI:10.1091/mbc.9.6.1565
     notes: Ziman et al. 1998 analyzed regulated Chs3p anterograde transport from the
       chitosome to the plasma membrane in Saccharomyces cerevisiae.
+  gene_symbols:
+  - CHS1
+  - CHS3
+  protein_examples:
+  - uniprot_id: UniProtKB:P08004
+    protein_label: Chitin synthase 1
+    gene_symbol: CHS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CHS1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P08004
+      notes: UniProtKB reviewed (Swiss-Prot) entry P08004, the single reviewed entry
+        for gene CHS1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P29465
+    protein_label: Chitin synthase 3
+    gene_symbol: CHS3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CHS3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12928491
+      notes: Valdivia RH et al. 2003, ‘The yeasts Rho1p and Pkc1p regulate the transport
+        of chitin synthase III (Chs3p) from internal stores to the plasma membrane.’,
+        Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell membrane' localisation of P29465.
+    - reference: PMID:17519287
+      notes: Reyes A et al. 2007, ‘Chitin synthase III requires Chs4p-dependent translocation
+        of Chs3p into the plasma membrane.’, J Cell Sci. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell membrane' localisation of P29465.
+    - reference: PMID:28346351
+      notes: Gohlke S et al. 2017, ‘In Vitro and In Vivo Studies on the Structural
+        Organization of Chs3 from Saccharomyces cerevisiae.’, Int J Mol Sci. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell membrane' localisation
+        of P29465.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4751
   taxon_label: Fungi

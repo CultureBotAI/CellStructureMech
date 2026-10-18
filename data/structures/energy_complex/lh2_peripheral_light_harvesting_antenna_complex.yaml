@@ -34,6 +34,11 @@ curation_history:
   changes: '#2299: Scope the PufX-containing graph receiver to the C. sphaeroides
     example.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: LH2 antenna complex
   synonym_type: EXACT_SYNONYM
@@ -112,6 +117,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: C. sphaeroides RC-LH1-PufX core receiving excitation from surrounding
       LH2 complexes in the cited native-membrane study.
+    xrefs:
+    - UniProtKB:P0C0Y8
+    - UniProtKB:P0C0Y9
   - node_id: light_harvesting
     label: photosynthesis, light harvesting
     node_type: BIOLOGICAL_PROCESS

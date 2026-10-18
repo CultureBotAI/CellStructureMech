@@ -29,6 +29,18 @@ curation_history:
     GO:0000347 THO complex because GO scopes that context-specific parthood to child
     term GO:0000445.
   llm_assisted: true
+- timestamp: '2026-10-18T03:31:34Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0140513
 components:
@@ -51,6 +63,27 @@ components:
   - reference: DOI:10.1093/emboj/19.21.5824
     notes: DOI for the Chavez et al. 2000 EMBO Journal THO-complex paper, verified
       through PubMed.
+  protein_examples:
+  - uniprot_id: UniProtKB:P17629
+    protein_label: THO complex subunit HPR1
+    gene_symbol: HPR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HPR1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11060033
+      notes: Chávez S et al. 2000, ‘A protein complex containing Tho2, Hpr1, Mft1
+        and a novel protein, Thp2, connects transcription elongation with mitotic
+        recombination in Saccharomyces cerevisiae.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P17629.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P17629.
 - component_id: tho2_subunit
   label: Tho2 subunit
   component_type: PROTEIN
@@ -70,6 +103,27 @@ components:
   - reference: DOI:10.1093/emboj/19.21.5824
     notes: DOI for the Chavez et al. 2000 EMBO Journal THO-complex paper, verified
       through PubMed.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53552
+    protein_label: THO complex subunit 2
+    gene_symbol: THO2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene THO2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11060033
+      notes: Chávez S et al. 2000, ‘A protein complex containing Tho2, Hpr1, Mft1
+        and a novel protein, Thp2, connects transcription elongation with mitotic
+        recombination in Saccharomyces cerevisiae.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P53552.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53552.
 - component_id: mft1_subunit
   label: Mft1 subunit
   component_type: PROTEIN
@@ -89,6 +143,27 @@ components:
   - reference: DOI:10.1093/emboj/19.21.5824
     notes: DOI for the Chavez et al. 2000 EMBO Journal THO-complex paper, verified
       through PubMed.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33441
+    protein_label: THO complex subunit MFT1
+    gene_symbol: MFT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene MFT1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11060033
+      notes: Chávez S et al. 2000, ‘A protein complex containing Tho2, Hpr1, Mft1
+        and a novel protein, Thp2, connects transcription elongation with mitotic
+        recombination in Saccharomyces cerevisiae.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P33441.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P33441.
 - component_id: thp2_subunit
   label: Thp2 subunit
   component_type: PROTEIN
@@ -108,6 +183,27 @@ components:
   - reference: DOI:10.1093/emboj/19.21.5824
     notes: DOI for the Chavez et al. 2000 EMBO Journal THO-complex paper, verified
       through PubMed.
+  protein_examples:
+  - uniprot_id: UniProtKB:O13539
+    protein_label: THO complex subunit THP2
+    gene_symbol: THP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene THP2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11060033
+      notes: Chávez S et al. 2000, ‘A protein complex containing Tho2, Hpr1, Mft1
+        and a novel protein, Thp2, connects transcription elongation with mitotic
+        recombination in Saccharomyces cerevisiae.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of O13539.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of O13539.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

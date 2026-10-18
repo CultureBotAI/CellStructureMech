@@ -21,6 +21,11 @@ curation_history:
     function evidence, GO/PubMed/DOI evidence, a nonmechanistic DnaA-L2 regulatory
     graph, and grounding/boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:1990078
 components:
@@ -44,6 +49,34 @@ components:
   - reference: PMID:21288885
     notes: Chodavarapu et al. 2011 reported that full-length and truncated E. coli
       L2 physically interact with the N-terminal region of DnaA.
+  protein_examples:
+  - uniprot_id: UniProtKB:P03004
+    protein_label: Chromosomal replication initiator protein DnaA
+    gene_symbol: dnaA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dnaA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22574163
+      notes: 'Regev T et al. 2012, ‘Association of the chromosome replication initiator
+        DnaA with the Escherichia coli inner membrane in vivo: quantity and mode of
+        binding.’, PLoS One. ECO:0000269 experimental evidence cited by UniProt for
+        the ''Cytoplasm'' localisation of P03004.'
+    - reference: PMID:28166228
+      notes: Schenk K et al. 2017, ‘Rapid turnover of DnaA at replication origin regions
+        contributes to initiation control of DNA replication.’, PLoS Genet. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, nucleoid' localisation
+        of P03004.
+    - reference: PMID:9478970
+      notes: Garner J et al. 1998, ‘Membrane-mediated release of nucleotide from an
+        initiator of chromosomal replication, Escherichia coli DnaA, occurs with insertion
+        of a distinct region of the protein into the lipid bilayer.’, J Biol Chem.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P03004.
 - component_id: ribosomal_protein_l2
   label: 50S ribosomal protein L2
   component_type: PROTEIN
@@ -65,6 +98,23 @@ components:
     notes: Chodavarapu et al. 2011 purified an oriC plasmid replication inhibitor
       as a truncated ribosomal protein L2 and showed that truncated or mature L2 interacts
       with DnaA.
+  protein_examples:
+  - uniprot_id: UniProtKB:P60422
+    protein_label: Large ribosomal subunit protein uL2
+    gene_symbol: rplB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene rplB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P60422
+      notes: UniProtKB reviewed (Swiss-Prot) entry P60422, the single reviewed entry
+        for gene rplB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli

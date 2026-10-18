@@ -19,6 +19,11 @@ curation_history:
     a biomineralization-boundary function, GO/UniProt/DOI/PMID evidence, a nonmechanistic
     magnetosome-membrane topology graph, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 5 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -116,6 +121,12 @@ causal_graphs:
   - node_id: mam_mms_proteins
     label: Mam/Mms magnetosome membrane proteins
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:V6F235
+    - UniProtKB:V6F510
+    - UniProtKB:Q93DY9
+    - UniProtKB:Q6NE76
+    - UniProtKB:Q6NE58
   - node_id: magnetosome_biomineralization
     label: magnetosome biomineralization
     node_type: BIOLOGICAL_PROCESS

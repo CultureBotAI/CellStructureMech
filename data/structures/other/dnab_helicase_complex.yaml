@@ -19,6 +19,13 @@ curation_history:
     component, Geobacillus/PDB scope, DNA helicase activity evidence, GO/PubMed/DOI/PDB
     evidence, a nonmechanistic helicase-activity graph, and a grounding discussion.
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:05Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: DnaB hexamer
   synonym_type: EXACT_SYNONYM
@@ -49,6 +56,23 @@ components:
   - reference: PDB:2R6D
     notes: RCSB PDB entry 2R6D contains six chains of Geobacillus stearothermophilus
       replicative DNA helicase DnaB.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9X4C9
+    protein_label: Replicative DNA helicase DnaB
+    gene_symbol: dnaB
+    taxon_id: NCBITaxon:1422
+    taxon_label: Geobacillus stearothermophilus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene dnaB in Geobacillus stearothermophilus,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q9X4C9
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q9X4C9, the single reviewed entry
+        for gene dnaB in Geobacillus stearothermophilus. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1422
   taxon_label: Geobacillus stearothermophilus

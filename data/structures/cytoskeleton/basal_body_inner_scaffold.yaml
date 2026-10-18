@@ -20,6 +20,11 @@ curation_history:
     graph, EMDB datasets and licensed density preview; preserved unknown molecular
     assignments, assay scope and family-grounding uncertainty.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 part_of:
@@ -44,6 +49,24 @@ components:
     notes: Figures 5D-E and 6C combine model fitting and loss of the corresponding
       density in poc1 deletion material. Scaffold density is nearly absent in the
       mutant; initial assembly versus subsequent maintenance is not separated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q229Z6
+    protein_label: POC1 centriolar protein homolog
+    gene_symbol: TTHERM_01308010
+    taxon_id: NCBITaxon:312017
+    taxon_label: Tetrahymena thermophila SB210
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene POC1, which UniProt lists
+      under the primary name TTHERM_01308010, in Tetrahymena thermophila SB210. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:20008567
+      notes: Pearson CG et al. 2009, ‘Basal body stability and ciliogenesis requires
+        the conserved component Poc1.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm, cytoskeleton, cilium basal body' localisation
+        of Q229Z6.
 - component_id: fam161a
   label: FAM161A family protein
   component_type: PROTEIN
@@ -66,6 +89,23 @@ components:
       Unlike Poc1, Fam161A has no assigned molecular cryo-ET density here. Human-protein
       interaction results cited by the article are not direct evidence of a Tetrahymena
       Poc1-Fam161A contact.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q23CT1
+    protein_label: EF-hand domain-containing protein
+    gene_symbol: TTHERM_00052590
+    taxon_id: NCBITaxon:312017
+    taxon_label: Tetrahymena thermophila SB210
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAM161A, which
+      UniProt lists under the primary name TTHERM_00052590, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q23CT1
+      notes: UniProtKB unreviewed (TrEMBL) entry Q23CT1 for gene FAM161A in Tetrahymena
+        thermophila SB210. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:5911
   taxon_label: Tetrahymena thermophila

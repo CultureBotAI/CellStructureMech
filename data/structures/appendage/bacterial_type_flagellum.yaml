@@ -219,6 +219,23 @@ components:
     - reference: DOI:10.1128/JB.00626-18
       notes: Independent experimental literature supports the curated placement of
         fliY in the B. subtilis C ring / switch complex (FliG, FliM, FliN) component.
+  - uniprot_id: UniProtKB:P26419
+    protein_label: Flagellar motor switch protein FliN
+    gene_symbol: fliN
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliN in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P26419
+      notes: UniProtKB reviewed (Swiss-Prot) entry P26419, the single reviewed entry
+        for gene fliN in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: stator
   label: stator unit (MotA5MotB2)
   component_type: PROTEIN_COMPLEX
@@ -269,38 +286,37 @@ components:
     - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/motB
       notes: SubtiWiki category 387 lists motB among B. subtilis flagellar proteins
         and links UniProtKB:P28612.
-  - uniprot_id: UniProtKB:P39063
-    protein_label: Uncharacterized protein YtxD
-    gene_symbol: ytxD
-    taxon_id: NCBITaxon:224308
-    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+  - uniprot_id: UniProtKB:P09348
+    protein_label: Motility protein A
+    gene_symbol: motA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-01'
-    role: Curator-mapped from SubtiWiki category 387 to the stator unit (MotA5MotB2)
-      component; identity and taxon independently verified in UniProtKB.
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene motA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/motP
-      notes: SubtiWiki category 387 lists motP among B. subtilis flagellar proteins
-        and links UniProtKB:P39063, whose current UniProt primary gene symbol is ytxD.
-    - reference: DOI:10.1016/j.jmb.2005.07.030
-      notes: Independent experimental literature supports the curated placement of
-        motP in the B. subtilis stator unit (MotA5MotB2) component.
-  - uniprot_id: UniProtKB:P39064
-    protein_label: Uncharacterized protein YtxE
-    gene_symbol: ytxE
-    taxon_id: NCBITaxon:224308
-    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    - reference: https://www.uniprot.org/uniprotkb/P09348
+      notes: UniProtKB reviewed (Swiss-Prot) entry P09348, the single reviewed entry
+        for gene motA in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0AF06
+    protein_label: Motility protein B
+    gene_symbol: motB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
-    retrieved_on: '2026-09-01'
-    role: Curator-mapped from SubtiWiki category 387 to the stator unit (MotA5MotB2)
-      component; identity and taxon independently verified in UniProtKB.
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene motB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/motS
-      notes: SubtiWiki category 387 lists motS among B. subtilis flagellar proteins
-        and links UniProtKB:P39064, whose current UniProt primary gene symbol is ytxE.
-    - reference: DOI:10.1016/j.jmb.2005.07.030
-      notes: Independent experimental literature supports the curated placement of
-        motS in the B. subtilis stator unit (MotA5MotB2) component.
+    - reference: PMID:2447650
+      notes: 'Chun SY et al. 1988, ‘Bacterial motility: membrane topology of the Escherichia
+        coli MotB protein.’, Science. ECO:0000269 experimental evidence cited by UniProt
+        for the ''Cell inner membrane'' localisation of P0AF06.'
 - component_id: rod
   label: rod (FlgB, FlgC, FlgF, FlgG)
   component_type: PROTEIN_COMPLEX
@@ -355,6 +371,23 @@ components:
     - reference: https://www.subtiwiki.uni-goettingen.de/v5/gene/flgC
       notes: SubtiWiki category 387 lists flgC among B. subtilis flagellar proteins
         and links UniProtKB:P24501.
+  - uniprot_id: UniProtKB:P16323
+    protein_label: Flagellar basal-body rod protein FlgF
+    gene_symbol: flgF
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flgF in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P16323
+      notes: UniProtKB reviewed (Swiss-Prot) entry P16323, the single reviewed entry
+        for gene flgF in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: lp_rings
   label: L and P rings (FlgH, FlgI)
   component_type: PROTEIN_COMPLEX
@@ -368,6 +401,41 @@ components:
   evidence:
   - reference: DOI:10.1146/annurev.micro.57.030502.090832
     notes: The L and P rings are not rotor components but bearings.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A1N8
+    protein_label: Flagellar L-ring protein
+    gene_symbol: flgH
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flgH in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A1N8
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A1N8, the single reviewed entry
+        for gene flgH in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P15930
+    protein_label: Flagellar P-ring protein
+    gene_symbol: flgI
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flgI in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P15930
+      notes: UniProtKB reviewed (Swiss-Prot) entry P15930, the single reviewed entry
+        for gene flgI in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: export_apparatus
   label: flagellar type III membrane export gate (FlhA, FlhB, FliP, FliQ, FliR)
   component_type: PROTEIN_COMPLEX
@@ -827,6 +895,18 @@ curation_history:
     bacterial flagellum and basal-body prevalence scope; Qualify C-ring assembly essentiality
     in the enclosing flagellar records; Narrow the completed portions of the flagellum
     grounding TODO.'
+  llm_assisted: true
+- timestamp: '2026-10-18T03:08:11Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:47Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s); removed 2 non-matching protein_example(s).
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307

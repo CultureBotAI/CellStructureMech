@@ -52,6 +52,18 @@ curation_history:
   changes: 'Resolved #1237 by routing Matsuoka et al. 1998 COPII liposome evidence
     through reachable PMID:9568718 instead of the unreadable Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:16:38Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 has_part:
@@ -81,6 +93,110 @@ components:
     notes: GO:0030126 identifies the COPI vesicle-coat child.
   - reference: GO:0030127
     notes: GO:0030127 identifies the COPII vesicle-coat child.
+  gene_symbols:
+  - CHC1
+  - CLC1
+  - SEC13
+  - SEC31
+  - RET1
+  - SEC26
+  protein_examples:
+  - uniprot_id: UniProtKB:P22137
+    protein_label: Clathrin heavy chain
+    gene_symbol: CHC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CHC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22137
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22137, the single reviewed entry
+        for gene CHC1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P17891
+    protein_label: Clathrin light chain
+    gene_symbol: CLC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CLC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P17891
+      notes: UniProtKB reviewed (Swiss-Prot) entry P17891, the single reviewed entry
+        for gene CLC1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q04491
+    protein_label: Protein transport protein SEC13
+    gene_symbol: SEC13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC13 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        Q04491.'
+  - uniprot_id: UniProtKB:P38968
+    protein_label: Protein transport protein SEC31
+    gene_symbol: SEC31
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC31 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38968
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38968, the single reviewed entry
+        for gene SEC31 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P41810
+    protein_label: Coatomer subunit beta
+    gene_symbol: SEC26
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC26 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Golgi apparatus membrane' localisation of P41810.
+  - uniprot_id: UniProtKB:P53622
+    protein_label: Coatomer subunit alpha
+    gene_symbol: COP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene RET1, which UniProt lists
+      under the primary name COP1, in Saccharomyces cerevisiae S288C. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53622
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53622, the single reviewed entry
+        for gene RET1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: coated_vesicle_membrane_lipid_bilayer
   label: coated vesicle membrane lipid bilayer
   component_type: LIPID

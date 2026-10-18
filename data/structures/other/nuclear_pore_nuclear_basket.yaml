@@ -27,6 +27,18 @@ curation_history:
     NPC organization and splitting the boundary TODO into structural basket-Nup and
     recruited-factor candidates.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:24Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: nuclear basket
   synonym_type: RELATED_SYNONYM
@@ -54,6 +66,32 @@ components:
   - reference: DOI:10.1242/jcs.264865
     notes: Schmidt et al. 2026 refined a budding-yeast nuclear pore basket model containing
       Mlp1 and Mlp2.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02455
+    protein_label: Protein MLP1
+    gene_symbol: MLP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene MLP1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14718167
+      notes: Galy V et al. 2004, ‘Nuclear retention of unspliced mRNAs in yeast is
+        mediated by perinuclear Mlp1.’, Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of Q02455.
+    - reference: PMID:16027220
+      notes: Niepel M et al. 2005, ‘The nuclear pore complex-associated protein, Mlp2p,
+        binds to the yeast spindle pole body and promotes its efficient assembly.’,
+        J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of Q02455.
+    - reference: PMID:24152732
+      notes: Niepel M et al. 2013, ‘The nuclear basket proteins Mlp1p and Mlp2p are
+        part of a dynamic interactome including Esc1p and the proteasome.’, Mol Biol
+        Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        nuclear pore complex' localisation of Q02455.
 - component_id: mlp2_family
   label: Mlp2-family nuclear-basket coiled-coil nucleoporin
   component_type: PROTEIN
@@ -74,6 +112,23 @@ components:
   - reference: DOI:10.1242/jcs.264865
     notes: Schmidt et al. 2026 found that Mlp2 cooperates with Mlp1 to stabilize budding-yeast
       basket architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40457
+    protein_label: Protein MLP2
+    gene_symbol: MLP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MLP2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:24152732
+      notes: Niepel M et al. 2013, ‘The nuclear basket proteins Mlp1p and Mlp2p are
+        part of a dynamic interactome including Esc1p and the proteasome.’, Mol Biol
+        Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        nuclear pore complex' localisation of P40457.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

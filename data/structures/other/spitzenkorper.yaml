@@ -40,6 +40,18 @@ curation_history:
   changes: Updated the Spitzenkorper vesicle-supply graph description to match the
     post-review graph after removing the exocyst edge.
   llm_assisted: true
+- timestamp: '2026-10-18T03:30:41Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Spitzenkörper
   synonym_type: EXACT_SYNONYM
@@ -85,6 +97,25 @@ components:
   - reference: DOI:10.1038/s41467-020-16712-9
     notes: Zheng et al. 2020 assayed Spitzenkorper F-actin and its scaffold-dependent
       organization in Neurospora crassa.
+  gene_symbols:
+  - act
+  protein_examples:
+  - uniprot_id: UniProtKB:P78711
+    protein_label: Actin
+    gene_symbol: act
+    taxon_id: NCBITaxon:367110
+    taxon_label: Neurospora crassa OR74A
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene act in Neurospora crassa OR74A,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P78711
+      notes: UniProtKB reviewed (Swiss-Prot) entry P78711, the single reviewed entry
+        for gene act in Neurospora crassa OR74A. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: spitzenkorper_scaffold_proteins
   label: Spitzenkorper scaffold proteins
   component_type: PROTEIN
@@ -105,6 +136,23 @@ components:
   - reference: DOI:10.1038/s41467-020-16712-9
     notes: Zheng et al. 2020 identified SPA-2/JNS-1 and LAH-2 scaffold modules transported
       to the Spitzenkorper by MYO-5 via SPZ-1.
+  protein_examples:
+  - uniprot_id: UniProtKB:V5IQM7
+    protein_label: Spa2-like protein
+    gene_symbol: spa2
+    taxon_id: NCBITaxon:367110
+    taxon_label: Neurospora crassa OR74A
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SPA-2, which
+      UniProt lists under the primary name spa2, in Neurospora crassa OR74A. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/V5IQM7
+      notes: UniProtKB unreviewed (TrEMBL) entry V5IQM7 for gene SPA-2 in Neurospora
+        crassa OR74A. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4751
   taxon_label: Fungi

@@ -35,6 +35,11 @@ curation_history:
     move cytoskeleton from is-a parentage to GO-supported parthood. Identity, protein
     claims, scientific status and earlier history are retained.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: TAC
   synonym_type: RELATED_SYNONYM
@@ -119,6 +124,23 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
     accession for kinetoplastid TAC40 was curated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q581S0
+    protein_label: Uncharacterized protein
+    gene_symbol: Tb927.4.1610
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TAC40, which
+      UniProt lists under the primary name Tb927.4.1610, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q581S0
+      notes: UniProtKB unreviewed (TrEMBL) entry Q581S0 for gene TAC40 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: tac102
   label: TAC102 mitochondrial genome segregation protein
   component_type: PROTEIN
@@ -135,6 +157,23 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
     accession for kinetoplastid TAC102 was curated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q57XN5
+    protein_label: Uncharacterized protein
+    gene_symbol: Tb927.7.2390
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TAC102, which
+      UniProt lists under the primary name Tb927.7.2390, in Trypanosoma brucei brucei
+      TREU927. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q57XN5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q57XN5 for gene TAC102 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei

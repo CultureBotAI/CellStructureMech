@@ -22,6 +22,13 @@ curation_history:
     scope, a nucleotide-excision-repair function, GO/PubMed/DOI evidence, a nonmechanistic
     function graph, and a NEF1 subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:30Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: NEF1 complex
   synonym_type: EXACT_SYNONYM
@@ -48,6 +55,23 @@ components:
   evidence:
   - reference: GO:0000110
     notes: GO:0000110 defines the NEF1 complex as containing Rad1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06777
+    protein_label: DNA repair protein RAD1
+    gene_symbol: RAD1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P06777
+      notes: UniProtKB reviewed (Swiss-Prot) entry P06777, the single reviewed entry
+        for gene RAD1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rad10_nef1_subunit
   label: Rad10 NEF1 subunit
   component_type: PROTEIN
@@ -65,6 +89,23 @@ components:
   evidence:
   - reference: GO:0000110
     notes: GO:0000110 defines the NEF1 complex as containing Rad10p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06838
+    protein_label: DNA repair protein RAD10
+    gene_symbol: RAD10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P06838
+      notes: UniProtKB reviewed (Swiss-Prot) entry P06838, the single reviewed entry
+        for gene RAD10 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rad14_nef1_subunit
   label: Rad14 NEF1 subunit
   component_type: PROTEIN
@@ -82,6 +123,23 @@ components:
   evidence:
   - reference: GO:0000110
     notes: GO:0000110 defines the NEF1 complex as containing Rad14p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P28519
+    protein_label: DNA repair protein RAD14
+    gene_symbol: RAD14
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD14 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P28519
+      notes: UniProtKB reviewed (Swiss-Prot) entry P28519, the single reviewed entry
+        for gene RAD14 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

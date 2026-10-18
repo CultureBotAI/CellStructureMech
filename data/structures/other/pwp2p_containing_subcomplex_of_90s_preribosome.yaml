@@ -22,6 +22,18 @@ curation_history:
     budding-yeast scope, a 90S-preribosome-assembly function, GO/PubMed/DOI evidence,
     a nonmechanistic assembly graph, and a UTP-B subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:51Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: 25-30 S subcomplex of 90S preribosome
   synonym_type: EXACT_SYNONYM
@@ -54,6 +66,22 @@ components:
   - reference: DOI:10.1074/jbc.M404909200
     notes: Dosil and Bustelo 2004 identified Pwp2p among the proteins associated with
       the Pwp2 small subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25635
+    protein_label: Periodic tryptophan protein 2
+    gene_symbol: PWP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PWP2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of P25635.
 - component_id: dip2_utp_b_subunit
   label: Dip2 UTP-B subunit
   component_type: PROTEIN
@@ -73,6 +101,22 @@ components:
   - reference: DOI:10.1074/jbc.M404909200
     notes: Dosil and Bustelo 2004 identified Dip2p among the proteins associated with
       the Pwp2 small subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12220
+    protein_label: U3 small nucleolar RNA-associated protein 12
+    gene_symbol: DIP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene DIP2 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q12220.
 - component_id: utp21_utp_b_subunit
   label: Utp21 UTP-B subunit
   component_type: PROTEIN
@@ -92,6 +136,26 @@ components:
   - reference: DOI:10.1074/jbc.M404909200
     notes: Dosil and Bustelo 2004 identified Utp21p among the proteins associated
       with the Pwp2 small subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06078
+    protein_label: U3 small nucleolar RNA-associated protein 21
+    gene_symbol: UTP21
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP21 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of Q06078.
+    - reference: PMID:15590835
+      notes: Bernstein KA et al. 2004, ‘The small-subunit processome is a ribosome
+        assembly intermediate.’, Eukaryot Cell. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q06078.
 - component_id: utp13_utp_b_subunit
   label: Utp13 UTP-B subunit
   component_type: PROTEIN
@@ -111,6 +175,22 @@ components:
   - reference: DOI:10.1074/jbc.M404909200
     notes: Dosil and Bustelo 2004 identified Utp13p among the proteins associated
       with the Pwp2 small subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q05946
+    protein_label: U3 small nucleolar RNA-associated protein 13
+    gene_symbol: UTP13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP13 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q05946.
 - component_id: utp18_utp_b_subunit
   label: Utp18 UTP-B subunit
   component_type: PROTEIN
@@ -130,6 +210,26 @@ components:
   - reference: DOI:10.1074/jbc.M404909200
     notes: Dosil and Bustelo 2004 identified Utp18p among the proteins associated
       with the Pwp2 small subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40362
+    protein_label: U3 small nucleolar RNA-associated protein 18
+    gene_symbol: UTP18
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP18 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P40362.
+    - reference: PMID:15590835
+      notes: Bernstein KA et al. 2004, ‘The small-subunit processome is a ribosome
+        assembly intermediate.’, Eukaryot Cell. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of P40362.
 - component_id: utp6_utp_b_subunit
   label: Utp6 UTP-B subunit
   component_type: PROTEIN
@@ -149,6 +249,27 @@ components:
   - reference: DOI:10.1074/jbc.M404909200
     notes: Dosil and Bustelo 2004 identified Utp6p among the proteins associated with
       the Pwp2 small subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02354
+    protein_label: U3 small nucleolar RNA-associated protein 6
+    gene_symbol: UTP6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q02354.
+    - reference: PMID:12150911
+      notes: Grandi P et al. 2002, ‘90S pre-ribosomes include the 35S pre-rRNA, the
+        U3 snoRNP, and 40S subunit processing factors but predominantly lack 60S synthesis
+        factors.’, Mol Cell. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Nucleus, nucleolus' localisation of Q02354.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

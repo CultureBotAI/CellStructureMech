@@ -36,6 +36,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s); added 1 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: SecYEG translocon
   synonym_type: EXACT_SYNONYM
@@ -144,6 +150,23 @@ components:
   - reference: DOI:10.1093/emboj/16.10.2756
     notes: Duong and Wickner 1997 separated the functions of SecYE, SecG, and SecDF-YajC
       in purified E. coli preprotein translocase.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AG99
+    protein_label: Protein-export membrane protein SecG
+    gene_symbol: secG
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene secG in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AG99
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AG99, the single reviewed entry
+        for gene secG in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -210,6 +233,8 @@ causal_graphs:
   - node_id: seca_atpase
     label: SecA ATPase
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P10408
   - node_id: unfolded_preprotein
     label: unfolded Sec preprotein
     node_type: GENE_OR_PROTEIN

@@ -28,6 +28,18 @@ curation_history:
     Eukaryota taxonomic-distribution row and adding a secretory-vesicle node to the
     Sec4/Sec15 graph.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:51Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 8 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: exocyst complex
   synonym_type: EXACT_SYNONYM
@@ -56,6 +68,22 @@ components:
     notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
       complex the exocyst and showed that it is required for exocytosis in Saccharomyces
       cerevisiae.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33332
+    protein_label: Exocyst complex component SEC3
+    gene_symbol: SEC3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:20139078
+      notes: Baek K et al. 2010, ‘Structure-function study of the N-terminal domain
+        of exocyst subunit Sec3.’, J Biol Chem. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bud tip' localisation of P33332.
 - component_id: sec5_exocyst_subunit
   label: Sec5 exocyst subunit
   component_type: PROTEIN
@@ -74,6 +102,23 @@ components:
     notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
       complex the exocyst and showed that it is required for exocytosis in Saccharomyces
       cerevisiae.
+  protein_examples:
+  - uniprot_id: UniProtKB:P89102
+    protein_label: Exocyst complex component SEC5
+    gene_symbol: SEC5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P89102
+      notes: UniProtKB reviewed (Swiss-Prot) entry P89102, the single reviewed entry
+        for gene SEC5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sec6_exocyst_subunit
   label: Sec6 exocyst subunit
   component_type: PROTEIN
@@ -94,6 +139,23 @@ components:
     notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
       complex the exocyst and showed that it is required for exocytosis in Saccharomyces
       cerevisiae.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32844
+    protein_label: Exocyst complex component SEC6
+    gene_symbol: SEC6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32844
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32844, the single reviewed entry
+        for gene SEC6 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sec8_exocyst_subunit
   label: Sec8 exocyst subunit
   component_type: PROTEIN
@@ -114,6 +176,23 @@ components:
     notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
       complex the exocyst and showed that it is required for exocytosis in Saccharomyces
       cerevisiae.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32855
+    protein_label: Exocyst complex component SEC8
+    gene_symbol: SEC8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32855
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32855, the single reviewed entry
+        for gene SEC8 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sec10_exocyst_subunit
   label: Sec10 exocyst subunit
   component_type: PROTEIN
@@ -132,6 +211,23 @@ components:
     notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
       complex the exocyst and showed that it is required for exocytosis in Saccharomyces
       cerevisiae.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06245
+    protein_label: Exocyst complex component SEC10
+    gene_symbol: SEC10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q06245
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q06245, the single reviewed entry
+        for gene SEC10 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sec15_exocyst_subunit
   label: Sec15 exocyst subunit
   component_type: PROTEIN
@@ -151,6 +247,23 @@ components:
   - reference: DOI:10.1093/emboj/18.4.1071
     notes: Guo et al. 1999 connected Sec15p with GTP-bound Sec4p during secretory-vesicle
       targeting.
+  protein_examples:
+  - uniprot_id: UniProtKB:P22224
+    protein_label: Exocyst complex component SEC15
+    gene_symbol: SEC15
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC15 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22224
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22224, the single reviewed entry
+        for gene SEC15 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: exo70_exocyst_subunit
   label: Exo70 exocyst subunit
   component_type: PROTEIN
@@ -169,6 +282,27 @@ components:
     notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
       complex the exocyst and showed that it is required for exocytosis in Saccharomyces
       cerevisiae.
+  protein_examples:
+  - uniprot_id: UniProtKB:P19658
+    protein_label: Exocyst complex component EXO70
+    gene_symbol: EXO70
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EXO70 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15583031
+      notes: Boyd C et al. 2004, ‘Vesicles carry most exocyst subunits to exocytic
+        sites marked by the remaining two subunits, Sec3p and Exo70p.’, J Cell Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasmic vesicle,
+        secretory vesicle' localisation of P19658.
+    - reference: PMID:15788396
+      notes: Zhang X et al. 2005, ‘The critical role of Exo84p in the organization
+        and polarized localization of the exocyst complex.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Bud' localisation of P19658.
 - component_id: exo84_exocyst_subunit
   label: Exo84 exocyst subunit
   component_type: PROTEIN
@@ -184,6 +318,23 @@ components:
   evidence:
   - reference: DOI:10.1074/jbc.274.33.23558
     notes: Guo et al. 1999 identified Exo84p as an exocyst protein essential for secretion.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38261
+    protein_label: Exocyst complex component EXO84
+    gene_symbol: EXO84
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EXO84 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38261
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38261, the single reviewed entry
+        for gene EXO84 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -237,6 +388,8 @@ causal_graphs:
   - node_id: sec4p
     label: Sec4p
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P07560
   - node_id: sec15_exocyst_subunit
     label: Sec15 exocyst subunit
     node_type: GENE_OR_PROTEIN

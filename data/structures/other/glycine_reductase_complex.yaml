@@ -20,6 +20,11 @@ curation_history:
     with a grounding TODO, an Acetoanaerobium sticklandii DSM 519 canonical example,
     glycine reductase activity, and DOI/PMID evidence.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:1990204
 components:
@@ -80,6 +85,22 @@ components:
     notes: Graentzdoerffer et al. 2001 cloned the Clostridium sticklandii grd operon
       containing the genes for the other glycine reductase components, including protein
       B.
+  protein_examples:
+  - uniprot_id: UniProtKB:E3PXR9
+    protein_label: Glycine reductase component B (47 kDa, subunit gamma)
+    gene_symbol: grdB
+    taxon_id: NCBITaxon:499177
+    taxon_label: Acetoanaerobium sticklandii DSM 519
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene grdB in Acetoanaerobium
+      sticklandii DSM 519. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/E3PXR9
+      notes: UniProtKB unreviewed (TrEMBL) entry E3PXR9 for gene grdB in Acetoanaerobium
+        sticklandii DSM 519. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: grdc_protein_c
   label: Glycine reductase protein C
   component_type: PROTEIN_COMPLEX
@@ -106,6 +127,37 @@ components:
   - reference: PMID:11271425
     notes: Graentzdoerffer et al. 2001 reported that C. sticklandii transcripts downstream
       of grdB cover genes encoding both subunits of protein C.
+  protein_examples:
+  - uniprot_id: UniProtKB:E3PXS0
+    protein_label: Glycine reductase component C subunit beta
+    gene_symbol: grdC
+    taxon_id: NCBITaxon:499177
+    taxon_label: Acetoanaerobium sticklandii DSM 519
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene grdC in Acetoanaerobium
+      sticklandii DSM 519. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/E3PXS0
+      notes: UniProtKB unreviewed (TrEMBL) entry E3PXS0 for gene grdC in Acetoanaerobium
+        sticklandii DSM 519. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:E3PXS1
+    protein_label: Glycine reductase component C subunit alpha
+    gene_symbol: grdD
+    taxon_id: NCBITaxon:499177
+    taxon_label: Acetoanaerobium sticklandii DSM 519
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene grdD in Acetoanaerobium
+      sticklandii DSM 519. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/E3PXS1
+      notes: UniProtKB unreviewed (TrEMBL) entry E3PXS1 for gene grdD in Acetoanaerobium
+        sticklandii DSM 519. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:499177
   taxon_label: Acetoanaerobium sticklandii DSM 519

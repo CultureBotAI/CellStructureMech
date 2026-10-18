@@ -27,6 +27,11 @@ curation_history:
   changes: 'Addressed PR review issue #479 by narrowing the chimallin grounding TODO
     rationale so it no longer suggests an unsupported HK97-like fold equivalence.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0043232
 synonyms:
@@ -60,6 +65,31 @@ components:
   - reference: DOI:10.1038/s41586-022-05013-4
     notes: Laughlin et al. 2022 named the major jumbo-bacteriophage nuclear shell
       protein chimallin and analyzed its shell self-assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:B3FIW8
+    protein_label: Chimallin
+    gene_symbol: 201phi2-1p105
+    taxon_id: NCBITaxon:198110
+    taxon_label: Pseudomonas phage 201phi2-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene chmA, which UniProt lists
+      under the primary name 201phi2-1p105, in Pseudomonas phage 201phi2-1. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:28082593
+      notes: Chaikeeratisak V et al. 2017, ‘Assembly of a nucleus-like structure during
+        viral replication in bacteria.’, Science. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Host cytoplasm' localisation of B3FIW8.
+    - reference: PMID:28813669
+      notes: Chaikeeratisak V et al. 2017, ‘The Phage Nucleus and Tubulin Spindle
+        Are Conserved among Large Pseudomonas Phages.’, Cell Rep. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Host cytoplasm' localisation of B3FIW8.
+    - reference: PMID:35922510
+      notes: Laughlin TG et al. 2022, ‘Architecture and self-assembly of the jumbo
+        bacteriophage nuclear shell.’, Nature. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Host cytoplasm' localisation of B3FIW8.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:198110
   taxon_label: Pseudomonas phage 201phi2-1

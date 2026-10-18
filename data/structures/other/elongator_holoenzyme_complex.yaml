@@ -26,6 +26,13 @@ curation_history:
   changes: Normalized Winkler et al. Elongator composition evidence notes to name
     Saccharomyces cerevisiae explicitly.
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:26Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: holo-Elongator
   synonym_type: EXACT_SYNONYM
@@ -58,6 +65,33 @@ components:
   - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
     notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
       and found that tagging any one of the six Elp subunits yielded all six components.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06706
+    protein_label: Elongator complex protein 1
+    gene_symbol: IKI3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ELP1, which UniProt lists under
+      the primary name IKI3, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15780940
+      notes: Rahl PB et al. 2005, ‘Elp1p, the yeast homolog of the FD disease syndrome
+        protein, negatively regulates exocytosis independently of transcriptional
+        elongation.’, Mol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of Q06706.
+    - reference: PMID:24750273
+      notes: Di Santo R et al. 2014, ‘A conserved and essential basic region mediates
+        tRNA binding to the Elp1 subunit of the Saccharomyces cerevisiae Elongator
+        complex.’, Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of Q06706.
+    - reference: PMID:10024884
+      notes: Otero G et al. 1999, ‘Elongator, a multisubunit component of a novel
+        RNA polymerase II holoenzyme for transcriptional elongation.’, Mol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q06706.
 - component_id: elp2_elongator_subunit
   label: Elp2 Elongator subunit
   component_type: PROTEIN
@@ -79,6 +113,23 @@ components:
   - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
     notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
       and found that tagging any one of the six Elp subunits yielded all six components.
+  protein_examples:
+  - uniprot_id: UniProtKB:P42935
+    protein_label: Elongator complex protein 2
+    gene_symbol: ELP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ELP2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P42935
+      notes: UniProtKB reviewed (Swiss-Prot) entry P42935, the single reviewed entry
+        for gene ELP2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: elp3_elongator_subunit
   label: Elp3 Elongator subunit
   component_type: PROTEIN
@@ -100,6 +151,31 @@ components:
   - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
     notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
       and found that tagging any one of the six Elp subunits yielded all six components.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02908
+    protein_label: Elongator complex protein 3
+    gene_symbol: ELP3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ELP3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q02908.
+    - reference: PMID:15780940
+      notes: Rahl PB et al. 2005, ‘Elp1p, the yeast homolog of the FD disease syndrome
+        protein, negatively regulates exocytosis independently of transcriptional
+        elongation.’, Mol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of Q02908.
+    - reference: PMID:10024884
+      notes: Otero G et al. 1999, ‘Elongator, a multisubunit component of a novel
+        RNA polymerase II holoenzyme for transcriptional elongation.’, Mol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q02908.
 - component_id: elp4_elongator_subunit
   label: Elp4 Elongator subunit
   component_type: PROTEIN
@@ -121,6 +197,23 @@ components:
   - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
     notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
       and found that tagging any one of the six Elp subunits yielded all six components.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02884
+    protein_label: Elongator complex protein 4
+    gene_symbol: ELP4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ELP4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q02884
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q02884, the single reviewed entry
+        for gene ELP4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: elp5_elongator_subunit
   label: Elp5 Elongator subunit
   component_type: PROTEIN
@@ -142,6 +235,28 @@ components:
   - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
     notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
       and found that tagging any one of the six Elp subunits yielded all six components.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38874
+    protein_label: Elongator complex protein 5
+    gene_symbol: IKI1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ELP5, which UniProt lists under
+      the primary name IKI1, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15780940
+      notes: Rahl PB et al. 2005, ‘Elp1p, the yeast homolog of the FD disease syndrome
+        protein, negatively regulates exocytosis independently of transcriptional
+        elongation.’, Mol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of P38874.
+    - reference: PMID:10024884
+      notes: Otero G et al. 1999, ‘Elongator, a multisubunit component of a novel
+        RNA polymerase II holoenzyme for transcriptional elongation.’, Mol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P38874.
 - component_id: elp6_elongator_subunit
   label: Elp6 Elongator subunit
   component_type: PROTEIN
@@ -163,6 +278,27 @@ components:
   - reference: DOI:10.1128/MCB.21.23.8203-8212.2001
     notes: Krogan and Greenblatt 2001 purified Saccharomyces cerevisiae Holo-Elongator
       and found that tagging any one of the six Elp subunits yielded all six components.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04868
+    protein_label: Elongator complex protein 6
+    gene_symbol: ELP6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ELP6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15780940
+      notes: Rahl PB et al. 2005, ‘Elp1p, the yeast homolog of the FD disease syndrome
+        protein, negatively regulates exocytosis independently of transcriptional
+        elongation.’, Mol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of Q04868.
+    - reference: PMID:10024884
+      notes: Otero G et al. 1999, ‘Elongator, a multisubunit component of a novel
+        RNA polymerase II holoenzyme for transcriptional elongation.’, Mol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q04868.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

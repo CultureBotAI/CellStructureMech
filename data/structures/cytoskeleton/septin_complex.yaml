@@ -33,6 +33,13 @@ curation_history:
   changes: 'Addressed #2215: Qualified the detected minimum of two Spn1-4 copies versus
     the proposed exact two-copy model in An et al. 2004.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:12:53Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0032991
 part_of:
@@ -56,6 +63,80 @@ components:
   - reference: DOI:10.1091/mbc.E04-07-0640
     notes: An et al. 2004 assayed fission-yeast septin requirements for septin complex
       formation.
+  gene_symbols:
+  - spn1
+  - spn2
+  - spn3
+  - spn4
+  protein_examples:
+  - uniprot_id: UniProtKB:O36023
+    protein_label: Septin homolog spn1
+    gene_symbol: spn1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene spn1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15385632
+      notes: An H et al. 2004, ‘Requirements of fission yeast septins for complex
+        formation, localization, and function.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cell cortex' localisation of
+        O36023.
+  - uniprot_id: UniProtKB:Q09116
+    protein_label: Septin homolog spn2
+    gene_symbol: spn2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene spn2 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q09116
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q09116, the single reviewed entry
+        for gene spn2 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P48008
+    protein_label: Septin homolog spn3
+    gene_symbol: spn3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene spn3 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15385632
+      notes: An H et al. 2004, ‘Requirements of fission yeast septins for complex
+        formation, localization, and function.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cell cortex' localisation of
+        P48008.
+    - reference: PMID:28914606
+      notes: McDonald NA et al. 2017, ‘Nanoscale architecture of the Schizosaccharomyces
+        pombe contractile ring.’, Elife. ECO:0000269 experimental evidence cited by
+        UniProt for the 'Cytoplasm, cell cortex' localisation of P48008.
+  - uniprot_id: UniProtKB:P48009
+    protein_label: Septin homolog spn4
+    gene_symbol: spn4
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene spn4 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15385632
+      notes: An H et al. 2004, ‘Requirements of fission yeast septins for complex
+        formation, localization, and function.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cell cortex' localisation of
+        P48009.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe

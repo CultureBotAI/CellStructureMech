@@ -36,6 +36,18 @@ curation_history:
     Fim inventory and added the confirmed 2025 FimI termination source to the assembly
     function.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:09:28Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: type 1 pilus
   synonym_type: EXACT_SYNONYM
@@ -68,6 +80,25 @@ components:
   - reference: DOI:10.1038/s41467-025-60325-z
     notes: Bachmann et al. 2025 structurally analyze the Escherichia coli type 1 pilus
       rod as a helical assembly of FimA.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q47223
+    protein_label: Type-1 fimbrial protein, A chain
+    gene_symbol: fimA
+    taxon_id: NCBITaxon:562
+    taxon_label: Escherichia coli
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fimA in Escherichia coli, a
+      taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q47223
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q47223, the single reviewed entry
+        for gene fimA in Escherichia coli. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 - component_id: fimg_tip_adaptor
   label: FimG tip adaptor subunit
   component_type: PROTEIN
@@ -86,6 +117,23 @@ components:
   - reference: DOI:10.1038/s41467-025-60325-z
     notes: Bachmann et al. 2025 place FimG between FimH and FimF in the type 1 pilus
       flexible tip fibrillum.
+  protein_examples:
+  - uniprot_id: UniProtKB:P08190
+    protein_label: Protein FimG
+    gene_symbol: fimG
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fimG in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P08190
+      notes: UniProtKB reviewed (Swiss-Prot) entry P08190, the single reviewed entry
+        for gene fimG in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: fimf_tip_adaptor
   label: FimF tip adaptor subunit
   component_type: PROTEIN
@@ -101,6 +149,23 @@ components:
   - reference: DOI:10.1038/s41467-025-60325-z
     notes: Bachmann et al. 2025 model FimF between FimG and the FimA rod in the assembled
       type 1 pilus.
+  protein_examples:
+  - uniprot_id: UniProtKB:P08189
+    protein_label: Protein FimF
+    gene_symbol: fimF
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fimF in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P08189
+      notes: UniProtKB reviewed (Swiss-Prot) entry P08189, the single reviewed entry
+        for gene fimF in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: fimh_tip_adhesin
   label: FimH tip adhesin
   component_type: PROTEIN
@@ -120,6 +185,23 @@ components:
   - reference: DOI:10.1128/ecosalplus.ESP-0007-2017
     notes: Werneburg and Thanassi 2018 review FimH as the mannose-binding adhesin
       of type 1 pili.
+  protein_examples:
+  - uniprot_id: UniProtKB:P08191
+    protein_label: Type 1 fimbrin D-mannose specific adhesin
+    gene_symbol: fimH
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fimH in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:1971261
+      notes: Krogfelt KA et al. 1990, ‘Direct evidence that the FimH protein is the
+        mannose-specific adhesin of Escherichia coli type 1 fimbriae.’, Infect Immun.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Fimbrium' localisation
+        of P08191.
 - component_id: fimi_terminator
   label: FimI terminator subunit
   component_type: PROTEIN
@@ -136,6 +218,23 @@ components:
   - reference: DOI:10.1038/s41467-025-60325-z
     notes: Bachmann et al. 2025 describe a single FimI subunit terminating the FimA
       rod and anchoring it to FimD.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39264
+    protein_label: Fimbrin-like protein FimI
+    gene_symbol: fimI
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fimI in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39264
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39264, the single reviewed entry
+        for gene fimI in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -203,9 +302,13 @@ causal_graphs:
   - node_id: fimc_chaperone
     label: FimC chaperone
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P31697
   - node_id: fimd_usher
     label: FimD usher
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P30130
   - node_id: fimh_adhesin
     label: FimH tip adhesin
     node_type: GENE_OR_PROTEIN

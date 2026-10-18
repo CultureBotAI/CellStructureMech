@@ -31,6 +31,13 @@ curation_history:
   changes: '#1142: Added a resolved Lst4-Lst7 GAP boundary discussion and Cell Reports
     evidence so the graph''s omitted GAP cycles are explicitly out of scope.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:49Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0032991
 synonyms:
@@ -63,6 +70,22 @@ components:
   - reference: DOI:10.1016/j.bbrc.2005.08.108
     notes: Wang et al. 2005 characterized the Saccharomyces cerevisiae Gtr1p-Gtr2p
       GTPase complex during cell-proliferation regulation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q00582
+    protein_label: GTP-binding protein GTR1
+    gene_symbol: GTR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GTR1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:28993463
+      notes: Varlakhanova NV et al. 2017, ‘Pib2 and the EGO complex are both required
+        for activation of TORC1.’, J Cell Sci. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Vacuole membrane' localisation of Q00582.
 - component_id: gtr2_gtpase
   label: Gtr2 Rag-family GTPase
   component_type: PROTEIN
@@ -85,6 +108,30 @@ components:
   - reference: DOI:10.1016/j.bbrc.2005.08.108
     notes: Wang et al. 2005 characterized the Saccharomyces cerevisiae Gtr1p-Gtr2p
       GTPase complex during cell-proliferation regulation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53290
+    protein_label: GTP-binding protein GTR2
+    gene_symbol: GTR2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GTR2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Vacuole membrane' localisation of P53290.
+    - reference: PMID:15989961
+      notes: Dubouloz F et al. 2005, ‘The TOR and EGO protein complexes orchestrate
+        microautophagy in yeast.’, Mol Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Vacuole membrane' localisation of P53290.
+    - reference: PMID:28993463
+      notes: Varlakhanova NV et al. 2017, ‘Pib2 and the EGO complex are both required
+        for activation of TORC1.’, J Cell Sci. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Vacuole membrane' localisation of P53290.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

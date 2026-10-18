@@ -35,6 +35,13 @@ curation_history:
   changes: '#1253: Replaced unreadable Free 2013 fungal-wall citations with readable
     Orlean 2012 support for Saccharomyces cerevisiae wall assembly.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:14:59Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: chitin- and beta-glucan-containing cell wall
   synonym_type: NARROW_SYNONYM
@@ -87,6 +94,86 @@ components:
   - reference: DOI:10.1128/microbiolspec.FUNK-0035-2016
     notes: Gow, Latge and Munro 2017 review mannoproteins and GPI-modified proteins
       as fungal cell-wall constituents.
+  gene_symbols:
+  - CWP1
+  - CWP2
+  - SED1
+  - GAS1
+  protein_examples:
+  - uniprot_id: UniProtKB:P28319
+    protein_label: Cell wall protein CWP1
+    gene_symbol: CWP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CWP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P28319
+      notes: UniProtKB reviewed (Swiss-Prot) entry P28319, the single reviewed entry
+        for gene CWP1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P43497
+    protein_label: Cell wall protein CWP2
+    gene_symbol: CWP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CWP2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P43497
+      notes: UniProtKB reviewed (Swiss-Prot) entry P43497, the single reviewed entry
+        for gene CWP2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q01589
+    protein_label: Cell wall protein SED1
+    gene_symbol: SED1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SED1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q01589
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q01589, the single reviewed entry
+        for gene SED1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P22146
+    protein_label: 1,3-beta-glucanosyltransferase GAS1
+    gene_symbol: GAS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GAS1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18434410
+      notes: Luallen RJ et al. 2008, ‘An engineered Saccharomyces cerevisiae strain
+        binds the broadly neutralizing human immunodeficiency virus type 1 antibody
+        2G12 and elicits mannose-specific gp120-binding antibodies.’, J Virol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell membrane' localisation
+        of P22146.
+    - reference: PMID:3046936
+      notes: Conzelmann A et al. 1988, ‘A major 125-kd membrane glycoprotein of Saccharomyces
+        cerevisiae is attached to the lipid bilayer through an inositol-containing
+        phospholipid.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell membrane' localisation of P22146.
+    - reference: PMID:3072201
+      notes: Popolo L et al. 1988, ‘Immunochemical characterization of gp115, a yeast
+        glycoprotein modulated by the cell cycle.’, Eur J Cell Biol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell membrane' localisation of P22146.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4751
   taxon_label: Fungi

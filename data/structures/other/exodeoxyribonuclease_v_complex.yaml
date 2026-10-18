@@ -33,6 +33,13 @@ curation_history:
   changes: '#1472/#1473: removed weak RecBCD exact synonymy and removed unsupported
     assembly-essentiality assertions from the RecB, RecC, and RecD component rows.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:55Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0140535
 - GO:1902494
@@ -52,6 +59,23 @@ components:
   - reference: PDB:1W36
     notes: RCSB maps PDB:1W36 polymer entity 1 to Escherichia coli exodeoxyribonuclease
       V beta chain RecB, UniProtKB:P08394.
+  protein_examples:
+  - uniprot_id: UniProtKB:P08394
+    protein_label: RecBCD enzyme subunit RecB
+    gene_symbol: recB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene recB in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P08394
+      notes: UniProtKB reviewed (Swiss-Prot) entry P08394, the single reviewed entry
+        for gene recB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: recc_subunit
   label: RecBCD enzyme subunit RecC
   component_type: PROTEIN
@@ -67,6 +91,23 @@ components:
   - reference: PDB:1W36
     notes: RCSB maps PDB:1W36 polymer entity 2 to Escherichia coli exodeoxyribonuclease
       V gamma chain RecC, UniProtKB:P07648.
+  protein_examples:
+  - uniprot_id: UniProtKB:P07648
+    protein_label: RecBCD enzyme subunit RecC
+    gene_symbol: recC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene recC in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P07648
+      notes: UniProtKB reviewed (Swiss-Prot) entry P07648, the single reviewed entry
+        for gene recC in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: recd_subunit
   label: RecBCD enzyme subunit RecD
   component_type: PROTEIN
@@ -82,6 +123,23 @@ components:
   - reference: PDB:1W36
     notes: RCSB maps PDB:1W36 polymer entity 3 to Escherichia coli exodeoxyribonuclease
       V alpha chain RecD, UniProtKB:P04993.
+  protein_examples:
+  - uniprot_id: UniProtKB:P04993
+    protein_label: RecBCD enzyme subunit RecD
+    gene_symbol: recD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene recD in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P04993
+      notes: UniProtKB reviewed (Swiss-Prot) entry P04993, the single reviewed entry
+        for gene recD in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli

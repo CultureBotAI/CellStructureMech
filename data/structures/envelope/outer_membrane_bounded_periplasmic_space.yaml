@@ -35,6 +35,11 @@ curation_history:
   changes: '#2314: Make LPS, rather than the Lpt machine, the cargo moving across
     the periplasm.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: outer membrane bounded periplasmic space
   synonym_type: EXACT_SYNONYM
@@ -150,6 +155,8 @@ causal_graphs:
   - node_id: lpt_machine
     label: Lpt lipopolysaccharide transport machinery
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P31554
   edges:
   - subject: inner_membrane
     predicate: bounds the inner side of

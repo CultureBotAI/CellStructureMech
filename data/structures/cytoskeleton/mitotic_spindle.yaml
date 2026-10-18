@@ -52,6 +52,13 @@ curation_history:
     electron-microscopy reconstruction; preserved separately cited Straight 1997 live-cell
     evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:11:43Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0005819
 has_part:
@@ -78,6 +85,59 @@ components:
   grounding_notes: The mitotic spindle uses alpha- and beta-tubulin subunits that
     are shared with other eukaryotic microtubule arrays; no exact source-neutral CURIE
     was assigned for only the mitotic-spindle tubulin constituents.
+  gene_symbols:
+  - TUB1
+  - TUB2
+  - TUB3
+  protein_examples:
+  - uniprot_id: UniProtKB:P09733
+    protein_label: Tubulin alpha-1 chain
+    gene_symbol: TUB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TUB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11739794
+      notes: Anders KR et al. 2001, ‘Dominant-lethal alpha-tubulin mutants defective
+        in microtubule depolymerization in yeast.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cytoskeleton' localisation of
+        P09733.
+  - uniprot_id: UniProtKB:P02557
+    protein_label: Tubulin beta chain
+    gene_symbol: TUB2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TUB2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:23001566
+      notes: Cederquist GY et al. 2012, ‘An inherited TUBB2B mutation alters a kinesin-binding
+        site and causes polymicrogyria, CFEOM and axon dysinnervation.’, Hum Mol Genet.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton'
+        localisation of P02557.
+  - uniprot_id: UniProtKB:P09734
+    protein_label: Tubulin alpha-3 chain
+    gene_symbol: TUB3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TUB3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P09734
+      notes: UniProtKB reviewed (Swiss-Prot) entry P09734, the single reviewed entry
+        for gene TUB3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

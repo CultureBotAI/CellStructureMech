@@ -21,6 +21,13 @@ curation_history:
     example, ion-gradient-dependent transport function, evidence, and a receptor-grounding
     discussion.
   llm_assisted: true
+- timestamp: '2026-10-18T03:32:49Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: TRAP transporter complex
   synonym_type: EXACT_SYNONYM
@@ -48,6 +55,25 @@ components:
   - reference: DOI:10.1128/JB.179.17.5482-5493.1997
     notes: Forward et al. 1997 identified DctP as the periplasmic C4-dicarboxylate-binding
       component of the Rhodobacter capsulatus DctPQM TRAP transporter.
+  gene_symbols:
+  - dctP
+  protein_examples:
+  - uniprot_id: UniProtKB:P37735
+    protein_label: C4-dicarboxylate-binding periplasmic protein DctP
+    gene_symbol: dctP
+    taxon_id: NCBITaxon:1061
+    taxon_label: Rhodobacter capsulatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene dctP in Rhodobacter capsulatus,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:1569065
+      notes: Walmsley AR et al. 1992, ‘The mechanism of ligand binding to the periplasmic
+        C4-dicarboxylate binding protein (DctP) from Rhodobacter capsulatus.’, J Biol
+        Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Periplasm'
+        localisation of P37735.
 - component_id: trap_small_membrane_dctq
   label: TRAP transporter, small membrane protein DctQ
   component_type: PROTEIN
@@ -64,6 +90,31 @@ components:
   - reference: DOI:10.1128/JB.179.17.5482-5493.1997
     notes: Forward et al. 1997 identified R. capsulatus dctQ as a membrane-protein
       gene required with dctP and dctM for functional C4-dicarboxylate transport.
+  gene_symbols:
+  - dctQ
+  protein_examples:
+  - uniprot_id: UniProtKB:O07837
+    protein_label: C4-dicarboxylate TRAP transporter small permease protein DctQ
+    gene_symbol: dctQ
+    taxon_id: NCBITaxon:1061
+    taxon_label: Rhodobacter capsulatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene dctQ in Rhodobacter capsulatus,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11150659
+      notes: Wyborn NR et al. 2001, ‘Topological analysis of DctQ, the small integral
+        membrane protein of the C4-dicarboxylate TRAP transporter of Rhodobacter capsulatus.’,
+        FEMS Microbiol Lett. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cell inner membrane' localisation of O07837.
+    - reference: PMID:9287004
+      notes: 'Forward JA et al. 1997, ‘TRAP transporters: a new family of periplasmic
+        solute transport systems encoded by the dctPQM genes of Rhodobacter capsulatus
+        and by homologs in diverse gram-negative bacteria.’, J Bacteriol. ECO:0000269
+        experimental evidence cited by UniProt for the ''Cell inner membrane'' localisation
+        of O07837.'
 - component_id: trap_large_membrane_dctm
   label: TRAP transporter large membrane protein DctM
   component_type: PROTEIN
@@ -80,6 +131,26 @@ components:
   - reference: DOI:10.1128/JB.179.17.5482-5493.1997
     notes: Forward et al. 1997 identified R. capsulatus dctM as a membrane-protein
       gene required with dctP and dctQ for functional C4-dicarboxylate transport.
+  gene_symbols:
+  - dctM
+  protein_examples:
+  - uniprot_id: UniProtKB:O07838
+    protein_label: C4-dicarboxylate TRAP transporter large permease protein DctM
+    gene_symbol: dctM
+    taxon_id: NCBITaxon:1061
+    taxon_label: Rhodobacter capsulatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene dctM in Rhodobacter capsulatus,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9287004
+      notes: 'Forward JA et al. 1997, ‘TRAP transporters: a new family of periplasmic
+        solute transport systems encoded by the dctPQM genes of Rhodobacter capsulatus
+        and by homologs in diverse gram-negative bacteria.’, J Bacteriol. ECO:0000269
+        experimental evidence cited by UniProt for the ''Cell inner membrane'' localisation
+        of O07838.'
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

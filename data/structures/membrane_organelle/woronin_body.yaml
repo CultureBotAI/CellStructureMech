@@ -27,6 +27,13 @@ curation_history:
     edge and keeping the Woronin body graph focused on directly supported dense-core,
     membrane-boundary and septal-pore plugging relations.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:18:53Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 components:
 - component_id: woronin_body_membrane
   label: Woronin body membrane
@@ -60,6 +67,28 @@ components:
   - reference: DOI:10.1038/nsb910
     notes: Yuan et al. 2003 solved the Neurospora crassa HEX-1 crystal lattice and
       showed lattice assembly is required for Woronin body function.
+  protein_examples:
+  - uniprot_id: UniProtKB:P87252
+    protein_label: Woronin body major protein
+    gene_symbol: hex-1
+    taxon_id: NCBITaxon:367110
+    taxon_label: Neurospora crassa OR74A
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene hex-1 in Neurospora crassa
+      OR74A, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10783241
+      notes: Jedd G et al. 2000, ‘A new self-assembled peroxisomal vesicle required
+        for efficient resealing of the plasma membrane.’, Nat Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell septum' localisation
+        of P87252.
+    - reference: PMID:11273682
+      notes: Tenney K et al. 2000, ‘Hex-1, a gene unique to filamentous fungi, encodes
+        the major protein of the Woronin body and functions as a plug for septal pores.’,
+        Fungal Genet Biol. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cell septum' localisation of P87252.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:147538
   taxon_label: Pezizomycotina

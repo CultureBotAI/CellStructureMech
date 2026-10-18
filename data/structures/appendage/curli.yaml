@@ -36,6 +36,12 @@ curation_history:
   changes: Softened the resolved curli secretion-complex rationale after PR review
     to avoid treating GO:0062155 as an exact CsgE/F/G component-boundary decision.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s); added 2 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: curli fimbriae
   synonym_type: EXACT_SYNONYM
@@ -61,6 +67,23 @@ components:
   - reference: DOI:10.1126/science.1067484
     notes: Chapman et al. 2002 showed that the Escherichia coli csg operons direct
       amyloid fiber formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P28307
+    protein_label: Major curlin subunit
+    gene_symbol: csgA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene csgA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P28307
+      notes: UniProtKB reviewed (Swiss-Prot) entry P28307, the single reviewed entry
+        for gene csgA in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: csgB_nucleator
   label: CsgB nucleator subunit
   component_type: PROTEIN
@@ -72,6 +95,23 @@ components:
   evidence:
   - reference: DOI:10.1128/ecosalplus.ESP-0037-2018
     notes: Bhoite et al. 2019 review CsgB-dependent nucleation during curli assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABK7
+    protein_label: Minor curlin subunit
+    gene_symbol: csgB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene csgB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ABK7
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ABK7, the single reviewed entry
+        for gene csgB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -125,9 +165,13 @@ causal_graphs:
   - node_id: csgG_pore
     label: CsgG outer-membrane secretion pore
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P0AEA2
   - node_id: csgF_adaptor
     label: CsgF cell-surface adaptor
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P0AE98
   - node_id: csgB_nucleator
     label: CsgB nucleator subunit
     node_type: GENE_OR_PROTEIN

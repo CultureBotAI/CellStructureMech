@@ -25,6 +25,11 @@ curation_history:
   changes: 'Resolved PR #1344 review issue #1345 by adding direct Saccharomyces literature
     evidence to the chitosan-to-chitosan-layer formation edge.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 part_of:
 - GO:0005619
 components:
@@ -116,6 +121,9 @@ causal_graphs:
   - node_id: cda_chitin_deacetylases
     label: Cda1/Cda2 chitin deacetylases
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q06702
+    - UniProtKB:Q06703
   - node_id: chitosan
     label: chitosan
     node_type: CHEMICAL

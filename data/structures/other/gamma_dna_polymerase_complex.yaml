@@ -23,6 +23,13 @@ curation_history:
     TODO, and a resolved discussion for modeling the homodimeric accessory subunit
     as one component class.
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:07Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0042575
 - GO:0098798
@@ -50,6 +57,27 @@ components:
   - reference: PMID:10608893
     notes: Lim et al. reconstituted human Hp140 with the p55 accessory subunit as
       an active DNA polymerase gamma complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P54098
+    protein_label: DNA polymerase subunit gamma-1
+    gene_symbol: POLG
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POLG in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10827171
+      notes: Spelbrink JN et al. 2000, ‘In vivo functional analysis of the human mitochondrial
+        DNA polymerase POLG expressed in cultured human cells.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Mitochondrion' localisation
+        of P54098.
+    - reference: PMID:18063578
+      notes: Bogenhagen DF et al. 2008, ‘The layered structure of human mitochondrial
+        DNA nucleoids.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion' localisation of P54098.
 - component_id: pol_gamma_accessory_subunit
   label: DNA polymerase gamma accessory subunit
   component_type: PROTEIN
@@ -74,6 +102,23 @@ components:
   - reference: PMID:11172710
     notes: Carrodeguas et al. showed that mammalian Pol gamma B, the accessory subunit
       of DNA polymerase gamma, functions as a homodimer.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9UHN1
+    protein_label: DNA polymerase subunit gamma-2
+    gene_symbol: POLG2
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POLG2 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q9UHN1
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q9UHN1, the single reviewed entry
+        for gene POLG2 in Homo sapiens. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

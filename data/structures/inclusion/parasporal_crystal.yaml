@@ -28,6 +28,13 @@ curation_history:
     protein-to-crystal relationship; updated Toxins review notes after consulting
     PubMed Central full text.
   llm_assisted: true
+- timestamp: '2026-10-18T03:15:29Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: parasporal crystalline inclusion
   synonym_type: EXACT_SYNONYM
@@ -65,6 +72,62 @@ components:
       the Bacillus thuringiensis subsp. israelensis inclusion has two electron-microscopic
       lattice classes with distinct major polypeptides; the ASM article and PDF were
       blocked by Cloudflare during curation, so no verbatim snippets were copied.
+  gene_symbols:
+  - cry4Aa
+  - cry11Aa
+  - cyt1Aa
+  protein_examples:
+  - uniprot_id: UniProtKB:P16480
+    protein_label: Pesticidal crystal protein Cry4Aa
+    gene_symbol: cry4Aa
+    taxon_id: NCBITaxon:1430
+    taxon_label: Bacillus thuringiensis serovar israelensis
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene cry4Aa in Bacillus thuringiensis
+      serovar israelensis, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P16480
+      notes: UniProtKB reviewed (Swiss-Prot) entry P16480, the single reviewed entry
+        for gene cry4Aa in Bacillus thuringiensis serovar israelensis. Establishes
+        the accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:P21256
+    protein_label: Pesticidal crystal protein Cry11Aa
+    gene_symbol: cry11Aa
+    taxon_id: NCBITaxon:1430
+    taxon_label: Bacillus thuringiensis serovar israelensis
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene cry11Aa in Bacillus thuringiensis
+      serovar israelensis, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P21256
+      notes: UniProtKB reviewed (Swiss-Prot) entry P21256, the single reviewed entry
+        for gene cry11Aa in Bacillus thuringiensis serovar israelensis. Establishes
+        the accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:P0A382
+    protein_label: Type-1Aa cytolytic delta-endotoxin
+    gene_symbol: cyt1Aa
+    taxon_id: NCBITaxon:1430
+    taxon_label: Bacillus thuringiensis serovar israelensis
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene cyt1Aa in Bacillus thuringiensis
+      serovar israelensis, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A382
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A382, the single reviewed entry
+        for gene cyt1Aa in Bacillus thuringiensis serovar israelensis. Establishes
+        the accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1428
   taxon_label: Bacillus thuringiensis

@@ -26,6 +26,11 @@ curation_history:
   changes: 'Addressed #2266: distinguished centrin-arm and hook-complex terminology
     in assertion-local source notes and occurrence wording.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 part_of:
@@ -52,6 +57,23 @@ components:
   grounding_notes: General centrin-family accessions are broader than the T. brucei
     Centrin4 protein at the ciliary centrin arm. No exact source-neutral Centrin4
     family CURIE was curated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q57WF6
+    protein_label: Centrin, putative
+    gene_symbol: Tb927.7.3410
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TbCentrin4,
+      which UniProt lists under the primary name Tb927.7.3410, in Trypanosoma brucei
+      brucei TREU927. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q57WF6
+      notes: UniProtKB unreviewed (TrEMBL) entry Q57WF6 for gene TbCentrin4 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei

@@ -20,6 +20,18 @@ curation_history:
     canonical example, an IFT cargo-transport function, GO/DOI evidence, a nonmechanistic
     transport graph, and boundary and component-grounding discussions.
   llm_assisted: true
+- timestamp: '2026-10-18T03:08:56Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: intraflagellar transport particle
   synonym_type: EXACT_SYNONYM
@@ -47,6 +59,109 @@ components:
   - reference: DOI:10.1038/nrm952
     notes: Rosenbaum and Witman 2002 review IFT particles as protein assemblies that
       transport cargo during cilium and flagellum assembly and maintenance.
+  gene_symbols:
+  - IFT172
+  - IFT88
+  - IFT81
+  - IFT74
+  - IFT52
+  - IFT46
+  protein_examples:
+  - uniprot_id: UniProtKB:Q5DM57
+    protein_label: Intraflagellar transport protein 172
+    gene_symbol: IFT172
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IFT172 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17326139
+      notes: Sloboda RD et al. 2007, ‘Localization of EB1, IFT polypeptides, and kinesin-2
+        in Chlamydomonas flagellar axonemes via immunogold scanning electron microscopy.’,
+        Cell Motil Cytoskeleton. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, cytoskeleton, cilium basal body' localisation of Q5DM57.
+    - reference: PMID:9585417
+      notes: 'Cole DG et al. 1998, ‘Chlamydomonas kinesin-II-dependent intraflagellar
+        transport (IFT): IFT particles contain proteins required for ciliary assembly
+        in Caenorhabditis elegans sensory neurons.’, J Cell Biol. ECO:0000269 experimental
+        evidence cited by UniProt for the ''Cytoplasm, cytoskeleton, cilium basal
+        body'' localisation of Q5DM57.'
+  - uniprot_id: UniProtKB:Q68RJ5
+    protein_label: Intraflagellar transport protein 81
+    gene_symbol: IFT81
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IFT81 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q68RJ5
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q68RJ5, the single reviewed entry
+        for gene IFT81 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q6RCE1
+    protein_label: Intraflagellar transport protein 74
+    gene_symbol: IFT74
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IFT74 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q6RCE1
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q6RCE1, the single reviewed entry
+        for gene IFT74 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:A2T2X4
+    protein_label: Intraflagellar transport protein 46
+    gene_symbol: IFT46
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IFT46 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15955805
+      notes: 'Lucker BF et al. 2005, ‘Characterization of the intraflagellar transport
+        complex B core: direct interaction of the IFT81 and IFT74/72 subunits.’, J
+        Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the ''Cytoplasm,
+        cytoskeleton, cilium basal body'' localisation of A2T2X4.'
+    - reference: PMID:17312020
+      notes: 'Hou Y et al. 2007, ‘Functional analysis of an individual IFT protein:
+        IFT46 is required for transport of outer dynein arms into flagella.’, J Cell
+        Biol. ECO:0000269 experimental evidence cited by UniProt for the ''Cytoplasm,
+        cytoskeleton, cilium basal body'' localisation of A2T2X4.'
+    - reference: PMID:18852297
+      notes: Ahmed NT et al. 2008, ‘ODA16 aids axonemal outer row dynein assembly
+        through an interaction with the intraflagellar transport machinery.’, J Cell
+        Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton, cilium basal body' localisation of A2T2X4.
+  - uniprot_id: UniProtKB:Q9FPW0
+    protein_label: Intraflagellar transport particle protein IFT88
+    gene_symbol: IFT88
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene IFT88 in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q9FPW0
+      notes: UniProtKB unreviewed (TrEMBL) entry Q9FPW0 for gene IFT88 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

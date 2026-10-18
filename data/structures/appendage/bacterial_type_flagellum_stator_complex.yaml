@@ -53,6 +53,11 @@ curation_history:
     scope; A-subunit label-only decision is contradicted by an exact family. Preserved
     historical events and PROPOSED status.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial-type flagellum motor force generator complex
   synonym_type: EXACT_SYNONYM
@@ -98,6 +103,24 @@ components:
       angular speed, not the direction of MotA rotation, and did not test all Mot/Pom
       stators.
   grounding: InterPro:IPR047055
+  protein_examples:
+  - uniprot_id: UniProtKB:Q0PBH2
+    protein_label: Flagellar motor proton channel
+    gene_symbol: motA
+    taxon_id: NCBITaxon:192222
+    taxon_label: Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene motA in Campylobacter
+      jejuni subsp. jejuni NCTC 11168 = ATCC 700819. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q0PBH2
+      notes: UniProtKB unreviewed (TrEMBL) entry Q0PBH2 for gene motA in Campylobacter
+        jejuni subsp. jejuni NCTC 11168 = ATCC 700819. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 - component_id: b_subunit
   label: flagellar stator B subunit
   component_type: PROTEIN
@@ -120,6 +143,24 @@ components:
   - reference: DOI:10.1016/j.str.2018.02.016
     notes: Kojima et al. 2018 showed that the periplasmic domain of the stator B subunit
       controls peptidoglycan binding and ion influx.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q0PBH3
+    protein_label: Flagellar motor protein
+    gene_symbol: motB
+    taxon_id: NCBITaxon:192222
+    taxon_label: Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene motB in Campylobacter
+      jejuni subsp. jejuni NCTC 11168 = ATCC 700819. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q0PBH3
+      notes: UniProtKB unreviewed (TrEMBL) entry Q0PBH3 for gene motB in Campylobacter
+        jejuni subsp. jejuni NCTC 11168 = ATCC 700819. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

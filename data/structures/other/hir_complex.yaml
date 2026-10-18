@@ -26,6 +26,13 @@ curation_history:
   changes: Recorded a resolved component-boundary discussion explaining why Asf1 is
     not curated as one of the four HIR complex constituents.
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:57Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: HIRA complex
   synonym_type: EXACT_SYNONYM
@@ -51,6 +58,27 @@ components:
   - reference: DOI:10.1016/j.cub.2005.10.053
     notes: Green et al. 2005 reported that Hir1, Hir2, Hir3 and Hpc2 comprise the
       budding-yeast HIR complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32479
+    protein_label: Protein HIR1
+    gene_symbol: HIR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HIR1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11782447
+      notes: Sharp JA et al. 2002, ‘Chromatin assembly factor I and Hir proteins contribute
+        to building functional kinetochores in S. cerevisiae.’, Genes Dev. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P32479.
+    - reference: PMID:19683497
+      notes: Fillingham J et al. 2009, ‘Two-color cell array screen reveals interdependent
+        roles for histone chaperones and a chromatin boundary regulator in histone
+        gene repression.’, Mol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Chromosome' localisation of P32479.
 - component_id: hir2_hir_subunit
   label: Hir2 HIR subunit
   component_type: PROTEIN
@@ -69,6 +97,28 @@ components:
   - reference: DOI:10.1016/j.cub.2005.10.053
     notes: Green et al. 2005 reported that Hir1, Hir2, Hir3 and Hpc2 comprise the
       budding-yeast HIR complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32480
+    protein_label: Protein HIR2
+    gene_symbol: HIR2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HIR2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:8417331
+      notes: Sherwood PW et al. 1993, ‘Characterization of HIR1 and HIR2, two genes
+        required for regulation of histone gene transcription in Saccharomyces cerevisiae.’,
+        Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P32480.
+    - reference: PMID:19683497
+      notes: Fillingham J et al. 2009, ‘Two-color cell array screen reveals interdependent
+        roles for histone chaperones and a chromatin boundary regulator in histone
+        gene repression.’, Mol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Chromosome' localisation of P32480.
 - component_id: hir3_hir_subunit
   label: Hir3 HIR subunit
   component_type: PROTEIN
@@ -87,6 +137,28 @@ components:
   - reference: DOI:10.1016/j.cub.2005.10.053
     notes: Green et al. 2005 reported that Hir1, Hir2, Hir3 and Hpc2 comprise the
       budding-yeast HIR complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47171
+    protein_label: Histone transcription regulator 3
+    gene_symbol: HIR3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HIR3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9671488
+      notes: Qian Z et al. 1998, ‘Yeast Ty1 retrotransposition is stimulated by a
+        synergistic interaction between mutations in chromatin assembly factor I and
+        histone regulatory proteins.’, Mol Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of P47171.
+    - reference: PMID:19683497
+      notes: Fillingham J et al. 2009, ‘Two-color cell array screen reveals interdependent
+        roles for histone chaperones and a chromatin boundary regulator in histone
+        gene repression.’, Mol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Chromosome' localisation of P47171.
 - component_id: hpc2_hir_subunit
   label: Hpc2 HIR subunit
   component_type: PROTEIN
@@ -105,6 +177,27 @@ components:
   - reference: DOI:10.1016/j.cub.2005.10.053
     notes: Green et al. 2005 reported that Hir1, Hir2, Hir3 and Hpc2 comprise the
       budding-yeast HIR complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q01448
+    protein_label: Histone promoter control protein 2
+    gene_symbol: HPC2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HPC2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q01448.
+    - reference: PMID:19683497
+      notes: Fillingham J et al. 2009, ‘Two-color cell array screen reveals interdependent
+        roles for histone chaperones and a chromatin boundary regulator in histone
+        gene repression.’, Mol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Chromosome' localisation of Q01448.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

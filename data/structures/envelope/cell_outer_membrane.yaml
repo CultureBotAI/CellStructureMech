@@ -33,6 +33,95 @@ components:
   evidence:
   - reference: DOI:10.1101/cshperspect.a000414
     notes: Porins and assembly proteins are core outer-membrane components.
+  gene_symbols:
+  - ompA
+  - ompC
+  - ompF
+  - bamA
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A910
+    protein_label: Outer membrane protein A
+    gene_symbol: ompA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ompA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10636850
+      notes: Arora A et al. 2000, ‘Refolded outer membrane protein A of Escherichia
+        coli forms ion channels with two conductance states in planar lipid bilayers.’,
+        J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        outer membrane' localisation of P0A910.
+    - reference: PMID:10947984
+      notes: Belaaouaj A et al. 2000, ‘Degradation of outer membrane protein A in
+        Escherichia coli killing by neutrophil elastase.’, Science. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell outer membrane' localisation of P0A910.
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P0A910.
+  - uniprot_id: UniProtKB:P06996
+    protein_label: Outer membrane porin C
+    gene_symbol: ompC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ompC in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:2464593
+      notes: Gehring KB et al. 1989, ‘Existence and purification of porin heterotrimers
+        of Escherichia coli K12 OmpC, OmpF, and PhoE proteins.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell outer membrane' localisation
+        of P06996.
+  - uniprot_id: UniProtKB:P02931
+    protein_label: Outer membrane porin F
+    gene_symbol: ompF
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ompF in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P02931.
+    - reference: PMID:2464593
+      notes: Gehring KB et al. 1989, ‘Existence and purification of porin heterotrimers
+        of Escherichia coli K12 OmpC, OmpF, and PhoE proteins.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell outer membrane' localisation
+        of P02931.
+  - uniprot_id: UniProtKB:P0A940
+    protein_label: Outer membrane protein assembly factor BamA
+    gene_symbol: bamA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene bamA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P0A940.
+    - reference: PMID:23882017
+      notes: Ruhe ZC et al. 2013, ‘Receptor polymorphism restricts contact-dependent
+        growth inhibition to members of the same species.’, mBio. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell outer membrane' localisation of P0A940.
+    - reference: PMID:24619089
+      notes: Ni D et al. 2014, ‘Structural and functional analysis of the β-barrel
+        domain of BamA from Escherichia coli.’, FASEB J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell outer membrane' localisation of P0A940.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -67,6 +156,8 @@ causal_graphs:
   - node_id: lpt_machine
     label: Lpt transenvelope LPS transport machine
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P31554
   - node_id: lipopolysaccharide
     label: lipopolysaccharide
     node_type: CHEMICAL
@@ -75,6 +166,11 @@ causal_graphs:
   - node_id: bam_complex
     label: beta-barrel assembly machinery complex
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P0A940
+    - UniProtKB:P77774
+    - UniProtKB:P0A903
+    - UniProtKB:P0AC02
   - node_id: outer_membrane_beta_barrels
     label: outer-membrane beta-barrel proteins
     node_type: GENE_OR_PROTEIN
@@ -251,6 +347,12 @@ curation_history:
   changes: Added a FUNCTION graph for LPS- and beta-barrel-porin-mediated selective
     permeability, grounded LPS nodes with ChEBI, and added Nikaido 2003 evidence for
     hydrophobic exclusion and porin diffusion.
+  llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB protein_example(s); added 5 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0040

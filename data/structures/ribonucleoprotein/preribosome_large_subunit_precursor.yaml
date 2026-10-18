@@ -28,6 +28,18 @@ curation_history:
     RNA cohort component so it no longer implies that mature 5S rRNA is a precursor
     rRNA.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:34:59Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: 66S preribosome
   synonym_type: NARROW_SYNONYM
@@ -69,6 +81,91 @@ components:
     notes: GO:0030687 defines the large-subunit precursor preribosome as containing
       ribosomal proteins, including late-associating large-subunit ribosomal proteins,
       and associated proteins.
+  gene_symbols:
+  - NOP7
+  - ERB1
+  - YTM1
+  - NOG1
+  - NSA2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02892
+    protein_label: Nucleolar GTP-binding protein 1
+    gene_symbol: NOG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NOG1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11112701
+      notes: Park JH et al. 2001, ‘A novel nucleolar G-protein conserved in eukaryotes.’,
+        J Cell Sci. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        nucleolus' localisation of Q02892.
+  - uniprot_id: UniProtKB:P53261
+    protein_label: Pescadillo homolog
+    gene_symbol: NOP7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene NOP7 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11911362
+      notes: Adams CC et al. 2002, ‘Saccharomyces cerevisiae nucleolar protein Nop7p
+        is necessary for biogenesis of 60S ribosomal subunits.’, RNA. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation
+        of P53261.
+  - uniprot_id: UniProtKB:Q04660
+    protein_label: Ribosome biogenesis protein ERB1
+    gene_symbol: ERB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ERB1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18448671
+      notes: Tang L et al. 2008, ‘Interactions among Ytm1, Erb1, and Nop7 required
+        for assembly of the Nop7-subcomplex in yeast preribosomes.’, Mol Biol Cell.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus'
+        localisation of Q04660.
+  - uniprot_id: UniProtKB:Q12024
+    protein_label: Ribosome biogenesis protein YTM1
+    gene_symbol: YTM1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene YTM1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of Q12024.
+  - uniprot_id: UniProtKB:P40078
+    protein_label: Ribosome biogenesis protein NSA2
+    gene_symbol: NSA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene NSA2 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40078
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40078, the single reviewed entry
+        for gene NSA2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

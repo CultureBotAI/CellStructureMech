@@ -57,6 +57,11 @@ curation_history:
     status. Addressed #2123: corrected P30 assembly essentiality to DISPENSABLE with
     II-3 mutant evidence; retained constituent, adhesion and morphology roles.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:47Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: terminal organelle
   synonym_type: EXACT_SYNONYM
@@ -89,6 +94,61 @@ components:
       lacking P1/P40/P90 and surface nap but retaining the attachment-organelle membrane
       and internal core. DISPENSABLE refers to this assembly phenotype, not normal
       cytadherence or gliding, or universal dispensability across Mycoplasma.
+  protein_examples:
+  - uniprot_id: UniProtKB:P11311
+    protein_label: Adhesin P1
+    gene_symbol: P1
+    taxon_id: NCBITaxon:272634
+    taxon_label: Mycoplasmoides pneumoniae M129
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene mpn141, which UniProt lists
+      under the primary name P1, in Mycoplasmoides pneumoniae M129. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:20199607
+      notes: Kannan TR et al. 2010, ‘Mycoplasma pneumoniae Community Acquired Respiratory
+        Distress Syndrome toxin expression reveals growth phase and infection-dependent
+        regulation.’, Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell projection, attachment organelle membrane' localisation of P11311.
+    - reference: PMID:21631602
+      notes: Cloward JM et al. 2011, ‘Loss of co-chaperone TopJ impacts adhesin P1
+        presentation and terminal organelle maturation in Mycoplasma pneumoniae.’,
+        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cell projection, attachment organelle membrane' localisation of P11311.
+    - reference: PMID:26633540
+      notes: Nakane D et al. 2015, ‘Systematic Structural Analyses of Attachment Organelle
+        in Mycoplasma pneumoniae.’, PLoS Pathog. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cell projection, attachment organelle membrane'
+        localisation of P11311.
+  - uniprot_id: UniProtKB:Q50341
+    protein_label: Adhesin P40/P90
+    gene_symbol: orf6
+    taxon_id: NCBITaxon:272634
+    taxon_label: Mycoplasmoides pneumoniae M129
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene mpn142, which UniProt lists
+      under the primary name orf6, in Mycoplasmoides pneumoniae M129. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:26633540
+      notes: Nakane D et al. 2015, ‘Systematic Structural Analyses of Attachment Organelle
+        in Mycoplasma pneumoniae.’, PLoS Pathog. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cell projection, attachment organelle' localisation
+        of Q50341.
+    - reference: PMID:33057023
+      notes: Vizarraga D et al. 2020, ‘Immunodominant proteins P1 and P40/P90 from
+        human pathogen Mycoplasma pneumoniae.’, Nat Commun. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell projection, attachment organelle'
+        localisation of Q50341.
+    - reference: PMID:1612757
+      notes: Layh-Schmitt G et al. 1992, ‘Localization and biochemical characterization
+        of the ORF6 gene product of the Mycoplasma pneumoniae P1 operon.’, Infect
+        Immun. ECO:0000269 experimental evidence cited by UniProt for the 'Cell surface'
+        localisation of Q50341.
 - component_id: p30_tip_adhesin
   label: P30 tip adhesin
   component_type: PROTEIN
@@ -114,6 +174,34 @@ components:
       protein knobs. DISPENSABLE refers to organelle assembly in this mutant, not
       normal cytadherence, gliding or morphology, or universal dispensability across
       Mycoplasma.
+  protein_examples:
+  - uniprot_id: UniProtKB:P75330
+    protein_label: 30 kDa adhesin-related protein
+    gene_symbol: p30
+    taxon_id: NCBITaxon:272634
+    taxon_label: Mycoplasmoides pneumoniae M129
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene mpn453, which UniProt lists
+      under the primary name p30, in Mycoplasmoides pneumoniae M129. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:17163973
+      notes: Hasselbring BM et al. 2007, ‘Cytoskeletal protein P41 is required to
+        anchor the terminal organelle of the wall-less prokaryote Mycoplasma pneumoniae.’,
+        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cell projection, attachment organelle membrane' localisation of P75330.
+    - reference: PMID:2123834
+      notes: Dallo SF et al. 1990, ‘Characterization of the gene for a 30-kilodalton
+        adhesion-related protein of Mycoplasma pneumoniae.’, Infect Immun. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell projection, attachment
+        organelle membrane' localisation of P75330.
+    - reference: PMID:26633540
+      notes: Nakane D et al. 2015, ‘Systematic Structural Analyses of Attachment Organelle
+        in Mycoplasma pneumoniae.’, PLoS Pathog. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cell projection, attachment organelle membrane'
+        localisation of P75330.
 - component_id: hmw2_paired_plate_scaffold
   label: HMW2 paired-plate scaffold
   component_type: PROTEIN

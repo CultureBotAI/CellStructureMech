@@ -28,6 +28,13 @@ curation_history:
   changes: Added direct McConnell et al. 2004 literature evidence to the CHRAC causal-graph
     edge that connects the complex to chromatin remodeling.
   llm_assisted: true
+- timestamp: '2026-10-18T03:20:56Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: chromatin accessibility complex
   synonym_type: EXACT_SYNONYM
@@ -55,6 +62,22 @@ components:
   - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
     notes: McConnell et al. 2004 purified a four-subunit Isw2 complex containing Itc1p,
       Isw2p, Dpb4p, and Dls1p from Saccharomyces cerevisiae.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08773
+    protein_label: ISWI chromatin-remodeling complex ATPase ISW2
+    gene_symbol: ISW2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ISW2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q08773.
 - component_id: itc1_chrac_acf1_homolog_subunit
   label: Itc1 CHRAC ACF1-homolog subunit
   component_type: PROTEIN
@@ -72,6 +95,23 @@ components:
   - reference: DOI:10.1128/MCB.24.7.2605-2613.2004
     notes: McConnell et al. 2004 found Itc1p in the Dls1p-purified four-subunit Isw2
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53125
+    protein_label: Imitation switch two complex protein 1
+    gene_symbol: ITC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ITC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11238944
+      notes: 'Gelbart ME et al. 2001, ‘Interactions of Isw2 chromatin remodeling complex
+        with nucleosomal arrays: analyses using recombinant yeast histones and immobilized
+        templates.’, Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt
+        for the ''Nucleus'' localisation of P53125.'
 - component_id: dpb4_chrac_histone_fold_subunit
   label: Dpb4 CHRAC histone-fold subunit
   component_type: PROTEIN
@@ -92,6 +132,23 @@ components:
   - reference: DOI:10.1128/MCB.24.1.217-227.2004
     notes: Iida and Araki 2004 described Dpb4p in the putative budding-yeast ISW2/yCHRAC
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04603
+    protein_label: DNA polymerase epsilon subunit D
+    gene_symbol: DPB4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DPB4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11024162
+      notes: Ohya T et al. 2000, ‘Structure and function of the fourth subunit (Dpb4p)
+        of DNA polymerase epsilon in Saccharomyces cerevisiae.’, Nucleic Acids Res.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation
+        of Q04603.
 - component_id: dls1_chrac_histone_fold_subunit
   label: Dls1 CHRAC histone-fold subunit
   component_type: PROTEIN
@@ -112,6 +169,22 @@ components:
   - reference: DOI:10.1128/MCB.24.1.217-227.2004
     notes: Iida and Araki 2004 described Dls1p in the putative budding-yeast ISW2/yCHRAC
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40366
+    protein_label: Protein DLS1
+    gene_symbol: DLS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DLS1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P40366.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

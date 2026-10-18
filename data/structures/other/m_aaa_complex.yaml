@@ -19,6 +19,18 @@ curation_history:
     and ATP-dependent functions, seven intervention-bounded mechanistic edges, native
     structural-dataset provenance and a link-only restricted-license figure.
   llm_assisted: true
+- timestamp: '2026-10-18T03:25:59Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 parent_structures:
 - GO:0098800
 - GO:1905368
@@ -46,6 +58,24 @@ components:
   - reference: https://www.ebi.ac.uk/emdb/EMD-1712
     notes: The deposited yeast preparation contains Yta10 and Yta12. Membership is
       distinct from an inferred assembly sequence or a universal two-paralog composition.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39925
+    protein_label: Mitochondrial inner membrane m-AAA protease component YTA10
+    gene_symbol: AFG3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AFG3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym YTA10).
+    evidence:
+    - reference: PMID:8681382
+      notes: Arlt H et al. 1996, ‘The YTA10-12 complex, an AAA protease with chaperone-like
+        activity in the inner membrane of mitochondria.’, Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Mitochondrion inner membrane' localisation
+        of P39925.
 - component_id: yta12
   label: Yta12-type m-AAA protease subunit
   component_type: PROTEIN
@@ -68,6 +98,29 @@ components:
     notes: Figure 4 and yeast engineering methods test endogenous Yta12 SIM or larger
       IMSD replacements in W303-1B. The processing phenotype does not alone establish
       defective oligomer assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40341
+    protein_label: Mitochondrial inner membrane m-AAA protease component YTA12
+    gene_symbol: YTA12
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YTA12 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym RCA1).
+    evidence:
+    - reference: PMID:7929327
+      notes: Tzagoloff A et al. 1994, ‘A new member of a family of ATPases is essential
+        for assembly of mitochondrial respiratory chain and ATP synthetase complexes
+        in Saccharomyces cerevisiae.’, J Biol Chem. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Mitochondrion inner membrane' localisation of P40341.
+    - reference: PMID:8681382
+      notes: Arlt H et al. 1996, ‘The YTA10-12 complex, an AAA protease with chaperone-like
+        activity in the inner membrane of mitochondria.’, Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Mitochondrion inner membrane' localisation
+        of P40341.
 - component_id: zinc
   label: zinc(2+)
   grounding: CHEBI:29105

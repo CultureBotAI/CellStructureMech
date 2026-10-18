@@ -39,6 +39,13 @@ curation_history:
   changes: '#2324: Correct redundant Sgp roles and conditional mutant backgrounds,
     repair the Prange title, and remove unsupported majority-absence wording.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:15:46Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: intracellular sulfur globule
   synonym_type: EXACT_SYNONYM
@@ -80,6 +87,39 @@ components:
   - reference: DOI:10.1159/000351335
     notes: Maki 2013 reviews SgpA-family proteins as structural proteins associated
       with bacterial intracellular sulfur globules.
+  protein_examples:
+  - uniprot_id: UniProtKB:O52057
+    protein_label: Sulfur globule protein CV1
+    gene_symbol: sgpA
+    taxon_id: NCBITaxon:572477
+    taxon_label: Allochromatium vinosum DSM 180
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene sgpA in Allochromatium vinosum
+      DSM 180, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O52057
+      notes: UniProtKB reviewed (Swiss-Prot) entry O52057, the single reviewed entry
+        for gene sgpA in Allochromatium vinosum DSM 180. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:O52179
+    protein_label: Sulfur globule protein CV2
+    gene_symbol: sgpB
+    taxon_id: NCBITaxon:572477
+    taxon_label: Allochromatium vinosum DSM 180
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene sgpB in Allochromatium vinosum
+      DSM 180, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O52179
+      notes: UniProtKB reviewed (Swiss-Prot) entry O52179, the single reviewed entry
+        for gene sgpB in Allochromatium vinosum DSM 180. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sgpc_envelope_protein
   label: SgpC sulfur globule envelope protein
   component_type: PROTEIN
@@ -99,6 +139,23 @@ components:
     notes: Prange et al. 2004 report normal globules after individual sgpA or sgpB
       inactivation, smaller globules after sgpC inactivation, and no sulfur globules
       in the sgpBC double mutant.
+  protein_examples:
+  - uniprot_id: UniProtKB:O52055
+    protein_label: Sulfur globule protein CV3
+    gene_symbol: sgpC
+    taxon_id: NCBITaxon:572477
+    taxon_label: Allochromatium vinosum DSM 180
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene sgpC in Allochromatium vinosum
+      DSM 180, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O52055
+      notes: UniProtKB reviewed (Swiss-Prot) entry O52055, the single reviewed entry
+        for gene sgpC in Allochromatium vinosum DSM 180. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

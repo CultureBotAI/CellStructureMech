@@ -28,6 +28,13 @@ curation_history:
     tagged-AP-5 localization are separate Hirst et al. 2011 findings; addresses PR
     #1102 review issue #1103.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:19:52Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0030119
 synonyms:
@@ -48,6 +55,25 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: AP-5 beta5 subunit is a subtype-specific AP-5 subunit class; no
     exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+  gene_symbols:
+  - AP5B1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q2VPB7
+    protein_label: AP-5 complex subunit beta-1
+    gene_symbol: AP5B1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AP5B1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q2VPB7
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q2VPB7, the single reviewed entry
+        for gene AP5B1 in Homo sapiens. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 - component_id: ap5_zeta_subunit
   label: AP-5 zeta subunit
   component_type: PROTEIN
@@ -61,6 +87,25 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: AP-5 zeta subunit is a subtype-specific AP-5 subunit class; no
     exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+  gene_symbols:
+  - AP5Z1
+  protein_examples:
+  - uniprot_id: UniProtKB:O43299
+    protein_label: AP-5 complex subunit zeta-1
+    gene_symbol: AP5Z1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AP5Z1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:20613862
+      notes: Słabicki M et al. 2010, ‘A genome-scale DNA repair RNAi screen identifies
+        SPG48 as a novel gene associated with hereditary spastic paraplegia.’, PLoS
+        Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm'
+        localisation of O43299.
 - component_id: ap5_mu5_subunit
   label: AP-5 mu5 subunit
   component_type: PROTEIN
@@ -74,6 +119,24 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: AP-5 mu5 subunit is a subtype-specific AP-5 subunit class; no exact
     source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+  gene_symbols:
+  - AP5M1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9H0R1
+    protein_label: AP-5 complex subunit mu-1
+    gene_symbol: AP5M1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AP5M1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22022230
+      notes: Hirst J et al. 2011, ‘The fifth adaptor protein complex.’, PLoS Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytosol'
+        localisation of Q9H0R1.
 - component_id: ap5_sigma5_subunit
   label: AP-5 sigma5 subunit
   component_type: PROTEIN
@@ -87,6 +150,24 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: AP-5 sigma5 subunit is a subtype-specific AP-5 subunit class; no
     exact source-neutral InterPro, Pfam or NCBIfam CURIE was curated in this pass.
+  gene_symbols:
+  - AP5S1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9NUS5
+    protein_label: AP-5 complex subunit sigma-1
+    gene_symbol: AP5S1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AP5S1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22022230
+      notes: Hirst J et al. 2011, ‘The fifth adaptor protein complex.’, PLoS Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytosol'
+        localisation of Q9NUS5.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens

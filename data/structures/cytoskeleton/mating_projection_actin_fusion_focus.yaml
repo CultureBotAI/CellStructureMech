@@ -31,6 +31,18 @@ curation_history:
   changes: 'Resolved #1730 by moving GO:0015629 actin cytoskeleton from parent_structures
     into part_of.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:11:36Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: actin fusion focus
   synonym_type: BROAD_SYNONYM
@@ -57,6 +69,25 @@ components:
   - reference: DOI:10.1083/jcb.201411124
     notes: Dudin et al. 2015 analyzed formin-nucleated actin aster formation at the
       fission-yeast fusion site.
+  gene_symbols:
+  - act1
+  protein_examples:
+  - uniprot_id: UniProtKB:P10989
+    protein_label: Actin
+    gene_symbol: act1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene act1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P10989
+      notes: UniProtKB reviewed (Swiss-Prot) entry P10989, the single reviewed entry
+        for gene act1 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe
@@ -108,6 +139,8 @@ causal_graphs:
   - node_id: fus1_formin
     label: Fus1 formin
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q10719
   - node_id: actin_filaments
     label: actin filaments
     node_type: GENE_OR_PROTEIN
@@ -119,6 +152,9 @@ causal_graphs:
   - node_id: type_v_myosins
     label: type V myosins
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:O74805
+    - UniProtKB:O94477
   - node_id: cell_wall_hydrolases
     label: cell-wall hydrolases
     node_type: GENE_OR_PROTEIN

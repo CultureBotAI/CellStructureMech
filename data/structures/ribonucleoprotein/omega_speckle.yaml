@@ -28,6 +28,18 @@ curation_history:
     hsr-omega-n/hnRNP colocalization, physical association and dependence without
     claiming active hnRNP recruitment.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:34:42Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0016607
 - GO:0140168
@@ -72,6 +84,61 @@ components:
     notes: Prasanth et al. 2000 colocalized HRB87F, Hrp40, Hrb57A and S5 hnRNPs with
       omega speckles and detected physical association between hnRNPs and hsr-omega
       transcripts.
+  protein_examples:
+  - uniprot_id: UniProtKB:P48810
+    protein_label: Heterogeneous nuclear ribonucleoprotein 87F
+    gene_symbol: Hrb87F
+    taxon_id: NCBITaxon:7227
+    taxon_label: Drosophila melanogaster
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene Hrb87F in Drosophila melanogaster,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:1717937
+      notes: Hovemann BT et al. 1991, ‘Drosophila snRNP associated protein P11 which
+        specifically binds to heat shock puff 93D reveals strong homology with hnRNP
+        core protein A1.’, Nucleic Acids Res. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of P48810.
+  - uniprot_id: UniProtKB:Q08473
+    protein_label: RNA-binding protein squid
+    gene_symbol: sqd
+    taxon_id: NCBITaxon:7227
+    taxon_label: Drosophila melanogaster
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene Hrp40, which UniProt lists
+      under the primary name sqd, in Drosophila melanogaster, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:7684991
+      notes: Kelley RL 1993, ‘Initial organization of the Drosophila dorsoventral
+        axis depends on an RNA-binding protein encoded by the squid gene.’, Genes
+        Dev. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of Q08473.
+    - reference: PMID:10197986
+      notes: Norvell A et al. 1999, ‘Specific isoforms of squid, a Drosophila hnRNP,
+        perform distinct roles in Gurken localization during oogenesis.’, Genes Dev.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation
+        of Q08473.
+  - uniprot_id: UniProtKB:A1ZBW0
+    protein_label: Heterogeneous nuclear ribonucleoprotein K, isoform C
+    gene_symbol: HnRNP-K
+    taxon_id: NCBITaxon:7227
+    taxon_label: Drosophila melanogaster
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Hrb57A, which
+      UniProt lists under the primary name HnRNP-K, in Drosophila melanogaster. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A1ZBW0
+      notes: UniProtKB unreviewed (TrEMBL) entry A1ZBW0 for gene Hrb57A in Drosophila
+        melanogaster. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:7227
   taxon_label: Drosophila melanogaster

@@ -28,6 +28,11 @@ curation_history:
     in-situ tomography and documented the source DeepDeWedge processing, retaining
     image bytes and all biological claims.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: A-C linker
   synonym_type: EXACT_SYNONYM
@@ -58,6 +63,23 @@ components:
     notes: Results and Figure 5 identify the unusual beta-propeller by fitting an
       MS-derived AlphaFold model library into the map. Figure 6 retains WRAP73 in
       both forms; functional necessity is not established by this assignment.
+  protein_examples:
+  - uniprot_id: UniProtKB:I7MIG5
+    protein_label: WD repeat WRAP73-like protein, putative
+    gene_symbol: TTHERM_00614690
+    taxon_id: NCBITaxon:312017
+    taxon_label: Tetrahymena thermophila SB210
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene WRAP73, which
+      UniProt lists under the primary name TTHERM_00614690, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/I7MIG5
+      notes: UniProtKB unreviewed (TrEMBL) entry I7MIG5 for gene WRAP73 in Tetrahymena
+        thermophila SB210. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: cep135
   label: CEP135 family protein
   component_type: PROTEIN
@@ -81,6 +103,23 @@ components:
       325-360 contact segment. Methods explicitly cannot discriminate the two N-terminally
       similar variants in the density. GFP localization used induced constructs, not
       endogenous abundance.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q24GZ2
+    protein_label: Centrosomal protein, putative
+    gene_symbol: TTHERM_01457090
+    taxon_id: NCBITaxon:312017
+    taxon_label: Tetrahymena thermophila SB210
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP135, which
+      UniProt lists under the primary name TTHERM_01457090, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q24GZ2
+      notes: UniProtKB unreviewed (TrEMBL) entry Q24GZ2 for gene CEP135 in Tetrahymena
+        thermophila SB210. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: tbc1d31
   label: TBC1D31 family protein
   component_type: PROTEIN
@@ -106,6 +145,23 @@ components:
       density fitting, supported by GFP localization. The Results and Methods reverse
       the A/B accession aliases, so no exact paralogue accession pairing or whole-linker
       copy number is asserted.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q23KH2
+    protein_label: MORN motif protein
+    gene_symbol: TTHERM_00193630
+    taxon_id: NCBITaxon:312017
+    taxon_label: Tetrahymena thermophila SB210
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TBC1D31, which
+      UniProt lists under the primary name TTHERM_00193630, in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q23KH2
+      notes: UniProtKB unreviewed (TrEMBL) entry Q23KH2 for gene TBC1D31 in Tetrahymena
+        thermophila SB210. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: poc1
   label: POC1 family protein
   component_type: PROTEIN
@@ -126,6 +182,24 @@ components:
     notes: Figures 3-4 and the structural model connect POC1 to the proximal C-link
       and B-C junction. The verified POC1 accession is Q229Z6; the transposed accession
       in the article Methods is not copied into a protein example.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q229Z6
+    protein_label: POC1 centriolar protein homolog
+    gene_symbol: TTHERM_01308010
+    taxon_id: NCBITaxon:312017
+    taxon_label: Tetrahymena thermophila SB210
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene POC1, which UniProt lists
+      under the primary name TTHERM_01308010, in Tetrahymena thermophila SB210. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:20008567
+      notes: Pearson CG et al. 2009, ‘Basal body stability and ciliogenesis requires
+        the conserved component Poc1.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm, cytoskeleton, cilium basal body' localisation
+        of Q229Z6.
 canonical_examples:
 - taxon_id: NCBITaxon:5911
   taxon_label: Tetrahymena thermophila

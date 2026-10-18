@@ -27,6 +27,13 @@ curation_history:
     complex to the GO:0005935 bud-neck site and separating DOI-backed neck localization
     from GO-backed complex identity in the function and graph text.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:20:28Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0000133
 part_of:
@@ -51,6 +58,43 @@ components:
     notes: Valtz and Herskowitz 1996 found that Pea2 relocalizes to the neck between
       mother and daughter cells before cytokinesis and reported that Pea2 follows
       the same general localization pattern as Spa2.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23201
+    protein_label: Scaffold protein SPA2
+    gene_symbol: SPA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12361575
+      notes: van Drogen F et al. 2002, ‘Spa2p functions as a scaffold-like protein
+        to recruit the Mpk1p MAP kinase module to sites of polarized growth.’, Curr
+        Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Bud tip'
+        localisation of P23201.
+    - reference: PMID:31699995
+      notes: Xie Y et al. 2019, ‘Polarisome scaffolder Spa2-mediated macromolecular
+        condensation of Aip5 for actin polymerization.’, Nat Commun. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Bud tip' localisation of P23201.
+  - uniprot_id: UniProtKB:P40091
+    protein_label: Protein PEA2
+    gene_symbol: PEA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PEA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40091
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40091, the single reviewed entry
+        for gene PEA2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

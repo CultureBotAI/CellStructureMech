@@ -38,6 +38,13 @@ curation_history:
     guide spliceosomal snRNA modification during snRNP maturation rather than catalytically
     modifying RNAs themselves.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:33:34Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: coiled body
   synonym_type: EXACT_SYNONYM
@@ -73,6 +80,32 @@ components:
   - reference: PMID:10944589
     notes: Bellini 2000 reviewed coilin as more than a molecular marker of the Cajal/coiled
       body.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38432
+    protein_label: Coilin
+    gene_symbol: COIL
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene COIL in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:7679389
+      notes: Carmo-Fonseca M et al. 1993, ‘Assembly of snRNP-containing coiled bodies
+        is regulated in interphase and mitosis--evidence that the coiled body is a
+        kinetic nuclear structure.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of P38432.
+    - reference: PMID:16079131
+      notes: Santama N et al. 2005, ‘Characterization of hCINAP, a novel coilin-interacting
+        protein encoded by a transcript from the transcription factor TAFIID32 locus.’,
+        J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        Cajal body' localisation of P38432.
+    - reference: PMID:22547674
+      notes: Stern JL et al. 2012, ‘Telomerase recruitment requires both TCAB1 and
+        Cajal bodies independently.’, Mol Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, Cajal body' localisation of P38432.
 - component_id: spliceosomal_snrnp_complexes
   label: spliceosomal snRNP complex
   component_type: PROTEIN_COMPLEX

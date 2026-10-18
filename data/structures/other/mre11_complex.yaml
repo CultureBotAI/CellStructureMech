@@ -30,6 +30,18 @@ curation_history:
     XRS2 and NBN gene symbols to a Saccharomyces cerevisiae Xrs2 row backed by the
     component-level evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:26:40Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: MRN complex
   synonym_type: EXACT_SYNONYM
@@ -71,6 +83,22 @@ components:
   - reference: DOI:10.1093/nar/27.10.2072
     notes: Chamankhah and Xiao 1999 studied formation of the yeast Mre11-Rad50-Xrs2
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32829
+    protein_label: Double-strand break repair protein MRE11
+    gene_symbol: MRE11
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MRE11 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9845372
+      notes: Usui T et al. 1998, ‘Complex formation and functional versatility of
+        Mre11 of budding yeast in recombination.’, Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P32829.
 - component_id: rad50_atpase_subunit
   label: Rad50 ATPase subunit
   component_type: PROTEIN
@@ -90,6 +118,22 @@ components:
   - reference: DOI:10.1093/nar/27.10.2072
     notes: Chamankhah and Xiao 1999 studied formation of the yeast Mre11-Rad50-Xrs2
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P12753
+    protein_label: DNA repair protein RAD50
+    gene_symbol: RAD50
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD50 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9845372
+      notes: Usui T et al. 1998, ‘Complex formation and functional versatility of
+        Mre11 of budding yeast in recombination.’, Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P12753.
 - component_id: xrs2_regulatory_subunit
   label: Xrs2 regulatory subunit
   component_type: PROTEIN
@@ -109,6 +153,22 @@ components:
   - reference: DOI:10.1093/nar/27.10.2072
     notes: Chamankhah and Xiao 1999 studied formation of the yeast Mre11-Rad50-Xrs2
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33301
+    protein_label: DNA repair protein XRS2
+    gene_symbol: XRS2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene XRS2 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9845372
+      notes: Usui T et al. 1998, ‘Complex formation and functional versatility of
+        Mre11 of budding yeast in recombination.’, Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P33301.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

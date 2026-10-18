@@ -39,6 +39,13 @@ curation_history:
   changes: 'Addressed #2233: Corrected cytoskeleton parthood and retained the specific
     filament-system identity.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:13:06Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0099513
 components:
@@ -62,6 +69,24 @@ components:
   - reference: DOI:10.1073/pnas.1010176107
     notes: Aylett et al. 2010 determined the filament structure of the bacterial tubulin
       homologue TubZ.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8KNP3
+    protein_label: Tubulin-like protein TubZ
+    gene_symbol: tubZ
+    taxon_id: NCBITaxon:1430
+    taxon_label: Bacillus thuringiensis serovar israelensis
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene tubZ in Bacillus thuringiensis
+      serovar israelensis, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:17510284
+      notes: Larsen RA et al. 2007, ‘Treadmilling of a prokaryotic tubulin-like protein,
+        TubZ, required for plasmid stability in Bacillus thuringiensis.’, Genes Dev.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm' localisation
+        of Q8KNP3.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1428
   taxon_label: Bacillus thuringiensis

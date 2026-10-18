@@ -35,6 +35,13 @@ curation_history:
     and component prose, and added beta/gamma InterPro support to the coenzyme-B sulfoethylthiotransferase
     function evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:13:33Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:1990234
 components:
@@ -57,6 +64,24 @@ components:
     notes: RCSB maps PDB:1MRO polymer entity 1 to Methanothermobacter marburgensis
       str. Marburg methyl-coenzyme M reductase subunit alpha, UniProtKB:P11558, with
       two copies in the deposited complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P11558
+    protein_label: Methyl-coenzyme M reductase I subunit alpha
+    gene_symbol: mcrA
+    taxon_id: NCBITaxon:79929
+    taxon_label: Methanothermobacter marburgensis str. Marburg
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene mcrA in Methanothermobacter
+      marburgensis str. Marburg, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:23533332
+      notes: Wrede C et al. 2013, ‘Localization of Methyl-Coenzyme M reductase as
+        metabolic marker for diverse methanogenic Archaea.’, Archaea. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P11558.
 - component_id: mcr_beta_subunit
   label: Methyl-coenzyme M reductase, beta subunit
   component_type: PROTEIN
@@ -76,6 +101,24 @@ components:
     notes: RCSB maps PDB:1MRO polymer entity 2 to Methanothermobacter marburgensis
       str. Marburg methyl-coenzyme M reductase subunit beta, UniProtKB:P11560, with
       two copies in the deposited complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P11560
+    protein_label: Methyl-coenzyme M reductase I subunit beta
+    gene_symbol: mcrB
+    taxon_id: NCBITaxon:79929
+    taxon_label: Methanothermobacter marburgensis str. Marburg
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene mcrB in Methanothermobacter
+      marburgensis str. Marburg, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:23533332
+      notes: Wrede C et al. 2013, ‘Localization of Methyl-Coenzyme M reductase as
+        metabolic marker for diverse methanogenic Archaea.’, Archaea. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P11560.
 - component_id: mcr_gamma_subunit
   label: Methyl-coenzyme M reductase, gamma subunit
   component_type: PROTEIN
@@ -95,6 +138,24 @@ components:
     notes: RCSB maps PDB:1MRO polymer entity 3 to Methanothermobacter marburgensis
       str. Marburg methyl-coenzyme M reductase subunit gamma, UniProtKB:P11562, with
       two copies in the deposited complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P11562
+    protein_label: Methyl-coenzyme M reductase I subunit gamma
+    gene_symbol: mcrG
+    taxon_id: NCBITaxon:79929
+    taxon_label: Methanothermobacter marburgensis str. Marburg
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene mcrG in Methanothermobacter
+      marburgensis str. Marburg, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:23533332
+      notes: Wrede C et al. 2013, ‘Localization of Methyl-Coenzyme M reductase as
+        metabolic marker for diverse methanogenic Archaea.’, Archaea. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P11562.
 canonical_examples:
 - taxon_id: NCBITaxon:79929
   taxon_label: Methanothermobacter marburgensis str. Marburg

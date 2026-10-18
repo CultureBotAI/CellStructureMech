@@ -30,6 +30,18 @@ curation_history:
     a generic outer microtubule-binding subunit class and adding the outer-kinetochore-to-kinetochore
     parthood edge.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:26:16Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: MIND complex
   synonym_type: EXACT_SYNONYM
@@ -71,6 +83,33 @@ components:
   - reference: DOI:10.1083/jcb.200509158
     notes: Kline et al. 2006 reconstituted the human Mis12 complex with hMis12 as
       one of four stable complex members.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39731
+    protein_label: Kinetochore-associated protein MTW1
+    gene_symbol: MTW1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MTW1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14602074
+      notes: Pinsky BA et al. 2003, ‘An Mtw1 complex promotes kinetochore biorientation
+        that is monitored by the Ipl1/Aurora protein kinase.’, Dev Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore'
+        localisation of P39731.
+    - reference: PMID:14657030
+      notes: Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment
+        of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore'
+        localisation of P39731.
+    - reference: PMID:12455957
+      notes: 'Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of
+        proteins important for chromosome segregation in Saccharomyces cerevisiae.’,
+        Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Cytoplasm, cytoskeleton, spindle pole'' localisation of P39731.'
 - component_id: dsn1_subunit
   label: Dsn1 subunit family
   component_type: PROTEIN
@@ -90,6 +129,23 @@ components:
       complex.
   - reference: DOI:10.1083/jcb.200509158
     notes: Kline et al. 2006 found hDsn1 in a stable four-subunit human Mis12 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40568
+    protein_label: Kinetochore-associated protein DSN1
+    gene_symbol: DSN1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DSN1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40568
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40568, the single reviewed entry
+        for gene DSN1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: nsl1_subunit
   label: Nsl1 subunit family
   component_type: PROTEIN
@@ -109,6 +165,27 @@ components:
       complex.
   - reference: DOI:10.1083/jcb.200509158
     notes: Kline et al. 2006 found hNsl1 in a stable four-subunit human Mis12 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12143
+    protein_label: Kinetochore-associated protein NSL1
+    gene_symbol: NSL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NSL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12455957
+      notes: 'Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of
+        proteins important for chromosome segregation in Saccharomyces cerevisiae.’,
+        Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Nucleus'' localisation of Q12143.'
+    - reference: PMID:14657030
+      notes: Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment
+        of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12143.
 - component_id: nnf1_pmf1_subunit
   label: Nnf1/PMF1 subunit family
   component_type: PROTEIN
@@ -132,6 +209,28 @@ components:
   - reference: DOI:10.1083/jcb.200509158
     notes: Kline et al. 2006 found hNnf1/PMF1 in a stable four-subunit human Mis12
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47149
+    protein_label: Kinetochore-associated protein NNF1
+    gene_symbol: NNF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NNF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12455957
+      notes: 'Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of
+        proteins important for chromosome segregation in Saccharomyces cerevisiae.’,
+        Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Nucleus'' localisation of P47149.'
+    - reference: PMID:14657030
+      notes: Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment
+        of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore'
+        localisation of P47149.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -197,6 +296,10 @@ causal_graphs:
   - node_id: outer_microtubule_binding_subunits
     label: outer microtubule-binding kinetochore subunits
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P40460
+    - UniProtKB:P33895
+    - UniProtKB:Q04477
   edges:
   - subject: mis12_mind_type_complex
     predicate: is a

@@ -35,6 +35,11 @@ curation_history:
     PT abbreviation and changing the Nosema bombycis canonical example to cite the
     polar filament/tube proteomics paper directly.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: polar filament
   synonym_type: RELATED_SYNONYM
@@ -61,6 +66,56 @@ components:
   grounding_notes: The polar tube wall is assembled from several divergent microsporidian
     PTPs; no exact source-neutral family or complex term was assigned for the aggregate
     PTP set.
+  gene_symbols:
+  - PTP1
+  - PTP2
+  - PTP3
+  protein_examples:
+  - uniprot_id: UniProtKB:R0KLZ1
+    protein_label: Polar tube protein 1
+    gene_symbol: PTP1
+    taxon_id: NCBITaxon:578461
+    taxon_label: Nosema bombycis CQ1
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene PTP1 in Nosema
+      bombycis CQ1. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/R0KLZ1
+      notes: UniProtKB unreviewed (TrEMBL) entry R0KLZ1 for gene PTP1 in Nosema bombycis
+        CQ1. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:R0KY97
+    protein_label: Polar tube protein 2
+    gene_symbol: PTP2
+    taxon_id: NCBITaxon:578461
+    taxon_label: Nosema bombycis CQ1
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene PTP2 in Nosema
+      bombycis CQ1. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/R0KY97
+      notes: UniProtKB unreviewed (TrEMBL) entry R0KY97 for gene PTP2 in Nosema bombycis
+        CQ1. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:J7EQ15
+    protein_label: Polar tube protein 3
+    gene_symbol: PTP3
+    taxon_id: NCBITaxon:27978
+    taxon_label: Nosema bombycis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene PTP3 in Nosema
+      bombycis. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/J7EQ15
+      notes: UniProtKB unreviewed (TrEMBL) entry J7EQ15 for gene PTP3 in Nosema bombycis.
+        Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:6029
   taxon_label: Microsporidia

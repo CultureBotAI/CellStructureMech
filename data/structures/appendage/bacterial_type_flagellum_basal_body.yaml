@@ -59,6 +59,13 @@ curation_history:
     flagellar records; Correct bacterial flagellum and basal-body prevalence scope;
     Qualify C-ring assembly essentiality in the enclosing flagellar records.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:08:28Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 18 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: bacterial flagellum basal body
   synonym_type: EXACT_SYNONYM
@@ -85,6 +92,24 @@ components:
   - reference: DOI:10.1038/s41467-021-24507-9
     notes: Kawamoto et al. 2021 used Salmonella cryo-EM to show that the native MS
       ring is formed by 34 FliF subunits and acts as a core assembly template.
+  protein_examples:
+  - uniprot_id: UniProtKB:P15928
+    protein_label: Flagellar M-ring protein
+    gene_symbol: fliF
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliF in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P15928
+      notes: UniProtKB reviewed (Swiss-Prot) entry P15928, the single reviewed entry
+        for gene fliF in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: c_ring
   label: C ring / switch complex (FliG, FliM, FliN)
   component_type: PROTEIN_COMPLEX
@@ -109,6 +134,58 @@ components:
     notes: Konishi et al. 2009 studied Salmonella SJW1103-derived fliG, fliM or fliN
       deletion mutants overproducing FliI. Low-yield flagellar assembly was recovered,
       not motility; this does not establish normal assembly without C-ring proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A1J9
+    protein_label: Flagellar motor switch protein FliG
+    gene_symbol: fliG
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliG in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:1631122
+      notes: Francis NR et al. 1992, ‘Localization of the Salmonella typhimurium flagellar
+        switch protein FliG to the cytoplasmic M-ring face of the basal body.’, Proc
+        Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cell inner membrane' localisation of P0A1J9.
+  - uniprot_id: UniProtKB:P26418
+    protein_label: Flagellar motor switch protein FliM
+    gene_symbol: fliM
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliM in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P26418
+      notes: UniProtKB reviewed (Swiss-Prot) entry P26418, the single reviewed entry
+        for gene fliM in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P26419
+    protein_label: Flagellar motor switch protein FliN
+    gene_symbol: fliN
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliN in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P26419
+      notes: UniProtKB reviewed (Swiss-Prot) entry P26419, the single reviewed entry
+        for gene fliN in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: stator
   label: stator unit (MotA5MotB2)
   component_type: PROTEIN_COMPLEX
@@ -123,6 +200,41 @@ components:
   - reference: DOI:10.1038/s41564-020-0788-8
     notes: Deme et al. 2020 resolved the MotA5MotB2 stator architecture and modeled
       how MotA engages FliG to drive rotation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P55891
+    protein_label: Motility protein A
+    gene_symbol: motA
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene motA in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P55891
+      notes: UniProtKB reviewed (Swiss-Prot) entry P55891, the single reviewed entry
+        for gene motA in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P55892
+    protein_label: Motility protein B
+    gene_symbol: motB
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene motB in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P55892
+      notes: UniProtKB reviewed (Swiss-Prot) entry P55892, the single reviewed entry
+        for gene motB in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: rod
   label: rod (FliE, FlgB, FlgC, FlgF, FlgG)
   component_type: PROTEIN_COMPLEX
@@ -142,6 +254,103 @@ components:
   - reference: DOI:10.1016/j.cell.2021.03.057
     notes: Tan et al. 2021 resolved how the MS ring and FliE/FlgB proximal rod transmit
       torque into the helical rod.
+  protein_examples:
+  - uniprot_id: UniProtKB:P26462
+    protein_label: Flagellar hook-basal body complex protein FliE
+    gene_symbol: fliE
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliE in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P26462
+      notes: UniProtKB reviewed (Swiss-Prot) entry P26462, the single reviewed entry
+        for gene fliE in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P16437
+    protein_label: Flagellar basal body rod protein FlgB
+    gene_symbol: flgB
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flgB in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:10809679
+      notes: Minamino T et al. 2000, ‘Interaction between FliE and FlgB, a proximal
+        rod component of the flagellar basal body of Salmonella.’, J Bacteriol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Bacterial flagellum basal
+        body' localisation of P16437.
+    - reference: PMID:11554792
+      notes: Hirano T et al. 2001, ‘The role in flagellar rod assembly of the N-terminal
+        domain of Salmonella FlgJ, a flagellum-specific muramidase.’, J Mol Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Bacterial flagellum
+        basal body' localisation of P16437.
+    - reference: PMID:1594581
+      notes: Sosinsky GE et al. 1992, ‘Mass determination and estimation of subunit
+        stoichiometry of the bacterial hook-basal body flagellar complex of Salmonella
+        typhimurium by scanning transmission electron microscopy.’, Proc Natl Acad
+        Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Bacterial
+        flagellum basal body' localisation of P16437.
+  - uniprot_id: UniProtKB:P0A1I7
+    protein_label: Flagellar basal-body rod protein FlgC
+    gene_symbol: flgC
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flgC in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A1I7
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A1I7, the single reviewed entry
+        for gene flgC in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P16323
+    protein_label: Flagellar basal-body rod protein FlgF
+    gene_symbol: flgF
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flgF in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P16323
+      notes: UniProtKB reviewed (Swiss-Prot) entry P16323, the single reviewed entry
+        for gene flgF in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P0A1J3
+    protein_label: Flagellar basal-body rod protein FlgG
+    gene_symbol: flgG
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flgG in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A1J3
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A1J3, the single reviewed entry
+        for gene flgG in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: lp_rings
   label: L and P rings (FlgH, FlgI)
   component_type: PROTEIN_COMPLEX
@@ -156,6 +365,41 @@ components:
   - reference: DOI:10.1038/s41467-021-24715-3
     notes: Yamaguchi et al. 2021 resolved the Salmonella LP-ring bushing around the
       rod and assigned FlgH to the L ring and FlgI to the P ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A1N8
+    protein_label: Flagellar L-ring protein
+    gene_symbol: flgH
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flgH in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A1N8
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A1N8, the single reviewed entry
+        for gene flgH in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P15930
+    protein_label: Flagellar P-ring protein
+    gene_symbol: flgI
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flgI in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P15930
+      notes: UniProtKB reviewed (Swiss-Prot) entry P15930, the single reviewed entry
+        for gene flgI in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 - component_id: export_apparatus
   label: flagellar type III membrane export gate (FlhA, FlhB, FliP, FliQ, FliR)
   component_type: PROTEIN_COMPLEX
@@ -176,6 +420,92 @@ components:
   - reference: DOI:10.1038/s41467-021-24507-9
     notes: Kawamoto et al. 2021 show that the MS-ring core has a central hole sized
       to accommodate the flagellar export gate.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40729
+    protein_label: Flagellar biosynthesis protein FlhA
+    gene_symbol: flhA
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flhA in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40729
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40729, the single reviewed entry
+        for gene flhA in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P40727
+    protein_label: Flagellar biosynthetic protein FlhB
+    gene_symbol: flhB
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flhB in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40727
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40727, the single reviewed entry
+        for gene flhB in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P54700
+    protein_label: Flagellar biosynthetic protein FliP
+    gene_symbol: fliP
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliP in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P54700
+      notes: UniProtKB reviewed (Swiss-Prot) entry P54700, the single reviewed entry
+        for gene fliP in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P0A1L5
+    protein_label: Flagellar biosynthetic protein FliQ
+    gene_symbol: fliQ
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliQ in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A1L5
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A1L5, the single reviewed entry
+        for gene fliQ in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P54702
+    protein_label: Flagellar biosynthetic protein FliR
+    gene_symbol: fliR
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliR in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P54702
+      notes: UniProtKB reviewed (Swiss-Prot) entry P54702, the single reviewed entry
+        for gene fliR in Salmonella enterica subsp. enterica serovar Typhimurium str.
+        LT2. Establishes the accession and gene identity only; the component's membership
+        in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

@@ -42,6 +42,18 @@ curation_history:
     minted chlorosome baseplate antenna complex record and narrowed the envelope grounding
     TODO to the glycolipid monolayer and accessory Csm proteins.
   llm_assisted: true
+- timestamp: '2026-10-18T03:16:32Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: chlorosome membrane
   synonym_type: EXACT_SYNONYM
@@ -91,6 +103,25 @@ components:
     notes: Nielsen et al. 2016 resolved the in situ CsmA-containing baseplate antenna
       complex of Chlorobaculum tepidum.
   grounding: cellstructuremech:chlorosome_baseplate_antenna_complex
+  gene_symbols:
+  - csmA
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A314
+    protein_label: Bacteriochlorophyll c-binding protein
+    gene_symbol: csmA
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene csmA in Chlorobaculum tepidum
+      TLS, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A314
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A314, the single reviewed entry
+        for gene csmA in Chlorobaculum tepidum TLS. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 - component_id: csm_envelope_proteins
   label: accessory chlorosome envelope proteins
   component_type: PROTEIN
@@ -120,6 +151,148 @@ components:
   - reference: DOI:10.1021/bi060776y
     notes: Li et al. 2006 used cross-linking to map molecular contacts among chlorosome
       envelope proteins from Chlorobium tepidum.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q46383
+    protein_label: Chlorosome envelope protein B
+    gene_symbol: csmB
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene csmB in Chlorobaculum tepidum
+      TLS, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q46383
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q46383, the single reviewed entry
+        for gene csmB in Chlorobaculum tepidum TLS. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q46367
+    protein_label: Chlorosome protein C
+    gene_symbol: csmC
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene csmC in Chlorobaculum tepidum
+      TLS, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q46367
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q46367, the single reviewed entry
+        for gene csmC in Chlorobaculum tepidum TLS. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q46386
+    protein_label: Chlorosome protein E
+    gene_symbol: csmE
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene csmE in Chlorobaculum tepidum
+      TLS, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q46386
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q46386, the single reviewed entry
+        for gene csmE in Chlorobaculum tepidum TLS. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:O68986
+    protein_label: Chlorosome envelope protein F
+    gene_symbol: csmF
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene csmF in Chlorobaculum tepidum
+      TLS, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O68986
+      notes: UniProtKB reviewed (Swiss-Prot) entry O68986, the single reviewed entry
+        for gene csmF in Chlorobaculum tepidum TLS. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:O68988
+    protein_label: Chlorosome protein I
+    gene_symbol: csmI
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene csmI in Chlorobaculum tepidum
+      TLS, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O68988
+      notes: UniProtKB reviewed (Swiss-Prot) entry O68988, the single reviewed entry
+        for gene csmI in Chlorobaculum tepidum TLS. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:O68983
+    protein_label: Chlorosome protein J
+    gene_symbol: csmJ
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene csmJ in Chlorobaculum tepidum
+      TLS, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O68983
+      notes: UniProtKB reviewed (Swiss-Prot) entry O68983, the single reviewed entry
+        for gene csmJ in Chlorobaculum tepidum TLS. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:H2VFJ4
+    protein_label: Chlorosome envelope protein D
+    gene_symbol: csmD
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene csmD in Chlorobaculum
+      tepidum TLS. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/H2VFJ4
+      notes: UniProtKB unreviewed (TrEMBL) entry H2VFJ4 for gene csmD in Chlorobaculum
+        tepidum TLS. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:H2VFJ1
+    protein_label: Chlorosome envelope protein H
+    gene_symbol: csmH
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene csmH in Chlorobaculum
+      tepidum TLS. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/H2VFJ1
+      notes: UniProtKB unreviewed (TrEMBL) entry H2VFJ1 for gene csmH in Chlorobaculum
+        tepidum TLS. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q8KEN5
+    protein_label: Chlorosome envelope protein X
+    gene_symbol: csmX
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene csmX in Chlorobaculum
+      tepidum TLS. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8KEN5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q8KEN5 for gene csmX in Chlorobaculum
+        tepidum TLS. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

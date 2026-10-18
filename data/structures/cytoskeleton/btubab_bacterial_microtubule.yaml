@@ -34,6 +34,11 @@ curation_history:
   changes: 'Addressed #2231: Corrected cytoskeleton parthood and retained the specific
     filament-system identity.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0099513
 synonyms:
@@ -66,6 +71,22 @@ components:
   - reference: DOI:10.1073/pnas.1705062114
     notes: Deng et al. 2017 resolved purified BtubABC mini-microtubules and modeled
       BtubA as one alternating tubulin subunit in the polymer.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8GCC4
+    protein_label: Tubulin BtubA
+    gene_symbol: btubA
+    taxon_id: NCBITaxon:48466
+    taxon_label: Prosthecobacter vanneervenii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene btubA in Prosthecobacter
+      vanneervenii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8GCC4
+      notes: UniProtKB unreviewed (TrEMBL) entry Q8GCC4 for gene btubA in Prosthecobacter
+        vanneervenii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: btubb
   label: BtubB
   component_type: PROTEIN
@@ -88,6 +109,22 @@ components:
   - reference: DOI:10.1073/pnas.1705062114
     notes: Deng et al. 2017 resolved purified BtubABC mini-microtubules and modeled
       BtubB as one alternating tubulin subunit in the polymer.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8GCC0
+    protein_label: Tubulin BtubB
+    gene_symbol: btubB
+    taxon_id: NCBITaxon:48466
+    taxon_label: Prosthecobacter vanneervenii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene btubB in Prosthecobacter
+      vanneervenii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8GCC0
+      notes: UniProtKB unreviewed (TrEMBL) entry Q8GCC0 for gene btubB in Prosthecobacter
+        vanneervenii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: btubc
   label: BtubC
   component_type: PROTEIN

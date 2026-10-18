@@ -33,6 +33,18 @@ curation_history:
   changes: 'Addressed PR #1114 / issue #1115 by changing the HOPS vacuole-membrane
     graph edge from acts-on to localization.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:25:06Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 synonyms:
@@ -56,6 +68,24 @@ components:
   - reference: DOI:10.1073/pnas.97.17.9402
     notes: Seals et al. 2000 showed that class C Vps11p is part of the six-protein
       yeast HOPS complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P12868
+    protein_label: E3 ubiquitin-protein ligase PEP5
+    gene_symbol: PEP5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS11, which UniProt lists
+      under the primary name PEP5, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10944212
+      notes: Seals DF et al. 2000, ‘A Ypt/Rab effector complex containing the Sec1
+        homolog Vps33p is required for homotypic vacuole fusion.’, Proc Natl Acad
+        Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole
+        membrane' localisation of P12868.
 - component_id: vps16_hops_subunit
   label: Vps16 HOPS subunit
   component_type: PROTEIN
@@ -72,6 +102,23 @@ components:
   - reference: DOI:10.1073/pnas.97.17.9402
     notes: Seals et al. 2000 showed that class C Vps16p is part of the six-protein
       yeast HOPS complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03308
+    protein_label: Vacuolar protein sorting-associated protein 16
+    gene_symbol: VPS16
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS16 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03308
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03308, the single reviewed entry
+        for gene VPS16 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps18_hops_subunit
   label: Vps18 HOPS subunit
   component_type: PROTEIN
@@ -88,6 +135,24 @@ components:
   - reference: DOI:10.1073/pnas.97.17.9402
     notes: Seals et al. 2000 showed that class C Vps18p is part of the six-protein
       yeast HOPS complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P27801
+    protein_label: Vacuolar membrane protein PEP3
+    gene_symbol: PEP3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS18, which UniProt lists
+      under the primary name PEP3, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P27801
+      notes: UniProtKB reviewed (Swiss-Prot) entry P27801, the single reviewed entry
+        for gene VPS18 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps33_hops_subunit
   label: Vps33 HOPS subunit
   component_type: PROTEIN
@@ -104,6 +169,23 @@ components:
   - reference: DOI:10.1073/pnas.97.17.9402
     notes: Seals et al. 2000 showed that Sec1-family protein Vps33p is part of the
       six-protein yeast HOPS complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P20795
+    protein_label: Vacuolar protein sorting-associated protein 33
+    gene_symbol: VPS33
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS33 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P20795
+      notes: UniProtKB reviewed (Swiss-Prot) entry P20795, the single reviewed entry
+        for gene VPS33 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps39_vam6_hops_subunit
   label: Vps39/Vam6 HOPS subunit
   component_type: PROTEIN
@@ -121,6 +203,24 @@ components:
   - reference: DOI:10.1073/pnas.97.17.9402
     notes: Seals et al. 2000 identified Vam6p/Vps39p as a vacuole-associated subunit
       of yeast HOPS.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07468
+    protein_label: Vacuolar morphogenesis protein 6
+    gene_symbol: VAM6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS39, which UniProt lists
+      under the primary name VAM6, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q07468
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q07468, the single reviewed entry
+        for gene VPS39 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps41_vam2_hops_subunit
   label: Vps41/Vam2 HOPS subunit
   component_type: PROTEIN
@@ -138,6 +238,24 @@ components:
   - reference: DOI:10.1073/pnas.97.17.9402
     notes: Seals et al. 2000 identified Vam2p/Vps41p as a vacuole-associated subunit
       of yeast HOPS.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38959
+    protein_label: Vacuolar protein sorting-associated protein 41
+    gene_symbol: VPS41
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS41 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym VAM2).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38959
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38959, the single reviewed entry
+        for gene VPS41 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -226,6 +344,8 @@ causal_graphs:
   - node_id: ypt7_rab
     label: Ypt7 Rab GTPase
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P32939
   - node_id: homotypic_vacuole_fusion
     label: vacuole fusion, non-autophagic
     node_type: BIOLOGICAL_PROCESS

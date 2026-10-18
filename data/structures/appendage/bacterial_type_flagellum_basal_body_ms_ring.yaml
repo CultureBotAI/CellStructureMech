@@ -48,6 +48,11 @@ curation_history:
   changes: '#2141: Replace unsupported majority bacterial prevalence with lineage-dependent
     occurrence and an explicitly qualified genomic survey.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, mounting plate
   synonym_type: BROAD_SYNONYM
@@ -182,6 +187,8 @@ causal_graphs:
   - node_id: flie
     label: flagellar basal-body protein FliE
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P26462
   - node_id: basal_body_rod
     label: bacterial-type flagellum basal body, rod
     node_type: STRUCTURE

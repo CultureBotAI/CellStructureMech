@@ -41,6 +41,18 @@ curation_history:
     evidence through reachable PMID:25002088 instead of the unreadable Annual Reviews
     DOI.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:15:15Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s); removed 1 non-matching protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: cell membrane
   synonym_type: EXACT_SYNONYM
@@ -94,6 +106,84 @@ components:
   - reference: PMID:25002088
     notes: Douglas and Konopka 2014 review fungal plasma-membrane domains that contain
       transporters and integral membrane proteins.
+  gene_symbols:
+  - lacY
+  - secY
+  - PMA1
+  - HXT1
+  protein_examples:
+  - uniprot_id: UniProtKB:P02920
+    protein_label: Lactose permease
+    gene_symbol: lacY
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene lacY in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:2164211
+      notes: 'Calamia J et al. 1990, ‘lac permease of Escherichia coli: topology and
+        sequence elements promoting membrane insertion.’, Proc Natl Acad Sci U S A.
+        ECO:0000269 experimental evidence cited by UniProt for the ''Cell inner membrane''
+        localisation of P02920.'
+    - reference: PMID:7000781
+      notes: Newman MJ et al. 1980, ‘Solubilization and reconstitution of the lactose
+        transport system from Escherichia coli.’, J Biol Chem. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell inner membrane' localisation of P02920.
+    - reference: PMID:7028742
+      notes: Newman MJ et al. 1981, ‘Purification and reconstitution of functional
+        lactose carrier from Escherichia coli.’, J Biol Chem. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell inner membrane' localisation of P02920.
+  - uniprot_id: UniProtKB:P05030
+    protein_label: Plasma membrane ATPase 1
+    gene_symbol: PMA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PMA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P05030
+      notes: UniProtKB reviewed (Swiss-Prot) entry P05030, the single reviewed entry
+        for gene PMA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P32465
+    protein_label: Low-affinity glucose transporter HXT1
+    gene_symbol: HXT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HXT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32465
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32465, the single reviewed entry
+        for gene HXT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P0AGA2
+    protein_label: Protein translocase subunit SecY
+    gene_symbol: secY
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene secY in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AGA2
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AGA2, the single reviewed entry
+        for gene secY in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

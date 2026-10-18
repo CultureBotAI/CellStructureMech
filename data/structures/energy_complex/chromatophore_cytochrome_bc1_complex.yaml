@@ -29,6 +29,11 @@ curation_history:
   changes: '#2297: Separate generic return-carrier identity from the C. sphaeroides
     c2/PufX graph.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: cytochrome bc1 complex
   synonym_type: RELATED_SYNONYM
@@ -119,6 +124,8 @@ causal_graphs:
   - node_id: cytochrome_c2
     label: cytochrome c2
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P0C0X8
   - node_id: electron_transport
     label: photosynthetic electron transport chain
     node_type: BIOLOGICAL_PROCESS

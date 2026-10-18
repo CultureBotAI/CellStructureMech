@@ -22,6 +22,13 @@ curation_history:
     function evidence, GO/PubMed/DOI evidence, a nonmechanistic function graph, and
     a DDK subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:22:41Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: DDK
   synonym_type: EXACT_SYNONYM
@@ -52,6 +59,23 @@ components:
   - reference: GO:0031431
     notes: GO:0031431 defines budding-yeast DDK as comprising the catalytic Cdc7p
       subunit and the regulatory Dbf4p subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06243
+    protein_label: Cell division control protein 7
+    gene_symbol: CDC7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P06243
+      notes: UniProtKB reviewed (Swiss-Prot) entry P06243, the single reviewed entry
+        for gene CDC7 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: dbf4_regulatory_subunit
   label: Dbf4 regulatory subunit
   component_type: PROTEIN
@@ -69,6 +93,23 @@ components:
   - reference: GO:0031431
     notes: GO:0031431 defines budding-yeast DDK as comprising the catalytic Cdc7p
       subunit and the regulatory Dbf4p subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32325
+    protein_label: DDK kinase regulatory subunit DBF4
+    gene_symbol: DBF4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DBF4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32325
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32325, the single reviewed entry
+        for gene DBF4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

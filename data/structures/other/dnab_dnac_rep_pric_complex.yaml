@@ -21,6 +21,18 @@ curation_history:
     function evidence, GO/PubMed/DOI evidence, a nonmechanistic Rep/PriC-branch restart
     graph, and grounding/boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:04Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s); removed 1 non-matching protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: DnaB-DnaC-Rep-PriC preprimosome
   synonym_type: EXACT_SYNONYM
@@ -62,6 +74,23 @@ components:
   - reference: PMID:19941825
     notes: Guy et al. 2009 used reconstituted E. coli replisomes to study Rep helicase
       activity at blocked forks.
+  protein_examples:
+  - uniprot_id: UniProtKB:P09980
+    protein_label: ATP-dependent DNA helicase Rep
+    gene_symbol: rep
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene rep in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P09980
+      notes: UniProtKB reviewed (Swiss-Prot) entry P09980, the single reviewed entry
+        for gene rep in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: pric_restart_protein
   label: PriC replication restart protein
   component_type: PROTEIN
@@ -77,6 +106,23 @@ components:
   evidence:
   - reference: GO:1990160
     notes: GO:1990160 defines PriC as a constituent of this preprimosome.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23862
+    protein_label: Replication restart protein PriC
+    gene_symbol: priC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene priC in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P23862
+      notes: UniProtKB reviewed (Swiss-Prot) entry P23862, the single reviewed entry
+        for gene priC in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: primosome_assembly_site_dna
   label: primosome assembly site DNA
   component_type: DNA

@@ -25,6 +25,13 @@ curation_history:
   changes: 'Resolved PR #1402 review issue #1403 by singularizing the central-bridge
     graph title to match GO:1990717.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:09:47Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 part_of:
 - GO:1990716
 components:
@@ -45,6 +52,26 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for the axonemal central-bridge protein
     set was verified in this pass.
+  gene_symbols:
+  - PF20
+  - HY3
+  protein_examples:
+  - uniprot_id: UniProtKB:P93107
+    protein_label: Flagellar WD repeat-containing protein Pf20
+    gene_symbol: PF20
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PF20 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P93107
+      notes: UniProtKB reviewed (Swiss-Prot) entry P93107, the single reviewed entry
+        for gene PF20 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

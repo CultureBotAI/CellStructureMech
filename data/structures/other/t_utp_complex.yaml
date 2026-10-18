@@ -22,6 +22,13 @@ curation_history:
     GO/PubMed/DOI evidence, a nonmechanistic assembly graph, and a t-UTP subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:31:30Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Nan1p-containing subcomplex of 90S preribosome
   synonym_type: EXACT_SYNONYM
@@ -48,6 +55,27 @@ components:
   evidence:
   - reference: GO:0034455
     notes: GO:0034455 defines the t-UTP complex as containing Utp5p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04177
+    protein_label: U3 small nucleolar RNA-associated protein 5
+    gene_symbol: UTP5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q04177.
+    - reference: PMID:15489292
+      notes: Gallagher JE et al. 2004, ‘RNA polymerase I transcription and pre-rRNA
+        processing are linked by specific SSU processome components.’, Genes Dev.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus'
+        localisation of Q04177.
 - component_id: utp4_t_utp_subunit
   label: Utp4 t-UTP subunit
   component_type: PROTEIN
@@ -64,6 +92,22 @@ components:
   evidence:
   - reference: GO:0034455
     notes: GO:0034455 defines the t-UTP complex as containing Utp4p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06679
+    protein_label: U3 small nucleolar RNA-associated protein 4
+    gene_symbol: UTP4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q06679.
 - component_id: nan1_t_utp_subunit
   label: Nan1 t-UTP subunit
   component_type: PROTEIN
@@ -80,6 +124,27 @@ components:
   evidence:
   - reference: GO:0034455
     notes: GO:0034455 defines the t-UTP complex as containing Nan1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02931
+    protein_label: NET1-associated nuclear protein 1
+    gene_symbol: NAN1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NAN1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q02931.
+    - reference: PMID:15489292
+      notes: Gallagher JE et al. 2004, ‘RNA polymerase I transcription and pre-rRNA
+        processing are linked by specific SSU processome components.’, Genes Dev.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus'
+        localisation of Q02931.
 - component_id: utp8_t_utp_subunit
   label: Utp8 t-UTP subunit
   component_type: PROTEIN
@@ -96,6 +161,32 @@ components:
   evidence:
   - reference: GO:0034455
     notes: GO:0034455 defines the t-UTP complex as containing Utp8p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53276
+    protein_label: U3 small nucleolar RNA-associated protein 8
+    gene_symbol: UTP8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of P53276.
+    - reference: PMID:12794079
+      notes: Steiner-Mosonyi M et al. 2003, ‘Utp8p is an essential intranuclear component
+        of the nuclear tRNA export machinery of Saccharomyces cerevisiae.’, J Biol
+        Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        nucleolus' localisation of P53276.
+    - reference: PMID:15489292
+      notes: Gallagher JE et al. 2004, ‘RNA polymerase I transcription and pre-rRNA
+        processing are linked by specific SSU processome components.’, Genes Dev.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus'
+        localisation of P53276.
 - component_id: utp9_t_utp_subunit
   label: Utp9 t-UTP subunit
   component_type: PROTEIN
@@ -112,6 +203,27 @@ components:
   evidence:
   - reference: GO:0034455
     notes: GO:0034455 defines the t-UTP complex as containing Utp9p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38882
+    protein_label: U3 small nucleolar RNA-associated protein 9
+    gene_symbol: UTP9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP9 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of P38882.
+    - reference: PMID:15489292
+      notes: Gallagher JE et al. 2004, ‘RNA polymerase I transcription and pre-rRNA
+        processing are linked by specific SSU processome components.’, Genes Dev.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus'
+        localisation of P38882.
 - component_id: utp10_t_utp_subunit
   label: Utp10 t-UTP subunit
   component_type: PROTEIN
@@ -128,6 +240,23 @@ components:
   evidence:
   - reference: GO:0034455
     notes: GO:0034455 defines the t-UTP complex as containing Utp10.
+  protein_examples:
+  - uniprot_id: UniProtKB:P42945
+    protein_label: U3 small nucleolar RNA-associated protein 10
+    gene_symbol: UTP10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P42945
+      notes: UniProtKB reviewed (Swiss-Prot) entry P42945, the single reviewed entry
+        for gene UTP10 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: utp15_t_utp_subunit
   label: Utp15 t-UTP subunit
   component_type: PROTEIN
@@ -144,6 +273,27 @@ components:
   evidence:
   - reference: GO:0034455
     notes: GO:0034455 defines the t-UTP complex as containing Utp15p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04305
+    protein_label: U3 small nucleolar RNA-associated protein 15
+    gene_symbol: UTP15
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP15 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q04305.
+    - reference: PMID:15489292
+      notes: Gallagher JE et al. 2004, ‘RNA polymerase I transcription and pre-rRNA
+        processing are linked by specific SSU processome components.’, Genes Dev.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus'
+        localisation of Q04305.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

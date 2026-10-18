@@ -34,6 +34,11 @@ curation_history:
     graph edge from a generic cargo node to a BIOLOGICAL_PROCESS endocytic-recycling
     node.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005768
 has_part:
@@ -150,6 +155,8 @@ causal_graphs:
   - node_id: tbrab11
     label: TbRAB11
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q9NJE8
   - node_id: endocytic_recycling
     label: endocytic recycling
     node_type: BIOLOGICAL_PROCESS

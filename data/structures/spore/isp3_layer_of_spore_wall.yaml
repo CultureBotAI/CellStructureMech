@@ -20,6 +20,13 @@ curation_history:
     nonmechanistic Isp3 layer topology graph, and boundary discussions for Isp3 component
     grounding and Saccharomyces layer separation.
   llm_assisted: true
+- timestamp: '2026-10-18T03:37:42Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 part_of:
 - GO:0005619
 components:
@@ -41,6 +48,27 @@ components:
     notes: Fukunishi et al. 2014 identified p23 as the Isp3/Meu4 protein, found that
       Isp3 remains firmly associated with the spore-wall fraction, and localized Isp3
       to the outermost electron-dense layer by immunoelectron microscopy.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40899
+    protein_label: Spore wall structural constituent isp3
+    gene_symbol: isp3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene isp3 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:24623719
+      notes: Fukunishi K et al. 2014, ‘The fission yeast spore is coated by a proteinaceous
+        surface layer comprising mainly Isp3.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Spore coat' localisation of P40899.
+    - reference: PMID:33375328
+      notes: Tahara YO et al. 2020, ‘Quick-Freeze, Deep-Etch Electron Microscopy Reveals
+        the Characteristic Architecture of the Fission Yeast Spore.’, J Fungi (Basel).
+        ECO:0000269 experimental evidence cited by UniProt for the 'Spore coat' localisation
+        of P40899.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe

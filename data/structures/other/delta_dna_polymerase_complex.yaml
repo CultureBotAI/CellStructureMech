@@ -36,6 +36,13 @@ curation_history:
   changes: Removed an obsolete GO alternate ID from the previous curation-history
     note.
   llm_assisted: true
+- timestamp: '2026-10-18T03:22:44Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: delta-DNA polymerase complex
   synonym_type: EXACT_SYNONYM
@@ -69,6 +76,22 @@ components:
   - reference: PMID:11568188
     notes: Johansson et al. established that purified Saccharomyces cerevisiae DNA
       polymerase delta contains Pol3, Pol31 and Pol32 at 1:1:1 stoichiometry.
+  protein_examples:
+  - uniprot_id: UniProtKB:P15436
+    protein_label: DNA polymerase delta catalytic subunit
+    gene_symbol: POL3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POL3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P15436.
 - component_id: pol31_subunit
   label: Pol31 subunit
   component_type: PROTEIN
@@ -92,6 +115,23 @@ components:
   - reference: PMID:11568188
     notes: Johansson et al. established that purified Saccharomyces cerevisiae DNA
       polymerase delta contains Pol3, Pol31 and Pol32 at 1:1:1 stoichiometry.
+  protein_examples:
+  - uniprot_id: UniProtKB:P46957
+    protein_label: DNA polymerase delta small subunit
+    gene_symbol: POL31
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POL31 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P46957
+      notes: UniProtKB reviewed (Swiss-Prot) entry P46957, the single reviewed entry
+        for gene POL31 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: pol32_subunit
   label: Pol32 subunit
   component_type: PROTEIN
@@ -115,6 +155,23 @@ components:
   - reference: PMID:11568188
     notes: Johansson et al. established that purified Saccharomyces cerevisiae DNA
       polymerase delta contains Pol3, Pol31 and Pol32 at 1:1:1 stoichiometry.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47110
+    protein_label: DNA polymerase delta subunit 3
+    gene_symbol: POL32
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POL32 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P47110
+      notes: UniProtKB reviewed (Swiss-Prot) entry P47110, the single reviewed entry
+        for gene POL32 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

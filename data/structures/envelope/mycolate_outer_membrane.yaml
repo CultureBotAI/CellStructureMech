@@ -35,6 +35,18 @@ curation_history:
     from the mycomembrane literature and replacing the M. tuberculosis canonical example
     with a directly supported M. smegmatis example.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:15:05Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: MOM
   synonym_type: EXACT_SYNONYM
@@ -96,6 +108,57 @@ components:
   - reference: DOI:10.1016/j.tim.2009.12.005
     notes: Niederweis et al. 2010 review mycobacterial outer-membrane proteins and
       porin channels.
+  gene_symbols:
+  - mspA
+  - porA
+  - porB
+  protein_examples:
+  - uniprot_id: UniProtKB:A0QR29
+    protein_label: Porin MspA
+    gene_symbol: mspA
+    taxon_id: NCBITaxon:246196
+    taxon_label: Mycolicibacterium smegmatis MC2 155
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene mspA in Mycolicibacterium smegmatis
+      MC2 155, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0QR29
+      notes: UniProtKB reviewed (Swiss-Prot) entry A0QR29, the single reviewed entry
+        for gene mspA in Mycolicibacterium smegmatis MC2 155. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:H7C6A6
+    protein_label: Porin
+    gene_symbol: porA
+    taxon_id: NCBITaxon:1718
+    taxon_label: Corynebacterium glutamicum
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene porA in Corynebacterium
+      glutamicum. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/H7C6A6
+      notes: UniProtKB unreviewed (TrEMBL) entry H7C6A6 for gene porA in Corynebacterium
+        glutamicum. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:H7C685
+    protein_label: Anion-specific porin
+    gene_symbol: porB
+    taxon_id: NCBITaxon:1718
+    taxon_label: Corynebacterium glutamicum
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene porB in Corynebacterium
+      glutamicum. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/H7C685
+      notes: UniProtKB unreviewed (TrEMBL) entry H7C685 for gene porB in Corynebacterium
+        glutamicum. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

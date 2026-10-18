@@ -46,6 +46,11 @@ curation_history:
     with historical PFRC/PFRA, moved examples and citations with their families, and
     qualified PFR2 essentiality and assembly scope for full versus reduced rods.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: PFR
   synonym_type: RELATED_SYNONYM
@@ -90,7 +95,7 @@ components:
     role: Reviewed UniProtKB entry for the PFRC/PFRD-encoded 73 kDa protein in Trypanosoma
       brucei brucei, assigned to consolidated PFR1 by Gadelha et al. 2004. The source
       protein name and historical UniProt mnemonic PFR2_TRYBB are not a cross-species
-      orthology assertion.
+      orthology assertion (also declared as synonym PFRD).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q26789
       notes: UniProtKB reviewed entry Q26789 verifies the source-native 73 kDa protein
@@ -142,7 +147,7 @@ components:
     role: Reviewed UniProtKB entry for the PFRA/PFRB-encoded 69 kDa protein in Trypanosoma
       brucei brucei, assigned to consolidated PFR2 by Gadelha et al. 2004. The source
       protein name and historical UniProt mnemonic PFR1_TRYBB are not a cross-species
-      orthology assertion.
+      orthology assertion (also declared as synonym PFRB).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/P22225
       notes: UniProtKB reviewed entry P22225 verifies the source-native 69 kDa protein
@@ -151,6 +156,21 @@ components:
     - reference: DOI:10.1016/j.molbiopara.2004.03.006
       notes: Table 1 and Fig. 1 map T. brucei PFRC to PFR1 and PFRA to PFR2, consistently
         with Leishmania nomenclature.
+  - uniprot_id: UniProtKB:Q26785
+    protein_label: Paraflagellar rod protein
+    gene_symbol: PFR2
+    taxon_id: NCBITaxon:5702
+    taxon_label: Trypanosoma brucei brucei
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene PFR2 in Trypanosoma
+      brucei brucei. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q26785
+      notes: UniProtKB unreviewed (TrEMBL) entry Q26785 for gene PFR2 in Trypanosoma
+        brucei brucei. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: InterPro:IPR007824 / Pfam:PF05149 covers both PFR1 and PFR2 rather
     than the individual consolidated PFR2 family. No exact source-neutral PFR2-only

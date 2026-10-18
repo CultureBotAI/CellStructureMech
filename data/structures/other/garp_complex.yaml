@@ -26,6 +26,18 @@ curation_history:
   changes: 'Addressed PR #1118 / issue #1119 by narrowing the resolved GARP interactor
     boundary to the cited Vps51-Tlg1p association.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:14Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0099023
 synonyms:
@@ -56,6 +68,22 @@ components:
   - reference: DOI:10.1091/mbc.e02-10-0654
     notes: Conibear, Cleck and Stevens 2003 showed that Vps51 is an additional subunit
       of the tetrameric yeast GARP complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36116
+    protein_label: Vacuolar protein sorting-associated protein 51
+    gene_symbol: VPS51
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS51 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12377769
+      notes: Siniossoglou S et al. 2002, ‘Vps51p links the VFT complex to the SNARE
+        Tlg1p.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Golgi apparatus, trans-Golgi network membrane' localisation of P36116.
 - component_id: vps52_garp_subunit
   label: Vps52 GARP subunit
   component_type: PROTEIN
@@ -73,6 +101,23 @@ components:
   - reference: DOI:10.1091/mbc.e02-10-0654
     notes: Conibear, Cleck and Stevens 2003 described yeast GARP as a tetrameric Vps51/Vps52/Vps53/Vps54
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39904
+    protein_label: Vacuolar protein sorting-associated protein 52
+    gene_symbol: VPS52
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS52 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39904
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39904, the single reviewed entry
+        for gene VPS52 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps53_garp_subunit
   label: Vps53 GARP subunit
   component_type: PROTEIN
@@ -90,6 +135,23 @@ components:
   - reference: DOI:10.1091/mbc.e02-10-0654
     notes: Conibear, Cleck and Stevens 2003 described yeast GARP as a tetrameric Vps51/Vps52/Vps53/Vps54
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47061
+    protein_label: Vacuolar protein sorting-associated protein 53
+    gene_symbol: VPS53
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS53 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P47061
+      notes: UniProtKB reviewed (Swiss-Prot) entry P47061, the single reviewed entry
+        for gene VPS53 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps54_garp_subunit
   label: Vps54 GARP subunit
   component_type: PROTEIN
@@ -107,6 +169,23 @@ components:
   - reference: DOI:10.1091/mbc.e02-10-0654
     notes: Conibear, Cleck and Stevens 2003 described yeast GARP as a tetrameric Vps51/Vps52/Vps53/Vps54
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12071
+    protein_label: Vacuolar protein sorting-associated protein 54
+    gene_symbol: VPS54
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS54 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12071
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12071, the single reviewed entry
+        for gene VPS54 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -188,6 +267,8 @@ causal_graphs:
   - node_id: tlg1_snare
     label: Tlg1 t-SNARE
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q03322
   - node_id: retrograde_transport_endosome_to_golgi
     label: retrograde transport, endosome to Golgi
     node_type: BIOLOGICAL_PROCESS

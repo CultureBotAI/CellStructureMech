@@ -28,6 +28,13 @@ curation_history:
     because this first record models a protein-rich nuclear body rather than a resident-RNA
     ribonucleoprotein granule.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:21:10Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0016604
 part_of:
@@ -53,6 +60,29 @@ components:
   - reference: DOI:10.1091/mbc.e05-08-0768
     notes: Li et al. 2006 used CstF-64 as a cleavage-body marker and found that CstF-64-containing
       cleavage bodies were primarily observed in S-phase HeLa cells.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33240
+    protein_label: Cleavage stimulation factor subunit 2
+    gene_symbol: CSTF2
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CSTF2 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11598190
+      notes: Bléoo S et al. 2001, ‘Association of human DEAD box protein DDX1 with
+        a cleavage stimulation factor involved in 3'-end processing of pre-MRNA.’,
+        Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P33240.
+    - reference: PMID:32816001
+      notes: Grozdanov PN et al. 2020, ‘A missense mutation in the CSTF2 gene that
+        impairs the function of the RNA recognition motif and causes defects in 3'
+        end processing is associated with intellectual disability in humans.’, Nucleic
+        Acids Res. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of P33240.
 - component_id: cpsf100
   label: CPSF-100
   component_type: PROTEIN
@@ -73,6 +103,23 @@ components:
   - reference: DOI:10.1091/mbc.e05-08-0768
     notes: Li et al. 2006 followed CPSF-100-positive cleavage bodies in synchronized
       HeLa cells and their relationship to DDX1 bodies and Cajal bodies.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9P2I0
+    protein_label: Cleavage and polyadenylation specificity factor subunit 2
+    gene_symbol: CPSF2
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CPSF2 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q9P2I0
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q9P2I0, the single reviewed entry
+        for gene CPSF2 in Homo sapiens. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens

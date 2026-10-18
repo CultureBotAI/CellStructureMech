@@ -21,6 +21,11 @@ curation_history:
     Paramecium scope, DOI evidence, a nonmechanistic ciliary-rootlet topology graph,
     and TODOs for SF-assemblin grounding and rootlet subtype boundaries.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: cilial rootlet
   synonym_type: EXACT_SYNONYM
@@ -53,6 +58,24 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for the SF-assemblin homologs that
     build microbial eukaryotic striated ciliary rootlets was verified in this pass.
+  gene_symbols:
+  - SFA
+  protein_examples:
+  - uniprot_id: UniProtKB:B2XYH3
+    protein_label: Striated fiber assemblin
+    gene_symbol: sfa
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SFA in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/B2XYH3
+      notes: UniProtKB unreviewed (TrEMBL) entry B2XYH3 for gene SFA in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

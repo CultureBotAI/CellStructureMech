@@ -24,6 +24,18 @@ curation_history:
   action: ADD_IMAGE
   changes: Added PMC4434539.1 fig3; version, CC licence, JATS figure identity and
     media md5 verified through the PMC OA S3 dataset.
+- timestamp: '2026-10-18T03:26:10Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0098800
 part_of:
@@ -41,6 +53,33 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - MIC10
+  protein_examples:
+  - uniprot_id: UniProtKB:Q96VH5
+    protein_label: MICOS complex subunit MIC10
+    gene_symbol: MIC10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MIC10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16823961
+      notes: 'Reinders J et al. 2006, ‘Toward the complete yeast mitochondrial proteome:
+        multidimensional separation techniques for mitochondrial proteomics.’, J Proteome
+        Res. ECO:0000269 experimental evidence cited by UniProt for the ''Mitochondrion
+        inner membrane'' localisation of Q96VH5.'
+    - reference: PMID:21944719
+      notes: von der Malsburg K et al. 2011, ‘Dual role of mitofilin in mitochondrial
+        membrane organization and protein biogenesis.’, Dev Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Mitochondrion inner membrane' localisation
+        of Q96VH5.
+    - reference: PMID:21987634
+      notes: Hoppins S et al. 2011, ‘A mitochondrial-focused genetic interaction map
+        reveals a scaffold-like complex required for inner membrane organization in
+        mitochondria.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion inner membrane' localisation of Q96VH5.
 - component_id: mic12
   label: MICOS complex subunit Mic12
   grounding: InterPro:IPR031463
@@ -55,6 +94,23 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - MIC12
+  protein_examples:
+  - uniprot_id: UniProtKB:P38341
+    protein_label: MICOS complex subunit MIC12
+    gene_symbol: MIC12
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MIC12 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38341
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38341, the single reviewed entry
+        for gene MIC12 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: mic26
   label: MICOS subunit Mic26, fungi
   grounding: InterPro:IPR033181
@@ -70,6 +126,23 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - MIC26
+  protein_examples:
+  - uniprot_id: UniProtKB:P50087
+    protein_label: MICOS subunit MIC26
+    gene_symbol: MIC26
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MIC26 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P50087
+      notes: UniProtKB reviewed (Swiss-Prot) entry P50087, the single reviewed entry
+        for gene MIC26 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: mic27
   label: MICOS complex subunit MIC27
   grounding: InterPro:IPR061953
@@ -84,6 +157,23 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - MIC27
+  protein_examples:
+  - uniprot_id: UniProtKB:P50945
+    protein_label: MICOS complex subunit MIC27
+    gene_symbol: MIC27
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene MIC27 in Saccharomyces
+      cerevisiae S288C. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P50945
+      notes: UniProtKB reviewed (Swiss-Prot) entry P50945, the single reviewed entry
+        for gene MIC27 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

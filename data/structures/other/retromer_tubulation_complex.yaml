@@ -23,6 +23,13 @@ curation_history:
     reviewed-label-only Vps5/Vps17 yeast components, Saccharomyces scope, GO/DOI evidence,
     a nonmechanistic tubulation assembly graph, and a component-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:29:07Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0098796
 part_of:
@@ -56,6 +63,23 @@ components:
       retromer subcomplex.
   - reference: GO:0030905
     notes: The GO tubulation retromer-complex definition names Vps5p as a yeast constituent.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q92331
+    protein_label: Vacuolar protein sorting-associated protein 5
+    gene_symbol: VPS5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q92331
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q92331, the single reviewed entry
+        for gene VPS5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps17_retromer_subunit
   label: Vps17 retromer subunit
   component_type: PROTEIN
@@ -74,6 +98,22 @@ components:
       retromer subcomplex.
   - reference: GO:0030905
     notes: The GO tubulation retromer-complex definition names Vps17p as a yeast constituent.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32913
+    protein_label: Vacuolar protein sorting-associated protein 17
+    gene_symbol: VPS17
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS17 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9700157
+      notes: Seaman MN et al. 1998, ‘A membrane coat complex essential for endosome-to-Golgi
+        retrograde transport in yeast.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Endomembrane system' localisation of P32913.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

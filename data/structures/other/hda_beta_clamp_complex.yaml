@@ -36,6 +36,11 @@ curation_history:
     boundary discussion so Kurz et al. 2004 supports direct Hda-beta binding while
     GO:1990085 supports the replication-inhibiting scope.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Hda-DnaN complex
   synonym_type: EXACT_SYNONYM
@@ -67,6 +72,24 @@ components:
   - reference: PMID:15150238
     notes: Kurz et al. 2004 purified E. coli Hda and beta proteins and assayed their
       direct interaction.
+  protein_examples:
+  - uniprot_id: UniProtKB:P69931
+    protein_label: DnaA regulatory inactivator Hda
+    gene_symbol: hda
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene hda in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12618445
+      notes: Kim PD et al. 2003, ‘Identification of a novel membrane-associated gene
+        product that suppresses toxicity of a TrfA peptide from plasmid RK2 and its
+        relationship to the DnaA host initiation protein.’, J Bacteriol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell inner membrane' localisation
+        of P69931.
 - component_id: dnaN_beta_clamp
   label: DNA polymerase III, beta sliding clamp processivity factor complex
   component_type: PROTEIN_COMPLEX
@@ -87,6 +110,23 @@ components:
   - reference: PMID:15150238
     notes: Kurz et al. 2004 showed direct interaction between E. coli Hda and the
       sliding-clamp beta subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A988
+    protein_label: Beta sliding clamp
+    gene_symbol: dnaN
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dnaN in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:23994470
+      notes: Ozaki S et al. 2013, ‘A replicase clamp-binding dynamin-like protein
+        promotes colocalization of nascent DNA strands and equipartitioning of chromosomes
+        in E. coli.’, Cell Rep. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of P0A988.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli

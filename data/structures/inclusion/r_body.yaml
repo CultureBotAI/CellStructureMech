@@ -38,6 +38,11 @@ curation_history:
   changes: '#2323: Correct the Wang 2021 article title while preserving the earlier
     pH-trigger scope correction.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0016234
 synonyms:
@@ -70,6 +75,56 @@ components:
   - reference: DOI:10.1038/s41467-021-24796-0
     notes: Wang et al. 2021 showed that Pseudomonas aeruginosa PA14 produces extendable
       Reb-based R-bodies.
+  gene_symbols:
+  - rebA
+  - rebB
+  - rebD
+  protein_examples:
+  - uniprot_id: UniProtKB:Q57297
+    protein_label: RebA
+    gene_symbol: rebA
+    taxon_id: NCBITaxon:28907
+    taxon_label: Caedibacter taeniospiralis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene rebA in Caedibacter
+      taeniospiralis. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q57297
+      notes: UniProtKB unreviewed (TrEMBL) entry Q57297 for gene rebA in Caedibacter
+        taeniospiralis. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q46365
+    protein_label: RebB
+    gene_symbol: rebB
+    taxon_id: NCBITaxon:28907
+    taxon_label: Caedibacter taeniospiralis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene rebB in Caedibacter
+      taeniospiralis. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q46365
+      notes: UniProtKB unreviewed (TrEMBL) entry Q46365 for gene rebB in Caedibacter
+        taeniospiralis. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q57342
+    protein_label: RebD
+    gene_symbol: rebD
+    taxon_id: NCBITaxon:28907
+    taxon_label: Caedibacter taeniospiralis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene rebD in Caedibacter
+      taeniospiralis. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q57342
+      notes: UniProtKB unreviewed (TrEMBL) entry Q57342 for gene rebD in Caedibacter
+        taeniospiralis. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:28907
   taxon_label: Caedibacter taeniospiralis

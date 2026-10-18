@@ -26,6 +26,11 @@ curation_history:
   changes: Added 1 taxon-paired protein example(s) from UniProtKB reviewed entries
     annotated to SL-0491 (Anammoxosome), matched to components by gene symbol, each
     carrying UniProt's ECO:0000269 PubMed evidence for the localisation.
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 components:
@@ -64,6 +69,55 @@ components:
   - reference: DOI:10.1111/1574-6976.12014
     notes: Kartal et al. 2013 review hydrazine synthase as the central hydrazine-forming
       complex of anammox catabolism.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A2C9CHN2
+    protein_label: Hydrazine synthase subunit A
+    gene_symbol: hzsA_1
+    taxon_id: NCBITaxon:174633
+    taxon_label: Candidatus Kuenenia stuttgartiensis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene hzsA, which
+      UniProt lists under the primary name hzsA_1, in Candidatus Kuenenia stuttgartiensis.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A2C9CHN2
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A2C9CHN2 for gene hzsA in Candidatus
+        Kuenenia stuttgartiensis. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:A0A2C9CH14
+    protein_label: Hydrazine synthase subunit B
+    gene_symbol: hzsB_1
+    taxon_id: NCBITaxon:174633
+    taxon_label: Candidatus Kuenenia stuttgartiensis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene hzsB, which
+      UniProt lists under the primary name hzsB_1, in Candidatus Kuenenia stuttgartiensis.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A2C9CH14
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A2C9CH14 for gene hzsB in Candidatus
+        Kuenenia stuttgartiensis. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:A0A2C9CHM2
+    protein_label: Hydrazine synthase subunit C
+    gene_symbol: hzsC_3
+    taxon_id: NCBITaxon:174633
+    taxon_label: Candidatus Kuenenia stuttgartiensis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene hzsC, which
+      UniProt lists under the primary name hzsC_3, in Candidatus Kuenenia stuttgartiensis.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A2C9CHM2
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A2C9CHM2 for gene hzsC in Candidatus
+        Kuenenia stuttgartiensis. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
 - component_id: hydrazine_dehydrogenase
   label: hydrazine dehydrogenase and hydroxylamine oxidoreductase-family cytochromes
   component_type: PROTEIN
@@ -102,6 +156,21 @@ components:
         Enzymes in the Anammoxosome and on the Tubule-Like Structures of Kuenenia
         stuttgartiensis.’, J Bacteriol. ECO:0000269 experimental evidence for the
         anammoxosome localisation of Q1PX48, as cited by UniProt.
+  - uniprot_id: UniProtKB:Q1PYC5
+    protein_label: Hydrazine dehydrogenase
+    gene_symbol: hdh
+    taxon_id: NCBITaxon:174633
+    taxon_label: Candidatus Kuenenia stuttgartiensis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene hdh in Candidatus
+      Kuenenia stuttgartiensis. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q1PYC5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q1PYC5 for gene hdh in Candidatus
+        Kuenenia stuttgartiensis. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
 - component_id: anammox_electron_transporters
   label: anammoxosome electron-transfer proteins
   component_type: PROTEIN

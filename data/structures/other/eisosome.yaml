@@ -37,6 +37,13 @@ curation_history:
     evidence through reachable PMID:25002088 instead of the unreadable Annual Reviews
     DOI.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:16Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: MCC/eisosome
   synonym_type: RELATED_SYNONYM
@@ -61,6 +68,41 @@ components:
   - reference: DOI:10.1083/jcb.201104040
     notes: Karotki et al. 2011 reconstituted purified yeast Pil1 and Lsp1 into filaments
       and membrane-associated scaffolds.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53252
+    protein_label: Sphingolipid long chain base-responsive protein PIL1
+    gene_symbol: PIL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PIL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Lipid droplet' localisation of P53252.
+  - uniprot_id: UniProtKB:Q12230
+    protein_label: Sphingolipid long chain base-responsive protein LSP1
+    gene_symbol: LSP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene LSP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm, cell cortex' localisation of Q12230.
+    - reference: PMID:16496001
+      notes: Walther TC et al. 2006, ‘Eisosomes mark static sites of endocytosis.’,
+        Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cell cortex' localisation of Q12230.
 - component_id: sur7_membrane_protein
   label: Sur7 MCC integral membrane protein
   component_type: PROTEIN
@@ -79,6 +121,32 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession for
     the Sur7-family eisosome membrane proteins was curated in this pass.
+  protein_examples:
+  - uniprot_id: UniProtKB:P54003
+    protein_label: Protein SUR7
+    gene_symbol: SUR7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SUR7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11784867
+      notes: Young ME et al. 2002, ‘The Sur7p family defines novel cortical domains
+        in Saccharomyces cerevisiae, affects sphingolipid metabolism, and is involved
+        in sporulation.’, Mol Cell Biol. ECO:0000269 experimental evidence cited by
+        UniProt for the 'Cell membrane' localisation of P54003.
+    - reference: PMID:12469340
+      notes: 'Navarre C et al. 2002, ‘Subproteomics: identification of plasma membrane
+        proteins from the yeast Saccharomyces cerevisiae.’, Proteomics. ECO:0000269
+        experimental evidence cited by UniProt for the ''Cell membrane'' localisation
+        of P54003.'
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cell membrane' localisation of P54003.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4751
   taxon_label: Fungi

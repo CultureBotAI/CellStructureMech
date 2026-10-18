@@ -47,6 +47,13 @@ curation_history:
   changes: 'Clarified the PR #1129 issue #1130 curation-history wording so it no longer
     exposes the intermediate Trs85-containing GEF-activity phrase.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:32:45Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0030008
 components:
@@ -68,6 +75,23 @@ components:
     notes: GO:1990072 names Bet3 among the yeast TRAPPIII protein-complex subunits.
   - reference: DOI:10.1078/S0171-9335(04)70009-6
     notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36149
+    protein_label: Trafficking protein particle complex subunit BET3
+    gene_symbol: BET3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BET3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P36149
+      notes: UniProtKB reviewed (Swiss-Prot) entry P36149, the single reviewed entry
+        for gene BET3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: bet5_trappiii_subunit
   label: Bet5 TRAPPIII subunit
   component_type: PROTEIN
@@ -85,6 +109,23 @@ components:
     notes: GO:1990072 names Bet5 among the yeast TRAPPIII protein-complex subunits.
   - reference: DOI:10.1078/S0171-9335(04)70009-6
     notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03630
+    protein_label: Trafficking protein particle complex subunit BET5
+    gene_symbol: BET5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BET5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03630
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03630, the single reviewed entry
+        for gene BET5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs20_trappiii_subunit
   label: Trs20 TRAPPIII subunit
   component_type: PROTEIN
@@ -102,6 +143,23 @@ components:
     notes: GO:1990072 names Trs20 among the yeast TRAPPIII protein-complex subunits.
   - reference: DOI:10.1078/S0171-9335(04)70009-6
     notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38334
+    protein_label: Trafficking protein particle complex subunit 20
+    gene_symbol: TRS20
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS20 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38334
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38334, the single reviewed entry
+        for gene TRS20 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs23_trappiii_subunit
   label: Trs23 TRAPPIII subunit
   component_type: PROTEIN
@@ -119,6 +177,23 @@ components:
     notes: GO:1990072 names Trs23 among the yeast TRAPPIII protein-complex subunits.
   - reference: DOI:10.1078/S0171-9335(04)70009-6
     notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03784
+    protein_label: Trafficking protein particle complex subunit 23
+    gene_symbol: TRS23
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS23 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03784
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03784, the single reviewed entry
+        for gene TRS23 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs31_trappiii_subunit
   label: Trs31 TRAPPIII subunit
   component_type: PROTEIN
@@ -136,6 +211,23 @@ components:
     notes: GO:1990072 names Trs31 among the yeast TRAPPIII protein-complex subunits.
   - reference: DOI:10.1078/S0171-9335(04)70009-6
     notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03337
+    protein_label: Trafficking protein particle complex subunit 31
+    gene_symbol: TRS31
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS31 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03337
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03337, the single reviewed entry
+        for gene TRS31 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs33_trappiii_subunit
   label: Trs33 TRAPPIII subunit
   component_type: PROTEIN
@@ -153,6 +245,23 @@ components:
     notes: GO:1990072 names Trs33 among the yeast TRAPPIII protein-complex subunits.
   - reference: DOI:10.1078/S0171-9335(04)70009-6
     notes: Sacher et al. 2000 placed this protein among yeast TRAPP subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q99394
+    protein_label: Trafficking protein particle complex subunit 33
+    gene_symbol: TRS33
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS33 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q99394
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q99394, the single reviewed entry
+        for gene TRS33 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs85_trappiii_subunit
   label: Trs85 TRAPPIII subunit
   component_type: PROTEIN
@@ -174,6 +283,27 @@ components:
   - reference: DOI:10.1073/pnas.1000063107
     notes: Lynch-Day et al. 2010 described Trs85 as the TRAPPIII subunit that directs
       Ypt1 GEF activity to the phagophore assembly site.
+  protein_examples:
+  - uniprot_id: UniProtKB:P46944
+    protein_label: Trafficking protein particle complex III-specific subunit 85
+    gene_symbol: TRS85
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS85 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11239471
+      notes: Sacher M et al. 2001, ‘TRAPP I implicated in the specificity of tethering
+        in ER-to-Golgi transport.’, Mol Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Preautophagosomal structure' localisation of P46944.
+    - reference: PMID:20375281
+      notes: Lynch-Day MA et al. 2010, ‘Trs85 directs a Ypt1 GEF, TRAPPIII, to the
+        phagophore to promote autophagy.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Preautophagosomal structure' localisation
+        of P46944.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

@@ -85,6 +85,11 @@ curation_history:
     with revision context; preserved the current prompt, task lifecycle, original
     dates, scientific claims and child-record boundaries.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: axonemal outer doublet
   synonym_type: EXACT_SYNONYM
@@ -131,6 +136,27 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for the axonemal alpha/beta-tubulin
     constituent set of GO:0097545 was verified in this pass.
+  gene_symbols:
+  - TUA1
+  - TUA2
+  - TUB1
+  - TUB2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q6SPP7
+    protein_label: TUA2
+    gene_symbol: TUA2
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TUA2 in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q6SPP7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q6SPP7 for gene TUA2 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

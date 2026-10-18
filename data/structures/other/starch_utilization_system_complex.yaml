@@ -30,6 +30,18 @@ curation_history:
   changes: 'Addressed PR #1875 review issue #1876 by changing SusE and SusF essentiality
     from DISPENSABLE to UNKNOWN.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:30:49Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Sus complex
   synonym_type: EXACT_SYNONYM
@@ -60,6 +72,23 @@ components:
   - reference: DOI:10.1128/JB.182.19.5365-5372.2000
     notes: Shipman et al. 2000 found that SusC contributes to starch binding and interacts
       with SusD in the outer membrane.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8A1G1
+    protein_label: TonB-dependent receptor SusC
+    gene_symbol: susC
+    taxon_id: NCBITaxon:226186
+    taxon_label: Bacteroides thetaiotaomicron VPI-5482
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene susC in Bacteroides thetaiotaomicron
+      VPI-5482. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8A1G1
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q8A1G1, the single reviewed entry
+        for gene susC in Bacteroides thetaiotaomicron VPI-5482. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: susd_starch_binding_lipoprotein
   label: SusD starch-binding lipoprotein
   component_type: PROTEIN
@@ -80,6 +109,23 @@ components:
   - reference: DOI:10.1128/JB.182.19.5365-5372.2000
     notes: Shipman et al. 2000 measured a major SusD contribution to cell-surface
       starch binding and provided evidence for an outer-membrane SusC-SusD interaction.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8A1G2
+    protein_label: Starch-binding protein SusD
+    gene_symbol: susD
+    taxon_id: NCBITaxon:226186
+    taxon_label: Bacteroides thetaiotaomicron VPI-5482
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene susD in Bacteroides thetaiotaomicron
+      VPI-5482. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8A1G2
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q8A1G2, the single reviewed entry
+        for gene susD in Bacteroides thetaiotaomicron VPI-5482. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: suse_starch_binding_lipoprotein
   label: SusE starch-binding lipoprotein
   component_type: PROTEIN
@@ -99,6 +145,23 @@ components:
   - reference: DOI:10.1128/JB.182.19.5365-5372.2000
     notes: Shipman et al. 2000 found that SusE contributes to starch binding and increases
       SusC-SusD binding activity in B. thetaiotaomicron.
+  protein_examples:
+  - uniprot_id: UniProtKB:G8JZT0
+    protein_label: Outer membrane protein SusE
+    gene_symbol: susE
+    taxon_id: NCBITaxon:226186
+    taxon_label: Bacteroides thetaiotaomicron VPI-5482
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene susE in Bacteroides thetaiotaomicron
+      VPI-5482, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22910908
+      notes: Cameron EA et al. 2012, ‘Multidomain Carbohydrate-binding Proteins Involved
+        in Bacteroides thetaiotaomicron Starch Metabolism.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell outer membrane' localisation
+        of G8JZT0.
 - component_id: susf_starch_binding_lipoprotein
   label: SusF starch-binding lipoprotein
   component_type: PROTEIN
@@ -118,6 +181,23 @@ components:
   - reference: DOI:10.1128/JB.182.19.5365-5372.2000
     notes: Shipman et al. 2000 showed that SusF is surface exposed and protected from
       proteolysis by amylopectin, supporting its association with bound starch.
+  protein_examples:
+  - uniprot_id: UniProtKB:G8JZS6
+    protein_label: Outer membrane protein SusF
+    gene_symbol: susF
+    taxon_id: NCBITaxon:226186
+    taxon_label: Bacteroides thetaiotaomicron VPI-5482
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene susF in Bacteroides thetaiotaomicron
+      VPI-5482, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22910908
+      notes: Cameron EA et al. 2012, ‘Multidomain Carbohydrate-binding Proteins Involved
+        in Bacteroides thetaiotaomicron Starch Metabolism.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell outer membrane' localisation
+        of G8JZS6.
 - component_id: susg_alpha_amylase
   label: SusG alpha-amylase
   component_type: PROTEIN
@@ -137,6 +217,23 @@ components:
   - reference: DOI:10.1128/JB.181.23.7206-7211.1999
     notes: Shipman et al. 1999 showed that SusG is an outer-membrane protein exposed
       on the cell surface whose main role is starch hydrolysis.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8A1G3
+    protein_label: Alpha-amylase SusG
+    gene_symbol: susG
+    taxon_id: NCBITaxon:226186
+    taxon_label: Bacteroides thetaiotaomicron VPI-5482
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene susG in Bacteroides thetaiotaomicron
+      VPI-5482, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10572122
+      notes: Shipman JA et al. 1999, ‘Physiological characterization of SusG, an outer
+        membrane protein essential for starch utilization by Bacteroides thetaiotaomicron.’,
+        J Bacteriol. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        outer membrane' localisation of Q8A1G3.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:818
   taxon_label: Bacteroides thetaiotaomicron

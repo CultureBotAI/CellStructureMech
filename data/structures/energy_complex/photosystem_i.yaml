@@ -37,6 +37,18 @@ curation_history:
   changes: '#2303: Expose the unresolved Jordan source-taxon conflict and limit P700
     wording to oxygenic PSI.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:13:38Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0009521
 components:
@@ -58,6 +70,46 @@ components:
   - reference: PMID:11418848
     notes: Jordan et al. 2001 resolved the cyanobacterial PSI structure including
       the PsaA/PsaB reaction-center core.
+  gene_symbols:
+  - psaA
+  - psaB
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A406
+    protein_label: Photosystem I P700 chlorophyll a apoprotein A1
+    gene_symbol: psaA
+    taxon_id: NCBITaxon:32046
+    taxon_label: Synechococcus elongatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene psaA in Synechococcus elongatus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A406
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A406, the single reviewed entry
+        for gene psaA in Synechococcus elongatus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0A408
+    protein_label: Photosystem I P700 chlorophyll a apoprotein A2
+    gene_symbol: psaB
+    taxon_id: NCBITaxon:32046
+    taxon_label: Synechococcus elongatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene psaB in Synechococcus elongatus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A408
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A408, the single reviewed entry
+        for gene psaB in Synechococcus elongatus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: terminal_iron_sulfur_acceptors
   label: terminal iron-sulfur electron acceptors
   component_type: PROTEIN
@@ -76,6 +128,27 @@ components:
   - reference: PMID:11418848
     notes: Jordan et al. 2001 located the Fe4S4 clusters in the cyanobacterial PSI
       structural model.
+  gene_symbols:
+  - psaC
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A416
+    protein_label: Photosystem I iron-sulfur center
+    gene_symbol: psaC
+    taxon_id: NCBITaxon:32046
+    taxon_label: Synechococcus elongatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene psaC in Synechococcus elongatus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A416
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A416, the single reviewed entry
+        for gene psaC in Synechococcus elongatus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: psi_bound_pigments
   label: PSI chlorophyll and carotenoid cofactors
   component_type: SMALL_MOLECULE
@@ -161,6 +234,8 @@ causal_graphs:
   - node_id: ferredoxin
     label: ferredoxin
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P0A3D0
   - node_id: electron_transport
     label: photosynthetic electron transport chain
     node_type: BIOLOGICAL_PROCESS

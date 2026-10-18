@@ -22,6 +22,13 @@ curation_history:
     GO/PubMed/DOI evidence, a nonmechanistic function graph, and a SHREC subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:30:32Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Snf2/HDAC containing repressor complex
   synonym_type: EXACT_SYNONYM
@@ -50,6 +57,25 @@ components:
   - reference: DOI:10.1016/j.cell.2006.12.035
     notes: Sugiyama et al. 2007 described SHREC as a fission-yeast core quartet that
       includes Clr1.
+  gene_symbols:
+  - clr1
+  protein_examples:
+  - uniprot_id: UniProtKB:O74808
+    protein_label: Cryptic loci regulator protein 1
+    gene_symbol: clr1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene clr1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O74808
+      notes: UniProtKB reviewed (Swiss-Prot) entry O74808, the single reviewed entry
+        for gene clr1 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: clr2_shrec_subunit
   label: Clr2 SHREC subunit
   component_type: PROTEIN
@@ -68,6 +94,24 @@ components:
   - reference: DOI:10.1016/j.cell.2006.12.035
     notes: Sugiyama et al. 2007 described SHREC as a fission-yeast core quartet that
       includes Clr2.
+  gene_symbols:
+  - clr2
+  protein_examples:
+  - uniprot_id: UniProtKB:O13881
+    protein_label: Cryptic loci regulator 2
+    gene_symbol: clr2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene clr2 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17289569
+      notes: Sugiyama T et al. 2007, ‘SHREC, an effector complex for heterochromatic
+        transcriptional silencing.’, Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of O13881.
 - component_id: clr3_shrec_histone_deacetylase_subunit
   label: Clr3 SHREC histone deacetylase subunit
   component_type: PROTEIN
@@ -86,6 +130,24 @@ components:
   - reference: DOI:10.1016/j.cell.2006.12.035
     notes: Sugiyama et al. 2007 identified Clr3 as the SHREC histone deacetylase associated
       with heterochromatic transcriptional gene silencing.
+  gene_symbols:
+  - clr3
+  protein_examples:
+  - uniprot_id: UniProtKB:P56523
+    protein_label: Histone deacetylase clr3
+    gene_symbol: clr3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene clr3 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17289569
+      notes: Sugiyama T et al. 2007, ‘SHREC, an effector complex for heterochromatic
+        transcriptional silencing.’, Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of P56523.
 - component_id: mit1_shrec_snf2_family_subunit
   label: Mit1 SHREC SNF2-family subunit
   component_type: PROTEIN
@@ -105,6 +167,29 @@ components:
   - reference: DOI:10.1016/j.cell.2006.12.035
     notes: Sugiyama et al. 2007 identified Mit1 as the SHREC SNF2 chromatin-remodeling
       factor homolog associated with heterochromatic transcriptional gene silencing.
+  gene_symbols:
+  - mit1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9P793
+    protein_label: ATP-dependent chromatin remodeler mit1
+    gene_symbol: mit1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene mit1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16823372
+      notes: Matsuyama A et al. 2006, ‘ORFeome cloning and global analysis of protein
+        localization in the fission yeast Schizosaccharomyces pombe.’, Nat Biotechnol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation
+        of Q9P793.
+    - reference: PMID:17289569
+      notes: Sugiyama T et al. 2007, ‘SHREC, an effector complex for heterochromatic
+        transcriptional silencing.’, Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of Q9P793.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe

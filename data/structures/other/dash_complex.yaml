@@ -40,6 +40,18 @@ curation_history:
   changes: Weakened the DASH-to-spindle-microtubule attachment graph edge from stabilization
     to a contribution claim that matches the attached evidence.
   llm_assisted: true
+- timestamp: '2026-10-18T03:22:38Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0140513
 part_of:
@@ -81,6 +93,31 @@ components:
   - reference: DOI:10.1093/emboj/21.1.181
     notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
       the budding-yeast Duo1p-Dam1p-Dad1p complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53168
+    protein_label: DASH complex subunit DUO1
+    gene_symbol: DUO1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DUO1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53168.
+    - reference: PMID:9817759
+      notes: Hofmann C et al. 1998, ‘Saccharomyces cerevisiae Duo1p and Dam1p, novel
+        proteins involved in mitotic spindle function.’, J Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P53168.
+    - reference: PMID:11782438
+      notes: Janke C et al. 2002, ‘Four new subunits of the Dam1-Duo1 complex reveal
+        novel functions in sister kinetochore biorientation.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore'
+        localisation of P53168.
 - component_id: dam1_dash_subunit
   label: Dam1 DASH subunit
   component_type: PROTEIN
@@ -103,6 +140,30 @@ components:
   - reference: DOI:10.1093/emboj/21.1.181
     notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
       the budding-yeast Duo1p-Dam1p-Dad1p complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53267
+    protein_label: DASH complex subunit DAM1
+    gene_symbol: DAM1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DAM1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11698664
+      notes: Jones MH et al. 2001, ‘Yeast Dam1p has a role at the kinetochore in assembly
+        of the mitotic spindle.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P53267.
+    - reference: PMID:21256019
+      notes: Maure JF et al. 2011, ‘The Ndc80 loop region facilitates formation of
+        kinetochore attachment to the dynamic microtubule plus end.’, Curr Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P53267.
+    - reference: PMID:9817759
+      notes: Hofmann C et al. 1998, ‘Saccharomyces cerevisiae Duo1p and Dam1p, novel
+        proteins involved in mitotic spindle function.’, J Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P53267.
 - component_id: dad1_dash_subunit
   label: Dad1 DASH subunit
   component_type: PROTEIN
@@ -125,6 +186,32 @@ components:
   - reference: DOI:10.1093/emboj/21.1.181
     notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
       the budding-yeast Duo1p-Dam1p-Dad1p complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12248
+    protein_label: DASH complex subunit DAD1
+    gene_symbol: DAD1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DAD1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q12248.
+    - reference: PMID:25236177
+      notes: Umbreit NT et al. 2014, ‘Kinetochores require oligomerization of Dam1
+        complex to maintain microtubule attachments against tension and promote biorientation.’,
+        Nat Commun. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of Q12248.
+    - reference: PMID:11782438
+      notes: Janke C et al. 2002, ‘Four new subunits of the Dam1-Duo1 complex reveal
+        novel functions in sister kinetochore biorientation.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, spindle'
+        localisation of Q12248.
 - component_id: dad2_dash_subunit
   label: Dad2 DASH subunit
   component_type: PROTEIN
@@ -147,6 +234,32 @@ components:
   - reference: DOI:10.1093/emboj/21.1.181
     notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
       the budding-yeast Duo1p-Dam1p-Dad1p complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36162
+    protein_label: DASH complex subunit DAD2
+    gene_symbol: DAD2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DAD2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P36162.
+    - reference: PMID:11782438
+      notes: Janke C et al. 2002, ‘Four new subunits of the Dam1-Duo1 complex reveal
+        novel functions in sister kinetochore biorientation.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, spindle'
+        localisation of P36162.
+    - reference: PMID:36701236
+      notes: Weiβ M et al. 2023, ‘Single-copy locus proteomics of early- and late-firing
+        DNA replication origins identifies a role of Ask1/DASH complex in replication
+        timing control.’, Cell Rep. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Chromosome' localisation of P36162.
 - component_id: ask1_dash_subunit
   label: Ask1 DASH subunit
   component_type: PROTEIN
@@ -169,6 +282,32 @@ components:
   - reference: DOI:10.1093/emboj/21.1.181
     notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
       the budding-yeast Duo1p-Dam1p-Dad1p complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35734
+    protein_label: DASH complex subunit ASK1
+    gene_symbol: ASK1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ASK1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P35734.
+    - reference: PMID:25236177
+      notes: Umbreit NT et al. 2014, ‘Kinetochores require oligomerization of Dam1
+        complex to maintain microtubule attachments against tension and promote biorientation.’,
+        Nat Commun. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of P35734.
+    - reference: PMID:11782438
+      notes: Janke C et al. 2002, ‘Four new subunits of the Dam1-Duo1 complex reveal
+        novel functions in sister kinetochore biorientation.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, spindle'
+        localisation of P35734.
 - component_id: spc19_dash_subunit
   label: Spc19 DASH subunit
   component_type: PROTEIN
@@ -191,6 +330,32 @@ components:
   - reference: DOI:10.1093/emboj/21.1.181
     notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
       the budding-yeast Duo1p-Dam1p-Dad1p complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03954
+    protein_label: DASH complex subunit SPC19
+    gene_symbol: SPC19
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPC19 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q03954.
+    - reference: PMID:11782438
+      notes: Janke C et al. 2002, ‘Four new subunits of the Dam1-Duo1 complex reveal
+        novel functions in sister kinetochore biorientation.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, spindle'
+        localisation of Q03954.
+    - reference: PMID:36701236
+      notes: Weiβ M et al. 2023, ‘Single-copy locus proteomics of early- and late-firing
+        DNA replication origins identifies a role of Ask1/DASH complex in replication
+        timing control.’, Cell Rep. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Chromosome' localisation of Q03954.
 - component_id: spc34_dash_subunit
   label: Spc34 DASH subunit
   component_type: PROTEIN
@@ -213,6 +378,32 @@ components:
   - reference: DOI:10.1093/emboj/21.1.181
     notes: Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of
       the budding-yeast Duo1p-Dam1p-Dad1p complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36131
+    protein_label: DASH complex subunit SPC34
+    gene_symbol: SPC34
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPC34 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P36131.
+    - reference: PMID:11782438
+      notes: Janke C et al. 2002, ‘Four new subunits of the Dam1-Duo1 complex reveal
+        novel functions in sister kinetochore biorientation.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, spindle'
+        localisation of P36131.
+    - reference: PMID:36701236
+      notes: Weiβ M et al. 2023, ‘Single-copy locus proteomics of early- and late-firing
+        DNA replication origins identifies a role of Ask1/DASH complex in replication
+        timing control.’, Cell Rep. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Chromosome' localisation of P36131.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

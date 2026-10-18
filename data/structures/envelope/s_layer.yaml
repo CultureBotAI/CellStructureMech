@@ -26,6 +26,41 @@ components:
     notes: Sleytr et al. 2014 review SLP self-assembly and lattice types. The review
       reports generally one protein/glycoprotein species with molecular masses of
       40-170 kDa; this is subunit mass, not copies per lattice.
+  gene_symbols:
+  - rsaA
+  - sbsB
+  protein_examples:
+  - uniprot_id: UniProtKB:P35828
+    protein_label: S-layer protein
+    gene_symbol: rsaA
+    taxon_id: NCBITaxon:190650
+    taxon_label: Caulobacter vibrioides CB15
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rsaA in Caulobacter vibrioides
+      CB15, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P35828
+      notes: UniProtKB reviewed (Swiss-Prot) entry P35828, the single reviewed entry
+        for gene rsaA in Caulobacter vibrioides CB15. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q45664
+    protein_label: SbsB protein
+    gene_symbol: sbsB
+    taxon_id: NCBITaxon:1422
+    taxon_label: Geobacillus stearothermophilus
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene sbsB in Geobacillus
+      stearothermophilus. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q45664
+      notes: UniProtKB unreviewed (TrEMBL) entry Q45664 for gene sbsB in Geobacillus
+        stearothermophilus. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: slh_domain
   label: S-layer homology (SLH) domain
   component_type: PROTEIN
@@ -38,6 +73,24 @@ components:
   evidence:
   - reference: DOI:10.1038/nrmicro3213
     notes: Fagan & Fairweather 2014 describe SLH-mediated anchoring.
+  gene_symbols:
+  - sbsB
+  protein_examples:
+  - uniprot_id: UniProtKB:Q45664
+    protein_label: SbsB protein
+    gene_symbol: sbsB
+    taxon_id: NCBITaxon:1422
+    taxon_label: Geobacillus stearothermophilus
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene sbsB in Geobacillus
+      stearothermophilus. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q45664
+      notes: UniProtKB unreviewed (TrEMBL) entry Q45664 for gene sbsB in Geobacillus
+        stearothermophilus. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: scwp
   label: secondary cell-wall polymer (SCWP)
   component_type: POLYSACCHARIDE
@@ -264,6 +317,18 @@ curation_history:
   action: ADDRESS_REVIEW
   changes: '#2316: Bound bacterial thickness and subunit mass, qualify speculative
     phage roles and correct the link-only license rationale.'
+  llm_assisted: true
+- timestamp: '2026-10-18T03:15:18Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0262

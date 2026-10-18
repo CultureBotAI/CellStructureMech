@@ -19,6 +19,11 @@ curation_history:
     MutS constituent row, E. coli scope, mismatch-repair function evidence, GO/PubMed/DOI
     evidence, a nonmechanistic function graph, and a MutS subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: MutS mismatch repair complex
   synonym_type: EXACT_SYNONYM
@@ -46,6 +51,23 @@ components:
   - reference: DOI:10.1038/35037509
     notes: Obmolova et al. 2000 reported MutS crystal structures, including a MutS-substrate
       DNA complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23909
+    protein_label: DNA mismatch repair protein MutS
+    gene_symbol: mutS
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene mutS in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P23909
+      notes: UniProtKB reviewed (Swiss-Prot) entry P23909, the single reviewed entry
+        for gene mutS in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli

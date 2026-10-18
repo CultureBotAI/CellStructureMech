@@ -26,6 +26,13 @@ curation_history:
   action: NORMALIZE_LOCAL_ID
   changes: Renamed the mRNA-capping function_id to lowercase snake case.
   llm_assisted: true
+- timestamp: '2026-10-18T03:26:42Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0140513
 components:
@@ -46,6 +53,23 @@ components:
   - reference: GO:0031533
     notes: GO:0031533 defines the Saccharomyces mRNA capping enzyme complex as containing
       Cet1p RNA 5'-triphosphatase and Ceg1p guanyltransferase subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:O13297
+    protein_label: mRNA-capping enzyme subunit beta
+    gene_symbol: CET1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CET1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O13297
+      notes: UniProtKB reviewed (Swiss-Prot) entry O13297, the single reviewed entry
+        for gene CET1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ceg1_guanyltransferase_subunit
   label: Ceg1 guanyltransferase subunit
   component_type: PROTEIN
@@ -63,6 +87,23 @@ components:
   - reference: GO:0031533
     notes: GO:0031533 defines the Saccharomyces mRNA capping enzyme complex as containing
       Cet1p RNA 5'-triphosphatase and Ceg1p guanyltransferase subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q01159
+    protein_label: mRNA-capping enzyme subunit alpha
+    gene_symbol: CEG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CEG1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q01159
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q01159, the single reviewed entry
+        for gene CEG1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

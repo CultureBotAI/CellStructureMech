@@ -28,6 +28,34 @@ components:
   evidence:
   - reference: DOI:10.1101/cshperspect.a000414
     notes: Envelope review describes lipoprotein coupling.
+  gene_symbols:
+  - lpp
+  protein_examples:
+  - uniprot_id: UniProtKB:P69776
+    protein_label: Major outer membrane lipoprotein Lpp
+    gene_symbol: lpp
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene lpp in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:3013869
+      notes: Choi DS et al. 1986, ‘Trimeric structure and localization of the major
+        lipoprotein in the cell surface of Escherichia coli.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell outer membrane' localisation
+        of P69776.
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Secreted, cell wall' localisation of P69776.
+    - reference: PMID:4245367
+      notes: Braun V et al. 1970, ‘The covalent murein-lipoprotein structure of the
+        Escherichia coli cell wall. The attachment site of the lipoprotein on the
+        murein.’, Eur J Biochem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Secreted, cell wall' localisation of P69776.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1224
   taxon_label: Pseudomonadota
@@ -146,6 +174,7 @@ causal_graphs:
     xrefs:
     - UniProtKB:P69776
     - Pfam:PF04728
+    component_ref: outer_membrane_lipoprotein_links
   - node_id: lol_pathway
     label: Lol lipoprotein-trafficking pathway
     node_type: PATHWAY
@@ -156,6 +185,9 @@ causal_graphs:
   - node_id: ldt_lpp
     label: Lpp-anchoring L,D-transpeptidases
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P39176
+    - UniProtKB:P75954
   - node_id: thin_peptidoglycan
     label: thin peptidoglycan sacculus
     node_type: STRUCTURE
@@ -261,6 +293,12 @@ curation_history:
   action: ADDRESS_REVIEW
   changes: '#2313: Correct peptidoglycan/Lpp acyl donor-acceptor direction and type
     Lol as a pathway.'
+  llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s); added 2 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
 datasets:
 - accession: S-BIAD2294

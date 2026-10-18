@@ -31,6 +31,13 @@ curation_history:
     row from COMMON to VARIABLE because the mouse liver IGC purification evidence
     establishes an observed canonical example, not species-wide commonness.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:34:02Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: ICG
   synonym_type: EXACT_SYNONYM
@@ -62,6 +69,38 @@ components:
   - reference: DOI:10.1242/jcs.113.19.3485
     notes: Prasanth et al. 2000 used SC35 and SRp55 as markers of SR-protein nuclear
       speckles that were distinct from hnRNP-containing omega speckles.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q62093
+    protein_label: Serine/arginine-rich splicing factor 2
+    gene_symbol: Srsf2
+    taxon_id: NCBITaxon:10090
+    taxon_label: Mus musculus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SRSF2 in Mus musculus, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q62093
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q62093, the single reviewed entry
+        for gene SRSF2 in Mus musculus. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
+  - uniprot_id: UniProtKB:Q3TWW8
+    protein_label: Serine/arginine-rich splicing factor 6
+    gene_symbol: Srsf6
+    taxon_id: NCBITaxon:10090
+    taxon_label: Mus musculus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SRSF6 in Mus musculus, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12549914
+      notes: Tran Q et al. 2003, ‘SRp55 is a regulator of calcitonin/CGRP alternative
+        RNA splicing.’, Biochemistry. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus' localisation of Q3TWW8.
 - component_id: spliceosomal_snrnp_complexes
   label: spliceosomal snRNP complex
   component_type: PROTEIN_COMPLEX

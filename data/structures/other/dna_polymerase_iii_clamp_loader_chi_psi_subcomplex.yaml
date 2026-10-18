@@ -33,6 +33,11 @@ curation_history:
   changes: 'Fixed #1722 by adding PMID:8505305 to the chi and psi component evidence
     lists so the local 1:1 stoichiometry and psi linkage claims are directly sourced.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: DNA polymerase III, DnaX complex, chi/psi subcomplex
   synonym_type: EXACT_SYNONYM
@@ -196,9 +201,13 @@ causal_graphs:
   - node_id: tau_gamma_dnax_products
     label: DnaX tau/gamma products
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P06710
   - node_id: single_stranded_dna_binding_protein
     label: single-stranded DNA-binding protein
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P0AGE0
   - node_id: clamp_loader
     label: DNA polymerase III, clamp loader complex
     node_type: STRUCTURE

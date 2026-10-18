@@ -20,6 +20,11 @@ curation_history:
     exchange graph, explicit proto-organelle/import boundaries, two follow-ups and
     inspected CC BY 4.0 NanoSIMS figure via the PMC adapter.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: spheroid body
   synonym_type: RELATED_SYNONYM
@@ -52,6 +57,55 @@ components:
   - reference: DOI:10.1093/ismeco/ycae055
     notes: Intact nif cluster, NifDK immunoblots and acetylene-reduction activity
       support assignment; no assembly-essentiality test.
+  protein_examples:
+  - uniprot_id: UniProtKB:C1DK95
+    protein_label: Nitrogenase iron protein
+    gene_symbol: anfH
+    taxon_id: NCBITaxon:322710
+    taxon_label: Azotobacter vinelandii DJ
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene nifH, which
+      UniProt lists under the primary name anfH, in Azotobacter vinelandii DJ. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/C1DK95
+      notes: UniProtKB unreviewed (TrEMBL) entry C1DK95 for gene nifH in Azotobacter
+        vinelandii DJ. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:P07328
+    protein_label: Nitrogenase molybdenum-iron protein alpha chain
+    gene_symbol: nifD
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene nifD in Azotobacter vinelandii.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P07328
+      notes: UniProtKB reviewed (Swiss-Prot) entry P07328, the single reviewed entry
+        for gene nifD in Azotobacter vinelandii. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P07329
+    protein_label: Nitrogenase molybdenum-iron protein beta chain
+    gene_symbol: nifK
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene nifK in Azotobacter vinelandii.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P07329
+      notes: UniProtKB reviewed (Swiss-Prot) entry P07329, the single reviewed entry
+        for gene nifK in Azotobacter vinelandii. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: hupl
   label: Uptake hydrogenase large subunit
   component_type: PROTEIN

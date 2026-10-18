@@ -48,6 +48,18 @@ curation_history:
     evidence from rotation-driven swimming deformation while retaining the active
     pathway introduced for #203.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:09:16Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: endoflagellum
   synonym_type: EXACT_SYNONYM
@@ -79,6 +91,22 @@ components:
     notes: Motaleb et al. 2000 disrupted Borrelia burgdorferi flaB and showed that
       periplasmic flagella are required for both motility and the normal flat-wave
       cell shape.
+  protein_examples:
+  - uniprot_id: UniProtKB:D1KJW6
+    protein_label: Flagellin
+    gene_symbol: flaB
+    taxon_id: NCBITaxon:139
+    taxon_label: Borreliella burgdorferi
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB in Borreliella
+      burgdorferi. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/D1KJW6
+      notes: UniProtKB unreviewed (TrEMBL) entry D1KJW6 for gene flaB in Borreliella
+        burgdorferi. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: flaA_sheath
   label: FlaA flagellar proteins
   component_type: PROTEIN
@@ -137,6 +165,93 @@ components:
     notes: Qin et al. 2018 used in situ cryoET of Borrelia burgdorferi to visualize
       the periplasmic flagellar basal body, collar, and distinct cytoplasmic ATPase
       complex.
+  gene_symbols:
+  - fliF
+  - fliG2
+  - fliM
+  - fliN
+  - motA
+  - motB
+  protein_examples:
+  - uniprot_id: UniProtKB:Q44912
+    protein_label: Flagellar M-ring protein
+    gene_symbol: fliF
+    taxon_id: NCBITaxon:224326
+    taxon_label: Borreliella burgdorferi B31
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliF in Borreliella burgdorferi
+      B31, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q44912
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q44912, the single reviewed entry
+        for gene fliF in Borreliella burgdorferi B31. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q57511
+    protein_label: Flagellar motor switch protein FliM
+    gene_symbol: fliM
+    taxon_id: NCBITaxon:224326
+    taxon_label: Borreliella burgdorferi B31
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliM in Borreliella burgdorferi
+      B31, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q57511
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q57511, the single reviewed entry
+        for gene fliM in Borreliella burgdorferi B31. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q44903
+    protein_label: Flagellar motor switch protein FliN
+    gene_symbol: fliN
+    taxon_id: NCBITaxon:224326
+    taxon_label: Borreliella burgdorferi B31
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fliN in Borreliella burgdorferi
+      B31, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q44903
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q44903, the single reviewed entry
+        for gene fliN in Borreliella burgdorferi B31. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q44902
+    protein_label: Motility protein A
+    gene_symbol: motA
+    taxon_id: NCBITaxon:224326
+    taxon_label: Borreliella burgdorferi B31
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene motA in Borreliella burgdorferi
+      B31, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q44902
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q44902, the single reviewed entry
+        for gene motA in Borreliella burgdorferi B31. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q57371
+    protein_label: Flagellar motor apparatus
+    gene_symbol: motB
+    taxon_id: NCBITaxon:139
+    taxon_label: Borreliella burgdorferi
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene motB in Borreliella
+      burgdorferi. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q57371
+      notes: UniProtKB unreviewed (TrEMBL) entry Q57371 for gene motB in Borreliella
+        burgdorferi. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:203691
   taxon_label: Spirochaetota

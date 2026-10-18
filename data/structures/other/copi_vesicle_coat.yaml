@@ -41,6 +41,18 @@ curation_history:
     with reachable Yu et al. 2012 Arf1-coatomer and Sandmann et al. 2003 Golgi-to-ER
     retrieval evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:21:32Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 8 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0030120
 part_of:
@@ -69,6 +81,127 @@ components:
   - reference: DOI:10.1091/mbc.e02-11-0736
     notes: Sandmann et al. 2003 described COPI retrograde vesicles and direct binding
       of a KKXX ER-retrieval motif by coatomer in Saccharomyces cerevisiae.
+  gene_symbols:
+  - RET1
+  - SEC26
+  - SEC27
+  - SEC21
+  - RET2
+  - SEC28
+  - RET3
+  protein_examples:
+  - uniprot_id: UniProtKB:P41810
+    protein_label: Coatomer subunit beta
+    gene_symbol: SEC26
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC26 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Golgi apparatus membrane' localisation of P41810.
+  - uniprot_id: UniProtKB:P41811
+    protein_label: Coatomer subunit beta'
+    gene_symbol: SEC27
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC27 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P41811
+      notes: UniProtKB reviewed (Swiss-Prot) entry P41811, the single reviewed entry
+        for gene SEC27 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P32074
+    protein_label: Coatomer subunit gamma
+    gene_symbol: SEC21
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC21 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32074
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32074, the single reviewed entry
+        for gene SEC21 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P43621
+    protein_label: Coatomer subunit delta
+    gene_symbol: RET2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RET2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P43621
+      notes: UniProtKB reviewed (Swiss-Prot) entry P43621, the single reviewed entry
+        for gene RET2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P40509
+    protein_label: Coatomer subunit epsilon
+    gene_symbol: SEC28
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC28 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40509
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40509, the single reviewed entry
+        for gene SEC28 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P53600
+    protein_label: Coatomer subunit zeta
+    gene_symbol: RET3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RET3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53600
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53600, the single reviewed entry
+        for gene RET3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P53622
+    protein_label: Coatomer subunit alpha
+    gene_symbol: COP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene RET1, which UniProt lists
+      under the primary name COP1, in Saccharomyces cerevisiae S288C. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53622
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53622, the single reviewed entry
+        for gene RET1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: arf_gtpase
   label: Arf-family COPI GTPase
   component_type: PROTEIN
@@ -84,6 +217,41 @@ components:
   - reference: DOI:10.1016/j.cell.2012.01.015
     notes: Yu et al. 2012 showed that Arf1-GTP binds two coatomer subcomplexes during
       COPI coatomer recruitment to membranes.
+  gene_symbols:
+  - ARF1
+  - ARF2
+  protein_examples:
+  - uniprot_id: UniProtKB:P11076
+    protein_label: ADP-ribosylation factor 1
+    gene_symbol: ARF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15504911
+      notes: Gillingham AK et al. 2004, ‘The GTPase Arf1p and the ER to Golgi cargo
+        receptor Erv14p cooperate to recruit the golgin Rud3p to the cis-Golgi.’,
+        J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Golgi
+        apparatus' localisation of P11076.
+  - uniprot_id: UniProtKB:P19146
+    protein_label: ADP-ribosylation factor 2
+    gene_symbol: ARF2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARF2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Golgi apparatus' localisation of P19146.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

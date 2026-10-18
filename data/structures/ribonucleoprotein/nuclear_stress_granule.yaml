@@ -27,6 +27,13 @@ curation_history:
     gene_symbols slot so the repeat transcript label remains only in label-only curation
     text.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:34:38Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: nuclear stress body
   synonym_type: EXACT_SYNONYM
@@ -64,6 +71,31 @@ components:
   - reference: DOI:10.1083/jcb.200306104
     notes: Jolly et al. 2004 connected HSF1-containing nuclear stress granules with
       RNA polymerase II transcription of satellite III repeats.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q00613
+    protein_label: Heat shock factor protein 1
+    gene_symbol: HSF1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HSF1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10413683
+      notes: Mercier PA et al. 1999, ‘Human heat shock factor 1 is predominantly a
+        nuclear protein before and after heat stress.’, J Cell Sci. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q00613.
+    - reference: PMID:10747973
+      notes: Dai R et al. 2000, ‘c-Jun NH2-terminal kinase targeting and phosphorylation
+        of heat shock factor-1 suppress its transcriptional activity.’, J Biol Chem.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation
+        of Q00613.
+    - reference: PMID:11447121
+      notes: Holmberg CI et al. 2001, ‘Phosphorylation of serine 230 promotes inducible
+        transcriptional activity of heat shock factor 1.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q00613.
 - component_id: satellite_iii_stress_rna
   label: satellite III stress-induced RNA
   component_type: RNA
@@ -94,6 +126,73 @@ components:
   - reference: DOI:10.1091/mbc.12.11.3502
     notes: Denegri et al. 2001 identified stress-induced nuclear bodies as sites that
       accumulate pre-mRNA processing factors in heat-shocked human cells.
+  gene_symbols:
+  - SRSF1
+  - SAFB
+  - HNRNPM
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07955
+    protein_label: Serine/arginine-rich splicing factor 1
+    gene_symbol: SRSF1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SRSF1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:37595559
+      notes: Cho S et al. 2023, ‘FAM120A couples SREBP-dependent transcription and
+        splicing of lipogenesis enzymes downstream of mTORC1.’, Mol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome' localisation of
+        Q07955.
+    - reference: PMID:12215544
+      notes: Cazalla D et al. 2002, ‘Nuclear export and retention signals in the RS
+        domain of SR proteins.’, Mol Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm' localisation of Q07955.
+    - reference: PMID:20308322
+      notes: Sinha R et al. 2010, ‘Arginine methylation controls the subcellular localization
+        and functions of the oncoprotein splicing factor SF2/ASF.’, Mol Cell Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm' localisation
+        of Q07955.
+  - uniprot_id: UniProtKB:Q15424
+    protein_label: Scaffold attachment factor B1
+    gene_symbol: SAFB
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SAFB in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:19674106
+      notes: Tsianou D et al. 2009, ‘The enzymatic activity of SR protein kinases
+        1 and 1a is negatively affected by interaction with scaffold attachment factors
+        B1 and 2.’, FEBS J. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Nucleus' localisation of Q15424.
+    - reference: PMID:22693546
+      notes: 'Mokhonov VV et al. 2012, ‘Sequence-specific binding of recombinant Zbed4
+        to DNA: insights into Zbed4 participation in gene transcription and its association
+        with other proteins.’, PLoS One. ECO:0000269 experimental evidence cited by
+        UniProt for the ''Nucleus'' localisation of Q15424.'
+  - uniprot_id: UniProtKB:P52272
+    protein_label: Heterogeneous nuclear ribonucleoprotein M
+    gene_symbol: HNRNPM
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HNRNPM in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P52272
+      notes: UniProtKB reviewed (Swiss-Prot) entry P52272, the single reviewed entry
+        for gene HNRNPM in Homo sapiens. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens

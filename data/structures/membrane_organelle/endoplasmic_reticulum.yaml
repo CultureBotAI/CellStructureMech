@@ -35,6 +35,13 @@ curation_history:
     example to the Sec61 citation scope and changing the graph edge from a membrane-bounds-organelle
     assertion to an ER-membrane-is-part-of-ER assertion.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:17:04Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0043231
 part_of:
@@ -75,6 +82,58 @@ components:
   - reference: DOI:10.1091/mbc.3.2.129
     notes: Stirling et al. 1992 isolated yeast sec61 mutants defective in integral
       membrane protein insertion into the endoplasmic reticulum.
+  gene_symbols:
+  - SEC61
+  - SBH1
+  - SSS1
+  protein_examples:
+  - uniprot_id: UniProtKB:P32915
+    protein_label: Protein transport protein SEC61
+    gene_symbol: SEC61
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC61 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32915
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32915, the single reviewed entry
+        for gene SEC61 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P52870
+    protein_label: Protein transport protein SBH1
+    gene_symbol: SBH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SBH1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P52870
+      notes: UniProtKB reviewed (Swiss-Prot) entry P52870, the single reviewed entry
+        for gene SBH1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P35179
+    protein_label: Protein transport protein SSS1
+    gene_symbol: SSS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SSS1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Endoplasmic reticulum membrane' localisation of P35179.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

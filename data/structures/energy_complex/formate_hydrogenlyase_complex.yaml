@@ -26,6 +26,11 @@ curation_history:
   action: REVISED_TEXT
   changes: Restored standard Hyc and FHL capitalization in component role prose.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: FHL complex
   synonym_type: EXACT_SYNONYM
@@ -309,6 +314,10 @@ causal_graphs:
     label: HycB-HycG membrane hydrogenase module
     node_type: GENE_OR_PROTEIN
     description: Six-subunit Hyc module resolved with FdhF in PDB:7Z0T.
+    xrefs:
+    - UniProtKB:P0AAK1
+    - UniProtKB:P16431
+    - UniProtKB:P16433
   - node_id: formate
     label: formate
     node_type: CHEMICAL

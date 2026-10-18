@@ -30,6 +30,13 @@ curation_history:
   changes: Replaced broad histone acetyltransferase complex parentage with the direct
     H4/H2A histone acetyltransferase complex parent.
   llm_assisted: true
+- timestamp: '2026-10-18T03:27:32Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 13 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: TIP60 histone acetylase complex
   synonym_type: EXACT_SYNONYM
@@ -56,6 +63,25 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - TRA1
+  protein_examples:
+  - uniprot_id: UniProtKB:P38811
+    protein_label: SAGA complex/NuA4 acetyltransferase complex subunit TRA1
+    gene_symbol: TRA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18616809
+      notes: Hoke SM et al. 2008, ‘Systematic genetic array analysis links the Saccharomyces
+        cerevisiae SAGA/SLIK and NuA4 component Tra1 to multiple cellular processes.’,
+        BMC Genet. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of P38811.
 - component_id: eaf1_nua4_scaffold_subunit
   label: Eaf1 NuA4 scaffold subunit
   component_type: PROTEIN
@@ -72,6 +98,25 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - EAF1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06337
+    protein_label: Chromatin modification-related protein EAF1
+    gene_symbol: EAF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EAF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q06337
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q06337, the single reviewed entry
+        for gene EAF1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: eaf3_nua4_tintin_subunit
   label: Eaf3 NuA4 TINTIN subunit
   component_type: PROTEIN
@@ -88,6 +133,24 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - EAF3
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12432
+    protein_label: Chromatin modification-related protein EAF3
+    gene_symbol: EAF3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EAF3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q12432.
 - component_id: eaf5_nua4_tintin_subunit
   label: Eaf5 NuA4 TINTIN subunit
   component_type: PROTEIN
@@ -104,6 +167,24 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - EAF5
+  protein_examples:
+  - uniprot_id: UniProtKB:P39995
+    protein_label: Chromatin modification-related protein EAF5
+    gene_symbol: EAF5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EAF5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P39995.
 - component_id: eaf7_nua4_tintin_subunit
   label: Eaf7 NuA4 TINTIN subunit
   component_type: PROTEIN
@@ -120,6 +201,24 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - EAF7
+  protein_examples:
+  - uniprot_id: UniProtKB:P53911
+    protein_label: Chromatin modification-related protein EAF7
+    gene_symbol: EAF7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EAF7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53911.
 - component_id: esa1_nua4_catalytic_subunit
   label: Esa1 NuA4 catalytic subunit
   component_type: PROTEIN
@@ -136,6 +235,25 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - ESA1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08649
+    protein_label: Histone acetyltransferase ESA1
+    gene_symbol: ESA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ESA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q08649
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q08649, the single reviewed entry
+        for gene ESA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: epl1_nua4_piccolo_subunit
   label: Epl1 NuA4 piccolo subunit
   component_type: PROTEIN
@@ -151,6 +269,24 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - EPL1
+  protein_examples:
+  - uniprot_id: UniProtKB:P43572
+    protein_label: Enhancer of polycomb-like protein 1
+    gene_symbol: EPL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EPL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P43572.
 - component_id: yng2_nua4_piccolo_subunit
   label: Yng2 NuA4 piccolo subunit
   component_type: PROTEIN
@@ -166,6 +302,33 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - YNG2
+  protein_examples:
+  - uniprot_id: UniProtKB:P38806
+    protein_label: Chromatin modification-related protein YNG2
+    gene_symbol: YNG2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YNG2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10805724
+      notes: Loewith R et al. 2000, ‘Three yeast proteins related to the human candidate
+        tumor suppressor p33(ING1) are associated with histone acetyltransferase activities.’,
+        Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38806.
+    - reference: PMID:11544250
+      notes: Choy JS et al. 2001, ‘Yng2p-dependent NuA4 histone H4 acetylation activity
+        is required for mitotic and meiotic progression.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P38806.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38806.
 - component_id: eaf6_nua4_piccolo_subunit
   label: Eaf6 NuA4 piccolo subunit
   component_type: PROTEIN
@@ -181,6 +344,24 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - EAF6
+  protein_examples:
+  - uniprot_id: UniProtKB:P47128
+    protein_label: Chromatin modification-related protein EAF6
+    gene_symbol: EAF6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EAF6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P47128.
 - component_id: act1_nua4_actin_subunit
   label: Act1 NuA4 actin constituent
   component_type: PROTEIN
@@ -196,6 +377,25 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - ACT1
+  protein_examples:
+  - uniprot_id: UniProtKB:P60010
+    protein_label: Actin
+    gene_symbol: ACT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ACT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P60010
+      notes: UniProtKB reviewed (Swiss-Prot) entry P60010, the single reviewed entry
+        for gene ACT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: arp4_nua4_subunit
   label: Arp4 NuA4 subunit
   component_type: PROTEIN
@@ -212,6 +412,24 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - ARP4
+  protein_examples:
+  - uniprot_id: UniProtKB:P80428
+    protein_label: Actin-related protein 4
+    gene_symbol: ARP4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:8573785
+      notes: Weber V et al. 1995, ‘The actin-related protein Act3p of Saccharomyces
+        cerevisiae is located in the nucleus.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P80428.
 - component_id: swc4_nua4_subunit
   label: Swc4 NuA4 subunit
   component_type: PROTEIN
@@ -227,6 +445,24 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - SWC4
+  protein_examples:
+  - uniprot_id: UniProtKB:P53201
+    protein_label: SWR1-complex protein 4
+    gene_symbol: SWC4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWC4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53201.
 - component_id: yaf9_nua4_subunit
   label: Yaf9 NuA4 subunit
   component_type: PROTEIN
@@ -242,6 +478,25 @@ components:
     notes: Wang et al. 2018 describe yeast NuA4 as a 13-subunit complex containing
       Tra1, Eaf1, Eaf3, Eaf5, Eaf7, Esa1, Epl1, Yng2, Eaf6, actin, Arp4, Swc4 and
       Yaf9.
+  gene_symbols:
+  - YAF9
+  protein_examples:
+  - uniprot_id: UniProtKB:P53930
+    protein_label: Protein AF-9 homolog
+    gene_symbol: YAF9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YAF9 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53930
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53930, the single reviewed entry
+        for gene YAF9 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

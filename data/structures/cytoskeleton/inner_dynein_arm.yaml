@@ -38,6 +38,18 @@ curation_history:
   changes: 'Addressed #2210: aligned the nonmechanistic dynein-arm graph with source-supported
     constituent parthood rather than assembly.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:11:33Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s); removed 1 non-matching protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005858
 part_of:
@@ -60,6 +72,58 @@ components:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 resolved the arrangement of inner and outer dynein
       arms attached to Chlamydomonas axonemal outer doublets by cryoelectron tomography.
+  gene_symbols:
+  - DHC1
+  - DHC2
+  - DHC5
+  - DHC9
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9SMH3
+    protein_label: Dynein-1-alpha heavy chain, flagellar inner arm I1 complex
+    gene_symbol: DHC1
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DHC1 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q9SMH3
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q9SMH3, the single reviewed entry
+        for gene DHC1 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q96392
+    protein_label: Dynein heavy chain 5
+    gene_symbol: Dhc5
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene DHC5 in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q96392
+      notes: UniProtKB unreviewed (TrEMBL) entry Q96392 for gene DHC5 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q4AC22
+    protein_label: Dynein axonemal heavy chain 7
+    gene_symbol: DHC9
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene DHC9 in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q4AC22
+      notes: UniProtKB unreviewed (TrEMBL) entry Q4AC22 for gene DHC9 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

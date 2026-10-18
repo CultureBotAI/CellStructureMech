@@ -33,6 +33,13 @@ curation_history:
   changes: 'Addressed #2279: Use the publisher-corrected MeiAR DOI and preserve erratum
     provenance.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:11:37Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0005826
 components:
@@ -53,6 +60,25 @@ components:
   - reference: DOI:10.1242/jcs.jcs091561
     notes: Yan and Balasubramanian 2012 characterized the F-actin-containing meiotic
       actin ring in fission yeast.
+  gene_symbols:
+  - act1
+  protein_examples:
+  - uniprot_id: UniProtKB:P10989
+    protein_label: Actin
+    gene_symbol: act1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene act1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P10989
+      notes: UniProtKB reviewed (Swiss-Prot) entry P10989, the single reviewed entry
+        for gene act1 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: myosin_proteins
   label: myosin proteins
   component_type: PROTEIN
@@ -68,6 +94,43 @@ components:
   - reference: GO:0110086
     notes: GO:0110086 defines the meiotic actomyosin contractile ring as composed
       of actin filaments, myosin, and myosin-associated proteins.
+  gene_symbols:
+  - myo2
+  - myp2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9USI6
+    protein_label: Myosin type-2 heavy chain 1
+    gene_symbol: myo2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene myo2 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q9USI6
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q9USI6, the single reviewed entry
+        for gene myo2 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:O14157
+    protein_label: Myosin type-2 heavy chain 2
+    gene_symbol: myo3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene myp2, which UniProt lists under
+      the primary name myo3, in Schizosaccharomyces pombe 972h-, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O14157
+      notes: UniProtKB reviewed (Swiss-Prot) entry O14157, the single reviewed entry
+        for gene myp2 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe

@@ -23,6 +23,13 @@ curation_history:
     deacetylase activity, GO/PubMed/DOI evidence, a nonmechanistic function graph,
     and an Rpd3S subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:29:27Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Clr6-CII complex
   synonym_type: EXACT_SYNONYM
@@ -69,6 +76,22 @@ components:
   - reference: DOI:10.1016/j.cell.2005.10.025
     notes: Keogh et al. 2005 characterized Rpd3C(S) as one of two distinct budding-yeast
       Rpd3 complexes.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32561
+    protein_label: Histone deacetylase RPD3
+    gene_symbol: RPD3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RPD3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P32561.
 - component_id: sin3_rpd3s_corepressor_subunit
   label: Sin3 Rpd3S corepressor subunit
   component_type: PROTEIN
@@ -88,6 +111,23 @@ components:
   - reference: DOI:10.1016/j.cell.2005.10.025
     notes: Keogh et al. 2005 reported that Rpd3C(S) shares Sin3 with the larger Rpd3C(L)
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P22579
+    protein_label: Transcriptional regulatory protein SIN3
+    gene_symbol: SIN3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SIN3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22579
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22579, the single reviewed entry
+        for gene SIN3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ume1_rpd3s_wd_repeat_subunit
   label: Ume1 Rpd3S WD-repeat subunit
   component_type: PROTEIN
@@ -106,6 +146,23 @@ components:
   - reference: DOI:10.1016/j.cell.2005.10.025
     notes: Keogh et al. 2005 reported that Rpd3C(S) shares Ume1 with the larger Rpd3C(L)
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03010
+    protein_label: Transcriptional regulatory protein UME1
+    gene_symbol: UME1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UME1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03010
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03010, the single reviewed entry
+        for gene UME1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rco1_rpd3s_subunit
   label: Rco1 Rpd3S subunit
   component_type: PROTEIN
@@ -126,6 +183,22 @@ components:
       Rpd3S.
   - reference: DOI:10.1016/j.cell.2005.10.025
     notes: Keogh et al. 2005 identified Rco1 as a unique Rpd3C(S) subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04779
+    protein_label: Transcriptional regulatory protein RCO1
+    gene_symbol: RCO1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RCO1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q04779.
 - component_id: eaf3_rpd3s_chromodomain_subunit
   label: Eaf3 Rpd3S chromodomain subunit
   component_type: PROTEIN
@@ -148,6 +221,22 @@ components:
   - reference: DOI:10.1016/j.cell.2005.10.025
     notes: Keogh et al. 2005 identified Eaf3 as a unique Rpd3C(S) subunit and linked
       its chromodomain to recruitment to methylated nucleosomes.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12432
+    protein_label: Chromatin modification-related protein EAF3
+    gene_symbol: EAF3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EAF3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q12432.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

@@ -20,6 +20,11 @@ curation_history:
     function, six-edge mechanistic graph, verified inclusion-body parentage and explicit
     identity, composition and fitness boundaries.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial stress granule
   synonym_type: RELATED_SYNONYM
@@ -46,6 +51,23 @@ components:
   - reference: InterPro:IPR004491
     notes: Verified whole-protein HslU family. This is the ATPase subunit, not HslV
       or the complete HslUV protease complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A6H5
+    protein_label: ATP-dependent protease ATPase subunit HslU
+    gene_symbol: hslU
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene hslU in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A6H5
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A6H5, the single reviewed entry
+        for gene hslU in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: kbl
   label: 2-amino-3-ketobutyrate coenzyme A ligase
   component_type: PROTEIN
@@ -63,6 +85,23 @@ components:
   - reference: InterPro:IPR011282
     notes: Verified Kbl whole-protein family, not a generic pyridoxal-phosphate-dependent
       enzyme superfamily.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AB77
+    protein_label: 2-amino-3-ketobutyrate coenzyme A ligase
+    gene_symbol: kbl
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene kbl in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AB77
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AB77, the single reviewed entry
+        for gene kbl in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: acnb
   label: Aconitase B
   component_type: PROTEIN
@@ -79,6 +118,23 @@ components:
       the study does not establish an assembly requirement for AcnB.
   - reference: InterPro:IPR004406
     notes: Verified Aconitase B family, distinct from generic aconitase groupings.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36683
+    protein_label: Aconitate hydratase B
+    gene_symbol: acnB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene acnB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P36683
+      notes: UniProtKB reviewed (Swiss-Prot) entry P36683, the single reviewed entry
+        for gene acnB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: mrna
   label: mRNA
   component_type: RNA

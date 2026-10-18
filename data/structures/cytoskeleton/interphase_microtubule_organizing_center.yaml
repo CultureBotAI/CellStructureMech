@@ -29,6 +29,11 @@ curation_history:
     and preserve site/assay qualifiers in node descriptions; unchanged identifiers,
     topology and evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005815
 synonyms:
@@ -343,12 +348,16 @@ causal_graphs:
   - node_id: crm1
     label: Crm1 exportin
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P14068
   - node_id: ran_gtp
     label: RanGTP-dependent state
     node_type: STATE
   - node_id: nup146
     label: Nup146 with intact FG5-12 region
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q09847
   - node_id: docked_mto1
     label: Mto1 docked at the cytoplasmic NPC face
     node_type: STATE

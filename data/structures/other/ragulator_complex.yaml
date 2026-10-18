@@ -30,6 +30,13 @@ curation_history:
   action: REFORMATTED_RECORD
   changes: Expanded shared YAML evidence aliases into plain repeated mappings.
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:57Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0032991
 synonyms:
@@ -73,6 +80,23 @@ components:
     notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly identified
       Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2 and TORC1 on
       yeast vacuoles and associated puncta.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02205
+    protein_label: Protein MEH1
+    gene_symbol: MEH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EGO1, which UniProt lists under
+      the primary name MEH1, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15989961
+      notes: Dubouloz F et al. 2005, ‘The TOR and EGO protein complexes orchestrate
+        microautophagy in yeast.’, Mol Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Vacuole membrane' localisation of Q02205.
 - component_id: ego2_ragulator_subunit
   label: Ego2 Ragulator/EGO subunit
   component_type: PROTEIN
@@ -91,6 +115,23 @@ components:
     notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly identified
       Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2 and TORC1 on
       yeast vacuoles and associated puncta.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q3E830
+    protein_label: Protein EGO2
+    gene_symbol: EGO2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EGO2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q3E830
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q3E830, the single reviewed entry
+        for gene EGO2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ego3_ragulator_subunit
   label: Ego3 Ragulator/EGO subunit
   component_type: PROTEIN
@@ -112,6 +153,32 @@ components:
     notes: Kira et al. 2016 showed that Ego consists of Ego1, Ego3 and the newly identified
       Ego2 subunit, and followed Ego1/2/3 colocalization with Gtr1/2 and TORC1 on
       yeast vacuoles and associated puncta.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38247
+    protein_label: Protein SLM4
+    gene_symbol: SLM4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EGO3, which UniProt lists under
+      the primary name SLM4, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Vacuole membrane' localisation of P38247.
+    - reference: PMID:15989961
+      notes: Dubouloz F et al. 2005, ‘The TOR and EGO protein complexes orchestrate
+        microautophagy in yeast.’, Mol Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Vacuole membrane' localisation of P38247.
+    - reference: PMID:29698392
+      notes: Ukai H et al. 2018, ‘Gtr/Ego-independent TORC1 activation is achieved
+        through a glutamine-sensitive interaction with Pib2 on the vacuolar membrane.’,
+        PLoS Genet. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole
+        membrane' localisation of P38247.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

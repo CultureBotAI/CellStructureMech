@@ -20,6 +20,18 @@ curation_history:
     functions, two mechanistic graphs and a checksum-verified CC BY 4.0 figure; preserved
     identity, taxon and inference limits.
   llm_assisted: true
+- timestamp: '2026-10-18T03:12:04Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 part_of:
@@ -55,7 +67,7 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-08'
     role: Reference-sequence exemplar for species-level experiments; no assertion
-      that this exact reference stock was imaged.
+      that this exact reference stock was imaged (also declared as synonym atb2, alp2).
     evidence:
     - reference: DOI:10.3390/cells12060917
       notes: GFP-Atb2 labels PAA microtubules in the Figure 2 localization and dynamics
@@ -65,6 +77,22 @@ components:
       notes: Native accession, reviewed status, protein label, primary gene and source
         taxon verified on 2026-10-08. Localization comes from the primary experiments,
         not the sequence lookup.
+  - uniprot_id: UniProtKB:P04688
+    protein_label: Tubulin alpha-1 chain
+    gene_symbol: nda2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene nda2 in Schizosaccharomyces
+      pombe 972h-. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P04688
+      notes: UniProtKB reviewed (Swiss-Prot) entry P04688, the single reviewed entry
+        for gene nda2 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
   evidence:
   - reference: DOI:10.3390/cells12060917
     notes: Figure 2 directly follows GFP-Atb2 in the equatorial polygon and longitudinal
@@ -89,6 +117,25 @@ components:
   - reference: DOI:10.3390/cells12060917
     notes: Figure 2 establishes the microtubule array to which the generic polymer
       composition applies.
+  gene_symbols:
+  - nda3
+  protein_examples:
+  - uniprot_id: UniProtKB:P05219
+    protein_label: Tubulin beta chain
+    gene_symbol: nda3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nda3 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P05219
+      notes: UniProtKB reviewed (Swiss-Prot) entry P05219, the single reviewed entry
+        for gene nda3 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ase1
   label: Microtubule-associated protein, MAP65/Ase1/PRC1
   component_type: PROTEIN
@@ -139,6 +186,62 @@ components:
       spindle-pole targeting.
   - reference: DOI:10.3390/cells12060917
     notes: Equatorial Mto1 recruitment precedes PAA formation in live-cell time series.
+  protein_examples:
+  - uniprot_id: UniProtKB:O94488
+    protein_label: Gamma tubulin complex adapter mto1
+    gene_symbol: mto1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene mto1 in Schizosaccharomyces
+      pombe 972h-. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15004232
+      notes: Venkatram S et al. 2004, ‘Identification and characterization of two
+        novel proteins affecting fission yeast gamma-tubulin complex function.’, Mol
+        Biol Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton, microtubule organizing center, spindle pole body' localisation
+        of O94488.
+    - reference: PMID:15120067
+      notes: Sawin KE et al. 2004, ‘Microtubule nucleation at non-spindle pole body
+        microtubule-organizing centers requires fission yeast centrosomin-related
+        protein mod20p.’, Curr Biol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole
+        body' localisation of O94488.
+    - reference: PMID:15659644
+      notes: Samejima I et al. 2005, ‘Fission yeast mto2p regulates microtubule nucleation
+        by the centrosomin-related protein mto1p.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing
+        center, spindle pole body' localisation of O94488.
+  - uniprot_id: UniProtKB:Q9USP7
+    protein_label: Gamma tubulin complex adapter mto2
+    gene_symbol: mto2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene mto2 in Schizosaccharomyces
+      pombe 972h-. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10759889
+      notes: Ding DQ et al. 2000, ‘Large-scale screening of intracellular protein
+        localization in living fission yeast cells by the use of a GFP-fusion genomic
+        DNA library.’, Genes Cells. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of Q9USP7.
+    - reference: PMID:15659644
+      notes: Samejima I et al. 2005, ‘Fission yeast mto2p regulates microtubule nucleation
+        by the centrosomin-related protein mto1p.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing
+        center' localisation of Q9USP7.
+    - reference: PMID:15800064
+      notes: Venkatram S et al. 2005, ‘Mto2p, a novel fission yeast protein required
+        for cytoplasmic microtubule organization and anchoring of the cytokinetic
+        actin ring.’, Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, cytoskeleton, microtubule organizing center' localisation
+        of Q9USP7.
 canonical_examples:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe

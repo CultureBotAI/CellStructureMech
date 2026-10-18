@@ -33,6 +33,13 @@ curation_history:
     title so it does not say GO:0005931 regulates doublets and broadening the subunit-grounding
     TODO to the complete 11-or-more-member N-DRC cohort.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:10:11Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: axonemal interdoublet link
   synonym_type: EXACT_SYNONYM
@@ -63,6 +70,89 @@ components:
     notes: Gui et al. 2019 used Chlamydomonas N-DRC mutants and tagged subunits to
       localize scaffold and associated subunits in the axonemal nexin-dynein regulatory
       complex.
+  gene_symbols:
+  - DRC1
+  - DRC2
+  - DRC4
+  protein_examples:
+  - uniprot_id: UniProtKB:P0DL09
+    protein_label: Dynein regulatory complex protein 1
+    gene_symbol: DRC1
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DRC1 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:23354437
+      notes: Wirschell M et al. 2013, ‘The nexin-dynein regulatory complex subunit
+        DRC1 is essential for motile cilia function in algae and humans.’, Nat Genet.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton,
+        cilium axoneme' localisation of P0DL09.
+    - reference: PMID:23427265
+      notes: Bower R et al. 2013, ‘The N-DRC forms a conserved biochemical complex
+        that maintains outer doublet alignment and limits microtubule sliding in motile
+        axonemes.’, Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, cytoskeleton, flagellum axoneme' localisation of P0DL09.
+    - reference: PMID:25411337
+      notes: Oda T et al. 2015, ‘Detailed structural and biochemical characterization
+        of the nexin-dynein regulatory complex.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, flagellum axoneme'
+        localisation of P0DL09.
+  - uniprot_id: UniProtKB:A8JB22
+    protein_label: Dynein regulatory complex subunit 2
+    gene_symbol: DRC2
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DRC2 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:29167384
+      notes: Bower R et al. 2018, ‘DRC2/CCDC65 is a central hub for assembly of the
+        nexin-dynein regulatory complex and other regulators of ciliary and flagellar
+        motility.’, Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, cytoskeleton, flagellum basal body' localisation of A8JB22.
+    - reference: PMID:23427265
+      notes: Bower R et al. 2013, ‘The N-DRC forms a conserved biochemical complex
+        that maintains outer doublet alignment and limits microtubule sliding in motile
+        axonemes.’, Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, cytoskeleton, flagellum axoneme' localisation of A8JB22.
+    - reference: PMID:25411337
+      notes: Oda T et al. 2015, ‘Detailed structural and biochemical characterization
+        of the nexin-dynein regulatory complex.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, flagellum axoneme'
+        localisation of A8JB22.
+  - uniprot_id: UniProtKB:Q7XJ96
+    protein_label: Dynein regulatory complex subunit 4
+    gene_symbol: DRC4
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DRC4 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12847082
+      notes: Rupp G et al. 2003, ‘A subunit of the dynein regulatory complex in Chlamydomonas
+        is a homologue of a growth arrest-specific gene product.’, J Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, flagellum
+        axoneme' localisation of Q7XJ96.
+    - reference: PMID:23427265
+      notes: Bower R et al. 2013, ‘The N-DRC forms a conserved biochemical complex
+        that maintains outer doublet alignment and limits microtubule sliding in motile
+        axonemes.’, Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, cytoskeleton, flagellum axoneme' localisation of Q7XJ96.
+    - reference: PMID:25411337
+      notes: Oda T et al. 2015, ‘Detailed structural and biochemical characterization
+        of the nexin-dynein regulatory complex.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, flagellum axoneme'
+        localisation of Q7XJ96.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

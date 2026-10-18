@@ -20,6 +20,13 @@ curation_history:
     GO/PubMed/DOI evidence, a nonmechanistic Noc2p-Noc3p graph, and a subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:27:10Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0030689
 part_of:
@@ -46,6 +53,22 @@ components:
   - reference: DOI:10.1016/s0092-8674(01)00358-0
     notes: Milkereit et al. 2001 reported that Noc2p participates in two distinct
       Noc complexes, Noc1p/Noc2p and Noc2p/Noc3p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39744
+    protein_label: Nucleolar complex protein 2
+    gene_symbol: NOC2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NOC2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11371346
+      notes: Milkereit P et al. 2001, ‘Maturation and intranuclear transport of pre-ribosomes
+        requires Noc proteins.’, Cell. ECO:0000269 experimental evidence cited by
+        UniProt for the 'Nucleus, nucleolus' localisation of P39744.
 - component_id: noc3_noc_complex_subunit
   label: Noc3 Noc-complex subunit
   component_type: PROTEIN
@@ -67,6 +90,22 @@ components:
   - reference: DOI:10.1016/s0092-8674(01)00358-0
     notes: Milkereit et al. 2001 isolated Noc2p and Noc3p in one of two distinct Noc
       complexes involved in pre-ribosome maturation and intranuclear transport.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07896
+    protein_label: Nucleolar complex-associated protein 3
+    gene_symbol: NOC3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NOC3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11371346
+      notes: Milkereit P et al. 2001, ‘Maturation and intranuclear transport of pre-ribosomes
+        requires Noc proteins.’, Cell. ECO:0000269 experimental evidence cited by
+        UniProt for the 'Nucleus, nucleolus' localisation of Q07896.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

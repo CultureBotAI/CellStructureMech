@@ -21,6 +21,13 @@ curation_history:
     function, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a NEF2
     subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:31Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: NEF2 complex
   synonym_type: EXACT_SYNONYM
@@ -44,6 +51,22 @@ components:
   evidence:
   - reference: GO:0000111
     notes: GO:0000111 defines the NEF2 complex as containing Rad4p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P14736
+    protein_label: DNA repair protein RAD4
+    gene_symbol: RAD4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P14736.
 - component_id: rad23_nef2_subunit
   label: Rad23 NEF2 subunit
   component_type: PROTEIN
@@ -61,6 +84,22 @@ components:
   evidence:
   - reference: GO:0000111
     notes: GO:0000111 defines the NEF2 complex as containing Rad23p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32628
+    protein_label: UV excision repair protein RAD23
+    gene_symbol: RAD23
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD23 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P32628.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

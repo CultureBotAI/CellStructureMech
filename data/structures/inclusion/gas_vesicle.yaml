@@ -22,6 +22,22 @@ components:
   evidence:
   - reference: PMID:22147705
     notes: Solid-state NMR supports cross-beta assembly of the GvpA shell.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0ABR7ZBW9
+    protein_label: Gas vesicle protein A
+    gene_symbol: gvpA
+    taxon_id: NCBITaxon:2692880
+    taxon_label: Anabaena cylindrica FACHB-318
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene gvpA in Anabaena
+      cylindrica FACHB-318. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0ABR7ZBW9
+      notes: UniProtKB unreviewed (TrEMBL) entry A0ABR7ZBW9 for gene gvpA in Anabaena
+        cylindrica FACHB-318. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: gvpc
   label: gas vesicle strengthening protein GvpC
   component_type: PROTEIN
@@ -33,6 +49,22 @@ components:
   evidence:
   - reference: PMID:8177173
     notes: Walsby reviews GvpC-dependent strengthening.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0ABR7ZCB1
+    protein_label: Gas vesicle protein C
+    gene_symbol: gvpC
+    taxon_id: NCBITaxon:2692880
+    taxon_label: Anabaena cylindrica FACHB-318
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene gvpC in Anabaena
+      cylindrica FACHB-318. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0ABR7ZCB1
+      notes: UniProtKB unreviewed (TrEMBL) entry A0ABR7ZCB1 for gene gvpC in Anabaena
+        cylindrica FACHB-318. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -164,9 +196,12 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     xrefs:
     - Pfam:PF06386
+    - UniProtKB:A0ACH3YVU0
   - node_id: accessory_gvp_complex
     label: accessory Gvp assembly complex
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:A0ACH3YVU0
   - node_id: gvpa
     label: major gas vesicle protein GvpA
     node_type: GENE_OR_PROTEIN
@@ -309,6 +344,12 @@ curation_history:
   action: ADDRESS_REVIEW
   changes: '#2318: Correct the Bayro first-author attribution without changing rejected
     shell or GvpC findings.'
+  llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s); added 2 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0125

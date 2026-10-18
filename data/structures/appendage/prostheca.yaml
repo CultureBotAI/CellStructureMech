@@ -41,6 +41,11 @@ curation_history:
     from unresolved whole-cell nutrient delivery, retained conflicting transport evidence,
     and narrowed the NA1000 example to its attached StpX source.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 8 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial stalk
   synonym_type: RELATED_SYNONYM
@@ -182,9 +187,14 @@ causal_graphs:
   - node_id: shpa_taca_phosphorelay
     label: ShpA-TacA stalk phosphorelay
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:A0A0H3C8T5
+    - UniProtKB:A0A0H3CC96
   - node_id: stalk_wall_synthesis_machinery
     label: MreB-dependent stalk wall-synthesis machinery
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:A0A0H3C7V4
   - node_id: stalk_peptidoglycan
     label: stalk peptidoglycan
     node_type: CHEMICAL
@@ -196,9 +206,16 @@ causal_graphs:
   - node_id: stpx
     label: StpX stalk-localized membrane protein
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:A0A0H3C927
   - node_id: stp_crossbands
     label: StpABCD stalk crossbands
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:A0A0H3CCF8
+    - UniProtKB:A0A0H3CAY8
+    - UniProtKB:A0A0H3CAU4
+    - UniProtKB:A0A0H3C9Z9
   - node_id: prostheca
     label: prostheca
     node_type: STRUCTURE

@@ -21,6 +21,11 @@ curation_history:
     homodimeric structure with a reviewed UniProt example, and cited DOI/PMID/PDB
     evidence.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 synonyms:
 - synonym_text: 1-deoxy-D-xylulose 5-phosphate reductoisomerase complex
   synonym_type: EXACT_SYNONYM
@@ -49,7 +54,7 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-01'
     role: Reviewed E. coli K-12 Dxr accession mapped by RCSB to the two protein chains
-      in PDB:1Q0Q.
+      in PDB:1Q0Q (also declared as synonym ispC).
     evidence:
     - reference: UniProtKB:P45568
       notes: UniProtKB P45568 is the reviewed Escherichia coli K-12 entry for Dxr,

@@ -45,6 +45,11 @@ curation_history:
     graph identity, and retained the superseded rationale and unresolved molecular
     inventory. Preserved PROPOSED status.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: cilial transition zone
   synonym_type: EXACT_SYNONYM
@@ -117,6 +122,42 @@ components:
   - reference: DOI:10.1101/cshperspect.a028134
     notes: Garcia-Gonzalo and Reiter 2017 reviewed the transition zone as a protein-rich
       gate that controls ciliary composition.
+  gene_symbols:
+  - CEP290
+  - NPHP4
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A2K3DWT6
+    protein_label: Cep290 middle coiled-coil region domain-containing protein
+    gene_symbol: CHLRE_03g167550v5
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP290, which
+      UniProt lists under the primary name CHLRE_03g167550v5, in Chlamydomonas reinhardtii.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A2K3DWT6
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A2K3DWT6 for gene CEP290 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:A0A2K3D4W1
+    protein_label: Nephrocystin-4
+    gene_symbol: CHLRE_12g531400v5
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene NPHP4, which
+      UniProt lists under the primary name CHLRE_12g531400v5, in Chlamydomonas reinhardtii.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A2K3D4W1
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A2K3D4W1 for gene NPHP4 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

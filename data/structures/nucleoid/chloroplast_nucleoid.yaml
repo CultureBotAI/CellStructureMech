@@ -66,6 +66,8 @@ components:
   grounding_notes: Chlamydomonas HLP directly supports this HU-like nucleoid protein
     component, but no exact InterPro, Pfam, NCBIfam, or UniProt family CURIE was curated
     for a source-neutral component.
+  gene_symbols:
+  - HLP
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
