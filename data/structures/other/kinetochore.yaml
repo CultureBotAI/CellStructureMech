@@ -33,6 +33,13 @@ curation_history:
   changes: Retyped exact protein-complex graph nodes for COMA, MIS12/MIND, and Ndc80
     from GENE_OR_PROTEIN to STRUCTURE.
   llm_assisted: true
+- timestamp: '2026-10-18T03:25:42Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 12 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: condensed chromosome kinetochore
   synonym_type: EXACT_SYNONYM
@@ -84,6 +91,77 @@ components:
   - reference: DOI:10.1101/gad.1144403
     notes: De Wulf, McAinsh and Sorger 2003 analyzed hierarchical assembly of the
       budding-yeast kinetochore from multiple subcomplexes, including COMA.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02732
+    protein_label: Inner kinetochore subunit CTF19
+    gene_symbol: CTF19
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CTF19 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:29046335
+      notes: Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration
+        through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q02732.
+  - uniprot_id: UniProtKB:P53298
+    protein_label: Inner kinetochore subunit OKP1
+    gene_symbol: OKP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene OKP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53298.
+    - reference: PMID:10323865
+      notes: Ortiz J et al. 1999, ‘A putative protein complex consisting of Ctf19,
+        Mcm21, and Okp1 represents a missing link in the budding yeast kinetochore.’,
+        Genes Dev. ECO:0000269 experimental evidence cited by UniProt for the 'Chromosome,
+        centromere, kinetochore' localisation of P53298.
+  - uniprot_id: UniProtKB:Q06675
+    protein_label: Inner kinetochore subunit MCM21
+    gene_symbol: MCM21
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MCM21 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:29046335
+      notes: Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration
+        through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q06675.
+  - uniprot_id: UniProtKB:P38313
+    protein_label: Inner kinetochore subunit AME1
+    gene_symbol: AME1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AME1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38313.
+    - reference: PMID:29046335
+      notes: Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration
+        through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Chromosome, centromere, kinetochore' localisation
+        of P38313.
 - component_id: mis12_mind_type_complex
   label: MIS12/MIND type complex
   component_type: PROTEIN_COMPLEX
@@ -104,6 +182,90 @@ components:
   - reference: DOI:10.1101/gad.1144403
     notes: De Wulf, McAinsh and Sorger 2003 placed the Mtw1/MIND complex within the
       budding-yeast kinetochore hierarchy.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39731
+    protein_label: Kinetochore-associated protein MTW1
+    gene_symbol: MTW1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MTW1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14602074
+      notes: Pinsky BA et al. 2003, ‘An Mtw1 complex promotes kinetochore biorientation
+        that is monitored by the Ipl1/Aurora protein kinase.’, Dev Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore'
+        localisation of P39731.
+    - reference: PMID:14657030
+      notes: Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment
+        of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore'
+        localisation of P39731.
+    - reference: PMID:12455957
+      notes: 'Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of
+        proteins important for chromosome segregation in Saccharomyces cerevisiae.’,
+        Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Cytoplasm, cytoskeleton, spindle pole'' localisation of P39731.'
+  - uniprot_id: UniProtKB:P40568
+    protein_label: Kinetochore-associated protein DSN1
+    gene_symbol: DSN1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DSN1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40568
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40568, the single reviewed entry
+        for gene DSN1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q12143
+    protein_label: Kinetochore-associated protein NSL1
+    gene_symbol: NSL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NSL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12455957
+      notes: 'Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of
+        proteins important for chromosome segregation in Saccharomyces cerevisiae.’,
+        Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Nucleus'' localisation of Q12143.'
+    - reference: PMID:14657030
+      notes: Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment
+        of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12143.
+  - uniprot_id: UniProtKB:P47149
+    protein_label: Kinetochore-associated protein NNF1
+    gene_symbol: NNF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NNF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12455957
+      notes: 'Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of
+        proteins important for chromosome segregation in Saccharomyces cerevisiae.’,
+        Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Nucleus'' localisation of P47149.'
+    - reference: PMID:14657030
+      notes: Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment
+        of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore'
+        localisation of P47149.
 - component_id: ndc80_complex
   label: Ndc80 complex
   component_type: PROTEIN_COMPLEX
@@ -123,6 +285,86 @@ components:
   - reference: DOI:10.1083/jcb.200305100
     notes: Westermann et al. 2003 identified Ndc80 among the budding-yeast kinetochore
       proteins forming a conserved molecular core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40460
+    protein_label: Kinetochore protein NDC80
+    gene_symbol: NDC80
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NDC80 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40460
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40460, the single reviewed entry
+        for gene NDC80 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P33895
+    protein_label: Kinetochore protein NUF2
+    gene_symbol: NUF2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUF2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P33895
+      notes: UniProtKB reviewed (Swiss-Prot) entry P33895, the single reviewed entry
+        for gene NUF2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q04477
+    protein_label: Kinetochore protein SPC24
+    gene_symbol: SPC24
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPC24 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11179222
+      notes: Janke C et al. 2001, ‘The budding yeast proteins Spc24p and Spc25p interact
+        with Ndc80p and Nuf2p at the kinetochore and are important for kinetochore
+        clustering and checkpoint control.’, EMBO J. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of Q04477.
+    - reference: PMID:11266451
+      notes: Wigge PA et al. 2001, ‘The Ndc80p complex from Saccharomyces cerevisiae
+        contains conserved centromere components and has a function in chromosome
+        segregation.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus' localisation of Q04477.
+    - reference: PMID:11952896
+      notes: Le Masson I et al. 2002, ‘Spc24 interacts with Mps2 and is required for
+        chromosome segregation, but is not implicated in spindle pole body duplication.’,
+        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q04477.
+  - uniprot_id: UniProtKB:P40014
+    protein_label: Kinetochore protein SPC25
+    gene_symbol: SPC25
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPC25 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11179222
+      notes: Janke C et al. 2001, ‘The budding yeast proteins Spc24p and Spc25p interact
+        with Ndc80p and Nuf2p at the kinetochore and are important for kinetochore
+        clustering and checkpoint control.’, EMBO J. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of P40014.
+    - reference: PMID:11266451
+      notes: Wigge PA et al. 2001, ‘The Ndc80p complex from Saccharomyces cerevisiae
+        contains conserved centromere components and has a function in chromosome
+        segregation.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Chromosome, centromere, kinetochore' localisation of P40014.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

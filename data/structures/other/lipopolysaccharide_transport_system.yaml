@@ -20,6 +20,11 @@ curation_history:
     components, bacterial taxonomy, E. coli canonical example, ATP-dependent LPS transport
     function, evidence, and component grounding/boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 7 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Lpt machinery
   synonym_type: EXACT_SYNONYM
@@ -49,6 +54,33 @@ components:
   - reference: DOI:10.1126/science.aar1886
     notes: Sherman et al. 2018 reconstituted membrane-to-membrane LPS movement through
       an Lpt protein bridge.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ADV1
+    protein_label: Lipopolysaccharide export system protein LptA
+    gene_symbol: lptA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene lptA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17056748
+      notes: Sperandeo P et al. 2007, ‘Characterization of lptA and lptB, two essential
+        genes implicated in lipopolysaccharide transport to the outer membrane of
+        Escherichia coli.’, J Bacteriol. ECO:0000269 experimental evidence cited by
+        UniProt for the 'Periplasm' localisation of P0ADV1.
+    - reference: PMID:18480051
+      notes: Tran AX et al. 2008, ‘The LptA protein of Escherichia coli is a periplasmic
+        lipid A-binding protein involved in the lipopolysaccharide export pathway.’,
+        J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Periplasm'
+        localisation of P0ADV1.
+    - reference: PMID:20446753
+      notes: Chng SS et al. 2010, ‘Proteins required for lipopolysaccharide assembly
+        in Escherichia coli form a transenvelope complex.’, Biochemistry. ECO:0000269
+        experimental evidence cited by UniProt for the 'Periplasm' localisation of
+        P0ADV1.
 - component_id: lptb_cytoplasmic_atpase
   label: LptB cytoplasmic ATPase
   component_type: PROTEIN
@@ -67,6 +99,22 @@ components:
   - reference: DOI:10.1126/science.1228984
     notes: Okuda, Freinkman and Kahne 2012 showed that cytoplasmic ATP hydrolysis
       powers E. coli LPS transport across the periplasm.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A9V1
+    protein_label: Lipopolysaccharide export system ATP-binding protein LptB
+    gene_symbol: lptB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene lptB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of P0A9V1.
 - component_id: lptc_inner_membrane_adapter
   label: LptC inner-membrane adapter
   component_type: PROTEIN
@@ -85,6 +133,28 @@ components:
   - reference: DOI:10.1074/jbc.R117.802512
     notes: Sperandeo, Martorana and Polissi 2017 review LptC as the inner-membrane
       Lpt component that bridges LptBFG and LptA.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ADV9
+    protein_label: Lipopolysaccharide export system protein LptC
+    gene_symbol: lptC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene lptC in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18424520
+      notes: Sperandeo P et al. 2008, ‘Functional analysis of the protein machinery
+        required for transport of lipopolysaccharide to the outer membrane of Escherichia
+        coli.’, J Bacteriol. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cell inner membrane' localisation of P0ADV9.
+    - reference: PMID:20720015
+      notes: Tran AX et al. 2010, ‘Structure and functional analysis of LptC, a conserved
+        membrane protein involved in the lipopolysaccharide export pathway in Escherichia
+        coli.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cell inner membrane' localisation of P0ADV9.
 - component_id: lptd_outer_membrane_beta_barrel
   label: LptD outer-membrane beta-barrel
   component_type: PROTEIN
@@ -104,6 +174,31 @@ components:
   - reference: DOI:10.1073/pnas.0912872107
     notes: Chng et al. 2010 characterized LptD as part of the two-protein outer-membrane
       LptDE complex in E. coli.
+  protein_examples:
+  - uniprot_id: UniProtKB:P31554
+    protein_label: LPS-assembly protein LptD
+    gene_symbol: lptD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene lptD in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12207697
+      notes: Braun M et al. 2002, ‘Imp/OstA is required for cell envelope biogenesis
+        in Escherichia coli.’, Mol Microbiol. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell outer membrane' localisation of P31554.
+    - reference: PMID:12724388
+      notes: Abe S et al. 2003, ‘n-Hexane sensitivity of Escherichia coli due to low
+        expression of imp/ostA encoding an 87 kDa minor protein associated with the
+        outer membrane.’, Microbiology (Reading). ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cell outer membrane' localisation of P31554.
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P31554.
 - component_id: lpte_outer_membrane_lipoprotein
   label: LptE outer-membrane lipoprotein
   component_type: PROTEIN
@@ -122,6 +217,32 @@ components:
   - reference: DOI:10.1073/pnas.0912872107
     notes: Chng et al. 2010 characterized LptE as part of the two-protein outer-membrane
       LptDE complex in E. coli.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ADC1
+    protein_label: LPS-assembly lipoprotein LptE
+    gene_symbol: lptE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene lptE in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:20446753
+      notes: Chng SS et al. 2010, ‘Proteins required for lipopolysaccharide assembly
+        in Escherichia coli form a transenvelope complex.’, Biochemistry. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell outer membrane' localisation
+        of P0ADC1.
+    - reference: PMID:21257904
+      notes: Freinkman E et al. 2011, ‘The complex that inserts lipopolysaccharide
+        into the bacterial outer membrane forms a two-protein plug-and-barrel.’, Proc
+        Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cell outer membrane' localisation of P0ADC1.
+    - reference: PMID:3316191
+      notes: Takase I et al. 1987, ‘Genes encoding two lipoproteins in the leuS-dacA
+        region of the Escherichia coli chromosome.’, J Bacteriol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell outer membrane' localisation of P0ADC1.
 - component_id: lptf_inner_membrane_permease
   label: LptF inner-membrane permease
   component_type: PROTEIN
@@ -139,6 +260,23 @@ components:
   - reference: DOI:10.1016/j.febslet.2009.05.051
     notes: Narita and Tokuda 2009 biochemically characterized the E. coli LptBFGC
       inner-membrane ABC transporter complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AF98
+    protein_label: Lipopolysaccharide export system permease protein LptF
+    gene_symbol: lptF
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene lptF in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AF98
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AF98, the single reviewed entry
+        for gene lptF in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: lptg_inner_membrane_permease
   label: LptG inner-membrane permease
   component_type: PROTEIN
@@ -156,6 +294,23 @@ components:
   - reference: DOI:10.1016/j.febslet.2009.05.051
     notes: Narita and Tokuda 2009 biochemically characterized the E. coli LptBFGC
       inner-membrane ABC transporter complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ADC6
+    protein_label: Lipopolysaccharide export system permease protein LptG
+    gene_symbol: lptG
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene lptG in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ADC6
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ADC6, the single reviewed entry
+        for gene lptG in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

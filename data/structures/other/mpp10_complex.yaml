@@ -20,6 +20,13 @@ curation_history:
     scope, a 90S-preribosome-assembly function, GO/PubMed/DOI evidence, a nonmechanistic
     assembly graph, and an Mpp10-complex subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:26:35Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0140513
 part_of:
@@ -41,6 +48,27 @@ components:
   evidence:
   - reference: GO:0034457
     notes: GO:0034457 defines the Mpp10 complex as containing Mpp10p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47083
+    protein_label: U3 small nucleolar RNA-associated protein MPP10
+    gene_symbol: MPP10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MPP10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of P47083.
+    - reference: PMID:9315638
+      notes: Dunbar DA et al. 1997, ‘Mpp10p, a U3 small nucleolar ribonucleoprotein
+        component required for pre-18S rRNA processing in yeast.’, Mol Cell Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus'
+        localisation of P47083.
 - component_id: imp3_mpp10_complex_subunit
   label: Imp3 Mpp10-complex subunit
   component_type: PROTEIN
@@ -56,6 +84,23 @@ components:
   evidence:
   - reference: GO:0034457
     notes: GO:0034457 defines the Mpp10 complex as containing Imp3p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32899
+    protein_label: U3 small nucleolar ribonucleoprotein protein IMP3
+    gene_symbol: IMP3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IMP3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10409734
+      notes: Lee SJ et al. 1999, ‘Imp3p and Imp4p, two specific components of the
+        U3 small nucleolar ribonucleoprotein that are essential for pre-18S rRNA processing.’,
+        Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P32899.
 - component_id: imp4_mpp10_complex_subunit
   label: Imp4 Mpp10-complex subunit
   component_type: PROTEIN
@@ -71,6 +116,23 @@ components:
   evidence:
   - reference: GO:0034457
     notes: GO:0034457 defines the Mpp10 complex as containing Imp4p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53941
+    protein_label: U3 small nucleolar ribonucleoprotein protein IMP4
+    gene_symbol: IMP4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IMP4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10409734
+      notes: Lee SJ et al. 1999, ‘Imp3p and Imp4p, two specific components of the
+        U3 small nucleolar ribonucleoprotein that are essential for pre-18S rRNA processing.’,
+        Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P53941.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

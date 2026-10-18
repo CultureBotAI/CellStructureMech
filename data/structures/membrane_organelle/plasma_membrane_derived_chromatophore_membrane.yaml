@@ -57,6 +57,18 @@ curation_history:
   changes: Retyped the locally grounded RC-LH1-PufX and cytochrome bc1 complex graph
     nodes as STRUCTURE.
   llm_assisted: true
+- timestamp: '2026-10-18T03:18:33Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: cellular chromatophore membrane
   synonym_type: EXACT_SYNONYM
@@ -121,6 +133,46 @@ components:
   - reference: uniprot.location:SL-0042
     notes: UniProt SL-0042 lists antenna complexes among the contents of cellular
       chromatophore membranes.
+  gene_symbols:
+  - pucA
+  - pucB
+  protein_examples:
+  - uniprot_id: UniProtKB:P0C0Y0
+    protein_label: Light-harvesting protein B-800/850 alpha chain
+    gene_symbol: pucA
+    taxon_id: NCBITaxon:1063
+    taxon_label: Cereibacter sphaeroides
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene pucA in Cereibacter sphaeroides,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0C0Y0
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0C0Y0, the single reviewed entry
+        for gene pucA in Cereibacter sphaeroides. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0C0Y2
+    protein_label: Light-harvesting protein B-800/850 beta chain
+    gene_symbol: pucB
+    taxon_id: NCBITaxon:1063
+    taxon_label: Cereibacter sphaeroides
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene pucB in Cereibacter sphaeroides,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0C0Y2
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0C0Y2, the single reviewed entry
+        for gene pucB in Cereibacter sphaeroides. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: cytochrome_bc1_complex
   label: chromatophore cytochrome bc1 complex
   component_type: PROTEIN_COMPLEX
@@ -155,6 +207,76 @@ components:
   - reference: DOI:10.1016/S0006-3495(02)75470-2
     notes: Feniouk et al. 2002 quantified ATP synthase in Rhodobacter capsulatus chromatophore
       vesicles and analyzed proton-driven ATP synthesis across those vesicles.
+  gene_symbols:
+  - atpA
+  - atpB
+  - atpD
+  - atpE
+  protein_examples:
+  - uniprot_id: UniProtKB:A4WUM7
+    protein_label: ATP synthase subunit beta
+    gene_symbol: atpD
+    taxon_id: NCBITaxon:349102
+    taxon_label: Cereibacter sphaeroides ATCC 17025
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene atpD in Cereibacter sphaeroides
+      ATCC 17025, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A4WUM7
+      notes: UniProtKB reviewed (Swiss-Prot) entry A4WUM7, the single reviewed entry
+        for gene atpD in Cereibacter sphaeroides ATCC 17025. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q3J433
+    protein_label: ATP synthase subunit alpha
+    gene_symbol: atpA
+    taxon_id: NCBITaxon:272943
+    taxon_label: Cereibacter sphaeroides 2.4.1
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene atpA in Cereibacter sphaeroides
+      2.4.1. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q3J433
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q3J433, the single reviewed entry
+        for gene atpA in Cereibacter sphaeroides 2.4.1. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q3IZ12
+    protein_label: ATP synthase subunit a
+    gene_symbol: atpB
+    taxon_id: NCBITaxon:272943
+    taxon_label: Cereibacter sphaeroides 2.4.1
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene atpB in Cereibacter sphaeroides
+      2.4.1. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q3IZ12
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q3IZ12, the single reviewed entry
+        for gene atpB in Cereibacter sphaeroides 2.4.1. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q3IZ13
+    protein_label: ATP synthase subunit c
+    gene_symbol: atpE
+    taxon_id: NCBITaxon:272943
+    taxon_label: Cereibacter sphaeroides 2.4.1
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene atpE in Cereibacter sphaeroides
+      2.4.1. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q3IZ13
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q3IZ13, the single reviewed entry
+        for gene atpE in Cereibacter sphaeroides 2.4.1. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

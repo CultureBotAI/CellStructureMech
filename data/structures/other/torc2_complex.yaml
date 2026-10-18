@@ -35,6 +35,18 @@ curation_history:
     but removed the Wullschleger 2005 DOI from their component and graph-edge evidence
     to avoid overextending one molecular-organization paper.
   llm_assisted: true
+- timestamp: '2026-10-18T03:31:50Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 synonyms:
@@ -69,6 +81,32 @@ components:
   - reference: DOI:10.1074/jbc.M505553200
     notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
       TORC2 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32600
+    protein_label: Serine/threonine-protein kinase TOR2
+    gene_symbol: TOR2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TOR2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10973982
+      notes: Kunz J et al. 2000, ‘HEAT repeats mediate plasma membrane localization
+        of Tor2p in yeast.’, J Biol Chem. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell membrane' localisation of P32600.
+    - reference: PMID:12631735
+      notes: Wedaman KP et al. 2003, ‘Tor kinases are in distinct membrane-associated
+        protein complexes in Saccharomyces cerevisiae.’, Mol Biol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell membrane' localisation
+        of P32600.
+    - reference: PMID:8846782
+      notes: Cardenas ME et al. 1995, ‘FKBP12-rapamycin target TOR2 is a vacuolar
+        protein with an associated phosphatidylinositol-4 kinase activity.’, EMBO
+        J. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane'
+        localisation of P32600.
 - component_id: avo1_torc2_subunit
   label: Avo1 TORC2 subunit
   component_type: PROTEIN
@@ -87,6 +125,23 @@ components:
   - reference: DOI:10.1074/jbc.M505553200
     notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
       TORC2 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08236
+    protein_label: Target of rapamycin complex 2 subunit AVO1
+    gene_symbol: AVO1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AVO1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12631735
+      notes: Wedaman KP et al. 2003, ‘Tor kinases are in distinct membrane-associated
+        protein complexes in Saccharomyces cerevisiae.’, Mol Biol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell membrane' localisation
+        of Q08236.
 - component_id: avo2_torc2_subunit
   label: Avo2 TORC2 subunit
   component_type: PROTEIN
@@ -105,6 +160,23 @@ components:
   - reference: DOI:10.1074/jbc.M505553200
     notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
       TORC2 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04749
+    protein_label: Target of rapamycin complex 2 subunit AVO2
+    gene_symbol: AVO2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AVO2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12631735
+      notes: Wedaman KP et al. 2003, ‘Tor kinases are in distinct membrane-associated
+        protein complexes in Saccharomyces cerevisiae.’, Mol Biol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell membrane' localisation
+        of Q04749.
 - component_id: tsc11_avo3_torc2_subunit
   label: Tsc11/Avo3 TORC2 subunit
   component_type: PROTEIN
@@ -124,6 +196,24 @@ components:
   - reference: DOI:10.1074/jbc.M505553200
     notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
       TORC2 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40061
+    protein_label: Target of rapamycin complex 2 subunit TSC11
+    gene_symbol: TSC11
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TSC11 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym AVO3).
+    evidence:
+    - reference: PMID:12631735
+      notes: Wedaman KP et al. 2003, ‘Tor kinases are in distinct membrane-associated
+        protein complexes in Saccharomyces cerevisiae.’, Mol Biol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell membrane' localisation
+        of P40061.
 - component_id: lst8_torc2_subunit
   label: Lst8 TORC1/TORC2 beta-propeller subunit
   component_type: PROTEIN
@@ -143,6 +233,23 @@ components:
   - reference: DOI:10.1074/jbc.M505553200
     notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
       TORC2 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P41318
+    protein_label: Target of rapamycin complex subunit LST8
+    gene_symbol: LST8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene LST8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P41318
+      notes: UniProtKB reviewed (Swiss-Prot) entry P41318, the single reviewed entry
+        for gene LST8 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: bit61_torc2_subunit
   label: Bit61 TORC2 subunit
   component_type: PROTEIN
@@ -161,6 +268,23 @@ components:
   - reference: DOI:10.1074/jbc.M505553200
     notes: Wullschleger et al. 2005 examined the molecular organization of the budding-yeast
       TORC2 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47041
+    protein_label: Target of rapamycin complex 2 subunit BIT61
+    gene_symbol: BIT61
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BIT61 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P47041
+      notes: UniProtKB reviewed (Swiss-Prot) entry P47041, the single reviewed entry
+        for gene BIT61 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: slm1_torc2_subunit
   label: Slm1 TORC2 subunit
   component_type: PROTEIN
@@ -176,6 +300,31 @@ components:
   evidence:
   - reference: GO:0031932
     notes: Gene Ontology cellular-component term for the TORC2 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40485
+    protein_label: Phosphatidylinositol 4,5-bisphosphate-binding protein SLM1
+    gene_symbol: SLM1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SLM1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15023338
+      notes: Yu JW et al. 2004, ‘Genome-wide analysis of membrane targeting by S.
+        cerevisiae pleckstrin homology domains.’, Mol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell membrane' localisation of P40485.
+    - reference: PMID:15372071
+      notes: Audhya A et al. 2004, ‘Genome-wide lethality screen identifies new PI4,5P2
+        effectors that regulate the actin cytoskeleton.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell membrane' localisation of P40485.
+    - reference: PMID:15689497
+      notes: Fadri M et al. 2005, ‘The pleckstrin homology domain proteins Slm1 and
+        Slm2 are required for actin cytoskeleton organization in yeast and bind phosphatidylinositol-4,5-bisphosphate
+        and TORC2.’, Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell membrane' localisation of P40485.
 - component_id: slm2_torc2_subunit
   label: Slm2 TORC2 subunit
   component_type: PROTEIN
@@ -191,6 +340,31 @@ components:
   evidence:
   - reference: GO:0031932
     notes: Gene Ontology cellular-component term for the TORC2 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53955
+    protein_label: Phosphatidylinositol 4,5-bisphosphate-binding protein SLM2
+    gene_symbol: SLM2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene SLM2 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15023338
+      notes: Yu JW et al. 2004, ‘Genome-wide analysis of membrane targeting by S.
+        cerevisiae pleckstrin homology domains.’, Mol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell membrane' localisation of P53955.
+    - reference: PMID:15372071
+      notes: Audhya A et al. 2004, ‘Genome-wide lethality screen identifies new PI4,5P2
+        effectors that regulate the actin cytoskeleton.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell membrane' localisation of P53955.
+    - reference: PMID:15689497
+      notes: Fadri M et al. 2005, ‘The pleckstrin homology domain proteins Slm1 and
+        Slm2 are required for actin cytoskeleton organization in yeast and bind phosphatidylinositol-4,5-bisphosphate
+        and TORC2.’, Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell membrane' localisation of P53955.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

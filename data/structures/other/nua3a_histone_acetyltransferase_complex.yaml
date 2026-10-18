@@ -20,6 +20,13 @@ curation_history:
     scope, histone acetyltransferase activity, GO/PubMed/DOI evidence, a nonmechanistic
     function graph, and a NuA3a subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:27:15Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0033100
 components:
@@ -41,6 +48,22 @@ components:
   - reference: DOI:10.1074/mcp.M114.038224
     notes: Gilbert et al. 2014 classified NuA3a as the Eaf6p/Nto1p/Sas3p/Taf14p/Yng1p
       form of NuA3.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47128
+    protein_label: Chromatin modification-related protein EAF6
+    gene_symbol: EAF6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EAF6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P47128.
 - component_id: nto1_nua3a_subunit
   label: Nto1 NuA3a subunit
   component_type: PROTEIN
@@ -59,6 +82,22 @@ components:
   - reference: DOI:10.1074/mcp.M114.038224
     notes: Gilbert et al. 2014 classified NuA3a as the Eaf6p/Nto1p/Sas3p/Taf14p/Yng1p
       form of NuA3.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12311
+    protein_label: NuA3 HAT complex component NTO1
+    gene_symbol: NTO1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NTO1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q12311.
 - component_id: sas3_nua3a_catalytic_subunit
   label: Sas3 NuA3a catalytic subunit
   component_type: PROTEIN
@@ -78,6 +117,22 @@ components:
   - reference: DOI:10.1074/mcp.M114.038224
     notes: Gilbert et al. 2014 classified NuA3a as the Eaf6p/Nto1p/Sas3p/Taf14p/Yng1p
       form of NuA3.
+  protein_examples:
+  - uniprot_id: UniProtKB:P34218
+    protein_label: Histone acetyltransferase SAS3
+    gene_symbol: SAS3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SAS3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P34218.
 - component_id: taf14_nua3a_subunit
   label: Taf14 NuA3a subunit
   component_type: PROTEIN
@@ -96,6 +151,23 @@ components:
   - reference: DOI:10.1074/mcp.M114.038224
     notes: Gilbert et al. 2014 classified NuA3a as the Eaf6p/Nto1p/Sas3p/Taf14p/Yng1p
       form of NuA3.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35189
+    protein_label: Transcription initiation factor TFIID subunit 14
+    gene_symbol: TAF14
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TAF14 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P35189
+      notes: UniProtKB reviewed (Swiss-Prot) entry P35189, the single reviewed entry
+        for gene TAF14 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: yng1_nua3a_reader_subunit
   label: Yng1 NuA3a reader subunit
   component_type: PROTEIN
@@ -115,6 +187,22 @@ components:
   - reference: DOI:10.1074/mcp.M114.038224
     notes: Gilbert et al. 2014 classified NuA3a as the Eaf6p/Nto1p/Sas3p/Taf14p/Yng1p
       form of NuA3.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08465
+    protein_label: Protein YNG1
+    gene_symbol: YNG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YNG1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q08465.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

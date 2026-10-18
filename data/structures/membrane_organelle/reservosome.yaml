@@ -41,6 +41,11 @@ curation_history:
     readable Figueiredo 2004 and Sant''Anna 2009 support and narrowing acidic proteolysis
     claims to hydrolase/proteome claims covered by Sant''Anna 2009.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 components:
 - component_id: reservosome_membrane
   label: reservosome membrane
@@ -78,6 +83,25 @@ components:
   grounding_notes: T. cruzi carries multiple related cysteine-proteinase isoforms;
     this first record does not pin a single exact UniProt or MEROPS accession for
     the reservosome-localized cruzipain pool.
+  gene_symbols:
+  - CZP
+  protein_examples:
+  - uniprot_id: UniProtKB:P25779
+    protein_label: Cruzipain
+    gene_symbol: CZP
+    taxon_id: NCBITaxon:5693
+    taxon_label: Trypanosoma cruzi
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene CZP in Trypanosoma cruzi.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P25779
+      notes: UniProtKB reviewed (Swiss-Prot) entry P25779, the single reviewed entry
+        for gene CZP in Trypanosoma cruzi. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5693
   taxon_label: Trypanosoma cruzi

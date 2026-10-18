@@ -28,6 +28,12 @@ curation_history:
   changes: Corrected the section attribution of the hypothetical Sfi1 connection to
     the interaction Results; retained its exclusion from established constituents.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 5 verified UniProtKB protein_example(s); added 2 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 part_of:
@@ -55,6 +61,93 @@ components:
       nonredundant ICL1e-family centrins. Functional dependence is not encoded as
       a measured subunit stoichiometry or proof that every depletion eliminates the
       entire complex.
+  gene_symbols:
+  - Icl1a
+  - Icl1b
+  - Icl1c
+  - Icl1e
+  - Icl1f
+  protein_examples:
+  - uniprot_id: UniProtKB:Q27177
+    protein_label: Caltractin ICL1a
+    gene_symbol: Icl1a
+    taxon_id: NCBITaxon:5888
+    taxon_label: Paramecium tetraurelia
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene Icl1a in Paramecium tetraurelia.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q27177
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q27177, the single reviewed entry
+        for gene Icl1a in Paramecium tetraurelia. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q27179
+    protein_label: Caltractin ICL1b
+    gene_symbol: Icl1b
+    taxon_id: NCBITaxon:5888
+    taxon_label: Paramecium tetraurelia
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene Icl1b in Paramecium tetraurelia.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q27179
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q27179, the single reviewed entry
+        for gene Icl1b in Paramecium tetraurelia. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q27178
+    protein_label: Caltractin ICL1c
+    gene_symbol: Icl1c
+    taxon_id: NCBITaxon:5888
+    taxon_label: Paramecium tetraurelia
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene Icl1c in Paramecium tetraurelia.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q27178
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q27178, the single reviewed entry
+        for gene Icl1c in Paramecium tetraurelia. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q3SEK0
+    protein_label: Caltractin ICL1e
+    gene_symbol: Icl1e
+    taxon_id: NCBITaxon:5888
+    taxon_label: Paramecium tetraurelia
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene Icl1e in Paramecium tetraurelia.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q3SEK0
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q3SEK0, the single reviewed entry
+        for gene Icl1e in Paramecium tetraurelia. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q3SEK2
+    protein_label: Caltractin ICL1f
+    gene_symbol: Icl1f
+    taxon_id: NCBITaxon:5888
+    taxon_label: Paramecium tetraurelia
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene Icl1f in Paramecium tetraurelia.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q3SEK2
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q3SEK2, the single reviewed entry
+        for gene Icl1f in Paramecium tetraurelia. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:5888
   taxon_label: Paramecium tetraurelia
@@ -107,6 +200,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: External basal-body centrin whose depletion perturbs ICL1e localization;
       not asserted as an ICL1e-complex constituent.
+    xrefs:
+    - UniProtKB:Q27177
+    - UniProtKB:Q3SEK0
   - node_id: icl1e_complex
     label: ICL1e complex
     node_type: STRUCTURE

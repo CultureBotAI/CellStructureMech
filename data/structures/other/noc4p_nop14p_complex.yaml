@@ -20,6 +20,13 @@ curation_history:
     function, GO/PubMed/DOI evidence, a nonmechanistic Noc4p-Nop14p graph, and a subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:27:12Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0030689
 part_of:
@@ -47,6 +54,32 @@ components:
   - reference: DOI:10.1074/jbc.M208898200
     notes: Milkereit et al. 2003 reported that Noc4p and Nop14p form a Noc complex
       with a specific role in nucleolar 40S subunit formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06512
+    protein_label: Nucleolar complex protein 4
+    gene_symbol: NOC4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NOC4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12446671
+      notes: Milkereit P et al. 2003, ‘A Noc complex specifically involved in the
+        formation and nuclear export of ribosomal 40 S subunits.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation
+        of Q06512.
+    - reference: PMID:15590835
+      notes: Bernstein KA et al. 2004, ‘The small-subunit processome is a ribosome
+        assembly intermediate.’, Eukaryot Cell. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q06512.
+    - reference: PMID:16159874
+      notes: Léger-Silvestre I et al. 2005, ‘Specific Role for Yeast Homologs of the
+        Diamond Blackfan Anemia-associated Rps19 Protein in Ribosome Synthesis.’,
+        J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        nucleolus' localisation of Q06512.
 - component_id: nop14_noc_complex_subunit
   label: Nop14 Noc-complex subunit
   component_type: PROTEIN
@@ -67,6 +100,27 @@ components:
   - reference: DOI:10.1074/jbc.M208898200
     notes: Milkereit et al. 2003 described Nop14p as the partner of Noc4p in a Noc
       complex involved in 40S subunit formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q99207
+    protein_label: Nucleolar complex protein 14
+    gene_symbol: NOP14
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NOP14 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q99207.
+    - reference: PMID:12446671
+      notes: Milkereit P et al. 2003, ‘A Noc complex specifically involved in the
+        formation and nuclear export of ribosomal 40 S subunits.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation
+        of Q99207.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

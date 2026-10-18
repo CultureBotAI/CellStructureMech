@@ -40,6 +40,12 @@ curation_history:
   changes: 'Addressed PR #464 CI issue #468 by replacing obsolete parent GO:0044464
     with live GO:0110165.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s); added 1 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 synonyms:
@@ -66,6 +72,22 @@ components:
   - reference: DOI:10.1016/j.cell.2008.07.016
     notes: Ebersbach et al. 2008 independently characterized PopZ as a self-associating
       polar protein needed for polar organization in Caulobacter.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A0H3C7Y4
+    protein_label: Pole-organizing protein popZ
+    gene_symbol: popZ
+    taxon_id: NCBITaxon:565050
+    taxon_label: Caulobacter vibrioides NA1000
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene popZ in Caulobacter
+      vibrioides NA1000. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A0H3C7Y4
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A0H3C7Y4 for gene popZ in Caulobacter
+        vibrioides NA1000. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:155892
   taxon_label: Caulobacter vibrioides
@@ -143,6 +165,8 @@ causal_graphs:
   - node_id: cpdr
     label: CpdR
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:A0A0H3C5J9
   edges:
   - subject: popz
     predicate: self-associates into

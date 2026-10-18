@@ -28,6 +28,18 @@ curation_history:
     instead of gene_symbol; identities, labels, taxa, membership and stoichiometry
     unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:25:18Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 parent_structures:
 - GO:0098800
 part_of:
@@ -54,6 +66,35 @@ components:
   - reference: ComplexPortal:CPX-1655
     notes: The exact accession annotates YME1 as an enzymatic participant, separately
       from MGR1, MGR3 and zinc.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32795
+    protein_label: Mitochondrial inner membrane i-AAA protease supercomplex subunit
+      YME1
+    gene_symbol: YME1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YME1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym OSD1, YTA11).
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Mitochondrion inner membrane' localisation of P32795.
+    - reference: PMID:8355690
+      notes: Thorsness PE et al. 1993, ‘Inactivation of YME1, a member of the ftsH-SEC18-PAS1-CDC48
+        family of putative ATPase-encoding genes, causes increased escape of DNA from
+        mitochondria in Saccharomyces cerevisiae.’, Mol Cell Biol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Mitochondrion inner membrane' localisation
+        of P32795.
+    - reference: PMID:8688560
+      notes: Weber ER et al. 1996, ‘Biochemical and functional analysis of the YME1
+        gene product, an ATP and zinc-dependent mitochondrial protease from S. cerevisiae.’,
+        Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        'Mitochondrion inner membrane' localisation of P32795.
 - component_id: mgr1
   label: Mitochondrial inner membrane i-AAA protease complex subunit Mgr1
   grounding: InterPro:IPR013911
@@ -70,6 +111,32 @@ components:
   - reference: InterPro:IPR013911
     notes: Issuing-authority entry verifies the Mgr1 family, rather than a generic
       adaptor domain.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25573
+    protein_label: Mitochondrial inner membrane i-AAA protease supercomplex subunit
+      MGR1
+    gene_symbol: MGR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MGR1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Mitochondrion inner membrane' localisation of P25573.
+    - reference: PMID:14576278
+      notes: Sickmann A et al. 2003, ‘The proteome of Saccharomyces cerevisiae mitochondria.’,
+        Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion inner membrane' localisation of P25573.
+    - reference: PMID:16267274
+      notes: Dunn CD et al. 2006, ‘A genomewide screen for petite-negative yeast strains
+        yields a new subunit of the i-AAA protease complex.’, Mol Biol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Mitochondrion inner membrane'
+        localisation of P25573.
 - component_id: mgr3
   label: Protein Mrg3-like
   grounding: InterPro:IPR040201
@@ -89,6 +156,25 @@ components:
     notes: The authority spells the family label Mrg3-like; the reviewed MGR3 protein
       Q04472 maps to this family. The label is preserved, not interpreted as a different
       gene.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04472
+    protein_label: Mitochondrial inner membrane i-AAA protease supercomplex subunit
+      MGR3
+    gene_symbol: MGR3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MGR3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym FMP24).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q04472
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q04472, the single reviewed entry
+        for gene MGR3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: zinc
   label: zinc(2+)
   grounding: CHEBI:29105

@@ -44,6 +44,19 @@ curation_history:
     FlaF binding data and the FlaG/FlaF anchoring model with claim-level, abstract-limited
     2020 evidence. Preserved PROPOSED status.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:07:57Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:47Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB protein_example(s); added 1 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: archaellum
   synonym_type: EXACT_SYNONYM
@@ -76,6 +89,37 @@ components:
   - reference: DOI:10.1038/s41467-022-28337-1
     notes: Gambelli et al. 2022 solved the Methanocaldococcus villosus archaellum
       filament and found two alternating archaellins, ArlB1 and ArlB2, in the filament.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q4J9K5
+    protein_label: Flagellin
+    gene_symbol: flaB
+    taxon_id: NCBITaxon:330779
+    taxon_label: Sulfolobus acidocaldarius DSM 639
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB in Sulfolobus
+      acidocaldarius DSM 639. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q4J9K5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q4J9K5 for gene flaB in Sulfolobus
+        acidocaldarius DSM 639. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:A0A8X6EH07
+    protein_label: Flagellin
+    gene_symbol: flaB
+    taxon_id: NCBITaxon:667126
+    taxon_label: Methanocaldococcus villosus
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB in Methanocaldococcus
+      villosus. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A8X6EH07
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A8X6EH07 for gene flaB in Methanocaldococcus
+        villosus. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: arli_arlj_motor
   label: ArlI/ArlJ archaellum motor core
   component_type: PROTEIN_COMPLEX
@@ -96,6 +140,47 @@ components:
   - reference: DOI:10.3389/fmicb.2015.00023
     notes: Albers and Jarrell 2015 review FlaI/ArlI as the assembly ATPase and FlaJ/ArlJ
       as the only polytopic membrane protein conserved in archaellum operons.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q4J9L0
+    protein_label: Archaeal flagellar ATPase motor FlaI
+    gene_symbol: flaI
+    taxon_id: NCBITaxon:330779
+    taxon_label: Sulfolobus acidocaldarius DSM 639
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flaI in Sulfolobus acidocaldarius
+      DSM 639, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:23129770
+      notes: Banerjee A et al. 2012, ‘FlaX, a unique component of the crenarchaeal
+        archaellum, forms oligomeric ring-shaped structures and interacts with the
+        motor ATPase FlaI.’, J Biol Chem. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Archaeal flagellum' localisation of Q4J9L0.
+    - reference: PMID:24103130
+      notes: Banerjee A et al. 2013, ‘Insights into subunit interactions in the Sulfolobus
+        acidocaldarius archaellum cytoplasmic complex.’, FEBS J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Archaeal flagellum' localisation of Q4J9L0.
+    - reference: PMID:21506936
+      notes: Ghosh A et al. 2011, ‘Archaeal flagellar ATPase motor shows ATP-dependent
+        hexameric assembly and activity stimulation by specific lipid binding.’, Biochem
+        J. ECO:0000269 experimental evidence cited by UniProt for the 'Cell membrane'
+        localisation of Q4J9L0.
+  - uniprot_id: UniProtKB:Q4J9L1
+    protein_label: Flagella-related protein J
+    gene_symbol: flaJ
+    taxon_id: NCBITaxon:330779
+    taxon_label: Sulfolobus acidocaldarius DSM 639
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaJ in Sulfolobus
+      acidocaldarius DSM 639. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q4J9L1
+      notes: UniProtKB unreviewed (TrEMBL) entry Q4J9L1 for gene flaJ in Sulfolobus
+        acidocaldarius DSM 639. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
 - component_id: arlh_regulator
   label: ArlH motor regulator
   component_type: PROTEIN
@@ -149,6 +234,22 @@ components:
       formation and motility-disrupting interface mutations, supporting an S-layer-anchoring
       model. Full text was unavailable; direct contacts to the intact motor are not
       established by this abstract.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q4J9K7
+    protein_label: Flagellar protein FlaG
+    gene_symbol: flaG
+    taxon_id: NCBITaxon:330779
+    taxon_label: Sulfolobus acidocaldarius DSM 639
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaG in Sulfolobus
+      acidocaldarius DSM 639. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q4J9K7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q4J9K7 for gene flaG in Sulfolobus
+        acidocaldarius DSM 639. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
 - component_id: cytosolic_scaffold
   label: ArlX/ArlCDE cytosolic scaffold
   component_type: PROTEIN_COMPLEX
@@ -177,6 +278,27 @@ components:
     notes: The inspected abstract of Banerjee et al. 2013 reports that Sulfolobus
       acidocaldarius FlaX interacts with FlaI and FlaH in the cytoplasmic archaellum
       complex. The full text was not accessible for this curation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q4J9K6
+    protein_label: Archaeal flagellar motor scaffold protein FlaX
+    gene_symbol: flaX
+    taxon_id: NCBITaxon:330779
+    taxon_label: Sulfolobus acidocaldarius DSM 639
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene flaX in Sulfolobus acidocaldarius
+      DSM 639, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:23129770
+      notes: Banerjee A et al. 2012, ‘FlaX, a unique component of the crenarchaeal
+        archaellum, forms oligomeric ring-shaped structures and interacts with the
+        motor ATPase FlaI.’, J Biol Chem. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Archaeal flagellum' localisation of Q4J9K6.
+    - reference: PMID:24103130
+      notes: Banerjee A et al. 2013, ‘Insights into subunit interactions in the Sulfolobus
+        acidocaldarius archaellum cytoplasmic complex.’, FEBS J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Archaeal flagellum' localisation of Q4J9K6.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
@@ -258,6 +380,7 @@ causal_graphs:
   - node_id: prearchaellin
     label: prearchaellins
     node_type: GENE_OR_PROTEIN
+    component_ref: archaellins
   - node_id: archaellins
     label: mature archaellins
     node_type: GENE_OR_PROTEIN
@@ -265,6 +388,8 @@ causal_graphs:
   - node_id: arlk_pibd
     label: PibD/FlaK prepilin peptidase
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:N6V0I0
   - node_id: arli_arlj
     label: ArlI/ArlJ motor core
     node_type: GENE_OR_PROTEIN

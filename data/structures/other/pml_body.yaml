@@ -28,6 +28,13 @@ curation_history:
     evidence from the PML-rescue paper to Koken et al. 1994''s direct human acute-promyelocytic-leukemia
     PML-body evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:46Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: ND10
   synonym_type: EXACT_SYNONYM
@@ -67,6 +74,31 @@ components:
     notes: Zhong et al. 2000 showed that PML is required for proper PML nuclear-body
       formation in primary Pml-null cells and that SUMO modification of PML is required
       for this role.
+  protein_examples:
+  - uniprot_id: UniProtKB:P29590
+    protein_label: Protein PML
+    gene_symbol: PML
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PML in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:27211601
+      notes: Liang YC et al. 2016, ‘SUMO5, a Novel Poly-SUMO Isoform, Regulates PML
+        Nuclear Bodies.’, Sci Rep. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of P29590.
+    - reference: PMID:20501696
+      notes: Mimura Y et al. 2010, ‘Two-step colocalization of MORC3 with PML nuclear
+        bodies.’, J Cell Sci. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Nucleus, PML body' localisation of P29590.
+    - reference: PMID:20719947
+      notes: Sivachandran N et al. 2010, ‘Epstein-Barr virus nuclear antigen 1 Hijacks
+        the host kinase CK2 to disrupt PML nuclear bodies.’, J Virol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus, PML body' localisation
+        of P29590.
 - component_id: sp100_autoantigen
   label: Sp100 nuclear antigen
   component_type: PROTEIN
@@ -85,6 +117,31 @@ components:
   - reference: DOI:10.1083/jcb.147.2.221
     notes: Ishov et al. 1999 described ND10 as discrete nuclear accumulations of proteins
       including PML and Sp100.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23497
+    protein_label: Nuclear autoantigen Sp-100
+    gene_symbol: SP100
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SP100 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:25593309
+      notes: Gong F et al. 2015, ‘Screen identifies bromodomain protein ZMYND8 in
+        chromatin recognition of transcription-associated DNA damage that promotes
+        homologous recombination.’, Genes Dev. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of P23497.
+    - reference: PMID:27211601
+      notes: Liang YC et al. 2016, ‘SUMO5, a Novel Poly-SUMO Isoform, Regulates PML
+        Nuclear Bodies.’, Sci Rep. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus, PML body' localisation of P23497.
+    - reference: PMID:17245429
+      notes: Milovic-Holm K et al. 2007, ‘FLASH links the CD95 signaling pathway to
+        the cell nucleus and nuclear bodies.’, EMBO J. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nuclear body' localisation of P23497.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens

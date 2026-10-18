@@ -25,6 +25,18 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T03:20:40Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: cellulosomal complex
   synonym_type: EXACT_SYNONYM
@@ -129,6 +141,42 @@ components:
   - reference: DOI:10.1146/annurev-biochem-091208-085603
     notes: Fontes and Gilbert 2010 review cell-surface anchoring scaffoldins and multi-scaffoldin
       architectures in natural cellulosomes.
+  gene_symbols:
+  - olpB
+  - orf2p
+  - sdbA
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06852
+    protein_label: Cell surface glycoprotein 1
+    gene_symbol: olpB
+    taxon_id: NCBITaxon:203119
+    taxon_label: Acetivibrio thermocellus ATCC 27405
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene olpB in Acetivibrio thermocellus
+      ATCC 27405, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q06852
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q06852, the single reviewed entry
+        for gene olpB in Acetivibrio thermocellus ATCC 27405. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P71143
+    protein_label: Scaffolding dockerin binding protein A
+    gene_symbol: sdbA
+    taxon_id: NCBITaxon:1515
+    taxon_label: Acetivibrio thermocellus
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene sdbA in Acetivibrio
+      thermocellus. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P71143
+      notes: UniProtKB unreviewed (TrEMBL) entry P71143 for gene sdbA in Acetivibrio
+        thermocellus. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

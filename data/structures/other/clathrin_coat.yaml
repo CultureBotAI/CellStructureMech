@@ -28,6 +28,18 @@ curation_history:
   changes: 'Resolved PR #1090 review issue #1091 by narrowing the AP-type clathrin
     adaptor grounding note to AP-family heterotetrameric adaptor complexes.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:20:56Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0030117
 synonyms:
@@ -50,6 +62,42 @@ components:
   grounding_notes: The triskelion is represented at the source-neutral protein-complex
     level; no exact Complex Portal, GO, InterPro, Pfam, or NCBIfam CURIE was curated
     in this pass.
+  gene_symbols:
+  - CHC1
+  - CLC1
+  protein_examples:
+  - uniprot_id: UniProtKB:P22137
+    protein_label: Clathrin heavy chain
+    gene_symbol: CHC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CHC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22137
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22137, the single reviewed entry
+        for gene CHC1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P17891
+    protein_label: Clathrin light chain
+    gene_symbol: CLC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CLC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P17891
+      notes: UniProtKB reviewed (Swiss-Prot) entry P17891, the single reviewed entry
+        for gene CLC1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ap_type_clathrin_adaptors
   label: AP-type clathrin adaptor complexes
   component_type: PROTEIN_COMPLEX
@@ -70,6 +118,76 @@ components:
     adaptor complexes; this parent record keeps the AP-family complex boundary broad
     until exact source-neutral complex groundings are curated for each clathrin-coat
     subtype.
+  gene_symbols:
+  - APL2
+  - APL4
+  - APM1
+  - APS1
+  protein_examples:
+  - uniprot_id: UniProtKB:P36000
+    protein_label: AP-1 complex subunit beta-1
+    gene_symbol: APL2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene APL2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P36000
+      notes: UniProtKB reviewed (Swiss-Prot) entry P36000, the single reviewed entry
+        for gene APL2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q12028
+    protein_label: AP-1 complex subunit gamma-1
+    gene_symbol: APL4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene APL4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12028
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12028, the single reviewed entry
+        for gene APL4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q00776
+    protein_label: AP-1 complex subunit mu-1-I
+    gene_symbol: APM1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene APM1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q00776
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q00776, the single reviewed entry
+        for gene APM1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P35181
+    protein_label: AP-1 complex subunit sigma-1
+    gene_symbol: APS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene APS1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P35181
+      notes: UniProtKB reviewed (Swiss-Prot) entry P35181, the single reviewed entry
+        for gene APS1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

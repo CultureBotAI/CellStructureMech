@@ -29,6 +29,13 @@ curation_history:
   changes: 'Addressed review issue #522 by adding GO:0031985 Golgi cisterna as a curated
     Golgi apparatus part and grounding the Golgi cisterna graph node.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:17:54Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0043231
 part_of:
@@ -55,6 +62,69 @@ components:
   - reference: DOI:10.1016/j.ceb.2014.04.010
     notes: Papanikou and Glick 2014 review how Golgi cisternae maintain processing-enzyme
       cohorts.
+  gene_symbols:
+  - OCH1
+  - MNN1
+  - KRE2
+  protein_examples:
+  - uniprot_id: UniProtKB:P31755
+    protein_label: Initiation-specific alpha-1,6-mannosyltransferase
+    gene_symbol: OCH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene OCH1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14676282
+      notes: Karhinen L et al. 2004, ‘Activity of recycling Golgi mannosyltransferases
+        in the yeast endoplasmic reticulum.’, J Cell Sci. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Endoplasmic reticulum membrane' localisation
+        of P31755.
+    - reference: PMID:1628616
+      notes: 'Nakayama K et al. 1992, ‘OCH1 encodes a novel membrane bound mannosyltransferase:
+        outer chain elongation of asparagine-linked oligosaccharides.’, EMBO J. ECO:0000269
+        experimental evidence cited by UniProt for the ''Endoplasmic reticulum membrane''
+        localisation of P31755.'
+    - reference: PMID:15229219
+      notes: Bruinsma P et al. 2004, ‘Retrograde transport of the mannosyltransferase
+        Och1p to the early Golgi requires a component of the COG transport complex.’,
+        J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Golgi
+        apparatus membrane' localisation of P31755.
+  - uniprot_id: UniProtKB:P39106
+    protein_label: Alpha-1,3-mannosyltransferase MNN1
+    gene_symbol: MNN1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MNN1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39106
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39106, the single reviewed entry
+        for gene MNN1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P27809
+    protein_label: Glycolipid 2-alpha-mannosyltransferase
+    gene_symbol: KRE2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene KRE2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P27809
+      notes: UniProtKB reviewed (Swiss-Prot) entry P27809, the single reviewed entry
+        for gene KRE2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: golgi_snare_trafficking_machinery
   label: Golgi SNARE trafficking machinery
   component_type: PROTEIN
@@ -70,6 +140,59 @@ components:
   - reference: DOI:10.1016/j.ceb.2014.04.010
     notes: Papanikou and Glick 2014 review Golgi identity as depending on vesicle
       capture and fusion machinery, including SNARE pairing.
+  gene_symbols:
+  - SED5
+  - TLG2
+  - SEC22
+  protein_examples:
+  - uniprot_id: UniProtKB:Q01590
+    protein_label: Integral membrane protein SED5
+    gene_symbol: SED5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SED5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q01590
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q01590, the single reviewed entry
+        for gene SED5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q08144
+    protein_label: t-SNARE affecting a late Golgi compartment protein 2
+    gene_symbol: TLG2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TLG2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q08144
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q08144, the single reviewed entry
+        for gene TLG2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P22214
+    protein_label: Protein transport protein SEC22
+    gene_symbol: SEC22
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC22 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22214
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22214, the single reviewed entry
+        for gene SEC22 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

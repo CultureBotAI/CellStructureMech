@@ -22,6 +22,13 @@ curation_history:
     constituent rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI evidence,
     a nonmechanistic function graph, and a subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:29:45Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 17 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: PBAF complex
   synonym_type: EXACT_SYNONYM
@@ -53,6 +60,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32597
+    protein_label: Nuclear protein STH1/NPS1
+    gene_symbol: STH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene STH1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P32597.
 - component_id: sfh1_rsc_core_subunit
   label: Sfh1 RSC core subunit
   component_type: PROTEIN
@@ -71,6 +94,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06168
+    protein_label: Chromatin structure-remodeling complex subunit SFH1
+    gene_symbol: SFH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SFH1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q06168.
 - component_id: rsc6_rsc_core_subunit
   label: Rsc6 RSC core subunit
   component_type: PROTEIN
@@ -88,6 +127,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25632
+    protein_label: Chromatin structure-remodeling complex protein RSC6
+    gene_symbol: RSC6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSC6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P25632.
 - component_id: rsc8_rsc_core_subunit
   label: Rsc8 RSC core subunit
   component_type: PROTEIN
@@ -105,6 +160,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P43609
+    protein_label: Chromatin structure-remodeling complex protein RSC8
+    gene_symbol: RSC8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSC8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P43609.
 - component_id: rsc9_rsc_core_subunit
   label: Rsc9 RSC core subunit
   component_type: PROTEIN
@@ -122,6 +193,27 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03124
+    protein_label: Chromatin structure-remodeling complex subunit RSC9
+    gene_symbol: RSC9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSC9 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11931764
+      notes: Damelin M et al. 2002, ‘The genome-wide localization of Rsc9, a component
+        of the RSC chromatin-remodeling complex, changes in response to stress.’,
+        Mol Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of Q03124.
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q03124.
 - component_id: arp7_rsc_arp_module_subunit
   label: Arp7 RSC Arp module subunit
   component_type: PROTEIN
@@ -139,6 +231,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12406
+    protein_label: Actin-related protein 7
+    gene_symbol: ARP7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12406.
 - component_id: arp9_rsc_arp_module_subunit
   label: Arp9 RSC Arp module subunit
   component_type: PROTEIN
@@ -156,6 +264,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q05123
+    protein_label: Actin-like protein ARP9
+    gene_symbol: ARP9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP9 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q05123.
 - component_id: rtt102_rsc_arp_module_subunit
   label: Rtt102 RSC Arp module subunit
   component_type: PROTEIN
@@ -173,6 +297,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53330
+    protein_label: Regulator of Ty1 transposition protein 102
+    gene_symbol: RTT102
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RTT102 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53330.
 - component_id: npl6_rsc_arm_lobe_subunit
   label: Npl6 RSC arm lobe subunit
   component_type: PROTEIN
@@ -190,6 +330,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32832
+    protein_label: Chromatin structure-remodeling complex subunit RSC7
+    gene_symbol: NPL6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NPL6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P32832.
 - component_id: htl1_rsc_subunit
   label: Htl1 RSC subunit
   component_type: PROTEIN
@@ -207,6 +363,23 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9URQ5
+    protein_label: High temperature lethal protein 1
+    gene_symbol: HTL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HTL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12417720
+      notes: Romeo MJ et al. 2002, ‘HTL1 encodes a novel factor that interacts with
+        the RSC chromatin remodeling complex in Saccharomyces cerevisiae.’, Mol Cell
+        Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of Q9URQ5.
 - component_id: ldb7_rsc_subunit
   label: Ldb7 RSC subunit
   component_type: PROTEIN
@@ -224,6 +397,23 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38210
+    protein_label: Chromatin structure-remodeling complex protein RSC14
+    gene_symbol: LDB7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene LDB7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38210
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38210, the single reviewed entry
+        for gene LDB7 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rsc1_rsc2_rsc_isoform_subunit
   label: Rsc1/Rsc2 RSC isoform subunit
   component_type: PROTEIN
@@ -243,6 +433,37 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53236
+    protein_label: Chromatin structure-remodeling complex subunit RSC1
+    gene_symbol: RSC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P53236.
+  - uniprot_id: UniProtKB:Q06488
+    protein_label: Chromatin structure-remodeling complex subunit RSC2
+    gene_symbol: RSC2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSC2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q06488.
 - component_id: rsc3_rsc_tail_subunit
   label: Rsc3 RSC tail subunit
   component_type: PROTEIN
@@ -260,6 +481,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06639
+    protein_label: Chromatin structure-remodeling complex protein RSC3
+    gene_symbol: RSC3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSC3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q06639.
 - component_id: rsc30_rsc_tail_subunit
   label: Rsc30 RSC tail subunit
   component_type: PROTEIN
@@ -277,6 +514,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38781
+    protein_label: Chromatin structure-remodeling complex protein RSC30
+    gene_symbol: RSC30
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSC30 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P38781.
 - component_id: rsc4_rsc_head_subunit
   label: Rsc4 RSC head subunit
   component_type: PROTEIN
@@ -294,6 +547,26 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02206
+    protein_label: Chromatin structure-remodeling complex subunit RSC4
+    gene_symbol: RSC4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSC4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q02206.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q02206.
 - component_id: rsc58_rsc_head_body_subunit
   label: Rsc58 RSC head/body subunit
   component_type: PROTEIN
@@ -312,6 +585,22 @@ components:
     notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
       Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2,
       and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07979
+    protein_label: Chromatin structure-remodeling complex protein RSC58
+    gene_symbol: RSC58
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSC58 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q07979.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

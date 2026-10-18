@@ -27,6 +27,13 @@ curation_history:
   changes: Narrowed the Homo sapiens distribution row to the Fei et al. 2017 human
     nuclear-speckle organization claim that its reference directly supports.
   llm_assisted: true
+- timestamp: '2026-10-18T03:34:33Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: nuclear speckle
   synonym_type: EXACT_SYNONYM
@@ -71,6 +78,47 @@ components:
   - reference: DOI:10.1038/387523a0
     notes: Misteli, Caceres and Spector 1997 tracked a GFP-tagged pre-mRNA splicing
       factor between nuclear speckles and sites of transcription.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07955
+    protein_label: Serine/arginine-rich splicing factor 1
+    gene_symbol: SRSF1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SRSF1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:37595559
+      notes: Cho S et al. 2023, ‘FAM120A couples SREBP-dependent transcription and
+        splicing of lipogenesis enzymes downstream of mTORC1.’, Mol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Chromosome' localisation of
+        Q07955.
+    - reference: PMID:12215544
+      notes: Cazalla D et al. 2002, ‘Nuclear export and retention signals in the RS
+        domain of SR proteins.’, Mol Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm' localisation of Q07955.
+    - reference: PMID:20308322
+      notes: Sinha R et al. 2010, ‘Arginine methylation controls the subcellular localization
+        and functions of the oncoprotein splicing factor SF2/ASF.’, Mol Cell Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm' localisation
+        of Q07955.
+  - uniprot_id: UniProtKB:Q01130
+    protein_label: Serine/arginine-rich splicing factor 2
+    gene_symbol: SRSF2
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SRSF2 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:21157427
+      notes: Edmond V et al. 2011, ‘Acetylation and phosphorylation of SRSF2 control
+        cell fate decision in response to cisplatin.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q01130.
 - component_id: son_srrm2_scaffold_proteins
   label: SON/SRRM2 scaffold proteins
   component_type: PROTEIN
@@ -92,6 +140,55 @@ components:
   - reference: DOI:10.1242/jcs.206854
     notes: Fei et al. 2017 resolved SON in the central region of human nuclear speckles
       by super-resolution microscopy.
+  protein_examples:
+  - uniprot_id: UniProtKB:P18583
+    protein_label: Protein SON
+    gene_symbol: SON
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SON in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:1424986
+      notes: Mattioni T et al. 1992, ‘A cDNA clone for a novel nuclear protein with
+        DNA binding activity.’, Chromosoma. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus speckle' localisation of P18583.
+    - reference: PMID:21504830
+      notes: Ahn EY et al. 2011, ‘SON controls cell-cycle progression by coordinated
+        regulation of RNA splicing.’, Mol Cell. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus speckle' localisation of P18583.
+    - reference: PMID:34023904
+      notes: Yildirim A et al. 2021, ‘SANS (USH1G) regulates pre-mRNA splicing by
+        mediating the intra-nuclear transfer of tri-snRNP complexes.’, Nucleic Acids
+        Res. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus speckle'
+        localisation of P18583.
+  - uniprot_id: UniProtKB:Q9UQ35
+    protein_label: Serine/arginine repetitive matrix protein 2
+    gene_symbol: SRRM2
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SRRM2 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:28062851
+      notes: Zanini IM et al. 2017, ‘Human cactin interacts with DHX8 and SRRM2 to
+        assure efficient pre-mRNA splicing and sister chromatid cohesion.’, J Cell
+        Sci. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of Q9UQ35.
+    - reference: PMID:28076346
+      notes: Bertram K et al. 2017, ‘Cryo-EM structure of a human spliceosome activated
+        for step 2 of splicing.’, Nature. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of Q9UQ35.
+    - reference: PMID:28502770
+      notes: Zhang X et al. 2017, ‘An Atomic Structure of the Human Spliceosome.’,
+        Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of Q9UQ35.
 - component_id: malat1_lncrna
   label: MALAT1 lncRNA
   component_type: RNA

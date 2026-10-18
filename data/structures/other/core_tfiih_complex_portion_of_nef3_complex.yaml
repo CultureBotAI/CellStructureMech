@@ -19,6 +19,13 @@ curation_history:
     TFIIH core constituents, Saccharomyces scope, a nucleotide-excision-repair function
     graph, and TFIIH-core grounding and boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-18T03:21:52Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: SSL2-core TFIIH complex portion of NEF3 complex
   synonym_type: EXACT_SYNONYM
@@ -48,6 +55,24 @@ components:
   - reference: GO:0000440
     notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q00578
+    protein_label: General transcription and DNA repair factor IIH helicase/translocase
+      subunit XPB/SSL2
+    gene_symbol: SSL2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SSL2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q00578
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q00578, the single reviewed entry
+        for gene SSL2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: tfb1_p62_tfiih_core_subunit
   label: Tfb1/p62 TFIIH core subunit
   component_type: PROTEIN
@@ -68,6 +93,23 @@ components:
   - reference: GO:0000440
     notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32776
+    protein_label: General transcription and DNA repair factor IIH subunit TFB1
+    gene_symbol: TFB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TFB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32776
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32776, the single reviewed entry
+        for gene TFB1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: tfb2_p52_tfiih_core_subunit
   label: Tfb2/p52 TFIIH core subunit
   component_type: PROTEIN
@@ -88,6 +130,23 @@ components:
   - reference: GO:0000440
     notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02939
+    protein_label: General transcription and DNA repair factor IIH subunit TFB2
+    gene_symbol: TFB2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TFB2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q02939
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q02939, the single reviewed entry
+        for gene TFB2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ssl1_p44_tfiih_core_subunit
   label: Ssl1/p44 TFIIH core subunit
   component_type: PROTEIN
@@ -108,6 +167,23 @@ components:
   - reference: GO:0000440
     notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04673
+    protein_label: General transcription and DNA repair factor IIH subunit SSL1
+    gene_symbol: SSL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SSL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q04673
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q04673, the single reviewed entry
+        for gene SSL1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: tfb4_p34_tfiih_core_subunit
   label: Tfb4/p34 TFIIH core subunit
   component_type: PROTEIN
@@ -128,6 +204,23 @@ components:
   - reference: GO:0000440
     notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12004
+    protein_label: General transcription and DNA repair factor IIH subunit TFB4
+    gene_symbol: TFB4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TFB4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12004
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12004, the single reviewed entry
+        for gene TFB4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: tfb5_p8_tfiih_core_subunit
   label: Tfb5/p8 TFIIH core subunit
   component_type: PROTEIN
@@ -148,6 +241,22 @@ components:
   - reference: GO:0000440
     notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q3E7C1
+    protein_label: General transcription and DNA repair factor IIH subunit TFB5
+    gene_symbol: TFB5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TFB5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q3E7C1.
 - component_id: rad3_xpd_tfiih_core_subunit
   label: Rad3/XPD TFIIH core subunit
   component_type: PROTEIN
@@ -168,6 +277,24 @@ components:
   - reference: GO:0000440
     notes: GO:0000440 denotes that TFIIH core complex when it is part of the NEF3
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06839
+    protein_label: General transcription and DNA repair factor IIH helicase subunit
+      XPD/RAD3
+    gene_symbol: RAD3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P06839
+      notes: UniProtKB reviewed (Swiss-Prot) entry P06839, the single reviewed entry
+        for gene RAD3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

@@ -33,6 +33,11 @@ curation_history:
     edge to the nuclear inner membrane, and modelling Heh1p and Heh2p as cargo of
     that process.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: inner nuclear membrane
   synonym_type: EXACT_SYNONYM
@@ -125,12 +130,18 @@ causal_graphs:
   - node_id: kap60_kap95
     label: Kap60/Kap95 karyopherin system
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q02821
   - node_id: heh1p
     label: Heh1p
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q03707
   - node_id: heh2p
     label: Heh2p
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q03281
   - node_id: integral_inner_nuclear_membrane_protein_targeting
     label: integral inner nuclear membrane protein targeting
     node_type: BIOLOGICAL_PROCESS

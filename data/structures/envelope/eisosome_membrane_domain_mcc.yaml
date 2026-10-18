@@ -33,6 +33,13 @@ curation_history:
     evidence through reachable PMID:25002088 instead of the unreadable Annual Reviews
     DOI.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:14:53Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: membrane compartment of Can1
   synonym_type: EXACT_SYNONYM
@@ -63,6 +70,32 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral family CURIE for Sur7-containing MCC/eisosome
     membrane proteins was curated in this pass.
+  protein_examples:
+  - uniprot_id: UniProtKB:P54003
+    protein_label: Protein SUR7
+    gene_symbol: SUR7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SUR7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11784867
+      notes: Young ME et al. 2002, ‘The Sur7p family defines novel cortical domains
+        in Saccharomyces cerevisiae, affects sphingolipid metabolism, and is involved
+        in sporulation.’, Mol Cell Biol. ECO:0000269 experimental evidence cited by
+        UniProt for the 'Cell membrane' localisation of P54003.
+    - reference: PMID:12469340
+      notes: 'Navarre C et al. 2002, ‘Subproteomics: identification of plasma membrane
+        proteins from the yeast Saccharomyces cerevisiae.’, Proteomics. ECO:0000269
+        experimental evidence cited by UniProt for the ''Cell membrane'' localisation
+        of P54003.'
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cell membrane' localisation of P54003.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4751
   taxon_label: Fungi

@@ -22,6 +22,13 @@ curation_history:
     GO-grounded actin-polymerization function, GO/DOI evidence, a nonmechanistic Arp2/3
     activation graph, and a component-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:33:09Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0032991
 part_of:
@@ -44,6 +51,32 @@ components:
   - reference: DOI:10.1016/j.devcel.2009.09.010
     notes: Derivery et al. 2009 purified the human WASH complex and identified WASH
       as a complex subunit.
+  gene_symbols:
+  - WASHC1
+  protein_examples:
+  - uniprot_id: UniProtKB:A8K0Z3
+    protein_label: WASH complex subunit 1
+    gene_symbol: WASHC1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene WASHC1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:19922874
+      notes: Gomez TS et al. 2009, ‘A FAM21-containing WASH complex regulates retromer-dependent
+        sorting.’, Dev Cell. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Early endosome membrane' localisation of A8K0Z3.
+    - reference: PMID:22114305
+      notes: Zech T et al. 2011, ‘The Arp2/3 activator WASH regulates α5β1-integrin-mediated
+        invasive migration.’, J Cell Sci. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Late endosome' localisation of A8K0Z3.
+    - reference: PMID:24344185
+      notes: Monteiro P et al. 2013, ‘Endosomal WASH and exocyst complexes control
+        exocytosis of MT1-MMP at invadopodia.’, J Cell Biol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Late endosome' localisation of A8K0Z3.
 - component_id: fam21_wash_subunit
   label: FAM21/VPEF WASH-complex subunit
   component_type: PROTEIN
@@ -59,6 +92,24 @@ components:
   - reference: DOI:10.1016/j.devcel.2009.09.010
     notes: Derivery et al. 2009 identified VPEF/FAM21 in affinity purifications of
       the WASH complex from human cells.
+  gene_symbols:
+  - WASHC2A
+  protein_examples:
+  - uniprot_id: UniProtKB:Q641Q2
+    protein_label: WASH complex subunit 2A
+    gene_symbol: WASHC2A
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene WASHC2A in Homo sapiens, a
+      taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:28892079
+      notes: McNally KE et al. 2017, ‘Retriever is a multiprotein complex for retromer-independent
+        endosomal cargo recycling.’, Nat Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Early endosome membrane' localisation of Q641Q2.
 - component_id: swip_wash_subunit
   label: SWIP/KIAA1033 WASH-complex subunit
   component_type: PROTEIN
@@ -74,6 +125,25 @@ components:
   - reference: DOI:10.1016/j.devcel.2009.09.010
     notes: Derivery et al. 2009 identified KIAA1033 in affinity purifications of the
       WASH complex from human cells.
+  gene_symbols:
+  - WASHC4
+  protein_examples:
+  - uniprot_id: UniProtKB:Q2M389
+    protein_label: WASH complex subunit 4
+    gene_symbol: WASHC4
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene WASHC4 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:23676666
+      notes: Ryder PV et al. 2013, ‘The WASH complex, an endosomal Arp2/3 activator,
+        interacts with the Hermansky-Pudlak syndrome complex BLOC-1 and its cargo
+        phosphatidylinositol-4-kinase type IIα.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Early endosome' localisation of Q2M389.
 - component_id: strumpellin_wash_subunit
   label: strumpellin/KIAA0196 WASH-complex subunit
   component_type: PROTEIN
@@ -90,6 +160,35 @@ components:
   - reference: DOI:10.1016/j.devcel.2009.09.010
     notes: Derivery et al. 2009 identified KIAA0196/strumpellin in affinity purifications
       of the WASH complex from human cells.
+  gene_symbols:
+  - WASHC5
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12768
+    protein_label: WASH complex subunit 5
+    gene_symbol: WASHC5
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene WASHC5 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:20833645
+      notes: Clemen CS et al. 2010, ‘Strumpellin is a novel valosin-containing protein
+        binding partner linking hereditary spastic paraplegia to protein aggregation
+        diseases.’, Brain. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cytoplasm, cytosol' localisation of Q12768.
+    - reference: PMID:23085491
+      notes: 'Freeman C et al. 2013, ‘The hereditary spastic paraplegia protein strumpellin:
+        characterisation in neurons and of the effect of disease mutations on WASH
+        complex assembly and function.’, Biochim Biophys Acta. ECO:0000269 experimental
+        evidence cited by UniProt for the ''Early endosome'' localisation of Q12768.'
+    - reference: PMID:23676666
+      notes: Ryder PV et al. 2013, ‘The WASH complex, an endosomal Arp2/3 activator,
+        interacts with the Hermansky-Pudlak syndrome complex BLOC-1 and its cargo
+        phosphatidylinositol-4-kinase type IIα.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Early endosome' localisation of Q12768.
 - component_id: ccdc53_wash_subunit
   label: CCDC53 WASH-complex subunit
   component_type: PROTEIN
@@ -105,6 +204,25 @@ components:
   - reference: DOI:10.1016/j.devcel.2009.09.010
     notes: Derivery et al. 2009 identified CCDC53 in affinity purifications of the
       WASH complex from human cells.
+  gene_symbols:
+  - WASHC3
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9Y3C0
+    protein_label: WASH complex subunit 3
+    gene_symbol: WASHC3
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene WASHC3 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q9Y3C0
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q9Y3C0, the single reviewed entry
+        for gene WASHC3 in Homo sapiens. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 - component_id: f_actin_capping_protein_heterodimer
   label: F-actin-capping protein heterodimer
   component_type: PROTEIN_COMPLEX
@@ -121,6 +239,42 @@ components:
   - reference: DOI:10.1016/j.devcel.2009.09.010
     notes: Derivery et al. 2009 identified capping-protein alpha and beta subunits
       in affinity purifications of the WASH complex from human cells.
+  gene_symbols:
+  - CAPZA1
+  - CAPZB
+  protein_examples:
+  - uniprot_id: UniProtKB:P52907
+    protein_label: F-actin-capping protein subunit alpha-1
+    gene_symbol: CAPZA1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CAPZA1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P52907
+      notes: UniProtKB reviewed (Swiss-Prot) entry P52907, the single reviewed entry
+        for gene CAPZA1 in Homo sapiens. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
+  - uniprot_id: UniProtKB:P47756
+    protein_label: F-actin-capping protein subunit beta
+    gene_symbol: CAPZB
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CAPZB in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P47756
+      notes: UniProtKB reviewed (Swiss-Prot) entry P47756, the single reviewed entry
+        for gene CAPZB in Homo sapiens. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens

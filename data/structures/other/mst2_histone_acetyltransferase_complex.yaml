@@ -21,6 +21,13 @@ curation_history:
     GO/PubMed/DOI evidence, a nonmechanistic function graph, and an Mst2 complex subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:26:47Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Mst2 complex
   synonym_type: EXACT_SYNONYM
@@ -54,6 +61,23 @@ components:
   - reference: DOI:10.1101/gad.1993611
     notes: Reddy et al. 2011 described Mst2 as the H3K14 acetyltransferase catalytic
       subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q10325
+    protein_label: Histone acetyltransferase mst2
+    gene_symbol: mst2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene mst2 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q10325
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q10325, the single reviewed entry
+        for gene mst2 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: nto1_mst2_complex_subunit
   label: Nto1 Mst2 complex subunit
   component_type: PROTEIN
@@ -74,6 +98,23 @@ components:
   - reference: DOI:10.1101/gad.1993611
     notes: Reddy et al. 2011 identified Nto1 as an activity-essential Mst2-complex
       component.
+  protein_examples:
+  - uniprot_id: UniProtKB:O74759
+    protein_label: Mst2 complex subunit nto1
+    gene_symbol: nto1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nto1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16823372
+      notes: Matsuyama A et al. 2006, ‘ORFeome cloning and global analysis of protein
+        localization in the fission yeast Schizosaccharomyces pombe.’, Nat Biotechnol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm' localisation
+        of O74759.
 - component_id: ptf2_mst2_complex_subunit
   label: Ptf2 Mst2 complex subunit
   component_type: PROTEIN
@@ -94,6 +135,23 @@ components:
   - reference: DOI:10.1101/gad.1993611
     notes: Reddy et al. 2011 identified Ptf2 as an activity-essential Mst2-complex
       component.
+  protein_examples:
+  - uniprot_id: UniProtKB:O60127
+    protein_label: Pdp3-interacting factor 2
+    gene_symbol: ptf2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ptf2 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16823372
+      notes: Matsuyama A et al. 2006, ‘ORFeome cloning and global analysis of protein
+        localization in the fission yeast Schizosaccharomyces pombe.’, Nat Biotechnol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm' localisation
+        of O60127.
 - component_id: ptf1_mst2_complex_subunit
   label: Ptf1 Mst2 complex subunit
   component_type: PROTEIN
@@ -113,6 +171,23 @@ components:
     notes: GO:0036410 defines Ptf1 as a fission-yeast Mst2-complex constituent.
   - reference: DOI:10.1101/gad.1993611
     notes: Reddy et al. 2011 identified Ptf1 as an Mst2-complex component.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9P6N2
+    protein_label: Pdp3-interacting factor 1
+    gene_symbol: ptf1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ptf1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16823372
+      notes: Matsuyama A et al. 2006, ‘ORFeome cloning and global analysis of protein
+        localization in the fission yeast Schizosaccharomyces pombe.’, Nat Biotechnol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm' localisation
+        of Q9P6N2.
 - component_id: eaf6_mst2_complex_subunit
   label: Eaf6 Mst2 complex subunit
   component_type: PROTEIN
@@ -132,6 +207,23 @@ components:
     notes: GO:0036410 defines Eaf6 as a fission-yeast Mst2-complex constituent.
   - reference: DOI:10.1101/gad.1993611
     notes: Reddy et al. 2011 identified Eaf6 as an Mst2-complex component.
+  protein_examples:
+  - uniprot_id: UniProtKB:O14240
+    protein_label: Chromatin modification-related protein eaf6
+    gene_symbol: eaf6
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene eaf6 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O14240
+      notes: UniProtKB reviewed (Swiss-Prot) entry O14240, the single reviewed entry
+        for gene eaf6 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe

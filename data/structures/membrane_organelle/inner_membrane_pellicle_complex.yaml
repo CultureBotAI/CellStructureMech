@@ -28,6 +28,11 @@ curation_history:
     IMC review for Apicomplexa-wide taxonomic scope and by retyping the IMC shape-stability
     graph node as a stable parasite-morphology state.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 synonyms:
@@ -71,6 +76,10 @@ components:
   - reference: DOI:10.1093/molbev/mss081
     notes: Kono et al. 2012 analysed Plasmodium alveolin proteins in inner-membrane-complex
       architecture across asexual and sexual malaria-parasite stages.
+  gene_symbols:
+  - IMC1a
+  - IMC1c
+  - IMC1g
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5794
   taxon_label: Apicomplexa
@@ -156,6 +165,10 @@ causal_graphs:
   - node_id: glideosome
     label: actin-myosin glideosome
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:O00934
+    - UniProtKB:Q7Z289
+    - UniProtKB:A0A125YT84
   - node_id: host_cell_invasion
     label: host-cell invasion
     node_type: BIOLOGICAL_PROCESS

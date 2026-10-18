@@ -36,6 +36,11 @@ curation_history:
     in vitro system, and named K1-CanA as the solved NMR construct. Preserved PROPOSED
     status and unresolved family, minor-subunit and physiological-function questions.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:47Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: cannulae
   synonym_type: EXACT_SYNONYM
@@ -64,6 +69,24 @@ components:
     notes: Munte et al. 2025 solved the NMR solution structure of the N-terminally
       truncated K1-CanA construct and separately characterized divalent-ion-induced
       polymerization of full-length recombinant CanA.
+  gene_symbols:
+  - canA
+  protein_examples:
+  - uniprot_id: UniProtKB:A0ACM8DFF3
+    protein_label: CanA
+    gene_symbol: canA
+    taxon_id: NCBITaxon:54256
+    taxon_label: Pyrodictium abyssi
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene canA in Pyrodictium
+      abyssi. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0ACM8DFF3
+      notes: UniProtKB unreviewed (TrEMBL) entry A0ACM8DFF3 for gene canA in Pyrodictium
+        abyssi. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: canx_cannula_glycoprotein
   label: CanX cannula glycoprotein
   component_type: PROTEIN

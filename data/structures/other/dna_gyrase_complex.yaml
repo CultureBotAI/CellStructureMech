@@ -27,6 +27,13 @@ curation_history:
   changes: '#1475: added structured stoichiometry to the GyrA and GyrB component rows
     to capture the A2B2 DNA gyrase protein assembly described by GO:0120217 and PDB:6RKU.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:22:46Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0009330
 components:
@@ -47,6 +54,23 @@ components:
     notes: RCSB maps PDB:6RKU polymer entity 1 to Escherichia coli K-12 DNA gyrase
       subunit A, UniProtKB:P0AES4.
   stoichiometry: 2 copies per GyrA2-GyrB2 complex
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene gyrA in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AES4
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AES4, the single reviewed entry
+        for gene gyrA in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: gyrase_subunit_b
   label: DNA gyrase subunit B
   component_type: PROTEIN
@@ -64,6 +88,23 @@ components:
     notes: RCSB maps PDB:6RKU polymer entity 2 to Escherichia coli K-12 DNA gyrase
       subunit B, UniProtKB:P0AES6.
   stoichiometry: 2 copies per GyrA2-GyrB2 complex
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene gyrB in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AES6
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AES6, the single reviewed entry
+        for gene gyrB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:83333
   taxon_label: Escherichia coli K-12

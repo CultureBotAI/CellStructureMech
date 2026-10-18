@@ -26,6 +26,13 @@ curation_history:
     that makes TGN clathrin adaptor and cargo-selection factors explicit parts of
     the TGN clathrin coat in the topology graph.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:21:07Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0030125
 part_of:
@@ -52,6 +59,42 @@ components:
   grounding_notes: The clathrin triskelion is represented here at the source-neutral
     protein-complex level; no exact Complex Portal, GO, InterPro, Pfam, or NCBIfam
     CURIE was curated in this pass.
+  gene_symbols:
+  - CHC1
+  - CLC1
+  protein_examples:
+  - uniprot_id: UniProtKB:P22137
+    protein_label: Clathrin heavy chain
+    gene_symbol: CHC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CHC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22137
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22137, the single reviewed entry
+        for gene CHC1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P17891
+    protein_label: Clathrin light chain
+    gene_symbol: CLC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CLC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P17891
+      notes: UniProtKB reviewed (Swiss-Prot) entry P17891, the single reviewed entry
+        for gene CLC1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: tgn_clathrin_adaptors
   label: TGN clathrin adaptor and cargo-selection factors
   component_type: PROTEIN
@@ -74,6 +117,76 @@ components:
   grounding_notes: TGN clathrin coats use AP-type, epsin-like, and other cargo-selection
     factors; no exact source-neutral protein-family or complex CURIE was curated for
     that full adaptor class.
+  gene_symbols:
+  - GGA1
+  - GGA2
+  - ENT3
+  - ENT5
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06336
+    protein_label: ADP-ribosylation factor-binding protein GGA1
+    gene_symbol: GGA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GGA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q06336
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q06336, the single reviewed entry
+        for gene GGA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P38817
+    protein_label: ADP-ribosylation factor-binding protein GGA2
+    gene_symbol: GGA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GGA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38817
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38817, the single reviewed entry
+        for gene GGA2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P47160
+    protein_label: Epsin-3
+    gene_symbol: ENT3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ENT3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12483220
+      notes: Duncan MC et al. 2003, ‘Yeast epsin-related proteins required for Golgi-endosome
+        traffic define a gamma-adaptin ear-binding motif.’, Nat Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P47160.
+  - uniprot_id: UniProtKB:Q03769
+    protein_label: Epsin-5
+    gene_symbol: ENT5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ENT5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03769
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03769, the single reviewed entry
+        for gene ENT5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

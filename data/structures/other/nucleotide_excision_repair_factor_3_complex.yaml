@@ -28,6 +28,13 @@ curation_history:
   changes: Canonicalized the GO:0000440 component and graph node labels to the issuing
     GO term label.
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:32Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: NEF3 complex
   synonym_type: EXACT_SYNONYM
@@ -53,6 +60,23 @@ components:
   evidence:
   - reference: GO:0000112
     notes: GO:0000112 defines the NEF3 complex as containing Rad2p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P07276
+    protein_label: DNA repair protein RAD2
+    gene_symbol: RAD2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P07276
+      notes: UniProtKB reviewed (Swiss-Prot) entry P07276, the single reviewed entry
+        for gene RAD2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: core_tfiih_ssl2p_nef3_subcomplex
   label: core TFIIH complex portion of NEF3 complex
   component_type: PROTEIN_COMPLEX

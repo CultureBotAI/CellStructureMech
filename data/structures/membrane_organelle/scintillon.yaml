@@ -25,6 +25,11 @@ curation_history:
   changes: 'Addressed adversarial review issue #1979: listed exact inspected LBP accessions
     and excluded Q39912, which resolves to luciferase O77206.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 part_of:
@@ -68,6 +73,24 @@ components:
   evidence:
   - reference: DOI:10.1371/journal.pone.0171594
     notes: Figure 7 localizes LBP in isolated scintillons.
+  gene_symbols:
+  - lbp
+  protein_examples:
+  - uniprot_id: UniProtKB:Q39913
+    protein_label: Luciferin-binding protein
+    gene_symbol: lbp
+    taxon_id: NCBITaxon:160621
+    taxon_label: Lingulaulax polyedra
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene lbp in Lingulaulax
+      polyedra. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q39913
+      notes: UniProtKB unreviewed (TrEMBL) entry Q39913 for gene lbp in Lingulaulax
+        polyedra. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: luciferin
   label: dinoflagellate luciferin
   component_type: SMALL_MOLECULE

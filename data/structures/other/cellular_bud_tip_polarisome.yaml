@@ -26,6 +26,18 @@ curation_history:
   changes: 'Resolved #1738 by renaming the Bud6/Aip3 component and graph node from
     an actin nucleation-promoting factor to an actin-associated polarity protein.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:20:32Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 parent_structures:
 - GO:0000133
 part_of:
@@ -52,6 +64,43 @@ components:
   - reference: DOI:10.1128/MCB.18.7.4053
     notes: Sheu et al. 1998 found that Spa2 interacts with Pea2 in two-hybrid and
       coimmunoprecipitation experiments.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23201
+    protein_label: Scaffold protein SPA2
+    gene_symbol: SPA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12361575
+      notes: van Drogen F et al. 2002, ‘Spa2p functions as a scaffold-like protein
+        to recruit the Mpk1p MAP kinase module to sites of polarized growth.’, Curr
+        Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Bud tip'
+        localisation of P23201.
+    - reference: PMID:31699995
+      notes: Xie Y et al. 2019, ‘Polarisome scaffolder Spa2-mediated macromolecular
+        condensation of Aip5 for actin polymerization.’, Nat Commun. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Bud tip' localisation of P23201.
+  - uniprot_id: UniProtKB:P40091
+    protein_label: Protein PEA2
+    gene_symbol: PEA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PEA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40091
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40091, the single reviewed entry
+        for gene PEA2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: bud6_actin_associated_polarity_protein
   label: Bud6/Aip3 actin-associated polarity protein
   component_type: PROTEIN
@@ -71,6 +120,27 @@ components:
     notes: Sheu et al. 1998 showed that Spa2 interacts with Bud6/Aip3 by two-hybrid
       analysis and that a significant portion of Spa2, Pea2, and Bud6 cosediments
       as a 12S multiprotein complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P41697
+    protein_label: Bud site selection protein 6
+    gene_symbol: BUD6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BUD6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym AIP3).
+    evidence:
+    - reference: PMID:31699995
+      notes: Xie Y et al. 2019, ‘Polarisome scaffolder Spa2-mediated macromolecular
+        condensation of Aip5 for actin polymerization.’, Nat Commun. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Bud tip' localisation of P41697.
+    - reference: PMID:41065574
+      notes: Magliozzi JO et al. 2025, ‘Aip5 forms a "composite" actin nucleator with
+        Bud6 and caps pointed ends of actin filaments.’, J Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Bud tip' localisation of P41697.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

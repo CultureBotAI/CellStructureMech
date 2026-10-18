@@ -42,6 +42,19 @@ curation_history:
   changes: '#2309: Retain bacterial aa3 subunit IV label-only instead of using a domain
     grounding.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:14:41Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s); added 1 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: cytochrome c oxidase complex
   synonym_type: EXACT_SYNONYM
@@ -72,6 +85,23 @@ components:
   - reference: PDB:1QLE
     notes: RCSB maps PDB:1QLE polymer entity 1 to Paracoccus denitrificans cytochrome
       c oxidase subunit 1-beta, UniProtKB:P98002.
+  protein_examples:
+  - uniprot_id: UniProtKB:P98002
+    protein_label: Cytochrome c oxidase subunit 1-beta
+    gene_symbol: ctaDII
+    taxon_id: NCBITaxon:266
+    taxon_label: Paracoccus denitrificans
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ctaDII in Paracoccus denitrificans,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P98002
+      notes: UniProtKB reviewed (Swiss-Prot) entry P98002, the single reviewed entry
+        for gene ctaDII in Paracoccus denitrificans. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 - component_id: cytochrome_c_oxidase_subunit_ii
   label: cytochrome c oxidase subunit II
   component_type: PROTEIN
@@ -99,6 +129,40 @@ components:
   - reference: PDB:1QLE
     notes: RCSB maps PDB:1QLE polymer entity 2 to Paracoccus denitrificans cytochrome
       c oxidase subunit 2, UniProtKB:P08306.
+  protein_examples:
+  - uniprot_id: UniProtKB:P08306
+    protein_label: Cytochrome c oxidase subunit 2
+    gene_symbol: ctaC
+    taxon_id: NCBITaxon:266
+    taxon_label: Paracoccus denitrificans
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ctaC in Paracoccus denitrificans,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure (also declared
+      as synonym ctaB, coiI).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P08306
+      notes: UniProtKB reviewed (Swiss-Prot) entry P08306, the single reviewed entry
+        for gene ctaC in Paracoccus denitrificans. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:A1BA40
+    protein_label: Protoheme IX farnesyltransferase
+    gene_symbol: ctaB
+    taxon_id: NCBITaxon:318586
+    taxon_label: Paracoccus denitrificans PD1222
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ctaB in Paracoccus denitrificans
+      PD1222. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A1BA40
+      notes: UniProtKB reviewed (Swiss-Prot) entry A1BA40, the single reviewed entry
+        for gene ctaB in Paracoccus denitrificans PD1222. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cytochrome_c_oxidase_subunit_iii
   label: cytochrome c oxidase subunit III
   component_type: PROTEIN
@@ -120,6 +184,24 @@ components:
   - reference: PDB:1QLE
     notes: RCSB maps PDB:1QLE polymer entity 3 to Paracoccus denitrificans cytochrome
       c oxidase subunit 3, UniProtKB:P06030.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06030
+    protein_label: Cytochrome c oxidase subunit 3
+    gene_symbol: ctaE
+    taxon_id: NCBITaxon:266
+    taxon_label: Paracoccus denitrificans
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ctaE in Paracoccus denitrificans,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure (also declared
+      as synonym coiII).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P06030
+      notes: UniProtKB reviewed (Swiss-Prot) entry P06030, the single reviewed entry
+        for gene ctaE in Paracoccus denitrificans. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: bacterial_aa3_subunit_iv
   label: bacterial aa3-type cytochrome c oxidase subunit IV
   component_type: PROTEIN
@@ -140,6 +222,23 @@ components:
   grounding_notes: InterPro IPR012422 is a domain entry and IPR036596 is a homologous
     superfamily, neither an exact integrated protein family under the curation policy.
     Retain the PDB-supported subunit as label-only pending an exact family.
+  protein_examples:
+  - uniprot_id: UniProtKB:P77921
+    protein_label: Cytochrome c oxidase subunit 4
+    gene_symbol: ctaH
+    taxon_id: NCBITaxon:266
+    taxon_label: Paracoccus denitrificans
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ctaH in Paracoccus denitrificans,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P77921
+      notes: UniProtKB reviewed (Swiss-Prot) entry P77921, the single reviewed entry
+        for gene ctaH in Paracoccus denitrificans. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:266
   taxon_label: Paracoccus denitrificans
@@ -204,6 +303,8 @@ causal_graphs:
   - node_id: reduced_cytochrome_c
     label: reduced cytochrome c
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P00096
   - node_id: subunit_i
     label: bacterial cytochrome c oxidase subunit I
     node_type: GENE_OR_PROTEIN

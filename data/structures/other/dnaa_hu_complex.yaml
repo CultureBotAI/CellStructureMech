@@ -27,6 +27,11 @@ curation_history:
   changes: 'Addressed PR #1867 review issue #1868 by removing unsupported DNA-bending
     mechanism text from the nonmechanistic DnaA-HU graph scope.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: DnaA-HU-DNA complex
   synonym_type: EXACT_SYNONYM
@@ -53,6 +58,34 @@ components:
   - reference: PMID:18179598
     notes: Chodavarapu et al. 2008 studied E. coli DnaA interaction with HU during
       initiation at the E. coli replication origin.
+  protein_examples:
+  - uniprot_id: UniProtKB:P03004
+    protein_label: Chromosomal replication initiator protein DnaA
+    gene_symbol: dnaA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dnaA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22574163
+      notes: 'Regev T et al. 2012, ‘Association of the chromosome replication initiator
+        DnaA with the Escherichia coli inner membrane in vivo: quantity and mode of
+        binding.’, PLoS One. ECO:0000269 experimental evidence cited by UniProt for
+        the ''Cytoplasm'' localisation of P03004.'
+    - reference: PMID:28166228
+      notes: Schenk K et al. 2017, ‘Rapid turnover of DnaA at replication origin regions
+        contributes to initiation control of DNA replication.’, PLoS Genet. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, nucleoid' localisation
+        of P03004.
+    - reference: PMID:9478970
+      notes: Garner J et al. 1998, ‘Membrane-mediated release of nucleotide from an
+        initiator of chromosomal replication, Escherichia coli DnaA, occurs with insertion
+        of a distinct region of the protein into the lipid bilayer.’, J Biol Chem.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane'
+        localisation of P03004.
 - component_id: hu_dimer
   label: HU histone-like protein dimer
   component_type: PROTEIN_COMPLEX

@@ -27,6 +27,13 @@ curation_history:
     Nup82/Nup159 claims with fungal Yoshida/Teimer/Aitchison support, narrowing the
     distribution row to Saccharomyces cerevisiae, and revising the CFNC boundary TODO.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:15Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: cytoplasmic fibers of the NPC
   synonym_type: RELATED_SYNONYM
@@ -54,6 +61,27 @@ components:
   - reference: DOI:10.1038/s41467-017-01160-9
     notes: Teimer et al. 2017 characterized a thermophilic-fungus Nup82 cytoplasmic-face
       complex and its connection to the Y-complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40368
+    protein_label: Nucleoporin NUP82
+    gene_symbol: NUP82
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP82 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P40368.'
+    - reference: PMID:10801828
+      notes: Bailer SM et al. 2000, ‘Nup116p associates with the Nup82p-Nsp1p-Nup159p
+        nucleoporin complex.’, J Biol Chem. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus, nuclear pore complex' localisation of P40368.
 - component_id: nup159_family
   label: Nup159-family cytoplasmic-filament nucleoporin
   component_type: PROTEIN
@@ -74,6 +102,33 @@ components:
   - reference: DOI:10.1038/s41467-017-01160-9
     notes: Teimer et al. 2017 characterized a thermophilic-fungus Nup82 cytoplasmic-face
       complex, including its Nup159 subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40477
+    protein_label: Nucleoporin NUP159
+    gene_symbol: NUP159
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP159 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P40477.'
+    - reference: PMID:17546040
+      notes: Stelter P et al. 2007, ‘Molecular basis for the functional interaction
+        of dynein light chain with the nuclear-pore complex.’, Nat Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus, nuclear pore complex'
+        localisation of P40477.
+    - reference: PMID:23223634
+      notes: Nyarko A et al. 2013, ‘Multiple recognition motifs in nucleoporin Nup159
+        provide a stable and rigid Nup159-Dyn2 assembly.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus, nuclear pore complex'
+        localisation of P40477.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

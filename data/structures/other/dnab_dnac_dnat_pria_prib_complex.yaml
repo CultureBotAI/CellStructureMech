@@ -32,6 +32,18 @@ curation_history:
   action: FIX_REVIEW_ISSUE
   changes: '#1855: typed the GO:1990100 DnaB-DnaC causal node as STRUCTURE.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:01Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: DnaB-DnaC-DnaT-PriA-PriB preprimosome
   synonym_type: EXACT_SYNONYM
@@ -76,6 +88,23 @@ components:
   - reference: PMID:8663104
     notes: Ng and Marians 1996 placed DnaT in the PriA-PriB-DnaT complex assembled
       at a PhiX174 primosome assembly site.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8J2
+    protein_label: Replication restart protein DnaT
+    gene_symbol: dnaT
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dnaT in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A8J2
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A8J2, the single reviewed entry
+        for gene dnaT in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: pria_restart_protein
   label: PriA replication restart protein
   component_type: PROTEIN
@@ -94,6 +123,23 @@ components:
   - reference: PMID:8663104
     notes: Ng and Marians 1996 described PriA recognition and binding at a PhiX174
       primosome assembly site.
+  protein_examples:
+  - uniprot_id: UniProtKB:P17888
+    protein_label: Replication restart protein PriA
+    gene_symbol: priA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene priA in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P17888
+      notes: UniProtKB reviewed (Swiss-Prot) entry P17888, the single reviewed entry
+        for gene priA in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: prib_restart_protein
   label: PriB replication restart protein
   component_type: PROTEIN
@@ -112,6 +158,23 @@ components:
   - reference: PMID:8663104
     notes: Ng and Marians 1996 reported that PriB stabilizes PriA on primosome assembly
       site DNA.
+  protein_examples:
+  - uniprot_id: UniProtKB:P07013
+    protein_label: Replication restart protein PriB
+    gene_symbol: priB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene priB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P07013
+      notes: UniProtKB reviewed (Swiss-Prot) entry P07013, the single reviewed entry
+        for gene priB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: primosome_assembly_site_dna
   label: primosome assembly site DNA
   component_type: DNA

@@ -199,6 +199,28 @@ components:
   - reference: DOI:10.1002/pro.2827
     notes: Barber-Zucker and Zarivach 2015 describe MamK as the actin-like filament
       associated with magnetosome chains.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q6NE59
+    protein_label: Actin-like protein MamK
+    gene_symbol: mamK
+    taxon_id: NCBITaxon:431944
+    taxon_label: Magnetospirillum gryphiswaldense MSR-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene mamK in Magnetospirillum gryphiswaldense
+      MSR-1, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17601786
+      notes: Scheffel A et al. 2007, ‘The acidic repetitive domain of the Magnetospirillum
+        gryphiswaldense MamJ protein displays hypervariability but is not required
+        for magnetosome chain assembly.’, J Bacteriol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm, cytoskeleton' localisation of Q6NE59.
+    - reference: PMID:20487281
+      notes: Katzmann E et al. 2010, ‘Loss of the actin-like protein MamK has pleiotropic
+        effects on magnetosome formation and chain assembly in Magnetospirillum gryphiswaldense.’,
+        Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm, cytoskeleton' localisation of Q6NE59.
 - component_id: mamj_connector
   label: MamJ connector
   component_type: PROTEIN
@@ -518,6 +540,13 @@ curation_history:
   changes: Grounded the split MamJ connector component to the exact InterPro MamJ
     family and narrowed its protein-example roles to the connector component.
   llm_assisted: true
+- timestamp: '2026-10-18T03:18:00Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 xrefs:
 - uniprot.location:SL-0510
 - MICRO:0000216

@@ -33,6 +33,11 @@ curation_history:
   changes: '#2317: Remove unsupported majority-absence language while retaining variable
     bacterial occurrence.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 components:
 - component_id: cyanophycin_polymer_core
   label: cyanophycin polymer
@@ -93,6 +98,8 @@ causal_graphs:
   - node_id: cyanophycin_synthetase
     label: cyanophycin synthetase
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P73833
   - node_id: cyanophycin_polymer_core
     label: cyanophycin polymer
     node_type: CHEMICAL

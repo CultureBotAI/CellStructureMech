@@ -21,6 +21,11 @@ curation_history:
     one function and six-edge assembly graph, six boundary/gap discussions and an
     unchanged checksum-verified CC BY 3.0 figure; retained PROPOSED status.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 parent_structures:
 - GO:0005815
 synonyms:
@@ -58,7 +63,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-08'
     role: Reference-sequence exemplar for the species-level localization experiment;
-      the reference stock is not asserted to be the engineered experimental strain.
+      the reference stock is not asserted to be the engineered experimental strain
+      (also declared as synonym hrs1, mug3).
     evidence:
     - reference: DOI:10.1016/j.cub.2012.02.042
       notes: Figures 1-2 and the deletion control show Hrs1 enrichment in the organizing
@@ -96,7 +102,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-08'
     role: Reference-sequence exemplar for the species-level localization experiment;
-      the reference stock is not asserted to be the engineered experimental strain.
+      the reference stock is not asserted to be the engineered experimental strain
+      (also declared as synonym tug1).
     evidence:
     - reference: DOI:10.1016/j.cub.2012.02.042
       notes: Figure 3 detects S. pombe gamma tubulin in the rMTOC with GTU88 immunogold

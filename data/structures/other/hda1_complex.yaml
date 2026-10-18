@@ -21,6 +21,13 @@ curation_history:
     GO/PubMed/DOI evidence, a nonmechanistic function graph, and a HDA1 subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:52Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0000118
 part_of:
@@ -50,6 +57,23 @@ components:
   - reference: DOI:10.1074/jbc.271.26.15837
     notes: Carmen et al. 1996 identified HDA1 as a subunit of the 350-kDa yeast HDA
       histone deacetylase complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53973
+    protein_label: Histone deacetylase HDA1
+    gene_symbol: HDA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HDA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53973
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53973, the single reviewed entry
+        for gene HDA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: hda2_hda1_complex_subunit
   label: Hda2 HDA1 subunit
   component_type: PROTEIN
@@ -70,6 +94,22 @@ components:
   - reference: DOI:10.1073/pnas.081560698
     notes: Wu et al. 2001 identified HDA2 in the HDA1 complex and described HDA1 interaction
       with the Hda2-Hda3 subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06629
+    protein_label: HDA1 complex subunit 2
+    gene_symbol: HDA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HDA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q06629.
 - component_id: hda3_hda1_complex_subunit
   label: Hda3 HDA1 subunit
   component_type: PROTEIN
@@ -93,6 +133,22 @@ components:
   - reference: DOI:10.1074/jbc.271.26.15837
     notes: Carmen et al. 1996 identified HDA3 as a subunit of the 350-kDa yeast HDA
       histone deacetylase complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06623
+    protein_label: HDA1 complex subunit 3
+    gene_symbol: HDA3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HDA3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q06623.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

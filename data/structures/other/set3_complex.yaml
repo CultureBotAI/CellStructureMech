@@ -27,6 +27,18 @@ curation_history:
   changes: Clarified that the Set3C primary paper identified the GO-curated Hos4p
     subunit under its YIL112w name.
   llm_assisted: true
+- timestamp: '2026-10-18T03:30:21Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: HDAC3 complex
   synonym_type: EXACT_SYNONYM
@@ -59,6 +71,23 @@ components:
   - reference: DOI:10.1101/gad.207401
     notes: Pijnappel et al. 2001 identified Set3p as a constituent of budding-yeast
       Set3C.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36124
+    protein_label: Histone reader SET3
+    gene_symbol: SET3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SET3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P36124
+      notes: UniProtKB reviewed (Swiss-Prot) entry P36124, the single reviewed entry
+        for gene SET3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: snt1_set3c_subunit
   label: Snt1 SET3C subunit
   component_type: PROTEIN
@@ -77,6 +106,23 @@ components:
   - reference: DOI:10.1101/gad.207401
     notes: Pijnappel et al. 2001 identified Snt1p as a constituent of budding-yeast
       Set3C.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25357
+    protein_label: Probable DNA-binding protein SNT1
+    gene_symbol: SNT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SNT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P25357
+      notes: UniProtKB reviewed (Swiss-Prot) entry P25357, the single reviewed entry
+        for gene SNT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: hos4_set3c_subunit
   label: Hos4 SET3C subunit
   component_type: PROTEIN
@@ -96,6 +142,23 @@ components:
   - reference: DOI:10.1101/gad.207401
     notes: Pijnappel et al. 2001 identified YIL112w as a constituent of budding-yeast
       Set3C; GO:0034967 curates that subunit with the Hos4p name.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40480
+    protein_label: Protein HOS4
+    gene_symbol: HOS4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HOS4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40480
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40480, the single reviewed entry
+        for gene HOS4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sif2_set3c_subunit
   label: Sif2 SET3C subunit
   component_type: PROTEIN
@@ -114,6 +177,23 @@ components:
   - reference: DOI:10.1101/gad.207401
     notes: Pijnappel et al. 2001 identified Sif2p as a constituent of budding-yeast
       Set3C.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38262
+    protein_label: SIR4-interacting protein SIF2
+    gene_symbol: SIF2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SIF2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38262
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38262, the single reviewed entry
+        for gene SIF2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cpr1_set3c_subunit
   label: Cpr1 SET3C subunit
   component_type: PROTEIN
@@ -132,6 +212,32 @@ components:
   - reference: DOI:10.1101/gad.207401
     notes: Pijnappel et al. 2001 identified Cpr1p as a constituent of budding-yeast
       Set3C.
+  protein_examples:
+  - uniprot_id: UniProtKB:P14832
+    protein_label: Peptidyl-prolyl cis-trans isomerase
+    gene_symbol: CPR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene CPR1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15643056
+      notes: Arévalo-Rodríguez M et al. 2005, ‘Cyclophilin A is localized to the nucleus
+        and controls meiosis in Saccharomyces cerevisiae.’, Eukaryot Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P14832.
+    - reference: PMID:16823961
+      notes: 'Reinders J et al. 2006, ‘Toward the complete yeast mitochondrial proteome:
+        multidimensional separation techniques for mitochondrial proteomics.’, J Proteome
+        Res. ECO:0000269 experimental evidence cited by UniProt for the ''Mitochondrion
+        intermembrane space'' localisation of P14832.'
+    - reference: PMID:22984289
+      notes: Vögtle FN et al. 2012, ‘Intermembrane space proteome of yeast mitochondria.’,
+        Mol Cell Proteomics. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Mitochondrion intermembrane space' localisation of P14832.
 - component_id: hos2_set3c_subunit
   label: Hos2 SET3C deacetylase subunit
   component_type: PROTEIN
@@ -150,6 +256,23 @@ components:
   - reference: DOI:10.1101/gad.207401
     notes: Pijnappel et al. 2001 identified Hos2p as a constituent of budding-yeast
       Set3C.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53096
+    protein_label: Probable histone deacetylase HOS2
+    gene_symbol: HOS2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HOS2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53096
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53096, the single reviewed entry
+        for gene HOS2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: hst1_set3c_subunit
   label: Hst1 SET3C deacetylase subunit
   component_type: PROTEIN
@@ -169,6 +292,22 @@ components:
   - reference: DOI:10.1101/gad.207401
     notes: Pijnappel et al. 2001 identified Hst1p as a constituent of budding-yeast
       Set3C.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53685
+    protein_label: NAD-dependent protein deacetylase HST1
+    gene_symbol: HST1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene HST1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53685.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

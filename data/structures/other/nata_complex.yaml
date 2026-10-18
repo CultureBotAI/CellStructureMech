@@ -31,6 +31,13 @@ curation_history:
   changes: 'Resolved PR #1626 review issue #1627 by narrowing the NatA subunit-grounding
     TODO so it no longer asserts unsupported Naa-family aliases.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:26:55Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: N-terminal acetyltransferase A complex
   synonym_type: EXACT_SYNONYM
@@ -56,6 +63,22 @@ components:
     notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal
       salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that
       Nat1p anchors the complex to ribosomes.
+  protein_examples:
+  - uniprot_id: UniProtKB:P12945
+    protein_label: N-terminal acetyltransferase A complex subunit NAT1
+    gene_symbol: NAT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NAT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P12945.
 - component_id: ard1_nata_catalytic_subunit
   label: Ard1 NatA catalytic subunit
   component_type: PROTEIN
@@ -73,6 +96,22 @@ components:
     notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal
       salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that
       Nat1p anchors the complex to ribosomes.
+  protein_examples:
+  - uniprot_id: UniProtKB:P07347
+    protein_label: N-terminal acetyltransferase A complex catalytic subunit ARD1
+    gene_symbol: ARD1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARD1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P07347.
 - component_id: nat5_nata_gnat_subunit
   label: Nat5 NatA GNAT-family subunit
   component_type: PROTEIN
@@ -91,6 +130,22 @@ components:
     notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal
       salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that
       Nat1p anchors the complex to ribosomes.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08689
+    protein_label: N-alpha-acetyltransferase NAT5
+    gene_symbol: NAT5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NAT5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q08689.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

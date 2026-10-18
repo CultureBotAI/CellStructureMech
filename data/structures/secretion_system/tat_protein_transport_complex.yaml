@@ -29,6 +29,11 @@ curation_history:
     TatAC and archaeal taxonomic assertions, and recording the TatAC boundary as a
     resolved discussion.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Tat translocase
   synonym_type: EXACT_SYNONYM
@@ -62,6 +67,32 @@ components:
   - reference: DOI:10.1021/bi500169s
     notes: Behrendt and Bruser 2014 characterized the transition from E. coli TatBC
       receptor complexes to substrate-bound TatABC complexes.
+  protein_examples:
+  - uniprot_id: UniProtKB:P69428
+    protein_label: Sec-independent protein translocase protein TatA
+    gene_symbol: tatA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene tatA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11591389
+      notes: De Leeuw E et al. 2001, ‘Membrane interactions and self-association of
+        the TatA and TatB components of the twin-arginine translocation pathway.’,
+        FEBS Lett. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        inner membrane' localisation of P69428.
+    - reference: PMID:15225613
+      notes: Berthelmann F et al. 2004, ‘Localization of the Tat translocon components
+        in Escherichia coli.’, FEBS Lett. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P69428.
+    - reference: PMID:20169075
+      notes: Kostecki JS et al. 2010, ‘Visualizing interactions along the Escherichia
+        coli twin-arginine translocation pathway using protein fragment complementation.’,
+        PLoS One. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        inner membrane' localisation of P69428.
 - component_id: tatc_family_receptor_component
   label: TatC-family receptor component
   component_type: PROTEIN
@@ -79,6 +110,32 @@ components:
   - reference: DOI:10.1038/s41564-026-02399-z
     notes: Deme et al. 2026 resolved the TatC contacts that recognize the twin-arginine
       targeting sequence in bacterial TatBC and TatABC core complexes.
+  protein_examples:
+  - uniprot_id: UniProtKB:P69423
+    protein_label: Sec-independent protein translocase protein TatC
+    gene_symbol: tatC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene tatC in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11591389
+      notes: De Leeuw E et al. 2001, ‘Membrane interactions and self-association of
+        the TatA and TatB components of the twin-arginine translocation pathway.’,
+        FEBS Lett. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        inner membrane' localisation of P69423.
+    - reference: PMID:15225613
+      notes: Berthelmann F et al. 2004, ‘Localization of the Tat translocon components
+        in Escherichia coli.’, FEBS Lett. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P69423.
+    - reference: PMID:20169075
+      notes: Kostecki JS et al. 2010, ‘Visualizing interactions along the Escherichia
+        coli twin-arginine translocation pathway using protein fragment complementation.’,
+        PLoS One. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        inner membrane' localisation of P69423.
 - component_id: tatb_family_receptor_component
   label: TatB-family receptor component
   component_type: PROTEIN
@@ -99,6 +156,32 @@ components:
   - reference: DOI:10.1021/bi500169s
     notes: Behrendt and Bruser 2014 biochemically characterized the E. coli TatBC
       complex and its substrate-triggered shift toward TatABC.
+  protein_examples:
+  - uniprot_id: UniProtKB:P69425
+    protein_label: Sec-independent protein translocase protein TatB
+    gene_symbol: tatB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene tatB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11591389
+      notes: De Leeuw E et al. 2001, ‘Membrane interactions and self-association of
+        the TatA and TatB components of the twin-arginine translocation pathway.’,
+        FEBS Lett. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        inner membrane' localisation of P69425.
+    - reference: PMID:15225613
+      notes: Berthelmann F et al. 2004, ‘Localization of the Tat translocon components
+        in Escherichia coli.’, FEBS Lett. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P69425.
+    - reference: PMID:20169075
+      notes: Kostecki JS et al. 2010, ‘Visualizing interactions along the Escherichia
+        coli twin-arginine translocation pathway using protein fragment complementation.’,
+        PLoS One. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        inner membrane' localisation of P69425.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

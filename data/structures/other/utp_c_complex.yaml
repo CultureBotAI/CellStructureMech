@@ -21,6 +21,13 @@ curation_history:
     GO/PubMed/DOI evidence, a nonmechanistic assembly graph, and a UTP-C subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:33:00Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Rrp7p-containing subcomplex of 90S preribosome
   synonym_type: EXACT_SYNONYM
@@ -47,6 +54,22 @@ components:
   evidence:
   - reference: GO:0034456
     notes: GO:0034456 defines the UTP-C complex as containing Rrp7p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25368
+    protein_label: Ribosomal RNA-processing protein 7
+    gene_symbol: RRP7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RRP7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P25368.
 - component_id: utp22_utp_c_subunit
   label: Utp22 UTP-C subunit
   component_type: PROTEIN
@@ -63,6 +86,26 @@ components:
   evidence:
   - reference: GO:0034456
     notes: GO:0034456 defines the UTP-C complex as containing Utp22p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53254
+    protein_label: U3 small nucleolar RNA-associated protein 22
+    gene_symbol: UTP22
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP22 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P53254.
+    - reference: PMID:15590835
+      notes: Bernstein KA et al. 2004, ‘The small-subunit processome is a ribosome
+        assembly intermediate.’, Eukaryot Cell. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of P53254.
 - component_id: ckb1_utp_c_subunit
   label: Ckb1 UTP-C subunit
   component_type: PROTEIN
@@ -79,6 +122,23 @@ components:
   evidence:
   - reference: GO:0034456
     notes: GO:0034456 defines the UTP-C complex as containing Ckb1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P43639
+    protein_label: Casein kinase II subunit beta
+    gene_symbol: CKB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CKB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P43639
+      notes: UniProtKB reviewed (Swiss-Prot) entry P43639, the single reviewed entry
+        for gene CKB1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cka1_utp_c_subunit
   label: Cka1 UTP-C subunit
   component_type: PROTEIN
@@ -95,6 +155,23 @@ components:
   evidence:
   - reference: GO:0034456
     notes: GO:0034456 defines the UTP-C complex as containing Cka1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P15790
+    protein_label: Casein kinase II subunit alpha
+    gene_symbol: CKA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CKA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P15790
+      notes: UniProtKB reviewed (Swiss-Prot) entry P15790, the single reviewed entry
+        for gene CKA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ckb2_utp_c_subunit
   label: Ckb2 UTP-C subunit
   component_type: PROTEIN
@@ -111,6 +188,23 @@ components:
   evidence:
   - reference: GO:0034456
     notes: GO:0034456 defines the UTP-C complex as containing Ckb2p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38930
+    protein_label: Casein kinase II subunit beta'
+    gene_symbol: CKB2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CKB2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38930
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38930, the single reviewed entry
+        for gene CKB2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cka2_utp_c_subunit
   label: Cka2 UTP-C subunit
   component_type: PROTEIN
@@ -127,6 +221,23 @@ components:
   evidence:
   - reference: GO:0034456
     notes: GO:0034456 defines the UTP-C complex as containing Cka2p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P19454
+    protein_label: Casein kinase II subunit alpha'
+    gene_symbol: CKA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CKA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P19454
+      notes: UniProtKB reviewed (Swiss-Prot) entry P19454, the single reviewed entry
+        for gene CKA2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

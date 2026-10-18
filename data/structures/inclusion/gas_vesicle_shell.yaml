@@ -26,6 +26,11 @@ curation_history:
     and collapse-pressure evidence; resolved #228 by adding Walsby, Revsbech and Griffel
     1992 primary gas-vesicle-wall permeability evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: gas vesicle wall
   synonym_type: EXACT_SYNONYM
@@ -52,6 +57,22 @@ components:
   - reference: DOI:10.1016/j.str.2023.03.011
     notes: Dutka et al. 2023 resolved the Dolichospermum gas-vesicle shell as a wall
       built from a helical GvpA filament.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0ABR7ZBW9
+    protein_label: Gas vesicle protein A
+    gene_symbol: gvpA
+    taxon_id: NCBITaxon:2692880
+    taxon_label: Anabaena cylindrica FACHB-318
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene gvpA in Anabaena
+      cylindrica FACHB-318. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0ABR7ZBW9
+      notes: UniProtKB unreviewed (TrEMBL) entry A0ABR7ZBW9 for gene gvpA in Anabaena
+        cylindrica FACHB-318. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: gvpc
   label: gas vesicle strengthening protein GvpC
   component_type: PROTEIN
@@ -70,6 +91,22 @@ components:
     notes: Hayes et al. 1992 showed that recombinant GvpC binds urea-stripped Anabaena
       flos-aquae gas vesicles after dialysis and restores most of their critical collapse
       pressure.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0ABR7ZCB1
+    protein_label: Gas vesicle protein C
+    gene_symbol: gvpC
+    taxon_id: NCBITaxon:2692880
+    taxon_label: Anabaena cylindrica FACHB-318
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene gvpC in Anabaena
+      cylindrica FACHB-318. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0ABR7ZCB1
+      notes: UniProtKB unreviewed (TrEMBL) entry A0ABR7ZCB1 for gene gvpC in Anabaena
+        cylindrica FACHB-318. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

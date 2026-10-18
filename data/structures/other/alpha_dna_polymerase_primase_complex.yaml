@@ -28,6 +28,13 @@ curation_history:
   changes: De-aliased repeated GO:0005658 evidence entries so the YAML emits without
     anchors.
   llm_assisted: true
+- timestamp: '2026-10-18T03:19:45Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: DNA polymerase alpha:primase complex
   synonym_type: EXACT_SYNONYM
@@ -56,6 +63,25 @@ components:
     notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
       complex comprising large and small DNA polymerase alpha subunits plus two primase
       subunits.
+  gene_symbols:
+  - POL1
+  protein_examples:
+  - uniprot_id: UniProtKB:P13382
+    protein_label: DNA polymerase alpha catalytic subunit A
+    gene_symbol: POL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P13382
+      notes: UniProtKB reviewed (Swiss-Prot) entry P13382, the single reviewed entry
+        for gene POL1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: dna_polymerase_alpha_small_subunit
   label: DNA polymerase alpha small subunit
   component_type: PROTEIN
@@ -71,6 +97,25 @@ components:
     notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
       complex comprising large and small DNA polymerase alpha subunits plus two primase
       subunits.
+  gene_symbols:
+  - POL12
+  protein_examples:
+  - uniprot_id: UniProtKB:P38121
+    protein_label: DNA polymerase alpha subunit B
+    gene_symbol: POL12
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POL12 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38121
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38121, the single reviewed entry
+        for gene POL12 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: dna_primase_large_subunit
   label: DNA primase large subunit
   component_type: PROTEIN
@@ -86,6 +131,25 @@ components:
     notes: GO:0005658 defines the alpha DNA polymerase:primase complex as a four-polypeptide
       complex comprising large and small DNA polymerase alpha subunits plus two primase
       subunits.
+  gene_symbols:
+  - PRI2
+  protein_examples:
+  - uniprot_id: UniProtKB:P20457
+    protein_label: DNA primase large subunit
+    gene_symbol: PRI2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PRI2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P20457
+      notes: UniProtKB reviewed (Swiss-Prot) entry P20457, the single reviewed entry
+        for gene PRI2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: dna_primase_small_subunit
   label: DNA primase small subunit
   component_type: PROTEIN
@@ -104,6 +168,25 @@ components:
   - reference: PMID:11395402
     notes: The PubMed abstract for the DNA primase review states that the small eukaryotic
       primase subunit contains the active site for RNA synthesis.
+  gene_symbols:
+  - PRI1
+  protein_examples:
+  - uniprot_id: UniProtKB:P10363
+    protein_label: DNA primase small subunit
+    gene_symbol: PRI1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PRI1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P10363
+      notes: UniProtKB reviewed (Swiss-Prot) entry P10363, the single reviewed entry
+        for gene PRI1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

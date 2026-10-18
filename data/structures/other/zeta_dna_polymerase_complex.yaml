@@ -23,6 +23,13 @@ curation_history:
     TODO, and a resolved discussion for using the four-subunit Pol zeta assembly while
     leaving Rev1 outside the stable complex boundary.
   llm_assisted: true
+- timestamp: '2026-10-18T03:33:11Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0042575
 components:
@@ -49,6 +56,22 @@ components:
   - reference: PMID:23066099
     notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol zeta
       complex containing Rev3, Rev7, Pol31, and Pol32.
+  protein_examples:
+  - uniprot_id: UniProtKB:P14284
+    protein_label: DNA polymerase zeta catalytic subunit
+    gene_symbol: REV3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene REV3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16452144
+      notes: Zhang H et al. 2006, ‘Saccharomyces cerevisiae polymerase zeta functions
+        in mitochondria.’, Genetics. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion' localisation of P14284.
 - component_id: rev7_subunit
   label: Rev7 subunit
   component_type: PROTEIN
@@ -71,6 +94,22 @@ components:
   - reference: PMID:23066099
     notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol zeta
       complex containing Rev3, Rev7, Pol31, and Pol32.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38927
+    protein_label: DNA polymerase zeta processivity subunit
+    gene_symbol: REV7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene REV7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16452144
+      notes: Zhang H et al. 2006, ‘Saccharomyces cerevisiae polymerase zeta functions
+        in mitochondria.’, Genetics. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion' localisation of P38927.
 - component_id: pol31_subunit
   label: Pol31 subunit
   component_type: PROTEIN
@@ -95,6 +134,23 @@ components:
   - reference: PMID:23066099
     notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol zeta
       complex containing Rev3, Rev7, Pol31, and Pol32.
+  protein_examples:
+  - uniprot_id: UniProtKB:P46957
+    protein_label: DNA polymerase delta small subunit
+    gene_symbol: POL31
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POL31 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P46957
+      notes: UniProtKB reviewed (Swiss-Prot) entry P46957, the single reviewed entry
+        for gene POL31 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: pol32_subunit
   label: Pol32 subunit
   component_type: PROTEIN
@@ -119,6 +175,23 @@ components:
   - reference: PMID:23066099
     notes: Makarova et al. purified a four-subunit Saccharomyces cerevisiae Pol zeta
       complex containing Rev3, Rev7, Pol31, and Pol32.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47110
+    protein_label: DNA polymerase delta subunit 3
+    gene_symbol: POL32
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POL32 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P47110
+      notes: UniProtKB reviewed (Swiss-Prot) entry P47110, the single reviewed entry
+        for gene POL32 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

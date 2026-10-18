@@ -33,6 +33,18 @@ curation_history:
   changes: Cited Masatani et al. 2013 on the GRA17/GRA23 component and PVM-localization
     edge to support TgGRA23 localization directly.
   llm_assisted: true
+- timestamp: '2026-10-18T03:15:59Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0030141
 has_part:
@@ -71,6 +83,59 @@ components:
   - reference: DOI:10.1016/j.pt.2014.12.002
     notes: Mercier and Cesbron-Delauw 2015 review dense granules within the Toxoplasma
       secretory system.
+  gene_symbols:
+  - GRA1
+  - GRA2
+  - GRA6
+  protein_examples:
+  - uniprot_id: UniProtKB:P13403
+    protein_label: Dense granule protein 1
+    gene_symbol: GRA1
+    taxon_id: NCBITaxon:5811
+    taxon_label: Toxoplasma gondii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GRA1 in Toxoplasma gondii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P13403
+      notes: UniProtKB reviewed (Swiss-Prot) entry P13403, the single reviewed entry
+        for gene GRA1 in Toxoplasma gondii. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
+  - uniprot_id: UniProtKB:P13404
+    protein_label: Dense granule protein 2
+    gene_symbol: GRA2
+    taxon_id: NCBITaxon:5811
+    taxon_label: Toxoplasma gondii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GRA2 in Toxoplasma gondii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P13404
+      notes: UniProtKB reviewed (Swiss-Prot) entry P13404, the single reviewed entry
+        for gene GRA2 in Toxoplasma gondii. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
+  - uniprot_id: UniProtKB:Q27003
+    protein_label: Dense granule protein 6
+    gene_symbol: GRA6
+    taxon_id: NCBITaxon:5811
+    taxon_label: Toxoplasma gondii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GRA6 in Toxoplasma gondii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q27003
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q27003, the single reviewed entry
+        for gene GRA6 in Toxoplasma gondii. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 - component_id: gra17_gra23_permeability_factors
   label: GRA17/GRA23 PVM permeability factors
   component_type: PROTEIN
@@ -89,6 +154,25 @@ components:
   - reference: DOI:10.1016/j.parint.2013.04.003
     notes: Masatani et al. 2013 identified TgGRA23 as a Toxoplasma dense-granule protein
       associated with the PVM and intravacuolar network.
+  gene_symbols:
+  - GRA17
+  - GRA23
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A125YME4
+    protein_label: Dense granule protein DG32
+    gene_symbol: GRA23
+    taxon_id: NCBITaxon:508771
+    taxon_label: Toxoplasma gondii ME49
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene GRA23 in Toxoplasma
+      gondii ME49. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A125YME4
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A125YME4 for gene GRA23 in Toxoplasma
+        gondii ME49. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: exported_dense_granule_effectors
   label: exported dense granule effectors
   component_type: PROTEIN

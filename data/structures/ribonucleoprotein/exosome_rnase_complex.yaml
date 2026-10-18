@@ -27,6 +27,13 @@ curation_history:
     parent with GO:1905354 exoribonuclease complex and removing the nuclear Rrp6 nuclease
     from the generic GO:0000178 component list and functional graph.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:33:50Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 10 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: exosome multienzyme ribonuclease complex
   synonym_type: EXACT_SYNONYM
@@ -57,6 +64,155 @@ components:
   - reference: RCSB_PDB:2NN6
     notes: RCSB PDB 2NN6 records the Liu et al. human RNA exosome structure with Rrp41,
       Rrp45, Rrp46, Rrp43, Mtr3, Rrp42, Csl4, Rrp4 and Rrp40.
+  gene_symbols:
+  - RRP41
+  - RRP42
+  - RRP43
+  - RRP45
+  - RRP46
+  - MTR3
+  - RRP4
+  - RRP40
+  - CSL4
+  protein_examples:
+  - uniprot_id: UniProtKB:P46948
+    protein_label: Exosome complex component SKI6
+    gene_symbol: SKI6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RRP41, which UniProt lists
+      under the primary name SKI6, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P46948.
+  - uniprot_id: UniProtKB:Q12277
+    protein_label: Exosome complex component RRP42
+    gene_symbol: RRP42
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RRP42 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q12277.
+  - uniprot_id: UniProtKB:P25359
+    protein_label: Exosome complex component RRP43
+    gene_symbol: RRP43
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RRP43 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P25359.
+  - uniprot_id: UniProtKB:Q05636
+    protein_label: Exosome complex component RRP45
+    gene_symbol: RRP45
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RRP45 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q05636.
+  - uniprot_id: UniProtKB:P53256
+    protein_label: Exosome complex component RRP46
+    gene_symbol: RRP46
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RRP46 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P53256.
+  - uniprot_id: UniProtKB:P48240
+    protein_label: Exosome complex component MTR3
+    gene_symbol: MTR3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MTR3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P48240
+      notes: UniProtKB reviewed (Swiss-Prot) entry P48240, the single reviewed entry
+        for gene MTR3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P38792
+    protein_label: Exosome complex component RRP4
+    gene_symbol: RRP4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RRP4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38792
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38792, the single reviewed entry
+        for gene RRP4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q08285
+    protein_label: Exosome complex component RRP40
+    gene_symbol: RRP40
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RRP40 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q08285.
+  - uniprot_id: UniProtKB:P53859
+    protein_label: Exosome complex component CSL4
+    gene_symbol: CSL4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CSL4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P53859.
 - component_id: rrp44_dis3_rnase
   label: Rrp44/Dis3 catalytic nuclease
   component_type: PROTEIN
@@ -77,6 +233,27 @@ components:
   - reference: DOI:10.1016/j.cell.2006.10.037
     notes: Liu et al. 2006 compared yeast 9-, 10- and 11-subunit exosomes and assigned
       processive hydrolytic activity to Rrp44 and to the yeast 10-subunit exosome.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08162
+    protein_label: Exosome complex exonuclease DIS3
+    gene_symbol: DIS3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RRP44, which UniProt lists
+      under the primary name DIS3, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q08162.
+    - reference: PMID:14576278
+      notes: Sickmann A et al. 2003, ‘The proteome of Saccharomyces cerevisiae mitochondria.’,
+        Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion' localisation of Q08162.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

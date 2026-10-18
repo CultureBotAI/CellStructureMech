@@ -40,6 +40,13 @@ curation_history:
   changes: 'Resolved #1237 by routing Matsuoka et al. 1998 COPII liposome evidence
     through reachable PMID:9568718 instead of the unreadable Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:21:38Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0030120
 part_of:
@@ -65,6 +72,23 @@ components:
   - reference: PMID:8004676
     notes: Barlowe et al. 1994 identified Sar1p with Sec13p, Sec31p, Sec23p, and Sec24p
       as Sec proteins that form the COPII coat driving ER vesicle budding.
+  protein_examples:
+  - uniprot_id: UniProtKB:P20606
+    protein_label: Small COPII coat GTPase SAR1
+    gene_symbol: SAR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SAR1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P20606
+      notes: UniProtKB reviewed (Swiss-Prot) entry P20606, the single reviewed entry
+        for gene SAR1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sec23_sec24_inner_coat
   label: Sec23/Sec24 inner COPII coat
   component_type: PROTEIN_COMPLEX
@@ -86,6 +110,58 @@ components:
   - reference: DOI:10.7554/elife.00951
     notes: Zanetti et al. 2013 resolved a membrane-assembled COPII coat and distinguish
       inner coat proteins from outer COPII cage components.
+  protein_examples:
+  - uniprot_id: UniProtKB:P15303
+    protein_label: Protein transport protein SEC23
+    gene_symbol: SEC23
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC23 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10720463
+      notes: Matsuoka K et al. 2000, ‘The use of liposomes to study COPII- and COPI-coated
+        vesicle formation and membrane protein sorting.’, Methods. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasmic vesicle, COPII-coated vesicle
+        membrane' localisation of P15303.
+    - reference: PMID:11086000
+      notes: Shimoni Y et al. 2000, ‘Lst1p and Sec24p cooperate in sorting of the
+        plasma membrane ATPase into COPII vesicles in Saccharomyces cerevisiae.’,
+        J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasmic
+        vesicle, COPII-coated vesicle membrane' localisation of P15303.
+    - reference: PMID:12235121
+      notes: Supek F et al. 2002, ‘Sec16p potentiates the action of COPII proteins
+        to bud transport vesicles.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasmic vesicle, COPII-coated vesicle membrane'
+        localisation of P15303.
+  - uniprot_id: UniProtKB:P40482
+    protein_label: Protein transport protein SEC24
+    gene_symbol: SEC24
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC24 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:8548805
+      notes: Bednarek SY et al. 1995, ‘COPI- and COPII-coated vesicles bud directly
+        from the endoplasmic reticulum in yeast.’, Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm' localisation of P40482.
+    - reference: PMID:10720463
+      notes: Matsuoka K et al. 2000, ‘The use of liposomes to study COPII- and COPI-coated
+        vesicle formation and membrane protein sorting.’, Methods. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasmic vesicle, COPII-coated vesicle
+        membrane' localisation of P40482.
+    - reference: PMID:10753972
+      notes: Peng R et al. 2000, ‘Evidence for overlapping and distinct functions
+        in protein transport of coat protein Sec24p family members.’, J Biol Chem.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasmic vesicle,
+        COPII-coated vesicle membrane' localisation of P40482.
 - component_id: sec13_sec31_outer_coat
   label: Sec13/Sec31 outer COPII coat
   component_type: PROTEIN_COMPLEX
@@ -107,6 +183,39 @@ components:
   - reference: DOI:10.7554/elife.00951
     notes: Zanetti et al. 2013 used cryo-electron tomography to analyze the complete
       membrane-assembled COPII coat and its outer-coat arrangement.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04491
+    protein_label: Protein transport protein SEC13
+    gene_symbol: SEC13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC13 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        Q04491.'
+  - uniprot_id: UniProtKB:P38968
+    protein_label: Protein transport protein SEC31
+    gene_symbol: SEC31
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC31 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38968
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38968, the single reviewed entry
+        for gene SEC31 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

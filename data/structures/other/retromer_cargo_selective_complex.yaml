@@ -28,6 +28,13 @@ curation_history:
   changes: 'Replaced PR #1424 / issue #1425 synonym curation with the exact GO:0030906
     aliases and removed an unlisted word-order variant.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:29:05Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0098796
 part_of:
@@ -68,6 +75,23 @@ components:
   - reference: GO:0030906
     notes: The GO cargo-selective retromer-complex definition names Vps35p as a yeast
       constituent.
+  protein_examples:
+  - uniprot_id: UniProtKB:P34110
+    protein_label: Vacuolar protein sorting-associated protein 35
+    gene_symbol: VPS35
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS35 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P34110
+      notes: UniProtKB reviewed (Swiss-Prot) entry P34110, the single reviewed entry
+        for gene VPS35 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps29_retromer_subunit
   label: Vps29 retromer subunit
   component_type: PROTEIN
@@ -87,6 +111,23 @@ components:
   - reference: GO:0030906
     notes: The GO cargo-selective retromer-complex definition names Vps29p as a yeast
       constituent.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38759
+    protein_label: Vacuolar protein sorting-associated protein 29
+    gene_symbol: VPS29
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS29 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38759
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38759, the single reviewed entry
+        for gene VPS29 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps26_retromer_subunit
   label: Vps26 retromer subunit
   component_type: PROTEIN
@@ -106,6 +147,24 @@ components:
   - reference: GO:0030906
     notes: The GO cargo-selective retromer-complex definition names Vps26p as a yeast
       constituent.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40335
+    protein_label: Carboxypeptidase Y-deficient protein 8
+    gene_symbol: PEP8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS26, which UniProt lists
+      under the primary name PEP8, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40335
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40335, the single reviewed entry
+        for gene VPS26 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

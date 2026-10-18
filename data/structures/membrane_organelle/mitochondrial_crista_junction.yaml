@@ -27,6 +27,11 @@ curation_history:
     removing the weak cristae-formation graph edge, and grounding the Eukaryota scope
     row to GO:0044284.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0044232
 part_of:
@@ -116,6 +121,8 @@ causal_graphs:
     label: MICOS complex
     node_type: GENE_OR_PROTEIN
     grounding: GO:0061617
+    xrefs:
+    - UniProtKB:P36112
   edges:
   - subject: crista_junction
     predicate: is part of

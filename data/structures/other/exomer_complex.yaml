@@ -39,6 +39,18 @@ curation_history:
     whole-exomer membrane recruitment and cited Wang et al. 2006 for the Arf1-dependent
     membrane-binding evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:02Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 synonyms:
@@ -69,6 +81,32 @@ components:
   - reference: DOI:10.15252/embr.201540795
     notes: Huranova et al. 2016 showed that yeast exomer assembles at the trans-Golgi
       network by recruiting Chs5 before the ChAP cargo-binding subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12114
+    protein_label: Chitin biosynthesis protein CHS5
+    gene_symbol: CHS5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CHS5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Golgi apparatus, trans-Golgi network membrane' localisation of Q12114.
+    - reference: PMID:16498409
+      notes: Trautwein M et al. 2006, ‘Arf1p, Chs5p and the ChAPs are required for
+        export of specialized cargo from the Golgi.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Golgi apparatus, trans-Golgi network membrane'
+        localisation of Q12114.
+    - reference: PMID:17000877
+      notes: 'Wang CW et al. 2006, ‘Exomer: A coat complex for transport of select
+        membrane proteins from the trans-Golgi network to the plasma membrane in yeast.’,
+        J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the ''Golgi
+        apparatus, trans-Golgi network membrane'' localisation of Q12114.'
 - component_id: chs6_exomer_chap_subunit
   label: Chs6 exomer ChAP subunit
   component_type: PROTEIN
@@ -92,6 +130,32 @@ components:
   - reference: DOI:10.1038/sj.emboj.7601007
     notes: Trautwein et al. 2006 named Chs6, Bch1, Bud7 and Bch2 as the ChAP family
       that interacts with Chs5 and Arf1 during specialized Golgi export.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40955
+    protein_label: Chitin biosynthesis protein CHS6
+    gene_symbol: CHS6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CHS6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Golgi apparatus, trans-Golgi network membrane' localisation of P40955.
+    - reference: PMID:16498409
+      notes: Trautwein M et al. 2006, ‘Arf1p, Chs5p and the ChAPs are required for
+        export of specialized cargo from the Golgi.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Golgi apparatus, trans-Golgi network membrane'
+        localisation of P40955.
+    - reference: PMID:17000877
+      notes: 'Wang CW et al. 2006, ‘Exomer: A coat complex for transport of select
+        membrane proteins from the trans-Golgi network to the plasma membrane in yeast.’,
+        J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the ''Golgi
+        apparatus, trans-Golgi network membrane'' localisation of P40955.'
 - component_id: bch1_exomer_chap_subunit
   label: Bch1 exomer ChAP subunit
   component_type: PROTEIN
@@ -115,6 +179,32 @@ components:
   - reference: DOI:10.1038/sj.emboj.7601007
     notes: Trautwein et al. 2006 named Chs6, Bch1, Bud7 and Bch2 as the ChAP family
       that interacts with Chs5 and Arf1 during specialized Golgi export.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q05029
+    protein_label: Protein BCH1
+    gene_symbol: BCH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BCH1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Golgi apparatus, trans-Golgi network membrane' localisation of Q05029.
+    - reference: PMID:16498409
+      notes: Trautwein M et al. 2006, ‘Arf1p, Chs5p and the ChAPs are required for
+        export of specialized cargo from the Golgi.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Golgi apparatus, trans-Golgi network membrane'
+        localisation of Q05029.
+    - reference: PMID:17000877
+      notes: 'Wang CW et al. 2006, ‘Exomer: A coat complex for transport of select
+        membrane proteins from the trans-Golgi network to the plasma membrane in yeast.’,
+        J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the ''Golgi
+        apparatus, trans-Golgi network membrane'' localisation of Q05029.'
 - component_id: bud7_exomer_chap_subunit
   label: Bud7 exomer ChAP subunit
   component_type: PROTEIN
@@ -138,6 +228,32 @@ components:
   - reference: DOI:10.1038/sj.emboj.7601007
     notes: Trautwein et al. 2006 named Chs6, Bch1, Bud7 and Bch2 as the ChAP family
       that interacts with Chs5 and Arf1 during specialized Golgi export.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08754
+    protein_label: Bud site selection protein 7
+    gene_symbol: BUD7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BUD7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Golgi apparatus, trans-Golgi network membrane' localisation of Q08754.
+    - reference: PMID:16498409
+      notes: Trautwein M et al. 2006, ‘Arf1p, Chs5p and the ChAPs are required for
+        export of specialized cargo from the Golgi.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Golgi apparatus, trans-Golgi network membrane'
+        localisation of Q08754.
+    - reference: PMID:17000877
+      notes: 'Wang CW et al. 2006, ‘Exomer: A coat complex for transport of select
+        membrane proteins from the trans-Golgi network to the plasma membrane in yeast.’,
+        J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the ''Golgi
+        apparatus, trans-Golgi network membrane'' localisation of Q08754.'
 - component_id: bch2_exomer_chap_subunit
   label: Bch2 exomer ChAP subunit
   component_type: PROTEIN
@@ -161,6 +277,32 @@ components:
   - reference: DOI:10.1038/sj.emboj.7601007
     notes: Trautwein et al. 2006 named Chs6, Bch1, Bud7 and Bch2 as the ChAP family
       that interacts with Chs5 and Arf1 during specialized Golgi export.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36122
+    protein_label: Protein BCH2
+    gene_symbol: BCH2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BCH2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Golgi apparatus, trans-Golgi network membrane' localisation of P36122.
+    - reference: PMID:16498409
+      notes: Trautwein M et al. 2006, ‘Arf1p, Chs5p and the ChAPs are required for
+        export of specialized cargo from the Golgi.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Golgi apparatus, trans-Golgi network membrane'
+        localisation of P36122.
+    - reference: PMID:17000877
+      notes: 'Wang CW et al. 2006, ‘Exomer: A coat complex for transport of select
+        membrane proteins from the trans-Golgi network to the plasma membrane in yeast.’,
+        J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the ''Golgi
+        apparatus, trans-Golgi network membrane'' localisation of P36122.'
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -243,6 +385,8 @@ causal_graphs:
   - node_id: arf1_gtpase
     label: Arf1 GTPase
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P11076
   - node_id: trans_golgi_network
     label: trans-Golgi network
     node_type: STRUCTURE

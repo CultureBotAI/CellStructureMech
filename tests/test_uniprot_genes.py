@@ -485,3 +485,108 @@ def test_resolve_symbol_stops_at_the_first_taxon_that_answers(fake_search):
     finally:
         G.search_gene = original
     assert asked == [("mreB", 83333)]
+
+
+def test_include_complexes_reaches_protein_complex_components_with_symbols(fake_search):
+    doc = _doc([
+        {"component_id": "ring", "component_type": "PROTEIN_COMPLEX", "gene_symbols": ["fliF"]},
+        {"component_id": "hook", "component_type": "PROTEIN", "gene_symbols": ["flgE"]},
+    ])
+    assert [c["component_id"] for c in G.candidates(doc)] == ["hook"]
+    assert [c["component_id"] for c in G.candidates(doc, include_complexes=True)] == ["ring", "hook"]
+
+
+def test_causal_graph_report_classifies_gene_or_protein_nodes():
+    doc = {
+        "components": [
+            {"component_id": "covered_comp", "component_type": "PROTEIN", "gene_symbols": ["a"],
+             "protein_examples": [{"uniprot_id": "UniProtKB:P1", "gene_symbol": "a"}]},
+            {"component_id": "partial_comp", "component_type": "PROTEIN", "gene_symbols": ["a", "b"],
+             "protein_examples": [{"uniprot_id": "UniProtKB:P1", "gene_symbol": "a"}]},
+            {"component_id": "seedable_comp", "component_type": "PROTEIN", "gene_symbols": ["c"]},
+            {"component_id": "nosym_comp", "component_type": "PROTEIN", "label": "generic subunit"},
+        ],
+        "causal_graphs": [{
+            "name": "g1",
+            "nodes": [
+                {"id": "n1", "node_type": "GENE_OR_PROTEIN", "label": "A", "component_ref": "covered_comp"},
+                {"id": "n2", "node_type": "GENE_OR_PROTEIN", "label": "AB", "component_ref": "partial_comp"},
+                {"id": "n3", "node_type": "GENE_OR_PROTEIN", "label": "C", "component_ref": "seedable_comp"},
+                {"id": "n4", "node_type": "GENE_OR_PROTEIN", "label": "D", "component_ref": "nosym_comp"},
+                {"id": "n5", "node_type": "GENE_OR_PROTEIN", "label": "Ext1", "xrefs": ["UniProtKB:P99999"]},
+                {"id": "n6", "node_type": "GENE_OR_PROTEIN", "label": "Ext2"},
+                {"id": "n7", "node_type": "BIOLOGICAL_PROCESS", "label": "Proc"},
+            ],
+        }],
+    }
+    rows = G.causal_graph_report(doc)
+    assert [(nid, cat) for _, nid, cat, _ in rows] == [
+        ("n1", G.CG_COVERED),
+        ("n2", G.CG_PARTIAL),
+        ("n3", G.CG_SEEDABLE),
+        ("n4", G.CG_NO_SYMBOL),
+        ("n5", G.CG_UNANCHORED_XREF),
+        ("n6", G.CG_UNANCHORED),
+    ]
+
+
+def test_verify_records_checks_status_taxon_and_label(monkeypatch, tmp_path):
+    monkeypatch.setattr(
+        G, "fetch_entries_by_accession",
+        lambda accs: {"P0A9X4": entry("P0A9X4", ["mreB"], 83333, organism="Escherichia coli (strain K12)")},
+    )
+    monkeypatch.setattr(G, "ncbi_taxon_names", lambda tids: {"83333": "Escherichia coli K-12"})
+    good_doc = {
+        "canonical_examples": [{"taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12"}],
+        "components": [{
+            "component_id": "mreb",
+            "protein_examples": [{
+                "uniprot_id": "UniProtKB:P0A9X4",
+                "entry_status": "REVIEWED",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+            }],
+        }],
+    }
+    assert G.verify_records([(tmp_path / "good.yaml", good_doc)]) == []
+
+    bad_doc = {
+        "canonical_examples": [{"taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12"}],
+        "components": [{
+            "component_id": "mreb",
+            "protein_examples": [{
+                "uniprot_id": "UniProtKB:P0A9X4",
+                "entry_status": "REVIEWED",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli (strain K12)",
+            }],
+        }],
+    }
+    issues = G.verify_records([(tmp_path / "bad.yaml", bad_doc)])
+    assert len(issues) == 1
+    assert "taxon_label" in issues[0][3]
+
+
+def test_missing_symbols_recognizes_synonym_recorded_in_role():
+    hit = {"entry": entry("P0ABG7", ["mrdB", "rodA"], 83333), "symbol": "rodA",
+           "taxon_label": "E. coli K-12", "narrowed": False}
+    ex = G.build_example(hit, "2026-09-07", {}, {"83333": "Escherichia coli K-12"})
+    comp = {"gene_symbols": ["rodA"], "protein_examples": [ex]}
+    assert G.missing_symbols(comp) == []
+
+
+def test_missing_symbols_recognizes_also_declared_synonyms_and_locus_tags():
+    comp = {
+        "gene_symbols": ["secY", "prlA"],
+        "protein_examples": [{
+            "uniprot_id": "UniProtKB:P0AGA2",
+            "gene_symbol": "secY",
+            "role": (
+                "The single reviewed UniProtKB entry for gene secY "
+                "(also declared as synonym prlA) in Escherichia coli K-12."
+            ),
+        }],
+    }
+    assert G.missing_symbols(comp) == []
+
+

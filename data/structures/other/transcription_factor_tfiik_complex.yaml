@@ -19,6 +19,18 @@ curation_history:
     complex parent, holo-TFIIH parthood, three TFIIK protein components, Saccharomyces
     scope, a nonmechanistic subunit assembly graph, and grounding/boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-18T03:32:31Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: TFIIK complex
   synonym_type: EXACT_SYNONYM
@@ -49,6 +61,23 @@ components:
   evidence:
   - reference: GO:0070985
     notes: GO:0070985 defines TFIIK as containing Ccl1p/Cyclin H in Saccharomyces/human.
+  protein_examples:
+  - uniprot_id: UniProtKB:P37366
+    protein_label: Cyclin CCL1
+    gene_symbol: CCL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene CCL1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P37366
+      notes: UniProtKB reviewed (Swiss-Prot) entry P37366, the single reviewed entry
+        for gene CCL1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: tfb3_mat1_tfiik_subunit
   label: Tfb3/MAT1 TFIIK subunit
   component_type: PROTEIN
@@ -64,6 +93,23 @@ components:
   evidence:
   - reference: GO:0070985
     notes: GO:0070985 defines TFIIK as containing Tfb3p/MAT1 in Saccharomyces/human.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03290
+    protein_label: RNA polymerase II transcription factor B subunit 3
+    gene_symbol: TFB3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TFB3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03290
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03290, the single reviewed entry
+        for gene TFB3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: kin28_cdk7_tfiik_subunit
   label: Kin28/CDK7 TFIIK subunit
   component_type: PROTEIN
@@ -79,6 +125,22 @@ components:
   evidence:
   - reference: GO:0070985
     notes: GO:0070985 defines TFIIK as containing Kin28p/CDK7 in Saccharomyces/human.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06242
+    protein_label: Serine/threonine-protein kinase KIN28
+    gene_symbol: KIN28
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene KIN28 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P06242.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

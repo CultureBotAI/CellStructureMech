@@ -34,6 +34,18 @@ curation_history:
     narrowing the Escherichia coli canonical example to Vanzo-supported RNase E scaffold
     mapping; resolved #559 by simplifying the mRNA catabolic process description.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:33:23Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: RNA degradosome
   synonym_type: RELATED_SYNONYM
@@ -62,6 +74,29 @@ components:
   - reference: DOI:10.1146/annurev.micro.61.080706.093440
     notes: Carpousis 2007 reviewed RNase E as the multidomain scaffold of the E. coli
       RNA degradosome.
+  protein_examples:
+  - uniprot_id: UniProtKB:P21513
+    protein_label: Ribonuclease E
+    gene_symbol: rne
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rne in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11134527
+      notes: Liou GG et al. 2001, ‘RNA degradosomes exist in vivo in Escherichia coli
+        as multicomponent complexes associated with the cytoplasmic membrane via the
+        N-terminal region of ribonuclease E.’, Proc Natl Acad Sci U S A. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P21513.
+    - reference: PMID:22509045
+      notes: Murashko ON et al. 2012, ‘Membrane binding of Escherichia coli RNase
+        E catalytic domain stabilizes protein structure and increases RNA substrate
+        affinity.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P21513.
 - component_id: polynucleotide_phosphorylase
   label: polynucleotide phosphorylase
   component_type: PROTEIN
@@ -82,6 +117,22 @@ components:
   - reference: DOI:10.1101/gad.12.17.2770
     notes: Vanzo et al. 1998 identified a PNPase interaction site in the RNase E scaffold
       region.
+  protein_examples:
+  - uniprot_id: UniProtKB:P05055
+    protein_label: Polyribonucleotide nucleotidyltransferase
+    gene_symbol: pnp
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene pnp in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of P05055.
 - component_id: rhlb_dead_box_helicase
   label: RhlB DEAD-box RNA helicase
   component_type: PROTEIN
@@ -100,6 +151,23 @@ components:
   - reference: DOI:10.1101/gad.12.17.2770
     notes: Vanzo et al. 1998 localized the RhlB binding site to the RNase E scaffold
       region.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8J8
+    protein_label: ATP-dependent RNA helicase RhlB
+    gene_symbol: rhlB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene rhlB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18337249
+      notes: Taghbalout A et al. 2008, ‘RNaseE and RNA helicase B play central roles
+        in the cytoskeletal organization of the RNA degradosome.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P0A8J8.
 - component_id: enolase_degradosome_component
   label: enolase degradosome component
   component_type: PROTEIN
@@ -119,6 +187,33 @@ components:
   - reference: DOI:10.1016/j.jmb.2006.02.012
     notes: Chandran and Luisi 2006 analyzed recognition of enolase in the E. coli
       RNA degradosome.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A6P9
+    protein_label: Enolase
+    gene_symbol: eno
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene eno in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17242352
+      notes: Taghbalout A et al. 2007, ‘RNaseE and the other constituents of the RNA
+        degradosome are components of the bacterial cytoskeleton.’, Proc Natl Acad
+        Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton' localisation of P0A6P9.
+    - reference: PMID:18337249
+      notes: Taghbalout A et al. 2008, ‘RNaseE and RNA helicase B play central roles
+        in the cytoskeletal organization of the RNA degradosome.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton' localisation
+        of P0A6P9.
+    - reference: PMID:15003462
+      notes: Boël G et al. 2004, ‘Is 2-phosphoglycerate-dependent automodification
+        of bacterial enolases implicated in their export?’, J Mol Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Secreted' localisation of
+        P0A6P9.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1224
   taxon_label: Pseudomonadota

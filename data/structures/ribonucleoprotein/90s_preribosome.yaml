@@ -29,6 +29,18 @@ curation_history:
     evidence and component-boundary discussion and by making the 35S pre-rRNA grounding
     rationale self-contained.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:33:18Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0030684
 components:
@@ -83,6 +95,144 @@ components:
   - reference: DOI:10.1016/s1097-2765(02)00579-8
     notes: Grandi et al. 2002 identified non-ribosomal proteins, including U3-associated
       proteins and other 18S-rRNA synthesis factors, in 90S pre-ribosomal particles.
+  gene_symbols:
+  - NOP1
+  - NOP56
+  - NOP58
+  - SNU13
+  - UTP4
+  - UTP8
+  - UTP10
+  protein_examples:
+  - uniprot_id: UniProtKB:P15646
+    protein_label: rRNA 2'-O-methyltransferase fibrillarin
+    gene_symbol: NOP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NOP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12756332
+      notes: Xu C et al. 2003, ‘In vivo analysis of nucleolar proteins modified by
+        the yeast arginine methyltransferase Hmt1/Rmt1p.’, RNA. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P15646.
+    - reference: PMID:2298745
+      notes: Henríquez R et al. 1990, ‘Isolation and sequencing of NOP1. A yeast gene
+        encoding a nucleolar protein homologous to a human autoimmune antigen.’, J
+        Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        nucleolus' localisation of P15646.
+    - reference: PMID:2686980
+      notes: Schimmang T et al. 1989, ‘A yeast nucleolar protein related to mammalian
+        fibrillarin is associated with small nucleolar RNA and is essential for viability.’,
+        EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        nucleolus' localisation of P15646.
+  - uniprot_id: UniProtKB:Q12460
+    protein_label: Nucleolar protein 56
+    gene_symbol: NOP56
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NOP56 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9372940
+      notes: Gautier T et al. 1997, ‘Nucleolar KKE/D repeat proteins Nop56p and Nop58p
+        interact with Nop1p and are required for ribosome biogenesis.’, Mol Cell Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus'
+        localisation of Q12460.
+  - uniprot_id: UniProtKB:P39990
+    protein_label: 13 kDa ribonucleoprotein-associated protein
+    gene_symbol: SNU13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SNU13 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39990
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39990, the single reviewed entry
+        for gene SNU13 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q06679
+    protein_label: U3 small nucleolar RNA-associated protein 4
+    gene_symbol: UTP4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of Q06679.
+  - uniprot_id: UniProtKB:P53276
+    protein_label: U3 small nucleolar RNA-associated protein 8
+    gene_symbol: UTP8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12068309
+      notes: Dragon F et al. 2002, ‘A large nucleolar U3 ribonucleoprotein required
+        for 18S ribosomal RNA biogenesis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, nucleolus' localisation of P53276.
+    - reference: PMID:12794079
+      notes: Steiner-Mosonyi M et al. 2003, ‘Utp8p is an essential intranuclear component
+        of the nuclear tRNA export machinery of Saccharomyces cerevisiae.’, J Biol
+        Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        nucleolus' localisation of P53276.
+    - reference: PMID:15489292
+      notes: Gallagher JE et al. 2004, ‘RNA polymerase I transcription and pre-rRNA
+        processing are linked by specific SSU processome components.’, Genes Dev.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus'
+        localisation of P53276.
+  - uniprot_id: UniProtKB:P42945
+    protein_label: U3 small nucleolar RNA-associated protein 10
+    gene_symbol: UTP10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UTP10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P42945
+      notes: UniProtKB reviewed (Swiss-Prot) entry P42945, the single reviewed entry
+        for gene UTP10 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q12499
+    protein_label: Nucleolar protein 58
+    gene_symbol: NOP58
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene NOP58 in Saccharomyces
+      cerevisiae S288C. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9632712
+      notes: Wu P et al. 1998, ‘Nop5p is a small nucleolar ribonucleoprotein component
+        required for pre-18 S rRNA processing in yeast.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation
+        of Q12499.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

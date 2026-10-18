@@ -36,6 +36,13 @@ curation_history:
   changes: '#2325: Expose the unresolved bacterial identity conflict and correct the
     sole-author attribution to Docampo 2024.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:15:47Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: metachromatic granule
   synonym_type: EXACT_SYNONYM
@@ -112,6 +119,25 @@ components:
       to bacterial acidocalcisome-like organelles. This is the 2003 interpretation;
       see the bacterial_identity_conflict discussion for contrary C58 results and
       the later counterargument.
+  gene_symbols:
+  - hppA
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8VPZ0
+    protein_label: Putative K(+)-stimulated pyrophosphate-energized sodium pump
+    gene_symbol: hppA
+    taxon_id: NCBITaxon:358
+    taxon_label: Agrobacterium tumefaciens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene hppA in Agrobacterium tumefaciens,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8VPZ0
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q8VPZ0, the single reviewed entry
+        for gene hppA in Agrobacterium tumefaciens. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 - component_id: cation_transporters
   label: acidocalcisome cation transporters
   component_type: PROTEIN

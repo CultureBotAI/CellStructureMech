@@ -30,6 +30,11 @@ curation_history:
   changes: Corrected the GO:1902495 parentage note to describe GO:1902495 as an ancestor
     of GO:1990197.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 synonyms:
 - synonym_text: ATP-binding cassette (ABC) methionine importer complex
   synonym_type: EXACT_SYNONYM
@@ -81,7 +86,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-01'
     role: Reviewed E. coli K-12 MetN accession that UniProt maps to GO:1990197 and
-      RCSB maps to the two MetN copies in PDB:6CVL entity 1.
+      RCSB maps to the two MetN copies in PDB:6CVL entity 1 (also declared as synonym
+      abc).
     evidence:
     - reference: UniProtKB:P30750
       notes: UniProtKB P30750 is the reviewed E. coli K-12 entry for Methionine import
@@ -122,7 +128,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-01'
     role: Reviewed E. coli K-12 MetI accession that UniProt maps to GO:1990197 and
-      RCSB maps to the two MetI copies in PDB:6CVL entity 2.
+      RCSB maps to the two MetI copies in PDB:6CVL entity 2 (also declared as synonym
+      yaeE).
     evidence:
     - reference: UniProtKB:P31547
       notes: UniProtKB P31547 is the reviewed E. coli K-12 entry for the D-methionine
@@ -160,7 +167,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-01'
     role: Reviewed E. coli K-12 MetQ accession that UniProt maps to GO:1990197 and
-      RCSB maps to the single MetQ copy in PDB:6CVL entity 3.
+      RCSB maps to the single MetQ copy in PDB:6CVL entity 3 (also declared as synonym
+      yaeC).
     evidence:
     - reference: UniProtKB:P28635
       notes: UniProtKB P28635 is the reviewed E. coli K-12 entry for the D-methionine-binding

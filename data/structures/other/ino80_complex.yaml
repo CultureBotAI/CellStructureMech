@@ -20,6 +20,18 @@ curation_history:
     GO/PubMed/DOI evidence, a nonmechanistic function graph, and a subunit-grounding
     TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:25:31Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 14 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: INO80 chromatin remodeling complex
   synonym_type: EXACT_SYNONYM
@@ -53,6 +65,22 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53115
+    protein_label: Chromatin-remodeling ATPase INO80
+    gene_symbol: INO80
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene INO80 in Saccharomyces
+      cerevisiae S288C. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53115.
 - component_id: rvb1_ino80c_head_subunit
   label: Rvb1 INO80-C head subunit
   component_type: PROTEIN
@@ -70,6 +98,22 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03940
+    protein_label: RuvB-like protein 1
+    gene_symbol: RVB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RVB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q03940.
 - component_id: rvb2_ino80c_head_subunit
   label: Rvb2 INO80-C head subunit
   component_type: PROTEIN
@@ -87,6 +131,28 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12464
+    protein_label: RuvB-like protein 2
+    gene_symbol: RVB2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RVB2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10787406
+      notes: Lim CR et al. 2000, ‘The Saccharomyces cerevisiae RuvB-like protein,
+        Tih2p, is required for cell cycle progression and RNA polymerase II-directed
+        transcription.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus, nucleoplasm' localisation of Q12464.
+    - reference: PMID:11604509
+      notes: King TH et al. 2001, ‘A well-connected and conserved nucleoplasmic helicase
+        is required for production of box C/D and H/ACA snoRNAs and localization of
+        snoRNP proteins.’, Mol Cell Biol. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus, nucleoplasm' localisation of Q12464.
 - component_id: ies5_ino80c_subunit
   label: Ies5 INO80-C subunit
   component_type: PROTEIN
@@ -104,6 +170,22 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40060
+    protein_label: Ino eighty subunit 5
+    gene_symbol: IES5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IES5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P40060.
 - component_id: ies3_ino80c_nhp10_module_subunit
   label: Ies3 INO80-C Nhp10 module subunit
   component_type: PROTEIN
@@ -121,6 +203,22 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12345
+    protein_label: Ino eighty subunit 3
+    gene_symbol: IES3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IES3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q12345.
 - component_id: nhp10_ino80c_nhp10_module_subunit
   label: Nhp10 INO80-C Nhp10 module subunit
   component_type: PROTEIN
@@ -138,6 +236,22 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03435
+    protein_label: Non-histone protein 10
+    gene_symbol: NHP10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NHP10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q03435.
 - component_id: ies6_ino80c_arp5_module_subunit
   label: Ies6 INO80-C Arp5 module subunit
   component_type: PROTEIN
@@ -155,6 +269,22 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32617
+    protein_label: Chromatin-remodeling complex subunit IES6
+    gene_symbol: IES6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IES6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P32617.
 - component_id: ies1_ino80c_subunit
   label: Ies1 INO80-C subunit
   component_type: PROTEIN
@@ -172,6 +302,22 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:P43579
+    protein_label: Ino eighty subunit 1
+    gene_symbol: IES1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IES1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P43579.
 - component_id: arp8_ino80c_arp8_module_subunit
   label: Arp8 INO80-C Arp8 module subunit
   component_type: PROTEIN
@@ -189,6 +335,23 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12386
+    protein_label: Actin-like protein ARP8
+    gene_symbol: ARP8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12386
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12386, the single reviewed entry
+        for gene ARP8 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: arp4_ino80c_arp8_module_subunit
   label: Arp4 INO80-C Arp8 module subunit
   component_type: PROTEIN
@@ -206,6 +369,22 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:P80428
+    protein_label: Actin-related protein 4
+    gene_symbol: ARP4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:8573785
+      notes: Weber V et al. 1995, ‘The actin-related protein Act3p of Saccharomyces
+        cerevisiae is located in the nucleus.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P80428.
 - component_id: act1_ino80c_actin_constituent
   label: Act1 INO80-C actin constituent
   component_type: PROTEIN
@@ -223,6 +402,23 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:P60010
+    protein_label: Actin
+    gene_symbol: ACT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ACT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P60010
+      notes: UniProtKB reviewed (Swiss-Prot) entry P60010, the single reviewed entry
+        for gene ACT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: taf14_ino80c_subunit
   label: Taf14 INO80-C subunit
   component_type: PROTEIN
@@ -240,6 +436,23 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35189
+    protein_label: Transcription initiation factor TFIID subunit 14
+    gene_symbol: TAF14
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TAF14 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P35189
+      notes: UniProtKB reviewed (Swiss-Prot) entry P35189, the single reviewed entry
+        for gene TAF14 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ies2_ino80c_neck_subunit
   label: Ies2 INO80-C neck subunit
   component_type: PROTEIN
@@ -257,6 +470,22 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40154
+    protein_label: Ino eighty subunit 2
+    gene_symbol: IES2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IES2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P40154.
 - component_id: ies4_ino80c_subunit
   label: Ies4 INO80-C subunit
   component_type: PROTEIN
@@ -274,6 +503,22 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08561
+    protein_label: Ino eighty subunit 4
+    gene_symbol: IES4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IES4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q08561.
 - component_id: arp5_ino80c_arp5_module_subunit
   label: Arp5 INO80-C Arp5 module subunit
   component_type: PROTEIN
@@ -292,6 +537,23 @@ components:
     notes: Watanabe et al. 2015 Supplementary Table 2 reports this protein among the
       Saccharomyces cerevisiae INO80-C subunits detected by mass spectrometry in three
       independent TAP-tagged purifications.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53946
+    protein_label: Actin-related protein 5
+    gene_symbol: ARP5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53946
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53946, the single reviewed entry
+        for gene ARP5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

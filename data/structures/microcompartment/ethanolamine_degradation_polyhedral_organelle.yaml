@@ -33,6 +33,11 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Eut metabolosome
   synonym_type: EXACT_SYNONYM
@@ -248,12 +253,19 @@ causal_graphs:
   - node_id: eutc_targeting_peptide
     label: EutC N-terminal targeting sequence
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P19265
   - node_id: eut_lumen_enzymes
     label: Eut lumen enzymes
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P19264
+    - UniProtKB:P19265
   - node_id: eutq
     label: EutQ assembly factor
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q9ZFV5
   edges:
   - subject: eut_bmc_domain_shell_proteins
     predicate: self-assemble into

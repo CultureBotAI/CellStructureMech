@@ -22,6 +22,11 @@ curation_history:
     depletion graph, bounded native Figure 2 with verified CC BY 4.0 provenance, and
     explicit identity, catalytic, family and imaging limits.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: CRL4WDR1
   synonym_type: EXACT_SYNONYM
@@ -49,6 +54,22 @@ components:
       WDR1 immunoprecipitation from a cell line with endogenously tagged WDR1, TbCUL4
       and TbDDB1 recovers both partners. Other tested cullins, including TbCUL1/Tb927.11.11430,
       did not co-precipitate WDR1 in that assay.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q57XW2
+    protein_label: Cullin 4B, putative
+    gene_symbol: CUL4
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CUL4 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q57XW2
+      notes: UniProtKB unreviewed (TrEMBL) entry Q57XW2 for gene CUL4 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: ddb1
   label: DDB1 adaptor subunit
   component_type: PROTEIN
@@ -67,6 +88,22 @@ components:
     notes: Figure 3C-E identifies TbDDB1 as Tb927.6.5110. The WDR1 1-300 amino-acid
       GST fusion pulls down tagged DDB1 from trypanosome lysate; this is not a binding
       experiment with two purified partners.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q586I3
+    protein_label: DNA damage-binding protein 1
+    gene_symbol: DDB1
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene DDB1 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q586I3
+      notes: UniProtKB unreviewed (TrEMBL) entry Q586I3 for gene DDB1 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: wdr1
   label: WDR1 substrate-recognition subunit
   component_type: PROTEIN
@@ -90,6 +127,22 @@ components:
       the TbPLK PEST motif disrupts fragment-mediated association. Full-length WDR1
       was not tested in yeast because cloning failed. Growth defects after RNAi do
       not establish essentiality for complex assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q582R9
+    protein_label: Uncharacterized protein
+    gene_symbol: WDR1
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene WDR1 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q582R9
+      notes: UniProtKB unreviewed (TrEMBL) entry Q582R9 for gene WDR1 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei

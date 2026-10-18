@@ -50,6 +50,11 @@ curation_history:
   action: LINKED_INTRALUMINAL_VESICLE_RECORD
   changes: Grounded the multivesicular-body intraluminal vesicle graph node to cellstructuremech:multivesicular_body_intraluminal_vesicle.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 has_part:
 - GO:0010008
 - GO:0031904
@@ -160,6 +165,8 @@ causal_graphs:
   - node_id: vps27_endosomal_recruiter
     label: Vps27 endosomal ESCRT-I recruiter
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P40343
   - node_id: escrt_i
     label: ESCRT I complex
     node_type: STRUCTURE

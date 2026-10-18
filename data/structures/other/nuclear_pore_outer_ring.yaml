@@ -28,6 +28,13 @@ curation_history:
     Nup84/Y-complex spoke node before the outer ring and narrowing the Saccharomyces
     cerevisiae example to the Lutzmann-supported reconstitution claim.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:24Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Nup84 complex
   synonym_type: RELATED_SYNONYM
@@ -61,6 +68,23 @@ components:
   - reference: DOI:10.1083/jcb.201109008
     notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
       module in the nuclear pore complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P52891
+    protein_label: Nucleoporin NUP84
+    gene_symbol: NUP84
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP84 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P52891.'
 - component_id: nup85_family
   label: Nup85-family nucleoporin
   component_type: PROTEIN
@@ -81,6 +105,23 @@ components:
   - reference: DOI:10.1083/jcb.201109008
     notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
       module in the nuclear pore complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P46673
+    protein_label: Nucleoporin NUP85
+    gene_symbol: NUP85
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP85 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P46673.'
 - component_id: nup120_nup160_family
   label: Nup120/Nup160-family nucleoporin
   component_type: PROTEIN
@@ -101,6 +142,23 @@ components:
   - reference: DOI:10.1083/jcb.201109008
     notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
       module in the nuclear pore complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35729
+    protein_label: Nucleoporin NUP120
+    gene_symbol: NUP120
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP120 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P35729.'
 - component_id: nup133_family
   label: Nup133-family nucleoporin
   component_type: PROTEIN
@@ -121,6 +179,23 @@ components:
   - reference: DOI:10.1083/jcb.201109008
     notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
       module in the nuclear pore complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36161
+    protein_label: Nucleoporin NUP133
+    gene_symbol: NUP133
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP133 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P36161.'
 - component_id: nup145c_nup96_family
   label: Nup145C/Nup96-family nucleoporin
   component_type: PROTEIN
@@ -141,6 +216,23 @@ components:
   - reference: DOI:10.1083/jcb.201109008
     notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
       module in the nuclear pore complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P49687
+    protein_label: Nucleoporin NUP145
+    gene_symbol: NUP145
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP145 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P49687.'
 - component_id: sec13_family
   label: Sec13-family nucleoporin
   component_type: PROTEIN
@@ -161,6 +253,23 @@ components:
   - reference: DOI:10.1083/jcb.201109008
     notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
       module in the nuclear pore complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04491
+    protein_label: Protein transport protein SEC13
+    gene_symbol: SEC13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC13 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        Q04491.'
 - component_id: seh1_family
   label: Seh1-family nucleoporin
   component_type: PROTEIN
@@ -181,6 +290,28 @@ components:
   - reference: DOI:10.1083/jcb.201109008
     notes: Fernandez-Martinez et al. 2012 mapped the heptameric Saccharomyces Nup84
       module in the nuclear pore complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53011
+    protein_label: Nucleoporin SEH1
+    gene_symbol: SEH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEH1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P53011.'
+    - reference: PMID:21454883
+      notes: Dokudovskaya S et al. 2011, ‘A conserved coatomer-related complex containing
+        Sec13 and Seh1 dynamically associates with the vacuole in Saccharomyces cerevisiae.’,
+        Mol Cell Proteomics. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Vacuole membrane' localisation of P53011.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

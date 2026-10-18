@@ -35,6 +35,18 @@ curation_history:
     to the Cog1-Cog8 graph parthood edges and removing the mammalian-backed COG-to-Golgi
     localization edge from the yeast graph.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:21:21Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0099023
 synonyms:
@@ -67,6 +79,23 @@ components:
   - reference: DOI:10.1074/jbc.M400662200
     notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
       counterparts and mapped pairwise interactions within the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53079
+    protein_label: Conserved oligomeric Golgi complex subunit 1
+    gene_symbol: COG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene COG1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53079
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53079, the single reviewed entry
+        for gene COG1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cog2_cog_subunit
   label: Cog2 COG subunit
   component_type: PROTEIN
@@ -86,6 +115,27 @@ components:
   - reference: DOI:10.1074/jbc.M400662200
     notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
       counterparts and mapped pairwise interactions within the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53271
+    protein_label: Conserved oligomeric Golgi complex subunit 2
+    gene_symbol: COG2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene COG2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Golgi apparatus membrane' localisation of P53271.
+    - reference: PMID:9606204
+      notes: VanRheenen SM et al. 1998, ‘Sec35p, a novel peripheral membrane protein,
+        is required for ER to Golgi vesicle docking.’, J Cell Biol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Golgi apparatus membrane' localisation
+        of P53271.
 - component_id: cog3_cog_subunit
   label: Cog3 COG subunit
   component_type: PROTEIN
@@ -105,6 +155,28 @@ components:
   - reference: DOI:10.1074/jbc.M400662200
     notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
       counterparts and mapped pairwise interactions within the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40094
+    protein_label: Conserved oligomeric Golgi complex subunit 3
+    gene_symbol: COG3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene COG3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10562277
+      notes: VanRheenen SM et al. 1999, ‘Sec34p, a protein required for vesicle tethering
+        to the yeast Golgi apparatus, is in a complex with Sec35p.’, J Cell Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Golgi apparatus
+        membrane' localisation of P40094.
+    - reference: PMID:10588657
+      notes: Spelbrink RG et al. 1999, ‘The yeast GRD20 gene is required for protein
+        sorting in the trans-Golgi network/endosomal system and for polarization of
+        the actin cytoskeleton.’, Mol Biol Cell. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Golgi apparatus membrane' localisation of P40094.
 - component_id: cog4_cog_subunit
   label: Cog4 COG subunit
   component_type: PROTEIN
@@ -124,6 +196,23 @@ components:
   - reference: DOI:10.1074/jbc.M400662200
     notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
       counterparts and mapped pairwise interactions within the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06096
+    protein_label: Conserved oligomeric Golgi complex subunit 4
+    gene_symbol: COG4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene COG4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q06096
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q06096, the single reviewed entry
+        for gene COG4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cog5_cog_subunit
   label: Cog5 COG subunit
   component_type: PROTEIN
@@ -143,6 +232,23 @@ components:
   - reference: DOI:10.1074/jbc.M400662200
     notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
       counterparts and mapped pairwise interactions within the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53951
+    protein_label: Conserved oligomeric Golgi complex subunit 5
+    gene_symbol: COG5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene COG5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53951
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53951, the single reviewed entry
+        for gene COG5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cog6_cog_subunit
   label: Cog6 COG subunit
   component_type: PROTEIN
@@ -162,6 +268,23 @@ components:
   - reference: DOI:10.1074/jbc.M400662200
     notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
       counterparts and mapped pairwise interactions within the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53959
+    protein_label: Conserved oligomeric Golgi complex subunit 6
+    gene_symbol: COG6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene COG6 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53959
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53959, the single reviewed entry
+        for gene COG6 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cog7_cog_subunit
   label: Cog7 COG subunit
   component_type: PROTEIN
@@ -181,6 +304,23 @@ components:
   - reference: DOI:10.1074/jbc.M400662200
     notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
       counterparts and mapped pairwise interactions within the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53195
+    protein_label: Conserved oligomeric Golgi complex subunit 7
+    gene_symbol: COG7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene COG7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53195
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53195, the single reviewed entry
+        for gene COG7 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cog8_cog_subunit
   label: Cog8 COG subunit
   component_type: PROTEIN
@@ -200,6 +340,23 @@ components:
   - reference: DOI:10.1074/jbc.M400662200
     notes: Loh and Hong 2004 compared the mammalian COG subunits with their yeast
       counterparts and mapped pairwise interactions within the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04632
+    protein_label: Conserved oligomeric Golgi complex subunit 8
+    gene_symbol: COG8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene COG8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q04632
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q04632, the single reviewed entry
+        for gene COG8 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

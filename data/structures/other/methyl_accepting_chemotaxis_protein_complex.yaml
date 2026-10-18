@@ -256,6 +256,11 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 causal_graphs:
 - graph_id: chea_chew_hexagonal_array_assembly
   title: CheA and CheW network receptor trimers into a hexagonal array
@@ -397,6 +402,8 @@ causal_graphs:
   - node_id: phospho_chey
     label: phospho-CheY
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P0AE67
   - node_id: motor_reversal
     label: flagellar motor reversal to clockwise rotation
     node_type: BIOLOGICAL_PROCESS

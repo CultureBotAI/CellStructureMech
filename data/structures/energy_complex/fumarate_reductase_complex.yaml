@@ -33,6 +33,18 @@ curation_history:
   changes: 'Resolved issue #1452 by adding source-attested quinol-fumarate reductase
     synonymy from the PDB:1KF6 primary citation title.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:13:23Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: quinol-fumarate reductase
   synonym_type: EXACT_SYNONYM
@@ -57,6 +69,23 @@ components:
   - reference: PDB:1KF6
     notes: RCSB maps PDB:1KF6 polymer entity 1 to the E. coli FrdA flavoprotein subunit,
       UniProtKB:P00363.
+  protein_examples:
+  - uniprot_id: UniProtKB:P00363
+    protein_label: Fumarate reductase flavoprotein subunit
+    gene_symbol: frdA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene frdA in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P00363
+      notes: UniProtKB reviewed (Swiss-Prot) entry P00363, the single reviewed entry
+        for gene frdA in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: frdb_iron_sulfur_subunit
   label: fumarate reductase iron-sulfur subunit
   component_type: PROTEIN
@@ -77,6 +106,23 @@ components:
   - reference: PDB:1KF6
     notes: RCSB maps PDB:1KF6 polymer entity 2 to the E. coli FrdB iron-sulfur subunit,
       UniProtKB:P0AC47.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AC47
+    protein_label: Fumarate reductase iron-sulfur subunit
+    gene_symbol: frdB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene frdB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AC47
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AC47, the single reviewed entry
+        for gene frdB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: frdc_hydrophobic_subunit
   label: Fumarate reductase, subunit C
   component_type: PROTEIN
@@ -94,6 +140,22 @@ components:
   - reference: PDB:1KF6
     notes: RCSB maps PDB:1KF6 polymer entity 3 to the E. coli FrdC hydrophobic subunit,
       UniProtKB:P0A8Q0.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8Q0
+    protein_label: Fumarate reductase subunit C
+    gene_symbol: frdC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene frdC in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P0A8Q0.
 - component_id: frdd_hydrophobic_subunit
   label: Fumarate reductase, subunit D
   component_type: PROTEIN
@@ -111,6 +173,22 @@ components:
   - reference: PDB:1KF6
     notes: RCSB maps PDB:1KF6 polymer entity 4 to the E. coli FrdD hydrophobic subunit,
       UniProtKB:P0A8Q3.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8Q3
+    protein_label: Fumarate reductase subunit D
+    gene_symbol: frdD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene frdD in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P0A8Q3.
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli

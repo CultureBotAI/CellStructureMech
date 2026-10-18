@@ -40,6 +40,18 @@ curation_history:
   changes: 'Resolved #1224 by routing Katzmann, Babst and Emr 2001 ESCRT-I evidence
     through reachable PMID:11511343 instead of the unreadable Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:33Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0036452
 part_of:
@@ -72,6 +84,25 @@ components:
   - reference: DOI:10.1083/jcb.200302136
     notes: Katzmann, Stefan, Babst and Emr 2003 described ESCRT-I as the Vps23, Vps28
       and Vps37 complex while testing how Vps27 recruits it to yeast endosomal membranes.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25604
+    protein_label: Suppressor protein STP22 of temperature-sensitive alpha-factor
+      receptor and arginine permease
+    gene_symbol: STP22
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS23, which UniProt lists
+      under the primary name STP22, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P25604
+      notes: UniProtKB reviewed (Swiss-Prot) entry P25604, the single reviewed entry
+        for gene VPS23 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps28_escrt_i_subunit
   label: Vps28 ESCRT-I subunit
   component_type: PROTEIN
@@ -92,6 +123,23 @@ components:
   - reference: DOI:10.1083/jcb.200302136
     notes: Katzmann, Stefan, Babst and Emr 2003 described ESCRT-I as the Vps23, Vps28
       and Vps37 complex while testing how Vps27 recruits it to yeast endosomal membranes.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02767
+    protein_label: Vacuolar protein sorting-associated protein 28
+    gene_symbol: VPS28
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS28 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q02767
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q02767, the single reviewed entry
+        for gene VPS28 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps37_escrt_i_subunit
   label: Vps37 ESCRT-I subunit
   component_type: PROTEIN
@@ -112,6 +160,23 @@ components:
   - reference: DOI:10.1083/jcb.200302136
     notes: Katzmann, Stefan, Babst and Emr 2003 described ESCRT-I as the Vps23, Vps28
       and Vps37 complex while testing how Vps27 recruits it to yeast endosomal membranes.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q99176
+    protein_label: Protein SRN2
+    gene_symbol: SRN2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS37, which UniProt lists
+      under the primary name SRN2, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9790597
+      notes: Hong SJ et al. 1998, ‘Isolation of an extragenic suppressor of the rna1-1
+        mutation in Saccharomyces cerevisiae.’, Mol Gen Genet. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm' localisation of Q99176.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -188,6 +253,8 @@ causal_graphs:
   - node_id: vps27_endosomal_recruiter
     label: Vps27 endosomal ESCRT-I recruiter
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P40343
   - node_id: endosome_membrane
     label: endosome membrane
     node_type: STRUCTURE

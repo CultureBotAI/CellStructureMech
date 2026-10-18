@@ -30,6 +30,13 @@ curation_history:
   changes: Removed the invalid section-level attaches_to value from the ESCRT-IV accessory-factor
     boundary discussion.
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:44Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0036452
 synonyms:
@@ -63,6 +70,23 @@ components:
   - reference: DOI:10.1016/j.devcel.2011.05.015
     notes: Henne, Buchkovich and Emr 2011 reviewed Vps4 as the AAA ATPase that disassembles
       ESCRT-III during ESCRT recycling.
+  protein_examples:
+  - uniprot_id: UniProtKB:P52917
+    protein_label: Vacuolar protein sorting-associated protein 4
+    gene_symbol: VPS4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P52917
+      notes: UniProtKB reviewed (Swiss-Prot) entry P52917, the single reviewed entry
+        for gene VPS4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vta1_vps4_cofactor
   label: Vta1 Vps4 cofactor
   component_type: PROTEIN
@@ -80,6 +104,26 @@ components:
   - reference: PMID:20696398
     notes: Yang and Hurley 2010 determined the dimeric Vta1 VSL domain bound to Vps4
       domains and modeled the Vps4-Vta1 ESCRT recycling assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06263
+    protein_label: Vacuolar protein sorting-associated protein VTA1
+    gene_symbol: VTA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VTA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14701806
+      notes: Shiflett SL et al. 2004, ‘Characterization of Vta1p, a class E Vps protein
+        in Saccharomyces cerevisiae.’, J Biol Chem. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm' localisation of Q06263.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Endosome membrane' localisation of Q06263.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

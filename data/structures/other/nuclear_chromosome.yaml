@@ -33,6 +33,13 @@ curation_history:
     broad Eukaryota distribution assertion and retuning the chromosomal-DNA graph
     edge to a composition predicate.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:27:36Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0005694
 part_of:
@@ -72,6 +79,76 @@ components:
   - reference: DOI:10.1146/annurev-genet-120116-023438
     notes: Noma 2017 reviewed mechanisms that organize the three-dimensional budding-yeast
       genome.
+  gene_symbols:
+  - HTA1
+  - HTB1
+  - HHT1
+  - HHF1
+  protein_examples:
+  - uniprot_id: UniProtKB:P04911
+    protein_label: Histone H2A.1
+    gene_symbol: HTA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HTA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P04911
+      notes: UniProtKB reviewed (Swiss-Prot) entry P04911, the single reviewed entry
+        for gene HTA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P02293
+    protein_label: Histone H2B.1
+    gene_symbol: HTB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HTB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P02293
+      notes: UniProtKB reviewed (Swiss-Prot) entry P02293, the single reviewed entry
+        for gene HTB1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P61830
+    protein_label: Histone H3
+    gene_symbol: HHT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HHT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P61830
+      notes: UniProtKB reviewed (Swiss-Prot) entry P61830, the single reviewed entry
+        for gene HHT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P02309
+    protein_label: Histone H4
+    gene_symbol: HHF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HHF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P02309
+      notes: UniProtKB reviewed (Swiss-Prot) entry P02309, the single reviewed entry
+        for gene HHF1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

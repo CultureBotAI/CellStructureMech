@@ -35,6 +35,11 @@ curation_history:
     the core-primosome graph, and narrowed the boundary discussion to leave species-specific
     helicase-primase protein subcomplexes out of the generic core record.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: core primosome
   synonym_type: EXACT_SYNONYM
@@ -57,6 +62,25 @@ components:
   - reference: GO:1990098
     notes: GO:1990098 defines a core primosome as a protein-DNA complex containing
       at least one DNA helicase.
+  gene_symbols:
+  - dnaB
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ACB0
+    protein_label: Replicative DNA helicase DnaB
+    gene_symbol: dnaB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dnaB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ACB0
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ACB0, the single reviewed entry
+        for gene dnaB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: dna_primase
   label: DNA primase
   component_type: PROTEIN
@@ -72,6 +96,25 @@ components:
   - reference: GO:1990098
     notes: GO:1990098 defines a core primosome as a protein-DNA complex containing
       at least one primase.
+  gene_symbols:
+  - dnaG
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABS5
+    protein_label: DNA primase
+    gene_symbol: dnaG
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dnaG in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ABS5
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ABS5, the single reviewed entry
+        for gene dnaG in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: template_dna
   label: template DNA
   component_type: DNA

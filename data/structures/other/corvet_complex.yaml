@@ -31,6 +31,18 @@ curation_history:
   changes: 'Addressed PR #1116 / issue #1117 by adding a resolved boundary discussion
     that keeps Vps21 as a CORVET interactor, not a constituent.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:22:09Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0099023
 synonyms:
@@ -53,6 +65,23 @@ components:
   evidence:
   - reference: DOI:10.1016/j.devcel.2007.03.006
     notes: Peplowska et al. 2007 identified Vps3 as a CORVET-specific subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23643
+    protein_label: Vacuolar protein sorting-associated protein 3
+    gene_symbol: VPS3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P23643
+      notes: UniProtKB reviewed (Swiss-Prot) entry P23643, the single reviewed entry
+        for gene VPS3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps8_corvet_subunit
   label: Vps8 CORVET subunit
   component_type: PROTEIN
@@ -68,6 +97,23 @@ components:
   evidence:
   - reference: DOI:10.1016/j.devcel.2007.03.006
     notes: Peplowska et al. 2007 identified Vps8 as a CORVET-specific subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39702
+    protein_label: Vacuolar protein sorting-associated protein 8
+    gene_symbol: VPS8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39702
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39702, the single reviewed entry
+        for gene VPS8 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps11_pep5_corvet_subunit
   label: Vps11/Pep5 CORVET subunit
   component_type: PROTEIN
@@ -84,6 +130,24 @@ components:
   evidence:
   - reference: DOI:10.1016/j.devcel.2007.03.006
     notes: Peplowska et al. 2007 placed Vps11 in the shared class C Vps core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P12868
+    protein_label: E3 ubiquitin-protein ligase PEP5
+    gene_symbol: PEP5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS11, which UniProt lists
+      under the primary name PEP5, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10944212
+      notes: Seals DF et al. 2000, ‘A Ypt/Rab effector complex containing the Sec1
+        homolog Vps33p is required for homotypic vacuole fusion.’, Proc Natl Acad
+        Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole
+        membrane' localisation of P12868.
 - component_id: vps16_corvet_subunit
   label: Vps16 CORVET subunit
   component_type: PROTEIN
@@ -99,6 +163,23 @@ components:
   evidence:
   - reference: DOI:10.1016/j.devcel.2007.03.006
     notes: Peplowska et al. 2007 placed Vps16 in the shared class C Vps core.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03308
+    protein_label: Vacuolar protein sorting-associated protein 16
+    gene_symbol: VPS16
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS16 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03308
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03308, the single reviewed entry
+        for gene VPS16 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps18_pep3_corvet_subunit
   label: Vps18/Pep3 CORVET subunit
   component_type: PROTEIN
@@ -115,6 +196,24 @@ components:
   evidence:
   - reference: DOI:10.1016/j.devcel.2007.03.006
     notes: Peplowska et al. 2007 placed Vps18 in the shared class C Vps core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P27801
+    protein_label: Vacuolar membrane protein PEP3
+    gene_symbol: PEP3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS18, which UniProt lists
+      under the primary name PEP3, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P27801
+      notes: UniProtKB reviewed (Swiss-Prot) entry P27801, the single reviewed entry
+        for gene VPS18 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: vps33_corvet_subunit
   label: Vps33 CORVET subunit
   component_type: PROTEIN
@@ -130,6 +229,23 @@ components:
   evidence:
   - reference: DOI:10.1016/j.devcel.2007.03.006
     notes: Peplowska et al. 2007 placed Vps33 in the shared class C Vps core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P20795
+    protein_label: Vacuolar protein sorting-associated protein 33
+    gene_symbol: VPS33
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS33 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P20795
+      notes: UniProtKB reviewed (Swiss-Prot) entry P20795, the single reviewed entry
+        for gene VPS33 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -204,6 +320,8 @@ causal_graphs:
   - node_id: vps21_rab
     label: Vps21 Rab5 homolog
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P36017
   - node_id: endosome_membrane
     label: endosome membrane
     node_type: STRUCTURE

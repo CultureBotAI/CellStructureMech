@@ -41,6 +41,13 @@ curation_history:
     as holo-translocon constituents around a SecYEG core rather than folded into the
     SecYEG translocon complex record.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:35:44Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: HTL complex
   synonym_type: EXACT_SYNONYM
@@ -71,6 +78,23 @@ components:
   - reference: PMID:27435098
     notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
       supercomplex in the E. coli inner membrane.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AGA2
+    protein_label: Protein translocase subunit SecY
+    gene_symbol: secY
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene secY in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AGA2
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AGA2, the single reviewed entry
+        for gene secY in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: sece_clamp_subunit
   label: Protein translocase subunit SecE
   component_type: PROTEIN
@@ -91,6 +115,22 @@ components:
   - reference: PMID:27435098
     notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
       supercomplex in the E. coli inner membrane.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AG96
+    protein_label: Protein translocase subunit SecE
+    gene_symbol: secE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene secE in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P0AG96.
 - component_id: secg_accessory_subunit
   label: Protein-export membrane protein SecG
   component_type: PROTEIN
@@ -112,6 +152,23 @@ components:
   - reference: PMID:27435098
     notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
       supercomplex in the E. coli inner membrane.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AG99
+    protein_label: Protein-export membrane protein SecG
+    gene_symbol: secG
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene secG in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AG99
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AG99, the single reviewed entry
+        for gene secG in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: secd_subunit
   label: Protein translocase subunit SecD
   component_type: PROTEIN
@@ -133,6 +190,26 @@ components:
   - reference: PMID:27435098
     notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
       supercomplex in the E. coli inner membrane.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AG90
+    protein_label: Protein translocase subunit SecD
+    gene_symbol: secD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene secD in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P0AG90.
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell inner membrane' localisation of P0AG90.
 - component_id: secf_subunit
   label: Protein translocase subunit SecF
   component_type: PROTEIN
@@ -154,6 +231,23 @@ components:
   - reference: PMID:27435098
     notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
       supercomplex in the E. coli inner membrane.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AG93
+    protein_label: Protein translocase subunit SecF
+    gene_symbol: secF
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene secF in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AG93
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AG93, the single reviewed entry
+        for gene secF in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: yajc_accessory_subunit
   label: Sec translocon accessory complex subunit YajC
   component_type: PROTEIN
@@ -175,6 +269,27 @@ components:
   - reference: PMID:27435098
     notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
       supercomplex in the E. coli inner membrane.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ADZ7
+    protein_label: Sec translocon accessory complex subunit YajC
+    gene_symbol: yajC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene yajC in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell inner membrane' localisation of P0ADZ7.
+    - reference: PMID:27435098
+      notes: Komar J et al. 2016, ‘Membrane protein insertion and assembly by the
+        bacterial holo-translocon SecYEG-SecDF-YajC-YidC.’, Biochem J. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell inner membrane' localisation
+        of P0ADZ7.
 - component_id: yidc_insertase
   label: Membrane protein insertase YidC
   component_type: PROTEIN
@@ -196,6 +311,28 @@ components:
   - reference: PMID:27435098
     notes: Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC
       supercomplex in the E. coli inner membrane.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25714
+    protein_label: Membrane protein insertase YidC
+    gene_symbol: yidC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene yidC in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:11821429
+      notes: Urbanus ML et al. 2002, ‘Targeting, insertion, and localization of Escherichia
+        coli YidC.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell inner membrane' localisation of P25714.
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell inner membrane' localisation of P25714.
 canonical_examples:
 - taxon_id: NCBITaxon:83333
   taxon_label: Escherichia coli K-12

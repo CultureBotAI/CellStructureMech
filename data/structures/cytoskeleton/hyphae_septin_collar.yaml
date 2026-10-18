@@ -26,6 +26,11 @@ curation_history:
   changes: 'Resolved #1818 from PR #1817 by tightening the Pyricularia taxonomic-distribution
     and canonical-example notes to cite structure-level Sep5-GFP septin-collar observations.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: septin collar of invasive hyphae
   synonym_type: RELATED_SYNONYM
@@ -51,6 +56,57 @@ components:
   - reference: GO:0032173
     notes: GO:0032173 defines the broader septin collar as a structure composed of
       highly ordered septin filament arrays.
+  gene_symbols:
+  - SEP3
+  - SEP4
+  - SEP5
+  - SEP6
+  protein_examples:
+  - uniprot_id: UniProtKB:G4ML89
+    protein_label: Septin like spn2
+    gene_symbol: SEP3
+    taxon_id: NCBITaxon:242507
+    taxon_label: Pyricularia oryzae 70-15
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SEP3 in Pyricularia
+      oryzae 70-15. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/G4ML89
+      notes: UniProtKB unreviewed (TrEMBL) entry G4ML89 for gene SEP3 in Pyricularia
+        oryzae 70-15. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:G4NJK4
+    protein_label: Septin
+    gene_symbol: SEP4
+    taxon_id: NCBITaxon:242507
+    taxon_label: Pyricularia oryzae 70-15
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SEP4 in Pyricularia
+      oryzae 70-15. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/G4NJK4
+      notes: UniProtKB unreviewed (TrEMBL) entry G4NJK4 for gene SEP4 in Pyricularia
+        oryzae 70-15. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:G4N7W8
+    protein_label: Septin-type G domain-containing protein
+    gene_symbol: SEP5
+    taxon_id: NCBITaxon:242507
+    taxon_label: Pyricularia oryzae 70-15
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SEP5 in Pyricularia
+      oryzae 70-15. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/G4N7W8
+      notes: UniProtKB unreviewed (TrEMBL) entry G4N7W8 for gene SEP5 in Pyricularia
+        oryzae 70-15. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:318829
   taxon_label: Pyricularia oryzae

@@ -42,6 +42,11 @@ curation_history:
   changes: 'Addressed #2267, #2268: corrected the three-protein occurrence citation
     and qualified the proposed FPC4 native linking role.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: cilium pocket collar
   synonym_type: EXACT_SYNONYM
@@ -79,6 +84,37 @@ components:
   grounding_notes: InterPro:IPR040747 / Pfam:PF18281 covers the BILBO1 N-terminal
     domain rather than a full-length BILBO1 protein family, and it also occurs in
     BILBO2. No exact source-neutral BILBO1 whole-protein CURIE was curated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q382W6
+    protein_label: EF-hand domain-containing protein
+    gene_symbol: BILBO1
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BILBO1 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q382W6
+      notes: UniProtKB unreviewed (TrEMBL) entry Q382W6 for gene BILBO1 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:B2B9C5
+    protein_label: Flagellar pocket-related cytoskeletal protein
+    gene_symbol: BILBO1
+    taxon_id: NCBITaxon:5691
+    taxon_label: Trypanosoma brucei
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BILBO1 in Trypanosoma
+      brucei. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/B2B9C5
+      notes: UniProtKB unreviewed (TrEMBL) entry B2B9C5 for gene BILBO1 in Trypanosoma
+        brucei. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: fpc4
   label: FPC4 microtubule-binding FPC protein
   component_type: PROTEIN
@@ -98,6 +134,22 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession for
     the complete FPC4 protein family was curated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q582Y1
+    protein_label: Serine/threonine-protein
+    gene_symbol: FPC4
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FPC4 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q582Y1
+      notes: UniProtKB unreviewed (TrEMBL) entry Q582Y1 for gene FPC4 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: bilbo2
   label: BILBO2 flagellar pocket collar partner
   component_type: PROTEIN
@@ -116,6 +168,23 @@ components:
   grounding_notes: InterPro:IPR040747 / Pfam:PF18281 denotes the shared BILBO N-terminal
     domain, not the complete BILBO2 family. No exact source-neutral BILBO2 whole-protein
     CURIE was curated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q584W7
+    protein_label: BILBO1 N-terminal domain-containing protein
+    gene_symbol: BILBO2
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene BILBO2 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure (also declared
+      as synonym Tb927.6.3240).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q584W7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q584W7 for gene BILBO2 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei

@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/uniprot_genes.py
+  slug: uniprot-protein-examples
+session:
+  id: 2026-10-18T053500Z-claude-code-1d4cdb
+  timestamp: '2026-10-18T05:35:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add Claude skill and corpus-wide UniProt protein_examples and causal_graphs curation
+  details: Created .claude/skills/uniprot-protein-examples/SKILL.md, extended scripts/uniprot_genes.py
+    with --include-complexes, --causal-graphs, and --verify, and curated verified UniProt
+    protein_examples (1,952 total across 1,417 components) and CausalNode UniProtKB xrefs
+    across the 909-record corpus, increasing GENE_OR_PROTEIN causal node UniProt coverage
+    from 23.1% (300/1,296) to 91.6% (1,187/1,296) with 0 verification errors.

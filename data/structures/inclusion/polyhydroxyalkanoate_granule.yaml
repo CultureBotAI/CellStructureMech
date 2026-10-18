@@ -47,6 +47,18 @@ curation_history:
   changes: '#2322: Correct the Bresan assay attribution and separate phasin membership/size
     effects from an unverified formation requirement.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:15:31Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: PHA granule
   synonym_type: EXACT_SYNONYM
@@ -95,6 +107,23 @@ components:
   - reference: DOI:10.1016/j.mcpro.2024.100765
     notes: Kelly et al. 2024 describe PHA synthases among the broad classes of PHA
       granule-associated proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:P23608
+    protein_label: Poly(3-hydroxyalkanoate) polymerase subunit PhaC
+    gene_symbol: phaC
+    taxon_id: NCBITaxon:381666
+    taxon_label: Cupriavidus necator H16
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene phaC in Cupriavidus necator
+      H16, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P23608
+      notes: UniProtKB reviewed (Swiss-Prot) entry P23608, the single reviewed entry
+        for gene phaC in Cupriavidus necator H16. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: phasins
   label: phasins
   component_type: PROTEIN
@@ -113,6 +142,24 @@ components:
     notes: Pfeiffer and Jendrossek 2012 localized multiple Cupriavidus necator H16
       phasins to PHB granules. Single phaP6 or phaP7 deletions did not visibly alter
       granule formation, but do not establish dispensability of all phasins.
+  gene_symbols:
+  - phaP1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q0KBV4
+    protein_label: Phasin (PHA-granule associated protein)
+    gene_symbol: phaP1
+    taxon_id: NCBITaxon:381666
+    taxon_label: Cupriavidus necator H16
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene phaP1 in Cupriavidus
+      necator H16. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q0KBV4
+      notes: UniProtKB unreviewed (TrEMBL) entry Q0KBV4 for gene phaP1 in Cupriavidus
+        necator H16. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

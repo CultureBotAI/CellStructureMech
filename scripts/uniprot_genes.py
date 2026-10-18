@@ -60,6 +60,7 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import re
 import sys
 import time
 import urllib.error
@@ -87,6 +88,35 @@ MAX_EVIDENCE = 3
 RETRIES = 3
 
 
+CACHE_PATH = REPO_ROOT / "build" / "uniprot_gene_cache.json"
+_CACHE: dict[str, list[dict]] | None = None
+_CACHE_DIRTY: bool = False
+
+
+def _load_cache() -> dict[str, list[dict]]:
+    global _CACHE
+    if _CACHE is None:
+        if CACHE_PATH.exists():
+            try:
+                _CACHE = json.loads(CACHE_PATH.read_text(encoding="utf-8"))
+            except Exception:
+                _CACHE = {}
+        else:
+            _CACHE = {}
+    return _CACHE
+
+
+def _save_cache() -> None:
+    global _CACHE_DIRTY
+    if _CACHE is not None and _CACHE_DIRTY:
+        try:
+            CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+            CACHE_PATH.write_text(json.dumps(_CACHE, sort_keys=True), encoding="utf-8")
+            _CACHE_DIRTY = False
+        except OSError:
+            pass
+
+
 def _get(url: str) -> bytes:
     last: Exception | None = None
     for attempt in range(RETRIES):
@@ -111,10 +141,36 @@ def search_gene(symbol: str, taxon_id: int) -> list[dict]:
     (*P. aeruginosa*, 287) while the reviewed entry often sits on a strain node
     below it (PAO1, 208964). The entry's own organism is what gets recorded.
     """
+    global _CACHE_DIRTY
+    key = f"{symbol}@{taxon_id}"
+    if _CACHE is not None and key in _CACHE:
+        return _CACHE[key]
     q = f"(gene_exact:{symbol}) AND (taxonomy_id:{taxon_id}) AND (reviewed:true)"
     url = REST + "?" + urllib.parse.urlencode(
         {"query": q, "format": "json", "size": 25, "fields": FIELDS})
-    return json.loads(_get(url)).get("results", [])
+    results = json.loads(_get(url)).get("results", [])
+    if _CACHE is not None:
+        _CACHE[key] = results
+        _CACHE_DIRTY = True
+    return results
+
+
+def fetch_entries_by_accession(accessions: list[str]) -> dict[str, dict]:
+    """Fetch UniProt entries for a batch of accessions, keyed by primaryAccession."""
+    unique = sorted({a.split(":")[-1] for a in accessions if a})
+    out: dict[str, dict] = {}
+    batch_size = 100
+    for i in range(0, len(unique), batch_size):
+        chunk = unique[i : i + batch_size]
+        q = " OR ".join(f"(accession:{acc})" for acc in chunk)
+        url = REST + "?" + urllib.parse.urlencode(
+            {"query": q, "format": "json", "size": len(chunk) + 25, "fields": FIELDS}
+        )
+        for entry in json.loads(_get(url)).get("results", []):
+            acc = entry.get("primaryAccession")
+            if acc:
+                out[acc] = entry
+    return out
 
 
 def entry_status(entry: dict) -> str | None:
@@ -177,17 +233,33 @@ def localisation_note(acc: str, location: str, citation: str | None) -> str:
     return f"{citation} {base}" if citation else base
 
 
+_SYNONYM_ROLE_RE = re.compile(r"\bgene ([^\s,()]+), which UniProt lists under the primary name\b")
+_ALSO_SYNONYM_RE = re.compile(r"\(also declared as (?:synonym|locus tag)[s]? ([^)]+)\)")
+
+
 def missing_symbols(component: dict) -> list[str]:
     """Declared gene symbols with no protein example of their own yet."""
-    have = {(e.get("gene_symbol") or "").lower()
-            for e in component.get("protein_examples") or []}
+    have = set()
+    for e in component.get("protein_examples") or []:
+        if e.get("gene_symbol"):
+            have.add(e["gene_symbol"].lower())
+        role = e.get("role") or ""
+        m = _SYNONYM_ROLE_RE.search(role)
+        if m:
+            have.add(m.group(1).lower())
+        m2 = _ALSO_SYNONYM_RE.search(role)
+        if m2:
+            for tok in re.split(r"[,;\s]+", m2.group(1)):
+                if tok and tok.lower() != "and":
+                    have.add(tok.lower())
     return [s for s in component.get("gene_symbols") or [] if s.lower() not in have]
 
 
-def candidates(doc: dict) -> list[dict]:
-    """Components this route could reach: PROTEIN, with a symbol still unrepresented."""
+def candidates(doc: dict, include_complexes: bool = False) -> list[dict]:
+    """Components this route could reach: PROTEIN (or PROTEIN_COMPLEX) with missing symbols."""
+    allowed = {"PROTEIN", "PROTEIN_COMPLEX"} if include_complexes else {"PROTEIN"}
     return [c for c in doc.get("components") or []
-            if c.get("component_type") == "PROTEIN" and missing_symbols(c)]
+            if c.get("component_type") in allowed and missing_symbols(c)]
 
 
 def per_taxon(symbol: str, taxa: list[tuple[int, str]]):
@@ -281,7 +353,7 @@ GAP_MEANING = {
 }
 
 
-def gap_report(doc: dict) -> list[tuple[str, str, str]]:
+def gap_report(doc: dict, include_complexes: bool = False) -> list[tuple[str, str, str]]:
     """``(component_id, category, detail)`` for every PROTEIN symbol still unresolved.
 
     A row per **component**, but candidacy is per **symbol**, matching
@@ -299,9 +371,10 @@ def gap_report(doc: dict) -> list[tuple[str, str, str]]:
     """
     taxa = [(int(t["taxon_id"].split(":")[1]), t["taxon_label"])
             for t in doc.get("canonical_examples") or [] if t.get("taxon_id")]
+    allowed = {"PROTEIN", "PROTEIN_COMPLEX"} if include_complexes else {"PROTEIN"}
     rows = []
     for component in doc.get("components") or []:
-        if component.get("component_type") != "PROTEIN":
+        if component.get("component_type") not in allowed:
             continue
         held = len(component.get("protein_examples") or [])
         symbols = missing_symbols(component)
@@ -325,8 +398,10 @@ def gap_report(doc: dict) -> list[tuple[str, str, str]]:
         for symbol in symbols:
             resolved = None
             for taxon_id, _label, hits, exact in per_taxon(symbol, taxa):
-                if len(exact) == 1:
-                    resolved = exact[0]["primaryAccession"]
+                at_node = [e for e in exact if (e.get("organism") or {}).get("taxonId") == taxon_id]
+                chosen = at_node or exact
+                if len(chosen) == 1:
+                    resolved = chosen[0]["primaryAccession"]
                     break
                 if len(exact) > 1:
                     accs = ", ".join(sorted(e["primaryAccession"] for e in exact))
@@ -354,11 +429,11 @@ def gap_report(doc: dict) -> list[tuple[str, str, str]]:
     return rows
 
 
-def cmd_gaps(records) -> int:
+def cmd_gaps(records, include_complexes: bool = False) -> int:
     counts: dict[str, int] = dict.fromkeys(GAP_MEANING, 0)
     partial = 0
     for path, doc in records:
-        rows = gap_report(doc)
+        rows = gap_report(doc, include_complexes=include_complexes)
         if not rows:
             continue
         print(f"\n{path.relative_to(REPO_ROOT)}  ({doc['identifier']})")
@@ -366,11 +441,188 @@ def cmd_gaps(records) -> int:
             counts[category] += 1
             partial += detail.startswith("[")
             print(f"  {cid}\t{category}\t{detail}")
-    print("\nPROTEIN components with an unresolved gene symbol:")
+    kind_label = "PROTEIN / PROTEIN_COMPLEX" if include_complexes else "PROTEIN"
+    print(f"\n{kind_label} components with an unresolved gene symbol:")
     for category, n in sorted(counts.items(), key=lambda kv: -kv[1]):
         print(f"  {n:3}  {category:20} {GAP_MEANING[category]}")
     total = sum(counts.values())
     print(f"  {total:3}  total, of which {partial} already hold at least one accession")
+    return 0
+
+
+# ----------------------------------------------------------- causal graphs
+#
+# Audit GENE_OR_PROTEIN elements of causal_graphs and how they connect to
+# components[].protein_examples or CausalNode.xrefs.
+
+CG_COVERED = "COVERED"
+CG_PARTIAL = "PARTIAL_EXAMPLES"
+CG_SEEDABLE = "HAS_SYMBOLS_NO_EXAMPLES"
+CG_NO_SYMBOL = "NO_GENE_SYMBOLS"
+CG_UNANCHORED_XREF = "UNANCHORED_WITH_UNIPROT"
+CG_UNANCHORED = "UNANCHORED_NO_UNIPROT"
+
+CG_MEANING = {
+    CG_COVERED: "component_ref target holds protein_examples covering all declared symbols",
+    CG_PARTIAL: "component_ref target holds protein_examples but has unrepresented symbols",
+    CG_SEEDABLE: "component_ref target declares gene_symbols but holds no protein_examples",
+    CG_NO_SYMBOL: "component_ref target declares no gene_symbols and holds no protein_examples",
+    CG_UNANCHORED_XREF: "no component_ref, but node carries a UniProtKB grounding or xref",
+    CG_UNANCHORED: "no component_ref and no UniProtKB grounding or xref on the node",
+}
+
+
+def causal_graph_report(doc: dict) -> list[tuple[str, str, str, str]]:
+    """``(graph_name, node_id, category, detail)`` for every GENE_OR_PROTEIN node."""
+    comp_by_id = {c["component_id"]: c for c in doc.get("components") or [] if c.get("component_id")}
+    rows: list[tuple[str, str, str, str]] = []
+    for graph in doc.get("causal_graphs") or []:
+        gname = graph.get("graph_id") or graph.get("name") or graph.get("label") or "<unnamed>"
+        for node in graph.get("nodes") or []:
+            if node.get("node_type") != "GENE_OR_PROTEIN":
+                continue
+            nid = node.get("node_id") or node.get("id") or "<no-id>"
+            nlabel = node.get("label") or ""
+            cref = node.get("component_ref")
+            if cref and cref in comp_by_id:
+                comp = comp_by_id[cref]
+                examples = comp.get("protein_examples") or []
+                symbols = comp.get("gene_symbols") or []
+                missing = missing_symbols(comp)
+                if examples and not missing:
+                    accs = ", ".join(e.get("uniprot_id", "") for e in examples)
+                    rows.append((gname, nid, CG_COVERED, f"->{cref} ({accs})"))
+                elif examples:
+                    accs = ", ".join(e.get("uniprot_id", "") for e in examples)
+                    detail = f"->{cref} (have: {accs}; missing: {', '.join(missing)})"
+                    rows.append((gname, nid, CG_PARTIAL, detail))
+                elif symbols:
+                    ctype = comp.get("component_type")
+                    detail = f"->{cref} ({ctype}: {', '.join(symbols)})"
+                    rows.append((gname, nid, CG_SEEDABLE, detail))
+                else:
+                    ctype = comp.get("component_type")
+                    detail = f"->{cref} ({ctype}: {comp.get('label')})"
+                    rows.append((gname, nid, CG_NO_SYMBOL, detail))
+            else:
+                grounding = node.get("grounding") or ""
+                xrefs = node.get("xrefs") or []
+                uniprot_ids = [x for x in ([grounding] + list(xrefs)) if str(x).startswith("UniProtKB:")]
+                if uniprot_ids:
+                    rows.append((gname, nid, CG_UNANCHORED_XREF, f"{nlabel} ({', '.join(uniprot_ids)})"))
+                else:
+                    rows.append((gname, nid, CG_UNANCHORED, nlabel))
+    return rows
+
+
+def cmd_causal_graphs(records) -> int:
+    counts: dict[str, int] = dict.fromkeys(CG_MEANING, 0)
+    for path, doc in records:
+        rows = causal_graph_report(doc)
+        if not rows:
+            continue
+        print(f"\n{path.relative_to(REPO_ROOT)}  ({doc['identifier']})")
+        for gname, nid, category, detail in rows:
+            counts[category] += 1
+            print(f"  {gname}\t{nid}\t{category}\t{detail}")
+    print("\ncausal_graphs GENE_OR_PROTEIN node summary:")
+    for category, n in sorted(counts.items(), key=lambda kv: -kv[1]):
+        print(f"  {n:4}  {category:25} {CG_MEANING[category]}")
+    print(f"  {sum(counts.values()):4}  total GENE_OR_PROTEIN causal nodes")
+    return 0
+
+
+# ------------------------------------------------------------------ verify
+#
+# Verify existing protein_examples and CausalNode UniProtKB xrefs against live
+# UniProt and NCBI Taxonomy.
+
+
+def verify_records(records: list[tuple[Path, dict]]) -> list[tuple[Path, str, str, str]]:
+    """Return ``(path, location, uniprot_id, problem)`` for any invalid UniProt example or xref."""
+    all_accs: list[str] = []
+    for _path, doc in records:
+        for comp in doc.get("components") or []:
+            for ex in comp.get("protein_examples") or []:
+                if ex.get("uniprot_id"):
+                    all_accs.append(ex["uniprot_id"])
+        for graph in doc.get("causal_graphs") or []:
+            for node in graph.get("nodes") or []:
+                if node.get("node_type") != "GENE_OR_PROTEIN":
+                    continue
+                for x in [node.get("grounding"), *(node.get("xrefs") or [])]:
+                    if x and str(x).startswith("UniProtKB:"):
+                        all_accs.append(str(x))
+    if not all_accs:
+        return []
+    entries = fetch_entries_by_accession(all_accs)
+    taxon_ids = [
+        str((e.get("organism") or {}).get("taxonId"))
+        for e in entries.values()
+        if (e.get("organism") or {}).get("taxonId")
+    ]
+    taxon_names = ncbi_taxon_names(taxon_ids) if taxon_ids else {}
+
+    issues: list[tuple[Path, str, str, str]] = []
+    for path, doc in records:
+        record_labels = {
+            t["taxon_id"].split(":")[1]: t["taxon_label"]
+            for t in doc.get("canonical_examples") or []
+            if t.get("taxon_id") and t.get("taxon_label")
+        }
+        for comp in doc.get("components") or []:
+            cid = comp.get("component_id") or "<component>"
+            for ex in comp.get("protein_examples") or []:
+                uid = ex.get("uniprot_id") or ""
+                acc = uid.split(":")[-1]
+                entry = entries.get(acc)
+                if not entry:
+                    issues.append((path, f"components.{cid}", uid, "accession did not resolve in UniProtKB"))
+                    continue
+                actual_status = entry_status(entry)
+                if ex.get("entry_status") != actual_status:
+                    msg = f"entry_status is {ex.get('entry_status')!r}, UniProt says {actual_status!r}"
+                    issues.append((path, f"components.{cid}", uid, msg))
+                actual_taxon = (entry.get("organism") or {}).get("taxonId")
+                if actual_taxon and ex.get("taxon_id") != f"NCBITaxon:{actual_taxon}":
+                    msg = f"taxon_id is {ex.get('taxon_id')!r}, UniProt says 'NCBITaxon:{actual_taxon}'"
+                    issues.append((path, f"components.{cid}", uid, msg))
+                if actual_taxon:
+                    allowed_labels = {
+                        lb for lb in (
+                            record_labels.get(str(actual_taxon)),
+                            taxon_names.get(str(actual_taxon)),
+                        ) if lb
+                    }
+                    if allowed_labels and ex.get("taxon_label") not in allowed_labels:
+                        msg = (
+                            f"taxon_label is {ex.get('taxon_label')!r}, "
+                            f"expected one of {sorted(allowed_labels)}"
+                        )
+                        issues.append((path, f"components.{cid}", uid, msg))
+        for graph in doc.get("causal_graphs") or []:
+            gname = graph.get("graph_id") or graph.get("name") or graph.get("label") or "<graph>"
+            for node in graph.get("nodes") or []:
+                if node.get("node_type") != "GENE_OR_PROTEIN":
+                    continue
+                nid = node.get("node_id") or node.get("id") or "<node>"
+                for x in [node.get("grounding"), *(node.get("xrefs") or [])]:
+                    if x and str(x).startswith("UniProtKB:"):
+                        acc = str(x).split(":")[-1]
+                        if acc not in entries:
+                            issues.append((path, f"causal_graphs.{gname}.{nid}", str(x),
+                                           "accession did not resolve in UniProtKB"))
+    return issues
+
+
+def cmd_verify(records) -> int:
+    issues = verify_records(records)
+    for path, loc, uid, problem in issues:
+        print(f"{path.relative_to(REPO_ROOT)}\t{loc}\t{uid}\t{problem}")
+    if issues:
+        print(f"\n{len(issues)} verification issue(s) found", file=sys.stderr)
+        return 1
+    print("all UniProtKB protein_examples and causal_graphs xrefs verified ok")
     return 0
 
 
@@ -436,13 +688,14 @@ def build_example(hit: dict, today: str, citations: dict[str, str],
     }
 
 
-def plan_record(doc: dict, today: str) -> list[tuple[str, str, list[dict]]]:
+def plan_record(doc: dict, today: str, include_complexes: bool = False) -> list[tuple[str, str, list[dict]]]:
     taxa = [(int(t["taxon_id"].split(":")[1]), t["taxon_label"])
             for t in doc.get("canonical_examples") or [] if t.get("taxon_id")]
     if not taxa:
         return [(c["component_id"], "no canonical taxon on the record", [])
-                for c in candidates(doc)]
-    resolved = [(component, *resolve(component, taxa)) for component in candidates(doc)]
+                for c in candidates(doc, include_complexes=include_complexes)]
+    resolved = [(component, *resolve(component, taxa))
+                for component in candidates(doc, include_complexes=include_complexes)]
     citations = pubmed_citations(
         [p for _, hits, _ in resolved for hit in hits
          for _, pmids in localisations(hit["entry"]) for p in pmids[:MAX_EVIDENCE]])
@@ -476,12 +729,25 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--record", help="One record; default is every record.")
-    # --gaps reads and --apply writes; asking for both is a contradiction to
-    # reject, not one to resolve by precedence (#300).
+    parser.add_argument("--include-complexes", action="store_true",
+                        help="Also resolve PROTEIN_COMPLEX components that declare subunit gene_symbols.")
+    # --gaps, --causal-graphs, and --verify read; --apply writes; asking for more
+    # than one is a contradiction to reject, not one to resolve by precedence (#300).
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--apply", action="store_true")
     mode.add_argument("--gaps", action="store_true",
                       help="Report what is left and why, instead of seeding. Read-only.")
+    mode.add_argument(
+        "--causal-graphs", action="store_true",
+        help="Audit causal_graphs GENE_OR_PROTEIN nodes and their protein_examples coverage. Read-only.",
+    )
+    mode.add_argument(
+        "--verify", action="store_true",
+        help=(
+            "Verify all existing protein_examples and CausalNode UniProtKB xrefs "
+            "against live UniProt/NCBI. Read-only."
+        ),
+    )
     args = parser.parse_args()
 
     if args.record:
@@ -490,44 +756,55 @@ def main() -> int:
     else:
         records = load_records()
 
-    if args.gaps:
-        return cmd_gaps(records)
+    if args.causal_graphs:
+        return cmd_causal_graphs(records)
 
-    today = datetime.date.today().isoformat()
-    total = 0
-    for path, doc in records:
-        rows = plan_record(doc, today)
-        if not rows:
-            continue
-        print(f"\n{path.relative_to(REPO_ROOT)}  ({doc['identifier']})")
-        added = 0
-        for component_id, why, examples in rows:
-            for example in examples:
-                print(f"  {component_id}\t{example['uniprot_id']}\t{example['taxon_label']}"
-                      f"\t{len(example['evidence'])} evidence\t{example['protein_label']}")
-            if not examples:
-                print(f"  {component_id}\t-\t{why}")
-            if examples and args.apply:
-                component = next(c for c in doc["components"] if c["component_id"] == component_id)
-                component.setdefault("protein_examples", []).extend(examples)
-                added += len(examples)
-        if added:
-            record_curation_event(
-                doc, curator="uniprot_genes", action="SEED_PROTEIN_EXAMPLES", llm_assisted=False,
-                changes=f"#183: added {added} protein example(s) by resolving each of the component's "
-                        f"declared gene symbols to the single reviewed UniProtKB entry for that symbol "
-                        f"in a taxon this record names, deduplicated by accession. Symbols resolving to "
-                        f"more than one reviewed entry were skipped rather than chosen between.",
-            )
-            _write(doc, path)
-            print(f"  wrote {added} protein example(s)")
-            total += added
-    if not args.apply:
-        print("\ndry run; pass --apply to write the rows with an accession")
-    else:
-        print(f"\nwrote {total} protein example(s)")
-    return 0
+    if args.verify:
+        return cmd_verify(records)
+
+    _load_cache()
+    try:
+        if args.gaps:
+            return cmd_gaps(records, include_complexes=args.include_complexes)
+
+        today = datetime.date.today().isoformat()
+        total = 0
+        for path, doc in records:
+            rows = plan_record(doc, today, include_complexes=args.include_complexes)
+            if not rows:
+                continue
+            print(f"\n{path.relative_to(REPO_ROOT)}  ({doc['identifier']})")
+            added = 0
+            for component_id, why, examples in rows:
+                for example in examples:
+                    print(f"  {component_id}\t{example['uniprot_id']}\t{example['taxon_label']}"
+                          f"\t{len(example['evidence'])} evidence\t{example['protein_label']}")
+                if not examples:
+                    print(f"  {component_id}\t-\t{why}")
+                if examples and args.apply:
+                    component = next(c for c in doc["components"] if c["component_id"] == component_id)
+                    component.setdefault("protein_examples", []).extend(examples)
+                    added += len(examples)
+            if added:
+                record_curation_event(
+                    doc, curator="uniprot_genes", action="SEED_PROTEIN_EXAMPLES", llm_assisted=False,
+                    changes=f"#183: added {added} protein example(s) by resolving each of the component's "
+                            f"declared gene symbols to the single reviewed UniProtKB entry for that symbol "
+                            f"in a taxon this record names, deduplicated by accession. Symbols resolving to "
+                            f"more than one reviewed entry were skipped rather than chosen between.",
+                )
+                _write(doc, path)
+                print(f"  wrote {added} protein example(s)")
+                total += added
+        if not args.apply:
+            print("\ndry run; pass --apply to write the rows with an accession")
+        else:
+            print(f"\nwrote {total} protein example(s)")
+        return 0
+    finally:
+        _save_cache()
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

@@ -35,6 +35,13 @@ curation_history:
     local primary localization evidence, preserving conservative family grounding,
     unknown essentiality and the accessory-component TODO.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:09:44Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: contractile ring
   synonym_type: RELATED_SYNONYM
@@ -62,6 +69,23 @@ components:
   - reference: DOI:10.1002/cm.21052
     notes: Lee et al. 2012 review actin filaments as a central structural element
       of the fission-yeast contractile ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P10989
+    protein_label: Actin
+    gene_symbol: act1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene act1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P10989
+      notes: UniProtKB reviewed (Swiss-Prot) entry P10989, the single reviewed entry
+        for gene act1 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: myosin_ii_myo2_family
   label: Myo2-family myosin-II motor
   component_type: PROTEIN
@@ -81,6 +105,23 @@ components:
   - reference: DOI:10.1002/cm.21052
     notes: Lee et al. 2012 review myosin II as a core fission-yeast contractile-ring
       protein.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9USI6
+    protein_label: Myosin type-2 heavy chain 1
+    gene_symbol: myo2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene myo2 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q9USI6
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q9USI6, the single reviewed entry
+        for gene myo2 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cdc12_formin_family
   label: Cdc12-family cytokinetic formin
   component_type: PROTEIN
@@ -103,6 +144,23 @@ components:
   - reference: DOI:10.1002/cm.21052
     notes: Lee et al. 2012 review Cdc12-mediated actin assembly in fission-yeast cytokinesis
       nodes and rings.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q10059
+    protein_label: Cell division control protein 12
+    gene_symbol: cdc12
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene cdc12 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10759889
+      notes: Ding DQ et al. 2000, ‘Large-scale screening of intracellular protein
+        localization in living fission yeast cells by the use of a GFP-fusion genomic
+        DNA library.’, Genes Cells. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus' localisation of Q10059.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe

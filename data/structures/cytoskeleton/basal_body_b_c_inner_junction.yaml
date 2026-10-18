@@ -21,6 +21,11 @@ curation_history:
     core/WD40 identities, model-fitting limits, strain provenance, cross-species uncertainty
     and conflicting reported repeat/dataset labels.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: B-C inner junction
   synonym_type: EXACT_SYNONYM
@@ -56,6 +61,23 @@ components:
     notes: Figure 4A-B and Results trace the POC1 C-link helix to its N-terminal B08/C10
       bridge. This establishes shared participation in connected modules, not identity
       of the B-C junction and A-C linker.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q229Z6
+    protein_label: POC1 centriolar protein homolog
+    gene_symbol: POC1
+    taxon_id: NCBITaxon:312017
+    taxon_label: Tetrahymena thermophila SB210
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene POC1 in Tetrahymena thermophila
+      SB210. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:20008567
+      notes: Pearson CG et al. 2009, ‘Basal body stability and ciliogenesis requires
+        the conserved component Poc1.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm, cytoskeleton, cilium basal body' localisation
+        of Q229Z6.
 - component_id: inner_junction_ladder_protein
   label: alpha-helical inner-junction ladder protein
   component_type: PROTEIN

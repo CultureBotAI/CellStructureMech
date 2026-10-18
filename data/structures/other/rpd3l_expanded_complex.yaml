@@ -22,6 +22,13 @@ curation_history:
     budding-yeast scope, histone deacetylase activity, GO/PubMed/DOI evidence, a nonmechanistic
     function graph, and a Rpd3L-Expanded subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:29:26Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 19 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Clr6-LE complex
   synonym_type: EXACT_SYNONYM
@@ -51,6 +58,22 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Rpd3p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32561
+    protein_label: Histone deacetylase RPD3
+    gene_symbol: RPD3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RPD3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P32561.
 - component_id: sin3_rpd3le_subunit
   label: Sin3 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -68,6 +91,23 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Sin3p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P22579
+    protein_label: Transcriptional regulatory protein SIN3
+    gene_symbol: SIN3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SIN3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22579
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22579, the single reviewed entry
+        for gene SIN3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ume1_rpd3le_subunit
   label: Ume1 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -85,6 +125,23 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Ume1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03010
+    protein_label: Transcriptional regulatory protein UME1
+    gene_symbol: UME1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UME1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03010
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03010, the single reviewed entry
+        for gene UME1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: pho23_rpd3le_subunit
   label: Pho23 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -102,6 +159,22 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Pho23p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P50947
+    protein_label: Transcriptional regulatory protein PHO23
+    gene_symbol: PHO23
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PHO23 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P50947.
 - component_id: sap30_rpd3le_subunit
   label: Sap30 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -119,6 +192,22 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Sap30p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38429
+    protein_label: Transcriptional regulatory protein SAP30
+    gene_symbol: SAP30
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SAP30 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38429.
 - component_id: sds3_rpd3le_subunit
   label: Sds3 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -136,6 +225,22 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Sds3p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40505
+    protein_label: Transcriptional regulatory protein SDS3
+    gene_symbol: SDS3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SDS3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P40505.
 - component_id: cti6_rpd3le_subunit
   label: Cti6 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -153,6 +258,32 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Cti6p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08923
+    protein_label: Histone deacetylase complex subunit CTI6
+    gene_symbol: CTI6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CTI6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12086626
+      notes: Papamichos-Chronakis M et al. 2002, ‘Cti6, a PHD domain protein, bridges
+        the Cyc8-Tup1 corepressor and the SAGA coactivator to overcome repression
+        at GAL1.’, Mol Cell. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Nucleus' localisation of Q08923.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q08923.
+    - reference: PMID:15133041
+      notes: Puig S et al. 2004, ‘Cti6 is an Rpd3-Sin3 histone deacetylase-associated
+        protein required for growth under iron-limiting conditions in Saccharomyces
+        cerevisiae.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus' localisation of Q08923.
 - component_id: rxt2_rpd3le_subunit
   label: Rxt2 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -170,6 +301,22 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Rxt2p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38255
+    protein_label: Transcriptional regulatory protein RXT2
+    gene_symbol: RXT2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RXT2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38255.
 - component_id: rxt3_rpd3le_subunit
   label: Rxt3 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -187,6 +334,22 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Rxt3p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07458
+    protein_label: Transcriptional regulatory protein RXT3
+    gene_symbol: RXT3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RXT3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q07458.
 - component_id: dep1_rpd3le_subunit
   label: Dep1 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -204,6 +367,23 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Dep1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P31385
+    protein_label: Transcriptional regulatory protein DEP1
+    gene_symbol: DEP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DEP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P31385
+      notes: UniProtKB reviewed (Swiss-Prot) entry P31385, the single reviewed entry
+        for gene DEP1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ume6_rpd3le_subunit
   label: Ume6 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -221,6 +401,22 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Ume6p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39001
+    protein_label: Transcriptional regulatory protein UME6
+    gene_symbol: UME6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UME6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P39001.
 - component_id: ash1_rpd3le_subunit
   label: Ash1 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -238,6 +434,32 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Ash1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P34233
+    protein_label: Transcriptional regulatory protein ASH1
+    gene_symbol: ASH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ASH1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P34233.
+    - reference: PMID:8625408
+      notes: Bobola N et al. 1996, ‘Asymmetric accumulation of Ash1p in postanaphase
+        nuclei depends on a myosin and restricts yeast mating-type switching to mother
+        cells.’, Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P34233.
+    - reference: PMID:8625409
+      notes: Sil A et al. 1996, ‘Identification of asymmetrically localized determinant,
+        Ash1p, required for lineage-specific transcription of the yeast HO gene.’,
+        Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of P34233.
 - component_id: dot6_rpd3le_subunit
   label: Dot6 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -255,6 +477,23 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Dot6p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40059
+    protein_label: Transcriptional regulatory protein DOT6
+    gene_symbol: DOT6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DOT6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40059
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40059, the single reviewed entry
+        for gene DOT6 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: snt1_rpd3le_subunit
   label: Snt1 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -272,6 +511,23 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Snt1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25357
+    protein_label: Probable DNA-binding protein SNT1
+    gene_symbol: SNT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SNT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P25357
+      notes: UniProtKB reviewed (Swiss-Prot) entry P25357, the single reviewed entry
+        for gene SNT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sif2_rpd3le_subunit
   label: Sif2 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -289,6 +545,23 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Sif2p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38262
+    protein_label: SIR4-interacting protein SIF2
+    gene_symbol: SIF2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SIF2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38262
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38262, the single reviewed entry
+        for gene SIF2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: set3_rpd3le_subunit
   label: Set3 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -306,6 +579,23 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Set3p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36124
+    protein_label: Histone reader SET3
+    gene_symbol: SET3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SET3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P36124
+      notes: UniProtKB reviewed (Swiss-Prot) entry P36124, the single reviewed entry
+        for gene SET3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: hos2_rpd3le_subunit
   label: Hos2 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -323,6 +613,23 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Hos2p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53096
+    protein_label: Probable histone deacetylase HOS2
+    gene_symbol: HOS2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HOS2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53096
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53096, the single reviewed entry
+        for gene HOS2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: tos4_rpd3le_subunit
   label: Tos4 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -340,6 +647,22 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Tos4p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06266
+    protein_label: Protein TOS4
+    gene_symbol: TOS4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TOS4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15282802
+      notes: Sundin BA et al. 2004, ‘Localization of proteins that are coordinately
+        expressed with Cln2 during the cell cycle.’, Yeast. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q06266.
 - component_id: tod6_rpd3le_subunit
   label: Tod6 Rpd3L-Expanded subunit
   component_type: PROTEIN
@@ -357,6 +680,22 @@ components:
   - reference: GO:0070210
     notes: GO:0070210 defines the S. cerevisiae Rpd3L-Expanded complex as containing
       Tod6p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P34219
+    protein_label: Transcriptional regulatory protein TOD6
+    gene_symbol: TOD6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TOD6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P34219.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

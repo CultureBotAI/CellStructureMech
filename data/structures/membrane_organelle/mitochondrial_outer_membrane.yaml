@@ -19,6 +19,11 @@ curation_history:
     protein-import function evidence, a nonmechanistic outer-membrane topology graph,
     and a lipid-bilayer grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: mitochondrion outer membrane
   synonym_type: EXACT_SYNONYM
@@ -143,6 +148,8 @@ causal_graphs:
     label: mitochondrial outer membrane translocase complex
     node_type: GENE_OR_PROTEIN
     grounding: GO:0005742
+    xrefs:
+    - UniProtKB:P23644
   - node_id: protein_import_into_mitochondrial_matrix
     label: protein import into mitochondrial matrix
     node_type: BIOLOGICAL_PROCESS

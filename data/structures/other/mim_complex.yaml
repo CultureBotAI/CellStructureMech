@@ -26,6 +26,18 @@ curation_history:
   action: ADD_IMAGE
   changes: Added PMC6010339.1 fig5; version, CC licence, JATS figure identity and
     media md5 verified through the PMC OA S3 dataset.
+- timestamp: '2026-10-18T03:26:15Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 synonyms:
 - synonym_text: mitochondrial outer import machinery
   synonym_type: EXACT_SYNONYM
@@ -55,6 +67,28 @@ components:
   - reference: InterPro:IPR013262
     notes: Verified MIM1/TOM13 family; the historical TOM13 name does not make Mim1
       a constitutive TOM subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08176
+    protein_label: Mitochondrial import protein 1
+    gene_symbol: MIM1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MIM1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym TOM13).
+    evidence:
+    - reference: PMID:15326197
+      notes: Ishikawa D et al. 2004, ‘Two novel proteins in the mitochondrial outer
+        membrane mediate beta-barrel protein assembly.’, J Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Mitochondrion outer membrane'
+        localisation of Q08176.
+    - reference: PMID:15608614
+      notes: Waizenegger T et al. 2005, ‘Mim1, a protein required for the assembly
+        of the TOM complex of mitochondria.’, EMBO Rep. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Mitochondrion outer membrane' localisation of Q08176.
 - component_id: mim2
   label: Mim2
   grounding: InterPro:IPR037652
@@ -73,6 +107,23 @@ components:
       complementation is not natural taxonomic occurrence.
   - reference: InterPro:IPR037652
     notes: Verified Mim2 family, distinct from the Mim1/TOM13 family.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q3E798
+    protein_label: Mitochondrial import protein 2
+    gene_symbol: MIM2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MIM2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22467864
+      notes: Dimmer KS et al. 2012, ‘A crucial role for Mim2 in the biogenesis of
+        mitochondrial outer membrane proteins.’, J Cell Sci. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Mitochondrion outer membrane' localisation
+        of Q3E798.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

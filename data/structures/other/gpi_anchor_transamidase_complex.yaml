@@ -33,6 +33,18 @@ curation_history:
     carrying the Cdc91 alias on the Gab1 subunit, graph node, edge evidence, and subunit-boundary
     TODO.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:46Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 synonyms:
 - synonym_text: GPI transamidase complex
   synonym_type: EXACT_SYNONYM
@@ -62,6 +74,23 @@ components:
   - reference: DOI:10.1091/mbc.12.10.3295
     notes: Primary Saccharomyces biochemical evidence for this GPI-anchor transamidase
       constituent.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39012
+    protein_label: GPI transamidase component GAA1
+    gene_symbol: GAA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GAA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39012
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39012, the single reviewed entry
+        for gene GAA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: gpi8_subunit
   label: Gpi8 subunit
   component_type: PROTEIN
@@ -79,6 +108,23 @@ components:
   - reference: DOI:10.1091/mbc.12.10.3295
     notes: Primary Saccharomyces biochemical evidence for this GPI-anchor transamidase
       constituent.
+  protein_examples:
+  - uniprot_id: UniProtKB:P49018
+    protein_label: GPI-anchor transamidase
+    gene_symbol: GPI8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GPI8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P49018
+      notes: UniProtKB reviewed (Swiss-Prot) entry P49018, the single reviewed entry
+        for gene GPI8 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: gpi16_subunit
   label: Gpi16 subunit
   component_type: PROTEIN
@@ -97,6 +143,23 @@ components:
   - reference: DOI:10.1091/mbc.12.10.3295
     notes: Primary Saccharomyces biochemical evidence for this GPI-anchor transamidase
       constituent.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38875
+    protein_label: GPI transamidase component GPI16
+    gene_symbol: GPI16
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GPI16 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11598210
+      notes: Fraering P et al. 2001, ‘The GPI transamidase complex of Saccharomyces
+        cerevisiae contains Gaa1p, Gpi8p, and Gpi16p.’, Mol Biol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Endoplasmic reticulum membrane'
+        localisation of P38875.
 - component_id: gpi17_subunit
   label: Gpi17 subunit
   component_type: PROTEIN
@@ -112,6 +175,23 @@ components:
   evidence:
   - reference: GO:0042765
     notes: GO:0042765 names Gpi17p as a Saccharomyces GPI-anchor transamidase subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04080
+    protein_label: GPI transamidase component GPI17
+    gene_symbol: GPI17
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GPI17 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q04080
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q04080, the single reviewed entry
+        for gene GPI17 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: gab1_subunit
   label: Gab1/Cdc91 subunit
   component_type: PROTEIN
@@ -132,6 +212,24 @@ components:
   - reference: DOI:10.1091/mbc.e02-12-0794
     notes: Hong et al. 2003 connected Cdc91p/Gab1p with the yeast GPI-anchor transamidase
       complex as the fifth subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P41733
+    protein_label: GPI transamidase component GAB1
+    gene_symbol: GAB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GAB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym CDC91).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P41733
+      notes: UniProtKB reviewed (Swiss-Prot) entry P41733, the single reviewed entry
+        for gene GAB1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

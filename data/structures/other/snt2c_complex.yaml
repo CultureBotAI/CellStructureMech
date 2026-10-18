@@ -26,6 +26,13 @@ curation_history:
   changes: Clarified that Snt2p is the SANT-domain subunit of Snt2C, leaving JmjC-domain
     wording on Ecm5p.
   llm_assisted: true
+- timestamp: '2026-10-18T03:30:36Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Snt2 complex
   synonym_type: EXACT_SYNONYM
@@ -54,6 +61,22 @@ components:
   - reference: DOI:10.1186/gb-2008-9-11-r167
     notes: Shevchenko et al. 2008 listed SNT2 under the Snt2 complex and reported
       validating the three-member complex by tagging Snt2.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53127
+    protein_label: E3 ubiquitin-protein ligase SNT2
+    gene_symbol: SNT2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SNT2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P53127.
 - component_id: ecm5_snt2c_subunit
   label: Ecm5 Snt2C subunit
   component_type: PROTEIN
@@ -73,6 +96,22 @@ components:
   - reference: DOI:10.1186/gb-2008-9-11-r167
     notes: Shevchenko et al. 2008 listed ECM5 under the Snt2 complex and described
       Ecm5p as the other Snt2C subunit besides Snt2p and Rpd3p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03214
+    protein_label: Protein ECM5
+    gene_symbol: ECM5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ECM5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q03214.
 - component_id: rpd3_snt2c_deacetylase_subunit
   label: Rpd3 Snt2C deacetylase subunit
   component_type: PROTEIN
@@ -92,6 +131,22 @@ components:
   - reference: DOI:10.1186/gb-2008-9-11-r167
     notes: Shevchenko et al. 2008 found Snt2C in an Rpd3-TAP pulldown and listed RPD3
       under the Snt2 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32561
+    protein_label: Histone deacetylase RPD3
+    gene_symbol: RPD3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RPD3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P32561.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

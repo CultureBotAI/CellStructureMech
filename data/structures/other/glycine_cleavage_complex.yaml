@@ -20,6 +20,11 @@ curation_history:
     with a grounding TODO, reviewed E. coli K-12 UniProt examples, glycine dehydrogenase
     activity, and DOI/PMID evidence.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 synonyms:
 - synonym_text: glycine cleavage system
   synonym_type: EXACT_SYNONYM
@@ -166,7 +171,7 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-02'
     role: Reviewed E. coli K-12 lpdA/lpd accession for the shared glycine cleavage
-      L-protein.
+      L-protein (also declared as synonym lpd).
     evidence:
     - reference: UniProtKB:P0A9P0
       notes: UniProtKB P0A9P0 is the reviewed E. coli K-12 entry for dihydrolipoyl

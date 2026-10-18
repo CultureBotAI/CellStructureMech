@@ -52,6 +52,11 @@ curation_history:
     with the engineered partial-C-ring bypass, retained the distinct FliG result,
     and distinguished assembly from motor function.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, C ring
   synonym_type: EXACT_SYNONYM
@@ -315,6 +320,8 @@ causal_graphs:
   - node_id: chey_p
     label: phosphorylated CheY
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P0A2D5
   - node_id: rotation
     label: flagellar motor switching
     node_type: BIOLOGICAL_PROCESS

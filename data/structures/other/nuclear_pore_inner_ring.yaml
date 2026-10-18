@@ -27,6 +27,13 @@ curation_history:
     scaffold wording and adding an open TODO for deferred Nic96, Nup53/Nup59, and
     CNT or FG-channel component-boundary curation.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:20Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: inner ring complex
   synonym_type: RELATED_SYNONYM
@@ -54,6 +61,23 @@ components:
   - reference: DOI:10.1038/s41422-022-00632-y
     notes: Li et al. 2022 resolved Nup192, Nup188, Nup170, and Nup157 in the near-atomic
       Saccharomyces inner ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47054
+    protein_label: Nucleoporin NUP192
+    gene_symbol: NUP192
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP192 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P47054.'
 - component_id: nup188_family
   label: Nup188-family nucleoporin
   component_type: PROTEIN
@@ -74,6 +98,23 @@ components:
   - reference: DOI:10.1038/s41422-022-00632-y
     notes: Li et al. 2022 resolved Nup192, Nup188, Nup170, and Nup157 in the near-atomic
       Saccharomyces inner ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P52593
+    protein_label: Nucleoporin NUP188
+    gene_symbol: NUP188
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP188 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P52593.'
 - component_id: nup170_nup155_family
   label: Nup170/Nup155-family nucleoporin
   component_type: PROTEIN
@@ -94,6 +135,23 @@ components:
   - reference: DOI:10.1038/s41422-022-00632-y
     notes: Li et al. 2022 resolved Nup192, Nup188, Nup170, and Nup157 in the near-atomic
       Saccharomyces inner ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38181
+    protein_label: Nucleoporin NUP170
+    gene_symbol: NUP170
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP170 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P38181.'
 - component_id: nup157_family
   label: Nup157-family nucleoporin
   component_type: PROTEIN
@@ -114,6 +172,23 @@ components:
   - reference: DOI:10.1038/s41422-022-00632-y
     notes: Li et al. 2022 resolved Nup192, Nup188, Nup170, and Nup157 in the near-atomic
       Saccharomyces inner ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40064
+    protein_label: Nucleoporin NUP157
+    gene_symbol: NUP157
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP157 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P40064.'
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

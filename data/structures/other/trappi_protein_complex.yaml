@@ -41,6 +41,13 @@ curation_history:
   changes: 'Resolved PR #1124 issue #1125 by adding Sacher et al. 2000 primary subunit-identification
     evidence to the six TRAPPI component rows and their yeast graph parthood edges.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:32:37Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0030008
 synonyms:
@@ -76,6 +83,23 @@ components:
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36149
+    protein_label: Trafficking protein particle complex subunit BET3
+    gene_symbol: BET3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BET3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P36149
+      notes: UniProtKB reviewed (Swiss-Prot) entry P36149, the single reviewed entry
+        for gene BET3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: bet5_trappi_subunit
   label: Bet5 TRAPPI subunit
   component_type: PROTEIN
@@ -97,6 +121,23 @@ components:
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03630
+    protein_label: Trafficking protein particle complex subunit BET5
+    gene_symbol: BET5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BET5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03630
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03630, the single reviewed entry
+        for gene BET5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs20_trappi_subunit
   label: Trs20 TRAPPI subunit
   component_type: PROTEIN
@@ -118,6 +159,23 @@ components:
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38334
+    protein_label: Trafficking protein particle complex subunit 20
+    gene_symbol: TRS20
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS20 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38334
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38334, the single reviewed entry
+        for gene TRS20 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs23_trappi_subunit
   label: Trs23 TRAPPI subunit
   component_type: PROTEIN
@@ -139,6 +197,23 @@ components:
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03784
+    protein_label: Trafficking protein particle complex subunit 23
+    gene_symbol: TRS23
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS23 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03784
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03784, the single reviewed entry
+        for gene TRS23 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs31_trappi_subunit
   label: Trs31 TRAPPI subunit
   component_type: PROTEIN
@@ -159,6 +234,23 @@ components:
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03337
+    protein_label: Trafficking protein particle complex subunit 31
+    gene_symbol: TRS31
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS31 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03337
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03337, the single reviewed entry
+        for gene TRS31 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs33_trappi_subunit
   label: Trs33 TRAPPI subunit
   component_type: PROTEIN
@@ -180,6 +272,23 @@ components:
   - reference: DOI:10.1016/j.cell.2006.09.029
     notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
       I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q99394
+    protein_label: Trafficking protein particle complex subunit 33
+    gene_symbol: TRS33
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS33 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q99394
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q99394, the single reviewed entry
+        for gene TRS33 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

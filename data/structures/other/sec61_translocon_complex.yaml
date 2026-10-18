@@ -34,6 +34,13 @@ curation_history:
     Sec61 beta/gamma labels and notes from yeast gene-product wording to source-neutral
     component classes.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:30:00Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Sec61 complex
   synonym_type: EXACT_SYNONYM
@@ -67,6 +74,23 @@ components:
     notes: Stirling et al. 1992 cloned Saccharomyces SEC61 and found that Sec61p is
       an integral ER membrane protein required for secretory and membrane-polypeptide
       insertion.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32915
+    protein_label: Protein transport protein SEC61
+    gene_symbol: SEC61
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC61 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32915
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32915, the single reviewed entry
+        for gene SEC61 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sbh1_beta_subunit
   label: Sec61 beta subunit
   component_type: PROTEIN
@@ -86,6 +110,23 @@ components:
   - reference: DOI:10.1074/jbc.M701840200
     notes: Feng et al. 2007 showed that the Sbh1p transmembrane domain is sufficient
       for coimmunoprecipitation with Sec61p and Sss1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P52870
+    protein_label: Protein transport protein SBH1
+    gene_symbol: SBH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SBH1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P52870
+      notes: UniProtKB reviewed (Swiss-Prot) entry P52870, the single reviewed entry
+        for gene SBH1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sss1_gamma_subunit
   label: Sec61 gamma subunit
   component_type: PROTEIN
@@ -105,6 +146,22 @@ components:
   - reference: DOI:10.1074/jbc.M701840200
     notes: Feng et al. 2007 assayed Sss1p coimmunoprecipitation with Sbh1p and Sec61p
       in Saccharomyces cells.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35179
+    protein_label: Protein transport protein SSS1
+    gene_symbol: SSS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SSS1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Endoplasmic reticulum membrane' localisation of P35179.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

@@ -26,6 +26,13 @@ curation_history:
   changes: Removed native pMMO array organization from functions; retained array packing
     as a source-backed pMMO component and causal-graph structure.
   llm_assisted: true
+- timestamp: '2026-10-18T03:18:09Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: methane-oxidizing compartment
   synonym_type: EXACT_SYNONYM
@@ -73,6 +80,56 @@ components:
   - reference: DOI:10.1128/JB.183.5.1810-1812.2001
     notes: Stolyar et al. 2001 assayed expression of individual Methylococcus capsulatus
       Bath pmo gene copies encoding particulate methane monooxygenase subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q607G3
+    protein_label: Particulate methane monooxygenase beta subunit
+    gene_symbol: pmoA1
+    taxon_id: NCBITaxon:243233
+    taxon_label: Methylococcus capsulatus str. Bath
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene pmoA, which UniProt lists under
+      the primary name pmoA1, in Methylococcus capsulatus str. Bath, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12379148
+      notes: Basu P et al. 2003, ‘The membrane-associated form of methane mono-oxygenase
+        from Methylococcus capsulatus (Bath) is a copper/iron protein.’, Biochem J.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Membrane' localisation
+        of Q607G3.
+    - reference: PMID:15674245
+      notes: Lieberman RL et al. 2005, ‘Crystal structure of a membrane-bound metalloenzyme
+        that catalyses the biological oxidation of methane.’, Nature. ECO:0000269
+        experimental evidence cited by UniProt for the 'Membrane' localisation of
+        Q607G3.
+    - reference: PMID:22013879
+      notes: Smith SM et al. 2011, ‘Crystal structure and characterization of particulate
+        methane monooxygenase from Methylocystis species strain M.’, Biochemistry.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Membrane' localisation
+        of Q607G3.
+  - uniprot_id: UniProtKB:G1UBD1
+    protein_label: Particulate methane monooxygenase alpha subunit
+    gene_symbol: pmoB1
+    taxon_id: NCBITaxon:243233
+    taxon_label: Methylococcus capsulatus str. Bath
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene pmoB, which UniProt lists under
+      the primary name pmoB1, in Methylococcus capsulatus str. Bath, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12379148
+      notes: Basu P et al. 2003, ‘The membrane-associated form of methane mono-oxygenase
+        from Methylococcus capsulatus (Bath) is a copper/iron protein.’, Biochem J.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Membrane' localisation
+        of G1UBD1.
+    - reference: PMID:15674245
+      notes: Lieberman RL et al. 2005, ‘Crystal structure of a membrane-bound metalloenzyme
+        that catalyses the biological oxidation of methane.’, Nature. ECO:0000269
+        experimental evidence cited by UniProt for the 'Membrane' localisation of
+        G1UBD1.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria

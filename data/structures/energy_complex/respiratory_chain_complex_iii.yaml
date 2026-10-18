@@ -40,6 +40,18 @@ curation_history:
   changes: '#2308: Retain the Rieske subunit label-only instead of using a domain
     as a protein-family grounding.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:14:27Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: complex III
   synonym_type: EXACT_SYNONYM
@@ -86,6 +98,24 @@ components:
   - reference: PDB:2QJP
     notes: RCSB maps PDB:2QJP polymer entity 1 to Cereibacter sphaeroides cytochrome
       b, UniProtKB:Q02761.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02761
+    protein_label: Cytochrome b
+    gene_symbol: petB
+    taxon_id: NCBITaxon:1063
+    taxon_label: Cereibacter sphaeroides
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fbcB, which UniProt lists under
+      the primary name petB, in Cereibacter sphaeroides, a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q02761
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q02761, the single reviewed entry
+        for gene fbcB in Cereibacter sphaeroides. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: rieske_iron_sulfur_subunit
   label: Rieske iron-sulfur subunit
   component_type: PROTEIN
@@ -111,6 +141,24 @@ components:
   grounding_notes: IPR006317 is a domain entry, not an integrated whole-protein family.
     The broader Rieske family IPR014349 also spans other electron-transfer systems.
     No exact whole-protein family was verified for this complex-III subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02762
+    protein_label: Ubiquinol-cytochrome c reductase iron-sulfur subunit
+    gene_symbol: petA
+    taxon_id: NCBITaxon:1063
+    taxon_label: Cereibacter sphaeroides
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fbcF, which UniProt lists under
+      the primary name petA, in Cereibacter sphaeroides, a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q02762
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q02762, the single reviewed entry
+        for gene fbcF in Cereibacter sphaeroides. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: cytochrome_c1
   label: cytochrome c1
   component_type: PROTEIN
@@ -130,6 +178,24 @@ components:
   - reference: PDB:2QJP
     notes: RCSB maps PDB:2QJP polymer entity 2 to Cereibacter sphaeroides cytochrome
       c1, UniProtKB:Q02760.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02760
+    protein_label: Cytochrome c1
+    gene_symbol: petC
+    taxon_id: NCBITaxon:1063
+    taxon_label: Cereibacter sphaeroides
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene fbcC, which UniProt lists under
+      the primary name petC, in Cereibacter sphaeroides, a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q02760
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q02760, the single reviewed entry
+        for gene fbcC in Cereibacter sphaeroides. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:1063
   taxon_label: Cereibacter sphaeroides
@@ -207,6 +273,8 @@ causal_graphs:
   - node_id: cytochrome_c
     label: cytochrome c
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P0C0X8
   - node_id: quinol_cytochrome_c_reductase_activity
     label: quinol-cytochrome-c reductase activity
     node_type: MOLECULAR_FUNCTION

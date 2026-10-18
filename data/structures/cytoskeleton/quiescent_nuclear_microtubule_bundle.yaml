@@ -29,6 +29,13 @@ curation_history:
     graph scope in supported display fields; corrected Tub3 localization to Figure
     2A and Figure 2 supplement 1A.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:12:05Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0099070
 part_of:
@@ -116,6 +123,25 @@ components:
   grounding_notes: Exact Beta tubulin family checked using S. cerevisiae TUB2 P02557;
     the identity lookup is not a Q-nMT localization experiment.
   grounding: InterPro:IPR002453
+  gene_symbols:
+  - TUB2
+  protein_examples:
+  - uniprot_id: UniProtKB:P02557
+    protein_label: Tubulin beta chain
+    gene_symbol: TUB2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TUB2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:23001566
+      notes: Cederquist GY et al. 2012, ‘An inherited TUBB2B mutation alters a kinesin-binding
+        site and causes polymicrogyria, CFEOM and axon dysinnervation.’, Hum Mol Genet.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton'
+        localisation of P02557.
 - component_id: xmap215
   label: XMAP215
   component_type: PROTEIN

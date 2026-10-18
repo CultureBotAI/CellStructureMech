@@ -29,6 +29,13 @@ curation_history:
     and sphere-cortex localization claim supported by its Tuma, Stolk and Roth 1993
     reference.
   llm_assisted: true
+- timestamp: '2026-10-18T03:35:34Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0016604
 part_of:
@@ -51,6 +58,24 @@ components:
     notes: Tuma, Stolk and Roth 1993 localized SPH-1 specifically to the cortex of
       Xenopus laevis sphere organelles and found that cloned SPH-1 encodes a p80-coilin-related
       protein.
+  gene_symbols:
+  - coil
+  protein_examples:
+  - uniprot_id: UniProtKB:Q09003
+    protein_label: Coilin
+    gene_symbol: coil
+    taxon_id: NCBITaxon:8355
+    taxon_label: Xenopus laevis
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene coil in Xenopus laevis, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:8349728
+      notes: Tuma RS et al. 1993, ‘Identification and characterization of a sphere
+        organelle protein.’, J Cell Biol. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of Q09003.
 - component_id: u7_snrna
   label: U7 snRNA
   component_type: RNA

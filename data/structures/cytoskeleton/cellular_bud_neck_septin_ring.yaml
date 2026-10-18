@@ -29,6 +29,13 @@ curation_history:
   changes: 'Resolved #1746 by attaching the bud-neck septin-ring component TODO at
     record scope as well as to the reviewed-label-only septin component.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:10:57Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0005940
 part_of:
@@ -52,6 +59,104 @@ components:
   - reference: DOI:10.1091/mbc.E04-09-0764
     notes: Kozubowski et al. 2005 describe Saccharomyces septins forming a ring-shaped
       scaffold at the future budding site.
+  gene_symbols:
+  - CDC3
+  - CDC10
+  - CDC11
+  - CDC12
+  - SHS1
+  protein_examples:
+  - uniprot_id: UniProtKB:P32457
+    protein_label: Cell division control protein 3
+    gene_symbol: CDC3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32457
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32457, the single reviewed entry
+        for gene CDC3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P25342
+    protein_label: Cell division control protein 10
+    gene_symbol: CDC10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Membrane' localisation of P25342.
+  - uniprot_id: UniProtKB:P32458
+    protein_label: Cell division control protein 11
+    gene_symbol: CDC11
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC11 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Membrane' localisation of P32458.
+    - reference: PMID:25971666
+      notes: Finnigan GC et al. 2015, ‘The Carboxy-Terminal Tails of Septins Cdc11
+        and Shs1 Recruit Myosin-II Binding Factor Bni5 to the Bud Neck in Saccharomyces
+        cerevisiae.’, Genetics. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Bud neck' localisation of P32458.
+  - uniprot_id: UniProtKB:P32468
+    protein_label: Cell division control protein 12
+    gene_symbol: CDC12
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC12 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Membrane' localisation of P32468.
+  - uniprot_id: UniProtKB:Q07657
+    protein_label: Seventh homolog of septin 1
+    gene_symbol: SHS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SHS1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Bud neck' localisation of Q07657.
+    - reference: PMID:25971666
+      notes: Finnigan GC et al. 2015, ‘The Carboxy-Terminal Tails of Septins Cdc11
+        and Shs1 Recruit Myosin-II Binding Factor Bni5 to the Bud Neck in Saccharomyces
+        cerevisiae.’, Genetics. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Bud neck' localisation of Q07657.
+    - reference: PMID:9790978
+      notes: 'Mino A et al. 1998, ‘Shs1p: a novel member of septin that interacts
+        with spa2p, involved in polarized growth in saccharomyces cerevisiae.’, Biochem
+        Biophys Res Commun. ECO:0000269 experimental evidence cited by UniProt for
+        the ''Bud neck'' localisation of Q07657.'
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

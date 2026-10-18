@@ -24,6 +24,11 @@ curation_history:
     and hypothetical catalytic mechanism; declined broader family grounds and unsupported
     constituents.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 synonyms:
@@ -57,6 +62,22 @@ components:
       isolation in three biological replicates recovered SkpZ and Usp7 (Results and
       Figure 6B). Figure 3A supports Tpr86-Usp7 co-isolation. These support complex
       membership, not exact pairwise contact sites or assembly essentiality.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q57UW5
+    protein_label: Uncharacterized protein
+    gene_symbol: Tpr86
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Tpr86 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q57UW5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q57UW5 for gene Tpr86 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: usp7
   label: Usp7 TUSK subunit
   component_type: PROTEIN
@@ -77,6 +98,22 @@ components:
       tagged-Usp7 immunoprecipitation co-enriching Tpr86 with an enolase control.
       The paper identifies Usp7 as the deubiquitinase-family member; molecular activity
       of individual candidate surface substrates is not assigned from these interactions.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q38D19
+    protein_label: Ubiquitin carboxyl-terminal hydrolase
+    gene_symbol: Usp7
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Usp7 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q38D19
+      notes: UniProtKB unreviewed (TrEMBL) entry Q38D19 for gene Usp7 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: skpz
   label: SkpZ TUSK subunit
   component_type: PROTEIN
@@ -96,6 +133,22 @@ components:
       isolation identify the three-member TUSK association. The phylogeny distinguishes
       the SkpZ lineage from Skp1.1, Skp1.3 and Skp1.4. RNAi effects on protein abundance
       do not establish whether the residual complex can assemble without SkpZ.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q388H1
+    protein_label: SKP1 component dimerisation domain-containing protein
+    gene_symbol: SkpZ
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene SkpZ in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q388H1
+      notes: UniProtKB unreviewed (TrEMBL) entry Q388H1 for gene SkpZ in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei

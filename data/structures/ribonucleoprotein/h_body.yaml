@@ -20,6 +20,11 @@ curation_history:
     function, seven-edge assembly graph, identity and evidence boundaries, and an
     explicit TmaR family-grounding follow-up.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Hfq condensate
   synonym_type: RELATED_SYNONYM
@@ -44,6 +49,22 @@ components:
   grounding: InterPro:IPR005001
   gene_symbols:
   - hfq
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A6X3
+    protein_label: RNA-binding protein Hfq
+    gene_symbol: hfq
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene hfq in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:36577380
+      notes: Goldberger O et al. 2022, ‘Heterotypic phase separation of Hfq is linked
+        to its roles as an RNA chaperone.’, Cell Rep. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm' localisation of P0A6X3.
 - component_id: polyp
   label: polyphosphate
   component_type: SMALL_MOLECULE
@@ -90,6 +111,29 @@ components:
   grounding: InterPro:IPR028878
   gene_symbols:
   - rne
+  protein_examples:
+  - uniprot_id: UniProtKB:P21513
+    protein_label: Ribonuclease E
+    gene_symbol: rne
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene rne in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11134527
+      notes: Liou GG et al. 2001, ‘RNA degradosomes exist in vivo in Escherichia coli
+        as multicomponent complexes associated with the cytoplasmic membrane via the
+        N-terminal region of ribonuclease E.’, Proc Natl Acad Sci U S A. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P21513.
+    - reference: PMID:22509045
+      notes: Murashko ON et al. 2012, ‘Membrane binding of Escherichia coli RNase
+        E catalytic domain stabilizes protein structure and increases RNA substrate
+        affinity.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P21513.
 - component_id: rhlb
   label: ATP-dependent RNA helicase RhlB type
   component_type: PROTEIN
@@ -106,6 +150,23 @@ components:
   grounding: InterPro:IPR023554
   gene_symbols:
   - rhlB
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8J8
+    protein_label: ATP-dependent RNA helicase RhlB
+    gene_symbol: rhlB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene rhlB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18337249
+      notes: Taghbalout A et al. 2008, ‘RNaseE and RNA helicase B play central roles
+        in the cytoskeletal organization of the RNA degradosome.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P0A8J8.
 - component_id: tmar
   label: TmaR
   component_type: PROTEIN
@@ -128,6 +189,28 @@ components:
     sequence families; no exact TmaR functional-family boundary was established. A
     broad family or domain is not asserted as equivalent to the named pole-localizer
     class.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8M6
+    protein_label: Pole-localizer protein TmaR
+    gene_symbol: tmaR
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene tmaR in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:33376208
+      notes: Szoke T et al. 2021, ‘Tyrosine phosphorylation-dependent localization
+        of TmaR that controls activity of a major bacterial sugar regulator by polar
+        sequestration.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm' localisation of P0A8M6.
+    - reference: PMID:37934665
+      notes: Szoke T et al. 2023, ‘Regulation of major bacterial survival strategies
+        by transcripts sequestration in a membraneless organelle.’, Cell Rep. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P0A8M6.
 canonical_examples:
 - taxon_id: NCBITaxon:511145
   taxon_label: Escherichia coli str. K-12 substr. MG1655

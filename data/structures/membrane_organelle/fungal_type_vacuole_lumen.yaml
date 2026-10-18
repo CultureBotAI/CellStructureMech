@@ -25,6 +25,11 @@ curation_history:
     so it keeps the singular lumen identity and names the compartmentalized storage
     and degradation roles.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005775
 part_of:
@@ -111,6 +116,10 @@ causal_graphs:
   - node_id: acid_hydrolases
     label: acid hydrolases
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P07267
+    - UniProtKB:P00729
+    - UniProtKB:P09232
   - node_id: macromolecule_degradation
     label: macromolecule degradation
     node_type: BIOLOGICAL_PROCESS

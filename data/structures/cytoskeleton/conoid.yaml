@@ -57,6 +57,11 @@ curation_history:
     the declared conoid_tubulin_fibers component, as required by the corpus anchor
     contract. No scientific claim, original discussion or earlier event changed.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 part_of:
 - GO:0005856
 - GO:0020007
@@ -91,6 +96,22 @@ components:
   - reference: DOI:10.1371/journal.ppat.1005388
     notes: Graindorge et al. 2016 localized MyoH at the conoid and showed that MyoH
       is required for Toxoplasma entry and exit.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A7J6K9H8
+    protein_label: Myosin H
+    gene_symbol: MyoH
+    taxon_id: NCBITaxon:5811
+    taxon_label: Toxoplasma gondii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene MyoH in Toxoplasma
+      gondii. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A7J6K9H8
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A7J6K9H8 for gene MyoH in Toxoplasma
+        gondii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

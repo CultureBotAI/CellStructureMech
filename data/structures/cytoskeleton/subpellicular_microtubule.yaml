@@ -35,6 +35,11 @@ curation_history:
     to GO:0020032, preserving the lattice, molecular constituents and Trypanosoma
     boundary.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005874
 part_of:
@@ -58,6 +63,25 @@ components:
     constituent set was verified in this pass; broad tubulin/FtsZ-domain groundings
     would also cover bacterial, archaeal and phage tubulin-like proteins outside this
     GO term.
+  gene_symbols:
+  - TUBA1
+  - TUBB1
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A125YQG0
+    protein_label: Tubulin alpha chain
+    gene_symbol: TUBA1
+    taxon_id: NCBITaxon:508771
+    taxon_label: Toxoplasma gondii ME49
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TUBA1 in Toxoplasma
+      gondii ME49. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A125YQG0
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A125YQG0 for gene TUBA1 in Toxoplasma
+        gondii ME49. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5811
   taxon_label: Toxoplasma gondii

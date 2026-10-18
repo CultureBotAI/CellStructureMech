@@ -36,7 +36,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-08-29'
     role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Tile the shell facets; central pores admit bicarbonate and RuBP.'
+      Tile the shell facets; central pores admit bicarbonate and RuBP (also declared
+      as synonym ccmK).'
     evidence:
     - reference: PMID:17675289
       notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
@@ -270,7 +271,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-08-29'
     role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Encapsulated cargo; fixes CO2 into 3-phosphoglycerate.'
+      Encapsulated cargo; fixes CO2 into 3-phosphoglycerate (also declared as synonym
+      rbcL).'
     evidence:
     - reference: PMID:17675289
       notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
@@ -295,7 +297,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-08-29'
     role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Encapsulated cargo; fixes CO2 into 3-phosphoglycerate.'
+      Encapsulated cargo; fixes CO2 into 3-phosphoglycerate (also declared as synonym
+      rbcS).'
     evidence:
     - reference: PMID:17675289
       notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
@@ -899,6 +902,11 @@ curation_history:
   action: REPLACED_UNREADABLE_EVIDENCE
   changes: 'Resolved #1241 by routing Rae et al. 2013 carboxysome review evidence
     through reachable PMID:24006469 instead of the unreadable MMBR DOI.'
+  llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034

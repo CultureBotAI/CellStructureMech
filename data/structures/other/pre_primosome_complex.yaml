@@ -29,6 +29,11 @@ curation_history:
   changes: '#1866: Replaced the GO-backed E. coli taxonomic-distribution row with
     direct Ng and Marians PhiX174-type preprimosome evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: pre-priming complex
   synonym_type: EXACT_SYNONYM
@@ -67,6 +72,25 @@ components:
   - reference: GO:1990099
     notes: GO:1990099 defines pre-primosome complexes as protein-DNA complexes that
       contain a DNA helicase.
+  gene_symbols:
+  - dnaB
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ACB0
+    protein_label: Replicative DNA helicase DnaB
+    gene_symbol: dnaB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dnaB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ACB0
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ACB0, the single reviewed entry
+        for gene dnaB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: helicase_chaperone
   label: helicase-chaperoning replication protein
   component_type: PROTEIN
@@ -82,6 +106,25 @@ components:
   - reference: GO:1990099
     notes: GO:1990099 defines pre-primosome associated proteins as chaperoning the
       helicase to DNA.
+  gene_symbols:
+  - dnaC
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AEF0
+    protein_label: Replicative helicase loader DnaC
+    gene_symbol: dnaC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dnaC in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0AEF0
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0AEF0, the single reviewed entry
+        for gene dnaC in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: replication_site_dna
   label: replication initiation or restart DNA
   component_type: DNA

@@ -27,6 +27,13 @@ curation_history:
   changes: 'Addressed #2211: aligned the nonmechanistic dynein-arm graph with source-supported
     constituent parthood rather than assembly.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:11:58Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0005858
 part_of:
@@ -49,6 +56,59 @@ components:
   - reference: DOI:10.1126/science.1128618
     notes: Nicastro et al. 2006 resolved dynein arms attached to Chlamydomonas outer
       doublet microtubules by cryoelectron tomography.
+  gene_symbols:
+  - ODA2
+  - ODA4
+  - ODA11
+  protein_examples:
+  - uniprot_id: UniProtKB:Q39575
+    protein_label: Dynein gamma chain, flagellar outer arm
+    gene_symbol: ODA2
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ODA2 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q39575
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q39575, the single reviewed entry
+        for gene ODA2 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q39565
+    protein_label: Dynein beta chain, flagellar outer arm
+    gene_symbol: ODA4
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ODA4 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q39565
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q39565, the single reviewed entry
+        for gene ODA4 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q39610
+    protein_label: Dynein alpha chain, flagellar outer arm
+    gene_symbol: ODA11
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ODA11 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q39610
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q39610, the single reviewed entry
+        for gene ODA11 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 - component_id: outer_arm_dynein_intermediate_chains
   label: outer-arm dynein intermediate chains
   component_type: PROTEIN
@@ -62,6 +122,42 @@ components:
   - reference: GO:0036157
     notes: GO defines outer dynein arms as complexes that contain two or more intermediate
       chains.
+  gene_symbols:
+  - ODA6
+  - ODA9
+  protein_examples:
+  - uniprot_id: UniProtKB:P27766
+    protein_label: Dynein, 70 kDa intermediate chain, flagellar outer arm
+    gene_symbol: ODA6
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ODA6 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P27766
+      notes: UniProtKB reviewed (Swiss-Prot) entry P27766, the single reviewed entry
+        for gene ODA6 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q39578
+    protein_label: Dynein, 78 kDa intermediate chain, flagellar outer arm
+    gene_symbol: ODA9
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ODA9 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q39578
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q39578, the single reviewed entry
+        for gene ODA9 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 - component_id: outer_arm_dynein_light_chains
   label: outer-arm dynein light chains
   component_type: PROTEIN
@@ -75,6 +171,27 @@ components:
   - reference: GO:0036157
     notes: GO defines outer dynein arms as complexes that contain a cluster of four
       to eight light chains.
+  gene_symbols:
+  - LC1
+  - LC2
+  - LC8
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9XHH2
+    protein_label: Dynein axonemal light chain 1
+    gene_symbol: LC1
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene LC1 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:19620633
+      notes: Patel-King RS et al. 2009, ‘An outer arm dynein light chain acts in a
+        conformational switch for flagellar motility.’, J Cell Biol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, flagellum axoneme'
+        localisation of Q9XHH2.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

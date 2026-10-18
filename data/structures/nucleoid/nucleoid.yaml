@@ -26,6 +26,127 @@ components:
   evidence:
   - reference: DOI:10.1038/nrmicro2261
     notes: The review covers major NAP families and their regulatory roles.
+  gene_symbols:
+  - hupA
+  - hupB
+  - ihfA
+  - ihfB
+  - fis
+  - hns
+  - dps
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ACF0
+    protein_label: DNA-binding protein HU-alpha
+    gene_symbol: hupA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene hupA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:21903814
+      notes: Wang W et al. 2011, ‘Chromosome organization by a nucleoid-associated
+        protein in live bacteria.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cytoplasm, nucleoid' localisation of P0ACF0.
+  - uniprot_id: UniProtKB:P0ACF4
+    protein_label: DNA-binding protein HU-beta
+    gene_symbol: hupB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene hupB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ACF4
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ACF4, the single reviewed entry
+        for gene hupB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0A6X7
+    protein_label: Integration host factor subunit alpha
+    gene_symbol: ihfA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ihfA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:21903814
+      notes: Wang W et al. 2011, ‘Chromosome organization by a nucleoid-associated
+        protein in live bacteria.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cytoplasm, nucleoid' localisation of P0A6X7.
+  - uniprot_id: UniProtKB:P0A6Y1
+    protein_label: Integration host factor subunit beta
+    gene_symbol: ihfB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ihfB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A6Y1
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A6Y1, the single reviewed entry
+        for gene ihfB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0A6R3
+    protein_label: DNA-binding protein Fis
+    gene_symbol: fis
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene fis in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:21903814
+      notes: Wang W et al. 2011, ‘Chromosome organization by a nucleoid-associated
+        protein in live bacteria.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cytoplasm, nucleoid' localisation of P0A6R3.
+  - uniprot_id: UniProtKB:P0ACF8
+    protein_label: DNA-binding protein H-NS
+    gene_symbol: hns
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene hns in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:21903814
+      notes: Wang W et al. 2011, ‘Chromosome organization by a nucleoid-associated
+        protein in live bacteria.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cytoplasm, nucleoid' localisation of P0ACF8.
+    - reference: PMID:333393
+      notes: Varshavsky AJ et al. 1977, ‘Histone-like proteins in the purified Escherichia
+        coli deoxyribonucleoprotein.’, Nucleic Acids Res. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, nucleoid' localisation of P0ACF8.
+  - uniprot_id: UniProtKB:P0ABT2
+    protein_label: DNA protection during starvation protein
+    gene_symbol: dps
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dps in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ABT2
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ABT2, the single reviewed entry
+        for gene dps in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -163,6 +284,11 @@ curation_history:
   changes: Added a FUNCTION graph for NAP-mediated DNA binding, bending, bridging,
     supercoil constraint, and multiscale chromosomal compaction into the nucleoid,
     with additional evidence from Verma, Qian and Adhya 2019.
+  llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 7 verified UniProtKB protein_example(s).
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0187

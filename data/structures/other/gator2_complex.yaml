@@ -36,6 +36,13 @@ curation_history:
     graph edge, narrowed the Saccharomyces taxonomic presence qualifier, and normalized
     the initial creation-history sections.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:22Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0032991
 part_of:
@@ -66,6 +73,28 @@ components:
     notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
       subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
       that antagonizes SEACIT in TORC1 signaling.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08281
+    protein_label: Restriction of telomere capping protein 1
+    gene_symbol: RTC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEA2, which UniProt lists under
+      the primary name RTC1, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Vacuole membrane' localisation of Q08281.
+    - reference: PMID:21454883
+      notes: Dokudovskaya S et al. 2011, ‘A conserved coatomer-related complex containing
+        Sec13 and Seh1 dynamically associates with the vacuole in Saccharomyces cerevisiae.’,
+        Mol Cell Proteomics. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Vacuole membrane' localisation of Q08281.
 - component_id: sea3_gator2_subunit
   label: Sea3 GATOR2 subunit
   component_type: PROTEIN
@@ -87,6 +116,28 @@ components:
     notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
       subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
       that antagonizes SEACIT in TORC1 signaling.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03897
+    protein_label: Maintenance of telomere capping protein 5
+    gene_symbol: MTC5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEA3, which UniProt lists under
+      the primary name MTC5, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Vacuole membrane' localisation of Q03897.
+    - reference: PMID:21454883
+      notes: Dokudovskaya S et al. 2011, ‘A conserved coatomer-related complex containing
+        Sec13 and Seh1 dynamically associates with the vacuole in Saccharomyces cerevisiae.’,
+        Mol Cell Proteomics. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Vacuole membrane' localisation of Q03897.
 - component_id: sea4_gator2_subunit
   label: Sea4 GATOR2 subunit
   component_type: PROTEIN
@@ -108,6 +159,23 @@ components:
     notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
       subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
       that antagonizes SEACIT in TORC1 signaling.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38164
+    protein_label: SEH-associated protein 4
+    gene_symbol: SEA4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEA4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38164
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38164, the single reviewed entry
+        for gene SEA4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: seh1_gator2_subunit
   label: Seh1 GATOR2 subunit
   component_type: PROTEIN
@@ -129,6 +197,28 @@ components:
     notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
       subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
       that antagonizes SEACIT in TORC1 signaling.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53011
+    protein_label: Nucleoporin SEH1
+    gene_symbol: SEH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEH1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P53011.'
+    - reference: PMID:21454883
+      notes: Dokudovskaya S et al. 2011, ‘A conserved coatomer-related complex containing
+        Sec13 and Seh1 dynamically associates with the vacuole in Saccharomyces cerevisiae.’,
+        Mol Cell Proteomics. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Vacuole membrane' localisation of P53011.
 - component_id: sec13_gator2_subunit
   label: Sec13 GATOR2 subunit
   component_type: PROTEIN
@@ -150,6 +240,23 @@ components:
     notes: Panchaud, Peli-Gulli and De Virgilio 2013 named the yeast SEACIT and SEACAT
       subcomplexes and described SEACAT as a Seh1/Sea2-4/Sec13 GATOR2 counterpart
       that antagonizes SEACIT in TORC1 signaling.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04491
+    protein_label: Protein transport protein SEC13
+    gene_symbol: SEC13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC13 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        Q04491.'
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

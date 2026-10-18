@@ -25,6 +25,18 @@ curation_history:
   action: ADD_IMAGE
   changes: Added PMC5460017.1 f4; version, CC licence, JATS figure identity and media
     md5 verified through the PMC OA S3 dataset.
+- timestamp: '2026-10-18T03:26:12Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Mic19-Mic60 subcomplex
   synonym_type: EXACT_SYNONYM
@@ -56,6 +68,32 @@ components:
   - reference: InterPro:IPR019133
     notes: InterPro resolves this accession as a family named MICOS complex subunit
       MIC60, rather than a generic coiled-coil domain.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36112
+    protein_label: MICOS complex subunit MIC60
+    gene_symbol: MIC60
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene MIC60 in Saccharomyces
+      cerevisiae S288C. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Mitochondrion inner membrane' localisation of P36112.
+    - reference: PMID:19528297
+      notes: Rabl R et al. 2009, ‘Formation of cristae and crista junctions in mitochondria
+        depends on antagonism between Fcj1 and Su e/g.’, J Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Mitochondrion inner membrane'
+        localisation of P36112.
+    - reference: PMID:21944719
+      notes: von der Malsburg K et al. 2011, ‘Dual role of mitofilin in mitochondrial
+        membrane organization and protein biogenesis.’, Dev Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Mitochondrion inner membrane' localisation
+        of P36112.
 - component_id: mic19
   label: MICOS complex subunit Mic19
   component_type: PROTEIN
@@ -79,6 +117,32 @@ components:
   - reference: DOI:10.1126/sciadv.abo4946
     notes: Mic19 promotes higher-order assembly of purified fungal Mic60; interface
       substitutions impair binding and budding-yeast crista-junction organization.
+  protein_examples:
+  - uniprot_id: UniProtKB:P43594
+    protein_label: MICOS complex subunit MIC19
+    gene_symbol: MIC19
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MIC19 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Mitochondrion inner membrane' localisation of P43594.
+    - reference: PMID:21944719
+      notes: von der Malsburg K et al. 2011, ‘Dual role of mitofilin in mitochondrial
+        membrane organization and protein biogenesis.’, Dev Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Mitochondrion inner membrane' localisation
+        of P43594.
+    - reference: PMID:21987634
+      notes: Hoppins S et al. 2011, ‘A mitochondrial-focused genetic interaction map
+        reveals a scaffold-like complex required for inner membrane organization in
+        mitochondria.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion inner membrane' localisation of P43594.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

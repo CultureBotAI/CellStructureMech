@@ -27,6 +27,18 @@ curation_history:
   changes: Narrowed the stalk graph so the GO:0001536 stalk connects to a radial-spoke
     base node rather than directly to the axonemal doublet microtubule.
   llm_assisted: true
+- timestamp: '2026-10-18T03:12:29Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -51,6 +63,90 @@ components:
   - reference: DOI:10.1242/jcs.245233
     notes: Poghosyan et al. 2020 refined the Chlamydomonas radial-spoke architecture
       and assigned proteins to the stalk region.
+  gene_symbols:
+  - RSP3
+  - RSP5
+  - RSP7
+  - RSP8
+  - RSP11
+  - RSP12
+  protein_examples:
+  - uniprot_id: UniProtKB:P12759
+    protein_label: Flagellar radial spoke protein 3
+    gene_symbol: RSP3
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSP3 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P12759
+      notes: UniProtKB reviewed (Swiss-Prot) entry P12759, the single reviewed entry
+        for gene RSP3 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q27YU7
+    protein_label: Flagellar radial spoke protein 5
+    gene_symbol: RSP5
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSP5 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16507594
+      notes: Yang P et al. 2006, ‘Radial spoke proteins of Chlamydomonas flagella.’,
+        J Cell Sci. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton, flagellum axoneme' localisation of Q27YU7.
+  - uniprot_id: UniProtKB:Q27YT9
+    protein_label: Radial spoke protein 7
+    gene_symbol: RSP7
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene RSP7 in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q27YT9
+      notes: UniProtKB unreviewed (TrEMBL) entry Q27YT9 for gene RSP7 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q27YU6
+    protein_label: Radial spike protein 8
+    gene_symbol: RSP8
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene RSP8 in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q27YU6
+      notes: UniProtKB unreviewed (TrEMBL) entry Q27YU6 for gene RSP8 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q27YU2
+    protein_label: Peptidyl-prolyl cis-trans isomerase
+    gene_symbol: RSP12
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene RSP12 in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q27YU2
+      notes: UniProtKB unreviewed (TrEMBL) entry Q27YU2 for gene RSP12 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

@@ -23,6 +23,11 @@ curation_history:
     misattributed older WDR1-PLK mechanism and unsupported stoichiometry, family mappings,
     substrates and assembly imaging.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0031461
 components:
@@ -45,6 +50,22 @@ components:
       C-terminally 3xHA-tagged scaffold was immunoisolated from procyclic T. brucei;
       Supplementary Table S3, CULE row 2, confirms the bait locus. RNAi lethality
       does not establish assembly essentiality.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q383D5
+    protein_label: Cullin 1, putative
+    gene_symbol: Cul-E
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Cul-E in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q383D5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q383D5 for gene Cul-E in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: rbx1
   label: Rbx1 RING subunit
   component_type: PROTEIN
@@ -66,6 +87,22 @@ components:
       with the Cullin-E bait. The paper distinguishes this Rbx1 ortholog from the
       other Rbx-like paralogs; their family similarity does not make them additional
       Cullin-E constituents.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q38C61
+    protein_label: RING-type domain-containing protein
+    gene_symbol: Rbx1
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Rbx1 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q38C61
+      notes: UniProtKB unreviewed (TrEMBL) entry Q38C61 for gene Rbx1 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: skp1_2
   label: Skp1.2 adaptor subunit
   component_type: PROTEIN
@@ -84,6 +121,22 @@ components:
     notes: Table 1, Figure 2B and Supplementary Table S3 CULE row 3 identify Tb927.9.8370
       as the Skp1.2 constituent. This locus is distinct from the TUSK-associated SkpZ
       lineage, so the two complexes are not conflated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q384S1
+    protein_label: SKP1 component POZ domain-containing protein
+    gene_symbol: Skp1.2
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Skp1.2 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q384S1
+      notes: UniProtKB unreviewed (TrEMBL) entry Q384S1 for gene Skp1.2 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: kelch_client_recognition
   label: kelch-domain client-recognition subunit
   component_type: PROTEIN

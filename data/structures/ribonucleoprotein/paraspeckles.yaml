@@ -28,6 +28,13 @@ curation_history:
     and DBHS graph edge; resolved #1686 by narrowing the Homo sapiens taxonomic and
     canonical-example notes to the claims supported by their cited references.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:34:53Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0140168
 part_of:
@@ -72,6 +79,77 @@ components:
   - reference: DOI:10.1083/jcb.200906113
     notes: Bond and Fox 2009 reviewed SFPQ/PSF, NONO/p54nrb and PSPC1 as core paraspeckle
       proteins that associate with NEAT1.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q15233
+    protein_label: Non-POU domain-containing octamer-binding protein
+    gene_symbol: NONO
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NONO in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22416126
+      notes: Passon DM et al. 2012, ‘Structure of the heterodimer of human NONO and
+        paraspeckle protein component 1 and analysis of its role in subnuclear body
+        formation.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of Q15233.
+    - reference: PMID:28712728
+      notes: Morchikh M et al. 2017, ‘HEXIM1 and NEAT1 Long Non-coding RNA Form a
+        Multi-subunit Complex that Regulates DNA-Mediated Innate Immune Response.’,
+        Mol Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of Q15233.
+  - uniprot_id: UniProtKB:P23246
+    protein_label: Splicing factor, proline- and glutamine-rich
+    gene_symbol: SFPQ
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SFPQ in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:25765647
+      notes: Lee M et al. 2015, ‘The structure of human SFPQ reveals a coiled-coil
+        mediated polymer essential for functional aggregation in gene regulation.’,
+        Nucleic Acids Res. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Nucleus speckle' localisation of P23246.
+    - reference: PMID:10653975
+      notes: Meissner M et al. 2000, ‘Differential nuclear localization and nuclear
+        matrix association of the splicing factors PSF and PTB.’, J Cell Biochem.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus matrix'
+        localisation of P23246.
+    - reference: PMID:19439179
+      notes: Lukong KE et al. 2009, ‘BRK phosphorylates PSF promoting its cytoplasmic
+        localization and cell cycle arrest.’, Cell Signal. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus matrix' localisation of P23246.
+  - uniprot_id: UniProtKB:Q8WXF1
+    protein_label: Paraspeckle component 1
+    gene_symbol: PSPC1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PSPC1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11790299
+      notes: 'Fox AH et al. 2002, ‘Paraspeckles: a novel nuclear domain.’, Curr Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the ''Nucleus speckle''
+        localisation of Q8WXF1.'
+    - reference: PMID:16148043
+      notes: Fox AH et al. 2005, ‘P54nrb forms a heterodimer with PSP1 that localizes
+        to paraspeckles in an RNA-dependent manner.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus speckle' localisation of Q8WXF1.
+    - reference: PMID:28712728
+      notes: Morchikh M et al. 2017, ‘HEXIM1 and NEAT1 Long Non-coding RNA Form a
+        Multi-subunit Complex that Regulates DNA-Mediated Innate Immune Response.’,
+        Mol Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus
+        speckle' localisation of Q8WXF1.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens

@@ -29,6 +29,13 @@ curation_history:
     naming paper cited by that row; the Roguev 2001 H3K4 methyltransferase evidence
     remains attached to the function.
   llm_assisted: true
+- timestamp: '2026-10-18T03:30:15Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 8 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: COMPASS complex
   synonym_type: EXACT_SYNONYM
@@ -59,6 +66,23 @@ components:
   - reference: GO:0048188
     notes: GO:0048188 defines the Saccharomyces Set1C/COMPASS complex as containing
       Shg1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38337
+    protein_label: COMPASS component SHG1
+    gene_symbol: SHG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SHG1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38337
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38337, the single reviewed entry
+        for gene SHG1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sdc1_compass_subunit
   label: Sdc1 COMPASS subunit
   component_type: PROTEIN
@@ -76,6 +100,22 @@ components:
   - reference: GO:0048188
     notes: GO:0048188 defines the Saccharomyces Set1C/COMPASS complex as containing
       Sdc1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03323
+    protein_label: COMPASS component SDC1
+    gene_symbol: SDC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SDC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q03323.
 - component_id: swd1_compass_subunit
   label: Swd1 COMPASS subunit
   component_type: PROTEIN
@@ -92,6 +132,22 @@ components:
   - reference: GO:0048188
     notes: GO:0048188 defines the Saccharomyces Set1C/COMPASS complex as containing
       Swd1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39706
+    protein_label: COMPASS component SWD1
+    gene_symbol: SWD1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWD1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15282802
+      notes: Sundin BA et al. 2004, ‘Localization of proteins that are coordinately
+        expressed with Cln2 during the cell cycle.’, Yeast. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P39706.
 - component_id: swd2_compass_subunit
   label: Swd2 COMPASS subunit
   component_type: PROTEIN
@@ -108,6 +164,23 @@ components:
   - reference: GO:0048188
     notes: GO:0048188 defines the Saccharomyces Set1C/COMPASS complex as containing
       Swd2p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36104
+    protein_label: COMPASS component SWD2
+    gene_symbol: SWD2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWD2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12819204
+      notes: Nedea E et al. 2003, ‘Organization and function of APT, a subcomplex
+        of the yeast cleavage and polyadenylation factor involved in the formation
+        of mRNA and small nucleolar RNA 3'-ends.’, J Biol Chem. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P36104.
 - component_id: swd3_compass_subunit
   label: Swd3 COMPASS subunit
   component_type: PROTEIN
@@ -124,6 +197,23 @@ components:
   - reference: GO:0048188
     notes: GO:0048188 defines the Saccharomyces Set1C/COMPASS complex as containing
       Swd3p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38123
+    protein_label: COMPASS component SWD3
+    gene_symbol: SWD3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWD3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38123
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38123, the single reviewed entry
+        for gene SWD3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: spp1_compass_subunit
   label: Spp1 COMPASS subunit
   component_type: PROTEIN
@@ -141,6 +231,23 @@ components:
   - reference: GO:0048188
     notes: GO:0048188 defines the Saccharomyces Set1C/COMPASS complex as containing
       Spp1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03012
+    protein_label: COMPASS component SPP1
+    gene_symbol: SPP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03012
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03012, the single reviewed entry
+        for gene SPP1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: bre2_compass_subunit
   label: Bre2 COMPASS subunit
   component_type: PROTEIN
@@ -157,6 +264,23 @@ components:
   - reference: GO:0048188
     notes: GO:0048188 defines the Saccharomyces Set1C/COMPASS complex as containing
       Bre2p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P43132
+    protein_label: COMPASS component BRE2
+    gene_symbol: BRE2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BRE2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P43132
+      notes: UniProtKB reviewed (Swiss-Prot) entry P43132, the single reviewed entry
+        for gene BRE2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: set1_compass_catalytic_subunit
   label: Set1 COMPASS catalytic subunit
   component_type: PROTEIN
@@ -174,6 +298,22 @@ components:
   - reference: GO:0048188
     notes: GO:0048188 defines the Saccharomyces Set1C/COMPASS complex as containing
       Set1p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38827
+    protein_label: Histone-lysine N-methyltransferase, H3 lysine-4 specific
+    gene_symbol: SET1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SET1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:29071121
+      notes: Luciano P et al. 2017, ‘Binding to RNA regulates Set1 function.’, Cell
+        Discov. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of P38827.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

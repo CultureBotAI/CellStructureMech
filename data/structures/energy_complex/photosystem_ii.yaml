@@ -30,6 +30,13 @@ curation_history:
   changes: '#1442: updated the NCBITaxon:32053 canonical-example label from the accepted
     Thermosynechococcus vulcanus synonym to the current NCBI label Thermostichus vulcanus.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:13:40Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0009521
 components:
@@ -51,6 +58,60 @@ components:
   - reference: PMID:21499260
     notes: Umena et al. 2011 resolved the oxygen-evolving PSII structure, including
       protein subunits and cofactors.
+  gene_symbols:
+  - psbA
+  - psbD
+  protein_examples:
+  - uniprot_id: UniProtKB:P51765
+    protein_label: Photosystem II protein D1
+    gene_symbol: psbA
+    taxon_id: NCBITaxon:32053
+    taxon_label: Thermostichus vulcanus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene psbA in Thermostichus vulcanus,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12518057
+      notes: Kamiya N et al. 2003, ‘Crystal structure of oxygen-evolving photosystem
+        II from Thermosynechococcus vulcanus at 3.7-A resolution.’, Proc Natl Acad
+        Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Cellular
+        thylakoid membrane' localisation of P51765.
+    - reference: PMID:19433803
+      notes: Kawakami K et al. 2009, ‘Location of chloride and its possible functions
+        in oxygen-evolving photosystem II revealed by X-ray crystallography.’, Proc
+        Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cellular thylakoid membrane' localisation of P51765.
+    - reference: PMID:21499260
+      notes: Umena Y et al. 2011, ‘Crystal structure of oxygen-evolving photosystem
+        II at a resolution of 1.9 Å.’, Nature. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cellular thylakoid membrane' localisation of P51765.
+  - uniprot_id: UniProtKB:D0VWR8
+    protein_label: Photosystem II D2 protein
+    gene_symbol: psbD
+    taxon_id: NCBITaxon:32053
+    taxon_label: Thermostichus vulcanus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene psbD in Thermostichus vulcanus,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12518057
+      notes: Kamiya N et al. 2003, ‘Crystal structure of oxygen-evolving photosystem
+        II from Thermosynechococcus vulcanus at 3.7-A resolution.’, Proc Natl Acad
+        Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Cellular
+        thylakoid membrane' localisation of D0VWR8.
+    - reference: PMID:19433803
+      notes: Kawakami K et al. 2009, ‘Location of chloride and its possible functions
+        in oxygen-evolving photosystem II revealed by X-ray crystallography.’, Proc
+        Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cellular thylakoid membrane' localisation of D0VWR8.
+    - reference: PMID:21499260
+      notes: Umena Y et al. 2011, ‘Crystal structure of oxygen-evolving photosystem
+        II at a resolution of 1.9 Å.’, Nature. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cellular thylakoid membrane' localisation of D0VWR8.
 - component_id: oxygen_evolving_manganese_calcium_cluster
   label: oxygen-evolving manganese-calcium cluster
   component_type: SMALL_MOLECULE

@@ -28,6 +28,13 @@ curation_history:
     grounding notes so they no longer over-attribute all fourteen subunit labels to
     GO:0000812.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:31:19Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 14 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: SWR-C
   synonym_type: EXACT_SYNONYM
@@ -56,6 +63,24 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - SWR1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q05471
+    protein_label: Chromatin remodeling protein SWR1
+    gene_symbol: SWR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWR1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q05471.
 - component_id: swc2_swr1c_subunit
   label: Swc2 SWR-C subunit
   component_type: PROTEIN
@@ -71,6 +96,25 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - SWC2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03388
+    protein_label: Vacuolar protein sorting-associated protein 72
+    gene_symbol: VPS72
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWC2, which UniProt lists under
+      the primary name VPS72, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q03388.
 - component_id: bdf1_swr1c_subunit
   label: Bdf1 SWR-C subunit
   component_type: PROTEIN
@@ -87,6 +131,28 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - BDF1
+  protein_examples:
+  - uniprot_id: UniProtKB:P35817
+    protein_label: Bromodomain-containing factor 1
+    gene_symbol: BDF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BDF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P35817.
+    - reference: PMID:7791775
+      notes: Chua P et al. 1995, ‘Bdf1, a yeast chromosomal protein required for sporulation.’,
+        Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P35817.
 - component_id: swc3_swr1c_subunit
   label: Swc3 SWR-C subunit
   component_type: PROTEIN
@@ -102,6 +168,24 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - SWC3
+  protein_examples:
+  - uniprot_id: UniProtKB:P31376
+    protein_label: SWR1-complex protein 3
+    gene_symbol: SWC3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWC3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P31376.
 - component_id: arp6_swr1c_subunit
   label: Arp6 SWR-C subunit
   component_type: PROTEIN
@@ -118,6 +202,24 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - ARP6
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12509
+    protein_label: Actin-like protein ARP6
+    gene_symbol: ARP6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q12509.
 - component_id: swc5_swr1c_subunit
   label: Swc5 SWR-C subunit
   component_type: PROTEIN
@@ -133,6 +235,24 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - SWC5
+  protein_examples:
+  - uniprot_id: UniProtKB:P38326
+    protein_label: SWR1-complex protein 5
+    gene_symbol: SWC5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWC5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38326.
 - component_id: yaf9_swr1c_subunit
   label: Yaf9 SWR-C subunit
   component_type: PROTEIN
@@ -148,6 +268,25 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - YAF9
+  protein_examples:
+  - uniprot_id: UniProtKB:P53930
+    protein_label: Protein AF-9 homolog
+    gene_symbol: YAF9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YAF9 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53930
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53930, the single reviewed entry
+        for gene YAF9 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: swc6_swr1c_subunit
   label: Swc6 SWR-C subunit
   component_type: PROTEIN
@@ -163,6 +302,25 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - SWC6
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03433
+    protein_label: Vacuolar protein sorting-associated protein 71
+    gene_symbol: VPS71
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWC6, which UniProt lists under
+      the primary name VPS71, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q03433.
 - component_id: swc7_swr1c_subunit
   label: Swc7 SWR-C subunit
   component_type: PROTEIN
@@ -178,6 +336,24 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - SWC7
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06707
+    protein_label: SWR1-complex protein 7
+    gene_symbol: SWC7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWC7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q06707.
 - component_id: rvb1_swr1c_subunit
   label: Rvb1 SWR-C subunit
   component_type: PROTEIN
@@ -194,6 +370,24 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - RVB1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03940
+    protein_label: RuvB-like protein 1
+    gene_symbol: RVB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RVB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q03940.
 - component_id: rvb2_swr1c_subunit
   label: Rvb2 SWR-C subunit
   component_type: PROTEIN
@@ -210,6 +404,30 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - RVB2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12464
+    protein_label: RuvB-like protein 2
+    gene_symbol: RVB2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RVB2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10787406
+      notes: Lim CR et al. 2000, ‘The Saccharomyces cerevisiae RuvB-like protein,
+        Tih2p, is required for cell cycle progression and RNA polymerase II-directed
+        transcription.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus, nucleoplasm' localisation of Q12464.
+    - reference: PMID:11604509
+      notes: King TH et al. 2001, ‘A well-connected and conserved nucleoplasmic helicase
+        is required for production of box C/D and H/ACA snoRNAs and localization of
+        snoRNP proteins.’, Mol Cell Biol. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus, nucleoplasm' localisation of Q12464.
 - component_id: arp4_swr1c_subunit
   label: Arp4 SWR-C subunit
   component_type: PROTEIN
@@ -226,6 +444,24 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - ARP4
+  protein_examples:
+  - uniprot_id: UniProtKB:P80428
+    protein_label: Actin-related protein 4
+    gene_symbol: ARP4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:8573785
+      notes: Weber V et al. 1995, ‘The actin-related protein Act3p of Saccharomyces
+        cerevisiae is located in the nucleus.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P80428.
 - component_id: swc4_swr1c_subunit
   label: Swc4 SWR-C subunit
   component_type: PROTEIN
@@ -241,6 +477,24 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - SWC4
+  protein_examples:
+  - uniprot_id: UniProtKB:P53201
+    protein_label: SWR1-complex protein 4
+    gene_symbol: SWC4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWC4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53201.
 - component_id: act1_swr1c_subunit
   label: Act1 SWR-C actin constituent
   component_type: PROTEIN
@@ -256,6 +510,25 @@ components:
     notes: Wu et al. 2009 describe the yeast SWR1 enzyme as containing the Swr1 ATPase,
       Swc2, Bdf1, Swc3, Arp6, Swc5, Yaf9, Swc6, Swc7, Rvb1, Rvb2, Arp4, Swc4/Eaf2
       and Act1.
+  gene_symbols:
+  - ACT1
+  protein_examples:
+  - uniprot_id: UniProtKB:P60010
+    protein_label: Actin
+    gene_symbol: ACT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ACT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P60010
+      notes: UniProtKB reviewed (Swiss-Prot) entry P60010, the single reviewed entry
+        for gene ACT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

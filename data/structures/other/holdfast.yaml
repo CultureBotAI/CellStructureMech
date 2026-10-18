@@ -35,6 +35,12 @@ curation_history:
     Hfs synthesis/export edge and replacing the old-cell-pole state with an old-pole-or-stalk-tip
     cellular-localization node.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s); added 1 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Caulobacter holdfast
   synonym_type: RELATED_SYNONYM
@@ -80,6 +86,55 @@ components:
   - reference: DOI:10.1128/JB.00112-19
     notes: Sulkowski et al. 2019 analyze HfaA, HfaB and HfaD as proteins that anchor
       Caulobacter holdfast at the old cell pole.
+  protein_examples:
+  - uniprot_id: UniProtKB:P27342
+    protein_label: Holdfast attachment protein A
+    gene_symbol: hfaA
+    taxon_id: NCBITaxon:190650
+    taxon_label: Caulobacter vibrioides CB15
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene hfaA in Caulobacter vibrioides
+      CB15. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P27342
+      notes: UniProtKB reviewed (Swiss-Prot) entry P27342, the single reviewed entry
+        for gene hfaA in Caulobacter vibrioides CB15. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:P27343
+    protein_label: Putative transcription activator protein HfaB
+    gene_symbol: hfaB
+    taxon_id: NCBITaxon:190650
+    taxon_label: Caulobacter vibrioides CB15
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene hfaB in Caulobacter vibrioides
+      CB15. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P27343
+      notes: UniProtKB reviewed (Swiss-Prot) entry P27343, the single reviewed entry
+        for gene hfaB in Caulobacter vibrioides CB15. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q45977
+    protein_label: Holdfast attachment protein D
+    gene_symbol: hfaD
+    taxon_id: NCBITaxon:190650
+    taxon_label: Caulobacter vibrioides CB15
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene hfaD in Caulobacter vibrioides
+      CB15. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q45977
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q45977, the single reviewed entry
+        for gene hfaD in Caulobacter vibrioides CB15. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:155892
   taxon_label: Caulobacter vibrioides
@@ -133,6 +188,8 @@ causal_graphs:
   - node_id: hfsk_c_di_gmp_effector
     label: HfsK c-di-GMP effector
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:A0A0H3CE47
   - node_id: holdfast_polysaccharide
     label: holdfast polysaccharide
     node_type: CHEMICAL

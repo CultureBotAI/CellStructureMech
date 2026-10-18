@@ -35,6 +35,11 @@ curation_history:
     2022 T. vulcanus structure as a phycocyanin rod resolved from phycobilisome preparations
     rather than as a rod resolved inside a fully intact phycobilisome.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: phycobilisome peripheral rod
   synonym_type: EXACT_SYNONYM
@@ -64,6 +69,37 @@ components:
     notes: Kawakami et al. 2022 resolved a T. vulcanus phycocyanin rod and describe
       phycobiliprotein alpha and beta subunits with linear tetrapyrrole chromophores
       as the phycocyanin rod building blocks.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0ABT0C7V5
+    protein_label: Phycocyanin subunit alpha
+    gene_symbol: cpcA
+    taxon_id: NCBITaxon:2813851
+    taxon_label: Thermostichus vulcanus str. 'Rupite'
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene cpcA in Thermostichus
+      vulcanus str. 'Rupite'. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0ABT0C7V5
+      notes: UniProtKB unreviewed (TrEMBL) entry A0ABT0C7V5 for gene cpcA in Thermostichus
+        vulcanus str. 'Rupite'. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:A0ABT0C7V6
+    protein_label: Phycocyanin subunit beta
+    gene_symbol: cpcB
+    taxon_id: NCBITaxon:2813851
+    taxon_label: Thermostichus vulcanus str. 'Rupite'
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene cpcB in Thermostichus
+      vulcanus str. 'Rupite'. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0ABT0C7V6
+      notes: UniProtKB unreviewed (TrEMBL) entry A0ABT0C7V6 for gene cpcB in Thermostichus
+        vulcanus str. 'Rupite'. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
 - component_id: rod_linker_polypeptides
   label: phycobilisome rod linker polypeptides
   component_type: PROTEIN
@@ -83,6 +119,37 @@ components:
   - reference: DOI:10.1038/s41467-022-30962-9
     notes: Kawakami et al. 2022 classify T. vulcanus rod, rod-terminal, and rod-core
       linker proteins and model linker positions in the phycocyanin rod structure.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0ABT0C7V3
+    protein_label: Phycobilisome rod-core linker polypeptide
+    gene_symbol: cpcG
+    taxon_id: NCBITaxon:2813851
+    taxon_label: Thermostichus vulcanus str. 'Rupite'
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene cpcG in Thermostichus
+      vulcanus str. 'Rupite'. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0ABT0C7V3
+      notes: UniProtKB unreviewed (TrEMBL) entry A0ABT0C7V3 for gene cpcG in Thermostichus
+        vulcanus str. 'Rupite'. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:A0ABT0C7D6
+    protein_label: Phycobilisome rod-core linker polypeptide
+    gene_symbol: cpcC
+    taxon_id: NCBITaxon:2813851
+    taxon_label: Thermostichus vulcanus str. 'Rupite'
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene cpcC in Thermostichus
+      vulcanus str. 'Rupite'. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0ABT0C7D6
+      notes: UniProtKB unreviewed (TrEMBL) entry A0ABT0C7D6 for gene cpcC in Thermostichus
+        vulcanus str. 'Rupite'. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
 - component_id: rod_phycobilin_chromophores
   label: rod-bound phycobilin chromophores
   component_type: SMALL_MOLECULE

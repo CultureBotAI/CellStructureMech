@@ -121,6 +121,22 @@ components:
   - reference: DOI:10.1038/nrmicro2921
     notes: McKenney et al. 2012 contrast species with an exosporium against B. subtilis,
       which lacks one.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q81JD7
+    protein_label: BclA protein
+    gene_symbol: bclA
+    taxon_id: NCBITaxon:1392
+    taxon_label: Bacillus anthracis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene bclA in Bacillus
+      anthracis. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q81JD7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q81JD7 for gene bclA in Bacillus
+        anthracis. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1239
   taxon_label: Bacillota
@@ -182,6 +198,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     xrefs:
     - UniProtKB:P35149
+    component_ref: coat
   - node_id: basement_layer
     label: spore coat basement layer
     node_type: STRUCTURE
@@ -193,6 +210,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     xrefs:
     - UniProtKB:P14016
+    component_ref: coat
   - node_id: outer_coat
     label: outer spore coat
     node_type: STRUCTURE
@@ -378,4 +396,9 @@ curation_history:
   action: ADDRESSED_REVIEW
   changes: Removed the endospore cortex graph node's component_ref so the GO:0043595
     structure node no longer points at the narrower peptidoglycan component.
+  llm_assisted: true
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true

@@ -35,6 +35,13 @@ curation_history:
   changes: '#2310: Source the NqrF FAD role to the primary structure instead of a
     missing InterPro GO annotation.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:14:46Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Na+-NQR complex
   synonym_type: EXACT_SYNONYM
@@ -61,6 +68,23 @@ components:
   - reference: PDB:7XK3
     notes: RCSB maps PDB:7XK3 polymer entity 1 to Vibrio cholerae O395 Na(+)-translocating
       NADH-quinone reductase subunit A, UniProtKB:A5F5X1.
+  protein_examples:
+  - uniprot_id: UniProtKB:A5F5X1
+    protein_label: Na(+)-translocating NADH-quinone reductase subunit A
+    gene_symbol: nqrA
+    taxon_id: NCBITaxon:345073
+    taxon_label: Vibrio cholerae O395
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqrA in Vibrio cholerae O395,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A5F5X1
+      notes: UniProtKB reviewed (Swiss-Prot) entry A5F5X1, the single reviewed entry
+        for gene nqrA in Vibrio cholerae O395. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: nqrB_subunit
   label: Na(+)-translocating NADH-quinone reductase subunit B
   component_type: PROTEIN
@@ -78,6 +102,23 @@ components:
   - reference: PDB:7XK3
     notes: RCSB maps PDB:7XK3 polymer entity 2 to Vibrio cholerae O395 Na(+)-translocating
       NADH-quinone reductase subunit B, UniProtKB:A5F5X0.
+  protein_examples:
+  - uniprot_id: UniProtKB:A5F5X0
+    protein_label: Na(+)-translocating NADH-quinone reductase subunit B
+    gene_symbol: nqrB
+    taxon_id: NCBITaxon:345073
+    taxon_label: Vibrio cholerae O395
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqrB in Vibrio cholerae O395,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A5F5X0
+      notes: UniProtKB reviewed (Swiss-Prot) entry A5F5X0, the single reviewed entry
+        for gene nqrB in Vibrio cholerae O395. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: nqrC_subunit
   label: Na(+)-translocating NADH-quinone reductase subunit C
   component_type: PROTEIN
@@ -94,6 +135,23 @@ components:
   - reference: PDB:7XK3
     notes: RCSB maps PDB:7XK3 polymer entity 3 to Vibrio cholerae O395 Na(+)-translocating
       NADH-quinone reductase subunit C, UniProtKB:A5F5Y7.
+  protein_examples:
+  - uniprot_id: UniProtKB:A5F5Y7
+    protein_label: Na(+)-translocating NADH-quinone reductase subunit C
+    gene_symbol: nqrC
+    taxon_id: NCBITaxon:345073
+    taxon_label: Vibrio cholerae O395
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqrC in Vibrio cholerae O395,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A5F5Y7
+      notes: UniProtKB reviewed (Swiss-Prot) entry A5F5Y7, the single reviewed entry
+        for gene nqrC in Vibrio cholerae O395. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: nqrD_subunit
   label: Na(+)-translocating NADH-quinone reductase subunit D
   component_type: PROTEIN
@@ -110,6 +168,23 @@ components:
   - reference: PDB:7XK3
     notes: RCSB maps PDB:7XK3 polymer entity 4 to Vibrio cholerae O395 Na(+)-translocating
       NADH-quinone reductase subunit D, UniProtKB:A5F5Y6.
+  protein_examples:
+  - uniprot_id: UniProtKB:A5F5Y6
+    protein_label: Na(+)-translocating NADH-quinone reductase subunit D
+    gene_symbol: nqrD
+    taxon_id: NCBITaxon:345073
+    taxon_label: Vibrio cholerae O395
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqrD in Vibrio cholerae O395,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A5F5Y6
+      notes: UniProtKB reviewed (Swiss-Prot) entry A5F5Y6, the single reviewed entry
+        for gene nqrD in Vibrio cholerae O395. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: nqrE_subunit
   label: Na(+)-translocating NADH-quinone reductase subunit E
   component_type: PROTEIN
@@ -126,6 +201,23 @@ components:
   - reference: PDB:7XK3
     notes: RCSB maps PDB:7XK3 polymer entity 5 to Vibrio cholerae O395 Na(+)-translocating
       NADH-quinone reductase subunit E, UniProtKB:A5F5Y5.
+  protein_examples:
+  - uniprot_id: UniProtKB:A5F5Y5
+    protein_label: Na(+)-translocating NADH-quinone reductase subunit E
+    gene_symbol: nqrE
+    taxon_id: NCBITaxon:345073
+    taxon_label: Vibrio cholerae O395
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqrE in Vibrio cholerae O395,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A5F5Y5
+      notes: UniProtKB reviewed (Swiss-Prot) entry A5F5Y5, the single reviewed entry
+        for gene nqrE in Vibrio cholerae O395. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: nqrF_subunit
   label: Na(+)-translocating NADH-quinone reductase subunit F
   component_type: PROTEIN
@@ -147,6 +239,23 @@ components:
     notes: Kishikawa et al. 2022 identify FAD and the 2Fe-2S center in the NqrF structure
       (Results, NqrA/NqrF arrangement); this primary structure supports the FAD cofactor
       role.
+  protein_examples:
+  - uniprot_id: UniProtKB:A5F5Y4
+    protein_label: Na(+)-translocating NADH-quinone reductase subunit F
+    gene_symbol: nqrF
+    taxon_id: NCBITaxon:345073
+    taxon_label: Vibrio cholerae O395
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqrF in Vibrio cholerae O395,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A5F5Y4
+      notes: UniProtKB reviewed (Swiss-Prot) entry A5F5Y4, the single reviewed entry
+        for gene nqrF in Vibrio cholerae O395. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:345073
   taxon_label: Vibrio cholerae O395

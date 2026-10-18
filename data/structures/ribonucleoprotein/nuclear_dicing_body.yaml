@@ -30,6 +30,13 @@ curation_history:
     a primary-miRNA-only cohort to a pri/pre-miRNA substrate cohort matching the cited
     SERRATE recruitment evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:34:28Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: D body
   synonym_type: EXACT_SYNONYM
@@ -63,6 +70,28 @@ components:
   - reference: DOI:10.1073/pnas.0701061104
     notes: Song et al. 2007 showed that HYL1 and DCL1 fusion proteins colocalize to
       small nuclear bodies that lack the Cajal-body marker Atcoilin.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9SP32
+    protein_label: Endoribonuclease Dicer homolog 1
+    gene_symbol: DCL1
+    taxon_id: NCBITaxon:3702
+    taxon_label: Arabidopsis thaliana
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DCL1 in Arabidopsis thaliana,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15821876
+      notes: Hiraguri A et al. 2005, ‘Specific interactions between Dicer-like proteins
+        and HYL1/DRB-family dsRNA-binding proteins in Arabidopsis thaliana.’, Plant
+        Mol Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of Q9SP32.
+    - reference: PMID:17442570
+      notes: Fang Y et al. 2007, ‘Identification of nuclear dicing bodies containing
+        proteins for microRNA biogenesis in living Arabidopsis plants.’, Curr Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation
+        of Q9SP32.
 - component_id: hyponastic_leaves1
   label: HYPONASTIC LEAVES1
   component_type: PROTEIN
@@ -83,6 +112,34 @@ components:
   - reference: DOI:10.1073/pnas.0701061104
     notes: Song et al. 2007 found that HYL1 and DCL1 nuclear bodies are distinct from
       Arabidopsis Cajal bodies.
+  protein_examples:
+  - uniprot_id: UniProtKB:O04492
+    protein_label: Double-stranded RNA-binding protein 1
+    gene_symbol: DRB1
+    taxon_id: NCBITaxon:3702
+    taxon_label: Arabidopsis thaliana
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HYL1, which UniProt lists under
+      the primary name DRB1, in Arabidopsis thaliana, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:14722360
+      notes: Han MH et al. 2004, ‘The Arabidopsis double-stranded RNA-binding protein
+        HYL1 plays a role in microRNA-mediated gene regulation.’, Proc Natl Acad Sci
+        U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of O04492.
+    - reference: PMID:17337628
+      notes: Wu F et al. 2007, ‘The N-terminal double-stranded RNA binding domains
+        of Arabidopsis HYPONASTIC LEAVES1 are sufficient for pre-microRNA processing.’,
+        Plant Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of O04492.
+    - reference: PMID:17442570
+      notes: Fang Y et al. 2007, ‘Identification of nuclear dicing bodies containing
+        proteins for microRNA biogenesis in living Arabidopsis plants.’, Curr Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation
+        of O04492.
 - component_id: serrate
   label: SERRATE
   component_type: PROTEIN
@@ -105,6 +162,31 @@ components:
     notes: Xie et al. 2021 showed that SERRATE can drive DCL1, HYL1 and pri/pre-miRNAs
       into phase-separated D-body droplets and that SERRATE mutation abrogates D-body
       formation in vivo.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9ZVD0
+    protein_label: Serrate RNA effector molecule
+    gene_symbol: SE
+    taxon_id: NCBITaxon:3702
+    taxon_label: Arabidopsis thaliana
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SE in Arabidopsis thaliana,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16889646
+      notes: Yang L et al. 2006, ‘SERRATE is a novel nuclear regulator in primary
+        microRNA processing in Arabidopsis.’, Plant J. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of Q9ZVD0.
+    - reference: PMID:17442570
+      notes: Fang Y et al. 2007, ‘Identification of nuclear dicing bodies containing
+        proteins for microRNA biogenesis in living Arabidopsis plants.’, Curr Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation
+        of Q9ZVD0.
+    - reference: PMID:17675322
+      notes: Fujioka Y et al. 2007, ‘Location of a possible miRNA processing site
+        in SmD3/SmB nuclear bodies in Arabidopsis.’, Plant Cell Physiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q9ZVD0.
 - component_id: mirna_processing_substrates
   label: pri/pre-miRNA substrate cohort
   component_type: RNA

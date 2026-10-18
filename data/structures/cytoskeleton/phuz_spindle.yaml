@@ -34,6 +34,11 @@ curation_history:
     boundary discussion and grounded retained spindle rotation in primary 201phi2-1
     experiments.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: phage tubulin spindle
   synonym_type: RELATED_SYNONYM
@@ -61,6 +66,27 @@ components:
   - reference: DOI:10.1016/j.celrep.2017.07.064
     notes: Chaikeeratisak et al. 2017 showed that dynamic PhuZ polymers form bipolar
       spindles associated with nucleus-like compartments in large Pseudomonas phages.
+  protein_examples:
+  - uniprot_id: UniProtKB:B3FK34
+    protein_label: Phage tubulin-like protein
+    gene_symbol: phuZ
+    taxon_id: NCBITaxon:198110
+    taxon_label: Pseudomonas phage 201phi2-1
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene phuZ in Pseudomonas phage
+      201phi2-1. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22726436
+      notes: Kraemer JA et al. 2012, ‘A phage tubulin assembles dynamic filaments
+        by an atypical mechanism to center viral DNA within the host cell.’, Cell.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Host cytoplasm'
+        localisation of B3FK34.
+    - reference: PMID:25429514
+      notes: Erb ML et al. 2014, ‘A bacteriophage tubulin harnesses dynamic instability
+        to center DNA in infected cells.’, Elife. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Host cytoplasm' localisation of B3FK34.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:198110
   taxon_label: Pseudomonas phage 201phi2-1

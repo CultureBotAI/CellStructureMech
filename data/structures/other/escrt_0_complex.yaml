@@ -28,6 +28,13 @@ curation_history:
   changes: 'Constrained the Katzmann 2003 ESCRT-I recruitment edge to Vps27 instead
     of the whole ESCRT-0 complex for PR #1110 / issue #1111.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:30Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0036452
 part_of:
@@ -60,6 +67,31 @@ components:
   - reference: DOI:10.1016/j.devcel.2011.05.015
     notes: Henne, Buchkovich and Emr 2011 reviewed Vps27 as the yeast ESCRT-0 cargo-recognition
       subunit in the endosomal ESCRT pathway.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40343
+    protein_label: Vacuolar protein sorting-associated protein 27
+    gene_symbol: VPS27
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene VPS27 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12006563
+      notes: Stahelin RV et al. 2002, ‘Phosphatidylinositol 3-phosphate induces the
+        membrane penetration of the FYVE domains of Vps27p and Hrs.’, J Biol Chem.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Endosome membrane'
+        localisation of P40343.
+    - reference: PMID:12900393
+      notes: Katzmann DJ et al. 2003, ‘Vps27 recruits ESCRT machinery to endosomes
+        during MVB sorting.’, J Cell Biol. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Endosome membrane' localisation of P40343.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Endosome membrane' localisation of P40343.
 - component_id: hse1_escrt_0_subunit
   label: Hse1 ESCRT-0 subunit
   component_type: PROTEIN
@@ -80,6 +112,26 @@ components:
   - reference: DOI:10.1016/j.devcel.2011.05.015
     notes: Henne, Buchkovich and Emr 2011 reviewed Hse1 as the second yeast ESCRT-0
       subunit in the endosomal ESCRT pathway.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38753
+    protein_label: Class E vacuolar protein-sorting machinery protein HSE1
+    gene_symbol: HSE1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HSE1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12055639
+      notes: Bilodeau PS et al. 2002, ‘The Vps27p Hse1p complex binds ubiquitin and
+        mediates endosomal protein sorting.’, Nat Cell Biol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Endosome membrane' localisation of P38753.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Endosome membrane' localisation of P38753.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

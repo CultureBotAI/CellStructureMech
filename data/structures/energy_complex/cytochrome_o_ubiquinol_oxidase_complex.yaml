@@ -26,6 +26,11 @@ curation_history:
   changes: '#2298: Use a neutral CyoA structural role and qualify historical quinol-binding
     evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0098803
 components:
@@ -45,6 +50,24 @@ components:
   - reference: PDB:1FFT
     notes: The PDB:1FFT deposition maps polymer entity 1 of the E. coli ubiquinol
       oxidase structure to UniProtKB:P0ABI8/CYOB_ECOLI.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABI8
+    protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+    gene_symbol: cyoB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene cyoB in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:6365921
+      notes: Kita K et al. 1984, ‘Terminal oxidases of Escherichia coli aerobic respiratory
+        chain. I. Purification and properties of cytochrome b562-o complex from cells
+        in the early exponential phase of aerobic growth.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell inner membrane' localisation
+        of P0ABI8.
 - component_id: cyo_subunit_ii
   label: Cytochrome o ubiquinol oxidase subunit II
   component_type: PROTEIN
@@ -69,6 +92,28 @@ components:
     notes: Tsatsos et al. 1998 abstract reports a sixfold increase in apparent ubiquinol
       Km for CyoA W136A, suggesting proximity to or involvement in quinol binding;
       this is not an exclusive structural localization of the site to CyoA.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABJ1
+    protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 2
+    gene_symbol: cyoA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene cyoA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell inner membrane' localisation of P0ABJ1.
+    - reference: PMID:6365921
+      notes: Kita K et al. 1984, ‘Terminal oxidases of Escherichia coli aerobic respiratory
+        chain. I. Purification and properties of cytochrome b562-o complex from cells
+        in the early exponential phase of aerobic growth.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell inner membrane' localisation
+        of P0ABJ1.
 - component_id: cyo_subunit_iii
   label: Cytochrome o ubiquinol oxidase, subunit III
   component_type: PROTEIN
@@ -85,6 +130,23 @@ components:
   - reference: PDB:1FFT
     notes: The PDB:1FFT deposition maps polymer entity 3 of the E. coli ubiquinol
       oxidase structure to UniProtKB:P0ABJ3/CYOC_ECOLI.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABJ3
+    protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 3
+    gene_symbol: cyoC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene cyoC in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ABJ3
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ABJ3, the single reviewed entry
+        for gene cyoC in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: cyo_subunit_iv
   label: Cytochrome o ubiquinol oxidase subunit IV
   component_type: PROTEIN
@@ -102,6 +164,23 @@ components:
   - reference: UniProtKB:P0ABJ6
     notes: Reviewed UniProtKB entry P0ABJ6 records E. coli cyoD as cytochrome bo3
       ubiquinol oxidase subunit 4.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABJ6
+    protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 4
+    gene_symbol: cyoD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene cyoD in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ABJ6
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ABJ6, the single reviewed entry
+        for gene cyoD in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli

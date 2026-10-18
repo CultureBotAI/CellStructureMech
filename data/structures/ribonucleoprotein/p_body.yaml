@@ -28,6 +28,18 @@ curation_history:
     localization claim; resolved #546 by connecting the mRNA-cargo and Edc3/Lsm4 graph
     nodes directly to the P-body structure.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:34:49Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: P body
   synonym_type: EXACT_SYNONYM
@@ -78,6 +90,109 @@ components:
   - reference: DOI:10.1016/j.molcel.2007.02.011
     notes: Parker and Sheth 2007 reviewed P-body proteins involved in mRNA translation
       control and degradation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12517
+    protein_label: mRNA-decapping enzyme subunit 1
+    gene_symbol: DCP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DCP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10761922
+      notes: Tharun S et al. 2000, ‘Yeast Sm-like proteins function in mRNA decapping
+        and decay.’, Nature. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cytoplasm, P-body' localisation of Q12517.
+    - reference: PMID:12730603
+      notes: Sheth U et al. 2003, ‘Decapping and decay of messenger RNA occur in cytoplasmic
+        processing bodies.’, Science. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, P-body' localisation of Q12517.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm, P-body' localisation of Q12517.
+  - uniprot_id: UniProtKB:P22147
+    protein_label: 5'-3' exoribonuclease 1
+    gene_symbol: XRN1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene XRN1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22147
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22147, the single reviewed entry
+        for gene XRN1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P53550
+    protein_label: m7GpppN-mRNA hydrolase
+    gene_symbol: DCP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene DCP2 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12730603
+      notes: Sheth U et al. 2003, ‘Decapping and decay of messenger RNA occur in cytoplasmic
+        processing bodies.’, Science. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, P-body' localisation of P53550.
+  - uniprot_id: UniProtKB:P39517
+    protein_label: ATP-dependent RNA helicase DHH1
+    gene_symbol: DHH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene DHH1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12032091
+      notes: Fischer N et al. 2002, ‘The DEAD box protein Dhh1 stimulates the decapping
+        enzyme Dcp1.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, P-body' localisation of P39517.
+    - reference: PMID:12730603
+      notes: Sheth U et al. 2003, ‘Decapping and decay of messenger RNA occur in cytoplasmic
+        processing bodies.’, Science. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, P-body' localisation of P39517.
+    - reference: PMID:12930949
+      notes: Tseng-Rogenski SS et al. 2003, ‘Functional conservation of Dhh1p, a cytoplasmic
+        DExD/H-box protein present in large complexes.’, Nucleic Acids Res. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm, P-body' localisation
+        of P39517.
+  - uniprot_id: UniProtKB:P25644
+    protein_label: Deadenylation-dependent mRNA-decapping factor PAT1
+    gene_symbol: PAT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene PAT1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10779343
+      notes: Wyers F et al. 2000, ‘Deletion of the PAT1 gene affects translation initiation
+        and suppresses a PAB1 gene deletion in yeast.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P25644.
+    - reference: PMID:23706738
+      notes: 'Haimovich G et al. 2013, ‘Gene expression is circular: factors for mRNA
+        degradation also foster mRNA synthesis.’, Cell. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Cytoplasm'' localisation of P25644.'
+    - reference: PMID:12730603
+      notes: Sheth U et al. 2003, ‘Decapping and decay of messenger RNA occur in cytoplasmic
+        processing bodies.’, Science. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm, P-body' localisation of P25644.
 - component_id: edc3_lsm4_assembly_scaffolds
   label: Edc3/Lsm4 P-body assembly scaffolds
   component_type: PROTEIN
@@ -96,6 +211,41 @@ components:
   - reference: DOI:10.1083/jcb.200704147
     notes: Decker, Teixeira and Parker 2007 showed that Edc3p and the Q/N-rich domain
       of Lsm4p function in processing-body assembly in Saccharomyces cerevisiae.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39998
+    protein_label: Enhancer of mRNA-decapping protein 3
+    gene_symbol: EDC3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EDC3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15020463
+      notes: Kshirsagar M et al. 2004, ‘Identification of Edc3p as an enhancer of
+        mRNA decapping in Saccharomyces cerevisiae.’, Genetics. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, P-body' localisation of P39998.
+  - uniprot_id: UniProtKB:P40070
+    protein_label: LSM complex subunit LSM4
+    gene_symbol: LSM4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene LSM4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P40070.
+    - reference: PMID:15075370
+      notes: Fernandez CF et al. 2004, ‘An Lsm2-Lsm7 complex in Saccharomyces cerevisiae
+        associates with the small nucleolar RNA snR5.’, Mol Biol Cell. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P40070.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

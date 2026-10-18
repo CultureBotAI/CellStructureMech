@@ -32,6 +32,11 @@ curation_history:
   changes: 'Addressed review issues #947 and #948 by adding a vacuolar-to-nuclear-outer-membrane
     contact edge and a resolved V-ATPase/Vac8p component-boundary interpretation.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0031090
 part_of:
@@ -153,9 +158,13 @@ causal_graphs:
   - node_id: vac8p
     label: Vac8p
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P39968
   - node_id: nvj1p
     label: Nvj1p
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P38881
   edges:
   - subject: vacuolar_membrane
     predicate: is part of

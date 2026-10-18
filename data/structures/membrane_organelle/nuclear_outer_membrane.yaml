@@ -26,6 +26,11 @@ curation_history:
     lumen to the nuclear inner membrane and Vac8p to the vacuolar membrane in the
     contact graph.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: outer nuclear membrane
   synonym_type: EXACT_SYNONYM
@@ -124,9 +129,13 @@ causal_graphs:
   - node_id: nvj1p
     label: Nvj1p
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P38881
   - node_id: vac8p
     label: Vac8p
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P39968
   edges:
   - subject: nuclear_outer_membrane
     predicate: is part of

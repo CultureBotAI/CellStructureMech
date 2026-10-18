@@ -29,6 +29,11 @@ curation_history:
     endospore external encapsulating structure in part_of, record evidence, the topology
     graph, and the bacterial exosporium boundary discussion.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: epispore
   synonym_type: EXACT_SYNONYM
@@ -67,6 +72,52 @@ components:
   - reference: DOI:10.1111/mmi.13650
     notes: Terry et al. 2017 biochemically dissected Bacillus cereus exosporium architecture
       and related ExsY, BclA, and ExsFA/BxpB to basal-layer and nap assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q81JD7
+    protein_label: BclA protein
+    gene_symbol: bclA
+    taxon_id: NCBITaxon:1392
+    taxon_label: Bacillus anthracis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene bclA in Bacillus
+      anthracis. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q81JD7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q81JD7 for gene bclA in Bacillus
+        anthracis. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:S5W424
+    protein_label: BxpB
+    gene_symbol: bxpB
+    taxon_id: NCBITaxon:1392
+    taxon_label: Bacillus anthracis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene bxpB in Bacillus
+      anthracis. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/S5W424
+      notes: UniProtKB unreviewed (TrEMBL) entry S5W424 for gene bxpB in Bacillus
+        anthracis. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:A0AAQ3FPT7
+    protein_label: Exosporium protein Y
+    gene_symbol: exsY
+    taxon_id: NCBITaxon:1392
+    taxon_label: Bacillus anthracis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene exsY in Bacillus
+      anthracis. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0AAQ3FPT7
+      notes: UniProtKB unreviewed (TrEMBL) entry A0AAQ3FPT7 for gene exsY in Bacillus
+        anthracis. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1239
   taxon_label: Bacillota

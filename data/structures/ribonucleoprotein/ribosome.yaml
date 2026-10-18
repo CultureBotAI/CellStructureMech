@@ -79,6 +79,120 @@ components:
   - reference: DOI:10.1128/MMBR.00013-07
     notes: Kaczanowska and Rydén-Aulin 2007 report 21 proteins in the E. coli 30S
       subunit and 33 proteins in the 50S subunit.
+  gene_symbols:
+  - rpsA
+  - rpsB
+  - rpsC
+  - rpsD
+  - rpsE
+  - rpsL
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AG67
+    protein_label: Small ribosomal subunit protein bS1
+    gene_symbol: rpsA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rpsA in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:342903
+      notes: Subramanian AR et al. 1977, ‘Exchange of individual ribosomal proteins
+        between ribosomes as studied by heavy isotope-transfer experiments.’, Mol
+        Gen Genet. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm'
+        localisation of P0AG67.
+  - uniprot_id: UniProtKB:P0A7V0
+    protein_label: Small ribosomal subunit protein uS2
+    gene_symbol: rpsB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rpsB in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A7V0
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A7V0, the single reviewed entry
+        for gene rpsB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0A7V3
+    protein_label: Small ribosomal subunit protein uS3
+    gene_symbol: rpsC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rpsC in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A7V3
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A7V3, the single reviewed entry
+        for gene rpsC in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0A7V8
+    protein_label: Small ribosomal subunit protein uS4
+    gene_symbol: rpsD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rpsD in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A7V8
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A7V8, the single reviewed entry
+        for gene rpsD in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P27152
+    protein_label: Small ribosomal subunit protein uS5
+    gene_symbol: rpsE
+    taxon_id: NCBITaxon:274
+    taxon_label: Thermus thermophilus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rpsE in Thermus thermophilus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P27152
+      notes: UniProtKB reviewed (Swiss-Prot) entry P27152, the single reviewed entry
+        for gene rpsE in Thermus thermophilus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P17293
+    protein_label: Small ribosomal subunit protein uS12
+    gene_symbol: rpsL
+    taxon_id: NCBITaxon:274
+    taxon_label: Thermus thermophilus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rpsL in Thermus thermophilus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P17293
+      notes: UniProtKB reviewed (Swiss-Prot) entry P17293, the single reviewed entry
+        for gene rpsL in Thermus thermophilus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: lsu_proteins
   label: large-subunit ribosomal proteins (33 proteins in Escherichia coli)
   component_type: PROTEIN
@@ -100,6 +214,103 @@ components:
       subunit and 33 proteins in the 50S subunit.
   - reference: DOI:10.1038/nature08403
     notes: Schmeing and Ramakrishnan 2009 review ribosomal-protein roles in translation.
+  gene_symbols:
+  - rplA
+  - rplB
+  - rplC
+  - rplD
+  - rplL
+  protein_examples:
+  - uniprot_id: UniProtKB:P27150
+    protein_label: Large ribosomal subunit protein uL1
+    gene_symbol: rplA
+    taxon_id: NCBITaxon:274
+    taxon_label: Thermus thermophilus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rplA in Thermus thermophilus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P27150
+      notes: UniProtKB reviewed (Swiss-Prot) entry P27150, the single reviewed entry
+        for gene rplA in Thermus thermophilus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P60422
+    protein_label: Large ribosomal subunit protein uL2
+    gene_symbol: rplB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rplB in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P60422
+      notes: UniProtKB reviewed (Swiss-Prot) entry P60422, the single reviewed entry
+        for gene rplB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P52860
+    protein_label: Large ribosomal subunit protein uL3
+    gene_symbol: rplC
+    taxon_id: NCBITaxon:274
+    taxon_label: Thermus thermophilus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rplC in Thermus thermophilus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P52860
+      notes: UniProtKB reviewed (Swiss-Prot) entry P52860, the single reviewed entry
+        for gene rplC in Thermus thermophilus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P49665
+    protein_label: Large ribosomal subunit protein uL4
+    gene_symbol: rplD
+    taxon_id: NCBITaxon:274
+    taxon_label: Thermus thermophilus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rplD in Thermus thermophilus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P49665
+      notes: UniProtKB reviewed (Swiss-Prot) entry P49665, the single reviewed entry
+        for gene rplD in Thermus thermophilus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0A7K2
+    protein_label: Large ribosomal subunit protein bL12
+    gene_symbol: rplL
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rplL in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A7K2
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A7K2, the single reviewed entry
+        for gene rplL in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -253,6 +464,9 @@ causal_graphs:
   - node_id: ef_g
     label: elongation factor G
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P13551
+    - UniProtKB:P0A6M8
   - node_id: translocation
     label: ribosomal translocation
     node_type: BIOLOGICAL_PROCESS
@@ -425,6 +639,18 @@ curation_history:
   changes: 'Issue #2043: preserve 3 nonprotein Complex Portal source name(s) in source_name
     instead of gene_symbol; identities, labels, taxa, membership and stoichiometry
     unchanged.'
+  llm_assisted: true
+- timestamp: '2026-10-18T03:35:32Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 11 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
 complex_compositions:
 - composition_id: complex_portal_cpx_3802

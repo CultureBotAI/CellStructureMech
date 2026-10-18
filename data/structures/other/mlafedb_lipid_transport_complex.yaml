@@ -33,6 +33,11 @@ curation_history:
   changes: Reanchored the MlaC and outer-membrane Mla exclusion discussion from the
     components section to the four MlaFEDB constituent component rows.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: MlaFEDB complex
   synonym_type: EXACT_SYNONYM
@@ -283,6 +288,8 @@ causal_graphs:
   - node_id: mlac
     label: Intermembrane phospholipid transport system MlaC
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P0ADV7
   - node_id: phospholipid_transport
     label: phospholipid transport
     node_type: BIOLOGICAL_PROCESS

@@ -34,6 +34,12 @@ curation_history:
   changes: 'Addressed #2115: replaced bacterial absence with bounded 2025 experimental
     and inferred evidence, retaining archaeal graph scope. Preserved PROPOSED status.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:47Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s); added 1 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: archaellum filament
   synonym_type: EXACT_SYNONYM
@@ -66,6 +72,37 @@ components:
   - reference: DOI:10.1038/s41467-022-28337-1
     notes: Gambelli et al. 2022 resolved the Methanocaldococcus villosus archaellum
       filament as a polymer of alternating ArlB1 and ArlB2 archaellins.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A8X6EH07
+    protein_label: Flagellin
+    gene_symbol: flaB
+    taxon_id: NCBITaxon:667126
+    taxon_label: Methanocaldococcus villosus
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB in Methanocaldococcus
+      villosus. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A8X6EH07
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A8X6EH07 for gene flaB in Methanocaldococcus
+        villosus. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:A0A8X6EH06
+    protein_label: Flagellin
+    gene_symbol: flaB
+    taxon_id: NCBITaxon:667126
+    taxon_label: Methanocaldococcus villosus
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB in Methanocaldococcus
+      villosus. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A8X6EH06
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A8X6EH06 for gene flaB in Methanocaldococcus
+        villosus. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2157
   taxon_label: Archaea
@@ -127,9 +164,12 @@ causal_graphs:
   - node_id: prearchaellin
     label: prearchaellins
     node_type: GENE_OR_PROTEIN
+    component_ref: archaellins
   - node_id: arlk_pibd
     label: PibD/FlaK prepilin peptidase
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:N6V0I0
   - node_id: archaellins
     label: mature archaellins
     node_type: GENE_OR_PROTEIN

@@ -28,6 +28,13 @@ curation_history:
     rRNA constituent, attaching the component-splitting TODO to it, and removing the
     redundant peptidyltransferase activity graph node and large-subunit activity edge.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:34:12Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: ribosomal large subunit
   synonym_type: EXACT_SYNONYM
@@ -87,6 +94,103 @@ components:
   - reference: DOI:10.1128/MMBR.00013-07
     notes: Kaczanowska and Ryden-Aulin 2007 report 33 protein constituents for the
       Escherichia coli 50S subunit.
+  gene_symbols:
+  - rplB
+  - rplC
+  - rplD
+  - rplE
+  - rplL
+  protein_examples:
+  - uniprot_id: UniProtKB:P60422
+    protein_label: Large ribosomal subunit protein uL2
+    gene_symbol: rplB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rplB in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P60422
+      notes: UniProtKB reviewed (Swiss-Prot) entry P60422, the single reviewed entry
+        for gene rplB in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P60438
+    protein_label: Large ribosomal subunit protein uL3
+    gene_symbol: rplC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rplC in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P60438
+      notes: UniProtKB reviewed (Swiss-Prot) entry P60438, the single reviewed entry
+        for gene rplC in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P60723
+    protein_label: Large ribosomal subunit protein uL4
+    gene_symbol: rplD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rplD in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P60723
+      notes: UniProtKB reviewed (Swiss-Prot) entry P60723, the single reviewed entry
+        for gene rplD in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P62399
+    protein_label: Large ribosomal subunit protein uL5
+    gene_symbol: rplE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rplE in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P62399
+      notes: UniProtKB reviewed (Swiss-Prot) entry P62399, the single reviewed entry
+        for gene rplE in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0A7K2
+    protein_label: Large ribosomal subunit protein bL12
+    gene_symbol: rplL
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rplL in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A7K2
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A7K2, the single reviewed entry
+        for gene rplL in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:2238
   taxon_label: Haloarcula marismortui

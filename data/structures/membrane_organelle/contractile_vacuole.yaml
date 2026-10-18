@@ -36,6 +36,13 @@ curation_history:
     GO:0031164 is already represented as a membrane substructure in has_part; retained
     it as a grounded STRUCTURE node in the function graph.
   llm_assisted: true
+- timestamp: '2026-10-18T03:16:51Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: CV
   synonym_type: EXACT_SYNONYM
@@ -68,6 +75,76 @@ components:
   - reference: DOI:10.1042/BC20070091
     notes: Nishihara et al. 2008 detected V-ATPase on vesicles around the Amoeba proteus
       contractile vacuole.
+  gene_symbols:
+  - vatA
+  - vatB
+  - vatC
+  - vatM
+  protein_examples:
+  - uniprot_id: UniProtKB:P54647
+    protein_label: V-type proton ATPase catalytic subunit A
+    gene_symbol: vatA
+    taxon_id: NCBITaxon:44689
+    taxon_label: Dictyostelium discoideum
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene vatA in Dictyostelium discoideum,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P54647
+      notes: UniProtKB reviewed (Swiss-Prot) entry P54647, the single reviewed entry
+        for gene vatA in Dictyostelium discoideum. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q76NU1
+    protein_label: V-type proton ATPase subunit B
+    gene_symbol: vatB
+    taxon_id: NCBITaxon:44689
+    taxon_label: Dictyostelium discoideum
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene vatB in Dictyostelium discoideum,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q76NU1
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q76NU1, the single reviewed entry
+        for gene vatB in Dictyostelium discoideum. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P54648
+    protein_label: V-type proton ATPase subunit C
+    gene_symbol: vatC
+    taxon_id: NCBITaxon:44689
+    taxon_label: Dictyostelium discoideum
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene vatC in Dictyostelium discoideum,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P54648
+      notes: UniProtKB reviewed (Swiss-Prot) entry P54648, the single reviewed entry
+        for gene vatC in Dictyostelium discoideum. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q54E04
+    protein_label: Vacuolar proton translocating ATPase 100 kDa subunit
+    gene_symbol: vatM
+    taxon_id: NCBITaxon:44689
+    taxon_label: Dictyostelium discoideum
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene vatM in Dictyostelium discoideum,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q54E04
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q54E04, the single reviewed entry
+        for gene vatM in Dictyostelium discoideum. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: contractile_vacuole_aquaporins
   label: contractile vacuole aquaporins
   component_type: PROTEIN
@@ -86,6 +163,43 @@ components:
   - reference: DOI:10.1016/j.ejop.2024.126078
     notes: More et al. 2024 review membrane channels and receptors implicated in contractile-vacuole
       filling.
+  gene_symbols:
+  - aqpA
+  - aqpB
+  - MIP1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9U8P7
+    protein_label: Aquaporin A
+    gene_symbol: aqpA
+    taxon_id: NCBITaxon:44689
+    taxon_label: Dictyostelium discoideum
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene aqpA in Dictyostelium discoideum,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q9U8P7
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q9U8P7, the single reviewed entry
+        for gene aqpA in Dictyostelium discoideum. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q54WT8
+    protein_label: Aquaporin-B
+    gene_symbol: aqpB
+    taxon_id: NCBITaxon:44689
+    taxon_label: Dictyostelium discoideum
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene aqpB in Dictyostelium discoideum,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22262860
+      notes: von Bülow J et al. 2012, ‘Functional characterization of a novel aquaporin
+        from Dictyostelium discoideum amoebae implies a unique gating mechanism.’,
+        J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        membrane' localisation of Q54WT8.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

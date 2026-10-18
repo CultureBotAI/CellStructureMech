@@ -20,6 +20,13 @@ curation_history:
     function, GO/DOI evidence, a nonmechanistic topology graph, and boundary and component-grounding
     discussions.
   llm_assisted: true
+- timestamp: '2026-10-18T03:12:29Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0032991
 part_of:
@@ -43,6 +50,26 @@ components:
   - reference: DOI:10.1242/jcs.245233
     notes: Poghosyan et al. 2020 refined the Chlamydomonas radial-spoke architecture
       and assigned proteins to the neck region.
+  gene_symbols:
+  - RSP2
+  - RSP16
+  - RSP23
+  protein_examples:
+  - uniprot_id: UniProtKB:Q6UBQ3
+    protein_label: Flagellar radial spoke protein 2
+    gene_symbol: RSP2
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RSP2 in Chlamydomonas reinhardtii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16507594
+      notes: Yang P et al. 2006, ‘Radial spoke proteins of Chlamydomonas flagella.’,
+        J Cell Sci. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton, flagellum axoneme' localisation of Q6UBQ3.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

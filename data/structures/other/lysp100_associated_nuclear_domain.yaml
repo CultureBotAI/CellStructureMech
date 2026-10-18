@@ -21,6 +21,18 @@ curation_history:
     function evidence, a nonmechanistic LYSp100B redistribution graph and a LAND/PML/Bright
     boundary TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:25:55Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: LANDs
   synonym_type: EXACT_SYNONYM
@@ -50,6 +62,32 @@ components:
   - reference: DOI:10.1093/emboj/19.15.4123
     notes: Zong, Das and Tucker 2000 analyzed the LYSp100B/Sp140 homolog of Sp100
       and its redistribution from LANDs after interaction with Bright.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q13342
+    protein_label: Nuclear body protein SP140
+    gene_symbol: SP140
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SP140 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:25593309
+      notes: Gong F et al. 2015, ‘Screen identifies bromodomain protein ZMYND8 in
+        chromatin recognition of transcription-associated DNA damage that promotes
+        homologous recombination.’, Genes Dev. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of Q13342.
+    - reference: PMID:8695863
+      notes: 'Dent AL et al. 1996, ‘LYSP100-associated nuclear domains (LANDs): description
+        of a new class of subnuclear structures and their relationship to PML nuclear
+        bodies.’, Blood. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Nucleus'' localisation of Q13342.'
+    - reference: PMID:8910577
+      notes: Bloch DB et al. 1996, ‘Identification and characterization of a leukocyte-specific
+        component of the nuclear body.’, J Biol Chem. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of Q13342.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens
@@ -110,6 +148,8 @@ causal_graphs:
   - node_id: bright_arid3a
     label: Bright/ARID3A
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q99856
   - node_id: lysp100_associated_nuclear_domain
     label: LYSP100-associated nuclear domain
     node_type: STRUCTURE

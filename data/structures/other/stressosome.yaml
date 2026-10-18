@@ -22,6 +22,18 @@ curation_history:
     strain examples, scoped response dependencies, boundary discussions and a visually
     inspected, licence-checked PMC figure.
   llm_assisted: true
+- timestamp: '2026-10-18T03:30:58Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 components:
@@ -50,12 +62,30 @@ components:
     taxon_label: Bacillus subtilis subsp. subtilis str. 168
     entry_status: REVIEWED
     retrieved_on: '2026-10-03'
-    role: RsbRA constituent of the reconstituted strain-168 core.
+    role: RsbRA constituent of the reconstituted strain-168 core (also declared as
+      synonym rsbR).
     evidence:
     - reference: DOI:10.1107/S205225251900945X
       notes: Kwon et al. cloned the proteins from strain 168 (ATCC 23857) and reconstituted
         RsbRA-RsbS cores. The accession, reviewed status and strain taxon were independently
         checked at UniProt; the canonical taxon label was checked through ENA taxonomy.
+  - uniprot_id: UniProtKB:O34627
+    protein_label: Blue-light photoreceptor
+    gene_symbol: pfyP
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ytvA, which UniProt lists under
+      the primary name pfyP, in Bacillus subtilis subsp. subtilis str. 168, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O34627
+      notes: UniProtKB reviewed (Swiss-Prot) entry O34627, the single reviewed entry
+        for gene ytvA in Bacillus subtilis subsp. subtilis str. 168. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
   evidence:
   - reference: DOI:10.1038/s41467-019-10782-0
     notes: Listeria cryo-EM resolves RsbR STAS domains in the core; the N-terminal
@@ -116,6 +146,24 @@ components:
       by negative-stain EM.
   - reference: DOI:10.1107/S205225251900945X
     notes: Bacillus RsbRA-RsbS cores were reconstituted without RsbT.
+  protein_examples:
+  - uniprot_id: UniProtKB:P42411
+    protein_label: Serine/threonine-protein kinase RsbT
+    gene_symbol: rsbT
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rsbT in Bacillus subtilis subsp.
+      subtilis str. 168, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P42411
+      notes: UniProtKB reviewed (Swiss-Prot) entry P42411, the single reviewed entry
+        for gene rsbT in Bacillus subtilis subsp. subtilis str. 168. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
 - component_id: prli42
   label: Stressosome-associated protein Prli42
   component_type: PROTEIN

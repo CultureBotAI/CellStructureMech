@@ -65,6 +65,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     xrefs:
     - Pfam:PF03023
+    - UniProtKB:P0AF16
   - node_id: exported_lipid_ii
     label: lipid II
     node_type: CHEMICAL
@@ -77,11 +78,13 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     xrefs:
     - InterPro:IPR001182
+    - UniProtKB:P0ABG7
   - node_id: penicillin_binding_transpeptidases
     label: penicillin-binding transpeptidases
     node_type: GENE_OR_PROTEIN
     xrefs:
     - InterPro:IPR001460
+    - UniProtKB:P0AD65
   - node_id: glycan_strands
     label: alternating GlcNAc-MurNAc glycan strands
     node_type: CHEMICAL
@@ -194,6 +197,11 @@ curation_history:
   action: ADDRESS_REVIEW
   changes: '#2315: Remove lysyl-specific Lipid II groundings from generic nodes and
     correct the turgor-capacity relation.'
+  llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
 related_records:
 - corpus: PathwayMech

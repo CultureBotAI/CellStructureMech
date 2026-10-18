@@ -31,6 +31,13 @@ curation_history:
     at DNA damage sites, not a separate checkpoint clamp self-loading edge. Addresses
     issue #1664.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:53Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Rad17-RFC
   synonym_type: EXACT_SYNONYM
@@ -64,6 +71,23 @@ components:
   - reference: GO:0031389
     notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like complex
       as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32641
+    protein_label: Checkpoint protein RAD24
+    gene_symbol: RAD24
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD24 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32641
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32641, the single reviewed entry
+        for gene RAD24 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rfc2_subunit
   label: Rfc2 subunit
   component_type: PROTEIN
@@ -81,6 +105,23 @@ components:
   - reference: GO:0031389
     notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like complex
       as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40348
+    protein_label: Replication factor C subunit 2
+    gene_symbol: RFC2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RFC2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40348
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40348, the single reviewed entry
+        for gene RFC2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rfc3_subunit
   label: Rfc3 subunit
   component_type: PROTEIN
@@ -98,6 +139,23 @@ components:
   - reference: GO:0031389
     notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like complex
       as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38629
+    protein_label: Replication factor C subunit 3
+    gene_symbol: RFC3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RFC3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38629
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38629, the single reviewed entry
+        for gene RFC3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rfc4_subunit
   label: Rfc4 subunit
   component_type: PROTEIN
@@ -115,6 +173,23 @@ components:
   - reference: GO:0031389
     notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like complex
       as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40339
+    protein_label: Replication factor C subunit 4
+    gene_symbol: RFC4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RFC4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40339
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40339, the single reviewed entry
+        for gene RFC4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rfc5_subunit
   label: Rfc5 subunit
   component_type: PROTEIN
@@ -132,6 +207,23 @@ components:
   - reference: GO:0031389
     notes: GO:0031389 defines the Saccharomyces cerevisiae Rad17/Rad24 RFC-like complex
       as containing Rad24p, Rfc2p, Rfc3p, Rfc4p and Rfc5p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38251
+    protein_label: Replication factor C subunit 5
+    gene_symbol: RFC5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RFC5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38251
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38251, the single reviewed entry
+        for gene RFC5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

@@ -21,6 +21,13 @@ curation_history:
     rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI evidence, a nonmechanistic
     function graph, and a subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:19:32Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: ATP-utilizing chromatin assembly and remodeling factor complex
   synonym_type: EXACT_SYNONYM
@@ -46,6 +53,22 @@ components:
     notes: Gelbart et al. 2001 purified Isw2p with Itc1p and found that both subunits
       were required for the ATPase and chromatin-remodeling activities of the Isw2
       complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08773
+    protein_label: ISWI chromatin-remodeling complex ATPase ISW2
+    gene_symbol: ISW2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ISW2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q08773.
 - component_id: itc1_acf_subunit
   label: Itc1 ACF subunit
   component_type: PROTEIN
@@ -63,6 +86,23 @@ components:
   - reference: DOI:10.1128/MCB.21.6.2098-2106.2001
     notes: Gelbart et al. 2001 identified YGL133w, named ITC1, as the second subunit
       of the budding-yeast Isw2 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53125
+    protein_label: Imitation switch two complex protein 1
+    gene_symbol: ITC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ITC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11238944
+      notes: 'Gelbart ME et al. 2001, ‘Interactions of Isw2 chromatin remodeling complex
+        with nucleosomal arrays: analyses using recombinant yeast histones and immobilized
+        templates.’, Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt
+        for the ''Nucleus'' localisation of P53125.'
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

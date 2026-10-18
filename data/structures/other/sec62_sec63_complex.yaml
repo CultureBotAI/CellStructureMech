@@ -28,6 +28,13 @@ curation_history:
     #1201 by changing Sec71 and Sec72 graph edges to accessory-subunit predicates,
     and resolved #1202 by adding the SEC66 alias to the Sec71 component.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:30:07Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: ER protein translocation subcomplex
   synonym_type: EXACT_SYNONYM
@@ -63,6 +70,23 @@ components:
   - reference: DOI:10.1002/yea.954
     notes: Willer et al. 2003 studied Sec62p and Sec63p as the two essential proteins
       of the yeast tetrameric Sec62/Sec63 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P21825
+    protein_label: Translocation protein SEC62
+    gene_symbol: SEC62
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC62 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P21825
+      notes: UniProtKB reviewed (Swiss-Prot) entry P21825, the single reviewed entry
+        for gene SEC62 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sec63_translocon_subunit
   label: Sec63 translocon subunit
   component_type: PROTEIN
@@ -82,6 +106,23 @@ components:
   - reference: DOI:10.1002/yea.954
     notes: Willer et al. 2003 demonstrated a specific Sec62p-Sec63p interaction in
       the yeast ER Sec63 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P14906
+    protein_label: Protein translocation protein SEC63
+    gene_symbol: SEC63
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC63 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P14906
+      notes: UniProtKB reviewed (Swiss-Prot) entry P14906, the single reviewed entry
+        for gene SEC63 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sec71_translocon_subunit
   label: Sec71 translocon subunit
   component_type: PROTEIN
@@ -102,6 +143,25 @@ components:
   - reference: DOI:10.1038/s41586-018-0856-x
     notes: Wu et al. 2019 structurally resolved Sec71/Sec66 with Sec62p, Sec63p, and
       Sec72p in the yeast post-translational ER translocation machinery.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33754
+    protein_label: Translocation protein SEC66
+    gene_symbol: SEC66
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC71, which UniProt lists
+      under the primary name SEC66, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:8257795
+      notes: Feldheim D et al. 1993, ‘Structural and functional characterization of
+        Sec66p, a new subunit of the polypeptide translocation apparatus in the yeast
+        endoplasmic reticulum.’, Mol Biol Cell. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Endoplasmic reticulum membrane' localisation of
+        P33754.
 - component_id: sec72_translocon_subunit
   label: Sec72 translocon subunit
   component_type: PROTEIN
@@ -121,6 +181,23 @@ components:
   - reference: DOI:10.1002/yea.954
     notes: Willer et al. 2003 assayed Sec72p interactions at the cytosolic surface
       of the yeast Sec63 complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39742
+    protein_label: Translocation protein SEC72
+    gene_symbol: SEC72
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC72 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39742
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39742, the single reviewed entry
+        for gene SEC72 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

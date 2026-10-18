@@ -26,6 +26,18 @@ curation_history:
     cerevisiae and resolved #1212 by expressing CCT1-CCT8 stoichiometry per complete
     double-ring complex.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:20:50Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 7 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: TRiC
   synonym_type: EXACT_SYNONYM
@@ -62,6 +74,24 @@ components:
   - reference: PMID:8771707
     notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
       related yeasts.
+  protein_examples:
+  - uniprot_id: UniProtKB:P12612
+    protein_label: T-complex protein 1 subunit alpha
+    gene_symbol: TCP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene CCT1, which UniProt lists
+      under the primary name TCP1, in Saccharomyces cerevisiae S288C. Identifier for
+      the component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P12612
+      notes: UniProtKB reviewed (Swiss-Prot) entry P12612, the single reviewed entry
+        for gene CCT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cct2_beta_subunit
   label: CCT beta subunit
   component_type: PROTEIN
@@ -83,6 +113,23 @@ components:
   - reference: PMID:8771707
     notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
       related yeasts.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39076
+    protein_label: T-complex protein 1 subunit beta
+    gene_symbol: CCT2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CCT2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39076
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39076, the single reviewed entry
+        for gene CCT2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cct3_gamma_subunit
   label: CCT gamma subunit
   component_type: PROTEIN
@@ -104,6 +151,23 @@ components:
   - reference: PMID:8771707
     notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
       related yeasts.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39077
+    protein_label: T-complex protein 1 subunit gamma
+    gene_symbol: CCT3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CCT3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39077
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39077, the single reviewed entry
+        for gene CCT3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cct4_delta_subunit
   label: CCT delta subunit
   component_type: PROTEIN
@@ -125,6 +189,23 @@ components:
   - reference: PMID:8771707
     notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
       related yeasts.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39078
+    protein_label: T-complex protein 1 subunit delta
+    gene_symbol: CCT4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CCT4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39078
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39078, the single reviewed entry
+        for gene CCT4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cct5_epsilon_subunit
   label: CCT epsilon subunit
   component_type: PROTEIN
@@ -146,6 +227,23 @@ components:
   - reference: PMID:8771707
     notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
       related yeasts.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40413
+    protein_label: T-complex protein 1 subunit epsilon
+    gene_symbol: CCT5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CCT5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40413
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40413, the single reviewed entry
+        for gene CCT5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cct6_zeta_subunit
   label: CCT zeta subunit
   component_type: PROTEIN
@@ -167,6 +265,23 @@ components:
   - reference: PMID:8771707
     notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
       related yeasts.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39079
+    protein_label: T-complex protein 1 subunit zeta
+    gene_symbol: CCT6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CCT6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39079
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39079, the single reviewed entry
+        for gene CCT6 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cct7_eta_subunit
   label: CCT eta subunit
   component_type: PROTEIN
@@ -188,6 +303,23 @@ components:
   - reference: PMID:8771707
     notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
       related yeasts.
+  protein_examples:
+  - uniprot_id: UniProtKB:P42943
+    protein_label: T-complex protein 1 subunit eta
+    gene_symbol: CCT7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CCT7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P42943
+      notes: UniProtKB reviewed (Swiss-Prot) entry P42943, the single reviewed entry
+        for gene CCT7 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cct8_theta_subunit
   label: CCT theta subunit
   component_type: PROTEIN
@@ -209,6 +341,23 @@ components:
   - reference: PMID:8771707
     notes: Stoldt et al. 1996 reviewed CCT subunits in Saccharomyces cerevisiae and
       related yeasts.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47079
+    protein_label: T-complex protein 1 subunit theta
+    gene_symbol: CCT8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CCT8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P47079
+      notes: UniProtKB reviewed (Swiss-Prot) entry P47079, the single reviewed entry
+        for gene CCT8 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

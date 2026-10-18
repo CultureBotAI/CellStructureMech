@@ -19,6 +19,18 @@ curation_history:
     Chlamydomonas scope, A/B-junction stability function, GO and DOI evidence, a nonmechanistic
     inner-junction bridge graph, and an inner-junction protein-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:10:00Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 part_of:
 - GO:0097545
 components:
@@ -46,6 +58,60 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for the complete inner-junction protein-family
     set was verified in this pass.
+  gene_symbols:
+  - FAP20
+  - PACRG
+  - FAP52
+  - FAP106
+  protein_examples:
+  - uniprot_id: UniProtKB:A8IU92
+    protein_label: Cilia- and flagella-associated protein 20
+    gene_symbol: CFAP20
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene FAP20, which UniProt lists
+      under the primary name CFAP20, in Chlamydomonas reinhardtii, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A8IU92
+      notes: UniProtKB reviewed (Swiss-Prot) entry A8IU92, the single reviewed entry
+        for gene FAP20 in Chlamydomonas reinhardtii. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:A8ILK1
+    protein_label: Cilia- and flagella-associated protein 52
+    gene_symbol: CFAP52
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene FAP52, which UniProt lists
+      under the primary name CFAP52, in Chlamydomonas reinhardtii, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15998802
+      notes: Pazour GJ et al. 2005, ‘Proteomic analysis of a eukaryotic cilium.’,
+        J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        projection, cilium, flagellum' localisation of A8ILK1.
+  - uniprot_id: UniProtKB:B1B601
+    protein_label: Parkin-co-regulated gene product
+    gene_symbol: PACRG
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene PACRG in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/B1B601
+      notes: UniProtKB unreviewed (TrEMBL) entry B1B601 for gene PACRG in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

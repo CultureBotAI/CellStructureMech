@@ -21,6 +21,13 @@ curation_history:
     function, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a NEF4
     subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:35Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: NEF4 complex
   synonym_type: EXACT_SYNONYM
@@ -44,6 +51,23 @@ components:
   evidence:
   - reference: GO:0000113
     notes: GO:0000113 defines the NEF4 complex as containing Rad7p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06779
+    protein_label: DNA repair protein RAD7
+    gene_symbol: RAD7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P06779
+      notes: UniProtKB reviewed (Swiss-Prot) entry P06779, the single reviewed entry
+        for gene RAD7 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: rad16_nef4_subunit
   label: Rad16 NEF4 subunit
   component_type: PROTEIN
@@ -61,6 +85,23 @@ components:
   evidence:
   - reference: GO:0000113
     notes: GO:0000113 defines the NEF4 complex as containing Rad16p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P31244
+    protein_label: DNA repair protein RAD16
+    gene_symbol: RAD16
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAD16 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P31244
+      notes: UniProtKB reviewed (Swiss-Prot) entry P31244, the single reviewed entry
+        for gene RAD16 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

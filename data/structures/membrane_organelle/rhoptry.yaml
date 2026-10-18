@@ -55,6 +55,18 @@ curation_history:
   changes: Replaced Bradley et al. 2005 DOI citations with PMID:16002398 so rhoptry
     proteome evidence resolves through PubMed.
   llm_assisted: true
+- timestamp: '2026-10-18T03:18:45Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 5 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -92,6 +104,84 @@ components:
   - reference: DOI:10.1371/journal.ppat.0010017
     notes: Alexander et al. 2005 showed that rhoptry-neck protein RON4 relocates to
       the moving junction during Toxoplasma invasion.
+  gene_symbols:
+  - RON2
+  - RON4
+  - RON5
+  - RON8
+  protein_examples:
+  - uniprot_id: UniProtKB:B6KV60
+    protein_label: Rhoptry neck protein 2
+    gene_symbol: RON2
+    taxon_id: NCBITaxon:508771
+    taxon_label: Toxoplasma gondii ME49
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RON2 in Toxoplasma gondii ME49,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:21347343
+      notes: Lamarque M et al. 2011, ‘The RON2-AMA1 interaction is a critical step
+        in moving junction-dependent invasion by apicomplexan parasites.’, PLoS Pathog.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Secreted' localisation
+        of B6KV60.
+    - reference: PMID:16244709
+      notes: 'Alexander DL et al. 2005, ‘Identification of the moving junction complex
+        of Toxoplasma gondii: a collaboration between distinct secretory organelles.’,
+        PLoS Pathog. ECO:0000269 experimental evidence cited by UniProt for the ''Host
+        cell membrane'' localisation of B6KV60.'
+    - reference: PMID:19247437
+      notes: Besteiro S et al. 2009, ‘Export of a Toxoplasma gondii rhoptry neck protein
+        complex at the host cell membrane to form the moving junction during invasion.’,
+        PLoS Pathog. ECO:0000269 experimental evidence cited by UniProt for the 'Host
+        cell membrane' localisation of B6KV60.
+  - uniprot_id: UniProtKB:B6KJ32
+    protein_label: Rhoptry neck protein 4
+    gene_symbol: RON4
+    taxon_id: NCBITaxon:5811
+    taxon_label: Toxoplasma gondii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RON4 in Toxoplasma gondii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16002398
+      notes: Bradley PJ et al. 2005, ‘Proteomic analysis of rhoptry organelles reveals
+        many novel constituents for host-parasite interactions in Toxoplasma gondii.’,
+        J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Secreted'
+        localisation of B6KJ32.
+  - uniprot_id: UniProtKB:S8ERS3
+    protein_label: Rhoptry neck protein RON5
+    gene_symbol: RON5
+    taxon_id: NCBITaxon:508771
+    taxon_label: Toxoplasma gondii ME49
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene RON5 in Toxoplasma
+      gondii ME49. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/S8ERS3
+      notes: UniProtKB unreviewed (TrEMBL) entry S8ERS3 for gene RON5 in Toxoplasma
+        gondii ME49. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:S8F1T4
+    protein_label: Rhoptry neck protein RON8
+    gene_symbol: RON8
+    taxon_id: NCBITaxon:508771
+    taxon_label: Toxoplasma gondii ME49
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene RON8 in Toxoplasma
+      gondii ME49. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/S8F1T4
+      notes: UniProtKB unreviewed (TrEMBL) entry S8F1T4 for gene RON8 in Toxoplasma
+        gondii ME49. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: rhoptry_bulb_proteins
   label: rhoptry bulb proteins
   component_type: PROTEIN
@@ -110,6 +200,83 @@ components:
   - reference: DOI:10.1038/nrmicro1800
     notes: Boothroyd and Dubremetz 2008 review secretion of rhoptry bulb proteins
       during host invasion and parasitophorous vacuole establishment.
+  gene_symbols:
+  - ROP1
+  - ROP2
+  - ROP16
+  - ROP18
+  protein_examples:
+  - uniprot_id: UniProtKB:Q2PAY2
+    protein_label: Serine/threonine-protein kinase ROP18
+    gene_symbol: ROP18
+    taxon_id: NCBITaxon:5811
+    taxon_label: Toxoplasma gondii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ROP18 in Toxoplasma gondii,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:23144612
+      notes: Behnke MS et al. 2012, ‘The polymorphic pseudokinase ROP5 controls virulence
+        in Toxoplasma gondii by regulating the active kinase ROP18.’, PLoS Pathog.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Parasitophorous
+        vacuole membrane' localisation of Q2PAY2.
+    - reference: PMID:24390541
+      notes: Alaganan A et al. 2014, ‘Toxoplasma GRA7 effector increases turnover
+        of immunity-related GTPases and contributes to acute virulence in the mouse.’,
+        Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Parasitophorous vacuole membrane' localisation of Q2PAY2.
+    - reference: PMID:19266027
+      notes: Khan A et al. 2009, ‘Selection at a single locus leads to widespread
+        expansion of Toxoplasma gondii lineages that are virulent in mice.’, PLoS
+        Genet. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasmic
+        vesicle, secretory vesicle, rhoptry' localisation of Q2PAY2.
+  - uniprot_id: UniProtKB:A9JQX2
+    protein_label: Rhoptry 1
+    gene_symbol: ROP1
+    taxon_id: NCBITaxon:5811
+    taxon_label: Toxoplasma gondii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene ROP1 in Toxoplasma
+      gondii. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A9JQX2
+      notes: UniProtKB unreviewed (TrEMBL) entry A9JQX2 for gene ROP1 in Toxoplasma
+        gondii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q06AK3
+    protein_label: Rop2 protein
+    gene_symbol: Rop2
+    taxon_id: NCBITaxon:5811
+    taxon_label: Toxoplasma gondii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene ROP2 in Toxoplasma
+      gondii. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q06AK3
+      notes: UniProtKB unreviewed (TrEMBL) entry Q06AK3 for gene ROP2 in Toxoplasma
+        gondii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q3YJR5
+    protein_label: Serine/threonine-protein
+    gene_symbol: ROP16
+    taxon_id: NCBITaxon:5811
+    taxon_label: Toxoplasma gondii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene ROP16 in Toxoplasma
+      gondii. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q3YJR5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q3YJR5 for gene ROP16 in Toxoplasma
+        gondii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

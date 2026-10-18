@@ -21,6 +21,11 @@ curation_history:
     canonical example, molybdenum-binding and DNA-binding functions, dimer subunit
     count, and DOI/PMID/PDB evidence.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 synonyms:
 - synonym_text: ModE dimer
   synonym_type: EXACT_SYNONYM
@@ -50,7 +55,7 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-01'
     role: Reviewed E. coli K-12 ModE accession that UniProt maps to GO:1990198 and
-      RCSB maps to the ModE homodimer in PDB:1O7L.
+      RCSB maps to the ModE homodimer in PDB:1O7L (also declared as synonym modR).
     evidence:
     - reference: UniProtKB:P0A9G8
       notes: UniProtKB P0A9G8 is the reviewed E. coli K-12 entry for DNA-binding transcriptional

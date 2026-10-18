@@ -31,6 +31,19 @@ curation_history:
   changes: 'Resolved review issues #568 and #569 by grounding BamA-E to exact InterPro
     family terms and correcting BAM function graph edge directions.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:19:58Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s); added 3 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: BAM complex
   synonym_type: EXACT_SYNONYM
@@ -63,6 +76,30 @@ components:
     notes: Gu et al. 2016 solved E. coli BAM structures with BamA and four associated
       lipoproteins.
   grounding: InterPro:IPR023707
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A940
+    protein_label: Outer membrane protein assembly factor BamA
+    gene_symbol: bamA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene bamA in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P0A940.
+    - reference: PMID:23882017
+      notes: Ruhe ZC et al. 2013, ‘Receptor polymorphism restricts contact-dependent
+        growth inhibition to members of the same species.’, mBio. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell outer membrane' localisation of P0A940.
+    - reference: PMID:24619089
+      notes: Ni D et al. 2014, ‘Structural and functional analysis of the β-barrel
+        domain of BamA from Escherichia coli.’, FASEB J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell outer membrane' localisation of P0A940.
 - component_id: bam_b
   label: BamB lipoprotein
   component_type: PROTEIN
@@ -78,6 +115,31 @@ components:
   - reference: DOI:10.1038/ncomms12865
     notes: Iadanza et al. 2016 resolved BamB in an intact BamABCDE cryo-EM structure.
   grounding: InterPro:IPR017687
+  protein_examples:
+  - uniprot_id: UniProtKB:P77774
+    protein_label: Outer membrane protein assembly factor BamB
+    gene_symbol: bamB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene bamB in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15851030
+      notes: Wu T et al. 2005, ‘Identification of a multicomponent complex required
+        for outer membrane biogenesis in Escherichia coli.’, Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cell outer membrane' localisation of P77774.
+    - reference: PMID:26900875
+      notes: Han L et al. 2016, ‘Structure of the BAM complex and its implications
+        for biogenesis of outer-membrane proteins.’, Nat Struct Mol Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell outer membrane' localisation
+        of P77774.
+    - reference: PMID:26901871
+      notes: Gu Y et al. 2016, ‘Structural basis of outer membrane protein insertion
+        by the BAM complex.’, Nature. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P77774.
 - component_id: bam_c
   label: BamC lipoprotein
   component_type: PROTEIN
@@ -93,6 +155,31 @@ components:
   - reference: DOI:10.1038/nature17199
     notes: Gu et al. 2016 report BamC in E. coli five-subunit BAM crystal structures.
   grounding: InterPro:IPR014524
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A903
+    protein_label: Outer membrane protein assembly factor BamC
+    gene_symbol: bamC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene bamC in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P0A903.
+    - reference: PMID:26900875
+      notes: Han L et al. 2016, ‘Structure of the BAM complex and its implications
+        for biogenesis of outer-membrane proteins.’, Nat Struct Mol Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell outer membrane' localisation
+        of P0A903.
+    - reference: PMID:26901871
+      notes: Gu Y et al. 2016, ‘Structural basis of outer membrane protein insertion
+        by the BAM complex.’, Nature. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P0A903.
 - component_id: bam_d
   label: BamD lipoprotein
   component_type: PROTEIN
@@ -109,6 +196,31 @@ components:
     notes: Bakelar, Buchanan and Noinaj 2016 solved a BamACDE structure containing
       BamD.
   grounding: InterPro:IPR017689
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AC02
+    protein_label: Outer membrane protein assembly factor BamD
+    gene_symbol: bamD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene bamD in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P0AC02.
+    - reference: PMID:26900875
+      notes: Han L et al. 2016, ‘Structure of the BAM complex and its implications
+        for biogenesis of outer-membrane proteins.’, Nat Struct Mol Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell outer membrane' localisation
+        of P0AC02.
+    - reference: PMID:26901871
+      notes: Gu Y et al. 2016, ‘Structural basis of outer membrane protein insertion
+        by the BAM complex.’, Nature. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P0AC02.
 - component_id: bam_e
   label: BamE lipoprotein
   component_type: PROTEIN
@@ -124,6 +236,32 @@ components:
   - reference: DOI:10.1038/nature17199
     notes: Gu et al. 2016 report BamE in E. coli five-subunit BAM crystal structures.
   grounding: InterPro:IPR026592
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A937
+    protein_label: Outer membrane protein assembly factor BamE
+    gene_symbol: bamE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene bamE in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17404237
+      notes: Sklar JG et al. 2007, ‘Lipoprotein SmpA is a component of the YaeT complex
+        that assembles outer membrane proteins in Escherichia coli.’, Proc Natl Acad
+        Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Cell
+        outer membrane' localisation of P0A937.
+    - reference: PMID:26900875
+      notes: Han L et al. 2016, ‘Structure of the BAM complex and its implications
+        for biogenesis of outer-membrane proteins.’, Nat Struct Mol Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cell outer membrane' localisation
+        of P0A937.
+    - reference: PMID:26901871
+      notes: Gu Y et al. 2016, ‘Structural basis of outer membrane protein insertion
+        by the BAM complex.’, Nature. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell outer membrane' localisation of P0A937.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -190,6 +328,10 @@ causal_graphs:
   - node_id: bam_b_to_e_lipoproteins
     label: BamB-E lipoproteins
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P77774
+    - UniProtKB:P0A903
+    - UniProtKB:P0AC02
   - node_id: bam_complex
     label: Bam protein complex
     node_type: STRUCTURE

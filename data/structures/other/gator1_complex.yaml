@@ -42,6 +42,18 @@ curation_history:
   changes: '#1135: Added GO:0035859 as the source-defined Seh1-associated complex
     part_of container for GATOR1/SEACIT.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:17Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -75,6 +87,27 @@ components:
     notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex with
       Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino acid
       deprivation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47170
+    protein_label: Vacuolar membrane-associated protein IML1
+    gene_symbol: IML1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene IML1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Vacuole membrane' localisation of P47170.
+    - reference: PMID:21454883
+      notes: Dokudovskaya S et al. 2011, ‘A conserved coatomer-related complex containing
+        Sec13 and Seh1 dynamically associates with the vacuole in Saccharomyces cerevisiae.’,
+        Mol Cell Proteomics. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Vacuole membrane' localisation of P47170.
 - component_id: npr2_gator1_subunit
   label: Npr2 GATOR1 subunit
   component_type: PROTEIN
@@ -96,6 +129,23 @@ components:
     notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex with
       Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino acid
       deprivation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P39923
+    protein_label: Nitrogen permease regulator 2
+    gene_symbol: NPR2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NPR2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:21454883
+      notes: Dokudovskaya S et al. 2011, ‘A conserved coatomer-related complex containing
+        Sec13 and Seh1 dynamically associates with the vacuole in Saccharomyces cerevisiae.’,
+        Mol Cell Proteomics. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Vacuole membrane' localisation of P39923.
 - component_id: npr3_gator1_subunit
   label: Npr3 GATOR1 subunit
   component_type: PROTEIN
@@ -117,6 +167,23 @@ components:
     notes: Panchaud, Peli-Gulli and De Virgilio 2013 identified Iml1 in complex with
       Npr2 and Npr3 as a yeast GAP for the Rag-family GTPase Gtr1 during amino acid
       deprivation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38742
+    protein_label: Nitrogen permease regulator 3
+    gene_symbol: NPR3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NPR3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:21454883
+      notes: Dokudovskaya S et al. 2011, ‘A conserved coatomer-related complex containing
+        Sec13 and Seh1 dynamically associates with the vacuole in Saccharomyces cerevisiae.’,
+        Mol Cell Proteomics. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Vacuole membrane' localisation of P38742.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -195,6 +262,8 @@ causal_graphs:
   - node_id: gtr1_rag_gtpase
     label: Gtr1 Rag-family GTPase
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q00582
   - node_id: fungal_type_vacuole_membrane
     label: fungal-type vacuole membrane
     node_type: STRUCTURE

@@ -20,6 +20,13 @@ curation_history:
     constituent rows, yeast scope, chromatin-remodeling function, GO/PubMed/DOI evidence,
     a nonmechanistic function graph, and a subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:31:10Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 12 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: SWI-SNF complex
   synonym_type: EXACT_SYNONYM
@@ -48,6 +55,23 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P22082
+    protein_label: SWI/SNF chromatin-remodeling complex subunit SNF2
+    gene_symbol: SNF2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SNF2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22082
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22082, the single reviewed entry
+        for gene SNF2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: swi1_swi_snf_core_subunit
   label: Swi1 SWI/SNF core subunit
   component_type: PROTEIN
@@ -70,6 +94,22 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P09547
+    protein_label: SWI/SNF chromatin-remodeling complex subunit SWI1
+    gene_symbol: SWI1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWI1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18362884
+      notes: Du Z et al. 2008, ‘Newly identified prion linked to the chromatin-remodeling
+        factor Swi1 in Saccharomyces cerevisiae.’, Nat Genet. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P09547.
 - component_id: swi3_swi_snf_core_subunit
   label: Swi3 SWI/SNF core subunit
   component_type: PROTEIN
@@ -92,6 +132,23 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32591
+    protein_label: SWI/SNF complex subunit SWI3
+    gene_symbol: SWI3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWI3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32591
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32591, the single reviewed entry
+        for gene SWI3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: snf5_swi_snf_core_subunit
   label: Snf5 SWI/SNF core subunit
   component_type: PROTEIN
@@ -113,6 +170,22 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P18480
+    protein_label: SWI/SNF chromatin-remodeling complex subunit SNF5
+    gene_symbol: SNF5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SNF5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P18480.
 - component_id: snf6_swi_snf_core_subunit
   label: Snf6 SWI/SNF core subunit
   component_type: PROTEIN
@@ -135,6 +208,23 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P18888
+    protein_label: Transcription regulatory protein SNF6
+    gene_symbol: SNF6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SNF6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P18888
+      notes: UniProtKB reviewed (Swiss-Prot) entry P18888, the single reviewed entry
+        for gene SNF6 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: snf12_swi_snf_core_subunit
   label: Snf12 SWI/SNF core subunit
   component_type: PROTEIN
@@ -156,6 +246,23 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53628
+    protein_label: Transcription regulatory protein SNF12
+    gene_symbol: SNF12
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SNF12 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53628
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53628, the single reviewed entry
+        for gene SNF12 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: swp82_swi_snf_core_subunit
   label: Swp82 SWI/SNF core subunit
   component_type: PROTEIN
@@ -178,6 +285,22 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P43554
+    protein_label: SWI/SNF global transcription activator complex subunit SWP82
+    gene_symbol: SWP82
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SWP82 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P43554.
 - component_id: snf11_swi_snf_subunit
   label: Snf11 SWI/SNF subunit
   component_type: PROTEIN
@@ -199,6 +322,23 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38956
+    protein_label: Transcription regulatory protein SNF11
+    gene_symbol: SNF11
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SNF11 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38956
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38956, the single reviewed entry
+        for gene SNF11 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: taf14_swi_snf_subunit
   label: Taf14 SWI/SNF subunit
   component_type: PROTEIN
@@ -220,6 +360,23 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35189
+    protein_label: Transcription initiation factor TFIID subunit 14
+    gene_symbol: TAF14
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TAF14 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P35189
+      notes: UniProtKB reviewed (Swiss-Prot) entry P35189, the single reviewed entry
+        for gene TAF14 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: arp7_swi_snf_arp_module_subunit
   label: Arp7 SWI/SNF Arp module subunit
   component_type: PROTEIN
@@ -241,6 +398,22 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12406
+    protein_label: Actin-related protein 7
+    gene_symbol: ARP7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12406.
 - component_id: arp9_swi_snf_arp_module_subunit
   label: Arp9 SWI/SNF Arp module subunit
   component_type: PROTEIN
@@ -262,6 +435,22 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q05123
+    protein_label: Actin-like protein ARP9
+    gene_symbol: ARP9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP9 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12697820
+      notes: Hsu JM et al. 2003, ‘The yeast RSC chromatin-remodeling complex is required
+        for kinetochore function in chromosome segregation.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q05123.
 - component_id: rtt102_swi_snf_arp_module_subunit
   label: Rtt102 SWI/SNF Arp module subunit
   component_type: PROTEIN
@@ -283,6 +472,22 @@ components:
     notes: Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces
       cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12,
       Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53330
+    protein_label: Regulator of Ty1 transposition protein 102
+    gene_symbol: RTT102
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RTT102 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53330.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

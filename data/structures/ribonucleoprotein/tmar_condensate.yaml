@@ -26,6 +26,11 @@ curation_history:
   changes: 'Addressed review issue #1987 by separating established EI-HPr partnership
     from modeled HPr exclusion by TmaR-bound EI; no component or mechanism expansion.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:53Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: TmaR-EI polar condensate
   synonym_type: RELATED_SYNONYM
@@ -56,6 +61,28 @@ components:
   - reference: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/NF040881/
     notes: 'Live authority model: NF040881.1, source NCBIFAM, family_type equivalog,
       product_name PTS system regulator TmaR; checked 2026-10-03.'
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8M6
+    protein_label: Pole-localizer protein TmaR
+    gene_symbol: tmaR
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene tmaR in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:33376208
+      notes: Szoke T et al. 2021, ‘Tyrosine phosphorylation-dependent localization
+        of TmaR that controls activity of a major bacterial sugar regulator by polar
+        sequestration.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm' localisation of P0A8M6.
+    - reference: PMID:37934665
+      notes: Szoke T et al. 2023, ‘Regulation of major bacterial survival strategies
+        by transcripts sequestration in a membraneless organelle.’, Cell Rep. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P0A8M6.
 - component_id: ei
   label: Phosphotransferase system, enzyme I
   component_type: PROTEIN
@@ -71,6 +98,23 @@ components:
     notes: Results explicitly distinguish EI-independent bacterial TmaR condensation
       from two-protein reconstitution in yeast. Figures 1-3 test client recruitment
       and interaction.
+  protein_examples:
+  - uniprot_id: UniProtKB:P08839
+    protein_label: Phosphoenolpyruvate-protein phosphotransferase
+    gene_symbol: ptsI
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene ptsI in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:33376208
+      notes: Szoke T et al. 2021, ‘Tyrosine phosphorylation-dependent localization
+        of TmaR that controls activity of a major bacterial sugar regulator by polar
+        sequestration.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm' localisation of P08839.
 - component_id: rna
   label: RNA
   component_type: RNA

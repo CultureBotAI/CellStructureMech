@@ -39,6 +39,13 @@ curation_history:
   changes: '#1445/#1446: generalized the definition to remove mitochondrial matrix
     wording and cited Baradaran et al. 2013 on the membrane-arm proton-pumping edge.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:14:17Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 14 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: NADH dehydrogenase (ubiquinone) complex
   synonym_type: EXACT_SYNONYM
@@ -67,6 +74,127 @@ components:
   - reference: PMID:23417064
     notes: Baradaran et al. 2013 resolved the Thermus thermophilus complex I structure,
       including the hydrophilic electron-transfer domain and its iron-sulfur clusters.
+  gene_symbols:
+  - nqo1
+  - nqo2
+  - nqo3
+  - nqo4
+  - nqo5
+  - nqo6
+  - nqo9
+  protein_examples:
+  - uniprot_id: UniProtKB:Q56222
+    protein_label: NADH-quinone oxidoreductase subunit 1
+    gene_symbol: nqo1
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo1 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56222
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56222, the single reviewed entry
+        for gene nqo1 in Thermus thermophilus HB8. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q56221
+    protein_label: NADH-quinone oxidoreductase subunit 2
+    gene_symbol: nqo2
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo2 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56221
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56221, the single reviewed entry
+        for gene nqo2 in Thermus thermophilus HB8. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q56223
+    protein_label: NADH-quinone oxidoreductase subunit 3
+    gene_symbol: nqo3
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo3 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56223
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56223, the single reviewed entry
+        for gene nqo3 in Thermus thermophilus HB8. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q56220
+    protein_label: NADH-quinone oxidoreductase subunit 4
+    gene_symbol: nqo4
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo4 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56220
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56220, the single reviewed entry
+        for gene nqo4 in Thermus thermophilus HB8. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q56219
+    protein_label: NADH-quinone oxidoreductase subunit 5
+    gene_symbol: nqo5
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo5 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56219
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56219, the single reviewed entry
+        for gene nqo5 in Thermus thermophilus HB8. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q56218
+    protein_label: NADH-quinone oxidoreductase subunit 6
+    gene_symbol: nqo6
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo6 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56218
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56218, the single reviewed entry
+        for gene nqo6 in Thermus thermophilus HB8. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q56224
+    protein_label: NADH-quinone oxidoreductase subunit 9
+    gene_symbol: nqo9
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo9 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56224
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56224, the single reviewed entry
+        for gene nqo9 in Thermus thermophilus HB8. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: membrane_proton_pumping_arm
   label: membrane proton-pumping arm
   component_type: PROTEIN_COMPLEX
@@ -85,6 +213,127 @@ components:
   - reference: PMID:23417064
     notes: Baradaran et al. 2013 resolved the T. thermophilus membrane arm and described
       antiporter-like domains linked to proton translocation.
+  gene_symbols:
+  - nqo7
+  - nqo8
+  - nqo10
+  - nqo11
+  - nqo12
+  - nqo13
+  - nqo14
+  protein_examples:
+  - uniprot_id: UniProtKB:Q56217
+    protein_label: NADH-quinone oxidoreductase subunit 7
+    gene_symbol: nqo7
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo7 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56217
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56217, the single reviewed entry
+        for gene nqo7 in Thermus thermophilus HB8. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q60019
+    protein_label: NADH-quinone oxidoreductase subunit 8
+    gene_symbol: nqo8
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo8 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q60019
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q60019, the single reviewed entry
+        for gene nqo8 in Thermus thermophilus HB8. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q56225
+    protein_label: NADH-quinone oxidoreductase subunit 10
+    gene_symbol: nqo10
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo10 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56225
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56225, the single reviewed entry
+        for gene nqo10 in Thermus thermophilus HB8. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q56226
+    protein_label: NADH-quinone oxidoreductase subunit 11
+    gene_symbol: nqo11
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo11 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56226
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56226, the single reviewed entry
+        for gene nqo11 in Thermus thermophilus HB8. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q56227
+    protein_label: NADH-quinone oxidoreductase subunit 12
+    gene_symbol: nqo12
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo12 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56227
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56227, the single reviewed entry
+        for gene nqo12 in Thermus thermophilus HB8. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q56228
+    protein_label: NADH-quinone oxidoreductase subunit 13
+    gene_symbol: nqo13
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo13 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56228
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56228, the single reviewed entry
+        for gene nqo13 in Thermus thermophilus HB8. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q56229
+    protein_label: NADH-quinone oxidoreductase subunit 14
+    gene_symbol: nqo14
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus HB8
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nqo14 in Thermus thermophilus
+      HB8, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q56229
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q56229, the single reviewed entry
+        for gene nqo14 in Thermus thermophilus HB8. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:274
   taxon_label: Thermus thermophilus

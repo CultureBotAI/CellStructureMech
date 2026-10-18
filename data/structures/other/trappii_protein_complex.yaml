@@ -37,6 +37,13 @@ curation_history:
   changes: 'Resolved PR #1127 issue #1128 by replacing the six shared-core TRAPPII
     component rows'' Choi et al. 2011 wording with neutral component-membership evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:32:43Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 10 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0030008
 synonyms:
@@ -69,6 +76,23 @@ components:
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
     notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
       plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36149
+    protein_label: Trafficking protein particle complex subunit BET3
+    gene_symbol: BET3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BET3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P36149
+      notes: UniProtKB reviewed (Swiss-Prot) entry P36149, the single reviewed entry
+        for gene BET3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: bet5_trappii_subunit
   label: Bet5 TRAPPII subunit
   component_type: PROTEIN
@@ -90,6 +114,23 @@ components:
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
     notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
       plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03630
+    protein_label: Trafficking protein particle complex subunit BET5
+    gene_symbol: BET5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BET5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03630
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03630, the single reviewed entry
+        for gene BET5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: tca17_trappii_subunit
   label: Tca17 TRAPPII subunit
   component_type: PROTEIN
@@ -111,6 +152,22 @@ components:
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
     notes: Choi et al. 2011 showed that Tca17 is a fourth yeast TRAPPII-specific component
       alongside Trs65, Trs120 and Trs130.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32613
+    protein_label: TRAPP-associated protein TCA17
+    gene_symbol: TCA17
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TCA17 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:19220810
+      notes: Montpetit B et al. 2009, ‘Identification of the novel TRAPP associated
+        protein Tca17.’, Traffic. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Golgi apparatus, trans-Golgi network' localisation of P32613.
 - component_id: trs20_trappii_subunit
   label: Trs20 TRAPPII subunit
   component_type: PROTEIN
@@ -132,6 +189,23 @@ components:
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
     notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
       plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38334
+    protein_label: Trafficking protein particle complex subunit 20
+    gene_symbol: TRS20
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS20 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38334
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38334, the single reviewed entry
+        for gene TRS20 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs23_trappii_subunit
   label: Trs23 TRAPPII subunit
   component_type: PROTEIN
@@ -153,6 +227,23 @@ components:
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
     notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
       plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03784
+    protein_label: Trafficking protein particle complex subunit 23
+    gene_symbol: TRS23
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS23 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03784
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03784, the single reviewed entry
+        for gene TRS23 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs31_trappii_subunit
   label: Trs31 TRAPPII subunit
   component_type: PROTEIN
@@ -174,6 +265,23 @@ components:
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
     notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
       plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03337
+    protein_label: Trafficking protein particle complex subunit 31
+    gene_symbol: TRS31
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS31 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03337
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03337, the single reviewed entry
+        for gene TRS31 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs33_trappii_subunit
   label: Trs33 TRAPPII subunit
   component_type: PROTEIN
@@ -195,6 +303,23 @@ components:
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
     notes: Choi et al. 2011 described TRAPPII as containing the shared TRAPP core
       plus Trs65, Trs120, Trs130 and Tca17 as TRAPPII-specific subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q99394
+    protein_label: Trafficking protein particle complex subunit 33
+    gene_symbol: TRS33
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS33 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q99394
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q99394, the single reviewed entry
+        for gene TRS33 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs65_trappii_subunit
   label: Trs65 TRAPPII subunit
   component_type: PROTEIN
@@ -216,6 +341,23 @@ components:
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
     notes: Choi et al. 2011 showed that Tca17 is a fourth yeast TRAPPII-specific component
       alongside Trs65, Trs120 and Trs130.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32893
+    protein_label: Trafficking protein particle complex II-specific subunit 65
+    gene_symbol: TRS65
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS65 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32893
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32893, the single reviewed entry
+        for gene TRS65 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: trs120_trappii_subunit
   label: Trs120 TRAPPII subunit
   component_type: PROTEIN
@@ -236,6 +378,22 @@ components:
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
     notes: Choi et al. 2011 showed that Tca17 is a fourth yeast TRAPPII-specific component
       alongside Trs65, Trs120 and Trs130.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04183
+    protein_label: Trafficking protein particle complex II-specific subunit 120
+    gene_symbol: TRS120
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS120 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11239471
+      notes: Sacher M et al. 2001, ‘TRAPP I implicated in the specificity of tethering
+        in ER-to-Golgi transport.’, Mol Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Golgi apparatus, cis-Golgi network' localisation of Q04183.
 - component_id: trs130_trappii_subunit
   label: Trs130 TRAPPII subunit
   component_type: PROTEIN
@@ -257,6 +415,23 @@ components:
   - reference: DOI:10.1111/j.1600-0854.2011.01181.x
     notes: Choi et al. 2011 showed that Tca17 is a fourth yeast TRAPPII-specific component
       alongside Trs65, Trs120 and Trs130.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03660
+    protein_label: Trafficking protein particle complex II-specific subunit 130
+    gene_symbol: TRS130
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS130 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03660
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03660, the single reviewed entry
+        for gene TRS130 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

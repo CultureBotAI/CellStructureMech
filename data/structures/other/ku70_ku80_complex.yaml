@@ -29,6 +29,13 @@ curation_history:
     and NHEJ, and narrowed the budding-yeast canonical example to the HDF2/Ku80 two-subunit-complex
     evidence.
   llm_assisted: true
+- timestamp: '2026-10-18T03:25:44Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Ku70:Ku80 heterodimer
   synonym_type: EXACT_SYNONYM
@@ -53,6 +60,24 @@ components:
   - reference: PMID:8890183
     notes: Boulton and Jackson 1996 characterized the Saccharomyces cerevisiae Ku70
       homologue.
+  gene_symbols:
+  - YKU70
+  protein_examples:
+  - uniprot_id: UniProtKB:P32807
+    protein_label: ATP-dependent DNA helicase II subunit 1
+    gene_symbol: YKU70
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YKU70 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9635192
+      notes: Laroche T et al. 1998, ‘Mutation of yeast Ku genes disrupts the subnuclear
+        organization of telomeres.’, Curr Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of P32807.
 - component_id: ku80_subunit
   label: Ku80 subunit
   component_type: PROTEIN
@@ -72,6 +97,24 @@ components:
   - reference: DOI:10.1074/jbc.271.44.27765
     notes: Feldmann et al. 1996 identified Hdf2 as a second subunit of the Saccharomyces
       cerevisiae Ku homologue.
+  gene_symbols:
+  - YKU80
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04437
+    protein_label: ATP-dependent DNA helicase II subunit 2
+    gene_symbol: YKU80
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YKU80 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9635192
+      notes: Laroche T et al. 1998, ‘Mutation of yeast Ku genes disrupts the subnuclear
+        organization of telomeres.’, Curr Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of Q04437.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

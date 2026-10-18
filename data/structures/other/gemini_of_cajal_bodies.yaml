@@ -24,6 +24,13 @@ curation_history:
     an SMN label-only component, human HeLa scope, snRNP-biogenesis association evidence,
     a nonmechanistic SMN/gems graph, and an SMN-complex/Cajal-body boundary TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:24:23Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: Gemini of coiled bodies
   synonym_type: EXACT_SYNONYM
@@ -53,6 +60,33 @@ components:
   - reference: PMID:8670859
     notes: Liu and Dreyfuss 1996 used SMN monoclonal antibodies to identify several
       intense dots in HeLa nuclei and named the structures gems.
+  gene_symbols:
+  - SMN1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q16637
+    protein_label: Survival motor neuron protein
+    gene_symbol: SMN1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SMN1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11283611
+      notes: Gangwani L et al. 2001, ‘Spinal muscular atrophy disrupts the interaction
+        of ZPR1 with the SMN protein.’, Nat Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus, gem' localisation of Q16637.
+    - reference: PMID:8670859
+      notes: Liu Q et al. 1996, ‘A novel nuclear structure containing the survival
+        of motor neurons protein.’, EMBO J. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus, gem' localisation of Q16637.
+    - reference: PMID:21072240
+      notes: Mahmoudi S et al. 2010, ‘WRAP53 is essential for Cajal body formation
+        and for targeting the survival of motor neuron complex to Cajal bodies.’,
+        PLoS Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        Cajal body' localisation of Q16637.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:9606
   taxon_label: Homo sapiens

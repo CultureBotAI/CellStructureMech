@@ -26,6 +26,11 @@ curation_history:
     cohort, resolved #498 by adding plural channelrhodopsin evidence, and resolved
     #499 by keeping Ueki-backed function text focused on carotenoid-layer shielding.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: eyespot
   synonym_type: RELATED_SYNONYM
@@ -70,6 +75,25 @@ components:
   - reference: DOI:10.1038/srep34646
     notes: Awasthi et al. 2016 followed bacterial-type rhodopsin trafficking into
       the Chlamydomonas eyespot and flagella.
+  gene_symbols:
+  - COP3
+  - COP4
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8RUT8
+    protein_label: Archaeal-type opsin 2
+    gene_symbol: cop4
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene COP4 in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8RUT8
+      notes: UniProtKB unreviewed (TrEMBL) entry Q8RUT8 for gene COP4 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

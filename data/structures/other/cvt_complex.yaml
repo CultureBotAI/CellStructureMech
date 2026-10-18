@@ -27,6 +27,13 @@ curation_history:
     retaining GO:0032258 as evidence for Cvt-complex enclosure in the cargo-delivery
     graph.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:22:28Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: cytoplasm to vacuole targeting complex
   synonym_type: EXACT_SYNONYM
@@ -62,6 +69,30 @@ components:
   grounding_notes: Curated from budding-yeast APE1/proApe1 membership in the Cvt complex;
     no exact source-neutral InterPro or Pfam family identifier for the Cvt precursor-aminopeptidase-I
     cargo constituent was verified in this pass.
+  protein_examples:
+  - uniprot_id: UniProtKB:P14904
+    protein_label: Vacuolar aminopeptidase 1
+    gene_symbol: APE1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene APE1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:24493041
+      notes: Matile P et al. 1971, ‘A lysosomal aminopeptidase isozyme in differentiating
+        yeast cells and protoplasts.’, Planta. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Vacuole' localisation of P14904.
+    - reference: PMID:363165
+      notes: Frey J et al. 1978, ‘Subcellular localization and levels of aminopeptidases
+        and dipeptidase in Saccharomyces cerevisiae.’, Biochim Biophys Acta. ECO:0000269
+        experimental evidence cited by UniProt for the 'Vacuole' localisation of P14904.
+    - reference: PMID:8601598
+      notes: Oda MN et al. 1996, ‘Identification of a cytoplasm to vacuole targeting
+        determinant in aminopeptidase I.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Vacuole' localisation of P14904.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

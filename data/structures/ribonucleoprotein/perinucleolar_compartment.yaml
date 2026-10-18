@@ -41,6 +41,13 @@ curation_history:
   changes: 'Resolved #1697 by correcting the inherited hnRNP 1 typo in the perinucleolar
     compartment definition to hnRNP I.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:34:55Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: perinucleolar region
   synonym_type: EXACT_SYNONYM
@@ -69,6 +76,25 @@ components:
   - reference: DOI:10.1091/mbc.E02-12-0818
     notes: Wang et al. 2003 showed that PTB and RNA polymerase III transcripts are
       essential for perinucleolar compartment integrity.
+  gene_symbols:
+  - PTBP1
+  protein_examples:
+  - uniprot_id: UniProtKB:P26599
+    protein_label: Polypyrimidine tract-binding protein 1
+    gene_symbol: PTBP1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PTBP1 in Homo sapiens, a taxon
+      this record names. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:40965981
+      notes: Masson A et al. 2025, ‘PTBP1 variants displaying altered nucleocytoplasmic
+        distribution are responsible for a neurodevelopmental disorder with skeletal
+        dysplasia.’, J Clin Invest. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus' localisation of P26599.
 - component_id: rna_polymerase_iii_transcripts
   label: RNA polymerase III transcript cohort
   component_type: RNA

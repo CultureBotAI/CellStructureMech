@@ -34,6 +34,13 @@ curation_history:
     mRNA cargo component, and resolved #552 by renaming the Pab1/Pub1/Pbp1 cohort
     as RNA-binding markers and narrowing Pab1 to a marker role.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:33:38Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: cytoplasmic mRNP granule
   synonym_type: EXACT_SYNONYM
@@ -79,6 +86,70 @@ components:
   - reference: DOI:10.1371/journal.pone.0010006
     notes: Swisher and Parker 2010 assayed Pbp1, Pbp4, Lsm12, Dhh1 and Pab1 localization
       and effects on Saccharomyces stress granules.
+  protein_examples:
+  - uniprot_id: UniProtKB:P04147
+    protein_label: Polyadenylate-binding protein, cytoplasmic and nuclear
+    gene_symbol: PAB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PAB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P04147
+      notes: UniProtKB reviewed (Swiss-Prot) entry P04147, the single reviewed entry
+        for gene PAB1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P32588
+    protein_label: Nuclear and cytoplasmic polyadenylated RNA-binding protein PUB1
+    gene_symbol: PUB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PUB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:23222640
+      notes: Mitchell SF et al. 2013, ‘Global analysis of yeast mRNPs.’, Nat Struct
+        Mol Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm'
+        localisation of P32588.
+    - reference: PMID:8413212
+      notes: Anderson JT et al. 1993, ‘PUB1 is a major nuclear and cytoplasmic polyadenylated
+        RNA-binding protein in Saccharomyces cerevisiae.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P32588.
+    - reference: PMID:8413213
+      notes: 'Matunis MJ et al. 1993, ‘PUB1: a major yeast poly(A)+ RNA-binding protein.’,
+        Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the
+        ''Nucleus'' localisation of P32588.'
+  - uniprot_id: UniProtKB:P53297
+    protein_label: PAB1-binding protein 1
+    gene_symbol: PBP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PBP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P53297.
+    - reference: PMID:15082763
+      notes: Tadauchi T et al. 2004, ‘Posttranscriptional regulation of HO expression
+        by the Mkt1-Pbp1 complex.’, Mol Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm' localisation of P53297.
+    - reference: PMID:14576278
+      notes: Sickmann A et al. 2003, ‘The proteome of Saccharomyces cerevisiae mitochondria.’,
+        Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion' localisation of P53297.
 - component_id: eif3_40s_translation_initiation_cohort
   label: eIF3/40S translation-initiation cohort
   component_type: OTHER

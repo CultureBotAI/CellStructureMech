@@ -20,6 +20,18 @@ curation_history:
     meiotic-transcript-surveillance function evidence, a nonmechanistic MTREC/NURS
     recruitment graph and a component-boundary TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:27:38Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Mmi1 nuclear focus
   synonym_type: EXACT_SYNONYM
@@ -51,6 +63,27 @@ components:
   - reference: DOI:10.1371/journal.pgen.1008598
     notes: Shichino et al. 2020 analyzed Mmi1 foci and the MTREC/NURS-dependent recruitment
       of the nuclear exosome to those foci.
+  protein_examples:
+  - uniprot_id: UniProtKB:O74958
+    protein_label: RNA binding exosome specificity factor Mmi1
+    gene_symbol: mmi1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene mmi1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16823372
+      notes: Matsuyama A et al. 2006, ‘ORFeome cloning and global analysis of protein
+        localization in the fission yeast Schizosaccharomyces pombe.’, Nat Biotechnol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation
+        of O74958.
+    - reference: PMID:16823445
+      notes: Harigaya Y et al. 2006, ‘Selective elimination of messenger RNA prevents
+        an incidence of untimely meiosis.’, Nature. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of O74958.
 - component_id: nuclear_exosome_rnase_complex
   label: nuclear exosome (RNase complex)
   component_type: PROTEIN_COMPLEX
@@ -139,6 +172,8 @@ causal_graphs:
   - node_id: mtrec_nurs
     label: MTREC/NURS complex
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q9UTR8
   - node_id: nuclear_exosome_rnase_complex
     label: nuclear exosome (RNase complex)
     node_type: STRUCTURE

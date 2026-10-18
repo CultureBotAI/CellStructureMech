@@ -21,6 +21,13 @@ curation_history:
     ribosomal small-subunit biogenesis functions, GO/SO/PubMed evidence, a nonmechanistic
     constituent graph and a TODO for exact component boundaries.
   llm_assisted: true
+- timestamp: '2026-10-18T03:35:05Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: 43S preribosome
   synonym_type: NARROW_SYNONYM
@@ -61,6 +68,109 @@ components:
     notes: GO:0030688 defines the small-subunit precursor preribosome as containing
       ribosomal proteins, including late-associating small-subunit ribosomal proteins,
       and associated proteins.
+  gene_symbols:
+  - ENP1
+  - LTV1
+  - TSR1
+  - DIM1
+  - RIO2
+  - NOB1
+  protein_examples:
+  - uniprot_id: UniProtKB:P38333
+    protein_label: Essential nuclear protein 1
+    gene_symbol: ENP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ENP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38333
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38333, the single reviewed entry
+        for gene ENP1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P34078
+    protein_label: Protein LTV1
+    gene_symbol: LTV1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene LTV1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P34078
+      notes: UniProtKB reviewed (Swiss-Prot) entry P34078, the single reviewed entry
+        for gene LTV1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q07381
+    protein_label: Ribosome biogenesis protein TSR1
+    gene_symbol: TSR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TSR1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q07381
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q07381, the single reviewed entry
+        for gene TSR1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P41819
+    protein_label: Dimethyladenosine transferase
+    gene_symbol: DIM1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DIM1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12628929
+      notes: Schäfer T et al. 2003, ‘The path from nucleolar 90S to cytoplasmic 40S
+        pre-ribosomes.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cytoplasm' localisation of P41819.
+  - uniprot_id: UniProtKB:P40160
+    protein_label: Serine/threonine-protein kinase RIO2
+    gene_symbol: RIO2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RIO2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40160
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40160, the single reviewed entry
+        for gene RIO2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q08444
+    protein_label: 20S-pre-rRNA D-site endonuclease NOB1
+    gene_symbol: NOB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NOB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q08444
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q08444, the single reviewed entry
+        for gene NOB1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

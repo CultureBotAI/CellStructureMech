@@ -41,6 +41,13 @@ curation_history:
   action: ADDRESSED_REVIEW
   changes: Retyped the prospore membrane leading-edge coat graph node as STRUCTURE.
   llm_assisted: true
+- timestamp: '2026-10-18T03:37:52Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: ascospore-type prospore membrane
   synonym_type: EXACT_SYNONYM
@@ -96,6 +103,53 @@ components:
   - reference: DOI:10.1093/emboj/20.24.6946
     notes: Moreno-Borchart et al. 2001 linked formation of the Saccharomyces prospore
       membrane to leading-edge protein coat assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38871
+    protein_label: Sporulation-specific protein 1
+    gene_symbol: SSP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SSP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11742972
+      notes: Moreno-Borchart AC et al. 2001, ‘Prospore membrane formation linked to
+        the leading edge protein (LEP) coat assembly.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Prospore membrane' localisation of P38871.
+  - uniprot_id: UniProtKB:Q07732
+    protein_label: Accumulates dyads protein 3
+    gene_symbol: ADY3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ADY3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q07732
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q07732, the single reviewed entry
+        for gene ADY3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q05610
+    protein_label: Donuts protein 1
+    gene_symbol: DON1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DON1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10899120
+      notes: Knop M et al. 2000, ‘Role of the spindle pole body of yeast in mediating
+        assembly of the prospore membrane during meiosis.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Prospore membrane' localisation of Q05610.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

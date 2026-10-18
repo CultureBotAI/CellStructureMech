@@ -48,6 +48,11 @@ curation_history:
     without Alp7, retaining defective maintenance and site-specific scope; appended
     updated source-access accounting.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005815
 part_of:
@@ -353,6 +358,8 @@ causal_graphs:
   - node_id: myp2
     label: Myp2 in the contractile ring
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:O14157
   - node_id: mto1
     label: Mto1-like microtubule nucleation adaptor
     node_type: GENE_OR_PROTEIN

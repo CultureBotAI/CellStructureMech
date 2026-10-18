@@ -27,6 +27,13 @@ curation_history:
     rows. Resolved #1188 by connecting the RAVE graph to the assembled V-ATPase product
     node.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:29:03Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: regulator of the (H+)-ATPase of the vacuolar and endosomal membranes
   synonym_type: BROAD_SYNONYM
@@ -52,6 +59,23 @@ components:
     notes: GO:0043291 names Rav1p as a Saccharomyces RAVE subunit.
   - reference: DOI:10.1038/35070067
     notes: Seol et al. 2001 isolated RAVE and identified Rav1p in the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47104
+    protein_label: Regulator of V-ATPase in vacuolar membrane protein 1
+    gene_symbol: RAV1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAV1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15090613
+      notes: Sipos G et al. 2004, ‘Soi3p/Rav1p functions at the early endosome to
+        regulate endocytic trafficking to the vacuole and localization of trans-Golgi
+        network transmembrane proteins.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Endomembrane system' localisation of P47104.
 - component_id: rav2_subunit
   label: Rav2 subunit
   component_type: PROTEIN
@@ -68,6 +92,23 @@ components:
     notes: GO:0043291 names Rav2p as a Saccharomyces RAVE subunit.
   - reference: DOI:10.1038/35070067
     notes: Seol et al. 2001 isolated RAVE and identified Rav2p in the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03956
+    protein_label: Regulator of V-ATPase in vacuolar membrane protein 2
+    gene_symbol: RAV2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene RAV2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q03956
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03956, the single reviewed entry
+        for gene RAV2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: skp1_subunit
   label: Skp1 subunit
   component_type: PROTEIN
@@ -85,6 +126,22 @@ components:
     notes: GO:0043291 names Skp1p as a Saccharomyces RAVE subunit.
   - reference: DOI:10.1038/35070067
     notes: Seol et al. 2001 isolated RAVE and identified Skp1p in the complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P52286
+    protein_label: Suppressor of kinetochore protein 1
+    gene_symbol: SKP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SKP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P52286.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

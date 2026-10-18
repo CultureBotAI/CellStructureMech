@@ -33,6 +33,13 @@ curation_history:
   changes: 'Addressed #2232: Corrected cytoskeleton parthood and retained the specific
     filament-system identity.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:11:00Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 parent_structures:
 - GO:0099513
 components:
@@ -57,6 +64,22 @@ components:
   - reference: DOI:10.3390/biom13010134
     notes: Brown and Duggin 2023 reviewed the diversity and potential multifunctionality
       of archaeal CetZ tubulin-like cytoskeletal proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:D4GVD7
+    protein_label: Tubulin-like protein CetZ1
+    gene_symbol: cetZ1
+    taxon_id: NCBITaxon:309800
+    taxon_label: Haloferax volcanii DS2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene cetZ1 in Haloferax volcanii
+      DS2, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:25533961
+      notes: Duggin IG et al. 2015, ‘CetZ tubulin-like proteins control archaeal cell
+        shape.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of D4GVD7.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2246
   taxon_label: Haloferax volcanii

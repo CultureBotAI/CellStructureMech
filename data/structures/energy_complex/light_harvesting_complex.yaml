@@ -46,6 +46,13 @@ curation_history:
   changes: '#2300: Separate Zheng 2021 architecture evidence from the PCC 6803 photoprotection
     study.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:13:30Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: antenna complex
   synonym_type: RELATED_SYNONYM
@@ -77,6 +84,99 @@ components:
   - reference: DOI:10.1038/ncomms12454
     notes: Nielsen et al. 2016 resolved the CsmA protein lattice of the chlorosome
       baseplate antenna complex.
+  gene_symbols:
+  - cpcA
+  - cpcB
+  - pucA
+  - pucB
+  - csmA
+  protein_examples:
+  - uniprot_id: UniProtKB:Q54715
+    protein_label: C-phycocyanin alpha subunit
+    gene_symbol: cpcA
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene cpcA in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q54715
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q54715, the single reviewed entry
+        for gene cpcA in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q54714
+    protein_label: C-phycocyanin beta subunit
+    gene_symbol: cpcB
+    taxon_id: NCBITaxon:1111708
+    taxon_label: Synechocystis sp. PCC 6803 substr. Kazusa
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene cpcB in Synechocystis sp. PCC
+      6803 substr. Kazusa, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q54714
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q54714, the single reviewed entry
+        for gene cpcB in Synechocystis sp. PCC 6803 substr. Kazusa. Establishes the
+        accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:P0C0Y0
+    protein_label: Light-harvesting protein B-800/850 alpha chain
+    gene_symbol: pucA
+    taxon_id: NCBITaxon:1063
+    taxon_label: Cereibacter sphaeroides
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene pucA in Cereibacter sphaeroides,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0C0Y0
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0C0Y0, the single reviewed entry
+        for gene pucA in Cereibacter sphaeroides. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0C0Y2
+    protein_label: Light-harvesting protein B-800/850 beta chain
+    gene_symbol: pucB
+    taxon_id: NCBITaxon:1063
+    taxon_label: Cereibacter sphaeroides
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene pucB in Cereibacter sphaeroides,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0C0Y2
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0C0Y2, the single reviewed entry
+        for gene pucB in Cereibacter sphaeroides. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0A314
+    protein_label: Bacteriochlorophyll c-binding protein
+    gene_symbol: csmA
+    taxon_id: NCBITaxon:194439
+    taxon_label: Chlorobaculum tepidum TLS
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene csmA in Chlorobaculum tepidum
+      TLS, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0A314
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A314, the single reviewed entry
+        for gene csmA in Chlorobaculum tepidum TLS. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
 - component_id: photosynthetic_antenna_pigments
   label: photosynthetic antenna pigments
   component_type: SMALL_MOLECULE

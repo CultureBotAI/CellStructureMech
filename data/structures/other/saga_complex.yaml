@@ -28,6 +28,18 @@ curation_history:
     cysteine-type deubiquitinase activities, GO/PubMed/DOI evidence, a nonmechanistic
     function graph, and a SAGA subunit-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T03:29:56Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 17 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Spt-Ada-Gcn5-acetyltransferase complex
   synonym_type: EXACT_SYNONYM
@@ -54,6 +66,23 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38811
+    protein_label: SAGA complex/NuA4 acetyltransferase complex subunit TRA1
+    gene_symbol: TRA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:18616809
+      notes: Hoke SM et al. 2008, ‘Systematic genetic array analysis links the Saccharomyces
+        cerevisiae SAGA/SLIK and NuA4 component Tra1 to multiple cellular processes.’,
+        BMC Genet. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of P38811.
 - component_id: taf5_saga_core_subunit
   label: Taf5 SAGA core subunit
   component_type: PROTEIN
@@ -71,6 +100,23 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38129
+    protein_label: SAGA complex/transcription factor TFIID complex subunit TAF5
+    gene_symbol: TAF5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TAF5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38129
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38129, the single reviewed entry
+        for gene TAF5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: taf6_saga_core_subunit
   label: Taf6 SAGA core subunit
   component_type: PROTEIN
@@ -88,6 +134,22 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53040
+    protein_label: SAGA complex/transcription factor TFIID complex subunit TAF6
+    gene_symbol: TAF6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TAF6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22932476
+      notes: Dastidar RG et al. 2012, ‘The nuclear localization of SWI/SNF proteins
+        is subjected to oxygen regulation.’, Cell Biosci. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P53040.
 - component_id: taf9_saga_core_subunit
   label: Taf9 SAGA core subunit
   component_type: PROTEIN
@@ -105,6 +167,22 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q05027
+    protein_label: SAGA complex/transcription factor TFIID complex subunit TAF9
+    gene_symbol: TAF9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TAF9 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q05027.
 - component_id: taf10_saga_core_subunit
   label: Taf10 SAGA core subunit
   component_type: PROTEIN
@@ -122,6 +200,23 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12030
+    protein_label: SAGA complex/transcription factor TFIID complex subunit TAF10
+    gene_symbol: TAF10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TAF10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12030
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12030, the single reviewed entry
+        for gene TAF10 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: taf12_saga_core_subunit
   label: Taf12 SAGA core subunit
   component_type: PROTEIN
@@ -139,6 +234,22 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03761
+    protein_label: SAGA complex/transcription factor TFIID complex subunit TAF12
+    gene_symbol: TAF12
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TAF12 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q03761.
 - component_id: spt3_saga_core_subunit
   label: Spt3 SAGA core subunit
   component_type: PROTEIN
@@ -156,6 +267,22 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06844
+    protein_label: SAGA complex subunit SPT3
+    gene_symbol: SPT3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPT3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22932476
+      notes: Dastidar RG et al. 2012, ‘The nuclear localization of SWI/SNF proteins
+        is subjected to oxygen regulation.’, Cell Biosci. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P06844.
 - component_id: spt7_saga_core_subunit
   label: Spt7 SAGA core subunit
   component_type: PROTEIN
@@ -173,6 +300,23 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35177
+    protein_label: SAGA complex subunit SPT7
+    gene_symbol: SPT7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPT7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P35177
+      notes: UniProtKB reviewed (Swiss-Prot) entry P35177, the single reviewed entry
+        for gene SPT7 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: spt20_saga_core_subunit
   label: Spt20 SAGA core subunit
   component_type: PROTEIN
@@ -190,6 +334,22 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P50875
+    protein_label: SAGA complex subunit SPT20
+    gene_symbol: SPT20
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPT20 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15647753
+      notes: Pray-Grant MG et al. 2005, ‘Chd1 chromodomain links histone H3 methylation
+        with SAGA- and SLIK-dependent acetylation.’, Nature. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P50875.
 - component_id: ada1_saga_core_subunit
   label: Ada1 SAGA core subunit
   component_type: PROTEIN
@@ -207,6 +367,24 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12060
+    protein_label: SAGA complex subunit HFI1
+    gene_symbol: HFI1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ADA1, which UniProt lists under
+      the primary name HFI1, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12060
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12060, the single reviewed entry
+        for gene ADA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: spt8_saga_tbp_subunit
   label: Spt8 SAGA TBP-interacting subunit
   component_type: PROTEIN
@@ -224,6 +402,22 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38915
+    protein_label: SAGA complex subunit SPT8
+    gene_symbol: SPT8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SPT8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11914276
+      notes: Kumar A et al. 2002, ‘Subcellular localization of the yeast proteome.’,
+        Genes Dev. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus'
+        localisation of P38915.
 - component_id: gcn5_saga_hat_subunit
   label: Gcn5 SAGA HAT subunit
   component_type: PROTEIN
@@ -240,6 +434,22 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03330
+    protein_label: Histone acetyltransferase GCN5
+    gene_symbol: GCN5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GCN5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22932476
+      notes: Dastidar RG et al. 2012, ‘The nuclear localization of SWI/SNF proteins
+        is subjected to oxygen regulation.’, Cell Biosci. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q03330.
 - component_id: ada2_saga_hat_subunit
   label: Ada2 SAGA HAT subunit
   component_type: PROTEIN
@@ -256,6 +466,23 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02336
+    protein_label: SAGA complex subunit ADA2
+    gene_symbol: ADA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ADA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q02336
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q02336, the single reviewed entry
+        for gene ADA2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ada3_saga_hat_subunit
   label: Ada3 SAGA HAT subunit
   component_type: PROTEIN
@@ -272,6 +499,24 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32494
+    protein_label: SAGA complex subunit NGG1
+    gene_symbol: NGG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ADA3, which UniProt lists under
+      the primary name NGG1, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:21734642
+      notes: Lee KK et al. 2011, ‘Combinatorial depletion analysis to assemble the
+        network architecture of the SAGA and ADA chromatin remodeling complexes.’,
+        Mol Syst Biol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P32494.
 - component_id: sgf29_saga_hat_subunit
   label: Sgf29 SAGA HAT subunit
   component_type: PROTEIN
@@ -288,6 +533,23 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25554
+    protein_label: SAGA complex subunit SGF29
+    gene_symbol: SGF29
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SGF29 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P25554
+      notes: UniProtKB reviewed (Swiss-Prot) entry P25554, the single reviewed entry
+        for gene SGF29 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ubp8_saga_dub_subunit
   label: Ubp8 SAGA DUB subunit
   component_type: PROTEIN
@@ -304,6 +566,23 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P50102
+    protein_label: Ubiquitin carboxyl-terminal hydrolase 8
+    gene_symbol: UBP8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene UBP8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P50102
+      notes: UniProtKB reviewed (Swiss-Prot) entry P50102, the single reviewed entry
+        for gene UBP8 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: sgf11_saga_dub_subunit
   label: Sgf11 SAGA DUB subunit
   component_type: PROTEIN
@@ -320,6 +599,22 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03067
+    protein_label: SAGA complex subunit SGF11
+    gene_symbol: SGF11
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene SGF11 in Saccharomyces
+      cerevisiae S288C. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q03067.
 - component_id: sus1_saga_dub_subunit
   label: Sus1 SAGA DUB subunit
   component_type: PROTEIN
@@ -336,6 +631,28 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q6WNK7
+    protein_label: SAGA complex subunit SUS1
+    gene_symbol: SUS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene SUS1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16855026
+      notes: Köhler A et al. 2006, ‘The mRNA export factor Sus1 is involved in Spt/Ada/Gcn5
+        acetyltransferase-mediated H2B deubiquitinylation through its interaction
+        with Ubp8 and Sgf11.’, Mol Biol Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus, nucleoplasm' localisation of Q6WNK7.
+    - reference: PMID:20230609
+      notes: Cuenca-Bono B et al. 2010, ‘A novel link between Sus1 and the cytoplasmic
+        mRNA decay machinery suggests a broad role in mRNA metabolism.’, BMC Cell
+        Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        P-body' localisation of Q6WNK7.
 - component_id: sgf73_saga_dub_subunit
   label: Sgf73 SAGA DUB-anchor subunit
   component_type: PROTEIN
@@ -353,6 +670,22 @@ components:
   - reference: DOI:10.1038/s41586-020-1933-5
     notes: Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported
       all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53165
+    protein_label: SAGA complex subunit SGF73
+    gene_symbol: SGF73
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SGF73 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22932476
+      notes: Dastidar RG et al. 2012, ‘The nuclear localization of SWI/SNF proteins
+        is subjected to oxygen regulation.’, Cell Biosci. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of P53165.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

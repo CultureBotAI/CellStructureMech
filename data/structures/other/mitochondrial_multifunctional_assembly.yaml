@@ -28,6 +28,18 @@ curation_history:
   changes: Distinguished transient Cox13 association observed in import/chase assays
     from the proposed transfer route into mature complex IV before PR submission.
   llm_assisted: true
+- timestamp: '2026-10-18T03:26:26Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: MIMAS
   synonym_type: EXACT_SYNONYM
@@ -52,6 +64,30 @@ components:
       MIMAS, and Nde1-AAC crosslinking support membership; not all cellular AAC is
       in MIMAS.'
   grounding: InterPro:IPR002113
+  protein_examples:
+  - uniprot_id: UniProtKB:P18239
+    protein_label: ADP/ATP translocase 2
+    gene_symbol: PET9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AAC2, which UniProt lists under
+      the primary name PET9, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:795470
+      notes: Lauquin G et al. 1976, ‘Effect of genetic and physiological manipulations
+        onthe kinetic and binding parameters of the adenine nucleotide translocator
+        in Saccharomyces cervisiae and Candida utilis.’, Biochimie. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Mitochondrion inner membrane' localisation
+        of P18239.
+    - reference: PMID:35127709
+      notes: van Roermund CWT et al. 2021, ‘Peroxisomal ATP Uptake Is Provided by
+        Two Adenine Nucleotide Transporters and the ABCD Transporters.’, Front Cell
+        Dev Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Peroxisome
+        membrane' localisation of P18239.
 - component_id: rcf1
   label: Mitochondrial Respiratory Supercomplex Factor 1
   component_type: PROTEIN
@@ -66,6 +102,26 @@ components:
       R67A reduces its MIMAS association, whereas Q61A/Q71A increases it, in the tested
       rcf1/rcf2 deletion background. This does not establish fixed occupancy.'
   grounding: InterPro:IPR050355
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03713
+    protein_label: Respiratory supercomplex factor 1, mitochondrial
+    gene_symbol: RCF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene RCF1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Mitochondrion membrane' localisation of Q03713.
+    - reference: PMID:14576278
+      notes: Sickmann A et al. 2003, ‘The proteome of Saccharomyces cerevisiae mitochondria.’,
+        Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion membrane' localisation of Q03713.
 - component_id: psd1
   label: Phosphatidylserine decarboxylase, eukaryotic type 1
   component_type: PROTEIN
@@ -81,6 +137,33 @@ components:
       MIMAS in wild-type mitochondria. Catalytic competence and physical incorporation
       are distinct; complete assembly essentiality is not assigned from destabilization.'
   grounding: InterPro:IPR033661
+  protein_examples:
+  - uniprot_id: UniProtKB:P39006
+    protein_label: Phosphatidylserine decarboxylase proenzyme 1, mitochondrial
+    gene_symbol: PSD1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PSD1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14576278
+      notes: Sickmann A et al. 2003, ‘The proteome of Saccharomyces cerevisiae mitochondria.’,
+        Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion inner membrane' localisation of P39006.
+    - reference: PMID:22984266
+      notes: Horvath SE et al. 2012, ‘Processing and topology of the yeast mitochondrial
+        phosphatidylserine decarboxylase 1.’, J Biol Chem. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Mitochondrion inner membrane' localisation
+        of P39006.
+    - reference: PMID:23124206
+      notes: 'Tamura Y et al. 2012, ‘Phosphatidylethanolamine biosynthesis in mitochondria:
+        phosphatidylserine (PS) trafficking is independent of a PS decarboxylase and
+        intermembrane space proteins UPS1P and UPS2P.’, J Biol Chem. ECO:0000269 experimental
+        evidence cited by UniProt for the ''Mitochondrion inner membrane'' localisation
+        of P39006.'
 - component_id: nde1
   label: external mitochondrial NADH dehydrogenase
   component_type: PROTEIN
@@ -100,6 +183,22 @@ components:
     The verified Nde1 reference protein maps to IPR045024, Alternative NADH dehydrogenase,
     which also includes internal Ndi1 and bacterial proteins. That broader family
     is not substituted for this external mitochondrial class.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40215
+    protein_label: External NADH-ubiquinone oxidoreductase 1, mitochondrial
+    gene_symbol: NDE1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NDE1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14576278
+      notes: Sickmann A et al. 2003, ‘The proteome of Saccharomyces cerevisiae mitochondria.’,
+        Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Mitochondrion intermembrane space' localisation of P40215.
 - component_id: tafazzin
   label: Tafazzin
   component_type: PROTEIN
@@ -114,6 +213,33 @@ components:
       Its membership does not prove that cardiolipin remodeling is locally coupled
       to transport or respiratory-chain assembly.'
   grounding: InterPro:IPR000872
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06510
+    protein_label: Tafazzin
+    gene_symbol: TAZ1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TAZ1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:15588229
+      notes: Testet E et al. 2005, ‘Ypr140wp, 'the yeast tafazzin', displays a mitochondrial
+        lysophosphatidylcholine (lyso-PC) acyltransferase activity related to triacylglycerol
+        and mitochondrial lipid synthesis.’, Biochem J. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Mitochondrion outer membrane' localisation of Q06510.
+    - reference: PMID:16135531
+      notes: 'Brandner K et al. 2005, ‘Taz1, an outer mitochondrial membrane protein,
+        affects stability and assembly of inner membrane protein complexes: implications
+        for Barth Syndrome.’, Mol Biol Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the ''Mitochondrion outer membrane'' localisation of Q06510.'
+    - reference: PMID:16880272
+      notes: Claypool SM et al. 2006, ‘Mitochondrial mislocalization and altered assembly
+        of a cluster of Barth syndrome mutant tafazzins.’, J Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Mitochondrion outer membrane'
+        localisation of Q06510.
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

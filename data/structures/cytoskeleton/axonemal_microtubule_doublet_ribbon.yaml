@@ -26,6 +26,11 @@ curation_history:
   changes: 'Addressed PR #1398 review issue #1399 by adding an evidence-backed stabilizes
     edge to the axonemal doublet ribbon graph.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 part_of:
 - GO:0097545
 components:
@@ -46,6 +51,27 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for the A11-A13 axonemal ribbon tubulin
     constituent set was verified in this pass.
+  gene_symbols:
+  - TUA1
+  - TUA2
+  - TUB1
+  - TUB2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q6SPP7
+    protein_label: TUA2
+    gene_symbol: TUA2
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TUA2 in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q6SPP7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q6SPP7 for gene TUA2 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: ribbon_associated_mips
   label: ribbon-associated microtubule inner proteins
   component_type: PROTEIN
@@ -66,6 +92,25 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral CURIE for the complete set of ribbon-associated
     MIP families was verified in this pass.
+  gene_symbols:
+  - RIB43a
+  - RIB72
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9M6B0
+    protein_label: Flagellar protofilament ribbon protein
+    gene_symbol: RIB43a
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene RIB43a in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q9M6B0
+      notes: UniProtKB unreviewed (TrEMBL) entry Q9M6B0 for gene RIB43a in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

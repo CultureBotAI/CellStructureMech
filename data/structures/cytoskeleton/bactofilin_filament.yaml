@@ -37,6 +37,12 @@ curation_history:
     polymerization from unproven native oomycete function and archaeal sequence hits.
     Existing bacterial occurrences and Caulobacter graph are unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s); added 1 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0099513
 synonyms:
@@ -68,6 +74,37 @@ components:
     notes: Deng et al. 2019 structurally analyzed bactofilin filaments and demonstrated
       in vitro polymerization of recombinant Phytophthora infestans PiBac as well
       as bacterial proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A0H3C8L7
+    protein_label: Bactofilin A BacA
+    gene_symbol: bacA
+    taxon_id: NCBITaxon:565050
+    taxon_label: Caulobacter vibrioides NA1000
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene bacA in Caulobacter
+      vibrioides NA1000. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A0H3C8L7
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A0H3C8L7 for gene bacA in Caulobacter
+        vibrioides NA1000. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:A0A0H3CDZ6
+    protein_label: Bactofilin B BacB
+    gene_symbol: bacB
+    taxon_id: NCBITaxon:565050
+    taxon_label: Caulobacter vibrioides NA1000
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene bacB in Caulobacter
+      vibrioides NA1000. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A0H3CDZ6
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A0H3CDZ6 for gene bacB in Caulobacter
+        vibrioides NA1000. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -138,6 +175,8 @@ causal_graphs:
   - node_id: pbpc
     label: PbpC
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:A0A0H3CES2
   - node_id: stalk_biogenesis
     label: Caulobacter stalk biogenesis
     node_type: BIOLOGICAL_PROCESS

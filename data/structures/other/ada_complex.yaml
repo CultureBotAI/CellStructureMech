@@ -27,6 +27,13 @@ curation_history:
   changes: Deep-copied ADA graph-edge evidence lists so the record serializes without
     YAML anchors or aliases.
   llm_assisted: true
+- timestamp: '2026-10-18T03:19:38Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 6 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 synonyms:
 - synonym_text: ADA HAT complex
   synonym_type: EXACT_SYNONYM
@@ -62,6 +69,23 @@ components:
   - reference: DOI:10.1038/msb.2011.40
     notes: Lee et al. 2011 modeled Ada2 as a HAT/Core-module constituent of the Saccharomyces
       cerevisiae ADA complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02336
+    protein_label: SAGA complex subunit ADA2
+    gene_symbol: ADA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ADA2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q02336
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q02336, the single reviewed entry
+        for gene ADA2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: gcn5_ada_catalytic_subunit
   label: Gcn5 ADA catalytic subunit
   component_type: PROTEIN
@@ -81,6 +105,22 @@ components:
   - reference: DOI:10.1038/msb.2011.40
     notes: Lee et al. 2011 modeled Gcn5 as a HAT/Core-module constituent of the Saccharomyces
       cerevisiae ADA complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03330
+    protein_label: Histone acetyltransferase GCN5
+    gene_symbol: GCN5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene GCN5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:22932476
+      notes: Dastidar RG et al. 2012, ‘The nuclear localization of SWI/SNF proteins
+        is subjected to oxygen regulation.’, Cell Biosci. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q03330.
 - component_id: ada3_ngg1_ada_hat_subunit
   label: Ada3/Ngg1 ADA HAT subunit
   component_type: PROTEIN
@@ -100,6 +140,23 @@ components:
   - reference: DOI:10.1038/msb.2011.40
     notes: Lee et al. 2011 modeled Ada3/Ngg1 as a HAT/Core-module constituent of the
       Saccharomyces cerevisiae ADA complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32494
+    protein_label: SAGA complex subunit NGG1
+    gene_symbol: NGG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NGG1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:21734642
+      notes: Lee KK et al. 2011, ‘Combinatorial depletion analysis to assemble the
+        network architecture of the SAGA and ADA chromatin remodeling complexes.’,
+        Mol Syst Biol. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P32494.
 - component_id: sgf29_ada_hat_subunit
   label: Sgf29 ADA HAT subunit
   component_type: PROTEIN
@@ -119,6 +176,23 @@ components:
   - reference: DOI:10.1038/msb.2011.40
     notes: Lee et al. 2011 characterized Sgf29 as a HAT/Core-module component of all
       Gcn5 histone acetyltransferase complexes.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25554
+    protein_label: SAGA complex subunit SGF29
+    gene_symbol: SGF29
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SGF29 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P25554
+      notes: UniProtKB reviewed (Swiss-Prot) entry P25554, the single reviewed entry
+        for gene SGF29 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: ahc1_ada_module_subunit
   label: Ahc1 ADA-module subunit
   component_type: PROTEIN
@@ -135,6 +209,22 @@ components:
   - reference: DOI:10.1038/msb.2011.40
     notes: Lee et al. 2011 modeled Ahc1 with Ahc2 as the ADA-specific module of the
       Saccharomyces cerevisiae ADA complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12433
+    protein_label: Protein AHC1
+    gene_symbol: AHC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AHC1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q12433.
 - component_id: ahc2_ada_module_subunit
   label: Ahc2 ADA-module subunit
   component_type: PROTEIN
@@ -151,6 +241,22 @@ components:
   - reference: DOI:10.1038/msb.2011.40
     notes: Lee et al. 2011 identified Ycr082w/Ahc2 as a novel ADA-complex subunit
       that co-purified with Ada3, Ahc1, Gcn5, Ada2 and Sgf29.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25649
+    protein_label: ADA histone acetyltransferase complex component 2
+    gene_symbol: AHC2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AHC2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P25649.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

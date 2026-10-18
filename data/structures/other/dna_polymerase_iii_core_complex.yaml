@@ -41,6 +41,18 @@ curation_history:
     polymerase activity without bundling proofreading activity into that GO molecular
     function.
   llm_assisted: true
+- timestamp: '2026-10-18T03:22:50Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0042575
 part_of:
@@ -65,6 +77,23 @@ components:
   - reference: PMID:3283127
     notes: Maki and Kornberg 1988 described partial assemblies of the Pol III core
       containing alpha, epsilon and theta subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P10443
+    protein_label: DNA polymerase III subunit alpha
+    gene_symbol: dnaE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene dnaE in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P10443
+      notes: UniProtKB reviewed (Swiss-Prot) entry P10443, the single reviewed entry
+        for gene dnaE in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: epsilon_subunit
   label: DNA polymerase III epsilon subunit
   component_type: PROTEIN
@@ -84,6 +113,23 @@ components:
   - reference: PMID:3283127
     notes: Maki and Kornberg 1988 described partial assemblies of the Pol III core
       containing alpha, epsilon and theta subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P03007
+    protein_label: DNA polymerase III subunit epsilon
+    gene_symbol: dnaQ
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene dnaQ in Escherichia coli K-12,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P03007
+      notes: UniProtKB reviewed (Swiss-Prot) entry P03007, the single reviewed entry
+        for gene dnaQ in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: theta_subunit
   label: DNA polymerase III theta subunit
   component_type: PROTEIN
@@ -103,6 +149,23 @@ components:
   - reference: PMID:3283127
     notes: Maki and Kornberg 1988 described partial assemblies of the Pol III core
       containing alpha, epsilon and theta subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABS8
+    protein_label: DNA polymerase III subunit theta
+    gene_symbol: holE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene holE in Escherichia coli
+      K-12. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ABS8
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ABS8, the single reviewed entry
+        for gene holE in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli

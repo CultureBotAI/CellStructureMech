@@ -40,6 +40,18 @@ curation_history:
   action: FIXED_DISCUSSION_ANCHORS
   changes: Updated central-channel review TODO anchors after narrowing component ids.
   llm_assisted: true
+- timestamp: '2026-10-18T03:28:12Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: central channel
   synonym_type: RELATED_SYNONYM
@@ -70,6 +82,23 @@ components:
   - reference: DOI:10.1126/science.aac9176
     notes: Stuwe et al. 2015 used fungal Nup57, Nup49, and Nsp1 proteins when determining
       inner-ring and channel-nucleoporin architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P48837
+    protein_label: Nucleoporin NUP57
+    gene_symbol: NUP57
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP57 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        P48837.'
 - component_id: nup49_family
   label: Nup49-family FG-channel nucleoporin
   component_type: PROTEIN
@@ -92,6 +121,23 @@ components:
   - reference: DOI:10.1126/science.aac9176
     notes: Stuwe et al. 2015 used fungal Nup57, Nup49, and Nsp1 proteins when determining
       inner-ring and channel-nucleoporin architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02199
+    protein_label: Nucleoporin NUP49/NSP49
+    gene_symbol: NUP49
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NUP49 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10684247
+      notes: 'Rout MP et al. 2000, ‘The yeast nuclear pore complex: composition, architecture,
+        and transport mechanism.’, J Cell Biol. ECO:0000269 experimental evidence
+        cited by UniProt for the ''Nucleus, nuclear pore complex'' localisation of
+        Q02199.'
 - component_id: nsp1_family
   label: Nsp1-family FG-channel nucleoporin
   component_type: PROTEIN
@@ -114,6 +160,23 @@ components:
   - reference: DOI:10.1126/science.aac9176
     notes: Stuwe et al. 2015 used fungal Nup57, Nup49, and Nsp1 proteins when determining
       inner-ring and channel-nucleoporin architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P14907
+    protein_label: Nucleoporin NSP1
+    gene_symbol: NSP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene NSP1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P14907
+      notes: UniProtKB reviewed (Swiss-Prot) entry P14907, the single reviewed entry
+        for gene NSP1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4890
   taxon_label: Ascomycota

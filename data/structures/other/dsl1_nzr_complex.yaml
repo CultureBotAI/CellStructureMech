@@ -29,6 +29,18 @@ curation_history:
     for the Sec39/Dsl3 alias and removing an unsupported alias from the taxonomic-distribution
     summary.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:23:12Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 parent_structures:
 - GO:0099023
 synonyms:
@@ -58,6 +70,29 @@ components:
   - reference: DOI:10.1038/nsmb.1548
     notes: Tripathi, Ren, Jeffrey and Hughson 2009 described the yeast Dsl1p vesicle
       tethering complex as containing Dsl1p, Tip20p and Sec39p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53847
+    protein_label: Protein transport protein DSL1
+    gene_symbol: DSL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DSL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11493604
+      notes: Andag U et al. 2001, ‘The coatomer-interacting protein Dsl1p is required
+        for Golgi-to-endoplasmic reticulum retrieval in yeast.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Endoplasmic reticulum membrane'
+        localisation of P53847.
+    - reference: PMID:11739780
+      notes: Reilly BA et al. 2001, ‘Golgi-to-endoplasmic reticulum (ER) retrograde
+        traffic in yeast requires Dsl1p, a component of the ER target site that interacts
+        with a COPI coat subunit.’, Mol Biol Cell. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Endoplasmic reticulum membrane' localisation of
+        P53847.
 - component_id: tip20_dsl1_nzr_subunit
   label: Tip20 Dsl1/NZR subunit
   component_type: PROTEIN
@@ -74,6 +109,23 @@ components:
   - reference: DOI:10.1038/nsmb.1548
     notes: Tripathi, Ren, Jeffrey and Hughson 2009 described the yeast Dsl1p vesicle
       tethering complex as containing Dsl1p, Tip20p and Sec39p.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33891
+    protein_label: Protein transport protein TIP20
+    gene_symbol: TIP20
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TIP20 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:8334998
+      notes: Sweet DJ et al. 1993, ‘The TIP1 gene of Saccharomyces cerevisiae encodes
+        an 80 kDa cytoplasmic protein that interacts with the cytoplasmic domain of
+        Sec20p.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the
+        'Endoplasmic reticulum membrane' localisation of P33891.
 - component_id: sec39_dsl3_dsl1_nzr_subunit
   label: Sec39/Dsl3 Dsl1/NZR subunit
   component_type: PROTEIN
@@ -94,6 +146,24 @@ components:
   - reference: DOI:10.1091/mbc.e05-01-0056
     notes: Kraynack et al. 2005 established that budding-yeast Dsl3p is Sec39p and
       associates with Dsl1p-complex subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12745
+    protein_label: Protein transport protein SEC39
+    gene_symbol: SEC39
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SEC39 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym DSL3).
+    evidence:
+    - reference: PMID:15958492
+      notes: Kraynack BA et al. 2005, ‘Dsl1p, Tip20p, and the novel Dsl3(Sec39) protein
+        are required for the stability of the Q/t-SNARE complex at the endoplasmic
+        reticulum in yeast.’, Mol Biol Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Endoplasmic reticulum membrane' localisation of Q12745.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

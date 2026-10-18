@@ -28,6 +28,18 @@ curation_history:
   changes: Expanded repeated CAF-1 component evidence into independent YAML lists
     so the record does not emit anchors or aliases.
   llm_assisted: true
+- timestamp: '2026-10-18T03:20:06Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 synonyms:
 - synonym_text: chromatin assembly factor 1 complex
   synonym_type: EXACT_SYNONYM
@@ -61,6 +73,24 @@ components:
   - reference: DOI:10.1101/gad.11.3.345
     notes: Kaufman et al. 1997 purified Saccharomyces cerevisiae CAF-I and identified
       CAC1, CAC2 and CAC3/MSI1 as the genes encoding the three yeast CAF-I subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12495
+    protein_label: Chromatin assembly factor 1 subunit A
+    gene_symbol: RLF2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CAC1, which UniProt lists under
+      the primary name RLF2, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12495
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12495, the single reviewed entry
+        for gene CAC1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: cac2_caf1_p60_subunit
   label: Cac2 CAF-1 p60 subunit
   component_type: PROTEIN
@@ -80,6 +110,23 @@ components:
   - reference: DOI:10.1101/gad.11.3.345
     notes: Kaufman et al. 1997 purified Saccharomyces cerevisiae CAF-I and identified
       CAC1, CAC2 and CAC3/MSI1 as the genes encoding the three yeast CAF-I subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q04199
+    protein_label: Chromatin assembly factor 1 subunit B
+    gene_symbol: CAC2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CAC2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q04199
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q04199, the single reviewed entry
+        for gene CAC2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: msi1_cac3_caf1_p50_subunit
   label: Msi1/Cac3 CAF-1 p50 subunit
   component_type: PROTEIN
@@ -101,6 +148,24 @@ components:
   - reference: DOI:10.1101/gad.11.3.345
     notes: Kaufman et al. 1997 purified Saccharomyces cerevisiae CAF-I and identified
       CAC1, CAC2 and CAC3/MSI1 as the genes encoding the three yeast CAF-I subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P13712
+    protein_label: Histone-binding protein MSI1
+    gene_symbol: MSI1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MSI1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym CAC3).
+    evidence:
+    - reference: PMID:11238915
+      notes: Johnston SD et al. 2001, ‘CAC3(MSI1) suppression of RAS2(G19V) is independent
+        of chromatin assembly factor I and mediated by NPR1.’, Mol Cell Biol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Cytoplasm' localisation of
+        P13712.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

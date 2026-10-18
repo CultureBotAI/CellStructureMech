@@ -38,6 +38,18 @@ curation_history:
   changes: 'Resolved #975 and #976 by giving the two COMA bridge edges side-specific
     predicates and adding a TODO for the GO exact-synonym Mcm1p/Mcm21p spelling mismatch.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:21:25Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:51Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 4 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0140513
 part_of:
@@ -63,6 +75,22 @@ components:
   - reference: DOI:10.1101/gad.1144403
     notes: De Wulf, McAinsh and Sorger 2003 placed Ctf19p in the budding-yeast COMA
       kinetochore subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q02732
+    protein_label: Inner kinetochore subunit CTF19
+    gene_symbol: CTF19
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CTF19 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:29046335
+      notes: Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration
+        through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q02732.
 - component_id: okp1_subunit
   label: Okp1 subunit
   component_type: PROTEIN
@@ -82,6 +110,27 @@ components:
   - reference: DOI:10.1101/gad.1144403
     notes: De Wulf, McAinsh and Sorger 2003 placed Okp1p in the budding-yeast COMA
       kinetochore subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53298
+    protein_label: Inner kinetochore subunit OKP1
+    gene_symbol: OKP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene OKP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P53298.
+    - reference: PMID:10323865
+      notes: Ortiz J et al. 1999, ‘A putative protein complex consisting of Ctf19,
+        Mcm21, and Okp1 represents a missing link in the budding yeast kinetochore.’,
+        Genes Dev. ECO:0000269 experimental evidence cited by UniProt for the 'Chromosome,
+        centromere, kinetochore' localisation of P53298.
 - component_id: mcm21_subunit
   label: Mcm21 subunit
   component_type: PROTEIN
@@ -101,6 +150,22 @@ components:
   - reference: DOI:10.1101/gad.1144403
     notes: De Wulf, McAinsh and Sorger 2003 placed Mcm21p in the budding-yeast COMA
       kinetochore subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q06675
+    protein_label: Inner kinetochore subunit MCM21
+    gene_symbol: MCM21
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene MCM21 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:29046335
+      notes: Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration
+        through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q06675.
 - component_id: ame1_subunit
   label: Ame1 subunit
   component_type: PROTEIN
@@ -120,6 +185,27 @@ components:
   - reference: DOI:10.1101/gad.1144403
     notes: De Wulf, McAinsh and Sorger 2003 placed Ame1p in the budding-yeast COMA
       kinetochore subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38313
+    protein_label: Inner kinetochore subunit AME1
+    gene_symbol: AME1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene AME1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P38313.
+    - reference: PMID:29046335
+      notes: Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration
+        through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Chromosome, centromere, kinetochore' localisation
+        of P38313.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -184,9 +270,15 @@ causal_graphs:
   - node_id: centromeric_dna_proximal_subunits
     label: centromeric DNA-proximal kinetochore subunits
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P36012
   - node_id: microtubule_bound_subunits
     label: microtubule-bound kinetochore subunits
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P40460
+    - UniProtKB:P33895
+    - UniProtKB:Q04477
   edges:
   - subject: coma_complex
     predicate: is part of

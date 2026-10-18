@@ -25,6 +25,34 @@ components:
   evidence:
   - reference: DOI:10.1038/nrmicro.2017.40
     notes: Hospenthal et al. review T4P filament architecture.
+  gene_symbols:
+  - pilA
+  protein_examples:
+  - uniprot_id: UniProtKB:P04739
+    protein_label: Type IV major pilin protein PilA
+    gene_symbol: pilA
+    taxon_id: NCBITaxon:208964
+    taxon_label: Pseudomonas aeruginosa PAO1
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene pilA in Pseudomonas aeruginosa
+      PAO1. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:39666767
+      notes: Ochner H et al. 2024, ‘Structure of the Pseudomonas aeruginosa PAO1 Type
+        IV pilus.’, PLoS Pathog. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Fimbrium' localisation of P04739.
+    - reference: PMID:27162347
+      notes: Kilmury SL et al. 2016, ‘Type IV pilins regulate their own expression
+        via direct intramembrane interactions with the sensor kinase PilS.’, Proc
+        Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cell inner membrane' localisation of P04739.
+    - reference: PMID:23266901
+      notes: Okuda J et al. 2013, ‘Type IV pilus protein PilA of Pseudomonas aeruginosa
+        modulates calcium signaling through binding the calcium-modulating cyclophilin
+        ligand.’, J Infect Chemother. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Host endoplasmic reticulum membrane' localisation of P04739.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -65,6 +93,8 @@ causal_graphs:
   - node_id: extension_atpase
     label: PilB-family extension ATPase
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P22608
   - node_id: major_pilin
     label: major type IV pilin
     node_type: GENE_OR_PROTEIN
@@ -79,6 +109,8 @@ causal_graphs:
   - node_id: retraction_atpase
     label: PilT-family retraction ATPase
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P24559
   - node_id: twitching_motility
     label: type IV pilus-dependent motility
     node_type: BIOLOGICAL_PROCESS
@@ -184,6 +216,12 @@ curation_history:
   changes: 'Addressed #2184: Removed cytoplasmic motor constituent rows, retained
     their evidenced external graph nodes, and scoped the separate-motor mechanism
     to type IVa systems.'
+  llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s); added 2 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
 datasets:
 - accession: CryoETDataPortal:10155

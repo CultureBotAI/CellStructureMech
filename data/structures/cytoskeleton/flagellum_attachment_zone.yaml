@@ -33,6 +33,18 @@ curation_history:
     assembly essentiality UNKNOWN because RNAi retains abnormal FAZ structures and
     does not prove complete protein loss.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:11:21Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 2 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: FAZ
   synonym_type: RELATED_SYNONYM
@@ -79,6 +91,24 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession for
     the complete FAZ1 protein family was curated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q585H6
+    protein_label: Flagellar attachment zone protein 1
+    gene_symbol: FAZ1
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene FAZ1 in Trypanosoma brucei
+      brucei TREU927, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym Tb927.4.3740).
+    evidence:
+    - reference: PMID:17945531
+      notes: Vaughan S et al. 2008, ‘A repetitive protein essential for the flagellum
+        attachment zone filament structure and function in Trypanosoma brucei.’, Protist.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cell projection,
+        cilium, flagellum' localisation of Q585H6.
 - component_id: faz2
   label: FAZ2 filament protein
   component_type: PROTEIN
@@ -99,6 +129,24 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: No exact source-neutral InterPro, Pfam or NCBIfam accession for
     the complete FAZ2 protein family was curated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q4GYE7
+    protein_label: Flagellar attachment zone protein 1 conserved domain-containing
+      protein
+    gene_symbol: FAZ2
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene FAZ2 in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure (also declared
+      as synonym Tb927.1.4310).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q4GYE7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q4GYE7 for gene FAZ2 in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: cc2d
   label: CC2D FAZ filament protein
   component_type: PROTEIN
@@ -118,6 +166,23 @@ components:
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The CC2D component is curated as a T. brucei FAZ protein by gene
     name because no exact source-neutral complete-family CURIE was curated.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q583I5
+    protein_label: C2 domain-containing protein
+    gene_symbol: CC2D
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CC2D in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure (also declared
+      as synonym Tb927.4.2080).
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q583I5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q583I5 for gene CC2D in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5691
   taxon_label: Trypanosoma brucei

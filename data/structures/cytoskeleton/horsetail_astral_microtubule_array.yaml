@@ -19,6 +19,18 @@ curation_history:
     function and six-edge assembly graph, explicit boundary discussions and an unchanged
     checksum-verified CC BY 3.0 figure.
   llm_assisted: true
+- timestamp: '2026-10-18T03:11:23Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005818
 part_of:
@@ -49,7 +61,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-08'
     role: Reference-sequence exemplar for species-level Atb2 imaging; the exact reference
-      stock is not asserted to be the experimental strain.
+      stock is not asserted to be the experimental strain (also declared as synonym
+      atb2, alp2).
     evidence:
     - reference: DOI:10.1016/j.cub.2012.02.042
       notes: Figure 4A follows mCherry-Atb2 in the meiotic radial array before its
@@ -60,6 +73,22 @@ components:
         atb2/alp2 aliases and reference taxon verified on 2026-10-08. The native InterPro
         response includes the exact Alpha tubulin family; experimental membership
         comes from the primary study.
+  - uniprot_id: UniProtKB:P04688
+    protein_label: Tubulin alpha-1 chain
+    gene_symbol: nda2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene nda2 in Schizosaccharomyces
+      pombe 972h-. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P04688
+      notes: UniProtKB reviewed (Swiss-Prot) entry P04688, the single reviewed entry
+        for gene nda2 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
   evidence:
   - reference: DOI:10.1016/j.cub.2012.02.042
     notes: Figure 4A directly images mCherry-Atb2-labeled array microtubules in homothallic
@@ -83,6 +112,25 @@ components:
   - reference: DOI:10.1016/j.cub.2012.02.042
     notes: Tomography and fluorescence establish the radial microtubule structure
       to which the generic polymer composition applies.
+  gene_symbols:
+  - nda3
+  protein_examples:
+  - uniprot_id: UniProtKB:P05219
+    protein_label: Tubulin beta chain
+    gene_symbol: nda3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nda3 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P05219
+      notes: UniProtKB reviewed (Swiss-Prot) entry P05219, the single reviewed entry
+        for gene nda3 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe

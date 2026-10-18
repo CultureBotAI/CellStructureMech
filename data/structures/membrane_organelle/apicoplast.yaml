@@ -38,6 +38,18 @@ curation_history:
     graph as FUNCTION; resolved #305 by scoping the Toxoplasma gondii canonical-example
     note to the Tic20 paper it cites.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:16:10Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 5 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0009536
 has_part:
@@ -73,6 +85,24 @@ components:
   - reference: DOI:10.1073/pnas.0803862105
     notes: van Dooren et al. 2008 localized Toxoplasma gondii Tic20 to the apicoplast
       and showed that TgTic20 disruption blocks apicoplast protein import.
+  gene_symbols:
+  - TIC20
+  protein_examples:
+  - uniprot_id: UniProtKB:S8GBF3
+    protein_label: TIC20
+    gene_symbol: TIC20
+    taxon_id: NCBITaxon:508771
+    taxon_label: Toxoplasma gondii ME49
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TIC20 in Toxoplasma
+      gondii ME49. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/S8GBF3
+      notes: UniProtKB unreviewed (TrEMBL) entry S8GBF3 for gene TIC20 in Toxoplasma
+        gondii ME49. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: selma_erad_import_machinery
   label: apicoplast SELMA/ERAD-derived import machinery
   component_type: PROTEIN
@@ -89,6 +119,39 @@ components:
   - reference: DOI:10.1371/journal.ppat.1003426
     notes: Agrawal et al. 2013 identified an apicoplast-localized ubiquitylation system
       required for import of nuclear-encoded plastid proteins.
+  gene_symbols:
+  - DER1
+  protein_examples:
+  - uniprot_id: UniProtKB:O97275
+    protein_label: Derlin
+    gene_symbol: DER1
+    taxon_id: NCBITaxon:36329
+    taxon_label: Plasmodium falciparum 3D7
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene DER1 in Plasmodium
+      falciparum 3D7. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O97275
+      notes: UniProtKB unreviewed (TrEMBL) entry O97275 for gene DER1 in Plasmodium
+        falciparum 3D7. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:B9PY98
+    protein_label: Derlin
+    gene_symbol: DER1
+    taxon_id: NCBITaxon:5811
+    taxon_label: Toxoplasma gondii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene DER1 in Toxoplasma
+      gondii. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/B9PY98
+      notes: UniProtKB unreviewed (TrEMBL) entry B9PY98 for gene DER1 in Toxoplasma
+        gondii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: nuclear_encoded_metabolic_enzymes
   label: nuclear-encoded apicoplast metabolic enzymes
   component_type: PROTEIN
@@ -109,6 +172,59 @@ components:
     notes: van Dooren and Striepen 2013 review the apicoplast as a plastid carrying
       multiple parasite metabolic pathways that depend on nuclear-encoded imported
       proteins.
+  gene_symbols:
+  - ispG
+  - ispH
+  - fabI
+  - fabZ
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8I295
+    protein_label: 4-hydroxy-3-methylbut-2-enyl diphosphate reductase, apicoplast
+    gene_symbol: LytB
+    taxon_id: NCBITaxon:36329
+    taxon_label: Plasmodium falciparum 3D7
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ispH, which UniProt lists under
+      the primary name LytB, in Plasmodium falciparum 3D7, a taxon this record names.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8I295
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q8I295, the single reviewed entry
+        for gene ispH in Plasmodium falciparum 3D7. Establishes the accession and
+        gene identity only; the component's membership in this structure rests on
+        the record's own sources.
+  - uniprot_id: UniProtKB:Q965D5
+    protein_label: Enoyl-acyl-carrier protein reductase
+    gene_symbol: fabI
+    taxon_id: NCBITaxon:5833
+    taxon_label: Plasmodium falciparum
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene fabI in Plasmodium
+      falciparum. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q965D5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q965D5 for gene fabI in Plasmodium
+        falciparum. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q965D7
+    protein_label: 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    gene_symbol: fabZ
+    taxon_id: NCBITaxon:5833
+    taxon_label: Plasmodium falciparum
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene fabZ in Plasmodium
+      falciparum. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q965D7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q965D7 for gene fabZ in Plasmodium
+        falciparum. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5794
   taxon_label: Apicomplexa

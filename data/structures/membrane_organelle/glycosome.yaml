@@ -32,6 +32,18 @@ curation_history:
   action: ADDRESSED_REVIEW
   changes: Retyped the glycosome lumen graph node as CELLULAR_LOCALIZATION.
   llm_assisted: true
+- timestamp: '2026-10-18T03:17:45Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005777
 has_part:
@@ -70,6 +82,91 @@ components:
   - reference: DOI:10.1073/pnas.0806664105
     notes: Haanstra et al. 2008 used PEX14-deficient trypanosomes to test the importance
       of sequestering glycolytic enzymes in glycosomes.
+  gene_symbols:
+  - HK1
+  - PGI
+  - PFK
+  - TIM
+  - GAPDH
+  - PGKC
+  protein_examples:
+  - uniprot_id: UniProtKB:P13377
+    protein_label: Glucose-6-phosphate isomerase, glycosomal
+    gene_symbol: PGI
+    taxon_id: NCBITaxon:5702
+    taxon_label: Trypanosoma brucei brucei
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PGI in Trypanosoma brucei brucei,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P13377
+      notes: UniProtKB reviewed (Swiss-Prot) entry P13377, the single reviewed entry
+        for gene PGI in Trypanosoma brucei brucei. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:O15648
+    protein_label: ATP-dependent 6-phosphofructokinase
+    gene_symbol: pfk
+    taxon_id: NCBITaxon:5702
+    taxon_label: Trypanosoma brucei brucei
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PFK in Trypanosoma brucei brucei,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:2940090
+      notes: Misset O et al. 1986, ‘Glycolytic enzymes of Trypanosoma brucei. Simultaneous
+        purification, intraglycosomal concentrations and physical properties.’, Eur
+        J Biochem. ECO:0000269 experimental evidence cited by UniProt for the 'Glycosome'
+        localisation of O15648.
+  - uniprot_id: UniProtKB:A0A3G1VTN5
+    protein_label: Phosphotransferase
+    gene_symbol: Hk1
+    taxon_id: NCBITaxon:5702
+    taxon_label: Trypanosoma brucei brucei
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene HK1 in Trypanosoma
+      brucei brucei. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A3G1VTN5
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A3G1VTN5 for gene HK1 in Trypanosoma
+        brucei brucei. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:O96429
+    protein_label: Glyceraldehyde-3-phosphate dehydrogenase
+    gene_symbol: GAPDH
+    taxon_id: NCBITaxon:31285
+    taxon_label: Trypanosoma brucei gambiense
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene GAPDH in Trypanosoma
+      brucei gambiense. Identifier for the component's declared gene symbol; it is
+      not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O96429
+      notes: UniProtKB unreviewed (TrEMBL) entry O96429 for gene GAPDH in Trypanosoma
+        brucei gambiense. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q4GZG4
+    protein_label: Phosphoglycerate kinase
+    gene_symbol: PGKC
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene PGKC in Trypanosoma
+      brucei brucei TREU927. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q4GZG4
+      notes: UniProtKB unreviewed (TrEMBL) entry Q4GZG4 for gene PGKC in Trypanosoma
+        brucei brucei TREU927. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: peroxin_import_machinery
   label: glycosomal peroxin import machinery
   component_type: PROTEIN
@@ -92,6 +189,73 @@ components:
   - reference: DOI:10.1016/j.bbamcr.2015.09.015
     notes: Haanstra et al. 2016 review conserved peroxin machinery in trypanosomatid
       glycosome biogenesis and maintenance.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q57W55
+    protein_label: Glycosomal targeting signal receptor
+    gene_symbol: PEX5
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PEX5 in Trypanosoma brucei
+      brucei TREU927, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10589985
+      notes: de Walque S et al. 1999, ‘Cloning and analysis of the PTS-1 receptor
+        in Trypanosoma brucei.’, Mol Biochem Parasitol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Cytoplasm, cytosol' localisation of Q57W55.
+    - reference: PMID:17320990
+      notes: Galland N et al. 2007, ‘Characterization of the role of the receptors
+        PEX5 and PEX7 in the import of proteins into glycosomes of Trypanosoma brucei.’,
+        Biochim Biophys Acta. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cytoplasm, cytosol' localisation of Q57W55.
+    - reference: PMID:23994617
+      notes: Gualdrón-López M et al. 2013, ‘Ubiquitination of the glycosomal matrix
+        protein receptor PEX5 in Trypanosoma brucei by PEX4 displays novel features.’,
+        Biochim Biophys Acta. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cytoplasm, cytosol' localisation of Q57W55.
+  - uniprot_id: UniProtKB:Q57W97
+    protein_label: Glycosomal targeting signal 2 receptor
+    gene_symbol: PEX7
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PEX7 in Trypanosoma brucei
+      brucei TREU927, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17320990
+      notes: Galland N et al. 2007, ‘Characterization of the role of the receptors
+        PEX5 and PEX7 in the import of proteins into glycosomes of Trypanosoma brucei.’,
+        Biochim Biophys Acta. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cytoplasm, cytosol' localisation of Q57W97.
+  - uniprot_id: UniProtKB:Q38CL4
+    protein_label: Glycosomal membrane protein PEX14
+    gene_symbol: PEX14
+    taxon_id: NCBITaxon:185431
+    taxon_label: Trypanosoma brucei brucei TREU927
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PEX14 in Trypanosoma brucei
+      brucei TREU927, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12386344
+      notes: Furuya T et al. 2002, ‘Glucose is toxic to glycosome-deficient trypanosomes.’,
+        Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Glycosome membrane' localisation of Q38CL4.
+    - reference: PMID:12709066
+      notes: Moyersoen J et al. 2003, ‘Characterization of Trypanosoma brucei PEX14
+        and its role in the import of glycosomal matrix proteins.’, Eur J Biochem.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Glycosome membrane'
+        localisation of Q38CL4.
+    - reference: PMID:22809509
+      notes: Verplaetse E et al. 2012, ‘Studies on the organization of the docking
+        complex involved in matrix protein import into glycosomes of Trypanosoma brucei.’,
+        Biochem Biophys Res Commun. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Glycosome membrane' localisation of Q38CL4.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5653
   taxon_label: Kinetoplastea

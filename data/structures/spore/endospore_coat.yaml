@@ -28,6 +28,13 @@ curation_history:
     function label to the endospore coat and adding the GO:0043591 external-structure
     node and parthood edge to the topology graph.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:37:37Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 part_of:
 - GO:0043591
 components:
@@ -57,6 +64,77 @@ components:
   - reference: PMID:3139490
     notes: Zheng et al. identified CotE as a morphogenetic protein needed to assemble
       the outer Bacillus subtilis spore coat.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35149
+    protein_label: Stage IV sporulation protein A
+    gene_symbol: spoIVA
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene spoIVA in Bacillus subtilis
+      subsp. subtilis str. 168, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P35149
+      notes: UniProtKB reviewed (Swiss-Prot) entry P35149, the single reviewed entry
+        for gene spoIVA in Bacillus subtilis subsp. subtilis str. 168. Establishes
+        the accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
+  - uniprot_id: UniProtKB:O32062
+    protein_label: Spore coat morphogenetic protein SafA
+    gene_symbol: safA
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene safA in Bacillus subtilis subsp.
+      subtilis str. 168, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:11325931
+      notes: Ozin AJ et al. 2001, ‘SpoVID guides SafA to the spore coat in Bacillus
+        subtilis.’, J Bacteriol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Forespore' localisation of O32062.
+    - reference: PMID:30168214
+      notes: Nunes F et al. 2018, ‘SpoVID functions as a non-competitive hub that
+        connects the modules for assembly of the inner and outer spore coat layers
+        in Bacillus subtilis.’, Mol Microbiol. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Forespore' localisation of O32062.
+    - reference: PMID:30455281
+      notes: Pereira FC et al. 2019, ‘A LysM Domain Intervenes in Sequential Protein-Protein
+        and Protein-Peptidoglycan Interactions Important for Spore Coat Assembly in
+        Bacillus subtilis.’, J Bacteriol. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Forespore' localisation of O32062.
+  - uniprot_id: UniProtKB:P14016
+    protein_label: Spore coat morphogenetic protein CotE
+    gene_symbol: cotE
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis subsp. subtilis str. 168
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene cotE in Bacillus subtilis subsp.
+      subtilis str. 168, a taxon this record names. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:17172339
+      notes: Costa T et al. 2007, ‘The timing of cotE expression affects Bacillus
+        subtilis spore coat morphology but not lysozyme resistance.’, J Bacteriol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Forespore' localisation
+        of P14016.
+    - reference: PMID:26484546
+      notes: Isticato R et al. 2015, ‘The Direct Interaction between Two Morphogenetic
+        Proteins Is Essential for Spore Coat Formation in Bacillus subtilis.’, PLoS
+        One. ECO:0000269 experimental evidence cited by UniProt for the 'Forespore'
+        localisation of P14016.
+    - reference: PMID:8299942
+      notes: Driks A et al. 1994, ‘Subcellular localization of proteins involved in
+        the assembly of the spore coat of Bacillus subtilis.’, Genes Dev. ECO:0000269
+        experimental evidence cited by UniProt for the 'Forespore' localisation of
+        P14016.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1239
   taxon_label: Bacillota

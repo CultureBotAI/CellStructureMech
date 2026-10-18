@@ -20,6 +20,11 @@ curation_history:
     causal edges, verified structural datasets, a CC BY 4.0 figure, and explicit oligomer/source-provenance
     conflicts.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:52Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
 parent_structures:
 - GO:1905368
 part_of:
@@ -45,7 +50,7 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-05'
     role: Reviewed reference sequence for the yeast mitochondrial Lon subunit, not
-      an identifier for the entire oligomer.
+      an identifier for the entire oligomer (also declared as synonym LON).
     evidence:
     - reference: UniProtKB:P36775
       notes: Native reviewed record verifies the gene aliases PIM1/LON, loci YBL022C/YBL0440,

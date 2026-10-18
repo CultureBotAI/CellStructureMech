@@ -27,6 +27,18 @@ curation_history:
     sterol-polarization DOI from the septin-cap colocalization edge and top-level
     evidence.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:12:49Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0032156
 part_of:
@@ -48,6 +60,84 @@ components:
   - reference: GO:0032156
     notes: GO:0032156 defines the broader septin cytoskeleton as cytoskeleton composed
       of septins and associated proteins.
+  gene_symbols:
+  - CDC3
+  - CDC10
+  - CDC11
+  - CDC12
+  protein_examples:
+  - uniprot_id: UniProtKB:P39826
+    protein_label: Cell division control protein 3
+    gene_symbol: CDC3
+    taxon_id: NCBITaxon:5476
+    taxon_label: Candida albicans
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC3 in Candida albicans, a
+      taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39826
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39826, the single reviewed entry
+        for gene CDC3 in Candida albicans. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
+  - uniprot_id: UniProtKB:P39827
+    protein_label: Cell division control protein 10
+    gene_symbol: CDC10
+    taxon_id: NCBITaxon:237561
+    taxon_label: Candida albicans SC5314
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC10 in Candida albicans SC5314,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39827
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39827, the single reviewed entry
+        for gene CDC10 in Candida albicans SC5314. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:G1UB61
+    protein_label: Septin CDC11
+    gene_symbol: CDC11
+    taxon_id: NCBITaxon:237561
+    taxon_label: Candida albicans SC5314
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC11 in Candida albicans SC5314,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11454197
+      notes: Sudbery PE 2001, ‘The germ tubes of Candida albicans hyphae and pseudohyphae
+        show different patterns of septin ring localization.’, Mol Microbiol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Bud neck' localisation of
+        G1UB61.
+    - reference: PMID:12181342
+      notes: Warenda AJ et al. 2002, ‘Septin function in Candida albicans morphogenesis.’,
+        Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt for the
+        'Bud neck' localisation of G1UB61.
+    - reference: PMID:19915075
+      notes: Zhang C et al. 2010, ‘A photostable green fluorescent protein variant
+        for analysis of protein localization in Candida albicans.’, Eukaryot Cell.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Bud neck' localisation
+        of G1UB61.
+  - uniprot_id: UniProtKB:G1UAV6
+    protein_label: Septin
+    gene_symbol: CDC12
+    taxon_id: NCBITaxon:5476
+    taxon_label: Candida albicans
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CDC12 in Candida
+      albicans. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/G1UAV6
+      notes: UniProtKB unreviewed (TrEMBL) entry G1UAV6 for gene CDC12 in Candida
+        albicans. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans

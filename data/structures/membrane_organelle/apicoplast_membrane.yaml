@@ -20,6 +20,11 @@ curation_history:
     boundary function, GO/DOI evidence, a nonmechanistic apicoplast-membrane topology
     graph, and a lipid-grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 parent_structures:
 - GO:0016020
 part_of:
@@ -122,9 +127,14 @@ causal_graphs:
   - node_id: selma_import_system
     label: SELMA/ERAD-derived import machinery
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:O97275
+    - UniProtKB:B9PY98
   - node_id: tic20_translocon
     label: Tic20 inner-membrane translocon
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:S8GBF3
   edges:
   - subject: apicoplast_membrane
     predicate: bounds

@@ -22,6 +22,11 @@ curation_history:
     falciparum female-gametocyte scope, DOI/GO evidence, a nonmechanistic Pfg377 emergence
     graph, and component-grounding and release-scope discussions.
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0031410
 components:
@@ -61,6 +66,22 @@ components:
   - reference: DOI:10.1111/j.1365-2958.2007.06039.x
     notes: De Koning-Ward et al. 2008 used targeted gene disruption to tie Pfg377
       to normal osmiophilic-body formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A059WIJ2
+    protein_label: Pfg377
+    gene_symbol: pfg377
+    taxon_id: NCBITaxon:5833
+    taxon_label: Plasmodium falciparum
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene Pfg377 in Plasmodium
+      falciparum. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A059WIJ2
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A059WIJ2 for gene Pfg377 in Plasmodium
+        falciparum. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5833
   taxon_label: Plasmodium falciparum

@@ -31,6 +31,42 @@ components:
   - reference: DOI:10.1042/bst20110773
     notes: Walker 2013 reviews the same sector composition, and the variable c-ring
       stoichiometry across species.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABB0
+    protein_label: ATP synthase subunit alpha
+    gene_symbol: atpA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene atpA in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell inner membrane' localisation of P0ABB0.
+  - uniprot_id: UniProtKB:P0ABB4
+    protein_label: ATP synthase subunit beta
+    gene_symbol: atpD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene atpD in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ABB4
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ABB4, the single reviewed entry
+        for gene atpD in Escherichia coli K-12. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: central_stalk
   label: central stalk (gamma, epsilon)
   component_type: PROTEIN_COMPLEX
@@ -45,6 +81,24 @@ components:
   - reference: DOI:10.1146/annurev-biochem-013118-110903
     notes: Kuehlbrandt 2019 describes the central stalk transmitting rotation into
       the catalytic head.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABA6
+    protein_label: ATP synthase gamma chain
+    gene_symbol: atpG
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene atpG in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell inner membrane' localisation of P0ABA6.
 - component_id: c_ring
   label: Fo c-ring
   component_type: PROTEIN_COMPLEX
@@ -62,6 +116,24 @@ components:
   - reference: DOI:10.1042/bst20110773
     notes: Walker 2013 reviews the same sector composition, and the variable c-ring
       stoichiometry across species.
+  protein_examples:
+  - uniprot_id: UniProtKB:P68699
+    protein_label: ATP synthase subunit c
+    gene_symbol: atpE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene atpE in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, ‘Global topology analysis of the Escherichia coli
+        inner membrane proteome.’, Science. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cell inner membrane' localisation of P68699.
 - component_id: a_subunit
   label: Fo subunit a
   component_type: PROTEIN
@@ -291,6 +363,18 @@ curation_history:
   action: ADDRESS_REVIEW
   changes: '#2307: Remove family-mismatched archaeal occurrence, scope the stalk prototype
     and unground the ATP-product predicate.'
+  llm_assisted: true
+- timestamp: '2026-10-18T03:14:00Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: removed 1 non-matching protein_example(s).
   llm_assisted: true
 datasets:
 - accession: PDB:6OQR

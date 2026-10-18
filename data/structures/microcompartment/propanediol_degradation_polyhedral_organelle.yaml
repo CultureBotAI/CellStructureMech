@@ -33,6 +33,18 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T03:19:13Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 3 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:50Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: Pdu microcompartment
   synonym_type: EXACT_SYNONYM
@@ -310,6 +322,94 @@ components:
   - reference: DOI:10.1128/JB.05661-11
     notes: Fan and Bobik showed that the PduD N-terminal region packages PduCDE into
       the Pdu microcompartment.
+  protein_examples:
+  - uniprot_id: UniProtKB:P37450
+    protein_label: Propanediol dehydratase large subunit
+    gene_symbol: pduC
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene pduC in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:10498708
+      notes: Bobik TA et al. 1999, ‘The propanediol utilization (pdu) operon of Salmonella
+        enterica serovar Typhimurium LT2 includes genes necessary for formation of
+        polyhedral organelles involved in coenzyme B(12)-dependent 1, 2-propanediol
+        degradation.’, J Bacteriol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Bacterial microcompartment' localisation of P37450.
+    - reference: PMID:11844753
+      notes: Havemann GD et al. 2002, ‘PduA is a shell protein of polyhedral organelles
+        involved in coenzyme B(12)-dependent degradation of 1,2-propanediol in Salmonella
+        enterica serovar typhimurium LT2.’, J Bacteriol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Bacterial microcompartment' localisation
+        of P37450.
+    - reference: PMID:12923081
+      notes: Havemann GD et al. 2003, ‘Protein content of polyhedral organelles involved
+        in coenzyme B12-dependent degradation of 1,2-propanediol in Salmonella enterica
+        serovar Typhimurium LT2.’, J Bacteriol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bacterial microcompartment' localisation of P37450.
+  - uniprot_id: UniProtKB:O31041
+    protein_label: Propanediol dehydratase medium subunit
+    gene_symbol: pduD
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene pduD in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:10498708
+      notes: Bobik TA et al. 1999, ‘The propanediol utilization (pdu) operon of Salmonella
+        enterica serovar Typhimurium LT2 includes genes necessary for formation of
+        polyhedral organelles involved in coenzyme B(12)-dependent 1, 2-propanediol
+        degradation.’, J Bacteriol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Bacterial microcompartment' localisation of O31041.
+    - reference: PMID:11844753
+      notes: Havemann GD et al. 2002, ‘PduA is a shell protein of polyhedral organelles
+        involved in coenzyme B(12)-dependent degradation of 1,2-propanediol in Salmonella
+        enterica serovar typhimurium LT2.’, J Bacteriol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Bacterial microcompartment' localisation
+        of O31041.
+    - reference: PMID:12923081
+      notes: Havemann GD et al. 2003, ‘Protein content of polyhedral organelles involved
+        in coenzyme B12-dependent degradation of 1,2-propanediol in Salmonella enterica
+        serovar Typhimurium LT2.’, J Bacteriol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bacterial microcompartment' localisation of O31041.
+  - uniprot_id: UniProtKB:O31042
+    protein_label: Propanediol dehydratase small subunit
+    gene_symbol: pduE
+    taxon_id: NCBITaxon:99287
+    taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene pduE in Salmonella enterica
+      subsp. enterica serovar Typhimurium str. LT2, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: PMID:10498708
+      notes: Bobik TA et al. 1999, ‘The propanediol utilization (pdu) operon of Salmonella
+        enterica serovar Typhimurium LT2 includes genes necessary for formation of
+        polyhedral organelles involved in coenzyme B(12)-dependent 1, 2-propanediol
+        degradation.’, J Bacteriol. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Bacterial microcompartment' localisation of O31042.
+    - reference: PMID:11844753
+      notes: Havemann GD et al. 2002, ‘PduA is a shell protein of polyhedral organelles
+        involved in coenzyme B(12)-dependent degradation of 1,2-propanediol in Salmonella
+        enterica serovar typhimurium LT2.’, J Bacteriol. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Bacterial microcompartment' localisation
+        of O31042.
+    - reference: PMID:12923081
+      notes: Havemann GD et al. 2003, ‘Protein content of polyhedral organelles involved
+        in coenzyme B12-dependent degradation of 1,2-propanediol in Salmonella enterica
+        serovar Typhimurium LT2.’, J Bacteriol. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Bacterial microcompartment' localisation of O31042.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2
   taxon_label: Bacteria
@@ -380,6 +480,10 @@ causal_graphs:
   - node_id: pdu_lumen_enzyme_core
     label: Pdu lumen enzyme core
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P37450
+    - UniProtKB:O31041
+    - UniProtKB:O31042
   - node_id: pdum_structural_protein
     label: PduM structural protein
     node_type: GENE_OR_PROTEIN

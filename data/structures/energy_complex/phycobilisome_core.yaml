@@ -40,6 +40,18 @@ curation_history:
   changes: '#2305: Correct Zheng authorship and state attribution, and qualify the
     separate Kawakami core/rod preparations.'
   llm_assisted: true
+- timestamp: '2026-10-18T03:13:51Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 5 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-18T05:29:49Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: allophycocyanin core
   synonym_type: EXACT_SYNONYM
@@ -73,6 +85,39 @@ components:
   - reference: DOI:10.1038/s41467-021-25813-y
     notes: Zheng et al. 2021 resolved PCC 7002 and PCC 7120 allophycocyanin core subunits
       within intact phycobilisomes by cryo-EM.
+  protein_examples:
+  - uniprot_id: UniProtKB:B1XQM2
+    protein_label: Allophycocyanin alpha subunit
+    gene_symbol: apcA
+    taxon_id: NCBITaxon:32049
+    taxon_label: Picosynechococcus sp. PCC 7002
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene apcA in Picosynechococcus sp.
+      PCC 7002, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/B1XQM2
+      notes: UniProtKB reviewed (Swiss-Prot) entry B1XQM2, the single reviewed entry
+        for gene apcA in Picosynechococcus sp. PCC 7002. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:O68970
+    protein_label: Allophycocyanin beta subunit
+    gene_symbol: apcB
+    taxon_id: NCBITaxon:32049
+    taxon_label: Picosynechococcus sp. PCC 7002
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene apcB in Picosynechococcus sp.
+      PCC 7002, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O68970
+      notes: UniProtKB reviewed (Swiss-Prot) entry O68970, the single reviewed entry
+        for gene apcB in Picosynechococcus sp. PCC 7002. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: core_linkers_and_terminal_emitters
   label: phycobilisome core linker and terminal emitter polypeptides
   component_type: PROTEIN
@@ -98,6 +143,71 @@ components:
     notes: Zheng et al. 2021 modeled PCC 7002 and PCC 7120 core linkers and terminal
       emitters in cryo-EM phycobilisome structures; this paper is not the PCC 6803
       OCP-bound photoprotection study.
+  protein_examples:
+  - uniprot_id: UniProtKB:O68966
+    protein_label: Allophycocyanin subunit alpha-B
+    gene_symbol: apcD
+    taxon_id: NCBITaxon:32049
+    taxon_label: Picosynechococcus sp. PCC 7002
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene apcD in Picosynechococcus sp.
+      PCC 7002, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O68966
+      notes: UniProtKB reviewed (Swiss-Prot) entry O68966, the single reviewed entry
+        for gene apcD in Picosynechococcus sp. PCC 7002. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:O68973
+    protein_label: Phycobiliprotein ApcE
+    gene_symbol: apcE
+    taxon_id: NCBITaxon:32049
+    taxon_label: Picosynechococcus sp. PCC 7002
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene apcE in Picosynechococcus sp.
+      PCC 7002, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O68973
+      notes: UniProtKB reviewed (Swiss-Prot) entry O68973, the single reviewed entry
+        for gene apcE in Picosynechococcus sp. PCC 7002. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:O68967
+    protein_label: Allophycocyanin subunit beta-18
+    gene_symbol: apcF
+    taxon_id: NCBITaxon:32049
+    taxon_label: Picosynechococcus sp. PCC 7002
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene apcF in Picosynechococcus sp.
+      PCC 7002, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O68967
+      notes: UniProtKB reviewed (Swiss-Prot) entry O68967, the single reviewed entry
+        for gene apcF in Picosynechococcus sp. PCC 7002. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:O68971
+    protein_label: Phycobilisome 7.8 kDa linker polypeptide, allophycocyanin-associated,
+      core
+    gene_symbol: apcC
+    taxon_id: NCBITaxon:32049
+    taxon_label: Picosynechococcus sp. PCC 7002
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene apcC in Picosynechococcus
+      sp. PCC 7002. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O68971
+      notes: UniProtKB unreviewed (TrEMBL) entry O68971 for gene apcC in Picosynechococcus
+        sp. PCC 7002. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 - component_id: core_phycobilin_chromophores
   label: allophycocyanin-bound phycobilin chromophores
   component_type: SMALL_MOLECULE

@@ -48,6 +48,11 @@ curation_history:
     and separated filament is-a from cytoskeleton parthood without changing the minted
     identity.'
   llm_assisted: true
+- timestamp: '2026-10-18T05:29:48Z'
+  curator: claude-opus-4-7
+  action: EDIT
+  changes: added 1 verified UniProtKB protein_example(s).
+  llm_assisted: true
 parent_structures:
 - GO:0099513
 components:
@@ -69,6 +74,22 @@ components:
       filaments and active plasmid segregation.
   - reference: DOI:10.1128/JB.00676-09
     notes: Polka et al. 2009 analyzed purified AlfA polymerization and filament ultrastructure.
+  protein_examples:
+  - uniprot_id: UniProtKB:O52947
+    protein_label: Actin-like protein N-terminal domain-containing protein
+    gene_symbol: alfA
+    taxon_id: NCBITaxon:1423
+    taxon_label: Bacillus subtilis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene alfA in Bacillus
+      subtilis. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O52947
+      notes: UniProtKB unreviewed (TrEMBL) entry O52947 for gene alfA in Bacillus
+        subtilis. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1423
   taxon_label: Bacillus subtilis
