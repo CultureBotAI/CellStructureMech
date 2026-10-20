@@ -1,0 +1,710 @@
+# Axonemal doublet outer junction architecture and CFAP77 provenance
+
+- Review: 20261020T035513Z-axonemal-microtubule-doublet-outer-junction-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-20T03:52:37Z
+- Finished UTC: 2026-10-20T03:55:13Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Architecture, source-specific membership and evidence-qualified stabilization are supported. One minor issue concerns the CFAP77A locus mapping and inaccurate attribution to UniProt’s gene-name field.
+
+## Scope And Provenance
+
+Entire record, all four edges, both primary studies and the2023 supplement.
+
+Selection: Seventh unreviewed path of batch3.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0160114 | data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml | maintained | axonemal microtubule doublet outer junction |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0160114 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0160114 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0160114 | 9 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:0160114 | The named-locus question is resolved by primary supplement and UniProt; no expression-module claim is asserted or used as localization evidence. |
+| Claim-level scientific review | passed | True | GO:0160114 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0160114 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0160114 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0160114 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0160114 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0160114 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Outer A/B boundary
+
+identity: supported. Targets: GO:0160114.
+
+Exact GO identity and doublet parthood are supported. The junction includes the tubulin interface with reinforcing proteins; it is distinct from the inner junction.
+
+### Species-dependent junction proteins
+
+scope: supported. Targets: GO:0160114.
+
+Both source-specific protein sets are supported. The generic label does not claim an identical set in all organisms. The supplement supports the authors’ species-specific classification of OJ2/OJ3; OJ3 sequence identity and similar external densities elsewhere remain unresolved.
+
+### CFAP77A locus correspondence
+
+provenance: concern. Targets: GO:0160114.
+
+The accession is a correct representative when the paper supplement is considered. UniProt alone does not supply the named CFAP77 mapping. The role should cite Table3 and distinguish an ORF identifier from a primary gene name.
+
+### Tetrahymena species and strain
+
+scope: supported. Targets: GO:0160114.
+
+Species-level morphology and the reference-strain sequence are explicitly distinct. No claim that SB210 was the experimental stock is made. Normal ciliary anatomy supports qualitative COMMON.
+
+### Stabilization evidence levels
+
+evidence: supported. Targets: GO:0160114.
+
+The graph attributes the patch destabilization result to simulation with both proteins omitted. The knockout phenotype is separately described as mild/occasional; UNKNOWN essentiality avoids upgrading it to complete assembly failure.
+
+### Four coarse relations
+
+graph: supported. Targets: GO:0160114.
+
+Formation and A/B contacts are supported by the structural sources; stabilization retains its computational evidence type. NONMECHANISTIC scope is explicit.
+
+### Open families and status
+
+completeness: supported. Targets: GO:0160114.
+
+Exact families, copies and unresolved OJ3 identity remain bounded enrichment work. PROPOSED and native history are preserved. No optional image, physical measurement or trait is asserted.
+
+## Findings
+
+### F1: CFAP77 mapping is attributed to the wrong source and gene field
+
+minor / open / confirmed; issue key: axonemal-outer-junction-cfap77-locus-source.
+
+UniProt Q22WR6 supplies ORF name TTHERM_00974270, not a primary CFAP77 gene name or alias. Supplementary Table3 of the cited2023 paper directly identifies this accession/locus as CFAP77A. Attach that source to the example and describe the UniProt field accurately; this is not a wrong-accession finding.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Cite the2023 Supplementary Table3 mapping, identify the representative as CFAP77A, and call TTHERM_00974270 an ORF/locus name rather than a UniProt primary gene name.
+
+- The example traces CFAP77A to the exact accession and locus in Table3.
+- UniProt field terminology matches the current native entry.
+- Keep simulation and knockout evidence distinct; after separately authorized curation run record/history/generated-page checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| outer-junction-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0160114,GO:0097545,GO:0097649,GO:0097650; Definitions and doublet children | supports | All four active terms match. The exact junction joins B1 to A10/A11 and is part of the doublet. |
+| outer-junction-taxa | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=5911,312017; Exact taxonomy records | supports | Species5911 and strain312017 match Tetrahymena thermophila and SB210 respectively. |
+| outer-junction-protein | https://rest.uniprot.org/uniprotkb/Q22WR6.json; entryType, proteinDescription, genes and organism | context_only | Q22WR6 is unreviewed, has the recorded protein label and SB210 taxon, and contains only ORF name TTHERM_00974270. It does not list a primary geneName or CFAP77 alias. |
+| outer-junction-paper | https://pmc-oa-opendata.s3.amazonaws.com/PMC10105768.1/PMC10105768.1.xml; Outer-junction Results, Figures5–6 and simulation Methods | supports | The source supports the junction architecture and distinguishes the joint-protein molecular-dynamics comparison from milder CFAP77A/B knockout effects. Its main text notes an OJ3-like density in other species with unresolved identity. |
+| outer-junction-supplement | https://pmc-oa-opendata.s3.amazonaws.com/PMC10105768.1/41467_2023_37868_MOESM1_ESM.pdf; Supplementary Tables2–3; PDF text read | supports | Table3 explicitly joins CFAP77A, Q22WR6 and TTHERM_00974270; CFAP77B is separate. Table2 labels OJ2/OJ3 species-specific, while Table3 leaves OJ3 sequence unknown. |
+| sheath-native-paper | https://pmc-oa-opendata.s3.amazonaws.com/PMC6936269.1/PMC6936269.1.xml; Outer-junction Results and Figure6 | supports | The primary Chlamydomonas structure places FAP127/FAP53/FAP141 helices at the B1-A10/A11 junction and distinguishes seam-associated neighbors. |
+| outer-junction-doi | https://api.crossref.org/works/10.1038/s41467-023-37868-0; DOI/title and available PMID/PMCID joins | supports | Exact article metadata and identifiers match the cited primary source. |
+| outer-junction-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/s41467-023-37868-0&amp;format=json&amp;resultType=core; DOI/title and available PMID/PMCID joins | supports | Exact article metadata and identifiers match the cited primary source. |
+| sheath-doi | https://api.crossref.org/works/10.1016/j.cell.2019.09.030; DOI/title and available PMID/PMCID joins | supports | Exact article metadata and identifiers match the cited primary source. |
+| sheath-native-meta | https://pmc-oa-opendata.s3.amazonaws.com/PMC6936269.1/PMC6936269.1.json; DOI/title and available PMID/PMCID joins | supports | Exact article metadata and identifiers match the cited primary source. |
+| record | data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml; Entire target, component/example, all four graph edges, discussion and inline history | context_only | The record preserves the earlier simulation-versus-knockout correction. The accession role incorrectly attributes the named-gene mapping to UniProt and calls an ORF name the primary name. |
+| schema-result | just validate data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_microtubule_doublet_outer_junction-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_microtubule_doublet_outer_junction-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch3-20261019-YKo4JU/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_microtubule_doublet_outer_junction-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml; exact collect() scope | supports | 9 of9 collected target identifiers returned OK at the unchanged base. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Simulation and knockout outcomes differ and are not interchangeable.
+- OJ3 is structurally traced but sequence identity remains unresolved; similar densities elsewhere do not establish homology or organismal absence.
+- No universal composition, exact copy-number model or population-prevalence estimate is established.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Only the review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261020T035513Z-axonemal-microtubule-doublet-outer-junction-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Axonemal doublet outer junction architecture and CFAP77 provenance
+started_at: '2026-10-20T03:52:37Z'
+finished_at: '2026-10-20T03:55:13Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Architecture, source-specific membership and evidence-qualified stabilization
+  are supported. One minor issue concerns the CFAP77A locus mapping and inaccurate
+  attribution to UniProt’s gene-name field.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+    sha256: 226a02455cd0afbaedc49a3c74a986e5f6bab41d60e1240d98249ee656e5ac10
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0160114
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+  label: axonemal microtubule doublet outer junction
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+    role: maintained scientific record
+scope:
+  description: Entire record, all four edges, both primary studies and the2023 supplement.
+  selection: Seventh unreviewed path of batch3.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0160114
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160114
+  command: just validate data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160114
+  command: just validate-strict data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+    --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_microtubule_doublet_outer_junction-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160114
+  summary: 9 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0160114
+  summary: The named-locus question is resolved by primary supplement and UniProt;
+    no expression-module claim is asserted or used as localization evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160114
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - outer-junction-go
+  - outer-junction-taxa
+  - outer-junction-protein
+  - outer-junction-paper
+  - outer-junction-supplement
+  - sheath-native-paper
+  - outer-junction-doi
+  - outer-junction-epmc
+  - sheath-doi
+  - sheath-native-meta
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160114
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160114
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160114
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160114
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160114
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: outer-junction-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0160114,GO:0097545,GO:0097649,GO:0097650
+  locator: Definitions and doublet children
+  accessed_at: '2026-10-20T03:52:55.518592Z'
+  support: supports
+  summary: All four active terms match. The exact junction joins B1 to A10/A11 and
+    is part of the doublet.
+  snapshot_sha256: e2fe87ed1d66d65adb9ef0236bd25ee9fca34d059ee2bc95c84cf45ce78cf109
+- evidence_id: outer-junction-taxa
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=5911,312017
+  locator: Exact taxonomy records
+  accessed_at: '2026-10-20T03:52:55.154591Z'
+  support: supports
+  summary: Species5911 and strain312017 match Tetrahymena thermophila and SB210 respectively.
+  snapshot_sha256: fda62743792eecc892116e6d58703350304a02ea34bd536d666e735750142c2a
+- evidence_id: outer-junction-protein
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q22WR6.json
+  locator: entryType, proteinDescription, genes and organism
+  accessed_at: '2026-10-20T03:52:55.518734Z'
+  support: context_only
+  summary: Q22WR6 is unreviewed, has the recorded protein label and SB210 taxon, and
+    contains only ORF name TTHERM_00974270. It does not list a primary geneName or
+    CFAP77 alias.
+  snapshot_sha256: 19d1da9b838bf7c69be86da3ebb47545eafc416983371767d5b7e22a17f97773
+- evidence_id: outer-junction-paper
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10105768.1/PMC10105768.1.xml
+  locator: Outer-junction Results, Figures5–6 and simulation Methods
+  accessed_at: '2026-10-20T03:53:10.366923Z'
+  support: supports
+  summary: The source supports the junction architecture and distinguishes the joint-protein
+    molecular-dynamics comparison from milder CFAP77A/B knockout effects. Its main
+    text notes an OJ3-like density in other species with unresolved identity.
+  snapshot_sha256: d1e5f6244aa6ab81ee532a796c8a3a450a781ec87de3d4c474eb200f4e90bfb0
+- evidence_id: outer-junction-supplement
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10105768.1/41467_2023_37868_MOESM1_ESM.pdf
+  locator: Supplementary Tables2–3; PDF text read
+  accessed_at: '2026-10-20T03:53:46.492420Z'
+  support: supports
+  summary: Table3 explicitly joins CFAP77A, Q22WR6 and TTHERM_00974270; CFAP77B is
+    separate. Table2 labels OJ2/OJ3 species-specific, while Table3 leaves OJ3 sequence
+    unknown.
+  snapshot_sha256: 98c44ea5e4b6bf75d99eec076e2c271bf41e79b2cafbe8f2ef3abe084fdca47a
+- evidence_id: sheath-native-paper
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC6936269.1/PMC6936269.1.xml
+  locator: Outer-junction Results and Figure6
+  accessed_at: '2026-10-20T03:39:02.896527Z'
+  support: supports
+  summary: The primary Chlamydomonas structure places FAP127/FAP53/FAP141 helices
+    at the B1-A10/A11 junction and distinguishes seam-associated neighbors.
+  snapshot_sha256: 0876ca7aaca5f9242bcead773c38bd14befec9d32ada12bb647428f60f79594e
+- evidence_id: outer-junction-doi
+  kind: database
+  reference: https://api.crossref.org/works/10.1038/s41467-023-37868-0
+  locator: DOI/title and available PMID/PMCID joins
+  accessed_at: '2026-10-20T03:52:55.722156Z'
+  support: supports
+  summary: Exact article metadata and identifiers match the cited primary source.
+  snapshot_sha256: 0fac22d651b64a30489314853b315b1585d3a439768c6175fc61fd7f52590766
+- evidence_id: outer-junction-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/s41467-023-37868-0&format=json&resultType=core
+  locator: DOI/title and available PMID/PMCID joins
+  accessed_at: '2026-10-20T03:52:55.518812Z'
+  support: supports
+  summary: Exact article metadata and identifiers match the cited primary source.
+  snapshot_sha256: 7a83851ae038c499357c56bf416870972889d053f5865ccfe854631957c5d6ba
+- evidence_id: sheath-doi
+  kind: database
+  reference: https://api.crossref.org/works/10.1016/j.cell.2019.09.030
+  locator: DOI/title and available PMID/PMCID joins
+  accessed_at: '2026-10-20T03:38:20.146648Z'
+  support: supports
+  summary: Exact article metadata and identifiers match the cited primary source.
+  snapshot_sha256: a3e49957a48d0ff0d685a5bc8982695c74b53673cbe9d10fbc706024ab787e50
+- evidence_id: sheath-native-meta
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC6936269.1/PMC6936269.1.json
+  locator: DOI/title and available PMID/PMCID joins
+  accessed_at: '2026-10-20T03:39:02.669848Z'
+  support: supports
+  summary: Exact article metadata and identifiers match the cited primary source.
+  snapshot_sha256: 3c4ec5e8504f645ea0d0a4d43925a26045c4b84322cff24f4c6119e55c151723
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+  locator: Entire target, component/example, all four graph edges, discussion and
+    inline history
+  accessed_at: '2026-10-20T03:55:13Z'
+  support: context_only
+  summary: The record preserves the earlier simulation-versus-knockout correction.
+    The accession role incorrectly attributes the named-gene mapping to UniProt and
+    calls an ORF name the primary name.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T03:52:39Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml'
+  snapshot_sha256: 8dbcec58bdb5896a628ccda3ba9ba99d5a360730f012d3b32a6066411675bb20
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+    --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_microtubule_doublet_outer_junction-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T03:52:40Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml\
+    \ --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_microtubule_doublet_outer_junction-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch3-20261019-YKo4JU/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_microtubule_doublet_outer_junction-strict.tsv"
+  snapshot_sha256: 727528f239414d915675208a22c7da2b85cc8e1864912b8beaa08983aa629668
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml;
+    exact collect() scope
+  accessed_at: '2026-10-20T03:55:13Z'
+  support: supports
+  summary: '9 of9 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Outer A/B boundary
+  outcome: supported
+  target_ids:
+  - GO:0160114
+  summary: Exact GO identity and doublet parthood are supported. The junction includes
+    the tubulin interface with reinforcing proteins; it is distinct from the inner
+    junction.
+  evidence_ids:
+  - outer-junction-go
+  - sheath-native-paper
+  - outer-junction-paper
+  - record
+- assessment_id: composition
+  area: scope
+  topic: Species-dependent junction proteins
+  outcome: supported
+  target_ids:
+  - GO:0160114
+  summary: Both source-specific protein sets are supported. The generic label does
+    not claim an identical set in all organisms. The supplement supports the authors’
+    species-specific classification of OJ2/OJ3; OJ3 sequence identity and similar
+    external densities elsewhere remain unresolved.
+  evidence_ids:
+  - sheath-native-paper
+  - outer-junction-paper
+  - outer-junction-supplement
+  - record
+- assessment_id: protein
+  area: provenance
+  topic: CFAP77A locus correspondence
+  outcome: concern
+  target_ids:
+  - GO:0160114
+  summary: The accession is a correct representative when the paper supplement is
+    considered. UniProt alone does not supply the named CFAP77 mapping. The role should
+    cite Table3 and distinguish an ORF identifier from a primary gene name.
+  evidence_ids:
+  - outer-junction-protein
+  - outer-junction-supplement
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Tetrahymena species and strain
+  outcome: supported
+  target_ids:
+  - GO:0160114
+  summary: Species-level morphology and the reference-strain sequence are explicitly
+    distinct. No claim that SB210 was the experimental stock is made. Normal ciliary
+    anatomy supports qualitative COMMON.
+  evidence_ids:
+  - outer-junction-taxa
+  - outer-junction-paper
+  - outer-junction-protein
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Stabilization evidence levels
+  outcome: supported
+  target_ids:
+  - GO:0160114
+  summary: The graph attributes the patch destabilization result to simulation with
+    both proteins omitted. The knockout phenotype is separately described as mild/occasional;
+    UNKNOWN essentiality avoids upgrading it to complete assembly failure.
+  evidence_ids:
+  - outer-junction-paper
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Four coarse relations
+  outcome: supported
+  target_ids:
+  - GO:0160114
+  summary: Formation and A/B contacts are supported by the structural sources; stabilization
+    retains its computational evidence type. NONMECHANISTIC scope is explicit.
+  evidence_ids:
+  - outer-junction-go
+  - sheath-native-paper
+  - outer-junction-paper
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Open families and status
+  outcome: supported
+  target_ids:
+  - GO:0160114
+  summary: Exact families, copies and unresolved OJ3 identity remain bounded enrichment
+    work. PROPOSED and native history are preserved. No optional image, physical measurement
+    or trait is asserted.
+  evidence_ids:
+  - record
+  - outer-junction-supplement
+findings:
+- finding_id: F1
+  issue_key: axonemal-outer-junction-cfap77-locus-source
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: CFAP77 mapping is attributed to the wrong source and gene field
+  description: UniProt Q22WR6 supplies ORF name TTHERM_00974270, not a primary CFAP77
+    gene name or alias. Supplementary Table3 of the cited2023 paper directly identifies
+    this accession/locus as CFAP77A. Attach that source to the example and describe
+    the UniProt field accurately; this is not a wrong-accession finding.
+  target_ids:
+  - GO:0160114
+  field_paths:
+  - components[component_id=outer_junction_proteins].protein_examples[0].role
+  - components[component_id=outer_junction_proteins].protein_examples[0].evidence
+  evidence_ids:
+  - outer-junction-protein
+  - outer-junction-supplement
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Evidence standard and Components
+  native_severity: minor
+  normalization_reason: The selected protein identity is supported by the primary
+    supplement; inaccurate field/source attribution is nonblocking provenance.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0160114
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+    role: maintained scientific record
+  description: Cite the2023 Supplementary Table3 mapping, identify the representative
+    as CFAP77A, and call TTHERM_00974270 an ORF/locus name rather than a UniProt primary
+    gene name.
+  acceptance_checks:
+  - The example traces CFAP77A to the exact accession and locus in Table3.
+  - UniProt field terminology matches the current native entry.
+  - Keep simulation and knockout evidence distinct; after separately authorized curation
+    run record/history/generated-page checks.
+  generator: Maintained YAML owns changes; just render derives pages.
+limitations:
+- Simulation and knockout outcomes differ and are not interchangeable.
+- OJ3 is structurally traced but sequence identity remains unresolved; similar densities
+  elsewhere do not establish homology or organismal absence.
+- No universal composition, exact copy-number model or population-prevalence estimate
+  is established.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+```
