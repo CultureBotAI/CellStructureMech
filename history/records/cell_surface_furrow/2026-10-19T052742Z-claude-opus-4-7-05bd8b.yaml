@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cell_surface_furrow.yaml
+  slug: cell_surface_furrow
+session:
+  id: 2026-10-19T052742Z-claude-opus-4-7-05bd8b
+  timestamp: '2026-10-19T05:27:42Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for cell surface furrow (GO:0097610) in other.
+  details: Authored data/structures/other/cell_surface_furrow.yaml for cell surface furrow
+    (GO:0097610) with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal graph.

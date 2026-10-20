@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/germ_tube.yaml
+  slug: germ_tube
+session:
+  id: 2026-10-19T052708Z-claude-opus-4-7-ed6a94
+  timestamp: '2026-10-19T05:27:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for germ tube (GO:0032179) in appendage.
+  details: Authored data/structures/appendage/germ_tube.yaml for germ tube (GO:0032179) with
+    verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions,
+    literature evidence, and causal graph.

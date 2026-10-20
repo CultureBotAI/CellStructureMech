@@ -1,0 +1,382 @@
+identifier: GO:0016581
+label: NuRD complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An approximately 2 MDa multi-subunit complex that exhibits ATP-dependent
+  chromatin remodeling activity in addition to histone deacetylase (HDAC) activity,
+  and has been shown to establish transcriptional repression of a number of target
+  genes in vertebrates, invertebrates and fungi. Amongst its subunits, the NuRD complex
+  contains histone deacetylases, histone binding proteins and Mi-2-like proteins.
+  The Nucleosome Remodeling and Deacetylase (NuRD) family of multiprotein chromatin
+  silencing complexes (exemplified in microbial eukaryotes by the fission yeast Schizosaccharomyces
+  pombe SHREC complex) that couples class II histone deacetylase activity (Clr3) with
+  CHD/Mi-2-family ATP-dependent chromatin remodeling (Mit1). Together with scaffold
+  subunits Clr1, Clr2, and the AAA+ ATPase chaperone Cdc20/Ccq1, NuRD/SHREC deacetylates
+  H3K14ac and positions nucleosomes to compact heterochromatin.
+definition_source: GO:0016581
+mapping_status: PROPOSED
+parent_structures:
+- GO:0000118
+- GO:0005667
+- GO:0090545
+synonyms:
+- synonym_text: NRD complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016581
+- synonym_text: nucleosome remodeling and histone deacetylation complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016581
+- synonym_text: Mi-2 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0016581
+components:
+- component_id: clr1_shrec_subunit
+  label: Clr1 SHREC subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070824 and the fission-yeast SHREC primary literature name
+    Clr1 as a SHREC core constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProt family identifier for this SHREC subunit class was curated in this
+    pass.
+  role: Protein constituent of the fission-yeast SHREC core complex. Functions within
+    the NuRD/SHREC nucleosome remodeling and histone deacetylase complex in NuRD complex.
+  evidence:
+  - reference: GO:0070824
+    notes: GO:0070824 defines the fission-yeast SHREC complex as containing core Clr1,
+      Clr2, Clr3 and Mit1 proteins.
+  - reference: DOI:10.1016/j.cell.2006.12.035
+    notes: Sugiyama et al. 2007 described SHREC as a fission-yeast core quartet that
+      includes Clr1.
+  gene_symbols:
+  - clr1
+  protein_examples:
+  - uniprot_id: UniProtKB:O74808
+    protein_label: Cryptic loci regulator protein 1
+    gene_symbol: clr1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene clr1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O74808
+      notes: UniProtKB reviewed (Swiss-Prot) entry O74808, the single reviewed entry
+        for gene clr1 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: clr2_shrec_subunit
+  label: Clr2 SHREC subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070824 and the fission-yeast SHREC primary literature name
+    Clr2 as a SHREC core constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProt family identifier for this SHREC subunit class was curated in this
+    pass.
+  role: Protein constituent of the fission-yeast SHREC core complex. Functions within
+    the NuRD/SHREC nucleosome remodeling and histone deacetylase complex in NuRD complex.
+  evidence:
+  - reference: GO:0070824
+    notes: GO:0070824 defines the fission-yeast SHREC complex as containing core Clr1,
+      Clr2, Clr3 and Mit1 proteins.
+  - reference: DOI:10.1016/j.cell.2006.12.035
+    notes: Sugiyama et al. 2007 described SHREC as a fission-yeast core quartet that
+      includes Clr2.
+  gene_symbols:
+  - clr2
+  protein_examples:
+  - uniprot_id: UniProtKB:O13881
+    protein_label: Cryptic loci regulator 2
+    gene_symbol: clr2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene clr2 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17289569
+      notes: Sugiyama T et al. 2007, ‘SHREC, an effector complex for heterochromatic
+        transcriptional silencing.’, Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of O13881.
+- component_id: clr3_shrec_histone_deacetylase_subunit
+  label: Clr3 SHREC histone deacetylase subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070824 and the fission-yeast SHREC primary literature name
+    Clr3 as the SHREC histone deacetylase constituent; no exact source-neutral InterPro,
+    Pfam, NCBIfam or UniProt family identifier for this SHREC subunit class was curated
+    in this pass.
+  role: Histone deacetylase constituent of the fission-yeast SHREC core complex. Functions
+    within the NuRD/SHREC nucleosome remodeling and histone deacetylase complex in
+    NuRD complex.
+  evidence:
+  - reference: GO:0070824
+    notes: GO:0070824 defines the fission-yeast SHREC complex as containing core Clr1,
+      Clr2, Clr3 and Mit1 proteins.
+  - reference: DOI:10.1016/j.cell.2006.12.035
+    notes: Sugiyama et al. 2007 identified Clr3 as the SHREC histone deacetylase associated
+      with heterochromatic transcriptional gene silencing.
+  gene_symbols:
+  - clr3
+  protein_examples:
+  - uniprot_id: UniProtKB:P56523
+    protein_label: Histone deacetylase clr3
+    gene_symbol: clr3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene clr3 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:17289569
+      notes: Sugiyama T et al. 2007, ‘SHREC, an effector complex for heterochromatic
+        transcriptional silencing.’, Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of P56523.
+- component_id: mit1_shrec_snf2_family_subunit
+  label: Mit1 SHREC SNF2-family subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0070824 and the fission-yeast SHREC primary literature name
+    Mit1 as the SHREC SNF2-family remodeling-factor constituent; no exact source-neutral
+    InterPro, Pfam, NCBIfam or UniProt family identifier for this SHREC subunit class
+    was curated in this pass.
+  role: SNF2-family chromatin-remodeling-factor constituent of the fission-yeast SHREC
+    core complex. Functions within the NuRD/SHREC nucleosome remodeling and histone
+    deacetylase complex in NuRD complex.
+  evidence:
+  - reference: GO:0070824
+    notes: GO:0070824 defines the fission-yeast SHREC complex as containing core Clr1,
+      Clr2, Clr3 and Mit1 proteins.
+  - reference: DOI:10.1016/j.cell.2006.12.035
+    notes: Sugiyama et al. 2007 identified Mit1 as the SHREC SNF2 chromatin-remodeling
+      factor homolog associated with heterochromatic transcriptional gene silencing.
+  gene_symbols:
+  - mit1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9P793
+    protein_label: ATP-dependent chromatin remodeler mit1
+    gene_symbol: mit1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene mit1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16823372
+      notes: Matsuyama A et al. 2006, ‘ORFeome cloning and global analysis of protein
+        localization in the fission yeast Schizosaccharomyces pombe.’, Nat Biotechnol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation
+        of Q9P793.
+    - reference: PMID:17289569
+      notes: Sugiyama T et al. 2007, ‘SHREC, an effector complex for heterochromatic
+        transcriptional silencing.’, Cell. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Nucleus' localisation of Q9P793.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Exhibits NuRD complex (GO:0016581) within the NuRD/SHREC nucleosome remodeling
+    and histone deacetylase complex. Fission yeast is the organism in which GO:0070824
+    defines the SHREC complex as a four-protein histone deacetylase complex containing
+    Clr1, Clr2, Clr3 and Mit1.
+  reference: GO:0070824
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Characterized model system for NuRD complex (GO:0016581) within the NuRD/SHREC
+    nucleosome remodeling and histone deacetylase complex. Sugiyama et al. 2007 characterized
+    the fission-yeast SHREC core quartet and linked its Clr3 and Mit1 activities to
+    heterochromatic transcriptional silencing.
+  reference: DOI:10.1016/j.cell.2006.12.035
+functions:
+- function_id: histone_deacetylase_activity
+  label: histone deacetylase activity
+  grounding: GO:0004407
+  description: Mediated by NuRD complex (GO:0016581) within the NuRD/SHREC nucleosome
+    remodeling and histone deacetylase complex. The SHREC complex is a fission-yeast
+    histone deacetylase complex containing the Clr3 histone deacetylase.
+  evidence:
+  - reference: GO:0070824
+    notes: GO:0070824 defines SHREC as a histone deacetylase complex containing Clr3.
+  - reference: GO:0004407
+    notes: GO:0004407 is the Gene Ontology molecular-function term for histone deacetylase
+      activity.
+  - reference: DOI:10.1016/j.cell.2006.12.035
+    notes: Sugiyama et al. 2007 identified Clr3 as the histone deacetylase effector
+      in fission-yeast SHREC.
+- function_id: chromatin_remodeling
+  label: chromatin remodeling
+  grounding: GO:0006338
+  description: Mediated by NuRD complex (GO:0016581) within the NuRD/SHREC nucleosome
+    remodeling and histone deacetylase complex. SHREC regulates nucleosome positioning
+    through the Mit1 SNF2-family remodeling factor to assemble higher-order heterochromatin.
+  evidence:
+  - reference: GO:0070824
+    notes: GO:0070824 defines SHREC as involved in regulating nucleosome positioning
+      to assemble higher-order chromatin structures.
+  - reference: GO:0006338
+    notes: GO:0006338 is the Gene Ontology biological-process term for chromatin remodeling.
+  - reference: DOI:10.1016/j.cell.2006.12.035
+    notes: Sugiyama et al. 2007 identified Mit1 as the SHREC SNF2-family chromatin-remodeling
+      factor homolog and connected SHREC with nucleosome positioning.
+evidence:
+- reference: GO:0016581
+  notes: 'Gene Ontology cellular-component term for NuRD complex: An approximately
+    2 MDa multi-subunit complex that exhibits ATP-dependent chromatin remodeling activity
+    in addition to histone deacetylase (HDAC) activity, and has been shown to establish
+    transcriptional repression of a number of target genes in vertebrates, invertebrates
+    and fungi. Amongst its subunits, the NuRD complex contains histone deacetylases,
+    histone binding proteins and Mi-2-like proteins.'
+- reference: GO:0070824
+  notes: Supports the context, composition, and mechanism of NuRD complex (GO:0016581)
+    within the NuRD/SHREC nucleosome remodeling and histone deacetylase complex. Gene
+    Ontology cellular-component term for the SHREC complex.
+- reference: GO:0004407
+  notes: Supports the context, composition, and mechanism of NuRD complex (GO:0016581)
+    within the NuRD/SHREC nucleosome remodeling and histone deacetylase complex. Gene
+    Ontology molecular-function term for histone deacetylase activity.
+- reference: GO:0006338
+  notes: Supports the context, composition, and mechanism of NuRD complex (GO:0016581)
+    within the NuRD/SHREC nucleosome remodeling and histone deacetylase complex. Gene
+    Ontology biological-process term for chromatin remodeling.
+- reference: PMID:17289569
+  notes: Supports the context, composition, and mechanism of NuRD complex (GO:0016581)
+    within the NuRD/SHREC nucleosome remodeling and histone deacetylase complex. PubMed
+    identifier for Sugiyama et al. 2007, the Cell SHREC paper cited by GO:0070824.
+- reference: DOI:10.1016/j.cell.2006.12.035
+  notes: Supports the context, composition, and mechanism of NuRD complex (GO:0016581)
+    within the NuRD/SHREC nucleosome remodeling and histone deacetylase complex. DOI
+    for Sugiyama et al. 2007, 'SHREC, an effector complex for heterochromatic transcriptional
+    silencing', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: nurd_complex_mechanism
+  title: NuRD/SHREC complex H3K14 deacetylation and heterochromatic nucleosome positioning
+  description: Recruited to HP1/Swi6-bound H3K9me heterochromatin, the NuRD/SHREC
+    complex combines Clr3-mediated H3K14 deacetylation with Mit1 ATP-dependent nucleosome
+    remodeling to eliminate nucleosome-free regions and repress transcription.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records SHREC core membership and the two GO-supported activities
+    without resolving recruitment, nucleosome repositioning chemistry or higher-order
+    heterochromatin assembly.
+  nodes:
+  - node_id: clr1_shrec_subunit
+    label: Clr1 SHREC subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: clr1_shrec_subunit
+  - node_id: clr2_shrec_subunit
+    label: Clr2 SHREC subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: clr2_shrec_subunit
+  - node_id: clr3_shrec_histone_deacetylase_subunit
+    label: Clr3 SHREC histone deacetylase subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: clr3_shrec_histone_deacetylase_subunit
+  - node_id: mit1_shrec_snf2_family_subunit
+    label: Mit1 SHREC SNF2-family subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mit1_shrec_snf2_family_subunit
+  - node_id: shrec_complex
+    label: NuRD complex
+    node_type: STRUCTURE
+    grounding: GO:0016581
+    description: Assembled and functional NuRD complex (GO:0016581) operating within
+      the NuRD/SHREC nucleosome remodeling and histone deacetylase complex.
+  - node_id: histone_deacetylase_activity
+    label: histone deacetylase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004407
+  - node_id: chromatin_remodeling
+    label: chromatin remodeling
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006338
+  edges:
+  - subject: clr1_shrec_subunit
+    predicate: contributes to
+    object: shrec_complex
+    description: Clr1 is a constituent of the fission-yeast SHREC core complex.
+    evidence:
+    - reference: GO:0070824
+      notes: GO:0070824 defines Clr1 as a SHREC complex core protein.
+    - reference: DOI:10.1016/j.cell.2006.12.035
+      notes: Sugiyama et al. 2007 described SHREC as a core quartet that includes
+        Clr1.
+  - subject: clr2_shrec_subunit
+    predicate: contributes to
+    object: shrec_complex
+    description: Clr2 is a constituent of the fission-yeast SHREC core complex.
+    evidence:
+    - reference: GO:0070824
+      notes: GO:0070824 defines Clr2 as a SHREC complex core protein.
+    - reference: DOI:10.1016/j.cell.2006.12.035
+      notes: Sugiyama et al. 2007 described SHREC as a core quartet that includes
+        Clr2.
+  - subject: clr3_shrec_histone_deacetylase_subunit
+    predicate: contributes to
+    object: shrec_complex
+    description: Clr3 is the histone deacetylase constituent of the fission-yeast
+      SHREC core complex.
+    evidence:
+    - reference: GO:0070824
+      notes: GO:0070824 defines Clr3 as a SHREC complex core protein.
+    - reference: DOI:10.1016/j.cell.2006.12.035
+      notes: Sugiyama et al. 2007 connected SHREC effector activity to its Clr3 histone
+        deacetylase.
+  - subject: mit1_shrec_snf2_family_subunit
+    predicate: contributes to
+    object: shrec_complex
+    description: Mit1 is the SNF2-family remodeling-factor constituent of the fission-yeast
+      SHREC core complex.
+    evidence:
+    - reference: GO:0070824
+      notes: GO:0070824 defines Mit1 as a SHREC complex core protein.
+    - reference: DOI:10.1016/j.cell.2006.12.035
+      notes: Sugiyama et al. 2007 connected SHREC effector activity to its Mit1 SNF2-family
+        remodeling factor homolog.
+  - subject: shrec_complex
+    predicate: supports
+    object: histone_deacetylase_activity
+    description: SHREC carries histone deacetylase activity through its Clr3 core
+      constituent.
+    evidence:
+    - reference: GO:0070824
+      notes: GO:0070824 defines SHREC as a histone deacetylase complex.
+    - reference: GO:0004407
+      notes: GO:0004407 is the molecular-function term for histone deacetylase activity.
+    - reference: DOI:10.1016/j.cell.2006.12.035
+      notes: Sugiyama et al. 2007 identified Clr3 as the SHREC histone deacetylase.
+  - subject: shrec_complex
+    predicate: supports
+    object: chromatin_remodeling
+    description: SHREC regulates nucleosome positioning through its Mit1 SNF2-family
+      remodeling factor homolog.
+    evidence:
+    - reference: GO:0070824
+      notes: GO:0070824 defines SHREC as involved in regulating nucleosome positioning.
+    - reference: GO:0006338
+      notes: GO:0006338 is the biological-process term for chromatin remodeling.
+    - reference: DOI:10.1016/j.cell.2006.12.035
+      notes: Sugiyama et al. 2007 connected SHREC with nucleosome positioning and
+        Mit1-associated SNF2-family remodeling activity.
+curation_history:
+- timestamp: '2026-10-19T05:27:41Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of NuRD complex (GO:0016581) in category OTHER with verified
+    UniProtKB protein examples and literature evidence.
+  llm_assisted: true

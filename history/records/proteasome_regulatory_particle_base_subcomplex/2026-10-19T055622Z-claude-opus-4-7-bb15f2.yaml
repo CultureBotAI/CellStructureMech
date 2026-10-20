@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/proteasome_regulatory_particle_base_subcomplex.yaml
+  slug: proteasome_regulatory_particle_base_subcomplex
+session:
+  id: 2026-10-19T055622Z-claude-opus-4-7-bb15f2
+  timestamp: '2026-10-19T05:56:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for proteasome regulatory particle, base subcomplex (GO:0008540)
+    in other.
+  details: Authored data/structures/other/proteasome_regulatory_particle_base_subcomplex.yaml
+    for proteasome regulatory particle, base subcomplex (GO:0008540) with verified GO hierarchy,
+    taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and
+    causal graph.

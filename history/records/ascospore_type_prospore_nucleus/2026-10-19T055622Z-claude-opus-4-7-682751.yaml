@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/spore/ascospore_type_prospore_nucleus.yaml
+  slug: ascospore_type_prospore_nucleus
+session:
+  id: 2026-10-19T055622Z-claude-opus-4-7-682751
+  timestamp: '2026-10-19T05:56:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for ascospore-type prospore nucleus (GO:1905754) in spore.
+  details: Authored data/structures/spore/ascospore_type_prospore_nucleus.yaml for ascospore-type
+    prospore nucleus (GO:1905754) with verified GO hierarchy, taxonomic distribution, UniProtKB
+    protein examples, functions, literature evidence, and causal graph.

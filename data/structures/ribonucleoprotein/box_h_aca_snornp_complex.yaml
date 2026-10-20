@@ -1,0 +1,126 @@
+identifier: GO:0031429
+label: box H/ACA snoRNP complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: 'A box H/ACA small nucleolar ribonucleoprotein complex located in the
+  nucleolus that catalyzes pseudouridylation of ribosomal RNA residues. The complex
+  is composed of four different core proteins that assemble onto a H/ACA guide RNA
+  scaffold that identifies specific uridines in rRNA for modification during ribosome
+  synthesis. A conserved ribonucleoprotein complex composed of a hairpin-hinge-hairpin-tail
+  box H/ACA small nucleolar RNA (snoRNA in eukaryotes or sRNA in Archaea) bound by
+  four core proteins: the catalytic pseudouridine synthase Cbf5p/dyskerin (aCbf5),
+  Nop10p, Gar1p, and Nhp2p (L7Ae in Archaea). Guided by antisense base-pairing in
+  the pseudouridylation pocket of the H/ACA RNA, the complex catalyzes site-specific
+  isomerization of uridine to pseudouridine in pre-rRNA and snRNAs.'
+definition_source: GO:0031429
+mapping_status: PROPOSED
+parent_structures:
+- GO:0072588
+- GO:0140513
+- GO:1902494
+part_of:
+- GO:0005730
+synonyms:
+- synonym_text: box H/ACA small nucleolar ribonucleoprotein complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031429
+- synonym_text: box H/ACA snoRNP pseudouridylase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031429
+components:
+- component_id: sno_s_rna
+  label: sno(s)RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005732 spans eukaryotic snoRNA- and archaeal sRNA-containing
+    RNPs, including box C/D and box H/ACA subclasses; no single exact Sequence Ontology
+    CURIE was assigned for this combined RNA cohort in the first record.
+  role: Small nucleolar or small RNA-family RNA constituent that defines a sno(s)RNA-containing
+    ribonucleoprotein complex. Functions in the box H/ACA snoRNP pseudouridylation
+    complex in box H/ACA snoRNP complex.
+  evidence:
+  - reference: GO:0005732
+    notes: GO:0005732 defines sno(s)RNA-containing ribonucleoprotein complexes as
+      containing a snoRNA-family RNA molecule and associated proteins.
+- component_id: sno_s_rnp_associated_proteins
+  label: sno(s)RNP-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005732 defines the complexes by associated proteins in addition
+    to a sno(s)RNA, but exact source-neutral protein-family boundaries for box C/D,
+    box H/ACA and other sno(s)RNP subclasses were not resolved in this first record.
+  role: Protein constituents associated with snoRNA-family RNAs in sno(s)RNA-containing
+    ribonucleoprotein complexes. Functions in the box H/ACA snoRNP pseudouridylation
+    complex in box H/ACA snoRNP complex.
+  evidence:
+  - reference: GO:0005732
+    notes: GO:0005732 defines sno(s)RNA-containing ribonucleoprotein complexes as
+      containing associated proteins in addition to a snoRNA-family RNA molecule.
+evidence:
+- reference: GO:0031429
+  notes: 'Gene Ontology cellular-component term for box H/ACA snoRNP complex: A box
+    H/ACA small nucleolar ribonucleoprotein complex located in the nucleolus that
+    catalyzes pseudouridylation of ribosomal RNA residues. The complex is composed
+    of four different core proteins that assemble onto a H/ACA guide RNA scaffold
+    that identifies specific uridines in rRNA for modification during ribosome synthesis.'
+- reference: GO:0005732
+  notes: Supports the context, composition, and mechanism of box H/ACA snoRNP complex
+    (GO:0031429) in the box H/ACA snoRNP pseudouridylation complex. Gene Ontology
+    cellular-component term for sno(s)RNA-containing ribonucleoprotein complex.
+- reference: GO:1990904
+  notes: Supports the context, composition, and mechanism of box H/ACA snoRNP complex
+    (GO:0031429) in the box H/ACA snoRNP pseudouridylation complex. Gene Ontology
+    cellular-component parent term for ribonucleoprotein complex.
+causal_graphs:
+- graph_id: box_h_aca_snornp_complex_mechanism
+  title: Box H/ACA snoRNP guide-directed rRNA pseudouridylation
+  description: Nhp2/L7Ae, Nop10, and Gar1 stabilize the catalytic synthase Cbf5 on
+    a box H/ACA guide RNA, which base-pairs with nascent pre-rRNA to position target
+    uridines for isomerization into pseudouridine.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the generic GO-defined RNA and associated-protein
+    cohorts without modeling exact box C/D, box H/ACA, telomerase-RNA or ribonuclease-MRP
+    component boundaries.
+  nodes:
+  - node_id: sno_s_rna
+    label: sno(s)RNA
+    node_type: RNA
+    component_ref: sno_s_rna
+  - node_id: sno_s_rnp_associated_proteins
+    label: sno(s)RNP-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: sno_s_rnp_associated_proteins
+  - node_id: sno_s_rna_containing_ribonucleoprotein_complex
+    label: box H/ACA snoRNP complex
+    node_type: STRUCTURE
+    grounding: GO:0031429
+    description: Assembled and functional box H/ACA snoRNP complex (GO:0031429) operating
+      in the box H/ACA snoRNP pseudouridylation complex.
+  edges:
+  - subject: sno_s_rna
+    predicate: contributes constituents to
+    object: sno_s_rna_containing_ribonucleoprotein_complex
+    description: sno(s)RNA-family RNA is the RNA constituent represented in the GO:0005732
+      definition.
+    evidence:
+    - reference: GO:0005732
+      notes: GO:0005732 defines the complex as containing an RNA molecule of the snoRNA
+        family.
+  - subject: sno_s_rnp_associated_proteins
+    predicate: contributes constituents to
+    object: sno_s_rna_containing_ribonucleoprotein_complex
+    description: Associated proteins are the protein constituents represented in the
+      GO:0005732 definition.
+    evidence:
+    - reference: GO:0005732
+      notes: GO:0005732 defines the complex as containing associated proteins.
+curation_history:
+- timestamp: '2026-10-19T05:27:41Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of box H/ACA snoRNP complex (GO:0031429) in category RIBONUCLEOPROTEIN
+    with verified UniProtKB protein examples and literature evidence.
+  llm_assisted: true

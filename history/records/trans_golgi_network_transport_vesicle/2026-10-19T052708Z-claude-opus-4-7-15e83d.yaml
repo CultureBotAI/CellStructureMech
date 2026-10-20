@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle.yaml
+  slug: trans_golgi_network_transport_vesicle
+session:
+  id: 2026-10-19T052708Z-claude-opus-4-7-15e83d
+  timestamp: '2026-10-19T05:27:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for trans-Golgi network transport vesicle (GO:0030140)
+    in membrane_organelle.
+  details: Authored data/structures/membrane_organelle/trans_golgi_network_transport_vesicle.yaml
+    for trans-Golgi network transport vesicle (GO:0030140) with verified GO hierarchy, taxonomic
+    distribution, UniProtKB protein examples, functions, literature evidence, and causal graph.

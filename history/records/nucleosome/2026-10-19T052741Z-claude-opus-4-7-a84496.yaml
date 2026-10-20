@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nucleosome.yaml
+  slug: nucleosome
+session:
+  id: 2026-10-19T052741Z-claude-opus-4-7-a84496
+  timestamp: '2026-10-19T05:27:41Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for nucleosome (GO:0000786) in other.
+  details: Authored data/structures/other/nucleosome.yaml for nucleosome (GO:0000786) with
+    verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions,
+    literature evidence, and causal graph.

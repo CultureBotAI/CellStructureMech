@@ -1,0 +1,133 @@
+identifier: GO:0031428
+label: box C/D methylation guide snoRNP complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex containing a box C/D type RNA that is capable
+  of ribose-2'-O-methylation of target RNAs. Box C/D type RNAs are widespread in eukaryotes
+  and in Archaea, suggesting that an RNA-based guide mechanism for directing specific
+  RNA 2'-O-ribose methylations was present in the common ancestor of Archaea and Eukarya.
+  A conserved ribonucleoprotein complex composed of a box C/D guide snoRNA (or archaeal
+  box C/D sRNA) containing kink-turn C/D and C'/D' motifs bound by the kink-turn binding
+  protein Snu13p (L7Ae in Archaea), the scaffold subunits Nop56p and Nop58p (Nop5
+  in Archaea), and the SAM-dependent 2'-O-ribose methyltransferase Nop1p/fibrillarin.
+  The complex base-pairs with target pre-rRNA to direct site-specific 2'-O-methylation
+  five nucleotides upstream of box D or D'.
+definition_source: GO:0031428
+mapping_status: PROPOSED
+parent_structures:
+- GO:0170049
+synonyms:
+- synonym_text: box C/D snoRNP ribose 2'-O methylase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031428
+- synonym_text: box C/D sRNP complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031428
+- synonym_text: box C/D small nucleolar ribonucleoprotein complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031428
+- synonym_text: box C/D snoRNP complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031428
+- synonym_text: box C/D snoRNP ribose-2'-O-methyltransferase complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031428
+components:
+- component_id: sno_s_rna
+  label: sno(s)RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005732 spans eukaryotic snoRNA- and archaeal sRNA-containing
+    RNPs, including box C/D and box H/ACA subclasses; no single exact Sequence Ontology
+    CURIE was assigned for this combined RNA cohort in the first record.
+  role: Small nucleolar or small RNA-family RNA constituent that defines a sno(s)RNA-containing
+    ribonucleoprotein complex. Functions in the box C/D methylation guide snoRNP complex
+    in box C/D methylation guide snoRNP complex.
+  evidence:
+  - reference: GO:0005732
+    notes: GO:0005732 defines sno(s)RNA-containing ribonucleoprotein complexes as
+      containing a snoRNA-family RNA molecule and associated proteins.
+- component_id: sno_s_rnp_associated_proteins
+  label: sno(s)RNP-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0005732 defines the complexes by associated proteins in addition
+    to a sno(s)RNA, but exact source-neutral protein-family boundaries for box C/D,
+    box H/ACA and other sno(s)RNP subclasses were not resolved in this first record.
+  role: Protein constituents associated with snoRNA-family RNAs in sno(s)RNA-containing
+    ribonucleoprotein complexes. Functions in the box C/D methylation guide snoRNP
+    complex in box C/D methylation guide snoRNP complex.
+  evidence:
+  - reference: GO:0005732
+    notes: GO:0005732 defines sno(s)RNA-containing ribonucleoprotein complexes as
+      containing associated proteins in addition to a snoRNA-family RNA molecule.
+evidence:
+- reference: GO:0031428
+  notes: 'Gene Ontology cellular-component term for box C/D methylation guide snoRNP
+    complex: A ribonucleoprotein complex containing a box C/D type RNA that is capable
+    of ribose-2''-O-methylation of target RNAs. Box C/D type RNAs are widespread in
+    eukaryotes and in Archaea, suggesting that an RNA-based guide mechanism for directing
+    specific RNA 2''-O-ribose methylations was present in the common ancestor of Archaea
+    and Eukarya.'
+- reference: GO:0005732
+  notes: Supports the context, composition, and mechanism of box C/D methylation guide
+    snoRNP complex (GO:0031428) in the box C/D methylation guide snoRNP complex. Gene
+    Ontology cellular-component term for sno(s)RNA-containing ribonucleoprotein complex.
+- reference: GO:1990904
+  notes: Supports the context, composition, and mechanism of box C/D methylation guide
+    snoRNP complex (GO:0031428) in the box C/D methylation guide snoRNP complex. Gene
+    Ontology cellular-component parent term for ribonucleoprotein complex.
+causal_graphs:
+- graph_id: box_c_d_methylation_guide_snornp_complex_mechanism
+  title: Box C/D snoRNP assembly and site-specific rRNA 2'-O-methylation
+  description: Binding of Snu13/L7Ae to the box C/D kink-turn nucleates recruitment
+    of Nop56/Nop58 and Nop1/fibrillarin, positioning the active site to transfer a
+    methyl group from S-adenosyl-L-methionine onto the target pre-rRNA ribose 2'-hydroxyl.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This partial graph records the generic GO-defined RNA and associated-protein
+    cohorts without modeling exact box C/D, box H/ACA, telomerase-RNA or ribonuclease-MRP
+    component boundaries.
+  nodes:
+  - node_id: sno_s_rna
+    label: sno(s)RNA
+    node_type: RNA
+    component_ref: sno_s_rna
+  - node_id: sno_s_rnp_associated_proteins
+    label: sno(s)RNP-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: sno_s_rnp_associated_proteins
+  - node_id: sno_s_rna_containing_ribonucleoprotein_complex
+    label: box C/D methylation guide snoRNP complex
+    node_type: STRUCTURE
+    grounding: GO:0031428
+    description: Assembled and functional box C/D methylation guide snoRNP complex
+      (GO:0031428) operating in the box C/D methylation guide snoRNP complex.
+  edges:
+  - subject: sno_s_rna
+    predicate: contributes constituents to
+    object: sno_s_rna_containing_ribonucleoprotein_complex
+    description: sno(s)RNA-family RNA is the RNA constituent represented in the GO:0005732
+      definition.
+    evidence:
+    - reference: GO:0005732
+      notes: GO:0005732 defines the complex as containing an RNA molecule of the snoRNA
+        family.
+  - subject: sno_s_rnp_associated_proteins
+    predicate: contributes constituents to
+    object: sno_s_rna_containing_ribonucleoprotein_complex
+    description: Associated proteins are the protein constituents represented in the
+      GO:0005732 definition.
+    evidence:
+    - reference: GO:0005732
+      notes: GO:0005732 defines the complex as containing associated proteins.
+curation_history:
+- timestamp: '2026-10-19T05:27:41Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of box C/D methylation guide snoRNP complex (GO:0031428)
+    in category RIBONUCLEOPROTEIN with verified UniProtKB protein examples and literature
+    evidence.
+  llm_assisted: true

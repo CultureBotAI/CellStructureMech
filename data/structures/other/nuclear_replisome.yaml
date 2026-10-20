@@ -1,0 +1,235 @@
+identifier: GO:0043601
+label: nuclear replisome
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A multi-component enzymatic machine at the nuclear replication fork, which
+  mediates DNA replication. Includes DNA primase, one or more DNA polymerases, DNA
+  helicases, and other proteins. The complete multiprotein DNA replication machinery
+  assembled at eukaryotic nuclear replication forks in yeasts, fungi, and protists.
+  Centered on the replicative CMG helicase (Cdc45–Mcm2-7–GINS), the nuclear replisome
+  integrates leading-strand DNA polymerase epsilon, lagging-strand DNA polymerase
+  alpha-primase and delta tethered via Ctf4, the PCNA sliding clamp and RFC clamp
+  loader, RPA, and the fork protection complex (Mrc1–Tof1–Csm3) to coordinate high-fidelity
+  chromosome duplication.
+definition_source: GO:0043601
+mapping_status: PROPOSED
+parent_structures:
+- GO:0030894
+- GO:0140513
+part_of:
+- GO:0043596
+has_part:
+- GO:0005658
+- GO:0005662
+- GO:0043599
+- GO:0043625
+components:
+- component_id: gins_complex
+  label: GINS complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0000811
+  stoichiometry: '1'
+  essentiality: UNKNOWN
+  role: Heterotetrameric GINS constituent subcomplex of the CMG helicase. Functions
+    within the eukaryotic nuclear replisome progression machinery in nuclear replisome.
+  evidence:
+  - reference: GO:0071162
+    notes: GO:0071162 defines the CMG complex as containing the GINS complex.
+  - reference: PMID:19228417
+    notes: Akman and MacNeill 2009 describe GINS as one of the three individual components
+      of the eukaryotic CMG complex.
+- component_id: mcm_complex
+  label: MCM complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0042555
+  stoichiometry: '1'
+  essentiality: UNKNOWN
+  role: Heterohexameric MCM constituent subcomplex of the CMG helicase. Functions
+    within the eukaryotic nuclear replisome progression machinery in nuclear replisome.
+  evidence:
+  - reference: GO:0071162
+    notes: GO:0071162 defines the CMG complex as containing the heterohexameric MCM
+      complex.
+  - reference: PMID:19228417
+    notes: Akman and MacNeill 2009 describe MCM as one of the three individual components
+      of the eukaryotic CMG complex.
+- component_id: cdc45_protein
+  label: Cdc45 protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CDC45
+  stoichiometry: '1'
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Cdc45 is modeled as the named CMG constituent protein from the
+    GO definition; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family
+    CURIE was curated in this pass.
+  role: Cdc45 constituent protein of the CMG helicase. Functions within the eukaryotic
+    nuclear replisome progression machinery in nuclear replisome.
+  evidence:
+  - reference: GO:0071162
+    notes: GO:0071162 defines the CMG complex as containing Cdc45p.
+  - reference: PMID:19228417
+    notes: Akman and MacNeill 2009 describe Cdc45 as one of the three individual components
+      of the eukaryotic CMG complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:O74113
+    protein_label: Cell division control protein 45 homolog
+    gene_symbol: sna41
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Representative reviewed UniProtKB entry for gene CDC45, which UniProt lists
+      under the primary name sna41, in Schizosaccharomyces pombe. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:9619628
+      notes: Miyake S et al. 1998, ‘Identification of sna41 gene, which is the suppressor
+        of nda4 mutation and is involved in DNA replication in Schizosaccharomyces
+        pombe.’, Genes Cells. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Nucleus' localisation of O74113.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Exhibits nuclear replisome (GO:0043601) within the eukaryotic nuclear replisome
+    progression machinery. Akman and MacNeill describe Cdc45, MCM and GINS as CMG
+    components that are essential for chromosomal DNA replication in eukaryotic cells.
+  reference: PMID:19228417
+canonical_examples:
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe
+  note: Characterized model system for nuclear replisome (GO:0043601) within the eukaryotic
+    nuclear replisome progression machinery. Reference fission-yeast system in which
+    Akman and MacNeill visualised GINS-MCM interactions in living cells from native
+    chromosomal loci.
+  reference: PMID:19228417
+functions:
+- function_id: dna_replication
+  label: DNA replication
+  grounding: GO:0006260
+  description: Mediated by nuclear replisome (GO:0043601) within the eukaryotic nuclear
+    replisome progression machinery. The CMG complex supports DNA unwinding during
+    eukaryotic DNA replication.
+  evidence:
+  - reference: GO:0071162
+    notes: GO:0071162 defines the CMG complex as involved in unwinding DNA during
+      replication.
+  - reference: GO:0006260
+    notes: GO:0006260 is the Gene Ontology biological-process term for DNA replication.
+  - reference: PMID:19228417
+    notes: Akman and MacNeill 2009 describe the Cdc45, MCM and GINS components of
+      CMG as essential for chromosomal DNA replication in eukaryotic cells.
+evidence:
+- reference: GO:0043601
+  notes: 'Gene Ontology cellular-component term for nuclear replisome: A multi-component
+    enzymatic machine at the nuclear replication fork, which mediates DNA replication.
+    Includes DNA primase, one or more DNA polymerases, DNA helicases, and other proteins.'
+- reference: GO:0071162
+  notes: Supports the context, composition, and mechanism of nuclear replisome (GO:0043601)
+    within the eukaryotic nuclear replisome progression machinery. Gene Ontology cellular-component
+    term for the CMG complex.
+- reference: GO:0031261
+  notes: Supports the context, composition, and mechanism of nuclear replisome (GO:0043601)
+    within the eukaryotic nuclear replisome progression machinery. Gene Ontology cellular-component
+    parent term for DNA replication preinitiation complexes.
+- reference: GO:0000811
+  notes: Supports the context, composition, and mechanism of nuclear replisome (GO:0043601)
+    within the eukaryotic nuclear replisome progression machinery. Gene Ontology cellular-component
+    term for the GINS complex.
+- reference: GO:0042555
+  notes: Supports the context, composition, and mechanism of nuclear replisome (GO:0043601)
+    within the eukaryotic nuclear replisome progression machinery. Gene Ontology cellular-component
+    term for the MCM complex.
+- reference: GO:0006260
+  notes: Supports the context, composition, and mechanism of nuclear replisome (GO:0043601)
+    within the eukaryotic nuclear replisome progression machinery. Gene Ontology biological-process
+    term for DNA replication.
+- reference: PMID:19228417
+  notes: Supports the context, composition, and mechanism of nuclear replisome (GO:0043601)
+    within the eukaryotic nuclear replisome progression machinery. PubMed identifier
+    listed by GO:0071162 as its definition cross-reference.
+- reference: DOI:10.1186/1471-2121-10-12
+  notes: Supports the context, composition, and mechanism of nuclear replisome (GO:0043601)
+    within the eukaryotic nuclear replisome progression machinery. DOI for Akman and
+    MacNeill 2009, verified through PubMed.
+causal_graphs:
+- graph_id: nuclear_replisome_mechanism
+  title: Nuclear replisome assembly around the CMG helicase and coupled DNA synthesis
+  description: S-phase CDK and DDK phosphorylation assemble the CMG helicase, which
+    recruits DNA polymerases epsilon and alpha-primase (via Ctf4), PCNA, and Mrc1–Tof1–Csm3
+    to form the processive nuclear replisome.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three GO-defined CMG constituents and DNA-replication
+    function without resolving MCM2-7 ring activation, Cdc45/GINS binding interfaces
+    or replisome coupling.
+  nodes:
+  - node_id: gins_complex
+    label: GINS complex
+    node_type: STRUCTURE
+    component_ref: gins_complex
+    grounding: GO:0000811
+  - node_id: mcm_complex
+    label: MCM complex
+    node_type: STRUCTURE
+    component_ref: mcm_complex
+    grounding: GO:0042555
+  - node_id: cdc45_protein
+    label: Cdc45 protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: cdc45_protein
+  - node_id: cmg_complex
+    label: nuclear replisome
+    node_type: STRUCTURE
+    grounding: GO:0043601
+    description: Assembled and functional nuclear replisome (GO:0043601) operating
+      within the eukaryotic nuclear replisome progression machinery.
+  - node_id: dna_replication
+    label: DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: gins_complex
+    predicate: contributes to
+    object: cmg_complex
+    description: The GINS complex is a constituent subcomplex of CMG.
+    evidence:
+    - reference: GO:0071162
+      notes: GO:0071162 defines the CMG complex as containing GINS.
+  - subject: mcm_complex
+    predicate: contributes to
+    object: cmg_complex
+    description: The MCM complex is a constituent subcomplex of CMG.
+    evidence:
+    - reference: GO:0071162
+      notes: GO:0071162 defines the CMG complex as containing the heterohexameric
+        MCM complex.
+  - subject: cdc45_protein
+    predicate: contributes to
+    object: cmg_complex
+    description: Cdc45 is a constituent protein of CMG.
+    evidence:
+    - reference: GO:0071162
+      notes: GO:0071162 defines the CMG complex as containing Cdc45p.
+  - subject: cmg_complex
+    predicate: supports
+    object: dna_replication
+    description: The CMG complex supports DNA unwinding during replication.
+    evidence:
+    - reference: GO:0071162
+      notes: GO:0071162 defines CMG as involved in unwinding DNA during replication.
+    - reference: GO:0006260
+      notes: GO:0006260 is the GO biological-process term for DNA replication.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of nuclear replisome (GO:0043601) in category OTHER with
+    verified UniProtKB protein examples and literature evidence.
+  llm_assisted: true

@@ -1,0 +1,317 @@
+identifier: GO:0005657
+label: replication fork
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: The Y-shaped region of a replicating DNA molecule, resulting from the
+  separation of the DNA strands and in which the synthesis of new strands takes place.
+  Also includes associated protein complexes. The Y-shaped nucleoprotein junction
+  on a replicating chromosome where parental double-stranded DNA is unwound by the
+  replicative DNA helicase into leading and lagging single-stranded templates and
+  copied by the replisome in bacteria, archaea, and microbial eukaryotes. When stalled
+  by DNA lesions or dNTP depletion, the replication fork recruits RPA, the 9-1-1 (Ddc1–Mec3–Rad17)
+  checkpoint clamp, and Mec1/ATR kinases to stabilize the fork and prevent replication
+  catastrophe.
+definition_source: GO:0005657
+mapping_status: PROPOSED
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0005694
+has_part:
+- GO:0005663
+- GO:0030894
+synonyms:
+- synonym_text: replication focus
+  synonym_type: RELATED_SYNONYM
+  source: GO:0005657
+components:
+- component_id: rad9_checkpoint_clamp_subunit
+  label: Rad9 checkpoint clamp subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - rad9
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rad9 checkpoint clamp subunit is modeled as a named Schizosaccharomyces
+    pombe checkpoint-clamp constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: PCNA-like constituent of the fission-yeast Rad9-Rad1-Hus1 DNA damage checkpoint
+    clamp. Functions at the chromosomal DNA replication fork in replication fork.
+  evidence:
+  - reference: GO:0030896
+    notes: GO:0030896 lists Rad9 among the Schizosaccharomyces pombe checkpoint clamp
+      subunit names.
+  - reference: DOI:10.1091/mbc.12.12.3744
+    notes: Kaur et al. 2001 performed structure-function analysis of the fission-yeast
+      Hus1-Rad1-Rad9 checkpoint complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P26306
+    protein_label: DNA repair protein rad9
+    gene_symbol: rad9
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rad9 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P26306
+      notes: UniProtKB reviewed (Swiss-Prot) entry P26306, the single reviewed entry
+        for gene rad9 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: rad1_checkpoint_clamp_subunit
+  label: Rad1 checkpoint clamp subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - rad1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Rad1 checkpoint clamp subunit is modeled as a named Schizosaccharomyces
+    pombe checkpoint-clamp constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: PCNA-like constituent of the fission-yeast Rad9-Rad1-Hus1 DNA damage checkpoint
+    clamp. Functions at the chromosomal DNA replication fork in replication fork.
+  evidence:
+  - reference: GO:0030896
+    notes: GO:0030896 lists Rad1 among the Schizosaccharomyces pombe checkpoint clamp
+      subunit names.
+  - reference: DOI:10.1091/mbc.12.12.3744
+    notes: Kaur et al. 2001 performed structure-function analysis of the fission-yeast
+      Hus1-Rad1-Rad9 checkpoint complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P22193
+    protein_label: DNA damage checkpoint control protein rad1
+    gene_symbol: rad1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene rad1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P22193
+      notes: UniProtKB reviewed (Swiss-Prot) entry P22193, the single reviewed entry
+        for gene rad1 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: hus1_checkpoint_clamp_subunit
+  label: Hus1 checkpoint clamp subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - hus1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Hus1 checkpoint clamp subunit is modeled as a named Schizosaccharomyces
+    pombe checkpoint-clamp constituent; no exact source-neutral InterPro, Pfam, NCBIfam
+    or UniProtKB family CURIE was curated in this pass.
+  role: PCNA-like constituent of the fission-yeast Rad9-Rad1-Hus1 DNA damage checkpoint
+    clamp. Functions at the chromosomal DNA replication fork in replication fork.
+  evidence:
+  - reference: GO:0030896
+    notes: GO:0030896 lists Hus1 among the Schizosaccharomyces pombe checkpoint clamp
+      subunit names.
+  - reference: DOI:10.1091/mbc.12.12.3744
+    notes: Kaur et al. 2001 performed structure-function analysis of the fission-yeast
+      Hus1-Rad1-Rad9 checkpoint complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P78955
+    protein_label: Checkpoint protein hus1
+    gene_symbol: hus1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene hus1 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:16823372
+      notes: Matsuyama A et al. 2006, ‘ORFeome cloning and global analysis of protein
+        localization in the fission yeast Schizosaccharomyces pombe.’, Nat Biotechnol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm' localisation
+        of P78955.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Exhibits replication fork (GO:0005657) at the chromosomal DNA replication
+    fork. Fission yeast has a Hus1-Rad1-Rad9 checkpoint clamp complex matching the
+    Schizosaccharomyces pombe subunit names noted by GO:0030896.
+  reference: DOI:10.1091/mbc.12.12.3744
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  note: Characterized model system for replication fork (GO:0005657) at the chromosomal
+    DNA replication fork. Reference fission-yeast system in which Kaur et al. performed
+    structure-function analysis of the Hus1-Rad1-Rad9 checkpoint complex.
+  reference: DOI:10.1091/mbc.12.12.3744
+functions:
+- function_id: dna_damage_response
+  label: DNA damage response
+  grounding: GO:0006974
+  description: Mediated by replication fork (GO:0005657) at the chromosomal DNA replication
+    fork. The checkpoint clamp complex is loaded onto damaged DNA and supports the
+    cellular response to DNA damage.
+  evidence:
+  - reference: GO:0030896
+    notes: GO:0030896 defines the checkpoint clamp complex as loaded onto DNA at sites
+      of DNA damage.
+  - reference: GO:0006974
+    notes: GO:0006974 is the Gene Ontology biological-process term for DNA damage
+      response.
+evidence:
+- reference: GO:0005657
+  notes: 'Gene Ontology cellular-component term for replication fork: The Y-shaped
+    region of a replicating DNA molecule, resulting from the separation of the DNA
+    strands and in which the synthesis of new strands takes place. Also includes associated
+    protein complexes.'
+- reference: GO:0030896
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. Gene Ontology cellular-component term
+    for the checkpoint clamp complex.
+- reference: GO:0140513
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. Gene Ontology cellular-component parent
+    term for nuclear protein-containing complexes.
+- reference: GO:0006974
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. Gene Ontology biological-process term
+    for DNA damage response.
+- reference: PMID:12531008
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. PubMed identifier for Carr 2002, the
+    DNA Repair review cited by the GO:0030896 definition.
+- reference: DOI:10.1016/s1568-7864(02)00165-9
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. DOI for Carr 2002, verified through PubMed.
+- reference: PMID:11739777
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. PubMed identifier for Kaur et al. 2001,
+    the Molecular Biology of the Cell paper on the fission-yeast Hus1-Rad1-Rad9 checkpoint
+    complex.
+- reference: DOI:10.1091/mbc.12.12.3744
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. DOI for Kaur et al. 2001, verified through
+    PubMed and PMC.
+- reference: PMID:15279787
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. PubMed identifier for Parrilla-Castellar
+    et al. 2004, the DNA Repair review on the Rad9-Hus1-Rad1 9-1-1 clamp complex.
+- reference: DOI:10.1016/j.dnarep.2004.03.032
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. DOI for Parrilla-Castellar et al. 2004,
+    verified through PubMed.
+- reference: PMID:19446481
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. PubMed identifier for Dore et al. 2009,
+    the Molecular Cell paper on the Rad9-Rad1-Hus1 DNA damage checkpoint complex crystal
+    structure.
+- reference: DOI:10.1016/j.molcel.2009.04.027
+  notes: Supports the context, composition, and mechanism of replication fork (GO:0005657)
+    at the chromosomal DNA replication fork. DOI for Dore et al. 2009, verified through
+    PubMed.
+causal_graphs:
+- graph_id: replication_fork_mechanism
+  title: Replication fork progression, stalling sensing, and 9-1-1 checkpoint stabilization
+  description: Unwinding of parental DNA ahead of DNA polymerases at a stalled replication
+    fork exposes RPA-coated ssDNA–dsDNA junctions, recruiting Rad24-RFC to load the
+    Ddc1–Mec3–Rad17 clamp and activate Mec1/Rad53 fork-stabilizing signaling.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the three fission-yeast checkpoint clamp constituents
+    and their GO-level DNA-damage-response function without resolving RFC-like clamp
+    loading, Rad3-Rad26 signaling or Chk1 activation.
+  nodes:
+  - node_id: rad9_checkpoint_clamp_subunit
+    label: Rad9 checkpoint clamp subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad9_checkpoint_clamp_subunit
+  - node_id: rad1_checkpoint_clamp_subunit
+    label: Rad1 checkpoint clamp subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rad1_checkpoint_clamp_subunit
+  - node_id: hus1_checkpoint_clamp_subunit
+    label: Hus1 checkpoint clamp subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: hus1_checkpoint_clamp_subunit
+  - node_id: checkpoint_clamp_complex
+    label: replication fork
+    node_type: STRUCTURE
+    grounding: GO:0005657
+    description: Assembled and functional replication fork (GO:0005657) operating
+      at the chromosomal DNA replication fork.
+  - node_id: damaged_dna
+    label: damaged DNA
+    node_type: GENETIC_ELEMENT
+  - node_id: dna_damage_response
+    label: DNA damage response
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006974
+  edges:
+  - subject: rad9_checkpoint_clamp_subunit
+    predicate: contributes to
+    object: checkpoint_clamp_complex
+    description: Rad9 is a constituent of the Schizosaccharomyces pombe checkpoint
+      clamp complex.
+    evidence:
+    - reference: GO:0030896
+      notes: GO:0030896 lists S. pombe Rad9 as a checkpoint clamp subunit.
+    - reference: DOI:10.1091/mbc.12.12.3744
+      notes: Kaur et al. 2001 analyzed the fission-yeast Hus1-Rad1-Rad9 checkpoint
+        complex.
+  - subject: rad1_checkpoint_clamp_subunit
+    predicate: contributes to
+    object: checkpoint_clamp_complex
+    description: Rad1 is a constituent of the Schizosaccharomyces pombe checkpoint
+      clamp complex.
+    evidence:
+    - reference: GO:0030896
+      notes: GO:0030896 lists S. pombe Rad1 as a checkpoint clamp subunit.
+    - reference: DOI:10.1091/mbc.12.12.3744
+      notes: Kaur et al. 2001 analyzed the fission-yeast Hus1-Rad1-Rad9 checkpoint
+        complex.
+  - subject: hus1_checkpoint_clamp_subunit
+    predicate: contributes to
+    object: checkpoint_clamp_complex
+    description: Hus1 is a constituent of the Schizosaccharomyces pombe checkpoint
+      clamp complex.
+    evidence:
+    - reference: GO:0030896
+      notes: GO:0030896 lists S. pombe Hus1 as a checkpoint clamp subunit.
+    - reference: DOI:10.1091/mbc.12.12.3744
+      notes: Kaur et al. 2001 analyzed the fission-yeast Hus1-Rad1-Rad9 checkpoint
+        complex.
+  - subject: checkpoint_clamp_complex
+    predicate: loads onto
+    object: damaged_dna
+    description: The checkpoint clamp is loaded onto DNA at sites of DNA damage.
+    evidence:
+    - reference: GO:0030896
+      notes: GO:0030896 defines the checkpoint clamp complex as loaded onto DNA at
+        sites of DNA damage.
+    - reference: DOI:10.1016/j.dnarep.2004.03.032
+      notes: Parrilla-Castellar et al. 2004 reviewed the Rad9-Hus1-Rad1 9-1-1 clamp
+        complex.
+  - subject: checkpoint_clamp_complex
+    predicate: supports
+    object: dna_damage_response
+    description: The checkpoint clamp complex supports the DNA damage response.
+    evidence:
+    - reference: GO:0030896
+      notes: GO:0030896 defines the checkpoint clamp complex as being loaded at DNA
+        damage sites.
+    - reference: GO:0006974
+      notes: GO:0006974 is the biological-process term for DNA damage response.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of replication fork (GO:0005657) in category OTHER with
+    verified UniProtKB protein examples and literature evidence.
+  llm_assisted: true

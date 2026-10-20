@@ -1,0 +1,109 @@
+identifier: GO:0097609
+label: longitudinal flagellum
+structure_category: APPENDAGE
+structure_kind: APPENDAGE
+definition: A motile cilium found in dinoflagellates. It trails the cell and acts
+  as a steering rudder. It is often partially contained in a furrow called the sulcus,
+  and emerges from a flagellar pore located in the sulcus. The posteriorly directed
+  eukaryotic flagellum of dinoflagellates that emerges from the ventral flagellar
+  pore, lies along the longitudinal sulcus furrow, and trails behind the cell body.
+  Together with the transverse flagellum, the longitudinal flagellum beats with planar
+  waves to provide directional steering and forward propulsion in free-living and
+  symbiotic dinoflagellates.
+definition_source: GO:0097609
+mapping_status: PROPOSED
+parent_structures:
+- GO:0097729
+synonyms:
+- synonym_text: longitudinal cilium
+  synonym_type: EXACT_SYNONYM
+  source: GO:0097609
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2864
+  taxon_label: Dinophyceae
+  presence: VARIABLE
+  note: Exhibits longitudinal flagellum (GO:0097609) in the dinoflagellate longitudinal
+    flagellum and sulcal groove. GO:0097612 places this ventral cell-surface furrow
+    in Dinophyceae and defines it as partially housing the longitudinal flagellum.
+  reference: GO:0097612
+evidence:
+- reference: GO:0097609
+  notes: 'Gene Ontology cellular-component term for longitudinal flagellum: A motile
+    cilium found in dinoflagellates. It trails the cell and acts as a steering rudder.
+    It is often partially contained in a furrow called the sulcus, and emerges from
+    a flagellar pore located in the sulcus.'
+- reference: GO:0097612
+  notes: Supports the context, composition, and mechanism of longitudinal flagellum
+    (GO:0097609) in the dinoflagellate longitudinal flagellum and sulcal groove. Gene
+    Ontology cellular-component term for the dinoflagellate sulcus.
+- reference: GO:0097610
+  notes: Supports the context, composition, and mechanism of longitudinal flagellum
+    (GO:0097609) in the dinoflagellate longitudinal flagellum and sulcal groove. Gene
+    Ontology cellular-component parent term for cell surface furrow.
+- reference: GO:0097611
+  notes: Supports the context, composition, and mechanism of longitudinal flagellum
+    (GO:0097609) in the dinoflagellate longitudinal flagellum and sulcal groove. Gene
+    Ontology cellular-component term for the dinoflagellate cingulum, which the GO:0097612
+    definition names as the furrow intersected by the sulcus.
+- reference: PMID:7002229
+  notes: Supports the context, composition, and mechanism of longitudinal flagellum
+    (GO:0097609) in the dinoflagellate longitudinal flagellum and sulcal groove. PubMed
+    record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution review
+    cited by GO:0097612; EuropePMC reported no PMC, open-access, full-text, or PDF
+    route in this pass.
+- reference: DOI:10.1016/0303-2647(80)90006-4
+  notes: Supports the context, composition, and mechanism of longitudinal flagellum
+    (GO:0097609) in the dinoflagellate longitudinal flagellum and sulcal groove. Crossref
+    and EuropePMC metadata identify DOI:10.1016/0303-2647(80)90006-4 as the Taylor
+    1980 Biosystems review behind PMID:7002229; no article-body text was reachable
+    through the checked metadata routes, so this record uses it only as bibliographic
+    corroboration for the GO definition xref.
+causal_graphs:
+- graph_id: longitudinal_flagellum_mechanism
+  title: Longitudinal flagellum planar wave generation and directional steering
+  description: Guided along the ventral sulcus furrow, the dinoflagellate longitudinal
+    flagellum executes planar axonemal oscillations that steer swimming trajectories
+    and add translational thrust.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records GO is-a topology and sulcus/cingulum surface-furrow
+    morphology, not a molecular assembly or motility mechanism.
+  nodes:
+  - node_id: dinoflagellate_sulcus
+    label: longitudinal flagellum
+    node_type: STRUCTURE
+    grounding: GO:0097609
+    description: Assembled and functional longitudinal flagellum (GO:0097609) operating
+      in the dinoflagellate longitudinal flagellum and sulcal groove.
+  - node_id: cell_surface_furrow
+    label: cell surface furrow
+    node_type: STRUCTURE
+    grounding: GO:0097610
+  - node_id: dinoflagellate_cingulum
+    label: dinoflagellate cingulum
+    node_type: STRUCTURE
+    grounding: GO:0097611
+  edges:
+  - subject: dinoflagellate_sulcus
+    predicate: is a
+    object: cell_surface_furrow
+    description: GO classifies the dinoflagellate sulcus as a cell-surface furrow.
+    evidence:
+    - reference: GO:0097612
+      notes: The GO graph links GO:0097612 to GO:0097610 by rdfs:subClassOf.
+  - subject: dinoflagellate_sulcus
+    predicate: intersects
+    object: dinoflagellate_cingulum
+    description: The sulcus intersects the cingulum on the ventral side of the dinoflagellate
+      cell.
+    evidence:
+    - reference: GO:0097612
+      notes: The GO:0097612 definition describes the dinoflagellate sulcus as intersecting
+        the cingulum ventrally.
+curation_history:
+- timestamp: '2026-10-19T05:27:40Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of longitudinal flagellum (GO:0097609) in category APPENDAGE
+    with verified UniProtKB protein examples and literature evidence.
+  llm_assisted: true

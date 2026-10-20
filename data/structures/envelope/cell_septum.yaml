@@ -1,0 +1,182 @@
+identifier: GO:0030428
+label: cell septum
+structure_category: ENVELOPE
+structure_kind: ENVELOPE_LAYER
+definition: A structure composed of peptidoglycan and often chitin in addition to
+  other materials. It usually forms perpendicular to the long axis of a cell or hypha
+  and grows centripetally from the cell wall to the center of the cell and often functions
+  in the compartmentalization of a cell into two daughter cells. An intercellular
+  cross-wall layer composed of peptidoglycan in dividing bacteria, pseudomurein/S-layer
+  in archaea, or chitin and beta-glucan in yeasts and filamentous fungi that forms
+  perpendicular to the longitudinal cell axis to partition daughter cells or hyphal
+  compartments. Synthesis of the cell septum is directed by the cytokinetic FtsZ divisome
+  in prokaryotes or the actomyosin contractile ring and septin collar in fungi.
+definition_source: GO:0030428
+mapping_status: PROPOSED
+parent_structures:
+- GO:0110165
+has_part:
+- GO:1990586
+synonyms:
+- synonym_text: septum
+  synonym_type: BROAD_SYNONYM
+  source: GO:0030428
+- synonym_text: cross wall
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030428
+components:
+- component_id: bacterial_septal_peptidoglycan
+  label: bacterial septal peptidoglycan
+  component_type: PEPTIDOGLYCAN
+  component_role: CONSTITUENT
+  essentiality: CONDITIONAL
+  role: Newly synthesized peptidoglycan that closes the division plane in walled bacteria.
+    Functions in cell septum wall synthesis and daughter cell partitioning in cell
+    septum.
+  evidence:
+  - reference: DOI:10.1111/j.1749-6632.2012.06818.x
+    notes: Egan and Vollmer 2012 review septal peptidoglycan synthesis as the peptidoglycan-building
+      output of the bacterial divisome.
+  - reference: DOI:10.1146/annurev-biophys-121219-081703
+    notes: McQuillen and Xiao 2020 review how the FtsZ ring organizes septal peptidoglycan
+      synthesis.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: No exact source-neutral CHEBI, GO, or polymer term was identified
+    for the peptidoglycan specifically deposited at bacterial division septa; this
+    component deliberately excludes chitin- and glucan-containing fungal septal walls.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Exhibits cell septum (GO:0030428) in cell septum wall synthesis and daughter
+    cell partitioning. Walled FtsZ-dividing bacteria close the division plane with
+    septal peptidoglycan, while wall-less lineages and bacteria using other division
+    modes are outside this broad row.
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Characterized model system for cell septum (GO:0030428) in cell septum wall
+    synthesis and daughter cell partitioning. Rod-shaped diderm model for divisome-directed
+    septal peptidoglycan synthesis.
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Characterized model system for cell septum (GO:0030428) in cell septum wall
+    synthesis and daughter cell partitioning. Gram-positive model for FtsZ-guided
+    septal synthesis and division-plane closure.
+  reference: DOI:10.1146/annurev-biophys-121219-081703
+functions:
+- function_id: daughter_cell_compartmentalization
+  label: daughter-cell compartmentalization
+  description: Mediated by cell septum (GO:0030428) in cell septum wall synthesis
+    and daughter cell partitioning. The completed division septum spans the division
+    site and blocks cytoplasmic and organellar exchange between nascent daughter cells.
+  evidence:
+  - reference: GO:0000935
+    notes: GO:0000935 defines the division septum as a cell septum that compartmentalizes
+      two daughter cells.
+evidence:
+- reference: GO:0030428
+  notes: 'Gene Ontology cellular-component term for cell septum: A structure composed
+    of peptidoglycan and often chitin in addition to other materials. It usually forms
+    perpendicular to the long axis of a cell or hypha and grows centripetally from
+    the cell wall to the center of the cell and often functions in the compartmentalization
+    of a cell into two daughter cells.'
+- reference: GO:0000935
+  notes: Supports the context, composition, and mechanism of cell septum (GO:0030428)
+    in cell septum wall synthesis and daughter cell partitioning. Gene Ontology cellular-component
+    term for the division septum.
+- reference: GO:0032153
+  notes: Supports the context, composition, and mechanism of cell septum (GO:0030428)
+    in cell septum wall synthesis and daughter cell partitioning. Gene Ontology cellular-component
+    term for the cell division site that contains division septum structures.
+- reference: DOI:10.1146/annurev-biophys-121219-081703
+  notes: Supports the context, composition, and mechanism of cell septum (GO:0030428)
+    in cell septum wall synthesis and daughter cell partitioning. McQuillen and Xiao
+    2020, Insights into the Structure, Function, and Dynamics of the Bacterial Cytokinetic
+    FtsZ-Ring, Annual Review of Biophysics.
+- reference: DOI:10.1111/j.1749-6632.2012.06818.x
+  notes: Supports the context, composition, and mechanism of cell septum (GO:0030428)
+    in cell septum wall synthesis and daughter cell partitioning. Egan and Vollmer
+    2012, The physiology of bacterial cell division, Annals of the New York Academy
+    of Sciences.
+causal_graphs:
+- graph_id: cell_septum_mechanism
+  title: Cell septum centripetal synthesis and daughter compartment separation
+  description: Cytokinetic ring constriction recruits cell-wall synthases to deposit
+    septal peptidoglycan or chitin/beta-glucan inward at midcell, constructing the
+    cell septum that partitions the two daughter cells.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph links the divisome to the physical septal peptidoglycan product
+    without enumerating the organism-specific enzyme order or envelope remodeling
+    steps that differ between diderm and monoderm bacteria.
+  nodes:
+  - node_id: cell_division_site
+    label: cell division site
+    node_type: STRUCTURE
+    grounding: GO:0032153
+  - node_id: divisome
+    label: divisome complex
+    node_type: STRUCTURE
+    grounding: GO:1990586
+  - node_id: bacterial_septal_peptidoglycan
+    label: bacterial septal peptidoglycan
+    node_type: STRUCTURE
+    component_ref: bacterial_septal_peptidoglycan
+  - node_id: division_septum
+    label: cell septum
+    node_type: STRUCTURE
+    grounding: GO:0030428
+    description: Assembled and functional cell septum (GO:0030428) operating in cell
+      septum wall synthesis and daughter cell partitioning.
+  - node_id: daughter_cell_compartments
+    label: daughter-cell compartments
+    node_type: CELLULAR_LOCALIZATION
+  edges:
+  - subject: divisome
+    predicate: localizes to
+    object: cell_division_site
+    description: The bacterial divisome assembles at the future division site where
+      septal wall closure will occur.
+    evidence:
+    - reference: GO:1990586
+      notes: GO:1990586 defines the divisome as the complex that carries out division
+        septum assembly at the division site.
+  - subject: divisome
+    predicate: synthesizes
+    object: bacterial_septal_peptidoglycan
+    description: Septal peptidoglycan synthases organized by the divisome make new
+      bacterial cell-wall material at the closing division plane.
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-121219-081703
+      notes: McQuillen and Xiao 2020 review FtsZ-guided motion of septal peptidoglycan
+        synthases.
+    - reference: DOI:10.1111/j.1749-6632.2012.06818.x
+      notes: Egan and Vollmer 2012 describe septal synthesis as the output of the
+        division machinery.
+  - subject: bacterial_septal_peptidoglycan
+    predicate: forms
+    object: division_septum
+    description: Centripetal addition of bacterial septal peptidoglycan creates the
+      cross-wall called the division septum.
+    evidence:
+    - reference: GO:0030428
+      notes: GO:0030428 defines cell septa as wall structures composed of peptidoglycan
+        and/or chitin that grow inward from the cell wall.
+  - subject: division_septum
+    predicate: compartmentalizes
+    object: daughter_cell_compartments
+    description: A complete division septum spans the cell and blocks exchange between
+      the two compartments made during division.
+    evidence:
+    - reference: GO:0000935
+      notes: GO:0000935 defines the division septum by daughter-cell compartmentalization.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of cell septum (GO:0030428) in category ENVELOPE with
+    verified UniProtKB protein examples and literature evidence.
+  llm_assisted: true

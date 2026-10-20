@@ -1,0 +1,172 @@
+identifier: GO:0031026
+label: glutamate synthase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A complex that possesses glutamate synthase activity. The iron-sulfur
+  flavoprotein glutamine:2-oxoglutarate amidotransferase (GOGAT) enzyme complex that
+  catalyzes the reductive transfer of the amide amino group from L-glutamine to 2-oxoglutarate
+  to yield two molecules of L-glutamate. Operating alongside glutamine synthetase
+  in the high-affinity GS-GOGAT ammonia assimilation pathway across bacteria, archaea,
+  yeasts, and microalgae, the glutamate synthase complex couples an amidotransferase
+  site with FMN and [3Fe-4S]/[4Fe-4S] clusters through an intramolecular ammonia tunnel.
+definition_source: GO:0031026
+mapping_status: PROPOSED
+parent_structures:
+- GO:0140535
+- GO:1990204
+components:
+- component_id: gltb_large_chain
+  label: Glutamate synthase NADPH large chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The reviewed E. coli GltB accession carries domain-level InterPro
+    entries and broad FAD/NADPH dehydrogenase families, but no exact source-neutral
+    glutamate synthase NADPH large-chain family was verified.
+  gene_symbols:
+  - gltB
+  essentiality: UNKNOWN
+  role: Large glutamate synthase subunit that binds glutamine and participates in
+    amide transfer to 2-oxoglutarate in the NADPH-dependent GltBD complex. Functions
+    within the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex in glutamate
+    synthase complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P09831
+    protein_label: Glutamate synthase [NADPH] large chain
+    gene_symbol: gltB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    role: Reviewed E. coli K-12 GltB accession for the NADPH-dependent glutamate synthase
+      large chain.
+    evidence:
+    - reference: UniProtKB:P09831
+      notes: UniProtKB P09831 is the reviewed E. coli K-12 entry for the NADPH-dependent
+        glutamate synthase large chain.
+    - reference: PMID:3326786
+      notes: Oliver et al. 1987 sequenced the E. coli K-12 glutamate synthase structural
+        genes for both large and small subunits.
+  evidence:
+  - reference: UniProtKB:P09831
+    notes: Reviewed E. coli K-12 GltB accession.
+  - reference: PMID:3326786
+    notes: Oliver et al. 1987 identified the E. coli K-12 large subunit structural
+      gene.
+  - reference: ComplexPortal:CPX-5041
+    notes: Complex Portal CPX-5041 curates P09831/GltB as a protein participant in
+      the E. coli K-12 glutamate synthase [NADPH] complex.
+- component_id: gltd_small_chain
+  label: Glutamate synthase NADPH small chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: InterPro:IPR006006 is GltD-like but also covers AegA/UacF relatives,
+    so it was reviewed as too broad for exact glutamate synthase NADPH small-chain
+    grounding.
+  gene_symbols:
+  - gltD
+  essentiality: UNKNOWN
+  role: Small iron-sulfur glutamate synthase subunit in the NADPH-dependent GltBD
+    complex. Functions within the iron-sulfur flavoprotein glutamate synthase (GOGAT)
+    complex in glutamate synthase complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P09832
+    protein_label: Glutamate synthase [NADPH] small chain
+    gene_symbol: gltD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    role: Reviewed E. coli K-12 GltD accession for the NADPH-dependent glutamate synthase
+      small chain.
+    evidence:
+    - reference: UniProtKB:P09832
+      notes: UniProtKB P09832 is the reviewed E. coli K-12 entry for the NADPH-dependent
+        glutamate synthase small chain.
+    - reference: PMID:3326786
+      notes: Oliver et al. 1987 sequenced the E. coli K-12 glutamate synthase structural
+        genes for both large and small subunits.
+  evidence:
+  - reference: UniProtKB:P09832
+    notes: Reviewed E. coli K-12 GltD accession.
+  - reference: PMID:3326786
+    notes: Oliver et al. 1987 identified the E. coli K-12 small subunit structural
+      gene.
+  - reference: ComplexPortal:CPX-5041
+    notes: Complex Portal CPX-5041 curates P09832/GltD as a protein participant in
+      the E. coli K-12 glutamate synthase [NADPH] complex.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Characterized model system for glutamate synthase complex (GO:0031026) within
+    the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex. Source strain
+    for the CPX-5041 GltBD composition and the reviewed UniProtKB GltB and GltD examples.
+  reference: ComplexPortal:CPX-5041
+functions:
+- function_id: glutamate_synthase_nadph_activity
+  label: glutamate synthase (NADPH) activity
+  grounding: GO:0004355
+  description: Mediated by glutamate synthase complex (GO:0031026) within the iron-sulfur
+    flavoprotein glutamate synthase (GOGAT) complex. NADPH-dependent conversion mediated
+    by the GltBD complex between glutamine plus 2-oxoglutarate and glutamate.
+  evidence:
+  - reference: GO:0009342
+    notes: GO:0009342 is the cellular-component term for a complex that possesses
+      glutamate synthase (NADPH) activity.
+  - reference: GO:0004355
+    notes: GO:0004355 is the molecular-function term for glutamate synthase (NADPH)
+      activity.
+  - reference: PMID:4565085
+    notes: Miller and Stadtman 1972 characterized purified E. coli glutamate synthase
+      as an iron-sulfur flavoprotein.
+evidence:
+- reference: GO:0031026
+  notes: 'Gene Ontology cellular-component term for glutamate synthase complex: A
+    complex that possesses glutamate synthase activity.'
+- reference: GO:0009342
+  notes: Supports the context, composition, and mechanism of glutamate synthase complex
+    (GO:0031026) within the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex.
+    Gene Ontology cellular-component term for the NADPH-specific glutamate synthase
+    complex.
+- reference: GO:0004355
+  notes: Supports the context, composition, and mechanism of glutamate synthase complex
+    (GO:0031026) within the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex.
+    Gene Ontology molecular-function term for glutamate synthase (NADPH) activity.
+- reference: UniProtKB:P09831
+  notes: Supports the context, composition, and mechanism of glutamate synthase complex
+    (GO:0031026) within the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex.
+    Reviewed UniProtKB E. coli K-12 GltB entry.
+- reference: UniProtKB:P09832
+  notes: Supports the context, composition, and mechanism of glutamate synthase complex
+    (GO:0031026) within the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex.
+    Reviewed UniProtKB E. coli K-12 GltD entry.
+- reference: ComplexPortal:CPX-5041
+  notes: Supports the context, composition, and mechanism of glutamate synthase complex
+    (GO:0031026) within the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex.
+    Complex Portal entry for the E. coli K-12 glutamate synthase [NADPH] complex.
+- reference: PMID:4565085
+  notes: Supports the context, composition, and mechanism of glutamate synthase complex
+    (GO:0031026) within the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex.
+    PubMed identifier for Miller and Stadtman 1972, the Journal of Biological Chemistry
+    biochemical study cited by GO:0009342 and CPX-5041.
+- reference: DOI:10.1016/S0021-9258(19)44642-5
+  notes: Supports the context, composition, and mechanism of glutamate synthase complex
+    (GO:0031026) within the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex.
+    DOI for Miller and Stadtman 1972 as reported by UniProtKB.
+- reference: PMID:3326786
+  notes: Supports the context, composition, and mechanism of glutamate synthase complex
+    (GO:0031026) within the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex.
+    PubMed identifier for Oliver et al. 1987, the E. coli K-12 glutamate synthase
+    structural-gene sequence paper.
+- reference: DOI:10.1016/0378-1119(87)90207-1
+  notes: Supports the context, composition, and mechanism of glutamate synthase complex
+    (GO:0031026) within the iron-sulfur flavoprotein glutamate synthase (GOGAT) complex.
+    DOI for Oliver et al. 1987, as reported by PubMed.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of glutamate synthase complex (GO:0031026) in category
+    OTHER with verified UniProtKB protein examples and literature evidence.
+  llm_assisted: true

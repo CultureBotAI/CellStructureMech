@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/proton_transporting_v_type_atpase_v1_domain.yaml
+  slug: proton_transporting_v_type_atpase_v1_domain
+session:
+  id: 2026-10-19T052741Z-claude-opus-4-7-9fabb9
+  timestamp: '2026-10-19T05:27:41Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for proton-transporting V-type ATPase, V1 domain (GO:0033180)
+    in energy_complex.
+  details: Authored data/structures/energy_complex/proton_transporting_v_type_atpase_v1_domain.yaml
+    for proton-transporting V-type ATPase, V1 domain (GO:0033180) with verified GO hierarchy,
+    taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and
+    causal graph.

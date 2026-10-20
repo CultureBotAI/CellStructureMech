@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nurd_complex.yaml
+  slug: nurd_complex
+session:
+  id: 2026-10-19T052741Z-claude-opus-4-7-43e1df
+  timestamp: '2026-10-19T05:27:41Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for NuRD complex (GO:0016581) in other.
+  details: Authored data/structures/other/nurd_complex.yaml for NuRD complex (GO:0016581)
+    with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions,
+    literature evidence, and causal graph.

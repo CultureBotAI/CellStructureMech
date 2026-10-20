@@ -1,0 +1,368 @@
+identifier: GO:0033100
+label: NuA3 histone acetyltransferase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A Gcn5-independent multisubunit complex that catalyzes the acetylation
+  of histone H3. The budding yeast complex includes Sas3p, Taf30p, and Yng1p. The
+  yeast Nucleosomal Acetyltransferase of histone H3 (NuA3) multiprotein complex in
+  Saccharomyces cerevisiae and related fungi that specifically acetylates lysine 14
+  (and lysine 23) of nucleosomal histone H3 to facilitate RNA polymerase II transcription
+  elongation and DNA replication. The core NuA3 complex comprises the MYST-family
+  catalytic subunit Sas3p, the H3K4me3-binding PHD-finger scaffold Yng1p, the H3K36me3-reading
+  PWWP subunit Pdp3p, Nto1p, Eaf6p, and Taf14p.
+definition_source: GO:0033100
+mapping_status: PROPOSED
+parent_structures:
+- GO:0070775
+components:
+- component_id: eaf6_nua3a_subunit
+  label: Eaf6 NuA3a subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - EAF6
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:1990467 and SGD annotations follow Saccharomyces cerevisiae
+    Eaf6p naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this NuA3a subunit class was curated in this pass.
+  role: Protein constituent shared by the budding-yeast NuA3a and NuA3b complexes.
+    Functions in the NuA3 histone H3 acetyltransferase holocomplex in NuA3 histone
+    acetyltransferase complex.
+  evidence:
+  - reference: GO:1990467
+    notes: GO:1990467 defines the budding-yeast NuA3a complex as containing Eaf6p.
+  - reference: DOI:10.1074/mcp.M114.038224
+    notes: Gilbert et al. 2014 classified NuA3a as the Eaf6p/Nto1p/Sas3p/Taf14p/Yng1p
+      form of NuA3.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47128
+    protein_label: Chromatin modification-related protein EAF6
+    gene_symbol: EAF6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene EAF6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P47128.
+- component_id: nto1_nua3a_subunit
+  label: Nto1 NuA3a subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NTO1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:1990467 and SGD annotations follow Saccharomyces cerevisiae
+    Nto1p naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this NuA3a subunit class was curated in this pass.
+  role: Protein constituent shared by the budding-yeast NuA3a and NuA3b complexes.
+    Functions in the NuA3 histone H3 acetyltransferase holocomplex in NuA3 histone
+    acetyltransferase complex.
+  evidence:
+  - reference: GO:1990467
+    notes: GO:1990467 defines the budding-yeast NuA3a complex as containing Nto1p.
+  - reference: DOI:10.1074/mcp.M114.038224
+    notes: Gilbert et al. 2014 classified NuA3a as the Eaf6p/Nto1p/Sas3p/Taf14p/Yng1p
+      form of NuA3.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12311
+    protein_label: NuA3 HAT complex component NTO1
+    gene_symbol: NTO1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene NTO1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of Q12311.
+- component_id: sas3_nua3a_catalytic_subunit
+  label: Sas3 NuA3a catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SAS3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:1990467 and SGD annotations follow Saccharomyces cerevisiae
+    Sas3p naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this NuA3a subunit class was curated in this pass.
+  role: Catalytic MYST-family histone acetyltransferase constituent shared by the
+    budding-yeast NuA3a and NuA3b complexes. Functions in the NuA3 histone H3 acetyltransferase
+    holocomplex in NuA3 histone acetyltransferase complex.
+  evidence:
+  - reference: GO:1990467
+    notes: GO:1990467 defines the budding-yeast NuA3a complex as containing Sas3p.
+  - reference: DOI:10.1074/mcp.M114.038224
+    notes: Gilbert et al. 2014 classified NuA3a as the Eaf6p/Nto1p/Sas3p/Taf14p/Yng1p
+      form of NuA3.
+  protein_examples:
+  - uniprot_id: UniProtKB:P34218
+    protein_label: Histone acetyltransferase SAS3
+    gene_symbol: SAS3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SAS3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P34218.
+- component_id: taf14_nua3a_subunit
+  label: Taf14 NuA3a subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TAF14
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:1990467 and SGD annotations follow Saccharomyces cerevisiae
+    Taf14p naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this NuA3a subunit class was curated in this pass.
+  role: YEATS-domain constituent shared by the budding-yeast NuA3a and NuA3b complexes.
+    Functions in the NuA3 histone H3 acetyltransferase holocomplex in NuA3 histone
+    acetyltransferase complex.
+  evidence:
+  - reference: GO:1990467
+    notes: GO:1990467 defines the budding-yeast NuA3a complex as containing Taf14p.
+  - reference: DOI:10.1074/mcp.M114.038224
+    notes: Gilbert et al. 2014 classified NuA3a as the Eaf6p/Nto1p/Sas3p/Taf14p/Yng1p
+      form of NuA3.
+  protein_examples:
+  - uniprot_id: UniProtKB:P35189
+    protein_label: Transcription initiation factor TFIID subunit 14
+    gene_symbol: TAF14
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TAF14 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P35189
+      notes: UniProtKB reviewed (Swiss-Prot) entry P35189, the single reviewed entry
+        for gene TAF14 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: yng1_nua3a_reader_subunit
+  label: Yng1 NuA3a reader subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - YNG1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:1990467 and SGD annotations follow Saccharomyces cerevisiae
+    Yng1p naming; no exact source-neutral InterPro, Pfam, NCBIfam or UniProt family
+    identifier for this NuA3a subunit class was curated in this pass.
+  role: NuA3a-specific PHD-finger reader constituent that links the budding-yeast
+    NuA3a complex to H3K4me3. Functions in the NuA3 histone H3 acetyltransferase holocomplex
+    in NuA3 histone acetyltransferase complex.
+  evidence:
+  - reference: GO:1990467
+    notes: GO:1990467 defines the budding-yeast NuA3a complex as containing Yng1p.
+  - reference: DOI:10.1074/mcp.M114.038224
+    notes: Gilbert et al. 2014 classified NuA3a as the Eaf6p/Nto1p/Sas3p/Taf14p/Yng1p
+      form of NuA3.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08465
+    protein_label: Protein YNG1
+    gene_symbol: YNG1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene YNG1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q08465.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Exhibits NuA3 histone acetyltransferase complex (GO:0033100) in the NuA3 histone
+    H3 acetyltransferase holocomplex. Budding yeast is the organism in which GO:1990467
+    defines the NuA3a complex as containing Eaf6p, Nto1p, Sas3p, Taf14p and Yng1p.
+  reference: GO:1990467
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Characterized model system for NuA3 histone acetyltransferase complex (GO:0033100)
+    in the NuA3 histone H3 acetyltransferase holocomplex. Gilbert et al. 2014 separated
+    budding-yeast NuA3 into the Yng1p-containing NuA3a complex and the Pdp3p-containing
+    NuA3b complex.
+  reference: DOI:10.1074/mcp.M114.038224
+functions:
+- function_id: histone_acetyltransferase_activity
+  label: histone acetyltransferase activity
+  grounding: GO:0004402
+  description: Mediated by NuA3 histone acetyltransferase complex (GO:0033100) in
+    the NuA3 histone H3 acetyltransferase holocomplex. The NuA3a complex catalyzes
+    histone H3 acetylation through its Sas3 catalytic subunit and associates with
+    H3K4me3 using Yng1p.
+  evidence:
+  - reference: GO:1990467
+    notes: GO:1990467 defines NuA3a as a NuA3 complex that catalyzes histone H3 acetylation.
+  - reference: GO:0004402
+    notes: GO:0004402 is the Gene Ontology molecular-function term for histone acetyltransferase
+      activity.
+  - reference: DOI:10.1074/mcp.M114.038224
+    notes: Gilbert et al. 2014 distinguished Yng1p-associated NuA3a from Pdp3p-associated
+      NuA3b.
+evidence:
+- reference: GO:0033100
+  notes: 'Gene Ontology cellular-component term for NuA3 histone acetyltransferase
+    complex: A Gcn5-independent multisubunit complex that catalyzes the acetylation
+    of histone H3. The budding yeast complex includes Sas3p, Taf30p, and Yng1p.'
+- reference: GO:1990467
+  notes: Supports the context, composition, and mechanism of NuA3 histone acetyltransferase
+    complex (GO:0033100) in the NuA3 histone H3 acetyltransferase holocomplex. Gene
+    Ontology cellular-component term for the NuA3a histone acetyltransferase complex.
+- reference: GO:0004402
+  notes: Supports the context, composition, and mechanism of NuA3 histone acetyltransferase
+    complex (GO:0033100) in the NuA3 histone H3 acetyltransferase holocomplex. Gene
+    Ontology molecular-function term for histone acetyltransferase activity.
+- reference: PMID:25104842
+  notes: Supports the context, composition, and mechanism of NuA3 histone acetyltransferase
+    complex (GO:0033100) in the NuA3 histone H3 acetyltransferase holocomplex. PubMed
+    identifier for Gilbert et al. 2014, the budding-yeast NuA3a/NuA3b split-complex
+    paper cited by GO:1990467.
+- reference: DOI:10.1074/mcp.M114.038224
+  notes: Supports the context, composition, and mechanism of NuA3 histone acetyltransferase
+    complex (GO:0033100) in the NuA3 histone H3 acetyltransferase holocomplex. DOI
+    for Gilbert et al. 2014, 'A PWWP domain-containing protein targets the NuA3 acetyltransferase
+    complex via histone H3 lysine 36 trimethylation to coordinate transcriptional
+    elongation at coding regions', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: nua3_histone_acetyltransferase_complex_mechanism
+  title: NuA3 histone acetyltransferase complex methylation-coupled H3K14 acetylation
+  description: Yng1p and Pdp3p reader domains recruit the NuA3 histone acetyltransferase
+    complex to H3K4me3- and H3K36me3-modified nucleosomes, activating Sas3p to acetylate
+    H3K14 and stimulate transcription elongation.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the GO-defined NuA3a constituents and their connection
+    to histone acetyltransferase activity without resolving Yng1-dependent H3K4me3
+    recognition, Sas3 catalytic chemistry or transcriptional recruitment.
+  nodes:
+  - node_id: eaf6_nua3a_subunit
+    label: Eaf6 NuA3a subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: eaf6_nua3a_subunit
+  - node_id: nto1_nua3a_subunit
+    label: Nto1 NuA3a subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: nto1_nua3a_subunit
+  - node_id: sas3_nua3a_catalytic_subunit
+    label: Sas3 NuA3a catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sas3_nua3a_catalytic_subunit
+  - node_id: taf14_nua3a_subunit
+    label: Taf14 NuA3a subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: taf14_nua3a_subunit
+  - node_id: yng1_nua3a_reader_subunit
+    label: Yng1 NuA3a reader subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: yng1_nua3a_reader_subunit
+  - node_id: nua3a_histone_acetyltransferase_complex
+    label: NuA3 histone acetyltransferase complex
+    node_type: STRUCTURE
+    grounding: GO:0033100
+    description: Assembled and functional NuA3 histone acetyltransferase complex (GO:0033100)
+      operating in the NuA3 histone H3 acetyltransferase holocomplex.
+  - node_id: histone_acetyltransferase_activity
+    label: histone acetyltransferase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004402
+  edges:
+  - subject: eaf6_nua3a_subunit
+    predicate: contributes to
+    object: nua3a_histone_acetyltransferase_complex
+    description: Eaf6p is a constituent of the budding-yeast NuA3a complex.
+    evidence:
+    - reference: GO:1990467
+      notes: GO:1990467 defines Eaf6p as a NuA3a constituent.
+    - reference: DOI:10.1074/mcp.M114.038224
+      notes: Gilbert et al. 2014 classified NuA3a by affinity purification and mass
+        spectrometry.
+  - subject: nto1_nua3a_subunit
+    predicate: contributes to
+    object: nua3a_histone_acetyltransferase_complex
+    description: Nto1p is a constituent of the budding-yeast NuA3a complex.
+    evidence:
+    - reference: GO:1990467
+      notes: GO:1990467 defines Nto1p as a NuA3a constituent.
+    - reference: DOI:10.1074/mcp.M114.038224
+      notes: Gilbert et al. 2014 classified NuA3a by affinity purification and mass
+        spectrometry.
+  - subject: sas3_nua3a_catalytic_subunit
+    predicate: contributes to
+    object: nua3a_histone_acetyltransferase_complex
+    description: Sas3p is a constituent of the budding-yeast NuA3a complex.
+    evidence:
+    - reference: GO:1990467
+      notes: GO:1990467 defines Sas3p as a NuA3a constituent.
+    - reference: DOI:10.1074/mcp.M114.038224
+      notes: Gilbert et al. 2014 classified NuA3a by affinity purification and mass
+        spectrometry.
+  - subject: taf14_nua3a_subunit
+    predicate: contributes to
+    object: nua3a_histone_acetyltransferase_complex
+    description: Taf14p is a constituent of the budding-yeast NuA3a complex.
+    evidence:
+    - reference: GO:1990467
+      notes: GO:1990467 defines Taf14p as a NuA3a constituent.
+    - reference: DOI:10.1074/mcp.M114.038224
+      notes: Gilbert et al. 2014 classified NuA3a by affinity purification and mass
+        spectrometry.
+  - subject: yng1_nua3a_reader_subunit
+    predicate: contributes to
+    object: nua3a_histone_acetyltransferase_complex
+    description: Yng1p is a constituent of the budding-yeast NuA3a complex.
+    evidence:
+    - reference: GO:1990467
+      notes: GO:1990467 defines Yng1p as a NuA3a constituent.
+    - reference: DOI:10.1074/mcp.M114.038224
+      notes: Gilbert et al. 2014 classified NuA3a by affinity purification and mass
+        spectrometry.
+  - subject: nua3a_histone_acetyltransferase_complex
+    predicate: supports
+    object: histone_acetyltransferase_activity
+    description: NuA3a supports Sas3-dependent histone H3 acetyltransferase activity.
+    evidence:
+    - reference: GO:1990467
+      notes: GO:1990467 defines NuA3a as a NuA3 histone H3 acetyltransferase complex.
+    - reference: GO:0004402
+      notes: GO:0004402 is the molecular-function term for histone acetyltransferase
+        activity.
+    - reference: DOI:10.1074/mcp.M114.038224
+      notes: Gilbert et al. 2014 classified Yng1p-associated NuA3a as a NuA3 form
+        containing the Sas3 histone acetyltransferase subunit.
+curation_history:
+- timestamp: '2026-10-19T05:27:41Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of NuA3 histone acetyltransferase complex (GO:0033100)
+    in category OTHER with verified UniProtKB protein examples and literature evidence.
+  llm_assisted: true

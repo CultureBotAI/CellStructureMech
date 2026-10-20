@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hyphal_tip.yaml
+  slug: hyphal_tip
+session:
+  id: 2026-10-19T052740Z-claude-opus-4-7-326db8
+  timestamp: '2026-10-19T05:27:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for hyphal tip (GO:0001411) in other.
+  details: Authored data/structures/other/hyphal_tip.yaml for hyphal tip (GO:0001411) with
+    verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions,
+    literature evidence, and causal graph.

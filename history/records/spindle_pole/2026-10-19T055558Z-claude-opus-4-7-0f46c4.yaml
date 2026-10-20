@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spindle_pole.yaml
+  slug: spindle_pole
+session:
+  id: 2026-10-19T055558Z-claude-opus-4-7-0f46c4
+  timestamp: '2026-10-19T05:55:58Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for spindle pole (GO:0000922) in cytoskeleton.
+  details: Authored data/structures/cytoskeleton/spindle_pole.yaml for spindle pole (GO:0000922)
+    with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions,
+    literature evidence, and causal graph.

@@ -1,0 +1,193 @@
+identifier: GO:0036186
+label: early phagosome membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding an early phagosome. In phagotrophic protists,
+  amoebae (Dictyostelium discoideum, Entamoeba histolytica), and ciliates, the early
+  phagosome membrane derives from the invaginated plasma membrane and is transiently
+  enriched in phosphatidylinositol 3-phosphate (PI3P) and active Rab5 GTPase, recruiting
+  early endosomal tethering complexes before maturing into a late phagosome membrane.
+definition_source: GO:0036186
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-19T05:56:21Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of early phagosome membrane (GO:0036186) in category MEMBRANE_ORGANELLE
+    with verified UniProtKB protein examples and literature evidence.
+  llm_assisted: true
+parent_structures:
+- GO:0030670
+part_of:
+- GO:0032009
+components:
+- component_id: phagocytic_vesicle_lipid_bilayer
+  label: phagocytic vesicle lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer material that forms the phagocytic vesicle membrane boundary
+    around ingested particulate cargo. Functions across the Rab5-positive lipid bilayer
+    of the early phagosome membrane.
+  evidence:
+  - reference: GO:0030670
+    notes: GO:0030670 identifies the phagocytic vesicle membrane surrounding a phagocytic
+      vesicle.
+  - reference: uniprot.location:SL-0205
+    notes: UniProt SL-0205 maps directly to GO:0030670 and describes the membrane
+      surrounding a phagosome.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0030670 and UniProt SL-0205 identify the whole phagocytic vesicle
+    membrane; no separate source-neutral CURIE was curated for the generic lipid constituent
+    of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  presence: COMMON
+  note: Exhibits early phagosome membrane (GO:0036186) across the Rab5-positive lipid
+    bilayer of the early phagosome membrane. Dictyostelium discoideum phagosomes have
+    membranes that are progressively remodeled after particle uptake.
+  reference: PMID:12388753
+canonical_examples:
+- taxon_id: NCBITaxon:44689
+  taxon_label: Dictyostelium discoideum
+  note: Characterized model system for early phagosome membrane (GO:0036186) across
+    the Rab5-positive lipid bilayer of the early phagosome membrane. Amoebozoan model
+    whose purified latex-bead phagosome membranes were profiled across a maturation
+    time course.
+  reference: PMID:16926386
+functions:
+- function_id: phagosome_maturation
+  label: phagosome maturation
+  grounding: GO:0090382
+  description: The phagocytic vesicle membrane is progressively remodeled as newly
+    formed phagosomes mature toward late digestive compartments. Mediated by early
+    phagosome membrane (GO:0036186) across the Rab5-positive lipid bilayer of the
+    early phagosome membrane.
+  evidence:
+  - reference: GO:0090382
+    notes: GO:0090382 defines phagosome maturation as cellular rearrangement of phagosome
+      constituent parts after early phagosome formation.
+  - reference: PMID:12388753
+    notes: Gotthardt et al. 2002 dissected Dictyostelium phagosome maturation into
+      temporally distinct membrane-trafficking phases.
+evidence:
+- reference: GO:0036186
+  notes: 'Gene Ontology cellular-component term for early phagosome membrane: The
+    lipid bilayer surrounding an early phagosome.'
+- reference: GO:0030670
+  notes: Supports the context, composition, and mechanism of early phagosome membrane
+    (GO:0036186) across the Rab5-positive lipid bilayer of the early phagosome membrane.
+    Gene Ontology cellular-component term for the phagocytic vesicle membrane.
+- reference: GO:0030659
+  notes: Supports the context, composition, and mechanism of early phagosome membrane
+    (GO:0036186) across the Rab5-positive lipid bilayer of the early phagosome membrane.
+    Gene Ontology cellular-component parent term for cytoplasmic vesicle membrane.
+- reference: GO:0045335
+  notes: Supports the context, composition, and mechanism of early phagosome membrane
+    (GO:0036186) across the Rab5-positive lipid bilayer of the early phagosome membrane.
+    Gene Ontology cellular-component term for the enclosing phagocytic vesicle.
+- reference: GO:0097013
+  notes: Supports the context, composition, and mechanism of early phagosome membrane
+    (GO:0036186) across the Rab5-positive lipid bilayer of the early phagosome membrane.
+    Gene Ontology cellular-component term for the lumen bounded by the phagocytic
+    vesicle membrane.
+- reference: GO:0090382
+  notes: Supports the context, composition, and mechanism of early phagosome membrane
+    (GO:0036186) across the Rab5-positive lipid bilayer of the early phagosome membrane.
+    Gene Ontology biological-process term for phagosome maturation.
+- reference: uniprot.location:SL-0205
+  notes: Supports the context, composition, and mechanism of early phagosome membrane
+    (GO:0036186) across the Rab5-positive lipid bilayer of the early phagosome membrane.
+    UniProt Subcellular Location entry SL-0205 maps to GO:0030670 and places phagosome
+    membrane under cytoplasmic vesicle membrane.
+- reference: PMID:12388753
+  notes: Supports the context, composition, and mechanism of early phagosome membrane
+    (GO:0036186) across the Rab5-positive lipid bilayer of the early phagosome membrane.
+    Gotthardt et al. 2002, High-resolution dissection of phagosome maturation reveals
+    distinct membrane trafficking phases, Molecular Biology of the Cell.
+- reference: PMID:16926386
+  notes: Supports the context, composition, and mechanism of early phagosome membrane
+    (GO:0036186) across the Rab5-positive lipid bilayer of the early phagosome membrane.
+    Gotthardt et al. 2006, Proteomics fingerprinting of phagosome maturation and evidence
+    for the role of a Galpha during uptake, Molecular & Cellular Proteomics.
+causal_graphs:
+- graph_id: early_phagosome_membrane_mechanism
+  title: Early phagosome membrane Rab5/PI3P remodeling and endosomal fusion
+  description: Following phagocytic cup scission, the early phagosome membrane recruits
+    Rab5 and Vps34 PI 3-kinase to generate PI3P and drive fusion with early endosomes.
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the phagocytic vesicle membrane boundary without
+    asserting specific Rab, V-ATPase, protease, or actin recruitment mechanisms.
+  nodes:
+  - node_id: phagocytic_vesicle_membrane
+    label: early phagosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0036186
+    description: Assembled and functional early phagosome membrane (GO:0036186) operating
+      across the Rab5-positive lipid bilayer of the early phagosome membrane.
+  - node_id: phagocytic_vesicle_lumen
+    label: phagocytic vesicle lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0097013
+  - node_id: phagocytic_vesicle
+    label: phagocytic vesicle
+    node_type: ORGANELLE
+    grounding: GO:0045335
+  - node_id: phagosome_maturation
+    label: phagosome maturation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0090382
+  edges:
+  - subject: phagocytic_vesicle_membrane
+    predicate: bounds
+    object: phagocytic_vesicle_lumen
+    description: The phagocytic vesicle membrane bounds the lumen of the phagocytic
+      vesicle.
+    evidence:
+    - reference: GO:0030670
+      notes: GO:0030670 identifies the membrane.
+    - reference: GO:0097013
+      notes: GO:0097013 defines the phagocytic vesicle lumen as enclosed by a phagocytic
+        vesicle membrane.
+  - subject: phagocytic_vesicle_membrane
+    predicate: is part of
+    object: phagocytic_vesicle
+    description: The phagocytic vesicle membrane is part of the phagocytic vesicle.
+    evidence:
+    - reference: GO:0030670
+      notes: GO:0030670 identifies the phagocytic vesicle membrane surrounding a phagocytic
+        vesicle.
+    - reference: uniprot.location:SL-0205
+      notes: UniProt SL-0205 names the phagosome as the parent compartment.
+  - subject: phagosome_maturation
+    predicate: remodels
+    object: phagocytic_vesicle_membrane
+    description: Phagosome maturation remodels the phagocytic vesicle membrane after
+      particle uptake.
+    evidence:
+    - reference: GO:0090382
+      notes: GO:0090382 defines phagosome maturation as rearrangement of phagosome
+        parts.
+    - reference: PMID:12388753
+      notes: Gotthardt et al. 2002 resolved ordered Dictyostelium phagosome membrane-trafficking
+        phases.
+discussions:
+- discussion_id: ground_phagocytic_vesicle_lipid_bilayer
+  prompt: Resolve an exact source-neutral grounding for the lipid constituent of the
+    phagocytic vesicle membrane.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - components#phagocytic_vesicle_lipid_bilayer
+  rationale: The record is exactly grounded to GO:0030670 and UniProt SL-0205, but
+    no exact source-neutral CURIE was curated for the generic lipid constituent of
+    the phagocytic vesicle membrane.
+  evidence:
+  - reference: GO:0030670
+    notes: GO:0030670 identifies the phagocytic vesicle membrane.
+  - reference: uniprot.location:SL-0205
+    notes: UniProt SL-0205 describes the membrane surrounding a phagosome.
+  posed_by: codex
+  posed_date: '2026-09-23'

@@ -1,0 +1,262 @@
+identifier: GO:0000786
+label: nucleosome
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A complex comprised of DNA wound around a multisubunit core and associated
+  proteins, which forms the primary packing unit of DNA into higher order structures.
+  The fundamental repeating nucleoprotein packaging unit of eukaryotic chromatin in
+  yeasts, filamentous fungi, microalgae, and protists, consisting of ~147 base pairs
+  of chromosomal DNA wrapped in 1.65 left-handed superhelical turns around a histone
+  octamer composed of a central (H3–H4)2 tetramer flanked by two H2A–H2B dimers. Nucleosome
+  positioning and post-translational histone modifications govern DNA accessibility
+  for transcription, replication, and repair.
+definition_source: GO:0000786
+mapping_status: PROPOSED
+parent_structures:
+- GO:0032993
+part_of:
+- GO:0000785
+synonyms:
+- synonym_text: cytoplasmic nucleosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0000786
+- synonym_text: nuclear nucleosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0000786
+components:
+- component_id: chromosomal_dna
+  label: nuclear chromosomal DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: This component marks the DNA polymer of a eukaryotic nuclear chromosome
+    without claiming a source-neutral CURIE for the full set of yeast chromosomes.
+  role: Linear nuclear DNA molecules that carry the eukaryotic nuclear genome. Functions
+    in the core nucleosome particle and chromosomal chromatin fiber in nucleosome.
+  evidence:
+  - reference: GO:0000228
+    notes: GO:0000228 defines a nuclear chromosome as encoding the nuclear genome.
+  - reference: DOI:10.1038/nature08973
+    notes: Duan et al. 2010 modeled the Saccharomyces cerevisiae nuclear genome in
+      three dimensions.
+- component_id: chromatin_proteins
+  label: chromatin-associated proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Eukaryotic nuclear chromosomes are chromatinized DNA, but the histone
+    and non-histone chromatin protein repertoire is intentionally not flattened into
+    exact family CURIEs here.
+  role: Histone and non-histone proteins that package and organize nuclear chromosomal
+    DNA. Functions in the core nucleosome particle and chromosomal chromatin fiber
+    in nucleosome.
+  evidence:
+  - reference: DOI:10.1146/annurev-genet-120116-023438
+    notes: Noma 2017 reviewed mechanisms that organize the three-dimensional budding-yeast
+      genome.
+  gene_symbols:
+  - HTA1
+  - HTB1
+  - HHT1
+  - HHF1
+  protein_examples:
+  - uniprot_id: UniProtKB:P04911
+    protein_label: Histone H2A.1
+    gene_symbol: HTA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HTA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P04911
+      notes: UniProtKB reviewed (Swiss-Prot) entry P04911, the single reviewed entry
+        for gene HTA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P02293
+    protein_label: Histone H2B.1
+    gene_symbol: HTB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HTB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P02293
+      notes: UniProtKB reviewed (Swiss-Prot) entry P02293, the single reviewed entry
+        for gene HTB1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P61830
+    protein_label: Histone H3
+    gene_symbol: HHT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HHT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P61830
+      notes: UniProtKB reviewed (Swiss-Prot) entry P61830, the single reviewed entry
+        for gene HHT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P02309
+    protein_label: Histone H4
+    gene_symbol: HHF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HHF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P02309
+      notes: UniProtKB reviewed (Swiss-Prot) entry P02309, the single reviewed entry
+        for gene HHF1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Exhibits nucleosome (GO:0000786) in the core nucleosome particle and chromosomal
+    chromatin fiber. Budding yeast carries its nuclear genome on chromosomes that
+    are folded into a constrained three-dimensional nuclear arrangement.
+  reference: DOI:10.1038/nature08973
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Characterized model system for nucleosome (GO:0000786) in the core nucleosome
+    particle and chromosomal chromatin fiber. Reference yeast system used to model
+    nuclear chromosome folding and spatial genome organization.
+  reference: DOI:10.1038/nature08973
+functions:
+- function_id: chromosome_organization
+  label: chromosome organization
+  grounding: GO:0051276
+  description: Mediated by nucleosome (GO:0000786) in the core nucleosome particle
+    and chromosomal chromatin fiber. Nuclear chromosomes package chromosomal DNA with
+    chromatin proteins and fold the nuclear genome within the nucleus.
+  evidence:
+  - reference: DOI:10.1146/annurev-genet-120116-023438
+    notes: Noma 2017 reviewed yeast genome folding and three-dimensional chromosome
+      organization.
+evidence:
+- reference: GO:0000786
+  notes: 'Gene Ontology cellular-component term for nucleosome: A complex comprised
+    of DNA wound around a multisubunit core and associated proteins, which forms the
+    primary packing unit of DNA into higher order structures.'
+- reference: GO:0000228
+  notes: Supports the context, composition, and mechanism of nucleosome (GO:0000786)
+    in the core nucleosome particle and chromosomal chromatin fiber. Gene Ontology
+    cellular-component term for nuclear chromosome.
+- reference: GO:0005694
+  notes: Supports the context, composition, and mechanism of nucleosome (GO:0000786)
+    in the core nucleosome particle and chromosomal chromatin fiber. Gene Ontology
+    cellular-component parent term for chromosome.
+- reference: GO:0031981
+  notes: Supports the context, composition, and mechanism of nucleosome (GO:0000786)
+    in the core nucleosome particle and chromosomal chromatin fiber. Gene Ontology
+    cellular-component term for nuclear lumen.
+- reference: GO:0051276
+  notes: Supports the context, composition, and mechanism of nucleosome (GO:0000786)
+    in the core nucleosome particle and chromosomal chromatin fiber. Gene Ontology
+    biological-process term for chromosome organization.
+- reference: DOI:10.1038/nature08973
+  notes: Supports the context, composition, and mechanism of nucleosome (GO:0000786)
+    in the core nucleosome particle and chromosomal chromatin fiber. Duan et al. 2010,
+    A three-dimensional model of the yeast genome, Nature.
+- reference: DOI:10.1146/annurev-genet-120116-023438
+  notes: 'Supports the context, composition, and mechanism of nucleosome (GO:0000786)
+    in the core nucleosome particle and chromosomal chromatin fiber. Noma 2017, The
+    Yeast Genomes in Three Dimensions: Mechanisms and Functions, Annual Review of
+    Genetics.'
+causal_graphs:
+- graph_id: nucleosome_mechanism
+  title: Nucleosome assembly, DNA wrapping, and chromatin compaction
+  description: Histone chaperones deposit an (H3–H4)2 tetramer and two H2A–H2B dimers
+    onto ~147 bp of chromosomal DNA to form the canonical nucleosome, compacting genomic
+    DNA and establishing the substrate for epigenetic regulation.
+  graph_kind: ASSEMBLY
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph separates DNA and chromatin proteins from the assembled
+    nuclear chromosome but does not enumerate histone variants, condensin/cohesin,
+    centromeres or telomere-specific complexes.
+  nodes:
+  - node_id: chromosomal_dna
+    label: nuclear chromosomal DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: chromosomal_dna
+  - node_id: chromatin_proteins
+    label: chromatin-associated proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: chromatin_proteins
+  - node_id: nuclear_chromosome
+    label: nucleosome
+    node_type: STRUCTURE
+    grounding: GO:0000786
+    description: Assembled and functional nucleosome (GO:0000786) operating in the
+      core nucleosome particle and chromosomal chromatin fiber.
+  - node_id: nuclear_lumen
+    label: nuclear lumen
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031981
+  - node_id: chromosome_organization
+    label: chromosome organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051276
+  edges:
+  - subject: chromosomal_dna
+    predicate: is a DNA constituent of
+    object: nuclear_chromosome
+    description: Nuclear chromosomal DNA is the genome-encoding DNA constituent of
+      the nuclear chromosome.
+    evidence:
+    - reference: GO:0000228
+      notes: GO:0000228 defines a nuclear chromosome as encoding the nuclear genome.
+    - reference: DOI:10.1038/nature08973
+      notes: Duan et al. 2010 modeled Saccharomyces cerevisiae nuclear chromosomes
+        as folded genomic DNA molecules.
+  - subject: chromatin_proteins
+    predicate: organize
+    object: chromosomal_dna
+    description: Chromatin-associated proteins package and fold budding-yeast nuclear
+      chromosomal DNA.
+    evidence:
+    - reference: DOI:10.1146/annurev-genet-120116-023438
+      notes: Noma 2017 reviewed yeast factors that shape three-dimensional genome
+        organization.
+  - subject: nuclear_chromosome
+    predicate: is located in
+    object: nuclear_lumen
+    description: Nuclear chromosomes reside in the nuclear lumen when the eukaryotic
+      nucleus is intact.
+    evidence:
+    - reference: GO:0000228
+      notes: GO asserts GO:0000228 nuclear chromosome part_of GO:0031981 nuclear lumen.
+  - subject: nuclear_chromosome
+    predicate: undergoes
+    object: chromosome_organization
+    description: Nuclear chromosomes are folded and spatially organized as part of
+      three-dimensional genome organization.
+    evidence:
+    - reference: DOI:10.1146/annurev-genet-120116-023438
+      notes: Noma 2017 reviewed three-dimensional organization of yeast nuclear chromosomes.
+curation_history:
+- timestamp: '2026-10-19T05:27:41Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of nucleosome (GO:0000786) in category OTHER with verified
+    UniProtKB protein examples and literature evidence.
+  llm_assisted: true

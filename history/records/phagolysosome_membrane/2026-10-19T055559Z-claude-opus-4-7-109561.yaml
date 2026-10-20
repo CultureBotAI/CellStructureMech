@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+  slug: phagolysosome_membrane
+session:
+  id: 2026-10-19T055559Z-claude-opus-4-7-109561
+  timestamp: '2026-10-19T05:55:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-opus-4-7
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for phagolysosome membrane (GO:0061474) in membrane_organelle.
+  details: Authored data/structures/membrane_organelle/phagolysosome_membrane.yaml for phagolysosome
+    membrane (GO:0061474) with verified GO hierarchy, taxonomic distribution, UniProtKB protein
+    examples, functions, literature evidence, and causal graph.
